@@ -1,0 +1,80 @@
+[
+  {
+    "key": "ecosystemClient.allProjects",
+    "value": "All Projects",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemClient.noProjectsFound",
+    "value": "No projects found",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystemClient.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ecosystemClient.visitProject",
+    "value": "Visit Project",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystemClient.exploreMore",
+    "value": "Explore More",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemClient.technology.title",
+    "value": "Technology",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "ecosystemClient.technology.subtitle",
+    "value": "Learn the tech that powers these projects",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "ecosystemClient.technology.description",
+    "value": "Deep dive into Ergo's technology stack and understand the innovations that make these projects possible.",
+    "context": "Description",
+    "maxLength": 156
+  },
+  {
+    "key": "ecosystemClient.useCases.title",
+    "value": "Use Cases",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystemClient.useCases.subtitle",
+    "value": "See what you can build on Ergo",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "ecosystemClient.useCases.description",
+    "value": "Explore real-world applications and discover the possibilities for building on Ergo's platform.",
+    "context": "Description",
+    "maxLength": 142.5
+  },
+  {
+    "key": "ecosystemClient.emailCapture.title",
+    "value": "Stay Connected with Ecosystem Updates",
+    "context": "Title",
+    "maxLength": 55.5
+  },
+  {
+    "key": "ecosystemClient.emailCapture.description",
+    "value": "Get notified about new dApps, protocol updates, and ecosystem developments",
+    "context": "Description",
+    "maxLength": 111
+  }
+]

@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { comparisons } from "@/data/comparisons";
 import { infographics, filterInfographics } from "@/data/infographics";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";

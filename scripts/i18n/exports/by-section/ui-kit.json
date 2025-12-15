@@ -1,0 +1,224 @@
+[
+  {
+    "key": "ui-kit.title",
+    "value": "UI Kit",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "ui-kit.subtitle",
+    "value": "Design system and components",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "ui-kit.description",
+    "value": "Complete component library for modern dApps",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "ui-kit.lastUpdated",
+    "value": "Last updated: March 2024",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "ui-kit.overview",
+    "value": "Overview",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ui-kit.components",
+    "value": "Components",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ui-kit.patterns",
+    "value": "Patterns",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ui-kit.colors",
+    "value": "Colors",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "ui-kit.typography",
+    "value": "Typography",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ui-kit.philosophy",
+    "value": "Philosophy",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ui-kit.playground",
+    "value": "Playground",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ui-kit.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ui-kit.getStarted",
+    "value": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ui-kit.featureGrid",
+    "value": "Feature Grid",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ui-kit.statsGrid",
+    "value": "Statistics Grid",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ui-kit.heroPattern",
+    "value": "Hero Pattern",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ui-kit.codeSnippet",
+    "value": "Code Snippet",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ui-kit.copyCode",
+    "value": "Copy Code",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ui-kit.viewCode",
+    "value": "View Code",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ui-kit.themeToggle",
+    "value": "Theme Toggle",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ui-kit.glitchEffect",
+    "value": "Glitch Effect",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ui-kit.signatureEffects",
+    "value": "Signature Effects",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ui-kit.undergroundManifesto",
+    "value": "Underground Manifesto",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "ui-kit.designPrinciples",
+    "value": "Design Principles",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ui-kit.accessibility",
+    "value": "Accessibility",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ui-kit.responsive",
+    "value": "Responsive Design",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ui-kit.performance",
+    "value": "Performance Optimized",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "ui-kit.buttons.getStarted",
+    "value": "Get Started",
+    "context": "Button label - keep short",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ui-kit.buttons.openInFigma",
+    "value": "Open in Figma",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ui-kit.features.title",
+    "value": "Features",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "ui-kit.features.subtitle",
+    "value": "Powerful components for modern dApps",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "ui-kit.features.components.title",
+    "value": "Components",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "ui-kit.features.components.description",
+    "value": "Reusable UI components built with React and Tailwind CSS",
+    "context": "Description",
+    "maxLength": 84
+  },
+  {
+    "key": "ui-kit.cta.title",
+    "value": "Ready to build?",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ui-kit.cta.subtitle",
+    "value": "Start using Ergo UI Kit in your project today",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "ui-kit.cta.buttons.getStarted",
+    "value": "Get Started",
+    "context": "Button label - keep short",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ui-kit.cta.buttons.openInFigma",
+    "value": "Open in Figma",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  }
+]

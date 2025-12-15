@@ -36,7 +36,12 @@
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report",
     "health": "node scripts/health-check.js",
-    "health:prod": "BASE_URL=https://ergoblockchain.org node scripts/health-check.js"
+    "health:prod": "BASE_URL=https://ergoblockchain.org node scripts/health-check.js",
+    "translate": "node scripts/translate-json.js",
+    "translate:ru": "node scripts/translate-json.js --all ru",
+    "translate:zh": "node scripts/translate-json.js --all zh-cn",
+    "crowdin:upload": "crowdin upload sources",
+    "crowdin:download": "crowdin download"
   },
   "dependencies": {
     "@algolia/autocomplete-core": "^1.19.2",
@@ -66,7 +71,7 @@
     "katex": "^0.16.22",
     "lucide-react": "^0.454.0",
     "mermaid": "^11.10.1",
-    "next": "^16.0.3",
+    "next": "^16.0.10",
     "next-intl": "^4.3.12",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.4.6",

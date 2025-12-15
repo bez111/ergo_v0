@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import ComparisonClient from "./ComparisonClient"
-import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
-    alternates: { canonical: "https://ergoblockchain.org/start/comparison" },
+    alternates: getAlternates('/start/comparison', locale),
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: "https://ergoblockchain.org/start/comparison",
+      url: getCanonicalUrl('/start/comparison', locale),
       siteName: "Ergo Platform",
       images: [{ url: "https://ergoblockchain.org/og/comparison.png", width: 1200, height: 630, alt: t('ogAlt') }],
       type: "website",

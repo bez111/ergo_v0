@@ -1,0 +1,188 @@
+[
+  {
+    "key": "faqPage.title",
+    "value": "Ergo",
+    "context": "FAQ content",
+    "maxLength": 6
+  },
+  {
+    "key": "faqPage.titleHighlight",
+    "value": "FAQ",
+    "context": "FAQ content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "faqPage.subtitle",
+    "value": "Find answers to common questions about Ergo",
+    "context": "FAQ content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "faqPage.questionsCount",
+    "value": "{count} questions",
+    "context": "FAQ content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "faqPage.tabs.beginner",
+    "value": "Beginner",
+    "context": "FAQ content",
+    "maxLength": 12
+  },
+  {
+    "key": "faqPage.tabs.technical",
+    "value": "Technical",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faqPage.search.placeholder",
+    "value": "Search questions...",
+    "context": "FAQ content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "faqPage.search.ariaLabel",
+    "value": "Search FAQ questions",
+    "context": "FAQ content",
+    "maxLength": 30
+  },
+  {
+    "key": "faqPage.filters.all",
+    "value": "All",
+    "context": "FAQ content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "faqPage.categories.basics",
+    "value": "Basics",
+    "context": "FAQ content",
+    "maxLength": 9
+  },
+  {
+    "key": "faqPage.categories.technology",
+    "value": "Technology",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "faqPage.categories.gettingStarted",
+    "value": "Getting Started",
+    "context": "FAQ content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "faqPage.categories.ecosystem",
+    "value": "Ecosystem",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faqPage.categories.community",
+    "value": "Community",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faqPage.categories.general",
+    "value": "General",
+    "context": "FAQ content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "faqPage.categories.economics",
+    "value": "Economics",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faqPage.categories.wallets",
+    "value": "Wallets",
+    "context": "FAQ content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "faqPage.categories.mining",
+    "value": "Mining",
+    "context": "FAQ content",
+    "maxLength": 9
+  },
+  {
+    "key": "faqPage.levels.beginner",
+    "value": "beginner",
+    "context": "FAQ content",
+    "maxLength": 12
+  },
+  {
+    "key": "faqPage.levels.technical",
+    "value": "technical",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faqPage.noResults.title",
+    "value": "No questions found",
+    "context": "FAQ content",
+    "maxLength": 27
+  },
+  {
+    "key": "faqPage.noResults.subtitle",
+    "value": "Try a different search or category",
+    "context": "FAQ content",
+    "maxLength": 51
+  },
+  {
+    "key": "faqPage.relatedResources.title",
+    "value": "Still have questions?",
+    "context": "FAQ content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "faqPage.relatedResources.qaHub.title",
+    "value": "Q&A Hub",
+    "context": "FAQ content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "faqPage.relatedResources.qaHub.description",
+    "value": "Browse community questions and detailed answers",
+    "context": "FAQ content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "faqPage.relatedResources.glossary.title",
+    "value": "Glossary",
+    "context": "FAQ content",
+    "maxLength": 12
+  },
+  {
+    "key": "faqPage.relatedResources.glossary.description",
+    "value": "Learn Ergo terminology and concepts",
+    "context": "FAQ content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "faqPage.relatedResources.askCommunity.title",
+    "value": "Ask Community",
+    "context": "FAQ content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "faqPage.relatedResources.askCommunity.description",
+    "value": "Get help from the Ergo community on Discord",
+    "context": "FAQ content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "faqPage.cta.title",
+    "value": "Stay updated",
+    "context": "FAQ content",
+    "maxLength": 18
+  },
+  {
+    "key": "faqPage.cta.description",
+    "value": "Get new FAQs, guides, and important network updates delivered to your inbox.",
+    "context": "FAQ content",
+    "maxLength": 114
+  }
+]

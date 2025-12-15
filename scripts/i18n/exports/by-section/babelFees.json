@@ -1,0 +1,800 @@
+[
+  {
+    "key": "babelFees.title",
+    "value": "Babel Fees - Pay Transaction Fees with Any Token",
+    "context": "Title",
+    "maxLength": 72
+  },
+  {
+    "key": "babelFees.description",
+    "value": "Learn about Babel Fees on Ergo blockchain - pay transaction fees using any token instead of ERG",
+    "context": "Description",
+    "maxLength": 142.5
+  },
+  {
+    "key": "babelFees.subDescription",
+    "value": "Babel Fees allow users to pay transaction fees with tokens other than ERG, improving user experience and token utility",
+    "context": "General content",
+    "maxLength": 177
+  },
+  {
+    "key": "babelFees.seo.title",
+    "value": "Babel Fees - Flexible Transaction Fee Payment | Ergo Platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 91.5
+  },
+  {
+    "key": "babelFees.seo.description",
+    "value": "Discover how Babel Fees on Ergo blockchain enable paying transaction fees with any token. Learn about the benefits, implementation, and use cases.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 219
+  },
+  {
+    "key": "babelFees.seo.keywords",
+    "value": "Babel Fees, Ergo blockchain, transaction fees, token payment, ERG alternative, flexible fees, DeFi Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 154.5
+  },
+  {
+    "key": "babelFees.cta.howItWorks",
+    "value": "How It Works",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "babelFees.cta.eip",
+    "value": "View EIP-0019",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "babelFees.cta.calculator",
+    "value": "Fee Calculator",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.cta.exploreWallets",
+    "value": "Explore Wallets",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "babelFees.cta.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "babelFees.cta.readyToUse",
+    "value": "Ready to Use Babel Fees?",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "babelFees.cta.experienceFlexibility",
+    "value": "Experience the flexibility of paying fees with any token",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "babelFees.feePaymentOptions",
+    "value": "Fee Payment Options",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.options.erg.name",
+    "value": "ERG (Native)",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "babelFees.options.erg.description",
+    "value": "Standard fee payment method",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "babelFees.options.anyToken.name",
+    "value": "Any Token",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "babelFees.options.anyToken.description",
+    "value": "Pay with supported tokens",
+    "context": "Description",
+    "maxLength": 37.5
+  },
+  {
+    "key": "babelFees.options.automaticExchange.name",
+    "value": "Automatic Exchange",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "babelFees.options.automaticExchange.description",
+    "value": "Token to ERG conversion",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "babelFees.whyFees.title",
+    "value": "Why Transaction Fees Are Necessary",
+    "context": "Title",
+    "maxLength": 51
+  },
+  {
+    "key": "babelFees.whyFees.description",
+    "value": "Transaction fees are essential for maintaining network security and preventing spam attacks on the blockchain.",
+    "context": "Description",
+    "maxLength": 165
+  },
+  {
+    "key": "babelFees.whyFees.miners",
+    "value": "Miners",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "babelFees.whyFees.minersDescription",
+    "value": "Receive rewards for processing transactions",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "babelFees.whyFees.spam",
+    "value": "Spam Prevention",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "babelFees.whyFees.spamDescription",
+    "value": "Fees prevent network congestion from spam",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "babelFees.whyFees.network",
+    "value": "Network Security",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "babelFees.whyFees.networkDescription",
+    "value": "Ensures sustainable blockchain operation",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "babelFees.whyFees.standardPayment",
+    "value": "Standard Payment",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "babelFees.whyFees.standardPaymentDescription",
+    "value": "Typically, fees must be paid in ERG (native token)",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.title",
+    "value": "What Are Babel Fees",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.whatAre",
+    "value": "What Are They?",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.whatAreDescription",
+    "value": "Babel Fees are a mechanism that allows users to pay transaction fees with any token instead of ERG.",
+    "context": "General content",
+    "maxLength": 148.5
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.whyCreated",
+    "value": "Why Created",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.uxImprovement",
+    "value": "UX Improvement",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.uxImprovementDescription",
+    "value": "Users don't need to hold ERG for transactions",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.tokenUtility",
+    "value": "Token Utility",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.tokenUtilityDescription",
+    "value": "Increases practical use of tokens",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.dAppAccessibility",
+    "value": "dApp Accessibility",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "babelFees.whatAreBabelFees.dAppAccessibilityDescription",
+    "value": "Simplifies interaction with decentralized applications",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.title",
+    "value": "How Babel Fees Work",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.description",
+    "value": "Babel Fees work through a system of intermediaries who accept tokens and pay fees in ERG.",
+    "context": "Description",
+    "maxLength": 133.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.processFlowTitle",
+    "value": "Transaction Process",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.userOffer",
+    "value": "User offers token",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryDetect",
+    "value": "Intermediary detects",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.ergFeePaid",
+    "value": "Fee paid in ERG",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.userOfferTitle",
+    "value": "User Offer",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.userOfferDescription",
+    "value": "User specifies token and amount to pay fee",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryRole",
+    "value": "Intermediary Role",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryDetectDescription",
+    "value": "Detect Offer",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryDetectDescription2",
+    "value": "Intermediary sees profitable exchange offer",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryExecute",
+    "value": "Execute Transaction",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryExecuteDescription",
+    "value": "Intermediary includes transaction in block",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryPay",
+    "value": "Pay Fee",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.intermediaryPayDescription",
+    "value": "Intermediary pays ERG to miners, receives tokens",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.marketMechanism",
+    "value": "Market Mechanism",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "babelFees.howBabelFeesWork.marketMechanismDescription",
+    "value": "Competition between intermediaries ensures fair exchange rates",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "babelFees.benefits.title",
+    "value": "Benefits of Babel Fees",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "babelFees.benefits.forUsers",
+    "value": "For Users",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "babelFees.benefits.convenience",
+    "value": "Convenience",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "babelFees.benefits.reducedFriction",
+    "value": "Reduced Friction",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "babelFees.benefits.forTokenIssuers",
+    "value": "For Token Issuers",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "babelFees.benefits.increasedTokenUtility",
+    "value": "Increased Utility",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "babelFees.benefits.improvedUX",
+    "value": "Improved UX",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "babelFees.benefits.forEcosystem",
+    "value": "For Ecosystem",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "babelFees.benefits.moreUserFriendly",
+    "value": "More User-Friendly",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "babelFees.benefits.stimulation",
+    "value": "Activity Stimulation",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "babelFees.benefits.userExperience.title",
+    "value": "Better User Experience",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "babelFees.benefits.userExperience.description",
+    "value": "No need to hold ERG for transactions",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "babelFees.benefits.tokenUtility.title",
+    "value": "Increased Token Utility",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "babelFees.benefits.tokenUtility.description",
+    "value": "Use your tokens directly for fees",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "babelFees.benefits.accessibility.title",
+    "value": "Greater Accessibility",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "babelFees.benefits.accessibility.description",
+    "value": "Lower barrier to entry for new users",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "babelFees.benefits.flexibility.title",
+    "value": "Payment Flexibility",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.benefits.flexibility.description",
+    "value": "Choose from multiple payment options",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "babelFees.practicalConsiderations.title",
+    "value": "Practical Considerations",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "babelFees.practicalConsiderations.walletSupport",
+    "value": "Wallet Support",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.practicalConsiderations.walletSupportDescription",
+    "value": "Requires wallet integration",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "babelFees.practicalConsiderations.tokenAcceptance",
+    "value": "Token Acceptance",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "babelFees.practicalConsiderations.tokenAcceptanceDescription",
+    "value": "Not all tokens may be accepted",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "babelFees.practicalConsiderations.exchangeRates",
+    "value": "Exchange Rates",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.practicalConsiderations.exchangeRatesDescription",
+    "value": "Determined by market forces",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "babelFees.practicalConsiderations.howToUse",
+    "value": "How to Use",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "babelFees.practicalConsiderations.howToUseDescription",
+    "value": "Choose a supporting wallet",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "babelFees.currentStatus.title",
+    "value": "Current Status",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.currentStatus.important",
+    "value": "Important",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "babelFees.currentStatus.importantDescription",
+    "value": "Babel Fees are in development and implementation phase",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "babelFees.currentStatus.keyQuestions",
+    "value": "Key Questions",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "babelFees.currentStatus.widelyAdopted",
+    "value": "Will Babel Fees be widely adopted by the ecosystem?",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "babelFees.currentStatus.activeMarkets",
+    "value": "Will active markets emerge for token-to-fee exchanges?",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "babelFees.currentStatus.ongoingWork",
+    "value": "Ongoing work on standardization and implementation",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "babelFees.currentStatus.checkUpdates",
+    "value": "Check updates in EIP-0019",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "babelFees.comparison.title",
+    "value": "Fee Payment Methods Comparison",
+    "context": "Title",
+    "maxLength": 45
+  },
+  {
+    "key": "babelFees.comparison.ergFees",
+    "value": "ERG Fees",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "babelFees.comparison.babelFees",
+    "value": "Babel Fees",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "babelFees.comparison.alwaysAccepted",
+    "value": "Always Accepted",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "babelFees.comparison.primaryMethod",
+    "value": "Primary Method",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "babelFees.comparison.predictableStable",
+    "value": "Predictable & Stable",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "babelFees.comparison.supportedAll",
+    "value": "Supported by All",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "babelFees.comparison.offerFlexibility",
+    "value": "Offer Flexibility",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "babelFees.comparison.availabilityDepends",
+    "value": "Availability Depends",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "babelFees.comparison.requiresIntermediary",
+    "value": "Requires Intermediary",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "babelFees.comparison.mayHaveVariableRates",
+    "value": "May Have Variable Rates",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "babelFees.conclusion.title",
+    "value": "Conclusion",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "babelFees.conclusion.description",
+    "value": "Babel Fees represent an innovative approach to transaction fee payment, making Ergo blockchain more accessible and user-friendly.",
+    "context": "Description",
+    "maxLength": 193.5
+  },
+  {
+    "key": "babelFees.conclusion.keepEye",
+    "value": "Keep an eye on this technology's development in the Ergo ecosystem!",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "babelFees.howItWorks.title",
+    "value": "How Babel Fees Work",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "babelFees.howItWorks.description",
+    "value": "Babel Fees enable flexible fee payments through smart contracts",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "babelFees.howItWorks.steps.userInitiates.title",
+    "value": "User Initiates Transaction",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "babelFees.howItWorks.steps.userInitiates.description",
+    "value": "Choose any supported token for fee payment",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "babelFees.howItWorks.steps.smartContract.title",
+    "value": "Smart Contract Processes",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "babelFees.howItWorks.steps.smartContract.description",
+    "value": "Contract handles token conversion automatically",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "babelFees.howItWorks.steps.minerReceives.title",
+    "value": "Miner Receives ERG",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "babelFees.howItWorks.steps.minerReceives.description",
+    "value": "Miners always receive fees in native ERG",
+    "context": "Description",
+    "maxLength": 60
+  },
+  {
+    "key": "babelFees.howItWorks.steps.transactionComplete.title",
+    "value": "Transaction Complete",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "babelFees.howItWorks.steps.transactionComplete.description",
+    "value": "Transaction processed with alternative fee payment",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "babelFees.technicalDetails.title",
+    "value": "Technical Implementation",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "babelFees.technicalDetails.description",
+    "value": "Babel Fees are implemented through Ergo's advanced smart contract capabilities",
+    "context": "Description",
+    "maxLength": 117
+  },
+  {
+    "key": "babelFees.technicalDetails.eip",
+    "value": "EIP-0019 Specification",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "babelFees.technicalDetails.smartContracts",
+    "value": "Smart Contract Architecture",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "babelFees.technicalDetails.tokenExchange",
+    "value": "Token Exchange Mechanism",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "babelFees.technicalDetails.minerIncentives",
+    "value": "Miner Incentive Structure",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "babelFees.supportedWallets.title",
+    "value": "Supported Wallets",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "babelFees.supportedWallets.description",
+    "value": "Wallets that support Babel Fees functionality",
+    "context": "Description",
+    "maxLength": 67.5
+  },
+  {
+    "key": "babelFees.faq.title",
+    "value": "Frequently Asked Questions",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "babelFees.faq.whatAre.question",
+    "value": "What are Babel Fees?",
+    "context": "FAQ content",
+    "maxLength": 30
+  },
+  {
+    "key": "babelFees.faq.whatAre.answer",
+    "value": "Babel Fees allow you to pay transaction fees using any supported token instead of ERG.",
+    "context": "FAQ content",
+    "maxLength": 129
+  },
+  {
+    "key": "babelFees.faq.howWork.question",
+    "value": "How do Babel Fees work?",
+    "context": "FAQ content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "babelFees.faq.howWork.answer",
+    "value": "Smart contracts automatically convert your chosen token to ERG for fee payment.",
+    "context": "FAQ content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "babelFees.faq.whichTokens.question",
+    "value": "Which tokens are supported?",
+    "context": "FAQ content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "babelFees.faq.whichTokens.answer",
+    "value": "Any token can potentially support Babel Fees if liquidity providers enable it.",
+    "context": "FAQ content",
+    "maxLength": 117
+  },
+  {
+    "key": "babelFees.faq.costs.question",
+    "value": "Are there additional costs?",
+    "context": "FAQ content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "babelFees.faq.costs.answer",
+    "value": "There may be a small conversion fee, but it's often offset by convenience.",
+    "context": "FAQ content",
+    "maxLength": 111
+  }
+]

@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { Clock } from "lucide-react"
 import { Card } from "@/components/ui/card"

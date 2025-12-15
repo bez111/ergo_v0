@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import {
   Search,
   Filter,
@@ -62,7 +63,13 @@ const itemVariants = {
 type CategoryFilter = GlossaryTerm['category'] | 'all';
 type DifficultyFilter = GlossaryTerm['difficulty'] | 'all';
 
-export function GlossaryHubClient() {
+interface GlossaryHubClientProps {
+  locale: string;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function GlossaryHubClient({ locale }: GlossaryHubClientProps) {
+  const t = useTranslations('glossary');
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyFilter>("all");
@@ -111,8 +118,8 @@ export function GlossaryHubClient() {
             {/* Breadcrumbs */}
             <Breadcrumbs
               items={[
-                { name: 'Learn', href: '/learn' },
-                { name: 'Glossary', href: '/learn/glossary' },
+                { name: t('breadcrumbs.learn'), href: '/learn' },
+                { name: t('breadcrumbs.glossary'), href: '/learn/glossary' },
               ]}
               className="mb-8"
             />
@@ -131,16 +138,16 @@ export function GlossaryHubClient() {
                   className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3"
                 >
                   <h1 className="text-3xl md:text-4xl font-bold text-white">
-                    Ergo <span className="text-orange-400">Glossary</span>
+                    {t('title')} <span className="text-orange-400">{t('titleHighlight')}</span>
                   </h1>
                   <div className="flex flex-wrap gap-2 text-xs md:text-sm text-neutral-300">
                     <span className="inline-flex items-center gap-1 rounded-full bg-black/70 border border-white/10 px-3 py-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
-                      {totalTerms}+ terms
+                      {totalTerms}+ {t('stats.terms')}
                     </span>
                     <span className="inline-flex items-center gap-1 rounded-full bg-black/70 border border-white/10 px-3 py-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
-                      {totalCategories} categories
+                      {totalCategories} {t('stats.categories')}
                     </span>
                   </div>
                 </motion.div>
@@ -150,7 +157,7 @@ export function GlossaryHubClient() {
                   variants={itemVariants}
                   className="text-sm md:text-base text-neutral-300 mb-4"
                 >
-                  Master Ergo terminology in one searchable reference.
+                  {t('subtitle')}
                 </motion.p>
 
                 {/* Search + category filter */}
@@ -167,13 +174,13 @@ export function GlossaryHubClient() {
                     />
                     <input
                       type="search"
-                      placeholder="Search terms..."
+                      placeholder={t('search.placeholder')}
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="w-full bg-black/60 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-sm md:text-base
                                 text-white placeholder-neutral-500 focus:outline-none focus:border-orange-500/50
                                 transition-colors"
-                      aria-label="Search glossary terms"
+                      aria-label={t('search.ariaLabel')}
                       role="searchbox"
                     />
                   </div>
@@ -187,7 +194,7 @@ export function GlossaryHubClient() {
                                 focus:outline-none focus:border-orange-500/50 cursor-pointer"
                       aria-label="Filter by category"
                     >
-                      <option value="all">All Categories</option>
+                      <option value="all">{t('filters.allCategories')}</option>
                       {Object.entries(glossaryCategories).map(([key, meta]) => (
                         <option key={key} value={key}>
                           {meta.name}
@@ -202,7 +209,7 @@ export function GlossaryHubClient() {
                   variants={itemVariants}
                   className="flex items-center gap-2 text-xs text-neutral-400 mb-3"
                 >
-                  <span className="hidden md:inline">Level:</span>
+                  <span className="hidden md:inline">{t('filters.level')}</span>
                   <GraduationCap className="w-3 h-3" aria-hidden="true" />
                   <select
                     value={difficultyFilter}
@@ -211,10 +218,10 @@ export function GlossaryHubClient() {
                               focus:outline-none focus:border-orange-500/50 cursor-pointer"
                     aria-label="Filter by difficulty level"
                   >
-                    <option value="all">All levels</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
+                    <option value="all">{t('filters.allLevels')}</option>
+                    <option value="beginner">{t('filters.beginner')}</option>
+                    <option value="intermediate">{t('filters.intermediate')}</option>
+                    <option value="advanced">{t('filters.advanced')}</option>
                   </select>
                 </motion.div>
 
@@ -223,7 +230,7 @@ export function GlossaryHubClient() {
                   variants={itemVariants}
                   className="text-xs md:text-sm text-neutral-400 flex flex-wrap gap-2 items-center"
                 >
-                  <span className="font-medium text-neutral-300">Popular:</span>
+                  <span className="font-medium text-neutral-300">{t('popular')}</span>
                   <Link
                     href="/learn/glossary/eutxo"
                     className="px-3 py-2 md:px-2 md:py-1 min-h-[44px] md:min-h-0 flex items-center rounded-full bg-black/70 border border-white/10 hover:border-orange-400 hover:text-orange-300 transition-colors"
@@ -349,7 +356,7 @@ export function GlossaryHubClient() {
                 className="text-center py-16"
               >
                 <p className="text-neutral-400 text-lg">
-                  No terms found matching your criteria.
+                  {t('noResults.message')}
                 </p>
                 <button
                   onClick={() => {
@@ -359,7 +366,7 @@ export function GlossaryHubClient() {
                   }}
                   className="mt-4 text-orange-400 hover:text-orange-300 underline"
                 >
-                  Clear filters
+                  {t('noResults.clearFilters')}
                 </button>
               </motion.div>
             )}
@@ -377,25 +384,24 @@ export function GlossaryHubClient() {
                 className="bg-black border border-white/10 rounded-2xl p-8 text-center"
               >
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Build on Ergo?
+                  {t('cta.title')}
                 </h2>
                 <p className="text-neutral-300 mb-6 max-w-xl mx-auto">
-                  Now that you understand the terminology, dive into the documentation
-                  and start building decentralized applications.
+                  {t('cta.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href="/docs/developers"
                     className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl transition-colors"
                   >
-                    Developer Docs
+                    {t('cta.devDocs')}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     href="/learn"
                     className="inline-flex items-center justify-center gap-2 border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-xl transition-colors"
                   >
-                    Learning Hub
+                    {t('cta.learningHub')}
                   </Link>
                 </div>
               </motion.div>
@@ -403,8 +409,8 @@ export function GlossaryHubClient() {
 
             {/* Email Capture */}
             <FinalCTASimple
-              title="Learn More About Ergo"
-              description="Get educational content, terminology guides, and blockchain insights delivered to your inbox."
+              title={t('emailCapture.title')}
+              description={t('emailCapture.description')}
             />
           </div>
         </PageTransition>

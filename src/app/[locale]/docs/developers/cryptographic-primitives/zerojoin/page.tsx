@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { ArrowLeft, Shield, Eye, Lock, Users, Zap, BookOpen } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
 import { CodeBlock } from "@/components/ui";

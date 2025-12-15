@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Info } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export function InfoBlock() {
   return (

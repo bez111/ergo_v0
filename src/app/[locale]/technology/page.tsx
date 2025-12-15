@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import TechnologyClient from './TechnologyClient'
 import { siteConfig } from '@/config/site-config'
 import { technologyTopics, categoryLabels } from '@/data/technology-topics'
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, createItemListSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

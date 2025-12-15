@@ -1,0 +1,44 @@
+[
+  {
+    "key": "docs.title",
+    "value": "Documentation",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docs.subtitle",
+    "value": "Technical documentation and guides",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "docs.description",
+    "value": "Comprehensive documentation for developers and users.",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "docs.sections.gettingStarted",
+    "value": "Getting Started",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docs.sections.apiReference",
+    "value": "API Reference",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docs.sections.tutorials",
+    "value": "Tutorials",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docs.sections.examples",
+    "value": "Examples",
+    "context": "General content",
+    "maxLength": 12
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useIdentity.title",
+    "value": "Digital Identity",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "useIdentity.description",
+    "value": "Self-sovereign identity solutions on Ergo",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "useIdentity.subtitle",
+    "value": "Privacy-preserving identity management",
+    "context": "General content",
+    "maxLength": 57
+  }
+]

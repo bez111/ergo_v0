@@ -1,0 +1,20 @@
+[
+  {
+    "key": "ecosystemGrants.title",
+    "value": "Ecosystem Grants",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystemGrants.description",
+    "value": "Funding opportunities for Ergo ecosystem development",
+    "context": "Description",
+    "maxLength": 78
+  },
+  {
+    "key": "ecosystemGrants.subtitle",
+    "value": "Build the future of blockchain with community support",
+    "context": "General content",
+    "maxLength": 79.5
+  }
+]

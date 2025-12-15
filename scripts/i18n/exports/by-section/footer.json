@@ -1,0 +1,146 @@
+[
+  {
+    "key": "footer.platform",
+    "value": "PLATFORM",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "footer.learnTitle",
+    "value": "LEARN",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "footer.community",
+    "value": "COMMUNITY",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "footer.technology",
+    "value": "Technology",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "footer.useCases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "footer.ecosystem",
+    "value": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "footer.compare",
+    "value": "Compare Blockchains",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "footer.infographics",
+    "value": "Infographics",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "footer.wallets",
+    "value": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "footer.startHere",
+    "value": "Start Here",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "footer.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "footer.glossary",
+    "value": "Glossary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "footer.faq",
+    "value": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "footer.playbooks",
+    "value": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "footer.patterns",
+    "value": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "footer.github",
+    "value": "GitHub",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "footer.grants",
+    "value": "Grants",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "footer.blog",
+    "value": "Blog",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "footer.discord",
+    "value": "Discord",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "footer.telegram",
+    "value": "Telegram",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "footer.twitter",
+    "value": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "footer.copyright",
+    "value": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED.",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "footer.openSource",
+    "value": "ERGO IS AN OPEN-SOURCE PROJECT.",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "footer.contributeOnGithub",
+    "value": "CONTRIBUTE ON GITHUB",
+    "context": "General content",
+    "maxLength": 30
+  }
+]

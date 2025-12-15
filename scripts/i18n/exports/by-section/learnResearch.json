@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnResearch.title",
+    "value": "Research Papers",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learnResearch.description",
+    "value": "Academic research and whitepapers about Ergo",
+    "context": "Description",
+    "maxLength": 66
+  },
+  {
+    "key": "learnResearch.subtitle",
+    "value": "Scientific foundation of Ergo technology",
+    "context": "General content",
+    "maxLength": 60
+  }
+]

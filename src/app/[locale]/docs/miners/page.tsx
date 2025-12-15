@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   BookOpen,
   Cpu,

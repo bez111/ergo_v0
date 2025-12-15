@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnGuidesOraclePool.title",
+    "value": "Oracle Pool Guide",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learnGuidesOraclePool.description",
+    "value": "How to use and create oracle pools on Ergo",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "learnGuidesOraclePool.subtitle",
+    "value": "Decentralized data feeds tutorial",
+    "context": "General content",
+    "maxLength": 49.5
+  }
+]

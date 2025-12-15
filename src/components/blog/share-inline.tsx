@@ -14,11 +14,14 @@ type ShareInlineProps = {
 
 export function ShareInline({ title, url, utm = "", className }: ShareInlineProps) {
   const shareUrl = `${url}${utm}`
+  const shareTagline = '@BuildOnErgo $ERG'
+  const twitterText = `${title}\n${shareUrl} ${shareTagline}`
+  const telegramText = `${title} ${shareTagline}`
   const encoded = encodeURIComponent
   const links = {
-    x: `https://twitter.com/intent/tweet?text=${encoded(title)}&url=${encoded(shareUrl)}&via=BuildOnErgo`,
+    x: `https://twitter.com/intent/tweet?text=${encoded(twitterText)}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encoded(shareUrl)}`,
-    telegram: `https://t.me/share/url?url=${encoded(shareUrl)}&text=${encoded(title)}`,
+    telegram: `https://t.me/share/url?url=${encoded(shareUrl)}&text=${encoded(telegramText)}`,
     reddit: `https://www.reddit.com/submit?url=${encoded(shareUrl)}&title=${encoded(title)}`,
   }
 

@@ -1,13 +1,31 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getMessages } from 'next-intl/server'
 import { QuestionPageClient } from './QuestionPageClient'
-import { getQuestionBySlug, getRelatedQuestions, getAllQuestionSlugs } from '@/data/questions'
+import { getQuestionBySlug, getRelatedQuestions, getAllQuestionSlugs, type QuestionEntry } from '@/data/questions'
+import { type QuestionsTranslations } from '@/data/questions-i18n'
 import { siteConfig } from '@/config/site-config'
 import { createBreadcrumbSchema, createFAQSchema, createHowToSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
+}
+
+// Helper to apply translations to a question
+function applyTranslation(question: QuestionEntry, translations?: QuestionsTranslations): QuestionEntry {
+  if (!translations) return question
+  const tr = translations[question.slug]
+  if (!tr) return question
+  
+  return {
+    ...question,
+    query: tr.query ?? question.query,
+    shortAnswer: tr.shortAnswer ?? question.shortAnswer,
+    keyPoints: tr.keyPoints ?? question.keyPoints,
+    seoTitle: tr.seoTitle ?? question.seoTitle,
+    seoDescription: tr.seoDescription ?? question.seoDescription,
+  }
 }
 
 export function generateStaticParams() {
@@ -15,11 +33,22 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const question = getQuestionBySlug(slug)
+  const { slug, locale } = await params
+  const baseQuestion = getQuestionBySlug(slug)
 
-  if (!question) {
+  if (!baseQuestion) {
     return { title: 'Question Not Found', description: 'The requested question could not be found.' }
+  }
+
+  // Get translations for non-English locales
+  let question = baseQuestion
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { questionsData?: QuestionsTranslations }
+      question = applyTranslation(baseQuestion, messages?.questionsData)
+    } catch {
+      // Fallback to English if translations fail
+    }
   }
 
   const title = question.seoTitle || question.query
@@ -49,15 +78,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function QuestionPage({ params }: Props) {
-  const { slug } = await params
-  const question = getQuestionBySlug(slug)
+  const { slug, locale } = await params
+  const baseQuestion = getQuestionBySlug(slug)
 
-  if (!question) {
+  if (!baseQuestion) {
     notFound()
   }
 
-  const relatedQuestions = question.relatedQuestions ? getRelatedQuestions(question.relatedQuestions) : []
-  const baseUrl = siteConfig.siteUrl
+  // Get translations for non-English locales
+  let question = baseQuestion
+  let translations: QuestionsTranslations | undefined
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { questionsData?: QuestionsTranslations }
+      translations = messages?.questionsData
+      question = applyTranslation(baseQuestion, translations)
+    } catch {
+      // Fallback to English if translations fail
+    }
+  }
+
+  // Apply translations to related questions too
+  const baseRelatedQuestions = baseQuestion.relatedQuestions ? getRelatedQuestions(baseQuestion.relatedQuestions) : []
+  const relatedQuestions = baseRelatedQuestions.map(q => applyTranslation(q, translations))
 
   // Build schemas based on question type
   const schemas: object[] = [

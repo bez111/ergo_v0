@@ -1,0 +1,74 @@
+[
+  {
+    "key": "topicsHub.hero.title",
+    "value": "Explore Ergo by",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "topicsHub.hero.titleHighlight",
+    "value": "Topic",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "topicsHub.hero.subtitle",
+    "value": "Deep dives into every major part of Ergo. Each topic hub brings together guides, docs, infographics, glossary terms, and practical playbooks.",
+    "context": "General content",
+    "maxLength": 211.5
+  },
+  {
+    "key": "topicsHub.hero.topicHubs",
+    "value": "Topic Hubs",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "topicsHub.hero.comprehensiveCoverage",
+    "value": "Comprehensive Coverage",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "topicsHub.card.keyTerms",
+    "value": "key terms",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "topicsHub.card.guidesAndDocs",
+    "value": "guides & docs",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "topicsHub.card.openHub",
+    "value": "Open hub",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "topicsHub.cta.title",
+    "value": "Looking for something specific?",
+    "context": "Title",
+    "maxLength": 46.5
+  },
+  {
+    "key": "topicsHub.cta.description",
+    "value": "Try our Q&A hub for quick answers or browse the glossary for term definitions.",
+    "context": "Description",
+    "maxLength": 117
+  },
+  {
+    "key": "topicsHub.cta.browseQA",
+    "value": "Browse Q&A",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "topicsHub.cta.viewGlossary",
+    "value": "View Glossary",
+    "context": "General content",
+    "maxLength": 19.5
+  }
+]

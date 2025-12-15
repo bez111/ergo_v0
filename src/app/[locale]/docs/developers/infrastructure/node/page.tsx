@@ -1,7 +1,7 @@
 
 /* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Server, Settings, TestTube, Network, Cog, Layers, ChevronLeft } from "lucide-react";
 
 export default function NodePage() {

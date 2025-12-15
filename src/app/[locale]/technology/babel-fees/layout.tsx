@@ -1,22 +1,49 @@
 import { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import {
-  createTechnologyMetadata,
   createTechArticleSchema,
   createFAQSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-// SEO Configuration
+interface Props {
+  params: Promise<{ locale: string }>
+  children: React.ReactNode
+}
+
 const SEO = {
   slug: "babel-fees",
-  title: "Babel Fees: Pay TX Fees in Any Token",
-  description: "Pay Ergo transaction fees in any token without holding ERG. Babel fees enable seamless DeFi UX by allowing fee payment in stablecoins, NFTs, or custom tokens.",
   ogImage: "/og/technology/babel-fees.png",
   keywords: [
     "Babel fees", "gas abstraction", "transaction fees", "DeFi UX",
     "token payment", "stablecoin fees", "Ergo DeFi", "fee abstraction",
     "EIP-31", "gasless transactions", "crypto UX", "token economics"
   ],
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'babelFees' })
+
+  const title = t('title')
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: SEO.keywords,
+    alternates: {
+      canonical: `https://ergoblockchain.org/technology/${SEO.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      url: `https://ergoblockchain.org/technology/${SEO.slug}`,
+      title,
+      description,
+      images: [{ url: SEO.ogImage, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", title, description },
+  }
 }
 
 // FAQ Content
@@ -39,16 +66,6 @@ const FAQ_ITEMS = [
   }
 ]
 
-// Metadata Export
-export const metadata: Metadata = createTechnologyMetadata(
-  SEO.slug,
-  SEO.title,
-  SEO.description,
-  SEO.ogImage,
-  SEO.keywords
-)
-
-// Layout with Schemas
 export default function BabelFeesLayout({ children }: { children: React.ReactNode }) {
   const schemas = [
     createTechArticleSchema(`/technology/${SEO.slug}`, {
@@ -74,4 +91,3 @@ export default function BabelFeesLayout({ children }: { children: React.ReactNod
     </>
   )
 }
-

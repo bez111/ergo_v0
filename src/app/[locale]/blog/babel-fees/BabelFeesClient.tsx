@@ -4,7 +4,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"

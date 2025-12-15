@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { getMessages } from 'next-intl/server'
 import { siteConfig } from "@/config/site-config"
 import { comparisons, getComparisonBySlug } from "@/data/comparisons"
+import { getLocalizedComparison, type ComparisonTranslations } from "@/data/comparisons-i18n"
 import { ComparePageClient } from "./ComparePageClient"
 import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
@@ -20,10 +22,21 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
   const slug = params.competitor.replace("ergo-vs-", "")
-  const comparison = getComparisonBySlug(slug)
+  const baseComparison = getComparisonBySlug(slug)
 
-  if (!comparison) {
+  if (!baseComparison) {
     return { title: "Comparison Not Found", description: "The requested comparison could not be found." }
+  }
+
+  // Get translations for non-English locales
+  let comparison = baseComparison
+  if (params.locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale: params.locale }) as { comparisonItems?: ComparisonTranslations }
+      comparison = getLocalizedComparison(baseComparison, messages?.comparisonItems)
+    } catch {
+      // Fallback to English
+    }
   }
 
   const origin = siteConfig.siteUrl
@@ -58,10 +71,21 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export default async function CompareDetailPage(props: Props) {
   const params = await props.params
   const slug = params.competitor.replace("ergo-vs-", "")
-  const comparison = getComparisonBySlug(slug)
+  const baseComparison = getComparisonBySlug(slug)
 
-  if (!comparison) {
+  if (!baseComparison) {
     notFound()
+  }
+
+  // Get translations for non-English locales
+  let comparison = baseComparison
+  if (params.locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale: params.locale }) as { comparisonItems?: ComparisonTranslations }
+      comparison = getLocalizedComparison(baseComparison, messages?.comparisonItems)
+    } catch {
+      // Fallback to English
+    }
   }
 
   const url = `/compare/ergo-vs-${comparison.slug}`

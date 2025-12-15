@@ -1,0 +1,20 @@
+[
+  {
+    "key": "startFaq.title",
+    "value": "Getting Started FAQ",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "startFaq.description",
+    "value": "Essential questions for newcomers to Ergo",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "startFaq.subtitle",
+    "value": "Your first steps with Ergo blockchain",
+    "context": "General content",
+    "maxLength": 55.5
+  }
+]

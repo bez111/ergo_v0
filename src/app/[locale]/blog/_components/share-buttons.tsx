@@ -12,16 +12,17 @@ interface ShareButtonsProps {
 export function ShareButtons({ title, description, url }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false)
   
-  const shareUrl = `https://ergoblockchain.org${url}`
-  const encodedUrl = encodeURIComponent(shareUrl)
-  const encodedTitle = encodeURIComponent(title)
-  const encodedDescription = encodeURIComponent(description)
+  const shareUrl = `https://ergoblockchain.org${url}?utm_source=share`
+  const shareTagline = 'via @BuildOnErgo $ERG'
+  
+  // Twitter: Title + URL + tagline on one line
+  const twitterText = `${title}\n${shareUrl} ${shareTagline}`
   
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=ergoplatformorg`,
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
-    telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`,
+    telegram: `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(`${title} ${shareTagline}`)}`
   }
   
   const handleCopyLink = async () => {
@@ -35,18 +36,26 @@ export function ShareButtons({ title, description, url }: ShareButtonsProps) {
   }
   
   const handleNativeShare = async () => {
-    if (navigator.share) {
+    const twitterTextForShare = `${title}\n${shareUrl} ${shareTagline}`
+    
+    // Only use native share on actual mobile devices
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    
+    if (isMobile && navigator.share) {
       try {
         await navigator.share({
           title,
-          text: description,
-          url: shareUrl
+          text: twitterTextForShare,
         })
       } catch (err) {
         if ((err as Error).name !== 'AbortError') {
-          console.error('Error sharing:', err)
+          // Fallback to Twitter on error
+          window.open(shareLinks.twitter, '_blank', 'noopener,noreferrer')
         }
       }
+    } else {
+      // Desktop fallback - open Twitter directly
+      window.open(shareLinks.twitter, '_blank', 'noopener,noreferrer,width=600,height=400')
     }
   }
   

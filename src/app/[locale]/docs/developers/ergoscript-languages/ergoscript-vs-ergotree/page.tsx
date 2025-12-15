@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Code2, FileCode, Info, Zap } from "lucide-react";
 
 export default function ErgoScriptVsErgoTreePage() {

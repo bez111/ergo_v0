@@ -7,7 +7,7 @@
  * Used on individual technology pages for automatic internal linking.
  */
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
@@ -16,7 +16,6 @@ import {
   getRelatedTechnologies,
   categoryLabels,
   categoryColors,
-  type TechnologyTopic 
 } from "@/data/technology-topics"
 
 interface RelatedTechnologiesProps {

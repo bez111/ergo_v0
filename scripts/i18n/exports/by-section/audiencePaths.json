@@ -1,0 +1,158 @@
+[
+  {
+    "key": "audiencePaths.title",
+    "value": "GET STARTED WITH ERGO",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "audiencePaths.subtitle",
+    "value": "Choose your path and start your journey in the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "audiencePaths.audiences.developers.title",
+    "value": "For Developers",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "audiencePaths.audiences.developers.description",
+    "value": "Build advanced DeFi applications and dApps with ErgoScript",
+    "context": "Description",
+    "maxLength": 87
+  },
+  {
+    "key": "audiencePaths.audiences.developers.cta",
+    "value": "Start Developing",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "audiencePaths.audiences.developers.links.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "audiencePaths.audiences.developers.links.technology",
+    "value": "Technology",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "audiencePaths.audiences.developers.links.useCases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "audiencePaths.audiences.miners.title",
+    "value": "For Miners",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "audiencePaths.audiences.miners.description",
+    "value": "Join the ASIC-resistant Autolykos mining network",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "audiencePaths.audiences.miners.cta",
+    "value": "Start Mining",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "audiencePaths.audiences.miners.links.miningDocs",
+    "value": "Mining Docs",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "audiencePaths.audiences.miners.links.miningPools",
+    "value": "Mining Pools",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "audiencePaths.audiences.miners.links.calculator",
+    "value": "Profitability Calculator",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "audiencePaths.audiences.users.title",
+    "value": "For Users",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "audiencePaths.audiences.users.description",
+    "value": "Explore the ecosystem and start using Ergo",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "audiencePaths.audiences.users.cta",
+    "value": "Get Wallet",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "audiencePaths.audiences.users.links.wallets",
+    "value": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "audiencePaths.audiences.users.links.ecosystem",
+    "value": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "audiencePaths.audiences.users.links.buyErg",
+    "value": "Buy ERG",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "audiencePaths.audiences.investors.title",
+    "value": "For Investors",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "audiencePaths.audiences.investors.description",
+    "value": "Learn about investment opportunities in the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 87
+  },
+  {
+    "key": "audiencePaths.audiences.investors.cta",
+    "value": "Learn About Investing",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "audiencePaths.audiences.investors.links.whatIsErgo",
+    "value": "What is Ergo",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "audiencePaths.audiences.investors.links.projects",
+    "value": "Projects",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "audiencePaths.audiences.investors.links.community",
+    "value": "Community",
+    "context": "General content",
+    "maxLength": 13.5
+  }
+]

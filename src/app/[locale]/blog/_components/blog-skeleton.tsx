@@ -1,4 +1,4 @@
-/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable  */
 import { SkeletonCard, SkeletonHero, SkeletonPagination } from "@/components/ui/skeleton"
 
 // Pre-computed widths to avoid Math.random() during render

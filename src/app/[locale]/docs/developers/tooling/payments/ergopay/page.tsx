@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { CodeBlock } from "@/components/ui";
 

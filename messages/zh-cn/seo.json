@@ -1,0 +1,36 @@
+{
+  "seo": {
+    "defaultTitle": "Ergo Platform - Contractual Money 的可持续Blockchain",
+    "defaultDescription": "Ergo 创建先进的加密功能和全新的DeFi功能，这是一个建立在长达十年的区块链理论和开发基础上的坚实基础。",
+    "keywords": "blockchain, cryptocurency, DeFi, 智能合同，Ergo, UTXO, 工作证明"
+  },
+  "footer": {
+    "platform": "平板",
+    "developers": "开发者",
+    "community": "常驻代表",
+    "technology": "技术",
+    "useCases": "使用案例",
+    "ecosystem": "生态环境",
+    "wallets": "钱包",
+    "documentation": "文件",
+    "learn": "学习",
+    "github": "GitHub",
+    "grants": "补助金",
+    "blog": "博客",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "推特",
+    "allRightsReserved": "ALL RIGHTS RESERVED.",
+    "copyright": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED.",
+    "openSource": "ERGO AN OPEN-SOURCE PROJECT.",
+    "contributeOnGithub": "CONTRIBUTE ON GITHUB",
+    "learnTitle": "得分",
+    "compare": "比较Blockchains",
+    "infographics": "信息图像",
+    "startHere": "从这里开始",
+    "glossary": "Glossary",
+    "faq": "常见问题",
+    "playbooks": "游戏书",
+    "patterns": "开发模式"
+  }
+}

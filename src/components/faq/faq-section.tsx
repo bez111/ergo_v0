@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { SchemaOrg } from '@/src/components/seo/schema-org'
+import { SchemaOrg } from '@/components/seo/schema-org'
 
 interface FAQItem {
   question: string

@@ -1,0 +1,242 @@
+[
+  {
+    "key": "faq.title",
+    "value": "Frequently Asked Questions",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "faq.subtitle",
+    "value": "Find answers to common questions about Ergo blockchain, technology, and ecosystem.",
+    "context": "FAQ content",
+    "maxLength": 123
+  },
+  {
+    "key": "faq.searchPlaceholder",
+    "value": "Search questions...",
+    "context": "FAQ content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "faq.noResults",
+    "value": "No questions found matching your search.",
+    "context": "FAQ content",
+    "maxLength": 60
+  },
+  {
+    "key": "faq.categories.all",
+    "value": "All Questions",
+    "context": "FAQ content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "faq.categories.basics",
+    "value": "Basics",
+    "context": "FAQ content",
+    "maxLength": 9
+  },
+  {
+    "key": "faq.categories.technology",
+    "value": "Technology",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "faq.categories.gettingStarted",
+    "value": "Getting Started",
+    "context": "FAQ content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "faq.categories.ecosystem",
+    "value": "Ecosystem",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faq.categories.community",
+    "value": "Community",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "faq.questions.basics.whatIsErgo.q",
+    "value": "What is Ergo?",
+    "context": "FAQ content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "faq.questions.basics.whatIsErgo.a",
+    "value": "Ergo is a next-generation smart contract platform that prioritizes economic freedom through decentralized, censorship-resistant, and secure financial contracts.",
+    "context": "FAQ content",
+    "maxLength": 240
+  },
+  {
+    "key": "faq.questions.basics.howDifferent.q",
+    "value": "How is Ergo different from other blockchains?",
+    "context": "FAQ content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "faq.questions.basics.howDifferent.a",
+    "value": "Ergo combines proven cryptographic features with innovative approaches like eUTXO model, storage rent, and Sigma protocols for enhanced security and sustainability.",
+    "context": "FAQ content",
+    "maxLength": 246
+  },
+  {
+    "key": "faq.questions.basics.ergToken.q",
+    "value": "What is ERG token?",
+    "context": "FAQ content",
+    "maxLength": 27
+  },
+  {
+    "key": "faq.questions.basics.ergToken.a",
+    "value": "ERG is Ergo's native cryptocurrency used for transaction fees, smart contract execution, and storage rent. It has a fixed supply cap of 97.7 million tokens.",
+    "context": "FAQ content",
+    "maxLength": 234
+  },
+  {
+    "key": "faq.questions.technologyFaq.eUTXO.q",
+    "value": "What is the eUTXO model?",
+    "context": "FAQ content",
+    "maxLength": 36
+  },
+  {
+    "key": "faq.questions.technologyFaq.eUTXO.a",
+    "value": "Extended UTXO (eUTXO) combines Bitcoin's UTXO security with Ethereum's smart contract expressiveness, enabling more predictable and secure dApps.",
+    "context": "FAQ content",
+    "maxLength": 217.5
+  },
+  {
+    "key": "faq.questions.technologyFaq.autolykos.q",
+    "value": "What is Autolykos consensus?",
+    "context": "FAQ content",
+    "maxLength": 42
+  },
+  {
+    "key": "faq.questions.technologyFaq.autolykos.a",
+    "value": "Autolykos v2 is Ergo's ASIC-resistant Proof-of-Work algorithm designed to be memory-hard and promote decentralized mining.",
+    "context": "FAQ content",
+    "maxLength": 183
+  },
+  {
+    "key": "faq.questions.technologyFaq.sigmaProtocols.q",
+    "value": "What are Sigma protocols?",
+    "context": "FAQ content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "faq.questions.technologyFaq.sigmaProtocols.a",
+    "value": "Sigma protocols enable powerful cryptographic proofs for privacy and complex smart contracts without revealing sensitive information.",
+    "context": "FAQ content",
+    "maxLength": 199.5
+  },
+  {
+    "key": "faq.questions.gettingStarted.getErg.q",
+    "value": "How do I get ERG tokens?",
+    "context": "FAQ content",
+    "maxLength": 36
+  },
+  {
+    "key": "faq.questions.gettingStarted.getErg.a",
+    "value": "You can buy ERG on exchanges like KuCoin, Gate.io, or CoinEx, or earn them through mining or participating in the ecosystem.",
+    "context": "FAQ content",
+    "maxLength": 186
+  },
+  {
+    "key": "faq.questions.gettingStarted.wallet.q",
+    "value": "Which wallet should I use?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "faq.questions.gettingStarted.wallet.a",
+    "value": "Popular options include Nautilus (browser extension), official mobile wallets, or hardware wallets like Ledger for maximum security.",
+    "context": "FAQ content",
+    "maxLength": 198
+  },
+  {
+    "key": "faq.questions.gettingStarted.startMining.q",
+    "value": "How do I start mining ERG?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "faq.questions.gettingStarted.startMining.a",
+    "value": "You can mine ERG using GPU miners. Check our mining guide for pool recommendations and setup instructions.",
+    "context": "FAQ content",
+    "maxLength": 159
+  },
+  {
+    "key": "faq.questions.ecosystem.dApps.q",
+    "value": "What dApps are available on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "faq.questions.ecosystem.dApps.a",
+    "value": "Ergo has DeFi protocols like SigmaUSD, DEXs like Spectrum, NFT platforms, and various tools. Explore the ecosystem page for more.",
+    "context": "FAQ content",
+    "maxLength": 193.5
+  },
+  {
+    "key": "faq.questions.ecosystem.defi.q",
+    "value": "What DeFi options are available?",
+    "context": "FAQ content",
+    "maxLength": 48
+  },
+  {
+    "key": "faq.questions.ecosystem.defi.a",
+    "value": "Ergo offers algorithmic stablecoins (SigmaUSD), decentralized exchanges, lending protocols, and yield farming opportunities.",
+    "context": "FAQ content",
+    "maxLength": 186
+  },
+  {
+    "key": "faq.questions.ecosystem.nfts.q",
+    "value": "Does Ergo support NFTs?",
+    "context": "FAQ content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "faq.questions.ecosystem.nfts.a",
+    "value": "Yes! Ergo has a vibrant NFT ecosystem with marketplaces, creation tools, and unique features like royalty enforcement.",
+    "context": "FAQ content",
+    "maxLength": 177
+  },
+  {
+    "key": "faq.questions.community.getHelp.q",
+    "value": "Where can I get help?",
+    "context": "FAQ content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "faq.questions.community.getHelp.a",
+    "value": "Join our Discord, Telegram, or visit the Ergo Forum. The community is welcoming and always ready to help newcomers.",
+    "context": "FAQ content",
+    "maxLength": 172.5
+  },
+  {
+    "key": "faq.questions.community.contribute.q",
+    "value": "How can I contribute to Ergo?",
+    "context": "FAQ content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "faq.questions.community.contribute.a",
+    "value": "You can contribute through development, documentation, community support, content creation, or applying for ecosystem grants.",
+    "context": "FAQ content",
+    "maxLength": 187.5
+  },
+  {
+    "key": "faq.questions.community.stayUpdated.q",
+    "value": "How do I stay updated with Ergo news?",
+    "context": "FAQ content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "faq.questions.community.stayUpdated.a",
+    "value": "Follow @ergoplatformorg on Twitter, join our Discord/Telegram, subscribe to the newsletter, or check the official blog.",
+    "context": "FAQ content",
+    "maxLength": 178.5
+  }
+]

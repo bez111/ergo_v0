@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-img-element */
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Eye } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';

@@ -1,0 +1,404 @@
+[
+  {
+    "key": "wallet.title",
+    "value": "Wallets",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "wallet.subtitle",
+    "value": "Secure your ERG",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "wallet.description",
+    "value": "Secure wallets for Ergo",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "wallet.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "wallet.webWallet",
+    "value": "Web Wallet",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "wallet.mobileWallet",
+    "value": "Mobile Wallet",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "wallet.desktopWallet",
+    "value": "Desktop Wallet",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "wallet.hardwareWallet",
+    "value": "Hardware Wallet",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "wallet.seo.title",
+    "value": "Wallets - Secure ERG Storage | Ergo Platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 66
+  },
+  {
+    "key": "wallet.seo.description",
+    "value": "Find the best Ergo wallets for secure ERG storage and transactions.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 100.5
+  },
+  {
+    "key": "wallet.seo.keywords",
+    "value": "Ergo wallet, ERG storage, Nautilus, SAFEW, mobile wallet",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 84
+  },
+  {
+    "key": "wallet.seo.ogTitle",
+    "value": "Ergo Wallets - Secure ERG Storage",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 49.5
+  },
+  {
+    "key": "wallet.seo.ogDescription",
+    "value": "Find the best Ergo wallets for secure ERG storage and transactions.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 100.5
+  },
+  {
+    "key": "wallet.seo.twitterTitle",
+    "value": "Ergo Wallets - Secure ERG Storage",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 49.5
+  },
+  {
+    "key": "wallet.seo.twitterDescription",
+    "value": "Find the best Ergo wallets for secure ERG storage and transactions.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 100.5
+  },
+  {
+    "key": "wallet.types.mobile.title",
+    "value": "Mobile Wallets",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "wallet.types.mobile.description",
+    "value": "Wallets for iOS and Android",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "wallet.types.desktop.title",
+    "value": "Desktop Wallets",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "wallet.types.desktop.description",
+    "value": "Wallets for Windows, Mac, and Linux",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "wallet.types.hardware.title",
+    "value": "Hardware Wallets",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "wallet.types.hardware.description",
+    "value": "Cold storage solutions",
+    "context": "Description",
+    "maxLength": 33
+  },
+  {
+    "key": "wallet.types.web.title",
+    "value": "Web Wallets",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "wallet.types.web.description",
+    "value": "Browser-based wallets",
+    "context": "Description",
+    "maxLength": 31.5
+  },
+  {
+    "key": "wallet.features.security",
+    "value": "Security",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "wallet.features.usability",
+    "value": "Ease of Use",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "wallet.features.features",
+    "value": "Features",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "wallet.features.platforms",
+    "value": "Platforms",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "wallet.recommended.title",
+    "value": "Recommended Wallets",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "wallet.recommended.description",
+    "value": "Our top picks for different use cases",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "wallet.security_first",
+    "value": "Security First",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "wallet.desktop_mobile_mobile_browser_extension_browser",
+    "value": "Desktop\",\n  mobile: \"Mobile\",\n  \"browser-extension\": \"Browser",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "wallet.hardware_paper_paper_node_node",
+    "value": "Hardware\",\n  paper: \"paper\",\n  node: \"node",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "wallet.chrome_firefox_android_ios",
+    "value": "Chrome\", \"Firefox\", \"Android\", \"iOS",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "wallet.windows_macos_linux",
+    "value": "Windows\", \"macOS\", \"Linux",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "wallet.full_node_integration_enhanced_privacy",
+    "value": "Full Node Integration\", \"Enhanced Privacy\", \"Offline Vault\", \"Token Management",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "wallet.desktop_isofficial_true_isrecommended_true",
+    "value": "Desktop\",\n    isOfficial: true,\n    isRecommended: true,\n    websiteUrl: \"https://satergo.com/",
+    "context": "General content",
+    "maxLength": 141
+  },
+  {
+    "key": "wallet.ergomixer_privacy_quick_setup_no_download_required",
+    "value": "ErgoMixer Privacy\", \"Quick Setup\", \"No Download Required",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "wallet.browser_websiteurl_https_safew_org",
+    "value": "Browser\",\n    websiteUrl: \"https://safew.org/",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "wallet.multi_signature_mobile_first_user_friendly",
+    "value": "Multi-Signature\", \"Mobile-first\", \"User-friendly",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "wallet.cold_storage_physical_confirmation_recovery_phrase",
+    "value": "Cold Storage\", \"Physical Confirmation\", \"Recovery Phrase",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "wallet.hardware_websiteurl_https_www_ledger_com",
+    "value": "Hardware\",\n    websiteUrl: \"https://www.ledger.com/",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "wallet.cold_storage_no_internet_required_printable_keys",
+    "value": "Cold Storage\", \"No Internet Required\", \"Printable Keys",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "wallet.full_node_integration_cli_api_access_cold_storage",
+    "value": "Full Node Integration\", \"CLI/API Access\", \"Cold Storage",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "wallet.offline_key_generation_and_storage",
+    "value": "Offline key generation and storage for maximum security.",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "wallet.offer_price",
+    "value": "Offer',\n            price:",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "wallet.aggregaterating_ratingvalue",
+    "value": "AggregateRating',\n            ratingValue:",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "wallet.home_item_https_ergoblockchain_org",
+    "value": "Home',\n        item: 'https://ergoblockchain.org",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "wallet.schema.name",
+    "value": "Ergo Wallets",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "wallet.schema.description",
+    "value": "Collection of secure wallets for Ergo blockchain",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "wallet.schema.wallets.nautilus.name",
+    "value": "Nautilus Wallet",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "wallet.schema.wallets.nautilus.description",
+    "value": "Feature-rich browser extension wallet for Ergo with dApp connectivity",
+    "context": "Description",
+    "maxLength": 103.5
+  },
+  {
+    "key": "wallet.schema.wallets.satergo.name",
+    "value": "Satergo Wallet",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "wallet.schema.wallets.satergo.description",
+    "value": "Desktop wallet with full node integration and advanced features",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "wallet.ui.features",
+    "value": "Features",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "wallet.ui.visitWebsite",
+    "value": "Visit Website",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "wallet.ui.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "wallet.ui.securityTitle",
+    "value": "Security First",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "wallet.ui.securityNote",
+    "value": "Always download wallets from official sources and verify checksums for maximum security.",
+    "context": "General content",
+    "maxLength": 132
+  },
+  {
+    "key": "wallet.ui.platforms",
+    "value": "Platforms",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "wallet.ui.users",
+    "value": "Users",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "wallet.ui.rating",
+    "value": "Rating",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "wallet.ui.recommended",
+    "value": "Recommended",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "wallet.ui.official",
+    "value": "Official",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "wallet.ui.allWallets",
+    "value": "All Wallets",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "wallet.ui.filterBy",
+    "value": "Filter by:",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "wallet.ui.searchWallets",
+    "value": "Search wallets...",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "wallet.ui.noWalletsFound",
+    "value": "No wallets found matching your criteria.",
+    "context": "General content",
+    "maxLength": 60
+  }
+]

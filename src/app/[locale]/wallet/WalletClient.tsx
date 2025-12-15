@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/badge"
 import {
   Shield,
@@ -20,7 +20,6 @@ import {
   ShieldCheck} from "lucide-react"
 import { LucideIcon } from "lucide-react"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 
@@ -162,7 +161,6 @@ const allWallets: Wallet[] = [
 export default function WalletClient() {
   const t = useTranslations("wallet")
   const [isClient, setIsClient] = useState(false)
-  const localizedPath = useLocalizedPath();
 
   useEffect(() => {
     setIsClient(true)
@@ -403,7 +401,7 @@ export default function WalletClient() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link 
-              href={localizedPath("/use/get-erg")}
+              href="/use/get-erg"
               className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div className="flex items-start gap-4 mb-4">
@@ -419,7 +417,7 @@ export default function WalletClient() {
             </Link>
             
             <Link
-              href={localizedPath("/docs")}
+              href="/docs"
               className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div className="flex items-start gap-4 mb-4">

@@ -212,12 +212,32 @@ aside .sticky-toc {
     @apply bg-background text-foreground;
   }
   
-  /* ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Proper focus indicators */
+  /* ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Enhanced focus indicators for WCAG 2.1 AA */
   :focus-visible {
-    outline: 2px solid #f59e0b !important; /* orange-500 */
-    outline-offset: 2px;
+    outline: 3px solid #f59e0b !important; /* orange-500 - thicker for visibility */
+    outline-offset: 3px;
     border-radius: 4px;
-    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+    box-shadow: 
+      0 0 0 6px rgba(245, 158, 11, 0.25),
+      0 0 20px rgba(245, 158, 11, 0.4) !important;
+    transition: outline-offset 0.15s ease-out, box-shadow 0.15s ease-out;
+  }
+  
+  /* Animated focus ring for better visibility */
+  @keyframes focus-pulse {
+    0%, 100% { box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.25), 0 0 20px rgba(245, 158, 11, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.35), 0 0 30px rgba(245, 158, 11, 0.5); }
+  }
+  
+  :focus-visible:not(:active) {
+    animation: focus-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Disable animation for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    :focus-visible:not(:active) {
+      animation: none;
+    }
   }
 
   /* ✅ Skip link стили */
@@ -256,10 +276,29 @@ aside .sticky-toc {
   /* ✅ Улучшенные состояния для интерактивных элементов */
   button:focus-visible,
   a:focus-visible,
-  [role="button"]:focus-visible {
-    outline: 2px solid #f59e0b !important;
-    outline-offset: 2px !important;
-    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1) !important;
+  [role="button"]:focus-visible,
+  [role="link"]:focus-visible,
+  [role="tab"]:focus-visible,
+  [role="menuitem"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid #f59e0b !important;
+    outline-offset: 3px !important;
+    box-shadow: 
+      0 0 0 6px rgba(245, 158, 11, 0.25),
+      0 0 20px rgba(245, 158, 11, 0.4) !important;
+    z-index: 1; /* Ensure focus ring is visible above siblings */
+    position: relative;
+  }
+  
+  /* Cards and containers with focus-within */
+  .card:focus-within,
+  article:focus-within,
+  [class*="Card"]:focus-within {
+    outline: 2px solid rgba(245, 158, 11, 0.5);
+    outline-offset: 4px;
+    border-radius: 12px;
   }
   /* ✅ Respect reduced motion preferences */
   @media (prefers-reduced-motion: reduce) {

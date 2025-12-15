@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { getMessages } from 'next-intl/server'
 import { PatternPageClient } from "./PatternPageClient"
-import { devPatterns, getPatternBySlug, categoryLabels } from "@/data/dev-patterns"
+import { devPatterns, getPatternBySlug, categoryLabels, type DevPattern } from "@/data/dev-patterns"
+import { getLocalizedPatterns, type PatternsTranslations } from "@/data/patterns-i18n"
 import { siteConfig } from "@/config/site-config"
 import { createBreadcrumbSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
@@ -11,13 +13,31 @@ interface Props {
   params: Promise<{ slug: string; locale: string }>
 }
 
+// Helper to get localized pattern by slug
+function getLocalizedPatternBySlug(slug: string, translations?: PatternsTranslations): DevPattern | undefined {
+  const patterns = getLocalizedPatterns(translations)
+  return patterns.find(p => p.slug === slug)
+}
+
 export async function generateStaticParams() {
   return devPatterns.map((pattern) => ({ slug: pattern.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const pattern = getPatternBySlug(slug)
+  const { slug, locale } = await params
+  
+  // Get translations for non-English locales
+  let pattern: DevPattern | undefined
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { patternsData?: PatternsTranslations }
+      pattern = getLocalizedPatternBySlug(slug, messages?.patternsData)
+    } catch {
+      pattern = getPatternBySlug(slug)
+    }
+  } else {
+    pattern = getPatternBySlug(slug)
+  }
   
   if (!pattern) {
     return { title: "Pattern Not Found" }
@@ -44,19 +64,40 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PatternPage({ params }: Props) {
-  const { slug } = await params
-  const pattern = getPatternBySlug(slug)
+  const { slug, locale } = await params
+  
+  // Get translations for non-English locales
+  let pattern: DevPattern | undefined
+  let translations: PatternsTranslations | undefined
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { patternsData?: PatternsTranslations }
+      translations = messages?.patternsData
+      pattern = getLocalizedPatternBySlug(slug, translations)
+    } catch {
+      pattern = getPatternBySlug(slug)
+    }
+  } else {
+    pattern = getPatternBySlug(slug)
+  }
   
   if (!pattern) {
     notFound()
   }
 
   const relatedPatterns = pattern.relatedPatterns
-    .map(slug => getPatternBySlug(slug))
+    .map(s => translations ? getLocalizedPatternBySlug(s, translations) : getPatternBySlug(s))
     .filter(Boolean)
 
   const categoryLabel = categoryLabels[pattern.category]
 
+  // Map pattern difficulty to schema proficiency level
+  const difficultyMap: Record<string, "Beginner" | "Intermediate" | "Advanced"> = {
+    beginner: "Beginner",
+    intermediate: "Intermediate",
+    advanced: "Advanced"
+  }
+  
   const schemas = [
     createTechArticleSchema(`/patterns/${slug}`, {
       headline: pattern.title,
@@ -64,7 +105,7 @@ export default async function PatternPage({ params }: Props) {
       datePublished: pattern.publishDate,
       dateModified: pattern.updatedDate || pattern.publishDate,
       keywords: pattern.keywords,
-      proficiencyLevel: pattern.difficulty,
+      proficiencyLevel: difficultyMap[pattern.difficulty],
     }),
     createBreadcrumbSchema([
       { name: "Patterns", href: "/patterns" },

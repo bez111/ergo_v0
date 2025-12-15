@@ -5,7 +5,6 @@ import { infographics } from "@/data/infographics"
 import {
   createBreadcrumbSchema,
   createCollectionSchema,
-  createItemListSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 

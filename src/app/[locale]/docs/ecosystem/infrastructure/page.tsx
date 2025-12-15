@@ -12,7 +12,7 @@ import {
   Link2,
   ChevronRight
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function InfrastructurePage() {
   const infraSections = [

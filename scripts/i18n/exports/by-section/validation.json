@@ -1,0 +1,44 @@
+[
+  {
+    "key": "validation.required",
+    "value": "Field {field} is required",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "validation.email.invalid",
+    "value": "Please enter a valid email address",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "validation.email.required",
+    "value": "Email address is required",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "validation.minLength",
+    "value": "{field} must contain at least {min} characters (current: {current})",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "validation.maxLength",
+    "value": "{field} must contain at most {max} characters (current: {current})",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "validation.pattern",
+    "value": "Invalid format for field {field}",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "validation.custom",
+    "value": "Field {field} is invalid",
+    "context": "General content",
+    "maxLength": 36
+  }
+]

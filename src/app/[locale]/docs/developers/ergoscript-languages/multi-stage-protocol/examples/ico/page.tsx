@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Coins, Copy, Check } from "lucide-react";
 import { InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";

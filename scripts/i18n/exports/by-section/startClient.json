@@ -1,0 +1,236 @@
+[
+  {
+    "key": "startClient.loading",
+    "value": "Loading...",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "startClient.skipToDocs",
+    "value": "Skip to Docs",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "startClient.recommended",
+    "value": "Recommended",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "startClient.steps",
+    "value": "steps",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "startClient.minTotal",
+    "value": "min total",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "startClient.changePath",
+    "value": "Change Path",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "startClient.journeyProgress",
+    "value": "Journey Progress",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "startClient.ofCompleted",
+    "value": "of",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "startClient.completed",
+    "value": "completed",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "startClient.journeyComplete",
+    "value": "Journey Complete!",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "startClient.start",
+    "value": "Start",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "startClient.review",
+    "value": "Review",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "startClient.congratulations",
+    "value": "Congratulations!",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "startClient.completedJourneyMessage",
+    "value": "You've completed the {journey} journey. Ready for the next challenge?",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "startClient.chooseAnotherPath",
+    "value": "Choose Another Path",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "startClient.exploreDocs",
+    "value": "Explore Docs",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "startClient.developerManifesto",
+    "value": "Developer Manifesto",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "startClient.stats.learningPaths.value",
+    "value": "5",
+    "context": "General content",
+    "maxLength": 1.5
+  },
+  {
+    "key": "startClient.stats.learningPaths.label",
+    "value": "Learning Paths",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "startClient.stats.quickStart.value",
+    "value": "< 30min",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "startClient.stats.quickStart.label",
+    "value": "Quick Start",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "startClient.stats.openSource.value",
+    "value": "100%",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "startClient.stats.openSource.label",
+    "value": "Open Source",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "startClient.stats.community.value",
+    "value": "24/7",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "startClient.stats.community.label",
+    "value": "Community",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "startClient.tailoredGuides.title",
+    "value": "Tailored",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "startClient.tailoredGuides.titleHighlight",
+    "value": "Guides",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "startClient.tailoredGuides.subtitle",
+    "value": "Deep-dive resources for specific user types",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "startClient.tailoredGuides.miners.title",
+    "value": "For Miners",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "startClient.tailoredGuides.miners.description",
+    "value": "GPU-friendly Autolykos PoW, fair rewards",
+    "context": "Description",
+    "maxLength": 60
+  },
+  {
+    "key": "startClient.tailoredGuides.holders.title",
+    "value": "For Holders",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "startClient.tailoredGuides.holders.description",
+    "value": "Sound tokenomics, DeFi, long-term value",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "startClient.tailoredGuides.builders.title",
+    "value": "For Builders",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "startClient.tailoredGuides.builders.description",
+    "value": "ErgoScript, SDKs, grants for developers",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "startClient.quickLinks.faq",
+    "value": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "startClient.quickLinks.joinCommunity",
+    "value": "Join Community",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "startClient.quickLinks.takeQuiz",
+    "value": "Take the Quiz",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "startClient.emailCapture.title",
+    "value": "Get Started with Ergo",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "startClient.emailCapture.description",
+    "value": "Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox",
+    "context": "Description",
+    "maxLength": 136.5
+  }
+]

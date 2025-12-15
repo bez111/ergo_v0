@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from "react"
 import { Card } from "./card"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
@@ -49,7 +49,7 @@ function CardInner({
           <div className="flex items-start gap-3 mb-3">
             {icon && (
               <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                {React.cloneElement(icon as React.ReactElement, { className: "w-5 h-5 text-orange-400" })}
+                {React.cloneElement(icon as React.ReactElement<{ className?: string }>, { className: "w-5 h-5 text-orange-400" })}
               </div>
             )}
             <div className="flex-1 min-w-0">

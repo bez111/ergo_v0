@@ -48,9 +48,10 @@ type SchemaData =
   | DefinedTerm
   | DefinedTermSet
   | BreadcrumbList
+  | Record<string, unknown> // Allow custom schemas
 
 interface SchemaOrgProps {
-  type: SchemaType
+  type: SchemaType | string // Allow custom types
   data: SchemaData
 }
 

@@ -1,6 +1,6 @@
 "use client"
 
-/* eslint-disable react-compiler/react-compiler, @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps */
 
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"

@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useMining.title",
+    "value": "Mining",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "useMining.description",
+    "value": "Mining ERG with Autolykos proof-of-work algorithm",
+    "context": "Description",
+    "maxLength": 73.5
+  },
+  {
+    "key": "useMining.subtitle",
+    "value": "Solo and pool mining guides",
+    "context": "General content",
+    "maxLength": 40.5
+  }
+]

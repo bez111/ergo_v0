@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect, useMemo } from "react";
 import { X, Search, FileText, Code, ExternalLink, Clock, Filter, Globe, BookOpen, MessageSquare, Calendar, Trash2, Lightbulb, Map, Layers, HelpCircle, Image, Pickaxe, Users } from "lucide-react";
 import { buildDocsSearchIndex, DocsSearchIndexItem, searchWithTypos } from "@/lib/docs-search-index";
 import { useSearchHistory } from "@/hooks/use-search-history";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 function highlight(text: string, query: string) {
   if (!query) return text;

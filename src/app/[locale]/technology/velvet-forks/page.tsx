@@ -13,7 +13,7 @@ import { useTranslations } from "next-intl"
 import { 
   GitBranch, Shield, Lock, CheckCircle, Layers, RefreshCw, Settings, Users, TrendingUp, ChevronDown, Terminal
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState } from "react"
 import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 

@@ -7,6 +7,8 @@ import {
   createTechArticleSchema,
   createFAQSchema,
   createHowToSchema,
+  getAlternates,
+  getCanonicalUrl,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
@@ -18,13 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('title'),
     description: t('description'),
     keywords: ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative"],
-    alternates: {
-      canonical: "https://ergoblockchain.org/use/babel-fees"
-    },
+    alternates: getAlternates('/use/babel-fees', locale),
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: "https://ergoblockchain.org/use/babel-fees",
+      url: getCanonicalUrl('/use/babel-fees', locale),
       siteName: "Ergo Platform",
       images: [{
         url: "https://ergoblockchain.org/og/babel-fees.png",

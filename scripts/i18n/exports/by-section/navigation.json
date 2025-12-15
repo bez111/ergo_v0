@@ -1,0 +1,476 @@
+[
+  {
+    "key": "navigation.home",
+    "value": "Home",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "navigation.start",
+    "value": "Start",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "navigation.use",
+    "value": "Use",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "navigation.ecosystem",
+    "value": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "navigation.technology",
+    "value": "Technology",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "navigation.learn",
+    "value": "Learn",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "navigation.glossary",
+    "value": "Glossary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "navigation.knowledge base",
+    "value": "Knowledge Base",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "navigation.topics",
+    "value": "Topics",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "navigation.q&a hub",
+    "value": "Q&A Hub",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "navigation.playbooks",
+    "value": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "navigation.dev patterns",
+    "value": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "navigation.docs",
+    "value": "Docs",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "navigation.blog",
+    "value": "Blog",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "navigation.community",
+    "value": "Community",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "navigation.communityNav",
+    "value": "COMMUNITY",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "navigation.getWallet",
+    "value": "Get Wallet",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "navigation.searchAriaLabel",
+    "value": "Search",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "navigation.quick introduction",
+    "value": "Quick Introduction",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "navigation.platform comparison",
+    "value": "Platform Comparison",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "navigation.onboarding quiz",
+    "value": "Onboarding Quiz",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "navigation.join the community",
+    "value": "Join the Community",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "navigation.faq for beginners",
+    "value": "FAQ for Beginners",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "navigation.faq",
+    "value": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "navigation.use cases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "navigation.get erg",
+    "value": "Get ERG",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "navigation.how-to guides",
+    "value": "How-to Guides",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "navigation.mine erg",
+    "value": "Mine ERG",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "navigation.earn with defi",
+    "value": "Earn with DeFi",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "navigation.transaction fees (babel fees)",
+    "value": "Transaction Fees (Babel Fees)",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "navigation.explore dapps & services",
+    "value": "Explore dApps & Services",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "navigation.ecosystem map",
+    "value": "Ecosystem Map",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "navigation.mining pools & resources",
+    "value": "Mining Pools & Resources",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "navigation.ecosystem grants & funding",
+    "value": "Ecosystem Grants & Funding",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "navigation.overview",
+    "value": "Overview",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "navigation.eutxo model",
+    "value": "eUTXO Model",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "navigation.ergoscript",
+    "value": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "navigation.secure pow (autolykos v2)",
+    "value": "Secure PoW (Autolykos v2)",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "navigation.storage rent",
+    "value": "Storage Rent",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "navigation.nipopows",
+    "value": "NIPOPOWs",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "navigation.privacy features (σ-protocols)",
+    "value": "Privacy Features (Σ-protocols)",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "navigation.learning hub",
+    "value": "Learning Hub",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "navigation.learn ergoscript",
+    "value": "Learn ErgoScript",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "navigation.research & papers",
+    "value": "Research & Papers",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "navigation.user & developer guides",
+    "value": "User & Developer Guides",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "navigation.a_brief_overview_of_ergo_and_its_core_purpose_description",
+    "value": "A brief overview of Ergo and its core purpose.",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "navigation.quick_introduction_description",
+    "value": "A brief overview of Ergo and its core purpose.",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "navigation.platform_comparison_description",
+    "value": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "navigation.onboarding_quiz_description",
+    "value": "Find your personalized path—investor, developer, miner, NFT enthusiast, and more.",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "navigation.join_the_community_description",
+    "value": "Connect via Discord, Telegram, Reddit, and the official forum.",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "navigation.faq_for_beginners_description",
+    "value": "Answers to the most common questions for newcomers.",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "navigation.use_cases_description",
+    "value": "Explore different ways to leverage Ergo's capabilities across various domains.",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "navigation.get_erg_description",
+    "value": "Learn how to buy, exchange, or earn ERG (markets, P2P, exchanges, guides).",
+    "context": "General content",
+    "maxLength": 111
+  },
+  {
+    "key": "navigation.how_to_guides_description",
+    "value": "Step-by-step tutorials for wallets, using dApps, transfers, 2FA setup, and more.",
+    "context": "General content",
+    "maxLength": 120
+  },
+  {
+    "key": "navigation.mine_erg_description",
+    "value": "Learn how to start mining, find mining pools, requirements, and beginner tips.",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "navigation.earn_with_defi_description",
+    "value": "Discover where and how to earn through staking, farming, lending, lotteries.",
+    "context": "General content",
+    "maxLength": 114
+  },
+  {
+    "key": "navigation.transaction_fees_babel_fees_description",
+    "value": "All about network fees and paying them with different tokens.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "navigation.platformComparisonDescription",
+    "value": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "navigation.onboardingQuizDescription",
+    "value": "Find your personalized path—investor, developer, miner, NFT enthusiast, and more.",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "navigation.joinTheCommunityDescription",
+    "value": "Connect via Discord, Telegram, Reddit, and the official forum.",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "navigation.faqForBeginnersDescription",
+    "value": "Answers to the most common questions for newcomers.",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "navigation.useCasesDescription",
+    "value": "Explore different ways to leverage Ergo's capabilities across various domains.",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "navigation.getErgDescription",
+    "value": "Learn how to buy, exchange, or earn ERG (markets, P2P, exchanges, guides).",
+    "context": "General content",
+    "maxLength": 111
+  },
+  {
+    "key": "navigation.explore_dapps_services_description",
+    "value": "One-stop catalog of dApps, services, and community projects with advanced search and filters.",
+    "context": "General content",
+    "maxLength": 139.5
+  },
+  {
+    "key": "navigation.ecosystem_map_description",
+    "value": "Visual map of projects, tools, and teams with interactive clusters and filters.",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "navigation.mining_pools_resources_description",
+    "value": "List of mining pools and useful tools for miners.",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "navigation.ecosystem_grants_funding_description",
+    "value": "Opportunities for project grants and ecosystem funding.",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "navigation.technology_overview_description",
+    "value": "Overview of Ergo's core technology and innovations.",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "navigation.eutxo_model_description",
+    "value": "An extended UTXO model delivering security and expressiveness for advanced smart contracts.",
+    "context": "General content",
+    "maxLength": 136.5
+  },
+  {
+    "key": "navigation.ergoscript_description",
+    "value": "A powerful and secure scripting language designed for developing complex and reliable financial contracts.",
+    "context": "General content",
+    "maxLength": 159
+  },
+  {
+    "key": "navigation.secure_pow_autolykos_v2_description",
+    "value": "An ASIC-resistant Proof-of-Work algorithm promoting decentralization and long-term network security.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "navigation.storage_rent_description",
+    "value": "A mechanism to prevent blockchain bloat and ensure its long-term economic sustainability.",
+    "context": "General content",
+    "maxLength": 133.5
+  },
+  {
+    "key": "navigation.nipopows_description",
+    "value": "Innovative technology enabling ultra-secure and efficient light client operation.",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "navigation.privacy_features_sigma_protocols_description",
+    "value": "Advanced cryptographic capabilities for optionally enhancing the privacy of transactions and data.",
+    "context": "General content",
+    "maxLength": 147
+  },
+  {
+    "key": "navigation.learn_ergoscript_description",
+    "value": "Comprehensive ErgoScript tutorial series from beginner to expert level",
+    "context": "General content",
+    "maxLength": 105
+  },
+  {
+    "key": "navigation.research_papers_description",
+    "value": "Academic research, whitepapers, and foundational studies.",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "navigation.user_developer_guides_description",
+    "value": "All guides and how-tos for users and developers in one place.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "navigation.faq_description",
+    "value": "Answers to frequently asked questions and common issues.",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "navigation.how_ergo_compares_to_bitcoin_ethereum_solana_and_other_blockchains_description",
+    "value": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.",
+    "context": "General content",
+    "maxLength": 103.5
+  }
+]

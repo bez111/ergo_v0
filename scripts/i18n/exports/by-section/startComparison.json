@@ -1,0 +1,20 @@
+[
+  {
+    "key": "startComparison.title",
+    "value": "Platform Comparison",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "startComparison.description",
+    "value": "How Ergo compares to other blockchain platforms",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "startComparison.subtitle",
+    "value": "Technical and feature comparison",
+    "context": "General content",
+    "maxLength": 48
+  }
+]

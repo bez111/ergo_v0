@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Shield, FileText, Hash, Database, Layers, CheckCircle, Zap, Lock } from "lucide-react";
 
 export default function BlockADProofsPage() {

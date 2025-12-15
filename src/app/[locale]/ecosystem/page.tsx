@@ -6,7 +6,6 @@ import {
   createBreadcrumbSchema,
   createFAQSchema,
   createCollectionSchema,
-  createItemListSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { siteConfig } from "@/config/site-config"
@@ -65,14 +64,6 @@ const FAQ_ITEMS = [
 
 export default function EcosystemPage() {
   const sorted = sortedAllProjects
-
-  // Build ItemList for projects
-  const itemListItems = sorted.map((p, i) => ({
-    name: p.name,
-    url: p.url,
-    description: p.description,
-    position: i + 1,
-  }))
 
   const schemas = [
     // ItemList schema

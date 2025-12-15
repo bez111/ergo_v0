@@ -1,0 +1,44 @@
+[
+  {
+    "key": "errors.network.offline",
+    "value": "You appear to be offline. Please check your connection.",
+    "context": "Error message",
+    "maxLength": 82.5
+  },
+  {
+    "key": "errors.network.timeout",
+    "value": "Request timed out. Please try again.",
+    "context": "Error message",
+    "maxLength": 54
+  },
+  {
+    "key": "errors.network.serverError",
+    "value": "Server error occurred. Please try again later.",
+    "context": "Error message",
+    "maxLength": 69
+  },
+  {
+    "key": "errors.form.submissionFailed",
+    "value": "Failed to submit form. Please try again.",
+    "context": "Error message",
+    "maxLength": 60
+  },
+  {
+    "key": "errors.form.invalidData",
+    "value": "Please check your input and try again.",
+    "context": "Error message",
+    "maxLength": 57
+  },
+  {
+    "key": "errors.general.unexpected",
+    "value": "An unexpected error occurred",
+    "context": "Error message",
+    "maxLength": 42
+  },
+  {
+    "key": "errors.general.tryAgain",
+    "value": "Please try again",
+    "context": "Error message",
+    "maxLength": 24
+  }
+]

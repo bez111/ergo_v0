@@ -33,7 +33,7 @@ import {
   Key as MultiKey,
   Server as SigningServer
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function MinotaurPage() {
   return (

@@ -1,0 +1,518 @@
+[
+  {
+    "key": "minersPage.hero.title",
+    "value": "Mine with GPUs. Earn forever. Stay profitable.",
+    "context": "Title",
+    "maxLength": 69
+  },
+  {
+    "key": "minersPage.hero.subtitle",
+    "value": "ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.",
+    "context": "General content",
+    "maxLength": 136.5
+  },
+  {
+    "key": "minersPage.hero.cta",
+    "value": "Start Mining Ergo",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "minersPage.hero.checkProfitability",
+    "value": "Check Profitability",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "minersPage.hero.whyMine",
+    "value": "Why mine Ergo instead of other coins?",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "minersPage.stats.networkHashrate",
+    "value": "Network Hashrate",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "minersPage.stats.blockReward",
+    "value": "Block Reward",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "minersPage.stats.blockTime",
+    "value": "Block Time",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "minersPage.stats.activeMiners",
+    "value": "Active Miners",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "minersPage.stats.miningPools",
+    "value": "Mining Pools",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "minersPage.coreValues.asicResistant.title",
+    "value": "ASIC-Resistant",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "minersPage.coreValues.asicResistant.description",
+    "value": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive.",
+    "context": "Description",
+    "maxLength": 150
+  },
+  {
+    "key": "minersPage.coreValues.asicResistant.highlight",
+    "value": "Level playing field",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "minersPage.coreValues.fairLaunch.title",
+    "value": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "minersPage.coreValues.fairLaunch.description",
+    "value": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one.",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "minersPage.coreValues.fairLaunch.highlight",
+    "value": "No insider dumps",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "minersPage.coreValues.realUseCases.title",
+    "value": "Real Use Cases",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "minersPage.coreValues.realUseCases.description",
+    "value": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value.",
+    "context": "Description",
+    "maxLength": 151.5
+  },
+  {
+    "key": "minersPage.coreValues.realUseCases.highlight",
+    "value": "Sustainable demand",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "minersPage.coreValues.storageRent.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "minersPage.coreValues.storageRent.description",
+    "value": "Built-in mechanism ensuring miners get paid beyond block rewards. Long-term sustainability by design.",
+    "context": "Description",
+    "maxLength": 151.5
+  },
+  {
+    "key": "minersPage.coreValues.storageRent.highlight",
+    "value": "Future-proof",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "minersPage.calculator.title",
+    "value": "Mining",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "minersPage.calculator.titleHighlight",
+    "value": "Profitability",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "minersPage.calculator.titleSuffix",
+    "value": "Calculator",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "minersPage.calculator.subtitle",
+    "value": "Calculate your potential earnings mining Ergo",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "minersPage.calculator.hashrate",
+    "value": "Hashrate (MH/s)",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "minersPage.calculator.power",
+    "value": "Power Consumption (W)",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "minersPage.calculator.electricity",
+    "value": "Electricity Cost ($/kWh)",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "minersPage.calculator.ergPrice",
+    "value": "ERG Price (USD)",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "minersPage.calculator.dailyErgMined",
+    "value": "Daily ERG Mined",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "minersPage.calculator.dailyRevenue",
+    "value": "Daily Revenue",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "minersPage.calculator.dailyPowerCost",
+    "value": "Daily Power Cost",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "minersPage.calculator.dailyProfit",
+    "value": "Daily Profit",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "minersPage.calculator.monthly",
+    "value": "Monthly",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "minersPage.calculator.yearly",
+    "value": "Yearly",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "minersPage.calculator.roiTime",
+    "value": "ROI Time (GPU @ $500)",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "minersPage.calculator.note",
+    "value": "Calculations are estimates based on current network difficulty and price.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "minersPage.calculator.gpuPresets",
+    "value": "Popular GPU Presets:",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "minersPage.calculator.readyToStart",
+    "value": "Ready to start mining?",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "minersPage.calculator.poolFee",
+    "value": "Pool Fee (%)",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "minersPage.calculator.monthlyProfit",
+    "value": "Monthly Profit",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "minersPage.calculator.yearlyProfit",
+    "value": "Yearly Profit",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "minersPage.pools.title",
+    "value": "Mining",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "minersPage.pools.titleHighlight",
+    "value": "Pools",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "minersPage.pools.titleSuffix",
+    "value": "Directory",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "minersPage.pools.hashrate",
+    "value": "Hashrate",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "minersPage.pools.miners",
+    "value": "Miners",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "minersPage.pools.minPayout",
+    "value": "Min Payout",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "minersPage.pools.payment",
+    "value": "Payment",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "minersPage.pools.noPoolsFound",
+    "value": "No pools match your criteria",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "minersPage.software.title",
+    "value": "Mining",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "minersPage.software.titleHighlight",
+    "value": "Software",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "minersPage.software.headers.software",
+    "value": "Software",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "minersPage.software.headers.gpuSupport",
+    "value": "GPU Support",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "minersPage.software.headers.devFee",
+    "value": "Dev Fee",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "minersPage.software.headers.bestFor",
+    "value": "Best For",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "minersPage.software.newToMining",
+    "value": "New to mining? Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.",
+    "context": "General content",
+    "maxLength": 132
+  },
+  {
+    "key": "minersPage.comparison.title",
+    "value": "How ERG Mining Compares",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "minersPage.comparison.headers.criterion",
+    "value": "Criterion",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "minersPage.comparison.headers.bitcoin",
+    "value": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "minersPage.comparison.headers.ethereum",
+    "value": "Ethereum",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "minersPage.comparison.headers.monero",
+    "value": "Monero",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "minersPage.comparison.headers.ergo",
+    "value": "Ergo",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "minersPage.comparison.deepDive",
+    "value": "Deep dive: Detailed comparison",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "minersPage.tools.openTool",
+    "value": "Open Tool",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "minersPage.tools.viewGuide",
+    "value": "View Guide",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "minersPage.joinNetwork.title",
+    "value": "Join the",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "minersPage.joinNetwork.titleHighlight",
+    "value": "Network",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "minersPage.joinNetwork.startMining.title",
+    "value": "Start Mining Now",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "minersPage.joinNetwork.startMining.subtitle",
+    "value": "Complete Guide",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "minersPage.joinNetwork.joinChat.title",
+    "value": "Join Miners' Chat",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "minersPage.joinNetwork.joinChat.subtitle",
+    "value": "Community Support",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "minersPage.joinNetwork.learnEconomics.title",
+    "value": "Learn Economics",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "minersPage.joinNetwork.learnEconomics.subtitle",
+    "value": "Long-term Viability",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "minersPage.joinNetwork.holdLongTerm.title",
+    "value": "Want to hold long-term?",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "minersPage.joinNetwork.holdLongTerm.description",
+    "value": "Learn about ERG as a store of value and investment",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "minersPage.faq.title",
+    "value": "Mining FAQ",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "minersPage.faq.questions.0.question",
+    "value": "What hardware do I need to mine ERG?",
+    "context": "FAQ content",
+    "maxLength": 54
+  },
+  {
+    "key": "minersPage.faq.questions.0.answer",
+    "value": "Any modern GPU with 4GB+ VRAM can mine ERG efficiently. AMD and NVIDIA cards both work well. Popular choices include RTX 3070, RTX 4070, and RX 6800.",
+    "context": "FAQ content",
+    "maxLength": 223.5
+  },
+  {
+    "key": "minersPage.faq.questions.1.question",
+    "value": "Which mining software should I use?",
+    "context": "FAQ content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "minersPage.faq.questions.1.answer",
+    "value": "lolMiner and T-Rex are the most popular options for ERG mining. Both are free (with dev fee) and support Windows and Linux.",
+    "context": "FAQ content",
+    "maxLength": 184.5
+  },
+  {
+    "key": "minersPage.faq.questions.2.question",
+    "value": "What is the current block reward?",
+    "context": "FAQ content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "minersPage.faq.questions.2.answer",
+    "value": "The current block reward is dynamically adjusted. Check the network stats above for the latest reward amount.",
+    "context": "FAQ content",
+    "maxLength": 163.5
+  },
+  {
+    "key": "minersPage.faq.questions.3.question",
+    "value": "Is solo mining profitable?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "minersPage.faq.questions.3.answer",
+    "value": "For most miners, pool mining is more consistent. Solo mining requires significant hashrate to find blocks regularly.",
+    "context": "FAQ content",
+    "maxLength": 174
+  }
+]

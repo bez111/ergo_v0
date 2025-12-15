@@ -1,4 +1,4 @@
-import { Organization, WebSite, SoftwareApplication, Product, Event, Person } from '@/src/types/schema'
+import { Organization, WebSite, SoftwareApplication, Product, Event, Person } from '@/types/schema'
 
 export const ORGANIZATION_SCHEMA: Organization = {
   '@type': 'Organization',

@@ -104,24 +104,24 @@ export const linkingRules: LinkRule[] = [
     maxLinksPerPage: 1
   },
 
-  // Use Cases
+  // Use Cases - Updated to new simplified URL structure
   {
     keywords: ['DeFi', 'decentralized finance'],
-    targetUrl: '/use/cases/defi',
+    targetUrl: '/use/defi',
     title: 'DeFi Use Cases',
     priority: 8,
     maxLinksPerPage: 1
   },
   {
     keywords: ['privacy', 'confidential transactions'],
-    targetUrl: '/use/cases/privacy',
+    targetUrl: '/use/privacy',
     title: 'Privacy Features',
     priority: 7,
     maxLinksPerPage: 1
   },
   {
     keywords: ['NFT', 'NFTs', 'non-fungible tokens'],
-    targetUrl: '/use/cases/nfts',
+    targetUrl: '/use/nfts',
     title: 'NFTs on Ergo',
     priority: 6,
     maxLinksPerPage: 1

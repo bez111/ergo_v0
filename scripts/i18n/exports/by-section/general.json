@@ -1,0 +1,152 @@
+[
+  {
+    "key": "general.this_is_a_static_page",
+    "value": "This is a static page without any locale processing.",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "general.ergo_platform_subtitle_decentralized_money",
+    "value": "Ergo Platform\",\n    subtitle: \"Decentralized Money for a Free Society\",\n    description: \"Resilient blockchain platform\",\n    exploreErgo: \"Explore Ergo\",\n    chooseYourPath: \"Choose Your Path",
+    "context": "General content",
+    "maxLength": 288
+  },
+  {
+    "key": "general.plateforme_ergo_subtitle",
+    "value": "Plateforme Ergo\", \n    subtitle:",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "general.explorer_ergo_chooseyourpath_choisissez_votre_voie",
+    "value": "Explorer Ergo\",\n    chooseYourPath: \"Choisissez votre voie",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "general.ergo_plattform_subtitle",
+    "value": "Ergo Plattform\",\n    subtitle:",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "general.robuste_blockchain_plattform_exploreergo_ergo",
+    "value": "Robuste Blockchain-Plattform\",\n    exploreErgo: \"Ergo erkunden\",\n    chooseYourPath:",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "general.plataforma_ergo_subtitle_dinero_descentralizado",
+    "value": "Plataforma Ergo\",\n    subtitle: \"Dinero descentralizado para una sociedad libre\",\n    description: \"Plataforma blockchain resistente\",\n    exploreErgo: \"Explorar Ergo\",\n    chooseYourPath: \"Elige tu camino",
+    "context": "General content",
+    "maxLength": 307.5
+  },
+  {
+    "key": "general.piattaforma_ergo_subtitle",
+    "value": "Piattaforma Ergo\",\n    subtitle:",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "general.piattaforma_blockchain_resiliente_exploreergo_esplora",
+    "value": "Piattaforma blockchain resiliente\",\n    exploreErgo: \"Esplora Ergo\",\n    chooseYourPath: \"Scegli il tuo percorso",
+    "context": "General content",
+    "maxLength": 168
+  },
+  {
+    "key": "general.decentralized_money_for_a_free_society",
+    "value": "Decentralized Money for a Free Society",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "general.resilient_blockchain_platform",
+    "value": "Resilient blockchain platform",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "general.argent_d_centralis_pour_une_soci_t_libre",
+    "value": "Argent décentralisé pour une société libre",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "general.plateforme_blockchain_r_siliente",
+    "value": "Plateforme blockchain résiliente",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "general.dezentrales_geld_f_r_eine_freie_gesellschaft",
+    "value": "Dezentrales Geld für eine freie Gesellschaft",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "general.robuste_blockchain_plattform",
+    "value": "Robuste Blockchain-Plattform",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "general.dinero_descentralizado_para_una_sociedad_libre",
+    "value": "Dinero descentralizado para una sociedad libre",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "general.plataforma_blockchain_resistente",
+    "value": "Plataforma blockchain resistente",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "general.denaro_decentralizzato_per_una_societ_libera",
+    "value": "Denaro decentralizzato per una società libera",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "general.piattaforma_blockchain_resiliente",
+    "value": "Piattaforma blockchain resiliente",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "general.ergo_platform_publisher_ergo_platform",
+    "value": "Ergo Platform\",\n    publisher: \"Ergo Platform",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "general.ergo_platform_title_t_defaulttitle",
+    "value": "Ergo Platform',\n      title: t('defaultTitle'),\n      description: t('defaultDescription",
+    "context": "General content",
+    "maxLength": 132
+  },
+  {
+    "key": "general.skip_to_main_content",
+    "value": "Skip to main content",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "general.this_is_the_simplest_page_possible",
+    "value": "This is the simplest page possible.",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "general.this_is_a_simple_test_page",
+    "value": "This is a simple test page.",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "general.test_other_languages",
+    "value": "Test other languages:",
+    "context": "General content",
+    "maxLength": 31.5
+  }
+]

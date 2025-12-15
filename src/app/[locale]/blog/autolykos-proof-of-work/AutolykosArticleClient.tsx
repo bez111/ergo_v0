@@ -26,7 +26,7 @@ import {
   Network,
   Activity,
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export default function AutolykosArticleClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)

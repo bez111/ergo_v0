@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { BookOpen, Globe, Code, Pickaxe, Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import NavLink from "@/components/nav-link"

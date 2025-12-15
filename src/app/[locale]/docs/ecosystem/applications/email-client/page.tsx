@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Globe, Mail, Zap, Info, BookOpen, ExternalLink, Shield, ArrowRight, ChevronRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function EmailClientPage() {
   return (

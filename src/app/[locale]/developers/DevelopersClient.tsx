@@ -4,7 +4,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import {
   Code,
   Shield,
@@ -40,7 +40,7 @@ import {
 } from "lucide-react"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"

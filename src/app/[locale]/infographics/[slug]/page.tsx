@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { getMessages } from 'next-intl/server';
 import { UniversalInfographicClient } from '@/components/infographics/UniversalInfographicClient';
 import { infographics } from '@/data/infographics';
+import { getLocalizedInfographic, type InfographicTranslations } from '@/data/infographics-i18n';
 import { siteConfig } from '@/config/site-config';
 
 interface Props {
@@ -10,13 +12,24 @@ interface Props {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
-  const infographic = infographics.find(item => item.slug === params.slug);
+  const baseInfographic = infographics.find(item => item.slug === params.slug);
 
-  if (!infographic) {
+  if (!baseInfographic) {
     return {
       title: 'Infographic Not Found',
       description: 'The requested infographic could not be found.',
     };
+  }
+
+  // Get translations for non-English locales
+  let infographic = baseInfographic;
+  if (params.locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale: params.locale }) as { infographicItems?: InfographicTranslations };
+      infographic = getLocalizedInfographic(baseInfographic, messages?.infographicItems);
+    } catch {
+      // Fallback to English
+    }
   }
 
   const origin = siteConfig.siteUrl;
@@ -63,10 +76,21 @@ export async function generateStaticParams() {
 
 export default async function InfographicDetailPage(props: Props) {
   const params = await props.params;
-  const infographic = infographics.find(item => item.slug === params.slug);
+  const baseInfographic = infographics.find(item => item.slug === params.slug);
 
-  if (!infographic) {
+  if (!baseInfographic) {
     notFound();
+  }
+
+  // Get translations for non-English locales
+  let infographic = baseInfographic;
+  if (params.locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale: params.locale }) as { infographicItems?: InfographicTranslations };
+      infographic = getLocalizedInfographic(baseInfographic, messages?.infographicItems);
+    } catch {
+      // Fallback to English
+    }
   }
 
   return <UniversalInfographicClient infographic={infographic} />;

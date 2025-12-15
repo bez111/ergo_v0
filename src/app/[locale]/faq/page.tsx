@@ -9,7 +9,8 @@ export const revalidate = 86400
 
 const url = `${siteConfig.siteUrl}/faq`
 
-const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "")
+// Helper to create URL-safe slugs from strings
+// const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "")
 const firstSentence = (s: string) => {
   const m = s.replace(/\s+/g, " ").match(/(.+?[.!?])\s/)
   return (m?.[1] || s).slice(0, 500)

@@ -1,12 +1,10 @@
 "use client"
 
-import Link from "next/link"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
+import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 
 export function Footer() {
   const t = useTranslations("footer")
-  const localizedPath = useLocalizedPath()
   
   return (
     <footer className="border-t border-primary/30 bg-black relative overflow-hidden z-50" role="contentinfo" aria-label="Site footer">
@@ -18,22 +16,22 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary" id="footer-platform">{t("platform") || "PLATFORM"}</div>
             <nav className="flex flex-col gap-px" aria-labelledby="footer-platform">
-              <Link href={localizedPath("technology")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/technology" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("technology") || "Technology"}
               </Link>
-              <Link href={localizedPath("use")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/use" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("useCases") || "Use Cases"}
               </Link>
-              <Link href={localizedPath("ecosystem")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/ecosystem" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("ecosystem") || "Ecosystem"}
               </Link>
-              <Link href={localizedPath("compare")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/compare" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("compare") || "Compare"}
               </Link>
-              <Link href={localizedPath("infographics")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/infographics" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("infographics") || "Infographics"}
               </Link>
-              <Link href={localizedPath("wallet")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/wallet" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("wallets") || "Wallets"}
               </Link>
             </nav>
@@ -42,22 +40,22 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary" id="footer-learn">{t("learnTitle") || "LEARN"}</div>
             <nav className="flex flex-col gap-px" aria-labelledby="footer-learn">
-              <Link href={localizedPath("start")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/start" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("startHere") || "Start Here"}
               </Link>
-              <Link href={localizedPath("docs")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/docs" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("documentation") || "Documentation"}
               </Link>
-              <Link href={localizedPath("learn/glossary")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/learn/glossary" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("glossary") || "Glossary"}
               </Link>
-              <Link href={localizedPath("faq")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/faq" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("faq") || "FAQ"}
               </Link>
-              <Link href={localizedPath("playbooks")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/playbooks" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("playbooks") || "Playbooks"}
               </Link>
-              <Link href={localizedPath("patterns")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/patterns" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("patterns") || "Dev Patterns"}
               </Link>
             </nav>
@@ -81,7 +79,7 @@ export function Footer() {
               <Link href="https://github.com/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono" target="_blank" rel="noopener noreferrer">
                 {t("github") || "GitHub"}
               </Link>
-              <Link href={localizedPath("ecosystem/grants")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="/ecosystem/grants" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("grants") || "Grants"}
               </Link>
             </nav>

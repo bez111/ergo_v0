@@ -1,6 +1,4 @@
 import type { Metadata } from "next"
-import { siteConfig } from "@/config/site-config"
-import { comparisons } from "@/data/comparisons"
 import { CompareHubClient } from "./CompareHubClient"
 import {
   createHubMetadata,

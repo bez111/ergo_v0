@@ -395,7 +395,7 @@ export function createEventSchema(config: EventConfig) {
   }
 }
 
-export default {
+const schemaHelpers = {
   createBreadcrumbSchema,
   createFAQSchema,
   createTechArticleSchema,
@@ -410,4 +410,6 @@ export default {
   createFinancialServiceSchema,
   createEventSchema,
 }
+
+export default schemaHelpers
 

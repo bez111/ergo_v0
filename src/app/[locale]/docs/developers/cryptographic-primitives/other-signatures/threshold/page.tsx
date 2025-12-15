@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { CodeBlock } from "@/components/ui";
 
 export default function ThresholdSignaturesPage() {

@@ -4,7 +4,7 @@
 
 import React from "react";
 import { TrendingUp, Coins, Layers, Flame, ChevronRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function FinancialPage() {
   const financialSections = [

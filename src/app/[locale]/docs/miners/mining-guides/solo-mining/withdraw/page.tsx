@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { ArrowLeft, Wallet, CreditCard, ArrowDown, Coins } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function WithdrawPage() {
   return (

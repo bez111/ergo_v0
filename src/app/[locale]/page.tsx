@@ -54,29 +54,40 @@ interface HomePageProps {
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'seo' });
+  const t = await getTranslations({ locale, namespace: 'seo.home.meta' });
+  
+  const canonicalUrl = locale === 'en' ? siteConfig.siteUrl : `${siteConfig.siteUrl}/${locale}`;
   
   return {
-    title: "Ergo Blockchain — MEV-Resistant PoW Smart Contracts",
-    description: "PoW eUTXO blockchain for DeFi, privacy and sound money. Predictable low fees, no pre-mine, no VC – built by a cypherpunk community for financial freedom.",
-    keywords: "ergo blockchain, decentralized finance, MEV resistant blockchain, eUTXO model, censorship resistant money, ASIC resistant mining, fair launch cryptocurrency, programmable money, financial sovereignty, cypherpunk blockchain, DeFi, privacy, sound money",
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': siteConfig.siteUrl,
+        'ru': `${siteConfig.siteUrl}/ru`,
+        'x-default': siteConfig.siteUrl
+      }
+    },
     openGraph: {
-      title: "Ergo Blockchain — Money Without Masters",
-      description: "PoW eUTXO blockchain for DeFi, privacy and sound money. No MEV, no VC control – built by cypherpunks for financial freedom.",
-      url: siteConfig.siteUrl,
-      siteName: "Ergo Blockchain",
+      title: t('og.title'),
+      description: t('og.description'),
+      url: canonicalUrl,
+      siteName: t('og.siteName'),
       type: "website",
+      locale: locale === 'ru' ? 'ru_RU' : 'en_US',
       images: [{
         url: "https://ergoblockchain.org/og/homepage.png",
         width: 1200,
         height: 630,
-        alt: "Ergo Blockchain - Money Without Masters"
+        alt: t('og.imageAlt')
       }]
     },
     twitter: {
       card: "summary_large_image",
-      title: "Ergo Blockchain — Money Without Masters",
-      description: "PoW eUTXO blockchain for DeFi, privacy and sound money. No MEV, no VC – built by cypherpunks for freedom.",
+      title: t('twitter.title'),
+      description: t('twitter.description'),
       images: ["https://ergoblockchain.org/og/homepage.png"],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle
@@ -86,35 +97,18 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'seo.home' });
   
   console.debug(`Locale: ${locale}`);
 
-  // FAQ data for schema - commercially important questions
+  // FAQ data for schema - commercially important questions (localized)
   const faqData = [
-    {
-      question: "What is Ergo?",
-      answer: "Ergo is a secure, open-source Proof-of-Work blockchain for programmable, censorship-resistant money. It uses the eUTXO model combining Bitcoin's security with smart contract capabilities, optional privacy, and predictable low fees (~$0.01)."
-    },
-    {
-      question: "How to buy ERG?",
-      answer: "You can buy ERG on exchanges like KuCoin, Gate.io, Bitpanda, or decentralized exchanges like Spectrum Finance. First get a wallet (Nautilus, SAFEW, or Ergo Mobile Wallet), then purchase ERG and withdraw to your wallet address."
-    },
-    {
-      question: "Is Ergo a good investment?",
-      answer: "Ergo has a fixed supply of 97.7M ERG with no pre-mine and fair launch. It's a Proof-of-Work blockchain with unique technology (eUTXO, Sigma Protocols). As with any cryptocurrency, do your own research and only invest what you can afford to lose."
-    },
-    {
-      question: "What makes Ergo different from other blockchains?",
-      answer: "Ergo uses the eUTXO model for MEV-resistant, predictable transactions. It features Sigma Protocols for optional privacy, Storage Rent for long-term sustainability, and Autolykos for ASIC-resistant GPU mining. Fair launch with no VC funding."
-    },
-    {
-      question: "How to get started with Ergo?",
-      answer: "1) Download a wallet (Nautilus for browser, Ergo Mobile Wallet for phone). 2) Back up your seed phrase securely. 3) Get ERG from an exchange or DEX. 4) Explore DeFi apps like Spectrum Finance, SigmaUSD, or ErgoMixer."
-    },
-    {
-      question: "What wallets support Ergo?",
-      answer: "Popular Ergo wallets include Nautilus (browser extension), SAFEW (full-featured web wallet), Ergo Mobile Wallet (iOS/Android), Terminus (mobile), and Satergo (desktop). Hardware wallet support is available through Ledger integration."
-    }
+    { question: t('faq.items.0.question'), answer: t('faq.items.0.answer') },
+    { question: t('faq.items.1.question'), answer: t('faq.items.1.answer') },
+    { question: t('faq.items.2.question'), answer: t('faq.items.2.answer') },
+    { question: t('faq.items.3.question'), answer: t('faq.items.3.answer') },
+    { question: t('faq.items.4.question'), answer: t('faq.items.4.answer') },
+    { question: t('faq.items.5.question'), answer: t('faq.items.5.answer') },
   ]
 
   return (
@@ -125,7 +119,7 @@ export default async function HomePage({ params }: HomePageProps) {
           src: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "Ergo Platform - Resilient Blockchain for Contractual Money",
+          alt: t('meta.heroImageAlt'),
           format: "png"
         }}
       />

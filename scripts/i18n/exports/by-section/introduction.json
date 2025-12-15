@@ -1,0 +1,530 @@
+[
+  {
+    "key": "introduction.hero.title",
+    "value": "Ergo — PoW smart‑contract platform with eUTXO & Sigma Protocols",
+    "context": "Title",
+    "maxLength": 94.5
+  },
+  {
+    "key": "introduction.hero.subtitle",
+    "value": "A next‑generation, ASIC‑resistant Proof‑of‑Work platform with predictable, auditable smart contracts and native privacy.",
+    "context": "General content",
+    "maxLength": 180
+  },
+  {
+    "key": "introduction.breadcrumb.home",
+    "value": "Home",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "introduction.breadcrumb.introduction",
+    "value": "Introduction",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "introduction.schema.tech_article.headline",
+    "value": "Ergo — PoW smart‑contract platform (eUTXO & Sigma Protocols)",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "introduction.schema.tech_article.description",
+    "value": "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs.",
+    "context": "Description",
+    "maxLength": 165
+  },
+  {
+    "key": "introduction.what_is_ergo.title",
+    "value": "What is",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "introduction.what_is_ergo.description_1",
+    "value": "Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.",
+    "context": "Description",
+    "maxLength": 334.5
+  },
+  {
+    "key": "introduction.what_is_ergo.description_2",
+    "value": "Its mission is to provide tools for decentralized and accessible financial systems — empowering people with economic freedom without intermediaries. Learn about the",
+    "context": "Description",
+    "maxLength": 246
+  },
+  {
+    "key": "introduction.what_is_ergo.and",
+    "value": "and",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "introduction.what_is_ergo.links.eutxo_model",
+    "value": "eUTXO smart‑contract model",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "introduction.what_is_ergo.links.autolykos",
+    "value": "Autolykos (ASIC‑resistant PoW)",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "introduction.what_is_ergo.links.storage_rent",
+    "value": "Storage Rent",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "introduction.what_is_ergo.links.sigma_privacy",
+    "value": "Sigma‑powered privacy",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "introduction.why_ergo.title",
+    "value": "Why Ergo?",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "introduction.why_ergo.items.eutxo_contracts",
+    "value": "eUTXO smart contracts with predictable execution",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "introduction.why_ergo.items.sigma_protocols",
+    "value": "Sigma (ZK) protocols for threshold/multisig and privacy",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "introduction.why_ergo.items.autolykos_pow",
+    "value": "Autolykos — ASIC‑resistant, GPU‑friendly PoW",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "introduction.why_ergo.items.storage_rent_nipopows",
+    "value": "Storage Rent and NIPoPoWs (succinct proofs)",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "introduction.key_innovation.title",
+    "value": "Key Innovation",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "introduction.key_innovation.description",
+    "value": "Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, creating a unique platform for complex financial applications.",
+    "context": "Description",
+    "maxLength": 252
+  },
+  {
+    "key": "introduction.references.label",
+    "value": "References",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "introduction.references.autolykos_v2",
+    "value": "Autolykos v2",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "introduction.references.ergo_github",
+    "value": "ergo (GitHub)",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introduction.features.privacy_first.title",
+    "value": "Privacy First",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introduction.features.privacy_first.description",
+    "value": "Built-in privacy at the protocol level",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "introduction.features.storage_rent.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "introduction.features.storage_rent.description",
+    "value": "Sustainable economic model for long-term viability",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "introduction.features.light_clients.title",
+    "value": "Light Clients",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introduction.features.light_clients.description",
+    "value": "Succinct proofs (NIPoPoWs), near full-node guarantees",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "introduction.features.fair_launch.title",
+    "value": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introduction.features.fair_launch.description",
+    "value": "No premine, no ICO, community-driven",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "introduction.principles.decentralized_first.title",
+    "value": "Decentralized First",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "introduction.principles.decentralized_first.description",
+    "value": "Launched fairly with no premine or ICO. Community-driven for maximum decentralization.",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "introduction.principles.secure_reliable.title",
+    "value": "Secure & Reliable",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "introduction.principles.secure_reliable.description",
+    "value": "Built on Proof-of-Work consensus (Autolykos) and the innovative eUTXO model.",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "introduction.principles.powerful_contracts.title",
+    "value": "Powerful Contracts",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "introduction.principles.powerful_contracts.description",
+    "value": "ErgoScript enables secure financial apps that are hard to implement safely in account-based models.",
+    "context": "Description",
+    "maxLength": 148.5
+  },
+  {
+    "key": "introduction.principles.long_term_focus.title",
+    "value": "Long-term Focus",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "introduction.principles.long_term_focus.description",
+    "value": "Designed for resilience with focus on real-world utility over speculation.",
+    "context": "Description",
+    "maxLength": 111
+  },
+  {
+    "key": "introduction.core_principles.title",
+    "value": "Core",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "introduction.core_principles.principles",
+    "value": "Principles",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "introduction.core_principles.subtitle",
+    "value": "Built on fundamental values that ensure long-term sustainability and real-world utility",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "introduction.technologies.proof_of_work.title",
+    "value": "Proof-of-Work (PoW)",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "introduction.technologies.proof_of_work.subtitle",
+    "value": "Maximum security",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "introduction.technologies.proof_of_work.description",
+    "value": "Autolykos algorithm is ASIC-resistant, ensuring fair distribution and robust security.",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "introduction.technologies.extended_utxo.title",
+    "value": "Extended UTXO",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introduction.technologies.extended_utxo.subtitle",
+    "value": "Smart money",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introduction.technologies.extended_utxo.description",
+    "value": "Allows complex smart contracts with better scalability and predictable fees.",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "introduction.technologies.sigma_protocols.title",
+    "value": "Sigma Protocols",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "introduction.technologies.sigma_protocols.subtitle",
+    "value": "Advanced cryptography",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "introduction.technologies.sigma_protocols.description",
+    "value": "Enables privacy and advanced crypto primitives (threshold/multisig, ring-like constructions).",
+    "context": "Description",
+    "maxLength": 139.5
+  },
+  {
+    "key": "introduction.key_technologies.title",
+    "value": "Key",
+    "context": "Title",
+    "maxLength": 4.5
+  },
+  {
+    "key": "introduction.key_technologies.technologies",
+    "value": "Technologies",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "introduction.key_technologies.subtitle",
+    "value": "Advanced cryptography and innovative consensus mechanisms power the Ergo platform",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "introduction.learn_more",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "introduction.code_example.title",
+    "value": "ErgoScript Example: Time-Locked Contract",
+    "context": "Title",
+    "maxLength": 60
+  },
+  {
+    "key": "introduction.code_example.comment_after",
+    "value": "After deadline, only recipient can spend",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "introduction.code_example.comment_before",
+    "value": "Before deadline, only sender can spend",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "introduction.what_makes_different.what_makes",
+    "value": "WHAT MAKES",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "introduction.what_makes_different.ergo_different",
+    "value": "ERGO DIFFERENT",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "introduction.what_makes_different.subtitle",
+    "value": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable",
+    "context": "General content",
+    "maxLength": 211.5
+  },
+  {
+    "key": "introduction.pillars.fair_launch_pow.title",
+    "value": "FAIR LAUNCH & PROOF-OF-WORK",
+    "context": "Title",
+    "maxLength": 40.5
+  },
+  {
+    "key": "introduction.pillars.fair_launch_pow.description",
+    "value": "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+    "context": "Description",
+    "maxLength": 273
+  },
+  {
+    "key": "introduction.pillars.eutxo_ergoscript.title",
+    "value": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+    "context": "Title",
+    "maxLength": 54
+  },
+  {
+    "key": "introduction.pillars.eutxo_ergoscript.description",
+    "value": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+    "context": "Description",
+    "maxLength": 268.5
+  },
+  {
+    "key": "introduction.pillars.storage_rent_sustainability.title",
+    "value": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+    "context": "Title",
+    "maxLength": 61.5
+  },
+  {
+    "key": "introduction.pillars.storage_rent_sustainability.description",
+    "value": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient.",
+    "context": "Description",
+    "maxLength": 277.5
+  },
+  {
+    "key": "introduction.pillars.research_driven.title",
+    "value": "RESEARCH-DRIVEN INNOVATION",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "introduction.pillars.research_driven.description",
+    "value": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+    "context": "Description",
+    "maxLength": 214.5
+  },
+  {
+    "key": "introduction.pillars.optional_privacy.title",
+    "value": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+    "context": "Title",
+    "maxLength": 55.5
+  },
+  {
+    "key": "introduction.pillars.optional_privacy.description",
+    "value": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+    "context": "Description",
+    "maxLength": 294
+  },
+  {
+    "key": "introduction.pillars.community_led.title",
+    "value": "COMMUNITY-LED DEVELOPMENT",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "introduction.pillars.community_led.description",
+    "value": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+    "context": "Description",
+    "maxLength": 279
+  },
+  {
+    "key": "introduction.faq.title",
+    "value": "FAQ",
+    "context": "FAQ content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "introduction.faq.eutxo_model.question",
+    "value": "What is the eUTXO model?",
+    "context": "FAQ content",
+    "maxLength": 36
+  },
+  {
+    "key": "introduction.faq.eutxo_model.answer",
+    "value": "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs.",
+    "context": "FAQ content",
+    "maxLength": 187.5
+  },
+  {
+    "key": "introduction.faq.sigma_protocols.question",
+    "value": "What are Sigma protocols on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "introduction.faq.sigma_protocols.answer",
+    "value": "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup.",
+    "context": "FAQ content",
+    "maxLength": 165
+  },
+  {
+    "key": "introduction.faq.proof_of_work.question",
+    "value": "Why Proof‑of‑Work for Ergo?",
+    "context": "FAQ content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "introduction.faq.proof_of_work.answer",
+    "value": "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record.",
+    "context": "FAQ content",
+    "maxLength": 186
+  },
+  {
+    "key": "introduction.cta.title",
+    "value": "Ready to",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "introduction.cta.dive_in",
+    "value": "Dive In",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "introduction.cta.description",
+    "value": "Your journey into the Ergo ecosystem is just a few clicks away. Get a secure wallet and start exploring the future of finance.",
+    "context": "Description",
+    "maxLength": 189
+  },
+  {
+    "key": "introduction.cta.buttons.get_wallet",
+    "value": "Get an Ergo Wallet",
+    "context": "Button label - keep short",
+    "maxLength": 27
+  },
+  {
+    "key": "introduction.cta.buttons.explore_ecosystem",
+    "value": "Explore Ecosystem",
+    "context": "Button label - keep short",
+    "maxLength": 25.5
+  },
+  {
+    "key": "introduction.cta.buttons.documentation",
+    "value": "Documentation",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introduction.last_updated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "key": "comparePageClient.breadcrumbTitle",
+    "value": "Ergo vs {name}",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "comparePageClient.heroVs",
+    "value": "vs",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "comparePageClient.heroTitle",
+    "value": "Ergo vs",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "comparePageClient.sections.featureComparison",
+    "value": "Feature",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "comparePageClient.sections.featureComparisonHighlight",
+    "value": "Comparison",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "comparePageClient.sections.feature",
+    "value": "Feature",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "comparePageClient.sections.advantageNote",
+    "value": "indicates advantage in that category. Last updated:",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "comparePageClient.sections.deepDive",
+    "value": "Deep",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "comparePageClient.sections.deepDiveHighlight",
+    "value": "Dive",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "comparePageClient.sections.ergoAdvantage",
+    "value": "Ergo Advantage",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "comparePageClient.sections.relatedArticles",
+    "value": "Related",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "comparePageClient.sections.relatedArticlesHighlight",
+    "value": "Articles",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "comparePageClient.sections.minRead",
+    "value": "min read",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "comparePageClient.sections.relatedInfographics",
+    "value": "Related",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "comparePageClient.sections.relatedInfographicsHighlight",
+    "value": "Infographics",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "comparePageClient.sections.faq",
+    "value": "Frequently Asked",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "comparePageClient.sections.faqHighlight",
+    "value": "Questions",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "comparePageClient.sections.moreComparisons",
+    "value": "More",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "comparePageClient.sections.moreComparisonsHighlight",
+    "value": "Comparisons",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "comparePageClient.cta.title",
+    "value": "Ready to Experience Ergo?",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "comparePageClient.cta.description",
+    "value": "Join thousands of users who chose decentralization, security, and financial freedom.",
+    "context": "Description",
+    "maxLength": 126
+  },
+  {
+    "key": "comparePageClient.cta.getWallet",
+    "value": "Get a Wallet",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "comparePageClient.cta.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  }
+]

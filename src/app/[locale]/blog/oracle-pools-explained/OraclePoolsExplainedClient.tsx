@@ -21,9 +21,6 @@ import {
   Network,
   Eye,
   CheckCircle,
-  ExternalLink,
-  FileText,
-  BookOpen,
   Zap,
   Code,
   AlertTriangle,
@@ -31,7 +28,7 @@ import {
   Users,
   Lock
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export function OraclePoolsExplainedClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)

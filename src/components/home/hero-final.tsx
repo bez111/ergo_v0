@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps, react-hooks/set-state-in-effect */
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
 import { CyberButton } from "@/components/animations/cyber-button"
@@ -13,11 +13,12 @@ export function HeroFinal() {
   const t = useTranslations('hero')
   const locale = useLocale()
   
+  // Localized hero messages
   const HERO_MESSAGES = [
-    "Money Without Masters",
-    "Global Settlement Layer",
-    "Digital Freedom Platform", 
-    "Decentralized By Design",
+    t('message1'),
+    t('message2'),
+    t('message3') || "Digital Freedom Platform", 
+    t('message4') || "Decentralized By Design",
   ]
   const [typedText, setTypedText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
@@ -169,7 +170,7 @@ export function HeroFinal() {
               }}
               asChild
             >
-              <Link href={locale === 'en' ? '/start' : `/${locale}/start`}>
+              <Link href="/start">
                 <span>&gt;</span>
                 <span>{t('startHere') || "Start Here"}</span>
                 <span className="animate-pulse">_</span>
@@ -187,7 +188,7 @@ export function HeroFinal() {
               }}
               asChild
             >
-              <Link href={locale === 'en' ? '/start/introduction' : `/${locale}/start/introduction`}>
+              <Link href="/start/introduction">
                 {t('exploreErgo') || "Explore Ergo"}
               </Link>
             </CyberButton>

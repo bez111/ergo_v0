@@ -13,7 +13,7 @@
  */
 
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { ArrowRight } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import type { TechnologyCategory, TechnologyStatus } from "@/data/technology-topics"
@@ -182,7 +182,7 @@ export function TechnologyCard({
 
             {/* Details list - compact */}
             <div className="space-y-1.5 mb-4">
-              {details.slice(0, 3).map((detail, i) => (
+              {details.slice(0, 3).map((detail) => (
                 <div
                   key={detail.title}
                   className="flex items-center gap-2 text-sm"

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Layers, Copy, Check } from "lucide-react";
 
 export default function ContextEnrichmentPage() {

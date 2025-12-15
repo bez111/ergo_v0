@@ -8,6 +8,30 @@ import type { PageSEOConfig } from "./types"
 const BASE_URL = siteConfig.siteUrl
 
 /**
+ * Generate locale-aware canonical URL
+ */
+export function getCanonicalUrl(path: string, locale: string): string {
+  if (locale === 'en') {
+    return `${BASE_URL}${path}`
+  }
+  return `${BASE_URL}/${locale}${path}`
+}
+
+/**
+ * Generate alternates object with canonical and language alternates
+ */
+export function getAlternates(path: string, locale: string) {
+  return {
+    canonical: getCanonicalUrl(path, locale),
+    languages: {
+      'en': `${BASE_URL}${path}`,
+      'ru': `${BASE_URL}/ru${path}`,
+      'x-default': `${BASE_URL}${path}`
+    }
+  }
+}
+
+/**
  * Creates standardized Next.js Metadata object
  * Use this in all page.tsx files for consistent SEO
  */

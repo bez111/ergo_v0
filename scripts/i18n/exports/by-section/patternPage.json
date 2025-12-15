@@ -1,0 +1,182 @@
+[
+  {
+    "key": "patternPage.breadcrumbs.devPatterns",
+    "value": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "patternPage.viewCode",
+    "value": "View Code",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "patternPage.problem",
+    "value": "Problem",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "patternPage.solution",
+    "value": "Solution",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "patternPage.howItWorks",
+    "value": "How It Works",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "patternPage.codeExamples",
+    "value": "Code Examples",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "patternPage.useCases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "patternPage.securityConsiderations",
+    "value": "Security Considerations",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "patternPage.realWorldImplementations",
+    "value": "Real-World Implementations",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "patternPage.resources",
+    "value": "Resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "patternPage.feeConsiderations",
+    "value": "Fee Considerations",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "patternPage.relatedPatterns",
+    "value": "Related Patterns",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "patternPage.difficulty.beginner",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "patternPage.difficulty.intermediate",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "patternPage.difficulty.advanced",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "patternPage.difficulty.expert",
+    "value": "Expert",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "patternPage.languages.ergoscript",
+    "value": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "patternPage.languages.scala",
+    "value": "Scala",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "patternPage.languages.typescript",
+    "value": "TypeScript",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "patternPage.languages.rust",
+    "value": "Rust",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "patternPage.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "patternPage.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "patternPage.whatsNext.browsePatterns.title",
+    "value": "Browse All Patterns",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "patternPage.whatsNext.browsePatterns.subtitle",
+    "value": "patterns available",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "patternPage.whatsNext.explorePlaybooks.title",
+    "value": "Explore Playbooks",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "patternPage.whatsNext.explorePlaybooks.subtitle",
+    "value": "Step-by-step guides",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "patternPage.whatsNext.builderResources.title",
+    "value": "Builder Resources",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "patternPage.whatsNext.builderResources.subtitle",
+    "value": "Full dev toolkit",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "patternPage.emailCapture.title",
+    "value": "Master Ergo Development",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "patternPage.emailCapture.description",
+    "value": "Get pattern updates, new tutorials, and advanced ErgoScript techniques delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 142.5
+  }
+]

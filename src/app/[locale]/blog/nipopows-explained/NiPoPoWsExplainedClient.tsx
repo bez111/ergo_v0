@@ -4,7 +4,6 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -21,12 +20,9 @@ import {
   Smartphone,
   Link as LinkIcon,
   Eye,
-  CheckCircle,
-  ExternalLink,
-  FileText,
-  BookOpen
+  CheckCircle
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export default function NiPoPoWsExplainedClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)

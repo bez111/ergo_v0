@@ -1,6 +1,6 @@
 "use client";
 
-/* eslint-disable react-compiler/react-compiler, react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
 
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command, Eye, Pin, Trash2, ChevronDown, ChevronRight, Clock, TrendingUp, Hash, BookOpen } from 'lucide-react';

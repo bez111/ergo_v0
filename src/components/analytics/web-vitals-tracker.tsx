@@ -3,12 +3,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 
 import { useEffect } from 'react'
-import { onCLS, onFCP, onFID, onINP, onLCP, onTTFB } from 'web-vitals'
+import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals'
 
-// Thresholds for alerting
+// Thresholds for alerting (FID deprecated, use INP instead)
 const THRESHOLDS = {
   LCP: 2500, // 2.5s
-  FID: 100,  // 100ms
   CLS: 0.1,  // 0.1
   INP: 200,  // 200ms
   FCP: 1800, // 1.8s
@@ -117,10 +116,9 @@ function trackPerformanceMarks() {
 
 export function WebVitalsTracker() {
   useEffect(() => {
-    // Track Core Web Vitals
+    // Track Core Web Vitals (FID deprecated in web-vitals v4, use INP)
     onCLS(sendToAnalytics)
     onFCP(sendToAnalytics)
-    onFID(sendToAnalytics)
     onINP(sendToAnalytics)
     onLCP(sendToAnalytics)
     onTTFB(sendToAnalytics)
@@ -147,10 +145,11 @@ export function WebVitalsTracker() {
         observer.observe({ entryTypes: ['longtask'] })
         
         return () => observer.disconnect()
-      } catch (e) {
+      } catch {
         // PerformanceObserver not supported
       }
     }
+    return undefined
   }, [])
 
   return null

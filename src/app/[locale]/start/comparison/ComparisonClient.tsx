@@ -12,7 +12,7 @@ import { Check, X, Zap, Shield, Coins, Code, Users, TrendingUp, ArrowRight, Chec
 import { PageTransition } from "@/components/animations/page-transition"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { useTranslations } from "next-intl"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import IntroductionClient from "./IntroductionClient"
-import { createBreadcrumbSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
-    alternates: { canonical: "https://ergoblockchain.org/start/introduction" },
+    alternates: getAlternates('/start/introduction', locale),
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: "https://ergoblockchain.org/start/introduction",
+      url: getCanonicalUrl('/start/introduction', locale),
       siteName: "Ergo Platform",
       images: [{ url: "https://ergoblockchain.org/og/introduction.png", width: 1200, height: 630, alt: t('ogAlt') }],
       type: "article",

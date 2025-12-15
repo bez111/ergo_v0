@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { ArrowLeft, Shield, Users, Network, Settings, Zap } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function OtherSignaturesPage() {
   return (

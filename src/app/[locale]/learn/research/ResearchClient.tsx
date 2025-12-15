@@ -4,7 +4,7 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SchemaOrg } from "@/components/seo/schema-org"
@@ -169,8 +169,8 @@ export default function ResearchClient() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Learn", href: "/learn" },
-              { label: "Research", href: "/learn/research" },
+              { name: "Learn", href: "/learn" },
+              { name: "Research", href: "/learn/research" },
             ]}
           />
         </div>

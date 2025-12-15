@@ -1,0 +1,4022 @@
+[
+  {
+    "key": "learn.title",
+    "value": "Learn",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "learn.subtitle",
+    "value": "Educational resources for everyone",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.description",
+    "value": "Educational resources for Ergo blockchain",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "learn.schema",
+    "value": "Learn Ergo Blockchain - Educational Resources",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "learn.seo.title",
+    "value": "Learn - Ergo Blockchain Education | Ergo Platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.seo.description",
+    "value": "Learn about Ergo blockchain technology, smart contracts, and development.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 109.5
+  },
+  {
+    "key": "learn.seo.keywords",
+    "value": "Ergo education, blockchain learning, tutorials, documentation",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.seo.ogTitle",
+    "value": "Learn Ergo Blockchain",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.seo.ogDescription",
+    "value": "Educational resources, tutorials, and guides for learning Ergo blockchain technology.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 127.5
+  },
+  {
+    "key": "learn.seo.twitterTitle",
+    "value": "Learn Ergo Blockchain",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.seo.twitterDescription",
+    "value": "Educational resources, tutorials, and guides for learning Ergo blockchain.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 111
+  },
+  {
+    "key": "learn.common.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.resources.tutorials",
+    "value": "Tutorials",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.resources.videos",
+    "value": "Videos",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.resources.articles",
+    "value": "Articles",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.resources.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.resources.faq.title",
+    "value": "Frequently Asked Questions",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.resources.faq.description",
+    "value": "Common questions about Ergo blockchain",
+    "context": "FAQ content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.resources.faq.difficulty",
+    "value": "Beginner",
+    "context": "FAQ content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.resources.faq.duration",
+    "value": "15 minutes",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.resources.research.title",
+    "value": "Research Papers",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.resources.research.description",
+    "value": "Academic research and whitepapers",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.resources.research.difficulty",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.resources.research.duration",
+    "value": "60+ minutes",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.faq.categories.title",
+    "value": "Categories",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.faq.categories.general",
+    "value": "General",
+    "context": "FAQ content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.faq.categories.technology",
+    "value": "Technology",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.faq.categories.economics",
+    "value": "Economics",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.faq.categories.ecosystem",
+    "value": "Ecosystem",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.faq.categories.wallets",
+    "value": "Wallets",
+    "context": "FAQ content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.faq.categories.troubleshooting",
+    "value": "Troubleshooting",
+    "context": "FAQ content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.faq.searchPlaceholder",
+    "value": "Search FAQ...",
+    "context": "FAQ content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.faq.expandAll",
+    "value": "Expand All",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.faq.collapseAll",
+    "value": "Collapse All",
+    "context": "FAQ content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.research.research_by_category",
+    "value": "Research by Category",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.research.join_the_discussion",
+    "value": "Join the Discussion",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.research.ergo_whitepaper_description_the_core",
+    "value": "Ergo Whitepaper\",\n    description: \"The core technical paper describing Ergo's design, principles, and protocol innovations.\",\n    url: \"https://ergoplatform.org/docs/whitepaper.pdf\",\n    category: \"Core Protocol",
+    "context": "General content",
+    "maxLength": 318
+  },
+  {
+    "key": "learn.research.extended_utxo_eutxo_model_description",
+    "value": "Extended UTXO (eUTXO) Model\",\n    description:",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.research.sigma_protocols_description_the_cryptographic",
+    "value": "Sigma Protocols\",\n    description: \"The cryptographic backbone of privacy and ring signatures in Ergo.\",\n    url: \"https://ergoplatform.org/docs/sigma-protocol.pdf\",\n    category: \"Cryptography",
+    "context": "General content",
+    "maxLength": 289.5
+  },
+  {
+    "key": "learn.research.autolykos_ergo_pow_algorithm_description",
+    "value": "Autolykos: Ergo PoW Algorithm\",\n    description: \"A novel, ASIC-resistant Proof-of-Work consensus mechanism.\",\n    url: \"https://ergoplatform.org/docs/Autolykos.pdf\",\n    category: \"Consensus",
+    "context": "General content",
+    "maxLength": 286.5
+  },
+  {
+    "key": "learn.research.nipopows_description_research_on_cross",
+    "value": "NIPoPoWs\",\n    description: \"Research on cross-chain, lightweight validation protocols for trustless interoperability.\",\n    url: \"https://nipopows.com/\",\n    category: \"Interoperability",
+    "context": "General content",
+    "maxLength": 279
+  },
+  {
+    "key": "learn.research.formal_security_protocol_analysis_icon",
+    "value": "Formal Security & Protocol Analysis\",\n    icon: Shield,\n    color:",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "learn.research.ergoscript_foundations_and_security_url",
+    "value": "ErgoScript: Foundations and Security\", url: \"https://ergoplatform.org/docs/ErgoScript.pdf",
+    "context": "General content",
+    "maxLength": 133.5
+  },
+  {
+    "key": "learn.research.security_properties_of_eutxo_based",
+    "value": "Security Properties of eUTXO-based Smart Contracts\", url:",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "learn.research.privacy_zero_knowledge_icon_eye_color",
+    "value": "Privacy & Zero-Knowledge\",\n    icon: Eye,\n    color:",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "learn.research.zero_knowledge_proofs_in_sigma_protocols_url",
+    "value": "Zero-Knowledge Proofs in Sigma Protocols\", url:",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.research.ring_signatures_for_blockchain_privacy",
+    "value": "Ring Signatures for Blockchain Privacy",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.research.defi_economic_models_icon_database_color",
+    "value": "DeFi & Economic Models\",\n    icon: Database,\n    color:",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "learn.research.composable_defi_primitives_on_eutxo_url",
+    "value": "Composable DeFi Primitives on eUTXO\", url:",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.research.on_chain_lending_lets_and_oracles_url",
+    "value": "On-chain Lending, LETS, and Oracles\", url:",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.research.storage_rent_blockchain_sustainability_icon",
+    "value": "Storage Rent & Blockchain Sustainability\",\n    icon: FileText,\n    color:",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "learn.research.ergo_storage_rent_model_url",
+    "value": "Ergo Storage Rent Model\", url: \"https://ergoplatform.org/docs/storage-rent.pdf",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "learn.research.efficient_blockchain_state_management_url",
+    "value": "Efficient Blockchain State Management\", url:",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.research.ergoscript_documentation_url_https_ergoplatform",
+    "value": "ErgoScript Documentation\", url: \"https://ergoplatform.org/docs/ergoscript.pdf",
+    "context": "General content",
+    "maxLength": 115.5
+  },
+  {
+    "key": "learn.research.node_implementation_url_https_github",
+    "value": "Node Implementation\", url: \"https://github.com/ergoplatform/ergo",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "learn.research.sigma_rust_cryptography_library_url",
+    "value": "Sigma-Rust Cryptography Library\", url: \"https://github.com/ergoplatform/sigma-rust",
+    "context": "General content",
+    "maxLength": 123
+  },
+  {
+    "key": "learn.research.ergomixer_technical_overview_url",
+    "value": "ErgoMixer Technical Overview\", url:",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.research.learn_item_https_ergoblockchain_org_learn",
+    "value": "Learn\", item: \"https://ergoblockchain.org/learn",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.research.research_item_https_ergoblockchain_org",
+    "value": "Research\", item: \"https://ergoblockchain.org/learn/research",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "learn.research.learn_href_learn",
+    "value": "Learn\", href: \"/learn",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.research.research_href_learn_research",
+    "value": "Research\", href: \"/learn/research",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.research.read_ergo_whitepaper_description_core",
+    "value": "Read Ergo Whitepaper\",\n                              description: \"Core protocol design and philosophy",
+    "context": "General content",
+    "maxLength": 153
+  },
+  {
+    "key": "learn.research.explore_research_library_description_cryptography",
+    "value": "Explore Research Library\",\n                              description: \"Cryptography, consensus, and architecture",
+    "context": "General content",
+    "maxLength": 168
+  },
+  {
+    "key": "learn.research.join_the_community_description_discuss",
+    "value": "Join the Community\",\n                              description: \"Discuss research and collaborate",
+    "context": "General content",
+    "maxLength": 145.5
+  },
+  {
+    "key": "learn.research.the_core_technical_paper_describing_ergo",
+    "value": "The core technical paper describing Ergo",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.research.extended_utxo_eutxo_model",
+    "value": "Extended UTXO (eUTXO) Model",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.research.by_iohk_cardano_ergo_researchers",
+    "value": "By IOHK/Cardano & Ergo researchers—the definitive paper on the eUTXO paradigm.",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "learn.research.the_cryptographic_backbone_of_privacy",
+    "value": "The cryptographic backbone of privacy and ring signatures in Ergo.",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "learn.research.autolykos_ergo_pow_algorithm",
+    "value": "Autolykos: Ergo PoW Algorithm",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "learn.research.a_novel_asic_resistant_proof",
+    "value": "A novel, ASIC-resistant Proof-of-Work consensus mechanism.",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "learn.research.research_on_cross_chain_lightweight",
+    "value": "Research on cross-chain, lightweight validation protocols for trustless interoperability.",
+    "context": "General content",
+    "maxLength": 133.5
+  },
+  {
+    "key": "learn.research.formal_security_protocol_analysis",
+    "value": "Formal Security & Protocol Analysis",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.research.ergoscript_foundations_and_security",
+    "value": "ErgoScript: Foundations and Security",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "learn.research.security_properties_of_eutxo_based_smart_contracts",
+    "value": "Security Properties of eUTXO-based Smart Contracts",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "learn.research.privacy_zero_knowledge",
+    "value": "Privacy & Zero-Knowledge",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.research.zero_knowledge_proofs_in_sigma_protocols",
+    "value": "Zero-Knowledge Proofs in Sigma Protocols",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.research.defi_economic_models",
+    "value": "DeFi & Economic Models",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.research.composable_defi_primitives_on_eutxo",
+    "value": "Composable DeFi Primitives on eUTXO",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.research.on_chain_lending_lets_and_oracles",
+    "value": "On-chain Lending, LETS, and Oracles",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.research.storage_rent_blockchain_sustainability",
+    "value": "Storage Rent & Blockchain Sustainability",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.research.ergo_storage_rent_model",
+    "value": "Ergo Storage Rent Model",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.research.efficient_blockchain_state_management",
+    "value": "Efficient Blockchain State Management",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.research.ergoscript_documentation",
+    "value": "ErgoScript Documentation",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.research.sigma_rust_cryptography_library",
+    "value": "Sigma-Rust Cryptography Library",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.research.ergomixer_technical_overview",
+    "value": "ErgoMixer Technical Overview",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.research.core_protocol_design_and_philosophy",
+    "value": "Core protocol design and philosophy",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.research.cryptography_consensus_and_architecture",
+    "value": "Cryptography, consensus, and architecture",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "learn.research.discuss_research_and_collaborate",
+    "value": "Discuss research and collaborate",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.research.academic_groundwork_and_technical_papers",
+    "value": "Academic groundwork and technical papers that underpin Ergo's protocol, security, and economics.",
+    "context": "General content",
+    "maxLength": 144
+  },
+  {
+    "key": "learn.research.curated_links_to_whitepapers_formal",
+    "value": "Curated links to whitepapers, formal analyses, and developer resources.",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "learn.research.have_an_idea_or_want",
+    "value": "Have an idea or want to contribute? Join community channels to discuss research and collaborate.",
+    "context": "General content",
+    "maxLength": 144
+  },
+  {
+    "key": "learn.research.peer_reviewed_research_publications_on",
+    "value": "Peer-reviewed research publications on Ergo's innovative blockchain technology.\",\n    url: \"https://ergoblockchain.org/learn/research\",\n    siteName: \"Ergo Platform",
+    "context": "General content",
+    "maxLength": 246
+  },
+  {
+    "key": "learn.research.scholarlyarticle_id_https_ergoblockchain_org",
+    "value": "ScholarlyArticle\",\n    \"@id\": \"https://ergoblockchain.org/learn/research\",\n    name: \"Ergo Platform Research Collection\",\n    description: \"Collection of academic research papers on Ergo blockchain technology",
+    "context": "General content",
+    "maxLength": 312
+  },
+  {
+    "key": "learn.research.organization_name_ergo_research_team",
+    "value": "Organization\",\n      name: \"Ergo Research Team",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.research.organization_name_ergo_platform",
+    "value": "Organization\",\n      name: \"Ergo Platform",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "learn.research.blockchain_cryptography_consensus_algorithms_smart",
+    "value": "Blockchain\", \"Cryptography\", \"Consensus Algorithms\", \"Smart Contracts",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "learn.research.dataset_name_ergo_research_papers",
+    "value": "Dataset\",\n    name: \"Ergo Research Papers Dataset\",\n    description: \"Collection of peer-reviewed papers on Ergo blockchain",
+    "context": "General content",
+    "maxLength": 184.5
+  },
+  {
+    "key": "learn.research.what_research_topics_does_ergo",
+    "value": "What research topics does Ergo cover?\",\n      answer: \"Ergo research covers consensus algorithms (Autolykos), cryptography (Sigma protocols), smart contracts (ErgoScript), storage rent economics, and NIPoPoWs.",
+    "context": "General content",
+    "maxLength": 313.5
+  },
+  {
+    "key": "learn.research.are_ergo_papers_peer_reviewed",
+    "value": "Are Ergo papers peer-reviewed?\",\n      answer: \"Yes, core Ergo research papers are peer-reviewed and published in academic conferences and journals.",
+    "context": "General content",
+    "maxLength": 222
+  },
+  {
+    "key": "learn.research.ergo_research_papers_blockchain_academic",
+    "value": "Ergo Research Papers | Blockchain Academic Publications",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "learn.research.ergo_research_academic_blockchain_papers",
+    "value": "Ergo Research | Academic Blockchain Papers",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.research.peer_reviewed_research_publications_on_ergo",
+    "value": "Peer-reviewed research publications on Ergo",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "learn.research.ergo_research_papers_academic_publications",
+    "value": "Ergo Research Papers | Academic Publications",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.research.collection_of_academic_research_papers",
+    "value": "Collection of academic research papers on Ergo blockchain technology",
+    "context": "General content",
+    "maxLength": 102
+  },
+  {
+    "key": "learn.research.collection_of_peer_reviewed_papers",
+    "value": "Collection of peer-reviewed papers on Ergo blockchain",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "learn.guides.confidential_transactions",
+    "value": "Confidential Transactions",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.guides.practical_use_cases",
+    "value": "Practical Use Cases",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.guides.confidential_defi_protocols",
+    "value": "Confidential DeFi protocols",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.guides.sigma_protocols_are_advanced_cryptographic",
+    "value": "Sigma protocols are advanced cryptographic tools that enable zero-knowledge proofs, allowing users to prove statements without revealing information. This is the foundation for privacy in Ergo smart contracts.",
+    "context": "General content",
+    "maxLength": 313.5
+  },
+  {
+    "key": "learn.guides.ergomixer_is_a_privacy_tool",
+    "value": "ErgoMixer is a privacy tool that allows users to mix their ERG and tokens, breaking the on-chain link between sender and receiver. This enhances transaction privacy and fungibility.",
+    "context": "General content",
+    "maxLength": 271.5
+  },
+  {
+    "key": "learn.guides.using_sigma_protocols_and_custom",
+    "value": "Using Sigma protocols and custom scripts, users can create confidential transactions and privacy-preserving dApps on Ergo.",
+    "context": "General content",
+    "maxLength": 183
+  },
+  {
+    "key": "learn.guides.ergo_s_privacy_features_empower",
+    "value": "Ergo's privacy features empower users to control their data and financial privacy on the blockchain.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.consensus.consensus_in_ergo",
+    "value": "Consensus in Ergo",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.guides.consensus.what_is_autolykos",
+    "value": "What is Autolykos?",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.guides.consensus.prevents_centralization_of_mining_power",
+    "value": "Prevents centralization of mining power",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "learn.guides.consensus.ensures_network_security_through_fair_competition",
+    "value": "Ensures network security through fair competition",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.guides.consensus.energy_efficient_compared_to_traditional_pow",
+    "value": "Energy-efficient compared to traditional PoW",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.guides.consensus.why_pow",
+    "value": "Why PoW?",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.guides.consensus.ergo_uses_autolykos_a_unique",
+    "value": "Ergo uses Autolykos, a unique, ASIC-resistant Proof-of-Work (PoW) algorithm. This ensures fair mining and decentralization, while keeping the network secure and energy-efficient.",
+    "context": "General content",
+    "maxLength": 267
+  },
+  {
+    "key": "learn.guides.consensus.autolykos_is_a_memory_hard",
+    "value": "Autolykos is a memory-hard PoW algorithm designed to be resistant to ASICs and favor GPU miners. It helps maintain decentralization and prevents mining centralization.",
+    "context": "General content",
+    "maxLength": 250.5
+  },
+  {
+    "key": "learn.guides.consensus.proof_of_work_is_a",
+    "value": "Proof-of-Work is a proven consensus mechanism that secures the network, enables permissionless participation, and aligns incentives for honest behavior.",
+    "context": "General content",
+    "maxLength": 228
+  },
+  {
+    "key": "learn.guides.oraclePool.how_oracle_pools_work",
+    "value": "How Oracle Pools Work",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.guides.oraclePool.multiple_oracles_submit_data_e",
+    "value": "Multiple oracles submit data (e.g., price feeds) to the pool.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.guides.oraclePool.decentralized_and_trustless_data_feeds",
+    "value": "Decentralized and trustless data feeds",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.guides.oraclePool.lower_costs_for_dapps",
+    "value": "Lower costs for dApps",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.guides.oraclePool.resistant_to_manipulation_and_single",
+    "value": "Resistant to manipulation and single points of failure",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "learn.guides.oraclePool.practical_use_cases",
+    "value": "Practical Use Cases",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.guides.oraclePool.stablecoins_e_g_sigmausd",
+    "value": "Stablecoins (e.g., SigmaUSD)",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.guides.oraclePool.oracles_bring_real_world_data",
+    "value": "Oracles bring real-world data to the blockchain. Ergo pioneered Oracle Pools, making data feeds decentralized, secure, and affordable for dApps.",
+    "context": "General content",
+    "maxLength": 216
+  },
+  {
+    "key": "learn.guides.oraclePool.oracle_pools_are_a_core",
+    "value": "Oracle Pools are a core innovation of Ergo, enabling a new generation of decentralized applications.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.storageRent.how_storage_rent_works",
+    "value": "How Storage Rent Works",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.guides.storageRent.fees_are_collected_by_miners",
+    "value": "Fees are collected by miners, incentivizing them to maintain the network.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "learn.guides.storageRent.unclaimed_or_abandoned_boxes_are",
+    "value": "Unclaimed or abandoned boxes are eventually recycled, freeing up space.",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "learn.guides.storageRent.prevents_blockchain_bloat",
+    "value": "Prevents blockchain bloat",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.guides.storageRent.encourages_active_participation",
+    "value": "Encourages active participation",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.guides.storageRent.ensures_long_term_sustainability",
+    "value": "Ensures long-term sustainability",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.guides.storageRent.storage_rent_is_a_unique",
+    "value": "Storage rent is a unique feature that helps Ergo remain efficient and sustainable for years to come.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.what_is_a_utxo",
+    "value": "What is a UTXO?",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.guides.unspent_transaction_output",
+    "value": "Unspent Transaction Output",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.guides.what_is_eutxo",
+    "value": "What is eUTXO?",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.guides.high",
+    "value": "High",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "learn.guides.the_extended_utxo_eutxo_model",
+    "value": "The extended UTXO (eUTXO) model is the foundation of Ergo. It combines the simplicity and security of Bitcoin's UTXO with the programmability of smart contracts.",
+    "context": "General content",
+    "maxLength": 241.5
+  },
+  {
+    "key": "learn.guides.utxo_stands_for",
+    "value": "UTXO stands for",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.guides.in_ergo_a_simple_payment",
+    "value": "In Ergo, a simple payment is a box locked by a script that only the recipient can unlock. More complex contracts (like multi-sig, oracles, or DeFi) are possible by adding logic to the box script and storing extra data.",
+    "context": "General content",
+    "maxLength": 327
+  },
+  {
+    "key": "learn.guides.ergo_educational_guides",
+    "value": "Ergo Educational Guides",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.guides.want_to_suggest_your_own",
+    "value": "Want to suggest your own guide or improve existing materials?",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.guides.contribute_to_the_documentation",
+    "value": "Contribute to the documentation",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.guides.what_is_eutxo_and_why",
+    "value": "What is eUTXO and Why Does It Matter?\",\n    description: \"A deep dive into the extended UTXO model at the core of Ergo.",
+    "context": "General content",
+    "maxLength": 178.5
+  },
+  {
+    "key": "learn.guides.how_ergoscript_works_the_basics",
+    "value": "How ErgoScript Works: The Basics",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.guides.what_is_an_oracle_pool",
+    "value": "What is an Oracle Pool?",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.guides.how_fees_work_in_ergo",
+    "value": "How Fees Work in Ergo",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.guides.ergo_glossary_description_terms_and",
+    "value": "Ergo Glossary\",\n    description: \"Terms and definitions every ecosystem participant should know.",
+    "context": "General content",
+    "maxLength": 144
+  },
+  {
+    "key": "learn.guides.history_and_mission_of_ergo",
+    "value": "History and Mission of Ergo",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.guides.what_is_eutxo_and_why_does_it_matter",
+    "value": "What is eUTXO and Why Does It Matter?",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.guides.a_deep_dive_into_the",
+    "value": "A deep dive into the extended UTXO model at the core of Ergo.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.guides.an_explanation_of_ergoscript_syntax",
+    "value": "An explanation of ErgoScript syntax and capabilities for smart contracts.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "learn.guides.the_role_and_structure_of",
+    "value": "The role and structure of oracles in the Ergo ecosystem.",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "learn.guides.principles_of_fee_calculation_and",
+    "value": "Principles of fee calculation and distribution in the network.",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "learn.guides.ergo_vs_cardano_a_comparison",
+    "value": "Ergo vs Cardano: A Comparison",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "learn.guides.terms_and_definitions_every_ecosystem",
+    "value": "Terms and definitions every ecosystem participant should know.",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "learn.guides.the_project",
+    "value": "The project",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.guides.dive_into_the_fundamental_concepts",
+    "value": "Dive into the fundamental concepts, architecture, and technologies of the Ergo blockchain. Here you'll find explanations, comparisons, glossaries, and the best educational materials.",
+    "context": "General content",
+    "maxLength": 273
+  },
+  {
+    "key": "learn.guides.how_ergoscript_works",
+    "value": "How ErgoScript Works",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.guides.simple_auditable_syntax",
+    "value": "Simple, auditable syntax",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.guides.native_support_for_zero_knowledge_proofs",
+    "value": "Native support for zero-knowledge proofs",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.guides.flexible_and_secure_smart_contracts",
+    "value": "Flexible and secure smart contracts",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.guides.efficient_execution_and_low_fees",
+    "value": "Efficient execution and low fees",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.guides.example_basic_ownership",
+    "value": "Example: Basic Ownership",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.guides.decentralized_exchanges",
+    "value": "Decentralized exchanges",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.guides.privacy_preserving_contracts",
+    "value": "Privacy-preserving contracts",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.guides.oracles_and_data_feeds",
+    "value": "Oracles and data feeds",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.guides.ergoscript_is_a_powerful_yet",
+    "value": "ErgoScript is a powerful, yet simple, smart contract language for the Ergo blockchain. It is based on Sigma protocols, enabling advanced cryptography and privacy.",
+    "context": "General content",
+    "maxLength": 243
+  },
+  {
+    "key": "learn.guides.ergoscript_s_design_makes_it",
+    "value": "ErgoScript's design makes it possible to build secure, efficient, and privacy-focused dApps on Ergo.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.how_storage_rent_works",
+    "value": "How Storage Rent Works",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.guides.fees_are_collected_by_miners",
+    "value": "Fees are collected by miners, incentivizing them to maintain the network.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "learn.guides.unclaimed_or_abandoned_boxes_are",
+    "value": "Unclaimed or abandoned boxes are eventually recycled, freeing up space.",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "learn.guides.prevents_blockchain_bloat",
+    "value": "Prevents blockchain bloat",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.guides.encourages_active_participation",
+    "value": "Encourages active participation",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.guides.ensures_long_term_sustainability",
+    "value": "Ensures long-term sustainability",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.guides.storage_rent_is_a_unique",
+    "value": "Storage rent is a unique feature that helps Ergo remain efficient and sustainable for years to come.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.privacy.confidential_transactions",
+    "value": "Confidential Transactions",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.guides.privacy.practical_use_cases",
+    "value": "Practical Use Cases",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.guides.privacy.confidential_defi_protocols",
+    "value": "Confidential DeFi protocols",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.guides.privacy.sigma_protocols_are_advanced_cryptographic",
+    "value": "Sigma protocols are advanced cryptographic tools that enable zero-knowledge proofs, allowing users to prove statements without revealing information. This is the foundation for privacy in Ergo smart contracts.",
+    "context": "General content",
+    "maxLength": 313.5
+  },
+  {
+    "key": "learn.guides.privacy.ergomixer_is_a_privacy_tool",
+    "value": "ErgoMixer is a privacy tool that allows users to mix their ERG and tokens, breaking the on-chain link between sender and receiver. This enhances transaction privacy and fungibility.",
+    "context": "General content",
+    "maxLength": 271.5
+  },
+  {
+    "key": "learn.guides.privacy.using_sigma_protocols_and_custom",
+    "value": "Using Sigma protocols and custom scripts, users can create confidential transactions and privacy-preserving dApps on Ergo.",
+    "context": "General content",
+    "maxLength": 183
+  },
+  {
+    "key": "learn.guides.privacy.ergo_s_privacy_features_empower",
+    "value": "Ergo's privacy features empower users to control their data and financial privacy on the blockchain.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.how_oracle_pools_work",
+    "value": "How Oracle Pools Work",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.guides.multiple_oracles_submit_data_e",
+    "value": "Multiple oracles submit data (e.g., price feeds) to the pool.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.guides.decentralized_and_trustless_data_feeds",
+    "value": "Decentralized and trustless data feeds",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.guides.lower_costs_for_dapps",
+    "value": "Lower costs for dApps",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.guides.resistant_to_manipulation_and_single",
+    "value": "Resistant to manipulation and single points of failure",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "learn.guides.stablecoins_e_g_sigmausd",
+    "value": "Stablecoins (e.g., SigmaUSD)",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.guides.oracles_bring_real_world_data",
+    "value": "Oracles bring real-world data to the blockchain. Ergo pioneered Oracle Pools, making data feeds decentralized, secure, and affordable for dApps.",
+    "context": "General content",
+    "maxLength": 216
+  },
+  {
+    "key": "learn.guides.oracle_pools_are_a_core",
+    "value": "Oracle Pools are a core innovation of Ergo, enabling a new generation of decentralized applications.",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "learn.guides.consensus_in_ergo",
+    "value": "Consensus in Ergo",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.guides.what_is_autolykos",
+    "value": "What is Autolykos?",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.guides.prevents_centralization_of_mining_power",
+    "value": "Prevents centralization of mining power",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "learn.guides.ensures_network_security_through_fair_competition",
+    "value": "Ensures network security through fair competition",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.guides.energy_efficient_compared_to_traditional_pow",
+    "value": "Energy-efficient compared to traditional PoW",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.guides.why_pow",
+    "value": "Why PoW?",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.guides.ergo_uses_autolykos_a_unique",
+    "value": "Ergo uses Autolykos, a unique, ASIC-resistant Proof-of-Work (PoW) algorithm. This ensures fair mining and decentralization, while keeping the network secure and energy-efficient.",
+    "context": "General content",
+    "maxLength": 267
+  },
+  {
+    "key": "learn.guides.autolykos_is_a_memory_hard",
+    "value": "Autolykos is a memory-hard PoW algorithm designed to be resistant to ASICs and favor GPU miners. It helps maintain decentralization and prevents mining centralization.",
+    "context": "General content",
+    "maxLength": 250.5
+  },
+  {
+    "key": "learn.guides.proof_of_work_is_a",
+    "value": "Proof-of-Work is a proven consensus mechanism that secures the network, enables permissionless participation, and aligns incentives for honest behavior.",
+    "context": "General content",
+    "maxLength": 228
+  },
+  {
+    "key": "learn.guides.in_depth_technical_guides_for",
+    "value": "In-depth technical guides for Ergo blockchain. Learn eUTXO model, consensus mechanisms, privacy features, oracle pools, and storage rent. Expert tutorials for developers.",
+    "context": "General content",
+    "maxLength": 255
+  },
+  {
+    "key": "learn.guides.deep_dive_into_ergo_s",
+    "value": "Deep dive into Ergo's technology with comprehensive guides and tutorials.\",\n    url: \"https://ergoblockchain.org/learn/guides\",\n    siteName: \"Ergo Platform",
+    "context": "General content",
+    "maxLength": 234
+  },
+  {
+    "key": "learn.guides.expert_tutorials_on_eutxo_consensus",
+    "value": "Expert tutorials on eUTXO, consensus, privacy, and more.",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "learn.guides.collectionpage_id_https_ergoblockchain_org",
+    "value": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/learn/guides\",\n    name: \"Ergo Technical Guides Collection\",\n    description: \"Collection of technical guides and tutorials for Ergo blockchain",
+    "context": "General content",
+    "maxLength": 298.5
+  },
+  {
+    "key": "learn.guides.techarticle_name_eutxo_model_guide",
+    "value": "TechArticle\",\n        name: \"eUTXO Model Guide\",\n        url: \"https://ergoblockchain.org/learn/guides/eutxo",
+    "context": "General content",
+    "maxLength": 162
+  },
+  {
+    "key": "learn.guides.techarticle_name_consensus_protocol_guide",
+    "value": "TechArticle\",\n        name: \"Consensus Protocol Guide\",\n        url: \"https://ergoblockchain.org/learn/guides/consensus",
+    "context": "General content",
+    "maxLength": 178.5
+  },
+  {
+    "key": "learn.guides.techarticle_name_privacy_features_guide",
+    "value": "TechArticle\",\n        name: \"Privacy Features Guide\",\n        url: \"https://ergoblockchain.org/learn/guides/privacy-features",
+    "context": "General content",
+    "maxLength": 186
+  },
+  {
+    "key": "learn.guides.what_technical_guides_are_available",
+    "value": "What technical guides are available?\",\n      answer: \"We offer guides on eUTXO model, consensus mechanisms, privacy features, oracle pools, storage rent, ErgoScript, and more technical topics.",
+    "context": "General content",
+    "maxLength": 288
+  },
+  {
+    "key": "learn.guides.how_often_are_guides_updated",
+    "value": "How often are guides updated?\",\n      answer: \"Guides are regularly updated to reflect the latest Ergo developments and community feedback.",
+    "context": "General content",
+    "maxLength": 208.5
+  },
+  {
+    "key": "learn.guides.ergo_technical_guides_defi_mining",
+    "value": "Ergo Technical Guides | DeFi, Mining & Development Tutorials",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "learn.guides.ergo_technical_guides_expert_blockchain_tutorials",
+    "value": "Ergo Technical Guides | Expert Blockchain Tutorials",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "learn.guides.ergo_technical_guides_learn_blockchain",
+    "value": "Ergo Technical Guides | Learn Blockchain",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.guides.collection_of_technical_guides_and",
+    "value": "Collection of technical guides and tutorials for Ergo blockchain",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "learn.learnErgoscript.title",
+    "value": "Learn ErgoScript",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.learnErgoscript.subtitle",
+    "value": "Master Ergo's smart contract language",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.learnErgoscript.description",
+    "value": "Comprehensive guide to learning ErgoScript, Ergo's powerful smart contract programming language.",
+    "context": "Description",
+    "maxLength": 144
+  },
+  {
+    "key": "learn.learnErgoscript.lastUpdated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.learnErgoscript.features.title",
+    "value": "Why Learn ErgoScript?",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.learnErgoscript.features.subtitle",
+    "value": "Powerful features for blockchain development",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.learnErgoscript.features.secure.title",
+    "value": "Secure by Design",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.learnErgoscript.features.secure.description",
+    "value": "Built-in security features and formal verification capabilities",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "learn.learnErgoscript.buttons.startTutorial",
+    "value": "Start Tutorial",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.learnErgoscript.buttons.documentation",
+    "value": "Documentation",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.learnErgoscript.cta.title",
+    "value": "Ready to Start Coding?",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.learnErgoscript.cta.subtitle",
+    "value": "Begin your ErgoScript journey today",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.learnErgoscript.cta.buttons.startLearning",
+    "value": "Start Learning",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.learnErgoscript.cta.buttons.joinCommunity",
+    "value": "Join Community",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.browseFaq",
+    "value": "Browse FAQ",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.sections.basics",
+    "value": "Blockchain Basics",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.sections.ergoScript",
+    "value": "ErgoScript",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.sections.development",
+    "value": "Development",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.sections.research",
+    "value": "Research",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.categories.basics.title",
+    "value": "Basics",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.categories.basics.description",
+    "value": "Start your journey with blockchain fundamentals",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.categories.advanced.title",
+    "value": "Advanced",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.categories.advanced.description",
+    "value": "Deep dive into technical concepts",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.categories.development.title",
+    "value": "Development",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.categories.development.description",
+    "value": "Learn to build on Ergo",
+    "context": "Description",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.categories.economics.title",
+    "value": "Economics",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.categories.economics.description",
+    "value": "Understand Ergo's economic model",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.paths.beginner.title",
+    "value": "Beginner Path",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.paths.beginner.description",
+    "value": "New to blockchain? Start here",
+    "context": "Description",
+    "maxLength": 43.5
+  },
+  {
+    "key": "learn.paths.developer.title",
+    "value": "Developer Path",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.paths.developer.description",
+    "value": "Learn to build dApps on Ergo",
+    "context": "Description",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.paths.trader.title",
+    "value": "Trader Path",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.paths.trader.description",
+    "value": "Master DeFi and trading",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.learn_more",
+    "value": "Learn more",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.start_your_journey_with_our",
+    "value": "Start your journey with our beginner-friendly introduction",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "learn.new_to_ergo",
+    "value": "New to Ergo?",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.get_started",
+    "value": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.join_the_community",
+    "value": "Join the Community",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.connect_with_other_developers_and_get_help",
+    "value": "Connect with other developers and get help",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.connect_with_other_developers_and",
+    "value": "Connect with other developers and get help from the Ergo community",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "learn.ergoscript.your_path_to_ergoscript_mastery",
+    "value": "Your Path to ErgoScript Mastery",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.ergoscript.ergoscript_language_fundamentals",
+    "value": "ErgoScript language fundamentals",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.ergoscript.advanced_contract_logic_patterns",
+    "value": "Advanced contract logic patterns",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.ergoscript.tokens_nfts_and_sigma_protocols",
+    "value": "Tokens, NFTs, and Sigma-protocols",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.ergoscript.multi_stage_dapps_and_defi",
+    "value": "Multi-stage dApps and DeFi",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.ergoscript.testing_and_security_best_practices",
+    "value": "Testing and security best practices",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscript.powerful_expressive_description_enables_complex",
+    "value": "Powerful & Expressive\",\n      description: \"Enables complex DeFi, multi-stage protocols, and unique dApps",
+    "context": "General content",
+    "maxLength": 157.5
+  },
+  {
+    "key": "learn.ergoscript.leverage_eutxo_description_only_ergoscript",
+    "value": "Leverage eUTXO\",\n      description: \"Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
+    "context": "General content",
+    "maxLength": 196.5
+  },
+  {
+    "key": "learn.ergoscript.built_in_cryptography_description_native",
+    "value": "Built-in Cryptography\",\n      description: \"Native support for Sigma-protocols, privacy, and advanced access schemes",
+    "context": "General content",
+    "maxLength": 174
+  },
+  {
+    "key": "learn.ergoscript.new_to_smart_contracts_description",
+    "value": "New to Smart Contracts\",\n      description: \"Step-by-step explanations of core blockchain and smart contract concepts",
+    "context": "General content",
+    "maxLength": 175.5
+  },
+  {
+    "key": "learn.ergoscript.blockchain_basics_smart_contract_fundamentals",
+    "value": "Blockchain basics\", \"Smart contract fundamentals\", \"eUTXO introduction",
+    "context": "General content",
+    "maxLength": 105
+  },
+  {
+    "key": "learn.ergoscript.experienced_blockchain_developers_description_discover",
+    "value": "Experienced Blockchain Developers\",\n      description: \"Discover eUTXO, new safe patterns, and advanced contract design",
+    "context": "General content",
+    "maxLength": 178.5
+  },
+  {
+    "key": "learn.ergoscript.security_best_practices_advanced_cryptography",
+    "value": "Security best practices\", \"Advanced cryptography",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "learn.ergoscript.scala_functional_programmers_description",
+    "value": "Scala/Functional Programmers\",\n      description:",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.ergoscript.functional_paradigms_type_safety_immutable",
+    "value": "Functional paradigms\", \"Type safety\", \"Immutable data structures",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "learn.ergoscript.defi_enthusiasts_description_build_the",
+    "value": "DeFi Enthusiasts\",\n      description: \"Build the next generation of decentralized financial applications",
+    "context": "General content",
+    "maxLength": 156
+  },
+  {
+    "key": "learn.ergoscript.dex_protocols_lending_platforms_algorithmic",
+    "value": "DEX protocols\", \"Lending platforms\", \"Algorithmic stablecoins",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.ergoscript.foundations_of_ergo_and_ergoscript",
+    "value": "Foundations of Ergo and ErgoScript",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.introduction_to_ergo_the_eutxo_model_duration",
+    "value": "Introduction to Ergo & the eUTXO Model\", duration:",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "learn.ergoscript.what_is_ergoscript_philosophy_and",
+    "value": "What is ErgoScript? Philosophy and Design Goals\", duration:",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "learn.ergoscript.setting_up_your_ergoscript_development",
+    "value": "Setting Up Your ErgoScript Development Environment\", duration:",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "learn.ergoscript.basic_syntax_data_types_operators_duration",
+    "value": "Basic Syntax, Data Types, Operators\", duration:",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.ergoscript.boxes_registers_context_variables_duration",
+    "value": "Boxes, Registers, Context Variables\", duration:",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.ergoscript.anatomy_of_an_ergo_transaction_duration",
+    "value": "Anatomy of an Ergo Transaction\", duration:",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.ergoscript.creating_basic_contracts",
+    "value": "Creating Basic Contracts",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.ergoscript.always_true_duration",
+    "value": "Always True\"', duration:",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.ergoscript.time_locked_contracts_duration",
+    "value": "Time-Locked Contracts\", duration:",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.ergoscript.ergotree_compilation_duration",
+    "value": "ErgoTree & Compilation\", duration:",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.fees_transaction_size_duration",
+    "value": "Fees & Transaction Size\", duration:",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscript.working_with_data_and_tokens",
+    "value": "Working with Data and Tokens",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.ergoscript.reading_writing_registers_duration",
+    "value": "Reading/Writing Registers\", duration:",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.ergoscript.handling_erg_native_tokens_duration",
+    "value": "Handling ERG & Native Tokens\", duration:",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.ergoscript.minting_burning_tokens_duration",
+    "value": "Minting/Burning Tokens\", duration:",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.nfts_in_ergoscript_duration",
+    "value": "NFTs in ErgoScript\", duration:",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.ergoscript.intermediate_contract_logic",
+    "value": "Intermediate Contract Logic",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.ergoscript.multi_stage_contracts_state_transitions_duration",
+    "value": "Multi-Stage Contracts & State Transitions\", duration:",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "learn.ergoscript.using_oracles_duration",
+    "value": "Using Oracles\", duration:",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscript.basic_escrow_duration",
+    "value": "Basic Escrow\", duration:",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.ergoscript.sigma_protocols_proofs_of_knowledge_duration",
+    "value": "Sigma Protocols & Proofs of Knowledge\", duration:",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.ergoscript.daos_voting_duration",
+    "value": "DAOs & Voting\", duration:",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscript.advanced_ergoscript_cryptography",
+    "value": "Advanced ErgoScript & Cryptography",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.ring_signatures_mixing_duration",
+    "value": "Ring Signatures, Mixing\", duration:",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscript.threshold_signatures_duration",
+    "value": "Threshold Signatures\", duration:",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.ergoscript.designing_defi_primitives_duration",
+    "value": "Designing DeFi Primitives\", duration:",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.ergoscript.gas_optimization_script_complexity_duration",
+    "value": "Gas Optimization & Script Complexity\", duration:",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "learn.ergoscript.advanced_context_extensions_duration",
+    "value": "Advanced Context Extensions\", duration:",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "learn.ergoscript.testing_debugging_best_practices",
+    "value": "Testing, Debugging & Best Practices",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscript.unit_integration_testing_duration",
+    "value": "Unit & Integration Testing\", duration:",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.ergoscript.debugging_techniques_duration",
+    "value": "Debugging Techniques\", duration:",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.ergoscript.pitfalls_vulnerabilities_duration",
+    "value": "Pitfalls & Vulnerabilities\", duration:",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.ergoscript.secure_development_best_practices_duration",
+    "value": "Secure Development Best Practices\", duration:",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "learn.ergoscript.practical_projects_dapp_examples",
+    "value": "Practical Projects & dApp Examples",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.nft_marketplace_duration",
+    "value": "NFT Marketplace\", duration:",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.ergoscript.decentralized_lottery_duration",
+    "value": "Decentralized Lottery\", duration:",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.ergoscript.defi_lending_protocol_duration",
+    "value": "DeFi Lending Protocol\", duration:",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.ergoscript.privacy_preserving_payment_channel_duration",
+    "value": "Privacy-Preserving Payment Channel\", duration:",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.ergoscript.custom_oracle_implementation_duration",
+    "value": "Custom Oracle Implementation\", duration:",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.ergoscript.what_development_tools_do_i_need_answer",
+    "value": "What development tools do I need?\",\n      answer:",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.ergoscript.your_first_contract_always_true",
+    "value": "Your First Contract: \"Always True\"",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.secure_by_design",
+    "value": "Secure by Design",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.ergoscript.powerful_expressive",
+    "value": "Powerful & Expressive",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscript.enables_complex_defi_multi_stage",
+    "value": "Enables complex DeFi, multi-stage protocols, and unique dApps",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.ergoscript.only_ergoscript_unlocks_the_full",
+    "value": "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
+    "context": "General content",
+    "maxLength": 141
+  },
+  {
+    "key": "learn.ergoscript.built_in_cryptography",
+    "value": "Built-in Cryptography",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscript.native_support_for_sigma_protocols",
+    "value": "Native support for Sigma-protocols, privacy, and advanced access schemes",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "learn.ergoscript.new_to_smart_contracts",
+    "value": "New to Smart Contracts",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.ergoscript.step_by_step_explanations_of",
+    "value": "Step-by-step explanations of core blockchain and smart contract concepts",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "learn.ergoscript.experienced_blockchain_developers",
+    "value": "Experienced Blockchain Developers",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.ergoscript.discover_eutxo_new_safe_patterns",
+    "value": "Discover eUTXO, new safe patterns, and advanced contract design",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "learn.ergoscript.scala_functional_programmers",
+    "value": "Scala/Functional Programmers",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.ergoscript.build_the_next_generation_of",
+    "value": "Build the next generation of decentralized financial applications",
+    "context": "General content",
+    "maxLength": 97.5
+  },
+  {
+    "key": "learn.ergoscript.introduction_to_ergo_the_eutxo_model",
+    "value": "Introduction to Ergo & the eUTXO Model",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.ergoscript.what_is_ergoscript_philosophy_and_design_goals",
+    "value": "What is ErgoScript? Philosophy and Design Goals",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.ergoscript.setting_up_your_ergoscript_development_environment",
+    "value": "Setting Up Your ErgoScript Development Environment",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "learn.ergoscript.basic_syntax_data_types_operators",
+    "value": "Basic Syntax, Data Types, Operators",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscript.boxes_registers_context_variables",
+    "value": "Boxes, Registers, Context Variables",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscript.anatomy_of_an_ergo_transaction",
+    "value": "Anatomy of an Ergo Transaction",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.ergoscript.your_first_contract",
+    "value": "Your First Contract:",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.ergoscript.time_locked_contracts",
+    "value": "Time-Locked Contracts",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscript.ergotree_compilation",
+    "value": "ErgoTree & Compilation",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.ergoscript.fees_transaction_size",
+    "value": "Fees & Transaction Size",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.ergoscript.reading_writing_registers",
+    "value": "Reading/Writing Registers",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscript.handling_erg_native_tokens",
+    "value": "Handling ERG & Native Tokens",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.ergoscript.minting_burning_tokens",
+    "value": "Minting/Burning Tokens",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.ergoscript.nfts_in_ergoscript",
+    "value": "NFTs in ErgoScript",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.ergoscript.token_standards_eip_004",
+    "value": "Token Standards (EIP-004)",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscript.multi_stage_contracts_state_transitions",
+    "value": "Multi-Stage Contracts & State Transitions",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "learn.ergoscript.sigma_protocols_proofs_of_knowledge",
+    "value": "Sigma Protocols & Proofs of Knowledge",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.ergoscript.ring_signatures_mixing",
+    "value": "Ring Signatures, Mixing",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.ergoscript.designing_defi_primitives",
+    "value": "Designing DeFi Primitives",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscript.gas_optimization_script_complexity",
+    "value": "Gas Optimization & Script Complexity",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "learn.ergoscript.advanced_context_extensions",
+    "value": "Advanced Context Extensions",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.ergoscript.unit_integration_testing",
+    "value": "Unit & Integration Testing",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.ergoscript.pitfalls_vulnerabilities",
+    "value": "Pitfalls & Vulnerabilities",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.ergoscript.secure_development_best_practices",
+    "value": "Secure Development Best Practices",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.ergoscript.decentralized_lottery",
+    "value": "Decentralized Lottery",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscript.defi_lending_protocol",
+    "value": "DeFi Lending Protocol",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscript.privacy_preserving_payment_channel",
+    "value": "Privacy-Preserving Payment Channel",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscript.custom_oracle_implementation",
+    "value": "Custom Oracle Implementation",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.ergoscript.scala_functional_programmers_description_ergoscript",
+    "value": "Scala/Functional Programmers\",\n      description: \"ErgoScript",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learn.ergoscript.your_first_contract_always_true_duration",
+    "value": "Your First Contract: \"Always True\"', duration:",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.ergoscript.what_development_tools_do_i_need_answer_you",
+    "value": "What development tools do I need?\",\n      answer:\n        \"You",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "learn.ergoscript.ergoscript_tutorial_series",
+    "value": "ErgoScript Tutorial Series",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.ergoscript.master_ergoscript_your_path_to",
+    "value": "Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "learn.ergoscript.step_by_step_tutorials_covering",
+    "value": "Step-by-step tutorials covering everything from basics to advanced DeFi protocols, designed for developers of all experience levels.",
+    "context": "General content",
+    "maxLength": 198
+  },
+  {
+    "key": "learn.ergoscript.your_first_ergoscript_contract",
+    "value": "Your First ErgoScript Contract",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.ergoscript.why_learn_ergoscript",
+    "value": "Why Learn ErgoScript?",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscript.who_is_this_tutorial_series_for",
+    "value": "Who Is This Tutorial Series For?",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.ergoscript.what_you_will_learn",
+    "value": "What You Will Learn",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.ergoscript.tutorial_series_structure",
+    "value": "Tutorial Series Structure",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscript.frequently_asked_questions",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.ergoscript.ready_to_master_ergoscript",
+    "value": "Ready to Master ErgoScript?",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.ergoscript.join_our_community_of_developers",
+    "value": "Join our community of developers building the future of decentralized applications on Ergo. Start your journey from beginner to expert with our comprehensive tutorial series.",
+    "context": "General content",
+    "maxLength": 261
+  },
+  {
+    "key": "learn.ergoscript.start_learning_now",
+    "value": "Start Learning Now",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.ergoscript.master_ergoscript_programming_language_build",
+    "value": "Master ErgoScript programming language. Build secure smart contracts on Ergo blockchain with zero-knowledge proofs, multi-stage protocols, and advanced cryptography.",
+    "context": "General content",
+    "maxLength": 247.5
+  },
+  {
+    "key": "learn.ergoscript.build_powerful_defi_applications_with",
+    "value": "Build powerful DeFi applications with ErgoScript's advanced features.",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "learn.ergoscript.course_id_https_ergoblockchain_org",
+    "value": "Course\",\n    \"@id\": \"https://ergoblockchain.org/learn/ergoscript\",\n    name: \"ErgoScript Programming Course\",\n    description: \"Learn to build smart contracts with ErgoScript",
+    "context": "General content",
+    "maxLength": 261
+  },
+  {
+    "key": "learn.ergoscript.organization_name_ergo_platform",
+    "value": "Organization\",\n      name: \"Ergo Platform",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "learn.ergoscript.smart_contracts_blockchain_programming_ergoscript",
+    "value": "Smart Contracts\", \"Blockchain Programming\", \"ErgoScript\", \"DeFi Development",
+    "context": "General content",
+    "maxLength": 112.5
+  },
+  {
+    "key": "learn.ergoscript.courseinstance_coursemode_online_courseworkload",
+    "value": "CourseInstance\",\n      courseMode: \"Online\",\n      courseWorkload:",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "learn.ergoscript.what_is_ergoscript_answer_ergoscript",
+    "value": "What is ErgoScript?\",\n      answer: \"ErgoScript is a powerful, protocol-friendly smart contract language based on Sigma protocols, enabling complex DeFi applications with built-in zero-knowledge proofs.",
+    "context": "General content",
+    "maxLength": 303
+  },
+  {
+    "key": "learn.ergoscript.what_can_i_build_with",
+    "value": "What can I build with ErgoScript?\",\n      answer: \"DEXs, lending protocols, NFT marketplaces, DAOs, oracle pools, privacy tools, and any complex financial contract.",
+    "context": "General content",
+    "maxLength": 246
+  },
+  {
+    "key": "learn.ergoscript.learn_ergoscript_smart_contract_programming",
+    "value": "Learn ErgoScript | Smart Contract Programming Tutorial",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "learn.ergoscript.ergoscript_programming_tutorial_build_on_ergo",
+    "value": "ErgoScript Programming Tutorial | Build on Ergo",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.ergoscript.learn_ergoscript_smart_contract_development",
+    "value": "Learn ErgoScript | Smart Contract Development",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "learn.ergoscript.build_powerful_defi_applications_with_ergoscript",
+    "value": "Build powerful DeFi applications with ErgoScript",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "learn.ergoscript.learn_to_build_smart_contracts_with_ergoscript",
+    "value": "Learn to build smart contracts with ErgoScript",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.how_do_i_learn_ergoscript",
+    "value": "How do I learn ErgoScript?\",\n      answer: \"Start with the ErgoScript tutorial series that covers basics to advanced concepts. Practice with examples, use the playground, and reference the documentation for comprehensive learning.",
+    "context": "General content",
+    "maxLength": 345
+  },
+  {
+    "key": "learn.what_resources_are_available_for",
+    "value": "What resources are available for learning Ergo?\",\n      answer: \"Ergo offers tutorials, comprehensive FAQ, research papers, video courses, developer documentation, community guides, and hands-on playgrounds for all skill levels.",
+    "context": "General content",
+    "maxLength": 342
+  },
+  {
+    "key": "learn.how_long_does_it_take_to_learn_ergoscript_answer",
+    "value": "How long does it take to learn ErgoScript?\",\n      answer:",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "learn.is_programming_experience_required_answer",
+    "value": "Is programming experience required?\",\n      answer: \"Basic programming knowledge helps but isn't required for understanding concepts. For ErgoScript development, familiarity with functional programming and cryptography is beneficial.",
+    "context": "General content",
+    "maxLength": 349.5
+  },
+  {
+    "key": "learn.learn_ergo_educational_resources",
+    "value": "Learn Ergo - Educational Resources",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.learn_ergo_master_blockchain_development",
+    "value": "Learn Ergo - Master Blockchain Development",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.course_id_https_ergoblockchain_org",
+    "value": "Course',\n    '@id': 'https://ergoblockchain.org/learn#course',\n    name: 'Ergo Blockchain Learning Path',\n    description: 'Comprehensive education on Ergo blockchain technology, from basics to advanced development",
+    "context": "General content",
+    "maxLength": 321
+  },
+  {
+    "key": "learn.organization_name_ergo_platform_url",
+    "value": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
+    "context": "General content",
+    "maxLength": 123
+  },
+  {
+    "key": "learn.audience_audiencetype_developers_crypto_enthusiasts",
+    "value": "Audience',\n      audienceType: 'Developers, Crypto Enthusiasts, Blockchain Students",
+    "context": "General content",
+    "maxLength": 124.5
+  },
+  {
+    "key": "learn.beginner_to_expert",
+    "value": "Beginner to Expert",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.courseinstance_name_ergoscript_tutorial_series",
+    "value": "CourseInstance',\n        name: 'ErgoScript Tutorial Series',\n        description: 'Master ErgoScript: Your path to building secure and powerful smart contracts',\n        courseMode: 'online',\n        duration:",
+    "context": "General content",
+    "maxLength": 313.5
+  },
+  {
+    "key": "learn.courseinstance_name_comprehensive_faq_description",
+    "value": "CourseInstance',\n        name: 'Comprehensive FAQ',\n        description: 'Everything you need to know about Ergo blockchain, technology, and ecosystem',\n        courseMode: 'online",
+    "context": "General content",
+    "maxLength": 270
+  },
+  {
+    "key": "learn.courseinstance_name_research_papers_description",
+    "value": "CourseInstance',\n        name: 'Research Papers',\n        description: 'Deep dive into the academic research and technical papers behind Ergo',\n        courseMode: 'online",
+    "context": "General content",
+    "maxLength": 256.5
+  },
+  {
+    "key": "learn.learningresource_name_ergoscript_tutorial_series",
+    "value": "LearningResource',\n          name: 'ErgoScript Tutorial Series',\n          description: 'Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo, step by step',\n          learningResourceType: 'Tutorial',\n          timeRequired:",
+    "context": "General content",
+    "maxLength": 385.5
+  },
+  {
+    "key": "learn.beginner_to_expert_teaches_ergoscript",
+    "value": "Beginner to Expert',\n          teaches: 'ErgoScript smart contract development",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "learn.learningresource_name_comprehensive_faq_description",
+    "value": "LearningResource',\n          name: 'Comprehensive FAQ',\n          description: 'Everything you need to know about Ergo blockchain, technology, and ecosystem in one place',\n          learningResourceType: 'Reference',\n          url: 'https://ergoblockchain.org/learn/faq',\n          educationalLevel: 'All Levels',\n          teaches: 'Ergo blockchain fundamentals and advanced concepts",
+    "context": "General content",
+    "maxLength": 576
+  },
+  {
+    "key": "learn.learningresource_name_research_papers_description",
+    "value": "LearningResource',\n          name: 'Research Papers',\n          description: 'Deep dive into the academic research and technical papers behind Ergo\\'s innovations',\n          learningResourceType: 'Academic Publication',\n          url: 'https://ergoblockchain.org/learn/research',\n          educationalLevel: 'Advanced',\n          teaches: 'Blockchain research and cryptographic protocols",
+    "context": "General content",
+    "maxLength": 582
+  },
+  {
+    "key": "learn.home_item_https_ergoblockchain_org",
+    "value": "Home',\n        item: 'https://ergoblockchain.org",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "learn.learn_item_https_ergoblockchain_org_learn",
+    "value": "Learn',\n        item: 'https://ergoblockchain.org/learn",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "learn.comprehensive_learning_resources_for_ergo",
+    "value": "Comprehensive learning resources for Ergo blockchain. From beginner guides to advanced ErgoScript development.",
+    "context": "General content",
+    "maxLength": 165
+  },
+  {
+    "key": "learn.ergoscript_tutorials_faq_research_papers",
+    "value": "ErgoScript tutorials, FAQ, research papers, and comprehensive guides for all levels.",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "learn.comprehensive_education_on_ergo_blockchain",
+    "value": "Comprehensive education on Ergo blockchain technology, from basics to advanced development",
+    "context": "General content",
+    "maxLength": 135
+  },
+  {
+    "key": "learn.master_ergoscript_your_path_to",
+    "value": "Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo, step by step",
+    "context": "General content",
+    "maxLength": 147
+  },
+  {
+    "key": "learn.everything_you_need_to_know",
+    "value": "Everything you need to know about Ergo blockchain, technology, and ecosystem in one place",
+    "context": "General content",
+    "maxLength": 133.5
+  },
+  {
+    "key": "learn.deep_dive_into_the_academic",
+    "value": "Deep dive into the academic research and technical papers behind Ergo\\",
+    "context": "General content",
+    "maxLength": 105
+  },
+  {
+    "key": "learn.hub.badge",
+    "value": "Ergo Learning Hub",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.hub.title",
+    "value": "Master Ergo Development",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.hub.subtitle",
+    "value": "Learn ErgoScript, eUTXO smart contracts, and Sigma protocols through hands-on tutorials and expert mentorship.",
+    "context": "General content",
+    "maxLength": 165
+  },
+  {
+    "key": "learn.hub.description",
+    "value": "From beginner wallet setup to advanced privacy dApps — structured paths with real projects and community support.",
+    "context": "Description",
+    "maxLength": 169.5
+  },
+  {
+    "key": "learn.hub.startButton",
+    "value": "Start",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "learn.hub.quickReference.title",
+    "value": "Quick Reference",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.hub.quickReference.items.visualGuides.name",
+    "value": "Visual Guides",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.hub.quickReference.items.visualGuides.subtitle",
+    "value": "Infographics that explain Ergo at a glance",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.hub.quickReference.items.glossary.name",
+    "value": "Glossary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.hub.quickReference.items.glossary.subtitle",
+    "value": "Ergo terminology & core concepts",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.hub.quickReference.items.playbooks.name",
+    "value": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.hub.quickReference.items.playbooks.subtitle",
+    "value": "Step-by-step paths for DeFi, privacy, mining",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.hub.quickReference.items.devPatterns.name",
+    "value": "Dev Patterns",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.hub.quickReference.items.devPatterns.subtitle",
+    "value": "Smart-contract patterns & reusable blueprints",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "learn.hub.tracks.curatedPathway",
+    "value": "Curated pathway",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.hub.tracks.stackTitle",
+    "value": "Stack you will touch",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.hub.tracks.stackLabels.core",
+    "value": "Core",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "learn.hub.tracks.stackLabels.tooling",
+    "value": "Tooling",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.hub.tracks.stackLabels.mentors",
+    "value": "Mentors",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.hub.tracks.stackLabels.deliverable",
+    "value": "Deliverable",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.hub.tracks.foundations.label",
+    "value": "Foundations",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.hub.tracks.foundations.badge",
+    "value": "Start here",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.hub.tracks.foundations.description",
+    "value": "Learn what makes Ergo different, how wallets stay sovereign, and why Storage Rent keeps the chain sustainable.",
+    "context": "Description",
+    "maxLength": 165
+  },
+  {
+    "key": "learn.hub.tracks.foundations.bullets.0",
+    "value": "Fair-launch DNA + key principles",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.hub.tracks.foundations.bullets.1",
+    "value": "Wallet security + on-chain habits",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learn.hub.tracks.foundations.bullets.2",
+    "value": "eUTXO vs account mindset shift",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.hub.tracks.foundations.cta",
+    "value": "Beginner path",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.hub.tracks.foundations.stack.core",
+    "value": "Wallets · Storage Rent · eUTXO",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.hub.tracks.foundations.stack.tooling",
+    "value": "Nautilus · SAFEW · Explorer",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.hub.tracks.foundations.stack.mentors",
+    "value": "Community channels",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.hub.tracks.foundations.stack.deliverable",
+    "value": "Secure wallet setup",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.hub.tracks.developer.label",
+    "value": "Developers",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.hub.tracks.developer.badge",
+    "value": "Code",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "learn.hub.tracks.developer.description",
+    "value": "Hands-on ErgoScript tutorials, VS Code snippets, and full-stack reference dApps.",
+    "context": "Description",
+    "maxLength": 120
+  },
+  {
+    "key": "learn.hub.tracks.developer.bullets.0",
+    "value": "Playground + AppKit workflow",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.hub.tracks.developer.bullets.1",
+    "value": "Contract templates you can fork",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.hub.tracks.developer.bullets.2",
+    "value": "Wallet + explorer integration",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "learn.hub.tracks.developer.cta",
+    "value": "Open dev guide",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.hub.tracks.developer.stack.core",
+    "value": "eUTXO · ErgoScript · Sigma",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.hub.tracks.developer.stack.tooling",
+    "value": "Playground · AppKit · Explorer",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.hub.tracks.developer.stack.mentors",
+    "value": "Discord office hours",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.hub.tracks.developer.stack.deliverable",
+    "value": "Ship a compliant dApp",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.hub.tracks.topics.label",
+    "value": "Topics",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.hub.tracks.topics.badge",
+    "value": "Explore",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.hub.tracks.topics.description",
+    "value": "Curated topic clusters that group related concepts, articles, and resources together.",
+    "context": "Description",
+    "maxLength": 127.5
+  },
+  {
+    "key": "learn.hub.tracks.topics.bullets.0",
+    "value": "Privacy & Sigma Protocols",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.hub.tracks.topics.bullets.1",
+    "value": "Mining & Autolykos",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.hub.tracks.topics.bullets.2",
+    "value": "DeFi & Smart Contracts",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.hub.tracks.topics.cta",
+    "value": "Browse topics",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.hub.tracks.topics.stack.core",
+    "value": "Topic clusters · Related content",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.hub.tracks.topics.stack.tooling",
+    "value": "Articles · Glossary · Guides",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.hub.tracks.topics.stack.mentors",
+    "value": "Community curators",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.hub.tracks.topics.stack.deliverable",
+    "value": "Deep topic understanding",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.hub.tracks.privacy.label",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.badge",
+    "value": "Sigma",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.description",
+    "value": "Master Σ-protocols, mixers, and selective disclosure flows for auditable privacy.",
+    "context": "Description",
+    "maxLength": 121.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.bullets.0",
+    "value": "Sigma protocols explained visually",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.hub.tracks.privacy.bullets.1",
+    "value": "ErgoMixer + compliance toolkit",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.hub.tracks.privacy.bullets.2",
+    "value": "Selective disclosure playbook",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.cta",
+    "value": "Explore privacy stack",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.stack.core",
+    "value": "Σ-protocols · ZK proofs · Mixers",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.hub.tracks.privacy.stack.tooling",
+    "value": "ErgoMixer · Stealth pools",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.stack.mentors",
+    "value": "Privacy researchers",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.hub.tracks.privacy.stack.deliverable",
+    "value": "Compliant privacy dApp",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.hub.tracks.research.label",
+    "value": "Research",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.hub.tracks.research.badge",
+    "value": "Deep dive",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.hub.tracks.research.description",
+    "value": "Whitepapers, Storage Rent models, and Autolykos research decks.",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "learn.hub.tracks.research.bullets.0",
+    "value": "Tokenomics + demurrage models",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "learn.hub.tracks.research.bullets.1",
+    "value": "Autolykos & NiPoPoWs papers",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "learn.hub.tracks.research.bullets.2",
+    "value": "Governance proposals archive",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.hub.tracks.research.cta",
+    "value": "Download papers",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.hub.tracks.research.stack.core",
+    "value": "Economics · Consensus · NIPoPoWs",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "learn.hub.tracks.research.stack.tooling",
+    "value": "Research papers · Models",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.hub.tracks.research.stack.mentors",
+    "value": "Core researchers",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.hub.tracks.research.stack.deliverable",
+    "value": "Research contribution",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.hub.faq.title",
+    "value": "Frequently asked questions",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.hub.faq.items.0.question",
+    "value": "How do I get started if I'm brand new?",
+    "context": "FAQ content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.hub.faq.items.0.answer",
+    "value": "Install Nautilus or SAFEW, back up your seed offline, grab a small amount of ERG, and run through the Beginner Path. It covers wallet hygiene, Storage Rent basics, and how to interact with dApps safely.",
+    "context": "FAQ content",
+    "maxLength": 303
+  },
+  {
+    "key": "learn.hub.faq.items.1.question",
+    "value": "What makes Ergo learning different from other L1s?",
+    "context": "FAQ content",
+    "maxLength": 75
+  },
+  {
+    "key": "learn.hub.faq.items.1.answer",
+    "value": "Ergo combines a research-first roadmap with real-world tooling. You get deterministic contracts (eUTXO), optional privacy (Σ-protocols), and sustainable economics (Storage Rent) without corporate gatekeepers.",
+    "context": "FAQ content",
+    "maxLength": 312
+  },
+  {
+    "key": "learn.hub.faq.items.2.question",
+    "value": "Is ErgoScript hard to learn?",
+    "context": "FAQ content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.hub.faq.items.2.answer",
+    "value": "If you've written Solidity or Rust, ErgoScript will feel familiar. The curated builder path walks through patterns, and AppKit handles most boilerplate so you can focus on business logic.",
+    "context": "FAQ content",
+    "maxLength": 280.5
+  },
+  {
+    "key": "learn.hub.faq.items.3.question",
+    "value": "Where can I ask questions live?",
+    "context": "FAQ content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.hub.faq.items.3.answer",
+    "value": "Join the weekly mentor hours on Discord or pop into the #dev or #academy channels any time. Core contributors hang out there and review repos frequently.",
+    "context": "FAQ content",
+    "maxLength": 229.5
+  },
+  {
+    "key": "learn.hub.nextSteps.badge",
+    "value": "Next steps",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.hub.nextSteps.title",
+    "value": "Continue Your Journey",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.hub.nextSteps.exploreEcosystem.title",
+    "value": "Explore Ecosystem",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.hub.nextSteps.exploreEcosystem.subtitle",
+    "value": "Discover Applications",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.hub.nextSteps.exploreEcosystem.description",
+    "value": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo",
+    "context": "Description",
+    "maxLength": 111
+  },
+  {
+    "key": "learn.hub.nextSteps.useErgo.title",
+    "value": "Use Ergo",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.hub.nextSteps.useErgo.subtitle",
+    "value": "Practical Guides",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.hub.nextSteps.useErgo.description",
+    "value": "Step-by-step guides for wallets, DeFi, mining, bridges, and more",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "learn.hub.cta.title",
+    "value": "Level Up Your Blockchain Skills",
+    "context": "Title",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.hub.cta.description",
+    "value": "Get notified about new tutorials, workshops, and learning resources for Ergo development",
+    "context": "Description",
+    "maxLength": 132
+  },
+  {
+    "key": "learn.glossaryHub.title",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "learn.glossaryHub.titleHighlight",
+    "value": "Glossary",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.glossaryHub.termsCount",
+    "value": "+ terms",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.glossaryHub.categoriesCount",
+    "value": "categories",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.glossaryHub.subtitle",
+    "value": "Master Ergo terminology in one searchable reference.",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "learn.glossaryHub.searchPlaceholder",
+    "value": "Search terms...",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.glossaryHub.allCategories",
+    "value": "All Categories",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.glossaryHub.level",
+    "value": "Level:",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.glossaryHub.allLevels",
+    "value": "All levels",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.glossaryHub.beginner",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.glossaryHub.intermediate",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.glossaryHub.advanced",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.glossaryHub.popular",
+    "value": "Popular:",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.glossaryHub.noResults.title",
+    "value": "No terms found",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.glossaryHub.noResults.description",
+    "value": "Try adjusting your search or filters",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "learn.glossaryHub.viewDetails",
+    "value": "View details",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.glossaryHub.cta.title",
+    "value": "Start Building on Ergo",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.glossaryHub.cta.description",
+    "value": "Ready to put your knowledge into practice? Explore our developer documentation and start building.",
+    "context": "Description",
+    "maxLength": 147
+  },
+  {
+    "key": "learn.researchPage.title",
+    "value": "Research Papers",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.researchPage.titleHighlight",
+    "value": "& Documentation",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.researchPage.subtitle",
+    "value": "Explore the academic foundations of Ergo's innovative blockchain technology",
+    "context": "General content",
+    "maxLength": 112.5
+  },
+  {
+    "key": "learn.researchPage.badges.papers",
+    "value": "papers",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.researchPage.badges.resources",
+    "value": "resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.researchPage.categories.all",
+    "value": "All",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "learn.researchPage.categories.coreProtocol",
+    "value": "Core Protocol & Architecture",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.researchPage.categories.privacy",
+    "value": "Privacy & Zero-Knowledge",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.researchPage.categories.economics",
+    "value": "Economic Models & DeFi",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.researchPage.categories.consensus",
+    "value": "Consensus & Mining",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.researchPage.categories.advanced",
+    "value": "Advanced Topics & Theory",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.researchPage.featuredPapers.title",
+    "value": "Featured Papers",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.researchPage.featuredPapers.downloadPdf",
+    "value": "Download PDF",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.researchPage.keyPapers.0.title",
+    "value": "Ergo: A Resilient Platform For Contractual Money",
+    "context": "Title",
+    "maxLength": 72
+  },
+  {
+    "key": "learn.researchPage.keyPapers.0.description",
+    "value": "The foundational whitepaper describing Ergo's architecture, eUTXO model, and key innovations.",
+    "context": "Description",
+    "maxLength": 139.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.0.category",
+    "value": "Core Protocol",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.1.title",
+    "value": "ErgoScript Language & Sigma Protocols",
+    "context": "Title",
+    "maxLength": 55.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.1.description",
+    "value": "Technical paper on ErgoScript language design and zero-knowledge proof integration.",
+    "context": "Description",
+    "maxLength": 124.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.1.category",
+    "value": "Cryptography",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.researchPage.keyPapers.2.title",
+    "value": "Multi-Stage Contracts in UTXO Model",
+    "context": "Title",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.2.description",
+    "value": "Research on implementing complex multi-stage contracts using the UTXO model.",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "learn.researchPage.keyPapers.2.category",
+    "value": "Architecture",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.researchPage.keyPapers.3.title",
+    "value": "Advanced ErgoScript Tutorial",
+    "context": "Title",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.researchPage.keyPapers.3.description",
+    "value": "Comprehensive guide to advanced ErgoScript programming patterns and best practices.",
+    "context": "Description",
+    "maxLength": 124.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.3.category",
+    "value": "Development",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.4.title",
+    "value": "Zerojoin: Privacy-Preserving Mixing",
+    "context": "Title",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.4.description",
+    "value": "Research on combining Zerocoin and CoinJoin for enhanced transaction privacy.",
+    "context": "Description",
+    "maxLength": 115.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.4.category",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.5.title",
+    "value": "Non-Interactive Proofs of Proof-of-Work",
+    "context": "Title",
+    "maxLength": 58.5
+  },
+  {
+    "key": "learn.researchPage.keyPapers.5.description",
+    "value": "Foundational research on NIPoPoWs enabling light clients and cross-chain verification.",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "learn.researchPage.keyPapers.5.category",
+    "value": "Cryptography",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.researchPage.browseByCategory.title",
+    "value": "Browse by Category",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.researchPage.browseByCategory.viewPaper",
+    "value": "View Paper",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.researchPage.developerResources.title",
+    "value": "Developer Resources",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.researchPage.developerResources.subtitle",
+    "value": "Technical documentation and implementation references",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "learn.researchPage.developerResources.items.0.title",
+    "value": "ErgoScript Documentation",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.researchPage.developerResources.items.1.title",
+    "value": "Protocol Specifications",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.researchPage.developerResources.items.2.title",
+    "value": "Node Implementation",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "learn.researchPage.developerResources.items.3.title",
+    "value": "Sigma-Rust Cryptography Library",
+    "context": "Title",
+    "maxLength": 46.5
+  },
+  {
+    "key": "learn.researchPage.developerResources.items.4.title",
+    "value": "ErgoMixer Technical Overview",
+    "context": "Title",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.researchPage.communityResearch.title",
+    "value": "Community Research",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.researchPage.communityResearch.subtitle",
+    "value": "Contribute to Ergo's research ecosystem",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "learn.researchPage.communityResearch.items.0.title",
+    "value": "Research Bounties",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.researchPage.communityResearch.items.0.description",
+    "value": "Earn rewards for contributing research",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.researchPage.communityResearch.items.1.title",
+    "value": "EIP Process",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.researchPage.communityResearch.items.1.description",
+    "value": "Participate in Ergo Improvement Proposals",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "learn.researchPage.communityResearch.items.2.title",
+    "value": "Academic Collaboration",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.researchPage.communityResearch.items.2.description",
+    "value": "Partner with universities and research institutions",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "learn.researchPage.communityResearch.joinResearch",
+    "value": "Join Research Community",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "learn.researchPage.communityResearch.viewEips",
+    "value": "View EIPs",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.researchPage.cta.title",
+    "value": "Dive Deeper Into Ergo Research",
+    "context": "Title",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.researchPage.cta.description",
+    "value": "Get updates on new research papers, academic collaborations, and breakthrough discoveries in blockchain technology.",
+    "context": "Description",
+    "maxLength": 172.5
+  },
+  {
+    "key": "learn.researchPage.curatedLinks",
+    "value": "Curated links to whitepapers, formal analyses, and developer resources.",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "learn.researchPage.keyDocuments",
+    "value": "Key Documents",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.researchPage.readPaper",
+    "value": "Read Paper",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.researchPage.quickStart.title",
+    "value": "Quick Start",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.researchPage.quickStart.readWhitepaper",
+    "value": "Read Ergo Whitepaper",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.researchPage.quickStart.exploreLibrary",
+    "value": "Explore Research Library",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.researchPage.quickStart.joinCommunity",
+    "value": "Join the Community",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.researchPage.buttons.keyDocuments",
+    "value": "Key Documents",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.researchPage.buttons.community",
+    "value": "Community",
+    "context": "Button label - keep short",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.ergoscriptPage.title",
+    "value": "ErgoScript",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.ergoscriptPage.subtitle",
+    "value": "Smart Contract Language for the Future",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "learn.ergoscriptPage.description",
+    "value": "ErgoScript is a powerful, secure smart contract language built on Sigma protocols and the extended UTXO model. Create complex financial contracts with built-in privacy, predictable fees, and mathematical guarantees.",
+    "context": "Description",
+    "maxLength": 322.5
+  },
+  {
+    "key": "learn.ergoscriptPage.heroDescription",
+    "value": "Type-safe, Sigma protocol-native, and purpose-built for financial contracts.",
+    "context": "General content",
+    "maxLength": 114
+  },
+  {
+    "key": "learn.ergoscriptPage.buttons.startLearning",
+    "value": "Start Learning",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.ergoscriptPage.buttons.viewOnGithub",
+    "value": "View on GitHub",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.title",
+    "value": "Quick Start",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.playgroundTitle",
+    "value": "Try Playground",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.playgroundDescription",
+    "value": "Interactive ErgoScript environment",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.documentationTitle",
+    "value": "Read Tutorial",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.documentationDescription",
+    "value": "Step-by-step guide",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.examplesTitle",
+    "value": "View Examples",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.ergoscriptPage.quickStart.examplesDescription",
+    "value": "Real contract patterns",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.ergoscriptPage.features.title",
+    "value": "Why ErgoScript?",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.subtitle",
+    "value": "Purpose-built for secure smart contracts",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.0.title",
+    "value": "Sigma Protocols",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.0.description",
+    "value": "Built-in zero-knowledge proofs for privacy and complex multi-party contracts",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.0.icon",
+    "value": "Shield",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.1.title",
+    "value": "UTXO Model",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.1.description",
+    "value": "Extended UTXO model with data and logic attached to boxes for enhanced security",
+    "context": "Description",
+    "maxLength": 118.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.1.icon",
+    "value": "Box",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.2.title",
+    "value": "Functional Programming",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.2.description",
+    "value": "Immutable data structures and functional paradigms for safer smart contracts",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.2.icon",
+    "value": "Code",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.3.title",
+    "value": "Oracle Integration",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.3.description",
+    "value": "Native oracle support for real-world data integration without external dependencies",
+    "context": "Description",
+    "maxLength": 124.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.3.icon",
+    "value": "Database",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.4.title",
+    "value": "Multi-Stage Contracts",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.4.description",
+    "value": "Complex contracts that evolve through multiple stages with different conditions",
+    "context": "Description",
+    "maxLength": 118.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.4.icon",
+    "value": "Layers",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.5.title",
+    "value": "Predictable Fees",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.5.description",
+    "value": "Know exact execution costs before deployment with deterministic fee calculation",
+    "context": "Description",
+    "maxLength": 118.5
+  },
+  {
+    "key": "learn.ergoscriptPage.features.items.5.icon",
+    "value": "Zap",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "learn.ergoscriptPage.codeExamples.title",
+    "value": "Learn by Example",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learn.ergoscriptPage.codeExamples.tabs.basics",
+    "value": "Basics",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.codeExamples.tabs.advanced",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.codeExamples.tabs.defi",
+    "value": "DeFi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.title",
+    "value": "Learning Path",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.subtitle",
+    "value": "From beginner to advanced ErgoScript developer",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.beginner.badge",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.beginner.title",
+    "value": "Foundations",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.beginner.description",
+    "value": "Start with the basics of ErgoScript and the UTXO model",
+    "context": "Description",
+    "maxLength": 81
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.intermediate.badge",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.intermediate.title",
+    "value": "Patterns & Protocols",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.intermediate.description",
+    "value": "Learn common patterns and build real applications",
+    "context": "Description",
+    "maxLength": 73.5
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.advanced.badge",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.advanced.title",
+    "value": "Complex Systems",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.ergoscriptPage.learningPath.advanced.description",
+    "value": "Master advanced techniques and protocol design",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.ergoscriptPage.resources.title",
+    "value": "Resources",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.ergoscriptPage.resources.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.ergoscriptPage.resources.tutorials",
+    "value": "Tutorials",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.ergoscriptPage.resources.examples",
+    "value": "Examples",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.faq.title",
+    "value": "Frequently Asked Questions",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "learn.ergoscriptPage.cta.title",
+    "value": "Ready to Build?",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learn.ergoscriptPage.cta.description",
+    "value": "Get ErgoScript updates, tutorials, and development tips delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 120
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.title",
+    "value": "Tutorials",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.0.title",
+    "value": "Hello World Contract",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.0.description",
+    "value": "Your first ErgoScript contract - basic syntax and structure",
+    "context": "Description",
+    "maxLength": 88.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.0.difficulty",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.0.time",
+    "value": "15 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.0.link",
+    "value": "/docs/ergoscript/hello-world",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.1.title",
+    "value": "Token Minting",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.1.description",
+    "value": "Create and manage custom tokens on Ergo blockchain",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.1.difficulty",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.1.time",
+    "value": "30 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.1.link",
+    "value": "/docs/ergoscript/token-minting",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.2.title",
+    "value": "Multi-Signature Wallet",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.2.description",
+    "value": "Build a secure multi-sig wallet with ErgoScript",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.2.difficulty",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.2.time",
+    "value": "45 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.2.link",
+    "value": "/docs/ergoscript/multisig",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.3.title",
+    "value": "Oracle Data Usage",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.3.description",
+    "value": "Integrate external data sources into your contracts",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.3.difficulty",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.3.time",
+    "value": "25 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learn.ergoscriptPage.tutorials.items.3.link",
+    "value": "/docs/ergoscript/oracles",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.0.question",
+    "value": "What makes ErgoScript different from Solidity?",
+    "context": "FAQ content",
+    "maxLength": 69
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.0.answer",
+    "value": "ErgoScript is based on the extended UTXO model, making it more secure and predictable than account-based models. It uses functional programming principles, has built-in zero-knowledge proofs, and offers deterministic fee calculation.",
+    "context": "FAQ content",
+    "maxLength": 349.5
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.1.question",
+    "value": "Do I need to know Scala to write ErgoScript?",
+    "context": "FAQ content",
+    "maxLength": 66
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.1.answer",
+    "value": "While ErgoScript is inspired by Scala, you don't need prior Scala knowledge. The syntax is designed to be accessible to developers familiar with any modern programming language. However, understanding functional programming concepts helps.",
+    "context": "FAQ content",
+    "maxLength": 358.5
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.2.question",
+    "value": "How do I test ErgoScript contracts?",
+    "context": "FAQ content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.2.answer",
+    "value": "You can test contracts using the Ergo Playground, local testnet, or the official Ergo testing framework. The Ergo SDK provides comprehensive testing tools for contract development and debugging.",
+    "context": "FAQ content",
+    "maxLength": 291
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.3.question",
+    "value": "What are the gas fees like for ErgoScript?",
+    "context": "FAQ content",
+    "maxLength": 63
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.3.answer",
+    "value": "ErgoScript contracts have predictable, low fees typically under $0.01. The extended UTXO model allows for efficient execution and the ability to calculate exact costs before deployment.",
+    "context": "FAQ content",
+    "maxLength": 277.5
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.4.question",
+    "value": "Can I build DeFi protocols with ErgoScript?",
+    "context": "FAQ content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "learn.ergoscriptPage.faqs.4.answer",
+    "value": "Yes! ErgoScript is perfect for DeFi. Examples include SigmaUSD (algorithmic stablecoin), DEXs like ErgoDEX, and various DeFi primitives. The language's security features make it ideal for financial applications.",
+    "context": "FAQ content",
+    "maxLength": 316.5
+  },
+  {
+    "key": "learn.ergoscriptPage.viewExamples",
+    "value": "View Examples",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "learn.ergoscriptPage.faqTitle",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  }
+]

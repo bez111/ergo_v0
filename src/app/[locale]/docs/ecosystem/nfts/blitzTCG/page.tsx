@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ExternalLink, ArrowLeft, Zap, Info } from "lucide-react";
 
 export default function BlitzTCGPage() {

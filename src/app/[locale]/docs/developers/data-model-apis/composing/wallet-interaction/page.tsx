@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { FileText, GitBranch, PenTool, Server, CheckCircle, Database, Coins, Layers } from "lucide-react";
 
 export default function WalletInteractionPage() {

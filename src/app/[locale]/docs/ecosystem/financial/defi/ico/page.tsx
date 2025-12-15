@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Copy as CopyIcon, Check as CheckIcon, ChevronRight, BookOpen, GitBranch, Info, Zap, Database, Lock, Target } from "lucide-react";
 import { CodeBlock } from "@/components/ui";
 

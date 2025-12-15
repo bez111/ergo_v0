@@ -22,7 +22,7 @@ import {
   Code,
   Layers
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Alert } from "@/components/ui/alert";
 
 export default function PerpetualTokensPage() {

@@ -1,0 +1,100 @@
+# Crowdin Configuration
+# https://developer.crowdin.com/configuration-file/
+#
+# To use Crowdin:
+# 1. Create a free account at https://crowdin.com (free for open source)
+# 2. Create a new project
+# 3. Add your API token to .env.local as CROWDIN_TOKEN
+# 4. Run: npx @crowdin/cli upload sources
+# 5. Run: npx @crowdin/cli download
+
+project_id_env: CROWDIN_PROJECT_ID
+api_token_env: CROWDIN_TOKEN
+
+preserve_hierarchy: true
+
+files:
+  # Common translations
+  - source: /messages/en/common.json
+    translation: /messages/%two_letters_code%/common.json
+    
+  # Home page
+  - source: /messages/en/home.json
+    translation: /messages/%two_letters_code%/home.json
+    
+  # Miners page
+  - source: /messages/en/miners.json
+    translation: /messages/%two_letters_code%/miners.json
+    
+  # Hodlers page
+  - source: /messages/en/hodlers.json
+    translation: /messages/%two_letters_code%/hodlers.json
+    
+  # Wallet page
+  - source: /messages/en/wallet.json
+    translation: /messages/%two_letters_code%/wallet.json
+    
+  # Ecosystem pages
+  - source: /messages/en/ecosystem.json
+    translation: /messages/%two_letters_code%/ecosystem.json
+    
+  # FAQ pages
+  - source: /messages/en/faq.json
+    translation: /messages/%two_letters_code%/faq.json
+    
+  # Learn pages
+  - source: /messages/en/learn.json
+    translation: /messages/%two_letters_code%/learn.json
+    
+  # Technology pages
+  - source: /messages/en/technology.json
+    translation: /messages/%two_letters_code%/technology.json
+    
+  # Start pages
+  - source: /messages/en/start.json
+    translation: /messages/%two_letters_code%/start.json
+    
+  # Developers pages
+  - source: /messages/en/developers.json
+    translation: /messages/%two_letters_code%/developers.json
+    
+  # Use cases pages
+  - source: /messages/en/use.json
+    translation: /messages/%two_letters_code%/use.json
+    
+  # Blog
+  - source: /messages/en/blog.json
+    translation: /messages/%two_letters_code%/blog.json
+    
+  # SEO & Footer
+  - source: /messages/en/seo.json
+    translation: /messages/%two_letters_code%/seo.json
+    
+  # Community
+  - source: /messages/en/community.json
+    translation: /messages/%two_letters_code%/community.json
+    
+  # Content Hubs (glossary, questions, topics, etc.)
+  - source: /messages/en/content-hubs.json
+    translation: /messages/%two_letters_code%/content-hubs.json
+    
+  # Infographics
+  - source: /messages/en/infographics.json
+    translation: /messages/%two_letters_code%/infographics.json
+    
+  # Manifesto
+  - source: /messages/en/manifesto.json
+    translation: /messages/%two_letters_code%/manifesto.json
+    
+  # Compare pages
+  - source: /messages/en/compare.json
+    translation: /messages/%two_letters_code%/compare.json
+    
+  # Newsletter
+  - source: /messages/en/newsletter.json
+    translation: /messages/%two_letters_code%/newsletter.json
+    
+  # Events
+  - source: /messages/en/events.json
+    translation: /messages/%two_letters_code%/events.json
+

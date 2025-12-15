@@ -1,41 +1,43 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import { PatternsHubClient } from "./PatternsHubClient"
 import { devPatterns, categoryLabels, categoryDescriptions, getAllCategories } from "@/data/dev-patterns"
 import { siteConfig } from "@/config/site-config"
 import { createBreadcrumbSchema, createCollectionSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
+interface Props {
+  params: Promise<{ locale: string }>
+}
+
 const origin = siteConfig.siteUrl
 const url = `${origin}/patterns`
 
-// SEO Configuration
-const SEO = {
-  title: "ErgoScript Patterns — 18 Copy-Paste Smart Contracts | Ergo",
-  description: "18 ready-to-use ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Copy, paste, deploy. Production-ready code examples.",
-  keywords: [
-    "ErgoScript patterns", "Ergo smart contracts", "ErgoScript examples",
-    "eUTXO patterns", "Ergo developer", "blockchain patterns",
-    "DeFi patterns", "copy paste smart contracts"
-  ],
-}
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'patternsPage.seo' })
 
-export const metadata: Metadata = {
-  title: SEO.title,
-  description: SEO.description,
-  keywords: SEO.keywords,
-  openGraph: {
-    title: "ErgoScript Patterns — 18 Copy-Paste Smart Contracts",
-    description: "18 ready-to-use ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Copy, paste, deploy.",
-    url: `${siteConfig.siteUrl}/patterns`,
-    type: "website",
-    images: [{ url: `${siteConfig.siteUrl}/og/hubs/pattern.png`, width: 1200, height: 630 }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ErgoScript Patterns — 18 Copy-Paste Smart Contracts",
-    description: "18 ready-to-use ErgoScript patterns. Time-locks, multi-sig, AMM, oracles. Copy, paste, deploy."
-  },
-  alternates: { canonical: `${siteConfig.siteUrl}/patterns` }
+  const title = t('title')
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: ["ErgoScript patterns", "Ergo smart contracts", "ErgoScript examples", "eUTXO patterns", "Ergo developer", "blockchain patterns", "DeFi patterns", "copy paste smart contracts"],
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.siteUrl}/patterns`,
+      type: "website",
+      images: [{ url: `${siteConfig.siteUrl}/og/hubs/pattern.png`, width: 1200, height: 630 }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description
+    },
+    alternates: { canonical: `${siteConfig.siteUrl}/patterns` }
+  }
 }
 
 export default function PatternsPage() {

@@ -1,0 +1,140 @@
+[
+  {
+    "key": "blog.title",
+    "value": "Blog",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "blog.subtitle",
+    "value": "Latest news and updates",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "blog.description",
+    "value": "Latest news and updates from Ergo",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "blog.readMore",
+    "value": "Read More",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.categories.technology",
+    "value": "Technology",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "blog.categories.ecosystem",
+    "value": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.categories.community",
+    "value": "Community",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.categories.announcements",
+    "value": "Announcements",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "blog.categories.all",
+    "value": "All Posts",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.categories.development",
+    "value": "Development",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "blog.categories.technical",
+    "value": "Technical",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.categories.education",
+    "value": "Education",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.seo.title",
+    "value": "Blog - Ergo News & Updates | Ergo Platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 63
+  },
+  {
+    "key": "blog.seo.description",
+    "value": "Read the latest news, updates, and insights from the Ergo blockchain team.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 111
+  },
+  {
+    "key": "blog.seo.keywords",
+    "value": "Ergo blog, blockchain news, updates, articles",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 67.5
+  },
+  {
+    "key": "blog.featured.title",
+    "value": "Featured Posts",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "blog.featured.readMore",
+    "value": "Read More",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "blog.recent.title",
+    "value": "Recent Posts",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "blog.recent.viewAll",
+    "value": "View All Posts",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "blog.newsletter.title",
+    "value": "Subscribe to Newsletter",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "blog.newsletter.description",
+    "value": "Get the latest updates delivered to your inbox",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "blog.newsletter.placeholder",
+    "value": "Enter your email",
+    "context": "Input placeholder",
+    "maxLength": 24
+  },
+  {
+    "key": "blog.newsletter.subscribe",
+    "value": "Subscribe",
+    "context": "General content",
+    "maxLength": 13.5
+  }
+]

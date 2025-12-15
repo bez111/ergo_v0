@@ -1,0 +1,80 @@
+{
+  "manifesto": {
+    "title": "管理者",
+    "content": {
+      "paragraph1": "在日益加强的监督和控制的世界中，我们支持金融自由和隐私。",
+      "paragraph2": "Ergo是建立在推动原先的加密革命的核心原则之上的：开放的、无许可的、安全的系统，赋予普通人权力。",
+      "paragraph3": "我们反对权力集中，我们反对监督国家，我们拒绝公司夺取我们的金融系统。",
+      "paragraph4": "Ergo提供工具，使人们能够通过可编程、私人和不可阻挡的合约金钱来保证金融互动。",
+      "conclusion": "这不仅仅是技术，这是一种抵制。"
+    }
+  },
+  "corePillars": {
+    "title": "CORE PILLARS",
+    "subtitle": "Ergo 将经过验证的原理与尖端加密结合在一起。",
+    "pillars": {
+      "security": {
+        "title": "安全(POW)",
+        "description": "抵御Autolykos v2 PoW确保大家的强有力的权力下放、公平采矿和长期安全。"
+      },
+      "programmability": {
+        "title": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
+        "description": "可正式核查、明示和安全的合同——由 ErgoScript 和高级eUTXO 模型提供动力。"
+      },
+      "sustainability": {
+        "title": "SUSTAINABILITY (STORAGE)",
+        "description": "存储租金和可预测的成本能够保持网络的长期健康并防止区块链流入。"
+      },
+      "privacy": {
+        "title": "Privacy",
+        "description": "使用 Sigma protocol-启用保密的 dApps 和交易的协议隐私。"
+      },
+      "oraclePools": {
+        "title": "收件人",
+        "description": "第一个真正分散的果园池——可靠、无许可的超链数据存取，并有内在的奖励措施。"
+      },
+      "devFriendly": {
+        "title": "DEV 好友",
+        "description": "世界级的文档、开放的工具和生机勃勃的协作社区在埃尔戈的基础上建设便捷和创新。"
+      }
+    }
+  },
+  "whyErgo": {
+    "title": "为什么错误？",
+    "subtitle": "一个复原力强的 blockchain 平台，将已验证的原理与尖端创新结合起来。",
+    "mainFeatures": {
+      "sustainable": {
+        "title": "可持续发展",
+        "subtitle": "生成到最后一个",
+        "description": "仓储租金被遗忘的状态，并用几十年的可预测费用为矿工提供资金。"
+      },
+      "fairAndSecure": {
+        "title": "常见问题与安全",
+        "subtitle": "工作证明基金会",
+        "description": "No ICO. No VC. No premine. Memory-handling mining → broad participation and durable security."
+      },
+      "powerfulAndFlexible": {
+        "title": "收件人和 FLEXIBL",
+        "subtitle": "高级智能合同",
+        "description": "eUTXO + ErgoScript 传输确定性的、可编译的逻辑，没有隐藏的全球状态。"
+      }
+    },
+    "additionalFeatures": {
+      "privacy": {
+        "title": "首页",
+        "description": "Sigma协议允许在需要时选择性披露和环/阈值证明。",
+        "subtitle": "可审计，可选隐私"
+      },
+      "community": {
+        "title": "常驻裁军谈判会议",
+        "description": "全球贡献者和投资促进机构推动路线图——而不是象征性的金库。",
+        "subtitle": "开放源码，无基础税"
+      },
+      "developer": {
+        "title": "发展基金会",
+        "description": "游乐场，CI 模板，浏览器APIs—快和安全地运送合同。",
+        "subtitle": "文档、 工具、 模板"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useBridges.title",
+    "value": "Cross-Chain Bridges",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "useBridges.description",
+    "value": "Connect Ergo with other blockchain networks",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "useBridges.subtitle",
+    "value": "Trustless interoperability solutions",
+    "context": "General content",
+    "maxLength": 54
+  }
+]

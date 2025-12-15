@@ -3,7 +3,7 @@
 // import { useState, useEffect } from 'react'
 // import { Star, ThumbsUp, ThumbsDown } from 'lucide-react'
 // import { motion, AnimatePresence } from 'framer-motion'
-// import { Button } from '@/src/components/ui/button'
+// import { Button } from '@/components/ui/button'
 
 // interface BlogRatingProps {
 //   postId: string

@@ -1,0 +1,68 @@
+[
+  {
+    "key": "ctaSection.title",
+    "value": "Ready to Build the Future?",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "ctaSection.subtitle",
+    "value": "Join the Ergo ecosystem and be part of the decentralized revolution",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "ctaSection.actions.getStarted.title",
+    "value": "Get Started",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ctaSection.actions.getStarted.description",
+    "value": "Set up wallet & buy ERG",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "ctaSection.actions.getStarted.label",
+    "value": "START NOW",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ctaSection.actions.developers.title",
+    "value": "For Developers",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "ctaSection.actions.developers.description",
+    "value": "Build on Ergo",
+    "context": "Description",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ctaSection.actions.developers.label",
+    "value": "START BUILDING",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "ctaSection.actions.miners.title",
+    "value": "For Miners",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "ctaSection.actions.miners.description",
+    "value": "Secure the network",
+    "context": "Description",
+    "maxLength": 27
+  },
+  {
+    "key": "ctaSection.actions.miners.label",
+    "value": "START MINING",
+    "context": "General content",
+    "maxLength": 18
+  }
+]

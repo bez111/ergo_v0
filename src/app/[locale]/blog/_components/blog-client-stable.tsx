@@ -3,7 +3,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useSearchParams } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { BookOpen, TrendingUp } from "lucide-react"
 import { BlogCard } from "./blog-card"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"

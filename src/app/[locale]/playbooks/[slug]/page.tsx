@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getMessages } from 'next-intl/server';
 import { getPlaybookBySlug, getAllPlaybookSlugs, Playbook } from "@/data/playbooks";
+import { getLocalizedPlaybookBySlug, type PlaybooksTranslations } from "@/data/playbooks-i18n";
 import { PlaybookPageClient } from "./PlaybookPageClient";
 import { SchemaOrg } from "@/components/seo/schema-org";
 
@@ -14,8 +16,20 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const playbook = getPlaybookBySlug(slug);
+  const { slug, locale } = await params;
+  
+  // Get translations for non-English locales
+  let playbook: Playbook | undefined;
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { playbooksData?: PlaybooksTranslations };
+      playbook = getLocalizedPlaybookBySlug(slug, messages?.playbooksData);
+    } catch {
+      playbook = getPlaybookBySlug(slug);
+    }
+  } else {
+    playbook = getPlaybookBySlug(slug);
+  }
 
   if (!playbook) {
     return {
@@ -131,8 +145,20 @@ function generateBreadcrumbSchema(playbook: Playbook) {
 }
 
 export default async function PlaybookPage({ params }: Props) {
-  const { slug } = await params;
-  const playbook = getPlaybookBySlug(slug);
+  const { slug, locale } = await params;
+  
+  // Get translations for non-English locales
+  let playbook: Playbook | undefined;
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { playbooksData?: PlaybooksTranslations };
+      playbook = getLocalizedPlaybookBySlug(slug, messages?.playbooksData);
+    } catch {
+      playbook = getPlaybookBySlug(slug);
+    }
+  } else {
+    playbook = getPlaybookBySlug(slug);
+  }
 
   if (!playbook) {
     notFound();

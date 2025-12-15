@@ -1,0 +1,548 @@
+[
+  {
+    "key": "comparisonClient.hero.title",
+    "value": "Platform",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "comparisonClient.hero.titleHighlight",
+    "value": "Analysis",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "comparisonClient.hero.subtitle",
+    "value": "Understanding Ergo's Technical Advantages",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "comparisonClient.hero.description",
+    "value": "Ergo combines the security and predictability of the eUTXO model with the programmability needed for complex smart contracts, and supports light clients via NIPoPoWs.",
+    "context": "Description",
+    "maxLength": 249
+  },
+  {
+    "key": "comparisonClient.hero.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "comparisonClient.hero.viewComparison",
+    "value": "View Comparison",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "comparisonClient.cards.predictableSecurity.title",
+    "value": "Predictable & Auditable Security",
+    "context": "Title",
+    "maxLength": 48
+  },
+  {
+    "key": "comparisonClient.cards.predictableSecurity.description",
+    "value": "No known protocol-level reentrancy class; deterministic execution bounds; friendly to audits",
+    "context": "Description",
+    "maxLength": 138
+  },
+  {
+    "key": "comparisonClient.cards.parallelExecution.title",
+    "value": "Parallel Execution",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "comparisonClient.cards.parallelExecution.description",
+    "value": "Independent UTXOs enable parallel execution; shared-box patterns may introduce contention",
+    "context": "Description",
+    "maxLength": 133.5
+  },
+  {
+    "key": "comparisonClient.cards.nativePrivacy.title",
+    "value": "Native Privacy",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "comparisonClient.cards.nativePrivacy.description",
+    "value": "Sigma-protocols and UTXO mixing at the protocol layer",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "comparisonClient.cards.nativeAssets.title",
+    "value": "Native L1 Assets",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "comparisonClient.cards.nativeAssets.description",
+    "value": "Native L1 tokens/NFTs (no wrapper contracts)",
+    "context": "Description",
+    "maxLength": 66
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.title",
+    "value": "Why Developers Choose",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.titleHighlight",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.developerFirst.title",
+    "value": "Developer-First Philosophy",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.developerFirst.quote",
+    "value": "Other platforms force you to work around their limitations. Ergo works around yours.",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.developerFirst.points.0",
+    "value": "Predictable execution costs",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.developerFirst.points.1",
+    "value": "Security by design",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.developerFirst.points.2",
+    "value": "No reentrancy attacks",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.productivity.title",
+    "value": "Built for Productivity",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.productivity.description",
+    "value": "Experience the difference of building on a platform designed for developer productivity.",
+    "context": "Description",
+    "maxLength": 132
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.productivity.points.0",
+    "value": "Declarative ErgoScript",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.productivity.points.1",
+    "value": "Formal verification support",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.productivity.points.2",
+    "value": "Rich cryptographic primitives",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.testimonial.quote",
+    "value": "Building on Ergo feels like having superpowers. The eUTXO model eliminates entire classes of bugs, and ErgoScript makes complex cryptographic operations feel natural.",
+    "context": "General content",
+    "maxLength": 249
+  },
+  {
+    "key": "comparisonClient.whyDevelopers.testimonial.attribution",
+    "value": "Ergo Developer Community",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "comparisonClient.stats.predictable.value",
+    "value": "Predictable",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "comparisonClient.stats.predictable.label",
+    "value": "Fees; no gas price auctions",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "comparisonClient.stats.noClass.value",
+    "value": "No class",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "comparisonClient.stats.noClass.label",
+    "value": "of protocol-level reentrancy",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "comparisonClient.stats.native.value",
+    "value": "Native",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "comparisonClient.stats.native.label",
+    "value": "L1 tokens/NFTs",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "comparisonClient.stats.light.value",
+    "value": "Light",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "comparisonClient.stats.light.label",
+    "value": "clients (NIPoPoWs)",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "comparisonClient.problem.title",
+    "value": "The Problem with",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "comparisonClient.problem.titleHighlight",
+    "value": "Current Platforms",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "comparisonClient.problem.nightmares.title",
+    "value": "Development Nightmares",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "comparisonClient.problem.nightmares.points.0",
+    "value": "Unpredictable gas costs bankrupting users",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "comparisonClient.problem.nightmares.points.1",
+    "value": "Reentrancy attacks draining protocols",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "comparisonClient.problem.nightmares.points.2",
+    "value": "Complex languages creating security holes",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "comparisonClient.problem.nightmares.points.3",
+    "value": "VC-controlled platforms changing rules",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "comparisonClient.problem.solution.title",
+    "value": "The Ergo Solution",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "comparisonClient.problem.solution.points.0",
+    "value": "Predictable fees; auditable execution bounds",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "comparisonClient.problem.solution.points.1",
+    "value": "Security-by-design in the eUTXO model",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "comparisonClient.problem.solution.points.2",
+    "value": "ErgoScript: declarative, explicit state transitions",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "comparisonClient.problem.solution.points.3",
+    "value": "Community-owned, fair launch principles",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "comparisonClient.differentiators.title",
+    "value": "What Makes",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "comparisonClient.differentiators.titleHighlight",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "comparisonClient.differentiators.subtitle",
+    "value": "Different",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "comparisonClient.differentiators.ergoAdvantage",
+    "value": "Ergo Advantage",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "comparisonClient.differentiators.others",
+    "value": "Others",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "comparisonClient.differentiators.vs",
+    "value": "VS",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "comparisonClient.differentiators.keyAdvantage",
+    "value": "Key Advantage",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "comparisonClient.platformComparison.title",
+    "value": "Blockchain",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "comparisonClient.platformComparison.titleHighlight",
+    "value": "Platform",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "comparisonClient.platformComparison.subtitle",
+    "value": "Comparison",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "comparisonClient.platformComparison.detailedLink",
+    "value": "Detailed 1-on-1 comparisons",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "comparisonClient.platformComparison.tableTitle",
+    "value": "Blockchain Platform Comparison: Ergo vs BTC/ETH/ADA/SOL/SUI",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "comparisonClient.platformComparison.tableCaption",
+    "value": "Platform comparison",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "comparisonClient.platformComparison.feature",
+    "value": "Feature",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "comparisonClient.platformComparison.footerNote",
+    "value": "Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated:",
+    "context": "General content",
+    "maxLength": 246
+  },
+  {
+    "key": "comparisonClient.trustIndicators.title",
+    "value": "Trust",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "comparisonClient.trustIndicators.titleHighlight",
+    "value": "Indicators",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "comparisonClient.trustIndicators.battleTested.title",
+    "value": "Battle-tested since 2019",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "comparisonClient.trustIndicators.battleTested.subtitle",
+    "value": "Proven security track record",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "comparisonClient.trustIndicators.developers.title",
+    "value": "100+ developers",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "comparisonClient.trustIndicators.developers.subtitle",
+    "value": "Growing active community",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "comparisonClient.trustIndicators.noIncidents.title",
+    "value": "No critical protocol-level incidents",
+    "context": "Title",
+    "maxLength": 54
+  },
+  {
+    "key": "comparisonClient.trustIndicators.noIncidents.subtitle",
+    "value": "As of",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "comparisonClient.faq.title",
+    "value": "FAQ",
+    "context": "FAQ content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "comparisonClient.faq.questions.0.q",
+    "value": "How does eUTXO reduce reentrancy risk?",
+    "context": "FAQ content",
+    "maxLength": 57
+  },
+  {
+    "key": "comparisonClient.faq.questions.0.a",
+    "value": "Transactions consume specified UTXOs and cannot be re-entered; the shared-state pattern behind reentrancy is absent.",
+    "context": "FAQ content",
+    "maxLength": 174
+  },
+  {
+    "key": "comparisonClient.faq.questions.1.q",
+    "value": "Are fees predictable on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "comparisonClient.faq.questions.1.a",
+    "value": "Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions).",
+    "context": "FAQ content",
+    "maxLength": 184.5
+  },
+  {
+    "key": "comparisonClient.faq.questions.2.q",
+    "value": "Does Ergo have light clients?",
+    "context": "FAQ content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "comparisonClient.faq.questions.2.a",
+    "value": "Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients.",
+    "context": "FAQ content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "comparisonClient.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "comparisonClient.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "comparisonClient.whatsNext.subtitle",
+    "value": "Start building or exploring the Ergo ecosystem today",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "comparisonClient.whatsNext.startBuilding.title",
+    "value": "Start Building",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "comparisonClient.whatsNext.startBuilding.subtitle",
+    "value": "Developer Docs",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "comparisonClient.whatsNext.startBuilding.description",
+    "value": "Get started with Ergo development using our comprehensive documentation and tutorials",
+    "context": "Description",
+    "maxLength": 127.5
+  },
+  {
+    "key": "comparisonClient.whatsNext.exploreEcosystem.title",
+    "value": "Explore Ecosystem",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "comparisonClient.whatsNext.exploreEcosystem.subtitle",
+    "value": "Discover Projects",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "comparisonClient.whatsNext.exploreEcosystem.description",
+    "value": "Discover the growing ecosystem of applications, tools, and services built on Ergo",
+    "context": "Description",
+    "maxLength": 121.5
+  },
+  {
+    "key": "comparisonClient.whatsNext.sourcesLabel",
+    "value": "Last updated:",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "comparisonClient.whatsNext.sourcesText",
+    "value": "Sources:",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "comparisonClient.emailCapture.title",
+    "value": "Stay Updated",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "comparisonClient.emailCapture.description",
+    "value": "Get the latest Ergo news, technical comparisons, and ecosystem updates delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 142.5
+  }
+]

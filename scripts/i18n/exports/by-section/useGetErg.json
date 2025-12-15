@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useGetErg.title",
+    "value": "Get ERG",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "useGetErg.description",
+    "value": "How to acquire ERG tokens through various methods",
+    "context": "Description",
+    "maxLength": 73.5
+  },
+  {
+    "key": "useGetErg.subtitle",
+    "value": "Exchanges, mining, and earning opportunities",
+    "context": "General content",
+    "maxLength": 66
+  }
+]

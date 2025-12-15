@@ -1,0 +1,482 @@
+[
+  {
+    "key": "uiKit.transaction_confirmed",
+    "value": "Transaction Confirmed",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "uiKit.carefully_selected_colors_for_optimal",
+    "value": "Carefully selected colors for optimal contrast and accessibility",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "uiKit.clear_hierarchy_and_readable_text_at_all_sizes",
+    "value": "Clear hierarchy and readable text at all sizes",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "uiKit.production_ready_components_with_comprehensive",
+    "value": "Production-ready components with comprehensive documentation",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "uiKit.cryptographic_visualization",
+    "value": "Cryptographic Visualization",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "uiKit.subtle_watermark_effect",
+    "value": "Subtle watermark effect",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "uiKit.reusable_patterns_and_layouts_with",
+    "value": "Reusable patterns and layouts with comprehensive code examples",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "uiKit.learn_more",
+    "value": "Learn more",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "uiKit.your_highlight_application_subtitle_compelling",
+    "value": "Your\"\n                  highlight=\"Application\"\n                  subtitle=\"Compelling description that explains the value proposition clearly and concisely.\"\n                  description=\"Additional context or details about your application.",
+    "context": "General content",
+    "maxLength": 364.5
+  },
+  {
+    "key": "uiKit.get_started",
+    "value": "Get started",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "uiKit.security_description_built_with_security",
+    "value": "Security\", description: \"Built with security as the foundation\", color:",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "uiKit.performance_description_optimized_for_speed",
+    "value": "Performance\", description: \"Optimized for speed and efficiency\", color:",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "uiKit.community_description_supported_by_a",
+    "value": "Community\", description: \"Supported by a vibrant ecosystem\", color:",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "uiKit.components_icon_layers_color",
+    "value": "Components\", icon: Layers, color:",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "uiKit.categories_icon_building_color",
+    "value": "Categories\", icon: Building, color:",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "uiKit.accessible_icon_shieldcheck_color",
+    "value": "Accessible\", icon: ShieldCheck, color:",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "uiKit.open_label_source_icon_gitbranch_color",
+    "value": "Open\", label: \"Source\", icon: GitBranch, color:",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "uiKit.button_component_language_jsx_filename_button_tsx",
+    "value": "Button Component\"\n  language=\"jsx\"\n  filename=\"Button.tsx",
+    "context": "Button label",
+    "maxLength": 85.5
+  },
+  {
+    "key": "uiKit.get_started_with_ergo_ui_kit",
+    "value": "Get started with Ergo UI Kit",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "uiKit.open_in_figma",
+    "value": "Open in Figma",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "uiKit.production_ready_components_from_buttons",
+    "value": "Production-ready components from buttons to complex patterns",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "uiKit.typography_system_desc_carefully_crafted",
+    "value": "Typography System\", desc: \"Carefully crafted type scale and hierarchy for all use cases",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "uiKit.design_patterns_desc_common_layouts",
+    "value": "Design Patterns\", desc: \"Common layouts and interaction patterns from real apps",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "uiKit.feature_grid_pattern_language_jsx",
+    "value": "Feature Grid Pattern\"\n                  language=\"jsx\"\n                  filename=\"FeatureGrid.tsx",
+    "context": "General content",
+    "maxLength": 147
+  },
+  {
+    "key": "uiKit.stats_grid_pattern_language_jsx",
+    "value": "Stats Grid Pattern\"\n                  language=\"jsx\"\n                  filename=\"StatsGrid.tsx",
+    "context": "General content",
+    "maxLength": 141
+  },
+  {
+    "key": "uiKit.primary_orange_hex",
+    "value": "Primary Orange\", hex:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "uiKit.primary_brand_color_token",
+    "value": "Primary brand color\", token:",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "uiKit.secondary_cyan_hex",
+    "value": "Secondary Cyan\", hex:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "uiKit.secondary_accent_token",
+    "value": "Secondary accent\", token:",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "uiKit.neutral_hex_ffffff_class",
+    "value": "Neutral\", hex: \"#ffffff\", class:",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "uiKit.text_contrast_token",
+    "value": "Text & contrast\", token:",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "uiKit.using_brand_colors_language_jsx",
+    "value": "Using Brand Colors\"\n                language=\"jsx",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "uiKit.theme_system_usage_language_jsx",
+    "value": "Theme System Usage\"\n                language=\"jsx",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "uiKit.main_page_title_desc",
+    "value": "Main Page Title\", desc:",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "uiKit.section_header_desc",
+    "value": "Section Header\", desc:",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "uiKit.subsection_title_desc",
+    "value": "Subsection Title\", desc:",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "uiKit.component_title_desc",
+    "value": "Component Title\", desc:",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "uiKit.body_size_text_base_weight",
+    "value": "Body\", size: \"text-base\", weight: \"font-normal\", sample: \"Regular paragraph text for body content and descriptions\", desc:",
+    "context": "General content",
+    "maxLength": 183
+  },
+  {
+    "key": "uiKit.small_size_text_sm_weight",
+    "value": "Small\", size: \"text-sm\", weight: \"font-normal\", sample: \"Helper text, captions, and metadata\", desc:",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "uiKit.ergoscript_example_language_scala_filename",
+    "value": "ErgoScript Example\"\n                language=\"scala\"\n                filename=\"validation.ergo",
+    "context": "General content",
+    "maxLength": 141
+  },
+  {
+    "key": "uiKit.performance_subtitle_optimized_for_speed",
+    "value": "Performance\"\n                  subtitle=\"Optimized for speed\"\n                  description=\"Lightning-fast components built with modern web standards and best practices.\"\n                  badge=\"Optimized",
+    "context": "General content",
+    "maxLength": 309
+  },
+  {
+    "key": "uiKit.community_subtitle_open_source_description",
+    "value": "Community\"\n                  subtitle=\"Open source\"\n                  description=\"Built by the community, for the community. Contributions and feedback welcome.\"\n                  badge=\"Open Source",
+    "context": "General content",
+    "maxLength": 298.5
+  },
+  {
+    "key": "uiKit.featurecard_component_language_jsx_filename",
+    "value": "FeatureCard Component\"\n                language=\"jsx\"\n                filename=\"FeatureCard.tsx",
+    "context": "General content",
+    "maxLength": 142.5
+  },
+  {
+    "key": "uiKit.view_component_code_in_section_below",
+    "value": "View component code in section below",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "uiKit.button_variants_language_jsx",
+    "value": "Button Variants\"\n                language=\"jsx",
+    "context": "Button label",
+    "maxLength": 69
+  },
+  {
+    "key": "uiKit.glitch_hex_language_jsx",
+    "value": "Glitch Hex\"\n                language=\"jsx",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "uiKit.glitch_button_language_jsx",
+    "value": "Glitch Button\"\n                language=\"jsx",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "uiKit.cryptographic_visualization_language_jsx",
+    "value": "Cryptographic Visualization\"\n                language=\"jsx",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "uiKit.watermark_hex_language_jsx",
+    "value": "Watermark Hex\"\n                language=\"jsx",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "uiKit.hero_pattern_usage_language_jsx",
+    "value": "Hero Pattern Usage\"\n                language=\"jsx\"\n                filename=\"HeroPattern.tsx",
+    "context": "General content",
+    "maxLength": 138
+  },
+  {
+    "key": "uiKit.feature_grid_usage_language_jsx",
+    "value": "Feature Grid Usage\"\n                language=\"jsx\"\n                filename=\"FeatureGrid.tsx",
+    "context": "General content",
+    "maxLength": 138
+  },
+  {
+    "key": "uiKit.learn_more_clicked",
+    "value": "Learn more clicked",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "uiKit.security_first",
+    "value": "Security First",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "uiKit.compelling_description_that_explains_the",
+    "value": "Compelling description that explains the value proposition clearly and concisely.",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "uiKit.optimized_for_speed",
+    "value": "Optimized for speed",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "uiKit.featurecard_component",
+    "value": "FeatureCard Component",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "uiKit.built_with_security_as_the_foundation",
+    "value": "Built with security as the foundation",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "uiKit.optimized_for_speed_and_efficiency",
+    "value": "Optimized for speed and efficiency",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "uiKit.supported_by_a_vibrant_ecosystem",
+    "value": "Supported by a vibrant ecosystem",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "uiKit.your_smart_contract_has_been_successfully_deployed",
+    "value": "Your smart contract has been successfully deployed",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "uiKit.production_ready_components_design_patterns",
+    "value": "Production-ready components, design patterns, and guidelines for building consistent, accessible, and modern Ergo applications with confidence.",
+    "context": "General content",
+    "maxLength": 214.5
+  },
+  {
+    "key": "uiKit.this_design_system_embodies_the",
+    "value": "This design system embodies the core values of the Ergo ecosystem: privacy, decentralization, simplicity, and accessibility. Every component and pattern reflects these principles while delivering exceptional user experiences.",
+    "context": "General content",
+    "maxLength": 337.5
+  },
+  {
+    "key": "uiKit.by_the_numbers",
+    "value": "By the Numbers",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "uiKit.auto_generated_documentation",
+    "value": "Auto-Generated Documentation",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "uiKit.interactive_sandbox_for_testing_and",
+    "value": "Interactive sandbox for testing and experimenting with components. Edit code in real-time and see instant results.",
+    "context": "General content",
+    "maxLength": 171
+  },
+  {
+    "key": "uiKit.our_design_system_is_built",
+    "value": "Our design system is built on the fundamental principles that guide the Ergo ecosystem. Every component, pattern, and guideline reflects these core values.",
+    "context": "General content",
+    "maxLength": 232.5
+  },
+  {
+    "key": "uiKit.small_action",
+    "value": "Small Action",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "uiKit.all_patterns_include_comprehensive_typescript",
+    "value": "All patterns include comprehensive TypeScript interfaces, usage examples, and auto-generated documentation. Props are automatically inferred and documented for better developer experience.",
+    "context": "General content",
+    "maxLength": 282
+  },
+  {
+    "key": "uiKit.professional_design_system_for_blockchain",
+    "value": "Professional design system for blockchain applications",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "uiKit.this_is_a_live_preview",
+    "value": "This is a live preview!",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "uiKit.button_icon_target_label_t_components_button",
+    "value": "Button', icon: Target, label: t('components.button",
+    "context": "Button label",
+    "maxLength": 75
+  },
+  {
+    "key": "uiKit.card_icon_type_label_t_components_card",
+    "value": "Card', icon: Type, label: t('components.card",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "uiKit.powered_by_ergo_ui_kit",
+    "value": "Powered by Ergo UI Kit",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "uiKit.code_cannot_be_empty",
+    "value": "Code cannot be empty",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "uiKit.primary_button_code",
+    "value": "Primary Button', code:",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "uiKit.edit_the_code_to_see_live_preview",
+    "value": "Edit the code to see live preview",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "uiKit.error_rendering_component",
+    "value": "Error rendering component",
+    "context": "Error message",
+    "maxLength": 37.5
+  },
+  {
+    "key": "uiKit.sourcegraphic_scale",
+    "value": "SourceGraphic\" scale=",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "uiKit.we_write_code_not_for",
+    "value": "We write code not for compliance. We write code to break the chains.\",",
+    "context": "General content",
+    "maxLength": 105
+  },
+  {
+    "key": "uiKit.underground_sovereign_open_source_forever",
+    "value": "Underground. Sovereign. Open source forever.\",\n    \"Privacy is not a feature. It's a fundamental right.\",\n    \"Decentralization is not optional. It's inevitable.",
+    "context": "General content",
+    "maxLength": 241.5
+  }
+]

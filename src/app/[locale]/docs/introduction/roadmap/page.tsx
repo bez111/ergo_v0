@@ -4,7 +4,7 @@
 
 import React, { useState } from "react";
 import { Flag, TrendingUp, Layers, Users, BookOpen, Link2, ExternalLink, ListChecks, Calendar, Star, Wrench, Shield, Coins, Swords, Network, Book, Zap, Trophy, MessageSquare, Target, BarChart3, Cpu, GitBranch, Lock, ArrowRight, CheckCircle, Database, AlertTriangle, HardDrive, RefreshCw, Lightbulb } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Main tabs for the roadmap page

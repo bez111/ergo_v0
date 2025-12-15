@@ -1,27 +1,39 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import ResearchClient from "./ResearchClient"
-import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-export const metadata: Metadata = {
-  title: "Ergo Research Papers | Blockchain Academic Publications",
-  description: "Academic research papers on Ergo blockchain. Peer-reviewed publications on consensus algorithms, cryptography, smart contracts, and distributed systems.",
-  keywords: ["blockchain research", "ergo papers", "academic publications", "cryptography research", "consensus algorithms", "distributed systems", "peer reviewed", "scientific papers"],
-  alternates: { canonical: "https://ergoblockchain.org/learn/research" },
-  openGraph: {
-    title: "Ergo Research | Academic Blockchain Papers",
-    description: "Peer-reviewed research publications on Ergo's innovative blockchain technology.",
-    url: "https://ergoblockchain.org/learn/research",
-    siteName: "Ergo Platform",
-    images: [{ url: "https://ergoblockchain.org/og/research.png", width: 1200, height: 630, alt: "Ergo Research" }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo Research Papers | Academic Publications",
-    description: "Scientific research on blockchain consensus, cryptography, and smart contracts.",
-    images: ["https://ergoblockchain.org/og/research.png"]
+interface Props {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'learnResearch' })
+
+  const title = `${t('title')} | Ergo`
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: ["blockchain research", "ergo papers", "academic publications", "cryptography research", "consensus algorithms", "distributed systems", "peer reviewed", "scientific papers"],
+    alternates: getAlternates('/learn/research', locale),
+    openGraph: {
+      title,
+      description,
+      url: getCanonicalUrl('/learn/research', locale),
+      siteName: "Ergo Platform",
+      images: [{ url: "https://ergoblockchain.org/og/research.png", width: 1200, height: 630, alt: "Ergo Research Papers" }],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://ergoblockchain.org/og/research.png"]
+    }
   }
 }
 
@@ -38,22 +50,26 @@ export default function ResearchPage() {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "@id": "https://ergoblockchain.org/learn/research",
-    name: "Ergo Platform Research Collection",
-    description: "Collection of academic research papers on Ergo blockchain technology",
+    name: "Ergo Research Collection",
+    description: "Academic research collection on Ergo blockchain technology",
     author: { "@type": "Organization", name: "Ergo Research Team" },
-    publisher: { "@type": "Organization", name: "Ergo Platform" },
-    about: ["Blockchain", "Cryptography", "Consensus Algorithms", "Smart Contracts"]
+    about: [
+      { "@type": "Thing", name: "Blockchain" },
+      { "@type": "Thing", name: "Cryptography" },
+      { "@type": "Thing", name: "Consensus Algorithms" },
+      { "@type": "Thing", name: "Smart Contracts" }
+    ]
   }
-  
+
   const schemas = [
     scholarlyArticleSchema,
     createBreadcrumbSchema([
       { name: "Learn", href: "/learn" },
-      { name: "Research", href: "/learn/research" },
+      { name: "Research", href: "/learn/research" }
     ]),
-    createFAQSchema(FAQ_ITEMS),
+    createFAQSchema(FAQ_ITEMS)
   ]
-  
+
   return (
     <>
       {renderSchemaScripts(schemas)}

@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { BookOpen, FileText, Video, Star, ExternalLink, Quote, Users } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const overviews = [
   { title: "Whitepaper I: Ergo: The Resilient Platform For Contractual Money", url: "/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf" },

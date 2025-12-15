@@ -1,48 +1,89 @@
 import { Metadata } from 'next'
+import { getMessages, getTranslations } from 'next-intl/server'
 import { QuestionsHubClient } from './QuestionsHubClient'
-import { questions, questionCategories, questionPersonas } from '@/data/questions'
+import { questions, questionCategories, questionPersonas, type QuestionEntry } from '@/data/questions'
+import { type QuestionsTranslations } from '@/data/questions-i18n'
 import { siteConfig } from '@/config/site-config'
 import {
-  createHubMetadata,
   createBreadcrumbSchema,
   createFAQSchema,
   createCollectionSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-// SEO Configuration
-const SEO = {
-  path: "/questions",
-  title: "Ergo Q&A Hub: Answers to Your Blockchain Questions",
-  description: "Find answers to common questions about Ergo blockchain: DeFi, privacy, mining, technology, and getting started. Expert answers with deep-dive resources.",
-  ogImage: "/og/hubs/q&a.png",
-  keywords: [
-    "Ergo FAQ", "Ergo questions", "eUTXO explained",
-    "Ergo DeFi", "Ergo mining", "Ergo privacy", "blockchain questions"
-  ],
+interface Props {
+  params: Promise<{ locale: string }>
 }
 
-// Metadata
-export const metadata: Metadata = createHubMetadata(
-  SEO.path,
-  SEO.title,
-  SEO.description,
-  SEO.ogImage,
-  SEO.keywords
-)
+// Helper to apply translations to questions
+function applyTranslations(qs: QuestionEntry[], translations?: QuestionsTranslations): QuestionEntry[] {
+  if (!translations) return qs
+  return qs.map(q => {
+    const tr = translations[q.slug]
+    if (!tr) return q
+    return {
+      ...q,
+      query: tr.query ?? q.query,
+      shortAnswer: tr.shortAnswer ?? q.shortAnswer,
+      keyPoints: tr.keyPoints ?? q.keyPoints,
+      seoTitle: tr.seoTitle ?? q.seoTitle,
+      seoDescription: tr.seoDescription ?? q.seoDescription,
+    }
+  })
+}
 
-export default function QuestionsPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'questionsPage.seo' })
+
+  const title = t('title')
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: ["Ergo FAQ", "Ergo questions", "eUTXO explained", "Ergo DeFi", "Ergo mining", "Ergo privacy", "blockchain questions"],
+    openGraph: {
+      title,
+      description,
+      url: `${siteConfig.siteUrl}/questions`,
+      type: "website",
+      images: [{ url: `${siteConfig.siteUrl}/og/hubs/q&a.png`, width: 1200, height: 630 }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description
+    },
+    alternates: { canonical: `${siteConfig.siteUrl}/questions` }
+  }
+}
+
+export default async function QuestionsPage({ params }: Props) {
+  const { locale } = await params
+  
+  // Get translations for non-English locales
+  let localizedQuestions = questions
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { questionsData?: QuestionsTranslations }
+      localizedQuestions = applyTranslations(questions, messages?.questionsData)
+    } catch {
+      // Fallback to English if translations fail
+    }
+  }
+
   // Group questions by category
   const questionsByCategory = questionCategories
     .filter(cat => cat.id !== 'all')
     .map(category => ({
       category: category,
-      questions: questions.filter(q => q.category === category.id)
+      questions: localizedQuestions.filter(q => q.category === category.id)
     }))
     .filter(group => group.questions.length > 0)
 
   // Featured questions (priority 1)
-  const featuredQuestions = questions.filter(q => q.priority === 1)
+  const featuredQuestions = localizedQuestions.filter(q => q.priority === 1)
 
   // Build FAQ from featured questions
   const faqItems = featuredQuestions.slice(0, 10).map(q => ({
@@ -58,8 +99,8 @@ export default function QuestionsPage() {
       "@id": `${siteConfig.siteUrl}/questions#list`,
       name: "Ergo Q&A Directory",
       description: "Comprehensive answers to common Ergo blockchain questions",
-      numberOfItems: questions.length,
-      itemListElement: questions.slice(0, 20).map((q, i) => ({
+      numberOfItems: localizedQuestions.length,
+      itemListElement: localizedQuestions.slice(0, 20).map((q, i) => ({
         "@type": "ListItem",
         position: i + 1,
         item: {
@@ -88,7 +129,7 @@ export default function QuestionsPage() {
     <>
       {renderSchemaScripts(schemas)}
       <QuestionsHubClient 
-        questions={questions}
+        questions={localizedQuestions}
         questionsByCategory={questionsByCategory}
         featuredQuestions={featuredQuestions}
         categories={questionCategories}

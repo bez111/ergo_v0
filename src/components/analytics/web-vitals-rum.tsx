@@ -83,7 +83,6 @@ interface ElementTimingProps {
 
 export function ElementTiming({ name, children }: ElementTimingProps) {
   return React.cloneElement(children, {
-    ...children.props,
     elementtiming: name
-  })
+  } as React.HTMLAttributes<HTMLElement>)
 } 

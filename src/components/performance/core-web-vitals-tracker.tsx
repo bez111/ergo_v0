@@ -14,55 +14,50 @@ interface WebVitalsMetric {
 export function CoreWebVitalsTracker() {
   useEffect(() => {
     // Dynamic import to avoid SSR issues
-    import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       
       // Largest Contentful Paint (LCP)
-      onLCP((metric) => {
+      onLCP((metric: WebVitalsMetric) => {
         const rating = metric.value <= 2500 ? 'good' : 
                       metric.value <= 4000 ? 'needs-improvement' : 'poor'
         
         console.log('LCP:', {
           value: metric.value,
-          rating,
-          element: metric.entries[metric.entries.length - 1]?.element
+          rating
         })
         
         // Send to analytics
         sendToAnalytics('LCP', metric.value, rating)
       })
 
-      // First Input Delay (FID) / Interaction to Next Paint (INP)
-      onFID((metric) => {
-        const rating = metric.value <= 100 ? 'good' : 
-                      metric.value <= 300 ? 'needs-improvement' : 'poor'
+      // Interaction to Next Paint (INP) - replaced FID in web-vitals v4
+      onINP((metric: WebVitalsMetric) => {
+        const rating = metric.value <= 200 ? 'good' : 
+                      metric.value <= 500 ? 'needs-improvement' : 'poor'
         
-        console.log('FID:', {
+        console.log('INP:', {
           value: metric.value,
           rating
         })
         
-        sendToAnalytics('FID', metric.value, rating)
+        sendToAnalytics('INP', metric.value, rating)
       })
 
       // Cumulative Layout Shift (CLS)
-      onCLS((metric) => {
+      onCLS((metric: WebVitalsMetric) => {
         const rating = metric.value <= 0.1 ? 'good' : 
                       metric.value <= 0.25 ? 'needs-improvement' : 'poor'
         
         console.log('CLS:', {
           value: metric.value,
-          rating,
-          sources: metric.entries.map(entry => ({
-            element: entry.sources?.[0]?.node,
-            value: entry.value
-          }))
+          rating
         })
         
         sendToAnalytics('CLS', metric.value, rating)
       })
 
       // First Contentful Paint (FCP)
-      onFCP((metric) => {
+      onFCP((metric: WebVitalsMetric) => {
         const rating = metric.value <= 1800 ? 'good' : 
                       metric.value <= 3000 ? 'needs-improvement' : 'poor'
         
@@ -75,7 +70,7 @@ export function CoreWebVitalsTracker() {
       })
 
       // Time to First Byte (TTFB)
-      onTTFB((metric) => {
+      onTTFB((metric: WebVitalsMetric) => {
         const rating = metric.value <= 800 ? 'good' : 
                       metric.value <= 1800 ? 'needs-improvement' : 'poor'
         

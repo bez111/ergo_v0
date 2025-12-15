@@ -1,0 +1,86 @@
+[
+  {
+    "key": "whatMakesDifferent.title",
+    "value": "WHAT MAKES ERGO DIFFERENT",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "whatMakesDifferent.subtitle",
+    "value": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a sustainable, secure, and truly decentralized platform",
+    "context": "General content",
+    "maxLength": 217.5
+  },
+  {
+    "key": "whatMakesDifferent.features.fairLaunch.title",
+    "value": "FAIR LAUNCH & PROOF-OF-WORK",
+    "context": "Title",
+    "maxLength": 40.5
+  },
+  {
+    "key": "whatMakesDifferent.features.fairLaunch.description",
+    "value": "Launched with no ICO or premine, secured by Autolykos v2 - an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+    "context": "Description",
+    "maxLength": 273
+  },
+  {
+    "key": "whatMakesDifferent.features.eutxoErgoscript.title",
+    "value": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+    "context": "Title",
+    "maxLength": 54
+  },
+  {
+    "key": "whatMakesDifferent.features.eutxoErgoscript.description",
+    "value": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+    "context": "Description",
+    "maxLength": 268.5
+  },
+  {
+    "key": "whatMakesDifferent.features.storageRent.title",
+    "value": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+    "context": "Title",
+    "maxLength": 61.5
+  },
+  {
+    "key": "whatMakesDifferent.features.storageRent.description",
+    "value": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient.",
+    "context": "Description",
+    "maxLength": 277.5
+  },
+  {
+    "key": "whatMakesDifferent.features.researchDriven.title",
+    "value": "RESEARCH-DRIVEN INNOVATION",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "whatMakesDifferent.features.researchDriven.description",
+    "value": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+    "context": "Description",
+    "maxLength": 214.5
+  },
+  {
+    "key": "whatMakesDifferent.features.privacy.title",
+    "value": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+    "context": "Title",
+    "maxLength": 55.5
+  },
+  {
+    "key": "whatMakesDifferent.features.privacy.description",
+    "value": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+    "context": "Description",
+    "maxLength": 294
+  },
+  {
+    "key": "whatMakesDifferent.features.communityLed.title",
+    "value": "COMMUNITY-LED DEVELOPMENT",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "whatMakesDifferent.features.communityLed.description",
+    "value": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+    "context": "Description",
+    "maxLength": 279
+  }
+]

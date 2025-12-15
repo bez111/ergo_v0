@@ -4,8 +4,8 @@ import Script from 'next/script'
 import { blogPosts } from "../_lib/blog-data"
 import { BlogPostClientPremium } from "./BlogPostClientPremium"
 import { BlogSchema } from "../_components/blog-schema"
-// import { generateMetadata as generatePageMetadata } from '@/src/components/seo/page-metadata'
-// import { PageMetadata } from '@/src/components/seo/page-metadata'
+// import { generateMetadata as generatePageMetadata } from '@/components/seo/page-metadata'
+// import { PageMetadata } from '@/components/seo/page-metadata'
 import { siteConfig } from '@/config/site-config'
 
 export function generateStaticParams() {

@@ -11,7 +11,7 @@ import { Progress } from "@/components/ui/progress"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { FadeIn } from "@/components/animations/fade-in"
 import { Shield, Cpu, Zap, Users, CheckCircle, TrendingUp, ChevronDown, Pickaxe, BookOpen } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -240,11 +240,15 @@ export default function SecurePowPage() {
                     Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
-                      {t("buttons.startMining")}
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
+                      <Link href="/miners">
+                        {t("buttons.startMining")}
+                      </Link>
                     </Button>
-                    <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
-                      {t("buttons.readWhitepaper")}
+                    <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
+                      <Link href="/api/pdf/documents/Ergo-%20A%20Resilient%20Platform%20For%20Contractual%20Money.pdf">
+                        {t("buttons.readWhitepaper")}
+                      </Link>
                     </Button>
                   </div>
                 </div>

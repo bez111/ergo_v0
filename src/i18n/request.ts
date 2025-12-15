@@ -34,13 +34,33 @@ export const localeConfig = {
   'ko-kr': { name: '한국어', dir: 'ltr', hreflang: 'ko-KR' }
 } as const;
 
+// Load and merge all message files from a locale folder
+async function loadMessages(locale: string): Promise<Record<string, any>> {
+  const files = [
+    'common', 'home', 'blog', 'community', 'compare', 'content-hubs',
+    'developers', 'ecosystem', 'events', 'faq', 'hodlers', 'infographics',
+    'learn', 'manifesto', 'miners', 'misc', 'newsletter', 'seo', 'start',
+    'technology', 'use', 'wallet'
+  ];
+  
+  const modules = await Promise.all(
+    files.map(file => 
+      import(`../../messages/${locale}/${file}.json`)
+        .then(m => m.default || m)
+        .catch(() => ({}))
+    )
+  );
+  
+  return modules.reduce((acc, mod) => ({ ...acc, ...mod }), {});
+}
+
 export default getRequestConfig(async ({ locale }) => {
   // Если locale не определен или не поддерживается, используем английский
   const safeLocale = locale && locales.includes(locale as any) ? locale : 'en';
   
   return {
     locale: safeLocale as string,
-    messages: (await import(`../../messages/${safeLocale}.json`)).default
+    messages: await loadMessages(safeLocale)
   };
 });
 

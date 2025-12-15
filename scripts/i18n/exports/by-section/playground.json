@@ -1,0 +1,194 @@
+[
+  {
+    "key": "playground.title",
+    "value": "Live Playground",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "playground.interactive",
+    "value": "Interactive",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "playground.reset",
+    "value": "Reset",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playground.component",
+    "value": "Component",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playground.codeEditor",
+    "value": "Code Editor",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "playground.livePreview",
+    "value": "Live Preview",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "playground.properties.variant",
+    "value": "Variant",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "playground.properties.size",
+    "value": "Size",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "playground.properties.disabled",
+    "value": "Disabled",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "playground.properties.loading",
+    "value": "Loading",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "playground.properties.hoverable",
+    "value": "Hoverable",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playground.properties.bordered",
+    "value": "Bordered",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "playground.templates.primaryButton",
+    "value": "Primary Button",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "playground.templates.featureCard",
+    "value": "Feature Card",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "playground.templates.statusBadge",
+    "value": "Status Badge",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "playground.editCode",
+    "value": "Edit the code to see live preview",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "playground.errorRendering",
+    "value": "Error rendering component",
+    "context": "Error message",
+    "maxLength": 37.5
+  },
+  {
+    "key": "playground.codeEmpty",
+    "value": "Code cannot be empty",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "playground.enable",
+    "value": "Enable",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "playground.poweredBy",
+    "value": "Powered by Ergo UI Kit",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "playground.components.button",
+    "value": "Button",
+    "context": "Button label",
+    "maxLength": 9
+  },
+  {
+    "key": "playground.components.card",
+    "value": "Card",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "playground.components.badge",
+    "value": "Badge",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playground.components.grid",
+    "value": "Grid",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "playground.variants.default",
+    "value": "Default",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "playground.variants.outline",
+    "value": "Outline",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "playground.variants.ghost",
+    "value": "Ghost",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playground.variants.destructive",
+    "value": "Destructive",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "playground.sizes.sm",
+    "value": "Small",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playground.sizes.default",
+    "value": "Default",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "playground.sizes.lg",
+    "value": "Large",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playground.sizes.icon",
+    "value": "Icon",
+    "context": "General content",
+    "maxLength": 6
+  }
+]

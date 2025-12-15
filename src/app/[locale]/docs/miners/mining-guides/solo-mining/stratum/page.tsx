@@ -20,7 +20,7 @@ import {
   GitBranch,
   ChevronRight
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 // Стандартный компонент копирования кода
 const CopyButton = ({ text }: { text: string }) => {

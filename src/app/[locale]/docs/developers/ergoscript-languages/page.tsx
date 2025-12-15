@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ExternalLink, Code, Settings, Database, Zap, BookOpen, Info, Cpu } from "lucide-react";
 import { CodeBlock, Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui";
 

@@ -2,14 +2,16 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Card } from "@/components/ui/card"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { Badge } from "@/components/ui/badge"
 import { Link2, Coins, Droplet, DollarSign, Ticket, ArrowRightLeft } from "lucide-react"
 import { featuredProjects } from "@/app/[locale]/ecosystem/_data"
+import { useTranslations } from "next-intl"
 
 export function PoweredByErgo() {
+  const t = useTranslations('poweredByErgoHome')
   // Icon mapping for projects
   const iconMap: Record<string, any> = {
     "Rosen Bridge": Link2,
@@ -44,7 +46,7 @@ export function PoweredByErgo() {
               lineHeight: 1
             }}
           >
-            <span className="text-white">Powered by</span> <span className="text-orange-400">builders</span><span className="text-white">. Designed for</span> <span className="text-orange-400">freedom & privacy</span><span className="text-white">.</span>
+            <span className="text-white">{t('titlePrefix')}</span> <span className="text-orange-400">{t('titleHighlight1')}</span><span className="text-white">. {t('titleMiddle')}</span> <span className="text-orange-400">{t('titleHighlight2')}</span><span className="text-white">.</span>
           </h2>
           <p 
             className="text-gray-400 mx-auto"
@@ -55,7 +57,7 @@ export function PoweredByErgo() {
               opacity: 0.85
             }}
           >
-            Open-source, decentralized, permissionless
+            {t('subtitle')}
           </p>
         </div>
 
@@ -104,7 +106,7 @@ export function PoweredByErgo() {
 
                   {/* Visit Project indicator - appears on hover, aligned right */}
                   <div className="flex items-center justify-end gap-2 text-orange-400 group-hover:text-orange-300 transition-all duration-300 font-semibold mt-auto opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
-                    <span>Visit Project</span>
+                    <span>{t('visitProject')}</span>
                   </div>
                 </div>
               </Card>
@@ -119,7 +121,7 @@ export function PoweredByErgo() {
             asChild
           >
             <Link href="/ecosystem" className="inline-flex items-center">
-              <span>Explore all projects</span>
+              <span>{t('viewAllCta')}</span>
             </Link>
           </CyberButton>
         </div>

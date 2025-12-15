@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import BabelFeesArticleClient from "./BabelFeesClient"
-import { siteConfig } from "@/config/site-config"
 import {
   createBlogMetadata,
   createTechArticleSchema,
@@ -61,8 +60,6 @@ export function generateMetadata(): Metadata {
 
 // Page Component
 export default function BabelFeesPage() {
-  const origin = siteConfig.siteUrl
-  
   const schemas = [
     {
       ...createTechArticleSchema(`/blog/${SEO.slug}`, {

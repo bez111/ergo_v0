@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ChevronLeft, Share2, FileText, Cpu, Shield, Network, Users, ChevronDown } from "lucide-react";
 
 export default function NodeProtocolPage() {

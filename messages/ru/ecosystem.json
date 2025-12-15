@@ -1,0 +1,1005 @@
+{
+  "ecosystem": {
+    "title": "Экосистема",
+    "subtitle": "Откройте для себя экосистему Эрго",
+    "description": "Исследуйте растущую экосистему Эрго",
+    "sections": {
+      "dapps": "Децентрализованные приложения",
+      "tools": "Инструменты разработчика",
+      "services": "Услуги и инфраструктура"
+    },
+    "grants": {
+      "hero": {
+        "title": "Программа грантов Ergo",
+        "description": "Финансирование разработчиков, исследователей и новаторов для создания будущего децентрализованных финансов на Ergo"
+      },
+      "subscribe": {
+        "placeholder": "Введите адрес электронной почты для обновления",
+        "button": "Уведомлять меня",
+        "success": "Спасибо! Мы сообщим вам, когда запускается программа грантов."
+      },
+      "features": {
+        "title": "Что ожидать",
+        "subtitle": "Возможности программы грантов",
+        "description": "Поддержка инноваций и развития экосистемы Эрго",
+        "items": [
+          {
+            "title": "Поддержка разработчиков",
+            "description": "Финансирование инновационных проектов dApp, средств и инфраструктуры",
+            "icon": "Zap"
+          },
+          {
+            "title": "Финансирование исследований",
+            "description": "Поддержка научных исследований и совершенствования протокола",
+            "icon": "Target"
+          },
+          {
+            "title": "Проекты сообщества",
+            "description": "Субсидии на общинные инициативы и содержание образования",
+            "icon": "Пользователи"
+          },
+          {
+            "title": "Субсидии на инновации",
+            "description": "Специальное финансирование прорывов и экспериментальных проектов",
+            "icon": "Фонарик"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Готовы построить на Ergo?",
+        "description": "Начните подготовку предложения по проекту и присоединяйтесь к нашему сообществу, чтобы быть в курсе",
+        "buttons": {
+          "discord": "Присоединиться к сообществу Discord",
+          "learn": "Узнать о Ergo"
+        }
+      }
+    },
+    "grantsPage": {
+      "seo": {
+        "title": "Гранты Ergo | Финансирование блокчейн‑проектов",
+        "description": "Финансирование для проектов в экосистеме Ergo: разработка, исследования и инициативы сообщества. Инструменты, инфраструктура и приложения на Ergo.",
+        "keywords": "гранты ergo, финансирование блокчейна, гранты разработчикам, open source гранты, финансирование проектов",
+        "ogTitle": "Гранты Ergo — поддержка блокчейн‑инноваций",
+        "ogDescription": "Гранты для проектов на Ergo: поддержка разработчиков, исследователей и инициатив сообщества.",
+        "ogAlt": "Программа грантов Ergo",
+        "twitterTitle": "Гранты Ergo | Финансирование",
+        "twitterDescription": "Поддержка разработчиков и проектов в экосистеме Ergo. Следите за обновлениями."
+      },
+      "schema": {
+        "financialService": {
+          "name": "Программа грантов Ergo",
+          "description": "Финансирование проектов, которые строят на блокчейне Ergo",
+          "audienceType": "Разработчики, исследователи, участники сообщества"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "Кто может подать заявку на грант?",
+              "answer": "Разработчики, исследователи, участники сообщества и организации, которые делают проекты, полезные для экосистемы Ergo."
+            },
+            {
+              "question": "Какие проекты финансируются?",
+              "answer": "DeFi‑протоколы, инструменты разработчика, инфраструктура, образовательный контент, инициативы сообщества и исследования, которые развивают технологию Ergo."
+            },
+            {
+              "question": "Какой объём финансирования доступен?",
+              "answer": "Сумма гранта зависит от масштаба и влияния проекта — от небольших грантов до существенного финансирования инфраструктуры."
+            }
+          ]
+        }
+      }
+    },
+    "mapPage": {
+      "seo": {
+        "title": "Карта экосистемы Ergo | интерактивный каталог проектов",
+        "description": "Исследуйте экосистему Ergo визуально. Интерактивная карта DeFi, NFT, кошельков, инфраструктуры и инструментов разработчика.",
+        "keywords": "экосистема ergo, карта defi, каталог dapp, проекты ergo, интерактивная карта, крипто экосистема",
+        "ogTitle": "Интерактивная карта экосистемы Ergo",
+        "ogDescription": "Визуальный обзор проектов Ergo: DeFi, NFT, кошельки и инфраструктура.",
+        "ogAlt": "Интерактивная карта экосистемы Ergo",
+        "twitterTitle": "Карта экосистемы Ergo",
+        "twitterDescription": "Интерактивная визуализация проектов Ergo: DeFi, NFT и инфраструктура."
+      },
+      "schema": {
+        "webApp": {
+          "name": "Интерактивная карта экосистемы Ergo",
+          "description": "Визуальный обзор проектов и приложений в экосистеме Ergo"
+        },
+        "dataset": {
+          "name": "Набор данных проектов экосистемы Ergo",
+          "description": "Полный набор данных проектов, строящих на блокчейне Ergo"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "Что такое карта экосистемы Ergo?",
+              "answer": "Интерактивная визуализация активных проектов, протоколов и приложений на Ergo, сгруппированных по категориям."
+            },
+            {
+              "question": "Сколько проектов в экосистеме Ergo?",
+              "answer": "В экосистеме Ergo — 50+ активных проектов: DeFi, NFT, кошельки, инфраструктура, инструменты разработчика и инициативы сообщества."
+            },
+            {
+              "question": "Как добавить свой проект на карту?",
+              "answer": "Отправьте проект через форму добавления в экосистему или свяжитесь с командой/фондом, чтобы попасть на карту."
+            },
+            {
+              "question": "Карта обновляется регулярно?",
+              "answer": "Да. Карта регулярно обновляется: добавляются новые проекты и убираются неактивные."
+            }
+          ]
+        }
+      }
+    },
+    "ecosystemPage": {
+      "schema": {
+        "breadcrumbs": {
+          "ecosystem": "Экосистема"
+        },
+        "collection": {
+          "name": "Экосистема Ergo",
+          "description": "Полный каталог dApp, кошельков и инструментов, построенных на блокчейне Ergo"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "Что такое экосистема Ergo?",
+              "answer": "Экосистема Ergo включает DeFi‑протоколы, NFT‑маркетплейсы, инструменты разработчика, кошельки и проекты сообщества, построенные на блокчейне Ergo."
+            },
+            {
+              "question": "Какие DeFi‑проекты есть в Ergo?",
+              "answer": "К ключевым DeFi‑проектам относятся SigmaUSD (алгоритмический стейблкоин), ErgoDEX (DEX), кредитные протоколы и oracle pools."
+            },
+            {
+              "question": "Какие кошельки поддерживают Ergo?",
+              "answer": "Популярные кошельки Ergo: Nautilus, Satergo, SAFEW и Ergo Mobile Wallet."
+            },
+            {
+              "question": "Есть ли NFT‑маркетплейсы в Ergo?",
+              "answer": "Да. В Ergo есть NFT‑маркетплейсы, например SkyHarbor, где можно минтить и торговать NFT с низкими комиссиями."
+            }
+          ]
+        }
+      }
+    },
+    "seo": {
+      "title": "Экосистема - проекты Эрго блокчейн | Платформа Ergo",
+      "description": "Откройте для себя процветающую экосистему Ergo: DeFi протоколы, рынки NFT, инструменты и приложения.",
+      "keywords": "экосистема Эрго, DeFi, NFTs, dApps, блокчейн проекты",
+      "ogTitle": "Ergo Ecosystem - Blockchain Проекты и Приложения",
+      "ogDescription": "Изучите инструменты DeFi, NFTs, кошельки и разработчики экосистемы Ergo."
+    },
+    "categories": {
+      "defi": {
+        "title": "DeFi",
+        "description": "Децентрализованные протоколы финансирования и приложения"
+      },
+      "nfts": {
+        "title": "NFTs",
+        "description": "Торговые площадки и коллекции NFT"
+      },
+      "tools": {
+        "title": "Инструменты",
+        "description": "Инструменты и инфраструктура развития"
+      },
+      "wallets": {
+        "title": "Кошельки",
+        "description": "Кошельки для хранения и управления ERG"
+      },
+      "gaming": {
+        "title": "Играть",
+        "description": "Блокчейн игры и метаверы"
+      },
+      "social": {
+        "title": "Соцсети",
+        "description": "Социальные платформы и общины"
+      }
+    },
+    "stats": {
+      "projects": "Активные проекты",
+      "activeProjects": "Активные проекты",
+      "categories": "Категории",
+      "status": "Онлайн-проекты",
+      "developers": "Разработчики",
+      "tvl": "Всего заблокировано",
+      "users": "Активные пользователи"
+    },
+    "filters": {
+      "all": "Все",
+      "defi": "DeFi",
+      "infrastructure": "Инфраструктура",
+      "oracles": "Оракл",
+      "privacy": "Приватность",
+      "nft": "NFT",
+      "wallets": "Кошельки",
+      "dao": "ДАО",
+      "gaming": "Играть",
+      "tools": "Инструменты"
+    },
+    "search": {
+      "placeholder": "Поиск проектов...",
+      "resultsCount": "Проекты {count}"
+    },
+    "featuredProjects": {
+      "title": "Избранные проекты",
+      "badge": "ОСОБЕНО"
+    },
+    "featured": {
+      "title": "Избранные проекты",
+      "viewAll": "Посмотреть все проекты"
+    },
+    "cta": {
+      "title": "Собрать на Ergo",
+      "description": "Присоединяйтесь к экосистеме и постройте будущее блокчейна",
+      "startBuilding": "Начать строительство",
+      "viewGrants": "Просмотр грантов"
+    },
+    "mining": {
+      "no_pools_match_your_criteria": "Нет пулов, соответствующих вашим критериям",
+      "new_to_mining": "Новый для добычи?",
+      "best_for": "Лучше для",
+      "ready_to_start_mining": "Готовы начать добывать?",
+      "getblok_category_large_url_https": "GetBlok\",\n      category: \"large\",\n      url: \"https://ergo.getblok.io\",\n      location: \"Global\",\n      fee:",
+      "pplns_minpayout": "PPLNS\",\n      minPayout:",
+      "auto_exchange_mobile_app_api_access_ssl_tls": "Автообмен, \"Мобильное приложение\", \"Доступ к API\", \"SSL/TLS",
+      "auto_exchange_mobile_app": "Автоматический обмен, мобильное приложение",
+      "telegram_bot_email_alerts_ddos_protection": "Телеграмм бот\", \"Email alerts\", защита \"DDoS",
+      "telegram_bot_email_alerts": "Telegram Bot\", \"Email Alerts\",",
+      "eu_us_asia_ru": "EU\", \"US\", \"Asia\", \"RU",
+      "herominers_category_large_url_https": "HeroMiners\",\n      category: \"large\",\n      url: \"https://ergo.herominers.com\",\n      location: \"Global\",\n      fee:",
+      "prop_minpayout": "PROP\",\n      minPayout:",
+      "ssl_support_worker_stats_profit": "Поддержка SSL\", \"Статистика работы\", \"Калькулятор прибыли\", \"Бот Discord",
+      "low_fee_discord_bot_profit_calc": "Низкая комиссия\", \"Discord Bot\", \"Profit Calc",
+      "woolypooly_category_medium_url_https": "WoolyPooly\", категория\n      : \"Средний\",\n      url: \"https://woolypooly.com/en/coin/erg\",\n      location: \"Европа\",\n      fee:",
+      "solo_mining_telegram_bot_mev_rewards_low_latency": "Одиночная добыча\", \"Телеграмм бот\", MEV награды\", \"Низкая задержка",
+      "solo_mining_mev_rewards_low_fee": "Соло-майнинг\", MEV награды, \"Низкая плата",
+      "pps_minpayout": "PPS+\",\n      minPayout:",
+      "mobile_app_multi_coin_instant": "Мобильное приложение\", \"Мульти-монеты\", \"Мгновенные платежи\", \"Китайская поддержка",
+      "multi_coin_instant_pay_mobile_app": "Мульти-монеты», «Мгновенный платеж», «Мобильное приложение",
+      "kryptex_pool_category_medium_url": "Kryptex Pool\",\n      category: \"medium\",\n      url: \"https://pool.kryptex.com/erg\",\n      location: \"Europe\",\n      fee:",
+      "mining_os_instant_payouts_profit": "Mining OS\", \"Мгновенные выплаты\", \"Переключатель прибыли\", \"Дашборд",
+      "mining_os_profit_switch_dashboard": "Добывающая ОС\", «Переключатель прибыли», «Дашборд",
+      "nanopool_category_medium_url_https": "Nanopool\",\n      category: \"medium\",\n      url: \"https://ergo.nanopool.org\",\n      location: \"Global\",\n      fee:",
+      "api_access_multi_lang_mobile_app": "Доступ к API\", \"Мульти-lang\", \"Мобильное приложение",
+      "eu_us_asia_au": "EU\", \"US\", \"Asia\", \"AU",
+      "best_for_mixed_rigs_download": "Лучше всего для смешанных игр\",\n      скачайте: \"https://github.com/NebuTech/NBMiner/releases",
+      "best_for_nvidia_cards_download": "Лучший для NVIDIA cards\",\n      скачайте: \"https://github.com/trexminer/T-Rex/releases",
+      "best_for_amd_cards_download": "Best for AMD cards\",\n      download: \"https://github.com/todxx/teamredminer/releases",
+      "advanced_users_download_https_github": "Расширенные пользователи\",\n      download: \"https://github.com/Lolliedieb/lolMiner-releases/releases",
+      "mining_pools_directory": "РЕСУРСОВАНИЕ ПОЛОЖЕНИЙ",
+      "smaller_pools_for_better_decentralization": "Малые бассейны для улучшения децентрализации",
+      "ergo_mining_software_options": "Параметры программы разработки Ergo",
+      "all_pools_icon_null_activeclass": "All Pools', \n      icon: null,\n      activeClass:",
+      "for_beginners": "Для начинающих",
+      "all_pools": "Все пулы",
+      "fair_launch_asic_resistant_truly": "Справедливый старт, устойчивый к воздействию ASIC, действительно децентрализованный. Найти пулы, программное обеспечение и ресурсы.",
+      "i_m_new_start_here": "Я новый - Начать здесь",
+      "browse_pools_directory": "Просмотр каталога пулов",
+      "start_with_nbminer_mixed_rigs": "Начните с NBMiner (смешанные фишки) или T-Rex (только (NVIDIa) для простейшей установки.",
+      "how_to_choose_a_pool": "Как выбрать пул?",
+      "beginners_choose_pools_with_good": "Начинающие: выбирайте пулы с хорошей поддержкой. Дополнительно: оптимизируйте комиссионные и местонахождение сервера.",
+      "minimum_requirements": "Минимальные требования?",
+      "depends_on_hashrate_and_electricity_cost": "Зависит от стоимости хэштрейта и электроэнергии.",
+      "view_all_faqs": "Посмотреть все ЧаВО",
+      "join_thousands_of_miners_securing": "Присоединяйтесь к тысячам майнеров, обеспечивающих безопасность сети Эрго."
+    },
+    "map": {
+      "title": "Эрго Экосистемная Карта",
+      "subtitle": "Интерактивная папка DeFi и dApp",
+      "description": "Исследуйте полную экосистему Ergo визуально. Интерактивная карта протоколов DeFi , платформ NFT, кошельков, инфраструктуры и инструментов для разработчиков. Откройте для себя более 50 активных проектов.",
+      "lastUpdated": "Последнее обновление",
+      "buttons": {
+        "exploreProjects": "Исследовать проекты",
+        "visitSigmaverse": "Посетить Sigmaverse"
+      },
+      "features": {
+        "title": "Возможности Экосистемы",
+        "subtitle": "Узнайте, что делает экосистему Эрго уникальной",
+        "interactive": {
+          "title": "Интерактивная визуализация",
+          "description": "Исследуйте проекты через интуитивный визуальный интерфейс"
+        },
+        "comprehensive": {
+          "title": "Комплексное покрытие",
+          "description": "Все активные проекты и протоколы в одном месте"
+        },
+        "realtime": {
+          "title": "Обновления в реальном времени",
+          "description": "Всегда обновляемая информация о проектах и статистика"
+        }
+      },
+      "cta": {
+        "title": "Готовы исследовать?",
+        "subtitle": "Окунитесь в растущую экосистему Эрго и откройте для себя инновационные проекты",
+        "buttons": {
+          "exploreEcosystem": "Исследовать Экосистему",
+          "visitSigmaverse": "Посетить Sigmaverse"
+        }
+      },
+      "seo": {
+        "title": "Эрго Экосистемная карта | Интерактивная DeFi и каталог dApp",
+        "description": "Исследуйте полную экосистему Ergo визуально. Интерактивная карта протоколов DeFi , платформ NFT, кошельков, инфраструктуры и инструментов для разработчиков. Откройте для себя более 50 активных проектов.",
+        "ogTitle": "Интерактивная карта Экосистемы Эрго | 50+ Проекты",
+        "ogDescription": "Визуальные исследования всех Эрго проектов. DeFi, NFTs, кошельки, сопоставление инфраструктуры.",
+        "twitterTitle": "Эрго Экосистемная карта | Визуальный исследователь проектов",
+        "twitterDescription": "Интерактивная визуализация 50 + Ergo проектов. Исследуйте DeFi, NFT, инфраструктуру."
+      },
+      "jump_to": "Перейти к:",
+      "filter_by_category": "Фильтр по категории:",
+      "spectrum_finance_category_defi_url": "Spectrum Finance\", категория: \"DEFI\", url: \"https://spectrum.fi",
+      "sigmausd_category_defi_url_https_sigmausd_io": "SigmaUSD\", категория: \"DEFI\", url: \"https://sigmausd.io",
+      "rosen_bridge_category_infrastructure_url": "Rosen Bridge\", category: \"INFRASTRUCTURE\", url: \"https://rosen.tech",
+      "ergomixer_category_privacy_url_https_ergomixer_io": "ErgoMixer\", категория: \"PRIVACY\", url: \"https://ergomixer.io",
+      "ergo_auction_house_category_nft": "Ergo Auction House\", категория \"NFT\", url: \"https://ergoauctions.org",
+      "paideia_category_dao_url_https_paideia_im": "Paideia\", категория: \"DAO\", url: \"https://paideia.im",
+      "oracle_pools_category_oracles_url": "Oracle Pools\", категория: \"ORACLES\", url: \"https://explorer.ergoplatform.com/en/oracle-pools-list",
+      "ergo_explorer_category_tools_url": "Ergo Explorer\", категория: \"TOOLS\", url: \"https://explorer.ergoplatform.com",
+      "mew_finance_category_defi_url": "Mew Finance\", категория: \"DEFI\", url: \"#",
+      "satergo_category_wallets_url_https_satergo_com": "SatErgo\", категория: \"WALLETS\", url: \"https://satergo.com",
+      "safew_category_wallets_url_https_safew_org": "SAFEW\", категория: \"WALLETS\", url: \"https://safew.org",
+      "ergowatch_category_tools_url_https_ergo_watch": "ErgoWatch\", категория: \"TOOLS\", url: \"https://ergo.watch",
+      "ergoraffle_category_defi_url_https_ergoraffle_com": "ErgoRaffle\", категория: \"DEFI\", url: \"https://ergoraffle.com",
+      "guapswap_category_tools_url": "GuapSwap\", категория: \"TOOLS\", url: \"#",
+      "sigmaverse_category_tools_url_https_sigmaverse_io": "Sigmaverse\", категория: \"TOOLS\", url: \"https://sigmaverse.io",
+      "ergone_category_tools_url": "ErgOne\", категория: \"TOOLS\", url: \"#",
+      "hodlbox_category_defi_url": "Hodlbox\", категория: \"DEFI\", url: \"#",
+      "tokenjay_category_defi_url": "TokenJay\", категория: \"DEFI\", url: \"#",
+      "single_tx_swap_category_tools_url": "Единый Tx Swap, категория: \"TOOLS\", url: \"#",
+      "crux_finance_category_tools_url": "Crux Finance\", категория: \"TOOLS\", url: \"#",
+      "fleet_sdk_category_tools_url": "Fleet SDK\", категория: \"TOOLS\", url: \"https://github.com/fleet-sdk/fleet",
+      "appkit_category_tools_url_https": "AppKit\", категория: \"TOOLS\", url: \"https://github.com/ergoplatform/ergo-appkit",
+      "sigmarust_category_tools_url_https": "SigmaRust\", категория: \"TOOLS\", url: \"https://github.com/ergoplatform/sigma-rust",
+      "sigrsv_category_defi_url": "SigRSV\", категория: \"DEFI\", url: \"#",
+      "defi_infrastructure_oracles_privacy_nft": "DEFI\",\n  \"ИНФРАСТРУКТУРНЫЙ\",\n  \"ORACLES\",\n  \"PRIVACY\",\n  \"NFT\",\n  \"WALLETS\",\n  \"DAO\",\n  \"TOOLS",
+      "suggest_a_project": "Предложить проект",
+      "no_projects_found": "Проектов не найдено",
+      "ergo_ecosystem_interactive_map": "Интерактивная карта Эрго Экосистемы",
+      "webapplication_id_https_ergoblockchain_org": "WebApplication\",\n    \"@id\": \"https://ergoblockchain. rg/ecosystem/map\",\n    name: \"Ergo Ecosystem Interactive Map\",\n    description: \"Visual explorer for Ergo blockchain projects and applications\",\n    раздела приложения: \"VisualizationApplication\",\n    operatingSystem: \"Web Browser\",\n    url: \"https://ergoblockchain. rg/экосистема/карта",
+      "organization_name_ergo_platform_url": "Организация\",\n      имя: \"Ergo Platform\",\n      url: \"https://ergoblockchain.org",
+      "what_is_the_ergo_ecosystem": "What is the Ergo Ecosystem Map?\",\n      answer: \"An interactive visualization showing all active projects, protocols, and applications built on Ergo blockchain, organized by category.",
+      "how_many_projects_are_in_the_ergo_ecosystem_answer": "Сколько проектов в экосистеме Ergo?\",\n      ответит:",
+      "how_do_i_add_my": "Как добавить мой проект на карту? ,\n      ответ: \"Представьте свой проект через форму представления экосистем или свяжитесь с Фондом Эрго для включения в карту экосистем.",
+      "is_the_ecosystem_map_updated": "Is the ecosystem map updated regularly?\",\n      answer: \"Yes, the ecosystem map is regularly updated to include new projects and remove inactive ones, providing an accurate view of the active ecosystem.",
+      "organization_name_ergo_platform": "Организация\",\n      имя: \"Платформа Ergo",
+      "datadownload_encodingformat_application_json_contenturl": "DataDownload\",\n      encodingFormat: \"application/json\",\n      contentUrl: \"https://ergoblockchain.org/api/ecosystem",
+      "place_name_global": "Место\",\n      имя: \"Глобальный",
+      "ergo_ecosystem_map_interactive_defi_dapp_directory": "Эрго Экосистемная карта | Интерактивная DeFi и каталог dApp",
+      "interactive_ergo_ecosystem_map_50_projects": "Интерактивная карта Экосистемы Эрго | 50+ Проекты",
+      "ergo_ecosystem_map_visual_project_explorer": "Эрго Экосистемная карта | Визуальный исследователь проектов",
+      "interactive_visualization_of_50_ergo": "Интерактивная визуализация 50 + Ergo проектов. Исследуйте DeFi, NFT, инфраструктуру.",
+      "visual_explorer_for_ergo_blockchain": "Визуальный исследователь для проектов блокчейн Ergo и приложений"
+    },
+    "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Восхождение",
+    "collectionpage_id_https_ergoblockchain_org": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#collection\",\n    name: \"Ergo Ecosystem\",\n    url: \"https://ergoblockchain.org/ecosystem",
+    "website_id_https_ergoblockchain_org_website": "Веб-сайт\", \"@id\": \"https://ergoblockchain.org#website",
+    "breadcrumblist_id_https_ergoblockchain_org": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
+    "ecosystem_item_https_ergoblockchain_org_ecosystem": "Экосистема\", пункт: \"https://ergoblockchain.org/ecosystem",
+    "what_defi_projects_are_on": "What DeFi projects are on Ergo?\",\n      answer: \"Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools.",
+    "are_there_nft_marketplaces_on": "Есть ли рынки NFT на Ergo?\",\n      ответить: \"Да, у Ergo есть такие торговые площадки как SkyHarbor для добычи и торговли NFT, с низкими комиссиями.",
+    "home_item_https_ergoblockchain_org": "Главная\", предмет: \"https://ergoblockchain.org/",
+    "projectPage": {
+      "breadcrumbs": {
+        "ecosystem": "Экосистема"
+      },
+      "defaultFaq": {
+        "whatIs": {
+          "q": "Что такое {name}?"
+        },
+        "features": {
+          "q": "Какие возможности есть у {name}?",
+          "a": "{name} предлагает: {features}."
+        },
+        "technologies": {
+          "q": "Какие технологии Ergo использует {name}?",
+          "a": "{name} построен(а) с использованием: {technologies}."
+        }
+      },
+      "buttons": {
+        "visitProject": "Посетить проект",
+        "github": "GitHub",
+        "twitter": "Твиттер",
+        "docs": "Документ",
+        "community": "Сообщество",
+        "backToEcosystem": "Вернуться к Экосистеме"
+      },
+      "status": {
+        "operational": "Оперативный",
+        "testing": "Тестирование",
+        "prototype": "Прототип",
+        "notOperating": "Не работает"
+      },
+      "sections": {
+        "keyFeatures": "Ключевые функции",
+        "builtWith": "Создано с помощью технологии Ergo",
+        "relatedArticles": "Похожие статьи",
+        "viewAll": "Посмотреть все",
+        "faq": "Часто задаваемые вопросы",
+        "relatedProjects": "Связанные {category} проекты",
+        "minRead": "{time} мин прочитано"
+      },
+      "cta": {
+        "title": "Посмотреть больше dApps",
+        "description": "Откройте для себя полную экосистему Эрго с помощью DeFi, кошельков, инструментов и многое другое.",
+        "primaryButton": "Посмотреть все проекты",
+        "secondaryButton": "Начать строительство"
+      }
+    },
+    "infographicPage": {
+      "breadcrumbs": {
+        "infographics": "Инфографика"
+      },
+      "meta": {
+        "minRead": "{time} мин прочитано"
+      },
+      "image": {
+        "clickToEnlarge": "Нажмите, чтобы увеличить",
+        "fullSize": "Полный размер"
+      },
+      "share": {
+        "title": "Поделиться этой информацией",
+        "subtitle": "помочь другим обнаружить Ergo",
+        "telegram": "Телеграмма",
+        "pinterest": "Пинтерес",
+        "download": "Скачать",
+        "copyLink": "Копировать ссылку",
+        "copied": "Скопировано!"
+      },
+      "sections": {
+        "about": "Об этом Инфографическом",
+        "systemsCompared": "Системы по сравнению",
+        "keyPoints": "Ключевые точки",
+        "howToRead": "Как читать эту информацию",
+        "relatedTopics": "Связанные темы"
+      },
+      "cta": {
+        "title": "Просмотреть больше информации о Ergo",
+        "description": "Откройте для себя визуальные руководства по смарт-контрактам Ergo's PoW, eUTXO, аренде хранения, конфиденциальности и многое другое.",
+        "button": "Просмотр всей информации"
+      }
+    }
+  },
+  "ecosystemPage": {},
+  "ecosystemGrants": {
+    "title": "Экосистемные гранты",
+    "description": "Возможности финансирования развития экосистем Эрго",
+    "subtitle": "Постройте будущее блокчейна при поддержке сообщества"
+  },
+  "ecosystemMap": {
+    "title": "Карта экосистем",
+    "description": "Интерактивная визуализация экосистемы Эрго",
+    "subtitle": "Изучите проекты, инструменты и услуги"
+  },
+  "ecosystemMining": {
+    "title": "Добыча экосистем",
+    "description": "Горные пулы, инструменты и ресурсы для Эрго майнеров",
+    "subtitle": "Все, что вам нужно для добычи ERG"
+  },
+  "ecosystemData": {
+    "spectrum-finance": {
+      "name": "Spectrum Finance",
+      "description": "Современная децентрализованная биржа с открытым исходным кодом (DEX), работающая на блокчейнах Эрго и Кардано. Она предлагает обеспечение ликвидности (LP), продуктивное земледелие и поддерживает Babel Fees.",
+      "longDescription": "Spectrum Finance was one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which allowed users to pay transaction fees in tokens other than ERG.\n\nThe DEX utilized automated market maker (AMM) pools for trustless token swaps, with liquidity providers earning fees from all trades. Yield farming features enabled additional token rewards for liquidity providers, creating incentives for deep liquidity across trading pairs.\n\nAs an open-source project, Spectrum Finance contributed significant code and research to the eUTXO DeFi ecosystem, demonstrating how complex financial applications could be built securely on this model. The protocol's smart contracts and architecture continue to serve as reference implementations for new DeFi projects.",
+      "features": [
+        "Decentralized Exchange",
+        "Liquidity Pools",
+        "Yield Farming",
+        "Babel Fees Support",
+        "Cross-chain Trading"
+      ]
+    },
+    "ergodex": {
+      "name": "ErgoDex",
+      "description": "Децентрализованный обмен, не связанный с лишением свободы (DEX) для Эрго и Кардано, позволяющий AMM и торговлю ордерами по обоим экосистемам.",
+      "longDescription": "ErgoDex is a pioneering non-custodial decentralized exchange built on the eUTXO model, providing seamless trading between Ergo and Cardano ecosystems. Unlike traditional DEXs that rely on centralized order matching, ErgoDex leverages the unique properties of the extended UTXO model to enable trustless, atomic swaps without intermediaries.\n\nThe platform supports both Automated Market Maker (AMM) pools for passive liquidity provision and traditional order-book trading for precise price execution. This hybrid approach gives traders flexibility while maintaining the security guarantees of on-chain settlement. All trades execute directly on the blockchain, ensuring transparency and eliminating counterparty risk.\n\nErgoDex represents a significant advancement in cross-chain DeFi infrastructure. By building on eUTXO rather than account-based models, the exchange achieves deterministic transaction outcomes, predictable fees, and enhanced security against common smart contract vulnerabilities. Liquidity providers can earn fees from both ERG and ADA trading pairs, making it an attractive option for yield generation across multiple blockchain ecosystems.",
+      "features": [
+        "Cross-chain DEX for Ergo & Cardano",
+        "Non-custodial trading",
+        "AMM and order-book models",
+        "Liquidity provision for ERG and ADA ecosystems"
+      ]
+    },
+    "sigmausd": {
+      "name": "SigmaUSD",
+      "description": "Первый EUTXO стабильный реализующий протокол AgeUSD. Он привязан к доллару США и поддерживается ERG с плавающим резервным коэффициентом (400%-800%).",
+      "longDescription": "SigmaUSD is a groundbreaking algorithmic stablecoin that pioneered the AgeUSD protocol on the Ergo blockchain. As the first stablecoin built on the extended UTXO model, it demonstrates how decentralized finance can achieve price stability without relying on centralized reserves or trusted third parties.\n\nThe protocol maintains its dollar peg through a unique dual-token mechanism: SigmaUSD (the stablecoin) and SigRSV (the reserve coin). Users mint SigmaUSD by depositing ERG as collateral, while reserve providers mint SigRSV to absorb price volatility. The system maintains a floating reserve ratio between 400% and 800%, ensuring robust overcollateralization even during market stress.\n\nWhat sets SigmaUSD apart from other stablecoins is its completely decentralized design with no liquidation risk for individual users. Price data comes from Ergo's trustless Oracle Pools, eliminating dependence on centralized oracles. The entire protocol runs on smart contracts verified on-chain, with transparent reserve ratios visible to anyone. This makes SigmaUSD an ideal stable unit of account for the Ergo DeFi ecosystem, enabling predictable value storage and transactions without counterparty risk.",
+      "features": [
+        "Algorithmic Stablecoin",
+        "ERG Collateralized",
+        "Decentralized",
+        "No Liquidation Risk"
+      ],
+      "faq": [
+        {
+          "question": "What is SigmaUSD?",
+          "answer": "SigmaUSD is a decentralized algorithmic stablecoin on Ergo, pegged to the US dollar and backed by ERG cryptocurrency with a reserve ratio of 400-800%."
+        },
+        {
+          "question": "How is SigmaUSD different from other stablecoins?",
+          "answer": "Unlike centralized stablecoins like USDT, SigmaUSD is fully decentralized with no single point of failure. It uses the AgeUSD protocol with overcollateralization and has no liquidation risk for users."
+        },
+        {
+          "question": "What is SigRSV?",
+          "answer": "SigRSV is the reserve coin that backs SigmaUSD. Reserve providers mint SigRSV to earn from ERG price appreciation while providing stability to the system."
+        }
+      ]
+    },
+    "rosen-bridge": {
+      "name": "Rosen Bridge",
+      "description": "Протокол с открытым исходным кодом для кроссчейн-переводов активов между Ergo и другими блокчейнами, такими как Cardano, Bitcoin Runes и Dogecoin.",
+      "longDescription": "Rosen Bridge - это децентрализованный кроссчейн-протокол, обеспечивающий безопасный перенос активов между Ergo и множеством других блокчейн-сетей, включая Cardano, Bitcoin, Dogecoin и Ethereum. Построенный на передовых криптографических технологиях, таких как NiPoPoWs (неинтерактивные доказательства Proof-of-Work), Rosen Bridge устраняет необходимость в централизованных хранителях или федеративных мультиподписях.\n\nМост работает через сеть независимых наблюдателей (Watchers), которые отслеживают транзакции в подключенных сетях. Эти наблюдатели используют криптографические доказательства для верификации кроссчейн-переводов без необходимости доверять какой-либо одной стороне. Модель безопасности протокола спроектирована так, чтобы оставаться устойчивой даже при компрометации большинства наблюдателей, благодаря экономическим стимулам и криптографическим гарантиям, встроенным в смарт-контракты.\n\nRosen Bridge поддерживает обернутые активы в обоих направлениях, позволяя пользователям переносить Bitcoin, ADA и другие токены в экосистему DeFi Ergo, а также использовать ERG и нативные токены Ergo в других сетях. Открытая архитектура моста позволяет любому запустить ноду наблюдателя, внося вклад в безопасность сети и получая комиссии. Этот децентрализованный подход к кроссчейн-взаимодействию делает Rosen Bridge критически важной инфраструктурой для мультичейн-будущего DeFi.",
+      "features": [
+        "Кроссчейн-переводы",
+        "Поддержка множества блокчейнов",
+        "Децентрализованные наблюдатели",
+        "Безопасный мост без доверия"
+      ],
+      "faq": [
+        {
+          "question": "Что такое Rosen Bridge?",
+          "answer": "Rosen Bridge - это децентрализованный протокол для переноса активов между Ergo и другими блокчейнами, такими как Cardano, Bitcoin и Ethereum, без использования централизованных хранителей."
+        },
+        {
+          "question": "Как работает Rosen Bridge?",
+          "answer": "Rosen Bridge использует сеть наблюдателей (Watchers), которые криптографически верифицируют кроссчейн-транзакции. Технология NiPoPoWs обеспечивает безопасную верификацию без необходимости загрузки полных данных блокчейна."
+        },
+        {
+          "question": "Какие блокчейны поддерживает Rosen Bridge?",
+          "answer": "Rosen Bridge в настоящее время поддерживает Ergo, Cardano, Bitcoin (включая Runes), Dogecoin и расширяется на дополнительные сети."
+        }
+      ]
+    },
+    "ergomixer": {
+      "name": "ErgoMixer",
+      "description": "Первый неинтерактивный несерьезный микшер в криптовалюте. Он позволяет пользователям отправлять токены, используя Sigma-протоколы для усиления конфиденциальности.",
+      "longDescription": "ErgoMixer is a pioneering privacy tool that introduced the world's first non-interactive, non-custodial token mixer. Unlike traditional mixers that require coordinated participation or trusted operators, ErgoMixer leverages Sigma Protocols to enable completely trustless transaction obfuscation.\n\nThe mixer works by pooling user transactions in a way that breaks the on-chain link between sender and recipient addresses. Users deposit tokens into mixing contracts, and after a configurable number of mixing rounds, withdraw to fresh addresses. The entire process is secured by zero-knowledge proofs built on Sigma Protocols, meaning neither the mixer operators nor blockchain observers can trace the connection between deposits and withdrawals.\n\nErgoMixer supports not just ERG but also native tokens issued on the Ergo blockchain, making it a comprehensive privacy solution for the entire ecosystem. The non-interactive design means users don't need to be online simultaneously with other participants. This represents a significant advancement over previous mixing implementations and demonstrates the power of Ergo's cryptographic primitives for building practical privacy applications that respect user sovereignty while remaining compliant with transparent blockchain architecture.",
+      "features": [
+        "Non-custodial Mixing",
+        "Token Privacy",
+        "Sigma Protocols",
+        "Zero-knowledge Proofs"
+      ],
+      "faq": [
+        {
+          "question": "What is ErgoMixer?",
+          "answer": "ErgoMixer is a decentralized, non-custodial token mixer that uses Sigma Protocols to break transaction links, providing financial privacy on the Ergo blockchain."
+        },
+        {
+          "question": "Is ErgoMixer safe to use?",
+          "answer": "Yes, ErgoMixer is non-custodial, meaning you always control your funds. The mixing process uses cryptographic proofs that mathematically guarantee privacy without trusting any third party."
+        },
+        {
+          "question": "What tokens can I mix?",
+          "answer": "ErgoMixer supports ERG and all native tokens on the Ergo blockchain, making it a comprehensive privacy solution for the ecosystem."
+        }
+      ]
+    },
+    "nautilus-wallet": {
+      "name": "Nautilus Wallet",
+      "description": "Расширение для браузера и мобильный кошелек для Ergo, фокусируется на приватности, безопасности и пользовательском опыте. Он поддерживает Ledger, несколько кошельков и dApp коннектор.",
+      "longDescription": "Nautilus Wallet is the most popular wallet for the Ergo ecosystem, offering a seamless experience across browser extensions and mobile devices. Designed with privacy and security as core principles, Nautilus provides users with complete control over their ERG and native tokens while maintaining an intuitive interface suitable for both newcomers and experienced users.\n\nThe wallet integrates Ledger hardware wallet support for maximum security, allowing users to store their private keys on dedicated hardware while still enjoying the convenience of a modern wallet interface. Multiple wallet management enables easy organization of different accounts, while the built-in dApp connector provides one-click access to DeFi protocols, NFT marketplaces, and other applications in the Ergo ecosystem.\n\nNautilus also integrates with ErgoMixer for optional transaction privacy, demonstrating how wallets can enhance user sovereignty without compromising usability. The wallet supports all Ergo native tokens, displays NFTs, and provides real-time portfolio tracking. With its open-source codebase and active development, Nautilus Wallet represents the gold standard for cryptocurrency wallets that prioritize user control and privacy.",
+      "features": [
+        "Browser Extension",
+        "Mobile App",
+        "Ledger Support",
+        "dApp Connector",
+        "Multi-wallet"
+      ],
+      "faq": [
+        {
+          "question": "What is Nautilus Wallet?",
+          "answer": "Nautilus is a browser extension and mobile wallet for Ergo, supporting ERG, native tokens, NFTs, Ledger hardware wallets, and connections to Ergo dApps."
+        },
+        {
+          "question": "Is Nautilus Wallet safe?",
+          "answer": "Yes, Nautilus is non-custodial and open-source. Your private keys are encrypted locally and never leave your device. Hardware wallet support adds an extra layer of security."
+        },
+        {
+          "question": "Can I use Nautilus with DeFi apps?",
+          "answer": "Yes, Nautilus has a built-in dApp connector that works with all major Ergo DeFi protocols including DEXs, lending platforms, and NFT marketplaces."
+        }
+      ]
+    },
+    "duckpools": {
+      "name": "DuckPools",
+      "description": "Обеспеченная платформа кредитования с алгоритмическими пулами кредитования. Пользователи предоставляют ERG или родные активы для получения дохода или заимствования активов против ERG залога.",
+      "longDescription": "DuckPools is a decentralized lending protocol bringing traditional lending mechanics to the Ergo blockchain. The platform enables users to deposit ERG and other native assets into algorithmic lending pools to earn yield, while borrowers can access liquidity by providing overcollateralized positions.\n\nThe protocol uses Ergo's Oracle Pools for accurate, trust-minimized price feeds, ensuring that collateral ratios and liquidation thresholds remain fair and transparent. Interest rates adjust algorithmically based on pool utilization, balancing supply and demand without manual intervention. All lending logic executes through audited ErgoScript smart contracts, providing deterministic outcomes and eliminating the possibility of reentrancy attacks common in account-based systems.\n\nDuckPools demonstrates how the eUTXO model can support complex DeFi primitives with enhanced security guarantees. Each loan is represented as a discrete UTXO with explicit state, making positions easy to audit and verify. The platform supports multiple collateral types and is designed to integrate with other Ergo DeFi protocols, enabling composable yield strategies across the ecosystem.",
+      "features": [
+        "Lending Pools",
+        "Collateralized Loans",
+        "Yield Generation",
+        "Native Asset Support"
+      ]
+    },
+    "paideia": {
+      "name": "Paideia",
+      "description": "Набор инструментов для создания и управления децентрализованными автономными организациями (DAO) на Эрго и Кардано с управлением казначейством.",
+      "longDescription": "Paideia is a comprehensive DAO infrastructure platform that empowers communities to create and manage decentralized organizations on both Ergo and Cardano blockchains. The platform provides all essential tools for decentralized governance: proposal creation, token-weighted voting, treasury management, and staking mechanisms.\n\nUnlike centralized governance tools, Paideia leverages smart contracts to enforce voting outcomes automatically. When a proposal passes, treasury transactions execute according to the vote without requiring trusted administrators. This eliminates the risk of governance capture or fund misappropriation that plagues many cryptocurrency projects.\n\nThe platform supports flexible governance configurations including quorum requirements, voting periods, and delegation mechanisms. DAOs can issue governance tokens, distribute them through airdrops or vesting schedules, and implement sophisticated voting schemes like quadratic voting. Paideia's multi-chain support means organizations can govern assets and activities across both Ergo and Cardano ecosystems from a unified interface.",
+      "features": [
+        "DAO Creation",
+        "Governance Tools",
+        "Treasury Management",
+        "Proposal Voting",
+        "Multi-chain"
+      ],
+      "faq": [
+        {
+          "question": "What is Paideia?",
+          "answer": "Paideia is a DAO creation and management platform for Ergo and Cardano, providing tools for governance, voting, treasury management, and community coordination."
+        },
+        {
+          "question": "Can anyone create a DAO on Paideia?",
+          "answer": "Yes, Paideia is permissionless. Anyone can create a DAO, configure governance rules, issue tokens, and start managing community decisions on-chain."
+        }
+      ]
+    },
+    "oracle-pools": {
+      "name": "Oracle Pools",
+      "description": "Децентрализованная система оракула на Эрго, которая соединяет смарт-контракты с внешними данными без доверия к централизованным источникам.",
+      "longDescription": "Oracle Pools is Ergo's native solution for bringing external data on-chain in a trust-minimized way. Unlike centralized oracle services, Ergo's Oracle Pools use on-chain aggregation and permissionless participation to create reliable data feeds for DeFi protocols, stablecoins, and other smart contract applications.\n\nThe system works by allowing multiple independent oracle operators to submit data points, which are then aggregated on-chain using the median or other statistical methods. This aggregation happens in transparent UTXOs, meaning anyone can verify how the final value was computed. Bad actors who submit manipulated data can be identified and their stakes slashed, creating strong economic incentives for honest behavior.\n\nOracle Pools power critical infrastructure across the Ergo ecosystem, including SigmaUSD's price feeds and various DeFi protocols. The permissionless design means new operators can join by staking collateral, increasing decentralization over time. Each oracle pool stores its data history on-chain in eUTXOs, providing a transparent, auditable record of price movements that applications can reference for time-weighted calculations or historical analysis.",
+      "features": [
+        "Decentralized Oracles",
+        "Price Feeds",
+        "External Data",
+        "Trustless Design"
+      ],
+      "faq": [
+        {
+          "question": "How do Oracle Pools differ from Chainlink?",
+          "answer": "Oracle Pools perform aggregation on-chain rather than off-chain, making the process fully transparent and auditable. Data is stored in eUTXOs, and anyone can verify how values are computed."
+        },
+        {
+          "question": "Can I run an oracle node?",
+          "answer": "Yes, Oracle Pools are permissionless. Anyone can stake collateral and become an oracle operator, earning rewards for providing accurate data."
+        }
+      ]
+    },
+    "ergo-explorer": {
+      "name": "Ergo Explorer",
+      "description": "Основной официальный обозреватель блоков для Ergo. Он позволяет пользователям отслеживать транзакции, блоки, адреса, токены и просматривать общую статистику сети.",
+      "longDescription": "Ergo Explorer is the official blockchain explorer for the Ergo network, providing comprehensive visibility into all on-chain activity. Users can search for transactions, blocks, addresses, and tokens, with detailed views of each component of the eUTXO model.\n\nThe explorer displays real-time network statistics including hashrate, difficulty, and block times, giving users insight into network health and mining activity. Token explorers show all native assets issued on Ergo, including their distribution and transaction history. For developers, the explorer provides API access to query blockchain data programmatically.\n\nAdvanced features include mempool monitoring, rich address analytics, and the ability to decode ErgoScript contracts. The explorer integrates with Oracle Pools to display current data feeds and their history. As an open-source project, Ergo Explorer sets the standard for transparency in the ecosystem.",
+      "features": [
+        "Block Explorer",
+        "Transaction Tracking",
+        "Token Info",
+        "Network Statistics",
+        "Address Lookup"
+      ]
+    },
+    "ergopad": {
+      "name": "ErgoPad",
+      "description": "Запуск токенов (IDO) и платформа сбора средств на блокчейне Ergo. Это дает держателям токена возможность участвовать в IDO.",
+      "longDescription": "ErgoPad was a pioneering token launch platform that facilitated Initial DEX Offerings (IDOs) for projects building on the Ergo blockchain. The platform enabled projects to raise funds from the community while giving token holders early access to promising ecosystem initiatives.\n\nThe platform operated through a staking model where users could stake ErgoPad tokens to gain allocation tiers for upcoming IDOs. Higher staking tiers provided larger allocations, creating incentives for long-term platform engagement. Multiple successful projects launched through ErgoPad, contributing to the growth of the Ergo ecosystem.\n\nWhile ErgoPad is currently not operating, its infrastructure and smart contracts remain as open-source contributions to the ecosystem. The platform demonstrated how decentralized fundraising could work on Ergo, providing a template for future launchpad projects and contributing valuable code to the community.",
+      "features": [
+        "Token Launch",
+        "IDO Platform",
+        "Staking",
+        "Community Projects"
+      ]
+    },
+    "mew-finance": {
+      "name": "Mew Finance",
+      "description": "Децентрализованная платформа финансирования (DeFi), предлагающая ряд финансовых приложений, включая DEX, рынок NFT и различные финансовые инструменты.",
+      "longDescription": "Mew Finance is an all-in-one DeFi platform on Ergo, combining a decentralized exchange with an NFT marketplace and advanced financial tools. The platform aims to provide a comprehensive DeFi experience where users can swap tokens, provide liquidity, trade NFTs, and access various yield opportunities in a single interface.\n\nThe DEX component supports token swaps with competitive fees and slippage protection. Liquidity providers can stake assets in pools to earn trading fees and additional token rewards. The integrated NFT marketplace allows creators to mint, list, and trade digital collectibles directly on the platform.\n\nMew Finance demonstrates the composability possible on Ergo's eUTXO model, integrating multiple DeFi primitives into a cohesive platform while maintaining the security guarantees of deterministic smart contract execution.",
+      "features": [
+        "DEX",
+        "NFT Marketplace",
+        "DeFi Suite",
+        "Token Swaps"
+      ]
+    },
+    "satergo": {
+      "name": "SatErgo",
+      "description": "Полнофункциональный настольный кошелек для Ergo с возможностью интеграции полного узла для поддержки децентрализации сети. Приватность фокусируется на автономном хранилище.",
+      "longDescription": "SatErgo is a feature-rich desktop wallet designed for power users who want maximum control over their Ergo experience. Unlike browser-based wallets, SatErgo runs as a native application on Windows, macOS, and Linux, providing enhanced security and the option to run a full Ergo node directly within the wallet.\n\nRunning a full node contributes to network decentralization by independently validating all transactions and blocks. This trustless verification means users don't rely on third-party servers to confirm their balances or broadcast transactions. The wallet's offline vault feature enables cold storage by creating and signing transactions on an air-gapped computer.\n\nSatErgo supports all Ergo native tokens and provides detailed transaction history with UTXO-level visibility. The privacy-focused design includes options for coin selection and address management that help users maintain financial privacy. With its Java-based architecture, SatErgo offers cross-platform consistency while maintaining the security standards expected from a self-custody solution.",
+      "features": [
+        "Desktop Wallet",
+        "Full Node Integration",
+        "Offline Vault",
+        "Privacy Focus"
+      ]
+    },
+    "safew": {
+      "name": "SAFEW",
+      "description": "Кошелек расширения браузера для Ergo, который интегрируется с ErgoMixer для усиления конфиденциальности транзакций.",
+      "longDescription": "SAFEW (Simple And Fast Ergo Wallet) is a privacy-focused browser extension wallet that stands out through its native integration with ErgoMixer. This integration enables users to mix their tokens directly from the wallet interface, breaking the on-chain link between transactions for enhanced financial privacy.\n\nThe wallet provides all standard features expected from a modern cryptocurrency wallet: sending and receiving ERG and native tokens, viewing transaction history, and connecting to decentralized applications through the EIP-12 dApp connector. What sets SAFEW apart is its commitment to user privacy as a first-class feature rather than an afterthought.\n\nSAFEW's interface is designed for simplicity without sacrificing functionality. Users can manage multiple addresses, view their token balances, and initiate mixing operations with just a few clicks. The open-source codebase allows security-conscious users to verify the wallet's behavior, while the browser extension format provides convenient access to Ergo DeFi directly from the browser.",
+      "features": [
+        "Browser Extension",
+        "ErgoMixer Integration",
+        "Privacy Enhanced",
+        "dApp Support"
+      ]
+    },
+    "ergowatch": {
+      "name": "ErgoWatch",
+      "description": "Аналитический обозреватель блоков, предоставляющий метрики сети Ergo, статистику DeFi (например, TVL), графики и панели инструментов для мониторинга активности блокчейна.",
+      "longDescription": "ErgoWatch is a comprehensive analytics platform that provides deep insights into the Ergo blockchain ecosystem. While the official Ergo Explorer focuses on transaction and block data, ErgoWatch specializes in aggregated metrics, historical trends, and DeFi analytics that help users understand ecosystem health and growth.\n\nThe platform tracks Total Value Locked (TVL) across Ergo DeFi protocols, providing historical charts and breakdowns by protocol. Network metrics include active addresses, transaction volumes, token statistics, and mining data. Custom dashboards visualize trends over time, helping researchers and investors make data-driven decisions.\n\nErgoWatch's open-source architecture means the community can verify how metrics are calculated and contribute improvements. The platform indexes blockchain data into queryable databases, enabling complex analytical queries that would be impractical to run directly on-chain. For developers and analysts, ErgoWatch provides an essential window into the quantitative health of the Ergo ecosystem.",
+      "features": [
+        "Analytics",
+        "DeFi Metrics",
+        "TVL Tracking",
+        "Network Dashboards",
+        "Charts"
+      ]
+    },
+    "cyberpixels": {
+      "name": "CyberPixels",
+      "description": "Игровой проект с игровой игрой в пиксель-стиле open-world с интеграцией в блокчейн (NFT, пользовательские токены, внутриигровой площадки).",
+      "longDescription": "CyberPixels (CyberVerse) is an ambitious blockchain gaming project building an open-world pixel-art game with deep Ergo integration. The game features NFT-based assets, custom tokens, and an in-game marketplace where players can trade items and resources using Ergo blockchain infrastructure.\n\nThe project leverages Ergo's native token capabilities for in-game currencies and item ownership. Each unique item exists as an NFT on the Ergo blockchain, providing true ownership and enabling players to trade assets outside the game. The eUTXO model's deterministic transactions ensure that marketplace trades execute atomically without risk of fraud.\n\nCyberPixels represents an exploration of how blockchain technology can enhance gaming through verifiable ownership, player-driven economies, and interoperability. The pixel-art aesthetic combined with blockchain mechanics aims to create engaging gameplay while demonstrating practical applications of Ergo technology in entertainment.",
+      "features": [
+        "Blockchain Gaming",
+        "NFT Integration",
+        "In-game Marketplace",
+        "Play-to-Earn"
+      ]
+    },
+    "sigmafi": {
+      "name": "SigmaFi",
+      "description": "Комплект децентрализованных финансовых контрактов P2P на Ergo, включая SigmaBonds для создания долговых обязательств P2P.",
+      "longDescription": "SigmaFi is a suite of peer-to-peer financial contracts that enable direct lending and borrowing between Ergo users without intermediary pools. The flagship product, SigmaBonds, allows users to create custom debt obligations with flexible terms negotiated directly between lender and borrower.\n\nUnlike pooled lending protocols, SigmaFi's P2P model gives participants full control over loan terms including interest rates, duration, and collateral requirements. Lenders can specify exactly what returns they require, while borrowers can find terms that match their needs. Smart contracts enforce repayment schedules and handle collateral liquidation if necessary.\n\nThe protocol demonstrates advanced ErgoScript capabilities for implementing complex financial logic. Each bond is represented as a UTXO with embedded contract terms, creating transparent and verifiable debt instruments. SigmaFi explores how traditional finance concepts like bonds and notes can be reimagined in a trustless, decentralized context.",
+      "features": [
+        "P2P Lending",
+        "Bond Issuance",
+        "Decentralized Finance",
+        "Smart Contracts"
+      ]
+    },
+    "ergoraffle": {
+      "name": "ErgoRaffle",
+      "description": "Сервис краудфилдинга с элементами лотереи, позволяющий собирать средства для проектов, в которых участники могут выиграть награды.",
+      "longDescription": "ErgoRaffle is a decentralized crowdfunding platform that combines fundraising with lottery mechanics. Projects can raise funds by selling raffle tickets, with participants receiving a chance to win prizes while supporting initiatives they believe in. The entire process runs on ErgoScript smart contracts, ensuring provable fairness and transparent fund distribution.\n\nThe platform uses Ergo's native randomness capabilities to select winners in a verifiable way. Unlike traditional lotteries where users must trust the operator, ErgoRaffle's on-chain execution means anyone can verify that winners were selected fairly. This trustless design eliminates the possibility of manipulation while reducing operational overhead.\n\nErgoRaffle serves as infrastructure for community fundraising, charity events, and project bootstrapping within the Ergo ecosystem. Projects can configure ticket prices, prize structures, and funding goals. When a raffle completes, smart contracts automatically distribute funds to the project and prizes to winners, creating a self-executing crowdfunding mechanism that requires no intermediaries.",
+      "features": [
+        "Crowdfunding",
+        "Lottery System",
+        "Provable Fairness",
+        "Project Funding"
+      ]
+    },
+    "minotaur-wallet": {
+      "name": "Minotaur Wallet",
+      "description": "Мобильный кошелек для Ergo с расширенными функциями, такими как мультиподписи, повышение безопасности управления фондами.",
+      "longDescription": "Minotaur Wallet is a mobile wallet for Ergo that focuses on advanced security features, particularly multi-signature support. Multi-sig wallets require multiple parties to approve transactions, making them ideal for shared funds, organizational treasuries, and users who want additional security layers.\n\nThe wallet implements Ergo's native multi-signature capabilities through Sigma Protocols, enabling flexible signing schemes. Users can configure M-of-N signatures where any M keys from N total signers can authorize a transaction. This provides both security redundancy and collaborative fund management without trusting a single party with complete control.\n\nMinotaur is designed for mobile use with a focus on usability. The interface guides users through creating and participating in multi-sig setups without requiring deep technical knowledge. For teams and organizations managing shared funds on Ergo, Minotaur provides essential infrastructure for secure, collaborative asset management.",
+      "features": [
+        "Mobile Wallet",
+        "Multi-signature",
+        "Enhanced Security",
+        "Fund Management"
+      ]
+    },
+    "guapswap": {
+      "name": "GuapSwap",
+      "description": "Децентрализованная смарт-контрактная услуга для обмена прибыли майнеров на Эрго, что позволяет автоматически обмениваться вознаграждением.",
+      "longDescription": "GuapSwap is a specialized tool for Ergo miners that enables automatic conversion of mining rewards. When miners earn block rewards in ERG, GuapSwap can automatically swap a portion into other tokens according to configured preferences, helping miners manage their income without manual intervention.\n\nThe service runs through smart contracts that execute swaps based on predefined rules. Miners can configure what percentage of rewards to swap and which tokens to receive, creating automated dollar-cost averaging or diversification strategies. This reduces the friction of actively managing mining income.\n\nGuapSwap demonstrates practical utility of smart contracts for the mining community. By automating common operations, it saves time and enables consistent execution of swap strategies regardless of market conditions. The tool complements Ergo's Autolykos mining algorithm by making reward management more accessible.",
+      "features": [
+        "Mining Rewards",
+        "Auto-swap",
+        "Profit Management",
+        "Miner Tools"
+      ]
+    },
+    "dexygold": {
+      "name": "DexyGold",
+      "description": "Алгоритмическая устойчивость, привязанная к цене золота (XAU/USD), с использованием сейнениорации, ценовых оракулов и избыточного ERG залога.",
+      "longDescription": "DexyGold is an experimental algorithmic stablecoin designed to track the price of gold (XAU/USD) using Ergo's Oracle Pools for price data. The protocol uses seigniorage mechanisms and overcollateralization to maintain its gold peg, creating a decentralized digital representation of gold value.\n\nThe design builds on lessons from SigmaUSD and other algorithmic stablecoins, adapting the approach for commodity-pegged assets. ERG serves as collateral, with the protocol minting and burning tokens to maintain price stability. Oracle Pools provide trustless gold price feeds that the smart contracts use to adjust supply.\n\nDexyGold explores how blockchain technology can create accessible exposure to gold prices without requiring physical custody or trust in centralized issuers. The prototype demonstrates Ergo's capability for implementing sophisticated financial instruments while maintaining decentralization and transparency.",
+      "features": [
+        "Gold-pegged Stablecoin",
+        "Algorithmic Design",
+        "Oracle Integration",
+        "ERG Collateral"
+      ]
+    },
+    "sigmao": {
+      "name": "SigmaO",
+      "description": "Платформа для торговых опций (Call/Put, American/European) на токенах Ergo EIP-4 с использованием стиля книги ордеров.",
+      "longDescription": "SigmaO is a decentralized options trading platform that brings derivatives markets to the Ergo blockchain. The protocol supports both Call and Put options with American and European exercise styles, enabling sophisticated hedging and speculation strategies for Ergo-native tokens.\n\nOptions are represented as EIP-4 tokens, making them tradeable on any Ergo marketplace. The order book model allows option writers to set their own premiums and strike prices, while buyers can select contracts that match their market views. Smart contracts handle option exercise automatically at expiration or when exercised early (for American options).\n\nSigmaO demonstrates how complex financial derivatives can be implemented on the eUTXO model. Each option contract encodes its parameters (underlying asset, strike price, expiration, option type) directly in the token, creating self-describing financial instruments. This brings institutional-grade trading tools to the decentralized ecosystem.",
+      "features": [
+        "Options Trading",
+        "Call/Put Options",
+        "Order Book",
+        "EIP-4 Tokens"
+      ]
+    },
+    "blitz-tcg": {
+      "name": "Blitz TCG",
+      "description": "Коллекционируемая торговая карта игры (TCG) на блокчейне Эрго.",
+      "longDescription": "Blitz TCG is a blockchain-based trading card game that combines competitive gameplay with true digital ownership through Ergo NFTs. Each card exists as a unique token on the Ergo blockchain, enabling players to truly own, trade, and collect their cards outside of any centralized platform.\n\nThe game leverages Ergo's native token standard for card issuance, with different rarity tiers and limited editions creating collectible value. Players can trade cards peer-to-peer on Ergo marketplaces, and the provable scarcity of blockchain-based cards creates genuine digital collectibles rather than revocable licenses.\n\nBlitz TCG demonstrates how blockchain technology can enhance traditional gaming genres. The competitive trading card format benefits from verifiable ownership and scarcity, while the Ergo blockchain provides low fees and fast transactions for active trading. The project explores sustainable blockchain gaming models that respect player ownership.",
+      "features": [
+        "Trading Card Game",
+        "NFT Cards",
+        "Competitive Play",
+        "Collectibles"
+      ]
+    },
+    "sigmaverse": {
+      "name": "Sigmaverse",
+      "description": "Централизованный портал и каталог экосистемы Ergo dApp, позволяющий разработчикам перечислять приложения и пользователей для поиска сервисов.",
+      "longDescription": "Sigmaverse is the primary discovery platform for the Ergo ecosystem, serving as a curated directory of decentralized applications, tools, and services built on Ergo. The platform helps users navigate the growing ecosystem by categorizing projects and providing essential information about each application.\n\nFor newcomers to Ergo, Sigmaverse offers a starting point to explore available DeFi protocols, wallets, NFT platforms, and developer tools. Each listing includes descriptions, links, and categorization that helps users find relevant applications for their needs. The directory covers the full spectrum of Ergo projects from established protocols to emerging experiments.\n\nDevelopers benefit from Sigmaverse as a promotional channel for their projects. Submitting a project to the directory increases visibility within the community and helps attract users and contributors. The platform serves as living documentation of Ergo's ecosystem growth, tracking the evolution from early infrastructure to a diverse application landscape.",
+      "features": [
+        "dApp Directory",
+        "Project Listings",
+        "Ecosystem Portal",
+        "Discovery Platform"
+      ]
+    },
+    "ergone": {
+      "name": "ErgOne",
+      "description": "Децентрализованная, ориентированная на общины маркетинговая платформа для пропаганды Эрго и его проектов, использующих токен ERGONE и Протокол о приверженности обязательству.",
+      "longDescription": "ErgOne is a decentralized marketing platform that incentivizes community members to promote Ergo and ecosystem projects. The platform uses the ERGONE token and a novel Proof-of-Commitment Protocol to reward genuine promotional efforts while filtering out low-quality engagement.\n\nCommunity members can earn ERGONE tokens by completing marketing tasks, creating content, and spreading awareness about Ergo projects. The token-based incentive system aligns individual efforts with ecosystem growth, creating a distributed marketing force that doesn't rely on centralized marketing budgets.\n\nErgOne demonstrates how blockchain tokens can coordinate community efforts toward shared goals. By making marketing participatory and incentive-aligned, the platform harnesses the enthusiasm of the Ergo community while providing measurable contributions to ecosystem visibility and adoption.",
+      "features": [
+        "Marketing Platform",
+        "Community Driven",
+        "Token Incentives",
+        "Project Promotion"
+      ]
+    },
+    "hodlbox": {
+      "name": "Hodlbox",
+      "description": "Платформа стимулирует долгосрочное проведение ERG с сундуками с сокровищами и различными вариантами блокирования средств, вознаграждает пользователей с помощью NFT.",
+      "longDescription": "Hodlbox is a gamified savings platform that encourages long-term holding of ERG through time-locked deposits and NFT rewards. Users can lock their ERG in \"treasure chests\" for specified periods, receiving unique NFT rewards upon completion of their holding commitment.\n\nThe platform implements time-locks through ErgoScript smart contracts that prevent early withdrawal. This creates credible commitment to long-term holding, which some users find helpful for maintaining investment discipline. Different lock periods offer varying rewards, incentivizing longer commitments.\n\nHodlbox adds an entertaining layer to the serious practice of long-term investing. The treasure chest metaphor and NFT collectibles create engagement beyond pure financial mechanics. The platform demonstrates how DeFi can incorporate gamification elements while maintaining trustless execution through smart contracts.",
+      "features": [
+        "HODL Incentives",
+        "Fund Locking",
+        "NFT Rewards",
+        "Long-term Savings"
+      ]
+    },
+    "tokenjay": {
+      "name": "TokenJay",
+      "description": "Платформа для торговли токенами P2P (от одного до другого) в экосистеме Ergo.",
+      "longDescription": "TokenJay is a peer-to-peer token trading platform that enables direct trades between Ergo users without relying on automated market makers or liquidity pools. The platform facilitates trustless exchanges where users can create and accept trade offers for ERG and any native tokens on the Ergo blockchain.\n\nUnlike AMM-based DEXs where prices are determined by pool ratios, TokenJay allows traders to set their own prices and find counterparties willing to accept those terms. This order-book style trading can be more capital efficient for large trades and provides better price discovery for less liquid tokens that might suffer from high slippage on AMMs.\n\nThe platform leverages Ergo's eUTXO model to enable atomic swaps where both sides of a trade execute in a single transaction. This eliminates counterparty risk since trades either complete fully or not at all. TokenJay serves as essential infrastructure for Ergo's token economy, enabling price discovery and liquidity for the growing ecosystem of native assets.",
+      "features": [
+        "P2P Trading",
+        "Token Swaps",
+        "Decentralized Exchange",
+        "Direct Trading"
+      ]
+    },
+    "single-tx-swap": {
+      "name": "Single Tx Swap",
+      "description": "Инструмент для выполнения P2P (peer-to-peer) токена swaps в рамках одной транзакции.",
+      "longDescription": "Single Tx Swap is a utility that enables atomic token exchanges between two parties in a single Ergo transaction. This trustless mechanism ensures that either both sides of a trade execute completely or neither does, eliminating counterparty risk inherent in multi-step exchanges.\n\nThe tool leverages Ergo's eUTXO model where multiple inputs and outputs can be combined in a single transaction with complex spending conditions. Both parties' assets are consumed as inputs and redistributed as outputs according to agreed terms. The transaction only succeeds if all conditions are satisfied.\n\nSingle Tx Swap provides essential infrastructure for trustless peer-to-peer trading. Unlike escrow-based solutions that lock funds temporarily, atomic swaps complete instantly with no waiting period. This efficiency makes the tool ideal for OTC trades and direct exchanges where both parties are ready to transact.",
+      "features": [
+        "Atomic Swaps",
+        "Single Transaction",
+        "P2P Exchange",
+        "Fast Execution"
+      ]
+    },
+    "crux-finance": {
+      "name": "Crux Finance",
+      "description": "Инструмент для управления криптовалютными портфелями в экосистеме Эрго, позволяющий отслеживать P&L, инвестиции и получать налоговые отчеты.",
+      "longDescription": "Crux Finance is a portfolio management and analytics platform designed specifically for the Ergo ecosystem. The platform helps users track their holdings across wallets, calculate profit and loss, monitor investment performance, and generate reports for tax compliance.\n\nBy connecting wallet addresses, users can view aggregated portfolio values, historical performance charts, and detailed breakdowns by token. The platform tracks transactions automatically, calculating cost basis and realized gains for tax reporting purposes. This automation saves significant time compared to manual tracking, especially for active traders and DeFi participants.\n\nCrux Finance integrates with Ergo DeFi protocols to provide comprehensive views of user positions including LP tokens, staking rewards, and lending positions. The platform's understanding of Ergo-specific protocols means it can accurately value complex DeFi positions. For users who need to report cryptocurrency gains, Crux Finance provides exportable reports compatible with common tax software formats.",
+      "features": [
+        "Portfolio Tracking",
+        "P&L Analysis",
+        "Tax Reports",
+        "Investment Management"
+      ]
+    },
+    "fleet-sdk": {
+      "name": "Fleet SDK",
+      "description": "Библиотека JavaScript, предназначенная для упрощения создания и подписания транзакций на блокчейне Ergo в веб-приложениях и Node.js.",
+      "longDescription": "Fleet SDK is the premier JavaScript/TypeScript library for building Ergo applications. Designed for both browser and Node.js environments, Fleet provides developers with intuitive APIs for constructing transactions, interacting with smart contracts, and integrating Ergo functionality into web applications.\n\nThe SDK abstracts the complexity of the eUTXO model, offering high-level builders for common transaction patterns while still exposing low-level primitives for advanced use cases. Developers can create multi-asset transactions, interact with dApps, and sign transactions using various wallet integrations. TypeScript support provides excellent IDE integration and compile-time type checking.\n\nFleet powers many Ergo web applications and dApps, serving as foundational infrastructure for frontend development. The library integrates seamlessly with popular wallet connectors like Nautilus and includes utilities for address validation, token handling, and box selection. Comprehensive documentation and active maintenance make Fleet the recommended choice for JavaScript developers building on Ergo.",
+      "features": [
+        "JavaScript SDK",
+        "Transaction Building",
+        "Web Integration",
+        "Node.js Support"
+      ]
+    },
+    "appkit": {
+      "name": "AppKit",
+      "description": "Основной набор разработки ПО (SDK) для разработки приложений на Ergo с использованием языков программирования на основе JVM.",
+      "longDescription": "AppKit is Ergo's official SDK for JVM-based development, providing Scala and Java developers with comprehensive tools for building Ergo applications. As the most mature Ergo development kit, AppKit offers direct access to core protocol functionality and serves as the reference implementation for Ergo development patterns.\n\nThe SDK enables developers to construct and sign transactions, compile ErgoScript contracts, interact with the Ergo node API, and work with cryptographic primitives. AppKit's Scala-first design provides elegant functional APIs that mirror the mathematical foundations of the eUTXO model, while Java compatibility ensures broad accessibility.\n\nAppKit is particularly powerful for backend services, off-chain bots, and applications requiring deep integration with ErgoScript. The SDK includes tools for contract compilation, box selection algorithms, and transaction chaining. Many core Ergo infrastructure projects and DeFi protocols are built using AppKit, making it essential knowledge for serious Ergo developers.",
+      "features": [
+        "JVM SDK",
+        "Scala/Java Support",
+        "Smart Contract Development",
+        "Official SDK"
+      ]
+    },
+    "sigma-rust": {
+      "name": "SigmaRust",
+      "description": "Реализация устного переводчика ErgoTree в Rust, предоставляя инструменты для работы с транзакциями и привязкой к различным языкам.",
+      "longDescription": "SigmaRust is a Rust implementation of the ErgoTree interpreter and Ergo protocol primitives. This high-performance library enables Ergo development in Rust while also providing bindings to other languages including JavaScript/WASM, Python, and C, making it foundational infrastructure for the multi-language Ergo development ecosystem.\n\nThe library implements ErgoTree evaluation, transaction validation, and Sigma protocol verification in pure Rust. Its WASM compilation target powers JavaScript applications that need to verify or construct Ergo transactions in the browser. This enables fully client-side transaction signing and contract interaction without server dependencies.\n\nSigmaRust's language bindings mean developers can use familiar languages while benefiting from Rust's performance and safety guarantees. The Python bindings enable rapid prototyping and data analysis, while the C bindings allow integration with virtually any programming language. SigmaRust represents critical infrastructure that expands Ergo development beyond JVM languages to the broader developer ecosystem.",
+      "features": [
+        "Rust Implementation",
+        "ErgoTree Interpreter",
+        "Multi-language Bindings",
+        "WASM Support"
+      ]
+    },
+    "gluon": {
+      "name": "Gluon",
+      "description": "Протокол, разработанный для укрепления (твердого) существующих стабильных организмов в экосистеме Эрго, таких как SigmaUSD.",
+      "longDescription": "Gluon is a protocol designed to enhance the stability and resilience of existing stablecoins like SigmaUSD. The project explores mechanisms for \"hardening\" algorithmic stablecoins against extreme market conditions and edge cases that can threaten peg stability.\n\nThe protocol investigates additional stability mechanisms that complement the AgeUSD design, potentially including enhanced liquidation processes, additional collateral types, or integration with other DeFi primitives. By strengthening the foundation of Ergo stablecoins, Gluon aims to increase user confidence and enable broader adoption.\n\nGluon represents ongoing research into sustainable stablecoin design on eUTXO blockchains. The project contributes to the ecosystem's understanding of decentralized monetary policy and helps identify improvements that can be incorporated into future versions of stablecoin protocols.",
+      "features": [
+        "Stablecoin Enhancement",
+        "Protocol Hardening",
+        "DeFi Infrastructure",
+        "Stability Mechanism"
+      ]
+    },
+    "chaincash": {
+      "name": "ChainCash",
+      "description": "Структура для создания децентрализованных денежных систем P2P на Ergo, позволяющая пользователям выпускать свои собственные валюты с опорой на доверие или залог.",
+      "longDescription": "ChainCash is an experimental framework for creating peer-to-peer monetary systems on Ergo. The project enables users to issue their own currencies backed by either trust relationships or collateral, exploring alternative approaches to money creation and value transfer.\n\nThe framework draws inspiration from historical monetary systems and modern concepts like local exchange trading systems (LETS). Users can create currencies backed by their reputation within a community or by depositing collateral. This enables experimentation with different monetary models including mutual credit, time banking, and community currencies.\n\nDeveloped by Ergo core developer kushti, ChainCash represents cutting-edge research into programmable money. The project demonstrates how blockchain technology can support diverse monetary experiments while maintaining transparency and preventing fraud. It contributes to Ergo's broader mission of financial innovation and inclusion.",
+      "features": [
+        "P2P Money",
+        "Custom Currencies",
+        "Trust-based Backing",
+        "Monetary Framework"
+      ]
+    },
+    "sigrsv": {
+      "name": "SigRSV",
+      "description": "Запасная монета для протокола SigmaUSD Стаекоин. Пользователи за счет размещения ERG в резервы и могут извлечь выгоду из роста цен ERG.",
+      "longDescription": "SigRSV is the reserve token of the SigmaUSD stablecoin protocol, representing a leveraged long position on ERG. When users mint SigRSV, they deposit ERG into the reserve, absorbing price volatility to keep SigmaUSD stable while gaining exposure to ERG price appreciation.\n\nThe reserve coin mechanism is elegant: when ERG price rises, the reserve becomes overcollateralized and SigRSV holders can redeem more ERG than they deposited. Conversely, when ERG price falls, SigRSV absorbs losses to maintain SigmaUSD's peg. This creates a market-driven stability mechanism without requiring liquidations or complex oracle manipulation.\n\nSigRSV is attractive for users who are bullish on ERG and want leveraged exposure while contributing to ecosystem stability. The protocol enforces reserve ratio limits (400-800%) that prevent both excessive leverage and under-collateralization. Minting and redemption occur through smart contracts using Oracle Pool price feeds, making the entire process transparent and trustless.",
+      "features": [
+        "Reserve Coin",
+        "ERG Exposure",
+        "SigmaUSD Backing",
+        "Yield Potential"
+      ]
+    },
+    "exle": {
+      "name": "EXLE",
+      "description": "Протокол о кредитовании/заимствовании в рамках экосистемы Эрго, интегрированный с Crux Finance.",
+      "longDescription": "EXLE is a decentralized lending and borrowing protocol being developed for the Ergo ecosystem. The protocol aims to enable users to lend their assets to earn yield or borrow against collateral, expanding DeFi capabilities on the eUTXO model.\n\nThe project integrates with Crux Finance for portfolio tracking and analytics, allowing users to monitor their lending positions alongside other Ergo investments. This integration demonstrates the composability possible within the Ergo DeFi ecosystem, where multiple protocols can work together to provide comprehensive financial services.\n\nEXLE represents ongoing innovation in Ergo DeFi, exploring how traditional lending primitives can be adapted to the eUTXO architecture. The protocol's development contributes to Ergo's goal of providing a full suite of decentralized financial tools while maintaining the security and predictability benefits of the extended UTXO model.",
+      "features": [
+        "Lending Protocol",
+        "Borrowing",
+        "DeFi Integration",
+        "Crux Finance Integration"
+      ]
+    }
+  },
+  "ecosystemClient": {
+    "allProjects": "Все проекты",
+    "noProjectsFound": "Проектов не найдено",
+    "learnMore": "Узнать больше",
+    "visitProject": "Посетить проект",
+    "exploreMore": "Подробнее",
+    "technology": {
+      "title": "Технология",
+      "subtitle": "Изучите технологию, которая поддерживает эти проекты",
+      "description": "Глубоко погрузитесь в технологический запас Эрго и понимайте инновации, которые делают эти проекты возможными."
+    },
+    "useCases": {
+      "title": "Варианты использования",
+      "subtitle": "Посмотрите, что вы можете построить на Ergo",
+      "description": "Изучите реальные приложения и откройте для себя возможности для создания на платформе Ergo."
+    },
+    "emailCapture": {
+      "title": "Оставайтесь на связи с обновлениями Ecosystem",
+      "description": "Получать уведомления о новых dApps, обновлениях протоколов и изменениях в экосистемах"
+    }
+  },
+  "mapClient": {
+    "hero": {
+      "title": "Карта экосистем",
+      "subtitle": "Визуальная карта проектов, инструментов и команд Ergo. Исследуйте кластеры, фильтруйте по категориям и найдите то, что строится.",
+      "projects": "проекты",
+      "categories": "категории",
+      "trending": "тренд"
+    },
+    "buttons": {
+      "browseEcosystem": "Обзор экосистемы",
+      "suggestProject": "Предложить проект"
+    },
+    "controls": {
+      "searchPlaceholder": "Поиск проектов...",
+      "trendingLabel": "Популярные"
+    },
+    "navigation": {
+      "jumpTo": "Перейти к:",
+      "filterByCategory": "Фильтр по категории:",
+      "clear": "Очистить"
+    },
+    "map": {
+      "noProjectsFound": "Проектов не найдено",
+      "open": "Открыть",
+      "close": "Закрыть"
+    },
+    "legend": "Легенда:"
+  }
+}

@@ -5,15 +5,17 @@
 import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Clock, Zap, Users, Target, Lightbulb } from "lucide-react"
+import { Zap, Users, Target, Lightbulb } from "lucide-react"
 import { FadeIn } from "@/components/animations/fade-in"
 import { SectionHeading } from "@/components/section-heading"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 
 function GrantsClient() {
+  const t = useTranslations('ecosystem.grants')
   const [email, setEmail] = useState("")
   const [isSubscribed, setIsSubscribed] = useState(false)
 
@@ -25,6 +27,29 @@ function GrantsClient() {
     }
   }
 
+  const features = [
+    {
+      icon: Zap,
+      title: t('features.items.0.title'),
+      description: t('features.items.0.description'),
+    },
+    {
+      icon: Target,
+      title: t('features.items.1.title'),
+      description: t('features.items.1.description'),
+    },
+    {
+      icon: Users,
+      title: t('features.items.2.title'),
+      description: t('features.items.2.description'),
+    },
+    {
+      icon: Lightbulb,
+      title: t('features.items.3.title'),
+      description: t('features.items.3.description'),
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* subtle background grid */}
@@ -35,17 +60,11 @@ function GrantsClient() {
           <section className="pt-32 pb-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-snug pb-2">
-                Coming Soon
+                {t('hero.title')}
               </h1>
               <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto">
-                Empowering developers, researchers, and innovators to build the future of decentralized finance on Ergo
+                {t('hero.description')}
               </p>
-
-              {/* Countdown */}
-              <div className="flex justify-center items-center gap-4 mb-12">
-                <Clock className="w-6 h-6 text-orange-400" />
-                <span className="text-lg text-neutral-300">Expected Launch: Q3 2025</span>
-              </div>
 
               {/* Email Subscription */}
               <div className="max-w-md mx-auto">
@@ -53,19 +72,19 @@ function GrantsClient() {
                   <form onSubmit={handleSubscribe} className="flex gap-2">
                     <Input
                       type="email"
-                      placeholder="Enter your email for updates"
+                      placeholder={t('subscribe.placeholder')}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="bg-neutral-900/80 border-neutral-700 text-white placeholder-neutral-500"
                       required
                     />
                     <Button type="submit" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      Notify Me
+                      {t('subscribe.button')}
                     </Button>
                   </form>
                 ) : (
                   <div className="text-green-400 text-lg">
-                    ✓ Thank you! We'll notify you when the grants program launches.
+                    {t('subscribe.success')}
                   </div>
                 )}
               </div>
@@ -78,40 +97,15 @@ function GrantsClient() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <SectionHeading
-                text="What to Expect"
-                subtitle="Grants Program Features"
-                description="Supporting innovation and development in the Ergo ecosystem"
+                text={t('features.title')}
+                subtitle={t('features.subtitle')}
+                description={t('features.description')}
               />
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {[
-                  {
-                    icon: Zap,
-                    title: "Developer Support",
-                    description: "Funding for innovative dApps, tools, and infrastructure projects",
-                    color: "",
-                  },
-                  {
-                    icon: Target,
-                    title: "Research Funding",
-                    description: "Support for academic research and protocol improvements",
-                    color: "",
-                  },
-                  {
-                    icon: Users,
-                    title: "Community Projects",
-                    description: "Grants for community-driven initiatives and educational content",
-                    color: "",
-                  },
-                  {
-                    icon: Lightbulb,
-                    title: "Innovation Grants",
-                    description: "Special funding for breakthrough ideas and experimental projects",
-                    color: "",
-                  },
-                ].map((feature, index) => (
+                {features.map((feature, index) => (
                   <motion.div
-                    key={feature.title}
+                    key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 + index * 0.1 }}
@@ -139,20 +133,20 @@ function GrantsClient() {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white leading-[1.1] pb-1">
-                Ready to Build on Ergo?
+                {t('cta.title')}
               </h2>
               <p className="text-xl text-neutral-300 mb-8">
-                Start preparing your project proposal and join our community to stay updated
+                {t('cta.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                  Join Discord Community
+                  {t('cta.buttons.discord')}
                 </Button>
                 <Button
                   variant="outline"
                   className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
-                  Learn About Ergo
+                  {t('cta.buttons.learn')}
                 </Button>
               </div>
             </div>

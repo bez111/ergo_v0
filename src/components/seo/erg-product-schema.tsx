@@ -1,5 +1,5 @@
 
-/* eslint-disable react-compiler/react-compiler, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { SchemaOrg } from './schema-org'
 
 interface ERGProductData {

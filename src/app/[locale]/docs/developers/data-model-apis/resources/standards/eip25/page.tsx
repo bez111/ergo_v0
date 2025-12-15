@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Link as LinkIcon, FileText, AlertTriangle, CheckCircle, Code, DollarSign, MessageSquare } from "lucide-react";
 import { CodeBlock } from "@/components/ui";
 

@@ -29,7 +29,7 @@ export async function GET(
     // Check cache
     if (imageCache.has(cacheKey)) {
       const cachedImage = imageCache.get(cacheKey)!
-      return new NextResponse(cachedImage, {
+      return new NextResponse(new Uint8Array(cachedImage), {
         headers: {
           'Content-Type': `image/${format}`,
           'Cache-Control': 'public, max-age=31536000, immutable',
@@ -103,7 +103,7 @@ export async function GET(
     imageCache.set(cacheKey, optimizedBuffer)
     
     // Return optimized image
-    return new NextResponse(optimizedBuffer, {
+    return new NextResponse(new Uint8Array(optimizedBuffer), {
       headers: {
         'Content-Type': `image/${format}`,
         'Cache-Control': 'public, max-age=31536000, immutable',

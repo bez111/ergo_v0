@@ -1,0 +1,74 @@
+[
+  {
+    "key": "notFound.title",
+    "value": "Page Not Found",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "notFound.description",
+    "value": "The page you're looking for doesn't exist",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "notFound.backHome",
+    "value": "Back to Home",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "notFound.subtitle",
+    "value": "The page you're looking for doesn't exist",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "notFound.searchPlaceholder",
+    "value": "Search for content...",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "notFound.suggestedPages",
+    "value": "Suggested Pages",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "notFound.popularPages",
+    "value": "Popular Pages",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "notFound.getStarted",
+    "value": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "notFound.blog",
+    "value": "Blog",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "notFound.goHome",
+    "value": "Go to Homepage",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "notFound.seo.title",
+    "value": "404 - Page Not Found | Ergo Platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 54
+  },
+  {
+    "key": "notFound.seo.description",
+    "value": "The requested page could not be found.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 57
+  }
+]

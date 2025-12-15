@@ -1,0 +1,458 @@
+[
+  {
+    "key": "introductionClient.hero.title",
+    "value": "Ergo Blockchain - PoW eUTXO Smart Contracts & Sigma Protocols",
+    "context": "Title",
+    "maxLength": 91.5
+  },
+  {
+    "key": "introductionClient.hero.subtitle",
+    "value": "ASIC-resistant Layer-1 PoW with eUTXO, auditable smart contracts, and Sigma-based privacy. Built for open, verifiable money.",
+    "context": "General content",
+    "maxLength": 186
+  },
+  {
+    "key": "introductionClient.whatIsErgo.title",
+    "value": "What is",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "introductionClient.whatIsErgo.titleHighlight",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "introductionClient.whatIsErgo.description1",
+    "value": "Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.",
+    "context": "Description",
+    "maxLength": 334.5
+  },
+  {
+    "key": "introductionClient.whatIsErgo.description2",
+    "value": "Its mission is to provide tools for decentralized and accessible financial systems - empowering people with economic freedom without intermediaries. Learn about the",
+    "context": "Description",
+    "maxLength": 246
+  },
+  {
+    "key": "introductionClient.whatIsErgo.eutxoLink",
+    "value": "eUTXO model",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introductionClient.whatIsErgo.powLink",
+    "value": "Proof of Work",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introductionClient.whatIsErgo.storageRentLink",
+    "value": "storage rent",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "introductionClient.whatIsErgo.privacyLink",
+    "value": "privacy features",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "introductionClient.whyErgo.title",
+    "value": "Why Ergo?",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "introductionClient.whyErgo.eutxo",
+    "value": "Extended UTXO (eUTXO) for predictable, auditable contracts",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "introductionClient.whyErgo.sigma",
+    "value": "Sigma Protocols for composable privacy",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "introductionClient.whyErgo.pow",
+    "value": "ASIC-resistant Proof of Work (Autolykos v2)",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "introductionClient.whyErgo.storageRent",
+    "value": "Storage Rent for blockchain sustainability",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "introductionClient.keyInnovation.title",
+    "value": "Key Innovation",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "introductionClient.keyInnovation.description",
+    "value": "Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, creating a unique platform for complex financial applications.",
+    "context": "Description",
+    "maxLength": 252
+  },
+  {
+    "key": "introductionClient.references.autolykos",
+    "value": "Autolykos v2",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "introductionClient.references.ergoGithub",
+    "value": "ergo (GitHub)",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introductionClient.featureHighlights.privacyFirst.title",
+    "value": "Privacy-First",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introductionClient.featureHighlights.privacyFirst.description",
+    "value": "Sigma Protocols for optional privacy",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "introductionClient.featureHighlights.storageRent.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "introductionClient.featureHighlights.storageRent.description",
+    "value": "Sustainable blockchain economics",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "introductionClient.featureHighlights.lightClients.title",
+    "value": "Light Clients",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introductionClient.featureHighlights.lightClients.description",
+    "value": "NIPoPoWs for mobile verification",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "introductionClient.featureHighlights.fairLaunch.title",
+    "value": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introductionClient.featureHighlights.fairLaunch.description",
+    "value": "No pre-mine, no ICO, no VC",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "introductionClient.corePrinciples.title",
+    "value": "Principles",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "introductionClient.corePrinciples.subtitle",
+    "value": "Built on fundamental values that ensure long-term sustainability and real-world utility",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "introductionClient.corePrinciples.soundMoney",
+    "value": "Sound Money",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introductionClient.corePrinciples.openMoney",
+    "value": "Open Money",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "introductionClient.corePrinciples.description",
+    "value": "Ergo combines {soundMoney} (hard, predictable supply) with {openMoney} (permissionless, verifiable access) - creating the foundation for truly free finance.",
+    "context": "Description",
+    "maxLength": 234
+  },
+  {
+    "key": "introductionClient.keyTechnologies.title",
+    "value": "Technologies",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "introductionClient.keyTechnologies.subtitle",
+    "value": "Advanced cryptography and innovative consensus mechanisms power the Ergo platform",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "introductionClient.ergoScriptExample.title",
+    "value": "ErgoScript Time-Lock Contract Example",
+    "context": "Title",
+    "maxLength": 55.5
+  },
+  {
+    "key": "introductionClient.ergoScriptExample.filename",
+    "value": "time-lock.ergo",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.title",
+    "value": "WHAT MAKES",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.subtitle",
+    "value": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable",
+    "context": "General content",
+    "maxLength": 211.5
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.fairLaunch.title",
+    "value": "Fair Launch",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.fairLaunch.description",
+    "value": "No pre-mine, no ICO, no VCs. Community-owned from day one with transparent distribution.",
+    "context": "Description",
+    "maxLength": 132
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.eutxoErgoScript.title",
+    "value": "eUTXO + ErgoScript",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.eutxoErgoScript.description",
+    "value": "Predictable execution, no reentrancy, and powerful cryptographic primitives built-in.",
+    "context": "Description",
+    "maxLength": 127.5
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.storageRent.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.storageRent.description",
+    "value": "Sustainable blockchain economics ensuring long-term viability and preventing state bloat.",
+    "context": "Description",
+    "maxLength": 133.5
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.researchDriven.title",
+    "value": "Research-Driven",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.researchDriven.description",
+    "value": "Built by experienced cryptographers with peer-reviewed academic foundations.",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.robustPrivacy.title",
+    "value": "Robust Privacy",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.robustPrivacy.description",
+    "value": "Sigma Protocols enable optional privacy at the protocol level, not as an afterthought.",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.communityLed.title",
+    "value": "Community-Led",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "introductionClient.whatMakesErgoDifferent.communityLed.description",
+    "value": "Decentralized governance with no single point of control or failure.",
+    "context": "Description",
+    "maxLength": 102
+  },
+  {
+    "key": "introductionClient.chooseYourPath.title",
+    "value": "Choose Your",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introductionClient.chooseYourPath.titleHighlight",
+    "value": "Path",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "introductionClient.chooseYourPath.subtitle",
+    "value": "Tailored guides for different types of Ergo users",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "introductionClient.chooseYourPath.miners.title",
+    "value": "For Miners",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "introductionClient.chooseYourPath.miners.subtitle",
+    "value": "GPU-friendly PoW",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "introductionClient.chooseYourPath.miners.description",
+    "value": "ASIC-resistant Autolykos algorithm, fair mining rewards, and accessible hardware requirements",
+    "context": "Description",
+    "maxLength": 139.5
+  },
+  {
+    "key": "introductionClient.chooseYourPath.holders.title",
+    "value": "For Holders",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "introductionClient.chooseYourPath.holders.subtitle",
+    "value": "Long-term value",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "introductionClient.chooseYourPath.holders.description",
+    "value": "Sound tokenomics, DeFi opportunities, and a sustainable ecosystem built for the future",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "introductionClient.chooseYourPath.builders.title",
+    "value": "For Builders",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "introductionClient.chooseYourPath.builders.subtitle",
+    "value": "Powerful smart contracts",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "introductionClient.chooseYourPath.builders.description",
+    "value": "ErgoScript, eUTXO model, SDKs, and developer grants to build the next generation of dApps",
+    "context": "Description",
+    "maxLength": 133.5
+  },
+  {
+    "key": "introductionClient.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "introductionClient.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "introductionClient.whatsNext.subtitle",
+    "value": "Start exploring the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "introductionClient.whatsNext.wallet.title",
+    "value": "Get Ergo Wallet",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "introductionClient.whatsNext.wallet.subtitle",
+    "value": "Start Securely",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "introductionClient.whatsNext.wallet.description",
+    "value": "Download a secure wallet to store ERG and interact with dApps",
+    "context": "Description",
+    "maxLength": 91.5
+  },
+  {
+    "key": "introductionClient.whatsNext.ecosystem.title",
+    "value": "Explore Ecosystem",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "introductionClient.whatsNext.ecosystem.subtitle",
+    "value": "Discover Applications",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "introductionClient.whatsNext.ecosystem.description",
+    "value": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo",
+    "context": "Description",
+    "maxLength": 111
+  },
+  {
+    "key": "introductionClient.whatsNext.compare.title",
+    "value": "Compare Blockchains",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "introductionClient.whatsNext.compare.subtitle",
+    "value": "Why Ergo vs others",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "introductionClient.whatsNext.compare.description",
+    "value": "See how Ergo's PoW, eUTXO, privacy, and sustainability stack up against Bitcoin, Ethereum, Cardano, and others",
+    "context": "Description",
+    "maxLength": 165
+  },
+  {
+    "key": "introductionClient.emailCapture.title",
+    "value": "Start Your Ergo Journey",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "introductionClient.emailCapture.description",
+    "value": "Get beginner-friendly guides, tutorials, and updates delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 115.5
+  }
+]

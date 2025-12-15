@@ -1,0 +1,80 @@
+[
+  {
+    "key": "playbooksHub.hero.title",
+    "value": "Ergo Playbooks",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "playbooksHub.hero.subtitle",
+    "value": "Curated guides for every use case. Each playbook combines infographics, articles, and actionable steps.",
+    "context": "General content",
+    "maxLength": 154.5
+  },
+  {
+    "key": "playbooksHub.hero.description",
+    "value": "Start from your first Ergo transaction and move step-by-step towards mining, DeFi, and building your own applications.",
+    "context": "Description",
+    "maxLength": 177
+  },
+  {
+    "key": "playbooksHub.hero.startButton",
+    "value": "Start with first transaction",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "playbooksHub.hero.browseQA",
+    "value": "Browse Q&A",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "playbooksHub.featured.title",
+    "value": "Featured playbooks",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "playbooksHub.filters.all",
+    "value": "All",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "playbooksHub.card.steps",
+    "value": "steps",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playbooksHub.noResults",
+    "value": "No playbooks in this category yet.",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "playbooksHub.cta.title",
+    "value": "Can't find what you're looking for?",
+    "context": "Title",
+    "maxLength": 52.5
+  },
+  {
+    "key": "playbooksHub.cta.description",
+    "value": "Explore our documentation, join the community, or suggest a new playbook.",
+    "context": "Description",
+    "maxLength": 109.5
+  },
+  {
+    "key": "playbooksHub.cta.browseDocs",
+    "value": "Browse Docs",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "playbooksHub.cta.joinCommunity",
+    "value": "Join Community",
+    "context": "General content",
+    "maxLength": 21
+  }
+]

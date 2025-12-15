@@ -1,0 +1,50 @@
+[
+  {
+    "key": "success.newsletter.subscribed",
+    "value": "Successfully subscribed! Check your email for confirmation.",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "success.newsletter.alreadySubscribed",
+    "value": "You are already subscribed to our newsletter.",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "success.newsletter.confirmationSent",
+    "value": "Confirmation email sent to {email}",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "success.contact.sent",
+    "value": "Message sent successfully!",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "success.contact.received",
+    "value": "We received your message and will respond soon.",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "success.general.saved",
+    "value": "Changes saved successfully",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "success.general.updated",
+    "value": "Successfully updated",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "success.general.deleted",
+    "value": "Successfully deleted",
+    "context": "General content",
+    "maxLength": 30
+  }
+]

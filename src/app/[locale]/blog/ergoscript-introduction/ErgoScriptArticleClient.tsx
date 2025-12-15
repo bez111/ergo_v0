@@ -4,7 +4,6 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -24,10 +23,9 @@ import {
   ChevronDown,
   Lock,
   Layers,
-  Network,
-  BookOpen,
+  Network
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export default function ErgoScriptArticleClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)

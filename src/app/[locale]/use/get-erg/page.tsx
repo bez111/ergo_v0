@@ -6,6 +6,8 @@ import {
   createItemListSchema,
   createFAQSchema,
   createHowToSchema,
+  getAlternates,
+  getCanonicalUrl,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
@@ -17,13 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
-    alternates: {
-      canonical: "https://ergoblockchain.org/use/get-erg"
-    },
+    alternates: getAlternates('/use/get-erg', locale),
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: "https://ergoblockchain.org/use/get-erg",
+      url: getCanonicalUrl('/use/get-erg', locale),
       siteName: "Ergo Platform",
       images: [{
         url: "https://ergoblockchain.org/og/get-erg.png",

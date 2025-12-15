@@ -310,7 +310,7 @@ export function buildDocsSearchIndex(): DocsSearchIndexItem[] {
       parents: ["Learn", "Infographics"],
       type: "infographic",
       tags,
-      excerpt: infographic.description,
+      excerpt: infographic.seoDescription,
       language: 'en',
       occurrences: [],
       totalOccurrences: 0

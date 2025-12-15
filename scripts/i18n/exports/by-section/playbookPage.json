@@ -1,0 +1,236 @@
+[
+  {
+    "key": "playbookPage.breadcrumbs.playbooks",
+    "value": "Playbooks",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.allPlaybooks",
+    "value": "All Playbooks",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "playbookPage.browseAllPlaybooks",
+    "value": "Browse All Playbooks",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "playbookPage.overview",
+    "value": "Overview",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "playbookPage.steps",
+    "value": "Steps",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "playbookPage.relatedResources",
+    "value": "Related Resources",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "playbookPage.relatedPlaybooks",
+    "value": "Related Playbooks",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "playbookPage.relatedInfographics",
+    "value": "Related Infographics",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "playbookPage.relatedArticles",
+    "value": "Related Articles",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "playbookPage.stepOf",
+    "value": "Step {current} of {total}",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "playbookPage.markComplete",
+    "value": "Mark as Complete",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "playbookPage.completed",
+    "value": "Completed",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.nextStep",
+    "value": "Next Step",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.previousStep",
+    "value": "Previous Step",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "playbookPage.problem",
+    "value": "Problem",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "playbookPage.solution",
+    "value": "Solution",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "playbookPage.stepsTitle",
+    "value": "Steps to Complete",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "playbookPage.stepByStepGuide",
+    "value": "Step-by-Step Guide",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "playbookPage.viewStep",
+    "value": "View step",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.hideStep",
+    "value": "Hide step",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.resources",
+    "value": "Resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.keyTerms",
+    "value": "Key Terms",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "playbookPage.difficulty.beginner",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "playbookPage.difficulty.intermediate",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "playbookPage.difficulty.advanced",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "playbookPage.progress.title",
+    "value": "Your Progress",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "playbookPage.progress.stepsCompleted",
+    "value": "of",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "playbookPage.progress.stepsWord",
+    "value": "steps completed",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "playbookPage.progress.allComplete",
+    "value": "All steps completed!",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "playbookPage.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "playbookPage.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "playbookPage.whatsNext.morePlaybooks.title",
+    "value": "More Playbooks",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "playbookPage.whatsNext.morePlaybooks.subtitle",
+    "value": "Continue learning",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "playbookPage.whatsNext.devPatterns.title",
+    "value": "Dev Patterns",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "playbookPage.whatsNext.devPatterns.subtitle",
+    "value": "Code examples",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "playbookPage.whatsNext.buildOnErgo.title",
+    "value": "Build on Ergo",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "playbookPage.whatsNext.buildOnErgo.subtitle",
+    "value": "Developer hub",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "playbookPage.emailCapture.title",
+    "value": "Complete Your Learning",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "playbookPage.emailCapture.description",
+    "value": "Get playbook updates, new guides, and step-by-step tutorials delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 127.5
+  }
+]

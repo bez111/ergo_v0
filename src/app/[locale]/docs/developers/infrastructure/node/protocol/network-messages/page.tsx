@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ChevronLeft, MessageSquare, Code, Database, FileText, Github } from "lucide-react";
 
 export default function NetworkMessagesPage() {

@@ -3,7 +3,8 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 
 import { useEffect, useState, useDeferredValue } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useSearchParams } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { Search, Filter, X } from "lucide-react"
 
 interface BlogToolbarProps {

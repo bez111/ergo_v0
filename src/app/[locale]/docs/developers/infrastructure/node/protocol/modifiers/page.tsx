@@ -4,7 +4,7 @@
 
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { 
   ChevronLeft, Layers, FileText, Cpu, Shield, RefreshCw, ArrowRight, Package, Download, CheckCircle 
 } from "lucide-react";

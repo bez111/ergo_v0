@@ -1,0 +1,668 @@
+[
+  {
+    "key": "getErg.title",
+    "value": "Get ERG - Buy Ergo Cryptocurrency",
+    "context": "Title",
+    "maxLength": 49.5
+  },
+  {
+    "key": "getErg.description",
+    "value": "Find where to buy ERG tokens on exchanges, DEXs, and P2P platforms",
+    "context": "Description",
+    "maxLength": 99
+  },
+  {
+    "key": "getErg.seo.title",
+    "value": "Get ERG - How to Buy Ergo Cryptocurrency | Exchange Guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 85.5
+  },
+  {
+    "key": "getErg.seo.description",
+    "value": "Complete guide on where and how to buy ERG tokens. Find the best exchanges, DEXs, and platforms to purchase Ergo cryptocurrency.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 192
+  },
+  {
+    "key": "getErg.seo.keywords",
+    "value": "buy ERG, Ergo exchanges, get ERG tokens, ERG trading, cryptocurrency exchange, DEX Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 130.5
+  },
+  {
+    "key": "getErg.hero.title",
+    "value": "Get ERG",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "getErg.hero.subtitle",
+    "value": "Your Gateway to the Ergo Ecosystem",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "getErg.hero.description",
+    "value": "Discover where to buy, trade, and store ERG tokens",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "getErg.hero.cta.exploreExchanges",
+    "value": "Explore Exchanges",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "getErg.hero.cta.viewGuide",
+    "value": "View Guide",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "getErg.exchanges.title",
+    "value": "Exchanges",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "getErg.exchanges.centralized",
+    "value": "Centralized Exchanges",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "getErg.exchanges.decentralized",
+    "value": "Decentralized Exchanges",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "getErg.exchanges.p2p",
+    "value": "P2P Platforms",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.heroDescription",
+    "value": "Choose from centralized exchanges, decentralized platforms, or peer-to-peer trading to acquire ERG tokens",
+    "context": "General content",
+    "maxLength": 157.5
+  },
+  {
+    "key": "getErg.subDescription",
+    "value": "Start your Ergo journey by acquiring ERG tokens through trusted exchanges and platforms",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "getErg.sections.exchanges.title",
+    "value": "Centralized Exchanges",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "getErg.sections.exchanges.description",
+    "value": "Trade ERG on established cryptocurrency exchanges with high liquidity",
+    "context": "Description",
+    "maxLength": 103.5
+  },
+  {
+    "key": "getErg.sections.exchanges.viewAll",
+    "value": "View All Exchanges",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "getErg.sections.exchanges.goToExchange",
+    "value": "Go to Exchange",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.sections.dex.title",
+    "value": "Decentralized Exchanges",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "getErg.sections.dex.description",
+    "value": "Trade directly from your wallet without KYC",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "getErg.sections.dex.viewAll",
+    "value": "View All DEXs",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.sections.dex.goToSwap",
+    "value": "Go to Swap",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "getErg.sections.dex.features.noKYC",
+    "value": "No KYC Required",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "getErg.sections.dex.features.selfCustody",
+    "value": "Self Custody",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "getErg.sections.dex.features.privateTrading",
+    "value": "Private Trading",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "getErg.sections.dex.features.directSwap",
+    "value": "Direct Swap",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "getErg.sections.p2p.title",
+    "value": "P2P Platforms",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.sections.p2p.description",
+    "value": "Trade directly with other users",
+    "context": "Description",
+    "maxLength": 46.5
+  },
+  {
+    "key": "getErg.sections.p2p.viewAll",
+    "value": "View All P2P",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "getErg.sections.p2p.goToPlatform",
+    "value": "Go to Platform",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.sections.p2p.explorePlatform",
+    "value": "Explore Platform",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "getErg.sections.p2p.features.directTrade",
+    "value": "Direct Trade",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "getErg.sections.p2p.features.multiplePayments",
+    "value": "Multiple Payment Methods",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "getErg.sections.p2p.features.escrowProtection",
+    "value": "Escrow Protection",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "getErg.sections.p2p.features.localCurrency",
+    "value": "Local Currency Support",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "getErg.sections.security.title",
+    "value": "Security First",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.sections.security.description",
+    "value": "Always store your ERG in a secure wallet after purchase",
+    "context": "Description",
+    "maxLength": 82.5
+  },
+  {
+    "key": "getErg.sections.security.findWallet",
+    "value": "Find a Wallet",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.sections.centralized.title",
+    "value": "Centralized Exchanges",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "getErg.sections.centralized.description",
+    "value": "Traditional exchanges with fiat on-ramps and high liquidity",
+    "context": "Description",
+    "maxLength": 88.5
+  },
+  {
+    "key": "getErg.sections.centralized.viewExchange",
+    "value": "View Exchange",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.sections.centralized.features.fiatSupport",
+    "value": "Fiat Support",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "getErg.sections.centralized.features.highLiquidity",
+    "value": "High Liquidity",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.sections.centralized.features.userFriendly",
+    "value": "User Friendly",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.sections.centralized.features.mobileApp",
+    "value": "Mobile App",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "getErg.services.cex.kucoin.name",
+    "value": "KuCoin",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "getErg.services.cex.kucoin.description",
+    "value": "Global exchange with ERG/USDT and ERG/BTC pairs",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "getErg.services.cex.gateio.name",
+    "value": "Gate.io",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "getErg.services.cex.gateio.description",
+    "value": "Major exchange supporting ERG trading",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "getErg.services.cex.coinex.name",
+    "value": "CoinEx",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "getErg.services.cex.coinex.description",
+    "value": "User-friendly exchange with ERG pairs",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "getErg.services.cex.huobi.name",
+    "value": "Huobi",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "getErg.services.cex.huobi.description",
+    "value": "Established exchange with deep ERG liquidity",
+    "context": "Description",
+    "maxLength": 66
+  },
+  {
+    "key": "getErg.services.cex.mexc.name",
+    "value": "MEXC",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "getErg.services.cex.mexc.description",
+    "value": "Fast-growing exchange with ERG perpetuals",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "getErg.services.cex.bitmart.name",
+    "value": "BitMart",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "getErg.services.cex.bitmart.description",
+    "value": "Popular exchange with ERG trading",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "getErg.services.cex.tradeogre.name",
+    "value": "TradeOgre",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "getErg.services.cex.tradeogre.description",
+    "value": "Simple exchange for ERG/BTC trading",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "getErg.services.cex.probit.name",
+    "value": "ProBit",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "getErg.services.cex.probit.description",
+    "value": "Korean exchange with ERG support",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "getErg.services.dex.spectrum.name",
+    "value": "Spectrum Finance",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "getErg.services.dex.spectrum.description",
+    "value": "Native Ergo DEX with deep liquidity",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "getErg.services.dex.uniswap.name",
+    "value": "Uniswap",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "getErg.services.dex.uniswap.description",
+    "value": "Trade wrapped ERG on Ethereum",
+    "context": "Description",
+    "maxLength": 43.5
+  },
+  {
+    "key": "getErg.services.dex.splash.name",
+    "value": "SplashPool",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "getErg.services.dex.splash.description",
+    "value": "Cross-chain DEX supporting ERG",
+    "context": "Description",
+    "maxLength": 45
+  },
+  {
+    "key": "getErg.services.p2p.localcryptos.name",
+    "value": "LocalCryptos",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "getErg.services.p2p.localcryptos.description",
+    "value": "P2P platform with escrow service",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "getErg.services.p2p.bisq.name",
+    "value": "Bisq",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "getErg.services.p2p.bisq.description",
+    "value": "Decentralized P2P trading network",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "getErg.features.liquidity.title",
+    "value": "High Liquidity",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.features.liquidity.description",
+    "value": "Access deep order books and competitive prices",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "getErg.features.security.title",
+    "value": "Secure Trading",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.features.security.description",
+    "value": "Trade on reputable platforms with proven security",
+    "context": "Description",
+    "maxLength": 73.5
+  },
+  {
+    "key": "getErg.features.variety.title",
+    "value": "Multiple Options",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "getErg.features.variety.description",
+    "value": "Choose from CEX, DEX, or P2P based on your needs",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "getErg.features.global.title",
+    "value": "Global Access",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.features.global.description",
+    "value": "Available worldwide with various fiat gateways",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "getErg.steps.title",
+    "value": "How to Buy ERG",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.steps.step1.title",
+    "value": "Choose Platform",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "getErg.steps.step1.description",
+    "value": "Select exchange based on your needs",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "getErg.steps.step2.title",
+    "value": "Create Account",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "getErg.steps.step2.description",
+    "value": "Sign up and verify if required",
+    "context": "Description",
+    "maxLength": 45
+  },
+  {
+    "key": "getErg.steps.step3.title",
+    "value": "Deposit Funds",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "getErg.steps.step3.description",
+    "value": "Add fiat or crypto to your account",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "getErg.steps.step4.title",
+    "value": "Buy ERG",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "getErg.steps.step4.description",
+    "value": "Place order and complete purchase",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "getErg.steps.step5.title",
+    "value": "Withdraw",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "getErg.steps.step5.description",
+    "value": "Transfer ERG to your wallet",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "getErg.faq.title",
+    "value": "Frequently Asked Questions",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "getErg.faq.whereToBy.question",
+    "value": "Where can I buy ERG?",
+    "context": "FAQ content",
+    "maxLength": 30
+  },
+  {
+    "key": "getErg.faq.whereToBy.answer",
+    "value": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, decentralized exchanges like Spectrum Finance, or P2P platforms.",
+    "context": "FAQ content",
+    "maxLength": 195
+  },
+  {
+    "key": "getErg.faq.minAmount.question",
+    "value": "What's the minimum amount to buy?",
+    "context": "FAQ content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "getErg.faq.minAmount.answer",
+    "value": "Minimum amounts vary by platform. Most exchanges allow purchases starting from $10-20 worth of ERG.",
+    "context": "FAQ content",
+    "maxLength": 148.5
+  },
+  {
+    "key": "getErg.faq.fees.question",
+    "value": "What are typical fees?",
+    "context": "FAQ content",
+    "maxLength": 33
+  },
+  {
+    "key": "getErg.faq.fees.answer",
+    "value": "Exchange fees range from 0.1% to 0.5% per trade.",
+    "context": "FAQ content",
+    "maxLength": 72
+  },
+  {
+    "key": "getErg.faq.storage.question",
+    "value": "How do I store ERG safely?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "getErg.faq.storage.answer",
+    "value": "Use official Ergo wallets like Ergo Wallet, Nautilus, or hardware wallets for maximum security.",
+    "context": "FAQ content",
+    "maxLength": 142.5
+  },
+  {
+    "key": "getErg.faq.whereStore.question",
+    "value": "Where should I store my ERG?",
+    "context": "FAQ content",
+    "maxLength": 42
+  },
+  {
+    "key": "getErg.faq.whereStore.answer",
+    "value": "Use official Ergo wallets like Nautilus, SAFEW, or Ergo Mobile for secure storage.",
+    "context": "FAQ content",
+    "maxLength": 123
+  },
+  {
+    "key": "getErg.faq.minPurchase.question",
+    "value": "What's the minimum ERG purchase?",
+    "context": "FAQ content",
+    "maxLength": 48
+  },
+  {
+    "key": "getErg.faq.minPurchase.answer",
+    "value": "Minimum varies by exchange, typically 1-10 ERG.",
+    "context": "FAQ content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "getErg.faq.time.question",
+    "value": "How long does it take?",
+    "context": "FAQ content",
+    "maxLength": 33
+  },
+  {
+    "key": "getErg.faq.time.answer",
+    "value": "CEX purchases are instant, DEX swaps take 2-5 minutes.",
+    "context": "FAQ content",
+    "maxLength": 81
+  },
+  {
+    "key": "getErg.cta.title",
+    "value": "Ready to Get Started?",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "getErg.cta.description",
+    "value": "Choose your preferred method to acquire ERG and join the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 106.5
+  },
+  {
+    "key": "getErg.cta.exploreExchanges",
+    "value": "Explore Exchanges",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "getErg.cta.learnMore",
+    "value": "Learn More About Ergo",
+    "context": "General content",
+    "maxLength": 31.5
+  }
+]

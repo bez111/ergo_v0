@@ -1,0 +1,98 @@
+[
+  {
+    "key": "mapClient.hero.title",
+    "value": "Ecosystem Map",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "mapClient.hero.subtitle",
+    "value": "Visual map of Ergo projects, tools and teams. Explore clusters, filter by category, and discover what's being built.",
+    "context": "General content",
+    "maxLength": 174
+  },
+  {
+    "key": "mapClient.hero.projects",
+    "value": "projects",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mapClient.hero.categories",
+    "value": "categories",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "mapClient.hero.trending",
+    "value": "trending",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mapClient.buttons.browseEcosystem",
+    "value": "Browse Ecosystem",
+    "context": "Button label - keep short",
+    "maxLength": 24
+  },
+  {
+    "key": "mapClient.buttons.suggestProject",
+    "value": "Suggest a Project",
+    "context": "Button label - keep short",
+    "maxLength": 25.5
+  },
+  {
+    "key": "mapClient.controls.searchPlaceholder",
+    "value": "Search projects...",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "mapClient.controls.trendingLabel",
+    "value": "Trending",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mapClient.navigation.jumpTo",
+    "value": "Jump to:",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mapClient.navigation.filterByCategory",
+    "value": "Filter by category:",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "mapClient.navigation.clear",
+    "value": "Clear",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "mapClient.map.noProjectsFound",
+    "value": "No projects found",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "mapClient.map.open",
+    "value": "Open",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "mapClient.map.close",
+    "value": "Close",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "mapClient.legend",
+    "value": "Legend:",
+    "context": "General content",
+    "maxLength": 10.5
+  }
+]

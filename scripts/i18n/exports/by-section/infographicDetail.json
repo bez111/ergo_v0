@@ -1,0 +1,44 @@
+[
+  {
+    "key": "infographicDetail.backToInfographics",
+    "value": "Back to Infographics",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "infographicDetail.published",
+    "value": "Published",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "infographicDetail.minRead",
+    "value": "min read",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "infographicDetail.tags",
+    "value": "Tags",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "infographicDetail.exploreMore.title",
+    "value": "Explore More Ergo Infographics",
+    "context": "Title",
+    "maxLength": 45
+  },
+  {
+    "key": "infographicDetail.exploreMore.description",
+    "value": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
+    "context": "Description",
+    "maxLength": 138
+  },
+  {
+    "key": "infographicDetail.exploreMore.button",
+    "value": "Browse All Infographics",
+    "context": "Button label",
+    "maxLength": 34.5
+  }
+]

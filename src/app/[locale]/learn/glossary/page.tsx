@@ -1,42 +1,37 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/config/site-config"
 import { glossaryTerms } from "@/data/glossary"
 import { GlossaryHubClient } from "./GlossaryHubClient"
-import { createBreadcrumbSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-const glossaryUrl = `${siteConfig.siteUrl}/learn/glossary`
-
-// SEO Configuration
-const SEO = {
-  title: "Ergo Glossary — 250+ Blockchain Terms Explained | Ergo",
-  description: "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols — your complete Ergo & crypto glossary. Search, filter, learn.",
-  keywords: [
-    "Ergo glossary", "blockchain terminology", "eUTXO explained",
-    "NiPoPoWs meaning", "Sigma Protocols definition", "ErgoScript tutorial",
-    "storage rent explained", "cryptocurrency terms", "blockchain definitions"
-  ],
+interface Props {
+  params: Promise<{ locale: string }>
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'glossary.seo' })
+  
   return {
-    title: SEO.title,
-    description: SEO.description,
-    keywords: SEO.keywords,
-    alternates: { canonical: glossaryUrl },
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    alternates: getAlternates('/learn/glossary', locale),
     openGraph: {
       type: "website",
-      url: glossaryUrl,
+      url: getCanonicalUrl('/learn/glossary', locale),
       siteName: "Ergo Platform",
-      title: SEO.title,
-      description: SEO.description,
+      title: t('title'),
+      description: t('description'),
       images: [{ url: `${siteConfig.siteUrl}/og/glossary.png`, width: 1200, height: 630, alt: "Ergo Blockchain Glossary" }],
-      locale: "en_US",
+      locale: locale === 'ru' ? 'ru_RU' : 'en_US',
     },
     twitter: {
       card: "summary_large_image",
-      title: SEO.title,
-      description: SEO.description,
+      title: t('title'),
+      description: t('description'),
       images: [`${siteConfig.siteUrl}/og/glossary.png`],
       site: siteConfig.twitterHandle,
       creator: siteConfig.twitterHandle,
@@ -45,8 +40,10 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function GlossaryPage() {
+export default async function GlossaryPage({ params }: Props) {
+  const { locale } = await params
   const origin = siteConfig.siteUrl
+  const glossaryUrl = `${origin}/learn/glossary`
 
   // DefinedTermSet Schema (complex, kept structured)
   const glossarySchema = {
@@ -92,7 +89,7 @@ export default function GlossaryPage() {
   return (
     <>
       {renderSchemaScripts(schemas)}
-      <GlossaryHubClient />
+      <GlossaryHubClient locale={locale} />
     </>
   )
 }

@@ -1,0 +1,212 @@
+[
+  {
+    "key": "communityClient.hero.title",
+    "value": "ERGO",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "communityClient.hero.titleHighlight",
+    "value": "COMMUNITY",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "communityClient.hero.subtitle",
+    "value": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution.",
+    "context": "General content",
+    "maxLength": 237
+  },
+  {
+    "key": "communityClient.platforms.sectionTitle",
+    "value": "COMMUNICATION HUBS",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "communityClient.platforms.followers",
+    "value": "Followers",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "communityClient.platforms.updates",
+    "value": "Updates",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "communityClient.platformGroups.0.title",
+    "value": "Real-time & Operations",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "communityClient.platformGroups.0.subtitle",
+    "value": "Live support, quick updates, breaking news",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "communityClient.platformGroups.1.title",
+    "value": "Deep Content & Research",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "communityClient.platformGroups.1.subtitle",
+    "value": "Tutorials, essays, EIPs, governance",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "communityClient.platformGroups.2.title",
+    "value": "Community & Discovery",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "communityClient.platformGroups.2.subtitle",
+    "value": "Discussions, visual content, discovery",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "communityClient.contributions.sectionTitle",
+    "value": "CONTRIBUTION MATRIX",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "communityClient.contributions.subtitle",
+    "value": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "communityClient.contributions.clickForGuide",
+    "value": "Click for detailed guide",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "communityClient.guidelines.sectionTitle",
+    "value": "COMMUNITY PROTOCOL",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "communityClient.guidelines.positive.title",
+    "value": "Encouraged Behavior",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "communityClient.guidelines.positive.items.0",
+    "value": "Respectful and constructive discussions",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "communityClient.guidelines.positive.items.1",
+    "value": "Helping newcomers and sharing knowledge",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "communityClient.guidelines.positive.items.2",
+    "value": "Contributing to projects and documentation",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "communityClient.guidelines.positive.items.3",
+    "value": "Providing constructive feedback",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "communityClient.guidelines.positive.items.4",
+    "value": "Following community guidelines",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "communityClient.guidelines.negative.title",
+    "value": "Discouraged Behavior",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "communityClient.guidelines.negative.items.0",
+    "value": "Spam, flooding, or off-topic content",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "communityClient.guidelines.negative.items.1",
+    "value": "Spreading misinformation or FUD",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "communityClient.guidelines.negative.items.2",
+    "value": "Personal attacks or harassment",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "communityClient.guidelines.negative.items.3",
+    "value": "Excessive self-promotion",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "communityClient.guidelines.negative.items.4",
+    "value": "Violating platform-specific rules",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "communityClient.cta.title",
+    "value": "Stay",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "communityClient.cta.titleHighlight",
+    "value": "Connected",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "communityClient.cta.subtitle",
+    "value": "Get the latest updates, announcements, and community highlights delivered to your inbox",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "communityClient.cta.emailPlaceholder",
+    "value": "Enter your email address",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "communityClient.cta.subscribe",
+    "value": "Subscribe",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "communityClient.cta.thankYou",
+    "value": "Thank you for subscribing!",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "communityClient.cta.confirmationMessage",
+    "value": "You'll receive updates about the Ergo community.",
+    "context": "General content",
+    "maxLength": 72
+  }
+]

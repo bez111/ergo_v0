@@ -1,7 +1,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 

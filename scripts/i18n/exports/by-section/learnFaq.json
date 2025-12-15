@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnFaq.title",
+    "value": "Learn FAQ",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "learnFaq.description",
+    "value": "Frequently asked questions about learning Ergo",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "learnFaq.subtitle",
+    "value": "Common questions and detailed answers",
+    "context": "General content",
+    "maxLength": 55.5
+  }
+]

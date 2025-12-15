@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnGuidesConsensus.title",
+    "value": "Consensus Guide",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learnGuidesConsensus.description",
+    "value": "Understanding Ergo's consensus mechanism and Autolykos",
+    "context": "Description",
+    "maxLength": 81
+  },
+  {
+    "key": "learnGuidesConsensus.subtitle",
+    "value": "Deep dive into proof-of-work consensus",
+    "context": "General content",
+    "maxLength": 57
+  }
+]

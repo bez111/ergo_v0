@@ -1,0 +1,224 @@
+[
+  {
+    "key": "compare.hub.title",
+    "value": "Ergo vs The World",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "compare.hub.subtitle",
+    "value": "Understand how Ergo compares to other blockchain platforms. Honest, technical comparisons with no marketing fluff.",
+    "context": "General content",
+    "maxLength": 171
+  },
+  {
+    "key": "compare.hub.chooseComparison",
+    "value": "Choose a Comparison",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "compare.hub.whyMatters",
+    "value": "Why These Comparisons Matter",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "compare.hub.whyMattersSubtitle",
+    "value": "Every blockchain makes tradeoffs. Understanding these tradeoffs helps you choose the right tool for your needs.",
+    "context": "General content",
+    "maxLength": 166.5
+  },
+  {
+    "key": "compare.hub.securityFirst",
+    "value": "Security First",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "compare.hub.securityFirstDesc",
+    "value": "Ergo's eUTXO model eliminates entire classes of vulnerabilities that affect account-based chains.",
+    "context": "General content",
+    "maxLength": 145.5
+  },
+  {
+    "key": "compare.hub.fairLaunch",
+    "value": "Fair Launch",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "compare.hub.fairLaunchDesc",
+    "value": "No ICO, no premine, no VC allocation. All ERG is earned through mining, like Bitcoin.",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "compare.hub.programmablePrivacy",
+    "value": "Programmable Privacy",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "compare.hub.programmablePrivacyDesc",
+    "value": "Sigma Protocols enable zero-knowledge proofs without trusted setup, built into the core protocol.",
+    "context": "General content",
+    "maxLength": 145.5
+  },
+  {
+    "key": "compare.hub.readyToBuild",
+    "value": "Ready to Build on Ergo?",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "compare.hub.readyToBuildDesc",
+    "value": "Join a community of builders creating the future of decentralized finance.",
+    "context": "General content",
+    "maxLength": 111
+  },
+  {
+    "key": "compare.hub.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "compare.hub.exploreEcosystem",
+    "value": "Explore Ecosystem",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "compare.detail.allComparisons",
+    "value": "All Comparisons",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "compare.detail.featureComparison",
+    "value": "Feature Comparison",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "compare.detail.deepDive",
+    "value": "Deep Dive",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "compare.detail.ergoAdvantage",
+    "value": "Ergo Advantage",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "compare.detail.relatedInfographics",
+    "value": "Related Infographics",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "compare.detail.faq",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "compare.detail.moreComparisons",
+    "value": "More Comparisons",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "compare.detail.readyToExperience",
+    "value": "Ready to Experience Ergo?",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "compare.detail.readyToExperienceDesc",
+    "value": "Join thousands of users who chose decentralization, security, and financial freedom.",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "compare.detail.getWallet",
+    "value": "Get a Wallet",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "compare.detail.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "compare.detail.lastUpdated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "compare.features.consensus",
+    "value": "Consensus",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "compare.features.stateModel",
+    "value": "State Model",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "compare.features.smartContracts",
+    "value": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "compare.features.privacy",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "compare.features.sustainability",
+    "value": "Sustainability",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "compare.features.lightClients",
+    "value": "Light Clients",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "compare.features.miningAlgorithm",
+    "value": "Mining Algorithm",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "compare.features.blockTime",
+    "value": "Block Time",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "compare.features.launchModel",
+    "value": "Launch Model",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "compare.features.networkEffect",
+    "value": "Network Effect",
+    "context": "General content",
+    "maxLength": 21
+  }
+]

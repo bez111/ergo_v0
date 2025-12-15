@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -90,19 +90,27 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
   };
 
   const handleShare = async () => {
-    if (navigator.share) {
+    const shareUrl = window.location.href;
+    const shareTagline = '@BuildOnErgo $ERG';
+    const twitterText = `${question.query}\n${shareUrl} ${shareTagline}`;
+    
+    // Check if mobile (use navigator.share) or desktop (use Twitter URL directly)
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile && navigator.share) {
       try {
         await navigator.share({
           title: question.query,
-          text: question.shortAnswer,
-          url: window.location.href
+          text: twitterText,
         });
       } catch {
-        // User cancelled or error
+        // User cancelled - fallback to Twitter
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`;
+        window.open(twitterUrl, '_blank', 'noopener,noreferrer');
       }
     } else {
-      // On desktop, open Twitter/X share
-      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(question.query)}&url=${encodeURIComponent(window.location.href)}`;
+      // Desktop: always use Twitter URL directly for consistent formatting
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`;
       window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
     }
   };

@@ -14,6 +14,7 @@ interface WhatsNextCTAProps {
   currentSlug?: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function WhatsNextCTA({ currentSlug }: WhatsNextCTAProps) {
   return (
     <FinalCTASimple

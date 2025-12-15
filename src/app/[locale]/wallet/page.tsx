@@ -5,7 +5,6 @@ import { BackgroundWrapper } from '@/components/home/background-wrapper'
 import {
   createBreadcrumbSchema,
   createFAQSchema,
-  createCollectionSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 

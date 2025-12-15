@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnGuidesPrivacyFeatures.title",
+    "value": "Privacy Features Guide",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learnGuidesPrivacyFeatures.description",
+    "value": "Using Sigma protocols and privacy tools on Ergo",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learnGuidesPrivacyFeatures.subtitle",
+    "value": "Protect your financial privacy",
+    "context": "General content",
+    "maxLength": 45
+  }
+]

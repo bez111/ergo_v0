@@ -1,0 +1,20 @@
+[
+  {
+    "key": "blogSection.title",
+    "value": "LATEST FROM THE ERGO BLOG",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "blogSection.subtitle",
+    "value": "Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "blogSection.viewAllPosts",
+    "value": "View All Posts",
+    "context": "General content",
+    "maxLength": 21
+  }
+]

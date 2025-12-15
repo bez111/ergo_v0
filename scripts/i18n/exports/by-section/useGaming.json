@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useGaming.title",
+    "value": "Gaming & Metaverse",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "useGaming.description",
+    "value": "Blockchain gaming and virtual world applications",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "useGaming.subtitle",
+    "value": "Play-to-earn and NFT gaming",
+    "context": "General content",
+    "maxLength": 40.5
+  }
+]

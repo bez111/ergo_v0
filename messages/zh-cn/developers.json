@@ -1,0 +1,1061 @@
+{
+  "developersPage": {
+    "breadcrumbs": {
+      "home": "首页",
+      "developers": "开发者"
+    },
+    "seo": {
+      "title": "Ergo 开发者 — ErgoScript、SDK、eUTXO 模式与 API | Build on Ergo",
+      "description": "在 Ergo 上构建更安全的 dApp：学习 ErgoScript，使用 eUTXO 模式与 SDK（Fleet、AppKit、sigma-rust），并利用可预测的成本与可选隐私（Sigma）。",
+      "keywords": [
+        "Ergo developers",
+        "ErgoScript",
+        "eUTXO",
+        "smart contracts",
+        "Ergo SDK",
+        "Fleet SDK",
+        "AppKit",
+        "sigma-rust",
+        "blockchain development",
+        "Sigma protocols",
+        "Ergo API"
+      ]
+    },
+    "schema": {
+      "techArticle": {
+        "headline": "Ergo 开发者 — ErgoScript、SDK 与 eUTXO 模式",
+        "description": "面向开发者的 Ergo 资源中心：ErgoScript、SDK、eUTXO 模式与实用资料。",
+        "keywords": [
+          "ErgoScript",
+          "eUTXO",
+          "Ergo SDK",
+          "Fleet SDK",
+          "AppKit",
+          "sigma-rust"
+        ],
+        "proficiencyLevel": "Beginner",
+        "technicalAudience": "Developers, Engineers, Technical Founders",
+        "about": [
+          { "name": "ErgoScript" },
+          { "name": "eUTXO Model" },
+          { "name": "Sigma Protocols" },
+          { "name": "Blockchain Development" },
+          { "name": "Smart Contracts" }
+        ]
+      },
+      "itemList": {
+        "name": "Ergo 核心技术",
+        "description": "面向开发者的 Ergo 技术与特性索引"
+      },
+      "howTo": {
+        "name": "如何开始在 Ergo 上开发",
+        "description": "使用 Fleet SDK 开始 Ergo 区块链开发的快速入门",
+        "steps": [
+          {
+            "name": "安装 Fleet SDK",
+            "text": "将 Fleet SDK 添加到你的 JavaScript/TypeScript 项目（npm install @fleet-sdk/core）。",
+            "url": "https://fleet-sdk.github.io/docs/"
+          },
+          {
+            "name": "连接 Ergo 测试网",
+            "text": "连接到 Ergo testnet，并从 faucet 获取测试 ERG 以开始实验。",
+            "url": "https://testnet.ergofaucet.org/"
+          },
+          {
+            "name": "构建第一笔交易",
+            "text": "使用 Fleet SDK 创建、签名并提交你的第一笔 Ergo 交易。",
+            "url": "/patterns"
+          },
+          {
+            "name": "部署智能合约",
+            "text": "编写 ErgoScript 并在测试网上部署合约，验证端到端行为。",
+            "url": "/learn/ergoscript"
+          },
+          {
+            "name": "加入开发者社区",
+            "text": "加入 Discord 获取帮助与反馈，并与其他构建者交流。",
+            "url": "https://discord.gg/ergo-platform-668903786361651200"
+          }
+        ]
+      }
+    },
+    "hero": {
+      "badge": "开发者中心",
+      "title": "构建没有中断的 DeFi",
+      "subtitle": "比特币级别的安全符合智能合同。没有再次进入的攻击。没有隐藏状态。可以预测的成本。内置隐私。",
+      "buttons": {
+        "startLearning": "开始学习",
+        "browsePatterns": "浏览模式",
+        "docs": "文档"
+      }
+    },
+    "whyBuild": {
+      "title": "为什么建立在这样的基础上",
+      "titleHighlight": "Ergo",
+      "items": {
+        "0": {
+          "title": "eUTXO 模式：无Surprises",
+          "description": "没有重新进入的攻击。没有MEV开发。没有隐藏的全局状态。在执行之前，知道您的合同将花费多少。"
+        },
+        "1": {
+          "title": "Sigma 协议：没有博士的隐私",
+          "description": "内置零知识证明。在没有加密专长的情况下添加隐私功能。环形签名、门槛证明、所有本土。"
+        },
+        "2": {
+          "title": "工作证明：无链停止",
+          "description": "没有回滚。没有治理攻击。没有验证卡特尔。经过战斗测试的安全正在起作用。"
+        },
+        "3": {
+          "title": "Fair Launch: No Corporate BS",
+          "description": "零VC预矿。零基础税。建立在社区实际拥有网络的链上。"
+        }
+      }
+    },
+    "quickStart": {
+      "title": "快速启动",
+      "titleHighlight": "SDK 队部",
+      "subtitle": "从零到你的第一笔Ergo交易，分三个步骤",
+      "readFullDocs": "阅读完整的船队SDK文档",
+      "steps": {
+        "0": {
+          "title": "安装船队SDK",
+          "description": "将舰队SDK添加到您的 JavaScript/TypeScript/TypeScript 项目"
+        },
+        "1": {
+          "title": "连接到Ergo",
+          "description": "初始化连接到Ergo 网络"
+        },
+        "2": {
+          "title": "创建交易",
+          "description": "创建您的第一笔Ergo交易"
+        }
+      }
+    },
+    "technologyIndex": {
+      "title": "技术",
+      "titleHighlight": "索引",
+      "subtitle": "完全提及埃尔戈的核心技术",
+      "viewAll": "查看所有技术",
+      "items": {
+        "0": {
+          "slug": "eutxo-model",
+          "title": "eUTXO 模型",
+          "description": "并联智能合同"
+        },
+        "1": {
+          "slug": "ergoscript",
+          "title": "ErgoScript",
+          "description": "安全智能合同"
+        },
+        "2": {
+          "slug": "secure-pow",
+          "title": "Autolykos PoW",
+          "description": "2. 抵制ASIC采矿业的情况"
+        },
+        "3": {
+          "slug": "storage-rent",
+          "title": "存储出租器",
+          "description": "国家可持续性"
+        },
+        "4": {
+          "slug": "privacy-features",
+          "title": "Sigma Protocols",
+          "description": "零知识证明"
+        },
+        "5": {
+          "slug": "nipopows",
+          "title": "NIPPoWs",
+          "description": "轻型客户端和桥"
+        },
+        "6": {
+          "slug": "oracle-pools",
+          "title": "Oracle 题库",
+          "description": "分散化数据源"
+        },
+        "7": {
+          "slug": "native-tokens",
+          "title": "原生令牌",
+          "description": "协议级令牌"
+        },
+        "8": {
+          "slug": "babel-fees",
+          "title": "Babel 费用",
+          "description": "使用任何令牌支付费用"
+        },
+        "9": {
+          "slug": "subblocks",
+          "title": "子块",
+          "description": "快速确认"
+        },
+        "10": {
+          "slug": "velvet-forks",
+          "title": "Velvet Forks",
+          "description": "无缝升级"
+        },
+        "11": {
+          "slug": "adaptive-emission",
+          "title": "适应性排放",
+          "description": "B. 货币政策"
+        }
+      }
+    },
+    "sdks": {
+      "title": "SDKs &",
+      "titleHighlight": "库",
+      "subtitle": "选择您首选语言的 SDK",
+      "recommended": "推荐的",
+      "items": {
+        "0": {
+          "name": "SDK 队部",
+          "language": "TypeScript / JavaScript",
+          "description": "最受欢迎的 SDK 网络应用和 Node.js 项目"
+        },
+        "1": {
+          "name": "AppKit",
+          "language": "Java / Scala / Kotlin",
+          "description": "后端服务和安卓应用的 JVM SDK"
+        },
+        "2": {
+          "name": "sigma-rust",
+          "language": "赤色",
+          "description": "高性能的执行情况"
+        },
+        "3": {
+          "name": "擦除",
+          "language": "Python",
+          "description": "用于Ergo 开发的 Python 包装器"
+        }
+      }
+    },
+    "learningResources": {
+      "title": "学习",
+      "titleHighlight": "资源",
+      "subtitle": "掌握埃尔戈开发的结构化路径",
+      "explore": "浏览",
+      "items": {
+        "0": {
+          "title": "ErgoScript 课程",
+          "description": "学习 ErgoScript 编程的基础",
+          "tag": "从这里开始"
+        },
+        "1": {
+          "title": "开发模式",
+          "description": "复制粘贴智能合同蓝图",
+          "tag": "代码"
+        },
+        "2": {
+          "title": "游戏书",
+          "description": "一步一步发展指南",
+          "tag": "指南"
+        },
+        "3": {
+          "title": "Glossary",
+          "description": "解释的关键术语和概念",
+          "tag": "参考"
+        }
+      }
+    },
+    "devTools": {
+      "title": "开发者",
+      "titleHighlight": "工具",
+      "explorer": {
+        "title": "探险家",
+        "description": "检查交易和块"
+      },
+      "faucet": {
+        "title": "Testnet Faucet",
+        "description": "为开发获取测试 ERG"
+      },
+      "vscode": {
+        "title": "VSCode 扩展",
+        "description": "ErgoScript 语法高亮"
+      }
+    },
+    "comparison": {
+      "title": "为什么埃尔戈是",
+      "titleHighlight": "不同的",
+      "headers": {
+        "criterion": "标准",
+        "bitcoin": "比特币",
+        "ethereum": "Ethereum",
+        "ergo": "Ergo"
+      },
+      "readMore": "读取：eUTXO vs 账户",
+      "rows": {
+        "0": {
+          "criterion": "基础模型",
+          "bitcoin": "UTXO",
+          "ethereum": "账户",
+          "ergo": "eUTXO"
+        },
+        "1": {
+          "criterion": "智能合同安全",
+          "bitcoin": "限量的",
+          "ethereum": "退职风险",
+          "ergo": "可预测、更安全"
+        },
+        "2": {
+          "criterion": "隐私功能 (L1)",
+          "bitcoin": "透明的",
+          "ethereum": "透明的",
+          "ergo": "可选的 (Sigma)"
+        },
+        "3": {
+          "criterion": "收费和可预见性",
+          "bitcoin": "Volatile",
+          "ethereum": "高且不可预测的",
+          "ergo": "低的、可预见的"
+        }
+      }
+    },
+    "networkHealth": {
+      "title": "实时网络",
+      "titleHighlight": "保健",
+      "subtitle": "稳定基层 = 可靠的智能合同",
+      "metrics": {
+        "hashrate": "哈希率",
+        "txDay": "TX/天",
+        "nodes": "Nodes",
+        "tvl": "TVL",
+        "supply": "供应",
+        "emission": "排放"
+      },
+      "emissionLeft": "{amount}M left"
+    },
+    "community": {
+      "title": "加入",
+      "titleHighlight": "社区",
+      "subtitle": "从核心开发者获得帮助并与其他构建者连接",
+      "discord": {
+        "title": "开发者Discord",
+        "subtitle": "实时支持",
+        "description": "在专用的 #dev 频道中从核心开发者获得直接帮助。"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "开源",
+        "description": "探索代码库，为核心议定书作出贡献。"
+      }
+    },
+    "faq": {
+      "title": "开发者",
+      "titleHighlight": "常见问题",
+      "items": {
+        "0": {
+          "question": "如何开始在Ergo上建造？",
+          "answer": "首先学习ErgoScript 基础知识，建立Ergo开发环境 (Scala/JavaScript SDKs)，在GitHub 上探索合同，并加入开发者Discord寻求支持。 /learn部分为新开发者提供了结构化路径。"
+        },
+        "1": {
+          "question": "我可以为Ergo使用哪种编程语言？",
+          "answer": "ErgoScript 是母语智能合同语言。为了开发应用，请使用: Scala/Java (Appkit SDK), JavaScript/TypeScript/TypeScript (Fleet SDK), Rust (Sigma-rust), or Python (ergpy). 大多数开发者都是从船队SDK开始的。"
+        },
+        "2": {
+          "question": "ErgoScript 难于学习吗？",
+          "answer": "ErgoScript 有一个不同于团结的学习曲线。它是功能性的和声明性的，而不是必须的。 如果您知道的 Scala 或函数编程，它就更容易了。eUTXO 模型需要新思维，但是可以防止整个类的 bug (不再输入)。"
+        },
+        "3": {
+          "question": "是什么使得开发者的Ergo不同？",
+          "answer": "出价错误：eUTXO 模型(无再入大气攻击、可预见的费用)、Sigma 协议 (内置隐私原始)、NiPoWs (轻度客户)和可预见的 ~0美元。 1 笔费用。智能合同通过设计更加安全。"
+        },
+        "4": {
+          "question": "我在哪里可以找到 ErgoScript 代码示例？",
+          "answer": "检查复制粘贴现成的合同模式/模式页面/逐步指南和文档的播放书。 供官方参考的 rgoplatform.com GitHub 生态系统项目资源库提供了真实世界的例子。"
+        },
+        "5": {
+          "question": "是否为Ergo开发者提供赠款？",
+          "answer": "是的！埃尔戈基金会为开源项目、舞蹈、工具和研究提供赠款。 通过GitHub 申请或加入开发者社区首先讨论您的项目。"
+        }
+      }
+    },
+    "cta": {
+      "title": "准备好建设？",
+      "subtitle": "从 ErgoScript 课程开始，探索模式，并加入开发者Discord。",
+      "startCourse": "启动 ErgoScript 课程",
+      "exploreEcosystem": "探索Ecosystem"
+    },
+    "emailCapture": {
+      "title": "开发者更新",
+      "description": "获取关于新SDK、ErgoScript 特征和生态系统开发的通知。"
+    }
+  },
+  "docs": {
+    "title": "文件",
+    "subtitle": "技术文件和指南",
+    "description": "供开发者和用户使用的综合文档。",
+    "hero": {
+      "whyErgo": "[TODO: Why Ergo?]",
+      "glossary": "[TODO: Glossary]",
+      "developerHub": "[TODO: Developer Hub]"
+    },
+    "sections": {
+      "gettingStarted": "正在开始",
+      "coreTechnology": {
+        "title": "[TODO: Core Technology]",
+        "description": "[TODO: Deep dive into Ergo's technical foundations and innovative features that set it apart from other blockchain platforms.]",
+        "eutxo": {
+          "title": "[TODO: eUTxO Model]",
+          "description": "[TODO: Extended UTXO model for advanced smart contracts]"
+        },
+        "nipopows": {
+          "title": "[TODO: NIPoPoWs]",
+          "description": "[TODO: Non-Interactive Proofs of Proof-of-Work for light clients]"
+        },
+        "ergoscript": {
+          "title": "[TODO: ErgoScript]",
+          "description": "[TODO: Powerful smart contract language with formal verification]"
+        },
+        "storageRent": {
+          "title": "[TODO: Storage Rent]",
+          "description": "[TODO: Economic incentives for sustainable blockchain storage]"
+        },
+        "autolykos": {
+          "title": "[TODO: Autolykos]",
+          "description": "[TODO: Memory-hard proof-of-work algorithm]"
+        },
+        "privacy": {
+          "title": "[TODO: Privacy Features]",
+          "description": "[TODO: Built-in privacy tools and protocols]"
+        },
+        "lightClients": {
+          "title": "[TODO: Light Clients]",
+          "description": "[TODO: Lightweight blockchain verification]"
+        }
+      },
+      "forDevelopers": {
+        "title": "[TODO: For Developers]",
+        "description": "[TODO: Build powerful applications on Ergo with our comprehensive development resources.]",
+        "ergoscript": {
+          "title": "[TODO: ErgoScript Basics]",
+          "description": "[TODO: Learn Ergo's smart contract language with practical examples and tutorials]"
+        },
+        "apis": {
+          "title": "[TODO: APIs & SDKs]",
+          "description": "[TODO: Integrate with Ergo using our REST APIs, GraphQL, and language-specific SDKs]"
+        },
+        "tutorials": {
+          "title": "[TODO: Development Tutorials]",
+          "description": "[TODO: Step-by-step guides for building dApps, tokens, and complex contracts]"
+        },
+        "tools": {
+          "title": "[TODO: Developer Tools]",
+          "description": "[TODO: IDEs, debuggers, testing frameworks, and deployment tools for Ergo development]"
+        }
+      },
+      "forMiners": {
+        "title": "[TODO: For Miners]",
+        "description": "[TODO: Everything you need to start mining Ergo and secure the network.]",
+        "gettingStarted": {
+          "title": "[TODO: Mining Guide]",
+          "description": "[TODO: Complete guide to mining Ergo: hardware, software, and pool selection]"
+        },
+        "hardware": {
+          "title": "[TODO: Hardware Requirements]",
+          "description": "[TODO: GPU specifications, memory requirements, and hardware optimization tips]"
+        },
+        "pools": {
+          "title": "[TODO: Mining Pools]",
+          "description": "[TODO: Find the best mining pools with detailed comparisons and setup guides]"
+        },
+        "profitability": {
+          "title": "[TODO: Mining Profitability]",
+          "description": "[TODO: Calculate earnings, understand costs, and optimize your mining operation]"
+        }
+      },
+      "apiReference": "API 参考",
+      "tutorials": "教程",
+      "examples": "示例："
+    }
+  },
+  "docsMenu": {
+    "introduction": {
+      "title": "一. 导言",
+      "whyErgo": "为什么埃尔戈文",
+      "keyFeatures": "关键功能",
+      "roadmap": "路径图",
+      "researchWhitepapers": "研究与白皮书",
+      "entities": "实体",
+      "wallets": "钱包",
+      "resources": "资源",
+      "contribute": "贡献",
+      "events": "事件",
+      "glossary": "Glossary",
+      "faq": "常见问题"
+    },
+    "ecosystem": {
+      "title": "生态环境",
+      "infrastructure": "B. 基础设施",
+      "applications": "应用程序",
+      "financial": "财务情况",
+      "nfts": "NFTs",
+      "privacy": "隐私",
+      "ai": "AI",
+      "daos": "DAOs",
+      "tooling": "配刀中",
+      "standards": "标准",
+      "subtitle": "发现Ergo生态系统",
+      "description": "探索不断增长的Ergo生态系统",
+      "seo": {
+        "title": "Ergo Ecosystem — dApps, wallets, tools, Defi",
+        "description": "探索Ergo 生态系统：分散应用、钱包、隐私工具、DFi 协议、SDK和基础设施。",
+        "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain 项目",
+        "ogTitle": "Ergo Ecosystem",
+        "ogDescription": "Ergo dApp、钱包、基础设施和工具目录。"
+      },
+      "filters": {
+        "all": "所有的",
+        "defi": "DeFi",
+        "privacy": "隐私",
+        "infrastructure": "B. 基础设施",
+        "nft": "NFTs",
+        "gaming": "游戏中",
+        "wallets": "钱包",
+        "tools": "工具",
+        "dao": "DAOs",
+        "oracles": "Oracles",
+        "stable": "稳定的"
+      },
+      "search": {
+        "placeholder": "搜索项目...",
+        "resultsCount": "{count} projects"
+      },
+      "projects": {
+        "rosenBridge": {
+          "title": "Rosen Bridge",
+          "subtitle": "连接Ergo的星系",
+          "description": "在Ergo和其他主要区块链之间无缝转移资产，如比特币、爱森、卡达诺和英国航天中心与Rosen Bridge。 我们的安全监控系统解锁了跨链流动性和新的 DeFi 可能性。",
+          "stats": {
+            "crossChain": {
+              "label": "交叉链接",
+              "value": "BTC, ETH, ADA, BSC & more"
+            },
+            "secureBridge": {
+              "label": "安全网路",
+              "value": "看守者和护卫模型"
+            },
+            "unlockLiquidity": {
+              "label": "解锁流动资金",
+              "value": "访问新市场"
+            }
+          },
+          "cta": "VISIT ROSEN BRIDGE"
+        },
+        "ergoMixer": {
+          "title": "ErgoMixer",
+          "subtitle": "非拘禁隐私协议",
+          "description": "使用零知识证明私下混合你的ERG和令牌。ErgoMixer是加密空间中第一个非交互式非拘禁混合器。",
+          "stats": {
+            "mixedVolume": {
+              "label": "混合音量",
+              "value": "10,000+ ERG"
+            },
+            "privacyScore": {
+              "label": "隐私评分",
+              "value": "99.9%"
+            },
+            "transactions": {
+              "label": "交易记录",
+              "value": "5,000+"
+            }
+          },
+          "cta": "在ERGO 上显示优先级"
+        },
+        "sigmaUSD": {
+          "title": "西格玛USD",
+          "subtitle": "Algorithmic Stablecoin Protocol",
+          "description": "SigmaUSD 是在Ergo上构建的加密算法马印记协议。 它提供了一种分散的方式来创造稳定的价值，而不依赖传统的银行系统或集中的储备。",
+          "stats": {
+            "stabilityScore": {
+              "label": "稳定得分",
+              "value": "99.8%"
+            },
+            "totalSupply": {
+              "label": "总供应量",
+              "value": "$2.5M+"
+            },
+            "collateralRatio": {
+              "label": "抵押比率",
+              "value": "400-800%"
+            }
+          },
+          "cta": "退出登录USD"
+        },
+        "gaming": {
+          "title": "Ergo Gaming Ecosystem",
+          "subtitle": "区块链游戏平台",
+          "description": "通过真正的资产所有权、游戏赚钱机械师和分散的锦标赛来体验游戏的未来。由 Ergo 高效和安全的区块链基础设施提供支持。",
+          "stats": {
+            "activeGames": {
+              "label": "活动游戏",
+              "value": "12+"
+            },
+            "players": {
+              "label": "玩家",
+              "value": "5,000+"
+            },
+            "rewardsPaid": {
+              "label": "已支付奖励",
+              "value": "50K+"
+            }
+          },
+          "cta": "在ERGO上启动 GAMING"
+        }
+      },
+      "projectPage": {
+        "breadcrumbs": {
+          "ecosystem": "生态环境"
+        },
+        "buttons": {
+          "visitProject": "访问项目",
+          "github": "GitHub",
+          "twitter": "推特",
+          "docs": "文档",
+          "community": "社区",
+          "backToEcosystem": "回到生态环境"
+        },
+        "status": {
+          "operational": "运行",
+          "testing": "测试",
+          "prototype": "原型",
+          "notOperating": "未运行"
+        },
+        "sections": {
+          "keyFeatures": "关键功能",
+          "builtWith": "使用 Ergo Technology 生成",
+          "relatedArticles": "相关文章",
+          "viewAll": "查看全部",
+          "faq": "常见问题",
+          "relatedProjects": "Related {category} Projects",
+          "minRead": "{time} min read"
+        },
+        "cta": {
+          "title": "探索更多的 dApps",
+          "description": "使用Defi、钱包、工具等方式发现整个埃尔戈生态系统。",
+          "primaryButton": "查看所有项目",
+          "secondaryButton": "开始Building"
+        }
+      },
+      "grants": {
+        "title": "Ergo 赠款方案",
+        "subtitle": "为区块链项目提供资金",
+        "description": "为您的Ergo项目获得资金。给开发者、研究人员和社区建设者的赠款。在 Ergo blockchain 上建造DeFi、基础设施、工具和应用。",
+        "lastUpdated": "上次更新",
+        "buttons": {
+          "applyNow": "立即应用",
+          "viewProjects": "查看项目"
+        },
+        "features": {
+          "title": "我们的基金",
+          "subtitle": "支持埃尔戈生态系统的创新与发展",
+          "funding": {
+            "title": "开发者支持",
+            "description": "为创新的应用程序、工具和基础设施项目筹资"
+          },
+          "research": {
+            "title": "研发融资",
+            "description": "支持学术研究和改进礼宾工作"
+          },
+          "community": {
+            "title": "社区项目",
+            "description": "为社区推动的倡议和教育内容提供补助金"
+          },
+          "innovation": {
+            "title": "创新补助金",
+            "description": "为突破性想法和试验项目提供特别资金"
+          }
+        },
+        "cta": {
+          "title": "准备在Ergo上建造吗？",
+          "subtitle": "开始准备您的项目提案并加入我们的社区以保持更新",
+          "buttons": {
+            "applyGrant": "申请补助金",
+            "joinCommunity": "加入社区"
+          }
+        },
+        "seo": {
+          "title": "Ergo 赠款方案 | 区块链项目的供资",
+          "description": "为您的Ergo项目获得资金。给开发者、研究人员和社区建设者的赠款。在 Ergo blockchain 上建造DeFi、基础设施、工具和应用。",
+          "ogTitle": "Ergo 赠款 - 为您的区块链创新添加资金",
+          "ogDescription": "申请在埃尔戈岛上建造的赠款，支持开发者、研究人员和社区倡议。",
+          "twitterTitle": "Ergo 赠款方案 | 获得资金",
+          "twitterDescription": "为开发者在Ergo上建造融资。申请今天的赠款。"
+        },
+        "whatToExpect": "期望什么",
+        "grantsFeatures": "赠款方案功能",
+        "supportingInnovation": "支持埃尔戈生态系统的创新与发展"
+      },
+      "infographicPage": {
+        "breadcrumbs": {
+          "infographics": "信息图像"
+        },
+        "meta": {
+          "minRead": "{time} min read"
+        },
+        "image": {
+          "clickToEnlarge": "单击以扩展",
+          "fullSize": "完整大小"
+        },
+        "share": {
+          "title": "分享此信息图形",
+          "subtitle": "帮助他人发现Ergo",
+          "telegram": "Telegram",
+          "pinterest": "Pinterest",
+          "download": "下载",
+          "copyLink": "复制链接",
+          "copied": "已复制！"
+        },
+        "sections": {
+          "about": "关于此信息",
+          "systemsCompared": "系统比较",
+          "keyPoints": "关键点",
+          "howToRead": "如何读取此信息图形",
+          "relatedTopics": "相关主题"
+        },
+        "cta": {
+          "title": "探索更多错误信息图形",
+          "description": "发现Ergo的 PoW、eUTXO 智能合同、存储租赁、隐私等视觉指南。",
+          "button": "浏览全部信息图形"
+        }
+      },
+      "map": {
+        "title": "Ergo 生态系统地图",
+        "subtitle": "交互式Defi & dApp 目录",
+        "description": "探索完整的 Ergo 生态系统。Defi 协议、NFT 平台、钱包、基础设施和开发者工具的交互地图。发现 50 + 个活动项目。",
+        "seo": {
+          "title": "Ergo 生态系统地图 | 交互式Defi & dApp 目录",
+          "description": "探索完整的 Ergo 生态系统。Defi 协议、NFT 平台、钱包、基础设施和开发者工具的交互地图。发现 50 + 个活动项目。",
+          "ogTitle": "交互式Ergo 生态系统地图 | 50+ 项目",
+          "ogDescription": "视觉探索所有埃尔戈项目。DeFi、NFT、钱包、基础设施已映射。",
+          "twitterTitle": "Ergo 生态系统地图 | 视觉项目浏览器",
+          "twitterDescription": "50+Ergo 项目的交互直观化。Explore DeFi，NFT，基础设施。"
+        }
+      }
+    },
+    "developers": {
+      "title": "开发者",
+      "gettingStarted": "正在开始",
+      "ergoscriptLanguages": "ErgoScript 语言",
+      "dataModelApis": "数据模型和 APIs",
+      "cryptographicPrimitives": "加密素材",
+      "infrastructure": "B. 基础设施",
+      "tooling": "配刀中",
+      "tutorials": "教程",
+      "bountiesGrants": "Bounties & 补助金",
+      "communitySupport": "社区支持",
+      "students": "学生",
+      "resources": "资源"
+    },
+    "miners": {
+      "title": "矿工",
+      "miningGuides": "采矿指南",
+      "poolMining": "池挖掘公司",
+      "soloMining": "单人采矿公司",
+      "hardware": "硬件",
+      "software": "软件",
+      "troubleshooting": "故障排除"
+    },
+    "features": {
+      "ergoscript": {
+        "title": "ErgoScript",
+        "description": "可编程资金的安全和声明语言",
+        "details": {
+          "verification": {
+            "title": "正式验证",
+            "description": "数学上可验证的合同行为"
+          },
+          "privacy": {
+            "title": "内置隐私",
+            "description": "零知识证明和保密交易"
+          },
+          "safety": {
+            "title": "类型安全",
+            "description": "编译时间保证防止运行时错误"
+          }
+        }
+      },
+      "autolykos": {
+        "title": "Autolykos",
+        "description": "ASIC工作校验算法",
+        "details": {
+          "efficiency": {
+            "title": "高能效",
+            "description": "优于传统的 PoW 算法"
+          },
+          "solo": {
+            "title": "单人采矿友好组织",
+            "description": "专为个别矿工设计，而不仅仅是池子"
+          },
+          "asic": {
+            "title": "ASIC Resistant",
+            "description": "内存硬算法可以防止ASIC的支配地位"
+          }
+        }
+      },
+      "eutxo": {
+        "title": "扩展 UTXO",
+        "description": "与类似比特币的安全性并行智能合同",
+        "details": {
+          "parallel": {
+            "title": "并行执行",
+            "description": "多个合同不发生冲突同时执行"
+          },
+          "composability": {
+            "title": "合成性",
+            "description": "合约可以合并为Lego块"
+          },
+          "security": {
+            "title": "安全",
+            "description": "消除再就业攻击和全球状态问题"
+          }
+        }
+      },
+      "storageRent": {
+        "title": "存储出租器",
+        "description": "可持续区块链经济",
+        "details": {
+          "sustainable": {
+            "title": "可持续增长",
+            "description": "阻止区块链无限增长"
+          },
+          "rewards": {
+            "title": "Perpetual 奖励",
+            "description": "即使在排放结束后矿工也会获得费用"
+          },
+          "prevention": {
+            "title": "血液预防",
+            "description": "自动清理遗弃的资金"
+          }
+        }
+      },
+      "sigmaProtocols": {
+        "title": "Sigma Protocols",
+        "description": "高级原始加密",
+        "details": {
+          "optionalPrivacy": {
+            "title": "可选隐私",
+            "description": "选择透明和私人交易"
+          },
+          "advancedSecurity": {
+            "title": "高级安全",
+            "description": "零知识验证和阈值签名"
+          },
+          "developerFriendly": {
+            "title": "适合开发人员",
+            "description": "内置的 dApps 加密工具"
+          }
+        }
+      },
+      "nipopows": {
+        "title": "NIPPoWs",
+        "description": "非交互式工作证明书",
+        "details": {
+          "instantMobileSync": {
+            "title": "即时移动同步",
+            "description": "轻型客户端以秒为单位同步，而不是小时"
+          },
+          "trustlessBridges": {
+            "title": "无用过的桥",
+            "description": "不受信任的第三方的跨链桥"
+          },
+          "cryptographicSecurity": {
+            "title": "加密安全",
+            "description": "经数学证明的安全保障"
+          }
+        }
+      },
+      "subblocks": {
+        "title": "子块",
+        "description": "L1安全性次二确认",
+        "details": {
+          "subSecondConfirmations": {
+            "title": "子二次确认",
+            "description": "付款确认以毫秒计"
+          },
+          "layer1Security": {
+            "title": "图层 1 安全",
+            "description": "与主区块链相同的安全"
+          },
+          "seamlessIntegration": {
+            "title": "无缝集成",
+            "description": "与现有的埃尔戈基础设施一起工作"
+          }
+        }
+      },
+      "nativeTokens": {
+        "title": "原生令牌",
+        "description": "一流的数字资产",
+        "details": {
+          "oneClickCreation": {
+            "title": "单击创建",
+            "description": "在单笔交易中发行令牌"
+          },
+          "defiReady": {
+            "title": "Defi 已准备好",
+            "description": "本机兼容所有Defi 协议"
+          },
+          "trueNativeAssets": {
+            "title": "真原生资源",
+            "description": "B. 协议一级的担保，而不是合同担保权"
+          }
+        }
+      },
+      "oraclePools": {
+        "title": "Oracle 题库",
+        "description": "分散化数据源",
+        "details": {
+          "reliablePriceFeeds": {
+            "title": "可靠的价格源",
+            "description": "精确、防篡改价格数据"
+          },
+          "universalCompatibility": {
+            "title": "通用兼容性",
+            "description": "适用于任何智能合同"
+          },
+          "fullyDecentralized": {
+            "title": "完全分散化",
+            "description": "没有一个单独的故障点或控制"
+          }
+        }
+      },
+      "velvetForks": {
+        "title": "Velvet Forks",
+        "description": "平滑协议升级",
+        "details": {
+          "backwardCompatible": {
+            "title": "后向兼容性",
+            "description": "现有合同继续工作"
+          },
+          "futureProof": {
+            "title": "未来证据",
+            "description": "允许逐渐采用新功能"
+          },
+          "gradualAdoption": {
+            "title": "逐渐通过",
+            "description": "更改在一段时间内激活，而不是即时激活"
+          }
+        }
+      },
+      "adaptiveEmission": {
+        "title": "适应性排放",
+        "description": "灵活的货币政策",
+        "details": {
+          "parameterTuning": {
+            "title": "参数调整",
+            "description": "社区可以调整排放参数"
+          },
+          "economicFlexibility": {
+            "title": "经济灵活性",
+            "description": "应对不断变化的经济状况"
+          },
+          "communityInput": {
+            "title": "社区输入",
+            "description": "货币政策的民主治理"
+          }
+        }
+      }
+    },
+    "map": {
+      "title": "技术架构图",
+      "subtitle": "Ergo技术如何一起工作的交互式直观",
+      "seo": {
+        "title": "Ergo Technology Map | 交互式Blockchain 建筑可视化",
+        "description": "通过交互式地图探索Ergo的技术生态系统。 请参阅Ergosscript、Autolykos、eUTXO、Sigma协议和其他组件如何连接以创建一个强大的区块链平台。",
+        "keywords": "ergo 技术地图，区块链架构，交互视觉化，ergoscript连接，技术生态系统，区块链组件",
+        "ogTitle": "Ergo Technology Map - 交互式建筑概述",
+        "ogDescription": "可视化埃尔戈的先进技术如何在我们的全面技术图中连接和相互作用。",
+        "ogAlt": "埃尔戈技术构造图",
+        "twitterTitle": "探索Ergo的技术地图",
+        "twitterDescription": "Ergo的区块链结构和组件连接的交互直观化。"
+      },
+      "categories": {
+        "all": "所有技术",
+        "core": "核心技术",
+        "consensus": "十二. 协商一致意见：",
+        "features": "功能",
+        "infrastructure": "B. 基础设施"
+      },
+      "legend": {
+        "title": "图例",
+        "core": "核心技术",
+        "consensus": "A. 共识机制",
+        "features": "高级功能",
+        "infrastructure": "基础结构图层",
+        "directConnection": "直接集成",
+        "relation": "相关技术"
+      },
+      "details": {
+        "keyFeatures": "关键功能",
+        "connections": "连接技术",
+        "learnMore": "了解更多",
+        "close": "关闭"
+      }
+    }
+  },
+  "docsResources": {},
+  "playground": {
+    "title": "实时游戏场",
+    "interactive": "交互式的",
+    "reset": "Reset",
+    "component": "组件",
+    "codeEditor": "代码编辑器",
+    "livePreview": "实时预览",
+    "properties": {
+      "variant": "变体",
+      "size": "大小",
+      "disabled": "已禁用",
+      "loading": "正在加载",
+      "hoverable": "可悬停的",
+      "bordered": "有边框"
+    },
+    "templates": {
+      "primaryButton": "主按钮",
+      "featureCard": "特色卡",
+      "statusBadge": "状态徽章"
+    },
+    "editCode": "编辑代码以查看实时预览",
+    "errorRendering": "渲染组件出错",
+    "codeEmpty": "代码不能为空",
+    "enable": "启用",
+    "poweredBy": "由 Ergo UI 套件支持",
+    "components": {
+      "button": "按钮",
+      "card": "卡",
+      "badge": "徽章",
+      "grid": "网格"
+    },
+    "variants": {
+      "default": "默认设置",
+      "outline": "轮廓：",
+      "ghost": "幽灵：",
+      "destructive": "破坏性的"
+    },
+    "sizes": {
+      "sm": "小的",
+      "default": "默认设置",
+      "lg": "大的",
+      "icon": "图标"
+    }
+  },
+  "resources": {
+    "ergoscript": {
+      "title": "ErgoScript 教程系列",
+      "description": "Master ErgoScript: 你在埃尔戈上逐步创建安全和强大的智能合约的路径。",
+      "difficulty": "从头到专家",
+      "duration": "20+ 小时"
+    },
+    "faq": {
+      "title": "全面常见问题",
+      "description": "你需要知道的都是Ergo blockchain, 技术和生态系统。",
+      "difficulty": "所有关卡",
+      "duration": "参考"
+    },
+    "research": {
+      "title": "研究文件",
+      "description": "深入研究构成Ergo创新基础的学术研究和技术文件。",
+      "difficulty": "高级版",
+      "duration": "真空的"
+    }
+  },
+  "sections": {
+    "learningResources": "学习资源"
+  }
+}

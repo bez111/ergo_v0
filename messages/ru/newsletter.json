@@ -1,0 +1,21 @@
+{
+  "newsletter": {
+    "title": "Будьте в курсе",
+    "subtitle": "Получать последние новости и обновления Ergo",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Введите ваш адрес электронной почты",
+    "subscribe": "Подписаться",
+    "interests": "Интересы (опционально)",
+    "privacyNotice": "Подписываясь, вы соглашаетесь с нашими",
+    "privacyPolicy": "Политика конфиденциальности",
+    "alreadySubscribed": {
+      "title": "Вы подписаны!"
+    },
+    "segments": {
+      "developers": "Разработчики",
+      "miners": "Майнеры",
+      "investors": "Инвесторы",
+      "general": "Общие новости"
+    }
+  }
+}

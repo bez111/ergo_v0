@@ -37,7 +37,6 @@ export function PerformanceOptimizations({
             as="image" 
             href={heroImage.src}
             {...(heroImage.srcSet && { imageSrcSet: heroImage.srcSet })}
-            // @ts-expect-error - fetchPriority is valid but not in React types yet
             fetchPriority="high"
           />
           {/* Preload AVIF/WebP versions if available */}
@@ -47,7 +46,6 @@ export function PerformanceOptimizations({
               as="image" 
               href={heroImage.src.replace(/\.(png|jpg|jpeg)$/, '.avif')}
               type="image/avif"
-              // @ts-expect-error - fetchPriority is valid but not in React types yet
               fetchPriority="high"
             />
           )}
@@ -57,7 +55,6 @@ export function PerformanceOptimizations({
               as="image" 
               href={heroImage.src.replace(/\.(png|jpg|jpeg)$/, '.webp')}
               type="image/webp"
-              // @ts-expect-error - fetchPriority is valid but not in React types yet
               fetchPriority="high"
             />
           )}

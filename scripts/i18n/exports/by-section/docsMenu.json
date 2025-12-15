@@ -1,0 +1,1766 @@
+[
+  {
+    "key": "docsMenu.introduction.title",
+    "value": "Introduction",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.introduction.whyErgo",
+    "value": "Why Ergo",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.introduction.keyFeatures",
+    "value": "Key Features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.introduction.roadmap",
+    "value": "Roadmap",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.introduction.researchWhitepapers",
+    "value": "Research & Whitepapers",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "docsMenu.introduction.entities",
+    "value": "Entities",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.introduction.wallets",
+    "value": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.introduction.resources",
+    "value": "Resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.introduction.contribute",
+    "value": "Contribute",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "docsMenu.introduction.events",
+    "value": "Events",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.introduction.glossary",
+    "value": "Glossary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.introduction.faq",
+    "value": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "docsMenu.ecosystem.title",
+    "value": "Ecosystem",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.subtitle",
+    "value": "Discover the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "docsMenu.ecosystem.description",
+    "value": "Explore the growing Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "docsMenu.ecosystem.infrastructure",
+    "value": "Infrastructure",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.applications",
+    "value": "Applications",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.financial",
+    "value": "Financial",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.nfts",
+    "value": "NFTs",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "docsMenu.ecosystem.seo.title",
+    "value": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 66
+  },
+  {
+    "key": "docsMenu.ecosystem.seo.description",
+    "value": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 168
+  },
+  {
+    "key": "docsMenu.ecosystem.seo.keywords",
+    "value": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 81
+  },
+  {
+    "key": "docsMenu.ecosystem.seo.ogTitle",
+    "value": "Ergo Ecosystem",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.seo.ogDescription",
+    "value": "Directory of Ergo dApps, wallets, infrastructure and tools.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 88.5
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.all",
+    "value": "All",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.defi",
+    "value": "DeFi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.privacy",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.infrastructure",
+    "value": "Infrastructure",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.nft",
+    "value": "NFTs",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.gaming",
+    "value": "Gaming",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.wallets",
+    "value": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.tools",
+    "value": "Tools",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.dao",
+    "value": "DAOs",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.oracles",
+    "value": "Oracles",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.filters.stable",
+    "value": "Stable",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.ecosystem.search.placeholder",
+    "value": "Search projects...",
+    "context": "Input placeholder",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.ecosystem.search.resultsCount",
+    "value": "{count} projects",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.title",
+    "value": "Rosen Bridge",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.subtitle",
+    "value": "Connecting Ergo's Ecosystem",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.description",
+    "value": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+    "context": "Description",
+    "maxLength": 331.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.stats.crossChain.label",
+    "value": "Cross-Chain",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.stats.crossChain.value",
+    "value": "BTC, ETH, ADA, BSC & more",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.stats.secureBridge.label",
+    "value": "Secure Bridge",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.stats.secureBridge.value",
+    "value": "Watcher & Guard Model",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.stats.unlockLiquidity.label",
+    "value": "Unlock Liquidity",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.stats.unlockLiquidity.value",
+    "value": "Access New Markets",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.rosenBridge.cta",
+    "value": "VISIT ROSEN BRIDGE",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.title",
+    "value": "ErgoMixer",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.subtitle",
+    "value": "Non-Custodial Privacy Protocol",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.description",
+    "value": "Mix your ERG and tokens privately using zero-knowledge proofs. ErgoMixer is the first non-interactive, non-custodial mixer in the crypto space.",
+    "context": "Description",
+    "maxLength": 214.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.stats.mixedVolume.label",
+    "value": "Mixed Volume",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.stats.mixedVolume.value",
+    "value": "10,000+ ERG",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.stats.privacyScore.label",
+    "value": "Privacy Score",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.stats.privacyScore.value",
+    "value": "99.9%",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.stats.transactions.label",
+    "value": "Transactions",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.stats.transactions.value",
+    "value": "5,000+",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.ergoMixer.cta",
+    "value": "LEARN ABOUT PRIVACY ON ERGO",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.title",
+    "value": "SigmaUSD",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.subtitle",
+    "value": "Algorithmic Stablecoin Protocol",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.description",
+    "value": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+    "context": "Description",
+    "maxLength": 301.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.stats.stabilityScore.label",
+    "value": "Stability Score",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.stats.stabilityScore.value",
+    "value": "99.8%",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.stats.totalSupply.label",
+    "value": "Total Supply",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.stats.totalSupply.value",
+    "value": "$2.5M+",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.stats.collateralRatio.label",
+    "value": "Collateral Ratio",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.stats.collateralRatio.value",
+    "value": "400-800%",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.sigmaUSD.cta",
+    "value": "EXPLORE SIGMAUSD",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.title",
+    "value": "Ergo Gaming Ecosystem",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.subtitle",
+    "value": "Blockchain Gaming Platform",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.description",
+    "value": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+    "context": "Description",
+    "maxLength": 268.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.stats.activeGames.label",
+    "value": "Active Games",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.stats.activeGames.value",
+    "value": "12+",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.stats.players.label",
+    "value": "Players",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.stats.players.value",
+    "value": "5,000+",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.stats.rewardsPaid.label",
+    "value": "Rewards Paid",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.stats.rewardsPaid.value",
+    "value": "$50K+",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projects.gaming.cta",
+    "value": "START GAMING ON ERGO",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.ecosystem.privacy",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.ai",
+    "value": "AI",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "docsMenu.ecosystem.daos",
+    "value": "DAOs",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "docsMenu.ecosystem.tooling",
+    "value": "Tooling",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.standards",
+    "value": "Standards",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.breadcrumbs.ecosystem",
+    "value": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.buttons.visitProject",
+    "value": "Visit project",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.buttons.github",
+    "value": "GitHub",
+    "context": "Button label - keep short",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.buttons.twitter",
+    "value": "Twitter",
+    "context": "Button label - keep short",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.buttons.docs",
+    "value": "Docs",
+    "context": "Button label - keep short",
+    "maxLength": 6
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.buttons.community",
+    "value": "Community",
+    "context": "Button label - keep short",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.buttons.backToEcosystem",
+    "value": "Back to Ecosystem",
+    "context": "Button label - keep short",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.status.operational",
+    "value": "Operational",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.status.testing",
+    "value": "Testing",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.status.prototype",
+    "value": "Prototype",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.status.notOperating",
+    "value": "Not operating",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.keyFeatures",
+    "value": "Key Features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.builtWith",
+    "value": "Built With Ergo Technology",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.relatedArticles",
+    "value": "Related Articles",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.viewAll",
+    "value": "View all",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.faq",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.relatedProjects",
+    "value": "Related {category} Projects",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.sections.minRead",
+    "value": "{time} min read",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.cta.title",
+    "value": "Explore More dApps",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.cta.description",
+    "value": "Discover the full Ergo ecosystem with DeFi, wallets, tools, and more.",
+    "context": "Description",
+    "maxLength": 103.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.cta.primaryButton",
+    "value": "View All Projects",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.ecosystem.projectPage.cta.secondaryButton",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.title",
+    "value": "Ergo Grants Program",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.subtitle",
+    "value": "Funding for Blockchain Projects",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.description",
+    "value": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
+    "context": "Description",
+    "maxLength": 249
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.lastUpdated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.buttons.applyNow",
+    "value": "Apply Now",
+    "context": "Button label - keep short",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.buttons.viewProjects",
+    "value": "View Projects",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.title",
+    "value": "What We Fund",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.subtitle",
+    "value": "Supporting innovation and development in the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.funding.title",
+    "value": "Developer Support",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.funding.description",
+    "value": "Funding for innovative dApps, tools, and infrastructure projects",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.research.title",
+    "value": "Research Funding",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.research.description",
+    "value": "Support for academic research and protocol improvements",
+    "context": "Description",
+    "maxLength": 82.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.community.title",
+    "value": "Community Projects",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.community.description",
+    "value": "Grants for community-driven initiatives and educational content",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.innovation.title",
+    "value": "Innovation Grants",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.features.innovation.description",
+    "value": "Special funding for breakthrough ideas and experimental projects",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.cta.title",
+    "value": "Ready to Build on Ergo?",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.cta.subtitle",
+    "value": "Start preparing your project proposal and join our community to stay updated",
+    "context": "General content",
+    "maxLength": 114
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.cta.buttons.applyGrant",
+    "value": "Apply for Grant",
+    "context": "Button label - keep short",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.cta.buttons.joinCommunity",
+    "value": "Join Community",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.seo.title",
+    "value": "Ergo Grants Program | Funding for Blockchain Projects",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 79.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.seo.description",
+    "value": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 249
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.seo.ogTitle",
+    "value": "Ergo Grants - Fund Your Blockchain Innovation",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 67.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.seo.ogDescription",
+    "value": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 147
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.seo.twitterTitle",
+    "value": "Ergo Grants Program | Get Funded",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 48
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.seo.twitterDescription",
+    "value": "Funding for developers building on Ergo. Apply for grants today.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 96
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.whatToExpect",
+    "value": "What to Expect",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.grantsFeatures",
+    "value": "Grants Program Features",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "docsMenu.ecosystem.grants.supportingInnovation",
+    "value": "Supporting innovation and development in the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.breadcrumbs.infographics",
+    "value": "Infographics",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.meta.minRead",
+    "value": "{time} min read",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.image.clickToEnlarge",
+    "value": "Click to Enlarge",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.image.fullSize",
+    "value": "Full Size",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.title",
+    "value": "Share this infographic",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.subtitle",
+    "value": "help others discover Ergo",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.telegram",
+    "value": "Telegram",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.pinterest",
+    "value": "Pinterest",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.copyLink",
+    "value": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.share.copied",
+    "value": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.sections.about",
+    "value": "About This Infographic",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.sections.systemsCompared",
+    "value": "Systems Compared",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.sections.keyPoints",
+    "value": "Key Points",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.sections.howToRead",
+    "value": "How to Read This Infographic",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.sections.relatedTopics",
+    "value": "Related Topics",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.cta.title",
+    "value": "Explore More Ergo Infographics",
+    "context": "Title",
+    "maxLength": 45
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.cta.description",
+    "value": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
+    "context": "Description",
+    "maxLength": 138
+  },
+  {
+    "key": "docsMenu.ecosystem.infographicPage.cta.button",
+    "value": "Browse All Infographics",
+    "context": "Button label",
+    "maxLength": 34.5
+  },
+  {
+    "key": "docsMenu.ecosystem.map.title",
+    "value": "Ergo Ecosystem Map",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.ecosystem.map.subtitle",
+    "value": "Interactive DeFi & dApp Directory",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "docsMenu.ecosystem.map.description",
+    "value": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+    "context": "Description",
+    "maxLength": 256.5
+  },
+  {
+    "key": "docsMenu.ecosystem.map.seo.title",
+    "value": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 81
+  },
+  {
+    "key": "docsMenu.ecosystem.map.seo.description",
+    "value": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 256.5
+  },
+  {
+    "key": "docsMenu.ecosystem.map.seo.ogTitle",
+    "value": "Interactive Ergo Ecosystem Map | 50+ Projects",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 67.5
+  },
+  {
+    "key": "docsMenu.ecosystem.map.seo.ogDescription",
+    "value": "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 126
+  },
+  {
+    "key": "docsMenu.ecosystem.map.seo.twitterTitle",
+    "value": "Ergo Ecosystem Map | Visual Project Explorer",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 66
+  },
+  {
+    "key": "docsMenu.ecosystem.map.seo.twitterDescription",
+    "value": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 124.5
+  },
+  {
+    "key": "docsMenu.developers.title",
+    "value": "Developers",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "docsMenu.developers.gettingStarted",
+    "value": "Getting Started",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.developers.ergoscriptLanguages",
+    "value": "ErgoScript Languages",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.developers.dataModelApis",
+    "value": "Data Model & APIs",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.developers.cryptographicPrimitives",
+    "value": "Cryptographic Primitives",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "docsMenu.developers.infrastructure",
+    "value": "Infrastructure",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.developers.tooling",
+    "value": "Tooling",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "docsMenu.developers.tutorials",
+    "value": "Tutorials",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.developers.bountiesGrants",
+    "value": "Bounties & Grants",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.developers.communitySupport",
+    "value": "Community Support",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.developers.students",
+    "value": "Students",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.developers.resources",
+    "value": "Resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.miners.title",
+    "value": "Miners",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.miners.miningGuides",
+    "value": "Mining Guides",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.miners.poolMining",
+    "value": "Pool Mining",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "docsMenu.miners.soloMining",
+    "value": "Solo Mining",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "docsMenu.miners.hardware",
+    "value": "Hardware",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.miners.software",
+    "value": "Software",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.miners.troubleshooting",
+    "value": "Troubleshooting",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.features.ergoscript.title",
+    "value": "ErgoScript",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "docsMenu.features.ergoscript.description",
+    "value": "Secure, declarative language for programmable money",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "docsMenu.features.ergoscript.details.verification.title",
+    "value": "Formal Verification",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "docsMenu.features.ergoscript.details.verification.description",
+    "value": "Mathematically provable contract behavior",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "docsMenu.features.ergoscript.details.privacy.title",
+    "value": "Built-in Privacy",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.ergoscript.details.privacy.description",
+    "value": "Zero-knowledge proofs and confidential transactions",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "docsMenu.features.ergoscript.details.safety.title",
+    "value": "Type Safety",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "docsMenu.features.ergoscript.details.safety.description",
+    "value": "Compile-time guarantees prevent runtime errors",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "docsMenu.features.autolykos.title",
+    "value": "Autolykos",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.features.autolykos.description",
+    "value": "ASIC-resistant Proof-of-Work algorithm",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "docsMenu.features.autolykos.details.efficiency.title",
+    "value": "Energy Efficient",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.autolykos.details.efficiency.description",
+    "value": "More efficient than traditional PoW algorithms",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "docsMenu.features.autolykos.details.solo.title",
+    "value": "Solo Mining Friendly",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.features.autolykos.details.solo.description",
+    "value": "Designed for individual miners, not just pools",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "docsMenu.features.autolykos.details.asic.title",
+    "value": "ASIC Resistant",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.features.autolykos.details.asic.description",
+    "value": "Memory-hard algorithm prevents ASIC dominance",
+    "context": "Description",
+    "maxLength": 67.5
+  },
+  {
+    "key": "docsMenu.features.eutxo.title",
+    "value": "Extended UTXO",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.features.eutxo.description",
+    "value": "Parallel smart contracts with Bitcoin-like security",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "docsMenu.features.eutxo.details.parallel.title",
+    "value": "Parallel Execution",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.features.eutxo.details.parallel.description",
+    "value": "Multiple contracts execute simultaneously without conflicts",
+    "context": "Description",
+    "maxLength": 88.5
+  },
+  {
+    "key": "docsMenu.features.eutxo.details.composability.title",
+    "value": "Composability",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.features.eutxo.details.composability.description",
+    "value": "Contracts can be combined like Lego blocks",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "docsMenu.features.eutxo.details.security.title",
+    "value": "Security",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.features.eutxo.details.security.description",
+    "value": "Eliminates reentrancy attacks and global state issues",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "docsMenu.features.storageRent.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.features.storageRent.description",
+    "value": "Sustainable blockchain economics",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "docsMenu.features.storageRent.details.sustainable.title",
+    "value": "Sustainable Growth",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.features.storageRent.details.sustainable.description",
+    "value": "Prevents unlimited blockchain growth",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "docsMenu.features.storageRent.details.rewards.title",
+    "value": "Perpetual Rewards",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.features.storageRent.details.rewards.description",
+    "value": "Miners earn fees even after emission ends",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "docsMenu.features.storageRent.details.prevention.title",
+    "value": "Bloat Prevention",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.storageRent.details.prevention.description",
+    "value": "Automatic cleanup of abandoned funds",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.title",
+    "value": "Sigma Protocols",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.description",
+    "value": "Advanced cryptographic primitives",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.details.optionalPrivacy.title",
+    "value": "Optional Privacy",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.details.optionalPrivacy.description",
+    "value": "Choose between transparent and private transactions",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.details.advancedSecurity.title",
+    "value": "Advanced Security",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.details.advancedSecurity.description",
+    "value": "Zero-knowledge proofs and threshold signatures",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.details.developerFriendly.title",
+    "value": "Developer Friendly",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.features.sigmaProtocols.details.developerFriendly.description",
+    "value": "Built-in cryptographic tools for dApps",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "docsMenu.features.nipopows.title",
+    "value": "NIPoPoWs",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.features.nipopows.description",
+    "value": "Non-Interactive Proofs of Proof-of-Work",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "docsMenu.features.nipopows.details.instantMobileSync.title",
+    "value": "Instant Mobile Sync",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "docsMenu.features.nipopows.details.instantMobileSync.description",
+    "value": "Light clients sync in seconds, not hours",
+    "context": "Description",
+    "maxLength": 60
+  },
+  {
+    "key": "docsMenu.features.nipopows.details.trustlessBridges.title",
+    "value": "Trustless Bridges",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.features.nipopows.details.trustlessBridges.description",
+    "value": "Cross-chain bridges without trusted third parties",
+    "context": "Description",
+    "maxLength": 73.5
+  },
+  {
+    "key": "docsMenu.features.nipopows.details.cryptographicSecurity.title",
+    "value": "Cryptographic Security",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "docsMenu.features.nipopows.details.cryptographicSecurity.description",
+    "value": "Mathematically proven security guarantees",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "docsMenu.features.subblocks.title",
+    "value": "Subblocks",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.features.subblocks.description",
+    "value": "Sub-second confirmations with L1 security",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "docsMenu.features.subblocks.details.subSecondConfirmations.title",
+    "value": "Sub-Second Confirmations",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "docsMenu.features.subblocks.details.subSecondConfirmations.description",
+    "value": "Payments confirm in milliseconds",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "docsMenu.features.subblocks.details.layer1Security.title",
+    "value": "Layer 1 Security",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.subblocks.details.layer1Security.description",
+    "value": "Same security as the main blockchain",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "docsMenu.features.subblocks.details.seamlessIntegration.title",
+    "value": "Seamless Integration",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.features.subblocks.details.seamlessIntegration.description",
+    "value": "Works with existing Ergo infrastructure",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.title",
+    "value": "Native Tokens",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.description",
+    "value": "First-class digital assets",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.details.oneClickCreation.title",
+    "value": "One-Click Creation",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.details.oneClickCreation.description",
+    "value": "Issue tokens in a single transaction",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.details.defiReady.title",
+    "value": "DeFi Ready",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.details.defiReady.description",
+    "value": "Native compatibility with all DeFi protocols",
+    "context": "Description",
+    "maxLength": 66
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.details.trueNativeAssets.title",
+    "value": "True Native Assets",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.features.nativeTokens.details.trueNativeAssets.description",
+    "value": "Protocol-level security, not contract-based",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "docsMenu.features.oraclePools.title",
+    "value": "Oracle Pools",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.features.oraclePools.description",
+    "value": "Decentralized data feeds",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "docsMenu.features.oraclePools.details.reliablePriceFeeds.title",
+    "value": "Reliable Price Feeds",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.features.oraclePools.details.reliablePriceFeeds.description",
+    "value": "Accurate, tamper-proof price data",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "docsMenu.features.oraclePools.details.universalCompatibility.title",
+    "value": "Universal Compatibility",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "docsMenu.features.oraclePools.details.universalCompatibility.description",
+    "value": "Works with any smart contract",
+    "context": "Description",
+    "maxLength": 43.5
+  },
+  {
+    "key": "docsMenu.features.oraclePools.details.fullyDecentralized.title",
+    "value": "Fully Decentralized",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "docsMenu.features.oraclePools.details.fullyDecentralized.description",
+    "value": "No single point of failure or control",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "docsMenu.features.velvetForks.title",
+    "value": "Velvet Forks",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.features.velvetForks.description",
+    "value": "Smooth protocol upgrades",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "docsMenu.features.velvetForks.details.backwardCompatible.title",
+    "value": "Backward Compatible",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "docsMenu.features.velvetForks.details.backwardCompatible.description",
+    "value": "Existing contracts continue working",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "docsMenu.features.velvetForks.details.futureProof.title",
+    "value": "Future Proof",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.features.velvetForks.details.futureProof.description",
+    "value": "Enables gradual adoption of new features",
+    "context": "Description",
+    "maxLength": 60
+  },
+  {
+    "key": "docsMenu.features.velvetForks.details.gradualAdoption.title",
+    "value": "Gradual Adoption",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.velvetForks.details.gradualAdoption.description",
+    "value": "Changes activate over time, not instantly",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.title",
+    "value": "Adaptive Emission",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.description",
+    "value": "Flexible monetary policy",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.details.parameterTuning.title",
+    "value": "Parameter Tuning",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.details.parameterTuning.description",
+    "value": "Community can adjust emission parameters",
+    "context": "Description",
+    "maxLength": 60
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.details.economicFlexibility.title",
+    "value": "Economic Flexibility",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.details.economicFlexibility.description",
+    "value": "Respond to changing economic conditions",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.details.communityInput.title",
+    "value": "Community Input",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "docsMenu.features.adaptiveEmission.details.communityInput.description",
+    "value": "Democratic governance of monetary policy",
+    "context": "Description",
+    "maxLength": 60
+  },
+  {
+    "key": "docsMenu.map.title",
+    "value": "Technology Architecture Map",
+    "context": "Title",
+    "maxLength": 40.5
+  },
+  {
+    "key": "docsMenu.map.subtitle",
+    "value": "Interactive visualization of how Ergo's technologies work together",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "docsMenu.map.seo.title",
+    "value": "Ergo Technology Map | Interactive Blockchain Architecture Visualization",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 106.5
+  },
+  {
+    "key": "docsMenu.map.seo.description",
+    "value": "Explore Ergo's technology ecosystem through an interactive map. See how ErgoScript, Autolykos, eUTXO, Sigma Protocols, and other components connect to create a powerful blockchain platform.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 283.5
+  },
+  {
+    "key": "docsMenu.map.seo.keywords",
+    "value": "ergo technology map, blockchain architecture, interactive visualization, ergoscript connections, technology ecosystem, blockchain components",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 210
+  },
+  {
+    "key": "docsMenu.map.seo.ogTitle",
+    "value": "Ergo Technology Map - Interactive Architecture Overview",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 82.5
+  },
+  {
+    "key": "docsMenu.map.seo.ogDescription",
+    "value": "Visualize how Ergo's advanced technologies connect and interact in our comprehensive technology map.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 150
+  },
+  {
+    "key": "docsMenu.map.seo.ogAlt",
+    "value": "Ergo Technology Architecture Map",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 48
+  },
+  {
+    "key": "docsMenu.map.seo.twitterTitle",
+    "value": "Explore Ergo's Technology Map",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 43.5
+  },
+  {
+    "key": "docsMenu.map.seo.twitterDescription",
+    "value": "Interactive visualization of Ergo's blockchain architecture and component connections.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 129
+  },
+  {
+    "key": "docsMenu.map.categories.all",
+    "value": "All Technologies",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "docsMenu.map.categories.core",
+    "value": "Core Technologies",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.map.categories.consensus",
+    "value": "Consensus",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "docsMenu.map.categories.features",
+    "value": "Features",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "docsMenu.map.categories.infrastructure",
+    "value": "Infrastructure",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "docsMenu.map.legend.title",
+    "value": "Legend",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "docsMenu.map.legend.core",
+    "value": "Core Technologies",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.map.legend.consensus",
+    "value": "Consensus Mechanism",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "docsMenu.map.legend.features",
+    "value": "Advanced Features",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "docsMenu.map.legend.infrastructure",
+    "value": "Infrastructure Layer",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "docsMenu.map.legend.directConnection",
+    "value": "Direct Integration",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.map.legend.relation",
+    "value": "Related Technology",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "docsMenu.map.details.keyFeatures",
+    "value": "Key Features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "docsMenu.map.details.connections",
+    "value": "Connected Technologies",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "docsMenu.map.details.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "docsMenu.map.details.close",
+    "value": "Close",
+    "context": "General content",
+    "maxLength": 7.5
+  }
+]

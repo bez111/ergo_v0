@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 
 export default function MosaikExamplesPage() {

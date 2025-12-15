@@ -1,7 +1,7 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   Shield, Users, Key, Lock, ExternalLink, AlertTriangle, CheckCircle, Info,
   Layers, Network, Settings, FileText, ArrowRight, BookOpen

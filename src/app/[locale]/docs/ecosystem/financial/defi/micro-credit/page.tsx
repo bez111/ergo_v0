@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { BookOpen, Users, Coins, ExternalLink, Info, Copy, Check, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";

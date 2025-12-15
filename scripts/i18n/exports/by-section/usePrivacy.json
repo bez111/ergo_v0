@@ -1,0 +1,20 @@
+[
+  {
+    "key": "usePrivacy.title",
+    "value": "Privacy Applications",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "usePrivacy.description",
+    "value": "Financial privacy tools and mixing services",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "usePrivacy.subtitle",
+    "value": "Confidential transactions and asset protection",
+    "context": "General content",
+    "maxLength": 69
+  }
+]

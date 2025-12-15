@@ -1,0 +1,1149 @@
+{
+  "learn": {
+    "title": "学习",
+    "subtitle": "人人享有教育资源",
+    "description": "Ergo blockchain 的教育资源",
+    "schema": "学习 Ergo Blockchain - 教育资源",
+    "seo": {
+      "title": "学习 - Ergo Blockchain 教育 | Ergo 平台",
+      "description": "学习Ergo blockchain 技术、智能合约和开发。",
+      "keywords": "Ergo 教育、区块链学习、教程、文档",
+      "ogTitle": "学习 Ergo Blockchain",
+      "ogDescription": "学习Ergo 区块链技术的教育资源、教程和指南。",
+      "twitterTitle": "学习 Ergo Blockchain",
+      "twitterDescription": "学习Ergo blockchain的教育资源、教程和指南。"
+    },
+    "glossaryTermPage": {
+      "seo": {
+        "notFound": {
+          "title": "未找到术语",
+          "description": "请求的术语表条目不存在。"
+        },
+        "titleTemplate": "什么是{term}？ | Ergo 术语表",
+        "imageAltTemplate": "{term} — Ergo 术语表"
+      },
+      "schema": {
+        "definedTermSetName": "Ergo 区块链术语表",
+        "headlineTemplate": "什么是{term}？",
+        "proficiency": {
+          "beginner": "入门",
+          "intermediate": "中级",
+          "advanced": "高级"
+        }
+      }
+    },
+    "common": {
+      "learnMore": "了解更多"
+    },
+    "resources": {
+      "tutorials": "教程",
+      "videos": "视频",
+      "articles": "文章",
+      "documentation": "文件",
+      "faq": {
+        "title": "常见问题",
+        "description": "关于Ergo blockchain 的常见问题",
+        "difficulty": "初学者",
+        "duration": "15 分钟"
+      },
+      "research": {
+        "title": "研究文件",
+        "description": "学术研究和白皮书",
+        "difficulty": "高级版",
+        "duration": "60 + 分钟"
+      }
+    },
+    "faq": {
+      "categories": {
+        "title": "类别管理",
+        "general": "A. 概况",
+        "technology": "技术",
+        "economics": "经济",
+        "ecosystem": "生态环境",
+        "wallets": "钱包",
+        "troubleshooting": "故障排除"
+      },
+      "searchPlaceholder": "搜索常见问题...",
+      "expandAll": "展开所有",
+      "collapseAll": "折叠所有"
+    },
+    "research": {
+      "research_by_category": "按类别分列的研究",
+      "join_the_discussion": "加入讨论",
+      "ergoscript_foundations_and_security_url": "General content",
+      "security_properties_of_eutxo_based": "85.5",
+      "zero_knowledge_proofs_in_sigma_protocols_url": "70.5",
+      "ring_signatures_for_blockchain_privacy": "Blockchain 隐私的环签名",
+      "composable_defi_primitives_on_eutxo_url": "63",
+      "on_chain_lending_lets_and_oracles_url": "63",
+      "ergo_storage_rent_model_url": "General content",
+      "efficient_blockchain_state_management_url": "66",
+      "ergoscript_documentation_url_https_ergoplatform": "General content",
+      "node_implementation_url_https_github": "General content",
+      "sigma_rust_cryptography_library_url": "General content",
+      "ergomixer_technical_overview_url": "52.5",
+      "learn_item_https_ergoblockchain_org_learn": "General content",
+      "research_item_https_ergoblockchain_org": "General content",
+      "learn_href_learn": "General content",
+      "research_href_learn_research": "General content",
+      "the_core_technical_paper_describing_ergo": "说明埃尔戈的核心技术文件",
+      "extended_utxo_eutxo_model": "扩展 UTXO 模型",
+      "by_iohk_cardano_ergo_researchers": "IOHK/Cardano & Ergo研究人员——关于eUTXO模式的最后文件。",
+      "the_cryptographic_backbone_of_privacy": "埃尔戈的隐私和环形签名的加密主干。",
+      "autolykos_ergo_pow_algorithm": "Autolykos: Ergo PoW Algorithm",
+      "a_novel_asic_resistant_proof": "一个新颖的、抵制ASIC的工作证明共识机制。",
+      "research_on_cross_chain_lightweight": "关于跨链、轻量验证协议的研究，以实现不可信的互操作性。",
+      "formal_security_protocol_analysis": "正式安全和协议分析",
+      "ergoscript_foundations_and_security": "ErgoScript: 基础与安全",
+      "security_properties_of_eutxo_based_smart_contracts": "基于eUTXO的智能合同的安全属性",
+      "privacy_zero_knowledge": "隐私和零知识",
+      "zero_knowledge_proofs_in_sigma_protocols": "Sigma 协议中的零知识校正",
+      "defi_economic_models": "Defi & 经济模型",
+      "composable_defi_primitives_on_eutxo": "在eUTXO上可混成的 DeFi 素材",
+      "on_chain_lending_lets_and_oracles": "链上出贷、LETS和Oracles",
+      "storage_rent_blockchain_sustainability": "储藏出租和区块链可持续性",
+      "ergo_storage_rent_model": "Ergo 存储租金模型",
+      "efficient_blockchain_state_management": "有效的区块链国家管理",
+      "ergoscript_documentation": "ErgoScript Documentation",
+      "sigma_rust_cryptography_library": "Sigma-Rust 密码库",
+      "ergomixer_technical_overview": "ErgoMixer 技术概述",
+      "core_protocol_design_and_philosophy": "核心议定书的设计和原理",
+      "cryptography_consensus_and_architecture": "密码、共识和结构",
+      "discuss_research_and_collaborate": "讨论研究与合作",
+      "academic_groundwork_and_technical_papers": "支持埃尔戈议定书、安全和经济学的学术基础和技术文件。",
+      "curated_links_to_whitepapers_formal": "管理到白纸、正式分析和开发者资源的链接。",
+      "have_an_idea_or_want": "有想法或想要贡献？加入社区渠道来讨论研究与合作。",
+      "blockchain_cryptography_consensus_algorithms_smart": ", ",
+      "ergo_research_papers_blockchain_academic": "Ergo Research Papers | Blockchain 学术出版物",
+      "ergo_research_academic_blockchain_papers": "Ergo Research | Academic Blockchain Papers",
+      "peer_reviewed_research_publications_on_ergo": "经同行审查的关于埃尔戈的研究出版物",
+      "ergo_research_papers_academic_publications": "Ergo Research Papers | 学术出版物",
+      "collection_of_academic_research_papers": "关于Ergo blockchain 技术的学术研究论文汇编",
+      "collection_of_peer_reviewed_papers": "在Ergo blockchain 上收集经同行审核的文档"
+    },
+    "guides": {
+      "confidential_transactions": "保密交易",
+      "practical_use_cases": "实际使用案件",
+      "confidential_defi_protocols": "保密的 DeFi 协议",
+      "sigma_protocols_are_advanced_cryptographic": "Sigma 协议是先进的密码工具，能够提供零知识证明，使用户能够在不透露信息的情况下证明陈述。 这是埃尔戈智能合同隐私的基础。",
+      "ergomixer_is_a_privacy_tool": "ErgoMixer是一个隐私工具，用户可以混合他们的ERG和令牌，打破发送者和接收者之间的链路。 这加强了交易隐私和可互换性。",
+      "using_sigma_protocols_and_custom": "使用 Sigma 协议和自定义脚本，用户可以在 Ergo 上创建保密交易和保护隐私的应用程序。",
+      "ergo_s_privacy_features_empower": "Ergo的隐私功能增强了用户控制数据和区块链上的财务隐私的能力。",
+      "consensus": {
+        "consensus_in_ergo": "在埃尔戈达成的共识：",
+        "what_is_autolykos": "什么是 Autolykos",
+        "prevents_centralization_of_mining_power": "防止采矿电力的中央化",
+        "ensures_network_security_through_fair_competition": "通过公平竞争确保网络安全",
+        "energy_efficient_compared_to_traditional_pow": "与传统的PoW相比能源效率",
+        "why_pow": "为什么PoW？",
+        "ergo_uses_autolykos_a_unique": "Ergo 使用 Autolykos ，这是一种独特的、具有ASIC抗工作能力的算法。这将确保公平采矿和权力下放，同时保持网络的安全性和能效。",
+        "autolykos_is_a_memory_hard": "Autolykos是一种内存硬PoW算法，旨在抗拒ASIC并有利于GPU矿工。它有助于保持权力下放和防止采矿集中。",
+        "proof_of_work_is_a": "工作证明是一个行之有效的协商一致机制，能够确保该网络的安全，能够无许可地参与，并对诚实行为给予奖励。"
+      },
+      "oraclePool": {
+        "how_oracle_pools_work": "Oracle 库是如何工作的",
+        "multiple_oracles_submit_data_e": "多个口径向集合提交数据（如价格原料）。",
+        "decentralized_and_trustless_data_feeds": "分散和不可信的数据源",
+        "lower_costs_for_dapps": "dapp 的低成本",
+        "resistant_to_manipulation_and_single": "抵制操纵和单个故障点",
+        "practical_use_cases": "实际使用案件",
+        "stablecoins_e_g_sigmausd": "Stablecoins (e.g., SigmaUSD)",
+        "oracles_bring_real_world_data": "Oracles 将真实世界的数据带到区块链。Ergo 率先运行Oracle Pools，使数据源分散、安全和支付得起。",
+        "oracle_pools_are_a_core": "Oracle 池是埃尔戈的一项核心创新，使新一代分散的应用成为可能。"
+      },
+      "storageRent": {
+        "how_storage_rent_works": "存储租金如何工作",
+        "fees_are_collected_by_miners": "收费由矿工收取，激励他们维护网络。",
+        "unclaimed_or_abandoned_boxes_are": "未被利用或遗弃的箱子最终被回收，腾出空间。",
+        "prevents_blockchain_bloat": "阻止区块链博客",
+        "encourages_active_participation": "鼓励积极参与",
+        "ensures_long_term_sustainability": "确保长期可持续性",
+        "storage_rent_is_a_unique": "储存租金是一个独特的功能，有助于埃尔戈在今后几年保持效率和可持续性。"
+      },
+      "what_is_a_utxo": "什么是 UTXO？",
+      "unspent_transaction_output": "未花费的交易输出",
+      "what_is_eutxo": "什么是eUTXO？",
+      "high": "高",
+      "the_extended_utxo_eutxo_model": "扩展的 UTXO 模型是Ergo 的基础。它将比特币的 UTXO 的简单性和安全性与智能合约的可编程性结合起来。",
+      "utxo_stands_for": "UTXO 代表",
+      "in_ergo_a_simple_payment": "在埃尔戈，一个简单的付款是一个由脚本锁定的框，只有收款人才能解锁。 通过在方框脚本中添加逻辑并存储额外数据，可以获得更复杂的合同（如多重签名、Oracles或 DeFi）。",
+      "ergo_educational_guides": "埃尔戈教育指南",
+      "want_to_suggest_your_own": "想要推荐您自己的指南或改进现有材料吗？",
+      "contribute_to_the_documentation": "为文档做贡献",
+      "how_ergoscript_works_the_basics": "ErgoScript 如何工作：基础知识",
+      "what_is_an_oracle_pool": "什么是Oracle Pool？",
+      "how_fees_work_in_ergo": "费用如何在埃尔戈工作",
+      "history_and_mission_of_ergo": "埃尔戈的历史和任务",
+      "what_is_eutxo_and_why_does_it_matter": "什么是 eUTXO 和为什么它是重要的？",
+      "a_deep_dive_into_the": "在埃尔戈的核心深深潜入扩展的 UTXO 模型。",
+      "an_explanation_of_ergoscript_syntax": "关于智能合约的 ErgoScript 语法和功能的解释。",
+      "the_role_and_structure_of": "神道在埃尔戈生态系统中的作用和结构。",
+      "principles_of_fee_calculation_and": "网络费用计算和分配原则。",
+      "ergo_vs_cardano_a_comparison": "Ergo vs Cardano: A Comparison",
+      "terms_and_definitions_every_ecosystem": "每个生态系统参与者都应知道的术语和定义。",
+      "the_project": "项目",
+      "dive_into_the_fundamental_concepts": "深入到Ergo blockchain的基本概念、结构和技术。在这里你可以找到解释、比较、词汇表和最好的教材。",
+      "how_ergoscript_works": "ErgoScript 如何工作",
+      "simple_auditable_syntax": "简单、可审计的语法",
+      "native_support_for_zero_knowledge_proofs": "本土对零知识证明的支持",
+      "flexible_and_secure_smart_contracts": "灵活和安全的智能合同",
+      "efficient_execution_and_low_fees": "高效执行和低费用",
+      "example_basic_ownership": "示例：基本所有权",
+      "decentralized_exchanges": "分散化的交流",
+      "privacy_preserving_contracts": "保护隐私的合同",
+      "oracles_and_data_feeds": "Oracles and data feed",
+      "ergoscript_is_a_powerful_yet": "ErgoScript 是Ergo blockchain一个强大但简单的智能合同语言。它基于Sigma 协议，从而能够高级加密和隐私。",
+      "ergoscript_s_design_makes_it": "ErgoScript的设计使得能够在Ergo上建立安全、高效和以隐私为重点的应用程序。",
+      "how_storage_rent_works": "存储租金如何工作",
+      "fees_are_collected_by_miners": "收费由矿工收取，激励他们维护网络。",
+      "unclaimed_or_abandoned_boxes_are": "未被利用或遗弃的箱子最终被回收，腾出空间。",
+      "prevents_blockchain_bloat": "阻止区块链博客",
+      "encourages_active_participation": "鼓励积极参与",
+      "ensures_long_term_sustainability": "确保长期可持续性",
+      "storage_rent_is_a_unique": "储存租金是一个独特的功能，有助于埃尔戈在今后几年保持效率和可持续性。",
+      "privacy": {
+        "confidential_transactions": "保密交易",
+        "practical_use_cases": "实际使用案件",
+        "confidential_defi_protocols": "保密的 DeFi 协议",
+        "sigma_protocols_are_advanced_cryptographic": "Sigma 协议是先进的密码工具，能够提供零知识证明，使用户能够在不透露信息的情况下证明陈述。 这是埃尔戈智能合同隐私的基础。",
+        "ergomixer_is_a_privacy_tool": "ErgoMixer是一个隐私工具，用户可以混合他们的ERG和令牌，打破发送者和接收者之间的链路。 这加强了交易隐私和可互换性。",
+        "using_sigma_protocols_and_custom": "使用 Sigma 协议和自定义脚本，用户可以在 Ergo 上创建保密交易和保护隐私的应用程序。",
+        "ergo_s_privacy_features_empower": "Ergo的隐私功能增强了用户控制数据和区块链上的财务隐私的能力。"
+      },
+      "how_oracle_pools_work": "Oracle 库是如何工作的",
+      "multiple_oracles_submit_data_e": "多个口径向集合提交数据（如价格原料）。",
+      "decentralized_and_trustless_data_feeds": "分散和不可信的数据源",
+      "lower_costs_for_dapps": "dapp 的低成本",
+      "resistant_to_manipulation_and_single": "抵制操纵和单个故障点",
+      "stablecoins_e_g_sigmausd": "Stablecoins (e.g., SigmaUSD)",
+      "oracles_bring_real_world_data": "Oracles 将真实世界的数据带到区块链。Ergo 率先运行Oracle Pools，使数据源分散、安全和支付得起。",
+      "oracle_pools_are_a_core": "Oracle 池是埃尔戈的一项核心创新，使新一代分散的应用成为可能。",
+      "consensus_in_ergo": "在埃尔戈达成的共识：",
+      "what_is_autolykos": "什么是 Autolykos",
+      "prevents_centralization_of_mining_power": "防止采矿电力的中央化",
+      "ensures_network_security_through_fair_competition": "通过公平竞争确保网络安全",
+      "energy_efficient_compared_to_traditional_pow": "与传统的PoW相比能源效率",
+      "why_pow": "为什么PoW？",
+      "ergo_uses_autolykos_a_unique": "Ergo 使用 Autolykos ，这是一种独特的、具有ASIC抗工作能力的算法。这将确保公平采矿和权力下放，同时保持网络的安全性和能效。",
+      "autolykos_is_a_memory_hard": "Autolykos是一种内存硬PoW算法，旨在抗拒ASIC并有利于GPU矿工。它有助于保持权力下放和防止采矿集中。",
+      "proof_of_work_is_a": "工作证明是一个行之有效的协商一致机制，能够确保该网络的安全，能够无许可地参与，并对诚实行为给予奖励。",
+      "in_depth_technical_guides_for": "Ergo blockchain的深入技术指南。学习eUTXO模型、共识机制、隐私功能、oracle 池和存储租用。为开发者提供专家教程。",
+      "expert_tutorials_on_eutxo_consensus": "关于eUTXO、共识、隐私等的专家辅导。",
+      "ergo_technical_guides_defi_mining": "Ergo 技术指南 | Defi, Mining & Development 教程",
+      "ergo_technical_guides_expert_blockchain_tutorials": "Ergo 技术指南 | Expert Blockchain 教程",
+      "ergo_technical_guides_learn_blockchain": "Ergo 技术指南 | 学习 Blockchain",
+      "collection_of_technical_guides_and": "Ergo blockchain 技术指南和教程收藏"
+    },
+    "learnErgoscript": {
+      "title": "学习 ErgoScript",
+      "subtitle": "Master Ergo的智能合同语言",
+      "description": "学习ErgoScript的综合指南，Ergo的强大智能合同编程语言。",
+      "lastUpdated": "上次更新",
+      "features": {
+        "title": "为什么要学习 ErgoScript？",
+        "subtitle": "区块链开发的强大功能",
+        "secure": {
+          "title": "设计安全",
+          "description": "内在的安全特征和正式的核查能力"
+        }
+      },
+      "buttons": {
+        "startTutorial": "开始教程",
+        "documentation": "文件"
+      },
+      "cta": {
+        "title": "准备开始编码吗？",
+        "subtitle": "今天开始你的 ErgoScript 旅程",
+        "buttons": {
+          "startLearning": "开始学习",
+          "joinCommunity": "加入社区"
+        }
+      }
+    },
+    "browseFaq": "浏览常见问题",
+    "sections": {
+      "basics": "区块链基础",
+      "ergoScript": "ErgoScript",
+      "development": "贸易和发展会议",
+      "research": "研究"
+    },
+    "categories": {
+      "basics": {
+        "title": "基础知识",
+        "description": "使用区块链基础开始您的旅程。"
+      },
+      "advanced": {
+        "title": "高级版",
+        "description": "深深潜入技术概念"
+      },
+      "development": {
+        "title": "贸易和发展会议",
+        "description": "学习如何在Ergo上建设"
+      },
+      "economics": {
+        "title": "经济",
+        "description": "理解Ergo的经济模式"
+      }
+    },
+    "paths": {
+      "beginner": {
+        "title": "入门路径",
+        "description": "新建到区块链吗？从这里开始"
+      },
+      "developer": {
+        "title": "开发者路径",
+        "description": "学习如何在 Ergo 上创建 dApps"
+      },
+      "trader": {
+        "title": "交易路径",
+        "description": "主Defi 和交易"
+      }
+    },
+    "learn_more": "了解更多",
+    "start_your_journey_with_our": "用我们的初步友善介绍开始您的旅程。",
+    "new_to_ergo": "新建到Ergo？",
+    "get_started": "开始",
+    "join_the_community": "加入社区",
+    "connect_with_other_developers_and_get_help": "与其他开发者连接并获得帮助",
+    "connect_with_other_developers_and": "连接其他开发者并从Ergo社区获得帮助",
+    "ergoscript": {
+      "your_path_to_ergoscript_mastery": "你到 ErgoScript 专知的路径",
+      "ergoscript_language_fundamentals": "ErgoScript 语言基础",
+      "advanced_contract_logic_patterns": "高级合同逻辑模式",
+      "tokens_nfts_and_sigma_protocols": "令牌、NFTs和Sigma-协议",
+      "multi_stage_dapps_and_defi": "多阶段的 dApps 和 DeFi",
+      "testing_and_security_best_practices": "测试和安全最佳做法",
+      "blockchain_basics_smart_contract_fundamentals": ", ",
+      "security_best_practices_advanced_cryptography": "General content",
+      "functional_paradigms_type_safety_immutable": ", ",
+      "dex_protocols_lending_platforms_algorithmic": ", ",
+      "foundations_of_ergo_and_ergoscript": "Ergo 和 ErgoScript 的基础",
+      "introduction_to_ergo_the_eutxo_model_duration": "75",
+      "what_is_ergoscript_philosophy_and": "88.5",
+      "setting_up_your_ergoscript_development": "93",
+      "basic_syntax_data_types_operators_duration": "70.5",
+      "boxes_registers_context_variables_duration": "70.5",
+      "anatomy_of_an_ergo_transaction_duration": "63",
+      "creating_basic_contracts": "创建基本合同",
+      "always_true_duration": "36",
+      "time_locked_contracts_duration": "49.5",
+      "ergotree_compilation_duration": "51",
+      "fees_transaction_size_duration": "52.5",
+      "working_with_data_and_tokens": "使用数据和令牌工作",
+      "reading_writing_registers_duration": "55.5",
+      "handling_erg_native_tokens_duration": "60",
+      "minting_burning_tokens_duration": "51",
+      "nfts_in_ergoscript_duration": "45",
+      "intermediate_contract_logic": "中间合同ogic",
+      "multi_stage_contracts_state_transitions_duration": "79.5",
+      "using_oracles_duration": "37.5",
+      "basic_escrow_duration": "36",
+      "sigma_protocols_proofs_of_knowledge_duration": "73.5",
+      "daos_voting_duration": "37.5",
+      "advanced_ergoscript_cryptography": "高级ErgoScript & 加密",
+      "ring_signatures_mixing_duration": "52.5",
+      "threshold_signatures_duration": "48",
+      "designing_defi_primitives_duration": "55.5",
+      "gas_optimization_script_complexity_duration": "72",
+      "advanced_context_extensions_duration": "58.5",
+      "testing_debugging_best_practices": "测试、调试和最佳做法",
+      "unit_integration_testing_duration": "57",
+      "debugging_techniques_duration": "48",
+      "pitfalls_vulnerabilities_duration": "57",
+      "secure_development_best_practices_duration": "67.5",
+      "practical_projects_dapp_examples": "实用项目和 dApp 示例",
+      "nft_marketplace_duration": "40.5",
+      "decentralized_lottery_duration": "49.5",
+      "defi_lending_protocol_duration": "49.5",
+      "privacy_preserving_payment_channel_duration": "69",
+      "custom_oracle_implementation_duration": "60",
+      "your_first_contract_always_true": "General content",
+      "secure_by_design": "设计安全",
+      "powerful_expressive": "强大与表达式",
+      "enables_complex_defi_multi_stage": "启用复杂的 DeFi，多阶段协议和独特的 dApps",
+      "only_ergoscript_unlocks_the_full": "只有ErgoScript 解锁了eUTXO的全部能量：可预见的成本、本地状态、复合性",
+      "built_in_cryptography": "内置加密",
+      "native_support_for_sigma_protocols": "本土对Sigma协议、隐私和高级访问计划的支持",
+      "new_to_smart_contracts": "新建智能合同",
+      "step_by_step_explanations_of": "逐步解释核心区块链和智能合同概念",
+      "experienced_blockchain_developers": "经验丰富的区块链开发者",
+      "discover_eutxo_new_safe_patterns": "发现eUTXO，新的安全模式和高级合同设计",
+      "scala_functional_programmers": "缩放/函数程序",
+      "build_the_next_generation_of": "建立下一代分散的财务应用",
+      "introduction_to_ergo_the_eutxo_model": "Ergo 和 eUTXO 模型简介",
+      "what_is_ergoscript_philosophy_and_design_goals": "什么是ErgoScript？哲学和设计目标",
+      "setting_up_your_ergoscript_development_environment": "设置您的 ErgoScript 开发环境",
+      "basic_syntax_data_types_operators": "基本语法，数据类型，操作员",
+      "boxes_registers_context_variables": "框，注册，上下文变量",
+      "anatomy_of_an_ergo_transaction": "Ergo 交易的解析度",
+      "your_first_contract": "您的第一个合同：",
+      "time_locked_contracts": "锁定时间的合同",
+      "ergotree_compilation": "Ergotree & Compilation",
+      "fees_transaction_size": "手续费和交易大小",
+      "reading_writing_registers": "读取/写入注册",
+      "handling_erg_native_tokens": "处理ERG & 原生令牌",
+      "minting_burning_tokens": "最小/燃烧令牌",
+      "nfts_in_ergoscript": "ErgoScript 的 NFTs",
+      "token_standards_eip_004": "令牌标准 (EIP-004)",
+      "multi_stage_contracts_state_transitions": "多阶段合同和州过渡",
+      "sigma_protocols_proofs_of_knowledge": "Sigma 协议 & 知识证明",
+      "ring_signatures_mixing": "环签名，合并",
+      "designing_defi_primitives": "正在设计 Defi 素材",
+      "gas_optimization_script_complexity": "气体优化和脚本复杂度",
+      "advanced_context_extensions": "高级上下文扩展",
+      "unit_integration_testing": "单元和集成测试",
+      "pitfalls_vulnerabilities": "陷阱与脆弱性",
+      "secure_development_best_practices": "安全发展最佳做法",
+      "decentralized_lottery": "分权彩票：",
+      "defi_lending_protocol": "DFi 贷款协议",
+      "privacy_preserving_payment_channel": "私密保存付款频道",
+      "custom_oracle_implementation": "自定义Oracle 实现",
+      "your_first_contract_always_true_duration": "General content",
+      "ergoscript_tutorial_series": "ErgoScript 教程系列",
+      "master_ergoscript_your_path_to": "Master ErgoScript: 您在Ergo 上建立安全和强大的智能合同的路径",
+      "step_by_step_tutorials_covering": "分步教程涵盖从基础知识到高级Defi 协议的所有内容，为所有经验级别的开发者设计。",
+      "your_first_ergoscript_contract": "您的第一个ErgoScript 合同",
+      "why_learn_ergoscript": "为什么要学习 ErgoScript？",
+      "who_is_this_tutorial_series_for": "此教程系列为谁？",
+      "what_you_will_learn": "您将学习的内容",
+      "tutorial_series_structure": "教程系列结构",
+      "frequently_asked_questions": "常见问题",
+      "ready_to_master_ergoscript": "准备好掌握ErgoScript？",
+      "join_our_community_of_developers": "加入我们的开发者社区，在Ergo上建设分散应用的未来。从初学者到专家的旅程使用我们的全面教程系列开始。",
+      "start_learning_now": "立即开始学习",
+      "master_ergoscript_programming_language_build": "掌握ErgoScript 编程语言。在Ergo blockchain上建立安全的智能合约，使用零知识验证、多阶段协议和先进的加密技术。",
+      "build_powerful_defi_applications_with": "使用 ErgoScript 高级功能构建强大的 DeFi 应用程序。",
+      "smart_contracts_blockchain_programming_ergoscript": ", ",
+      "learn_ergoscript_smart_contract_programming": "学习 ErgoScript | 智能合同编程教程",
+      "ergoscript_programming_tutorial_build_on_ergo": "ErgoScript 编程教程 | 建立在Ergo",
+      "learn_ergoscript_smart_contract_development": "学习 ErgoScript | 智能合同开发",
+      "build_powerful_defi_applications_with_ergoscript": "使用 ErgoScript 构建强大的 DeFi 应用程序",
+      "learn_to_build_smart_contracts_with_ergoscript": "学习与 ErgoScript 构建智能合同"
+    },
+    "learn_ergo_educational_resources": "学习 Ergo - 教育资源",
+    "learn_ergo_master_blockchain_development": "学习 Ergo - 掌握Blockchain 开发",
+    "beginner_to_expert": "从头到专家",
+    "comprehensive_learning_resources_for_ergo": "Ergo blockchain的全面学习资源。从初级指南到高级的 ErgoScript 开发。",
+    "ergoscript_tutorials_faq_research_papers": "ErgoScript 教程、常见问题解答、研究论文和所有级别的全面指南。",
+    "comprehensive_education_on_ergo_blockchain": "关于Ergo 区块链技术的全面教育，从基础知识到高级发展",
+    "master_ergoscript_your_path_to": "Master ErgoScript: 您在Ergo上逐步建立安全和强大的智能合同的路径",
+    "everything_you_need_to_know": "你需要在一个地方了解的关于Ergo blockchain、技术和生态系统的一切信息",
+    "hub": {
+      "badge": "Ergo 学习中心",
+      "title": "Master Ergo Development",
+      "subtitle": "学习ErgoScript, eUTXO 智能合约, 和 Sigma 协议, 通过实践教程和专家导师。",
+      "description": "从初学者钱包设置到高级隐私的 dApps — 带有真正项目和社区支持的结构化路径。",
+      "seo": {
+        "title": "学习 Ergo 开发 — ErgoScript 教程与智能合约",
+        "description": "通过实战教程、结构化学习路径与社区指导学习 ErgoScript、eUTXO 智能合约与 Sigma 协议。",
+        "keywords": "ErgoScript 教程, Ergo 智能合约, eUTXO 编程, Sigma 协议, 区块链开发, Ergo 开发者学习, Ergo dApp",
+        "ogImageAlt": "Ergo Learn — 用 Sigma 协议构建"
+      },
+      "schema": {
+        "course": {
+          "name": "Ergo 学习中心",
+          "description": "结构化学习路径：Ergo 基础、开发工具、隐私设计与研究级经济模型。",
+          "audienceType": "开发者, 创业者, 研究者, 隐私构建者",
+          "educationalLevel": "从入门到高级",
+          "instances": [
+            { "name": "ErgoScript 构建路径", "description": "ErgoScript 模式、确定性与部署的实战课程。", "duration": "PT20H" },
+            { "name": "隐私与 Sigma 协议", "description": "Σ 协议、混币与选择性披露的交互式讲解。" },
+            { "name": "研究与代币经济", "description": "白皮书、Storage Rent 模型与 Autolykos 研究资料。" }
+          ]
+        }
+      },
+      "startButton": "开始",
+      "quickReference": {
+        "title": "快速参考",
+        "items": {
+          "visualGuides": {
+            "name": "视觉指南",
+            "subtitle": "简单地解释Ergo的信息图形"
+          },
+          "glossary": {
+            "name": "Glossary",
+            "subtitle": "埃尔戈术语和核心概念"
+          },
+          "playbooks": {
+            "name": "游戏书",
+            "subtitle": "DeFi，隐私，挖掘分步路径"
+          },
+          "devPatterns": {
+            "name": "开发模式",
+            "subtitle": "智能合同模式和可重复使用的蓝图"
+          }
+        }
+      },
+      "tracks": {
+        "curatedPathway": "管理路径",
+        "stackTitle": "您将触摸的应用",
+        "stackLabels": {
+          "core": "核心文件",
+          "tooling": "配刀中",
+          "mentors": "导师",
+          "deliverable": "可交付"
+        },
+        "foundations": {
+          "label": "基金会",
+          "badge": "从这里开始",
+          "description": "了解什么使Ergo不同、钱包如何保持主权，以及为什么存储租金能够维持这一链的可持续性。",
+          "bullets": {
+            "0": "Fair-launch DNA + 关键原则",
+            "1": "钱包安全 + 链中的习惯管理",
+            "2": "eUTXO vs 帐户心态偏移"
+          },
+          "cta": "入门路径",
+          "stack": {
+            "core": "钱包 · 存储空间 · eUTXO",
+            "tooling": "Nautilus · SAFEW · 浏览器",
+            "mentors": "社区频道",
+            "deliverable": "安全钱包设置"
+          }
+        },
+        "developer": {
+          "label": "开发者",
+          "badge": "代码",
+          "description": "Hands-on ErgoScript 教程，VS 代码片段和全堆栈参考dApp。",
+          "bullets": {
+            "0": "Playground + AppKit 工作流",
+            "1": "您可以派生的合同模板",
+            "2": "钱包 + 浏览器集成"
+          },
+          "cta": "打开开发指南",
+          "stack": {
+            "core": "eUTXO · ErgoScript · Sigma",
+            "tooling": "游乐场 · AppKit · 浏览器",
+            "mentors": "Discord 办公时间",
+            "deliverable": "运送符合要求的应用"
+          }
+        },
+        "topics": {
+          "label": "主题",
+          "badge": "浏览",
+          "description": "管理主题组别，将概念、条款和资源联系在一起。",
+          "bullets": {
+            "0": "隐私和 Sigma 协议",
+            "1": "Mining & Autolykos",
+            "2": "Defi & 智能合同"
+          },
+          "cta": "浏览主题",
+          "stack": {
+            "core": "主题分组 · 相关内容",
+            "tooling": "文章 · 术语表 · 指南",
+            "mentors": "社区管理员",
+            "deliverable": "深入了解主题"
+          }
+        },
+        "privacy": {
+          "label": "隐私",
+          "badge": "Sigma",
+          "description": "为了可审计的隐私，掌握的 x-protocol、mixers 和选择性披露流程。",
+          "bullets": {
+            "0": "直观解释的 Sigma 协议",
+            "1": "ErgoMixer + 合规工具包",
+            "2": "选择性的披露播放列表"
+          },
+          "cta": "探索隐私应用",
+          "stack": {
+            "core": "X-协议 · ZK 校正 · 混合器",
+            "tooling": "ErgoMixer · 隐身库",
+            "mentors": "隐私研究者",
+            "deliverable": "合规隐私dApp"
+          }
+        },
+        "research": {
+          "label": "研究",
+          "badge": "深潜水器",
+          "description": "白纸、储存租金模型和自动化研究牌。",
+          "bullets": {
+            "0": "Tokenomics + durrage 模型",
+            "1": "Autolykos & NiPoWs 文件",
+            "2": "治理提议档案"
+          },
+          "cta": "下载文章",
+          "stack": {
+            "core": "经济协商一致意见·NIPPoWs",
+            "tooling": "研究论文· 模型",
+            "mentors": "核心研究人员",
+            "deliverable": "研究报告"
+          }
+        }
+      },
+      "faq": {
+        "title": "常见问题",
+        "items": {
+          "0": {
+            "question": "如果我是全新的，我如何开始？",
+            "answer": "安装Nautilus或SAFEW，将你的种子脱机备份，并抢走少量ERG，然后运行Beginner 路径。 它包括钱包卫生、存储租金基础以及如何安全地与 dApp 交互。"
+          },
+          "1": {
+            "question": "什么使Ergo学习不同于其他L1学习？",
+            "answer": "Ergo将研究-第一行进图与现实世界的工具结合起来。您可以获得决定性的合同(eUTXO)、可选的隐私(节日协议)和可持续的经济学(节日租房)，而没有公司的守门人。"
+          },
+          "2": {
+            "question": "ErgoScript 难于学习吗？",
+            "answer": "如果您写过团结或Rust，ErgoScript 将感到熟悉。 管理后的生成器路径通过模式走动，AppKit处理最具锅炉板，以便您可以集中精力处理商业逻辑。"
+          },
+          "3": {
+            "question": "我可以在哪里提问？",
+            "answer": "随时在Discord上加入每周的导师时间或进入#dev 或 #Academy 频道。 核心贡献者在那里伸出援手，经常进行审查。"
+          }
+        }
+      },
+      "nextSteps": {
+        "badge": "今后的步骤",
+        "title": "继续您的旅程",
+        "exploreEcosystem": {
+          "title": "探索Ecosystem",
+          "subtitle": "发现应用程序",
+          "description": "找到 Defi 协议、 钱包、 NFT 平台和其他在 Ergo 上构建的 dApps"
+        },
+        "useErgo": {
+          "title": "使用Ergo",
+          "subtitle": "实用指南",
+          "description": "钱包、排雷行动、采矿、桥梁和更多的分步指南"
+        }
+      },
+      "cta": {
+        "title": "升级您的Blockchain技能",
+        "description": "获取 Ergo 开发的新教程、讲习班和学习资源的通知"
+      }
+    },
+    "glossaryHub": {
+      "title": "Ergo",
+      "titleHighlight": "Glossary",
+      "termsCount": "+ 条款",
+      "categoriesCount": "类别",
+      "subtitle": "在一个可搜索的参考中掌握埃尔戈术语。",
+      "searchPlaceholder": "搜索词...",
+      "allCategories": "所有类别",
+      "level": "级别：",
+      "allLevels": "所有级别",
+      "beginner": "初学者",
+      "intermediate": "中间值",
+      "advanced": "高级版",
+      "popular": "受欢迎：",
+      "noResults": {
+        "title": "未找到条目",
+        "description": "尝试调整您的搜索或过滤器"
+      },
+      "viewDetails": "查看详细信息",
+      "cta": {
+        "title": "在Ergo上启动",
+        "description": "准备好将您的知识付诸实践吗？探索我们的开发者文档并开始构建。"
+      }
+    },
+    "glossaryPage": {
+      "seo": {
+        "title": "Ergo 术语表 — 250+ 区块链术语解释 | Ergo",
+        "description": "250+ 区块链术语简单解释。从 eUTXO 到 Sigma 协议——完整的 Ergo & 加密术语表。搜索、筛选、学习。",
+        "keywords": "Ergo 术语表, 区块链术语, eUTXO, NiPoPoWs, Sigma 协议, ErgoScript, Storage Rent, 加密术语, 区块链定义",
+        "imageAlt": "Ergo 区块链术语表"
+      },
+      "schema": {
+        "definedTermSet": {
+          "name": "Ergo 区块链术语表",
+          "description": "Ergo 区块链术语与核心概念的综合词汇表。"
+        },
+        "itemList": {
+          "name": "Ergo 术语",
+          "description": "Ergo 生态系统中的关键术语与概念列表。"
+        }
+      }
+    },
+    "researchPage": {
+      "title": "研究文件",
+      "titleHighlight": "经常预算： 预算外：",
+      "subtitle": "探索埃尔戈创新区块链技术的学术基础",
+      "seo": {
+        "title": "Ergo 研究论文 | 区块链学术出版物",
+        "description": "关于 Ergo 的学术研究论文：共识算法、密码学、智能合约与分布式系统等方向的资料。",
+        "keywords": "区块链研究, Ergo 论文, 学术出版物, 密码学研究, 共识算法, 分布式系统, 同行评审, 科学论文",
+        "openGraph": {
+          "title": "Ergo Research | 区块链学术论文",
+          "description": "关于 Ergo 创新区块链技术的同行评审研究出版物。",
+          "imageAlt": "Ergo Research"
+        },
+        "twitter": {
+          "title": "Ergo 研究论文 | 学术出版物",
+          "description": "关于区块链共识、密码学与智能合约的科学研究。"
+        }
+      },
+      "schema": {
+        "breadcrumbs": { "research": "研究" },
+        "scholarlyArticle": {
+          "name": "Ergo 研究合集",
+          "description": "Ergo 区块链技术学术研究论文合集",
+          "authorName": "Ergo Research Team",
+          "about": "Blockchain, Cryptography, Consensus Algorithms, Smart Contracts"
+        },
+        "faq": {
+          "items": [
+            { "question": "Ergo 的研究涵盖哪些主题？", "answer": "共识算法（Autolykos）、密码学（Sigma 协议）、智能合约（ErgoScript）、Storage Rent 经济模型以及 NiPoPoWs。" },
+            { "question": "Ergo 论文是否经过同行评审？", "answer": "是的，核心研究论文在学术社区中发表并/或经过同行评审。" },
+            { "question": "我可以参与 Ergo 研究吗？", "answer": "可以。欢迎学术合作与贡献，加入社区一起讨论研究方向。" }
+          ]
+        }
+      },
+      "badges": {
+        "papers": "文 件",
+        "resources": "资源"
+      },
+      "categories": {
+        "all": "所有的",
+        "coreProtocol": "核心协议和结构",
+        "privacy": "隐私和零知识",
+        "economics": "经济模型和 DeFi",
+        "consensus": "共识与采矿公司",
+        "advanced": "高级主题与原理"
+      },
+      "featuredPapers": {
+        "title": "精选文件",
+        "downloadPdf": "下载 PDF"
+      },
+      "keyPapers": {
+        "0": {
+          "title": "Ergo: 合约钱的复原平台",
+          "description": "描述Ergo的结构、eUTXO模式和关键创新的基础白皮书。",
+          "category": "核心议定书"
+        },
+        "1": {
+          "title": "ErgoScript 语言和 Sigma 协议",
+          "description": "关于ErgoScript 语言设计和零知识证明整合的技术文件。",
+          "category": "加密"
+        },
+        "2": {
+          "title": "UTXO 模型中的多阶段合同",
+          "description": "关于使用UTXO模式执行复杂的多阶段合同的研究。",
+          "category": "结构"
+        },
+        "3": {
+          "title": "Advanced ErgoScript 教程",
+          "description": "先进的 ErgoScript 方案拟订模式和最佳做法综合指南。",
+          "category": "贸易和发展会议"
+        },
+        "4": {
+          "title": "Zerojoin: Privacy-Preserving Mixing",
+          "description": "研究如何合并Zerocoin和Coinjoin以加强交易隐私。",
+          "category": "隐私"
+        },
+        "5": {
+          "title": "非交互式工作证明书",
+          "description": "关于NIPoPoW的基础研究，使光电客户和跨链核实成为可能。",
+          "category": "加密"
+        }
+      },
+      "browseByCategory": {
+        "title": "按类别浏览",
+        "viewPaper": "查看纸"
+      },
+      "developerResources": {
+        "title": "开发者资源",
+        "subtitle": "技术文件和执行参考文件",
+        "items": {
+          "0": {
+            "title": "ErgoScript Documentation"
+          },
+          "1": {
+            "title": "协议规范"
+          },
+          "2": {
+            "title": "节点实现"
+          },
+          "3": {
+            "title": "Sigma-Rust 密码库"
+          },
+          "4": {
+            "title": "ErgoMixer 技术概述"
+          }
+        }
+      },
+      "communityResearch": {
+        "title": "社区研究",
+        "subtitle": "为埃尔戈的研究生态系统做出贡献",
+        "items": {
+          "0": {
+            "title": "研究奖品",
+            "description": "贡献研究获得奖励"
+          },
+          "1": {
+            "title": "EIP 进程",
+            "description": "参与Ergo Improvement"
+          },
+          "2": {
+            "title": "学术协作",
+            "description": "与大学和研究机构的伙伴关系"
+          }
+        },
+        "joinResearch": "加入研究社区",
+        "viewEips": "查看 EIP"
+      },
+      "cta": {
+        "title": "挖掘深度进入Ergo Research",
+        "description": "获取关于区块链技术中新的研究论文、学术合作和突破性发现的最新信息。"
+      },
+      "curatedLinks": "管理到白纸、正式分析和开发者资源的链接。",
+      "keyDocuments": "关键文档",
+      "readPaper": "阅读纸",
+      "quickStart": {
+        "title": "快速开始",
+        "readWhitepaper": "读取Ergo Whitepaper",
+        "exploreLibrary": "探索研究库",
+        "joinCommunity": "加入社区"
+      },
+      "buttons": {
+        "keyDocuments": "关键文档",
+        "community": "社区"
+      }
+    },
+    "ergoscriptPage": {
+      "title": "ErgoScript",
+      "subtitle": "未来智能合同语言",
+      "description": "ErgoScript 是基于Sigma协议和扩展的 UTXO 模型的强大而安全的智能合同语言。 创建具有内在隐私、可预测费用和数学担保的复杂金融合同。",
+      "seo": {
+        "title": "学习 ErgoScript | 智能合约编程教程",
+        "description": "掌握 ErgoScript 编程语言。在 Ergo 上用 Sigma 协议与 eUTXO 模型构建安全的智能合约。",
+        "keywords": "ErgoScript 教程, 智能合约编程, 区块链开发, Ergo 编程, DeFi 开发, Sigma 协议, 零知识, 合约语言",
+        "openGraph": {
+          "title": "ErgoScript 编程教程 | 在 Ergo 上构建",
+          "description": "ErgoScript 智能合约开发完整指南：从基础到高级 DeFi。",
+          "imageAlt": "ErgoScript Tutorial"
+        },
+        "twitter": {
+          "title": "学习 ErgoScript | 智能合约开发",
+          "description": "用 ErgoScript 的高级特性构建强大的 DeFi 应用。"
+        }
+      },
+      "schema": {
+        "breadcrumbs": { "ergoscript": "ErgoScript" },
+        "course": {
+          "name": "ErgoScript 编程课程",
+          "description": "学习如何用 ErgoScript 构建智能合约",
+          "educationalLevel": "中级",
+          "teaches": "Smart Contracts, Blockchain Programming, ErgoScript, DeFi Development",
+          "timeRequired": "PT40H"
+        },
+        "faq": {
+          "items": [
+            { "question": "什么是 ErgoScript？", "answer": "ErgoScript 是基于 Sigma 协议的智能合约语言，结合 eUTXO 模型，可用于构建复杂的金融合约并支持零知识能力。" },
+            { "question": "ErgoScript 难学吗？", "answer": "有一定学习曲线，但安全性很强。如果熟悉函数式编程概念会更容易上手。" },
+            { "question": "我能用 ErgoScript 构建什么？", "answer": "DEX、借贷、NFT 市场、DAO、预言机池、隐私工具以及各种复杂金融合约。" }
+          ]
+        }
+      },
+      "heroDescription": "金融合同的Type-sigma protocol-native, and purpose-building.",
+      "buttons": {
+        "startLearning": "开始学习",
+        "viewOnGithub": "在 GitHub 上查看"
+      },
+      "quickStart": {
+        "title": "快速开始",
+        "playgroundTitle": "尝试游乐场",
+        "playgroundDescription": "交互式ErgoScript 环境",
+        "documentationTitle": "阅读教程",
+        "documentationDescription": "一步步指南",
+        "examplesTitle": "查看示例",
+        "examplesDescription": "实际合同模式"
+      },
+      "features": {
+        "title": "Why ErgoScript?",
+        "subtitle": "用于安全智能合同的设计",
+        "items": {
+          "0": {
+            "title": "Sigma Protocols",
+            "description": "内在零知识证明隐私和复杂的多方合同",
+            "icon": "盾牌"
+          },
+          "1": {
+            "title": "UTXO 模型",
+            "description": "扩展的 UTXO 模型，附有数据和逻辑附加到方框以增强安全性。",
+            "icon": "框"
+          },
+          "2": {
+            "title": "功能编程中",
+            "description": "无处不在的数据结构和更安全智能合同的功能模式",
+            "icon": "代码"
+          },
+          "3": {
+            "title": "Oracle 集成",
+            "description": "本机步枪支持在没有外部依赖的情况下实现真实世界数据集成",
+            "icon": "数据库"
+          },
+          "4": {
+            "title": "多阶段合同",
+            "description": "经过多个阶段、条件不同而演变的复杂合同",
+            "icon": "图层"
+          },
+          "5": {
+            "title": "可预测费用",
+            "description": "在部署前通过确定费用计算了解确切的执行费用",
+            "icon": "Zap"
+          }
+        }
+      },
+      "codeExamples": {
+        "title": "通过示例学习",
+        "tabs": {
+          "basics": "基础知识",
+          "advanced": "高级版",
+          "defi": "DeFi"
+        }
+      },
+      "learningPath": {
+        "title": "学习路径",
+        "subtitle": "从初学者到高级的 ErgoScript 开发者",
+        "beginner": {
+          "badge": "初学者",
+          "title": "基金会",
+          "description": "以 ErgoScript 和 UTXO 模型的基础知识开始"
+        },
+        "intermediate": {
+          "badge": "中间值",
+          "title": "模式和协议",
+          "description": "学习常见的模式并建立真正的应用程序"
+        },
+        "advanced": {
+          "badge": "高级版",
+          "title": "复杂系统",
+          "description": "掌握先进技术和协议设计"
+        }
+      },
+      "resources": {
+        "title": "资源",
+        "documentation": "文件",
+        "tutorials": "教程",
+        "examples": "示例："
+      },
+      "faq": {
+        "title": "常见问题"
+      },
+      "cta": {
+        "title": "准备好建设？",
+        "description": "获取 ErgoScript 更新、教程和开发提示发送到您的收件箱。"
+      },
+      "tutorials": {
+        "title": "教程",
+        "items": {
+          "0": {
+            "title": "Hello World Contracts",
+            "description": "您的第一个ErgoScript 合同 - 基本语法和结构",
+            "difficulty": "初学者",
+            "time": "15 分钟",
+            "link": "/docs/ergoscript/hello-world"
+          },
+          "1": {
+            "title": "Token Minting",
+            "description": "在Ergo blockchain 上创建和管理自定义令牌",
+            "difficulty": "中间值",
+            "time": "30 分钟",
+            "link": "/docs/ergoscript/token-minting"
+          },
+          "2": {
+            "title": "多签名钱包",
+            "description": "使用 ErgoScript 构建一个安全的多sig 钱包",
+            "difficulty": "高级版",
+            "time": "45 分钟",
+            "link": "/docs/ergoscript/multisig"
+          },
+          "3": {
+            "title": "Oracle 数据使用",
+            "description": "将外部数据源整合到您的合同中",
+            "difficulty": "中间值",
+            "time": "25 分钟",
+            "link": "/docs/ergoscript/oracles"
+          }
+        }
+      },
+      "faqs": {
+        "0": {
+          "question": "是什么使ErgoScript 不同于Solid？",
+          "answer": "ErgoScript 基于扩展的 UTXO 模型，使它比基于账户的模型更加安全和可预测。 它使用功能编程原则，拥有内在的零知识证明，并提供确定性费用计算。"
+        },
+        "1": {
+          "question": "我需要知道Scala来写入 ErgoScript 吗？",
+          "answer": "虽然ErgoScript 受到Scala的启发，但你不需要先了解Scala知识。 语法旨在让熟悉任何现代编程语言的开发者能够访问。然而，了解功能编程概念有帮助。"
+        },
+        "2": {
+          "question": "如何测试 ErgoScript 合同？",
+          "answer": "您可以使用 Ergo Playground、本地测试网或官方的 Ergo 测试框架测试合同。 Ergo SDK提供合同开发和调试的全面测试工具。"
+        },
+        "3": {
+          "question": "ErgoScript的气费是什么？",
+          "answer": "ErgoScript 合同的费用一般低于0.01美元。 扩展的 UTXO 模型允许高效执行并能够在部署前计算确切的费用。"
+        },
+        "4": {
+          "question": "我可以使用 ErgoScript 构建DeFi 协议吗？",
+          "answer": "是的！ErgoScript 对于DeFi是完美的。示例包括SigmaUSD (算法稳定性)、Ergodex等DEX以及各种DeFi原始。 语言的安全性能使它对金融应用程序是理想的。"
+        }
+      },
+      "viewExamples": "查看示例",
+      "faqTitle": "常见问题"
+    }
+  },
+  "learnErgoscript": {
+    "title": "学习 ErgoScript",
+    "description": "埃尔戈智能合同语言的综合指南",
+    "subtitle": "通过 ErgoScript 实现主区块链编程。",
+    "whyLearnFeatures": {
+      "secureByDesign": {
+        "title": "设计安全",
+        "description": "内置安全和正式可核查性，尽量减少智能合同风险"
+      },
+      "powerfulExpressive": {
+        "title": "强大与表达式",
+        "description": "启用复杂的 DeFi，多阶段协议和独特的 dApps"
+      },
+      "leverageEutxo": {
+        "title": "Leverage eUTXO",
+        "description": "只有ErgoScript 解锁了eUTXO的全部能量：可预见的成本、本地状态、复合性"
+      },
+      "builtInCryptography": {
+        "title": "内置加密",
+        "description": "本土对Sigma协议、隐私和高级访问计划的支持"
+      }
+    },
+    "faqs": {
+      "needPriorExperience": {
+        "question": "我需要先前的 blockchain 经验才能开始吗？",
+        "answer": "不！我们的教程系列从基础知识开始，逐渐积累复杂性。 我们正在随时解释区块链和智能合同概念，让完全的初学者能够看到。"
+      },
+      "ergoScriptDifferentFromSolidity": {
+        "question": "ErgoScript 与 Solid有何不同？",
+        "answer": "ErgoScript 基于 Scala 并为eUTXO 模型设计，提供更好的安全保证。 可预测的成本，以及本地对高级加密技术如Sigma协议的支持。 它比团结更具功能和数学上的严格性。"
+      },
+      "developmentTools": {
+        "question": "我需要什么发展工具？",
+        "answer": "您将需要一个文本编辑器，Ergo 节点软件，以及可选的 ErgoScript 编译器。 我们在模块 1.3 中提供详细的安装说明，以使您能够从完整的开发环境开始。"
+      },
+      "completeSeriesDuration": {
+        "question": "完成整个系列需要多长时间？",
+        "answer": "整个系列约有32小时的内容。 根据您的速度和先前的体验，您可以指望在4-8周内以持续的学习完成它。"
+      }
+    },
+    "targetAudience": {
+      "newToSmartContracts": {
+        "title": "新建智能合同",
+        "description": "逐步解释核心区块链和智能合同概念",
+        "examples": "Blockchain 基础、智能合同基础、eUTXO 介绍"
+      },
+      "experiencedDevelopers": {
+        "title": "经验丰富的区块链开发者",
+        "description": "发现eUTXO，新的安全模式和高级合同设计",
+        "examples": "eUTXO 模式、安全最佳做法、高级加密"
+      },
+      "scalaFunctionalProgrammers": {
+        "title": "缩放/函数程序",
+        "description": "ErgoScript的语法和哲学将会感到很熟悉，很容易应用您的技能",
+        "examples": "功能样式，类型安全，不可变的数据结构"
+      },
+      "defiEnthusiasts": {
+        "title": "DFi 爱好者",
+        "description": "建立下一代分散的财务应用",
+        "examples": "DEX 协议, 借贷平台, 算法拼图"
+      }
+    },
+    "modules": {
+      "foundations": {
+        "title": "Ergo 和 ErgoScript 的基础",
+        "totalDuration": "185 分钟",
+        "lessons": {
+          "0": {
+            "title": "Ergo 和 eUTXO 模型简介",
+            "duration": "20 分钟",
+            "level": "初学者"
+          },
+          "1": {
+            "title": "什么是ErgoScript？哲学和设计目标",
+            "duration": "15 分钟",
+            "level": "初学者"
+          },
+          "2": {
+            "title": "设置您的 ErgoScript 开发环境",
+            "duration": "30 分钟",
+            "level": "初学者"
+          },
+          "3": {
+            "title": "基本语法，数据类型，操作员",
+            "duration": "40 分钟",
+            "level": "初学者"
+          },
+          "4": {
+            "title": "框，注册，上下文变量",
+            "duration": "45 分钟",
+            "level": "初学者"
+          }
+        }
+      }
+    }
+  },
+  "learnGuides": {
+    "title": "学习指南",
+    "description": "一步一步教程和教育内容",
+    "subtitle": "综合学习资源"
+  },
+  "learnGuidesConsensus": {
+    "title": "共识指南",
+    "description": "理解Ergo的协商一致机制和自动取款机",
+    "subtitle": "深深潜入工作证明协商一致意见。"
+  },
+  "learnGuidesOraclePool": {
+    "title": "Oracle 池指南",
+    "description": "如何在埃尔戈上使用和创建口径库",
+    "subtitle": "分散化数据源教程"
+  },
+  "learnGuidesPrivacyFeatures": {
+    "title": "隐私功能指南",
+    "description": "在 Ergo 上使用 Sigma 协议和隐私工具",
+    "subtitle": "保护您的金融隐私"
+  },
+  "learnGuidesStorageRent": {
+    "title": "存储出租指南",
+    "description": "了解Ergo的存储租赁机制",
+    "subtitle": "可持续区块链存储经济"
+  },
+  "learnResearch": {
+    "title": "研究文件",
+    "description": "关于埃尔戈的学术研究和白皮书",
+    "subtitle": "埃尔戈技术的科学基础"
+  },
+  "glossary": {},
+  "glossaryTermPage": {
+    "whatIs": "什么是",
+    "share": {
+      "titleTemplate": "什么是{term}？",
+      "tweetTextTemplate": "什么是{term}？"
+    },
+    "buttons": {
+      "share": "分享",
+      "copy": "复制链接",
+      "copied": "已复制"
+    },
+    "sections": {
+      "keyPoints": "关键点",
+      "useCases": "使用案例",
+      "technicalDetails": "技术细节",
+      "relatedInfographics": "相关的",
+      "relatedInfographicsHighlight": "信息图像",
+      "relatedArticles": "相关的",
+      "relatedArticlesHighlight": "文章",
+      "faq": "常见问题",
+      "faqHighlight": "问 题",
+      "questionsAbout": "有关问题",
+      "relatedTopics": "相关的",
+      "relatedTopicsHighlight": "主题",
+      "exploreTopic": "探索主题",
+      "exploreMoreTerms": "探索更多",
+      "exploreMoreTermsHighlight": "条款"
+    },
+    "boxesCta": {
+      "title": "准备使用 Ergo Box？",
+      "description": "应用你学到的方框，并开始在Ergo上构建真正的Defi。",
+      "documentation": "文件",
+      "glossary": "Glossary"
+    },
+    "emailCapture": {
+      "title": "Master Ergo Terminology",
+      "description": "获得更多的教育内容和深度潜入埃尔戈技术，传送到您的收件箱。"
+    }
+  }
+}

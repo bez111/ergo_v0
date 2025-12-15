@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useDaos.title",
+    "value": "DAOs & Governance",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "useDaos.description",
+    "value": "Decentralized autonomous organizations on Ergo",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "useDaos.subtitle",
+    "value": "Community-driven decision making",
+    "context": "General content",
+    "maxLength": 48
+  }
+]

@@ -5,7 +5,7 @@
 // import type { BlogPost } from "../_lib/blog-data"
 // import { BlogCard } from "../_components/blog-card"
 // import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"
-// import Link from "next/link"
+// import { Link } from "@/i18n/navigation"
 // import { useState, useEffect, useRef } from "react"
 // import Image from "next/image"
 // import { Button } from "@/components/ui/button"

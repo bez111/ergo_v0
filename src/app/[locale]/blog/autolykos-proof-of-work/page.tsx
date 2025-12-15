@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import AutolykosArticleClient from "./AutolykosArticleClient"
-import { siteConfig } from "@/config/site-config"
 import {
   createBlogMetadata,
   createTechArticleSchema,

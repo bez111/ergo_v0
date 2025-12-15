@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useOracles.title",
+    "value": "Oracle Pools",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "useOracles.description",
+    "value": "Decentralized data feeds for smart contracts",
+    "context": "Description",
+    "maxLength": 66
+  },
+  {
+    "key": "useOracles.subtitle",
+    "value": "Reliable off-chain data integration",
+    "context": "General content",
+    "maxLength": 52.5
+  }
+]

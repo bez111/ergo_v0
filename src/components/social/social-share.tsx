@@ -26,15 +26,16 @@ export function SocialShare({ title, url, description, className }: SocialShareP
   const [copied, setCopied] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
 
-  const encodedTitle = encodeURIComponent(title)
-  const encodedUrl = encodeURIComponent(url)
+  const shareTagline = '@BuildOnErgo $ERG'
+  const twitterText = `${title}\n${url} ${shareTagline}`
+  const telegramText = `${title} ${shareTagline}`
   const encodedDescription = encodeURIComponent(description || title)
 
   const shareLinks = [
     {
       name: "Twitter",
       icon: Twitter,
-      url: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=BuildOnErgo`,
+      url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`,
       color: "hover:bg-blue-500/10 hover:text-blue-400 hover:border-blue-500/30",
       bgColor: "bg-blue-500/10",
       textColor: "text-blue-400"
@@ -42,7 +43,7 @@ export function SocialShare({ title, url, description, className }: SocialShareP
     {
       name: "LinkedIn", 
       icon: Linkedin,
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDescription}`,
+      url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodedDescription}`,
       color: "hover:bg-blue-600/10 hover:text-blue-300 hover:border-blue-600/30",
       bgColor: "bg-blue-600/10",
       textColor: "text-blue-300"
@@ -50,7 +51,7 @@ export function SocialShare({ title, url, description, className }: SocialShareP
     {
       name: "Facebook",
       icon: Facebook, 
-      url: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedTitle}`,
+      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`,
       color: "hover:bg-blue-700/10 hover:text-blue-200 hover:border-blue-700/30",
       bgColor: "bg-blue-700/10",
       textColor: "text-blue-200"
@@ -58,7 +59,7 @@ export function SocialShare({ title, url, description, className }: SocialShareP
     {
       name: "Telegram",
       icon: MessageCircle,
-      url: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+      url: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(telegramText)}`,
       color: "hover:bg-cyan-500/10 hover:text-cyan-400 hover:border-cyan-500/30", 
       bgColor: "bg-cyan-500/10",
       textColor: "text-cyan-400"
@@ -162,32 +163,33 @@ export function SocialShare({ title, url, description, className }: SocialShareP
 export function CompactSocialShare({ title, url, className }: SocialShareProps) {
   const [copied, setCopied] = useState(false)
 
-  const encodedTitle = encodeURIComponent(title)
-  const encodedUrl = encodeURIComponent(url)
+  const shareTagline = '@BuildOnErgo $ERG'
+  const twitterText = `${title}\n${url} ${shareTagline}`
+  const telegramText = `${title} ${shareTagline}`
 
   const shareLinks = [
     {
       name: "Twitter",
       icon: Twitter,
-      url: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=BuildOnErgo`,
+      url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`,
       color: "text-blue-400 hover:text-blue-300"
     },
     {
       name: "LinkedIn",
       icon: Linkedin, 
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+      url: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
       color: "text-blue-300 hover:text-blue-200"
     },
     {
       name: "Telegram",
       icon: MessageCircle,
-      url: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+      url: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(telegramText)}`,
       color: "text-cyan-400 hover:text-cyan-300"
     },
     {
       name: "Reddit",
       icon: Share2,
-      url: `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+      url: `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
       color: "text-red-400 hover:text-red-300"
     }
   ]

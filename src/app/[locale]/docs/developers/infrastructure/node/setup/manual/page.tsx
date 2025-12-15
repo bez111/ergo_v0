@@ -1,7 +1,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export default function ManualSetupPage() {
   return (

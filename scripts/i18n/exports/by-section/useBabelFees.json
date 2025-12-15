@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useBabelFees.title",
+    "value": "Babel Fees",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "useBabelFees.description",
+    "value": "Pay transaction fees in any token on Ergo",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "useBabelFees.subtitle",
+    "value": "Flexible fee payment system",
+    "context": "General content",
+    "maxLength": 40.5
+  }
+]

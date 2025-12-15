@@ -1,0 +1,206 @@
+[
+  {
+    "key": "walletClient.hero.title",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "walletClient.hero.titleHighlight",
+    "value": "Wallets",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "walletClient.hero.subtitle",
+    "value": "Secure your ERG with production-ready wallets",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "walletClient.hero.description",
+    "value": "From browser extensions to hardware devices - choose the perfect wallet for your security needs. All wallets are non-custodial, giving you full control of your funds.",
+    "context": "Description",
+    "maxLength": 249
+  },
+  {
+    "key": "walletClient.quickStart.title",
+    "value": "Quick Start",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "walletClient.quickStart.nautilus.name",
+    "value": "Nautilus Wallet",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "walletClient.quickStart.nautilus.subtitle",
+    "value": "Browser - Most Popular",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "walletClient.quickStart.satergo.name",
+    "value": "Satergo Wallet",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "walletClient.quickStart.satergo.subtitle",
+    "value": "Desktop - Full Node",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "walletClient.quickStart.ledger.name",
+    "value": "Ledger Hardware",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "walletClient.quickStart.ledger.subtitle",
+    "value": "Hardware - Maximum Security",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "walletClient.security.title",
+    "value": "Security First",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "walletClient.security.subtitle",
+    "value": "Best practices for wallet safety",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "walletClient.security.description",
+    "value": "Always download wallets from official sources and verify checksums for maximum security.",
+    "context": "Description",
+    "maxLength": 132
+  },
+  {
+    "key": "walletClient.security.tips.verifyChecksums",
+    "value": "Verify checksums after download",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "walletClient.security.tips.officialSources",
+    "value": "Download only from official sources",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "walletClient.security.tips.backupSeedPhrase",
+    "value": "Backup your seed phrase securely offline",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "walletClient.allWallets.title",
+    "value": "All Wallets",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "walletClient.allWallets.subtitle",
+    "value": "secure options for storing your ERG",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "walletClient.labels.recommended",
+    "value": "Recommended",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "walletClient.labels.loading",
+    "value": "Loading wallets...",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "walletClient.labels.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "walletClient.labels.visit",
+    "value": "Visit",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "walletClient.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "walletClient.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "walletClient.whatsNext.subtitle",
+    "value": "Now that you have a wallet, get some ERG and explore the ecosystem",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "walletClient.whatsNext.getErg.title",
+    "value": "Get ERG",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "walletClient.whatsNext.getErg.subtitle",
+    "value": "Buy ERG Tokens",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "walletClient.whatsNext.getErg.description",
+    "value": "Purchase ERG from exchanges or DEXs",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "walletClient.whatsNext.learnMore.title",
+    "value": "Learn More",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "walletClient.whatsNext.learnMore.subtitle",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "walletClient.whatsNext.learnMore.description",
+    "value": "Deep dive into Ergo's technology",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "walletClient.emailCapture.title",
+    "value": "Wallet Security Tips",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "walletClient.emailCapture.description",
+    "value": "Get the latest wallet security updates, best practices, and safety tips delivered to your inbox",
+    "context": "Description",
+    "maxLength": 142.5
+  }
+]

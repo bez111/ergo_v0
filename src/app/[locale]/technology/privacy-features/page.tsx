@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Eye, Shield, Shuffle, Vote, ArrowRight, ExternalLink, CheckCircle, Lock, ChevronDown, BookOpen, Terminal } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -283,10 +283,10 @@ export default function PrivacyFeaturesPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
-                        <Link href="/docs">Explore Privacy</Link>
+                        <Link href="/topics/ergo-privacy">Explore Privacy</Link>
                       </Button>
                       <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
-                        <Link href="/ecosystem">Try ErgoMixer</Link>
+                        <Link href="/learn/glossary/ergomixer">Try ErgoMixer</Link>
                       </Button>
                     </div>
                   </div>

@@ -1,0 +1,152 @@
+[
+  {
+    "key": "glossaryTermPage.whatIs",
+    "value": "What is",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "glossaryTermPage.buttons.share",
+    "value": "Share",
+    "context": "Button label - keep short",
+    "maxLength": 7.5
+  },
+  {
+    "key": "glossaryTermPage.buttons.copy",
+    "value": "Copy link",
+    "context": "Button label - keep short",
+    "maxLength": 13.5
+  },
+  {
+    "key": "glossaryTermPage.buttons.copied",
+    "value": "Copied",
+    "context": "Button label - keep short",
+    "maxLength": 9
+  },
+  {
+    "key": "glossaryTermPage.sections.keyPoints",
+    "value": "Key Points",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "glossaryTermPage.sections.useCases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "glossaryTermPage.sections.technicalDetails",
+    "value": "Technical Details",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "glossaryTermPage.sections.relatedInfographics",
+    "value": "Related",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "glossaryTermPage.sections.relatedInfographicsHighlight",
+    "value": "Infographics",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "glossaryTermPage.sections.relatedArticles",
+    "value": "Related",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "glossaryTermPage.sections.relatedArticlesHighlight",
+    "value": "Articles",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "glossaryTermPage.sections.faq",
+    "value": "Frequently Asked",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "glossaryTermPage.sections.faqHighlight",
+    "value": "Questions",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "glossaryTermPage.sections.questionsAbout",
+    "value": "Questions about",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "glossaryTermPage.sections.relatedTopics",
+    "value": "Related",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "glossaryTermPage.sections.relatedTopicsHighlight",
+    "value": "Topics",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "glossaryTermPage.sections.exploreTopic",
+    "value": "Explore topic",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "glossaryTermPage.sections.exploreMoreTerms",
+    "value": "Explore More",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "glossaryTermPage.sections.exploreMoreTermsHighlight",
+    "value": "Terms",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "glossaryTermPage.boxesCta.title",
+    "value": "Ready to Build with Ergo Boxes?",
+    "context": "Title",
+    "maxLength": 46.5
+  },
+  {
+    "key": "glossaryTermPage.boxesCta.description",
+    "value": "Apply what you've learned about boxes and start building real DeFi on Ergo.",
+    "context": "Description",
+    "maxLength": 112.5
+  },
+  {
+    "key": "glossaryTermPage.boxesCta.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "glossaryTermPage.boxesCta.glossary",
+    "value": "Glossary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "glossaryTermPage.emailCapture.title",
+    "value": "Master Ergo Terminology",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "glossaryTermPage.emailCapture.description",
+    "value": "Get more educational content and deep dives into Ergo technology delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 133.5
+  }
+]

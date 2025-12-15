@@ -1,0 +1,20 @@
+[
+  {
+    "key": "ecosystemMining.title",
+    "value": "Ecosystem Mining",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystemMining.description",
+    "value": "Mining pools, tools, and resources for Ergo miners",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "ecosystemMining.subtitle",
+    "value": "Everything you need to start mining ERG",
+    "context": "General content",
+    "maxLength": 58.5
+  }
+]

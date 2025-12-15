@@ -10,10 +10,6 @@ import {
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-interface DevelopersPageProps {
-  params: Promise<{ locale: string }>
-}
-
 // SEO Configuration - Combined best of /builders + /developers
 const SEO = {
   path: "/developers",
@@ -112,7 +108,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // Page Component
-export default async function DevelopersPage({ params }: DevelopersPageProps) {
+export default async function DevelopersPage() {
   const schemas = [
     // Breadcrumbs
     createBreadcrumbSchema([{ name: "Developers", href: "/developers" }]),
@@ -123,7 +119,7 @@ export default async function DevelopersPage({ params }: DevelopersPageProps) {
       description: SEO.description,
       image: SEO.ogImage,
       keywords: SEO.keywords,
-      proficiencyLevel: "Beginner to Expert",
+      proficiencyLevel: "Beginner",
       technicalAudience: "Developers, Engineers, Technical Founders",
       about: [
         { name: "ErgoScript" },

@@ -1,0 +1,86 @@
+[
+  {
+    "key": "corePillars.title",
+    "value": "CORE PILLARS",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "corePillars.subtitle",
+    "value": "Ergo combines proven principles with cutting-edge cryptography",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "corePillars.pillars.security.title",
+    "value": "SECURITY (POW)",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "corePillars.pillars.security.description",
+    "value": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone.",
+    "context": "Description",
+    "maxLength": 171
+  },
+  {
+    "key": "corePillars.pillars.programmability.title",
+    "value": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
+    "context": "Title",
+    "maxLength": 54
+  },
+  {
+    "key": "corePillars.pillars.programmability.description",
+    "value": "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model.",
+    "context": "Description",
+    "maxLength": 157.5
+  },
+  {
+    "key": "corePillars.pillars.sustainability.title",
+    "value": "SUSTAINABILITY (STORAGE RENT)",
+    "context": "Title",
+    "maxLength": 43.5
+  },
+  {
+    "key": "corePillars.pillars.sustainability.description",
+    "value": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat.",
+    "context": "Description",
+    "maxLength": 147
+  },
+  {
+    "key": "corePillars.pillars.privacy.title",
+    "value": "PRIVACY",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "corePillars.pillars.privacy.description",
+    "value": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions.",
+    "context": "Description",
+    "maxLength": 135
+  },
+  {
+    "key": "corePillars.pillars.oraclePools.title",
+    "value": "ORACLE POOLS",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "corePillars.pillars.oraclePools.description",
+    "value": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives.",
+    "context": "Description",
+    "maxLength": 172.5
+  },
+  {
+    "key": "corePillars.pillars.devFriendly.title",
+    "value": "DEV FRIENDLY",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "corePillars.pillars.devFriendly.description",
+    "value": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative.",
+    "context": "Description",
+    "maxLength": 166.5
+  }
+]

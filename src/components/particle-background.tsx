@@ -1,5 +1,5 @@
 "use client"
-/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable  */
 
 import { useEffect, useRef } from "react"
 

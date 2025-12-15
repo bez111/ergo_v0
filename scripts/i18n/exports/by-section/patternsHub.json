@@ -1,0 +1,92 @@
+[
+  {
+    "key": "patternsHub.hero.title",
+    "value": "ErgoScript",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "patternsHub.hero.titleHighlight",
+    "value": "Patterns",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "patternsHub.hero.subtitle",
+    "value": "Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship. From token mechanics to DeFi primitives.",
+    "context": "General content",
+    "maxLength": 166.5
+  },
+  {
+    "key": "patternsHub.hero.searchPlaceholder",
+    "value": "Search patterns (e.g., 'swap', 'multisig', 'oracle')...",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "patternsHub.filters.allCategories",
+    "value": "All Categories",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "patternsHub.difficulty.beginner",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "patternsHub.difficulty.intermediate",
+    "value": "Intermediate",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "patternsHub.difficulty.advanced",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "patternsHub.grid.noResults",
+    "value": "No patterns found",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "patternsHub.grid.noResultsDescription",
+    "value": "Try adjusting your filters or search terms.",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "patternsHub.grid.viewPattern",
+    "value": "View pattern",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "patternsHub.cta.title",
+    "value": "Ready to Build?",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "patternsHub.cta.description",
+    "value": "Start with the patterns, dive into documentation, or join the developer community for support.",
+    "context": "Description",
+    "maxLength": 141
+  },
+  {
+    "key": "patternsHub.cta.developerDocs",
+    "value": "Developer Docs",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "patternsHub.cta.buildDefiPlaybook",
+    "value": "Build DeFi Playbook",
+    "context": "General content",
+    "maxLength": 28.5
+  }
+]

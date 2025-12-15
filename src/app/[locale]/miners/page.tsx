@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { MinersClient } from './MinersClient'
-import { siteConfig } from '@/config/site-config'
 import {
   createHubMetadata,
   createBreadcrumbSchema,
@@ -8,10 +7,6 @@ import {
   createHowToSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
-
-interface MinersPageProps {
-  params: Promise<{ locale: string }>
-}
 
 // SEO Configuration
 const SEO = {
@@ -66,7 +61,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // Page Component
-export default async function MinersPage({ params }: MinersPageProps) {
+export default async function MinersPage() {
   const schemas = [
     createBreadcrumbSchema([{ name: "Miners", href: "/miners" }]),
     createHowToSchema({

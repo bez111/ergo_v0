@@ -3,9 +3,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 
 import { useState } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { getLocalizedMenuData } from "@/app/[locale]/docs/menuData"
-import { usePathname, useRouter } from "next/navigation"
+import { usePathname } from "next/navigation"
+import { useRouter } from "@/i18n/navigation"
 import { LocalSearch } from "./search/LocalSearch"
 import { useTranslations } from "next-intl"
 

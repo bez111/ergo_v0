@@ -3,7 +3,7 @@ import UseClient from "./UseClient"
 import { useCases } from "./_data"
 import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createCollectionSchema, createItemListSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createCollectionSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 600

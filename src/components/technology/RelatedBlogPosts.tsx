@@ -7,7 +7,7 @@
  * Использует keywords технологии + её название как теги для подбора.
  */
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 import { BookOpen, ArrowRight, Calendar } from "lucide-react"
 import { getTechnologyBySlug } from "@/data/technology-topics"

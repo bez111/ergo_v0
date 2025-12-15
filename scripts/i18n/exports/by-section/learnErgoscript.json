@@ -1,0 +1,290 @@
+[
+  {
+    "key": "learnErgoscript.title",
+    "value": "Learn ErgoScript",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learnErgoscript.description",
+    "value": "Comprehensive guide to Ergo's smart contract language",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "learnErgoscript.subtitle",
+    "value": "Master blockchain programming with ErgoScript",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.secureByDesign.title",
+    "value": "Secure by Design",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.secureByDesign.description",
+    "value": "Built-in security and formal verifiability, minimizing smart contract risks",
+    "context": "Description",
+    "maxLength": 112.5
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.powerfulExpressive.title",
+    "value": "Powerful & Expressive",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.powerfulExpressive.description",
+    "value": "Enables complex DeFi, multi-stage protocols, and unique dApps",
+    "context": "Description",
+    "maxLength": 91.5
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.leverageEutxo.title",
+    "value": "Leverage eUTXO",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.leverageEutxo.description",
+    "value": "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
+    "context": "Description",
+    "maxLength": 141
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.builtInCryptography.title",
+    "value": "Built-in Cryptography",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "learnErgoscript.whyLearnFeatures.builtInCryptography.description",
+    "value": "Native support for Sigma-protocols, privacy, and advanced access schemes",
+    "context": "Description",
+    "maxLength": 108
+  },
+  {
+    "key": "learnErgoscript.faqs.needPriorExperience.question",
+    "value": "Do I need prior blockchain experience to start?",
+    "context": "FAQ content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learnErgoscript.faqs.needPriorExperience.answer",
+    "value": "No! Our tutorial series starts from the basics and gradually builds up complexity. We explain blockchain and smart contract concepts as we go, making it accessible for complete beginners.",
+    "context": "FAQ content",
+    "maxLength": 280.5
+  },
+  {
+    "key": "learnErgoscript.faqs.ergoScriptDifferentFromSolidity.question",
+    "value": "How is ErgoScript different from Solidity?",
+    "context": "FAQ content",
+    "maxLength": 63
+  },
+  {
+    "key": "learnErgoscript.faqs.ergoScriptDifferentFromSolidity.answer",
+    "value": "ErgoScript is based on Scala and designed for the eUTXO model, offering better security guarantees, predictable costs, and native support for advanced cryptography like Sigma protocols. It's more functional and mathematically rigorous than Solidity.",
+    "context": "FAQ content",
+    "maxLength": 373.5
+  },
+  {
+    "key": "learnErgoscript.faqs.developmentTools.question",
+    "value": "What development tools do I need?",
+    "context": "FAQ content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learnErgoscript.faqs.developmentTools.answer",
+    "value": "You'll need a text editor, the Ergo node software, and optionally the ErgoScript compiler. We provide detailed setup instructions in Module 1.3 to get you started with the complete development environment.",
+    "context": "FAQ content",
+    "maxLength": 307.5
+  },
+  {
+    "key": "learnErgoscript.faqs.completeSeriesDuration.question",
+    "value": "How long does it take to complete the entire series?",
+    "context": "FAQ content",
+    "maxLength": 78
+  },
+  {
+    "key": "learnErgoscript.faqs.completeSeriesDuration.answer",
+    "value": "The complete series contains approximately 32 hours of content. Depending on your pace and prior experience, you can expect to complete it in 4-8 weeks with consistent study.",
+    "context": "FAQ content",
+    "maxLength": 261
+  },
+  {
+    "key": "learnErgoscript.targetAudience.newToSmartContracts.title",
+    "value": "New to Smart Contracts",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "learnErgoscript.targetAudience.newToSmartContracts.description",
+    "value": "Step-by-step explanations of core blockchain and smart contract concepts",
+    "context": "Description",
+    "maxLength": 108
+  },
+  {
+    "key": "learnErgoscript.targetAudience.newToSmartContracts.examples",
+    "value": "Blockchain basics, Smart contract fundamentals, eUTXO introduction",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "learnErgoscript.targetAudience.experiencedDevelopers.title",
+    "value": "Experienced Blockchain Developers",
+    "context": "Title",
+    "maxLength": 49.5
+  },
+  {
+    "key": "learnErgoscript.targetAudience.experiencedDevelopers.description",
+    "value": "Discover eUTXO, new safe patterns, and advanced contract design",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "learnErgoscript.targetAudience.experiencedDevelopers.examples",
+    "value": "eUTXO patterns, Security best practices, Advanced cryptography",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "learnErgoscript.targetAudience.scalaFunctionalProgrammers.title",
+    "value": "Scala/Functional Programmers",
+    "context": "Title",
+    "maxLength": 42
+  },
+  {
+    "key": "learnErgoscript.targetAudience.scalaFunctionalProgrammers.description",
+    "value": "ErgoScript's syntax and philosophy will feel familiar—apply your skills easily",
+    "context": "Description",
+    "maxLength": 117
+  },
+  {
+    "key": "learnErgoscript.targetAudience.scalaFunctionalProgrammers.examples",
+    "value": "Functional paradigms, Type safety, Immutable data structures",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "learnErgoscript.targetAudience.defiEnthusiasts.title",
+    "value": "DeFi Enthusiasts",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "learnErgoscript.targetAudience.defiEnthusiasts.description",
+    "value": "Build the next generation of decentralized financial applications",
+    "context": "Description",
+    "maxLength": 97.5
+  },
+  {
+    "key": "learnErgoscript.targetAudience.defiEnthusiasts.examples",
+    "value": "DEX protocols, Lending platforms, Algorithmic stablecoins",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.title",
+    "value": "Foundations of Ergo and ErgoScript",
+    "context": "Title",
+    "maxLength": 51
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.totalDuration",
+    "value": "185 min",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.0.title",
+    "value": "Introduction to Ergo & the eUTXO Model",
+    "context": "Title",
+    "maxLength": 57
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.0.duration",
+    "value": "20 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.0.level",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.1.title",
+    "value": "What is ErgoScript? Philosophy and Design Goals",
+    "context": "Title",
+    "maxLength": 70.5
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.1.duration",
+    "value": "15 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.1.level",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.2.title",
+    "value": "Setting Up Your ErgoScript Development Environment",
+    "context": "Title",
+    "maxLength": 75
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.2.duration",
+    "value": "30 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.2.level",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.3.title",
+    "value": "Basic Syntax, Data Types, Operators",
+    "context": "Title",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.3.duration",
+    "value": "40 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.3.level",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.4.title",
+    "value": "Boxes, Registers, Context Variables",
+    "context": "Title",
+    "maxLength": 52.5
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.4.duration",
+    "value": "45 min",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "learnErgoscript.modules.foundations.lessons.4.level",
+    "value": "Beginner",
+    "context": "General content",
+    "maxLength": 12
+  }
+]

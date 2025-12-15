@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useNfts.title",
+    "value": "NFTs & Digital Assets",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "useNfts.description",
+    "value": "Create, trade, and manage NFTs on Ergo",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "useNfts.subtitle",
+    "value": "Rich metadata and smart contract capabilities",
+    "context": "General content",
+    "maxLength": 67.5
+  }
+]

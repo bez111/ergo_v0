@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
 import { CyberButton } from "@/components/animations/cyber-button"
@@ -115,7 +115,7 @@ export function HeroSection() {
               className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-primary px-6 py-3"
               asChild
             >
-              <Link href={locale === 'en' ? '/start/introduction' : `/${locale}/start/introduction`} className="inline-flex items-center gap-2">
+              <Link href="/start/introduction" className="inline-flex items-center gap-2">
                 <span>&gt;</span>
                 <span>{t('exploreErgo') || "Explore Ergo"}</span>
                 <span className="animate-pulse">_</span>

@@ -1,6 +1,6 @@
 "use client"
 
-/* eslint-disable react-compiler/react-compiler, react/no-unescaped-entities */
+/* eslint-disable react/no-unescaped-entities */
 
 import React from 'react'
 

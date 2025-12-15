@@ -13,7 +13,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle, Microscope, ShieldCheck, Layers, FileText, KeyRound, Puzzle, Copy, Coins, Eye, ArrowLeftRight, BookOpen, Terminal, Users } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState } from "react"
 import React from "react"
 import { RelatedTechnologies, RelatedPatterns, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
@@ -224,15 +224,20 @@ export default function ErgoScriptPage() {
                     {t("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
-                      {t("quickStart.learnErgoScript")}
-                  </Button>
-                  <Button
-                    variant="outline"
+                      <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
+                        <Link href="/docs/developers/ergoscript-languages">
+                          {t("quickStart.learnErgoScript")}
+                        </Link>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="outline"
                         className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl"
-                  >
-                      Try Playground
-                                    </Button>
+                      >
+                        <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer">
+                          Try Playground
+                        </a>
+                      </Button>
                   </div>
               </div>
               <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>

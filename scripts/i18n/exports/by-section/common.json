@@ -1,0 +1,2090 @@
+[
+  {
+    "key": "common.loading",
+    "value": "Loading...",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.error",
+    "value": "Error",
+    "context": "Error message",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.retry",
+    "value": "Retry",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.close",
+    "value": "Close",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.open",
+    "value": "Open",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.menu",
+    "value": "Menu",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.search",
+    "value": "Search",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.searchPlaceholder",
+    "value": "Search...",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.readMore",
+    "value": "Read More",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.getStarted",
+    "value": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.viewAll",
+    "value": "View All",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.backToTop",
+    "value": "Back to Top",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.previous",
+    "value": "Previous",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.next",
+    "value": "Next",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.home",
+    "value": "Home",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.exploreEcosystem",
+    "value": "Explore Ecosystem",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "common.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "common.exploreCase",
+    "value": "Explore Use Case",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "common.supportedProjects",
+    "value": "Supported Projects",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "common.featuredUseCases",
+    "value": "Featured Use Cases",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "common.allUseCases",
+    "value": "All Use Cases",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "common.explore",
+    "value": "Explore",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.startLearning",
+    "value": "Start Learning",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "common.viewMore",
+    "value": "View More",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "common.blog",
+    "value": "Blog",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.community",
+    "value": "Community",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.developers",
+    "value": "Developers",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.resources",
+    "value": "Resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.about",
+    "value": "About",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.contact",
+    "value": "Contact",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.back",
+    "value": "Back",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.success",
+    "value": "Success",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.warning",
+    "value": "Warning",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.info",
+    "value": "Info",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.yes",
+    "value": "Yes",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.no",
+    "value": "No",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "common.cancel",
+    "value": "Cancel",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.confirm",
+    "value": "Confirm",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.save",
+    "value": "Save",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.delete",
+    "value": "Delete",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.edit",
+    "value": "Edit",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.update",
+    "value": "Update",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.create",
+    "value": "Create",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.submit",
+    "value": "Submit",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.reset",
+    "value": "Reset",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.filter",
+    "value": "Filter",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.sort",
+    "value": "Sort",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.share",
+    "value": "Share",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.upload",
+    "value": "Upload",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.copy",
+    "value": "Copy",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.paste",
+    "value": "Paste",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.cut",
+    "value": "Cut",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.undo",
+    "value": "Undo",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.redo",
+    "value": "Redo",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.dashboard",
+    "value": "Dashboard",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.settings",
+    "value": "Settings",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.profile",
+    "value": "Profile",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.logout",
+    "value": "Logout",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.login",
+    "value": "Login",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.register",
+    "value": "Register",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.forgotPassword",
+    "value": "Forgot Password?",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "common.resetPassword",
+    "value": "Reset Password",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "common.changePassword",
+    "value": "Change Password",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "common.email",
+    "value": "Email",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.password",
+    "value": "Password",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.username",
+    "value": "Username",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.name",
+    "value": "Name",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.firstName",
+    "value": "First Name",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.lastName",
+    "value": "Last Name",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.phone",
+    "value": "Phone",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.address",
+    "value": "Address",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.city",
+    "value": "City",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.country",
+    "value": "Country",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.zipCode",
+    "value": "Zip Code",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.language",
+    "value": "Language",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.theme",
+    "value": "Theme",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.light",
+    "value": "Light",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.dark",
+    "value": "Dark",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.auto",
+    "value": "Auto",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.notifications",
+    "value": "Notifications",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "common.privacy",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.terms",
+    "value": "Terms",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.help",
+    "value": "Help",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.faq",
+    "value": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.support",
+    "value": "Support",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.feedback",
+    "value": "Feedback",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.reportBug",
+    "value": "Report Bug",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.requestFeature",
+    "value": "Request Feature",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "common.version",
+    "value": "Version",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.copyright",
+    "value": "Copyright",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.allRightsReserved",
+    "value": "All rights reserved",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "common.poweredBy",
+    "value": "Powered by",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.madeWith",
+    "value": "Made with",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.love",
+    "value": "love",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.by",
+    "value": "by",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "common.and",
+    "value": "and",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.or",
+    "value": "or",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "common.not",
+    "value": "not",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.all",
+    "value": "All",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.none",
+    "value": "None",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.select",
+    "value": "Select",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.selectAll",
+    "value": "Select All",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.deselectAll",
+    "value": "Deselect All",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.toggle",
+    "value": "Toggle",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.expand",
+    "value": "Expand",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.collapse",
+    "value": "Collapse",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.show",
+    "value": "Show",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.hide",
+    "value": "Hide",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.enable",
+    "value": "Enable",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.disable",
+    "value": "Disable",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.on",
+    "value": "On",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "common.off",
+    "value": "Off",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.active",
+    "value": "Active",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.inactive",
+    "value": "Inactive",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.pending",
+    "value": "Pending",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.approved",
+    "value": "Approved",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.rejected",
+    "value": "Rejected",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.completed",
+    "value": "Completed",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.failed",
+    "value": "Failed",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.inProgress",
+    "value": "In Progress",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.scheduled",
+    "value": "Scheduled",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.draft",
+    "value": "Draft",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.published",
+    "value": "Published",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.archived",
+    "value": "Archived",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.deleted",
+    "value": "Deleted",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.restored",
+    "value": "Restored",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.updated",
+    "value": "Updated",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.created",
+    "value": "Created",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.modified",
+    "value": "Modified",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.accessed",
+    "value": "Accessed",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.viewed",
+    "value": "Viewed",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.downloaded",
+    "value": "Downloaded",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.uploaded",
+    "value": "Uploaded",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.shared",
+    "value": "Shared",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.liked",
+    "value": "Liked",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.commented",
+    "value": "Commented",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.replied",
+    "value": "Replied",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.mentioned",
+    "value": "Mentioned",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.tagged",
+    "value": "Tagged",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.followed",
+    "value": "Followed",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.unfollowed",
+    "value": "Unfollowed",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.blocked",
+    "value": "Blocked",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.unblocked",
+    "value": "Unblocked",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.muted",
+    "value": "Muted",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.unmuted",
+    "value": "Unmuted",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.pinned",
+    "value": "Pinned",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.unpinned",
+    "value": "Unpinned",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.starred",
+    "value": "Starred",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.unstarred",
+    "value": "Unstarred",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.bookmarked",
+    "value": "Bookmarked",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.unbookmarked",
+    "value": "Unbookmarked",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.subscribed",
+    "value": "Subscribed",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.unsubscribed",
+    "value": "Unsubscribed",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.joined",
+    "value": "Joined",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.left",
+    "value": "Left",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.invited",
+    "value": "Invited",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.accepted",
+    "value": "Accepted",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.declined",
+    "value": "Declined",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.removed",
+    "value": "Removed",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.added",
+    "value": "Added",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.changed",
+    "value": "Changed",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.moved",
+    "value": "Moved",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.copied",
+    "value": "Copied",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.duplicated",
+    "value": "Duplicated",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.merged",
+    "value": "Merged",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.split",
+    "value": "Split",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.imported",
+    "value": "Imported",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.exported",
+    "value": "Exported",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.synced",
+    "value": "Synced",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.refreshed",
+    "value": "Refreshed",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.reloaded",
+    "value": "Reloaded",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.retried",
+    "value": "Retried",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.reverted",
+    "value": "Reverted",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.recovered",
+    "value": "Recovered",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.repaired",
+    "value": "Repaired",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.fixed",
+    "value": "Fixed",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.resolved",
+    "value": "Resolved",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.closed",
+    "value": "Closed",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.reopened",
+    "value": "Reopened",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.locked",
+    "value": "Locked",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.unlocked",
+    "value": "Unlocked",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.encrypted",
+    "value": "Encrypted",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.decrypted",
+    "value": "Decrypted",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.compressed",
+    "value": "Compressed",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.decompressed",
+    "value": "Decompressed",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.optimized",
+    "value": "Optimized",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.minimized",
+    "value": "Minimized",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.maximized",
+    "value": "Maximized",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.normalized",
+    "value": "Normalized",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.validated",
+    "value": "Validated",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.verified",
+    "value": "Verified",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.authenticated",
+    "value": "Authenticated",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "common.authorized",
+    "value": "Authorized",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.granted",
+    "value": "Granted",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.denied",
+    "value": "Denied",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.allowed",
+    "value": "Allowed",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.forbidden",
+    "value": "Forbidden",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.restricted",
+    "value": "Restricted",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.limited",
+    "value": "Limited",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.unlimited",
+    "value": "Unlimited",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.free",
+    "value": "Free",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.paid",
+    "value": "Paid",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.trial",
+    "value": "Trial",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.premium",
+    "value": "Premium",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.basic",
+    "value": "Basic",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.advanced",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.pro",
+    "value": "Pro",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.enterprise",
+    "value": "Enterprise",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.custom",
+    "value": "Custom",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.default",
+    "value": "Default",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.primary",
+    "value": "Primary",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.secondary",
+    "value": "Secondary",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.tertiary",
+    "value": "Tertiary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.danger",
+    "value": "Danger",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.transparent",
+    "value": "Transparent",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.solid",
+    "value": "Solid",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.gradient",
+    "value": "Gradient",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.pattern",
+    "value": "Pattern",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.image",
+    "value": "Image",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.video",
+    "value": "Video",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.audio",
+    "value": "Audio",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.document",
+    "value": "Document",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.spreadsheet",
+    "value": "Spreadsheet",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.presentation",
+    "value": "Presentation",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.code",
+    "value": "Code",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.text",
+    "value": "Text",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.binary",
+    "value": "Binary",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.archive",
+    "value": "Archive",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.folder",
+    "value": "Folder",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.file",
+    "value": "File",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.link",
+    "value": "Link",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.shortcut",
+    "value": "Shortcut",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.alias",
+    "value": "Alias",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.bookmark",
+    "value": "Bookmark",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.favorite",
+    "value": "Favorite",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.recent",
+    "value": "Recent",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.popular",
+    "value": "Popular",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.trending",
+    "value": "Trending",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.featured",
+    "value": "Featured",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.recommended",
+    "value": "Recommended",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.sponsored",
+    "value": "Sponsored",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.promoted",
+    "value": "Promoted",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.sticky",
+    "value": "Sticky",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.announcement",
+    "value": "Announcement",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.notification",
+    "value": "Notification",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.alert",
+    "value": "Alert",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.message",
+    "value": "Message",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.comment",
+    "value": "Comment",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.reply",
+    "value": "Reply",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.reaction",
+    "value": "Reaction",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.mention",
+    "value": "Mention",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.tag",
+    "value": "Tag",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.hashtag",
+    "value": "Hashtag",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.keyword",
+    "value": "Keyword",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.category",
+    "value": "Category",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.subcategory",
+    "value": "Subcategory",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.group",
+    "value": "Group",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.subgroup",
+    "value": "Subgroup",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.section",
+    "value": "Section",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.subsection",
+    "value": "Subsection",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.chapter",
+    "value": "Chapter",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.paragraph",
+    "value": "Paragraph",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.sentence",
+    "value": "Sentence",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.word",
+    "value": "Word",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.character",
+    "value": "Character",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.symbol",
+    "value": "Symbol",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.icon",
+    "value": "Icon",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.emoji",
+    "value": "Emoji",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.sticker",
+    "value": "Sticker",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.gif",
+    "value": "GIF",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.meme",
+    "value": "Meme",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.quote",
+    "value": "Quote",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.citation",
+    "value": "Citation",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.reference",
+    "value": "Reference",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.source",
+    "value": "Source",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.author",
+    "value": "Author",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.editor",
+    "value": "Editor",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.contributor",
+    "value": "Contributor",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.reviewer",
+    "value": "Reviewer",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.moderator",
+    "value": "Moderator",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.administrator",
+    "value": "Administrator",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "common.owner",
+    "value": "Owner",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.member",
+    "value": "Member",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.guest",
+    "value": "Guest",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.visitor",
+    "value": "Visitor",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.user",
+    "value": "User",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "common.customer",
+    "value": "Customer",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.client",
+    "value": "Client",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.partner",
+    "value": "Partner",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.vendor",
+    "value": "Vendor",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.supplier",
+    "value": "Supplier",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.manufacturer",
+    "value": "Manufacturer",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.distributor",
+    "value": "Distributor",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.retailer",
+    "value": "Retailer",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.wholesaler",
+    "value": "Wholesaler",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.broker",
+    "value": "Broker",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.agent",
+    "value": "Agent",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.representative",
+    "value": "Representative",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "common.consultant",
+    "value": "Consultant",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.advisor",
+    "value": "Advisor",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.expert",
+    "value": "Expert",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.specialist",
+    "value": "Specialist",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.professional",
+    "value": "Professional",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.technician",
+    "value": "Technician",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.engineer",
+    "value": "Engineer",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.developer",
+    "value": "Developer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.designer",
+    "value": "Designer",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.architect",
+    "value": "Architect",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.analyst",
+    "value": "Analyst",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.researcher",
+    "value": "Researcher",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.scientist",
+    "value": "Scientist",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.teacher",
+    "value": "Teacher",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.instructor",
+    "value": "Instructor",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.trainer",
+    "value": "Trainer",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.coach",
+    "value": "Coach",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.mentor",
+    "value": "Mentor",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.tutor",
+    "value": "Tutor",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "common.student",
+    "value": "Student",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.learner",
+    "value": "Learner",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.trainee",
+    "value": "Trainee",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.apprentice",
+    "value": "Apprentice",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.intern",
+    "value": "Intern",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "common.volunteer",
+    "value": "Volunteer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.employee",
+    "value": "Employee",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.employer",
+    "value": "Employer",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.contractor",
+    "value": "Contractor",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.freelancer",
+    "value": "Freelancer",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.entrepreneur",
+    "value": "Entrepreneur",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.founder",
+    "value": "Founder",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.cofounder",
+    "value": "Co-founder",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "common.ceo",
+    "value": "CEO",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.cto",
+    "value": "CTO",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.cfo",
+    "value": "CFO",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.coo",
+    "value": "COO",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.cmo",
+    "value": "CMO",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "common.manager",
+    "value": "Manager",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "common.director",
+    "value": "Director",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.executive",
+    "value": "Executive",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.president",
+    "value": "President",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "common.vicePresident",
+    "value": "Vice President",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "common.chairman",
+    "value": "Chairman",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.boardMember",
+    "value": "Board Member",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "common.shareholder",
+    "value": "Shareholder",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "common.investor",
+    "value": "Investor",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "common.stakeholder",
+    "value": "Stakeholder",
+    "context": "General content",
+    "maxLength": 16.5
+  }
+]

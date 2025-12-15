@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { projects, getProjectBySlug, categoryLabels } from "../_data"
+import { getMessages } from 'next-intl/server'
+import { projects, getProjectBySlug, categoryLabels, type EcosystemProject } from "../_data"
+import { getLocalizedProjectBySlug, type EcosystemTranslations } from "../ecosystem-i18n"
 import ProjectClient from "./ProjectClient"
 import { createBreadcrumbSchema, createFAQSchema, createSoftwareAppSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
@@ -14,8 +16,20 @@ export async function generateStaticParams() {
 
 // Generate metadata for each project
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const project = getProjectBySlug(slug)
+  const { slug, locale } = await params
+  
+  // Get translations for non-English locales
+  let project: EcosystemProject | undefined
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { ecosystemData?: EcosystemTranslations }
+      project = getLocalizedProjectBySlug(slug, messages?.ecosystemData)
+    } catch {
+      project = getProjectBySlug(slug)
+    }
+  } else {
+    project = getProjectBySlug(slug)
+  }
   
   if (!project) {
     return { title: "Project Not Found | Ergo Ecosystem" }
@@ -62,8 +76,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
-  const { slug } = await params
-  const project = getProjectBySlug(slug)
+  const { slug, locale } = await params
+  
+  // Get translations for non-English locales
+  let project: EcosystemProject | undefined
+  if (locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale }) as { ecosystemData?: EcosystemTranslations }
+      project = getLocalizedProjectBySlug(slug, messages?.ecosystemData)
+    } catch {
+      project = getProjectBySlug(slug)
+    }
+  } else {
+    project = getProjectBySlug(slug)
+  }
 
   if (!project) {
     notFound()

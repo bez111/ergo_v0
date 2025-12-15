@@ -1,4 +1,4 @@
-// import Link from "next/link"
+// import { Link } from "@/i18n/navigation"
 // import Image from "next/image"
 // import { Clock, Eye, Share2 } from "lucide-react"
 // import type { BlogPost } from "../_lib/blog-data"

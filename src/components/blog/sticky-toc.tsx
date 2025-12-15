@@ -106,7 +106,7 @@ export function StickyTOC({ items, title = "Article Contents" }: StickyTOCProps)
 
             {/* Navigation */}
             <nav className="space-y-1 pl-2">
-              {items.map((item, index) => {
+              {items.map((item) => {
                 const isActive = activeSection === item.href.replace('#', '')
                 return (
                   <button

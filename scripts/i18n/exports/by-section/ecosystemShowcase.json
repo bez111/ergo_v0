@@ -1,0 +1,290 @@
+[
+  {
+    "key": "ecosystemShowcase.title",
+    "value": "Decentralize Everything",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "ecosystemShowcase.exploreEcosystem",
+    "value": "EXPLORE ECOSYSTEM",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystemShowcase.categories.defi",
+    "value": "DEFI",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystemShowcase.categories.privacy",
+    "value": "PRIVACY",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystemShowcase.categories.stable",
+    "value": "STABLE ASSETS",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystemShowcase.categories.gaming",
+    "value": "GAMING",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.title",
+    "value": "Rosen Bridge",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.subtitle",
+    "value": "Connecting Ergo's Ecosystem",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.description",
+    "value": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+    "context": "Description",
+    "maxLength": 331.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.cta",
+    "value": "VISIT ROSEN BRIDGE",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.stats.crossChain.label",
+    "value": "Cross-Chain",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.stats.crossChain.value",
+    "value": "BTC, ETH, ADA, BSC & more",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.stats.secureBridge.label",
+    "value": "Secure Bridge",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.stats.secureBridge.value",
+    "value": "Watcher & Guard Model",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.stats.unlockLiquidity.label",
+    "value": "Unlock Liquidity",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystemShowcase.projects.rosenBridge.stats.unlockLiquidity.value",
+    "value": "Access New Markets",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.title",
+    "value": "ErgoMixer",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.subtitle",
+    "value": "Non-Custodial Privacy Protocol",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.description",
+    "value": "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
+    "context": "Description",
+    "maxLength": 307.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.cta",
+    "value": "LEARN ABOUT PRIVACY ON ERGO",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.stats.mixedVolume.label",
+    "value": "Mixed Volume",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.stats.mixedVolume.value",
+    "value": "$3.7M",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.stats.privacyScore.label",
+    "value": "Privacy Score",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.stats.privacyScore.value",
+    "value": "99.9%",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.stats.transactions.label",
+    "value": "Transactions",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemShowcase.projects.ergoMixer.stats.transactions.value",
+    "value": "25K+",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.title",
+    "value": "SigmaUSD",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.subtitle",
+    "value": "Algorithmic Stablecoin Protocol",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.description",
+    "value": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+    "context": "Description",
+    "maxLength": 301.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.cta",
+    "value": "EXPLORE SIGMAUSD",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.stats.stabilityScore.label",
+    "value": "Stability Score",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.stats.stabilityScore.value",
+    "value": "99.2%",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.stats.totalSupply.label",
+    "value": "Total Supply",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.stats.totalSupply.value",
+    "value": "$2.1M",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.stats.collateralRatio.label",
+    "value": "Collateral Ratio",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystemShowcase.projects.sigmaUSD.stats.collateralRatio.value",
+    "value": "400%",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.title",
+    "value": "Ergo Gaming Ecosystem",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.subtitle",
+    "value": "Blockchain Gaming Platform",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.description",
+    "value": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+    "context": "Description",
+    "maxLength": 268.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.cta",
+    "value": "START GAMING ON ERGO",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.activeGames.label",
+    "value": "Active Games",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.activeGames.value",
+    "value": "12",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.players.label",
+    "value": "Players",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.players.value",
+    "value": "5K+",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.gameAssets.label",
+    "value": "Game Assets",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.gameAssets.value",
+    "value": "10K+",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.rewardsPaid.label",
+    "value": "Rewards Paid",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystemShowcase.projects.gaming.stats.rewardsPaid.value",
+    "value": "$250K",
+    "context": "General content",
+    "maxLength": 7.5
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "key": "questionPage.breadcrumbs.questions",
+    "value": "Questions",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionPage.answer",
+    "value": "Answer",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "questionPage.quickFacts",
+    "value": "Quick Facts",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "questionPage.resources",
+    "value": "Resources",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionPage.relatedQuestions",
+    "value": "Related Questions",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "questionPage.exploreMore",
+    "value": "Explore More",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "questionPage.shareTitle",
+    "value": "Share this question",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "questionPage.copyLink",
+    "value": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionPage.copied",
+    "value": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "questionPage.readTime",
+    "value": "min read",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionPage.lastUpdated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "questionPage.resourceTypes.doc",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "questionPage.resourceTypes.blog",
+    "value": "Blog Article",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "questionPage.resourceTypes.playbook",
+    "value": "Playbook",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionPage.resourceTypes.infographic",
+    "value": "Infographic",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "questionPage.resourceTypes.glossary",
+    "value": "Glossary",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionPage.resourceTypes.compare",
+    "value": "Comparison",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "questionPage.resourceTypes.technology",
+    "value": "Technology",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "questionPage.intentLabels.how_to",
+    "value": "How-to Guide",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "questionPage.intentLabels.what_is",
+    "value": "Explainer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionPage.intentLabels.compare",
+    "value": "Comparison",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "questionPage.intentLabels.problem",
+    "value": "Solution",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionPage.intentLabels.philosophy",
+    "value": "Philosophy",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "questionPage.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "questionPage.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "questionPage.emailCapture.title",
+    "value": "Have More Questions?",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "questionPage.emailCapture.description",
+    "value": "Get answers, guides, and updates delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 85.5
+  }
+]

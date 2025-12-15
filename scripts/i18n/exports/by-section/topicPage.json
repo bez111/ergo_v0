@@ -1,0 +1,122 @@
+[
+  {
+    "key": "topicPage.breadcrumbs.topics",
+    "value": "Topics",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "topicPage.share",
+    "value": "Share",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "topicPage.copyLink",
+    "value": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "topicPage.copied",
+    "value": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "topicPage.keyDifferentiators",
+    "value": "Key Differentiators",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "topicPage.startHere.title",
+    "value": "Start Here",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "topicPage.startHere.description",
+    "value": "Essential resources to understand the fundamentals.",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "topicPage.buildWithIt.title",
+    "value": "Build With It",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "topicPage.buildWithIt.description",
+    "value": "Developer documentation, patterns, and guides.",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "topicPage.philosophy.title",
+    "value": "Philosophy & Narrative",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "topicPage.philosophy.description",
+    "value": "The vision and principles behind the technology.",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "topicPage.visualGuides.title",
+    "value": "Visual Guides",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "topicPage.visualGuides.description",
+    "value": "Infographics and visual explanations to share.",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "topicPage.keyTerms",
+    "value": "Key Terms",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "topicPage.frequentlyAsked",
+    "value": "Frequently Asked",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "topicPage.relatedTopics",
+    "value": "Related Topics",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "topicPage.whatsNext.title",
+    "value": "What's",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "topicPage.whatsNext.titleHighlight",
+    "value": "Next",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "topicPage.emailCapture.title",
+    "value": "Master This Topic",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "topicPage.emailCapture.description",
+    "value": "Get in-depth guides, tutorials, and updates delivered to your inbox.",
+    "context": "Description",
+    "maxLength": 102
+  }
+]

@@ -1,7 +1,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { GitBranch, ArrowRight, ArrowLeft } from "lucide-react"
 
 export default function ForkingPage() {

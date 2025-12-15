@@ -69,13 +69,4 @@ export function WebVitals({ debug = false }: WebVitalsProps) {
   return null
 }
 
-// Type declaration for gtag
-declare global {
-  interface Window {
-    gtag: (
-      command: string,
-      targetId: string,
-      config?: Record<string, any>
-    ) => void
-  }
-}
+// Type declaration removed - using centralized declaration from google-analytics.tsx

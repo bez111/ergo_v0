@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 import {
   ArrowRight,
@@ -137,6 +137,7 @@ const faqs = [
 ]
 
 export default function LearnClient() {
+  // Translations available via useTranslations('learn.page') when needed
   const [activeTrack, setActiveTrack] = useState(learningTracks[0].id)
   const faqJsonLd = useMemo(() => ({
     "@context": "https://schema.org",

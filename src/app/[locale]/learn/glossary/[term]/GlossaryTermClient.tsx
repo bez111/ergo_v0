@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   ArrowLeft,
   ArrowRight,
@@ -92,19 +92,28 @@ export function GlossaryTermClient({ term }: Props) {
   };
 
   const handleShare = async () => {
-    if (navigator.share) {
+    const shareUrl = window.location.href;
+    const shareTagline = '@BuildOnErgo $ERG';
+    const shareTitle = `What is ${term.term}?`;
+    const twitterText = `${shareTitle}\n${shareUrl} ${shareTagline}`;
+    
+    // Check if mobile (use navigator.share) or desktop (use Twitter URL directly)
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile && navigator.share) {
       try {
         await navigator.share({
-          title: `What is ${term.term}?`,
-          text: term.shortDefinition,
-          url: window.location.href
+          title: shareTitle,
+          text: twitterText,
         });
       } catch {
-        // User cancelled or error
+        // User cancelled - fallback to Twitter
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`;
+        window.open(twitterUrl, '_blank', 'noopener,noreferrer');
       }
     } else {
-      // On desktop, open Twitter/X share
-      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`What is ${term.term}?`)}&url=${encodeURIComponent(window.location.href)}`;
+      // Desktop: always use Twitter URL directly for consistent formatting
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`;
       window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
     }
   };
@@ -445,25 +454,21 @@ export function GlossaryTermClient({ term }: Props) {
                       >
                         <div className="bg-black/60 border border-white/10 rounded-xl p-4 hover:border-orange-400/40 transition-all hover:bg-black/70">
                           <div className="flex items-start gap-4">
-                            <div className="w-16 h-16 bg-neutral-800 rounded-lg flex-shrink-0 overflow-hidden">
-                              {post.image && (
-                                <picture>
-                                  <source 
-                                    srcSet={post.image.replace(/\.(png|jpg|jpeg)$/i, '.avif')} 
-                                    type="image/avif" 
-                                  />
-                                  <source 
-                                    srcSet={post.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
-                                    type="image/webp" 
-                                  />
-                                  <img
-                                    src={post.image}
-                                    alt={post.title}
-                                    className="w-full h-full object-cover"
-                                    loading="lazy"
-                                    decoding="async"
-                                  />
-                                </picture>
+                            <div className="w-16 h-16 bg-neutral-800 rounded-lg flex-shrink-0 overflow-hidden flex items-center justify-center">
+                              {post.image ? (
+                                <img
+                                  src={post.image}
+                                  alt=""
+                                  className="w-full h-full object-cover"
+                                  loading="lazy"
+                                  decoding="async"
+                                  onError={(e) => {
+                                    // Hide broken image, parent div shows neutral bg
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                  }}
+                                />
+                              ) : (
+                                <BookOpen className="w-6 h-6 text-neutral-600" />
                               )}
                             </div>
                             <div className="flex-1 min-w-0">

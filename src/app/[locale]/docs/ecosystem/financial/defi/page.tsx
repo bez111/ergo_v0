@@ -2,9 +2,9 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
 
-import React from "react";
+import React, { type JSX } from "react";
 import { CheckCircle, Zap, TrendingUp, Info, Coins, Layers, Gift, ExternalLink } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const defiList: Array<{

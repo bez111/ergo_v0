@@ -1,0 +1,38 @@
+[
+  {
+    "key": "subscribeSection.title",
+    "value": "STAY IN THE LOOP",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "subscribeSection.subtitle",
+    "value": "Get Ergo releases, grants, dev calls, and top articles delivered weekly",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "subscribeSection.socialLinks.discord",
+    "value": "Discord",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "subscribeSection.socialLinks.twitter",
+    "value": "Twitter",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "subscribeSection.socialLinks.telegram",
+    "value": "Telegram",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "subscribeSection.privacyNotice",
+    "value": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click.",
+    "context": "General content",
+    "maxLength": 237
+  }
+]

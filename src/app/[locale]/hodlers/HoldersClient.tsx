@@ -4,7 +4,7 @@
 
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { 
   Shield, 
   Coins, 
@@ -459,11 +459,11 @@ export function HoldersClient() {
                     <div className="flex items-center justify-between mb-4">
                       <metric.icon className="w-8 h-8 text-orange-400" />
                       <Badge variant="outline" className={`text-xs ${
-                        metric.trend.startsWith('+') ? 'border-green-500/30 text-green-400' :
+                        metric.trend?.startsWith('+') ? 'border-green-500/30 text-green-400' :
                         metric.trend === 'stable' ? 'border-blue-500/30 text-blue-400' :
                         'border-orange-500/30 text-orange-400'
                       }`}>
-                        {metric.trend}
+                        {metric.trend ?? ''}
                       </Badge>
                     </div>
                     <div className="text-2xl font-bold text-white mb-1">

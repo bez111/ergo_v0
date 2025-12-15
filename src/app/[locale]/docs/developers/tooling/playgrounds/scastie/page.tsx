@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Copy, Check } from "lucide-react";
 
 const CopyButton = ({ text }: { text: string }) => {

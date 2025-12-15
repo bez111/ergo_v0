@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, BookOpen, MessageCircle, FileText } from "lucide-react"
@@ -9,8 +9,9 @@ interface RelatedLink {
   title: string
   href: string
   description: string
-  type: 'blog' | 'docs' | 'technology' | 'forum'
+  type: 'blog' | 'docs' | 'technology' | 'forum' | 'article' | 'guide'
   category?: string
+  readTime?: number
 }
 
 interface RelatedContentProps {

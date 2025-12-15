@@ -24,7 +24,7 @@ export const PLURAL_RULES = {
 } as const
 
 // Common ICU message patterns
-export interface ICUMessageParams extends Record<string, string | number | Date> {
+export interface ICUMessageParams {
   count?: number
   name?: string
   value?: string | number
@@ -32,6 +32,7 @@ export interface ICUMessageParams extends Record<string, string | number | Date>
   max?: number
   current?: number
   field?: string
+  [key: string]: string | number | Date | undefined
 }
 
 // Helper for creating ICU plural messages
@@ -78,7 +79,11 @@ export function useICUMessage() {
     // Format message with parameters
     format: (key: string, params: ICUMessageParams = {}) => {
       try {
-        const message = t(key, params)
+        // Filter out undefined values for next-intl compatibility
+        const cleanParams = Object.fromEntries(
+          Object.entries(params).filter(([, v]) => v !== undefined)
+        ) as Record<string, string | number | Date>
+        const message = t(key, cleanParams)
         return message
       } catch (error) {
         console.warn(`ICU message formatting failed for key: ${key}`, error)

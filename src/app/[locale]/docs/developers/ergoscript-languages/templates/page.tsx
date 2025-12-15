@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, FileText, Database, Zap } from "lucide-react";
 
 export default function ErgoTreeTemplatesPage() {

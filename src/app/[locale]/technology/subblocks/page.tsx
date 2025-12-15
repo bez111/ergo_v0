@@ -13,7 +13,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Rocket, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle, Layers, Clock, Network, GitBranch, Activity, Cpu, Database, Server, Users, Globe, Terminal, BookOpen } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState } from "react"
 import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 

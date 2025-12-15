@@ -1,0 +1,242 @@
+{
+  "minersPage": {
+    "hero": {
+      "title": "使用GPU开采。永远赚钱。保持盈利。",
+      "subtitle": "无损算法。合理奖励。储藏租金将在排放结束后支付给矿工。",
+      "cta": "开始挖矿错误",
+      "checkProfitability": "检查获利性",
+      "whyMine": "为什么要开采埃尔戈而不是其他硬币？"
+    },
+    "stats": {
+      "networkHashrate": "网络哈希率",
+      "blockReward": "块奖励",
+      "blockTime": "出块时间",
+      "activeMiners": "活跃矿工",
+      "miningPools": "矿池子"
+    },
+    "coreValues": {
+      "asicResistant": {
+        "title": "抗 ASIC",
+        "description": "仅GPU采矿。没有ASIC。没有工业农场将你挤出。你的游戏钻机保持竞争力。",
+        "highlight": "级别游戏场"
+      },
+      "fairLaunch": {
+        "title": "公平启动",
+        "description": "零预矿。零减税。零VC分配。每个ERG自第一天起公平开采。",
+        "highlight": "没有内线转包"
+      },
+      "realUseCases": {
+        "title": "实际使用案例",
+        "description": "Defi, DEXs, 隐私功能会产生实际需求，而不仅仅是投机――真正的实用驱动值。",
+        "highlight": "可持续需求"
+      },
+      "storageRent": {
+        "title": "存储出租器",
+        "description": "内置机制确保矿工获得超越区块奖励的报酬。通过设计实现长期可持续性。",
+        "highlight": "未来证明"
+      }
+    },
+    "calculator": {
+      "title": "采矿业：",
+      "titleHighlight": "获利性",
+      "titleSuffix": "计算器",
+      "subtitle": "计算您潜在的收入开采Ergo",
+      "hashrate": "哈希率 (MH/s)",
+      "power": "能量消耗(W)",
+      "electricity": "电力成本 ($/kWh)",
+      "ergPrice": "ERG 价格 (USD)",
+      "dailyErgMined": "每日挖掘的ERG",
+      "dailyRevenue": "每日收入",
+      "dailyPowerCost": "每日电源成本",
+      "dailyProfit": "每日损益",
+      "monthly": "每月的",
+      "yearly": "每年一次",
+      "roiTime": "ROI 时间 (GPU @ $500)",
+      "note": "计算是基于当前网络难度和价格的估计数。",
+      "gpuPresets": "热门GPU预设：",
+      "readyToStart": "准备开始采矿吗？",
+      "poolFee": "池费(%)",
+      "monthlyProfit": "月损益",
+      "yearlyProfit": "每年获利。"
+    },
+    "pools": {
+      "title": "采矿业：",
+      "titleHighlight": "资源库",
+      "titleSuffix": "目录",
+      "hashrate": "哈希率",
+      "miners": "矿工",
+      "minPayout": "最小支付",
+      "payment": "付款",
+      "noPoolsFound": "没有符合条件的资源库"
+    },
+    "software": {
+      "title": "采矿业：",
+      "titleHighlight": "软件",
+      "headers": {
+        "software": "软件",
+        "gpuSupport": "GPU 支持",
+        "devFee": "开发费",
+        "bestFor": "最好的"
+      },
+      "newToMining": "新建采矿？开始使用 NBMiner (混合钻机) 或 T-Rex(仅限NVIDIA) 进行最简单的安装。"
+    },
+    "comparison": {
+      "title": "ERG采矿Compares",
+      "headers": {
+        "criterion": "标准",
+        "bitcoin": "比特币",
+        "ethereum": "Ethereum",
+        "monero": "莫罗州",
+        "ergo": "Ergo"
+      },
+      "deepDive": "深深度：详细比较"
+    },
+    "tools": {
+      "openTool": "打开工具",
+      "viewGuide": "查看指南"
+    },
+    "joinNetwork": {
+      "title": "加入",
+      "titleHighlight": "网络",
+      "startMining": {
+        "title": "立即开始挖掘。",
+        "subtitle": "完整指南"
+      },
+      "joinChat": {
+        "title": "加入矿工聊天",
+        "subtitle": "社区支持"
+      },
+      "learnEconomics": {
+        "title": "学习经济",
+        "subtitle": "长期可行性"
+      },
+      "holdLongTerm": {
+        "title": "想要保持长期任期？",
+        "description": "学习关于ERG作为一个价值和投资存储的信息"
+      }
+    },
+    "faq": {
+      "title": "挖矿常见问题",
+      "questions": {
+        "0": {
+          "question": "我需要什么硬件来挖掘ERG？",
+          "answer": "任何使用 4GB+ VRAM 的现代GPU 都能有效地挖掘ERG。AMD 和 NVIDIA 两张卡都很有效。 最受欢迎的选择包括RTX 3070、RTX 4070和RX 6800。"
+        },
+        "1": {
+          "question": "我应该使用哪种采矿软件？",
+          "answer": "LolMiner和T-Rex是最受欢迎的ERG采矿选项，两者都是免费的(按dev 费用计算)并支持 Windows 和 Linux。"
+        },
+        "2": {
+          "question": "当前区块奖励是什么？",
+          "answer": "当前区块奖励被动态调整。请检查网络统计上方的最新奖励金额。"
+        },
+        "3": {
+          "question": "独家采矿是否有利可图？",
+          "answer": "对大多数矿工来说，矿池开采更加一致。单矿开采需要大量的哈希率才能定期找到区块。"
+        }
+      }
+    }
+  },
+  "mining": {
+    "title": "Mining Ergo (ERG)",
+    "description": "学习如何使用 Autolykos 工作算法证明来挖掘ERG",
+    "subDescription": "使用我们完整的指南开始开采ERG。安装、盈利计算器和集合推荐。",
+    "seo": {
+      "title": "Mining ERG - Complete Ergo Mining Guide | Autolykos PoW",
+      "description": "完成开采Ergo (ERG) cryptocurency的指南。了解Autolykos 算法、采矿设置、盈利能力和最好的采矿池。",
+      "keywords": "采矿、Ergo Mining、Autolykos、工作证明、采矿池、GPU采矿、采矿获利能力",
+      "openGraph": {
+        "title": "Mining ERG - Complete Guide",
+        "description": "用我们的全面指南开始挖掘Ergo 加密货币",
+        "imageAlt": "埃尔戈采矿指南"
+      },
+      "twitter": {
+        "title": "Mining ERG - Complete Guide",
+        "description": "学习如何开采Ergo (ERG) cryptocurrency"
+      }
+    },
+    "cta": {
+      "calculator": "采矿计算器"
+    },
+    "networkStats": {
+      "title": "网络统计",
+      "hashrate": "哈希率",
+      "blockTime": "出块时间",
+      "reward": "块奖励",
+      "miners": "活跃矿工"
+    },
+    "tabs": {
+      "overview": "概览",
+      "setup": "设置指南",
+      "pools": "矿池子",
+      "profitability": "获利性",
+      "gettingStarted": "正在开始",
+      "hardware": "硬件",
+      "calculator": "计算器",
+      "help": "帮助"
+    },
+    "stats": {
+      "hashrate": "210 TH/秒",
+      "blockTime": "2 分钟",
+      "reward": "1.2 ERG",
+      "miners": "12,847"
+    },
+    "seoSchema": {
+      "name": "如何挖矿Ergo (ERG)",
+      "description": "使用 GPU 挖掘Ergo 加密货币的完整指南",
+      "supply": {
+        "gpu": "图形卡 (GPU)",
+        "software": "挖掘软件",
+        "wallet": "Ergo Wallet"
+      },
+      "tool": {
+        "miner": "挖掘软件",
+        "pool": "矿池子"
+      },
+      "steps": {
+        "compatibility": {
+          "name": "检查 GPU 兼容性",
+          "text": "请确认您的 GPU 至少有 4GB 内存"
+        },
+        "download": {
+          "name": "下载采矿软件",
+          "text": "获取兼容的矿工，例如 NBMiner 或 TeamRedMiner"
+        },
+        "pool": {
+          "name": "选择采矿库",
+          "text": "选择一个具有优质哈希率和低费用的矿池。"
+        },
+        "configure": {
+          "name": "配置矿工",
+          "text": "在矿工配置中设置池地址和钱包"
+        },
+        "start": {
+          "name": "开始挖矿",
+          "text": "运行矿工并监视您的哈希速率"
+        }
+      },
+      "calculator": {
+        "name": "埃尔戈采矿计算器",
+        "description": "计算您的潜在开采利润。"
+      }
+    },
+    "faq": {
+      "profitability": {
+        "question": "开采ERG是否有利可图？",
+        "answer": "利润取决于电力成本、硬件效率和ERG价格。使用我们的计算器进行估算。"
+      },
+      "bestGpu": {
+        "question": "什么是开采ERG的最佳GPU？",
+        "answer": "AMD RX 6800 XT 和 NVIDIA RTX 3070 为Autolykos提供了极好的效率。"
+      },
+      "whichPool": {
+        "question": "我应该使用哪个矿池？",
+        "answer": "热门的集合包括英雄、 2矿工和 WoolyPooly。根据收费和位置选择。"
+      },
+      "earnings": {
+        "question": "我能赚多少钱？",
+        "answer": "收入因哈希率、网络难度和ERG价格而异。请检查我们的计算器以获取估计数。"
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 'use client';
 
-/* eslint-disable react-compiler/react-compiler, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { locales, localeConfig, type Locale } from '../i18n/request';
 import { Globe, ChevronDown } from 'lucide-react';

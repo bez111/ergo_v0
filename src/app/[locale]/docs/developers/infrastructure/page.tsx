@@ -1,7 +1,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Server, Globe, Code, Wallet, Layers, BookOpen, ChevronRight } from "lucide-react";
 
 export default function InfrastructurePage() {

@@ -1,0 +1,68 @@
+[
+  {
+    "key": "events.title",
+    "value": "Community Events",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "events.subtitle",
+    "value": "Join Ergo community events",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "events.description",
+    "value": "Discover hackathons, meetups, and conferences in the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 100.5
+  },
+  {
+    "key": "events.upcoming",
+    "value": "Upcoming Events",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "events.past",
+    "value": "Past Events",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "events.register",
+    "value": "Register",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "events.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "events.noEvents",
+    "value": "No events scheduled at the moment. Check back soon!",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "events.hackathons",
+    "value": "Hackathons",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "events.meetups",
+    "value": "Meetups",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "events.conferences",
+    "value": "Conferences",
+    "context": "General content",
+    "maxLength": 16.5
+  }
+]

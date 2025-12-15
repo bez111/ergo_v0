@@ -10,6 +10,7 @@ interface CyberButtonProps {
   variant?: "default" | "outline" | "ghost"
   size?: "default" | "sm" | "lg" | "icon"
   className?: string
+  style?: React.CSSProperties
   asChild?: boolean
 }
 
@@ -19,10 +20,12 @@ export function CyberButton({
   variant = "default",
   size = "default",
   className,
+  style,
   asChild = false,
 }: CyberButtonProps) {
   return (
     <motion.div
+      style={style}
       whileHover={{
         scale: 1.02,
       }}

@@ -1,0 +1,158 @@
+{
+  "infographicDetail": {
+    "seo": {
+      "titleSuffix": "Инфографика Ergo",
+      "notFound": {
+        "title": "Инфографика не найдена",
+        "description": "Запрошенная инфографика не найдена."
+      }
+    },
+    "backToInfographics": "Назад к инфографике",
+    "published": "Опубликовано",
+    "minRead": "мин чтения",
+    "tags": "Теги",
+    "exploreMore": {
+      "title": "Просмотреть больше информации о Ergo",
+      "description": "Откройте для себя визуальные руководства по смарт-контрактам Ergo's PoW, eUTXO, аренде хранения, конфиденциальности и многое другое.",
+      "button": "Просмотр всей информации"
+    }
+  },
+  "infographicsPage": {
+    "seo": {
+      "title": "Инфографика Ergo — визуальные гайды по PoW, DeFi, Storage Rent и приватности",
+      "description": "Визуальные объяснения Ergo: PoW‑консенсус, eUTXO, Storage Rent, приватность Sigma, NiPoPoWs и другое. Сохраняйте, делитесь и переиспользуйте с указанием источника.",
+      "keywords": "инфографика ergo, визуальные гайды по блокчейну, ergo pow, диаграммы eutxo, визуализация storage rent, sigma protocols, nipopows, ergo vs vc, autolykos майнинг, ergoscript, oracle pools, обучение блокчейну, визуальное обучение, экосистема ergo"
+    },
+    "schema": {
+      "collection": {
+        "name": "Инфографика Ergo Blockchain",
+        "description": "Визуальные гайды по PoW, eUTXO‑смарт‑контрактам, Storage Rent, приватности и глобальному сеттлменту. Сохраняйте, делитесь и переиспользуйте с указанием ergoblockchain.org."
+      },
+      "breadcrumbs": {
+        "infographics": "Инфографика"
+      },
+      "itemList": {
+        "name": "Коллекция инфографики Ergo",
+        "description": "Визуальные гайды по PoW, eUTXO, Storage Rent, приватности и масштабированию."
+      }
+    },
+    "breadcrumbs": {
+      "infographics": "Инфографика"
+    },
+    "hero": {
+      "title": "Эрго Блокчейн",
+      "titleHighlight": "Инфографика",
+      "subtitle": "Визуальные руководства по смарт-контрактам Ergo's PoW, eUTXO, аренде хранения, конфиденциальности и глобальному урегулированию.",
+      "subtitleSecondLine": "Сохранить, делиться и повторно использовать их с атрибутом ergoblockchain.org.",
+      "description": "Этот узел собирает визуальных объяснений для наиболее важных частей протокола Ergo – консенсуса, токеномики, DeFi, приватности, легких клиентов и многое другое. Каждая инфография поставляется с полным текстом, чтобы вы могли учиться, учиться и строить с Ergo.",
+      "learnBasics": "Изучение основ"
+    },
+    "filters": {
+      "searchPlaceholder": "Инфографика поиска (например, 'Аренда хранения', 'NiPoPoWs', 'цепочки VC')",
+      "filters": "Фильтры",
+      "sortNewest": "Новейшие",
+      "sortPopular": "Самые популярные",
+      "sortAZ": "А-Я"
+    },
+    "grid": {
+      "noResults": "Информации не найдены",
+      "noResultsDescription": "Попробуйте изменить фильтры или условия поиска.",
+      "resetFilters": "Сбросить фильтры",
+      "viewInfographic": "Просмотр инфоблока"
+    },
+    "pagination": {
+      "previous": "Предыдущий",
+      "next": "Следующий"
+    },
+    "card": {
+      "new": "Новый",
+      "visualGuide": "Визуальное руководство"
+    },
+    "shareMenu": {
+      "share": "Поделиться",
+      "download": "Скачать",
+      "shareTitle": "Поделиться",
+      "shareDescription": "Выберите, где бы поделиться этой информацией. Помогите другим киферпанкам найти цепочки справедливого запуска.",
+      "shareOn": "Поделиться на",
+      "copyLink": "Копировать ссылку",
+      "linkCopied": "Ссылка скопирована",
+      "linkCopiedToast": "Спасибо за распространение Ergo.",
+      "downloadTitle": "Скачать",
+      "downloadDescription": "Выберите лучший формат для повторного использования этой информации в социальной, блогах и колодах.",
+      "pngStandard": "PNG - Стандарт (1920 x 1080)",
+      "pngStandardDesc": "Ландшафтный PNG для настольных и социальных каналов",
+      "embedCode": "Код вставки (HTML)",
+      "embedCodeDesc": "Скопировать HTML сниппет для вставки этой информации",
+      "embedCopied": "Код вставки скопирован в буфер обмена.",
+      "close": "Закрыть"
+    },
+    "howToUse": {
+      "title": "Как использовать эту информацию",
+      "reuse": {
+        "title": "Повторно использовать бесплатно",
+        "description": "Вы можете повторно использовать любую информацию в презентациях, блогах или образовательных материалах."
+      },
+      "credit": {
+        "title": "Кредит и ссылка назад",
+        "description": "Пожалуйста, кредитуйте ergoblockchain.org и ссылайтесь на исходную страницу."
+      },
+      "branding": {
+        "title": "Пользовательский брендинг",
+        "description": "Если вы хотите изменить исходные файлы или пользовательский бренд, свяжитесь с сообществом Ergo."
+      },
+      "learnMore": "Узнайте больше о Ergo",
+      "joinCommunity": "Присоединиться к сообществу"
+    },
+    "relatedResources": {
+      "title": "Связанные ресурсы",
+      "questions": {
+        "title": "Частые вопросы",
+        "items": [
+          {
+            "href": "/questions/what-is-ergo",
+            "text": "Что такое Ergo blockchain?"
+          },
+          {
+            "href": "/questions/what-is-eutxo",
+            "text": "Что такое модель eUTXO?"
+          },
+          {
+            "href": "/questions/what-is-mev-resistance",
+            "text": "Как работает устойчивость к MEV?"
+          },
+          {
+            "href": "/questions/what-is-storage-rent",
+            "text": "Что такое Storage Rent?"
+          }
+        ],
+        "viewAll": "Просмотреть все вопросы"
+      },
+      "playbooks": {
+        "title": "Книги и руководства",
+        "items": [
+          {
+            "href": "/playbooks/first-transaction-10-minutes",
+            "text": "Первая транзакция в Ergo (быстрый старт)"
+          },
+          {
+            "href": "/playbooks/start-mining-ergo",
+            "text": "Начать добычу Эрго"
+          },
+          {
+            "href": "/playbooks/build-defi-on-ergo",
+            "text": "Собрать DeFi на Ergo"
+          },
+          {
+            "href": "/playbooks/private-transaction-ergomixer",
+            "text": "Приватные транзакции с ErgoMixer"
+          }
+        ],
+        "viewAll": "Посмотреть все плейлисты"
+      }
+    },
+    "emailCapture": {
+      "title": "Будьте в курсе визуальных ресурсов Ergo",
+      "description": "Получайте уведомления, когда мы публикуем новую информацию, визуальные руководства и образовательный контент о блокчейне Ergo."
+    }
+  }
+}

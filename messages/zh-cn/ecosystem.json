@@ -1,0 +1,689 @@
+{
+  "ecosystem": {
+    "title": "生态环境",
+    "subtitle": "发现Ergo生态系统",
+    "description": "探索不断增长的Ergo生态系统",
+    "sections": {
+      "dapps": "分散化应用",
+      "tools": "开发者工具",
+      "services": "服务和基础设施"
+    },
+    "grants": {
+      "hero": {
+        "title": "即将到来的",
+        "description": "赋予开发者、研究者和创新者权力，使他们能够在埃尔戈建设分散融资的未来"
+      },
+      "subscribe": {
+        "placeholder": "输入您的电子邮件以获取更新",
+        "button": "通知我",
+        "success": "谢谢！我们会在赠款程序启动时通知您。"
+      },
+      "features": {
+        "title": "期望什么",
+        "subtitle": "赠款方案功能",
+        "description": "支持埃尔戈生态系统的创新与发展",
+        "items": {
+          "0": {
+            "title": "开发者支持",
+            "description": "为创新的应用程序、工具和基础设施项目筹资",
+            "icon": "Zap"
+          },
+          "1": {
+            "title": "研发融资",
+            "description": "支持学术研究和改进礼宾工作",
+            "icon": "Target"
+          },
+          "2": {
+            "title": "社区项目",
+            "description": "为社区推动的倡议和教育内容提供补助金",
+            "icon": "用户"
+          },
+          "3": {
+            "title": "创新补助金",
+            "description": "为突破性想法和试验项目提供特别资金",
+            "icon": "浅布色"
+          }
+        }
+      },
+      "cta": {
+        "title": "准备在Ergo上建造吗？",
+        "description": "开始准备您的项目提案并加入我们的社区以保持更新",
+        "buttons": {
+          "discord": "加入 Discord 社区",
+          "learn": "学习 Ergo"
+        }
+      }
+    },
+    "grantsPage": {
+      "seo": {
+        "title": "Ergo Grants | Funding for Blockchain Projects",
+        "description": "Funding for projects building on Ergo: developers, researchers, and community builders. Build tools, infrastructure, and applications on Ergo.",
+        "keywords": "ergo grants, blockchain funding, developer grants, crypto grants, project funding, open source grants",
+        "ogTitle": "Ergo Grants — Fund Your Blockchain Innovation",
+        "ogDescription": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
+        "ogAlt": "Ergo Grants Program",
+        "twitterTitle": "Ergo Grants | Get Funded",
+        "twitterDescription": "Funding for developers building on Ergo. Apply for grants and stay updated."
+      },
+      "schema": {
+        "financialService": {
+          "name": "Ergo Grants Program",
+          "description": "Funding program for projects building on Ergo blockchain",
+          "audienceType": "Developers, Researchers, Community Builders"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "Who can apply for Ergo grants?",
+              "answer": "Developers, researchers, community builders, and organizations working on projects that benefit the Ergo ecosystem can apply for grants."
+            },
+            {
+              "question": "What types of projects get funded?",
+              "answer": "DeFi protocols, developer tools, infrastructure, educational content, community initiatives, and research projects that advance Ergo technology."
+            },
+            {
+              "question": "How much funding is available?",
+              "answer": "Grant amounts vary based on project scope and impact, ranging from small community grants to substantial funding for core infrastructure projects."
+            }
+          ]
+        }
+      }
+    },
+    "mapPage": {
+      "seo": {
+        "title": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
+        "description": "Explore the Ergo ecosystem visually. Interactive map of DeFi, NFT platforms, wallets, infrastructure, and developer tools.",
+        "keywords": "ergo ecosystem, defi map, dapp directory, blockchain ecosystem, ergo projects, interactive map, crypto ecosystem",
+        "ogTitle": "Interactive Ergo Ecosystem Map | 50+ Projects",
+        "ogDescription": "Visual exploration of Ergo projects: DeFi, NFTs, wallets, and infrastructure.",
+        "ogAlt": "Ergo Ecosystem Interactive Map",
+        "twitterTitle": "Ergo Ecosystem Map",
+        "twitterDescription": "Interactive visualization of Ergo projects. Explore DeFi, NFTs, and infrastructure."
+      },
+      "schema": {
+        "webApp": {
+          "name": "Ergo Ecosystem Interactive Map",
+          "description": "Visual explorer for Ergo blockchain projects and applications"
+        },
+        "dataset": {
+          "name": "Ergo Ecosystem Projects Dataset",
+          "description": "Complete dataset of projects building on Ergo blockchain"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "What is the Ergo Ecosystem Map?",
+              "answer": "An interactive visualization showing active projects, protocols, and applications built on Ergo blockchain, organized by category."
+            },
+            {
+              "question": "How many projects are in the Ergo ecosystem?",
+              "answer": "The Ergo ecosystem includes 50+ active projects across DeFi, NFTs, wallets, infrastructure, developer tools, and community initiatives."
+            },
+            {
+              "question": "How do I add my project to the map?",
+              "answer": "Submit your project through the ecosystem submission form or contact the Ergo Foundation to be included in the ecosystem map."
+            },
+            {
+              "question": "Is the ecosystem map updated regularly?",
+              "answer": "Yes. The ecosystem map is updated regularly to include new projects and remove inactive ones."
+            }
+          ]
+        }
+      }
+    },
+    "ecosystemPage": {
+      "schema": {
+        "breadcrumbs": {
+          "ecosystem": "生态环境"
+        },
+        "collection": {
+          "name": "Ergo 生态环境",
+          "description": "建立在 Ergo 区块链上的 dApp、钱包与工具的完整目录"
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "What is the Ergo ecosystem?",
+              "answer": "The Ergo ecosystem consists of DeFi protocols, NFT marketplaces, developer tools, wallets, and community projects built on the Ergo blockchain."
+            },
+            {
+              "question": "What DeFi projects are on Ergo?",
+              "answer": "Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools."
+            },
+            {
+              "question": "Which wallets support Ergo?",
+              "answer": "Popular Ergo wallets include Nautilus, Satergo, SAFEW, and Ergo Mobile Wallet."
+            },
+            {
+              "question": "Are there NFT marketplaces on Ergo?",
+              "answer": "Yes. Ergo has NFT marketplaces like SkyHarbor for minting and trading NFTs with low fees."
+            }
+          ]
+        }
+      }
+    },
+    "seo": {
+      "title": "Ecosystem - Ergo Blockchain 项目 | Ergo 平台",
+      "description": "发现蓬勃发展的错误: Defi 协议, NFT marketplace, tools and applications.",
+      "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain 项目",
+      "ogTitle": "Ergo Ecosystem - Blockchain Projects & Applications",
+      "ogDescription": "在Ergo生态系统中探索Defi、NFT、钱包和开发工具。"
+    },
+    "categories": {
+      "defi": {
+        "title": "DeFi",
+        "description": "权力下放的金融协议和应用"
+      },
+      "nfts": {
+        "title": "NFTs",
+        "description": "NFT 市场和收藏"
+      },
+      "tools": {
+        "title": "工具",
+        "description": "发展工具和基础设施"
+      },
+      "wallets": {
+        "title": "钱包",
+        "description": "存储和管理ERG的钱包"
+      },
+      "gaming": {
+        "title": "游戏中",
+        "description": "区块链游戏和元项目"
+      },
+      "social": {
+        "title": "社交活动",
+        "description": "社会平台和社区"
+      }
+    },
+    "stats": {
+      "projects": "活动项目",
+      "activeProjects": "活动项目",
+      "categories": "类别管理",
+      "status": "在线项目",
+      "developers": "开发者",
+      "tvl": "总值锁定",
+      "users": "活跃用户"
+    },
+    "filters": {
+      "all": "所有的",
+      "defi": "DeFi",
+      "infrastructure": "B. 基础设施",
+      "oracles": "Oracles",
+      "privacy": "隐私",
+      "nft": "NFT",
+      "wallets": "钱包",
+      "dao": "DAO",
+      "gaming": "游戏中",
+      "tools": "工具"
+    },
+    "search": {
+      "placeholder": "搜索项目...",
+      "resultsCount": "{count} projects"
+    },
+    "featuredProjects": {
+      "title": "精选项目",
+      "badge": "功能"
+    },
+    "featured": {
+      "title": "精选项目",
+      "viewAll": "查看所有项目"
+    },
+    "cta": {
+      "title": "建立在埃尔戈上",
+      "description": "加入生态系统并构建区块链的未来",
+      "startBuilding": "开始Building",
+      "viewGrants": "查看赠款"
+    },
+    "mining": {
+      "no_pools_match_your_criteria": "没有符合条件的资源库",
+      "new_to_mining": "新建挖掘？",
+      "best_for": "最好的",
+      "ready_to_start_mining": "准备开始挖矿吗？",
+      "auto_exchange_mobile_app_api_access_ssl_tls": ", ",
+      "auto_exchange_mobile_app": "General content",
+      "telegram_bot_email_alerts_ddos_protection": ", ",
+      "telegram_bot_email_alerts": ",",
+      "eu_us_asia_ru": ", ",
+      "ssl_support_worker_stats_profit": ", ",
+      "low_fee_discord_bot_profit_calc": ", ",
+      "solo_mining_telegram_bot_mev_rewards_low_latency": ", ",
+      "solo_mining_mev_rewards_low_fee": ", ",
+      "mobile_app_multi_coin_instant": ", ",
+      "multi_coin_instant_pay_mobile_app": ", ",
+      "mining_os_instant_payouts_profit": ", ",
+      "mining_os_profit_switch_dashboard": ", ",
+      "api_access_multi_lang_mobile_app": ", ",
+      "eu_us_asia_au": ", ",
+      "mining_pools_directory": "正在修剪战利品",
+      "smaller_pools_for_better_decentralization": "较小的集合以便更好地放权",
+      "ergo_mining_software_options": "Ergo 挖掘软件选项",
+      "for_beginners": "对于初学者",
+      "all_pools": "所有库",
+      "fair_launch_asic_resistant_truly": "公平启动，ASIC抗性，真正分散化。查找集合，软件和资源。",
+      "i_m_new_start_here": "我是新的 - 从这里开始",
+      "browse_pools_directory": "浏览池目录",
+      "start_with_nbminer_mixed_rigs": "从NBMiner(混合钻机)或T-Rex(仅限NVIDIA)开始进行最简单的安装。",
+      "how_to_choose_a_pool": "如何选择池？",
+      "beginners_choose_pools_with_good": "起始者：选择支持良好的池。高级：优化收费和服务器位置。",
+      "minimum_requirements": "最低要求？",
+      "depends_on_hashrate_and_electricity_cost": "取决于哈希率和电力成本。",
+      "view_all_faqs": "查看所有常见问题",
+      "join_thousands_of_miners_securing": "加入数以千计的矿工保护埃尔戈网络。博城、分散和营利。"
+    },
+    "map": {
+      "title": "Ergo 生态系统地图",
+      "subtitle": "交互式Defi & dApp 目录",
+      "description": "探索完整的 Ergo 生态系统。Defi 协议、NFT 平台、钱包、基础设施和开发者工具的交互地图。发现 50 + 个活动项目。",
+      "lastUpdated": "上次更新",
+      "buttons": {
+        "exploreProjects": "探索项目",
+        "visitSigmaverse": "访问 Sigmaverse"
+      },
+      "features": {
+        "title": "生态系统特点",
+        "subtitle": "发现使埃尔戈生态系统独特的内容",
+        "interactive": {
+          "title": "交互式可视化",
+          "description": "通过直观视界面探索项目"
+        },
+        "comprehensive": {
+          "title": "综合保险",
+          "description": "所有在一个地方活动的项目和协议"
+        },
+        "realtime": {
+          "title": "实时更新",
+          "description": "总是最新的项目信息和统计"
+        }
+      },
+      "cta": {
+        "title": "准备好浏览？",
+        "subtitle": "深入正在增长的埃尔戈生态系统并发现创新项目",
+        "buttons": {
+          "exploreEcosystem": "探索Ecosystem",
+          "visitSigmaverse": "访问 Sigmaverse"
+        }
+      },
+      "seo": {
+        "title": "Ergo 生态系统地图 | 交互式Defi & dApp 目录",
+        "description": "探索完整的 Ergo 生态系统。Defi 协议、NFT 平台、钱包、基础设施和开发者工具的交互地图。发现 50 + 个活动项目。",
+        "ogTitle": "交互式Ergo 生态系统地图 | 50+ 项目",
+        "ogDescription": "视觉探索所有埃尔戈项目。DeFi、NFT、钱包、基础设施已映射。",
+        "twitterTitle": "Ergo 生态系统地图 | 视觉项目浏览器",
+        "twitterDescription": "50+Ergo 项目的交互直观化。Explore DeFi，NFT，基础设施。"
+      },
+      "jump_to": "跳转到：",
+      "filter_by_category": "按类别筛选：",
+      "spectrum_finance_category_defi_url": ", url: ",
+      "sigmausd_category_defi_url_https_sigmausd_io": ", url: ",
+      "rosen_bridge_category_infrastructure_url": ", url: ",
+      "ergomixer_category_privacy_url_https_ergomixer_io": ", url: ",
+      "ergo_auction_house_category_nft": ", url: ",
+      "paideia_category_dao_url_https_paideia_im": ", url: ",
+      "oracle_pools_category_oracles_url": ", url: ",
+      "ergo_explorer_category_tools_url": ", url: ",
+      "mew_finance_category_defi_url": ", url: ",
+      "satergo_category_wallets_url_https_satergo_com": ", url: ",
+      "safew_category_wallets_url_https_safew_org": ", url: ",
+      "ergowatch_category_tools_url_https_ergo_watch": ", url: ",
+      "ergoraffle_category_defi_url_https_ergoraffle_com": ", url: ",
+      "guapswap_category_tools_url": ", url: ",
+      "sigmaverse_category_tools_url_https_sigmaverse_io": ", url: ",
+      "ergone_category_tools_url": ", url: ",
+      "hodlbox_category_defi_url": ", url: ",
+      "tokenjay_category_defi_url": ", url: ",
+      "single_tx_swap_category_tools_url": ", url: ",
+      "crux_finance_category_tools_url": ", url: ",
+      "fleet_sdk_category_tools_url": ", url: ",
+      "appkit_category_tools_url_https": ", url: ",
+      "sigmarust_category_tools_url_https": ", url: ",
+      "sigrsv_category_defi_url": ", url: ",
+      "suggest_a_project": "建议一个项目",
+      "no_projects_found": "未找到项目",
+      "ergo_ecosystem_interactive_map": "Ergo 生态系统交互地图",
+      "ergo_ecosystem_map_interactive_defi_dapp_directory": "Ergo 生态系统地图 | 交互式Defi & dApp 目录",
+      "interactive_ergo_ecosystem_map_50_projects": "交互式Ergo 生态系统地图 | 50+ 项目",
+      "ergo_ecosystem_map_visual_project_explorer": "Ergo 生态系统地图 | 视觉项目浏览器",
+      "interactive_visualization_of_50_ergo": "50+Ergo 项目的交互直观化。Explore DeFi，NFT，基础设施。",
+      "visual_explorer_for_ergo_blockchain": "Ergo 区块链项目和应用程序的视觉浏览器"
+    },
+    "website_id_https_ergoblockchain_org_website": ": ",
+    "ecosystem_item_https_ergoblockchain_org_ecosystem": "General content",
+    "home_item_https_ergoblockchain_org": "General content",
+    "projectPage": {
+      "breadcrumbs": {
+        "ecosystem": "生态环境"
+      },
+      "defaultFaq": {
+        "whatIs": {
+          "q": "什么是{name}？"
+        },
+        "features": {
+          "q": "{name}有哪些功能？",
+          "a": "{name}提供：{features}。"
+        },
+        "technologies": {
+          "q": "{name}使用了哪些 Ergo 技术？",
+          "a": "{name}使用了：{technologies}。"
+        }
+      },
+      "buttons": {
+        "visitProject": "访问项目",
+        "github": "GitHub",
+        "twitter": "推特",
+        "docs": "文档",
+        "community": "社区",
+        "backToEcosystem": "回到生态环境"
+      },
+      "status": {
+        "operational": "运行",
+        "testing": "测试",
+        "prototype": "原型",
+        "notOperating": "未运行"
+      },
+      "sections": {
+        "keyFeatures": "关键功能",
+        "builtWith": "使用 Ergo Technology 生成",
+        "relatedArticles": "相关文章",
+        "viewAll": "查看全部",
+        "faq": "常见问题",
+        "relatedProjects": "Related {category} Projects",
+        "minRead": "{time} min read"
+      },
+      "cta": {
+        "title": "探索更多的 dApps",
+        "description": "使用Defi、钱包、工具等方式发现整个埃尔戈生态系统。",
+        "primaryButton": "查看所有项目",
+        "secondaryButton": "开始Building"
+      }
+    },
+    "infographicPage": {
+      "breadcrumbs": {
+        "infographics": "信息图像"
+      },
+      "meta": {
+        "minRead": "{time} min read"
+      },
+      "image": {
+        "clickToEnlarge": "单击以扩展",
+        "fullSize": "完整大小"
+      },
+      "share": {
+        "title": "分享此信息图形",
+        "subtitle": "帮助他人发现Ergo",
+        "telegram": "Telegram",
+        "pinterest": "Pinterest",
+        "download": "下载",
+        "copyLink": "复制链接",
+        "copied": "已复制！"
+      },
+      "sections": {
+        "about": "关于此信息",
+        "systemsCompared": "系统比较",
+        "keyPoints": "关键点",
+        "howToRead": "如何读取此信息图形",
+        "relatedTopics": "相关主题"
+      },
+      "cta": {
+        "title": "探索更多错误信息图形",
+        "description": "发现Ergo的 PoW、eUTXO 智能合同、存储租赁、隐私等视觉指南。",
+        "button": "浏览全部信息图形"
+      }
+    }
+  },
+  "ecosystemPage": {},
+  "ecosystemGrants": {
+    "title": "生态系统补助金",
+    "description": "为埃尔戈生态系统发展提供资金的机会",
+    "subtitle": "在社区支持下建立区块链的未来"
+  },
+  "ecosystemMap": {
+    "title": "生态系统地图",
+    "description": "埃尔戈生态系统的交互式可视化",
+    "subtitle": "探索项目、工具和服务"
+  },
+  "ecosystemMining": {
+    "title": "生态系统采矿公司",
+    "description": "用于埃尔戈矿工的矿池、工具和资源",
+    "subtitle": "开始挖掘ERG所需的一切功能"
+  },
+  "ecosystemData": {
+    "rosen-bridge": {
+      "name": "Rosen Bridge",
+      "description": "一个开源的跨链资产转移协议，支持 Ergo 与 Cardano、Bitcoin Runes、Dogecoin 等区块链之间的互操作。",
+      "longDescription": "Rosen Bridge 是一个去中心化的跨链协议，可在 Ergo、Cardano、Bitcoin、Dogecoin、Ethereum 等多条区块链之间实现无需信任的资产转移。该桥使用 NiPoPoWs（非交互式工作量证明的证明）等先进密码学技术，无需中心化托管方或联邦多签。\n\n该桥通过一个由独立 Watcher 组成的网络运行，它们监控各连接链上的交易。这些 Watcher 使用密码学证明来验证跨链转账，无需信任任何单一方。即使多数 Watcher 被攻陷，协议的安全模型仍能保持稳健，这得益于智能合约中内置的经济激励和密码学保障。\n\nRosen Bridge 支持双向封装资产：用户可将 Bitcoin、ADA 及其他代币带入 Ergo 的 DeFi 生态，同时也能将 ERG 和 Ergo 原生代币用于其他链。该桥的开源架构允许任何人运行 Watcher 节点，参与网络安全并赚取手续费。这种去中心化的跨链互操作方式，使 Rosen Bridge 成为多链 DeFi 未来的关键基础设施。",
+      "features": [
+        "跨链转账",
+        "多链支持",
+        "去中心化 Watcher 网络",
+        "无需信任的桥"
+      ],
+      "faq": [
+        {
+          "question": "什么是 Rosen Bridge？",
+          "answer": "Rosen Bridge 是一个去中心化协议，用于在 Ergo 与 Cardano、Bitcoin、Ethereum 等区块链之间转移资产，无需依赖中心化托管方。"
+        },
+        {
+          "question": "Rosen Bridge 如何运作？",
+          "answer": "Rosen Bridge 使用 Watcher 网络以密码学方式验证跨链交易。NiPoPoWs 技术实现无需完整区块链数据的无信任验证。"
+        },
+        {
+          "question": "Rosen Bridge 支持哪些区块链？",
+          "answer": "Rosen Bridge 目前支持 Ergo、Cardano、Bitcoin（包括 Runes）、Dogecoin，并正在扩展至更多链。"
+        }
+      ]
+    },
+    "sigmausd": {
+      "name": "SigmaUSD",
+      "description": "首个基于 eUTXO 的稳定币，实现 AgeUSD 协议，以美元锚定，由 ERG 作为浮动储备（400%-800%）支撑。",
+      "longDescription": "SigmaUSD 是一款开创性的算法稳定币，在 Ergo 区块链上率先实现了 AgeUSD 协议。作为首个基于扩展 UTXO 模型的稳定币，它展示了如何在不依赖中心化储备或可信第三方的情况下实现价格稳定。\n\n该协议通过独特的双代币机制维持美元锚定：SigmaUSD（稳定币）和 SigRSV（储备币）。用户通过抵押 ERG 铸造 SigmaUSD，而储备提供者则铸造 SigRSV 来吸收价格波动。系统始终维持 400% 至 800% 的浮动储备率，即使在市场剧烈波动时也能保持充足超额抵押。\n\nSigmaUSD 与其他稳定币的不同之处在于其完全去中心化的设计，个人用户无清算风险。价格数据来自 Ergo 无需信任的 Oracle 池，消除了对中心化预言机的依赖。整个协议在链上智能合约中运行，储备率对任何人透明可见。这使 SigmaUSD 成为 Ergo DeFi 生态中理想的稳定计价单位，实现可预测的价值存储和交易，且无对手方风险。",
+      "features": [
+        "算法稳定币",
+        "ERG 抵押",
+        "去中心化",
+        "无清算风险"
+      ],
+      "faq": [
+        {
+          "question": "什么是 SigmaUSD？",
+          "answer": "SigmaUSD 是 Ergo 上的去中心化算法稳定币，以美元锚定，由 ERG 加密货币支撑，储备率为 400%-800%。"
+        },
+        {
+          "question": "SigmaUSD 与其他稳定币有何不同？",
+          "answer": "与 USDT 等中心化稳定币不同，SigmaUSD 完全去中心化，无单点故障。它采用带有超额抵押的 AgeUSD 协议，用户无清算风险。"
+        },
+        {
+          "question": "什么是 SigRSV？",
+          "answer": "SigRSV 是支撑 SigmaUSD 的储备币。储备提供者铸造 SigRSV 以分享 ERG 价格上涨收益，同时为系统提供稳定性。"
+        }
+      ]
+    },
+    "ergomixer": {
+      "name": "ErgoMixer",
+      "description": "加密行业首个非交互式、非托管混币器，允许用户通过 Sigma 协议私密发送代币，提供增强隐私保护。",
+      "longDescription": "ErgoMixer 是一款开创性的隐私工具，推出了全球首个非交互式、非托管代币混币器。与需要协调参与或可信运营商的传统混币器不同，ErgoMixer 利用 Sigma 协议实现完全无需信任的交易混淆。\n\n该混币器通过将用户交易汇集到一起，打破发送方和接收方地址之间的链上关联。用户将代币存入混币合约，经过可配置次数的混币轮次后，提取到新地址。整个过程由基于 Sigma 协议的零知识证明保护，这意味着无论是混币器运营商还是区块链观察者，都无法追踪存款和提款之间的联系。\n\nErgoMixer 不仅支持 ERG，还支持在 Ergo 区块链上发行的所有原生代币，是整个生态系统的综合隐私解决方案。非交互式设计意味着用户无需与其他参与者同时在线。这代表了对以往混币实现的重大进步，展示了 Ergo 密码学原语在构建实用隐私应用方面的强大能力，在保护用户主权的同时保持与透明区块链架构的兼容性。",
+      "features": [
+        "非托管混币",
+        "代币隐私",
+        "Sigma 协议",
+        "零知识证明"
+      ],
+      "faq": [
+        {
+          "question": "什么是 ErgoMixer？",
+          "answer": "ErgoMixer 是一个去中心化、非托管的代币混币器，使用 Sigma 协议打破交易关联，在 Ergo 区块链上提供金融隐私。"
+        },
+        {
+          "question": "ErgoMixer 安全吗？",
+          "answer": "是的，ErgoMixer 是非托管的，您始终控制自己的资金。混币过程使用密码学证明，在数学上保证隐私，无需信任任何第三方。"
+        },
+        {
+          "question": "我可以混合哪些代币？",
+          "answer": "ErgoMixer 支持 ERG 以及 Ergo 区块链上的所有原生代币，是整个生态系统的综合隐私解决方案。"
+        }
+      ]
+    },
+    "nautilus-wallet": {
+      "name": "Nautilus Wallet",
+      "description": "专为 Ergo 设计的浏览器扩展和移动钱包，注重隐私、安全和用户体验，支持 Ledger、多钱包和 dApp 连接器。",
+      "longDescription": "Nautilus Wallet 是 Ergo 生态系统中最受欢迎的钱包，在浏览器扩展和移动设备上提供无缝体验。以隐私和安全为核心原则，Nautilus 为用户提供对 ERG 和原生代币的完全控制，同时保持直观界面，适合新手和资深用户。\n\n该钱包集成 Ledger 硬件钱包支持以实现最高安全性，用户可将私钥存储在专用硬件上，同时享受现代钱包界面的便利。多钱包管理功能方便组织不同账户，内置 dApp 连接器可一键访问 Ergo 生态系统中的 DeFi 协议、NFT 市场和其他应用。\n\nNautilus 还集成 ErgoMixer 以提供可选的交易隐私保护，展示了钱包如何在不牺牲易用性的情况下增强用户主权。该钱包支持所有 Ergo 原生代币，可显示 NFT 并提供实时投资组合追踪。凭借开源代码库和积极的开发维护，Nautilus Wallet 代表了注重用户控制和隐私的加密货币钱包的行业标杆。",
+      "features": [
+        "浏览器扩展",
+        "移动 App",
+        "Ledger 支持",
+        "dApp 连接器",
+        "多钱包"
+      ],
+      "faq": [
+        {
+          "question": "什么是 Nautilus Wallet？",
+          "answer": "Nautilus 是 Ergo 的浏览器扩展和移动钱包，支持 ERG、原生代币、NFT、Ledger 硬件钱包以及与 Ergo dApp 的连接。"
+        },
+        {
+          "question": "Nautilus Wallet 安全吗？",
+          "answer": "是的，Nautilus 是非托管且开源的。您的私钥在本地加密存储，永不离开您的设备。硬件钱包支持增加了额外的安全层。"
+        },
+        {
+          "question": "我可以将 Nautilus 用于 DeFi 应用吗？",
+          "answer": "是的，Nautilus 内置 dApp 连接器，可与所有主要 Ergo DeFi 协议配合使用，包括 DEX、借贷平台和 NFT 市场。"
+        }
+      ]
+    },
+    "duckpools": {
+      "name": "DuckPools",
+      "description": "一个带有算法借贷池的抵押借贷平台。用户可存入 ERG 或原生资产赚取收益，或以 ERG 抵押借入资产。",
+      "longDescription": "DuckPools 是一个去中心化借贷协议，将传统借贷机制引入 Ergo 区块链。该平台允许用户将 ERG 和其他原生资产存入算法借贷池以赚取收益，借款人则可通过超额抵押头寸获取流动性。\n\n协议使用 Ergo 的 Oracle 池获取准确、最小化信任的价格数据，确保抵押率和清算阈值保持公平透明。利率根据池利用率自动调整，无需人工干预即可平衡供需。所有借贷逻辑通过审计过的 ErgoScript 智能合约执行，提供确定性结果并消除账户模型系统中常见的重入攻击可能性。\n\nDuckPools 展示了 eUTXO 模型如何以增强的安全保障支持复杂的 DeFi 原语。每笔贷款都表示为具有明确状态的独立 UTXO，便于审计和验证。该平台支持多种抵押类型，并设计为与其他 Ergo DeFi 协议集成，实现跨生态系统的可组合收益策略。",
+      "features": [
+        "借贷池",
+        "抵押贷款",
+        "收益生成",
+        "原生资产支持"
+      ]
+    },
+    "paideia": {
+      "name": "Paideia",
+      "description": "一套用于在 Ergo 和 Cardano 上创建和管理去中心化自治组织 (DAO) 的工具，提供治理和财库管理功能。",
+      "longDescription": "Paideia 是一个综合性的 DAO 基础设施平台，赋能社区在 Ergo 和 Cardano 区块链上创建和管理去中心化组织。该平台提供去中心化治理所需的所有基本工具：提案创建、代币加权投票、财库管理和质押机制。\n\n与中心化治理工具不同，Paideia 利用智能合约自动执行投票结果。当提案通过时，财库交易会根据投票结果自动执行，无需可信管理员。这消除了困扰许多加密货币项目的治理捕获或资金挪用风险。\n\n该平台支持灵活的治理配置，包括法定人数要求、投票期限和委托机制。DAO 可以发行治理代币，通过空投或归属时间表分发，并实施二次投票等复杂投票方案。Paideia 的多链支持意味着组织可以从统一界面管理跨 Ergo 和 Cardano 生态系统的资产和活动。",
+      "features": [
+        "DAO 创建",
+        "治理工具",
+        "财库管理",
+        "提案投票",
+        "多链"
+      ],
+      "faq": [
+        {
+          "question": "什么是 Paideia？",
+          "answer": "Paideia 是 Ergo 和 Cardano 的 DAO 创建和管理平台，提供治理、投票、财库管理和社区协调工具。"
+        },
+        {
+          "question": "任何人都可以在 Paideia 上创建 DAO 吗？",
+          "answer": "是的，Paideia 是无需许可的。任何人都可以创建 DAO、配置治理规则、发行代币并开始在链上管理社区决策。"
+        }
+      ]
+    },
+    "oracle-pools": {
+      "name": "Oracle 池",
+      "description": "Ergo 上的去中心化预言机系统，将智能合约与外部数据连接，无需信任中心化数据源。",
+      "longDescription": "Oracle 池是 Ergo 的原生解决方案，以最小化信任的方式将外部数据引入链上。与中心化预言机服务不同，Ergo 的 Oracle 池使用链上聚合和无需许可的参与来为 DeFi 协议、稳定币和其他智能合约应用创建可靠的数据馈送。\n\n该系统允许多个独立的预言机运营商提交数据点，然后使用中位数或其他统计方法在链上聚合。这种聚合发生在透明的 UTXO 中，任何人都可以验证最终值的计算方式。提交篡改数据的恶意行为者可以被识别并削减其质押，为诚实行为创造强大的经济激励。\n\nOracle 池为整个 Ergo 生态系统的关键基础设施提供动力，包括 SigmaUSD 的价格馈送和各种 DeFi 协议。无需许可的设计意味着新运营商可以通过质押抵押品加入，随时间增加去中心化程度。每个预言机池将其数据历史存储在链上的 eUTXO 中，提供透明、可审计的价格变动记录，应用程序可以引用这些记录进行时间加权计算或历史分析。",
+      "features": [
+        "去中心化预言机",
+        "价格馈送",
+        "外部数据",
+        "无需信任设计"
+      ],
+      "faq": [
+        {
+          "question": "什么是 Oracle 池？",
+          "answer": "Oracle 池是 Ergo 的去中心化预言机解决方案，通过多个独立数据源的链上聚合，向智能合约提供最小化信任的外部数据（如价格馈送）。"
+        },
+        {
+          "question": "Oracle 池与 Chainlink 有何不同？",
+          "answer": "Oracle 池在链上而非链下执行聚合，使过程完全透明可审计。数据存储在 eUTXO 中，任何人都可以验证值的计算方式。"
+        },
+        {
+          "question": "我可以运行预言机节点吗？",
+          "answer": "是的，Oracle 池是无需许可的。任何人都可以质押抵押品成为预言机运营商，通过提供准确数据赚取奖励。"
+        }
+      ]
+    },
+    "mew-finance": {
+      "name": "Mew Finance",
+      "description": "一个去中心化金融 (DeFi) 平台，提供一系列金融应用，包括 DEX、NFT 市场和各种金融工具。",
+      "features": [
+        "DEX",
+        "NFT 市场",
+        "DeFi 套件",
+        "代币交换"
+      ]
+    },
+    "ergoraffle": {
+      "name": "ErgoRaffle",
+      "description": "一个带有彩票元素的众筹服务，允许为项目筹款，参与者可赢得奖励。",
+      "features": [
+        "众筹",
+        "彩票系统",
+        "可证明公平",
+        "项目资助"
+      ]
+    },
+    "ergodex": {
+      "name": "ErgoDex",
+      "description": "面向 Ergo 和 Cardano 的非托管去中心化交易所 (DEX)，支持两个生态系统之间的 AMM 和订单簿交易。",
+      "features": [
+        "Ergo 和 Cardano 跨链 DEX",
+        "非托管交易",
+        "AMM 和订单簿模型",
+        "ERG 和 ADA 生态流动性提供"
+      ]
+    }
+  },
+  "ecosystemClient": {
+    "allProjects": "所有项目",
+    "noProjectsFound": "未找到项目",
+    "learnMore": "了解更多",
+    "visitProject": "访问项目",
+    "exploreMore": "探索更多",
+    "technology": {
+      "title": "技术",
+      "subtitle": "学习授权这些项目的技术",
+      "description": "深入到埃尔戈的技术库，了解使这些项目成为可能的创新办法。"
+    },
+    "useCases": {
+      "title": "使用案例",
+      "subtitle": "看看你可以建立在埃尔戈上的内容",
+      "description": "探索现实世界应用程序，发现在Ergo平台上建设的可能性。"
+    },
+    "emailCapture": {
+      "title": "与生态系统更新保持连接",
+      "description": "获取关于新的 dApp、协议更新和生态系统开发的通知"
+    }
+  },
+  "mapClient": {
+    "hero": {
+      "title": "生态系统地图",
+      "subtitle": "Ergo项目、工具和团队的视觉地图。按类别搜索集群，筛选并发现正在构建的东西。",
+      "projects": "项目",
+      "categories": "类别",
+      "trending": "热点"
+    },
+    "buttons": {
+      "browseEcosystem": "浏览生态环境",
+      "suggestProject": "建议一个项目"
+    },
+    "controls": {
+      "searchPlaceholder": "搜索项目...",
+      "trendingLabel": "热门主题"
+    },
+    "navigation": {
+      "jumpTo": "跳转到：",
+      "filterByCategory": "按类别筛选：",
+      "clear": "清空"
+    },
+    "map": {
+      "noProjectsFound": "未找到项目",
+      "open": "打开",
+      "close": "关闭"
+    },
+    "legend": "说明:"
+  }
+}

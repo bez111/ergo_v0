@@ -1,0 +1,2930 @@
+[
+  {
+    "key": "components.raw_icu_message_items",
+    "value": "Raw ICU Message (items):",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.ui.failed_to_copy_text",
+    "value": "Failed to copy text:",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.home.defi_without_compromise_quote_ergo",
+    "value": "DeFi Without Compromise\",\n      quote:\n        \"Ergo's eUTXO model allowed us to build a DEX with better security and lower fees than what we could achieve on other platforms.\",\n      author: \"Alex Chen\",\n      role: \"DeFi Developer\",\n      image:",
+    "context": "General content",
+    "maxLength": 370.5
+  },
+  {
+    "key": "components.home.privacy_when_needed_quote_the",
+    "value": "Privacy When Needed\",\n      quote:\n        \"The privacy features in Ergo helped our business maintain confidentiality in transactions while still being compliant with regulations.\",\n      author: \"Maria Rodriguez\",\n      role: \"Business Owner\",\n      image:",
+    "context": "General content",
+    "maxLength": 385.5
+  },
+  {
+    "key": "components.home.fair_mining_experience_quote_as",
+    "value": "Fair Mining Experience\",\n      quote:\n        \"As a small miner, I appreciate that Ergo remains ASIC-resistant, allowing me to participate in securing the network with consumer hardware.\",\n      author: \"Thomas Weber\",\n      role: \"Independent Miner\",\n      image:",
+    "context": "General content",
+    "maxLength": 396
+  },
+  {
+    "key": "components.home.defi_without_compromise",
+    "value": "DeFi Without Compromise",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.privacy_when_needed",
+    "value": "Privacy When Needed",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "components.home.fair_mining_experience",
+    "value": "Fair Mining Experience",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.home.fair_secure_subtitle_proof_of",
+    "value": "FAIR & SECURE\",\n      subtitle: \"Proof-of-Work Foundation\",\n      description: \"No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.",
+    "context": "General content",
+    "maxLength": 282
+  },
+  {
+    "key": "components.home.powerful_flexible_subtitle_advanced_smart",
+    "value": "POWERFUL & FLEXIBLE\",\n      subtitle: \"Advanced Smart Contracts\",\n      description: \"eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what's possible.",
+    "context": "General content",
+    "maxLength": 298.5
+  },
+  {
+    "key": "components.home.sustainable_subtitle_built_to_last",
+    "value": "SUSTAINABLE\",\n      subtitle: \"Built to Last\",\n      description: \"Storage rent mechanism prevents bloat and ensures network health with predictable costs for decades to come.",
+    "context": "General content",
+    "maxLength": 262.5
+  },
+  {
+    "key": "components.home.privacy_first_description_optional_privacy",
+    "value": "PRIVACY FIRST\",\n      description: \"Optional privacy with Sigma protocols for confidential transactions.",
+    "context": "General content",
+    "maxLength": 156
+  },
+  {
+    "key": "components.home.community_driven_description_open_source",
+    "value": "COMMUNITY DRIVEN\",\n      description: \"Open-source development led by passionate contributors worldwide.",
+    "context": "General content",
+    "maxLength": 156
+  },
+  {
+    "key": "components.home.developer_friendly_description_world_class",
+    "value": "DEVELOPER FRIENDLY\",\n      description: \"World-class docs, tools, and support make building on Ergo easy.",
+    "context": "General content",
+    "maxLength": 157.5
+  },
+  {
+    "key": "components.home.proof_of_work_foundation",
+    "value": "Proof-of-Work Foundation",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.no_ico_no_premine_asic",
+    "value": "No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.",
+    "context": "General content",
+    "maxLength": 162
+  },
+  {
+    "key": "components.home.advanced_smart_contracts",
+    "value": "Advanced Smart Contracts",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.eutxo_model_ergoscript_enable_secure",
+    "value": "eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what",
+    "context": "General content",
+    "maxLength": 151.5
+  },
+  {
+    "key": "components.home.built_to_last",
+    "value": "Built to Last",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.home.storage_rent_mechanism_prevents_bloat",
+    "value": "Storage rent mechanism prevents bloat and ensures network health with predictable costs for decades to come.",
+    "context": "General content",
+    "maxLength": 162
+  },
+  {
+    "key": "components.home.privacy_first",
+    "value": "PRIVACY FIRST",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.home.optional_privacy_with_sigma_protocols",
+    "value": "Optional privacy with Sigma protocols for confidential transactions.",
+    "context": "General content",
+    "maxLength": 102
+  },
+  {
+    "key": "components.home.open_source_development_led_by",
+    "value": "Open-source development led by passionate contributors worldwide.",
+    "context": "General content",
+    "maxLength": 97.5
+  },
+  {
+    "key": "components.home.world_class_docs_tools_and",
+    "value": "World-class docs, tools, and support make building on Ergo easy.",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.home.a_resilient_blockchain_platform_combining",
+    "value": "A resilient blockchain platform combining proven principles with cutting-edge innovation",
+    "context": "General content",
+    "maxLength": 132
+  },
+  {
+    "key": "components.home.defi_label_t_categories_defi",
+    "value": "DEFI\", label: t(\"categories.defi",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "components.home.privacy_label_t_categories_privacy",
+    "value": "PRIVACY\", label: t(\"categories.privacy",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "components.home.stable_label_t_categories_stable",
+    "value": "STABLE\", label: t(\"categories.stable",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "components.home.gaming_label_t_categories_gaming",
+    "value": "GAMING\", label: t(\"categories.gaming",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "components.home.rosen_bridge_subtitle_t_projects",
+    "value": "Rosen Bridge\",\n      subtitle: t(\"projects.rosenBridge.subtitle",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "components.home.connecting_ergo_s_ecosystem_description",
+    "value": "Connecting Ergo's Ecosystem\",\n      description: t(\"projects.rosenBridge.description",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "components.home.seamlessly_transfer_assets_between_ergo",
+    "value": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+    "context": "General content",
+    "maxLength": 331.5
+  },
+  {
+    "key": "components.home.cross_chain_value_t_projects",
+    "value": "Cross-Chain\", value: t(\"projects.rosenBridge.stats.crossChain.value",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "components.home.btc_eth_ada_bsc_more",
+    "value": "BTC, ETH, ADA, BSC & more",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.home.secure_bridge_value_t_projects",
+    "value": "Secure Bridge\", value: t(\"projects.rosenBridge.stats.secureBridge.value",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "components.home.watcher_guard_model",
+    "value": "Watcher & Guard Model",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.unlock_liquidity_value_t_projects",
+    "value": "Unlock Liquidity\", value: t(\"projects.rosenBridge.stats.unlockLiquidity.value",
+    "context": "General content",
+    "maxLength": 115.5
+  },
+  {
+    "key": "components.home.access_new_markets",
+    "value": "Access New Markets",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.home.visit_rosen_bridge_ctalink_https_rosen_tech",
+    "value": "VISIT ROSEN BRIDGE\",\n      ctaLink: \"https://rosen.tech",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "components.home.ergomixer_subtitle_t_projects_ergomixer_subtitle",
+    "value": "ErgoMixer\",\n      subtitle: t(\"projects.ergoMixer.subtitle",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "components.home.non_custodial_privacy_protocol_description",
+    "value": "Non-Custodial Privacy Protocol\",\n      description: t(\"projects.ergoMixer.description",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "components.home.mixed_volume_value_t_projects",
+    "value": "Mixed Volume\", value: t(\"projects.ergoMixer.stats.mixedVolume.value",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "components.home.privacy_score_value_t_projects",
+    "value": "Privacy Score\", value: t(\"projects.ergoMixer.stats.privacyScore.value",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "components.home.transactions_value_t_projects_ergomixer",
+    "value": "Transactions\", value: t(\"projects.ergoMixer.stats.transactions.value",
+    "context": "General content",
+    "maxLength": 102
+  },
+  {
+    "key": "components.home.learn_about_privacy_on_ergo",
+    "value": "LEARN ABOUT PRIVACY ON ERGO\",\n      ctaLink: \"/ecosystem/privacy",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.home.sigmausd_subtitle_t_projects_sigmausd_subtitle",
+    "value": "SigmaUSD\",\n      subtitle: t(\"projects.sigmaUSD.subtitle",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "components.home.algorithmic_stablecoin_protocol_description_t",
+    "value": "Algorithmic Stablecoin Protocol\",\n      description: t(\"projects.sigmaUSD.description",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "components.home.sigmausd_is_a_crypto_backed",
+    "value": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+    "context": "General content",
+    "maxLength": 301.5
+  },
+  {
+    "key": "components.home.stability_score_value_t_projects",
+    "value": "Stability Score\", value: t(\"projects.sigmaUSD.stats.stabilityScore.value",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "components.home.total_supply_value_t_projects",
+    "value": "Total Supply\", value: t(\"projects.sigmaUSD.stats.totalSupply.value",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "components.home.collateral_ratio_value_t_projects",
+    "value": "Collateral Ratio\", value: t(\"projects.sigmaUSD.stats.collateralRatio.value",
+    "context": "General content",
+    "maxLength": 111
+  },
+  {
+    "key": "components.home.explore_sigmausd_ctalink_ecosystem_sigmausd",
+    "value": "EXPLORE SIGMAUSD\",\n      ctaLink: \"/ecosystem/sigmausd",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "components.home.ergo_gaming_ecosystem_subtitle_t",
+    "value": "Ergo Gaming Ecosystem\",\n      subtitle: t(\"projects.gaming.subtitle",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "components.home.blockchain_gaming_platform_description_t",
+    "value": "Blockchain Gaming Platform\",\n      description: t(\"projects.gaming.description",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "components.home.experience_the_future_of_gaming",
+    "value": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo",
+    "context": "General content",
+    "maxLength": 193.5
+  },
+  {
+    "key": "components.home.active_games_value_t_projects",
+    "value": "Active Games\", value: t(\"projects.gaming.stats.activeGames.value",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.home.players_value_t_projects_gaming",
+    "value": "Players\", value: t(\"projects.gaming.stats.players.value",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "components.home.rewards_paid_value_t_projects",
+    "value": "Rewards Paid\", value: t(\"projects.gaming.stats.rewardsPaid.value",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.home.start_gaming_on_ergo_ctalink_ecosystem_gaming",
+    "value": "START GAMING ON ERGO\",\n      ctaLink: \"/ecosystem/gaming",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "components.home.decentralize_everything",
+    "value": "Decentralize Everything",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.get_started",
+    "value": "Get Started",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "components.home.get_wallet",
+    "value": "GET WALLET",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.home.try_a_dapp",
+    "value": "TRY A DAPP",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.home.explore_decentralized_apps",
+    "value": "Explore decentralized apps",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.home.secure_the_network",
+    "value": "Secure the network",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.home.connect_with_ergo_users",
+    "value": "Connect with Ergo users",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.choose_your_path_to_explore_the_ergo_ecosystem",
+    "value": "Choose your path to explore the Ergo ecosystem.",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "components.home.what_makes",
+    "value": "WHAT MAKES",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.home.ergo_different",
+    "value": "ERGO DIFFERENT",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "components.home.fair_launch_proof_of_work_description",
+    "value": "FAIR LAUNCH & PROOF-OF-WORK\",\n      description:",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "components.home.the_extended_utxo_model_combined",
+    "value": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+    "context": "General content",
+    "maxLength": 268.5
+  },
+  {
+    "key": "components.home.storage_rent_for_long_term",
+    "value": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY\",\n      description: 'A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient.",
+    "context": "General content",
+    "maxLength": 373.5
+  },
+  {
+    "key": "components.home.research_driven_innovation_description_built",
+    "value": "RESEARCH-DRIVEN INNOVATION\",\n      description: \"Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+    "context": "General content",
+    "maxLength": 288
+  },
+  {
+    "key": "components.home.ergo_offers_flexible_privacy_features",
+    "value": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+    "context": "General content",
+    "maxLength": 294
+  },
+  {
+    "key": "components.home.community_led_development_description_a",
+    "value": "COMMUNITY-LED DEVELOPMENT\",\n      description: \"A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+    "context": "General content",
+    "maxLength": 351
+  },
+  {
+    "key": "components.home.a_novel_mechanism_ensuring_network",
+    "value": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (",
+    "context": "General content",
+    "maxLength": 168
+  },
+  {
+    "key": "components.home.fair_launch_proof_of_work",
+    "value": "FAIR LAUNCH & PROOF-OF-WORK",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "components.home.launched_with_no_ico_or",
+    "value": "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+    "context": "General content",
+    "maxLength": 273
+  },
+  {
+    "key": "components.home.eutxo_ergoscript_for_advanced_defi",
+    "value": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "components.home.storage_rent_for_long_term_sustainability",
+    "value": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "components.home.research_driven_innovation",
+    "value": "RESEARCH-DRIVEN INNOVATION",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.home.built_on_peer_reviewed_academic",
+    "value": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+    "context": "General content",
+    "maxLength": 214.5
+  },
+  {
+    "key": "components.home.robust_optional_privacy_protocols",
+    "value": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "components.home.community_led_development",
+    "value": "COMMUNITY-LED DEVELOPMENT",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.home.a_truly_decentralized_open_source",
+    "value": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+    "context": "General content",
+    "maxLength": 279
+  },
+  {
+    "key": "components.home.ergo_combines_proven_cryptographic_techniques",
+    "value": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable",
+    "context": "General content",
+    "maxLength": 211.5
+  },
+  {
+    "key": "components.home.in_a_world_of_increasing",
+    "value": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
+    "context": "General content",
+    "maxLength": 141
+  },
+  {
+    "key": "components.home.ergo_is_built_on_the",
+    "value": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
+    "context": "General content",
+    "maxLength": 217.5
+  },
+  {
+    "key": "components.home.we_reject_the_centralization_of",
+    "value": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
+    "context": "General content",
+    "maxLength": 195
+  },
+  {
+    "key": "components.home.ergo_provides_the_tools_for",
+    "value": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
+    "context": "General content",
+    "maxLength": 211.5
+  },
+  {
+    "key": "components.home.this_is_not_just_technology_this_is_resistance",
+    "value": "This is not just technology. This is resistance.",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "components.home.i_m_interested_as_a",
+    "value": "I'm interested as a:",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.home.please_enter_a_valid_email",
+    "value": "Please enter a valid email address\")\n      setMessageType(\"error",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.home.successfully_subscribed_check_your_email",
+    "value": "Successfully subscribed! Check your email for confirmation.\")\n      setMessageType(\"success\")\n      setEmail(\"\")\n      setSelectedSegment(\"",
+    "context": "General content",
+    "maxLength": 208.5
+  },
+  {
+    "key": "components.home.failed_to_subscribe_please_try",
+    "value": "Failed to subscribe. Please try again.\"\n      setMessage(errorMessage)\n      setMessageType(\"error",
+    "context": "General content",
+    "maxLength": 147
+  },
+  {
+    "key": "components.home.enter_your_email_address",
+    "value": "Enter your email address",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.privacy_label_privacy",
+    "value": "PRIVACY\", label: \"PRIVACY",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.home.stable_label_stable_assets",
+    "value": "STABLE\", label: \"STABLE ASSETS",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "components.home.gaming_label_gaming",
+    "value": "GAMING\", label: \"GAMING",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.rosen_bridge_subtitle_connecting_ergo",
+    "value": "Rosen Bridge\",\n      subtitle: \"Connecting Ergo's Ecosystem\",\n      description:\n        \"Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.\",\n      image: \"/placeholder.svg",
+    "context": "General content",
+    "maxLength": 516
+  },
+  {
+    "key": "components.home.cross_chain_value_btc_eth_ada_bsc_more",
+    "value": "Cross-Chain\", value: \"BTC, ETH, ADA, BSC & more",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "components.home.secure_bridge_value_watcher_guard_model",
+    "value": "Secure Bridge\", value: \"Watcher & Guard Model",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "components.home.unlock_liquidity_value_access_new_markets",
+    "value": "Unlock Liquidity\", value: \"Access New Markets",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "components.home.mixed_volume_value",
+    "value": "Mixed Volume\", value:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.privacy_score_value",
+    "value": "Privacy Score\", value:",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.home.transactions_value",
+    "value": "Transactions\", value:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.sigmausd_subtitle_algorithmic_stablecoin_protocol",
+    "value": "SigmaUSD\",\n      subtitle: \"Algorithmic Stablecoin Protocol\",\n      description:\n        \"SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.\",\n      image: \"/placeholder.svg",
+    "context": "General content",
+    "maxLength": 486
+  },
+  {
+    "key": "components.home.stability_score_value",
+    "value": "Stability Score\", value:",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.total_supply_value",
+    "value": "Total Supply\", value:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.collateral_ratio_value",
+    "value": "Collateral Ratio\", value:",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.home.ergo_gaming_ecosystem_subtitle_blockchain",
+    "value": "Ergo Gaming Ecosystem\",\n      subtitle: \"Blockchain Gaming Platform\",\n      description:\n        \"Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.\",\n      image:",
+    "context": "General content",
+    "maxLength": 438
+  },
+  {
+    "key": "components.home.active_games_value",
+    "value": "Active Games\", value:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.rewards_paid_value",
+    "value": "Rewards Paid\", value:",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.decentralize_everything_classname_text_primary",
+    "value": "Decentralize Everything\" className=\"text-primary",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "components.home.non_custodial_privacy_protocol",
+    "value": "Non-Custodial Privacy Protocol",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "components.home.algorithmic_stablecoin_protocol",
+    "value": "Algorithmic stablecoin protocol",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.home.ergo_gaming_ecosystem",
+    "value": "Ergo Gaming Ecosystem",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.blockchain_gaming_platform",
+    "value": "Blockchain Gaming Platform",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.home.trusted_by_leading_exchanges",
+    "value": "TRUSTED BY LEADING EXCHANGES",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "components.home.active_community_description_developers_miners",
+    "value": "Active Community\",\n      description: \"Developers, miners, and users worldwide",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "components.home.market_cap_description_growing_ecosystem_value",
+    "value": "Market Cap\",\n      description: \"Growing ecosystem value",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "components.home.uptime_description_network_reliability_since",
+    "value": "Uptime\",\n      description: \"Network reliability since launch",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "components.home.total_value_locked_description_in",
+    "value": "Total Value Locked\",\n      description: \"In DeFi applications",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "components.home.coinbase_kucoin_gate_io_mexc_changelly_changenow",
+    "value": "Coinbase\", \"KuCoin\", \"Gate.io\", \"MEXC\", \"Changelly\", \"ChangeNOW",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "components.home.developers_miners_and_users_worldwide",
+    "value": "Developers, miners, and users worldwide",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "components.home.growing_ecosystem_value",
+    "value": "Growing ecosystem value",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.network_reliability_since_launch",
+    "value": "Network reliability since launch",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "components.home.in_defi_applications",
+    "value": "In DeFi applications",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.home.security_pow_description",
+    "value": "SECURITY (POW)\",\n      description:",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "components.home.programmability_eutxo_ergoscript_description",
+    "value": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)\",\n      description:",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "components.home.sustainability_storage_rent_description_storage",
+    "value": "SUSTAINABILITY (STORAGE RENT)\",\n      description: \"Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat.",
+    "context": "General content",
+    "maxLength": 225
+  },
+  {
+    "key": "components.home.privacy_description",
+    "value": "PRIVACY\",\n      description:",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "components.home.oracle_pools_description",
+    "value": "ORACLE POOLS\",\n      description:",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "components.home.dev_friendly_description_world_class",
+    "value": "DEV FRIENDLY\",\n      description: \"World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative.",
+    "context": "General content",
+    "maxLength": 219
+  },
+  {
+    "key": "components.home.asic_resistant_autolykos_v2_pow",
+    "value": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone.",
+    "context": "General content",
+    "maxLength": 171
+  },
+  {
+    "key": "components.home.programmability_eutxo_ergoscript",
+    "value": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "components.home.sustainability_storage_rent",
+    "value": "SUSTAINABILITY (STORAGE RENT)",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.home.storage_rent_and_predictable_costs",
+    "value": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat.",
+    "context": "General content",
+    "maxLength": 147
+  },
+  {
+    "key": "components.home.protocol_level_privacy_using_sigma",
+    "value": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions.",
+    "context": "General content",
+    "maxLength": 135
+  },
+  {
+    "key": "components.home.the_first_truly_decentralized_oracle",
+    "value": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives.",
+    "context": "General content",
+    "maxLength": 172.5
+  },
+  {
+    "key": "components.home.world_class_docs_open_tools",
+    "value": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative.",
+    "context": "General content",
+    "maxLength": 166.5
+  },
+  {
+    "key": "components.home.ergo_combines_proven_principles_with",
+    "value": "Ergo combines proven principles with cutting-edge cryptography to create a secure and efficient platform.",
+    "context": "General content",
+    "maxLength": 157.5
+  },
+  {
+    "key": "components.home.ready_to_contribute",
+    "value": "Ready to contribute?",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.home.discord_description_join_our_community",
+    "value": "Discord\",\n      description: \"Join our community chat\",\n      icon: Discord,\n      url: \"https://discord.gg/ergo\",\n      color:",
+    "context": "General content",
+    "maxLength": 190.5
+  },
+  {
+    "key": "components.home.twitter_description_follow_for_updates",
+    "value": "Twitter\",\n      description: \"Follow for updates\",\n      icon: Twitter,\n      url: \"https://twitter.com/ergoplatform\",\n      color:",
+    "context": "General content",
+    "maxLength": 196.5
+  },
+  {
+    "key": "components.home.forum_description_discuss_and_propose",
+    "value": "Forum\",\n      description: \"Discuss and propose ideas\",\n      icon: MessageSquare,\n      url: \"https://forum.ergoplatform.org\",\n      color:",
+    "context": "General content",
+    "maxLength": 210
+  },
+  {
+    "key": "components.home.github_description_contribute_to_the",
+    "value": "GitHub\",\n      description: \"Contribute to the code\",\n      icon: Github,\n      url: \"https://github.com/ergoplatform\",\n      color:",
+    "context": "General content",
+    "maxLength": 198
+  },
+  {
+    "key": "components.home.join_our_community_chat",
+    "value": "Join our community chat",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.follow_for_updates",
+    "value": "Follow for updates",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.home.discuss_and_propose_ideas",
+    "value": "Discuss and propose ideas",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.home.contribute_to_the_code",
+    "value": "Contribute to the code",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.home.join_the_ergo_community_and",
+    "value": "Join the Ergo community and be part of building the future of blockchain.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "components.home.ergo_is_an_open_platform",
+    "value": "Ergo is an open platform where anyone can contribute. Join us in building the future of blockchain.",
+    "context": "General content",
+    "maxLength": 148.5
+  },
+  {
+    "key": "components.home.get_involved",
+    "value": "Get Involved",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "components.home.ergo_represents_the_future_of",
+    "value": "Ergo represents the future of decentralized finance - combining Bitcoin's security with Ethereum's programmability, plus unique innovations like storage rent and built-in privacy.\",\n      author: \"Alex Chepurnoy\",\n      role: \"Core Developer & Co-founder\",\n      avatar: \"AC",
+    "context": "General content",
+    "maxLength": 411
+  },
+  {
+    "key": "components.home.the_eutxo_model_is_a",
+    "value": "The eUTXO model is a breakthrough that solves many of the scalability and security issues we see in other blockchains. Ergo's approach to smart contracts is elegant and powerful.\",\n      author: \"Kushti Research\",\n      role: \"Blockchain Researcher\",\n      avatar: \"KR",
+    "context": "General content",
+    "maxLength": 402
+  },
+  {
+    "key": "components.home.as_a_miner_i_love",
+    "value": "As a miner, I love that Ergo remains committed to fair, ASIC-resistant mining. The Autolykos algorithm ensures true decentralization without the energy waste of other PoW chains.\",\n      author: \"Mining Pool Operator\",\n      role: \"Community Validator\",\n      avatar: \"MP",
+    "context": "General content",
+    "maxLength": 406.5
+  },
+  {
+    "key": "components.home.ergo_s_oracle_pools_are",
+    "value": "Ergo's oracle pools are the missing piece of the DeFi puzzle. Finally, we have truly decentralized, reliable data feeds that don't depend on centralized providers.\",\n      author: \"DeFi Builder\",\n      role: \"dApp Developer\",\n      avatar: \"DB",
+    "context": "General content",
+    "maxLength": 364.5
+  },
+  {
+    "key": "components.home.ergo_s_commitment_to_academic",
+    "value": "Ergo's commitment to academic rigor and peer-reviewed research sets it apart. Every feature is built on solid theoretical foundations, not just hype.\",\n      author: \"Academic Researcher\",\n      role: \"Computer Science Professor\",\n      avatar: \"AR",
+    "context": "General content",
+    "maxLength": 372
+  },
+  {
+    "key": "components.home.developers_researchers_and_users_worldwide",
+    "value": "Developers, researchers, and users worldwide are building the future with Ergo.",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "components.home.join_thousands_of_developers_miners",
+    "value": "Join thousands of developers, miners, and users building on Ergo",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.home.decentralized_money_for_a_free_society",
+    "value": "Decentralized Money for a Free Society",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "components.home.the_globally_neutral_settlement_layer",
+    "value": "The globally-neutral settlement layer for programmable money.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "components.home.the_open_source_home_of_digital_freedom",
+    "value": "The open-source home of digital freedom",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "components.home.join_the_movement_for_decentralized",
+    "value": "Join the movement for decentralized, open-source money",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "components.home.ergo_classname_text_primary",
+    "value": "ERGO\" className=\"text-primary",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.home.join_a_movement_for_open",
+    "value": "Join a movement for open, programmable, and censorship-resistant finance.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "components.home.asic_resistant_mining_ergo_true",
+    "value": "ASIC-Resistant Mining\",\n      ergo: true,\n      bitcoin: false,\n      ethereum: false,\n      description: \"Fair mining for everyone",
+    "context": "General content",
+    "maxLength": 196.5
+  },
+  {
+    "key": "components.home.smart_contracts_ergo_true_bitcoin",
+    "value": "Smart Contracts\",\n      ergo: true,\n      bitcoin: false,\n      ethereum: true,\n      description: \"Programmable money",
+    "context": "General content",
+    "maxLength": 177
+  },
+  {
+    "key": "components.home.built_in_privacy_ergo_true",
+    "value": "Built-in Privacy\",\n      ergo: true,\n      bitcoin: false,\n      ethereum: false,\n      description:",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "components.home.storage_rent_ergo_true_bitcoin",
+    "value": "Storage Rent\",\n      ergo: true,\n      bitcoin: false,\n      ethereum: false,\n      description: \"Long-term sustainability",
+    "context": "General content",
+    "maxLength": 183
+  },
+  {
+    "key": "components.home.oracle_pools_ergo_true_bitcoin",
+    "value": "Oracle Pools\",\n      ergo: true,\n      bitcoin: false,\n      ethereum: false,\n      description: \"Decentralized data feeds",
+    "context": "General content",
+    "maxLength": 183
+  },
+  {
+    "key": "components.home.no_pre_mine_ergo_true",
+    "value": "No Pre-mine\",\n      ergo: true,\n      bitcoin: true,\n      ethereum: false,\n      description: \"Fair launch principles",
+    "context": "General content",
+    "maxLength": 177
+  },
+  {
+    "key": "components.home.energy_efficient_ergo_true_bitcoin",
+    "value": "Energy Efficient\",\n      ergo: true,\n      bitcoin: false,\n      ethereum: true,\n      description: \"Sustainable blockchain",
+    "context": "General content",
+    "maxLength": 184.5
+  },
+  {
+    "key": "components.home.best_of_both_worlds",
+    "value": "Best of both worlds",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "components.home.fair_mining_for_everyone",
+    "value": "Fair mining for everyone",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.protocols_for_confidentiality",
+    "value": "Σ-protocols for confidentiality",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.home.long_term_sustainability",
+    "value": "Long-term sustainability",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.decentralized_data_feeds",
+    "value": "Decentralized data feeds",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.fair_launch_principles",
+    "value": "Fair launch principles",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.home.sustainable_blockchain",
+    "value": "Sustainable blockchain",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.home.see_how_ergo_combines_the",
+    "value": "See how Ergo combines the best features from Bitcoin and Ethereum while solving their limitations.",
+    "context": "General content",
+    "maxLength": 147
+  },
+  {
+    "key": "components.home.experience_ergo_today",
+    "value": "Experience Ergo Today",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.home.bitcoin_level_security_description_proven",
+    "value": "Bitcoin-Level Security\",\n      description: \"Proven Proof-of-Work consensus with ASIC resistance ensures true decentralization and network security.\",\n      benefit: \"Your funds are protected by cryptographic guarantees\",\n      stat:",
+    "context": "General content",
+    "maxLength": 349.5
+  },
+  {
+    "key": "components.home.smart_contracts_done_right_description",
+    "value": "Smart Contracts Done Right\",\n      description:",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "components.home.build_defi_applications_with_confidence",
+    "value": "Build DeFi applications with confidence\",\n      stat: \"Zero contract exploits to date",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "components.home.privacy_by_design_description_sigma",
+    "value": "Privacy by Design\",\n      description: \"Sigma protocols provide mathematical privacy guarantees while maintaining auditability.\",\n      benefit: \"Control your financial privacy\",\n      stat: \"Cryptographically secure privacy",
+    "context": "General content",
+    "maxLength": 336
+  },
+  {
+    "key": "components.home.fair_sustainable_description_no_pre",
+    "value": "Fair & Sustainable\",\n      description: \"No pre-mine, no VCs, plus storage rent mechanism ensures long-term blockchain health.\",\n      benefit: \"Truly community-owned blockchain\",\n      stat:",
+    "context": "General content",
+    "maxLength": 286.5
+  },
+  {
+    "key": "components.home.bitcoin_level_security",
+    "value": "Bitcoin-Level Security",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.home.proven_proof_of_work_consensus",
+    "value": "Proven Proof-of-Work consensus with ASIC resistance ensures true decentralization and network security.",
+    "context": "General content",
+    "maxLength": 154.5
+  },
+  {
+    "key": "components.home.smart_contracts_done_right",
+    "value": "Smart Contracts Done Right",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.home.eutxo_model_combines_bitcoin",
+    "value": "eUTXO model combines Bitcoin",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "components.home.privacy_by_design",
+    "value": "Privacy by Design",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "components.home.sigma_protocols_provide_mathematical_privacy",
+    "value": "Sigma protocols provide mathematical privacy guarantees while maintaining auditability.",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "components.home.no_pre_mine_no_vcs",
+    "value": "No pre-mine, no VCs, plus storage rent mechanism ensures long-term blockchain health.",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "components.home.the_only_blockchain_that_combines",
+    "value": "The only blockchain that combines proven security, advanced smart contracts, and user sovereignty without compromise.",
+    "context": "General content",
+    "maxLength": 175.5
+  },
+  {
+    "key": "components.home.bitcoin_s_proven_security_ethereum",
+    "value": "Bitcoin's proven security + Ethereum's smart contracts + unique innovations = Ergo",
+    "context": "General content",
+    "maxLength": 123
+  },
+  {
+    "key": "components.home.join_our_discord_community",
+    "value": "Join our Discord community",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.home.follow_us_on_twitter",
+    "value": "Follow us on Twitter",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.home.join_our_telegram_channel",
+    "value": "Join our Telegram channel",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.home.view_all_posts",
+    "value": "View All Posts",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "components.home.view_all_blog_posts",
+    "value": "View all blog posts",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "components.home.from_the_ergo_blog",
+    "value": "FROM THE ERGO BLOG",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.home.stay_updated_with_the_latest",
+    "value": "Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "components.home.for_developers_description_build_innovative",
+    "value": "FOR DEVELOPERS\",\n      description: \"Build innovative applications on Ergo\",\n      iconName: \"Code\",\n      cta: \"START BUILDING\",\n      ctaLink: \"/docs",
+    "context": "General content",
+    "maxLength": 226.5
+  },
+  {
+    "key": "components.home.documentation_href_docs",
+    "value": "Documentation\", href: \"/docs",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "components.home.technology_href_technology",
+    "value": "Technology\", href: \"/technology",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.home.use_cases_href_use",
+    "value": "Use Cases\", href: \"/use",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.home.for_miners_description_secure_the",
+    "value": "For Miners\",\n      description: \"Secure the network\",\n      href: \"/use/mining\",\n      primary: false,\n      label: \"START MINING",
+    "context": "General content",
+    "maxLength": 193.5
+  },
+  {
+    "key": "components.home.mining_documents_href_docs_miners",
+    "value": "Mining Documents\", href: \"/docs/miners",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "components.home.mining_pools_href_mining_pools",
+    "value": "Mining Pools\", href: \"/mining/pools",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "components.home.profitability_calculator_href_use_mining",
+    "value": "Profitability Calculator\", href: \"/use/mining#calculator",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "components.home.for_users_description_use_ergo",
+    "value": "FOR USERS\",\n      description: \"Use Ergo for payments and DeFi\",\n      iconName: \"User\",\n      cta: \"GET STARTED\",\n      ctaLink: \"/start/introduction",
+    "context": "General content",
+    "maxLength": 225
+  },
+  {
+    "key": "components.home.ecosystem_href_ecosystem",
+    "value": "Ecosystem\", href: \"/ecosystem",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.home.buy_erg_href_use_get_erg",
+    "value": "Buy ERG\", href: \"/use/get-erg",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.home.for_investors_description_understand_ergo",
+    "value": "FOR INVESTORS\",\n      description: \"Understand Ergo's value proposition\",\n      iconName: \"LineChart\",\n      cta: \"EXPLORE ECOSYSTEM\",\n      ctaLink: \"/ecosystem",
+    "context": "General content",
+    "maxLength": 241.5
+  },
+  {
+    "key": "components.home.what_is_ergo_href_start_introduction",
+    "value": "What is Ergo\", href: \"/start/introduction",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "components.home.projects_href_ecosystem",
+    "value": "Projects\", href: \"/ecosystem",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "components.home.for_developers",
+    "value": "For Developers",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "components.home.build_innovative_applications_on_ergo",
+    "value": "Build innovative applications on Ergo",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "components.home.use_cases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "components.home.for_miners",
+    "value": "For Miners",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.home.secure_the_network_and_earn_rewards",
+    "value": "Secure the network and earn rewards",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "components.home.profitability_calculator",
+    "value": "Profitability Calculator",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "components.home.for_users",
+    "value": "FOR USERS",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "components.home.use_ergo_for_payments_and_defi",
+    "value": "Use Ergo for payments and DeFi",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "components.home.for_investors",
+    "value": "FOR INVESTORS",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.home.what_is_ergo",
+    "value": "What is Ergo",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "components.home.for_developers_description_build_on",
+    "value": "For Developers\",\n      description: \"Build on Ergo\",\n      href: \"/developers\",\n      primary: false,\n      label: \"START BUILDING",
+    "context": "General content",
+    "maxLength": 195
+  },
+  {
+    "key": "components.home.start_now",
+    "value": "START NOW",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "components.home.build_on_ergo",
+    "value": "Build on Ergo",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.home.ready_to_build_the",
+    "value": "Ready to Build the",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.home.join_the_movement_for_truly",
+    "value": "Join the movement for truly decentralized, programmable money. Start your Ergo journey today.",
+    "context": "General content",
+    "maxLength": 139.5
+  },
+  {
+    "key": "components.home.get_started_now",
+    "value": "Get Started Now",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "components.home.ready_to_get",
+    "value": "Ready to Get",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "components.home.choose_your_path_and_start",
+    "value": "Choose your path and start using the future of programmable money today.",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "components.home.resilient_secure_description_built_on",
+    "value": "Resilient & Secure\",\n      description:\n        \"Built on Proof of Work consensus with ASIC-resistant mining algorithm for long-term security and decentralization.",
+    "context": "General content",
+    "maxLength": 244.5
+  },
+  {
+    "key": "components.home.efficient_scalable_description_optimized_for",
+    "value": "Efficient & Scalable\",\n      description: \"Optimized for performance with innovative solutions for throughput and storage efficiency.",
+    "context": "General content",
+    "maxLength": 199.5
+  },
+  {
+    "key": "components.home.privacy_focused_description_advanced_cryptographic",
+    "value": "Privacy-Focused\",\n      description:\n        \"Advanced cryptographic features that enable optional privacy while maintaining compliance capabilities.",
+    "context": "General content",
+    "maxLength": 223.5
+  },
+  {
+    "key": "components.home.sustainable_description_storage_rent_mechanism",
+    "value": "Sustainable\",\n      description: \"Storage rent mechanism prevents blockchain bloat and ensures long-term economic sustainability.",
+    "context": "General content",
+    "maxLength": 193.5
+  },
+  {
+    "key": "components.home.extended_utxo_model_combines_bitcoin",
+    "value": "Extended UTXO model combines Bitcoin",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "components.home.ergoscript_description_powerful_smart_contract",
+    "value": "ErgoScript\",\n      description: \"Powerful smart contract language designed for secure financial contracts.",
+    "context": "General content",
+    "maxLength": 159
+  },
+  {
+    "key": "components.home.built_on_proof_of_work",
+    "value": "Built on Proof of Work consensus with ASIC-resistant mining algorithm for long-term security and decentralization.",
+    "context": "General content",
+    "maxLength": 171
+  },
+  {
+    "key": "components.home.optimized_for_performance_with_innovative",
+    "value": "Optimized for performance with innovative solutions for throughput and storage efficiency.",
+    "context": "General content",
+    "maxLength": 135
+  },
+  {
+    "key": "components.home.advanced_cryptographic_features_that_enable",
+    "value": "Advanced cryptographic features that enable optional privacy while maintaining compliance capabilities.",
+    "context": "General content",
+    "maxLength": 154.5
+  },
+  {
+    "key": "components.home.storage_rent_mechanism_prevents_blockchain",
+    "value": "Storage rent mechanism prevents blockchain bloat and ensures long-term economic sustainability.",
+    "context": "General content",
+    "maxLength": 142.5
+  },
+  {
+    "key": "components.home.powerful_smart_contract_language_designed",
+    "value": "Powerful smart contract language designed for secure financial contracts.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "components.home.active_projects_building_on_ergo",
+    "value": "Active projects building on Ergo",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "components.home.total_value_locked_in_ergo_defi",
+    "value": "Total value locked in Ergo DeFi",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.home.active_developers_in_the_ecosystem",
+    "value": "Active developers in the ecosystem",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "components.home.ergodex_description_decentralized_exchange_for",
+    "value": "ErgoDEX\",\n      description: \"Decentralized exchange for Ergo and Cardano ecosystems\",\n      category: \"DeFi\",\n      url: \"/ecosystem/projects/ergodex",
+    "context": "General content",
+    "maxLength": 225
+  },
+  {
+    "key": "components.home.spectrum_description_liquidity_and_yield",
+    "value": "Spectrum\",\n      description: \"Liquidity and yield farming protocol\",\n      category: \"DeFi\",\n      url: \"/ecosystem/projects/spectrum",
+    "context": "General content",
+    "maxLength": 201
+  },
+  {
+    "key": "components.home.sigmausd_description_algorithmic_stablecoin_protocol",
+    "value": "SigmaUSD\",\n      description: \"Algorithmic stablecoin protocol\",\n      category: \"Stablecoin\",\n      url: \"/ecosystem/projects/sigmausd",
+    "context": "General content",
+    "maxLength": 202.5
+  },
+  {
+    "key": "components.home.ergo_mixer_description_non_custodial",
+    "value": "Ergo Mixer\",\n      description: \"Non-custodial mixing service for privacy\",\n      category: \"Privacy\",\n      url: \"/ecosystem/projects/ergomixer",
+    "context": "General content",
+    "maxLength": 216
+  },
+  {
+    "key": "components.home.decentralized_exchange_for_ergo_and",
+    "value": "Decentralized exchange for Ergo and Cardano ecosystems",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "components.home.liquidity_and_yield_farming_protocol",
+    "value": "Liquidity and yield farming protocol",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "components.home.non_custodial_mixing_service_for_privacy",
+    "value": "Non-custodial mixing service for privacy",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "components.home.discover_the_growing_ecosystem_of",
+    "value": "Discover the growing ecosystem of projects and applications built on Ergo.",
+    "context": "General content",
+    "maxLength": 111
+  },
+  {
+    "key": "components.home.view_all_projects",
+    "value": "View All Projects",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "components.error_caught_by_errorboundary",
+    "value": "Error caught by ErrorBoundary:",
+    "context": "Error message",
+    "maxLength": 45
+  },
+  {
+    "key": "components.we_re_sorry_but_something",
+    "value": "We're sorry, but something unexpected happened. Please try refreshing the page.",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "components.error_details_development_only",
+    "value": "Error details (development only)",
+    "context": "Error message",
+    "maxLength": 48
+  },
+  {
+    "key": "components.go_badge_featured_false_classname",
+    "value": "Go\",\n  badge,\n  featured = false,\n  className = \"",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "components.large_pool",
+    "value": "Large Pool",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.search.no_results_found_for",
+    "value": "No results found for",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.search.did_you_mean",
+    "value": "Did you mean:",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.search.select_a_result_to_preview",
+    "value": "Select a result to preview",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.search.type_to_search_fuzzy_search_enabled_classname",
+    "value": "Type to search... (fuzzy search enabled)\"\n                    className=",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "components.search.resources_for_ergo_miners_including",
+    "value": "Resources for Ergo miners including guides and tools. Mining resources include software, hardware recommendations, pool information, and profitability calculators. Community support helps new miners get started.',\n    // Add descriptions for DeFi pages\n    '/docs/ecosystem/financial/defi': 'Decentralized Finance (DeFi) protocols on Ergo including lending, derivatives, crowdfunding, and yield farming. DeFi ecosystem leverages Ergo\\'s security and privacy features for innovative financial products.',\n    '/docs/ecosystem/financial/defi/duckpools': 'Decentralized lending pools on Ergo. DuckPools enables users to lend and borrow assets with transparent, on-chain protocols.',\n    '/docs/ecosystem/financial/defi/sigmafi':",
+    "context": "General content",
+    "maxLength": 1087.5
+  },
+  {
+    "key": "components.search.experimental_lending_engine_for_defi",
+    "value": "Experimental lending engine for DeFi on Ergo. EXLE provides innovative lending mechanisms and risk management.',\n    '/docs/ecosystem/financial/defi/micro-credit': 'Micro-loans for individuals and small businesses on Ergo. Expand access to DeFi with small-scale lending protocols.',\n    '/docs/ecosystem/financial/defi/flash-loans': 'Instant, collateral-free loans for advanced DeFi strategies and arbitrage on Ergo.',\n    '/docs/ecosystem/financial/defi/mutual-credit': 'Peer-to-peer credit protocols for trustless, decentralized borrowing and lending circles.',\n    '/docs/ecosystem/financial/defi/sigmao': 'Advanced options and derivatives protocol on Ergo. SigmaO enables complex financial instruments.',\n    '/docs/ecosystem/financial/defi/optionpools': 'Pooled options trading on Ergo. OptionPools provides decentralized options trading with liquidity pools.',\n    '/docs/ecosystem/financial/defi/trustless-prediction-markets':",
+    "context": "General content",
+    "maxLength": 1399.5
+  },
+  {
+    "key": "components.search.distributiontx_png_distribution_transaction_diagram",
+    "value": "DistributionTx.png': 'Distribution transaction diagram showing how ERG tokens are distributed in the Ergo ecosystem. Visual representation of token economics and distribution mechanisms.',\n    'FundingTx.png': 'Funding transaction illustration demonstrating how projects receive funding through transparent on-chain mechanisms. Shows the funding flow and governance structure.',",
+    "context": "General content",
+    "maxLength": 567
+  },
+  {
+    "key": "components.search.images_diagrams_tags_extracttags_description",
+    "value": "Images & Diagrams',\n      tags: extractTags(description, 'Images & Diagrams'),\n      type: 'content",
+    "context": "General content",
+    "maxLength": 148.5
+  },
+  {
+    "key": "components.search.searching_with_query_words_querywords",
+    "value": "Searching with query words:', queryWords);\n  console.log('Expanded query words:",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "components.search.all_icon",
+    "value": "All', icon:",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "components.search.all_content_types",
+    "value": "All content types",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "components.search.technical_documentation",
+    "value": "Technical documentation",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.search.search_index_initialized_with_searchindex",
+    "value": "Search index initialized with', searchIndex.current.length, 'pages",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "components.search.search_index_build_failed_console",
+    "value": "Search index build failed');\n      console.error('Search index build error:",
+    "context": "General content",
+    "maxLength": 112.5
+  },
+  {
+    "key": "components.search.failed_to_load_search_history",
+    "value": "Failed to load search history:",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "components.search.are_you_sure_you_want_to_clear_all_search_history",
+    "value": "Are you sure you want to clear all search history?",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "components.search.failed_to_load_recently_viewed",
+    "value": "Failed to load recently viewed:",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.search.failed_to_load_pinned_searches",
+    "value": "Failed to load pinned searches:",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.search.pinned_pin_search",
+    "value": "Pinned' : 'Pin search",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.search.type_to_search_fuzzy_search_enabled",
+    "value": "Type to search... (fuzzy search enabled)",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "components.search.all",
+    "value": "All",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "components.search.filter_by_tags",
+    "value": "Filter by tags:",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "components.search.search_ergo_documentation",
+    "value": "Search Ergo Documentation",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.search.start_typing_to_search_across",
+    "value": "Start typing to search across all documentation pages",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "components.search.press_enter_to_select",
+    "value": "Press Enter to select",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.search.press_esc_to_close",
+    "value": "Press Esc to close",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.search.search_documentation_classname",
+    "value": "Search documentation...\"\n                className=",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "components.search.x_algolia_api_key_algoliaconfig",
+    "value": "X-Algolia-API-Key': algoliaConfig.searchApiKey,\n            'X-Algolia-Application-Id",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "components.search.defi_protocols_content_explore_ergo",
+    "value": "DeFi Protocols',\n          content: 'Explore Ergo\\'s decentralized finance ecosystem including lending, derivatives, and crowdfunding protocols.',\n          url: '/docs/ecosystem/financial/defi',\n          section:",
+    "context": "General content",
+    "maxLength": 321
+  },
+  {
+    "key": "components.search.search_documentation",
+    "value": "Search documentation...",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.search.this_is_an_example",
+    "value": "This is an example",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "components.search.failed_to_copy",
+    "value": "Failed to copy:",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "components.search.failed_to_copy_code",
+    "value": "Failed to copy code:",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.search.copied_copy_link",
+    "value": "Copied!' : 'Copy Link",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.search.ergoscript_guide_content_learn_how",
+    "value": "ErgoScript Guide',\n          content: 'Learn how to write smart contracts using ErgoScript, Ergo\\'s functional programming language.',\n          url: '/docs/learn/ergoscript',\n          section:",
+    "context": "General content",
+    "maxLength": 291
+  },
+  {
+    "key": "components.search.utxo_model_content_understanding_ergo",
+    "value": "UTXO Model',\n          content: 'Understanding Ergo\\'s extended UTXO model and its advantages over account-based models.',\n          url: '/docs/introduction/eutxo',\n          section:",
+    "context": "General content",
+    "maxLength": 276
+  },
+  {
+    "key": "components.use_cases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "components.ergo_is_an_open_source_project",
+    "value": "ERGO IS AN OPEN-SOURCE PROJECT.",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.contribute_on_github",
+    "value": "CONTRIBUTE ON GITHUB",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.all_languages",
+    "value": "All Languages",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.try_another_keyword_or_check_spelling",
+    "value": "Try another keyword or check spelling",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "components.search_documentation_code_tutorials_classname",
+    "value": "Search documentation, code, tutorials...\"\n            className=",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.toggle_filters_cmd_f",
+    "value": "Toggle filters (Cmd+F)",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "components.search_documentation_code_tutorials",
+    "value": "Search documentation, code, tutorials...",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "components.all_occurrences_on_this_page",
+    "value": "All occurrences on this page:",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.useCases.explore_use_case",
+    "value": "Explore Use Case",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "components.useCases.use_cases_vs_projects",
+    "value": "Use Cases vs Projects",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.useCases.use_cases",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "components.useCases.learn_more_about_the_ecosystem",
+    "value": "Learn more about the Ecosystem",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "components.useCases.ready_to_get_started",
+    "value": "Ready to Get Started?",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.useCases.need_help_getting_started_answer",
+    "value": "Need help getting started?\",\n    answer: \"Join our active Discord community for real-time support and discussions.\",\n    cta: \"Ask in Discord\",\n    link: \"https://discord.gg/ergo",
+    "context": "General content",
+    "maxLength": 267
+  },
+  {
+    "key": "components.useCases.find_the_resources_you_need",
+    "value": "Find the resources you need to build, fund, or learn more about Ergo use cases",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "components.useCases.all_use_cases",
+    "value": "All Use Cases",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.useCases.browse_use_cases",
+    "value": "Browse Use Cases",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "components.useCases.what_is_ergo",
+    "value": "What is Ergo?",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.useCases.see_all_projects",
+    "value": "See All Projects",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "components.useCases.real_world_use_cases",
+    "value": "Real-World Use Cases",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.useCases.explore_the_real_problems_solved",
+    "value": "Explore the real problems solved by Ergo's technology and discover where innovation meets impact.",
+    "context": "General content",
+    "maxLength": 145.5
+  },
+  {
+    "key": "components.useCases.how_it_works",
+    "value": "How It Works",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "components.useCases.how_do_use_cases_become_reality_on_ergo",
+    "value": "How do use cases become reality on Ergo?",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "components.useCases.select_project_description_pick_from",
+    "value": "Select Project\",\n    description: \"Pick from vetted projects that address your use case",
+    "context": "General content",
+    "maxLength": 130.5
+  },
+  {
+    "key": "components.useCases.start_using_description_begin_leveraging",
+    "value": "Start Using\",\n    description: \"Begin leveraging Ergo's technology for your needs",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "components.useCases.choose_use_case",
+    "value": "Choose Use Case",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "components.useCases.pick_from_vetted_projects_that",
+    "value": "Pick from vetted projects that address your use case",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "components.useCases.begin_leveraging_ergo",
+    "value": "Begin leveraging Ergo",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.useCases.real_world_impact_stories",
+    "value": "Real-World Impact Stories",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.useCases.read_the_story",
+    "value": "Read the Story",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "components.useCases.see_how_real_users_leverage",
+    "value": "See how real users leverage Ergo to solve actual problems in their daily lives",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "components.babelFees.title",
+    "value": "Babel Fees on Ergo",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "components.babelFees.subtitle",
+    "value": "Pay Transaction Fees with Any Token",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "components.babelFees.description",
+    "value": "Revolutionary fee system on Ergo blockchain. Pay transaction fees using any token instead of ERG. Learn how Babel Fees enable seamless DeFi interactions and improve user experience.",
+    "context": "Description",
+    "maxLength": 271.5
+  },
+  {
+    "key": "components.babelFees.seo.title",
+    "value": "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 84
+  },
+  {
+    "key": "components.babelFees.seo.description",
+    "value": "Revolutionary fee system on Ergo blockchain. Pay transaction fees using any token instead of ERG. Learn how Babel Fees enable seamless DeFi interactions and improve user experience.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 271.5
+  },
+  {
+    "key": "components.babelFees.seo.ogTitle",
+    "value": "Babel Fees - Pay Ergo Fees with Any Token",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 61.5
+  },
+  {
+    "key": "components.babelFees.seo.ogDescription",
+    "value": "No ERG? No problem! Pay transaction fees using any token on Ergo blockchain.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 114
+  },
+  {
+    "key": "components.babelFees.seo.twitterTitle",
+    "value": "Babel Fees on Ergo | Revolutionary Fee System",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 67.5
+  },
+  {
+    "key": "components.babelFees.seo.twitterDescription",
+    "value": "Pay blockchain fees with any token. No ERG required for transactions.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 103.5
+  },
+  {
+    "key": "components.search_guides_topics_authors",
+    "value": "Search guides, topics, authors...",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "components.your_data_is_private",
+    "value": "YOUR DATA IS PRIVATE",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "components.please_enter_a_valid_email",
+    "value": "Please enter a valid email address\")\n      setMessageType(\"error",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.something_went_wrong_please_try",
+    "value": "Something went wrong. Please try again.\")\n      setMessageType(\"error",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "components.stay_updated_with_the_latest",
+    "value": "Stay updated with the latest news and developments from the Ergo ecosystem.",
+    "context": "General content",
+    "maxLength": 112.5
+  },
+  {
+    "key": "components.technical_terms_and_definitions_related",
+    "value": "Technical terms and definitions related to Ergo Platform",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "components.content_type_application_json",
+    "value": "Content-Type': 'application/json",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "components.inter_font_display_optional_src_url",
+    "value": "Inter';\n        font-display: optional;\n        src: url(",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "components.seo.webpage_name_headline_speakable",
+    "value": "WebPage\",\n    \"name\": headline,\n    \"speakable",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 69
+  },
+  {
+    "key": "components.seo.article_headline_article_title_description",
+    "value": "Article\",\n    \"headline\": article.title,\n    \"description\": article.description,\n    \"author",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 138
+  },
+  {
+    "key": "components.seo.ergo_is_a_resilient_blockchain",
+    "value": "Ergo is a resilient blockchain platform for contractual money, featuring advanced cryptographic protocols and sustainable tokenomics.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 199.5
+  },
+  {
+    "key": "components.seo.ergoscript_is_a_powerful_scripting",
+    "value": "ErgoScript is a powerful scripting language for Ergo blockchain smart contracts, based on Sigma protocols.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 159
+  },
+  {
+    "key": "components.seo.algorithmic_stablecoins_on_ergo_use",
+    "value": "Algorithmic stablecoins on Ergo use the AgeUSD protocol to maintain stable value through over-collateralization.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 168
+  },
+  {
+    "key": "components.seo.comprehensive_documentation_for_developers_building",
+    "value": "Comprehensive documentation for developers building on Ergo blockchain platform.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 120
+  },
+  {
+    "key": "components.seo.howto_name_name_description_description",
+    "value": "HowTo\",\n    \"name\": name,\n    \"description\": description,\n    \"image\": image,\n    \"totalTime\": totalTime,\n    \"supply",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 175.5
+  },
+  {
+    "key": "components.seo.howtosupply_name",
+    "value": "HowToSupply\",\n      \"name",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.seo.howtotool_name",
+    "value": "HowToTool\", \n      \"name",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 36
+  },
+  {
+    "key": "components.seo.howtostep_position",
+    "value": "HowToStep\",\n      \"position",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 40.5
+  },
+  {
+    "key": "components.seo.organization_name_ergo_platform_url",
+    "value": "Organization\",\n      \"name\": \"Ergo Platform\",\n      \"url\": \"https://ergoblockchain.org",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 129
+  },
+  {
+    "key": "components.seo.organization_name_ergo_platform_logo",
+    "value": "Organization\",\n      \"name\": \"Ergo Platform\",\n      \"logo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 85.5
+  },
+  {
+    "key": "components.seo.imageobject_url_https_ergoblockchain_org_logo_png",
+    "value": "ImageObject\",\n        \"url\": \"https://ergoblockchain.org/logo.png",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 97.5
+  },
+  {
+    "key": "components.seo.breadcrumblist_itemlistelement",
+    "value": "BreadcrumbList\",\n    \"itemListElement",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 55.5
+  },
+  {
+    "key": "components.seo.listitem_position",
+    "value": "ListItem\",\n      \"position",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 39
+  },
+  {
+    "key": "components.seo.documentation_use_cases_use_cases",
+    "value": "Documentation,\n    'use-cases': 'Use Cases',\n    'stablecoins': 'Stablecoins',\n    'privacy': 'Privacy Solutions',\n    'nfts': 'NFTs & Digital Assets',\n    'oracles': 'Oracle Services',\n    'gaming': 'Gaming & Metaverse',\n    'identity': 'Identity & Authentication',\n    'bridges': 'Cross-Chain Bridges',\n    'daos': 'DAOs & Alternative Economies',\n    'mining': 'Mining',\n    'guides': 'User Guides',\n    'get-erg': 'Get ERG',\n    'babel-fees': 'Babel Fees',\n    'ergoscript': 'ErgoScript',\n    'subblocks': 'Subblocks',\n    'native-tokens': 'Native Tokens',\n    'oracle-pools': 'Oracle Pools',\n    'velvet-forks': 'Velvet Forks',\n    'adaptive-emission': 'Adaptive Emission',\n    'nipopows': 'NiPoPoWs',\n    'eutxo': 'eUTXO',\n    'faq': 'FAQ'",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 1116
+  },
+  {
+    "key": "components.seo.article_id_url_headline_headline",
+    "value": "Article\",\n    \"@id\": url,\n    \"headline\": headline,\n    \"description\": description,\n    \"image",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 141
+  },
+  {
+    "key": "components.seo.imageobject_url_image_width",
+    "value": "ImageObject\",\n      \"url\": image,\n      \"width",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 69
+  },
+  {
+    "key": "components.seo.imageobject_url_https_ergoblockchain_org",
+    "value": "ImageObject\",\n      \"url\": \"https://ergoblockchain.org/logo.png\",\n      \"width",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 117
+  },
+  {
+    "key": "components.seo.thing_name",
+    "value": "Thing\",\n        \"name",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 31.5
+  },
+  {
+    "key": "components.seo.organization_id_https_ergoblockchain_org",
+    "value": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#organization\",\n    \"name\": \"Ergo Platform\",\n    \"url\": \"https://ergoblockchain.org\",\n    \"logo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 223.5
+  },
+  {
+    "key": "components.seo.ergo_is_a_next_generation",
+    "value": "Ergo is a next-generation smart contract platform that ensures economic freedom through secure, accessible, and decentralized financial tools.\",\n    \"sameAs",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 234
+  },
+  {
+    "key": "components.seo.person_name_alex_chepurnoy_url",
+    "value": "Person\",\n        \"name\": \"Alex Chepurnoy\",\n        \"url\": \"https://twitter.com/chepurnoy",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 132
+  },
+  {
+    "key": "components.seo.contactpoint_contacttype_customer_support_email",
+    "value": "ContactPoint\",\n      \"contactType\": \"customer support\",\n      \"email\": \"team@ergoblockchain.org\",\n      \"availableLanguage",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 183
+  },
+  {
+    "key": "components.seo.english_russian_chinese_spanish",
+    "value": "English\", \"Russian\", \"Chinese\", \"Spanish",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 60
+  },
+  {
+    "key": "components.seo.website_name_ergo_platform_url",
+    "value": "WebSite\",\n    \"name\": \"Ergo Platform\",\n    \"url\": \"https://ergoblockchain.org\",\n    \"potentialAction",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 150
+  },
+  {
+    "key": "components.seo.searchaction_target",
+    "value": "SearchAction\",\n      \"target\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 45
+  },
+  {
+    "key": "components.seo.softwareapplication_name_ergo_blockchain_applicationcategory",
+    "value": "SoftwareApplication\",\n    \"name\": \"Ergo Blockchain\",\n    \"applicationCategory\": \"Blockchain Platform\",\n    \"operatingSystem\": \"Cross-platform\",\n    \"offers",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 232.5
+  },
+  {
+    "key": "components.seo.offer_price",
+    "value": "Offer\",\n      \"price\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 33
+  },
+  {
+    "key": "components.seo.aggregaterating_ratingvalue",
+    "value": "AggregateRating\",\n      \"ratingValue\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 57
+  },
+  {
+    "key": "components.seo.faqpage_mainentity",
+    "value": "FAQPage\",\n    \"mainEntity",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.seo.question_name_faq_question_acceptedanswer",
+    "value": "Question\",\n      \"name\": faq.question,\n      \"acceptedAnswer",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 90
+  },
+  {
+    "key": "components.seo.answer_text",
+    "value": "Answer\",\n        \"text",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 33
+  },
+  {
+    "key": "components.seo.related_content_classname",
+    "value": "Related Content',\n  className = '",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 49.5
+  },
+  {
+    "key": "components.seo.ergoscript_tutorial_description_learn_the",
+    "value": "ErgoScript Tutorial',\n      description: 'Learn the basics of ErgoScript programming',\n      href: '/docs/developers/ergoscript-languages',\n      type: 'guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 237
+  },
+  {
+    "key": "components.seo.smart_contract_examples_description_real",
+    "value": "Smart Contract Examples',\n      description: 'Real-world ErgoScript contract examples',\n      href: '/docs/developers/tutorials',\n      type: 'guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 222
+  },
+  {
+    "key": "components.seo.sigma_protocols_description_understanding_sigma",
+    "value": "Sigma Protocols',\n      description: 'Understanding Sigma protocols in Ergo',\n      href: '/technology/privacy-features',\n      type: 'technology",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 217.5
+  },
+  {
+    "key": "components.seo.ageusd_protocol_description_how_the",
+    "value": "AgeUSD Protocol',\n      description: 'How the AgeUSD stablecoin protocol works',\n      href: '/use/stablecoins',\n      type: 'use-case",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 201
+  },
+  {
+    "key": "components.seo.defi_on_ergo_description_building",
+    "value": "DeFi on Ergo',\n      description: 'Building decentralized finance applications',\n      href: '/ecosystem/financial',\n      type: 'article",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 205.5
+  },
+  {
+    "key": "components.seo.oracle_pools_description_decentralized_price",
+    "value": "Oracle Pools',\n      description: 'Decentralized price feeds for DeFi',\n      href: '/technology/oracle-pools',\n      type: 'technology",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 202.5
+  },
+  {
+    "key": "components.seo.autolykos_algorithm_description_understanding_ergo",
+    "value": "Autolykos Algorithm',\n      description: 'Understanding Ergo\\'s mining algorithm',\n      href: '/docs/introduction/autolykos',\n      type: 'technology",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 225
+  },
+  {
+    "key": "components.seo.mining_profitability_description_calculate_your",
+    "value": "Mining Profitability',\n      description: 'Calculate your mining rewards',\n      href: '/use/mining',\n      type: 'use-case",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 184.5
+  },
+  {
+    "key": "components.seo.sigma_protocols_description_zero_knowledge",
+    "value": "Sigma Protocols',\n      description: 'Zero-knowledge proofs in Ergo',\n      href: '/technology/privacy-features',\n      type: 'technology",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 205.5
+  },
+  {
+    "key": "components.seo.privacy_guide_description_best_practices",
+    "value": "Privacy Guide',\n      description: 'Best practices for privacy on Ergo',\n      href: '/docs/introduction/privacy-guide',\n      type: 'guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 208.5
+  },
+  {
+    "key": "components.seo.mixer_ergomix_description_privacy_tools",
+    "value": "Mixer & ErgoMix',\n      description: 'Privacy tools for transactions',\n      href: '/use/privacy',\n      type: 'use-case",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 180
+  },
+  {
+    "key": "components.seo.learn_the_basics_of_ergoscript_programming",
+    "value": "Learn the basics of ErgoScript programming",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 63
+  },
+  {
+    "key": "components.seo.smart_contract_examples",
+    "value": "Smart Contract Examples",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 34.5
+  },
+  {
+    "key": "components.seo.real_world_ergoscript_contract_examples",
+    "value": "Real-world ErgoScript contract examples",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 58.5
+  },
+  {
+    "key": "components.seo.understanding_sigma_protocols_in_ergo",
+    "value": "Understanding Sigma protocols in Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 55.5
+  },
+  {
+    "key": "components.seo.how_the_ageusd_stablecoin_protocol_works",
+    "value": "How the AgeUSD stablecoin protocol works",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 60
+  },
+  {
+    "key": "components.seo.defi_on_ergo",
+    "value": "DeFi on Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 18
+  },
+  {
+    "key": "components.seo.building_decentralized_finance_applications",
+    "value": "Building decentralized finance applications",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 64.5
+  },
+  {
+    "key": "components.seo.decentralized_price_feeds_for_defi",
+    "value": "Decentralized price feeds for DeFi",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 51
+  },
+  {
+    "key": "components.seo.calculate_your_mining_rewards",
+    "value": "Calculate your mining rewards",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.seo.zero_knowledge_proofs_in_ergo",
+    "value": "Zero-knowledge proofs in Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.seo.best_practices_for_privacy_on_ergo",
+    "value": "Best practices for privacy on Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 51
+  },
+  {
+    "key": "components.seo.privacy_tools_for_transactions",
+    "value": "Privacy tools for transactions",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 45
+  },
+  {
+    "key": "components.seo.introduction_to_ergo_blockchain_description",
+    "value": "Introduction to Ergo Blockchain',\n    description: 'Learn the fundamentals of Ergo blockchain platform',\n    thumbnailUrl: 'https://ergoblockchain.org/videos/ergo-intro-thumb.jpg',\n    uploadDate:",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 294
+  },
+  {
+    "key": "components.seo.what_is_ergo",
+    "value": "What is Ergo?",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 19.5
+  },
+  {
+    "key": "components.seo.ergoscript_tutorial_for_beginners_description",
+    "value": "ErgoScript Tutorial for Beginners',\n    description: 'Step-by-step guide to writing smart contracts in ErgoScript',\n    thumbnailUrl: 'https://ergoblockchain.org/videos/ergoscript-thumb.jpg',\n    uploadDate:",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 310.5
+  },
+  {
+    "key": "components.seo.setup_development_environment",
+    "value": "Setup Development Environment",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.seo.first_smart_contract",
+    "value": "First Smart Contract",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 30
+  },
+  {
+    "key": "components.seo.testing_and_deployment",
+    "value": "Testing and Deployment",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 33
+  },
+  {
+    "key": "components.seo.learn_the_fundamentals_of_ergo_blockchain_platform",
+    "value": "Learn the fundamentals of Ergo blockchain platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 75
+  },
+  {
+    "key": "components.seo.step_by_step_guide_to",
+    "value": "Step-by-step guide to writing smart contracts in ErgoScript",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 88.5
+  },
+  {
+    "key": "components.seo.technology_href_technology",
+    "value": "Technology', href: '/technology",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.seo.ecosystem_href_ecosystem",
+    "value": "Ecosystem', href: '/ecosystem",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 43.5
+  },
+  {
+    "key": "components.seo.documentation_href_docs",
+    "value": "Documentation', href: '/docs",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 42
+  },
+  {
+    "key": "components.seo.get_started_href_start",
+    "value": "Get Started', href: '/start",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 40.5
+  },
+  {
+    "key": "components.seo.product_financialproduct",
+    "value": "Product\", \"FinancialProduct",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 40.5
+  },
+  {
+    "key": "components.seo.ergo_alternatename",
+    "value": "Ergo\",\n    \"alternateName",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 37.5
+  },
+  {
+    "key": "components.seo.erg_ergo_token_ergo_coin",
+    "value": "ERG\", \"Ergo Token\", \"Ergo Coin",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 45
+  },
+  {
+    "key": "components.seo.native_cryptocurrency_of_the_ergo",
+    "value": "Native cryptocurrency of the Ergo blockchain platform, enabling smart contracts and DeFi applications\",\n    \"category\": \"Cryptocurrency\",\n    \"brand",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 222
+  },
+  {
+    "key": "components.seo.brand_name_ergo_platform_logo",
+    "value": "Brand\",\n      \"name\": \"Ergo Platform\",\n      \"logo\": \"https://ergoblockchain.org/logo.png",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 133.5
+  },
+  {
+    "key": "components.seo.propertyvalue_name_consensus_mechanism_value",
+    "value": "PropertyValue\",\n        \"name\": \"Consensus Mechanism\",\n        \"value\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 106.5
+  },
+  {
+    "key": "components.seo.propertyvalue_name_max_supply_value",
+    "value": "PropertyValue\",\n        \"name\": \"Max Supply\",\n        \"value\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 93
+  },
+  {
+    "key": "components.seo.propertyvalue_name_block_time_value",
+    "value": "PropertyValue\",\n        \"name\": \"Block Time\",\n        \"value\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 93
+  },
+  {
+    "key": "components.seo.propertyvalue_name_smart_contract_language",
+    "value": "PropertyValue\",\n        \"name\": \"Smart Contract Language\",\n        \"value\": \"ErgoScript",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 130.5
+  },
+  {
+    "key": "components.seo.propertyvalue_name_circulating_supply_value",
+    "value": "PropertyValue\",\n        \"name\": \"Circulating Supply\",\n        \"value\": circulatingSupply.toString(),\n        \"unitText\": \"ERG",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 187.5
+  },
+  {
+    "key": "components.seo.propertyvalue_name_market_cap_value",
+    "value": "PropertyValue\",\n        \"name\": \"Market Cap\",\n        \"value\": marketCap.toString(),\n        \"unitText\": \"USD",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 163.5
+  },
+  {
+    "key": "components.seo.propertyvalue_name",
+    "value": "PropertyValue\",\n        \"name\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.seo.aggregateoffer_availability_instock_pricecurrency_usd",
+    "value": "AggregateOffer\",\n      \"availability\": \"InStock\",\n      \"priceCurrency\": \"USD",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 115.5
+  },
+  {
+    "key": "components.seo.organization_name_cryptocurrency_exchanges",
+    "value": "Organization\",\n        \"name\": \"Cryptocurrency Exchanges",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 84
+  },
+  {
+    "key": "components.seo.review_reviewrating",
+    "value": "Review\",\n      \"reviewRating",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 42
+  },
+  {
+    "key": "components.seo.rating_ratingvalue",
+    "value": "Rating\",\n        \"ratingValue\":",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 46.5
+  },
+  {
+    "key": "components.seo.organization_name_crypto_community",
+    "value": "Organization\",\n        \"name\": \"Crypto Community",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 72
+  },
+  {
+    "key": "components.seo.softwareapplication_name_ergo_platform_url",
+    "value": "SoftwareApplication\",\n        \"name\": \"Ergo Platform\",\n        \"url\": \"https://ergoblockchain.org",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 145.5
+  },
+  {
+    "key": "components.seo.techarticle_name_ergo_whitepaper_url",
+    "value": "TechArticle\",\n        \"name\": \"Ergo Whitepaper\",\n        \"url\": \"https://ergoplatform.org/en/whitepaper.pdf",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 160.5
+  },
+  {
+    "key": "components.seo.question_name_item_question_acceptedanswer",
+    "value": "Question\",\n      \"name\": item.question,\n      \"acceptedAnswer",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 91.5
+  },
+  {
+    "key": "components.seo.what_is_ergoscript_answer_ergoscript",
+    "value": "What is ErgoScript?\",\n      answer: \"ErgoScript is a powerful and protocol-friendly scripting language for Ergo blockchain smart contracts. It's based on Sigma protocols and provides a high level of security and expressiveness for complex DeFi applications.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 385.5
+  },
+  {
+    "key": "components.seo.what_can_you_build_with",
+    "value": "What can you build with ErgoScript?\",\n      answer: \"You can build DEXs, stablecoins, oracle pools, NFT marketplaces, DAOs, privacy tools, and complex DeFi protocols. ErgoScript's composability allows for sophisticated multi-stage protocols.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 361.5
+  },
+  {
+    "key": "components.seo.how_do_algorithmic_stablecoins_work_on_ergo_answer",
+    "value": "How do algorithmic stablecoins work on Ergo?\",\n      answer:",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 90
+  },
+  {
+    "key": "components.seo.what_is_sigmausd_answer_sigmausd",
+    "value": "What is SigmaUSD?\",\n      answer: \"SigmaUSD is Ergo's native algorithmic stablecoin pegged to USD. It's backed by ERG reserves and maintained through the AgeUSD protocol, providing decentralized stable value without centralized custody.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 354
+  },
+  {
+    "key": "components.seo.what_hardware_do_i_need_to_mine_ergo_answer",
+    "value": "What hardware do I need to mine Ergo?\",\n      answer:",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 79.5
+  },
+  {
+    "key": "components.seo.can_i_mine_ergo_with_a_cpu_answer",
+    "value": "Can I mine Ergo with a CPU?\",\n      answer:",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 64.5
+  },
+  {
+    "key": "components.seo.how_does_ergo_provide_privacy",
+    "value": "How does Ergo provide privacy?\",\n      answer: \"Ergo provides optional privacy through Sigma protocols, ErgoMix (a non-interactive mixer), stealth addresses, and ring signatures. Users can choose their privacy level for each transaction.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 355.5
+  },
+  {
+    "key": "components.seo.what_are_sigma_protocols_answer",
+    "value": "What are Sigma protocols?\",\n      answer: \"Sigma protocols are zero-knowledge proof protocols that allow proving statements without revealing the underlying information. Ergo uses them for privacy features and complex smart contracts.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 351
+  },
+  {
+    "key": "components.seo.is_ergo_a_privacy_coin",
+    "value": "Is Ergo a privacy coin?\",\n      answer: \"Ergo is not a privacy coin by default. It provides optional privacy features that users can choose to use. Most transactions are transparent, but privacy tools are available when needed.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 340.5
+  },
+  {
+    "key": "components.seo.how_do_algorithmic_stablecoins_work",
+    "value": "How do algorithmic stablecoins work on Ergo?\",\n      answer: \"Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 99
+  },
+  {
+    "key": "components.seo.home_href_current_pathname",
+    "value": "Home', href: '/', current: pathname === '/",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 63
+  },
+  {
+    "key": "components.seo.good",
+    "value": "Good",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 6
+  },
+  {
+    "key": "components.seo.performanceobserver_not_supported",
+    "value": "PerformanceObserver not supported",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 49.5
+  },
+  {
+    "key": "components.a_brief_overview_of_ergo_and_its_core_purpose",
+    "value": "A brief overview of Ergo and its core purpose.\":",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "components.how_ergo_compares_to_bitcoin",
+    "value": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.\":",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "components.connect_via_discord_telegram_reddit",
+    "value": "Connect via Discord, Telegram, Reddit, and the official forum.\":",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "components.answers_to_the_most_common_questions_for_newcomers",
+    "value": "Answers to the most common questions for newcomers.\":",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "components.learn_how_to_start_mining",
+    "value": "Learn how to start mining, find mining pools, requirements, and beginner tips.\":",
+    "context": "General content",
+    "maxLength": 120
+  },
+  {
+    "key": "components.discover_where_and_how_to",
+    "value": "Discover where and how to earn through staking, farming, lending, lotteries.\":",
+    "context": "General content",
+    "maxLength": 117
+  },
+  {
+    "key": "components.one_stop_catalog_of_dapps",
+    "value": "One-stop catalog of dApps, services, and community projects with advanced search and filters.\":",
+    "context": "General content",
+    "maxLength": 142.5
+  },
+  {
+    "key": "components.visual_map_of_projects_tools",
+    "value": "Visual map of projects, tools, and teams with interactive clusters and filters.\":",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "components.list_of_mining_pools_and_useful_tools_for_miners",
+    "value": "List of mining pools and useful tools for miners.\":",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "components.opportunities_for_project_grants_and",
+    "value": "Opportunities for project grants and ecosystem funding.\":",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "components.overview_of_ergo_s_core_technology_and_innovations",
+    "value": "Overview of Ergo's core technology and innovations.\":",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "components.an_extended_utxo_model_delivering",
+    "value": "An extended UTXO model delivering security and expressiveness for advanced smart contracts.\":",
+    "context": "General content",
+    "maxLength": 139.5
+  },
+  {
+    "key": "components.a_powerful_and_secure_scripting",
+    "value": "A powerful and secure scripting language designed for developing complex and reliable financial contracts.\":",
+    "context": "General content",
+    "maxLength": 162
+  },
+  {
+    "key": "components.an_asic_resistant_proof_of",
+    "value": "An ASIC-resistant Proof-of-Work algorithm promoting decentralization and long-term network security.\":",
+    "context": "General content",
+    "maxLength": 153
+  },
+  {
+    "key": "components.a_mechanism_to_prevent_blockchain",
+    "value": "A mechanism to prevent blockchain bloat and ensure its long-term economic sustainability.\":",
+    "context": "General content",
+    "maxLength": 136.5
+  },
+  {
+    "key": "components.innovative_technology_enabling_ultra_secure",
+    "value": "Innovative technology enabling ultra-secure and efficient light client operation.\":",
+    "context": "General content",
+    "maxLength": 124.5
+  },
+  {
+    "key": "components.advanced_cryptographic_capabilities_for_optionally",
+    "value": "Advanced cryptographic capabilities for optionally enhancing the privacy of transactions and data.\":",
+    "context": "General content",
+    "maxLength": 150
+  },
+  {
+    "key": "components.comprehensive_ergoscript_tutorial_series_from",
+    "value": "Comprehensive ErgoScript tutorial series from beginner to expert level\":",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "components.academic_research_whitepapers_and_foundational",
+    "value": "Academic research, whitepapers, and foundational studies.\":",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "components.all_guides_and_how_tos",
+    "value": "All guides and how-tos for users and developers in one place.\":",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "components.answers_to_frequently_asked_questions",
+    "value": "Answers to frequently asked questions and common issues.\":",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "components.tooling_pathname_startswith_docs_miners",
+    "value": "Tooling\" && pathname.startsWith(\"/docs/miners/Miner-Tooling",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "components.introduction_label_introduction_href_docs",
+    "value": "Introduction\", label: \"Introduction\", href: \"/docs",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "components.ecosystem_label_ecosystem_href_docs_ecosystem",
+    "value": "Ecosystem\", label: \"Ecosystem\", href: \"/docs/ecosystem",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "components.developers_label_developers_href_docs_developers",
+    "value": "Developers\", label: \"Developers\", href: \"/docs/developers",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "components.miners_label_miners_href_docs_miners",
+    "value": "Miners\", label: \"Miners\", href: \"/docs/miners",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "components.web_vitals_threshold_violation",
+    "value": "Web Vitals Threshold Violation",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "components.subtitle",
+    "value": "Join Ergo community events",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "components.description",
+    "value": "Discover hackathons, meetups, and conferences in the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 100.5
+  },
+  {
+    "key": "components.upcoming",
+    "value": "Upcoming Events",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "components.past",
+    "value": "Past Events",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "components.register",
+    "value": "Register",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "components.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.noEvents",
+    "value": "No events scheduled at the moment. Check back soon!",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "components.hackathons",
+    "value": "Hackathons",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "components.meetups",
+    "value": "Meetups",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "components.conferences",
+    "value": "Conferences",
+    "context": "General content",
+    "maxLength": 16.5
+  }
+]

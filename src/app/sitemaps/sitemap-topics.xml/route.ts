@@ -1,43 +1,25 @@
 import { NextResponse } from 'next/server'
-import { siteConfig } from '@/config/site-config'
 import { topics } from '@/data/topics'
+import { generateMultilingualSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
 
 export async function GET() {
-  const baseUrl = siteConfig.siteUrl
-  
-  // Hub page
   const hubPage = {
     url: '/topics',
     priority: 0.9,
-    changefreq: 'daily',
+    changefreq: 'daily' as const,
     lastmod: new Date().toISOString()
   }
   
-  // Individual topic pages - these are pillar pages, high priority
   const topicPages = topics.map(topic => ({
     url: `/topics/${topic.slug}`,
-    priority: 0.9, // High priority - pillar pages
-    changefreq: 'weekly',
+    priority: 0.9,
+    changefreq: 'weekly' as const,
     lastmod: topic.updatedDate || topic.publishDate
   }))
 
   const allPages = [hubPage, ...topicPages]
+  const sitemap = generateMultilingualSitemap(allPages)
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allPages.map(page => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`
-
-  return new NextResponse(sitemap, {
-    headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600'
-    }
-  })
+  return new NextResponse(sitemap, { headers: sitemapHeaders })
 }
 

@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 import { ArrowRight, Coins, Shield, Palette, Users, TrendingUp, Link2 } from "lucide-react"
 import type { UseCase } from "@/lib/use-cases-data"

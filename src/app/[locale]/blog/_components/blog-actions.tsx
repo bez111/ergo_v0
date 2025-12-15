@@ -101,19 +101,26 @@ export function BlogActions({ title, slug }: BlogActionsProps) {
   }
 
   const handleShare = async () => {
-    if (navigator.share) {
+    const shareUrl = `${window.location.origin}/blog/${slug}?utm_source=share`
+    const shareTagline = 'via @BuildOnErgo $ERG'
+    const twitterText = `${title}\n${shareUrl} ${shareTagline}`
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}`
+    
+    // Check if mobile (use navigator.share) or desktop (use Twitter URL directly)
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    
+    if (isMobile && navigator.share) {
       try {
         await navigator.share({
           title: title,
-          text: `Check out this article: ${title}`,
-          url: window.location.href,
+          text: twitterText,
         })
       } catch {
-        // Share cancelled or failed
+        // Share cancelled - fallback to Twitter
+        window.open(twitterUrl, '_blank', 'noopener,noreferrer')
       }
     } else {
-      // On desktop, open Twitter/X share
-      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(window.location.href)}`
+      // Desktop: always use Twitter URL directly for consistent formatting
       window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400')
     }
   }

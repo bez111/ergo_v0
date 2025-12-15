@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';

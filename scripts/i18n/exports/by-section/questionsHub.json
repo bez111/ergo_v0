@@ -1,0 +1,134 @@
+[
+  {
+    "key": "questionsHub.hero.title",
+    "value": "Your Questions,",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "questionsHub.hero.titleHighlight",
+    "value": "Answered",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "questionsHub.hero.subtitle",
+    "value": "Find expert answers to common questions about Ergo blockchain. Each answer links to deep-dive resources for further learning.",
+    "context": "General content",
+    "maxLength": 187.5
+  },
+  {
+    "key": "questionsHub.hero.searchPlaceholder",
+    "value": "Search questions...",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "questionsHub.featured.title",
+    "value": "Most Popular Questions",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "questionsHub.results.questionsFound",
+    "value": "Question",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionsHub.results.questionsFoundPlural",
+    "value": "Questions",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionsHub.results.found",
+    "value": "Found",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "questionsHub.noResults.message",
+    "value": "No questions match your search.",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "questionsHub.noResults.clearFilters",
+    "value": "Clear filters",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "questionsHub.category.questions",
+    "value": "questions",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionsHub.category.showLess",
+    "value": "Show less",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionsHub.category.showAll",
+    "value": "Show all",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionsHub.intent.how_to",
+    "value": "How-to",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "questionsHub.intent.what_is",
+    "value": "Explainer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "questionsHub.intent.compare",
+    "value": "Comparison",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "questionsHub.intent.problem",
+    "value": "Solution",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "questionsHub.intent.philosophy",
+    "value": "Philosophy",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "questionsHub.cta.title",
+    "value": "Can't find your question?",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "questionsHub.cta.description",
+    "value": "Join our community on Discord or Telegram and ask directly. Our community is always happy to help.",
+    "context": "Description",
+    "maxLength": 147
+  },
+  {
+    "key": "questionsHub.cta.joinCommunity",
+    "value": "Join Community",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "questionsHub.cta.browseGlossary",
+    "value": "Browse Glossary",
+    "context": "General content",
+    "maxLength": 22.5
+  }
+]

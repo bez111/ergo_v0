@@ -1,0 +1,20 @@
+[
+  {
+    "key": "startQuiz.title",
+    "value": "Onboarding Quiz",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "startQuiz.description",
+    "value": "Test your knowledge about Ergo blockchain",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "startQuiz.subtitle",
+    "value": "Interactive learning experience",
+    "context": "General content",
+    "maxLength": 46.5
+  }
+]

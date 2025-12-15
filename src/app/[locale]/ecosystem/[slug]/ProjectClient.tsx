@@ -1,8 +1,9 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 import {
   ExternalLink,
   Github,
@@ -123,40 +124,41 @@ interface ProjectClientProps {
 }
 
 export default function ProjectClient({ project, categoryLabel }: ProjectClientProps) {
+  const t = useTranslations('ecosystem.projectPage')
   const relatedProjects = getRelatedProjects(project, 4)
   const relatedBlogPosts = getRelatedBlogPostsForProject(project, 3)
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null)
 
   const statusConfig = {
     OPERATIONAL: { 
-      label: "Operational", 
+      label: t('status.operational'), 
       color: "bg-green-500/20 text-green-400 border-green-500/30",
       icon: <CheckCircle className="w-4 h-4" />
     },
     TESTING: { 
-      label: "Testing", 
+      label: t('status.testing'), 
       color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
       icon: <Clock className="w-4 h-4" />
     },
     PROTOTYPE: { 
-      label: "Prototype", 
+      label: t('status.prototype'), 
       color: "bg-blue-500/20 text-blue-400 border-blue-500/30",
       icon: <Beaker className="w-4 h-4" />
     },
     NOT_OPERATING: {
-      label: "Not operating",
+      label: t('status.notOperating'),
       color: "bg-red-500/20 text-red-400 border-red-500/30",
       icon: <Beaker className="w-4 h-4" />
     },
   }
 
   const breadcrumbs = [
-    { name: "Ecosystem", href: "/ecosystem" },
+    { name: t('breadcrumbs.ecosystem'), href: "/ecosystem" },
     { name: project.name, href: "#" },
   ]
 
   return (
-    <BackgroundWrapper variant="default">
+    <BackgroundWrapper>
       <div className="min-h-screen pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
@@ -211,7 +213,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                 >
                   <a href={project.url} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Visit project
+                    {t('buttons.visitProject')}
                   </a>
                 </Button>
               )}
@@ -224,7 +226,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                 >
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
-                    GitHub
+                    {t('buttons.github')}
                   </a>
                 </Button>
               )}
@@ -237,7 +239,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                 >
                   <a href={project.twitter} target="_blank" rel="noopener noreferrer">
                     <Twitter className="w-4 h-4 mr-2" />
-                    Twitter
+                    {t('buttons.twitter')}
                   </a>
                 </Button>
               )}
@@ -250,7 +252,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                 >
                   <a href={project.docs} target="_blank" rel="noopener noreferrer">
                     <FileText className="w-4 h-4 mr-2" />
-                    Docs
+                    {t('buttons.docs')}
                   </a>
                 </Button>
               )}
@@ -263,7 +265,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                 >
                   <a href={project.discord} target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Community
+                    {t('buttons.community')}
                   </a>
                 </Button>
               )}
@@ -274,7 +276,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                 className="text-neutral-400 hover:text-white sm:hidden"
               >
                 <Link href="/ecosystem">
-                  Back to Ecosystem
+                  {t('buttons.backToEcosystem')}
                 </Link>
               </Button>
             </div>
@@ -311,7 +313,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-12"
             >
-              <h2 className="text-2xl font-bold text-white mb-6">Key Features</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">{t('sections.keyFeatures')}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {project.features.map((feature, index) => (
                   <div 
@@ -334,7 +336,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mb-12"
             >
-              <h2 className="text-2xl font-bold text-white mb-6">Built With Ergo Technology</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">{t('sections.builtWith')}</h2>
               <div className="flex flex-wrap gap-3">
                 {project.technologies.map((tech) => {
                   const link = technologyLinks[tech]
@@ -378,13 +380,13 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-2">
                   <BookOpen className="w-6 h-6 text-orange-400" />
-                  Related Articles
+                  {t('sections.relatedArticles')}
                 </h2>
                 <Link 
                   href="/blog" 
                   className="text-orange-400 hover:text-orange-300 text-sm flex items-center gap-1"
                 >
-                  View all
+                  {t('sections.viewAll')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -432,7 +434,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mb-12"
             >
-              <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">{t('sections.faq')}</h2>
               <div className="space-y-3">
                 {project.faq.map((item, index) => (
                   <div 
@@ -470,7 +472,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
               className="mb-12"
             >
               <h2 className="text-2xl font-bold text-white mb-6">
-                Related {categoryLabel} Projects
+                {t('sections.relatedProjects', { category: categoryLabel })}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {relatedProjects.map((related) => (
@@ -517,12 +519,8 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <FinalCTASimple 
-              title="Explore More dApps"
-              description="Discover the full Ergo ecosystem with DeFi, wallets, tools, and more."
-              primaryButtonText="View All Projects"
-              primaryButtonHref="/ecosystem"
-              secondaryButtonText="Start Building"
-              secondaryButtonHref="/start"
+              title={t('cta.title')}
+              description={t('cta.description')}
             />
           </motion.div>
         </div>

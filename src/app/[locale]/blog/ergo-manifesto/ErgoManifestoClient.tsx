@@ -3,7 +3,6 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
 
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -26,7 +25,7 @@ import {
   Zap,
   Code
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export function ErgoManifestoClient() {
   const articleContents = [

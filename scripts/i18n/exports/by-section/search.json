@@ -1,0 +1,26 @@
+[
+  {
+    "key": "search.placeholder",
+    "value": "Search documentation...",
+    "context": "Input placeholder",
+    "maxLength": 34.5
+  },
+  {
+    "key": "search.noResults",
+    "value": "No results found",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "search.results",
+    "value": "results",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "search.searchIn",
+    "value": "Search in",
+    "context": "General content",
+    "maxLength": 13.5
+  }
+]

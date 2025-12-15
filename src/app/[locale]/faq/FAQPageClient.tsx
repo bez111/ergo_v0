@@ -3,7 +3,8 @@
 import { useState, useMemo } from "react"
 import { useSearchParams } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 import { 
   ChevronDown, 
   Search, 
@@ -70,6 +71,7 @@ export default function FAQPageClient({
   technicalCategories,
   stats 
 }: Props) {
+  const t = useTranslations('faqPage')
   const searchParams = useSearchParams()
   const initialLevel = searchParams.get('level') as FAQLevel | null
   
@@ -115,16 +117,16 @@ export default function FAQPageClient({
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
                 <div>
                   <h1 className="text-3xl md:text-4xl font-bold text-white">
-                    Ergo <span className="text-orange-400">FAQ</span>
+                    {t('title')} <span className="text-orange-400">{t('titleHighlight')}</span>
                   </h1>
                   <p className="text-sm md:text-base text-neutral-400 mt-1">
-                    Find answers to common questions about Ergo
+                    {t('subtitle')}
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2 text-xs md:text-sm text-neutral-300">
                   <span className="inline-flex items-center gap-1 rounded-full bg-black/70 border border-white/10 px-3 py-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
-                    {stats.total} questions
+                    {t('questionsCount', { count: stats.total })}
                   </span>
                 </div>
               </div>
@@ -140,7 +142,7 @@ export default function FAQPageClient({
                   }`}
                 >
                   <GraduationCap className="w-4 h-4" />
-                  <span>Beginner</span>
+                  <span>{t('tabs.beginner')}</span>
                   <Badge variant="outline" className={`ml-1 text-xs ${
                     activeLevel === 'beginner' ? 'border-black/30 text-black' : 'border-white/20'
                   }`}>
@@ -156,7 +158,7 @@ export default function FAQPageClient({
                   }`}
                 >
                   <Code className="w-4 h-4" />
-                  <span>Technical</span>
+                  <span>{t('tabs.technical')}</span>
                   <Badge variant="outline" className={`ml-1 text-xs ${
                     activeLevel === 'technical' ? 'border-black/30 text-black' : 'border-white/20'
                   }`}>
@@ -170,10 +172,10 @@ export default function FAQPageClient({
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 w-5 h-5" />
                 <input
                   type="search"
-                  placeholder="Search questions..."
+                  placeholder={t('search.placeholder')}
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-                  aria-label="Search FAQ questions"
+                  aria-label={t('search.ariaLabel')}
                   className="w-full pl-12 pr-4 py-3 bg-black/60 border border-white/10 rounded-xl text-white placeholder:text-neutral-400 focus:outline-none focus:border-orange-500/50 transition-colors"
                 />
               </div>
@@ -189,7 +191,7 @@ export default function FAQPageClient({
                     : "border-white/20 text-neutral-300 hover:border-orange-500/50"
                   }`}
                 >
-                  All
+                  {t('filters.all')}
                 </Button>
                 {currentCategories.map(category => {
                   const Icon = categoryIcons[category] || HelpCircle

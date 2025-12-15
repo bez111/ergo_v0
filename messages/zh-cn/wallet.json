@@ -1,0 +1,154 @@
+{
+  "wallet": {
+    "title": "钱包",
+    "subtitle": "保护您的ERG",
+    "description": "为埃尔戈安全的钱包",
+    "features": {
+      "security": "安全",
+      "privacy": "[TODO: Enhanced privacy features]",
+      "tokens": "[TODO: Native token support]",
+      "dapps": "[TODO: dApp integration]",
+      "usability": "便捷使用",
+      "features": "功能",
+      "platforms": "平台"
+    },
+    "download": "下载",
+    "webWallet": "Web 钱包",
+    "mobileWallet": "移动钱包",
+    "desktopWallet": "桌面钱包",
+    "hardwareWallet": "硬件钱包",
+    "seo": {
+      "title": "钱包 - 安全ERG 存储 | 错误平台",
+      "description": "找到最好的 Ergo 钱包用于安全的 ERG 存储和交易。",
+      "keywords": "Ergo wallet, ERG store, Nautilus, SAFEW, 移动钱包",
+      "ogTitle": "Ergo Wallet - 安全ERG 存储",
+      "ogDescription": "找到最好的 Ergo 钱包用于安全的 ERG 存储和交易。",
+      "twitterTitle": "Ergo Wallet - 安全ERG 存储",
+      "twitterDescription": "找到最好的 Ergo 钱包用于安全的 ERG 存储和交易。"
+    },
+    "types": {
+      "mobile": {
+        "title": "移动钱包",
+        "description": "iOS 和 Android 的钱包"
+      },
+      "desktop": {
+        "title": "桌面钱包",
+        "description": "Windows、 Mac和Linux 钱包"
+      },
+      "hardware": {
+        "title": "硬件钱包",
+        "description": "冷存储解决办法"
+      },
+      "web": {
+        "title": "Web 钱包",
+        "description": "基于浏览器的钱包"
+      }
+    },
+    "recommended": {
+      "title": "推荐钱包",
+      "description": "我们对不同使用情况的最佳选择"
+    },
+    "security_first": "优先安全",
+    "chrome_firefox_android_ios": ", ",
+    "windows_macos_linux": ", ",
+    "full_node_integration_enhanced_privacy": ", ",
+    "ergomixer_privacy_quick_setup_no_download_required": ", ",
+    "multi_signature_mobile_first_user_friendly": ", ",
+    "cold_storage_physical_confirmation_recovery_phrase": ", ",
+    "cold_storage_no_internet_required_printable_keys": ", ",
+    "full_node_integration_cli_api_access_cold_storage": ", ",
+    "offline_key_generation_and_storage": "为最大安全起见，离线密钥生成和存储。",
+    "schema": {
+      "name": "埃尔戈钱包",
+      "description": "为Ergo区块链收集安全钱包",
+      "wallets": {
+        "nautilus": {
+          "name": "Nautilus钱包",
+          "description": "为 Ergo 提供的 dApp 连接的 Feature丰富浏览器扩展钱包"
+        },
+        "satergo": {
+          "name": "Satergo 钱包",
+          "description": "带有完整节点集成和高级功能的桌面钱包"
+        }
+      }
+    },
+    "ui": {
+      "features": "功能",
+      "visitWebsite": "访问网站",
+      "download": "下载",
+      "securityTitle": "优先安全",
+      "securityNote": "总是从官方来源下载钱包并验证校验金额以确保最大的安全。",
+      "platforms": "平台",
+      "users": "用户",
+      "rating": "评分",
+      "recommended": "推荐的",
+      "official": "官方的",
+      "allWallets": "所有钱包",
+      "filterBy": "筛选条件：",
+      "searchWallets": "搜索钱包...",
+      "noWalletsFound": "没有找到符合您的条件的钱包。"
+    }
+  },
+  "walletClient": {
+    "hero": {
+      "title": "Ergo",
+      "titleHighlight": "钱包",
+      "subtitle": "使用生产准备好的钱包来保护您的ERG",
+      "description": "从浏览器扩展到硬件设备 - 为您的安全需要选择完美的钱包。 所有钱包都是非保管的，让您完全控制您的资金。"
+    },
+    "quickStart": {
+      "title": "快速开始",
+      "nautilus": {
+        "name": "Nautilus钱包",
+        "subtitle": "浏览器 - 最受欢迎的"
+      },
+      "satergo": {
+        "name": "Satergo 钱包",
+        "subtitle": "桌面 - 完整节点"
+      },
+      "ledger": {
+        "name": "Ledger 硬件",
+        "subtitle": "硬件-最大安全"
+      }
+    },
+    "security": {
+      "title": "优先安全",
+      "subtitle": "钱包安全的最佳做法",
+      "description": "总是从官方来源下载钱包并验证校验金额以确保最大的安全。",
+      "tips": {
+        "verifyChecksums": "下载后验证校验和",
+        "officialSources": "仅从官方来源下载",
+        "backupSeedPhrase": "安全地离线备份您的种子词组"
+      }
+    },
+    "allWallets": {
+      "title": "所有钱包",
+      "subtitle": "存储您的ERG的安全选项"
+    },
+    "labels": {
+      "recommended": "推荐的",
+      "loading": "加载钱包...",
+      "download": "下载",
+      "visit": "访问"
+    },
+    "whatsNext": {
+      "title": "是什么",
+      "titleHighlight": "下一个",
+      "subtitle": "现在你有一个钱包，获得一些ERG并探索生态系统",
+      "getErg": {
+        "title": "Get ERG",
+        "subtitle": "购买ERG令牌",
+        "description": "从交易所或DEX购买ERG"
+      },
+      "learnMore": {
+        "title": "了解更多",
+        "subtitle": "文件",
+        "description": "深深潜入埃尔戈的技术"
+      }
+    },
+    "emailCapture": {
+      "title": "钱包安全提示",
+      "description": "获取最新的钱包安全更新、最佳做法和安全提示发送到您的收件箱"
+    }
+  }
+}

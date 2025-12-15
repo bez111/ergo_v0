@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Cpu, Code2, Layers, Wrench, FileText } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const frameworks = [
   {

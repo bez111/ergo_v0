@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnGuides.title",
+    "value": "Learning Guides",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "learnGuides.description",
+    "value": "Step-by-step tutorials and educational content",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "learnGuides.subtitle",
+    "value": "Comprehensive learning resources",
+    "context": "General content",
+    "maxLength": 48
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "key": "usePages.common.whatsNext",
+    "value": "What's",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "usePages.common.whatsNextHighlight",
+    "value": "Next?",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "usePages.common.documentation",
+    "value": "Documentation",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "usePages.common.developerDocs",
+    "value": "Developer Docs",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "usePages.common.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "usePages.common.learnMore",
+    "value": "Learn More",
+    "context": "General content",
+    "maxLength": 15
+  }
+]

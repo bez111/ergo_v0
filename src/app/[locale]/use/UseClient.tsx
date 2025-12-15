@@ -5,7 +5,7 @@
 import { motion } from "framer-motion"
 import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink, Code, Database, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { useMemo, useState, useEffect } from "react"
 import { useCases as data } from "./_data"

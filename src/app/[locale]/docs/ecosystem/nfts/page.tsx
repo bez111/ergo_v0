@@ -5,7 +5,7 @@
 import React from "react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Info, Gift, ExternalLink, Gamepad2, Store, ShoppingBag, Image, Globe } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const nftSectors = [
   {

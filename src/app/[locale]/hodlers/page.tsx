@@ -7,10 +7,6 @@ import {
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-interface HodlersPageProps {
-  params: Promise<{ locale: string }>
-}
-
 // SEO Configuration
 const SEO = {
   path: "/hodlers",
@@ -54,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // Page Component
-export default async function HodlersPage({ params }: HodlersPageProps) {
+export default async function HodlersPage() {
   const schemas = [
     createBreadcrumbSchema([{ name: "Holders", href: "/hodlers" }]),
     createFAQSchema(FAQ_ITEMS),

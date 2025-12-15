@@ -4,7 +4,7 @@
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Users, Code, BookOpen, Megaphone } from "lucide-react"
 
 export default function ContributePage() {

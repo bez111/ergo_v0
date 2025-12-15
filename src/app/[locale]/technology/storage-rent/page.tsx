@@ -26,7 +26,7 @@ import {
   ChevronDown,
 } from "lucide-react"
 import { useState } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"

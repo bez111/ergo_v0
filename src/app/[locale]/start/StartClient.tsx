@@ -2,11 +2,10 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
@@ -297,7 +296,6 @@ const statsItems: StatsGridItem[] = [
 
 export default function StartPage() {
   const t = useTranslations('start')
-  const localizedPath = useLocalizedPath()
   const [selectedJourney, setSelectedJourney] = useState<Journey | null>(null)
   const [completedSteps, setCompletedSteps] = useLocalStorage<Record<string, boolean>>(
     "ergo_start_completed",
@@ -1001,7 +999,7 @@ export default function StartPage() {
                 variant="outline"
                 className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-orange-400 hover:border-orange-500/50 min-w-[200px] transition-all duration-200"
               >
-                <Link href={localizedPath("start/faq")}>
+                <Link href="/start/faq">
                   <HelpCircle className="w-4 h-4 mr-2" />
                   FAQ
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -1014,7 +1012,7 @@ export default function StartPage() {
                 asChild
                 className="bg-orange-500 hover:bg-orange-600 text-black min-w-[200px] transition-all duration-200"
               >
-                <Link href={localizedPath("start/community")}>
+                <Link href="/start/community">
                   <Users className="w-4 h-4 mr-2" />
                   Join Community
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -1028,7 +1026,7 @@ export default function StartPage() {
                 variant="outline"
                 className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-orange-400 hover:border-orange-500/50 min-w-[200px] transition-all duration-200"
               >
-                <Link href={localizedPath("start/quiz")}>
+                <Link href="/start/quiz">
                   <Target className="w-4 h-4 mr-2" />
                   Take the Quiz
                   <ChevronRight className="w-4 h-4 ml-2" />

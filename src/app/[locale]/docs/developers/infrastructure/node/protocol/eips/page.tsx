@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { 
   ChevronRight, ExternalLink, CheckCircle, Circle, 
   GitBranch, FileText, Github, Star, AlertCircle

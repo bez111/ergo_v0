@@ -2,42 +2,45 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Code2, Twitter } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { siteConfig } from "@/config/site-config"
 import { FaDiscord, FaTelegram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6";
+import { useTranslations } from "next-intl"
 
 export function JoinCommunity() {
+  const t = useTranslations('joinCommunityHome')
+  
   const channels = [
     {
       icon: FaDiscord,
       title: "Discord",
-      desc: "Join our community",
-      members: "Active daily",
+      desc: t('channels.discord.desc'),
+      members: t('channels.discord.members'),
       href: `${siteConfig.discordLink}`
     },
     {
       icon: Code2,
       title: "GitHub",
-      desc: "Contribute to the code",
-      members: "Open source",
+      desc: t('channels.github.desc'),
+      members: t('channels.github.members'),
       href: "https://github.com/ergoplatform"
     },
     {
       icon: FaTelegram,
       title: "Telegram",
-      desc: "Chat with the community",
-      members: "Global reach",
+      desc: t('channels.telegram.desc'),
+      members: t('channels.telegram.members'),
       href: `${siteConfig.telegramLink}`
     },
     {
       icon: FaXTwitter,
       title: "Twitter/X",
-      desc: "Follow latest updates",
-      members: "Daily updates",
+      desc: t('channels.twitter.desc'),
+      members: t('channels.twitter.members'),
       href: `${siteConfig.twitterLink}`
     }
   ]
@@ -55,10 +58,10 @@ export function JoinCommunity() {
               lineHeight: 1
             }}
           >
-            <span className="text-white">Where</span> <span className="text-orange-400">cypherpunks</span> <span className="text-white">still build</span>
+            <span className="text-white">{t('titlePrefix')}</span> <span className="text-orange-400">{t('titleHighlight')}</span> <span className="text-white">{t('titleSuffix')}</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Active community shipping real tools, not hype.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -96,7 +99,7 @@ export function JoinCommunity() {
             asChild
           >
             <Link href="/start/community" className="inline-flex items-center">
-              <span>Join community</span>
+              <span>{t('cta')}</span>
             </Link>
           </CyberButton>
         </div>

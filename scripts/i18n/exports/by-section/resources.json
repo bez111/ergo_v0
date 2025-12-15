@@ -1,0 +1,74 @@
+[
+  {
+    "key": "resources.ergoscript.title",
+    "value": "ErgoScript Tutorial Series",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "resources.ergoscript.description",
+    "value": "Master ErgoScript: your path to creating secure and powerful smart contracts on Ergo, step by step.",
+    "context": "Description",
+    "maxLength": 148.5
+  },
+  {
+    "key": "resources.ergoscript.difficulty",
+    "value": "Beginner to Expert",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "resources.ergoscript.duration",
+    "value": "20+ hours",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "resources.faq.title",
+    "value": "Comprehensive FAQ",
+    "context": "FAQ content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "resources.faq.description",
+    "value": "Everything you need to know about the Ergo blockchain, technologies, and ecosystem in one place.",
+    "context": "FAQ content",
+    "maxLength": 144
+  },
+  {
+    "key": "resources.faq.difficulty",
+    "value": "All Levels",
+    "context": "FAQ content",
+    "maxLength": 15
+  },
+  {
+    "key": "resources.faq.duration",
+    "value": "Reference",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "resources.research.title",
+    "value": "Research Papers",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "resources.research.description",
+    "value": "Deep dive into academic research and technical papers that form the foundation of Ergo innovations.",
+    "context": "Description",
+    "maxLength": 148.5
+  },
+  {
+    "key": "resources.research.difficulty",
+    "value": "Advanced",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "resources.research.duration",
+    "value": "Varies",
+    "context": "General content",
+    "maxLength": 9
+  }
+]

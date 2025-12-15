@@ -1,27 +1,39 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import ErgoScriptClient from "./ErgoScriptClient"
-import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-export const metadata: Metadata = {
-  title: "Learn ErgoScript | Smart Contract Programming Tutorial",
-  description: "Master ErgoScript programming language. Build secure smart contracts on Ergo blockchain with zero-knowledge proofs, multi-stage protocols, and advanced cryptography.",
-  keywords: ["ergoscript tutorial", "smart contract programming", "blockchain development", "ergo coding", "defi development", "sigma protocols", "zero knowledge", "contract language"],
-  alternates: { canonical: "https://ergoblockchain.org/learn/ergoscript" },
-  openGraph: {
-    title: "ErgoScript Programming Tutorial | Build on Ergo",
-    description: "Complete guide to ErgoScript smart contract development. From basics to advanced DeFi.",
-    url: "https://ergoblockchain.org/learn/ergoscript",
-    siteName: "Ergo Platform",
-    images: [{ url: "https://ergoblockchain.org/og/ergoscript.png", width: 1200, height: 630, alt: "ErgoScript Tutorial" }],
-    type: "article",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Learn ErgoScript | Smart Contract Development",
-    description: "Build powerful DeFi applications with ErgoScript's advanced features.",
-    images: ["https://ergoblockchain.org/og/ergoscript.png"]
+interface Props {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'learnErgoscript' })
+
+  const title = `${t('title')} | Ergo`
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: ["ergoscript tutorial", "smart contract programming", "blockchain development", "ergo coding", "defi development", "sigma protocols", "zero knowledge", "contract language"],
+    alternates: getAlternates('/learn/ergoscript', locale),
+    openGraph: {
+      title,
+      description,
+      url: getCanonicalUrl('/learn/ergoscript', locale),
+      siteName: "Ergo Platform",
+      images: [{ url: "https://ergoblockchain.org/og/ergoscript.png", width: 1200, height: 630, alt: "ErgoScript Programming Course" }],
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://ergoblockchain.org/og/ergoscript.png"]
+    }
   }
 }
 

@@ -1,0 +1,338 @@
+[
+  {
+    "key": "mining.title",
+    "value": "Mining Ergo (ERG)",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "mining.description",
+    "value": "Learn how to mine ERG using the Autolykos proof of work algorithm",
+    "context": "Description",
+    "maxLength": 97.5
+  },
+  {
+    "key": "mining.subDescription",
+    "value": "Start mining ERG today with our complete guide. Setup, profitability calculator and pool recommendations.",
+    "context": "General content",
+    "maxLength": 157.5
+  },
+  {
+    "key": "mining.seo.title",
+    "value": "Mining ERG - Complete Ergo Mining Guide | Autolykos PoW",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 82.5
+  },
+  {
+    "key": "mining.seo.description",
+    "value": "Complete guide to mining Ergo (ERG) cryptocurrency. Learn about Autolykos algorithm, mining setup, profitability, and best mining pools.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 204
+  },
+  {
+    "key": "mining.seo.keywords",
+    "value": "mining ERG, Ergo mining, Autolykos, proof of work, mining pools, GPU mining, mining profitability",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 145.5
+  },
+  {
+    "key": "mining.seo.openGraph.title",
+    "value": "Mining ERG - Complete Guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 40.5
+  },
+  {
+    "key": "mining.seo.openGraph.description",
+    "value": "Start mining Ergo cryptocurrency with our comprehensive guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 91.5
+  },
+  {
+    "key": "mining.seo.openGraph.imageAlt",
+    "value": "Ergo Mining Guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 25.5
+  },
+  {
+    "key": "mining.seo.twitter.title",
+    "value": "Mining ERG - Complete Guide",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 40.5
+  },
+  {
+    "key": "mining.seo.twitter.description",
+    "value": "Learn how to mine Ergo (ERG) cryptocurrency",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 64.5
+  },
+  {
+    "key": "mining.cta.calculator",
+    "value": "Mining Calculator",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "mining.networkStats.title",
+    "value": "Network Stats",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "mining.networkStats.hashrate",
+    "value": "Hashrate",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mining.networkStats.blockTime",
+    "value": "Block Time",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "mining.networkStats.reward",
+    "value": "Block Reward",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "mining.networkStats.miners",
+    "value": "Active Miners",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "mining.tabs.overview",
+    "value": "Overview",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mining.tabs.setup",
+    "value": "Setup Guide",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "mining.tabs.pools",
+    "value": "Mining Pools",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "mining.tabs.profitability",
+    "value": "Profitability",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "mining.tabs.gettingStarted",
+    "value": "Getting Started",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "mining.tabs.hardware",
+    "value": "Hardware",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mining.tabs.calculator",
+    "value": "Calculator",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "mining.tabs.help",
+    "value": "Help",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "mining.stats.hashrate",
+    "value": "210 TH/s",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "mining.stats.blockTime",
+    "value": "2 min",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "mining.stats.reward",
+    "value": "1.2 ERG",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "mining.stats.miners",
+    "value": "12,847",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "mining.seoSchema.name",
+    "value": "How to Mine Ergo (ERG)",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 33
+  },
+  {
+    "key": "mining.seoSchema.description",
+    "value": "Complete guide for mining Ergo cryptocurrency using GPU",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 82.5
+  },
+  {
+    "key": "mining.seoSchema.supply.gpu",
+    "value": "Graphics Card (GPU)",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 28.5
+  },
+  {
+    "key": "mining.seoSchema.supply.software",
+    "value": "Mining Software",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 22.5
+  },
+  {
+    "key": "mining.seoSchema.supply.wallet",
+    "value": "Ergo Wallet",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 16.5
+  },
+  {
+    "key": "mining.seoSchema.tool.miner",
+    "value": "Mining Software",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 22.5
+  },
+  {
+    "key": "mining.seoSchema.tool.pool",
+    "value": "Mining Pool",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 16.5
+  },
+  {
+    "key": "mining.seoSchema.steps.compatibility.name",
+    "value": "Check GPU Compatibility",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 34.5
+  },
+  {
+    "key": "mining.seoSchema.steps.compatibility.text",
+    "value": "Ensure your GPU has at least 4GB memory",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 58.5
+  },
+  {
+    "key": "mining.seoSchema.steps.download.name",
+    "value": "Download Mining Software",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 36
+  },
+  {
+    "key": "mining.seoSchema.steps.download.text",
+    "value": "Get compatible miner like NBMiner or TeamRedMiner",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 73.5
+  },
+  {
+    "key": "mining.seoSchema.steps.pool.name",
+    "value": "Choose Mining Pool",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 27
+  },
+  {
+    "key": "mining.seoSchema.steps.pool.text",
+    "value": "Select a mining pool with good hashrate and low fees",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 78
+  },
+  {
+    "key": "mining.seoSchema.steps.configure.name",
+    "value": "Configure Miner",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 22.5
+  },
+  {
+    "key": "mining.seoSchema.steps.configure.text",
+    "value": "Set pool address and wallet in miner configuration",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 75
+  },
+  {
+    "key": "mining.seoSchema.steps.start.name",
+    "value": "Start Mining",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 18
+  },
+  {
+    "key": "mining.seoSchema.steps.start.text",
+    "value": "Run the miner and monitor your hashrate",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 58.5
+  },
+  {
+    "key": "mining.seoSchema.calculator.name",
+    "value": "Ergo Mining Calculator",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 33
+  },
+  {
+    "key": "mining.seoSchema.calculator.description",
+    "value": "Calculate your potential mining profits",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 58.5
+  },
+  {
+    "key": "mining.faq.profitability.question",
+    "value": "Is mining ERG profitable?",
+    "context": "FAQ content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "mining.faq.profitability.answer",
+    "value": "Profitability depends on electricity costs, hardware efficiency, and ERG price. Use our calculator to estimate.",
+    "context": "FAQ content",
+    "maxLength": 166.5
+  },
+  {
+    "key": "mining.faq.bestGpu.question",
+    "value": "What's the best GPU for mining ERG?",
+    "context": "FAQ content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "mining.faq.bestGpu.answer",
+    "value": "AMD RX 6800 XT and NVIDIA RTX 3070 offer excellent efficiency for Autolykos.",
+    "context": "FAQ content",
+    "maxLength": 114
+  },
+  {
+    "key": "mining.faq.whichPool.question",
+    "value": "Which mining pool should I use?",
+    "context": "FAQ content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "mining.faq.whichPool.answer",
+    "value": "Popular pools include HeroMiners, 2Miners, and WoolyPooly. Choose based on fees and location.",
+    "context": "FAQ content",
+    "maxLength": 139.5
+  },
+  {
+    "key": "mining.faq.earnings.question",
+    "value": "How much can I earn?",
+    "context": "FAQ content",
+    "maxLength": 30
+  },
+  {
+    "key": "mining.faq.earnings.answer",
+    "value": "Earnings vary based on hashrate, network difficulty, and ERG price. Check our calculator for estimates.",
+    "context": "FAQ content",
+    "maxLength": 154.5
+  }
+]

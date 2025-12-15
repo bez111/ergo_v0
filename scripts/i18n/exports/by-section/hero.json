@@ -1,0 +1,86 @@
+[
+  {
+    "key": "hero.title",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "hero.subtitle",
+    "value": "Join a movement for open, programmable, and censorship-resistant finance.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "hero.description",
+    "value": "The globally-neutral settlement layer for programmable money.",
+    "context": "Description",
+    "maxLength": 91.5
+  },
+  {
+    "key": "hero.message1",
+    "value": "Decentralized Money for a Free Society",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "hero.message2",
+    "value": "The globally-neutral settlement layer for programmable money.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "hero.message3",
+    "value": "The open-source home of digital freedom",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "hero.message4",
+    "value": "Join the movement for decentralized, open-source money",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "hero.exploreErgo",
+    "value": "Explore Ergo",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "hero.chooseYourPath",
+    "value": "Choose Your Path",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "hero.startHere",
+    "value": "Start Here",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "hero.features.securePow",
+    "value": "Secure PoW",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "hero.features.smartContracts",
+    "value": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "hero.features.privacy",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "hero.features.eutxoModel",
+    "value": "eUTXO Model",
+    "context": "General content",
+    "maxLength": 16.5
+  }
+]

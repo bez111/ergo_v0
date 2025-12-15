@@ -1,45 +1,51 @@
 import { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import { playbooks, playbookClusters } from "@/data/playbooks"
 import { PlaybooksHubClient } from "./PlaybooksHubClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createCollectionSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createCollectionSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+
+interface Props {
+  params: Promise<{ locale: string }>
+}
 
 const origin = siteConfig.siteUrl
 const url = `${origin}/playbooks`
 
-// SEO Configuration
-const SEO = {
-  title: "Ergo Playbooks — Step-by-Step Guides for DeFi, Privacy & Mining | Ergo",
-  description: "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials.",
-  keywords: [
-    "Ergo playbooks", "Ergo guides", "Ergo tutorials", "DeFi guide",
-    "crypto privacy guide", "GPU mining guide", "Ergo development", "blockchain tutorials"
-  ],
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'playbooksPage.seo' })
+
+  const title = t('title')
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: ["Ergo playbooks", "Ergo guides", "Ergo tutorials", "DeFi guide", "crypto privacy guide", "GPU mining guide", "Ergo development", "blockchain tutorials"],
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: getCanonicalUrl('/playbooks', locale),
+      siteName: "Ergo Blockchain",
+      images: [{ url: "https://ergoblockchain.org/og/hubs/playbooks.png", width: 1200, height: 630, alt: "Ergo Playbooks - Step-by-Step Guides" }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://ergoblockchain.org/og/hubs/playbooks.png"]
+    },
+    alternates: getAlternates('/playbooks', locale),
+  }
 }
 
-export const metadata: Metadata = {
-  title: SEO.title,
-  description: SEO.description,
-  keywords: SEO.keywords,
-  openGraph: {
-    title: "Ergo Playbooks — Step-by-Step Guides for DeFi, Privacy & Mining",
-    description: SEO.description,
-    type: "website",
-    url: "https://ergoblockchain.org/playbooks",
-    siteName: "Ergo Blockchain",
-    images: [{ url: "https://ergoblockchain.org/og/hubs/playbooks.png", width: 1200, height: 630, alt: "Ergo Playbooks - Step-by-Step Guides" }]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo Playbooks — Step-by-Step Guides",
-    description: "Step-by-step guides for building on Ergo. DeFi, privacy, mining — choose your path and start shipping.",
-    images: ["https://ergoblockchain.org/og/hubs/playbooks.png"]
-  },
-  alternates: { canonical: "https://ergoblockchain.org/playbooks" },
-}
-
-export default function PlaybooksPage() {
+export default async function PlaybooksPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'playbooksPage.seo' })
+  
   // ItemList schema for playbooks (complex, kept structured)
   const itemListSchema = {
     "@context": "https://schema.org",
@@ -69,7 +75,7 @@ export default function PlaybooksPage() {
     itemListSchema,
     createCollectionSchema({
       name: "Ergo Playbooks",
-      description: SEO.description,
+      description: t('description'),
       url: "/playbooks",
     }),
     createBreadcrumbSchema([{ name: "Playbooks", href: "/playbooks" }]),

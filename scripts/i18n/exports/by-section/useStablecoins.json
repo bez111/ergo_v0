@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useStablecoins.title",
+    "value": "Stablecoins",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "useStablecoins.description",
+    "value": "Algorithmic stablecoins built on Ergo",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "useStablecoins.subtitle",
+    "value": "Decentralized stable value storage",
+    "context": "General content",
+    "maxLength": 51
+  }
+]

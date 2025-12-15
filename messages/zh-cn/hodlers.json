@@ -1,0 +1,113 @@
+{
+  "holdersPage": {
+    "hero": {
+      "title": "储存财富。保持隐私。保持主权。",
+      "subtitle": "比特币的安全性 + 智能合同 + 可选隐私。固定供应、公平启动，没有公司控制。",
+      "cta": "获取一个Ergo Wallet",
+      "whyDifferent": "为什么Ergo 是不同的"
+    },
+    "breadcrumbs": {
+      "home": "首页",
+      "hodlers": "持有者"
+    },
+    "seo": {
+      "title": "持有 ERG — 无预挖的“健全货币” | Ergo",
+      "description": "为什么持有 ERG？固定总量（97.7M）、公平启动、无 VC 控制。PoW 安全 + 智能合约 + 可选隐私。钱包、代币经济等。",
+      "keywords": [
+        "hold ERG",
+        "Ergo",
+        "sound money",
+        "fair launch",
+        "no pre-mine",
+        "store of value",
+        "financial sovereignty",
+        "ERG tokenomics"
+      ]
+    },
+    "coreValues": {
+      "soundMoney": {
+        "title": "声音钱",
+        "description": "97.7M最大供货。无通货膨胀。无倾销给您。2019年以来工作安全证明了。",
+        "highlight": "保护你的资源"
+      },
+      "smartContracts": {
+        "title": "智能合同",
+        "description": "Defi, DEXs, stablecoins 实际上能够工作。比特币级安全可编程的金钱。",
+        "highlight": "没有风险的工具"
+      },
+      "programmablePrivacy": {
+        "title": "可编程隐私",
+        "description": "隐藏您想要的东西。显示您需要的。不受信任的设置或背门的可选隐私。",
+        "highlight": "您的数据，您的选择"
+      },
+      "fairAccessible": {
+        "title": "公平和可访问",
+        "description": "零预矿。零虚拟机分配。零公司控制。自第一天起100%社区驱动的。",
+        "highlight": "真正的放权"
+      }
+    },
+    "comparison": {
+      "title": "ERG 如何Compares",
+      "headers": {
+        "criterion": "标准",
+        "bitcoin": "比特币",
+        "ethereum": "Ethereum",
+        "monero": "莫罗州",
+        "ergo": "Ergo"
+      },
+      "deepDive": "深深度：详细比较"
+    },
+    "liveMetrics": {
+      "title": "实时网络健康",
+      "subtitle": "链上实时数据 (实时更新)"
+    },
+    "useCasesSection": {
+      "title": "我真的可以和埃尔戈一起做什么？"
+    },
+    "chooseYourPath": {
+      "title": "选择您的",
+      "titleHighlight": "路径",
+      "buyHold": {
+        "title": "购买并挂载",
+        "description": "获取ERG并安全存储"
+      },
+      "exploreDeFi": {
+        "title": "探索DeFi",
+        "description": "让您的ERG正常工作"
+      },
+      "startMining": {
+        "title": "开始挖矿",
+        "description": "安全网络，赚取奖励"
+      },
+      "buildDapps": {
+        "title": "生成 dApps",
+        "description": "创建未来"
+      },
+      "interestedInMining": {
+        "title": "对采矿感兴趣吗？",
+        "description": "使用您的 GPU 安全网络来赚取ERG"
+      }
+    },
+    "faq": {
+      "title": "控件人常见问题",
+      "questions": {
+        "0": {
+          "question": "是什么使ERG与比特币不同？",
+          "answer": "ERG扩展了比特币的安全模型，提供智能合同、可选隐私和长期可持续性的存储租。相同的PoW安全性，更多的功能。"
+        },
+        "1": {
+          "question": "ERG是一种良好的长期投资吗？",
+          "answer": "ERG具有强有力的基本原理：固定供应、公平发射、通过DeFi实现真正的效用。永远不会因为投资而受到更大的损失。"
+        },
+        "2": {
+          "question": "如何安全地存储ERG？",
+          "answer": "使用 Nautilus 钱包获取方便或Ledger 硬件钱包获取最大安全性。永远不要分享您的种子短语。"
+        },
+        "3": {
+          "question": "我能从我的ERG赚钱吗？",
+          "answer": "是的！您可以在 Spectrum DEX 上提供流动资金，使用ErgoPad 启动页面或参与各种DeFi 协议。"
+        }
+      }
+    }
+  }
+}

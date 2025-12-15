@@ -55,13 +55,13 @@ export function getDownloadUrl(path: string, filename?: string): string {
 // Validate PDF path for security
 export function isValidPDFPath(path: string): boolean {
   // Only allow paths within docs directory
-  const allowedPaths = Object.values(PDF_CATEGORIES).map(cat => cat.path)
+  const allowedPaths = Object.values(PDF_CATEGORIES).map(cat => cat.path) as string[]
   const pathSegments = path.split('/')
   
   if (pathSegments.length < 2) return false
   
   const category = pathSegments[0]
-  return allowedPaths.includes(category)
+  return allowedPaths.includes(category ?? '')
 }
 
 // Generate SEO metadata for PDF pages

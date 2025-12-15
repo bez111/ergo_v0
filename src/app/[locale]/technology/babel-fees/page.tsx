@@ -5,21 +5,27 @@ import {
   createTechArticleSchema,
   createFAQSchema,
   createHowToSchema,
+  getAlternates,
+  getCanonicalUrl,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-export async function generateMetadata(): Promise<Metadata> {
+interface Props {
+  params: Promise<{ locale: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  
   return {
     title: "Babel Fees | Pay Transaction Fees with Any Token - Ergo Technology",
     description: "Learn how Babel Fees allow users to pay Ergo transaction fees with any token through automated intermediaries. Revolutionary UX improvement for blockchain transactions.",
     keywords: ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative", "ergo technology"],
-    alternates: {
-      canonical: "https://ergoblockchain.org/technology/babel-fees"
-    },
+    alternates: getAlternates('/technology/babel-fees', locale),
     openGraph: {
       title: "Babel Fees - Pay Transaction Fees with Any Token | Ergo Technology",
       description: "Revolutionary fee payment system allowing users to pay Ergo transaction fees with any token through automated intermediaries.",
-      url: "https://ergoblockchain.org/technology/babel-fees",
+      url: getCanonicalUrl('/technology/babel-fees', locale),
       siteName: "Ergo Platform",
       images: [{
         url: "https://ergoblockchain.org/og/babel-fees.png",

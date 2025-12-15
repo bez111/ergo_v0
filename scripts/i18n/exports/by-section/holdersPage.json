@@ -1,0 +1,284 @@
+[
+  {
+    "key": "holdersPage.hero.title",
+    "value": "Store wealth. Keep privacy. Stay sovereign.",
+    "context": "Title",
+    "maxLength": 64.5
+  },
+  {
+    "key": "holdersPage.hero.subtitle",
+    "value": "Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.",
+    "context": "General content",
+    "maxLength": 168
+  },
+  {
+    "key": "holdersPage.hero.cta",
+    "value": "Get an Ergo Wallet",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "holdersPage.hero.whyDifferent",
+    "value": "Why Ergo is Different",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "holdersPage.coreValues.soundMoney.title",
+    "value": "Sound Money",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "holdersPage.coreValues.soundMoney.description",
+    "value": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
+    "context": "Description",
+    "maxLength": 144
+  },
+  {
+    "key": "holdersPage.coreValues.soundMoney.highlight",
+    "value": "Protect your wealth",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "holdersPage.coreValues.smartContracts.title",
+    "value": "Smart Contracts",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "holdersPage.coreValues.smartContracts.description",
+    "value": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
+    "context": "Description",
+    "maxLength": 136.5
+  },
+  {
+    "key": "holdersPage.coreValues.smartContracts.highlight",
+    "value": "Utility without risk",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "holdersPage.coreValues.programmablePrivacy.title",
+    "value": "Programmable Privacy",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "holdersPage.coreValues.programmablePrivacy.description",
+    "value": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
+    "context": "Description",
+    "maxLength": 138
+  },
+  {
+    "key": "holdersPage.coreValues.programmablePrivacy.highlight",
+    "value": "Your data, your choice",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "holdersPage.coreValues.fairAccessible.title",
+    "value": "Fair & Accessible",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "holdersPage.coreValues.fairAccessible.description",
+    "value": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
+    "context": "Description",
+    "maxLength": 142.5
+  },
+  {
+    "key": "holdersPage.coreValues.fairAccessible.highlight",
+    "value": "True decentralization",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "holdersPage.comparison.title",
+    "value": "How ERG Compares",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "holdersPage.comparison.headers.criterion",
+    "value": "Criterion",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "holdersPage.comparison.headers.bitcoin",
+    "value": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "holdersPage.comparison.headers.ethereum",
+    "value": "Ethereum",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "holdersPage.comparison.headers.monero",
+    "value": "Monero",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "holdersPage.comparison.headers.ergo",
+    "value": "Ergo",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "holdersPage.comparison.deepDive",
+    "value": "Deep dive: Detailed comparison",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "holdersPage.liveMetrics.title",
+    "value": "Live Network Health",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "holdersPage.liveMetrics.subtitle",
+    "value": "Live on-chain data (updated in real time)",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "holdersPage.useCasesSection.title",
+    "value": "What can I actually DO with Ergo?",
+    "context": "Title",
+    "maxLength": 49.5
+  },
+  {
+    "key": "holdersPage.chooseYourPath.title",
+    "value": "Choose Your",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "holdersPage.chooseYourPath.titleHighlight",
+    "value": "Path",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "holdersPage.chooseYourPath.buyHold.title",
+    "value": "Buy & Hold",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "holdersPage.chooseYourPath.buyHold.description",
+    "value": "Get ERG and store securely",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "holdersPage.chooseYourPath.exploreDeFi.title",
+    "value": "Explore DeFi",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "holdersPage.chooseYourPath.exploreDeFi.description",
+    "value": "Put your ERG to work",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "holdersPage.chooseYourPath.startMining.title",
+    "value": "Start Mining",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "holdersPage.chooseYourPath.startMining.description",
+    "value": "Secure the network, earn rewards",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "holdersPage.chooseYourPath.buildDapps.title",
+    "value": "Build dApps",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "holdersPage.chooseYourPath.buildDapps.description",
+    "value": "Create the future",
+    "context": "Description",
+    "maxLength": 25.5
+  },
+  {
+    "key": "holdersPage.chooseYourPath.interestedInMining.title",
+    "value": "Interested in mining?",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "holdersPage.chooseYourPath.interestedInMining.description",
+    "value": "Earn ERG by securing the network with your GPU",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "holdersPage.faq.title",
+    "value": "Holders FAQ",
+    "context": "FAQ content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "holdersPage.faq.questions.0.question",
+    "value": "What makes ERG different from Bitcoin?",
+    "context": "FAQ content",
+    "maxLength": 57
+  },
+  {
+    "key": "holdersPage.faq.questions.0.answer",
+    "value": "ERG extends Bitcoin's security model with smart contracts, optional privacy, and storage rent for long-term sustainability. Same PoW security, more functionality.",
+    "context": "FAQ content",
+    "maxLength": 243
+  },
+  {
+    "key": "holdersPage.faq.questions.1.question",
+    "value": "Is ERG a good long-term investment?",
+    "context": "FAQ content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "holdersPage.faq.questions.1.answer",
+    "value": "ERG has strong fundamentals: fixed supply, fair launch, real utility through DeFi. Always DYOR and never invest more than you can afford to lose.",
+    "context": "FAQ content",
+    "maxLength": 217.5
+  },
+  {
+    "key": "holdersPage.faq.questions.2.question",
+    "value": "How do I store ERG safely?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "holdersPage.faq.questions.2.answer",
+    "value": "Use Nautilus wallet for convenience or Ledger hardware wallet for maximum security. Never share your seed phrase.",
+    "context": "FAQ content",
+    "maxLength": 169.5
+  },
+  {
+    "key": "holdersPage.faq.questions.3.question",
+    "value": "Can I earn yield on my ERG?",
+    "context": "FAQ content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "holdersPage.faq.questions.3.answer",
+    "value": "Yes! You can provide liquidity on Spectrum DEX, use ErgoPad launchpad, or participate in various DeFi protocols.",
+    "context": "FAQ content",
+    "maxLength": 168
+  }
+]

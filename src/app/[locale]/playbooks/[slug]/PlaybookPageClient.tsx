@@ -3,7 +3,8 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-img-element, react-hooks/set-state-in-effect */
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
@@ -87,6 +88,7 @@ const clusterColors: Record<string, string> = {
 };
 
 export function PlaybookPageClient({ playbook }: Props) {
+  const t = useTranslations('playbookPage');
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
   const [activeStep, setActiveStep] = useState<number | null>(0);
 
@@ -229,14 +231,14 @@ export function PlaybookPageClient({ playbook }: Props) {
                   <div className="bg-black border border-red-500/20 rounded-2xl p-5">
                     <div className="flex items-center gap-2 mb-3">
                       <AlertCircle className="w-5 h-5 text-red-400" />
-                      <h3 className="font-semibold text-white">The Problem</h3>
+                      <h3 className="font-semibold text-white">{t('problem')}</h3>
                     </div>
                     <p className="text-neutral-400 text-sm leading-relaxed">{playbook.problemStatement}</p>
                   </div>
                   <div className="bg-black border border-green-500/20 rounded-2xl p-5">
                     <div className="flex items-center gap-2 mb-3">
                       <CheckCircle className="w-5 h-5 text-green-400" />
-                      <h3 className="font-semibold text-white">The Solution</h3>
+                      <h3 className="font-semibold text-white">{t('solution')}</h3>
                     </div>
                     <p className="text-neutral-400 text-sm leading-relaxed">{playbook.solution}</p>
               </div>
@@ -257,7 +259,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                 <span className="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center">
                   <Zap className="w-4 h-4 text-orange-400" />
                 </span>
-                Step-by-Step Guide
+                {t('stepByStepGuide')}
               </h2>
 
               <div className="space-y-4">
@@ -363,7 +365,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                             {step.resources && step.resources.length > 0 && (
                                   <div className="space-y-3">
                                     <span className="text-xs text-neutral-400 uppercase tracking-wide font-medium">
-                                  Resources
+                                  {t('resources')}
                                 </span>
                                 <div className="flex flex-wrap gap-2">
                                   {step.resources.map((resource, rIndex) => {
@@ -410,7 +412,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                                     ) : (
                                       <>
                                         <CheckCircle className="w-4 h-4" />
-                                        Mark as Complete
+                                        {t('markComplete')}
                                       </>
                                     )}
                                   </button>
@@ -549,7 +551,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                   {relatedPlaybooks.length > 0 && (
                     <div>
                       <h3 className="text-sm font-semibold text-neutral-400 mb-3 uppercase tracking-wide">
-                        Playbooks
+                        {t('relatedPlaybooks')}
                       </h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         {relatedPlaybooks.slice(0, 2).map((related) => {
@@ -681,7 +683,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                   ) : (
                     <>
                       <h2 className="text-2xl font-bold text-white mb-2">
-                Ready to Get Started?
+                {t('finalCta.readyTitle')}
               </h2>
                       <p className="text-neutral-400 mb-6">
                 Complete this playbook and join the Ergo community.
@@ -700,7 +702,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                   href="/playbooks"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 transition-colors"
                 >
-                  Browse All Playbooks
+                  {t('browseAllPlaybooks')}
                 </Link>
               </div>
                 </CardContent>

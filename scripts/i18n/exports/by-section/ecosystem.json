@@ -1,0 +1,1436 @@
+[
+  {
+    "key": "ecosystem.title",
+    "value": "Ecosystem",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.subtitle",
+    "value": "Discover the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "ecosystem.description",
+    "value": "Explore the growing Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "ecosystem.sections.dapps",
+    "value": "Decentralized Applications",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "ecosystem.sections.tools",
+    "value": "Developer Tools",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ecosystem.sections.services",
+    "value": "Services & Infrastructure",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "ecosystem.grants.hero.title",
+    "value": "Coming Soon",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ecosystem.grants.hero.description",
+    "value": "Empowering developers, researchers, and innovators to build the future of decentralized finance on Ergo",
+    "context": "Description",
+    "maxLength": 154.5
+  },
+  {
+    "key": "ecosystem.grants.hero.expectedLaunch",
+    "value": "Expected Launch: Q3 2025",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "ecosystem.grants.subscribe.placeholder",
+    "value": "Enter your email for updates",
+    "context": "Input placeholder",
+    "maxLength": 42
+  },
+  {
+    "key": "ecosystem.grants.subscribe.button",
+    "value": "Notify Me",
+    "context": "Button label",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.grants.subscribe.success",
+    "value": "Thank you! We'll notify you when the grants program launches.",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "ecosystem.grants.features.title",
+    "value": "What to Expect",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "ecosystem.grants.features.subtitle",
+    "value": "Grants Program Features",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "ecosystem.grants.features.description",
+    "value": "Supporting innovation and development in the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 88.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.0.title",
+    "value": "Developer Support",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.0.description",
+    "value": "Funding for innovative dApps, tools, and infrastructure projects",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "ecosystem.grants.features.items.0.icon",
+    "value": "Zap",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.1.title",
+    "value": "Research Funding",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.grants.features.items.1.description",
+    "value": "Support for academic research and protocol improvements",
+    "context": "Description",
+    "maxLength": 82.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.1.icon",
+    "value": "Target",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "ecosystem.grants.features.items.2.title",
+    "value": "Community Projects",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystem.grants.features.items.2.description",
+    "value": "Grants for community-driven initiatives and educational content",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.2.icon",
+    "value": "Users",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.3.title",
+    "value": "Innovation Grants",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.grants.features.items.3.description",
+    "value": "Special funding for breakthrough ideas and experimental projects",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "ecosystem.grants.features.items.3.icon",
+    "value": "Lightbulb",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.grants.cta.title",
+    "value": "Ready to Build on Ergo?",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "ecosystem.grants.cta.description",
+    "value": "Start preparing your project proposal and join our community to stay updated",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "ecosystem.grants.cta.buttons.discord",
+    "value": "Join Discord Community",
+    "context": "Button label - keep short",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.grants.cta.buttons.learn",
+    "value": "Learn About Ergo",
+    "context": "Button label - keep short",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.seo.title",
+    "value": "Ecosystem - Ergo Blockchain Projects | Ergo Platform",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 78
+  },
+  {
+    "key": "ecosystem.seo.description",
+    "value": "Discover the thriving Ergo ecosystem: DeFi protocols, NFT marketplaces, tools, and applications.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 144
+  },
+  {
+    "key": "ecosystem.seo.keywords",
+    "value": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 81
+  },
+  {
+    "key": "ecosystem.seo.ogTitle",
+    "value": "Ergo Ecosystem - Blockchain Projects & Applications",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 76.5
+  },
+  {
+    "key": "ecosystem.seo.ogDescription",
+    "value": "Explore DeFi, NFTs, wallets, and developer tools in the Ergo ecosystem.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 106.5
+  },
+  {
+    "key": "ecosystem.categories.defi.title",
+    "value": "DeFi",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystem.categories.defi.description",
+    "value": "Decentralized finance protocols and applications",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "ecosystem.categories.nfts.title",
+    "value": "NFTs",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystem.categories.nfts.description",
+    "value": "NFT marketplaces and collections",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "ecosystem.categories.tools.title",
+    "value": "Tools",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystem.categories.tools.description",
+    "value": "Development tools and infrastructure",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "ecosystem.categories.wallets.title",
+    "value": "Wallets",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.categories.wallets.description",
+    "value": "Wallets for storing and managing ERG",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "ecosystem.categories.gaming.title",
+    "value": "Gaming",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "ecosystem.categories.gaming.description",
+    "value": "Blockchain games and metaverse projects",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "ecosystem.categories.social.title",
+    "value": "Social",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "ecosystem.categories.social.description",
+    "value": "Social platforms and communities",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "ecosystem.stats.projects",
+    "value": "Active Projects",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ecosystem.stats.activeProjects",
+    "value": "Active Projects",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ecosystem.stats.categories",
+    "value": "Categories",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ecosystem.stats.status",
+    "value": "Live Projects",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystem.stats.developers",
+    "value": "Developers",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ecosystem.stats.tvl",
+    "value": "Total Value Locked",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystem.stats.users",
+    "value": "Active Users",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystem.filters.all",
+    "value": "All",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "ecosystem.filters.defi",
+    "value": "DeFi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystem.filters.infrastructure",
+    "value": "Infrastructure",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "ecosystem.filters.oracles",
+    "value": "Oracles",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.filters.privacy",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.filters.nft",
+    "value": "NFT",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "ecosystem.filters.wallets",
+    "value": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.filters.dao",
+    "value": "DAO",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "ecosystem.filters.gaming",
+    "value": "Gaming",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "ecosystem.filters.tools",
+    "value": "Tools",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "ecosystem.search.placeholder",
+    "value": "Search projects...",
+    "context": "Input placeholder",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystem.search.resultsCount",
+    "value": "{count} projects",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.featuredProjects.title",
+    "value": "Featured Projects",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.featuredProjects.badge",
+    "value": "FEATURED",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystem.featured.title",
+    "value": "Featured Projects",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.featured.viewAll",
+    "value": "View All Projects",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.cta.title",
+    "value": "Build on Ergo",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystem.cta.description",
+    "value": "Join the ecosystem and build the future of blockchain",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "ecosystem.cta.startBuilding",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "ecosystem.cta.viewGrants",
+    "value": "View Grants",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ecosystem.mining.no_pools_match_your_criteria",
+    "value": "No pools match your criteria",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "ecosystem.mining.new_to_mining",
+    "value": "New to mining?",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "ecosystem.mining.best_for",
+    "value": "Best For",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystem.mining.ready_to_start_mining",
+    "value": "Ready to Start Mining?",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.mining.getblok_category_large_url_https",
+    "value": "GetBlok\",\n      category: \"large\",\n      url: \"https://ergo.getblok.io\",\n      location: \"Global\",\n      fee:",
+    "context": "General content",
+    "maxLength": 163.5
+  },
+  {
+    "key": "ecosystem.mining.pplns_minpayout",
+    "value": "PPLNS\",\n      minPayout:",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "ecosystem.mining.auto_exchange_mobile_app_api_access_ssl_tls",
+    "value": "Auto-exchange\", \"Mobile app\", \"API access\", \"SSL/TLS",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "ecosystem.mining.auto_exchange_mobile_app",
+    "value": "Auto-exchange\", \"Mobile App",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "ecosystem.mining.telegram_bot_email_alerts_ddos_protection",
+    "value": "Telegram bot\", \"Email alerts\", \"DDoS protection",
+    "context": "General content",
+    "maxLength": 70.5
+  },
+  {
+    "key": "ecosystem.mining.telegram_bot_email_alerts",
+    "value": "Telegram Bot\", \"Email Alerts\",",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "ecosystem.mining.eu_us_asia_ru",
+    "value": "EU\", \"US\", \"Asia\", \"RU",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.mining.herominers_category_large_url_https",
+    "value": "HeroMiners\",\n      category: \"large\",\n      url: \"https://ergo.herominers.com\",\n      location: \"Global\",\n      fee:",
+    "context": "General content",
+    "maxLength": 174
+  },
+  {
+    "key": "ecosystem.mining.prop_minpayout",
+    "value": "PROP\",\n      minPayout:",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "ecosystem.mining.ssl_support_worker_stats_profit",
+    "value": "SSL support\", \"Worker stats\", \"Profit calculator\", \"Discord bot",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "ecosystem.mining.low_fee_discord_bot_profit_calc",
+    "value": "Low Fee\", \"Discord Bot\", \"Profit Calc",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "ecosystem.mining.woolypooly_category_medium_url_https",
+    "value": "WoolyPooly\",\n      category: \"medium\",\n      url: \"https://woolypooly.com/en/coin/erg\",\n      location: \"Europe\",\n      fee:",
+    "context": "General content",
+    "maxLength": 186
+  },
+  {
+    "key": "ecosystem.mining.solo_mining_telegram_bot_mev_rewards_low_latency",
+    "value": "Solo mining\", \"Telegram bot\", \"MEV rewards\", \"Low latency",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "ecosystem.mining.solo_mining_mev_rewards_low_fee",
+    "value": "Solo Mining\", \"MEV Rewards\", \"Low Fee",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "ecosystem.mining.pps_minpayout",
+    "value": "PPS+\",\n      minPayout:",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "ecosystem.mining.mobile_app_multi_coin_instant",
+    "value": "Mobile app\", \"Multi-coin\", \"Instant payments\", \"Chinese support",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "ecosystem.mining.multi_coin_instant_pay_mobile_app",
+    "value": "Multi-coin\", \"Instant Pay\", \"Mobile App",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "ecosystem.mining.kryptex_pool_category_medium_url",
+    "value": "Kryptex Pool\",\n      category: \"medium\",\n      url: \"https://pool.kryptex.com/erg\",\n      location: \"Europe\",\n      fee:",
+    "context": "General content",
+    "maxLength": 180
+  },
+  {
+    "key": "ecosystem.mining.mining_os_instant_payouts_profit",
+    "value": "Mining OS\", \"Instant payouts\", \"Profit switching\", \"Dashboard",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "ecosystem.mining.mining_os_profit_switch_dashboard",
+    "value": "Mining OS\", \"Profit Switch\", \"Dashboard",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "ecosystem.mining.nanopool_category_medium_url_https",
+    "value": "Nanopool\",\n      category: \"medium\",\n      url: \"https://ergo.nanopool.org\",\n      location: \"Global\",\n      fee:",
+    "context": "General content",
+    "maxLength": 169.5
+  },
+  {
+    "key": "ecosystem.mining.api_access_multi_lang_mobile_app",
+    "value": "API Access\", \"Multi-lang\", \"Mobile App",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "ecosystem.mining.eu_us_asia_au",
+    "value": "EU\", \"US\", \"Asia\", \"AU",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.mining.best_for_mixed_rigs_download",
+    "value": "Best for mixed rigs\",\n      download: \"https://github.com/NebuTech/NBMiner/releases",
+    "context": "General content",
+    "maxLength": 124.5
+  },
+  {
+    "key": "ecosystem.mining.best_for_nvidia_cards_download",
+    "value": "Best for NVIDIA cards\",\n      download: \"https://github.com/trexminer/T-Rex/releases",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "ecosystem.mining.best_for_amd_cards_download",
+    "value": "Best for AMD cards\",\n      download: \"https://github.com/todxx/teamredminer/releases",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "ecosystem.mining.advanced_users_download_https_github",
+    "value": "Advanced users\",\n      download: \"https://github.com/Lolliedieb/lolMiner-releases/releases",
+    "context": "General content",
+    "maxLength": 135
+  },
+  {
+    "key": "ecosystem.mining.mining_pools_directory",
+    "value": "MINING POOLS DIRECTORY",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.mining.smaller_pools_for_better_decentralization",
+    "value": "Smaller pools for better decentralization",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "ecosystem.mining.ergo_mining_software_options",
+    "value": "Ergo mining software options",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "ecosystem.mining.all_pools_icon_null_activeclass",
+    "value": "All Pools', \n      icon: null,\n      activeClass:",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "ecosystem.mining.for_beginners",
+    "value": "For Beginners",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystem.mining.all_pools",
+    "value": "All Pools",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.mining.fair_launch_asic_resistant_truly",
+    "value": "Fair launch, ASIC-resistant, truly decentralized. Find pools, software, and resources.",
+    "context": "General content",
+    "maxLength": 129
+  },
+  {
+    "key": "ecosystem.mining.i_m_new_start_here",
+    "value": "I'm New - Start Here",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "ecosystem.mining.browse_pools_directory",
+    "value": "Browse Pools Directory",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.mining.start_with_nbminer_mixed_rigs",
+    "value": "Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.",
+    "context": "General content",
+    "maxLength": 109.5
+  },
+  {
+    "key": "ecosystem.mining.how_to_choose_a_pool",
+    "value": "How to choose a pool?",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "ecosystem.mining.beginners_choose_pools_with_good",
+    "value": "Beginners: choose pools with good support. Advanced: optimize for fees and server location.",
+    "context": "General content",
+    "maxLength": 136.5
+  },
+  {
+    "key": "ecosystem.mining.minimum_requirements",
+    "value": "Minimum requirements?",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "ecosystem.mining.depends_on_hashrate_and_electricity_cost",
+    "value": "Depends on hashrate and electricity cost.",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "ecosystem.mining.view_all_faqs",
+    "value": "View all FAQs",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystem.mining.join_thousands_of_miners_securing",
+    "value": "Join thousands of miners securing the Ergo network. Fair, decentralized, and profitable.",
+    "context": "General content",
+    "maxLength": 132
+  },
+  {
+    "key": "ecosystem.map.title",
+    "value": "Ergo Ecosystem Map",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystem.map.subtitle",
+    "value": "Interactive DeFi & dApp Directory",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "ecosystem.map.description",
+    "value": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+    "context": "Description",
+    "maxLength": 256.5
+  },
+  {
+    "key": "ecosystem.map.lastUpdated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystem.map.buttons.exploreProjects",
+    "value": "Explore Projects",
+    "context": "Button label - keep short",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.map.buttons.visitSigmaverse",
+    "value": "Visit Sigmaverse",
+    "context": "Button label - keep short",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.map.features.title",
+    "value": "Ecosystem Features",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystem.map.features.subtitle",
+    "value": "Discover what makes Ergo's ecosystem unique",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "ecosystem.map.features.interactive.title",
+    "value": "Interactive Visualization",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "ecosystem.map.features.interactive.description",
+    "value": "Explore projects through an intuitive visual interface",
+    "context": "Description",
+    "maxLength": 81
+  },
+  {
+    "key": "ecosystem.map.features.comprehensive.title",
+    "value": "Comprehensive Coverage",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.map.features.comprehensive.description",
+    "value": "All active projects and protocols in one place",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "ecosystem.map.features.realtime.title",
+    "value": "Real-time Updates",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.map.features.realtime.description",
+    "value": "Always up-to-date project information and statistics",
+    "context": "Description",
+    "maxLength": 78
+  },
+  {
+    "key": "ecosystem.map.cta.title",
+    "value": "Ready to Explore?",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.map.cta.subtitle",
+    "value": "Dive into the growing Ergo ecosystem and discover innovative projects",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "ecosystem.map.cta.buttons.exploreEcosystem",
+    "value": "Explore Ecosystem",
+    "context": "Button label - keep short",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.map.cta.buttons.visitSigmaverse",
+    "value": "Visit Sigmaverse",
+    "context": "Button label - keep short",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.map.seo.title",
+    "value": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 81
+  },
+  {
+    "key": "ecosystem.map.seo.description",
+    "value": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 256.5
+  },
+  {
+    "key": "ecosystem.map.seo.ogTitle",
+    "value": "Interactive Ergo Ecosystem Map | 50+ Projects",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 67.5
+  },
+  {
+    "key": "ecosystem.map.seo.ogDescription",
+    "value": "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 126
+  },
+  {
+    "key": "ecosystem.map.seo.twitterTitle",
+    "value": "Ergo Ecosystem Map | Visual Project Explorer",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 66
+  },
+  {
+    "key": "ecosystem.map.seo.twitterDescription",
+    "value": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 124.5
+  },
+  {
+    "key": "ecosystem.map.jump_to",
+    "value": "Jump to:",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystem.map.filter_by_category",
+    "value": "Filter by category:",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "ecosystem.map.spectrum_finance_category_defi_url",
+    "value": "Spectrum Finance\", category: \"DEFI\", url: \"https://spectrum.fi",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "ecosystem.map.sigmausd_category_defi_url_https_sigmausd_io",
+    "value": "SigmaUSD\", category: \"DEFI\", url: \"https://sigmausd.io",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "ecosystem.map.rosen_bridge_category_infrastructure_url",
+    "value": "Rosen Bridge\", category: \"INFRASTRUCTURE\", url: \"https://rosen.tech",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "ecosystem.map.ergomixer_category_privacy_url_https_ergomixer_io",
+    "value": "ErgoMixer\", category: \"PRIVACY\", url: \"https://ergomixer.io",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "ecosystem.map.ergo_auction_house_category_nft",
+    "value": "Ergo Auction House\", category: \"NFT\", url: \"https://ergoauctions.org",
+    "context": "General content",
+    "maxLength": 102
+  },
+  {
+    "key": "ecosystem.map.paideia_category_dao_url_https_paideia_im",
+    "value": "Paideia\", category: \"DAO\", url: \"https://paideia.im",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "ecosystem.map.oracle_pools_category_oracles_url",
+    "value": "Oracle Pools\", category: \"ORACLES\", url: \"https://explorer.ergoplatform.com/en/oracle-pools-list",
+    "context": "General content",
+    "maxLength": 144
+  },
+  {
+    "key": "ecosystem.map.ergo_explorer_category_tools_url",
+    "value": "Ergo Explorer\", category: \"TOOLS\", url: \"https://explorer.ergoplatform.com",
+    "context": "General content",
+    "maxLength": 111
+  },
+  {
+    "key": "ecosystem.map.mew_finance_category_defi_url",
+    "value": "Mew Finance\", category: \"DEFI\", url: \"#",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "ecosystem.map.satergo_category_wallets_url_https_satergo_com",
+    "value": "SatErgo\", category: \"WALLETS\", url: \"https://satergo.com",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "ecosystem.map.safew_category_wallets_url_https_safew_org",
+    "value": "SAFEW\", category: \"WALLETS\", url: \"https://safew.org",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "ecosystem.map.ergowatch_category_tools_url_https_ergo_watch",
+    "value": "ErgoWatch\", category: \"TOOLS\", url: \"https://ergo.watch",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "ecosystem.map.ergoraffle_category_defi_url_https_ergoraffle_com",
+    "value": "ErgoRaffle\", category: \"DEFI\", url: \"https://ergoraffle.com",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "ecosystem.map.guapswap_category_tools_url",
+    "value": "GuapSwap\", category: \"TOOLS\", url: \"#",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "ecosystem.map.sigmaverse_category_tools_url_https_sigmaverse_io",
+    "value": "Sigmaverse\", category: \"TOOLS\", url: \"https://sigmaverse.io",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "ecosystem.map.ergone_category_tools_url",
+    "value": "ErgOne\", category: \"TOOLS\", url: \"#",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "ecosystem.map.hodlbox_category_defi_url",
+    "value": "Hodlbox\", category: \"DEFI\", url: \"#",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "ecosystem.map.tokenjay_category_defi_url",
+    "value": "TokenJay\", category: \"DEFI\", url: \"#",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "ecosystem.map.single_tx_swap_category_tools_url",
+    "value": "Single Tx Swap\", category: \"TOOLS\", url: \"#",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "ecosystem.map.crux_finance_category_tools_url",
+    "value": "Crux Finance\", category: \"TOOLS\", url: \"#",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "ecosystem.map.fleet_sdk_category_tools_url",
+    "value": "Fleet SDK\", category: \"TOOLS\", url: \"https://github.com/fleet-sdk/fleet",
+    "context": "General content",
+    "maxLength": 106.5
+  },
+  {
+    "key": "ecosystem.map.appkit_category_tools_url_https",
+    "value": "AppKit\", category: \"TOOLS\", url: \"https://github.com/ergoplatform/ergo-appkit",
+    "context": "General content",
+    "maxLength": 115.5
+  },
+  {
+    "key": "ecosystem.map.sigmarust_category_tools_url_https",
+    "value": "SigmaRust\", category: \"TOOLS\", url: \"https://github.com/ergoplatform/sigma-rust",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "ecosystem.map.sigrsv_category_defi_url",
+    "value": "SigRSV\", category: \"DEFI\", url: \"#",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "ecosystem.map.defi_infrastructure_oracles_privacy_nft",
+    "value": "DEFI\",\n  \"INFRASTRUCTURE\",\n  \"ORACLES\",\n  \"PRIVACY\",\n  \"NFT\",\n  \"WALLETS\",\n  \"DAO\",\n  \"TOOLS",
+    "context": "General content",
+    "maxLength": 138
+  },
+  {
+    "key": "ecosystem.map.suggest_a_project",
+    "value": "Suggest a Project",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.map.no_projects_found",
+    "value": "No projects found",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.map.ergo_ecosystem_interactive_map",
+    "value": "Ergo Ecosystem Interactive Map",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "ecosystem.map.webapplication_id_https_ergoblockchain_org",
+    "value": "WebApplication\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem/map\",\n    name: \"Ergo Ecosystem Interactive Map\",\n    description: \"Visual explorer for Ergo blockchain projects and applications\",\n    applicationCategory: \"VisualizationApplication\",\n    operatingSystem: \"Web Browser\",\n    url: \"https://ergoblockchain.org/ecosystem/map",
+    "context": "General content",
+    "maxLength": 505.5
+  },
+  {
+    "key": "ecosystem.map.organization_name_ergo_platform_url",
+    "value": "Organization\",\n      name: \"Ergo Platform\",\n      url: \"https://ergoblockchain.org",
+    "context": "General content",
+    "maxLength": 123
+  },
+  {
+    "key": "ecosystem.map.what_is_the_ergo_ecosystem",
+    "value": "What is the Ergo Ecosystem Map?\",\n      answer: \"An interactive visualization showing all active projects, protocols, and applications built on Ergo blockchain, organized by category.",
+    "context": "General content",
+    "maxLength": 274.5
+  },
+  {
+    "key": "ecosystem.map.how_many_projects_are_in_the_ergo_ecosystem_answer",
+    "value": "How many projects are in the Ergo ecosystem?\",\n      answer:",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "ecosystem.map.how_do_i_add_my",
+    "value": "How do I add my project to the map?\",\n      answer: \"Submit your project through the ecosystem submission form or contact the Ergo Foundation to be included in the ecosystem map.",
+    "context": "General content",
+    "maxLength": 267
+  },
+  {
+    "key": "ecosystem.map.is_the_ecosystem_map_updated",
+    "value": "Is the ecosystem map updated regularly?\",\n      answer: \"Yes, the ecosystem map is regularly updated to include new projects and remove inactive ones, providing an accurate view of the active ecosystem.",
+    "context": "General content",
+    "maxLength": 303
+  },
+  {
+    "key": "ecosystem.map.organization_name_ergo_platform",
+    "value": "Organization\",\n      name: \"Ergo Platform",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "ecosystem.map.datadownload_encodingformat_application_json_contenturl",
+    "value": "DataDownload\",\n      encodingFormat: \"application/json\",\n      contentUrl: \"https://ergoblockchain.org/api/ecosystem",
+    "context": "General content",
+    "maxLength": 174
+  },
+  {
+    "key": "ecosystem.map.place_name_global",
+    "value": "Place\",\n      name: \"Global",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "ecosystem.map.ergo_ecosystem_map_interactive_defi_dapp_directory",
+    "value": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "ecosystem.map.interactive_ergo_ecosystem_map_50_projects",
+    "value": "Interactive Ergo Ecosystem Map | 50+ Projects",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "ecosystem.map.ergo_ecosystem_map_visual_project_explorer",
+    "value": "Ergo Ecosystem Map | Visual Project Explorer",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "ecosystem.map.interactive_visualization_of_50_ergo",
+    "value": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure.",
+    "context": "General content",
+    "maxLength": 124.5
+  },
+  {
+    "key": "ecosystem.map.visual_explorer_for_ergo_blockchain",
+    "value": "Visual explorer for Ergo blockchain projects and applications",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "ecosystem.itemlist_id_https_ergoblockchain_org",
+    "value": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
+    "context": "General content",
+    "maxLength": 144
+  },
+  {
+    "key": "ecosystem.collectionpage_id_https_ergoblockchain_org",
+    "value": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#collection\",\n    name: \"Ergo Ecosystem\",\n    url: \"https://ergoblockchain.org/ecosystem",
+    "context": "General content",
+    "maxLength": 229.5
+  },
+  {
+    "key": "ecosystem.website_id_https_ergoblockchain_org_website",
+    "value": "WebSite\", \"@id\": \"https://ergoblockchain.org#website",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "ecosystem.breadcrumblist_id_https_ergoblockchain_org",
+    "value": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
+    "context": "General content",
+    "maxLength": 115.5
+  },
+  {
+    "key": "ecosystem.ecosystem_item_https_ergoblockchain_org_ecosystem",
+    "value": "Ecosystem\", item: \"https://ergoblockchain.org/ecosystem",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "ecosystem.what_defi_projects_are_on",
+    "value": "What DeFi projects are on Ergo?\",\n      answer: \"Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools.",
+    "context": "General content",
+    "maxLength": 241.5
+  },
+  {
+    "key": "ecosystem.are_there_nft_marketplaces_on",
+    "value": "Are there NFT marketplaces on Ergo?\",\n      answer: \"Yes, Ergo has NFT marketplaces like SkyHarbor for minting and trading NFTs with low fees.",
+    "context": "General content",
+    "maxLength": 213
+  },
+  {
+    "key": "ecosystem.home_item_https_ergoblockchain_org",
+    "value": "Home\", item: \"https://ergoblockchain.org/",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "ecosystem.projectPage.breadcrumbs.ecosystem",
+    "value": "Ecosystem",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.projectPage.buttons.visitProject",
+    "value": "Visit project",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystem.projectPage.buttons.github",
+    "value": "GitHub",
+    "context": "Button label - keep short",
+    "maxLength": 9
+  },
+  {
+    "key": "ecosystem.projectPage.buttons.twitter",
+    "value": "Twitter",
+    "context": "Button label - keep short",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.projectPage.buttons.docs",
+    "value": "Docs",
+    "context": "Button label - keep short",
+    "maxLength": 6
+  },
+  {
+    "key": "ecosystem.projectPage.buttons.community",
+    "value": "Community",
+    "context": "Button label - keep short",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.projectPage.buttons.backToEcosystem",
+    "value": "Back to Ecosystem",
+    "context": "Button label - keep short",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.projectPage.status.operational",
+    "value": "Operational",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "ecosystem.projectPage.status.testing",
+    "value": "Testing",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.projectPage.status.prototype",
+    "value": "Prototype",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.projectPage.status.notOperating",
+    "value": "Not operating",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "ecosystem.projectPage.sections.keyFeatures",
+    "value": "Key Features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystem.projectPage.sections.builtWith",
+    "value": "Built With Ergo Technology",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "ecosystem.projectPage.sections.relatedArticles",
+    "value": "Related Articles",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.projectPage.sections.viewAll",
+    "value": "View all",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystem.projectPage.sections.faq",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "ecosystem.projectPage.sections.relatedProjects",
+    "value": "Related {category} Projects",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "ecosystem.projectPage.sections.minRead",
+    "value": "{time} min read",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ecosystem.projectPage.cta.title",
+    "value": "Explore More dApps",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "ecosystem.projectPage.cta.description",
+    "value": "Discover the full Ergo ecosystem with DeFi, wallets, tools, and more.",
+    "context": "Description",
+    "maxLength": 103.5
+  },
+  {
+    "key": "ecosystem.projectPage.cta.primaryButton",
+    "value": "View All Projects",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "ecosystem.projectPage.cta.secondaryButton",
+    "value": "Start Building",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "ecosystem.infographicPage.breadcrumbs.infographics",
+    "value": "Infographics",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "ecosystem.infographicPage.meta.minRead",
+    "value": "{time} min read",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "ecosystem.infographicPage.image.clickToEnlarge",
+    "value": "Click to Enlarge",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.infographicPage.image.fullSize",
+    "value": "Full Size",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.infographicPage.share.title",
+    "value": "Share this infographic",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.infographicPage.share.subtitle",
+    "value": "help others discover Ergo",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "ecosystem.infographicPage.share.telegram",
+    "value": "Telegram",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystem.infographicPage.share.pinterest",
+    "value": "Pinterest",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.infographicPage.share.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "ecosystem.infographicPage.share.copyLink",
+    "value": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "ecosystem.infographicPage.share.copied",
+    "value": "Copied!",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "ecosystem.infographicPage.sections.about",
+    "value": "About This Infographic",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "ecosystem.infographicPage.sections.systemsCompared",
+    "value": "Systems Compared",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "ecosystem.infographicPage.sections.keyPoints",
+    "value": "Key Points",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "ecosystem.infographicPage.sections.howToRead",
+    "value": "How to Read This Infographic",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "ecosystem.infographicPage.sections.relatedTopics",
+    "value": "Related Topics",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "ecosystem.infographicPage.cta.title",
+    "value": "Explore More Ergo Infographics",
+    "context": "Title",
+    "maxLength": 45
+  },
+  {
+    "key": "ecosystem.infographicPage.cta.description",
+    "value": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
+    "context": "Description",
+    "maxLength": 138
+  },
+  {
+    "key": "ecosystem.infographicPage.cta.button",
+    "value": "Browse All Infographics",
+    "context": "Button label",
+    "maxLength": 34.5
+  }
+]

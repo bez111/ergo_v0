@@ -1,0 +1,74 @@
+[
+  {
+    "key": "quickActions.title",
+    "value": "GET STARTED WITH ERGO",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quickActions.subtitle",
+    "value": "Choose your path to explore the Ergo ecosystem",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "quickActions.actions.getWallet.title",
+    "value": "GET WALLET",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "quickActions.actions.getWallet.description",
+    "value": "Set up your Ergo wallet",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quickActions.actions.buyErg.title",
+    "value": "BUY ERG",
+    "context": "Title",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quickActions.actions.buyErg.description",
+    "value": "Purchase Ergo tokens",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "quickActions.actions.tryDapp.title",
+    "value": "TRY A DAPP",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "quickActions.actions.tryDapp.description",
+    "value": "Explore decentralized apps",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "quickActions.actions.mineErg.title",
+    "value": "MINE ERG",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "quickActions.actions.mineErg.description",
+    "value": "Secure the network",
+    "context": "Description",
+    "maxLength": 27
+  },
+  {
+    "key": "quickActions.actions.joinCommunity.title",
+    "value": "JOIN COMMUNITY",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "quickActions.actions.joinCommunity.description",
+    "value": "Connect with Ergo users",
+    "context": "Description",
+    "maxLength": 34.5
+  }
+]

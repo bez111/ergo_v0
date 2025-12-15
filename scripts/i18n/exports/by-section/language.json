@@ -1,0 +1,14 @@
+[
+  {
+    "key": "language.switchLanguage",
+    "value": "Switch Language",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "language.currentLanguage",
+    "value": "English",
+    "context": "General content",
+    "maxLength": 10.5
+  }
+]

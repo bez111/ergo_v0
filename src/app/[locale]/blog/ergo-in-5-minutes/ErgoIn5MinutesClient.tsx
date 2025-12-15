@@ -4,7 +4,6 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -28,12 +27,9 @@ import {
   Code,
   Eye,
   CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  FileText,
-  BookOpen
+  ArrowRight
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export function ErgoIn5MinutesClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)

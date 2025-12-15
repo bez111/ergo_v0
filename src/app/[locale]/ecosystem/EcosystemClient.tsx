@@ -5,7 +5,7 @@
 import { useEffect, useMemo, useState, useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"

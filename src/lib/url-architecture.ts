@@ -256,16 +256,27 @@ export const REDIRECT_MAP: Record<string, { to: string; code: 301 | 302 | 410 }>
   // Исправляем Standards -> standards
   '/docs/ecosystem/Standards': { to: '/docs/ecosystem/standards', code: 301 },
   
-  // Упрощаем use-cases
-  '/use/use-cases': { to: '/use/cases', code: 301 },
-  '/use/use-cases/algorithmic-stablecoins': { to: '/use/cases/stablecoins', code: 301 },
-  '/use/use-cases/privacy-confidentiality': { to: '/use/cases/privacy', code: 301 },
-  '/use/use-cases/cross-chain-bridges': { to: '/use/cases/bridges', code: 301 },
-  '/use/use-cases/daos-alternative-economies': { to: '/use/cases/daos', code: 301 },
-  '/use/use-cases/nfts-digital-assets': { to: '/use/cases/nfts', code: 301 },
-  '/use/use-cases/oracles-data-feeds': { to: '/use/cases/oracles', code: 301 },
-  '/use/use-cases/identity-reputation': { to: '/use/cases/identity', code: 301 },
-  '/use/use-cases/gaming-metaverse': { to: '/use/cases/gaming', code: 301 },
+  // Упрощаем use-cases -> /use/{category}
+  '/use/use-cases': { to: '/use', code: 301 },
+  '/use/use-cases/algorithmic-stablecoins': { to: '/use/stablecoins', code: 301 },
+  '/use/use-cases/privacy-confidentiality': { to: '/use/privacy', code: 301 },
+  '/use/use-cases/cross-chain-bridges': { to: '/use/bridges', code: 301 },
+  '/use/use-cases/daos-alternative-economies': { to: '/use/daos', code: 301 },
+  '/use/use-cases/nfts-digital-assets': { to: '/use/nfts', code: 301 },
+  '/use/use-cases/oracles-data-feeds': { to: '/use/oracles', code: 301 },
+  '/use/use-cases/identity-reputation': { to: '/use/identity', code: 301 },
+  '/use/use-cases/gaming-metaverse': { to: '/use/gaming', code: 301 },
+  // Old /use/cases/* -> /use/*
+  '/use/cases': { to: '/use', code: 301 },
+  '/use/cases/stablecoins': { to: '/use/stablecoins', code: 301 },
+  '/use/cases/privacy': { to: '/use/privacy', code: 301 },
+  '/use/cases/bridges': { to: '/use/bridges', code: 301 },
+  '/use/cases/daos': { to: '/use/daos', code: 301 },
+  '/use/cases/nfts': { to: '/use/nfts', code: 301 },
+  '/use/cases/oracles': { to: '/use/oracles', code: 301 },
+  '/use/cases/identity': { to: '/use/identity', code: 301 },
+  '/use/cases/gaming': { to: '/use/gaming', code: 301 },
+  '/use/cases/defi': { to: '/use/defi', code: 301 },
   
   // Удаленные страницы
   '/old-page': { to: '', code: 410 },

@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Wrench, Database, CreditCard, FileText } from "lucide-react";
 
 export default function DataModelApisResourcesPage() {

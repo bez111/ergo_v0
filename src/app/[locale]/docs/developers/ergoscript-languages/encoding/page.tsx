@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Binary, Code2, Hash } from "lucide-react";
 import { CodeBlock } from "@/components/ui";
 

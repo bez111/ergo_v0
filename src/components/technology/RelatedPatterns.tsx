@@ -7,10 +7,10 @@
  * Used on technology pages to link to practical code examples.
  */
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { Code, ArrowRight, ExternalLink } from "lucide-react"
+import { Code, ArrowRight } from "lucide-react"
 import { devPatterns } from "@/data/dev-patterns"
 import { getTechnologyBySlug } from "@/data/technology-topics"
 
@@ -76,7 +76,7 @@ export function RelatedPatterns({
                           {pattern.title}
                         </h4>
                         <p className="text-sm text-neutral-400 line-clamp-2 mt-1">
-                          {pattern.description}
+                          {pattern.seoDescription}
                         </p>
                         <div className="flex items-center gap-2 mt-2">
                           <span className="text-xs px-2 py-0.5 rounded bg-neutral-800 text-neutral-300">

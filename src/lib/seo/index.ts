@@ -26,6 +26,8 @@ export {
   createUseCaseMetadata,
   createBlogMetadata,
   createHubMetadata,
+  getCanonicalUrl,
+  getAlternates,
 } from "./metadata"
 
 // Schema generators
@@ -48,4 +50,13 @@ export {
 
 // Re-export existing SchemaTypes for backward compatibility
 export { SchemaTypes, generateCompleteSchema } from "../schema-ultimate"
+
+// NoIndex configuration for SEO optimization
+export {
+  shouldNoIndex,
+  getRobotsMeta,
+  NOINDEX_PATTERNS,
+  FORCE_INDEX_PATHS,
+  PAGE_ESTIMATES,
+} from "./noindex-config"
 

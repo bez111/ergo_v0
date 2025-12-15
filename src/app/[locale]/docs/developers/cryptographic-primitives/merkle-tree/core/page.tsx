@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
 import React from "react";
 import { ArrowLeft, GitBranch, Code, Shield, Eye, Zap, Database, CheckCircle } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { CodeBlock } from "@/components/ui";
 
 export default function CoreMerkleTreePage() {

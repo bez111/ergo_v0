@@ -1,0 +1,15 @@
+{
+  "events": {
+    "title": "社区活动",
+    "subtitle": "加入Ergo社区活动",
+    "description": "在Ergo生态系统发现黑客、聚会和会议",
+    "upcoming": "即将到来的事件",
+    "past": "过去的事件",
+    "register": "注册",
+    "learnMore": "了解更多",
+    "noEvents": "目前没有预定的事件。请稍后再来看看！",
+    "hackathons": "Hackathon",
+    "meetups": "聚会",
+    "conferences": "会议"
+  }
+}

@@ -1,0 +1,344 @@
+[
+  {
+    "key": "privacyFeatures.title",
+    "value": "Privacy Features",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "privacyFeatures.subtitle",
+    "value": "Zero-knowledge proofs and confidential transactions",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "privacyFeatures.description",
+    "value": "Advanced cryptographic protocols for financial privacy on Ergo blockchain",
+    "context": "Description",
+    "maxLength": 109.5
+  },
+  {
+    "key": "privacyFeatures.technologies.0.title",
+    "value": "Sigma Protocols",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "privacyFeatures.technologies.0.description",
+    "value": "Zero-knowledge proof system enabling privacy without trusted setup",
+    "context": "Description",
+    "maxLength": 99
+  },
+  {
+    "key": "privacyFeatures.technologies.0.features.0",
+    "value": "Non-interactive zero-knowledge proofs",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "privacyFeatures.technologies.0.features.1",
+    "value": "No trusted setup required",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "privacyFeatures.technologies.0.features.2",
+    "value": "Composable with other protocols",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "privacyFeatures.technologies.0.features.3",
+    "value": "Mathematically proven security",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "privacyFeatures.technologies.1.title",
+    "value": "ErgoMixer",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "privacyFeatures.technologies.1.description",
+    "value": "Non-custodial mixing protocol for transaction privacy",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "privacyFeatures.technologies.1.features.0",
+    "value": "Trustless mixing without coordinators",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "privacyFeatures.technologies.1.features.1",
+    "value": "Ring signatures for anonymity",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "privacyFeatures.technologies.1.features.2",
+    "value": "Configurable anonymity sets",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "privacyFeatures.technologies.1.features.3",
+    "value": "No interaction required",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "privacyFeatures.technologies.2.title",
+    "value": "Stealth Addresses",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "privacyFeatures.technologies.2.description",
+    "value": "One-time addresses for enhanced receiver privacy",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "privacyFeatures.technologies.2.features.0",
+    "value": "Unlinkable payment addresses",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "privacyFeatures.technologies.2.features.1",
+    "value": "Receiver privacy protection",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "privacyFeatures.technologies.2.features.2",
+    "value": "SPV wallet compatible",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "privacyFeatures.technologies.2.features.3",
+    "value": "No on-chain address reuse",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "privacyFeatures.technologies.3.title",
+    "value": "Ring Signatures",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "privacyFeatures.technologies.3.description",
+    "value": "Sign transactions as member of a group without revealing identity",
+    "context": "Description",
+    "maxLength": 97.5
+  },
+  {
+    "key": "privacyFeatures.technologies.3.features.0",
+    "value": "Signer ambiguity",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "privacyFeatures.technologies.3.features.1",
+    "value": "Deniable authentication",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "privacyFeatures.technologies.3.features.2",
+    "value": "Group-based privacy",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "privacyFeatures.technologies.3.features.3",
+    "value": "No trusted parties",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "privacyFeatures.benefits.title",
+    "value": "Privacy Benefits",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "privacyFeatures.benefits.items.0",
+    "value": "Financial sovereignty and autonomy",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "privacyFeatures.benefits.items.1",
+    "value": "Protection from surveillance",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "privacyFeatures.benefits.items.2",
+    "value": "Confidential business transactions",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "privacyFeatures.benefits.items.3",
+    "value": "Selective disclosure capabilities",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "privacyFeatures.benefits.items.4",
+    "value": "Regulatory compliance options",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "privacyFeatures.benefits.items.5",
+    "value": "Enhanced fungibility",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "privacyFeatures.useCases.title",
+    "value": "Privacy Use Cases",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "privacyFeatures.useCases.items.0.title",
+    "value": "Confidential DeFi",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "privacyFeatures.useCases.items.0.description",
+    "value": "Private lending, trading, and yield farming",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "privacyFeatures.useCases.items.1.title",
+    "value": "Business Payments",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "privacyFeatures.useCases.items.1.description",
+    "value": "Confidential corporate transactions",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "privacyFeatures.useCases.items.2.title",
+    "value": "Personal Finance",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "privacyFeatures.useCases.items.2.description",
+    "value": "Private savings and investments",
+    "context": "Description",
+    "maxLength": 46.5
+  },
+  {
+    "key": "privacyFeatures.useCases.items.3.title",
+    "value": "Whistleblowing",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "privacyFeatures.useCases.items.3.description",
+    "value": "Anonymous information sharing",
+    "context": "Description",
+    "maxLength": 43.5
+  },
+  {
+    "key": "privacyFeatures.faq.title",
+    "value": "Privacy FAQ",
+    "context": "FAQ content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "privacyFeatures.faq.items.0.question",
+    "value": "How does Ergo implement privacy?",
+    "context": "FAQ content",
+    "maxLength": 48
+  },
+  {
+    "key": "privacyFeatures.faq.items.0.answer",
+    "value": "Ergo uses Sigma protocols for zero-knowledge proofs, enabling optional privacy features like ErgoMixer, ring signatures, and confidential transactions without trusted setup.",
+    "context": "FAQ content",
+    "maxLength": 259.5
+  },
+  {
+    "key": "privacyFeatures.faq.items.1.question",
+    "value": "Is Ergo a privacy coin?",
+    "context": "FAQ content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "privacyFeatures.faq.items.1.answer",
+    "value": "Ergo offers optional privacy. Users can choose transparent or confidential transactions. Privacy is a feature, not mandatory, maintaining regulatory compliance.",
+    "context": "FAQ content",
+    "maxLength": 240
+  },
+  {
+    "key": "privacyFeatures.faq.items.2.question",
+    "value": "What is ErgoMixer?",
+    "context": "FAQ content",
+    "maxLength": 27
+  },
+  {
+    "key": "privacyFeatures.faq.items.2.answer",
+    "value": "ErgoMixer is a non-custodial, trustless mixing protocol that breaks transaction links using Sigma protocols, providing strong privacy without centralized operators.",
+    "context": "FAQ content",
+    "maxLength": 246
+  },
+  {
+    "key": "privacyFeatures.faq.items.3.question",
+    "value": "Are privacy features secure?",
+    "context": "FAQ content",
+    "maxLength": 42
+  },
+  {
+    "key": "privacyFeatures.faq.items.3.answer",
+    "value": "Yes, Ergo's privacy features are based on proven cryptographic protocols with mathematical security guarantees. No trusted setup is required.",
+    "context": "FAQ content",
+    "maxLength": 211.5
+  },
+  {
+    "key": "privacyFeatures.cta.title",
+    "value": "Ready to Use Privacy Features?",
+    "context": "Title",
+    "maxLength": 45
+  },
+  {
+    "key": "privacyFeatures.cta.subtitle",
+    "value": "Start using Ergo's privacy tools today",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "privacyFeatures.cta.buttons.tryErgoMixer",
+    "value": "Try ErgoMixer",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "privacyFeatures.cta.buttons.readGuide",
+    "value": "Privacy Guide",
+    "context": "Button label - keep short",
+    "maxLength": 19.5
+  },
+  {
+    "key": "privacyFeatures.cta.buttons.viewCode",
+    "value": "View on GitHub",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  }
+]

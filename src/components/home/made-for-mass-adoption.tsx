@@ -1,38 +1,41 @@
 "use client"
 
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { Wallet, Pickaxe, Code, TrendingUp } from "lucide-react"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { Card } from "@/components/ui/card"
+import { useTranslations } from "next-intl"
 
 export function MadeForMassAdoption() {
+  const t = useTranslations('madeForMassAdoption')
+  
   const paths = [
     {
       icon: Wallet,
-      title: "Freedom seekers",
-      desc: "Control your money. Private transactions when needed. No banks, no permissions, just freedom.",
-      cta: "Get started",
+      title: t('paths.freedomSeekers.title'),
+      desc: t('paths.freedomSeekers.description'),
+      cta: t('paths.freedomSeekers.cta'),
       href: "/hodlers"
     },
     {
       icon: Code,
-      title: "Cypherpunks",
-      desc: "Build unstoppable smart contracts with ErgoScript. Create privacy-preserving dApps that actually work.",
-      cta: "Start building",
+      title: t('paths.cypherpunks.title'),
+      desc: t('paths.cypherpunks.description'),
+      cta: t('paths.cypherpunks.cta'),
       href: "/developers"
     },
     {
       icon: Pickaxe,
-      title: "Miners",
-      desc: "GPU-friendly mining that stays decentralized. Secure the network, earn rewards, resist ASICs.",
-      cta: "Start mining",
+      title: t('paths.miners.title'),
+      desc: t('paths.miners.description'),
+      cta: t('paths.miners.cta'),
       href: "/miners"
     },
     {
       icon: TrendingUp,
-      title: "Community",
-      desc: "No VCs, no pre-mine, no corporate control. Built by the community, for the community since 2019.",
-      cta: "Join us",
+      title: t('paths.community.title'),
+      desc: t('paths.community.description'),
+      cta: t('paths.community.cta'),
       href: "/start/community"
     }
   ]
@@ -50,7 +53,7 @@ export function MadeForMassAdoption() {
               lineHeight: 1
             }}
           >
-            <span className="text-orange-400">Choose your</span> <span className="text-white">path. Build your</span> <span className="text-orange-400">future</span><span className="text-white">.</span>
+            <span className="text-orange-400">{t('titlePrefix')}</span> <span className="text-white">{t('titleMiddle')}</span> <span className="text-orange-400">{t('titleSuffix')}</span><span className="text-white">.</span>
           </h2>
           <p 
             className="text-gray-400 mx-auto"
@@ -61,7 +64,7 @@ export function MadeForMassAdoption() {
               opacity: 0.85
             }}
           >
-            Find your role in the decentralized economy
+            {t('subtitle')}
           </p>
         </div>
 
@@ -115,7 +118,7 @@ export function MadeForMassAdoption() {
             asChild
           >
             <Link href="/start" className="inline-flex items-center">
-              <span>Start here</span>
+              <span>{t('startHereCta')}</span>
             </Link>
           </CyberButton>
         </div>

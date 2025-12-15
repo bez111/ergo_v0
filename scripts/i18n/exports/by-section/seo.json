@@ -1,0 +1,20 @@
+[
+  {
+    "key": "seo.defaultTitle",
+    "value": "Ergo Platform - Sustainable Blockchain for Contractual Money",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 90
+  },
+  {
+    "key": "seo.defaultDescription",
+    "value": "Ergo creates advanced cryptographic functions and radically new DeFi functionality on a solid foundation built over a decade of blockchain theory and development.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 243
+  },
+  {
+    "key": "seo.keywords",
+    "value": "blockchain, cryptocurrency, DeFi, smart contracts, Ergo, UTXO, proof of work",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 114
+  }
+]

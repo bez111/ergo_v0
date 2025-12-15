@@ -7,7 +7,6 @@ export function BackgroundWrapper({ children }: { children: React.ReactNode }) {
         href="/cyberpunk-grid.png" 
         as="image" 
         type="image/png"
-        // @ts-expect-error - fetchPriority is valid but not in React types yet
         fetchPriority="high"
       />
       

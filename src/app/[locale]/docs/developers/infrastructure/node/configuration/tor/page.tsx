@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { 
   ChevronRight, Shield, Network, Settings, 
   ExternalLink, AlertCircle, Code, Server

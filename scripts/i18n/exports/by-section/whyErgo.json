@@ -1,0 +1,122 @@
+[
+  {
+    "key": "whyErgo.title",
+    "value": "WHY ERGO?",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "whyErgo.subtitle",
+    "value": "A resilient blockchain platform combining proven principles with cutting-edge innovation",
+    "context": "General content",
+    "maxLength": 132
+  },
+  {
+    "key": "whyErgo.mainFeatures.fairAndSecure.title",
+    "value": "FAIR & SECURE",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "whyErgo.mainFeatures.fairAndSecure.subtitle",
+    "value": "Proof-of-Work Foundation",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "whyErgo.mainFeatures.fairAndSecure.description",
+    "value": "No ICO. No VC. No premine. Memory-hard mining → broad participation and durable security.",
+    "context": "Description",
+    "maxLength": 133.5
+  },
+  {
+    "key": "whyErgo.mainFeatures.powerfulAndFlexible.title",
+    "value": "POWERFUL & FLEXIBLE",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "whyErgo.mainFeatures.powerfulAndFlexible.subtitle",
+    "value": "Advanced Smart Contracts",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "whyErgo.mainFeatures.powerfulAndFlexible.description",
+    "value": "eUTXO + ErgoScript deliver deterministic, composable logic without a hidden global state.",
+    "context": "Description",
+    "maxLength": 133.5
+  },
+  {
+    "key": "whyErgo.mainFeatures.sustainable.title",
+    "value": "SUSTAINABLE",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "whyErgo.mainFeatures.sustainable.subtitle",
+    "value": "Built to Last",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "whyErgo.mainFeatures.sustainable.description",
+    "value": "Storage Rent cleans forgotten state and funds miners with predictable costs for decades.",
+    "context": "Description",
+    "maxLength": 132
+  },
+  {
+    "key": "whyErgo.additionalFeatures.privacy.title",
+    "value": "PRIVACY FIRST",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "whyErgo.additionalFeatures.privacy.subtitle",
+    "value": "Auditable, Optional Privacy",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "whyErgo.additionalFeatures.privacy.description",
+    "value": "Sigma-protocols enable selective disclosure and ring/threshold proofs when needed.",
+    "context": "Description",
+    "maxLength": 123
+  },
+  {
+    "key": "whyErgo.additionalFeatures.community.title",
+    "value": "COMMUNITY DRIVEN",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "whyErgo.additionalFeatures.community.subtitle",
+    "value": "Open Source, No Foundation Tax",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "whyErgo.additionalFeatures.community.description",
+    "value": "Global contributors and EIPs drive the roadmap—not token treasuries.",
+    "context": "Description",
+    "maxLength": 102
+  },
+  {
+    "key": "whyErgo.additionalFeatures.developer.title",
+    "value": "DEVELOPER FRIENDLY",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "whyErgo.additionalFeatures.developer.subtitle",
+    "value": "Docs, Tools, Templates",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "whyErgo.additionalFeatures.developer.description",
+    "value": "Playground, CI templates, explorer APIs—ship contracts fast and safely.",
+    "context": "Description",
+    "maxLength": 106.5
+  }
+]

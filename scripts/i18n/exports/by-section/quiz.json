@@ -1,0 +1,1856 @@
+[
+  {
+    "key": "quiz.intro.title",
+    "value": "ERGO PATH FINDER",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.intro.subtitle",
+    "value": "DISCOVER YOUR PLACE IN THE ECOSYSTEM",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "quiz.intro.description",
+    "value": "Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will help you identify which aspects of Ergo might interest you most and guide you to personalized resources.",
+    "context": "Description",
+    "maxLength": 295.5
+  },
+  {
+    "key": "quiz.intro.path_description",
+    "value": "Answer a few simple questions to find your path: Are you a future Investor, Developer, Miner, NFT Enthusiast, DeFi User, or something else?",
+    "context": "General content",
+    "maxLength": 208.5
+  },
+  {
+    "key": "quiz.intro.start_button",
+    "value": "START QUIZ",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "quiz.progress.question",
+    "value": "QUESTION",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.progress.of",
+    "value": "OF",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "quiz.progress.complete",
+    "value": "COMPLETE",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.navigation.previous",
+    "value": "Previous",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.navigation.restart",
+    "value": "Restart",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quiz.questions.q1.question",
+    "value": "What primarily attracts you to blockchain technology and Ergo?",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "quiz.questions.q1.options.investment",
+    "value": "Investment potential and financial opportunities",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.questions.q1.options.building",
+    "value": "Building applications and contributing to new technologies",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "quiz.questions.q1.options.mining",
+    "value": "Supporting network security and earning rewards through hardware",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "quiz.questions.q1.options.nft",
+    "value": "Collecting, creating, or trading unique digital items and art",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "quiz.questions.q1.options.defi",
+    "value": "Using new financial tools for borrowing, lending, or trading",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "quiz.questions.q1.options.privacy",
+    "value": "Enhancing my financial privacy and anonymity",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "quiz.questions.q1.options.learning",
+    "value": "I'm new and just want to learn the basics first!",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.questions.q2.question",
+    "value": "How would you describe your technical comfort level?",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "quiz.questions.q2.options.very_comfortable",
+    "value": "Very comfortable; I can code or manage complex systems",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "quiz.questions.q2.options.moderately_comfortable",
+    "value": "Moderately comfortable; I can learn new software and follow guides",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "quiz.questions.q2.options.not_technical",
+    "value": "Not very technical; I prefer simple and user-friendly applications",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "quiz.questions.q3.question",
+    "value": "What kind of activity within Ergo are you most interested in?",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "quiz.questions.q3.options.growing_assets",
+    "value": "Growing my assets and exploring financial instruments",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "quiz.questions.q3.options.creating_tools",
+    "value": "Creating new tools, dApps, or smart contracts",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "quiz.questions.q3.options.securing_network",
+    "value": "Securing the network and earning ERG",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "quiz.questions.q3.options.digital_art",
+    "value": "Exploring digital art and collectibles",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.questions.q3.options.understanding_tech",
+    "value": "Deeply understanding the technology and its principles",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "quiz.questions.q3.options.financial_privacy",
+    "value": "Protecting my financial privacy",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.questions.q4.question",
+    "value": "If you're interested in finance/investment, what's your approach to new financial technologies?",
+    "context": "General content",
+    "maxLength": 142.5
+  },
+  {
+    "key": "quiz.questions.q4.options.established_low_risk",
+    "value": "Looking for established, lower-risk ways to engage",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "quiz.questions.q4.options.defi_opportunities",
+    "value": "Exploring DeFi opportunities while understanding the risks",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "quiz.questions.q4.options.cutting_edge",
+    "value": "Interested in cutting-edge, experimental financial tools",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "quiz.questions.q4.options.not_interested",
+    "value": "Not particularly interested in financial aspects",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.questions.q5.question",
+    "value": "If you want to contribute, what type of participation inspires you most?",
+    "context": "General content",
+    "maxLength": 108
+  },
+  {
+    "key": "quiz.questions.q5.options.writing_code",
+    "value": "Writing code and building software",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "quiz.questions.q5.options.creating_content",
+    "value": "Creating educational content, art, or marketing materials",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "quiz.questions.q5.options.helping_community",
+    "value": "Helping others in the community and answering questions",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "quiz.questions.q5.options.governance",
+    "value": "Participating in governance discussions and proposals",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "quiz.questions.q5.options.network_infrastructure",
+    "value": "Supporting network infrastructure",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "quiz.profiles.developer.name",
+    "value": "Aspiring Developer",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.developer.title",
+    "value": "BUILD THE FUTURE",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.developer.description",
+    "value": "You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.",
+    "context": "Description",
+    "maxLength": 300
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.category",
+    "value": "Documentation & Learning",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.items.ergodocs.name",
+    "value": "ErgoDocs",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.items.ergodocs.description",
+    "value": "Comprehensive developer documentation",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.items.ergoscript.name",
+    "value": "ErgoScript Primer",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.items.ergoscript.description",
+    "value": "Learn Ergo's smart contract language",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.items.playground.name",
+    "value": "Ergo Playgrounds",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.developer.tools.documentation.items.playground.description",
+    "value": "Interactive coding environment",
+    "context": "Description",
+    "maxLength": 45
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.category",
+    "value": "Development Tools",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.items.appkit.name",
+    "value": "AppKit",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.items.appkit.description",
+    "value": "Java/Scala development toolkit",
+    "context": "Description",
+    "maxLength": 45
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.items.fleet.name",
+    "value": "Fleet SDK",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.items.fleet.description",
+    "value": "TypeScript SDK for Ergo",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.items.sigma_rust.name",
+    "value": "Sigma-Rust",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "quiz.profiles.developer.tools.development.items.sigma_rust.description",
+    "value": "Rust implementation of Sigma protocols",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.profiles.developer.next_steps.docs",
+    "value": "Explore Developer Documentation",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.profiles.developer.next_steps.playground",
+    "value": "Try the ErgoScript Playground",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "quiz.profiles.developer.next_steps.discord",
+    "value": "Join Developer Discord Channels",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.profiles.developer.next_steps.grants",
+    "value": "Check Out Developer Grants",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.developer.community.discord",
+    "value": "Developer Discord",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.developer.community.forum",
+    "value": "ErgoForum - Development",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.developer.community.github",
+    "value": "GitHub Organization",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.profiles.defi.name",
+    "value": "DeFi Explorer",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "quiz.profiles.defi.title",
+    "value": "DECENTRALIZED FINANCE PIONEER",
+    "context": "Title",
+    "maxLength": 43.5
+  },
+  {
+    "key": "quiz.profiles.defi.description",
+    "value": "You're ready to explore innovative financial instruments and opportunities that Ergo's decentralized world offers! Discover new ways to manage assets, earn returns, and participate in the future of finance.",
+    "context": "Description",
+    "maxLength": 309
+  },
+  {
+    "key": "quiz.profiles.defi.tools.wallets.category",
+    "value": "Wallets",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.wallets.items.nautilus.name",
+    "value": "Nautilus Wallet",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.wallets.items.nautilus.description",
+    "value": "Browser extension wallet",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.defi.tools.wallets.items.mobile.name",
+    "value": "Official Mobile Wallets",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.wallets.items.mobile.description",
+    "value": "iOS and Android apps",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.category",
+    "value": "DeFi Platforms",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.items.spectrum.name",
+    "value": "Spectrum Finance",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.items.spectrum.description",
+    "value": "Decentralized exchange (DEX)",
+    "context": "Description",
+    "maxLength": 42
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.items.sigmausd.name",
+    "value": "SigmaUSD",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.items.sigmausd.description",
+    "value": "Algorithmic stablecoin protocol",
+    "context": "Description",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.items.duckpools.name",
+    "value": "Duckpools",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.platforms.items.duckpools.description",
+    "value": "Lending and borrowing platform",
+    "context": "Description",
+    "maxLength": 45
+  },
+  {
+    "key": "quiz.profiles.defi.tools.analytics.category",
+    "value": "Analytics",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.analytics.items.ergo_watch.name",
+    "value": "ergo.watch",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "quiz.profiles.defi.tools.analytics.items.ergo_watch.description",
+    "value": "Network and DeFi analytics",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.defi.tools.analytics.items.explorer.name",
+    "value": "Ergo Explorer",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "quiz.profiles.defi.tools.analytics.items.explorer.description",
+    "value": "Blockchain explorer",
+    "context": "Description",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.profiles.defi.next_steps.wallet",
+    "value": "Install Nautilus Wallet",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.defi.next_steps.sigmausd",
+    "value": "Learn about SigmaUSD Stablecoin",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.profiles.defi.next_steps.spectrum",
+    "value": "Try Trading on Spectrum Finance",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.profiles.defi.next_steps.discord",
+    "value": "Join DeFi Discussions on Discord",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "quiz.profiles.defi.community.discord",
+    "value": "DeFi Discord Channels",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.defi.community.spectrum",
+    "value": "Spectrum Finance Community",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.defi.community.sigmausd",
+    "value": "SigmaUSD Community",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.investor.name",
+    "value": "Strategic Investor",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.investor.title",
+    "value": "LONG-TERM VALUE BUILDER",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.investor.description",
+    "value": "You're interested in Ergo's long-term potential and want to understand the fundamentals before making investment decisions. Focus on learning about the technology and ecosystem growth.",
+    "context": "Description",
+    "maxLength": 276
+  },
+  {
+    "key": "quiz.profiles.investor.tools.getting_started.category",
+    "value": "Getting Started",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.investor.tools.getting_started.items.wallets.name",
+    "value": "Official Wallets",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.investor.tools.getting_started.items.wallets.description",
+    "value": "Secure ERG storage",
+    "context": "Description",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.investor.tools.getting_started.items.exchanges.name",
+    "value": "Exchange Listings",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.investor.tools.getting_started.items.exchanges.description",
+    "value": "Where to buy ERG",
+    "context": "Description",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.category",
+    "value": "Research & Analytics",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.items.whitepaper.name",
+    "value": "Ergo Whitepaper",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.items.whitepaper.description",
+    "value": "Technical foundation",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.items.ecosystem.name",
+    "value": "Ecosystem Overview",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.items.ecosystem.description",
+    "value": "Projects and growth",
+    "context": "Description",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.items.stats.name",
+    "value": "Network Statistics",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.investor.tools.research.items.stats.description",
+    "value": "Real-time metrics",
+    "context": "Description",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.investor.next_steps.whitepaper",
+    "value": "Read the Ergo Whitepaper",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.investor.next_steps.ecosystem",
+    "value": "Explore the Ecosystem",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.investor.next_steps.tokenomics",
+    "value": "Learn About ERG Tokenomics",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.investor.next_steps.discord",
+    "value": "Join Investor Discussions",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "quiz.profiles.investor.community.discord",
+    "value": "General Discord",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.investor.community.reddit",
+    "value": "Reddit Community",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.investor.community.telegram",
+    "value": "Telegram Group",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.profiles.miner.name",
+    "value": "Network Guardian",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.miner.title",
+    "value": "SECURING THE BLOCKCHAIN",
+    "context": "Title",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.miner.description",
+    "value": "You're interested in supporting Ergo's network security while earning rewards! Ergo uses the Autolykos v2 algorithm, which is ASIC-resistant and designed for fair mining.",
+    "context": "Description",
+    "maxLength": 255
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.category",
+    "value": "Mining Information",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.items.autolykos.name",
+    "value": "Autolykos v2 Guide",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.items.autolykos.description",
+    "value": "Understanding the algorithm",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.items.pools.name",
+    "value": "Mining Pools",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.items.pools.description",
+    "value": "Popular Ergo mining pools",
+    "context": "Description",
+    "maxLength": 37.5
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.items.calculator.name",
+    "value": "Profitability Calculator",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.miner.tools.information.items.calculator.description",
+    "value": "Estimate mining returns",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.miner.tools.software.category",
+    "value": "Mining Software",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.miner.tools.software.items.official.name",
+    "value": "Official Miner",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.profiles.miner.tools.software.items.official.description",
+    "value": "Reference implementation",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.miner.tools.software.items.community.name",
+    "value": "Community Miners",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.miner.tools.software.items.community.description",
+    "value": "Third-party mining software",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "quiz.profiles.miner.next_steps.autolykos",
+    "value": "Learn About Autolykos v2",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.miner.next_steps.pools",
+    "value": "Find Mining Pools",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.miner.next_steps.calculator",
+    "value": "Calculate Mining Profitability",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "quiz.profiles.miner.next_steps.community",
+    "value": "Join Mining Community",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.miner.community.discord",
+    "value": "Mining Discord Channels",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.miner.community.pools",
+    "value": "Mining Pools Community",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "quiz.profiles.miner.community.support",
+    "value": "Technical Support",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.nft.name",
+    "value": "NFT Enthusiast",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.profiles.nft.title",
+    "value": "DIGITAL ART COLLECTOR",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.nft.description",
+    "value": "You're excited about unique digital items, art, and collectibles! Ergo's NFT ecosystem offers innovative marketplaces and creation tools with low fees and high security.",
+    "context": "Description",
+    "maxLength": 253.5
+  },
+  {
+    "key": "quiz.profiles.nft.tools.marketplaces.category",
+    "value": "NFT Marketplaces",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.nft.tools.marketplaces.items.auction_house.name",
+    "value": "Ergo Auction House",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.nft.tools.marketplaces.items.auction_house.description",
+    "value": "Premier NFT marketplace",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.nft.tools.marketplaces.items.skyharbor.name",
+    "value": "SkyHarbor",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.profiles.nft.tools.marketplaces.items.skyharbor.description",
+    "value": "NFT trading platform",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.profiles.nft.tools.creation.category",
+    "value": "Creation Tools",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.profiles.nft.tools.creation.items.tokenjay.name",
+    "value": "TokenJay",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.profiles.nft.tools.creation.items.tokenjay.description",
+    "value": "NFT minting platform",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.profiles.nft.tools.creation.items.utils.name",
+    "value": "Ergo Utils",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "quiz.profiles.nft.tools.creation.items.utils.description",
+    "value": "NFT creation utilities",
+    "context": "Description",
+    "maxLength": 33
+  },
+  {
+    "key": "quiz.profiles.nft.next_steps.auction_house",
+    "value": "Explore Ergo Auction House",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.nft.next_steps.creation",
+    "value": "Learn About NFT Creation",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.nft.next_steps.collections",
+    "value": "Browse NFT Collections",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "quiz.profiles.nft.next_steps.community",
+    "value": "Join NFT Community",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.nft.community.discord",
+    "value": "NFT Discord Channels",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.profiles.nft.community.artists",
+    "value": "Artist Community",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.nft.community.collectors",
+    "value": "Collector Groups",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.privacy.name",
+    "value": "Privacy Advocate",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.privacy.title",
+    "value": "FINANCIAL PRIVACY CHAMPION",
+    "context": "Title",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.privacy.description",
+    "value": "You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.",
+    "context": "Description",
+    "maxLength": 274.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.privacy_tools.category",
+    "value": "Privacy Tools",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.privacy_tools.items.ergomixer.name",
+    "value": "ErgoMixer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.privacy_tools.items.ergomixer.description",
+    "value": "Non-custodial transaction mixer",
+    "context": "Description",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.privacy_tools.items.stealth.name",
+    "value": "Stealth Addresses",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.privacy_tools.items.stealth.description",
+    "value": "Enhanced address privacy",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.educational.category",
+    "value": "Educational Resources",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.educational.items.sigma.name",
+    "value": "Sigma Protocols Guide",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.educational.items.sigma.description",
+    "value": "Understanding privacy tech",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.educational.items.best_practices.name",
+    "value": "Privacy Best Practices",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "quiz.profiles.privacy.tools.educational.items.best_practices.description",
+    "value": "How to stay private",
+    "context": "Description",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.profiles.privacy.next_steps.ergomixer",
+    "value": "Learn About ErgoMixer",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.privacy.next_steps.sigma",
+    "value": "Understand Sigma Protocols",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.privacy.next_steps.best_practices",
+    "value": "Read Privacy Best Practices",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "quiz.profiles.privacy.next_steps.discussions",
+    "value": "Join Privacy Discussions",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.privacy.community.discord",
+    "value": "Privacy Discord Channels",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.privacy.community.ergomixer",
+    "value": "ErgoMixer Community",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.profiles.privacy.community.technical",
+    "value": "Technical Discussions",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.learner.name",
+    "value": "Curious Learner",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.learner.title",
+    "value": "KNOWLEDGE SEEKER",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.learner.description",
+    "value": "You're new to Ergo and want to understand the fundamentals first! Perfect - learning the basics will help you make informed decisions about how to engage with the ecosystem.",
+    "context": "Description",
+    "maxLength": 259.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.category",
+    "value": "Educational Resources",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.items.faq.name",
+    "value": "FAQ for Beginners",
+    "context": "FAQ content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.items.faq.description",
+    "value": "Common questions answered",
+    "context": "FAQ content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.items.introduction.name",
+    "value": "Quick Introduction",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.items.introduction.description",
+    "value": "Ergo overview",
+    "context": "Description",
+    "maxLength": 19.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.items.handbook.name",
+    "value": "Ergonaut Handbook",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.educational.items.handbook.description",
+    "value": "Comprehensive guide",
+    "context": "Description",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.community.category",
+    "value": "Community Support",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.community.items.newcomer.name",
+    "value": "Newcomer Channels",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.community.items.newcomer.description",
+    "value": "Beginner-friendly discussions",
+    "context": "Description",
+    "maxLength": 43.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.community.items.learning_groups.name",
+    "value": "Learning Groups",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.learner.tools.community.items.learning_groups.description",
+    "value": "Study groups and mentorship",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "quiz.profiles.learner.next_steps.faq",
+    "value": "Read the FAQ for Beginners",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "quiz.profiles.learner.next_steps.introduction",
+    "value": "Take the Quick Introduction",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "quiz.profiles.learner.next_steps.community",
+    "value": "Join Newcomer Community",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "quiz.profiles.learner.next_steps.learning_hub",
+    "value": "Explore the Learning Hub",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.profiles.learner.community.discord",
+    "value": "General Discord",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.profiles.learner.community.newcomer",
+    "value": "Newcomer Support",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.profiles.learner.community.learning_groups",
+    "value": "Learning Groups",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.results.your_path",
+    "value": "YOUR ERGO PATH",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.results.next_steps",
+    "value": "YOUR NEXT STEPS",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.results.community.title",
+    "value": "CONNECT WITH YOUR COMMUNITY",
+    "context": "Title",
+    "maxLength": 40.5
+  },
+  {
+    "key": "quiz.results.community.description",
+    "value": "Join others who share your interests and get support on your Ergo journey",
+    "context": "Description",
+    "maxLength": 109.5
+  },
+  {
+    "key": "quiz.results.explore_more.title",
+    "value": "WANT TO EXPLORE OTHER ASPECTS OF ERGO?",
+    "context": "Title",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.results.explore_more.ecosystem",
+    "value": "Explore Entire Ecosystem",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "quiz.results.explore_more.faq",
+    "value": "Read Full FAQ",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "quiz.results.explore_more.community",
+    "value": "Join Main Community",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.results.take_again",
+    "value": "Take Quiz Again",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "quiz.quiz.title",
+    "value": "Find Your Path in Ergo",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "quiz.quiz.subtitle",
+    "value": "Personalized recommendations based on your interests",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "quiz.quiz.description",
+    "value": "Discover how you can best contribute to and benefit from the Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 112.5
+  },
+  {
+    "key": "quiz.quiz.questions.0.question",
+    "value": "What primarily attracts you to blockchain technology and Ergo?",
+    "context": "General content",
+    "maxLength": 93
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.0.text",
+    "value": "Investment potential and financial opportunities",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.0.profiles.0",
+    "value": "investor",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.0.profiles.1",
+    "value": "defi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.1.text",
+    "value": "Building applications and contributing to new technologies",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.1.profiles.0",
+    "value": "developer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.2.text",
+    "value": "Supporting network security and earning rewards through hardware",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.2.profiles.0",
+    "value": "miner",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.3.text",
+    "value": "Collecting, creating, or trading unique digital items and art",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.3.profiles.0",
+    "value": "nft",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.4.text",
+    "value": "Using new financial tools for borrowing, lending, or trading",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.4.profiles.0",
+    "value": "defi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.5.text",
+    "value": "Enhancing my financial privacy and anonymity",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.5.profiles.0",
+    "value": "privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.6.text",
+    "value": "I'm new and just want to learn the basics first!",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.quiz.questions.0.options.6.profiles.0",
+    "value": "beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.1.question",
+    "value": "How would you describe your technical comfort level?",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.0.text",
+    "value": "Very comfortable; I can code or manage complex systems",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.0.profiles.0",
+    "value": "developer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.1.text",
+    "value": "Moderately comfortable; I can learn new software and follow guides",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.1.profiles.0",
+    "value": "miner",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.1.profiles.1",
+    "value": "defi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.2.text",
+    "value": "Not very technical; I prefer simple and user-friendly applications",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.2.profiles.0",
+    "value": "beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.1.options.2.profiles.1",
+    "value": "investor",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.2.question",
+    "value": "What are you most interested in doing with Ergo?",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.0.text",
+    "value": "Growing my assets and exploring financial instruments",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.0.profiles.0",
+    "value": "investor",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.0.profiles.1",
+    "value": "defi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.1.text",
+    "value": "Creating new tools, dApps, or smart contracts",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.1.profiles.0",
+    "value": "developer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.2.text",
+    "value": "Securing the network and earning ERG",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.2.profiles.0",
+    "value": "miner",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.3.text",
+    "value": "Exploring digital art and collectibles",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.3.profiles.0",
+    "value": "nft",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.4.text",
+    "value": "Deeply understanding the technology and its principles",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.4.profiles.0",
+    "value": "beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.5.text",
+    "value": "Protecting my financial privacy",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "quiz.quiz.questions.2.options.5.profiles.0",
+    "value": "privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quiz.quiz.questions.3.question",
+    "value": "What's your risk tolerance when it comes to new financial tools?",
+    "context": "General content",
+    "maxLength": 96
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.0.text",
+    "value": "Looking for established, lower-risk ways to engage",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.0.profiles.0",
+    "value": "investor",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.1.text",
+    "value": "Exploring DeFi opportunities while understanding the risks",
+    "context": "General content",
+    "maxLength": 87
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.1.profiles.0",
+    "value": "defi",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.2.text",
+    "value": "Interested in cutting-edge, experimental financial tools",
+    "context": "General content",
+    "maxLength": 84
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.2.profiles.0",
+    "value": "developer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.2.profiles.1",
+    "value": "privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.3.text",
+    "value": "Not particularly interested in financial aspects",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.3.profiles.0",
+    "value": "beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.3.profiles.1",
+    "value": "miner",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "quiz.quiz.questions.3.options.3.profiles.2",
+    "value": "nft",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.question",
+    "value": "How do you prefer to contribute to projects you care about?",
+    "context": "General content",
+    "maxLength": 88.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.0.text",
+    "value": "Writing code and building software",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.0.profiles.0",
+    "value": "developer",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.1.text",
+    "value": "Creating educational content, art, or marketing materials",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.1.profiles.0",
+    "value": "nft",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.1.profiles.1",
+    "value": "beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.2.text",
+    "value": "Helping others in the community and answering questions",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.2.profiles.0",
+    "value": "beginner",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.3.text",
+    "value": "Participating in governance discussions and proposals",
+    "context": "General content",
+    "maxLength": 79.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.3.profiles.0",
+    "value": "investor",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.3.profiles.1",
+    "value": "privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.4.text",
+    "value": "Supporting network infrastructure",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "quiz.quiz.questions.4.options.4.profiles.0",
+    "value": "miner",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "quiz.comparison.title",
+    "value": "Platform Comparison",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "quiz.comparison.subtitle",
+    "value": "How Ergo compares to other blockchains",
+    "context": "General content",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.comparison.description",
+    "value": "Understanding Ergo's unique advantages",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.0.title",
+    "value": "Predictable & Auditable Security",
+    "context": "Title",
+    "maxLength": 48
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.0.ergo",
+    "value": "No known protocol-level reentrancy class; predictable execution costs",
+    "context": "General content",
+    "maxLength": 103.5
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.0.others",
+    "value": "Reentrancy patterns and gas price auctions common in account models",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.1.title",
+    "value": "Native Privacy",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.1.ergo",
+    "value": "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.1.others",
+    "value": "Often requires external add-ons or trusted services",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.2.title",
+    "value": "Developer Experience",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.2.ergo",
+    "value": "Declarative ErgoScript with eUTXO reasoning",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.2.others",
+    "value": "Mutable global state; complex reentrancy-safe patterns",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.3.title",
+    "value": "Fair & Decentralized",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.3.ergo",
+    "value": "Fair PoW launch, ASIC-resistant (GPU-friendly)",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "quiz.comparison.keyDifferentiators.3.others",
+    "value": "ICO allocations or validator gating",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "quiz.community.title",
+    "value": "Join the Community",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "quiz.community.subtitle",
+    "value": "Connect with Ergo enthusiasts worldwide",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "quiz.community.description",
+    "value": "Be part of the growing Ergo ecosystem",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "quiz.community.contributions.0.title",
+    "value": "Development",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "quiz.community.contributions.0.description",
+    "value": "Build dApps, tools, and infrastructure",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "quiz.community.contributions.0.tasks",
+    "value": "Smart Contracts, Frontend Apps, Tools & Libraries",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "quiz.community.contributions.1.title",
+    "value": "Content Creation",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "quiz.community.contributions.1.description",
+    "value": "Articles, videos, tutorials, documentation",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "quiz.community.contributions.1.tasks",
+    "value": "Technical Writing, Video Content, Tutorials",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "quiz.community.contributions.2.title",
+    "value": "Community Support",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "quiz.community.contributions.2.description",
+    "value": "Help newcomers and answer questions",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "quiz.community.contributions.2.tasks",
+    "value": "User Support, Onboarding, Mentoring",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "quiz.community.contributions.3.title",
+    "value": "Governance",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "quiz.community.contributions.3.description",
+    "value": "Participate in protocol decisions",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "quiz.community.contributions.3.tasks",
+    "value": "EIP Reviews, Voting, Proposals",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "quiz.community.contributions.4.title",
+    "value": "Infrastructure",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "quiz.community.contributions.4.description",
+    "value": "Run nodes, mining, network support",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "quiz.community.contributions.4.tasks",
+    "value": "Node Operation, Mining, Network Security",
+    "context": "General content",
+    "maxLength": 60
+  },
+  {
+    "key": "quiz.community.contributions.5.title",
+    "value": "Research",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "quiz.community.contributions.5.description",
+    "value": "Protocol research and improvements",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "quiz.community.contributions.5.tasks",
+    "value": "Academic Papers, Protocol Analysis, Innovation",
+    "context": "General content",
+    "maxLength": 69
+  }
+]

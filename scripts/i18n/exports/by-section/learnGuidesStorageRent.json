@@ -1,0 +1,20 @@
+[
+  {
+    "key": "learnGuidesStorageRent.title",
+    "value": "Storage Rent Guide",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "learnGuidesStorageRent.description",
+    "value": "Understanding Ergo's storage rent mechanism",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "learnGuidesStorageRent.subtitle",
+    "value": "Sustainable blockchain storage economics",
+    "context": "General content",
+    "maxLength": 60
+  }
+]

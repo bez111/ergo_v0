@@ -1,0 +1,410 @@
+[
+  {
+    "key": "infographicsPage.breadcrumbs.infographics",
+    "value": "Infographics",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "infographicsPage.hero.title",
+    "value": "Ergo Blockchain",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "infographicsPage.hero.titleHighlight",
+    "value": "Infographics",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "infographicsPage.hero.subtitle",
+    "value": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.",
+    "context": "General content",
+    "maxLength": 144
+  },
+  {
+    "key": "infographicsPage.hero.subtitleSecondLine",
+    "value": "Save, share, and reuse them with attribution to ergoblockchain.org.",
+    "context": "General content",
+    "maxLength": 100.5
+  },
+  {
+    "key": "infographicsPage.hero.description",
+    "value": "This hub collects visual explainers for the most important parts of the Ergo protocol: consensus, tokenomics, DeFi, privacy, light clients and more. Every infographic comes with a full-text breakdown so you can learn, teach and build with Ergo.",
+    "context": "Description",
+    "maxLength": 366
+  },
+  {
+    "key": "infographicsPage.hero.learnBasics",
+    "value": "Learn the basics",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "infographicsPage.filters.searchPlaceholder",
+    "value": "Search infographics (e.g. 'storage rent', 'NiPoPoWs', 'VC chains')",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "infographicsPage.filters.filters",
+    "value": "Filters",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "infographicsPage.filters.sortNewest",
+    "value": "Newest",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "infographicsPage.filters.sortPopular",
+    "value": "Most popular",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "infographicsPage.filters.sortAZ",
+    "value": "A-Z",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "infographicsPage.grid.noResults",
+    "value": "No infographics found",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "infographicsPage.grid.noResultsDescription",
+    "value": "Try adjusting your filters or search terms.",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "infographicsPage.grid.resetFilters",
+    "value": "Reset filters",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "infographicsPage.grid.viewInfographic",
+    "value": "View infographic",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "infographicsPage.pagination.previous",
+    "value": "Previous",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "infographicsPage.pagination.next",
+    "value": "Next",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "infographicsPage.card.new",
+    "value": "New",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "infographicsPage.card.visualGuide",
+    "value": "Visual guide",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "infographicsPage.shareMenu.share",
+    "value": "Share",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.download",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "infographicsPage.shareMenu.shareTitle",
+    "value": "Share",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.shareDescription",
+    "value": "Pick where to share this infographic. Help other cypherpunks find fair-launch chains.",
+    "context": "General content",
+    "maxLength": 127.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.shareOn",
+    "value": "Share on",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "infographicsPage.shareMenu.copyLink",
+    "value": "Copy link",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.linkCopied",
+    "value": "Link copied",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.linkCopiedToast",
+    "value": "Thanks for spreading Ergo.",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "infographicsPage.shareMenu.downloadTitle",
+    "value": "Download",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "infographicsPage.shareMenu.downloadDescription",
+    "value": "Choose the best format for reusing this infographic across social, blogs and decks.",
+    "context": "General content",
+    "maxLength": 124.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.pngStandard",
+    "value": "PNG - Standard (1920x1080)",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "infographicsPage.shareMenu.pngStandardDesc",
+    "value": "Landscape PNG for desktop and social feeds",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "infographicsPage.shareMenu.embedCode",
+    "value": "Embed code (HTML)",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.embedCodeDesc",
+    "value": "Copy HTML snippet to embed this infographic",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "infographicsPage.shareMenu.embedCopied",
+    "value": "Embed code copied to your clipboard.",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "infographicsPage.shareMenu.close",
+    "value": "Close",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "infographicsPage.howToUse.title",
+    "value": "How to use these infographics",
+    "context": "Title",
+    "maxLength": 43.5
+  },
+  {
+    "key": "infographicsPage.howToUse.reuse.title",
+    "value": "Reuse Freely",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "infographicsPage.howToUse.reuse.description",
+    "value": "You can reuse any infographic in presentations, blog posts or educational materials.",
+    "context": "Description",
+    "maxLength": 126
+  },
+  {
+    "key": "infographicsPage.howToUse.credit.title",
+    "value": "Credit & Link Back",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "infographicsPage.howToUse.credit.description",
+    "value": "Please credit ergoblockchain.org and link back to the original page.",
+    "context": "Description",
+    "maxLength": 102
+  },
+  {
+    "key": "infographicsPage.howToUse.branding.title",
+    "value": "Custom Branding",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "infographicsPage.howToUse.branding.description",
+    "value": "If you want editable source files or custom branding, contact the Ergo community.",
+    "context": "Description",
+    "maxLength": 121.5
+  },
+  {
+    "key": "infographicsPage.howToUse.learnMore",
+    "value": "Learn more about Ergo",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "infographicsPage.howToUse.joinCommunity",
+    "value": "Join the community",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "infographicsPage.relatedResources.title",
+    "value": "Related Resources",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.title",
+    "value": "Common Questions",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.0.href",
+    "value": "/questions/what-is-ergo",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.0.text",
+    "value": "What is Ergo blockchain?",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.1.href",
+    "value": "/questions/what-is-eutxo",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.1.text",
+    "value": "What is the eUTXO model?",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.2.href",
+    "value": "/questions/what-is-mev-resistance",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.2.text",
+    "value": "How does MEV resistance work?",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.3.href",
+    "value": "/questions/what-is-storage-rent",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.items.3.text",
+    "value": "What is storage rent?",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.questions.viewAll",
+    "value": "View all questions",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.title",
+    "value": "Playbooks & Guides",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.0.href",
+    "value": "/playbooks/first-ergo-wallet",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.0.text",
+    "value": "Set up your first Ergo wallet",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.1.href",
+    "value": "/playbooks/start-mining-ergo",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.1.text",
+    "value": "Start mining Ergo",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.2.href",
+    "value": "/playbooks/ergo-defi-basics",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.2.text",
+    "value": "Ergo DeFi basics",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.3.href",
+    "value": "/playbooks/privacy-on-ergo",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.items.3.text",
+    "value": "Privacy tools on Ergo",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "infographicsPage.relatedResources.playbooks.viewAll",
+    "value": "View all playbooks",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "infographicsPage.emailCapture.title",
+    "value": "Stay Updated on Ergo Visual Resources",
+    "context": "Title",
+    "maxLength": 55.5
+  },
+  {
+    "key": "infographicsPage.emailCapture.description",
+    "value": "Get notified when we publish new infographics, visual guides, and educational content about Ergo blockchain.",
+    "context": "Description",
+    "maxLength": 162
+  }
+]

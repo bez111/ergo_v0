@@ -1,0 +1,542 @@
+[
+  {
+    "key": "community.hero.title",
+    "value": "ERGO COMMUNITY",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "community.hero.description",
+    "value": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution.",
+    "context": "Description",
+    "maxLength": 237
+  },
+  {
+    "key": "community.platforms.title",
+    "value": "COMMUNICATION HUBS",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "community.platforms.labels.members",
+    "value": "Members",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "community.platforms.labels.activity",
+    "value": "Activity",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "community.platforms.discord.name",
+    "value": "Discord",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "community.platforms.discord.description",
+    "value": "Real-time discussions, AMA sessions, technical support",
+    "context": "Description",
+    "maxLength": 81
+  },
+  {
+    "key": "community.platforms.discord.members",
+    "value": "15K+",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "community.platforms.discord.activity",
+    "value": "24/7",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "community.platforms.discord.buttonText",
+    "value": "Join Discord",
+    "context": "Button label",
+    "maxLength": 18
+  },
+  {
+    "key": "community.platforms.discord.features.liveChat",
+    "value": "Live Chat",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "community.platforms.discord.features.voiceChannels",
+    "value": "Voice Channels",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "community.platforms.discord.features.developerSupport",
+    "value": "Developer Support",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.platforms.discord.features.communityEvents",
+    "value": "Community Events",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "community.platforms.telegram.name",
+    "value": "Telegram",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "community.platforms.telegram.description",
+    "value": "Quick updates, announcements, global community",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "community.platforms.telegram.members",
+    "value": "12K+",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "community.platforms.telegram.activity",
+    "value": "Active",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "community.platforms.telegram.buttonText",
+    "value": "Join Telegram",
+    "context": "Button label",
+    "maxLength": 19.5
+  },
+  {
+    "key": "community.platforms.telegram.features.instantUpdates",
+    "value": "Instant Updates",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "community.platforms.telegram.features.mobileFirst",
+    "value": "Mobile First",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "community.platforms.telegram.features.globalReach",
+    "value": "Global Reach",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "community.platforms.telegram.features.newsAlerts",
+    "value": "News & Alerts",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "community.platforms.reddit.name",
+    "value": "Reddit",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "community.platforms.reddit.description",
+    "value": "In-depth discussions, memes, community content",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "community.platforms.reddit.members",
+    "value": "8K+",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "community.platforms.reddit.activity",
+    "value": "Daily",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "community.platforms.reddit.buttonText",
+    "value": "Visit r/ergonauts",
+    "context": "Button label",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.platforms.reddit.features.longFormPosts",
+    "value": "Long-form Posts",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "community.platforms.reddit.features.communityVoting",
+    "value": "Community Voting",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "community.platforms.reddit.features.memesContent",
+    "value": "Memes & Content",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "community.platforms.reddit.features.discussions",
+    "value": "Discussions",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "community.platforms.forum.name",
+    "value": "ErgoForum",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "community.platforms.forum.description",
+    "value": "Technical discussions, EIPs, governance",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "community.platforms.forum.members",
+    "value": "3K+",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "community.platforms.forum.activity",
+    "value": "Weekly",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "community.platforms.forum.buttonText",
+    "value": "Visit Forum",
+    "context": "Button label",
+    "maxLength": 16.5
+  },
+  {
+    "key": "community.platforms.forum.features.technicalDeepDives",
+    "value": "Technical Deep-dives",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "community.platforms.forum.features.governance",
+    "value": "Governance",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "community.platforms.forum.features.eipDiscussions",
+    "value": "EIP Discussions",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "community.platforms.forum.features.research",
+    "value": "Research",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "community.contributions.title",
+    "value": "CONTRIBUTION MATRIX",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "community.contributions.description",
+    "value": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+    "context": "Description",
+    "maxLength": 126
+  },
+  {
+    "key": "community.contributions.types.development.title",
+    "value": "Development",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "community.contributions.types.development.description",
+    "value": "Build dApps, tools, and infrastructure",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "community.contributions.types.development.tasks.smartContracts",
+    "value": "Smart Contracts",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "community.contributions.types.development.tasks.frontendApps",
+    "value": "Frontend Apps",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "community.contributions.types.development.tasks.toolsLibraries",
+    "value": "Tools & Libraries",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.contributions.types.content.title",
+    "value": "Content Creation",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "community.contributions.types.content.description",
+    "value": "Articles, videos, tutorials, documentation",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "community.contributions.types.content.tasks.technicalWriting",
+    "value": "Technical Writing",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.contributions.types.content.tasks.videoContent",
+    "value": "Video Content",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "community.contributions.types.content.tasks.tutorials",
+    "value": "Tutorials",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "community.contributions.types.support.title",
+    "value": "Community Support",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.contributions.types.support.description",
+    "value": "Help newcomers and answer questions",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "community.contributions.types.support.tasks.userSupport",
+    "value": "User Support",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "community.contributions.types.support.tasks.onboarding",
+    "value": "Onboarding",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "community.contributions.types.support.tasks.mentoring",
+    "value": "Mentoring",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "community.contributions.types.governance.title",
+    "value": "Governance",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "community.contributions.types.governance.description",
+    "value": "Participate in protocol decisions",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "community.contributions.types.governance.tasks.eipReviews",
+    "value": "EIP Reviews",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "community.contributions.types.governance.tasks.voting",
+    "value": "Voting",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "community.contributions.types.governance.tasks.proposals",
+    "value": "Proposals",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "community.contributions.types.infrastructure.title",
+    "value": "Infrastructure",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "community.contributions.types.infrastructure.description",
+    "value": "Run nodes, mining, network support",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "community.contributions.types.infrastructure.tasks.nodeOperation",
+    "value": "Node Operation",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "community.contributions.types.infrastructure.tasks.mining",
+    "value": "Mining",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "community.contributions.types.infrastructure.tasks.networkSecurity",
+    "value": "Network Security",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "community.contributions.types.research.title",
+    "value": "Research",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "community.contributions.types.research.description",
+    "value": "Protocol research and improvements",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "community.contributions.types.research.tasks.academicResearch",
+    "value": "Academic Research",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.contributions.types.research.tasks.protocolAnalysis",
+    "value": "Protocol Analysis",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.contributions.types.research.tasks.innovation",
+    "value": "Innovation",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "community.guidelines.title",
+    "value": "COMMUNITY PROTOCOL",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "community.guidelines.encouraged.title",
+    "value": "Encouraged Behavior",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "community.guidelines.encouraged.items.respectfulDiscussions",
+    "value": "Respectful and constructive discussions",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "community.guidelines.encouraged.items.helpingNewcomers",
+    "value": "Helping newcomers and sharing knowledge",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "community.guidelines.encouraged.items.contributingProjects",
+    "value": "Contributing to projects and documentation",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "community.guidelines.encouraged.items.constructiveFeedback",
+    "value": "Providing constructive feedback",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "community.guidelines.encouraged.items.followingGuidelines",
+    "value": "Following community guidelines",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "community.guidelines.discouraged.title",
+    "value": "Discouraged Behavior",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "community.guidelines.discouraged.items.spamContent",
+    "value": "Spam, flooding, or off-topic content",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "community.guidelines.discouraged.items.misinformation",
+    "value": "Spreading misinformation or FUD",
+    "context": "General content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "community.guidelines.discouraged.items.personalAttacks",
+    "value": "Personal attacks or harassment",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "community.guidelines.discouraged.items.selfPromotion",
+    "value": "Excessive self-promotion",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "community.guidelines.discouraged.items.violatingRules",
+    "value": "Violating platform-specific rules",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "community.cta.title",
+    "value": "READY TO CONNECT?",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "community.cta.description",
+    "value": "Join thousands of developers, researchers, and enthusiasts building the future of DeFi",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "community.cta.joinDiscord",
+    "value": "Join Discord",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "community.cta.exploreMore",
+    "value": "Explore More",
+    "context": "General content",
+    "maxLength": 18
+  }
+]

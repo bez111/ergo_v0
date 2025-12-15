@@ -1,8 +1,8 @@
 "use client"
-/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable  */
 
 import React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
 
 type Variant = "primary" | "secondary" | "ghost"

@@ -1,0 +1,80 @@
+[
+  {
+    "key": "newsletter.title",
+    "value": "Stay Updated",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "newsletter.subtitle",
+    "value": "Get the latest Ergo news and updates",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "newsletter.emailLabel",
+    "value": "Email Address",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "newsletter.emailPlaceholder",
+    "value": "Enter your email address",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "newsletter.subscribe",
+    "value": "Subscribe",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "newsletter.interests",
+    "value": "Interests (optional)",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "newsletter.privacyNotice",
+    "value": "By subscribing, you agree to our",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "newsletter.privacyPolicy",
+    "value": "Privacy Policy",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "newsletter.alreadySubscribed.title",
+    "value": "You're subscribed!",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "newsletter.segments.developers",
+    "value": "Developers",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "newsletter.segments.miners",
+    "value": "Miners",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "newsletter.segments.investors",
+    "value": "Investors",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "newsletter.segments.general",
+    "value": "General News",
+    "context": "General content",
+    "maxLength": 18
+  }
+]

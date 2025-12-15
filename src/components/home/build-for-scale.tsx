@@ -4,6 +4,8 @@
 
 import React from "react";
 import { Shield, Zap, Code2, Coins } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 type StatItem = {
   icon: React.ReactNode;
@@ -16,33 +18,35 @@ type StatItem = {
 const BRAND = { orange: "#ff8800" };
 
 export function BuildForScale() {
+  const t = useTranslations('buildForScale');
+  
   const items: StatItem[] = [
     {
       icon: <Zap className="w-4 h-4" />,
-      value: "~2 min",
-      label: "Block time",
-      hint: "Fast, predictable finality",
+      value: t('stats.blockTime.value'),
+      label: t('stats.blockTime.label'),
+      hint: t('stats.blockTime.hint'),
       href: "/technology/subblocks",
     },
     {
       icon: <Shield className="w-4 h-4" />,
-      value: "MEV-resistant",
-      label: "Front-running",
-      hint: "Local ordering, no global priority auctions",
+      value: t('stats.mev.value'),
+      label: t('stats.mev.label'),
+      hint: t('stats.mev.hint'),
       href: "/questions/what-is-mev-resistance",
     },
     {
       icon: <Coins className="w-4 h-4" />,
-      value: "≈ $0.01",
-      label: "Typical fee",
-      hint: "Pennies, not dollars",
+      value: t('stats.fee.value'),
+      label: t('stats.fee.label'),
+      hint: t('stats.fee.hint'),
       href: "/technology/babel-fees",
     },
     {
       icon: <Code2 className="w-4 h-4" />,
-      value: "ErgoScript",
-      label: "Smart contracts",
-      hint: "Short, auditable logic",
+      value: t('stats.ergoscript.value'),
+      label: t('stats.ergoscript.label'),
+      hint: t('stats.ergoscript.hint'),
       href: "/technology/ergoscript",
     },
   ];
@@ -50,14 +54,14 @@ export function BuildForScale() {
   return (
     <section className="py-32 relative">
       <div className="mx-auto grid max-w-7xl items-start gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:px-8">
-        <LeftCopy />
+        <LeftCopy t={t} />
         <RightMetrics items={items} />
       </div>
     </section>
   );
 }
 
-function LeftCopy() {
+function LeftCopy({ t }: { t: any }) {
   return (
     <div>
       <h2
@@ -68,8 +72,8 @@ function LeftCopy() {
           lineHeight: 1
         }}
       >
-        Engineered for <span style={{ color: BRAND.orange }}>global</span>,{" "}
-        censorship-resistant settlement
+        {t('titlePrefix')} <span style={{ color: BRAND.orange }}>{t('titleHighlight')}</span>,{" "}
+        {t('titleSuffix')}
       </h2>
 
       <p
@@ -80,19 +84,19 @@ function LeftCopy() {
           maxWidth: "60ch"
         }}
       >
-        Sound Money principles, Open Money access.
+        {t('subtitle')}
       </p>
 
         <ul className="space-y-3 text-white/90 mb-8">
-        <Bullet>eUTXO = parallel, conflict-free flows</Bullet>
-        <Bullet>Predictable fees & clear spend conditions</Bullet>
-        <Bullet>MEV-resistant design (local ordering)</Bullet>
+        <Bullet>{t('bullets.0')}</Bullet>
+        <Bullet>{t('bullets.1')}</Bullet>
+        <Bullet>{t('bullets.2')}</Bullet>
       </ul>
 
       <p className="mt-4">
-        <span className="font-semibold">The result:</span>{" "}
+        <span className="font-semibold">{t('resultLabel')}</span>{" "}
         <span className="text-white/85">
-          Financial infrastructure that actually works.
+          {t('resultText')}
         </span>
       </p>
     </div>
@@ -122,15 +126,8 @@ function RightMetrics({ items }: { items: StatItem[] }) {
 }
 
 function StatCard({ icon, value, label, hint, href }: StatItem) {
-  const Wrapper: any = href ? "a" : "div";
-
-  return (
-    <Wrapper
-      href={href}
-      className="group flex min-h-[128px] flex-col rounded-3xl border border-white/10 bg-black/80 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-white/30"
-      aria-label={`${value} — ${label}${hint ? " — " + hint : ""}`}
-    >
-
+  const cardContent = (
+    <>
       <div
         className="font-extrabold tracking-tight [text-wrap:balance] mb-2"
         style={{ fontSize: "clamp(18px,2.2vw,28px)" }}
@@ -143,6 +140,29 @@ function StatCard({ icon, value, label, hint, href }: StatItem) {
       <div className="mt-auto pt-1 text-xs text-white/60 line-clamp-1">
         {hint}
       </div>
-    </Wrapper>
+    </>
+  );
+
+  const className = "group flex min-h-[128px] flex-col rounded-3xl border border-white/10 bg-black/80 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-white/30";
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={className}
+        aria-label={`${value} — ${label}${hint ? " — " + hint : ""}`}
+      >
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      className={className}
+      aria-label={`${value} — ${label}${hint ? " — " + hint : ""}`}
+    >
+      {cardContent}
+    </div>
   );
 }

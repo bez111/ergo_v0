@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const standards = [
   { title: "Identity & Security", href: "/docs/ecosystem/Standards/Identity-Security" },

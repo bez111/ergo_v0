@@ -11,26 +11,33 @@ export async function GET() {
     id: `blog-${post.slug}`,
     type: 'blog',
     title: post.title,
-    description: post.description,
-    content: post.description,
+    description: post.excerpt,
+    content: post.excerpt,
     url: `/blog/${post.slug}`,
     absoluteUrl: `${baseUrl}/blog/${post.slug}`,
     image: post.image,
     author: post.author.name,
     category: post.category,
-    tags: post.tags,
-    publishedAt: post.publishedAt,
-    updatedAt: post.updatedAt,
+    tags: post.tags ?? [],
+    publishedAt: post.date,
+    updatedAt: post.lastUpdated ?? post.date,
     readTime: post.readTime,
     priority: 0.7,
     changeFrequency: 'weekly',
-    keywords: [...post.tags, post.category, 'ergo', 'blockchain', 'blog'].join(', ')
+    keywords: [...(post.tags ?? []), post.category, 'ergo', 'blockchain', 'blog'].join(', ')
   }))
   
   // Index documentation pages
-  const docsIndex: unknown[] = []
-  const flattenDocs = (items: unknown[], parent = '') => {
-    items.forEach(item => {
+  interface MenuItem {
+    href?: string
+    label?: string
+    description?: string
+    items?: MenuItem[]
+  }
+  
+  const docsIndex: Record<string, unknown>[] = []
+  const flattenDocs = (items: MenuItem[], parent = '') => {
+    items.forEach((item: MenuItem) => {
       if (item.href && item.label) {
         docsIndex.push({
           id: `doc-${item.href}`,
@@ -50,7 +57,7 @@ export async function GET() {
       }
     })
   }
-  flattenDocs(menuData)
+  flattenDocs(menuData as MenuItem[])
   
   // Index main pages with enhanced SEO data
   const mainPages = [

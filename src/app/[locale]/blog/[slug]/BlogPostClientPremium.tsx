@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-img-element, react-hooks/set-state-in-effect */
 
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { 

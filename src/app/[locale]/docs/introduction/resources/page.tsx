@@ -1,7 +1,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Shield, FileText, AlertTriangle, EyeOff, Globe, ChevronRight } from "lucide-react";
 
 export default function ResourcesPage() {

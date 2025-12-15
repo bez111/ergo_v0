@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { getMessages } from 'next-intl/server'
 import { siteConfig } from "@/config/site-config"
 import { glossaryTerms, getTermBySlug } from "@/data/glossary"
+import { getLocalizedGlossaryTerm, type GlossaryTermsTranslations } from "@/data/glossary-i18n"
 import { GlossaryTermClient } from "./GlossaryTermClient"
 import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
@@ -17,10 +19,21 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params
-  const term = getTermBySlug(params.term)
+  const baseTerm = getTermBySlug(params.term)
 
-  if (!term) {
+  if (!baseTerm) {
     return { title: "Term Not Found", description: "The requested glossary term could not be found." }
+  }
+
+  // Get translations for non-English locales
+  let term = baseTerm
+  if (params.locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale: params.locale }) as { glossaryTerms?: GlossaryTermsTranslations }
+      term = getLocalizedGlossaryTerm(baseTerm, messages?.glossaryTerms)
+    } catch {
+      // Fallback to English
+    }
   }
 
   const origin = siteConfig.siteUrl
@@ -56,10 +69,21 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 
 export default async function GlossaryTermPage(props: Props) {
   const params = await props.params
-  const term = getTermBySlug(params.term)
+  const baseTerm = getTermBySlug(params.term)
 
-  if (!term) {
+  if (!baseTerm) {
     notFound()
+  }
+
+  // Get translations for non-English locales
+  let term = baseTerm
+  if (params.locale !== 'en') {
+    try {
+      const messages = await getMessages({ locale: params.locale }) as { glossaryTerms?: GlossaryTermsTranslations }
+      term = getLocalizedGlossaryTerm(baseTerm, messages?.glossaryTerms)
+    } catch {
+      // Fallback to English
+    }
   }
 
   const origin = siteConfig.siteUrl

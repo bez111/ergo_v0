@@ -3,40 +3,43 @@
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { Card } from "@/components/ui/card"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 
 export function FAQSimple() {
+  const t = useTranslations('faqSimpleHome')
+  // locale available via useLocale() when needed for language-specific features
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const faqs = [
     {
-      q: "What is Ergo in one sentence?",
-      a: "Ergo is a secure, open-source PoW blockchain for programmable, censorship-resistant money using the eUTXO model.",
+      q: t('items.0.q'),
+      a: t('items.0.a'),
       link: "/docs/why-ergo"
     },
     {
-      q: "How do I get started (wallet + first transaction)?",
-      a: "Install a supported wallet, back up your seed offline, get ERG (DEX/exchange/faucet), then send your first test transaction.",
+      q: t('items.1.q'),
+      a: t('items.1.a'),
       link: "/start"
     },
     {
-      q: "How much are network fees and who gets them?",
-      a: "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load.",
+      q: t('items.2.q'),
+      a: t('items.2.a'),
       link: "/docs/introduction/faq"
     },
     {
-      q: "What makes Ergo different from other smart-contract chains?",
-      a: "Ergo uses the eUTXO model for safer composition and predictable parallel execution, plus ErgoScript and Sigma protocols for short, auditable contracts and optional privacy tooling.",
+      q: t('items.3.q'),
+      a: t('items.3.a'),
       link: "/technology/eutxo-model"
     },
     {
-      q: "How is Ergo secured?",
-      a: "Ergo is secured by the Autolykos Proof-of-Work algorithm, open code, and community audits. Users should keep seed phrases offline, verify downloads/URLs, and prefer hardware wallets.",
+      q: t('items.4.q'),
+      a: t('items.4.a'),
       link: "/technology/secure-pow"
     },
     {
-      q: "What risks should I know before using Ergo?",
-      a: "Self-custody means irreversible transactions; markets are volatile; third-party dApps carry smart-contract and operational risk; watch for phishing.",
+      q: t('items.5.q'),
+      a: t('items.5.a'),
       link: "/docs/introduction/faq"
     }
   ]
@@ -54,10 +57,10 @@ export function FAQSimple() {
               lineHeight: 1
             }}
           >
-            <span className="text-orange-400">Common</span> <span className="text-white">questions</span>
+            <span className="text-orange-400">{t('titleHighlight')}</span> <span className="text-white">{t('titleSuffix')}</span>
           </h2>
           <p className="text-gray-400 text-lg">
-            Everything you need to know to get started
+            {t('subtitle')}
           </p>
         </div>
 
@@ -92,7 +95,7 @@ export function FAQSimple() {
                         href={faq.link}
                         className="text-orange-400 hover:text-orange-300 transition-colors font-medium text-sm"
                       >
-                        Learn more
+                        {t('learnMore') || 'Learn more'}
                       </Link>
                     </div>
                   )}

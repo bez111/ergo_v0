@@ -1,0 +1,1022 @@
+[
+  {
+    "key": "developersPage.breadcrumbs.home",
+    "value": "Home",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.breadcrumbs.developers",
+    "value": "Developers",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.hero.badge",
+    "value": "Developer Hub",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "developersPage.hero.title",
+    "value": "Build DeFi that doesn't break",
+    "context": "Title",
+    "maxLength": 43.5
+  },
+  {
+    "key": "developersPage.hero.subtitle",
+    "value": "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs. Built-in privacy.",
+    "context": "General content",
+    "maxLength": 183
+  },
+  {
+    "key": "developersPage.hero.buttons.startLearning",
+    "value": "Start Learning",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "developersPage.hero.buttons.browsePatterns",
+    "value": "Browse Patterns",
+    "context": "Button label - keep short",
+    "maxLength": 22.5
+  },
+  {
+    "key": "developersPage.hero.buttons.docs",
+    "value": "Docs",
+    "context": "Button label - keep short",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.whyBuild.title",
+    "value": "Why Build on",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.whyBuild.titleHighlight",
+    "value": "Ergo",
+    "context": "Title",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.whyBuild.items.0.title",
+    "value": "eUTXO Model: No Surprises",
+    "context": "Title",
+    "maxLength": 37.5
+  },
+  {
+    "key": "developersPage.whyBuild.items.0.description",
+    "value": "No reentrancy attacks. No MEV exploitation. No hidden global state. Know exactly what your contract will cost before execution.",
+    "context": "Description",
+    "maxLength": 190.5
+  },
+  {
+    "key": "developersPage.whyBuild.items.1.title",
+    "value": "Sigma Protocols: Privacy Without PhD",
+    "context": "Title",
+    "maxLength": 54
+  },
+  {
+    "key": "developersPage.whyBuild.items.1.description",
+    "value": "Built-in zero-knowledge proofs. Add privacy features without cryptography expertise. Ring signatures, threshold proofs, all native.",
+    "context": "Description",
+    "maxLength": 196.5
+  },
+  {
+    "key": "developersPage.whyBuild.items.2.title",
+    "value": "Proof-of-Work: No Chain Halts",
+    "context": "Title",
+    "maxLength": 43.5
+  },
+  {
+    "key": "developersPage.whyBuild.items.2.description",
+    "value": "No rollbacks. No governance attacks. No validator cartels. Battle-tested security that just works.",
+    "context": "Description",
+    "maxLength": 147
+  },
+  {
+    "key": "developersPage.whyBuild.items.3.title",
+    "value": "Fair Launch: No Corporate BS",
+    "context": "Title",
+    "maxLength": 42
+  },
+  {
+    "key": "developersPage.whyBuild.items.3.description",
+    "value": "Zero VC premines. Zero foundation tax. Build on a chain where the community actually owns the network.",
+    "context": "Description",
+    "maxLength": 153
+  },
+  {
+    "key": "developersPage.quickStart.title",
+    "value": "Quick Start with",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "developersPage.quickStart.titleHighlight",
+    "value": "Fleet SDK",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.quickStart.subtitle",
+    "value": "Get from zero to your first Ergo transaction in 3 steps",
+    "context": "General content",
+    "maxLength": 82.5
+  },
+  {
+    "key": "developersPage.quickStart.readFullDocs",
+    "value": "Read full Fleet SDK documentation",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "developersPage.quickStart.steps.0.title",
+    "value": "Install Fleet SDK",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.quickStart.steps.0.description",
+    "value": "Add Fleet SDK to your JavaScript/TypeScript project",
+    "context": "Description",
+    "maxLength": 76.5
+  },
+  {
+    "key": "developersPage.quickStart.steps.1.title",
+    "value": "Connect to Ergo",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "developersPage.quickStart.steps.1.description",
+    "value": "Initialize connection to Ergo network",
+    "context": "Description",
+    "maxLength": 55.5
+  },
+  {
+    "key": "developersPage.quickStart.steps.2.title",
+    "value": "Build Transaction",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.quickStart.steps.2.description",
+    "value": "Create your first Ergo transaction",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "developersPage.technologyIndex.title",
+    "value": "Technology",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.technologyIndex.titleHighlight",
+    "value": "Index",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "developersPage.technologyIndex.subtitle",
+    "value": "Complete reference to Ergo's core technologies",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "developersPage.technologyIndex.viewAll",
+    "value": "View All Technologies",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.0.slug",
+    "value": "eutxo-model",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.0.title",
+    "value": "eUTXO Model",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.0.description",
+    "value": "Parallel smart contracts",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "developersPage.technologyIndex.items.1.slug",
+    "value": "ergoscript",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.technologyIndex.items.1.title",
+    "value": "ErgoScript",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.technologyIndex.items.1.description",
+    "value": "Safe smart contracts",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "developersPage.technologyIndex.items.2.slug",
+    "value": "secure-pow",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.technologyIndex.items.2.title",
+    "value": "Autolykos PoW",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.2.description",
+    "value": "ASIC-resistant mining",
+    "context": "Description",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.3.slug",
+    "value": "storage-rent",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.technologyIndex.items.3.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.technologyIndex.items.3.description",
+    "value": "State sustainability",
+    "context": "Description",
+    "maxLength": 30
+  },
+  {
+    "key": "developersPage.technologyIndex.items.4.slug",
+    "value": "privacy-features",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "developersPage.technologyIndex.items.4.title",
+    "value": "Sigma Protocols",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.4.description",
+    "value": "Zero-knowledge proofs",
+    "context": "Description",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.5.slug",
+    "value": "nipopows",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.technologyIndex.items.5.title",
+    "value": "NIPoPoWs",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.technologyIndex.items.5.description",
+    "value": "Light clients & bridges",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.6.slug",
+    "value": "oracle-pools",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.technologyIndex.items.6.title",
+    "value": "Oracle Pools",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.technologyIndex.items.6.description",
+    "value": "Decentralized data feeds",
+    "context": "Description",
+    "maxLength": 36
+  },
+  {
+    "key": "developersPage.technologyIndex.items.7.slug",
+    "value": "native-tokens",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.7.title",
+    "value": "Native Tokens",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.7.description",
+    "value": "Protocol-level tokens",
+    "context": "Description",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.8.slug",
+    "value": "babel-fees",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.technologyIndex.items.8.title",
+    "value": "Babel Fees",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.technologyIndex.items.8.description",
+    "value": "Pay fees with any token",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.9.slug",
+    "value": "subblocks",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.9.title",
+    "value": "Subblocks",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.9.description",
+    "value": "Fast confirmations",
+    "context": "Description",
+    "maxLength": 27
+  },
+  {
+    "key": "developersPage.technologyIndex.items.10.slug",
+    "value": "velvet-forks",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.technologyIndex.items.10.title",
+    "value": "Velvet Forks",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.technologyIndex.items.10.description",
+    "value": "Seamless upgrades",
+    "context": "Description",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.11.slug",
+    "value": "adaptive-emission",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.11.title",
+    "value": "Adaptive Emission",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.technologyIndex.items.11.description",
+    "value": "Monetary policy",
+    "context": "Description",
+    "maxLength": 22.5
+  },
+  {
+    "key": "developersPage.sdks.title",
+    "value": "SDKs &",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.sdks.titleHighlight",
+    "value": "Libraries",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.sdks.subtitle",
+    "value": "Choose the SDK for your preferred language",
+    "context": "General content",
+    "maxLength": 63
+  },
+  {
+    "key": "developersPage.sdks.recommended",
+    "value": "Recommended",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.sdks.items.0.name",
+    "value": "Fleet SDK",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.sdks.items.0.language",
+    "value": "TypeScript / JavaScript",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "developersPage.sdks.items.0.description",
+    "value": "Most popular SDK for web apps and Node.js projects",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "developersPage.sdks.items.1.name",
+    "value": "AppKit",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.sdks.items.1.language",
+    "value": "Java / Scala / Kotlin",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.sdks.items.1.description",
+    "value": "JVM SDK for backend services and Android apps",
+    "context": "Description",
+    "maxLength": 67.5
+  },
+  {
+    "key": "developersPage.sdks.items.2.name",
+    "value": "sigma-rust",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.sdks.items.2.language",
+    "value": "Rust",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.sdks.items.2.description",
+    "value": "High-performance Rust implementation",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "developersPage.sdks.items.3.name",
+    "value": "ergpy",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "developersPage.sdks.items.3.language",
+    "value": "Python",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.sdks.items.3.description",
+    "value": "Python wrapper for Ergo development",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "developersPage.learningResources.title",
+    "value": "Learning",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.learningResources.titleHighlight",
+    "value": "Resources",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.learningResources.subtitle",
+    "value": "Structured paths to master Ergo development",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "developersPage.learningResources.explore",
+    "value": "Explore",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "developersPage.learningResources.items.0.title",
+    "value": "ErgoScript Course",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.learningResources.items.0.description",
+    "value": "Learn the fundamentals of ErgoScript programming",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "developersPage.learningResources.items.0.tag",
+    "value": "Start Here",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.learningResources.items.1.title",
+    "value": "Dev Patterns",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.learningResources.items.1.description",
+    "value": "Copy-paste smart contract blueprints",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "developersPage.learningResources.items.1.tag",
+    "value": "Code",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.learningResources.items.2.title",
+    "value": "Playbooks",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.learningResources.items.2.description",
+    "value": "Step-by-step development guides",
+    "context": "Description",
+    "maxLength": 46.5
+  },
+  {
+    "key": "developersPage.learningResources.items.2.tag",
+    "value": "Guides",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.learningResources.items.3.title",
+    "value": "Glossary",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.learningResources.items.3.description",
+    "value": "Key terms and concepts explained",
+    "context": "Description",
+    "maxLength": 48
+  },
+  {
+    "key": "developersPage.learningResources.items.3.tag",
+    "value": "Reference",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.devTools.title",
+    "value": "Developer",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.devTools.titleHighlight",
+    "value": "Tools",
+    "context": "Title",
+    "maxLength": 7.5
+  },
+  {
+    "key": "developersPage.devTools.explorer.title",
+    "value": "Explorer",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.devTools.explorer.description",
+    "value": "Inspect transactions & blocks",
+    "context": "Description",
+    "maxLength": 43.5
+  },
+  {
+    "key": "developersPage.devTools.faucet.title",
+    "value": "Testnet Faucet",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "developersPage.devTools.faucet.description",
+    "value": "Get test ERG for development",
+    "context": "Description",
+    "maxLength": 42
+  },
+  {
+    "key": "developersPage.devTools.vscode.title",
+    "value": "VSCode Extension",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "developersPage.devTools.vscode.description",
+    "value": "ErgoScript syntax highlighting",
+    "context": "Description",
+    "maxLength": 45
+  },
+  {
+    "key": "developersPage.comparison.title",
+    "value": "Why Ergo is",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.comparison.titleHighlight",
+    "value": "Different",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.comparison.headers.criterion",
+    "value": "Criterion",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.comparison.headers.bitcoin",
+    "value": "Bitcoin",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "developersPage.comparison.headers.ethereum",
+    "value": "Ethereum",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.comparison.headers.ergo",
+    "value": "Ergo",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.comparison.readMore",
+    "value": "Read: eUTXO vs Accounts",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "developersPage.comparison.rows.0.criterion",
+    "value": "Base Model",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "developersPage.comparison.rows.0.bitcoin",
+    "value": "UTXO",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "developersPage.comparison.rows.0.ethereum",
+    "value": "Account",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "developersPage.comparison.rows.0.ergo",
+    "value": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "developersPage.comparison.rows.1.criterion",
+    "value": "Smart Contract Safety",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.comparison.rows.1.bitcoin",
+    "value": "Limited",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "developersPage.comparison.rows.1.ethereum",
+    "value": "Reentrancy risks",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "developersPage.comparison.rows.1.ergo",
+    "value": "Predictable, safer",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "developersPage.comparison.rows.2.criterion",
+    "value": "Privacy Features (L1)",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.comparison.rows.2.bitcoin",
+    "value": "Transparent",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.comparison.rows.2.ethereum",
+    "value": "Transparent",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.comparison.rows.2.ergo",
+    "value": "Optional (Sigma)",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "developersPage.comparison.rows.3.criterion",
+    "value": "Fees & Predictability",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "developersPage.comparison.rows.3.bitcoin",
+    "value": "Volatile",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.comparison.rows.3.ethereum",
+    "value": "High, unpredictable",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "developersPage.comparison.rows.3.ergo",
+    "value": "Low, predictable",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "developersPage.networkHealth.title",
+    "value": "Live Network",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "developersPage.networkHealth.titleHighlight",
+    "value": "Health",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.networkHealth.subtitle",
+    "value": "Stable base layer = reliable smart contracts",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "developersPage.networkHealth.metrics.hashrate",
+    "value": "Hashrate",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.networkHealth.metrics.txDay",
+    "value": "TX/Day",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.networkHealth.metrics.nodes",
+    "value": "Nodes",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "developersPage.networkHealth.metrics.tvl",
+    "value": "TVL",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "developersPage.networkHealth.metrics.supply",
+    "value": "Supply",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.networkHealth.metrics.emission",
+    "value": "Emission",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.networkHealth.emissionLeft",
+    "value": "{amount}M left",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "developersPage.community.title",
+    "value": "Join the",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "developersPage.community.titleHighlight",
+    "value": "Community",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.community.subtitle",
+    "value": "Get help from core developers and connect with other builders",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "developersPage.community.discord.title",
+    "value": "Developer Discord",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.community.discord.subtitle",
+    "value": "Real-time support",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.community.discord.description",
+    "value": "Get direct help from core developers in dedicated #dev channels.",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "developersPage.community.github.title",
+    "value": "GitHub",
+    "context": "Title",
+    "maxLength": 9
+  },
+  {
+    "key": "developersPage.community.github.subtitle",
+    "value": "Open source",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "developersPage.community.github.description",
+    "value": "Explore the codebase and contribute to core protocols.",
+    "context": "Description",
+    "maxLength": 81
+  },
+  {
+    "key": "developersPage.faq.title",
+    "value": "Developer",
+    "context": "FAQ content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "developersPage.faq.titleHighlight",
+    "value": "FAQ",
+    "context": "FAQ content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "developersPage.faq.items.0.question",
+    "value": "How do I start building on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 48
+  },
+  {
+    "key": "developersPage.faq.items.0.answer",
+    "value": "Start by learning ErgoScript fundamentals, set up the Ergo development environment (Scala/JavaScript SDKs), explore example contracts on GitHub, and join the developer Discord for support. The /learn section has structured paths for new developers.",
+    "context": "FAQ content",
+    "maxLength": 372
+  },
+  {
+    "key": "developersPage.faq.items.1.question",
+    "value": "What programming languages can I use for Ergo?",
+    "context": "FAQ content",
+    "maxLength": 69
+  },
+  {
+    "key": "developersPage.faq.items.1.answer",
+    "value": "ErgoScript is the native smart contract language. For app development, use: Scala/Java (Appkit SDK), JavaScript/TypeScript (Fleet SDK), Rust (sigma-rust), or Python (ergpy). Most developers start with Fleet SDK for web apps.",
+    "context": "FAQ content",
+    "maxLength": 336
+  },
+  {
+    "key": "developersPage.faq.items.2.question",
+    "value": "Is ErgoScript hard to learn?",
+    "context": "FAQ content",
+    "maxLength": 42
+  },
+  {
+    "key": "developersPage.faq.items.2.answer",
+    "value": "ErgoScript has a learning curve different from Solidity. It's functional and declarative rather than imperative. If you know Scala or functional programming, it's easier. The eUTXO model requires new thinking but prevents entire classes of bugs (no reentrancy).",
+    "context": "FAQ content",
+    "maxLength": 391.5
+  },
+  {
+    "key": "developersPage.faq.items.3.question",
+    "value": "What makes Ergo different for developers?",
+    "context": "FAQ content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "developersPage.faq.items.3.answer",
+    "value": "Ergo offers: eUTXO model (no reentrancy attacks, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design.",
+    "context": "FAQ content",
+    "maxLength": 310.5
+  },
+  {
+    "key": "developersPage.faq.items.4.question",
+    "value": "Where can I find ErgoScript code examples?",
+    "context": "FAQ content",
+    "maxLength": 63
+  },
+  {
+    "key": "developersPage.faq.items.4.answer",
+    "value": "Check the /patterns page for copy-paste ready contract patterns, /playbooks for step-by-step guides, and docs.ergoplatform.com for the official reference. GitHub repos of ecosystem projects provide real-world examples.",
+    "context": "FAQ content",
+    "maxLength": 327
+  },
+  {
+    "key": "developersPage.faq.items.5.question",
+    "value": "Are there grants for Ergo developers?",
+    "context": "FAQ content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "developersPage.faq.items.5.answer",
+    "value": "Yes! The Ergo Foundation offers grants for open-source projects, dApps, tooling, and research. Apply via GitHub or join the developer community to discuss your project first.",
+    "context": "FAQ content",
+    "maxLength": 261
+  },
+  {
+    "key": "developersPage.cta.title",
+    "value": "Ready to Build?",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "developersPage.cta.subtitle",
+    "value": "Start with the ErgoScript course, explore patterns, and join the developer Discord.",
+    "context": "General content",
+    "maxLength": 124.5
+  },
+  {
+    "key": "developersPage.cta.startCourse",
+    "value": "Start ErgoScript Course",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "developersPage.cta.exploreEcosystem",
+    "value": "Explore Ecosystem",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.emailCapture.title",
+    "value": "Developer Updates",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "developersPage.emailCapture.description",
+    "value": "Get notified about new SDKs, ErgoScript features, and ecosystem developments.",
+    "context": "Description",
+    "maxLength": 115.5
+  }
+]

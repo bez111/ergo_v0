@@ -1,0 +1,2270 @@
+[
+  {
+    "key": "technologyPages.securePow.title",
+    "value": "Secure PoW",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "technologyPages.securePow.subtitle",
+    "value": "ASIC-resistant Autolykos v2 algorithm ensuring fair mining and network security",
+    "context": "General content",
+    "maxLength": 118.5
+  },
+  {
+    "key": "technologyPages.securePow.seo.title",
+    "value": "Autolykos Mining Algorithm | ASIC-Resistant GPU Mining on Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 93
+  },
+  {
+    "key": "technologyPages.securePow.seo.description",
+    "value": "Mine Ergo with GPUs using Autolykos v2 - the energy-efficient, ASIC-resistant algorithm. Start solo mining ERG profitably with consumer hardware. Complete mining guide included.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 265.5
+  },
+  {
+    "key": "technologyPages.securePow.seo.keywords",
+    "value": "autolykos, ergo mining, ASIC resistant, GPU mining, proof of work, secure mining algorithm",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 135
+  },
+  {
+    "key": "technologyPages.securePow.features.0.title",
+    "value": "ASIC-Resistant",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.securePow.features.0.description",
+    "value": "Memory-hard algorithm prevents ASIC dominance and keeps mining decentralized",
+    "context": "Description",
+    "maxLength": 114
+  },
+  {
+    "key": "technologyPages.securePow.features.1.title",
+    "value": "Energy Efficient",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.securePow.features.1.description",
+    "value": "More efficient than Bitcoin's SHA-256 while maintaining security guarantees",
+    "context": "Description",
+    "maxLength": 112.5
+  },
+  {
+    "key": "technologyPages.securePow.features.2.title",
+    "value": "Fair Mining",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.securePow.features.2.description",
+    "value": "GPU-friendly design ensures anyone can participate in network security",
+    "context": "Description",
+    "maxLength": 105
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.0.label",
+    "value": "Network Hashrate",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.0.value",
+    "value": "12.5 TH/s",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.0.change",
+    "value": "+5.2%",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.1.label",
+    "value": "Active Miners",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.1.value",
+    "value": "2,847",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.1.change",
+    "value": "+12.1%",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.2.label",
+    "value": "Block Time",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.2.value",
+    "value": "2.0 min",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.2.change",
+    "value": "Stable",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.3.label",
+    "value": "Difficulty",
+    "context": "General content",
+    "maxLength": 15
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.3.value",
+    "value": "1.2P",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "technologyPages.securePow.networkStats.3.change",
+    "value": "+3.8%",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.securePow.benefitsTitle",
+    "value": "Why Autolykos Matters",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.securePow.benefits.0",
+    "value": "Prevents mining centralization through ASIC resistance",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "technologyPages.securePow.benefits.1",
+    "value": "Reduces energy consumption compared to traditional PoW",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "technologyPages.securePow.benefits.2",
+    "value": "Enables profitable mining with consumer hardware",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "technologyPages.securePow.benefits.3",
+    "value": "Maintains network security through memory-hard puzzles",
+    "context": "General content",
+    "maxLength": 81
+  },
+  {
+    "key": "technologyPages.securePow.benefits.4",
+    "value": "Supports fair distribution of mining rewards",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "technologyPages.securePow.benefits.5",
+    "value": "Future-proofs against mining hardware monopolies",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "technologyPages.securePow.miningCommandTitle",
+    "value": "Start Mining",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.securePow.exampleCommand",
+    "value": "ergominer --pool stratum+tcp://pool.example.com:4444 --wallet YOUR_WALLET_ADDRESS",
+    "context": "General content",
+    "maxLength": 121.5
+  },
+  {
+    "key": "technologyPages.securePow.faqTitle",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.securePow.faq.0.question",
+    "value": "What is Autolykos?",
+    "context": "FAQ content",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.securePow.faq.0.answer",
+    "value": "Autolykos v2 is Ergo's memory-hard Proof-of-Work algorithm designed to be ASIC-resistant and GPU-friendly, keeping mining decentralized.",
+    "context": "FAQ content",
+    "maxLength": 204
+  },
+  {
+    "key": "technologyPages.securePow.faq.1.question",
+    "value": "Why is Autolykos ASIC-resistant?",
+    "context": "FAQ content",
+    "maxLength": 48
+  },
+  {
+    "key": "technologyPages.securePow.faq.1.answer",
+    "value": "Autolykos requires significant memory bandwidth making ASIC development economically unviable while remaining efficient on consumer GPUs.",
+    "context": "FAQ content",
+    "maxLength": 205.5
+  },
+  {
+    "key": "technologyPages.securePow.faq.2.question",
+    "value": "How energy efficient is Autolykos?",
+    "context": "FAQ content",
+    "maxLength": 51
+  },
+  {
+    "key": "technologyPages.securePow.faq.2.answer",
+    "value": "Autolykos is more energy-efficient than Bitcoin's SHA-256, requiring less electricity per hash while maintaining security.",
+    "context": "FAQ content",
+    "maxLength": 183
+  },
+  {
+    "key": "technologyPages.securePow.faq.3.question",
+    "value": "Can I mine Ergo with my GPU?",
+    "context": "FAQ content",
+    "maxLength": 42
+  },
+  {
+    "key": "technologyPages.securePow.faq.3.answer",
+    "value": "Yes! Autolykos is designed for GPU mining. Most modern GPUs can mine ERG profitably, making it accessible to home miners.",
+    "context": "FAQ content",
+    "maxLength": 181.5
+  },
+  {
+    "key": "technologyPages.securePow.faq.4.question",
+    "value": "How does Autolykos prevent centralization?",
+    "context": "FAQ content",
+    "maxLength": 63
+  },
+  {
+    "key": "technologyPages.securePow.faq.4.answer",
+    "value": "The memory-hard nature of Autolykos makes it expensive to develop specialized ASICs, keeping mining accessible to individual miners with consumer hardware.",
+    "context": "FAQ content",
+    "maxLength": 232.5
+  },
+  {
+    "key": "technologyPages.securePow.faq.5.question",
+    "value": "What hardware do I need to mine Ergo?",
+    "context": "FAQ content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "technologyPages.securePow.faq.5.answer",
+    "value": "You need a modern GPU with at least 4GB VRAM. Popular choices include NVIDIA RTX series and AMD RX series graphics cards.",
+    "context": "FAQ content",
+    "maxLength": 181.5
+  },
+  {
+    "key": "technologyPages.securePow.ctaTitle",
+    "value": "Ready to Start Mining?",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "technologyPages.securePow.ctaButtons.readGuide",
+    "value": "Mining Guide",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.securePow.ctaButtons.viewCode",
+    "value": "View on GitHub",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.eutxoModel.title",
+    "value": "eUTXO Model",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.subtitle",
+    "value": "The foundation of Ergo's advanced smart contract capabilities",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.description",
+    "value": "Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality via ErgoScript, enabling parallel execution and eliminating entire classes of vulnerabilities.",
+    "context": "Description",
+    "maxLength": 288
+  },
+  {
+    "key": "technologyPages.eutxoModel.seo.title",
+    "value": "eUTXO Model: Parallel Smart Contracts | Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 66
+  },
+  {
+    "key": "technologyPages.eutxoModel.seo.description",
+    "value": "Learn how Ergo's Extended UTXO model enables parallel execution, MEV resistance, and composable DeFi. No re-entrancy attacks by design.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 202.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.seo.keywords",
+    "value": "eUTXO, Extended UTXO, UTXO model, parallel execution, smart contracts, MEV resistance, composability, Ergo blockchain, DeFi security, box model",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 214.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.buttons.learnMore",
+    "value": "Learn More",
+    "context": "Button label - keep short",
+    "maxLength": 15
+  },
+  {
+    "key": "technologyPages.eutxoModel.buttons.viewCode",
+    "value": "View Code",
+    "context": "Button label - keep short",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.title",
+    "value": "Quick Start",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.exploreEutxo.title",
+    "value": "Explore eUTXO",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.exploreEutxo.description",
+    "value": "Interactive visualization of the model",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.developerGuide.title",
+    "value": "Developer Guide",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.developerGuide.description",
+    "value": "Build with eUTXO patterns",
+    "context": "Description",
+    "maxLength": 37.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.joinCommunity.title",
+    "value": "Join Community",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.eutxoModel.quickStart.joinCommunity.description",
+    "value": "Get help from experienced developers",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "technologyPages.eutxoModel.featuresTitle",
+    "value": "Key Features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.0.title",
+    "value": "Box-Based State",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.0.description",
+    "value": "Each UTXO is a 'box' containing value, data, and a guarding script that defines spending conditions.",
+    "context": "Description",
+    "maxLength": 150
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.1.title",
+    "value": "Immutable Data",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.1.description",
+    "value": "Boxes are immutable — once created, they cannot be modified, only consumed and new ones created.",
+    "context": "Description",
+    "maxLength": 144
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.2.title",
+    "value": "No Re-entrancy",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.2.description",
+    "value": "The UTXO model eliminates re-entrancy attacks by design — no mutable state to exploit.",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.3.title",
+    "value": "Parallel Execution",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.3.description",
+    "value": "Transactions touching different boxes can execute in parallel, improving scalability.",
+    "context": "Description",
+    "maxLength": 127.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.4.title",
+    "value": "Local Verification",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.4.description",
+    "value": "Smart contracts only need to verify their own inputs, not global blockchain state.",
+    "context": "Description",
+    "maxLength": 123
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.5.title",
+    "value": "Composable Protocols",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.eutxoModel.features.5.description",
+    "value": "Complex DeFi protocols built from simple, reusable box patterns.",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparisonTitle",
+    "value": "eUTXO vs Account Model",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparisonHeaders.aspect",
+    "value": "Aspect",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparisonHeaders.eutxo",
+    "value": "eUTXO Model",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparisonHeaders.account",
+    "value": "Account Model",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparisonHeaders.advantage",
+    "value": "Advantage",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.0.aspect",
+    "value": "State Management",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.0.eutxo",
+    "value": "No global balances — only unspent outputs",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.0.account",
+    "value": "Global state with account balances and storage",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.0.advantage",
+    "value": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.1.aspect",
+    "value": "Security",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.1.eutxo",
+    "value": "No re-entrancy attacks, predictable costs",
+    "context": "General content",
+    "maxLength": 61.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.1.account",
+    "value": "Vulnerable to re-entrancy, unpredictable gas",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.1.advantage",
+    "value": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.2.aspect",
+    "value": "Parallelism",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.2.eutxo",
+    "value": "Independent boxes enable parallel processing",
+    "context": "General content",
+    "maxLength": 66
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.2.account",
+    "value": "State contention forces sequential processing",
+    "context": "General content",
+    "maxLength": 67.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.2.advantage",
+    "value": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.3.aspect",
+    "value": "Privacy",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.3.eutxo",
+    "value": "Natural transaction privacy through separate boxes",
+    "context": "General content",
+    "maxLength": 75
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.3.account",
+    "value": "All balances publicly visible",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.3.advantage",
+    "value": "eUTXO",
+    "context": "General content",
+    "maxLength": 7.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.4.aspect",
+    "value": "Composability",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.4.eutxo",
+    "value": "Modular outputs compose into complex protocols",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.4.account",
+    "value": "Monolithic contracts with complex interactions",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.eutxoModel.comparison.4.advantage",
+    "value": "Tie",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCasesTitle",
+    "value": "Real-World Use Cases",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.0.title",
+    "value": "DEX Order Books",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.0.description",
+    "value": "Each order is a separate box, enabling parallel matching and atomic swaps",
+    "context": "Description",
+    "maxLength": 109.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.0.example",
+    "value": "Spectrum Finance",
+    "context": "General content",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.1.title",
+    "value": "Lending Protocols",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.1.description",
+    "value": "Collateral locked in boxes with clear liquidation conditions",
+    "context": "Description",
+    "maxLength": 90
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.1.example",
+    "value": "DuckPools",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.2.title",
+    "value": "Stablecoins",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.2.description",
+    "value": "Reserve boxes track collateral independently for each position",
+    "context": "Description",
+    "maxLength": 93
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.2.example",
+    "value": "SigmaUSD",
+    "context": "General content",
+    "maxLength": 12
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.3.title",
+    "value": "NFT Auctions",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.3.description",
+    "value": "Bid boxes compete without blocking each other",
+    "context": "Description",
+    "maxLength": 67.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.useCases.3.example",
+    "value": "Ergo Auction House",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.eutxoModel.codeExampleTitle",
+    "value": "Simple Yet Powerful",
+    "context": "General content",
+    "maxLength": 28.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.codeExampleDescription",
+    "value": "The eUTXO model simplifies smart contract development by treating everything as boxes with clear spending conditions. No complex state management, no re-entrancy concerns — just straightforward logic.",
+    "context": "General content",
+    "maxLength": 300
+  },
+  {
+    "key": "technologyPages.eutxoModel.codeExampleBenefits.0",
+    "value": "Predictable execution costs",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.codeExampleBenefits.1",
+    "value": "Natural transaction batching",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "technologyPages.eutxoModel.codeExampleBenefits.2",
+    "value": "Built-in multi-sig support",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.eutxoModel.codeExampleBenefits.3",
+    "value": "Atomic multi-asset swaps",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.eutxoModel.faqTitle",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.0.question",
+    "value": "How is eUTXO different from Bitcoin's basic UTXO?",
+    "context": "FAQ content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.0.answer",
+    "value": "While Bitcoin's UTXO model only tracks value transfers, Ergo's eUTXO extends this with arbitrary data storage in boxes and Turing-complete smart contracts via ErgoScript. This enables complex DeFi applications while keeping UTXO benefits.",
+    "context": "FAQ content",
+    "maxLength": 357
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.1.question",
+    "value": "Can eUTXO handle complex DeFi applications?",
+    "context": "FAQ content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.1.answer",
+    "value": "Yes! Ergo has DEXes (Spectrum), lending protocols, stablecoins (SigmaUSD), and more. The eUTXO model actually makes these more secure by preventing re-entrancy and enabling parallel execution.",
+    "context": "FAQ content",
+    "maxLength": 288
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.2.question",
+    "value": "Why is the eUTXO model more scalable?",
+    "context": "FAQ content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.2.answer",
+    "value": "Independent boxes enable parallel transaction processing. Unlike account models where state contention forces sequential execution, eUTXO transactions touching different boxes can run simultaneously.",
+    "context": "FAQ content",
+    "maxLength": 298.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.3.question",
+    "value": "How do smart contracts work in eUTXO?",
+    "context": "FAQ content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.faq.3.answer",
+    "value": "Each box has a guard script that defines its spending conditions. When spending a box, the script is executed with provided inputs. If it returns true, the box can be spent. This is simpler and more predictable than account-based execution.",
+    "context": "FAQ content",
+    "maxLength": 360
+  },
+  {
+    "key": "technologyPages.eutxoModel.relatedTitle",
+    "value": "Continue Learning",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.relatedSubtitle",
+    "value": "Explore related Ergo technologies",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "technologyPages.eutxoModel.exampleLabel",
+    "value": "Example",
+    "context": "General content",
+    "maxLength": 10.5
+  },
+  {
+    "key": "technologyPages.velvetForks.title",
+    "value": "Velvet Forks",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.velvetForks.subtitle",
+    "value": "Backward-compatible protocol upgrades",
+    "context": "General content",
+    "maxLength": 55.5
+  },
+  {
+    "key": "technologyPages.velvetForks.description",
+    "value": "Enable protocol evolution without breaking changes or forced upgrades. Velvet forks allow gradual feature adoption while preserving ecosystem stability.",
+    "context": "Description",
+    "maxLength": 228
+  },
+  {
+    "key": "technologyPages.velvetForks.seo.title",
+    "value": "Velvet Forks: Backward-Compatible Protocol Upgrades | Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 87
+  },
+  {
+    "key": "technologyPages.velvetForks.seo.description",
+    "value": "Learn how Ergo enables protocol evolution without breaking changes through velvet forks. Gradual feature adoption while preserving ecosystem stability.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 226.5
+  },
+  {
+    "key": "technologyPages.velvetForks.seo.keywords",
+    "value": "velvet forks, protocol upgrades, backward compatibility, blockchain evolution, soft fork, hard fork",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 148.5
+  },
+  {
+    "key": "technologyPages.velvetForks.buttons.readDocumentation",
+    "value": "Read Documentation",
+    "context": "Button label - keep short",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.velvetForks.buttons.exploreOther",
+    "value": "Explore Other Technologies",
+    "context": "Button label - keep short",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.title",
+    "value": "Quick Start",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.0.number",
+    "value": "01",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.0.title",
+    "value": "Learn Concepts",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.0.description",
+    "value": "Understand velvet fork principles",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.1.number",
+    "value": "02",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.1.title",
+    "value": "View Examples",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.1.description",
+    "value": "See velvet forks in action",
+    "context": "Description",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.2.number",
+    "value": "03",
+    "context": "General content",
+    "maxLength": 3
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.2.title",
+    "value": "Join Discussion",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.velvetForks.quickStart.steps.2.description",
+    "value": "Participate in governance",
+    "context": "Description",
+    "maxLength": 37.5
+  },
+  {
+    "key": "technologyPages.velvetForks.featuresTitle",
+    "value": "Key Features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.velvetForks.featuresSubtitle",
+    "value": "Why velvet forks are the future of blockchain protocol upgrades",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "technologyPages.velvetForks.features.0.title",
+    "value": "Backward Compatibility",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "technologyPages.velvetForks.features.0.description",
+    "value": "No breaking changes for existing applications and infrastructure",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "technologyPages.velvetForks.features.1.title",
+    "value": "Gradual Adoption",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.velvetForks.features.1.description",
+    "value": "New features can be adopted incrementally by the network",
+    "context": "Description",
+    "maxLength": 84
+  },
+  {
+    "key": "technologyPages.velvetForks.features.2.title",
+    "value": "Flexible Updates",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.velvetForks.features.2.description",
+    "value": "Protocol parameters can be adjusted without hard forks",
+    "context": "Description",
+    "maxLength": 81
+  },
+  {
+    "key": "technologyPages.velvetForks.features.3.title",
+    "value": "Community Consensus",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "technologyPages.velvetForks.features.3.description",
+    "value": "Changes require broad community agreement and miner support",
+    "context": "Description",
+    "maxLength": 88.5
+  },
+  {
+    "key": "technologyPages.velvetForks.features.4.title",
+    "value": "Security Preservation",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.velvetForks.features.4.description",
+    "value": "Maintains network security while enabling protocol evolution",
+    "context": "Description",
+    "maxLength": 90
+  },
+  {
+    "key": "technologyPages.velvetForks.features.5.title",
+    "value": "Reduced Risk",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.velvetForks.features.5.description",
+    "value": "Lower risk of network splits and ecosystem fragmentation",
+    "context": "Description",
+    "maxLength": 84
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorksTitle",
+    "value": "How It Works",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorksSubtitle",
+    "value": "The velvet fork process ensures smooth protocol evolution",
+    "context": "General content",
+    "maxLength": 85.5
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.0.title",
+    "value": "Proposal Phase",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.0.description",
+    "value": "Community proposes protocol improvements through EIPs",
+    "context": "Description",
+    "maxLength": 79.5
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.1.title",
+    "value": "Discussion & Review",
+    "context": "Title",
+    "maxLength": 28.5
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.1.description",
+    "value": "Technical review and community discussion",
+    "context": "Description",
+    "maxLength": 61.5
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.2.title",
+    "value": "Implementation",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.2.description",
+    "value": "Developers implement backward-compatible changes",
+    "context": "Description",
+    "maxLength": 72
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.3.title",
+    "value": "Gradual Activation",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.velvetForks.howItWorks.3.description",
+    "value": "Network adopts features without forced upgrades",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparisonTitle",
+    "value": "Fork Comparison",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparisonSubtitle",
+    "value": "Understanding different approaches to blockchain protocol upgrades",
+    "context": "General content",
+    "maxLength": 99
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.hardFork.title",
+    "value": "Hard Fork",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.hardFork.description",
+    "value": "Breaking changes that require all nodes to upgrade",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.hardFork.pros.0",
+    "value": "Complete protocol redesign possible",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.hardFork.pros.1",
+    "value": "Can fix fundamental issues",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.hardFork.cons.0",
+    "value": "Risk of network split",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.hardFork.cons.1",
+    "value": "Requires coordinated upgrade",
+    "context": "General content",
+    "maxLength": 42
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.softFork.title",
+    "value": "Soft Fork",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.softFork.description",
+    "value": "Backward-compatible changes that tighten rules",
+    "context": "Description",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.softFork.pros.0",
+    "value": "Maintains backward compatibility",
+    "context": "General content",
+    "maxLength": 48
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.softFork.pros.1",
+    "value": "No forced upgrades required",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.softFork.cons.0",
+    "value": "Limited to rule tightening",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.softFork.cons.1",
+    "value": "Cannot add new features easily",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.title",
+    "value": "Velvet Fork",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.description",
+    "value": "Ergo's approach: gradual feature introduction with full compatibility",
+    "context": "Description",
+    "maxLength": 103.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.pros.0",
+    "value": "No breaking changes ever",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.pros.1",
+    "value": "Gradual feature adoption",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.pros.2",
+    "value": "Preserves ecosystem stability",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.tradeoffs.0",
+    "value": "Slower feature rollout",
+    "context": "General content",
+    "maxLength": 33
+  },
+  {
+    "key": "technologyPages.velvetForks.comparison.velvetFork.tradeoffs.1",
+    "value": "Requires careful design",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "technologyPages.velvetForks.useCasesTitle",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.velvetForks.useCasesSubtitle",
+    "value": "Real-world applications of velvet fork technology",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "technologyPages.velvetForks.useCases.0.title",
+    "value": "Light Client Upgrades",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.velvetForks.useCases.0.description",
+    "value": "Enable new features for light clients without breaking existing implementations",
+    "context": "Description",
+    "maxLength": 118.5
+  },
+  {
+    "key": "technologyPages.velvetForks.useCases.1.title",
+    "value": "Privacy Enhancements",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.velvetForks.useCases.1.description",
+    "value": "Gradually introduce new privacy features while maintaining backward compatibility",
+    "context": "Description",
+    "maxLength": 121.5
+  },
+  {
+    "key": "technologyPages.velvetForks.useCases.2.title",
+    "value": "Smart Contract Evolution",
+    "context": "Title",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.velvetForks.useCases.2.description",
+    "value": "Upgrade ErgoScript capabilities without requiring ecosystem-wide changes",
+    "context": "Description",
+    "maxLength": 108
+  },
+  {
+    "key": "technologyPages.velvetForks.faqTitle",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.velvetForks.faqSubtitle",
+    "value": "Common questions about velvet forks and their implementation",
+    "context": "General content",
+    "maxLength": 90
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.0.question",
+    "value": "What exactly is a velvet fork?",
+    "context": "FAQ content",
+    "maxLength": 45
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.0.answer",
+    "value": "A velvet fork is Ergo's approach to protocol upgrades that maintains complete backward compatibility while enabling new features. Unlike hard or soft forks, velvet forks never break existing functionality.",
+    "context": "FAQ content",
+    "maxLength": 307.5
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.1.question",
+    "value": "How do velvet forks differ from soft forks?",
+    "context": "FAQ content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.1.answer",
+    "value": "While soft forks tighten existing rules, velvet forks can add entirely new features without affecting nodes that don't upgrade. This allows for more flexible protocol evolution.",
+    "context": "FAQ content",
+    "maxLength": 265.5
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.2.question",
+    "value": "Are velvet forks secure?",
+    "context": "FAQ content",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.2.answer",
+    "value": "Yes, velvet forks maintain the same security guarantees as the base protocol. New features are designed to be optional and don't compromise the security of existing functionality.",
+    "context": "FAQ content",
+    "maxLength": 268.5
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.3.question",
+    "value": "Do I need to upgrade my node for velvet forks?",
+    "context": "FAQ content",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.velvetForks.faq.3.answer",
+    "value": "No, upgrades are optional. Your node will continue to work normally, though you won't have access to new features until you choose to upgrade.",
+    "context": "FAQ content",
+    "maxLength": 213
+  },
+  {
+    "key": "technologyPages.velvetForks.relatedTitle",
+    "value": "Related Technologies",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.storageRent.title",
+    "value": "Storage Rent",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.storageRent.subtitle",
+    "value": "What is Storage Rent?",
+    "context": "General content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.storageRent.description",
+    "value": "Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.",
+    "context": "Description",
+    "maxLength": 210
+  },
+  {
+    "key": "technologyPages.storageRent.seo.title",
+    "value": "Storage Rent Explained | Sustainable Blockchain Economics on Ergo",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 97.5
+  },
+  {
+    "key": "technologyPages.storageRent.seo.description",
+    "value": "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 265.5
+  },
+  {
+    "key": "technologyPages.storageRent.seo.ogTitle",
+    "value": "Storage Rent | The Solution to Blockchain Sustainability",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 84
+  },
+  {
+    "key": "technologyPages.storageRent.seo.ogDescription",
+    "value": "How Ergo prevents blockchain bloat while ensuring perpetual network security through Storage Rent.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 147
+  },
+  {
+    "key": "technologyPages.storageRent.seo.twitterTitle",
+    "value": "Storage Rent | Solving Blockchain Bloat Forever",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 70.5
+  },
+  {
+    "key": "technologyPages.storageRent.seo.twitterDescription",
+    "value": "Sustainable economics: automatic cleanup, perpetual miner rewards, efficient blockchain.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 132
+  },
+  {
+    "key": "technologyPages.storageRent.problems.0.title",
+    "value": "Blockchain Bloat",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.storageRent.problems.0.description",
+    "value": "Traditional blockchains grow indefinitely, making full node operation increasingly expensive",
+    "context": "Description",
+    "maxLength": 138
+  },
+  {
+    "key": "technologyPages.storageRent.problems.0.stats",
+    "value": "~500GB/year growth",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.storageRent.problems.1.title",
+    "value": "Lost Coins",
+    "context": "Title",
+    "maxLength": 15
+  },
+  {
+    "key": "technologyPages.storageRent.problems.1.description",
+    "value": "Millions in lost or forgotten coins create permanent blockchain overhead",
+    "context": "Description",
+    "maxLength": 108
+  },
+  {
+    "key": "technologyPages.storageRent.problems.1.stats",
+    "value": "~20% of supply",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.storageRent.problems.2.title",
+    "value": "Miner Revenue",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.storageRent.problems.2.description",
+    "value": "Block rewards decrease over time, threatening long-term security",
+    "context": "Description",
+    "maxLength": 96
+  },
+  {
+    "key": "technologyPages.storageRent.problems.2.stats",
+    "value": "-50% every 4 years",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.storageRent.benefits.0",
+    "value": "Prevents unlimited blockchain growth",
+    "context": "General content",
+    "maxLength": 54
+  },
+  {
+    "key": "technologyPages.storageRent.benefits.1",
+    "value": "Creates sustainable miner revenue",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "technologyPages.storageRent.benefits.2",
+    "value": "Protects network decentralization",
+    "context": "General content",
+    "maxLength": 49.5
+  },
+  {
+    "key": "technologyPages.storageRent.benefits.3",
+    "value": "Cleans up lost/forgotten coins",
+    "context": "General content",
+    "maxLength": 45
+  },
+  {
+    "key": "technologyPages.storageRent.benefits.4",
+    "value": "Makes costs predictable",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "technologyPages.storageRent.benefits.5",
+    "value": "Aligns incentives",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.0.year",
+    "value": "Box Created",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.0.status",
+    "value": "Active UTXO",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.0.description",
+    "value": "Normal operation, no rent accrual",
+    "context": "Description",
+    "maxLength": 49.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.0.details",
+    "value": "Any transaction resets the 4-year timer",
+    "context": "General content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.1.year",
+    "value": "4 Years Later",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.1.status",
+    "value": "Rent begins accruing",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.1.description",
+    "value": "Small fee charged for continued storage",
+    "context": "Description",
+    "maxLength": 58.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.1.details",
+    "value": "~0.14 ERG per 4-year period",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.2.year",
+    "value": "Box Depleted",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.2.status",
+    "value": "Eligible for miner claim",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.2.description",
+    "value": "If rent isn't paid, remaining value goes to miners",
+    "context": "Description",
+    "maxLength": 75
+  },
+  {
+    "key": "technologyPages.storageRent.timeline.2.details",
+    "value": "Funds return to active circulation",
+    "context": "General content",
+    "maxLength": 51
+  },
+  {
+    "key": "technologyPages.storageRent.schema.techArticle.headline",
+    "value": "Storage Rent: Sustainable Blockchain Economics",
+    "context": "General content",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.storageRent.schema.techArticle.description",
+    "value": "How Storage Rent solves blockchain bloat and ensures long-term sustainability",
+    "context": "Description",
+    "maxLength": 115.5
+  },
+  {
+    "key": "technologyPages.storageRent.schema.faq.what.question",
+    "value": "What is Storage Rent?",
+    "context": "FAQ content",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.storageRent.schema.faq.what.answer",
+    "value": "Storage Rent is a mechanism where unused coins pay a minimal fee after 4 years of inactivity, preventing blockchain bloat and providing permanent miner rewards beyond emission.",
+    "context": "FAQ content",
+    "maxLength": 264
+  },
+  {
+    "key": "technologyPages.storageRent.schema.faq.cost.question",
+    "value": "How much does Storage Rent cost?",
+    "context": "FAQ content",
+    "maxLength": 48
+  },
+  {
+    "key": "technologyPages.storageRent.schema.faq.cost.answer",
+    "value": "Storage Rent costs approximately 0.14 ERG per UTXO every 4 years. Active users never pay rent as any transaction resets the timer.",
+    "context": "FAQ content",
+    "maxLength": 195
+  },
+  {
+    "key": "technologyPages.storageRent.schema.faq.importance.question",
+    "value": "Why is Storage Rent important?",
+    "context": "FAQ content",
+    "maxLength": 45
+  },
+  {
+    "key": "technologyPages.storageRent.schema.faq.importance.answer",
+    "value": "Storage Rent ensures blockchain sustainability by preventing unlimited growth, keeping the network lightweight, and providing perpetual security through miner rewards after emission ends.",
+    "context": "FAQ content",
+    "maxLength": 280.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.title",
+    "value": "Native Tokens & NFTs",
+    "context": "Title",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.nativeTokens.subtitle",
+    "value": "Create and trade tokens and NFTs directly at the protocol level",
+    "context": "General content",
+    "maxLength": 94.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.description",
+    "value": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
+    "context": "Description",
+    "maxLength": 273
+  },
+  {
+    "key": "technologyPages.nativeTokens.details",
+    "value": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
+    "context": "General content",
+    "maxLength": 273
+  },
+  {
+    "key": "technologyPages.nativeTokens.lastUpdated",
+    "value": "Last updated",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.nativeTokens.buttons.exploreNftEcosystem",
+    "value": "Explore NFT Ecosystem",
+    "context": "Button label - keep short",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.buttons.tokenApiDocs",
+    "value": "Token API Docs",
+    "context": "Button label - keep short",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.nativeTokens.navigation.keyFeatures",
+    "value": "Key features",
+    "context": "General content",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.nativeTokens.navigation.assetTypes",
+    "value": "Asset types",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.navigation.useCases",
+    "value": "Use cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.navigation.faq",
+    "value": "FAQ",
+    "context": "General content",
+    "maxLength": 4.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.title",
+    "value": "Key Metrics",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.tokenCreation.name",
+    "value": "Token Creation",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.tokenCreation.value",
+    "value": "1 TX",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.tokenCreation.description",
+    "value": "Single transaction creation",
+    "context": "Description",
+    "maxLength": 40.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.creationCost.name",
+    "value": "Creation Cost",
+    "context": "General content",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.creationCost.value",
+    "value": "~$0.01",
+    "context": "General content",
+    "maxLength": 9
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.creationCost.description",
+    "value": "Minimal fees in ERG",
+    "context": "Description",
+    "maxLength": 28.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.protocolSecurity.name",
+    "value": "Protocol Security",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.protocolSecurity.value",
+    "value": "100%",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.protocolSecurity.description",
+    "value": "First-class assets",
+    "context": "Description",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.tokenTypes.name",
+    "value": "Token Types",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.tokenTypes.value",
+    "value": "∞",
+    "context": "General content",
+    "maxLength": 1.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.keyMetrics.tokenTypes.description",
+    "value": "Unlimited possibilities",
+    "context": "Description",
+    "maxLength": 34.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.whyNativeAssets.title",
+    "value": "Why Native Assets?",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.whyNativeAssets.subtitle",
+    "value": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens",
+    "context": "General content",
+    "maxLength": 168
+  },
+  {
+    "key": "technologyPages.nativeTokens.featuresSection.title",
+    "value": "Why Native Assets?",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.featuresSection.subtitle",
+    "value": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens",
+    "context": "General content",
+    "maxLength": 168
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.0.title",
+    "value": "Protocol-Level Support",
+    "context": "Title",
+    "maxLength": 33
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.0.description",
+    "value": "Native tokens are first-class citizens, as secure as ERG itself",
+    "context": "Description",
+    "maxLength": 94.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.1.title",
+    "value": "No Smart Contracts",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.1.description",
+    "value": "Create tokens without complex code or contracts",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.2.title",
+    "value": "Instant Creation",
+    "context": "Title",
+    "maxLength": 24
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.2.description",
+    "value": "Issue tokens in a single transaction",
+    "context": "Description",
+    "maxLength": 54
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.3.title",
+    "value": "Low Cost",
+    "context": "Title",
+    "maxLength": 12
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.3.description",
+    "value": "Minimal fees for token creation and transfers",
+    "context": "Description",
+    "maxLength": 67.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.4.title",
+    "value": "Rich Metadata",
+    "context": "Title",
+    "maxLength": 19.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.4.description",
+    "value": "Store token data directly on-chain",
+    "context": "Description",
+    "maxLength": 51
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.5.title",
+    "value": "Cross-Chain Ready",
+    "context": "Title",
+    "maxLength": 25.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.features.5.description",
+    "value": "Built for multi-chain interoperability",
+    "context": "Description",
+    "maxLength": 57
+  },
+  {
+    "key": "technologyPages.nativeTokens.assetTypes.title",
+    "value": "Asset Types",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.assetTypes.subtitle",
+    "value": "Create any type of digital asset with native protocol support",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.tabs.tokens",
+    "value": "Fungible Tokens",
+    "context": "General content",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.tabs.nfts",
+    "value": "NFTs",
+    "context": "General content",
+    "maxLength": 6
+  },
+  {
+    "key": "technologyPages.nativeTokens.tabs.stablecoins",
+    "value": "Stablecoins",
+    "context": "General content",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCasesSection.title",
+    "value": "Use Cases",
+    "context": "Title",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCasesSection.subtitle",
+    "value": "Applications that benefit from native token creation",
+    "context": "General content",
+    "maxLength": 78
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.0.title",
+    "value": "Fungible Tokens",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.0.description",
+    "value": "Create custom currencies and utility tokens",
+    "context": "Description",
+    "maxLength": 64.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.1.title",
+    "value": "NFT Collections",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.1.description",
+    "value": "Launch digital art and collectibles",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.2.title",
+    "value": "Stablecoins",
+    "context": "Title",
+    "maxLength": 16.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.2.description",
+    "value": "Issue stable assets with protocol security",
+    "context": "Description",
+    "maxLength": 63
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.3.title",
+    "value": "Asset Tokenization",
+    "context": "Title",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCases.3.description",
+    "value": "Tokenize real-world assets on-chain",
+    "context": "Description",
+    "maxLength": 52.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.codeExample.title",
+    "value": "Simple Token Creation",
+    "context": "Title",
+    "maxLength": 31.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.codeExample.subtitle",
+    "value": "Create tokens with just a few lines of code",
+    "context": "General content",
+    "maxLength": 64.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.codeExample.code",
+    "value": "// Token creation parameters\nval tokenName = \"MyToken\"\nval tokenDescription = \"My awesome token on Ergo\"\nval tokenDecimals = 2\nval tokenAmount = 1000000L\n\n// Create token in a single transaction\nval token = Minting.issueToken(\n  ergoClient = client,\n  tokenName = tokenName,\n  tokenDescription = tokenDescription,\n  tokenAmount = tokenAmount,\n  tokenDecimals = tokenDecimals,\n  mintingAddress = address,\n  txFee = Parameters.MinFee\n)\n\n// Token is now live on the blockchain!\nprintln(s\"Token ID: ${token.getId}\")\nprintln(s\"Token created in TX: ${token.creationTx}\")",
+    "context": "General content",
+    "maxLength": 846
+  },
+  {
+    "key": "technologyPages.nativeTokens.codeExample.note",
+    "value": "No smart contract deployment, no complex setup - just simple, native token creation.",
+    "context": "General content",
+    "maxLength": 126
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.title",
+    "value": "Token Ecosystem",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.subtitle",
+    "value": "A thriving ecosystem of tools and platforms for native tokens",
+    "context": "General content",
+    "maxLength": 91.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.marketplaces.title",
+    "value": "Marketplaces",
+    "context": "Title",
+    "maxLength": 18
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.marketplaces.skyHarbor",
+    "value": "SkyHarbor - NFT marketplace",
+    "context": "General content",
+    "maxLength": 40.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.marketplaces.spectrum",
+    "value": "Spectrum - Token DEX",
+    "context": "General content",
+    "maxLength": 30
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.marketplaces.auctionHouse",
+    "value": "ErgoAuctionHouse - Auction platform",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.creationTools.title",
+    "value": "Creation Tools",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.creationTools.ergoMixer",
+    "value": "ErgoMixer - Privacy tokens",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.creationTools.tokenMinter",
+    "value": "Ergo Token Minter - Simple UI",
+    "context": "General content",
+    "maxLength": 43.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.creationTools.blitzTcg",
+    "value": "Blitz TCG - Gaming tokens",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.infrastructure.title",
+    "value": "Infrastructure",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.infrastructure.tokenApi",
+    "value": "Token API - REST endpoints",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.infrastructure.explorer",
+    "value": "Explorer - Token tracking",
+    "context": "General content",
+    "maxLength": 37.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ecosystem.infrastructure.wallets",
+    "value": "Wallets - Native support",
+    "context": "General content",
+    "maxLength": 36
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.0.question",
+    "value": "What are native tokens on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.0.answer",
+    "value": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself.",
+    "context": "FAQ content",
+    "maxLength": 277.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.1.question",
+    "value": "How much does it cost to create a token?",
+    "context": "FAQ content",
+    "maxLength": 60
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.1.answer",
+    "value": "Creating a token on Ergo costs approximately $0.01 in transaction fees. This is significantly cheaper than other blockchains that require smart contract deployment.",
+    "context": "FAQ content",
+    "maxLength": 246
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.2.question",
+    "value": "Can I create NFTs on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.2.answer",
+    "value": "Yes, NFTs are created as native tokens with a supply of 1. They support rich metadata including images, descriptions, and custom properties stored on IPFS.",
+    "context": "FAQ content",
+    "maxLength": 232.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.3.question",
+    "value": "Are native tokens compatible with DeFi?",
+    "context": "FAQ content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.faq.3.answer",
+    "value": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements.",
+    "context": "FAQ content",
+    "maxLength": 216
+  },
+  {
+    "key": "technologyPages.nativeTokens.cta.title",
+    "value": "Start Creating Native Assets",
+    "context": "Title",
+    "maxLength": 42
+  },
+  {
+    "key": "technologyPages.nativeTokens.cta.subtitle",
+    "value": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer",
+    "context": "General content",
+    "maxLength": 142.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.cta.buttons.readDocumentation",
+    "value": "Read Documentation",
+    "context": "Button label - keep short",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.cta.buttons.learnAboutAgeUsd",
+    "value": "Learn About AgeUSD",
+    "context": "Button label - keep short",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.title",
+    "value": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 88.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.description",
+    "value": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets on Ergo blockchain.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 249
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.keywords",
+    "value": "native tokens, NFTs, blockchain assets, ergo tokens, token creation, non-fungible tokens, protocol-level assets, token issuance, ergo NFTs, digital assets",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 231
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.ogTitle",
+    "value": "Native Tokens & NFTs on Ergo - Protocol-Level Assets",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 78
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.ogDescription",
+    "value": "Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 169.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.twitterTitle",
+    "value": "Native Tokens & NFTs - First-Class Ergo Assets",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 69
+  },
+  {
+    "key": "technologyPages.nativeTokens.seo.twitterDescription",
+    "value": "Create tokens & NFTs at protocol level. One-click creation, ~$0.01 cost, 100% secure.",
+    "context": "SEO metadata - keep concise",
+    "maxLength": 127.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.useCasesTitle",
+    "value": "Use Cases",
+    "context": "General content",
+    "maxLength": 13.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.tabContent.tokens",
+    "value": "Create fungible tokens for currencies, rewards, governance, and more. Each token inherits the full security of the Ergo protocol.",
+    "context": "General content",
+    "maxLength": 193.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.tabContent.nfts",
+    "value": "Issue unique digital assets with rich metadata. Perfect for art, collectibles, and digital property rights.",
+    "context": "General content",
+    "maxLength": 160.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.tabContent.stablecoins",
+    "value": "Build stable assets with protocol-level security. No complex smart contracts required.",
+    "context": "General content",
+    "maxLength": 129
+  },
+  {
+    "key": "technologyPages.nativeTokens.faqTitle",
+    "value": "Frequently Asked Questions",
+    "context": "General content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.nativeTokens.ctaTitle",
+    "value": "Ready to Create Tokens?",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.ctaButtons.readGuide",
+    "value": "Read the Guide",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.nativeTokens.ctaButtons.viewCode",
+    "value": "View on GitHub",
+    "context": "General content",
+    "maxLength": 21
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.headline",
+    "value": "Native Tokens & NFTs: First-Class Assets on Ergo",
+    "context": "General content",
+    "maxLength": 72
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.description",
+    "value": "Comprehensive guide to creating and managing native tokens and NFTs on Ergo blockchain",
+    "context": "Description",
+    "maxLength": 129
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.name",
+    "value": "How to Create Native Tokens on Ergo",
+    "context": "General content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.description",
+    "value": "Step-by-step guide to creating tokens on Ergo blockchain",
+    "context": "Description",
+    "maxLength": 84
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.defineParameters.name",
+    "value": "Define Token Parameters",
+    "context": "General content",
+    "maxLength": 34.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.defineParameters.text",
+    "value": "Set token name, description, amount, and decimals",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.createTransaction.name",
+    "value": "Create Transaction",
+    "context": "General content",
+    "maxLength": 27
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.createTransaction.text",
+    "value": "Build a minting transaction with token parameters",
+    "context": "General content",
+    "maxLength": 73.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.submitNetwork.name",
+    "value": "Submit to Network",
+    "context": "General content",
+    "maxLength": 25.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.techArticle.steps.submitNetwork.text",
+    "value": "Send the transaction to create your token instantly",
+    "context": "General content",
+    "maxLength": 76.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.whatAre.question",
+    "value": "What are native tokens on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 46.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.whatAre.answer",
+    "value": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself.",
+    "context": "FAQ content",
+    "maxLength": 277.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.cost.question",
+    "value": "How much does it cost to create a token?",
+    "context": "FAQ content",
+    "maxLength": 60
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.cost.answer",
+    "value": "Creating a token on Ergo costs approximately $0.01 in transaction fees. This is significantly cheaper than other blockchains that require smart contract deployment.",
+    "context": "FAQ content",
+    "maxLength": 246
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.nfts.question",
+    "value": "Can I create NFTs on Ergo?",
+    "context": "FAQ content",
+    "maxLength": 39
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.nfts.answer",
+    "value": "Yes, NFTs are created as native tokens with a supply of 1. They support rich metadata including images, descriptions, and custom properties stored on IPFS.",
+    "context": "FAQ content",
+    "maxLength": 232.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.code.question",
+    "value": "Do I need to code to create tokens?",
+    "context": "FAQ content",
+    "maxLength": 52.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.code.answer",
+    "value": "No, you can create tokens using simple UI tools or with just a few lines of code. The process is as simple as sending a transaction with token parameters.",
+    "context": "FAQ content",
+    "maxLength": 231
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.defi.question",
+    "value": "Are native tokens compatible with DeFi?",
+    "context": "FAQ content",
+    "maxLength": 58.5
+  },
+  {
+    "key": "technologyPages.nativeTokens.schema.faq.defi.answer",
+    "value": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements.",
+    "context": "FAQ content",
+    "maxLength": 216
+  }
+]

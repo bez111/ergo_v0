@@ -4,7 +4,8 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, Eye, ExternalLink, Share2, Download, ChevronDown, ArrowRight, Twitter, Linkedin, MessageCircle, Link2, X, Copy, Sparkles, BookOpen, HelpCircle } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';

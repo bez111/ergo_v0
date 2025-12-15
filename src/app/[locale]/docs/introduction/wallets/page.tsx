@@ -4,7 +4,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Shield, Smartphone, Monitor, Globe, Lock, BookOpen, ExternalLink, CheckCircle, Info, AlertTriangle, ArrowDown, ArrowUp, Users, Star, Key, FileText } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const wallets = [

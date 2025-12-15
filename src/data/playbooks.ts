@@ -8,7 +8,7 @@ export interface PlaybookStep {
   description: string;
   duration?: string;
   resources?: {
-    type: 'link' | 'tool' | 'doc';
+    type: 'link' | 'tool' | 'doc' | 'glossary' | 'question' | 'technology' | 'infographic';
     title: string;
     href: string;
   }[];
@@ -39,7 +39,7 @@ export interface Playbook {
   timeToComplete: string;
   
   // Content
-  heroDescription: string;
+  heroDescription?: string;
   
   // Why this matters
   problemStatement: string;
@@ -78,6 +78,12 @@ export interface Playbook {
   // Dates
   publishDate: string;
   updatedDate?: string;
+  
+  // Optional prerequisites
+  prerequisites?: string[];
+  
+  // Optional outcomes
+  outcomes?: string[];
 }
 
 export const playbooks: Playbook[] = [
@@ -756,7 +762,7 @@ export const playbooks: Playbook[] = [
     
     cluster: "investor",
     difficulty: "beginner",
-    estimatedTime: "10 minutes",
+    timeToComplete: "10 minutes",
     
     problemStatement: "You've heard about Ergo but don't know where to start. Crypto can seem overwhelming with wallets, addresses, and transactions.",
     solution: "This playbook gets you from zero to your first transaction in 10 minutes. Install Nautilus wallet, secure your seed phrase, receive some ERG, and send a test transaction.",
@@ -845,7 +851,7 @@ export const playbooks: Playbook[] = [
     
     cluster: "privacy",
     difficulty: "intermediate",
-    estimatedTime: "30 minutes",
+    timeToComplete: "30 minutes",
     
     problemStatement: "Blockchain transactions are public. Anyone can trace your financial activity, link your addresses, and profile your spending. This compromises your privacy and security.",
     solution: "ErgoMixer breaks the link between your input and output addresses using Sigma Protocols. It's non-custodial (you control your funds) and trustless (no operator can steal or log).",
@@ -940,7 +946,7 @@ export const playbooks: Playbook[] = [
     
     cluster: "developer",
     difficulty: "beginner",
-    estimatedTime: "15 minutes",
+    timeToComplete: "15 minutes",
     
     problemStatement: "On Ethereum, launching a token requires deploying a smart contract, paying high gas fees, and risking contract bugs. It's expensive and complex.",
     solution: "Ergo tokens are native to the protocol - no smart contract deployment needed. Mint tokens in a simple transaction for minimal fees. Your token inherits Ergo's full security.",
@@ -1026,7 +1032,7 @@ export const playbooks: Playbook[] = [
     
     cluster: "defi",
     difficulty: "intermediate",
-    estimatedTime: "20 minutes",
+    timeToComplete: "20 minutes",
     
     problemStatement: "Holding ERG earns nothing. You want your assets to generate yield, but centralized options require giving up custody and trusting third parties.",
     solution: "Provide liquidity on Spectrum Finance DEX. Deposit token pairs into pools, earn a share of all trading fees. Non-custodial, permissionless, and you can withdraw anytime.",

@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowLeft, Network, Copy, Check } from "lucide-react";
 

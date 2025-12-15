@@ -33,7 +33,7 @@
 
 // // Signature effects - только для визуального улучшения, не критичны для LCP
 // export const SignatureEffectsDynamic = dynamic(
-//   () => import('@/src/components/ui-kit/signature-effects').then(mod => ({
+//   () => import('@/components/ui-kit/signature-effects').then(mod => ({
 //     default: {
 //       HexagonalGrid: mod.HexagonalGrid,
 //       FloatingParticles: mod.FloatingParticles,

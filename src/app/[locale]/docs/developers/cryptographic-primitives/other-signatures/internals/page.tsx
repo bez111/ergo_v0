@@ -1,7 +1,7 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import { ArrowLeft, Shield, BookOpen, Code, Lock, Users, Zap } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { BlockMath, InlineMath } from "react-katex";
 import { CodeBlock } from "@/components/ui";
 

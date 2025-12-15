@@ -1,0 +1,20 @@
+[
+  {
+    "key": "useGuides.title",
+    "value": "Use Case Guides",
+    "context": "Title",
+    "maxLength": 22.5
+  },
+  {
+    "key": "useGuides.description",
+    "value": "Practical tutorials for using Ergo applications",
+    "context": "Description",
+    "maxLength": 70.5
+  },
+  {
+    "key": "useGuides.subtitle",
+    "value": "Step-by-step implementation guides",
+    "context": "General content",
+    "maxLength": 51
+  }
+]

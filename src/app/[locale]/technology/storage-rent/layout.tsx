@@ -1,15 +1,17 @@
 import { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import {
-  createTechnologyMetadata,
   createTechArticleSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-// SEO Configuration
+interface Props {
+  params: Promise<{ locale: string }>
+  children: React.ReactNode
+}
+
 const SEO = {
   slug: "storage-rent",
-  title: "Storage Rent: Sustainable Blockchain",
-  description: "Discover how Ergo's storage rent prevents state bloat and ensures long-term sustainability. Lost coins are recycled, miners earn forever.",
   ogImage: "/og/technology/storage-rent.png",
   keywords: [
     "storage rent", "state bloat", "blockchain sustainability",
@@ -19,16 +21,31 @@ const SEO = {
   ],
 }
 
-// Metadata Export
-export const metadata: Metadata = createTechnologyMetadata(
-  SEO.slug,
-  SEO.title,
-  SEO.description,
-  SEO.ogImage,
-  SEO.keywords
-)
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'technology.storageRent' })
 
-// Layout with Schemas
+  const title = t('title')
+  const description = t('description')
+
+  return {
+    title,
+    description,
+    keywords: SEO.keywords,
+    alternates: {
+      canonical: `https://ergoblockchain.org/technology/${SEO.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      url: `https://ergoblockchain.org/technology/${SEO.slug}`,
+      title,
+      description,
+      images: [{ url: SEO.ogImage, width: 1200, height: 630 }],
+    },
+    twitter: { card: "summary_large_image", title, description },
+  }
+}
+
 export default function StorageRentLayout({ children }: { children: React.ReactNode }) {
   const schemas = [
     createTechArticleSchema(`/technology/${SEO.slug}`, {

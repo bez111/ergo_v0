@@ -1,0 +1,128 @@
+{
+  "compare": {
+    "page": {
+      "seo": {
+        "title": "Ergo vs Bitcoin, Ethereum, Cardano — Full Comparison | Ergo",
+        "description": "Compare Ergo to Bitcoin, Ethereum, Cardano, Monero & more. Side-by-side analysis of consensus, smart contracts, privacy & tokenomics.",
+        "keywords": "ergo comparison, ergo vs bitcoin, ergo vs ethereum, blockchain comparison, ergo vs cardano, ergo vs monero, cryptocurrency comparison, best blockchain"
+      },
+      "schema": {
+        "breadcrumbs": {
+          "compare": "Compare"
+        },
+        "collection": {
+          "name": "Ergo Blockchain Comparisons",
+          "description": "Comprehensive comparisons of Ergo with other major blockchain platforms including Bitcoin, Ethereum, Cardano, Monero, and more."
+        },
+        "faq": {
+          "items": [
+            {
+              "question": "Is Ergo better than Ethereum?",
+              "answer": "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant (no front-running), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers."
+            }
+          ]
+        }
+      }
+    },
+    "hub": {
+      "title": "Ergo vs The World",
+      "subtitle": "了解Ergo 如何与其他区块链平台进行比较。诚实、技术比较与无营销流量。",
+      "chooseComparison": "选择一个比较",
+      "seeFullComparisonTable": "查看完整对比表",
+      "min": "分钟",
+      "card": {
+        "title": "Ergo vs {name}"
+      },
+      "visualSection": {
+        "title": "可视化对比与矩阵",
+        "subtitle": "Ergo vs 其他 L1 的对照图，便于保存与分享。",
+        "viewAll": "查看所有对比信息图",
+        "badge": "可视化指南"
+      },
+      "quickStats": {
+        "consensus": "共识",
+        "stateModel": "状态模型",
+        "launch": "启动",
+        "privacy": "隐私"
+      },
+      "aria": {
+        "comparisonsList": "区块链对比列表",
+        "visualComparisonsList": "对比信息图列表"
+      },
+      "whyMatters": "为什么这些比较事项",
+      "whyMattersSubtitle": "每个区块链都会进行交易。了解这些交易有助于您选择合适的工具来满足您的需要。",
+      "securityFirst": "优先安全",
+      "securityFirstDesc": "Ergo的 eUTXO 模型消除了影响基于账户的链的所有类型的脆弱性。",
+      "fairLaunch": "公平启动",
+      "fairLaunchDesc": "没有ICO、无预设、无VC分配。所有ERG都是通过采矿赚取的，如比特币。",
+      "programmablePrivacy": "可编程隐私",
+      "programmablePrivacyDesc": "Sigma 协议启用了不受信任的零知识验证，并将其建立在核心协议中。",
+      "readyToBuild": "准备在Ergo上建造吗？",
+      "readyToBuildDesc": "加入建设者社区，创造分散融资的未来。",
+      "startBuilding": "开始Building",
+      "exploreEcosystem": "探索Ecosystem"
+    },
+    "detail": {
+      "seo": {
+        "notFound": {
+          "title": "未找到对比页",
+          "description": "请求的对比页面不存在。"
+        },
+        "imageAltTemplate": "Ergo vs {name} 对比"
+      },
+      "allComparisons": "所有比较",
+      "featureComparison": "功能比较",
+      "deepDive": "深度潜行",
+      "ergoAdvantage": "Ergo 优势",
+      "relatedInfographics": "相关信息图形",
+      "faq": "常见问题",
+      "moreComparisons": "更多比较",
+      "readyToExperience": "准备体验Ergo吗？",
+      "readyToExperienceDesc": "加入成千上万选择权力下放、安全和财政自由的用户。",
+      "getWallet": "获取钱包",
+      "startBuilding": "开始Building",
+      "lastUpdated": "上次更新"
+    },
+    "features": {
+      "consensus": "十二. 协商一致意见：",
+      "stateModel": "状态模型",
+      "smartContracts": "智能合同",
+      "privacy": "隐私",
+      "sustainability": "可持续性",
+      "lightClients": "轻型客户端",
+      "miningAlgorithm": "采矿算法",
+      "blockTime": "出块时间",
+      "launchModel": "启动模型",
+      "networkEffect": "网络效果"
+    }
+  },
+  "comparePageClient": {
+    "breadcrumbTitle": "Ergo vs {name}",
+    "heroVs": "vs",
+    "heroTitle": "Ergo vs",
+    "sections": {
+      "featureComparison": "功能",
+      "featureComparisonHighlight": "比较",
+      "feature": "功能",
+      "advantageNote": "显示该类别的优点。最后更新：",
+      "deepDive": "深度的",
+      "deepDiveHighlight": "潜行",
+      "ergoAdvantage": "Ergo 优势",
+      "relatedArticles": "相关的",
+      "relatedArticlesHighlight": "文章",
+      "minRead": "最小读取数",
+      "relatedInfographics": "相关的",
+      "relatedInfographicsHighlight": "信息图像",
+      "faq": "常见问题",
+      "faqHighlight": "问 题",
+      "moreComparisons": "更多",
+      "moreComparisonsHighlight": "比较"
+    },
+    "cta": {
+      "title": "准备体验Ergo吗？",
+      "description": "加入成千上万选择权力下放、安全和财政自由的用户。",
+      "getWallet": "获取钱包",
+      "startBuilding": "开始Building"
+    }
+  }
+}

@@ -1,33 +1,17 @@
 import { NextResponse } from 'next/server'
-import { siteConfig } from '@/config/site-config'
+import { generateMultilingualSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
 
 export async function GET() {
-  const baseUrl = siteConfig.siteUrl
-  
-  // Ecosystem projects and tools
   const ecosystemPages = [
-    { url: '/ecosystem/spectrum', priority: 0.7, changefreq: 'weekly' },
-    { url: '/ecosystem/sigmausd', priority: 0.7, changefreq: 'weekly' },
-    { url: '/ecosystem/rosen-bridge', priority: 0.7, changefreq: 'weekly' },
-    { url: '/ecosystem/ergomixer', priority: 0.7, changefreq: 'weekly' },
-    { url: '/ecosystem/paideia', priority: 0.7, changefreq: 'weekly' },
-    { url: '/ecosystem/duckpools', priority: 0.7, changefreq: 'weekly' },
+    { url: '/ecosystem/spectrum', priority: 0.7, changefreq: 'weekly' as const },
+    { url: '/ecosystem/sigmausd', priority: 0.7, changefreq: 'weekly' as const },
+    { url: '/ecosystem/rosen-bridge', priority: 0.7, changefreq: 'weekly' as const },
+    { url: '/ecosystem/ergomixer', priority: 0.7, changefreq: 'weekly' as const },
+    { url: '/ecosystem/paideia', priority: 0.7, changefreq: 'weekly' as const },
+    { url: '/ecosystem/duckpools', priority: 0.7, changefreq: 'weekly' as const },
   ]
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${ecosystemPages.map(page => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`
+  const sitemap = generateMultilingualSitemap(ecosystemPages)
 
-  return new NextResponse(sitemap, {
-    headers: {
-      'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600'
-    }
-  })
+  return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

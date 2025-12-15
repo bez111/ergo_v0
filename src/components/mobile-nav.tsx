@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import * as React from "react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"

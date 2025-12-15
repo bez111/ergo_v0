@@ -226,4 +226,113 @@ export interface DefinedTermSet {
   name: string
   description: string
   hasDefinedTerm: DefinedTerm[]
-} 
+}
+
+// ItemList for collections/lists of items
+export interface ItemList {
+  '@type': 'ItemList'
+  name?: string
+  description?: string
+  itemListElement: {
+    '@type': 'ListItem'
+    position: number
+    name: string
+    url?: string
+    item?: string
+    description?: string
+  }[]
+}
+
+// Cryptocurrency product schema for ERG
+export interface CryptocurrencyProduct {
+  '@context': 'https://schema.org'
+  '@type': ['Product', 'FinancialProduct', 'CurrencyConversionService']
+  '@id': string
+  name: string
+  alternateName?: string[]
+  description: string
+  category: string
+  brand: {
+    '@type': 'Organization'
+    name: string
+    logo?: string
+  }
+  manufacturer?: {
+    '@type': 'Organization'
+    name: string
+    url: string
+  }
+  offers?: {
+    '@type': 'Offer'
+    category: string
+    availability: string
+    priceCurrency: string
+    seller?: {
+      '@type': 'Organization'
+      name: string
+    }
+  }
+  potentialAction?: {
+    '@type': string
+    target: {
+      '@type': 'EntryPoint'
+      urlTemplate: string
+    }
+    name: string
+  }[]
+  additionalProperty?: {
+    '@type': 'PropertyValue'
+    name: string
+    value: string
+  }[]
+  isRelatedTo?: {
+    '@type': 'FinancialProduct'
+    name: string
+    description: string
+  }[]
+}
+
+// WebPage schema
+export interface WebPage {
+  '@type': 'WebPage'
+  '@id'?: string
+  name: string
+  url: string
+  description?: string
+  mainEntity?: Record<string, unknown>
+  breadcrumb?: BreadcrumbList
+  primaryImageOfPage?: {
+    '@type': 'ImageObject'
+    url: string
+  }
+}
+
+// CollectionPage for hub/index pages
+export interface CollectionPage {
+  '@type': 'CollectionPage'
+  name: string
+  description: string
+  url?: string
+  mainEntity?: ItemList
+}
+
+// Union type for all schema types
+export type SchemaType = 
+  | 'Organization'
+  | 'WebSite'
+  | 'Article'
+  | 'FAQPage'
+  | 'HowTo'
+  | 'SoftwareApplication'
+  | 'Product'
+  | 'Event'
+  | 'Person'
+  | 'TechArticle'
+  | 'Course'
+  | 'DefinedTerm'
+  | 'DefinedTermSet'
+  | 'BreadcrumbList'
+  | 'ItemList'
+  | 'WebPage'
+  | 'CollectionPage'
+  | 'CryptocurrencyProduct' 

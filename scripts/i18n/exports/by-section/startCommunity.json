@@ -1,0 +1,20 @@
+[
+  {
+    "key": "startCommunity.title",
+    "value": "Join Community",
+    "context": "Title",
+    "maxLength": 21
+  },
+  {
+    "key": "startCommunity.description",
+    "value": "Connect with the Ergo community across various platforms",
+    "context": "Description",
+    "maxLength": 84
+  },
+  {
+    "key": "startCommunity.subtitle",
+    "value": "Discord, Telegram, Reddit, and more",
+    "context": "General content",
+    "maxLength": 52.5
+  }
+]

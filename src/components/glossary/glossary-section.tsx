@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FadeIn } from "@/components/animations/fade-in"
 import { SchemaOrg } from "@/components/seo/schema-org"
-import { DefinedTerm, DefinedTermSet } from "@/src/types/schema"
+import { DefinedTerm, DefinedTermSet } from "@/types/schema"
 
 interface GlossarySectionProps {
   terms: DefinedTerm[]

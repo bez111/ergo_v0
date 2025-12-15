@@ -41,7 +41,7 @@ import {
   CheckSquare,
   AlertTriangle
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Alert } from "@/components/ui/alert";
 

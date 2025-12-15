@@ -1,5 +1,5 @@
 "use client";
-/* eslint-disable react-compiler/react-compiler */
+/* eslint-disable  */
 
 import React, { isValidElement, cloneElement, useState, useEffect, useRef } from "react";
 import { parseTextForGlossaryTerms } from "./AutoGlossary";

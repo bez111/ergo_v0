@@ -42,7 +42,7 @@ import {
   ChevronDown,
 
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 import { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
@@ -215,7 +215,7 @@ export default function TechnologyPage() {
         <>
           Protocol-native, <b>composable</b> data feeds without a central operator — no single point of bribery or
           failure. Can be plugged into any contract. More: {""}
-          <Link href="/technology" className="underline hover:opacity-80">Oracle Pools</Link>.
+          <Link href="/technology/oracle-pools" className="underline hover:opacity-80">Oracle Pools</Link>.
         </>
       ),
     },
@@ -238,7 +238,7 @@ export default function TechnologyPage() {
         <>
           Yes — issuance is native at the protocol layer, in a single transaction. <b>True native assets</b> are
           instantly composable with dApps. More: {""}
-          <Link href="/technology" className="underline hover:opacity-80">Native Tokens</Link>.
+          <Link href="/technology/native-tokens" className="underline hover:opacity-80">Native Tokens</Link>.
         </>
       ),
     },
@@ -272,7 +272,7 @@ export default function TechnologyPage() {
     // Scroll to hash and highlight on load
     useEffect(() => {
       const hash = decodeURIComponent(window.location.hash.replace("#", ""))
-      if (!hash) return
+      if (!hash) return undefined
       const el = document.getElementById(hash)
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" })
@@ -280,6 +280,7 @@ export default function TechnologyPage() {
         const t = setTimeout(() => el.classList.remove("ring-1", "ring-orange-500/60"), 1200)
         return () => clearTimeout(t)
       }
+      return undefined
     }, [])
 
     return (
@@ -476,7 +477,7 @@ export default function TechnologyPage() {
                   }
                   const itemVariants = {
                     hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
                   }
                   return (
                     <motion.div
@@ -597,7 +598,7 @@ export default function TechnologyPage() {
               <TabsContent value="resources" className="m-0">
                 {(() => {
                   const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }
-                  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }
+                  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } } }
                   return (
                     <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

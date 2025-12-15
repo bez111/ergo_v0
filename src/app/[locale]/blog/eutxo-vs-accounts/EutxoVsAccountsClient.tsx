@@ -4,7 +4,6 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -26,7 +25,7 @@ import {
   Coins,
   CheckCircle,
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 
 export function EutxoVsAccountsClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)

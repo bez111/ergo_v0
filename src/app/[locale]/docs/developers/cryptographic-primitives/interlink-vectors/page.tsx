@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
 import React from "react";
 import { ArrowLeft, Shield, Link as LinkIcon, GitBranch, Database } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { CodeBlock } from "@/components/ui";
 
 export default function InterlinkVectorsPage() {

@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any */
 
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 
 const platformCards = [

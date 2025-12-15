@@ -1,4 +1,4 @@
-import { DefinedTermSet } from '@/src/types/schema'
+import { DefinedTermSet } from '@/types/schema'
 
 export const ERGO_GLOSSARY: DefinedTermSet = {
   '@type': 'DefinedTermSet',

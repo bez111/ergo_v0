@@ -14,7 +14,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import OracleComparisonTable from "@/components/oracle-comparison-table"
 import { Eye, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, Database, Globe, Activity, TrendingUp, Users, Server, AlertCircle, ChevronDown, Terminal, BookOpen, Cpu, Network, Clock, BarChart3, DollarSign } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { useState } from "react"
 import React from "react"
 import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
@@ -218,8 +218,8 @@ export default function OraclePoolsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Oracle Pools", href: "/technology/oracle-pools" }
+              { name: "Technology", href: "/technology" },
+              { name: "Oracle Pools", href: "/technology/oracle-pools" }
             ]}
             className="mb-8"
           />

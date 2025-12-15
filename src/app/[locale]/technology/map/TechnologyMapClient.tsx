@@ -42,7 +42,7 @@ import {
   Target,
   TrendingUp
 } from "lucide-react"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
