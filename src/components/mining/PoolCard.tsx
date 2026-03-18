@@ -48,7 +48,7 @@ export function PoolCard({ pool }: { pool: Pool }) {
         {pool.mainFeatures && pool.mainFeatures.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-2">
             {pool.mainFeatures.slice(0, 3).map((tag, idx) => (
-              <span key={idx} className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">
+              <span key={tag} className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">
                 {tag}
               </span>
             ))}

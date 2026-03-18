@@ -25,7 +25,7 @@ export function InfographicDetailClient({ infographic }: InfographicDetailClient
       const returnUrl = sessionStorage.getItem('infographics-return-url');
       if (returnUrl && returnUrl.includes('/infographics')) {
         sessionStorage.removeItem('infographics-return-url');
-        window.location.href = returnUrl;
+        router.push(returnUrl);
       } else {
         router.push('/infographics');
       }

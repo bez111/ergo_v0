@@ -16,7 +16,7 @@ export async function GET() {
       }
     })
   } catch (error) {
-    console.error('Architecture status error:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Architecture status error:', error)
     
     return NextResponse.json({
       success: false,

@@ -35,17 +35,11 @@ export async function POST(request: NextRequest) {
     })
 
     if (result.success) {
-      // Логирование успешной подписки для аналитики
-      console.log(`✅ Newsletter subscription successful: ${email} from ${source}`)
-      
       return NextResponse.json({
         success: true,
         message: 'Successfully subscribed to newsletter!'
       })
     } else {
-      // Логирование ошибки
-      console.error(`❌ Newsletter subscription failed: ${email} - ${result.error}`)
-      
       // Возвращаем пользователю понятное сообщение об ошибке
       let userMessage = 'Failed to subscribe. Please try again.'
       
@@ -65,8 +59,6 @@ export async function POST(request: NextRequest) {
       )
     }
   } catch (error) {
-    console.error('Newsletter API Error:', error)
-    
     return NextResponse.json(
       { 
         success: false, 
@@ -97,7 +89,7 @@ export async function GET(request: NextRequest) {
       subscribed: false // Будет реализовано позже
     })
   } catch (error) {
-    console.error('Newsletter status check error:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Newsletter status check error:', error)
     return NextResponse.json(
       { success: false, error: 'Failed to check subscription status' },
       { status: 500 }

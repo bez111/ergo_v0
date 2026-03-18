@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect, useMemo } from "react";
 import { X, Search, FileText, Code, ExternalLink, Clock, Filter, Globe, BookOpen, MessageSquare, Calendar, Trash2, Lightbulb, Map, Layers, HelpCircle, Image, Pickaxe, Users } from "lucide-react";
 import { buildDocsSearchIndex, DocsSearchIndexItem, searchWithTypos } from "@/lib/docs-search-index";
 import { useSearchHistory } from "@/hooks/use-search-history";
-import { Link } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 
 function highlight(text: string, query: string) {
   if (!query) return text;
@@ -76,6 +76,7 @@ const popularQueries = [
 ];
 
 export default function DocsSearchModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(0);
   const [selectedType, setSelectedType] = useState<string | null>(null);
@@ -163,7 +164,7 @@ export default function DocsSearchModal({ open, onClose }: { open: boolean; onCl
         e.preventDefault();
       }
       if (e.key === "Enter" && flatResults[selected]) {
-        window.location.href = flatResults[selected].href;
+        router.push(flatResults[selected].href);
         onClose();
       }
       // Горячие клавиши для фильтров

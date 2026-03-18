@@ -5,8 +5,8 @@ export const siteConfig = {
   discordLink: "https://discord.com/invite/ergo-platform-668903786361651200",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org',
   
-  beehiivApiKey: process.env.BEEHIIV_API_KEY,
-  beehiivPublicationId: process.env.BEEHIIV_PUBLICATION_ID,
+  beehiivApiKey: process.env.BEEHIIV_API_KEY || '',
+  beehiivPublicationId: process.env.BEEHIIV_PUBLICATION_ID || '',
 
-  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || ''
 };

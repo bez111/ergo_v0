@@ -7,6 +7,7 @@ import { createAutocomplete } from '@algolia/autocomplete-core';
 import { createQuerySuggestionsPlugin } from '@algolia/autocomplete-plugin-query-suggestions';
 import { createAlgoliaInsightsPlugin } from '@algolia/autocomplete-plugin-algolia-insights';
 import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command } from 'lucide-react';
+import { useRouter } from '@/i18n/navigation';
 
 // Algolia configuration - replace with your actual credentials
 const ALGOLIA_APP_ID = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || 'your-app-id';
@@ -69,6 +70,7 @@ const algoliaInsightsPlugin = createAlgoliaInsightsPlugin({
 });
 
 export function AlgoliaSearch() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult | null>(null);
@@ -176,7 +178,7 @@ export function AlgoliaSearch() {
         case 'Enter':
           event.preventDefault();
           if (results.hits[selectedIndex]) {
-            window.location.href = results.hits[selectedIndex].url;
+            router.push(results.hits[selectedIndex].url);
             setIsOpen(false);
           }
           break;

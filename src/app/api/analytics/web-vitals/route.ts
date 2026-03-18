@@ -46,12 +46,9 @@ export async function POST(request: NextRequest) {
       webVitalsData.splice(0, webVitalsData.length - 1000)
     }
 
-    // Log for debugging (remove in production)
-    console.log(`📊 Web Vital: ${metric.name} = ${metric.value} (${metric.rating})`)
-
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Error storing Web Vital:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Error storing Web Vital:', error)
     return NextResponse.json({ error: 'Failed to store metric' }, { status: 500 })
   }
 }
@@ -76,7 +73,7 @@ export async function GET() {
 
     return NextResponse.json(stats)
   } catch (error) {
-    console.error('Error fetching Web Vitals stats:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Error fetching Web Vitals stats:', error)
     return NextResponse.json({ error: 'Failed to fetch stats' }, { status: 500 })
   }
 }

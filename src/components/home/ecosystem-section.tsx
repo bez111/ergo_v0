@@ -46,7 +46,7 @@ export function EcosystemSection() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <Link
-              key={index}
+              key={project.url}
               href={project.url}
               className="group flex flex-col gap-4 rounded-lg border p-6 hover:border-primary hover:bg-muted/50 transition-colors"
             >

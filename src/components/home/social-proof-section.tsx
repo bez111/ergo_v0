@@ -83,13 +83,13 @@ export function SocialProofSection() {
             <p className="text-gray-400 font-mono text-sm">TRUSTED BY LEADING EXCHANGES</p>
             <div className="flex flex-wrap justify-center items-center gap-8 mt-4">
               {trustedBy.map((exchange, index) => (
-                <div key={index} className="text-gray-600 font-mono text-sm">{exchange}</div>
+                <div key={exchange} className="text-gray-600 font-mono text-sm">{exchange}</div>
               ))}
             </div>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center p-4 rounded-xl bg-neutral-900/50 border border-neutral-700">
+              <div key={stat.label} className="text-center p-4 rounded-xl bg-neutral-900/50 border border-neutral-700">
                 <stat.icon className="h-8 w-8 text-orange-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400 font-mono">{stat.label}</div>
@@ -123,7 +123,7 @@ export function SocialProofSection() {
           >
             {trustedBy.map((exchange, index) => (
               <motion.div
-                key={index}
+                key={exchange}
                 variants={staggerItem}
                 transition={{ delay: isInitialized ? (0.2 + index * 0.05) : 0 }}
                 className="text-gray-600 font-mono text-sm hover:text-orange-400 transition-colors duration-200"
@@ -142,7 +142,7 @@ export function SocialProofSection() {
         >
           {stats.map((stat, index) => (
             <motion.div
-              key={index}
+              key={stat.label}
               variants={staggerItem}
               transition={{ delay: isInitialized ? (0.4 + index * 0.1) : 0 }}
               className="text-center p-6 rounded-xl bg-neutral-900/50 border border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm group"

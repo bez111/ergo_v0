@@ -141,7 +141,7 @@ export function FeatureComparisonSection() {
                 </thead>
                 <tbody>
                   {features.map((item, index) => (
-                    <tr key={index} className="border-b border-neutral-800/50 hover:bg-neutral-900/30">
+                    <tr key={item.feature} className="border-b border-neutral-800/50 hover:bg-neutral-900/30">
                       <td className="py-4 px-6">
                         <div>
                           <div className="text-white font-semibold">{item.feature}</div>
@@ -212,8 +212,8 @@ export function FeatureComparisonSection() {
               </thead>
               <tbody>
                 {features.map((item, index) => (
-                  <motion.tr 
-                    key={index}
+                  <motion.tr
+                    key={item.feature}
                     variants={staggerItem}
                     transition={{ delay: isInitialized ? (0.4 + index * 0.05) : 0 }}
                     className="border-b border-neutral-800/50 hover:bg-neutral-800/30 transition-colors duration-200"

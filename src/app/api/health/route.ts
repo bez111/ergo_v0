@@ -28,7 +28,7 @@ async function checkDatabase(): Promise<boolean> {
     // const result = await db.query('SELECT 1')
     return true
   } catch (error) {
-    console.error('Database health check failed:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Database health check failed:', error)
     return false
   }
 }
@@ -40,7 +40,7 @@ async function checkRedis(): Promise<boolean> {
     // const result = await redis.ping()
     return true
   } catch (error) {
-    console.error('Redis health check failed:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Redis health check failed:', error)
     return false
   }
 }
@@ -56,7 +56,7 @@ async function checkExternalAPIs(): Promise<boolean> {
     
     return checks.every(result => result.status === 'fulfilled')
   } catch (error) {
-    console.error('External API health check failed:', error)
+    if (process.env.NODE_ENV === 'development') console.error('External API health check failed:', error)
     return false
   }
 }

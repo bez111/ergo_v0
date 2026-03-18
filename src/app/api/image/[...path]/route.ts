@@ -116,7 +116,7 @@ export async function GET(
       },
     })
   } catch (error) {
-    console.error('Image optimization error:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Image optimization error:', error)
     return new NextResponse('Error processing image', { status: 500 })
   }
 }

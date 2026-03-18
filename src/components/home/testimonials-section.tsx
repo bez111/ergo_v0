@@ -122,7 +122,7 @@ export function TestimonialsSection() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-700">
+                <div key={testimonial.author} className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-700">
                   <Quote className="h-8 w-8 text-orange-400 mb-4" />
                   <p className="text-gray-300 mb-6 leading-relaxed">{testimonial.quote}</p>
                   <div className="flex items-center gap-4">
@@ -172,7 +172,7 @@ export function TestimonialsSection() {
           >
             {testimonials.map((testimonial, index) => (
               <motion.div
-                key={index}
+                key={testimonial.author}
                 variants={staggerItem}
                 whileHover={{ scale: 1.02 }}
                 className="p-8 rounded-xl bg-neutral-900/50 border border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm group"

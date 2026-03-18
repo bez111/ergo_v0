@@ -1,8 +1,8 @@
 // Simple toast implementation
-export function toast({ title, description, duration = 3000 }: { 
+export function toast({ title, description, duration = 3000 }: {
   title: string
   description?: string
-  duration?: number 
+  duration?: number
 }) {
   // Create toast element
   const toastEl = document.createElement('div')
@@ -11,14 +11,21 @@ export function toast({ title, description, duration = 3000 }: {
     bg-black border border-orange-500/30 text-white
     animate-in slide-in-from-top-2 duration-300
   `.trim()
-  
-  toastEl.innerHTML = `
-    <div class="font-semibold text-sm">${title}</div>
-    ${description ? `<div class="text-xs text-gray-300 mt-1">${description}</div>` : ''}
-  `
-  
+
+  const titleEl = document.createElement('div')
+  titleEl.className = 'font-semibold text-sm'
+  titleEl.textContent = title
+  toastEl.appendChild(titleEl)
+
+  if (description) {
+    const descEl = document.createElement('div')
+    descEl.className = 'text-xs text-gray-300 mt-1'
+    descEl.textContent = description
+    toastEl.appendChild(descEl)
+  }
+
   document.body.appendChild(toastEl)
-  
+
   // Auto remove
   setTimeout(() => {
     toastEl.style.opacity = '0'

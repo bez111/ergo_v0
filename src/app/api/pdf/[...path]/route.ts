@@ -44,7 +44,7 @@ export async function GET(
       }
     })
   } catch (error) {
-    console.error('Error serving PDF:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Error serving PDF:', error)
     return new NextResponse('Internal Server Error', { status: 500 })
   }
 }

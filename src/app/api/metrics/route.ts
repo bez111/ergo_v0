@@ -124,7 +124,7 @@ export async function GET() {
       }
     })
   } catch (error) {
-    console.error('Error collecting metrics:', error)
+    if (process.env.NODE_ENV === 'development') console.error('Error collecting metrics:', error)
     return NextResponse.json(
       { error: 'Failed to collect metrics' },
       { status: 500 }

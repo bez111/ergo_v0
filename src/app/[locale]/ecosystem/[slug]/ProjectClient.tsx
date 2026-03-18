@@ -297,7 +297,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
             >
               <div className="prose prose-invert prose-lg max-w-none">
                 {project.longDescription.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-gray-300 leading-relaxed mb-4">
+                  <p key={`para-${index}`} className="text-gray-300 leading-relaxed mb-4">
                     {paragraph.trim()}
                   </p>
                 ))}
@@ -315,9 +315,9 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
             >
               <h2 className="text-2xl font-bold text-white mb-6">{t('sections.keyFeatures')}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {project.features.map((feature, index) => (
-                  <div 
-                    key={index}
+                {project.features.map((feature) => (
+                  <div
+                    key={feature}
                     className="flex items-center gap-3 p-4 bg-black rounded-2xl border border-white/10"
                   >
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -437,8 +437,8 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
               <h2 className="text-2xl font-bold text-white mb-6">{t('sections.faq')}</h2>
               <div className="space-y-3">
                 {project.faq.map((item, index) => (
-                  <div 
-                    key={index}
+                  <div
+                    key={item.question}
                     className="bg-black rounded-2xl border border-white/10 overflow-hidden"
                   >
                     <button

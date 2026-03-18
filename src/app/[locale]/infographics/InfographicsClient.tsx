@@ -881,16 +881,17 @@ function InfographicCard({
   infographic: InfographicMeta; 
   onDownload: (infographic: InfographicMeta, size?: string) => void;
 }) {
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
-  
+
   // Truncate title to max 2 lines (approximately 80 chars)
-  const truncatedTitle = infographic.title.length > 80 
-    ? infographic.title.substring(0, 77) + '...' 
+  const truncatedTitle = infographic.title.length > 80
+    ? infographic.title.substring(0, 77) + '...'
     : infographic.title;
-  
+
   // Truncate description to max 2 lines (approximately 140 chars)
-  const truncatedDescription = infographic.shortDescription.length > 140 
-    ? infographic.shortDescription.substring(0, 137) + '...' 
+  const truncatedDescription = infographic.shortDescription.length > 140
+    ? infographic.shortDescription.substring(0, 137) + '...'
     : infographic.shortDescription;
 
   const handleCardClick = () => {
@@ -899,7 +900,7 @@ function InfographicCard({
       const currentUrl = window.location.href;
       sessionStorage.setItem('infographics-return-url', currentUrl);
     }
-    window.location.href = `/infographics/${infographic.slug}`;
+    router.push(`/infographics/${infographic.slug}`);
   };
 
   return (

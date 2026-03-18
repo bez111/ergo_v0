@@ -20,12 +20,7 @@ export async function POST(request: NextRequest) {
       
       // Логируем критические метрики
       if (data.rating === 'poor') {
-        console.warn('[RUM Alert]', {
-          metric: data.name,
-          value: data.value,
-          path: data.path,
-          device: data.device
-        })
+        // Poor metric detected — integrate with monitoring service in production
       }
     } else {
       // В development режиме данные не отправляются
@@ -33,7 +28,7 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('[RUM Error]', error)
+    if (process.env.NODE_ENV === 'development') console.error('[RUM Error]', error)
     return NextResponse.json({ success: false }, { status: 500 })
   }
 }

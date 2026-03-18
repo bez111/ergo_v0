@@ -105,7 +105,7 @@ function GrantsClient() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {features.map((feature, index) => (
                   <motion.div
-                    key={index}
+                    key={feature.icon.displayName || `feature-${index}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 + index * 0.1 }}

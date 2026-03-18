@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
 
-import { Link } from "@/i18n/navigation"
+import { Link, useRouter } from "@/i18n/navigation"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations } from "next-intl"
@@ -296,6 +296,7 @@ const statsItems: StatsGridItem[] = [
 
 export default function StartPage() {
   const t = useTranslations('start')
+  const router = useRouter()
   const [selectedJourney, setSelectedJourney] = useState<Journey | null>(null)
   const [completedSteps, setCompletedSteps] = useLocalStorage<Record<string, boolean>>(
     "ergo_start_completed",
@@ -634,7 +635,7 @@ export default function StartPage() {
             secondaryAction={{
               text: "Skip to Docs",
               icon: BookOpen,
-              onClick: () => window.location.href = "/docs"
+              onClick: () => router.push("/docs")
             }}
           />
         </section>

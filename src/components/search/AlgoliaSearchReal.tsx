@@ -4,6 +4,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command } from 'lucide-react';
+import { useRouter } from '@/i18n/navigation';
 import { algoliaConfig } from '@/lib/algolia-config';
 
 interface SearchHit {
@@ -37,6 +38,7 @@ interface SearchResult {
 }
 
 export function AlgoliaSearchReal() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult | null>(null);
@@ -145,7 +147,7 @@ export function AlgoliaSearchReal() {
         case 'Enter':
           event.preventDefault();
           if (results.hits[selectedIndex]) {
-            window.location.href = results.hits[selectedIndex].url;
+            router.push(results.hits[selectedIndex].url);
             setIsOpen(false);
           }
           break;

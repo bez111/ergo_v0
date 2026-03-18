@@ -161,7 +161,7 @@ watchForBoxes();
 {`// Fleet SDK bot (conceptual)
 import { OutputBuilder, TransactionBuilder, ErgoNodeApi, ErgoProver } from "@fleet-sdk/core";
 const nodeApi = new ErgoNodeApi({ url: "http://your-node-ip:9053" });
-const botProver = new ErgoProver(process.env.BOT_SECRET_KEY);
+const botProver = new ErgoProver("YOUR_SECRET_KEY"); // ⚠️ Use env vars on server only
 async function updateOraclePrice() {
   try {
     const price = await getExternalPrice("ERG-USD");
