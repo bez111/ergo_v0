@@ -361,6 +361,10 @@
   },
   "navigation": {
     "home": "Home",
+    "build": "Build",
+    "agent economy": "Agent Economy",
+    "agent payments": "Agent Payments",
+    "demos": "Demos",
     "start": "Start",
     "use": "Use",
     "ecosystem": "Ecosystem",
