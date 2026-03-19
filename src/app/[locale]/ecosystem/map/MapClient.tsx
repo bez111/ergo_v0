@@ -1,7 +1,4 @@
 "use client"
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { useMemo, useRef, useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
@@ -95,7 +92,7 @@ function MapClient() {
   const [hovered, setHovered] = useState<string | null>(null)
   const [showFeatured, setShowFeatured] = useState(false)
   const hoverTimeoutRef = useRef<number | null>(null)
-  const isTouch = typeof window !== "undefined" && ("ontouchstart" in window || (navigator as any)?.maxTouchPoints > 0)
+  const isTouch = typeof window !== "undefined" && ("ontouchstart" in window || navigator?.maxTouchPoints > 0)
   const dragRef = useRef<{ dragging: boolean; startX: number; startY: number; baseX: number; baseY: number }>({ dragging: false, startX: 0, startY: 0, baseX: 0, baseY: 0 })
   const svgRef = useRef<SVGSVGElement | null>(null)
   const [isNarrow, setIsNarrow] = useState(false)
@@ -430,7 +427,7 @@ function MapClient() {
                           {!isNarrow && <text x={n.x + 14} y={n.y + 4} fontSize={12} fill="#E5E7EB">{label}</text>}
                           {hovered === n.name && (
                             <foreignObject x={tooltipX} y={tooltipY} width={240} height={90} style={{ pointerEvents: "auto" }}>
-                              <div className="bg-neutral-900/90 rounded-lg px-3 py-2 text-xs shadow-xl border border-neutral-700 text-white" style={{ textAlign: tooltipAlign as any }}>
+                              <div className="bg-neutral-900/90 rounded-lg px-3 py-2 text-xs shadow-xl border border-neutral-700 text-white" style={{ textAlign: tooltipAlign as "left" | "right" }}>
                                 <div className="font-semibold flex items-center gap-1">
                                   {n.name}
                                   {n.featured && <Star className="w-3 h-3 text-orange-400" />}

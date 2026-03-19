@@ -10,7 +10,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'start.page.quiz' })
+  const t = await getTranslations({ locale, namespace: 'start.quiz' })
 
   const title = t('seo.title')
   const description = t('seo.description')
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function QuizPage({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'start.page.quiz' })
+  const t = await getTranslations({ locale, namespace: 'start.quiz' })
 
   // Quiz schema (special type, kept structured)
   const quizSchema = {

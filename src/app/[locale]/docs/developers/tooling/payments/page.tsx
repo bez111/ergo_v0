@@ -1,9 +1,14 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
+
+interface PaymentToolItem {
+  title: string;
+  content: string;
+  url: string;
+}
 
 const paymentTools = [
   {
@@ -28,7 +33,7 @@ const paymentTools = [
   }
 ];
 
-function CardGrid({ items }: { items: any[] }) {
+function CardGrid({ items }: { items: PaymentToolItem[] }) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
       {items.map((item) => (

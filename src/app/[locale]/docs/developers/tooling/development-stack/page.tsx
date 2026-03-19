@@ -1,9 +1,23 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { Server, Globe, Monitor, Smartphone, Key, User, Wrench, BookOpen, Rocket, Package, Box, MessageCircle, HelpCircle, TestTube, Link2, Users, Cpu, Code, Layers, FileText, Database, Zap, FileQuestion, ExternalLink } from "lucide-react";
+
+interface DevStackCardItem {
+  title: string;
+  url: string;
+  content?: React.ReactNode;
+  icon?: React.ReactNode;
+  external?: boolean;
+}
+
+interface DevStackSimpleListItem {
+  title: string;
+  url: string;
+  content?: React.ReactNode;
+}
 
 // --- Development Stack Cards ---
 const justGettingStartedCards = [
@@ -88,7 +102,7 @@ function Card({ title, content, icon, url }: { title: string; content: string; i
   );
 }
 // --- Introduction Data (from introduction/page.tsx) ---
-const resourcesCards: any[] = [];
+const resourcesCards: DevStackCardItem[] = [];
 const baseResources = resourcesCards.filter(x => x.title !== "Sigmaverse" && x.title !== "Come chat!");
 const communityCards = [
   ...resourcesCards.filter(x => x.title === "Sigmaverse" || x.title === "Come chat!"),
@@ -186,7 +200,7 @@ const simpleExamples = [
   { title: "Creating a signature", content: "How to create and verify a multi-signature (m-of-n) contract on Ergo.", url: "../scs/sigma/3-out-of-5.md" },
   { title: "Sending a chained transaction", content: "Example of composing and sending chained transactions for advanced dApps.", url: "../anatomy/transactions/chained.md" }
 ];
-function DevelopmentStackCardGrid({ items, icon }: { items: any[]; icon?: boolean }) {
+function DevelopmentStackCardGrid({ items, icon }: { items: DevStackCardItem[]; icon?: boolean }) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-12">
       {items.map((item) => {
@@ -224,7 +238,7 @@ function DevelopmentStackCardGrid({ items, icon }: { items: any[]; icon?: boolea
     </div>
   );
 }
-function DevelopmentStackSimpleList({ items }: { items: any[] }) {
+function DevelopmentStackSimpleList({ items }: { items: DevStackSimpleListItem[] }) {
   return (
     <ul className="list-disc pl-6 text-gray-300 mb-6">
       {items.map((item) => (

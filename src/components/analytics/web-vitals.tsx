@@ -1,9 +1,8 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { useEffect } from 'react'
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals'
+import type { Metric } from 'web-vitals'
 
 interface WebVitalsProps {
   debug?: boolean
@@ -11,7 +10,7 @@ interface WebVitalsProps {
 
 export function WebVitals({ debug = false }: WebVitalsProps) {
   useEffect(() => {
-    const reportWebVitals = (metric: any) => {
+    const reportWebVitals = (metric: Metric) => {
       if (debug) {
         console.log(`[Web Vitals] ${metric.name}:`, metric.value)
       }

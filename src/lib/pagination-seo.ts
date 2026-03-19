@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any, import/no-anonymous-default-export */
+/* eslint-disable import/no-anonymous-default-export */
 /**
  * Pagination SEO utilities
  */
@@ -75,7 +75,7 @@ export function shouldIndexPage(config: PaginationConfig): boolean {
 /**
  * Generate structured data for pagination
  */
-export function getPaginationSchema(config: PaginationConfig, items: any[]) {
+export function getPaginationSchema(config: PaginationConfig, items: unknown[]) {
   const { currentPage, totalPages, baseUrl } = config
   
   return {

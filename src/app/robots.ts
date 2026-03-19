@@ -92,9 +92,26 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Claude-Web', // Claude browsing
         allow: '/',
       },
+      {
+        userAgent: 'PerplexityBot', // Perplexity AI
+        allow: '/',
+      },
+      {
+        userAgent: 'Applebot-Extended', // Apple AI
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider', // ByteDance/TikTok AI
+        allow: '/',
+      },
+      {
+        userAgent: 'cohere-ai', // Cohere
+        allow: '/',
+      },
     ],
     sitemap: [
       `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/llms.txt`,
     ],
     host: baseUrl,
   }

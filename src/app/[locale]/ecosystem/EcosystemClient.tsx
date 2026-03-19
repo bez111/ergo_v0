@@ -1,8 +1,8 @@
 "use client"
 
-/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/set-state-in-effect */
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
 
-import { useEffect, useMemo, useState, useCallback } from "react"
+import React, { useEffect, useMemo, useState, useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
@@ -55,9 +55,11 @@ import {
   Activity,
   ArrowRight,
 } from "lucide-react"
-import { projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, sortProjectsForListing } from "./_data"
+import { projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, sortProjectsForListing, type EcosystemProject } from "./_data"
 
-const projectIcons = {
+type ProjectStatus = EcosystemProject["status"]
+
+const projectIcons: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   "Spectrum Finance": ArrowRightLeft,
   "SigmaUSD": DollarSign,
   "Rosen Bridge": GitBranch,
@@ -98,7 +100,7 @@ const projectIcons = {
   "EXLE": Home,
 }
 
-const statusConfig = {
+const statusConfig: Record<ProjectStatus, { icon: React.ReactNode; color: string; label: string }> = {
   OPERATIONAL: {
     icon: <CheckCircle className="w-4 h-4 text-green-400" aria-hidden="true" focusable="false" />,
     color: "text-green-400",
@@ -119,7 +121,7 @@ const statusConfig = {
     color: "text-red-400",
     label: "NOT OPERATING",
   },
-} as const
+}
 
 const statusLabelMap: Record<string, string> = {
   NOT_OPERATING: "NOT OPERATING",
@@ -133,7 +135,7 @@ export default function EcosystemClient() {
   const [searchTerm, setSearchTerm] = useState("")
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("ALL")
-  const [selectedStatus, setSelectedStatus] = useState("ALL")
+  const [selectedStatus, setSelectedStatus] = useState<"ALL" | ProjectStatus>("ALL")
   const [viewMode, setViewMode] = useState<"grid" | "list">("list")
   const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0)
   const [isAutoPlay, setIsAutoPlay] = useState(true)
@@ -251,7 +253,7 @@ export default function EcosystemClient() {
                         <div className="flex items-center gap-4">
                           <div className="p-3 rounded-xl bg-orange-500/20 border border-orange-500/30">
                             {(() => {
-                              const IconComponent = (projectIcons as any)[project.name] || Activity
+                              const IconComponent = projectIcons[project.name] || Activity
                               return <IconComponent className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />
                             })()}
                           </div>
@@ -260,8 +262,8 @@ export default function EcosystemClient() {
                             <Badge variant="secondary" className="mt-1 bg-neutral-800 text-neutral-300 border-neutral-700">{project.category}</Badge>
                           </div>
                         </div>
-                        <div className={`flex items-center gap-2 ${(statusConfig as any)[project.status]?.color}`}>
-                          {(statusConfig as any)[project.status]?.icon}
+                        <div className={`flex items-center gap-2 ${statusConfig[project.status]?.color}`}>
+                          {statusConfig[project.status]?.icon}
                         </div>
                       </div>
                       <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
@@ -335,7 +337,7 @@ export default function EcosystemClient() {
                     <Button
                       key={status}
                       variant="outline"
-                      onClick={() => setSelectedStatus(status as any)}
+                      onClick={() => setSelectedStatus(status as "ALL" | ProjectStatus)}
                       className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}
                     >
                       {label}
@@ -366,7 +368,7 @@ export default function EcosystemClient() {
                             <div className="col-span-12 md:col-span-3 flex items-center gap-4">
                               <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
                                 {(() => {
-                                  const IconComponent = (projectIcons as any)[project.name] || Activity
+                                  const IconComponent = projectIcons[project.name] || Activity
                                   return <IconComponent className="w-5 h-5 text-orange-400" aria-hidden="true" focusable="false" />
                                 })()}
                               </div>
@@ -375,9 +377,9 @@ export default function EcosystemClient() {
                             <div className="col-span-6 md:col-span-2">
                               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-neutral-800 text-neutral-300 border border-neutral-700">{project.category}</span>
                             </div>
-                            <div className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${(statusConfig as any)[project.status]?.color}`}>
-                              {(statusConfig as any)[project.status]?.icon}
-                              <span>{(statusConfig as any)[project.status]?.label ?? project.status}</span>
+                            <div className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${statusConfig[project.status]?.color}`}>
+                              {statusConfig[project.status]?.icon}
+                              <span>{statusConfig[project.status]?.label ?? project.status}</span>
                             </div>
                             <div className="col-span-11 md:col-span-4 md:col-start-8">
                               <p className="text-sm text-neutral-400 line-clamp-2">{project.description}</p>

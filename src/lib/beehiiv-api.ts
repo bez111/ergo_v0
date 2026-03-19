@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable */
 // Beehiiv API Integration
 // Сервис для работы с Beehiiv API для сбора email подписчиков
 
@@ -18,7 +18,7 @@ export interface BeehiivSubscriber {
 export interface BeehiivResponse {
   success: boolean
   message?: string
-  data?: any
+  data?: Record<string, unknown>
   error?: string
 }
 

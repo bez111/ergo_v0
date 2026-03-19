@@ -1,10 +1,15 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { ExternalLink, ArrowLeft } from "lucide-react";
+
+interface AppKitCardItem {
+  title: string;
+  url: string;
+  content?: string;
+  external?: boolean;
+}
 
 const tutorials = [
   {
@@ -80,7 +85,7 @@ const references = [
   }
 ];
 
-function CardGrid({ items }: { items: any[] }) {
+function CardGrid({ items }: { items: AppKitCardItem[] }) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
       {items.map((item) => (
@@ -107,7 +112,7 @@ function CardGrid({ items }: { items: any[] }) {
   );
 }
 
-function SimpleList({ items }: { items: any[] }) {
+function SimpleList({ items }: { items: AppKitCardItem[] }) {
   return (
     <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
       {items.map((item) => (

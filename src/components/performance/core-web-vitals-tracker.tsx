@@ -1,8 +1,10 @@
 'use client'
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useEffect } from 'react'
+
+// Note: Window.gtag type is declared in newsletter-analytics.ts
 
 interface WebVitalsMetric {
   name: string
@@ -91,7 +93,7 @@ export function CoreWebVitalsTracker() {
 function sendToAnalytics(metric: string, value: number, rating: string) {
   // Send to Google Analytics 4
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', metric, {
+    window.gtag?.('event', metric, {
       custom_parameter_1: value,
       custom_parameter_2: rating,
       page_location: window.location.href

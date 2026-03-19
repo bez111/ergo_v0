@@ -1,6 +1,6 @@
 "use client"
 
-/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps */
 
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -253,9 +253,9 @@ export default function TechnologyPage() {
       if (node === null || node === undefined || node === false) return ""
       if (typeof node === "string" || typeof node === "number") return String(node)
       if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
-      if (typeof node === "object" && "props" in (node as any)) {
-        const { children } = (node as any).props ?? {}
-        return nodeToPlainText(children)
+      if (typeof node === "object" && node !== null && "props" in (node as React.ReactElement)) {
+        const { children } = ((node as React.ReactElement).props as Record<string, unknown>) ?? {}
+        return nodeToPlainText(children as React.ReactNode)
       }
       return ""
     }
@@ -604,7 +604,7 @@ export default function TechnologyPage() {
                       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {resources.map((res) => {
                           const isExternal = /^https?:\/\//.test(res.href)
-                          const Wrapper: any = isExternal ? 'a' : Link
+                          const Wrapper: React.ElementType = isExternal ? 'a' : Link
                           const wrapperProps = isExternal
                             ? { href: res.href, target: "_blank", rel: "noopener noreferrer" }
                             : { href: res.href }
@@ -707,9 +707,9 @@ export default function TechnologyPage() {
   )
 } 
 
-type Detail = { icon?: any; title: string; description: string }
-type TechFeature = { icon: any; title: string; description: string; href?: string; details: Detail[] }
-const resources: { title: string; href: string; icon: any }[] = [
+type Detail = { icon?: React.ElementType; title: string; description: string }
+type TechFeature = { icon: React.ElementType; title: string; description: string; href?: string; details: Detail[] }
+const resources: { title: string; href: string; icon: React.ElementType }[] = [
       { title: "Ergo Docs", href: "/docs", icon: Book },
   { title: "Whitepaper", href: "https://ergoplatform.org/docs/whitepaper.pdf", icon: ExternalLink },
   { title: "GitHub", href: "https://github.com/ergoplatform", icon: ExternalLink },

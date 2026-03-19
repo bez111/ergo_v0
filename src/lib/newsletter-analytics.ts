@@ -143,9 +143,4 @@ export class NewsletterAnalytics {
 // Export singleton instance
 export const newsletterAnalytics = NewsletterAnalytics.getInstance()
 
-// Type declaration for gtag (Google Analytics)
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void
-  }
-} 
+// Window.gtag type is declared in google-analytics.tsx 

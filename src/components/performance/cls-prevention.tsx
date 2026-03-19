@@ -1,6 +1,10 @@
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useLayoutEffect, useState, useRef } from 'react'
+
+// LayoutShift entry type (not yet in standard TypeScript DOM lib)
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput: boolean
+  value: number
+}
 
 interface CLSPreventionProps {
   children: React.ReactNode
@@ -128,8 +132,9 @@ export function LayoutShiftTracker() {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         // Only count layout shifts without recent user input
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value
+        const layoutShiftEntry = entry as LayoutShiftEntry
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value
           
           // Log if CLS exceeds threshold
           if (clsValue > 0.1) {

@@ -422,8 +422,7 @@ export default function CommunityClient() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {contributions.map((contribution, index) => {
                     const isMarketing = contribution.title === contributionBase[5]?.title // Marketing card
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    const CardWrapper: any = isMarketing ? Link : 'div'
+                    const CardWrapper: React.ElementType = isMarketing ? Link : 'div'
                     const cardProps = isMarketing ? { href: '/start/community/marketing' } : {}
                     
                     return (

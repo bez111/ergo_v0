@@ -1,9 +1,14 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
+
+interface LanguageCardItem {
+  title: string;
+  content: string;
+  url: string;
+}
 
 const languages = [
   {
@@ -23,7 +28,7 @@ const languages = [
   }
 ];
 
-function CardGrid({ items }: { items: any[] }) {
+function CardGrid({ items }: { items: LanguageCardItem[] }) {
   return (
     <div className="grid md:grid-cols-3 gap-6 mb-8">
       {items.map((item) => (

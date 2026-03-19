@@ -1,10 +1,10 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, Search, HelpCircle, Users, Shield, Code, Zap, Cpu } from "lucide-react"
+import { ChevronDown, Search, HelpCircle, Users, Shield, Code, Zap, Cpu, type LucideIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -43,7 +43,7 @@ export default function FAQClientLocalized() {
       id: string
       category: string
       categoryKey: string
-      icon: any
+      icon: LucideIcon
       q: string
       a: string
     }> = []
@@ -51,7 +51,7 @@ export default function FAQClientLocalized() {
     categories.forEach(categoryKey => {
       const categoryQuestions = t.raw(`questions.${categoryKey}`)
       if (categoryQuestions && typeof categoryQuestions === 'object') {
-        Object.entries(categoryQuestions).forEach(([questionKey, questionData]: [string, any]) => {
+        Object.entries(categoryQuestions as Record<string, Record<string, string>>).forEach(([questionKey, questionData]) => {
           if (questionData && typeof questionData === 'object' && questionData.q && questionData.a) {
             faqs.push({
               id: `${categoryKey}.${questionKey}`,

@@ -9,9 +9,8 @@ import { Suspense } from "react";
 import { createOrganizationSchema } from "@/lib/seo";
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas";
 
-/* Отключаем любое кеширование */
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+/* ISR: статическая генерация + обновление каждые 5 минут */
+export const revalidate = 300;
 
 
 const inter = Inter({
@@ -107,10 +106,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-  },
+  // TODO: добавить реальные коды верификации Google Search Console и Yandex Webmaster
+  // verification: {
+  //   google: 'YOUR_REAL_GOOGLE_CODE',
+  //   yandex: 'YOUR_REAL_YANDEX_CODE',
+  // },
   icons: {
     icon: "/logo-ergo.svg", // <- путь из public/
   },

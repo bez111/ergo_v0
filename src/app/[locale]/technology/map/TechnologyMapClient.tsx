@@ -1,6 +1,6 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps */
 
 import React, { useState, useEffect, useRef, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -397,9 +397,9 @@ function FAQSection() {
     if (node === null || node === undefined || node === false) return ""
     if (typeof node === "string" || typeof node === "number") return String(node)
     if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
-    if (typeof node === "object" && "props" in (node as any)) {
-      const { children } = (node as any).props ?? {}
-      return nodeToPlainText(children)
+    if (typeof node === "object" && node !== null && "props" in (node as React.ReactElement)) {
+      const { children } = ((node as React.ReactElement).props as Record<string, unknown>) ?? {}
+      return nodeToPlainText(children as React.ReactNode)
     }
     return ""
   }

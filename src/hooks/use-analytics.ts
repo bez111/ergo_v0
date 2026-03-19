@@ -1,17 +1,11 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { siteConfig } from "@/config/site-config";
 import { useCallback } from "react";
 
 const GA_ID = siteConfig.googleAnalyticsId || "";
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
+// Window.gtag type is declared in google-analytics.tsx
 
 /*
  If you use a cookie banner, you can do:

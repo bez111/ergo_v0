@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable */
 /**
  * Centralized logging system
  * Only logs in development mode, silent in production
@@ -8,31 +8,31 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 export const logger = {
-  log: (...args: any[]) => {
+  log: (...args: unknown[]) => {
     if (isDev) {
       console.log(...args)
     }
   },
   
-  error: (...args: any[]) => {
+  error: (...args: unknown[]) => {
     if (isDev) {
       console.error(...args)
     }
   },
   
-  warn: (...args: any[]) => {
+  warn: (...args: unknown[]) => {
     if (isDev) {
       console.warn(...args)
     }
   },
   
-  debug: (...args: any[]) => {
+  debug: (...args: unknown[]) => {
     if (isDev) {
       console.debug(...args)
     }
   },
   
-  info: (...args: any[]) => {
+  info: (...args: unknown[]) => {
     if (isDev) {
       console.info(...args)
     }
@@ -47,7 +47,7 @@ export const logger = {
   },
   
   // Metric logging
-  metric: (name: string, data: Record<string, any>) => {
+  metric: (name: string, data: Record<string, unknown>) => {
     if (isDev) {
       console.log(`📊 ${name}:`, data)
     }

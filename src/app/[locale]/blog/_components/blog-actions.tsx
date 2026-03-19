@@ -1,6 +1,6 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState } from 'react'
 import { Printer, Download, Share2, BookmarkPlus, Volume2, VolumeX } from 'lucide-react'
@@ -90,7 +90,7 @@ export function BlogActions({ title, slug }: BlogActionsProps) {
     const bookmarks = JSON.parse(localStorage.getItem('blog-bookmarks') || '[]')
     
     if (isBookmarked) {
-      const filtered = bookmarks.filter((b: any) => b.slug !== slug)
+      const filtered = bookmarks.filter((b: { slug: string; title: string; date: string }) => b.slug !== slug)
       localStorage.setItem('blog-bookmarks', JSON.stringify(filtered))
       setIsBookmarked(false)
     } else {

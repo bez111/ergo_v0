@@ -1,8 +1,23 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React, { useState, useRef, useEffect } from "react";
+
+interface FaqQuestion {
+  id: string;
+  question: string;
+  answer: string;
+  category: string;
+}
+
+interface FaqSection {
+  id: string;
+  title: string;
+  color?: string;
+  questions?: FaqQuestion[];
+  content?: string;
+}
 
 // Категории FAQ из /learn/faq
 const categories = [
@@ -468,7 +483,7 @@ function SearchBar({ value, onChange }: { value: string; onChange: (v: string) =
   );
 }
 
-function SectionAccordion({ sections, search }: { sections: {id: string, title: string, color?: string, questions?: any[], content?: any}[], search: string }) {
+function SectionAccordion({ sections, search }: { sections: FaqSection[], search: string }) {
   const [open, setOpen] = useState<string | null>(sections[0]?.id || null);
   // Фильтрация по поиску: ищем по вопросам и по справочному тексту
   const filtered = sections.map(sec => {
@@ -510,7 +525,7 @@ function SectionAccordion({ sections, search }: { sections: {id: string, title: 
               {sec.questions ? (
                 sec.questions.length > 0 ? (
                   <div className="space-y-3">
-                    {sec.questions.map((q: any) => (
+                    {sec.questions.map((q: FaqQuestion) => (
                       <div key={q.id} className="rounded-xl bg-neutral-800/80 shadow">
                         <div className="px-5 py-4 font-semibold text-lg text-cyan-200">{q.question}</div>
                         <div className="px-5 pb-4 text-gray-200 text-base whitespace-pre-line" dangerouslySetInnerHTML={{__html: q.answer}} />
@@ -521,7 +536,7 @@ function SectionAccordion({ sections, search }: { sections: {id: string, title: 
                   <div className="text-gray-400 italic">No questions in this section.</div>
                 )
               ) : (
-                <div className="text-gray-200 text-base space-y-2 leading-relaxed" dangerouslySetInnerHTML={{__html: sec.content}} />
+                <div className="text-gray-200 text-base space-y-2 leading-relaxed" dangerouslySetInnerHTML={{__html: sec.content ?? ""}} />
               )}
             </div>
           </div>

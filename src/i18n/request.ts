@@ -1,5 +1,3 @@
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getRequestConfig } from 'next-intl/server';
 
 // Supported locales
@@ -35,7 +33,7 @@ export const localeConfig = {
 } as const;
 
 // Load and merge all message files from a locale folder
-async function loadMessages(locale: string): Promise<Record<string, any>> {
+async function loadMessages(locale: string): Promise<Record<string, unknown>> {
   const files = [
     'common', 'home', 'blog', 'community', 'compare', 'content-hubs',
     'developers', 'ecosystem', 'events', 'faq', 'hodlers', 'infographics',
@@ -56,7 +54,7 @@ async function loadMessages(locale: string): Promise<Record<string, any>> {
 
 export default getRequestConfig(async ({ locale }) => {
   // Если locale не определен или не поддерживается, используем английский
-  const safeLocale = locale && locales.includes(locale as any) ? locale : 'en';
+  const safeLocale = locale && (locales as readonly string[]).includes(locale) ? locale : 'en';
   
   return {
     locale: safeLocale as string,
@@ -66,7 +64,7 @@ export default getRequestConfig(async ({ locale }) => {
 
 // Утилитные функции
 export function isRtlLocale(locale: string): boolean {
-  return rtlLocales.includes(locale as any);
+  return (rtlLocales as readonly string[]).includes(locale);
 }
 
 export function getLocaleConfig(locale: string) {

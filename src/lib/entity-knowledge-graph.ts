@@ -1,6 +1,15 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any, import/no-anonymous-default-export */
+/* eslint-disable import/no-anonymous-default-export */
 // Entity-based SEO & Knowledge Graph Optimization
+
+// Type for entity records keyed by entity name
+type EntityRecord = Record<string, { "@type": string; "@id": string; name: string; [key: string]: unknown }>
+
+// Type for knowledge graph items
+interface KnowledgeGraphItem {
+  "@type": string;
+  [key: string]: unknown;
+}
 // Helps Google understand entities and relationships for better ranking
 
 // Define Ergo-related entities
@@ -175,7 +184,7 @@ export const relationships = {
 export function generateKnowledgeGraph(pageType: string): object {
   const graph = {
     "@context": "https://schema.org",
-    "@graph": [] as any[]
+    "@graph": [] as KnowledgeGraphItem[]
   }
   
   // Always include main entity
@@ -315,7 +324,7 @@ export function generateAboutPageSchema(entity: string): object {
   return {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "mainEntity": (entities as any)[entity] || entities.ergoPlatform,
+    "mainEntity": (entities as EntityRecord)[entity] || entities.ergoPlatform,
     "primaryImageOfPage": {
       "@type": "ImageObject",
       "url": `https://ergoblockchain.org/images/${entity}.png`
@@ -337,7 +346,7 @@ export function generateAboutPageSchema(entity: string): object {
         }
       ]
     },
-    "mentions": Object.values(entities).filter(e => e["@id"] !== (entities as any)[entity]?.["@id"])
+    "mentions": Object.values(entities).filter(e => e["@id"] !== (entities as EntityRecord)[entity]?.["@id"])
   }
 }
 

@@ -1,10 +1,16 @@
 "use client";
 
-/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-explicit-any */
+/* eslint-disable react/no-unescaped-entities */
 
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
+
+interface BrowserCardItem {
+  title: string;
+  content: string;
+  url: string;
+}
 
 const platformCards = [
   {
@@ -32,7 +38,7 @@ const paymentCards = [
   }
 ];
 
-function CardGrid({ items }: { items: any[] }) {
+function CardGrid({ items }: { items: BrowserCardItem[] }) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
       {items.map((item) => (

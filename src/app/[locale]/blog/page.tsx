@@ -1,4 +1,4 @@
-// Suspense removed to prevent flashing on page reload
+import { Suspense } from "react"
 import { blogPosts, categories } from "./_lib/blog-data"
 import { BlogHero } from "./_components/blog-hero"
 import TrendingNow from "./_components/trending-now"
@@ -301,14 +301,16 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
 
           {/* Interactive Filters & Articles */}
           <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <BlogClientStable 
-              posts={blogPosts}
-              categories={categories.map(cat => ({ id: cat, name: cat }))}
-              page={currentPage}
-              pageSize={pageSize}
-              total={total}
-              hasMore={hasMore}
-            />
+            <Suspense>
+              <BlogClientStable
+                posts={blogPosts}
+                categories={categories.map(cat => ({ id: cat, name: cat }))}
+                page={currentPage}
+                pageSize={pageSize}
+                total={total}
+                hasMore={hasMore}
+              />
+            </Suspense>
           </div>
 
         </div>

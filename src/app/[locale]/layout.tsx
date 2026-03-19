@@ -1,5 +1,4 @@
-
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n/request';
@@ -8,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ErrorBoundary } from "@/components/error-boundary";
 import HreflangTags from "@/components/seo/hreflang-tags";
 import { NextIntlClientProvider } from 'next-intl';
-import { organizationSchema, websiteSchema } from "@/lib/schema-generator";
+import { createOrganizationSchema, createWebSiteSchema } from "@/lib/seo/schemas";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/config/site-config";
@@ -22,7 +21,7 @@ interface LocaleLayoutProps {
 export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
   const { locale } = await params;
   
-  if (!locales.includes(locale as any)) {
+  if (!(locales as readonly string[]).includes(locale)) {
     notFound();
   }
 
@@ -98,7 +97,7 @@ export function generateStaticParams() {
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale = 'en' } = await params;
   
-  if (!locale || !locales.includes(locale as any)) {
+  if (!locale || !(locales as readonly string[]).includes(locale)) {
     notFound();
   }
 
@@ -112,7 +111,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([organizationSchema, websiteSchema])
+          __html: JSON.stringify([createOrganizationSchema(), createWebSiteSchema()])
         }}
       />
       <NextIntlClientProvider locale={locale} messages={messages}>

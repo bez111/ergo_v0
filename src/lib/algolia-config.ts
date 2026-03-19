@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable */
 // Algolia DocSearch Configuration
 export const algoliaConfig = {
   appId: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || 'your-app-id',
@@ -54,7 +54,7 @@ export const docsearchConfig = {
   index_name: "ergo-docs",
   start_urls: [
     {
-                url: "https://your-domain.com/docs/",
+                url: "https://ergoblockchain.org/docs/",
       tags: ["docs"]
     }
   ],
@@ -154,10 +154,31 @@ export function getContentType(url: string, title: string): 'title' | 'content' 
 }
 
 // Helper function to build search index from menu data
-export function buildSearchIndex(menuData: any[]): any[] {
-  const index: any[] = [];
-  
-  function processMenuItem(item: any, parentSection: string = '') {
+interface MenuItem {
+  title: string
+  href?: string
+  description?: string
+  popularity?: number
+  date?: string
+  children?: MenuItem[]
+}
+
+interface SearchIndexEntry {
+  objectID: string
+  title: string
+  content: string
+  url: string
+  section: string
+  tags: string[]
+  type: 'title' | 'content' | 'code' | 'anchor'
+  popularity: number
+  date: string
+}
+
+export function buildSearchIndex(menuData: MenuItem[]): SearchIndexEntry[] {
+  const index: SearchIndexEntry[] = [];
+
+  function processMenuItem(item: MenuItem, parentSection: string = '') {
     const section = parentSection ? `${parentSection} > ${item.title}` : item.title;
     
     if (item.href) {
@@ -175,7 +196,7 @@ export function buildSearchIndex(menuData: any[]): any[] {
     }
     
     if (item.children) {
-      item.children.forEach((child: any) => processMenuItem(child, section));
+      item.children.forEach((child) => processMenuItem(child, section));
     }
   }
   

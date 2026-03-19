@@ -1,12 +1,12 @@
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, import/no-anonymous-default-export */
+/* eslint-disable @typescript-eslint/no-unused-vars, import/no-anonymous-default-export */
 // Featured Snippets Optimization System
 // Structures content to maximize chances of appearing in Google's Featured Snippets
 
 interface SnippetOptimization {
   type: 'paragraph' | 'list' | 'table' | 'video'
   content: string
-  structured: any
+  structured: Record<string, unknown>
 }
 
 // Common questions for Featured Snippets targeting
@@ -162,7 +162,7 @@ export const targetQuestions = {
 export function generateSnippetHTML(
   question: string,
   type: 'paragraph' | 'list' | 'table' | 'howto',
-  content: any
+  content: string | string[] | { headers: string[]; rows: string[][] }
 ): string {
   let html = `<div class="featured-snippet" itemscope itemtype="https://schema.org/Question">
     <h2 itemprop="name">${question}</h2>
@@ -171,25 +171,26 @@ export function generateSnippetHTML(
   
   switch(type) {
     case 'paragraph':
-      html += `<p class="snippet-answer">${content}</p>`;
+      html += `<p class="snippet-answer">${content as string}</p>`;
       break;
-      
+
     case 'list':
       html += '<ul class="snippet-list">';
-      content.forEach((item: string) => {
+      (content as string[]).forEach((item: string) => {
         html += `<li>${item}</li>`;
       });
       html += '</ul>';
       break;
-      
-    case 'table':
+
+    case 'table': {
+      const tableContent = content as { headers: string[]; rows: string[][] };
       html += '<table class="snippet-table">';
       html += '<thead><tr>';
-      content.headers.forEach((header: string) => {
+      tableContent.headers.forEach((header: string) => {
         html += `<th>${header}</th>`;
       });
       html += '</tr></thead><tbody>';
-      content.rows.forEach((row: string[]) => {
+      tableContent.rows.forEach((row: string[]) => {
         html += '<tr>';
         row.forEach((cell: string) => {
           html += `<td>${cell}</td>`;
@@ -198,10 +199,11 @@ export function generateSnippetHTML(
       });
       html += '</tbody></table>';
       break;
-      
+    }
+
     case 'howto':
       html += '<ol class="snippet-steps">';
-      content.forEach((step: string) => {
+      (content as string[]).forEach((step: string) => {
         html += `<li>${step}</li>`;
       });
       html += '</ol>';
@@ -253,7 +255,7 @@ export function generateSnippetSchema(
   answer: string,
   type: string
 ): object {
-  const schema: any = {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Question",
     "name": question,

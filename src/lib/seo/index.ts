@@ -48,9 +48,6 @@ export {
   createBlogSchema,
 } from "./schemas"
 
-// Re-export existing SchemaTypes for backward compatibility
-export { SchemaTypes, generateCompleteSchema } from "../schema-ultimate"
-
 // NoIndex configuration for SEO optimization
 export {
   shouldNoIndex,

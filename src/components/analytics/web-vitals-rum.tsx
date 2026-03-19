@@ -1,15 +1,18 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import React, { useEffect } from 'react'
+import type { Metric } from 'web-vitals'
+
+interface WebVitalMetric extends Metric {
+  attribution?: Record<string, unknown>;
+}
 
 // Lightweight Web Vitals RUM tracker
 export function WebVitalsRUM() {
   useEffect(() => {
     // Динамический импорт web-vitals только когда нужен
     import('web-vitals').then(({ onLCP, onINP, onCLS, onFCP, onTTFB }) => {
-      function sendToAnalytics(metric: any) {
+      function sendToAnalytics(metric: WebVitalMetric) {
         // Отправляем с помощью sendBeacon для надежности
         const data = {
           name: metric.name,

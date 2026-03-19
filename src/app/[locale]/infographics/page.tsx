@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import { InfographicsClient } from "./InfographicsClient"
 import { siteConfig } from "@/config/site-config"
 import { infographics } from "@/data/infographics"
@@ -89,7 +90,9 @@ export default function InfographicsPage() {
   return (
     <>
       {renderSchemaScripts(schemas)}
-      <InfographicsClient />
+      <Suspense>
+        <InfographicsClient />
+      </Suspense>
     </>
   )
 }

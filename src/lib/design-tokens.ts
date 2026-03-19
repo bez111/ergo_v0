@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable */
 export const designTokens = {
   colors: {
     brand: {
@@ -187,8 +187,8 @@ export const designTokens = {
 export const { colors, spacing, borderRadius, typography, shadows, animation, components } = designTokens
 
 // Helper function to access nested token values
-export const getToken = (path: string): any => {
-  return path.split('.').reduce((obj: any, key: string) => obj?.[key], designTokens)
+export const getToken = (path: string): unknown => {
+  return path.split('.').reduce((obj: Record<string, unknown> | undefined, key: string) => (obj as Record<string, unknown>)?.[key] as Record<string, unknown> | undefined, designTokens as unknown as Record<string, unknown>)
 }
 
 // Design principles for Ergo

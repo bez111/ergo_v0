@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { menuData } from "@/app/[locale]/docs/menuData";
 import { glossaryTerms } from "@/data/glossary";
 import { playbooks } from "@/data/playbooks";
@@ -162,7 +162,13 @@ export function buildDocsSearchIndex(): DocsSearchIndexItem[] {
   // ==========================================
   // 1. Index docs from menuData
   // ==========================================
-  function walk(items: any[], section: string, parents: string[] = [], type: DocsSearchIndexItem['type'] = 'docs') {
+  interface DocMenuItem {
+    href?: string
+    title: string
+    items?: DocMenuItem[]
+  }
+
+  function walk(items: DocMenuItem[], section: string, parents: string[] = [], type: DocsSearchIndexItem['type'] = 'docs') {
     for (const item of items) {
       if (item.href) {
         // Определяем тип контента

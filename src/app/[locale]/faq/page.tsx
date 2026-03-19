@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import { siteConfig } from "@/config/site-config"
 import { faqData, getFAQByLevel, beginnerCategories, technicalCategories } from "@/data/faq"
 import FAQPageClient from "./FAQPageClient"
@@ -71,13 +72,15 @@ export default function FAQPage() {
   return (
     <>
       {renderSchemaScripts(schemas)}
-      <FAQPageClient 
-        beginnerFAQ={beginnerFAQ}
-        technicalFAQ={technicalFAQ}
-        beginnerCategories={beginnerCategories}
-        technicalCategories={technicalCategories}
-        stats={{ total: totalQuestions, beginner: beginnerCount, technical: technicalCount }}
-      />
+      <Suspense>
+        <FAQPageClient
+          beginnerFAQ={beginnerFAQ}
+          technicalFAQ={technicalFAQ}
+          beginnerCategories={beginnerCategories}
+          technicalCategories={technicalCategories}
+          stats={{ total: totalQuestions, beginner: beginnerCount, technical: technicalCount }}
+        />
+      </Suspense>
     </>
   )
 }

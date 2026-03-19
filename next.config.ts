@@ -9,16 +9,28 @@ const nextConfig: NextConfig = {
 
   // Экспериментальные оптимизации
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-*'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-*', 'react-icons', 'mermaid'],
     webpackBuildWorker: true, // Ускорить сборку
     optimizeCss: true, // Включаем CSS оптимизацию для лучшего TTFB
   },
 
-  // Оптимизация серверных компонентов
-  serverExternalPackages: ['sharp'],
+  // Тяжёлые пакеты — не бандлить в server bundle (иначе превышается лимит Vercel 250MB)
+  serverExternalPackages: ['sharp', 'playwright-core', 'highlight.js'],
 
   // Исправление workspace root warning
   outputFileTracingRoot: __dirname,
+
+  // Исключить тяжёлые static файлы из serverless bundle (иначе > 250MB лимит Vercel)
+  outputFileTracingExcludes: {
+    '*': [
+      'public/og/**/*',
+      'public/infographics/**/*',
+      'public/docs/**/*',
+      'node_modules/@img/**/*',
+      'node_modules/playwright-core/**/*',
+      'node_modules/highlight.js/**/*',
+    ],
+  },
 
   // Оптимизация изображений
   images: {
@@ -67,6 +79,10 @@ const nextConfig: NextConfig = {
           {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400',
           },
         ],
       },

@@ -1,11 +1,13 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from "react";
 import { Shield, Zap, Code2, Coins } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+
+type TranslateFunction = ReturnType<typeof useTranslations>;
 
 type StatItem = {
   icon: React.ReactNode;
@@ -61,7 +63,7 @@ export function BuildForScale() {
   );
 }
 
-function LeftCopy({ t }: { t: any }) {
+function LeftCopy({ t }: { t: TranslateFunction }) {
   return (
     <div>
       <h2

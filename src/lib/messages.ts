@@ -1,9 +1,10 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { locales, type Locale } from '../i18n/request';
 
+type MessageRecord = Record<string, unknown>;
+
 // Helper to load all message files from a locale folder
-async function loadMessagesFromFolder(locale: string): Promise<Record<string, any>> {
+async function loadMessagesFromFolder(locale: string): Promise<MessageRecord> {
   const messageFiles = [
     'common', 'home', 'blog', 'community', 'compare', 'content-hubs',
     'developers', 'ecosystem', 'events', 'faq', 'hodlers', 'infographics',
@@ -20,7 +21,7 @@ async function loadMessagesFromFolder(locale: string): Promise<Record<string, an
   return modules.reduce((acc, mod) => ({ ...acc, ...(mod.default || mod) }), {});
 }
 
-export async function getMessages(locale: Locale): Promise<Record<string, any>> {
+export async function getMessages(locale: Locale): Promise<MessageRecord> {
   const safeLocale = locale || 'en';
   
   if (!locales.includes(safeLocale as Locale)) {
@@ -36,15 +37,15 @@ export async function getMessages(locale: Locale): Promise<Record<string, any>> 
   }
 }
 
-export function getTranslations(messages: any, namespace: string) {
+export function getTranslations(messages: MessageRecord, namespace: string) {
   return (key: string) => {
     const keys = `${namespace}.${key}`.split('.');
-    let value = messages;
-    
+    let value: unknown = messages;
+
     for (const k of keys) {
-      value = value?.[k];
+      value = (value as Record<string, unknown>)?.[k];
     }
-    
-    return value || key;
+
+    return (value as string) || key;
   };
 } 

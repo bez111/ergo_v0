@@ -1,8 +1,14 @@
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft, Layers } from "lucide-react";
+
+interface JvmCardItem {
+  title: string;
+  content: string;
+  url: string;
+}
 
 export default function JVMPage() {
   const languageCards = [
@@ -23,7 +29,7 @@ export default function JVMPage() {
     }
   ];
 
-  function CardGrid({ items }: { items: any[] }) {
+  function CardGrid({ items }: { items: JvmCardItem[] }) {
     return (
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         {items.map((item) => (

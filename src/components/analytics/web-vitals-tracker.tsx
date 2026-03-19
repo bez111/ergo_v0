@@ -1,9 +1,21 @@
 'use client'
 
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useEffect } from 'react'
 import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals'
+
+// Note: Window.gtag type is declared in newsletter-analytics.ts
+
+// Internal metric type that extends web-vitals Metric to also handle custom metrics
+interface AnalyticsMetric {
+  name: string
+  value: number
+  rating: string
+  delta?: number
+  id: string
+  navigationType: string
+}
 
 // Thresholds for alerting (FID deprecated, use INP instead)
 const THRESHOLDS = {
@@ -15,7 +27,7 @@ const THRESHOLDS = {
 }
 
 // Send metrics to analytics
-function sendToAnalytics(metric: any) {
+function sendToAnalytics(metric: AnalyticsMetric) {
   const body = {
     name: metric.name,
     value: metric.value,
@@ -28,8 +40,8 @@ function sendToAnalytics(metric: any) {
   }
 
   // Send to Google Analytics if available
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', metric.name, {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', metric.name, {
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       metric_id: metric.id,
       metric_value: metric.value,
@@ -54,7 +66,7 @@ function sendToAnalytics(metric: any) {
 }
 
 // Check if metric violates threshold
-function checkThresholdViolation(metric: any) {
+function checkThresholdViolation(metric: AnalyticsMetric) {
   const threshold = THRESHOLDS[metric.name as keyof typeof THRESHOLDS]
   
   if (threshold && metric.value > threshold) {

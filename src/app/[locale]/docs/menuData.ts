@@ -1,8 +1,19 @@
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
-import { useTranslations } from 'next-intl'
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
-export function getLocalizedMenuData(t: any) {
+export interface MenuItem {
+  title: string;
+  href?: string;
+  description?: string;
+  items?: MenuItem[];
+}
+
+export interface MenuSection {
+  title: string;
+  items: MenuItem[];
+}
+
+export function getLocalizedMenuData(t: (key: string) => string): MenuSection[] {
   return [
     {
       title: t('docsMenu.introduction.title'),

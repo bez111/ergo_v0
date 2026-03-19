@@ -1,16 +1,22 @@
 "use client"
 
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState } from "react"
 import { Link } from "@/i18n/navigation"
-import { getLocalizedMenuData } from "@/app/[locale]/docs/menuData"
+import { getLocalizedMenuData, type MenuItem as MenuItemType, type MenuSection } from "@/app/[locale]/docs/menuData"
 import { usePathname } from "next/navigation"
 import { useRouter } from "@/i18n/navigation"
 import { LocalSearch } from "./search/LocalSearch"
 import { useTranslations } from "next-intl"
 
-function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: number, parentPath?: string }) {
+interface SectionTab {
+  key: string;
+  label: string;
+  href: string;
+}
+
+function MenuItem({ item, level = 0, parentPath = "" }: { item: MenuItemType, level?: number, parentPath?: string }) {
   const [open, setOpen] = useState(false)
   const hasChildren = !!item.items?.length
   const pathname = usePathname() || "";
@@ -18,7 +24,7 @@ function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: num
   const isActive = item.href && pathname === item.href;
   const shouldForceOpen =
     (item.title === "Tooling" && pathname.startsWith("/docs/miners/Miner-Tooling")) ||
-    (hasChildren && item.items?.some((child: any) => child.href && pathname === child.href));
+    (hasChildren && item.items?.some((child: MenuItemType) => child.href && pathname === child.href));
   const baseClass = level === 0
     ? `font-medium text-base text-gray-200 hover:text-orange-400${isActive ? " text-orange-400" : ""}`
     : `font-normal text-sm text-gray-400 hover:text-orange-300${isActive ? " text-orange-300" : ""}`;
@@ -53,7 +59,7 @@ function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: num
       </div>
       {hasChildren && (open || shouldForceOpen) && (
         <div className="mt-1">
-          {item.items.map((child: any, idx: number) => (
+          {item.items?.map((child: MenuItemType, idx: number) => (
             <MenuItem key={idx} item={child} level={level + 1} parentPath={fullPath} />
           ))}
         </div>
@@ -86,9 +92,9 @@ export default function SidebarMenu() {
   const activeSection = getSectionKeyByPath(pathname);
 
   // Always open the section matching the current path
-  // const section = menuData.find((s: any) => typeof s.title === 'string' && s.title === openSection);
+  // const section = menuData.find((s: MenuSection) => typeof s.title === 'string' && s.title === openSection);
 
-  const handleSectionClick = (tab: any) => {
+  const handleSectionClick = (tab: SectionTab) => {
     setOpenSection(tab.key);
     router.push(tab.href);
   };
@@ -103,7 +109,7 @@ export default function SidebarMenu() {
       {/* 4 Big Section Buttons + Accordions */}
       <div className="flex flex-col gap-3 px-6 pt-2 pb-4 mb-4 bg-neutral-900 z-10">
         {sectionTabs.map(tab => {
-          const section = menuData.find((s: any) => typeof s.title === 'string' && s.title === tab.key);
+          const section = menuData.find((s: MenuSection) => typeof s.title === 'string' && s.title === tab.key);
           const isOpen = openSection === tab.key;
           return (
             <div key={tab.key}>
@@ -118,7 +124,7 @@ export default function SidebarMenu() {
               {/* Подменю — без тайтла раздела */}
               {isOpen && section && (
                 <div className="pl-2 pt-2">
-                  {section.items?.map((item: any) => (
+                  {section.items?.map((item: MenuItemType) => (
                     <MenuItem key={item.title} item={item} level={1} parentPath={""} />
                   ))}
                 </div>

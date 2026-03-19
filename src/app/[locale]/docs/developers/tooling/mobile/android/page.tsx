@@ -1,9 +1,14 @@
 "use client";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
+
+interface AndroidCardItem {
+  title: string;
+  content?: string;
+  url: string;
+}
 
 const platformCards = [
   {
@@ -43,7 +48,7 @@ const toolCards = [
   }
 ];
 
-function CardGrid({ items }: { items: any[] }) {
+function CardGrid({ items }: { items: AndroidCardItem[] }) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
       {items.map((item) => (

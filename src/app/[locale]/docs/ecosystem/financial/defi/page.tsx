@@ -1,6 +1,6 @@
 "use client";
 
-/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 
 import React, { type JSX } from "react";
 import { CheckCircle, Zap, TrendingUp, Info, Coins, Layers, Gift, ExternalLink } from "lucide-react";
@@ -279,7 +279,7 @@ export default function DeFiPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {defiList.filter(item => item.category === cat.key).map(item => {
               const moreLink = item.more || null;
-              const highlight = (item as any).highlight;
+              const highlight = item.highlight;
               let description = item.description;
                   if (cat.key === "Synthetics & Derivatives") {
                 if (item.name === "HodlCoin") {

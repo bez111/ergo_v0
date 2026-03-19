@@ -1,6 +1,8 @@
 import {defineRouting} from 'next-intl/routing';
-import { locales } from './request';
- 
+
+// Локали инлайнятся здесь чтобы не тянуть next-intl/server в Edge middleware
+const locales = ['en', 'ru'] as const;
+
 export const routing = defineRouting({
   // A list of all locales that are supported
   locales,

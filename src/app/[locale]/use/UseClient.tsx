@@ -1,6 +1,6 @@
 "use client"
 
-/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps */
 
 import { motion } from "framer-motion"
 import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink, Code, Database, Layers } from "lucide-react"
@@ -93,9 +93,9 @@ export default function UseClient() {
       if (node === null || node === undefined || node === false) return ""
       if (typeof node === "string" || typeof node === "number") return String(node)
       if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
-      if (typeof node === "object" && "props" in (node as any)) {
-        const { children } = (node as any).props ?? {}
-        return nodeToPlainText(children)
+      if (typeof node === "object" && node !== null && "props" in (node as React.ReactElement)) {
+        const { children } = ((node as React.ReactElement).props as Record<string, unknown>) ?? {}
+        return nodeToPlainText(children as React.ReactNode)
       }
       return ""
     }

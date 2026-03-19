@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // AI-Powered Internal Linking System for Maximum SEO
 // Automatically creates contextual links between related content
 
@@ -45,7 +45,7 @@ export function buildContentGraph(): ContentNode[] {
   })
   
   // Add documentation pages
-  const flattenDocs = (items: any[], nodes: ContentNode[]) => {
+  const flattenDocs = (items: Array<{ href?: string; label?: string; description?: string; items?: Array<Record<string, unknown>> }>, nodes: ContentNode[]) => {
     items.forEach(item => {
       if (item.href && item.label) {
         nodes.push({

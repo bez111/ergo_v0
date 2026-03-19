@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { getMessages } from 'next-intl/server'
@@ -118,7 +117,7 @@ export default async function PatternPage({ params }: Props) {
       {renderSchemaScripts(schemas)}
       <PatternPageClient 
         pattern={pattern} 
-        relatedPatterns={relatedPatterns as any[]}
+        relatedPatterns={relatedPatterns as DevPattern[]}
         categoryLabel={categoryLabel}
       />
     </>

@@ -1,5 +1,5 @@
 
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Metadata } from 'next'
 import { SchemaOrg } from './schema-org'
 
@@ -10,7 +10,7 @@ interface PageMetadataProps {
   image?: string
   type?: 'article' | 'website'
   schemaType?: 'Article' | 'WebSite' | 'FAQPage' | 'HowTo'
-  schemaData?: any
+  schemaData?: Record<string, unknown>
 }
 
 export function generateMetadata({
@@ -74,7 +74,7 @@ export function PageMetadata({
 }: PageMetadataProps) {
   return (
     <>
-      {schemaType && <SchemaOrg type={schemaType} data={schemaData} />}
+      {schemaType && schemaData && <SchemaOrg type={schemaType} data={schemaData} />}
     </>
   )
 } 

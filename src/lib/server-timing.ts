@@ -1,5 +1,3 @@
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Server-Timing utilities for performance monitoring
  * Provides metrics for edge, origin, cache status tracking
@@ -78,19 +76,19 @@ export function createServerTiming() {
 export const TimingPresets = {
   // Для HTML страниц
   html: (timing: ServerTiming, cacheStatus: string, renderTime: number) => {
-    timing.addCacheMetric(cacheStatus as any)
+    timing.addCacheMetric(cacheStatus as CacheStatus)
     timing.addOriginMetric(renderTime)
   },
 
   // Для API запросов
   api: (timing: ServerTiming, dbTime: number, cacheStatus: string) => {
     timing.addMetric('db', 'query', dbTime)
-    timing.addCacheMetric(cacheStatus as any)
+    timing.addCacheMetric(cacheStatus as CacheStatus)
   },
 
   // Для статических ресурсов
   static: (timing: ServerTiming, cacheStatus: string) => {
-    timing.addCacheMetric(cacheStatus as any, 'cdn')
+    timing.addCacheMetric(cacheStatus as CacheStatus, 'cdn')
   }
 }
 
