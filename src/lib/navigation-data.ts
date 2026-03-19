@@ -1,5 +1,37 @@
 export const mainNavItems = [
   {
+    title: "Build",
+    href: "/agent-economy",
+    description: "Build on the agent economy stack",
+    children: [
+      {
+        title: "Agent Economy",
+        href: "/agent-economy",
+        description: "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
+      },
+      {
+        title: "Agent Payments",
+        href: "/build/agent-payments",
+        description: "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.",
+      },
+      {
+        title: "Demos",
+        href: "/demos",
+        description: "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
+      },
+      {
+        title: "Developers",
+        href: "/developers",
+        description: "ErgoScript, SDKs (Fleet, AppKit, sigma-rust), patterns, playbooks, and grants.",
+      },
+      {
+        title: "Dev Patterns",
+        href: "/patterns",
+        description: "Copy-paste smart contract blueprints for common Ergo development patterns.",
+      },
+    ],
+  },
+  {
     title: "Start",
     href: "/start",
     description: "Begin your journey with Ergo",

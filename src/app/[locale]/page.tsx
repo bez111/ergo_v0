@@ -18,6 +18,11 @@ const BuildForScale = dynamic(() => import("@/components/home/build-for-scale").
   ssr: true
 });
 
+const AgentEconomySection = dynamic(() => import("@/components/home/agent-economy-section").then(mod => mod.AgentEconomySection), {
+  loading: () => <div className="h-64 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
 const MadeForMassAdoption = dynamic(() => import("@/components/home/made-for-mass-adoption").then(mod => mod.MadeForMassAdoption), {
   loading: () => <div className="h-96 bg-neutral-900/30 animate-pulse" />,
   ssr: true
@@ -163,6 +168,7 @@ export default async function HomePage({ params }: HomePageProps) {
           <HeroFinal />
           <WhyErgo />
           <BuildForScale />
+          <AgentEconomySection />
           <MadeForMassAdoption />
           <PoweredByErgo />
           <BlogSectionHome />
