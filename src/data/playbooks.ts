@@ -115,7 +115,7 @@ export const playbooks: Playbook[] = [
         duration: "2-3 days",
         resources: [
           { type: 'doc', title: "eUTXO Model Explained", href: "/technology/eutxo-model" },
-          { type: 'doc', title: "Boxes and Registers", href: "/docs/developers/eutxo-model" },
+          { type: 'doc', title: "Boxes and Registers", href: "/technology/eutxo-model" },
         ]
       },
       {
@@ -150,7 +150,7 @@ export const playbooks: Playbook[] = [
         description: "Deploy to testnet, run integration tests, and prepare for mainnet launch.",
         duration: "1 week",
         resources: [
-          { type: 'doc', title: "Deployment Guide", href: "/docs/developers/deployment" },
+          { type: 'doc', title: "Deployment Guide", href: "/docs/developers/infrastructure" },
           { type: 'tool', title: "Ergo Testnet Faucet", href: "https://testnet.ergoplatform.com/faucet" },
         ]
       },
@@ -225,7 +225,7 @@ export const playbooks: Playbook[] = [
         duration: "30 minutes",
         resources: [
           { type: 'tool', title: "Nautilus Wallet", href: "https://nautilus.io" },
-          { type: 'doc', title: "Wallet Security Guide", href: "/start/wallet" },
+          { type: 'doc', title: "Wallet Security Guide", href: "/wallet" },
         ]
       },
       {
@@ -243,7 +243,7 @@ export const playbooks: Playbook[] = [
         duration: "1-2 hours",
         resources: [
           { type: 'tool', title: "ErgoMixer", href: "https://ergomixer.com" },
-          { type: 'doc', title: "Mixing Guide", href: "/docs/users/ergomixer" },
+          { type: 'doc', title: "Mixing Guide", href: "/use/privacy" },
         ]
       },
       {
@@ -251,8 +251,8 @@ export const playbooks: Playbook[] = [
         description: "Learn about peer-to-peer exchanges and privacy-preserving acquisition methods.",
         duration: "Varies",
         resources: [
-          { type: 'link', title: "P2P Exchanges", href: "/start/get-erg" },
-          { type: 'doc', title: "Privacy Best Practices", href: "/docs/users/privacy" },
+          { type: 'link', title: "P2P Exchanges", href: "/use/get-erg" },
+          { type: 'doc', title: "Privacy Best Practices", href: "/technology/privacy-features" },
         ]
       },
       {
@@ -261,7 +261,7 @@ export const playbooks: Playbook[] = [
         duration: "1 hour",
         resources: [
           { type: 'doc', title: "Storage Rent Guide", href: "/technology/storage-rent" },
-          { type: 'doc', title: "Security Best Practices", href: "/start/security" },
+          { type: 'doc', title: "Security Best Practices", href: "/start" },
         ]
       },
     ],
@@ -285,7 +285,7 @@ export const playbooks: Playbook[] = [
     
     primaryCTA: {
       label: "Get Started",
-      href: "/start/wallet",
+      href: "/wallet",
     },
     secondaryCTA: {
       label: "Learn About Privacy",
@@ -326,8 +326,8 @@ export const playbooks: Playbook[] = [
         description: "Verify your GPU meets minimum requirements (4GB+ VRAM). AMD and NVIDIA cards both work.",
         duration: "15 minutes",
         resources: [
-          { type: 'doc', title: "Hardware Requirements", href: "/docs/miners/hardware" },
-          { type: 'link', title: "GPU Comparison Chart", href: "/docs/miners/gpu-comparison" },
+          { type: 'doc', title: "Hardware Requirements", href: "/docs/miners/Miner-Tooling" },
+          { type: 'link', title: "GPU Comparison Chart", href: "/docs/miners/Miner-Tooling" },
         ]
       },
       {
@@ -336,7 +336,7 @@ export const playbooks: Playbook[] = [
         duration: "30 minutes",
         resources: [
           { type: 'link', title: "lolMiner", href: "https://github.com/Lolliedieb/lolMiner-releases" },
-          { type: 'doc', title: "Mining Software Guide", href: "/docs/miners/software" },
+          { type: 'doc', title: "Mining Software Guide", href: "/docs/miners/mining-guides/software" },
         ]
       },
       {
@@ -344,8 +344,8 @@ export const playbooks: Playbook[] = [
         description: "Join a pool to receive regular payouts. Consider pool fees, server locations, and payout thresholds.",
         duration: "15 minutes",
         resources: [
-          { type: 'link', title: "Pool Comparison", href: "/docs/miners/pools" },
-          { type: 'doc', title: "Solo vs Pool Mining", href: "/docs/miners/solo-vs-pool" },
+          { type: 'link', title: "Pool Comparison", href: "/docs/miners/mining-guides/pools" },
+          { type: 'doc', title: "Solo vs Pool Mining", href: "/docs/miners/mining-guides/solo-mining" },
         ]
       },
       {
@@ -353,7 +353,7 @@ export const playbooks: Playbook[] = [
         description: "Set up your wallet address, configure batch files, and start mining. Monitor hashrate and temperature.",
         duration: "1 hour",
         resources: [
-          { type: 'doc', title: "Configuration Guide", href: "/docs/miners/configuration" },
+          { type: 'doc', title: "Configuration Guide", href: "/docs/miners/mining-guides" },
           { type: 'tool', title: "Ergo Explorer", href: "https://explorer.ergoplatform.com" },
         ]
       },
@@ -362,7 +362,7 @@ export const playbooks: Playbook[] = [
         description: "Tune GPU settings for best hashrate per watt. Understand overclocking and undervolting.",
         duration: "2-4 hours",
         resources: [
-          { type: 'doc', title: "Optimization Guide", href: "/docs/miners/optimization" },
+          { type: 'doc', title: "Optimization Guide", href: "/docs/miners/mining-guides/overclocking" },
           { type: 'link', title: "Mining Calculator", href: "https://whattomine.com/coins/340-erg-autolykos" },
         ]
       },
@@ -531,8 +531,8 @@ export const playbooks: Playbook[] = [
         description: "Set up proper self-custody, understand wallet security, and plan for long-term storage.",
         duration: "30 minutes",
         resources: [
-          { type: 'doc', title: "Wallet Guide", href: "/start/wallet" },
-          { type: 'doc', title: "Security Best Practices", href: "/start/security" },
+          { type: 'doc', title: "Wallet Guide", href: "/wallet" },
+          { type: 'doc', title: "Security Best Practices", href: "/start" },
         ]
       },
       {
@@ -557,7 +557,7 @@ export const playbooks: Playbook[] = [
     
     primaryCTA: {
       label: "Get ERG",
-      href: "/start/get-erg",
+      href: "/use/get-erg",
     },
     secondaryCTA: {
       label: "Technology Deep Dive",
@@ -625,8 +625,8 @@ export const playbooks: Playbook[] = [
         description: "Learn how to manage your ERG holdings to minimize Storage Rent impact.",
         duration: "15 minutes",
         resources: [
-          { type: 'doc', title: "User Guide", href: "/docs/users/storage-rent" },
-          { type: 'doc', title: "Wallet Best Practices", href: "/start/wallet" },
+          { type: 'doc', title: "User Guide", href: "/technology/storage-rent" },
+          { type: 'doc', title: "Wallet Best Practices", href: "/wallet" },
         ]
       },
     ],

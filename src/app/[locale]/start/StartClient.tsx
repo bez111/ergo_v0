@@ -116,7 +116,7 @@ const journeys: Record<Journey, {
         title: "Stay Safe",
         description: "Essential security practices",
         icon: Shield,
-        href: "/start/security-tips",
+        href: "/start",
         duration: "5 min"
       }
     ]
@@ -360,7 +360,7 @@ export default function StartPage() {
             title: t('journeys.new.steps.security.title'),
             description: t('journeys.new.steps.security.description'),
             icon: Shield,
-            href: "/start/security-tips",
+            href: "/start",
             duration: "5 min"
           }
         ]

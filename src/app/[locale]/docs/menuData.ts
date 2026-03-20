@@ -163,7 +163,7 @@ export function getLocalizedMenuData(t: (key: string) => string): MenuSection[] 
         },
         {
           title: t('docsMenu.miners.hardware'),
-          href: "/docs/miners/hardware",
+          href: "/docs/miners/Miner-Tooling",
         },
         {
           title: t('docsMenu.miners.software'),
@@ -328,7 +328,7 @@ export const menuData = [
       },
       {
         title: "Hardware",
-        href: "/docs/miners/hardware",
+        href: "/docs/miners/Miner-Tooling",
       },
       {
         title: "Software",
