@@ -21,6 +21,8 @@ import {
   Wallet,
   Coins,
   AlertCircle,
+  Copy,
+  Code2,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -217,8 +219,100 @@ interface AddressBalance {
   tokens: AddressToken[]
 }
 
+interface PlaygroundUtxo {
+  boxId: string
+  value: number
+  creationHeight: number
+  assets?: { tokenId: string; amount: number }[]
+}
+
+function generatePlaygroundCode(address: string, utxos: PlaygroundUtxo[]): string {
+  const totalErg = utxos.reduce((sum, u) => sum + u.value, 0)
+  const utxoComments = utxos.slice(0, 3).map((u, i) =>
+    `//   Box ${i + 1}: ${u.boxId.slice(0, 16)}... (${(u.value / 1e9).toFixed(4)} ERG)`
+  ).join('\n')
+
+  return `// Agent payment — auto-generated for your testnet address
+// Address: ${address.slice(0, 22)}...
+// ${utxos.length} UTxO${utxos.length !== 1 ? 's' : ''} · ${(totalErg / 1e9).toFixed(4)} ERG total
+//
+// Run: npm install @fleet-sdk/core && node agent-payment.js
+
+import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core";
+
+const TESTNET_API  = "https://api-testnet.ergoplatform.com";
+const YOUR_ADDRESS = "${address}";
+const RECEIVER     = "3WwbzW6u8hKWBcL1W7kNVMr25s2UHfSBnYtwSHvrRQt7DdPuoXrt";
+const AMOUNT       = "1000000"; // 0.001 ERG
+
+// Your live UTxOs (fetched from testnet):
+${utxoComments}
+
+async function main() {
+  const { fullHeight } = await fetch(
+    \`\${TESTNET_API}/api/v1/info\`
+  ).then(r => r.json());
+
+  const { items: inputs } = await fetch(
+    \`\${TESTNET_API}/api/v1/boxes/unspent/byAddress/\${YOUR_ADDRESS}\`
+  ).then(r => r.json());
+
+  const unsignedTx = new TransactionBuilder(fullHeight)
+    .from(inputs)
+    .to(new OutputBuilder(AMOUNT, RECEIVER))
+    .sendChangeTo(YOUR_ADDRESS)
+    .payMinFee()
+    .build()
+    .toEIP12Object();
+
+  console.log("Unsigned TX:");
+  console.log(JSON.stringify(unsignedTx, null, 2));
+  // → Sign with Nautilus wallet (testnet mode) or ergo-lib-wasm
+  // → POST signed TX to: \${TESTNET_API}/api/v1/transactions
+}
+
+main().catch(console.error);`
+}
+
 export function DemosClient() {
   const [expandedCode, setExpandedCode] = useState<string | null>(null)
+
+  // ── Playground state ──────────────────────────────────────────────────────
+  const [playgroundAddress, setPlaygroundAddress] = useState("")
+  const [playgroundUtxos, setPlaygroundUtxos] = useState<PlaygroundUtxo[] | null>(null)
+  const [playgroundLoading, setPlaygroundLoading] = useState(false)
+  const [playgroundError, setPlaygroundError] = useState<string | null>(null)
+  const [playgroundTab, setPlaygroundTab] = useState<'code' | 'utxos'>('code')
+  const [playgroundCopied, setPlaygroundCopied] = useState(false)
+
+  async function handlePlayground(e: React.FormEvent) {
+    e.preventDefault()
+    const addr = playgroundAddress.trim()
+    if (!addr) return
+    setPlaygroundLoading(true)
+    setPlaygroundError(null)
+    setPlaygroundUtxos(null)
+    try {
+      const res = await fetch(
+        `https://api-testnet.ergoplatform.com/api/v1/boxes/unspent/byAddress/${encodeURIComponent(addr)}?limit=10`
+      )
+      if (!res.ok) {
+        setPlaygroundError("Address not found on testnet. Make sure it's a valid Ergo testnet address.")
+        return
+      }
+      const data = await res.json()
+      if (!data.items?.length) {
+        setPlaygroundError("No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.")
+        return
+      }
+      setPlaygroundUtxos(data.items)
+      setPlaygroundTab('code')
+    } catch {
+      setPlaygroundError("Could not reach testnet API. Check your network connection.")
+    } finally {
+      setPlaygroundLoading(false)
+    }
+  }
 
   // ── Address Lookup state ──────────────────────────────────────────────────
   const [lookupAddress, setLookupAddress] = useState("")
@@ -601,6 +695,187 @@ export function DemosClient() {
                   )}
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Interactive TX Playground ────────────────────────────────────── */}
+        <section className="py-20 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+
+              {/* Header */}
+              <div className="text-center mb-10">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-4">
+                  <Code2 className="w-3.5 h-3.5 text-orange-400" />
+                  <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
+                    Testnet playground
+                  </span>
+                </div>
+                <h2
+                  className="font-extrabold tracking-tight text-white mb-3"
+                  style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}
+                >
+                  Generate your first agent payment
+                </h2>
+                <p className="text-gray-400 text-sm max-w-xl mx-auto">
+                  Paste your Ergo testnet address. We fetch your live UTxOs and generate a
+                  ready-to-run Fleet SDK script — pre-filled with your actual data.
+                </p>
+              </div>
+
+              {/* Input */}
+              <form onSubmit={handlePlayground} className="flex gap-2 mb-3">
+                <input
+                  type="text"
+                  value={playgroundAddress}
+                  onChange={(e) => setPlaygroundAddress(e.target.value)}
+                  placeholder="9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-orange-500/50 font-mono"
+                  spellCheck={false}
+                />
+                <button
+                  type="submit"
+                  disabled={playgroundLoading || !playgroundAddress.trim()}
+                  className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm shrink-0"
+                >
+                  {playgroundLoading ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <Play className="w-4 h-4" />
+                  )}
+                  {playgroundLoading ? "Fetching…" : "Generate"}
+                </button>
+              </form>
+
+              <p className="text-center text-gray-600 text-xs mb-8">
+                Need testnet ERG?{" "}
+                <a
+                  href="https://testnet.ergofaucet.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-400/70 hover:text-orange-400 transition-colors"
+                >
+                  testnet.ergofaucet.org
+                </a>
+                {" "}— free testnet ERG in seconds.
+              </p>
+
+              {/* Error */}
+              {playgroundError && (
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex items-start gap-3 bg-red-500/10 border border-red-500/20 rounded-xl p-4 text-sm text-red-300 mb-6"
+                >
+                  <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                  {playgroundError}
+                </motion.div>
+              )}
+
+              {/* Results */}
+              {playgroundUtxos && (
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-black/80 border border-white/10 rounded-2xl overflow-hidden"
+                >
+                  {/* Tab bar */}
+                  <div className="flex border-b border-white/10">
+                    <button
+                      onClick={() => setPlaygroundTab('code')}
+                      className={`flex-1 py-3 text-sm font-medium transition-colors ${
+                        playgroundTab === 'code'
+                          ? 'text-orange-400 border-b-2 border-orange-400 bg-orange-500/5'
+                          : 'text-gray-500 hover:text-gray-300'
+                      }`}
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        <Code2 className="w-4 h-4" />
+                        Ready-to-run code
+                      </span>
+                    </button>
+                    <button
+                      onClick={() => setPlaygroundTab('utxos')}
+                      className={`flex-1 py-3 text-sm font-medium transition-colors ${
+                        playgroundTab === 'utxos'
+                          ? 'text-orange-400 border-b-2 border-orange-400 bg-orange-500/5'
+                          : 'text-gray-500 hover:text-gray-300'
+                      }`}
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        <Wallet className="w-4 h-4" />
+                        Your UTxOs ({playgroundUtxos.length})
+                      </span>
+                    </button>
+                  </div>
+
+                  {/* Code tab */}
+                  {playgroundTab === 'code' && (
+                    <div>
+                      <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/8 bg-neutral-950">
+                        <div className="flex items-center gap-2">
+                          <Terminal className="w-3.5 h-3.5 text-orange-400" />
+                          <span className="text-gray-500 font-mono text-xs">agent-payment.js</span>
+                        </div>
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText(generatePlaygroundCode(playgroundAddress, playgroundUtxos))
+                            setPlaygroundCopied(true)
+                            setTimeout(() => setPlaygroundCopied(false), 2000)
+                          }}
+                          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-orange-400 transition-colors"
+                        >
+                          {playgroundCopied ? (
+                            <>
+                              <CheckCircle className="w-3.5 h-3.5 text-green-400" />
+                              <span className="text-green-400">Copied!</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-3.5 h-3.5" />
+                              Copy
+                            </>
+                          )}
+                        </button>
+                      </div>
+                      <pre className="px-5 py-4 text-xs text-neutral-300 font-mono leading-relaxed overflow-x-auto">
+                        {generatePlaygroundCode(playgroundAddress, playgroundUtxos)}
+                      </pre>
+                      <div className="border-t border-white/8 p-4 bg-orange-500/5">
+                        <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">Run it</p>
+                        <div className="space-y-1.5 font-mono text-xs text-gray-400">
+                          <p><span className="text-orange-400">1.</span> npm install @fleet-sdk/core</p>
+                          <p><span className="text-orange-400">2.</span> node agent-payment.js</p>
+                          <p><span className="text-orange-400">3.</span> Copy the unsigned TX JSON output</p>
+                          <p><span className="text-orange-400">4.</span> Open Nautilus (testnet mode) → sign → submit</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* UTxOs tab */}
+                  {playgroundTab === 'utxos' && (
+                    <div className="p-4 space-y-3 max-h-80 overflow-y-auto">
+                      {playgroundUtxos.map((utxo, i) => (
+                        <div key={utxo.boxId} className="flex items-start justify-between bg-black/40 rounded-xl px-4 py-3">
+                          <div className="min-w-0">
+                            <div className="text-xs text-gray-500 font-mono mb-1">Box {i + 1}</div>
+                            <div className="text-xs text-gray-400 font-mono">{utxo.boxId.slice(0, 24)}…</div>
+                            <div className="text-xs text-gray-600 mt-1">
+                              height {utxo.creationHeight} · {utxo.assets?.length ?? 0} token(s)
+                            </div>
+                          </div>
+                          <div className="text-orange-300 font-mono font-bold text-sm shrink-0 ml-4">
+                            {(utxo.value / 1e9).toFixed(4)} ERG
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+              )}
+
             </div>
           </div>
         </section>
