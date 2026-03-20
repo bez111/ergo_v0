@@ -289,6 +289,25 @@ export const blogPosts: BlogPost[] = [
     shares: 0
   },
   {
+    id: 'agent-economy-manifesto',
+    slug: 'agent-economy-manifesto',
+    title: 'The Agent Economy Manifesto: Every AI Agent Will Need to Pay and Be Paid',
+    excerpt:
+      'Autonomous agents are a new kind of economic actor. They need to transact at machine speed, without identity, with programmable acceptance conditions, and at micropayment scale. Every payment rail built for humans fails them. This is why.',
+    date: '2026-03-20',
+    lastUpdated: '2026-03-20',
+    author: authors['dev-relations']!,
+    category: 'Vision',
+    readTime: 12,
+    wordCount: 3000,
+    image: '/og/agent-economy.png',
+    tags: ['Agent Economy', 'Manifesto', 'AI Payments', 'Autonomous Agents', 'Ergo'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
+    shares: 0
+  },
+  {
     id: 'agents-cant-use-stripe',
     slug: 'agents-cant-use-stripe',
     title: 'Why AI Agents Can\'t Use Stripe — and What They Need Instead',
