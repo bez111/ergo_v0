@@ -10,6 +10,8 @@ import {
   Shield,
   Zap,
   Users,
+  Bot,
+  CreditCard,
   ExternalLink,
   ChevronDown,
   ArrowRight,
@@ -148,6 +150,31 @@ const sdks = [
     description: "Python wrapper for Ergo development",
     url: "https://github.com/ergo-pad/ergpy",
     github: "https://github.com/ergo-pad/ergpy",
+  },
+]
+
+// Agent Economy Funnel
+const agentEconomyLinks = [
+  {
+    title: "Agent Economy",
+    description: "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
+    href: "/agent-economy",
+    tag: "Overview",
+    icon: Bot,
+  },
+  {
+    title: "Agent Payments",
+    description: "Technical architecture: Reserve · Note · Tracker · Predicate — with Fleet SDK code examples.",
+    href: "/build/agent-payments",
+    tag: "Architecture",
+    icon: CreditCard,
+  },
+  {
+    title: "Live Demos",
+    description: "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
+    href: "/demos",
+    tag: "Testnet",
+    icon: Activity,
   },
 ]
 
@@ -547,6 +574,43 @@ export function DevelopersClient() {
                   </Link>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Agent Economy Stack */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-3xl p-8">
+              <div className="flex items-center gap-2 mb-3">
+                <Bot className="w-5 h-5 text-orange-400" />
+                <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">Agent Economy</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Building for autonomous agents?</h2>
+              <p className="text-neutral-400 mb-8 max-w-2xl">
+                Ergo is the only settlement layer with programmable credit, acceptance predicates, and verifiable reserves built in — everything agents need beyond basic payments.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                {agentEconomyLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group block bg-black/60 border border-white/10 hover:border-orange-500/40 rounded-2xl p-5 transition-all duration-300 hover:-translate-y-0.5"
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="w-9 h-9 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center group-hover:bg-orange-500/20 transition-colors">
+                        <item.icon className="w-4 h-4 text-orange-400" />
+                      </div>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-white/5 text-neutral-400 border border-white/10">{item.tag}</span>
+                    </div>
+                    <h3 className="font-bold text-white text-sm mb-1 group-hover:text-orange-100 transition-colors">{item.title}</h3>
+                    <p className="text-neutral-500 text-xs leading-relaxed">{item.description}</p>
+                    <div className="mt-3 flex items-center gap-1 text-orange-400 text-xs font-medium">
+                      Explore <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

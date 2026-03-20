@@ -18,7 +18,8 @@ import {
   Zap,
   Lock,
   Sparkles,
-  Shield
+  Shield,
+  Bot
 } from "lucide-react";
 import { DevPattern, PatternCategory, PatternDifficulty } from "@/data/dev-patterns";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
@@ -274,6 +275,16 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                     <Link href="/playbooks/build-defi-on-ergo">
                       <Zap className="w-4 h-4 mr-2" />
                       Build DeFi Playbook
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-orange-500/40 text-orange-400 hover:bg-orange-500/10 px-6 py-3 rounded-xl"
+                  >
+                    <Link href="/build/agent-payments">
+                      <Bot className="w-4 h-4 mr-2" />
+                      Agent Payments
                     </Link>
                   </Button>
                 </div>
