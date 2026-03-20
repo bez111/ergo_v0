@@ -1609,11 +1609,135 @@ export const playbooks: Playbook[] = [
       label: "Learn DAO Patterns",
       href: "/patterns/ergo-dao-treasury-voting-pattern",
     },
-    
+
     icon: "Building2",
     gradient: "from-indigo-500 to-purple-500",
-    
+
     publishDate: "2025-01-15",
+  },
+
+  // ============================================
+  // AGENT ECONOMY
+  // ============================================
+  {
+    slug: "build-agent-economy-apps",
+    title: "Build Agent Economy Apps on Ergo",
+    subtitle: "Notes, reserves, and acceptance predicates — everything autonomous agents need",
+
+    seoTitle: "Build Agent Economy Apps on Ergo — Notes, Credit & Programmable Trust",
+    seoDescription: "Step-by-step guide to building autonomous agent payment infrastructure on Ergo: deploy a reserve, issue notes, write acceptance predicates, integrate Fleet SDK.",
+    keywords: [
+      "agent economy Ergo", "autonomous agent payments", "ChainCash notes", "Fleet SDK agent",
+      "ErgoScript acceptance predicate", "programmable credit blockchain", "agent payments tutorial",
+      "build on Ergo developer guide", "eUTXO agent payments",
+    ],
+
+    cluster: "developer",
+    difficulty: "advanced",
+    timeToComplete: "3-6 hours",
+
+    heroDescription: "Ergo is the only settlement layer with programmable credit, acceptance predicates, and verifiable reserves built into the protocol. This playbook walks through the full agent payment stack.",
+
+    problemStatement: "Autonomous agents can't use Stripe or PayPal — they have no identity, no credit history, no bank account. Ethereum-style account model introduces reentrancy risks. Agents need programmable IOUs, not just coin transfers.",
+
+    solution: "Ergo's eUTXO model with ErgoScript acceptance predicates lets you issue bearer notes (IOUs), set conditions for acceptance (task hash + deadline), deploy verifiable reserves, and compose them into full credit flows — all deterministic, no reentrancy.",
+
+    steps: [
+      {
+        title: "Understand the Agent Payment Stack",
+        description: "Learn the 4 primitives: Reserve (backing), Note (bearer IOU), Tracker (anti-double-spend), Predicate (acceptance rule). These compose into full credit flows.",
+        duration: "30 min",
+        resources: [
+          { type: 'doc', title: "Agent Economy Overview", href: "/agent-economy" },
+          { type: 'doc', title: "Agent Payments Architecture", href: "/build/agent-payments" },
+          { type: 'technology', title: "eUTXO Model", href: "/technology/eutxo-model" },
+        ],
+      },
+      {
+        title: "Set Up Fleet SDK",
+        description: "Install Fleet SDK and connect to Ergo testnet. Get test ERG from the faucet. All agent demos run on testnet first.",
+        duration: "15 min",
+        resources: [
+          { type: 'tool', title: "Fleet SDK Docs", href: "https://fleet-sdk.github.io/docs/" },
+          { type: 'tool', title: "Testnet Faucet", href: "https://testnet.ergofaucet.org/" },
+          { type: 'doc', title: "Fleet SDK Quick Start", href: "/developers" },
+        ],
+      },
+      {
+        title: "Deploy a Reserve Box",
+        description: "A Reserve is a UTxO holding ERG (or tokens) with a script that controls how notes are issued against it. Deploy your first reserve on testnet.",
+        duration: "45 min",
+        resources: [
+          { type: 'doc', title: "Reserve Pattern Code", href: "/build/agent-payments#reserve" },
+          { type: 'doc', title: "Live Demo: API Call Payment", href: "/demos" },
+        ],
+      },
+      {
+        title: "Issue a Note (Programmable IOU)",
+        description: "Notes are bearer instruments backed by the reserve. An agent can issue a note to pay for a service; the service redeems it against the reserve. No bank required.",
+        duration: "45 min",
+        resources: [
+          { type: 'doc', title: "Note Architecture", href: "/build/agent-payments#note" },
+          { type: 'doc', title: "Live Demo: Credit System", href: "/demos" },
+          { type: 'technology', title: "ErgoScript", href: "/technology/ergoscript" },
+        ],
+      },
+      {
+        title: "Write an Acceptance Predicate",
+        description: "Predicates let you specify conditions for accepting payment: 'accept only if task hash matches and deadline hasn't passed.' Write your first ErgoScript predicate.",
+        duration: "60 min",
+        resources: [
+          { type: 'doc', title: "Predicate Pattern Code", href: "/build/agent-payments#predicate" },
+          { type: 'doc', title: "ErgoScript Patterns", href: "/patterns" },
+          { type: 'technology', title: "Sigma Protocols", href: "/technology/privacy-features" },
+        ],
+      },
+      {
+        title: "Compose Into a Full Flow",
+        description: "Combine reserve + note + tracker + predicate into a complete agent payment flow: agent buys API call, pays with note, provider redeems against reserve.",
+        duration: "60 min",
+        resources: [
+          { type: 'doc', title: "All 3 Demo Flows", href: "/demos" },
+          { type: 'technology', title: "Babel Fees (pay with any token)", href: "/technology/babel-fees" },
+        ],
+      },
+      {
+        title: "Deploy to Mainnet",
+        description: "Move from testnet to mainnet. Review security checklist, get your contract audited, and connect to BetterMoneyLabs ecosystem tools.",
+        duration: "Variable",
+        resources: [
+          { type: 'doc', title: "Agent Economy Ecosystem", href: "/agent-economy" },
+          { type: 'doc', title: "Developer Community Discord", href: "https://discord.gg/ergo-platform-668903786361651200" },
+        ],
+      },
+    ],
+
+    relatedInfographicTags: ["developer", "agent", "payments", "defi"],
+    relatedBlogTags: ["agent-economy", "ergoscript", "fleet-sdk", "chaincash"],
+    relatedDocsTags: ["developer", "ergoscript", "fleet"],
+
+    caseStudies: [
+      {
+        title: "ChainCash Reference Implementation",
+        description: "ChainCash is the reference implementation of notes + reserves on Ergo, built by BetterMoneyLabs. Open source, production-ready.",
+        outcome: "Programmable credit layer running on Ergo mainnet",
+        link: "https://github.com/chainCashLabs",
+      },
+    ],
+
+    primaryCTA: {
+      label: "See the Architecture",
+      href: "/build/agent-payments",
+    },
+    secondaryCTA: {
+      label: "Run Live Demos",
+      href: "/demos",
+    },
+
+    icon: "Code",
+    gradient: "from-orange-500 to-amber-500",
+
+    publishDate: "2026-03-20",
   },
 ];
 

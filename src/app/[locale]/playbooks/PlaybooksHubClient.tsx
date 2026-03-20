@@ -18,6 +18,7 @@ import {
   Clock,
   BookOpen,
   Zap,
+  Bot,
 } from "lucide-react";
 import { Playbook } from "@/data/playbooks";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
@@ -71,6 +72,7 @@ const playbookOrder: Record<string, number> = {
   "sustainable-blockchain-economics": 9,
   "ergo-global-settlement": 10,
   "build-defi-on-ergo": 11,
+  "build-agent-economy-apps": 12,
 };
 
 const difficultyRank: Record<string, number> = {
@@ -328,6 +330,38 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                   <p className="text-neutral-400">No playbooks in this category yet.</p>
                 </div>
               )}
+            </div>
+          </motion.section>
+
+          {/* Agent Economy Banner */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="pb-8"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-3xl p-6 flex flex-col md:flex-row items-center gap-6 justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <div>
+                    <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-1">New</p>
+                    <h3 className="font-bold text-white text-base">Building for autonomous agents?</h3>
+                    <p className="text-neutral-400 text-sm mt-1 max-w-xl">
+                      The "Build Agent Economy Apps" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet to mainnet.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  href="/playbooks/build-agent-economy-apps"
+                  className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm"
+                >
+                  Start Playbook
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </motion.section>
 

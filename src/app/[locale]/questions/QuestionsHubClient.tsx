@@ -18,7 +18,8 @@ import {
   ChevronDown,
   Sparkles,
   BookOpen,
-  Zap
+  Zap,
+  Bot
 } from "lucide-react";
 import { QuestionEntry } from "@/data/questions";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
@@ -307,6 +308,36 @@ export function QuestionsHubClient({
                 })}
               </div>
             )}
+          </motion.section>
+
+          {/* Agent Economy Banner */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 mb-8"
+          >
+            <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4 justify-between">
+              <div className="flex items-center gap-3">
+                <Bot className="w-6 h-6 text-orange-400 flex-shrink-0" />
+                <p className="text-white text-sm font-medium">
+                  Questions about building autonomous agent payments on Ergo?{" "}
+                  <Link href="/agent-economy" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                    See the Agent Economy overview
+                  </Link>{" "}
+                  or{" "}
+                  <Link href="/build/agent-payments" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                    dive into the architecture.
+                  </Link>
+                </p>
+              </div>
+              <Link
+                href="/demos"
+                className="flex-shrink-0 inline-flex items-center gap-1.5 border border-orange-500/40 text-orange-400 hover:bg-orange-500/10 px-4 py-2 rounded-xl text-sm font-medium transition-colors whitespace-nowrap"
+              >
+                Live Demos <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </motion.section>
 
           {/* CTA */}
