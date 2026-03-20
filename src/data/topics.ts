@@ -527,11 +527,89 @@ export const topics: TopicHub[] = [
     ],
     
     relatedTopics: ["ergo-mining", "ergo-technology"],
-    
+
     icon: "Leaf",
     color: "green",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26"
+  },
+
+  // ==================== AGENT ECONOMY ====================
+  {
+    slug: "agent-economy",
+    title: "Agent Economy on Ergo",
+    subtitle: "The Base Layer for Autonomous Agent Payments",
+    seoTitle: "Agent Economy on Ergo — AI Agent Payments, Notes & Reserves",
+    seoDescription: "Ergo is the only blockchain with all four agent payment primitives at the protocol level: Reserve, Note, Tracker, and Acceptance Predicate. No identity, no gas bootstrapping, no governance kill switch.",
+    keywords: ["agent economy", "AI agent payments", "autonomous agent blockchain", "ergo agent payments", "note reserve tracker", "acceptance predicate", "ChainCash", "Fleet SDK", "machine-to-machine payments", "programmable IOU"],
+
+    heroStatement: "Every AI system will need to pay and be paid. Ergo already has the primitives.",
+
+    introduction: "Autonomous AI agents are a fundamentally new kind of economic actor. They transact at machine speed, without persistent identity, at micropayment scale ($0.001 per API call), with conditional acceptance logic that no human-centric payment rail supports. Stripe requires KYC. Lightning requires persistent channels. Ethereum has non-deterministic gas and mandatory ETH pre-funding. Ergo is the only blockchain that satisfies all requirements agents have — at the protocol level, with no application-layer workarounds.",
+
+    whatMakesUnique: "Ergo's agent payment stack consists of four composable UTxO primitives: Reserve (collateral backing), Note (programmable bearer IOU), Tracker (anti-double-spend registry), and Acceptance Predicate (on-chain task completion condition). These aren't features bolted on for AI — they're protocol properties that emerge from eUTXO's deterministic execution, ErgoScript's expressive power, and Babel Fees' gas abstraction. ChainCash is the live mainnet reference implementation.",
+
+    keyDifferentiators: [
+      "Notes: programmable bearer IOUs transferable between agents without issuer round-trips",
+      "Acceptance Predicates: task completion logic enforced on-chain by miners, not your server",
+      "Babel Fees: agents pay fees in any token — zero ERG bootstrapping required",
+      "Deterministic eUTXO: agents know exact costs before submitting — no gas surprises",
+      "PoW: no validator multisig that can freeze agent infrastructure"
+    ],
+
+    sections: [
+      { id: "primitives", title: "The Four Primitives", description: "Reserve, Note, Tracker, Acceptance Predicate" },
+      { id: "why-ergo", title: "Why Ergo", description: "What makes Ergo uniquely suited for agent commerce" },
+      { id: "build", title: "Build", description: "SDKs, quickstart, examples" },
+      { id: "reference", title: "Reference Implementation", description: "ChainCash on mainnet" }
+    ],
+
+    startHere: [
+      { type: "blog", title: "Agent Economy Manifesto", url: "/blog/agent-economy-manifesto", description: "Why every AI agent will need to pay and be paid — and why Ergo already has the primitives", badge: "Start Here", priority: 1 },
+      { type: "technology", title: "Agent Payments Architecture", url: "/build/agent-payments", description: "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference", badge: "Architecture", priority: 1 },
+      { type: "compare", title: "Ergo vs ETH vs SOL for Agents", url: "/agent-economy/vs", description: "10-criteria comparison across chains for agent-specific requirements", badge: "Comparison", priority: 1 }
+    ],
+
+    buildWithIt: [
+      { type: "doc", title: "10-Minute Quickstart", url: "/build/quickstart", description: "First agent payment on Ergo testnet in under 10 minutes", badge: "Quickstart", priority: 1 },
+      { type: "playbook", title: "7-Step Agent Economy Playbook", url: "/playbooks/build-agent-economy-apps", description: "From environment setup to mainnet deployment", badge: "Playbook", priority: 1 },
+      { type: "doc", title: "GitHub: ergo-agent-economy", url: "https://github.com/bez111/ergo-agent-economy", description: "Open source examples: basic payment, Note IOU, acceptance predicate", badge: "Code", priority: 1 },
+      { type: "doc", title: "Live Testnet Demos", url: "/demos", description: "Working agent payment flows — address lookup, live stats", badge: "Demo", priority: 2 }
+    ],
+
+    philosophy: [
+      { type: "blog", title: "Why AI Agents Can't Use Stripe", url: "/blog/agents-cant-use-stripe", description: "The structural reasons every human-centric payment rail fails autonomous agents", badge: "Essential", priority: 1 },
+      { type: "technology", title: "Agent Economy Hub", url: "/agent-economy", description: "The full narrative: why agents need new money primitives", badge: "Vision", priority: 1 }
+    ],
+
+    visuals: [],
+
+    relatedTags: ["Agent Economy", "AI Payments", "Note", "Reserve", "Tracker", "Acceptance Predicate", "ChainCash", "Fleet SDK", "Babel Fees", "autonomous agents"],
+
+    keyTerms: [
+      { term: "Note", slug: "note-bearer-instrument", shortDefinition: "Programmable bearer IOU transferable between agents as payment" },
+      { term: "Reserve", slug: "reserve-box", shortDefinition: "Collateral UTxO backing a Note issuance system" },
+      { term: "Tracker", slug: "tracker-anti-double-spend", shortDefinition: "On-chain registry preventing double-redemption of Notes" },
+      { term: "Acceptance Predicate", slug: "acceptance-predicate", shortDefinition: "ErgoScript condition encoding task completion in the payment itself" },
+      { term: "Babel Fees", slug: "babel-fees-agent", shortDefinition: "Pay transaction fees in any token — agents don't need pre-funded ERG wallets" },
+      { term: "ChainCash", slug: "chaincash", shortDefinition: "Live mainnet reference implementation of the Reserve+Note+Tracker stack" },
+      { term: "Programmable IOU", slug: "programmable-iou", shortDefinition: "A Note with custom acceptance conditions enforced on-chain" },
+      { term: "Agent Economy", slug: "agent-economy", shortDefinition: "The emerging system of autonomous AI agents transacting without human intermediaries" }
+    ],
+
+    relatedQuestions: [
+      { question: "Why can't AI agents use Stripe?", slug: "why-cant-ai-agents-use-stripe" },
+      { question: "What blockchain is best for AI agent payments?", slug: "best-blockchain-ai-agent-payments" },
+      { question: "What is a Note in Ergo?", slug: "what-is-note-ergo" },
+      { question: "How do Babel Fees work for agents?", slug: "how-babel-fees-work-agents" }
+    ],
+
+    relatedTopics: ["ergo-defi", "ergo-technology"],
+
+    icon: "Bot",
+    color: "orange",
+    publishDate: "2026-03-20",
+    updatedDate: "2026-03-20"
   }
 ];
 

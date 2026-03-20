@@ -339,6 +339,11 @@ export function QuickstartClient() {
                 desc: "See working agent payment flows on Ergo testnet, open source",
                 href: "/demos",
               },
+              {
+                title: "GitHub: ergo-agent-economy",
+                desc: "Open source examples: basic payment, Note IOU, acceptance predicate",
+                href: "https://github.com/bez111/ergo-agent-economy",
+              },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp}>
                 <Link
