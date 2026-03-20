@@ -16,6 +16,11 @@ import {
   Play,
   Github,
   MessageSquare,
+  Search,
+  Loader2,
+  Wallet,
+  Coins,
+  AlertCircle,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -200,8 +205,52 @@ function StatusBadge({ status, label }: { status: string; label: string }) {
   return null
 }
 
+interface AddressToken {
+  tokenId: string
+  amount: number
+  name?: string
+  decimals?: number
+}
+
+interface AddressBalance {
+  nanoErgs: number
+  tokens: AddressToken[]
+}
+
 export function DemosClient() {
   const [expandedCode, setExpandedCode] = useState<string | null>(null)
+
+  // ── Address Lookup state ──────────────────────────────────────────────────
+  const [lookupAddress, setLookupAddress] = useState("")
+  const [lookupResult, setLookupResult] = useState<AddressBalance | null>(null)
+  const [lookupLoading, setLookupLoading] = useState(false)
+  const [lookupError, setLookupError] = useState<string | null>(null)
+
+  async function handleLookup(e: React.FormEvent) {
+    e.preventDefault()
+    const addr = lookupAddress.trim()
+    if (!addr) return
+
+    setLookupLoading(true)
+    setLookupError(null)
+    setLookupResult(null)
+
+    try {
+      const res = await fetch(
+        `https://api.ergoplatform.com/api/v1/addresses/${encodeURIComponent(addr)}/balance/confirmed`
+      )
+      if (!res.ok) {
+        setLookupError("Address not found or invalid. Check that it's a valid Ergo address.")
+        return
+      }
+      const data: AddressBalance = await res.json()
+      setLookupResult(data)
+    } catch {
+      setLookupError("Could not reach Ergo API. Check your network connection.")
+    } finally {
+      setLookupLoading(false)
+    }
+  }
 
   return (
     <BackgroundWrapper>
@@ -553,6 +602,132 @@ export function DemosClient() {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── Live Address Lookup ──────────────────────────────────────────── */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-4">
+                <Search className="w-3.5 h-3.5 text-orange-400" />
+                <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
+                  Live on mainnet
+                </span>
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-2">Address balance lookup</h2>
+              <p className="text-gray-400 text-sm">
+                Query any Ergo address balance live from the blockchain. Real data, real network.
+              </p>
+            </div>
+
+            <form onSubmit={handleLookup} className="flex gap-2 mb-6">
+              <input
+                type="text"
+                value={lookupAddress}
+                onChange={(e) => setLookupAddress(e.target.value)}
+                placeholder="9hHDQb26AjnJ...  (paste any Ergo address)"
+                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-orange-500/50 font-mono"
+                spellCheck={false}
+              />
+              <button
+                type="submit"
+                disabled={lookupLoading || !lookupAddress.trim()}
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm shrink-0"
+              >
+                {lookupLoading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Search className="w-4 h-4" />
+                )}
+                {lookupLoading ? "Looking up…" : "Lookup"}
+              </button>
+            </form>
+
+            {/* Error */}
+            {lookupError && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-start gap-3 bg-red-500/10 border border-red-500/20 rounded-xl p-4 text-sm text-red-300"
+              >
+                <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+                {lookupError}
+              </motion.div>
+            )}
+
+            {/* Result */}
+            {lookupResult && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-white/5 border border-white/10 rounded-xl overflow-hidden"
+              >
+                {/* ERG balance */}
+                <div className="flex items-center gap-4 p-5 border-b border-white/10">
+                  <div className="p-2.5 bg-orange-500/10 rounded-lg">
+                    <Wallet className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <div>
+                    <div className="text-white font-bold text-xl tabular-nums">
+                      {(lookupResult.nanoErgs / 1e9).toFixed(4)} ERG
+                    </div>
+                    <div className="text-gray-500 text-xs mt-0.5 font-mono">
+                      {lookupResult.nanoErgs.toLocaleString()} nanoERG
+                    </div>
+                  </div>
+                  <div className="ml-auto">
+                    <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400">
+                      <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                      Confirmed
+                    </span>
+                  </div>
+                </div>
+
+                {/* Tokens */}
+                {lookupResult.tokens.length > 0 && (
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Coins className="w-4 h-4 text-gray-400" />
+                      <span className="text-gray-400 text-sm">
+                        {lookupResult.tokens.length} token{lookupResult.tokens.length !== 1 ? "s" : ""}
+                      </span>
+                    </div>
+                    <div className="space-y-2 max-h-48 overflow-y-auto">
+                      {lookupResult.tokens.map((token) => (
+                        <div
+                          key={token.tokenId}
+                          className="flex items-center justify-between bg-black/30 rounded-lg px-3 py-2 text-sm"
+                        >
+                          <div className="min-w-0">
+                            <span className="text-white font-medium">
+                              {token.name || "Unknown Token"}
+                            </span>
+                            <span className="text-gray-600 font-mono text-xs block truncate">
+                              {token.tokenId.slice(0, 16)}…
+                            </span>
+                          </div>
+                          <span className="text-orange-300 font-mono font-bold shrink-0 ml-4">
+                            {token.amount.toLocaleString()}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {lookupResult.tokens.length === 0 && (
+                  <div className="p-4 text-center text-gray-500 text-sm">
+                    No tokens in this address
+                  </div>
+                )}
+              </motion.div>
+            )}
+
+            <p className="text-center text-gray-600 text-xs mt-4">
+              Data fetched live from{" "}
+              <code className="text-gray-500">api.ergoplatform.com</code>
+            </p>
           </div>
         </section>
 

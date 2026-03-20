@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { HeroFinal } from "@/components/home/hero-final"
 import { WhyErgo } from "@/components/home/why-ergo-new"
+import { LiveNetworkStats } from "@/components/home/live-network-stats"
 import { FAQSchema } from "@/components/seo/faq-schema"
 import { PerformanceOptimizations } from "@/components/seo/performance-optimizations"
 import { siteConfig } from '@/config/site-config';
@@ -166,6 +167,7 @@ export default async function HomePage({ params }: HomePageProps) {
         
         <BackgroundWrapper>
           <HeroFinal />
+          <LiveNetworkStats />
           <WhyErgo />
           <BuildForScale />
           <AgentEconomySection />

@@ -8896,9 +8896,425 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     category: "scalability",
     difficulty: "beginner",
-    
+
     publishDate: "2024-01-01",
-  }
+  },
+
+  // ============================================
+  // AGENT ECONOMY TERMS
+  // ============================================
+
+  {
+    slug: "agent-economy",
+    term: "Agent Economy",
+
+    shortDefinition: "An economic system where autonomous AI agents transact with each other and with humans using programmable money — without human intermediaries for each payment.",
+
+    definition: "The Agent Economy is the emerging paradigm where AI agents, LLM pipelines, and autonomous software processes are first-class economic actors: they pay for services, receive payments for tasks, issue credit, and settle obligations on-chain. Unlike human-facing payment systems, agent economy infrastructure must handle ephemeral identities, micropayments at machine speed, programmable acceptance conditions, and trustless multi-step settlement — all without KYC, billing accounts, or centralized rails. Ergo is designed as the base layer for this system through its Notes, Reserves, Trackers, and Acceptance Predicates.",
+
+    keywords: [
+      "agent economy",
+      "AI agent payments",
+      "autonomous agent blockchain",
+      "LLM agent payments",
+      "multi-agent payments",
+      "agentic economy",
+      "machine to machine payments",
+      "crypto for AI agents",
+    ],
+
+    keyPoints: [
+      "Agents are ephemeral — they can't hold Stripe accounts or pass KYC",
+      "Payments must be programmable: encode task completion as acceptance conditions",
+      "Micropayments at $0.001 scale require on-chain rails, not payment processors",
+      "Credit issuance (Notes against Reserves) enables multi-agent orchestration",
+      "Ergo's eUTXO model gives agents deterministic costs before submitting",
+      "Babel Fees let agents operate without a pre-funded ERG wallet",
+    ],
+
+    technicalDetails: "On Ergo, the agent economy stack consists of four primitives: (1) Reserve — a UTxO holding ERG as collateral; (2) Note — a bearer instrument referencing a Reserve with optional acceptance predicates; (3) Tracker — an anti-double-spend registry; (4) Acceptance Predicate — an ErgoScript condition in the receiver's spending script encoding task completion requirements. ChainCash is the production implementation.",
+
+    useCases: [
+      "LLM agent pays $0.001 per API call — no Stripe account needed",
+      "Orchestrator issues credit to sub-agents against a shared Reserve",
+      "Community currency: agents pool ERG, issue Notes, circulate locally",
+      "Agent proves task completion via acceptance predicate — no off-chain oracle",
+    ],
+
+    relatedTags: ["Agent Economy", "Note", "Reserve", "Acceptance Predicate", "ChainCash", "Babel Fees", "eUTXO"],
+
+    faq: [
+      {
+        question: "What is the agent economy in blockchain?",
+        answer: "The agent economy is the system where AI agents and autonomous software pay each other for services using programmable blockchain money — without human intermediaries. Ergo provides the base layer with Notes, Reserves, Trackers, and Acceptance Predicates.",
+      },
+      {
+        question: "Why can't AI agents use Stripe or traditional payments?",
+        answer: "Stripe requires KYC, billing accounts, and static merchant IDs. AI agents are ephemeral and identityless. They also need programmable acceptance conditions — 'accept payment only if task X is complete' — which centralized rails cannot provide. Blockchain is the only viable payment layer for autonomous agents.",
+      },
+      {
+        question: "Which blockchain is best for AI agent payments?",
+        answer: "Ergo is uniquely suited: eUTXO gives deterministic costs, ErgoScript provides acceptance predicates as first-class primitives, Babel Fees remove the need for pre-funded ERG wallets, and the Note+Reserve+Tracker stack is available at the protocol level — not as an application workaround.",
+      },
+    ],
+
+    category: "general",
+    difficulty: "intermediate",
+    learnMoreUrl: "/agent-economy",
+    docsUrl: "/build/agent-payments",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "note-bearer-instrument",
+    term: "Note (Bearer Instrument)",
+
+    shortDefinition: "A programmable IOU on Ergo — a UTxO encoding a payment obligation that can be transferred between agents and redeemed against a Reserve.",
+
+    definition: "In Ergo's agent economy stack, a Note is a bearer instrument implemented as a UTxO box. It references a Reserve box (the collateral backing), contains a value in ERG or tokens, an expiry block height, and an optional acceptance predicate. Notes can be transferred between agents without any issuer involvement — whoever holds the Note can redeem it against the Reserve. The acceptance predicate encodes conditions that must be true at redemption time, enabling trustless payment-for-task flows without off-chain oracles. ChainCash is the production implementation of the Note protocol on Ergo mainnet.",
+
+    keywords: [
+      "ergo note",
+      "bearer instrument blockchain",
+      "programmable IOU",
+      "ergo payment note",
+      "chaincash note",
+      "agent payment instrument",
+      "note reserve tracker ergo",
+    ],
+
+    keyPoints: [
+      "A Note is a UTxO box, not a token — it uses ErgoScript as spending logic",
+      "References a Reserve box as its backing collateral",
+      "Contains: value, expiry height, optional acceptance predicate, reserve box ID",
+      "Transferable between agents without issuer involvement",
+      "Redeemed against Reserve — Tracker prevents double-redemption",
+      "Acceptance predicate: conditions that must be satisfied at redemption",
+    ],
+
+    technicalDetails: "A Note box in Ergo typically uses registers: R4 = reserve box ID (to verify collateral), R5 = expiry block height, R6 = acceptance predicate hash or inline script. The spending script verifies HEIGHT < R5, that the redemption transaction includes the correct Reserve box, and that any acceptance conditions are satisfied. The Tracker box is also included in the redemption transaction to prevent double-spend.",
+
+    useCases: [
+      "Agent payment for API call with task hash acceptance predicate",
+      "Community currency note backed by shared ERG Reserve",
+      "Sub-agent credit issued by orchestrator within credit limit",
+      "Deferred payment: Note issued now, redeemed after task completion",
+    ],
+
+    relatedTags: ["Note", "Reserve", "Tracker", "Acceptance Predicate", "ChainCash", "Agent Economy", "Bearer Instrument"],
+
+    faq: [
+      {
+        question: "What is a Note in Ergo's agent economy?",
+        answer: "A Note is a programmable IOU — a UTxO box that encodes a payment obligation. It references a Reserve (the collateral), has an expiry, and optionally an acceptance predicate. Agents transfer Notes as payment; recipients redeem them against the Reserve.",
+      },
+      {
+        question: "How is an Ergo Note different from a token?",
+        answer: "A Note is a UTxO box with a spending script, not an ERC-20-style token. Its logic lives in ErgoScript, enabling conditions like 'accept only if task hash matches' to be embedded directly in the payment instrument. Tokens don't have this programmability.",
+      },
+    ],
+
+    category: "smart-contracts",
+    difficulty: "advanced",
+    learnMoreUrl: "/build/agent-payments",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "reserve-box",
+    term: "Reserve (Agent Economy)",
+
+    shortDefinition: "A collateral UTxO on Ergo that backs Note issuance — the source of truth for how much credit has been issued in an agent economy system.",
+
+    definition: "In Ergo's agent payment stack, a Reserve is a UTxO box holding ERG (or tokens) as collateral for Notes. The Reserve script enforces: total notes issued ≤ reserve value; only authorized issuers can create notes; the reserve can be topped up or drawn down within protocol rules. When an agent redeems a Note, the Reserve releases the corresponding value. The Reserve + Note + Tracker pattern (implemented in ChainCash) gives multi-agent systems a trustless credit layer without any centralized ledger.",
+
+    keywords: [
+      "ergo reserve box",
+      "agent economy reserve",
+      "collateral utxo ergo",
+      "note reserve tracker",
+      "chaincash reserve",
+      "programmable credit reserve",
+    ],
+
+    keyPoints: [
+      "Reserve box holds ERG or tokens as collateral for Notes",
+      "Script enforces: issued notes ≤ reserve value",
+      "Only authorized issuer keys can create new Notes against the Reserve",
+      "Reserve can be topped up (add collateral) or drawn down (remove excess)",
+      "Multiple Reserves can back different Note series",
+      "Community Reserves enable community currencies in one transaction",
+    ],
+
+    technicalDetails: "The Reserve script in ErgoScript: `sigmaProp(issuedNotes <= SELF.value && PK(issuerKey))`. The `issuedNotes` value is tracked via an output register updated in each note-issuance transaction. Redemption transactions decrease this count and release ERG to the redeemer. The Reserve box ID is embedded in each Note to prevent cross-reserve fraud.",
+
+    useCases: [
+      "Orchestrator deploys Reserve, issues Notes to sub-agents up to collateral limit",
+      "Community pools ERG into shared Reserve, issues community currency Notes",
+      "Corporate Reserve backing internal agent credit for API call payments",
+    ],
+
+    relatedTags: ["Reserve", "Note", "Tracker", "Agent Economy", "ChainCash", "eUTXO"],
+
+    faq: [
+      {
+        question: "What is a Reserve in Ergo's agent economy?",
+        answer: "A Reserve is a UTxO holding ERG as collateral. Notes (programmable IOUs) are issued against it, with the script enforcing that total notes never exceed the reserve value. When Notes are redeemed, the Reserve releases the ERG.",
+      },
+    ],
+
+    category: "smart-contracts",
+    difficulty: "advanced",
+    learnMoreUrl: "/build/agent-payments",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "acceptance-predicate",
+    term: "Acceptance Predicate",
+
+    shortDefinition: "An ErgoScript condition embedded in a Note's spending logic that must be satisfied at redemption — enabling trustless payment-for-task without off-chain oracles.",
+
+    definition: "An acceptance predicate is an ErgoScript expression in a Note's spending script (or receiver's box script) that encodes conditions for valid redemption. Example: 'Accept this payment only if the blake2b256 hash of the task output matches TASK_HASH, and the current block height is less than DEADLINE.' Acceptance predicates move payment conditions on-chain, eliminating the need for off-chain dispute resolution, oracle trust, or centralized escrow. This is a key primitive for autonomous agent commerce — the agent pays with a Note; the receiver's script enforces the business logic.",
+
+    keywords: [
+      "acceptance predicate ergo",
+      "ergoscript acceptance condition",
+      "programmable payment conditions",
+      "trustless payment smart contract",
+      "agent payment predicate",
+      "conditional payment blockchain",
+      "ergo payment logic",
+    ],
+
+    keyPoints: [
+      "Embedded in the Note spending script or receiver's box script",
+      "Evaluated at redemption time — no off-chain oracle needed",
+      "Can reference: task hash, block height deadline, credential proof, minimum value",
+      "Written in ErgoScript — sigma-protocol based, formally verifiable",
+      "Enables trustless payment-for-task: 'accept only if work is proven'",
+      "Composable with Sigma protocols for zero-knowledge task proofs",
+    ],
+
+    technicalDetails: "Example ErgoScript acceptance predicate: `sigmaProp(blake2b256(getVar[Coll[Byte]](0).get) == TASK_HASH && HEIGHT < DEADLINE && noteValue >= PRICE)`. The context variable `getVar(0)` is provided by the redeemer at spending time — they submit the task output preimage, and the script verifies the hash. This makes the payment atomically conditional on task delivery.",
+
+    useCases: [
+      "API provider: 'accept payment only if request hash matches delivered response'",
+      "Compute job: 'accept payment only if proof-of-work output hash is correct'",
+      "Data feed: 'accept payment only before block 1,500,000 deadline'",
+      "Multi-step pipeline: 'accept only if all upstream task hashes are present'",
+    ],
+
+    relatedTags: ["Acceptance Predicate", "ErgoScript", "Note", "Agent Economy", "Sigma Protocols", "Smart Contracts"],
+
+    faq: [
+      {
+        question: "What is an acceptance predicate in Ergo?",
+        answer: "An acceptance predicate is an ErgoScript condition in a Note's spending logic. It encodes requirements that must be met at redemption: task hash match, deadline, credential. This turns a payment into a trustless contract — no off-chain oracle or escrow needed.",
+      },
+      {
+        question: "How do acceptance predicates differ from smart contract escrow?",
+        answer: "Traditional escrow requires a trusted third party or complex on-chain state machine. An acceptance predicate is just a spending condition in ErgoScript — evaluated atomically at redemption. No separate escrow contract, no trusted intermediary, no multi-step dispute flow.",
+      },
+    ],
+
+    category: "smart-contracts",
+    difficulty: "advanced",
+    learnMoreUrl: "/build/agent-payments",
+    docsUrl: "/patterns",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "chaincash",
+    term: "ChainCash",
+
+    shortDefinition: "The production reference implementation of Ergo's Note+Reserve+Tracker agent payment stack — a community currency and bearer instrument protocol by BetterMoneyLabs.",
+
+    definition: "ChainCash is an open-source protocol built on Ergo that implements bearer instruments (Notes) backed by ERG Reserves, with a Tracker registry for double-spend prevention. It enables community currencies, agent credit systems, and programmable IOUs without any centralized infrastructure. ChainCash is live on Ergo mainnet, built by BetterMoneyLabs, and serves as the reference implementation for the agent economy payment stack described in Ergo documentation. Developers building agent payment systems can use ChainCash contracts directly or as templates for custom Reserve+Note implementations.",
+
+    keywords: [
+      "chaincash ergo",
+      "chaincash protocol",
+      "bettermoneylabs ergo",
+      "ergo community currency",
+      "chaincash bearer instrument",
+      "ergo note protocol",
+      "chaincash mainnet",
+      "agent economy reference implementation",
+    ],
+
+    keyPoints: [
+      "Live on Ergo mainnet — not a prototype",
+      "Open source — contracts and SDK available",
+      "Built by BetterMoneyLabs",
+      "Implements: Reserve, Note, Tracker, and redemption flows",
+      "Enables community currencies backed by ERG",
+      "Reference implementation for agent payment developers",
+      "Compatible with Fleet SDK and AppKit",
+    ],
+
+    useCases: [
+      "Community currencies: local ERG-backed notes for community use",
+      "Agent credit: orchestrators issue Notes to sub-agents",
+      "Developer template: fork ChainCash contracts for custom payment apps",
+      "API payment: services accept ChainCash Notes as payment",
+    ],
+
+    relatedTags: ["ChainCash", "Note", "Reserve", "Tracker", "Agent Economy", "BetterMoneyLabs", "Community Currency"],
+
+    faq: [
+      {
+        question: "What is ChainCash?",
+        answer: "ChainCash is a live Ergo protocol for bearer instruments (Notes) backed by ERG Reserves. Built by BetterMoneyLabs, it is the production reference implementation of Ergo's agent economy payment stack. It enables community currencies, agent credit, and programmable IOUs on Ergo mainnet.",
+      },
+      {
+        question: "Who built ChainCash?",
+        answer: "ChainCash was built by BetterMoneyLabs. It is open source and live on Ergo mainnet.",
+      },
+    ],
+
+    category: "economics",
+    difficulty: "intermediate",
+    learnMoreUrl: "/agent-economy",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "babel-fees-agent",
+    term: "Babel Fees (Agent Context)",
+
+    shortDefinition: "Ergo's mechanism for paying transaction fees in any token — critical for autonomous agents that don't hold a pre-funded ERG wallet.",
+
+    definition: "Babel Fees is Ergo's protocol for paying transaction fees in tokens other than the native ERG. A node or miner posts a 'Babel box' offering an exchange rate: submit X tokens, receive fee coverage in ERG. For autonomous agents, this is critical infrastructure: agents are often funded in application tokens, not ERG. Without Babel Fees, every agent instance would need a bootstrapped ERG wallet just to pay gas — a coordination overhead that breaks ephemeral agent architectures. With Babel Fees, an agent receiving a payment in any Ergo token can immediately pay transaction fees from those tokens.",
+
+    keywords: [
+      "babel fees ergo",
+      "pay transaction fees any token",
+      "gas abstraction blockchain",
+      "ergo fee abstraction",
+      "agent fee payment",
+      "no erg wallet agent",
+      "ergo token fees",
+      "fee market ergo",
+    ],
+
+    keyPoints: [
+      "Agents can pay tx fees in any Ergo native token — not only ERG",
+      "Nodes post 'Babel boxes' with exchange rates for fee coverage",
+      "Eliminates need to pre-fund agent wallets with ERG",
+      "Critical for ephemeral agent instances spun up on demand",
+      "Implemented at the protocol level, not as a wrapper",
+      "Enables true token-denominated agent economies",
+    ],
+
+    technicalDetails: "A Babel box is a UTxO offering to exchange a specific token for ERG at a posted rate. A transaction spending a Babel box must include an output returning ERG to the Babel box creator (the miner/node). This is verified by the Babel box spending script. The net effect: the transaction submitter pays fees in tokens, the Babel box creator receives those tokens and pays ERG fees on their behalf.",
+
+    useCases: [
+      "Agent funded in community tokens immediately operates without ERG bootstrap",
+      "Multi-tenant agent system where each agent pays fees from its own token balance",
+      "IoT device making on-chain payments with device-specific tokens",
+    ],
+
+    relatedTags: ["Babel Fees", "Agent Economy", "Transaction Fees", "eUTXO", "Native Tokens"],
+
+    faq: [
+      {
+        question: "What are Babel Fees on Ergo?",
+        answer: "Babel Fees let users and agents pay Ergo transaction fees in any token, not just ERG. A Babel box posted by a node offers to cover fees in exchange for tokens at a set rate. This means agents don't need a pre-funded ERG wallet — they can pay fees from any token they hold.",
+      },
+      {
+        question: "Why are Babel Fees important for AI agents?",
+        answer: "AI agents are ephemeral — they spin up, run, and disappear. Requiring each agent to hold pre-funded ERG for gas is a coordination bottleneck. Babel Fees remove this requirement: an agent can be bootstrapped with any token and immediately transact.",
+      },
+    ],
+
+    category: "economics",
+    difficulty: "intermediate",
+    learnMoreUrl: "/technology/babel-fees",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "programmable-iou",
+    term: "Programmable IOU",
+
+    shortDefinition: "A digital bearer instrument on blockchain that encodes not just a payment obligation, but conditions under which it can be redeemed — a Note with an acceptance predicate.",
+
+    definition: "A Programmable IOU is a payment commitment where the redemption conditions are encoded in the instrument itself, not managed off-chain. On Ergo, this is implemented as a Note box with an acceptance predicate in its spending script. Unlike a traditional IOU (a promise to pay), a Programmable IOU is enforced by the blockchain — the issuer cannot refuse redemption if conditions are met, and the holder cannot redeem until conditions are satisfied. This primitive is fundamental to agent economy applications where payments must be contingent on verifiable task completion.",
+
+    keywords: [
+      "programmable IOU blockchain",
+      "conditional payment instrument",
+      "bearer instrument smart contract",
+      "ergo note programmable",
+      "trustless payment obligation",
+      "agent economy IOU",
+      "smart payment commitment",
+    ],
+
+    keyPoints: [
+      "Encodes both the payment amount AND the redemption conditions",
+      "Conditions are on-chain in ErgoScript — no off-chain enforcement needed",
+      "Bearer instrument: transferable, redeemable by anyone meeting conditions",
+      "Differs from escrow: no third party, no separate dispute mechanism",
+      "Backed by a Reserve — collateral is locked until Note is redeemed or expired",
+    ],
+
+    relatedTags: ["Programmable IOU", "Note", "Acceptance Predicate", "Agent Economy", "ChainCash", "Bearer Instrument"],
+
+    faq: [
+      {
+        question: "What is a programmable IOU on blockchain?",
+        answer: "A programmable IOU is a payment commitment where redemption conditions are encoded on-chain. On Ergo, it's a Note with an acceptance predicate: 'you can redeem this payment if and only if condition X is proven at spending time.' No off-chain escrow or dispute mechanism needed.",
+      },
+    ],
+
+    category: "smart-contracts",
+    difficulty: "intermediate",
+    learnMoreUrl: "/agent-economy",
+    publishDate: "2026-03-20",
+  },
+
+  {
+    slug: "tracker-anti-double-spend",
+    term: "Tracker (Anti-Double-Spend Registry)",
+
+    shortDefinition: "A mutable UTxO on Ergo that maintains a set of redeemed Note IDs — preventing the same Note from being redeemed twice in the agent economy stack.",
+
+    definition: "In Ergo's Note+Reserve+Tracker payment stack, the Tracker is a UTxO box that acts as an on-chain registry of spent Note IDs. When a Note is redeemed, the redemption transaction must include the Tracker box as an input, the Tracker script verifies the Note ID is not already in the spent set, and the transaction outputs a new Tracker containing the updated spent set. This prevents double-redemption without requiring a centralized authority. The Tracker pattern is the eUTXO solution to the double-spend problem for bearer instruments — each UTxO can only be spent once, so the Tracker state is always consistent.",
+
+    keywords: [
+      "tracker ergo",
+      "anti double spend registry",
+      "note tracker chaincash",
+      "ergo spent note registry",
+      "utxo double spend prevention",
+      "bearer instrument tracker",
+    ],
+
+    keyPoints: [
+      "Mutable UTxO tracking spent Note IDs — updated on each redemption",
+      "Redemption transaction must reference Tracker — script verifies no double-spend",
+      "Outputs new Tracker with updated spent set after each redemption",
+      "eUTXO property: Tracker UTxO can only be spent once per transaction",
+      "Stateful but consistent: the chain itself is the source of truth",
+    ],
+
+    relatedTags: ["Tracker", "Note", "Reserve", "ChainCash", "Agent Economy", "eUTXO", "Double Spend"],
+
+    faq: [
+      {
+        question: "What is the Tracker in Ergo's agent economy?",
+        answer: "The Tracker is a UTxO that records all redeemed Note IDs. When a Note is redeemed, the transaction verifies the Note ID is not in the Tracker's spent set, then outputs a new Tracker with the ID added. This prevents double-redemption of bearer instruments without centralized state.",
+      },
+    ],
+
+    category: "smart-contracts",
+    difficulty: "advanced",
+    learnMoreUrl: "/build/agent-payments",
+    publishDate: "2026-03-20",
+  },
 
 ];
 

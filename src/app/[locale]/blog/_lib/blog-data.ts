@@ -287,6 +287,25 @@ export const blogPosts: BlogPost[] = [
     trending: true,
     difficulty: 'Intermediate',
     shares: 0
+  },
+  {
+    id: 'agents-cant-use-stripe',
+    slug: 'agents-cant-use-stripe',
+    title: 'Why AI Agents Can\'t Use Stripe — and What They Need Instead',
+    excerpt:
+      'Stripe, PayPal, and every payment rail built for humans shares the same fatal flaw for autonomous agents: they assume persistent identity and centralized trust. Here is what agents actually need from money — and why Ergo already has it.',
+    date: '2026-03-20',
+    lastUpdated: '2026-03-20',
+    author: authors['dev-relations']!,
+    category: 'Development',
+    readTime: 10,
+    wordCount: 2600,
+    image: '/og/agent-economy.png',
+    tags: ['Agent Economy', 'AI Payments', 'Stripe', 'Blockchain', 'Developer'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
+    shares: 0
   }
 ]
 
