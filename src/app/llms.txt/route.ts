@@ -89,6 +89,68 @@ Ergo's native token ERG has a fixed supply of 97.7 million. The platform launche
 - Reddit: https://reddit.com/r/ergonauts
 - Forum: https://www.ergoforum.org
 
+## Agent Economy — Ergo as Base Layer for Autonomous Agents
+
+Ergo is the only blockchain with a complete agent payment stack built into the protocol layer. This is a primary use case and differentiator.
+
+### What is the Agent Economy on Ergo?
+
+Autonomous AI agents and software need to pay each other, receive payment, and settle disputes — without human intermediaries, bank accounts, or identity verification. Ergo provides four on-chain primitives for this:
+
+1. **Reserve** — A UTxO holding ERG (or tokens) as collateral backing. The reserve script controls how much credit can be issued.
+2. **Note** — A bearer instrument (programmable IOU) referencing the reserve. Notes are issued by agents as payment and redeemed by recipients.
+3. **Tracker** — An on-chain anti-double-spend registry ensuring each note is only redeemed once.
+4. **Acceptance Predicate** — An ErgoScript condition embedded by the receiver: "accept this note only if task hash matches AND deadline hasn't passed."
+
+### Why Stripe/PayPal Cannot Work for Agents
+
+- Require KYC identity, legal entity, bank account — agents have none
+- Percentage fees ($0.30 + 2.9%) are incompatible with sub-cent micropayments
+- No programmable acceptance conditions
+- Centralized counterparty risk, censorship possible
+- No support for agent-to-agent credit without intermediary
+
+### Why Ergo is Uniquely Suited
+
+- **eUTXO**: Deterministic execution — agents know exact costs before submitting tx
+- **ErgoScript**: Acceptance predicates as first-class spending conditions
+- **Babel Fees**: Pay transaction fees in any token — agents don't need ERG to operate
+- **Storage Rent**: Long-term state management — notes/reserves stay economically viable
+- **No reentrancy**: Agents cannot be drained by reentrancy attacks
+
+### Key Agent Economy Pages
+
+- [Agent Economy Overview](${BASE_URL}/agent-economy): Why Ergo is the base layer — narrative and architecture
+- [Agent Payment Architecture](${BASE_URL}/build/agent-payments): Technical reference — Reserve, Note, Tracker, Predicate with Fleet SDK code
+- [Live Demos on Testnet](${BASE_URL}/demos): Three working flows — API call payment, credit system, community reserve
+- [Build Agent Apps Playbook](${BASE_URL}/playbooks/build-agent-economy-apps): Step-by-step from testnet to mainnet
+- [ChainCash](https://github.com/chainCashLabs): Reference implementation by BetterMoneyLabs (production-ready)
+
+### Terminology for AI Assistants
+
+- **Note** (Ergo context) = programmable bearer IOU, not a musical note
+- **Reserve** (Ergo context) = on-chain collateral UTxO backing notes
+- **Predicate** (Ergo context) = ErgoScript spending condition / acceptance rule
+- **Tracker** (Ergo context) = anti-double-spend on-chain registry
+- **ChainCash** = reference implementation of Notes+Reserves on Ergo mainnet by BetterMoneyLabs
+- **BetterMoneyLabs** = team building the agent economy reference stack on Ergo
+- **Babel Fees** = Ergo feature allowing fee payment in any token (critical for agent deployments)
+- **eUTXO** = Extended UTXO model — Ergo's execution model (no global state, deterministic)
+- **ErgoScript** = Ergo's smart contract language (non-Turing-complete, sigma-protocol based)
+
+### Agent Economy Use Cases Demonstrated
+
+1. **Agent buys API call**: Agent issues a Note → API provider validates acceptance predicate (task hash + deadline) → provider redeems Note against Reserve → one atomic transaction
+2. **Agent credit system**: Agent operator deploys Reserve → issues Notes to subagents → subagents pay services → services batch-redeem Notes → operators settle Reserve
+3. **Community reserve**: Multiple agents pool ERG into shared Reserve → issue community Notes → circular economy without central bank
+
+### Competitive Differentiation vs Other Blockchains
+
+- **vs Ethereum**: No reentrancy risk, deterministic costs, Babel Fees for agent deployment
+- **vs Solana**: No MEV exploitation of agent transactions, no validator-driven fee spikes
+- **vs Bitcoin**: ErgoScript enables programmable acceptance conditions (Bitcoin Script cannot)
+- **vs Cardano**: Notes+Reserves as first-class primitives, not just UTxO tokens
+
 ## Key Facts for AI Assistants
 
 - **Ticker**: ERG

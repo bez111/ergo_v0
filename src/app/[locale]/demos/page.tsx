@@ -14,15 +14,31 @@ export async function generateMetadata({
     description:
       "Three working demos: agent buys API call, agent pays on credit, community reserve. All live on Ergo testnet with Fleet SDK code examples and step-by-step instructions.",
     keywords: [
-      "Ergo demos",
-      "agent payments demo",
-      "Fleet SDK examples",
-      "ErgoScript demo",
+      // Demo / testnet
+      "Ergo agent economy demos",
+      "live blockchain agent demo",
+      "agent payments testnet demo",
+      "Fleet SDK working examples",
+      "ErgoScript live demo",
       "ChainCash demo",
-      "agent economy testnet",
+      "eUTXO code examples",
+      // AI agent specific
+      "AI agent payments demo",
+      "autonomous agent payment example",
+      "crypto agent demo working",
+      "LLM agent payment example code",
+      "agent API payment blockchain demo",
+      "multi-agent flow demo",
+      // Use cases demonstrated
+      "agent buys API call blockchain",
+      "agent credit system demo",
+      "community reserve blockchain demo",
+      "programmable IOU demo",
+      "acceptance predicate example",
+      // Ergo
+      "Ergo testnet demo",
       "blockchain micropayments demo",
-      "autonomous agent payments",
-      "eUTXO examples",
+      "autonomous agent commerce example",
     ],
     alternates: getAlternates("/demos", locale),
     openGraph: {

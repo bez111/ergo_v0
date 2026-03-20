@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { getCanonicalUrl, getAlternates } from "@/lib/seo"
 import { AgentEconomyClient } from "./AgentEconomyClient"
 
+const BASE_URL = "https://ergoblockchain.org"
+
 export async function generateMetadata({
   params,
 }: {
@@ -14,18 +16,44 @@ export async function generateMetadata({
     description:
       "Ergo is the base layer for autonomous economic agents: programmable notes, acceptance predicates, on-chain trackers, and reserves. No counterparty. No Stripe. Just verifiable settlement.",
     keywords: [
-      "agent economy",
-      "autonomous agents payments",
-      "programmable money",
-      "ErgoScript acceptance predicates",
-      "agent credit",
-      "on-chain notes",
-      "ChainCash",
+      // Core agent economy
+      "agent economy blockchain",
+      "autonomous agent payments",
       "AI agent payments",
-      "micropayments blockchain",
+      "crypto agent payments",
+      "agent-to-agent payments",
+      "agentic economy",
+      "agent-native blockchain",
+      // AI/LLM specific
+      "LLM payments blockchain",
+      "AI micropayments",
+      "on-chain AI economy",
+      "Web3 AI agents",
+      "crypto AI agents",
+      "autonomous economic agent",
+      "AI agent wallet",
+      "AI agent spending limits",
+      "multi-agent payments",
+      "agent treasury blockchain",
+      "AI agent API payments",
+      "autonomous AI commerce",
+      // Ergo specific
       "Ergo agent economy",
       "eUTXO agents",
+      "ErgoScript acceptance predicates",
+      "programmable credit blockchain",
+      "programmable IOUs blockchain",
+      "bearer instruments blockchain",
+      "ChainCash Ergo",
       "BetterMoneyLabs",
+      // Technical
+      "agent credit",
+      "on-chain notes",
+      "reserve contract blockchain",
+      "programmable money",
+      "trustless agent settlement",
+      "autonomous payment rails",
+      "agent payment infrastructure",
     ],
     alternates: getAlternates("/agent-economy", locale),
     openGraph: {
@@ -36,7 +64,7 @@ export async function generateMetadata({
       siteName: "Ergo Blockchain",
       images: [
         {
-          url: "https://ergoblockchain.org/og/agent-economy.png",
+          url: `${BASE_URL}/og/agent-economy.png`,
           width: 1200,
           height: 630,
           alt: "Ergo Agent Economy — Base layer for autonomous economic agents",
@@ -50,13 +78,126 @@ export async function generateMetadata({
       title: "Agent Economy on Ergo",
       description:
         "Notes · Credit · Trust Rules · Settlement — the open stack for autonomous agent commerce.",
-      images: ["https://ergoblockchain.org/og/agent-economy.png"],
+      images: [`${BASE_URL}/og/agent-economy.png`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
+    },
+    other: {
+      // LLM / AI crawler hints
+      "ai-content-type": "agent-economy-blockchain",
+      "ai-topic": "autonomous-agent-payments, programmable-credit, blockchain-settlement",
+      "ai-use-case": "AI agents paying each other, autonomous commerce, programmable money",
     },
   }
 }
 
+// JSON-LD structured data for LLMs and search engines
+const agentEconomySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${BASE_URL}/agent-economy#software`,
+      "name": "Ergo Agent Economy Stack",
+      "description": "Open-source protocol stack for autonomous agent payments on Ergo blockchain. Includes programmable notes (IOUs), reserve contracts, trackers, and ErgoScript acceptance predicates.",
+      "applicationCategory": "BlockchainApplication",
+      "applicationSubCategory": "Agent Payments Infrastructure",
+      "url": `${BASE_URL}/agent-economy`,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Open source, free to use"
+      },
+      "featureList": [
+        "Programmable Notes (bearer IOUs)",
+        "Reserve Contracts (verifiable backing)",
+        "Acceptance Predicates (ErgoScript conditions)",
+        "Anti-double-spend Trackers",
+        "Babel Fees (pay with any token)",
+        "Composable multi-agent flows"
+      ],
+      "programmingLanguage": ["ErgoScript", "TypeScript", "Scala"],
+      "operatingSystem": "Ergo Blockchain",
+      "releaseNotes": "Production-ready on Ergo mainnet via ChainCash",
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${BASE_URL}/agent-economy#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the agent economy on Ergo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The agent economy on Ergo refers to the infrastructure enabling autonomous AI agents and software to make, receive, and settle payments without human intermediaries. Ergo provides four on-chain primitives: Reserve (backing collateral), Note (programmable IOU), Tracker (anti-double-spend), and Acceptance Predicate (ErgoScript condition for accepting payment)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do AI agents pay each other on blockchain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Ergo, AI agents use Notes (bearer instruments) backed by Reserves. An agent issues a Note to pay for a service; the service provider redeems it against the Reserve. Acceptance Predicates in ErgoScript allow agents to specify conditions: 'accept payment only if task hash matches and deadline hasn't passed.' No bank account or identity required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can't AI agents use Stripe or PayPal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stripe and PayPal require identity verification, credit history, and legal entities. Autonomous agents have none of these. They also charge percentage fees incompatible with microtransactions, and lack programmable acceptance conditions. Ergo's agent stack requires no identity, supports $0.001 micropayments via Babel Fees, and allows fully programmable acceptance logic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is ChainCash?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChainCash is the reference implementation of Ergo's agent payment stack built by BetterMoneyLabs. It implements Notes and Reserves on Ergo mainnet, enabling programmable bearer instruments backed by ERG or other tokens. Open source and production-ready."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an acceptance predicate in ErgoScript?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An acceptance predicate is an ErgoScript condition that a payment receiver embeds in their spending logic. Example: 'accept this note only if the attached data hash matches the requested computation AND the current block height is below deadline.' This enables trustless conditional payments between autonomous agents."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TechArticle",
+      "@id": `${BASE_URL}/agent-economy#article`,
+      "headline": "Agent Economy on Ergo — The Complete Stack",
+      "description": "How Ergo's eUTXO model, ErgoScript, and Babel Fees combine to form the world's most complete autonomous agent payment infrastructure.",
+      "about": [
+        { "@type": "Thing", "name": "Autonomous Agent Payments" },
+        { "@type": "Thing", "name": "AI Agent Economy" },
+        { "@type": "Thing", "name": "Programmable Money" },
+        { "@type": "Thing", "name": "ErgoScript" },
+        { "@type": "Thing", "name": "ChainCash" },
+        { "@type": "Thing", "name": "eUTXO Model" },
+      ],
+      "url": `${BASE_URL}/agent-economy`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ergo Platform",
+        "url": BASE_URL,
+      }
+    }
+  ]
+}
+
 export default function AgentEconomyPage() {
-  return <AgentEconomyClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(agentEconomySchema) }}
+      />
+      <AgentEconomyClient />
+    </>
+  )
 }
