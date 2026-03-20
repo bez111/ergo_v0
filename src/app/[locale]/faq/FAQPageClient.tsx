@@ -17,7 +17,9 @@ import {
   Code,
   Coins,
   Pickaxe,
-  Globe
+  Globe,
+  Bot,
+  ArrowRight,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -344,6 +346,27 @@ export default function FAQPageClient({
               </a>
             </div>
           </motion.section>
+
+          {/* Agent Economy Banner */}
+          <div className="mt-8 mb-4">
+            <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-3xl p-6 flex flex-col md:flex-row items-center gap-5 justify-between">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/25 flex items-center justify-center flex-shrink-0">
+                  <Bot className="w-5 h-5 text-orange-400" />
+                </div>
+                <div>
+                  <p className="font-semibold text-white text-sm mb-0.5">Questions about autonomous agent payments?</p>
+                  <p className="text-neutral-400 text-sm">See how Ergo's Notes, Reserves, and Acceptance Predicates work together — with working demos on testnet.</p>
+                </div>
+              </div>
+              <Link
+                href="/build/agent-payments"
+                className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+              >
+                Architecture <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
 
           {/* Email Capture */}
           <div className="mt-16">

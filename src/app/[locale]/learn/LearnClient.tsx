@@ -8,7 +8,8 @@ import {
   Cpu,
   Layers,
   ChevronDown,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Bot,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -370,8 +371,29 @@ export default function LearnClient() {
         </div>
       </section>
 
+      {/* Agent Economy Banner */}
+      <div className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-3xl p-6 flex flex-col md:flex-row items-center gap-5 justify-between">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/25 flex items-center justify-center flex-shrink-0">
+              <Bot className="w-5 h-5 text-orange-400" />
+            </div>
+            <div>
+              <p className="font-semibold text-white text-sm mb-0.5">Ready to build autonomous agents?</p>
+              <p className="text-neutral-400 text-sm">Learn ErgoScript acceptance predicates, notes, and reserves — the full agent payment stack with working demos on testnet.</p>
+            </div>
+          </div>
+          <Link
+            href="/build/agent-payments"
+            className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+          >
+            Agent Payments <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
       {/* Email Capture Form */}
-      <FinalCTASimple 
+      <FinalCTASimple
         title="Level Up Your Blockchain Skills"
         description="Get notified about new tutorials, workshops, and learning resources for Ergo development"
       />

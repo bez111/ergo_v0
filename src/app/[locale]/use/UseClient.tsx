@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps */
 
 import { motion } from "framer-motion"
-import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink, Code, Database, Layers } from "lucide-react"
+import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink, Code, Database, Layers, Bot } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
 import { Card, CardContent } from "@/components/ui/card"
@@ -385,8 +385,29 @@ export default function UseClient() {
         </div>
       </section>
 
+      {/* Agent Economy Banner */}
+      <div className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-3xl p-6 flex flex-col md:flex-row items-center gap-5 justify-between">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/25 flex items-center justify-center flex-shrink-0">
+              <Bot className="w-5 h-5 text-orange-400" />
+            </div>
+            <div>
+              <p className="font-semibold text-white text-sm mb-0.5">New use case: Autonomous Agent Payments</p>
+              <p className="text-neutral-400 text-sm">Agents paying agents, programmable credit, community reserves — Ergo is the only chain with this stack built in at the protocol level.</p>
+            </div>
+          </div>
+          <Link
+            href="/agent-economy"
+            className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+          >
+            Explore Stack <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+
       {/* Email Capture Form */}
-      <FinalCTASimple 
+      <FinalCTASimple
         title="Discover New Use Cases"
         description="Get notified about new practical applications, real-world implementations, and use case studies"
       />

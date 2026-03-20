@@ -40,7 +40,7 @@ import {
   TrendingUp,
   Book,
   ChevronDown,
-
+  Bot,
 } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
@@ -695,8 +695,29 @@ export default function TechnologyPage() {
           </div>
         </FadeIn>
 
+        {/* Agent Economy Banner */}
+        <div className="max-w-6xl mx-auto px-4 pb-12">
+          <div className="bg-gradient-to-r from-orange-500/10 to-orange-600/5 border border-orange-500/30 rounded-3xl p-6 flex flex-col md:flex-row items-center gap-5 justify-between">
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/25 flex items-center justify-center flex-shrink-0">
+                <Bot className="w-5 h-5 text-orange-400" />
+              </div>
+              <div>
+                <p className="font-semibold text-white text-sm mb-0.5">These primitives power the Agent Economy</p>
+                <p className="text-neutral-400 text-sm">eUTXO, ErgoScript, and Babel Fees are the foundation for autonomous agent payments, notes, and acceptance predicates on Ergo.</p>
+              </div>
+            </div>
+            <Link
+              href="/agent-economy"
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
+            >
+              Agent Economy <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
         {/* Email Capture Form */}
-        <FinalCTASimple 
+        <FinalCTASimple
           title="Deep Dive into Ergo Technology"
           description="Get the latest technical insights, protocol updates, and development guides delivered to your inbox"
         />
