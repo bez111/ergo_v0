@@ -13,6 +13,9 @@ const SEO = {
     "Autonomous agents need to transact at machine speed, without identity, with programmable acceptance conditions, at micropayment scale. Stripe fails. Lightning fails. Ethereum fails. Here is what they actually need — and why Ergo already has it.",
   image: "/og/agent-economy.png",
   keywords: [
+    "agentic blockchain",
+    "agentic blockchain manifesto",
+    "ergo agentic blockchain",
     "agent economy manifesto",
     "AI agent payments",
     "autonomous agent commerce",

@@ -1,13 +1,13 @@
 {
   "seo": {
-    "defaultTitle": "Ergo Platform - Sustainable Blockchain for Contractual Money",
-    "defaultDescription": "Ergo creates advanced cryptographic functions and radically new DeFi functionality on a solid foundation built over a decade of blockchain theory and development.",
-    "keywords": "blockchain, cryptocurrency, DeFi, smart contracts, Ergo, UTXO, proof of work",
+    "defaultTitle": "Ergo — The Agentic Blockchain for Contractual Money",
+    "defaultDescription": "Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money without counterparty risk.",
+    "keywords": "agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, AI agent payments, ergo blockchain, cryptocurrency, DeFi, smart contracts, Ergo, eUTXO, proof of work",
     "home": {
       "meta": {
-        "title": "Ergo Blockchain — MEV-Resistant PoW Smart Contracts",
-        "description": "PoW eUTXO blockchain for DeFi, privacy and sound money. Predictable low fees, no pre-mine, no VC – built by a cypherpunk community for financial freedom.",
-        "keywords": "ergo blockchain, decentralized finance, MEV resistant blockchain, eUTXO model, censorship resistant money, ASIC resistant mining, fair launch cryptocurrency, programmable money, financial sovereignty, cypherpunk blockchain, DeFi, privacy, sound money",
+        "title": "Ergo — The Agentic Blockchain | MEV-Resistant PoW Smart Contracts",
+        "description": "The agentic blockchain: PoW + eUTXO for DeFi, AI agent payments, privacy and sound money. Predictable low fees, no pre-mine, no VC – built by cypherpunks for financial freedom.",
+        "keywords": "agentic blockchain, blockchain for AI agents, autonomous AI payments blockchain, AI agent payments, ergo blockchain, decentralized finance, MEV resistant blockchain, eUTXO model, censorship resistant money, ASIC resistant mining, fair launch cryptocurrency, programmable money, financial sovereignty, cypherpunk blockchain, DeFi, privacy, sound money, ergo agent economy",
         "og": {
           "title": "Ergo Blockchain — Money Without Masters",
           "description": "PoW eUTXO blockchain for DeFi, privacy and sound money. No MEV, no VC control – built by cypherpunks for financial freedom.",

@@ -11,7 +11,7 @@ const SEO = {
   title: "How to Build an Agent That Pays for Its Own API Calls on Ergo",
   description: "Step-by-step tutorial: autonomous agent with Ergo wallet, paid Express API that verifies on-chain payment, end-to-end agent payment flow on testnet. Full source code.",
   image: "/og/agent-economy.png",
-  keywords: ["ergo agent tutorial", "agent pays api calls", "autonomous agent payment tutorial", "fleet sdk tutorial", "ergo agent wallet", "build agent economy app", "agent micropayments tutorial", "ergo testnet tutorial", "on-chain payment verification", "agent api payment"],
+  keywords: ["agentic blockchain tutorial", "build agentic blockchain app", "ergo agent tutorial", "agent pays api calls", "autonomous agent payment tutorial", "fleet sdk tutorial", "ergo agent wallet", "build agent economy app", "agent micropayments tutorial", "ergo testnet tutorial", "on-chain payment verification", "agent api payment"],
 }
 
 const FAQ_ITEMS = [

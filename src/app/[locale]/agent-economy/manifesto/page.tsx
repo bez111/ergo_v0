@@ -8,11 +8,15 @@ const origin = siteConfig.siteUrl
 const url = `${origin}/agent-economy/manifesto`
 
 const SEO = {
-  title: "The Agent Economy Manifesto — Ergo as Base Layer for Autonomous Commerce",
+  title: "The Agentic Blockchain Manifesto — Ergo as Base Layer for Autonomous AI Commerce",
   description:
-    "Every AI system will need to pay and be paid. This manifesto explains why autonomous agents demand a new money layer — and why Ergo's eUTXO, ErgoScript, and Babel Fees make it the only viable base layer for the agent economy.",
+    "Every AI system will need to pay and be paid. This manifesto explains why the agentic blockchain era demands a new money layer — and why Ergo's eUTXO, ErgoScript, and Babel Fees make it the only viable agentic blockchain.",
   image: "/og/agent-economy.png",
   keywords: [
+    "agentic blockchain",
+    "agentic blockchain manifesto",
+    "ergo agentic blockchain",
+    "agentic blockchain payments",
     "agent economy manifesto",
     "blockchain for AI agents",
     "autonomous agent payments",

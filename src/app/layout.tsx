@@ -30,13 +30,18 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Ergo Platform - Resilient Blockchain for Contractual Money",
+    default: "Ergo — The Agentic Blockchain for Contractual Money",
     template: "%s | Ergo Platform"
   },
-  description: "Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.",
+  description: "Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money without counterparty risk.",
   keywords: [
     "ergo blockchain",
-    "smart contracts", 
+    "agentic blockchain",
+    "blockchain for AI agents",
+    "autonomous AI payments blockchain",
+    "AI agent payments",
+    "agentic blockchain payments",
+    "smart contracts",
     "DeFi platform",
     "ErgoScript",
     "eUTXO model",
@@ -44,7 +49,9 @@ export const metadata: Metadata = {
     "cryptocurrency",
     "blockchain development",
     "decentralized finance",
-    "privacy blockchain"
+    "privacy blockchain",
+    "autonomous agent payments",
+    "ergo agent economy",
   ],
   authors: [{ name: "Ergo Platform" }],
   creator: "Ergo Platform",
@@ -59,8 +66,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteConfig.siteUrl,
     siteName: 'Ergo Platform',
-    title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
-    description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
+    title: 'Ergo — The Agentic Blockchain for Contractual Money',
+    description: 'Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money without counterparty risk.',
     images: [
       {
         url: '/og-image.png',
@@ -72,8 +79,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
-    description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
+    title: 'Ergo — The Agentic Blockchain',
+    description: 'PoW + eUTXO + ErgoScript — the only blockchain built for autonomous AI agent payments. No premine. No VC. Just verifiable settlement.',
     images: ['/og-image.png'],
     creator: siteConfig.twitterHandle,
   },

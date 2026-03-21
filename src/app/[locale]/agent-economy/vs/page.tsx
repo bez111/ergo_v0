@@ -8,11 +8,15 @@ const origin = siteConfig.siteUrl
 const url = `${origin}/agent-economy/vs`
 
 const SEO = {
-  title: "Ergo vs Ethereum vs Solana for AI Agent Payments — Full Comparison",
+  title: "Best Agentic Blockchain: Ergo vs Ethereum vs Solana for AI Agent Payments",
   description:
-    "Which blockchain is best for autonomous AI agent payments? Side-by-side comparison of Ergo, Ethereum, Solana, and Cardano across 10 agent-critical criteria: reentrancy risk, fee predictability, Babel Fees, acceptance predicates, micropayment viability, MEV exposure, and more.",
+    "Which is the best agentic blockchain for autonomous AI agent payments? Side-by-side comparison of Ergo, Ethereum, Solana, and Cardano across 10 agent-critical criteria: reentrancy risk, fee predictability, Babel Fees, acceptance predicates, micropayment viability, MEV exposure, and more.",
   image: "/og/agent-economy.png",
   keywords: [
+    "best agentic blockchain",
+    "agentic blockchain comparison",
+    "agentic blockchain payments",
+    "ergo agentic blockchain",
     "ergo vs ethereum AI agents",
     "best blockchain for AI agents",
     "blockchain comparison autonomous agents",

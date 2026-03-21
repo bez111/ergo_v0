@@ -12,10 +12,17 @@ export async function generateMetadata({
   const { locale } = await params
 
   return {
-    title: "Agent Economy on Ergo — Notes, Credit & Programmable Trust",
+    title: "Ergo — The Agentic Blockchain | Agent Economy: Notes, Credit & Programmable Trust",
     description:
-      "Ergo is the base layer for autonomous economic agents: programmable notes, acceptance predicates, on-chain trackers, and reserves. No counterparty. No Stripe. Just verifiable settlement.",
+      "Ergo is the agentic blockchain: the base layer for autonomous AI agents that need to pay, receive, and settle without human intermediaries. eUTXO + ErgoScript + Babel Fees = the only viable stack.",
     keywords: [
+      // Agentic blockchain — PRIMARY cluster
+      "agentic blockchain",
+      "agentic blockchain payments",
+      "ergo agentic blockchain",
+      "blockchain for AI agents",
+      "autonomous AI payments blockchain",
+      "agentic economy blockchain",
       // Core agent economy
       "agent economy blockchain",
       "autonomous agent payments",
@@ -57,9 +64,9 @@ export async function generateMetadata({
     ],
     alternates: getAlternates("/agent-economy", locale),
     openGraph: {
-      title: "Agent Economy on Ergo — Notes, Credit & Programmable Trust",
+      title: "Ergo — The Agentic Blockchain | Agent Economy",
       description:
-        "Autonomous agents need credit, programmable acceptance rules, and verifiable settlement — not Stripe. Ergo is the only settlement layer built for this.",
+        "Ergo is the agentic blockchain: eUTXO + ErgoScript acceptance predicates + Babel Fees — the only settlement layer where autonomous AI agents can pay, receive, and settle without human intermediaries.",
       url: getCanonicalUrl("/agent-economy", locale),
       siteName: "Ergo Blockchain",
       images: [
@@ -84,9 +91,10 @@ export async function generateMetadata({
     },
     other: {
       // LLM / AI crawler hints
-      "ai-content-type": "agent-economy-blockchain",
-      "ai-topic": "autonomous-agent-payments, programmable-credit, blockchain-settlement",
-      "ai-use-case": "AI agents paying each other, autonomous commerce, programmable money",
+      "ai-content-type": "agentic-blockchain-agent-economy",
+      "ai-topic": "agentic-blockchain, autonomous-agent-payments, programmable-credit, blockchain-settlement",
+      "ai-use-case": "agentic blockchain infrastructure, AI agents paying each other, autonomous commerce, programmable money",
+      "ai-category": "agentic-blockchain",
     },
   }
 }
@@ -99,9 +107,10 @@ const agentEconomySchema = {
       "@type": "SoftwareApplication",
       "@id": `${BASE_URL}/agent-economy#software`,
       "name": "Ergo Agent Economy Stack",
-      "description": "Open-source protocol stack for autonomous agent payments on Ergo blockchain. Includes programmable notes (IOUs), reserve contracts, trackers, and ErgoScript acceptance predicates.",
+      "description": "Open-source protocol stack for autonomous AI agent payments on Ergo — the agentic blockchain. Includes programmable notes (IOUs), reserve contracts, trackers, and ErgoScript acceptance predicates.",
       "applicationCategory": "BlockchainApplication",
-      "applicationSubCategory": "Agent Payments Infrastructure",
+      "applicationSubCategory": "Agentic Blockchain Infrastructure",
+      "keywords": "agentic blockchain, blockchain for AI agents, autonomous agent payments, ergo agentic blockchain, eUTXO AI agents",
       "url": `${BASE_URL}/agent-economy`,
       "offers": {
         "@type": "Offer",

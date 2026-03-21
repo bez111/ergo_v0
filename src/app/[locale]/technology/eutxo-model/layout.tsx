@@ -16,6 +16,8 @@ const SEO = {
   ogImage: "/og/technology/eutxo-vs-accounts.png",
   keywords: [
     "eUTXO", "Extended UTXO", "UTXO model", "parallel execution",
+    "agentic blockchain", "eUTXO AI agents", "agentic blockchain eUTXO",
+    "blockchain for AI agents", "autonomous agent payments eUTXO",
     "smart contracts", "MEV resistance", "composability",
     "Ergo blockchain", "DeFi security", "box model",
     "no reentrancy", "ethereum comparison"
