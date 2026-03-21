@@ -186,6 +186,16 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // ── www canonical redirect ────────────────────────────────────────────
+      // Redirect ergoblockchain.org → www.ergoblockchain.org (production only)
+      ...(process.env.NODE_ENV === 'production' ? [
+        {
+          source: '/:path*',
+          has: [{ type: 'host' as const, value: 'ergoblockchain.org' }],
+          destination: 'https://www.ergoblockchain.org/:path*',
+          permanent: true,
+        },
+      ] : []),
       {
         source: '/use/use-cases/algorithmic-stablecoins',
         destination: '/use/stablecoins',
