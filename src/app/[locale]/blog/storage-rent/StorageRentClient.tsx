@@ -134,7 +134,7 @@ export function StorageRentArticleClient() {
                  <div className="flex items-center justify-between flex-wrap gap-4">
                    <ShareInline
                      title="How Ergo's Storage Rent Solves Blockchain State Bloat"
-                     url="https://ergoblockchain.org/blog/storage-rent"
+                     url="https://www.ergoblockchain.org/blog/storage-rent"
                      utm="?utm_source=share_hero"
                    />
                  </div>
@@ -486,7 +486,7 @@ export function StorageRentArticleClient() {
                  {/* Share CTA */}
           <ShareCTA
             title="How Ergo's Storage Rent Solves Blockchain State Bloat"
-            url="https://ergoblockchain.org/blog/storage-rent"
+            url="https://www.ergoblockchain.org/blog/storage-rent"
             description="Explore how Ergo's demurrage model keeps blockchain state lean, sustainable, and decentralized."
             subtitle="If this was useful, share it with other builders and node operators exploring scalable PoW design."
           />

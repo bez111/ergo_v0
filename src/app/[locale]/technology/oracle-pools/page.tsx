@@ -185,13 +185,13 @@ export default function OraclePoolsPage() {
               "@type": "ListItem",
               position: 1,
               name: "Technology",
-              item: "https://ergoblockchain.org/technology"
+              item: "https://www.ergoblockchain.org/technology"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: "Oracle Pools",
-              item: "https://ergoblockchain.org/technology/oracle-pools"
+              item: "https://www.ergoblockchain.org/technology/oracle-pools"
             }
           ]
         }}

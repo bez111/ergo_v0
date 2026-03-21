@@ -209,25 +209,25 @@ export default function PrivacyFeaturesPage() {
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          "@id": "https://ergoblockchain.org/technology/privacy-features#article",
+          "@id": "https://www.ergoblockchain.org/technology/privacy-features#article",
           headline: t("seo.title"),
           description: t("seo.description"),
-          image: "https://ergoblockchain.org/og/privacy.png",
+          image: "https://www.ergoblockchain.org/og/privacy.png",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
-          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
           publisher: {
             "@type": "Organization",
             name: "ergoblockchain.org",
-            url: "https://ergoblockchain.org",
-            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+            url: "https://www.ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/favicon.ico" },
           },
           keywords: t("seo.keywords"),
           about: [
             { "@type": "Thing", name: "Sigma protocol" },
             { "@type": "Thing", name: "Zero-knowledge proof" },
           ],
-          isPartOf: { "@type": "WebPage", "@id": "https://ergoblockchain.org/technology" },
+          isPartOf: { "@type": "WebPage", "@id": "https://www.ergoblockchain.org/technology" },
         }}
       />
       <SchemaOrg
@@ -235,12 +235,12 @@ export default function PrivacyFeaturesPage() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Technology", item: "https://ergoblockchain.org/technology" },
+            { "@type": "ListItem", position: 1, name: "Technology", item: "https://www.ergoblockchain.org/technology" },
             {
               "@type": "ListItem",
               position: 2,
               name: "Privacy Features",
-              item: "https://ergoblockchain.org/technology/privacy-features",
+              item: "https://www.ergoblockchain.org/technology/privacy-features",
             },
           ],
         }}

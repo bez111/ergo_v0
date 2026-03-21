@@ -22,7 +22,7 @@ export function EnhancedArticleSchema({
   author,
   datePublished,
   dateModified,
-  image = "https://ergoblockchain.org/og-image.png",
+  image = "https://www.ergoblockchain.org/og-image.png",
   url,
   category = "Blockchain",
   tags = [],
@@ -54,11 +54,11 @@ export function EnhancedArticleSchema({
       "name": "Ergo Platform",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ergoblockchain.org/logo.png",
+        "url": "https://www.ergoblockchain.org/logo.png",
         "width": 600,
         "height": 60
       },
-      "url": "https://ergoblockchain.org"
+      "url": "https://www.ergoblockchain.org"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",

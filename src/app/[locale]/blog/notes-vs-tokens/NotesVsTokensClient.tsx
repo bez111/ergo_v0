@@ -137,7 +137,7 @@ export function NotesVsTokensClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Notes vs Tokens: Why Bearer Instruments Matter for Agents"
-                url="https://ergoblockchain.org/blog/notes-vs-tokens"
+                url="https://www.ergoblockchain.org/blog/notes-vs-tokens"
               />
             </div>
           </motion.div>
@@ -450,7 +450,7 @@ export function NotesVsTokensClient() {
           <ShareCTA
             title="Notes vs Tokens: Why Bearer Instruments Matter for Agents"
             description="Notes and tokens are different tools for different jobs. Understanding which to use is the key to building correct agent payment systems on Ergo."
-            url="https://ergoblockchain.org/blog/notes-vs-tokens"
+            url="https://www.ergoblockchain.org/blog/notes-vs-tokens"
           />
 
           {/* Continue Learning */}

@@ -142,7 +142,7 @@ export default function BabelFeesArticleClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Ergo's Babel Fees Explained: Pay Crypto Transaction Fees In Any Token"
-                url="https://ergoblockchain.org/blog/babel-fees"
+                url="https://www.ergoblockchain.org/blog/babel-fees"
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -513,7 +513,7 @@ export default function BabelFeesArticleClient() {
           {/* Share CTA */}
           <ShareCTA
             title="Ergo’s Babel Fees Explained: Pay Crypto Transaction Fees In Any Token"
-            url="https://ergoblockchain.org/blog/babel-fees"
+            url="https://www.ergoblockchain.org/blog/babel-fees"
             description="Learn how Ergo’s Babel Fees turn gas payments into an on-chain market, letting users pay in any token while miners still receive ERG."
             subtitle="If this was useful, share it with other builders exploring better UX for DeFi and PoW smart contracts."
           />

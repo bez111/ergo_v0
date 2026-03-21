@@ -1,5 +1,5 @@
 export function generateDocsSchema() {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   
   return [
     // CollectionPage Schema

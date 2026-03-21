@@ -153,7 +153,7 @@ export function AcceptancePredicatesClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="ErgoScript Acceptance Predicates: The Missing Primitive for Agent Payments"
-                url="https://ergoblockchain.org/blog/ergoscript-acceptance-predicates"
+                url="https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates"
               />
             </div>
           </motion.div>
@@ -591,7 +591,7 @@ const tx = new TransactionBuilder(currentHeight)
           <ShareCTA
             title="ErgoScript Acceptance Predicates: The Missing Primitive for Agent Payments"
             description="How task completion logic lives inside the payment itself — enforced by miners, not oracles or escrow contracts."
-            url="https://ergoblockchain.org/blog/ergoscript-acceptance-predicates"
+            url="https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates"
           />
 
           {/* Continue Learning */}

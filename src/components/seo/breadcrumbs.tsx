@@ -142,7 +142,7 @@ export function Breadcrumbs({
   className = ''
 }: BreadcrumbsProps) {
   const pathname = usePathname()
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   
   // Determine breadcrumb items based on props
   let breadcrumbItems: BreadcrumbItem[]

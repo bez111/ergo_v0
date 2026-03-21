@@ -184,7 +184,7 @@ export function SigmaProtocolsClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Ergo And Sigma Protocols: The Next Step In Blockchain Privacy"
-                url="https://ergoblockchain.org/blog/sigma-protocols-privacy"
+                url="https://www.ergoblockchain.org/blog/sigma-protocols-privacy"
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -614,7 +614,7 @@ export function SigmaProtocolsClient() {
           {/* Share CTA */}
           <ShareCTA
             title="Ergo And Sigma Protocols: The Next Step In Blockchain Privacy"
-            url="https://ergoblockchain.org/blog/sigma-protocols-privacy"
+            url="https://www.ergoblockchain.org/blog/sigma-protocols-privacy"
             description="Discover how Ergo's composable zero-knowledge proofs offer compliant confidentiality for the next generation of privacy-preserving applications."
             subtitle="If this was useful, share it with privacy advocates and developers building confidential applications."
           />

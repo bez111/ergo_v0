@@ -149,7 +149,7 @@ export function StateOfAgentPaymentsClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="The State of On-Chain Agent Payments: 2026 Report"
-                url="https://ergoblockchain.org/blog/state-of-agent-payments-2026"
+                url="https://www.ergoblockchain.org/blog/state-of-agent-payments-2026"
               />
             </div>
           </motion.div>
@@ -482,7 +482,7 @@ export function StateOfAgentPaymentsClient() {
           <ShareCTA
             title="The State of On-Chain Agent Payments: 2026 Report"
             description="Chain-by-chain analysis of the agent payment landscape. Ergo is the only chain with the full stack — and the primitives are ready now."
-            url="https://ergoblockchain.org/blog/state-of-agent-payments-2026"
+            url="https://www.ergoblockchain.org/blog/state-of-agent-payments-2026"
           />
 
           {/* Continue Learning */}

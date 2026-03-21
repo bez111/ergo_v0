@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('ogDescription'),
       url: getCanonicalUrl('/start/introduction', locale),
       siteName: "Ergo Platform",
-      images: [{ url: "https://ergoblockchain.org/og/introduction.png", width: 1200, height: 630, alt: t('ogAlt') }],
+      images: [{ url: "https://www.ergoblockchain.org/og/introduction.png", width: 1200, height: 630, alt: t('ogAlt') }],
       type: "article",
       locale: "en_US"
     },
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["https://ergoblockchain.org/og/introduction.png"]
+      images: ["https://www.ergoblockchain.org/og/introduction.png"]
     }
   }
 }

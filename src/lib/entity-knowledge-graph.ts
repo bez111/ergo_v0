@@ -17,7 +17,7 @@ export const entities = {
   // Main Entity - Ergo Platform
   ergoPlatform: {
     "@type": "Thing",
-    "@id": "https://ergoblockchain.org/#ergo",
+    "@id": "https://www.ergoblockchain.org/#ergo",
     "name": "Ergo Platform",
     "alternateName": ["Ergo", "ERG", "Ergo Blockchain", "ErgoBlockchain"],
     "description": "A resilient blockchain platform for contractual money",
@@ -44,12 +44,12 @@ export const entities = {
   // Person Entities
   alexChepurnoy: {
     "@type": "Person",
-    "@id": "https://ergoblockchain.org/#alex-chepurnoy",
+    "@id": "https://www.ergoblockchain.org/#alex-chepurnoy",
     "name": "Alexander Chepurnoy",
     "alternateName": ["Alex Chepurnoy", "kushti"],
     "jobTitle": "Co-Founder",
     "worksFor": {
-      "@id": "https://ergoblockchain.org/#ergo"
+      "@id": "https://www.ergoblockchain.org/#ergo"
     },
     "sameAs": [
       "https://twitter.com/chepurnoy",
@@ -72,28 +72,28 @@ export const entities = {
   // Technology Entities
   ergoScript: {
     "@type": "ComputerLanguage",
-    "@id": "https://ergoblockchain.org/#ergoscript",
+    "@id": "https://www.ergoblockchain.org/#ergoscript",
     "name": "ErgoScript",
     "description": "A powerful scripting language for smart contracts on Ergo",
     "creator": {
-      "@id": "https://ergoblockchain.org/#ergo"
+      "@id": "https://www.ergoblockchain.org/#ergo"
     },
     "programmingParadigm": "Functional",
     "basedOn": "Sigma Protocols",
     "isPartOf": {
-      "@id": "https://ergoblockchain.org/#ergo"
+      "@id": "https://www.ergoblockchain.org/#ergo"
     }
   },
   
   autolykos: {
     "@type": "Algorithm",
-    "@id": "https://ergoblockchain.org/#autolykos",
+    "@id": "https://www.ergoblockchain.org/#autolykos",
     "name": "Autolykos",
     "alternateName": "Autolykos v2",
     "description": "ASIC-resistant, memory-hard Proof-of-Work consensus algorithm",
     "version": "2.0",
     "creator": {
-      "@id": "https://ergoblockchain.org/#ergo"
+      "@id": "https://www.ergoblockchain.org/#ergo"
     },
     "isBasedOn": "Equihash",
     "applicationCategory": "Cryptocurrency Mining"
@@ -101,11 +101,11 @@ export const entities = {
   
   sigmaProtocols: {
     "@type": "TechArticle",
-    "@id": "https://ergoblockchain.org/#sigma-protocols",
+    "@id": "https://www.ergoblockchain.org/#sigma-protocols",
     "name": "Sigma Protocols",
     "description": "Zero-knowledge proof protocols used in ErgoScript",
     "isPartOf": {
-      "@id": "https://ergoblockchain.org/#ergo"
+      "@id": "https://www.ergoblockchain.org/#ergo"
     },
     "about": [
       "Zero-Knowledge Proofs",
@@ -142,7 +142,7 @@ export const relationships = {
   ergoVsBitcoin: {
     "@type": "ComparisonRelation",
     "compares": [
-      { "@id": "https://ergoblockchain.org/#ergo" },
+      { "@id": "https://www.ergoblockchain.org/#ergo" },
       { "@id": "https://bitcoin.org" }
     ],
     "comparisonAspect": [
@@ -157,7 +157,7 @@ export const relationships = {
   ergoVsEthereum: {
     "@type": "ComparisonRelation",
     "compares": [
-      { "@id": "https://ergoblockchain.org/#ergo" },
+      { "@id": "https://www.ergoblockchain.org/#ergo" },
       { "@id": "https://ethereum.org" }
     ],
     "comparisonAspect": [
@@ -173,7 +173,7 @@ export const relationships = {
     "@type": "Relationship",
     "relationshipType": "Technical Similarity",
     "between": [
-      { "@id": "https://ergoblockchain.org/#ergo" },
+      { "@id": "https://www.ergoblockchain.org/#ergo" },
       { "@id": "https://cardano.org" }
     ],
     "description": "Both use eUTXO model, founders collaborated at IOHK"
@@ -271,19 +271,19 @@ export function addEntityMarkup(content: string): string {
   const markupPatterns = [
     {
       pattern: /\b(Ergo Platform|Ergo blockchain|Ergo)\b/g,
-      replacement: '<span itemscope itemtype="https://schema.org/Thing" itemid="https://ergoblockchain.org/#ergo"><span itemprop="name">$1</span></span>'
+      replacement: '<span itemscope itemtype="https://schema.org/Thing" itemid="https://www.ergoblockchain.org/#ergo"><span itemprop="name">$1</span></span>'
     },
     {
       pattern: /\b(ErgoScript)\b/g,
-      replacement: '<span itemscope itemtype="https://schema.org/ComputerLanguage" itemid="https://ergoblockchain.org/#ergoscript"><span itemprop="name">$1</span></span>'
+      replacement: '<span itemscope itemtype="https://schema.org/ComputerLanguage" itemid="https://www.ergoblockchain.org/#ergoscript"><span itemprop="name">$1</span></span>'
     },
     {
       pattern: /\b(Autolykos v2|Autolykos)\b/g,
-      replacement: '<span itemscope itemtype="https://schema.org/Algorithm" itemid="https://ergoblockchain.org/#autolykos"><span itemprop="name">$1</span></span>'
+      replacement: '<span itemscope itemtype="https://schema.org/Algorithm" itemid="https://www.ergoblockchain.org/#autolykos"><span itemprop="name">$1</span></span>'
     },
     {
       pattern: /\b(Alex Chepurnoy|Alexander Chepurnoy)\b/g,
-      replacement: '<span itemscope itemtype="https://schema.org/Person" itemid="https://ergoblockchain.org/#alex-chepurnoy"><span itemprop="name">$1</span></span>'
+      replacement: '<span itemscope itemtype="https://schema.org/Person" itemid="https://www.ergoblockchain.org/#alex-chepurnoy"><span itemprop="name">$1</span></span>'
     }
   ]
   
@@ -327,7 +327,7 @@ export function generateAboutPageSchema(entity: string): object {
     "mainEntity": (entities as EntityRecord)[entity] || entities.ergoPlatform,
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": `https://ergoblockchain.org/images/${entity}.png`
+      "url": `https://www.ergoblockchain.org/images/${entity}.png`
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -336,13 +336,13 @@ export function generateAboutPageSchema(entity: string): object {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://ergoblockchain.org"
+          "item": "https://www.ergoblockchain.org"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": entity,
-          "item": `https://ergoblockchain.org/${entity.toLowerCase()}`
+          "item": `https://www.ergoblockchain.org/${entity.toLowerCase()}`
         }
       ]
     },

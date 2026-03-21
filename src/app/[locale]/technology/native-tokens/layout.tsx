@@ -32,11 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: SEO.keywords,
     alternates: {
-      canonical: `https://ergoblockchain.org/technology/${SEO.slug}`,
+      canonical: `https://www.ergoblockchain.org/technology/${SEO.slug}`,
     },
     openGraph: {
       type: "article",
-      url: `https://ergoblockchain.org/technology/${SEO.slug}`,
+      url: `https://www.ergoblockchain.org/technology/${SEO.slug}`,
       title,
       description,
       images: [{ url: SEO.ogImage, width: 1200, height: 630 }],

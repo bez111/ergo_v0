@@ -54,7 +54,7 @@ export const docsearchConfig = {
   index_name: "ergo-docs",
   start_urls: [
     {
-                url: "https://ergoblockchain.org/docs/",
+                url: "https://www.ergoblockchain.org/docs/",
       tags: ["docs"]
     }
   ],

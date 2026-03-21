@@ -205,7 +205,7 @@ export function OraclePoolsExplainedClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline 
                 title="Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained" 
-                url="https://ergoblockchain.org/blog/oracle-pools-explained" 
+                url="https://www.ergoblockchain.org/blog/oracle-pools-explained" 
               />
             </div>
           </motion.div>
@@ -627,7 +627,7 @@ export function OraclePoolsExplainedClient() {
           <ShareCTA 
             title="Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained"
             description="Learn how Ergo's decentralized oracle pools minimize trust assumptions, provide on-chain data aggregation, and enable secure DeFi applications without single points of failure."
-            url="https://ergoblockchain.org/blog/oracle-pools-explained"
+            url="https://www.ergoblockchain.org/blog/oracle-pools-explained"
           />
 
           {/* Continue Learning */}

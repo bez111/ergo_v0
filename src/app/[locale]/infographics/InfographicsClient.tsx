@@ -610,7 +610,7 @@ function InfographicShareMenu({
   const [copied, setCopied] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [embedCopied, setEmbedCopied] = useState(false);
-  const shareUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://ergoblockchain.org'}/infographics/${infographic.slug}`;
+  const shareUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://www.ergoblockchain.org'}/infographics/${infographic.slug}`;
 
   // Close modals on Escape key
   useEffect(() => {

@@ -14,7 +14,7 @@ export function EmbedCode({ infographic }: EmbedCodeProps) {
   const [activeTab, setActiveTab] = useState<'html' | 'markdown'>('html');
   const [copied, setCopied] = useState(false);
 
-  const baseUrl = 'https://ergoblockchain.org';
+  const baseUrl = 'https://www.ergoblockchain.org';
   const infographicUrl = `${baseUrl}/infographics/${infographic.slug}?utm_source=embed&utm_medium=referral`;
   const imageUrl = `${baseUrl}${infographic.fullImageUrl}`;
 

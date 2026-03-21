@@ -196,7 +196,7 @@ export function ErgoIn5MinutesClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline 
                 title="Ergo in 5 Minutes: Why It Matters & How It Works" 
-                url="https://ergoblockchain.org/blog/ergo-in-5-minutes" 
+                url="https://www.ergoblockchain.org/blog/ergo-in-5-minutes" 
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -514,7 +514,7 @@ export function ErgoIn5MinutesClient() {
               {/* Share this post */}
               <ShareCTA
                 title="Ergo in 5 Minutes: Why It Matters & How It Works"
-                url="https://ergoblockchain.org/blog/ergo-in-5-minutes"
+                url="https://www.ergoblockchain.org/blog/ergo-in-5-minutes"
                 description="Quick introduction to Ergo: fair launch, eUTXO, Sigma protocols, and DeFi ecosystem"
                 subtitle="Help spread the word about Ergo's innovative blockchain technology"
               />

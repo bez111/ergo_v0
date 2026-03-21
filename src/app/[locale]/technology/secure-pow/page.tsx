@@ -140,8 +140,8 @@ export default function SecurePowPage() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Technology", item: "https://ergoblockchain.org/technology" },
-            { "@type": "ListItem", position: 2, name: "Secure PoW", item: "https://ergoblockchain.org/technology/secure-pow" },
+            { "@type": "ListItem", position: 1, name: "Technology", item: "https://www.ergoblockchain.org/technology" },
+            { "@type": "ListItem", position: 2, name: "Secure PoW", item: "https://www.ergoblockchain.org/technology/secure-pow" },
           ],
         }}
       />
@@ -151,17 +151,17 @@ export default function SecurePowPage() {
           "@type": "TechArticle",
           headline: t("seo.title"),
           description: t("seo.description"),
-          image: "https://ergoblockchain.org/og/secure-pow.png",
+          image: "https://www.ergoblockchain.org/og/secure-pow.png",
           datePublished: "2025-08-10",
           dateModified: "2025-08-10",
-          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
           publisher: {
             "@type": "Organization",
             name: "ergoblockchain.org",
-            url: "https://ergoblockchain.org",
-            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+            url: "https://www.ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/favicon.ico" },
           },
-          mainEntityOfPage: "https://ergoblockchain.org/technology/secure-pow",
+          mainEntityOfPage: "https://www.ergoblockchain.org/technology/secure-pow",
         }}
       />
       <SchemaOrg
@@ -172,7 +172,7 @@ export default function SecurePowPage() {
           description: t("howTo.description"),
           totalTime: "PT30M",
           estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "0" },
-          image: "https://ergoblockchain.org/og/secure-pow.png",
+          image: "https://www.ergoblockchain.org/og/secure-pow.png",
           tool: [
             { "@type": "HowToTool", name: t("howTo.tools.gpu") },
             { "@type": "HowToTool", name: t("howTo.tools.minerSoftware") },

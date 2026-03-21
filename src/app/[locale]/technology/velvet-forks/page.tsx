@@ -67,7 +67,7 @@ export default function VelvetForksPage() {
           keywords: "velvet forks, protocol upgrades, backward compatibility, blockchain evolution",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
-          image: "https://ergoblockchain.org/og/technology/velvet-forks.png",
+          image: "https://www.ergoblockchain.org/og/technology/velvet-forks.png",
           author: {
             "@type": "Organization",
             name: "Ergo Platform",
@@ -76,10 +76,10 @@ export default function VelvetForksPage() {
           publisher: {
             "@type": "Organization",
             name: "Ergo Platform",
-            url: "https://ergoblockchain.org",
+            url: "https://www.ergoblockchain.org",
             logo: {
               "@type": "ImageObject",
-              url: "https://ergoblockchain.org/favicon.ico"
+              url: "https://www.ergoblockchain.org/favicon.ico"
             }
           },
         }}

@@ -18,7 +18,7 @@ interface HowToData {
 export function HowToSchema({ 
   name, 
   description, 
-  image = "https://ergoblockchain.org/og-image.png",
+  image = "https://www.ergoblockchain.org/og-image.png",
   totalTime = "PT15M",
   steps,
   supply = [],
@@ -50,14 +50,14 @@ export function HowToSchema({
     "author": {
       "@type": "Organization",
       "name": "Ergo Platform",
-      "url": "https://ergoblockchain.org"
+      "url": "https://www.ergoblockchain.org"
     },
     "publisher": {
       "@type": "Organization", 
       "name": "Ergo Platform",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ergoblockchain.org/logo.png"
+        "url": "https://www.ergoblockchain.org/logo.png"
       }
     }
   }

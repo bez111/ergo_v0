@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'use' })
   const title = t('title') + " — DeFi, NFTs, Privacy, Bridges"
   const description = t('description')
-  const url = "https://ergoblockchain.org/use"
+  const url = "https://www.ergoblockchain.org/use"
   const twitterHandle = siteConfig.twitterHandle
   return {
     title,
@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "ergoblockchain.org",
       title,
       description,
-      images: [{ url: "https://ergoblockchain.org/og/use/use.png", width: 1200, height: 630 }],
+      images: [{ url: "https://www.ergoblockchain.org/og/use/use.png", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      images: ["https://ergoblockchain.org/og/use/use.png"],
+      images: ["https://www.ergoblockchain.org/og/use/use.png"],
       ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
     },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function UsePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'use' })
-  const base = "https://ergoblockchain.org/use"
+  const base = "https://www.ergoblockchain.org/use"
 
   // FAQ items from translations
   const faqItems = [

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: getCanonicalUrl('/start/introduction', locale),
       title: t('ogTitle'),
       description: t('ogDescription'),
-      images: [{ url: "https://ergoblockchain.org/og/intro.png", width: 1200, height: 630 }],
+      images: [{ url: "https://www.ergoblockchain.org/og/intro.png", width: 1200, height: 630 }],
     },
     twitter: { card: "summary_large_image" },
   }

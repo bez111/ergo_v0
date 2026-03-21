@@ -154,13 +154,13 @@ export default function SubblocksPage() {
               "@type": "ListItem",
               position: 1,
               name: "Technology",
-              item: "https://ergoblockchain.org/technology"
+              item: "https://www.ergoblockchain.org/technology"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: "Subblocks",
-              item: "https://ergoblockchain.org/technology/subblocks"
+              item: "https://www.ergoblockchain.org/technology/subblocks"
             }
           ]
         }}

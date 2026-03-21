@@ -160,13 +160,13 @@ export default function ErgoScriptPage() {
               "@type": "ListItem",
               position: 1,
               name: "Technology",
-              item: "https://ergoblockchain.org/technology"
+              item: "https://www.ergoblockchain.org/technology"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: "ErgoScript",
-              item: "https://ergoblockchain.org/technology/ergoscript"
+              item: "https://www.ergoblockchain.org/technology/ergoscript"
             }
           ]
         }}

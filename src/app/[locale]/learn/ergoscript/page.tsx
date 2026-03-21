@@ -25,14 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: getCanonicalUrl('/learn/ergoscript', locale),
       siteName: "Ergo Platform",
-      images: [{ url: "https://ergoblockchain.org/og/ergoscript.png", width: 1200, height: 630, alt: "ErgoScript Programming Course" }],
+      images: [{ url: "https://www.ergoblockchain.org/og/ergoscript.png", width: 1200, height: 630, alt: "ErgoScript Programming Course" }],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://ergoblockchain.org/og/ergoscript.png"]
+      images: ["https://www.ergoblockchain.org/og/ergoscript.png"]
     }
   }
 }
@@ -49,7 +49,7 @@ export default function ErgoScriptPage() {
   const courseSchema = {
     "@context": "https://schema.org",
     "@type": "Course",
-    "@id": "https://ergoblockchain.org/learn/ergoscript",
+    "@id": "https://www.ergoblockchain.org/learn/ergoscript",
     name: "ErgoScript Programming Course",
     description: "Learn to build smart contracts with ErgoScript",
     provider: { "@type": "Organization", name: "Ergo Platform" },

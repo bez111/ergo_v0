@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = project.longDescription 
     ? project.longDescription.split('\n\n')[0].slice(0, 160) 
     : project.description
-  const canonical = `https://ergoblockchain.org/ecosystem/${project.slug}`
+  const canonical = `https://www.ergoblockchain.org/ecosystem/${project.slug}`
 
   return {
     title,

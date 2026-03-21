@@ -140,13 +140,13 @@ export default function DAOsAlternativeEconomiesPage() {
               "@type": "ListItem",
               position: 1,
               name: t("schema.breadcrumbs.useCases"),
-              item: "https://ergoblockchain.org/use"
+              item: "https://www.ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: t("schema.breadcrumbs.daosAlternativeEconomies"),
-              item: "https://ergoblockchain.org/use/daos-alternative-economies"
+              item: "https://www.ergoblockchain.org/use/daos-alternative-economies"
             }
           ]
         }}

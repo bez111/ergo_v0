@@ -21,7 +21,7 @@ export const coreChannels = [
     name: "ergoblockchain.org", 
     description: "Article in blog + internal links", 
     icon: Globe,
-    url: "https://ergoblockchain.org/blog",
+    url: "https://www.ergoblockchain.org/blog",
     actionText: "Visit Blog"
   },
   { 
@@ -284,7 +284,7 @@ export const guideSteps = [
         },
         {
           text: "Subscribe to ergoblockchain.org blog for source content",
-          url: "https://ergoblockchain.org/blog",
+          url: "https://www.ergoblockchain.org/blog",
           priority: "medium"
         },
         {
@@ -517,7 +517,7 @@ export const faqsData = [
     q: "Where do I find content to share?",
     a: "Start with ergoblockchain.org/blog for official content. Subscribe to the Beehiiv newsletter for weekly digests. Follow @BuildOnErgo for developer updates. Join ErgoSocials Telegram to coordinate with other marketers. Never share content you don't understand - ask questions in Discord first.",
     links: [
-      { text: "ergoblockchain.org/blog", url: "https://ergoblockchain.org/blog" },
+      { text: "ergoblockchain.org/blog", url: "https://www.ergoblockchain.org/blog" },
       { text: "Beehiiv newsletter", url: "https://ergoblockchain.beehiiv.com/subscribe" },
       { text: "@BuildOnErgo", url: "https://twitter.com/BuildOnErgo" },
       { text: "ErgoSocials Telegram", url: "https://t.me/ErgoSocials" }

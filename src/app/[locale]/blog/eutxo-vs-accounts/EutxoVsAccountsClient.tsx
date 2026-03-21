@@ -154,7 +154,7 @@ export function EutxoVsAccountsClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline 
                 title="Two Blockchain Models: Why Ergo Chose Differently" 
-                url="https://ergoblockchain.org/blog/eutxo-vs-accounts" 
+                url="https://www.ergoblockchain.org/blog/eutxo-vs-accounts" 
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -501,7 +501,7 @@ export function EutxoVsAccountsClient() {
           {/* Share this post */}
           <ShareCTA
             title="Two Blockchain Models: Why Ergo Chose Differently"
-            url="https://ergoblockchain.org/blog/eutxo-vs-accounts"
+            url="https://www.ergoblockchain.org/blog/eutxo-vs-accounts"
             description="Deterministic execution, explicit state transitions, and privacy patterns versus global account state."
             subtitle="Help spread the word about Ergo's eUTXO model"
           />

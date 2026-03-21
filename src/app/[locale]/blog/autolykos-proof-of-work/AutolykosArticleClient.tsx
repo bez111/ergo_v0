@@ -141,7 +141,7 @@ export default function AutolykosArticleClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Autolykos Proof-of-Work: Why Ergo's Mining Algorithm Is Sustainable"
-                url="https://ergoblockchain.org/blog/autolykos-proof-of-work"
+                url="https://www.ergoblockchain.org/blog/autolykos-proof-of-work"
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -538,7 +538,7 @@ export default function AutolykosArticleClient() {
           {/* Share CTA */}
           <ShareCTA
             title="Autolykos Proof-of-Work: Why Ergo’s Mining Algorithm Is Sustainable"
-            url="https://ergoblockchain.org/blog/autolykos-proof-of-work"
+            url="https://www.ergoblockchain.org/blog/autolykos-proof-of-work"
             description="Dive into Autolykos, Ergo’s memory-hard PoW algorithm that keeps mining GPU-friendly, ASIC-resistant, and aligned with sustainable decentralisation."
             subtitle="If this was useful, share it with miners, GPU owners, and researchers interested in sustainable PoW design."
           />

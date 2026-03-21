@@ -3,7 +3,7 @@ import { glossaryTerms } from '@/data/glossary'
 
 export const revalidate = 86400 // 24h
 
-const BASE_URL = 'https://ergoblockchain.org'
+const BASE_URL = 'https://www.ergoblockchain.org'
 
 export async function GET() {
   // Build glossary section from live data

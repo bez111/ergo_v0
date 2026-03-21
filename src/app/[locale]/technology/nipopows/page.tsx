@@ -166,8 +166,8 @@ export default function NIPOPOWsPage() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Technology", item: "https://ergoblockchain.org/technology" },
-            { "@type": "ListItem", position: 2, name: "NIPoPoWs", item: "https://ergoblockchain.org/technology/nipopows" },
+            { "@type": "ListItem", position: 1, name: "Technology", item: "https://www.ergoblockchain.org/technology" },
+            { "@type": "ListItem", position: 2, name: "NIPoPoWs", item: "https://www.ergoblockchain.org/technology/nipopows" },
           ],
         }}
       />
@@ -175,19 +175,19 @@ export default function NIPOPOWsPage() {
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          "@id": "https://ergoblockchain.org/technology/nipopows#article",
+          "@id": "https://www.ergoblockchain.org/technology/nipopows#article",
           headline: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) on Ergo — Light Clients & Cross-Chain",
           description: "Verify Ergo on mobile/web with compact PoW proofs. NIPoPoWs enable light clients, bridges, and efficient oracles.",
-          image: "https://ergoblockchain.org/og/nipopows.png",
+          image: "https://www.ergoblockchain.org/og/nipopows.png",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
-          mainEntityOfPage: "https://ergoblockchain.org/technology/nipopows",
-          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          mainEntityOfPage: "https://www.ergoblockchain.org/technology/nipopows",
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
           publisher: {
             "@type": "Organization",
             name: "ergoblockchain.org",
-            url: "https://ergoblockchain.org",
-            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+            url: "https://www.ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/favicon.ico" },
           },
           keywords: "NIPoPoWs, Non-Interactive Proofs of Proof-of-Work, SPV, light clients, succinct proofs, cross-chain, Ergo",
           about: [
@@ -196,7 +196,7 @@ export default function NIPOPOWsPage() {
             { "@type": "Thing", name: "Cross-chain bridge" },
             { "@type": "Thing", name: "Proof-of-Work" },
           ],
-          isPartOf: { "@type": "WebPage", "@id": "https://ergoblockchain.org/technology" },
+          isPartOf: { "@type": "WebPage", "@id": "https://www.ergoblockchain.org/technology" },
         }}
       />
 

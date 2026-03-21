@@ -114,9 +114,9 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
 
   const topForSchema = allNonFeatured.slice(0, 12)
 
-  const blogId = "https://ergoblockchain.org/blog#blog"
-  const listId = `https://ergoblockchain.org/blog#list-${currentPage}`
-  const collectionId = `https://ergoblockchain.org/blog?page=${currentPage}#collection`
+  const blogId = "https://www.ergoblockchain.org/blog#blog"
+  const listId = `https://www.ergoblockchain.org/blog#list-${currentPage}`
+  const collectionId = `https://www.ergoblockchain.org/blog?page=${currentPage}#collection`
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize))
   const hasPartPages = Array.from({ length: Math.min(3, totalPages) }, (_, i) => i + 1)
@@ -124,7 +124,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
   const absolutize = (url: string | undefined) => {
     if (!url) return undefined
     if (/^https?:\/\//i.test(url)) return url
-    return `https://ergoblockchain.org${url.startsWith("/") ? url : `/${url}`}`
+    return `https://www.ergoblockchain.org${url.startsWith("/") ? url : `/${url}`}`
   }
 
   const blogJsonLd = {
@@ -137,10 +137,10 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     publisher: {
       "@type": "Organization",
       name: "ergoblockchain.org",
-      logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/icon-512x512.png", width: 512, height: 512 }
+      logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/icon-512x512.png", width: 512, height: 512 }
     },
-    isPartOf: { "@type": "WebSite", "@id": "https://ergoblockchain.org#website" },
-    hasPart: hasPartPages.map((p) => ({ "@type": "CollectionPage", "@id": `https://ergoblockchain.org/blog?page=${p}#collection` })),
+    isPartOf: { "@type": "WebSite", "@id": "https://www.ergoblockchain.org#website" },
+    hasPart: hasPartPages.map((p) => ({ "@type": "CollectionPage", "@id": `https://www.ergoblockchain.org/blog?page=${p}#collection` })),
     blogPost: topForSchema.map((p) => {
       const datePublishedISO = new Date(p.date).toISOString()
       const dateModifiedISO = new Date(p.date).toISOString()
@@ -149,8 +149,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         headline: p.title,
         description: p.excerpt,
         image: p.image ? [{ "@type": "ImageObject", url: absolutize(p.image), width: 1200, height: 630 }] : undefined,
-        url: `https://ergoblockchain.org/blog/${p.slug}`,
-        mainEntityOfPage: `https://ergoblockchain.org/blog/${p.slug}`,
+        url: `https://www.ergoblockchain.org/blog/${p.slug}`,
+        mainEntityOfPage: `https://www.ergoblockchain.org/blog/${p.slug}`,
         datePublished: datePublishedISO,
         dateModified: dateModifiedISO,
         dateCreated: datePublishedISO,
@@ -179,9 +179,9 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       position: start + index + 1,
       item: {
         "@type": "BlogPosting",
-        "@id": `https://ergoblockchain.org/blog/${p.slug}`,
+        "@id": `https://www.ergoblockchain.org/blog/${p.slug}`,
         name: p.title,
-        url: `https://ergoblockchain.org/blog/${p.slug}`,
+        url: `https://www.ergoblockchain.org/blog/${p.slug}`,
         isPartOf: { "@type": "Blog", "@id": blogId },
       },
     })),
@@ -193,7 +193,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     "@type": "CollectionPage",
     "@id": collectionId,
     name: "Ergo Blog",
-    url: "https://ergoblockchain.org/blog",
+    url: "https://www.ergoblockchain.org/blog",
     isPartOf: { "@type": "Blog", "@id": blogId },
     inLanguage: "en",
     mainEntity: { "@id": listId },
@@ -207,12 +207,12 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
   const websiteSearchJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://ergoblockchain.org#website",
-    url: "https://ergoblockchain.org",
+    "@id": "https://www.ergoblockchain.org#website",
+    url: "https://www.ergoblockchain.org",
     name: "Ergo",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://ergoblockchain.org/search?q={query}",
+      target: "https://www.ergoblockchain.org/search?q={query}",
       "query-input": "required name=query",
     },
   }

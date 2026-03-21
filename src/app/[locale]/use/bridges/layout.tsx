@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('ogDescription'),
       images: [SEO.ogImage],
       type: "website",
-      url: `https://ergoblockchain.org${SEO.canonicalPath}`,
+      url: `https://www.ergoblockchain.org${SEO.canonicalPath}`,
     },
     twitter: {
       card: "summary_large_image",
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       images: [SEO.ogImage],
     },
     alternates: {
-      canonical: `https://ergoblockchain.org${SEO.canonicalPath}`,
+      canonical: `https://www.ergoblockchain.org${SEO.canonicalPath}`,
     },
   }
 }

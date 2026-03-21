@@ -4,7 +4,7 @@ import { blogPosts } from './_lib/blog-data'
 const PAGE_SIZE = 12
 
 export default function BlogSitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   const currentDate = new Date()
 
   // Main blog page

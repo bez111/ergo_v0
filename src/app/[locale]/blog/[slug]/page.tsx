@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   
   // Optimize title for SEO (≤ 60 chars)
   const seoTitle = post.title.length > 50 

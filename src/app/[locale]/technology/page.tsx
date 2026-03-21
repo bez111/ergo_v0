@@ -14,13 +14,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('title'),
     description: t('description'),
     keywords: t('keywords').split(','),
-    alternates: { canonical: 'https://ergoblockchain.org/technology' },
+    alternates: { canonical: 'https://www.ergoblockchain.org/technology' },
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: 'https://ergoblockchain.org/technology',
+      url: 'https://www.ergoblockchain.org/technology',
       siteName: 'Ergo Platform',
-      images: [{ url: 'https://ergoblockchain.org/og/technology.png', width: 1200, height: 630, alt: t('ogImageAlt') }],
+      images: [{ url: 'https://www.ergoblockchain.org/og/technology.png', width: 1200, height: 630, alt: t('ogImageAlt') }],
       type: 'website',
       locale: 'en_US'
     },
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ['https://ergoblockchain.org/og/technology.png'],
+      images: ['https://www.ergoblockchain.org/og/technology.png'],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle
     },
@@ -60,7 +60,7 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
   const techItemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    '@id': 'https://ergoblockchain.org/technology#itemlist',
+    '@id': 'https://www.ergoblockchain.org/technology#itemlist',
     name: 'Ergo Blockchain Technology Features',
     description: 'Comprehensive list of Ergo blockchain technology features including eUTXO, ErgoScript, Autolykos PoW, and more.',
     numberOfItems: technologyTopics.length,
@@ -69,10 +69,10 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
       position: index + 1,
       item: {
         '@type': 'TechArticle',
-        '@id': `https://ergoblockchain.org/technology/${topic.slug}`,
+        '@id': `https://www.ergoblockchain.org/technology/${topic.slug}`,
         name: topic.title,
         description: topic.description,
-        url: `https://ergoblockchain.org/technology/${topic.slug}`,
+        url: `https://www.ergoblockchain.org/technology/${topic.slug}`,
         keywords: topic.keywords.join(', '),
         articleSection: categoryLabels[topic.category],
       },

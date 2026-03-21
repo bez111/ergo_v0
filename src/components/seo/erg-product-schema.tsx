@@ -20,7 +20,7 @@ export function ERGProductSchema({
   const ergProductSchema = {
     "@context": "https://schema.org",
     "@type": ["Product", "FinancialProduct"],
-    "@id": "https://ergoblockchain.org/#ERG",
+    "@id": "https://www.ergoblockchain.org/#ERG",
     "name": "Ergo",
     "alternateName": ["ERG", "Ergo Token", "Ergo Coin"],
     "description": "Native cryptocurrency of the Ergo blockchain platform, enabling smart contracts and DeFi applications",
@@ -28,12 +28,12 @@ export function ERGProductSchema({
     "brand": {
       "@type": "Brand",
       "name": "Ergo Platform",
-      "logo": "https://ergoblockchain.org/logo.png"
+      "logo": "https://www.ergoblockchain.org/logo.png"
     },
     "manufacturer": {
       "@type": "Organization",
       "name": "Ergo Platform",
-      "url": "https://ergoblockchain.org"
+      "url": "https://www.ergoblockchain.org"
     },
     "additionalProperty": [
       {
@@ -113,7 +113,7 @@ export function ERGProductSchema({
       {
         "@type": "SoftwareApplication",
         "name": "Ergo Platform",
-        "url": "https://ergoblockchain.org"
+        "url": "https://www.ergoblockchain.org"
       },
       {
         "@type": "TechArticle",

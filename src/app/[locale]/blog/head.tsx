@@ -6,7 +6,7 @@ export default async function Head({ searchParams }: { searchParams: Promise<{ p
   const pageSize = 12
   const total = blogPosts.filter((p) => !p.featured).length
   const last = Math.max(1, Math.ceil(total / pageSize))
-  const base = "https://ergoblockchain.org/blog"
+  const base = "https://www.ergoblockchain.org/blog"
 
   const prev = page > 2 ? `${base}?page=${page - 1}` : page === 2 ? base : undefined
   const next = page < last ? `${base}?page=${page + 1}` : undefined

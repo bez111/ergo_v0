@@ -14,7 +14,7 @@ export default function HreflangTags({ pathname, currentLocale }: HreflangTagsPr
   };
 
   const basePath = getBasePath(pathname, currentLocale);
-  const baseUrl = 'https://ergoblockchain.org';
+  const baseUrl = 'https://www.ergoblockchain.org';
 
   return (
     <>

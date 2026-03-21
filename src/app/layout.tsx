@@ -80,19 +80,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteConfig.siteUrl,
     languages: {
-      'en': 'https://ergoblockchain.org',
-      'ru': 'https://ergoblockchain.org/ru',
-      'fr': 'https://ergoblockchain.org/fr',
-      'de': 'https://ergoblockchain.org/de',
-      'es': 'https://ergoblockchain.org/es',
-      'ar': 'https://ergoblockchain.org/ar',
-      'zh-CN': 'https://ergoblockchain.org/zh-cn',
-      'zh-TW': 'https://ergoblockchain.org/zh-tw',
-      'tr': 'https://ergoblockchain.org/tr',
-      'pt-BR': 'https://ergoblockchain.org/pt-br',
-      'it': 'https://ergoblockchain.org/it',
-      'ja': 'https://ergoblockchain.org/ja',
-      'ko-KR': 'https://ergoblockchain.org/ko-kr',
+      'en': 'https://www.ergoblockchain.org',
+      'ru': 'https://www.ergoblockchain.org/ru',
+      'fr': 'https://www.ergoblockchain.org/fr',
+      'de': 'https://www.ergoblockchain.org/de',
+      'es': 'https://www.ergoblockchain.org/es',
+      'ar': 'https://www.ergoblockchain.org/ar',
+      'zh-CN': 'https://www.ergoblockchain.org/zh-cn',
+      'zh-TW': 'https://www.ergoblockchain.org/zh-tw',
+      'tr': 'https://www.ergoblockchain.org/tr',
+      'pt-BR': 'https://www.ergoblockchain.org/pt-br',
+      'it': 'https://www.ergoblockchain.org/it',
+      'ja': 'https://www.ergoblockchain.org/ja',
+      'ko-KR': 'https://www.ergoblockchain.org/ko-kr',
     },
   },
   robots: {
@@ -132,7 +132,7 @@ export default function RootLayout({
     >
       <head>
         {/* Google Fonts preconnect removed - fonts are self-hosted via next/font */}
-        <link rel="dns-prefetch" href="https://ergoblockchain.org" />
+        <link rel="dns-prefetch" href="https://www.ergoblockchain.org" />
         <link rel="preload" href="/og-image.png" as="image" type="image/png" />
         {renderSchemaScripts([organizationSchema])}
       </head>

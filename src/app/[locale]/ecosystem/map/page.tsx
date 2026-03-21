@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: getCanonicalUrl('/ecosystem/map', locale),
       siteName: "Ergo Platform",
       images: [{
-        url: "https://ergoblockchain.org/og/ecosystem-map.png",
+        url: "https://www.ergoblockchain.org/og/ecosystem-map.png",
         width: 1200,
         height: 630,
         alt: "Ergo Ecosystem Interactive Map"
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["https://ergoblockchain.org/og/ecosystem-map.png"],
+      images: ["https://www.ergoblockchain.org/og/ecosystem-map.png"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
     },
@@ -65,7 +65,7 @@ export default function EcosystemMapPage() {
     name: "Ergo Ecosystem Interactive Map",
     description: "Visual explorer for Ergo blockchain projects and applications",
     applicationCategory: "VisualizationApplication",
-    url: "https://ergoblockchain.org/ecosystem/map",
+    url: "https://www.ergoblockchain.org/ecosystem/map",
   })
 
   const faqSchema = createFAQSchema([
@@ -90,7 +90,7 @@ export default function EcosystemMapPage() {
   const datasetSchema = createDatasetSchema({
     name: "Ergo Ecosystem Projects Dataset",
     description: "Complete dataset of projects building on Ergo blockchain",
-    contentUrl: "https://ergoblockchain.org/api/ecosystem",
+    contentUrl: "https://www.ergoblockchain.org/api/ecosystem",
     temporalCoverage: "2019/..",
     keywords: ["blockchain", "defi", "ecosystem", "ergo", "projects"],
   })

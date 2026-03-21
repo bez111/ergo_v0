@@ -30,13 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       url: getCanonicalUrl('/playbooks', locale),
       siteName: "Ergo Blockchain",
-      images: [{ url: "https://ergoblockchain.org/og/hubs/playbooks.png", width: 1200, height: 630, alt: "Ergo Playbooks - Step-by-Step Guides" }]
+      images: [{ url: "https://www.ergoblockchain.org/og/hubs/playbooks.png", width: 1200, height: 630, alt: "Ergo Playbooks - Step-by-Step Guides" }]
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://ergoblockchain.org/og/hubs/playbooks.png"]
+      images: ["https://www.ergoblockchain.org/og/hubs/playbooks.png"]
     },
     alternates: getAlternates('/playbooks', locale),
   }

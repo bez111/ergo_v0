@@ -11,7 +11,7 @@
 
 export const URL_CONFIG = {
   // Базовый домен
-  domain: 'https://ergoblockchain.org',
+  domain: 'https://www.ergoblockchain.org',
   
   // Правила нормализации
   normalization: {

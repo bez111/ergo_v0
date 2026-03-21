@@ -246,7 +246,7 @@ export function AgentStripeClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Why AI Agents Can't Use Stripe — and What They Need Instead"
-                url="https://ergoblockchain.org/blog/agents-cant-use-stripe"
+                url="https://www.ergoblockchain.org/blog/agents-cant-use-stripe"
               />
             </div>
           </motion.div>
@@ -637,7 +637,7 @@ export function AgentStripeClient() {
           <ShareCTA
             title="Why AI Agents Can't Use Stripe — and What They Need Instead"
             description="The payment rails built for humans fail autonomous agents. Ergo has the primitives agents actually need — at the protocol level."
-            url="https://ergoblockchain.org/blog/agents-cant-use-stripe"
+            url="https://www.ergoblockchain.org/blog/agents-cant-use-stripe"
           />
 
           {/* Continue Learning */}

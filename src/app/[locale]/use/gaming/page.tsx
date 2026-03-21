@@ -148,13 +148,13 @@ export default function GamingMetaversePage() {
               "@type": "ListItem",
               position: 1,
               name: t("schema.breadcrumbs.useCases"),
-              item: "https://ergoblockchain.org/use"
+              item: "https://www.ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: t("schema.breadcrumbs.gamingMetaverse"),
-              item: "https://ergoblockchain.org/use/gaming-metaverse"
+              item: "https://www.ergoblockchain.org/use/gaming-metaverse"
             }
           ]
         }}

@@ -213,7 +213,7 @@ export function SigmaProtocolsExplainedClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Sigma Protocols Explained (Without A PhD)"
-                url="https://ergoblockchain.org/blog/sigma-protocols-explained"
+                url="https://www.ergoblockchain.org/blog/sigma-protocols-explained"
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -739,7 +739,7 @@ export function SigmaProtocolsExplainedClient() {
           {/* Share CTA */}
           <ShareCTA
             title="Sigma Protocols Explained (Without A PhD)"
-            url="https://ergoblockchain.org/blog/sigma-protocols-explained"
+            url="https://www.ergoblockchain.org/blog/sigma-protocols-explained"
             description="Learn about Sigma Protocols through simple analogies and real-world examples. No advanced mathematics required!"
             subtitle="If this helped you understand Sigma Protocols, share it with others who want to learn about accessible privacy technology."
           />

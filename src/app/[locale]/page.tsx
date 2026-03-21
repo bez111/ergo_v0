@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       type: "website",
       locale: locale === 'ru' ? 'ru_RU' : 'en_US',
       images: [{
-        url: "https://ergoblockchain.org/og/homepage.png",
+        url: "https://www.ergoblockchain.org/og/homepage.png",
         width: 1200,
         height: 630,
         alt: t('og.imageAlt')
@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       card: "summary_large_image",
       title: t('twitter.title'),
       description: t('twitter.description'),
-      images: ["https://ergoblockchain.org/og/homepage.png"],
+      images: ["https://www.ergoblockchain.org/og/homepage.png"],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle
     }

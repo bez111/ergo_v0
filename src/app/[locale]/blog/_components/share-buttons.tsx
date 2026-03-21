@@ -12,7 +12,7 @@ interface ShareButtonsProps {
 export function ShareButtons({ title, description, url }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false)
   
-  const shareUrl = `https://ergoblockchain.org${url}?utm_source=share`
+  const shareUrl = `https://www.ergoblockchain.org${url}?utm_source=share`
   const shareTagline = 'via @BuildOnErgo $ERG'
   
   // Twitter: Title + URL + tagline on one line

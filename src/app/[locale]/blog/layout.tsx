@@ -45,8 +45,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       ...getAlternates('/blog', locale),
       types: {
-        'application/rss+xml': 'https://ergoblockchain.org/blog/rss.xml',
-        'application/feed+json': 'https://ergoblockchain.org/blog/feed.json'
+        'application/rss+xml': 'https://www.ergoblockchain.org/blog/rss.xml',
+        'application/feed+json': 'https://www.ergoblockchain.org/blog/feed.json'
       }
     },
     robots: {

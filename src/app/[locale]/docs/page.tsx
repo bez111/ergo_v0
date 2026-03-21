@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('title'),
       description: t('subtitle'),
       type: 'website',
-      url: 'https://ergoblockchain.org/docs',
+      url: 'https://www.ergoblockchain.org/docs',
       images: [{
         url: '/og-docs.png',
         width: 1200,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       },
     },
     alternates: {
-      canonical: 'https://ergoblockchain.org/docs'
+      canonical: 'https://www.ergoblockchain.org/docs'
     }
   }
 }

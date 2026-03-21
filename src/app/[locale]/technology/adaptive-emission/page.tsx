@@ -157,13 +157,13 @@ export default function AdaptiveEmissionPage() {
               "@type": "ListItem",
               position: 1,
               name: "Technology",
-              item: "https://ergoblockchain.org/technology"
+              item: "https://www.ergoblockchain.org/technology"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: "Adaptive Emission",
-              item: "https://ergoblockchain.org/technology/adaptive-emission"
+              item: "https://www.ergoblockchain.org/technology/adaptive-emission"
             }
           ]
         }}

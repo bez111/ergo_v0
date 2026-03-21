@@ -152,13 +152,13 @@ export default function PrivacyConfidentialityPage() {
               "@type": "ListItem",
               position: 1,
               name: t("schema.breadcrumbs.useCases"),
-              item: "https://ergoblockchain.org/use"
+              item: "https://www.ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: t("schema.breadcrumbs.privacyConfidentiality"),
-              item: "https://ergoblockchain.org/use/privacy"
+              item: "https://www.ergoblockchain.org/use/privacy"
             }
           ]
         }}

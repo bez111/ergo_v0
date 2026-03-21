@@ -6,11 +6,11 @@ export async function getMetadata() {
     openGraph: {
       title: "Get Started with Ergo Blockchain",
       description: "Download wallet, buy ERG, send transactions. Complete beginner's guide to Ergo blockchain.",
-      url: "https://ergoblockchain.org/start",
+      url: "https://www.ergoblockchain.org/start",
       siteName: "Ergo Blockchain",
       type: "website",
       images: [{
-        url: "https://ergoblockchain.org/og/start.png",
+        url: "https://www.ergoblockchain.org/og/start.png",
         width: 1200,
         height: 630,
         alt: "Get Started with Ergo Blockchain"
@@ -20,7 +20,7 @@ export async function getMetadata() {
       card: "summary_large_image",
       title: "Get Started with Ergo Blockchain",
       description: "Download wallet, buy ERG, send transactions. Complete beginner's guide.",
-      images: ["https://ergoblockchain.org/og/start.png"],
+      images: ["https://www.ergoblockchain.org/og/start.png"],
       creator: "@ergoblockchain",
       site: "@ergoblockchain"
     }

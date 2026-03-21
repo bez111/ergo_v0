@@ -249,7 +249,7 @@ export function AgentEconomyManifestoClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="The Agent Economy Manifesto"
-                url="https://ergoblockchain.org/blog/agent-economy-manifesto"
+                url="https://www.ergoblockchain.org/blog/agent-economy-manifesto"
               />
             </div>
           </motion.div>
@@ -584,7 +584,7 @@ export function AgentEconomyManifestoClient() {
           <ShareCTA
             title="The Agent Economy Manifesto"
             description="Every AI system will need to pay and be paid. Ergo already has the protocol primitives — Reserve, Note, Tracker, Acceptance Predicate. The only thing missing is builders."
-            url="https://ergoblockchain.org/blog/agent-economy-manifesto"
+            url="https://www.ergoblockchain.org/blog/agent-economy-manifesto"
           />
 
           {/* Continue Learning */}

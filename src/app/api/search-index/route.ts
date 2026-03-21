@@ -4,7 +4,7 @@ import { menuData } from '@/app/[locale]/docs/menuData'
 
 // Generate a comprehensive search index for SEO and site search
 export async function GET() {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   
   // Index blog posts
   const blogIndex = blogPosts.map(post => ({

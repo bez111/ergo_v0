@@ -106,7 +106,7 @@ export function generatePDFSchema(doc: PDFDocument, url: string) {
     "publisher": {
       "@type": "Organization",
       "name": "Ergo Platform",
-      "url": "https://ergoblockchain.org"
+      "url": "https://www.ergoblockchain.org"
     },
     ...(doc.author && {
       "author": {

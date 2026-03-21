@@ -120,7 +120,7 @@ export function ErgoManifestoClient() {
             {/* Inline Share */}
             <ShareInline 
               title="The Ergo Manifesto: Building Ergonomic Money for Regular People" 
-              url="https://ergoblockchain.org/blog/ergo-manifesto" 
+              url="https://www.ergoblockchain.org/blog/ergo-manifesto" 
               utm="?utm_source=share_hero"
             />
           </motion.div>
@@ -457,7 +457,7 @@ export function ErgoManifestoClient() {
           <div id="action" />
           <ShareCTA
             title="The Ergo Manifesto: A Vision for Ergonomic Money"
-            url="https://ergoblockchain.org/blog/ergo-manifesto"
+            url="https://www.ergoblockchain.org/blog/ergo-manifesto"
             description="Ergo's manifesto on creating tools for regular people, financial privacy, and sustainable blockchain economics"
             subtitle="Help spread the vision of ergonomic money and decentralized finance"
           />

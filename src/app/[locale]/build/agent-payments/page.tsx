@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { getCanonicalUrl, getAlternates } from "@/lib/seo"
 import { AgentPaymentsClient } from "./AgentPaymentsClient"
 
-const BASE_URL = "https://ergoblockchain.org"
+const BASE_URL = "https://www.ergoblockchain.org"
 
 export async function generateMetadata({
   params,

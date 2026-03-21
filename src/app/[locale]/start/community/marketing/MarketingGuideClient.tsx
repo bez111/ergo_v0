@@ -81,7 +81,7 @@ export function MarketingGuideClient() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
                     <a 
-                      href="https://ergoblockchain.org/blog" 
+                      href="https://www.ergoblockchain.org/blog" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       aria-label="Start with Blog Content - Opens in new tab"
@@ -805,7 +805,7 @@ export function MarketingGuideClient() {
               </a>
               
               <a 
-                href="https://ergoblockchain.org/blog"
+                href="https://www.ergoblockchain.org/blog"
                     target="_blank"
                     rel="noopener noreferrer"
                 className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"

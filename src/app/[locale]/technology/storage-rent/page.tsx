@@ -236,8 +236,8 @@ export default function StorageRentPage() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Technology", item: "https://ergoblockchain.org/technology" },
-            { "@type": "ListItem", position: 2, name: "Storage Rent", item: "https://ergoblockchain.org/technology/storage-rent" },
+            { "@type": "ListItem", position: 1, name: "Technology", item: "https://www.ergoblockchain.org/technology" },
+            { "@type": "ListItem", position: 2, name: "Storage Rent", item: "https://www.ergoblockchain.org/technology/storage-rent" },
           ],
         }}
       />
@@ -258,17 +258,17 @@ export default function StorageRentPage() {
           "@type": "TechArticle",
           headline: t("seo.title"),
           description: t("seo.description"),
-          image: "https://ergoblockchain.org/og/storage-rent.png",
+          image: "https://www.ergoblockchain.org/og/storage-rent.png",
           datePublished: PUBLISHED,
           dateModified: UPDATED,
-          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
           publisher: {
             "@type": "Organization",
             name: "ergoblockchain.org",
-            url: "https://ergoblockchain.org",
-            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+            url: "https://www.ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/favicon.ico" },
           },
-          mainEntityOfPage: "https://ergoblockchain.org/technology/storage-rent",
+          mainEntityOfPage: "https://www.ergoblockchain.org/technology/storage-rent",
         }}
       />
       <SchemaOrg

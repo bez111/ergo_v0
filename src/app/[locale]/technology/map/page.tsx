@@ -51,25 +51,25 @@ export default async function TechnologyMapPage({ params }: Props) {
   const techArticleSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "@id": "https://ergoblockchain.org/technology/map",
+    "@id": "https://www.ergoblockchain.org/technology/map",
     "headline": t("title"),
     "description": t("subtitle"),
-    "image": "https://ergoblockchain.org/og/technology-map.png",
+    "image": "https://www.ergoblockchain.org/og/technology-map.png",
     "datePublished": "2024-12-15",
     "dateModified": new Date().toISOString().split('T')[0],
     "author": {
       "@type": "Organization",
-      "@id": "https://ergoblockchain.org#organization",
+      "@id": "https://www.ergoblockchain.org#organization",
       "name": "Ergo Platform",
-      "url": "https://ergoblockchain.org"
+      "url": "https://www.ergoblockchain.org"
     },
     "publisher": {
       "@type": "Organization",
-      "@id": "https://ergoblockchain.org#organization"
+      "@id": "https://www.ergoblockchain.org#organization"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://ergoblockchain.org/technology/map"
+      "@id": "https://www.ergoblockchain.org/technology/map"
     },
     "articleSection": "Technology",
     "keywords": [
@@ -109,13 +109,13 @@ export default async function TechnologyMapPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Technology",
-        "item": "https://ergoblockchain.org/technology"
+        "item": "https://www.ergoblockchain.org/technology"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": t("title"),
-        "item": "https://ergoblockchain.org/technology/map"
+        "item": "https://www.ergoblockchain.org/technology/map"
       }
     ]
   };
@@ -123,7 +123,7 @@ export default async function TechnologyMapPage({ params }: Props) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://ergoblockchain.org/technology/map#faq",
+    "@id": "https://www.ergoblockchain.org/technology/map#faq",
     "mainEntity": [
       {
         "@type": "Question",

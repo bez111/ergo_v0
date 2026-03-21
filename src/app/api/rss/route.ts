@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
 
 export async function GET() {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   const currentDate = new Date().toUTCString()
   
   // Sort posts by date (newest first)

@@ -11,7 +11,7 @@ interface BlogSchemaProps {
 }
 
 export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   
   // Enhanced Article Schema with all recommended fields
   const articleSchema = {

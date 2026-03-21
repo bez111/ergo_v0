@@ -35,15 +35,15 @@ export const metadata: Metadata = {
   description: 'Discover Ergo\'s key features: Extended UTXO model, Storage Rent for sustainability, ErgoScript smart contracts, Sigma Protocols, NIPoPoWs, and Autolykos PoW algorithm.',
   keywords: ['ergo features', 'eutxo model', 'storage rent', 'ergoscript', 'sigma protocols', 'nipopows', 'autolykos', 'blockchain features', 'smart contracts', 'proof of work'],
   alternates: {
-    canonical: 'https://ergoblockchain.org/docs/introduction/key-features'
+    canonical: 'https://www.ergoblockchain.org/docs/introduction/key-features'
   },
   openGraph: {
     title: 'Ergo Key Features - Revolutionary Blockchain Technology',
     description: 'Explore Ergo\'s revolutionary features: eUTXO model, Storage Rent, ErgoScript, and advanced cryptographic protocols.',
-    url: 'https://ergoblockchain.org/docs/introduction/key-features',
+    url: 'https://www.ergoblockchain.org/docs/introduction/key-features',
     siteName: 'Ergo Platform',
     images: [{
-      url: 'https://ergoblockchain.org/og/ergo-features.png',
+      url: 'https://www.ergoblockchain.org/og/ergo-features.png',
       width: 1200,
       height: 630,
       alt: 'Ergo Key Features'
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ergo Key Features - Next-Gen Blockchain',
     description: 'Revolutionary blockchain features: eUTXO, Storage Rent, ErgoScript, Sigma Protocols, and more.',
-    images: ['https://ergoblockchain.org/og/ergo-features.png'],
+    images: ['https://www.ergoblockchain.org/og/ergo-features.png'],
     creator: '@ergoplatform',
     site: '@ergoplatform'
   },

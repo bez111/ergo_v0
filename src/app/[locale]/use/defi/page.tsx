@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: getCanonicalUrl('/use/defi', locale),
       siteName: "Ergo Platform",
       images: [{
-        url: "https://ergoblockchain.org/og/defi.png",
+        url: "https://www.ergoblockchain.org/og/defi.png",
         width: 1200,
         height: 630,
         alt: "Ergo DeFi - Coming Soon"
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: "DeFi on Ergo - Coming Soon",
       description: "Advanced DeFi protocols and financial primitives on Ergo Platform - launching soon.",
-      images: ["https://ergoblockchain.org/og/defi.png"],
+      images: ["https://www.ergoblockchain.org/og/defi.png"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
     },

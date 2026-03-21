@@ -116,7 +116,7 @@ export function BuildAgentPaysClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="How to Build an Agent That Pays for Its Own API Calls"
-                url="https://ergoblockchain.org/blog/build-agent-pays-for-api"
+                url="https://www.ergoblockchain.org/blog/build-agent-pays-for-api"
               />
             </div>
           </motion.div>
@@ -593,7 +593,7 @@ runAgent("the latest Ergo block data").catch(console.error);`}</pre>
           <ShareCTA
             title="How to Build an Agent That Pays for Its Own API Calls"
             description="Full tutorial — agent wallet, paid API service, on-chain payment verification. No Stripe, no KYC, no human approval. Complete source code included."
-            url="https://ergoblockchain.org/blog/build-agent-pays-for-api"
+            url="https://www.ergoblockchain.org/blog/build-agent-pays-for-api"
           />
 
           {/* Continue Learning */}

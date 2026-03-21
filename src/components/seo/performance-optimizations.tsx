@@ -23,7 +23,7 @@ export function PerformanceOptimizations({
   return (
     <>
       {/* Google Fonts preconnect removed - fonts are self-hosted via next/font */}
-      <link rel="dns-prefetch" href="https://ergoblockchain.org" />
+      <link rel="dns-prefetch" href="https://www.ergoblockchain.org" />
       
       {preconnectDomains.map(domain => (
         <link key={domain} rel="preconnect" href={domain} />

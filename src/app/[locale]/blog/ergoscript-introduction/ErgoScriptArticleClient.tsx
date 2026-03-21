@@ -144,7 +144,7 @@ export default function ErgoScriptArticleClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="ErgoScript in 30 Minutes: A Practical Introduction to Ergo's Smart Contract Language"
-                url="https://ergoblockchain.org/blog/ergoscript-introduction"
+                url="https://www.ergoblockchain.org/blog/ergoscript-introduction"
                 utm="?utm_source=share_hero"
               />
             </div>
@@ -450,7 +450,7 @@ export default function ErgoScriptArticleClient() {
           {/* Share CTA */}
           <ShareCTA
             title="ErgoScript in 30 Minutes: A Practical Introduction to Ergo’s Smart Contract Language"
-            url="https://ergoblockchain.org/blog/ergoscript-introduction"
+            url="https://www.ergoblockchain.org/blog/ergoscript-introduction"
             description="Learn how ErgoScript, the Ergo blockchain’s functional smart contract language, powers secure, stateless dApps in the eUTXO model."
             subtitle="If this helped, share it with other devs exploring Ergo smart contracts and functional validation logic."
           />

@@ -49,7 +49,7 @@ export async function generateMetadata({
       siteName: "Ergo Blockchain",
       images: [
         {
-          url: "https://ergoblockchain.org/og/demos.png",
+          url: "https://www.ergoblockchain.org/og/demos.png",
           width: 1200,
           height: 630,
           alt: "Ergo Agent Economy Demos",
@@ -63,7 +63,7 @@ export async function generateMetadata({
       title: "Ergo Agent Economy Demos",
       description:
         "Agent buys API call. Agent pays on credit. Community reserve. All live on Ergo testnet.",
-      images: ["https://ergoblockchain.org/og/demos.png"],
+      images: ["https://www.ergoblockchain.org/og/demos.png"],
       creator: "@ergoplatform",
       site: "@ergoplatform",
     },

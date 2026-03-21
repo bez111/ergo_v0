@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('ogDescription'),
       url: getCanonicalUrl('/start/community', locale),
       siteName: "Ergo Platform",
-      images: [{ url: "https://ergoblockchain.org/og/community.png", width: 1200, height: 630, alt: t('ogAlt') }],
+      images: [{ url: "https://www.ergoblockchain.org/og/community.png", width: 1200, height: 630, alt: t('ogAlt') }],
       type: "website",
       locale: "en_US"
     },
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["https://ergoblockchain.org/og/community.png"]
+      images: ["https://www.ergoblockchain.org/og/community.png"]
     }
   }
 }
@@ -44,11 +44,11 @@ export default function CommunityPage() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://ergoblockchain.org/#community",
+    "@id": "https://www.ergoblockchain.org/#community",
     name: "Ergo Community",
     description: "Global community of developers, miners, and enthusiasts building on Ergo",
-    url: "https://ergoblockchain.org/start/community",
-    logo: "https://ergoblockchain.org/logo.png",
+    url: "https://www.ergoblockchain.org/start/community",
+    logo: "https://www.ergoblockchain.org/logo.png",
     sameAs: [
       "https://discord.com/invite/ergo-platform-668903786361651200",
       "https://t.me/ergoplatform",

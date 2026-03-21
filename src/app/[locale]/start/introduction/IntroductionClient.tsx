@@ -125,8 +125,8 @@ export default function IntroductionClient() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://ergoblockchain.org/" },
-            { "@type": "ListItem", position: 2, name: "Introduction", item: "https://ergoblockchain.org/start/introduction" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.ergoblockchain.org/" },
+            { "@type": "ListItem", position: 2, name: "Introduction", item: "https://www.ergoblockchain.org/start/introduction" },
           ],
         }}
       />
@@ -137,17 +137,17 @@ export default function IntroductionClient() {
           headline: "Ergo Blockchain — PoW eUTXO Smart Contracts & Sigma Protocols",
           description:
             "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs.",
-          image: "https://ergoblockchain.org/og/intro.png",
+          image: "https://www.ergoblockchain.org/og/intro.png",
           datePublished: isoDate,
           dateModified: isoDate,
-          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
           publisher: {
             "@type": "Organization",
             name: "ergoblockchain.org",
-            url: "https://ergoblockchain.org",
-            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+            url: "https://www.ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/favicon.ico" },
           },
-          mainEntityOfPage: "https://ergoblockchain.org/start/introduction",
+          mainEntityOfPage: "https://www.ergoblockchain.org/start/introduction",
         }}
       />
       <SchemaOrg

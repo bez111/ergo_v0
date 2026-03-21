@@ -57,13 +57,13 @@ export default function UIKitPage() {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://ergoblockchain.org"
+              item: "https://www.ergoblockchain.org"
             },
             {
               "@type": "ListItem",
               position: 2,
               name: t("title"),
-              item: "https://ergoblockchain.org/ui-kit"
+              item: "https://www.ergoblockchain.org/ui-kit"
             }
           ]
         }}

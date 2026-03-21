@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: playbook.seoTitle,
       description: playbook.seoDescription,
       type: "article",
-      url: `https://ergoblockchain.org/playbooks/${playbook.slug}`,
+      url: `https://www.ergoblockchain.org/playbooks/${playbook.slug}`,
       publishedTime: playbook.publishDate,
       modifiedTime: playbook.updatedDate,
     },
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: playbook.seoDescription,
     },
     alternates: {
-      canonical: `https://ergoblockchain.org/playbooks/${playbook.slug}`,
+      canonical: `https://www.ergoblockchain.org/playbooks/${playbook.slug}`,
     },
   };
 }
@@ -83,7 +83,7 @@ function generateHowToSchema(playbook: Playbook) {
       ...(step.resources && step.resources.length > 0 && {
         url: step.resources[0].href.startsWith("http")
           ? step.resources[0].href
-          : `https://ergoblockchain.org${step.resources[0].href}`,
+          : `https://www.ergoblockchain.org${step.resources[0].href}`,
       }),
     })),
     tool: [
@@ -99,7 +99,7 @@ function generateHowToSchema(playbook: Playbook) {
 function generateArticleSchema(playbook: Playbook) {
   return {
     "@type": "TechArticle",
-    "@id": `https://ergoblockchain.org/playbooks/${playbook.slug}#article`,
+    "@id": `https://www.ergoblockchain.org/playbooks/${playbook.slug}#article`,
     headline: playbook.title,
     description: playbook.seoDescription,
     datePublished: playbook.publishDate,
@@ -107,18 +107,18 @@ function generateArticleSchema(playbook: Playbook) {
     author: {
       "@type": "Organization",
       name: "Ergo Platform",
-      url: "https://ergoblockchain.org",
+      url: "https://www.ergoblockchain.org",
     },
     publisher: {
       "@type": "Organization",
       name: "Ergo Platform",
-      url: "https://ergoblockchain.org",
+      url: "https://www.ergoblockchain.org",
       logo: {
         "@type": "ImageObject",
-        url: "https://ergoblockchain.org/favicon.ico",
+        url: "https://www.ergoblockchain.org/favicon.ico",
       },
     },
-    mainEntityOfPage: `https://ergoblockchain.org/playbooks/${playbook.slug}`,
+    mainEntityOfPage: `https://www.ergoblockchain.org/playbooks/${playbook.slug}`,
     keywords: playbook.keywords.join(", "),
   };
 }
@@ -132,13 +132,13 @@ function generateBreadcrumbSchema(playbook: Playbook) {
         "@type": "ListItem",
         position: 1,
         name: "Playbooks",
-        item: "https://ergoblockchain.org/playbooks",
+        item: "https://www.ergoblockchain.org/playbooks",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: playbook.title,
-        item: `https://ergoblockchain.org/playbooks/${playbook.slug}`,
+        item: `https://www.ergoblockchain.org/playbooks/${playbook.slug}`,
       },
     ],
   };

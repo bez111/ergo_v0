@@ -80,7 +80,7 @@ export function generateHreflangLinks(pathname: string, currentLocale: Locale) {
   // Add x-default (English)
   hreflangLinks.push({
     hreflang: 'x-default',
-    href: `https://ergoblockchain.org${getLocalizedPath(pathname, 'en')}`
+    href: `https://www.ergoblockchain.org${getLocalizedPath(pathname, 'en')}`
   })
   
   // Add all locales
@@ -88,7 +88,7 @@ export function generateHreflangLinks(pathname: string, currentLocale: Locale) {
     const localizedPath = getLocalizedPath(pathname, locale)
     hreflangLinks.push({
       hreflang: localeConfig[locale].hreflang,
-      href: `https://ergoblockchain.org${localizedPath}`
+      href: `https://www.ergoblockchain.org${localizedPath}`
     })
   })
   
@@ -119,7 +119,7 @@ export function getLocaleFromPath(pathname: string): Locale {
 // Generate canonical URL
 export function getCanonicalUrl(pathname: string, locale: Locale): string {
   const localizedPath = getLocalizedPath(pathname, locale)
-  return `https://ergoblockchain.org${localizedPath}`
+  return `https://www.ergoblockchain.org${localizedPath}`
 }
 
 // SEO metadata per locale
@@ -181,13 +181,13 @@ export function generateSitemapEntries(pages: string[]) {
   pages.forEach(page => {
     locales.forEach(locale => {
       const localizedPath = getLocalizedPath(page, locale)
-      const url = `https://ergoblockchain.org${localizedPath}`
+      const url = `https://www.ergoblockchain.org${localizedPath}`
       
       // Generate alternates for this page
       const alternates: { [key: string]: string } = {}
       locales.forEach(altLocale => {
         const altPath = getLocalizedPath(page, altLocale)
-        alternates[localeConfig[altLocale].hreflang] = `https://ergoblockchain.org${altPath}`
+        alternates[localeConfig[altLocale].hreflang] = `https://www.ergoblockchain.org${altPath}`
       })
       
       entries.push({

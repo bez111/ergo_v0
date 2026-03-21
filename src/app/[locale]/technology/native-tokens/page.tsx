@@ -136,13 +136,13 @@ export default function NativeTokensPage() {
               "@type": "ListItem",
               position: 1,
               name: "Technology",
-              item: "https://ergoblockchain.org/technology"
+              item: "https://www.ergoblockchain.org/technology"
             },
             {
               "@type": "ListItem", 
               position: 2,
               name: "Native Tokens & NFTs",
-              item: "https://ergoblockchain.org/technology/native-tokens"
+              item: "https://www.ergoblockchain.org/technology/native-tokens"
             }
           ]
         }}

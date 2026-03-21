@@ -174,7 +174,7 @@ export async function getAllTags(): Promise<string[]> {
 // Generate RSS feed content
 export async function generateRSSFeed(): Promise<string> {
   const posts = await getAllPosts({ limit: 20 })
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   
   const rssItems = posts.map(post => `
     <item>

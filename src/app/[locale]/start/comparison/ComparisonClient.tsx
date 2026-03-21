@@ -170,8 +170,8 @@ export default function ComparisonClient() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Start", item: "https://ergoblockchain.org/start" },
-            { "@type": "ListItem", position: 2, name: "Comparison", item: "https://ergoblockchain.org/start/comparison" },
+            { "@type": "ListItem", position: 1, name: "Start", item: "https://www.ergoblockchain.org/start" },
+            { "@type": "ListItem", position: 2, name: "Comparison", item: "https://www.ergoblockchain.org/start/comparison" },
           ],
         }}
       />
@@ -182,17 +182,17 @@ export default function ComparisonClient() {
           headline: "Ergo vs Others — Practical Comparison",
           description:
             "Comparison of eUTXO vs account models, PoW vs PoS, privacy and fees: Ergo, Ethereum, Bitcoin, Cardano.",
-          image: "https://ergoblockchain.org/og/comparison.png",
+          image: "https://www.ergoblockchain.org/og/comparison.png",
           datePublished: isoDate,
           dateModified: isoDate,
-          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
           publisher: {
             "@type": "Organization",
             name: "ergoblockchain.org",
-            url: "https://ergoblockchain.org",
-            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+            url: "https://www.ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://www.ergoblockchain.org/favicon.ico" },
           },
-          mainEntityOfPage: "https://ergoblockchain.org/start/comparison",
+          mainEntityOfPage: "https://www.ergoblockchain.org/start/comparison",
         }}
       />
 

@@ -173,7 +173,7 @@ export default function NiPoPoWsExplainedClient() {
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline 
                 title="How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo" 
-                url="https://ergoblockchain.org/blog/nipopows-explained" 
+                url="https://www.ergoblockchain.org/blog/nipopows-explained" 
               />
             </div>
           </motion.div>
@@ -561,7 +561,7 @@ export default function NiPoPoWsExplainedClient() {
           <ShareCTA 
             title="How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo"
             description="Learn how Non-Interactive Proofs of Proof-of-Work enable lightweight blockchain verification and trustless cross-chain bridges."
-            url="https://ergoblockchain.org/blog/nipopows-explained"
+            url="https://www.ergoblockchain.org/blog/nipopows-explained"
           />
 
           {/* Continue Learning */}

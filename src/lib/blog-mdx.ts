@@ -120,7 +120,7 @@ export function calculateReadTime(content: string): number {
 
 // Generate SEO metadata for a blog post
 export function generateBlogMetadata(post: BlogPostMeta) {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = 'https://www.ergoblockchain.org'
   const url = `${baseUrl}/blog/${post.slug}`
   
   return {
@@ -182,7 +182,7 @@ export function generateBlogSchema(post: BlogPostMeta, url: string) {
       name: 'Ergo Platform',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ergoblockchain.org/logo.png',
+        url: 'https://www.ergoblockchain.org/logo.png',
       },
     },
     mainEntityOfPage: {

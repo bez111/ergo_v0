@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 
 export const revalidate = 86400 // 24h
 
-const BASE_URL = 'https://ergoblockchain.org'
+const BASE_URL = 'https://www.ergoblockchain.org'
 
 export async function GET() {
   const content = `# Ergo Platform

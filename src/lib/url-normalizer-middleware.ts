@@ -69,7 +69,7 @@ export function urlNormalizerMiddleware(request: NextRequest) {
   
   // 6. Добавляем canonical header
   const response = NextResponse.next()
-  const canonical = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org'}${normalized}${search}`
+  const canonical = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ergoblockchain.org'}${normalized}${search}`
   response.headers.set('Link', `<${canonical}>; rel="canonical"`)
   
   return response

@@ -41,13 +41,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('seo.title'),
     description: t('seo.description'),
     keywords: t('seo.keywords'),
-    alternates: { canonical: 'https://ergoblockchain.org/wallet' },
+    alternates: { canonical: 'https://www.ergoblockchain.org/wallet' },
     openGraph: {
       title: t('seo.ogTitle'),
       description: t('seo.ogDescription'),
-      url: 'https://ergoblockchain.org/wallet',
+      url: 'https://www.ergoblockchain.org/wallet',
       siteName: 'Ergo Platform',
-      images: [{ url: 'https://ergoblockchain.org/og/wallets.png', width: 1200, height: 630, alt: 'Ergo Wallets Overview' }],
+      images: [{ url: 'https://www.ergoblockchain.org/og/wallets.png', width: 1200, height: 630, alt: 'Ergo Wallets Overview' }],
       type: 'website',
       locale: 'en_US'
     },
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('seo.twitterTitle'),
       description: t('seo.twitterDescription'),
-      images: ['https://ergoblockchain.org/og/wallets.png'],
+      images: ['https://www.ergoblockchain.org/og/wallets.png'],
       creator: '@ergoplatform',
       site: '@ergoplatform'
     },
@@ -75,10 +75,10 @@ export default async function WalletPage({ params }: { params: Promise<{ locale:
   const walletsItemList = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    '@id': 'https://ergoblockchain.org/wallet#page',
+    '@id': 'https://www.ergoblockchain.org/wallet#page',
     name: t('name'),
     description: t('description'),
-    url: 'https://ergoblockchain.org/wallet',
+    url: 'https://www.ergoblockchain.org/wallet',
     mainEntity: {
       '@type': 'ItemList',
       itemListElement: [

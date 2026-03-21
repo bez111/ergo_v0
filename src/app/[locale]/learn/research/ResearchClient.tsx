@@ -156,8 +156,8 @@ export default function ResearchClient() {
         data={{
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Learn", item: "https://ergoblockchain.org/learn" },
-            { "@type": "ListItem", position: 2, name: "Research", item: "https://ergoblockchain.org/learn/research" },
+            { "@type": "ListItem", position: 1, name: "Learn", item: "https://www.ergoblockchain.org/learn" },
+            { "@type": "ListItem", position: 2, name: "Research", item: "https://www.ergoblockchain.org/learn/research" },
           ],
         }}
       />
