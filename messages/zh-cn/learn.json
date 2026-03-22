@@ -446,9 +446,19 @@
           "audienceType": "开发者, 创业者, 研究者, 隐私构建者",
           "educationalLevel": "从入门到高级",
           "instances": [
-            { "name": "ErgoScript 构建路径", "description": "ErgoScript 模式、确定性与部署的实战课程。", "duration": "PT20H" },
-            { "name": "隐私与 Sigma 协议", "description": "Σ 协议、混币与选择性披露的交互式讲解。" },
-            { "name": "研究与代币经济", "description": "白皮书、Storage Rent 模型与 Autolykos 研究资料。" }
+            {
+              "name": "ErgoScript 构建路径",
+              "description": "ErgoScript 模式、确定性与部署的实战课程。",
+              "duration": "PT20H"
+            },
+            {
+              "name": "隐私与 Sigma 协议",
+              "description": "Σ 协议、混币与选择性披露的交互式讲解。"
+            },
+            {
+              "name": "研究与代币经济",
+              "description": "白皮书、Storage Rent 模型与 Autolykos 研究资料。"
+            }
           ]
         }
       },
@@ -670,7 +680,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "research": "研究" },
+        "breadcrumbs": {
+          "research": "研究"
+        },
         "scholarlyArticle": {
           "name": "Ergo 研究合集",
           "description": "Ergo 区块链技术学术研究论文合集",
@@ -679,9 +691,18 @@
         },
         "faq": {
           "items": [
-            { "question": "Ergo 的研究涵盖哪些主题？", "answer": "共识算法（Autolykos）、密码学（Sigma 协议）、智能合约（ErgoScript）、Storage Rent 经济模型以及 NiPoPoWs。" },
-            { "question": "Ergo 论文是否经过同行评审？", "answer": "是的，核心研究论文在学术社区中发表并/或经过同行评审。" },
-            { "question": "我可以参与 Ergo 研究吗？", "answer": "可以。欢迎学术合作与贡献，加入社区一起讨论研究方向。" }
+            {
+              "question": "Ergo 的研究涵盖哪些主题？",
+              "answer": "共识算法（Autolykos）、密码学（Sigma 协议）、智能合约（ErgoScript）、Storage Rent 经济模型以及 NiPoPoWs。"
+            },
+            {
+              "question": "Ergo 论文是否经过同行评审？",
+              "answer": "是的，核心研究论文在学术社区中发表并/或经过同行评审。"
+            },
+            {
+              "question": "我可以参与 Ergo 研究吗？",
+              "answer": "可以。欢迎学术合作与贡献，加入社区一起讨论研究方向。"
+            }
           ]
         }
       },
@@ -815,7 +836,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "ergoscript": "ErgoScript" },
+        "breadcrumbs": {
+          "ergoscript": "ErgoScript"
+        },
         "course": {
           "name": "ErgoScript 编程课程",
           "description": "学习如何用 ErgoScript 构建智能合约",
@@ -825,9 +848,18 @@
         },
         "faq": {
           "items": [
-            { "question": "什么是 ErgoScript？", "answer": "ErgoScript 是基于 Sigma 协议的智能合约语言，结合 eUTXO 模型，可用于构建复杂的金融合约并支持零知识能力。" },
-            { "question": "ErgoScript 难学吗？", "answer": "有一定学习曲线，但安全性很强。如果熟悉函数式编程概念会更容易上手。" },
-            { "question": "我能用 ErgoScript 构建什么？", "answer": "DEX、借贷、NFT 市场、DAO、预言机池、隐私工具以及各种复杂金融合约。" }
+            {
+              "question": "什么是 ErgoScript？",
+              "answer": "ErgoScript 是基于 Sigma 协议的智能合约语言，结合 eUTXO 模型，可用于构建复杂的金融合约并支持零知识能力。"
+            },
+            {
+              "question": "ErgoScript 难学吗？",
+              "answer": "有一定学习曲线，但安全性很强。如果熟悉函数式编程概念会更容易上手。"
+            },
+            {
+              "question": "我能用 ErgoScript 构建什么？",
+              "answer": "DEX、借贷、NFT 市场、DAO、预言机池、隐私工具以及各种复杂金融合约。"
+            }
           ]
         }
       },
@@ -1106,7 +1138,51 @@
     "description": "关于埃尔戈的学术研究和白皮书",
     "subtitle": "埃尔戈技术的科学基础"
   },
-  "glossary": {},
+  "glossary": {
+    "seo": {
+      "title": "Ergo Glossary - 250+ Blockchain Terms Explained | Ergo",
+      "description": "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols - your complete Ergo & crypto glossary. Search, filter, learn.",
+      "keywords": "Ergo glossary, blockchain terminology, eUTXO explained, NiPoPoWs meaning, Sigma Protocols definition, ErgoScript tutorial, storage rent explained, cryptocurrency terms, blockchain definitions"
+    },
+    "title": "Ergo",
+    "titleHighlight": "Glossary",
+    "subtitle": "Master Ergo terminology in one searchable reference.",
+    "stats": {
+      "terms": "terms",
+      "categories": "categories"
+    },
+    "search": {
+      "placeholder": "Search terms...",
+      "ariaLabel": "Search glossary terms"
+    },
+    "filters": {
+      "allCategories": "All Categories",
+      "level": "Level:",
+      "allLevels": "All levels",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "popular": "Popular:",
+    "noResults": {
+      "message": "No terms found matching your criteria.",
+      "clearFilters": "Clear filters"
+    },
+    "cta": {
+      "title": "Ready to Build on Ergo?",
+      "description": "Now that you understand the terminology, dive into the documentation and start building decentralized applications.",
+      "devDocs": "Developer Docs",
+      "learningHub": "Learning Hub"
+    },
+    "emailCapture": {
+      "title": "Learn More About Ergo",
+      "description": "Get educational content, terminology guides, and blockchain insights delivered to your inbox."
+    },
+    "breadcrumbs": {
+      "learn": "Learn",
+      "glossary": "Glossary"
+    }
+  },
   "glossaryTermPage": {
     "whatIs": "什么是",
     "share": {

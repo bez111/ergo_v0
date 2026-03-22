@@ -506,9 +506,19 @@
           "audienceType": "Developers, founders, researchers, privacy builders",
           "educationalLevel": "Beginner to advanced",
           "instances": [
-            { "name": "ErgoScript Builder Path", "description": "Hands-on lessons for ErgoScript patterns, determinism, and deployment.", "duration": "PT20H" },
-            { "name": "Privacy & Sigma Protocols", "description": "Interactive explainer of Σ-protocols, mixers, and selective disclosure flows." },
-            { "name": "Research & Tokenomics Library", "description": "Original whitepapers, Storage Rent models, and Autolykos research decks." }
+            {
+              "name": "ErgoScript Builder Path",
+              "description": "Hands-on lessons for ErgoScript patterns, determinism, and deployment.",
+              "duration": "PT20H"
+            },
+            {
+              "name": "Privacy & Sigma Protocols",
+              "description": "Interactive explainer of Σ-protocols, mixers, and selective disclosure flows."
+            },
+            {
+              "name": "Research & Tokenomics Library",
+              "description": "Original whitepapers, Storage Rent models, and Autolykos research decks."
+            }
           ]
         }
       },
@@ -730,7 +740,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "research": "Research" },
+        "breadcrumbs": {
+          "research": "Research"
+        },
         "scholarlyArticle": {
           "name": "Ergo Platform Research Collection",
           "description": "Collection of academic research papers on Ergo blockchain technology",
@@ -739,9 +751,18 @@
         },
         "faq": {
           "items": [
-            { "question": "What research topics does Ergo cover?", "answer": "Ergo research covers consensus algorithms (Autolykos), cryptography (Sigma protocols), smart contracts (ErgoScript), storage rent economics, and NiPoPoWs." },
-            { "question": "Are Ergo papers peer-reviewed?", "answer": "Yes, core Ergo research papers are peer-reviewed and published in academic conferences and journals." },
-            { "question": "Can I contribute to Ergo research?", "answer": "Yes. Ergo welcomes academic collaboration—reach out if you're interested in blockchain research." }
+            {
+              "question": "What research topics does Ergo cover?",
+              "answer": "Ergo research covers consensus algorithms (Autolykos), cryptography (Sigma protocols), smart contracts (ErgoScript), storage rent economics, and NiPoPoWs."
+            },
+            {
+              "question": "Are Ergo papers peer-reviewed?",
+              "answer": "Yes, core Ergo research papers are peer-reviewed and published in academic conferences and journals."
+            },
+            {
+              "question": "Can I contribute to Ergo research?",
+              "answer": "Yes. Ergo welcomes academic collaboration—reach out if you're interested in blockchain research."
+            }
           ]
         }
       },
@@ -875,7 +896,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "ergoscript": "ErgoScript" },
+        "breadcrumbs": {
+          "ergoscript": "ErgoScript"
+        },
         "course": {
           "name": "ErgoScript Programming Course",
           "description": "Learn to build smart contracts with ErgoScript",
@@ -885,9 +908,18 @@
         },
         "faq": {
           "items": [
-            { "question": "What is ErgoScript?", "answer": "ErgoScript is a protocol-friendly smart contract language based on Sigma protocols, enabling complex DeFi applications with built-in zero-knowledge proofs." },
-            { "question": "Is ErgoScript difficult to learn?", "answer": "ErgoScript has a learning curve but offers powerful safety properties. Developers familiar with functional programming often find it intuitive." },
-            { "question": "What can I build with ErgoScript?", "answer": "DEXs, lending protocols, NFT marketplaces, DAOs, oracle pools, privacy tools, and any complex financial contract." }
+            {
+              "question": "What is ErgoScript?",
+              "answer": "ErgoScript is a protocol-friendly smart contract language based on Sigma protocols, enabling complex DeFi applications with built-in zero-knowledge proofs."
+            },
+            {
+              "question": "Is ErgoScript difficult to learn?",
+              "answer": "ErgoScript has a learning curve but offers powerful safety properties. Developers familiar with functional programming often find it intuitive."
+            },
+            {
+              "question": "What can I build with ErgoScript?",
+              "answer": "DEXs, lending protocols, NFT marketplaces, DAOs, oracle pools, privacy tools, and any complex financial contract."
+            }
           ]
         }
       },

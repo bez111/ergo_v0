@@ -109,5 +109,72 @@
         }
       }
     }
+  },
+  "holdersData": {
+    "mining-access": {
+      "title": "Mining Access"
+    },
+    "fair-launch": {
+      "title": "Fair Launch"
+    },
+    "long-term-security": {
+      "title": "Long-term Security"
+    },
+    "sound-money": {
+      "title": "Sound Money",
+      "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019."
+    },
+    "smart-contracts": {
+      "title": "Smart Contracts",
+      "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security."
+    },
+    "programmable-privacy": {
+      "title": "Programmable Privacy",
+      "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors."
+    },
+    "fair-accessible": {
+      "title": "Fair & Accessible",
+      "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one."
+    },
+    "store-value": {
+      "title": "Store Value Long-term",
+      "description": "Cold storage wallets with hardware support"
+    },
+    "use-defi": {
+      "title": "Use DeFi Protocols",
+      "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+    },
+    "private-transactions": {
+      "title": "Send Private Transactions",
+      "description": "Optional privacy for sensitive transfers"
+    },
+    "support-network": {
+      "title": "Support the Network",
+      "description": "Mining, running nodes, community participation"
+    },
+    "security-commodity": {
+      "question": "Is Ergo a security or commodity?",
+      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+    },
+    "different-from-bitcoin": {
+      "question": "How is Ergo different from Bitcoin?",
+      "answer": "Ergo shares Bitcoin"
+    },
+    "who-controls": {
+      "question": "Who controls the Ergo project?",
+      "answer": "No single entity controls Ergo. It"
+    },
+    "mining-rewards-end": {
+      "question": "What happens when mining rewards end?",
+      "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
+    },
+    "buy-store": {
+      "question": "Where can I buy and store ERG?",
+      "answer": "ERG is available on major exchanges like <a href=\\"
+    },
+    "privacy-legal": {
+      "question": "Is Ergo",
+      "answer": "Ergo"
+    }
   }
 }
