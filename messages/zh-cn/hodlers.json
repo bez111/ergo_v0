@@ -24,6 +24,44 @@
         "ERG tokenomics"
       ]
     },
+    "metrics": {
+      "networkHashrate": {
+        "label": "Network Hashrate"
+      },
+      "activeAddresses": {
+        "label": "Active Addresses"
+      },
+      "defiTvl": {
+        "label": "DeFi TVL"
+      },
+      "ergSupply": {
+        "label": "ERG Supply",
+        "trend": "{remaining}M left"
+      },
+      "avgBlockTime": {
+        "label": "Avg Block Time"
+      },
+      "activeNodes": {
+        "label": "Active Nodes"
+      }
+    },
+    "heroComparisons": [
+      {
+        "title": "Mining Access",
+        "ergo": "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
+        "others": "BTC: ASICs only / ETH: Proof-of-Stake"
+      },
+      {
+        "title": "Fair Launch",
+        "ergo": "0% pre-mine. 0% VC allocation. 100% fair distribution.",
+        "others": "BTC: Fair / ETH: 70M premined"
+      },
+      {
+        "title": "Long-term Security",
+        "ergo": "Storage rent ensures miners get paid forever. Built for decades.",
+        "others": "BTC: Fees only / ETH: Token burn"
+      }
+    ],
     "coreValues": {
       "soundMoney": {
         "title": "声音钱",
@@ -55,14 +93,129 @@
         "monero": "莫罗州",
         "ergo": "Ergo"
       },
-      "deepDive": "深深度：详细比较"
+      "deepDive": "深深度：详细比较",
+      "rows": [
+        {
+          "criterion": "Monetary Policy",
+          "bitcoin": {
+            "status": "good",
+            "text": "Fixed 21M supply"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "Changing tokenomics"
+          },
+          "monero": {
+            "status": "warning",
+            "text": "Tail emission"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Fixed 97M supply"
+          }
+        },
+        {
+          "criterion": "Security Model",
+          "bitcoin": {
+            "status": "good",
+            "text": "Proof-of-Work"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "Proof-of-Stake"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Proof-of-Work"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Proof-of-Work"
+          }
+        },
+        {
+          "criterion": "Privacy Features",
+          "bitcoin": {
+            "status": "bad",
+            "text": "Transparent"
+          },
+          "ethereum": {
+            "status": "bad",
+            "text": "Transparent"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Always private"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Optional privacy"
+          }
+        },
+        {
+          "criterion": "Smart Contracts",
+          "bitcoin": {
+            "status": "bad",
+            "text": "Very limited"
+          },
+          "ethereum": {
+            "status": "good",
+            "text": "Full featured"
+          },
+          "monero": {
+            "status": "bad",
+            "text": "None"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "eUTXO model"
+          }
+        },
+        {
+          "criterion": "Fair Launch",
+          "bitcoin": {
+            "status": "good",
+            "text": "No premine"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "70M premine"
+          },
+          "monero": {
+            "status": "good",
+            "text": "No premine"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "No premine"
+          }
+        }
+      ]
     },
     "liveMetrics": {
       "title": "实时网络健康",
       "subtitle": "链上实时数据 (实时更新)"
     },
     "useCasesSection": {
-      "title": "我真的可以和埃尔戈一起做什么？"
+      "title": "我真的可以和埃尔戈一起做什么？",
+      "items": [
+        {
+          "title": "Store Value Long-term",
+          "description": "Cold storage wallets with hardware support"
+        },
+        {
+          "title": "Use DeFi Protocols",
+          "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+        },
+        {
+          "title": "Send Private Transactions",
+          "description": "Optional privacy for sensitive transfers"
+        },
+        {
+          "title": "Support the Network",
+          "description": "Mining, running nodes, community participation"
+        }
+      ]
     },
     "chooseYourPath": {
       "title": "选择您的",
@@ -106,6 +259,26 @@
         "3": {
           "question": "我能从我的ERG赚钱吗？",
           "answer": "是的！您可以在 Spectrum DEX 上提供流动资金，使用ErgoPad 启动页面或参与各种DeFi 协议。"
+        },
+        "4": {
+          "question": "Is Ergo a security or commodity?",
+          "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, community-driven project. The fair launch and Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective."
+        },
+        "5": {
+          "question": "Who controls the Ergo project?",
+          "answer": "No single entity controls Ergo. It's maintained by the Ergo Foundation, core developers, and community contributors. All development is open-source on GitHub. The community votes on major protocol changes."
+        },
+        "6": {
+          "question": "What happens when mining rewards end?",
+          "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a storage rent mechanism that recycles lost coins. This creates sustainable long-term security without inflation."
+        },
+        "7": {
+          "question": "Where can I buy and store ERG?",
+          "answer": "ERG is available on major exchanges like KuCoin, Gate.io, and CoinEx. For storage, use Nautilus Wallet or hardware wallets. See our complete buying guide at /use/get-erg."
+        },
+        "8": {
+          "question": "Is Ergo's privacy legal to use?",
+          "answer": "Ergo's privacy features are optional and designed for legitimate use cases like business confidentiality and personal financial privacy. Always check your local regulations. The technology itself is similar to other privacy-preserving cryptocurrencies and compliance tools are available for institutions."
         }
       }
     }

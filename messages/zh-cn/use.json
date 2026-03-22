@@ -12,65 +12,6 @@
         "twitterDescription": "Ergo 上的高级 DeFi 协议与金融原语——即将推出。"
       }
     },
-    "title": "使用案例",
-    "subtitle": "从Defi 和 steblecoins 到DAOs 和比喻，发现Ergo的技术是如何建设一个数字主权新时代的。",
-    "description": "实时世界应用程序和使用建立在Ergo blockchain 上的案例",
-    "cases": {
-      "stablecoins": {
-        "title": "[TODO: Algorithmic Stablecoins]",
-        "subtitle": "[TODO: Stable value storage without centralized control]",
-        "description": "[TODO: Over-collateralized stablecoins with innovative AgeUSD protocol.]",
-        "tags": "[TODO: Stablecoin,Algorithmic,Collateral]"
-      },
-      "privacy": {
-        "title": "[TODO: Privacy & Confidentiality]",
-        "subtitle": "[TODO: Financial privacy in an increasingly surveilled world]",
-        "description": "[TODO: Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy.]",
-        "tags": "[TODO: Mixer,Stealth,Zero-Knowledge]"
-      },
-      "bridges": {
-        "title": "[TODO: Cross-Chain Bridges]",
-        "subtitle": "[TODO: Secure, trustless value transfer between blockchains]",
-        "description": "[TODO: Decentralized bridges with multi-signature security, no central custody.]",
-        "tags": "[TODO: Bridge,Interoperability,Multi-chain]"
-      },
-      "daos": {
-        "title": "[TODO: DAOs & Alternative Economies]",
-        "subtitle": "[TODO: Community governance and alternative economic systems]",
-        "description": "[TODO: Composable DAO infrastructure: treasury, voting, profit-sharing.]",
-        "tags": "[TODO: DAO,Governance,Community]"
-      },
-      "nfts": {
-        "title": "[TODO: NFTs & Digital Assets]",
-        "subtitle": "[TODO: True digital ownership, dynamic properties]",
-        "description": "[TODO: On-chain metadata, protocol royalties, programmable NFTs.]",
-        "tags": "[TODO: NFT,Royalties,Dynamic]"
-      },
-      "oracles": {
-        "title": "[TODO: Oracles & Data Feeds]",
-        "subtitle": "[TODO: Bringing real-world data on-chain]",
-        "description": "[TODO: Decentralized oracle pools provide external data for DeFi & prediction markets.]",
-        "tags": "[TODO: Oracles,Data Feeds,Prediction]"
-      },
-      "identity": {
-        "title": "[TODO: Identity & Reputation]",
-        "subtitle": "[TODO: Self-sovereign identity & Web3 reputation]",
-        "description": "[TODO: Decentralized identifiers (DID), Sybil resistance, reputation systems.]",
-        "tags": "[TODO: Identity,Reputation,DID]"
-      },
-      "gaming": {
-        "title": "[TODO: Gaming & Metaverse]",
-        "subtitle": "[TODO: Next-gen gaming assets & digital worlds]",
-        "description": "[TODO: Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.]",
-        "tags": "[TODO: Gaming,Metaverse,NFT]"
-      }
-    },
-    "common": {
-      "exploreCase": "[TODO: Explore Use Case]",
-      "learnMore": "[TODO: Learn More]",
-      "supportedProjects": "[TODO: Supported Projects]",
-      "getStarted": "[TODO: Get Started]"
-    },
     "guides": {
       "title": "埃尔戈指南",
       "subtitle": "用综合指南掌握埃尔戈生态系统，从钱包安装到高级智能合同开发。",
@@ -413,6 +354,9 @@
         }
       }
     },
+    "title": "使用案例",
+    "description": "实时世界应用程序和使用建立在Ergo blockchain 上的案例",
+    "subtitle": "从Defi 和 steblecoins 到DAOs 和比喻，发现Ergo的技术是如何建设一个数字主权新时代的。",
     "featuredUseCases": {
       "title": "精选使用案例",
       "defi": "分权金融（DeFi）",
@@ -424,6 +368,45 @@
       "startBuilding": "开始Building",
       "exploreUseCase": "探索使用案例",
       "comingSoon": "即将到来的"
+    },
+    "aria": {
+      "learnMoreAbout": "Learn more about {title}"
+    },
+    "learnTechnology": {
+      "title": "Learn the Technology",
+      "ergoscript": {
+        "title": "ErgoScript",
+        "description": "Learn the smart contract language powering these use cases",
+        "cta": "Start Tutorial"
+      },
+      "eutxo": {
+        "title": "eUTXO Model",
+        "description": "Understand the foundation that enables these applications",
+        "cta": "Learn More"
+      },
+      "allTechnology": {
+        "title": "All Technology",
+        "description": "Explore all of Ergo's technical innovations",
+        "cta": "View All"
+      }
+    },
+    "whatsNext": {
+      "title": "What's Next?",
+      "subtitle": "Start exploring applications or learn how to build on Ergo",
+      "exploreEcosystem": {
+        "title": "Explore Ecosystem",
+        "subtitle": "Discover Applications",
+        "description": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo"
+      },
+      "startBuilding": {
+        "title": "Start Building",
+        "subtitle": "Developer Resources",
+        "description": "Access documentation, tutorials, and tools to build your own Ergo applications"
+      }
+    },
+    "emailCapture": {
+      "title": "Discover New Use Cases",
+      "description": "Get notified about new practical applications, real-world implementations, and use case studies"
     },
     "allUseCases": "所有使用情况",
     "faq": {
@@ -602,6 +585,10 @@
         "title": "交换分散化Exchange (DEX)",
         "subtitle": "在其他区块链上使用包裹的 ERG (rsERG) 来交换分散交易所上的资产。这是一个更先进的方法，需要兼容的钱包。",
         "exchanges": {
+          "aster": {
+            "name": "Aster",
+            "description": "Decentralized perpetual contracts exchange"
+          },
           "hyperliquid": {
             "name": "超流动性",
             "description": "贸易企业资源规划使分散的衍生产品交易永久化，流动性很高。"
@@ -631,9 +618,21 @@
           "name": "ERG Exchange 目录",
           "description": "您可以购买ERG令牌的交易的完整列表",
           "items": [
-            { "name": "KuCoin", "url": "https://www.kucoin.com", "description": "ERG 流动性较高的大型交易所" },
-            { "name": "Gate.io", "url": "https://www.gate.io", "description": "支持 ERG 的热门交易所" },
-            { "name": "CoinEx", "url": "https://www.coinex.com", "description": "提供 ERG 交易对的交易所" }
+            {
+              "name": "KuCoin",
+              "url": "https://www.kucoin.com",
+              "description": "ERG 流动性较高的大型交易所"
+            },
+            {
+              "name": "Gate.io",
+              "url": "https://www.gate.io",
+              "description": "支持 ERG 的热门交易所"
+            },
+            {
+              "name": "CoinEx",
+              "url": "https://www.coinex.com",
+              "description": "提供 ERG 交易对的交易所"
+            }
           ]
         },
         "faq": {
@@ -2630,6 +2629,62 @@
         "title": "当我们启动时获得通知",
         "description": "成为第一个探索新的 Defi 枢纽的人。注册进行更新。"
       }
+    },
+    "cases": {
+      "stablecoins": {
+        "title": "[TODO: Algorithmic Stablecoins]",
+        "subtitle": "[TODO: Stable value storage without centralized control]",
+        "description": "[TODO: Over-collateralized stablecoins with innovative AgeUSD protocol.]",
+        "tags": "[TODO: Stablecoin,Algorithmic,Collateral]"
+      },
+      "privacy": {
+        "title": "[TODO: Privacy & Confidentiality]",
+        "subtitle": "[TODO: Financial privacy in an increasingly surveilled world]",
+        "description": "[TODO: Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy.]",
+        "tags": "[TODO: Mixer,Stealth,Zero-Knowledge]"
+      },
+      "bridges": {
+        "title": "[TODO: Cross-Chain Bridges]",
+        "subtitle": "[TODO: Secure, trustless value transfer between blockchains]",
+        "description": "[TODO: Decentralized bridges with multi-signature security, no central custody.]",
+        "tags": "[TODO: Bridge,Interoperability,Multi-chain]"
+      },
+      "daos": {
+        "title": "[TODO: DAOs & Alternative Economies]",
+        "subtitle": "[TODO: Community governance and alternative economic systems]",
+        "description": "[TODO: Composable DAO infrastructure: treasury, voting, profit-sharing.]",
+        "tags": "[TODO: DAO,Governance,Community]"
+      },
+      "nfts": {
+        "title": "[TODO: NFTs & Digital Assets]",
+        "subtitle": "[TODO: True digital ownership, dynamic properties]",
+        "description": "[TODO: On-chain metadata, protocol royalties, programmable NFTs.]",
+        "tags": "[TODO: NFT,Royalties,Dynamic]"
+      },
+      "oracles": {
+        "title": "[TODO: Oracles & Data Feeds]",
+        "subtitle": "[TODO: Bringing real-world data on-chain]",
+        "description": "[TODO: Decentralized oracle pools provide external data for DeFi & prediction markets.]",
+        "tags": "[TODO: Oracles,Data Feeds,Prediction]"
+      },
+      "identity": {
+        "title": "[TODO: Identity & Reputation]",
+        "subtitle": "[TODO: Self-sovereign identity & Web3 reputation]",
+        "description": "[TODO: Decentralized identifiers (DID), Sybil resistance, reputation systems.]",
+        "tags": "[TODO: Identity,Reputation,DID]"
+      },
+      "gaming": {
+        "title": "[TODO: Gaming & Metaverse]",
+        "subtitle": "[TODO: Next-gen gaming assets & digital worlds]",
+        "description": "[TODO: Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.]",
+        "tags": "[TODO: Gaming,Metaverse,NFT]"
+      }
+    },
+    "common": {
+      "exploreCase": "[TODO: Explore Use Case]",
+      "learnMore": "[TODO: Learn More]",
+      "supportedProjects": "[TODO: Supported Projects]",
+      "getStarted": "[TODO: Get Started]"
     }
   },
   "usePages": {
@@ -2703,6 +2758,97 @@
     "subtitle": "分散化稳定的价值存储"
   },
   "useCasesData": {
+    "tagLabels": {
+      "stablecoin": "Stablecoin",
+      "algorithmic": "Algorithmic",
+      "collateral": "Collateral",
+      "mixer": "Mixer",
+      "stealth": "Stealth",
+      "zeroKnowledge": "Zero-Knowledge",
+      "bridge": "Bridge",
+      "interoperability": "Interoperability",
+      "multichain": "Multi-chain",
+      "dao": "DAO",
+      "governance": "Governance",
+      "community": "Community",
+      "nft": "NFT",
+      "royalties": "Royalties",
+      "dynamic": "Dynamic",
+      "oracles": "Oracles",
+      "dataFeeds": "Data feeds",
+      "prediction": "Prediction",
+      "identity": "Identity",
+      "reputation": "Reputation",
+      "did": "DID",
+      "gaming": "Gaming",
+      "metaverse": "Metaverse"
+    },
+    "stablecoins": {
+      "title": "Algorithmic Stablecoins",
+      "subtitle": "Stable value storage without centralized control",
+      "description": "Over-collateralized stablecoins with innovative AgeUSD protocol."
+    },
+    "privacy": {
+      "title": "Privacy & Confidentiality",
+      "subtitle": "Financial privacy in an increasingly surveilled world",
+      "description": "Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy."
+    },
+    "bridges": {
+      "title": "Cross-Chain Bridges",
+      "subtitle": "Secure, trustless value transfer between blockchains",
+      "description": "Decentralized bridges with multi-signature security, no central custody."
+    },
+    "daos": {
+      "title": "DAOs & Alternative Economies",
+      "subtitle": "Community governance and alternative economic systems",
+      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing."
+    },
+    "nfts": {
+      "title": "NFTs & Digital Assets",
+      "subtitle": "True digital ownership, dynamic properties",
+      "description": "On-chain metadata, protocol royalties, programmable NFTs."
+    },
+    "oracles": {
+      "title": "Oracles & Data Feeds",
+      "subtitle": "Bringing real-world data on-chain",
+      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets."
+    },
+    "identity": {
+      "title": "Identity & Reputation",
+      "subtitle": "Self-sovereign identity & Web3 reputation",
+      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems."
+    },
+    "gaming": {
+      "title": "Gaming & Metaverse",
+      "subtitle": "Next-gen gaming assets & digital worlds",
+      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure."
+    },
+    "faq": {
+      "defi-on-ergo": {
+        "question": "Ergo 上的 DeFi 有什么不同？",
+        "answer": "Ergo 的 eUTXO 模型为 DeFi 提供了卓越的安全性和可组合性。智能合约更可预测，成本确定，并行交易处理实现更好的可扩展性。此外，可选的隐私功能保护您的金融数据。"
+      },
+      "start-using-ergo": {
+        "question": "如何开始使用 Ergo 应用？",
+        "answer": "1. 获取 Ergo 钱包，如 Nautilus 或 SAFEW\n2. 从交易所购买 ERG 代币\n3. 探索我们生态系统中的 dApp\n4. 加入 Discord 或 Telegram 社区获取帮助"
+      },
+      "ergo-vs-ethereum": {
+        "question": "Ergo 与以太坊在 dApp 方面相比如何？",
+        "answer": "Ergo 使用 eUTXO 模型（相对于以太坊的账户模型），提供更好的安全性、并行处理和可预测的成本。ErgoScript 在设计上更安全，具有形式化验证能力。原生代币不需要智能合约，使其更便宜、更安全。"
+      },
+      "privacy-features": {
+        "question": "Ergo 的隐私功能合法使用吗？",
+        "answer": "Ergo 通过 Sigma 协议提供可选的隐私功能。用户应检查当地法规。隐私在协议层面实现，用于合法用途，如商业保密、个人金融隐私和遵守数据保护法。"
+      },
+      "mining-profitable": {
+        "question": "挖 ERG 还有利可图吗？",
+        "answer": "挖矿盈利能力取决于您的电费、硬件效率和 ERG 价格。Ergo 的抗 ASIC Autolykos 算法保持 GPU 挖矿的可及性。使用挖矿计算器根据当前网络难度估算您的潜在回报。"
+      },
+      "developer-resources": {
+        "question": "开发者有哪些可用资源？",
+        "answer": "Ergo 提供全面的开发者资源：\n- ErgoScript 文档和教程\n- 多语言 SDK（Scala、JS、Python）\n- 用于 dApp 开发的 AppKit\n- 活跃的开发者社区和支持\n- 生态系统项目资助计划"
+      }
+    },
     "useCases": {
       "stablecoins": {
         "title": "算法稳定币",
@@ -2783,32 +2929,6 @@
           "元宇宙",
           "NFT"
         ]
-      }
-    },
-    "faq": {
-      "defi-on-ergo": {
-        "question": "Ergo 上的 DeFi 有什么不同？",
-        "answer": "Ergo 的 eUTXO 模型为 DeFi 提供了卓越的安全性和可组合性。智能合约更可预测，成本确定，并行交易处理实现更好的可扩展性。此外，可选的隐私功能保护您的金融数据。"
-      },
-      "start-using-ergo": {
-        "question": "如何开始使用 Ergo 应用？",
-        "answer": "1. 获取 Ergo 钱包，如 Nautilus 或 SAFEW\n2. 从交易所购买 ERG 代币\n3. 探索我们生态系统中的 dApp\n4. 加入 Discord 或 Telegram 社区获取帮助"
-      },
-      "ergo-vs-ethereum": {
-        "question": "Ergo 与以太坊在 dApp 方面相比如何？",
-        "answer": "Ergo 使用 eUTXO 模型（相对于以太坊的账户模型），提供更好的安全性、并行处理和可预测的成本。ErgoScript 在设计上更安全，具有形式化验证能力。原生代币不需要智能合约，使其更便宜、更安全。"
-      },
-      "privacy-features": {
-        "question": "Ergo 的隐私功能合法使用吗？",
-        "answer": "Ergo 通过 Sigma 协议提供可选的隐私功能。用户应检查当地法规。隐私在协议层面实现，用于合法用途，如商业保密、个人金融隐私和遵守数据保护法。"
-      },
-      "mining-profitable": {
-        "question": "挖 ERG 还有利可图吗？",
-        "answer": "挖矿盈利能力取决于您的电费、硬件效率和 ERG 价格。Ergo 的抗 ASIC Autolykos 算法保持 GPU 挖矿的可及性。使用挖矿计算器根据当前网络难度估算您的潜在回报。"
-      },
-      "developer-resources": {
-        "question": "开发者有哪些可用资源？",
-        "answer": "Ergo 提供全面的开发者资源：\n- ErgoScript 文档和教程\n- 多语言 SDK（Scala、JS、Python）\n- 用于 dApp 开发的 AppKit\n- 活跃的开发者社区和支持\n- 生态系统项目资助计划"
       }
     },
     "learnTechnology": {

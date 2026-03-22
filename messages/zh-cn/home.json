@@ -5,8 +5,11 @@
     "description": "可规划资金的全球中立定居层。",
     "message1": "没有主人的货币",
     "message2": "全球结算层",
+    "message3": "Digital Freedom Platform",
+    "message4": "Decentralized By Design",
     "exploreErgo": "Explore Ergo",
     "chooseYourPath": "选择您的路径",
+    "startHere": "从这里开始",
     "aria": {
       "keyFeatures": "Ergo 区块链的关键特性"
     },
@@ -15,8 +18,7 @@
       "smartContracts": "智能合同",
       "privacy": "隐私",
       "eutxoModel": "eUTXO 模型"
-    },
-    "startHere": "从这里开始"
+    }
   },
   "buildForScale": {
     "titlePrefix": "专为",
@@ -120,6 +122,7 @@
     "titleHighlight": "常见",
     "titleSuffix": "问题",
     "subtitle": "开始使用所需了解的一切",
+    "learnMore": "Learn more",
     "items": {
       "0": {
         "q": "用一句话概括 Ergo 是什么？",
@@ -146,6 +149,245 @@
         "a": "自我托管意味着交易不可逆；市场波动剧烈；第三方 dApp 存在智能合约和运营风险；请警惕网络钓鱼。"
       }
     }
+  },
+  "valueProposition": {
+    "title": "为什么选择",
+    "titleHighlight": "Ergo？",
+    "subtitle": "唯一将经过验证的安全性、先进智能合约和用户主权相结合的区块链，毫不妥协。",
+    "items": [
+      {
+        "icon": "Shield",
+        "title": "比特币级别安全性",
+        "description": "经过验证的工作量证明共识机制，具有 ASIC 抗性，确保真正的去中心化和网络安全。",
+        "benefit": "您的资金受到密码学保障的保护",
+        "stat": "自上线以来 99.9% 在线率"
+      },
+      {
+        "icon": "Zap",
+        "title": "智能合约做对了",
+        "description": "eUTXO 模型结合了比特币的安全性和以太坊的可编程性——没有任何权衡。",
+        "benefit": "自信地构建 DeFi 应用",
+        "stat": "迄今为止零合约漏洞"
+      },
+      {
+        "icon": "Eye",
+        "title": "隐私优先设计",
+        "description": "Sigma 协议提供数学隐私保证，同时保持可审计性。",
+        "benefit": "控制您的财务隐私",
+        "stat": "密码学安全的隐私"
+      },
+      {
+        "icon": "Coins",
+        "title": "公平且可持续",
+        "description": "无预挖、无风投，加上存储租金机制确保区块链的长期健康。",
+        "benefit": "真正由社区拥有的区块链",
+        "stat": "100% 公平启动"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "社区评价",
+    "subtitle": "来自在 Ergo 上构建的开发者、矿工和用户的声音",
+    "items": [
+      {
+        "quote": "Ergo 代表了去中心化金融的未来——结合比特币的安全性和以太坊的可编程性，加上存储租金和内置隐私等独特创新。",
+        "author": "Alex Chepurnoy",
+        "role": "核心开发者与联合创始人",
+        "avatar": "AC",
+        "social": {
+          "icon": "Github",
+          "handle": "@kushti"
+        }
+      },
+      {
+        "quote": "eUTXO 模型是一项突破，解决了我们在其他区块链中看到的许多可扩展性和安全性问题。Ergo 的智能合约方法既优雅又强大。",
+        "author": "Kushti Research",
+        "role": "区块链研究员",
+        "avatar": "KR",
+        "social": {
+          "icon": "Twitter",
+          "handle": "@kushti_ru"
+        }
+      },
+      {
+        "quote": "作为矿工，我喜欢 Ergo 坚持公平、抗 ASIC 的挖矿。Autolykos 算法确保真正的去中心化，而不会像其他 PoW 链那样浪费能源。",
+        "author": "矿池运营商",
+        "role": "社区验证者",
+        "avatar": "MP",
+        "social": {
+          "icon": "Twitter",
+          "handle": "@ergo_mining"
+        }
+      },
+      {
+        "quote": "Ergo 的预言机池是 DeFi 拼图中缺失的一块。终于，我们有了真正去中心化、可靠的数据源，不再依赖中心化提供商。",
+        "author": "DeFi Builder",
+        "role": "dApp 开发者",
+        "avatar": "DB",
+        "social": {
+          "icon": "Github",
+          "handle": "@defi_builder"
+        }
+      },
+      {
+        "quote": "Ergo 的隐私功能改变了游戏规则。Sigma 协议为保密性提供数学保证，同时保持验证所需的透明度。",
+        "author": "隐私倡导者",
+        "role": "安全研究员",
+        "avatar": "PA",
+        "social": {
+          "icon": "Linkedin",
+          "handle": "@privacy_advocate"
+        }
+      },
+      {
+        "quote": "Ergo 对学术严谨性和同行评审研究的承诺使其与众不同。每个功能都建立在坚实的理论基础上，而不仅仅是炒作。",
+        "author": "学术研究员",
+        "role": "计算机科学教授",
+        "avatar": "AR",
+        "social": {
+          "icon": "Linkedin",
+          "handle": "@academic_research"
+        }
+      }
+    ]
+  },
+  "socialProof": {
+    "title": "社区信任",
+    "stats": [
+      {
+        "icon": "Users",
+        "value": "活跃",
+        "label": "社区",
+        "description": "全球开发者、矿工和用户"
+      },
+      {
+        "icon": "TrendingUp",
+        "value": "增长中",
+        "label": "生态系统",
+        "description": "不断扩大的生态系统价值"
+      },
+      {
+        "icon": "Activity",
+        "value": "99.9%",
+        "label": "在线率",
+        "description": "自上线以来的网络可靠性"
+      },
+      {
+        "icon": "DollarSign",
+        "value": "安全",
+        "label": "DeFi",
+        "description": "经过验证的智能合约安全性"
+      }
+    ],
+    "trustedBy": [
+      "Coinbase",
+      "KuCoin",
+      "Gate.io",
+      "MEXC",
+      "Changelly",
+      "ChangeNOW"
+    ]
+  },
+  "featureComparison": {
+    "title": "Ergo 对比",
+    "subtitle": "了解 Ergo 与其他区块链的比较",
+    "features": [
+      {
+        "name": "共识机制",
+        "ergo": "工作量证明（抗ASIC）",
+        "bitcoin": "工作量证明（ASIC主导）",
+        "ethereum": "权益证明"
+      },
+      {
+        "name": "智能合约",
+        "ergo": "eUTXO + ErgoScript",
+        "bitcoin": "非常有限",
+        "ethereum": "账户模型 + Solidity"
+      },
+      {
+        "name": "隐私",
+        "ergo": "内置 Sigma 协议",
+        "bitcoin": "透明（需要混币器）",
+        "ethereum": "透明"
+      },
+      {
+        "name": "可持续性",
+        "ergo": "存储租金机制",
+        "bitcoin": "仅手续费（长期）",
+        "ethereum": "代币销毁"
+      },
+      {
+        "name": "轻客户端",
+        "ergo": "NIPoPoWs（密码学证明）",
+        "bitcoin": "SPV（安全性较低）",
+        "ethereum": "需要信任节点"
+      }
+    ]
+  },
+  "ecosystemSection": {
+    "title": "生态系统",
+    "subtitle": "探索在 Ergo 上构建的不断增长的项目和应用生态系统。",
+    "projects": [
+      {
+        "name": "Spectrum Finance",
+        "description": "去中心化交易所和流动性协议",
+        "category": "DeFi",
+        "url": "/ecosystem/spectrum"
+      },
+      {
+        "name": "SigmaUSD",
+        "description": "算法稳定币协议",
+        "category": "稳定币",
+        "url": "/ecosystem/sigmausd"
+      },
+      {
+        "name": "Rosen Bridge",
+        "description": "Ergo 和其他网络的跨链桥",
+        "category": "基础设施",
+        "url": "/ecosystem/rosen-bridge"
+      },
+      {
+        "name": "ErgoMixer",
+        "description": "非托管隐私混币服务",
+        "category": "隐私",
+        "url": "/ecosystem/ergomixer"
+      }
+    ],
+    "viewAll": "查看所有项目"
+  },
+  "communitySection": {
+    "title": "社区",
+    "subtitle": "加入 Ergo 社区，共同构建区块链的未来。",
+    "links": [
+      {
+        "name": "Discord",
+        "description": "加入我们的社区聊天",
+        "icon": "Discord",
+        "url": "https://discord.gg/ergo"
+      },
+      {
+        "name": "Twitter",
+        "description": "关注获取更新",
+        "icon": "Twitter",
+        "url": "https://x.com/BuildOnErgo"
+      },
+      {
+        "name": "论坛",
+        "description": "讨论和提出想法",
+        "icon": "MessageSquare",
+        "url": "https://ergoforum.org"
+      },
+      {
+        "name": "GitHub",
+        "description": "为代码做贡献",
+        "icon": "Github",
+        "url": "https://github.com/ergoplatform"
+      }
+    ],
+    "joinCommunity": "加入社区",
+    "readyToContribute": "准备好贡献了吗？",
+    "readyToContributeDesc": "Ergo 是一个开放平台，任何人都可以贡献。加入我们，共同构建区块链的未来。",
+    "getInvolved": "参与其中"
   },
   "finalCta": {
     "title": "加入 Ergo 构建者列表",
@@ -322,13 +564,13 @@
             "label": "玩家",
             "value": "5K+"
           },
-          "rewardsPaid": {
-            "label": "已支付奖励",
-            "value": "250K"
-          },
           "gameAssets": {
             "label": "游戏资源",
             "value": "10K+"
+          },
+          "rewardsPaid": {
+            "label": "已支付奖励",
+            "value": "250K"
           }
         }
       }
@@ -410,134 +652,5 @@
         "description": "与 Ergo 用户连接"
       }
     }
-  },
-  "valueProposition": {
-    "title": "为什么选择",
-    "titleHighlight": "Ergo？",
-    "subtitle": "唯一将经过验证的安全性、先进智能合约和用户主权相结合的区块链，毫不妥协。",
-    "items": [
-      {
-        "icon": "Shield",
-        "title": "比特币级别安全性",
-        "description": "经过验证的工作量证明共识机制，具有 ASIC 抗性，确保真正的去中心化和网络安全。",
-        "benefit": "您的资金受到密码学保障的保护",
-        "stat": "自上线以来 99.9% 在线率"
-      },
-      {
-        "icon": "Zap",
-        "title": "智能合约做对了",
-        "description": "eUTXO 模型结合了比特币的安全性和以太坊的可编程性——没有任何权衡。",
-        "benefit": "自信地构建 DeFi 应用",
-        "stat": "迄今为止零合约漏洞"
-      },
-      {
-        "icon": "Eye",
-        "title": "隐私优先设计",
-        "description": "Sigma 协议提供数学隐私保证，同时保持可审计性。",
-        "benefit": "控制您的财务隐私",
-        "stat": "密码学安全的隐私"
-      },
-      {
-        "icon": "Coins",
-        "title": "公平且可持续",
-        "description": "无预挖、无风投，加上存储租金机制确保区块链的长期健康。",
-        "benefit": "真正由社区拥有的区块链",
-        "stat": "100% 公平启动"
-      }
-    ]
-  },
-  "testimonials": {
-    "title": "社区评价",
-    "subtitle": "来自在 Ergo 上构建的开发者、矿工和用户的声音",
-    "items": [
-      {
-        "quote": "Ergo 代表了去中心化金融的未来——结合比特币的安全性和以太坊的可编程性，加上存储租金和内置隐私等独特创新。",
-        "author": "Alex Chepurnoy",
-        "role": "核心开发者与联合创始人",
-        "avatar": "AC",
-        "social": {"icon": "Github", "handle": "@kushti"}
-      },
-      {
-        "quote": "eUTXO 模型是一项突破，解决了我们在其他区块链中看到的许多可扩展性和安全性问题。Ergo 的智能合约方法既优雅又强大。",
-        "author": "Kushti Research",
-        "role": "区块链研究员",
-        "avatar": "KR",
-        "social": {"icon": "Twitter", "handle": "@kushti_ru"}
-      },
-      {
-        "quote": "作为矿工，我喜欢 Ergo 坚持公平、抗 ASIC 的挖矿。Autolykos 算法确保真正的去中心化，而不会像其他 PoW 链那样浪费能源。",
-        "author": "矿池运营商",
-        "role": "社区验证者",
-        "avatar": "MP",
-        "social": {"icon": "Twitter", "handle": "@ergo_mining"}
-      },
-      {
-        "quote": "Ergo 的预言机池是 DeFi 拼图中缺失的一块。终于，我们有了真正去中心化、可靠的数据源，不再依赖中心化提供商。",
-        "author": "DeFi Builder",
-        "role": "dApp 开发者",
-        "avatar": "DB",
-        "social": {"icon": "Github", "handle": "@defi_builder"}
-      },
-      {
-        "quote": "Ergo 的隐私功能改变了游戏规则。Sigma 协议为保密性提供数学保证，同时保持验证所需的透明度。",
-        "author": "隐私倡导者",
-        "role": "安全研究员",
-        "avatar": "PA",
-        "social": {"icon": "Linkedin", "handle": "@privacy_advocate"}
-      },
-      {
-        "quote": "Ergo 对学术严谨性和同行评审研究的承诺使其与众不同。每个功能都建立在坚实的理论基础上，而不仅仅是炒作。",
-        "author": "学术研究员",
-        "role": "计算机科学教授",
-        "avatar": "AR",
-        "social": {"icon": "Linkedin", "handle": "@academic_research"}
-      }
-    ]
-  },
-  "socialProof": {
-    "title": "社区信任",
-    "stats": [
-      {"icon": "Users", "value": "活跃", "label": "社区", "description": "全球开发者、矿工和用户"},
-      {"icon": "TrendingUp", "value": "增长中", "label": "生态系统", "description": "不断扩大的生态系统价值"},
-      {"icon": "Activity", "value": "99.9%", "label": "在线率", "description": "自上线以来的网络可靠性"},
-      {"icon": "DollarSign", "value": "安全", "label": "DeFi", "description": "经过验证的智能合约安全性"}
-    ],
-    "trustedBy": ["Coinbase", "KuCoin", "Gate.io", "MEXC", "Changelly", "ChangeNOW"]
-  },
-  "featureComparison": {
-    "title": "Ergo 对比",
-    "subtitle": "了解 Ergo 与其他区块链的比较",
-    "features": [
-      {"name": "共识机制", "ergo": "工作量证明（抗ASIC）", "bitcoin": "工作量证明（ASIC主导）", "ethereum": "权益证明"},
-      {"name": "智能合约", "ergo": "eUTXO + ErgoScript", "bitcoin": "非常有限", "ethereum": "账户模型 + Solidity"},
-      {"name": "隐私", "ergo": "内置 Sigma 协议", "bitcoin": "透明（需要混币器）", "ethereum": "透明"},
-      {"name": "可持续性", "ergo": "存储租金机制", "bitcoin": "仅手续费（长期）", "ethereum": "代币销毁"},
-      {"name": "轻客户端", "ergo": "NIPoPoWs（密码学证明）", "bitcoin": "SPV（安全性较低）", "ethereum": "需要信任节点"}
-    ]
-  },
-  "ecosystemSection": {
-    "title": "生态系统",
-    "subtitle": "探索在 Ergo 上构建的不断增长的项目和应用生态系统。",
-    "projects": [
-      {"name": "Spectrum Finance", "description": "去中心化交易所和流动性协议", "category": "DeFi", "url": "/ecosystem/spectrum"},
-      {"name": "SigmaUSD", "description": "算法稳定币协议", "category": "稳定币", "url": "/ecosystem/sigmausd"},
-      {"name": "Rosen Bridge", "description": "Ergo 和其他网络的跨链桥", "category": "基础设施", "url": "/ecosystem/rosen-bridge"},
-      {"name": "ErgoMixer", "description": "非托管隐私混币服务", "category": "隐私", "url": "/ecosystem/ergomixer"}
-    ],
-    "viewAll": "查看所有项目"
-  },
-  "communitySection": {
-    "title": "社区",
-    "subtitle": "加入 Ergo 社区，共同构建区块链的未来。",
-    "links": [
-      {"name": "Discord", "description": "加入我们的社区聊天", "icon": "Discord", "url": "https://discord.gg/ergo"},
-      {"name": "Twitter", "description": "关注获取更新", "icon": "Twitter", "url": "https://x.com/BuildOnErgo"},
-      {"name": "论坛", "description": "讨论和提出想法", "icon": "MessageSquare", "url": "https://ergoforum.org"},
-      {"name": "GitHub", "description": "为代码做贡献", "icon": "Github", "url": "https://github.com/ergoplatform"}
-    ],
-    "joinCommunity": "加入社区",
-    "readyToContribute": "准备好贡献了吗？",
-    "readyToContributeDesc": "Ergo 是一个开放平台，任何人都可以贡献。加入我们，共同构建区块链的未来。",
-    "getInvolved": "参与其中"
   }
 }

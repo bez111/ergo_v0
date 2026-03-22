@@ -3,15 +3,6 @@
     "title": "钱包",
     "subtitle": "保护您的ERG",
     "description": "为埃尔戈安全的钱包",
-    "features": {
-      "security": "安全",
-      "privacy": "[TODO: Enhanced privacy features]",
-      "tokens": "[TODO: Native token support]",
-      "dapps": "[TODO: dApp integration]",
-      "usability": "便捷使用",
-      "features": "功能",
-      "platforms": "平台"
-    },
     "download": "下载",
     "webWallet": "Web 钱包",
     "mobileWallet": "移动钱包",
@@ -44,20 +35,37 @@
         "description": "基于浏览器的钱包"
       }
     },
+    "features": {
+      "security": "安全",
+      "usability": "便捷使用",
+      "features": "功能",
+      "platforms": "平台",
+      "privacy": "[TODO: Enhanced privacy features]",
+      "tokens": "[TODO: Native token support]",
+      "dapps": "[TODO: dApp integration]"
+    },
     "recommended": {
       "title": "推荐钱包",
       "description": "我们对不同使用情况的最佳选择"
     },
     "security_first": "优先安全",
+    "desktop_mobile_mobile_browser_extension_browser": "Desktop\",\n  mobile: \"Mobile\",\n  \"browser-extension\": \"Browser",
+    "hardware_paper_paper_node_node": "Hardware\",\n  paper: \"paper\",\n  node: \"node",
     "chrome_firefox_android_ios": ", ",
     "windows_macos_linux": ", ",
     "full_node_integration_enhanced_privacy": ", ",
+    "desktop_isofficial_true_isrecommended_true": "Desktop\",\n    isOfficial: true,\n    isRecommended: true,\n    websiteUrl: \"https://satergo.com/",
     "ergomixer_privacy_quick_setup_no_download_required": ", ",
+    "browser_websiteurl_https_safew_org": "Browser\",\n    websiteUrl: \"https://safew.org/",
     "multi_signature_mobile_first_user_friendly": ", ",
     "cold_storage_physical_confirmation_recovery_phrase": ", ",
+    "hardware_websiteurl_https_www_ledger_com": "Hardware\",\n    websiteUrl: \"https://www.ledger.com/",
     "cold_storage_no_internet_required_printable_keys": ", ",
     "full_node_integration_cli_api_access_cold_storage": ", ",
     "offline_key_generation_and_storage": "为最大安全起见，离线密钥生成和存储。",
+    "offer_price": "Offer',\n            price:",
+    "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
+    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
       "name": "埃尔戈钱包",
       "description": "为Ergo区块链收集安全钱包",
@@ -71,6 +79,30 @@
           "description": "带有完整节点集成和高级功能的桌面钱包"
         }
       }
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "What is the best Ergo wallet?",
+          "answer": "The best Ergo wallet depends on your needs: Nautilus (browser extension) is great for DeFi and dApp interactions, Ergo Mobile Wallet is ideal for everyday phone use, and SAFEW offers advanced features for power users. For maximum security, use a Ledger hardware wallet with Nautilus."
+        },
+        {
+          "question": "Is Nautilus wallet safe?",
+          "answer": "Nautilus is a secure non-custodial wallet. Your keys are stored locally and encrypted, and the project is open-source. Always back up your 15-word seed phrase securely—if you lose it, you lose access to your funds."
+        },
+        {
+          "question": "Can I use Ledger with Ergo?",
+          "answer": "Yes. Ergo is supported on Ledger hardware wallets. Using Ledger with Nautilus keeps your private keys on the device and is a strong option for long-term storage."
+        },
+        {
+          "question": "How do I back up my Ergo wallet?",
+          "answer": "When you create a wallet you receive a 15-word seed phrase. Write it down on paper (never store it digitally) and keep it in multiple safe locations. Never share it—anyone with the phrase controls your funds."
+        },
+        {
+          "question": "Which wallet supports Ergo NFTs?",
+          "answer": "Nautilus is a popular choice for Ergo NFTs thanks to marketplace integrations (e.g. SkyHarbor). SAFEW also supports NFTs with an advanced token viewer."
+        }
+      ]
     },
     "ui": {
       "features": "功能",
@@ -129,7 +161,17 @@
       "recommended": "推荐的",
       "loading": "加载钱包...",
       "download": "下载",
-      "visit": "访问"
+      "visit": "访问",
+      "securityLevels": {
+        "high": "High",
+        "veryHigh": "Very High",
+        "maximum": "Maximum"
+      },
+      "walletTypes": {
+        "hot": "Hot",
+        "cold": "Cold",
+        "hybrid": "Hybrid"
+      }
     },
     "whatsNext": {
       "title": "是什么",
@@ -149,6 +191,132 @@
     "emailCapture": {
       "title": "钱包安全提示",
       "description": "获取最新的钱包安全更新、最佳做法和安全提示发送到您的收件箱"
+    },
+    "wallets": {
+      "nautilus": {
+        "name": "Nautilus Wallet",
+        "description": "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
+        "features": [
+          "dApp Integration",
+          "Hardware Wallet Support",
+          "Multi-signature",
+          "Token Management",
+          "DeFi Ready"
+        ]
+      },
+      "satergo": {
+        "name": "Satergo Wallet",
+        "description": "Desktop wallet with full node integration and advanced privacy features",
+        "features": [
+          "Full Node",
+          "ErgoMixer Integration",
+          "Advanced Privacy",
+          "Multi-Account",
+          "Cold Storage"
+        ]
+      },
+      "ergo-wallet-android": {
+        "name": "Ergo Wallet (Android)",
+        "description": "Official mobile wallet for Android with QR scanning and simple interface",
+        "features": [
+          "QR Scanning",
+          "Simple Interface",
+          "Backup & Restore",
+          "Multi-language",
+          "Offline Signing"
+        ]
+      },
+      "ergo-wallet-ios": {
+        "name": "Ergo Wallet (iOS)",
+        "description": "Official mobile wallet for iOS with intuitive design and secure storage",
+        "features": [
+          "Touch ID",
+          "Face ID",
+          "iCloud Backup",
+          "Simple Interface",
+          "Secure Enclave"
+        ]
+      },
+      "safew": {
+        "name": "SAFEW",
+        "description": "Simple And Fast Ergo Wallet - lightweight desktop wallet with essential features",
+        "features": [
+          "Lightweight",
+          "Fast Sync",
+          "Multiple Accounts",
+          "Token Support",
+          "Simple UI"
+        ]
+      },
+      "ledger": {
+        "name": "Ledger Hardware Wallet",
+        "description": "Cold storage solution with Ergo support for maximum security",
+        "features": [
+          "Cold Storage",
+          "Hardware Security",
+          "PIN Protection",
+          "Recovery Phrase",
+          "Offline Signing"
+        ]
+      },
+      "ergo-paper-wallet": {
+        "name": "Ergo Paper Wallet",
+        "description": "Generate secure paper wallets for cold storage of ERG",
+        "features": [
+          "Offline Generation",
+          "Cold Storage",
+          "No Registration",
+          "Open Source",
+          "Maximum Security"
+        ]
+      }
+    },
+    "categories": {
+      "Desktop": "Desktop",
+      "Mobile": "Mobile",
+      "Browser": "Browser",
+      "Hardware": "Hardware",
+      "Paper": "Paper"
+    },
+    "securityLevels": {
+      "High": "High",
+      "Very High": "Very High",
+      "Maximum": "Maximum"
+    },
+    "walletTypes": {
+      "Hot": "Hot",
+      "Cold": "Cold",
+      "Hybrid": "Hybrid"
+    }
+  },
+  "walletsData": {
+    "nautilus": {
+      "description": "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
+      "name": "Nautilus Wallet"
+    },
+    "satergo": {
+      "description": "Desktop wallet with full node integration and advanced privacy features",
+      "name": "Satergo Wallet"
+    },
+    "ergo-wallet-android": {
+      "description": "Official mobile wallet for Android with QR scanning and simple interface",
+      "name": "Ergo Wallet (Android)"
+    },
+    "ergo-wallet-ios": {
+      "description": "Official mobile wallet for iOS with intuitive design and secure storage",
+      "name": "Ergo Wallet (iOS)"
+    },
+    "safew": {
+      "description": "Simple And Fast Ergo Wallet - lightweight desktop wallet with essential features",
+      "name": "SAFEW"
+    },
+    "ledger": {
+      "description": "Cold storage solution with Ergo support for maximum security",
+      "name": "Ledger Hardware Wallet"
+    },
+    "ergo-paper-wallet": {
+      "description": "Generate secure paper wallets for cold storage of ERG",
+      "name": "Ergo Paper Wallet"
     }
   }
 }

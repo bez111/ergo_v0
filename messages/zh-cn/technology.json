@@ -8,778 +8,6 @@
       "architecture": "结构",
       "resources": "资源"
     },
-    "techFeatures": {
-      "eutxoModel": {
-        "title": "[TODO: eUTXO Model]",
-        "description": "[TODO: Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin's proven security model.]",
-        "details": {
-          "parallelExecution": {
-            "title": "[TODO: Parallel Execution]",
-            "description": "[TODO: Smart contracts run independently without global state conflicts.]"
-          },
-          "composability": {
-            "title": "[TODO: Composability]",
-            "description": "[TODO: Build complex DeFi applications from simple, reusable components.]"
-          },
-          "bitcoinSecurity": {
-            "title": "[TODO: Bitcoin-Level Security]",
-            "description": "[TODO: Inherits UTXO's battle-tested double-spend protection.]"
-          }
-        }
-      },
-      "ergoScript": {
-        "title": "[TODO: ErgoScript]",
-        "description": "[TODO: Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.]",
-        "details": {
-          "formalVerification": {
-            "title": "[TODO: Formal Verification]",
-            "description": "[TODO: Mathematically prove your smart contracts are secure and bug-free.]"
-          },
-          "builtInPrivacy": {
-            "title": "[TODO: Built-in Privacy]",
-            "description": "[TODO: Native zero-knowledge proofs and ring signatures for confidential transactions.]"
-          },
-          "safeByDesign": {
-            "title": "[TODO: Safe by Design]",
-            "description": "[TODO: Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors.]"
-          }
-        }
-      },
-      "autolykos": {
-        "title": "[TODO: Autolykos PoW]",
-        "description": "[TODO: Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.]",
-        "details": {
-          "energyEfficient": {
-            "title": "[TODO: Energy Efficient]",
-            "description": "[TODO: Memory-hard algorithm reduces power consumption compared to traditional PoW.]"
-          },
-          "soloMining": {
-            "title": "[TODO: Solo Mining Friendly]",
-            "description": "[TODO: Low barrier to entry enables individual miners to participate profitably.]"
-          },
-          "asicResistant": {
-            "title": "[TODO: ASIC Resistant]",
-            "description": "[TODO: Optimized for consumer GPUs to prevent mining centralization.]"
-          }
-        }
-      },
-      "storageRent": {
-        "title": "[TODO: Storage Rent]",
-        "description": "[TODO: Revolutionary economic model that prevents blockchain bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable blockchain size and permanent miner rewards.]",
-        "details": {
-          "sustainableBlockchain": {
-            "title": "[TODO: Sustainable Blockchain]",
-            "description": "[TODO: Automatic cleanup of unused data keeps the blockchain lean and efficient.]"
-          },
-          "perpetualSecurity": {
-            "title": "[TODO: Perpetual Security]",
-            "description": "[TODO: Miners receive rewards forever, ensuring long-term network security.]"
-          },
-          "resourceEfficient": {
-            "title": "[TODO: Resource Efficient]",
-            "description": "[TODO: Maintains lightweight blockchain that runs on modest hardware.]"
-          }
-        }
-      },
-      "sigmaProtocols": {
-        "title": "[TODO: Sigma Protocols]",
-        "description": "[TODO: Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.]",
-        "details": {
-          "optionalPrivacy": {
-            "title": "[TODO: Optional Privacy]",
-            "description": "[TODO: Choose between transparent or confidential transactions as needed.]"
-          },
-          "advancedSecurity": {
-            "title": "[TODO: Advanced Security]",
-            "description": "[TODO: Multi-signature wallets, threshold signatures, and secure voting systems.]"
-          },
-          "developerFriendly": {
-            "title": "[TODO: Developer Friendly]",
-            "description": "[TODO: Simple APIs to add privacy features to any application.]"
-          }
-        }
-      },
-      "sections": {
-        "ledgerModels": "[TODO: Blockchain Ledger Models: UTXO vs. Account]",
-        "transactionFlow": "[TODO: How eUTXO Transactions Work]",
-        "keyDifferences": "[TODO: eUTXO vs. Account Model — Key Differences]",
-        "useCases": "[TODO: eUTXO in Action — When It Shines]",
-        "faq": "[TODO: Frequently Asked Questions]",
-        "conclusion": "[TODO: Conclusion: The Future is eUTXO]"
-      },
-      "models": {
-        "utxo": {
-          "title": "[TODO: UTXO Model (Bitcoin-style)]",
-          "description": "[TODO: No global balances — only a collection of unspent outputs.]",
-          "analogy": "[TODO: Analogy: Like having cash bills/coins. Each transaction spends some bills, creates new ones.]",
-          "strengths": "[TODO: Strengths:]",
-          "strengthsText": "[TODO: Simplicity, privacy, parallel processing, easier audit trails.]",
-          "weakness": "[TODO: Weakness:]",
-          "weaknessText": "[TODO: Not naturally suited for stateful dApps.]"
-        },
-        "account": {
-          "title": "[TODO: Account Model (Ethereum-style)]",
-          "description": "[TODO: Global state: Each account has a balance and (for contracts) its own data storage.]",
-          "analogy": "[TODO: Analogy: Like a bank account — all assets tracked in one place.]",
-          "strengths": "[TODO: Strengths:]",
-          "strengthsText": "[TODO: Intuitive, flexible for stateful apps, natural for Turing-complete contracts.]",
-          "weaknesses": "[TODO: Weaknesses:]",
-          "weaknessesText": "[TODO: Potential for re-entrancy bugs, unpredictable gas, global state bloat.]"
-        }
-      },
-      "table": {
-        "aspect": "[TODO: Aspect]",
-        "eutxo": "[TODO: eUTXO]",
-        "account": "[TODO: Account]",
-        "advantage": "[TODO: Advantage]"
-      },
-      "conclusion": {
-        "text": "[TODO: The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.]",
-        "startBuilding": "[TODO: Start Building]",
-        "exploreEcosystem": "[TODO: Explore Ecosystem]"
-      }
-    },
-    "ergoScriptPage": {
-      "title": "[TODO: ErgoScript]",
-      "subtitle": "[TODO: Smart Contract Language]",
-      "description": "[TODO: Powerful, secure smart contract language with built-in cryptographic primitives and formal verification support.]",
-      "features": {
-        "formalVerification": {
-          "title": "[TODO: Formal Verification Support]",
-          "description": "[TODO: Supports formal verification and auditability via declarative constraints and first-class crypto primitives]"
-        },
-        "eutxoSecurity": {
-          "title": "[TODO: eUTXO Security Model]",
-          "description": "[TODO: The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO]"
-        },
-        "deterministicExecution": {
-          "title": "[TODO: Deterministic Execution]",
-          "description": "[TODO: Computational complexity is predictable, though network fees are market-driven]"
-        },
-        "nativeSigmaProtocols": {
-          "title": "[TODO: Native Sigma Protocols]",
-          "description": "[TODO: First-class support for multi-signature, threshold, and ring-signature constructions]"
-        },
-        "utxoConcurrency": {
-          "title": "[TODO: UTXO Concurrency]",
-          "description": "[TODO: Parallel transaction processing with batcher patterns for high-contention scenarios]"
-        },
-        "richDataTypes": {
-          "title": "[TODO: Rich Data Types]",
-          "description": "[TODO: Native support for complex data structures, collections, and cryptographic operations]"
-        }
-      },
-      "useCases": {
-        "defi": {
-          "title": "[TODO: DeFi Protocols]",
-          "description": "[TODO: Decentralized exchanges, lending platforms, and algorithmic stablecoins]"
-        },
-        "nfts": {
-          "title": "[TODO: NFT Marketplaces]",
-          "description": "[TODO: Unique digital assets with complex ownership and trading logic]"
-        },
-        "governance": {
-          "title": "[TODO: DAO Governance]",
-          "description": "[TODO: Decentralized voting systems and treasury management]"
-        },
-        "privacy": {
-          "title": "[TODO: Privacy Applications]",
-          "description": "[TODO: Zero-knowledge proofs and confidential transactions]"
-        },
-        "oracles": {
-          "title": "[TODO: Oracle Systems]",
-          "description": "[TODO: Decentralized data feeds and price discovery mechanisms]"
-        },
-        "gaming": {
-          "title": "[TODO: Gaming & Metaverse]",
-          "description": "[TODO: In-game assets, virtual economies, and play-to-earn mechanics]"
-        }
-      }
-    },
-    "nipopowsPage": {
-      "title": "[TODO: NIPoPoWs]",
-      "subtitle": "[TODO: Non-Interactive Proofs of Proof-of-Work]",
-      "description": "[TODO: Revolutionary cryptographic proofs that enable light clients, cross-chain protocols, and mobile verification without downloading the entire blockchain.]",
-      "benefits": {
-        "interoperability": {
-          "title": "[TODO: Interoperability]",
-          "description": "[TODO: Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions.]"
-        },
-        "lightClients": {
-          "title": "[TODO: Light Clients]",
-          "description": "[TODO: Secure verification on mobile or web without downloading the full blockchain.]"
-        },
-        "fastVerification": {
-          "title": "[TODO: Fast Verification]",
-          "description": "[TODO: Verify chain work in seconds using compact proofs instead of full syncs.]"
-        },
-        "trustless": {
-          "title": "[TODO: Trustless]",
-          "description": "[TODO: No trusted relays or validators; verification follows PoW assumptions.]"
-        }
-      },
-      "useCases": {
-        "crossChain": {
-          "title": "[TODO: Cross-Chain Protocols]",
-          "description": "[TODO: Trust-minimized bridges and SPV-style interoperability.]",
-          "example": "[TODO: Rosen Bridge]"
-        },
-        "mobileWallets": {
-          "title": "[TODO: Mobile Wallets]",
-          "description": "[TODO: Light wallets that prove chain work with succinct proofs.]",
-          "example": "[TODO: Ergo Mobile]"
-        },
-        "oracleSystems": {
-          "title": "[TODO: Oracle Systems]",
-          "description": "[TODO: Efficient verification of external chain data.]",
-          "example": "[TODO: Oracle Pools]"
-        },
-        "sidechains": {
-          "title": "[TODO: Sidechains]",
-          "description": "[TODO: Sidechains can verify L1 succinctly for security and liveness.]",
-          "example": "[TODO: Research]"
-        }
-      },
-      "comparison": {
-        "verificationTime": {
-          "aspect": "[TODO: Verification Time]",
-          "traditional": "[TODO: Hours to days (full sync)]",
-          "nipopows": "[TODO: Seconds to minutes]",
-          "advantage": "[TODO: NIPoPoWs]"
-        },
-        "dataRequired": {
-          "aspect": "[TODO: Data Required]",
-          "traditional": "[TODO: Entire blockchain history]",
-          "nipopows": "[TODO: Small cryptographic proof]",
-          "advantage": "[TODO: NIPoPoWs]"
-        },
-        "trustRequirements": {
-          "aspect": "[TODO: Trust Requirements]",
-          "traditional": "[TODO: Trust full nodes or validators]",
-          "nipopows": "[TODO: Trustless cryptographic verification]",
-          "advantage": "[TODO: NIPoPoWs]"
-        },
-        "mobileCompatibility": {
-          "aspect": "[TODO: Mobile Compatibility]",
-          "traditional": "[TODO: Impractical due to size]",
-          "nipopows": "[TODO: Optimized for mobile devices]",
-          "advantage": "[TODO: NIPoPoWs]"
-        },
-        "securityModel": {
-          "aspect": "[TODO: Security model]",
-          "traditional": "[TODO: Varies by design]",
-          "nipopows": "[TODO: Preserves PoW assumptions]",
-          "advantage": "[TODO: NIPoPoWs]"
-        },
-        "finalityHandling": {
-          "aspect": "[TODO: Finality handling]",
-          "traditional": "[TODO: Implementation-specific]",
-          "nipopows": "[TODO: Observe window; new proof can supersede]",
-          "advantage": "[TODO: NIPoPoWs]"
-        },
-        "stateAccess": {
-          "aspect": "[TODO: State access]",
-          "traditional": "[TODO: Full state on device]",
-          "nipopows": "[TODO: Event/work proof only (no full state)]",
-          "advantage": "[TODO: Depends]"
-        }
-      },
-      "workingSteps": {
-        "eventOccurs": {
-          "title": "[TODO: Event Occurs]",
-          "description": "[TODO: A transaction or block appears on Ergo.]"
-        },
-        "proofGeneration": {
-          "title": "[TODO: Proof Generation]",
-          "description": "[TODO: A succinct proof is built from sampled headers.]"
-        },
-        "verification": {
-          "title": "[TODO: Verification]",
-          "description": "[TODO: Anyone verifies the proof quickly and trustlessly.]"
-        }
-      }
-    },
-    "privacyFeaturesPage": {
-      "title": "[TODO: Privacy Features]",
-      "subtitle": "[TODO: Sigma Protocols & Confidential Transactions]",
-      "description": "[TODO: Advanced cryptographic privacy tools built into Ergo's protocol. Zero-knowledge proofs, ring signatures, and confidential transactions without trusted setups.]",
-      "technologies": {
-        "sigmaProtocols": {
-          "title": "[TODO: Sigma Protocols]",
-          "description": "[TODO: Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.]",
-          "features": {
-            "0": "[TODO: Zero-knowledge proofs]",
-            "1": "[TODO: Ring signatures]",
-            "2": "[TODO: Threshold signatures]",
-            "3": "[TODO: Composable privacy]"
-          }
-        },
-        "ergoMixer": {
-          "title": "[TODO: ErgoMixer]",
-          "description": "[TODO: On-chain, non-custodial mixing for transaction privacy and anonymity.]",
-          "features": {
-            "0": "[TODO: Non-custodial mixing]",
-            "1": "[TODO: On-chain privacy]",
-            "2": "[TODO: Token mixing support]",
-            "3": "[TODO: Configurable anonymity]"
-          }
-        },
-        "confidentialAssets": {
-          "title": "[TODO: Confidential Assets]",
-          "description": "[TODO: Issue tokens with hidden amounts and rules for maximum privacy.]",
-          "features": {
-            "0": "[TODO: Hidden token amounts]",
-            "1": "[TODO: Private smart contracts]",
-            "2": "[TODO: Confidential transactions]",
-            "3": "[TODO: Selective disclosure]"
-          }
-        }
-      },
-      "advantages": "[TODO: No trusted setup needed — pure cryptographic security,Flexible privacy features usable in dApps, DeFi, and NFTs,Open-source, peer-reviewed cryptography,Composable with other Ergo features,Built into the protocol, not added as afterthought,Mathematically proven security guarantees]",
-      "useCases": {
-        "privateTransactions": {
-          "title": "[TODO: Private Transactions]",
-          "description": "[TODO: Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)]",
-          "example": "[TODO: ErgoMixer]"
-        },
-        "confidentialDefi": {
-          "title": "[TODO: Confidential DeFi]",
-          "description": "[TODO: Build DeFi applications with private balances and logic]",
-          "example": "[TODO: Private DEX orders]"
-        },
-        "anonymousVoting": {
-          "title": "[TODO: Anonymous Voting]",
-          "description": "[TODO: Create DAOs and voting systems with secret ballots]",
-          "example": "[TODO: DAO governance]"
-        },
-        "privateNfts": {
-          "title": "[TODO: Private NFTs]",
-          "description": "[TODO: NFTs with hidden metadata or ownership information]",
-          "example": "[TODO: Confidential collectibles]"
-        }
-      }
-    },
-    "oraclePoolsPage": {
-      "title": "[TODO: Oracle Pools]",
-      "subtitle": "[TODO: Decentralized Price Feeds]",
-      "description": "[TODO: Reliable, consensus-based oracle system providing accurate price feeds for DeFi applications without central authorities or single points of failure.]",
-      "features": {
-        "reliablePriceFeeds": {
-          "title": "[TODO: Reliable Price Feeds]",
-          "description": "[TODO: Consensus-based data aggregation ensures accurate, manipulation-resistant prices]"
-        },
-        "universalCompatibility": {
-          "title": "[TODO: Universal Compatibility]",
-          "description": "[TODO: Any smart contract can access oracle data without special integrations]"
-        },
-        "fullyDecentralized": {
-          "title": "[TODO: Fully Decentralized]",
-          "description": "[TODO: No central authority or single point of failure in the data pipeline]"
-        },
-        "economicSecurity": {
-          "title": "[TODO: Economic Security]",
-          "description": "[TODO: Stake-based incentives ensure honest data provision]"
-        },
-        "consensusMechanism": {
-          "title": "[TODO: Consensus Mechanism]",
-          "description": "[TODO: Outlier detection and averaging for robust data quality]"
-        },
-        "lowLatencyUpdates": {
-          "title": "[TODO: Low Latency Updates]",
-          "description": "[TODO: Frequent updates ensure data freshness for DeFi applications]"
-        }
-      },
-      "technicalDetails": {
-        "dataAggregation": {
-          "title": "[TODO: Data Aggregation]",
-          "content": "[TODO: The oracle pool uses a robust averaging mechanism that filters out outliers by removing the top and bottom 25% of submissions, then calculating the average of remaining values for consensus.]"
-        },
-        "updateTriggers": {
-          "title": "[TODO: Update Triggers]",
-          "content": "[TODO: New data is published when price deviation exceeds threshold (e.g., 0.5%), maximum time since last update (e.g., 1 hour), or minimum oracle submissions are reached.]"
-        },
-        "economicSecurity": {
-          "title": "[TODO: Economic Security]",
-          "content": "[TODO: Oracle operators must stake collateral, with slashing for malicious behavior and rewards for honest participation, creating strong economic incentives for reliable data.]"
-        },
-        "attackResistance": {
-          "title": "[TODO: Attack Resistance]",
-          "content": "[TODO: Sybil attack protection via staking, outlier filtering prevents manipulation, and decentralization prevents censorship of oracle data.]"
-        }
-      },
-      "useCases": {
-        "sigmaUsdStablecoin": {
-          "title": "[TODO: SigmaUSD Stablecoin]",
-          "description": "[TODO: Algorithmic stablecoin using ERG/USD price feed for collateral calculations]"
-        },
-        "spectrumDex": {
-          "title": "[TODO: Spectrum DEX]",
-          "description": "[TODO: Decentralized exchange using price feeds for limit orders and liquidations]"
-        },
-        "lendingProtocols": {
-          "title": "[TODO: Lending Protocols]",
-          "description": "[TODO: Collateralized lending using oracle prices for liquidation thresholds]"
-        }
-      }
-    },
-    "subblocksPage": {
-      "title": "[TODO: Subblocks]",
-      "subtitle": "[TODO: Sub-Second Confirmations]",
-      "description": "[TODO: Revolutionary scaling solution providing near-instant transaction finality with full Layer 1 security. No bridges, no compromises.]",
-      "features": {
-        "subSecondConfirmations": {
-          "title": "[TODO: Sub-Second Confirmations]",
-          "description": "[TODO: Near-instant transaction finality for improved user experience without sacrificing decentralization]"
-        },
-        "layer1Security": {
-          "title": "[TODO: Layer 1 Security]",
-          "description": "[TODO: Full blockchain security without trusted intermediaries or bridges]"
-        },
-        "seamlessIntegration": {
-          "title": "[TODO: Seamless Integration]",
-          "description": "[TODO: Works with existing infrastructure - no bridges or sidechains needed]"
-        },
-        "parallelProcessing": {
-          "title": "[TODO: Parallel Processing]",
-          "description": "[TODO: Multiple subblocks can be validated in parallel for increased throughput]"
-        },
-        "adaptiveDifficulty": {
-          "title": "[TODO: Adaptive Difficulty]",
-          "description": "[TODO: Dynamic adjustment ensures consistent block times even with varying hash power]"
-        },
-        "minerIncentives": {
-          "title": "[TODO: Miner Incentives]",
-          "description": "[TODO: Additional rewards for subblock miners while maintaining main chain security]"
-        }
-      },
-      "technicalDetails": {
-        "architecture": {
-          "title": "[TODO: Architecture]",
-          "content": "[TODO: Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same security model as main blocks but with adjusted difficulty targets.]"
-        },
-        "consensusMechanism": {
-          "title": "[TODO: Consensus Mechanism]",
-          "content": "[TODO: Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure.]"
-        },
-        "transactionOrdering": {
-          "title": "[TODO: Transaction Ordering]",
-          "content": "[TODO: Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness.]"
-        },
-        "stateManagement": {
-          "title": "[TODO: State Management]",
-          "content": "[TODO: Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead.]"
-        }
-      },
-      "useCases": {
-        "defiApplications": {
-          "title": "[TODO: DeFi Applications]",
-          "description": "[TODO: Enable high-frequency trading and instant swaps with sub-second finality]"
-        },
-        "paymentSystems": {
-          "title": "[TODO: Payment Systems]",
-          "description": "[TODO: Point-of-sale transactions with immediate confirmation]"
-        },
-        "gaming": {
-          "title": "[TODO: Gaming]",
-          "description": "[TODO: Real-time game state updates without waiting for block confirmations]"
-        },
-        "socialApplications": {
-          "title": "[TODO: Social Applications]",
-          "description": "[TODO: Instant messaging and social interactions on-chain]"
-        }
-      }
-    },
-    "velvetForksPage": {
-      "title": "[TODO: Velvet Forks]",
-      "subtitle": "[TODO: Smooth Protocol Evolution]",
-      "description": "[TODO: Revolutionary upgrade mechanism enabling backward-compatible protocol improvements without forced upgrades or network splits.]",
-      "features": {
-        "backwardCompatible": {
-          "title": "[TODO: Backward Compatible]",
-          "description": "[TODO: No forced upgrades, no chain wars - new features coexist with non-upgraded nodes]"
-        },
-        "futureProof": {
-          "title": "[TODO: Future Proof]",
-          "description": "[TODO: Adopt innovations at your own pace without network disruption]"
-        },
-        "gradualAdoption": {
-          "title": "[TODO: Gradual Adoption]",
-          "description": "[TODO: Evolutionary, not revolutionary changes - the network evolves smoothly]"
-        },
-        "consensusPreservation": {
-          "title": "[TODO: Consensus Preservation]",
-          "description": "[TODO: Maintains network consensus even with different node versions]"
-        },
-        "securityFirst": {
-          "title": "[TODO: Security First]",
-          "description": "[TODO: New features only activate when safe majority adoption is reached]"
-        },
-        "developerFriendly": {
-          "title": "[TODO: Developer Friendly]",
-          "description": "[TODO: Test new features on mainnet without breaking existing applications]"
-        }
-      },
-      "useCases": {
-        "nipopowsIntegration": {
-          "title": "[TODO: NiPoPoWs Integration]",
-          "description": "[TODO: Non-Interactive Proofs of Proof-of-Work can be added as an optional feature, enabling light clients without forcing all nodes to support them.]",
-          "linkText": "[TODO: Learn about NiPoPoWs →]"
-        },
-        "privacyEnhancements": {
-          "title": "[TODO: Privacy Enhancements]",
-          "description": "[TODO: Advanced privacy features like ring signatures or stealth addresses can be introduced without breaking existing transparent transactions.]",
-          "linkText": "[TODO: Explore privacy features →]"
-        },
-        "smartContractExtensions": {
-          "title": "[TODO: Smart Contract Extensions]",
-          "description": "[TODO: New opcodes and scripting capabilities can be added for developers who want to use them, while existing contracts continue to work.]",
-          "linkText": "[TODO: Learn about ErgoScript →]"
-        },
-        "consensusImprovements": {
-          "title": "[TODO: Consensus Improvements]",
-          "description": "[TODO: Optimizations to block validation, mining algorithms, or network protocols can be tested and adopted gradually.]",
-          "linkText": "[TODO: About Autolykos →]"
-        }
-      }
-    },
-    "adaptiveEmissionPage": {
-      "title": "[TODO: Adaptive Emission]",
-      "subtitle": "[TODO: Flexible Economic Parameters]",
-      "description": "[TODO: Community-driven governance system enabling parameter adjustments through miner voting, ensuring long-term sustainability and network adaptability.]",
-      "features": {
-        "parameterTuning": {
-          "title": "[TODO: Parameter Tuning]",
-          "description": "[TODO: Economic variables can be adjusted based on network conditions]"
-        },
-        "economicFlexibility": {
-          "title": "[TODO: Economic Flexibility]",
-          "description": "[TODO: Adapt to changing network needs without hard forks]"
-        },
-        "communityInput": {
-          "title": "[TODO: Community Input]",
-          "description": "[TODO: Discussions and decisions involve the entire community]"
-        },
-        "minerVoting": {
-          "title": "[TODO: Miner Voting]",
-          "description": "[TODO: Miners vote on parameter changes through block headers]"
-        },
-        "gradualChanges": {
-          "title": "[TODO: Gradual Changes]",
-          "description": "[TODO: Parameters adjust smoothly to prevent economic shocks]"
-        },
-        "longTermSustainability": {
-          "title": "[TODO: Long-term Sustainability]",
-          "description": "[TODO: Ensures network security even after emission ends]"
-        }
-      },
-      "governance": {
-        "emissionSchedule": {
-          "title": "[TODO: Emission Schedule]",
-          "description": "[TODO: Declining emission with periodic reductions and post-emission sustainability through storage rent and transaction fees.]",
-          "linkText": "[TODO: Learn about governance →]"
-        },
-        "storageRentEconomics": {
-          "title": "[TODO: Storage Rent Economics]",
-          "description": "[TODO: UTXOs unspent for 4+ years pay storage fees, providing sustainable miner revenue and preventing state bloat.]",
-          "linkText": "[TODO: Storage rent details →]"
-        },
-        "minerVotingProcess": {
-          "title": "[TODO: Miner Voting Process]",
-          "description": "[TODO: Community proposals, 1024-epoch voting period, 90% threshold requirement, and gradual activation.]",
-          "linkText": "[TODO: Voting mechanism →]"
-        },
-        "economicParameters": {
-          "title": "[TODO: Economic Parameters]",
-          "description": "[TODO: Adjustable parameters include block size, storage fee factor, min fee, and computational cost limits.]",
-          "linkText": "[TODO: Parameter details →]"
-        }
-      },
-      "historicalVotes": {
-        "eip27": {
-          "title": "[TODO: Re-emission Soft Fork]",
-          "description": "[TODO: Extends emission schedule to ensure long-term network security]"
-        },
-        "eip37": {
-          "title": "[TODO: Difficulty Adjustment]",
-          "description": "[TODO: Improved difficulty adjustment algorithm for more stable block times]"
-        }
-      }
-    },
-    "nativeTokensPage": {
-      "title": "[TODO: Native Tokens & NFTs]",
-      "subtitle": "[TODO: First-Class Assets on Ergo]",
-      "description": "[TODO: Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.]",
-      "features": {
-        "oneClick": {
-          "title": "[TODO: One-Click Creation]",
-          "description": "[TODO: Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts]"
-        },
-        "nativeAssets": {
-          "title": "[TODO: True Native Assets]",
-          "description": "[TODO: First-class tokens with protocol-level security guarantees, not contract-based]"
-        },
-        "defiReady": {
-          "title": "[TODO: DeFi Ready]",
-          "description": "[TODO: Native integration with all Ergo applications and protocols]"
-        },
-        "costEffective": {
-          "title": "[TODO: Cost Effective]",
-          "description": "[TODO: Minimal fees for token creation and transfers - just simple, secure, native assets]"
-        },
-        "richMetadata": {
-          "title": "[TODO: Rich Metadata]",
-          "description": "[TODO: Support for complex metadata including images, descriptions, and custom properties]"
-        },
-        "universalCompatibility": {
-          "title": "[TODO: Universal Compatibility]",
-          "description": "[TODO: Any smart contract can access oracle data without special integrations]"
-        }
-      },
-      "useCases": {
-        "defiTokens": {
-          "title": "[TODO: DeFi Tokens]",
-          "description": "[TODO: Create governance tokens, utility tokens, and reward tokens for DeFi protocols]"
-        },
-        "nftCollections": {
-          "title": "[TODO: NFT Collections]",
-          "description": "[TODO: Build unique digital art, collectibles, and gaming assets]"
-        },
-        "stablecoins": {
-          "title": "[TODO: Stablecoins]",
-          "description": "[TODO: Issue algorithmic or collateralized stable value tokens]"
-        },
-        "loyaltyPrograms": {
-          "title": "[TODO: Loyalty Programs]",
-          "description": "[TODO: Create reward points and loyalty tokens for businesses]"
-        },
-        "gameAssets": {
-          "title": "[TODO: Game Assets]",
-          "description": "[TODO: In-game items, characters, and currencies with true ownership]"
-        },
-        "identityTokens": {
-          "title": "[TODO: Identity Tokens]",
-          "description": "[TODO: Reputation systems and identity verification tokens]"
-        }
-      }
-    },
-    "storageRentPage": {
-      "title": "[TODO: Storage Rent]",
-      "subtitle": "[TODO: Sustainable Blockchain Economics]",
-      "description": "[TODO: Ergo's storage rent mechanism prevents blockchain bloat and ensures long-term sustainability by recycling unused outputs.]",
-      "problems": {
-        "blockchainBloat": {
-          "title": "[TODO: Blockchain Bloat]",
-          "description": "[TODO: Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.]",
-          "stats": "[TODO: 2TB+ wasted space]"
-        },
-        "forgottenWallets": {
-          "title": "[TODO: Forgotten Wallets]",
-          "description": "[TODO: Lost private keys mean funds are stuck forever, reducing the effective money supply.]",
-          "stats": "[TODO: 4M+ lost coins]"
-        },
-        "scalabilityIssues": {
-          "title": "[TODO: Scalability Issues]",
-          "description": "[TODO: Growing blockchain size makes it harder for new nodes to sync and participate in the network.]",
-          "stats": "[TODO: 500GB+ to sync]"
-        }
-      },
-      "solutions": {
-        "automaticCleanup": {
-          "title": "[TODO: Automatic Cleanup]",
-          "description": "[TODO: Storage rent automatically removes old, unused outputs from the blockchain state.]"
-        },
-        "fundRecycling": {
-          "title": "[TODO: Fund Recycling]",
-          "description": "[TODO: Coins from forgotten wallets are gradually returned to circulation through miners.]"
-        },
-        "sustainableGrowth": {
-          "title": "[TODO: Sustainable Growth]",
-          "description": "[TODO: Blockchain size remains manageable, ensuring long-term network health.]"
-        }
-      },
-      "howItWorks": {
-        "title": "[TODO: How Storage Rent Works]",
-        "steps": {
-          "creation": {
-            "title": "[TODO: Box Creation]",
-            "description": "[TODO: When you create a UTXO (box), it starts with full value and no rent due.]"
-          },
-          "aging": {
-            "title": "[TODO: Aging Process]",
-            "description": "[TODO: After 4 years of inactivity, the box becomes subject to storage rent fees.]"
-          },
-          "collection": {
-            "title": "[TODO: Rent Collection]",
-            "description": "[TODO: Miners can collect rent, gradually reducing the box value until it's spent or recycled.]"
-          },
-          "recycling": {
-            "title": "[TODO: Full Recycling]",
-            "description": "[TODO: If rent isn't paid, the remaining value goes to miners and the box is removed.]"
-          }
-        }
-      }
-    },
-    "eutxoModelPage": {
-      "title": "[TODO: eUTXO Model]",
-      "subtitle": "[TODO: Extended UTXO for Smart Contracts]",
-      "description": "[TODO: Ergo's eUTXO model combines Bitcoin's security with Ethereum's programmability, enabling parallel processing and predictable fees.]",
-      "modelComparison": {
-        "stateManagement": {
-          "aspect": "[TODO: State Management]",
-          "utxo": "[TODO: No global balances — only unspent outputs]",
-          "account": "[TODO: Global state with account balances and storage]",
-          "advantage": "[TODO: eUTXO]"
-        },
-        "security": {
-          "aspect": "[TODO: Security]",
-          "utxo": "[TODO: The reentrancy vulnerability class common to account-based systems is absent in eUTXO; script execution cost is bounded]",
-          "account": "[TODO: Re-entrancy class typical for account-based systems; gas costs can be unpredictable]",
-          "advantage": "[TODO: eUTXO]"
-        },
-        "parallelism": {
-          "aspect": "[TODO: Parallelism]",
-          "utxo": "[TODO: Independent boxes enable parallel processing]",
-          "account": "[TODO: State contention forces sequential processing]",
-          "advantage": "[TODO: eUTXO]"
-        },
-        "privacy": {
-          "aspect": "[TODO: Privacy]",
-          "utxo": "[TODO: UTXO mixing, Σ-protocols for advanced privacy]",
-          "account": "[TODO: Global state makes privacy harder by default]",
-          "advantage": "[TODO: eUTXO]"
-        },
-        "tokenHandling": {
-          "aspect": "[TODO: Token Handling]",
-          "utxo": "[TODO: Tokens are first-class citizens in boxes]",
-          "account": "[TODO: Requires separate contract logic (ERC-20/721)]",
-          "advantage": "[TODO: eUTXO]"
-        },
-        "learningCurve": {
-          "aspect": "[TODO: Learning Curve]",
-          "utxo": "[TODO: Must 'think in boxes', different paradigm]",
-          "account": "[TODO: More intuitive for traditional developers]",
-          "advantage": "[TODO: Account]"
-        }
-      },
-      "boxComponents": {
-        "value": {
-          "name": "[TODO: Value]",
-          "description": "[TODO: ERG + custom tokens]"
-        },
-        "guardingScript": {
-          "name": "[TODO: Guarding Script]",
-          "description": "[TODO: ErgoScript code controlling spending conditions]"
-        },
-        "registers": {
-          "name": "[TODO: Registers (R0–R9)]",
-          "description": "[TODO: User-defined: R4–R9 (R0–R3 are protocol-reserved)]"
-        },
-        "metadata": {
-          "name": "[TODO: Metadata]",
-          "description": "[TODO: Creation height, boxId (derived from creating tx)]"
-        }
-      }
-    },
     "hub": {
       "hero": {
         "title": "ERGO TECHNOLOGY",
@@ -791,6 +19,13 @@
       },
       "badges": {
         "research": "研究"
+      },
+      "categoryLabels": {
+        "core": "Core Protocol",
+        "scaling": "Scalability",
+        "privacy": "Privacy",
+        "economics": "Economics",
+        "interop": "Interoperability"
       },
       "tabs": {
         "useCases": "使用案例",
@@ -825,6 +60,7 @@
       },
       "architectureTab": {
         "title": "Ergo Tech Stack概述",
+        "leadIn": "Ergo's architecture",
         "description": "Ergo的结构提供了权力下放、可复合性和内置的隐私――没有权衡。",
         "layer1": {
           "title": "图层 1",
@@ -1025,6 +261,10 @@
       "breadcrumbs": {
         "home": "首页",
         "technology": "技术"
+      },
+      "itemList": {
+        "name": "Ergo Blockchain Technology Features",
+        "description": "Comprehensive list of Ergo blockchain technology features including eUTXO, ErgoScript, Autolykos PoW, and more."
       },
       "speakable": {
         "headline": "Ergo Technology Stack",
@@ -2086,7 +1326,8 @@
       "codeExample": {
         "title": "简单令牌创建",
         "subtitle": "仅用几行代码创建令牌",
-        "description": "没有智能合同部署，没有复杂的设置 - 只是简单、原生令牌创建。"
+        "description": "没有智能合同部署，没有复杂的设置 - 只是简单、原生令牌创建。",
+        "code": "// Token creation parameters\nval tokenName = \"MyToken\"\nval tokenDescription = \"My awesome token on Ergo\"\nval tokenDecimals = 2\nval tokenAmount = 1000000L\n\n// Create token in a single transaction\nval token = Minting.issueToken(\n  ergoClient = client,\n  tokenName = tokenName,\n  tokenDescription = tokenDescription,\n  tokenAmount = tokenAmount,\n  tokenDecimals = tokenDecimals,\n  mintingAddress = address,\n  txFee = Parameters.MinFee\n)\n\n// Token is now live on the blockchain!\nprintln(s\"Token ID: ${token.getId}\")\nprintln(s\"Token created in TX: ${token.creationTx}\")"
       },
       "ecosystem": {
         "title": "Token Ecosystem",
@@ -2395,6 +1636,8 @@
       "guard_script_spending_conditions": "警卫脚本 (支出条件)",
       "additional_data_for_smart_contracts": "附加数据(智能合同)",
       "custom_tokens_and_nfts": "自定义令牌和 NFTs",
+      "why_is_eutxo_better_than": "Why is eUTXO better than account-based models?\",\n      answer: \"eUTXO enables parallel transaction processing, eliminates double-spending at the protocol level, and provides more predictable fee structures.",
+      "can_i_build_complex_dapps": "Can I build complex dApps with eUTXO?\",\n      answer: \"Absolutely. eUTXO supports complex smart contracts while maintaining the security and simplicity of the UTXO model.",
       "next_generation_unspent_transaction_output": "并行智能合约和可混成的 DeFi 下一代未花费的交易输出模型",
       "what_is_eutxo": "什么是eUTXO？",
       "the_extended_unspent_transaction_output": "扩展未花费交易输出模型是比特币的 UTXO 模型的演变。 通过智能合约能力，同时保持原设计的安全性和简洁性。",
@@ -2873,8 +2116,12 @@
       "nfts_asset_registries": "NFTs & 资产注册",
       "each_nft_is_a_unique_box_no_global_ledger_needed": "每个NFT都是唯一的方框，无需全局分类帐。",
       "zero_knowledge_logic_baked_into_core_language": "零知识逻辑嵌入到核心语言",
+      "extended_utxo_smart_contracts_blockchain": "Extended UTXO\",\n    \"smart contracts\",\n    \"blockchain technology\",\n    \"DeFi\",\n    \"parallel processing\",\n    \"re-entrancy protection\",\n    \"Ergo blockchain\",\n    \"UTXO model\",\n    \"cryptocurrency",
       "discover_the_eutxo_model_a": "发现eUTXO模型，智能合约的安全和可缩放的方法。了解如何Ergo",
       "parallel_secure_smart_contracts_without": "Parallel, 安全的智能合约不会再次进入。Defi的前途。",
+      "what_is_the_eutxo_model": "What is the eUTXO model?\",\n      answer: \"The eUTXO (Extended UTXO) model combines Bitcoin's UTXO security with smart contract capabilities, enabling parallel execution and eliminating reentrancy attacks.",
+      "why_is_eutxo_better_for": "Why is eUTXO better for DeFi?\",\n      answer: \"eUTXO enables composable, predictable smart contracts with deterministic fees, no front-running, and parallel transaction processing for better throughput.",
+      "techarticle_headline_eutxo_model_extended": "TechArticle',\n    headline: 'eUTXO Model: Extended UTXO for Smart Contracts',\n    description: 'Technical guide to the eUTXO model and its advantages for DeFi",
       "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
       "eutxo_model_explained_parallel_smart": "eUTXO 模型解释 | 没有退货的并行智能合同",
       "master_the_eutxo_model_powering_ergo": "掌握eUTXO模型为Ergo",
@@ -2997,6 +2244,11 @@
       }
     },
     "ergoscriptOld": {
+      "what_is_ergoscript_answer_ergoscript": "What is ErgoScript?\",\n      answer: \"ErgoScript is Ergo's smart contract language based on Sigma protocols. It enables powerful, flexible, and secure smart contracts while maintaining the benefits of the UTXO model.",
+      "is_ergoscript_similar_to_other": "Is ErgoScript similar to other smart contract languages?\",\n      answer: \"ErgoScript is unique, combining functional programming with cryptographic protocols. It's more secure than Solidity, preventing reentrancy attacks by design.",
+      "how_do_i_learn_ergoscript": "How do I learn ErgoScript?\",\n      answer: \"Start with the official tutorials, use the ErgoScript playground for practice, and reference the documentation. Basic Scala knowledge helps but isn't required.",
+      "course_name_ergoscript_programming_course": "Course',\n    name: 'ErgoScript Programming Course',\n    description: 'Learn ErgoScript smart contract language for Ergo blockchain",
+      "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
       "ergoscript_secure_smart_contract_language": "ErgoScript - 安全智能合同语言",
       "learn_ergoscript_smart_contract_language": "学习 Ergo blockchain 的 ErgoScript 智能合同语言",
       "security_first": "优先安全",
@@ -3021,10 +2273,23 @@
       "predictable_moderate": "可预测，中",
       "copy_to_clipboard": "复制到剪贴板",
       "the_class_of_reentrancy_vulnerabilities": "在eUTXO 中缺少基于账户的系统共有的再入账功能类",
+      "deterministic_execution_description_computational_complexity": "Deterministic Execution\",\n    description: \"Computational complexity is predictable, though network fees are market-driven",
+      "utxo_concurrency_description_parallel_transaction": "UTXO Concurrency\",\n    description: \"Parallel transaction processing with batcher patterns for high-contention scenarios",
+      "what_about_throughput_and_scaling": "What about throughput and scaling for high-demand applications?\",\n      answer: \"The eUTXO model enables parallel transaction processing. For high-contention scenarios like DEXs, batcher/aggregator patterns can collect multiple orders and execute them in batches, effectively scaling throughput while maintaining the security guarantees.",
+      "can_i_build_complex_defi": "Can I build complex DeFi applications with ErgoScript?\",\n      answer: \"Yes. ErgoScript supports sophisticated financial instruments including DEXs, stablecoins, lending protocols, and advanced NFT contracts. The declarative model and native cryptographic primitives often make complex protocols simpler to implement and audit than on account-based systems.",
+      "technology_item_https_ergoblockchain_org": "Technology\",\n              item: \"https://ergoblockchain.org/technology",
+      "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
       "technology_href_technology": "General content",
       "ergoscript_href_technology_ergoscript": "General content",
       "on_this_page_classname": "36",
+      "try_online_playground_description_write": "Try Online Playground\",\n                              description: \"Write and test ErgoScript in your browser",
+      "read_documentation_description_comprehensive_guides": "Read Documentation\",\n                              description: \"Comprehensive guides and API references",
+      "join_community_description_get_help": "Join Community\",\n                              description: \"Get help from experienced developers",
       "no_shared_global_state_eliminates": "没有一个共享的全球状态取消了重新进入脆弱程度类",
+      "native_sigma_protocols_description_first": "Native Sigma Protocols\",\n                                  description: \"First-class cryptographic primitives for multi-party signatures",
+      "interactive_playground_description_test_contracts": "Interactive Playground\",\n                                  description: \"Test contracts instantly in your browser without setup",
+      "rich_tooling_ecosystem_description_sdks": "Rich Tooling Ecosystem\",\n                                  description: \"SDKs for Java, JavaScript, Python, and more",
+      "extensive_examples_description_learn_from": "Extensive Examples\",\n                                  description: \"Learn from production-ready contract templates",
       "non_custodial_defi_protocols": "非保管的 DeFi 协议",
       "decentralized_oracle_networks": "分散化果园网络",
       "stablecoins_and_native_tokens": "稳定和原生令牌",
@@ -3041,6 +2306,11 @@
       "sdks_apis_url_docs_developers_tooling": "General content",
       "node_js_library_url_https": "General content",
       "like_bitcoin_script_works_with": "像比特币脚本一样，与输出工作而不是账号不同。与BTC不同，脚本对Defi、DAO和复杂合同更强大。",
+      "no_shared_state_no_global": "No Shared State, No Global Variables\",\n                              description: \"Eliminates the reentrancy vulnerability class; mitigates some MEV patterns, but does not fully prevent frontrunning.",
+      "cryptography_first_design_description_sigma": "Cryptography-first Design\",\n                              description: \"Sigma protocols and zero-knowledge proofs are native. No need for external libraries or complex implementations.",
+      "predictable_execution_costs_description_script": "Predictable Execution Costs\",\n                              description: \"Script execution cost is statically bounded; the final network fee is still market-driven (mempool conditions).",
+      "restricted_computation_description_intentionally_limited": "Restricted Computation\",\n                              description: \"Intentionally limited to prevent infinite loops and ensure all contracts terminate predictably.",
+      "declarative_scripting_description_express_what": "Declarative Scripting\",\n                              description: \"Express what you want to achieve rather than how to achieve it. More readable and less error-prone.",
       "on_this_page": "在本页",
       "deterministic_execution": "决定性执行",
       "computational_complexity_is_predictable_though": "计算复杂性是可预测的，尽管网络费用是由市场驱动的",
@@ -3082,6 +2352,7 @@
       "explore_ergoscript_and_start_developing": "探索ErgoScript 并从今天开始开发安全的智能合同。",
       "try_playground": "尝试游乐场"
     },
+    "ergo_technology_description": "Ergo Technology\",\n    description:",
     "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
     "explore_ergo_s_technology_stack": "探索Ergo的技术堆栈：eUTXO、ErgoScript、Autolykos PoW、存储租借、Sigma协议、NIPPOW。",
     "adaptiveEmission": {
@@ -3188,6 +2459,9 @@
       "built_in_privacy_technology_sigma": "内置隐私技术：零知识证明的Sigma协议，匿名交易的ErgoMixer，环形签名和机密DeFi。不需要可信的设置。",
       "native_zero_knowledge_proofs_mixer": "原生的零知识证明，混合协议和位于Ergo blockchain的保密资产。",
       "optional_privacy_for_all_transactions": "使用 Sigma 协议和 ErgoMixer 的所有交易的可选隐私。",
+      "how_does_ergo_implement_privacy": "How does Ergo implement privacy?\",\n      answer: \"Ergo uses Sigma protocols for zero-knowledge proofs, enabling optional privacy features like ErgoMixer, ring signatures, and confidential transactions without trusted setup.",
+      "is_ergo_a_privacy_coin": "Is Ergo a privacy coin?\",\n      answer: \"Ergo offers optional privacy. Users can choose transparent or confidential transactions. Privacy is a feature, not mandatory, maintaining regulatory compliance.",
+      "what_is_ergomixer_answer_ergomixer": "What is ErgoMixer?\",\n      answer: \"ErgoMixer is a non-custodial, trustless mixing protocol that breaks transaction links using Sigma protocols, providing strong privacy without centralized operators.",
       "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
       "ergo_privacy_features_zero_knowledge": "Ergo Privacy 功能 | 零知识证明和保密交易",
       "ergo_privacy_technology_optional_confidentiality": "Ergo Privacy Technology | DeFi 的可选保密",
@@ -3204,23 +2478,49 @@
       "what_you_can_do_with_ergo_privacy": "你可以用Ergo隐私做什么",
       "frequently_asked_questions": "常见问题",
       "privacy_by_design_security_by_default": "设计的隐私，默认安全保护",
+      "sigma_protocols_description_enable_powerful": "Sigma Protocols\",\n    description:\n      \"Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
       "zero_knowledge_proofs_ring_signatures": ", ",
+      "ergomixer_description_on_chain_non": "ErgoMixer\",\n    description: \"On-chain, non-custodial mixing for transaction privacy and anonymity.",
+      "non_custodial_mixing_on_chain": "Non-custodial mixing\",\n      \"On-chain privacy\",\n      \"Token mixing support\",\n      \"Configurable anonymity",
+      "confidential_assets_description_issue_tokens": "Confidential Assets\",\n    description: \"Issue tokens with hidden amounts and rules for maximum privacy.",
+      "hidden_token_amounts_private_smart": "Hidden token amounts\",\n      \"Private smart contracts\",\n      \"Confidential transactions\",\n      \"Selective disclosure",
+      "flexible_privacy_features_usable_in": "Flexible privacy features usable in dApps, DeFi, and NFTs\",\n  \"Open-source, peer-reviewed cryptography\",\n  \"Composable with other Ergo features\",\n  \"Built into the protocol, not added as afterthought\",\n  \"Mathematically proven security guarantees",
+      "private_transactions_description_mix_your": "Private Transactions\",\n    description:\n      \"Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
+      "confidential_defi_description_build_defi": "Confidential DeFi\",\n    description: \"Build DeFi applications with private balances and logic",
+      "anonymous_voting_description_create_daos": "Anonymous Voting\",\n    description: \"Create DAOs and voting systems with secret ballots",
+      "private_nfts_description_nfts_with": "Private NFTs\",\n    description: \"NFTs with hidden metadata or ownership information",
       "confidential_collectibles": "保密的收藏品",
+      "what_level_of_privacy_does": "What level of privacy does Ergo offer? Is it just coin mixing?\",\n    answer:",
+      "if_i_use_privacy_features": "If I use privacy features, won't my transactions look suspicious?\",\n    answer:\n      \"On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion.",
+      "doesn_t_this_kind_of": "Doesn't this kind of privacy attract criminals?\",\n    answer:\n      \"Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling.",
+      "question_name_what_privacy_features": "Question\",\n              name: \"What privacy features does Ergo offer?",
+      "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance.",
+      "question_name_how_do_sigma_protocols_work": "Question\",\n              name: \"How do Sigma protocols work?",
+      "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation.",
+      "question_name_are_ergo_s": "Question\",\n              name: \"Are Ergo's privacy features regulatory compliant?",
+      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default.",
+      "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo 将隐私写入协议：Sigma协议、环/阈值签名、ErgoMixer、保密资产和选择性披露。",
+      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
       "imageobject_url_https_ergoblockchain_org": "General content",
       "ergo_privacy_sigma_protocols_ring": "Ergo privacy,Sigma protocols,铃声签名,零知识证明,ErgoMixer,secretary transactions",
       "thing_name_sigma_protocol": "General content",
       "thing_name_zero_knowledge_proof": "General content",
       "webpage_id_https_ergoblockchain_org_technology": ": ",
       "technology_item_https_ergoblockchain_org": "General content",
+      "privacy_features_item_https_ergoblockchain": "Privacy Features\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
+      "howto_name_how_to_increase": "HowTo\",\n          name: \"How to increase privacy with ErgoMixer\",\n          description: \"High-level steps to improve on-chain privacy using ErgoMixer with delays and larger anonymity sets.",
       "prepare_funds_text_split_funds": "General content",
       "run_mix_text_choose_round": "General content",
       "wait_spend_text_spend_after": "General content",
       "technology_href_technology": "General content",
       "privacy_features_href_technology_privacy_features": "General content",
       "on_page_navigation_classname": "45",
+      "basic_privacy_description_standard_transactions": "Basic Privacy\",\n                              description: \"Standard transactions with pseudonymous addresses",
       "pseudonymous_addresses_utxo_model_benefits": ", ",
+      "enhanced_privacy_description_using_ergomixer": "Enhanced Privacy\",\n                              description: \"Using ErgoMixer for transaction mixing and unlinkability",
       "transaction_mixing_address_unlinkability_amount": ", ",
+      "maximum_privacy_description_sigma_protocols": "Maximum Privacy\",\n                              description: \"Sigma protocols with zero-knowledge proofs and ring signatures",
       "enable_powerful_privacy_tools_like": "在协议一级启用强大的隐私工具，如环形签名和零知识证明。",
       "on_chain_non_custodial_mixing": "在链上，交易隐私和匿名的非拘禁混合。",
       "issue_tokens_with_hidden_amounts": "为最大隐私发布隐藏金额和规则的标记。",
@@ -3474,40 +2774,59 @@
     "bitcoin_level_security_description_inherits": "General content",
     "built_in_privacy_description_native": "General content",
     "safe_by_design_description_prevents": "General content",
+    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
     "energy_efficient_description_memory_hard": "General content",
     "solo_mining_friendly_description_low": "General content",
     "asic_resistant_description_optimized_for": "General content",
+    "storage_rent_description": "Storage Rent\",\n    description:",
     "sustainable_blockchain_description_automatic_cleanup": "General content",
     "perpetual_security_description_miners_receive": "General content",
     "resource_efficient_description_maintains_lightweight": "General content",
+    "sigma_protocols_description_built_in": "Sigma Protocols\",\n    description:\n      \"Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
     "optional_privacy_description_choose_between": "General content",
     "developer_friendly_description_simple_apis": "General content",
     "instant_mobile_sync_description_full": "General content",
     "trustless_bridges_description_connect_to": "General content",
     "cryptographic_security_description_mathematical_proofs": "General content",
+    "subblocks_in_development_description": "Subblocks (In Development)\",\n    description:",
     "sub_second_confirmations_description_near": "General content",
     "full_blockchain_security_without_trusted": "完整区块链安全无需信任中介。",
     "seamless_integration_description_works_with": "General content",
+    "native_tokens_nfts_description_create": "Native Tokens & NFTs\",\n    description:\n      \"Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
     "one_click_creation_description_issue": "General content",
     "defi_ready_description_native_integration": "General content",
     "true_native_assets_description_first": "General content",
+    "oracle_pools_description_decentralized_price": "Oracle Pools\",\n    description:\n      \"Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
     "reliable_price_feeds_description_consensus": "General content",
     "universal_compatibility_description_any_smart": "General content",
     "fully_decentralized_description_no_central": "General content",
     "backward_compatible_description_no_forced": "General content",
     "future_proof_description_adopt_innovations": "General content",
     "gradual_adoption_description_evolutionary_not": "General content",
+    "adaptive_emission_governance_description_consensus": "Adaptive Emission & Governance\",\n    description:\n      \"Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
     "parameter_tuning_description_economic_variables": "General content",
     "economic_flexibility_description_adapt_to": "General content",
     "community_input_description_discussions_and": "General content",
+    "dive_into_ergo_docs_href_docs_color": "Dive into Ergo Docs\",\n          href: \"/docs\",\n    color:",
+    "see_ecosystem_apps_href_ecosystem_color": "See Ecosystem Apps\",\n    href: \"/ecosystem\",\n    color:",
     "adaptive_emission_governance": "适应性排放与治理",
+    "what_makes_ergo_s_eutxo": "What makes Ergo's eUTXO model superior to account-based blockchains?\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "How does ErgoScript prevent smart contract vulnerabilities?\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "Why is Autolykos considered decentralized and energy-efficient?\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "How does Storage Rent solve blockchain sustainability?\",\n      tag: \"Storage",
+    "what_privacy_features_does_ergo": "What privacy features does Ergo offer natively?\",\n      tag: \"Privacy",
+    "why_are_ergo_s_oracle": "Why are Ergo's Oracle Pools more secure than Chainlink?\",\n      tag: \"Oracles",
+    "how_do_subblocks_achieve_sub": "How do Subblocks achieve sub-second transaction confirmations?\",\n      tag: \"Scaling",
+    "how_to_create_tokens_and": "How to create tokens and NFTs on Ergo without smart contracts?\",\n      tag: \"Tokens & NFTs",
     "answer_text_typeof_f_a_string": "General content",
     "research_in_development": "研究/开发中",
+    "decentralized_mixers_and_privacy_tools": "Decentralized mixers and privacy tools (check legal status)\",\n                              \"DAOs & governance systems",
     "infrastructure_apps": "基础设施和应用",
     "ergo_docs_href_docs": "General content",
     "whitepaper_href_https_ergoplatform_org": "General content",
     "github_href_https_github_com_ergoplatform": "General content",
     "dev_tutorials_href_docs_developers_tutorials": "General content",
+    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
     "smart_contracts_run_independently_without": "智能合约在没有全局状态冲突的情况下独立运行。",
     "build_complex_defi_applications_from": "从简单、可重复使用的组件构建复杂的 DeFi 应用程序。",
     "bitcoin_level_security": "比特币级别安全",
@@ -3559,18 +2878,40 @@
     "dive_deeper_into_the_docs": "深入到 docs或在最先进的 UTXO 区块链上开始构建。",
     "discover_ergo_s_advanced_blockchain": "发现 Ergo\\'s advanced blockchain 技术：eUTXO 模型用于并行智能合同，ErgoScript 编程语言，Sigma 协议用于零知识证明，以及ASIC耐用自动开采。",
     "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 智能合同”、“Sigma protocol”、“Autolykos mining”、“blockchain technology”、“智能合同编程”、“NIPPoWs”、“存储租赁”、“工作证明”、“Defi 基础结构”。",
+    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
     "ergo_technology_overview": "Ergo 技术概览",
     "ergo_technology_next_generation_blockchain": "Ergo Technology - 下一代区块chain",
+    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
+    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
+    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
+    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
+    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
     "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Modell', description: '扩展的 UTXO 模型启用平行执行",
     "thing_name_ergoscript_description_secure": "因此，名称：“ErgoScript”，描述：“安全”，可编程资金的声明语言",
     "thing_name_sigma_protocols_description": "因此，名称：“Sigma Protocols”，描述：“Native non-knowledge proofs和隐私功能",
     "thing_name_autolykos_description_memory": "这就是'，名称：“自动ykos”，描述：“记忆-硬的工作算法证明”",
     "thing_name_storage_rent_description": "因此，名称：“存储租赁”，描述：“可持续区块链状态管理”",
     "thing_name_nipopows_description_non": "因此，名称：“NIPPoWs”，描述：“非交互式工作证明”",
+    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
+    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
+    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
+    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
+    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
+    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
+    "answer_text": "Answer',\n          text:",
+    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
+    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
+    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
+    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
+    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
+    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
+    "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
+    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
     "ergo_blockchain_technology_eutxo_smart": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma 协议",
     "ergo_technology_stack_building_the_future": "Ergo Technology Stack - 构建未来",
     "advanced_blockchain_technology_eutxo_ergoscript": "高级区块链技术：eUTXO、ErgoScript、隐私功能和可持续的 PoW。",
     "eutxo_model_ergoscript_sigma_protocols": "eUTXO 模型，ErgoScript，Sigma 协议， NIPoPoWs - 尖端区块链科技。",
+    "comprehensive_overview_of_ergo": "Comprehensive overview of Ergo\\",
     "extended_utxo_model_enabling_parallel_execution": "扩展 UTXO 模型启用并行执行",
     "secure_declarative_language_for_programmable_money": "可编程资金的安全和声明语言",
     "native_zero_knowledge_proofs_and_privacy_features": "本机零知识证明和隐私功能",
@@ -3672,15 +3013,18 @@
         "title": "代码示例",
         "timelock": {
           "title": "Timelock 合同",
-          "description": "资金锁定直到指定区块高度"
+          "description": "资金锁定直到指定区块高度",
+          "code": "{\n  val deadline = 500000 // Block height\n  val recipient = PK(\"9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  \n  (HEIGHT > deadline) && recipient\n}"
         },
         "multisig": {
           "title": "多签名钱包",
-          "description": "需要多个签名才能花费资金"
+          "description": "需要多个签名才能花费资金",
+          "code": "{\n  val alice = PK(\"9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  val bob = PK(\"9f5QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  val charlie = PK(\"9f6QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  \n  atLeast(2, Coll(alice, bob, charlie))\n}"
         },
         "oracle": {
           "title": "Oracle 数据合同",
-          "description": "使用外部数据执行合同"
+          "description": "使用外部数据执行合同",
+          "code": "{\n  val oracleBox = CONTEXT.dataInputs(0)\n  val price = oracleBox.R4[Long].get\n  val threshold = 100000L // $1000 in cents\n  \n  price > threshold\n}"
         }
       },
       "technicalDetails": {
@@ -3754,6 +3098,7 @@
           },
           "solidity": {
             "title": "Solidity",
+            "code": "require(validSignatures >= 2, \"Need 2+ sigs\");\nfor (uint i = 0; i < signers.length; i++) {\n  if (verify(signers[i], signature[i])) {\n    validSignatures++;\n  }\n}",
             "description": "带有循环、状态变量和手动验证的渗透逻辑。"
           }
         },
@@ -4666,6 +4011,778 @@
           "sourceCode": "GitHub repositories"
         }
       }
+    },
+    "techFeatures": {
+      "eutxoModel": {
+        "title": "[TODO: eUTXO Model]",
+        "description": "[TODO: Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin's proven security model.]",
+        "details": {
+          "parallelExecution": {
+            "title": "[TODO: Parallel Execution]",
+            "description": "[TODO: Smart contracts run independently without global state conflicts.]"
+          },
+          "composability": {
+            "title": "[TODO: Composability]",
+            "description": "[TODO: Build complex DeFi applications from simple, reusable components.]"
+          },
+          "bitcoinSecurity": {
+            "title": "[TODO: Bitcoin-Level Security]",
+            "description": "[TODO: Inherits UTXO's battle-tested double-spend protection.]"
+          }
+        }
+      },
+      "ergoScript": {
+        "title": "[TODO: ErgoScript]",
+        "description": "[TODO: Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.]",
+        "details": {
+          "formalVerification": {
+            "title": "[TODO: Formal Verification]",
+            "description": "[TODO: Mathematically prove your smart contracts are secure and bug-free.]"
+          },
+          "builtInPrivacy": {
+            "title": "[TODO: Built-in Privacy]",
+            "description": "[TODO: Native zero-knowledge proofs and ring signatures for confidential transactions.]"
+          },
+          "safeByDesign": {
+            "title": "[TODO: Safe by Design]",
+            "description": "[TODO: Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors.]"
+          }
+        }
+      },
+      "autolykos": {
+        "title": "[TODO: Autolykos PoW]",
+        "description": "[TODO: Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.]",
+        "details": {
+          "energyEfficient": {
+            "title": "[TODO: Energy Efficient]",
+            "description": "[TODO: Memory-hard algorithm reduces power consumption compared to traditional PoW.]"
+          },
+          "soloMining": {
+            "title": "[TODO: Solo Mining Friendly]",
+            "description": "[TODO: Low barrier to entry enables individual miners to participate profitably.]"
+          },
+          "asicResistant": {
+            "title": "[TODO: ASIC Resistant]",
+            "description": "[TODO: Optimized for consumer GPUs to prevent mining centralization.]"
+          }
+        }
+      },
+      "storageRent": {
+        "title": "[TODO: Storage Rent]",
+        "description": "[TODO: Revolutionary economic model that prevents blockchain bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable blockchain size and permanent miner rewards.]",
+        "details": {
+          "sustainableBlockchain": {
+            "title": "[TODO: Sustainable Blockchain]",
+            "description": "[TODO: Automatic cleanup of unused data keeps the blockchain lean and efficient.]"
+          },
+          "perpetualSecurity": {
+            "title": "[TODO: Perpetual Security]",
+            "description": "[TODO: Miners receive rewards forever, ensuring long-term network security.]"
+          },
+          "resourceEfficient": {
+            "title": "[TODO: Resource Efficient]",
+            "description": "[TODO: Maintains lightweight blockchain that runs on modest hardware.]"
+          }
+        }
+      },
+      "sigmaProtocols": {
+        "title": "[TODO: Sigma Protocols]",
+        "description": "[TODO: Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.]",
+        "details": {
+          "optionalPrivacy": {
+            "title": "[TODO: Optional Privacy]",
+            "description": "[TODO: Choose between transparent or confidential transactions as needed.]"
+          },
+          "advancedSecurity": {
+            "title": "[TODO: Advanced Security]",
+            "description": "[TODO: Multi-signature wallets, threshold signatures, and secure voting systems.]"
+          },
+          "developerFriendly": {
+            "title": "[TODO: Developer Friendly]",
+            "description": "[TODO: Simple APIs to add privacy features to any application.]"
+          }
+        }
+      },
+      "sections": {
+        "ledgerModels": "[TODO: Blockchain Ledger Models: UTXO vs. Account]",
+        "transactionFlow": "[TODO: How eUTXO Transactions Work]",
+        "keyDifferences": "[TODO: eUTXO vs. Account Model — Key Differences]",
+        "useCases": "[TODO: eUTXO in Action — When It Shines]",
+        "faq": "[TODO: Frequently Asked Questions]",
+        "conclusion": "[TODO: Conclusion: The Future is eUTXO]"
+      },
+      "models": {
+        "utxo": {
+          "title": "[TODO: UTXO Model (Bitcoin-style)]",
+          "description": "[TODO: No global balances — only a collection of unspent outputs.]",
+          "analogy": "[TODO: Analogy: Like having cash bills/coins. Each transaction spends some bills, creates new ones.]",
+          "strengths": "[TODO: Strengths:]",
+          "strengthsText": "[TODO: Simplicity, privacy, parallel processing, easier audit trails.]",
+          "weakness": "[TODO: Weakness:]",
+          "weaknessText": "[TODO: Not naturally suited for stateful dApps.]"
+        },
+        "account": {
+          "title": "[TODO: Account Model (Ethereum-style)]",
+          "description": "[TODO: Global state: Each account has a balance and (for contracts) its own data storage.]",
+          "analogy": "[TODO: Analogy: Like a bank account — all assets tracked in one place.]",
+          "strengths": "[TODO: Strengths:]",
+          "strengthsText": "[TODO: Intuitive, flexible for stateful apps, natural for Turing-complete contracts.]",
+          "weaknesses": "[TODO: Weaknesses:]",
+          "weaknessesText": "[TODO: Potential for re-entrancy bugs, unpredictable gas, global state bloat.]"
+        }
+      },
+      "table": {
+        "aspect": "[TODO: Aspect]",
+        "eutxo": "[TODO: eUTXO]",
+        "account": "[TODO: Account]",
+        "advantage": "[TODO: Advantage]"
+      },
+      "conclusion": {
+        "text": "[TODO: The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.]",
+        "startBuilding": "[TODO: Start Building]",
+        "exploreEcosystem": "[TODO: Explore Ecosystem]"
+      }
+    },
+    "ergoScriptPage": {
+      "title": "[TODO: ErgoScript]",
+      "subtitle": "[TODO: Smart Contract Language]",
+      "description": "[TODO: Powerful, secure smart contract language with built-in cryptographic primitives and formal verification support.]",
+      "features": {
+        "formalVerification": {
+          "title": "[TODO: Formal Verification Support]",
+          "description": "[TODO: Supports formal verification and auditability via declarative constraints and first-class crypto primitives]"
+        },
+        "eutxoSecurity": {
+          "title": "[TODO: eUTXO Security Model]",
+          "description": "[TODO: The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO]"
+        },
+        "deterministicExecution": {
+          "title": "[TODO: Deterministic Execution]",
+          "description": "[TODO: Computational complexity is predictable, though network fees are market-driven]"
+        },
+        "nativeSigmaProtocols": {
+          "title": "[TODO: Native Sigma Protocols]",
+          "description": "[TODO: First-class support for multi-signature, threshold, and ring-signature constructions]"
+        },
+        "utxoConcurrency": {
+          "title": "[TODO: UTXO Concurrency]",
+          "description": "[TODO: Parallel transaction processing with batcher patterns for high-contention scenarios]"
+        },
+        "richDataTypes": {
+          "title": "[TODO: Rich Data Types]",
+          "description": "[TODO: Native support for complex data structures, collections, and cryptographic operations]"
+        }
+      },
+      "useCases": {
+        "defi": {
+          "title": "[TODO: DeFi Protocols]",
+          "description": "[TODO: Decentralized exchanges, lending platforms, and algorithmic stablecoins]"
+        },
+        "nfts": {
+          "title": "[TODO: NFT Marketplaces]",
+          "description": "[TODO: Unique digital assets with complex ownership and trading logic]"
+        },
+        "governance": {
+          "title": "[TODO: DAO Governance]",
+          "description": "[TODO: Decentralized voting systems and treasury management]"
+        },
+        "privacy": {
+          "title": "[TODO: Privacy Applications]",
+          "description": "[TODO: Zero-knowledge proofs and confidential transactions]"
+        },
+        "oracles": {
+          "title": "[TODO: Oracle Systems]",
+          "description": "[TODO: Decentralized data feeds and price discovery mechanisms]"
+        },
+        "gaming": {
+          "title": "[TODO: Gaming & Metaverse]",
+          "description": "[TODO: In-game assets, virtual economies, and play-to-earn mechanics]"
+        }
+      }
+    },
+    "nipopowsPage": {
+      "title": "[TODO: NIPoPoWs]",
+      "subtitle": "[TODO: Non-Interactive Proofs of Proof-of-Work]",
+      "description": "[TODO: Revolutionary cryptographic proofs that enable light clients, cross-chain protocols, and mobile verification without downloading the entire blockchain.]",
+      "benefits": {
+        "interoperability": {
+          "title": "[TODO: Interoperability]",
+          "description": "[TODO: Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions.]"
+        },
+        "lightClients": {
+          "title": "[TODO: Light Clients]",
+          "description": "[TODO: Secure verification on mobile or web without downloading the full blockchain.]"
+        },
+        "fastVerification": {
+          "title": "[TODO: Fast Verification]",
+          "description": "[TODO: Verify chain work in seconds using compact proofs instead of full syncs.]"
+        },
+        "trustless": {
+          "title": "[TODO: Trustless]",
+          "description": "[TODO: No trusted relays or validators; verification follows PoW assumptions.]"
+        }
+      },
+      "useCases": {
+        "crossChain": {
+          "title": "[TODO: Cross-Chain Protocols]",
+          "description": "[TODO: Trust-minimized bridges and SPV-style interoperability.]",
+          "example": "[TODO: Rosen Bridge]"
+        },
+        "mobileWallets": {
+          "title": "[TODO: Mobile Wallets]",
+          "description": "[TODO: Light wallets that prove chain work with succinct proofs.]",
+          "example": "[TODO: Ergo Mobile]"
+        },
+        "oracleSystems": {
+          "title": "[TODO: Oracle Systems]",
+          "description": "[TODO: Efficient verification of external chain data.]",
+          "example": "[TODO: Oracle Pools]"
+        },
+        "sidechains": {
+          "title": "[TODO: Sidechains]",
+          "description": "[TODO: Sidechains can verify L1 succinctly for security and liveness.]",
+          "example": "[TODO: Research]"
+        }
+      },
+      "comparison": {
+        "verificationTime": {
+          "aspect": "[TODO: Verification Time]",
+          "traditional": "[TODO: Hours to days (full sync)]",
+          "nipopows": "[TODO: Seconds to minutes]",
+          "advantage": "[TODO: NIPoPoWs]"
+        },
+        "dataRequired": {
+          "aspect": "[TODO: Data Required]",
+          "traditional": "[TODO: Entire blockchain history]",
+          "nipopows": "[TODO: Small cryptographic proof]",
+          "advantage": "[TODO: NIPoPoWs]"
+        },
+        "trustRequirements": {
+          "aspect": "[TODO: Trust Requirements]",
+          "traditional": "[TODO: Trust full nodes or validators]",
+          "nipopows": "[TODO: Trustless cryptographic verification]",
+          "advantage": "[TODO: NIPoPoWs]"
+        },
+        "mobileCompatibility": {
+          "aspect": "[TODO: Mobile Compatibility]",
+          "traditional": "[TODO: Impractical due to size]",
+          "nipopows": "[TODO: Optimized for mobile devices]",
+          "advantage": "[TODO: NIPoPoWs]"
+        },
+        "securityModel": {
+          "aspect": "[TODO: Security model]",
+          "traditional": "[TODO: Varies by design]",
+          "nipopows": "[TODO: Preserves PoW assumptions]",
+          "advantage": "[TODO: NIPoPoWs]"
+        },
+        "finalityHandling": {
+          "aspect": "[TODO: Finality handling]",
+          "traditional": "[TODO: Implementation-specific]",
+          "nipopows": "[TODO: Observe window; new proof can supersede]",
+          "advantage": "[TODO: NIPoPoWs]"
+        },
+        "stateAccess": {
+          "aspect": "[TODO: State access]",
+          "traditional": "[TODO: Full state on device]",
+          "nipopows": "[TODO: Event/work proof only (no full state)]",
+          "advantage": "[TODO: Depends]"
+        }
+      },
+      "workingSteps": {
+        "eventOccurs": {
+          "title": "[TODO: Event Occurs]",
+          "description": "[TODO: A transaction or block appears on Ergo.]"
+        },
+        "proofGeneration": {
+          "title": "[TODO: Proof Generation]",
+          "description": "[TODO: A succinct proof is built from sampled headers.]"
+        },
+        "verification": {
+          "title": "[TODO: Verification]",
+          "description": "[TODO: Anyone verifies the proof quickly and trustlessly.]"
+        }
+      }
+    },
+    "privacyFeaturesPage": {
+      "title": "[TODO: Privacy Features]",
+      "subtitle": "[TODO: Sigma Protocols & Confidential Transactions]",
+      "description": "[TODO: Advanced cryptographic privacy tools built into Ergo's protocol. Zero-knowledge proofs, ring signatures, and confidential transactions without trusted setups.]",
+      "technologies": {
+        "sigmaProtocols": {
+          "title": "[TODO: Sigma Protocols]",
+          "description": "[TODO: Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.]",
+          "features": {
+            "0": "[TODO: Zero-knowledge proofs]",
+            "1": "[TODO: Ring signatures]",
+            "2": "[TODO: Threshold signatures]",
+            "3": "[TODO: Composable privacy]"
+          }
+        },
+        "ergoMixer": {
+          "title": "[TODO: ErgoMixer]",
+          "description": "[TODO: On-chain, non-custodial mixing for transaction privacy and anonymity.]",
+          "features": {
+            "0": "[TODO: Non-custodial mixing]",
+            "1": "[TODO: On-chain privacy]",
+            "2": "[TODO: Token mixing support]",
+            "3": "[TODO: Configurable anonymity]"
+          }
+        },
+        "confidentialAssets": {
+          "title": "[TODO: Confidential Assets]",
+          "description": "[TODO: Issue tokens with hidden amounts and rules for maximum privacy.]",
+          "features": {
+            "0": "[TODO: Hidden token amounts]",
+            "1": "[TODO: Private smart contracts]",
+            "2": "[TODO: Confidential transactions]",
+            "3": "[TODO: Selective disclosure]"
+          }
+        }
+      },
+      "advantages": "[TODO: No trusted setup needed — pure cryptographic security,Flexible privacy features usable in dApps, DeFi, and NFTs,Open-source, peer-reviewed cryptography,Composable with other Ergo features,Built into the protocol, not added as afterthought,Mathematically proven security guarantees]",
+      "useCases": {
+        "privateTransactions": {
+          "title": "[TODO: Private Transactions]",
+          "description": "[TODO: Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)]",
+          "example": "[TODO: ErgoMixer]"
+        },
+        "confidentialDefi": {
+          "title": "[TODO: Confidential DeFi]",
+          "description": "[TODO: Build DeFi applications with private balances and logic]",
+          "example": "[TODO: Private DEX orders]"
+        },
+        "anonymousVoting": {
+          "title": "[TODO: Anonymous Voting]",
+          "description": "[TODO: Create DAOs and voting systems with secret ballots]",
+          "example": "[TODO: DAO governance]"
+        },
+        "privateNfts": {
+          "title": "[TODO: Private NFTs]",
+          "description": "[TODO: NFTs with hidden metadata or ownership information]",
+          "example": "[TODO: Confidential collectibles]"
+        }
+      }
+    },
+    "oraclePoolsPage": {
+      "title": "[TODO: Oracle Pools]",
+      "subtitle": "[TODO: Decentralized Price Feeds]",
+      "description": "[TODO: Reliable, consensus-based oracle system providing accurate price feeds for DeFi applications without central authorities or single points of failure.]",
+      "features": {
+        "reliablePriceFeeds": {
+          "title": "[TODO: Reliable Price Feeds]",
+          "description": "[TODO: Consensus-based data aggregation ensures accurate, manipulation-resistant prices]"
+        },
+        "universalCompatibility": {
+          "title": "[TODO: Universal Compatibility]",
+          "description": "[TODO: Any smart contract can access oracle data without special integrations]"
+        },
+        "fullyDecentralized": {
+          "title": "[TODO: Fully Decentralized]",
+          "description": "[TODO: No central authority or single point of failure in the data pipeline]"
+        },
+        "economicSecurity": {
+          "title": "[TODO: Economic Security]",
+          "description": "[TODO: Stake-based incentives ensure honest data provision]"
+        },
+        "consensusMechanism": {
+          "title": "[TODO: Consensus Mechanism]",
+          "description": "[TODO: Outlier detection and averaging for robust data quality]"
+        },
+        "lowLatencyUpdates": {
+          "title": "[TODO: Low Latency Updates]",
+          "description": "[TODO: Frequent updates ensure data freshness for DeFi applications]"
+        }
+      },
+      "technicalDetails": {
+        "dataAggregation": {
+          "title": "[TODO: Data Aggregation]",
+          "content": "[TODO: The oracle pool uses a robust averaging mechanism that filters out outliers by removing the top and bottom 25% of submissions, then calculating the average of remaining values for consensus.]"
+        },
+        "updateTriggers": {
+          "title": "[TODO: Update Triggers]",
+          "content": "[TODO: New data is published when price deviation exceeds threshold (e.g., 0.5%), maximum time since last update (e.g., 1 hour), or minimum oracle submissions are reached.]"
+        },
+        "economicSecurity": {
+          "title": "[TODO: Economic Security]",
+          "content": "[TODO: Oracle operators must stake collateral, with slashing for malicious behavior and rewards for honest participation, creating strong economic incentives for reliable data.]"
+        },
+        "attackResistance": {
+          "title": "[TODO: Attack Resistance]",
+          "content": "[TODO: Sybil attack protection via staking, outlier filtering prevents manipulation, and decentralization prevents censorship of oracle data.]"
+        }
+      },
+      "useCases": {
+        "sigmaUsdStablecoin": {
+          "title": "[TODO: SigmaUSD Stablecoin]",
+          "description": "[TODO: Algorithmic stablecoin using ERG/USD price feed for collateral calculations]"
+        },
+        "spectrumDex": {
+          "title": "[TODO: Spectrum DEX]",
+          "description": "[TODO: Decentralized exchange using price feeds for limit orders and liquidations]"
+        },
+        "lendingProtocols": {
+          "title": "[TODO: Lending Protocols]",
+          "description": "[TODO: Collateralized lending using oracle prices for liquidation thresholds]"
+        }
+      }
+    },
+    "subblocksPage": {
+      "title": "[TODO: Subblocks]",
+      "subtitle": "[TODO: Sub-Second Confirmations]",
+      "description": "[TODO: Revolutionary scaling solution providing near-instant transaction finality with full Layer 1 security. No bridges, no compromises.]",
+      "features": {
+        "subSecondConfirmations": {
+          "title": "[TODO: Sub-Second Confirmations]",
+          "description": "[TODO: Near-instant transaction finality for improved user experience without sacrificing decentralization]"
+        },
+        "layer1Security": {
+          "title": "[TODO: Layer 1 Security]",
+          "description": "[TODO: Full blockchain security without trusted intermediaries or bridges]"
+        },
+        "seamlessIntegration": {
+          "title": "[TODO: Seamless Integration]",
+          "description": "[TODO: Works with existing infrastructure - no bridges or sidechains needed]"
+        },
+        "parallelProcessing": {
+          "title": "[TODO: Parallel Processing]",
+          "description": "[TODO: Multiple subblocks can be validated in parallel for increased throughput]"
+        },
+        "adaptiveDifficulty": {
+          "title": "[TODO: Adaptive Difficulty]",
+          "description": "[TODO: Dynamic adjustment ensures consistent block times even with varying hash power]"
+        },
+        "minerIncentives": {
+          "title": "[TODO: Miner Incentives]",
+          "description": "[TODO: Additional rewards for subblock miners while maintaining main chain security]"
+        }
+      },
+      "technicalDetails": {
+        "architecture": {
+          "title": "[TODO: Architecture]",
+          "content": "[TODO: Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same security model as main blocks but with adjusted difficulty targets.]"
+        },
+        "consensusMechanism": {
+          "title": "[TODO: Consensus Mechanism]",
+          "content": "[TODO: Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure.]"
+        },
+        "transactionOrdering": {
+          "title": "[TODO: Transaction Ordering]",
+          "content": "[TODO: Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness.]"
+        },
+        "stateManagement": {
+          "title": "[TODO: State Management]",
+          "content": "[TODO: Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead.]"
+        }
+      },
+      "useCases": {
+        "defiApplications": {
+          "title": "[TODO: DeFi Applications]",
+          "description": "[TODO: Enable high-frequency trading and instant swaps with sub-second finality]"
+        },
+        "paymentSystems": {
+          "title": "[TODO: Payment Systems]",
+          "description": "[TODO: Point-of-sale transactions with immediate confirmation]"
+        },
+        "gaming": {
+          "title": "[TODO: Gaming]",
+          "description": "[TODO: Real-time game state updates without waiting for block confirmations]"
+        },
+        "socialApplications": {
+          "title": "[TODO: Social Applications]",
+          "description": "[TODO: Instant messaging and social interactions on-chain]"
+        }
+      }
+    },
+    "velvetForksPage": {
+      "title": "[TODO: Velvet Forks]",
+      "subtitle": "[TODO: Smooth Protocol Evolution]",
+      "description": "[TODO: Revolutionary upgrade mechanism enabling backward-compatible protocol improvements without forced upgrades or network splits.]",
+      "features": {
+        "backwardCompatible": {
+          "title": "[TODO: Backward Compatible]",
+          "description": "[TODO: No forced upgrades, no chain wars - new features coexist with non-upgraded nodes]"
+        },
+        "futureProof": {
+          "title": "[TODO: Future Proof]",
+          "description": "[TODO: Adopt innovations at your own pace without network disruption]"
+        },
+        "gradualAdoption": {
+          "title": "[TODO: Gradual Adoption]",
+          "description": "[TODO: Evolutionary, not revolutionary changes - the network evolves smoothly]"
+        },
+        "consensusPreservation": {
+          "title": "[TODO: Consensus Preservation]",
+          "description": "[TODO: Maintains network consensus even with different node versions]"
+        },
+        "securityFirst": {
+          "title": "[TODO: Security First]",
+          "description": "[TODO: New features only activate when safe majority adoption is reached]"
+        },
+        "developerFriendly": {
+          "title": "[TODO: Developer Friendly]",
+          "description": "[TODO: Test new features on mainnet without breaking existing applications]"
+        }
+      },
+      "useCases": {
+        "nipopowsIntegration": {
+          "title": "[TODO: NiPoPoWs Integration]",
+          "description": "[TODO: Non-Interactive Proofs of Proof-of-Work can be added as an optional feature, enabling light clients without forcing all nodes to support them.]",
+          "linkText": "[TODO: Learn about NiPoPoWs →]"
+        },
+        "privacyEnhancements": {
+          "title": "[TODO: Privacy Enhancements]",
+          "description": "[TODO: Advanced privacy features like ring signatures or stealth addresses can be introduced without breaking existing transparent transactions.]",
+          "linkText": "[TODO: Explore privacy features →]"
+        },
+        "smartContractExtensions": {
+          "title": "[TODO: Smart Contract Extensions]",
+          "description": "[TODO: New opcodes and scripting capabilities can be added for developers who want to use them, while existing contracts continue to work.]",
+          "linkText": "[TODO: Learn about ErgoScript →]"
+        },
+        "consensusImprovements": {
+          "title": "[TODO: Consensus Improvements]",
+          "description": "[TODO: Optimizations to block validation, mining algorithms, or network protocols can be tested and adopted gradually.]",
+          "linkText": "[TODO: About Autolykos →]"
+        }
+      }
+    },
+    "adaptiveEmissionPage": {
+      "title": "[TODO: Adaptive Emission]",
+      "subtitle": "[TODO: Flexible Economic Parameters]",
+      "description": "[TODO: Community-driven governance system enabling parameter adjustments through miner voting, ensuring long-term sustainability and network adaptability.]",
+      "features": {
+        "parameterTuning": {
+          "title": "[TODO: Parameter Tuning]",
+          "description": "[TODO: Economic variables can be adjusted based on network conditions]"
+        },
+        "economicFlexibility": {
+          "title": "[TODO: Economic Flexibility]",
+          "description": "[TODO: Adapt to changing network needs without hard forks]"
+        },
+        "communityInput": {
+          "title": "[TODO: Community Input]",
+          "description": "[TODO: Discussions and decisions involve the entire community]"
+        },
+        "minerVoting": {
+          "title": "[TODO: Miner Voting]",
+          "description": "[TODO: Miners vote on parameter changes through block headers]"
+        },
+        "gradualChanges": {
+          "title": "[TODO: Gradual Changes]",
+          "description": "[TODO: Parameters adjust smoothly to prevent economic shocks]"
+        },
+        "longTermSustainability": {
+          "title": "[TODO: Long-term Sustainability]",
+          "description": "[TODO: Ensures network security even after emission ends]"
+        }
+      },
+      "governance": {
+        "emissionSchedule": {
+          "title": "[TODO: Emission Schedule]",
+          "description": "[TODO: Declining emission with periodic reductions and post-emission sustainability through storage rent and transaction fees.]",
+          "linkText": "[TODO: Learn about governance →]"
+        },
+        "storageRentEconomics": {
+          "title": "[TODO: Storage Rent Economics]",
+          "description": "[TODO: UTXOs unspent for 4+ years pay storage fees, providing sustainable miner revenue and preventing state bloat.]",
+          "linkText": "[TODO: Storage rent details →]"
+        },
+        "minerVotingProcess": {
+          "title": "[TODO: Miner Voting Process]",
+          "description": "[TODO: Community proposals, 1024-epoch voting period, 90% threshold requirement, and gradual activation.]",
+          "linkText": "[TODO: Voting mechanism →]"
+        },
+        "economicParameters": {
+          "title": "[TODO: Economic Parameters]",
+          "description": "[TODO: Adjustable parameters include block size, storage fee factor, min fee, and computational cost limits.]",
+          "linkText": "[TODO: Parameter details →]"
+        }
+      },
+      "historicalVotes": {
+        "eip27": {
+          "title": "[TODO: Re-emission Soft Fork]",
+          "description": "[TODO: Extends emission schedule to ensure long-term network security]"
+        },
+        "eip37": {
+          "title": "[TODO: Difficulty Adjustment]",
+          "description": "[TODO: Improved difficulty adjustment algorithm for more stable block times]"
+        }
+      }
+    },
+    "nativeTokensPage": {
+      "title": "[TODO: Native Tokens & NFTs]",
+      "subtitle": "[TODO: First-Class Assets on Ergo]",
+      "description": "[TODO: Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.]",
+      "features": {
+        "oneClick": {
+          "title": "[TODO: One-Click Creation]",
+          "description": "[TODO: Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts]"
+        },
+        "nativeAssets": {
+          "title": "[TODO: True Native Assets]",
+          "description": "[TODO: First-class tokens with protocol-level security guarantees, not contract-based]"
+        },
+        "defiReady": {
+          "title": "[TODO: DeFi Ready]",
+          "description": "[TODO: Native integration with all Ergo applications and protocols]"
+        },
+        "costEffective": {
+          "title": "[TODO: Cost Effective]",
+          "description": "[TODO: Minimal fees for token creation and transfers - just simple, secure, native assets]"
+        },
+        "richMetadata": {
+          "title": "[TODO: Rich Metadata]",
+          "description": "[TODO: Support for complex metadata including images, descriptions, and custom properties]"
+        },
+        "universalCompatibility": {
+          "title": "[TODO: Universal Compatibility]",
+          "description": "[TODO: Any smart contract can access oracle data without special integrations]"
+        }
+      },
+      "useCases": {
+        "defiTokens": {
+          "title": "[TODO: DeFi Tokens]",
+          "description": "[TODO: Create governance tokens, utility tokens, and reward tokens for DeFi protocols]"
+        },
+        "nftCollections": {
+          "title": "[TODO: NFT Collections]",
+          "description": "[TODO: Build unique digital art, collectibles, and gaming assets]"
+        },
+        "stablecoins": {
+          "title": "[TODO: Stablecoins]",
+          "description": "[TODO: Issue algorithmic or collateralized stable value tokens]"
+        },
+        "loyaltyPrograms": {
+          "title": "[TODO: Loyalty Programs]",
+          "description": "[TODO: Create reward points and loyalty tokens for businesses]"
+        },
+        "gameAssets": {
+          "title": "[TODO: Game Assets]",
+          "description": "[TODO: In-game items, characters, and currencies with true ownership]"
+        },
+        "identityTokens": {
+          "title": "[TODO: Identity Tokens]",
+          "description": "[TODO: Reputation systems and identity verification tokens]"
+        }
+      }
+    },
+    "storageRentPage": {
+      "title": "[TODO: Storage Rent]",
+      "subtitle": "[TODO: Sustainable Blockchain Economics]",
+      "description": "[TODO: Ergo's storage rent mechanism prevents blockchain bloat and ensures long-term sustainability by recycling unused outputs.]",
+      "problems": {
+        "blockchainBloat": {
+          "title": "[TODO: Blockchain Bloat]",
+          "description": "[TODO: Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.]",
+          "stats": "[TODO: 2TB+ wasted space]"
+        },
+        "forgottenWallets": {
+          "title": "[TODO: Forgotten Wallets]",
+          "description": "[TODO: Lost private keys mean funds are stuck forever, reducing the effective money supply.]",
+          "stats": "[TODO: 4M+ lost coins]"
+        },
+        "scalabilityIssues": {
+          "title": "[TODO: Scalability Issues]",
+          "description": "[TODO: Growing blockchain size makes it harder for new nodes to sync and participate in the network.]",
+          "stats": "[TODO: 500GB+ to sync]"
+        }
+      },
+      "solutions": {
+        "automaticCleanup": {
+          "title": "[TODO: Automatic Cleanup]",
+          "description": "[TODO: Storage rent automatically removes old, unused outputs from the blockchain state.]"
+        },
+        "fundRecycling": {
+          "title": "[TODO: Fund Recycling]",
+          "description": "[TODO: Coins from forgotten wallets are gradually returned to circulation through miners.]"
+        },
+        "sustainableGrowth": {
+          "title": "[TODO: Sustainable Growth]",
+          "description": "[TODO: Blockchain size remains manageable, ensuring long-term network health.]"
+        }
+      },
+      "howItWorks": {
+        "title": "[TODO: How Storage Rent Works]",
+        "steps": {
+          "creation": {
+            "title": "[TODO: Box Creation]",
+            "description": "[TODO: When you create a UTXO (box), it starts with full value and no rent due.]"
+          },
+          "aging": {
+            "title": "[TODO: Aging Process]",
+            "description": "[TODO: After 4 years of inactivity, the box becomes subject to storage rent fees.]"
+          },
+          "collection": {
+            "title": "[TODO: Rent Collection]",
+            "description": "[TODO: Miners can collect rent, gradually reducing the box value until it's spent or recycled.]"
+          },
+          "recycling": {
+            "title": "[TODO: Full Recycling]",
+            "description": "[TODO: If rent isn't paid, the remaining value goes to miners and the box is removed.]"
+          }
+        }
+      }
+    },
+    "eutxoModelPage": {
+      "title": "[TODO: eUTXO Model]",
+      "subtitle": "[TODO: Extended UTXO for Smart Contracts]",
+      "description": "[TODO: Ergo's eUTXO model combines Bitcoin's security with Ethereum's programmability, enabling parallel processing and predictable fees.]",
+      "modelComparison": {
+        "stateManagement": {
+          "aspect": "[TODO: State Management]",
+          "utxo": "[TODO: No global balances — only unspent outputs]",
+          "account": "[TODO: Global state with account balances and storage]",
+          "advantage": "[TODO: eUTXO]"
+        },
+        "security": {
+          "aspect": "[TODO: Security]",
+          "utxo": "[TODO: The reentrancy vulnerability class common to account-based systems is absent in eUTXO; script execution cost is bounded]",
+          "account": "[TODO: Re-entrancy class typical for account-based systems; gas costs can be unpredictable]",
+          "advantage": "[TODO: eUTXO]"
+        },
+        "parallelism": {
+          "aspect": "[TODO: Parallelism]",
+          "utxo": "[TODO: Independent boxes enable parallel processing]",
+          "account": "[TODO: State contention forces sequential processing]",
+          "advantage": "[TODO: eUTXO]"
+        },
+        "privacy": {
+          "aspect": "[TODO: Privacy]",
+          "utxo": "[TODO: UTXO mixing, Σ-protocols for advanced privacy]",
+          "account": "[TODO: Global state makes privacy harder by default]",
+          "advantage": "[TODO: eUTXO]"
+        },
+        "tokenHandling": {
+          "aspect": "[TODO: Token Handling]",
+          "utxo": "[TODO: Tokens are first-class citizens in boxes]",
+          "account": "[TODO: Requires separate contract logic (ERC-20/721)]",
+          "advantage": "[TODO: eUTXO]"
+        },
+        "learningCurve": {
+          "aspect": "[TODO: Learning Curve]",
+          "utxo": "[TODO: Must 'think in boxes', different paradigm]",
+          "account": "[TODO: More intuitive for traditional developers]",
+          "advantage": "[TODO: Account]"
+        }
+      },
+      "boxComponents": {
+        "value": {
+          "name": "[TODO: Value]",
+          "description": "[TODO: ERG + custom tokens]"
+        },
+        "guardingScript": {
+          "name": "[TODO: Guarding Script]",
+          "description": "[TODO: ErgoScript code controlling spending conditions]"
+        },
+        "registers": {
+          "name": "[TODO: Registers (R0–R9)]",
+          "description": "[TODO: User-defined: R4–R9 (R0–R3 are protocol-reserved)]"
+        },
+        "metadata": {
+          "name": "[TODO: Metadata]",
+          "description": "[TODO: Creation height, boxId (derived from creating tx)]"
+        }
+      }
     }
   },
   "technologyPages": {
@@ -5250,6 +5367,7 @@
       "codeExample": {
         "title": "简单令牌创建",
         "subtitle": "仅用几行代码创建令牌",
+        "code": "// Token creation parameters\nval tokenName = \"MyToken\"\nval tokenDescription = \"My awesome token on Ergo\"\nval tokenDecimals = 2\nval tokenAmount = 1000000L\n\n// Create token in a single transaction\nval token = Minting.issueToken(\n  ergoClient = client,\n  tokenName = tokenName,\n  tokenDescription = tokenDescription,\n  tokenAmount = tokenAmount,\n  tokenDecimals = tokenDecimals,\n  mintingAddress = address,\n  txFee = Parameters.MinFee\n)\n\n// Token is now live on the blockchain!\nprintln(s\"Token ID: ${token.getId}\")\nprintln(s\"Token created in TX: ${token.creationTx}\")",
         "note": "没有智能合同部署，没有复杂的设置 - 只是简单、原生令牌创建。"
       },
       "ecosystem": {
@@ -5520,9 +5638,18 @@
         "name": "如何使用 Babel Fees",
         "description": "用任意代币支付手续费的分步指南（Babel Fees）",
         "steps": [
-          { "name": "选择 dApp", "text": "打开支持 Babel Fees 的应用" },
-          { "name": "选择代币", "text": "选择你要用来支付手续费的代币" },
-          { "name": "执行交易", "text": "完成交易——中介会自动处理 ERG 转换" }
+          {
+            "name": "选择 dApp",
+            "text": "打开支持 Babel Fees 的应用"
+          },
+          {
+            "name": "选择代币",
+            "text": "选择你要用来支付手续费的代币"
+          },
+          {
+            "name": "执行交易",
+            "text": "完成交易——中介会自动处理 ERG 转换"
+          }
         ]
       }
     },
@@ -5712,6 +5839,248 @@
         "question": "是否还有额外费用？",
         "answer": "可能有少量转换费用，但往往被方便抵销。"
       }
+    }
+  },
+  "technologyTopicsData": {
+    "eutxo-model": {
+      "title": "Extended UTXO Model",
+      "description": "Smart contracts with parallel execution, composability, and enhanced security through the Extended UTXO model",
+      "shortDescription": "Parallel smart contracts with enhanced security",
+      "keywords": "eutxo,eUTXO,utxo,smart contracts,parallel execution,composability,mev resistance,ethereum comparison,technical",
+      "details": [
+        {
+          "title": "Parallel Execution",
+          "description": "Process multiple transactions simultaneously without state conflicts"
+        },
+        {
+          "title": "Native Composability",
+          "description": "Build complex DeFi from simple, reusable contract pieces"
+        },
+        {
+          "title": "MEV Resistance",
+          "description": "Deterministic transactions prevent front-running attacks"
+        }
+      ]
+    },
+    "ergoscript": {
+      "title": "ErgoScript",
+      "description": "Powerful yet safe smart contract language with formal verification and built-in cryptographic primitives",
+      "shortDescription": "Safe smart contracts with formal verification",
+      "keywords": "ergoscript,ErgoScript,smart contracts,formal verification,sigma protocols,type safety,ergo developers,functional programming",
+      "details": [
+        {
+          "title": "Formal Verification",
+          "description": "Mathematically provable contract correctness"
+        },
+        {
+          "title": "Built-in Privacy",
+          "description": "Native Sigma protocols for zero-knowledge proofs"
+        },
+        {
+          "title": "Type Safety",
+          "description": "Strong typing prevents common vulnerabilities"
+        }
+      ]
+    },
+    "secure-pow": {
+      "title": "Autolykos Proof-of-Work",
+      "description": "Memory-hard, ASIC-resistant mining algorithm that promotes decentralization and energy efficiency",
+      "shortDescription": "ASIC-resistant GPU mining for decentralization",
+      "keywords": "autolykos,proof of work,pow,mining,asic resistant,gpu mining,sustainable pow,decentralization",
+      "details": [
+        {
+          "title": "Energy Efficient",
+          "description": "Optimized for consumer GPUs with lower power consumption"
+        },
+        {
+          "title": "Solo Mining Friendly",
+          "description": "Algorithm design reduces pool centralization pressure"
+        },
+        {
+          "title": "ASIC Resistant",
+          "description": "Memory-hard design keeps mining accessible to everyone"
+        }
+      ]
+    },
+    "storage-rent": {
+      "title": "Storage Rent",
+      "description": "Sustainable blockchain economics through state recycling - dormant coins pay small fees to keep the network secure",
+      "shortDescription": "Long-term sustainability through state recycling",
+      "keywords": "storage rent,sustainability,state bloat,miner revenue,tokenomics,demurrage,scalability,decentralization",
+      "details": [
+        {
+          "title": "State Sustainability",
+          "description": "Prevents unlimited blockchain growth and state bloat"
+        },
+        {
+          "title": "Miner Revenue",
+          "description": "Ensures mining rewards continue after emission ends"
+        },
+        {
+          "title": "Lost Coin Recovery",
+          "description": "Recirculates dormant coins back into the economy"
+        }
+      ]
+    },
+    "privacy-features": {
+      "title": "Sigma Protocols",
+      "description": "Native zero-knowledge proofs, ring signatures, and advanced privacy features without external dependencies",
+      "shortDescription": "Optional privacy with zero-knowledge proofs",
+      "keywords": "sigma protocols,privacy,zero knowledge proofs,zkp,ring signatures,ergomixer,cryptography,defi privacy",
+      "details": [
+        {
+          "title": "Optional Privacy",
+          "description": "Choose when and how much privacy you need"
+        },
+        {
+          "title": "Zero-Knowledge Proofs",
+          "description": "Prove statements without revealing underlying data"
+        },
+        {
+          "title": "Ring Signatures",
+          "description": "Hide transaction origins among multiple signers"
+        }
+      ]
+    },
+    "nipopows": {
+      "title": "NIPoPoWs",
+      "description": "Non-Interactive Proofs of Proof-of-Work enable instant mobile sync and trustless cross-chain bridges",
+      "shortDescription": "Light clients and trustless bridges",
+      "keywords": "nipopows,light clients,mobile wallet,cross chain,bridges,sidechains,succinct proofs,superblocks",
+      "details": [
+        {
+          "title": "Instant Mobile Sync",
+          "description": "Verify blockchain in seconds, not hours"
+        },
+        {
+          "title": "Trustless Bridges",
+          "description": "Cross-chain communication without trusted intermediaries"
+        },
+        {
+          "title": "Cryptographic Security",
+          "description": "Mathematical proofs, not trust assumptions"
+        }
+      ]
+    },
+    "subblocks": {
+      "title": "Subblocks",
+      "description": "Layer-1 scaling solution achieving sub-second transaction confirmations while maintaining full security",
+      "shortDescription": "Sub-second confirmations on Layer 1",
+      "keywords": "subblocks,scaling,fast confirmations,layer 1,throughput",
+      "details": [
+        {
+          "title": "Sub-Second Confirmations",
+          "description": "Near-instant transaction feedback for better UX"
+        },
+        {
+          "title": "Layer-1 Security",
+          "description": "No trusted sequencers or additional trust assumptions"
+        },
+        {
+          "title": "Seamless Integration",
+          "description": "Works with existing contracts and infrastructure"
+        }
+      ]
+    },
+    "native-tokens": {
+      "title": "Native Tokens & NFTs",
+      "description": "First-class token support at the protocol level - create tokens and NFTs in a single transaction without smart contracts",
+      "shortDescription": "One-click token and NFT creation",
+      "keywords": "native tokens,nft,eip4,token creation,digital assets",
+      "details": [
+        {
+          "title": "One-Click Creation",
+          "description": "Issue tokens in a single transaction, no contract needed"
+        },
+        {
+          "title": "DeFi Ready",
+          "description": "Instantly compatible with all Ergo DeFi protocols"
+        },
+        {
+          "title": "True Native Assets",
+          "description": "Protocol-level support, not smart contract workarounds"
+        }
+      ]
+    },
+    "oracle-pools": {
+      "title": "Oracle Pools",
+      "description": "Decentralized data feeds built into the protocol - reliable price data without centralized operators",
+      "shortDescription": "Decentralized on-chain data feeds",
+      "keywords": "oracle pools,oracles,price feeds,data feeds,defi infrastructure,on-chain aggregation,oracle security",
+      "details": [
+        {
+          "title": "Reliable Price Feeds",
+          "description": "Aggregated data from multiple independent sources"
+        },
+        {
+          "title": "Protocol Native",
+          "description": "Built into Ergo, not a third-party add-on"
+        },
+        {
+          "title": "Fully Decentralized",
+          "description": "No single point of failure or manipulation"
+        }
+      ]
+    },
+    "velvet-forks": {
+      "title": "Velvet Forks",
+      "description": "Upgrade the protocol without hard forks - add new features while maintaining backward compatibility",
+      "shortDescription": "Seamless protocol upgrades",
+      "keywords": "velvet forks,soft forks,protocol upgrades,backward compatibility",
+      "details": [
+        {
+          "title": "Backward Compatible",
+          "description": "Old nodes continue working during upgrades"
+        },
+        {
+          "title": "Future Proof",
+          "description": "Add new consensus rules without disruption"
+        },
+        {
+          "title": "Gradual Adoption",
+          "description": "Network upgrades happen organically over time"
+        }
+      ]
+    },
+    "adaptive-emission": {
+      "title": "Adaptive Emission",
+      "description": "Dynamic monetary policy that can be adjusted through community governance for long-term economic stability",
+      "shortDescription": "Community-governed monetary policy",
+      "keywords": "adaptive emission,tokenomics,monetary policy,governance,emission schedule",
+      "details": [
+        {
+          "title": "Parameter Tuning",
+          "description": "Adjust emission and economic parameters over time"
+        },
+        {
+          "title": "Economic Flexibility",
+          "description": "Respond to changing market conditions"
+        },
+        {
+          "title": "Community Input",
+          "description": "Governance-driven monetary policy decisions"
+        }
+      ]
+    },
+    "babel-fees": {
+      "title": "Babel Fees",
+      "description": "Pay transaction fees with any token instead of ERG through automated intermediaries",
+      "shortDescription": "Pay fees with any token",
+      "keywords": "babel fees,transaction fees,ux,token payments,gas abstraction,defi ux,on-chain markets",
+      "details": [
+        {
+          "title": "Token Flexibility",
+          "description": "Use any token to pay transaction fees"
+        },
+        {
+          "title": "Automated Exchange",
+          "description": "Intermediaries handle ERG conversion automatically"
+        },
+        {
+          "title": "Seamless UX",
+          "description": "No need to hold ERG for transactions"
+        }
+      ]
     }
   }
 }

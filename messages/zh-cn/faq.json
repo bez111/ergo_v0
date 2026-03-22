@@ -18,14 +18,6 @@
           "q": "什么是Ergo？",
           "a": "Ergo是下一代智能合同平台，通过分散、抵制检查和保证金融合同，将经济自由列为优先事项。"
         },
-        "isErgoCompany": {
-          "q": "[TODO: Is Ergo a company?]",
-          "a": "[TODO: No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network.]"
-        },
-        "fairLaunch": {
-          "q": "[TODO: What does a \"fair launch\" mean?]",
-          "a": "[TODO: Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.]"
-        },
         "howDifferent": {
           "q": "Ergo 与其他区块链有什么不同？",
           "a": "Ergo将经证明的加密特征与创新方法相结合，如eUTXO模型、储存租金和Sigma协议，以加强安全和可持续性。"
@@ -33,6 +25,98 @@
         "ergToken": {
           "q": "ERG 令牌是什么？",
           "a": "ERG 是Ergo的原生加密货币，用于交易费、智能合同执行和储存租金。它的固定供应上限为9,770万代币。"
+        },
+        "isErgoCompany": {
+          "q": "[TODO: Is Ergo a company?]",
+          "a": "[TODO: No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network.]"
+        },
+        "fairLaunch": {
+          "q": "[TODO: What does a \"fair launch\" mean?]",
+          "a": "[TODO: Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.]"
+        }
+      },
+      "technologyFaq": {
+        "eUTXO": {
+          "q": "eUTXO 模型是什么？",
+          "a": "扩展的 UTXO (eUTXO) 将比特币的 UTXO 安全性与Etherum 的智能合同表达式结合起来，使得dApp更可预测和安全。"
+        },
+        "autolykos": {
+          "q": "什么是Autolykos共识？",
+          "a": "Autolykos v2是Ergo的ASIC工作证明算法，设计起来是内存硬的，并促进分散的采矿。"
+        },
+        "sigmaProtocols": {
+          "q": "什么是 Sigma 协议？",
+          "a": "Sigma 协议能够在不泄露敏感信息的情况下为隐私和复杂的智能合同提供强大的加密掩码。"
+        }
+      },
+      "gettingStarted": {
+        "getErg": {
+          "q": "如何获得ERG令牌？",
+          "a": "您可以在KuCoin、Gate.io或 CoinEx等交易所购买ERG，或通过采矿或参与生态系统赚取ERG。"
+        },
+        "wallet": {
+          "q": "我应该使用哪个钱包？",
+          "a": "最受欢迎的选项包括Nautilus(浏览器扩展)、官方移动钱包或像Ledger这样的硬件钱包以实现最大安全。"
+        },
+        "startMining": {
+          "q": "如何开始开采ERG？",
+          "a": "您可以使用 GPU 矿工挖掘ERG 矿工。请检查我们的采矿指南以了解池建议和设置说明。"
+        },
+        "ergCoinUse": {
+          "q": "[TODO: What is the ERG coin used for?]",
+          "a": "[TODO: ERG is used for transaction fees, collateral for stablecoins (SigmaUSD), participating in DeFi applications, powering dApps (NFTs, gaming), and incentivizing miners.]"
+        },
+        "howToGetErg": {
+          "q": "[TODO: How can I get ERG?]",
+          "a": "[TODO: You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing.]"
+        },
+        "bestWallet": {
+          "q": "[TODO: Which wallet is best for beginners?]",
+          "a": "[TODO: The official mobile wallets (Android/iOS) or the Nautilus Wallet (browser extension) are excellent, user-friendly starting points.]"
+        }
+      },
+      "ecosystem": {
+        "dApps": {
+          "q": "Ergo上有哪些dApp？",
+          "a": "Ergo 有 DeFi 协议，如SigmaUSD 、 DEX 像Spectrum、 NFT 平台和各种工具。探索生态系统页面更多。"
+        },
+        "defi": {
+          "q": "哪些Defi 选项可用？",
+          "a": "Ergo 提供算法马氏体（SigmaUSD）、分散交易所、借贷协议和生产农业机会。"
+        },
+        "nfts": {
+          "q": "Ergo 支持NFT吗？",
+          "a": "是的！Ergo 有一个充满活力的 NFT 生态系统，它有市场、创建工具和独特的功能，如使用版税的执行。"
+        },
+        "dappsOnErgo": {
+          "q": "[TODO: What kinds of dApps are on Ergo?]",
+          "a": "[TODO: Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more.]"
+        },
+        "ergoMixer": {
+          "q": "[TODO: What is ErgoMixer?]",
+          "a": "[TODO: ErgoMixer is a non-custodial service that increases your transaction privacy by mixing your ERG with others, making it difficult to trace your transaction history.]"
+        }
+      },
+      "community": {
+        "getHelp": {
+          "q": "在哪里能得到帮助？",
+          "a": "加入我们的Discord, Telegram, 或访问Ergo Forum。社区欢迎并随时准备帮助新来者。"
+        },
+        "contribute": {
+          "q": "我如何为埃尔戈做贡献？",
+          "a": "您可以通过开发、文档、社区支持、内容创建或申请生态系统赠款作出贡献。"
+        },
+        "stayUpdated": {
+          "q": "如何随时更新Ergo新闻？",
+          "a": "在Twitter上关注@ergoplatform.org，加入我们的 Discord/ Telegram，订阅通讯，或查看官方博客。"
+        },
+        "whoGoverns": {
+          "q": "[TODO: Who governs Ergo?]",
+          "a": "[TODO: Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support.]"
+        },
+        "howToContribute": {
+          "q": "[TODO: How can I contribute if I'm not a developer?]",
+          "a": "[TODO: You can help with community support, content creation (articles, videos), translation, testing dApps, or simply spreading awareness about Ergo.]"
         }
       },
       "technology": {
@@ -51,90 +135,6 @@
         "sigmaProtocols": {
           "q": "[TODO: What are Sigma Protocols?]",
           "a": "[TODO: These are advanced zero-knowledge proofs built into Ergo's core, enabling privacy features like ErgoMixer, complex multi-party contracts, and secure multi-signature schemes.]"
-        }
-      },
-      "gettingStarted": {
-        "ergCoinUse": {
-          "q": "[TODO: What is the ERG coin used for?]",
-          "a": "[TODO: ERG is used for transaction fees, collateral for stablecoins (SigmaUSD), participating in DeFi applications, powering dApps (NFTs, gaming), and incentivizing miners.]"
-        },
-        "howToGetErg": {
-          "q": "[TODO: How can I get ERG?]",
-          "a": "[TODO: You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing.]"
-        },
-        "bestWallet": {
-          "q": "[TODO: Which wallet is best for beginners?]",
-          "a": "[TODO: The official mobile wallets (Android/iOS) or the Nautilus Wallet (browser extension) are excellent, user-friendly starting points.]"
-        },
-        "getErg": {
-          "q": "如何获得ERG令牌？",
-          "a": "您可以在KuCoin、Gate.io或 CoinEx等交易所购买ERG，或通过采矿或参与生态系统赚取ERG。"
-        },
-        "wallet": {
-          "q": "我应该使用哪个钱包？",
-          "a": "最受欢迎的选项包括Nautilus(浏览器扩展)、官方移动钱包或像Ledger这样的硬件钱包以实现最大安全。"
-        },
-        "startMining": {
-          "q": "如何开始开采ERG？",
-          "a": "您可以使用 GPU 矿工挖掘ERG 矿工。请检查我们的采矿指南以了解池建议和设置说明。"
-        }
-      },
-      "ecosystem": {
-        "dappsOnErgo": {
-          "q": "[TODO: What kinds of dApps are on Ergo?]",
-          "a": "[TODO: Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more.]"
-        },
-        "ergoMixer": {
-          "q": "[TODO: What is ErgoMixer?]",
-          "a": "[TODO: ErgoMixer is a non-custodial service that increases your transaction privacy by mixing your ERG with others, making it difficult to trace your transaction history.]"
-        },
-        "dApps": {
-          "q": "Ergo上有哪些dApp？",
-          "a": "Ergo 有 DeFi 协议，如SigmaUSD 、 DEX 像Spectrum、 NFT 平台和各种工具。探索生态系统页面更多。"
-        },
-        "defi": {
-          "q": "哪些Defi 选项可用？",
-          "a": "Ergo 提供算法马氏体（SigmaUSD）、分散交易所、借贷协议和生产农业机会。"
-        },
-        "nfts": {
-          "q": "Ergo 支持NFT吗？",
-          "a": "是的！Ergo 有一个充满活力的 NFT 生态系统，它有市场、创建工具和独特的功能，如使用版税的执行。"
-        }
-      },
-      "community": {
-        "whoGoverns": {
-          "q": "[TODO: Who governs Ergo?]",
-          "a": "[TODO: Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support.]"
-        },
-        "howToContribute": {
-          "q": "[TODO: How can I contribute if I'm not a developer?]",
-          "a": "[TODO: You can help with community support, content creation (articles, videos), translation, testing dApps, or simply spreading awareness about Ergo.]"
-        },
-        "getHelp": {
-          "q": "在哪里能得到帮助？",
-          "a": "加入我们的Discord, Telegram, 或访问Ergo Forum。社区欢迎并随时准备帮助新来者。"
-        },
-        "contribute": {
-          "q": "我如何为埃尔戈做贡献？",
-          "a": "您可以通过开发、文档、社区支持、内容创建或申请生态系统赠款作出贡献。"
-        },
-        "stayUpdated": {
-          "q": "如何随时更新Ergo新闻？",
-          "a": "在Twitter上关注@ergoplatform.org，加入我们的 Discord/ Telegram，订阅通讯，或查看官方博客。"
-        }
-      },
-      "technologyFaq": {
-        "eUTXO": {
-          "q": "eUTXO 模型是什么？",
-          "a": "扩展的 UTXO (eUTXO) 将比特币的 UTXO 安全性与Etherum 的智能合同表达式结合起来，使得dApp更可预测和安全。"
-        },
-        "autolykos": {
-          "q": "什么是Autolykos共识？",
-          "a": "Autolykos v2是Ergo的ASIC工作证明算法，设计起来是内存硬的，并促进分散的采矿。"
-        },
-        "sigmaProtocols": {
-          "q": "什么是 Sigma 协议？",
-          "a": "Sigma 协议能够在不泄露敏感信息的情况下为隐私和复杂的智能合同提供强大的加密掩码。"
         }
       }
     }
@@ -192,6 +192,19 @@
     "cta": {
       "title": "保持更新",
       "description": "获取新的常见问题解答、指南和重要的网络更新发送到您的收件箱。"
+    },
+    "seo": {
+      "title": "Ergo FAQ — Answers to 50+ Common Questions | Ergo",
+      "description": "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy, eUTXO, ErgoScript — find what you need in seconds.",
+      "ogTitle": "Ergo FAQ — Answers to 50+ Common Questions",
+      "ogDescription": "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy — find what you need in seconds.",
+      "twitterTitle": "Ergo FAQ — Answers to 50+ Common Questions",
+      "twitterDescription": "50+ answered questions about Ergo. Wallets, mining, DeFi, privacy — find answers in seconds."
+    },
+    "schema": {
+      "breadcrumbs": {
+        "faq": "FAQ"
+      }
     }
   },
   "learnFaq": {
