@@ -3,8 +3,9 @@ import { getRequestConfig } from 'next-intl/server';
 // Supported locales
 // English is default (no prefix), Russian enabled
 export const locales = [
-  'en',
-  'ru'
+  'en', 'ru', 'zh-cn', 'zh-tw',
+  'tr', 'ko-kr', 'es', 'pt-br',
+  'ja', 'de', 'fr', 'it'
 ] as const;
 
 // Локали с префиксами (все кроме английского)

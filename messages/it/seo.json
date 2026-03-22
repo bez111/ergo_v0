@@ -1,0 +1,80 @@
+{
+  "seo": {
+    "defaultTitle": "Ergo — La Agentic Blockchain per il denaro contrattuale",
+    "defaultDescription": "Ergo è l'agentic blockchain — PoW + eUTXO + ErgoScript pensata per pagamenti autonomi di agenti IA, DeFi e denaro programmabile senza rischio di controparte.",
+    "keywords": "agentic blockchain, blockchain per agenti IA, blockchain pagamenti IA autonomi, pagamenti agenti IA, ergo blockchain, criptovaluta, DeFi, smart contract, Ergo, eUTXO, proof of work",
+    "home": {
+      "meta": {
+        "title": "Ergo — La Agentic Blockchain | Smart Contract PoW resistenti al MEV",
+        "description": "L'agentic blockchain per agenti IA autonomi: PoW + eUTXO per DeFi, pagamenti di agenti IA, privacy e denaro sano. Commissioni basse e prevedibili, nessun pre-mine, nessun VC – costruita da cypherpunk per la libertà finanziaria.",
+        "keywords": "agentic blockchain, blockchain per agenti IA, blockchain pagamenti IA autonomi, pagamenti agenti IA, ergo blockchain, finanza decentralizzata, blockchain resistente al MEV, modello eUTXO, denaro resistente alla censura, mining resistente agli ASIC, criptovaluta a lancio equo, denaro programmabile, sovranità finanziaria, blockchain cypherpunk, DeFi, privacy, denaro sano, ergo agent economy",
+        "og": {
+          "title": "Ergo Blockchain — Denaro senza padroni",
+          "description": "Blockchain PoW eUTXO per DeFi, privacy e denaro sano. Nessun MEV, nessun controllo VC – costruita da cypherpunk per la libertà finanziaria.",
+          "siteName": "Ergo Blockchain",
+          "imageAlt": "Ergo Blockchain - Denaro senza padroni"
+        },
+        "twitter": {
+          "title": "Ergo Blockchain — Denaro senza padroni",
+          "description": "Blockchain PoW eUTXO per DeFi, privacy e denaro sano. Nessun MEV, nessun VC – costruita da cypherpunk per la libertà."
+        },
+        "heroImageAlt": "Ergo Platform - Blockchain resiliente per il denaro contrattuale"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "Cos'è Ergo?",
+            "answer": "Ergo è una blockchain Proof-of-Work open-source e sicura per denaro programmabile e resistente alla censura. Utilizza il modello eUTXO che combina la sicurezza di Bitcoin con capacità di smart contract, privacy opzionale e commissioni basse prevedibili (~0,01 $)."
+          },
+          {
+            "question": "Come comprare ERG?",
+            "answer": "Puoi acquistare ERG su exchange come KuCoin, Gate.io, Bitpanda o exchange decentralizzati come Spectrum Finance. Prima crea un wallet (Nautilus, SAFEW o Ergo Mobile Wallet), poi acquista ERG e preleva verso il tuo indirizzo wallet."
+          },
+          {
+            "question": "Ergo è un buon investimento?",
+            "answer": "Ergo ha un'offerta fissa di 97,7 M di ERG senza pre-mine e con un lancio equo. È una blockchain Proof-of-Work con tecnologia unica (eUTXO, Sigma Protocols). Come per qualsiasi criptovaluta, fai le tue ricerche e investi solo ciò che puoi permetterti di perdere."
+          },
+          {
+            "question": "Cosa distingue Ergo dalle altre blockchain?",
+            "answer": "Ergo utilizza il modello eUTXO per transazioni prevedibili e resistenti al MEV. Integra Sigma Protocols per la privacy opzionale, Storage Rent per la sostenibilità a lungo termine e Autolykos per il mining GPU resistente agli ASIC. Lancio equo senza finanziamenti VC."
+          },
+          {
+            "question": "Come iniziare con Ergo?",
+            "answer": "1) Scarica un wallet (Nautilus per il browser, Ergo Mobile Wallet per il telefono). 2) Salva in modo sicuro la tua frase seed. 3) Procurati ERG da un exchange o DEX. 4) Esplora le app DeFi come Spectrum Finance, SigmaUSD o ErgoMixer."
+          },
+          {
+            "question": "Quali wallet supportano Ergo?",
+            "answer": "I wallet Ergo più diffusi sono Nautilus (estensione browser), SAFEW (web wallet completo), Ergo Mobile Wallet (iOS/Android), Terminus (mobile) e Satergo (desktop). Il supporto per hardware wallet è disponibile tramite integrazione Ledger."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "platform": "PIATTAFORMA",
+    "learnTitle": "IMPARA",
+    "community": "COMMUNITY",
+    "technology": "Tecnologia",
+    "useCases": "Casi d'uso",
+    "ecosystem": "Ecosistema",
+    "compare": "Confronta Blockchain",
+    "infographics": "Infografiche",
+    "wallets": "Wallet",
+    "startHere": "Inizia qui",
+    "documentation": "Documentazione",
+    "glossary": "Glossario",
+    "faq": "FAQ",
+    "playbooks": "Playbooks",
+    "patterns": "Pattern Dev",
+    "github": "GitHub",
+    "grants": "Sovvenzioni",
+    "blog": "Blog",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "allRightsReserved": "TUTTI I DIRITTI RISERVATI.",
+    "copyright": "© {{year}} ERGO PLATFORM. TUTTI I DIRITTI RISERVATI.",
+    "openSource": "ERGO È UN PROGETTO OPEN-SOURCE.",
+    "contributeOnGithub": "CONTRIBUISCI SU GITHUB"
+  }
+}

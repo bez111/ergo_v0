@@ -1,0 +1,80 @@
+{
+  "seo": {
+    "defaultTitle": "Ergo — La Agentic Blockchain pour la monnaie contractuelle",
+    "defaultDescription": "Ergo est l'agentic blockchain — PoW + eUTXO + ErgoScript conçue pour les paiements autonomes d'agents IA, la DeFi et la monnaie programmable sans risque de contrepartie.",
+    "keywords": "agentic blockchain, blockchain pour agents IA, blockchain paiements IA autonomes, paiements agents IA, ergo blockchain, cryptomonnaie, DeFi, contrats intelligents, Ergo, eUTXO, preuve de travail",
+    "home": {
+      "meta": {
+        "title": "Ergo — La Agentic Blockchain | Smart Contracts PoW résistants au MEV",
+        "description": "L'agentic blockchain pour agents IA autonomes : PoW + eUTXO pour la DeFi, les paiements d'agents IA, la confidentialité et la monnaie saine. Frais bas prévisibles, pas de pré-minage, pas de capital-risque – conçue par des cypherpunks pour la liberté financière.",
+        "keywords": "agentic blockchain, blockchain pour agents IA, blockchain paiements IA autonomes, paiements agents IA, ergo blockchain, finance décentralisée, blockchain résistante au MEV, modèle eUTXO, monnaie résistante à la censure, minage résistant aux ASIC, cryptomonnaie à lancement équitable, monnaie programmable, souveraineté financière, blockchain cypherpunk, DeFi, confidentialité, monnaie saine, ergo agent economy",
+        "og": {
+          "title": "Ergo Blockchain — La monnaie sans maîtres",
+          "description": "Blockchain PoW eUTXO pour la DeFi, la confidentialité et la monnaie saine. Pas de MEV, pas de contrôle du capital-risque – conçue par des cypherpunks pour la liberté financière.",
+          "siteName": "Ergo Blockchain",
+          "imageAlt": "Ergo Blockchain - La monnaie sans maîtres"
+        },
+        "twitter": {
+          "title": "Ergo Blockchain — La monnaie sans maîtres",
+          "description": "Blockchain PoW eUTXO pour la DeFi, la confidentialité et la monnaie saine. Pas de MEV, pas de VC – conçue par des cypherpunks pour la liberté."
+        },
+        "heroImageAlt": "Ergo Platform - Blockchain résiliente pour la monnaie contractuelle"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "Qu'est-ce qu'Ergo ?",
+            "answer": "Ergo est une blockchain Proof-of-Work open-source et sécurisée pour une monnaie programmable et résistante à la censure. Elle utilise le modèle eUTXO combinant la sécurité de Bitcoin avec des capacités de contrats intelligents, une confidentialité optionnelle et des frais bas prévisibles (~0,01 $)."
+          },
+          {
+            "question": "Comment acheter des ERG ?",
+            "answer": "Vous pouvez acheter des ERG sur des plateformes comme KuCoin, Gate.io, Bitpanda ou des échanges décentralisés comme Spectrum Finance. Commencez par créer un portefeuille (Nautilus, SAFEW ou Ergo Mobile Wallet), achetez des ERG puis retirez-les vers votre adresse de portefeuille."
+          },
+          {
+            "question": "Ergo est-il un bon investissement ?",
+            "answer": "Ergo dispose d'une offre fixe de 97,7 M d'ERG sans pré-minage et avec un lancement équitable. C'est une blockchain Proof-of-Work dotée d'une technologie unique (eUTXO, Sigma Protocols). Comme pour toute cryptomonnaie, faites vos propres recherches et n'investissez que ce que vous pouvez vous permettre de perdre."
+          },
+          {
+            "question": "Qu'est-ce qui différencie Ergo des autres blockchains ?",
+            "answer": "Ergo utilise le modèle eUTXO pour des transactions résistantes au MEV et prévisibles. Il intègre Sigma Protocols pour une confidentialité optionnelle, Storage Rent pour une durabilité à long terme, et Autolykos pour le minage GPU résistant aux ASIC. Lancement équitable sans financement par capital-risque."
+          },
+          {
+            "question": "Comment démarrer avec Ergo ?",
+            "answer": "1) Téléchargez un portefeuille (Nautilus pour le navigateur, Ergo Mobile Wallet pour le téléphone). 2) Sauvegardez votre phrase mnémonique en lieu sûr. 3) Obtenez des ERG sur une plateforme d'échange ou un DEX. 4) Explorez les applications DeFi comme Spectrum Finance, SigmaUSD ou ErgoMixer."
+          },
+          {
+            "question": "Quels portefeuilles prennent en charge Ergo ?",
+            "answer": "Les portefeuilles Ergo populaires incluent Nautilus (extension de navigateur), SAFEW (portefeuille web complet), Ergo Mobile Wallet (iOS/Android), Terminus (mobile) et Satergo (bureau). La prise en charge des portefeuilles matériels est disponible via l'intégration Ledger."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "platform": "PLATEFORME",
+    "learnTitle": "APPRENDRE",
+    "community": "COMMUNAUTÉ",
+    "technology": "Technologie",
+    "useCases": "Cas d'usage",
+    "ecosystem": "Écosystème",
+    "compare": "Comparer les blockchains",
+    "infographics": "Infographies",
+    "wallets": "Portefeuilles",
+    "startHere": "Commencer ici",
+    "documentation": "Documentation",
+    "glossary": "Glossaire",
+    "faq": "FAQ",
+    "playbooks": "Playbooks",
+    "patterns": "Modèles Dev",
+    "github": "GitHub",
+    "grants": "Subventions",
+    "blog": "Blog",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "allRightsReserved": "TOUS DROITS RÉSERVÉS.",
+    "copyright": "© {{year}} ERGO PLATFORM. TOUS DROITS RÉSERVÉS.",
+    "openSource": "ERGO EST UN PROJET OPEN-SOURCE.",
+    "contributeOnGithub": "CONTRIBUER SUR GITHUB"
+  }
+}

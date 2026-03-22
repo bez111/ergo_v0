@@ -1,36 +1,80 @@
 {
   "seo": {
-    "defaultTitle": "Ergo Platform - Contractual Money 的可持续Blockchain",
-    "defaultDescription": "Ergo 创建先进的加密功能和全新的DeFi功能，这是一个建立在长达十年的区块链理论和开发基础上的坚实基础。",
-    "keywords": "blockchain, cryptocurency, DeFi, 智能合同，Ergo, UTXO, 工作证明"
+    "defaultTitle": "Ergo — 智能代理区块链（Agentic Blockchain），合约货币的未来",
+    "defaultDescription": "Ergo 是智能代理区块链（agentic blockchain）——PoW + eUTXO + ErgoScript，专为自主 AI 代理支付、DeFi 和无交易对手风险的可编程货币而构建。",
+    "keywords": "agentic blockchain, 智能代理区块链, blockchain for AI agents, AI代理区块链, autonomous AI payments blockchain, 自主AI支付区块链, AI agent payments, AI代理支付, ergo blockchain, Ergo区块链, cryptocurrency, 加密货币, DeFi, 去中心化金融, smart contracts, 智能合约, Ergo, eUTXO, proof of work, 工作量证明",
+    "home": {
+      "meta": {
+        "title": "Ergo — 智能代理区块链 | 抗MEV的PoW智能合约",
+        "description": "智能代理区块链：PoW + eUTXO，用于 DeFi、AI 代理支付、隐私和健全货币。可预测的低手续费，无预挖，无风投——由密码朋克为金融自由而构建。",
+        "keywords": "agentic blockchain, 智能代理区块链, blockchain for AI agents, AI代理区块链, autonomous AI payments blockchain, 自主AI支付, AI agent payments, AI代理支付, ergo blockchain, Ergo区块链, decentralized finance, 去中心化金融, MEV resistant blockchain, 抗MEV区块链, eUTXO model, eUTXO模型, censorship resistant money, 抗审查货币, ASIC resistant mining, 抗ASIC挖矿, fair launch cryptocurrency, 公平发行加密货币, programmable money, 可编程货币, financial sovereignty, 金融主权, cypherpunk blockchain, 密码朋克区块链, DeFi, privacy, 隐私, sound money, 健全货币, ergo agent economy, Ergo代理经济",
+        "og": {
+          "title": "Ergo 区块链 — 无主之钱",
+          "description": "用于 DeFi、隐私和健全货币的 PoW eUTXO 区块链。无 MEV，无风投控制——由密码朋克为金融自由而构建。",
+          "siteName": "Ergo 区块链",
+          "imageAlt": "Ergo 区块链 - 无主之钱"
+        },
+        "twitter": {
+          "title": "Ergo 区块链 — 无主之钱",
+          "description": "用于 DeFi、隐私和健全货币的 PoW eUTXO 区块链。无 MEV，无风投——由密码朋克为自由而构建。"
+        },
+        "heroImageAlt": "Ergo 平台 - 合约货币的坚韧区块链"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "什么是 Ergo？",
+            "answer": "Ergo 是一个安全的开源工作量证明（PoW）区块链，专为可编程、抗审查货币而设计。它采用 eUTXO 模型，将比特币的安全性与智能合约能力相结合，提供可选隐私功能和可预测的低手续费（约 $0.01）。"
+          },
+          {
+            "question": "如何购买 ERG？",
+            "answer": "您可以在 KuCoin、Gate.io、Bitpanda 等中心化交易所，或 Spectrum Finance 等去中心化交易所购买 ERG。首先获取钱包（Nautilus、SAFEW 或 Ergo 移动钱包），然后购买 ERG 并提现到您的钱包地址。"
+          },
+          {
+            "question": "Ergo 是好的投资选择吗？",
+            "answer": "Ergo 总供应量固定为 9770 万 ERG，无预挖，公平发行。它是一条拥有独特技术（eUTXO、Sigma Protocols）的工作量证明区块链。与所有加密货币一样，请自行研究，仅投入您能承受损失的资金。"
+          },
+          {
+            "question": "Ergo 与其他区块链有何不同？",
+            "answer": "Ergo 采用 eUTXO 模型，实现抗 MEV 的可预测交易。它具备 Sigma Protocols 提供的可选隐私功能、用于长期可持续性的存储租金机制，以及支持抗 ASIC GPU 挖矿的 Autolykos 算法。公平发行，无风投融资。"
+          },
+          {
+            "question": "如何开始使用 Ergo？",
+            "answer": "1) 下载钱包（浏览器端用 Nautilus，手机端用 Ergo 移动钱包）。2) 安全备份您的助记词。3) 从交易所或 DEX 获取 ERG。4) 探索 DeFi 应用，如 Spectrum Finance、SigmaUSD 或 ErgoMixer。"
+          },
+          {
+            "question": "哪些钱包支持 Ergo？",
+            "answer": "常用的 Ergo 钱包包括：Nautilus（浏览器扩展）、SAFEW（功能完整的网页钱包）、Ergo 移动钱包（iOS/Android）、Terminus（移动端）和 Satergo（桌面端）。通过 Ledger 集成还支持硬件钱包。"
+          }
+        ]
+      }
+    }
   },
   "footer": {
-    "platform": "平板",
-    "developers": "开发者",
-    "community": "常驻代表",
+    "platform": "平台",
+    "learnTitle": "学习",
+    "community": "社区",
     "technology": "技术",
-    "useCases": "使用案例",
-    "ecosystem": "生态环境",
+    "useCases": "使用场景",
+    "ecosystem": "生态系统",
+    "compare": "区块链对比",
+    "infographics": "信息图表",
     "wallets": "钱包",
-    "documentation": "文件",
-    "learn": "学习",
+    "startHere": "从这里开始",
+    "documentation": "文档",
+    "glossary": "术语表",
+    "faq": "常见问题",
+    "playbooks": "操作手册",
+    "patterns": "开发模式",
     "github": "GitHub",
-    "grants": "补助金",
+    "grants": "资助",
     "blog": "博客",
     "discord": "Discord",
     "telegram": "Telegram",
-    "twitter": "推特",
-    "allRightsReserved": "ALL RIGHTS RESERVED.",
-    "copyright": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED.",
-    "openSource": "ERGO AN OPEN-SOURCE PROJECT.",
-    "contributeOnGithub": "CONTRIBUTE ON GITHUB",
-    "learnTitle": "得分",
-    "compare": "比较Blockchains",
-    "infographics": "信息图像",
-    "startHere": "从这里开始",
-    "glossary": "Glossary",
-    "faq": "常见问题",
-    "playbooks": "游戏书",
-    "patterns": "开发模式"
+    "twitter": "Twitter",
+    "allRightsReserved": "版权所有。",
+    "copyright": "© {{year}} ERGO PLATFORM. 版权所有。",
+    "openSource": "ERGO 是一个开源项目。",
+    "contributeOnGithub": "在 GITHUB 上参与贡献"
   }
 }

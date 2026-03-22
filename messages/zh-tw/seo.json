@@ -1,0 +1,80 @@
+{
+  "seo": {
+    "defaultTitle": "Ergo — 智能代理區塊鏈（Agentic Blockchain），合約貨幣的未來",
+    "defaultDescription": "Ergo 是智能代理區塊鏈（agentic blockchain）——PoW + eUTXO + ErgoScript，專為自主 AI 代理支付、DeFi 和無交易對手風險的可程式化貨幣而構建。",
+    "keywords": "agentic blockchain, 智能代理區塊鏈, blockchain for AI agents, AI代理區塊鏈, autonomous AI payments blockchain, 自主AI支付區塊鏈, AI agent payments, AI代理支付, ergo blockchain, Ergo區塊鏈, cryptocurrency, 加密貨幣, DeFi, 去中心化金融, smart contracts, 智能合約, Ergo, eUTXO, proof of work, 工作量證明",
+    "home": {
+      "meta": {
+        "title": "Ergo — 智能代理區塊鏈 | 抗MEV的PoW智能合約",
+        "description": "智能代理區塊鏈：PoW + eUTXO，用於 DeFi、AI 代理支付、隱私和健全貨幣。可預測的低手續費，無預挖，無創投——由密碼龐克為金融自由而構建。",
+        "keywords": "agentic blockchain, 智能代理區塊鏈, blockchain for AI agents, AI代理區塊鏈, autonomous AI payments blockchain, 自主AI支付, AI agent payments, AI代理支付, ergo blockchain, Ergo區塊鏈, decentralized finance, 去中心化金融, MEV resistant blockchain, 抗MEV區塊鏈, eUTXO model, eUTXO模型, censorship resistant money, 抗審查貨幣, ASIC resistant mining, 抗ASIC挖礦, fair launch cryptocurrency, 公平發行加密貨幣, programmable money, 可程式化貨幣, financial sovereignty, 金融主權, cypherpunk blockchain, 密碼龐克區塊鏈, DeFi, privacy, 隱私, sound money, 健全貨幣, ergo agent economy, Ergo代理經濟",
+        "og": {
+          "title": "Ergo 區塊鏈 — 無主之錢",
+          "description": "用於 DeFi、隱私和健全貨幣的 PoW eUTXO 區塊鏈。無 MEV，無創投控制——由密碼龐克為金融自由而構建。",
+          "siteName": "Ergo 區塊鏈",
+          "imageAlt": "Ergo 區塊鏈 - 無主之錢"
+        },
+        "twitter": {
+          "title": "Ergo 區塊鏈 — 無主之錢",
+          "description": "用於 DeFi、隱私和健全貨幣的 PoW eUTXO 區塊鏈。無 MEV，無創投——由密碼龐克為自由而構建。"
+        },
+        "heroImageAlt": "Ergo 平台 - 合約貨幣的堅韌區塊鏈"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "什麼是 Ergo？",
+            "answer": "Ergo 是一個安全的開源工作量證明（PoW）區塊鏈，專為可程式化、抗審查貨幣而設計。它採用 eUTXO 模型，將比特幣的安全性與智能合約能力相結合，提供可選隱私功能和可預測的低手續費（約 $0.01）。"
+          },
+          {
+            "question": "如何購買 ERG？",
+            "answer": "您可以在 KuCoin、Gate.io、Bitpanda 等中心化交易所，或 Spectrum Finance 等去中心化交易所購買 ERG。首先取得錢包（Nautilus、SAFEW 或 Ergo 行動錢包），然後購買 ERG 並提領至您的錢包地址。"
+          },
+          {
+            "question": "Ergo 是好的投資選擇嗎？",
+            "answer": "Ergo 總供應量固定為 9770 萬 ERG，無預挖，公平發行。它是一條擁有獨特技術（eUTXO、Sigma Protocols）的工作量證明區塊鏈。與所有加密貨幣一樣，請自行研究，僅投入您能承受損失的資金。"
+          },
+          {
+            "question": "Ergo 與其他區塊鏈有何不同？",
+            "answer": "Ergo 採用 eUTXO 模型，實現抗 MEV 的可預測交易。它具備 Sigma Protocols 提供的可選隱私功能、用於長期可持續性的存儲租金機制，以及支援抗 ASIC GPU 挖礦的 Autolykos 演算法。公平發行，無創投融資。"
+          },
+          {
+            "question": "如何開始使用 Ergo？",
+            "answer": "1) 下載錢包（瀏覽器端用 Nautilus，手機端用 Ergo 行動錢包）。2) 安全備份您的助記詞。3) 從交易所或 DEX 取得 ERG。4) 探索 DeFi 應用，如 Spectrum Finance、SigmaUSD 或 ErgoMixer。"
+          },
+          {
+            "question": "哪些錢包支援 Ergo？",
+            "answer": "常用的 Ergo 錢包包括：Nautilus（瀏覽器擴充功能）、SAFEW（功能完整的網頁錢包）、Ergo 行動錢包（iOS/Android）、Terminus（行動端）和 Satergo（桌面端）。透過 Ledger 整合還支援硬體錢包。"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "platform": "平台",
+    "learnTitle": "學習",
+    "community": "社群",
+    "technology": "技術",
+    "useCases": "使用場景",
+    "ecosystem": "生態系統",
+    "compare": "區塊鏈比較",
+    "infographics": "資訊圖表",
+    "wallets": "錢包",
+    "startHere": "從這裡開始",
+    "documentation": "文件",
+    "glossary": "術語表",
+    "faq": "常見問題",
+    "playbooks": "操作手冊",
+    "patterns": "開發模式",
+    "github": "GitHub",
+    "grants": "資助",
+    "blog": "部落格",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "allRightsReserved": "版權所有。",
+    "copyright": "© {{year}} ERGO PLATFORM. 版權所有。",
+    "openSource": "ERGO 是一個開源專案。",
+    "contributeOnGithub": "在 GITHUB 上參與貢獻"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest news and updates",
+    "description": "Latest news and updates from Ergo",
+    "readMore": "Read More",
+    "categories": {
+      "technology": "Technology",
+      "ecosystem": "Ecosystem",
+      "community": "Community",
+      "announcements": "Announcements",
+      "all": "All Posts",
+      "development": "Development",
+      "technical": "Technical",
+      "education": "Education"
+    },
+    "seo": {
+      "title": "Blog - Ergo News & Updates | Ergo Platform",
+      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
+      "keywords": "Ergo blog, blockchain news, updates, articles"
+    },
+    "featured": {
+      "title": "Featured Posts",
+      "readMore": "Read More"
+    },
+    "recent": {
+      "title": "Recent Posts",
+      "viewAll": "View All Posts"
+    },
+    "newsletter": {
+      "title": "Subscribe to Newsletter",
+      "description": "Get the latest updates delivered to your inbox",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "seo": {
+    "defaultTitle": "Ergo — エージェンティック・ブロックチェーン（Agentic Blockchain）、契約通貨の未来",
+    "defaultDescription": "Ergoはエージェンティック・ブロックチェーン（agentic blockchain）——PoW + eUTXO + ErgoScriptで構築された、自律型AIエージェント決済・DeFi・カウンターパーティリスクのないプログラマブルマネーのためのブロックチェーンです。",
+    "keywords": "agentic blockchain, エージェンティックブロックチェーン, blockchain for AI agents, AIエージェントブロックチェーン, autonomous AI payments blockchain, 自律型AI決済ブロックチェーン, AI agent payments, AIエージェント決済, ergo blockchain, Ergoブロックチェーン, cryptocurrency, 暗号通貨, DeFi, 分散型金融, smart contracts, スマートコントラクト, Ergo, eUTXO, proof of work, プルーフ・オブ・ワーク",
+    "home": {
+      "meta": {
+        "title": "Ergo — エージェンティック・ブロックチェーン | MEV耐性のPoWスマートコントラクト",
+        "description": "エージェンティック・ブロックチェーン：DeFi・AIエージェント決済・プライバシー・健全な通貨のためのPoW + eUTXO。予測可能な低手数料、プレマインなし、VCなし——サイファーパンクが金融の自由のために構築。",
+        "keywords": "agentic blockchain, エージェンティックブロックチェーン, blockchain for AI agents, AIエージェントブロックチェーン, autonomous AI payments blockchain, 自律型AI決済, AI agent payments, AIエージェント決済, ergo blockchain, Ergoブロックチェーン, decentralized finance, 分散型金融, MEV resistant blockchain, MEV耐性ブロックチェーン, eUTXO model, eUTXOモデル, censorship resistant money, 検閲耐性通貨, ASIC resistant mining, ASIC耐性マイニング, fair launch cryptocurrency, フェアローンチ暗号通貨, programmable money, プログラマブルマネー, financial sovereignty, 金融主権, cypherpunk blockchain, サイファーパンクブロックチェーン, DeFi, privacy, プライバシー, sound money, 健全な通貨, ergo agent economy, Ergoエージェントエコノミー",
+        "og": {
+          "title": "Ergoブロックチェーン — 支配者なき通貨",
+          "description": "DeFi・プライバシー・健全な通貨のためのPoW eUTXOブロックチェーン。MEVなし、VC支配なし——サイファーパンクが金融の自由のために構築。",
+          "siteName": "Ergoブロックチェーン",
+          "imageAlt": "Ergoブロックチェーン - 支配者なき通貨"
+        },
+        "twitter": {
+          "title": "Ergoブロックチェーン — 支配者なき通貨",
+          "description": "DeFi・プライバシー・健全な通貨のためのPoW eUTXOブロックチェーン。MEVなし、VCなし——サイファーパンクが自由のために構築。"
+        },
+        "heroImageAlt": "Ergoプラットフォーム - 契約通貨のための強靭なブロックチェーン"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "Ergoとは何ですか？",
+            "answer": "Ergoは、プログラマブルで検閲耐性のある通貨のための、安全なオープンソースのプルーフ・オブ・ワーク（PoW）ブロックチェーンです。eUTXOモデルを採用し、ビットコインのセキュリティとスマートコントラクト機能を組み合わせ、オプションのプライバシー機能と予測可能な低手数料（約$0.01）を提供します。"
+          },
+          {
+            "question": "ERGの購入方法は？",
+            "answer": "ERGはKuCoin、Gate.io、BitpandaなどのCEX、またはSpectrum FinanceなどのDEXで購入できます。まずウォレット（Nautilus、SAFEW、またはErgo Mobileウォレット）を用意し、ERGを購入してご自身のウォレットアドレスに出金してください。"
+          },
+          {
+            "question": "Ergoは良い投資対象ですか？",
+            "answer": "Ergoの総供給量は9,770万ERGで固定されており、プレマインなし、フェアローンチです。独自技術（eUTXO、Sigma Protocols）を持つPoWブロックチェーンです。他の暗号通貨と同様に、自己調査を行い、損失を許容できる範囲でのみ投資してください。"
+          },
+          {
+            "question": "Ergoが他のブロックチェーンと異なる点は？",
+            "answer": "ErgoはeUTXOモデルによりMEV耐性のある予測可能なトランザクションを実現します。Sigma Protocolsによるオプションのプライバシー機能、長期的な持続可能性のためのストレージレント、ASIC耐性GPU採掘のためのAutolykosを備えています。VC資金調達なしのフェアローンチです。"
+          },
+          {
+            "question": "Ergoを始めるには？",
+            "answer": "1) ウォレットをダウンロード（ブラウザ用はNautilus、スマートフォン用はErgo Mobileウォレット）。2) シードフレーズを安全にバックアップ。3) 取引所またはDEXでERGを入手。4) Spectrum Finance、SigmaUSD、ErgoMixerなどのDeFiアプリを探索。"
+          },
+          {
+            "question": "Ergoに対応しているウォレットは？",
+            "answer": "主なErgoウォレットには、Nautilus（ブラウザ拡張機能）、SAFEW（高機能ウェブウォレット）、Ergo Mobileウォレット（iOS/Android）、Terminus（モバイル）、Satergo（デスクトップ）があります。Ledger連携によるハードウェアウォレットもサポートされています。"
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "platform": "プラットフォーム",
+    "learnTitle": "学ぶ",
+    "community": "コミュニティ",
+    "technology": "テクノロジー",
+    "useCases": "ユースケース",
+    "ecosystem": "エコシステム",
+    "compare": "ブロックチェーン比較",
+    "infographics": "インフォグラフィック",
+    "wallets": "ウォレット",
+    "startHere": "はじめに",
+    "documentation": "ドキュメント",
+    "glossary": "用語集",
+    "faq": "よくある質問",
+    "playbooks": "プレイブック",
+    "patterns": "開発パターン",
+    "github": "GitHub",
+    "grants": "グラント",
+    "blog": "ブログ",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "allRightsReserved": "無断複製・転載を禁じます。",
+    "copyright": "© {{year}} ERGO PLATFORM. 無断複製・転載を禁じます。",
+    "openSource": "ERGOはオープンソースプロジェクトです。",
+    "contributeOnGithub": "GITHUBでコントリビュート"
+  }
+}

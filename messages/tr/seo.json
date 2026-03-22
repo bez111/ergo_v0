@@ -1,0 +1,80 @@
+{
+  "seo": {
+    "defaultTitle": "Ergo — Sözleşmeli Para İçin Ajanlık Blok Zinciri",
+    "defaultDescription": "Ergo, ajanlık blok zinciridir (agentic blockchain) — özerk AI ajan ödemeleri, DeFi ve karşı taraf riski olmayan programlanabilir para için tasarlanmış PoW + eUTXO + ErgoScript.",
+    "keywords": "ajanlık blok zinciri, agentic blockchain, AI ajanlar için blok zinciri, blockchain for AI agents, özerk AI ödeme blok zinciri, autonomous AI payments blockchain, AI ajan ödemeleri, AI agent payments, ergo blok zinciri, ergo blockchain, kripto para, cryptocurrency, DeFi, merkeziyetsiz finans, akıllı sözleşmeler, smart contracts, Ergo, eUTXO, iş kanıtı, proof of work",
+    "home": {
+      "meta": {
+        "title": "Ergo — Ajanlık Blok Zinciri | MEV Dirençli PoW Akıllı Sözleşmeler",
+        "description": "Ajanlık blok zinciri (agentic blockchain): DeFi, AI ajan ödemeleri, gizlilik ve sağlam para için PoW + eUTXO. Öngörülebilir düşük ücretler, ön madencilik yok, VC yok — finansal özgürlük için cypherpunk'lar tarafından inşa edildi.",
+        "keywords": "ajanlık blok zinciri, agentic blockchain, AI ajanlar için blok zinciri, blockchain for AI agents, özerk AI ödeme blok zinciri, autonomous AI payments blockchain, AI ajan ödemeleri, AI agent payments, ergo blok zinciri, ergo blockchain, merkeziyetsiz finans, decentralized finance, MEV dirençli blok zinciri, MEV resistant blockchain, eUTXO modeli, eUTXO model, sansüre dirençli para, censorship resistant money, ASIC dirençli madencilik, ASIC resistant mining, adil başlangıç kripto parası, fair launch cryptocurrency, programlanabilir para, programmable money, finansal egemenlik, financial sovereignty, cypherpunk blok zinciri, cypherpunk blockchain, DeFi, gizlilik, privacy, sağlam para, sound money, ergo agent economy",
+        "og": {
+          "title": "Ergo Blok Zinciri — Efendisiz Para",
+          "description": "DeFi, gizlilik ve sağlam para için PoW eUTXO blok zinciri. MEV yok, VC kontrolü yok — finansal özgürlük için cypherpunk'lar tarafından inşa edildi.",
+          "siteName": "Ergo Blockchain",
+          "imageAlt": "Ergo Blockchain - Efendisiz Para"
+        },
+        "twitter": {
+          "title": "Ergo Blok Zinciri — Efendisiz Para",
+          "description": "DeFi, gizlilik ve sağlam para için PoW eUTXO blok zinciri. MEV yok, VC yok — özgürlük için cypherpunk'lar tarafından inşa edildi."
+        },
+        "heroImageAlt": "Ergo Platform — Sözleşmeli Para İçin Dayanıklı Blok Zinciri"
+      },
+      "faq": {
+        "items": [
+          {
+            "question": "Ergo nedir?",
+            "answer": "Ergo, programlanabilir ve sansüre dirençli para için güvenli, açık kaynaklı bir İş Kanıtı (Proof-of-Work) blok zinciridir. Bitcoin'in güvenliğini akıllı sözleşme yetenekleriyle, isteğe bağlı gizlilikle ve öngörülebilir düşük ücretlerle (~$0,01) birleştiren eUTXO modelini kullanır."
+          },
+          {
+            "question": "ERG nasıl satın alınır?",
+            "answer": "ERG'yi KuCoin, Gate.io, Bitpanda gibi borsalarda veya Spectrum Finance gibi merkeziyetsiz borsalarda satın alabilirsiniz. Önce bir cüzdan edinin (Nautilus, SAFEW veya Ergo Mobil Cüzdanı), ardından ERG satın alıp cüzdan adresinize çekin."
+          },
+          {
+            "question": "Ergo iyi bir yatırım mıdır?",
+            "answer": "Ergo, ön madenciliği ve adil başlangıcı olmayan 97,7 milyon ERG sabit arzına sahiptir. Benzersiz teknolojiye (eUTXO, Sigma Protocols) sahip bir İş Kanıtı blok zinciridir. Her kripto parada olduğu gibi, kendi araştırmanızı yapın ve kaybetmeyi göze alabileceğiniz kadar yatırım yapın."
+          },
+          {
+            "question": "Ergo'yu diğer blok zincirlerinden farklı kılan nedir?",
+            "answer": "Ergo, MEV dirençli ve öngörülebilir işlemler için eUTXO modelini kullanır. İsteğe bağlı gizlilik için Sigma Protocols, uzun vadeli sürdürülebilirlik için Storage Rent ve ASIC dirençli GPU madenciliği için Autolykos özelliklerine sahiptir. VC finansmanı olmadan adil başlangıç."
+          },
+          {
+            "question": "Ergo'ya nasıl başlanır?",
+            "answer": "1) Bir cüzdan indirin (tarayıcı için Nautilus, telefon için Ergo Mobil Cüzdanı). 2) Tohum ifadenizi güvenli şekilde yedekleyin. 3) Bir borsadan veya DEX'ten ERG alın. 4) Spectrum Finance, SigmaUSD veya ErgoMixer gibi DeFi uygulamalarını keşfedin."
+          },
+          {
+            "question": "Ergo'yu hangi cüzdanlar destekler?",
+            "answer": "Popüler Ergo cüzdanları arasında Nautilus (tarayıcı uzantısı), SAFEW (tam özellikli web cüzdanı), Ergo Mobil Cüzdanı (iOS/Android), Terminus (mobil) ve Satergo (masaüstü) bulunur. Ledger entegrasyonu aracılığıyla donanım cüzdan desteği de mevcuttur."
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "platform": "PLATFORM",
+    "learnTitle": "ÖĞREN",
+    "community": "TOPLULUK",
+    "technology": "Teknoloji",
+    "useCases": "Kullanım Alanları",
+    "ecosystem": "Ekosistem",
+    "compare": "Blok Zincirlerini Karşılaştır",
+    "infographics": "İnfografikler",
+    "wallets": "Cüzdanlar",
+    "startHere": "Buradan Başla",
+    "documentation": "Belgeler",
+    "glossary": "Sözlük",
+    "faq": "SSS",
+    "playbooks": "Kılavuzlar",
+    "patterns": "Geliştirici Kalıpları",
+    "github": "GitHub",
+    "grants": "Hibeler",
+    "blog": "Blog",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "allRightsReserved": "TÜM HAKLAR SAKLIDIR.",
+    "copyright": "© {{year}} ERGO PLATFORM. TÜM HAKLAR SAKLIDIR.",
+    "openSource": "ERGO AÇIK KAYNAK BİR PROJEDİR.",
+    "contributeOnGithub": "GITHUB'DA KATKI SAĞ"
+  }
+}
