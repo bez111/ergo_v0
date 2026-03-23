@@ -2,23 +2,39 @@
   "compare": {
     "page": {
       "seo": {
-        "title": "Ergo vs Bitcoin, Ethereum, Cardano — Full Comparison | Ergo",
-        "description": "Compare Ergo to Bitcoin, Ethereum, Cardano, Monero & more. Side-by-side analysis of consensus, smart contracts, privacy & tokenomics.",
-        "keywords": "ergo comparison, ergo vs bitcoin, ergo vs ethereum, blockchain comparison, ergo vs cardano, ergo vs monero, cryptocurrency comparison, best blockchain"
+        "title": "Ergo vs Bitcoin, Ethereum, Cardano — 全面对比 | Ergo",
+        "description": "将 Ergo 与 Bitcoin、Ethereum、Cardano、Monero 等进行比较。共识机制、智能合约、隐私与代币经济的横向分析。",
+        "keywords": "Ergo 对比, Ergo vs Bitcoin, Ergo vs Ethereum, 区块链对比, Ergo vs Cardano, Ergo vs Monero, 加密货币对比, 最佳区块链"
       },
       "schema": {
         "breadcrumbs": {
-          "compare": "Compare"
+          "compare": "对比"
         },
         "collection": {
-          "name": "Ergo Blockchain Comparisons",
-          "description": "Comprehensive comparisons of Ergo with other major blockchain platforms including Bitcoin, Ethereum, Cardano, Monero, and more."
+          "name": "Ergo 区块链对比",
+          "description": "Ergo 与其他主要区块链平台（包括 Bitcoin、Ethereum、Cardano、Monero 等）的全面对比。"
         },
         "faq": {
           "items": [
             {
-              "question": "Is Ergo better than Ethereum?",
-              "answer": "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant (no front-running), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers."
+              "question": "Ergo 比 Ethereum 更好吗？",
+              "answer": "Ergo 与 Ethereum 用途不同。Ergo 采用 eUTXO 模型，具有 MEV 抗性（无抢先交易），手续费可预测（约 $0.01），在 DeFi 方面更为安全。Ethereum 生态更大，开发者更多。对于希望公平、可预测交易且不受 MEV 提取影响的用户，Ergo 是更好的选择。"
+            },
+            {
+              "question": "Ergo 与 Cardano 有何不同？",
+              "answer": "两者都使用 eUTXO 模型，但 Ergo 采用工作量证明（类似 Bitcoin），而 Cardano 采用权益证明。Ergo 是公平启动（无 ICO，无预挖），而 Cardano 进行了 ICO。Ergo 拥有用于隐私的 Sigma 协议、用于可持续性的存储租金，更专注于金融应用和密码朋克价值观。"
+            },
+            {
+              "question": "Ergo 比 Bitcoin 更好吗？",
+              "answer": "Ergo 在 Bitcoin 经过验证的 PoW 安全基础上，通过 ErgoScript 增加了智能合约功能。两者均为公平启动，发行量固定。Ergo 新增：可编程货币（智能合约）、可选隐私（Sigma 协议）、存储租金（可持续性）以及 NiPoPoWs（轻客户端）。Bitcoin 拥有更大的网络效应和流动性。"
+            },
+            {
+              "question": "与其他区块链相比，Ergo 的独特之处在哪里？",
+              "answer": "Ergo 独特地结合了：eUTXO 模型（Bitcoin 安全性 + 智能合约）、Sigma 协议（可选隐私）、存储租金（长期可持续性）、Autolykos（抗 ASIC 挖矿）、公平启动（无预挖，无风险投资）以及 MEV 抗性。没有其他链拥有这一完整组合。"
+            },
+            {
+              "question": "Ergo 的隐私性比 Monero 更强吗？",
+              "answer": "Ergo 通过 Sigma 协议和 ErgoMixer 提供可选隐私，而 Monero 默认强制隐私。Ergo 的方式在需要合规时允许公开，同时仍能实现强隐私。Monero 更适合最大匿名性，Ergo 更适合兼顾智能合约能力的灵活隐私。"
             }
           ]
         }
@@ -49,18 +65,18 @@
         "comparisonsList": "区块链对比列表",
         "visualComparisonsList": "对比信息图列表"
       },
-      "whyMatters": "为什么这些比较事项",
-      "whyMattersSubtitle": "每个区块链都会进行交易。了解这些交易有助于您选择合适的工具来满足您的需要。",
-      "securityFirst": "优先安全",
-      "securityFirstDesc": "Ergo的 eUTXO 模型消除了影响基于账户的链的所有类型的脆弱性。",
+      "whyMatters": "为什么这些对比很重要",
+      "whyMattersSubtitle": "每条区块链都存在权衡取舍。了解这些权衡有助于您选择适合自己需求的工具。",
+      "securityFirst": "安全优先",
+      "securityFirstDesc": "Ergo 的 eUTXO 模型消除了影响基于账户的链的整类漏洞。",
       "fairLaunch": "公平启动",
-      "fairLaunchDesc": "没有ICO、无预设、无VC分配。所有ERG都是通过采矿赚取的，如比特币。",
+      "fairLaunchDesc": "无 ICO、无预挖、无风险投资分配。所有 ERG 均通过挖矿获得，与 Bitcoin 一样。",
       "programmablePrivacy": "可编程隐私",
-      "programmablePrivacyDesc": "Sigma 协议启用了不受信任的零知识验证，并将其建立在核心协议中。",
-      "readyToBuild": "准备在Ergo上建造吗？",
-      "readyToBuildDesc": "加入建设者社区，创造分散融资的未来。",
-      "startBuilding": "开始Building",
-      "exploreEcosystem": "探索Ecosystem"
+      "programmablePrivacyDesc": "Sigma 协议实现了无需可信设置的零知识证明，内置于核心协议中。",
+      "readyToBuild": "准备在 Ergo 上构建了吗？",
+      "readyToBuildDesc": "加入构建者社区，共同创造去中心化金融的未来。",
+      "startBuilding": "开始构建",
+      "exploreEcosystem": "探索生态系统"
     },
     "detail": {
       "seo": {
@@ -70,30 +86,30 @@
         },
         "imageAltTemplate": "Ergo vs {name} 对比"
       },
-      "allComparisons": "所有比较",
-      "featureComparison": "功能比较",
-      "deepDive": "深度潜行",
+      "allComparisons": "所有对比",
+      "featureComparison": "功能对比",
+      "deepDive": "深度解析",
       "ergoAdvantage": "Ergo 优势",
-      "relatedInfographics": "相关信息图形",
+      "relatedInfographics": "相关信息图",
       "faq": "常见问题",
-      "moreComparisons": "更多比较",
-      "readyToExperience": "准备体验Ergo吗？",
-      "readyToExperienceDesc": "加入成千上万选择权力下放、安全和财政自由的用户。",
+      "moreComparisons": "更多对比",
+      "readyToExperience": "准备体验 Ergo 了吗？",
+      "readyToExperienceDesc": "加入成千上万选择去中心化、安全性和财务自由的用户。",
       "getWallet": "获取钱包",
-      "startBuilding": "开始Building",
-      "lastUpdated": "上次更新"
+      "startBuilding": "开始构建",
+      "lastUpdated": "最后更新"
     },
     "features": {
-      "consensus": "十二. 协商一致意见：",
+      "consensus": "共识机制",
       "stateModel": "状态模型",
-      "smartContracts": "智能合同",
+      "smartContracts": "智能合约",
       "privacy": "隐私",
       "sustainability": "可持续性",
-      "lightClients": "轻型客户端",
-      "miningAlgorithm": "采矿算法",
+      "lightClients": "轻客户端",
+      "miningAlgorithm": "挖矿算法",
       "blockTime": "出块时间",
-      "launchModel": "启动模型",
-      "networkEffect": "网络效果"
+      "launchModel": "启动模式",
+      "networkEffect": "网络效应"
     }
   },
   "comparePageClient": {
@@ -102,892 +118,892 @@
     "heroTitle": "Ergo vs",
     "sections": {
       "featureComparison": "功能",
-      "featureComparisonHighlight": "比较",
+      "featureComparisonHighlight": "对比",
       "feature": "功能",
-      "advantageNote": "显示该类别的优点。最后更新：",
-      "deepDive": "深度的",
-      "deepDiveHighlight": "潜行",
+      "advantageNote": "表示在该类别中的优势。最后更新：",
+      "deepDive": "深度",
+      "deepDiveHighlight": "解析",
       "ergoAdvantage": "Ergo 优势",
-      "relatedArticles": "相关的",
+      "relatedArticles": "相关",
       "relatedArticlesHighlight": "文章",
-      "minRead": "最小读取数",
-      "relatedInfographics": "相关的",
-      "relatedInfographicsHighlight": "信息图像",
-      "faq": "常见问题",
-      "faqHighlight": "问 题",
+      "minRead": "分钟阅读",
+      "relatedInfographics": "相关",
+      "relatedInfographicsHighlight": "信息图",
+      "faq": "常见",
+      "faqHighlight": "问题",
       "moreComparisons": "更多",
-      "moreComparisonsHighlight": "比较"
+      "moreComparisonsHighlight": "对比"
     },
     "cta": {
-      "title": "准备体验Ergo吗？",
-      "description": "加入成千上万选择权力下放、安全和财政自由的用户。",
+      "title": "准备体验 Ergo 了吗？",
+      "description": "加入成千上万选择去中心化、安全性和财务自由的用户。",
       "getWallet": "获取钱包",
-      "startBuilding": "开始Building"
+      "startBuilding": "开始构建"
     }
   },
   "comparisonsData": {
     "bitcoin": {
       "name": "Bitcoin",
-      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
-      "seoDescription": "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients."
+      "seoTitle": "Ergo vs Bitcoin 2025：智能合约、隐私与可持续性对比",
+      "seoDescription": "Ergo 与 Bitcoin 的完整对比：eUTXO 智能合约 vs 简单 UTXO、Sigma 协议隐私、存储租金可持续性以及 NiPoPoWs 轻客户端。"
     },
     "ethereum": {
       "name": "Ethereum",
-      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols."
+      "seoTitle": "Ergo vs Ethereum 2025：eUTXO vs 账户模型、PoW vs PoS 对比",
+      "seoDescription": "Ergo 与 Ethereum 的完整对比：eUTXO vs 账户模型、可预测手续费、无重入攻击、PoW 安全性以及 Sigma 协议原生隐私。"
     },
     "cardano": {
       "name": "Cardano",
-      "seoTitle": "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
-      "seoDescription": "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy."
+      "seoTitle": "Ergo vs Cardano 2025：eUTXO 同根异枝，理念各异",
+      "seoDescription": "对比 Ergo 与 Cardano：两者均使用 eUTXO，但 Ergo 采用 PoW 共识、存储租金、公平启动以及原生 Sigma 协议隐私。"
     },
     "monero": {
       "name": "Monero",
-      "seoTitle": "Ergo vs Monero 2025: Privacy Approaches Compared",
-      "seoDescription": "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations."
+      "seoTitle": "Ergo vs Monero 2025：隐私方案对比",
+      "seoDescription": "对比 Ergo 与 Monero 的隐私方案：Sigma 协议 vs 环签名、可选隐私 vs 强制隐私、智能合约以及监管考量。"
     },
     "zcash": {
       "name": "Zcash",
-      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
-      "seoDescription": "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward."
+      "seoTitle": "Ergo vs Zcash 2025：Sigma 协议 vs zk-SNARKs 隐私对比",
+      "seoDescription": "对比 Ergo 与 Zcash：Sigma 协议 vs zk-SNARKs、无需可信设置、智能合约、公平启动 vs 创始人奖励。"
     },
     "solana": {
       "name": "Solana",
-      "seoTitle": "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
-      "seoDescription": "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches."
+      "seoTitle": "Ergo vs Solana 2025：去中心化 vs 速度的权衡",
+      "seoDescription": "对比 Ergo 与 Solana：PoW vs PoS、去中心化 vs TPS、公平启动 vs 风险投资，以及可持续性方案。"
     },
     "cbdc": {
-      "name": "CBDCs",
-      "seoTitle": "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
-      "seoDescription": "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom."
+      "name": "央行数字货币",
+      "seoTitle": "Ergo vs 央行数字货币 2025：去中心化货币 vs 中央银行数字货币",
+      "seoDescription": "对比 Ergo 区块链与央行数字货币：隐私、抗审查性、可编程货币以及金融自由。"
     },
     "vc-chains": {
-      "name": "VC-Funded Chains",
-      "seoTitle": "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
-      "seoDescription": "Compare Ergo's fair launch with VC-funded blockchains: token distribution, governance, incentive alignment, and long-term sustainability."
+      "name": "风险投资支持的链",
+      "seoTitle": "Ergo vs 风险投资区块链 2025：公平启动 vs 内部人分配",
+      "seoDescription": "对比 Ergo 的公平启动与风险投资支持的区块链：代币分配、治理、激励对齐以及长期可持续性。"
     },
     "kaspa": {
       "name": "Kaspa",
-      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
-      "seoDescription": "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability."
+      "seoTitle": "Ergo vs Kaspa 2025：智能合约、可持续性与 PoW 对比",
+      "seoDescription": "Ergo vs Kaspa 对比：eUTXO 智能合约 vs 纯支付、存储租金 vs 无租金、隐私功能以及长期可持续性。"
     },
     "ravencoin": {
       "name": "Ravencoin",
-      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
-      "seoDescription": "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability."
+      "seoTitle": "Ergo vs Ravencoin 2025：智能合约、隐私与代币功能对比",
+      "seoDescription": "Ergo vs Ravencoin 对比：eUTXO 智能合约 vs 以资产为核心的脚本、隐私功能、DeFi 能力以及可持续性。"
     },
     "litecoin": {
       "name": "Litecoin",
-      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
-      "seoDescription": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities."
+      "seoTitle": "Ergo vs Litecoin 2025：智能合约、隐私与功能对比",
+      "seoDescription": "Ergo vs Litecoin 对比：eUTXO 智能合约 vs 简单支付、Sigma 协议 vs MWEB 隐私以及 DeFi 能力。"
     },
     "avalanche": {
       "name": "Avalanche",
-      "seoTitle": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
-      "seoDescription": "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization."
+      "seoTitle": "Ergo vs Avalanche 2025：公平启动 PoW vs 风险投资支持 PoS 对比",
+      "seoDescription": "Ergo vs Avalanche 对比：公平启动 vs 风险投资、抗 ASIC PoW vs PoS、eUTXO vs 账户模型，以及真正的去中心化。"
     },
     "algorand": {
       "name": "Algorand",
-      "seoTitle": "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
-      "seoDescription": "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain."
+      "seoTitle": "Ergo vs Algorand 2025：去中心化 PoW vs 企业级 PoS 对比",
+      "seoDescription": "Ergo vs Algorand 对比：草根 PoW vs MIT 支持的 PoS、公平启动 vs 基金会控制，以及真正的去中心化 vs 企业区块链。"
     }
   },
   "comparisonItems": {
     "bitcoin": {
       "name": "Bitcoin",
-      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
-      "seoDescription": "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients.",
+      "seoTitle": "Ergo vs Bitcoin 2025：智能合约、隐私与可持续性对比",
+      "seoDescription": "Ergo 与 Bitcoin 的完整对比：eUTXO 智能合约 vs 简单 UTXO、Sigma 协议隐私、存储租金可持续性以及 NiPoPoWs 轻客户端。",
       "summary": {
         "headline": "Bitcoin",
         "subheadline": "Ergo extends Bitcoin",
         "points": [
           {
-            "title": "Programmable eUTXO",
-            "description": "Same UTXO security model as Bitcoin, but with full smart contract capabilities via ErgoScript"
+            "title": "可编程的 eUTXO",
+            "description": "与 Bitcoin 相同的 UTXO 安全模型，但通过 ErgoScript 具备完整的智能合约能力"
           },
           {
-            "title": "Native Privacy",
-            "description": "Sigma Protocols enable zero-knowledge proofs at L1, while Bitcoin has no native privacy"
+            "title": "原生隐私",
+            "description": "Sigma 协议在 L1 层实现零知识证明，而 Bitcoin 不具备原生隐私"
           },
           {
-            "title": "Long-term Sustainability",
-            "description": "Storage rent ensures miner revenue beyond block rewards, solving Bitcoin"
+            "title": "长期可持续性",
+            "description": "存储租金确保矿工在区块奖励之外仍有收入，解决 Bitcoin 的安全预算问题"
           },
           {
-            "title": "Trustless Light Clients",
-            "description": "NiPoPoWs enable mobile wallets to verify blockchain without trusting third parties"
+            "title": "无需信任的轻客户端",
+            "description": "NiPoPoWs 使移动钱包无需信任第三方即可验证区块链"
           }
         ]
       },
       "sections": [
         {
-          "title": "Smart Contract Capabilities",
+          "title": "智能合约能力",
           "content": "Bitcoin",
-          "ergoAdvantage": "Full DeFi capabilities: DEXs, lending protocols, stablecoins, DAOs, and more - all on a UTXO-based L1."
+          "ergoAdvantage": "完整的 DeFi 能力：DEX、借贷协议、稳定币、DAO 等——全部基于 UTXO 的 L1 实现。"
         },
         {
-          "title": "Privacy Architecture",
-          "content": "Bitcoin transactions are pseudonymous but fully transparent on-chain. Privacy requires external tools like CoinJoin or L2 solutions. Ergo has Sigma Protocols built into the core protocol, enabling zero-knowledge proofs natively without trusted setup.",
-          "ergoAdvantage": "Optional privacy with selective disclosure - prove what you need without revealing everything."
+          "title": "隐私架构",
+          "content": "Bitcoin 交易是假名的，但链上完全透明。隐私需要依赖 CoinJoin 等外部工具或 L2 解决方案。Ergo 将 Sigma 协议内置于核心协议中，无需可信设置即可原生实现零知识证明。",
+          "ergoAdvantage": "可选隐私与选择性披露——仅证明您需要证明的内容，无需全盘透明。"
         },
         {
-          "title": "Long-term Security Budget",
+          "title": "长期安全预算",
           "content": "Bitcoin",
-          "ergoAdvantage": "Protocol-level solution to the security budget problem that Bitcoin hasn"
+          "ergoAdvantage": "协议层面对 Bitcoin 尚未解决的安全预算问题提供了解决方案。"
         }
       ],
       "faq": [
         {
-          "question": "How is Ergo different from Bitcoin?",
-          "answer": "While sharing Bitcoin"
+          "question": "Ergo 与 Bitcoin 有何不同？",
+          "answer": "在共享 Bitcoin"
         },
         {
-          "question": "Is Ergo more private than Bitcoin?",
-          "answer": "Yes. Ergo has native Sigma Protocols enabling zero-knowledge proofs at L1, while Bitcoin requires external tools or L2 solutions for privacy. Ergo"
+          "question": "Ergo 比 Bitcoin 更具隐私性吗？",
+          "answer": "是的。Ergo 拥有原生 Sigma 协议，可在 L1 实现零知识证明，而 Bitcoin 需要外部工具或 L2 解决方案来实现隐私。Ergo"
         },
         {
-          "question": "Can Ergo do everything Bitcoin does?",
-          "answer": "Yes, and more. Ergo supports all Bitcoin use cases (store of value, payments) plus full smart contract capabilities, native tokens, and advanced cryptographic features."
+          "question": "Ergo 能做到 Bitcoin 能做的一切吗？",
+          "answer": "可以，而且更多。Ergo 支持所有 Bitcoin 用例（价值储存、支付），同时具备完整的智能合约能力、原生代币和高级密码学功能。"
         },
         {
-          "question": "Is Ergo a Bitcoin fork?",
-          "answer": "No. Ergo is built from scratch with its own codebase, but it shares philosophical alignment with Bitcoin: fair launch, PoW consensus, UTXO model, and cypherpunk values."
+          "question": "Ergo 是 Bitcoin 的分叉吗？",
+          "answer": "不是。Ergo 是从零开始构建的，拥有自己的代码库，但在哲学上与 Bitcoin 一脉相承：公平启动、PoW 共识、UTXO 模型和密码朋克价值观。"
         }
       ]
     },
     "ethereum": {
       "name": "Ethereum",
-      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols.",
+      "seoTitle": "Ergo vs Ethereum 2025：eUTXO vs 账户模型、PoW vs PoS 对比",
+      "seoDescription": "Ergo 与 Ethereum 的完整对比：eUTXO vs 账户模型、可预测手续费、无重入攻击、PoW 安全性以及 Sigma 协议原生隐私。",
       "summary": {
-        "headline": "Predictable, Secure, and Truly Decentralized",
-        "subheadline": "Ergo offers Ethereum-level programmability without the security pitfalls, unpredictable fees, or centralization risks.",
+        "headline": "可预测、安全且真正去中心化",
+        "subheadline": "Ergo 提供与 Ethereum 同等的可编程性，同时避免安全隐患、不可预测的手续费和中心化风险。",
         "points": [
           {
-            "title": "No Reentrancy Attacks",
-            "description": "eUTXO model eliminates entire classes of smart contract vulnerabilities that plague Ethereum"
+            "title": "无重入攻击",
+            "description": "eUTXO 模型从根本上消除了困扰 Ethereum 的整类智能合约漏洞"
           },
           {
-            "title": "Predictable Fees",
-            "description": "No gas price auctions or MEV extraction - fees are stable and predictable"
+            "title": "可预测手续费",
+            "description": "无 Gas 竞价或 MEV 提取——手续费稳定且可预测"
           },
           {
-            "title": "True Decentralization",
-            "description": "PoW consensus with GPU mining keeps the network accessible and censorship-resistant"
+            "title": "真正的去中心化",
+            "description": "GPU 挖矿的 PoW 共识使网络保持开放且抗审查"
           },
           {
-            "title": "Parallel Execution",
-            "description": "UTXO-based transactions can be validated in parallel, improving throughput"
+            "title": "并行执行",
+            "description": "基于 UTXO 的交易可并行验证，提升吞吐量"
           }
         ]
       },
       "sections": [
         {
-          "title": "Security Model",
+          "title": "安全模型",
           "content": "Ethereum",
-          "ergoAdvantage": "No DAO hack, no reentrancy exploits possible. Security by design, not by careful coding."
+          "ergoAdvantage": "不可能发生 DAO 黑客攻击，不可能出现重入漏洞。安全源于设计，而非谨慎编码。"
         },
         {
-          "title": "Fee Economics",
+          "title": "手续费经济学",
           "content": "Ethereum",
-          "ergoAdvantage": "Know your fees before you transact. No surprise gas spikes or MEV taxes."
+          "ergoAdvantage": "交易前即可知晓手续费。不会有意外的 Gas 峰值或 MEV 税。"
         },
         {
-          "title": "Consensus & Decentralization",
+          "title": "共识与去中心化",
           "content": "Ethereum",
-          "ergoAdvantage": "True permissionless participation in consensus. No minimum stake, no validator cartels."
+          "ergoAdvantage": "真正的无许可共识参与。无最低质押要求，无验证者卡特尔。"
         }
       ],
       "faq": [
         {
-          "question": "What advantages does Ergo have over Ethereum?",
-          "answer": "Ergo offers predictable fees without MEV extraction, eliminates reentrancy attacks by design, provides native privacy via Sigma Protocols, maintains PoW decentralization, and has first-class native tokens without wrapper contracts."
+          "question": "Ergo 相比 Ethereum 有哪些优势？",
+          "answer": "Ergo 提供无 MEV 提取的可预测手续费，从设计上消除重入攻击，通过 Sigma 协议提供原生隐私，维持 PoW 去中心化，并拥有一流的原生代币而无需包装合约。"
         },
         {
-          "question": "Can Ergo run Ethereum dApps?",
-          "answer": "Not directly - Ergo uses ErgoScript, not Solidity. However, most DeFi concepts (DEXs, lending, stablecoins) have been implemented on Ergo with often better security properties due to the eUTXO model."
+          "question": "Ergo 能运行 Ethereum DApp 吗？",
+          "answer": "不能直接运行——Ergo 使用 ErgoScript，而非 Solidity。但大多数 DeFi 概念（DEX、借贷、稳定币）已在 Ergo 上实现，且由于 eUTXO 模型，通常具有更好的安全属性。"
         },
         {
-          "question": "Why does Ergo use PoW instead of PoS like Ethereum?",
-          "answer": "PoW provides stronger censorship resistance, fairer distribution (anyone can mine), and proven security. PoS tends toward plutocracy and has shown censorship compliance issues."
+          "question": "为什么 Ergo 使用 PoW 而不是像 Ethereum 那样使用 PoS？",
+          "answer": "PoW 提供更强的抗审查性、更公平的分配（任何人都能挖矿）和经过验证的安全性。PoS 倾向于寡头垄断，并已出现审查合规问题。"
         },
         {
-          "question": "Is Ergo faster than Ethereum?",
-          "answer": "Ergo has ~2 minute blocks vs Ethereum"
+          "question": "Ergo 比 Ethereum 更快吗？",
+          "answer": "Ergo 约 2 分钟出块 vs Ethereum"
         }
       ]
     },
     "cardano": {
       "name": "Cardano",
-      "seoTitle": "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
-      "seoDescription": "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy.",
+      "seoTitle": "Ergo vs Cardano 2025：eUTXO 同根异枝，理念各异",
+      "seoDescription": "对比 Ergo 与 Cardano：两者均使用 eUTXO，但 Ergo 采用 PoW 共识、存储租金、公平启动以及原生 Sigma 协议隐私。",
       "summary": {
-        "headline": "eUTXO Siblings with Different DNA",
-        "subheadline": "Both use extended UTXO, but Ergo chose PoW, fair launch, and protocol-level sustainability.",
+        "headline": "eUTXO 同根，DNA 各异",
+        "subheadline": "两者都使用扩展 UTXO，但 Ergo 选择了 PoW、公平启动和协议层面的可持续性。",
         "points": [
           {
-            "title": "Proof-of-Work Security",
-            "description": "Ergo uses battle-tested PoW while Cardano relies on PoS with different security assumptions"
+            "title": "工作量证明安全性",
+            "description": "Ergo 使用经过验证的 PoW，而 Cardano 依赖具有不同安全假设的 PoS"
           },
           {
-            "title": "Fair Launch",
-            "description": "No ICO, no premine, no VC allocation - Ergo"
+            "title": "公平启动",
+            "description": "无 ICO、无预挖、无风险投资分配——Ergo"
           },
           {
-            "title": "Storage Rent",
-            "description": "Protocol-level sustainability mechanism that Cardano lacks"
+            "title": "存储租金",
+            "description": "Cardano 所缺乏的协议层面可持续性机制"
           },
           {
-            "title": "Native Privacy",
-            "description": "Sigma Protocols built-in vs Cardano"
+            "title": "原生隐私",
+            "description": "内置 Sigma 协议 vs Cardano"
           }
         ]
       },
       "sections": [
         {
-          "title": "Consensus Philosophy",
-          "content": "Cardano chose Proof-of-Stake for energy efficiency and scalability. Ergo chose Proof-of-Work for censorship resistance, fair distribution, and proven security. Both are valid choices with different tradeoffs.",
-          "ergoAdvantage": "PoW means anyone can participate in consensus without minimum stake requirements or delegation."
+          "title": "共识哲学",
+          "content": "Cardano 为了能源效率和可扩展性选择了权益证明。Ergo 为了抗审查性、公平分配和经过验证的安全性选择了工作量证明。两者都是有不同权衡取舍的有效选择。",
+          "ergoAdvantage": "PoW 意味着任何人都可以参与共识，无需最低质押要求或委托。"
         },
         {
-          "title": "Token Distribution",
-          "content": "Cardano had an ICO and foundation allocation. Ergo had no ICO, no premine, and no VC investors. All ERG is earned through mining, similar to Bitcoin",
-          "ergoAdvantage": "No insider advantage. Everyone competes on equal terms from day one."
+          "title": "代币分配",
+          "content": "Cardano 进行了 ICO 并设有基金会分配。Ergo 没有 ICO、没有预挖、没有风险投资方。所有 ERG 均通过挖矿获得，类似于 Bitcoin",
+          "ergoAdvantage": "无内部人优势。从第一天起人人平等竞争。"
         },
         {
-          "title": "Privacy Approach",
-          "content": "Cardano is developing Midnight as a separate privacy sidechain. Ergo has Sigma Protocols built into the base layer, enabling privacy features on the main chain without additional infrastructure.",
-          "ergoAdvantage": "Privacy is a first-class feature, not an afterthought on a separate chain."
+          "title": "隐私方案",
+          "content": "Cardano 正在将 Midnight 作为独立的隐私侧链进行开发。Ergo 将 Sigma 协议内置于基础层，无需额外基础设施即可在主链上实现隐私功能。",
+          "ergoAdvantage": "隐私是一等功能，而非独立链上的事后补充。"
         }
       ],
       "faq": [
         {
-          "question": "How does Ergo compare to Cardano?",
-          "answer": "Both use eUTXO, but Ergo has PoW consensus, fair launch tokenomics, native privacy via Sigma Protocols, and storage rent for sustainability. Cardano has a larger ecosystem but different philosophical choices."
+          "question": "Ergo 与 Cardano 相比如何？",
+          "answer": "两者都使用 eUTXO，但 Ergo 具有 PoW 共识、公平启动代币经济学、通过 Sigma 协议的原生隐私以及用于可持续性的存储租金。Cardano 生态更大，但做出了不同的哲学选择。"
         },
         {
-          "question": "Is Ergo related to Cardano?",
-          "answer": "Yes, historically. Alex Chepurnoy (Ergo"
+          "question": "Ergo 与 Cardano 有历史渊源吗？",
+          "answer": "是的。Alex Chepurnoy（Ergo"
         },
         {
-          "question": "Which is better for DeFi, Ergo or Cardano?",
-          "answer": "Both support DeFi on eUTXO. Ergo has pioneering implementations like ErgoDEX and SigmaUSD. Cardano has more projects due to larger ecosystem. Ergo"
+          "question": "在 DeFi 方面，Ergo 和 Cardano 哪个更好？",
+          "answer": "两者都支持基于 eUTXO 的 DeFi。Ergo 拥有 ErgoDEX 和 SigmaUSD 等先驱实现。Cardano 因生态更大而拥有更多项目。Ergo"
         }
       ]
     },
     "monero": {
       "name": "Monero",
-      "seoTitle": "Ergo vs Monero 2025: Privacy Approaches Compared",
-      "seoDescription": "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations.",
+      "seoTitle": "Ergo vs Monero 2025：隐私方案对比",
+      "seoDescription": "对比 Ergo 与 Monero 的隐私方案：Sigma 协议 vs 环签名、可选隐私 vs 强制隐私、智能合约以及监管考量。",
       "summary": {
-        "headline": "Privacy: Mandatory vs Programmable",
-        "subheadline": "Monero enforces privacy by default. Ergo offers programmable privacy with selective disclosure.",
+        "headline": "隐私：强制 vs 可编程",
+        "subheadline": "Monero 默认强制隐私。Ergo 提供具有选择性披露的可编程隐私。",
         "points": [
           {
-            "title": "Programmable Privacy",
+            "title": "可编程隐私",
             "description": "Ergo"
           },
           {
-            "title": "Smart Contracts",
-            "description": "Full DeFi capabilities that Monero"
+            "title": "智能合约",
+            "description": "Monero 所不具备的完整 DeFi 能力"
           },
           {
-            "title": "Regulatory Flexibility",
-            "description": "Optional privacy with audit capabilities vs mandatory opacity"
+            "title": "监管灵活性",
+            "description": "具备审计能力的可选隐私 vs 强制不透明"
           },
           {
-            "title": "Fair Launch",
-            "description": "Both had fair launches with no premine - aligned cypherpunk values"
+            "title": "公平启动",
+            "description": "两者均无预挖公平启动——体现一致的密码朋克价值观"
           }
         ]
       },
       "sections": [
         {
-          "title": "Privacy Philosophy",
-          "content": "Monero believes privacy should be mandatory and universal - every transaction is private. Ergo believes privacy should be programmable - users choose their privacy level and can prove specific properties without revealing everything.",
-          "ergoAdvantage": "Selective disclosure enables use cases like tax compliance proofs, age verification, or credit checks without full transparency."
+          "title": "隐私哲学",
+          "content": "Monero 认为隐私应该是强制且普遍的——每笔交易都是私密的。Ergo 认为隐私应该是可编程的——用户选择自己的隐私级别，并可在不透露所有信息的前提下证明特定属性。",
+          "ergoAdvantage": "选择性披露支持税务合规证明、年龄验证或信用核查等用例，而无需完全透明。"
         },
         {
-          "title": "Smart Contract Capabilities",
+          "title": "智能合约能力",
           "content": "Monero",
-          "ergoAdvantage": "Private DEXs, lending protocols, and stablecoins are possible on Ergo but not on Monero."
+          "ergoAdvantage": "私密 DEX、借贷协议和稳定币在 Ergo 上可以实现，但在 Monero 上无法实现。"
         },
         {
-          "title": "Regulatory Landscape",
-          "content": "Monero has been delisted from many exchanges due to regulatory pressure on mandatory privacy coins. Ergo",
-          "ergoAdvantage": "Better exchange accessibility while maintaining privacy capabilities for those who need them."
+          "title": "监管环境",
+          "content": "由于对强制隐私币的监管压力，Monero 已被许多交易所下架。Ergo",
+          "ergoAdvantage": "在维持隐私能力的同时，对有需求的用户保持更好的交易所可访问性。"
         }
       ],
       "faq": [
         {
-          "question": "Is Ergo a privacy coin like Monero?",
-          "answer": "Ergo has strong privacy capabilities via Sigma Protocols, but privacy is optional rather than mandatory. This gives users choice and enables smart contracts that Monero can"
+          "question": "Ergo 是像 Monero 那样的隐私币吗？",
+          "answer": "Ergo 通过 Sigma 协议具备强大的隐私能力，但隐私是可选的而非强制性的。这使用户拥有选择权，并支持 Monero 无法实现的智能合约"
         },
         {
-          "question": "Which is more private, Ergo or Monero?",
-          "answer": "Monero provides stronger default privacy since all transactions are private. Ergo provides programmable privacy - potentially very strong when used, but optional. Different tools for different needs."
+          "question": "Ergo 和 Monero 哪个更私密？",
+          "answer": "Monero 提供更强的默认隐私，因为所有交易都是私密的。Ergo 提供可编程隐私——使用时可能非常强大，但属于可选。不同工具满足不同需求。"
         },
         {
-          "question": "Can Ergo be used for private transactions?",
-          "answer": "Yes. ErgoMixer and Sigma Protocols enable private transactions. The difference is that Ergo users choose when to use privacy features rather than having them enforced."
+          "question": "Ergo 可以用于私密交易吗？",
+          "answer": "可以。ErgoMixer 和 Sigma 协议支持私密交易。区别在于 Ergo 用户可以选择何时使用隐私功能，而非被强制执行。"
         }
       ]
     },
     "zcash": {
       "name": "Zcash",
-      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
-      "seoDescription": "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward.",
+      "seoTitle": "Ergo vs Zcash 2025：Sigma 协议 vs zk-SNARKs 隐私对比",
+      "seoDescription": "对比 Ergo 与 Zcash：Sigma 协议 vs zk-SNARKs、无需可信设置、智能合约、公平启动 vs 创始人奖励。",
       "summary": {
-        "headline": "Zero-Knowledge Without Trusted Setup",
-        "subheadline": "Both enable ZK proofs, but Ergo",
+        "headline": "无需可信设置的零知识",
+        "subheadline": "两者都支持零知识证明，但 Ergo",
         "points": [
           {
-            "title": "No Trusted Setup",
-            "description": "Sigma Protocols don"
+            "title": "无需可信设置",
+            "description": "Sigma 协议不"
           },
           {
-            "title": "Smart Contracts",
-            "description": "Full DeFi capabilities vs Zcash"
+            "title": "智能合约",
+            "description": "完整的 DeFi 能力 vs Zcash"
           },
           {
-            "title": "Fair Launch",
-            "description": "No founders reward or dev tax - all coins earned through mining"
+            "title": "公平启动",
+            "description": "无创始人奖励或开发税——所有代币通过挖矿获得"
           },
           {
-            "title": "Composable Privacy",
-            "description": "Privacy features work with smart contracts, not just transfers"
+            "title": "可组合隐私",
+            "description": "隐私功能与智能合约协同工作，而不仅限于转账"
           }
         ]
       },
       "sections": [
         {
-          "title": "Trusted Setup Concern",
+          "title": "可信设置问题",
           "content": "Zcash",
-          "ergoAdvantage": "Mathematical security without ceremony trust assumptions."
+          "ergoAdvantage": "无需仪式信任假设的数学安全性。"
         },
         {
-          "title": "Tokenomics",
-          "content": "Zcash had a 20% ",
-          "ergoAdvantage": "Aligned incentives with no insider advantages."
+          "title": "代币经济学",
+          "content": "Zcash 有 20%",
+          "ergoAdvantage": "激励对齐，无内部人优势。"
         }
       ],
       "faq": [
         {
-          "question": "How is Ergo",
-          "answer": "Ergo uses Sigma Protocols (no trusted setup needed), while Zcash uses zk-SNARKs (required trusted setup). Ergo also has full smart contracts while Zcash is limited to transfers."
+          "question": "Ergo 如何",
+          "answer": "Ergo 使用 Sigma 协议（无需可信设置），而 Zcash 使用 zk-SNARKs（需要可信设置）。Ergo 还拥有完整的智能合约，而 Zcash 仅限于转账。"
         },
         {
-          "question": "Which has better privacy technology?",
-          "answer": "Both are cryptographically sound. zk-SNARKs produce smaller proofs but require trusted setup. Sigma Protocols have no setup risk but larger proofs. Ergo"
+          "question": "哪个隐私技术更好？",
+          "answer": "两者在密码学上都是可靠的。zk-SNARKs 生成更小的证明但需要可信设置。Sigma 协议无设置风险但证明更大。Ergo"
         }
       ]
     },
     "solana": {
       "name": "Solana",
-      "seoTitle": "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
-      "seoDescription": "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches.",
+      "seoTitle": "Ergo vs Solana 2025：去中心化 vs 速度的权衡",
+      "seoDescription": "对比 Ergo 与 Solana：PoW vs PoS、去中心化 vs TPS、公平启动 vs 风险投资，以及可持续性方案。",
       "summary": {
-        "headline": "Decentralization Over Speed Theater",
-        "subheadline": "Solana optimizes for TPS. Ergo optimizes for decentralization, security, and sustainability.",
+        "headline": "去中心化优先于速度表演",
+        "subheadline": "Solana 为 TPS 优化。Ergo 为去中心化、安全性和可持续性优化。",
         "points": [
           {
-            "title": "True Decentralization",
-            "description": "GPU mining vs validator hardware requirements that cost $50K+"
+            "title": "真正的去中心化",
+            "description": "GPU 挖矿 vs 需要 $50K+ 的验证者硬件要求"
           },
           {
-            "title": "No VC Control",
-            "description": "Fair launch vs massive VC/insider allocation"
+            "title": "无风险投资控制",
+            "description": "公平启动 vs 大量风险投资/内部人分配"
           },
           {
-            "title": "Network Stability",
-            "description": "No outages vs Solana"
+            "title": "网络稳定性",
+            "description": "无中断 vs Solana"
           },
           {
-            "title": "Sustainable Security",
-            "description": "Storage rent vs inflationary staking rewards"
+            "title": "可持续安全性",
+            "description": "存储租金 vs 通胀质押奖励"
           }
         ]
       },
       "sections": [
         {
-          "title": "Decentralization Reality",
+          "title": "去中心化现实",
           "content": "Solana",
-          "ergoAdvantage": "Real decentralization means anyone can run a node and mine, not just well-funded validators."
+          "ergoAdvantage": "真正的去中心化意味着任何人都可以运行节点和挖矿，而不仅限于资金充足的验证者。"
         },
         {
-          "title": "Token Distribution",
-          "content": "Solana had significant VC funding and insider allocation. Nearly 50% of tokens went to insiders before public availability. Ergo had no ICO, no premine, no VC - all tokens are mined.",
-          "ergoAdvantage": "No insider advantage. Fair competition from day one."
+          "title": "代币分配",
+          "content": "Solana 获得了大量风险投资资金和内部人分配。近 50% 的代币在公开可用前流向内部人。Ergo 没有 ICO、没有预挖、没有风险投资——所有代币均通过挖矿获得。",
+          "ergoAdvantage": "无内部人优势。从第一天起公平竞争。"
         },
         {
-          "title": "Network Reliability",
-          "content": "Solana has experienced multiple extended outages, sometimes lasting 24+ hours. Ergo has maintained consistent uptime since launch, demonstrating the reliability of PoW consensus.",
-          "ergoAdvantage": "Battle-tested reliability vs experimental high-speed architecture."
+          "title": "网络可靠性",
+          "content": "Solana 经历了多次长时间中断，有时持续超过 24 小时。Ergo 自上线以来保持了一致的正常运行时间，展示了 PoW 共识的可靠性。",
+          "ergoAdvantage": "经过验证的可靠性 vs 实验性高速架构。"
         }
       ],
       "faq": [
         {
-          "question": "Why is Ergo slower than Solana?",
-          "answer": "Ergo prioritizes security and decentralization over raw speed. Solana"
+          "question": "为什么 Ergo 比 Solana 慢？",
+          "answer": "Ergo 将安全性和去中心化置于原始速度之上。Solana"
         },
         {
-          "question": "Is Solana more decentralized than Ergo?",
-          "answer": "No. Solana"
+          "question": "Solana 比 Ergo 更去中心化吗？",
+          "answer": "不。Solana"
         }
       ]
     },
     "cbdc": {
-      "name": "CBDCs",
-      "seoTitle": "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
-      "seoDescription": "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom.",
+      "name": "央行数字货币",
+      "seoTitle": "Ergo vs 央行数字货币 2025：去中心化货币 vs 中央银行数字货币",
+      "seoDescription": "对比 Ergo 区块链与央行数字货币：隐私、抗审查性、可编程货币以及金融自由。",
       "summary": {
-        "headline": "Money Without Masters vs Programmable Control",
-        "subheadline": "CBDCs give central banks unprecedented control. Ergo gives individuals financial sovereignty.",
+        "headline": "无主之钱 vs 可编程控制",
+        "subheadline": "央行数字货币赋予中央银行前所未有的控制权。Ergo 赋予个人金融主权。",
         "points": [
           {
-            "title": "Privacy by Design",
-            "description": "Sigma Protocols for privacy vs total surveillance capability"
+            "title": "设计即隐私",
+            "description": "Sigma 协议提供隐私 vs 全面监控能力"
           },
           {
-            "title": "Censorship Resistance",
-            "description": "Permissionless transactions vs freezable, controllable money"
+            "title": "抗审查性",
+            "description": "无许可交易 vs 可冻结、可控制的货币"
           },
           {
-            "title": "No Expiration",
-            "description": "Your money doesn"
+            "title": "无到期日",
+            "description": "您的货币不会"
           },
           {
-            "title": "Self-Custody",
-            "description": "You hold your keys vs bank-controlled accounts"
+            "title": "自我托管",
+            "description": "您持有自己的私钥 vs 银行控制的账户"
           }
         ]
       },
       "sections": [
         {
-          "title": "Surveillance vs Privacy",
-          "content": "CBDCs give central banks complete visibility into every transaction. They can track, analyze, and profile all spending. Ergo",
-          "ergoAdvantage": "Financial privacy is a human right. Ergo protects it; CBDCs eliminate it."
+          "title": "监控 vs 隐私",
+          "content": "央行数字货币使中央银行对每笔交易拥有完全可见性。它们可以追踪、分析和分析所有消费行为。Ergo",
+          "ergoAdvantage": "金融隐私是基本人权。Ergo 保护它；央行数字货币消除它。"
         },
         {
-          "title": "Programmable Control",
-          "content": "CBDCs can be programmed with spending restrictions, expiration dates, geographic limits, and approved merchant lists. Your money becomes a tool of control. Ergo",
-          "ergoAdvantage": "Smart contracts that empower users, not restrict them."
+          "title": "可编程控制",
+          "content": "央行数字货币可以设置消费限制、到期日、地理限制和批准商家列表。您的货币成为控制工具。Ergo",
+          "ergoAdvantage": "赋权用户的智能合约，而非限制用户。"
         },
         {
-          "title": "Financial Sovereignty",
-          "content": "With CBDCs, your money exists at the pleasure of the central bank. It can be frozen, seized, or devalued at will. Ergo enables true self-custody where only you control your funds.",
-          "ergoAdvantage": "Not your keys, not your coins. Ergo ensures your keys, your coins."
+          "title": "金融主权",
+          "content": "使用央行数字货币，您的资金存在于中央银行的恩准之下。它可以随时被冻结、没收或贬值。Ergo 实现真正的自我托管，只有您才能控制自己的资金。",
+          "ergoAdvantage": "没有您的私钥，就没有您的代币。Ergo 确保您的私钥，您的代币。"
         }
       ],
       "faq": [
         {
-          "question": "Why should I care about CBDCs?",
-          "answer": "CBDCs give governments unprecedented control over money: surveillance of all transactions, ability to freeze accounts, programmable restrictions, and potential negative interest rates. They"
+          "question": "我为什么要关心央行数字货币？",
+          "answer": "央行数字货币赋予政府对货币前所未有的控制权：监控所有交易、冻结账户的能力、可编程限制以及潜在的负利率。它们"
         },
         {
-          "question": "How does Ergo protect against CBDC-style control?",
-          "answer": "Ergo is decentralized (no central authority), private (Sigma Protocols), censorship-resistant (PoW mining), and self-custodial (you hold your keys). No one can freeze, expire, or restrict your ERG."
+          "question": "Ergo 如何防范央行数字货币式的控制？",
+          "answer": "Ergo 是去中心化的（无中央机构）、私密的（Sigma 协议）、抗审查的（PoW 挖矿）和自我托管的（您持有私钥）。没有人能冻结、过期或限制您的 ERG。"
         },
         {
-          "question": "Can Ergo and CBDCs coexist?",
-          "answer": "Yes, but they serve opposite purposes. CBDCs are tools of control; Ergo is a tool of freedom. As CBDCs roll out, alternatives like Ergo become more important for preserving financial autonomy."
+          "question": "Ergo 和央行数字货币能共存吗？",
+          "answer": "可以，但它们服务于相反的目的。央行数字货币是控制工具；Ergo 是自由工具。随着央行数字货币的推出，像 Ergo 这样的替代品在保护金融自主权方面变得更加重要。"
         }
       ]
     },
     "vc-chains": {
-      "name": "VC-Funded Chains",
-      "seoTitle": "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
+      "name": "风险投资支持的链",
+      "seoTitle": "Ergo vs 风险投资区块链 2025：公平启动 vs 内部人分配",
       "seoDescription": "Compare Ergo",
       "summary": {
-        "headline": "Built for Users, Not Investors",
-        "subheadline": "VC chains optimize for investor returns. Ergo optimizes for user empowerment.",
+        "headline": "为用户而建，而非为投资者",
+        "subheadline": "风险投资链为投资者回报优化。Ergo 为用户赋权优化。",
         "points": [
           {
-            "title": "Fair Distribution",
-            "description": "All ERG is mined - no insider allocation, no ICO, no premine"
+            "title": "公平分配",
+            "description": "所有 ERG 均通过挖矿获得——无内部人分配、无 ICO、无预挖"
           },
           {
-            "title": "Aligned Incentives",
-            "description": "No VCs demanding returns, pivots, or token unlocks"
+            "title": "激励对齐",
+            "description": "无风险投资方要求回报、转型或代币解锁"
           },
           {
-            "title": "Community Governance",
-            "description": "Decisions made by users and miners, not boardrooms"
+            "title": "社区治理",
+            "description": "决策由用户和矿工做出，而非董事会"
           },
           {
-            "title": "Long-term Focus",
-            "description": "Building sustainable technology, not pumping for exits"
+            "title": "长期专注",
+            "description": "构建可持续技术，而非为退出而炒作"
           }
         ]
       },
       "sections": [
         {
-          "title": "Token Distribution",
-          "content": "Typical VC chains allocate 40-60% of tokens to insiders: founders, team, advisors, and VCs. These tokens unlock over time, creating constant sell pressure. Ergo has zero insider allocation - all ERG is mined through PoW.",
-          "ergoAdvantage": "No token unlocks, no insider dumps. Supply is predictable and fair."
+          "title": "代币分配",
+          "content": "典型的风险投资链将 40-60% 的代币分配给内部人：创始人、团队、顾问和风险投资方。这些代币随时间解锁，造成持续的抛售压力。Ergo 零内部人分配——所有 ERG 均通过 PoW 挖矿获得。",
+          "ergoAdvantage": "无代币解锁，无内部人抛售。供应量可预测且公平。"
         },
         {
-          "title": "Incentive Alignment",
-          "content": "VC-funded projects must deliver returns to investors. This often means prioritizing token price over technology, rushing to market, or pivoting away from original vision. Ergo",
-          "ergoAdvantage": "Development focused on technology and users, not investor returns."
+          "title": "激励对齐",
+          "content": "风险投资支持的项目必须向投资者提供回报。这往往意味着将代币价格置于技术之上、匆忙上市或偏离最初愿景。Ergo",
+          "ergoAdvantage": "开发专注于技术和用户，而非投资者回报。"
         },
         {
-          "title": "Governance Reality",
-          "content": "Despite ",
-          "ergoAdvantage": "Real decentralization in decision-making, not theater."
+          "title": "治理现实",
+          "content": "尽管",
+          "ergoAdvantage": "决策中的真正去中心化，而非表演。"
         }
       ],
       "faq": [
         {
-          "question": "What",
-          "answer": "VC funding creates misaligned incentives: projects must deliver investor returns, leading to token dumps, rushed development, and governance controlled by large stakeholders rather than users."
+          "question": "什么",
+          "answer": "风险投资造成激励错位：项目必须提供投资者回报，导致代币抛售、仓促开发以及由大股东而非用户控制的治理。"
         },
         {
-          "question": "How is Ergo funded without VCs?",
-          "answer": "Ergo has a treasury funded by a portion of block rewards (similar to Zcash"
+          "question": "Ergo 在没有风险投资的情况下如何获得资金？",
+          "answer": "Ergo 拥有由部分区块奖励资助的国库（类似于 Zcash"
         },
         {
-          "question": "Why does fair launch matter?",
-          "answer": "Fair launch means everyone competes on equal terms from day one. No insiders got tokens cheaper than you. This creates genuine decentralization and aligned community incentives."
+          "question": "公平启动为什么重要？",
+          "answer": "公平启动意味着从第一天起人人平等竞争。没有内部人以比您更低的价格获得代币。这创造了真正的去中心化和一致的社区激励。"
         }
       ]
     },
     "kaspa": {
       "name": "Kaspa",
-      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
-      "seoDescription": "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability.",
+      "seoTitle": "Ergo vs Kaspa 2025：智能合约、可持续性与 PoW 对比",
+      "seoDescription": "Ergo vs Kaspa 对比：eUTXO 智能合约 vs 纯支付、存储租金 vs 无租金、隐私功能以及长期可持续性。",
       "summary": {
-        "headline": "Smart Contract PoW vs Speed-Focused PoW",
-        "subheadline": "Both are fair-launched PoW chains, but Ergo adds smart contracts, privacy, and sustainability features Kaspa lacks.",
+        "headline": "智能合约 PoW vs 速度优先 PoW",
+        "subheadline": "两者都是公平启动的 PoW 链，但 Ergo 增加了 Kaspa 所缺乏的智能合约、隐私和可持续性功能。",
         "points": [
           {
-            "title": "Smart Contracts",
-            "description": "Ergo has full smart contract support via ErgoScript; Kaspa is payments-only (smart contracts planned)"
+            "title": "智能合约",
+            "description": "Ergo 通过 ErgoScript 提供完整的智能合约支持；Kaspa 仅限支付（智能合约在规划中）"
           },
           {
-            "title": "Privacy Features",
-            "description": "Ergo offers Sigma Protocols and ErgoMixer; Kaspa has no native privacy"
+            "title": "隐私功能",
+            "description": "Ergo 提供 Sigma 协议和 ErgoMixer；Kaspa 无原生隐私"
           },
           {
-            "title": "Long-term Sustainability",
-            "description": "Ergo has storage rent for post-emission security; Kaspa relies on fees only"
+            "title": "长期可持续性",
+            "description": "Ergo 拥有用于排放后安全的存储租金；Kaspa 仅依赖手续费"
           },
           {
-            "title": "Light Clients",
-            "description": "Ergo has NiPoPoWs for trustless light clients; Kaspa uses SPV"
+            "title": "轻客户端",
+            "description": "Ergo 拥有用于无信任轻客户端的 NiPoPoWs；Kaspa 使用 SPV"
           }
         ]
       },
       "sections": [
         {
-          "title": "Smart Contract Capabilities",
-          "content": "Ergo launched with full smart contract support via ErgoScript, enabling DEXs, stablecoins, lending, and complex DeFi. Kaspa launched as a pure payment chain with smart contracts on the roadmap but not yet implemented.",
-          "ergoAdvantage": "Working DeFi ecosystem today vs promised future features."
+          "title": "智能合约能力",
+          "content": "Ergo 从上线起就通过 ErgoScript 提供完整的智能合约支持，支持 DEX、稳定币、借贷和复杂 DeFi。Kaspa 作为纯支付链上线，智能合约在路线图中但尚未实现。",
+          "ergoAdvantage": "今日可用的 DeFi 生态系统 vs 承诺的未来功能。"
         },
         {
-          "title": "Mining Accessibility",
+          "title": "挖矿可及性",
           "content": "Ergo",
-          "ergoAdvantage": "GPU mining remains viable, promoting decentralization."
+          "ergoAdvantage": "GPU 挖矿依然可行，促进去中心化。"
         },
         {
-          "title": "Long-term Sustainability",
-          "content": "Both chains will eventually run out of block rewards. Ergo",
-          "ergoAdvantage": "Storage rent ensures sustainable security budget."
+          "title": "长期可持续性",
+          "content": "两条链最终都会耗尽区块奖励。Ergo",
+          "ergoAdvantage": "存储租金确保可持续的安全预算。"
         },
         {
-          "title": "Speed vs Security Trade-off",
+          "title": "速度 vs 安全权衡",
           "content": "Kaspa",
-          "ergoAdvantage": "Simpler, battle-tested design with light client support."
+          "ergoAdvantage": "更简单、经过验证的设计，具备轻客户端支持。"
         }
       ],
       "faq": [
         {
-          "question": "Is Kaspa faster than Ergo?",
-          "answer": "Kaspa has faster block times (~1 sec vs ~2 min), but Ergo"
+          "question": "Kaspa 比 Ergo 更快吗？",
+          "answer": "Kaspa 出块时间更快（约 1 秒 vs 约 2 分钟），但 Ergo"
         },
         {
-          "question": "Does Kaspa have smart contracts?",
-          "answer": "Not yet. Kaspa launched as a pure payment chain. Smart contracts are on the roadmap but not implemented. Ergo has had full smart contracts since launch."
+          "question": "Kaspa 有智能合约吗？",
+          "answer": "尚未。Kaspa 作为纯支付链上线。智能合约在路线图中但尚未实现。Ergo 自上线起就拥有完整的智能合约。"
         },
         {
-          "question": "Which is better for mining?",
-          "answer": "Ergo remains GPU-friendly due to ASIC-resistant Autolykos. Kaspa has seen ASIC development which may centralize mining over time."
+          "question": "哪个更适合挖矿？",
+          "answer": "Ergo 由于抗 ASIC 的 Autolykos 保持了 GPU 友好性。Kaspa 已出现 ASIC 开发，可能随时间推移导致挖矿中心化。"
         },
         {
-          "question": "Which has better long-term economics?",
+          "question": "哪个拥有更好的长期经济学？",
           "answer": "Ergo"
         }
       ]
     },
     "ravencoin": {
       "name": "Ravencoin",
-      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
-      "seoDescription": "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability.",
+      "seoTitle": "Ergo vs Ravencoin 2025：智能合约、隐私与代币功能对比",
+      "seoDescription": "Ergo vs Ravencoin 对比：eUTXO 智能合约 vs 以资产为核心的脚本、隐私功能、DeFi 能力以及可持续性。",
       "summary": {
-        "headline": "Full DeFi Platform vs Asset-Focused Chain",
-        "subheadline": "Both enable native tokens on PoW, but Ergo adds smart contracts, privacy, and DeFi that Ravencoin can",
+        "headline": "完整 DeFi 平台 vs 资产专注链",
+        "subheadline": "两者都在 PoW 上支持原生代币，但 Ergo 增加了 Ravencoin 无法实现的智能合约、隐私和 DeFi",
         "points": [
           {
-            "title": "Smart Contracts",
-            "description": "Ergo has Turing-incomplete but powerful ErgoScript; Ravencoin has limited asset scripts"
+            "title": "智能合约",
+            "description": "Ergo 拥有图灵不完备但功能强大的 ErgoScript；Ravencoin 拥有有限的资产脚本"
           },
           {
-            "title": "DeFi Capabilities",
-            "description": "Ergo supports DEXs, lending, stablecoins; Ravencoin is asset issuance only"
+            "title": "DeFi 能力",
+            "description": "Ergo 支持 DEX、借贷、稳定币；Ravencoin 仅限资产发行"
           },
           {
-            "title": "Privacy",
-            "description": "Ergo has Sigma Protocols; Ravencoin has no privacy features"
+            "title": "隐私",
+            "description": "Ergo 拥有 Sigma 协议；Ravencoin 无隐私功能"
           },
           {
-            "title": "Sustainability",
-            "description": "Ergo has storage rent; Ravencoin has no long-term security mechanism"
+            "title": "可持续性",
+            "description": "Ergo 拥有存储租金；Ravencoin 无长期安全机制"
           }
         ]
       },
       "sections": [
         {
-          "title": "Smart Contract Power",
-          "content": "Ravencoin was designed specifically for asset issuance with limited scripting. Ergo",
-          "ergoAdvantage": "Full DeFi capabilities vs simple asset transfers."
+          "title": "智能合约能力",
+          "content": "Ravencoin 专门为资产发行而设计，脚本功能有限。Ergo",
+          "ergoAdvantage": "完整的 DeFi 能力 vs 简单的资产转账。"
         },
         {
-          "title": "Token Capabilities",
-          "content": "Both support native tokens without smart contracts. Ravencoin has unique features like messaging and restricted assets. Ergo tokens can participate in complex DeFi protocols and smart contracts.",
-          "ergoAdvantage": "Tokens can be used in DeFi, not just transferred."
+          "title": "代币能力",
+          "content": "两者都支持无需智能合约的原生代币。Ravencoin 拥有消息传递和受限资产等独特功能。Ergo 代币可参与复杂的 DeFi 协议和智能合约。",
+          "ergoAdvantage": "代币可用于 DeFi，而不仅限于转账。"
         },
         {
-          "title": "Privacy Features",
-          "content": "Ravencoin has no privacy features. Ergo provides Sigma Protocols for zero-knowledge proofs and ErgoMixer for transaction mixing, enabling private transfers when needed.",
-          "ergoAdvantage": "Optional privacy for sensitive transactions."
+          "title": "隐私功能",
+          "content": "Ravencoin 没有隐私功能。Ergo 提供用于零知识证明的 Sigma 协议和用于交易混合的 ErgoMixer，可在需要时实现私密转账。",
+          "ergoAdvantage": "敏感交易的可选隐私。"
         },
         {
-          "title": "Long-term Viability",
-          "content": "Both face the post-emission challenge. Ergo",
-          "ergoAdvantage": "Storage rent ensures long-term security budget."
+          "title": "长期可行性",
+          "content": "两者都面临排放后挑战。Ergo",
+          "ergoAdvantage": "存储租金确保长期安全预算。"
         }
       ],
       "faq": [
         {
-          "question": "Is Ravencoin better for tokens than Ergo?",
-          "answer": "Ravencoin has specialized token features like messaging and restricted assets. But Ergo tokens can participate in DeFi (DEXs, lending, etc.), making them more useful overall."
+          "question": "Ravencoin 在代币方面比 Ergo 更好吗？",
+          "answer": "Ravencoin 拥有消息传递和受限资产等专业化代币功能。但 Ergo 代币可参与 DeFi（DEX、借贷等），整体上更有用。"
         },
         {
-          "question": "Which is better for mining?",
-          "answer": "Both are GPU-mineable. Ravencoin uses KAWPOW, Ergo uses Autolykos. Both resist ASICs, though market conditions affect profitability."
+          "question": "哪个更适合挖矿？",
+          "answer": "两者都可 GPU 挖矿。Ravencoin 使用 KAWPOW，Ergo 使用 Autolykos。两者都抵抗 ASIC，尽管市场条件影响盈利能力。"
         },
         {
-          "question": "Can Ravencoin do DeFi?",
-          "answer": "No. Ravencoin"
+          "question": "Ravencoin 能做 DeFi 吗？",
+          "answer": "不能。Ravencoin"
         },
         {
-          "question": "Which has a larger community?",
-          "answer": "Ravencoin has been around longer and has a larger market cap. Ergo has a more technically active community building DeFi and tools."
+          "question": "哪个拥有更大的社区？",
+          "answer": "Ravencoin 存在时间更长，市值更大。Ergo 拥有更技术活跃的社区，正在构建 DeFi 和工具。"
         }
       ]
     },
     "litecoin": {
       "name": "Litecoin",
-      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
-      "seoDescription": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities.",
+      "seoTitle": "Ergo vs Litecoin 2025：智能合约、隐私与功能对比",
+      "seoDescription": "Ergo vs Litecoin 对比：eUTXO 智能合约 vs 简单支付、Sigma 协议 vs MWEB 隐私以及 DeFi 能力。",
       "summary": {
-        "headline": "Modern Smart Contract PoW vs Classic Payment Coin",
-        "subheadline": "Litecoin is digital silver to Bitcoin",
+        "headline": "现代智能合约 PoW vs 经典支付币",
+        "subheadline": "Litecoin 是数字银，对标 Bitcoin",
         "points": [
           {
-            "title": "Smart Contracts",
-            "description": "Ergo has full ErgoScript contracts; Litecoin has Bitcoin-like limited scripting"
+            "title": "智能合约",
+            "description": "Ergo 拥有完整的 ErgoScript 合约；Litecoin 拥有类似 Bitcoin 的有限脚本"
           },
           {
-            "title": "Privacy Approach",
-            "description": "Ergo uses Sigma Protocols (ZK proofs); Litecoin added MWEB (MimbleWimble)"
+            "title": "隐私方案",
+            "description": "Ergo 使用 Sigma 协议（零知识证明）；Litecoin 添加了 MWEB（MimbleWimble）"
           },
           {
             "title": "DeFi",
-            "description": "Ergo has active DEXs and stablecoins; Litecoin has no DeFi"
+            "description": "Ergo 拥有活跃的 DEX 和稳定币；Litecoin 无 DeFi"
           },
           {
-            "title": "Innovation",
-            "description": "Ergo: research-driven with novel features; Litecoin: conservative Bitcoin fork"
+            "title": "创新性",
+            "description": "Ergo：研究驱动，具有新颖功能；Litecoin：保守的 Bitcoin 分叉"
           }
         ]
       },
       "sections": [
         {
-          "title": "Purpose & Vision",
-          "content": "Litecoin was created as ",
-          "ergoAdvantage": "Built for DeFi and programmable money from day one."
+          "title": "目的与愿景",
+          "content": "Litecoin 创建为",
+          "ergoAdvantage": "从第一天起就为 DeFi 和可编程货币而构建。"
         },
         {
-          "title": "Smart Contract Capabilities",
-          "content": "Litecoin has Bitcoin-like scripting - useful for basic multi-sig but not DeFi. Ergo",
-          "ergoAdvantage": "Full DeFi capabilities vs payment-only functionality."
+          "title": "智能合约能力",
+          "content": "Litecoin 拥有类似 Bitcoin 的脚本——适用于基本多签但不适用于 DeFi。Ergo",
+          "ergoAdvantage": "完整的 DeFi 能力 vs 仅限支付功能。"
         },
         {
-          "title": "Privacy Features",
-          "content": "Litecoin added MWEB (MimbleWimble Extension Blocks) for optional privacy. Ergo uses Sigma Protocols enabling zero-knowledge proofs. Both offer opt-in privacy with different technical approaches.",
-          "ergoAdvantage": "Sigma Protocols are more flexible for smart contract privacy."
+          "title": "隐私功能",
+          "content": "Litecoin 为可选隐私添加了 MWEB（MimbleWimble 扩展块）。Ergo 使用 Sigma 协议实现零知识证明。两者都提供不同技术方案的可选隐私。",
+          "ergoAdvantage": "Sigma 协议对智能合约隐私更灵活。"
         },
         {
-          "title": "Mining Decentralization",
-          "content": "Litecoin mining is dominated by ASICs, concentrating hash power. Ergo",
-          "ergoAdvantage": "More decentralized mining participation."
+          "title": "挖矿去中心化",
+          "content": "Litecoin 挖矿由 ASIC 主导，集中算力。Ergo",
+          "ergoAdvantage": "更去中心化的挖矿参与。"
         }
       ],
       "faq": [
         {
-          "question": "Is Litecoin faster than Ergo?",
-          "answer": "Slightly - 2.5 min vs 2 min blocks. But for DeFi, Ergo"
+          "question": "Litecoin 比 Ergo 更快吗？",
+          "answer": "略快——2.5 分钟 vs 2 分钟出块。但对于 DeFi，Ergo"
         },
         {
-          "question": "Which has better privacy?",
-          "answer": "Different approaches. Litecoin uses MWEB (MimbleWimble), Ergo uses Sigma Protocols. Ergo"
+          "question": "哪个隐私更好？",
+          "answer": "方案不同。Litecoin 使用 MWEB（MimbleWimble），Ergo 使用 Sigma 协议。Ergo"
         },
         {
-          "question": "Can I do DeFi on Litecoin?",
-          "answer": "No. Litecoin"
+          "question": "我可以在 Litecoin 上做 DeFi 吗？",
+          "answer": "不能。Litecoin"
         },
         {
-          "question": "Which is more decentralized?",
-          "answer": "Ergo, due to ASIC-resistant mining. Litecoin mining is dominated by ASIC farms, while Ergo remains GPU-mineable."
+          "question": "哪个更去中心化？",
+          "answer": "Ergo，因为采用抗 ASIC 挖矿。Litecoin 挖矿被 ASIC 农场主导，而 Ergo 仍可 GPU 挖矿。"
         }
       ]
     },
     "avalanche": {
       "name": "Avalanche",
-      "seoTitle": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
-      "seoDescription": "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization.",
+      "seoTitle": "Ergo vs Avalanche 2025：公平启动 PoW vs 风险投资支持 PoS 对比",
+      "seoDescription": "Ergo vs Avalanche 对比：公平启动 vs 风险投资、抗 ASIC PoW vs PoS、eUTXO vs 账户模型，以及真正的去中心化。",
       "summary": {
-        "headline": "Grassroots PoW vs VC-Backed PoS",
-        "subheadline": "Avalanche raised $290M+ from VCs with insider allocations. Ergo had zero pre-mine, zero VC money - just fair mining from block 1.",
+        "headline": "草根 PoW vs 风险投资支持 PoS",
+        "subheadline": "Avalanche 通过风险投资融资 2.9 亿美元以上并进行内部人分配。Ergo 零预挖、零风险投资——从第 1 个区块起公平挖矿。",
         "points": [
           {
-            "title": "Token Distribution",
-            "description": "Ergo: 100% mined, no pre-mine. Avalanche: 50% to insiders/team/foundation"
+            "title": "代币分配",
+            "description": "Ergo：100% 挖矿，无预挖。Avalanche：50% 流向内部人/团队/基金会"
           },
           {
-            "title": "Consensus",
-            "description": "Ergo: GPU-mineable PoW. Avalanche: PoS requiring 2000 AVAX ($50K+) to validate"
+            "title": "共识机制",
+            "description": "Ergo：GPU 可挖矿 PoW。Avalanche：PoS 需要质押 2000 AVAX（$50K+）才能验证"
           },
           {
-            "title": "Censorship Resistance",
-            "description": "Ergo: permissionless mining. Avalanche: validators can be identified and pressured"
+            "title": "抗审查性",
+            "description": "Ergo：无许可挖矿。Avalanche：验证者可被识别并受到施压"
           },
           {
-            "title": "MEV Protection",
-            "description": "Ergo: no front-running by design. Avalanche: MEV extraction is possible"
+            "title": "MEV 保护",
+            "description": "Ergo：设计上无抢先交易。Avalanche：MEV 提取是可能的"
           }
         ]
       },
       "sections": [
         {
-          "title": "Token Distribution & Fairness",
-          "content": "Avalanche conducted multiple funding rounds, raising over $290M from VCs including Andreessen Horowitz, Polychain, and Three Arrows Capital. Approximately 50% of tokens went to team, foundation, and investors. Ergo had zero pre-mine, zero ICO - every ERG was mined through PoW, ensuring no insider advantage.",
-          "ergoAdvantage": "True fair launch with no insider allocation or VC influence."
+          "title": "代币分配与公平性",
+          "content": "Avalanche 进行了多轮融资，从包括 Andreessen Horowitz、Polychain 和 Three Arrows Capital 在内的风险投资方筹集了超过 2.9 亿美元。约 50% 的代币流向团队、基金会和投资者。Ergo 零预挖、零 ICO——每一枚 ERG 都通过 PoW 挖矿获得，确保无内部人优势。",
+          "ergoAdvantage": "真正的公平启动，无内部人分配或风险投资影响。"
         },
         {
-          "title": "Consensus & Censorship Resistance",
-          "content": "Avalanche uses Proof-of-Stake where validators must stake 2000 AVAX (worth $50,000+). This creates barriers to entry and validators are identifiable, making them targets for regulatory pressure. Ergo",
-          "ergoAdvantage": "Permissionless, anonymous participation in consensus."
+          "title": "共识与抗审查性",
+          "content": "Avalanche 使用权益证明，验证者必须质押 2000 AVAX（价值 $50,000+）。这造成了准入壁垒，且验证者是可识别的，使其成为监管压力的目标。Ergo",
+          "ergoAdvantage": "无许可、匿名地参与共识。"
         },
         {
-          "title": "MEV & Front-Running",
+          "title": "MEV 与抢先交易",
           "content": "Avalanche",
-          "ergoAdvantage": "No MEV extraction means fairer trading for users."
+          "ergoAdvantage": "无 MEV 提取意味着对用户更公平的交易。"
         },
         {
-          "title": "Smart Contract Model",
-          "content": "Avalanche uses the EVM with Solidity - familiar to developers but with known issues (reentrancy, MEV). Ergo",
-          "ergoAdvantage": "Safer smart contract execution model."
+          "title": "智能合约模型",
+          "content": "Avalanche 使用带有 Solidity 的 EVM——对开发者熟悉，但存在已知问题（重入、MEV）。Ergo",
+          "ergoAdvantage": "更安全的智能合约执行模型。"
         }
       ],
       "faq": [
         {
-          "question": "Is Avalanche faster than Ergo?",
-          "answer": "Yes, Avalanche has ~1 second finality vs Ergo"
+          "question": "Avalanche 比 Ergo 更快吗？",
+          "answer": "是的，Avalanche 约 1 秒终结性 vs Ergo"
         },
         {
-          "question": "Why does VC funding matter?",
-          "answer": "VC-backed chains have insiders who received tokens cheaply and may have influence over development. This creates misaligned incentives. Ergo"
+          "question": "风险投资资金为什么重要？",
+          "answer": "风险投资支持的链有以低价获得代币的内部人，可能对开发产生影响。这造成了激励错位。Ergo"
         },
         {
-          "question": "Can I build the same apps on both?",
-          "answer": "Similar apps, different approaches. Avalanche uses Solidity/EVM, Ergo uses ErgoScript/eUTXO. Ergo"
+          "question": "我能在两者上构建相同的应用吗？",
+          "answer": "类似的应用，不同的方案。Avalanche 使用 Solidity/EVM，Ergo 使用 ErgoScript/eUTXO。Ergo"
         },
         {
-          "question": "Which is more decentralized?",
-          "answer": "Ergo. Anyone can mine with a GPU anonymously. Avalanche requires staking $50K+ and validators are identifiable, making them targets for regulation."
+          "question": "哪个更去中心化？",
+          "answer": "Ergo。任何人都可以匿名使用 GPU 挖矿。Avalanche 需要质押 $50K+ 且验证者是可识别的，使其成为监管目标。"
         }
       ]
     },
     "algorand": {
       "name": "Algorand",
-      "seoTitle": "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
-      "seoDescription": "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain.",
+      "seoTitle": "Ergo vs Algorand 2025：去中心化 PoW vs 企业级 PoS 对比",
+      "seoDescription": "Ergo vs Algorand 对比：草根 PoW vs MIT 支持的 PoS、公平启动 vs 基金会控制，以及真正的去中心化 vs 企业区块链。",
       "summary": {
-        "headline": "Cypherpunk PoW vs Corporate PoS",
-        "subheadline": "Algorand is MIT-backed with foundation-controlled tokenomics. Ergo is community-built with fair distribution and no central authority.",
+        "headline": "密码朋克 PoW vs 企业级 PoS",
+        "subheadline": "Algorand 由 MIT 支持，代币经济学由基金会控制。Ergo 由社区构建，分配公平，无中央权威。",
         "points": [
           {
-            "title": "Governance",
-            "description": "Ergo: community-driven. Algorand: foundation-controlled with relay node requirements"
+            "title": "治理",
+            "description": "Ergo：社区驱动。Algorand：基金会控制，有中继节点要求"
           },
           {
-            "title": "Token Distribution",
-            "description": "Ergo: 100% mined. Algorand: foundation controls billions of ALGO"
+            "title": "代币分配",
+            "description": "Ergo：100% 挖矿。Algorand：基金会控制数十亿 ALGO"
           },
           {
-            "title": "Consensus",
-            "description": "Ergo: permissionless PoW. Algorand: Pure PoS with participation requirements"
+            "title": "共识机制",
+            "description": "Ergo：无许可 PoW。Algorand：纯权益证明，有参与要求"
           },
           {
-            "title": "Philosophy",
-            "description": "Ergo: cypherpunk, privacy-focused. Algorand: enterprise, compliance-friendly"
+            "title": "理念",
+            "description": "Ergo：密码朋克，注重隐私。Algorand：企业级，合规友好"
           }
         ]
       },
       "sections": [
         {
-          "title": "Centralization Concerns",
+          "title": "中心化问题",
           "content": "Algorand",
-          "ergoAdvantage": "Fully decentralized with no foundation-controlled infrastructure."
+          "ergoAdvantage": "完全去中心化，无基金会控制的基础设施。"
         },
         {
-          "title": "Token Distribution",
+          "title": "代币分配",
           "content": "Algorand",
-          "ergoAdvantage": "Fair distribution with no central entity controlling supply."
+          "ergoAdvantage": "公平分配，无中央实体控制供应量。"
         },
         {
-          "title": "Philosophical Approach",
-          "content": "Algorand positions itself for enterprise adoption with compliance-friendly features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
-          "ergoAdvantage": "Built for individual freedom, not corporate compliance."
+          "title": "哲学方案",
+          "content": "Algorand 凭借合规友好功能和 MIT 学术背书，将自身定位于企业采用。Ergo 拥抱密码朋克价值观：隐私、抗审查性和金融主权。不同的目标受众，不同的设计决策。",
+          "ergoAdvantage": "为个人自由而构建，而非企业合规。"
         },
         {
-          "title": "Smart Contract Capabilities",
-          "content": "Algorand uses TEAL (Transaction Execution Approval Language) and PyTeal. Ergo uses ErgoScript. Both are capable but different. Ergo",
-          "ergoAdvantage": "eUTXO model is safer for financial applications."
+          "title": "智能合约能力",
+          "content": "Algorand 使用 TEAL（交易执行审批语言）和 PyTeal。Ergo 使用 ErgoScript。两者都有能力但各有不同。Ergo",
+          "ergoAdvantage": "eUTXO 模型对金融应用更安全。"
         }
       ],
       "faq": [
         {
-          "question": "Is Algorand decentralized?",
-          "answer": "Partially. While anyone can run participation nodes, relay nodes are foundation-controlled. The foundation also controls significant token supply. Ergo is fully permissionless with no central infrastructure."
+          "question": "Algorand 是去中心化的吗？",
+          "answer": "部分如此。虽然任何人都可以运行参与节点，但中继节点由基金会控制。基金会还控制着大量代币供应量。Ergo 是完全无许可的，没有中央基础设施。"
         },
         {
-          "question": "Which is faster?",
-          "answer": "Algorand has ~4 second finality vs Ergo"
+          "question": "哪个更快？",
+          "answer": "Algorand 约 4 秒终结性 vs Ergo"
         },
         {
-          "question": "Can both do DeFi?",
-          "answer": "Yes, both support DeFi. Algorand has growing DeFi with TEAL contracts. Ergo has active DeFi with unique MEV resistance due to eUTXO model."
+          "question": "两者都能做 DeFi 吗？",
+          "answer": "是的，两者都支持 DeFi。Algorand 拥有使用 TEAL 合约的增长中 DeFi。Ergo 拥有活跃的 DeFi，由于 eUTXO 模型具有独特的 MEV 抗性。"
         },
         {
-          "question": "Which is better for privacy?",
-          "answer": "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no native privacy features and is designed to be compliance-friendly."
+          "question": "哪个在隐私方面更好？",
+          "answer": "Ergo。Sigma 协议在 L1 实现零知识证明。Algorand 没有原生隐私功能，其设计是合规友好的。"
         },
         {
-          "question": "Why choose Ergo over Algorand?",
-          "answer": "If you value true decentralization, privacy, fair distribution, and cypherpunk principles over speed and enterprise adoption, Ergo aligns better with those values."
+          "question": "为什么选择 Ergo 而非 Algorand？",
+          "answer": "如果您重视真正的去中心化、隐私、公平分配和密码朋克原则，而非速度和企业采用，Ergo 与这些价值观更为契合。"
         }
       ]
     }

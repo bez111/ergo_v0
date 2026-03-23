@@ -78,7 +78,7 @@
           "name": "Ergo 用户指南库",
           "description": "用于使用 Ergo 区块链应用程序的教育资源",
           "level": "从初级到高级的",
-          "teaches": "Cryptocurrency Wallets, Defi Trading, Blockchain Mining, NFT Trading, Smart Contraction"
+          "teaches": "加密货币钱包、DeFi交易、区块链挖矿、NFT交易、智能合约交互"
         }
       }
     },
@@ -134,8 +134,8 @@
           }
         },
         "standardPayment": {
-          "title": "在ERG中标准付款",
-          "description": "Description"
+          "title": "以ERG支付标准手续费",
+          "description": "通常情况下，Ergo网络的交易费用以平台原生代币ERG支付。手续费金额取决于交易的字节大小和当前网络拥堵情况，但总体而言，得益于eUTXO模型，Ergo的费用具有较高的可预测性。"
         }
       },
       "introduction": {
@@ -176,28 +176,28 @@
         "details": {
           "userOffer": {
             "title": "用户报价",
-            "description": "Babel fee box."
+            "description": "希望用代币支付手续费的用户，会在其交易中创建一个特殊的"输出框"，通常称为"Babel 费用盒"。在这个盒中，用户提供一定数量的代币，以换取他人代为支付ERG手续费。"
           },
           "intermediaries": {
             "title": "中间人（采矿者、机器人、服务业）的作用",
             "steps": {
               "detecting": {
                 "title": "1. 检测报价",
-                "description": "Description"
+                "description": "矿工或专用机器人/服务（中间人）扫描网络，寻找这些"Babel 费用盒"。"
               },
               "executing": {
-                "title": "2. 执行Exchange",
-                "description": "Description"
+                "title": "2. 执行交换",
+                "description": "若代币报价有利可图（即所提供代币的市场价值大于或等于ERG手续费加上中间人的少量利润），中间人即"履行"该报价。"
               },
               "paying": {
-                "title": "3. 支付ERG费用",
-                "description": "Description"
+                "title": "3. 支付ERG手续费",
+                "description": "中间人从"Babel 费用盒"中取出所提供的代币，并向将交易打包入区块的矿工支付所需的ERG手续费。"
               }
             }
           },
           "market": {
             "title": "市场机制",
-            "description": "Description"
+            "description": "Babel Fees对特定代币的有效性，取决于该代币是否存在"市场"——即是否有中间人愿意以某一汇率用ERG来兑换这些代币。代币越受欢迎，被接受用于手续费支付的可能性就越高。"
           }
         }
       },
@@ -252,7 +252,7 @@
           },
           "exchangeRates": {
             "title": "汇率",
-            "description": "Description"
+            "description": "您的代币被接受以覆盖ERG手续费的"价格"或汇率，将由市场条件和中间人的报价决定。"
           },
           "howToUse": {
             "title": "如何使用",
@@ -268,7 +268,7 @@
         },
         "questions": {
           "adoption": "矿物/中间体目前采集的Babel费用有多大？",
-          "markets": "General content",
+          "markets": "目前是否存在活跃且流动性充足的"市场"，使许多代币可用于Babel手续费支付？",
           "development": "是否正在努力改进或扩大巴贝勒收费机制？"
         },
         "checkUpdates": "在 EIP-0019 上查看最新更新"
@@ -276,7 +276,7 @@
       "comparison": {
         "title": "比较：ERG费用与Babel 费用",
         "ergFees": {
-          "title": "ERG Fees",
+          "title": "ERG 手续费",
           "features": {
             "accepted": "总是接受费用支付",
             "reliable": "主要和最可靠的方法",
@@ -370,43 +370,43 @@
       "comingSoon": "即将到来的"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "了解更多关于{title}的信息"
     },
     "learnTechnology": {
-      "title": "Learn the Technology",
+      "title": "学习技术",
       "ergoscript": {
         "title": "ErgoScript",
-        "description": "Learn the smart contract language powering these use cases",
-        "cta": "Start Tutorial"
+        "description": "学习驱动这些用例的智能合约语言",
+        "cta": "开始教程"
       },
       "eutxo": {
-        "title": "eUTXO Model",
-        "description": "Understand the foundation that enables these applications",
-        "cta": "Learn More"
+        "title": "eUTXO 模型",
+        "description": "理解支撑这些应用的基础架构",
+        "cta": "了解更多"
       },
       "allTechnology": {
-        "title": "All Technology",
-        "description": "Explore all of Ergo's technical innovations",
-        "cta": "View All"
+        "title": "全部技术",
+        "description": "探索Ergo的所有技术创新",
+        "cta": "查看全部"
       }
     },
     "whatsNext": {
-      "title": "What's Next?",
-      "subtitle": "Start exploring applications or learn how to build on Ergo",
+      "title": "接下来？",
+      "subtitle": "开始探索应用，或学习如何在Ergo上进行构建",
       "exploreEcosystem": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover Applications",
-        "description": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo"
+        "title": "探索生态系统",
+        "subtitle": "发现应用",
+        "description": "查找在Ergo上构建的DeFi协议、钱包、NFT平台及其他dApp"
       },
       "startBuilding": {
-        "title": "Start Building",
-        "subtitle": "Developer Resources",
-        "description": "Access documentation, tutorials, and tools to build your own Ergo applications"
+        "title": "开始构建",
+        "subtitle": "开发者资源",
+        "description": "获取文档、教程和工具，构建您自己的Ergo应用"
       }
     },
     "emailCapture": {
-      "title": "Discover New Use Cases",
-      "description": "Get notified about new practical applications, real-world implementations, and use case studies"
+      "title": "发现新用例",
+      "description": "获取有关新实际应用、现实世界实现及用例研究的最新通知"
     },
     "allUseCases": "所有使用情况",
     "faq": {
@@ -456,7 +456,7 @@
         "5": {
           "id": "开发者资源",
           "question": "开发者可获得哪些资源？",
-          "answer": "Ergo 提供了全面的开发者资源：ErgoScript 文档和教程，多语言的 SDK (Scala ) JS, Pythone, AppKit for dApp development, Active developer community and support, allows programme for ecosystem projects."
+          "answer": "Ergo 提供了全面的开发者资源：ErgoScript 文档和教程、多语言SDK（Scala、JS、Python）、用于dApp开发的AppKit、活跃的开发者社区与支持、面向生态系统项目的资助计划。"
         }
       }
     },
@@ -587,7 +587,7 @@
         "exchanges": {
           "aster": {
             "name": "Aster",
-            "description": "Decentralized perpetual contracts exchange"
+            "description": "去中心化永续合约交易所"
           },
           "hyperliquid": {
             "name": "超流动性",
@@ -609,8 +609,8 @@
         "goToSwap": "转到交换机"
       },
       "security": {
-        "title": "总是安全",
-        "description": "Description",
+        "title": "始终保持安全",
+        "description": "在交易所购买ERG后，务必将其提取到您自己控制私钥的个人钱包中。请记住加密货币的准则："不是您的密钥，就不是您的加密资产。"",
         "findWallet": "在此查找安全钱包"
       },
       "schema": {
@@ -682,8 +682,8 @@
       }
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
-      "subtitle": "稳定的值存储，没有集中控制",
+      "title": "算法稳定币",
+      "subtitle": "无需中心化控制的稳定价值存储",
       "description": "带有创新的年龄和美元协议的超附属的马铃薯。分散、透明和复原力。",
       "lastUpdated": "最后更新：",
       "meta": {
@@ -772,7 +772,7 @@
           "sigmaUsd": {
             "title": "SigmaUSD (稳定)",
             "points": {
-              "point1": "Petged to $1",
+              "point1": "锚定1美元",
               "point2": "被ERG储备打包",
               "point3": "储备率大于400%",
               "point4": "价值1美元的ERG可赎回"
@@ -831,8 +831,8 @@
           "answer": "Ergo上的算法马氏体通过超额抵押、算法供应调整和市场刺激等综合办法维持了它们的宠物。 年龄美元协议使用双令牌系统，即备用供应商为了保持稳定性而吸收波动性。"
         },
         "whyErgoIdeal": {
-          "question": "是什么？",
-          "answer": "Ergo的 eUTXO 模型为抵押管理提供了更高的担保，本地的oracle 池确保可靠的价格进出， ErgoScript 公司使复杂的稳定机制得以建立，同时保持透明度和可审计性。"
+          "question": "是什么使Ergo成为稳定币的理想平台？",
+          "answer": "Ergo的eUTXO模型为抵押品管理提供了卓越的安全性，原生oracle池确保可靠的价格喂价，ErgoScript支持构建复杂的稳定机制，同时保持透明度和可审计性。"
         },
         "howAgeUsdWorks": {
           "question": "年龄美元协议是如何运作的？",
@@ -856,30 +856,30 @@
         "developerDocs": "开发者文档"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start using or building algorithmic stablecoins on Ergo today",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "今天就开始在Ergo上使用或构建算法稳定币",
         "cards": {
           "useSigmaUsd": {
-            "title": "Use SigmaUSD",
-            "subtitle": "Start Trading",
-            "description": "Experience the first algorithmic stablecoin on Ergo using the AgeUSD protocol"
+            "title": "使用SigmaUSD",
+            "subtitle": "开始交易",
+            "description": "体验Ergo上基于AgeUSD协议的首个算法稳定币"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Build Your Own",
-            "description": "Access documentation and tools to build your own stablecoin protocols on Ergo"
+            "title": "开发者文档",
+            "subtitle": "自行构建",
+            "description": "获取文档和工具，在Ergo上构建您自己的稳定币协议"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo Stablecoins",
-        "description": "Get notified about SigmaUSD updates, new stablecoin protocols, and DeFi innovations."
+        "title": "获取Ergo稳定币最新动态",
+        "description": "接收SigmaUSD更新、新稳定币协议及DeFi创新的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
           "useCases": "使用案例",
-          "algorithmicStablecoins": "Algorithmic Stablecoins"
+          "algorithmicStablecoins": "算法稳定币"
         },
         "techArticle": {
           "headline": "Ergo 上的算法星系",
@@ -907,7 +907,7 @@
               "text": "安装一个 Ergo 钱包，如Nautilus 或 SAFEW"
             },
             "getErg": {
-              "name": "Get ERG tokens",
+              "name": "获取ERG代币",
               "text": "从交易所或DEX获取ERG"
             },
             "accessSigmaUsd": {
@@ -1009,7 +1009,7 @@
           }
         },
         "ergomixer": {
-          "title": "ErgoMixer Protocol",
+          "title": "ErgoMixer 协议",
           "howItWorks": {
             "title": "如何工作",
             "points": {
@@ -1033,8 +1033,8 @@
           }
         },
         "codeExample": {
-          "title": "Sigma Protocol Example",
-          "description": "混合的零知识证明"
+          "title": "Sigma 协议示例",
+          "description": "用于混币的零知识证明"
         }
       },
       "projects": {
@@ -1104,17 +1104,17 @@
         "privacyGuide": "隐私指南"
       },
       "relatedContent": {
-        "title": "Explore Privacy",
-        "subtitle": "Dive deeper into Ergo's privacy features and technology"
+        "title": "探索隐私功能",
+        "subtitle": "深入了解Ergo的隐私特性与技术"
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo Privacy",
-        "description": "Get notified about privacy features, Sigma Protocols updates, and security innovations."
+        "title": "获取Ergo隐私最新动态",
+        "description": "接收隐私功能、Sigma 协议更新及安全创新的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
           "useCases": "使用案例",
-          "privacyConfidentiality": "隐私和保密"
+          "privacyConfidentiality": "隐私与保密"
         },
         "techArticle": {
           "headline": "Ergo上的隐私和保密",
@@ -1175,8 +1175,8 @@
           "description": "W3C DID规范"
         },
         "privacyEcosystem": {
-          "name": "Privacy Ecosystem",
-          "description": "Privacy tools and protocols on Ergo"
+          "name": "隐私生态系统",
+          "description": "Ergo上的隐私工具与协议"
         },
         "buildIdentityApps": {
           "name": "构建身份应用",
@@ -1204,8 +1204,8 @@
           "description": "代表赚取信誉积分的不可转让代币"
         },
         "sybilResistance": {
-          "title": "Sybil Resistance",
-          "description": "防止假身份并确保一人一票"
+          "title": "抗女巫攻击",
+          "description": "防止虚假身份并确保一人一票"
         },
         "verifiableCredentials": {
           "title": "可验证的证书",
@@ -1256,7 +1256,7 @@
             }
           },
           "sybilResistance": {
-            "title": "Sybil Resistance"
+            "title": "抗女巫攻击"
           }
         },
         "codeExample": {
@@ -1324,31 +1324,31 @@
       },
       "cta": {
         "title": "准备好构建身份解决方案？",
-        "subtitle": "在埃尔戈创建分散化身份和声誉系统。",
-        "startBuilding": "开始Building",
+        "subtitle": "在Ergo上创建去中心化身份与信誉系统。",
+        "startBuilding": "开始构建",
         "learnMore": "了解更多",
-        "developerDocs": "Developer Docs"
+        "developerDocs": "开发者文档"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building or exploring identity solutions on Ergo today",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "今天就开始在Ergo上构建或探索身份解决方案",
         "cards": {
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build identity and reputation systems on Ergo"
+            "title": "开发者文档",
+            "subtitle": "开始构建",
+            "description": "获取文档和工具，在Ergo上构建身份与信誉系统"
           },
           "privacyGuide": {
-            "title": "Privacy Guide",
-            "subtitle": "Learn More",
-            "description": "Understand privacy-preserving identity solutions and their implementation on Ergo"
+            "title": "隐私指南",
+            "subtitle": "了解更多",
+            "description": "了解隐私保护的身份解决方案及其在Ergo上的实现"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Digital Identity",
-        "description": "Get notified about self-sovereign identity solutions and privacy-preserving credentials."
+        "title": "获取数字身份最新动态",
+        "description": "接收自主身份解决方案及隐私保护凭证的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
@@ -1420,8 +1420,8 @@
           "description": "使用 1:1 后台支持包装令牌的原生支持"
         },
         "atomicSwaps": {
-          "title": "Atomic Swaps",
-          "description": "没有中间商直接对同行跨链交易"
+          "title": "原子交换",
+          "description": "无需中间人的点对点跨链直接交易"
         }
       },
       "technical": {
@@ -1540,30 +1540,30 @@
         "developerDocs": "开发者文档"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start bridging assets or learn how to build cross-chain applications on Ergo",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "开始跨链资产或学习如何在Ergo上构建跨链应用",
         "cards": {
           "useRosenBridge": {
-            "title": "Use Rosen Bridge",
-            "subtitle": "Start Bridging",
-            "description": "Bridge assets between Ergo and other blockchains using the most secure and decentralized bridge protocol"
+            "title": "使用Rosen Bridge",
+            "subtitle": "开始跨链",
+            "description": "使用最安全、最去中心化的桥接协议，在Ergo与其他区块链之间转移资产"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Build Bridges",
-            "description": "Learn how to integrate cross-chain functionality into your applications and contribute to the bridge ecosystem"
+            "title": "开发者文档",
+            "subtitle": "构建桥接",
+            "description": "了解如何将跨链功能集成到您的应用中，并为桥接生态系统做出贡献"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Cross-Chain Bridges",
-        "description": "Get notified about new bridge integrations, security updates, and cross-chain opportunities."
+        "title": "获取跨链桥最新动态",
+        "description": "接收新桥接集成、安全更新及跨链机会的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
           "useCases": "使用案例",
-          "crossChainBridges": "交叉链桥"
+          "crossChainBridges": "跨链桥"
         },
         "techArticle": {
           "headline": "Ergo 上的连锁桥。",
@@ -1573,8 +1573,8 @@
       }
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "社区治理和替代性经济体系",
+      "title": "DAO 与替代经济",
+      "subtitle": "社区治理与替代性经济体系",
       "description": "可压缩的 DAO 基础设施：国库、投票、利润分享。",
       "lastUpdated": "最后更新：",
       "meta": {
@@ -1583,8 +1583,8 @@
         "canonicalPath": "/use/daos-alternative-economies"
       },
       "seo": {
-        "title": "DAOs & Alternative Economies on Ergo | Decentralized Governance",
-        "description": "• 在埃尔戈建立自动化组织和替代性经济体系；",
+        "title": "Ergo上的DAO与替代经济 | 去中心化治理",
+        "description": "在Ergo上构建DAO与替代性经济体系。财库管理、链上投票、利润分享及可组合的治理基础设施。",
         "keywords": "DAOs, 分散管理, 替代经济, Paideia, 金库管理, 链上投票, Ergo DAO",
         "ogTitle": "Ergo DAOs & Alternative Economies",
         "ogDescription": "Ergo blockchain的社区治理和替代经济体系。",
@@ -1608,7 +1608,7 @@
       },
       "navigation": {
         "daoFeatures": "DAO 功能",
-        "liveDaos": "Live DAOs",
+        "liveDaos": "在线DAO",
         "faq": "常见问题"
       },
       "features": {
@@ -1631,8 +1631,8 @@
           "description": "自定义治理模型的 DAO 模块"
         },
         "tokenEconomies": {
-          "title": "Token Economies",
-          "description": "用内置经济模型创建自定义令牌"
+          "title": "代币经济",
+          "description": "使用内置经济模型创建自定义代币"
         },
         "reputationSystems": {
           "title": "信誉系统",
@@ -1688,8 +1688,8 @@
         }
       },
       "projects": {
-        "title": "Live DAOs",
-        "subtitle": "活跃的 DAOs 在 Ergo 上运行",
+        "title": "在线DAO",
+        "subtitle": "在Ergo上运行的活跃DAO",
         "paideia": {
           "name": "Paideia",
           "description": "完整的 DAO 基础设施和治理工具",
@@ -1705,7 +1705,7 @@
           "description": "社区管理的启动板和孵化器",
           "status": "实时模式",
           "features": {
-            "feature1": "Staking governance",
+            "feature1": "质押治理",
             "feature2": "收入共享",
             "feature3": "项目供资"
           }
@@ -1716,7 +1716,7 @@
           "status": "正在开发",
           "features": {
             "feature1": "二次投票",
-            "feature2": "delegation",
+            "feature2": "委托投票",
             "feature3": "已锁定时间的建议"
           }
         },
@@ -1756,30 +1756,30 @@
         "daoGuide": "DAO 指南"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building your DAO or learn how to participate in decentralized governance",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "开始构建您的DAO，或了解如何参与去中心化治理",
         "cards": {
           "launchWithPaideia": {
-            "title": "Launch with Paideia",
-            "subtitle": "Start Building",
-            "description": "Create and manage your decentralized autonomous organization with Paideia's comprehensive DAO toolkit"
+            "title": "使用Paideia启动",
+            "subtitle": "开始构建",
+            "description": "使用Paideia全面的DAO工具包，创建并管理您的去中心化自治组织"
           },
           "daoGuide": {
-            "title": "DAO Guide",
-            "subtitle": "Learn More",
-            "description": "Explore comprehensive documentation on DAO governance models, treasury management, and best practices"
+            "title": "DAO指南",
+            "subtitle": "了解更多",
+            "description": "探索DAO治理模型、财库管理及最佳实践的全面文档"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on DAOs",
-        "description": "Get notified about DAO governance updates, treasury innovations, and community initiatives."
+        "title": "获取DAO最新动态",
+        "description": "接收DAO治理更新、财库创新及社区倡议的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
           "useCases": "使用案例",
-          "daosAlternativeEconomies": "DAOs & Alternative Economies"
+          "daosAlternativeEconomies": "DAO与替代经济"
         }
       }
     },
@@ -1794,7 +1794,7 @@
         "canonicalPath": "/use/nfts-digital-assets"
       },
       "seo": {
-        "title": "NFTs & Digital Assets on Ergo | True Digital Oownership",
+        "title": "Ergo上的NFT与数字资产 | 真正的数字所有权",
         "description": "在Ergo上创建和交易NFTs。上链元数据、协议使用费、动态NFT和可编程的数字资产。",
         "keywords": "NFT, digital assets, SkyHarbor, 上链元数据，协议使用费，动态NFT, Ergo NFT",
         "ogTitle": "NFTs & Digital Assets on Ergo",
@@ -1830,8 +1830,8 @@
           "description": "将NFT元数据直接存储在链上，用于真正的永久性和放权。"
         },
         "protocolRoyalties": {
-          "title": "Protocol Royalties",
-          "description": "协议一级可以执行的特许权使用费，确保创作者始终得到支付"
+          "title": "协议版税",
+          "description": "在协议层面强制执行的版税，确保创作者始终获得报酬"
         },
         "dynamicNfts": {
           "title": "动态NFTs",
@@ -1894,8 +1894,8 @@
           }
         },
         "codeExample": {
-          "title": "NFT Mining 示例",
-          "description": "用于创建 NFT 的 ErgoScript"
+          "title": "NFT 铸造示例",
+          "description": "用于NFT创建的ErgoScript"
         }
       },
       "projects": {
@@ -1964,25 +1964,25 @@
         "nftGuide": "NFT 指南"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Learn how to create and manage digital assets on Ergo blockchain",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "了解如何在Ergo区块链上创建和管理数字资产",
         "cards": {
           "nftGuide": {
-            "title": "NFT Guide",
-            "subtitle": "Learn More",
-            "description": "Learn how to create, mint, and manage NFTs on Ergo with comprehensive documentation and tutorials"
+            "title": "NFT指南",
+            "subtitle": "了解更多",
+            "description": "通过全面的文档和教程，学习如何在Ergo上创建、铸造和管理NFT"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Explore comprehensive developer documentation and start building NFT applications on Ergo blockchain"
+            "title": "开发者文档",
+            "subtitle": "开始构建",
+            "description": "探索全面的开发者文档，开始在Ergo区块链上构建NFT应用"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo NFTs",
-        "description": "Get notified about new NFT drops, marketplace updates, and digital asset innovations."
+        "title": "获取Ergo NFT最新动态",
+        "description": "接收新NFT发布、市场更新及数字资产创新的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
@@ -2107,8 +2107,8 @@
         }
       },
       "projects": {
-        "title": "Live Oracle Solutions",
-        "subtitle": "正在Ergo上执行Oracle",
+        "title": "在线Oracle解决方案",
+        "subtitle": "正在Ergo上运行的Oracle实现",
         "oraclePools": {
           "name": "Oracle 池v2",
           "description": "为埃尔戈分散化的Oracle基础设施",
@@ -2173,25 +2173,25 @@
         "developerDocs": "开发者文档"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start using or building oracle solutions on Ergo today",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "今天就开始在Ergo上使用或构建Oracle解决方案",
         "cards": {
           "oracleCore": {
             "title": "Oracle Core",
-            "subtitle": "Start Building",
-            "description": "Core off-chain component for Oracle Pools - bootstrap, run, and manage oracle solutions on Ergo"
+            "subtitle": "开始构建",
+            "description": "Oracle池的核心链下组件——在Ergo上启动、运行和管理Oracle解决方案"
           },
           "oracleDocumentation": {
-            "title": "Oracle Documentation",
-            "subtitle": "Learn More",
-            "description": "Comprehensive guide to understanding and implementing oracle solutions on Ergo"
+            "title": "Oracle文档",
+            "subtitle": "了解更多",
+            "description": "理解和实现Ergo上Oracle解决方案的全面指南"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Oracle Pools",
-        "description": "Get notified about oracle updates, data feed improvements, and DeFi integrations."
+        "title": "获取Oracle池最新动态",
+        "description": "接收Oracle更新、数据馈送改进及DeFi集成的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
@@ -2381,25 +2381,25 @@
         "startBuilding": "开始Building"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start playing or building blockchain games on Ergo today",
+        "titlePrefix": "接下来",
+        "titleHighlight": "是什么？",
+        "subtitle": "今天就开始在Ergo上体验或构建区块链游戏",
         "cards": {
           "exploreGames": {
-            "title": "Explore Games",
-            "subtitle": "Start Playing",
-            "description": "Discover and play blockchain games built on Ergo's gaming ecosystem"
+            "title": "探索游戏",
+            "subtitle": "开始游戏",
+            "description": "发现并体验在Ergo游戏生态系统上构建的区块链游戏"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build your own blockchain games on Ergo"
+            "title": "开发者文档",
+            "subtitle": "开始构建",
+            "description": "获取文档和工具，在Ergo上构建您自己的区块链游戏"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Blockchain Gaming",
-        "description": "Get notified about new games, NFT drops, and gaming ecosystem updates on Ergo."
+        "title": "获取区块链游戏最新动态",
+        "description": "接收Ergo上新游戏发布、NFT上新及游戏生态系统更新的最新通知。"
       },
       "schema": {
         "breadcrumbs": {
@@ -2568,7 +2568,7 @@
         }
       }
     },
-    "whyErgo": "为什么为Defi & Mining错误？",
+    "whyErgo": "为什么选择Ergo用于DeFi和挖矿？",
     "seeComparison": "查看它的比较",
     "hoverTexts": {
       "stablecoins": "了解更多",
@@ -2606,8 +2606,8 @@
           "description": "经过战斗测试的智能合同，并经过正式验证"
         },
         "3": {
-          "title": "Lightning Fast",
-          "description": "低收费次级交易"
+          "title": "闪电极速",
+          "description": "极低手续费的亚秒级交易"
         }
       },
       "whatsComing": {
@@ -2632,68 +2632,68 @@
     },
     "cases": {
       "stablecoins": {
-        "title": "[TODO: Algorithmic Stablecoins]",
-        "subtitle": "[TODO: Stable value storage without centralized control]",
-        "description": "[TODO: Over-collateralized stablecoins with innovative AgeUSD protocol.]",
-        "tags": "[TODO: Stablecoin,Algorithmic,Collateral]"
+        "title": "算法稳定币",
+        "subtitle": "无需中心化控制的稳定价值存储",
+        "description": "采用创新AgeUSD协议的超额抵押稳定币。",
+        "tags": "稳定币,算法,抵押品"
       },
       "privacy": {
-        "title": "[TODO: Privacy & Confidentiality]",
-        "subtitle": "[TODO: Financial privacy in an increasingly surveilled world]",
-        "description": "[TODO: Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy.]",
-        "tags": "[TODO: Mixer,Stealth,Zero-Knowledge]"
+        "title": "隐私与保密",
+        "subtitle": "在日益被监控的世界中保护金融隐私",
+        "description": "非托管混币器、隐身地址、零知识证明，实现完全隐私。",
+        "tags": "混币器,隐身,零知识"
       },
       "bridges": {
-        "title": "[TODO: Cross-Chain Bridges]",
-        "subtitle": "[TODO: Secure, trustless value transfer between blockchains]",
-        "description": "[TODO: Decentralized bridges with multi-signature security, no central custody.]",
-        "tags": "[TODO: Bridge,Interoperability,Multi-chain]"
+        "title": "跨链桥",
+        "subtitle": "区块链之间安全、无需信任的价值转移",
+        "description": "采用多重签名安全的去中心化桥接，无需中心化托管。",
+        "tags": "桥接,互操作性,多链"
       },
       "daos": {
-        "title": "[TODO: DAOs & Alternative Economies]",
-        "subtitle": "[TODO: Community governance and alternative economic systems]",
-        "description": "[TODO: Composable DAO infrastructure: treasury, voting, profit-sharing.]",
-        "tags": "[TODO: DAO,Governance,Community]"
+        "title": "DAO与替代经济",
+        "subtitle": "社区治理与替代性经济体系",
+        "description": "可组合的DAO基础设施：财库、投票、利润分享。",
+        "tags": "DAO,治理,社区"
       },
       "nfts": {
-        "title": "[TODO: NFTs & Digital Assets]",
-        "subtitle": "[TODO: True digital ownership, dynamic properties]",
-        "description": "[TODO: On-chain metadata, protocol royalties, programmable NFTs.]",
-        "tags": "[TODO: NFT,Royalties,Dynamic]"
+        "title": "NFT与数字资产",
+        "subtitle": "真正的数字所有权，动态属性",
+        "description": "链上元数据、协议版税、可编程NFT。",
+        "tags": "NFT,版税,动态"
       },
       "oracles": {
-        "title": "[TODO: Oracles & Data Feeds]",
-        "subtitle": "[TODO: Bringing real-world data on-chain]",
-        "description": "[TODO: Decentralized oracle pools provide external data for DeFi & prediction markets.]",
-        "tags": "[TODO: Oracles,Data Feeds,Prediction]"
+        "title": "预言机与数据馈送",
+        "subtitle": "将真实世界数据引入链上",
+        "description": "去中心化预言机池为DeFi和预测市场提供外部数据。",
+        "tags": "预言机,数据馈送,预测"
       },
       "identity": {
-        "title": "[TODO: Identity & Reputation]",
-        "subtitle": "[TODO: Self-sovereign identity & Web3 reputation]",
-        "description": "[TODO: Decentralized identifiers (DID), Sybil resistance, reputation systems.]",
-        "tags": "[TODO: Identity,Reputation,DID]"
+        "title": "身份与信誉",
+        "subtitle": "自主身份与Web3信誉",
+        "description": "去中心化标识符(DID)、抗女巫攻击、信誉系统。",
+        "tags": "身份,信誉,DID"
       },
       "gaming": {
-        "title": "[TODO: Gaming & Metaverse]",
-        "subtitle": "[TODO: Next-gen gaming assets & digital worlds]",
-        "description": "[TODO: Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.]",
-        "tags": "[TODO: Gaming,Metaverse,NFT]"
+        "title": "游戏与元宇宙",
+        "subtitle": "下一代游戏资产与数字世界",
+        "description": "可编程游戏代币、NFT驱动的经济、元宇宙基础设施。",
+        "tags": "游戏,元宇宙,NFT"
       }
     },
     "common": {
-      "exploreCase": "[TODO: Explore Use Case]",
-      "learnMore": "[TODO: Learn More]",
-      "supportedProjects": "[TODO: Supported Projects]",
-      "getStarted": "[TODO: Get Started]"
+      "exploreCase": "探索用例",
+      "learnMore": "了解更多",
+      "supportedProjects": "支持的项目",
+      "getStarted": "立即开始"
     }
   },
   "usePages": {
     "common": {
-      "whatsNext": "是什么",
-      "whatsNextHighlight": "下一步？",
-      "documentation": "文件",
+      "whatsNext": "接下来",
+      "whatsNextHighlight": "是什么？",
+      "documentation": "文档",
       "developerDocs": "开发者文档",
-      "startBuilding": "开始Building",
+      "startBuilding": "开始构建",
       "learnMore": "了解更多"
     }
   },
@@ -2708,8 +2708,8 @@
     "subtitle": "无需信任的互操作性解决办法"
   },
   "useDaos": {
-    "title": "DAOs & Governance",
-    "description": "埃尔戈权力下放的自治组织",
+    "title": "DAO与治理",
+    "description": "Ergo上的去中心化自治组织",
     "subtitle": "社区驱动的决策"
   },
   "useGaming": {
@@ -2718,9 +2718,9 @@
     "subtitle": "游戏赚钱和 NFT 游戏"
   },
   "useGetErg": {
-    "title": "Get ERG",
-    "description": "如何通过各种方法获取ERG令牌",
-    "subtitle": "交流、采矿和赚取收入的机会"
+    "title": "获取ERG",
+    "description": "如何通过各种方式获取ERG代币",
+    "subtitle": "交易所、挖矿及收益机会"
   },
   "useGuides": {
     "title": "使用案例指南",
@@ -2753,75 +2753,75 @@
     "subtitle": "保密交易和资产保护"
   },
   "useStablecoins": {
-    "title": "Stablecoins",
-    "description": "在Ergo上构建算法拼图",
-    "subtitle": "分散化稳定的价值存储"
+    "title": "稳定币",
+    "description": "在Ergo上构建的算法稳定币",
+    "subtitle": "去中心化的稳定价值存储"
   },
   "useCasesData": {
     "tagLabels": {
-      "stablecoin": "Stablecoin",
-      "algorithmic": "Algorithmic",
-      "collateral": "Collateral",
-      "mixer": "Mixer",
-      "stealth": "Stealth",
-      "zeroKnowledge": "Zero-Knowledge",
-      "bridge": "Bridge",
-      "interoperability": "Interoperability",
-      "multichain": "Multi-chain",
+      "stablecoin": "稳定币",
+      "algorithmic": "算法",
+      "collateral": "抵押品",
+      "mixer": "混币器",
+      "stealth": "隐身",
+      "zeroKnowledge": "零知识",
+      "bridge": "桥接",
+      "interoperability": "互操作性",
+      "multichain": "多链",
       "dao": "DAO",
-      "governance": "Governance",
-      "community": "Community",
+      "governance": "治理",
+      "community": "社区",
       "nft": "NFT",
-      "royalties": "Royalties",
-      "dynamic": "Dynamic",
-      "oracles": "Oracles",
-      "dataFeeds": "Data feeds",
-      "prediction": "Prediction",
-      "identity": "Identity",
-      "reputation": "Reputation",
+      "royalties": "版税",
+      "dynamic": "动态",
+      "oracles": "预言机",
+      "dataFeeds": "数据馈送",
+      "prediction": "预测",
+      "identity": "身份",
+      "reputation": "信誉",
       "did": "DID",
-      "gaming": "Gaming",
-      "metaverse": "Metaverse"
+      "gaming": "游戏",
+      "metaverse": "元宇宙"
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
-      "subtitle": "Stable value storage without centralized control",
-      "description": "Over-collateralized stablecoins with innovative AgeUSD protocol."
+      "title": "算法稳定币",
+      "subtitle": "无需中心化控制的稳定价值存储",
+      "description": "采用创新AgeUSD协议的超额抵押稳定币。"
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy."
+      "title": "隐私与保密",
+      "subtitle": "在日益被监控的世界中保护金融隐私",
+      "description": "非托管混币器、隐身地址、零知识证明，实现完全隐私。"
     },
     "bridges": {
-      "title": "Cross-Chain Bridges",
-      "subtitle": "Secure, trustless value transfer between blockchains",
-      "description": "Decentralized bridges with multi-signature security, no central custody."
+      "title": "跨链桥",
+      "subtitle": "区块链之间安全、无需信任的价值转移",
+      "description": "采用多重签名安全的去中心化桥接，无需中心化托管。"
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "Community governance and alternative economic systems",
-      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing."
+      "title": "DAO与替代经济",
+      "subtitle": "社区治理与替代性经济体系",
+      "description": "可组合的DAO基础设施：财库、投票、利润分享。"
     },
     "nfts": {
-      "title": "NFTs & Digital Assets",
-      "subtitle": "True digital ownership, dynamic properties",
-      "description": "On-chain metadata, protocol royalties, programmable NFTs."
+      "title": "NFT与数字资产",
+      "subtitle": "真正的数字所有权，动态属性",
+      "description": "链上元数据、协议版税、可编程NFT。"
     },
     "oracles": {
-      "title": "Oracles & Data Feeds",
-      "subtitle": "Bringing real-world data on-chain",
-      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets."
+      "title": "预言机与数据馈送",
+      "subtitle": "将真实世界数据引入链上",
+      "description": "去中心化预言机池为DeFi和预测市场提供外部数据。"
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems."
+      "title": "身份与信誉",
+      "subtitle": "自主身份与Web3信誉",
+      "description": "去中心化标识符(DID)、抗女巫攻击、信誉系统。"
     },
     "gaming": {
-      "title": "Gaming & Metaverse",
-      "subtitle": "Next-gen gaming assets & digital worlds",
-      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure."
+      "title": "游戏与元宇宙",
+      "subtitle": "下一代游戏资产与数字世界",
+      "description": "可编程游戏代币、NFT驱动的经济、元宇宙基础设施。"
     },
     "faq": {
       "defi-on-ergo": {
@@ -2987,8 +2987,8 @@
       "keywords": "购买 ERG, Ergo 交易, 获得 ERG 令牌, ERG 交易, 加密货币交易, DEX Ergo"
     },
     "hero": {
-      "title": "Get ERG",
-      "subtitle": "您通往埃尔戈生态系统的网关",
+      "title": "获取ERG",
+      "subtitle": "您通往Ergo生态系统的入口",
       "description": "发现购买、交易和存储ERG令牌",
       "cta": {
         "exploreExchanges": "探索交流",
@@ -3063,8 +3063,8 @@
           "description": "支持ERG交易的主要交易"
         },
         "coinex": {
-          "name": "硬币",
-          "description": "与ERG对用户友好交流"
+          "name": "CoinEx",
+          "description": "支持ERG交易对的友好交易所"
         },
         "huobi": {
           "name": "Huobi",
@@ -3089,8 +3089,8 @@
       },
       "dex": {
         "spectrum": {
-          "name": "旁观金融公司",
-          "description": "原生Ergo DEX 具有深厚的流动资金"
+          "name": "Spectrum Finance",
+          "description": "流动性深厚的原生Ergo DEX"
         },
         "uniswap": {
           "name": "Uniswap",
@@ -3107,8 +3107,8 @@
           "description": "带有crow 服务的 P2P 平台"
         },
         "bisq": {
-          "name": "双精度",
-          "description": "分散的 P2P 交易网络"
+          "name": "Bisq",
+          "description": "去中心化P2P交易网络"
         }
       }
     },
@@ -3197,40 +3197,40 @@
     "description": "了解Ergo如何推动DeFi、NFT、隐私和更多创新应用。",
     "categories": {
       "defi": {
-        "title": "[TODO: DeFi Applications]",
-        "description": "[TODO: Decentralized finance built on solid foundations]"
+        "title": "DeFi应用",
+        "description": "建立在坚实基础上的去中心化金融"
       },
       "nfts": {
-        "title": "[TODO: NFTs & Digital Assets]",
-        "description": "[TODO: Native tokens and NFTs with protocol-level security]"
+        "title": "NFT与数字资产",
+        "description": "具有协议级安全的原生代币和NFT"
       },
       "privacy": {
-        "title": "[TODO: Privacy & Confidentiality]",
-        "description": "[TODO: Built-in privacy features and mixing protocols]"
+        "title": "隐私与保密",
+        "description": "内置隐私功能与混币协议"
       },
       "bridges": {
-        "title": "[TODO: Cross-Chain Bridges]",
-        "description": "[TODO: Secure interoperability with other blockchains]"
+        "title": "跨链桥",
+        "description": "与其他区块链的安全互操作"
       },
       "oracles": {
-        "title": "[TODO: Oracles & Data Feeds]",
-        "description": "[TODO: Reliable external data integration]"
+        "title": "预言机与数据馈送",
+        "description": "可靠的外部数据集成"
       },
       "daos": {
-        "title": "[TODO: DAOs & Alternative Economies]",
-        "description": "[TODO: Decentralized governance and economic models]"
+        "title": "DAO与替代经济",
+        "description": "去中心化治理与经济模型"
       },
       "stablecoins": {
-        "title": "[TODO: Algorithmic Stablecoins]",
-        "description": "[TODO: Decentralized stable value mechanisms]"
+        "title": "算法稳定币",
+        "description": "去中心化的稳定价值机制"
       },
       "gaming": {
-        "title": "[TODO: Gaming & Metaverse]",
-        "description": "[TODO: Blockchain gaming and virtual worlds]"
+        "title": "游戏与元宇宙",
+        "description": "区块链游戏与虚拟世界"
       },
       "identity": {
-        "title": "[TODO: Identity & Reputation]",
-        "description": "[TODO: Decentralized identity and reputation systems]"
+        "title": "身份与信誉",
+        "description": "去中心化身份与信誉系统"
       }
     }
   }

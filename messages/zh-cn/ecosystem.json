@@ -56,34 +56,34 @@
     },
     "grantsPage": {
       "seo": {
-        "title": "Ergo Grants | Funding for Blockchain Projects",
-        "description": "Funding for projects building on Ergo: developers, researchers, and community builders. Build tools, infrastructure, and applications on Ergo.",
-        "keywords": "ergo grants, blockchain funding, developer grants, crypto grants, project funding, open source grants",
-        "ogTitle": "Ergo Grants — Fund Your Blockchain Innovation",
-        "ogDescription": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
-        "ogAlt": "Ergo Grants Program",
-        "twitterTitle": "Ergo Grants | Get Funded",
-        "twitterDescription": "Funding for developers building on Ergo. Apply for grants and stay updated."
+        "title": "Ergo 资助计划 | 区块链项目资金支持",
+        "description": "为在 Ergo 上构建的项目提供资金：开发者、研究者和社区建设者。在 Ergo 上构建工具、基础设施和应用程序。",
+        "keywords": "ergo grants, 区块链资金, 开发者资助, 加密资助, 项目资金, 开源资助",
+        "ogTitle": "Ergo 资助——为您的区块链创新提供资金",
+        "ogDescription": "申请资助在 Ergo 上构建。支持开发者、研究者和社区倡议。",
+        "ogAlt": "Ergo 资助计划",
+        "twitterTitle": "Ergo 资助计划 | 获得资金支持",
+        "twitterDescription": "为在 Ergo 上构建的开发者提供资金。申请资助并保持更新。"
       },
       "schema": {
         "financialService": {
-          "name": "Ergo Grants Program",
-          "description": "Funding program for projects building on Ergo blockchain",
-          "audienceType": "Developers, Researchers, Community Builders"
+          "name": "Ergo 资助计划",
+          "description": "为在 Ergo 区块链上构建项目的资金计划",
+          "audienceType": "开发者、研究者、社区建设者"
         },
         "faq": {
           "items": [
             {
-              "question": "Who can apply for Ergo grants?",
-              "answer": "Developers, researchers, community builders, and organizations working on projects that benefit the Ergo ecosystem can apply for grants."
+              "question": "谁可以申请 Ergo 资助？",
+              "answer": "开发者、研究者、社区建设者以及致力于有益于 Ergo 生态系统项目的组织均可申请资助。"
             },
             {
-              "question": "What types of projects get funded?",
-              "answer": "DeFi protocols, developer tools, infrastructure, educational content, community initiatives, and research projects that advance Ergo technology."
+              "question": "哪类项目可以获得资助？",
+              "answer": "DeFi 协议、开发者工具、基础设施、教育内容、社区倡议以及推进 Ergo 技术的研究项目。"
             },
             {
-              "question": "How much funding is available?",
-              "answer": "Grant amounts vary based on project scope and impact, ranging from small community grants to substantial funding for core infrastructure projects."
+              "question": "可获得多少资金支持？",
+              "answer": "资助金额根据项目范围和影响力而定，从小型社区资助到核心基础设施项目的大额资金均有涵盖。"
             }
           ]
         }
@@ -91,41 +91,41 @@
     },
     "mapPage": {
       "seo": {
-        "title": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
-        "description": "Explore the Ergo ecosystem visually. Interactive map of DeFi, NFT platforms, wallets, infrastructure, and developer tools.",
-        "keywords": "ergo ecosystem, defi map, dapp directory, blockchain ecosystem, ergo projects, interactive map, crypto ecosystem",
-        "ogTitle": "Interactive Ergo Ecosystem Map | 50+ Projects",
-        "ogDescription": "Visual exploration of Ergo projects: DeFi, NFTs, wallets, and infrastructure.",
-        "ogAlt": "Ergo Ecosystem Interactive Map",
-        "twitterTitle": "Ergo Ecosystem Map",
-        "twitterDescription": "Interactive visualization of Ergo projects. Explore DeFi, NFTs, and infrastructure."
+        "title": "Ergo 生态系统地图 | 交互式 DeFi & dApp 目录",
+        "description": "以可视化方式探索完整的 Ergo 生态系统。DeFi 协议、NFT 平台、钱包、基础设施和开发者工具的交互地图。",
+        "keywords": "ergo 生态系统, defi 地图, dapp 目录, 区块链生态系统, ergo 项目, 交互地图, 加密生态系统",
+        "ogTitle": "交互式 Ergo 生态系统地图 | 50+ 项目",
+        "ogDescription": "以可视化方式探索所有 Ergo 项目：DeFi、NFT、钱包和基础设施。",
+        "ogAlt": "Ergo 生态系统交互地图",
+        "twitterTitle": "Ergo 生态系统地图",
+        "twitterDescription": "Ergo 项目的交互可视化。探索 DeFi、NFT 和基础设施。"
       },
       "schema": {
         "webApp": {
-          "name": "Ergo Ecosystem Interactive Map",
-          "description": "Visual explorer for Ergo blockchain projects and applications"
+          "name": "Ergo 生态系统交互地图",
+          "description": "Ergo 区块链项目和应用程序的可视化探索器"
         },
         "dataset": {
-          "name": "Ergo Ecosystem Projects Dataset",
-          "description": "Complete dataset of projects building on Ergo blockchain"
+          "name": "Ergo 生态系统项目数据集",
+          "description": "在 Ergo 区块链上构建的项目完整数据集"
         },
         "faq": {
           "items": [
             {
-              "question": "What is the Ergo Ecosystem Map?",
-              "answer": "An interactive visualization showing active projects, protocols, and applications built on Ergo blockchain, organized by category."
+              "question": "什么是 Ergo 生态系统地图？",
+              "answer": "一个交互可视化工具，展示在 Ergo 区块链上构建的所有活跃项目、协议和应用程序，按类别组织。"
             },
             {
-              "question": "How many projects are in the Ergo ecosystem?",
-              "answer": "The Ergo ecosystem includes 50+ active projects across DeFi, NFTs, wallets, infrastructure, developer tools, and community initiatives."
+              "question": "Ergo 生态系统中有多少个项目？",
+              "answer": "Ergo 生态系统包括 50 多个活跃项目，涵盖 DeFi、NFT、钱包、基础设施、开发者工具和社区倡议。"
             },
             {
-              "question": "How do I add my project to the map?",
-              "answer": "Submit your project through the ecosystem submission form or contact the Ergo Foundation to be included in the ecosystem map."
+              "question": "如何将我的项目添加到地图中？",
+              "answer": "通过生态系统提交表单提交您的项目，或联系 Ergo 基金会以将其纳入生态系统地图。"
             },
             {
-              "question": "Is the ecosystem map updated regularly?",
-              "answer": "Yes. The ecosystem map is updated regularly to include new projects and remove inactive ones."
+              "question": "生态系统地图是否定期更新？",
+              "answer": "是的。生态系统地图定期更新，以纳入新项目并移除非活跃项目。"
             }
           ]
         }
@@ -134,40 +134,40 @@
     "ecosystemPage": {
       "schema": {
         "breadcrumbs": {
-          "ecosystem": "生态环境"
+          "ecosystem": "生态系统"
         },
         "collection": {
-          "name": "Ergo 生态环境",
+          "name": "Ergo 生态系统",
           "description": "建立在 Ergo 区块链上的 dApp、钱包与工具的完整目录"
         },
         "faq": {
           "items": [
             {
-              "question": "What is the Ergo ecosystem?",
-              "answer": "The Ergo ecosystem consists of DeFi protocols, NFT marketplaces, developer tools, wallets, and community projects built on the Ergo blockchain."
+              "question": "什么是 Ergo 生态系统？",
+              "answer": "Ergo 生态系统由构建在 Ergo 区块链上的 DeFi 协议、NFT 市场、开发者工具、钱包和社区项目组成。"
             },
             {
-              "question": "What DeFi projects are on Ergo?",
-              "answer": "Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools."
+              "question": "Ergo 上有哪些 DeFi 项目？",
+              "answer": "主要 DeFi 项目包括 SigmaUSD（算法稳定币）、ErgoDEX（DEX）、借贷协议和 Oracle 池。"
             },
             {
-              "question": "Which wallets support Ergo?",
-              "answer": "Popular Ergo wallets include Nautilus, Satergo, SAFEW, and Ergo Mobile Wallet."
+              "question": "哪些钱包支持 Ergo？",
+              "answer": "流行的 Ergo 钱包包括 Nautilus、Satergo、SAFEW 和 Ergo 移动钱包。"
             },
             {
-              "question": "Are there NFT marketplaces on Ergo?",
-              "answer": "Yes. Ergo has NFT marketplaces like SkyHarbor for minting and trading NFTs with low fees."
+              "question": "Ergo 上有 NFT 市场吗？",
+              "answer": "是的。Ergo 拥有如 SkyHarbor 这样的 NFT 市场，支持以低手续费铸造和交易 NFT。"
             }
           ]
         }
       }
     },
     "seo": {
-      "title": "Ecosystem - Ergo Blockchain 项目 | Ergo 平台",
-      "description": "发现蓬勃发展的错误: Defi 协议, NFT marketplace, tools and applications.",
-      "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain 项目",
-      "ogTitle": "Ergo Ecosystem - Blockchain Projects & Applications",
-      "ogDescription": "在Ergo生态系统中探索Defi、NFT、钱包和开发工具。"
+      "title": "生态系统 - Ergo 区块链项目 | Ergo 平台",
+      "description": "发现蓬勃发展的 Ergo 生态系统：DeFi 协议、NFT 市场、工具和应用程序。",
+      "keywords": "Ergo 生态系统, DeFi, NFTs, dApps, 区块链项目",
+      "ogTitle": "Ergo 生态系统 - 区块链项目与应用程序",
+      "ogDescription": "在 Ergo 生态系统中探索 DeFi、NFT、钱包和开发者工具。"
     },
     "categories": {
       "defi": {
@@ -205,20 +205,20 @@
       "users": "活跃用户"
     },
     "filters": {
-      "all": "所有的",
+      "all": "所有",
       "defi": "DeFi",
-      "infrastructure": "B. 基础设施",
-      "oracles": "Oracles",
+      "infrastructure": "基础设施",
+      "oracles": "预言机",
       "privacy": "隐私",
       "nft": "NFT",
       "wallets": "钱包",
       "dao": "DAO",
-      "gaming": "游戏中",
+      "gaming": "游戏",
       "tools": "工具"
     },
     "search": {
       "placeholder": "搜索项目...",
-      "resultsCount": "{count} projects"
+      "resultsCount": "{count} 个项目"
     },
     "featuredProjects": {
       "title": "精选项目",
@@ -229,10 +229,10 @@
       "viewAll": "查看所有项目"
     },
     "cta": {
-      "title": "建立在埃尔戈上",
-      "description": "加入生态系统并构建区块链的未来",
-      "startBuilding": "开始Building",
-      "viewGrants": "查看赠款"
+      "title": "在 Ergo 上构建",
+      "description": "加入生态系统，共建区块链的未来",
+      "startBuilding": "开始构建",
+      "viewGrants": "查看资助"
     },
     "mining": {
       "no_pools_match_your_criteria": "没有符合条件的资源库",
@@ -322,7 +322,7 @@
         "ogTitle": "交互式Ergo 生态系统地图 | 50+ 项目",
         "ogDescription": "视觉探索所有埃尔戈项目。DeFi、NFT、钱包、基础设施已映射。",
         "twitterTitle": "Ergo 生态系统地图 | 视觉项目浏览器",
-        "twitterDescription": "50+Ergo 项目的交互直观化。Explore DeFi，NFT，基础设施。"
+        "twitterDescription": "50+ 个 Ergo 项目的交互可视化。探索 DeFi、NFT、基础设施。"
       },
       "jump_to": "跳转到：",
       "filter_by_category": "按类别筛选：",
@@ -356,17 +356,17 @@
       "ergo_ecosystem_interactive_map": "Ergo 生态系统交互地图",
       "webapplication_id_https_ergoblockchain_org": "WebApplication\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem/map\",\n    name: \"Ergo Ecosystem Interactive Map\",\n    description: \"Visual explorer for Ergo blockchain projects and applications\",\n    applicationCategory: \"VisualizationApplication\",\n    operatingSystem: \"Web Browser\",\n    url: \"https://ergoblockchain.org/ecosystem/map",
       "organization_name_ergo_platform_url": "Organization\",\n      name: \"Ergo Platform\",\n      url: \"https://ergoblockchain.org",
-      "what_is_the_ergo_ecosystem": "What is the Ergo Ecosystem Map?\",\n      answer: \"An interactive visualization showing all active projects, protocols, and applications built on Ergo blockchain, organized by category.",
-      "how_many_projects_are_in_the_ergo_ecosystem_answer": "How many projects are in the Ergo ecosystem?\",\n      answer:",
-      "how_do_i_add_my": "How do I add my project to the map?\",\n      answer: \"Submit your project through the ecosystem submission form or contact the Ergo Foundation to be included in the ecosystem map.",
-      "is_the_ecosystem_map_updated": "Is the ecosystem map updated regularly?\",\n      answer: \"Yes, the ecosystem map is regularly updated to include new projects and remove inactive ones, providing an accurate view of the active ecosystem.",
+      "what_is_the_ergo_ecosystem": "什么是 Ergo 生态系统地图？\",\n      answer: \"一个交互可视化工具，展示在 Ergo 区块链上构建的所有活跃项目、协议和应用程序，按类别组织。",
+      "how_many_projects_are_in_the_ergo_ecosystem_answer": "Ergo 生态系统中有多少个项目？\",\n      answer:",
+      "how_do_i_add_my": "如何将我的项目添加到地图中？\",\n      answer: \"通过生态系统提交表单提交您的项目，或联系 Ergo 基金会以将其纳入生态系统地图。",
+      "is_the_ecosystem_map_updated": "生态系统地图是否定期更新？\",\n      answer: \"是的，生态系统地图定期更新，以纳入新项目并移除非活跃项目，提供活跃生态系统的准确视图。",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "datadownload_encodingformat_application_json_contenturl": "DataDownload\",\n      encodingFormat: \"application/json\",\n      contentUrl: \"https://ergoblockchain.org/api/ecosystem",
       "place_name_global": "Place\",\n      name: \"Global",
       "ergo_ecosystem_map_interactive_defi_dapp_directory": "Ergo 生态系统地图 | 交互式Defi & dApp 目录",
       "interactive_ergo_ecosystem_map_50_projects": "交互式Ergo 生态系统地图 | 50+ 项目",
       "ergo_ecosystem_map_visual_project_explorer": "Ergo 生态系统地图 | 视觉项目浏览器",
-      "interactive_visualization_of_50_ergo": "50+Ergo 项目的交互直观化。Explore DeFi，NFT，基础设施。",
+      "interactive_visualization_of_50_ergo": "50+ 个 Ergo 项目的交互可视化。探索 DeFi、NFT、基础设施。",
       "visual_explorer_for_ergo_blockchain": "Ergo 区块链项目和应用程序的视觉浏览器"
     },
     "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
@@ -374,8 +374,8 @@
     "website_id_https_ergoblockchain_org_website": ": ",
     "breadcrumblist_id_https_ergoblockchain_org": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
     "ecosystem_item_https_ergoblockchain_org_ecosystem": "General content",
-    "what_defi_projects_are_on": "What DeFi projects are on Ergo?\",\n      answer: \"Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools.",
-    "are_there_nft_marketplaces_on": "Are there NFT marketplaces on Ergo?\",\n      answer: \"Yes, Ergo has NFT marketplaces like SkyHarbor for minting and trading NFTs with low fees.",
+    "what_defi_projects_are_on": "Ergo 上有哪些 DeFi 项目？\",\n      answer: \"主要 DeFi 项目包括 SigmaUSD（算法稳定币）、ErgoDEX（DEX）、借贷协议和 Oracle 池。",
+    "are_there_nft_marketplaces_on": "Ergo 上有 NFT 市场吗？\",\n      answer: \"是的，Ergo 拥有如 SkyHarbor 这样的 NFT 市场，支持以低手续费铸造和交易 NFT。",
     "home_item_https_ergoblockchain_org": "General content",
     "projectPage": {
       "breadcrumbs": {
@@ -400,7 +400,7 @@
         "twitter": "推特",
         "docs": "文档",
         "community": "社区",
-        "backToEcosystem": "回到生态环境"
+        "backToEcosystem": "返回生态系统"
       },
       "status": {
         "operational": "运行",
@@ -410,18 +410,18 @@
       },
       "sections": {
         "keyFeatures": "关键功能",
-        "builtWith": "使用 Ergo Technology 生成",
+        "builtWith": "基于 Ergo 技术构建",
         "relatedArticles": "相关文章",
         "viewAll": "查看全部",
         "faq": "常见问题",
-        "relatedProjects": "Related {category} Projects",
-        "minRead": "{time} min read"
+        "relatedProjects": "相关 {category} 项目",
+        "minRead": "{time} 分钟阅读"
       },
       "cta": {
-        "title": "探索更多的 dApps",
-        "description": "使用Defi、钱包、工具等方式发现整个埃尔戈生态系统。",
+        "title": "探索更多 dApp",
+        "description": "发现完整的 Ergo 生态系统，包括 DeFi、钱包、工具等。",
         "primaryButton": "查看所有项目",
-        "secondaryButton": "开始Building"
+        "secondaryButton": "开始构建"
       }
     },
     "infographicPage": {
@@ -477,20 +477,20 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.",
-      "longDescription": "Spectrum Finance was one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which allowed users to pay transaction fees in tokens other than ERG.\n\nThe DEX utilized automated market maker (AMM) pools for trustless token swaps, with liquidity providers earning fees from all trades. Yield farming features enabled additional token rewards for liquidity providers, creating incentives for deep liquidity across trading pairs.\n\nAs an open-source project, Spectrum Finance contributed significant code and research to the eUTXO DeFi ecosystem, demonstrating how complex financial applications could be built securely on this model. The protocol's smart contracts and architecture continue to serve as reference implementations for new DeFi projects.",
+      "description": "一个运行在 Ergo 和 Cardano 区块链上的前沿开源去中心化交易所 (DEX)，提供流动性提供 (LP)、收益耕作，并支持 Babel Fees。",
+      "longDescription": "Spectrum Finance 是最早基于 eUTXO 模型构建的跨链去中心化交易所之一，同时运行于 Ergo 和 Cardano 区块链。该平台率先推出了多项创新，包括原生 Babel Fees 支持，允许用户使用 ERG 以外的代币支付交易费。\n\n该 DEX 利用自动做市商 (AMM) 池实现无需信任的代币兑换，流动性提供者可从所有交易中赚取手续费。收益耕作功能为流动性提供者提供额外代币奖励，激励各交易对保持深度流动性。\n\n作为开源项目，Spectrum Finance 为 eUTXO DeFi 生态贡献了大量代码和研究成果，展示了如何在此模型上安全构建复杂金融应用。该协议的智能合约和架构至今仍作为新 DeFi 项目的参考实现。",
       "features": [
-        "Decentralized Exchange",
-        "Liquidity Pools",
-        "Yield Farming",
-        "Babel Fees Support",
-        "Cross-chain Trading"
+        "去中心化交易所",
+        "流动性池",
+        "收益耕作",
+        "Babel Fees 支持",
+        "跨链交易"
       ]
     },
     "ergodex": {
       "name": "ErgoDex",
       "description": "面向 Ergo 和 Cardano 的非托管去中心化交易所 (DEX)，支持两个生态系统之间的 AMM 和订单簿交易。",
-      "longDescription": "ErgoDex is a pioneering non-custodial decentralized exchange built on the eUTXO model, providing seamless trading between Ergo and Cardano ecosystems. Unlike traditional DEXs that rely on centralized order matching, ErgoDex leverages the unique properties of the extended UTXO model to enable trustless, atomic swaps without intermediaries.\n\nThe platform supports both Automated Market Maker (AMM) pools for passive liquidity provision and traditional order-book trading for precise price execution. This hybrid approach gives traders flexibility while maintaining the security guarantees of on-chain settlement. All trades execute directly on the blockchain, ensuring transparency and eliminating counterparty risk.\n\nErgoDex represents a significant advancement in cross-chain DeFi infrastructure. By building on eUTXO rather than account-based models, the exchange achieves deterministic transaction outcomes, predictable fees, and enhanced security against common smart contract vulnerabilities. Liquidity providers can earn fees from both ERG and ADA trading pairs, making it an attractive option for yield generation across multiple blockchain ecosystems.",
+      "longDescription": "ErgoDex 是一个基于 eUTXO 模型构建的开创性非托管去中心化交易所，在 Ergo 和 Cardano 生态系统之间提供无缝交易。与依赖中心化订单撮合的传统 DEX 不同，ErgoDex 利用扩展 UTXO 模型的独特属性，无需中间方即可实现无需信任的原子兑换。\n\n该平台同时支持自动做市商 (AMM) 池（用于被动流动性提供）和传统订单簿交易（用于精确价格执行）。这种混合方式在保持链上结算安全保障的同时，为交易者提供了灵活性。所有交易直接在区块链上执行，确保透明度并消除对手方风险。\n\nErgoDex 代表了跨链 DeFi 基础设施的重大进步。通过构建于 eUTXO 而非基于账户的模型，交易所实现了确定性交易结果、可预测的费用，以及对常见智能合约漏洞的增强防护。流动性提供者可从 ERG 和 ADA 交易对中赚取手续费，使其成为跨多条区块链生态系统创收的有吸引力选择。",
       "features": [
         "Ergo 和 Cardano 跨链 DEX",
         "非托管交易",
@@ -659,31 +659,31 @@
     },
     "ergo-explorer": {
       "name": "Ergo Explorer",
-      "description": "The main official block explorer for Ergo. It allows users to track transactions, blocks, addresses, tokens, and view general network statistics.",
-      "longDescription": "Ergo Explorer is the official blockchain explorer for the Ergo network, providing comprehensive visibility into all on-chain activity. Users can search for transactions, blocks, addresses, and tokens, with detailed views of each component of the eUTXO model.\n\nThe explorer displays real-time network statistics including hashrate, difficulty, and block times, giving users insight into network health and mining activity. Token explorers show all native assets issued on Ergo, including their distribution and transaction history. For developers, the explorer provides API access to query blockchain data programmatically.\n\nAdvanced features include mempool monitoring, rich address analytics, and the ability to decode ErgoScript contracts. The explorer integrates with Oracle Pools to display current data feeds and their history. As an open-source project, Ergo Explorer sets the standard for transparency in the ecosystem.",
+      "description": "Ergo 的主要官方区块浏览器，允许用户追踪交易、区块、地址、代币，并查看网络整体统计数据。",
+      "longDescription": "Ergo Explorer 是 Ergo 网络的官方区块链浏览器，对所有链上活动提供全面的可见性。用户可以搜索交易、区块、地址和代币，并详细查看 eUTXO 模型的各个组成部分。\n\n该浏览器显示实时网络统计数据，包括算力、难度和出块时间，让用户了解网络健康状况和挖矿活动。代币浏览器展示 Ergo 上发行的所有原生资产，包括其分布情况和交易历史。对于开发者，浏览器提供 API 接口以编程方式查询区块链数据。\n\n高级功能包括内存池监控、丰富的地址分析，以及解码 ErgoScript 合约的能力。浏览器与 Oracle 池集成，展示当前数据馈送及其历史记录。作为开源项目，Ergo Explorer 为生态系统树立了透明度标准。",
       "features": [
-        "Block Explorer",
-        "Transaction Tracking",
-        "Token Info",
-        "Network Statistics",
-        "Address Lookup"
+        "区块浏览器",
+        "交易追踪",
+        "代币信息",
+        "网络统计",
+        "地址查询"
       ]
     },
     "ergopad": {
       "name": "ErgoPad",
-      "description": "A token launch (IDO) and fundraising platform on the Ergo blockchain. It gives token holders the opportunity to participate in IDOs.",
-      "longDescription": "ErgoPad was a pioneering token launch platform that facilitated Initial DEX Offerings (IDOs) for projects building on the Ergo blockchain. The platform enabled projects to raise funds from the community while giving token holders early access to promising ecosystem initiatives.\n\nThe platform operated through a staking model where users could stake ErgoPad tokens to gain allocation tiers for upcoming IDOs. Higher staking tiers provided larger allocations, creating incentives for long-term platform engagement. Multiple successful projects launched through ErgoPad, contributing to the growth of the Ergo ecosystem.\n\nWhile ErgoPad is currently not operating, its infrastructure and smart contracts remain as open-source contributions to the ecosystem. The platform demonstrated how decentralized fundraising could work on Ergo, providing a template for future launchpad projects and contributing valuable code to the community.",
+      "description": "Ergo 区块链上的代币发行 (IDO) 和众筹平台，为代币持有者提供参与 IDO 的机会。",
+      "longDescription": "ErgoPad 是一个开创性的代币发行平台，为在 Ergo 区块链上构建项目的团队提供初始 DEX 发行 (IDO) 服务。该平台使项目能够从社区筹集资金，同时为代币持有者提供早期参与优质生态项目的机会。\n\n平台采用质押模型运营，用户可以质押 ErgoPad 代币以获得即将到来的 IDO 的分配额度。更高的质押等级提供更大的分配份额，激励用户对平台的长期参与。多个成功项目通过 ErgoPad 发行，为 Ergo 生态系统的增长做出了贡献。\n\n尽管 ErgoPad 目前已停止运营，其基础设施和智能合约仍作为开源贡献保留在生态系统中。该平台展示了去中心化筹款在 Ergo 上的运作方式，为未来的发射台项目提供了模板，并为社区贡献了宝贵的代码。",
       "features": [
-        "Token Launch",
-        "IDO Platform",
-        "Staking",
-        "Community Projects"
+        "代币发行",
+        "IDO 平台",
+        "质押",
+        "社区项目"
       ]
     },
     "mew-finance": {
       "name": "Mew Finance",
       "description": "一个去中心化金融 (DeFi) 平台，提供一系列金融应用，包括 DEX、NFT 市场和各种金融工具。",
-      "longDescription": "Mew Finance is an all-in-one DeFi platform on Ergo, combining a decentralized exchange with an NFT marketplace and advanced financial tools. The platform aims to provide a comprehensive DeFi experience where users can swap tokens, provide liquidity, trade NFTs, and access various yield opportunities in a single interface.\n\nThe DEX component supports token swaps with competitive fees and slippage protection. Liquidity providers can stake assets in pools to earn trading fees and additional token rewards. The integrated NFT marketplace allows creators to mint, list, and trade digital collectibles directly on the platform.\n\nMew Finance demonstrates the composability possible on Ergo's eUTXO model, integrating multiple DeFi primitives into a cohesive platform while maintaining the security guarantees of deterministic smart contract execution.",
+      "longDescription": "Mew Finance 是 Ergo 上的一站式 DeFi 平台，将去中心化交易所与 NFT 市场和高级金融工具结合在一起。该平台旨在提供全面的 DeFi 体验，用户可在单一界面内完成代币兑换、流动性提供、NFT 交易以及获取各类收益机会。\n\nDEX 组件支持具有竞争力费率和滑点保护的代币兑换。流动性提供者可将资产质押进池子以赚取交易费和额外代币奖励。集成的 NFT 市场允许创作者直接在平台上铸造、挂单和交易数字收藏品。\n\nMew Finance 展示了 Ergo eUTXO 模型上可能实现的可组合性，将多个 DeFi 原语整合成一个统一平台，同时保持确定性智能合约执行的安全保障。",
       "features": [
         "DEX",
         "NFT 市场",
@@ -693,64 +693,64 @@
     },
     "satergo": {
       "name": "SatErgo",
-      "description": "A comprehensive desktop wallet for Ergo with the option to integrate a full node to support network decentralization. Privacy-focused with offline vault.",
-      "longDescription": "SatErgo is a feature-rich desktop wallet designed for power users who want maximum control over their Ergo experience. Unlike browser-based wallets, SatErgo runs as a native application on Windows, macOS, and Linux, providing enhanced security and the option to run a full Ergo node directly within the wallet.\n\nRunning a full node contributes to network decentralization by independently validating all transactions and blocks. This trustless verification means users don't rely on third-party servers to confirm their balances or broadcast transactions. The wallet's offline vault feature enables cold storage by creating and signing transactions on an air-gapped computer.\n\nSatErgo supports all Ergo native tokens and provides detailed transaction history with UTXO-level visibility. The privacy-focused design includes options for coin selection and address management that help users maintain financial privacy. With its Java-based architecture, SatErgo offers cross-platform consistency while maintaining the security standards expected from a self-custody solution.",
+      "description": "一款功能全面的 Ergo 桌面钱包，可集成完整节点以支持网络去中心化，注重隐私并提供离线金库功能。",
+      "longDescription": "SatErgo 是一款功能丰富的桌面钱包，专为希望最大程度掌控 Ergo 体验的高级用户设计。与基于浏览器的钱包不同，SatErgo 在 Windows、macOS 和 Linux 上作为原生应用运行，提供更强的安全性，并可在钱包内直接运行完整的 Ergo 节点。\n\n运行完整节点通过独立验证所有交易和区块来促进网络去中心化。这种无需信任的验证意味着用户无需依赖第三方服务器来确认余额或广播交易。钱包的离线金库功能可在气隙计算机上创建和签名交易，实现冷存储。\n\nSatErgo 支持所有 Ergo 原生代币，并提供 UTXO 级别可见性的详细交易历史。注重隐私的设计包括币选择和地址管理选项，帮助用户维护金融隐私。凭借基于 Java 的架构，SatErgo 在保持自托管解决方案所需安全标准的同时，提供跨平台一致性。",
       "features": [
-        "Desktop Wallet",
-        "Full Node Integration",
-        "Offline Vault",
-        "Privacy Focus"
+        "桌面钱包",
+        "完整节点集成",
+        "离线金库",
+        "隐私优先"
       ]
     },
     "safew": {
       "name": "SAFEW",
-      "description": "A browser extension wallet for Ergo that integrates with ErgoMixer for enhanced transaction privacy.",
-      "longDescription": "SAFEW (Simple And Fast Ergo Wallet) is a privacy-focused browser extension wallet that stands out through its native integration with ErgoMixer. This integration enables users to mix their tokens directly from the wallet interface, breaking the on-chain link between transactions for enhanced financial privacy.\n\nThe wallet provides all standard features expected from a modern cryptocurrency wallet: sending and receiving ERG and native tokens, viewing transaction history, and connecting to decentralized applications through the EIP-12 dApp connector. What sets SAFEW apart is its commitment to user privacy as a first-class feature rather than an afterthought.\n\nSAFEW's interface is designed for simplicity without sacrificing functionality. Users can manage multiple addresses, view their token balances, and initiate mixing operations with just a few clicks. The open-source codebase allows security-conscious users to verify the wallet's behavior, while the browser extension format provides convenient access to Ergo DeFi directly from the browser.",
+      "description": "一款集成 ErgoMixer 以增强交易隐私的 Ergo 浏览器扩展钱包。",
+      "longDescription": "SAFEW（Simple And Fast Ergo Wallet，简单快速的 Ergo 钱包）是一款注重隐私的浏览器扩展钱包，其突出之处在于与 ErgoMixer 的原生集成。这种集成使用户能够直接从钱包界面混合其代币，打破交易之间的链上关联，增强金融隐私。\n\n该钱包提供现代加密货币钱包所有标准功能：发送和接收 ERG 及原生代币、查看交易历史，以及通过 EIP-12 dApp 连接器连接去中心化应用。SAFEW 的与众不同之处在于将用户隐私作为核心功能而非事后补充。\n\nSAFEW 的界面设计简洁而不失功能性。用户只需几次点击即可管理多个地址、查看代币余额并发起混币操作。开源代码库允许注重安全的用户验证钱包行为，而浏览器扩展格式则提供了直接从浏览器访问 Ergo DeFi 的便利。",
       "features": [
-        "Browser Extension",
-        "ErgoMixer Integration",
-        "Privacy Enhanced",
-        "dApp Support"
+        "浏览器扩展",
+        "ErgoMixer 集成",
+        "增强隐私",
+        "dApp 支持"
       ]
     },
     "ergowatch": {
       "name": "ErgoWatch",
-      "description": "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.",
-      "longDescription": "ErgoWatch is a comprehensive analytics platform that provides deep insights into the Ergo blockchain ecosystem. While the official Ergo Explorer focuses on transaction and block data, ErgoWatch specializes in aggregated metrics, historical trends, and DeFi analytics that help users understand ecosystem health and growth.\n\nThe platform tracks Total Value Locked (TVL) across Ergo DeFi protocols, providing historical charts and breakdowns by protocol. Network metrics include active addresses, transaction volumes, token statistics, and mining data. Custom dashboards visualize trends over time, helping researchers and investors make data-driven decisions.\n\nErgoWatch's open-source architecture means the community can verify how metrics are calculated and contribute improvements. The platform indexes blockchain data into queryable databases, enabling complex analytical queries that would be impractical to run directly on-chain. For developers and analysts, ErgoWatch provides an essential window into the quantitative health of the Ergo ecosystem.",
+      "description": "一个提供 Ergo 网络指标、DeFi 统计（如 TVL）、图表和仪表板的分析型区块浏览器，用于监控区块链活动。",
+      "longDescription": "ErgoWatch 是一个全面的分析平台，提供对 Ergo 区块链生态系统的深入洞察。官方 Ergo Explorer 专注于交易和区块数据，而 ErgoWatch 则专注于聚合指标、历史趋势和 DeFi 分析，帮助用户了解生态系统健康状况和增长情况。\n\n该平台追踪 Ergo DeFi 协议的总锁仓量 (TVL)，提供按协议划分的历史图表和细分数据。网络指标包括活跃地址、交易量、代币统计和挖矿数据。自定义仪表板可视化趋势变化，帮助研究人员和投资者做出数据驱动的决策。\n\nErgoWatch 的开源架构意味着社区可以验证指标的计算方式并贡献改进。该平台将区块链数据索引到可查询的数据库中，支持直接在链上运行不切实际的复杂分析查询。对于开发者和分析师，ErgoWatch 提供了了解 Ergo 生态系统量化健康状况的重要窗口。",
       "features": [
-        "Analytics",
-        "DeFi Metrics",
-        "TVL Tracking",
-        "Network Dashboards",
-        "Charts"
+        "数据分析",
+        "DeFi 指标",
+        "TVL 追踪",
+        "网络仪表板",
+        "图表"
       ]
     },
     "cyberpixels": {
       "name": "CyberPixels",
-      "description": "A gaming project featuring an open-world pixel-style game with blockchain integration (NFTs, custom tokens, in-game marketplace).",
-      "longDescription": "CyberPixels (CyberVerse) is an ambitious blockchain gaming project building an open-world pixel-art game with deep Ergo integration. The game features NFT-based assets, custom tokens, and an in-game marketplace where players can trade items and resources using Ergo blockchain infrastructure.\n\nThe project leverages Ergo's native token capabilities for in-game currencies and item ownership. Each unique item exists as an NFT on the Ergo blockchain, providing true ownership and enabling players to trade assets outside the game. The eUTXO model's deterministic transactions ensure that marketplace trades execute atomically without risk of fraud.\n\nCyberPixels represents an exploration of how blockchain technology can enhance gaming through verifiable ownership, player-driven economies, and interoperability. The pixel-art aesthetic combined with blockchain mechanics aims to create engaging gameplay while demonstrating practical applications of Ergo technology in entertainment.",
+      "description": "一个以区块链集成为特色的像素风开放世界游戏项目，包含 NFT、自定义代币和游戏内市场。",
+      "longDescription": "CyberPixels（CyberVerse）是一个雄心勃勃的区块链游戏项目，正在构建一个与 Ergo 深度集成的开放世界像素艺术游戏。游戏具有基于 NFT 的资产、自定义代币，以及玩家可以使用 Ergo 区块链基础设施交易物品和资源的游戏内市场。\n\n该项目利用 Ergo 的原生代币能力实现游戏内货币和物品所有权。每件独特物品都作为 NFT 存在于 Ergo 区块链上，提供真正的所有权并使玩家能够在游戏外交易资产。eUTXO 模型的确定性交易确保市场交易以原子方式执行，无欺诈风险。\n\nCyberPixels 探索了区块链技术如何通过可验证所有权、玩家驱动经济和互操作性来提升游戏体验。像素艺术美学与区块链机制的结合旨在创造引人入胜的游戏玩法，同时展示 Ergo 技术在娱乐领域的实际应用。",
       "features": [
-        "Blockchain Gaming",
-        "NFT Integration",
-        "In-game Marketplace",
+        "区块链游戏",
+        "NFT 集成",
+        "游戏内市场",
         "Play-to-Earn"
       ]
     },
     "sigmafi": {
       "name": "SigmaFi",
-      "description": "A suite of decentralized P2P financial contracts on Ergo, including SigmaBonds for creating P2P debt obligations.",
-      "longDescription": "SigmaFi is a suite of peer-to-peer financial contracts that enable direct lending and borrowing between Ergo users without intermediary pools. The flagship product, SigmaBonds, allows users to create custom debt obligations with flexible terms negotiated directly between lender and borrower.\n\nUnlike pooled lending protocols, SigmaFi's P2P model gives participants full control over loan terms including interest rates, duration, and collateral requirements. Lenders can specify exactly what returns they require, while borrowers can find terms that match their needs. Smart contracts enforce repayment schedules and handle collateral liquidation if necessary.\n\nThe protocol demonstrates advanced ErgoScript capabilities for implementing complex financial logic. Each bond is represented as a UTXO with embedded contract terms, creating transparent and verifiable debt instruments. SigmaFi explores how traditional finance concepts like bonds and notes can be reimagined in a trustless, decentralized context.",
+      "description": "Ergo 上的一套去中心化点对点金融合约套件，包括用于创建点对点债务义务的 SigmaBonds。",
+      "longDescription": "SigmaFi 是一套点对点金融合约套件，无需中间池即可在 Ergo 用户之间直接实现借贷。旗舰产品 SigmaBonds 允许用户创建自定义债务义务，条款由贷款方和借款方直接协商确定。\n\n与资金池借贷协议不同，SigmaFi 的 P2P 模型赋予参与者对贷款条款的完全控制权，包括利率、期限和抵押品要求。贷款方可以指定所需回报，借款方可以找到符合其需求的条款。智能合约执行还款计划并在必要时处理抵押品清算。\n\n该协议展示了 ErgoScript 在实现复杂金融逻辑方面的高级能力。每份债券都表示为嵌入合约条款的 UTXO，创造出透明且可验证的债务工具。SigmaFi 探索了如何在无需信任、去中心化的背景下重新构想债券和票据等传统金融概念。",
       "features": [
-        "P2P Lending",
-        "Bond Issuance",
-        "Decentralized Finance",
-        "Smart Contracts"
+        "P2P 借贷",
+        "债券发行",
+        "去中心化金融",
+        "智能合约"
       ]
     },
     "ergoraffle": {
       "name": "ErgoRaffle",
       "description": "一个带有彩票元素的众筹服务，允许为项目筹款，参与者可赢得奖励。",
-      "longDescription": "ErgoRaffle is a decentralized crowdfunding platform that combines fundraising with lottery mechanics. Projects can raise funds by selling raffle tickets, with participants receiving a chance to win prizes while supporting initiatives they believe in. The entire process runs on ErgoScript smart contracts, ensuring provable fairness and transparent fund distribution.\n\nThe platform uses Ergo's native randomness capabilities to select winners in a verifiable way. Unlike traditional lotteries where users must trust the operator, ErgoRaffle's on-chain execution means anyone can verify that winners were selected fairly. This trustless design eliminates the possibility of manipulation while reducing operational overhead.\n\nErgoRaffle serves as infrastructure for community fundraising, charity events, and project bootstrapping within the Ergo ecosystem. Projects can configure ticket prices, prize structures, and funding goals. When a raffle completes, smart contracts automatically distribute funds to the project and prizes to winners, creating a self-executing crowdfunding mechanism that requires no intermediaries.",
+      "longDescription": "ErgoRaffle 是一个去中心化众筹平台，将募资与彩票机制相结合。项目可以通过销售抽奖券筹集资金，参与者在支持自己看好的项目的同时，还有机会赢取奖励。整个过程在 ErgoScript 智能合约上运行，确保可证明的公平性和透明的资金分配。\n\n该平台使用 Ergo 的原生随机性功能以可验证的方式选出获奖者。与用户必须信任运营者的传统彩票不同，ErgoRaffle 的链上执行意味着任何人都可以验证获奖者是否被公平选出。这种无需信任的设计消除了操纵的可能性，同时降低了运营开销。\n\nErgoRaffle 作为 Ergo 生态系统内社区募资、慈善活动和项目启动的基础设施。项目可以配置票价、奖品结构和筹资目标。当抽奖完成时，智能合约自动向项目分发资金并向获奖者发放奖品，创造出无需中间方的自执行众筹机制。",
       "features": [
         "众筹",
         "彩票系统",
@@ -760,200 +760,200 @@
     },
     "minotaur-wallet": {
       "name": "Minotaur Wallet",
-      "description": "A mobile wallet for Ergo with advanced features like multi-signatures, enhancing fund management security.",
-      "longDescription": "Minotaur Wallet is a mobile wallet for Ergo that focuses on advanced security features, particularly multi-signature support. Multi-sig wallets require multiple parties to approve transactions, making them ideal for shared funds, organizational treasuries, and users who want additional security layers.\n\nThe wallet implements Ergo's native multi-signature capabilities through Sigma Protocols, enabling flexible signing schemes. Users can configure M-of-N signatures where any M keys from N total signers can authorize a transaction. This provides both security redundancy and collaborative fund management without trusting a single party with complete control.\n\nMinotaur is designed for mobile use with a focus on usability. The interface guides users through creating and participating in multi-sig setups without requiring deep technical knowledge. For teams and organizations managing shared funds on Ergo, Minotaur provides essential infrastructure for secure, collaborative asset management.",
+      "description": "一款具有多重签名等高级功能的 Ergo 移动钱包，增强资金管理安全性。",
+      "longDescription": "Minotaur Wallet 是一款专注于高级安全功能（尤其是多重签名支持）的 Ergo 移动钱包。多签钱包需要多方批准交易，非常适合共享资金、组织财库以及希望增加安全层的用户。\n\n该钱包通过 Sigma 协议实现 Ergo 的原生多重签名能力，支持灵活的签名方案。用户可以配置 M-of-N 签名，即 N 个签名者中任意 M 个密钥可授权一笔交易。这既提供了安全冗余，又实现了协作资金管理，无需将完全控制权托付给单一方。\n\nMinotaur 专为移动使用设计，注重易用性。界面引导用户创建和参与多签设置，无需深厚的技术知识。对于在 Ergo 上管理共享资金的团队和组织，Minotaur 为安全、协作的资产管理提供了必要的基础设施。",
       "features": [
-        "Mobile Wallet",
-        "Multi-signature",
-        "Enhanced Security",
-        "Fund Management"
+        "移动钱包",
+        "多重签名",
+        "增强安全",
+        "资金管理"
       ]
     },
     "guapswap": {
       "name": "GuapSwap",
-      "description": "A decentralized smart contract-based service for swapping miner profits on Ergo, allowing automatic exchange of mining rewards.",
-      "longDescription": "GuapSwap is a specialized tool for Ergo miners that enables automatic conversion of mining rewards. When miners earn block rewards in ERG, GuapSwap can automatically swap a portion into other tokens according to configured preferences, helping miners manage their income without manual intervention.\n\nThe service runs through smart contracts that execute swaps based on predefined rules. Miners can configure what percentage of rewards to swap and which tokens to receive, creating automated dollar-cost averaging or diversification strategies. This reduces the friction of actively managing mining income.\n\nGuapSwap demonstrates practical utility of smart contracts for the mining community. By automating common operations, it saves time and enables consistent execution of swap strategies regardless of market conditions. The tool complements Ergo's Autolykos mining algorithm by making reward management more accessible.",
+      "description": "一项基于智能合约的去中心化服务，用于兑换 Ergo 矿工利润，支持自动兑换挖矿奖励。",
+      "longDescription": "GuapSwap 是一款专为 Ergo 矿工打造的工具，可自动转换挖矿奖励。当矿工赚取 ERG 区块奖励时，GuapSwap 可根据配置偏好自动将一部分兑换为其他代币，帮助矿工无需手动干预即可管理收入。\n\n该服务通过智能合约运行，根据预定义规则执行兑换。矿工可以配置要兑换的奖励比例和目标代币，创造自动化的定期定额投资或分散化策略。这减少了主动管理挖矿收入的摩擦。\n\nGuapSwap 展示了智能合约对矿工社区的实际价值。通过自动化常见操作，无论市场条件如何，都能节省时间并一致执行兑换策略。该工具通过使奖励管理更易于实现，补充了 Ergo 的 Autolykos 挖矿算法。",
       "features": [
-        "Mining Rewards",
-        "Auto-swap",
-        "Profit Management",
-        "Miner Tools"
+        "挖矿奖励",
+        "自动兑换",
+        "利润管理",
+        "矿工工具"
       ]
     },
     "dexygold": {
       "name": "DexyGold",
-      "description": "An algorithmic stablecoin pegged to the price of gold (XAU/USD), utilizing seigniorage, price oracles, and excess ERG collateral.",
-      "longDescription": "DexyGold is an experimental algorithmic stablecoin designed to track the price of gold (XAU/USD) using Ergo's Oracle Pools for price data. The protocol uses seigniorage mechanisms and overcollateralization to maintain its gold peg, creating a decentralized digital representation of gold value.\n\nThe design builds on lessons from SigmaUSD and other algorithmic stablecoins, adapting the approach for commodity-pegged assets. ERG serves as collateral, with the protocol minting and burning tokens to maintain price stability. Oracle Pools provide trustless gold price feeds that the smart contracts use to adjust supply.\n\nDexyGold explores how blockchain technology can create accessible exposure to gold prices without requiring physical custody or trust in centralized issuers. The prototype demonstrates Ergo's capability for implementing sophisticated financial instruments while maintaining decentralization and transparency.",
+      "description": "一种与黄金价格 (XAU/USD) 挂钩的算法稳定币，利用铸币税机制、价格预言机和超额 ERG 抵押品。",
+      "longDescription": "DexyGold 是一种实验性算法稳定币，旨在使用 Ergo 的 Oracle 池作为价格数据来追踪黄金价格 (XAU/USD)。该协议使用铸币税机制和超额抵押来维持黄金锚定，创造去中心化的黄金价值数字表示。\n\n该设计汲取了 SigmaUSD 和其他算法稳定币的经验教训，将这种方法适用于商品锚定资产。ERG 作为抵押品，协议通过铸造和销毁代币来维持价格稳定。Oracle 池提供无需信任的黄金价格馈送，智能合约利用这些数据来调整供应量。\n\nDexyGold 探索区块链技术如何在无需实物托管或信任中心化发行方的情况下，创造对黄金价格的便捷敞口。该原型展示了 Ergo 在保持去中心化和透明度的同时实现复杂金融工具的能力。",
       "features": [
-        "Gold-pegged Stablecoin",
-        "Algorithmic Design",
-        "Oracle Integration",
-        "ERG Collateral"
+        "黄金锚定稳定币",
+        "算法设计",
+        "预言机集成",
+        "ERG 抵押品"
       ]
     },
     "sigmao": {
       "name": "SigmaO",
-      "description": "A platform for trading options (Call/Put, American/European) on Ergo EIP-4 tokens using an order book style.",
-      "longDescription": "SigmaO is a decentralized options trading platform that brings derivatives markets to the Ergo blockchain. The protocol supports both Call and Put options with American and European exercise styles, enabling sophisticated hedging and speculation strategies for Ergo-native tokens.\n\nOptions are represented as EIP-4 tokens, making them tradeable on any Ergo marketplace. The order book model allows option writers to set their own premiums and strike prices, while buyers can select contracts that match their market views. Smart contracts handle option exercise automatically at expiration or when exercised early (for American options).\n\nSigmaO demonstrates how complex financial derivatives can be implemented on the eUTXO model. Each option contract encodes its parameters (underlying asset, strike price, expiration, option type) directly in the token, creating self-describing financial instruments. This brings institutional-grade trading tools to the decentralized ecosystem.",
+      "description": "一个以订单簿方式交易 Ergo EIP-4 代币期权（看涨/看跌、美式/欧式）的平台。",
+      "longDescription": "SigmaO 是一个去中心化期权交易平台，将衍生品市场引入 Ergo 区块链。该协议同时支持具有美式和欧式行权风格的看涨和看跌期权，为 Ergo 原生代币实现复杂的对冲和投机策略。\n\n期权以 EIP-4 代币的形式表示，可在任何 Ergo 市场上交易。订单簿模型允许期权卖方设定自己的权利金和行权价，而买方可以选择符合其市场观点的合约。智能合约在到期时或提前行权时（美式期权）自动处理期权行使。\n\nSigmaO 展示了复杂金融衍生品如何在 eUTXO 模型上实现。每份期权合约将其参数（标的资产、行权价、到期日、期权类型）直接编码在代币中，创造出自描述的金融工具。这为去中心化生态系统带来了机构级交易工具。",
       "features": [
-        "Options Trading",
-        "Call/Put Options",
-        "Order Book",
-        "EIP-4 Tokens"
+        "期权交易",
+        "看涨/看跌期权",
+        "订单簿",
+        "EIP-4 代币"
       ]
     },
     "blitz-tcg": {
       "name": "Blitz TCG",
-      "description": "A collectible trading card game (TCG) on the Ergo blockchain.",
-      "longDescription": "Blitz TCG is a blockchain-based trading card game that combines competitive gameplay with true digital ownership through Ergo NFTs. Each card exists as a unique token on the Ergo blockchain, enabling players to truly own, trade, and collect their cards outside of any centralized platform.\n\nThe game leverages Ergo's native token standard for card issuance, with different rarity tiers and limited editions creating collectible value. Players can trade cards peer-to-peer on Ergo marketplaces, and the provable scarcity of blockchain-based cards creates genuine digital collectibles rather than revocable licenses.\n\nBlitz TCG demonstrates how blockchain technology can enhance traditional gaming genres. The competitive trading card format benefits from verifiable ownership and scarcity, while the Ergo blockchain provides low fees and fast transactions for active trading. The project explores sustainable blockchain gaming models that respect player ownership.",
+      "description": "Ergo 区块链上的一款集换式卡牌游戏 (TCG)。",
+      "longDescription": "Blitz TCG 是一款基于区块链的集换式卡牌游戏，通过 Ergo NFT 将竞技游戏与真正的数字所有权相结合。每张卡牌都作为 Ergo 区块链上的独特代币存在，使玩家能够在任何中心化平台之外真正拥有、交易和收集卡牌。\n\n游戏利用 Ergo 的原生代币标准发行卡牌，不同稀有度等级和限量版赋予收藏价值。玩家可以在 Ergo 市场上点对点交易卡牌，基于区块链的卡牌的可证明稀缺性创造了真正的数字收藏品，而非可撤销的许可证。\n\nBlitz TCG 展示了区块链技术如何提升传统游戏类型。竞技集换式卡牌形式受益于可验证的所有权和稀缺性，而 Ergo 区块链提供低手续费和快速交易以支持活跃的交易活动。该项目探索尊重玩家所有权的可持续区块链游戏模式。",
       "features": [
-        "Trading Card Game",
-        "NFT Cards",
-        "Competitive Play",
-        "Collectibles"
+        "集换式卡牌游戏",
+        "NFT 卡牌",
+        "竞技玩法",
+        "收藏品"
       ]
     },
     "sigmaverse": {
       "name": "Sigmaverse",
-      "description": "A centralized portal and directory for the Ergo dApp ecosystem, allowing developers to list applications and users to find services.",
-      "longDescription": "Sigmaverse is the primary discovery platform for the Ergo ecosystem, serving as a curated directory of decentralized applications, tools, and services built on Ergo. The platform helps users navigate the growing ecosystem by categorizing projects and providing essential information about each application.\n\nFor newcomers to Ergo, Sigmaverse offers a starting point to explore available DeFi protocols, wallets, NFT platforms, and developer tools. Each listing includes descriptions, links, and categorization that helps users find relevant applications for their needs. The directory covers the full spectrum of Ergo projects from established protocols to emerging experiments.\n\nDevelopers benefit from Sigmaverse as a promotional channel for their projects. Submitting a project to the directory increases visibility within the community and helps attract users and contributors. The platform serves as living documentation of Ergo's ecosystem growth, tracking the evolution from early infrastructure to a diverse application landscape.",
+      "description": "Ergo dApp 生态系统的聚合门户和目录，允许开发者列出应用程序，用户查找服务。",
+      "longDescription": "Sigmaverse 是 Ergo 生态系统的主要发现平台，作为 Ergo 上构建的去中心化应用、工具和服务的精选目录。该平台通过对项目进行分类并提供每个应用的基本信息，帮助用户浏览不断增长的生态系统。\n\n对于 Ergo 新人，Sigmaverse 提供了探索现有 DeFi 协议、钱包、NFT 平台和开发者工具的起点。每条列表包含描述、链接和分类，帮助用户找到满足其需求的相关应用。目录涵盖 Ergo 项目的全部范围，从成熟协议到新兴实验。\n\n开发者将 Sigmaverse 作为其项目的推广渠道。向目录提交项目可以提高在社区内的曝光度，并帮助吸引用户和贡献者。该平台作为 Ergo 生态系统增长的动态文档，追踪从早期基础设施到多样化应用格局的演变。",
       "features": [
-        "dApp Directory",
-        "Project Listings",
-        "Ecosystem Portal",
-        "Discovery Platform"
+        "dApp 目录",
+        "项目列表",
+        "生态系统门户",
+        "发现平台"
       ]
     },
     "ergone": {
       "name": "ErgOne",
-      "description": "A decentralized, community-driven marketing platform for promoting Ergo and its projects using the ERGONE token and Proof-of-Commitment Protocol.",
-      "longDescription": "ErgOne is a decentralized marketing platform that incentivizes community members to promote Ergo and ecosystem projects. The platform uses the ERGONE token and a novel Proof-of-Commitment Protocol to reward genuine promotional efforts while filtering out low-quality engagement.\n\nCommunity members can earn ERGONE tokens by completing marketing tasks, creating content, and spreading awareness about Ergo projects. The token-based incentive system aligns individual efforts with ecosystem growth, creating a distributed marketing force that doesn't rely on centralized marketing budgets.\n\nErgOne demonstrates how blockchain tokens can coordinate community efforts toward shared goals. By making marketing participatory and incentive-aligned, the platform harnesses the enthusiasm of the Ergo community while providing measurable contributions to ecosystem visibility and adoption.",
+      "description": "一个去中心化、社区驱动的营销平台，使用 ERGONE 代币和承诺证明协议推广 Ergo 及其项目。",
+      "longDescription": "ErgOne 是一个去中心化营销平台，激励社区成员推广 Ergo 和生态系统项目。该平台使用 ERGONE 代币和新颖的承诺证明协议，奖励真实的推广努力，同时过滤低质量互动。\n\n社区成员可以通过完成营销任务、创作内容和传播 Ergo 项目的认知度来赚取 ERGONE 代币。基于代币的激励系统使个人努力与生态系统增长保持一致，创造出不依赖中心化营销预算的分布式营销力量。\n\nErgOne 展示了区块链代币如何协调社区力量朝着共同目标努力。通过使营销具有参与性和激励一致性，该平台在为生态系统可见度和采用提供可衡量贡献的同时，充分利用了 Ergo 社区的热情。",
       "features": [
-        "Marketing Platform",
-        "Community Driven",
-        "Token Incentives",
-        "Project Promotion"
+        "营销平台",
+        "社区驱动",
+        "代币激励",
+        "项目推广"
       ]
     },
     "hodlbox": {
       "name": "Hodlbox",
-      "description": "A platform encouraging long-term holding of ERG with treasure chests and various fund-locking options, rewarding users with NFTs.",
-      "longDescription": "Hodlbox is a gamified savings platform that encourages long-term holding of ERG through time-locked deposits and NFT rewards. Users can lock their ERG in \"treasure chests\" for specified periods, receiving unique NFT rewards upon completion of their holding commitment.\n\nThe platform implements time-locks through ErgoScript smart contracts that prevent early withdrawal. This creates credible commitment to long-term holding, which some users find helpful for maintaining investment discipline. Different lock periods offer varying rewards, incentivizing longer commitments.\n\nHodlbox adds an entertaining layer to the serious practice of long-term investing. The treasure chest metaphor and NFT collectibles create engagement beyond pure financial mechanics. The platform demonstrates how DeFi can incorporate gamification elements while maintaining trustless execution through smart contracts.",
+      "description": "一个通过宝箱和各种资金锁仓选项鼓励长期持有 ERG 的平台，以 NFT 奖励用户。",
+      "longDescription": "Hodlbox 是一个游戏化储蓄平台，通过定时锁仓存款和 NFT 奖励鼓励长期持有 ERG。用户可以将 ERG 锁入\"宝箱\"一段指定时间，在完成持有承诺后获得独特的 NFT 奖励。\n\n该平台通过 ErgoScript 智能合约实现时间锁，防止提前提款。这为长期持有创造了可信承诺，一些用户认为这有助于保持投资纪律。不同锁仓期限提供不同奖励，激励更长时间的承诺。\n\nHodlbox 为严肃的长期投资实践增添了娱乐性。宝箱比喻和 NFT 收藏品创造了超越纯金融机制的参与感。该平台展示了 DeFi 如何在通过智能合约保持无需信任执行的同时，融入游戏化元素。",
       "features": [
-        "HODL Incentives",
-        "Fund Locking",
-        "NFT Rewards",
-        "Long-term Savings"
+        "HODL 激励",
+        "资金锁仓",
+        "NFT 奖励",
+        "长期储蓄"
       ]
     },
     "tokenjay": {
       "name": "TokenJay",
-      "description": "A platform for P2P (peer-to-peer) token trading within the Ergo ecosystem.",
-      "longDescription": "TokenJay is a peer-to-peer token trading platform that enables direct trades between Ergo users without relying on automated market makers or liquidity pools. The platform facilitates trustless exchanges where users can create and accept trade offers for ERG and any native tokens on the Ergo blockchain.\n\nUnlike AMM-based DEXs where prices are determined by pool ratios, TokenJay allows traders to set their own prices and find counterparties willing to accept those terms. This order-book style trading can be more capital efficient for large trades and provides better price discovery for less liquid tokens that might suffer from high slippage on AMMs.\n\nThe platform leverages Ergo's eUTXO model to enable atomic swaps where both sides of a trade execute in a single transaction. This eliminates counterparty risk since trades either complete fully or not at all. TokenJay serves as essential infrastructure for Ergo's token economy, enabling price discovery and liquidity for the growing ecosystem of native assets.",
+      "description": "Ergo 生态系统内用于点对点 (P2P) 代币交易的平台。",
+      "longDescription": "TokenJay 是一个点对点代币交易平台，无需依赖自动做市商或流动性池即可在 Ergo 用户之间实现直接交易。该平台促进无需信任的交换，用户可以为 ERG 和 Ergo 区块链上任何原生代币创建和接受交易报价。\n\n与价格由池子比率决定的基于 AMM 的 DEX 不同，TokenJay 允许交易者设定自己的价格并寻找愿意接受这些条款的对手方。这种订单簿式交易对大额交易而言资本效率更高，并为流动性较差的代币提供更好的价格发现，这些代币在 AMM 上可能遭受高滑点。\n\n该平台利用 Ergo 的 eUTXO 模型实现原子兑换，交易双方在单笔交易中执行。这消除了对手方风险，因为交易要么完全完成，要么根本不执行。TokenJay 作为 Ergo 代币经济的重要基础设施，为不断增长的原生资产生态系统提供价格发现和流动性。",
       "features": [
-        "P2P Trading",
-        "Token Swaps",
-        "Decentralized Exchange",
-        "Direct Trading"
+        "P2P 交易",
+        "代币兑换",
+        "去中心化交易所",
+        "直接交易"
       ]
     },
     "single-tx-swap": {
       "name": "Single Tx Swap",
-      "description": "A tool for executing P2P (peer-to-peer) token swaps within a single transaction.",
-      "longDescription": "Single Tx Swap is a utility that enables atomic token exchanges between two parties in a single Ergo transaction. This trustless mechanism ensures that either both sides of a trade execute completely or neither does, eliminating counterparty risk inherent in multi-step exchanges.\n\nThe tool leverages Ergo's eUTXO model where multiple inputs and outputs can be combined in a single transaction with complex spending conditions. Both parties' assets are consumed as inputs and redistributed as outputs according to agreed terms. The transaction only succeeds if all conditions are satisfied.\n\nSingle Tx Swap provides essential infrastructure for trustless peer-to-peer trading. Unlike escrow-based solutions that lock funds temporarily, atomic swaps complete instantly with no waiting period. This efficiency makes the tool ideal for OTC trades and direct exchanges where both parties are ready to transact.",
+      "description": "一个在单笔交易内执行点对点 (P2P) 代币兑换的工具。",
+      "longDescription": "Single Tx Swap 是一个工具，可在单笔 Ergo 交易中实现两方之间的原子代币交换。这种无需信任的机制确保交易双方要么全部完成，要么都不执行，消除了多步骤交换中固有的对手方风险。\n\n该工具利用 Ergo 的 eUTXO 模型，其中多个输入和输出可以在具有复杂花费条件的单笔交易中组合。双方资产作为输入被消耗，并根据约定条款作为输出重新分配。只有满足所有条件时，交易才会成功。\n\nSingle Tx Swap 为无需信任的点对点交易提供必要基础设施。与临时锁定资金的托管类解决方案不同，原子兑换即时完成，无需等待期。这种效率使该工具非常适合场外交易 (OTC) 和双方均已准备好交易时的直接交换。",
       "features": [
-        "Atomic Swaps",
-        "Single Transaction",
-        "P2P Exchange",
-        "Fast Execution"
+        "原子兑换",
+        "单笔交易",
+        "P2P 交换",
+        "快速执行"
       ]
     },
     "crux-finance": {
       "name": "Crux Finance",
-      "description": "A tool for managing crypto portfolios within the Ergo ecosystem, allowing tracking of P&L, investments, and generating tax reports.",
-      "longDescription": "Crux Finance is a portfolio management and analytics platform designed specifically for the Ergo ecosystem. The platform helps users track their holdings across wallets, calculate profit and loss, monitor investment performance, and generate reports for tax compliance.\n\nBy connecting wallet addresses, users can view aggregated portfolio values, historical performance charts, and detailed breakdowns by token. The platform tracks transactions automatically, calculating cost basis and realized gains for tax reporting purposes. This automation saves significant time compared to manual tracking, especially for active traders and DeFi participants.\n\nCrux Finance integrates with Ergo DeFi protocols to provide comprehensive views of user positions including LP tokens, staking rewards, and lending positions. The platform's understanding of Ergo-specific protocols means it can accurately value complex DeFi positions. For users who need to report cryptocurrency gains, Crux Finance provides exportable reports compatible with common tax software formats.",
+      "description": "一个用于管理 Ergo 生态系统内加密货币投资组合的工具，支持追踪盈亏 (P&L)、投资并生成税务报告。",
+      "longDescription": "Crux Finance 是一个专为 Ergo 生态系统设计的投资组合管理和分析平台。该平台帮助用户追踪多个钱包中的持仓、计算盈亏、监控投资表现并生成税务合规报告。\n\n通过连接钱包地址，用户可以查看汇总的投资组合价值、历史表现图表和按代币划分的详细分类。平台自动追踪交易，计算成本基础和已实现收益以供税务申报。与手动追踪相比，这种自动化节省了大量时间，对于活跃交易者和 DeFi 参与者尤为如此。\n\nCrux Finance 与 Ergo DeFi 协议集成，提供用户持仓的全面视图，包括 LP 代币、质押奖励和借贷头寸。该平台对 Ergo 特定协议的理解意味着它能够准确评估复杂的 DeFi 头寸。对于需要申报加密货币收益的用户，Crux Finance 提供与常见税务软件格式兼容的可导出报告。",
       "features": [
-        "Portfolio Tracking",
-        "P&L Analysis",
-        "Tax Reports",
-        "Investment Management"
+        "投资组合追踪",
+        "盈亏分析",
+        "税务报告",
+        "投资管理"
       ]
     },
     "fleet-sdk": {
       "name": "Fleet SDK",
-      "description": "A JavaScript library designed to simplify the creation and signing of transactions on the Ergo blockchain in web applications and Node.js.",
-      "longDescription": "Fleet SDK is the premier JavaScript/TypeScript library for building Ergo applications. Designed for both browser and Node.js environments, Fleet provides developers with intuitive APIs for constructing transactions, interacting with smart contracts, and integrating Ergo functionality into web applications.\n\nThe SDK abstracts the complexity of the eUTXO model, offering high-level builders for common transaction patterns while still exposing low-level primitives for advanced use cases. Developers can create multi-asset transactions, interact with dApps, and sign transactions using various wallet integrations. TypeScript support provides excellent IDE integration and compile-time type checking.\n\nFleet powers many Ergo web applications and dApps, serving as foundational infrastructure for frontend development. The library integrates seamlessly with popular wallet connectors like Nautilus and includes utilities for address validation, token handling, and box selection. Comprehensive documentation and active maintenance make Fleet the recommended choice for JavaScript developers building on Ergo.",
+      "description": "一个旨在简化 Ergo 区块链交易创建和签名的 JavaScript 库，适用于 Web 应用和 Node.js。",
+      "longDescription": "Fleet SDK 是构建 Ergo 应用的顶级 JavaScript/TypeScript 库。专为浏览器和 Node.js 环境设计，Fleet 为开发者提供直观的 API，用于构建交易、与智能合约交互以及将 Ergo 功能集成到 Web 应用中。\n\n该 SDK 抽象了 eUTXO 模型的复杂性，为常见交易模式提供高级构建器，同时仍为高级用例暴露底层原语。开发者可以创建多资产交易、与 dApp 交互，并使用各种钱包集成签名交易。TypeScript 支持提供出色的 IDE 集成和编译时类型检查。\n\nFleet 为许多 Ergo Web 应用和 dApp 提供支持，作为前端开发的基础设施。该库与 Nautilus 等流行钱包连接器无缝集成，并包含地址验证、代币处理和 Box 选择的实用工具。全面的文档和积极的维护使 Fleet 成为在 Ergo 上构建的 JavaScript 开发者的首选。",
       "features": [
         "JavaScript SDK",
-        "Transaction Building",
-        "Web Integration",
-        "Node.js Support"
+        "交易构建",
+        "Web 集成",
+        "Node.js 支持"
       ]
     },
     "appkit": {
       "name": "AppKit",
-      "description": "The primary Software Development Kit (SDK) for developing applications on Ergo using JVM-based programming languages.",
-      "longDescription": "AppKit is Ergo's official SDK for JVM-based development, providing Scala and Java developers with comprehensive tools for building Ergo applications. As the most mature Ergo development kit, AppKit offers direct access to core protocol functionality and serves as the reference implementation for Ergo development patterns.\n\nThe SDK enables developers to construct and sign transactions, compile ErgoScript contracts, interact with the Ergo node API, and work with cryptographic primitives. AppKit's Scala-first design provides elegant functional APIs that mirror the mathematical foundations of the eUTXO model, while Java compatibility ensures broad accessibility.\n\nAppKit is particularly powerful for backend services, off-chain bots, and applications requiring deep integration with ErgoScript. The SDK includes tools for contract compilation, box selection algorithms, and transaction chaining. Many core Ergo infrastructure projects and DeFi protocols are built using AppKit, making it essential knowledge for serious Ergo developers.",
+      "description": "使用基于 JVM 的编程语言在 Ergo 上开发应用程序的主要软件开发套件 (SDK)。",
+      "longDescription": "AppKit 是 Ergo 官方的 JVM 开发 SDK，为 Scala 和 Java 开发者提供构建 Ergo 应用的全面工具。作为最成熟的 Ergo 开发套件，AppKit 提供对核心协议功能的直接访问，并作为 Ergo 开发模式的参考实现。\n\n该 SDK 使开发者能够构建和签名交易、编译 ErgoScript 合约、与 Ergo 节点 API 交互，以及使用密码学原语。AppKit 以 Scala 为主的设计提供了优雅的函数式 API，反映了 eUTXO 模型的数学基础，而 Java 兼容性确保了广泛的可访问性。\n\nAppKit 对于后端服务、链下机器人以及需要深度集成 ErgoScript 的应用特别强大。该 SDK 包含合约编译、Box 选择算法和交易链接的工具。许多核心 Ergo 基础设施项目和 DeFi 协议都使用 AppKit 构建，使其成为严肃的 Ergo 开发者必须掌握的知识。",
       "features": [
         "JVM SDK",
-        "Scala/Java Support",
-        "Smart Contract Development",
-        "Official SDK"
+        "Scala/Java 支持",
+        "智能合约开发",
+        "官方 SDK"
       ]
     },
     "sigma-rust": {
       "name": "SigmaRust",
-      "description": "An implementation of the ErgoTree interpreter in Rust, providing tools for working with transactions and bindings for various languages.",
-      "longDescription": "SigmaRust is a Rust implementation of the ErgoTree interpreter and Ergo protocol primitives. This high-performance library enables Ergo development in Rust while also providing bindings to other languages including JavaScript/WASM, Python, and C, making it foundational infrastructure for the multi-language Ergo development ecosystem.\n\nThe library implements ErgoTree evaluation, transaction validation, and Sigma protocol verification in pure Rust. Its WASM compilation target powers JavaScript applications that need to verify or construct Ergo transactions in the browser. This enables fully client-side transaction signing and contract interaction without server dependencies.\n\nSigmaRust's language bindings mean developers can use familiar languages while benefiting from Rust's performance and safety guarantees. The Python bindings enable rapid prototyping and data analysis, while the C bindings allow integration with virtually any programming language. SigmaRust represents critical infrastructure that expands Ergo development beyond JVM languages to the broader developer ecosystem.",
+      "description": "Rust 实现的 ErgoTree 解释器，提供处理交易的工具以及多种语言的绑定。",
+      "longDescription": "SigmaRust 是 ErgoTree 解释器和 Ergo 协议原语的 Rust 实现。这个高性能库支持在 Rust 中进行 Ergo 开发，同时提供对其他语言的绑定，包括 JavaScript/WASM、Python 和 C，使其成为多语言 Ergo 开发生态系统的基础设施。\n\n该库以纯 Rust 实现 ErgoTree 评估、交易验证和 Sigma 协议验证。其 WASM 编译目标支持需要在浏览器中验证或构建 Ergo 交易的 JavaScript 应用程序。这实现了完全客户端侧的交易签名和合约交互，无需服务器依赖。\n\nSigmaRust 的语言绑定意味着开发者可以使用熟悉的语言，同时受益于 Rust 的性能和安全保证。Python 绑定支持快速原型设计和数据分析，而 C 绑定允许与几乎任何编程语言集成。SigmaRust 代表着关键基础设施，将 Ergo 开发从 JVM 语言扩展到更广泛的开发者生态系统。",
       "features": [
-        "Rust Implementation",
-        "ErgoTree Interpreter",
-        "Multi-language Bindings",
-        "WASM Support"
+        "Rust 实现",
+        "ErgoTree 解释器",
+        "多语言绑定",
+        "WASM 支持"
       ]
     },
     "gluon": {
       "name": "Gluon",
-      "description": "A protocol developed to strengthen (harden) existing stablecoins in the Ergo ecosystem, such as SigmaUSD.",
-      "longDescription": "Gluon is a protocol designed to enhance the stability and resilience of existing stablecoins like SigmaUSD. The project explores mechanisms for \"hardening\" algorithmic stablecoins against extreme market conditions and edge cases that can threaten peg stability.\n\nThe protocol investigates additional stability mechanisms that complement the AgeUSD design, potentially including enhanced liquidation processes, additional collateral types, or integration with other DeFi primitives. By strengthening the foundation of Ergo stablecoins, Gluon aims to increase user confidence and enable broader adoption.\n\nGluon represents ongoing research into sustainable stablecoin design on eUTXO blockchains. The project contributes to the ecosystem's understanding of decentralized monetary policy and helps identify improvements that can be incorporated into future versions of stablecoin protocols.",
+      "description": "一个旨在强化（加固）Ergo 生态系统中现有稳定币（如 SigmaUSD）的协议。",
+      "longDescription": "Gluon 是一个旨在增强 SigmaUSD 等现有稳定币的稳定性和弹性的协议。该项目探索针对极端市场条件和可能威胁锚定稳定性的边缘情况\"加固\"算法稳定币的机制。\n\n该协议研究补充 AgeUSD 设计的额外稳定机制，可能包括增强的清算流程、额外的抵押品类型，或与其他 DeFi 原语的集成。通过加强 Ergo 稳定币的基础，Gluon 旨在提高用户信心并推动更广泛的采用。\n\nGluon 代表着对 eUTXO 区块链上可持续稳定币设计的持续研究。该项目有助于生态系统理解去中心化货币政策，并帮助识别可纳入稳定币协议未来版本的改进措施。",
       "features": [
-        "Stablecoin Enhancement",
-        "Protocol Hardening",
-        "DeFi Infrastructure",
-        "Stability Mechanism"
+        "稳定币增强",
+        "协议加固",
+        "DeFi 基础设施",
+        "稳定机制"
       ]
     },
     "chaincash": {
       "name": "ChainCash",
-      "description": "A framework for creating decentralized P2P monetary systems on Ergo, allowing users to issue their own currencies backed by trust or collateral.",
-      "longDescription": "ChainCash is an experimental framework for creating peer-to-peer monetary systems on Ergo. The project enables users to issue their own currencies backed by either trust relationships or collateral, exploring alternative approaches to money creation and value transfer.\n\nThe framework draws inspiration from historical monetary systems and modern concepts like local exchange trading systems (LETS). Users can create currencies backed by their reputation within a community or by depositing collateral. This enables experimentation with different monetary models including mutual credit, time banking, and community currencies.\n\nDeveloped by Ergo core developer kushti, ChainCash represents cutting-edge research into programmable money. The project demonstrates how blockchain technology can support diverse monetary experiments while maintaining transparency and preventing fraud. It contributes to Ergo's broader mission of financial innovation and inclusion.",
+      "description": "一个在 Ergo 上创建去中心化点对点货币系统的框架，允许用户发行以信任或抵押品背书的自定义货币。",
+      "longDescription": "ChainCash 是一个在 Ergo 上创建点对点货币系统的实验性框架。该项目使用户能够发行以信任关系或抵押品背书的自定义货币，探索货币创造和价值转移的替代方法。\n\n该框架从历史货币系统和现代概念（如本地交换贸易系统，LETS）中汲取灵感。用户可以创建以其在社区内的声誉或存入抵押品背书的货币。这使得互信信贷、时间银行和社区货币等不同货币模式的实验成为可能。\n\n由 Ergo 核心开发者 kushti 开发的 ChainCash 代表着对可编程货币的前沿研究。该项目展示了区块链技术如何在保持透明度和防止欺诈的同时支持多样化的货币实验。它为 Ergo 更广泛的金融创新和普惠金融使命做出贡献。",
       "features": [
-        "P2P Money",
-        "Custom Currencies",
-        "Trust-based Backing",
-        "Monetary Framework"
+        "P2P 货币",
+        "自定义货币",
+        "信任背书",
+        "货币框架"
       ]
     },
     "sigrsv": {
       "name": "SigRSV",
-      "description": "The reserve coin for the SigmaUSD stablecoin protocol. Users mint SigRSV by depositing ERG into reserves and can profit from ERG price increases.",
-      "longDescription": "SigRSV is the reserve token of the SigmaUSD stablecoin protocol, representing a leveraged long position on ERG. When users mint SigRSV, they deposit ERG into the reserve, absorbing price volatility to keep SigmaUSD stable while gaining exposure to ERG price appreciation.\n\nThe reserve coin mechanism is elegant: when ERG price rises, the reserve becomes overcollateralized and SigRSV holders can redeem more ERG than they deposited. Conversely, when ERG price falls, SigRSV absorbs losses to maintain SigmaUSD's peg. This creates a market-driven stability mechanism without requiring liquidations or complex oracle manipulation.\n\nSigRSV is attractive for users who are bullish on ERG and want leveraged exposure while contributing to ecosystem stability. The protocol enforces reserve ratio limits (400-800%) that prevent both excessive leverage and under-collateralization. Minting and redemption occur through smart contracts using Oracle Pool price feeds, making the entire process transparent and trustless.",
+      "description": "SigmaUSD 稳定币协议的储备币。用户通过将 ERG 存入储备来铸造 SigRSV，并可从 ERG 价格上涨中获益。",
+      "longDescription": "SigRSV 是 SigmaUSD 稳定币协议的储备代币，代表对 ERG 的杠杆多头头寸。当用户铸造 SigRSV 时，他们将 ERG 存入储备，吸收价格波动以保持 SigmaUSD 稳定，同时获得 ERG 价格上涨的敞口。\n\n储备币机制十分优雅：当 ERG 价格上涨时，储备变得超额抵押，SigRSV 持有者可以赎回比存入时更多的 ERG。反之，当 ERG 价格下跌时，SigRSV 吸收损失以维持 SigmaUSD 的锚定。这创造了一种无需清算或复杂预言机操纵的市场驱动稳定机制。\n\nSigRSV 对看好 ERG 的用户具有吸引力，他们可以在为生态系统稳定做贡献的同时获得杠杆敞口。协议执行储备率限制（400-800%），防止过度杠杆和抵押不足。铸造和赎回通过使用 Oracle 池价格馈送的智能合约进行，使整个过程透明且无需信任。",
       "features": [
-        "Reserve Coin",
-        "ERG Exposure",
-        "SigmaUSD Backing",
-        "Yield Potential"
+        "储备币",
+        "ERG 敞口",
+        "SigmaUSD 背书",
+        "收益潜力"
       ]
     },
     "exle": {
       "name": "EXLE",
-      "description": "A lending/borrowing protocol within the Ergo ecosystem, integrated with Crux Finance.",
-      "longDescription": "EXLE is a decentralized lending and borrowing protocol being developed for the Ergo ecosystem. The protocol aims to enable users to lend their assets to earn yield or borrow against collateral, expanding DeFi capabilities on the eUTXO model.\n\nThe project integrates with Crux Finance for portfolio tracking and analytics, allowing users to monitor their lending positions alongside other Ergo investments. This integration demonstrates the composability possible within the Ergo DeFi ecosystem, where multiple protocols can work together to provide comprehensive financial services.\n\nEXLE represents ongoing innovation in Ergo DeFi, exploring how traditional lending primitives can be adapted to the eUTXO architecture. The protocol's development contributes to Ergo's goal of providing a full suite of decentralized financial tools while maintaining the security and predictability benefits of the extended UTXO model.",
+      "description": "Ergo 生态系统内的借贷协议，与 Crux Finance 集成。",
+      "longDescription": "EXLE 是一个正在为 Ergo 生态系统开发的去中心化借贷协议。该协议旨在使用户能够出借资产以赚取收益，或以抵押品借款，在 eUTXO 模型上扩展 DeFi 能力。\n\n该项目与 Crux Finance 集成用于投资组合追踪和分析，允许用户与其他 Ergo 投资一起监控其借贷头寸。这种集成展示了 Ergo DeFi 生态系统内可能实现的可组合性，多个协议可以协同工作提供全面的金融服务。\n\nEXLE 代表着 Ergo DeFi 的持续创新，探索如何将传统借贷原语适配到 eUTXO 架构。该协议的开发有助于 Ergo 实现提供完整去中心化金融工具套件的目标，同时保持扩展 UTXO 模型的安全性和可预测性优势。",
       "features": [
-        "Lending Protocol",
-        "Borrowing",
-        "DeFi Integration",
-        "Crux Finance Integration"
+        "借贷协议",
+        "借款",
+        "DeFi 集成",
+        "Crux Finance 集成"
       ]
     }
   },

@@ -1,21 +1,21 @@
 {
   "community": {
     "hero": {
-      "title": "ERGO 熟悉的",
-      "description": "连接到激情的开发者、研究人员和热衷于建设分散融资的未来。您的声音对于塑造Ergo的进化至关重要。"
+      "title": "ERGO 社区",
+      "description": "与充满热情的开发者、研究人员和爱好者共同构建去中心化金融的未来。您的声音对于塑造 Ergo 的演进至关重要。"
     },
     "platforms": {
-      "title": "共享",
+      "title": "交流中心",
       "labels": {
         "members": "成员",
         "activity": "活动"
       },
       "discord": {
         "name": "Discord",
-        "description": "实时讨论、AMA会议、技术支持。",
+        "description": "实时讨论、AMA 会议、技术支持",
         "members": "15K+",
         "activity": "24/7",
-        "buttonText": "加入Discord",
+        "buttonText": "加入 Discord",
         "features": {
           "liveChat": "在线聊天",
           "voiceChannels": "语音频道",
@@ -27,36 +27,36 @@
         "name": "Telegram",
         "description": "快速更新、通知、全球社区",
         "members": "12K+",
-        "activity": "已启用",
+        "activity": "活跃",
         "buttonText": "加入 Telegram",
         "features": {
           "instantUpdates": "即时更新",
-          "mobileFirst": "移动设备在前",
-          "globalReach": "全球范围",
-          "newsAlerts": "新闻和提醒"
+          "mobileFirst": "移动优先",
+          "globalReach": "全球覆盖",
+          "newsAlerts": "新闻与提醒"
         }
       },
       "reddit": {
         "name": "Reddit",
-        "description": "深入讨论、备忘录、社区内容",
+        "description": "深度讨论、梗图、社区内容",
         "members": "8K+",
-        "activity": "每天",
-        "buttonText": "访问 r/ergonauts/",
+        "activity": "每日活跃",
+        "buttonText": "访问 r/ergonauts",
         "features": {
-          "longFormPosts": "长期形式的帖子",
-          "communityVoting": "社区表决",
-          "memesContent": "Memes & Content",
+          "longFormPosts": "长文帖子",
+          "communityVoting": "社区投票",
+          "memesContent": "梗图与内容",
           "discussions": "讨论"
         }
       },
       "forum": {
         "name": "ErgoForum",
-        "description": "技术讨论、执行伙伴、治理",
+        "description": "技术讨论、EIP、治理",
         "members": "3K+",
-        "activity": "每周的",
+        "activity": "每周活跃",
         "buttonText": "访问论坛",
         "features": {
-          "technicalDeepDives": "技术深潜水器",
+          "technicalDeepDives": "深度技术探讨",
           "governance": "治理",
           "eipDiscussions": "EIP 讨论",
           "research": "研究"
@@ -64,114 +64,114 @@
       }
     },
     "contributions": {
-      "title": "连接消息",
-      "description": "每次贡献都能增强Ergo生态系统。寻找您的路径来产生影响。",
+      "title": "贡献矩阵",
+      "description": "每一份贡献都能增强 Ergo 生态系统。找到您的路径，产生影响。",
       "types": {
         "development": {
-          "title": "贸易和发展会议",
-          "description": "构建dApp、工具和基础设施",
+          "title": "开发",
+          "description": "构建 dApp、工具和基础设施",
           "tasks": {
-            "smartContracts": "智能合同",
-            "frontendApps": "前端应用程序",
-            "toolsLibraries": "工具和库"
+            "smartContracts": "智能合约",
+            "frontendApps": "前端应用",
+            "toolsLibraries": "工具与库"
           }
         },
         "content": {
-          "title": "内容创建",
+          "title": "内容创作",
           "description": "文章、视频、教程、文档",
           "tasks": {
-            "technicalWriting": "技术写入",
+            "technicalWriting": "技术写作",
             "videoContent": "视频内容",
             "tutorials": "教程"
           }
         },
         "support": {
           "title": "社区支持",
-          "description": "帮助新移民并回答问题",
+          "description": "帮助新人并解答问题",
           "tasks": {
             "userSupport": "用户支持",
-            "onboarding": "上线",
-            "mentoring": "导师"
+            "onboarding": "新手引导",
+            "mentoring": "辅导"
           }
         },
         "governance": {
           "title": "治理",
-          "description": "参与协议决定",
+          "description": "参与协议决策",
           "tasks": {
-            "eipReviews": "EIP 评论",
-            "voting": "表 决",
-            "proposals": "建议"
+            "eipReviews": "EIP 审查",
+            "voting": "投票",
+            "proposals": "提案"
           }
         },
         "infrastructure": {
-          "title": "B. 基础设施",
-          "description": "运行节点，采矿，网络支持",
+          "title": "基础设施",
+          "description": "运行节点、挖矿、网络支持",
           "tasks": {
-            "nodeOperation": "节点操作",
-            "mining": "采矿业：",
+            "nodeOperation": "节点运营",
+            "mining": "挖矿",
             "networkSecurity": "网络安全"
           }
         },
         "research": {
           "title": "研究",
-          "description": "B. 礼宾研究和改进",
+          "description": "协议研究与改进",
           "tasks": {
             "academicResearch": "学术研究",
             "protocolAnalysis": "协议分析",
-            "innovation": "Innovation"
+            "innovation": "创新"
           }
         }
       }
     },
     "guidelines": {
-      "title": "家居协议",
+      "title": "社区准则",
       "encouraged": {
-        "title": "鼓励行为",
+        "title": "鼓励的行为",
         "items": {
-          "respectfulDiscussions": "尊重和建设性的讨论",
-          "helpingNewcomers": "帮助新来者，分享知识",
+          "respectfulDiscussions": "尊重且有建设性的讨论",
+          "helpingNewcomers": "帮助新人并分享知识",
           "contributingProjects": "为项目和文档做出贡献",
           "constructiveFeedback": "提供建设性反馈",
           "followingGuidelines": "遵循社区准则"
         }
       },
       "discouraged": {
-        "title": "阻止行为",
+        "title": "不鼓励的行为",
         "items": {
-          "spamContent": "垃圾邮件、洪水或主题外内容",
-          "misinformation": "传播错误信息或 FUD",
-          "personalAttacks": "人身攻击或骚扰行为",
-          "selfPromotion": "过多的自我升级",
+          "spamContent": "垃圾内容、刷屏或偏离主题的内容",
+          "misinformation": "散布错误信息或 FUD",
+          "personalAttacks": "人身攻击或骚扰",
+          "selfPromotion": "过度自我宣传",
           "violatingRules": "违反平台特定规则"
         }
       }
     },
     "cta": {
-      "title": "重新连接？",
-      "description": "加入数以千计的开发者、研究人员和爱好者来建设Defi 的未来",
-      "joinDiscord": "加入Discord",
+      "title": "准备好建立联系了吗？",
+      "description": "加入数以千计的开发者、研究人员和爱好者，共同构建 DeFi 的未来",
+      "joinDiscord": "加入 Discord",
       "exploreMore": "探索更多"
     }
   },
   "communityClient": {
     "hero": {
       "title": "ERGO",
-      "titleHighlight": "常驻代表",
-      "subtitle": "连接到激情的开发者、研究人员和热衷于建设分散融资的未来。您的声音对于塑造Ergo的进化至关重要。"
+      "titleHighlight": "社区",
+      "subtitle": "与充满热情的开发者、研究人员和爱好者共同构建去中心化金融的未来。您的声音对于塑造 Ergo 的演进至关重要。"
     },
     "platforms": {
-      "sectionTitle": "共享",
+      "sectionTitle": "交流中心",
       "followers": "关注者",
       "updates": "更新"
     },
     "platformGroups": {
       "0": {
-        "title": "实时和操作",
+        "title": "实时与运营",
         "subtitle": "实时支持、快速更新、突发新闻"
       },
       "1": {
         "title": "深度内容与研究",
-        "subtitle": "教程，文章，EIP，治理"
+        "subtitle": "教程、文章、EIP、治理"
       },
       "2": {
         "title": "社区与发现",
@@ -179,41 +179,41 @@
       }
     },
     "contributions": {
-      "sectionTitle": "连接消息",
-      "subtitle": "每次贡献都能增强Ergo生态系统。寻找您的路径来产生影响。",
+      "sectionTitle": "贡献矩阵",
+      "subtitle": "每一份贡献都能增强 Ergo 生态系统。找到您的路径，产生影响。",
       "clickForGuide": "点击查看详细指南"
     },
     "guidelines": {
-      "sectionTitle": "家居协议",
+      "sectionTitle": "社区准则",
       "positive": {
-        "title": "鼓励行为",
+        "title": "鼓励的行为",
         "items": {
-          "0": "尊重和建设性的讨论",
-          "1": "帮助新来者，分享知识",
+          "0": "尊重且有建设性的讨论",
+          "1": "帮助新人并分享知识",
           "2": "为项目和文档做出贡献",
           "3": "提供建设性反馈",
           "4": "遵循社区准则"
         }
       },
       "negative": {
-        "title": "阻止行为",
+        "title": "不鼓励的行为",
         "items": {
-          "0": "垃圾邮件、洪水或主题外内容",
-          "1": "传播错误信息或 FUD",
-          "2": "人身攻击或骚扰行为",
-          "3": "过多的自我升级",
+          "0": "垃圾内容、刷屏或偏离主题的内容",
+          "1": "散布错误信息或 FUD",
+          "2": "人身攻击或骚扰",
+          "3": "过度自我宣传",
           "4": "违反平台特定规则"
         }
       }
     },
     "cta": {
-      "title": "停留时间",
-      "titleHighlight": "已连接",
-      "subtitle": "获取最新的更新、公告和社区精彩节目发送到您的收件箱",
+      "title": "保持",
+      "titleHighlight": "联系",
+      "subtitle": "获取最新更新、公告和社区精彩内容，直接发送到您的收件箱",
       "emailPlaceholder": "输入您的电子邮件地址",
       "subscribe": "订阅",
       "thankYou": "感谢您的订阅！",
-      "confirmationMessage": "您将收到关于埃尔戈社区的更新。"
+      "confirmationMessage": "您将收到关于 Ergo 社区的更新。"
     }
   }
 }

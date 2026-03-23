@@ -1,34 +1,34 @@
 {
   "blog": {
     "title": "博客",
-    "subtitle": "最新消息和更新",
-    "description": "最新消息和来自埃尔戈的更新",
+    "subtitle": "最新消息与更新",
+    "description": "来自 Ergo 的最新消息与更新",
     "readMore": "阅读更多",
     "categories": {
       "technology": "技术",
-      "ecosystem": "生态环境",
+      "ecosystem": "生态系统",
       "community": "社区",
-      "announcements": "通知",
+      "announcements": "公告",
       "all": "所有帖子",
-      "development": "贸易和发展会议",
+      "development": "开发",
       "technical": "技术",
       "education": "教育"
     },
     "seo": {
-      "title": "博客-Ergo 新闻和更新 | Ergo 平台",
-      "description": "从 Ergo 区块链团队阅读最新消息、更新和见解。",
-      "keywords": "错误博客，区块链新闻，更新，文章"
+      "title": "博客 - Ergo 新闻与更新 | Ergo 平台",
+      "description": "阅读来自 Ergo 区块链团队的最新新闻、更新和见解。",
+      "keywords": "Ergo 博客, 区块链新闻, 更新, 文章"
     },
     "featured": {
-      "title": "精选帖子",
+      "title": "精选文章",
       "readMore": "阅读更多"
     },
     "recent": {
-      "title": "最近的帖子",
+      "title": "最新文章",
       "viewAll": "查看所有帖子"
     },
     "newsletter": {
-      "title": "订阅新闻消息",
+      "title": "订阅新闻通讯",
       "description": "获取发送到收件箱的最新更新",
       "placeholder": "输入您的电子邮件",
       "subscribe": "订阅"

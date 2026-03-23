@@ -1,79 +1,79 @@
 {
   "manifesto": {
-    "title": "管理者",
+    "title": "宣言",
     "content": {
-      "paragraph1": "在日益加强的监督和控制的世界中，我们支持金融自由和隐私。",
-      "paragraph2": "Ergo是建立在推动原先的加密革命的核心原则之上的：开放的、无许可的、安全的系统，赋予普通人权力。",
-      "paragraph3": "我们反对权力集中，我们反对监督国家，我们拒绝公司夺取我们的金融系统。",
-      "paragraph4": "Ergo提供工具，使人们能够通过可编程、私人和不可阻挡的合约金钱来保证金融互动。",
-      "conclusion": "这不仅仅是技术，这是一种抵制。"
+      "paragraph1": "在日益加强的监控和管控的世界中，我们捍卫金融自由与隐私。",
+      "paragraph2": "Ergo 建立在推动最初加密革命的核心原则之上：开放、无需许可、安全的系统，赋予普通人力量。",
+      "paragraph3": "我们拒绝权力集中，我们拒绝监控国家，我们拒绝企业对我们金融系统的侵占。",
+      "paragraph4": "Ergo 提供工具，让人们能够通过合约货币——可编程、私密且不可阻挡——来保障自己的金融交互安全。",
+      "conclusion": "这不仅仅是技术，这是一种抵抗。"
     }
   },
   "corePillars": {
-    "title": "CORE PILLARS",
-    "subtitle": "Ergo 将经过验证的原理与尖端加密结合在一起。",
+    "title": "核心支柱",
+    "subtitle": "Ergo 将经过验证的原则与前沿密码学相结合",
     "pillars": {
       "security": {
-        "title": "安全(POW)",
-        "description": "抵御Autolykos v2 PoW确保大家的强有力的权力下放、公平采矿和长期安全。"
+        "title": "安全性（POW）",
+        "description": "抗 ASIC 的 Autolykos v2 PoW 确保强健的去中心化、公平挖矿以及对所有人的长期安全保障。"
       },
       "programmability": {
-        "title": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
-        "description": "可正式核查、明示和安全的合同——由 ErgoScript 和高级eUTXO 模型提供动力。"
+        "title": "可编程性（eUTXO + ERGOSCRIPT）",
+        "description": "可形式化验证、富有表达力且安全的合约——由 ErgoScript 和先进的 eUTXO 模型驱动。"
       },
       "sustainability": {
-        "title": "SUSTAINABILITY (STORAGE)",
-        "description": "存储租金和可预测的成本能够保持网络的长期健康并防止区块链流入。"
+        "title": "可持续性（存储租金）",
+        "description": "存储租金和可预测的成本维护网络的长期健康，防止区块链膨胀。"
       },
       "privacy": {
-        "title": "Privacy",
-        "description": "使用 Sigma protocol-启用保密的 dApps 和交易的协议隐私。"
+        "title": "隐私",
+        "description": "使用 Sigma 协议的协议级隐私——支持保密的 dApp 和交易。"
       },
       "oraclePools": {
-        "title": "收件人",
-        "description": "第一个真正分散的果园池——可靠、无许可的超链数据存取，并有内在的奖励措施。"
+        "title": "预言机池",
+        "description": "首个真正去中心化的预言机池——可靠、无需许可的链下数据访问，内置激励机制。"
       },
       "devFriendly": {
-        "title": "DEV 好友",
-        "description": "世界级的文档、开放的工具和生机勃勃的协作社区在埃尔戈的基础上建设便捷和创新。"
+        "title": "开发者友好",
+        "description": "世界级文档、开放工具和充满活力的协作社区，让在 Ergo 上构建变得简单而富有创新性。"
       }
     }
   },
   "whyErgo": {
-    "title": "为什么错误？",
-    "subtitle": "一个复原力强的 blockchain 平台，将已验证的原理与尖端创新结合起来。",
+    "title": "为什么选择 Ergo？",
+    "subtitle": "一个韧性强大的区块链平台，将经过验证的原则与前沿创新相结合",
     "mainFeatures": {
-      "sustainable": {
-        "title": "可持续发展",
-        "subtitle": "生成到最后一个",
-        "description": "仓储租金被遗忘的状态，并用几十年的可预测费用为矿工提供资金。"
-      },
       "fairAndSecure": {
-        "title": "常见问题与安全",
-        "subtitle": "工作证明基金会",
-        "description": "No ICO. No VC. No premine. Memory-handling mining → broad participation and durable security."
+        "title": "公平且安全",
+        "subtitle": "工作量证明基础",
+        "description": "无 ICO。无风投。无预挖。内存硬挖矿 → 广泛参与和持久安全。"
       },
       "powerfulAndFlexible": {
-        "title": "收件人和 FLEXIBL",
-        "subtitle": "高级智能合同",
-        "description": "eUTXO + ErgoScript 传输确定性的、可编译的逻辑，没有隐藏的全球状态。"
+        "title": "强大且灵活",
+        "subtitle": "先进智能合约",
+        "description": "eUTXO + ErgoScript 提供确定性、可组合的逻辑，没有隐藏的全局状态。"
+      },
+      "sustainable": {
+        "title": "可持续",
+        "subtitle": "为长远而生",
+        "description": "存储租金清理被遗忘的状态，并以可预测的成本为矿工提供数十年的资金支持。"
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "首页",
-        "description": "Sigma协议允许在需要时选择性披露和环/阈值证明。",
-        "subtitle": "可审计，可选隐私"
+        "title": "隐私优先",
+        "subtitle": "可审计的可选隐私",
+        "description": "Sigma 协议在需要时支持选择性披露和环/门限证明。"
       },
       "community": {
-        "title": "常驻裁军谈判会议",
-        "description": "全球贡献者和投资促进机构推动路线图——而不是象征性的金库。",
-        "subtitle": "开放源码，无基础税"
+        "title": "社区驱动",
+        "subtitle": "开源，无基金会税收",
+        "description": "全球贡献者和 EIP 推动路线图——而非代币金库。"
       },
       "developer": {
-        "title": "发展基金会",
-        "description": "游乐场，CI 模板，浏览器APIs—快和安全地运送合同。",
-        "subtitle": "文档、 工具、 模板"
+        "title": "开发者友好",
+        "subtitle": "文档、工具、模板",
+        "description": "Playground、CI 模板、区块浏览器 API——快速安全地交付合约。"
       }
     }
   }

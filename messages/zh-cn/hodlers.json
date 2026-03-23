@@ -1,18 +1,18 @@
 {
   "holdersPage": {
     "hero": {
-      "title": "储存财富。保持隐私。保持主权。",
-      "subtitle": "比特币的安全性 + 智能合同 + 可选隐私。固定供应、公平启动，没有公司控制。",
-      "cta": "获取一个Ergo Wallet",
-      "whyDifferent": "为什么Ergo 是不同的"
+      "title": "储存财富。保护隐私。掌握主权。",
+      "subtitle": "Bitcoin 久经考验的安全性 + 智能合约 + 可选隐私。固定供应、公平启动、无企业控制。",
+      "cta": "获取 Ergo 钱包",
+      "whyDifferent": "Ergo 为何与众不同"
     },
     "breadcrumbs": {
       "home": "首页",
-      "hodlers": "持有者"
+      "hodlers": "持有者专区"
     },
     "seo": {
-      "title": "持有 ERG — 无预挖的“健全货币” | Ergo",
-      "description": "为什么持有 ERG？固定总量（97.7M）、公平启动、无 VC 控制。PoW 安全 + 智能合约 + 可选隐私。钱包、代币经济等。",
+      "title": "持有 ERG — 无预挖的健全货币 | Ergo",
+      "description": "为什么持有 ERG？固定总量（97.7M）、公平启动、无 VC 控制。PoW 安全性 + 智能合约 + 可选隐私。钱包、代币经济等。",
       "keywords": [
         "hold ERG",
         "Ergo",
@@ -26,327 +26,327 @@
     },
     "metrics": {
       "networkHashrate": {
-        "label": "Network Hashrate"
+        "label": "网络哈希率"
       },
       "activeAddresses": {
-        "label": "Active Addresses"
+        "label": "活跃地址"
       },
       "defiTvl": {
         "label": "DeFi TVL"
       },
       "ergSupply": {
-        "label": "ERG Supply",
-        "trend": "{remaining}M left"
+        "label": "ERG 供应量",
+        "trend": "剩余 {remaining}M"
       },
       "avgBlockTime": {
-        "label": "Avg Block Time"
+        "label": "平均出块时间"
       },
       "activeNodes": {
-        "label": "Active Nodes"
+        "label": "活跃节点"
       }
     },
     "heroComparisons": [
       {
-        "title": "Mining Access",
-        "ergo": "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
-        "others": "BTC: ASICs only / ETH: Proof-of-Stake"
+        "title": "挖矿门槛",
+        "ergo": "GPU 友好。抗 ASIC。任何人都可以参与网络安全维护。",
+        "others": "BTC：仅限 ASIC / ETH：权益证明"
       },
       {
-        "title": "Fair Launch",
-        "ergo": "0% pre-mine. 0% VC allocation. 100% fair distribution.",
-        "others": "BTC: Fair / ETH: 70M premined"
+        "title": "公平启动",
+        "ergo": "0% 预挖。0% VC 分配。100% 公平分发。",
+        "others": "BTC：公平 / ETH：7000 万预挖"
       },
       {
-        "title": "Long-term Security",
-        "ergo": "Storage rent ensures miners get paid forever. Built for decades.",
-        "others": "BTC: Fees only / ETH: Token burn"
+        "title": "长期安全性",
+        "ergo": "存储租金确保矿工永久获得报酬。为数十年而生。",
+        "others": "BTC：仅手续费 / ETH：代币销毁"
       }
     ],
     "coreValues": {
       "soundMoney": {
-        "title": "声音钱",
-        "description": "97.7M最大供货。无通货膨胀。无倾销给您。2019年以来工作安全证明了。",
-        "highlight": "保护你的资源"
+        "title": "健全货币",
+        "description": "9770 万枚最大供应量。无通货膨胀。无 VC 抛售。自 2019 年起久经考验的工作量证明安全性。",
+        "highlight": "保护你的财富"
       },
       "smartContracts": {
-        "title": "智能合同",
-        "description": "Defi, DEXs, stablecoins 实际上能够工作。比特币级安全可编程的金钱。",
-        "highlight": "没有风险的工具"
+        "title": "智能合约",
+        "description": "真正可用的 DeFi、DEX、稳定币。具备 Bitcoin 级安全性的可编程货币。",
+        "highlight": "无风险的实用价值"
       },
       "programmablePrivacy": {
         "title": "可编程隐私",
-        "description": "隐藏您想要的东西。显示您需要的。不受信任的设置或背门的可选隐私。",
-        "highlight": "您的数据，您的选择"
+        "description": "隐藏你想隐藏的，展示你需要展示的。无需可信设置或后门的可选隐私保护。",
+        "highlight": "你的数据，你做主"
       },
       "fairAccessible": {
-        "title": "公平和可访问",
-        "description": "零预矿。零虚拟机分配。零公司控制。自第一天起100%社区驱动的。",
-        "highlight": "真正的放权"
+        "title": "公平且普惠",
+        "description": "零预挖。零 VC 分配。零企业控制。自第一天起 100% 社区驱动。",
+        "highlight": "真正的去中心化"
       }
     },
     "comparison": {
-      "title": "ERG 如何Compares",
+      "title": "ERG 横向对比",
       "headers": {
-        "criterion": "标准",
-        "bitcoin": "比特币",
+        "criterion": "对比项",
+        "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
-        "monero": "莫罗州",
+        "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "深深度：详细比较",
+      "deepDive": "深度解读：详细对比",
       "rows": [
         {
-          "criterion": "Monetary Policy",
+          "criterion": "货币政策",
           "bitcoin": {
             "status": "good",
-            "text": "Fixed 21M supply"
+            "text": "固定 2100 万供应量"
           },
           "ethereum": {
             "status": "warning",
-            "text": "Changing tokenomics"
+            "text": "代币经济持续变化"
           },
           "monero": {
             "status": "warning",
-            "text": "Tail emission"
+            "text": "尾部释放"
           },
           "ergo": {
             "status": "good",
-            "text": "Fixed 97M supply"
+            "text": "固定 9700 万供应量"
           }
         },
         {
-          "criterion": "Security Model",
+          "criterion": "安全模型",
           "bitcoin": {
             "status": "good",
-            "text": "Proof-of-Work"
+            "text": "工作量证明"
           },
           "ethereum": {
             "status": "warning",
-            "text": "Proof-of-Stake"
+            "text": "权益证明"
           },
           "monero": {
             "status": "good",
-            "text": "Proof-of-Work"
+            "text": "工作量证明"
           },
           "ergo": {
             "status": "good",
-            "text": "Proof-of-Work"
+            "text": "工作量证明"
           }
         },
         {
-          "criterion": "Privacy Features",
+          "criterion": "隐私功能",
           "bitcoin": {
             "status": "bad",
-            "text": "Transparent"
+            "text": "完全透明"
           },
           "ethereum": {
             "status": "bad",
-            "text": "Transparent"
+            "text": "完全透明"
           },
           "monero": {
             "status": "good",
-            "text": "Always private"
+            "text": "强制隐私"
           },
           "ergo": {
             "status": "good",
-            "text": "Optional privacy"
+            "text": "可选隐私"
           }
         },
         {
-          "criterion": "Smart Contracts",
+          "criterion": "智能合约",
           "bitcoin": {
             "status": "bad",
-            "text": "Very limited"
+            "text": "非常有限"
           },
           "ethereum": {
             "status": "good",
-            "text": "Full featured"
+            "text": "功能完整"
           },
           "monero": {
             "status": "bad",
-            "text": "None"
+            "text": "无"
           },
           "ergo": {
             "status": "good",
-            "text": "eUTXO model"
+            "text": "eUTXO 模型"
           }
         },
         {
-          "criterion": "Fair Launch",
+          "criterion": "公平启动",
           "bitcoin": {
             "status": "good",
-            "text": "No premine"
+            "text": "无预挖"
           },
           "ethereum": {
             "status": "warning",
-            "text": "70M premine"
+            "text": "7000 万预挖"
           },
           "monero": {
             "status": "good",
-            "text": "No premine"
+            "text": "无预挖"
           },
           "ergo": {
             "status": "good",
-            "text": "No premine"
+            "text": "无预挖"
           }
         }
       ]
     },
     "liveMetrics": {
-      "title": "实时网络健康",
-      "subtitle": "链上实时数据 (实时更新)"
+      "title": "实时网络健康状况",
+      "subtitle": "链上实时数据（实时更新）"
     },
     "useCasesSection": {
-      "title": "我真的可以和埃尔戈一起做什么？",
+      "title": "我实际上能用 Ergo 做什么？",
       "items": [
         {
-          "title": "Store Value Long-term",
-          "description": "Cold storage wallets with hardware support"
+          "title": "长期价值储存",
+          "description": "支持硬件钱包的冷存储方案"
         },
         {
-          "title": "Use DeFi Protocols",
-          "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+          "title": "使用 DeFi 协议",
+          "description": "连接 Ergo、Cardano 及其他区块链的跨链桥"
         },
         {
-          "title": "Send Private Transactions",
-          "description": "Optional privacy for sensitive transfers"
+          "title": "发送私密交易",
+          "description": "敏感转账的可选隐私保护"
         },
         {
-          "title": "Support the Network",
-          "description": "Mining, running nodes, community participation"
+          "title": "支持网络",
+          "description": "挖矿、运行节点、参与社区"
         }
       ]
     },
     "chooseYourPath": {
-      "title": "选择您的",
-      "titleHighlight": "路径",
+      "title": "选择你的",
+      "titleHighlight": "方向",
       "buyHold": {
-        "title": "购买并挂载",
-        "description": "获取ERG并安全存储"
+        "title": "买入并持有",
+        "description": "获取 ERG 并安全存储"
       },
       "exploreDeFi": {
-        "title": "探索DeFi",
-        "description": "让您的ERG正常工作"
+        "title": "探索 DeFi",
+        "description": "让你的 ERG 产生收益"
       },
       "startMining": {
         "title": "开始挖矿",
-        "description": "安全网络，赚取奖励"
+        "description": "保障网络安全，赚取奖励"
       },
       "buildDapps": {
-        "title": "生成 dApps",
-        "description": "创建未来"
+        "title": "构建 dApp",
+        "description": "创造未来"
       },
       "interestedInMining": {
-        "title": "对采矿感兴趣吗？",
-        "description": "使用您的 GPU 安全网络来赚取ERG"
+        "title": "对挖矿感兴趣？",
+        "description": "用你的 GPU 为网络提供安全保障并赚取 ERG"
       }
     },
     "faq": {
-      "title": "控件人常见问题",
+      "title": "持有者常见问题",
       "questions": {
         "0": {
-          "question": "是什么使ERG与比特币不同？",
-          "answer": "ERG扩展了比特币的安全模型，提供智能合同、可选隐私和长期可持续性的存储租。相同的PoW安全性，更多的功能。"
+          "question": "ERG 与 Bitcoin 有何不同？",
+          "answer": "ERG 在 Bitcoin 安全模型基础上扩展了智能合约、可选隐私和用于长期可持续性的存储租金机制。相同的 PoW 安全性，更多功能。"
         },
         "1": {
-          "question": "ERG是一种良好的长期投资吗？",
-          "answer": "ERG具有强有力的基本原理：固定供应、公平发射、通过DeFi实现真正的效用。永远不会因为投资而受到更大的损失。"
+          "question": "ERG 是好的长期投资吗？",
+          "answer": "ERG 具有强劲基本面：固定供应、公平启动、通过 DeFi 实现真实效用。请务必自行研究（DYOR），切勿投入超出承受能力的资金。"
         },
         "2": {
-          "question": "如何安全地存储ERG？",
-          "answer": "使用 Nautilus 钱包获取方便或Ledger 硬件钱包获取最大安全性。永远不要分享您的种子短语。"
+          "question": "如何安全存储 ERG？",
+          "answer": "日常使用推荐 Nautilus 钱包，最高安全性推荐 Ledger 硬件钱包。切勿泄露你的助记词。"
         },
         "3": {
-          "question": "我能从我的ERG赚钱吗？",
-          "answer": "是的！您可以在 Spectrum DEX 上提供流动资金，使用ErgoPad 启动页面或参与各种DeFi 协议。"
+          "question": "我能用 ERG 获得收益吗？",
+          "answer": "可以！你可以在 Spectrum DEX 上提供流动性，使用 ErgoPad 参与发射台，或参与各种 DeFi 协议。"
         },
         "4": {
-          "question": "Is Ergo a security or commodity?",
-          "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, community-driven project. The fair launch and Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective."
+          "question": "Ergo 属于证券还是商品？",
+          "answer": "Ergo 于 2019 年公平启动，无预挖、无 ICO、无 VC 融资。与 Bitcoin 类似，它是去中心化的社区驱动项目。公平启动和工作量证明共识机制使其在监管角度上与 Bitcoin 相似。"
         },
         "5": {
-          "question": "Who controls the Ergo project?",
-          "answer": "No single entity controls Ergo. It's maintained by the Ergo Foundation, core developers, and community contributors. All development is open-source on GitHub. The community votes on major protocol changes."
+          "question": "谁控制 Ergo 项目？",
+          "answer": "没有任何单一实体控制 Ergo。它由 Ergo 基金会、核心开发者和社区贡献者共同维护。所有开发均在 GitHub 上开源进行。社区对重大协议变更进行投票。"
         },
         "6": {
-          "question": "What happens when mining rewards end?",
-          "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a storage rent mechanism that recycles lost coins. This creates sustainable long-term security without inflation."
+          "question": "挖矿奖励结束后会发生什么？",
+          "answer": "Ergo 有一个约在 2027 年结束的 8 年释放计划。之后，矿工将通过交易手续费和回收遗失代币的存储租金机制获得激励。这在不产生通货膨胀的前提下创造了可持续的长期安全性。"
         },
         "7": {
-          "question": "Where can I buy and store ERG?",
-          "answer": "ERG is available on major exchanges like KuCoin, Gate.io, and CoinEx. For storage, use Nautilus Wallet or hardware wallets. See our complete buying guide at /use/get-erg."
+          "question": "在哪里可以购买和存储 ERG？",
+          "answer": "ERG 可在 KuCoin、Gate.io 和 CoinEx 等主要交易所购买。存储方面，使用 Nautilus Wallet 或硬件钱包。完整购买指南请访问 /use/get-erg。"
         },
         "8": {
-          "question": "Is Ergo's privacy legal to use?",
-          "answer": "Ergo's privacy features are optional and designed for legitimate use cases like business confidentiality and personal financial privacy. Always check your local regulations. The technology itself is similar to other privacy-preserving cryptocurrencies and compliance tools are available for institutions."
+          "question": "使用 Ergo 的隐私功能合法吗？",
+          "answer": "Ergo 的隐私功能是可选的，专为商业保密和个人财务隐私等合法用途而设计。请务必了解当地法规。该技术与其他隐私加密货币类似，机构也可使用合规工具。"
         }
       }
     }
   },
   "holdersData": {
     "mining-access": {
-      "title": "Mining Access"
+      "title": "挖矿门槛"
     },
     "fair-launch": {
-      "title": "Fair Launch"
+      "title": "公平启动"
     },
     "long-term-security": {
-      "title": "Long-term Security"
+      "title": "长期安全性"
     },
     "sound-money": {
-      "title": "Sound Money",
-      "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019."
+      "title": "健全货币",
+      "description": "9770 万枚最大供应量。无通货膨胀。无 VC 抛售。自 2019 年起久经考验的工作量证明安全性。"
     },
     "smart-contracts": {
-      "title": "Smart Contracts",
-      "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security."
+      "title": "智能合约",
+      "description": "真正可用的 DeFi、DEX、稳定币。具备 Bitcoin 级安全性的可编程货币。"
     },
     "programmable-privacy": {
-      "title": "Programmable Privacy",
-      "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors."
+      "title": "可编程隐私",
+      "description": "隐藏你想隐藏的，展示你需要展示的。无需可信设置或后门的可选隐私保护。"
     },
     "fair-accessible": {
-      "title": "Fair & Accessible",
-      "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one."
+      "title": "公平且普惠",
+      "description": "零预挖。零 VC 分配。零企业控制。自第一天起 100% 社区驱动。"
     },
     "store-value": {
-      "title": "Store Value Long-term",
-      "description": "Cold storage wallets with hardware support"
+      "title": "长期价值储存",
+      "description": "支持硬件钱包的冷存储方案"
     },
     "use-defi": {
-      "title": "Use DeFi Protocols",
-      "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+      "title": "使用 DeFi 协议",
+      "description": "连接 Ergo、Cardano 及其他区块链的跨链桥"
     },
     "private-transactions": {
-      "title": "Send Private Transactions",
-      "description": "Optional privacy for sensitive transfers"
+      "title": "发送私密交易",
+      "description": "敏感转账的可选隐私保护"
     },
     "support-network": {
-      "title": "Support the Network",
-      "description": "Mining, running nodes, community participation"
+      "title": "支持网络",
+      "description": "挖矿、运行节点、参与社区"
     },
     "security-commodity": {
-      "question": "Is Ergo a security or commodity?",
-      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+      "question": "Ergo 属于证券还是商品？",
+      "answer": "Ergo 于 2019 年公平启动，无预挖、无 ICO、无 VC 融资。与 Bitcoin 类似，它"
     },
     "different-from-bitcoin": {
-      "question": "How is Ergo different from Bitcoin?",
-      "answer": "Ergo shares Bitcoin"
+      "question": "Ergo 与 Bitcoin 有何不同？",
+      "answer": "Ergo 与 Bitcoin 共享"
     },
     "who-controls": {
-      "question": "Who controls the Ergo project?",
-      "answer": "No single entity controls Ergo. It"
+      "question": "谁控制 Ergo 项目？",
+      "answer": "没有任何单一实体控制 Ergo。它"
     },
     "mining-rewards-end": {
-      "question": "What happens when mining rewards end?",
-      "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
+      "question": "挖矿奖励结束后会发生什么？",
+      "answer": "Ergo 有一个约在 2027 年结束的 8 年释放计划。之后，矿工将通过交易手续费和回收遗失代币的 <a href=\\"
     },
     "buy-store": {
-      "question": "Where can I buy and store ERG?",
-      "answer": "ERG is available on major exchanges like <a href=\\"
+      "question": "在哪里可以购买和存储 ERG？",
+      "answer": "ERG 可在 <a href=\\"
     },
     "privacy-legal": {
-      "question": "Is Ergo",
+      "question": "使用 Ergo 的隐私功能合法吗？",
       "answer": "Ergo"
     }
   }

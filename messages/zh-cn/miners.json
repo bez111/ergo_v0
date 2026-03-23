@@ -1,115 +1,115 @@
 {
   "minersPage": {
     "hero": {
-      "title": "使用GPU开采。永远赚钱。保持盈利。",
-      "subtitle": "无损算法。合理奖励。储藏租金将在排放结束后支付给矿工。",
-      "cta": "开始挖矿错误",
-      "checkProfitability": "检查获利性",
-      "whyMine": "为什么要开采埃尔戈而不是其他硬币？"
+      "title": "用 GPU 挖矿。持续赚取收益。保持盈利。",
+      "subtitle": "抗 ASIC 算法。公平奖励。存储租金机制确保排放结束后矿工仍能持续获得收入。",
+      "cta": "开始挖 Ergo",
+      "checkProfitability": "查看盈利能力",
+      "whyMine": "为什么选择挖 Ergo 而非其他币种？"
     },
     "stats": {
       "networkHashrate": "网络哈希率",
-      "blockReward": "块奖励",
+      "blockReward": "区块奖励",
       "blockTime": "出块时间",
       "activeMiners": "活跃矿工",
-      "miningPools": "矿池子"
+      "miningPools": "矿池"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "miners": "For Miners"
+      "home": "首页",
+      "miners": "矿工专区"
     },
     "metrics": {
       "networkHashrate": {
-        "label": "Network Hashrate",
-        "comment": "Network hashrate → competition & security"
+        "label": "网络哈希率",
+        "comment": "网络哈希率 → 竞争度与安全性"
       },
       "difficulty": {
-        "label": "Difficulty",
-        "comment": "Difficulty → baseline for profitability"
+        "label": "难度",
+        "comment": "挖矿难度 → 盈利能力基准"
       },
       "blockTime": {
-        "label": "Block Time",
-        "comment": "Consistent block times = predictable rewards"
+        "label": "出块时间",
+        "comment": "稳定的出块时间 = 可预测的奖励"
       },
       "blockReward": {
-        "label": "Block Reward",
-        "comment": "Block reward + fees → total miner revenue",
-        "trend": "{remaining}M left"
+        "label": "区块奖励",
+        "comment": "区块奖励 + 手续费 → 矿工总收入",
+        "trend": "剩余 {remaining}M"
       },
       "activeMiners": {
-        "label": "Active Miners",
-        "comment": "Healthy miner distribution"
+        "label": "活跃矿工",
+        "comment": "健康的矿工分布"
       },
       "miningPools": {
-        "label": "Mining Pools",
-        "comment": "Multiple pool options for decentralization"
+        "label": "矿池",
+        "comment": "多个矿池选择，促进去中心化"
       }
     },
     "coreValues": {
       "asicResistant": {
         "title": "抗 ASIC",
-        "description": "仅GPU采矿。没有ASIC。没有工业农场将你挤出。你的游戏钻机保持竞争力。",
-        "highlight": "级别游戏场"
+        "description": "纯 GPU 挖矿。无 ASIC。无工业农场将你挤出局。你的游戏显卡依然具有竞争力。",
+        "highlight": "公平竞争环境"
       },
       "fairLaunch": {
         "title": "公平启动",
-        "description": "零预矿。零减税。零VC分配。每个ERG自第一天起公平开采。",
-        "highlight": "没有内线转包"
+        "description": "零预挖。零开发税。零 VC 分配。每一枚 ERG 自第一天起公平挖出。",
+        "highlight": "无内部人抛售"
       },
       "realUseCases": {
-        "title": "实际使用案例",
-        "description": "Defi, DEXs, 隐私功能会产生实际需求，而不仅仅是投机――真正的实用驱动值。",
+        "title": "真实应用场景",
+        "description": "DeFi、DEX、隐私功能创造真实需求。不只是投机——真正的实用价值驱动增长。",
         "highlight": "可持续需求"
       },
       "storageRent": {
-        "title": "存储出租器",
-        "description": "内置机制确保矿工获得超越区块奖励的报酬。通过设计实现长期可持续性。",
-        "highlight": "未来证明"
+        "title": "存储租金",
+        "description": "内置机制确保矿工在区块奖励之外持续获得收入。从设计上实现长期可持续性。",
+        "highlight": "面向未来"
       }
     },
     "calculator": {
-      "title": "采矿业：",
-      "titleHighlight": "获利性",
+      "title": "挖矿",
+      "titleHighlight": "盈利能力",
       "titleSuffix": "计算器",
-      "subtitle": "计算您潜在的收入开采Ergo",
-      "hashrate": "哈希率 (MH/s)",
-      "power": "能量消耗(W)",
-      "electricity": "电力成本 ($/kWh)",
+      "subtitle": "计算挖 Ergo 的潜在收益",
+      "hashrate": "算力 (MH/s)",
+      "power": "功耗 (W)",
+      "electricity": "电费 ($/kWh)",
       "ergPrice": "ERG 价格 (USD)",
-      "dailyErgMined": "每日挖掘的ERG",
+      "dailyErgMined": "每日挖矿 ERG",
       "dailyRevenue": "每日收入",
-      "dailyPowerCost": "每日电源成本",
-      "dailyProfit": "每日损益",
-      "monthly": "每月的",
-      "yearly": "每年一次",
-      "roiTime": "ROI 时间 (GPU @ $500)",
-      "note": "计算是基于当前网络难度和价格的估计数。",
-      "gpuPresets": "热门GPU预设：",
-      "readyToStart": "准备开始采矿吗？",
-      "poolFee": "池费(%)",
-      "monthlyProfit": "月损益",
-      "yearlyProfit": "每年获利。"
+      "dailyPowerCost": "每日电费",
+      "dailyProfit": "每日利润",
+      "monthly": "月度",
+      "yearly": "年度",
+      "roiTime": "回本时间（GPU @ $500）",
+      "note": "计算结果为基于当前网络难度和价格的估算值。",
+      "gpuPresets": "热门 GPU 预设：",
+      "readyToStart": "准备好开始挖矿了吗？",
+      "poolFee": "矿池费率 (%)",
+      "monthlyProfit": "月度利润",
+      "yearlyProfit": "年度利润"
     },
     "pools": {
-      "title": "采矿业：",
-      "titleHighlight": "资源库",
-      "titleSuffix": "目录",
+      "title": "矿池",
+      "titleHighlight": "目录",
+      "titleSuffix": "列表",
       "hashrate": "哈希率",
-      "miners": "矿工",
-      "minPayout": "最小支付",
-      "payment": "付款",
-      "noPoolsFound": "没有符合条件的资源库"
+      "miners": "矿工数",
+      "minPayout": "最低起付",
+      "payment": "付款方式",
+      "noPoolsFound": "没有符合条件的矿池"
     },
     "software": {
-      "title": "采矿业：",
+      "title": "挖矿",
       "titleHighlight": "软件",
       "headers": {
         "software": "软件",
         "gpuSupport": "GPU 支持",
-        "devFee": "开发费",
-        "bestFor": "最好的"
+        "devFee": "开发者费用",
+        "bestFor": "适合场景"
       },
-      "newToMining": "新建采矿？开始使用 NBMiner (混合钻机) 或 T-Rex(仅限NVIDIA) 进行最简单的安装。",
+      "newToMining": "挖矿新手？推荐从 NBMiner（混合矿机）或 T-Rex（仅 NVIDIA）入手，配置最简单。",
       "items": [
         {
           "name": "NBMiner",
@@ -118,7 +118,7 @@
             "AMD"
           ],
           "fee": "2%",
-          "recommended": "Best for mixed rigs"
+          "recommended": "最适合混合矿机"
         },
         {
           "name": "T-Rex",
@@ -126,7 +126,7 @@
             "NVIDIA"
           ],
           "fee": "1%",
-          "recommended": "Best for NVIDIA cards"
+          "recommended": "最适合 NVIDIA 显卡"
         },
         {
           "name": "TeamRedMiner",
@@ -134,7 +134,7 @@
             "AMD"
           ],
           "fee": "2%",
-          "recommended": "Best for AMD cards"
+          "recommended": "最适合 AMD 显卡"
         },
         {
           "name": "lolMiner",
@@ -143,7 +143,7 @@
             "AMD"
           ],
           "fee": "1%",
-          "recommended": "Advanced users"
+          "recommended": "高级用户"
         }
       ]
     },
@@ -155,9 +155,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
           "features": [
-            "Auto-exchange",
-            "Mobile app",
-            "API access"
+            "自动兑换",
+            "手机应用",
+            "API 接入"
           ]
         },
         {
@@ -166,9 +166,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "0.1 ERG",
           "features": [
-            "24/7 Support",
-            "Telegram bot",
-            "Email alerts"
+            "全天候支持",
+            "Telegram 机器人",
+            "邮件提醒"
           ]
         },
         {
@@ -177,9 +177,9 @@
           "paymentSystem": "PROP",
           "minPayout": "0.5 ERG",
           "features": [
-            "SSL support",
-            "Worker stats",
-            "Discord bot"
+            "SSL 支持",
+            "矿机统计",
+            "Discord 机器人"
           ]
         },
         {
@@ -188,9 +188,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
           "features": [
-            "Solo mining",
-            "Telegram bot",
-            "MEV rewards"
+            "单独挖矿",
+            "Telegram 机器人",
+            "MEV 奖励"
           ]
         },
         {
@@ -199,9 +199,9 @@
           "paymentSystem": "PPS+",
           "minPayout": "1 ERG",
           "features": [
-            "Mobile app",
-            "Multi-coin",
-            "Instant payments"
+            "手机应用",
+            "多币种",
+            "即时到账"
           ]
         },
         {
@@ -210,9 +210,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "1 ERG",
           "features": [
-            "Email notifications",
+            "邮件通知",
             "API",
-            "Multi-language"
+            "多语言"
           ]
         }
       ]
@@ -221,158 +221,158 @@
       "items": [
         {
           "step": "01",
-          "title": "Check Your Hardware",
-          "description": "Verify GPU compatibility and power requirements for optimal mining performance.",
+          "title": "检查硬件配置",
+          "description": "验证 GPU 兼容性和功耗需求，以获得最佳挖矿性能。",
           "details": [
-            "NVIDIA GTX 1060 6GB+ or AMD RX 580 8GB+",
-            "Minimum 4GB VRAM required",
-            "Stable power supply (80+ Gold recommended)",
-            "Adequate cooling and ventilation"
+            "NVIDIA GTX 1060 6GB+ 或 AMD RX 580 8GB+",
+            "至少需要 4GB 显存",
+            "稳定电源（推荐 80+ 金牌认证）",
+            "充足的散热与通风条件"
           ],
-          "duration": "5 min"
+          "duration": "5 分钟"
         },
         {
           "step": "02",
-          "title": "Choose Mining Setup",
-          "description": "Decide between solo mining or joining a pool based on your hashrate and preferences.",
+          "title": "选择挖矿方式",
+          "description": "根据你的算力和偏好，在单独挖矿和加入矿池之间做出选择。",
           "details": [
-            "Solo mining: Full block rewards but irregular payouts",
-            "Pool mining: Regular payouts but shared rewards",
-            "Recommended pools: Herominers, Woolypooly, 2Miners",
-            "Consider pool fees (typically 1-2%)"
+            "单独挖矿：获得完整区块奖励，但收益不规律",
+            "矿池挖矿：收益稳定，但需分享奖励",
+            "推荐矿池：Herominers、Woolypooly、2Miners",
+            "考虑矿池费率（通常为 1-2%）"
           ],
-          "duration": "10 min"
+          "duration": "10 分钟"
         },
         {
           "step": "03",
-          "title": "Download & Configure",
-          "description": "Get mining software and configure it for your hardware and chosen pool.",
+          "title": "下载并配置",
+          "description": "获取挖矿软件并针对你的硬件和所选矿池进行配置。",
           "details": [
-            "Download T-Rex (NVIDIA) or lolMiner (AMD/NVIDIA)",
-            "Configure pool address and wallet",
-            "Set optimal core clock and memory settings",
-            "Test with low intensity first"
+            "下载 T-Rex（NVIDIA）或 lolMiner（AMD/NVIDIA）",
+            "配置矿池地址和钱包",
+            "设置最优核心频率和显存参数",
+            "先以低强度测试运行"
           ],
-          "duration": "15 min"
+          "duration": "15 分钟"
         },
         {
           "step": "04",
-          "title": "Start Mining",
-          "description": "Launch the miner and monitor your earnings and hardware performance.",
+          "title": "开始挖矿",
+          "description": "启动矿机并监控你的收益和硬件运行状况。",
           "details": [
-            "Monitor GPU temperature and power draw",
-            "Check pool dashboard for shares",
-            "Optimize settings over time",
-            "Set up monitoring alerts"
+            "监控 GPU 温度和功耗",
+            "在矿池面板查看份额",
+            "持续优化参数设置",
+            "设置监控提醒"
           ],
-          "duration": "Ongoing"
+          "duration": "持续进行"
         }
       ]
     },
     "comparison": {
-      "title": "ERG采矿Compares",
+      "title": "ERG 挖矿对比",
       "headers": {
-        "criterion": "标准",
-        "bitcoin": "比特币",
+        "criterion": "对比项",
+        "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
-        "monero": "莫罗州",
+        "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "深深度：详细比较",
+      "deepDive": "深度解读：详细对比",
       "rows": [
         {
-          "criterion": "Mining Hardware",
+          "criterion": "挖矿硬件",
           "bitcoin": {
             "status": "bad",
-            "text": "ASIC-only"
+            "text": "仅限 ASIC"
           },
           "ethereum": {
             "status": "warning",
-            "text": "Proof-of-Stake"
+            "text": "权益证明"
           },
           "monero": {
             "status": "good",
-            "text": "CPU/GPU friendly"
+            "text": "CPU/GPU 友好"
           },
           "ergo": {
             "status": "good",
-            "text": "GPU-optimized"
+            "text": "GPU 优化"
           }
         },
         {
-          "criterion": "Block Reward",
+          "criterion": "区块奖励",
           "bitcoin": {
             "status": "warning",
-            "text": "Halving every 4y"
+            "text": "每 4 年减半"
           },
           "ethereum": {
             "status": "bad",
-            "text": "No mining"
+            "text": "无法挖矿"
           },
           "monero": {
             "status": "good",
-            "text": "Tail emission"
+            "text": "尾部释放"
           },
           "ergo": {
             "status": "good",
-            "text": "9 ERG + fees"
+            "text": "9 ERG + 手续费"
           }
         },
         {
-          "criterion": "Future Incentives",
+          "criterion": "未来激励",
           "bitcoin": {
             "status": "warning",
-            "text": "Fees only"
+            "text": "仅手续费"
           },
           "ethereum": {
             "status": "bad",
-            "text": "No mining"
+            "text": "无法挖矿"
           },
           "monero": {
             "status": "good",
-            "text": "Perpetual rewards"
+            "text": "永久奖励"
           },
           "ergo": {
             "status": "good",
-            "text": "Storage rent"
+            "text": "存储租金"
           }
         },
         {
-          "criterion": "Network Utility",
+          "criterion": "网络实用性",
           "bitcoin": {
             "status": "good",
-            "text": "Store of value"
+            "text": "价值储存"
           },
           "ethereum": {
             "status": "good",
-            "text": "Smart contracts"
+            "text": "智能合约"
           },
           "monero": {
             "status": "good",
-            "text": "Privacy payments"
+            "text": "隐私支付"
           },
           "ergo": {
             "status": "good",
-            "text": "DeFi + Privacy"
+            "text": "DeFi + 隐私"
           }
         },
         {
-          "criterion": "Mining Accessibility",
+          "criterion": "挖矿门槛",
           "bitcoin": {
             "status": "bad",
-            "text": "Industrial scale"
+            "text": "工业规模"
           },
           "ethereum": {
             "status": "bad",
-            "text": "No mining"
+            "text": "无法挖矿"
           },
           "monero": {
             "status": "good",
-            "text": "Home mining"
+            "text": "家庭挖矿"
           },
           "ergo": {
             "status": "good",
-            "text": "GPU rigs viable"
+            "text": "GPU 矿机可行"
           }
         }
       ]
@@ -382,20 +382,20 @@
       "viewGuide": "查看指南",
       "items": [
         {
-          "name": "Mining Profitability Calculator",
-          "description": "Calculate potential earnings based on your hardware and electricity costs."
+          "name": "挖矿盈利计算器",
+          "description": "根据你的硬件和电费计算潜在收益。"
         },
         {
-          "name": "Official Mining Guide",
-          "description": "Comprehensive setup guide for beginners and advanced miners."
+          "name": "官方挖矿指南",
+          "description": "面向新手和高级矿工的完整配置指南。"
         },
         {
-          "name": "Autolykos Algorithm",
-          "description": "Learn about Ergo's ASIC-resistant Proof-of-Work algorithm."
+          "name": "Autolykos 算法",
+          "description": "了解 Ergo 的抗 ASIC 工作量证明算法。"
         },
         {
-          "name": "Storage Rent Economics",
-          "description": "How storage rent ensures long-term miner incentives."
+          "name": "存储租金经济学",
+          "description": "存储租金如何确保矿工长期激励。"
         }
       ]
     },
@@ -403,178 +403,178 @@
       "title": "加入",
       "titleHighlight": "网络",
       "startMining": {
-        "title": "立即开始挖掘。",
+        "title": "立即开始挖矿",
         "subtitle": "完整指南"
       },
       "joinChat": {
-        "title": "加入矿工聊天",
+        "title": "加入矿工交流群",
         "subtitle": "社区支持"
       },
       "learnEconomics": {
-        "title": "学习经济",
+        "title": "了解经济机制",
         "subtitle": "长期可行性"
       },
       "holdLongTerm": {
-        "title": "想要保持长期任期？",
-        "description": "学习关于ERG作为一个价值和投资存储的信息"
+        "title": "想要长期持有？",
+        "description": "了解 ERG 作为价值储存手段和投资标的"
       }
     },
     "faq": {
       "title": "挖矿常见问题",
       "questions": {
         "0": {
-          "question": "我需要什么硬件来挖掘ERG？",
-          "answer": "任何使用 4GB+ VRAM 的现代GPU 都能有效地挖掘ERG。AMD 和 NVIDIA 两张卡都很有效。 最受欢迎的选择包括RTX 3070、RTX 4070和RX 6800。"
+          "question": "挖 ERG 需要什么硬件？",
+          "answer": "任何配备 4GB+ 显存的现代 GPU 都能高效挖 ERG。AMD 和 NVIDIA 显卡均可正常工作。热门选择包括 RTX 3070、RTX 4070 和 RX 6800。"
         },
         "1": {
-          "question": "我应该使用哪种采矿软件？",
-          "answer": "LolMiner和T-Rex是最受欢迎的ERG采矿选项，两者都是免费的(按dev 费用计算)并支持 Windows 和 Linux。"
+          "question": "应该使用哪款挖矿软件？",
+          "answer": "lolMiner 和 T-Rex 是最受欢迎的 ERG 挖矿软件。两者均免费使用（含开发者费用），支持 Windows 和 Linux。"
         },
         "2": {
-          "question": "当前区块奖励是什么？",
-          "answer": "当前区块奖励被动态调整。请检查网络统计上方的最新奖励金额。"
+          "question": "当前区块奖励是多少？",
+          "answer": "当前区块奖励动态调整。请查看上方网络统计数据获取最新奖励金额。"
         },
         "3": {
-          "question": "独家采矿是否有利可图？",
-          "answer": "对大多数矿工来说，矿池开采更加一致。单矿开采需要大量的哈希率才能定期找到区块。"
+          "question": "单独挖矿是否有利可图？",
+          "answer": "对大多数矿工而言，矿池挖矿收益更稳定。单独挖矿需要足够大的算力才能定期找到区块。"
         },
         "4": {
-          "question": "Is Ergo still profitable to mine?",
-          "answer": "Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. Use a mining calculator to estimate earnings. Many miners find Ergo profitable due to lower competition compared to major coins."
+          "question": "Ergo 挖矿还有利可图吗？",
+          "answer": "盈利能力取决于你的电费成本、硬件效率和当前网络难度。使用挖矿计算器估算收益。与主流币种相比竞争较小，许多矿工认为 Ergo 挖矿依然有利可图。"
         },
         "5": {
-          "question": "Will ASICs come to Ergo?",
-          "answer": "Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining accessible to GPU miners."
+          "question": "Ergo 会出现 ASIC 矿机吗？",
+          "answer": "Ergo 使用 Autolykos 算法，专门通过内存密集型计算设计为抗 ASIC。若 ASIC 威胁去中心化，算法可以更新。社区致力于保持 GPU 矿工的挖矿可及性。"
         },
         "6": {
-          "question": "How stable is the Ergo development team?",
-          "answer": "Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. The project is open-source with regular updates and a clear roadmap. Check the GitHub activity and join Discord to see the active community."
+          "question": "Ergo 开发团队稳定吗？",
+          "answer": "Ergo 拥有一支强大且活跃的开发团队，由经验丰富的密码学家和区块链研究人员领导。项目开源，定期更新，路线图清晰。查看 GitHub 动态并加入 Discord，感受活跃的社区氛围。"
         },
         "7": {
-          "question": "How does storage rent affect miners?",
-          "answer": "Storage rent is a unique mechanism that provides miners with income beyond block rewards. When emissions end, miners will continue earning from storage rent collected from dormant boxes. This ensures long-term network security and miner profitability."
+          "question": "存储租金对矿工有何影响？",
+          "answer": "存储租金是一种独特机制，为矿工提供区块奖励之外的持续收入。排放结束后，矿工将继续从休眠 box 收取的存储租金中获得收益。这确保了网络的长期安全性和矿工的持续盈利。"
         }
       }
     }
   },
   "mining": {
-    "title": "Mining Ergo (ERG)",
-    "description": "学习如何使用 Autolykos 工作算法证明来挖掘ERG",
-    "subDescription": "使用我们完整的指南开始开采ERG。安装、盈利计算器和集合推荐。",
+    "title": "挖矿 Ergo (ERG)",
+    "description": "学习如何使用 Autolykos 工作量证明算法挖掘 ERG",
+    "subDescription": "使用我们的完整指南今天就开始挖 ERG。包含配置说明、盈利计算器和矿池推荐。",
     "seo": {
       "title": "Mining ERG - Complete Ergo Mining Guide | Autolykos PoW",
-      "description": "完成开采Ergo (ERG) cryptocurency的指南。了解Autolykos 算法、采矿设置、盈利能力和最好的采矿池。",
-      "keywords": "采矿、Ergo Mining、Autolykos、工作证明、采矿池、GPU采矿、采矿获利能力",
+      "description": "挖掘 Ergo (ERG) 加密货币的完整指南。了解 Autolykos 算法、挖矿配置、盈利能力和最佳矿池。",
+      "keywords": "挖矿 ERG，Ergo Mining，Autolykos，工作量证明，挖矿池，GPU 挖矿，挖矿盈利能力",
       "openGraph": {
         "title": "Mining ERG - Complete Guide",
-        "description": "用我们的全面指南开始挖掘Ergo 加密货币",
-        "imageAlt": "埃尔戈采矿指南"
+        "description": "使用我们的完整指南开始挖掘 Ergo 加密货币",
+        "imageAlt": "Ergo 挖矿指南"
       },
       "twitter": {
         "title": "Mining ERG - Complete Guide",
-        "description": "学习如何开采Ergo (ERG) cryptocurrency"
+        "description": "学习如何挖掘 Ergo (ERG) 加密货币"
       }
     },
     "cta": {
-      "calculator": "采矿计算器"
+      "calculator": "挖矿计算器"
     },
     "networkStats": {
       "title": "网络统计",
       "hashrate": "哈希率",
       "blockTime": "出块时间",
-      "reward": "块奖励",
+      "reward": "区块奖励",
       "miners": "活跃矿工"
     },
     "tabs": {
       "overview": "概览",
-      "setup": "设置指南",
-      "pools": "矿池子",
-      "profitability": "获利性",
-      "gettingStarted": "正在开始",
+      "setup": "配置指南",
+      "pools": "矿池",
+      "profitability": "盈利能力",
+      "gettingStarted": "快速入门",
       "hardware": "硬件",
       "calculator": "计算器",
       "help": "帮助"
     },
     "stats": {
-      "hashrate": "210 TH/秒",
+      "hashrate": "210 TH/s",
       "blockTime": "2 分钟",
       "reward": "1.2 ERG",
       "miners": "12,847"
     },
     "seoSchema": {
-      "name": "如何挖矿Ergo (ERG)",
-      "description": "使用 GPU 挖掘Ergo 加密货币的完整指南",
+      "name": "如何挖矿 Ergo (ERG)",
+      "description": "使用 GPU 挖掘 Ergo 加密货币的完整指南",
       "supply": {
-        "gpu": "图形卡 (GPU)",
-        "software": "挖掘软件",
+        "gpu": "显卡 (GPU)",
+        "software": "挖矿软件",
         "wallet": "Ergo Wallet"
       },
       "tool": {
-        "miner": "挖掘软件",
-        "pool": "矿池子"
+        "miner": "挖矿软件",
+        "pool": "矿池"
       },
       "steps": {
         "compatibility": {
           "name": "检查 GPU 兼容性",
-          "text": "请确认您的 GPU 至少有 4GB 内存"
+          "text": "确保你的 GPU 至少有 4GB 显存"
         },
         "download": {
-          "name": "下载采矿软件",
-          "text": "获取兼容的矿工，例如 NBMiner 或 TeamRedMiner"
+          "name": "下载挖矿软件",
+          "text": "获取兼容的矿机软件，如 NBMiner 或 TeamRedMiner"
         },
         "pool": {
-          "name": "选择采矿库",
-          "text": "选择一个具有优质哈希率和低费用的矿池。"
+          "name": "选择矿池",
+          "text": "选择哈希率良好且费率低的矿池"
         },
         "configure": {
-          "name": "配置矿工",
-          "text": "在矿工配置中设置池地址和钱包"
+          "name": "配置矿机",
+          "text": "在矿机配置中设置矿池地址和钱包"
         },
         "start": {
           "name": "开始挖矿",
-          "text": "运行矿工并监视您的哈希速率"
+          "text": "运行矿机并监控你的哈希率"
         }
       },
       "calculator": {
-        "name": "埃尔戈采矿计算器",
-        "description": "计算您的潜在开采利润。"
+        "name": "Ergo 挖矿计算器",
+        "description": "计算你的潜在挖矿利润"
       }
     },
     "faq": {
       "profitability": {
-        "question": "开采ERG是否有利可图？",
-        "answer": "利润取决于电力成本、硬件效率和ERG价格。使用我们的计算器进行估算。"
+        "question": "挖 ERG 是否有利可图？",
+        "answer": "盈利能力取决于电费成本、硬件效率和 ERG 价格。使用我们的计算器进行估算。"
       },
       "bestGpu": {
-        "question": "什么是开采ERG的最佳GPU？",
-        "answer": "AMD RX 6800 XT 和 NVIDIA RTX 3070 为Autolykos提供了极好的效率。"
+        "question": "挖 ERG 最佳的 GPU 是什么？",
+        "answer": "AMD RX 6800 XT 和 NVIDIA RTX 3070 在 Autolykos 挖矿中表现出色的能效比。"
       },
       "whichPool": {
-        "question": "我应该使用哪个矿池？",
-        "answer": "热门的集合包括英雄、 2矿工和 WoolyPooly。根据收费和位置选择。"
+        "question": "应该使用哪个矿池？",
+        "answer": "热门矿池包括 HeroMiners、2Miners 和 WoolyPooly。根据费率和地理位置选择。"
       },
       "earnings": {
-        "question": "我能赚多少钱？",
-        "answer": "收入因哈希率、网络难度和ERG价格而异。请检查我们的计算器以获取估计数。"
+        "question": "我能赚多少？",
+        "answer": "收益取决于算力、网络难度和 ERG 价格。查看我们的计算器获取估算数据。"
       }
     }
   },
   "minersData": {
     "asic-resistant": {
-      "title": "ASIC-Resistant",
-      "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive."
+      "title": "抗 ASIC",
+      "description": "纯 GPU 挖矿。无 ASIC。无工业农场将你挤出局。你的游戏显卡依然具有竞争力。"
     },
     "fair-launch": {
-      "title": "Fair Launch",
-      "description": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one."
+      "title": "公平启动",
+      "description": "零预挖。零开发税。零 VC 分配。每一枚 ERG 自第一天起公平挖出。"
     },
     "real-use-cases": {
-      "title": "Real Use Cases",
-      "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value."
+      "title": "真实应用场景",
+      "description": "DeFi、DEX、隐私功能创造真实需求。不只是投机——真正的实用价值驱动增长。"
     },
     "long-term-economics": {
-      "title": "Long-term Economics",
-      "description": "Storage rent pays miners forever. When emissions end, you still earn. Built for decades, not pump & dump."
+      "title": "长期经济机制",
+      "description": "存储租金永久支付矿工。排放结束后你仍能持续赚取。为数十年而生，而非短期炒作。"
     },
     "getblok": {
       "name": "GetBlok"
@@ -607,40 +607,40 @@
       "name": "lolMiner"
     },
     "calculator": {
-      "description": "Calculate potential earnings based on your hardware and electricity costs.",
-      "name": "Mining Profitability Calculator"
+      "description": "根据你的硬件和电费计算潜在收益。",
+      "name": "挖矿盈利计算器"
     },
     "guide": {
-      "description": "Comprehensive setup guide for beginners and advanced miners.",
-      "name": "Official Mining Guide"
+      "description": "面向新手和高级矿工的完整配置指南。",
+      "name": "官方挖矿指南"
     },
     "autolykos": {
-      "description": "Learn about Ergo",
+      "description": "了解 Ergo 的抗 ASIC 工作量证明算法。",
       "name": "Autolykos Algorithm"
     },
     "storage-rent": {
-      "question": "How does storage rent affect miners?",
-      "answer": "Storage rent creates a sustainable fee mechanism that benefits miners long-term. Unused UTXOs pay rent over time, which goes to miners as additional rewards beyond block emissions. This ensures miner incentives continue after the emission schedule ends. Learn more about <a href=\\"
+      "question": "存储租金对矿工有何影响？",
+      "answer": "存储租金创建了一种可持续的手续费机制，长期有利于矿工。未使用的 UTXO 随时间支付租金，这些租金作为区块释放之外的额外奖励归矿工所有。这确保了排放计划结束后矿工激励仍能持续。了解更多关于 <a href=\\"
     },
     "profitable": {
-      "question": "Is Ergo still profitable to mine?",
-      "answer": "Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. Use a <a href=\\"
+      "question": "Ergo 挖矿还有利可图吗？",
+      "answer": "盈利能力取决于你的电费成本、硬件效率和当前网络难度。使用 <a href=\\"
     },
     "asics": {
-      "question": "Will ASICs come to Ergo?",
-      "answer": "Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining accessible to GPU miners. Read more about <a href=\\"
+      "question": "Ergo 会出现 ASIC 矿机吗？",
+      "answer": "Ergo 使用 Autolykos 算法，专门通过内存密集型计算设计为抗 ASIC。若 ASIC 威胁去中心化，算法可以更新。社区致力于保持 GPU 矿工的挖矿可及性。了解更多关于 <a href=\\"
     },
     "team": {
-      "question": "How stable is the Ergo development team?",
-      "answer": "Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. The project is open-source with regular updates and a clear roadmap. Check the <a href=\\"
+      "question": "Ergo 开发团队稳定吗？",
+      "answer": "Ergo 拥有一支强大且活跃的开发团队，由经验丰富的密码学家和区块链研究人员领导。项目开源，定期更新，路线图清晰。查看 <a href=\\"
     },
     "pools": {
-      "question": "Which mining pools support Ergo?",
-      "answer": "Popular Ergo mining pools include Herominers, Woolypooly, 2Miners, Nanopool, and F2Pool. Each has different fee structures and payout methods. Solo mining is also viable for larger operations. See the complete pool comparison on this page for details."
+      "question": "哪些矿池支持 Ergo？",
+      "answer": "热门 Ergo 矿池包括 Herominers、Woolypooly、2Miners、Nanopool 和 F2Pool。各矿池手续费结构和付款方式不同。对于大型矿场，单独挖矿也是可行选择。详情请查看本页的完整矿池对比。"
     },
     "hardware": {
-      "question": "What",
-      "answer": "You need a GPU with at least 4GB VRAM. NVIDIA GTX 1060 6GB or AMD RX 580 8GB are good starting points. More powerful cards like RTX 3070+ or RX 6700 XT+ will be more profitable. Check the hardware guide on this page for detailed recommendations and optimization tips."
+      "question": "需要什么硬件？",
+      "answer": "你需要至少 4GB 显存的 GPU。NVIDIA GTX 1060 6GB 或 AMD RX 580 8GB 是不错的起点。更强大的显卡如 RTX 3070+ 或 RX 6700 XT+ 盈利能力更高。详细建议和优化技巧请查看本页的硬件指南。"
     }
   }
 }

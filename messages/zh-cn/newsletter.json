@@ -2,20 +2,20 @@
   "newsletter": {
     "title": "保持更新",
     "subtitle": "获取最新的 Ergo 新闻和更新",
+    "emailLabel": "电子邮件地址",
     "emailPlaceholder": "输入您的电子邮件地址",
     "subscribe": "订阅",
-    "interests": "兴趣(可选)",
-    "privacyNotice": "通过订阅，您同意我们",
+    "interests": "兴趣（可选）",
+    "privacyNotice": "订阅即表示您同意我们的",
     "privacyPolicy": "隐私政策",
     "alreadySubscribed": {
-      "title": "您已经订阅了！"
+      "title": "您已订阅！"
     },
     "segments": {
       "developers": "开发者",
       "miners": "矿工",
       "investors": "投资者",
-      "general": "一般新闻"
-    },
-    "emailLabel": "电子邮件地址"
+      "general": "综合资讯"
+    }
   }
 }

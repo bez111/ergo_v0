@@ -2,12 +2,12 @@
   "hero": {
     "title": "Ergo",
     "subtitle": "加入一个开放式、可规划性和抵制检查的融资运动。",
-    "description": "可规划资金的全球中立定居层。",
+    "description": "可规划资金的全球中立结算层。",
     "message1": "没有主人的货币",
     "message2": "全球结算层",
-    "message3": "Digital Freedom Platform",
-    "message4": "Decentralized By Design",
-    "exploreErgo": "Explore Ergo",
+    "message3": "数字自由平台",
+    "message4": "去中心化设计",
+    "exploreErgo": "探索 Ergo",
     "chooseYourPath": "选择您的路径",
     "startHere": "从这里开始",
     "aria": {
@@ -15,7 +15,7 @@
     },
     "features": {
       "securePow": "安全 PoW",
-      "smartContracts": "智能合同",
+      "smartContracts": "智能合约",
       "privacy": "隐私",
       "eutxoModel": "eUTXO 模型"
     }
@@ -122,7 +122,7 @@
     "titleHighlight": "常见",
     "titleSuffix": "问题",
     "subtitle": "开始使用所需了解的一切",
-    "learnMore": "Learn more",
+    "learnMore": "了解更多",
     "items": {
       "0": {
         "q": "用一句话概括 Ergo 是什么？",
@@ -420,45 +420,45 @@
     }
   },
   "audiencePaths": {
-    "title": "开始使用错误",
-    "subtitle": "选择您的路径并在Ergo生态系统中开始您的旅程",
+    "title": "开始使用 Ergo",
+    "subtitle": "选择您的路径并在 Ergo 生态系统中开始您的旅程",
     "audiences": {
       "developers": {
-        "title": "给开发者",
-        "description": "使用 ErgoScript 构建高级的 DeFi 应用程序和 dApps",
+        "title": "面向开发者",
+        "description": "使用 ErgoScript 构建高级的 DeFi 应用程序和 dApp",
         "cta": "开始开发",
         "links": {
-          "documentation": "文件",
+          "documentation": "文档",
           "technology": "技术",
-          "useCases": "使用案例"
+          "useCases": "使用场景"
         }
       },
       "miners": {
-        "title": "给矿工",
-        "description": "加入 ASIC 抗自动开采网络",
+        "title": "面向矿工",
+        "description": "加入抗 ASIC 的 Autolykos 挖矿网络",
         "cta": "开始挖矿",
         "links": {
-          "miningDocs": "采矿文档",
-          "miningPools": "矿池子",
-          "calculator": "利润计算器"
+          "miningDocs": "挖矿文档",
+          "miningPools": "矿池",
+          "calculator": "收益计算器"
         }
       },
       "users": {
-        "title": "给用户",
+        "title": "面向用户",
         "description": "探索生态系统并开始使用 Ergo",
         "cta": "获取钱包",
         "links": {
           "wallets": "钱包",
-          "ecosystem": "生态环境",
-          "buyErg": "购买ERG"
+          "ecosystem": "生态系统",
+          "buyErg": "购买 ERG"
         }
       },
       "investors": {
-        "title": "供投资者使用",
-        "description": "了解埃尔戈生态系统中的投资机会",
+        "title": "面向投资者",
+        "description": "了解 Ergo 生态系统中的投资机会",
         "cta": "了解投资信息",
         "links": {
-          "whatIsErgo": "什么是Ergo",
+          "whatIsErgo": "什么是 Ergo",
           "projects": "项目",
           "community": "社区"
         }
@@ -466,98 +466,98 @@
     }
   },
   "blogSection": {
-    "title": "源自战争遗留爆炸物的影响",
-    "subtitle": "随时更新埃尔戈生态系统的最新消息、技术见解和社区更新",
+    "title": "ERGO 博客最新内容",
+    "subtitle": "随时了解 Ergo 生态系统的最新新闻、技术见解和社区动态",
     "viewAllPosts": "查看所有帖子"
   },
   "subscribeSection": {
-    "title": "停留在锁屏中",
-    "subtitle": "每周获取Ergo releases、赠款、dev 通话和顶级文章",
+    "title": "保持关注",
+    "subtitle": "每周获取 Ergo 发布、资助、开发者会议和精选文章",
     "socialLinks": {
       "discord": "Discord",
       "twitter": "推特",
       "telegram": "Telegram"
     },
-    "privacyNotice": "我们尊重您的隐私。您的电子邮件仅用于更新错误，永远不会与第三方共享。 您可以随时单击取消订阅。"
+    "privacyNotice": "我们尊重您的隐私。您的电子邮件仅用于 Ergo 更新，绝不会与第三方共享。您可以随时一键取消订阅。"
   },
   "ecosystemShowcase": {
-    "title": "分散所有内容",
-    "exploreEcosystem": "解冻宝箱",
+    "title": "去中心化一切",
+    "exploreEcosystem": "探索生态系统",
     "categories": {
       "defi": "DEFI",
-      "privacy": "Privacy",
-      "stable": "已状态",
-      "gaming": "GAMING"
+      "privacy": "隐私",
+      "stable": "稳定资产",
+      "gaming": "游戏"
     },
     "projects": {
       "rosenBridge": {
         "title": "Rosen Bridge",
-        "subtitle": "连接Ergo的星系",
-        "description": "在Ergo和其他主要区块链之间无缝转移资产，如比特币、爱森、卡达诺和英国航天中心与Rosen Bridge。 我们的安全监控系统解锁了跨链流动性和新的 DeFi 可能性。",
-        "cta": "VISIT ROSEN BRIDGE",
+        "subtitle": "连接 Ergo 生态系统",
+        "description": "通过 Rosen Bridge 在 Ergo 与 Bitcoin、Ethereum、Cardano、BSC 等主流区块链之间无缝转移资产。我们的安全观察者与守卫系统解锁跨链流动性和新的 DeFi 可能性。",
+        "cta": "访问 ROSEN BRIDGE",
         "stats": {
           "crossChain": {
-            "label": "交叉链接",
+            "label": "跨链支持",
             "value": "BTC, ETH, ADA, BSC & more"
           },
           "secureBridge": {
-            "label": "安全网路",
-            "value": "看守者和护卫模型"
+            "label": "安全桥接",
+            "value": "观察者与守卫模型"
           },
           "unlockLiquidity": {
-            "label": "解锁流动资金",
-            "value": "访问新市场"
+            "label": "解锁流动性",
+            "value": "进入新市场"
           }
         }
       },
       "ergoMixer": {
         "title": "ErgoMixer",
-        "subtitle": "非拘禁隐私协议",
-        "description": "ErgoMixer使用Sigma协议和环形签名提供尖端的隐私解决方案。享受完整的财务隐私，同时通过可选的透明度功能保持监管合规。",
-        "cta": "在ERGO 上显示优先级",
+        "subtitle": "非托管隐私协议",
+        "description": "ErgoMixer 使用 Sigma 协议和环签名提供前沿隐私解决方案。在享受完整金融隐私的同时，通过可选透明度功能保持合规。",
+        "cta": "了解 ERGO 上的隐私工具",
         "stats": {
           "mixedVolume": {
-            "label": "混合音量",
-            "value": "370万美元"
+            "label": "混合交易量",
+            "value": "$3.7M"
           },
           "privacyScore": {
             "label": "隐私评分",
             "value": "99.9%"
           },
           "transactions": {
-            "label": "交易记录",
+            "label": "交易次数",
             "value": "25K+"
           }
         }
       },
       "sigmaUSD": {
-        "title": "西格玛USD",
-        "subtitle": "Algorithmic Stablecoin Protocol",
-        "description": "SigmaUSD 是在Ergo上构建的加密算法马印记协议。 它提供了一种分散的方式来创造稳定的价值，而不依赖传统的银行系统或集中的储备。",
-        "cta": "退出登录USD",
+        "title": "SigmaUSD",
+        "subtitle": "算法稳定币协议",
+        "description": "SigmaUSD 是构建在 Ergo 上的加密抵押算法稳定币协议。它提供了一种去中心化的方式来创造稳定价值，无需依赖传统银行系统或中心化储备。",
+        "cta": "探索 SIGMAUSD",
         "stats": {
           "stabilityScore": {
-            "label": "稳定得分",
+            "label": "稳定性评分",
             "value": "99.2%"
           },
           "totalSupply": {
             "label": "总供应量",
-            "value": "210万美元"
+            "value": "$2.1M"
           },
           "collateralRatio": {
-            "label": "抵押比率",
+            "label": "抵押率",
             "value": "400%"
           }
         }
       },
       "gaming": {
-        "title": "Ergo Gaming Ecosystem",
+        "title": "Ergo 游戏生态",
         "subtitle": "区块链游戏平台",
-        "description": "通过真正的资产所有权、游戏赚钱机械师和分散的锦标赛来体验游戏的未来。由 Ergo 高效和安全的区块链基础设施提供支持。",
-        "cta": "在ERGO上启动 GAMING",
+        "description": "通过真正的资产所有权、边玩边赚机制和去中心化锦标赛，体验游戏的未来。由 Ergo 高效安全的区块链基础设施提供支持。",
+        "cta": "在 ERGO 上开始游戏",
         "stats": {
           "activeGames": {
-            "label": "活动游戏",
+            "label": "活跃游戏",
             "value": "12"
           },
           "players": {
@@ -565,65 +565,65 @@
             "value": "5K+"
           },
           "gameAssets": {
-            "label": "游戏资源",
+            "label": "游戏资产",
             "value": "10K+"
           },
           "rewardsPaid": {
-            "label": "已支付奖励",
-            "value": "250K"
+            "label": "已发放奖励",
+            "value": "$250K"
           }
         }
       }
     }
   },
   "ctaSection": {
-    "title": "准备好建设未来？",
-    "subtitle": "加入埃尔戈生态系统并成为分散革命的一部分",
+    "title": "准备好构建未来了吗？",
+    "subtitle": "加入 Ergo 生态系统，成为去中心化革命的一部分",
     "actions": {
       "getStarted": {
-        "title": "开始",
-        "description": "设置钱包并购买ERG",
+        "title": "开始使用",
+        "description": "设置钱包并购买 ERG",
         "label": "立即开始"
       },
       "developers": {
-        "title": "给开发者",
-        "description": "建立在埃尔戈上",
-        "label": "开始打包"
+        "title": "面向开发者",
+        "description": "在 Ergo 上构建",
+        "label": "开始构建"
       },
       "miners": {
-        "title": "给矿工",
-        "description": "安全网络",
-        "label": "开始美化"
+        "title": "面向矿工",
+        "description": "保护网络安全",
+        "label": "开始挖矿"
       }
     }
   },
   "whatMakesDifferent": {
-    "title": "什么样的倒计时",
-    "subtitle": "Ergo 将经过验证的加密技术与创新的区块链设计相结合，创建一个可持续、安全和真正分散的平台",
+    "title": "ERGO 有何与众不同",
+    "subtitle": "Ergo 将经过验证的加密技术与创新的区块链设计相结合，创建一个可持续、安全且真正去中心化的平台",
     "features": {
       "fairLaunch": {
-        "title": "FAIR LAWH & PROF-OF-WORK",
-        "description": "由无ICO或伪装发射， Autolykos v2 - 一种能效高的工作证明算法，从第一天起确保公平分配和可靠的安全。"
+        "title": "公平发行与工作量证明",
+        "description": "无 ICO、无预挖，由 Autolykos v2 提供安全保障——这是一种抗 ASIC、能效高的工作量证明算法，从第一天起确保公平分配和强健安全。"
       },
       "eutxoErgoscript": {
-        "title": "eUTXO & ERGOSCRIPT for ADVANCED DEFI",
-        "description": "扩展的 UTXO 模型与我们强大的语言ErgoScript 相结合，能够提供高度安全、可预测和表达式的金融应用，推送DeFi的边界。"
+        "title": "eUTXO 与 ErgoScript 驱动高级 DeFi",
+        "description": "扩展 UTXO 模型与强大的 ErgoScript 语言相结合，使金融应用能够实现高度安全、可预测且富有表达力，推动 DeFi 边界不断扩展。"
       },
       "storageRent": {
-        "title": "可持续发展问题世界首脑会议的后续行动",
-        "description": "Description"
+        "title": "存储租金保障长期可持续性",
+        "description": "一种新颖机制，通过将闲置数据（"粉尘"）的费用回收给矿工，确保网络健康和可预测的运营成本，防止链膨胀并保持链的高效运行。"
       },
       "researchDriven": {
-        "title": "重置引文",
-        "description": "埃尔戈建立在经同行审查的学术研究和第一项原则基础上，促进为现实世界的长期性而设计的强有力和开拓性的解决办法。"
+        "title": "研究驱动的创新",
+        "description": "Ergo 建立在同行评审学术研究和第一性原理之上，推动为现实世界长期应用而设计的强健突破性解决方案。"
       },
       "privacy": {
-        "title": "三、区域性选择(奇-PROTOCOLS)",
-        "description": "Ergo提供由Sigma协议驱动的灵活的隐私功能，能够使用安全的多签名、环形签名和零知识证明，用于特定交易中的保密选项。"
+        "title": "强大的可选隐私（Σ-协议）",
+        "description": "Ergo 提供由 Sigma 协议驱动的灵活隐私功能，支持安全多重签名、环签名和零知识证明，为交易提供定制化保密选项。"
       },
       "communityLed": {
-        "title": "共同指示灯发展",
-        "description": "一个真正分散的开放源码项目，由世界各地充满激情的社区成员和开发者牵头，确保协议不受集中控制。"
+        "title": "社区主导的开发",
+        "description": "真正去中心化的开源项目，由全球充满热情的社区成员和开发者主导，确保协议不受中心化控制。"
       }
     }
   },

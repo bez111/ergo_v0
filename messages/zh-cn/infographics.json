@@ -7,14 +7,14 @@
         "description": "请求的信息图不存在。"
       }
     },
-    "backToInfographics": "回到信息图形",
-    "published": "已发布",
-    "minRead": "最小读取数",
+    "backToInfographics": "返回信息图列表",
+    "published": "发布时间",
+    "minRead": "分钟阅读",
     "tags": "标签",
     "exploreMore": {
-      "title": "探索更多错误信息图形",
-      "description": "发现Ergo的 PoW、eUTXO 智能合同、存储租赁、隐私等视觉指南。",
-      "button": "浏览全部信息图形"
+      "title": "探索更多 Ergo 信息图",
+      "description": "发现 Ergo PoW、eUTXO 智能合约、存储租金、隐私等主题的视觉指南。",
+      "button": "浏览全部信息图"
     }
   },
   "infographicsPage": {
@@ -37,70 +37,70 @@
       }
     },
     "breadcrumbs": {
-      "infographics": "信息图像"
+      "infographics": "信息图"
     },
     "hero": {
       "title": "Ergo Blockchain",
-      "titleHighlight": "信息图像",
-      "subtitle": "Ergo PoW、eUTXO 智能合同、存储租赁、隐私和全局结算的视觉指南。",
-      "subtitleSecondLine": "保存、分享和重新使用它们，并将其归属为 ergoblockchain.org。",
-      "description": "这个枢纽为Ergo协议的最重要部分收集视觉解释器：协商一致、 tokenomics、 DeFi、 隐私、 光顾客等等。 每个信息图形都有全文细分，因此你可以通过埃尔戈学习、教导和构建。",
+      "titleHighlight": "信息图",
+      "subtitle": "Ergo PoW、eUTXO 智能合约、存储租金、隐私与全球结算的视觉指南。",
+      "subtitleSecondLine": "保存、分享并在注明 ergoblockchain.org 后免费复用。",
+      "description": "本专区汇集了 Ergo 协议最重要模块的视觉解说：共识机制、代币经济、DeFi、隐私、轻客户端等。每张信息图均附有完整文字解析，助您通过 Ergo 学习、教学和构建。",
       "learnBasics": "学习基础知识"
     },
     "filters": {
-      "searchPlaceholder": "搜索信息图形(如：'存储出租', 'NiPoPoWs', 'VC 链')",
-      "filters": "筛选器",
-      "sortNewest": "最新的",
-      "sortPopular": "最受欢迎的",
+      "searchPlaceholder": "搜索信息图（如：'存储租金'、'NiPoPoWs'、'VC 链'）",
+      "filters": "筛选",
+      "sortNewest": "最新",
+      "sortPopular": "最受欢迎",
       "sortAZ": "A-Z"
     },
     "grid": {
-      "noResults": "未找到信息图形",
-      "noResultsDescription": "尝试调整筛选器或搜索条件。",
-      "resetFilters": "重置过滤器",
-      "viewInfographic": "查看信息图形"
+      "noResults": "未找到相关信息图",
+      "noResultsDescription": "请尝试调整筛选条件或搜索词。",
+      "resetFilters": "重置筛选",
+      "viewInfographic": "查看信息图"
     },
     "pagination": {
-      "previous": "上一个",
-      "next": "下一个"
+      "previous": "上一页",
+      "next": "下一页"
     },
     "card": {
-      "new": "新的",
+      "new": "新",
       "visualGuide": "视觉指南"
     },
     "shareMenu": {
       "share": "分享",
       "download": "下载",
       "shareTitle": "分享",
-      "shareDescription": "选择哪里分享这个信息图形。请帮助其他圆圈子找到公平发射链。",
-      "shareOn": "分享于",
+      "shareDescription": "选择分享此信息图的平台，帮助更多密码朋克发现公平发行的区块链。",
+      "shareOn": "分享至",
       "copyLink": "复制链接",
       "linkCopied": "链接已复制",
-      "linkCopiedToast": "感谢扩展埃尔戈。",
+      "linkCopiedToast": "感谢传播 Ergo。",
       "downloadTitle": "下载",
-      "downloadDescription": "选择最佳格式，用于在社会、博客和牌组中重新使用此信息图表。",
-      "pngStandard": "PNG - 标准 (1920x1080)",
-      "pngStandardDesc": "桌面和社交源横向PNG",
-      "embedCode": "嵌入代码 (HTML)",
-      "embedCodeDesc": "复制 HTML 代码片段来嵌入此信息图形",
+      "downloadDescription": "选择最适合在社交媒体、博客和演示文稿中复用的格式。",
+      "pngStandard": "PNG - 标准（1920x1080）",
+      "pngStandardDesc": "适用于桌面和社交媒体的横向 PNG",
+      "embedCode": "嵌入代码（HTML）",
+      "embedCodeDesc": "复制 HTML 代码片段以嵌入此信息图",
       "embedCopied": "嵌入代码已复制到剪贴板。",
       "close": "关闭"
     },
     "howToUse": {
-      "title": "如何使用这些信息图形",
+      "title": "如何使用这些信息图",
       "reuse": {
-        "title": "免费重用",
-        "description": "您可以在演示、博客文章或教育材料中重新使用任何信息图表。"
+        "title": "免费复用",
+        "description": "您可以在演示文稿、博客文章或教育材料中自由复用任何信息图。"
       },
       "credit": {
-        "title": "信用和链接返回",
-        "description": "请充值 ergoblockchain.org 并链接到原始页面。"
+        "title": "注明来源并回链",
+        "description": "请注明 ergoblockchain.org 并链接至原始页面。"
       },
       "branding": {
-        "title": "自定义品牌化",
-        "description": "如果您想要编辑源文件或自定义品牌，请联系 Ergo 社区。"
+        "title": "自定义品牌",
+        "description": "如需可编辑的源文件或自定义品牌，请联系 Ergo 社区。"
       },
-      "learnMore": "了解更多关于埃尔戈的信息",
+      "learnMore": "了解更多关于 Ergo 的信息",
       "joinCommunity": "加入社区"
     },
     "relatedResources": {
@@ -110,11 +110,11 @@
         "items": {
           "0": {
             "href": "/questions/what-is-ergo",
-            "text": "Ergo blockchain是什么？"
+            "text": "什么是 Ergo 区块链？"
           },
           "1": {
             "href": "/questions/what-is-eutxo",
-            "text": "eUTXO 模型是什么？"
+            "text": "什么是 eUTXO 模型？"
           },
           "2": {
             "href": "/questions/what-is-mev-resistance",
@@ -122,13 +122,13 @@
           },
           "3": {
             "href": "/questions/what-is-storage-rent",
-            "text": "什么是存储空间租金？"
+            "text": "什么是存储租金？"
           }
         },
-        "viewAll": "查看所有问题"
+        "viewAll": "查看全部问题"
       },
       "playbooks": {
-        "title": "游戏书籍和指南",
+        "title": "操作手册与指南",
         "items": {
           "0": {
             "href": "/playbooks/first-transaction-10-minutes",
@@ -136,7 +136,7 @@
           },
           "1": {
             "href": "/playbooks/start-mining-ergo",
-            "text": "开始挖矿Ergo"
+            "text": "开始挖矿 Ergo"
           },
           "2": {
             "href": "/playbooks/build-defi-on-ergo",
@@ -144,15 +144,15 @@
           },
           "3": {
             "href": "/playbooks/private-transaction-ergomixer",
-            "text": "Ergo 上的隐私工具"
+            "text": "通过 ErgoMixer 进行隐私交易"
           }
         },
-        "viewAll": "查看所有播放列表"
+        "viewAll": "查看全部操作手册"
       }
     },
     "emailCapture": {
-      "title": "保持更新在Ergo Visual Resources",
-      "description": "当我们发布关于Ergo blockchain的新信息图形、视觉指南和教育内容时获得通知。"
+      "title": "获取 Ergo 视觉资源最新动态",
+      "description": "当我们发布关于 Ergo 区块链的新信息图、视觉指南和教育内容时，第一时间获取通知。"
     }
   }
 }
