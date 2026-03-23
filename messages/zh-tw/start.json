@@ -1,162 +1,162 @@
 {
   "start": {
-    "title": "Get Started",
-    "subtitle": "Begin your Ergo journey",
-    "description": "Begin your journey with Ergo",
+    "title": "開始使用",
+    "subtitle": "開啟您的 Ergo 之旅",
+    "description": "開啟您與 Ergo 的旅程",
     "seo": {
-      "title": "Get Started - Begin with Ergo | Ergo Platform",
-      "description": "Start using Ergo blockchain: wallets, exchanges, and resources for beginners.",
-      "keywords": "get started Ergo, beginner guide, Ergo wallet, how to start"
+      "title": "開始使用——從 Ergo 入門 | Ergo 平台",
+      "description": "開始使用 Ergo 區塊鏈：適合初學者的錢包、交易所和資源。",
+      "keywords": "開始使用 Ergo, 初學者指南, Ergo 錢包, 如何開始"
     },
     "schema": {
-      "name": "Getting Started with Ergo Blockchain",
+      "name": "Ergo 區塊鏈入門指南",
       "faq": {
         "items": [
           {
-            "question": "How do I get started with Ergo?",
-            "answer": "Download a wallet like Nautilus, buy ERG from an exchange, and make your first transaction. Our step-by-step guide walks you through each step."
+            "question": "我如何開始使用 Ergo？",
+            "answer": "下載 Nautilus 等錢包，從交易所購買 ERG，並進行您的第一筆交易。我們的逐步指南將引導您完成每個步驟。"
           },
           {
-            "question": "What wallet should I use?",
-            "answer": "For most users, we recommend Nautilus browser extension for desktop or Ergo Mobile for iOS/Android. Both are secure and support all Ergo features."
+            "question": "我應該使用哪個錢包？",
+            "answer": "對大多數用戶，我們推薦用於桌面的 Nautilus 瀏覽器擴充功能或適用於 iOS/Android 的 Ergo Mobile。兩者都安全且支援所有 Ergo 功能。"
           },
           {
-            "question": "Where can I buy ERG?",
-            "answer": "ERG is available on exchanges like KuCoin and Gate.io, or you can use decentralized exchanges like ErgoDEX for more privacy."
+            "question": "我在哪裡可以購買 ERG？",
+            "answer": "ERG 可在 KuCoin 和 Gate.io 等交易所獲得，或者您可以使用 ErgoDEX 等去中心化交易所以獲得更多隱私保護。"
           },
           {
-            "question": "Is Ergo suitable for beginners?",
-            "answer": "Yes! Our getting started guide is designed for complete beginners. No prior crypto experience is required."
+            "question": "Ergo 適合初學者嗎？",
+            "answer": "當然！我們的入門指南專為完全初學者設計。不需要任何加密貨幣先前經驗。"
           }
         ]
       }
     },
     "page": {
       "breadcrumbs": {
-        "start": "Start"
+        "start": "開始"
       },
       "aria": {
-        "downloadWallet": "Download {wallet} wallet",
-        "tradeErgOn": "Trade ERG on {exchange}"
+        "downloadWallet": "下載 {wallet} 錢包",
+        "tradeErgOn": "在 {exchange} 交易 ERG"
       },
       "disclaimer": {
-        "title": "Disclaimer",
-        "text": "Links are informational. Do your own research. Trading involves risk."
+        "title": "免責聲明",
+        "text": "連結僅供參考。請自行研究。交易涉及風險。"
       },
       "hero": {
-        "title": "Start Using",
+        "title": "開始使用",
         "titleHighlight": "Ergo",
-        "subtitle": "Get started with Ergo blockchain in 3 simple steps",
-        "description": "Download a wallet, buy ERG tokens, and send your first transaction. Join the decentralized finance revolution with predictable fees and enhanced security."
+        "subtitle": "透過 3 個簡單步驟開始使用 Ergo 區塊鏈",
+        "description": "下載錢包、購買 ERG 代幣，並發送您的第一筆交易。以可預測的費用和增強的安全性加入去中心化金融革命。"
       },
       "quickFacts": {
-        "title": "Quick Facts",
+        "title": "快速概覽",
         "items": [
           {
-            "title": "Secure by Design",
-            "description": "Non-custodial wallets give you full control of your funds"
+            "title": "設計安全",
+            "description": "非託管錢包讓您完全掌控自己的資金"
           },
           {
-            "title": "Low Fees",
-            "description": "Predictable fees around $0.01 per transaction"
+            "title": "低廉費用",
+            "description": "每筆交易可預測的費用約 $0.01"
           },
           {
-            "title": "Fast Confirmation",
-            "description": "Transactions confirm in approximately 2 minutes"
+            "title": "快速確認",
+            "description": "交易在約 2 分鐘內確認"
           }
         ]
       },
       "steps": [
         {
           "number": "01",
-          "title": "Download a Wallet",
-          "description": "Choose a secure wallet to store your ERG tokens",
+          "title": "下載錢包",
+          "description": "選擇安全的錢包來儲存您的 ERG 代幣",
           "wallets": [
             {
               "name": "Nautilus",
-              "type": "Browser Extension",
-              "description": "Most popular Ergo wallet with dApp support and advanced features",
+              "type": "瀏覽器擴充功能",
+              "description": "最受歡迎的 Ergo 錢包，支援 dApp 和進階功能",
               "recommended": true,
-              "buttonText": "Download Nautilus"
+              "buttonText": "下載 Nautilus"
             },
             {
               "name": "Ergo Mobile",
-              "type": "iOS & Android",
-              "description": "Official mobile wallet with secure storage and easy transactions",
+              "type": "iOS 和 Android",
+              "description": "官方行動錢包，具備安全儲存和便捷交易功能",
               "recommended": false,
-              "buttonText": "Get Ergo Mobile"
+              "buttonText": "取得 Ergo Mobile"
             },
             {
               "name": "SAFEW",
-              "type": "Web Wallet",
-              "description": "Simple web-based wallet for quick access and beginners",
+              "type": "網頁錢包",
+              "description": "簡單的網頁版錢包，方便快速訪問和初學者使用",
               "recommended": false,
-              "buttonText": "Open SAFEW"
+              "buttonText": "開啟 SAFEW"
             }
           ]
         },
         {
           "number": "02",
-          "title": "Buy ERG Tokens",
-          "description": "Purchase ERG from exchanges or DEXs",
+          "title": "購買 ERG 代幣",
+          "description": "從交易所或去中心化交易所購買 ERG",
           "exchanges": [
             {
               "name": "KuCoin",
-              "type": "Spot - ~0.1% fees",
-              "description": "Large centralized exchange with high liquidity and ERG/USDT pair",
-              "buttonText": "Trade ERG on KuCoin"
+              "type": "現貨——手續費約 0.1%",
+              "description": "大型中心化交易所，高流動性，提供 ERG/USDT 交易對",
+              "buttonText": "在 KuCoin 交易 ERG"
             },
             {
               "name": "Gate.io",
-              "type": "Spot - ~0.2% fees",
-              "description": "Global exchange with multiple ERG trading pairs and good volume",
-              "buttonText": "Trade ERG on Gate.io"
+              "type": "現貨——手續費約 0.2%",
+              "description": "全球交易所，提供多個 ERG 交易對和良好的交易量",
+              "buttonText": "在 Gate.io 交易 ERG"
             },
             {
               "name": "ErgoDEX",
-              "type": "No KYC - ~0.3% fees",
-              "description": "Native Ergo DEX with full decentralization and privacy",
-              "buttonText": "Open ErgoDEX"
+              "type": "無 KYC——手續費約 0.3%",
+              "description": "原生 Ergo 去中心化交易所，完全去中心化且保護隱私",
+              "buttonText": "開啟 ErgoDEX"
             }
           ],
-          "disclaimer": "Links are informational. Do your own research. Trading involves risk."
+          "disclaimer": "連結僅供參考。請自行研究。交易涉及風險。"
         },
         {
           "number": "03",
-          "title": "Send Your First Transaction",
-          "description": "Test your wallet by sending ERG",
+          "title": "發送您的第一筆交易",
+          "description": "透過發送 ERG 來測試您的錢包",
           "proTips": {
-            "title": "Pro Tips",
-            "subtitle": "Best practices for success"
+            "title": "專業技巧",
+            "subtitle": "成功的最佳實踐"
           },
           "tips": [
-            "Start with a small test amount (0.1 ERG)",
-            "Transaction fees are typically ~0.001-0.002 ERG ($0.01)",
-            "Transactions confirm in ~2 minutes",
-            "Always double-check the recipient address"
+            "從小額測試金額開始（0.1 ERG）",
+            "交易費用通常約為 0.001-0.002 ERG（$0.01）",
+            "交易在約 2 分鐘內確認",
+            "請務必仔細核對收款地址"
           ]
         }
       ],
       "badges": {
-        "recommended": "Recommended"
+        "recommended": "推薦"
       },
       "whatsNext": {
-        "title": "What's Next?",
-        "description": "Now that you have ERG, explore the Ergo ecosystem",
+        "title": "下一步是什麼？",
+        "description": "現在您擁有了 ERG，探索 Ergo 生態系統吧",
         "dapps": {
-          "title": "Explore dApps",
-          "subtitle": "Ecosystem Applications",
-          "description": "Discover decentralized applications built on Ergo"
+          "title": "探索 dApps",
+          "subtitle": "生態系統應用程式",
+          "description": "探索在 Ergo 上建構的去中心化應用程式"
         },
         "docs": {
-          "title": "Learn More",
-          "subtitle": "Technical Documentation",
-          "description": "Deep dive into Ergo's technology and features"
+          "title": "深入了解",
+          "subtitle": "技術文件",
+          "description": "深入了解 Ergo 的技術和功能"
         }
       },
       "finalCta": {
-        "title": "Get Started with Ergo",
-        "description": "Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+        "title": "開始使用 Ergo",
+        "description": "獲取最新更新、初學者指南和逐步教學，直接發送至您的信箱"
       }
     },
     "quiz": {
@@ -1004,666 +1004,671 @@
     },
     "comparison": {
       "seo": {
-        "title": "Ergo vs Other Blockchains - Detailed Comparison",
-        "description": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "keywords": "Ergo comparison, blockchain comparison, Bitcoin vs Ergo, Ethereum vs Ergo, UTXO vs account model",
-        "ogTitle": "Ergo vs Other Blockchains - Detailed Comparison",
-        "ogDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "ogAlt": "Ergo blockchain comparison chart",
-        "twitterTitle": "Ergo vs Other Blockchains - Detailed Comparison",
-        "twitterDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols."
+        "title": "Ergo 與其他區塊鏈比較 - 詳細對比分析",
+        "description": "比較 Ergo 與 Bitcoin、Ethereum 及 Cardano。了解擴展 UTXO 和 Sigma 協議的獨特優勢。",
+        "keywords": "Ergo 比較, 區塊鏈比較, Bitcoin 對比 Ergo, Ethereum 對比 Ergo, UTXO 與帳戶模型",
+        "ogTitle": "Ergo 與其他區塊鏈比較 - 詳細對比分析",
+        "ogDescription": "比較 Ergo 與 Bitcoin、Ethereum 及 Cardano。了解擴展 UTXO 和 Sigma 協議的獨特優勢。",
+        "ogAlt": "Ergo 區塊鏈比較圖表",
+        "twitterTitle": "Ergo 與其他區塊鏈比較 - 詳細對比分析",
+        "twitterDescription": "比較 Ergo 與 Bitcoin、Ethereum 及 Cardano。了解擴展 UTXO 和 Sigma 協議的獨特優勢。"
       },
       "schema": {
         "breadcrumbs": {
-          "comparison": "Comparison"
+          "comparison": "比較"
         },
         "faq": {
           "items": [
             {
-              "question": "How is Ergo different from Bitcoin?",
-              "answer": "While sharing Bitcoin's UTXO model and PoW consensus, Ergo adds smart contracts, Storage Rent, and NiPoPoWs for advanced functionality."
+              "question": "Ergo 與 Bitcoin 有何不同？",
+              "answer": "Ergo 共享 Bitcoin 的 UTXO 模型和 PoW 共識，同時增加了智能合約、Storage Rent 和 NiPoPoWs 以實現更高級的功能。"
             },
             {
-              "question": "What advantages does Ergo have over Ethereum?",
-              "answer": "Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining."
+              "question": "Ergo 相對 Ethereum 有哪些優勢？",
+              "answer": "Ergo 提供可預測的費用、無重入攻擊、並行交易處理及能源高效的 PoW 挖礦。"
             },
             {
-              "question": "How does Ergo compare to Cardano?",
-              "answer": "Both use eUTXO, but Ergo has PoW consensus, Storage Rent, and no VC funding, making it more decentralized and sustainable."
+              "question": "Ergo 與 Cardano 相比如何？",
+              "answer": "兩者均使用 eUTXO，但 Ergo 採用 PoW 共識、Storage Rent，且無風投資金，使其更加去中心化且可持續。"
             }
           ]
         }
       },
       "keyDifferentiators": {
         "0": {
-          "title": "Security & Predictability",
-          "ergo": "eUTXO model provides predictable execution costs and eliminates many attack vectors like reentrancy",
-          "others": "Account-based models are prone to reentrancy attacks and unpredictable gas costs"
+          "title": "安全性與可預測性",
+          "ergo": "eUTXO 模型提供可預測的執行成本，並消除了重入等多種攻擊向量",
+          "others": "基於帳戶的模型容易受到重入攻擊，且 Gas 成本難以預測"
         },
         "1": {
-          "title": "Smart Contract Design",
-          "ergo": "ErgoScript enables powerful contracts with built-in cryptographic primitives and formal verification",
-          "others": "Most platforms require external libraries and complex implementations for advanced cryptography"
+          "title": "智能合約設計",
+          "ergo": "ErgoScript 透過內建加密原語和形式化驗證，實現強大的合約功能",
+          "others": "大多數平台需要外部庫和複雜實現來支援進階加密功能"
         },
         "2": {
-          "title": "Scalability & Efficiency",
-          "ergo": "Parallel transaction processing and efficient light clients via NIPoPoWs",
-          "others": "Sequential processing and resource-intensive light client implementations"
+          "title": "可擴展性與效率",
+          "ergo": "透過 NIPoPoWs 實現並行交易處理和高效輕客戶端",
+          "others": "順序處理以及資源密集的輕客戶端實現"
         },
         "3": {
-          "title": "Long-term Sustainability",
-          "ergo": "Storage rent mechanism prevents blockchain bloat and ensures miner incentives beyond block rewards",
-          "others": "Growing state size and uncertain long-term economics after emission ends"
+          "title": "長期可持續性",
+          "ergo": "Storage Rent 機制防止區塊鏈膨脹，並確保區塊獎勵結束後礦工的激勵",
+          "others": "不斷增長的狀態規模以及發行結束後不確定的長期經濟模型"
         }
       }
     },
     "faq": {
       "seo": {
-        "title": "Ergo FAQ - Frequently Asked Questions",
-        "description": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "keywords": "Ergo FAQ, blockchain questions, cryptocurrency FAQ, smart contracts FAQ, mining FAQ",
-        "ogTitle": "Ergo FAQ - Frequently Asked Questions",
-        "ogDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "ogAlt": "Ergo FAQ - Frequently Asked Questions",
-        "twitterTitle": "Ergo FAQ - Frequently Asked Questions",
-        "twitterDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more."
+        "title": "Ergo 常見問題——常見問題解答",
+        "description": "尋找有關 Ergo 區塊鏈、錢包、挖礦、智能合約等常見問題的解答。",
+        "keywords": "Ergo 常見問題, 區塊鏈問題, 加密貨幣常見問題, 智能合約常見問題, 挖礦常見問題",
+        "ogTitle": "Ergo 常見問題——常見問題解答",
+        "ogDescription": "尋找有關 Ergo 區塊鏈、錢包、挖礦、智能合約等常見問題的解答。",
+        "ogAlt": "Ergo 常見問題——常見問題解答",
+        "twitterTitle": "Ergo 常見問題——常見問題解答",
+        "twitterDescription": "尋找有關 Ergo 區塊鏈、錢包、挖礦、智能合約等常見問題的解答。"
       }
     },
     "community": {
       "seo": {
-        "title": "Ergo Community - Join the Ecosystem",
-        "description": "Connect with the Ergo community through Discord, Telegram, Reddit, and other channels. Get involved in development and governance.",
-        "keywords": "Ergo community, Discord, Telegram, Reddit, blockchain community, cryptocurrency community",
-        "ogTitle": "Join the Ergo Community",
-        "ogDescription": "Connect with developers, miners, traders, and enthusiasts building on Ergo",
-        "ogAlt": "Ergo Community",
-        "twitterTitle": "Ergo Community - Get Involved",
-        "twitterDescription": "Join thousands of developers, miners, and enthusiasts in the Ergo ecosystem"
+        "title": "Ergo 社群 - 加入生態系統",
+        "description": "透過 Discord、Telegram、Reddit 及其他管道與 Ergo 社群互動。參與開發與治理。",
+        "keywords": "Ergo 社群, Discord, Telegram, Reddit, 區塊鏈社群, 加密貨幣社群",
+        "ogTitle": "加入 Ergo 社群",
+        "ogDescription": "與在 Ergo 上開發的開發者、礦工、交易者及愛好者建立聯繫",
+        "ogAlt": "Ergo 社群",
+        "twitterTitle": "Ergo 社群 - 積極參與",
+        "twitterDescription": "加入 Ergo 生態系統中數千名開發者、礦工及愛好者"
       },
       "schema": {
         "breadcrumbs": {
-          "community": "Community"
+          "community": "社群"
         },
         "faq": {
           "items": [
             {
-              "question": "How do I join the Ergo community?",
-              "answer": "Join Discord for real-time chat, Telegram for updates, Reddit for discussions, or GitHub to contribute. All channels are open and welcoming to newcomers."
+              "question": "我如何加入 Ergo 社群？",
+              "answer": "加入 Discord 進行即時交流、Telegram 獲取更新、Reddit 參與討論，或透過 GitHub 貢獻代碼。所有頻道對新人開放且友善。"
             },
             {
-              "question": "What is the main Ergo community platform?",
-              "answer": "Discord is the most active platform, with dedicated channels for development, mining, trading, and general discussion."
+              "question": "Ergo 的主要社群平台是什麼？",
+              "answer": "Discord 是最活躍的平台，設有開發、挖礦、交易及一般討論等專屬頻道。"
             },
             {
-              "question": "Can I contribute to Ergo without coding?",
-              "answer": "Yes. You can contribute with content, translations, community support, testing, documentation, or governance discussions."
+              "question": "我可以在不會編程的情況下為 Ergo 做貢獻嗎？",
+              "answer": "可以。您可以透過內容創作、翻譯、社群支援、測試、文檔或治理討論做出貢獻。"
             },
             {
-              "question": "Are there regional Ergo communities?",
-              "answer": "Yes. There are active regional communities in multiple languages, with dedicated groups and channels."
+              "question": "是否有 Ergo 地區社群？",
+              "answer": "有。多種語言的活躍地區社群均設有專屬群組和頻道。"
             }
           ]
         }
       },
       "contributions": {
         "0": {
-          "title": "Development",
-          "description": "Contribute to core protocol development",
-          "tasks": "Core development, Bug fixes, Feature implementation"
+          "title": "開發",
+          "description": "為核心協議開發做出貢獻",
+          "tasks": "核心開發、錯誤修復、功能實現"
         },
         "1": {
-          "title": "Documentation",
-          "description": "Help improve documentation and guides",
-          "tasks": "Writing guides, Translation, API documentation"
+          "title": "文檔",
+          "description": "協助改善文檔和指南",
+          "tasks": "撰寫指南、翻譯、API 文檔"
         },
         "2": {
-          "title": "Community Support",
-          "description": "Help new users and answer questions",
-          "tasks": "Discord support, Forum moderation, User onboarding"
+          "title": "社群支援",
+          "description": "幫助新用戶並回答問題",
+          "tasks": "Discord 支援、論壇管理、用戶引導"
         },
         "3": {
-          "title": "Governance",
-          "description": "Participate in protocol governance",
-          "tasks": "EIP discussions, Voting, Proposal creation"
+          "title": "治理",
+          "description": "參與協議治理",
+          "tasks": "EIP 討論、投票、提案創建"
         },
         "4": {
-          "title": "Infrastructure",
-          "description": "Run nodes and maintain infrastructure",
-          "tasks": "Node operation, Mining pools, Network monitoring"
+          "title": "基礎設施",
+          "description": "運行節點並維護基礎設施",
+          "tasks": "節點運營、礦池、網絡監控"
         },
         "5": {
-          "title": "Marketing",
-          "description": "Promote Ergo and educate others",
-          "tasks": "Content creation, Social media, Event organization"
+          "title": "市場推廣",
+          "description": "推廣 Ergo 並教育他人",
+          "tasks": "內容創作、社交媒體、活動組織"
         }
       },
       "marketingGuide": {
         "seo": {
-          "title": "Community Marketing Playbook | Ergo Platform",
-          "description": "Learn how to amplify Ergo content across all channels. 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics."
+          "title": "社群行銷手冊 | Ergo 平台",
+          "description": "學習如何在所有管道放大 Ergo 內容。7 個核心行銷管道、經過驗證的互動策略、最佳時機安排及成功指標。"
         },
         "breadcrumbs": {
-          "start": "Start",
-          "community": "Community",
-          "marketing": "Marketing Guide"
+          "start": "開始",
+          "community": "社群",
+          "marketing": "行銷指南"
         },
         "hero": {
-          "title": "Community Marketing Playbook",
-          "subtitle": "Want to help Ergo grow? This guide shows you how to amplify Ergo content across all channels and turn every announcement into a coordinated community effort that drives real engagement.",
-          "description": "You'll learn about 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics. Everything you need to start contributing to Ergo's marketing today.",
+          "title": "社群行銷手冊",
+          "subtitle": "想幫助 Ergo 成長嗎？本指南教您如何在所有管道放大 Ergo 內容，並將每次公告轉化為推動真實互動的協調社群行動。",
+          "description": "您將了解 7 個核心行銷管道、經過驗證的互動策略、最佳時機安排及成功指標。開始為 Ergo 行銷做出貢獻所需的一切知識盡在其中。",
           "buttons": {
-            "startBlog": "Start with Blog Content",
-            "exploreInfographics": "Explore Infographics"
+            "startBlog": "從部落格內容開始",
+            "exploreInfographics": "探索資訊圖表"
           },
-          "coreChannelsTitle": "Core Channels"
+          "coreChannelsTitle": "核心管道"
         },
         "quickStart": {
-          "title": "Get Started in 3 Steps",
+          "title": "3 步驟快速開始",
           "steps": [
             {
-              "title": "Step 1",
-              "subtitle": "Join Discord + Telegram",
-              "description": "Start by joining core communities where you can learn from experienced marketers and coordinate your efforts with others.",
-              "hoverText": "Start Here"
+              "title": "第一步",
+              "subtitle": "加入 Discord 和 Telegram",
+              "description": "從加入核心社群開始，在那裡您可以向有經驗的行銷人員學習，並與他人協調工作。",
+              "hoverText": "從這裡開始"
             },
             {
-              "title": "Step 2",
-              "subtitle": "Pick ONE channel (Twitter / Reddit)",
-              "description": "Choose one platform you're comfortable with and master it before expanding. Quality engagement on one channel beats spreading yourself thin.",
-              "hoverText": "Focus First"
+              "title": "第二步",
+              "subtitle": "選擇一個管道（Twitter / Reddit）",
+              "description": "選擇一個您熟悉的平台，先精通它再擴展。在一個管道上的高質量互動勝過分散精力。",
+              "hoverText": "聚焦優先"
             },
             {
-              "title": "Step 3",
-              "subtitle": "Follow 5-step workflow below",
-              "description": "Use the proven amplification strategy to turn every blog post into a coordinated community-wide conversation that helps Ergo grow.",
-              "hoverText": "Scale Up"
+              "title": "第三步",
+              "subtitle": "遵循下方 5 步驟工作流程",
+              "description": "使用經過驗證的放大策略，將每篇部落格文章轉化為有助於 Ergo 成長的全社群協調對話。",
+              "hoverText": "擴大規模"
             }
           ]
         },
         "navigation": {
-          "title": "On this page:",
-          "jumpTo": "Jump to"
+          "title": "本頁內容：",
+          "jumpTo": "跳轉至"
         },
-        "guideTitle": "Your Step-by-Step Guide",
+        "guideTitle": "您的逐步指南",
         "coreChannels": [
           {
             "name": "ergoblockchain.org",
-            "description": "Article in blog + internal links",
-            "actionText": "Visit Blog"
+            "description": "部落格文章及內部鏈接",
+            "actionText": "訪問部落格"
           },
           {
-            "name": "Beehiiv Newsletter",
-            "description": "Digest or dedicated issue",
-            "actionText": "Subscribe"
+            "name": "Beehiiv 電子報",
+            "description": "摘要或專題期刊",
+            "actionText": "訂閱"
           },
           {
             "name": "Telegram",
-            "description": "Marketing Community",
-            "actionText": "Join Channel"
+            "description": "行銷社群",
+            "actionText": "加入頻道"
           },
           {
             "name": "Ergo Discord",
-            "description": "#announcements, #general, #dev, #research",
-            "actionText": "Join Discord"
+            "description": "#公告, #一般, #開發, #研究",
+            "actionText": "加入 Discord"
           },
           {
             "name": "Reddit r/ergonauts",
-            "description": "Community discussions",
-            "actionText": "Visit Subreddit"
+            "description": "社群討論",
+            "actionText": "訪問 Subreddit"
           },
           {
             "name": "X (Twitter)",
-            "description": "Thread/tweet series + link",
-            "actionText": "Follow @BuildOnErgo"
+            "description": "推文串 / 推文系列 + 鏈接",
+            "actionText": "關注 @BuildOnErgo"
           }
         ],
         "guideSteps": {
           "whyMatters": {
-            "title": "Why Your Help Matters",
-            "description": "How community members like you drive Ergo's growth",
-            "intro": "Your voice matters. Community-driven marketing is the backbone of Ergo's growth. Unlike traditional marketing, your authentic contributions build genuine relationships and trust.",
-            "keyBenefitsTitle": "Key Benefits:",
+            "title": "為什麼您的幫助很重要",
+            "description": "像您這樣的社群成員如何推動 Ergo 的成長",
+            "intro": "您的聲音很重要。社群驅動的行銷是 Ergo 成長的支柱。與傳統行銷不同，您的真誠貢獻能建立真實的關係和信任。",
+            "keyBenefitsTitle": "主要優勢：",
             "points": [
-              "Your authentic voice carries more weight than corporate messaging",
-              "You understand Ergo's technology deeply and can explain it better",
-              "Your decentralized efforts match Ergo's decentralized philosophy",
-              "You can reach audiences that traditional marketing can't",
-              "You create lasting engagement through genuine conversations"
+              "您真實的聲音比企業訊息更有份量",
+              "您深入了解 Ergo 的技術，能更好地加以解釋",
+              "您的去中心化行動符合 Ergo 的去中心化理念",
+              "您能觸及傳統行銷無法覆蓋的受眾",
+              "您透過真誠的對話創造持久的互動"
             ],
-            "checklistTitle": "Quick Start Checklist:",
+            "checklistTitle": "快速開始清單：",
             "actionItems": [
               {
-                "text": "Join Ergo Discord for real-time community discussions",
+                "text": "加入 Ergo Discord 進行即時社群討論",
                 "priority": "high"
               },
               {
-                "text": "Follow @BuildOnErgo on Twitter for developer updates",
+                "text": "在 Twitter 上關注 @BuildOnErgo 以獲取開發者更新",
                 "priority": "high"
               },
               {
-                "text": "Join ErgoSocials Telegram for marketing coordination",
+                "text": "加入 ErgoSocials Telegram 進行行銷協調",
                 "priority": "high"
               },
               {
-                "text": "Subscribe to ergoblockchain.org blog for source content",
+                "text": "訂閱 ergoblockchain.org 部落格以獲取原始內容",
                 "priority": "medium"
               },
               {
-                "text": "Join r/ergonauts subreddit for Reddit marketing practice",
+                "text": "加入 r/ergonauts subreddit 練習 Reddit 行銷",
                 "priority": "medium"
               },
               {
-                "text": "Subscribe to Beehiiv newsletter for weekly content digest",
+                "text": "訂閱 Beehiiv 電子報以獲取每週內容摘要",
                 "priority": "low"
               }
             ],
             "priorityLabels": {
-              "high": "high priority",
-              "medium": "medium priority",
-              "low": "low priority"
+              "high": "高優先",
+              "medium": "中優先",
+              "low": "低優先"
             }
           },
           "coreChannels": {
-            "title": "Where to Share Ergo Content",
-            "description": "Start with these essential channels",
-            "intro": "These are the core channels where you can share Ergo content. Start here, then explore extended distribution channels below:",
-            "strategyTitle": "Pro Strategy:",
-            "strategy": "When new content is published on ergoblockchain.org, share it across these channels within 24-48 hours for maximum impact.",
+            "title": "在哪裡分享 Ergo 內容",
+            "description": "從這些核心管道開始",
+            "intro": "這些是您可以分享 Ergo 內容的核心管道。先從這裡開始，然後探索下方的擴展分發管道：",
+            "strategyTitle": "專業策略：",
+            "strategy": "當 ergoblockchain.org 發布新內容時，在 24-48 小時內於這些管道分享，以獲得最大影響力。",
             "tips": [
-              "Customize your content for each platform's audience",
-              "Use platform-specific features (Twitter threads, Reddit formatting)",
-              "Cross-reference between channels to build a cohesive narrative",
-              "Track engagement to see what works best for you"
+              "為每個平台的受眾自訂您的內容",
+              "使用平台特定功能（Twitter 推文串、Reddit 格式）",
+              "在管道之間交叉引用以建立連貫的敘述",
+              "追蹤互動效果以了解哪些方式最適合您"
             ]
           },
           "contentStrategy": {
-            "title": "How to Amplify New Content",
-            "description": "Turn every blog post into a community-wide conversation",
-            "intro": "When new Ergo content is published, here's how you can help amplify it across the community:",
-            "workflowTitle": "5-Step Workflow:",
+            "title": "如何放大新內容",
+            "description": "將每篇部落格文章轉化為全社群的對話",
+            "intro": "當新的 Ergo 內容發布時，以下是您如何幫助在社群中放大它：",
+            "workflowTitle": "5 步驟工作流程：",
             "workflow": [
               {
-                "title": "Source Content",
-                "description": "Start with ergoblockchain.org blog post or announcement",
-                "time": "Day 0"
+                "title": "來源內容",
+                "description": "從 ergoblockchain.org 部落格文章或公告開始",
+                "time": "第 0 天"
               },
               {
-                "title": "Newsletter Integration",
-                "description": "Include in next Beehiiv digest or create dedicated issue",
-                "time": "Day 1-2"
+                "title": "電子報整合",
+                "description": "納入下一期 Beehiiv 摘要或創建專題期刊",
+                "time": "第 1-2 天"
               },
               {
-                "title": "Social Media Cascade",
-                "description": "Share across Telegram, Discord, Twitter with platform-specific angles",
-                "time": "Day 1-3"
+                "title": "社交媒體傳播",
+                "description": "在 Telegram、Discord、Twitter 上以平台特定角度分享",
+                "time": "第 1-3 天"
               },
               {
-                "title": "Reddit Strategy",
-                "description": "Cross-post to relevant subreddits with community-specific context",
-                "time": "Day 2-7"
+                "title": "Reddit 策略",
+                "description": "帶著社群特定背景交叉發布至相關 subreddit",
+                "time": "第 2-7 天"
               },
               {
-                "title": "Long-form Content",
-                "description": "Create Twitter Articles or LinkedIn posts for deeper engagement",
-                "time": "Week 1-2"
+                "title": "長篇內容",
+                "description": "創建 Twitter 文章或 LinkedIn 帖子以深化互動",
+                "time": "第 1-2 週"
               }
             ],
-            "examplesTitle": "Real Examples:",
+            "examplesTitle": "真實範例：",
             "examples": [
-              "New ErgoScript tutorial -> Developer-focused Reddit posts + Discord #dev discussion",
-              "Mining update -> r/gpumining + r/cryptomining with profitability analysis",
-              "DeFi protocol launch -> r/defi + Twitter thread with comparison charts"
+              "新 ErgoScript 教程 -> 面向開發者的 Reddit 帖子 + Discord #dev 討論",
+              "挖礦更新 -> r/gpumining + r/cryptomining 附收益分析",
+              "DeFi 協議發布 -> r/defi + Twitter 推文串附比較圖表"
             ]
           },
           "redditMastery": {
-            "title": "How to Share on Reddit",
-            "description": "Navigate Reddit's unique culture to help Ergo grow",
-            "intro": "Reddit requires a different approach. Your success comes from providing value to the community, not just promoting Ergo.",
-            "bestPracticesTitle": "Best Practices:",
+            "title": "如何在 Reddit 上分享",
+            "description": "駕馭 Reddit 的獨特文化以幫助 Ergo 成長",
+            "intro": "Reddit 需要不同的方式。您的成功來自於為社群提供價值，而非僅僅推廣 Ergo。",
+            "bestPracticesTitle": "最佳實踐：",
             "bestPractices": [
-              "Always read community rules before posting",
-              "Engage with other posts before sharing your own",
-              "Use descriptive, non-promotional titles",
-              "Explain why your content is relevant to that community",
-              "Respond to comments within 2-4 hours",
-              "Follow the 80/20 rule: 80% engagement, 20% promotion"
+              "發布前務必閱讀社群規則",
+              "先與他人的帖子互動，再分享自己的內容",
+              "使用描述性、非促銷性的標題",
+              "解釋為什麼您的內容與該社群相關",
+              "在 2-4 小時內回覆評論",
+              "遵循 80/20 法則：80% 互動，20% 推廣"
             ],
-            "timingTitle": "Optimal Timing:",
+            "timingTitle": "最佳時機：",
             "timing": {
-              "General Crypto": "Weekdays 9-11 AM EST, 2-4 PM EST",
-              "Technical/Dev": "Tuesday-Thursday, avoid Mondays and Fridays",
-              "Mining": "Sunday evenings, Wednesday mornings",
-              "Economics": "Monday-Wednesday for serious discussions"
+              "General Crypto": "工作日上午 9-11 時（EST）、下午 2-4 時（EST）",
+              "Technical/Dev": "週二至週四，避開週一和週五",
+              "Mining": "週日晚上、週三早上",
+              "Economics": "週一至週三進行嚴肅討論"
             },
-            "showMoreSubreddits": "+{count} more subreddits",
-            "showLess": "Show less"
+            "showMoreSubreddits": "+{count} 個更多 subreddit",
+            "showLess": "顯示較少"
           },
           "engagementTactics": {
-            "title": "How to Create Engaging Content",
-            "description": "Build meaningful conversations that help people discover Ergo",
-            "intro": "Great marketing sparks conversations. Here's how you can create engaging content that helps people discover Ergo:",
+            "title": "如何創作吸引人的內容",
+            "description": "建立有意義的對話，幫助人們發現 Ergo",
+            "intro": "出色的行銷能激發對話。以下是您如何創作吸引人的內容，幫助人們發現 Ergo：",
             "tactics": [
               {
-                "name": "Question-Driven Posts",
-                "description": "Start with thought-provoking questions",
+                "name": "問題驅動的帖子",
+                "description": "以發人深省的問題開始",
                 "examples": [
-                  "What's your biggest challenge with current DeFi protocols?",
-                  "How do you think privacy coins will evolve in the next 5 years?",
-                  "What would convince you to switch from Ethereum to Ergo?"
+                  "您在使用現有 DeFi 協議時最大的挑戰是什麼？",
+                  "您認為隱私幣在未來 5 年將如何演變？",
+                  "什麼會讓您考慮從 Ethereum 轉向 Ergo？"
                 ]
               },
               {
-                "name": "Comparison Content",
-                "description": "Position Ergo against alternatives",
+                "name": "比較內容",
+                "description": "將 Ergo 與替代方案進行定位",
                 "examples": [
-                  "Ergo vs Ethereum: Transaction costs breakdown",
-                  "eUTXO vs Account model: Security implications",
-                  "Autolykos vs other mining algorithms: Efficiency analysis"
+                  "Ergo 對比 Ethereum：交易費用細分",
+                  "eUTXO 對比帳戶模型：安全性影響",
+                  "Autolykos 對比其他挖礦算法：效率分析"
                 ]
               },
               {
-                "name": "Educational Series",
-                "description": "Create multi-part content that builds audience",
+                "name": "教育系列",
+                "description": "創作能積累受眾的多部分內容",
                 "examples": [
-                  "ErgoScript Basics: 5-part tutorial series",
-                  "History of Money: Weekly deep-dives",
-                  "DeFi Security: Case studies and lessons"
+                  "ErgoScript 基礎：5 部分教程系列",
+                  "貨幣歷史：每週深度探討",
+                  "DeFi 安全：案例研究與教訓"
                 ]
               }
             ],
-            "responseStrategyTitle": "Response Strategy:",
+            "responseStrategyTitle": "回覆策略：",
             "responseStrategy": [
-              "Acknowledge every comment within 4 hours",
-              "Ask follow-up questions to extend conversations",
-              "Tag relevant experts when technical questions arise",
-              "Share additional resources in comments",
-              "Create follow-up posts based on popular questions"
+              "在 4 小時內確認每條評論",
+              "提出後續問題以延伸對話",
+              "當技術問題出現時標記相關專家",
+              "在評論中分享額外資源",
+              "根據熱門問題創建後續帖子"
             ]
           },
           "timingOptimization": {
-            "title": "When to Post for Maximum Impact",
-            "description": "Timing strategies to maximize your reach",
-            "intro": "When you post matters. Here's when to share content for maximum visibility:",
-            "scheduleTitle": "Optimal Schedule:",
+            "title": "何時發布以獲得最大影響",
+            "description": "最大化您觸及範圍的時機策略",
+            "intro": "發布時機很重要。以下是分享內容以獲得最大可見度的時機：",
+            "scheduleTitle": "最佳時間表：",
             "schedule": {
-              "Blog Posts": "Tuesdays 10 AM EST - highest engagement for technical content",
-              "Newsletter": "Bi-weekly Thursdays - allows time for blog content integration",
-              "Twitter": "Daily 9 AM, 1 PM, 6 PM EST - matches global audience peaks",
-              "Reddit": "Platform-specific timing based on subreddit analytics",
-              "Discord": "Real-time engagement, peak hours 7-10 PM EST",
-              "Telegram": "Follow news cycle, immediate for breaking updates"
+              "Blog Posts": "週二上午 10 時（EST）- 技術內容互動率最高",
+              "Newsletter": "每兩週的週四 - 允許足夠時間整合部落格內容",
+              "Twitter": "每天上午 9 時、下午 1 時、下午 6 時（EST）- 符合全球受眾高峰",
+              "Reddit": "根據 subreddit 分析的平台特定時機",
+              "Discord": "即時互動，高峰時段為晚上 7-10 時（EST）",
+              "Telegram": "跟隨新聞週期，突發更新即時發布"
             },
-            "frequencyTitle": "Frequency Guidelines:",
+            "frequencyTitle": "頻率指南：",
             "frequency": [
-              "Quality over quantity - better to post less frequently with high value",
-              "Maintain consistent presence without overwhelming audiences",
-              "Batch content creation for efficiency",
-              "Leave gaps for community-generated discussions",
-              "Adjust frequency based on engagement metrics"
+              "質量重於數量 - 發布較少但高價值的內容更佳",
+              "保持一致的存在感而不讓受眾感到不堪重負",
+              "批量創作內容以提高效率",
+              "為社群生成的討論留有空間",
+              "根據互動指標調整頻率"
             ],
-            "toolsTitle": "Recommended Tools:",
+            "toolsTitle": "推薦工具：",
             "tools": [
-              "Buffer/Hootsuite for scheduling",
-              "Reddit analytics for optimal posting times",
-              "Twitter Analytics for audience insights",
-              "Discord bots for engagement tracking"
+              "Buffer/Hootsuite 用於排程",
+              "Reddit 分析工具用於最佳發布時間",
+              "Twitter Analytics 用於受眾洞察",
+              "Discord 機器人用於互動追蹤"
             ]
           },
           "measurementSuccess": {
-            "title": "How to Know If You're Helping",
-            "description": "Track your impact and see what works",
-            "intro": "Want to know if your efforts are making a difference? Focus on these metrics that indicate real community growth:",
+            "title": "如何知道您是否有所幫助",
+            "description": "追蹤您的影響並了解哪些有效",
+            "intro": "想知道您的努力是否產生了影響？專注於這些表明真實社群成長的指標：",
             "keyMetrics": [
               {
-                "category": "Engagement Quality",
+                "category": "互動質量",
                 "metrics": [
-                  "Comment depth and thoughtfulness",
-                  "Question quality in responses",
-                  "Cross-platform conversation continuation"
+                  "評論深度和思考性",
+                  "回覆中的問題質量",
+                  "跨平台對話延續"
                 ]
               },
               {
-                "category": "Community Growth",
+                "category": "社群成長",
                 "metrics": [
-                  "New Discord/Telegram members",
-                  "Developer GitHub activity",
-                  "Ecosystem project mentions"
+                  "新 Discord/Telegram 成員",
+                  "開發者 GitHub 活動",
+                  "生態系統項目提及"
                 ]
               },
               {
-                "category": "Content Performance",
+                "category": "內容表現",
                 "metrics": [
-                  "Time spent reading",
-                  "Share-to-view ratio",
-                  "Follow-up question generation"
+                  "閱讀花費時間",
+                  "分享與瀏覽比率",
+                  "後續問題生成"
                 ]
               },
               {
-                "category": "Business Impact",
+                "category": "業務影響",
                 "metrics": [
-                  "Website traffic from social",
-                  "Developer tool downloads",
-                  "Ecosystem adoption metrics"
+                  "來自社交媒體的網站流量",
+                  "開發者工具下載量",
+                  "生態系統採用指標"
                 ]
               }
             ],
-            "analyticsToolsTitle": "Analytics Tools:",
+            "analyticsToolsTitle": "分析工具：",
             "analyticsTools": [
-              "Google Analytics for website traffic attribution",
-              "Social media native analytics",
-              "Discord/Telegram member growth tracking",
-              "GitHub activity monitoring for developer interest"
+              "Google Analytics 用於網站流量歸因",
+              "社交媒體原生分析工具",
+              "Discord/Telegram 成員增長追蹤",
+              "GitHub 活動監控以了解開發者興趣"
             ],
-            "optimizationTitle": "Optimization Process:",
+            "optimizationTitle": "優化流程：",
             "optimization": [
-              "Weekly review of top-performing content",
-              "Monthly analysis of channel effectiveness",
-              "Quarterly strategy adjustments based on data",
-              "A/B testing for content formats and timing"
+              "每週審查表現最佳的內容",
+              "每月分析管道效果",
+              "根據數據每季度調整策略",
+              "對內容格式和時機進行 A/B 測試"
             ]
           }
         },
         "redditCategories": [
           {
-            "title": "General Crypto",
-            "description": "For crypto comparisons, DeFi, PoW, network economics"
+            "title": "一般加密貨幣",
+            "description": "適合加密貨幣比較、DeFi、PoW、網絡經濟學"
           },
           {
-            "title": "Privacy / Cypherpunk",
-            "description": "Privacy, programmable privacy, crypto-anarchy"
+            "title": "隱私 / 密碼朋克",
+            "description": "隱私、可程式化隱私、加密無政府主義"
           },
           {
-            "title": "Mining & PoW",
-            "description": "ERG mining, PoW vs PoS, mining economics"
+            "title": "挖礦與 PoW",
+            "description": "ERG 挖礦、PoW 對比 PoS、挖礦經濟學"
           },
           {
-            "title": "Economics & History",
-            "description": "Perfect for History of Money series"
+            "title": "經濟學與歷史",
+            "description": "非常適合貨幣歷史系列"
           },
           {
-            "title": "Dev & Tech",
-            "description": "eUTXO, ErgoScript, Sigma protocols, dev guides"
+            "title": "開發與技術",
+            "description": "eUTXO、ErgoScript、Sigma 協議、開發指南"
           }
         ],
         "additionalPlatforms": {
-          "title": "More Places to Share",
-          "subtitle": "Once you're comfortable with core channels, explore these additional platforms. Each one requires a different approach - customize your content for each platform's audience.",
+          "title": "更多分享場所",
+          "subtitle": "熟悉核心管道後，探索這些額外平台。每個平台都需要不同的方式 - 為每個平台的受眾自訂您的內容。",
           "categories": [
             {
-              "title": "Crypto-Native Platforms",
+              "title": "加密原生平台",
               "platforms": [
                 {
                   "name": "Bitcointalk.org",
-                  "description": "ANN threads, research posts, mining/wallet guides",
-                  "actionText": "Visit Forum"
+                  "description": "ANN 帖子、研究文章、挖礦/錢包指南",
+                  "actionText": "訪問論壇"
                 },
                 {
                   "name": "Medium",
-                  "description": "Mirror best articles with canonical link",
-                  "actionText": "Publish Article"
+                  "description": "帶 canonical 鏈接鏡像最佳文章",
+                  "actionText": "發布文章"
                 },
                 {
                   "name": "Mirror.xyz",
-                  "description": "Web3-native blog for research/essays",
-                  "actionText": "Create Post"
+                  "description": "Web3 原生部落格，用於研究/論文",
+                  "actionText": "創建帖子"
                 },
                 {
                   "name": "HackerNoon",
-                  "description": "Long-form research in crypto/blockchain section",
-                  "actionText": "Submit Article"
+                  "description": "加密/區塊鏈版塊的長篇研究",
+                  "actionText": "提交文章"
                 },
                 {
                   "name": "Dev.to",
-                  "description": "Technical articles for builders (eUTXO, off-chain, oracles)",
-                  "actionText": "Publish Tutorial"
+                  "description": "面向開發者的技術文章（eUTXO、鏈下、預言機）",
+                  "actionText": "發布教程"
                 }
               ]
             },
             {
-              "title": "Tech & Product Platforms",
+              "title": "技術與產品平台",
               "platforms": [
                 {
                   "name": "Hacker News",
-                  "description": "Strong, non-clickbait articles (history of money, eUTXO, privacy)",
-                  "actionText": "Submit Story"
+                  "description": "優質、非標題黨文章（貨幣歷史、eUTXO、隱私）",
+                  "actionText": "提交故事"
                 },
                 {
                   "name": "Lobsters",
-                  "description": "Technical posts on cryptography, PoW, protocols",
-                  "actionText": "Submit Link"
+                  "description": "關於密碼學、PoW、協議的技術文章",
+                  "actionText": "提交鏈接"
                 },
                 {
                   "name": "Indie Hackers",
-                  "description": "Articles on building tools and ecosystems",
-                  "actionText": "Share Story"
+                  "description": "關於構建工具和生態系統的文章",
+                  "actionText": "分享故事"
                 },
                 {
                   "name": "Stack Overflow / Bitcoin.SE",
-                  "description": "Q&A with links as sources (not for posting articles)",
-                  "actionText": "Answer Questions"
+                  "description": "以鏈接為來源的問答（非發布文章之用）",
+                  "actionText": "回答問題"
                 }
               ]
             },
             {
-              "title": "Social & Content Platforms",
+              "title": "社交與內容平台",
               "platforms": [
                 {
                   "name": "Farcaster",
-                  "description": "Channels: /crypto, /bitcoin, /defi, /privacy",
-                  "actionText": "Join Network"
+                  "description": "頻道：/crypto, /bitcoin, /defi, /privacy",
+                  "actionText": "加入網絡"
                 },
                 {
                   "name": "Nostr",
-                  "description": "Notes with key points and link",
-                  "actionText": "Publish Note"
+                  "description": "帶要點和鏈接的筆記",
+                  "actionText": "發布筆記"
                 },
                 {
                   "name": "Lens Protocol",
-                  "description": "Web3-native audience for research content",
-                  "actionText": "Create Post"
+                  "description": "面向研究內容的 Web3 原生受眾",
+                  "actionText": "創建帖子"
                 },
                 {
                   "name": "YouTube",
-                  "description": "Short summary videos (2-5 min) per key article",
-                  "actionText": "Create Video"
+                  "description": "每篇重點文章的短摘要視頻（2-5 分鐘）",
+                  "actionText": "創建視頻"
                 }
               ]
             }
           ],
-          "tipsTitle": "Tips for Using Extended Channels:",
+          "tipsTitle": "使用擴展管道的技巧：",
           "tips": [
             {
-              "strong": "Customize your angle:",
-              "text": "Share history of money articles in economics/philosophy subreddits; privacy content in privacy/cypherpunk communities; eUTXO content on dev platforms and Hacker News"
+              "strong": "自訂您的角度：",
+              "text": "在經濟學/哲學 subreddit 分享貨幣歷史文章；在隱私/密碼朋克社群分享隱私內容；在開發平台和 Hacker News 分享 eUTXO 內容"
             },
             {
-              "strong": "Vary your formats:",
-              "text": "Try full cross-posts (Reddit, Mirror, Medium), thread summaries with links, or visual content (diagrams, quotes) with source links"
+              "strong": "多樣化您的格式：",
+              "text": "嘗試完整的交叉帖子（Reddit、Mirror、Medium）、帶鏈接的推文串摘要，或帶來源鏈接的視覺內容（圖表、引用）"
             },
             {
-              "strong": "Take your time:",
-              "text": "Don't try to share everything in one day. Build a habit: for each new article, make 5-10 meaningful posts across different places over a few days"
+              "strong": "慢慢來：",
+              "text": "不要試圖在一天內分享所有內容。養成習慣：對於每篇新文章，在幾天內在不同地方發布 5-10 個有意義的帖子"
             }
           ]
         },
         "faq": {
-          "title": "Frequently Asked Questions",
-          "usefulLinksTitle": "Useful Links:",
+          "title": "常見問題",
+          "usefulLinksTitle": "有用鏈接：",
           "questions": [
             {
-              "question": "I'm new to marketing. Where should I start?",
-              "answer": "Start with Step 1: Join Discord (discord.gg/ergo-platform) and see how other community members share content. Then pick ONE channel you're comfortable with - usually Twitter or Reddit - and practice the strategies from this guide for 2 weeks before expanding."
+              "question": "我是行銷新手，應該從哪裡開始？",
+              "answer": "從第一步開始：加入 Discord（discord.gg/ergo-platform），觀察其他社群成員如何分享內容。然後選擇一個您熟悉的管道——通常是 Twitter 或 Reddit——並在擴展之前用兩週時間練習本指南中的策略。"
             },
             {
-              "question": "Where do I find content to share?",
-              "answer": "Start with ergoblockchain.org/blog for official content. Subscribe to the Beehiiv newsletter for weekly digests. Follow @BuildOnErgo for developer updates. Join ErgoSocials Telegram to coordinate with other marketers. Never share content you don't understand - ask questions in Discord first."
+              "question": "我在哪裡可以找到要分享的內容？",
+              "answer": "從 ergoblockchain.org/blog 開始獲取官方內容。訂閱 Beehiiv 電子報以獲取每週摘要。關注 @BuildOnErgo 以獲取開發者更新。加入 ErgoSocials Telegram 與其他行銷人員協調。切勿分享您不理解的內容 - 先在 Discord 中提問。"
             },
             {
-              "question": "How do I succeed on Reddit without getting banned?",
-              "answer": "Follow the 80/20 rule: spend 80% of your time commenting on others' posts, 20% sharing your own content. Read subreddit rules carefully - each has different requirements. Start with r/ergonauts to practice, then expand to crypto subreddits like r/CryptoCurrency. Always explain why your content matters to that specific community."
+              "question": "如何在 Reddit 上成功而不被封禁？",
+              "answer": "遵循 80/20 法則：花 80% 的時間評論他人的帖子，20% 分享自己的內容。仔細閱讀 subreddit 規則 - 每個都有不同的要求。從 r/ergonauts 開始練習，然後擴展到 r/CryptoCurrency 等加密貨幣 subreddit。始終解釋為什麼您的內容對該特定社群重要。"
             },
             {
-              "question": "How much time do I need to commit?",
-              "answer": "Start with just 30 minutes daily: 10 minutes reading new content, 10 minutes engaging on Discord/Twitter, 10 minutes posting/commenting. As you get comfortable, you can batch content creation (1 hour weekly) and focus on real-time engagement. Quality beats quantity - it's better to do less consistently than burn out."
+              "question": "我需要投入多少時間？",
+              "answer": "從每天僅 30 分鐘開始：10 分鐘閱讀新內容，10 分鐘在 Discord/Twitter 上互動，10 分鐘發帖/評論。隨著熟練度提升，您可以批量創作內容（每週 1 小時）並專注於即時互動。質量勝於數量 - 持續地做少一些勝過精疲力竭。"
             },
             {
-              "question": "How do I know if I'm making a difference?",
-              "answer": "Focus on engagement quality: Are people asking follow-up questions? Are your posts generating discussions? Are community members mentioning Ergo more often? Track Discord member growth, Twitter engagement rates, and Reddit upvote ratios. Success means more people learning about Ergo, not just more views."
+              "question": "如何知道我是否有所幫助？",
+              "answer": "專注於互動質量：人們是否在提出後續問題？您的帖子是否引發了討論？社群成員是否更頻繁地提及 Ergo？追蹤 Discord 成員增長、Twitter 互動率及 Reddit 讚踩比率。成功意味著更多人了解 Ergo，而非僅僅增加瀏覽量。"
             },
             {
-              "question": "What mistakes should I avoid?",
-              "answer": "Don't spam the same content across platforms without customization. Don't argue with critics - engage constructively or ignore. Don't share content you can't explain. Don't neglect community rules. Don't expect immediate results - community building takes months, not days."
+              "question": "我應該避免哪些錯誤？",
+              "answer": "不要在沒有自訂的情況下在各平台發布相同內容。不要與批評者爭論 - 建設性地互動或忽略。不要分享您無法解釋的內容。不要忽視社群規則。不要期望立即見效 - 建立社群需要數月而非數天。"
             }
           ]
         },
         "finalCta": {
-          "title": "Ready to",
-          "titleHighlight": "Help",
-          "titleEnd": "Ergo Grow?",
-          "subtitle": "Start implementing these strategies today and make a real impact on Ergo's growth",
+          "title": "準備好",
+          "titleHighlight": "幫助",
+          "titleEnd": "Ergo 成長了嗎？",
+          "subtitle": "今天就開始實施這些策略，對 Ergo 的成長產生真實影響",
           "discord": {
-            "title": "Join Marketing Discord",
-            "members": "15K+ Active Members",
-            "description": "Connect with experienced community marketers, share strategies, and get feedback on your campaigns in #marketing channel"
+            "title": "加入行銷 Discord",
+            "members": "15K+ 活躍成員",
+            "description": "在 #marketing 頻道中與經驗豐富的社群行銷人員聯繫、分享策略並獲得您活動的反饋"
           },
           "sourceContent": {
-            "title": "Get Source Content",
-            "frequency": "Fresh Weekly Posts",
-            "description": "Start with ergoblockchain.org blog posts and announcements - your primary source for authentic, high-quality content to amplify"
+            "title": "獲取來源內容",
+            "frequency": "每週更新文章",
+            "description": "從 ergoblockchain.org 部落格文章和公告開始 - 這是您放大真實高質量內容的主要來源"
           }
         },
         "emailCta": {
-          "title": "Stay Updated on Marketing",
-          "description": "Get notified about new marketing strategies, community growth tactics, and engagement best practices"
+          "title": "保持行銷更新",
+          "description": "獲取關於新行銷策略、社群成長策略及互動最佳實踐的通知"
         }
       }
     },
     "introduction": {
       "seo": {
-        "title": "Introduction to Ergo | Beginner's Guide to Blockchain",
-        "description": "Complete introduction to Ergo blockchain. Learn the basics of smart contracts, DeFi, mining, and why Ergo is the future of programmable money. Perfect for beginners.",
-        "keywords": "ergo introduction, blockchain basics, ergo tutorial, crypto beginner, learn blockchain, ergo guide, defi introduction, smart contracts basics",
-        "ogTitle": "Introduction to Ergo - Start Your Blockchain Journey",
-        "ogDescription": "Beginner-friendly guide to understanding Ergo blockchain, its technology, and ecosystem.",
-        "ogAlt": "Ergo Introduction",
-        "twitterTitle": "Introduction to Ergo Blockchain",
-        "twitterDescription": "Learn the fundamentals of Ergo - the future of programmable money."
+        "title": "Ergo 簡介 | 區塊鏈初學者指南",
+        "description": "Ergo 區塊鏈完整簡介。了解智能合約、DeFi、挖礦的基礎知識，以及為何 Ergo 是可程式貨幣的未來。非常適合初學者。",
+        "keywords": "ergo 簡介, 區塊鏈基礎, ergo 教學, 加密貨幣初學者, 學習區塊鏈, ergo 指南, defi 簡介, 智能合約基礎",
+        "ogTitle": "Ergo 簡介——開始您的區塊鏈之旅",
+        "ogDescription": "適合初學者的 Ergo 區塊鏈理解指南，涵蓋技術和生態系統。",
+        "ogAlt": "Ergo 簡介",
+        "twitterTitle": "Ergo 區塊鏈簡介",
+        "twitterDescription": "學習 Ergo 的基礎知識——可程式貨幣的未來。"
       },
       "schema": {
         "breadcrumbs": {
-          "introduction": "Introduction"
+          "introduction": "簡介"
         },
         "learningResource": {
-          "name": "Ergo Blockchain Introduction",
-          "description": "Educational resource for learning Ergo blockchain fundamentals",
+          "name": "Ergo 區塊鏈簡介",
+          "description": "學習 Ergo 區塊鏈基礎知識的教育資源",
           "learningResourceType": "Presentation",
           "educationalLevel": "Beginner",
-          "teaches": ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency"],
+          "teaches": [
+            "Blockchain",
+            "Smart Contracts",
+            "DeFi",
+            "Cryptocurrency"
+          ],
           "timeRequired": "PT30M"
         },
         "techArticle": {
-          "headline": "Introduction to Ergo Blockchain",
-          "description": "Comprehensive guide for beginners to understand Ergo",
+          "headline": "Ergo 區塊鏈簡介",
+          "description": "初學者了解 Ergo 的全面指南",
           "datePublished": "2024-01-01",
           "proficiencyLevel": "Beginner"
         }
@@ -1671,173 +1676,173 @@
     },
     "journeys": {
       "new": {
-        "title": "New to Crypto",
-        "subtitle": "Start from the basics",
+        "title": "加密新手",
+        "subtitle": "從基礎開始",
         "steps": {
           "why": {
-            "title": "Why Ergo?",
-            "description": "Learn what makes Ergo unique"
+            "title": "為什麼選擇 Ergo？",
+            "description": "了解 Ergo 的獨特之處"
           },
           "wallet": {
-            "title": "Get a Wallet",
-            "description": "Set up your first Ergo wallet"
+            "title": "獲取錢包",
+            "description": "設置您的第一個 Ergo 錢包"
           },
           "testnet": {
-            "title": "Try Testnet",
-            "description": "Practice with test coins"
+            "title": "嘗試測試網",
+            "description": "使用測試代幣進行練習"
           },
           "send": {
-            "title": "Send Transaction",
-            "description": "Learn by doing your first transaction"
+            "title": "發送交易",
+            "description": "透過完成第一筆交易進行學習"
           },
           "security": {
-            "title": "Security Best Practices",
-            "description": "Keep your assets safe"
+            "title": "安全最佳實踐",
+            "description": "保護您的資產安全"
           }
         }
       },
       "explore": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover what's possible",
+        "title": "探索生態系統",
+        "subtitle": "發現可能性",
         "steps": {
           "compare": {
-            "title": "Compare Platforms",
-            "description": "See how Ergo differs from other blockchains"
+            "title": "比較平台",
+            "description": "了解 Ergo 與其他區塊鏈的差異"
           },
           "features": {
-            "title": "Key Features",
-            "description": "Understand Ergo's unique capabilities"
+            "title": "核心功能",
+            "description": "了解 Ergo 的獨特能力"
           },
           "privacy": {
-            "title": "Privacy Features",
-            "description": "Learn about Sigma protocols"
+            "title": "隱私功能",
+            "description": "了解 Sigma 協議"
           },
           "stories": {
-            "title": "Success Stories",
-            "description": "Real-world applications and use cases"
+            "title": "成功案例",
+            "description": "真實世界的應用和用例"
           }
         }
       },
       "build": {
-        "title": "Start Building",
-        "subtitle": "Develop on Ergo",
+        "title": "開始開發",
+        "subtitle": "在 Ergo 上開發",
         "steps": {
           "hello": {
             "title": "Hello World",
-            "description": "Your first ErgoScript contract"
+            "description": "您的第一個 ErgoScript 合約"
           },
           "playground": {
-            "title": "Use Playground",
-            "description": "Interactive coding environment"
+            "title": "使用遊樂場",
+            "description": "互動式編程環境"
           },
           "sdk": {
-            "title": "Choose SDK",
-            "description": "Pick your development tools"
+            "title": "選擇 SDK",
+            "description": "選擇您的開發工具"
           },
           "community": {
-            "title": "Join Developers",
-            "description": "Connect with the dev community"
+            "title": "加入開發者",
+            "description": "與開發者社群聯繫"
           }
         }
       },
       "mine": {
-        "title": "Start Mining",
-        "subtitle": "Secure the network",
+        "title": "開始挖礦",
+        "subtitle": "保護網絡安全",
         "steps": {
           "hardware": {
-            "title": "Check Hardware",
-            "description": "Ensure your GPU is compatible"
+            "title": "檢查硬件",
+            "description": "確認您的 GPU 是否兼容"
           },
           "pool": {
-            "title": "Choose Pool",
-            "description": "Find a reliable mining pool"
+            "title": "選擇礦池",
+            "description": "找到可靠的挖礦礦池"
           },
           "software": {
-            "title": "Setup Software",
-            "description": "Configure your mining software"
+            "title": "設置軟件",
+            "description": "配置您的挖礦軟件"
           },
           "monitor": {
-            "title": "Monitor Performance",
-            "description": "Track your mining results"
+            "title": "監控效能",
+            "description": "追蹤您的挖礦結果"
           }
         }
       },
       "invest": {
-        "title": "Learn to Invest",
-        "subtitle": "Understand the fundamentals",
+        "title": "學習投資",
+        "subtitle": "了解基本面",
         "steps": {
           "research": {
-            "title": "Research Ergo",
-            "description": "Study the technology and tokenomics"
+            "title": "研究 Ergo",
+            "description": "研究技術和代幣經濟學"
           },
           "exchange": {
-            "title": "Find Exchanges",
-            "description": "Where to buy and trade ERG"
+            "title": "尋找交易所",
+            "description": "購買和交易 ERG 的場所"
           },
           "storage": {
-            "title": "Secure Storage",
-            "description": "Best practices for holding ERG"
+            "title": "安全存儲",
+            "description": "持有 ERG 的最佳實踐"
           },
           "defi": {
-            "title": "Explore DeFi",
-            "description": "Discover earning opportunities"
+            "title": "探索 DeFi",
+            "description": "發現賺取機會"
           }
         }
       }
     },
     "steps": {
       "wallet": {
-        "title": "Setup Wallet",
-        "description": "Choose and setup your Ergo wallet"
+        "title": "設定錢包",
+        "description": "選擇並設定您的 Ergo 錢包"
       },
       "getErg": {
-        "title": "Get ERG",
-        "description": "Buy ERG on exchanges"
+        "title": "取得 ERG",
+        "description": "在交易所購買 ERG"
       },
       "explore": {
-        "title": "Explore dApps",
-        "description": "Discover Ergo applications"
+        "title": "探索 dApps",
+        "description": "探索 Ergo 應用程式"
       },
       "build": {
-        "title": "Start Building",
-        "description": "Develop on Ergo"
+        "title": "開始建構",
+        "description": "在 Ergo 上開發"
       }
     },
     "quickLinks": {
-      "title": "Quick Links",
-      "wallet": "Download Wallet",
-      "exchange": "Buy ERG",
-      "documentation": "Documentation",
-      "community": "Join Community"
+      "title": "快速連結",
+      "wallet": "下載錢包",
+      "exchange": "購買 ERG",
+      "documentation": "文件",
+      "community": "加入社區"
     },
     "faqContent": {
-      "basics_icon_helpcircle_q_what": "Basics\",\n    icon: HelpCircle,\n    q: 'What does a \"fair launch\" mean?',\n    a: 'Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.",
-      "basics_icon_helpcircle_q_is": "Basics\",\n    icon: HelpCircle,\n    q: \"Is Ergo a company?\",\n    a: \"No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network.",
-      "basics_icon_helpcircle_q_what_does_a_fair_launch": "Basics\",\n    icon: HelpCircle,\n    q: 'What does a \"fair launch",
-      "technology_icon_cpu_q_what": "Technology\",\n    icon: Cpu,\n    q: \"What is eUTXO?\",\n    a: 'The Extended UTXO model attaches data and logic directly to \"boxes\" of money. This enhances smart contract security, fee predictability, and allows for better scalability compared to the account model.",
-      "getting_started_icon_zap_q": "Getting Started\",\n    icon: Zap,\n    q: \"How can I get ERG?\",\n    a: \"You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing.",
-      "ecosystem_icon_users_q_what": "Ecosystem\",\n    icon: Users,\n    q: \"What kinds of dApps are on Ergo?\",\n    a: \"Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more.",
-      "community_icon_users_q_who": "Community\",\n    icon: Users,\n    q: \"Who governs Ergo?\",\n    a: \"Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support.",
-      "all_basics_technology_getting_started": "All\", \"Basics\", \"Technology\", \"Getting Started\", \"Ecosystem\", \"Community",
-      "ergo_is_a_secure_proof": "Ergo is a secure Proof-of-Work blockchain for powerful smart contracts, enabling decentralized financial applications. Think of it as digital money (ERG) with programmable rules.",
-      "what_does_a_fair_launch": "What does a \"fair launch\" mean?',\n    a: 'Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.",
-      "the_extended_utxo_model_attaches": "The Extended UTXO model attaches data and logic directly to \"boxes\" of money. This enhances smart contract security, fee predictability, and allows for better scalability compared to the account model.",
-      "find_answers_to_common_questions": "Find answers to common questions about Ergo, its technology, and the ecosystem. If you can't find what you're looking for, join our community channels.",
-      "everything_you_need_to_know": "Everything you need to know about Ergo blockchain in one place.",
-      "faqpage_id_https_ergoblockchain_org": "FAQPage\",\n    \"@id\": \"https://ergoblockchain.org/start/faq\",\n    name: \"Ergo Frequently Asked Questions",
-      "question_name_what_is_ergo": "Question\",\n        name: \"What is Ergo?",
-      "answer_text_ergo_is_a": "Answer\",\n          text: \"Ergo is a next-generation Proof-of-Work blockchain platform with smart contracts, designed for financial contracts and DeFi applications.",
-      "question_name_can_i_mine_ergo": "Question\",\n        name: \"Can I mine Ergo?",
+      "basics_icon_helpcircle_q_what": "基礎知識\",\n    icon: HelpCircle,\n    q: '什麼是「公平發行」？',\n    a: 'Ergo 沒有為創始人進行首次代幣發行（ICO）或預挖代幣。這確保了更公平的分配，因為每個人從第一天起都有平等的機會透過挖礦獲得 ERG。",
+      "basics_icon_helpcircle_q_is": "基礎知識\",\n    icon: HelpCircle,\n    q: \"Ergo 是一家公司嗎？\",\n    a: \"不是，Ergo 是一個去中心化的開源協議。Ergo 基金會是一個非營利社群機構，支持開發但不控制網絡。",
+      "basics_icon_helpcircle_q_what_does_a_fair_launch": "基礎知識\",\n    icon: HelpCircle,\n    q: '什麼是「公平發行",
+      "technology_icon_cpu_q_what": "技術\",\n    icon: Cpu,\n    q: \"什麼是 eUTXO？\",\n    a: '擴展 UTXO 模型直接將數據和邏輯附加到資金「盒子」上。這提高了智能合約的安全性、費用可預測性，並與帳戶模型相比實現了更好的可擴展性。",
+      "getting_started_icon_zap_q": "入門\",\n    icon: Zap,\n    q: \"如何獲得 ERG？\",\n    a: \"您可以在各種加密貨幣交易所、透過點對點交易或挖礦獲取 ERG。投資前請務必進行自己的研究。",
+      "ecosystem_icon_users_q_what": "生態系統\",\n    icon: Users,\n    q: \"Ergo 上有哪些類型的 dApp？\",\n    a: \"Ergo 的生態系統包括 DeFi 平台（Spectrum、Duckpools）、隱私工具（ErgoMixer）、NFT 市場（SkyHarbor）、跨鏈橋（Rosen）等。",
+      "community_icon_users_q_who": "社群\",\n    icon: Users,\n    q: \"誰在治理 Ergo？\",\n    a: \"Ergo 是去中心化且由社群驅動的。協議變更透過 Ergo 改進提案（EIPs）進行討論和正式化，由礦工表達支持。",
+      "all_basics_technology_getting_started": "全部\", \"基礎知識\", \"技術\", \"入門\", \"生態系統\", \"社群",
+      "ergo_is_a_secure_proof": "Ergo 是一個安全的工作量證明區塊鏈，用於強大的智能合約，支持去中心化金融應用程序。可以將其視為具有可程式化規則的數字貨幣（ERG）。",
+      "what_does_a_fair_launch": "什麼是「公平發行」？',\n    a: 'Ergo 沒有為創始人進行首次代幣發行（ICO）或預挖代幣。這確保了更公平的分配，因為每個人從第一天起都有平等的機會透過挖礦獲得 ERG。",
+      "the_extended_utxo_model_attaches": "擴展 UTXO 模型直接將數據和邏輯附加到資金「盒子」上。這提高了智能合約的安全性、費用可預測性，並與帳戶模型相比實現了更好的可擴展性。",
+      "find_answers_to_common_questions": "找到關於 Ergo、其技術及生態系統的常見問題解答。如果找不到您要尋找的內容，請加入我們的社群頻道。",
+      "everything_you_need_to_know": "在一個地方了解關於 Ergo 區塊鏈的一切知識。",
+      "faqpage_id_https_ergoblockchain_org": "FAQPage\",\n    \"@id\": \"https://ergoblockchain.org/start/faq\",\n    name: \"Ergo 常見問題",
+      "question_name_what_is_ergo": "Question\",\n        name: \"什麼是 Ergo？",
+      "answer_text_ergo_is_a": "Answer\",\n          text: \"Ergo 是一個具有智能合約的下一代工作量證明區塊鏈平台，專為金融合約和 DeFi 應用程序設計。",
+      "question_name_can_i_mine_ergo": "Question\",\n        name: \"我可以挖礦 Ergo 嗎？",
       "answer_text": "Answer\",\n          text:",
-      "ergo_faq_frequently_asked_questions": "Ergo FAQ | Frequently Asked Questions About Blockchain",
-      "ergo_faq_all_your_questions_answered": "Ergo FAQ - All Your Questions Answered",
-      "ergo_faq_quick_answers_to_common_questions": "Ergo FAQ | Quick Answers to Common Questions"
+      "ergo_faq_frequently_asked_questions": "Ergo 常見問題 | 關於區塊鏈的常見問題",
+      "ergo_faq_all_your_questions_answered": "Ergo 常見問題 - 所有問題一次解答",
+      "ergo_faq_quick_answers_to_common_questions": "Ergo 常見問題 | 常見問題快速解答"
     },
     "introductionMeta": {
       "ergo_introduction_description_pow_smart": "Ergo Introduction\",\n    description: \"PoW smart contracts with eUTXO & Sigma Protocols.",
       "ergo_introduction_pow_smart_contracts": "Ergo Introduction — PoW Smart Contracts, eUTXO, Sigma Protocols",
-      "meet_ergo_a_pow_smart": "Meet Ergo: a PoW smart‑contract platform using the eUTXO model and Sigma protocols. Build privacy‑aware, auditable dApps with predictable costs.",
-      "pow_smart_contracts_with_eutxo_sigma_protocols": "PoW smart contracts with eUTXO & Sigma Protocols.",
+      "meet_ergo_a_pow_smart": "認識 Ergo：一個使用 eUTXO 模型和 Sigma 協議的 PoW 智能合約平台。以可預測的成本建構具隱私保護和可審計性的 dApps。",
+      "pow_smart_contracts_with_eutxo_sigma_protocols": "具備 eUTXO 和 Sigma 協議的 PoW 智能合約。",
       "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
       "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
@@ -1850,13 +1855,13 @@
       "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject\",\n        url: \"https://ergoblockchain.org/logo.png",
       "learningresource_name_ergo_blockchain_introduction": "LearningResource\",\n    name: \"Ergo Blockchain Introduction\",\n    description: \"Educational resource for learning Ergo blockchain fundamentals\",\n    learningResourceType: \"Presentation\",\n    educationalLevel: \"Beginner",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Cryptocurrency",
-      "introduction_to_ergo_beginner": "Introduction to Ergo | Beginner",
-      "introduction_to_ergo_start_your_blockchain_journey": "Introduction to Ergo - Start Your Blockchain Journey",
-      "beginner_friendly_guide_to_understanding": "Beginner-friendly guide to understanding Ergo blockchain, its technology, and ecosystem.",
-      "introduction_to_ergo_blockchain": "Introduction to Ergo Blockchain",
-      "learn_the_fundamentals_of_ergo": "Learn the fundamentals of Ergo - the future of programmable money.",
-      "comprehensive_guide_for_beginners_to": "Comprehensive guide for beginners to understand Ergo",
-      "educational_resource_for_learning_ergo": "Educational resource for learning Ergo blockchain fundamentals"
+      "introduction_to_ergo_beginner": "Ergo 簡介 | 初學者",
+      "introduction_to_ergo_start_your_blockchain_journey": "Ergo 簡介——開始您的區塊鏈之旅",
+      "beginner_friendly_guide_to_understanding": "適合初學者的 Ergo 區塊鏈理解指南，涵蓋技術和生態系統。",
+      "introduction_to_ergo_blockchain": "Ergo 區塊鏈簡介",
+      "learn_the_fundamentals_of_ergo": "學習 Ergo 的基礎知識——可程式貨幣的未來。",
+      "comprehensive_guide_for_beginners_to": "初學者了解 Ergo 的全面指南",
+      "educational_resource_for_learning_ergo": "學習 Ergo 區塊鏈基礎知識的教育資源"
     },
     "quizContent": {
       "connect_with_your_community": "CONNECT WITH YOUR COMMUNITY",
@@ -2049,99 +2054,99 @@
     "learning_paths_icon_target_color": "Learning Paths\", icon: Target, color:",
     "quick_start_icon_clock_color": "Quick Start\", icon: Clock, color:",
     "open_source_icon_gitbranch_color": "Open Source\", icon: GitBranch, color:",
-    "skip_to_docs": "Skip to Docs",
-    "choose_your_path_into_ergo": "Choose your path into Ergo",
-    "pick_what_describes_you_best": "Pick what describes you best, and we\\'ll guide you through everything you need to know.",
-    "start_from_the_basics": "Start from the basics",
-    "why_ergo_exists": "Why Ergo Exists",
-    "understand_the_problems_we_solve": "Understand the problems we solve",
-    "download_and_set_up_securely": "Download and set up securely",
-    "try_test_coins": "Try Test Coins",
-    "get_free_testnet_erg_to_practice": "Get free testnet ERG to practice",
-    "send_first_transaction": "Send First Transaction",
-    "learn_by_doing_send_erg": "Learn by doing - send ERG",
-    "essential_security_practices": "Essential security practices",
-    "i_want_to_learn": "I Want to Learn",
-    "compare_with_bitcoin_ethereum_monero": "Compare with Bitcoin, Ethereum, Monero",
-    "eutxo_sigma_protocols_explained": "eUTXO, Sigma Protocols explained",
-    "how_ergo_protects_your_data": "How Ergo protects your data",
-    "real_use_cases": "Real Use Cases",
-    "community_success_stories": "Community success stories",
-    "build_on_ergo": "Build on Ergo",
-    "your_first_ergoscript_contract": "Your first ErgoScript contract",
-    "try_playground": "Try Playground",
-    "interactive_contract_editor": "Interactive contract editor",
-    "libraries_for_your_language": "Libraries for your language",
-    "get_help_from_core_devs": "Get help from core devs",
-    "i_want_to_mine": "I Want to Mine",
-    "secure_the_network": "Secure the network",
-    "autolykos_v2_for_gpus": "Autolykos v2 for GPUs",
-    "choose_a_pool": "Choose a Pool",
-    "compare_pools_and_fees": "Compare pools and fees",
-    "run_a_node": "Run a Node",
-    "advanced_full_node_setup": "Advanced: full node setup",
-    "understand_the_asset": "Understand the asset",
-    "what": "What",
-    "supply_distribution_governance": "Supply, distribution, governance",
-    "major_integrations_and_users": "Major integrations and users",
-    "price_volume_analytics": "Price, volume, analytics",
-    "take_the_quiz": "Take the Quiz",
+    "skip_to_docs": "跳至文件",
+    "choose_your_path_into_ergo": "選擇您進入 Ergo 的路徑",
+    "pick_what_describes_you_best": "選擇最能描述您的選項，我們將引導您了解所有需要知道的內容。",
+    "start_from_the_basics": "從基礎開始",
+    "why_ergo_exists": "Ergo 存在的原因",
+    "understand_the_problems_we_solve": "了解我們解決的問題",
+    "download_and_set_up_securely": "安全下載並設定",
+    "try_test_coins": "試用測試幣",
+    "get_free_testnet_erg_to_practice": "獲取免費的測試網 ERG 來練習",
+    "send_first_transaction": "發送第一筆交易",
+    "learn_by_doing_send_erg": "邊做邊學——發送 ERG",
+    "essential_security_practices": "基本安全實踐",
+    "i_want_to_learn": "我想學習",
+    "compare_with_bitcoin_ethereum_monero": "與比特幣、以太坊、門羅幣比較",
+    "eutxo_sigma_protocols_explained": "eUTXO、Sigma 協議詳解",
+    "how_ergo_protects_your_data": "Ergo 如何保護您的數據",
+    "real_use_cases": "真實使用案例",
+    "community_success_stories": "社區成功故事",
+    "build_on_ergo": "在 Ergo 上建構",
+    "your_first_ergoscript_contract": "您的第一個 ErgoScript 合約",
+    "try_playground": "試用練習場",
+    "interactive_contract_editor": "互動式合約編輯器",
+    "libraries_for_your_language": "適合您程式語言的函式庫",
+    "get_help_from_core_devs": "獲得核心開發者的幫助",
+    "i_want_to_mine": "我想挖礦",
+    "secure_the_network": "保護網路安全",
+    "autolykos_v2_for_gpus": "適用於 GPU 的 Autolykos v2",
+    "choose_a_pool": "選擇礦池",
+    "compare_pools_and_fees": "比較礦池和費用",
+    "run_a_node": "運行節點",
+    "advanced_full_node_setup": "進階：完整節點設定",
+    "understand_the_asset": "了解資產",
+    "what": "什麼",
+    "supply_distribution_governance": "供應量、分配、治理",
+    "major_integrations_and_users": "主要整合與用戶",
+    "price_volume_analytics": "價格、交易量、分析",
+    "take_the_quiz": "參加測驗",
     "comparisonMeta": {
       "start_item_https_ergoblockchain_org_start": "Start\", item: \"https://ergoblockchain.org/start",
       "comparison_item_https_ergoblockchain_org": "Comparison\", item: \"https://ergoblockchain.org/start/comparison",
       "techarticle_headline": "TechArticle\",\n          headline:",
-      "comparison_of_eutxo_vs_account": "Comparison of eUTXO vs account models, PoW vs PoS, privacy and fees: Ergo, Ethereum, Bitcoin, Cardano.",
+      "comparison_of_eutxo_vs_account": "eUTXO 與帳戶模型、PoW 與 PoS、隱私及手續費比較：Ergo、Ethereum、Bitcoin、Cardano。",
       "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
       "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "question_name_how_does_eutxo": "Question\",\n                    name: \"How does eUTXO reduce reentrancy risk?",
-      "question_name_are_fees_predictable_on_ergo": "Question\",\n                    name: \"Are fees predictable on Ergo?",
-      "answer_text_script_cost_is": "Answer\",\n                      text: \"Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions).",
-      "question_name_does_ergo_have_light_clients": "Question\",\n                    name: \"Does Ergo have light clients?",
-      "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients.",
-      "ergo_vs_others_practical_comparison": "Ergo vs Others — Practical Comparison",
-      "quick_comparison_of_ergo_vs": "Quick comparison of Ergo vs account-based chains: eUTXO, ASIC-resistant PoW (Autolykos), Sigma protocols, predictable fees, native L1 tokens, and light clients (NIPoPoWs).",
-      "eutxo_autolykos_pow_sigma_protocols": "eUTXO, Autolykos PoW, Sigma protocols, predictable fees.",
-      "compare_ergo_with_bitcoin_ethereum": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Technical specs, consensus mechanisms, smart contracts, scalability, and unique features side-by-side comparison.",
-      "compare_ergo_with_leading_blockchains": "Compare Ergo with Leading Blockchains",
-      "blockchain_comparison": "Blockchain Comparison",
-      "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"Blockchain Platform Comparison\",\n    description: \"Technical comparison of Ergo with other blockchain platforms",
-      "what_advantages_does_ergo_have": "What advantages does Ergo have over Ethereum?\",\n      answer: \"Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining.",
-      "how_does_ergo_compare_to": "How does Ergo compare to Cardano?\",\n      answer: \"Both use eUTXO, but Ergo has PoW consensus, storage rent, and no VC funding, making it more decentralized and sustainable.",
-      "ergo_vs_bitcoin_ethereum_cardano": "Ergo vs Bitcoin, Ethereum, Cardano",
-      "technical_comparison_of_ergo_vs": "Technical comparison of Ergo vs Bitcoin, Ethereum, Cardano. See why Ergo stands out.",
-      "technical_comparison_of_ergo_with": "Technical comparison of Ergo with other blockchain platforms"
+      "question_name_how_does_eutxo": "Question\",\n                    name: \"eUTXO 如何降低重入風險？",
+      "question_name_are_fees_predictable_on_ergo": "Question\",\n                    name: \"Ergo 上的費用是否可預測？",
+      "answer_text_script_cost_is": "Answer\",\n                      text: \"Script 費用有上限且手續費可預測；不存在 Gas 競價（最終費用取決於記憶體池狀況）。",
+      "question_name_does_ergo_have_light_clients": "Question\",\n                    name: \"Ergo 是否支援輕客戶端？",
+      "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"是的。NIPoPoWs 為最小化信任的輕客戶端提供簡潔的證明。",
+      "ergo_vs_others_practical_comparison": "Ergo 與其他鏈的實際比較",
+      "quick_comparison_of_ergo_vs": "Ergo 與帳戶型鏈的快速比較：eUTXO、ASIC 抗性 PoW（Autolykos）、Sigma 協議、可預測費用、原生 L1 代幣及輕客戶端（NIPoPoWs）。",
+      "eutxo_autolykos_pow_sigma_protocols": "eUTXO, Autolykos PoW, Sigma 協議, 可預測費用。",
+      "compare_ergo_with_bitcoin_ethereum": "比較 Ergo 與 Bitcoin、Ethereum 及 Cardano。技術規格、共識機制、智能合約、可擴展性及獨特功能的並排對比。",
+      "compare_ergo_with_leading_blockchains": "比較 Ergo 與主流區塊鏈",
+      "blockchain_comparison": "區塊鏈比較",
+      "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"區塊鏈平台比較\",\n    description: \"Ergo 與其他區塊鏈平台的技術比較",
+      "what_advantages_does_ergo_have": "Ergo 相對 Ethereum 有哪些優勢？\",\n      answer: \"Ergo 提供可預測的費用、無重入攻擊、並行交易處理及能源高效的 PoW 挖礦。",
+      "how_does_ergo_compare_to": "Ergo 與 Cardano 相比如何？\",\n      answer: \"兩者均使用 eUTXO，但 Ergo 採用 PoW 共識、Storage Rent，且無風投資金，使其更加去中心化且可持續。",
+      "ergo_vs_bitcoin_ethereum_cardano": "Ergo 對比 Bitcoin、Ethereum、Cardano",
+      "technical_comparison_of_ergo_vs": "Ergo 與 Bitcoin、Ethereum、Cardano 的技術比較。了解 Ergo 脫穎而出的原因。",
+      "technical_comparison_of_ergo_with": "Ergo 與其他區塊鏈平台的技術比較"
     },
     "community_icon_users_color": "Community\", icon: Users, color:",
-    "get_started": "Get Started",
+    "get_started": "開始使用",
     "communityMeta": {
-      "connect_with_developers_miners_traders": "Connect with developers, miners, traders, and enthusiasts. Discord, Telegram, Reddit, and more.",
-      "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo Community\",\n    description: \"Global community of developers, miners, and enthusiasts building on Ergo\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
+      "connect_with_developers_miners_traders": "與開發者、礦工、交易者及愛好者建立聯繫。Discord、Telegram、Reddit 及更多。",
+      "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo 社群\",\n    description: \"在 Ergo 上開發的全球開發者、礦工及愛好者社群\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "aggregaterating_ratingvalue": "AggregateRating\",\n      ratingValue:",
-      "how_do_i_join_the": "How do I join the Ergo community?\",\n      answer: \"Join our Discord server for real-time chat, Telegram for quick updates, Reddit for discussions, or GitHub to contribute to development. All platforms are open and welcoming to newcomers.",
-      "what_is_the_main_ergo_community_platform_answer": "What is the main Ergo community platform?\",\n      answer:",
-      "can_i_contribute_to_ergo": "Can I contribute to Ergo without coding?\",\n      answer: \"Yes! You can contribute through content creation, translations, community management, testing, documentation, or participating in governance discussions.",
-      "are_there_regional_ergo_communities": "Are there regional Ergo communities?\",\n      answer: \"Yes, there are active regional communities in multiple languages including Chinese, Russian, Spanish, Turkish, and more, each with dedicated Telegram groups.",
-      "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergo Community Platforms",
+      "how_do_i_join_the": "如何加入 Ergo 社群？\",\n      answer: \"加入我們的 Discord 伺服器進行即時交流、Telegram 獲取快速更新、Reddit 參與討論，或透過 GitHub 貢獻開發。所有平台對新人開放且友善。",
+      "what_is_the_main_ergo_community_platform_answer": "Ergo 的主要社群平台是什麼？\",\n      answer:",
+      "can_i_contribute_to_ergo": "我可以在不會編程的情況下為 Ergo 做貢獻嗎？\",\n      answer: \"可以！您可以透過內容創作、翻譯、社群管理、測試、文檔或參與治理討論做出貢獻。",
+      "are_there_regional_ergo_communities": "是否有 Ergo 地區社群？\",\n      answer: \"有，多種語言的活躍地區社群，包括中文、俄文、西班牙文、土耳其文等，每種語言都有專屬的 Telegram 群組。",
+      "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergo 社群平台",
       "discord_url_https_discord_gg": "Discord\",\n        url: \"https://discord.gg/ergo-platform\",\n        description:",
-      "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"Quick updates and global chat",
-      "reddit_url_https_reddit_com": "Reddit\",\n        url: \"https://reddit.com/r/ergonauts\",\n        description: \"Discussions and community content",
-      "github_url_https_github_com": "GitHub\",\n        url: \"https://github.com/ergoplatform\",\n        description: \"Open source development",
-      "ergo_community_join_discord_telegram_forums": "Ergo Community | Join Discord, Telegram & Forums",
-      "connect_with_the_ergo_community": "Connect with the Ergo community. Join 15K+ members on Discord, Telegram, Reddit. Get support, participate in governance, contribute to development, and shape the future of Ergo.",
-      "join_the_ergo_community_15k_active_members": "Join the Ergo Community | 15K+ Active Members",
-      "ergo_community_global_blockchain_network": "Ergo Community | Global Blockchain Network",
-      "join_15k_members_building_the": "Join 15K+ members building the future of DeFi. Active Discord, Telegram, development groups.",
-      "global_community_of_developers_miners": "Global community of developers, miners, and enthusiasts building on Ergo",
-      "main_community_hub_with_15k_members": "Main community hub with 15K+ members",
-      "quick_updates_and_global_chat": "Quick updates and global chat",
-      "discussions_and_community_content": "Discussions and community content",
-      "open_source_development": "Open source development"
+      "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"快速更新與全球交流",
+      "reddit_url_https_reddit_com": "Reddit\",\n        url: \"https://reddit.com/r/ergonauts\",\n        description: \"討論與社群內容",
+      "github_url_https_github_com": "GitHub\",\n        url: \"https://github.com/ergoplatform\",\n        description: \"開源開發",
+      "ergo_community_join_discord_telegram_forums": "Ergo 社群 | 加入 Discord、Telegram 及論壇",
+      "connect_with_the_ergo_community": "與 Ergo 社群聯繫。加入 Discord 上 15K+ 成員、Telegram、Reddit。獲取支援、參與治理、貢獻開發，共同塑造 Ergo 的未來。",
+      "join_the_ergo_community_15k_active_members": "加入 Ergo 社群 | 15K+ 活躍成員",
+      "ergo_community_global_blockchain_network": "Ergo 社群 | 全球區塊鏈網絡",
+      "join_15k_members_building_the": "加入 15K+ 成員共同構建 DeFi 的未來。活躍的 Discord、Telegram、開發群組。",
+      "global_community_of_developers_miners": "在 Ergo 上開發的全球開發者、礦工及愛好者社群",
+      "main_community_hub_with_15k_members": "擁有 15K+ 成員的主要社群中心",
+      "quick_updates_and_global_chat": "快速更新與全球交流",
+      "discussions_and_community_content": "討論與社群內容",
+      "open_source_development": "開源開發"
     },
     "how_long_does_it_take_to_learn_ergo_answer": "How long does it take to learn Ergo?\",\n      answer:",
     "start_your_ergo_journey_summary": "Start Your Ergo Journey\",\n    summary: \"Choose your personalized path into Ergo blockchain: beginner, developer, miner, or investor\",\n    url: \"https://ergoblockchain.org/start",
     "start_your_journey_with_ergo": "Start Your Journey with Ergo Blockchain',\n    description: 'Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
-    "start_with_ergo_learning_paths": "Start with Ergo - Learning Paths",
+    "start_with_ergo_learning_paths": "開始使用 Ergo——學習路徑",
     "start_your_ergo_journey_choose": "Start Your Ergo Journey - Choose Your Path',\n    description: 'Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
     "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
     "howtosupply_name_computer_or_smartphone": "HowToSupply', name: 'Computer or smartphone",
@@ -2158,581 +2163,581 @@
     "course_name_learning_path_description": "Course',\n          name: 'Learning Path',\n          description: 'Deep dive into Ergo technology and ecosystem",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
-    "start_your_journey_with_ergo_blockchain": "Start Your Journey with Ergo Blockchain",
-    "personalized_learning_paths_for_beginners": "Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.",
-    "start_your_ergo_journey_choose_your_path": "Start Your Ergo Journey - Choose Your Path",
-    "beginner_developer_miner_investor_find": "Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
-    "for_those_new_to_cryptocurrency_and_blockchain": "For those new to cryptocurrency and blockchain",
-    "for_programmers_wanting_to_build_on_ergo": "For programmers wanting to build on Ergo",
-    "for_those_interested_in_mining_erg": "For those interested in mining ERG",
-    "for_understanding_ergo_as_an_investment": "For understanding Ergo as an investment",
-    "deep_dive_into_ergo_technology_and_ecosystem": "Deep dive into Ergo technology and ecosystem"
+    "start_your_journey_with_ergo_blockchain": "開始您與 Ergo 區塊鏈的旅程",
+    "personalized_learning_paths_for_beginners": "為初學者、開發者、礦工和投資者提供個人化學習路徑。找到您進入 Ergo 的方式。",
+    "start_your_ergo_journey_choose_your_path": "開始您的 Ergo 之旅——選擇您的路徑",
+    "beginner_developer_miner_investor_find": "初學者？開發者？礦工？投資者？找到您進入 Ergo 的個人化路徑。",
+    "for_those_new_to_cryptocurrency_and_blockchain": "適合加密貨幣和區塊鏈新手",
+    "for_programmers_wanting_to_build_on_ergo": "適合想在 Ergo 上建構的程式設計師",
+    "for_those_interested_in_mining_erg": "適合有興趣挖掘 ERG 的人",
+    "for_understanding_ergo_as_an_investment": "用於了解 Ergo 作為投資的價值",
+    "deep_dive_into_ergo_technology_and_ecosystem": "深入了解 Ergo 技術和生態系統"
   },
   "startIntroduction": {
-    "title": "Introduction to Ergo",
-    "description": "Quick overview of Ergo blockchain fundamentals",
-    "subtitle": "What makes Ergo unique",
+    "title": "Ergo 簡介",
+    "description": "Ergo 區塊鏈基礎快速概覽",
+    "subtitle": "Ergo 的獨特之處",
     "coreValues": {
       "decentralizedFirst": {
-        "title": "Decentralized First",
-        "description": "No central authority, no single points of failure"
+        "title": "去中心化優先",
+        "description": "無中央權威，無單點故障"
       },
       "secureReliable": {
-        "title": "Secure & Reliable",
-        "description": "Battle-tested cryptography and proven consensus"
+        "title": "安全可靠",
+        "description": "經實戰驗證的密碼學與已驗證的共識機制"
       },
       "powerfulContracts": {
-        "title": "Powerful Contracts",
-        "description": "Advanced smart contract capabilities with ErgoScript"
+        "title": "強大的合約",
+        "description": "透過 ErgoScript 實現進階智能合約功能"
       },
       "longTermFocus": {
-        "title": "Long-term Focus",
-        "description": "Sustainable economics and future-proof design"
+        "title": "長遠規劃",
+        "description": "可持續的經濟模型與面向未來的設計"
       }
     },
     "keyInnovations": {
       "proofOfWork": {
-        "title": "Proof-of-Work (PoW)",
-        "subtitle": "Maximum security",
-        "description": "ASIC-resistant Autolykos algorithm ensures fair mining"
+        "title": "工作量證明（PoW）",
+        "subtitle": "最高安全性",
+        "description": "抗 ASIC 的 Autolykos 演算法確保公平挖礦"
       },
       "extendedUtxo": {
-        "title": "Extended UTXO",
-        "subtitle": "Smart money",
-        "description": "Combines Bitcoin security with Ethereum programmability"
+        "title": "擴展 UTXO",
+        "subtitle": "智能貨幣",
+        "description": "結合比特幣的安全性與以太坊的可程式性"
       },
       "sigmaProtocols": {
-        "title": "Sigma Protocols",
-        "subtitle": "Advanced cryptography",
-        "description": "Built-in zero-knowledge proofs and privacy features"
+        "title": "Sigma 協議",
+        "subtitle": "進階密碼學",
+        "description": "內建零知識證明與隱私保護功能"
       }
     },
     "introduction": {
       "faq": {
         "eutxoModel": {
-          "question": "What is the Extended UTXO model?",
-          "answer": "Extended UTXO combines Bitcoin's security with Ethereum's programmability, allowing smart contracts while maintaining transaction parallelism."
+          "question": "什麼是擴展 UTXO 模型？",
+          "answer": "擴展 UTXO 結合了比特幣的安全性與以太坊的可程式性，允許智能合約同時保持交易並行性。"
         },
         "sigmaProtocols": {
-          "question": "What are Sigma Protocols?",
-          "answer": "Sigma Protocols are cryptographic proofs that enable privacy features and zero-knowledge proofs natively on Ergo blockchain."
+          "question": "什麼是 Sigma 協議？",
+          "answer": "Sigma 協議是密碼學證明，能在 Ergo 區塊鏈上原生啟用隱私功能與零知識證明。"
         },
         "pow": {
-          "question": "Why does Ergo use Proof-of-Work?",
-          "answer": "Proof-of-Work provides maximum security and decentralization. Ergo's Autolykos algorithm is ASIC-resistant and energy-efficient."
+          "question": "Ergo 為何使用工作量證明？",
+          "answer": "工作量證明提供最高的安全性與去中心化。Ergo 的 Autolykos 演算法抗 ASIC 且節能高效。"
         }
       },
       "cta": {
         "readyToDiveIn": {
-          "title": "Ready to Dive In?",
-          "description": "Choose your path to start exploring the Ergo ecosystem."
+          "title": "準備好深入了解了嗎？",
+          "description": "選擇您的路徑，開始探索 Ergo 生態系統。"
         },
         "getErgoWallet": {
-          "button": "Get Ergo Wallet"
+          "button": "取得 Ergo 錢包"
         },
         "exploreEcosystem": {
-          "button": "Explore Ecosystem"
+          "button": "探索生態系統"
         },
         "documentation": {
-          "button": "Read Documentation"
+          "button": "閱讀文件"
         },
-        "lastUpdated": "Last updated: December 2024"
+        "lastUpdated": "最後更新：2024 年 12 月"
       },
       "whatMakesErgoDifferent": {
-        "title": "WHAT MAKES",
+        "title": "是什麼讓",
         "fairLaunch": {
-          "title": "Fair Launch",
-          "description": "No ICO, no premine, no VC funding. Ergo was launched fairly with equal opportunity for all participants."
+          "title": "公平啟動",
+          "description": "無 ICO、無預挖、無風投資金。Ergo 以公平方式啟動，所有參與者機會均等。"
         },
         "eutxoErgoScript": {
           "title": "eUTXO + ErgoScript",
-          "description": "Extended UTXO model combined with powerful ErgoScript enables complex smart contracts with Bitcoin-level security."
+          "description": "擴展 UTXO 模型結合強大的 ErgoScript，實現具備比特幣級安全性的複雜智能合約。"
         },
         "storageRent": {
-          "title": "Storage Rent",
-          "description": "Sustainable blockchain economics through storage rent mechanism that prevents state bloat and ensures long-term viability."
+          "title": "儲存租金",
+          "description": "透過儲存租金機制實現可持續的區塊鏈經濟，防止狀態膨脹並確保長期可行性。"
         },
         "researchDriven": {
-          "title": "Research-Driven",
-          "description": "Built on peer-reviewed academic research and cryptographic innovations, ensuring solid theoretical foundations."
+          "title": "研究驅動",
+          "description": "建立在同行評審的學術研究和密碼學創新之上，確保堅實的理論基礎。"
         },
         "robustPrivacy": {
-          "title": "Robust Privacy",
-          "description": "Native Sigma protocols provide zero-knowledge proofs and privacy features without compromising transparency."
+          "title": "強健的隱私保護",
+          "description": "原生 Sigma 協議在不犧牲透明度的前提下提供零知識證明與隱私功能。"
         },
         "communityLed": {
-          "title": "Community-Led",
-          "description": "Decentralized development and governance driven by a passionate global community of developers and researchers."
+          "title": "社區主導",
+          "description": "由充滿熱情的全球開發者和研究者社區驅動的去中心化開發與治理。"
         }
       },
       "featureHighlights": {
         "lightClients": {
-          "title": "Light Clients",
-          "description": "NiPoPoWs enable ultra-efficient light clients with cryptographic security guarantees"
+          "title": "輕量客戶端",
+          "description": "NiPoPoWs 實現具備密碼學安全保證的超高效輕量客戶端"
         },
         "fairLaunch": {
-          "title": "Fair Launch",
-          "description": "No ICO, no premine, no VC funding - launched fairly for everyone"
+          "title": "公平啟動",
+          "description": "無 ICO、無預挖、無風投資金——對所有人公平啟動"
         },
         "privacyFirst": {
-          "title": "Privacy First",
-          "description": "Optional privacy features using Sigma protocols and zero-knowledge proofs"
+          "title": "隱私優先",
+          "description": "使用 Sigma 協議和零知識證明的可選隱私功能"
         },
         "storageRent": {
-          "title": "Storage Rent",
-          "description": "Sustainable economics preventing blockchain bloat and ensuring long-term viability"
+          "title": "儲存租金",
+          "description": "可持續的經濟模型，防止區塊鏈膨脹並確保長期可行性"
         }
       },
       "corePrinciples": {
-        "title": "Principles"
+        "title": "核心原則"
       },
       "keyTechnologies": {
-        "title": "Technologies",
-        "learnMore": "Learn More"
+        "title": "核心技術",
+        "learnMore": "了解更多"
       },
       "ergoScriptExample": {
-        "title": "ErgoScript Smart Contract Example",
+        "title": "ErgoScript 智能合約範例",
         "filename": "timelock.ergo"
       },
       "principles": {
         "decentralizedFirst": {
-          "title": "Decentralized First",
-          "description": "No central authority, no single points of failure"
+          "title": "去中心化優先",
+          "description": "無中央權威，無單點故障"
         },
         "secureReliable": {
-          "title": "Secure & Reliable",
-          "description": "Battle-tested cryptography and proven consensus"
+          "title": "安全可靠",
+          "description": "經實戰驗證的密碼學與已驗證的共識機制"
         },
         "powerfulContracts": {
-          "title": "Powerful Contracts",
-          "description": "Advanced smart contract capabilities with ErgoScript"
+          "title": "強大的合約",
+          "description": "透過 ErgoScript 實現進階智能合約功能"
         },
         "longTermFocus": {
-          "title": "Long-term Focus",
-          "description": "Sustainable economics and future-proof design"
+          "title": "長遠規劃",
+          "description": "可持續的經濟模型與面向未來的設計"
         }
       },
       "technologies": {
         "pow": {
-          "title": "Proof-of-Work (PoW)",
-          "subtitle": "Maximum security",
-          "description": "ASIC-resistant Autolykos algorithm ensures fair mining",
-          "badge": "Secure"
+          "title": "工作量證明（PoW）",
+          "subtitle": "最高安全性",
+          "description": "抗 ASIC 的 Autolykos 演算法確保公平挖礦",
+          "badge": "安全"
         },
         "extendedUtxo": {
-          "title": "Extended UTXO",
-          "subtitle": "Smart money",
-          "description": "Combines Bitcoin security with Ethereum programmability",
-          "badge": "Innovative"
+          "title": "擴展 UTXO",
+          "subtitle": "智能貨幣",
+          "description": "結合比特幣的安全性與以太坊的可程式性",
+          "badge": "創新"
         },
         "sigmaProtocols": {
-          "title": "Sigma Protocols",
-          "subtitle": "Advanced cryptography",
-          "description": "Built-in zero-knowledge proofs and privacy features",
-          "badge": "Private"
+          "title": "Sigma 協議",
+          "subtitle": "進階密碼學",
+          "description": "內建零知識證明與隱私保護功能",
+          "badge": "私密"
         }
       },
       "whatIsErgo": {
-        "eutxoLink": "eUTXO model",
-        "powLink": "Proof-of-Work",
-        "storageRentLink": "Storage Rent",
-        "privacyLink": "Privacy Features"
+        "eutxoLink": "eUTXO 模型",
+        "powLink": "工作量證明",
+        "storageRentLink": "儲存租金",
+        "privacyLink": "隱私功能"
       },
       "whyErgo": {
-        "title": "Why Choose Ergo?",
-        "eutxo": "Extended UTXO model for secure smart contracts",
-        "sigma": "Sigma protocols for privacy and zero-knowledge proofs",
-        "pow": "ASIC-resistant Proof-of-Work consensus",
-        "storageRent": "Storage rent mechanism for long-term sustainability"
+        "title": "為何選擇 Ergo？",
+        "eutxo": "擴展 UTXO 模型，用於安全的智能合約",
+        "sigma": "Sigma 協議，用於隱私保護和零知識證明",
+        "pow": "抗 ASIC 的工作量證明共識",
+        "storageRent": "儲存租金機制，確保長期可持續性"
       },
       "keyInnovation": {
-        "title": "Key Innovation"
+        "title": "核心創新"
       },
       "references": {
-        "autolykos": "Autolykos v2 Algorithm",
+        "autolykos": "Autolykos v2 演算法",
         "ergoGithub": "Ergo GitHub"
       }
     }
   },
   "startCommunity": {
-    "title": "Join Community",
-    "description": "Connect with the Ergo community across various platforms",
-    "subtitle": "Discord, Telegram, Reddit, and more"
+    "title": "加入社區",
+    "description": "在各大平台與 Ergo 社區建立連結",
+    "subtitle": "Discord、Telegram、Reddit 等更多平台"
   },
   "startComparison": {
-    "title": "Platform Comparison",
-    "description": "How Ergo compares to other blockchain platforms",
-    "subtitle": "Technical and feature comparison"
+    "title": "平台比較",
+    "description": "Ergo 與其他區塊鏈平台的比較",
+    "subtitle": "技術與功能比較"
   },
   "startQuiz": {
-    "title": "Onboarding Quiz",
-    "description": "Test your knowledge about Ergo blockchain",
-    "subtitle": "Interactive learning experience"
+    "title": "入門測驗",
+    "description": "測試您對 Ergo 區塊鏈的了解程度",
+    "subtitle": "互動學習體驗"
   },
   "startClient": {
-    "loading": "Loading...",
-    "skipToDocs": "Skip to Docs",
-    "recommended": "Recommended",
-    "steps": "steps",
-    "minTotal": "min total",
-    "changePath": "Change Path",
-    "journeyProgress": "Journey Progress",
-    "ofCompleted": "of",
-    "completed": "completed",
-    "journeyComplete": "Journey Complete!",
-    "start": "Start",
-    "review": "Review",
-    "congratulations": "Congratulations!",
-    "completedJourneyMessage": "You've completed the {journey} journey. Ready for the next challenge?",
-    "chooseAnotherPath": "Choose Another Path",
-    "exploreDocs": "Explore Docs",
-    "developerManifesto": "Developer Manifesto",
+    "loading": "載入中……",
+    "skipToDocs": "跳至文件",
+    "recommended": "推薦",
+    "steps": "步驟",
+    "minTotal": "分鐘合計",
+    "changePath": "更換路徑",
+    "journeyProgress": "學習進度",
+    "ofCompleted": "共",
+    "completed": "已完成",
+    "journeyComplete": "學習旅程完成！",
+    "start": "開始",
+    "review": "複習",
+    "congratulations": "恭喜！",
+    "completedJourneyMessage": "您已完成「{journey}」旅程。準備好迎接下一個挑戰了嗎？",
+    "chooseAnotherPath": "選擇其他路徑",
+    "exploreDocs": "探索文件",
+    "developerManifesto": "開發者宣言",
     "stats": {
       "learningPaths": {
         "value": "5",
-        "label": "Learning Paths"
+        "label": "學習路徑"
       },
       "quickStart": {
         "value": "< 30min",
-        "label": "Quick Start"
+        "label": "快速入門"
       },
       "openSource": {
         "value": "100%",
-        "label": "Open Source"
+        "label": "開放原始碼"
       },
       "community": {
         "value": "24/7",
-        "label": "Community"
+        "label": "社區支援"
       }
     },
     "tailoredGuides": {
-      "title": "Tailored",
-      "titleHighlight": "Guides",
-      "subtitle": "Deep-dive resources for specific user types",
+      "title": "量身定制",
+      "titleHighlight": "指南",
+      "subtitle": "針對特定使用者類型的深度資源",
       "miners": {
-        "title": "For Miners",
-        "description": "GPU-friendly Autolykos PoW, fair rewards"
+        "title": "礦工專區",
+        "description": "GPU 友好的 Autolykos PoW，公平的獎勵機制"
       },
       "holders": {
-        "title": "For Holders",
-        "description": "Sound tokenomics, DeFi, long-term value"
+        "title": "持有者專區",
+        "description": "健全的代幣經濟學、DeFi 機會、長期價值"
       },
       "builders": {
-        "title": "For Builders",
-        "description": "ErgoScript, SDKs, grants for developers"
+        "title": "建設者專區",
+        "description": "ErgoScript、SDK、面向開發者的補助金"
       }
     },
     "quickLinks": {
-      "faq": "FAQ",
-      "joinCommunity": "Join Community",
-      "takeQuiz": "Take the Quiz"
+      "faq": "常見問題",
+      "joinCommunity": "加入社區",
+      "takeQuiz": "參加測驗"
     },
     "emailCapture": {
-      "title": "Get Started with Ergo",
-      "description": "Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+      "title": "開始使用 Ergo",
+      "description": "獲取最新更新、入門指南和逐步教學，直接發送至您的信箱"
     }
   },
   "comparisonClient": {
     "hero": {
-      "title": "Platform",
-      "titleHighlight": "Analysis",
-      "subtitle": "Understanding Ergo's Technical Advantages",
-      "description": "Ergo combines the security and predictability of the eUTXO model with the programmability needed for complex smart contracts, and supports light clients via NIPoPoWs.",
-      "startBuilding": "Start Building",
-      "viewComparison": "View Comparison"
+      "title": "平台",
+      "titleHighlight": "分析",
+      "subtitle": "了解 Ergo 的技術優勢",
+      "description": "Ergo 結合了 eUTXO 模型的安全性與可預測性，以及複雜智能合約所需的可程式性，並透過 NIPoPoWs 支援輕量客戶端。",
+      "startBuilding": "開始建構",
+      "viewComparison": "查看比較"
     },
     "cards": {
       "predictableSecurity": {
-        "title": "Predictable & Auditable Security",
-        "description": "No known protocol-level reentrancy class; deterministic execution bounds; friendly to audits"
+        "title": "可預測且可審計的安全性",
+        "description": "無已知的協議層重入類別；確定性執行界限；易於審計"
       },
       "parallelExecution": {
-        "title": "Parallel Execution",
-        "description": "Independent UTXOs enable parallel execution; shared-box patterns may introduce contention"
+        "title": "並行執行",
+        "description": "獨立的 UTXO 實現並行執行；共享盒子模式可能引入競爭"
       },
       "nativePrivacy": {
-        "title": "Native Privacy",
-        "description": "Sigma-protocols and UTXO mixing at the protocol layer"
+        "title": "原生隱私保護",
+        "description": "協議層的 Sigma 協議和 UTXO 混合"
       },
       "nativeAssets": {
-        "title": "Native L1 Assets",
-        "description": "Native L1 tokens/NFTs (no wrapper contracts)"
+        "title": "原生 L1 資產",
+        "description": "原生 L1 代幣/NFT（無需包裝合約）"
       }
     },
     "whyDevelopers": {
-      "title": "Why Developers Choose",
+      "title": "為何開發者選擇",
       "titleHighlight": "Ergo",
       "developerFirst": {
-        "title": "Developer-First Philosophy",
-        "quote": "Other platforms force you to work around their limitations. Ergo works around yours.",
+        "title": "開發者優先的理念",
+        "quote": "其他平台迫使您繞過其限制。Ergo 反而為您解決障礙。",
         "points": [
-          "Predictable execution costs",
-          "Security by design",
-          "No reentrancy attacks"
+          "可預測的執行成本",
+          "設計上的安全性",
+          "無重入攻擊"
         ]
       },
       "productivity": {
-        "title": "Built for Productivity",
-        "description": "Experience the difference of building on a platform designed for developer productivity.",
+        "title": "為生產力而生",
+        "description": "體驗在專為開發者生產力設計的平台上建構的不同之處。",
         "points": [
-          "Declarative ErgoScript",
-          "Formal verification support",
-          "Rich cryptographic primitives"
+          "聲明式 ErgoScript",
+          "正式驗證支援",
+          "豐富的密碼學原語"
         ]
       },
       "testimonial": {
-        "quote": "Building on Ergo feels like having superpowers. The eUTXO model eliminates entire classes of bugs, and ErgoScript makes complex cryptographic operations feel natural.",
-        "attribution": "Ergo Developer Community"
+        "quote": "在 Ergo 上建構就像擁有超能力。eUTXO 模型消除了整類錯誤，而 ErgoScript 讓複雜的密碼學操作變得自然流暢。",
+        "attribution": "Ergo 開發者社區"
       }
     },
     "stats": {
       "predictable": {
-        "value": "Predictable",
-        "label": "Fees; no gas price auctions"
+        "value": "可預測",
+        "label": "手續費；無燃料費競價"
       },
       "noClass": {
-        "value": "No class",
-        "label": "of protocol-level reentrancy"
+        "value": "無此類別",
+        "label": "協議層重入問題"
       },
       "native": {
-        "value": "Native",
-        "label": "L1 tokens/NFTs"
+        "value": "原生",
+        "label": "L1 代幣/NFT"
       },
       "light": {
-        "value": "Light",
-        "label": "clients (NIPoPoWs)"
+        "value": "輕量",
+        "label": "客戶端（NIPoPoWs）"
       }
     },
     "problem": {
-      "title": "The Problem with",
-      "titleHighlight": "Current Platforms",
+      "title": "現有平台的",
+      "titleHighlight": "問題所在",
       "nightmares": {
-        "title": "Development Nightmares",
+        "title": "開發噩夢",
         "points": [
-          "Unpredictable gas costs bankrupting users",
-          "Reentrancy attacks draining protocols",
-          "Complex languages creating security holes",
-          "VC-controlled platforms changing rules"
+          "不可預測的燃料費讓用戶破產",
+          "重入攻擊掏空協議",
+          "複雜語言造成安全漏洞",
+          "VC 控制的平台隨意更改規則"
         ]
       },
       "solution": {
-        "title": "The Ergo Solution",
+        "title": "Ergo 的解決方案",
         "points": [
-          "Predictable fees; auditable execution bounds",
-          "Security-by-design in the eUTXO model",
-          "ErgoScript: declarative, explicit state transitions",
-          "Community-owned, fair launch principles"
+          "可預測的手續費；可審計的執行界限",
+          "eUTXO 模型中的設計安全性",
+          "ErgoScript：聲明式、明確的狀態轉換",
+          "社區所有，公平啟動原則"
         ]
       }
     },
     "differentiators": {
-      "title": "What Makes",
+      "title": "是什麼讓",
       "titleHighlight": "Ergo",
-      "subtitle": "Different",
-      "ergoAdvantage": "Ergo Advantage",
-      "others": "Others",
-      "vs": "VS",
-      "keyAdvantage": "Key Advantage"
+      "subtitle": "與眾不同",
+      "ergoAdvantage": "Ergo 優勢",
+      "others": "其他平台",
+      "vs": "對比",
+      "keyAdvantage": "核心優勢"
     },
     "platformComparison": {
-      "title": "Blockchain",
-      "titleHighlight": "Platform",
-      "subtitle": "Comparison",
-      "detailedLink": "Detailed 1-on-1 comparisons",
-      "tableTitle": "Blockchain Platform Comparison: Ergo vs BTC/ETH/ADA/SOL/SUI",
-      "tableCaption": "Platform comparison",
-      "feature": "Feature",
-      "footerNote": "Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated:"
+      "title": "區塊鏈",
+      "titleHighlight": "平台",
+      "subtitle": "比較",
+      "detailedLink": "詳細的一對一比較",
+      "tableTitle": "區塊鏈平台比較：Ergo 對比 BTC/ETH/ADA/SOL/SUI",
+      "tableCaption": "平台比較",
+      "feature": "功能特性",
+      "footerNote": "主要區塊鏈平台的全面比較，包括共識機制、狀態模型、智能合約功能及獨特特性。更新於："
     },
     "trustIndicators": {
-      "title": "Trust",
-      "titleHighlight": "Indicators",
+      "title": "信任",
+      "titleHighlight": "指標",
       "battleTested": {
-        "title": "Battle-tested since 2019",
-        "subtitle": "Proven security track record"
+        "title": "自 2019 年起實戰驗證",
+        "subtitle": "久經驗證的安全記錄"
       },
       "developers": {
-        "title": "100+ developers",
-        "subtitle": "Growing active community"
+        "title": "100+ 位開發者",
+        "subtitle": "持續成長的活躍社區"
       },
       "noIncidents": {
-        "title": "No critical protocol-level incidents",
-        "subtitle": "As of"
+        "title": "無重大協議層事故",
+        "subtitle": "截至"
       }
     },
     "faq": {
-      "title": "FAQ",
+      "title": "常見問題",
       "questions": [
         {
-          "q": "How does eUTXO reduce reentrancy risk?",
-          "a": "Transactions consume specified UTXOs and cannot be re-entered; the shared-state pattern behind reentrancy is absent."
+          "q": "eUTXO 如何降低重入風險？",
+          "a": "交易消耗指定的 UTXO 且無法被重入；導致重入的共享狀態模式不存在於此。"
         },
         {
-          "q": "Are fees predictable on Ergo?",
-          "a": "Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions)."
+          "q": "Ergo 的手續費可預測嗎？",
+          "a": "腳本成本有界且手續費可預測；不存在燃料費競價（最終費用取決於記憶池狀況）。"
         },
         {
-          "q": "Does Ergo have light clients?",
-          "a": "Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients."
+          "q": "Ergo 有輕量客戶端嗎？",
+          "a": "有。NIPoPoWs 為最小化信任的輕量客戶端提供簡潔的證明。"
         }
       ]
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
-      "subtitle": "Start building or exploring the Ergo ecosystem today",
+      "title": "下一步",
+      "titleHighlight": "是什麼",
+      "subtitle": "立即開始建構或探索 Ergo 生態系統",
       "startBuilding": {
-        "title": "Start Building",
-        "subtitle": "Developer Docs",
-        "description": "Get started with Ergo development using our comprehensive documentation and tutorials"
+        "title": "開始建構",
+        "subtitle": "開發者文件",
+        "description": "使用我們全面的文件和教學開始 Ergo 開發"
       },
       "exploreEcosystem": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover Projects",
-        "description": "Discover the growing ecosystem of applications, tools, and services built on Ergo"
+        "title": "探索生態系統",
+        "subtitle": "探索專案",
+        "description": "探索在 Ergo 上建構的不斷增長的應用程式、工具和服務生態系統"
       },
-      "sourcesLabel": "Last updated:",
-      "sourcesText": "Sources:"
+      "sourcesLabel": "最後更新：",
+      "sourcesText": "資料來源："
     },
     "emailCapture": {
-      "title": "Stay Updated",
-      "description": "Get the latest Ergo news, technical comparisons, and ecosystem updates delivered to your inbox."
+      "title": "保持更新",
+      "description": "獲取最新的 Ergo 新聞、技術比較和生態系統更新，直接發送至您的信箱。"
     }
   },
   "introductionClient": {
     "hero": {
-      "title": "Ergo Blockchain - PoW eUTXO Smart Contracts & Sigma Protocols",
-      "subtitle": "ASIC-resistant Layer-1 PoW with eUTXO, auditable smart contracts, and Sigma-based privacy. Built for open, verifiable money."
+      "title": "Ergo 區塊鏈——PoW eUTXO 智能合約與 Sigma 協議",
+      "subtitle": "具備 eUTXO 的抗 ASIC Layer-1 PoW、可審計的智能合約，以及基於 Sigma 的隱私保護。專為開放、可驗證的貨幣而生。"
     },
     "whatIsErgo": {
-      "title": "What is",
+      "title": "什麼是",
       "titleHighlight": "Ergo",
-      "description1": "Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.",
-      "description2": "Its mission is to provide tools for decentralized and accessible financial systems - empowering people with economic freedom without intermediaries. Learn about the",
-      "eutxoLink": "eUTXO model",
-      "powLink": "Proof of Work",
-      "storageRentLink": "storage rent",
-      "privacyLink": "privacy features"
+      "description1": "Ergo 專為開發安全且強大的去中心化應用程式（dApps）和金融合約而設計。它建立在十年的區塊鏈理論與開發基礎上，將既有原則與新研究相結合。",
+      "description2": "其使命是為去中心化且可及的金融系統提供工具，在無需中介的情況下賦予人們經濟自由。了解",
+      "eutxoLink": "eUTXO 模型",
+      "powLink": "工作量證明",
+      "storageRentLink": "儲存租金",
+      "privacyLink": "隱私功能"
     },
     "whyErgo": {
-      "title": "Why Ergo?",
-      "eutxo": "Extended UTXO (eUTXO) for predictable, auditable contracts",
-      "sigma": "Sigma Protocols for composable privacy",
-      "pow": "ASIC-resistant Proof of Work (Autolykos v2)",
-      "storageRent": "Storage Rent for blockchain sustainability"
+      "title": "為何選擇 Ergo？",
+      "eutxo": "擴展 UTXO（eUTXO），用於可預測、可審計的合約",
+      "sigma": "Sigma 協議，用於可組合的隱私保護",
+      "pow": "抗 ASIC 的工作量證明（Autolykos v2）",
+      "storageRent": "儲存租金，確保區塊鏈可持續性"
     },
     "keyInnovation": {
-      "title": "Key Innovation",
-      "description": "Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, creating a unique platform for complex financial applications."
+      "title": "核心創新",
+      "description": "Ergo 將比特幣 UTXO 模型的安全性與以太坊智能合約的表達能力相結合，為複雜的金融應用創造了獨特的平台。"
     },
     "references": {
       "autolykos": "Autolykos v2",
-      "ergoGithub": "ergo (GitHub)"
+      "ergoGithub": "ergo（GitHub）"
     },
     "featureHighlights": {
       "privacyFirst": {
-        "title": "Privacy-First",
-        "description": "Sigma Protocols for optional privacy"
+        "title": "隱私優先",
+        "description": "Sigma 協議提供可選的隱私保護"
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Sustainable blockchain economics"
+        "title": "儲存租金",
+        "description": "可持續的區塊鏈經濟模型"
       },
       "lightClients": {
-        "title": "Light Clients",
-        "description": "NIPoPoWs for mobile verification"
+        "title": "輕量客戶端",
+        "description": "NIPoPoWs 用於行動端驗證"
       },
       "fairLaunch": {
-        "title": "Fair Launch",
-        "description": "No pre-mine, no ICO, no VC"
+        "title": "公平啟動",
+        "description": "無預挖、無 ICO、無風投"
       }
     },
     "corePrinciples": {
-      "title": "Principles",
-      "subtitle": "Built on fundamental values that ensure long-term sustainability and real-world utility",
-      "soundMoney": "Sound Money",
-      "openMoney": "Open Money",
-      "description": "Ergo combines {soundMoney} (hard, predictable supply) with {openMoney} (permissionless, verifiable access) - creating the foundation for truly free finance."
+      "title": "核心原則",
+      "subtitle": "建立在確保長期可持續性和現實效用的基本價值觀之上",
+      "soundMoney": "健全貨幣",
+      "openMoney": "開放貨幣",
+      "description": "Ergo 將 {soundMoney}（硬性、可預測的供應量）與 {openMoney}（無需許可、可驗證的訪問）相結合——為真正自由的金融奠定基礎。"
     },
     "keyTechnologies": {
-      "title": "Technologies",
-      "subtitle": "Advanced cryptography and innovative consensus mechanisms power the Ergo platform"
+      "title": "核心技術",
+      "subtitle": "進階密碼學與創新的共識機制為 Ergo 平台提供動力"
     },
     "ergoScriptExample": {
-      "title": "ErgoScript Time-Lock Contract Example",
+      "title": "ErgoScript 時間鎖合約範例",
       "filename": "time-lock.ergo"
     },
     "whatMakesErgoDifferent": {
-      "title": "WHAT MAKES",
-      "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable",
+      "title": "是什麼讓",
+      "subtitle": "Ergo 將已驗證的密碼學技術與創新的區塊鏈設計相結合，打造出安全、可擴展且可持續的平台",
       "fairLaunch": {
-        "title": "Fair Launch",
-        "description": "No pre-mine, no ICO, no VCs. Community-owned from day one with transparent distribution."
+        "title": "公平啟動",
+        "description": "無預挖、無 ICO、無風投。從第一天起由社區所有，分配透明。"
       },
       "eutxoErgoScript": {
         "title": "eUTXO + ErgoScript",
-        "description": "Predictable execution, no reentrancy, and powerful cryptographic primitives built-in."
+        "description": "可預測的執行、無重入問題，以及內建強大的密碼學原語。"
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Sustainable blockchain economics ensuring long-term viability and preventing state bloat."
+        "title": "儲存租金",
+        "description": "可持續的區塊鏈經濟模型，確保長期可行性並防止狀態膨脹。"
       },
       "researchDriven": {
-        "title": "Research-Driven",
-        "description": "Built by experienced cryptographers with peer-reviewed academic foundations."
+        "title": "研究驅動",
+        "description": "由經驗豐富的密碼學家建構，具備同行評審的學術基礎。"
       },
       "robustPrivacy": {
-        "title": "Robust Privacy",
-        "description": "Sigma Protocols enable optional privacy at the protocol level, not as an afterthought."
+        "title": "強健的隱私保護",
+        "description": "Sigma 協議在協議層面實現可選隱私，而非事後添加。"
       },
       "communityLed": {
-        "title": "Community-Led",
-        "description": "Decentralized governance with no single point of control or failure."
+        "title": "社區主導",
+        "description": "去中心化治理，無單一控制點或故障點。"
       }
     },
     "chooseYourPath": {
-      "title": "Choose Your",
-      "titleHighlight": "Path",
-      "subtitle": "Tailored guides for different types of Ergo users",
+      "title": "選擇您的",
+      "titleHighlight": "路徑",
+      "subtitle": "針對不同類型 Ergo 用戶的量身定制指南",
       "miners": {
-        "title": "For Miners",
-        "subtitle": "GPU-friendly PoW",
-        "description": "ASIC-resistant Autolykos algorithm, fair mining rewards, and accessible hardware requirements"
+        "title": "礦工專區",
+        "subtitle": "GPU 友好的 PoW",
+        "description": "抗 ASIC 的 Autolykos 演算法、公平的挖礦獎勵，以及親民的硬體要求"
       },
       "holders": {
-        "title": "For Holders",
-        "subtitle": "Long-term value",
-        "description": "Sound tokenomics, DeFi opportunities, and a sustainable ecosystem built for the future"
+        "title": "持有者專區",
+        "subtitle": "長期價值",
+        "description": "健全的代幣經濟學、DeFi 機會，以及為未來而建的可持續生態系統"
       },
       "builders": {
-        "title": "For Builders",
-        "subtitle": "Powerful smart contracts",
-        "description": "ErgoScript, eUTXO model, SDKs, and developer grants to build the next generation of dApps"
+        "title": "建設者專區",
+        "subtitle": "強大的智能合約",
+        "description": "ErgoScript、eUTXO 模型、SDK 和開發者補助金，用於建構下一代 dApps"
       }
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
-      "subtitle": "Start exploring the Ergo ecosystem",
+      "title": "下一步",
+      "titleHighlight": "是什麼",
+      "subtitle": "開始探索 Ergo 生態系統",
       "wallet": {
-        "title": "Get Ergo Wallet",
-        "subtitle": "Start Securely",
-        "description": "Download a secure wallet to store ERG and interact with dApps"
+        "title": "取得 Ergo 錢包",
+        "subtitle": "安全入門",
+        "description": "下載安全的錢包以儲存 ERG 並與 dApps 互動"
       },
       "ecosystem": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover Applications",
-        "description": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo"
+        "title": "探索生態系統",
+        "subtitle": "探索應用程式",
+        "description": "尋找在 Ergo 上建構的 DeFi 協議、錢包、NFT 平台和其他 dApps"
       },
       "compare": {
-        "title": "Compare Blockchains",
-        "subtitle": "Why Ergo vs others",
-        "description": "See how Ergo's PoW, eUTXO, privacy, and sustainability stack up against Bitcoin, Ethereum, Cardano, and others"
+        "title": "比較區塊鏈",
+        "subtitle": "為何選擇 Ergo 而非其他",
+        "description": "了解 Ergo 的 PoW、eUTXO、隱私保護和可持續性相較於比特幣、以太坊、Cardano 等的優勢"
       }
     },
     "emailCapture": {
-      "title": "Start Your Ergo Journey",
-      "description": "Get beginner-friendly guides, tutorials, and updates delivered to your inbox."
+      "title": "開始您的 Ergo 之旅",
+      "description": "獲取適合初學者的指南、教學和更新，直接發送至您的信箱。"
     }
   },
   "comparison": {

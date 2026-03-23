@@ -618,9 +618,21 @@
           "name": "ERG Exchange Directory",
           "description": "Complete list of exchanges where you can buy ERG tokens",
           "items": [
-            { "name": "KuCoin", "url": "https://www.kucoin.com", "description": "Major exchange with high ERG liquidity" },
-            { "name": "Gate.io", "url": "https://www.gate.io", "description": "Popular exchange supporting ERG" },
-            { "name": "CoinEx", "url": "https://www.coinex.com", "description": "Exchange with ERG trading pairs" }
+            {
+              "name": "KuCoin",
+              "url": "https://www.kucoin.com",
+              "description": "Major exchange with high ERG liquidity"
+            },
+            {
+              "name": "Gate.io",
+              "url": "https://www.gate.io",
+              "description": "Popular exchange supporting ERG"
+            },
+            {
+              "name": "CoinEx",
+              "url": "https://www.coinex.com",
+              "description": "Exchange with ERG trading pairs"
+            }
           ]
         },
         "faq": {
@@ -911,562 +923,562 @@
       }
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, and zero-knowledge proofs for complete privacy.",
-      "lastUpdated": "Last updated:",
+      "title": "Gizlilik ve Mahremiyet",
+      "subtitle": "Giderek artan gözetim altında finansal gizlilik",
+      "description": "Tam gizlilik için emanetsiz karıştırıcılar, gizli adresler ve sıfır bilgi kanıtları.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "privacy",
         "ogImage": "/og-privacy.png",
         "canonicalPath": "/use/privacy-confidentiality"
       },
       "seo": {
-        "title": "Privacy & Confidentiality on Ergo | Financial Privacy Solutions",
-        "description": "Build privacy-preserving applications on Ergo. Non-custodial mixers, stealth addresses, zero-knowledge proofs, and ring signatures for complete financial privacy.",
-        "keywords": "privacy, confidentiality, ErgoMixer, stealth addresses, zero-knowledge proofs, ring signatures, financial privacy, anonymous transactions",
-        "ogTitle": "Privacy & Confidentiality on Ergo",
-        "ogDescription": "Financial privacy in an increasingly surveilled world. Non-custodial mixers and zero-knowledge proofs.",
-        "twitterTitle": "Privacy & Confidentiality on Ergo",
-        "twitterDescription": "Build privacy-preserving applications with ErgoMixer and Sigma protocols"
+        "title": "Ergo'da Gizlilik ve Mahremiyet | Finansal Gizlilik Çözümleri",
+        "description": "Ergo'da gizliliği koruyan uygulamalar geliştirin. Tam finansal gizlilik için emanetsiz karıştırıcılar, gizli adresler, sıfır bilgi kanıtları ve halka imzaları.",
+        "keywords": "gizlilik, mahremiyet, ErgoMixer, gizli adresler, sıfır bilgi kanıtları, halka imzaları, finansal gizlilik, anonim işlemler",
+        "ogTitle": "Ergo'da Gizlilik ve Mahremiyet",
+        "ogDescription": "Giderek artan gözetim altında finansal gizlilik. Emanetsiz karıştırıcılar ve sıfır bilgi kanıtları.",
+        "twitterTitle": "Ergo'da Gizlilik ve Mahremiyet",
+        "twitterDescription": "ErgoMixer ve Sigma protokolleri ile gizliliği koruyan uygulamalar geliştirin"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "useErgoMixer": {
-          "name": "Use ErgoMixer",
-          "description": "Start mixing coins for privacy"
+          "name": "ErgoMixer Kullan",
+          "description": "Gizlilik için coin karıştırmaya başlayın"
         },
         "privacyGuide": {
-          "name": "Privacy Guide",
-          "description": "Learn privacy best practices"
+          "name": "Gizlilik Rehberi",
+          "description": "Gizlilik en iyi uygulamalarını öğrenin"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build privacy applications"
+          "name": "Geliştirici Belgeleri",
+          "description": "Gizlilik uygulamaları geliştirin"
         }
       },
       "navigation": {
-        "privacyFeatures": "Privacy features",
-        "liveProjects": "Live Projects",
-        "faq": "FAQ"
+        "privacyFeatures": "Gizlilik özellikleri",
+        "liveProjects": "Canlı Projeler",
+        "faq": "SSS"
       },
       "features": {
-        "title": "Privacy Features",
-        "subtitle": "Comprehensive privacy toolkit for financial sovereignty",
+        "title": "Gizlilik Özellikleri",
+        "subtitle": "Finansal egemenlik için kapsamlı gizlilik araç seti",
         "nonCustodialMixers": {
-          "title": "Non-Custodial Mixers",
-          "description": "Mix coins without trusting third parties using ErgoMixer's advanced protocols"
+          "title": "Emanetsiz Karıştırıcılar",
+          "description": "ErgoMixer'ın gelişmiş protokollerini kullanarak üçüncü taraflara güvenmeden coin karıştırın"
         },
         "stealthAddresses": {
-          "title": "Stealth Addresses",
-          "description": "One-time addresses for enhanced transaction privacy and unlinkability"
+          "title": "Gizli Adresler",
+          "description": "Gelişmiş işlem gizliliği ve bağlantısızlık için tek kullanımlık adresler"
         },
         "zeroKnowledgeProofs": {
-          "title": "Zero-Knowledge Proofs",
-          "description": "Prove statements without revealing underlying data using Sigma protocols"
+          "title": "Sıfır Bilgi Kanıtları",
+          "description": "Sigma protokollerini kullanarak temel verileri ifşa etmeden ifadeleri kanıtlayın"
         },
         "ringSignatures": {
-          "title": "Ring Signatures",
-          "description": "Sign transactions as a member of a group without revealing which member"
+          "title": "Halka İmzaları",
+          "description": "Hangi üye olduğunu ifşa etmeden bir grubun üyesi olarak işlemleri imzalayın"
         },
         "confidentialAssets": {
-          "title": "Confidential Assets",
-          "description": "Hide asset types and amounts while maintaining verifiability"
+          "title": "Gizli Varlıklar",
+          "description": "Doğrulanabilirliği korurken varlık türlerini ve miktarlarını gizleyin"
         },
         "privacyPools": {
-          "title": "Privacy Pools",
-          "description": "Join privacy-preserving pools for enhanced anonymity sets"
+          "title": "Gizlilik Havuzları",
+          "description": "Gelişmiş anonimlik kümeleri için gizliliği koruyan havuzlara katılın"
         }
       },
       "technical": {
-        "title": "Technical Implementation",
-        "subtitle": "How privacy technologies work on Ergo",
+        "title": "Teknik Uygulama",
+        "subtitle": "Gizlilik teknolojileri Ergo'da nasıl çalışır",
         "tabs": {
-          "overview": "Overview",
+          "overview": "Genel Bakış",
           "ergomixer": "ErgoMixer",
-          "code": "Code Example"
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "Privacy Technologies",
-          "description": "Ergo provides multiple layers of privacy through cryptographic protocols and smart contract capabilities:",
+          "title": "Gizlilik Teknolojileri",
+          "description": "Ergo, kriptografik protokoller ve akıllı sözleşme yetenekleri aracılığıyla çok katmanlı gizlilik sağlar:",
           "points": {
-            "point1": "Sigma protocols for zero-knowledge proofs",
-            "point2": "Ring signatures for signer ambiguity",
-            "point3": "Stealth addresses for receiver privacy",
-            "point4": "CoinJoin++ for transaction mixing",
-            "point5": "Confidential assets for amount privacy"
+            "point1": "Sıfır bilgi kanıtları için Sigma protokolleri",
+            "point2": "İmzalayan belirsizliği için halka imzaları",
+            "point3": "Alıcı gizliliği için gizli adresler",
+            "point4": "İşlem karıştırma için CoinJoin++",
+            "point5": "Miktar gizliliği için gizli varlıklar"
           }
         },
         "ergomixer": {
-          "title": "ErgoMixer Protocol",
+          "title": "ErgoMixer Protokolü",
           "howItWorks": {
-            "title": "How It Works",
+            "title": "Nasıl Çalışır",
             "points": {
-              "point1": "Users create mixing requests",
-              "point2": "Funds locked in mixing contracts",
-              "point3": "Ring signatures hide sender",
-              "point4": "Mixed outputs to new addresses"
+              "point1": "Kullanıcılar karıştırma talepleri oluşturur",
+              "point2": "Fonlar karıştırma sözleşmelerinde kilitlenir",
+              "point3": "Halka imzaları göndereni gizler",
+              "point4": "Karıştırılmış çıktılar yeni adreslere gönderilir"
             }
           },
           "keyFeatures": {
-            "title": "Key Features",
+            "title": "Temel Özellikler",
             "points": {
-              "point1": "No trusted coordinator",
-              "point2": "No interaction required",
-              "point3": "Configurable anonymity sets",
-              "point4": "Tor/VPN compatible"
+              "point1": "Güvenilir koordinatör yok",
+              "point2": "Etkileşim gerekmez",
+              "point3": "Yapılandırılabilir anonimlik kümeleri",
+              "point4": "Tor/VPN uyumlu"
             }
           },
           "mixingProcess": {
-            "title": "Mixing Process"
+            "title": "Karıştırma Süreci"
           }
         },
         "codeExample": {
-          "title": "Sigma Protocol Example",
-          "description": "Zero-knowledge proof for mixing"
+          "title": "Sigma Protokol Örneği",
+          "description": "Karıştırma için sıfır bilgi kanıtı"
         }
       },
       "projects": {
-        "title": "Privacy Projects",
-        "subtitle": "Privacy-preserving applications on Ergo",
+        "title": "Gizlilik Projeleri",
+        "subtitle": "Ergo'da gizliliği koruyan uygulamalar",
         "ergoMixer": {
           "name": "ErgoMixer",
-          "description": "Non-custodial, non-interactive mixer for enhanced privacy",
-          "status": "Live",
+          "description": "Gelişmiş gizlilik için emanetsiz, etkileşimsiz karıştırıcı",
+          "status": "Canlı",
           "features": {
             "feature1": "CoinJoin++",
-            "feature2": "No trusted setup",
-            "feature3": "Tor support"
+            "feature2": "Güvenilir kurulum yok",
+            "feature3": "Tor desteği"
           }
         },
         "stealthAddresses": {
-          "name": "Stealth Addresses",
-          "description": "One-time payment addresses for transaction privacy",
-          "status": "Live",
+          "name": "Gizli Adresler",
+          "description": "İşlem gizliliği için tek kullanımlık ödeme adresleri",
+          "status": "Canlı",
           "features": {
-            "feature1": "Unlinkable payments",
-            "feature2": "Receiver privacy",
-            "feature3": "SPV compatible"
+            "feature1": "Bağlantısız ödemeler",
+            "feature2": "Alıcı gizliliği",
+            "feature3": "SPV uyumlu"
           }
         },
         "sigmaUsdPrivacy": {
-          "name": "SigmaUSD Privacy",
-          "description": "Privacy features for stablecoin transactions",
-          "status": "In Development",
+          "name": "SigmaUSD Gizliliği",
+          "description": "Stablecoin işlemleri için gizlilik özellikleri",
+          "status": "Geliştirmede",
           "features": {
-            "feature1": "Private minting",
-            "feature2": "Shielded transfers",
-            "feature3": "Confidential balances"
+            "feature1": "Özel basım",
+            "feature2": "Korumalı transferler",
+            "feature3": "Gizli bakiyeler"
           }
         },
-        "learnMore": "Learn More",
-        "comingSoon": "Coming Soon"
+        "learnMore": "Daha Fazla Bilgi",
+        "comingSoon": "Yakında"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about privacy on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'da gizlilik hakkında yaygın sorular",
         "howErgoMixerWorks": {
-          "question": "How does ErgoMixer provide privacy?",
-          "answer": "ErgoMixer uses a CoinJoin++ protocol that allows users to mix their coins with others without trusting a central party. It leverages Ergo's Sigma protocols to create complex spending conditions that ensure privacy while maintaining security."
+          "question": "ErgoMixer gizliliği nasıl sağlar?",
+          "answer": "ErgoMixer, kullanıcıların merkezi bir tarafa güvenmeden coinlerini başkalarıyla karıştırmasına olanak tanıyan bir CoinJoin++ protokolü kullanır. Güvenliği korurken gizliliği sağlayan karmaşık harcama koşulları oluşturmak için Ergo'nun Sigma protokollerinden yararlanır."
         },
         "whatAreSigmaProtocols": {
-          "question": "What are Sigma protocols?",
-          "answer": "Sigma protocols are a class of zero-knowledge proofs that allow proving knowledge of a secret without revealing it. Ergo's ErgoScript natively supports Sigma protocols, enabling complex privacy-preserving applications without trusted setups."
+          "question": "Sigma protokolleri nedir?",
+          "answer": "Sigma protokolleri, bir sırrı ifşa etmeden bilgi sahibi olunduğunu kanıtlamaya olanak tanıyan sıfır bilgi kanıtlarının bir sınıfıdır. Ergo'nun ErgoScript'i, güvenilir kurulumlar olmadan karmaşık gizlilik korumalı uygulamaları etkinleştirerek Sigma protokollerini yerel olarak destekler."
         },
         "howStealthAddressesWork": {
-          "question": "How do stealth addresses work on Ergo?",
-          "answer": "Stealth addresses allow receivers to publish a single address while senders generate unique one-time addresses for each payment. This breaks the link between the published address and on-chain transactions, enhancing receiver privacy."
+          "question": "Ergo'da gizli adresler nasıl çalışır?",
+          "answer": "Gizli adresler, alıcıların tek bir adres yayınlamasına izin verirken gönderenler her ödeme için benzersiz tek kullanımlık adresler oluşturur. Bu, yayınlanan adres ile zincir üzerindeki işlemler arasındaki bağlantıyı keserek alıcı gizliliğini artırır."
         },
         "isPrivacyOptional": {
-          "question": "Is Ergo privacy optional or mandatory?",
-          "answer": "Ergo provides optional privacy features. Users can choose when to use privacy tools like ErgoMixer or stealth addresses based on their needs, maintaining flexibility while ensuring regulatory compliance when needed."
+          "question": "Ergo gizliliği isteğe bağlı mı yoksa zorunlu mu?",
+          "answer": "Ergo, isteğe bağlı gizlilik özellikleri sunar. Kullanıcılar, ihtiyaçlarına göre ErgoMixer veya gizli adresler gibi gizlilik araçlarını ne zaman kullanacaklarını seçebilir; gerektiğinde yasal uyumluluğu sağlarken esnekliği koruyabilirler."
         },
         "whatMakesErgoDifferent": {
-          "question": "What makes Ergo's privacy different from other chains?",
-          "answer": "Ergo's eUTXO model naturally provides better privacy than account-based systems. Combined with native Sigma protocols, optional privacy tools, and no trusted setups, Ergo offers a unique balance of privacy, transparency, and compliance."
+          "question": "Ergo'nun gizliliği diğer zincirlerden ne farkı vardır?",
+          "answer": "Ergo'nun eUTXO modeli, hesap tabanlı sistemlere kıyasla doğal olarak daha iyi gizlilik sağlar. Yerel Sigma protokolleri, isteğe bağlı gizlilik araçları ve güvenilir kurulum gereksinimleri olmadan Ergo, gizlilik, şeffaflık ve uyumluluk arasında benzersiz bir denge sunar."
         }
       },
       "cta": {
-        "title": "Ready for Financial Privacy?",
-        "subtitle": "Start using privacy tools on Ergo today.",
-        "tryErgoMixer": "Try ErgoMixer",
-        "privacyGuide": "Privacy Guide"
+        "title": "Finansal Gizliğe Hazır mısınız?",
+        "subtitle": "Bugün Ergo'da gizlilik araçlarını kullanmaya başlayın.",
+        "tryErgoMixer": "ErgoMixer'ı Deneyin",
+        "privacyGuide": "Gizlilik Rehberi"
       },
       "relatedContent": {
-        "title": "Explore Privacy",
-        "subtitle": "Dive deeper into Ergo's privacy features and technology"
+        "title": "Gizliliği Keşfedin",
+        "subtitle": "Ergo'nun gizlilik özelliklerini ve teknolojisini daha derinlemesine inceleyin"
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo Privacy",
-        "description": "Get notified about privacy features, Sigma Protocols updates, and security innovations."
+        "title": "Ergo Gizliliği Hakkında Güncel Kalın",
+        "description": "Gizlilik özellikleri, Sigma Protokol güncellemeleri ve güvenlik yenilikleri hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "privacyConfidentiality": "Privacy & Confidentiality"
+          "useCases": "Kullanım Senaryoları",
+          "privacyConfidentiality": "Gizlilik ve Mahremiyet"
         },
         "techArticle": {
-          "headline": "Privacy & Confidentiality on Ergo",
-          "description": "Comprehensive guide to privacy technologies and applications on Ergo blockchain",
-          "keywords": "privacy, ErgoMixer, stealth addresses, zero-knowledge proofs"
+          "headline": "Ergo'da Gizlilik ve Mahremiyet",
+          "description": "Ergo blockchain'deki gizlilik teknolojileri ve uygulamalarına kapsamlı rehber",
+          "keywords": "gizlilik, ErgoMixer, gizli adresler, sıfır bilgi kanıtları"
         },
         "howTo": {
-          "name": "How to Use Privacy Features on Ergo",
-          "description": "Step-by-step guide to using privacy tools on Ergo",
+          "name": "Ergo'da Gizlilik Özelliklerini Nasıl Kullanırsınız",
+          "description": "Ergo'da gizlilik araçlarını kullanmak için adım adım rehber",
           "steps": {
             "setupWallet": {
-              "name": "Set up Ergo wallet",
-              "text": "Install a privacy-focused Ergo wallet"
+              "name": "Ergo cüzdanı kurun",
+              "text": "Gizlilik odaklı bir Ergo cüzdanı yükleyin"
             },
             "accessErgoMixer": {
-              "name": "Access ErgoMixer",
-              "text": "Connect to ErgoMixer through Tor for enhanced privacy"
+              "name": "ErgoMixer'a erişin",
+              "text": "Gelişmiş gizlilik için Tor üzerinden ErgoMixer'a bağlanın"
             },
             "configureMixing": {
-              "name": "Configure mixing",
-              "text": "Set mixing rounds and anonymity parameters"
+              "name": "Karıştırmayı yapılandırın",
+              "text": "Karıştırma turlarını ve anonimlik parametrelerini ayarlayın"
             },
             "mixCoins": {
-              "name": "Mix coins",
-              "text": "Submit coins for mixing and wait for completion"
+              "name": "Coinleri karıştırın",
+              "text": "Coinleri karıştırma için gönderin ve tamamlanmasını bekleyin"
             }
           }
         }
       }
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems.",
-      "lastUpdated": "Last updated:",
+      "title": "Kimlik ve İtibar",
+      "subtitle": "Öz-egemen kimlik ve Web3 itibarı",
+      "description": "Merkezi olmayan tanımlayıcılar (DID), Sybil direnci, itibar sistemleri.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "identity",
         "ogImage": "/og-identity.png",
         "canonicalPath": "/use/identity-reputation"
       },
       "seo": {
-        "title": "Identity & Reputation on Ergo | Self-Sovereign Identity",
-        "description": "Build decentralized identity and reputation systems on Ergo. DIDs, verifiable credentials, Sybil resistance, and non-transferable reputation tokens.",
-        "keywords": "identity, reputation, DID, self-sovereign identity, verifiable credentials, Sybil resistance, Web3 identity",
-        "ogTitle": "Identity & Reputation on Ergo",
-        "ogDescription": "Self-sovereign identity and Web3 reputation systems.",
-        "twitterTitle": "Identity on Ergo",
-        "twitterDescription": "Decentralized identity and reputation systems"
+        "title": "Ergo'da Kimlik ve İtibar | Öz-Egemen Kimlik",
+        "description": "Ergo'da merkezi olmayan kimlik ve itibar sistemleri oluşturun. DID'ler, doğrulanabilir kimlik bilgileri, Sybil direnci ve devredilemez itibar token'ları.",
+        "keywords": "kimlik, itibar, DID, öz-egemen kimlik, doğrulanabilir kimlik bilgileri, Sybil direnci, Web3 kimliği",
+        "ogTitle": "Ergo'da Kimlik ve İtibar",
+        "ogDescription": "Öz-egemen kimlik ve Web3 itibar sistemleri.",
+        "twitterTitle": "Ergo'da Kimlik",
+        "twitterDescription": "Merkezi olmayan kimlik ve itibar sistemleri"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "identityGuide": {
-          "name": "Identity Guide",
-          "description": "Learn about SSI on Ergo"
+          "name": "Kimlik Rehberi",
+          "description": "Ergo'da SSI hakkında bilgi edinin"
         },
         "didStandards": {
-          "name": "DID Standards",
-          "description": "W3C DID specifications"
+          "name": "DID Standartları",
+          "description": "W3C DID spesifikasyonları"
         },
         "privacyEcosystem": {
-          "name": "Privacy Ecosystem",
-          "description": "Privacy tools and protocols on Ergo"
+          "name": "Gizlilik Ekosistemi",
+          "description": "Ergo'da gizlilik araçları ve protokolleri"
         },
         "buildIdentityApps": {
-          "name": "Build Identity Apps",
-          "description": "Developer resources"
+          "name": "Kimlik Uygulamaları Geliştirin",
+          "description": "Geliştirici kaynakları"
         }
       },
       "navigation": {
-        "identityFeatures": "Identity features",
-        "useCases": "Use Cases",
-        "faq": "FAQ"
+        "identityFeatures": "Kimlik özellikleri",
+        "useCases": "Kullanım Senaryoları",
+        "faq": "SSS"
       },
       "features": {
-        "title": "Identity Features",
-        "subtitle": "Building blocks for decentralized identity",
+        "title": "Kimlik Özellikleri",
+        "subtitle": "Merkezi olmayan kimlik için yapı taşları",
         "selfSovereignIdentity": {
-          "title": "Self-Sovereign Identity",
-          "description": "Control your own identity without relying on centralized authorities"
+          "title": "Öz-Egemen Kimlik",
+          "description": "Merkezi otoritelere bağımlı olmadan kendi kimliğinizi kontrol edin"
         },
         "decentralizedIdentifiers": {
-          "title": "Decentralized Identifiers",
-          "description": "DIDs that work across platforms and applications"
+          "title": "Merkezi Olmayan Tanımlayıcılar",
+          "description": "Platformlar ve uygulamalar genelinde çalışan DID'ler"
         },
         "reputationTokens": {
-          "title": "Reputation Tokens",
-          "description": "Non-transferable tokens that represent earned reputation"
+          "title": "İtibar Token'ları",
+          "description": "Kazanılan itibarı temsil eden devredilemez token'lar"
         },
         "sybilResistance": {
-          "title": "Sybil Resistance",
-          "description": "Prevent fake identities and ensure one-person-one-vote"
+          "title": "Sybil Direnci",
+          "description": "Sahte kimlikleri önleyin ve bir kişi bir oy ilkesini sağlayın"
         },
         "verifiableCredentials": {
-          "title": "Verifiable Credentials",
-          "description": "Cryptographic proofs of identity attributes and achievements"
+          "title": "Doğrulanabilir Kimlik Bilgileri",
+          "description": "Kimlik nitelikleri ve başarıların kriptografik kanıtları"
         },
         "privacyPreserving": {
-          "title": "Privacy-Preserving",
-          "description": "Selective disclosure of identity information using zero-knowledge proofs"
+          "title": "Gizliliği Koruyan",
+          "description": "Sıfır bilgi kanıtları kullanarak kimlik bilgilerinin seçici olarak açıklanması"
         }
       },
       "technical": {
-        "title": "Technical Architecture",
-        "subtitle": "How identity systems work on Ergo",
+        "title": "Teknik Mimari",
+        "subtitle": "Kimlik sistemleri Ergo'da nasıl çalışır",
         "tabs": {
-          "overview": "Overview",
-          "reputation": "Reputation",
-          "code": "Code Example"
+          "overview": "Genel Bakış",
+          "reputation": "İtibar",
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "Identity System",
-          "description": "Ergo enables decentralized identity through:",
+          "title": "Kimlik Sistemi",
+          "description": "Ergo, merkezi olmayan kimliği şunlar aracılığıyla etkinleştirir:",
           "points": {
-            "point1": "Cryptographic key pairs for identity",
-            "point2": "On-chain DIDs and credentials",
-            "point3": "Zero-knowledge proofs for privacy",
-            "point4": "Non-transferable reputation tokens",
-            "point5": "Verifiable credential issuance"
+            "point1": "Kimlik için kriptografik anahtar çiftleri",
+            "point2": "Zincir üzerinde DID'ler ve kimlik bilgileri",
+            "point3": "Gizlilik için sıfır bilgi kanıtları",
+            "point4": "Devredilemez itibar token'ları",
+            "point5": "Doğrulanabilir kimlik bilgisi yayımı"
           }
         },
         "reputation": {
-          "title": "Reputation System",
+          "title": "İtibar Sistemi",
           "earning": {
-            "title": "Earning Reputation",
+            "title": "İtibar Kazanma",
             "points": {
-              "point1": "Complete verified actions",
-              "point2": "Receive peer endorsements",
-              "point3": "Contribute to protocols",
-              "point4": "Time-based accumulation"
+              "point1": "Doğrulanmış eylemleri tamamlayın",
+              "point2": "Akran onayları alın",
+              "point3": "Protokollere katkıda bulunun",
+              "point4": "Zaman bazlı birikim"
             }
           },
           "using": {
-            "title": "Using Reputation",
+            "title": "İtibarı Kullanma",
             "points": {
-              "point1": "Weighted voting power",
-              "point2": "Access to services",
-              "point3": "Better loan terms",
-              "point4": "Trust signaling"
+              "point1": "Ağırlıklı oy gücü",
+              "point2": "Hizmetlere erişim",
+              "point3": "Daha iyi kredi koşulları",
+              "point4": "Güven sinyali"
             }
           },
           "sybilResistance": {
-            "title": "Sybil Resistance"
+            "title": "Sybil Direnci"
           }
         },
         "codeExample": {
-          "title": "Reputation Token Example",
-          "description": "Non-transferable reputation NFT"
+          "title": "İtibar Token'ı Örneği",
+          "description": "Devredilemez itibar NFT'si"
         }
       },
       "useCases": {
-        "title": "Identity Use Cases",
-        "subtitle": "Applications for decentralized identity",
+        "title": "Kimlik Kullanım Senaryoları",
+        "subtitle": "Merkezi olmayan kimlik uygulamaları",
         "daoGovernance": {
-          "name": "DAO Governance",
-          "description": "Reputation-weighted voting for decentralized organizations",
-          "status": "Concept",
+          "name": "DAO Yönetimi",
+          "description": "Merkezi olmayan organizasyonlar için itibar ağırlıklı oylama",
+          "status": "Kavram",
           "features": {
-            "feature1": "Merit-based voting",
-            "feature2": "Delegation systems",
-            "feature3": "Contribution tracking"
+            "feature1": "Liyakat bazlı oylama",
+            "feature2": "Delegasyon sistemleri",
+            "feature3": "Katkı takibi"
           }
         },
         "defiCreditScoring": {
-          "name": "DeFi Credit Scoring",
-          "description": "On-chain credit history for under-collateralized loans",
-          "status": "Research",
+          "name": "DeFi Kredi Skorlaması",
+          "description": "Yetersiz teminatlı krediler için zincir üzerinde kredi geçmişi",
+          "status": "Araştırma",
           "features": {
-            "feature1": "Payment history",
-            "feature2": "Risk assessment",
-            "feature3": "Credit limits"
+            "feature1": "Ödeme geçmişi",
+            "feature2": "Risk değerlendirmesi",
+            "feature3": "Kredi limitleri"
           }
         },
         "professionalCredentials": {
-          "name": "Professional Credentials",
-          "description": "Verifiable professional certifications and achievements",
-          "status": "Planned",
+          "name": "Profesyonel Kimlik Bilgileri",
+          "description": "Doğrulanabilir profesyonel sertifikalar ve başarılar",
+          "status": "Planlanmış",
           "features": {
-            "feature1": "Skill verification",
-            "feature2": "Work history",
-            "feature3": "Peer endorsements"
+            "feature1": "Beceri doğrulama",
+            "feature2": "İş geçmişi",
+            "feature3": "Akran onayları"
           }
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about identity on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'da kimlik hakkında yaygın sorular",
         "whatIsSsi": {
-          "question": "What is self-sovereign identity?",
-          "answer": "Self-sovereign identity (SSI) gives individuals control over their digital identity without depending on centralized authorities. Users own their identity data and choose what to share and with whom."
+          "question": "Öz-egemen kimlik nedir?",
+          "answer": "Öz-egemen kimlik (SSI), bireylere merkezi otoritelere bağımlı olmadan dijital kimlikleri üzerinde kontrol sağlar. Kullanıcılar kimlik verilerinin sahibidir ve neyi kiminle paylaşacaklarını seçerler."
         },
         "howReputationTokensWork": {
-          "question": "How do reputation tokens work?",
-          "answer": "Reputation tokens are non-transferable NFTs that represent earned achievements or trust. They cannot be sold or transferred, ensuring reputation must be earned, not bought."
+          "question": "İtibar token'ları nasıl çalışır?",
+          "answer": "İtibar token'ları, kazanılan başarıları veya güveni temsil eden devredilemez NFT'lerdir. Satılamaz veya transfer edilemezler; bu sayede itibarın satın alınmak yerine kazanılması zorunlu olur."
         },
         "whatAreDids": {
-          "question": "What are DIDs on Ergo?",
-          "answer": "Decentralized Identifiers (DIDs) on Ergo are unique identifiers anchored on the blockchain. They enable verifiable, self-sovereign digital identity that works across different platforms and applications."
+          "question": "Ergo'da DID'ler nedir?",
+          "answer": "Ergo'daki Merkezi Olmayan Tanımlayıcılar (DID'ler), blockchain'de sabitlenmiş benzersiz tanımlayıcılardır. Farklı platformlarda ve uygulamalarda çalışan doğrulanabilir, öz-egemen dijital kimliği etkinleştirirler."
         },
         "howPrivacyMaintained": {
-          "question": "How is privacy maintained?",
-          "answer": "Ergo uses zero-knowledge proofs and selective disclosure to maintain privacy. Users can prove attributes about their identity (like being over 18) without revealing the actual data."
+          "question": "Gizlilik nasıl korunur?",
+          "answer": "Ergo, gizliliği korumak için sıfır bilgi kanıtları ve seçici ifşa kullanır. Kullanıcılar, gerçek verileri ifşa etmeden kimliklerinin nitelikleri hakkında (18 yaşından büyük olmak gibi) kanıt sunabilir."
         },
         "canReputationBeUsedForDefi": {
-          "question": "Can reputation be used for DeFi?",
-          "answer": "Yes! On-chain reputation can enable under-collateralized lending, better interest rates, and access to exclusive DeFi services based on proven track record rather than just collateral."
+          "question": "İtibar DeFi için kullanılabilir mi?",
+          "answer": "Evet! Zincir üzerindeki itibar, yalnızca teminata değil kanıtlanmış geçmişe dayalı olarak yetersiz teminatlı borç vermeyi, daha iyi faiz oranlarını ve özel DeFi hizmetlerine erişimi mümkün kılabilir."
         }
       },
       "cta": {
-        "title": "Ready to Build Identity Solutions?",
-        "subtitle": "Create decentralized identity and reputation systems on Ergo.",
-        "startBuilding": "Start Building",
-        "learnMore": "Learn More",
-        "developerDocs": "Developer Docs"
+        "title": "Kimlik Çözümleri Geliştirmeye Hazır mısınız?",
+        "subtitle": "Ergo'da merkezi olmayan kimlik ve itibar sistemleri oluşturun.",
+        "startBuilding": "Geliştirmeye Başlayın",
+        "learnMore": "Daha Fazla Bilgi",
+        "developerDocs": "Geliştirici Belgeleri"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building or exploring identity solutions on Ergo today",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "Bugün Ergo'da kimlik çözümleri geliştirmeye veya keşfetmeye başlayın",
         "cards": {
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build identity and reputation systems on Ergo"
+            "title": "Geliştirici Belgeleri",
+            "subtitle": "Geliştirmeye Başlayın",
+            "description": "Ergo'da kimlik ve itibar sistemleri oluşturmak için belgelere ve araçlara erişin"
           },
           "privacyGuide": {
-            "title": "Privacy Guide",
-            "subtitle": "Learn More",
-            "description": "Understand privacy-preserving identity solutions and their implementation on Ergo"
+            "title": "Gizlilik Rehberi",
+            "subtitle": "Daha Fazla Bilgi",
+            "description": "Ergo'da gizliliği koruyan kimlik çözümlerini ve bunların uygulanmasını anlayın"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Digital Identity",
-        "description": "Get notified about self-sovereign identity solutions and privacy-preserving credentials."
+        "title": "Dijital Kimlik Hakkında Güncel Kalın",
+        "description": "Öz-egemen kimlik çözümleri ve gizliliği koruyan kimlik bilgileri hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "identityReputation": "Identity & Reputation"
+          "useCases": "Kullanım Senaryoları",
+          "identityReputation": "Kimlik ve İtibar"
         }
       }
     },
     "bridges": {
-      "title": "Cross-Chain Bridges",
-      "subtitle": "Secure, trustless value transfer between blockchains",
-      "description": "Decentralized bridges with multi-signature security, no central custody.",
-      "lastUpdated": "Last updated:",
+      "title": "Zincirler Arası Köprüler",
+      "subtitle": "Blockchain'ler arasında güvenli, güvensiz değer transferi",
+      "description": "Çok imzalı güvenlik ile merkezi emanet olmaksızın merkezi olmayan köprüler.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "bridges",
         "ogImage": "/og-bridges.png",
         "canonicalPath": "/use/cross-chain-bridges"
       },
       "seo": {
-        "title": "Cross-Chain Bridges on Ergo | Interoperability Solutions",
-        "description": "Build and use cross-chain bridges on Ergo. Trustless transfers, multi-signature security, and decentralized validators for secure blockchain interoperability.",
-        "keywords": "cross-chain bridges, Rosen Bridge, blockchain interoperability, wrapped assets, atomic swaps, multi-chain, trustless transfers",
-        "ogTitle": "Cross-Chain Bridges on Ergo",
-        "ogDescription": "Secure, trustless value transfer between blockchains with Rosen Bridge.",
-        "twitterTitle": "Cross-Chain Bridges on Ergo",
-        "twitterDescription": "Connect Ergo to the multi-chain ecosystem"
+        "title": "Ergo'da Zincirler Arası Köprüler | Birlikte Çalışabilirlik Çözümleri",
+        "description": "Ergo'da zincirler arası köprüler oluşturun ve kullanın. Güvenli blockchain birlikte çalışabilirliği için güvensiz transferler, çok imzalı güvenlik ve merkezi olmayan doğrulayıcılar.",
+        "keywords": "zincirler arası köprüler, Rosen Bridge, blockchain birlikte çalışabilirliği, sarılı varlıklar, atomik takaslar, çok zincirli, güvensiz transferler",
+        "ogTitle": "Ergo'da Zincirler Arası Köprüler",
+        "ogDescription": "Rosen Bridge ile blockchain'ler arasında güvenli, güvensiz değer transferi.",
+        "twitterTitle": "Ergo'da Zincirler Arası Köprüler",
+        "twitterDescription": "Ergo'yu çok zincirli ekosisteme bağlayın"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "useRosenBridge": {
-          "name": "Use Rosen Bridge",
-          "description": "Bridge assets between chains"
+          "name": "Rosen Bridge Kullan",
+          "description": "Zincirler arasında varlık köprüleyin"
         },
         "bridgeDocs": {
-          "name": "Bridge Docs",
-          "description": "Integration documentation"
+          "name": "Köprü Belgeleri",
+          "description": "Entegrasyon belgeleri"
         },
         "developerGuide": {
-          "name": "Developer Guide",
-          "description": "Build bridge applications"
+          "name": "Geliştirici Rehberi",
+          "description": "Köprü uygulamaları geliştirin"
         }
       },
       "navigation": {
-        "keyFeatures": "Key features",
-        "liveBridges": "Live Bridges",
-        "faq": "FAQ"
+        "keyFeatures": "Temel özellikler",
+        "liveBridges": "Canlı Köprüler",
+        "faq": "SSS"
       },
       "features": {
-        "title": "Bridge Features",
-        "subtitle": "Connect Ergo to the multi-chain ecosystem",
+        "title": "Köprü Özellikleri",
+        "subtitle": "Ergo'yu çok zincirli ekosisteme bağlayın",
         "trustlessTransfers": {
-          "title": "Trustless Transfers",
-          "description": "Move assets between chains without relying on centralized custodians"
+          "title": "Güvensiz Transferler",
+          "description": "Merkezi saklaycılara güvenmeden zincirler arasında varlık taşıyın"
         },
         "multiSignatureSecurity": {
-          "title": "Multi-Signature Security",
-          "description": "Decentralized validator sets ensure bridge security and reliability"
+          "title": "Çok İmzalı Güvenlik",
+          "description": "Merkezi olmayan doğrulayıcı grupları köprü güvenliğini ve güvenilirliğini sağlar"
         },
         "fastFinality": {
-          "title": "Fast Finality",
-          "description": "Quick confirmation times for cross-chain transactions"
+          "title": "Hızlı Kesinlik",
+          "description": "Zincirler arası işlemler için hızlı onay süreleri"
         },
         "multipleChains": {
-          "title": "Multiple Chains",
-          "description": "Connect to Ethereum, BSC, Cardano, and other major blockchains"
+          "title": "Çoklu Zincirler",
+          "description": "Ethereum, BSC, Cardano ve diğer büyük blockchain'lere bağlanın"
         },
         "wrappedAssets": {
-          "title": "Wrapped Assets",
-          "description": "Native support for wrapped tokens with 1:1 backing"
+          "title": "Sarılı Varlıklar",
+          "description": "1:1 destekli sarılı token'lar için yerel destek"
         },
         "atomicSwaps": {
-          "title": "Atomic Swaps",
-          "description": "Direct peer-to-peer cross-chain exchanges without intermediaries"
+          "title": "Atomik Takaslar",
+          "description": "Aracılar olmadan doğrudan eşten eşe zincirler arası takaslar"
         }
       },
       "technical": {
-        "title": "How It Works",
-        "subtitle": "Technical architecture of Ergo bridges",
+        "title": "Nasıl Çalışır",
+        "subtitle": "Ergo köprülerinin teknik mimarisi",
         "tabs": {
-          "overview": "Overview",
+          "overview": "Genel Bakış",
           "rosen": "Rosen Bridge",
-          "code": "Code Example"
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "Bridge Architecture",
-          "description": "Cross-chain bridges on Ergo use decentralized validator networks to ensure secure asset transfers:",
+          "title": "Köprü Mimarisi",
+          "description": "Ergo'daki zincirler arası köprüler, güvenli varlık transferlerini sağlamak için merkezi olmayan doğrulayıcı ağları kullanır:",
           "points": {
-            "point1": "Lock assets in source chain contracts",
-            "point2": "Validators confirm the lock transaction",
-            "point3": "Mint wrapped tokens on destination chain",
-            "point4": "Multi-sig ensures no single point of failure",
-            "point5": "Oracle pools provide price feeds"
+            "point1": "Kaynak zincir sözleşmelerinde varlıkları kilitleyin",
+            "point2": "Doğrulayıcılar kilit işlemini onaylar",
+            "point3": "Hedef zincirde sarılı token'lar bas",
+            "point4": "Çok imzalı yapı tek hata noktası olmadığını garanti eder",
+            "point5": "Oracle havuzları fiyat beslemeleri sağlar"
           }
         },
         "rosen": {
-          "title": "Rosen Architecture",
+          "title": "Rosen Mimarisi",
           "watchers": {
-            "title": "Watchers",
+            "title": "İzleyiciler",
             "points": {
-              "point1": "Monitor source chain events",
-              "point2": "Report lock transactions",
-              "point3": "Validate bridge requests",
-              "point4": "Decentralized network"
+              "point1": "Kaynak zincir olaylarını izleyin",
+              "point2": "Kilit işlemlerini raporlayın",
+              "point3": "Köprü taleplerini doğrulayın",
+              "point4": "Merkezi olmayan ağ"
             }
           },
           "guards": {
-            "title": "Guards",
+            "title": "Koruyucular",
             "points": {
-              "point1": "Sign multi-sig transactions",
-              "point2": "Protect bridge funds",
-              "point3": "Execute minting/burning",
-              "point4": "Consensus required"
+              "point1": "Çok imzalı işlemleri imzalayın",
+              "point2": "Köprü fonlarını koruyun",
+              "point3": "Basım/yakma işlemlerini yürütün",
+              "point4": "Mutabakat gereklidir"
             }
           },
           "transferProcess": {
-            "title": "Transfer Process"
+            "title": "Transfer Süreci"
           }
         },
         "codeExample": {
-          "title": "Bridge Contract Example",
-          "description": "Simplified bridge locking contract"
+          "title": "Köprü Sözleşme Örneği",
+          "description": "Basitleştirilmiş köprü kilitleme sözleşmesi"
         }
       },
       "projects": {
-        "title": "Live Bridges",
-        "subtitle": "Active bridge solutions connecting Ergo",
+        "title": "Canlı Köprüler",
+        "subtitle": "Ergo'yu bağlayan aktif köprü çözümleri",
         "rosenBridge": {
           "name": "Rosen Bridge",
-          "description": "Decentralized bridge connecting Ergo to multiple chains",
-          "status": "Live",
+          "description": "Ergo'yu birden fazla zincire bağlayan merkezi olmayan köprü",
+          "status": "Canlı",
           "chains": {
             "chain1": "Cardano",
             "chain2": "Bitcoin",
@@ -1475,8 +1487,8 @@
         },
         "spectrumBridge": {
           "name": "Spectrum Bridge",
-          "description": "Cross-chain liquidity bridge for DeFi applications",
-          "status": "In Development",
+          "description": "DeFi uygulamaları için zincirler arası likidite köprüsü",
+          "status": "Geliştirmede",
           "chains": {
             "chain1": "Cardano",
             "chain2": "BSC"
@@ -1484,290 +1496,290 @@
         },
         "graviton": {
           "name": "Graviton",
-          "description": "Multi-chain bridge protocol with oracle validation",
-          "status": "Planned",
+          "description": "Oracle doğrulamalı çok zincirli köprü protokolü",
+          "status": "Planlanmış",
           "chains": {
             "chain1": "Ethereum",
             "chain2": "Polygon",
             "chain3": "Avalanche"
           }
         },
-        "visitBridge": "Visit Bridge",
-        "comingSoon": "Coming Soon"
+        "visitBridge": "Köprüyü Ziyaret Et",
+        "comingSoon": "Yakında"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about cross-chain bridges",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Zincirler arası köprüler hakkında yaygın sorular",
         "howBridgesWork": {
-          "question": "How do cross-chain bridges work on Ergo?",
-          "answer": "Ergo bridges use a combination of multi-signature wallets, oracle pools, and smart contracts to lock assets on one chain and mint wrapped versions on another. Validators ensure the integrity of cross-chain transactions."
+          "question": "Ergo'da zincirler arası köprüler nasıl çalışır?",
+          "answer": "Ergo köprüleri, bir zincirdeki varlıkları kilitlemek ve başka bir zincirde sarılı sürümlerini basmak için çok imzalı cüzdanlar, oracle havuzları ve akıllı sözleşmelerin bir kombinasyonunu kullanır. Doğrulayıcılar, zincirler arası işlemlerin bütünlüğünü sağlar."
         },
         "whatIsRosenBridge": {
-          "question": "What is Rosen Bridge?",
-          "answer": "Rosen Bridge is Ergo's flagship decentralized bridge solution. It uses a network of watchers and guards to facilitate trustless asset transfers between Ergo and other blockchains without central points of failure."
+          "question": "Rosen Bridge nedir?",
+          "answer": "Rosen Bridge, Ergo'nun öncü merkezi olmayan köprü çözümüdür. Merkezi hata noktaları olmaksızın Ergo ile diğer blockchain'ler arasında güvensiz varlık transferlerini kolaylaştırmak için izleyiciler ve koruyuculardan oluşan bir ağ kullanır."
         },
         "areBridgedAssetsSecure": {
-          "question": "Are bridged assets secure?",
-          "answer": "Yes, bridged assets are secured through multi-signature contracts and decentralized validator networks. The original assets are locked in secure contracts, and wrapped versions maintain 1:1 backing."
+          "question": "Köprülenen varlıklar güvende mi?",
+          "answer": "Evet, köprülenen varlıklar çok imzalı sözleşmeler ve merkezi olmayan doğrulayıcı ağları aracılığıyla güvence altına alınır. Orijinal varlıklar güvenli sözleşmelerde kilitlenir ve sarılı sürümler 1:1 desteği korur."
         },
         "whichChainsConnect": {
-          "question": "Which chains can Ergo connect to?",
-          "answer": "Ergo can connect to any blockchain that supports multi-signature wallets or smart contracts. Current bridges support Cardano, Bitcoin, and Ethereum, with more chains being added regularly."
+          "question": "Ergo hangi zincirlere bağlanabilir?",
+          "answer": "Ergo, çok imzalı cüzdanları veya akıllı sözleşmeleri destekleyen herhangi bir blockchain'e bağlanabilir. Mevcut köprüler Cardano, Bitcoin ve Ethereum'u desteklerken düzenli olarak daha fazla zincir eklenmektedir."
         },
         "transferTimes": {
-          "question": "How long do bridge transfers take?",
-          "answer": "Transfer times vary by destination chain. Typically, transfers complete within 10-30 minutes, depending on network congestion and confirmation requirements on both chains."
+          "question": "Köprü transferleri ne kadar sürer?",
+          "answer": "Transfer süreleri hedef zincire göre değişir. Genellikle transferler, her iki zincirdeki ağ yoğunluğuna ve onay gereksinimlerine bağlı olarak 10-30 dakika içinde tamamlanır."
         }
       },
       "cta": {
-        "title": "Ready to Bridge Assets?",
-        "subtitle": "Connect Ergo to the multi-chain ecosystem today.",
-        "useRosenBridge": "Use Rosen Bridge",
-        "tryRosenBridge": "Try Rosen Bridge",
-        "viewCode": "View Code",
-        "developerDocs": "Developer Docs"
+        "title": "Varlıkları Köprülemeye Hazır mısınız?",
+        "subtitle": "Ergo'yu bugün çok zincirli ekosisteme bağlayın.",
+        "useRosenBridge": "Rosen Bridge Kullan",
+        "tryRosenBridge": "Rosen Bridge'i Deneyin",
+        "viewCode": "Kodu Görüntüle",
+        "developerDocs": "Geliştirici Belgeleri"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start bridging assets or learn how to build cross-chain applications on Ergo",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "Varlık köprülemeye başlayın veya Ergo'da zincirler arası uygulamalar oluşturmayı öğrenin",
         "cards": {
           "useRosenBridge": {
-            "title": "Use Rosen Bridge",
-            "subtitle": "Start Bridging",
-            "description": "Bridge assets between Ergo and other blockchains using the most secure and decentralized bridge protocol"
+            "title": "Rosen Bridge Kullan",
+            "subtitle": "Köprülemeye Başlayın",
+            "description": "En güvenli ve merkezi olmayan köprü protokolünü kullanarak Ergo ile diğer blockchain'ler arasında varlık köprüleyin"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Build Bridges",
-            "description": "Learn how to integrate cross-chain functionality into your applications and contribute to the bridge ecosystem"
+            "title": "Geliştirici Belgeleri",
+            "subtitle": "Köprüler Geliştirin",
+            "description": "Uygulamalarınıza zincirler arası işlevsellik entegre etmeyi ve köprü ekosistemine katkıda bulunmayı öğrenin"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Cross-Chain Bridges",
-        "description": "Get notified about new bridge integrations, security updates, and cross-chain opportunities."
+        "title": "Zincirler Arası Köprüler Hakkında Güncel Kalın",
+        "description": "Yeni köprü entegrasyonları, güvenlik güncellemeleri ve zincirler arası fırsatlar hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "crossChainBridges": "Cross-Chain Bridges"
+          "useCases": "Kullanım Senaryoları",
+          "crossChainBridges": "Zincirler Arası Köprüler"
         },
         "techArticle": {
-          "headline": "Cross-Chain Bridges on Ergo",
-          "description": "Comprehensive guide to cross-chain bridges and interoperability on Ergo blockchain",
-          "keywords": "cross-chain bridges, Rosen Bridge, interoperability, wrapped assets"
+          "headline": "Ergo'da Zincirler Arası Köprüler",
+          "description": "Ergo blockchain'de zincirler arası köprüler ve birlikte çalışabilirliğe kapsamlı rehber",
+          "keywords": "zincirler arası köprüler, Rosen Bridge, birlikte çalışabilirlik, sarılı varlıklar"
         }
       }
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "Community governance and alternative economic systems",
-      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing.",
-      "lastUpdated": "Last updated:",
+      "title": "DAO'lar ve Alternatif Ekonomiler",
+      "subtitle": "Topluluk yönetimi ve alternatif ekonomik sistemler",
+      "description": "Birleştirilebilir DAO altyapısı: hazine, oylama, kar paylaşımı.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "daos",
         "ogImage": "/og-daos.png",
         "canonicalPath": "/use/daos-alternative-economies"
       },
       "seo": {
-        "title": "DAOs & Alternative Economies on Ergo | Decentralized Governance",
-        "description": "Build DAOs and alternative economic systems on Ergo. Treasury management, on-chain voting, profit sharing, and composable governance infrastructure.",
-        "keywords": "DAOs, decentralized governance, alternative economies, Paideia, treasury management, on-chain voting, Ergo DAO",
-        "ogTitle": "DAOs & Alternative Economies on Ergo",
-        "ogDescription": "Community governance and alternative economic systems on Ergo blockchain.",
-        "twitterTitle": "DAOs on Ergo",
-        "twitterDescription": "Build decentralized organizations with Paideia"
+        "title": "Ergo'da DAO'lar ve Alternatif Ekonomiler | Merkezi Olmayan Yönetim",
+        "description": "Ergo'da DAO'lar ve alternatif ekonomik sistemler oluşturun. Hazine yönetimi, zincir üzerinde oylama, kar paylaşımı ve birleştirilebilir yönetim altyapısı.",
+        "keywords": "DAO'lar, merkezi olmayan yönetim, alternatif ekonomiler, Paideia, hazine yönetimi, zincir üzerinde oylama, Ergo DAO",
+        "ogTitle": "Ergo'da DAO'lar ve Alternatif Ekonomiler",
+        "ogDescription": "Ergo blockchain'de topluluk yönetimi ve alternatif ekonomik sistemler.",
+        "twitterTitle": "Ergo'da DAO'lar",
+        "twitterDescription": "Paideia ile merkezi olmayan organizasyonlar oluşturun"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "createDao": {
-          "name": "Create a DAO",
-          "description": "Launch your DAO with Paideia"
+          "name": "DAO Oluşturun",
+          "description": "Paideia ile DAO'nuzu başlatın"
         },
         "daoGuide": {
-          "name": "DAO Guide",
-          "description": "Learn DAO best practices"
+          "name": "DAO Rehberi",
+          "description": "DAO en iyi uygulamalarını öğrenin"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build DAO applications"
+          "name": "Geliştirici Belgeleri",
+          "description": "DAO uygulamaları geliştirin"
         }
       },
       "navigation": {
-        "daoFeatures": "DAO features",
-        "liveDaos": "Live DAOs",
-        "faq": "FAQ"
+        "daoFeatures": "DAO özellikleri",
+        "liveDaos": "Canlı DAO'lar",
+        "faq": "SSS"
       },
       "features": {
-        "title": "DAO Features",
-        "subtitle": "Complete toolkit for decentralized organizations",
+        "title": "DAO Özellikleri",
+        "subtitle": "Merkezi olmayan organizasyonlar için tam araç seti",
         "onChainGovernance": {
-          "title": "On-Chain Governance",
-          "description": "Transparent voting and proposal systems with automatic execution"
+          "title": "Zincir Üzerinde Yönetim",
+          "description": "Otomatik yürütme ile şeffaf oylama ve öneri sistemleri"
         },
         "treasuryManagement": {
-          "title": "Treasury Management",
-          "description": "Decentralized fund management with multi-signature controls"
+          "title": "Hazine Yönetimi",
+          "description": "Çok imzalı kontrollerle merkezi olmayan fon yönetimi"
         },
         "profitSharing": {
-          "title": "Profit Sharing",
-          "description": "Automatic distribution of revenues to DAO members"
+          "title": "Kar Paylaşımı",
+          "description": "DAO üyelerine gelirlerin otomatik dağıtımı"
         },
         "composableInfrastructure": {
-          "title": "Composable Infrastructure",
-          "description": "Modular DAO components for custom governance models"
+          "title": "Birleştirilebilir Altyapı",
+          "description": "Özel yönetim modelleri için modüler DAO bileşenleri"
         },
         "tokenEconomies": {
-          "title": "Token Economies",
-          "description": "Create custom tokens with built-in economic models"
+          "title": "Token Ekonomileri",
+          "description": "Yerleşik ekonomik modellerle özel token'lar oluşturun"
         },
         "reputationSystems": {
-          "title": "Reputation Systems",
-          "description": "Non-transferable reputation tokens for merit-based governance"
+          "title": "İtibar Sistemleri",
+          "description": "Liyakat bazlı yönetim için devredilemez itibar token'ları"
         }
       },
       "technical": {
-        "title": "DAO Architecture",
-        "subtitle": "How DAOs work on Ergo",
+        "title": "DAO Mimarisi",
+        "subtitle": "DAO'lar Ergo'da nasıl çalışır",
         "tabs": {
-          "overview": "Overview",
-          "governance": "Governance",
-          "code": "Code Example"
+          "overview": "Genel Bakış",
+          "governance": "Yönetim",
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "DAO Components",
-          "description": "Ergo DAOs combine multiple components for complete governance:",
+          "title": "DAO Bileşenleri",
+          "description": "Ergo DAO'ları tam yönetim için birden fazla bileşeni birleştirir:",
           "points": {
-            "point1": "Governance tokens for voting rights",
-            "point2": "Proposal contracts for decision making",
-            "point3": "Treasury contracts for fund management",
-            "point4": "Distribution contracts for profit sharing",
-            "point5": "Time-locks for security"
+            "point1": "Oy hakları için yönetim token'ları",
+            "point2": "Karar alma için öneri sözleşmeleri",
+            "point3": "Fon yönetimi için hazine sözleşmeleri",
+            "point4": "Kar paylaşımı için dağıtım sözleşmeleri",
+            "point5": "Güvenlik için zaman kilitleri"
           }
         },
         "governance": {
-          "title": "Voting Mechanisms",
+          "title": "Oylama Mekanizmaları",
           "tokenVoting": {
-            "title": "Token Voting",
+            "title": "Token Oylaması",
             "points": {
-              "point1": "1 token = 1 vote",
-              "point2": "Delegation supported",
-              "point3": "Snapshot voting",
-              "point4": "No double voting"
+              "point1": "1 token = 1 oy",
+              "point2": "Delegasyon desteklenir",
+              "point3": "Anlık görüntü oylaması",
+              "point4": "Çift oylama yok"
             }
           },
           "quadraticVoting": {
-            "title": "Quadratic Voting",
+            "title": "Kuadratik Oylama",
             "points": {
-              "point1": "Cost = votes squared",
-              "point2": "Reduces whale influence",
-              "point3": "Fair distribution",
-              "point4": "Sybil resistant"
+              "point1": "Maliyet = oy sayısının karesi",
+              "point2": "Balina etkisini azaltır",
+              "point3": "Adil dağılım",
+              "point4": "Sybil dirençli"
             }
           },
           "proposalLifecycle": {
-            "title": "Proposal Lifecycle"
+            "title": "Öneri Yaşam Döngüsü"
           }
         },
         "codeExample": {
-          "title": "DAO Voting Contract",
-          "description": "Simplified voting mechanism"
+          "title": "DAO Oylama Sözleşmesi",
+          "description": "Basitleştirilmiş oylama mekanizması"
         }
       },
       "projects": {
-        "title": "Live DAOs",
-        "subtitle": "Active DAOs operating on Ergo",
+        "title": "Canlı DAO'lar",
+        "subtitle": "Ergo'da faaliyet gösteren aktif DAO'lar",
         "paideia": {
           "name": "Paideia",
-          "description": "Complete DAO infrastructure and governance toolkit",
-          "status": "Live",
+          "description": "Tam DAO altyapısı ve yönetim araç seti",
+          "status": "Canlı",
           "features": {
-            "feature1": "Treasury management",
-            "feature2": "Proposal system",
-            "feature3": "Token distribution"
+            "feature1": "Hazine yönetimi",
+            "feature2": "Öneri sistemi",
+            "feature3": "Token dağıtımı"
           }
         },
         "ergoPadDao": {
           "name": "ErgoPad DAO",
-          "description": "Community-governed launchpad and incubator",
-          "status": "Live",
+          "description": "Topluluk tarafından yönetilen fırlatma platformu ve kuluçka merkezi",
+          "status": "Canlı",
           "features": {
-            "feature1": "Staking governance",
-            "feature2": "Revenue sharing",
-            "feature3": "Project funding"
+            "feature1": "Staking yönetimi",
+            "feature2": "Gelir paylaşımı",
+            "feature3": "Proje finansmanı"
           }
         },
         "sigmaDao": {
           "name": "SigmaDAO",
-          "description": "Experimental DAO for protocol governance",
-          "status": "In Development",
+          "description": "Protokol yönetimi için deneysel DAO",
+          "status": "Geliştirmede",
           "features": {
-            "feature1": "Quadratic voting",
-            "feature2": "Delegation",
-            "feature3": "Time-locked proposals"
+            "feature1": "Kuadratik oylama",
+            "feature2": "Delegasyon",
+            "feature3": "Zaman kilitli öneriler"
           }
         },
-        "visitDao": "Visit DAO",
-        "comingSoon": "Coming Soon"
+        "visitDao": "DAO'yu Ziyaret Et",
+        "comingSoon": "Yakında"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about DAOs on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'da DAO'lar hakkında yaygın sorular",
         "whatMakesErgoIdeal": {
-          "question": "What makes Ergo ideal for DAOs?",
-          "answer": "Ergo's eUTXO model provides superior security for treasury management, ErgoScript enables complex governance logic, and native tokens allow for custom economic models without smart contract risks."
+          "question": "Ergo'yu DAO'lar için ideal yapan nedir?",
+          "answer": "Ergo'nun eUTXO modeli hazine yönetimi için üstün güvenlik sağlar, ErgoScript karmaşık yönetim mantığını etkinleştirir ve yerel token'lar akıllı sözleşme riskleri olmadan özel ekonomik modellere izin verir."
         },
         "howPaideiaWorks": {
-          "question": "How does Paideia work?",
-          "answer": "Paideia provides a complete DAO toolkit including proposal creation, on-chain voting, treasury management, and token distribution. It uses ErgoScript for transparent and automatic execution of governance decisions."
+          "question": "Paideia nasıl çalışır?",
+          "answer": "Paideia, öneri oluşturma, zincir üzerinde oylama, hazine yönetimi ve token dağıtımı dahil tam bir DAO araç seti sunar. Yönetim kararlarının şeffaf ve otomatik yürütülmesi için ErgoScript kullanır."
         },
         "canManageRealWorldAssets": {
-          "question": "Can DAOs manage real-world assets?",
-          "answer": "Yes, Ergo DAOs can manage both digital and tokenized real-world assets through oracle integration and legal wrapper structures, enabling hybrid on-chain/off-chain governance models."
+          "question": "DAO'lar gerçek dünya varlıklarını yönetebilir mi?",
+          "answer": "Evet, Ergo DAO'ları oracle entegrasyonu ve yasal sarmalayıcı yapılar aracılığıyla hem dijital hem de tokenize edilmiş gerçek dünya varlıklarını yönetebilir; bu da hibrit zincir üzerinde/zincir dışında yönetim modellerini mümkün kılar."
         },
         "governanceModelsSupported": {
-          "question": "What governance models are supported?",
-          "answer": "Ergo supports various governance models including token-weighted voting, quadratic voting, reputation-based systems, delegated voting, and time-locked proposals with customizable parameters."
+          "question": "Hangi yönetim modelleri destekleniyor?",
+          "answer": "Ergo, özelleştirilebilir parametrelerle token ağırlıklı oylama, kuadratik oylama, itibar tabanlı sistemler, devredilmiş oylama ve zaman kilitli öneriler dahil çeşitli yönetim modellerini destekler."
         },
         "howTreasuriesSecured": {
-          "question": "How are DAO treasuries secured?",
-          "answer": "DAO treasuries use multi-signature contracts, time-locks, and spending limits. ErgoScript enables complex security policies that protect funds while allowing legitimate governance actions."
+          "question": "DAO hazinaları nasıl güvence altına alınır?",
+          "answer": "DAO hazinaları çok imzalı sözleşmeler, zaman kilitleri ve harcama limitleri kullanır. ErgoScript, meşru yönetim eylemlerine izin verirken fonları koruyan karmaşık güvenlik politikalarını etkinleştirir."
         }
       },
       "cta": {
-        "title": "Ready to Build a DAO?",
-        "subtitle": "Start your decentralized organization on Ergo today.",
-        "tryPaideia": "Try Paideia",
-        "launchWithPaideia": "Launch with Paideia",
-        "viewCode": "View Code",
-        "daoGuide": "DAO Guide"
+        "title": "DAO Oluşturmaya Hazır mısınız?",
+        "subtitle": "Bugün Ergo'da merkezi olmayan organizasyonunuzu başlatın.",
+        "tryPaideia": "Paideia'yı Deneyin",
+        "launchWithPaideia": "Paideia ile Başlatın",
+        "viewCode": "Kodu Görüntüle",
+        "daoGuide": "DAO Rehberi"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building your DAO or learn how to participate in decentralized governance",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "DAO'nuzu oluşturmaya başlayın veya merkezi olmayan yönetime katılmayı öğrenin",
         "cards": {
           "launchWithPaideia": {
-            "title": "Launch with Paideia",
-            "subtitle": "Start Building",
-            "description": "Create and manage your decentralized autonomous organization with Paideia's comprehensive DAO toolkit"
+            "title": "Paideia ile Başlatın",
+            "subtitle": "Geliştirmeye Başlayın",
+            "description": "Paideia'nın kapsamlı DAO araç setiyle merkezi olmayan özerk organizasyonunuzu oluşturun ve yönetin"
           },
           "daoGuide": {
-            "title": "DAO Guide",
-            "subtitle": "Learn More",
-            "description": "Explore comprehensive documentation on DAO governance models, treasury management, and best practices"
+            "title": "DAO Rehberi",
+            "subtitle": "Daha Fazla Bilgi",
+            "description": "DAO yönetim modelleri, hazine yönetimi ve en iyi uygulamalar hakkında kapsamlı belgeleri keşfedin"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on DAOs",
-        "description": "Get notified about DAO governance updates, treasury innovations, and community initiatives."
+        "title": "DAO'lar Hakkında Güncel Kalın",
+        "description": "DAO yönetim güncellemeleri, hazine yenilikleri ve topluluk girişimleri hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "daosAlternativeEconomies": "DAOs & Alternative Economies"
+          "useCases": "Kullanım Senaryoları",
+          "daosAlternativeEconomies": "DAO'lar ve Alternatif Ekonomiler"
         }
       }
     },

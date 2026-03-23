@@ -1,162 +1,162 @@
 {
   "start": {
-    "title": "Get Started",
-    "subtitle": "Begin your Ergo journey",
-    "description": "Begin your journey with Ergo",
+    "title": "Başlarken",
+    "subtitle": "Ergo yolculuğuna başla",
+    "description": "Ergo ile yolculuğunuza başlayın",
     "seo": {
-      "title": "Get Started - Begin with Ergo | Ergo Platform",
-      "description": "Start using Ergo blockchain: wallets, exchanges, and resources for beginners.",
-      "keywords": "get started Ergo, beginner guide, Ergo wallet, how to start"
+      "title": "Başlarken - Ergo ile Başlayın | Ergo Platformu",
+      "description": "Ergo blok zincirini kullanmaya başlayın: yeni başlayanlar için cüzdanlar, borsalar ve kaynaklar.",
+      "keywords": "Ergo'ya başlayın, başlangıç rehberi, Ergo cüzdanı, nasıl başlanır"
     },
     "schema": {
-      "name": "Getting Started with Ergo Blockchain",
+      "name": "Ergo Blok Zinciri ile Başlarken",
       "faq": {
         "items": [
           {
-            "question": "How do I get started with Ergo?",
-            "answer": "Download a wallet like Nautilus, buy ERG from an exchange, and make your first transaction. Our step-by-step guide walks you through each step."
+            "question": "Ergo'ya nasıl başlarım?",
+            "answer": "Nautilus gibi bir cüzdan indirin, bir borsadan ERG satın alın ve ilk işleminizi yapın. Adım adım rehberimiz her adımda size yol gösterir."
           },
           {
-            "question": "What wallet should I use?",
-            "answer": "For most users, we recommend Nautilus browser extension for desktop or Ergo Mobile for iOS/Android. Both are secure and support all Ergo features."
+            "question": "Hangi cüzdanı kullanmalıyım?",
+            "answer": "Çoğu kullanıcı için masaüstünde Nautilus tarayıcı uzantısını veya iOS/Android için Ergo Mobile'ı öneririz. Her ikisi de güvenli ve tüm Ergo özelliklerini destekler."
           },
           {
-            "question": "Where can I buy ERG?",
-            "answer": "ERG is available on exchanges like KuCoin and Gate.io, or you can use decentralized exchanges like ErgoDEX for more privacy."
+            "question": "ERG nereden satın alabilirim?",
+            "answer": "ERG, KuCoin ve Gate.io gibi borsalarda mevcuttur veya daha fazla gizlilik için ErgoDEX gibi merkeziyetsiz borsaları kullanabilirsiniz."
           },
           {
-            "question": "Is Ergo suitable for beginners?",
-            "answer": "Yes! Our getting started guide is designed for complete beginners. No prior crypto experience is required."
+            "question": "Ergo yeni başlayanlar için uygun mu?",
+            "answer": "Evet! Başlangıç rehberimiz tam anlamıyla yeni başlayanlar için tasarlanmıştır. Önceki kripto deneyimi gerekmez."
           }
         ]
       }
     },
     "page": {
       "breadcrumbs": {
-        "start": "Start"
+        "start": "Başlangıç"
       },
       "aria": {
-        "downloadWallet": "Download {wallet} wallet",
-        "tradeErgOn": "Trade ERG on {exchange}"
+        "downloadWallet": "{wallet} cüzdanını indir",
+        "tradeErgOn": "{exchange} üzerinde ERG işlemi yap"
       },
       "disclaimer": {
-        "title": "Disclaimer",
-        "text": "Links are informational. Do your own research. Trading involves risk."
+        "title": "Sorumluluk Reddi",
+        "text": "Bağlantılar bilgilendirme amaçlıdır. Kendi araştırmanızı yapın. Ticaret risk içerir."
       },
       "hero": {
-        "title": "Start Using",
+        "title": "Kullanmaya Başla",
         "titleHighlight": "Ergo",
-        "subtitle": "Get started with Ergo blockchain in 3 simple steps",
-        "description": "Download a wallet, buy ERG tokens, and send your first transaction. Join the decentralized finance revolution with predictable fees and enhanced security."
+        "subtitle": "3 basit adımda Ergo blok zincirine başlayın",
+        "description": "Bir cüzdan indirin, ERG token satın alın ve ilk işleminizi gönderin. Öngörülebilir ücretler ve gelişmiş güvenlikle merkeziyetsiz finans devrimine katılın."
       },
       "quickFacts": {
-        "title": "Quick Facts",
+        "title": "Hızlı Bilgiler",
         "items": [
           {
-            "title": "Secure by Design",
-            "description": "Non-custodial wallets give you full control of your funds"
+            "title": "Tasarım Gereği Güvenli",
+            "description": "Gözetim altında olmayan cüzdanlar fonlarınız üzerinde tam kontrol sağlar"
           },
           {
-            "title": "Low Fees",
-            "description": "Predictable fees around $0.01 per transaction"
+            "title": "Düşük Ücretler",
+            "description": "İşlem başına ~0,01 $ civarında öngörülebilir ücretler"
           },
           {
-            "title": "Fast Confirmation",
-            "description": "Transactions confirm in approximately 2 minutes"
+            "title": "Hızlı Onay",
+            "description": "İşlemler yaklaşık 2 dakikada onaylanır"
           }
         ]
       },
       "steps": [
         {
           "number": "01",
-          "title": "Download a Wallet",
-          "description": "Choose a secure wallet to store your ERG tokens",
+          "title": "Bir Cüzdan İndirin",
+          "description": "ERG token'larınızı saklamak için güvenli bir cüzdan seçin",
           "wallets": [
             {
               "name": "Nautilus",
-              "type": "Browser Extension",
-              "description": "Most popular Ergo wallet with dApp support and advanced features",
+              "type": "Tarayıcı Uzantısı",
+              "description": "dApp desteği ve gelişmiş özellikler ile en popüler Ergo cüzdanı",
               "recommended": true,
-              "buttonText": "Download Nautilus"
+              "buttonText": "Nautilus'u İndir"
             },
             {
               "name": "Ergo Mobile",
-              "type": "iOS & Android",
-              "description": "Official mobile wallet with secure storage and easy transactions",
+              "type": "iOS ve Android",
+              "description": "Güvenli depolama ve kolay işlemlerle resmi mobil cüzdan",
               "recommended": false,
-              "buttonText": "Get Ergo Mobile"
+              "buttonText": "Ergo Mobile'ı Al"
             },
             {
               "name": "SAFEW",
-              "type": "Web Wallet",
-              "description": "Simple web-based wallet for quick access and beginners",
+              "type": "Web Cüzdanı",
+              "description": "Hızlı erişim ve yeni başlayanlar için basit web tabanlı cüzdan",
               "recommended": false,
-              "buttonText": "Open SAFEW"
+              "buttonText": "SAFEW'i Aç"
             }
           ]
         },
         {
           "number": "02",
-          "title": "Buy ERG Tokens",
-          "description": "Purchase ERG from exchanges or DEXs",
+          "title": "ERG Token Satın Alın",
+          "description": "Borsalardan veya DEX'lerden ERG satın alın",
           "exchanges": [
             {
               "name": "KuCoin",
-              "type": "Spot - ~0.1% fees",
-              "description": "Large centralized exchange with high liquidity and ERG/USDT pair",
-              "buttonText": "Trade ERG on KuCoin"
+              "type": "Spot - ~%0,1 ücret",
+              "description": "Yüksek likidite ve ERG/USDT çifti ile büyük merkezi borsa",
+              "buttonText": "KuCoin'de ERG İşlemi Yap"
             },
             {
               "name": "Gate.io",
-              "type": "Spot - ~0.2% fees",
-              "description": "Global exchange with multiple ERG trading pairs and good volume",
-              "buttonText": "Trade ERG on Gate.io"
+              "type": "Spot - ~%0,2 ücret",
+              "description": "Birden fazla ERG işlem çifti ve iyi hacimle küresel borsa",
+              "buttonText": "Gate.io'da ERG İşlemi Yap"
             },
             {
               "name": "ErgoDEX",
-              "type": "No KYC - ~0.3% fees",
-              "description": "Native Ergo DEX with full decentralization and privacy",
-              "buttonText": "Open ErgoDEX"
+              "type": "KYC Yok - ~%0,3 ücret",
+              "description": "Tam merkeziyetsizlik ve gizlilik ile yerel Ergo DEX",
+              "buttonText": "ErgoDEX'i Aç"
             }
           ],
-          "disclaimer": "Links are informational. Do your own research. Trading involves risk."
+          "disclaimer": "Bağlantılar bilgilendirme amaçlıdır. Kendi araştırmanızı yapın. Ticaret risk içerir."
         },
         {
           "number": "03",
-          "title": "Send Your First Transaction",
-          "description": "Test your wallet by sending ERG",
+          "title": "İlk İşleminizi Gönderin",
+          "description": "ERG göndererek cüzdanınızı test edin",
           "proTips": {
-            "title": "Pro Tips",
-            "subtitle": "Best practices for success"
+            "title": "Uzman İpuçları",
+            "subtitle": "Başarı için en iyi uygulamalar"
           },
           "tips": [
-            "Start with a small test amount (0.1 ERG)",
-            "Transaction fees are typically ~0.001-0.002 ERG ($0.01)",
-            "Transactions confirm in ~2 minutes",
-            "Always double-check the recipient address"
+            "Küçük bir test miktarıyla başlayın (0,1 ERG)",
+            "İşlem ücretleri genellikle ~0,001-0,002 ERG (0,01 $)",
+            "İşlemler ~2 dakikada onaylanır",
+            "Alıcı adresini her zaman iki kez kontrol edin"
           ]
         }
       ],
       "badges": {
-        "recommended": "Recommended"
+        "recommended": "Önerilen"
       },
       "whatsNext": {
-        "title": "What's Next?",
-        "description": "Now that you have ERG, explore the Ergo ecosystem",
+        "title": "Sırada Ne Var?",
+        "description": "ERG'niz olduğuna göre Ergo ekosistemini keşfedin",
         "dapps": {
-          "title": "Explore dApps",
-          "subtitle": "Ecosystem Applications",
-          "description": "Discover decentralized applications built on Ergo"
+          "title": "dApp'leri Keşfet",
+          "subtitle": "Ekosistem Uygulamaları",
+          "description": "Ergo üzerine inşa edilmiş merkeziyetsiz uygulamaları keşfedin"
         },
         "docs": {
-          "title": "Learn More",
-          "subtitle": "Technical Documentation",
-          "description": "Deep dive into Ergo's technology and features"
+          "title": "Daha Fazla Öğren",
+          "subtitle": "Teknik Belgeler",
+          "description": "Ergo'nun teknolojisi ve özelliklerine derinlemesine dalın"
         }
       },
       "finalCta": {
-        "title": "Get Started with Ergo",
-        "description": "Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+        "title": "Ergo ile Başlayın",
+        "description": "En son güncellemeleri, başlangıç rehberlerini ve adım adım eğitimleri gelen kutunuza alın"
       }
     },
     "quiz": {
@@ -1004,840 +1004,845 @@
     },
     "comparison": {
       "seo": {
-        "title": "Ergo vs Other Blockchains - Detailed Comparison",
-        "description": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "keywords": "Ergo comparison, blockchain comparison, Bitcoin vs Ergo, Ethereum vs Ergo, UTXO vs account model",
-        "ogTitle": "Ergo vs Other Blockchains - Detailed Comparison",
-        "ogDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "ogAlt": "Ergo blockchain comparison chart",
-        "twitterTitle": "Ergo vs Other Blockchains - Detailed Comparison",
-        "twitterDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols."
+        "title": "Ergo ve Diğer Blok Zincirler - Ayrıntılı Karşılaştırma",
+        "description": "Ergo'yu Bitcoin, Ethereum ve Cardano ile karşılaştırın. Extended UTXO ve Sigma Protokollerinin benzersiz avantajlarını anlayın.",
+        "keywords": "Ergo karşılaştırması, blok zincir karşılaştırması, Bitcoin ve Ergo, Ethereum ve Ergo, UTXO ile hesap modeli",
+        "ogTitle": "Ergo ve Diğer Blok Zincirler - Ayrıntılı Karşılaştırma",
+        "ogDescription": "Ergo'yu Bitcoin, Ethereum ve Cardano ile karşılaştırın. Extended UTXO ve Sigma Protokollerinin benzersiz avantajlarını anlayın.",
+        "ogAlt": "Ergo blok zincir karşılaştırma tablosu",
+        "twitterTitle": "Ergo ve Diğer Blok Zincirler - Ayrıntılı Karşılaştırma",
+        "twitterDescription": "Ergo'yu Bitcoin, Ethereum ve Cardano ile karşılaştırın. Extended UTXO ve Sigma Protokollerinin benzersiz avantajlarını anlayın."
       },
       "schema": {
         "breadcrumbs": {
-          "comparison": "Comparison"
+          "comparison": "Karşılaştırma"
         },
         "faq": {
           "items": [
             {
-              "question": "How is Ergo different from Bitcoin?",
-              "answer": "While sharing Bitcoin's UTXO model and PoW consensus, Ergo adds smart contracts, Storage Rent, and NiPoPoWs for advanced functionality."
+              "question": "Ergo, Bitcoin'den nasıl farklıdır?",
+              "answer": "Bitcoin'in UTXO modelini ve PoW konsensüsünü paylaşırken Ergo, gelişmiş işlevsellik için akıllı sözleşmeler, Depolama Kirası ve NiPoPoWs ekler."
             },
             {
-              "question": "What advantages does Ergo have over Ethereum?",
-              "answer": "Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining."
+              "question": "Ergo'nun Ethereum'a göre ne gibi avantajları var?",
+              "answer": "Ergo öngörülebilir ücretler, yeniden giriş saldırısı yokluğu, paralel işlem işleme ve enerji verimli PoW madenciliği sunar."
             },
             {
-              "question": "How does Ergo compare to Cardano?",
-              "answer": "Both use eUTXO, but Ergo has PoW consensus, Storage Rent, and no VC funding, making it more decentralized and sustainable."
+              "question": "Ergo, Cardano ile nasıl karşılaştırılır?",
+              "answer": "Her ikisi de eUTXO kullanır; ancak Ergo'nun PoW konsensüsü, Depolama Kirası ve VC finansmanı yoktur; bu da onu daha merkezi olmayan ve sürdürülebilir kılar."
             }
           ]
         }
       },
       "keyDifferentiators": {
         "0": {
-          "title": "Security & Predictability",
-          "ergo": "eUTXO model provides predictable execution costs and eliminates many attack vectors like reentrancy",
-          "others": "Account-based models are prone to reentrancy attacks and unpredictable gas costs"
+          "title": "Güvenlik ve Öngörülebilirlik",
+          "ergo": "eUTXO modeli öngörülebilir yürütme maliyetleri sağlar ve yeniden giriş gibi pek çok saldırı vektörünü ortadan kaldırır",
+          "others": "Hesap tabanlı modeller yeniden giriş saldırılarına ve öngörülemeyen gaz maliyetlerine açıktır"
         },
         "1": {
-          "title": "Smart Contract Design",
-          "ergo": "ErgoScript enables powerful contracts with built-in cryptographic primitives and formal verification",
-          "others": "Most platforms require external libraries and complex implementations for advanced cryptography"
+          "title": "Akıllı Sözleşme Tasarımı",
+          "ergo": "ErgoScript, yerleşik kriptografik ilkeller ve resmi doğrulama ile güçlü sözleşmeler sunar",
+          "others": "Çoğu platform, gelişmiş kriptografi için harici kütüphaneler ve karmaşık uygulamalar gerektirir"
         },
         "2": {
-          "title": "Scalability & Efficiency",
-          "ergo": "Parallel transaction processing and efficient light clients via NIPoPoWs",
-          "others": "Sequential processing and resource-intensive light client implementations"
+          "title": "Ölçeklenebilirlik ve Verimlilik",
+          "ergo": "NIPoPoWs aracılığıyla paralel işlem işleme ve verimli hafif istemciler",
+          "others": "Sıralı işleme ve kaynak yoğun hafif istemci uygulamaları"
         },
         "3": {
-          "title": "Long-term Sustainability",
-          "ergo": "Storage rent mechanism prevents blockchain bloat and ensures miner incentives beyond block rewards",
-          "others": "Growing state size and uncertain long-term economics after emission ends"
+          "title": "Uzun Vadeli Sürdürülebilirlik",
+          "ergo": "Depolama kirası mekanizması blok zincir şişmesini önler ve emisyon ötesinde madenci teşviklerini güvence altına alır",
+          "others": "Büyüyen durum boyutu ve emisyon sona erdikten sonra belirsiz uzun vadeli ekonomik tablo"
         }
       }
     },
     "faq": {
       "seo": {
-        "title": "Ergo FAQ - Frequently Asked Questions",
-        "description": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "keywords": "Ergo FAQ, blockchain questions, cryptocurrency FAQ, smart contracts FAQ, mining FAQ",
-        "ogTitle": "Ergo FAQ - Frequently Asked Questions",
-        "ogDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "ogAlt": "Ergo FAQ - Frequently Asked Questions",
-        "twitterTitle": "Ergo FAQ - Frequently Asked Questions",
-        "twitterDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more."
+        "title": "Ergo SSS - Sıkça Sorulan Sorular",
+        "description": "Ergo blok zinciri, cüzdanlar, madencilik, akıllı sözleşmeler ve daha fazlası hakkında sık sorulan soruların yanıtlarını bulun.",
+        "keywords": "Ergo SSS, blok zinciri soruları, kripto para SSS, akıllı sözleşmeler SSS, madencilik SSS",
+        "ogTitle": "Ergo SSS - Sıkça Sorulan Sorular",
+        "ogDescription": "Ergo blok zinciri, cüzdanlar, madencilik, akıllı sözleşmeler ve daha fazlası hakkında sık sorulan soruların yanıtlarını bulun.",
+        "ogAlt": "Ergo SSS - Sıkça Sorulan Sorular",
+        "twitterTitle": "Ergo SSS - Sıkça Sorulan Sorular",
+        "twitterDescription": "Ergo blok zinciri, cüzdanlar, madencilik, akıllı sözleşmeler ve daha fazlası hakkında sık sorulan soruların yanıtlarını bulun."
       }
     },
     "community": {
       "seo": {
-        "title": "Ergo Community - Join the Ecosystem",
-        "description": "Connect with the Ergo community through Discord, Telegram, Reddit, and other channels. Get involved in development and governance.",
-        "keywords": "Ergo community, Discord, Telegram, Reddit, blockchain community, cryptocurrency community",
-        "ogTitle": "Join the Ergo Community",
-        "ogDescription": "Connect with developers, miners, traders, and enthusiasts building on Ergo",
-        "ogAlt": "Ergo Community",
-        "twitterTitle": "Ergo Community - Get Involved",
-        "twitterDescription": "Join thousands of developers, miners, and enthusiasts in the Ergo ecosystem"
+        "title": "Ergo Topluluğu - Ekosisteme Katılın",
+        "description": "Discord, Telegram, Reddit ve diğer kanallar aracılığıyla Ergo topluluğuyla bağlantı kurun. Geliştirme ve yönetişime katılın.",
+        "keywords": "Ergo topluluğu, Discord, Telegram, Reddit, blok zincir topluluğu, kripto para topluluğu",
+        "ogTitle": "Ergo Topluluğuna Katılın",
+        "ogDescription": "Ergo üzerine inşa eden geliştiriciler, madenciler, yatırımcılar ve meraklılarla bağlantı kurun",
+        "ogAlt": "Ergo Topluluğu",
+        "twitterTitle": "Ergo Topluluğu - Dahil Olun",
+        "twitterDescription": "Ergo ekosistemindeki binlerce geliştirici, madenci ve meraklıya katılın"
       },
       "schema": {
         "breadcrumbs": {
-          "community": "Community"
+          "community": "Topluluk"
         },
         "faq": {
           "items": [
             {
-              "question": "How do I join the Ergo community?",
-              "answer": "Join Discord for real-time chat, Telegram for updates, Reddit for discussions, or GitHub to contribute. All channels are open and welcoming to newcomers."
+              "question": "Ergo topluluğuna nasıl katılabilirim?",
+              "answer": "Gerçek zamanlı sohbet için Discord'a, güncellemeler için Telegram'a, tartışmalar için Reddit'e ya da katkıda bulunmak için GitHub'a katılın. Tüm kanallar açık ve yeni gelenlere dostanedir."
             },
             {
-              "question": "What is the main Ergo community platform?",
-              "answer": "Discord is the most active platform, with dedicated channels for development, mining, trading, and general discussion."
+              "question": "Ana Ergo topluluk platformu nedir?",
+              "answer": "Discord en aktif platform olup geliştirme, madencilik, ticaret ve genel tartışma için özel kanallara sahiptir."
             },
             {
-              "question": "Can I contribute to Ergo without coding?",
-              "answer": "Yes. You can contribute with content, translations, community support, testing, documentation, or governance discussions."
+              "question": "Kod yazmadan Ergo'ya katkıda bulunabilir miyim?",
+              "answer": "Evet. İçerik, çeviri, topluluk desteği, test, belgelendirme veya yönetişim tartışmaları ile katkıda bulunabilirsiniz."
             },
             {
-              "question": "Are there regional Ergo communities?",
-              "answer": "Yes. There are active regional communities in multiple languages, with dedicated groups and channels."
+              "question": "Bölgesel Ergo toplulukları var mı?",
+              "answer": "Evet. Birden fazla dilde özel gruplar ve kanallarla aktif bölgesel topluluklar bulunmaktadır."
             }
           ]
         }
       },
       "contributions": {
         "0": {
-          "title": "Development",
-          "description": "Contribute to core protocol development",
-          "tasks": "Core development, Bug fixes, Feature implementation"
+          "title": "Geliştirme",
+          "description": "Çekirdek protokol geliştirmeye katkıda bulunun",
+          "tasks": "Çekirdek geliştirme, Hata düzeltmeleri, Özellik uygulaması"
         },
         "1": {
-          "title": "Documentation",
-          "description": "Help improve documentation and guides",
-          "tasks": "Writing guides, Translation, API documentation"
+          "title": "Belgelendirme",
+          "description": "Belgelendirme ve kılavuzları iyileştirmeye yardım edin",
+          "tasks": "Kılavuz yazma, Çeviri, API belgelendirmesi"
         },
         "2": {
-          "title": "Community Support",
-          "description": "Help new users and answer questions",
-          "tasks": "Discord support, Forum moderation, User onboarding"
+          "title": "Topluluk Desteği",
+          "description": "Yeni kullanıcılara yardım edin ve soruları yanıtlayın",
+          "tasks": "Discord desteği, Forum moderasyonu, Kullanıcı katılımı"
         },
         "3": {
-          "title": "Governance",
-          "description": "Participate in protocol governance",
-          "tasks": "EIP discussions, Voting, Proposal creation"
+          "title": "Yönetişim",
+          "description": "Protokol yönetişimine katılın",
+          "tasks": "EIP tartışmaları, Oylama, Teklif oluşturma"
         },
         "4": {
-          "title": "Infrastructure",
-          "description": "Run nodes and maintain infrastructure",
-          "tasks": "Node operation, Mining pools, Network monitoring"
+          "title": "Altyapı",
+          "description": "Düğümleri çalıştırın ve altyapıyı koruyun",
+          "tasks": "Düğüm işletimi, Madencilik havuzları, Ağ izleme"
         },
         "5": {
-          "title": "Marketing",
-          "description": "Promote Ergo and educate others",
-          "tasks": "Content creation, Social media, Event organization"
+          "title": "Pazarlama",
+          "description": "Ergo'yu tanıtın ve diğerlerini eğitin",
+          "tasks": "İçerik üretimi, Sosyal medya, Etkinlik organizasyonu"
         }
       },
       "marketingGuide": {
         "seo": {
-          "title": "Community Marketing Playbook | Ergo Platform",
-          "description": "Learn how to amplify Ergo content across all channels. 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics."
+          "title": "Topluluk Pazarlama Rehberi | Ergo Platformu",
+          "description": "Ergo içeriğini tüm kanallarda nasıl yükselteceğinizi öğrenin. 7 temel pazarlama kanalı, kanıtlanmış etkileşim taktikleri, optimum zamanlama stratejileri ve başarı metrikleri."
         },
         "breadcrumbs": {
-          "start": "Start",
-          "community": "Community",
-          "marketing": "Marketing Guide"
+          "start": "Başlangıç",
+          "community": "Topluluk",
+          "marketing": "Pazarlama Rehberi"
         },
         "hero": {
-          "title": "Community Marketing Playbook",
-          "subtitle": "Want to help Ergo grow? This guide shows you how to amplify Ergo content across all channels and turn every announcement into a coordinated community effort that drives real engagement.",
-          "description": "You'll learn about 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics. Everything you need to start contributing to Ergo's marketing today.",
+          "title": "Topluluk Pazarlama Rehberi",
+          "subtitle": "Ergo'nun büyümesine yardımcı olmak ister misiniz? Bu rehber, Ergo içeriğini tüm kanallarda nasıl yükselteceğinizi ve her duyuruyu gerçek etkileşimi artıran koordineli bir topluluk çabasına nasıl dönüştüreceğinizi gösterir.",
+          "description": "7 temel pazarlama kanalı, kanıtlanmış etkileşim taktikleri, optimum zamanlama stratejileri ve başarı metrikleri hakkında bilgi edineceksiniz. Ergo'nun pazarlamasına bugün katkıda başlamak için ihtiyacınız olan her şey.",
           "buttons": {
-            "startBlog": "Start with Blog Content",
-            "exploreInfographics": "Explore Infographics"
+            "startBlog": "Blog İçeriğiyle Başlayın",
+            "exploreInfographics": "İnfografikleri Keşfedin"
           },
-          "coreChannelsTitle": "Core Channels"
+          "coreChannelsTitle": "Temel Kanallar"
         },
         "quickStart": {
-          "title": "Get Started in 3 Steps",
+          "title": "3 Adımda Başlayın",
           "steps": [
             {
-              "title": "Step 1",
-              "subtitle": "Join Discord + Telegram",
-              "description": "Start by joining core communities where you can learn from experienced marketers and coordinate your efforts with others.",
-              "hoverText": "Start Here"
+              "title": "Adım 1",
+              "subtitle": "Discord ve Telegram'a Katılın",
+              "description": "Deneyimli pazarlamacılardan öğrenebileceğiniz ve çabalarınızı diğerleriyle koordine edebileceğiniz temel topluluklara katılarak başlayın.",
+              "hoverText": "Buradan Başlayın"
             },
             {
-              "title": "Step 2",
-              "subtitle": "Pick ONE channel (Twitter / Reddit)",
-              "description": "Choose one platform you're comfortable with and master it before expanding. Quality engagement on one channel beats spreading yourself thin.",
-              "hoverText": "Focus First"
+              "title": "Adım 2",
+              "subtitle": "BİR kanal seçin (Twitter / Reddit)",
+              "description": "Rahat olduğunuz tek bir platformu seçin ve genişlemeden önce onu ustaca kullanmayı öğrenin. Tek kanalda kaliteli etkileşim, kendinizi çok dağıtmaktan iyidir.",
+              "hoverText": "Önce Odaklanın"
             },
             {
-              "title": "Step 3",
-              "subtitle": "Follow 5-step workflow below",
-              "description": "Use the proven amplification strategy to turn every blog post into a coordinated community-wide conversation that helps Ergo grow.",
-              "hoverText": "Scale Up"
+              "title": "Adım 3",
+              "subtitle": "Aşağıdaki 5 adımlı iş akışını takip edin",
+              "description": "Ergo'nun büyümesine yardımcı olan koordineli, topluluk çapında bir konuşmaya her blog gönderisini dönüştürmek için kanıtlanmış yükseltme stratejisini kullanın.",
+              "hoverText": "Ölçeği Büyütün"
             }
           ]
         },
         "navigation": {
-          "title": "On this page:",
-          "jumpTo": "Jump to"
+          "title": "Bu sayfada:",
+          "jumpTo": "Geç"
         },
-        "guideTitle": "Your Step-by-Step Guide",
+        "guideTitle": "Adım Adım Rehberiniz",
         "coreChannels": [
           {
             "name": "ergoblockchain.org",
-            "description": "Article in blog + internal links",
-            "actionText": "Visit Blog"
+            "description": "Blog yazısı + dahili bağlantılar",
+            "actionText": "Blogu Ziyaret Et"
           },
           {
-            "name": "Beehiiv Newsletter",
-            "description": "Digest or dedicated issue",
-            "actionText": "Subscribe"
+            "name": "Beehiiv Bülteni",
+            "description": "Özet veya özel sayı",
+            "actionText": "Abone Ol"
           },
           {
             "name": "Telegram",
-            "description": "Marketing Community",
-            "actionText": "Join Channel"
+            "description": "Pazarlama Topluluğu",
+            "actionText": "Kanala Katıl"
           },
           {
             "name": "Ergo Discord",
-            "description": "#announcements, #general, #dev, #research",
-            "actionText": "Join Discord"
+            "description": "#duyurular, #genel, #geliştirme, #araştırma",
+            "actionText": "Discord'a Katıl"
           },
           {
             "name": "Reddit r/ergonauts",
-            "description": "Community discussions",
-            "actionText": "Visit Subreddit"
+            "description": "Topluluk tartışmaları",
+            "actionText": "Subredditi Ziyaret Et"
           },
           {
             "name": "X (Twitter)",
-            "description": "Thread/tweet series + link",
-            "actionText": "Follow @BuildOnErgo"
+            "description": "Thread/tweet serisi + bağlantı",
+            "actionText": "@BuildOnErgo'yu Takip Et"
           }
         ],
         "guideSteps": {
           "whyMatters": {
-            "title": "Why Your Help Matters",
-            "description": "How community members like you drive Ergo's growth",
-            "intro": "Your voice matters. Community-driven marketing is the backbone of Ergo's growth. Unlike traditional marketing, your authentic contributions build genuine relationships and trust.",
-            "keyBenefitsTitle": "Key Benefits:",
+            "title": "Yardımınız Neden Önemli",
+            "description": "Sizin gibi topluluk üyelerinin Ergo'nun büyümesini nasıl yönlendirdiği",
+            "intro": "Sesiniz önemli. Topluluk odaklı pazarlama, Ergo'nun büyümesinin temel taşıdır. Geleneksel pazarlamanın aksine, özgün katkılarınız gerçek ilişkiler ve güven inşa eder.",
+            "keyBenefitsTitle": "Temel Faydalar:",
             "points": [
-              "Your authentic voice carries more weight than corporate messaging",
-              "You understand Ergo's technology deeply and can explain it better",
-              "Your decentralized efforts match Ergo's decentralized philosophy",
-              "You can reach audiences that traditional marketing can't",
-              "You create lasting engagement through genuine conversations"
+              "Özgün sesiniz kurumsal mesajlardan daha fazla ağırlık taşır",
+              "Ergo'nun teknolojisini derinlemesine anlıyor ve daha iyi açıklayabiliyorsunuz",
+              "Merkezi olmayan çabalarınız Ergo'nun merkezi olmayan felsefesiyle örtüşüyor",
+              "Geleneksel pazarlamanın ulaşamadığı kitlelere ulaşabilirsiniz",
+              "Gerçek konuşmalar aracılığıyla kalıcı etkileşim yaratıyorsunuz"
             ],
-            "checklistTitle": "Quick Start Checklist:",
+            "checklistTitle": "Hızlı Başlangıç Kontrol Listesi:",
             "actionItems": [
               {
-                "text": "Join Ergo Discord for real-time community discussions",
+                "text": "Gerçek zamanlı topluluk tartışmaları için Ergo Discord'a katılın",
                 "priority": "high"
               },
               {
-                "text": "Follow @BuildOnErgo on Twitter for developer updates",
+                "text": "Geliştirici güncellemeleri için Twitter'da @BuildOnErgo'yu takip edin",
                 "priority": "high"
               },
               {
-                "text": "Join ErgoSocials Telegram for marketing coordination",
+                "text": "Pazarlama koordinasyonu için ErgoSocials Telegram'a katılın",
                 "priority": "high"
               },
               {
-                "text": "Subscribe to ergoblockchain.org blog for source content",
+                "text": "Kaynak içerik için ergoblockchain.org bloguna abone olun",
                 "priority": "medium"
               },
               {
-                "text": "Join r/ergonauts subreddit for Reddit marketing practice",
+                "text": "Reddit pazarlama pratiği için r/ergonauts subredditine katılın",
                 "priority": "medium"
               },
               {
-                "text": "Subscribe to Beehiiv newsletter for weekly content digest",
+                "text": "Haftalık içerik özeti için Beehiiv bültenine abone olun",
                 "priority": "low"
               }
             ],
             "priorityLabels": {
-              "high": "high priority",
-              "medium": "medium priority",
-              "low": "low priority"
+              "high": "yüksek öncelik",
+              "medium": "orta öncelik",
+              "low": "düşük öncelik"
             }
           },
           "coreChannels": {
-            "title": "Where to Share Ergo Content",
-            "description": "Start with these essential channels",
-            "intro": "These are the core channels where you can share Ergo content. Start here, then explore extended distribution channels below:",
-            "strategyTitle": "Pro Strategy:",
-            "strategy": "When new content is published on ergoblockchain.org, share it across these channels within 24-48 hours for maximum impact.",
+            "title": "Ergo İçeriğini Nerede Paylaşılır",
+            "description": "Bu temel kanallarla başlayın",
+            "intro": "Ergo içeriğini paylaşabileceğiniz temel kanallar bunlardır. Buradan başlayın, ardından aşağıda genişletilmiş dağıtım kanallarını keşfedin:",
+            "strategyTitle": "Profesyonel Strateji:",
+            "strategy": "ergoblockchain.org'da yeni içerik yayınlandığında, maksimum etki için 24-48 saat içinde bu kanallar aracılığıyla paylaşın.",
             "tips": [
-              "Customize your content for each platform's audience",
-              "Use platform-specific features (Twitter threads, Reddit formatting)",
-              "Cross-reference between channels to build a cohesive narrative",
-              "Track engagement to see what works best for you"
+              "İçeriğinizi her platformun kitlesine göre özelleştirin",
+              "Platforma özgü özellikleri kullanın (Twitter thread'leri, Reddit biçimlendirmesi)",
+              "Tutarlı bir anlatı oluşturmak için kanallar arasında çapraz referans verin",
+              "Sizin için en iyi işe yarayanı görmek için etkileşimi takip edin"
             ]
           },
           "contentStrategy": {
-            "title": "How to Amplify New Content",
-            "description": "Turn every blog post into a community-wide conversation",
-            "intro": "When new Ergo content is published, here's how you can help amplify it across the community:",
-            "workflowTitle": "5-Step Workflow:",
+            "title": "Yeni İçerik Nasıl Yükseltilir",
+            "description": "Her blog gönderisini topluluk çapında bir konuşmaya dönüştürün",
+            "intro": "Yeni Ergo içeriği yayınlandığında, onu topluluk genelinde yükseltmeye nasıl yardımcı olabileceğiniz aşağıda açıklanmıştır:",
+            "workflowTitle": "5 Adımlı İş Akışı:",
             "workflow": [
               {
-                "title": "Source Content",
-                "description": "Start with ergoblockchain.org blog post or announcement",
-                "time": "Day 0"
+                "title": "Kaynak İçerik",
+                "description": "ergoblockchain.org blog gönderisi veya duyurusuyla başlayın",
+                "time": "Gün 0"
               },
               {
-                "title": "Newsletter Integration",
-                "description": "Include in next Beehiiv digest or create dedicated issue",
-                "time": "Day 1-2"
+                "title": "Bülten Entegrasyonu",
+                "description": "Bir sonraki Beehiiv özetine ekleyin veya özel sayı oluşturun",
+                "time": "Gün 1-2"
               },
               {
-                "title": "Social Media Cascade",
-                "description": "Share across Telegram, Discord, Twitter with platform-specific angles",
-                "time": "Day 1-3"
+                "title": "Sosyal Medya Kaskadı",
+                "description": "Platforma özgü açılarla Telegram, Discord, Twitter'da paylaşın",
+                "time": "Gün 1-3"
               },
               {
-                "title": "Reddit Strategy",
-                "description": "Cross-post to relevant subreddits with community-specific context",
-                "time": "Day 2-7"
+                "title": "Reddit Stratejisi",
+                "description": "Topluluktan özgü bağlamla ilgili subredditlere çapraz gönderi yapın",
+                "time": "Gün 2-7"
               },
               {
-                "title": "Long-form Content",
-                "description": "Create Twitter Articles or LinkedIn posts for deeper engagement",
-                "time": "Week 1-2"
+                "title": "Uzun Biçimli İçerik",
+                "description": "Daha derin etkileşim için Twitter Makaleleri veya LinkedIn gönderileri oluşturun",
+                "time": "Hafta 1-2"
               }
             ],
-            "examplesTitle": "Real Examples:",
+            "examplesTitle": "Gerçek Örnekler:",
             "examples": [
-              "New ErgoScript tutorial -> Developer-focused Reddit posts + Discord #dev discussion",
-              "Mining update -> r/gpumining + r/cryptomining with profitability analysis",
-              "DeFi protocol launch -> r/defi + Twitter thread with comparison charts"
+              "Yeni ErgoScript eğitimi -> Geliştirici odaklı Reddit gönderileri + Discord #geliştirme tartışması",
+              "Madencilik güncellemesi -> r/gpumining + r/cryptomining karlılık analiziyle",
+              "DeFi protokol lansmanı -> r/defi + karşılaştırma grafikleriyle Twitter thread'i"
             ]
           },
           "redditMastery": {
-            "title": "How to Share on Reddit",
-            "description": "Navigate Reddit's unique culture to help Ergo grow",
-            "intro": "Reddit requires a different approach. Your success comes from providing value to the community, not just promoting Ergo.",
-            "bestPracticesTitle": "Best Practices:",
+            "title": "Reddit'te Nasıl Paylaşılır",
+            "description": "Ergo'nun büyümesine yardımcı olmak için Reddit'in benzersiz kültüründe gezinin",
+            "intro": "Reddit farklı bir yaklaşım gerektirir. Başarınız, yalnızca Ergo'yu tanıtmak yerine topluluğa değer sağlamaktan gelir.",
+            "bestPracticesTitle": "En İyi Uygulamalar:",
             "bestPractices": [
-              "Always read community rules before posting",
-              "Engage with other posts before sharing your own",
-              "Use descriptive, non-promotional titles",
-              "Explain why your content is relevant to that community",
-              "Respond to comments within 2-4 hours",
-              "Follow the 80/20 rule: 80% engagement, 20% promotion"
+              "Gönderi yapmadan önce her zaman topluluk kurallarını okuyun",
+              "Kendi içeriğinizi paylaşmadan önce diğer gönderilerle etkileşime girin",
+              "Tanıtım içermeyen, açıklayıcı başlıklar kullanın",
+              "İçeriğinizin neden o topluluğa uygun olduğunu açıklayın",
+              "Yorumlara 2-4 saat içinde yanıt verin",
+              "80/20 kuralını uygulayın: %80 etkileşim, %20 tanıtım"
             ],
-            "timingTitle": "Optimal Timing:",
+            "timingTitle": "Optimum Zamanlama:",
             "timing": {
-              "General Crypto": "Weekdays 9-11 AM EST, 2-4 PM EST",
-              "Technical/Dev": "Tuesday-Thursday, avoid Mondays and Fridays",
-              "Mining": "Sunday evenings, Wednesday mornings",
-              "Economics": "Monday-Wednesday for serious discussions"
+              "General Crypto": "Hafta içi sabah 9-11 EST, öğleden sonra 2-4 EST",
+              "Technical/Dev": "Salı-Perşembe, Pazartesi ve Cuma'dan kaçının",
+              "Mining": "Pazar akşamları, Çarşamba sabahları",
+              "Economics": "Ciddi tartışmalar için Pazartesi-Çarşamba"
             },
-            "showMoreSubreddits": "+{count} more subreddits",
-            "showLess": "Show less"
+            "showMoreSubreddits": "+{count} daha fazla subreddit",
+            "showLess": "Daha az göster"
           },
           "engagementTactics": {
-            "title": "How to Create Engaging Content",
-            "description": "Build meaningful conversations that help people discover Ergo",
-            "intro": "Great marketing sparks conversations. Here's how you can create engaging content that helps people discover Ergo:",
+            "title": "İlgi Çekici İçerik Nasıl Oluşturulur",
+            "description": "İnsanların Ergo'yu keşfetmesine yardımcı olan anlamlı konuşmalar kurun",
+            "intro": "Harika pazarlama konuşmaları kıvılcımlar. İnsanların Ergo'yu keşfetmesine yardımcı olan ilgi çekici içerik nasıl oluşturabileceğiniz aşağıda açıklanmıştır:",
             "tactics": [
               {
-                "name": "Question-Driven Posts",
-                "description": "Start with thought-provoking questions",
+                "name": "Soru Odaklı Gönderiler",
+                "description": "Düşündürücü sorularla başlayın",
                 "examples": [
-                  "What's your biggest challenge with current DeFi protocols?",
-                  "How do you think privacy coins will evolve in the next 5 years?",
-                  "What would convince you to switch from Ethereum to Ergo?"
+                  "Mevcut DeFi protokolleriyle en büyük zorluğunuz nedir?",
+                  "Gizlilik tokenlarının önümüzdeki 5 yılda nasıl gelişeceğini düşünüyorsunuz?",
+                  "Ethereum'dan Ergo'ya geçmenizi ne ikna eder?"
                 ]
               },
               {
-                "name": "Comparison Content",
-                "description": "Position Ergo against alternatives",
+                "name": "Karşılaştırma İçeriği",
+                "description": "Ergo'yu alternatiflere karşı konumlandırın",
                 "examples": [
-                  "Ergo vs Ethereum: Transaction costs breakdown",
-                  "eUTXO vs Account model: Security implications",
-                  "Autolykos vs other mining algorithms: Efficiency analysis"
+                  "Ergo ve Ethereum: İşlem maliyetleri analizi",
+                  "eUTXO ile Hesap modeli: Güvenlik etkileri",
+                  "Autolykos ve diğer madencilik algoritmaları: Verimlilik analizi"
                 ]
               },
               {
-                "name": "Educational Series",
-                "description": "Create multi-part content that builds audience",
+                "name": "Eğitim Serisi",
+                "description": "Kitle oluşturan çok bölümlü içerik oluşturun",
                 "examples": [
-                  "ErgoScript Basics: 5-part tutorial series",
-                  "History of Money: Weekly deep-dives",
-                  "DeFi Security: Case studies and lessons"
+                  "ErgoScript Temelleri: 5 bölümlük eğitim serisi",
+                  "Para Tarihi: Haftalık derinlemesine incelemeler",
+                  "DeFi Güvenliği: Vaka çalışmaları ve dersler"
                 ]
               }
             ],
-            "responseStrategyTitle": "Response Strategy:",
+            "responseStrategyTitle": "Yanıt Stratejisi:",
             "responseStrategy": [
-              "Acknowledge every comment within 4 hours",
-              "Ask follow-up questions to extend conversations",
-              "Tag relevant experts when technical questions arise",
-              "Share additional resources in comments",
-              "Create follow-up posts based on popular questions"
+              "4 saat içinde her yorumu kabul edin",
+              "Konuşmaları uzatmak için takip soruları sorun",
+              "Teknik sorular ortaya çıktığında ilgili uzmanları etiketleyin",
+              "Yorumlarda ek kaynaklar paylaşın",
+              "Popüler sorulara dayalı takip gönderileri oluşturun"
             ]
           },
           "timingOptimization": {
-            "title": "When to Post for Maximum Impact",
-            "description": "Timing strategies to maximize your reach",
-            "intro": "When you post matters. Here's when to share content for maximum visibility:",
-            "scheduleTitle": "Optimal Schedule:",
+            "title": "Maksimum Etki İçin Ne Zaman Gönderi Yapılır",
+            "description": "Erişiminizi en üst düzeye çıkarmak için zamanlama stratejileri",
+            "intro": "Ne zaman gönderi yaptığınız önemlidir. Maksimum görünürlük için içeriği ne zaman paylaşacağınız aşağıda belirtilmiştir:",
+            "scheduleTitle": "Optimum Program:",
             "schedule": {
-              "Blog Posts": "Tuesdays 10 AM EST - highest engagement for technical content",
-              "Newsletter": "Bi-weekly Thursdays - allows time for blog content integration",
-              "Twitter": "Daily 9 AM, 1 PM, 6 PM EST - matches global audience peaks",
-              "Reddit": "Platform-specific timing based on subreddit analytics",
-              "Discord": "Real-time engagement, peak hours 7-10 PM EST",
-              "Telegram": "Follow news cycle, immediate for breaking updates"
+              "Blog Posts": "Salı sabahı saat 10 EST - teknik içerik için en yüksek etkileşim",
+              "Newsletter": "İki haftada bir Perşembe - blog içeriği entegrasyonu için zaman tanır",
+              "Twitter": "Günlük sabah 9, öğlen 1, akşam 6 EST - küresel kitle zirvelerine uyar",
+              "Reddit": "Subreddit analizlerine dayalı platforma özgü zamanlama",
+              "Discord": "Gerçek zamanlı etkileşim, akşam 7-10 EST yoğun saatler",
+              "Telegram": "Haber döngüsünü takip edin, son dakika güncellemeleri için anlık"
             },
-            "frequencyTitle": "Frequency Guidelines:",
+            "frequencyTitle": "Sıklık Yönergeleri:",
             "frequency": [
-              "Quality over quantity - better to post less frequently with high value",
-              "Maintain consistent presence without overwhelming audiences",
-              "Batch content creation for efficiency",
-              "Leave gaps for community-generated discussions",
-              "Adjust frequency based on engagement metrics"
+              "Nitelik nicelikten önemlidir - yüksek değerle daha az sıklıkta gönderi yapmak daha iyidir",
+              "Kitleleri bunaltmadan tutarlı varlık sürdürün",
+              "Verimlilik için toplu içerik üretimi yapın",
+              "Topluluk tarafından üretilen tartışmalar için boşluk bırakın",
+              "Sıklığı etkileşim metriklerine göre ayarlayın"
             ],
-            "toolsTitle": "Recommended Tools:",
+            "toolsTitle": "Önerilen Araçlar:",
             "tools": [
-              "Buffer/Hootsuite for scheduling",
-              "Reddit analytics for optimal posting times",
-              "Twitter Analytics for audience insights",
-              "Discord bots for engagement tracking"
+              "Zamanlama için Buffer/Hootsuite",
+              "Optimum gönderi zamanları için Reddit analitiği",
+              "Kitle bilgileri için Twitter Analitiği",
+              "Etkileşim takibi için Discord botları"
             ]
           },
           "measurementSuccess": {
-            "title": "How to Know If You're Helping",
-            "description": "Track your impact and see what works",
-            "intro": "Want to know if your efforts are making a difference? Focus on these metrics that indicate real community growth:",
+            "title": "Yardımcı Olup Olmadığınızı Nasıl Anlarsınız",
+            "description": "Etkinizi takip edin ve nelerin işe yaradığını görün",
+            "intro": "Çabalarınızın fark yaratıp yaratmadığını bilmek ister misiniz? Gerçek topluluk büyümesini gösteren bu metriklere odaklanın:",
             "keyMetrics": [
               {
-                "category": "Engagement Quality",
+                "category": "Etkileşim Kalitesi",
                 "metrics": [
-                  "Comment depth and thoughtfulness",
-                  "Question quality in responses",
-                  "Cross-platform conversation continuation"
+                  "Yorum derinliği ve düşüncenin kalitesi",
+                  "Yanıtlardaki soru kalitesi",
+                  "Platformlar arası konuşma sürekliliği"
                 ]
               },
               {
-                "category": "Community Growth",
+                "category": "Topluluk Büyümesi",
                 "metrics": [
-                  "New Discord/Telegram members",
-                  "Developer GitHub activity",
-                  "Ecosystem project mentions"
+                  "Yeni Discord/Telegram üyeleri",
+                  "Geliştirici GitHub etkinliği",
+                  "Ekosistem proje bahisleri"
                 ]
               },
               {
-                "category": "Content Performance",
+                "category": "İçerik Performansı",
                 "metrics": [
-                  "Time spent reading",
-                  "Share-to-view ratio",
-                  "Follow-up question generation"
+                  "Okumaya harcanan süre",
+                  "Paylaşım-görüntüleme oranı",
+                  "Takip sorusu üretimi"
                 ]
               },
               {
-                "category": "Business Impact",
+                "category": "İş Etkisi",
                 "metrics": [
-                  "Website traffic from social",
-                  "Developer tool downloads",
-                  "Ecosystem adoption metrics"
+                  "Sosyal medyadan web sitesi trafiği",
+                  "Geliştirici araç indirmeleri",
+                  "Ekosistem benimseme metrikleri"
                 ]
               }
             ],
-            "analyticsToolsTitle": "Analytics Tools:",
+            "analyticsToolsTitle": "Analitik Araçlar:",
             "analyticsTools": [
-              "Google Analytics for website traffic attribution",
-              "Social media native analytics",
-              "Discord/Telegram member growth tracking",
-              "GitHub activity monitoring for developer interest"
+              "Web sitesi trafiği ilişkilendirmesi için Google Analytics",
+              "Sosyal medyanın yerel analitiği",
+              "Discord/Telegram üye büyüme takibi",
+              "Geliştirici ilgisi için GitHub etkinlik izleme"
             ],
-            "optimizationTitle": "Optimization Process:",
+            "optimizationTitle": "Optimizasyon Süreci:",
             "optimization": [
-              "Weekly review of top-performing content",
-              "Monthly analysis of channel effectiveness",
-              "Quarterly strategy adjustments based on data",
-              "A/B testing for content formats and timing"
+              "En iyi performans gösteren içeriğin haftalık incelemesi",
+              "Kanal etkinliğinin aylık analizi",
+              "Verilere dayalı üç aylık strateji ayarlamaları",
+              "İçerik biçimleri ve zamanlama için A/B testi"
             ]
           }
         },
         "redditCategories": [
           {
-            "title": "General Crypto",
-            "description": "For crypto comparisons, DeFi, PoW, network economics"
+            "title": "Genel Kripto",
+            "description": "Kripto karşılaştırmaları, DeFi, PoW, ağ ekonomisi için"
           },
           {
-            "title": "Privacy / Cypherpunk",
-            "description": "Privacy, programmable privacy, crypto-anarchy"
+            "title": "Gizlilik / Cypherpunk",
+            "description": "Gizlilik, programlanabilir gizlilik, kripto-anarşi"
           },
           {
-            "title": "Mining & PoW",
-            "description": "ERG mining, PoW vs PoS, mining economics"
+            "title": "Madencilik ve PoW",
+            "description": "ERG madenciliği, PoW ile PoS karşılaştırması, madencilik ekonomisi"
           },
           {
-            "title": "Economics & History",
-            "description": "Perfect for History of Money series"
+            "title": "Ekonomi ve Tarih",
+            "description": "Para Tarihi serisi için mükemmel"
           },
           {
-            "title": "Dev & Tech",
-            "description": "eUTXO, ErgoScript, Sigma protocols, dev guides"
+            "title": "Geliştirme ve Teknoloji",
+            "description": "eUTXO, ErgoScript, Sigma protokolleri, geliştirme kılavuzları"
           }
         ],
         "additionalPlatforms": {
-          "title": "More Places to Share",
-          "subtitle": "Once you're comfortable with core channels, explore these additional platforms. Each one requires a different approach - customize your content for each platform's audience.",
+          "title": "Paylaşmak İçin Daha Fazla Yer",
+          "subtitle": "Temel kanallarla rahatladıktan sonra bu ek platformları keşfedin. Her biri farklı bir yaklaşım gerektirir - içeriğinizi her platformun kitlesine göre özelleştirin.",
           "categories": [
             {
-              "title": "Crypto-Native Platforms",
+              "title": "Kripto Yerel Platformlar",
               "platforms": [
                 {
                   "name": "Bitcointalk.org",
-                  "description": "ANN threads, research posts, mining/wallet guides",
-                  "actionText": "Visit Forum"
+                  "description": "ANN thread'leri, araştırma gönderileri, madencilik/cüzdan kılavuzları",
+                  "actionText": "Forumu Ziyaret Et"
                 },
                 {
                   "name": "Medium",
-                  "description": "Mirror best articles with canonical link",
-                  "actionText": "Publish Article"
+                  "description": "Kanonik bağlantıyla en iyi makaleleri yansıtın",
+                  "actionText": "Makale Yayınla"
                 },
                 {
                   "name": "Mirror.xyz",
-                  "description": "Web3-native blog for research/essays",
-                  "actionText": "Create Post"
+                  "description": "Araştırma/denemeler için Web3 yerel blogu",
+                  "actionText": "Gönderi Oluştur"
                 },
                 {
                   "name": "HackerNoon",
-                  "description": "Long-form research in crypto/blockchain section",
-                  "actionText": "Submit Article"
+                  "description": "Kripto/blok zincir bölümünde uzun biçimli araştırma",
+                  "actionText": "Makale Gönder"
                 },
                 {
                   "name": "Dev.to",
-                  "description": "Technical articles for builders (eUTXO, off-chain, oracles)",
-                  "actionText": "Publish Tutorial"
+                  "description": "İnşaacılar için teknik makaleler (eUTXO, zincir dışı, oracle'lar)",
+                  "actionText": "Eğitim Yayınla"
                 }
               ]
             },
             {
-              "title": "Tech & Product Platforms",
+              "title": "Teknoloji ve Ürün Platformları",
               "platforms": [
                 {
                   "name": "Hacker News",
-                  "description": "Strong, non-clickbait articles (history of money, eUTXO, privacy)",
-                  "actionText": "Submit Story"
+                  "description": "Güçlü, tıklama tuzağı olmayan makaleler (para tarihi, eUTXO, gizlilik)",
+                  "actionText": "Hikaye Gönder"
                 },
                 {
                   "name": "Lobsters",
-                  "description": "Technical posts on cryptography, PoW, protocols",
-                  "actionText": "Submit Link"
+                  "description": "Kriptografi, PoW, protokoller üzerine teknik gönderiler",
+                  "actionText": "Bağlantı Gönder"
                 },
                 {
                   "name": "Indie Hackers",
-                  "description": "Articles on building tools and ecosystems",
-                  "actionText": "Share Story"
+                  "description": "Araçlar ve ekosistemler inşa etme üzerine makaleler",
+                  "actionText": "Hikaye Paylaş"
                 },
                 {
                   "name": "Stack Overflow / Bitcoin.SE",
-                  "description": "Q&A with links as sources (not for posting articles)",
-                  "actionText": "Answer Questions"
+                  "description": "Kaynak olarak bağlantılarla soru-cevap (makale göndermek için değil)",
+                  "actionText": "Soruları Yanıtla"
                 }
               ]
             },
             {
-              "title": "Social & Content Platforms",
+              "title": "Sosyal ve İçerik Platformları",
               "platforms": [
                 {
                   "name": "Farcaster",
-                  "description": "Channels: /crypto, /bitcoin, /defi, /privacy",
-                  "actionText": "Join Network"
+                  "description": "Kanallar: /kripto, /bitcoin, /defi, /gizlilik",
+                  "actionText": "Ağa Katıl"
                 },
                 {
                   "name": "Nostr",
-                  "description": "Notes with key points and link",
-                  "actionText": "Publish Note"
+                  "description": "Anahtar noktalar ve bağlantı içeren notlar",
+                  "actionText": "Not Yayınla"
                 },
                 {
                   "name": "Lens Protocol",
-                  "description": "Web3-native audience for research content",
-                  "actionText": "Create Post"
+                  "description": "Araştırma içeriği için Web3 yerel kitlesi",
+                  "actionText": "Gönderi Oluştur"
                 },
                 {
                   "name": "YouTube",
-                  "description": "Short summary videos (2-5 min) per key article",
-                  "actionText": "Create Video"
+                  "description": "Her önemli makale için kısa özet videolar (2-5 dakika)",
+                  "actionText": "Video Oluştur"
                 }
               ]
             }
           ],
-          "tipsTitle": "Tips for Using Extended Channels:",
+          "tipsTitle": "Genişletilmiş Kanalları Kullanmak İçin İpuçları:",
           "tips": [
             {
-              "strong": "Customize your angle:",
-              "text": "Share history of money articles in economics/philosophy subreddits; privacy content in privacy/cypherpunk communities; eUTXO content on dev platforms and Hacker News"
+              "strong": "Açınızı özelleştirin:",
+              "text": "Para tarihi makalelerini ekonomi/felsefe subredditlerinde paylaşın; gizlilik içeriğini gizlilik/cypherpunk topluluklarında; eUTXO içeriğini geliştirme platformlarında ve Hacker News'de paylaşın"
             },
             {
-              "strong": "Vary your formats:",
-              "text": "Try full cross-posts (Reddit, Mirror, Medium), thread summaries with links, or visual content (diagrams, quotes) with source links"
+              "strong": "Biçimlerinizi çeşitlendirin:",
+              "text": "Tam çapraz gönderiler (Reddit, Mirror, Medium), bağlantılı thread özetleri veya kaynak bağlantıları içeren görsel içerik (diyagramlar, alıntılar) deneyin"
             },
             {
-              "strong": "Take your time:",
-              "text": "Don't try to share everything in one day. Build a habit: for each new article, make 5-10 meaningful posts across different places over a few days"
+              "strong": "Zamanınızı alın:",
+              "text": "Her şeyi bir günde paylaşmaya çalışmayın. Bir alışkanlık edinin: her yeni makale için birkaç gün içinde farklı yerlerde 5-10 anlamlı gönderi yapın"
             }
           ]
         },
         "faq": {
-          "title": "Frequently Asked Questions",
-          "usefulLinksTitle": "Useful Links:",
+          "title": "Sıkça Sorulan Sorular",
+          "usefulLinksTitle": "Yararlı Bağlantılar:",
           "questions": [
             {
-              "question": "I'm new to marketing. Where should I start?",
-              "answer": "Start with Step 1: Join Discord (discord.gg/ergo-platform) and see how other community members share content. Then pick ONE channel you're comfortable with - usually Twitter or Reddit - and practice the strategies from this guide for 2 weeks before expanding."
+              "question": "Pazarlamaya yeniyim. Nereden başlamalıyım?",
+              "answer": "Adım 1 ile başlayın: Discord'a katılın (discord.gg/ergo-platform) ve diğer topluluk üyelerinin içeriği nasıl paylaştığını görün. Ardından, genellikle Twitter veya Reddit olmak üzere, rahat olduğunuz BİR kanal seçin ve genişlemeden önce 2 hafta boyunca bu kılavuzdaki stratejileri uygulayın."
             },
             {
-              "question": "Where do I find content to share?",
-              "answer": "Start with ergoblockchain.org/blog for official content. Subscribe to the Beehiiv newsletter for weekly digests. Follow @BuildOnErgo for developer updates. Join ErgoSocials Telegram to coordinate with other marketers. Never share content you don't understand - ask questions in Discord first."
+              "question": "Paylaşmak için içeriği nerede bulabilirim?",
+              "answer": "Resmi içerik için ergoblockchain.org/blog ile başlayın. Haftalık özetler için Beehiiv bültenine abone olun. Geliştirici güncellemeleri için @BuildOnErgo'yu takip edin. Diğer pazarlamacılarla koordinasyon sağlamak için ErgoSocials Telegram'a katılın. Anlamadığınız içerikleri asla paylaşmayın - önce Discord'da soru sorun."
             },
             {
-              "question": "How do I succeed on Reddit without getting banned?",
-              "answer": "Follow the 80/20 rule: spend 80% of your time commenting on others' posts, 20% sharing your own content. Read subreddit rules carefully - each has different requirements. Start with r/ergonauts to practice, then expand to crypto subreddits like r/CryptoCurrency. Always explain why your content matters to that specific community."
+              "question": "Reddit'te yasaklanmadan nasıl başarılı olurum?",
+              "answer": "80/20 kuralını uygulayın: zamanınızın %80'ini başkalarının gönderilerine yorum yaparak, %20'sini kendi içeriğinizi paylaşarak geçirin. Subreddit kurallarını dikkatlice okuyun - her birinin farklı gereksinimleri vardır. Pratik yapmak için r/ergonauts ile başlayın, ardından r/CryptoCurrency gibi kripto subredditlerini genişletin. İçeriğinizin neden o belirli topluluk için önemli olduğunu her zaman açıklayın."
             },
             {
-              "question": "How much time do I need to commit?",
-              "answer": "Start with just 30 minutes daily: 10 minutes reading new content, 10 minutes engaging on Discord/Twitter, 10 minutes posting/commenting. As you get comfortable, you can batch content creation (1 hour weekly) and focus on real-time engagement. Quality beats quantity - it's better to do less consistently than burn out."
+              "question": "Ne kadar zaman ayırmam gerekiyor?",
+              "answer": "Günlük yalnızca 30 dakikayla başlayın: yeni içerik okumak için 10 dakika, Discord/Twitter'da etkileşim için 10 dakika, gönderi yapmak/yorum yapmak için 10 dakika. Rahatlıkça yaptıkça içerik üretimini toplu hale getirebilir (haftalık 1 saat) ve gerçek zamanlı etkileşime odaklanabilirsiniz. Nitelik nicelikten önemlidir - tutarlı biçimde az yapmak tükenmek yerine daha iyidir."
             },
             {
-              "question": "How do I know if I'm making a difference?",
-              "answer": "Focus on engagement quality: Are people asking follow-up questions? Are your posts generating discussions? Are community members mentioning Ergo more often? Track Discord member growth, Twitter engagement rates, and Reddit upvote ratios. Success means more people learning about Ergo, not just more views."
+              "question": "Fark yaratıp yaratmadığımı nasıl anlayabilirim?",
+              "answer": "Etkileşim kalitesine odaklanın: İnsanlar takip soruları soruyor mu? Gönderileriniz tartışmalar mı doğuruyor? Topluluk üyeleri Ergo'dan daha sık mı bahsediyor? Discord üye büyümesini, Twitter etkileşim oranlarını ve Reddit oy oranlarını takip edin. Başarı, yalnızca daha fazla görüntüleme değil, daha fazla insanın Ergo hakkında bilgi edinmesi anlamına gelir."
             },
             {
-              "question": "What mistakes should I avoid?",
-              "answer": "Don't spam the same content across platforms without customization. Don't argue with critics - engage constructively or ignore. Don't share content you can't explain. Don't neglect community rules. Don't expect immediate results - community building takes months, not days."
+              "question": "Hangi hatalardan kaçınmalıyım?",
+              "answer": "Özelleştirme yapmadan aynı içeriği platformlarda spam yapmayın. Eleştirmenlerle tartışmayın - yapıcı biçimde etkileşime girin ya da görmezden gelin. Açıklayamadığınız içerikleri paylaşmayın. Topluluk kurallarını ihmal etmeyin. Anlık sonuçlar beklemeyin - topluluk inşası günler değil, aylar sürer."
             }
           ]
         },
         "finalCta": {
-          "title": "Ready to",
-          "titleHighlight": "Help",
-          "titleEnd": "Ergo Grow?",
-          "subtitle": "Start implementing these strategies today and make a real impact on Ergo's growth",
+          "title": "Hazır mısınız",
+          "titleHighlight": "Yardım",
+          "titleEnd": "Ergo Büyüsün?",
+          "subtitle": "Bu stratejileri bugün uygulamaya başlayın ve Ergo'nun büyümesi üzerinde gerçek bir etki yaratın",
           "discord": {
-            "title": "Join Marketing Discord",
-            "members": "15K+ Active Members",
-            "description": "Connect with experienced community marketers, share strategies, and get feedback on your campaigns in #marketing channel"
+            "title": "Pazarlama Discord'una Katılın",
+            "members": "15 Bin+ Aktif Üye",
+            "description": "Deneyimli topluluk pazarlamacılarıyla bağlantı kurun, stratejiler paylaşın ve kampanyalarınız hakkında #marketing kanalında geri bildirim alın"
           },
           "sourceContent": {
-            "title": "Get Source Content",
-            "frequency": "Fresh Weekly Posts",
-            "description": "Start with ergoblockchain.org blog posts and announcements - your primary source for authentic, high-quality content to amplify"
+            "title": "Kaynak İçerik Edinin",
+            "frequency": "Haftalık Taze Gönderiler",
+            "description": "Yükseltmek için özgün, yüksek kaliteli içeriğin birincil kaynağınız olan ergoblockchain.org blog gönderileri ve duyurularıyla başlayın"
           }
         },
         "emailCta": {
-          "title": "Stay Updated on Marketing",
-          "description": "Get notified about new marketing strategies, community growth tactics, and engagement best practices"
+          "title": "Pazarlama Hakkında Güncel Kalın",
+          "description": "Yeni pazarlama stratejileri, topluluk büyüme taktikleri ve etkileşim en iyi uygulamaları hakkında bildirim alın"
         }
       }
     },
     "introduction": {
       "seo": {
-        "title": "Introduction to Ergo | Beginner's Guide to Blockchain",
-        "description": "Complete introduction to Ergo blockchain. Learn the basics of smart contracts, DeFi, mining, and why Ergo is the future of programmable money. Perfect for beginners.",
-        "keywords": "ergo introduction, blockchain basics, ergo tutorial, crypto beginner, learn blockchain, ergo guide, defi introduction, smart contracts basics",
-        "ogTitle": "Introduction to Ergo - Start Your Blockchain Journey",
-        "ogDescription": "Beginner-friendly guide to understanding Ergo blockchain, its technology, and ecosystem.",
-        "ogAlt": "Ergo Introduction",
-        "twitterTitle": "Introduction to Ergo Blockchain",
-        "twitterDescription": "Learn the fundamentals of Ergo - the future of programmable money."
+        "title": "Ergo'ya Giriş | Blok Zinciri için Başlangıç Rehberi",
+        "description": "Ergo blok zincirine tam giriş. Akıllı sözleşmelerin, DeFi'nin, madenciliğin temellerini ve Ergo'nun neden programlanabilir paranın geleceği olduğunu öğrenin. Yeni başlayanlar için mükemmel.",
+        "keywords": "ergo giriş, blok zinciri temelleri, ergo eğitimi, kripto başlangıç, blok zinciri öğren, ergo rehberi, defi giriş, akıllı sözleşmeler temelleri",
+        "ogTitle": "Ergo'ya Giriş - Blok Zinciri Yolculuğunuza Başlayın",
+        "ogDescription": "Ergo blok zincirini, teknolojisini ve ekosistemini anlamak için yeni başlayanlara uygun rehber.",
+        "ogAlt": "Ergo Girişi",
+        "twitterTitle": "Ergo Blok Zincirine Giriş",
+        "twitterDescription": "Ergo'nun temellerini öğrenin - programlanabilir paranın geleceği."
       },
       "schema": {
         "breadcrumbs": {
-          "introduction": "Introduction"
+          "introduction": "Giriş"
         },
         "learningResource": {
-          "name": "Ergo Blockchain Introduction",
-          "description": "Educational resource for learning Ergo blockchain fundamentals",
-          "learningResourceType": "Presentation",
-          "educationalLevel": "Beginner",
-          "teaches": ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency"],
+          "name": "Ergo Blok Zinciri Girişi",
+          "description": "Ergo blok zinciri temellerini öğrenmek için eğitim kaynağı",
+          "learningResourceType": "Sunum",
+          "educationalLevel": "Başlangıç",
+          "teaches": [
+            "Blok Zinciri",
+            "Akıllı Sözleşmeler",
+            "DeFi",
+            "Kripto Para"
+          ],
           "timeRequired": "PT30M"
         },
         "techArticle": {
-          "headline": "Introduction to Ergo Blockchain",
-          "description": "Comprehensive guide for beginners to understand Ergo",
+          "headline": "Ergo Blok Zincirine Giriş",
+          "description": "Yeni başlayanların Ergo'yu anlaması için kapsamlı rehber",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "Başlangıç"
         }
       }
     },
     "journeys": {
       "new": {
-        "title": "New to Crypto",
-        "subtitle": "Start from the basics",
+        "title": "Kripto'ya Yeni",
+        "subtitle": "Temellerden başlayın",
         "steps": {
           "why": {
-            "title": "Why Ergo?",
-            "description": "Learn what makes Ergo unique"
+            "title": "Neden Ergo?",
+            "description": "Ergo'yu benzersiz kılan şeyi öğrenin"
           },
           "wallet": {
-            "title": "Get a Wallet",
-            "description": "Set up your first Ergo wallet"
+            "title": "Cüzdan Edinin",
+            "description": "İlk Ergo cüzdanınızı kurun"
           },
           "testnet": {
-            "title": "Try Testnet",
-            "description": "Practice with test coins"
+            "title": "Test Ağını Deneyin",
+            "description": "Test coinleriyle pratik yapın"
           },
           "send": {
-            "title": "Send Transaction",
-            "description": "Learn by doing your first transaction"
+            "title": "İşlem Gönderin",
+            "description": "İlk işleminizi yaparak öğrenin"
           },
           "security": {
-            "title": "Security Best Practices",
-            "description": "Keep your assets safe"
+            "title": "Güvenlik En İyi Uygulamaları",
+            "description": "Varlıklarınızı güvende tutun"
           }
         }
       },
       "explore": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover what's possible",
+        "title": "Ekosistemi Keşfedin",
+        "subtitle": "Nelerin mümkün olduğunu keşfedin",
         "steps": {
           "compare": {
-            "title": "Compare Platforms",
-            "description": "See how Ergo differs from other blockchains"
+            "title": "Platformları Karşılaştırın",
+            "description": "Ergo'nun diğer blok zincirlerden nasıl farklı olduğunu görün"
           },
           "features": {
-            "title": "Key Features",
-            "description": "Understand Ergo's unique capabilities"
+            "title": "Temel Özellikler",
+            "description": "Ergo'nun benzersiz yeteneklerini anlayın"
           },
           "privacy": {
-            "title": "Privacy Features",
-            "description": "Learn about Sigma protocols"
+            "title": "Gizlilik Özellikleri",
+            "description": "Sigma protokolleri hakkında bilgi edinin"
           },
           "stories": {
-            "title": "Success Stories",
-            "description": "Real-world applications and use cases"
+            "title": "Başarı Hikayeleri",
+            "description": "Gerçek dünya uygulamaları ve kullanım senaryoları"
           }
         }
       },
       "build": {
-        "title": "Start Building",
-        "subtitle": "Develop on Ergo",
+        "title": "İnşa Etmeye Başlayın",
+        "subtitle": "Ergo üzerinde geliştirin",
         "steps": {
           "hello": {
-            "title": "Hello World",
-            "description": "Your first ErgoScript contract"
+            "title": "Merhaba Dünya",
+            "description": "İlk ErgoScript sözleşmeniz"
           },
           "playground": {
-            "title": "Use Playground",
-            "description": "Interactive coding environment"
+            "title": "Oyun Alanını Kullanın",
+            "description": "İnteraktif kodlama ortamı"
           },
           "sdk": {
-            "title": "Choose SDK",
-            "description": "Pick your development tools"
+            "title": "SDK Seçin",
+            "description": "Geliştirme araçlarınızı seçin"
           },
           "community": {
-            "title": "Join Developers",
-            "description": "Connect with the dev community"
+            "title": "Geliştiricilere Katılın",
+            "description": "Geliştirici topluluğuyla bağlantı kurun"
           }
         }
       },
       "mine": {
-        "title": "Start Mining",
-        "subtitle": "Secure the network",
+        "title": "Madenciliğe Başlayın",
+        "subtitle": "Ağı güvence altına alın",
         "steps": {
           "hardware": {
-            "title": "Check Hardware",
-            "description": "Ensure your GPU is compatible"
+            "title": "Donanımı Kontrol Edin",
+            "description": "GPU'nuzun uyumlu olduğundan emin olun"
           },
           "pool": {
-            "title": "Choose Pool",
-            "description": "Find a reliable mining pool"
+            "title": "Havuz Seçin",
+            "description": "Güvenilir bir madencilik havuzu bulun"
           },
           "software": {
-            "title": "Setup Software",
-            "description": "Configure your mining software"
+            "title": "Yazılımı Kurun",
+            "description": "Madencilik yazılımınızı yapılandırın"
           },
           "monitor": {
-            "title": "Monitor Performance",
-            "description": "Track your mining results"
+            "title": "Performansı İzleyin",
+            "description": "Madencilik sonuçlarınızı takip edin"
           }
         }
       },
       "invest": {
-        "title": "Learn to Invest",
-        "subtitle": "Understand the fundamentals",
+        "title": "Yatırım Yapmayı Öğrenin",
+        "subtitle": "Temelleri anlayın",
         "steps": {
           "research": {
-            "title": "Research Ergo",
-            "description": "Study the technology and tokenomics"
+            "title": "Ergo'yu Araştırın",
+            "description": "Teknolojiyi ve token ekonomisini inceleyin"
           },
           "exchange": {
-            "title": "Find Exchanges",
-            "description": "Where to buy and trade ERG"
+            "title": "Borsaları Bulun",
+            "description": "ERG'yi nerede alıp satacağınızı öğrenin"
           },
           "storage": {
-            "title": "Secure Storage",
-            "description": "Best practices for holding ERG"
+            "title": "Güvenli Saklama",
+            "description": "ERG tutmak için en iyi uygulamalar"
           },
           "defi": {
-            "title": "Explore DeFi",
-            "description": "Discover earning opportunities"
+            "title": "DeFi'yi Keşfedin",
+            "description": "Kazanma fırsatlarını keşfedin"
           }
         }
       }
     },
     "steps": {
       "wallet": {
-        "title": "Setup Wallet",
-        "description": "Choose and setup your Ergo wallet"
+        "title": "Cüzdan Kur",
+        "description": "Ergo cüzdanınızı seçin ve kurun"
       },
       "getErg": {
-        "title": "Get ERG",
-        "description": "Buy ERG on exchanges"
+        "title": "ERG Al",
+        "description": "Borsalarda ERG satın alın"
       },
       "explore": {
-        "title": "Explore dApps",
-        "description": "Discover Ergo applications"
+        "title": "dApp'leri Keşfet",
+        "description": "Ergo uygulamalarını keşfedin"
       },
       "build": {
-        "title": "Start Building",
-        "description": "Develop on Ergo"
+        "title": "İnşa Etmeye Başla",
+        "description": "Ergo üzerinde geliştirin"
       }
     },
     "quickLinks": {
-      "title": "Quick Links",
-      "wallet": "Download Wallet",
-      "exchange": "Buy ERG",
-      "documentation": "Documentation",
-      "community": "Join Community"
+      "title": "Hızlı Bağlantılar",
+      "wallet": "Cüzdan İndir",
+      "exchange": "ERG Satın Al",
+      "documentation": "Belgeler",
+      "community": "Topluluğa Katıl"
     },
     "faqContent": {
-      "basics_icon_helpcircle_q_what": "Basics\",\n    icon: HelpCircle,\n    q: 'What does a \"fair launch\" mean?',\n    a: 'Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.",
-      "basics_icon_helpcircle_q_is": "Basics\",\n    icon: HelpCircle,\n    q: \"Is Ergo a company?\",\n    a: \"No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network.",
-      "basics_icon_helpcircle_q_what_does_a_fair_launch": "Basics\",\n    icon: HelpCircle,\n    q: 'What does a \"fair launch",
-      "technology_icon_cpu_q_what": "Technology\",\n    icon: Cpu,\n    q: \"What is eUTXO?\",\n    a: 'The Extended UTXO model attaches data and logic directly to \"boxes\" of money. This enhances smart contract security, fee predictability, and allows for better scalability compared to the account model.",
-      "getting_started_icon_zap_q": "Getting Started\",\n    icon: Zap,\n    q: \"How can I get ERG?\",\n    a: \"You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing.",
-      "ecosystem_icon_users_q_what": "Ecosystem\",\n    icon: Users,\n    q: \"What kinds of dApps are on Ergo?\",\n    a: \"Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more.",
-      "community_icon_users_q_who": "Community\",\n    icon: Users,\n    q: \"Who governs Ergo?\",\n    a: \"Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support.",
-      "all_basics_technology_getting_started": "All\", \"Basics\", \"Technology\", \"Getting Started\", \"Ecosystem\", \"Community",
-      "ergo_is_a_secure_proof": "Ergo is a secure Proof-of-Work blockchain for powerful smart contracts, enabling decentralized financial applications. Think of it as digital money (ERG) with programmable rules.",
-      "what_does_a_fair_launch": "What does a \"fair launch\" mean?',\n    a: 'Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.",
-      "the_extended_utxo_model_attaches": "The Extended UTXO model attaches data and logic directly to \"boxes\" of money. This enhances smart contract security, fee predictability, and allows for better scalability compared to the account model.",
-      "find_answers_to_common_questions": "Find answers to common questions about Ergo, its technology, and the ecosystem. If you can't find what you're looking for, join our community channels.",
-      "everything_you_need_to_know": "Everything you need to know about Ergo blockchain in one place.",
-      "faqpage_id_https_ergoblockchain_org": "FAQPage\",\n    \"@id\": \"https://ergoblockchain.org/start/faq\",\n    name: \"Ergo Frequently Asked Questions",
-      "question_name_what_is_ergo": "Question\",\n        name: \"What is Ergo?",
-      "answer_text_ergo_is_a": "Answer\",\n          text: \"Ergo is a next-generation Proof-of-Work blockchain platform with smart contracts, designed for financial contracts and DeFi applications.",
-      "question_name_can_i_mine_ergo": "Question\",\n        name: \"Can I mine Ergo?",
+      "basics_icon_helpcircle_q_what": "Temel Bilgiler\",\n    icon: HelpCircle,\n    q: '\"Adil başlatma\" ne anlama gelir?',\n    a: 'Ergo'nun kurucular için Başlangıç Para Teklifi (ICO) veya önceden üretilmiş tokeni yoktu. Bu, herkesin ilk günden itibaren madencilik yoluyla ERG edinmek için eşit fırsata sahip olduğu daha adil bir dağılımı garanti eder.",
+      "basics_icon_helpcircle_q_is": "Temel Bilgiler\",\n    icon: HelpCircle,\n    q: \"Ergo bir şirket midir?\",\n    a: \"Hayır, Ergo merkezi olmayan, açık kaynaklı bir protokoldür. Ergo Vakfı, geliştirmeyi destekleyen ancak ağı kontrol etmeyen kar amacı gütmeyen bir topluluk organıdır.",
+      "basics_icon_helpcircle_q_what_does_a_fair_launch": "Temel Bilgiler\",\n    icon: HelpCircle,\n    q: '\"Adil başlatma",
+      "technology_icon_cpu_q_what": "Teknoloji\",\n    icon: Cpu,\n    q: \"eUTXO nedir?\",\n    a: 'Extended UTXO modeli, verileri ve mantığı doğrudan para \"kutularına\" ekler. Bu, akıllı sözleşme güvenliğini, ücret öngörülebilirliğini artırır ve hesap modeline kıyasla daha iyi ölçeklenebilirlik sağlar.",
+      "getting_started_icon_zap_q": "Başlarken\",\n    icon: Zap,\n    q: \"ERG nasıl edinebilirim?\",\n    a: \"ERG'yi çeşitli kripto para borsalarında, eşler arası işlemler aracılığıyla veya madencilikle edinebilirsiniz. Yatırım yapmadan önce her zaman kendi araştırmanızı yapın.",
+      "ecosystem_icon_users_q_what": "Ekosistem\",\n    icon: Users,\n    q: \"Ergo'da ne tür dApp'ler var?\",\n    a: \"Ergo'nun ekosistemi DeFi platformlarını (Spectrum, Duckpools), gizlilik araçlarını (ErgoMixer), NFT pazaryerlerini (SkyHarbor), zincirler arası köprüleri (Rosen) ve daha fazlasını içerir.",
+      "community_icon_users_q_who": "Topluluk\",\n    icon: Users,\n    q: \"Ergo'yu kim yönetiyor?\",\n    a: \"Ergo merkezi olmayan ve topluluk odaklıdır. Protokol değişiklikleri, madencilerin destek sinyali verdiği Ergo İyileştirme Teklifleri (EIP'ler) aracılığıyla tartışılır ve resmileştirilir.",
+      "all_basics_technology_getting_started": "Tümü\", \"Temel Bilgiler\", \"Teknoloji\", \"Başlarken\", \"Ekosistem\", \"Topluluk",
+      "ergo_is_a_secure_proof": "Ergo, güçlü akıllı sözleşmeler için güvenli bir İş Kanıtı blok zinciridir ve merkezi olmayan finansal uygulamaları mümkün kılar. Programlanabilir kurallara sahip dijital para (ERG) olarak düşünebilirsiniz.",
+      "what_does_a_fair_launch": "\"Adil başlatma\" ne anlama gelir?',\n    a: 'Ergo'nun kurucular için Başlangıç Para Teklifi (ICO) veya önceden üretilmiş tokeni yoktu. Bu, herkesin ilk günden itibaren madencilik yoluyla ERG edinmek için eşit fırsata sahip olduğu daha adil bir dağılımı garanti eder.",
+      "the_extended_utxo_model_attaches": "Extended UTXO modeli, verileri ve mantığı doğrudan para 'kutularına' ekler. Bu, akıllı sözleşme güvenliğini, ücret öngörülebilirliğini artırır ve hesap modeline kıyasla daha iyi ölçeklenebilirlik sağlar.",
+      "find_answers_to_common_questions": "Ergo, teknolojisi ve ekosistemi hakkındaki yaygın soruların yanıtlarını bulun. Aradığınızı bulamazsanız topluluk kanallarımıza katılın.",
+      "everything_you_need_to_know": "Ergo blok zinciri hakkında ihtiyacınız olan her şey tek bir yerde.",
+      "faqpage_id_https_ergoblockchain_org": "FAQPage\",\n    \"@id\": \"https://ergoblockchain.org/start/faq\",\n    name: \"Ergo Sıkça Sorulan Sorular",
+      "question_name_what_is_ergo": "Question\",\n        name: \"Ergo nedir?",
+      "answer_text_ergo_is_a": "Answer\",\n          text: \"Ergo, finansal sözleşmeler ve DeFi uygulamaları için tasarlanmış, akıllı sözleşmeli yeni nesil bir İş Kanıtı blok zincir platformudur.",
+      "question_name_can_i_mine_ergo": "Question\",\n        name: \"Ergo'yu madencilik yapabilir miyim?",
       "answer_text": "Answer\",\n          text:",
-      "ergo_faq_frequently_asked_questions": "Ergo FAQ | Frequently Asked Questions About Blockchain",
-      "ergo_faq_all_your_questions_answered": "Ergo FAQ - All Your Questions Answered",
-      "ergo_faq_quick_answers_to_common_questions": "Ergo FAQ | Quick Answers to Common Questions"
+      "ergo_faq_frequently_asked_questions": "Ergo SSS | Blok Zincir Hakkında Sıkça Sorulan Sorular",
+      "ergo_faq_all_your_questions_answered": "Ergo SSS - Tüm Sorularınız Yanıtlandı",
+      "ergo_faq_quick_answers_to_common_questions": "Ergo SSS | Yaygın Sorulara Hızlı Yanıtlar"
     },
     "introductionMeta": {
       "ergo_introduction_description_pow_smart": "Ergo Introduction\",\n    description: \"PoW smart contracts with eUTXO & Sigma Protocols.",
-      "ergo_introduction_pow_smart_contracts": "Ergo Introduction — PoW Smart Contracts, eUTXO, Sigma Protocols",
-      "meet_ergo_a_pow_smart": "Meet Ergo: a PoW smart‑contract platform using the eUTXO model and Sigma protocols. Build privacy‑aware, auditable dApps with predictable costs.",
-      "pow_smart_contracts_with_eutxo_sigma_protocols": "PoW smart contracts with eUTXO & Sigma Protocols.",
+      "ergo_introduction_pow_smart_contracts": "Ergo Girişi — PoW Akıllı Sözleşmeleri, eUTXO, Sigma Protokolleri",
+      "meet_ergo_a_pow_smart": "Ergo ile tanışın: eUTXO modelini ve Sigma protokollerini kullanan bir PoW akıllı sözleşme platformu. Öngörülebilir maliyetlerle gizlilik odaklı, denetlenebilir dApp'ler inşa edin.",
+      "pow_smart_contracts_with_eutxo_sigma_protocols": "eUTXO ve Sigma Protokolleri ile PoW akıllı sözleşmeleri.",
       "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
       "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
@@ -1850,13 +1855,13 @@
       "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject\",\n        url: \"https://ergoblockchain.org/logo.png",
       "learningresource_name_ergo_blockchain_introduction": "LearningResource\",\n    name: \"Ergo Blockchain Introduction\",\n    description: \"Educational resource for learning Ergo blockchain fundamentals\",\n    learningResourceType: \"Presentation\",\n    educationalLevel: \"Beginner",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Cryptocurrency",
-      "introduction_to_ergo_beginner": "Introduction to Ergo | Beginner",
-      "introduction_to_ergo_start_your_blockchain_journey": "Introduction to Ergo - Start Your Blockchain Journey",
-      "beginner_friendly_guide_to_understanding": "Beginner-friendly guide to understanding Ergo blockchain, its technology, and ecosystem.",
-      "introduction_to_ergo_blockchain": "Introduction to Ergo Blockchain",
-      "learn_the_fundamentals_of_ergo": "Learn the fundamentals of Ergo - the future of programmable money.",
-      "comprehensive_guide_for_beginners_to": "Comprehensive guide for beginners to understand Ergo",
-      "educational_resource_for_learning_ergo": "Educational resource for learning Ergo blockchain fundamentals"
+      "introduction_to_ergo_beginner": "Ergo'ya Giriş | Başlangıç",
+      "introduction_to_ergo_start_your_blockchain_journey": "Ergo'ya Giriş - Blok Zinciri Yolculuğunuza Başlayın",
+      "beginner_friendly_guide_to_understanding": "Ergo blok zincirini, teknolojisini ve ekosistemini anlamak için yeni başlayanlara uygun rehber.",
+      "introduction_to_ergo_blockchain": "Ergo Blok Zincirine Giriş",
+      "learn_the_fundamentals_of_ergo": "Ergo'nun temellerini öğrenin - programlanabilir paranın geleceği.",
+      "comprehensive_guide_for_beginners_to": "Yeni başlayanların Ergo'yu anlaması için kapsamlı rehber",
+      "educational_resource_for_learning_ergo": "Ergo blok zinciri temellerini öğrenmek için eğitim kaynağı"
     },
     "quizContent": {
       "connect_with_your_community": "CONNECT WITH YOUR COMMUNITY",
@@ -2049,99 +2054,99 @@
     "learning_paths_icon_target_color": "Learning Paths\", icon: Target, color:",
     "quick_start_icon_clock_color": "Quick Start\", icon: Clock, color:",
     "open_source_icon_gitbranch_color": "Open Source\", icon: GitBranch, color:",
-    "skip_to_docs": "Skip to Docs",
-    "choose_your_path_into_ergo": "Choose your path into Ergo",
-    "pick_what_describes_you_best": "Pick what describes you best, and we\\'ll guide you through everything you need to know.",
-    "start_from_the_basics": "Start from the basics",
-    "why_ergo_exists": "Why Ergo Exists",
-    "understand_the_problems_we_solve": "Understand the problems we solve",
-    "download_and_set_up_securely": "Download and set up securely",
-    "try_test_coins": "Try Test Coins",
-    "get_free_testnet_erg_to_practice": "Get free testnet ERG to practice",
-    "send_first_transaction": "Send First Transaction",
-    "learn_by_doing_send_erg": "Learn by doing - send ERG",
-    "essential_security_practices": "Essential security practices",
-    "i_want_to_learn": "I Want to Learn",
-    "compare_with_bitcoin_ethereum_monero": "Compare with Bitcoin, Ethereum, Monero",
-    "eutxo_sigma_protocols_explained": "eUTXO, Sigma Protocols explained",
-    "how_ergo_protects_your_data": "How Ergo protects your data",
-    "real_use_cases": "Real Use Cases",
-    "community_success_stories": "Community success stories",
-    "build_on_ergo": "Build on Ergo",
-    "your_first_ergoscript_contract": "Your first ErgoScript contract",
-    "try_playground": "Try Playground",
-    "interactive_contract_editor": "Interactive contract editor",
-    "libraries_for_your_language": "Libraries for your language",
-    "get_help_from_core_devs": "Get help from core devs",
-    "i_want_to_mine": "I Want to Mine",
-    "secure_the_network": "Secure the network",
-    "autolykos_v2_for_gpus": "Autolykos v2 for GPUs",
-    "choose_a_pool": "Choose a Pool",
-    "compare_pools_and_fees": "Compare pools and fees",
-    "run_a_node": "Run a Node",
-    "advanced_full_node_setup": "Advanced: full node setup",
-    "understand_the_asset": "Understand the asset",
-    "what": "What",
-    "supply_distribution_governance": "Supply, distribution, governance",
-    "major_integrations_and_users": "Major integrations and users",
-    "price_volume_analytics": "Price, volume, analytics",
-    "take_the_quiz": "Take the Quiz",
+    "skip_to_docs": "Belgelere Geç",
+    "choose_your_path_into_ergo": "Ergo'ya giden yolunuzu seçin",
+    "pick_what_describes_you_best": "Sizi en iyi tanımlayan seçeneği belirleyin, bilmeniz gereken her şeyde size rehberlik edelim.",
+    "start_from_the_basics": "Temellerden başla",
+    "why_ergo_exists": "Ergo Neden Var",
+    "understand_the_problems_we_solve": "Çözdüğümüz sorunları anlayın",
+    "download_and_set_up_securely": "İndirin ve güvenli şekilde kurun",
+    "try_test_coins": "Test Paralarını Dene",
+    "get_free_testnet_erg_to_practice": "Pratik yapmak için ücretsiz testnet ERG alın",
+    "send_first_transaction": "İlk İşlemi Gönder",
+    "learn_by_doing_send_erg": "Yaparak öğren - ERG gönder",
+    "essential_security_practices": "Temel güvenlik uygulamaları",
+    "i_want_to_learn": "Öğrenmek İstiyorum",
+    "compare_with_bitcoin_ethereum_monero": "Bitcoin, Ethereum, Monero ile karşılaştırın",
+    "eutxo_sigma_protocols_explained": "eUTXO, Sigma Protokolleri açıklandı",
+    "how_ergo_protects_your_data": "Ergo verilerinizi nasıl korur",
+    "real_use_cases": "Gerçek Kullanım Senaryoları",
+    "community_success_stories": "Topluluk başarı hikayeleri",
+    "build_on_ergo": "Ergo Üzerinde İnşa Et",
+    "your_first_ergoscript_contract": "İlk ErgoScript sözleşmeniz",
+    "try_playground": "Oyun Alanını Dene",
+    "interactive_contract_editor": "Etkileşimli sözleşme düzenleyicisi",
+    "libraries_for_your_language": "Diliniz için kütüphaneler",
+    "get_help_from_core_devs": "Temel geliştiricilerden yardım alın",
+    "i_want_to_mine": "Madencilik Yapmak İstiyorum",
+    "secure_the_network": "Ağı güvence altına al",
+    "autolykos_v2_for_gpus": "GPU'lar için Autolykos v2",
+    "choose_a_pool": "Bir Havuz Seç",
+    "compare_pools_and_fees": "Havuzları ve ücretleri karşılaştırın",
+    "run_a_node": "Bir Düğüm Çalıştır",
+    "advanced_full_node_setup": "Gelişmiş: tam düğüm kurulumu",
+    "understand_the_asset": "Varlığı anlayın",
+    "what": "Ne",
+    "supply_distribution_governance": "Arz, dağıtım, yönetişim",
+    "major_integrations_and_users": "Büyük entegrasyonlar ve kullanıcılar",
+    "price_volume_analytics": "Fiyat, hacim, analitik",
+    "take_the_quiz": "Sınava Gir",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "Start\", item: \"https://ergoblockchain.org/start",
-      "comparison_item_https_ergoblockchain_org": "Comparison\", item: \"https://ergoblockchain.org/start/comparison",
+      "start_item_https_ergoblockchain_org_start": "Başlangıç\", item: \"https://ergoblockchain.org/start",
+      "comparison_item_https_ergoblockchain_org": "Karşılaştırma\", item: \"https://ergoblockchain.org/start/comparison",
       "techarticle_headline": "TechArticle\",\n          headline:",
-      "comparison_of_eutxo_vs_account": "Comparison of eUTXO vs account models, PoW vs PoS, privacy and fees: Ergo, Ethereum, Bitcoin, Cardano.",
+      "comparison_of_eutxo_vs_account": "eUTXO ile hesap modelleri, PoW ve PoS, gizlilik ve ücretlerin karşılaştırması: Ergo, Ethereum, Bitcoin, Cardano.",
       "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
       "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "question_name_how_does_eutxo": "Question\",\n                    name: \"How does eUTXO reduce reentrancy risk?",
-      "question_name_are_fees_predictable_on_ergo": "Question\",\n                    name: \"Are fees predictable on Ergo?",
-      "answer_text_script_cost_is": "Answer\",\n                      text: \"Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions).",
-      "question_name_does_ergo_have_light_clients": "Question\",\n                    name: \"Does Ergo have light clients?",
-      "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients.",
-      "ergo_vs_others_practical_comparison": "Ergo vs Others — Practical Comparison",
-      "quick_comparison_of_ergo_vs": "Quick comparison of Ergo vs account-based chains: eUTXO, ASIC-resistant PoW (Autolykos), Sigma protocols, predictable fees, native L1 tokens, and light clients (NIPoPoWs).",
-      "eutxo_autolykos_pow_sigma_protocols": "eUTXO, Autolykos PoW, Sigma protocols, predictable fees.",
-      "compare_ergo_with_bitcoin_ethereum": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Technical specs, consensus mechanisms, smart contracts, scalability, and unique features side-by-side comparison.",
-      "compare_ergo_with_leading_blockchains": "Compare Ergo with Leading Blockchains",
-      "blockchain_comparison": "Blockchain Comparison",
-      "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"Blockchain Platform Comparison\",\n    description: \"Technical comparison of Ergo with other blockchain platforms",
-      "what_advantages_does_ergo_have": "What advantages does Ergo have over Ethereum?\",\n      answer: \"Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining.",
-      "how_does_ergo_compare_to": "How does Ergo compare to Cardano?\",\n      answer: \"Both use eUTXO, but Ergo has PoW consensus, storage rent, and no VC funding, making it more decentralized and sustainable.",
-      "ergo_vs_bitcoin_ethereum_cardano": "Ergo vs Bitcoin, Ethereum, Cardano",
-      "technical_comparison_of_ergo_vs": "Technical comparison of Ergo vs Bitcoin, Ethereum, Cardano. See why Ergo stands out.",
-      "technical_comparison_of_ergo_with": "Technical comparison of Ergo with other blockchain platforms"
+      "question_name_how_does_eutxo": "Question\",\n                    name: \"eUTXO yeniden giriş riskini nasıl azaltır?",
+      "question_name_are_fees_predictable_on_ergo": "Question\",\n                    name: \"Ergo'da ücretler öngörülebilir mi?",
+      "answer_text_script_cost_is": "Answer\",\n                      text: \"Betik maliyeti sınırlıdır ve ücretler öngörülebilirdir; gaz fiyatı açık artırması yoktur (nihai ücretler bellek havuzu koşullarına bağlıdır).",
+      "question_name_does_ergo_have_light_clients": "Question\",\n                    name: \"Ergo'nun hafif istemcileri var mı?",
+      "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Evet. NIPoPoWs, güven gerektirmeyen hafif istemciler için özlü kanıtlar sunar.",
+      "ergo_vs_others_practical_comparison": "Ergo ve Diğerleri — Pratik Karşılaştırma",
+      "quick_comparison_of_ergo_vs": "Ergo ile hesap tabanlı zincirler arasında hızlı karşılaştırma: eUTXO, ASIC dirençli PoW (Autolykos), Sigma protokolleri, öngörülebilir ücretler, yerel L1 tokenları ve hafif istemciler (NIPoPoWs).",
+      "eutxo_autolykos_pow_sigma_protocols": "eUTXO, Autolykos PoW, Sigma protokolleri, öngörülebilir ücretler.",
+      "compare_ergo_with_bitcoin_ethereum": "Ergo'yu Bitcoin, Ethereum ve Cardano ile karşılaştırın. Teknik özellikler, konsensüs mekanizmaları, akıllı sözleşmeler, ölçeklenebilirlik ve benzersiz özellikler yan yana karşılaştırma.",
+      "compare_ergo_with_leading_blockchains": "Ergo'yu Önde Gelen Blok Zincirlerle Karşılaştırın",
+      "blockchain_comparison": "Blok Zincir Karşılaştırması",
+      "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"Blok Zincir Platform Karşılaştırması\",\n    description: \"Ergo'nun diğer blok zincir platformlarıyla teknik karşılaştırması",
+      "what_advantages_does_ergo_have": "Ergo'nun Ethereum'a göre ne gibi avantajları var?\",\n      answer: \"Ergo öngörülebilir ücretler, yeniden giriş saldırısı yokluğu, paralel işlem işleme ve enerji verimli PoW madenciliği sunar.",
+      "how_does_ergo_compare_to": "Ergo, Cardano ile nasıl karşılaştırılır?\",\n      answer: \"Her ikisi de eUTXO kullanır; ancak Ergo'nun PoW konsensüsü, depolama kirası ve VC finansmanı yoktur; bu da onu daha merkezi olmayan ve sürdürülebilir kılar.",
+      "ergo_vs_bitcoin_ethereum_cardano": "Ergo ve Bitcoin, Ethereum, Cardano",
+      "technical_comparison_of_ergo_vs": "Ergo ile Bitcoin, Ethereum, Cardano'nun teknik karşılaştırması. Ergo'nun neden öne çıktığını görün.",
+      "technical_comparison_of_ergo_with": "Ergo'nun diğer blok zincir platformlarıyla teknik karşılaştırması"
     },
     "community_icon_users_color": "Community\", icon: Users, color:",
-    "get_started": "Get Started",
+    "get_started": "Başla",
     "communityMeta": {
-      "connect_with_developers_miners_traders": "Connect with developers, miners, traders, and enthusiasts. Discord, Telegram, Reddit, and more.",
-      "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo Community\",\n    description: \"Global community of developers, miners, and enthusiasts building on Ergo\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
-      "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
+      "connect_with_developers_miners_traders": "Geliştiriciler, madenciler, yatırımcılar ve meraklılarla bağlantı kurun. Discord, Telegram, Reddit ve daha fazlası.",
+      "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo Topluluğu\",\n    description: \"Ergo üzerinde inşa eden küresel geliştirici, madenci ve meraklı topluluğu\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
+      "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platformu",
       "aggregaterating_ratingvalue": "AggregateRating\",\n      ratingValue:",
-      "how_do_i_join_the": "How do I join the Ergo community?\",\n      answer: \"Join our Discord server for real-time chat, Telegram for quick updates, Reddit for discussions, or GitHub to contribute to development. All platforms are open and welcoming to newcomers.",
-      "what_is_the_main_ergo_community_platform_answer": "What is the main Ergo community platform?\",\n      answer:",
-      "can_i_contribute_to_ergo": "Can I contribute to Ergo without coding?\",\n      answer: \"Yes! You can contribute through content creation, translations, community management, testing, documentation, or participating in governance discussions.",
-      "are_there_regional_ergo_communities": "Are there regional Ergo communities?\",\n      answer: \"Yes, there are active regional communities in multiple languages including Chinese, Russian, Spanish, Turkish, and more, each with dedicated Telegram groups.",
-      "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergo Community Platforms",
+      "how_do_i_join_the": "Ergo topluluğuna nasıl katılabilirim?\",\n      answer: \"Gerçek zamanlı sohbet için Discord sunucumuza, hızlı güncellemeler için Telegram'a, tartışmalar için Reddit'e ya da geliştirmeye katkıda bulunmak için GitHub'a katılın. Tüm platformlar açık ve yeni gelenlere dostanedir.",
+      "what_is_the_main_ergo_community_platform_answer": "Ana Ergo topluluk platformu nedir?\",\n      answer:",
+      "can_i_contribute_to_ergo": "Kod yazmadan Ergo'ya katkıda bulunabilir miyim?\",\n      answer: \"Evet! İçerik oluşturma, çeviri, topluluk yönetimi, test, belgelendirme veya yönetişim tartışmalarına katılarak katkıda bulunabilirsiniz.",
+      "are_there_regional_ergo_communities": "Bölgesel Ergo toplulukları var mı?\",\n      answer: \"Evet, Çince, Rusça, İspanyolca, Türkçe ve daha fazlası dahil olmak üzere birden fazla dilde aktif bölgesel topluluklar bulunmakta olup her birinin özel Telegram grupları vardır.",
+      "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergo Topluluk Platformları",
       "discord_url_https_discord_gg": "Discord\",\n        url: \"https://discord.gg/ergo-platform\",\n        description:",
-      "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"Quick updates and global chat",
-      "reddit_url_https_reddit_com": "Reddit\",\n        url: \"https://reddit.com/r/ergonauts\",\n        description: \"Discussions and community content",
-      "github_url_https_github_com": "GitHub\",\n        url: \"https://github.com/ergoplatform\",\n        description: \"Open source development",
-      "ergo_community_join_discord_telegram_forums": "Ergo Community | Join Discord, Telegram & Forums",
-      "connect_with_the_ergo_community": "Connect with the Ergo community. Join 15K+ members on Discord, Telegram, Reddit. Get support, participate in governance, contribute to development, and shape the future of Ergo.",
-      "join_the_ergo_community_15k_active_members": "Join the Ergo Community | 15K+ Active Members",
-      "ergo_community_global_blockchain_network": "Ergo Community | Global Blockchain Network",
-      "join_15k_members_building_the": "Join 15K+ members building the future of DeFi. Active Discord, Telegram, development groups.",
-      "global_community_of_developers_miners": "Global community of developers, miners, and enthusiasts building on Ergo",
-      "main_community_hub_with_15k_members": "Main community hub with 15K+ members",
-      "quick_updates_and_global_chat": "Quick updates and global chat",
-      "discussions_and_community_content": "Discussions and community content",
-      "open_source_development": "Open source development"
+      "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"Hızlı güncellemeler ve küresel sohbet",
+      "reddit_url_https_reddit_com": "Reddit\",\n        url: \"https://reddit.com/r/ergonauts\",\n        description: \"Tartışmalar ve topluluk içeriği",
+      "github_url_https_github_com": "GitHub\",\n        url: \"https://github.com/ergoplatform\",\n        description: \"Açık kaynak geliştirme",
+      "ergo_community_join_discord_telegram_forums": "Ergo Topluluğu | Discord, Telegram ve Forumlara Katılın",
+      "connect_with_the_ergo_community": "Ergo topluluğuyla bağlantı kurun. Discord, Telegram, Reddit'te 15 Bin'den fazla üyeye katılın. Destek alın, yönetişime katılın, geliştirmeye katkıda bulunun ve Ergo'nun geleceğini şekillendirin.",
+      "join_the_ergo_community_15k_active_members": "Ergo Topluluğuna Katılın | 15 Bin+ Aktif Üye",
+      "ergo_community_global_blockchain_network": "Ergo Topluluğu | Küresel Blok Zincir Ağı",
+      "join_15k_members_building_the": "DeFi'nin geleceğini inşa eden 15 Bin+ üyeye katılın. Aktif Discord, Telegram, geliştirme grupları.",
+      "global_community_of_developers_miners": "Ergo üzerinde inşa eden küresel geliştirici, madenci ve meraklı topluluğu",
+      "main_community_hub_with_15k_members": "15 Bin+ üyeli ana topluluk merkezi",
+      "quick_updates_and_global_chat": "Hızlı güncellemeler ve küresel sohbet",
+      "discussions_and_community_content": "Tartışmalar ve topluluk içeriği",
+      "open_source_development": "Açık kaynak geliştirme"
     },
     "how_long_does_it_take_to_learn_ergo_answer": "How long does it take to learn Ergo?\",\n      answer:",
     "start_your_ergo_journey_summary": "Start Your Ergo Journey\",\n    summary: \"Choose your personalized path into Ergo blockchain: beginner, developer, miner, or investor\",\n    url: \"https://ergoblockchain.org/start",
     "start_your_journey_with_ergo": "Start Your Journey with Ergo Blockchain',\n    description: 'Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
-    "start_with_ergo_learning_paths": "Start with Ergo - Learning Paths",
+    "start_with_ergo_learning_paths": "Ergo ile Başlayın - Öğrenme Yolları",
     "start_your_ergo_journey_choose": "Start Your Ergo Journey - Choose Your Path',\n    description: 'Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
     "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
     "howtosupply_name_computer_or_smartphone": "HowToSupply', name: 'Computer or smartphone",
@@ -2158,472 +2163,472 @@
     "course_name_learning_path_description": "Course',\n          name: 'Learning Path',\n          description: 'Deep dive into Ergo technology and ecosystem",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
-    "start_your_journey_with_ergo_blockchain": "Start Your Journey with Ergo Blockchain",
-    "personalized_learning_paths_for_beginners": "Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.",
-    "start_your_ergo_journey_choose_your_path": "Start Your Ergo Journey - Choose Your Path",
-    "beginner_developer_miner_investor_find": "Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
-    "for_those_new_to_cryptocurrency_and_blockchain": "For those new to cryptocurrency and blockchain",
-    "for_programmers_wanting_to_build_on_ergo": "For programmers wanting to build on Ergo",
-    "for_those_interested_in_mining_erg": "For those interested in mining ERG",
-    "for_understanding_ergo_as_an_investment": "For understanding Ergo as an investment",
-    "deep_dive_into_ergo_technology_and_ecosystem": "Deep dive into Ergo technology and ecosystem"
+    "start_your_journey_with_ergo_blockchain": "Ergo Blok Zinciri ile Yolculuğunuza Başlayın",
+    "personalized_learning_paths_for_beginners": "Yeni başlayanlar, geliştiriciler, madenciler ve yatırımcılar için kişiselleştirilmiş öğrenme yolları. Ergo'ya giden yolunuzu bulun.",
+    "start_your_ergo_journey_choose_your_path": "Ergo Yolculuğunuza Başlayın - Yolunuzu Seçin",
+    "beginner_developer_miner_investor_find": "Yeni başlayan mı? Geliştirici mi? Madenci mi? Yatırımcı mı? Ergo'ya giden kişiselleştirilmiş yolunuzu bulun.",
+    "for_those_new_to_cryptocurrency_and_blockchain": "Kripto para ve blok zincirine yeni olanlar için",
+    "for_programmers_wanting_to_build_on_ergo": "Ergo üzerinde inşa etmek isteyen programcılar için",
+    "for_those_interested_in_mining_erg": "ERG madenciliğiyle ilgilenenler için",
+    "for_understanding_ergo_as_an_investment": "Ergo'yu bir yatırım olarak anlamak için",
+    "deep_dive_into_ergo_technology_and_ecosystem": "Ergo teknolojisi ve ekosistemine derinlemesine dalış"
   },
   "startIntroduction": {
-    "title": "Introduction to Ergo",
-    "description": "Quick overview of Ergo blockchain fundamentals",
-    "subtitle": "What makes Ergo unique",
+    "title": "Ergo'ya Giriş",
+    "description": "Ergo blok zinciri temellerine hızlı genel bakış",
+    "subtitle": "Ergo'yu benzersiz kılan nedir",
     "coreValues": {
       "decentralizedFirst": {
-        "title": "Decentralized First",
-        "description": "No central authority, no single points of failure"
+        "title": "Önce Merkeziyetsizlik",
+        "description": "Merkezi otorite yok, tek hata noktası yok"
       },
       "secureReliable": {
-        "title": "Secure & Reliable",
-        "description": "Battle-tested cryptography and proven consensus"
+        "title": "Güvenli ve Güvenilir",
+        "description": "Savaş testinden geçmiş kriptografi ve kanıtlanmış konsensüs"
       },
       "powerfulContracts": {
-        "title": "Powerful Contracts",
-        "description": "Advanced smart contract capabilities with ErgoScript"
+        "title": "Güçlü Sözleşmeler",
+        "description": "ErgoScript ile gelişmiş akıllı sözleşme yetenekleri"
       },
       "longTermFocus": {
-        "title": "Long-term Focus",
-        "description": "Sustainable economics and future-proof design"
+        "title": "Uzun Vadeli Odak",
+        "description": "Sürdürülebilir ekonomi ve geleceğe dayanıklı tasarım"
       }
     },
     "keyInnovations": {
       "proofOfWork": {
-        "title": "Proof-of-Work (PoW)",
-        "subtitle": "Maximum security",
-        "description": "ASIC-resistant Autolykos algorithm ensures fair mining"
+        "title": "İş Kanıtı (PoW)",
+        "subtitle": "Maksimum güvenlik",
+        "description": "ASIC'e dirençli Autolykos algoritması adil madenciliği garanti eder"
       },
       "extendedUtxo": {
-        "title": "Extended UTXO",
-        "subtitle": "Smart money",
-        "description": "Combines Bitcoin security with Ethereum programmability"
+        "title": "Genişletilmiş UTXO",
+        "subtitle": "Akıllı para",
+        "description": "Bitcoin güvenliğini Ethereum programlanabilirliğiyle birleştirir"
       },
       "sigmaProtocols": {
-        "title": "Sigma Protocols",
-        "subtitle": "Advanced cryptography",
-        "description": "Built-in zero-knowledge proofs and privacy features"
+        "title": "Sigma Protokolleri",
+        "subtitle": "Gelişmiş kriptografi",
+        "description": "Yerleşik sıfır-bilgi ispatları ve gizlilik özellikleri"
       }
     },
     "introduction": {
       "faq": {
         "eutxoModel": {
-          "question": "What is the Extended UTXO model?",
-          "answer": "Extended UTXO combines Bitcoin's security with Ethereum's programmability, allowing smart contracts while maintaining transaction parallelism."
+          "question": "Genişletilmiş UTXO modeli nedir?",
+          "answer": "Genişletilmiş UTXO, Bitcoin'in güvenliğini Ethereum'un programlanabilirliğiyle birleştirerek işlem paralelliğini korurken akıllı sözleşmelere olanak tanır."
         },
         "sigmaProtocols": {
-          "question": "What are Sigma Protocols?",
-          "answer": "Sigma Protocols are cryptographic proofs that enable privacy features and zero-knowledge proofs natively on Ergo blockchain."
+          "question": "Sigma Protokolleri nelerdir?",
+          "answer": "Sigma Protokolleri, Ergo blok zincirinde yerel olarak gizlilik özellikleri ve sıfır-bilgi ispatlara olanak tanıyan kriptografik kanıtlardır."
         },
         "pow": {
-          "question": "Why does Ergo use Proof-of-Work?",
-          "answer": "Proof-of-Work provides maximum security and decentralization. Ergo's Autolykos algorithm is ASIC-resistant and energy-efficient."
+          "question": "Ergo neden İş Kanıtı kullanır?",
+          "answer": "İş Kanıtı maksimum güvenlik ve merkeziyetsizlik sağlar. Ergo'nun Autolykos algoritması ASIC'e dirençli ve enerji verimlidir."
         }
       },
       "cta": {
         "readyToDiveIn": {
-          "title": "Ready to Dive In?",
-          "description": "Choose your path to start exploring the Ergo ecosystem."
+          "title": "Başlamaya Hazır mısınız?",
+          "description": "Ergo ekosistemini keşfetmeye başlamak için yolunuzu seçin."
         },
         "getErgoWallet": {
-          "button": "Get Ergo Wallet"
+          "button": "Ergo Cüzdanı Al"
         },
         "exploreEcosystem": {
-          "button": "Explore Ecosystem"
+          "button": "Ekosistemi Keşfet"
         },
         "documentation": {
-          "button": "Read Documentation"
+          "button": "Belgeleri Oku"
         },
-        "lastUpdated": "Last updated: December 2024"
+        "lastUpdated": "Son güncelleme: Aralık 2024"
       },
       "whatMakesErgoDifferent": {
-        "title": "WHAT MAKES",
+        "title": "ERGO'YU FARKLI YAPAN",
         "fairLaunch": {
-          "title": "Fair Launch",
-          "description": "No ICO, no premine, no VC funding. Ergo was launched fairly with equal opportunity for all participants."
+          "title": "Adil Başlangıç",
+          "description": "ICO yok, ön-madencilik yok, risk sermayesi finansmanı yok. Ergo tüm katılımcılar için eşit fırsatla adil biçimde başlatıldı."
         },
         "eutxoErgoScript": {
           "title": "eUTXO + ErgoScript",
-          "description": "Extended UTXO model combined with powerful ErgoScript enables complex smart contracts with Bitcoin-level security."
+          "description": "Genişletilmiş UTXO modeli güçlü ErgoScript ile birleşerek Bitcoin düzeyinde güvenlikle karmaşık akıllı sözleşmeler sağlar."
         },
         "storageRent": {
-          "title": "Storage Rent",
-          "description": "Sustainable blockchain economics through storage rent mechanism that prevents state bloat and ensures long-term viability."
+          "title": "Depolama Kirası",
+          "description": "Durum şişkinliğini önleyen ve uzun vadeli sürdürülebilirliği güvence altına alan depolama kirası mekanizması aracılığıyla sürdürülebilir blok zinciri ekonomisi."
         },
         "researchDriven": {
-          "title": "Research-Driven",
-          "description": "Built on peer-reviewed academic research and cryptographic innovations, ensuring solid theoretical foundations."
+          "title": "Araştırma Odaklı",
+          "description": "Hakemli akademik araştırma ve kriptografik yenilikler üzerine inşa edilerek sağlam teorik temeller sağlanır."
         },
         "robustPrivacy": {
-          "title": "Robust Privacy",
-          "description": "Native Sigma protocols provide zero-knowledge proofs and privacy features without compromising transparency."
+          "title": "Güçlü Gizlilik",
+          "description": "Yerel Sigma protokolleri şeffaflıktan ödün vermeden sıfır-bilgi ispatları ve gizlilik özellikleri sunar."
         },
         "communityLed": {
-          "title": "Community-Led",
-          "description": "Decentralized development and governance driven by a passionate global community of developers and researchers."
+          "title": "Topluluk Güdümlü",
+          "description": "Tutkulu küresel bir geliştirici ve araştırmacı topluluğu tarafından yürütülen merkeziyetsiz geliştirme ve yönetişim."
         }
       },
       "featureHighlights": {
         "lightClients": {
-          "title": "Light Clients",
-          "description": "NiPoPoWs enable ultra-efficient light clients with cryptographic security guarantees"
+          "title": "Hafif İstemciler",
+          "description": "NiPoPoWlar kriptografik güvenlik garantileriyle ultra verimli hafif istemciler sağlar"
         },
         "fairLaunch": {
-          "title": "Fair Launch",
-          "description": "No ICO, no premine, no VC funding - launched fairly for everyone"
+          "title": "Adil Başlangıç",
+          "description": "ICO yok, ön-madencilik yok, risk sermayesi finansmanı yok - herkes için adil biçimde başlatıldı"
         },
         "privacyFirst": {
-          "title": "Privacy First",
-          "description": "Optional privacy features using Sigma protocols and zero-knowledge proofs"
+          "title": "Önce Gizlilik",
+          "description": "Sigma protokolleri ve sıfır-bilgi ispatları kullanan isteğe bağlı gizlilik özellikleri"
         },
         "storageRent": {
-          "title": "Storage Rent",
-          "description": "Sustainable economics preventing blockchain bloat and ensuring long-term viability"
+          "title": "Depolama Kirası",
+          "description": "Blok zinciri şişkinliğini önleyen ve uzun vadeli sürdürülebilirliği sağlayan sürdürülebilir ekonomi"
         }
       },
       "corePrinciples": {
-        "title": "Principles"
+        "title": "İlkeler"
       },
       "keyTechnologies": {
-        "title": "Technologies",
-        "learnMore": "Learn More"
+        "title": "Teknolojiler",
+        "learnMore": "Daha Fazla Öğren"
       },
       "ergoScriptExample": {
-        "title": "ErgoScript Smart Contract Example",
+        "title": "ErgoScript Akıllı Sözleşme Örneği",
         "filename": "timelock.ergo"
       },
       "principles": {
         "decentralizedFirst": {
-          "title": "Decentralized First",
-          "description": "No central authority, no single points of failure"
+          "title": "Önce Merkeziyetsizlik",
+          "description": "Merkezi otorite yok, tek hata noktası yok"
         },
         "secureReliable": {
-          "title": "Secure & Reliable",
-          "description": "Battle-tested cryptography and proven consensus"
+          "title": "Güvenli ve Güvenilir",
+          "description": "Savaş testinden geçmiş kriptografi ve kanıtlanmış konsensüs"
         },
         "powerfulContracts": {
-          "title": "Powerful Contracts",
-          "description": "Advanced smart contract capabilities with ErgoScript"
+          "title": "Güçlü Sözleşmeler",
+          "description": "ErgoScript ile gelişmiş akıllı sözleşme yetenekleri"
         },
         "longTermFocus": {
-          "title": "Long-term Focus",
-          "description": "Sustainable economics and future-proof design"
+          "title": "Uzun Vadeli Odak",
+          "description": "Sürdürülebilir ekonomi ve geleceğe dayanıklı tasarım"
         }
       },
       "technologies": {
         "pow": {
-          "title": "Proof-of-Work (PoW)",
-          "subtitle": "Maximum security",
-          "description": "ASIC-resistant Autolykos algorithm ensures fair mining",
-          "badge": "Secure"
+          "title": "İş Kanıtı (PoW)",
+          "subtitle": "Maksimum güvenlik",
+          "description": "ASIC'e dirençli Autolykos algoritması adil madenciliği garanti eder",
+          "badge": "Güvenli"
         },
         "extendedUtxo": {
-          "title": "Extended UTXO",
-          "subtitle": "Smart money",
-          "description": "Combines Bitcoin security with Ethereum programmability",
-          "badge": "Innovative"
+          "title": "Genişletilmiş UTXO",
+          "subtitle": "Akıllı para",
+          "description": "Bitcoin güvenliğini Ethereum programlanabilirliğiyle birleştirir",
+          "badge": "Yenilikçi"
         },
         "sigmaProtocols": {
-          "title": "Sigma Protocols",
-          "subtitle": "Advanced cryptography",
-          "description": "Built-in zero-knowledge proofs and privacy features",
-          "badge": "Private"
+          "title": "Sigma Protokolleri",
+          "subtitle": "Gelişmiş kriptografi",
+          "description": "Yerleşik sıfır-bilgi ispatları ve gizlilik özellikleri",
+          "badge": "Gizli"
         }
       },
       "whatIsErgo": {
-        "eutxoLink": "eUTXO model",
-        "powLink": "Proof-of-Work",
-        "storageRentLink": "Storage Rent",
-        "privacyLink": "Privacy Features"
+        "eutxoLink": "eUTXO modeli",
+        "powLink": "İş Kanıtı",
+        "storageRentLink": "Depolama Kirası",
+        "privacyLink": "Gizlilik Özellikleri"
       },
       "whyErgo": {
-        "title": "Why Choose Ergo?",
-        "eutxo": "Extended UTXO model for secure smart contracts",
-        "sigma": "Sigma protocols for privacy and zero-knowledge proofs",
-        "pow": "ASIC-resistant Proof-of-Work consensus",
-        "storageRent": "Storage rent mechanism for long-term sustainability"
+        "title": "Neden Ergo'yu Seçmelisiniz?",
+        "eutxo": "Güvenli akıllı sözleşmeler için Genişletilmiş UTXO modeli",
+        "sigma": "Gizlilik ve sıfır-bilgi ispatları için Sigma protokolleri",
+        "pow": "ASIC'e dirençli İş Kanıtı konsensüsü",
+        "storageRent": "Uzun vadeli sürdürülebilirlik için depolama kirası mekanizması"
       },
       "keyInnovation": {
-        "title": "Key Innovation"
+        "title": "Temel Yenilik"
       },
       "references": {
-        "autolykos": "Autolykos v2 Algorithm",
+        "autolykos": "Autolykos v2 Algoritması",
         "ergoGithub": "Ergo GitHub"
       }
     }
   },
   "startCommunity": {
-    "title": "Join Community",
-    "description": "Connect with the Ergo community across various platforms",
-    "subtitle": "Discord, Telegram, Reddit, and more"
+    "title": "Topluluğa Katıl",
+    "description": "Çeşitli platformlarda Ergo topluluğuyla bağlantı kurun",
+    "subtitle": "Discord, Telegram, Reddit ve daha fazlası"
   },
   "startComparison": {
-    "title": "Platform Comparison",
-    "description": "How Ergo compares to other blockchain platforms",
-    "subtitle": "Technical and feature comparison"
+    "title": "Platform Karşılaştırması",
+    "description": "Ergo'nun diğer blok zinciri platformlarıyla karşılaştırması",
+    "subtitle": "Teknik ve özellik karşılaştırması"
   },
   "startQuiz": {
-    "title": "Onboarding Quiz",
-    "description": "Test your knowledge about Ergo blockchain",
-    "subtitle": "Interactive learning experience"
+    "title": "Başlangıç Sınavı",
+    "description": "Ergo blok zinciri hakkındaki bilginizi test edin",
+    "subtitle": "İnteraktif öğrenme deneyimi"
   },
   "startClient": {
-    "loading": "Loading...",
-    "skipToDocs": "Skip to Docs",
-    "recommended": "Recommended",
-    "steps": "steps",
-    "minTotal": "min total",
-    "changePath": "Change Path",
-    "journeyProgress": "Journey Progress",
-    "ofCompleted": "of",
-    "completed": "completed",
-    "journeyComplete": "Journey Complete!",
-    "start": "Start",
-    "review": "Review",
-    "congratulations": "Congratulations!",
-    "completedJourneyMessage": "You've completed the {journey} journey. Ready for the next challenge?",
-    "chooseAnotherPath": "Choose Another Path",
-    "exploreDocs": "Explore Docs",
-    "developerManifesto": "Developer Manifesto",
+    "loading": "Yükleniyor...",
+    "skipToDocs": "Belgelere Geç",
+    "recommended": "Önerilen",
+    "steps": "adım",
+    "minTotal": "dk toplam",
+    "changePath": "Yolu Değiştir",
+    "journeyProgress": "Yolculuk İlerlemesi",
+    "ofCompleted": "/",
+    "completed": "tamamlandı",
+    "journeyComplete": "Yolculuk Tamamlandı!",
+    "start": "Başla",
+    "review": "İncele",
+    "congratulations": "Tebrikler!",
+    "completedJourneyMessage": "{journey} yolculuğunu tamamladınız. Bir sonraki mücadeleye hazır mısınız?",
+    "chooseAnotherPath": "Başka Bir Yol Seç",
+    "exploreDocs": "Belgeleri Keşfet",
+    "developerManifesto": "Geliştirici Manifestosu",
     "stats": {
       "learningPaths": {
         "value": "5",
-        "label": "Learning Paths"
+        "label": "Öğrenme Yolları"
       },
       "quickStart": {
-        "value": "< 30min",
-        "label": "Quick Start"
+        "value": "< 30dk",
+        "label": "Hızlı Başlangıç"
       },
       "openSource": {
         "value": "100%",
-        "label": "Open Source"
+        "label": "Açık Kaynak"
       },
       "community": {
         "value": "24/7",
-        "label": "Community"
+        "label": "Topluluk"
       }
     },
     "tailoredGuides": {
-      "title": "Tailored",
-      "titleHighlight": "Guides",
-      "subtitle": "Deep-dive resources for specific user types",
+      "title": "Özel",
+      "titleHighlight": "Rehberler",
+      "subtitle": "Belirli kullanıcı türleri için derinlemesine kaynaklar",
       "miners": {
-        "title": "For Miners",
-        "description": "GPU-friendly Autolykos PoW, fair rewards"
+        "title": "Madenciler İçin",
+        "description": "GPU dostu Autolykos PoW, adil ödüller"
       },
       "holders": {
-        "title": "For Holders",
-        "description": "Sound tokenomics, DeFi, long-term value"
+        "title": "Tutucular İçin",
+        "description": "Sağlam tokenomik, DeFi, uzun vadeli değer"
       },
       "builders": {
-        "title": "For Builders",
-        "description": "ErgoScript, SDKs, grants for developers"
+        "title": "İnşaatçılar İçin",
+        "description": "ErgoScript, SDK'lar, geliştiriciler için hibeler"
       }
     },
     "quickLinks": {
-      "faq": "FAQ",
-      "joinCommunity": "Join Community",
-      "takeQuiz": "Take the Quiz"
+      "faq": "SSS",
+      "joinCommunity": "Topluluğa Katıl",
+      "takeQuiz": "Sınava Gir"
     },
     "emailCapture": {
-      "title": "Get Started with Ergo",
-      "description": "Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+      "title": "Ergo ile Başlayın",
+      "description": "En son güncellemeleri, başlangıç rehberlerini ve adım adım eğitimleri gelen kutunuza alın"
     }
   },
   "comparisonClient": {
     "hero": {
       "title": "Platform",
-      "titleHighlight": "Analysis",
-      "subtitle": "Understanding Ergo's Technical Advantages",
-      "description": "Ergo combines the security and predictability of the eUTXO model with the programmability needed for complex smart contracts, and supports light clients via NIPoPoWs.",
-      "startBuilding": "Start Building",
-      "viewComparison": "View Comparison"
+      "titleHighlight": "Analizi",
+      "subtitle": "Ergo'nun Teknik Avantajlarını Anlamak",
+      "description": "Ergo, eUTXO modelinin güvenliğini ve öngörülebilirliğini karmaşık akıllı sözleşmeler için gereken programlanabilirlikle birleştirir ve NIPoPoWlar aracılığıyla hafif istemcileri destekler.",
+      "startBuilding": "İnşa Etmeye Başla",
+      "viewComparison": "Karşılaştırmayı Gör"
     },
     "cards": {
       "predictableSecurity": {
-        "title": "Predictable & Auditable Security",
-        "description": "No known protocol-level reentrancy class; deterministic execution bounds; friendly to audits"
+        "title": "Öngörülebilir ve Denetlenebilir Güvenlik",
+        "description": "Bilinen protokol düzeyinde yeniden giriş sınıfı yok; deterministik yürütme sınırları; denetimlere uygun"
       },
       "parallelExecution": {
-        "title": "Parallel Execution",
-        "description": "Independent UTXOs enable parallel execution; shared-box patterns may introduce contention"
+        "title": "Paralel Yürütme",
+        "description": "Bağımsız UTXO'lar paralel yürütmeyi sağlar; paylaşılan kutu kalıpları çekişme yaratabilir"
       },
       "nativePrivacy": {
-        "title": "Native Privacy",
-        "description": "Sigma-protocols and UTXO mixing at the protocol layer"
+        "title": "Yerel Gizlilik",
+        "description": "Protokol katmanında Sigma protokolleri ve UTXO karıştırma"
       },
       "nativeAssets": {
-        "title": "Native L1 Assets",
-        "description": "Native L1 tokens/NFTs (no wrapper contracts)"
+        "title": "Yerel L1 Varlıkları",
+        "description": "Yerel L1 token'lar/NFT'ler (sarmalayıcı sözleşme yok)"
       }
     },
     "whyDevelopers": {
-      "title": "Why Developers Choose",
-      "titleHighlight": "Ergo",
+      "title": "Geliştiriciler Neden",
+      "titleHighlight": "Ergo'yu Seçiyor",
       "developerFirst": {
-        "title": "Developer-First Philosophy",
-        "quote": "Other platforms force you to work around their limitations. Ergo works around yours.",
+        "title": "Geliştirici Öncelikli Felsefe",
+        "quote": "Diğer platformlar sizi kendi sınırlamalarıyla çalışmaya zorlar. Ergo sizin sınırlamalarınıza göre çalışır.",
         "points": [
-          "Predictable execution costs",
-          "Security by design",
-          "No reentrancy attacks"
+          "Öngörülebilir yürütme maliyetleri",
+          "Tasarım gereği güvenlik",
+          "Yeniden giriş saldırısı yok"
         ]
       },
       "productivity": {
-        "title": "Built for Productivity",
-        "description": "Experience the difference of building on a platform designed for developer productivity.",
+        "title": "Verimlilik İçin Tasarlandı",
+        "description": "Geliştirici verimliliği için tasarlanmış bir platformda inşa etmenin farkını yaşayın.",
         "points": [
-          "Declarative ErgoScript",
-          "Formal verification support",
-          "Rich cryptographic primitives"
+          "Bildirimsel ErgoScript",
+          "Biçimsel doğrulama desteği",
+          "Zengin kriptografik ilkeller"
         ]
       },
       "testimonial": {
-        "quote": "Building on Ergo feels like having superpowers. The eUTXO model eliminates entire classes of bugs, and ErgoScript makes complex cryptographic operations feel natural.",
-        "attribution": "Ergo Developer Community"
+        "quote": "Ergo üzerinde geliştirme yapmak süper güçlere sahip olmak gibi hissettiriyor. eUTXO modeli tüm hata sınıflarını ortadan kaldırıyor ve ErgoScript karmaşık kriptografik işlemleri doğal hissettiriyor.",
+        "attribution": "Ergo Geliştirici Topluluğu"
       }
     },
     "stats": {
       "predictable": {
-        "value": "Predictable",
-        "label": "Fees; no gas price auctions"
+        "value": "Öngörülebilir",
+        "label": "Ücretler; gaz fiyatı açık artırması yok"
       },
       "noClass": {
-        "value": "No class",
-        "label": "of protocol-level reentrancy"
+        "value": "Sınıf yok",
+        "label": "protokol düzeyinde yeniden giriş için"
       },
       "native": {
-        "value": "Native",
-        "label": "L1 tokens/NFTs"
+        "value": "Yerel",
+        "label": "L1 token'lar/NFT'ler"
       },
       "light": {
-        "value": "Light",
-        "label": "clients (NIPoPoWs)"
+        "value": "Hafif",
+        "label": "istemciler (NIPoPoWlar)"
       }
     },
     "problem": {
-      "title": "The Problem with",
-      "titleHighlight": "Current Platforms",
+      "title": "Mevcut Platformların",
+      "titleHighlight": "Sorunu",
       "nightmares": {
-        "title": "Development Nightmares",
+        "title": "Geliştirme Kabusları",
         "points": [
-          "Unpredictable gas costs bankrupting users",
-          "Reentrancy attacks draining protocols",
-          "Complex languages creating security holes",
-          "VC-controlled platforms changing rules"
+          "Kullanıcıları iflasa sürükleyen öngörülemeyen gaz maliyetleri",
+          "Protokolleri boşaltan yeniden giriş saldırıları",
+          "Güvenlik açıkları yaratan karmaşık diller",
+          "Kuralları değiştiren risk sermayesi kontrolündeki platformlar"
         ]
       },
       "solution": {
-        "title": "The Ergo Solution",
+        "title": "Ergo Çözümü",
         "points": [
-          "Predictable fees; auditable execution bounds",
-          "Security-by-design in the eUTXO model",
-          "ErgoScript: declarative, explicit state transitions",
-          "Community-owned, fair launch principles"
+          "Öngörülebilir ücretler; denetlenebilir yürütme sınırları",
+          "eUTXO modelinde tasarım gereği güvenlik",
+          "ErgoScript: bildirimsel, açık durum geçişleri",
+          "Topluluk sahipli, adil başlangıç ilkeleri"
         ]
       }
     },
     "differentiators": {
-      "title": "What Makes",
+      "title": "Ergo'yu",
       "titleHighlight": "Ergo",
-      "subtitle": "Different",
-      "ergoAdvantage": "Ergo Advantage",
-      "others": "Others",
+      "subtitle": "Farklı Kılan",
+      "ergoAdvantage": "Ergo Avantajı",
+      "others": "Diğerleri",
       "vs": "VS",
-      "keyAdvantage": "Key Advantage"
+      "keyAdvantage": "Temel Avantaj"
     },
     "platformComparison": {
-      "title": "Blockchain",
+      "title": "Blok Zinciri",
       "titleHighlight": "Platform",
-      "subtitle": "Comparison",
-      "detailedLink": "Detailed 1-on-1 comparisons",
-      "tableTitle": "Blockchain Platform Comparison: Ergo vs BTC/ETH/ADA/SOL/SUI",
-      "tableCaption": "Platform comparison",
-      "feature": "Feature",
-      "footerNote": "Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated:"
+      "subtitle": "Karşılaştırması",
+      "detailedLink": "Ayrıntılı bire bir karşılaştırmalar",
+      "tableTitle": "Blok Zinciri Platform Karşılaştırması: Ergo vs BTC/ETH/ADA/SOL/SUI",
+      "tableCaption": "Platform karşılaştırması",
+      "feature": "Özellik",
+      "footerNote": "Konsensüs mekanizmaları, durum modelleri, akıllı sözleşme yetenekleri ve ayırt edici özellikler dahil olmak üzere büyük blok zinciri platformlarının kapsamlı karşılaştırması. Güncellenme:"
     },
     "trustIndicators": {
-      "title": "Trust",
-      "titleHighlight": "Indicators",
+      "title": "Güven",
+      "titleHighlight": "Göstergeleri",
       "battleTested": {
-        "title": "Battle-tested since 2019",
-        "subtitle": "Proven security track record"
+        "title": "2019'dan beri savaş testinden geçmiş",
+        "subtitle": "Kanıtlanmış güvenlik sicili"
       },
       "developers": {
-        "title": "100+ developers",
-        "subtitle": "Growing active community"
+        "title": "100'den fazla geliştirici",
+        "subtitle": "Büyüyen aktif topluluk"
       },
       "noIncidents": {
-        "title": "No critical protocol-level incidents",
-        "subtitle": "As of"
+        "title": "Kritik protokol düzeyinde olay yok",
+        "subtitle": "İtibarıyla"
       }
     },
     "faq": {
-      "title": "FAQ",
+      "title": "SSS",
       "questions": [
         {
-          "q": "How does eUTXO reduce reentrancy risk?",
-          "a": "Transactions consume specified UTXOs and cannot be re-entered; the shared-state pattern behind reentrancy is absent."
+          "q": "eUTXO yeniden giriş riskini nasıl azaltır?",
+          "a": "İşlemler belirtilen UTXO'ları tüketir ve yeniden girilemez; yeniden girişin arkasındaki paylaşılan durum kalıbı mevcut değildir."
         },
         {
-          "q": "Are fees predictable on Ergo?",
-          "a": "Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions)."
+          "q": "Ergo'da ücretler öngörülebilir mi?",
+          "a": "Betik maliyeti sınırlıdır ve ücretler öngörülebilirdir; gaz fiyatı açık artırması yoktur (nihai ücretler bellek havuzu koşullarına bağlıdır)."
         },
         {
-          "q": "Does Ergo have light clients?",
-          "a": "Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients."
+          "q": "Ergo'nun hafif istemcileri var mı?",
+          "a": "Evet. NIPoPoWlar güven minimize edilmiş hafif istemciler için özlü kanıtlar sağlar."
         }
       ]
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
-      "subtitle": "Start building or exploring the Ergo ecosystem today",
+      "title": "Sırada",
+      "titleHighlight": "Ne Var",
+      "subtitle": "Bugün Ergo ekosistemine inşa etmeye veya keşfetmeye başlayın",
       "startBuilding": {
-        "title": "Start Building",
-        "subtitle": "Developer Docs",
-        "description": "Get started with Ergo development using our comprehensive documentation and tutorials"
+        "title": "İnşa Etmeye Başla",
+        "subtitle": "Geliştirici Belgeleri",
+        "description": "Kapsamlı belgelerimiz ve eğitimlerimizi kullanarak Ergo geliştirmeye başlayın"
       },
       "exploreEcosystem": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover Projects",
-        "description": "Discover the growing ecosystem of applications, tools, and services built on Ergo"
+        "title": "Ekosistemi Keşfet",
+        "subtitle": "Projeleri Keşfet",
+        "description": "Ergo üzerine inşa edilmiş uygulamaların, araçların ve hizmetlerin büyüyen ekosistemini keşfedin"
       },
-      "sourcesLabel": "Last updated:",
-      "sourcesText": "Sources:"
+      "sourcesLabel": "Son güncelleme:",
+      "sourcesText": "Kaynaklar:"
     },
     "emailCapture": {
-      "title": "Stay Updated",
-      "description": "Get the latest Ergo news, technical comparisons, and ecosystem updates delivered to your inbox."
+      "title": "Güncel Kalın",
+      "description": "En son Ergo haberlerini, teknik karşılaştırmaları ve ekosistem güncellemelerini gelen kutunuza alın."
     }
   },
   "introductionClient": {
     "hero": {
-      "title": "Ergo Blockchain - PoW eUTXO Smart Contracts & Sigma Protocols",
-      "subtitle": "ASIC-resistant Layer-1 PoW with eUTXO, auditable smart contracts, and Sigma-based privacy. Built for open, verifiable money."
+      "title": "Ergo Blok Zinciri - PoW eUTXO Akıllı Sözleşmeler ve Sigma Protokolleri",
+      "subtitle": "eUTXO ile ASIC'e dirençli Katman-1 PoW, denetlenebilir akıllı sözleşmeler ve Sigma tabanlı gizlilik. Açık, doğrulanabilir para için inşa edildi."
     },
     "whatIsErgo": {
-      "title": "What is",
-      "titleHighlight": "Ergo",
-      "description1": "Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.",
-      "description2": "Its mission is to provide tools for decentralized and accessible financial systems - empowering people with economic freedom without intermediaries. Learn about the",
-      "eutxoLink": "eUTXO model",
-      "powLink": "Proof of Work",
-      "storageRentLink": "storage rent",
-      "privacyLink": "privacy features"
+      "title": "Ergo",
+      "titleHighlight": "Nedir",
+      "description1": "Ergo, güvenli ve güçlü merkeziyetsiz uygulamalar (dApp'ler) ve finansal sözleşmeler geliştirmek için tasarlanmıştır. Yerleşik ilkeleri yeni araştırmalarla birleştirerek on yıllık blok zinciri teorisi ve geliştirmesi üzerine inşa edilmiştir.",
+      "description2": "Misyonu, merkeziyetsiz ve erişilebilir finansal sistemler için araçlar sağlamak - insanları aracılar olmadan ekonomik özgürlükle güçlendirmektir. Şunlar hakkında öğrenin:",
+      "eutxoLink": "eUTXO modeli",
+      "powLink": "İş Kanıtı",
+      "storageRentLink": "depolama kirası",
+      "privacyLink": "gizlilik özellikleri"
     },
     "whyErgo": {
-      "title": "Why Ergo?",
-      "eutxo": "Extended UTXO (eUTXO) for predictable, auditable contracts",
-      "sigma": "Sigma Protocols for composable privacy",
-      "pow": "ASIC-resistant Proof of Work (Autolykos v2)",
-      "storageRent": "Storage Rent for blockchain sustainability"
+      "title": "Neden Ergo?",
+      "eutxo": "Öngörülebilir, denetlenebilir sözleşmeler için Genişletilmiş UTXO (eUTXO)",
+      "sigma": "Birleştirilebilir gizlilik için Sigma Protokolleri",
+      "pow": "ASIC'e dirençli İş Kanıtı (Autolykos v2)",
+      "storageRent": "Blok zinciri sürdürülebilirliği için Depolama Kirası"
     },
     "keyInnovation": {
-      "title": "Key Innovation",
-      "description": "Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, creating a unique platform for complex financial applications."
+      "title": "Temel Yenilik",
+      "description": "Ergo, Bitcoin'in UTXO modelinin güvenliğini Ethereum'un akıllı sözleşmelerinin ifade gücüyle birleştirerek karmaşık finansal uygulamalar için benzersiz bir platform yaratır."
     },
     "references": {
       "autolykos": "Autolykos v2",
@@ -2631,108 +2636,108 @@
     },
     "featureHighlights": {
       "privacyFirst": {
-        "title": "Privacy-First",
-        "description": "Sigma Protocols for optional privacy"
+        "title": "Önce Gizlilik",
+        "description": "İsteğe bağlı gizlilik için Sigma Protokolleri"
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Sustainable blockchain economics"
+        "title": "Depolama Kirası",
+        "description": "Sürdürülebilir blok zinciri ekonomisi"
       },
       "lightClients": {
-        "title": "Light Clients",
-        "description": "NIPoPoWs for mobile verification"
+        "title": "Hafif İstemciler",
+        "description": "Mobil doğrulama için NIPoPoWlar"
       },
       "fairLaunch": {
-        "title": "Fair Launch",
-        "description": "No pre-mine, no ICO, no VC"
+        "title": "Adil Başlangıç",
+        "description": "Ön-madencilik yok, ICO yok, risk sermayesi yok"
       }
     },
     "corePrinciples": {
-      "title": "Principles",
-      "subtitle": "Built on fundamental values that ensure long-term sustainability and real-world utility",
-      "soundMoney": "Sound Money",
-      "openMoney": "Open Money",
-      "description": "Ergo combines {soundMoney} (hard, predictable supply) with {openMoney} (permissionless, verifiable access) - creating the foundation for truly free finance."
+      "title": "İlkeler",
+      "subtitle": "Uzun vadeli sürdürülebilirliği ve gerçek dünya faydasını sağlayan temel değerler üzerine inşa edildi",
+      "soundMoney": "Sağlam Para",
+      "openMoney": "Açık Para",
+      "description": "Ergo, {soundMoney}'yi (katı, öngörülebilir arz) {openMoney} ile (izinsiz, doğrulanabilir erişim) birleştirir - gerçekten özgür finans için temel oluşturur."
     },
     "keyTechnologies": {
-      "title": "Technologies",
-      "subtitle": "Advanced cryptography and innovative consensus mechanisms power the Ergo platform"
+      "title": "Teknolojiler",
+      "subtitle": "Gelişmiş kriptografi ve yenilikçi konsensüs mekanizmaları Ergo platformuna güç verir"
     },
     "ergoScriptExample": {
-      "title": "ErgoScript Time-Lock Contract Example",
+      "title": "ErgoScript Zaman Kilitli Sözleşme Örneği",
       "filename": "time-lock.ergo"
     },
     "whatMakesErgoDifferent": {
-      "title": "WHAT MAKES",
-      "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable",
+      "title": "ERGO'YU FARKLI YAPAN",
+      "subtitle": "Ergo, güvenli, ölçeklenebilir ve sürdürülebilir bir platform yaratmak için kanıtlanmış kriptografik teknikleri yenilikçi blok zinciri tasarımıyla birleştirir",
       "fairLaunch": {
-        "title": "Fair Launch",
-        "description": "No pre-mine, no ICO, no VCs. Community-owned from day one with transparent distribution."
+        "title": "Adil Başlangıç",
+        "description": "Ön-madencilik yok, ICO yok, risk sermayesi yok. İlk günden şeffaf dağıtımla topluluk sahipli."
       },
       "eutxoErgoScript": {
         "title": "eUTXO + ErgoScript",
-        "description": "Predictable execution, no reentrancy, and powerful cryptographic primitives built-in."
+        "description": "Öngörülebilir yürütme, yeniden giriş yok ve yerleşik güçlü kriptografik ilkeller."
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Sustainable blockchain economics ensuring long-term viability and preventing state bloat."
+        "title": "Depolama Kirası",
+        "description": "Uzun vadeli uygulanabilirliği sağlayan ve durum şişkinliğini önleyen sürdürülebilir blok zinciri ekonomisi."
       },
       "researchDriven": {
-        "title": "Research-Driven",
-        "description": "Built by experienced cryptographers with peer-reviewed academic foundations."
+        "title": "Araştırma Odaklı",
+        "description": "Hakemli akademik temellere sahip deneyimli kriptograflar tarafından inşa edildi."
       },
       "robustPrivacy": {
-        "title": "Robust Privacy",
-        "description": "Sigma Protocols enable optional privacy at the protocol level, not as an afterthought."
+        "title": "Güçlü Gizlilik",
+        "description": "Sigma Protokolleri, sonradan ekleme olarak değil protokol düzeyinde isteğe bağlı gizlilik sağlar."
       },
       "communityLed": {
-        "title": "Community-Led",
-        "description": "Decentralized governance with no single point of control or failure."
+        "title": "Topluluk Güdümlü",
+        "description": "Tek kontrol veya hata noktası olmaksızın merkeziyetsiz yönetişim."
       }
     },
     "chooseYourPath": {
-      "title": "Choose Your",
-      "titleHighlight": "Path",
-      "subtitle": "Tailored guides for different types of Ergo users",
+      "title": "Yolunuzu",
+      "titleHighlight": "Seçin",
+      "subtitle": "Farklı Ergo kullanıcı türleri için özel rehberler",
       "miners": {
-        "title": "For Miners",
-        "subtitle": "GPU-friendly PoW",
-        "description": "ASIC-resistant Autolykos algorithm, fair mining rewards, and accessible hardware requirements"
+        "title": "Madenciler İçin",
+        "subtitle": "GPU dostu PoW",
+        "description": "ASIC'e dirençli Autolykos algoritması, adil madencilik ödülleri ve erişilebilir donanım gereksinimleri"
       },
       "holders": {
-        "title": "For Holders",
-        "subtitle": "Long-term value",
-        "description": "Sound tokenomics, DeFi opportunities, and a sustainable ecosystem built for the future"
+        "title": "Tutucular İçin",
+        "subtitle": "Uzun vadeli değer",
+        "description": "Sağlam tokenomik, DeFi fırsatları ve geleceğe yönelik sürdürülebilir bir ekosistem"
       },
       "builders": {
-        "title": "For Builders",
-        "subtitle": "Powerful smart contracts",
-        "description": "ErgoScript, eUTXO model, SDKs, and developer grants to build the next generation of dApps"
+        "title": "İnşaatçılar İçin",
+        "subtitle": "Güçlü akıllı sözleşmeler",
+        "description": "ErgoScript, eUTXO modeli, SDK'lar ve bir sonraki nesil dApp'leri inşa etmek için geliştirici hibeleri"
       }
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
-      "subtitle": "Start exploring the Ergo ecosystem",
+      "title": "Sırada",
+      "titleHighlight": "Ne Var",
+      "subtitle": "Ergo ekosistemini keşfetmeye başlayın",
       "wallet": {
-        "title": "Get Ergo Wallet",
-        "subtitle": "Start Securely",
-        "description": "Download a secure wallet to store ERG and interact with dApps"
+        "title": "Ergo Cüzdanı Al",
+        "subtitle": "Güvenli Başla",
+        "description": "ERG depolamak ve dApp'lerle etkileşim için güvenli bir cüzdan indirin"
       },
       "ecosystem": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover Applications",
-        "description": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo"
+        "title": "Ekosistemi Keşfet",
+        "subtitle": "Uygulamaları Keşfet",
+        "description": "Ergo üzerine inşa edilmiş DeFi protokollerini, cüzdanları, NFT platformlarını ve diğer dApp'leri bulun"
       },
       "compare": {
-        "title": "Compare Blockchains",
-        "subtitle": "Why Ergo vs others",
-        "description": "See how Ergo's PoW, eUTXO, privacy, and sustainability stack up against Bitcoin, Ethereum, Cardano, and others"
+        "title": "Blok Zincirlerini Karşılaştır",
+        "subtitle": "Neden Ergo diğerlerine karşı",
+        "description": "Ergo'nun PoW, eUTXO, gizlilik ve sürdürülebilirliğinin Bitcoin, Ethereum, Cardano ve diğerlerine karşı nasıl durduğunu görün"
       }
     },
     "emailCapture": {
-      "title": "Start Your Ergo Journey",
-      "description": "Get beginner-friendly guides, tutorials, and updates delivered to your inbox."
+      "title": "Ergo Yolculuğunuza Başlayın",
+      "description": "Başlangıç dostu rehberleri, eğitimleri ve güncellemeleri gelen kutunuza alın."
     }
   },
   "comparison": {

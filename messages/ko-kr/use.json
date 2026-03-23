@@ -618,9 +618,21 @@
           "name": "ERG Exchange Directory",
           "description": "Complete list of exchanges where you can buy ERG tokens",
           "items": [
-            { "name": "KuCoin", "url": "https://www.kucoin.com", "description": "Major exchange with high ERG liquidity" },
-            { "name": "Gate.io", "url": "https://www.gate.io", "description": "Popular exchange supporting ERG" },
-            { "name": "CoinEx", "url": "https://www.coinex.com", "description": "Exchange with ERG trading pairs" }
+            {
+              "name": "KuCoin",
+              "url": "https://www.kucoin.com",
+              "description": "Major exchange with high ERG liquidity"
+            },
+            {
+              "name": "Gate.io",
+              "url": "https://www.gate.io",
+              "description": "Popular exchange supporting ERG"
+            },
+            {
+              "name": "CoinEx",
+              "url": "https://www.coinex.com",
+              "description": "Exchange with ERG trading pairs"
+            }
           ]
         },
         "faq": {
@@ -911,437 +923,437 @@
       }
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, and zero-knowledge proofs for complete privacy.",
-      "lastUpdated": "Last updated:",
+      "title": "프라이버시 및 기밀성",
+      "subtitle": "감시가 강화되는 세상에서의 금융 프라이버시",
+      "description": "완전한 프라이버시를 위한 비수탁 믹서, 스텔스 주소 및 영지식 증명.",
+      "lastUpdated": "최종 업데이트:",
       "meta": {
         "slug": "privacy",
         "ogImage": "/og-privacy.png",
         "canonicalPath": "/use/privacy-confidentiality"
       },
       "seo": {
-        "title": "Privacy & Confidentiality on Ergo | Financial Privacy Solutions",
-        "description": "Build privacy-preserving applications on Ergo. Non-custodial mixers, stealth addresses, zero-knowledge proofs, and ring signatures for complete financial privacy.",
-        "keywords": "privacy, confidentiality, ErgoMixer, stealth addresses, zero-knowledge proofs, ring signatures, financial privacy, anonymous transactions",
-        "ogTitle": "Privacy & Confidentiality on Ergo",
-        "ogDescription": "Financial privacy in an increasingly surveilled world. Non-custodial mixers and zero-knowledge proofs.",
-        "twitterTitle": "Privacy & Confidentiality on Ergo",
-        "twitterDescription": "Build privacy-preserving applications with ErgoMixer and Sigma protocols"
+        "title": "Ergo의 프라이버시 및 기밀성 | 금융 프라이버시 솔루션",
+        "description": "Ergo에서 프라이버시 보호 애플리케이션을 구축하세요. 완전한 금융 프라이버시를 위한 비수탁 믹서, 스텔스 주소, 영지식 증명 및 링 서명.",
+        "keywords": "프라이버시, 기밀성, ErgoMixer, 스텔스 주소, 영지식 증명, 링 서명, 금융 프라이버시, 익명 거래",
+        "ogTitle": "Ergo의 프라이버시 및 기밀성",
+        "ogDescription": "감시가 강화되는 세상에서의 금융 프라이버시. 비수탁 믹서와 영지식 증명.",
+        "twitterTitle": "Ergo의 프라이버시 및 기밀성",
+        "twitterDescription": "ErgoMixer와 Sigma 프로토콜로 프라이버시 보호 애플리케이션 구축"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "빠른 시작",
         "useErgoMixer": {
-          "name": "Use ErgoMixer",
-          "description": "Start mixing coins for privacy"
+          "name": "ErgoMixer 사용",
+          "description": "프라이버시를 위한 코인 믹싱 시작"
         },
         "privacyGuide": {
-          "name": "Privacy Guide",
-          "description": "Learn privacy best practices"
+          "name": "프라이버시 가이드",
+          "description": "프라이버시 모범 사례 학습"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build privacy applications"
+          "name": "개발자 문서",
+          "description": "프라이버시 애플리케이션 구축"
         }
       },
       "navigation": {
-        "privacyFeatures": "Privacy features",
-        "liveProjects": "Live Projects",
-        "faq": "FAQ"
+        "privacyFeatures": "프라이버시 기능",
+        "liveProjects": "라이브 프로젝트",
+        "faq": "자주 묻는 질문"
       },
       "features": {
-        "title": "Privacy Features",
-        "subtitle": "Comprehensive privacy toolkit for financial sovereignty",
+        "title": "프라이버시 기능",
+        "subtitle": "금융 주권을 위한 종합 프라이버시 툴킷",
         "nonCustodialMixers": {
-          "title": "Non-Custodial Mixers",
-          "description": "Mix coins without trusting third parties using ErgoMixer's advanced protocols"
+          "title": "비수탁 믹서",
+          "description": "ErgoMixer의 고급 프로토콜을 사용하여 제3자를 신뢰하지 않고 코인 믹싱"
         },
         "stealthAddresses": {
-          "title": "Stealth Addresses",
-          "description": "One-time addresses for enhanced transaction privacy and unlinkability"
+          "title": "스텔스 주소",
+          "description": "향상된 거래 프라이버시와 추적 불가능성을 위한 일회용 주소"
         },
         "zeroKnowledgeProofs": {
-          "title": "Zero-Knowledge Proofs",
-          "description": "Prove statements without revealing underlying data using Sigma protocols"
+          "title": "영지식 증명",
+          "description": "Sigma 프로토콜을 사용하여 기본 데이터를 공개하지 않고 명제 증명"
         },
         "ringSignatures": {
-          "title": "Ring Signatures",
-          "description": "Sign transactions as a member of a group without revealing which member"
+          "title": "링 서명",
+          "description": "어느 구성원인지 공개하지 않고 그룹 구성원으로서 거래에 서명"
         },
         "confidentialAssets": {
-          "title": "Confidential Assets",
-          "description": "Hide asset types and amounts while maintaining verifiability"
+          "title": "기밀 자산",
+          "description": "검증 가능성을 유지하면서 자산 유형 및 금액 숨기기"
         },
         "privacyPools": {
-          "title": "Privacy Pools",
-          "description": "Join privacy-preserving pools for enhanced anonymity sets"
+          "title": "프라이버시 풀",
+          "description": "향상된 익명성 집합을 위한 프라이버시 보호 풀 참여"
         }
       },
       "technical": {
-        "title": "Technical Implementation",
-        "subtitle": "How privacy technologies work on Ergo",
+        "title": "기술 구현",
+        "subtitle": "Ergo에서 프라이버시 기술이 작동하는 방식",
         "tabs": {
-          "overview": "Overview",
+          "overview": "개요",
           "ergomixer": "ErgoMixer",
-          "code": "Code Example"
+          "code": "코드 예제"
         },
         "overview": {
-          "title": "Privacy Technologies",
-          "description": "Ergo provides multiple layers of privacy through cryptographic protocols and smart contract capabilities:",
+          "title": "프라이버시 기술",
+          "description": "Ergo는 암호화 프로토콜과 스마트 계약 기능을 통해 다중 레이어 프라이버시를 제공합니다:",
           "points": {
-            "point1": "Sigma protocols for zero-knowledge proofs",
-            "point2": "Ring signatures for signer ambiguity",
-            "point3": "Stealth addresses for receiver privacy",
-            "point4": "CoinJoin++ for transaction mixing",
-            "point5": "Confidential assets for amount privacy"
+            "point1": "영지식 증명을 위한 Sigma 프로토콜",
+            "point2": "서명자 모호성을 위한 링 서명",
+            "point3": "수신자 프라이버시를 위한 스텔스 주소",
+            "point4": "거래 믹싱을 위한 CoinJoin++",
+            "point5": "금액 프라이버시를 위한 기밀 자산"
           }
         },
         "ergomixer": {
-          "title": "ErgoMixer Protocol",
+          "title": "ErgoMixer 프로토콜",
           "howItWorks": {
-            "title": "How It Works",
+            "title": "작동 방식",
             "points": {
-              "point1": "Users create mixing requests",
-              "point2": "Funds locked in mixing contracts",
-              "point3": "Ring signatures hide sender",
-              "point4": "Mixed outputs to new addresses"
+              "point1": "사용자가 믹싱 요청 생성",
+              "point2": "믹싱 계약에 자금 잠금",
+              "point3": "링 서명으로 발신자 숨기기",
+              "point4": "새 주소로 믹싱된 출력"
             }
           },
           "keyFeatures": {
-            "title": "Key Features",
+            "title": "주요 기능",
             "points": {
-              "point1": "No trusted coordinator",
-              "point2": "No interaction required",
-              "point3": "Configurable anonymity sets",
-              "point4": "Tor/VPN compatible"
+              "point1": "신뢰할 수 있는 코디네이터 불필요",
+              "point2": "상호작용 불필요",
+              "point3": "구성 가능한 익명성 집합",
+              "point4": "Tor/VPN 호환"
             }
           },
           "mixingProcess": {
-            "title": "Mixing Process"
+            "title": "믹싱 프로세스"
           }
         },
         "codeExample": {
-          "title": "Sigma Protocol Example",
-          "description": "Zero-knowledge proof for mixing"
+          "title": "Sigma 프로토콜 예제",
+          "description": "믹싱을 위한 영지식 증명"
         }
       },
       "projects": {
-        "title": "Privacy Projects",
-        "subtitle": "Privacy-preserving applications on Ergo",
+        "title": "프라이버시 프로젝트",
+        "subtitle": "Ergo의 프라이버시 보호 애플리케이션",
         "ergoMixer": {
           "name": "ErgoMixer",
-          "description": "Non-custodial, non-interactive mixer for enhanced privacy",
-          "status": "Live",
+          "description": "향상된 프라이버시를 위한 비수탁, 비대화형 믹서",
+          "status": "라이브",
           "features": {
             "feature1": "CoinJoin++",
-            "feature2": "No trusted setup",
-            "feature3": "Tor support"
+            "feature2": "신뢰할 수 있는 설정 불필요",
+            "feature3": "Tor 지원"
           }
         },
         "stealthAddresses": {
-          "name": "Stealth Addresses",
-          "description": "One-time payment addresses for transaction privacy",
-          "status": "Live",
+          "name": "스텔스 주소",
+          "description": "거래 프라이버시를 위한 일회용 결제 주소",
+          "status": "라이브",
           "features": {
-            "feature1": "Unlinkable payments",
-            "feature2": "Receiver privacy",
-            "feature3": "SPV compatible"
+            "feature1": "추적 불가능한 결제",
+            "feature2": "수신자 프라이버시",
+            "feature3": "SPV 호환"
           }
         },
         "sigmaUsdPrivacy": {
-          "name": "SigmaUSD Privacy",
-          "description": "Privacy features for stablecoin transactions",
-          "status": "In Development",
+          "name": "SigmaUSD 프라이버시",
+          "description": "스테이블코인 거래를 위한 프라이버시 기능",
+          "status": "개발 중",
           "features": {
-            "feature1": "Private minting",
-            "feature2": "Shielded transfers",
-            "feature3": "Confidential balances"
+            "feature1": "프라이빗 민팅",
+            "feature2": "차폐 전송",
+            "feature3": "기밀 잔액"
           }
         },
-        "learnMore": "Learn More",
-        "comingSoon": "Coming Soon"
+        "learnMore": "더 알아보기",
+        "comingSoon": "출시 예정"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about privacy on Ergo",
+        "title": "자주 묻는 질문",
+        "subtitle": "Ergo 프라이버시에 관한 일반적인 질문",
         "howErgoMixerWorks": {
-          "question": "How does ErgoMixer provide privacy?",
-          "answer": "ErgoMixer uses a CoinJoin++ protocol that allows users to mix their coins with others without trusting a central party. It leverages Ergo's Sigma protocols to create complex spending conditions that ensure privacy while maintaining security."
+          "question": "ErgoMixer는 어떻게 프라이버시를 제공합니까?",
+          "answer": "ErgoMixer는 사용자가 중앙 당사자를 신뢰하지 않고 다른 사람들과 코인을 믹싱할 수 있는 CoinJoin++ 프로토콜을 사용합니다. Ergo의 Sigma 프로토콜을 활용하여 보안을 유지하면서 프라이버시를 보장하는 복잡한 지출 조건을 만듭니다."
         },
         "whatAreSigmaProtocols": {
-          "question": "What are Sigma protocols?",
-          "answer": "Sigma protocols are a class of zero-knowledge proofs that allow proving knowledge of a secret without revealing it. Ergo's ErgoScript natively supports Sigma protocols, enabling complex privacy-preserving applications without trusted setups."
+          "question": "Sigma 프로토콜이란 무엇입니까?",
+          "answer": "Sigma 프로토콜은 비밀을 공개하지 않고 비밀에 대한 지식을 증명할 수 있는 영지식 증명의 한 종류입니다. Ergo의 ErgoScript는 Sigma 프로토콜을 기본으로 지원하여 신뢰할 수 있는 설정 없이 복잡한 프라이버시 보호 애플리케이션을 가능하게 합니다."
         },
         "howStealthAddressesWork": {
-          "question": "How do stealth addresses work on Ergo?",
-          "answer": "Stealth addresses allow receivers to publish a single address while senders generate unique one-time addresses for each payment. This breaks the link between the published address and on-chain transactions, enhancing receiver privacy."
+          "question": "Ergo에서 스텔스 주소는 어떻게 작동합니까?",
+          "answer": "스텔스 주소는 수신자가 단일 주소를 공개하는 동안 발신자가 각 결제에 대해 고유한 일회용 주소를 생성할 수 있게 합니다. 이는 공개된 주소와 온체인 거래 간의 연결을 끊어 수신자 프라이버시를 향상시킵니다."
         },
         "isPrivacyOptional": {
-          "question": "Is Ergo privacy optional or mandatory?",
-          "answer": "Ergo provides optional privacy features. Users can choose when to use privacy tools like ErgoMixer or stealth addresses based on their needs, maintaining flexibility while ensuring regulatory compliance when needed."
+          "question": "Ergo 프라이버시는 선택적입니까, 필수적입니까?",
+          "answer": "Ergo는 선택적 프라이버시 기능을 제공합니다. 사용자는 필요에 따라 ErgoMixer나 스텔스 주소와 같은 프라이버시 도구를 언제 사용할지 선택할 수 있으며, 필요할 때 규제 준수를 보장하면서 유연성을 유지합니다."
         },
         "whatMakesErgoDifferent": {
-          "question": "What makes Ergo's privacy different from other chains?",
-          "answer": "Ergo's eUTXO model naturally provides better privacy than account-based systems. Combined with native Sigma protocols, optional privacy tools, and no trusted setups, Ergo offers a unique balance of privacy, transparency, and compliance."
+          "question": "Ergo의 프라이버시가 다른 체인과 다른 점은 무엇입니까?",
+          "answer": "Ergo의 eUTXO 모델은 계정 기반 시스템보다 자연스럽게 더 나은 프라이버시를 제공합니다. 기본 Sigma 프로토콜, 선택적 프라이버시 도구 및 신뢰할 수 있는 설정 불필요와 결합하여 Ergo는 프라이버시, 투명성 및 규정 준수의 독특한 균형을 제공합니다."
         }
       },
       "cta": {
-        "title": "Ready for Financial Privacy?",
-        "subtitle": "Start using privacy tools on Ergo today.",
-        "tryErgoMixer": "Try ErgoMixer",
-        "privacyGuide": "Privacy Guide"
+        "title": "금융 프라이버시를 위한 준비가 되셨나요?",
+        "subtitle": "오늘 Ergo에서 프라이버시 도구 사용을 시작하세요.",
+        "tryErgoMixer": "ErgoMixer 사용해보기",
+        "privacyGuide": "프라이버시 가이드"
       },
       "relatedContent": {
-        "title": "Explore Privacy",
-        "subtitle": "Dive deeper into Ergo's privacy features and technology"
+        "title": "프라이버시 탐색",
+        "subtitle": "Ergo의 프라이버시 기능과 기술을 더 깊이 알아보세요"
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo Privacy",
-        "description": "Get notified about privacy features, Sigma Protocols updates, and security innovations."
+        "title": "Ergo 프라이버시 최신 소식 받기",
+        "description": "프라이버시 기능, Sigma 프로토콜 업데이트 및 보안 혁신에 대한 알림을 받으세요."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "privacyConfidentiality": "Privacy & Confidentiality"
+          "useCases": "사용 사례",
+          "privacyConfidentiality": "프라이버시 및 기밀성"
         },
         "techArticle": {
-          "headline": "Privacy & Confidentiality on Ergo",
-          "description": "Comprehensive guide to privacy technologies and applications on Ergo blockchain",
-          "keywords": "privacy, ErgoMixer, stealth addresses, zero-knowledge proofs"
+          "headline": "Ergo의 프라이버시 및 기밀성",
+          "description": "Ergo 블록체인의 프라이버시 기술 및 애플리케이션에 대한 종합 가이드",
+          "keywords": "프라이버시, ErgoMixer, 스텔스 주소, 영지식 증명"
         },
         "howTo": {
-          "name": "How to Use Privacy Features on Ergo",
-          "description": "Step-by-step guide to using privacy tools on Ergo",
+          "name": "Ergo에서 프라이버시 기능을 사용하는 방법",
+          "description": "Ergo에서 프라이버시 도구를 사용하기 위한 단계별 가이드",
           "steps": {
             "setupWallet": {
-              "name": "Set up Ergo wallet",
-              "text": "Install a privacy-focused Ergo wallet"
+              "name": "Ergo 지갑 설정",
+              "text": "프라이버시 중심의 Ergo 지갑 설치"
             },
             "accessErgoMixer": {
-              "name": "Access ErgoMixer",
-              "text": "Connect to ErgoMixer through Tor for enhanced privacy"
+              "name": "ErgoMixer 접속",
+              "text": "향상된 프라이버시를 위해 Tor를 통해 ErgoMixer에 연결"
             },
             "configureMixing": {
-              "name": "Configure mixing",
-              "text": "Set mixing rounds and anonymity parameters"
+              "name": "믹싱 구성",
+              "text": "믹싱 라운드 및 익명성 매개변수 설정"
             },
             "mixCoins": {
-              "name": "Mix coins",
-              "text": "Submit coins for mixing and wait for completion"
+              "name": "코인 믹싱",
+              "text": "믹싱을 위해 코인 제출 후 완료 대기"
             }
           }
         }
       }
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems.",
-      "lastUpdated": "Last updated:",
+      "title": "신원 및 평판",
+      "subtitle": "자기 주권 신원 및 Web3 평판",
+      "description": "탈중앙화 식별자(DID), 시빌 저항, 평판 시스템.",
+      "lastUpdated": "최종 업데이트:",
       "meta": {
         "slug": "identity",
         "ogImage": "/og-identity.png",
         "canonicalPath": "/use/identity-reputation"
       },
       "seo": {
-        "title": "Identity & Reputation on Ergo | Self-Sovereign Identity",
-        "description": "Build decentralized identity and reputation systems on Ergo. DIDs, verifiable credentials, Sybil resistance, and non-transferable reputation tokens.",
-        "keywords": "identity, reputation, DID, self-sovereign identity, verifiable credentials, Sybil resistance, Web3 identity",
-        "ogTitle": "Identity & Reputation on Ergo",
-        "ogDescription": "Self-sovereign identity and Web3 reputation systems.",
-        "twitterTitle": "Identity on Ergo",
-        "twitterDescription": "Decentralized identity and reputation systems"
+        "title": "Ergo의 신원 및 평판 | 자기 주권 신원",
+        "description": "Ergo에서 탈중앙화 신원 및 평판 시스템을 구축하세요. DID, 검증 가능한 자격 증명, 시빌 저항 및 양도 불가 평판 토큰.",
+        "keywords": "신원, 평판, DID, 자기 주권 신원, 검증 가능한 자격 증명, 시빌 저항, Web3 신원",
+        "ogTitle": "Ergo의 신원 및 평판",
+        "ogDescription": "자기 주권 신원 및 Web3 평판 시스템.",
+        "twitterTitle": "Ergo의 신원",
+        "twitterDescription": "탈중앙화 신원 및 평판 시스템"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "빠른 시작",
         "identityGuide": {
-          "name": "Identity Guide",
-          "description": "Learn about SSI on Ergo"
+          "name": "신원 가이드",
+          "description": "Ergo의 자기 주권 신원에 대해 알아보기"
         },
         "didStandards": {
-          "name": "DID Standards",
-          "description": "W3C DID specifications"
+          "name": "DID 표준",
+          "description": "W3C DID 사양"
         },
         "privacyEcosystem": {
-          "name": "Privacy Ecosystem",
-          "description": "Privacy tools and protocols on Ergo"
+          "name": "프라이버시 생태계",
+          "description": "Ergo의 프라이버시 도구 및 프로토콜"
         },
         "buildIdentityApps": {
-          "name": "Build Identity Apps",
-          "description": "Developer resources"
+          "name": "신원 앱 구축",
+          "description": "개발자 리소스"
         }
       },
       "navigation": {
-        "identityFeatures": "Identity features",
-        "useCases": "Use Cases",
-        "faq": "FAQ"
+        "identityFeatures": "신원 기능",
+        "useCases": "사용 사례",
+        "faq": "자주 묻는 질문"
       },
       "features": {
-        "title": "Identity Features",
-        "subtitle": "Building blocks for decentralized identity",
+        "title": "신원 기능",
+        "subtitle": "탈중앙화 신원을 위한 기본 구성 요소",
         "selfSovereignIdentity": {
-          "title": "Self-Sovereign Identity",
-          "description": "Control your own identity without relying on centralized authorities"
+          "title": "자기 주권 신원",
+          "description": "중앙화된 기관에 의존하지 않고 자신의 신원 제어"
         },
         "decentralizedIdentifiers": {
-          "title": "Decentralized Identifiers",
-          "description": "DIDs that work across platforms and applications"
+          "title": "탈중앙화 식별자",
+          "description": "플랫폼 및 애플리케이션 전반에서 작동하는 DID"
         },
         "reputationTokens": {
-          "title": "Reputation Tokens",
-          "description": "Non-transferable tokens that represent earned reputation"
+          "title": "평판 토큰",
+          "description": "획득한 평판을 나타내는 양도 불가 토큰"
         },
         "sybilResistance": {
-          "title": "Sybil Resistance",
-          "description": "Prevent fake identities and ensure one-person-one-vote"
+          "title": "시빌 저항",
+          "description": "가짜 신원 방지 및 1인 1표 보장"
         },
         "verifiableCredentials": {
-          "title": "Verifiable Credentials",
-          "description": "Cryptographic proofs of identity attributes and achievements"
+          "title": "검증 가능한 자격 증명",
+          "description": "신원 속성 및 성취에 대한 암호학적 증명"
         },
         "privacyPreserving": {
-          "title": "Privacy-Preserving",
-          "description": "Selective disclosure of identity information using zero-knowledge proofs"
+          "title": "프라이버시 보호",
+          "description": "영지식 증명을 사용한 신원 정보의 선택적 공개"
         }
       },
       "technical": {
-        "title": "Technical Architecture",
-        "subtitle": "How identity systems work on Ergo",
+        "title": "기술 아키텍처",
+        "subtitle": "Ergo에서 신원 시스템이 작동하는 방식",
         "tabs": {
-          "overview": "Overview",
-          "reputation": "Reputation",
-          "code": "Code Example"
+          "overview": "개요",
+          "reputation": "평판",
+          "code": "코드 예제"
         },
         "overview": {
-          "title": "Identity System",
-          "description": "Ergo enables decentralized identity through:",
+          "title": "신원 시스템",
+          "description": "Ergo는 다음을 통해 탈중앙화 신원을 가능하게 합니다:",
           "points": {
-            "point1": "Cryptographic key pairs for identity",
-            "point2": "On-chain DIDs and credentials",
-            "point3": "Zero-knowledge proofs for privacy",
-            "point4": "Non-transferable reputation tokens",
-            "point5": "Verifiable credential issuance"
+            "point1": "신원을 위한 암호화 키 쌍",
+            "point2": "온체인 DID 및 자격 증명",
+            "point3": "프라이버시를 위한 영지식 증명",
+            "point4": "양도 불가 평판 토큰",
+            "point5": "검증 가능한 자격 증명 발급"
           }
         },
         "reputation": {
-          "title": "Reputation System",
+          "title": "평판 시스템",
           "earning": {
-            "title": "Earning Reputation",
+            "title": "평판 획득",
             "points": {
-              "point1": "Complete verified actions",
-              "point2": "Receive peer endorsements",
-              "point3": "Contribute to protocols",
-              "point4": "Time-based accumulation"
+              "point1": "검증된 행동 완료",
+              "point2": "동료 추천 받기",
+              "point3": "프로토콜에 기여",
+              "point4": "시간 기반 축적"
             }
           },
           "using": {
-            "title": "Using Reputation",
+            "title": "평판 사용",
             "points": {
-              "point1": "Weighted voting power",
-              "point2": "Access to services",
-              "point3": "Better loan terms",
-              "point4": "Trust signaling"
+              "point1": "가중 투표권",
+              "point2": "서비스 접근",
+              "point3": "더 나은 대출 조건",
+              "point4": "신뢰 신호"
             }
           },
           "sybilResistance": {
-            "title": "Sybil Resistance"
+            "title": "시빌 저항"
           }
         },
         "codeExample": {
-          "title": "Reputation Token Example",
-          "description": "Non-transferable reputation NFT"
+          "title": "평판 토큰 예제",
+          "description": "양도 불가 평판 NFT"
         }
       },
       "useCases": {
-        "title": "Identity Use Cases",
-        "subtitle": "Applications for decentralized identity",
+        "title": "신원 사용 사례",
+        "subtitle": "탈중앙화 신원을 위한 애플리케이션",
         "daoGovernance": {
-          "name": "DAO Governance",
-          "description": "Reputation-weighted voting for decentralized organizations",
-          "status": "Concept",
+          "name": "DAO 거버넌스",
+          "description": "탈중앙화 조직을 위한 평판 가중 투표",
+          "status": "개념",
           "features": {
-            "feature1": "Merit-based voting",
-            "feature2": "Delegation systems",
-            "feature3": "Contribution tracking"
+            "feature1": "공로 기반 투표",
+            "feature2": "위임 시스템",
+            "feature3": "기여도 추적"
           }
         },
         "defiCreditScoring": {
-          "name": "DeFi Credit Scoring",
-          "description": "On-chain credit history for under-collateralized loans",
-          "status": "Research",
+          "name": "DeFi 신용 평가",
+          "description": "저담보 대출을 위한 온체인 신용 이력",
+          "status": "연구 중",
           "features": {
-            "feature1": "Payment history",
-            "feature2": "Risk assessment",
-            "feature3": "Credit limits"
+            "feature1": "결제 이력",
+            "feature2": "위험 평가",
+            "feature3": "신용 한도"
           }
         },
         "professionalCredentials": {
-          "name": "Professional Credentials",
-          "description": "Verifiable professional certifications and achievements",
-          "status": "Planned",
+          "name": "전문 자격 증명",
+          "description": "검증 가능한 전문 자격증 및 성취",
+          "status": "계획됨",
           "features": {
-            "feature1": "Skill verification",
-            "feature2": "Work history",
-            "feature3": "Peer endorsements"
+            "feature1": "기술 검증",
+            "feature2": "경력 이력",
+            "feature3": "동료 추천"
           }
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about identity on Ergo",
+        "title": "자주 묻는 질문",
+        "subtitle": "Ergo 신원에 관한 일반적인 질문",
         "whatIsSsi": {
-          "question": "What is self-sovereign identity?",
-          "answer": "Self-sovereign identity (SSI) gives individuals control over their digital identity without depending on centralized authorities. Users own their identity data and choose what to share and with whom."
+          "question": "자기 주권 신원이란 무엇입니까?",
+          "answer": "자기 주권 신원(SSI)은 중앙화된 기관에 의존하지 않고 개인이 자신의 디지털 신원을 제어할 수 있게 합니다. 사용자는 자신의 신원 데이터를 소유하고 무엇을 누구와 공유할지 선택합니다."
         },
         "howReputationTokensWork": {
-          "question": "How do reputation tokens work?",
-          "answer": "Reputation tokens are non-transferable NFTs that represent earned achievements or trust. They cannot be sold or transferred, ensuring reputation must be earned, not bought."
+          "question": "평판 토큰은 어떻게 작동합니까?",
+          "answer": "평판 토큰은 획득한 성취나 신뢰를 나타내는 양도 불가 NFT입니다. 판매하거나 양도할 수 없어 평판은 구매가 아닌 노력으로 얻어야 함을 보장합니다."
         },
         "whatAreDids": {
-          "question": "What are DIDs on Ergo?",
-          "answer": "Decentralized Identifiers (DIDs) on Ergo are unique identifiers anchored on the blockchain. They enable verifiable, self-sovereign digital identity that works across different platforms and applications."
+          "question": "Ergo의 DID란 무엇입니까?",
+          "answer": "Ergo의 탈중앙화 식별자(DID)는 블록체인에 고정된 고유 식별자입니다. 다양한 플랫폼과 애플리케이션에서 작동하는 검증 가능한 자기 주권 디지털 신원을 가능하게 합니다."
         },
         "howPrivacyMaintained": {
-          "question": "How is privacy maintained?",
-          "answer": "Ergo uses zero-knowledge proofs and selective disclosure to maintain privacy. Users can prove attributes about their identity (like being over 18) without revealing the actual data."
+          "question": "프라이버시는 어떻게 유지됩니까?",
+          "answer": "Ergo는 프라이버시를 유지하기 위해 영지식 증명과 선택적 공개를 사용합니다. 사용자는 실제 데이터를 공개하지 않고 신원 속성(예: 18세 이상)을 증명할 수 있습니다."
         },
         "canReputationBeUsedForDefi": {
-          "question": "Can reputation be used for DeFi?",
-          "answer": "Yes! On-chain reputation can enable under-collateralized lending, better interest rates, and access to exclusive DeFi services based on proven track record rather than just collateral."
+          "question": "평판을 DeFi에 활용할 수 있습니까?",
+          "answer": "네! 온체인 평판은 담보물만이 아닌 입증된 실적을 기반으로 저담보 대출, 더 나은 이자율 및 독점 DeFi 서비스 접근을 가능하게 할 수 있습니다."
         }
       },
       "cta": {
-        "title": "Ready to Build Identity Solutions?",
-        "subtitle": "Create decentralized identity and reputation systems on Ergo.",
-        "startBuilding": "Start Building",
-        "learnMore": "Learn More",
-        "developerDocs": "Developer Docs"
+        "title": "신원 솔루션 구축 준비가 되셨나요?",
+        "subtitle": "Ergo에서 탈중앙화 신원 및 평판 시스템을 만드세요.",
+        "startBuilding": "구축 시작",
+        "learnMore": "더 알아보기",
+        "developerDocs": "개발자 문서"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building or exploring identity solutions on Ergo today",
+        "titlePrefix": "다음은",
+        "titleHighlight": "무엇인가요?",
+        "subtitle": "오늘 Ergo에서 신원 솔루션 구축 또는 탐색을 시작하세요",
         "cards": {
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build identity and reputation systems on Ergo"
+            "title": "개발자 문서",
+            "subtitle": "구축 시작",
+            "description": "Ergo에서 신원 및 평판 시스템을 구축하기 위한 문서와 도구에 접근하세요"
           },
           "privacyGuide": {
-            "title": "Privacy Guide",
-            "subtitle": "Learn More",
-            "description": "Understand privacy-preserving identity solutions and their implementation on Ergo"
+            "title": "프라이버시 가이드",
+            "subtitle": "더 알아보기",
+            "description": "프라이버시 보호 신원 솔루션과 Ergo에서의 구현을 이해하세요"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Digital Identity",
-        "description": "Get notified about self-sovereign identity solutions and privacy-preserving credentials."
+        "title": "디지털 신원 최신 소식 받기",
+        "description": "자기 주권 신원 솔루션과 프라이버시 보호 자격 증명에 대한 알림을 받으세요."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "identityReputation": "Identity & Reputation"
+          "useCases": "사용 사례",
+          "identityReputation": "신원 및 평판"
         }
       }
     },
