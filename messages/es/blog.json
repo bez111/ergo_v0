@@ -1,37 +1,37 @@
 {
   "blog": {
     "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "subtitle": "Últimas noticias y actualizaciones",
+    "description": "Últimas noticias y actualizaciones de Ergo",
+    "readMore": "Leer Más",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "Tecnología",
+      "ecosystem": "Ecosistema",
+      "community": "Comunidad",
+      "announcements": "Anuncios",
+      "all": "Todas las Publicaciones",
+      "development": "Desarrollo",
+      "technical": "Técnico",
+      "education": "Educación"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "Blog - Noticias y Actualizaciones de Ergo | Ergo Platform",
+      "description": "Lee las últimas noticias, actualizaciones e ideas del equipo de Ergo blockchain.",
+      "keywords": "blog de Ergo, noticias de blockchain, actualizaciones, artículos"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "Publicaciones Destacadas",
+      "readMore": "Leer Más"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "Publicaciones Recientes",
+      "viewAll": "Ver Todas las Publicaciones"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "Suscribirse al Boletín",
+      "description": "Recibe las últimas actualizaciones en tu bandeja de entrada",
+      "placeholder": "Ingresa tu correo electrónico",
+      "subscribe": "Suscribirse"
     }
   }
 }

@@ -1,110 +1,110 @@
 {
   "holdersPage": {
     "hero": {
-      "title": "Store wealth. Keep privacy. Stay sovereign.",
-      "subtitle": "Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.",
-      "cta": "Get an Ergo Wallet",
-      "whyDifferent": "Why Ergo is Different"
+      "title": "자산을 보관하세요. 프라이버시를 지키세요. 주권을 유지하세요.",
+      "subtitle": "Bitcoin의 검증된 보안 + 스마트 컨트랙트 + 선택적 프라이버시. 고정 공급량, 공정한 출시, 기업 통제 없음.",
+      "cta": "Ergo 지갑 받기",
+      "whyDifferent": "Ergo가 다른 이유"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "hodlers": "For Hodlers"
+      "home": "홈",
+      "hodlers": "홀더를 위한"
     },
     "seo": {
-      "title": "Hold ERG — Sound Money with No Pre-mine | Ergo",
-      "description": "Why hold ERG? Fixed supply (97.7M), fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
+      "title": "ERG 보유 — 사전 채굴 없는 건전한 화폐 | Ergo",
+      "description": "왜 ERG를 보유해야 할까요? 고정 공급량 (97.7M), 공정한 출시, VC 통제 없음. Bitcoin 보안 + 스마트 컨트랙트 + 선택적 프라이버시. 지갑, 토큰노믹스 및 더 많은 정보.",
       "keywords": [
-        "hold ERG",
-        "Ergo investment",
-        "sound money",
-        "cryptocurrency holders",
-        "Bitcoin alternative",
-        "fair launch",
-        "no pre-mine",
-        "store of value",
-        "financial sovereignty",
-        "ERG tokenomics"
+        "ERG 보유",
+        "Ergo 투자",
+        "건전한 화폐",
+        "암호화폐 홀더",
+        "Bitcoin 대안",
+        "공정한 출시",
+        "사전 채굴 없음",
+        "가치 저장",
+        "금융 주권",
+        "ERG 토큰노믹스"
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Network Hashrate" },
-      "activeAddresses": { "label": "Active Addresses" },
+      "networkHashrate": { "label": "네트워크 해시레이트" },
+      "activeAddresses": { "label": "활성 주소" },
       "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG Supply", "trend": "{remaining}M left" },
-      "avgBlockTime": { "label": "Avg Block Time" },
-      "activeNodes": { "label": "Active Nodes" }
+      "ergSupply": { "label": "ERG 공급량", "trend": "{remaining}M 남음" },
+      "avgBlockTime": { "label": "평균 블록 시간" },
+      "activeNodes": { "label": "활성 노드" }
     },
     "heroComparisons": [
       {
-        "title": "Mining Access",
-        "ergo": "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
-        "others": "BTC: ASICs only / ETH: Proof-of-Stake"
+        "title": "채굴 접근성",
+        "ergo": "GPU 친화적. ASIC 저항. 누구나 네트워크를 보호할 수 있습니다.",
+        "others": "BTC: ASIC 전용 / ETH: Proof-of-Stake"
       },
       {
-        "title": "Fair Launch",
-        "ergo": "0% pre-mine. 0% VC allocation. 100% fair distribution.",
-        "others": "BTC: Fair / ETH: 70M premined"
+        "title": "공정한 출시",
+        "ergo": "사전 채굴 0%. VC 할당 0%. 100% 공정한 분배.",
+        "others": "BTC: 공정 / ETH: 7천만 사전 채굴"
       },
       {
-        "title": "Long-term Security",
-        "ergo": "Storage rent ensures miners get paid forever. Built for decades.",
-        "others": "BTC: Fees only / ETH: Token burn"
+        "title": "장기 보안",
+        "ergo": "스토리지 렌트로 채굴자가 영원히 보상받을 수 있습니다. 수십 년을 위해 구축됨.",
+        "others": "BTC: 수수료만 / ETH: 토큰 소각"
       }
     ],
     "coreValues": {
       "soundMoney": {
-        "title": "Sound Money",
-        "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
-        "highlight": "Protect your wealth"
+        "title": "건전한 화폐",
+        "description": "최대 공급량 97.7M. 인플레이션 없음. VC 덤핑 없음. 2019년부터 검증된 Proof-of-Work 보안.",
+        "highlight": "자산을 보호하세요"
       },
       "smartContracts": {
-        "title": "Smart Contracts",
-        "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
-        "highlight": "Utility without risk"
+        "title": "스마트 컨트랙트",
+        "description": "실제로 작동하는 DeFi, DEX, 스테이블코인. Bitcoin 수준의 보안을 갖춘 프로그래밍 가능한 화폐.",
+        "highlight": "위험 없는 유틸리티"
       },
       "programmablePrivacy": {
-        "title": "Programmable Privacy",
-        "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
-        "highlight": "Your data, your choice"
+        "title": "프로그래밍 가능한 프라이버시",
+        "description": "원하는 것을 숨기세요. 필요한 것을 보여주세요. 신뢰 설정이나 백도어 없는 선택적 프라이버시.",
+        "highlight": "내 데이터, 내 선택"
       },
       "fairAccessible": {
-        "title": "Fair & Accessible",
-        "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
-        "highlight": "True decentralization"
+        "title": "공정하고 접근 가능한",
+        "description": "사전 채굴 없음. VC 할당 없음. 기업 통제 없음. 첫날부터 100% 커뮤니티 주도.",
+        "highlight": "진정한 탈중앙화"
       }
     },
     "comparison": {
-      "title": "How ERG Compares",
+      "title": "ERG 비교",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "기준",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "Deep dive: Detailed comparison",
+      "deepDive": "심층 분석: 상세 비교",
       "rows": [
         {
-          "criterion": "Monetary Policy",
+          "criterion": "통화 정책",
           "bitcoin": {
             "status": "good",
-            "text": "Fixed 21M supply"
+            "text": "고정 2,100만 공급량"
           },
           "ethereum": {
             "status": "warning",
-            "text": "Changing tokenomics"
+            "text": "변화하는 토큰노믹스"
           },
           "monero": {
             "status": "warning",
-            "text": "Tail emission"
+            "text": "테일 발행"
           },
           "ergo": {
             "status": "good",
-            "text": "Fixed 97M supply"
+            "text": "고정 9,700만 공급량"
           }
         },
         {
-          "criterion": "Security Model",
+          "criterion": "보안 모델",
           "bitcoin": {
             "status": "good",
             "text": "Proof-of-Work"
@@ -123,220 +123,220 @@
           }
         },
         {
-          "criterion": "Privacy Features",
+          "criterion": "프라이버시 기능",
           "bitcoin": {
             "status": "bad",
-            "text": "Transparent"
+            "text": "투명"
           },
           "ethereum": {
             "status": "bad",
-            "text": "Transparent"
+            "text": "투명"
           },
           "monero": {
             "status": "good",
-            "text": "Always private"
+            "text": "항상 프라이빗"
           },
           "ergo": {
             "status": "good",
-            "text": "Optional privacy"
+            "text": "선택적 프라이버시"
           }
         },
         {
-          "criterion": "Smart Contracts",
+          "criterion": "스마트 컨트랙트",
           "bitcoin": {
             "status": "bad",
-            "text": "Very limited"
+            "text": "매우 제한적"
           },
           "ethereum": {
             "status": "good",
-            "text": "Full featured"
+            "text": "완전한 기능"
           },
           "monero": {
             "status": "bad",
-            "text": "None"
+            "text": "없음"
           },
           "ergo": {
             "status": "good",
-            "text": "eUTXO model"
+            "text": "eUTXO 모델"
           }
         },
         {
-          "criterion": "Fair Launch",
+          "criterion": "공정한 출시",
           "bitcoin": {
             "status": "good",
-            "text": "No premine"
+            "text": "사전 채굴 없음"
           },
           "ethereum": {
             "status": "warning",
-            "text": "70M premine"
+            "text": "7천만 사전 채굴"
           },
           "monero": {
             "status": "good",
-            "text": "No premine"
+            "text": "사전 채굴 없음"
           },
           "ergo": {
             "status": "good",
-            "text": "No premine"
+            "text": "사전 채굴 없음"
           }
         }
       ]
     },
     "liveMetrics": {
-      "title": "Live Network Health",
-      "subtitle": "Live on-chain data (updated in real time)"
+      "title": "실시간 네트워크 상태",
+      "subtitle": "실시간 온체인 데이터 (실시간 업데이트)"
     },
     "useCasesSection": {
-      "title": "What can I actually DO with Ergo?",
+      "title": "Ergo로 실제로 무엇을 할 수 있나요?",
       "items": [
         {
-          "title": "Store Value Long-term",
-          "description": "Cold storage wallets with hardware support"
+          "title": "장기 가치 저장",
+          "description": "하드웨어 지원이 있는 콜드 스토리지 지갑"
         },
         {
-          "title": "Use DeFi Protocols",
-          "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+          "title": "DeFi 프로토콜 이용",
+          "description": "Ergo, Cardano 및 다른 블록체인을 위한 크로스체인 브리지"
         },
         {
-          "title": "Send Private Transactions",
-          "description": "Optional privacy for sensitive transfers"
+          "title": "프라이빗 거래 전송",
+          "description": "민감한 이체를 위한 선택적 프라이버시"
         },
         {
-          "title": "Support the Network",
-          "description": "Mining, running nodes, community participation"
+          "title": "네트워크 지원",
+          "description": "채굴, 노드 운영, 커뮤니티 참여"
         }
       ]
     },
     "chooseYourPath": {
-      "title": "Choose Your",
-      "titleHighlight": "Path",
+      "title": "당신의",
+      "titleHighlight": "길을 선택하세요",
       "buyHold": {
-        "title": "Buy & Hold",
-        "description": "Get ERG and store securely"
+        "title": "구매 & 보유",
+        "description": "ERG를 획득하고 안전하게 저장하세요"
       },
       "exploreDeFi": {
-        "title": "Explore DeFi",
-        "description": "Put your ERG to work"
+        "title": "DeFi 탐색",
+        "description": "ERG를 활용하세요"
       },
       "startMining": {
-        "title": "Start Mining",
-        "description": "Secure the network, earn rewards"
+        "title": "채굴 시작",
+        "description": "네트워크를 보호하고 보상을 받으세요"
       },
       "buildDapps": {
-        "title": "Build dApps",
-        "description": "Create the future"
+        "title": "dApp 구축",
+        "description": "미래를 만들어가세요"
       },
       "interestedInMining": {
-        "title": "Interested in mining?",
-        "description": "Earn ERG by securing the network with your GPU"
+        "title": "채굴에 관심 있으신가요?",
+        "description": "GPU로 네트워크를 보호하며 ERG를 획득하세요"
       }
     },
     "faq": {
-      "title": "Holders FAQ",
+      "title": "홀더 FAQ",
       "questions": {
         "0": {
-          "question": "What makes ERG different from Bitcoin?",
-          "answer": "ERG extends Bitcoin's security model with smart contracts, optional privacy, and storage rent for long-term sustainability. Same PoW security, more functionality."
+          "question": "ERG가 Bitcoin과 다른 점은 무엇인가요?",
+          "answer": "ERG는 Bitcoin의 보안 모델을 스마트 컨트랙트, 선택적 프라이버시, 장기 지속 가능성을 위한 스토리지 렌트로 확장합니다. 동일한 PoW 보안, 더 많은 기능."
         },
         "1": {
-          "question": "Is ERG a good long-term investment?",
-          "answer": "ERG has strong fundamentals: fixed supply, fair launch, real utility through DeFi. Always DYOR and never invest more than you can afford to lose."
+          "question": "ERG는 장기 투자로 좋은가요?",
+          "answer": "ERG는 강력한 기본 요소를 가지고 있습니다: 고정 공급량, 공정한 출시, DeFi를 통한 실제 유틸리티. 항상 스스로 조사하고 감당할 수 있는 것 이상을 투자하지 마세요."
         },
         "2": {
-          "question": "How do I store ERG safely?",
-          "answer": "Use Nautilus wallet for convenience or Ledger hardware wallet for maximum security. Never share your seed phrase."
+          "question": "ERG를 안전하게 저장하는 방법은?",
+          "answer": "편의를 위해 Nautilus 지갑을 사용하거나 최대 보안을 위해 Ledger 하드웨어 지갑을 사용하세요. 시드 문구를 절대 공유하지 마세요."
         },
         "3": {
-          "question": "Can I earn yield on my ERG?",
-          "answer": "Yes! You can provide liquidity on Spectrum DEX, use ErgoPad launchpad, or participate in various DeFi protocols."
+          "question": "ERG로 수익을 낼 수 있나요?",
+          "answer": "네! Spectrum DEX에서 유동성을 제공하거나, ErgoPad 런치패드를 사용하거나, 다양한 DeFi 프로토콜에 참여할 수 있습니다."
         },
         "4": {
-          "question": "Is Ergo a security or commodity?",
-          "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, community-driven project. The fair launch and Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective."
+          "question": "Ergo는 증권인가요, 상품인가요?",
+          "answer": "Ergo는 2019년에 사전 채굴, ICO, VC 자금 없이 공정하게 출시되었습니다. Bitcoin처럼 탈중앙화된 커뮤니티 주도 프로젝트입니다. 공정한 출시와 Proof-of-Work 합의는 규제 관점에서 Bitcoin과 유사하게 만듭니다."
         },
         "5": {
-          "question": "Who controls the Ergo project?",
-          "answer": "No single entity controls Ergo. It's maintained by the Ergo Foundation, core developers, and community contributors. All development is open-source on GitHub. The community votes on major protocol changes."
+          "question": "Ergo 프로젝트를 누가 통제하나요?",
+          "answer": "어떤 단일 주체도 Ergo를 통제하지 않습니다. Ergo 재단, 핵심 개발자, 커뮤니티 기여자들이 유지 관리합니다. 모든 개발은 GitHub에서 오픈 소스입니다. 커뮤니티가 주요 프로토콜 변경에 투표합니다."
         },
         "6": {
-          "question": "What happens when mining rewards end?",
-          "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a storage rent mechanism that recycles lost coins. This creates sustainable long-term security without inflation."
+          "question": "채굴 보상이 끝나면 어떻게 되나요?",
+          "answer": "Ergo는 약 2027년에 끝나는 8년 발행 일정을 가지고 있습니다. 그 후에는 채굴자가 거래 수수료와 잃어버린 코인을 재활용하는 스토리지 렌트 메커니즘으로 인센티브를 받습니다. 이로써 인플레이션 없이 장기적으로 지속 가능한 보안이 만들어집니다."
         },
         "7": {
-          "question": "Where can I buy and store ERG?",
-          "answer": "ERG is available on major exchanges like KuCoin, Gate.io, and CoinEx. For storage, use Nautilus Wallet or hardware wallets. See our complete buying guide at /use/get-erg."
+          "question": "ERG를 어디서 구매하고 저장할 수 있나요?",
+          "answer": "ERG는 KuCoin, Gate.io, CoinEx 같은 주요 거래소에서 구매할 수 있습니다. 저장을 위해 Nautilus 지갑이나 하드웨어 지갑을 사용하세요. /use/get-erg에서 완전한 구매 가이드를 확인하세요."
         },
         "8": {
-          "question": "Is Ergo's privacy legal to use?",
-          "answer": "Ergo's privacy features are optional and designed for legitimate use cases like business confidentiality and personal financial privacy. Always check your local regulations. The technology itself is similar to other privacy-preserving cryptocurrencies and compliance tools are available for institutions."
+          "question": "Ergo의 프라이버시는 합법적으로 사용할 수 있나요?",
+          "answer": "Ergo의 프라이버시 기능은 선택적이며 비즈니스 기밀 유지 및 개인 금융 프라이버시와 같은 합법적인 사용 사례를 위해 설계되었습니다. 항상 현지 규정을 확인하세요. 기술 자체는 다른 프라이버시 보호 암호화폐와 유사하며 기관을 위한 규정 준수 도구가 제공됩니다."
         }
       }
     }
   },
   "holdersData": {
     "mining-access": {
-      "title": "Mining Access"
+      "title": "채굴 접근성"
     },
     "fair-launch": {
-      "title": "Fair Launch"
+      "title": "공정한 출시"
     },
     "long-term-security": {
-      "title": "Long-term Security"
+      "title": "장기 보안"
     },
     "sound-money": {
-      "title": "Sound Money",
-      "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019."
+      "title": "건전한 화폐",
+      "description": "최대 공급량 97.7M. 인플레이션 없음. VC 덤핑 없음. 2019년부터 검증된 Proof-of-Work 보안."
     },
     "smart-contracts": {
-      "title": "Smart Contracts",
-      "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security."
+      "title": "스마트 컨트랙트",
+      "description": "실제로 작동하는 DeFi, DEX, 스테이블코인. Bitcoin 수준의 보안을 갖춘 프로그래밍 가능한 화폐."
     },
     "programmable-privacy": {
-      "title": "Programmable Privacy",
-      "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors."
+      "title": "프로그래밍 가능한 프라이버시",
+      "description": "원하는 것을 숨기세요. 필요한 것을 보여주세요. 신뢰 설정이나 백도어 없는 선택적 프라이버시."
     },
     "fair-accessible": {
-      "title": "Fair & Accessible",
-      "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one."
+      "title": "공정하고 접근 가능한",
+      "description": "사전 채굴 없음. VC 할당 없음. 기업 통제 없음. 첫날부터 100% 커뮤니티 주도."
     },
     "store-value": {
-      "title": "Store Value Long-term",
-      "description": "Cold storage wallets with hardware support"
+      "title": "장기 가치 저장",
+      "description": "하드웨어 지원이 있는 콜드 스토리지 지갑"
     },
     "use-defi": {
-      "title": "Use DeFi Protocols",
-      "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+      "title": "DeFi 프로토콜 이용",
+      "description": "Ergo, Cardano 및 다른 블록체인을 위한 크로스체인 브리지"
     },
     "private-transactions": {
-      "title": "Send Private Transactions",
-      "description": "Optional privacy for sensitive transfers"
+      "title": "프라이빗 거래 전송",
+      "description": "민감한 이체를 위한 선택적 프라이버시"
     },
     "support-network": {
-      "title": "Support the Network",
-      "description": "Mining, running nodes, community participation"
+      "title": "네트워크 지원",
+      "description": "채굴, 노드 운영, 커뮤니티 참여"
     },
     "security-commodity": {
-      "question": "Is Ergo a security or commodity?",
-      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+      "question": "Ergo는 증권인가요, 상품인가요?",
+      "answer": "Ergo는 2019년에 사전 채굴, ICO, VC 자금 없이 공정하게 출시되었습니다."
     },
     "different-from-bitcoin": {
-      "question": "How is Ergo different from Bitcoin?",
-      "answer": "Ergo shares Bitcoin"
+      "question": "Ergo가 Bitcoin과 다른 점은 무엇인가요?",
+      "answer": "Ergo는 Bitcoin의 보안 모델을 공유합니다"
     },
     "who-controls": {
-      "question": "Who controls the Ergo project?",
-      "answer": "No single entity controls Ergo. It"
+      "question": "Ergo 프로젝트를 누가 통제하나요?",
+      "answer": "어떤 단일 주체도 Ergo를 통제하지 않습니다."
     },
     "mining-rewards-end": {
-      "question": "What happens when mining rewards end?",
-      "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
+      "question": "채굴 보상이 끝나면 어떻게 되나요?",
+      "answer": "Ergo는 약 2027년에 끝나는 8년 발행 일정을 가지고 있습니다. 그 후에는 채굴자가 거래 수수료와 스토리지 렌트 메커니즘으로 인센티브를 받습니다."
     },
     "buy-store": {
-      "question": "Where can I buy and store ERG?",
-      "answer": "ERG is available on major exchanges like <a href=\\"
+      "question": "ERG를 어디서 구매하고 저장할 수 있나요?",
+      "answer": "ERG는 주요 거래소에서 구매할 수 있습니다."
     },
     "privacy-legal": {
-      "question": "Is Ergo",
-      "answer": "Ergo"
+      "question": "Ergo의 프라이버시는 합법적으로 사용할 수 있나요?",
+      "answer": "Ergo의 프라이버시 기능은 선택적이며 합법적인 사용 사례를 위해 설계되었습니다."
     }
   }
 }

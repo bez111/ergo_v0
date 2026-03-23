@@ -1,21 +1,21 @@
 {
   "newsletter": {
-    "title": "Stay Updated",
-    "subtitle": "Get the latest Ergo news and updates",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "Enter your email address",
-    "subscribe": "Subscribe",
-    "interests": "Interests (optional)",
-    "privacyNotice": "By subscribing, you agree to our",
-    "privacyPolicy": "Privacy Policy",
+    "title": "최신 정보 받기",
+    "subtitle": "최신 Ergo 뉴스 및 업데이트 구독",
+    "emailLabel": "이메일 주소",
+    "emailPlaceholder": "이메일 주소를 입력하세요",
+    "subscribe": "구독하기",
+    "interests": "관심사 (선택)",
+    "privacyNotice": "구독하시면 당사의",
+    "privacyPolicy": "개인정보 처리방침",
     "alreadySubscribed": {
-      "title": "You're subscribed!"
+      "title": "이미 구독 중입니다!"
     },
     "segments": {
-      "developers": "Developers",
-      "miners": "Miners",
-      "investors": "Investors",
-      "general": "General News"
+      "developers": "개발자",
+      "miners": "채굴자",
+      "investors": "투자자",
+      "general": "일반 뉴스"
     }
   }
 }

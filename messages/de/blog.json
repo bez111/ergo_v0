@@ -1,37 +1,37 @@
 {
   "blog": {
     "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "subtitle": "Neueste Nachrichten und Updates",
+    "description": "Neueste Nachrichten und Updates von Ergo",
+    "readMore": "Mehr lesen",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
+      "technology": "Technologie",
+      "ecosystem": "Ökosystem",
       "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "announcements": "Ankündigungen",
+      "all": "Alle Beiträge",
+      "development": "Entwicklung",
+      "technical": "Technisch",
+      "education": "Bildung"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "Blog – Ergo Neuigkeiten & Updates | Ergo Platform",
+      "description": "Lesen Sie die neuesten Nachrichten, Updates und Einblicke vom Ergo-Blockchain-Team.",
+      "keywords": "Ergo Blog, Blockchain-Nachrichten, Updates, Artikel"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "Ausgewählte Beiträge",
+      "readMore": "Mehr lesen"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "Neueste Beiträge",
+      "viewAll": "Alle Beiträge ansehen"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "Newsletter abonnieren",
+      "description": "Erhalten Sie die neuesten Updates direkt in Ihren Posteingang",
+      "placeholder": "E-Mail-Adresse eingeben",
+      "subscribe": "Abonnieren"
     }
   }
 }

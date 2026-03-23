@@ -1,37 +1,37 @@
 {
   "blog": {
     "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "subtitle": "Dernières actualités et mises à jour",
+    "description": "Dernières actualités et mises à jour d'Ergo",
+    "readMore": "Lire la suite",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "Technologie",
+      "ecosystem": "Écosystème",
+      "community": "Communauté",
+      "announcements": "Annonces",
+      "all": "Tous les articles",
+      "development": "Développement",
+      "technical": "Technique",
+      "education": "Éducation"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "Blog - Actualités & Mises à jour Ergo | Ergo Platform",
+      "description": "Lisez les dernières actualités, mises à jour et analyses de l'équipe Ergo blockchain.",
+      "keywords": "blog Ergo, actualités blockchain, mises à jour, articles"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "Articles à la une",
+      "readMore": "Lire la suite"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "Articles récents",
+      "viewAll": "Voir tous les articles"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "S'abonner à la newsletter",
+      "description": "Recevez les dernières mises à jour dans votre boîte mail",
+      "placeholder": "Entrez votre adresse e-mail",
+      "subscribe": "S'abonner"
     }
   }
 }

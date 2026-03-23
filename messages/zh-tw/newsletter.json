@@ -1,21 +1,21 @@
 {
   "newsletter": {
-    "title": "Stay Updated",
-    "subtitle": "Get the latest Ergo news and updates",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "Enter your email address",
-    "subscribe": "Subscribe",
-    "interests": "Interests (optional)",
-    "privacyNotice": "By subscribing, you agree to our",
-    "privacyPolicy": "Privacy Policy",
+    "title": "掌握最新資訊",
+    "subtitle": "獲取最新的 Ergo 新聞與更新",
+    "emailLabel": "電子郵件地址",
+    "emailPlaceholder": "請輸入您的電子郵件地址",
+    "subscribe": "訂閱",
+    "interests": "興趣（選填）",
+    "privacyNotice": "訂閱即表示您同意我們的",
+    "privacyPolicy": "隱私政策",
     "alreadySubscribed": {
-      "title": "You're subscribed!"
+      "title": "您已成功訂閱！"
     },
     "segments": {
-      "developers": "Developers",
-      "miners": "Miners",
-      "investors": "Investors",
-      "general": "General News"
+      "developers": "開發者",
+      "miners": "礦工",
+      "investors": "投資者",
+      "general": "一般新聞"
     }
   }
 }

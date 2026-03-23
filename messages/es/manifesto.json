@@ -1,79 +1,79 @@
 {
   "manifesto": {
-    "title": "MANIFESTO",
+    "title": "MANIFIESTO",
     "content": {
-      "paragraph1": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
-      "paragraph2": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
-      "paragraph3": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
-      "paragraph4": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
-      "conclusion": "This is not just technology. This is resistance."
+      "paragraph1": "En un mundo de vigilancia y control crecientes, defendemos la libertad financiera y la privacidad.",
+      "paragraph2": "Ergo está construido sobre los principios fundamentales que impulsaron la revolución cripto original: sistemas abiertos, sin permisos y seguros que empoderan a las personas comunes.",
+      "paragraph3": "Rechazamos la centralización del poder. Rechazamos el Estado de vigilancia. Rechazamos la captura corporativa de nuestros sistemas financieros.",
+      "paragraph4": "Ergo proporciona las herramientas para que las personas aseguren sus interacciones financieras a través del dinero contractual: programable, privado e incontenible.",
+      "conclusion": "Esto no es solo tecnología. Esto es resistencia."
     }
   },
   "corePillars": {
-    "title": "CORE PILLARS",
-    "subtitle": "Ergo combines proven principles with cutting-edge cryptography",
+    "title": "PILARES FUNDAMENTALES",
+    "subtitle": "Ergo combina principios probados con criptografía de vanguardia",
     "pillars": {
       "security": {
-        "title": "SECURITY (POW)",
-        "description": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone."
+        "title": "SEGURIDAD (POW)",
+        "description": "El Autolykos v2 PoW resistente a ASIC garantiza una descentralización robusta, minería justa y seguridad a largo plazo para todos."
       },
       "programmability": {
-        "title": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
-        "description": "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model."
+        "title": "PROGRAMABILIDAD (eUTXO + ERGOSCRIPT)",
+        "description": "Contratos formalmente verificables, expresivos y seguros, impulsados por ErgoScript y el avanzado modelo eUTXO."
       },
       "sustainability": {
-        "title": "SUSTAINABILITY (STORAGE RENT)",
-        "description": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat."
+        "title": "SOSTENIBILIDAD (STORAGE RENT)",
+        "description": "El Storage Rent y los costos predecibles mantienen la salud de la red a largo plazo y previenen el bloat de la blockchain."
       },
       "privacy": {
-        "title": "PRIVACY",
-        "description": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions."
+        "title": "PRIVACIDAD",
+        "description": "Privacidad a nivel de protocolo usando Sigma protocols, habilitando dApps y transacciones confidenciales."
       },
       "oraclePools": {
         "title": "ORACLE POOLS",
-        "description": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives."
+        "description": "Los primeros oracle pools verdaderamente descentralizados: acceso confiable y sin permisos a datos off-chain con incentivos integrados."
       },
       "devFriendly": {
-        "title": "DEV FRIENDLY",
-        "description": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative."
+        "title": "AMIGABLE PARA DEVS",
+        "description": "Documentación de primer nivel, herramientas abiertas y una comunidad vibrante y colaborativa hacen que construir en Ergo sea fácil e innovador."
       }
     }
   },
   "whyErgo": {
-    "title": "WHY ERGO?",
-    "subtitle": "A resilient blockchain platform combining proven principles with cutting-edge innovation",
+    "title": "¿POR QUÉ ERGO?",
+    "subtitle": "Una plataforma blockchain resiliente que combina principios probados con innovación de vanguardia",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "FAIR & SECURE",
-        "subtitle": "Proof-of-Work Foundation",
-        "description": "No ICO. No VC. No premine. Memory-hard mining → broad participation and durable security."
+        "title": "JUSTO Y SEGURO",
+        "subtitle": "Fundamento de Proof-of-Work",
+        "description": "Sin ICO. Sin VC. Sin preminado. Minería memory-hard → participación amplia y seguridad duradera."
       },
       "powerfulAndFlexible": {
-        "title": "POWERFUL & FLEXIBLE",
-        "subtitle": "Advanced Smart Contracts",
-        "description": "eUTXO + ErgoScript deliver deterministic, composable logic without a hidden global state."
+        "title": "POTENTE Y FLEXIBLE",
+        "subtitle": "Contratos Inteligentes Avanzados",
+        "description": "eUTXO + ErgoScript entregan lógica determinista y componible sin un estado global oculto."
       },
       "sustainable": {
-        "title": "SUSTAINABLE",
-        "subtitle": "Built to Last",
-        "description": "Storage Rent cleans forgotten state and funds miners with predictable costs for decades."
+        "title": "SOSTENIBLE",
+        "subtitle": "Construido para Durar",
+        "description": "Storage Rent limpia el estado olvidado y financia a los mineros con costos predecibles durante décadas."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PRIVACY FIRST",
-        "subtitle": "Auditable, Optional Privacy",
-        "description": "Sigma-protocols enable selective disclosure and ring/threshold proofs when needed."
+        "title": "PRIVACIDAD PRIMERO",
+        "subtitle": "Privacidad Opcional y Auditable",
+        "description": "Los Sigma-protocols permiten divulgación selectiva y pruebas de anillo/umbral cuando se necesitan."
       },
       "community": {
-        "title": "COMMUNITY DRIVEN",
-        "subtitle": "Open Source, No Foundation Tax",
-        "description": "Global contributors and EIPs drive the roadmap—not token treasuries."
+        "title": "IMPULSADO POR LA COMUNIDAD",
+        "subtitle": "Código Abierto, Sin Impuesto de Fundación",
+        "description": "Contribuidores globales y EIPs impulsan la hoja de ruta, no tesorerías de tokens."
       },
       "developer": {
-        "title": "DEVELOPER FRIENDLY",
-        "subtitle": "Docs, Tools, Templates",
-        "description": "Playground, CI templates, explorer APIs—ship contracts fast and safely."
+        "title": "AMIGABLE PARA DESARROLLADORES",
+        "subtitle": "Documentación, Herramientas, Plantillas",
+        "description": "Playground, plantillas CI, APIs del explorador: lanza contratos rápido y de forma segura."
       }
     }
   }

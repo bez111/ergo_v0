@@ -1,219 +1,219 @@
 {
   "community": {
     "hero": {
-      "title": "ERGO COMMUNITY",
-      "description": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "title": "ERGO 커뮤니티",
+      "description": "탈중앙화 금융의 미래를 구축하는 열정적인 개발자, 연구원 및 애호가와 연결하세요. Ergo의 발전을 형성하는 데 있어 당신의 목소리가 중요합니다."
     },
     "platforms": {
-      "title": "COMMUNICATION HUBS",
+      "title": "소통 허브",
       "labels": {
-        "members": "Members",
-        "activity": "Activity"
+        "members": "회원",
+        "activity": "활동"
       },
       "discord": {
         "name": "Discord",
-        "description": "Real-time discussions, AMA sessions, technical support",
+        "description": "실시간 토론, AMA 세션, 기술 지원",
         "members": "15K+",
         "activity": "24/7",
-        "buttonText": "Join Discord",
+        "buttonText": "Discord 참여",
         "features": {
-          "liveChat": "Live Chat",
-          "voiceChannels": "Voice Channels",
-          "developerSupport": "Developer Support",
-          "communityEvents": "Community Events"
+          "liveChat": "실시간 채팅",
+          "voiceChannels": "음성 채널",
+          "developerSupport": "개발자 지원",
+          "communityEvents": "커뮤니티 이벤트"
         }
       },
       "telegram": {
         "name": "Telegram",
-        "description": "Quick updates, announcements, global community",
+        "description": "빠른 업데이트, 공지사항, 글로벌 커뮤니티",
         "members": "12K+",
-        "activity": "Active",
-        "buttonText": "Join Telegram",
+        "activity": "활성",
+        "buttonText": "Telegram 참여",
         "features": {
-          "instantUpdates": "Instant Updates",
-          "mobileFirst": "Mobile First",
-          "globalReach": "Global Reach",
-          "newsAlerts": "News & Alerts"
+          "instantUpdates": "즉시 업데이트",
+          "mobileFirst": "모바일 우선",
+          "globalReach": "글로벌 도달",
+          "newsAlerts": "뉴스 및 알림"
         }
       },
       "reddit": {
         "name": "Reddit",
-        "description": "In-depth discussions, memes, community content",
+        "description": "심층 토론, 밈, 커뮤니티 콘텐츠",
         "members": "8K+",
-        "activity": "Daily",
-        "buttonText": "Visit r/ergonauts",
+        "activity": "매일",
+        "buttonText": "r/ergonauts 방문",
         "features": {
-          "longFormPosts": "Long-form Posts",
-          "communityVoting": "Community Voting",
-          "memesContent": "Memes & Content",
-          "discussions": "Discussions"
+          "longFormPosts": "장문 게시물",
+          "communityVoting": "커뮤니티 투표",
+          "memesContent": "밈 및 콘텐츠",
+          "discussions": "토론"
         }
       },
       "forum": {
         "name": "ErgoForum",
-        "description": "Technical discussions, EIPs, governance",
+        "description": "기술 토론, EIP, 거버넌스",
         "members": "3K+",
-        "activity": "Weekly",
-        "buttonText": "Visit Forum",
+        "activity": "매주",
+        "buttonText": "포럼 방문",
         "features": {
-          "technicalDeepDives": "Technical Deep-dives",
-          "governance": "Governance",
-          "eipDiscussions": "EIP Discussions",
-          "research": "Research"
+          "technicalDeepDives": "기술 심층 분석",
+          "governance": "거버넌스",
+          "eipDiscussions": "EIP 토론",
+          "research": "연구"
         }
       }
     },
     "contributions": {
-      "title": "CONTRIBUTION MATRIX",
-      "description": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+      "title": "기여 매트릭스",
+      "description": "모든 기여는 Ergo 에코시스템을 강화합니다. 영향을 미칠 경로를 찾으세요.",
       "types": {
         "development": {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
+          "title": "개발",
+          "description": "dApp, 도구 및 인프라 구축",
           "tasks": {
-            "smartContracts": "Smart Contracts",
-            "frontendApps": "Frontend Apps",
-            "toolsLibraries": "Tools & Libraries"
+            "smartContracts": "스마트 컨트랙트",
+            "frontendApps": "프론트엔드 앱",
+            "toolsLibraries": "도구 및 라이브러리"
           }
         },
         "content": {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
+          "title": "콘텐츠 제작",
+          "description": "기사, 동영상, 튜토리얼, 문서",
           "tasks": {
-            "technicalWriting": "Technical Writing",
-            "videoContent": "Video Content",
-            "tutorials": "Tutorials"
+            "technicalWriting": "기술 글쓰기",
+            "videoContent": "동영상 콘텐츠",
+            "tutorials": "튜토리얼"
           }
         },
         "support": {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
+          "title": "커뮤니티 지원",
+          "description": "신규 사용자 도움 및 질문 답변",
           "tasks": {
-            "userSupport": "User Support",
-            "onboarding": "Onboarding",
-            "mentoring": "Mentoring"
+            "userSupport": "사용자 지원",
+            "onboarding": "온보딩",
+            "mentoring": "멘토링"
           }
         },
         "governance": {
-          "title": "Governance",
-          "description": "Participate in protocol decisions",
+          "title": "거버넌스",
+          "description": "프로토콜 결정에 참여",
           "tasks": {
-            "eipReviews": "EIP Reviews",
-            "voting": "Voting",
-            "proposals": "Proposals"
+            "eipReviews": "EIP 검토",
+            "voting": "투표",
+            "proposals": "제안"
           }
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
+          "title": "인프라",
+          "description": "노드 운영, 채굴, 네트워크 지원",
           "tasks": {
-            "nodeOperation": "Node Operation",
-            "mining": "Mining",
-            "networkSecurity": "Network Security"
+            "nodeOperation": "노드 운영",
+            "mining": "채굴",
+            "networkSecurity": "네트워크 보안"
           }
         },
         "research": {
-          "title": "Research",
-          "description": "Protocol research and improvements",
+          "title": "연구",
+          "description": "프로토콜 연구 및 개선",
           "tasks": {
-            "academicResearch": "Academic Research",
-            "protocolAnalysis": "Protocol Analysis",
-            "innovation": "Innovation"
+            "academicResearch": "학술 연구",
+            "protocolAnalysis": "프로토콜 분석",
+            "innovation": "혁신"
           }
         }
       }
     },
     "guidelines": {
-      "title": "COMMUNITY PROTOCOL",
+      "title": "커뮤니티 프로토콜",
       "encouraged": {
-        "title": "Encouraged Behavior",
+        "title": "권장되는 행동",
         "items": {
-          "respectfulDiscussions": "Respectful and constructive discussions",
-          "helpingNewcomers": "Helping newcomers and sharing knowledge",
-          "contributingProjects": "Contributing to projects and documentation",
-          "constructiveFeedback": "Providing constructive feedback",
-          "followingGuidelines": "Following community guidelines"
+          "respectfulDiscussions": "존중하고 건설적인 토론",
+          "helpingNewcomers": "신규 사용자 돕기 및 지식 공유",
+          "contributingProjects": "프로젝트 및 문서에 기여",
+          "constructiveFeedback": "건설적인 피드백 제공",
+          "followingGuidelines": "커뮤니티 가이드라인 준수"
         }
       },
       "discouraged": {
-        "title": "Discouraged Behavior",
+        "title": "금지되는 행동",
         "items": {
-          "spamContent": "Spam, flooding, or off-topic content",
-          "misinformation": "Spreading misinformation or FUD",
-          "personalAttacks": "Personal attacks or harassment",
-          "selfPromotion": "Excessive self-promotion",
-          "violatingRules": "Violating platform-specific rules"
+          "spamContent": "스팸, 도배 또는 주제 외 콘텐츠",
+          "misinformation": "허위 정보 또는 FUD 유포",
+          "personalAttacks": "인신 공격 또는 괴롭힘",
+          "selfPromotion": "과도한 자기 홍보",
+          "violatingRules": "플랫폼별 규칙 위반"
         }
       }
     },
     "cta": {
-      "title": "READY TO CONNECT?",
-      "description": "Join thousands of developers, researchers, and enthusiasts building the future of DeFi",
-      "joinDiscord": "Join Discord",
-      "exploreMore": "Explore More"
+      "title": "연결할 준비가 되셨나요?",
+      "description": "DeFi의 미래를 구축하는 수천 명의 개발자, 연구원 및 애호가와 함께 하세요",
+      "joinDiscord": "Discord 참여",
+      "exploreMore": "더 탐색하기"
     }
   },
   "communityClient": {
     "hero": {
       "title": "ERGO",
-      "titleHighlight": "COMMUNITY",
-      "subtitle": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "titleHighlight": "커뮤니티",
+      "subtitle": "탈중앙화 금융의 미래를 구축하는 열정적인 개발자, 연구원 및 애호가와 연결하세요. Ergo의 발전을 형성하는 데 있어 당신의 목소리가 중요합니다."
     },
     "platforms": {
-      "sectionTitle": "COMMUNICATION HUBS",
-      "followers": "Followers",
-      "updates": "Updates"
+      "sectionTitle": "소통 허브",
+      "followers": "팔로워",
+      "updates": "업데이트"
     },
     "platformGroups": [
       {
-        "title": "Real-time & Operations",
-        "subtitle": "Live support, quick updates, breaking news"
+        "title": "실시간 및 운영",
+        "subtitle": "실시간 지원, 빠른 업데이트, 속보"
       },
       {
-        "title": "Deep Content & Research",
-        "subtitle": "Tutorials, essays, EIPs, governance"
+        "title": "심층 콘텐츠 및 연구",
+        "subtitle": "튜토리얼, 에세이, EIP, 거버넌스"
       },
       {
-        "title": "Community & Discovery",
-        "subtitle": "Discussions, visual content, discovery"
+        "title": "커뮤니티 및 발견",
+        "subtitle": "토론, 시각적 콘텐츠, 발견"
       }
     ],
     "contributions": {
-      "sectionTitle": "CONTRIBUTION MATRIX",
-      "subtitle": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
-      "clickForGuide": "Click for detailed guide"
+      "sectionTitle": "기여 매트릭스",
+      "subtitle": "모든 기여는 Ergo 에코시스템을 강화합니다. 영향을 미칠 경로를 찾으세요.",
+      "clickForGuide": "상세 가이드 보기"
     },
     "guidelines": {
-      "sectionTitle": "COMMUNITY PROTOCOL",
+      "sectionTitle": "커뮤니티 프로토콜",
       "positive": {
-        "title": "Encouraged Behavior",
+        "title": "권장되는 행동",
         "items": [
-          "Respectful and constructive discussions",
-          "Helping newcomers and sharing knowledge",
-          "Contributing to projects and documentation",
-          "Providing constructive feedback",
-          "Following community guidelines"
+          "존중하고 건설적인 토론",
+          "신규 사용자 돕기 및 지식 공유",
+          "프로젝트 및 문서에 기여",
+          "건설적인 피드백 제공",
+          "커뮤니티 가이드라인 준수"
         ]
       },
       "negative": {
-        "title": "Discouraged Behavior",
+        "title": "금지되는 행동",
         "items": [
-          "Spam, flooding, or off-topic content",
-          "Spreading misinformation or FUD",
-          "Personal attacks or harassment",
-          "Excessive self-promotion",
-          "Violating platform-specific rules"
+          "스팸, 도배 또는 주제 외 콘텐츠",
+          "허위 정보 또는 FUD 유포",
+          "인신 공격 또는 괴롭힘",
+          "과도한 자기 홍보",
+          "플랫폼별 규칙 위반"
         ]
       }
     },
     "cta": {
-      "title": "Stay",
-      "titleHighlight": "Connected",
-      "subtitle": "Get the latest updates, announcements, and community highlights delivered to your inbox",
-      "emailPlaceholder": "Enter your email address",
-      "subscribe": "Subscribe",
-      "thankYou": "Thank you for subscribing!",
-      "confirmationMessage": "You'll receive updates about the Ergo community."
+      "title": "연결 유지",
+      "titleHighlight": "하기",
+      "subtitle": "최신 업데이트, 공지사항 및 커뮤니티 하이라이트를 받은 편지함으로 받아보세요",
+      "emailPlaceholder": "이메일 주소를 입력하세요",
+      "subscribe": "구독하기",
+      "thankYou": "구독해 주셔서 감사합니다!",
+      "confirmationMessage": "Ergo 커뮤니티에 관한 업데이트를 받으실 것입니다."
     }
   }
 }

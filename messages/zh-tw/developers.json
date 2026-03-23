@@ -1,997 +1,997 @@
 {
   "developersPage": {
     "breadcrumbs": {
-      "home": "Home",
-      "developers": "Developers"
+      "home": "首頁",
+      "developers": "開發者"
     },
     "seo": {
-      "title": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API | Build on Ergo",
-      "description": "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). Predictable costs and optional privacy with Sigma protocols.",
+      "title": "Ergo 開發者 — ErgoScript、SDKs、eUTXO 模式與 API | 在 Ergo 上開發",
+      "description": "在 Ergo 上開發安全的 dApp。學習 ErgoScript，探索 eUTXO 模式，存取 SDKs（Fleet、AppKit、sigma-rust）。可預測的費用和可選隱私，採用 Sigma 協議。",
       "keywords": [
-        "Ergo developers",
+        "Ergo 開發者",
         "ErgoScript",
         "eUTXO",
-        "smart contracts",
-        "build on Ergo",
+        "智能合約",
+        "在 Ergo 上開發",
         "Ergo SDK",
         "Fleet SDK",
         "sigma-rust",
         "AppKit",
-        "blockchain development",
-        "Sigma protocols",
+        "區塊鏈開發",
+        "Sigma 協議",
         "Ergo API",
-        "dApp development",
-        "Ergo patterns",
-        "Ergo playbooks",
-        "DeFi development",
-        "Ergo grants",
-        "ErgoScript tutorial"
+        "dApp 開發",
+        "Ergo 模式",
+        "Ergo 操作手冊",
+        "DeFi 開發",
+        "Ergo 補助金",
+        "ErgoScript 教程"
       ]
     },
     "schema": {
       "techArticle": {
-        "headline": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API",
-        "description": "Developer hub for building on Ergo: ErgoScript, SDKs, eUTXO patterns, and practical resources.",
+        "headline": "Ergo 開發者 — ErgoScript、SDKs、eUTXO 模式與 API",
+        "description": "在 Ergo 上開發的開發者中心：ErgoScript、SDKs、eUTXO 模式和實用資源。",
         "keywords": [
-          "Ergo developers",
+          "Ergo 開發者",
           "ErgoScript",
           "eUTXO",
-          "smart contracts",
+          "智能合約",
           "Ergo SDK",
           "Fleet SDK",
           "AppKit",
           "sigma-rust"
         ],
-        "proficiencyLevel": "Beginner",
-        "technicalAudience": "Developers, Engineers, Technical Founders",
+        "proficiencyLevel": "初學者",
+        "technicalAudience": "開發者、工程師、技術創辦人",
         "about": [
           { "name": "ErgoScript" },
-          { "name": "eUTXO Model" },
-          { "name": "Sigma Protocols" },
-          { "name": "Blockchain Development" },
-          { "name": "Smart Contracts" }
+          { "name": "eUTXO 模型" },
+          { "name": "Sigma 協議" },
+          { "name": "區塊鏈開發" },
+          { "name": "智能合約" }
         ]
       },
       "itemList": {
-        "name": "Ergo Core Technologies",
-        "description": "Index of Ergo blockchain technologies and features for developers"
+        "name": "Ergo 核心技術",
+        "description": "面向開發者的 Ergo 區塊鏈技術與功能索引"
       },
       "howTo": {
-        "name": "Start Building on Ergo",
-        "description": "Quick start guide for Ergo blockchain development with Fleet SDK",
+        "name": "開始在 Ergo 上開發",
+        "description": "使用 Fleet SDK 進行 Ergo 區塊鏈開發的快速入門指南",
         "steps": [
           {
-            "name": "Install Fleet SDK",
-            "text": "Add Fleet SDK to your JavaScript/TypeScript project (npm install @fleet-sdk/core).",
+            "name": "安裝 Fleet SDK",
+            "text": "將 Fleet SDK 添加到您的 JavaScript/TypeScript 專案（npm install @fleet-sdk/core）。",
             "url": "https://fleet-sdk.github.io/docs/"
           },
           {
-            "name": "Connect to Ergo testnet",
-            "text": "Connect to Ergo testnet and get test ERG from the faucet to start experimenting.",
+            "name": "連接到 Ergo 測試網",
+            "text": "連接到 Ergo 測試網並從水龍頭獲取測試 ERG 開始實驗。",
             "url": "https://testnet.ergofaucet.org/"
           },
           {
-            "name": "Build your first transaction",
-            "text": "Create, sign, and submit your first Ergo transaction with Fleet SDK.",
+            "name": "建立您的第一筆交易",
+            "text": "使用 Fleet SDK 建立、簽署並提交您的第一筆 Ergo 交易。",
             "url": "/patterns"
           },
           {
-            "name": "Deploy a smart contract",
-            "text": "Write ErgoScript and deploy contracts to testnet to verify behavior end-to-end.",
+            "name": "部署智能合約",
+            "text": "編寫 ErgoScript 並將合約部署到測試網以端對端驗證行為。",
             "url": "/learn/ergoscript"
           },
           {
-            "name": "Join the developer community",
-            "text": "Join Discord to get help, feedback, and connect with other builders.",
+            "name": "加入開發者社群",
+            "text": "加入 Discord 獲取幫助、反饋，並與其他建設者交流。",
             "url": "https://discord.gg/ergo-platform-668903786361651200"
           }
         ]
       }
     },
     "hero": {
-      "badge": "Developer Hub",
-      "title": "Build DeFi that doesn't break",
-      "subtitle": "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs. Built-in privacy.",
+      "badge": "開發者中心",
+      "title": "開發不會崩潰的 DeFi",
+      "subtitle": "Bitcoin 級別的安全性與智能合約結合。無重入攻擊。無隱藏狀態。可預測的費用。內建隱私。",
       "buttons": {
-        "startLearning": "Start Learning",
-        "browsePatterns": "Browse Patterns",
-        "docs": "Docs"
+        "startLearning": "開始學習",
+        "browsePatterns": "瀏覽模式",
+        "docs": "文件"
       }
     },
     "whyBuild": {
-      "title": "Why Build on",
-      "titleHighlight": "Ergo",
+      "title": "為何在",
+      "titleHighlight": "Ergo 上開發",
       "items": [
         {
-          "title": "eUTXO Model: No Surprises",
-          "description": "No reentrancy attacks. No MEV exploitation. No hidden global state. Know exactly what your contract will cost before execution."
+          "title": "eUTXO 模型：零意外",
+          "description": "無重入攻擊。無 MEV 剝削。無隱藏全域狀態。在執行前精確了解您的合約費用。"
         },
         {
-          "title": "Sigma Protocols: Privacy Without PhD",
-          "description": "Built-in zero-knowledge proofs. Add privacy features without cryptography expertise. Ring signatures, threshold proofs, all native."
+          "title": "Sigma 協議：無需博士也能實現隱私",
+          "description": "內建零知識證明。無需密碼學專業知識即可添加隱私功能。環簽名、閾值證明，全部原生支援。"
         },
         {
-          "title": "Proof-of-Work: No Chain Halts",
-          "description": "No rollbacks. No governance attacks. No validator cartels. Battle-tested security that just works."
+          "title": "工作量證明：無鏈停滯",
+          "description": "無回滾。無治理攻擊。無驗證者卡特爾。久經考驗的安全性，可靠運作。"
         },
         {
-          "title": "Fair Launch: No Corporate BS",
-          "description": "Zero VC premines. Zero foundation tax. Build on a chain where the community actually owns the network."
+          "title": "公平發行：無企業廢話",
+          "description": "零創投預挖。零基金會稅。在社群真正擁有網路的鏈上開發。"
         }
       ]
     },
     "quickStart": {
-      "title": "Quick Start with",
+      "title": "快速開始使用",
       "titleHighlight": "Fleet SDK",
-      "subtitle": "Get from zero to your first Ergo transaction in 3 steps",
-      "readFullDocs": "Read full Fleet SDK documentation",
+      "subtitle": "從零到您的第一筆 Ergo 交易只需 3 個步驟",
+      "readFullDocs": "閱讀完整 Fleet SDK 文件",
       "steps": [
         {
           "step": 1,
-          "title": "Install Fleet SDK",
-          "description": "Add Fleet SDK to your JavaScript/TypeScript project"
+          "title": "安裝 Fleet SDK",
+          "description": "將 Fleet SDK 添加到您的 JavaScript/TypeScript 專案"
         },
         {
           "step": 2,
-          "title": "Connect to Ergo",
-          "description": "Initialize connection to Ergo network"
+          "title": "連接到 Ergo",
+          "description": "初始化與 Ergo 網路的連接"
         },
         {
           "step": 3,
-          "title": "Build Transaction",
-          "description": "Create your first Ergo transaction"
+          "title": "建立交易",
+          "description": "建立您的第一筆 Ergo 交易"
         }
       ]
     },
     "technologyIndex": {
-      "title": "Technology",
-      "titleHighlight": "Index",
-      "subtitle": "Complete reference to Ergo's core technologies",
-      "viewAll": "View All Technologies",
+      "title": "技術",
+      "titleHighlight": "索引",
+      "subtitle": "Ergo 核心技術的完整參考",
+      "viewAll": "查看所有技術",
       "items": [
         {
           "slug": "eutxo-model",
-          "title": "eUTXO Model",
-          "description": "Parallel smart contracts"
+          "title": "eUTXO 模型",
+          "description": "平行智能合約"
         },
         {
           "slug": "ergoscript",
           "title": "ErgoScript",
-          "description": "Safe smart contracts"
+          "description": "安全智能合約"
         },
         {
           "slug": "secure-pow",
           "title": "Autolykos PoW",
-          "description": "ASIC-resistant mining"
+          "description": "抗 ASIC 挖礦"
         },
         {
           "slug": "storage-rent",
-          "title": "Storage Rent",
-          "description": "State sustainability"
+          "title": "儲存租金",
+          "description": "狀態可持續性"
         },
         {
           "slug": "privacy-features",
-          "title": "Sigma Protocols",
-          "description": "Zero-knowledge proofs"
+          "title": "Sigma 協議",
+          "description": "零知識證明"
         },
         {
           "slug": "nipopows",
           "title": "NIPoPoWs",
-          "description": "Light clients & bridges"
+          "description": "輕客戶端與橋接"
         },
         {
           "slug": "oracle-pools",
-          "title": "Oracle Pools",
-          "description": "Decentralized data feeds"
+          "title": "Oracle 池",
+          "description": "去中心化資料饋送"
         },
         {
           "slug": "native-tokens",
-          "title": "Native Tokens",
-          "description": "Protocol-level tokens"
+          "title": "原生代幣",
+          "description": "協議層代幣"
         },
         {
           "slug": "babel-fees",
           "title": "Babel Fees",
-          "description": "Pay fees with any token"
+          "description": "使用任何代幣支付費用"
         },
         {
           "slug": "subblocks",
-          "title": "Subblocks",
-          "description": "Fast confirmations"
+          "title": "子區塊",
+          "description": "快速確認"
         },
         {
           "slug": "velvet-forks",
-          "title": "Velvet Forks",
-          "description": "Seamless upgrades"
+          "title": "天鵝絨分叉",
+          "description": "無縫升級"
         },
         {
           "slug": "adaptive-emission",
-          "title": "Adaptive Emission",
-          "description": "Monetary policy"
+          "title": "自適應發行",
+          "description": "貨幣政策"
         }
       ]
     },
     "sdks": {
-      "title": "SDKs &",
-      "titleHighlight": "Libraries",
-      "subtitle": "Choose the SDK for your preferred language",
-      "recommended": "Recommended",
+      "title": "SDKs 與",
+      "titleHighlight": "函式庫",
+      "subtitle": "選擇適合您偏好語言的 SDK",
+      "recommended": "推薦",
       "items": [
         {
           "name": "Fleet SDK",
           "language": "TypeScript / JavaScript",
-          "description": "Most popular SDK for web apps and Node.js projects",
+          "description": "Web 應用和 Node.js 專案最受歡迎的 SDK",
           "recommended": true
         },
         {
           "name": "AppKit",
           "language": "Java / Scala / Kotlin",
-          "description": "JVM SDK for backend services and Android apps"
+          "description": "用於後端服務和 Android 應用的 JVM SDK"
         },
         {
           "name": "sigma-rust",
           "language": "Rust",
-          "description": "High-performance Rust implementation"
+          "description": "高效能 Rust 實作"
         },
         {
-          "name": "ergpy",
+          "name": "ergopy",
           "language": "Python",
-          "description": "Python wrapper for Ergo development"
+          "description": "用於 Ergo 開發的 Python 封裝庫"
         }
       ]
     },
     "learningResources": {
-      "title": "Learning",
-      "titleHighlight": "Resources",
-      "subtitle": "Structured paths to master Ergo development",
-      "explore": "Explore",
+      "title": "學習",
+      "titleHighlight": "資源",
+      "subtitle": "精通 Ergo 開發的結構化路徑",
+      "explore": "探索",
       "items": [
         {
-          "title": "ErgoScript Course",
-          "description": "Learn the fundamentals of ErgoScript programming",
-          "tag": "Start Here"
+          "title": "ErgoScript 課程",
+          "description": "學習 ErgoScript 程式設計的基礎知識",
+          "tag": "從這裡開始"
         },
         {
-          "title": "Dev Patterns",
-          "description": "Copy-paste smart contract blueprints",
-          "tag": "Code"
+          "title": "開發模式",
+          "description": "可複製貼上的智能合約藍圖",
+          "tag": "程式碼"
         },
         {
-          "title": "Playbooks",
-          "description": "Step-by-step development guides",
-          "tag": "Guides"
+          "title": "操作手冊",
+          "description": "逐步開發指南",
+          "tag": "指南"
         },
         {
-          "title": "Glossary",
-          "description": "Key terms and concepts explained",
-          "tag": "Reference"
+          "title": "詞彙表",
+          "description": "關鍵術語和概念解釋",
+          "tag": "參考"
         }
       ]
     },
     "devTools": {
-      "title": "Developer",
-      "titleHighlight": "Tools",
+      "title": "開發者",
+      "titleHighlight": "工具",
       "explorer": {
-        "title": "Explorer",
-        "description": "Inspect transactions & blocks"
+        "title": "區塊瀏覽器",
+        "description": "檢查交易和區塊"
       },
       "faucet": {
-        "title": "Testnet Faucet",
-        "description": "Get test ERG for development"
+        "title": "測試網水龍頭",
+        "description": "獲取用於開發的測試 ERG"
       },
       "vscode": {
-        "title": "VSCode Extension",
-        "description": "ErgoScript syntax highlighting"
+        "title": "VSCode 擴充功能",
+        "description": "ErgoScript 語法高亮"
       }
     },
     "comparison": {
-      "title": "Why Ergo is",
-      "titleHighlight": "Different",
+      "title": "為何 Ergo",
+      "titleHighlight": "與眾不同",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "標準",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "ergo": "Ergo"
       },
-      "readMore": "Read: eUTXO vs Accounts",
+      "readMore": "閱讀：eUTXO 與帳戶模型比較",
       "rows": [
         {
-          "criterion": "Base Model",
+          "criterion": "基礎模型",
           "bitcoin": "UTXO",
-          "ethereum": "Account",
+          "ethereum": "帳戶",
           "ergo": "eUTXO"
         },
         {
-          "criterion": "Smart Contract Safety",
-          "bitcoin": "Limited",
-          "ethereum": "Reentrancy risks",
-          "ergo": "Predictable, safer"
+          "criterion": "智能合約安全性",
+          "bitcoin": "有限",
+          "ethereum": "重入風險",
+          "ergo": "可預測，更安全"
         },
         {
-          "criterion": "Privacy Features (L1)",
-          "bitcoin": "Transparent",
-          "ethereum": "Transparent",
-          "ergo": "Optional (Sigma)"
+          "criterion": "隱私功能（L1）",
+          "bitcoin": "透明",
+          "ethereum": "透明",
+          "ergo": "可選（Sigma）"
         },
         {
-          "criterion": "Fees & Predictability",
-          "bitcoin": "Volatile",
-          "ethereum": "High, unpredictable",
-          "ergo": "Low, predictable"
+          "criterion": "費用與可預測性",
+          "bitcoin": "波動",
+          "ethereum": "高，不可預測",
+          "ergo": "低，可預測"
         }
       ]
     },
     "networkHealth": {
-      "title": "Live Network",
-      "titleHighlight": "Health",
-      "subtitle": "Stable base layer = reliable smart contracts",
+      "title": "即時網路",
+      "titleHighlight": "健康狀況",
+      "subtitle": "穩定的基礎層 = 可靠的智能合約",
       "metrics": {
-        "hashrate": "Hashrate",
-        "txDay": "TX/Day",
-        "nodes": "Nodes",
+        "hashrate": "算力",
+        "txDay": "交易/天",
+        "nodes": "節點",
         "tvl": "TVL",
-        "supply": "Supply",
-        "emission": "Emission"
+        "supply": "供應量",
+        "emission": "發行量"
       },
-      "emissionLeft": "{amount}M left"
+      "emissionLeft": "剩餘 {amount}M"
     },
     "community": {
-      "title": "Join the",
-      "titleHighlight": "Community",
-      "subtitle": "Get help from core developers and connect with other builders",
+      "title": "加入",
+      "titleHighlight": "社群",
+      "subtitle": "從核心開發者獲取幫助，與其他建設者交流",
       "discord": {
-        "title": "Developer Discord",
-        "subtitle": "Real-time support",
-        "description": "Get direct help from core developers in dedicated #dev channels."
+        "title": "開發者 Discord",
+        "subtitle": "即時支援",
+        "description": "在專屬 #dev 頻道中直接獲得核心開發者的幫助。"
       },
       "github": {
         "title": "GitHub",
-        "subtitle": "Open source",
-        "description": "Explore the codebase and contribute to core protocols."
+        "subtitle": "開源",
+        "description": "探索程式碼庫並為核心協議做出貢獻。"
       }
     },
     "faq": {
-      "title": "Developer",
-      "titleHighlight": "FAQ",
+      "title": "開發者",
+      "titleHighlight": "常見問題",
       "items": [
         {
-          "question": "How do I start building on Ergo?",
-          "answer": "Start by learning ErgoScript fundamentals, set up the Ergo development environment (Scala/JavaScript SDKs), explore example contracts on GitHub, and join the developer Discord for support. The /learn section has structured paths for new developers."
+          "question": "如何開始在 Ergo 上開發？",
+          "answer": "從學習 ErgoScript 基礎開始，設置 Ergo 開發環境（Scala/JavaScript SDKs），在 GitHub 上探索示例合約，並加入開發者 Discord 獲取支援。/learn 部分有針對新開發者的結構化學習路徑。"
         },
         {
-          "question": "What programming languages can I use for Ergo?",
-          "answer": "ErgoScript is the native smart contract language. For app development, use: Scala/Java (Appkit SDK), JavaScript/TypeScript (Fleet SDK), Rust (sigma-rust), or Python (ergpy). Most developers start with Fleet SDK for web apps."
+          "question": "我可以使用哪些程式語言進行 Ergo 開發？",
+          "answer": "ErgoScript 是原生智能合約語言。對於應用開發，可使用：Scala/Java（Appkit SDK）、JavaScript/TypeScript（Fleet SDK）、Rust（sigma-rust）或 Python（ergpy）。大多數開發者從 Fleet SDK 開始進行 Web 應用開發。"
         },
         {
-          "question": "Is ErgoScript hard to learn?",
-          "answer": "ErgoScript has a learning curve different from Solidity. It's functional and declarative rather than imperative. If you know Scala or functional programming, it's easier. The eUTXO model requires new thinking but prevents entire classes of bugs (no reentrancy)."
+          "question": "ErgoScript 難以學習嗎？",
+          "answer": "ErgoScript 的學習曲線與 Solidity 不同。它是函數式和宣告式的，而非命令式的。如果您了解 Scala 或函數式程式設計，會更容易上手。eUTXO 模型需要新的思維方式，但可以防止整類錯誤（無重入）。"
         },
         {
-          "question": "What makes Ergo different for developers?",
-          "answer": "Ergo offers: eUTXO model (no reentrancy attacks, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design."
+          "question": "Ergo 對開發者有何與眾不同之處？",
+          "answer": "Ergo 提供：eUTXO 模型（無重入攻擊，費用可預測）、Sigma 協議（內建隱私原語）、NiPoPoWs（輕客戶端）和可預測的約 $0.01 費用。智能合約在設計上更加安全。"
         },
         {
-          "question": "Where can I find ErgoScript code examples?",
-          "answer": "Check the /patterns page for copy-paste ready contract patterns, /playbooks for step-by-step guides, and docs.ergoplatform.com for the official reference. GitHub repos of ecosystem projects provide real-world examples."
+          "question": "在哪裡可以找到 ErgoScript 程式碼示例？",
+          "answer": "查看 /patterns 頁面獲取可複製貼上的合約模式，/playbooks 獲取逐步指南，以及 docs.ergoplatform.com 獲取官方參考文件。生態系統專案的 GitHub 倉庫提供了真實的示例。"
         },
         {
-          "question": "Are there grants for Ergo developers?",
-          "answer": "Yes! The Ergo Foundation offers grants for open-source projects, dApps, tooling, and research. Apply via GitHub or join the developer community to discuss your project first."
+          "question": "Ergo 開發者有補助金嗎？",
+          "answer": "有！Ergo 基金會為開源專案、dApps、工具和研究提供補助金。通過 GitHub 申請，或先加入開發者社群討論您的專案。"
         }
       ]
     },
     "cta": {
-      "title": "Ready to Build?",
-      "subtitle": "Start with the ErgoScript course, explore patterns, and join the developer Discord.",
-      "startCourse": "Start ErgoScript Course",
-      "exploreEcosystem": "Explore Ecosystem"
+      "title": "準備好開發了嗎？",
+      "subtitle": "從 ErgoScript 課程開始，探索模式，並加入開發者 Discord。",
+      "startCourse": "開始 ErgoScript 課程",
+      "exploreEcosystem": "探索生態系統"
     },
     "emailCapture": {
-      "title": "Developer Updates",
-      "description": "Get notified about new SDKs, ErgoScript features, and ecosystem developments."
+      "title": "開發者更新",
+      "description": "獲取有關新 SDKs、ErgoScript 功能和生態系統發展的通知。"
     }
   },
   "docs": {
-    "title": "Documentation",
-    "subtitle": "Technical documentation and guides",
-    "description": "Comprehensive documentation for developers and users.",
+    "title": "文件",
+    "subtitle": "技術文件和指南",
+    "description": "面向開發者和用戶的全面文件。",
     "sections": {
-      "gettingStarted": "Getting Started",
-      "apiReference": "API Reference",
-      "tutorials": "Tutorials",
-      "examples": "Examples"
+      "gettingStarted": "入門指南",
+      "apiReference": "API 參考",
+      "tutorials": "教程",
+      "examples": "示例"
     }
   },
   "docsMenu": {
     "introduction": {
-      "title": "Introduction",
-      "whyErgo": "Why Ergo",
-      "keyFeatures": "Key Features",
-      "roadmap": "Roadmap",
-      "researchWhitepapers": "Research & Whitepapers",
-      "entities": "Entities",
-      "wallets": "Wallets",
-      "resources": "Resources",
-      "contribute": "Contribute",
-      "events": "Events",
-      "glossary": "Glossary",
-      "faq": "FAQ"
+      "title": "介紹",
+      "whyErgo": "為何選擇 Ergo",
+      "keyFeatures": "主要功能",
+      "roadmap": "路線圖",
+      "researchWhitepapers": "研究與白皮書",
+      "entities": "實體",
+      "wallets": "錢包",
+      "resources": "資源",
+      "contribute": "貢獻",
+      "events": "活動",
+      "glossary": "詞彙表",
+      "faq": "常見問題"
     },
     "ecosystem": {
-      "title": "Ecosystem",
-      "subtitle": "Discover the Ergo ecosystem",
-      "description": "Explore the growing Ergo ecosystem",
-      "infrastructure": "Infrastructure",
-      "applications": "Applications",
-      "financial": "Financial",
+      "title": "生態系統",
+      "subtitle": "探索 Ergo 生態系統",
+      "description": "探索不斷成長的 Ergo 生態系統",
+      "infrastructure": "基礎設施",
+      "applications": "應用程式",
+      "financial": "金融",
       "nfts": "NFTs",
       "seo": {
-        "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
-        "description": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
-        "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
-        "ogTitle": "Ergo Ecosystem",
-        "ogDescription": "Directory of Ergo dApps, wallets, infrastructure and tools."
+        "title": "Ergo 生態系統 — dApps、錢包、工具、DeFi",
+        "description": "探索 Ergo 生態系統：去中心化應用、錢包、隱私工具、DeFi 協議、SDKs 和基礎設施。",
+        "keywords": "Ergo 生態系統, DeFi, NFTs, dApps, 區塊鏈專案",
+        "ogTitle": "Ergo 生態系統",
+        "ogDescription": "Ergo dApps、錢包、基礎設施和工具目錄。"
       },
       "filters": {
-        "all": "All",
+        "all": "全部",
         "defi": "DeFi",
-        "privacy": "Privacy",
-        "infrastructure": "Infrastructure",
+        "privacy": "隱私",
+        "infrastructure": "基礎設施",
         "nft": "NFTs",
-        "gaming": "Gaming",
-        "wallets": "Wallets",
-        "tools": "Tools",
+        "gaming": "遊戲",
+        "wallets": "錢包",
+        "tools": "工具",
         "dao": "DAOs",
-        "oracles": "Oracles",
-        "stable": "Stable"
+        "oracles": "預言機",
+        "stable": "穩定幣"
       },
       "search": {
-        "placeholder": "Search projects...",
-        "resultsCount": "{count} projects"
+        "placeholder": "搜尋專案...",
+        "resultsCount": "{count} 個專案"
       },
       "projects": {
         "rosenBridge": {
           "title": "Rosen Bridge",
-          "subtitle": "Connecting Ergo's Ecosystem",
-          "description": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+          "subtitle": "連接 Ergo 的生態系統",
+          "description": "使用 Rosen Bridge 在 Ergo 和其他領先區塊鏈（如 Bitcoin、Ethereum、Cardano 和 BSC）之間無縫轉移資產。我們安全的守望者和守衛系統解鎖跨鏈流動性和新的 DeFi 可能性。",
           "stats": {
             "crossChain": {
-              "label": "Cross-Chain",
-              "value": "BTC, ETH, ADA, BSC & more"
+              "label": "跨鏈",
+              "value": "BTC、ETH、ADA、BSC 等"
             },
             "secureBridge": {
-              "label": "Secure Bridge",
-              "value": "Watcher & Guard Model"
+              "label": "安全橋接",
+              "value": "守望者和守衛模型"
             },
             "unlockLiquidity": {
-              "label": "Unlock Liquidity",
-              "value": "Access New Markets"
+              "label": "解鎖流動性",
+              "value": "進入新市場"
             }
           },
-          "cta": "VISIT ROSEN BRIDGE"
+          "cta": "訪問 ROSEN BRIDGE"
         },
         "ergoMixer": {
           "title": "ErgoMixer",
-          "subtitle": "Non-Custodial Privacy Protocol",
-          "description": "Mix your ERG and tokens privately using zero-knowledge proofs. ErgoMixer is the first non-interactive, non-custodial mixer in the crypto space.",
+          "subtitle": "非托管隱私協議",
+          "description": "使用零知識證明私密混合您的 ERG 和代幣。ErgoMixer 是加密貨幣領域第一個非互動式、非托管的混幣器。",
           "stats": {
             "mixedVolume": {
-              "label": "Mixed Volume",
+              "label": "混合量",
               "value": "10,000+ ERG"
             },
             "privacyScore": {
-              "label": "Privacy Score",
+              "label": "隱私評分",
               "value": "99.9%"
             },
             "transactions": {
-              "label": "Transactions",
+              "label": "交易數",
               "value": "5,000+"
             }
           },
-          "cta": "LEARN ABOUT PRIVACY ON ERGO"
+          "cta": "了解 ERGO 上的隱私"
         },
         "sigmaUSD": {
           "title": "SigmaUSD",
-          "subtitle": "Algorithmic Stablecoin Protocol",
-          "description": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+          "subtitle": "算法穩定幣協議",
+          "description": "SigmaUSD 是建立在 Ergo 上的加密貨幣抵押算法穩定幣協議。它提供了一種去中心化的方式來創造穩定價值，而無需依賴傳統銀行系統或中心化儲備。",
           "stats": {
             "stabilityScore": {
-              "label": "Stability Score",
+              "label": "穩定性評分",
               "value": "99.8%"
             },
             "totalSupply": {
-              "label": "Total Supply",
+              "label": "總供應量",
               "value": "$2.5M+"
             },
             "collateralRatio": {
-              "label": "Collateral Ratio",
+              "label": "抵押率",
               "value": "400-800%"
             }
           },
-          "cta": "EXPLORE SIGMAUSD"
+          "cta": "探索 SIGMAUSD"
         },
         "gaming": {
-          "title": "Ergo Gaming Ecosystem",
-          "subtitle": "Blockchain Gaming Platform",
-          "description": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+          "title": "Ergo 遊戲生態系統",
+          "subtitle": "區塊鏈遊戲平台",
+          "description": "體驗具有真實資產所有權、邊玩邊賺機制和去中心化錦標賽的遊戲未來。由 Ergo 高效安全的區塊鏈基礎設施提供支援。",
           "stats": {
             "activeGames": {
-              "label": "Active Games",
+              "label": "活躍遊戲",
               "value": "12+"
             },
             "players": {
-              "label": "Players",
+              "label": "玩家",
               "value": "5,000+"
             },
             "rewardsPaid": {
-              "label": "Rewards Paid",
+              "label": "已支付獎勵",
               "value": "$50K+"
             }
           },
-          "cta": "START GAMING ON ERGO"
+          "cta": "在 ERGO 上開始遊戲"
         }
       },
-      "privacy": "Privacy",
+      "privacy": "隱私",
       "ai": "AI",
       "daos": "DAOs",
-      "tooling": "Tooling",
-      "standards": "Standards",
+      "tooling": "工具",
+      "standards": "標準",
       "projectPage": {
         "breadcrumbs": {
-          "ecosystem": "Ecosystem"
+          "ecosystem": "生態系統"
         },
         "buttons": {
-          "visitProject": "Visit project",
+          "visitProject": "訪問專案",
           "github": "GitHub",
           "twitter": "Twitter",
-          "docs": "Docs",
-          "community": "Community",
-          "backToEcosystem": "Back to Ecosystem"
+          "docs": "文件",
+          "community": "社群",
+          "backToEcosystem": "返回生態系統"
         },
         "status": {
-          "operational": "Operational",
-          "testing": "Testing",
-          "prototype": "Prototype",
-          "notOperating": "Not operating"
+          "operational": "運行中",
+          "testing": "測試中",
+          "prototype": "原型",
+          "notOperating": "未運行"
         },
         "sections": {
-          "keyFeatures": "Key Features",
-          "builtWith": "Built With Ergo Technology",
-          "relatedArticles": "Related Articles",
-          "viewAll": "View all",
-          "faq": "Frequently Asked Questions",
-          "relatedProjects": "Related {category} Projects",
-          "minRead": "{time} min read"
+          "keyFeatures": "主要功能",
+          "builtWith": "使用 Ergo 技術構建",
+          "relatedArticles": "相關文章",
+          "viewAll": "查看全部",
+          "faq": "常見問題",
+          "relatedProjects": "相關 {category} 專案",
+          "minRead": "{time} 分鐘閱讀"
         },
         "cta": {
-          "title": "Explore More dApps",
-          "description": "Discover the full Ergo ecosystem with DeFi, wallets, tools, and more.",
-          "primaryButton": "View All Projects",
-          "secondaryButton": "Start Building"
+          "title": "探索更多 dApps",
+          "description": "探索完整的 Ergo 生態系統，包括 DeFi、錢包、工具等。",
+          "primaryButton": "查看所有專案",
+          "secondaryButton": "開始開發"
         }
       },
       "grants": {
-        "title": "Ergo Grants Program",
-        "subtitle": "Funding for Blockchain Projects",
-        "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-        "lastUpdated": "Last updated",
+        "title": "Ergo 補助金計畫",
+        "subtitle": "區塊鏈專案資金支援",
+        "description": "獲取您的 Ergo 專案資金。面向開發者、研究人員和社群建設者的補助金。在 Ergo 區塊鏈上開發 DeFi、基礎設施、工具和應用程式。",
+        "lastUpdated": "最後更新",
         "buttons": {
-          "applyNow": "Apply Now",
-          "viewProjects": "View Projects"
+          "applyNow": "立即申請",
+          "viewProjects": "查看專案"
         },
         "features": {
-          "title": "What We Fund",
-          "subtitle": "Supporting innovation and development in the Ergo ecosystem",
+          "title": "我們資助的內容",
+          "subtitle": "支援 Ergo 生態系統中的創新和開發",
           "funding": {
-            "title": "Developer Support",
-            "description": "Funding for innovative dApps, tools, and infrastructure projects"
+            "title": "開發者支援",
+            "description": "為創新 dApps、工具和基礎設施專案提供資金"
           },
           "research": {
-            "title": "Research Funding",
-            "description": "Support for academic research and protocol improvements"
+            "title": "研究資金",
+            "description": "支援學術研究和協議改進"
           },
           "community": {
-            "title": "Community Projects",
-            "description": "Grants for community-driven initiatives and educational content"
+            "title": "社群專案",
+            "description": "為社群主導的倡議和教育內容提供補助金"
           },
           "innovation": {
-            "title": "Innovation Grants",
-            "description": "Special funding for breakthrough ideas and experimental projects"
+            "title": "創新補助金",
+            "description": "為突破性想法和實驗性專案提供特別資金"
           }
         },
         "cta": {
-          "title": "Ready to Build on Ergo?",
-          "subtitle": "Start preparing your project proposal and join our community to stay updated",
+          "title": "準備好在 Ergo 上開發了嗎？",
+          "subtitle": "開始準備您的專案提案，並加入我們的社群以保持最新資訊",
           "buttons": {
-            "applyGrant": "Apply for Grant",
-            "joinCommunity": "Join Community"
+            "applyGrant": "申請補助金",
+            "joinCommunity": "加入社群"
           }
         },
         "seo": {
-          "title": "Ergo Grants Program | Funding for Blockchain Projects",
-          "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-          "ogTitle": "Ergo Grants - Fund Your Blockchain Innovation",
-          "ogDescription": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
-          "twitterTitle": "Ergo Grants Program | Get Funded",
-          "twitterDescription": "Funding for developers building on Ergo. Apply for grants today."
+          "title": "Ergo 補助金計畫 | 區塊鏈專案資金支援",
+          "description": "獲取您的 Ergo 專案資金。面向開發者、研究人員和社群建設者的補助金。在 Ergo 區塊鏈上開發 DeFi、基礎設施、工具和應用程式。",
+          "ogTitle": "Ergo 補助金 - 資助您的區塊鏈創新",
+          "ogDescription": "申請補助金在 Ergo 上開發。支援開發者、研究人員和社群倡議。",
+          "twitterTitle": "Ergo 補助金計畫 | 獲得資助",
+          "twitterDescription": "為在 Ergo 上開發的開發者提供資金。立即申請補助金。"
         },
-        "whatToExpect": "What to Expect",
-        "grantsFeatures": "Grants Program Features",
-        "supportingInnovation": "Supporting innovation and development in the Ergo ecosystem"
+        "whatToExpect": "預期內容",
+        "grantsFeatures": "補助金計畫特色",
+        "supportingInnovation": "支援 Ergo 生態系統中的創新和開發"
       },
       "infographicPage": {
         "breadcrumbs": {
-          "infographics": "Infographics"
+          "infographics": "資訊圖表"
         },
         "meta": {
-          "minRead": "{time} min read"
+          "minRead": "{time} 分鐘閱讀"
         },
         "image": {
-          "clickToEnlarge": "Click to Enlarge",
-          "fullSize": "Full Size"
+          "clickToEnlarge": "點擊放大",
+          "fullSize": "全尺寸"
         },
         "share": {
-          "title": "Share this infographic",
-          "subtitle": "help others discover Ergo",
+          "title": "分享此資訊圖表",
+          "subtitle": "幫助他人探索 Ergo",
           "telegram": "Telegram",
           "pinterest": "Pinterest",
-          "download": "Download",
-          "copyLink": "Copy link",
-          "copied": "Copied!"
+          "download": "下載",
+          "copyLink": "複製連結",
+          "copied": "已複製！"
         },
         "sections": {
-          "about": "About This Infographic",
-          "systemsCompared": "Systems Compared",
-          "keyPoints": "Key Points",
-          "howToRead": "How to Read This Infographic",
-          "relatedTopics": "Related Topics"
+          "about": "關於此資訊圖表",
+          "systemsCompared": "比較的系統",
+          "keyPoints": "要點",
+          "howToRead": "如何閱讀此資訊圖表",
+          "relatedTopics": "相關主題"
         },
         "cta": {
-          "title": "Explore More Ergo Infographics",
-          "description": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
-          "button": "Browse All Infographics"
+          "title": "探索更多 Ergo 資訊圖表",
+          "description": "探索 Ergo 的 PoW、eUTXO 智能合約、儲存租金、隱私等視覺指南。",
+          "button": "瀏覽所有資訊圖表"
         }
       },
       "map": {
-        "title": "Ergo Ecosystem Map",
-        "subtitle": "Interactive DeFi & dApp Directory",
-        "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+        "title": "Ergo 生態系統地圖",
+        "subtitle": "互動式 DeFi 與 dApp 目錄",
+        "description": "以視覺化方式探索完整的 Ergo 生態系統。DeFi 協議、NFT 平台、錢包、基礎設施和開發者工具的互動地圖。探索 50 個以上活躍專案。",
         "seo": {
-          "title": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
-          "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
-          "ogTitle": "Interactive Ergo Ecosystem Map | 50+ Projects",
-          "ogDescription": "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
-          "twitterTitle": "Ergo Ecosystem Map | Visual Project Explorer",
-          "twitterDescription": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure."
+          "title": "Ergo 生態系統地圖 | 互動式 DeFi 與 dApp 目錄",
+          "description": "以視覺化方式探索完整的 Ergo 生態系統。DeFi 協議、NFT 平台、錢包、基礎設施和開發者工具的互動地圖。探索 50 個以上活躍專案。",
+          "ogTitle": "互動式 Ergo 生態系統地圖 | 50+ 專案",
+          "ogDescription": "所有 Ergo 專案的視覺化探索。DeFi、NFTs、錢包、基礎設施的地圖。",
+          "twitterTitle": "Ergo 生態系統地圖 | 視覺化專案探索器",
+          "twitterDescription": "50 個以上 Ergo 專案的互動式視覺化。探索 DeFi、NFTs、基礎設施。"
         }
       }
     },
     "developers": {
-      "title": "Developers",
-      "gettingStarted": "Getting Started",
-      "ergoscriptLanguages": "ErgoScript Languages",
-      "dataModelApis": "Data Model & APIs",
-      "cryptographicPrimitives": "Cryptographic Primitives",
-      "infrastructure": "Infrastructure",
-      "tooling": "Tooling",
-      "tutorials": "Tutorials",
-      "bountiesGrants": "Bounties & Grants",
-      "communitySupport": "Community Support",
-      "students": "Students",
-      "resources": "Resources"
+      "title": "開發者",
+      "gettingStarted": "入門指南",
+      "ergoscriptLanguages": "ErgoScript 語言",
+      "dataModelApis": "資料模型與 APIs",
+      "cryptographicPrimitives": "密碼學原語",
+      "infrastructure": "基礎設施",
+      "tooling": "工具",
+      "tutorials": "教程",
+      "bountiesGrants": "賞金與補助金",
+      "communitySupport": "社群支援",
+      "students": "學生",
+      "resources": "資源"
     },
     "miners": {
-      "title": "Miners",
-      "miningGuides": "Mining Guides",
-      "poolMining": "Pool Mining",
-      "soloMining": "Solo Mining",
-      "hardware": "Hardware",
-      "software": "Software",
-      "troubleshooting": "Troubleshooting"
+      "title": "礦工",
+      "miningGuides": "挖礦指南",
+      "poolMining": "礦池挖礦",
+      "soloMining": "單人挖礦",
+      "hardware": "硬體",
+      "software": "軟體",
+      "troubleshooting": "故障排除"
     },
     "features": {
       "ergoscript": {
         "title": "ErgoScript",
-        "description": "Secure, declarative language for programmable money",
+        "description": "安全的、宣告式的可程式化貨幣語言",
         "details": {
           "verification": {
-            "title": "Formal Verification",
-            "description": "Mathematically provable contract behavior"
+            "title": "形式驗證",
+            "description": "數學上可證明的合約行為"
           },
           "privacy": {
-            "title": "Built-in Privacy",
-            "description": "Zero-knowledge proofs and confidential transactions"
+            "title": "內建隱私",
+            "description": "零知識證明和機密交易"
           },
           "safety": {
-            "title": "Type Safety",
-            "description": "Compile-time guarantees prevent runtime errors"
+            "title": "類型安全",
+            "description": "編譯時保證防止運行時錯誤"
           }
         }
       },
       "autolykos": {
         "title": "Autolykos",
-        "description": "ASIC-resistant Proof-of-Work algorithm",
+        "description": "抗 ASIC 的工作量證明算法",
         "details": {
           "efficiency": {
-            "title": "Energy Efficient",
-            "description": "More efficient than traditional PoW algorithms"
+            "title": "節能高效",
+            "description": "比傳統 PoW 算法更高效"
           },
           "solo": {
-            "title": "Solo Mining Friendly",
-            "description": "Designed for individual miners, not just pools"
+            "title": "個人挖礦友好",
+            "description": "專為個人礦工設計，而非僅限礦池"
           },
           "asic": {
-            "title": "ASIC Resistant",
-            "description": "Memory-hard algorithm prevents ASIC dominance"
+            "title": "抗 ASIC",
+            "description": "記憶體密集算法防止 ASIC 主導"
           }
         }
       },
       "eutxo": {
-        "title": "Extended UTXO",
-        "description": "Parallel smart contracts with Bitcoin-like security",
+        "title": "擴展 UTXO",
+        "description": "具有 Bitcoin 級別安全性的平行智能合約",
         "details": {
           "parallel": {
-            "title": "Parallel Execution",
-            "description": "Multiple contracts execute simultaneously without conflicts"
+            "title": "平行執行",
+            "description": "多個合約同時執行而不衝突"
           },
           "composability": {
-            "title": "Composability",
-            "description": "Contracts can be combined like Lego blocks"
+            "title": "可組合性",
+            "description": "合約可以像樂高積木一樣組合"
           },
           "security": {
-            "title": "Security",
-            "description": "Eliminates reentrancy attacks and global state issues"
+            "title": "安全性",
+            "description": "消除重入攻擊和全域狀態問題"
           }
         }
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Sustainable blockchain economics",
+        "title": "儲存租金",
+        "description": "可持續的區塊鏈經濟學",
         "details": {
           "sustainable": {
-            "title": "Sustainable Growth",
-            "description": "Prevents unlimited blockchain growth"
+            "title": "可持續增長",
+            "description": "防止區塊鏈無限增長"
           },
           "rewards": {
-            "title": "Perpetual Rewards",
-            "description": "Miners earn fees even after emission ends"
+            "title": "永久獎勵",
+            "description": "礦工在發行結束後仍能賺取費用"
           },
           "prevention": {
-            "title": "Bloat Prevention",
-            "description": "Automatic cleanup of abandoned funds"
+            "title": "防止膨脹",
+            "description": "自動清理廢棄資金"
           }
         }
       },
       "sigmaProtocols": {
-        "title": "Sigma Protocols",
-        "description": "Advanced cryptographic primitives",
+        "title": "Sigma 協議",
+        "description": "高級密碼學原語",
         "details": {
           "optionalPrivacy": {
-            "title": "Optional Privacy",
-            "description": "Choose between transparent and private transactions"
+            "title": "可選隱私",
+            "description": "在透明和私密交易之間選擇"
           },
           "advancedSecurity": {
-            "title": "Advanced Security",
-            "description": "Zero-knowledge proofs and threshold signatures"
+            "title": "高級安全性",
+            "description": "零知識證明和閾值簽名"
           },
           "developerFriendly": {
-            "title": "Developer Friendly",
-            "description": "Built-in cryptographic tools for dApps"
+            "title": "開發者友好",
+            "description": "為 dApps 內建的密碼學工具"
           }
         }
       },
       "nipopows": {
         "title": "NIPoPoWs",
-        "description": "Non-Interactive Proofs of Proof-of-Work",
+        "description": "工作量證明的非互動式證明",
         "details": {
           "instantMobileSync": {
-            "title": "Instant Mobile Sync",
-            "description": "Light clients sync in seconds, not hours"
+            "title": "即時行動同步",
+            "description": "輕客戶端在幾秒內同步，而非幾小時"
           },
           "trustlessBridges": {
-            "title": "Trustless Bridges",
-            "description": "Cross-chain bridges without trusted third parties"
+            "title": "無信任橋接",
+            "description": "無需信任第三方的跨鏈橋"
           },
           "cryptographicSecurity": {
-            "title": "Cryptographic Security",
-            "description": "Mathematically proven security guarantees"
+            "title": "密碼學安全性",
+            "description": "數學上經過證明的安全保證"
           }
         }
       },
       "subblocks": {
-        "title": "Subblocks",
-        "description": "Sub-second confirmations with L1 security",
+        "title": "子區塊",
+        "description": "具有 L1 安全性的亞秒確認",
         "details": {
           "subSecondConfirmations": {
-            "title": "Sub-Second Confirmations",
-            "description": "Payments confirm in milliseconds"
+            "title": "亞秒確認",
+            "description": "支付在毫秒內確認"
           },
           "layer1Security": {
-            "title": "Layer 1 Security",
-            "description": "Same security as the main blockchain"
+            "title": "第一層安全性",
+            "description": "與主區塊鏈相同的安全性"
           },
           "seamlessIntegration": {
-            "title": "Seamless Integration",
-            "description": "Works with existing Ergo infrastructure"
+            "title": "無縫整合",
+            "description": "與現有 Ergo 基礎設施相容"
           }
         }
       },
       "nativeTokens": {
-        "title": "Native Tokens",
-        "description": "First-class digital assets",
+        "title": "原生代幣",
+        "description": "第一類數位資產",
         "details": {
           "oneClickCreation": {
-            "title": "One-Click Creation",
-            "description": "Issue tokens in a single transaction"
+            "title": "一鍵創建",
+            "description": "在單筆交易中發行代幣"
           },
           "defiReady": {
-            "title": "DeFi Ready",
-            "description": "Native compatibility with all DeFi protocols"
+            "title": "DeFi 就緒",
+            "description": "與所有 DeFi 協議的原生相容性"
           },
           "trueNativeAssets": {
-            "title": "True Native Assets",
-            "description": "Protocol-level security, not contract-based"
+            "title": "真正的原生資產",
+            "description": "協議層安全性，而非基於合約"
           }
         }
       },
       "oraclePools": {
-        "title": "Oracle Pools",
-        "description": "Decentralized data feeds",
+        "title": "Oracle 池",
+        "description": "去中心化資料饋送",
         "details": {
           "reliablePriceFeeds": {
-            "title": "Reliable Price Feeds",
-            "description": "Accurate, tamper-proof price data"
+            "title": "可靠的價格饋送",
+            "description": "準確、防篡改的價格資料"
           },
           "universalCompatibility": {
-            "title": "Universal Compatibility",
-            "description": "Works with any smart contract"
+            "title": "通用相容性",
+            "description": "與任何智能合約相容"
           },
           "fullyDecentralized": {
-            "title": "Fully Decentralized",
-            "description": "No single point of failure or control"
+            "title": "完全去中心化",
+            "description": "無單點故障或控制"
           }
         }
       },
       "velvetForks": {
-        "title": "Velvet Forks",
-        "description": "Smooth protocol upgrades",
+        "title": "天鵝絨分叉",
+        "description": "平滑的協議升級",
         "details": {
           "backwardCompatible": {
-            "title": "Backward Compatible",
-            "description": "Existing contracts continue working"
+            "title": "向後相容",
+            "description": "現有合約繼續運作"
           },
           "futureProof": {
-            "title": "Future Proof",
-            "description": "Enables gradual adoption of new features"
+            "title": "面向未來",
+            "description": "實現新功能的漸進採用"
           },
           "gradualAdoption": {
-            "title": "Gradual Adoption",
-            "description": "Changes activate over time, not instantly"
+            "title": "漸進採用",
+            "description": "變更隨時間生效，而非即刻"
           }
         }
       },
       "adaptiveEmission": {
-        "title": "Adaptive Emission",
-        "description": "Flexible monetary policy",
+        "title": "自適應發行",
+        "description": "靈活的貨幣政策",
         "details": {
           "parameterTuning": {
-            "title": "Parameter Tuning",
-            "description": "Community can adjust emission parameters"
+            "title": "參數調整",
+            "description": "社群可以調整發行參數"
           },
           "economicFlexibility": {
-            "title": "Economic Flexibility",
-            "description": "Respond to changing economic conditions"
+            "title": "經濟靈活性",
+            "description": "響應不斷變化的經濟條件"
           },
           "communityInput": {
-            "title": "Community Input",
-            "description": "Democratic governance of monetary policy"
+            "title": "社群意見",
+            "description": "貨幣政策的民主治理"
           }
         }
       }
     },
     "map": {
-      "title": "Technology Architecture Map",
-      "subtitle": "Interactive visualization of how Ergo's technologies work together",
+      "title": "技術架構地圖",
+      "subtitle": "Ergo 技術如何協同工作的互動式視覺化",
       "seo": {
-        "title": "Ergo Technology Map | Interactive Blockchain Architecture Visualization",
-        "description": "Explore Ergo's technology ecosystem through an interactive map. See how ErgoScript, Autolykos, eUTXO, Sigma Protocols, and other components connect to create a powerful blockchain platform.",
-        "keywords": "ergo technology map, blockchain architecture, interactive visualization, ergoscript connections, technology ecosystem, blockchain components",
-        "ogTitle": "Ergo Technology Map - Interactive Architecture Overview",
-        "ogDescription": "Visualize how Ergo's advanced technologies connect and interact in our comprehensive technology map.",
-        "ogAlt": "Ergo Technology Architecture Map",
-        "twitterTitle": "Explore Ergo's Technology Map",
-        "twitterDescription": "Interactive visualization of Ergo's blockchain architecture and component connections."
+        "title": "Ergo 技術地圖 | 互動式區塊鏈架構視覺化",
+        "description": "通過互動地圖探索 Ergo 的技術生態系統。了解 ErgoScript、Autolykos、eUTXO、Sigma 協議和其他組件如何連接，形成強大的區塊鏈平台。",
+        "keywords": "ergo 技術地圖, 區塊鏈架構, 互動式視覺化, ergoscript 連接, 技術生態系統, 區塊鏈組件",
+        "ogTitle": "Ergo 技術地圖 - 互動式架構概覽",
+        "ogDescription": "在我們的綜合技術地圖中視覺化 Ergo 先進技術的連接和互動。",
+        "ogAlt": "Ergo 技術架構地圖",
+        "twitterTitle": "探索 Ergo 的技術地圖",
+        "twitterDescription": "Ergo 區塊鏈架構和組件連接的互動式視覺化。"
       },
       "categories": {
-        "all": "All Technologies",
-        "core": "Core Technologies",
-        "consensus": "Consensus",
-        "features": "Features",
-        "infrastructure": "Infrastructure"
+        "all": "所有技術",
+        "core": "核心技術",
+        "consensus": "共識",
+        "features": "功能",
+        "infrastructure": "基礎設施"
       },
       "legend": {
-        "title": "Legend",
-        "core": "Core Technologies",
-        "consensus": "Consensus Mechanism",
-        "features": "Advanced Features",
-        "infrastructure": "Infrastructure Layer",
-        "directConnection": "Direct Integration",
-        "relation": "Related Technology"
+        "title": "圖例",
+        "core": "核心技術",
+        "consensus": "共識機制",
+        "features": "高級功能",
+        "infrastructure": "基礎設施層",
+        "directConnection": "直接整合",
+        "relation": "相關技術"
       },
       "details": {
-        "keyFeatures": "Key Features",
-        "connections": "Connected Technologies",
-        "learnMore": "Learn More",
-        "close": "Close"
+        "keyFeatures": "主要功能",
+        "connections": "已連接的技術",
+        "learnMore": "了解更多",
+        "close": "關閉"
       }
     }
   },
   "docsResources": {},
   "playground": {
-    "title": "Live Playground",
-    "interactive": "Interactive",
-    "reset": "Reset",
-    "component": "Component",
-    "codeEditor": "Code Editor",
-    "livePreview": "Live Preview",
+    "title": "即時遊樂場",
+    "interactive": "互動式",
+    "reset": "重置",
+    "component": "組件",
+    "codeEditor": "程式碼編輯器",
+    "livePreview": "即時預覽",
     "properties": {
-      "variant": "Variant",
-      "size": "Size",
-      "disabled": "Disabled",
-      "loading": "Loading",
-      "hoverable": "Hoverable",
-      "bordered": "Bordered"
+      "variant": "變體",
+      "size": "尺寸",
+      "disabled": "已停用",
+      "loading": "載入中",
+      "hoverable": "可懸停",
+      "bordered": "有邊框"
     },
     "templates": {
-      "primaryButton": "Primary Button",
-      "featureCard": "Feature Card",
-      "statusBadge": "Status Badge"
+      "primaryButton": "主要按鈕",
+      "featureCard": "功能卡片",
+      "statusBadge": "狀態徽章"
     },
-    "editCode": "Edit the code to see live preview",
-    "errorRendering": "Error rendering component",
-    "codeEmpty": "Code cannot be empty",
-    "enable": "Enable",
-    "poweredBy": "Powered by Ergo UI Kit",
+    "editCode": "編輯程式碼以查看即時預覽",
+    "errorRendering": "渲染組件時出錯",
+    "codeEmpty": "程式碼不能為空",
+    "enable": "啟用",
+    "poweredBy": "由 Ergo UI Kit 提供支援",
     "components": {
-      "button": "Button",
-      "card": "Card",
-      "badge": "Badge",
-      "grid": "Grid"
+      "button": "按鈕",
+      "card": "卡片",
+      "badge": "徽章",
+      "grid": "網格"
     },
     "variants": {
-      "default": "Default",
-      "outline": "Outline",
-      "ghost": "Ghost",
-      "destructive": "Destructive"
+      "default": "預設",
+      "outline": "輪廓",
+      "ghost": "幽靈",
+      "destructive": "破壞性"
     },
     "sizes": {
-      "sm": "Small",
-      "default": "Default",
-      "lg": "Large",
-      "icon": "Icon"
+      "sm": "小",
+      "default": "預設",
+      "lg": "大",
+      "icon": "圖標"
     }
   },
   "resources": {
     "ergoscript": {
-      "title": "ErgoScript Tutorial Series",
-      "description": "Master ErgoScript: your path to creating secure and powerful smart contracts on Ergo, step by step.",
-      "difficulty": "Beginner to Expert",
-      "duration": "20+ hours"
+      "title": "ErgoScript 教程系列",
+      "description": "掌握 ErgoScript：逐步在 Ergo 上創建安全強大智能合約的路徑。",
+      "difficulty": "初學者到專家",
+      "duration": "20+ 小時"
     },
     "faq": {
-      "title": "Comprehensive FAQ",
-      "description": "Everything you need to know about the Ergo blockchain, technologies, and ecosystem in one place.",
-      "difficulty": "All Levels",
-      "duration": "Reference"
+      "title": "全面常見問題",
+      "description": "關於 Ergo 區塊鏈、技術和生態系統的所有須知，集中於一處。",
+      "difficulty": "所有級別",
+      "duration": "參考資料"
     },
     "research": {
-      "title": "Research Papers",
-      "description": "Deep dive into academic research and technical papers that form the foundation of Ergo innovations.",
-      "difficulty": "Advanced",
-      "duration": "Varies"
+      "title": "研究論文",
+      "description": "深入研究構成 Ergo 創新基礎的學術研究和技術論文。",
+      "difficulty": "進階",
+      "duration": "不等"
     }
   },
   "sections": {
-    "learningResources": "Learning Resources"
+    "learningResources": "學習資源"
   }
 }

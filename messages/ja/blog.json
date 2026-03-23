@@ -1,37 +1,37 @@
 {
   "blog": {
-    "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "title": "ブログ",
+    "subtitle": "最新ニュースとアップデート",
+    "description": "Ergoからの最新ニュースとアップデート",
+    "readMore": "続きを読む",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "テクノロジー",
+      "ecosystem": "エコシステム",
+      "community": "コミュニティ",
+      "announcements": "お知らせ",
+      "all": "全投稿",
+      "development": "開発",
+      "technical": "技術",
+      "education": "教育"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "ブログ - Ergoニュース＆アップデート | Ergo Platform",
+      "description": "Ergoブロックチェーンチームからの最新ニュース、アップデート、インサイトをお読みください。",
+      "keywords": "Ergoブログ, ブロックチェーンニュース, アップデート, 記事"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "注目の投稿",
+      "readMore": "続きを読む"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "最新投稿",
+      "viewAll": "全投稿を見る"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "ニュースレターを購読する",
+      "description": "最新アップデートをメールでお届けします",
+      "placeholder": "メールアドレスを入力",
+      "subscribe": "購読する"
     }
   }
 }

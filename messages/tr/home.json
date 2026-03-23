@@ -1,198 +1,198 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "Join a movement for open, programmable, and censorship-resistant finance.",
-    "description": "The globally-neutral settlement layer for programmable money.",
-    "message1": "Money Without Masters",
-    "message2": "Global Settlement Layer",
-    "message3": "Digital Freedom Platform",
-    "message4": "Decentralized By Design",
-    "exploreErgo": "Explore Ergo",
-    "chooseYourPath": "Choose Your Path",
-    "startHere": "Start Here",
+    "subtitle": "Açık, programlanabilir ve sansüre dirençli finans için bir harekete katılın.",
+    "description": "Programlanabilir para için küresel olarak tarafsız uzlaşma katmanı.",
+    "message1": "Efendisiz Para",
+    "message2": "Küresel Uzlaşma Katmanı",
+    "message3": "Dijital Özgürlük Platformu",
+    "message4": "Tasarımdan Merkeziyetsiz",
+    "exploreErgo": "Ergo'yu Keşfet",
+    "chooseYourPath": "Yolunuzu Seçin",
+    "startHere": "Buradan Başlayın",
     "aria": {
-      "keyFeatures": "Key features of Ergo blockchain"
+      "keyFeatures": "Ergo blok zincirinin temel özellikleri"
     },
     "features": {
-      "securePow": "Secure PoW",
-      "smartContracts": "Smart Contracts",
-      "privacy": "Privacy",
-      "eutxoModel": "eUTXO Model"
+      "securePow": "Güvenli PoW",
+      "smartContracts": "Akıllı Sözleşmeler",
+      "privacy": "Gizlilik",
+      "eutxoModel": "eUTXO Modeli"
     }
   },
   "buildForScale": {
-    "titlePrefix": "Engineered for",
-    "titleHighlight": "global",
-    "titleSuffix": "censorship-resistant settlement",
-    "subtitle": "Sound Money principles, Open Money access.",
+    "titlePrefix": "Küresel",
+    "titleHighlight": "küresel",
+    "titleSuffix": "sansüre dirençli uzlaşma için tasarlandı",
+    "subtitle": "Sağlam Para ilkeleri, Açık Para erişimi.",
     "bullets": {
-      "0": "eUTXO = parallel, conflict-free flows",
-      "1": "Predictable fees & clear spend conditions",
-      "2": "MEV-resistant design (local ordering)"
+      "0": "eUTXO = paralel, çatışmasız akışlar",
+      "1": "Öngörülebilir ücretler ve net harcama koşulları",
+      "2": "MEV dirençli tasarım (yerel sıralama)"
     },
-    "resultLabel": "The result:",
-    "resultText": "Financial infrastructure that actually works.",
+    "resultLabel": "Sonuç:",
+    "resultText": "Gerçekten işe yarayan finansal altyapı.",
     "stats": {
       "blockTime": {
-        "value": "~2 min",
-        "label": "Block time",
-        "hint": "Fast, predictable finality"
+        "value": "~2 dk",
+        "label": "Blok süresi",
+        "hint": "Hızlı, öngörülebilir kesinlik"
       },
       "mev": {
-        "value": "MEV-resistant",
-        "label": "Front-running",
-        "hint": "Local ordering, no global priority auctions"
+        "value": "MEV dirençli",
+        "label": "Öncü işlem",
+        "hint": "Yerel sıralama, küresel öncelik açık artırması yok"
       },
       "fee": {
         "value": "≈ $0.01",
-        "label": "Typical fee",
-        "hint": "Pennies, not dollars"
+        "label": "Tipik ücret",
+        "hint": "Kuruşlar, dolar değil"
       },
       "ergoscript": {
         "value": "ErgoScript",
-        "label": "Smart contracts",
-        "hint": "Short, auditable logic"
+        "label": "Akıllı sözleşmeler",
+        "hint": "Kısa, denetlenebilir mantık"
       }
     }
   },
   "madeForMassAdoption": {
-    "titlePrefix": "Choose your",
-    "titleMiddle": "path. Build your",
-    "titleSuffix": "future",
-    "subtitle": "Find your role in the decentralized economy",
-    "startHereCta": "Start here",
+    "titlePrefix": "Yolunuzu",
+    "titleMiddle": "seçin. Geleceğinizi",
+    "titleSuffix": "inşa edin",
+    "subtitle": "Merkeziyetsiz ekonomideki rolünüzü bulun",
+    "startHereCta": "Buradan başlayın",
     "paths": {
       "freedomSeekers": {
-        "title": "Freedom seekers",
-        "description": "Control your money. Private transactions when needed. No banks, no permissions, just freedom.",
-        "cta": "Get started"
+        "title": "Özgürlük arayanlar",
+        "description": "Paranızı kontrol edin. Gerektiğinde gizli işlemler. Banka yok, izin yok, sadece özgürlük.",
+        "cta": "Başlayın"
       },
       "cypherpunks": {
-        "title": "Cypherpunks",
-        "description": "Build unstoppable smart contracts with ErgoScript. Create privacy-preserving dApps that actually work.",
-        "cta": "Start building"
+        "title": "Cypherpunk'lar",
+        "description": "ErgoScript ile durdurulamaz akıllı sözleşmeler oluşturun. Gerçekten çalışan gizlilik koruyan dApp'ler yaratın.",
+        "cta": "İnşa etmeye başlayın"
       },
       "miners": {
-        "title": "Miners",
-        "description": "GPU-friendly mining that stays decentralized. Secure the network, earn rewards, resist ASICs.",
-        "cta": "Start mining"
+        "title": "Madenciler",
+        "description": "Merkeziyetsiz kalan GPU dostu madencilik. Ağı güvence altına alın, ödül kazanın, ASIC'lere karşı koyun.",
+        "cta": "Madenciliğe başlayın"
       },
       "community": {
-        "title": "Community",
-        "description": "No VCs, no pre-mine, no corporate control. Built by the community, for the community since 2019.",
-        "cta": "Join us"
+        "title": "Topluluk",
+        "description": "VC yok, ön madencilik yok, kurumsal kontrol yok. 2019'dan beri topluluk tarafından, topluluk için inşa edildi.",
+        "cta": "Bize katılın"
       }
     }
   },
   "poweredByErgoHome": {
-    "titlePrefix": "Powered by",
-    "titleHighlight1": "builders",
-    "titleMiddle": "Designed for",
-    "titleHighlight2": "freedom & privacy",
-    "subtitle": "Open-source, decentralized, permissionless",
-    "visitProject": "Visit Project",
-    "viewAllCta": "Explore all projects"
+    "titlePrefix": "Desteklenen:",
+    "titleHighlight1": "inşaatçılar",
+    "titleMiddle": "Tasarlandı:",
+    "titleHighlight2": "özgürlük ve gizlilik",
+    "subtitle": "Açık kaynak, merkeziyetsiz, izinsiz",
+    "visitProject": "Projeyi Ziyaret Et",
+    "viewAllCta": "Tüm projeleri keşfet"
   },
   "joinCommunityHome": {
-    "titlePrefix": "Where",
-    "titleHighlight": "cypherpunks",
-    "titleSuffix": "still build",
-    "subtitle": "Active community shipping real tools, not hype.",
-    "cta": "Join community",
+    "titlePrefix": "Cypherpunk'ların",
+    "titleHighlight": "cypherpunk'lar",
+    "titleSuffix": "hâlâ inşa ettiği yer",
+    "subtitle": "Gerçek araçlar gönderen aktif topluluk, abartı değil.",
+    "cta": "Topluluğa katılın",
     "channels": {
       "discord": {
-        "desc": "Join our community",
-        "members": "Active daily"
+        "desc": "Topluluğumuza katılın",
+        "members": "Her gün aktif"
       },
       "github": {
-        "desc": "Contribute to the code",
-        "members": "Open source"
+        "desc": "Koda katkı sağlayın",
+        "members": "Açık kaynak"
       },
       "telegram": {
-        "desc": "Chat with the community",
-        "members": "Global reach"
+        "desc": "Toplulukla sohbet edin",
+        "members": "Küresel erişim"
       },
       "twitter": {
-        "desc": "Follow latest updates",
-        "members": "Daily updates"
+        "desc": "Son güncellemeleri takip edin",
+        "members": "Günlük güncellemeler"
       }
     }
   },
   "faqSimpleHome": {
-    "titleHighlight": "Common",
-    "titleSuffix": "questions",
-    "subtitle": "Everything you need to know to get started",
-    "learnMore": "Learn more",
+    "titleHighlight": "Yaygın",
+    "titleSuffix": "sorular",
+    "subtitle": "Başlamak için bilmeniz gereken her şey",
+    "learnMore": "Daha fazla bilgi edinin",
     "items": {
       "0": {
-        "q": "What is Ergo in one sentence?",
-        "a": "Ergo is a secure, open-source PoW blockchain for programmable, censorship-resistant money using the eUTXO model."
+        "q": "Ergo bir cümleyle nedir?",
+        "a": "Ergo, eUTXO modelini kullanan programlanabilir, sansüre dirençli para için güvenli, açık kaynaklı bir PoW blok zinciridir."
       },
       "1": {
-        "q": "How do I get started (wallet + first transaction)?",
-        "a": "Install a supported wallet, back up your seed offline, get ERG (DEX/exchange/faucet), then send your first test transaction."
+        "q": "Nasıl başlayabilirim (cüzdan + ilk işlem)?",
+        "a": "Desteklenen bir cüzdan kurun, tohum ifadenizi çevrimdışı yedekleyin, ERG edinin (DEX/borsa/musluk), ardından ilk test işleminizi gönderin."
       },
       "2": {
-        "q": "How much are network fees and who gets them?",
-        "a": "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load."
+        "q": "Ağ ücretleri ne kadar ve kim alır?",
+        "a": "Tipik ücretler ≈ $0.01 olup blokları işleyen madencilere gider; onaylamadan önce tam ücret gösterilir. Ücretler ağ yüküne göre değişir."
       },
       "3": {
-        "q": "What makes Ergo different from other smart-contract chains?",
-        "a": "Ergo uses the eUTXO model for safer composition and predictable parallel execution, plus ErgoScript and Sigma protocols for short, auditable contracts and optional privacy tooling."
+        "q": "Ergo'yu diğer akıllı sözleşme zincirlerinden farklı kılan nedir?",
+        "a": "Ergo, daha güvenli bileşim ve öngörülebilir paralel yürütme için eUTXO modelini, ayrıca kısa denetlenebilir sözleşmeler ve isteğe bağlı gizlilik araçları için ErgoScript ve Sigma protokollerini kullanır."
       },
       "4": {
-        "q": "How is Ergo secured?",
-        "a": "Ergo is secured by the Autolykos Proof-of-Work algorithm, open code, and community audits. Users should keep seed phrases offline, verify downloads/URLs, and prefer hardware wallets."
+        "q": "Ergo nasıl güvence altına alınır?",
+        "a": "Ergo, Autolykos Proof-of-Work algoritması, açık kod ve topluluk denetimleriyle güvence altına alınır. Kullanıcılar tohum ifadelerini çevrimdışı tutmalı, indirmeleri/URL'leri doğrulamalı ve donanım cüzdanlarını tercih etmelidir."
       },
       "5": {
-        "q": "What risks should I know before using Ergo?",
-        "a": "Self-custody means irreversible transactions; markets are volatile; third-party dApps carry smart-contract and operational risk; watch for phishing."
+        "q": "Ergo kullanmadan önce hangi riskleri bilmeliyim?",
+        "a": "Öz-gözetim geri döndürülemez işlemler anlamına gelir; piyasalar değişkendir; üçüncü taraf dApp'ler akıllı sözleşme ve operasyonel risk taşır; kimlik avına dikkat edin."
       }
     }
   },
   "valueProposition": {
-    "title": "Why Choose",
+    "title": "Neden",
     "titleHighlight": "Ergo?",
-    "subtitle": "The only blockchain that combines proven security, advanced smart contracts, and user sovereignty without compromise.",
+    "subtitle": "Kanıtlanmış güvenliği, gelişmiş akıllı sözleşmeleri ve kullanıcı egemenliğini taviz vermeden birleştiren tek blok zinciri.",
     "items": [
       {
         "icon": "Shield",
-        "title": "Bitcoin-Level Security",
-        "description": "Proven Proof-of-Work consensus with ASIC resistance ensures true decentralization and network security.",
-        "benefit": "Your funds are protected by cryptographic guarantees",
-        "stat": "99.9% uptime since launch"
+        "title": "Bitcoin Düzeyinde Güvenlik",
+        "description": "ASIC direnciyle kanıtlanmış Proof-of-Work konsensüsü, gerçek merkeziyetsizleşme ve ağ güvenliği sağlar.",
+        "benefit": "Fonlarınız kriptografik güvencelerle korunur",
+        "stat": "Başlatılmasından bu yana %99.9 çalışma süresi"
       },
       {
         "icon": "Zap",
-        "title": "Smart Contracts Done Right",
-        "description": "eUTXO model combines Bitcoin's security with Ethereum's programmability—without the trade-offs.",
-        "benefit": "Build DeFi applications with confidence",
-        "stat": "Zero contract exploits to date"
+        "title": "Doğru Yapılmış Akıllı Sözleşmeler",
+        "description": "eUTXO modeli, Bitcoin'in güvenliğini Ethereum'un programlanabilirliğiyle—ödün vermeden—birleştirir.",
+        "benefit": "DeFi uygulamalarını güvenle inşa edin",
+        "stat": "Bugüne kadar sıfır sözleşme istismarı"
       },
       {
         "icon": "Eye",
-        "title": "Privacy by Design",
-        "description": "Sigma protocols provide mathematical privacy guarantees while maintaining auditability.",
-        "benefit": "Control your financial privacy",
-        "stat": "Cryptographically secure privacy"
+        "title": "Tasarımdan Gizlilik",
+        "description": "Sigma protokolleri, denetlenebilirliği korurken matematiksel gizlilik güvenceleri sağlar.",
+        "benefit": "Finansal gizliliğinizi kontrol edin",
+        "stat": "Kriptografik olarak güvenli gizlilik"
       },
       {
         "icon": "Coins",
-        "title": "Fair & Sustainable",
-        "description": "No pre-mine, no VCs, plus storage rent mechanism ensures long-term blockchain health.",
-        "benefit": "Truly community-owned blockchain",
-        "stat": "100% fair launch"
+        "title": "Adil ve Sürdürülebilir",
+        "description": "Ön madencilik yok, VC yok, artı depolama kirası mekanizması uzun vadeli blok zinciri sağlığını güvence altına alır.",
+        "benefit": "Gerçekten topluluk sahipli blok zinciri",
+        "stat": "%100 adil başlangıç"
       }
     ]
   },
   "testimonials": {
-    "title": "What the Community Says",
-    "subtitle": "Hear from developers, miners, and users building on Ergo",
+    "title": "Topluluk Ne Diyor",
+    "subtitle": "Ergo üzerinde inşa eden geliştiriciler, madenciler ve kullanıcılardan dinleyin",
     "items": [
       {
-        "quote": "Ergo represents the future of decentralized finance - combining Bitcoin's security with Ethereum's programmability, plus unique innovations like storage rent and built-in privacy.",
+        "quote": "Ergo, merkeziyetsiz finansın geleceğini temsil ediyor — Bitcoin'in güvenliğini Ethereum'un programlanabilirliğiyle, ayrıca depolama kirası ve yerleşik gizlilik gibi benzersiz yeniliklerle birleştiriyor.",
         "author": "Alex Chepurnoy",
-        "role": "Core Developer & Co-founder",
+        "role": "Çekirdek Geliştirici ve Kurucu Ortak",
         "avatar": "AC",
         "social": {
           "icon": "Github",
@@ -200,9 +200,9 @@
         }
       },
       {
-        "quote": "The eUTXO model is a breakthrough that solves many of the scalability and security issues we see in other blockchains. Ergo's approach to smart contracts is elegant and powerful.",
-        "author": "Kushti Research",
-        "role": "Blockchain Researcher",
+        "quote": "eUTXO modeli, diğer blok zincirlerinde gördüğümüz ölçeklenebilirlik ve güvenlik sorunlarının çoğunu çözen bir atılımdır. Ergo'nun akıllı sözleşmelere yaklaşımı zarif ve güçlüdür.",
+        "author": "Kushti Araştırması",
+        "role": "Blok Zinciri Araştırmacısı",
         "avatar": "KR",
         "social": {
           "icon": "Twitter",
@@ -210,9 +210,9 @@
         }
       },
       {
-        "quote": "As a miner, I love that Ergo remains committed to fair, ASIC-resistant mining. The Autolykos algorithm ensures true decentralization without the energy waste of other PoW chains.",
-        "author": "Mining Pool Operator",
-        "role": "Community Validator",
+        "quote": "Bir madenci olarak Ergo'nun adil, ASIC dirençli madenciliğe bağlılığını seviyorum. Autolykos algoritması, diğer PoW zincirlerinin enerji israfı olmadan gerçek merkeziyetsizleşmeyi sağlıyor.",
+        "author": "Madencilik Havuzu Operatörü",
+        "role": "Topluluk Doğrulayıcısı",
         "avatar": "MP",
         "social": {
           "icon": "Twitter",
@@ -220,9 +220,9 @@
         }
       },
       {
-        "quote": "Ergo's oracle pools are the missing piece of the DeFi puzzle. Finally, we have truly decentralized, reliable data feeds that don't depend on centralized providers.",
-        "author": "DeFi Builder",
-        "role": "dApp Developer",
+        "quote": "Ergo'nun oracle havuzları DeFi bulmacasının eksik parçasıdır. Sonunda merkezi sağlayıcılara bağlı olmayan gerçekten merkeziyetsiz, güvenilir veri akışlarına sahibiz.",
+        "author": "DeFi İnşaatçısı",
+        "role": "dApp Geliştiricisi",
         "avatar": "DB",
         "social": {
           "icon": "Github",
@@ -230,9 +230,9 @@
         }
       },
       {
-        "quote": "The privacy features in Ergo are game-changing. Sigma protocols provide mathematical guarantees for confidentiality while maintaining the transparency needed for verification.",
-        "author": "Privacy Advocate",
-        "role": "Security Researcher",
+        "quote": "Ergo'daki gizlilik özellikleri çığır açıcıdır. Sigma protokolleri, doğrulama için gereken şeffaflığı korurken gizlilik için matematiksel güvenceler sağlar.",
+        "author": "Gizlilik Savunucusu",
+        "role": "Güvenlik Araştırmacısı",
         "avatar": "PA",
         "social": {
           "icon": "Linkedin",
@@ -240,9 +240,9 @@
         }
       },
       {
-        "quote": "Ergo's commitment to academic rigor and peer-reviewed research sets it apart. Every feature is built on solid theoretical foundations, not just hype.",
-        "author": "Academic Researcher",
-        "role": "Computer Science Professor",
+        "quote": "Ergo'nun akademik titizlik ve hakemli araştırmaya bağlılığı onu farklı kılıyor. Her özellik sağlam teorik temeller üzerine inşa edilmiştir, salt abartı değil.",
+        "author": "Akademik Araştırmacı",
+        "role": "Bilgisayar Bilimi Profesörü",
         "avatar": "AR",
         "social": {
           "icon": "Linkedin",
@@ -252,31 +252,31 @@
     ]
   },
   "socialProof": {
-    "title": "Trusted by the Community",
+    "title": "Topluluk Tarafından Güvenilen",
     "stats": [
       {
         "icon": "Users",
-        "value": "Active",
-        "label": "Community",
-        "description": "Developers, miners, and users worldwide"
+        "value": "Aktif",
+        "label": "Topluluk",
+        "description": "Dünya genelinde geliştiriciler, madenciler ve kullanıcılar"
       },
       {
         "icon": "TrendingUp",
-        "value": "Growing",
-        "label": "Ecosystem",
-        "description": "Expanding ecosystem value"
+        "value": "Büyüyor",
+        "label": "Ekosistem",
+        "description": "Genişleyen ekosistem değeri"
       },
       {
         "icon": "Activity",
         "value": "99.9%",
-        "label": "Uptime",
-        "description": "Network reliability since launch"
+        "label": "Çalışma Süresi",
+        "description": "Başlatılmasından bu yana ağ güvenilirliği"
       },
       {
         "icon": "DollarSign",
-        "value": "Secure",
+        "value": "Güvenli",
         "label": "DeFi",
-        "description": "Proven smart contract security"
+        "description": "Kanıtlanmış akıllı sözleşme güvenliği"
       }
     ],
     "trustedBy": [
@@ -289,287 +289,287 @@
     ]
   },
   "featureComparison": {
-    "title": "How Ergo Compares",
-    "subtitle": "See how Ergo stacks up against other blockchains",
+    "title": "Ergo Nasıl Karşılaştırılır",
+    "subtitle": "Ergo'nun diğer blok zincirlerine karşı nasıl durduğunu görün",
     "features": [
       {
-        "name": "Consensus",
-        "ergo": "Proof-of-Work (ASIC-resistant)",
-        "bitcoin": "Proof-of-Work (ASIC-dominated)",
+        "name": "Konsensüs",
+        "ergo": "Proof-of-Work (ASIC dirençli)",
+        "bitcoin": "Proof-of-Work (ASIC baskın)",
         "ethereum": "Proof-of-Stake"
       },
       {
-        "name": "Smart Contracts",
-        "ergo": "eUTXO with ErgoScript",
-        "bitcoin": "Very Limited",
-        "ethereum": "Account-based with Solidity"
+        "name": "Akıllı Sözleşmeler",
+        "ergo": "ErgoScript ile eUTXO",
+        "bitcoin": "Çok Sınırlı",
+        "ethereum": "Solidity ile hesap tabanlı"
       },
       {
-        "name": "Privacy",
-        "ergo": "Built-in Sigma Protocols",
-        "bitcoin": "Transparent (needs mixers)",
-        "ethereum": "Transparent"
+        "name": "Gizlilik",
+        "ergo": "Yerleşik Sigma Protokolleri",
+        "bitcoin": "Şeffaf (karıştırıcı gerektirir)",
+        "ethereum": "Şeffaf"
       },
       {
-        "name": "Sustainability",
-        "ergo": "Storage Rent mechanism",
-        "bitcoin": "Fees only (long-term)",
-        "ethereum": "Token burning"
+        "name": "Sürdürülebilirlik",
+        "ergo": "Depolama Kirası mekanizması",
+        "bitcoin": "Yalnızca ücretler (uzun vadeli)",
+        "ethereum": "Token yakma"
       },
       {
-        "name": "Light Clients",
-        "ergo": "NIPoPoWs (cryptographic proofs)",
-        "bitcoin": "SPV (less secure)",
-        "ethereum": "Requires trusted nodes"
+        "name": "Hafif İstemciler",
+        "ergo": "NIPOPOWs (kriptografik kanıtlar)",
+        "bitcoin": "SPV (daha az güvenli)",
+        "ethereum": "Güvenilir düğümler gerektirir"
       }
     ]
   },
   "ecosystemSection": {
-    "title": "Ecosystem",
-    "subtitle": "Discover the growing ecosystem of projects and applications built on Ergo.",
+    "title": "Ekosistem",
+    "subtitle": "Ergo üzerine inşa edilen büyüyen proje ve uygulama ekosistemini keşfedin.",
     "projects": [
       {
         "name": "Spectrum Finance",
-        "description": "Decentralized exchange and liquidity protocol",
+        "description": "Merkeziyetsiz borsa ve likidite protokolü",
         "category": "DeFi",
         "url": "/ecosystem/spectrum"
       },
       {
         "name": "SigmaUSD",
-        "description": "Algorithmic stablecoin protocol",
+        "description": "Algoritmik stablecoin protokolü",
         "category": "Stablecoin",
         "url": "/ecosystem/sigmausd"
       },
       {
         "name": "Rosen Bridge",
-        "description": "Cross-chain bridge for Ergo and other networks",
-        "category": "Infrastructure",
+        "description": "Ergo ve diğer ağlar için zincirler arası köprü",
+        "category": "Altyapı",
         "url": "/ecosystem/rosen-bridge"
       },
       {
         "name": "ErgoMixer",
-        "description": "Non-custodial mixing service for privacy",
-        "category": "Privacy",
+        "description": "Gizlilik için emanetsiz karıştırma hizmeti",
+        "category": "Gizlilik",
         "url": "/ecosystem/ergomixer"
       }
     ],
-    "viewAll": "View All Projects"
+    "viewAll": "Tüm Projeleri Görüntüle"
   },
   "communitySection": {
-    "title": "Community",
-    "subtitle": "Join the Ergo community and be part of building the future of blockchain.",
+    "title": "Topluluk",
+    "subtitle": "Ergo topluluğuna katılın ve blok zincirinin geleceğini inşa etmenin parçası olun.",
     "links": [
       {
         "name": "Discord",
-        "description": "Join our community chat",
+        "description": "Topluluk sohbetimize katılın",
         "icon": "Discord",
         "url": "https://discord.gg/ergo"
       },
       {
         "name": "Twitter",
-        "description": "Follow for updates",
+        "description": "Güncellemeler için takip edin",
         "icon": "Twitter",
         "url": "https://x.com/BuildOnErgo"
       },
       {
         "name": "Forum",
-        "description": "Discuss and propose ideas",
+        "description": "Fikirleri tartışın ve önerin",
         "icon": "MessageSquare",
         "url": "https://ergoforum.org"
       },
       {
         "name": "GitHub",
-        "description": "Contribute to the code",
+        "description": "Koda katkı sağlayın",
         "icon": "Github",
         "url": "https://github.com/ergoplatform"
       }
     ],
-    "joinCommunity": "Join the Community",
-    "readyToContribute": "Ready to contribute?",
-    "readyToContributeDesc": "Ergo is an open platform where anyone can contribute. Join us in building the future of blockchain.",
-    "getInvolved": "Get Involved"
+    "joinCommunity": "Topluluğa Katılın",
+    "readyToContribute": "Katkıda bulunmaya hazır mısınız?",
+    "readyToContributeDesc": "Ergo, herkesin katkıda bulunabileceği açık bir platformdur. Blok zincirinin geleceğini inşa etmede bize katılın.",
+    "getInvolved": "Katılın"
   },
   "finalCta": {
-    "title": "Join the Ergo Builders List",
-    "description": "Weekly builder updates: guides, patterns, tools. No spam.",
+    "title": "Ergo İnşaatçılar Listesine Katılın",
+    "description": "Haftalık inşaatçı güncellemeleri: kılavuzlar, kalıplar, araçlar. Spam yok.",
     "social": {
-      "followTitle": "Follow for daily updates",
-      "twitterAria": "Follow us on Twitter",
-      "telegramAria": "Join our Telegram",
-      "discordAria": "Join our Discord"
+      "followTitle": "Günlük güncellemeler için takip edin",
+      "twitterAria": "Twitter'da takip edin",
+      "telegramAria": "Telegram'ımıza katılın",
+      "discordAria": "Discord'umuza katılın"
     },
     "alreadyOnList": {
-      "title": "You're on the list ✓",
-      "subtitle": "Thanks for being part of the Ergo builders community!"
+      "title": "Listedesiniz ✓",
+      "subtitle": "Ergo inşaatçılar topluluğunun parçası olduğunuz için teşekkürler!"
     },
     "errors": {
-      "invalidEmail": "Please enter a valid email address",
-      "subscriptionFailed": "Subscription failed. Please try again.",
-      "network": "Network error. Please try again."
+      "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+      "subscriptionFailed": "Abonelik başarısız oldu. Lütfen tekrar deneyin.",
+      "network": "Ağ hatası. Lütfen tekrar deneyin."
     },
     "form": {
-      "placeholder": "your@email.com",
-      "emailLabel": "Email address",
-      "ariaLabel": "Newsletter subscription form",
-      "submitLabel": "Subscribe",
-      "subscribingLabel": "Subscribing..."
+      "placeholder": "sizin@email.com",
+      "emailLabel": "E-posta adresi",
+      "ariaLabel": "Bülten abonelik formu",
+      "submitLabel": "Abone Ol",
+      "subscribingLabel": "Abone olunuyor..."
     },
     "subscribed": {
-      "label": "✓ Subscribed",
-      "description": "Welcome to the Ergo builders community!"
+      "label": "✓ Abone Olundu",
+      "description": "Ergo inşaatçılar topluluğuna hoş geldiniz!"
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "ERGO İLE BAŞLAYIN",
+    "subtitle": "Yolunuzu seçin ve Ergo ekosistemindeki yolculuğunuza başlayın",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing",
+        "title": "Geliştiriciler için",
+        "description": "ErgoScript ile gelişmiş DeFi uygulamaları ve dApp'ler inşa edin",
+        "cta": "Geliştirmeye Başlayın",
         "links": {
-          "documentation": "Documentation",
-          "technology": "Technology",
-          "useCases": "Use Cases"
+          "documentation": "Belgeler",
+          "technology": "Teknoloji",
+          "useCases": "Kullanım Senaryoları"
         }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining",
+        "title": "Madenciler için",
+        "description": "ASIC dirençli Autolykos madencilik ağına katılın",
+        "cta": "Madenciliğe Başlayın",
         "links": {
-          "miningDocs": "Mining Docs",
-          "miningPools": "Mining Pools",
-          "calculator": "Profitability Calculator"
+          "miningDocs": "Madencilik Belgeleri",
+          "miningPools": "Madencilik Havuzları",
+          "calculator": "Kârlılık Hesaplayıcısı"
         }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet",
+        "title": "Kullanıcılar için",
+        "description": "Ekosistemi keşfedin ve Ergo'yu kullanmaya başlayın",
+        "cta": "Cüzdan Edinin",
         "links": {
-          "wallets": "Wallets",
-          "ecosystem": "Ecosystem",
-          "buyErg": "Buy ERG"
+          "wallets": "Cüzdanlar",
+          "ecosystem": "Ekosistem",
+          "buyErg": "ERG Satın Al"
         }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing",
+        "title": "Yatırımcılar için",
+        "description": "Ergo ekosistemindeki yatırım fırsatları hakkında bilgi edinin",
+        "cta": "Yatırım Hakkında Bilgi Edinin",
         "links": {
-          "whatIsErgo": "What is Ergo",
-          "projects": "Projects",
-          "community": "Community"
+          "whatIsErgo": "Ergo nedir",
+          "projects": "Projeler",
+          "community": "Topluluk"
         }
       }
     }
   },
   "blogSection": {
-    "title": "LATEST FROM THE ERGO BLOG",
-    "subtitle": "Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem",
-    "viewAllPosts": "View All Posts"
+    "title": "ERGO BLOGUNDA SON YAZILAR",
+    "subtitle": "Ergo ekosisteminden en son haberler, teknik bilgiler ve topluluk güncellemeleriyle güncel kalın",
+    "viewAllPosts": "Tüm Yazıları Görüntüle"
   },
   "subscribeSection": {
-    "title": "STAY IN THE LOOP",
-    "subtitle": "Get Ergo releases, grants, dev calls, and top articles delivered weekly",
+    "title": "GÜNCEL KALIN",
+    "subtitle": "Ergo sürümleri, hibeler, geliştirici çağrıları ve en iyi makaleler haftalık olarak teslim edilir",
     "socialLinks": {
       "discord": "Discord",
       "twitter": "Twitter",
       "telegram": "Telegram"
     },
-    "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+    "privacyNotice": "Gizliliğinize saygı duyuyoruz. E-postanız yalnızca Ergo güncellemeleri için kullanılır ve üçüncü taraflarla asla paylaşılmaz. Tek tıklamayla istediğiniz zaman aboneliğinizi iptal edebilirsiniz."
   },
   "ecosystemShowcase": {
-    "title": "Decentralize Everything",
-    "exploreEcosystem": "EXPLORE ECOSYSTEM",
+    "title": "Her Şeyi Merkeziyetsizleştir",
+    "exploreEcosystem": "EKOSİSTEMİ KEŞFET",
     "categories": {
-      "defi": "DEFI",
-      "privacy": "PRIVACY",
-      "stable": "STABLE ASSETS",
-      "gaming": "GAMING"
+      "defi": "DEFİ",
+      "privacy": "GİZLİLİK",
+      "stable": "İSTİKRARLI VARLIKLAR",
+      "gaming": "OYUN"
     },
     "projects": {
       "rosenBridge": {
         "title": "Rosen Bridge",
-        "subtitle": "Connecting Ergo's Ecosystem",
-        "description": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
-        "cta": "VISIT ROSEN BRIDGE",
+        "subtitle": "Ergo'nun Ekosistemini Bağlamak",
+        "description": "Rosen Bridge ile Ergo ile Bitcoin, Ethereum, Cardano ve BSC gibi diğer önde gelen blok zincirleri arasında varlıkları sorunsuzca aktarın. Güvenli İzleyici ve Koruyucu sistemimiz, zincirler arası likiditeyi ve yeni DeFi olanaklarını açar.",
+        "cta": "ROSEN BRIDGE'İ ZİYARET ET",
         "stats": {
           "crossChain": {
-            "label": "Cross-Chain",
-            "value": "BTC, ETH, ADA, BSC & more"
+            "label": "Zincirler Arası",
+            "value": "BTC, ETH, ADA, BSC ve daha fazlası"
           },
           "secureBridge": {
-            "label": "Secure Bridge",
-            "value": "Watcher & Guard Model"
+            "label": "Güvenli Köprü",
+            "value": "İzleyici ve Koruyucu Modeli"
           },
           "unlockLiquidity": {
-            "label": "Unlock Liquidity",
-            "value": "Access New Markets"
+            "label": "Likiditeyi Aç",
+            "value": "Yeni Piyasalara Erişim"
           }
         }
       },
       "ergoMixer": {
         "title": "ErgoMixer",
-        "subtitle": "Non-Custodial Privacy Protocol",
-        "description": "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
-        "cta": "LEARN ABOUT PRIVACY ON ERGO",
+        "subtitle": "Emanetsiz Gizlilik Protokolü",
+        "description": "ErgoMixer, Sigma protokollerini ve halka imzalarını kullanarak son teknoloji gizlilik çözümleri sunar. İsteğe bağlı şeffaflık özellikleri sayesinde düzenleyici uyumu korurken tam finansal gizliliğin keyfini çıkarın.",
+        "cta": "ERGO'DA GİZLİLİK HAKKINDA ÖĞREN",
         "stats": {
           "mixedVolume": {
-            "label": "Mixed Volume",
+            "label": "Karıştırılan Hacim",
             "value": "$3.7M"
           },
           "privacyScore": {
-            "label": "Privacy Score",
+            "label": "Gizlilik Puanı",
             "value": "99.9%"
           },
           "transactions": {
-            "label": "Transactions",
+            "label": "İşlemler",
             "value": "25K+"
           }
         }
       },
       "sigmaUSD": {
         "title": "SigmaUSD",
-        "subtitle": "Algorithmic Stablecoin Protocol",
-        "description": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
-        "cta": "EXPLORE SIGMAUSD",
+        "subtitle": "Algoritmik Stablecoin Protokolü",
+        "description": "SigmaUSD, Ergo üzerine inşa edilmiş kripto destekli bir algoritmik stablecoin protokolüdür. Geleneksel bankacılık sistemlerine veya merkezi rezervlere güvenmeden istikrarlı değer oluşturmanın merkeziyetsiz bir yolunu sunar.",
+        "cta": "SIGMAUSD'Yİ KEŞFET",
         "stats": {
           "stabilityScore": {
-            "label": "Stability Score",
+            "label": "İstikrar Puanı",
             "value": "99.2%"
           },
           "totalSupply": {
-            "label": "Total Supply",
+            "label": "Toplam Arz",
             "value": "$2.1M"
           },
           "collateralRatio": {
-            "label": "Collateral Ratio",
+            "label": "Teminat Oranı",
             "value": "400%"
           }
         }
       },
       "gaming": {
-        "title": "Ergo Gaming Ecosystem",
-        "subtitle": "Blockchain Gaming Platform",
-        "description": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
-        "cta": "START GAMING ON ERGO",
+        "title": "Ergo Oyun Ekosistemi",
+        "subtitle": "Blok Zinciri Oyun Platformu",
+        "description": "Gerçek varlık sahipliği, oyna-kazan mekaniği ve merkeziyetsiz turnuvalarla oyunun geleceğini deneyimleyin. Ergo'nun verimli ve güvenli blok zinciri altyapısıyla desteklenmektedir.",
+        "cta": "ERGO'DA OYNAMAYA BAŞLA",
         "stats": {
           "activeGames": {
-            "label": "Active Games",
+            "label": "Aktif Oyunlar",
             "value": "12"
           },
           "players": {
-            "label": "Players",
+            "label": "Oyuncular",
             "value": "5K+"
           },
           "gameAssets": {
-            "label": "Game Assets",
+            "label": "Oyun Varlıkları",
             "value": "10K+"
           },
           "rewardsPaid": {
-            "label": "Rewards Paid",
+            "label": "Ödenen Ödüller",
             "value": "$250K"
           }
         }
@@ -577,79 +577,79 @@
     }
   },
   "ctaSection": {
-    "title": "Ready to Build the Future?",
-    "subtitle": "Join the Ergo ecosystem and be part of the decentralized revolution",
+    "title": "Geleceği İnşa Etmeye Hazır mısınız?",
+    "subtitle": "Ergo ekosistemine katılın ve merkeziyetsiz devrimin parçası olun",
     "actions": {
       "getStarted": {
-        "title": "Get Started",
-        "description": "Set up wallet & buy ERG",
-        "label": "START NOW"
+        "title": "Başlayın",
+        "description": "Cüzdan kurun ve ERG satın alın",
+        "label": "ŞİMDİ BAŞLA"
       },
       "developers": {
-        "title": "For Developers",
-        "description": "Build on Ergo",
-        "label": "START BUILDING"
+        "title": "Geliştiriciler için",
+        "description": "Ergo üzerinde inşa edin",
+        "label": "İNŞA ETMEYE BAŞLA"
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Secure the network",
-        "label": "START MINING"
+        "title": "Madenciler için",
+        "description": "Ağı güvence altına alın",
+        "label": "MADENCİLİĞE BAŞLA"
       }
     }
   },
   "whatMakesDifferent": {
-    "title": "WHAT MAKES ERGO DIFFERENT",
-    "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a sustainable, secure, and truly decentralized platform",
+    "title": "ERGO'YU FARKLI KILAN NEDIR",
+    "subtitle": "Ergo, sürdürülebilir, güvenli ve gerçekten merkeziyetsiz bir platform oluşturmak için kanıtlanmış kriptografik teknikleri yenilikçi blok zinciri tasarımıyla birleştirir",
     "features": {
       "fairLaunch": {
-        "title": "FAIR LAUNCH & PROOF-OF-WORK",
-        "description": "Launched with no ICO or premine, secured by Autolykos v2 - an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one."
+        "title": "ADİL BAŞLANGIÇ VE PROOF-OF-WORK",
+        "description": "ICO veya ön madencilik olmadan başlatıldı, Autolykos v2 ile güvence altına alındı — ilk günden itibaren adil dağıtım ve güçlü güvenlik sağlayan ASIC dirençli ve enerji verimli bir Proof-of-Work algoritması."
       },
       "eutxoErgoscript": {
-        "title": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
-        "description": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi."
+        "title": "GELİŞMİŞ DEFİ İÇİN eUTXO VE ERGOSCRIPT",
+        "description": "Genişletilmiş UTXO modeli, güçlü dilimiz ErgoScript ile birleşerek DeFi'nin sınırlarını zorlayan, son derece güvenli, öngörülebilir ve ifade zengin finansal uygulamalar sağlar."
       },
       "storageRent": {
-        "title": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
-        "description": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient."
+        "title": "UZUN VADELİ SÜRDÜRÜLEBİLİRLİK İÇİN DEPOLAMA KİRASI",
+        "description": "Kullanılmayan verilerden (\"toz\") gelen ücretleri madencilere geri dönüştürerek ağ sağlığını ve öngörülebilir operasyonel maliyetleri sağlayan, şişmeyi önleyen ve zinciri verimli tutan yenilikçi bir mekanizma."
       },
       "researchDriven": {
-        "title": "RESEARCH-DRIVEN INNOVATION",
-        "description": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity."
+        "title": "ARAŞTIRMA ODAKLI İNOVASYON",
+        "description": "Hakemli akademik araştırma ve temel prensipler üzerine inşa edilen Ergo, gerçek dünya uzun ömürlülüğü için tasarlanmış sağlam, çığır açan çözümleri destekler."
       },
       "privacy": {
-        "title": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
-        "description": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions."
+        "title": "GÜÇLÜ İSTEĞE BAĞLI GİZLİLİK (Σ-PROTOKOLLER)",
+        "description": "Ergo, Sigma protokollerinin desteklediği esnek gizlilik özellikleri sunarak işlemlerde özelleştirilmiş gizlilik seçenekleri için güvenli çok imzaları, halka imzalarını ve sıfır-bilgi kanıtlarını etkinleştirir."
       },
       "communityLed": {
-        "title": "COMMUNITY-LED DEVELOPMENT",
-        "description": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control."
+        "title": "TOPLULUK ÖNCÜLÜĞÜNDE GELİŞTİRME",
+        "description": "Geliştirmenin dünya genelindeki tutkulu topluluk üyeleri ve geliştiriciler tarafından yönetildiği, protokolün merkezi kontrolden uzak kalmasını sağlayan gerçek anlamda merkeziyetsiz, açık kaynaklı bir proje."
       }
     }
   },
   "quickActions": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path to explore the Ergo ecosystem",
+    "title": "ERGO İLE BAŞLAYIN",
+    "subtitle": "Ergo ekosistemini keşfetmek için yolunuzu seçin",
     "actions": {
       "getWallet": {
-        "title": "GET WALLET",
-        "description": "Set up your Ergo wallet"
+        "title": "CÜZDAN EDİNİN",
+        "description": "Ergo cüzdanınızı kurun"
       },
       "buyErg": {
-        "title": "BUY ERG",
-        "description": "Purchase Ergo tokens"
+        "title": "ERG SATIN ALIN",
+        "description": "Ergo token'ları satın alın"
       },
       "tryDapp": {
-        "title": "TRY A DAPP",
-        "description": "Explore decentralized apps"
+        "title": "DAPP DENEYİN",
+        "description": "Merkeziyetsiz uygulamaları keşfedin"
       },
       "mineErg": {
-        "title": "MINE ERG",
-        "description": "Secure the network"
+        "title": "ERG MADENCİLİĞİ YAPIN",
+        "description": "Ağı güvence altına alın"
       },
       "joinCommunity": {
-        "title": "JOIN COMMUNITY",
-        "description": "Connect with Ergo users"
+        "title": "TOPLULUĞA KATILIN",
+        "description": "Ergo kullanıcılarıyla bağlantı kurun"
       }
     }
   }

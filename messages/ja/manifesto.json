@@ -1,79 +1,79 @@
 {
   "manifesto": {
-    "title": "MANIFESTO",
+    "title": "マニフェスト",
     "content": {
-      "paragraph1": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
-      "paragraph2": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
-      "paragraph3": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
-      "paragraph4": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
-      "conclusion": "This is not just technology. This is resistance."
+      "paragraph1": "監視と管理が強まる世界において、私たちは金融の自由とプライバシーを守り抜く。",
+      "paragraph2": "Ergoは、元の暗号革命を牽引したコア原則——オープンで許可不要、安全なシステムが普通の人々を力づける——の上に構築されている。",
+      "paragraph3": "私たちは権力の中央集権化を拒否する。監視国家を拒否する。金融システムの企業支配を拒否する。",
+      "paragraph4": "Ergoは、人々が金融のやり取りを保護するためのツールを提供する——プログラマブルで、プライベートで、止められない契約通貨として。",
+      "conclusion": "これは単なるテクノロジーではない。これは抵抗だ。"
     }
   },
   "corePillars": {
-    "title": "CORE PILLARS",
-    "subtitle": "Ergo combines proven principles with cutting-edge cryptography",
+    "title": "コアピラー",
+    "subtitle": "Ergoは実証済みの原則と最先端の暗号技術を組み合わせる",
     "pillars": {
       "security": {
-        "title": "SECURITY (POW)",
-        "description": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone."
+        "title": "セキュリティ（PoW）",
+        "description": "ASIC耐性のAutolykos v2 PoWが強固な分散化、公平なマイニング、そして全員のための長期的なセキュリティを保証する。"
       },
       "programmability": {
-        "title": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
-        "description": "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model."
+        "title": "プログラマビリティ（eUTXO + ErgoScript）",
+        "description": "形式検証可能で表現力豊か、かつ安全なコントラクト——ErgoScriptと高度なeUTXOモデルによって実現。"
       },
       "sustainability": {
-        "title": "SUSTAINABILITY (STORAGE RENT)",
-        "description": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat."
+        "title": "持続可能性（ストレージレント）",
+        "description": "ストレージレントと予測可能なコストがネットワークの長期的な健全性を維持し、ブロックチェーンの肥大化を防ぐ。"
       },
       "privacy": {
-        "title": "PRIVACY",
-        "description": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions."
+        "title": "プライバシー",
+        "description": "Sigma protocolsを使ったプロトコルレベルのプライバシー——機密dAppsとトランザクションを実現する。"
       },
       "oraclePools": {
-        "title": "ORACLE POOLS",
-        "description": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives."
+        "title": "オラクルプール",
+        "description": "初の真に分散化されたオラクルプール——内蔵インセンティブを持つ信頼性の高い、許可不要のオフチェーンデータアクセス。"
       },
       "devFriendly": {
-        "title": "DEV FRIENDLY",
-        "description": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative."
+        "title": "開発者フレンドリー",
+        "description": "世界クラスのドキュメント、オープンなツール、そして活気あるコラボレーティブなコミュニティがErgo上でのビルドを容易かつ革新的にする。"
       }
     }
   },
   "whyErgo": {
-    "title": "WHY ERGO?",
-    "subtitle": "A resilient blockchain platform combining proven principles with cutting-edge innovation",
+    "title": "なぜErgoなのか？",
+    "subtitle": "実証済みの原則と最先端のイノベーションを組み合わせた強靭なブロックチェーンプラットフォーム",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "FAIR & SECURE",
-        "subtitle": "Proof-of-Work Foundation",
-        "description": "No ICO. No VC. No premine. Memory-hard mining → broad participation and durable security."
+        "title": "公平＆安全",
+        "subtitle": "プルーフ・オブ・ワークの基盤",
+        "description": "ICOなし。VCなし。プレマインなし。メモリハードマイニングにより広範な参加と耐久性のあるセキュリティを実現。"
       },
       "powerfulAndFlexible": {
-        "title": "POWERFUL & FLEXIBLE",
-        "subtitle": "Advanced Smart Contracts",
-        "description": "eUTXO + ErgoScript deliver deterministic, composable logic without a hidden global state."
+        "title": "強力＆柔軟",
+        "subtitle": "高度なスマートコントラクト",
+        "description": "eUTXO + ErgoScriptが隠れたグローバル状態なしに決定論的でコンポーザブルなロジックを提供する。"
       },
       "sustainable": {
-        "title": "SUSTAINABLE",
-        "subtitle": "Built to Last",
-        "description": "Storage Rent cleans forgotten state and funds miners with predictable costs for decades."
+        "title": "持続可能",
+        "subtitle": "長続きする設計",
+        "description": "ストレージレントが忘れられた状態をクリーンアップし、数十年間にわたる予測可能なコストでマイナーに資金を提供する。"
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PRIVACY FIRST",
-        "subtitle": "Auditable, Optional Privacy",
-        "description": "Sigma-protocols enable selective disclosure and ring/threshold proofs when needed."
+        "title": "プライバシーファースト",
+        "subtitle": "監査可能なオプションのプライバシー",
+        "description": "Sigma protocolsが必要な時に選択的開示とリング/閾値証明を可能にする。"
       },
       "community": {
-        "title": "COMMUNITY DRIVEN",
-        "subtitle": "Open Source, No Foundation Tax",
-        "description": "Global contributors and EIPs drive the roadmap—not token treasuries."
+        "title": "コミュニティ主導",
+        "subtitle": "オープンソース、財団税なし",
+        "description": "世界中のコントリビューターとEIPがロードマップを推進——トークン財務省ではなく。"
       },
       "developer": {
-        "title": "DEVELOPER FRIENDLY",
-        "subtitle": "Docs, Tools, Templates",
-        "description": "Playground, CI templates, explorer APIs—ship contracts fast and safely."
+        "title": "開発者フレンドリー",
+        "subtitle": "ドキュメント、ツール、テンプレート",
+        "description": "プレイグラウンド、CIテンプレート、エクスプローラーAPI——コントラクトを素早く安全にリリースできる。"
       }
     }
   }

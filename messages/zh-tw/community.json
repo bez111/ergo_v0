@@ -1,219 +1,219 @@
 {
   "community": {
     "hero": {
-      "title": "ERGO COMMUNITY",
-      "description": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "title": "ERGO 社群",
+      "description": "與充滿熱情的開發者、研究人員和愛好者聯繫，共同建構去中心化金融的未來。您的聲音在塑造 Ergo 的演進中至關重要。"
     },
     "platforms": {
-      "title": "COMMUNICATION HUBS",
+      "title": "溝通中心",
       "labels": {
-        "members": "Members",
-        "activity": "Activity"
+        "members": "成員",
+        "activity": "活躍度"
       },
       "discord": {
         "name": "Discord",
-        "description": "Real-time discussions, AMA sessions, technical support",
+        "description": "即時討論、AMA 問答、技術支援",
         "members": "15K+",
-        "activity": "24/7",
-        "buttonText": "Join Discord",
+        "activity": "全天候",
+        "buttonText": "加入 Discord",
         "features": {
-          "liveChat": "Live Chat",
-          "voiceChannels": "Voice Channels",
-          "developerSupport": "Developer Support",
-          "communityEvents": "Community Events"
+          "liveChat": "即時聊天",
+          "voiceChannels": "語音頻道",
+          "developerSupport": "開發者支援",
+          "communityEvents": "社群活動"
         }
       },
       "telegram": {
         "name": "Telegram",
-        "description": "Quick updates, announcements, global community",
+        "description": "快速更新、公告、全球社群",
         "members": "12K+",
-        "activity": "Active",
-        "buttonText": "Join Telegram",
+        "activity": "活躍",
+        "buttonText": "加入 Telegram",
         "features": {
-          "instantUpdates": "Instant Updates",
-          "mobileFirst": "Mobile First",
-          "globalReach": "Global Reach",
-          "newsAlerts": "News & Alerts"
+          "instantUpdates": "即時更新",
+          "mobileFirst": "行動優先",
+          "globalReach": "全球覆蓋",
+          "newsAlerts": "新聞與提醒"
         }
       },
       "reddit": {
         "name": "Reddit",
-        "description": "In-depth discussions, memes, community content",
+        "description": "深度討論、表情包、社群內容",
         "members": "8K+",
-        "activity": "Daily",
-        "buttonText": "Visit r/ergonauts",
+        "activity": "每日",
+        "buttonText": "訪問 r/ergonauts",
         "features": {
-          "longFormPosts": "Long-form Posts",
-          "communityVoting": "Community Voting",
-          "memesContent": "Memes & Content",
-          "discussions": "Discussions"
+          "longFormPosts": "長篇文章",
+          "communityVoting": "社群投票",
+          "memesContent": "表情包與內容",
+          "discussions": "討論"
         }
       },
       "forum": {
         "name": "ErgoForum",
-        "description": "Technical discussions, EIPs, governance",
+        "description": "技術討論、EIP、治理",
         "members": "3K+",
-        "activity": "Weekly",
-        "buttonText": "Visit Forum",
+        "activity": "每週",
+        "buttonText": "訪問論壇",
         "features": {
-          "technicalDeepDives": "Technical Deep-dives",
-          "governance": "Governance",
-          "eipDiscussions": "EIP Discussions",
-          "research": "Research"
+          "technicalDeepDives": "技術深度剖析",
+          "governance": "治理",
+          "eipDiscussions": "EIP 討論",
+          "research": "研究"
         }
       }
     },
     "contributions": {
-      "title": "CONTRIBUTION MATRIX",
-      "description": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+      "title": "貢獻矩陣",
+      "description": "每一項貢獻都能強化 Ergo 生態系統。找到您的方式來發揮影響力。",
       "types": {
         "development": {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
+          "title": "開發",
+          "description": "構建 dApp、工具和基礎設施",
           "tasks": {
-            "smartContracts": "Smart Contracts",
-            "frontendApps": "Frontend Apps",
-            "toolsLibraries": "Tools & Libraries"
+            "smartContracts": "智能合約",
+            "frontendApps": "前端應用",
+            "toolsLibraries": "工具與函式庫"
           }
         },
         "content": {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
+          "title": "內容創作",
+          "description": "文章、影片、教程、文件",
           "tasks": {
-            "technicalWriting": "Technical Writing",
-            "videoContent": "Video Content",
-            "tutorials": "Tutorials"
+            "technicalWriting": "技術寫作",
+            "videoContent": "影片內容",
+            "tutorials": "教程"
           }
         },
         "support": {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
+          "title": "社群支援",
+          "description": "幫助新手並回答問題",
           "tasks": {
-            "userSupport": "User Support",
-            "onboarding": "Onboarding",
-            "mentoring": "Mentoring"
+            "userSupport": "用戶支援",
+            "onboarding": "新人引導",
+            "mentoring": "導師輔導"
           }
         },
         "governance": {
-          "title": "Governance",
-          "description": "Participate in protocol decisions",
+          "title": "治理",
+          "description": "參與協議決策",
           "tasks": {
-            "eipReviews": "EIP Reviews",
-            "voting": "Voting",
-            "proposals": "Proposals"
+            "eipReviews": "EIP 審查",
+            "voting": "投票",
+            "proposals": "提案"
           }
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
+          "title": "基礎設施",
+          "description": "運行節點、挖礦、網路支援",
           "tasks": {
-            "nodeOperation": "Node Operation",
-            "mining": "Mining",
-            "networkSecurity": "Network Security"
+            "nodeOperation": "節點運營",
+            "mining": "挖礦",
+            "networkSecurity": "網路安全"
           }
         },
         "research": {
-          "title": "Research",
-          "description": "Protocol research and improvements",
+          "title": "研究",
+          "description": "協議研究與改進",
           "tasks": {
-            "academicResearch": "Academic Research",
-            "protocolAnalysis": "Protocol Analysis",
-            "innovation": "Innovation"
+            "academicResearch": "學術研究",
+            "protocolAnalysis": "協議分析",
+            "innovation": "創新"
           }
         }
       }
     },
     "guidelines": {
-      "title": "COMMUNITY PROTOCOL",
+      "title": "社群準則",
       "encouraged": {
-        "title": "Encouraged Behavior",
+        "title": "鼓勵的行為",
         "items": {
-          "respectfulDiscussions": "Respectful and constructive discussions",
-          "helpingNewcomers": "Helping newcomers and sharing knowledge",
-          "contributingProjects": "Contributing to projects and documentation",
-          "constructiveFeedback": "Providing constructive feedback",
-          "followingGuidelines": "Following community guidelines"
+          "respectfulDiscussions": "尊重且具建設性的討論",
+          "helpingNewcomers": "幫助新手並分享知識",
+          "contributingProjects": "為專案和文件做出貢獻",
+          "constructiveFeedback": "提供建設性的反饋",
+          "followingGuidelines": "遵循社群準則"
         }
       },
       "discouraged": {
-        "title": "Discouraged Behavior",
+        "title": "不鼓勵的行為",
         "items": {
-          "spamContent": "Spam, flooding, or off-topic content",
-          "misinformation": "Spreading misinformation or FUD",
-          "personalAttacks": "Personal attacks or harassment",
-          "selfPromotion": "Excessive self-promotion",
-          "violatingRules": "Violating platform-specific rules"
+          "spamContent": "垃圾訊息、洗版或離題內容",
+          "misinformation": "散播錯誤資訊或 FUD",
+          "personalAttacks": "人身攻擊或騷擾",
+          "selfPromotion": "過度自我推銷",
+          "violatingRules": "違反各平台特定規則"
         }
       }
     },
     "cta": {
-      "title": "READY TO CONNECT?",
-      "description": "Join thousands of developers, researchers, and enthusiasts building the future of DeFi",
-      "joinDiscord": "Join Discord",
-      "exploreMore": "Explore More"
+      "title": "準備好聯繫了嗎？",
+      "description": "加入數千名正在構建 DeFi 未來的開發者、研究人員和愛好者",
+      "joinDiscord": "加入 Discord",
+      "exploreMore": "探索更多"
     }
   },
   "communityClient": {
     "hero": {
       "title": "ERGO",
-      "titleHighlight": "COMMUNITY",
-      "subtitle": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "titleHighlight": "社群",
+      "subtitle": "與充滿熱情的開發者、研究人員和愛好者聯繫，共同建構去中心化金融的未來。您的聲音在塑造 Ergo 的演進中至關重要。"
     },
     "platforms": {
-      "sectionTitle": "COMMUNICATION HUBS",
-      "followers": "Followers",
-      "updates": "Updates"
+      "sectionTitle": "溝通中心",
+      "followers": "追蹤者",
+      "updates": "更新"
     },
     "platformGroups": [
       {
-        "title": "Real-time & Operations",
-        "subtitle": "Live support, quick updates, breaking news"
+        "title": "即時與運營",
+        "subtitle": "即時支援、快速更新、突發新聞"
       },
       {
-        "title": "Deep Content & Research",
-        "subtitle": "Tutorials, essays, EIPs, governance"
+        "title": "深度內容與研究",
+        "subtitle": "教程、文章、EIP、治理"
       },
       {
-        "title": "Community & Discovery",
-        "subtitle": "Discussions, visual content, discovery"
+        "title": "社群與探索",
+        "subtitle": "討論、視覺內容、探索"
       }
     ],
     "contributions": {
-      "sectionTitle": "CONTRIBUTION MATRIX",
-      "subtitle": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
-      "clickForGuide": "Click for detailed guide"
+      "sectionTitle": "貢獻矩陣",
+      "subtitle": "每一項貢獻都能強化 Ergo 生態系統。找到您的方式來發揮影響力。",
+      "clickForGuide": "點擊查看詳細指南"
     },
     "guidelines": {
-      "sectionTitle": "COMMUNITY PROTOCOL",
+      "sectionTitle": "社群準則",
       "positive": {
-        "title": "Encouraged Behavior",
+        "title": "鼓勵的行為",
         "items": [
-          "Respectful and constructive discussions",
-          "Helping newcomers and sharing knowledge",
-          "Contributing to projects and documentation",
-          "Providing constructive feedback",
-          "Following community guidelines"
+          "尊重且具建設性的討論",
+          "幫助新手並分享知識",
+          "為專案和文件做出貢獻",
+          "提供建設性的反饋",
+          "遵循社群準則"
         ]
       },
       "negative": {
-        "title": "Discouraged Behavior",
+        "title": "不鼓勵的行為",
         "items": [
-          "Spam, flooding, or off-topic content",
-          "Spreading misinformation or FUD",
-          "Personal attacks or harassment",
-          "Excessive self-promotion",
-          "Violating platform-specific rules"
+          "垃圾訊息、洗版或離題內容",
+          "散播錯誤資訊或 FUD",
+          "人身攻擊或騷擾",
+          "過度自我推銷",
+          "違反各平台特定規則"
         ]
       }
     },
     "cta": {
-      "title": "Stay",
-      "titleHighlight": "Connected",
-      "subtitle": "Get the latest updates, announcements, and community highlights delivered to your inbox",
-      "emailPlaceholder": "Enter your email address",
-      "subscribe": "Subscribe",
-      "thankYou": "Thank you for subscribing!",
-      "confirmationMessage": "You'll receive updates about the Ergo community."
+      "title": "保持",
+      "titleHighlight": "聯繫",
+      "subtitle": "將最新更新、公告和社群精選內容直接發送到您的收件匣",
+      "emailPlaceholder": "請輸入您的電子郵件地址",
+      "subscribe": "訂閱",
+      "thankYou": "感謝您的訂閱！",
+      "confirmationMessage": "您將收到有關 Ergo 社群的更新。"
     }
   }
 }

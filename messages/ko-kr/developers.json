@@ -1,997 +1,997 @@
 {
   "developersPage": {
     "breadcrumbs": {
-      "home": "Home",
-      "developers": "Developers"
+      "home": "홈",
+      "developers": "개발자"
     },
     "seo": {
-      "title": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API | Build on Ergo",
-      "description": "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). Predictable costs and optional privacy with Sigma protocols.",
+      "title": "Ergo 개발자 — ErgoScript, SDK, eUTXO 패턴 & API | Ergo에서 구축",
+      "description": "Ergo에서 안전한 dApp을 구축하세요. ErgoScript를 배우고, eUTXO 패턴을 탐색하고, SDK (Fleet, AppKit, sigma-rust)에 접근하세요. Sigma 프로토콜로 예측 가능한 비용과 선택적 프라이버시.",
       "keywords": [
-        "Ergo developers",
+        "Ergo 개발자",
         "ErgoScript",
         "eUTXO",
-        "smart contracts",
-        "build on Ergo",
+        "스마트 컨트랙트",
+        "Ergo에서 구축",
         "Ergo SDK",
         "Fleet SDK",
         "sigma-rust",
         "AppKit",
-        "blockchain development",
-        "Sigma protocols",
+        "블록체인 개발",
+        "Sigma 프로토콜",
         "Ergo API",
-        "dApp development",
-        "Ergo patterns",
-        "Ergo playbooks",
-        "DeFi development",
-        "Ergo grants",
-        "ErgoScript tutorial"
+        "dApp 개발",
+        "Ergo 패턴",
+        "Ergo 플레이북",
+        "DeFi 개발",
+        "Ergo 그랜트",
+        "ErgoScript 튜토리얼"
       ]
     },
     "schema": {
       "techArticle": {
-        "headline": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API",
-        "description": "Developer hub for building on Ergo: ErgoScript, SDKs, eUTXO patterns, and practical resources.",
+        "headline": "Ergo 개발자 — ErgoScript, SDK, eUTXO 패턴 & API",
+        "description": "Ergo 구축을 위한 개발자 허브: ErgoScript, SDK, eUTXO 패턴 및 실용적인 리소스.",
         "keywords": [
-          "Ergo developers",
+          "Ergo 개발자",
           "ErgoScript",
           "eUTXO",
-          "smart contracts",
+          "스마트 컨트랙트",
           "Ergo SDK",
           "Fleet SDK",
           "AppKit",
           "sigma-rust"
         ],
-        "proficiencyLevel": "Beginner",
-        "technicalAudience": "Developers, Engineers, Technical Founders",
+        "proficiencyLevel": "초급",
+        "technicalAudience": "개발자, 엔지니어, 기술 창업자",
         "about": [
           { "name": "ErgoScript" },
-          { "name": "eUTXO Model" },
-          { "name": "Sigma Protocols" },
-          { "name": "Blockchain Development" },
-          { "name": "Smart Contracts" }
+          { "name": "eUTXO 모델" },
+          { "name": "Sigma 프로토콜" },
+          { "name": "블록체인 개발" },
+          { "name": "스마트 컨트랙트" }
         ]
       },
       "itemList": {
-        "name": "Ergo Core Technologies",
-        "description": "Index of Ergo blockchain technologies and features for developers"
+        "name": "Ergo 핵심 기술",
+        "description": "개발자를 위한 Ergo 블록체인 기술 및 기능 색인"
       },
       "howTo": {
-        "name": "Start Building on Ergo",
-        "description": "Quick start guide for Ergo blockchain development with Fleet SDK",
+        "name": "Ergo에서 구축 시작하기",
+        "description": "Fleet SDK를 사용한 Ergo 블록체인 개발 빠른 시작 가이드",
         "steps": [
           {
-            "name": "Install Fleet SDK",
-            "text": "Add Fleet SDK to your JavaScript/TypeScript project (npm install @fleet-sdk/core).",
+            "name": "Fleet SDK 설치",
+            "text": "JavaScript/TypeScript 프로젝트에 Fleet SDK를 추가하세요 (npm install @fleet-sdk/core).",
             "url": "https://fleet-sdk.github.io/docs/"
           },
           {
-            "name": "Connect to Ergo testnet",
-            "text": "Connect to Ergo testnet and get test ERG from the faucet to start experimenting.",
+            "name": "Ergo 테스트넷 연결",
+            "text": "Ergo 테스트넷에 연결하고 faucet에서 테스트 ERG를 받아 실험을 시작하세요.",
             "url": "https://testnet.ergofaucet.org/"
           },
           {
-            "name": "Build your first transaction",
-            "text": "Create, sign, and submit your first Ergo transaction with Fleet SDK.",
+            "name": "첫 번째 거래 구축",
+            "text": "Fleet SDK로 첫 번째 Ergo 거래를 생성, 서명 및 제출하세요.",
             "url": "/patterns"
           },
           {
-            "name": "Deploy a smart contract",
-            "text": "Write ErgoScript and deploy contracts to testnet to verify behavior end-to-end.",
+            "name": "스마트 컨트랙트 배포",
+            "text": "ErgoScript를 작성하고 테스트넷에 컨트랙트를 배포하여 엔드투엔드 동작을 검증하세요.",
             "url": "/learn/ergoscript"
           },
           {
-            "name": "Join the developer community",
-            "text": "Join Discord to get help, feedback, and connect with other builders.",
+            "name": "개발자 커뮤니티 참여",
+            "text": "Discord에 참여하여 도움, 피드백을 받고 다른 빌더들과 연결하세요.",
             "url": "https://discord.gg/ergo-platform-668903786361651200"
           }
         ]
       }
     },
     "hero": {
-      "badge": "Developer Hub",
-      "title": "Build DeFi that doesn't break",
-      "subtitle": "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs. Built-in privacy.",
+      "badge": "개발자 허브",
+      "title": "망가지지 않는 DeFi를 구축하세요",
+      "subtitle": "Bitcoin 수준의 보안이 스마트 컨트랙트를 만납니다. 재진입 공격 없음. 숨겨진 상태 없음. 예측 가능한 비용. 내장된 프라이버시.",
       "buttons": {
-        "startLearning": "Start Learning",
-        "browsePatterns": "Browse Patterns",
-        "docs": "Docs"
+        "startLearning": "학습 시작",
+        "browsePatterns": "패턴 탐색",
+        "docs": "문서"
       }
     },
     "whyBuild": {
-      "title": "Why Build on",
-      "titleHighlight": "Ergo",
+      "title": "왜",
+      "titleHighlight": "Ergo에서 구축하나요",
       "items": [
         {
-          "title": "eUTXO Model: No Surprises",
-          "description": "No reentrancy attacks. No MEV exploitation. No hidden global state. Know exactly what your contract will cost before execution."
+          "title": "eUTXO 모델: 놀라움 없음",
+          "description": "재진입 공격 없음. MEV 악용 없음. 숨겨진 전역 상태 없음. 실행 전에 컨트랙트 비용을 정확히 알 수 있습니다."
         },
         {
-          "title": "Sigma Protocols: Privacy Without PhD",
-          "description": "Built-in zero-knowledge proofs. Add privacy features without cryptography expertise. Ring signatures, threshold proofs, all native."
+          "title": "Sigma 프로토콜: 박사 학위 없이도 프라이버시",
+          "description": "내장된 영지식 증명. 암호화 전문 지식 없이 프라이버시 기능 추가. 링 서명, 임계값 증명, 모두 네이티브."
         },
         {
-          "title": "Proof-of-Work: No Chain Halts",
-          "description": "No rollbacks. No governance attacks. No validator cartels. Battle-tested security that just works."
+          "title": "Proof-of-Work: 체인 중단 없음",
+          "description": "롤백 없음. 거버넌스 공격 없음. 검증자 카르텔 없음. 그냥 작동하는 실전 테스트된 보안."
         },
         {
-          "title": "Fair Launch: No Corporate BS",
-          "description": "Zero VC premines. Zero foundation tax. Build on a chain where the community actually owns the network."
+          "title": "공정한 출시: 기업 BS 없음",
+          "description": "VC 사전 채굴 없음. 재단 세금 없음. 커뮤니티가 실제로 네트워크를 소유하는 체인에서 구축하세요."
         }
       ]
     },
     "quickStart": {
-      "title": "Quick Start with",
+      "title": "빠른 시작",
       "titleHighlight": "Fleet SDK",
-      "subtitle": "Get from zero to your first Ergo transaction in 3 steps",
-      "readFullDocs": "Read full Fleet SDK documentation",
+      "subtitle": "3단계로 첫 Ergo 거래까지 도달하세요",
+      "readFullDocs": "전체 Fleet SDK 문서 읽기",
       "steps": [
         {
           "step": 1,
-          "title": "Install Fleet SDK",
-          "description": "Add Fleet SDK to your JavaScript/TypeScript project"
+          "title": "Fleet SDK 설치",
+          "description": "JavaScript/TypeScript 프로젝트에 Fleet SDK 추가"
         },
         {
           "step": 2,
-          "title": "Connect to Ergo",
-          "description": "Initialize connection to Ergo network"
+          "title": "Ergo에 연결",
+          "description": "Ergo 네트워크에 연결 초기화"
         },
         {
           "step": 3,
-          "title": "Build Transaction",
-          "description": "Create your first Ergo transaction"
+          "title": "거래 구축",
+          "description": "첫 번째 Ergo 거래 생성"
         }
       ]
     },
     "technologyIndex": {
-      "title": "Technology",
-      "titleHighlight": "Index",
-      "subtitle": "Complete reference to Ergo's core technologies",
-      "viewAll": "View All Technologies",
+      "title": "기술",
+      "titleHighlight": "색인",
+      "subtitle": "Ergo 핵심 기술에 대한 완전한 참조",
+      "viewAll": "모든 기술 보기",
       "items": [
         {
           "slug": "eutxo-model",
-          "title": "eUTXO Model",
-          "description": "Parallel smart contracts"
+          "title": "eUTXO 모델",
+          "description": "병렬 스마트 컨트랙트"
         },
         {
           "slug": "ergoscript",
           "title": "ErgoScript",
-          "description": "Safe smart contracts"
+          "description": "안전한 스마트 컨트랙트"
         },
         {
           "slug": "secure-pow",
           "title": "Autolykos PoW",
-          "description": "ASIC-resistant mining"
+          "description": "ASIC 저항 채굴"
         },
         {
           "slug": "storage-rent",
-          "title": "Storage Rent",
-          "description": "State sustainability"
+          "title": "스토리지 렌트",
+          "description": "상태 지속 가능성"
         },
         {
           "slug": "privacy-features",
-          "title": "Sigma Protocols",
-          "description": "Zero-knowledge proofs"
+          "title": "Sigma 프로토콜",
+          "description": "영지식 증명"
         },
         {
           "slug": "nipopows",
           "title": "NIPoPoWs",
-          "description": "Light clients & bridges"
+          "description": "라이트 클라이언트 & 브리지"
         },
         {
           "slug": "oracle-pools",
-          "title": "Oracle Pools",
-          "description": "Decentralized data feeds"
+          "title": "오라클 풀",
+          "description": "탈중앙화 데이터 피드"
         },
         {
           "slug": "native-tokens",
-          "title": "Native Tokens",
-          "description": "Protocol-level tokens"
+          "title": "네이티브 토큰",
+          "description": "프로토콜 수준 토큰"
         },
         {
           "slug": "babel-fees",
           "title": "Babel Fees",
-          "description": "Pay fees with any token"
+          "description": "모든 토큰으로 수수료 지불"
         },
         {
           "slug": "subblocks",
-          "title": "Subblocks",
-          "description": "Fast confirmations"
+          "title": "서브블록",
+          "description": "빠른 확인"
         },
         {
           "slug": "velvet-forks",
-          "title": "Velvet Forks",
-          "description": "Seamless upgrades"
+          "title": "벨벳 포크",
+          "description": "원활한 업그레이드"
         },
         {
           "slug": "adaptive-emission",
-          "title": "Adaptive Emission",
-          "description": "Monetary policy"
+          "title": "적응형 발행",
+          "description": "통화 정책"
         }
       ]
     },
     "sdks": {
-      "title": "SDKs &",
-      "titleHighlight": "Libraries",
-      "subtitle": "Choose the SDK for your preferred language",
-      "recommended": "Recommended",
+      "title": "SDK &",
+      "titleHighlight": "라이브러리",
+      "subtitle": "선호하는 언어에 맞는 SDK 선택",
+      "recommended": "추천",
       "items": [
         {
           "name": "Fleet SDK",
           "language": "TypeScript / JavaScript",
-          "description": "Most popular SDK for web apps and Node.js projects",
+          "description": "웹 앱 및 Node.js 프로젝트에서 가장 인기 있는 SDK",
           "recommended": true
         },
         {
           "name": "AppKit",
           "language": "Java / Scala / Kotlin",
-          "description": "JVM SDK for backend services and Android apps"
+          "description": "백엔드 서비스 및 Android 앱을 위한 JVM SDK"
         },
         {
           "name": "sigma-rust",
           "language": "Rust",
-          "description": "High-performance Rust implementation"
+          "description": "고성능 Rust 구현"
         },
         {
           "name": "ergpy",
           "language": "Python",
-          "description": "Python wrapper for Ergo development"
+          "description": "Ergo 개발을 위한 Python 래퍼"
         }
       ]
     },
     "learningResources": {
-      "title": "Learning",
-      "titleHighlight": "Resources",
-      "subtitle": "Structured paths to master Ergo development",
-      "explore": "Explore",
+      "title": "학습",
+      "titleHighlight": "리소스",
+      "subtitle": "Ergo 개발을 마스터하기 위한 구조적인 경로",
+      "explore": "탐색",
       "items": [
         {
-          "title": "ErgoScript Course",
-          "description": "Learn the fundamentals of ErgoScript programming",
-          "tag": "Start Here"
+          "title": "ErgoScript 강좌",
+          "description": "ErgoScript 프로그래밍의 기초 배우기",
+          "tag": "여기서 시작"
         },
         {
-          "title": "Dev Patterns",
-          "description": "Copy-paste smart contract blueprints",
-          "tag": "Code"
+          "title": "개발 패턴",
+          "description": "복사-붙여넣기 스마트 컨트랙트 청사진",
+          "tag": "코드"
         },
         {
-          "title": "Playbooks",
-          "description": "Step-by-step development guides",
-          "tag": "Guides"
+          "title": "플레이북",
+          "description": "단계별 개발 가이드",
+          "tag": "가이드"
         },
         {
-          "title": "Glossary",
-          "description": "Key terms and concepts explained",
-          "tag": "Reference"
+          "title": "용어집",
+          "description": "주요 용어 및 개념 설명",
+          "tag": "참조"
         }
       ]
     },
     "devTools": {
-      "title": "Developer",
-      "titleHighlight": "Tools",
+      "title": "개발자",
+      "titleHighlight": "도구",
       "explorer": {
-        "title": "Explorer",
-        "description": "Inspect transactions & blocks"
+        "title": "탐색기",
+        "description": "거래 및 블록 검사"
       },
       "faucet": {
-        "title": "Testnet Faucet",
-        "description": "Get test ERG for development"
+        "title": "테스트넷 Faucet",
+        "description": "개발을 위한 테스트 ERG 받기"
       },
       "vscode": {
-        "title": "VSCode Extension",
-        "description": "ErgoScript syntax highlighting"
+        "title": "VSCode 확장",
+        "description": "ErgoScript 구문 강조 표시"
       }
     },
     "comparison": {
-      "title": "Why Ergo is",
-      "titleHighlight": "Different",
+      "title": "Ergo가",
+      "titleHighlight": "다른 이유",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "기준",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "ergo": "Ergo"
       },
-      "readMore": "Read: eUTXO vs Accounts",
+      "readMore": "읽기: eUTXO vs 계정",
       "rows": [
         {
-          "criterion": "Base Model",
+          "criterion": "기본 모델",
           "bitcoin": "UTXO",
-          "ethereum": "Account",
+          "ethereum": "계정",
           "ergo": "eUTXO"
         },
         {
-          "criterion": "Smart Contract Safety",
-          "bitcoin": "Limited",
-          "ethereum": "Reentrancy risks",
-          "ergo": "Predictable, safer"
+          "criterion": "스마트 컨트랙트 안전성",
+          "bitcoin": "제한적",
+          "ethereum": "재진입 위험",
+          "ergo": "예측 가능하고 더 안전"
         },
         {
-          "criterion": "Privacy Features (L1)",
-          "bitcoin": "Transparent",
-          "ethereum": "Transparent",
-          "ergo": "Optional (Sigma)"
+          "criterion": "프라이버시 기능 (L1)",
+          "bitcoin": "투명",
+          "ethereum": "투명",
+          "ergo": "선택적 (Sigma)"
         },
         {
-          "criterion": "Fees & Predictability",
-          "bitcoin": "Volatile",
-          "ethereum": "High, unpredictable",
-          "ergo": "Low, predictable"
+          "criterion": "수수료 및 예측 가능성",
+          "bitcoin": "변동적",
+          "ethereum": "높고 예측 불가",
+          "ergo": "낮고 예측 가능"
         }
       ]
     },
     "networkHealth": {
-      "title": "Live Network",
-      "titleHighlight": "Health",
-      "subtitle": "Stable base layer = reliable smart contracts",
+      "title": "실시간 네트워크",
+      "titleHighlight": "상태",
+      "subtitle": "안정적인 기본 레이어 = 신뢰할 수 있는 스마트 컨트랙트",
       "metrics": {
-        "hashrate": "Hashrate",
-        "txDay": "TX/Day",
-        "nodes": "Nodes",
+        "hashrate": "해시레이트",
+        "txDay": "일일 TX",
+        "nodes": "노드",
         "tvl": "TVL",
-        "supply": "Supply",
-        "emission": "Emission"
+        "supply": "공급량",
+        "emission": "발행"
       },
-      "emissionLeft": "{amount}M left"
+      "emissionLeft": "{amount}M 남음"
     },
     "community": {
-      "title": "Join the",
-      "titleHighlight": "Community",
-      "subtitle": "Get help from core developers and connect with other builders",
+      "title": "커뮤니티에",
+      "titleHighlight": "참여하세요",
+      "subtitle": "핵심 개발자의 도움을 받고 다른 빌더들과 연결하세요",
       "discord": {
-        "title": "Developer Discord",
-        "subtitle": "Real-time support",
-        "description": "Get direct help from core developers in dedicated #dev channels."
+        "title": "개발자 Discord",
+        "subtitle": "실시간 지원",
+        "description": "전용 #dev 채널에서 핵심 개발자로부터 직접 도움을 받으세요."
       },
       "github": {
         "title": "GitHub",
-        "subtitle": "Open source",
-        "description": "Explore the codebase and contribute to core protocols."
+        "subtitle": "오픈 소스",
+        "description": "코드베이스를 탐색하고 핵심 프로토콜에 기여하세요."
       }
     },
     "faq": {
-      "title": "Developer",
+      "title": "개발자",
       "titleHighlight": "FAQ",
       "items": [
         {
-          "question": "How do I start building on Ergo?",
-          "answer": "Start by learning ErgoScript fundamentals, set up the Ergo development environment (Scala/JavaScript SDKs), explore example contracts on GitHub, and join the developer Discord for support. The /learn section has structured paths for new developers."
+          "question": "Ergo에서 어떻게 구축을 시작하나요?",
+          "answer": "ErgoScript 기초를 배우고, Ergo 개발 환경 (Scala/JavaScript SDK)을 설정하고, GitHub에서 예제 컨트랙트를 탐색하고, 지원을 위해 개발자 Discord에 참여하세요. /learn 섹션에는 신규 개발자를 위한 구조적인 경로가 있습니다."
         },
         {
-          "question": "What programming languages can I use for Ergo?",
-          "answer": "ErgoScript is the native smart contract language. For app development, use: Scala/Java (Appkit SDK), JavaScript/TypeScript (Fleet SDK), Rust (sigma-rust), or Python (ergpy). Most developers start with Fleet SDK for web apps."
+          "question": "Ergo에 어떤 프로그래밍 언어를 사용할 수 있나요?",
+          "answer": "ErgoScript는 네이티브 스마트 컨트랙트 언어입니다. 앱 개발에는 Scala/Java (Appkit SDK), JavaScript/TypeScript (Fleet SDK), Rust (sigma-rust), Python (ergpy)를 사용하세요. 대부분의 개발자는 웹 앱에 Fleet SDK로 시작합니다."
         },
         {
-          "question": "Is ErgoScript hard to learn?",
-          "answer": "ErgoScript has a learning curve different from Solidity. It's functional and declarative rather than imperative. If you know Scala or functional programming, it's easier. The eUTXO model requires new thinking but prevents entire classes of bugs (no reentrancy)."
+          "question": "ErgoScript는 배우기 어렵나요?",
+          "answer": "ErgoScript는 Solidity와 다른 학습 곡선을 가지고 있습니다. 명령형보다는 함수형 및 선언형입니다. Scala 또는 함수형 프로그래밍을 알고 있다면 더 쉽습니다. eUTXO 모델은 새로운 사고방식이 필요하지만 전체 버그 클래스를 방지합니다 (재진입 없음)."
         },
         {
-          "question": "What makes Ergo different for developers?",
-          "answer": "Ergo offers: eUTXO model (no reentrancy attacks, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design."
+          "question": "개발자에게 Ergo가 다른 점은 무엇인가요?",
+          "answer": "Ergo는 eUTXO 모델 (재진입 공격 없음, 예측 가능한 비용), Sigma 프로토콜 (내장된 프라이버시 기본 요소), NiPoPoWs (라이트 클라이언트), 예측 가능한 ~$0.01 수수료를 제공합니다. 스마트 컨트랙트는 설계에 의해 더 안전합니다."
         },
         {
-          "question": "Where can I find ErgoScript code examples?",
-          "answer": "Check the /patterns page for copy-paste ready contract patterns, /playbooks for step-by-step guides, and docs.ergoplatform.com for the official reference. GitHub repos of ecosystem projects provide real-world examples."
+          "question": "ErgoScript 코드 예제를 어디서 찾을 수 있나요?",
+          "answer": "복사-붙여넣기 준비된 컨트랙트 패턴은 /patterns 페이지를, 단계별 가이드는 /playbooks를, 공식 참조는 docs.ergoplatform.com을 확인하세요. 에코시스템 프로젝트의 GitHub 저장소에서 실제 예제를 제공합니다."
         },
         {
-          "question": "Are there grants for Ergo developers?",
-          "answer": "Yes! The Ergo Foundation offers grants for open-source projects, dApps, tooling, and research. Apply via GitHub or join the developer community to discuss your project first."
+          "question": "Ergo 개발자를 위한 그랜트가 있나요?",
+          "answer": "네! Ergo 재단은 오픈 소스 프로젝트, dApp, 도구 및 연구에 대한 그랜트를 제공합니다. GitHub를 통해 신청하거나 먼저 프로젝트를 논의하기 위해 개발자 커뮤니티에 참여하세요."
         }
       ]
     },
     "cta": {
-      "title": "Ready to Build?",
-      "subtitle": "Start with the ErgoScript course, explore patterns, and join the developer Discord.",
-      "startCourse": "Start ErgoScript Course",
-      "exploreEcosystem": "Explore Ecosystem"
+      "title": "구축할 준비가 되셨나요?",
+      "subtitle": "ErgoScript 강좌로 시작하고, 패턴을 탐색하고, 개발자 Discord에 참여하세요.",
+      "startCourse": "ErgoScript 강좌 시작",
+      "exploreEcosystem": "에코시스템 탐색"
     },
     "emailCapture": {
-      "title": "Developer Updates",
-      "description": "Get notified about new SDKs, ErgoScript features, and ecosystem developments."
+      "title": "개발자 업데이트",
+      "description": "새로운 SDK, ErgoScript 기능 및 에코시스템 발전에 대한 알림을 받으세요."
     }
   },
   "docs": {
-    "title": "Documentation",
-    "subtitle": "Technical documentation and guides",
-    "description": "Comprehensive documentation for developers and users.",
+    "title": "문서",
+    "subtitle": "기술 문서 및 가이드",
+    "description": "개발자와 사용자를 위한 종합 문서.",
     "sections": {
-      "gettingStarted": "Getting Started",
-      "apiReference": "API Reference",
-      "tutorials": "Tutorials",
-      "examples": "Examples"
+      "gettingStarted": "시작하기",
+      "apiReference": "API 참조",
+      "tutorials": "튜토리얼",
+      "examples": "예제"
     }
   },
   "docsMenu": {
     "introduction": {
-      "title": "Introduction",
-      "whyErgo": "Why Ergo",
-      "keyFeatures": "Key Features",
-      "roadmap": "Roadmap",
-      "researchWhitepapers": "Research & Whitepapers",
-      "entities": "Entities",
-      "wallets": "Wallets",
-      "resources": "Resources",
-      "contribute": "Contribute",
-      "events": "Events",
-      "glossary": "Glossary",
+      "title": "소개",
+      "whyErgo": "왜 Ergo인가",
+      "keyFeatures": "주요 기능",
+      "roadmap": "로드맵",
+      "researchWhitepapers": "연구 & 백서",
+      "entities": "주체",
+      "wallets": "지갑",
+      "resources": "리소스",
+      "contribute": "기여",
+      "events": "이벤트",
+      "glossary": "용어집",
       "faq": "FAQ"
     },
     "ecosystem": {
-      "title": "Ecosystem",
-      "subtitle": "Discover the Ergo ecosystem",
-      "description": "Explore the growing Ergo ecosystem",
-      "infrastructure": "Infrastructure",
-      "applications": "Applications",
-      "financial": "Financial",
-      "nfts": "NFTs",
+      "title": "에코시스템",
+      "subtitle": "Ergo 에코시스템 발견",
+      "description": "성장하는 Ergo 에코시스템 탐색",
+      "infrastructure": "인프라",
+      "applications": "애플리케이션",
+      "financial": "금융",
+      "nfts": "NFT",
       "seo": {
-        "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
-        "description": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
-        "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
-        "ogTitle": "Ergo Ecosystem",
-        "ogDescription": "Directory of Ergo dApps, wallets, infrastructure and tools."
+        "title": "Ergo 에코시스템 — dApp, 지갑, 도구, DeFi",
+        "description": "Ergo 에코시스템 탐색: 탈중앙화 앱, 지갑, 프라이버시 도구, DeFi 프로토콜, SDK 및 인프라.",
+        "keywords": "Ergo 에코시스템, DeFi, NFT, dApp, 블록체인 프로젝트",
+        "ogTitle": "Ergo 에코시스템",
+        "ogDescription": "Ergo dApp, 지갑, 인프라 및 도구 디렉토리."
       },
       "filters": {
-        "all": "All",
+        "all": "전체",
         "defi": "DeFi",
-        "privacy": "Privacy",
-        "infrastructure": "Infrastructure",
-        "nft": "NFTs",
-        "gaming": "Gaming",
-        "wallets": "Wallets",
-        "tools": "Tools",
-        "dao": "DAOs",
-        "oracles": "Oracles",
-        "stable": "Stable"
+        "privacy": "프라이버시",
+        "infrastructure": "인프라",
+        "nft": "NFT",
+        "gaming": "게이밍",
+        "wallets": "지갑",
+        "tools": "도구",
+        "dao": "DAO",
+        "oracles": "오라클",
+        "stable": "스테이블"
       },
       "search": {
-        "placeholder": "Search projects...",
-        "resultsCount": "{count} projects"
+        "placeholder": "프로젝트 검색...",
+        "resultsCount": "{count}개 프로젝트"
       },
       "projects": {
         "rosenBridge": {
           "title": "Rosen Bridge",
-          "subtitle": "Connecting Ergo's Ecosystem",
-          "description": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+          "subtitle": "Ergo 에코시스템 연결",
+          "description": "Rosen Bridge로 Ergo와 Bitcoin, Ethereum, Cardano, BSC 같은 주요 블록체인 간에 자산을 원활하게 이전하세요. 안전한 Watcher & Guard 시스템으로 크로스체인 유동성과 새로운 DeFi 가능성을 열어드립니다.",
           "stats": {
             "crossChain": {
-              "label": "Cross-Chain",
-              "value": "BTC, ETH, ADA, BSC & more"
+              "label": "크로스체인",
+              "value": "BTC, ETH, ADA, BSC 등"
             },
             "secureBridge": {
-              "label": "Secure Bridge",
-              "value": "Watcher & Guard Model"
+              "label": "안전한 브리지",
+              "value": "Watcher & Guard 모델"
             },
             "unlockLiquidity": {
-              "label": "Unlock Liquidity",
-              "value": "Access New Markets"
+              "label": "유동성 잠금 해제",
+              "value": "새로운 시장 접근"
             }
           },
-          "cta": "VISIT ROSEN BRIDGE"
+          "cta": "ROSEN BRIDGE 방문"
         },
         "ergoMixer": {
           "title": "ErgoMixer",
-          "subtitle": "Non-Custodial Privacy Protocol",
-          "description": "Mix your ERG and tokens privately using zero-knowledge proofs. ErgoMixer is the first non-interactive, non-custodial mixer in the crypto space.",
+          "subtitle": "비수탁 프라이버시 프로토콜",
+          "description": "영지식 증명을 사용하여 ERG와 토큰을 비공개로 믹싱하세요. ErgoMixer는 크립토 공간에서 최초의 비대화형 비수탁 믹서입니다.",
           "stats": {
             "mixedVolume": {
-              "label": "Mixed Volume",
+              "label": "믹싱된 볼륨",
               "value": "10,000+ ERG"
             },
             "privacyScore": {
-              "label": "Privacy Score",
+              "label": "프라이버시 점수",
               "value": "99.9%"
             },
             "transactions": {
-              "label": "Transactions",
+              "label": "거래",
               "value": "5,000+"
             }
           },
-          "cta": "LEARN ABOUT PRIVACY ON ERGO"
+          "cta": "ERGO에서 프라이버시 알아보기"
         },
         "sigmaUSD": {
           "title": "SigmaUSD",
-          "subtitle": "Algorithmic Stablecoin Protocol",
-          "description": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+          "subtitle": "알고리즘 스테이블코인 프로토콜",
+          "description": "SigmaUSD는 Ergo 위에 구축된 암호화폐 담보 알고리즘 스테이블코인 프로토콜입니다. 전통적인 은행 시스템이나 중앙화된 준비금에 의존하지 않고 안정적인 가치를 생성하는 탈중앙화 방법을 제공합니다.",
           "stats": {
             "stabilityScore": {
-              "label": "Stability Score",
+              "label": "안정성 점수",
               "value": "99.8%"
             },
             "totalSupply": {
-              "label": "Total Supply",
+              "label": "총 공급량",
               "value": "$2.5M+"
             },
             "collateralRatio": {
-              "label": "Collateral Ratio",
+              "label": "담보 비율",
               "value": "400-800%"
             }
           },
-          "cta": "EXPLORE SIGMAUSD"
+          "cta": "SIGMAUSD 탐색"
         },
         "gaming": {
-          "title": "Ergo Gaming Ecosystem",
-          "subtitle": "Blockchain Gaming Platform",
-          "description": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+          "title": "Ergo 게이밍 에코시스템",
+          "subtitle": "블록체인 게이밍 플랫폼",
+          "description": "진정한 자산 소유권, 플레이-투-언 메커니즘, 탈중앙화 토너먼트로 게이밍의 미래를 경험하세요. Ergo의 효율적이고 안전한 블록체인 인프라로 구동됩니다.",
           "stats": {
             "activeGames": {
-              "label": "Active Games",
+              "label": "활성 게임",
               "value": "12+"
             },
             "players": {
-              "label": "Players",
+              "label": "플레이어",
               "value": "5,000+"
             },
             "rewardsPaid": {
-              "label": "Rewards Paid",
+              "label": "지급된 보상",
               "value": "$50K+"
             }
           },
-          "cta": "START GAMING ON ERGO"
+          "cta": "ERGO에서 게이밍 시작"
         }
       },
-      "privacy": "Privacy",
+      "privacy": "프라이버시",
       "ai": "AI",
-      "daos": "DAOs",
-      "tooling": "Tooling",
-      "standards": "Standards",
+      "daos": "DAO",
+      "tooling": "도구",
+      "standards": "표준",
       "projectPage": {
         "breadcrumbs": {
-          "ecosystem": "Ecosystem"
+          "ecosystem": "에코시스템"
         },
         "buttons": {
-          "visitProject": "Visit project",
+          "visitProject": "프로젝트 방문",
           "github": "GitHub",
           "twitter": "Twitter",
-          "docs": "Docs",
-          "community": "Community",
-          "backToEcosystem": "Back to Ecosystem"
+          "docs": "문서",
+          "community": "커뮤니티",
+          "backToEcosystem": "에코시스템으로 돌아가기"
         },
         "status": {
-          "operational": "Operational",
-          "testing": "Testing",
-          "prototype": "Prototype",
-          "notOperating": "Not operating"
+          "operational": "운영 중",
+          "testing": "테스트 중",
+          "prototype": "프로토타입",
+          "notOperating": "운영 중단"
         },
         "sections": {
-          "keyFeatures": "Key Features",
-          "builtWith": "Built With Ergo Technology",
-          "relatedArticles": "Related Articles",
-          "viewAll": "View all",
-          "faq": "Frequently Asked Questions",
-          "relatedProjects": "Related {category} Projects",
-          "minRead": "{time} min read"
+          "keyFeatures": "주요 기능",
+          "builtWith": "Ergo 기술로 구축",
+          "relatedArticles": "관련 기사",
+          "viewAll": "전체 보기",
+          "faq": "자주 묻는 질문",
+          "relatedProjects": "관련 {category} 프로젝트",
+          "minRead": "{time}분 읽기"
         },
         "cta": {
-          "title": "Explore More dApps",
-          "description": "Discover the full Ergo ecosystem with DeFi, wallets, tools, and more.",
-          "primaryButton": "View All Projects",
-          "secondaryButton": "Start Building"
+          "title": "더 많은 dApp 탐색",
+          "description": "DeFi, 지갑, 도구 등으로 완전한 Ergo 에코시스템을 발견하세요.",
+          "primaryButton": "모든 프로젝트 보기",
+          "secondaryButton": "구축 시작"
         }
       },
       "grants": {
-        "title": "Ergo Grants Program",
-        "subtitle": "Funding for Blockchain Projects",
-        "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-        "lastUpdated": "Last updated",
+        "title": "Ergo 그랜트 프로그램",
+        "subtitle": "블록체인 프로젝트를 위한 자금 지원",
+        "description": "Ergo 프로젝트를 위한 자금을 받으세요. 개발자, 연구원, 커뮤니티 빌더를 위한 그랜트. Ergo 블록체인에서 DeFi, 인프라, 도구 및 애플리케이션을 구축하세요.",
+        "lastUpdated": "마지막 업데이트",
         "buttons": {
-          "applyNow": "Apply Now",
-          "viewProjects": "View Projects"
+          "applyNow": "지금 신청",
+          "viewProjects": "프로젝트 보기"
         },
         "features": {
-          "title": "What We Fund",
-          "subtitle": "Supporting innovation and development in the Ergo ecosystem",
+          "title": "우리가 지원하는 것",
+          "subtitle": "Ergo 에코시스템의 혁신과 개발을 지원합니다",
           "funding": {
-            "title": "Developer Support",
-            "description": "Funding for innovative dApps, tools, and infrastructure projects"
+            "title": "개발자 지원",
+            "description": "혁신적인 dApp, 도구 및 인프라 프로젝트를 위한 자금 지원"
           },
           "research": {
-            "title": "Research Funding",
-            "description": "Support for academic research and protocol improvements"
+            "title": "연구 자금",
+            "description": "학술 연구 및 프로토콜 개선을 위한 지원"
           },
           "community": {
-            "title": "Community Projects",
-            "description": "Grants for community-driven initiatives and educational content"
+            "title": "커뮤니티 프로젝트",
+            "description": "커뮤니티 주도 이니셔티브 및 교육 콘텐츠를 위한 그랜트"
           },
           "innovation": {
-            "title": "Innovation Grants",
-            "description": "Special funding for breakthrough ideas and experimental projects"
+            "title": "혁신 그랜트",
+            "description": "획기적인 아이디어 및 실험적 프로젝트를 위한 특별 자금"
           }
         },
         "cta": {
-          "title": "Ready to Build on Ergo?",
-          "subtitle": "Start preparing your project proposal and join our community to stay updated",
+          "title": "Ergo에서 구축할 준비가 되셨나요?",
+          "subtitle": "프로젝트 제안을 준비하고 최신 정보를 받으려면 커뮤니티에 참여하세요",
           "buttons": {
-            "applyGrant": "Apply for Grant",
-            "joinCommunity": "Join Community"
+            "applyGrant": "그랜트 신청",
+            "joinCommunity": "커뮤니티 참여"
           }
         },
         "seo": {
-          "title": "Ergo Grants Program | Funding for Blockchain Projects",
-          "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-          "ogTitle": "Ergo Grants - Fund Your Blockchain Innovation",
-          "ogDescription": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
-          "twitterTitle": "Ergo Grants Program | Get Funded",
-          "twitterDescription": "Funding for developers building on Ergo. Apply for grants today."
+          "title": "Ergo 그랜트 프로그램 | 블록체인 프로젝트를 위한 자금",
+          "description": "Ergo 프로젝트를 위한 자금을 받으세요. 개발자, 연구원, 커뮤니티 빌더를 위한 그랜트. Ergo 블록체인에서 DeFi, 인프라, 도구 및 애플리케이션을 구축하세요.",
+          "ogTitle": "Ergo 그랜트 - 블록체인 혁신에 자금 지원",
+          "ogDescription": "Ergo에서 구축하기 위한 그랜트를 신청하세요. 개발자, 연구원 및 커뮤니티 이니셔티브를 위한 지원.",
+          "twitterTitle": "Ergo 그랜트 프로그램 | 자금 받기",
+          "twitterDescription": "Ergo에서 구축하는 개발자를 위한 자금 지원. 오늘 그랜트를 신청하세요."
         },
-        "whatToExpect": "What to Expect",
-        "grantsFeatures": "Grants Program Features",
-        "supportingInnovation": "Supporting innovation and development in the Ergo ecosystem"
+        "whatToExpect": "예상 사항",
+        "grantsFeatures": "그랜트 프로그램 기능",
+        "supportingInnovation": "Ergo 에코시스템의 혁신과 개발을 지원합니다"
       },
       "infographicPage": {
         "breadcrumbs": {
-          "infographics": "Infographics"
+          "infographics": "인포그래픽"
         },
         "meta": {
-          "minRead": "{time} min read"
+          "minRead": "{time}분 읽기"
         },
         "image": {
-          "clickToEnlarge": "Click to Enlarge",
-          "fullSize": "Full Size"
+          "clickToEnlarge": "클릭하여 확대",
+          "fullSize": "전체 크기"
         },
         "share": {
-          "title": "Share this infographic",
-          "subtitle": "help others discover Ergo",
+          "title": "이 인포그래픽 공유",
+          "subtitle": "다른 사람들이 Ergo를 발견하도록 도와주세요",
           "telegram": "Telegram",
           "pinterest": "Pinterest",
-          "download": "Download",
-          "copyLink": "Copy link",
-          "copied": "Copied!"
+          "download": "다운로드",
+          "copyLink": "링크 복사",
+          "copied": "복사됨!"
         },
         "sections": {
-          "about": "About This Infographic",
-          "systemsCompared": "Systems Compared",
-          "keyPoints": "Key Points",
-          "howToRead": "How to Read This Infographic",
-          "relatedTopics": "Related Topics"
+          "about": "이 인포그래픽에 대해",
+          "systemsCompared": "비교된 시스템",
+          "keyPoints": "주요 포인트",
+          "howToRead": "이 인포그래픽을 읽는 방법",
+          "relatedTopics": "관련 주제"
         },
         "cta": {
-          "title": "Explore More Ergo Infographics",
-          "description": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
-          "button": "Browse All Infographics"
+          "title": "더 많은 Ergo 인포그래픽 탐색",
+          "description": "Ergo의 PoW, eUTXO 스마트 컨트랙트, 스토리지 렌트, 프라이버시 등에 관한 시각적 가이드를 발견하세요.",
+          "button": "모든 인포그래픽 탐색"
         }
       },
       "map": {
-        "title": "Ergo Ecosystem Map",
-        "subtitle": "Interactive DeFi & dApp Directory",
-        "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+        "title": "Ergo 에코시스템 맵",
+        "subtitle": "인터랙티브 DeFi & dApp 디렉토리",
+        "description": "Ergo 에코시스템을 시각적으로 탐색하세요. DeFi 프로토콜, NFT 플랫폼, 지갑, 인프라 및 개발자 도구의 인터랙티브 맵. 50개 이상의 활성 프로젝트를 발견하세요.",
         "seo": {
-          "title": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
-          "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
-          "ogTitle": "Interactive Ergo Ecosystem Map | 50+ Projects",
-          "ogDescription": "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
-          "twitterTitle": "Ergo Ecosystem Map | Visual Project Explorer",
-          "twitterDescription": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure."
+          "title": "Ergo 에코시스템 맵 | 인터랙티브 DeFi & dApp 디렉토리",
+          "description": "Ergo 에코시스템을 시각적으로 탐색하세요. DeFi 프로토콜, NFT 플랫폼, 지갑, 인프라 및 개발자 도구의 인터랙티브 맵. 50개 이상의 활성 프로젝트를 발견하세요.",
+          "ogTitle": "인터랙티브 Ergo 에코시스템 맵 | 50개 이상 프로젝트",
+          "ogDescription": "모든 Ergo 프로젝트의 시각적 탐색. DeFi, NFT, 지갑, 인프라 맵.",
+          "twitterTitle": "Ergo 에코시스템 맵 | 시각적 프로젝트 탐색기",
+          "twitterDescription": "50개 이상 Ergo 프로젝트의 인터랙티브 시각화. DeFi, NFT, 인프라 탐색."
         }
       }
     },
     "developers": {
-      "title": "Developers",
-      "gettingStarted": "Getting Started",
-      "ergoscriptLanguages": "ErgoScript Languages",
-      "dataModelApis": "Data Model & APIs",
-      "cryptographicPrimitives": "Cryptographic Primitives",
-      "infrastructure": "Infrastructure",
-      "tooling": "Tooling",
-      "tutorials": "Tutorials",
-      "bountiesGrants": "Bounties & Grants",
-      "communitySupport": "Community Support",
-      "students": "Students",
-      "resources": "Resources"
+      "title": "개발자",
+      "gettingStarted": "시작하기",
+      "ergoscriptLanguages": "ErgoScript 언어",
+      "dataModelApis": "데이터 모델 & API",
+      "cryptographicPrimitives": "암호화 기본 요소",
+      "infrastructure": "인프라",
+      "tooling": "도구",
+      "tutorials": "튜토리얼",
+      "bountiesGrants": "바운티 & 그랜트",
+      "communitySupport": "커뮤니티 지원",
+      "students": "학생",
+      "resources": "리소스"
     },
     "miners": {
-      "title": "Miners",
-      "miningGuides": "Mining Guides",
-      "poolMining": "Pool Mining",
-      "soloMining": "Solo Mining",
-      "hardware": "Hardware",
-      "software": "Software",
-      "troubleshooting": "Troubleshooting"
+      "title": "채굴자",
+      "miningGuides": "채굴 가이드",
+      "poolMining": "풀 채굴",
+      "soloMining": "솔로 채굴",
+      "hardware": "하드웨어",
+      "software": "소프트웨어",
+      "troubleshooting": "문제 해결"
     },
     "features": {
       "ergoscript": {
         "title": "ErgoScript",
-        "description": "Secure, declarative language for programmable money",
+        "description": "프로그래밍 가능한 화폐를 위한 안전하고 선언적인 언어",
         "details": {
           "verification": {
-            "title": "Formal Verification",
-            "description": "Mathematically provable contract behavior"
+            "title": "공식 검증",
+            "description": "수학적으로 증명 가능한 컨트랙트 동작"
           },
           "privacy": {
-            "title": "Built-in Privacy",
-            "description": "Zero-knowledge proofs and confidential transactions"
+            "title": "내장된 프라이버시",
+            "description": "영지식 증명 및 기밀 거래"
           },
           "safety": {
-            "title": "Type Safety",
-            "description": "Compile-time guarantees prevent runtime errors"
+            "title": "타입 안전성",
+            "description": "컴파일 타임 보증으로 런타임 오류 방지"
           }
         }
       },
       "autolykos": {
         "title": "Autolykos",
-        "description": "ASIC-resistant Proof-of-Work algorithm",
+        "description": "ASIC 저항 Proof-of-Work 알고리즘",
         "details": {
           "efficiency": {
-            "title": "Energy Efficient",
-            "description": "More efficient than traditional PoW algorithms"
+            "title": "에너지 효율적",
+            "description": "전통적인 PoW 알고리즘보다 더 효율적"
           },
           "solo": {
-            "title": "Solo Mining Friendly",
-            "description": "Designed for individual miners, not just pools"
+            "title": "솔로 채굴 친화적",
+            "description": "풀만이 아닌 개인 채굴자를 위해 설계됨"
           },
           "asic": {
-            "title": "ASIC Resistant",
-            "description": "Memory-hard algorithm prevents ASIC dominance"
+            "title": "ASIC 저항",
+            "description": "메모리 하드 알고리즘으로 ASIC 지배 방지"
           }
         }
       },
       "eutxo": {
-        "title": "Extended UTXO",
-        "description": "Parallel smart contracts with Bitcoin-like security",
+        "title": "확장된 UTXO",
+        "description": "Bitcoin 수준의 보안을 갖춘 병렬 스마트 컨트랙트",
         "details": {
           "parallel": {
-            "title": "Parallel Execution",
-            "description": "Multiple contracts execute simultaneously without conflicts"
+            "title": "병렬 실행",
+            "description": "여러 컨트랙트가 충돌 없이 동시에 실행됨"
           },
           "composability": {
-            "title": "Composability",
-            "description": "Contracts can be combined like Lego blocks"
+            "title": "구성 가능성",
+            "description": "레고 블록처럼 컨트랙트를 결합할 수 있음"
           },
           "security": {
-            "title": "Security",
-            "description": "Eliminates reentrancy attacks and global state issues"
+            "title": "보안",
+            "description": "재진입 공격 및 전역 상태 문제 제거"
           }
         }
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Sustainable blockchain economics",
+        "title": "스토리지 렌트",
+        "description": "지속 가능한 블록체인 경제학",
         "details": {
           "sustainable": {
-            "title": "Sustainable Growth",
-            "description": "Prevents unlimited blockchain growth"
+            "title": "지속 가능한 성장",
+            "description": "무제한 블록체인 성장 방지"
           },
           "rewards": {
-            "title": "Perpetual Rewards",
-            "description": "Miners earn fees even after emission ends"
+            "title": "지속적인 보상",
+            "description": "발행이 끝난 후에도 채굴자가 수수료를 획득"
           },
           "prevention": {
-            "title": "Bloat Prevention",
-            "description": "Automatic cleanup of abandoned funds"
+            "title": "비대화 방지",
+            "description": "버려진 자금의 자동 정리"
           }
         }
       },
       "sigmaProtocols": {
-        "title": "Sigma Protocols",
-        "description": "Advanced cryptographic primitives",
+        "title": "Sigma 프로토콜",
+        "description": "고급 암호화 기본 요소",
         "details": {
           "optionalPrivacy": {
-            "title": "Optional Privacy",
-            "description": "Choose between transparent and private transactions"
+            "title": "선택적 프라이버시",
+            "description": "투명 거래와 프라이빗 거래 중 선택"
           },
           "advancedSecurity": {
-            "title": "Advanced Security",
-            "description": "Zero-knowledge proofs and threshold signatures"
+            "title": "고급 보안",
+            "description": "영지식 증명 및 임계값 서명"
           },
           "developerFriendly": {
-            "title": "Developer Friendly",
-            "description": "Built-in cryptographic tools for dApps"
+            "title": "개발자 친화적",
+            "description": "dApp을 위한 내장된 암호화 도구"
           }
         }
       },
       "nipopows": {
         "title": "NIPoPoWs",
-        "description": "Non-Interactive Proofs of Proof-of-Work",
+        "description": "작업 증명의 비대화형 증명",
         "details": {
           "instantMobileSync": {
-            "title": "Instant Mobile Sync",
-            "description": "Light clients sync in seconds, not hours"
+            "title": "즉각적인 모바일 동기화",
+            "description": "라이트 클라이언트가 몇 시간이 아닌 몇 초 만에 동기화됨"
           },
           "trustlessBridges": {
-            "title": "Trustless Bridges",
-            "description": "Cross-chain bridges without trusted third parties"
+            "title": "신뢰 없는 브리지",
+            "description": "신뢰할 수 있는 제3자 없는 크로스체인 브리지"
           },
           "cryptographicSecurity": {
-            "title": "Cryptographic Security",
-            "description": "Mathematically proven security guarantees"
+            "title": "암호화 보안",
+            "description": "수학적으로 증명된 보안 보증"
           }
         }
       },
       "subblocks": {
-        "title": "Subblocks",
-        "description": "Sub-second confirmations with L1 security",
+        "title": "서브블록",
+        "description": "L1 보안을 갖춘 1초 미만 확인",
         "details": {
           "subSecondConfirmations": {
-            "title": "Sub-Second Confirmations",
-            "description": "Payments confirm in milliseconds"
+            "title": "1초 미만 확인",
+            "description": "결제가 밀리초 만에 확인됨"
           },
           "layer1Security": {
-            "title": "Layer 1 Security",
-            "description": "Same security as the main blockchain"
+            "title": "레이어 1 보안",
+            "description": "메인 블록체인과 동일한 보안"
           },
           "seamlessIntegration": {
-            "title": "Seamless Integration",
-            "description": "Works with existing Ergo infrastructure"
+            "title": "원활한 통합",
+            "description": "기존 Ergo 인프라와 함께 작동"
           }
         }
       },
       "nativeTokens": {
-        "title": "Native Tokens",
-        "description": "First-class digital assets",
+        "title": "네이티브 토큰",
+        "description": "일급 디지털 자산",
         "details": {
           "oneClickCreation": {
-            "title": "One-Click Creation",
-            "description": "Issue tokens in a single transaction"
+            "title": "원클릭 생성",
+            "description": "단일 거래로 토큰 발행"
           },
           "defiReady": {
-            "title": "DeFi Ready",
-            "description": "Native compatibility with all DeFi protocols"
+            "title": "DeFi 준비됨",
+            "description": "모든 DeFi 프로토콜과 네이티브 호환"
           },
           "trueNativeAssets": {
-            "title": "True Native Assets",
-            "description": "Protocol-level security, not contract-based"
+            "title": "진정한 네이티브 자산",
+            "description": "컨트랙트 기반이 아닌 프로토콜 수준 보안"
           }
         }
       },
       "oraclePools": {
-        "title": "Oracle Pools",
-        "description": "Decentralized data feeds",
+        "title": "오라클 풀",
+        "description": "탈중앙화 데이터 피드",
         "details": {
           "reliablePriceFeeds": {
-            "title": "Reliable Price Feeds",
-            "description": "Accurate, tamper-proof price data"
+            "title": "신뢰할 수 있는 가격 피드",
+            "description": "정확하고 변조 방지된 가격 데이터"
           },
           "universalCompatibility": {
-            "title": "Universal Compatibility",
-            "description": "Works with any smart contract"
+            "title": "범용 호환성",
+            "description": "모든 스마트 컨트랙트와 작동"
           },
           "fullyDecentralized": {
-            "title": "Fully Decentralized",
-            "description": "No single point of failure or control"
+            "title": "완전히 탈중앙화",
+            "description": "단일 실패 지점 또는 통제 없음"
           }
         }
       },
       "velvetForks": {
-        "title": "Velvet Forks",
-        "description": "Smooth protocol upgrades",
+        "title": "벨벳 포크",
+        "description": "원활한 프로토콜 업그레이드",
         "details": {
           "backwardCompatible": {
-            "title": "Backward Compatible",
-            "description": "Existing contracts continue working"
+            "title": "하위 호환",
+            "description": "기존 컨트랙트가 계속 작동"
           },
           "futureProof": {
-            "title": "Future Proof",
-            "description": "Enables gradual adoption of new features"
+            "title": "미래 지향적",
+            "description": "새로운 기능의 점진적 채택 가능"
           },
           "gradualAdoption": {
-            "title": "Gradual Adoption",
-            "description": "Changes activate over time, not instantly"
+            "title": "점진적 채택",
+            "description": "변경 사항이 즉각적이 아닌 시간이 지남에 따라 활성화"
           }
         }
       },
       "adaptiveEmission": {
-        "title": "Adaptive Emission",
-        "description": "Flexible monetary policy",
+        "title": "적응형 발행",
+        "description": "유연한 통화 정책",
         "details": {
           "parameterTuning": {
-            "title": "Parameter Tuning",
-            "description": "Community can adjust emission parameters"
+            "title": "매개변수 조정",
+            "description": "커뮤니티가 발행 매개변수를 조정할 수 있음"
           },
           "economicFlexibility": {
-            "title": "Economic Flexibility",
-            "description": "Respond to changing economic conditions"
+            "title": "경제적 유연성",
+            "description": "변화하는 경제 조건에 대응"
           },
           "communityInput": {
-            "title": "Community Input",
-            "description": "Democratic governance of monetary policy"
+            "title": "커뮤니티 의견",
+            "description": "통화 정책의 민주적 거버넌스"
           }
         }
       }
     },
     "map": {
-      "title": "Technology Architecture Map",
-      "subtitle": "Interactive visualization of how Ergo's technologies work together",
+      "title": "기술 아키텍처 맵",
+      "subtitle": "Ergo의 기술이 어떻게 함께 작동하는지에 대한 인터랙티브 시각화",
       "seo": {
-        "title": "Ergo Technology Map | Interactive Blockchain Architecture Visualization",
-        "description": "Explore Ergo's technology ecosystem through an interactive map. See how ErgoScript, Autolykos, eUTXO, Sigma Protocols, and other components connect to create a powerful blockchain platform.",
-        "keywords": "ergo technology map, blockchain architecture, interactive visualization, ergoscript connections, technology ecosystem, blockchain components",
-        "ogTitle": "Ergo Technology Map - Interactive Architecture Overview",
-        "ogDescription": "Visualize how Ergo's advanced technologies connect and interact in our comprehensive technology map.",
-        "ogAlt": "Ergo Technology Architecture Map",
-        "twitterTitle": "Explore Ergo's Technology Map",
-        "twitterDescription": "Interactive visualization of Ergo's blockchain architecture and component connections."
+        "title": "Ergo 기술 맵 | 인터랙티브 블록체인 아키텍처 시각화",
+        "description": "인터랙티브 맵을 통해 Ergo의 기술 에코시스템을 탐색하세요. ErgoScript, Autolykos, eUTXO, Sigma 프로토콜 및 기타 구성 요소가 어떻게 연결되어 강력한 블록체인 플랫폼을 만드는지 확인하세요.",
+        "keywords": "ergo 기술 맵, 블록체인 아키텍처, 인터랙티브 시각화, ergoscript 연결, 기술 에코시스템, 블록체인 구성 요소",
+        "ogTitle": "Ergo 기술 맵 - 인터랙티브 아키텍처 개요",
+        "ogDescription": "종합적인 기술 맵에서 Ergo의 고급 기술이 어떻게 연결되고 상호작용하는지 시각화하세요.",
+        "ogAlt": "Ergo 기술 아키텍처 맵",
+        "twitterTitle": "Ergo의 기술 맵 탐색",
+        "twitterDescription": "Ergo의 블록체인 아키텍처 및 구성 요소 연결의 인터랙티브 시각화."
       },
       "categories": {
-        "all": "All Technologies",
-        "core": "Core Technologies",
-        "consensus": "Consensus",
-        "features": "Features",
-        "infrastructure": "Infrastructure"
+        "all": "모든 기술",
+        "core": "핵심 기술",
+        "consensus": "합의",
+        "features": "기능",
+        "infrastructure": "인프라"
       },
       "legend": {
-        "title": "Legend",
-        "core": "Core Technologies",
-        "consensus": "Consensus Mechanism",
-        "features": "Advanced Features",
-        "infrastructure": "Infrastructure Layer",
-        "directConnection": "Direct Integration",
-        "relation": "Related Technology"
+        "title": "범례",
+        "core": "핵심 기술",
+        "consensus": "합의 메커니즘",
+        "features": "고급 기능",
+        "infrastructure": "인프라 레이어",
+        "directConnection": "직접 통합",
+        "relation": "관련 기술"
       },
       "details": {
-        "keyFeatures": "Key Features",
-        "connections": "Connected Technologies",
-        "learnMore": "Learn More",
-        "close": "Close"
+        "keyFeatures": "주요 기능",
+        "connections": "연결된 기술",
+        "learnMore": "더 알아보기",
+        "close": "닫기"
       }
     }
   },
   "docsResources": {},
   "playground": {
-    "title": "Live Playground",
-    "interactive": "Interactive",
-    "reset": "Reset",
-    "component": "Component",
-    "codeEditor": "Code Editor",
-    "livePreview": "Live Preview",
+    "title": "라이브 플레이그라운드",
+    "interactive": "인터랙티브",
+    "reset": "초기화",
+    "component": "컴포넌트",
+    "codeEditor": "코드 에디터",
+    "livePreview": "라이브 미리보기",
     "properties": {
-      "variant": "Variant",
-      "size": "Size",
-      "disabled": "Disabled",
-      "loading": "Loading",
-      "hoverable": "Hoverable",
-      "bordered": "Bordered"
+      "variant": "변형",
+      "size": "크기",
+      "disabled": "비활성화",
+      "loading": "로딩",
+      "hoverable": "호버 가능",
+      "bordered": "테두리"
     },
     "templates": {
-      "primaryButton": "Primary Button",
-      "featureCard": "Feature Card",
-      "statusBadge": "Status Badge"
+      "primaryButton": "기본 버튼",
+      "featureCard": "기능 카드",
+      "statusBadge": "상태 배지"
     },
-    "editCode": "Edit the code to see live preview",
-    "errorRendering": "Error rendering component",
-    "codeEmpty": "Code cannot be empty",
-    "enable": "Enable",
-    "poweredBy": "Powered by Ergo UI Kit",
+    "editCode": "코드를 편집하여 라이브 미리보기 확인",
+    "errorRendering": "컴포넌트 렌더링 오류",
+    "codeEmpty": "코드는 비워둘 수 없습니다",
+    "enable": "활성화",
+    "poweredBy": "Ergo UI Kit으로 구동",
     "components": {
-      "button": "Button",
-      "card": "Card",
-      "badge": "Badge",
-      "grid": "Grid"
+      "button": "버튼",
+      "card": "카드",
+      "badge": "배지",
+      "grid": "그리드"
     },
     "variants": {
-      "default": "Default",
-      "outline": "Outline",
-      "ghost": "Ghost",
-      "destructive": "Destructive"
+      "default": "기본",
+      "outline": "아웃라인",
+      "ghost": "고스트",
+      "destructive": "파괴적"
     },
     "sizes": {
-      "sm": "Small",
-      "default": "Default",
-      "lg": "Large",
-      "icon": "Icon"
+      "sm": "작음",
+      "default": "기본",
+      "lg": "큰",
+      "icon": "아이콘"
     }
   },
   "resources": {
     "ergoscript": {
-      "title": "ErgoScript Tutorial Series",
-      "description": "Master ErgoScript: your path to creating secure and powerful smart contracts on Ergo, step by step.",
-      "difficulty": "Beginner to Expert",
-      "duration": "20+ hours"
+      "title": "ErgoScript 튜토리얼 시리즈",
+      "description": "ErgoScript 마스터: Ergo에서 안전하고 강력한 스마트 컨트랙트를 만드는 단계별 경로.",
+      "difficulty": "초급에서 전문가까지",
+      "duration": "20시간 이상"
     },
     "faq": {
-      "title": "Comprehensive FAQ",
-      "description": "Everything you need to know about the Ergo blockchain, technologies, and ecosystem in one place.",
-      "difficulty": "All Levels",
-      "duration": "Reference"
+      "title": "종합 FAQ",
+      "description": "한 곳에서 Ergo 블록체인, 기술 및 에코시스템에 대해 알아야 할 모든 것.",
+      "difficulty": "모든 수준",
+      "duration": "참조"
     },
     "research": {
-      "title": "Research Papers",
-      "description": "Deep dive into academic research and technical papers that form the foundation of Ergo innovations.",
-      "difficulty": "Advanced",
-      "duration": "Varies"
+      "title": "연구 논문",
+      "description": "Ergo 혁신의 기반을 형성하는 학술 연구 및 기술 논문 심층 탐구.",
+      "difficulty": "고급",
+      "duration": "다양함"
     }
   },
   "sections": {
-    "learningResources": "Learning Resources"
+    "learningResources": "학습 리소스"
   }
 }

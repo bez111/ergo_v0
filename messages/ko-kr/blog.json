@@ -1,37 +1,37 @@
 {
   "blog": {
-    "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "title": "블로그",
+    "subtitle": "최신 뉴스 및 업데이트",
+    "description": "Ergo의 최신 뉴스 및 업데이트",
+    "readMore": "더 읽기",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "기술",
+      "ecosystem": "에코시스템",
+      "community": "커뮤니티",
+      "announcements": "공지사항",
+      "all": "전체 게시물",
+      "development": "개발",
+      "technical": "기술적",
+      "education": "교육"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "블로그 - Ergo 뉴스 및 업데이트 | Ergo Platform",
+      "description": "Ergo 블록체인 팀의 최신 뉴스, 업데이트 및 인사이트를 읽어보세요.",
+      "keywords": "Ergo 블로그, 블록체인 뉴스, 업데이트, 기사"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "추천 게시물",
+      "readMore": "더 읽기"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "최근 게시물",
+      "viewAll": "전체 게시물 보기"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "뉴스레터 구독",
+      "description": "최신 업데이트를 이메일로 받아보세요",
+      "placeholder": "이메일을 입력하세요",
+      "subscribe": "구독하기"
     }
   }
 }

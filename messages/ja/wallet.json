@@ -1,319 +1,319 @@
 {
   "wallet": {
-    "title": "Wallets",
-    "subtitle": "Secure your ERG",
-    "description": "Secure wallets for Ergo",
-    "download": "Download",
-    "webWallet": "Web Wallet",
-    "mobileWallet": "Mobile Wallet",
-    "desktopWallet": "Desktop Wallet",
-    "hardwareWallet": "Hardware Wallet",
+    "title": "ウォレット",
+    "subtitle": "ERGを安全に保管する",
+    "description": "Ergo向けの安全なウォレット",
+    "download": "ダウンロード",
+    "webWallet": "ウェブウォレット",
+    "mobileWallet": "モバイルウォレット",
+    "desktopWallet": "デスクトップウォレット",
+    "hardwareWallet": "ハードウェアウォレット",
     "seo": {
-      "title": "Wallets - Secure ERG Storage | Ergo Platform",
-      "description": "Find the best Ergo wallets for secure ERG storage and transactions.",
-      "keywords": "Ergo wallet, ERG storage, Nautilus, SAFEW, mobile wallet",
-      "ogTitle": "Ergo Wallets - Secure ERG Storage",
-      "ogDescription": "Find the best Ergo wallets for secure ERG storage and transactions.",
-      "twitterTitle": "Ergo Wallets - Secure ERG Storage",
-      "twitterDescription": "Find the best Ergo wallets for secure ERG storage and transactions."
+      "title": "ウォレット - 安全なERG保管 | Ergo Platform",
+      "description": "安全なERG保管とトランザクションのための最適なErgoウォレットを見つけよう。",
+      "keywords": "Ergoウォレット, ERG保管, Nautilus, SAFEW, モバイルウォレット",
+      "ogTitle": "Ergoウォレット - 安全なERG保管",
+      "ogDescription": "安全なERG保管とトランザクションのための最適なErgoウォレットを見つけよう。",
+      "twitterTitle": "Ergoウォレット - 安全なERG保管",
+      "twitterDescription": "安全なERG保管とトランザクションのための最適なErgoウォレットを見つけよう。"
     },
     "types": {
       "mobile": {
-        "title": "Mobile Wallets",
-        "description": "Wallets for iOS and Android"
+        "title": "モバイルウォレット",
+        "description": "iOSとAndroid向けウォレット"
       },
       "desktop": {
-        "title": "Desktop Wallets",
-        "description": "Wallets for Windows, Mac, and Linux"
+        "title": "デスクトップウォレット",
+        "description": "Windows、Mac、Linux向けウォレット"
       },
       "hardware": {
-        "title": "Hardware Wallets",
-        "description": "Cold storage solutions"
+        "title": "ハードウェアウォレット",
+        "description": "コールドストレージソリューション"
       },
       "web": {
-        "title": "Web Wallets",
-        "description": "Browser-based wallets"
+        "title": "ウェブウォレット",
+        "description": "ブラウザベースのウォレット"
       }
     },
     "features": {
-      "security": "Security",
-      "usability": "Ease of Use",
-      "features": "Features",
-      "platforms": "Platforms"
+      "security": "セキュリティ",
+      "usability": "使いやすさ",
+      "features": "機能",
+      "platforms": "プラットフォーム"
     },
     "recommended": {
-      "title": "Recommended Wallets",
-      "description": "Our top picks for different use cases"
+      "title": "おすすめウォレット",
+      "description": "様々なユースケース向けのトップおすすめ"
     },
-    "security_first": "Security First",
+    "security_first": "セキュリティファースト",
     "desktop_mobile_mobile_browser_extension_browser": "Desktop\",\n  mobile: \"Mobile\",\n  \"browser-extension\": \"Browser",
     "hardware_paper_paper_node_node": "Hardware\",\n  paper: \"paper\",\n  node: \"node",
     "chrome_firefox_android_ios": "Chrome\", \"Firefox\", \"Android\", \"iOS",
     "windows_macos_linux": "Windows\", \"macOS\", \"Linux",
-    "full_node_integration_enhanced_privacy": "Full Node Integration\", \"Enhanced Privacy\", \"Offline Vault\", \"Token Management",
+    "full_node_integration_enhanced_privacy": "フルノード統合\", \"プライバシー強化\", \"オフラインボールト\", \"トークン管理",
     "desktop_isofficial_true_isrecommended_true": "Desktop\",\n    isOfficial: true,\n    isRecommended: true,\n    websiteUrl: \"https://satergo.com/",
-    "ergomixer_privacy_quick_setup_no_download_required": "ErgoMixer Privacy\", \"Quick Setup\", \"No Download Required",
+    "ergomixer_privacy_quick_setup_no_download_required": "ErgoMixerプライバシー\", \"クイックセットアップ\", \"ダウンロード不要",
     "browser_websiteurl_https_safew_org": "Browser\",\n    websiteUrl: \"https://safew.org/",
-    "multi_signature_mobile_first_user_friendly": "Multi-Signature\", \"Mobile-first\", \"User-friendly",
-    "cold_storage_physical_confirmation_recovery_phrase": "Cold Storage\", \"Physical Confirmation\", \"Recovery Phrase",
+    "multi_signature_mobile_first_user_friendly": "マルチシグネチャ\", \"モバイルファースト\", \"使いやすい",
+    "cold_storage_physical_confirmation_recovery_phrase": "コールドストレージ\", \"物理的確認\", \"リカバリーフレーズ",
     "hardware_websiteurl_https_www_ledger_com": "Hardware\",\n    websiteUrl: \"https://www.ledger.com/",
-    "cold_storage_no_internet_required_printable_keys": "Cold Storage\", \"No Internet Required\", \"Printable Keys",
-    "full_node_integration_cli_api_access_cold_storage": "Full Node Integration\", \"CLI/API Access\", \"Cold Storage",
-    "offline_key_generation_and_storage": "Offline key generation and storage for maximum security.",
+    "cold_storage_no_internet_required_printable_keys": "コールドストレージ\", \"インターネット不要\", \"印刷可能なキー",
+    "full_node_integration_cli_api_access_cold_storage": "フルノード統合\", \"CLI/APIアクセス\", \"コールドストレージ",
+    "offline_key_generation_and_storage": "最大のセキュリティのためのオフラインキー生成と保管。",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
-      "name": "Ergo Wallets",
-      "description": "Collection of secure wallets for Ergo blockchain",
+      "name": "Ergoウォレット",
+      "description": "Ergoブロックチェーンのための安全なウォレットコレクション",
       "wallets": {
         "nautilus": {
           "name": "Nautilus Wallet",
-          "description": "Feature-rich browser extension wallet for Ergo with dApp connectivity"
+          "description": "dApp接続性を持つErgo向けの機能豊富なブラウザ拡張ウォレット"
         },
         "satergo": {
           "name": "Satergo Wallet",
-          "description": "Desktop wallet with full node integration and advanced features"
+          "description": "フルノード統合と高度な機能を持つデスクトップウォレット"
         }
       }
     },
     "faq": {
       "items": [
         {
-          "question": "What is the best Ergo wallet?",
-          "answer": "The best Ergo wallet depends on your needs: Nautilus (browser extension) is great for DeFi and dApp interactions, Ergo Mobile Wallet is ideal for everyday phone use, and SAFEW offers advanced features for power users. For maximum security, use a Ledger hardware wallet with Nautilus."
+          "question": "最適なErgoウォレットはどれですか？",
+          "answer": "最適なErgoウォレットはニーズによって異なります：Nautilus（ブラウザ拡張機能）はDeFiとdAppsのインタラクションに最適、Ergo Mobile WalletはスマートフォンでのEverydayユースに理想的、SAFEWはパワーユーザー向けの高度な機能を提供します。最大のセキュリティのためにはLedgerハードウェアウォレットをNautilusと組み合わせて使用してください。"
         },
         {
-          "question": "Is Nautilus wallet safe?",
-          "answer": "Nautilus is a secure non-custodial wallet. Your keys are stored locally and encrypted, and the project is open-source. Always back up your 15-word seed phrase securely—if you lose it, you lose access to your funds."
+          "question": "Nautilusウォレットは安全ですか？",
+          "answer": "Nautilusは安全な非カストディアルウォレットです。あなたのキーはローカルに保存され暗号化されており、プロジェクトはオープンソースです。15語のシードフレーズを常に安全にバックアップしてください——失うと資金にアクセスできなくなります。"
         },
         {
-          "question": "Can I use Ledger with Ergo?",
-          "answer": "Yes. Ergo is supported on Ledger hardware wallets. Using Ledger with Nautilus keeps your private keys on the device and is a strong option for long-term storage."
+          "question": "ErgoでLedgerを使えますか？",
+          "answer": "はい。ErgoはLedgerハードウェアウォレットでサポートされています。NautilusでLedgerを使うことで秘密鍵をデバイス上に保ち、長期保管に最適な選択肢です。"
         },
         {
-          "question": "How do I back up my Ergo wallet?",
-          "answer": "When you create a wallet you receive a 15-word seed phrase. Write it down on paper (never store it digitally) and keep it in multiple safe locations. Never share it—anyone with the phrase controls your funds."
+          "question": "Ergoウォレットをバックアップするにはどうすればいいですか？",
+          "answer": "ウォレット作成時に15語のシードフレーズを受け取ります。紙に書き留め（デジタルに保存しないでください）、複数の安全な場所に保管してください。絶対に共有しないでください——フレーズを持つ人が資金をコントロールできます。"
         },
         {
-          "question": "Which wallet supports Ergo NFTs?",
-          "answer": "Nautilus is a popular choice for Ergo NFTs thanks to marketplace integrations (e.g. SkyHarbor). SAFEW also supports NFTs with an advanced token viewer."
+          "question": "どのウォレットがErgo NFTをサポートしていますか？",
+          "answer": "Nautilusはマーケットプレイス統合（例：SkyHarbor）のおかげでErgo NFTの人気の選択肢です。SAFEWも高度なトークンビューアーでNFTをサポートしています。"
         }
       ]
     },
     "ui": {
-      "features": "Features",
-      "visitWebsite": "Visit Website",
-      "download": "Download",
-      "securityTitle": "Security First",
-      "securityNote": "Always download wallets from official sources and verify checksums for maximum security.",
-      "platforms": "Platforms",
-      "users": "Users",
-      "rating": "Rating",
-      "recommended": "Recommended",
-      "official": "Official",
-      "allWallets": "All Wallets",
-      "filterBy": "Filter by:",
-      "searchWallets": "Search wallets...",
-      "noWalletsFound": "No wallets found matching your criteria."
+      "features": "機能",
+      "visitWebsite": "ウェブサイトを訪問",
+      "download": "ダウンロード",
+      "securityTitle": "セキュリティファースト",
+      "securityNote": "常に公式ソースからウォレットをダウンロードし、最大のセキュリティのためにチェックサムを検証してください。",
+      "platforms": "プラットフォーム",
+      "users": "ユーザー",
+      "rating": "評価",
+      "recommended": "おすすめ",
+      "official": "公式",
+      "allWallets": "全ウォレット",
+      "filterBy": "フィルター：",
+      "searchWallets": "ウォレットを検索...",
+      "noWalletsFound": "条件に一致するウォレットが見つかりませんでした。"
     }
   },
   "walletClient": {
     "hero": {
       "title": "Ergo",
-      "titleHighlight": "Wallets",
-      "subtitle": "Secure your ERG with production-ready wallets",
-      "description": "From browser extensions to hardware devices - choose the perfect wallet for your security needs. All wallets are non-custodial, giving you full control of your funds."
+      "titleHighlight": "ウォレット",
+      "subtitle": "本番対応のウォレットでERGを安全に保管する",
+      "description": "ブラウザ拡張機能からハードウェアデバイスまで——あなたのセキュリティニーズに最適なウォレットを選ぼう。すべてのウォレットは非カストディアルで、資金の完全なコントロールをあなたに与えます。"
     },
     "quickStart": {
-      "title": "Quick Start",
+      "title": "クイックスタート",
       "nautilus": {
         "name": "Nautilus Wallet",
-        "subtitle": "Browser - Most Popular"
+        "subtitle": "ブラウザ - 最も人気"
       },
       "satergo": {
         "name": "Satergo Wallet",
-        "subtitle": "Desktop - Full Node"
+        "subtitle": "デスクトップ - フルノード"
       },
       "ledger": {
-        "name": "Ledger Hardware",
-        "subtitle": "Hardware - Maximum Security"
+        "name": "Ledgerハードウェア",
+        "subtitle": "ハードウェア - 最大のセキュリティ"
       }
     },
     "security": {
-      "title": "Security First",
-      "subtitle": "Best practices for wallet safety",
-      "description": "Always download wallets from official sources and verify checksums for maximum security.",
+      "title": "セキュリティファースト",
+      "subtitle": "ウォレットの安全性のためのベストプラクティス",
+      "description": "常に公式ソースからウォレットをダウンロードし、最大のセキュリティのためにチェックサムを検証してください。",
       "tips": {
-        "verifyChecksums": "Verify checksums after download",
-        "officialSources": "Download only from official sources",
-        "backupSeedPhrase": "Backup your seed phrase securely offline"
+        "verifyChecksums": "ダウンロード後にチェックサムを検証する",
+        "officialSources": "公式ソースからのみダウンロードする",
+        "backupSeedPhrase": "シードフレーズをオフラインで安全にバックアップする"
       }
     },
     "allWallets": {
-      "title": "All Wallets",
-      "subtitle": "secure options for storing your ERG"
+      "title": "全ウォレット",
+      "subtitle": "ERGを保管するための安全なオプション"
     },
     "labels": {
-      "recommended": "Recommended",
-      "loading": "Loading wallets...",
-      "download": "Download",
-      "visit": "Visit",
+      "recommended": "おすすめ",
+      "loading": "ウォレットを読み込み中...",
+      "download": "ダウンロード",
+      "visit": "訪問",
       "securityLevels": {
-        "high": "High",
-        "veryHigh": "Very High",
-        "maximum": "Maximum"
+        "high": "高",
+        "veryHigh": "非常に高い",
+        "maximum": "最大"
       },
       "walletTypes": {
-        "hot": "Hot",
-        "cold": "Cold",
-        "hybrid": "Hybrid"
+        "hot": "ホット",
+        "cold": "コールド",
+        "hybrid": "ハイブリッド"
       }
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
-      "subtitle": "Now that you have a wallet, get some ERG and explore the ecosystem",
+      "title": "次は",
+      "titleHighlight": "何？",
+      "subtitle": "ウォレットを持ったら、ERGを入手してエコシステムを探索しよう",
       "getErg": {
-        "title": "Get ERG",
-        "subtitle": "Buy ERG Tokens",
-        "description": "Purchase ERG from exchanges or DEXs"
+        "title": "ERGを入手",
+        "subtitle": "ERGトークンを購入",
+        "description": "取引所やDEXからERGを購入する"
       },
       "learnMore": {
-        "title": "Learn More",
-        "subtitle": "Documentation",
-        "description": "Deep dive into Ergo's technology"
+        "title": "詳しく学ぶ",
+        "subtitle": "ドキュメント",
+        "description": "Ergoのテクノロジーを深く掘り下げる"
       }
     },
     "emailCapture": {
-      "title": "Wallet Security Tips",
-      "description": "Get the latest wallet security updates, best practices, and safety tips delivered to your inbox"
+      "title": "ウォレットセキュリティのヒント",
+      "description": "最新のウォレットセキュリティアップデート、ベストプラクティス、安全のヒントをメールでお届けします"
     },
     "wallets": {
       "nautilus": {
         "name": "Nautilus Wallet",
-        "description": "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
+        "description": "dApp接続性と高度なDeFi機能を持つ機能豊富なブラウザ拡張ウォレット",
         "features": [
-          "dApp Integration",
-          "Hardware Wallet Support",
-          "Multi-signature",
-          "Token Management",
-          "DeFi Ready"
+          "dApp統合",
+          "ハードウェアウォレットサポート",
+          "マルチシグネチャ",
+          "トークン管理",
+          "DeFi対応"
         ]
       },
       "satergo": {
         "name": "Satergo Wallet",
-        "description": "Desktop wallet with full node integration and advanced privacy features",
+        "description": "フルノード統合と高度なプライバシー機能を持つデスクトップウォレット",
         "features": [
-          "Full Node",
-          "ErgoMixer Integration",
-          "Advanced Privacy",
-          "Multi-Account",
-          "Cold Storage"
+          "フルノード",
+          "ErgoMixer統合",
+          "高度なプライバシー",
+          "マルチアカウント",
+          "コールドストレージ"
         ]
       },
       "ergo-wallet-android": {
-        "name": "Ergo Wallet (Android)",
-        "description": "Official mobile wallet for Android with QR scanning and simple interface",
+        "name": "Ergo Wallet（Android）",
+        "description": "QRスキャンとシンプルなインターフェースを持つAndroid向け公式モバイルウォレット",
         "features": [
-          "QR Scanning",
-          "Simple Interface",
-          "Backup & Restore",
-          "Multi-language",
-          "Offline Signing"
+          "QRスキャン",
+          "シンプルなインターフェース",
+          "バックアップ＆リストア",
+          "多言語対応",
+          "オフライン署名"
         ]
       },
       "ergo-wallet-ios": {
-        "name": "Ergo Wallet (iOS)",
-        "description": "Official mobile wallet for iOS with intuitive design and secure storage",
+        "name": "Ergo Wallet（iOS）",
+        "description": "直感的なデザインと安全な保管を持つiOS向け公式モバイルウォレット",
         "features": [
           "Touch ID",
           "Face ID",
-          "iCloud Backup",
-          "Simple Interface",
+          "iCloudバックアップ",
+          "シンプルなインターフェース",
           "Secure Enclave"
         ]
       },
       "safew": {
         "name": "SAFEW",
-        "description": "Simple And Fast Ergo Wallet - lightweight desktop wallet with essential features",
+        "description": "Simple And Fast Ergo Wallet（シンプルで高速なErgoウォレット）——必要な機能を持つ軽量デスクトップウォレット",
         "features": [
-          "Lightweight",
-          "Fast Sync",
-          "Multiple Accounts",
-          "Token Support",
-          "Simple UI"
+          "軽量",
+          "高速同期",
+          "複数アカウント",
+          "トークンサポート",
+          "シンプルなUI"
         ]
       },
       "ledger": {
-        "name": "Ledger Hardware Wallet",
-        "description": "Cold storage solution with Ergo support for maximum security",
+        "name": "Ledgerハードウェアウォレット",
+        "description": "最大のセキュリティのためのErgoサポート付きコールドストレージソリューション",
         "features": [
-          "Cold Storage",
-          "Hardware Security",
-          "PIN Protection",
-          "Recovery Phrase",
-          "Offline Signing"
+          "コールドストレージ",
+          "ハードウェアセキュリティ",
+          "PIN保護",
+          "リカバリーフレーズ",
+          "オフライン署名"
         ]
       },
       "ergo-paper-wallet": {
-        "name": "Ergo Paper Wallet",
-        "description": "Generate secure paper wallets for cold storage of ERG",
+        "name": "Ergoペーパーウォレット",
+        "description": "ERGのコールドストレージのための安全なペーパーウォレットを生成する",
         "features": [
-          "Offline Generation",
-          "Cold Storage",
-          "No Registration",
-          "Open Source",
-          "Maximum Security"
+          "オフライン生成",
+          "コールドストレージ",
+          "登録不要",
+          "オープンソース",
+          "最大のセキュリティ"
         ]
       }
     },
     "categories": {
-      "Desktop": "Desktop",
-      "Mobile": "Mobile",
-      "Browser": "Browser",
-      "Hardware": "Hardware",
-      "Paper": "Paper"
+      "Desktop": "デスクトップ",
+      "Mobile": "モバイル",
+      "Browser": "ブラウザ",
+      "Hardware": "ハードウェア",
+      "Paper": "ペーパー"
     },
     "securityLevels": {
-      "High": "High",
-      "Very High": "Very High",
-      "Maximum": "Maximum"
+      "High": "高",
+      "Very High": "非常に高い",
+      "Maximum": "最大"
     },
     "walletTypes": {
-      "Hot": "Hot",
-      "Cold": "Cold",
-      "Hybrid": "Hybrid"
+      "Hot": "ホット",
+      "Cold": "コールド",
+      "Hybrid": "ハイブリッド"
     }
   },
   "walletsData": {
     "nautilus": {
-      "description": "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
+      "description": "dApp接続性と高度なDeFi機能を持つ機能豊富なブラウザ拡張ウォレット",
       "name": "Nautilus Wallet"
     },
     "satergo": {
-      "description": "Desktop wallet with full node integration and advanced privacy features",
+      "description": "フルノード統合と高度なプライバシー機能を持つデスクトップウォレット",
       "name": "Satergo Wallet"
     },
     "ergo-wallet-android": {
-      "description": "Official mobile wallet for Android with QR scanning and simple interface",
-      "name": "Ergo Wallet (Android)"
+      "description": "QRスキャンとシンプルなインターフェースを持つAndroid向け公式モバイルウォレット",
+      "name": "Ergo Wallet（Android）"
     },
     "ergo-wallet-ios": {
-      "description": "Official mobile wallet for iOS with intuitive design and secure storage",
-      "name": "Ergo Wallet (iOS)"
+      "description": "直感的なデザインと安全な保管を持つiOS向け公式モバイルウォレット",
+      "name": "Ergo Wallet（iOS）"
     },
     "safew": {
-      "description": "Simple And Fast Ergo Wallet - lightweight desktop wallet with essential features",
+      "description": "Simple And Fast Ergo Wallet——必要な機能を持つ軽量デスクトップウォレット",
       "name": "SAFEW"
     },
     "ledger": {
-      "description": "Cold storage solution with Ergo support for maximum security",
-      "name": "Ledger Hardware Wallet"
+      "description": "最大のセキュリティのためのErgoサポート付きコールドストレージソリューション",
+      "name": "Ledgerハードウェアウォレット"
     },
     "ergo-paper-wallet": {
-      "description": "Generate secure paper wallets for cold storage of ERG",
-      "name": "Ergo Paper Wallet"
+      "description": "ERGのコールドストレージのための安全なペーパーウォレットを生成する",
+      "name": "Ergoペーパーウォレット"
     }
   }
 }

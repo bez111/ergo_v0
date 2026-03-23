@@ -2,114 +2,114 @@
   "compare": {
     "page": {
       "seo": {
-        "title": "Ergo vs Bitcoin, Ethereum, Cardano — Full Comparison | Ergo",
-        "description": "Compare Ergo to Bitcoin, Ethereum, Cardano, Monero & more. Side-by-side analysis of consensus, smart contracts, privacy & tokenomics.",
-        "keywords": "ergo comparison, ergo vs bitcoin, ergo vs ethereum, blockchain comparison, ergo vs cardano, ergo vs monero, cryptocurrency comparison, best blockchain 2025"
+        "title": "Ergo vs Bitcoin, Ethereum, Cardano — Vollständiger Vergleich | Ergo",
+        "description": "Vergleichen Sie Ergo mit Bitcoin, Ethereum, Cardano, Monero und mehr. Nebeneinandergestellte Analyse von Konsens, Smart Contracts, Datenschutz und Tokenomics.",
+        "keywords": "ergo vergleich, ergo vs bitcoin, ergo vs ethereum, blockchain vergleich, ergo vs cardano, ergo vs monero, kryptowährung vergleich, beste blockchain 2025"
       },
       "schema": {
         "breadcrumbs": {
-          "compare": "Compare"
+          "compare": "Vergleich"
         },
         "collection": {
-          "name": "Ergo Blockchain Comparisons",
-          "description": "Comprehensive comparisons of Ergo with other major blockchain platforms including Bitcoin, Ethereum, Cardano, Monero, and more."
+          "name": "Ergo Blockchain-Vergleiche",
+          "description": "Umfassende Vergleiche von Ergo mit anderen großen Blockchain-Plattformen, einschließlich Bitcoin, Ethereum, Cardano, Monero und mehr."
         },
         "faq": {
           "items": [
             {
-              "question": "Is Ergo better than Ethereum?",
-              "answer": "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant (no front-running), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers. Ergo is better for users who want fair, predictable transactions without MEV extraction."
+              "question": "Ist Ergo besser als Ethereum?",
+              "answer": "Ergo und Ethereum dienen unterschiedlichen Zwecken. Ergo verwendet das eUTXO-Modell, das MEV-resistent ist (kein Front-Running), hat vorhersehbare Gebühren (~0,01 $) und ist sicherer für DeFi. Ethereum hat ein größeres Ökosystem und mehr Entwickler. Ergo ist besser für Benutzer, die faire, vorhersehbare Transaktionen ohne MEV-Extraktion wünschen."
             },
             {
-              "question": "How is Ergo different from Cardano?",
-              "answer": "Both use eUTXO model, but Ergo is Proof-of-Work (like Bitcoin) while Cardano is Proof-of-Stake. Ergo had fair launch (no ICO, no pre-mine) vs Cardano's ICO. Ergo has Sigma Protocols for privacy, Storage Rent for sustainability, and is more focused on financial applications and cypherpunk values."
+              "question": "Wie unterscheidet sich Ergo von Cardano?",
+              "answer": "Beide verwenden das eUTXO-Modell, aber Ergo ist Proof-of-Work (wie Bitcoin), während Cardano Proof-of-Stake ist. Ergo hatte einen fairen Start (kein ICO, kein Premine) vs. Cardanos ICO. Ergo hat Sigma Protocols für Datenschutz, Storage Rent für Nachhaltigkeit und ist stärker auf Finanzanwendungen und Cypherpunk-Werte ausgerichtet."
             },
             {
-              "question": "Is Ergo better than Bitcoin?",
-              "answer": "Ergo extends Bitcoin's proven PoW security with smart contracts via ErgoScript. Both have fair launch and fixed supply. Ergo adds: programmable money (smart contracts), optional privacy (Sigma Protocols), Storage Rent (sustainability), and NiPoPoWs (light clients). Bitcoin has larger network effect and liquidity."
+              "question": "Ist Ergo besser als Bitcoin?",
+              "answer": "Ergo erweitert Bitcoins bewährte PoW-Sicherheit mit Smart Contracts via ErgoScript. Beide haben einen fairen Start und eine feste Gesamtmenge. Ergo fügt hinzu: programmierbares Geld (Smart Contracts), optionaler Datenschutz (Sigma Protocols), Storage Rent (Nachhaltigkeit) und NiPoPoWs (Light Clients). Bitcoin hat einen größeren Netzwerkeffekt und mehr Liquidität."
             },
             {
-              "question": "What makes Ergo unique compared to other blockchains?",
-              "answer": "Ergo uniquely combines: eUTXO model (Bitcoin security + smart contracts), Sigma Protocols (optional privacy), Storage Rent (long-term sustainability), Autolykos (ASIC-resistant mining), fair launch (no pre-mine, no VC), and MEV-resistance. No other chain has this exact combination."
+              "question": "Was macht Ergo im Vergleich zu anderen Blockchains einzigartig?",
+              "answer": "Ergo kombiniert einzigartig: eUTXO-Modell (Bitcoin-Sicherheit + Smart Contracts), Sigma Protocols (optionaler Datenschutz), Storage Rent (langfristige Nachhaltigkeit), Autolykos (ASIC-resistentes Mining), fairer Start (kein Premine, kein VC) und MEV-Resistenz. Keine andere Chain hat genau diese Kombination."
             },
             {
-              "question": "Is Ergo more private than Monero?",
-              "answer": "Ergo offers optional privacy through Sigma Protocols and ErgoMixer, while Monero has mandatory privacy. Ergo's approach allows compliance when needed while still enabling strong privacy. Monero is better for maximum anonymity, Ergo is better for flexible privacy with smart contract capabilities."
+              "question": "Ist Ergo privater als Monero?",
+              "answer": "Ergo bietet optionalen Datenschutz durch Sigma Protocols und ErgoMixer, während Monero obligatorischen Datenschutz hat. Ergos Ansatz ermöglicht Compliance bei Bedarf und gleichzeitig starken Datenschutz. Monero ist besser für maximale Anonymität, Ergo ist besser für flexiblen Datenschutz mit Smart-Contract-Fähigkeiten."
             }
           ]
         }
       }
     },
     "hub": {
-      "title": "Ergo vs The World",
-      "subtitle": "Understand how Ergo compares to other blockchain platforms. Honest, technical comparisons with no marketing fluff.",
-      "chooseComparison": "Choose a Comparison",
-      "seeFullComparisonTable": "See full comparison table",
-      "min": "min",
+      "title": "Ergo vs die Welt",
+      "subtitle": "Verstehen Sie, wie Ergo im Vergleich zu anderen Blockchain-Plattformen abschneidet. Ehrliche, technische Vergleiche ohne Marketing-Floskeln.",
+      "chooseComparison": "Vergleich wählen",
+      "seeFullComparisonTable": "Vollständige Vergleichstabelle anzeigen",
+      "min": "Min",
       "card": {
         "title": "Ergo vs {name}"
       },
       "visualSection": {
-        "title": "Visual comparisons & matrices",
-        "subtitle": "Side-by-side Ergo vs other L1 diagrams that are easy to save and share.",
-        "viewAll": "View all comparison infographics",
-        "badge": "Visual guide"
+        "title": "Visuelle Vergleiche & Matrizen",
+        "subtitle": "Nebeneinandergestellte Ergo vs. andere L1-Diagramme, die einfach zu speichern und zu teilen sind.",
+        "viewAll": "Alle Vergleichs-Infografiken anzeigen",
+        "badge": "Visueller Leitfaden"
       },
       "quickStats": {
-        "consensus": "Consensus",
-        "stateModel": "State model",
-        "launch": "Launch",
-        "privacy": "Privacy"
+        "consensus": "Konsens",
+        "stateModel": "Zustandsmodell",
+        "launch": "Start",
+        "privacy": "Datenschutz"
       },
       "aria": {
-        "comparisonsList": "Blockchain comparisons",
-        "visualComparisonsList": "Visual comparison infographics"
+        "comparisonsList": "Blockchain-Vergleiche",
+        "visualComparisonsList": "Visuelle Vergleichs-Infografiken"
       },
-      "whyMatters": "Why These Comparisons Matter",
-      "whyMattersSubtitle": "Every blockchain makes tradeoffs. Understanding these tradeoffs helps you choose the right tool for your needs.",
-      "securityFirst": "Security First",
-      "securityFirstDesc": "Ergo's eUTXO model eliminates entire classes of vulnerabilities that affect account-based chains.",
-      "fairLaunch": "Fair Launch",
-      "fairLaunchDesc": "No ICO, no premine, no VC allocation. All ERG is earned through mining, like Bitcoin.",
-      "programmablePrivacy": "Programmable Privacy",
-      "programmablePrivacyDesc": "Sigma Protocols enable zero-knowledge proofs without trusted setup, built into the core protocol.",
-      "readyToBuild": "Ready to Build on Ergo?",
-      "readyToBuildDesc": "Join a community of builders creating the future of decentralized finance.",
-      "startBuilding": "Start Building",
-      "exploreEcosystem": "Explore Ecosystem"
+      "whyMatters": "Warum diese Vergleiche wichtig sind",
+      "whyMattersSubtitle": "Jede Blockchain macht Kompromisse. Das Verständnis dieser Kompromisse hilft Ihnen, das richtige Werkzeug für Ihre Bedürfnisse zu wählen.",
+      "securityFirst": "Sicherheit zuerst",
+      "securityFirstDesc": "Ergos eUTXO-Modell eliminiert ganze Klassen von Schwachstellen, die kontobasierte Chains betreffen.",
+      "fairLaunch": "Fairer Start",
+      "fairLaunchDesc": "Kein ICO, kein Premine, keine VC-Zuteilung. Alle ERG werden durch Mining verdient, wie bei Bitcoin.",
+      "programmablePrivacy": "Programmierbarer Datenschutz",
+      "programmablePrivacyDesc": "Sigma Protocols ermöglichen Zero-Knowledge-Beweise ohne vertrauenswürdige Einrichtung, eingebaut in das Kernprotokoll.",
+      "readyToBuild": "Bereit, auf Ergo zu entwickeln?",
+      "readyToBuildDesc": "Treten Sie einer Gemeinschaft von Entwicklern bei, die die Zukunft der dezentralen Finanzen gestalten.",
+      "startBuilding": "Entwicklung starten",
+      "exploreEcosystem": "Ökosystem erkunden"
     },
     "detail": {
       "seo": {
         "notFound": {
-          "title": "Comparison Not Found",
-          "description": "The requested comparison could not be found."
+          "title": "Vergleich nicht gefunden",
+          "description": "Der angeforderte Vergleich konnte nicht gefunden werden."
         },
-        "imageAltTemplate": "Ergo vs {name} Comparison"
+        "imageAltTemplate": "Ergo vs {name} Vergleich"
       },
-      "allComparisons": "All Comparisons",
-      "featureComparison": "Feature Comparison",
-      "deepDive": "Deep Dive",
-      "ergoAdvantage": "Ergo Advantage",
-      "relatedInfographics": "Related Infographics",
-      "faq": "Frequently Asked Questions",
-      "moreComparisons": "More Comparisons",
-      "readyToExperience": "Ready to Experience Ergo?",
-      "readyToExperienceDesc": "Join thousands of users who chose decentralization, security, and financial freedom.",
-      "getWallet": "Get a Wallet",
-      "startBuilding": "Start Building",
-      "lastUpdated": "Last updated"
+      "allComparisons": "Alle Vergleiche",
+      "featureComparison": "Funktionsvergleich",
+      "deepDive": "Vertiefung",
+      "ergoAdvantage": "Ergo-Vorteil",
+      "relatedInfographics": "Verwandte Infografiken",
+      "faq": "Häufig gestellte Fragen",
+      "moreComparisons": "Weitere Vergleiche",
+      "readyToExperience": "Bereit, Ergo zu erleben?",
+      "readyToExperienceDesc": "Schließen Sie sich Tausenden von Nutzern an, die Dezentralisierung, Sicherheit und finanzielle Freiheit gewählt haben.",
+      "getWallet": "Wallet erhalten",
+      "startBuilding": "Entwicklung starten",
+      "lastUpdated": "Zuletzt aktualisiert"
     },
     "features": {
-      "consensus": "Consensus",
-      "stateModel": "State Model",
+      "consensus": "Konsens",
+      "stateModel": "Zustandsmodell",
       "smartContracts": "Smart Contracts",
-      "privacy": "Privacy",
-      "sustainability": "Sustainability",
+      "privacy": "Datenschutz",
+      "sustainability": "Nachhaltigkeit",
       "lightClients": "Light Clients",
-      "miningAlgorithm": "Mining Algorithm",
-      "blockTime": "Block Time",
-      "launchModel": "Launch Model",
-      "networkEffect": "Network Effect"
+      "miningAlgorithm": "Mining-Algorithmus",
+      "blockTime": "Blockzeit",
+      "launchModel": "Startmodell",
+      "networkEffect": "Netzwerkeffekt"
     }
   },
   "comparePageClient": {
@@ -117,893 +117,893 @@
     "heroVs": "vs",
     "heroTitle": "Ergo vs",
     "sections": {
-      "featureComparison": "Feature",
-      "featureComparisonHighlight": "Comparison",
-      "feature": "Feature",
-      "advantageNote": "indicates advantage in that category. Last updated:",
-      "deepDive": "Deep",
-      "deepDiveHighlight": "Dive",
-      "ergoAdvantage": "Ergo Advantage",
-      "relatedArticles": "Related",
-      "relatedArticlesHighlight": "Articles",
-      "minRead": "min read",
-      "relatedInfographics": "Related",
-      "relatedInfographicsHighlight": "Infographics",
-      "faq": "Frequently Asked",
-      "faqHighlight": "Questions",
-      "moreComparisons": "More",
-      "moreComparisonsHighlight": "Comparisons"
+      "featureComparison": "Funktions-",
+      "featureComparisonHighlight": "Vergleich",
+      "feature": "Funktion",
+      "advantageNote": "zeigt den Vorteil in dieser Kategorie an. Zuletzt aktualisiert:",
+      "deepDive": "Ver-",
+      "deepDiveHighlight": "tiefung",
+      "ergoAdvantage": "Ergo-Vorteil",
+      "relatedArticles": "Verwandte",
+      "relatedArticlesHighlight": "Artikel",
+      "minRead": "Min. Lesezeit",
+      "relatedInfographics": "Verwandte",
+      "relatedInfographicsHighlight": "Infografiken",
+      "faq": "Häufig gestellte",
+      "faqHighlight": "Fragen",
+      "moreComparisons": "Weitere",
+      "moreComparisonsHighlight": "Vergleiche"
     },
     "cta": {
-      "title": "Ready to Experience Ergo?",
-      "description": "Join thousands of users who chose decentralization, security, and financial freedom.",
-      "getWallet": "Get a Wallet",
-      "startBuilding": "Start Building"
+      "title": "Bereit, Ergo zu erleben?",
+      "description": "Schließen Sie sich Tausenden von Nutzern an, die Dezentralisierung, Sicherheit und finanzielle Freiheit gewählt haben.",
+      "getWallet": "Wallet erhalten",
+      "startBuilding": "Entwicklung starten"
     }
   },
   "comparisonsData": {
     "bitcoin": {
       "name": "Bitcoin",
-      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
-      "seoDescription": "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients."
+      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Datenschutz & Nachhaltigkeit im Vergleich",
+      "seoDescription": "Vollständiger Vergleich von Ergo und Bitcoin: eUTXO Smart Contracts vs einfaches UTXO, Sigma Protocols Datenschutz, Storage Rent Nachhaltigkeit und NiPoPoWs Light Clients."
     },
     "ethereum": {
       "name": "Ethereum",
-      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols."
+      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Kontomodell, PoW vs PoS im Vergleich",
+      "seoDescription": "Vollständiger Vergleich von Ergo und Ethereum: eUTXO vs Kontomodell, vorhersehbare Gebühren, keine Reentrancy-Angriffe, PoW-Sicherheit und nativer Datenschutz mit Sigma Protocols."
     },
     "cardano": {
       "name": "Cardano",
-      "seoTitle": "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
-      "seoDescription": "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy."
+      "seoTitle": "Ergo vs Cardano 2025: eUTXO-Geschwister mit unterschiedlichen Philosophien",
+      "seoDescription": "Vergleichen Sie Ergo und Cardano: Beide verwenden eUTXO, aber Ergo hat PoW-Konsens, Storage Rent, fairen Start und nativen Sigma Protocols Datenschutz."
     },
     "monero": {
       "name": "Monero",
-      "seoTitle": "Ergo vs Monero 2025: Privacy Approaches Compared",
-      "seoDescription": "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations."
+      "seoTitle": "Ergo vs Monero 2025: Datenschutzansätze im Vergleich",
+      "seoDescription": "Vergleichen Sie Ergo und Monero Datenschutz: Sigma Protocols vs Ring Signatures, optionaler vs obligatorischer Datenschutz, Smart Contracts und regulatorische Aspekte."
     },
     "zcash": {
       "name": "Zcash",
-      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
-      "seoDescription": "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward."
+      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Datenschutz",
+      "seoDescription": "Vergleichen Sie Ergo und Zcash: Sigma Protocols vs zk-SNARKs, keine vertrauenswürdige Einrichtung, Smart Contracts, fairer Start vs Gründerbelohnung."
     },
     "solana": {
       "name": "Solana",
-      "seoTitle": "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
-      "seoDescription": "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches."
+      "seoTitle": "Ergo vs Solana 2025: Dezentralisierung vs Geschwindigkeit im Vergleich",
+      "seoDescription": "Vergleichen Sie Ergo und Solana: PoW vs PoS, Dezentralisierung vs TPS, fairer Start vs VC-Finanzierung und Nachhaltigkeitsansätze."
     },
     "cbdc": {
       "name": "CBDCs",
-      "seoTitle": "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
-      "seoDescription": "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom."
+      "seoTitle": "Ergo vs CBDCs 2025: Dezentrales Geld vs digitale Zentralbankwährungen",
+      "seoDescription": "Vergleichen Sie Ergo Blockchain mit digitalen Zentralbankwährungen: Datenschutz, Zensurresistenz, programmierbares Geld und finanzielle Freiheit."
     },
     "vc-chains": {
-      "name": "VC-Funded Chains",
-      "seoTitle": "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
-      "seoDescription": "Compare Ergo's fair launch with VC-funded blockchains: token distribution, governance, incentive alignment, and long-term sustainability."
+      "name": "VC-finanzierte Chains",
+      "seoTitle": "Ergo vs VC-finanzierte Blockchains 2025: Fairer Start vs Insider-Zuteilung",
+      "seoDescription": "Vergleichen Sie Ergos fairen Start mit VC-finanzierten Blockchains: Token-Verteilung, Governance, Anreizausrichtung und langfristige Nachhaltigkeit."
     },
     "kaspa": {
       "name": "Kaspa",
-      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
-      "seoDescription": "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability."
+      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Nachhaltigkeit & PoW im Vergleich",
+      "seoDescription": "Ergo vs Kaspa Vergleich: eUTXO Smart Contracts vs reines Zahlungssystem, Storage Rent vs kein Rent, Datenschutzfunktionen und langfristige Nachhaltigkeit."
     },
     "ravencoin": {
       "name": "Ravencoin",
-      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
-      "seoDescription": "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability."
+      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Datenschutz & Token-Funktionen im Vergleich",
+      "seoDescription": "Ergo vs Ravencoin Vergleich: eUTXO Smart Contracts vs asset-fokussiertes Scripting, Datenschutzfunktionen, DeFi-Fähigkeiten und Nachhaltigkeit."
     },
     "litecoin": {
       "name": "Litecoin",
-      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
-      "seoDescription": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities."
+      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Datenschutz & Funktionen im Vergleich",
+      "seoDescription": "Ergo vs Litecoin Vergleich: eUTXO Smart Contracts vs einfache Zahlungen, Sigma Protocols vs MWEB Datenschutz und DeFi-Fähigkeiten."
     },
     "avalanche": {
       "name": "Avalanche",
-      "seoTitle": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
-      "seoDescription": "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization."
+      "seoTitle": "Ergo vs Avalanche 2025: Fairer Start PoW vs VC-finanziertes PoS im Vergleich",
+      "seoDescription": "Ergo vs Avalanche Vergleich: fairer Start vs VC-Finanzierung, ASIC-resistentes PoW vs PoS, eUTXO vs Kontomodell und echte Dezentralisierung."
     },
     "algorand": {
       "name": "Algorand",
-      "seoTitle": "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
-      "seoDescription": "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain."
+      "seoTitle": "Ergo vs Algorand 2025: Dezentrales PoW vs korporatives PoS im Vergleich",
+      "seoDescription": "Ergo vs Algorand Vergleich: Graswurzel-PoW vs MIT-gestütztes PoS, fairer Start vs Stiftungskontrolle und echte Dezentralisierung vs unternehmerische Blockchain."
     }
   },
   "comparisonItems": {
     "bitcoin": {
       "name": "Bitcoin",
-      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
-      "seoDescription": "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients.",
+      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Datenschutz & Nachhaltigkeit im Vergleich",
+      "seoDescription": "Vollständiger Vergleich von Ergo und Bitcoin: eUTXO Smart Contracts vs einfaches UTXO, Sigma Protocols Datenschutz, Storage Rent Nachhaltigkeit und NiPoPoWs Light Clients.",
       "summary": {
         "headline": "Bitcoin",
-        "subheadline": "Ergo extends Bitcoin",
+        "subheadline": "Ergo erweitert Bitcoin",
         "points": [
           {
-            "title": "Programmable eUTXO",
-            "description": "Same UTXO security model as Bitcoin, but with full smart contract capabilities via ErgoScript"
+            "title": "Programmierbares eUTXO",
+            "description": "Gleiches UTXO-Sicherheitsmodell wie Bitcoin, aber mit vollständigen Smart-Contract-Fähigkeiten via ErgoScript"
           },
           {
-            "title": "Native Privacy",
-            "description": "Sigma Protocols enable zero-knowledge proofs at L1, while Bitcoin has no native privacy"
+            "title": "Nativer Datenschutz",
+            "description": "Sigma Protocols ermöglichen Zero-Knowledge-Beweise auf L1, während Bitcoin keinen nativen Datenschutz hat"
           },
           {
-            "title": "Long-term Sustainability",
-            "description": "Storage rent ensures miner revenue beyond block rewards, solving Bitcoin"
+            "title": "Langfristige Nachhaltigkeit",
+            "description": "Storage Rent stellt sicher, dass Miner auch nach den Block-Belohnungen Einnahmen erzielen und löst Bitcoins Sicherheitsproblem"
           },
           {
-            "title": "Trustless Light Clients",
-            "description": "NiPoPoWs enable mobile wallets to verify blockchain without trusting third parties"
+            "title": "Vertrauenslose Light Clients",
+            "description": "NiPoPoWs ermöglichen mobilen Wallets, die Blockchain zu verifizieren, ohne Dritten zu vertrauen"
           }
         ]
       },
       "sections": [
         {
-          "title": "Smart Contract Capabilities",
+          "title": "Smart-Contract-Fähigkeiten",
           "content": "Bitcoin",
-          "ergoAdvantage": "Full DeFi capabilities: DEXs, lending protocols, stablecoins, DAOs, and more - all on a UTXO-based L1."
+          "ergoAdvantage": "Vollständige DeFi-Fähigkeiten: DEXs, Kreditprotokolle, Stablecoins, DAOs und mehr – alles auf einem UTXO-basierten L1."
         },
         {
-          "title": "Privacy Architecture",
-          "content": "Bitcoin transactions are pseudonymous but fully transparent on-chain. Privacy requires external tools like CoinJoin or L2 solutions. Ergo has Sigma Protocols built into the core protocol, enabling zero-knowledge proofs natively without trusted setup.",
-          "ergoAdvantage": "Optional privacy with selective disclosure - prove what you need without revealing everything."
+          "title": "Datenschutzarchitektur",
+          "content": "Bitcoin-Transaktionen sind pseudonym, aber vollständig transparent on-chain. Datenschutz erfordert externe Tools wie CoinJoin oder L2-Lösungen. Ergo hat Sigma Protocols in das Kernprotokoll eingebaut, die Zero-Knowledge-Beweise nativ ohne vertrauenswürdige Einrichtung ermöglichen.",
+          "ergoAdvantage": "Optionaler Datenschutz mit selektiver Offenlegung – beweisen Sie, was Sie müssen, ohne alles preiszugeben."
         },
         {
-          "title": "Long-term Security Budget",
+          "title": "Langfristiges Sicherheitsbudget",
           "content": "Bitcoin",
-          "ergoAdvantage": "Protocol-level solution to the security budget problem that Bitcoin hasn"
+          "ergoAdvantage": "Lösung auf Protokollebene für das Sicherheitsbudget-Problem, das Bitcoin noch nicht gelöst hat"
         }
       ],
       "faq": [
         {
-          "question": "How is Ergo different from Bitcoin?",
-          "answer": "While sharing Bitcoin"
+          "question": "Wie unterscheidet sich Ergo von Bitcoin?",
+          "answer": "Obwohl Ergo Bitcoins Philosophie teilt"
         },
         {
-          "question": "Is Ergo more private than Bitcoin?",
-          "answer": "Yes. Ergo has native Sigma Protocols enabling zero-knowledge proofs at L1, while Bitcoin requires external tools or L2 solutions for privacy. Ergo"
+          "question": "Ist Ergo privater als Bitcoin?",
+          "answer": "Ja. Ergo hat native Sigma Protocols, die Zero-Knowledge-Beweise auf L1 ermöglichen, während Bitcoin externe Tools oder L2-Lösungen für Datenschutz benötigt."
         },
         {
-          "question": "Can Ergo do everything Bitcoin does?",
-          "answer": "Yes, and more. Ergo supports all Bitcoin use cases (store of value, payments) plus full smart contract capabilities, native tokens, and advanced cryptographic features."
+          "question": "Kann Ergo alles, was Bitcoin kann?",
+          "answer": "Ja, und mehr. Ergo unterstützt alle Bitcoin-Anwendungsfälle (Wertaufbewahrung, Zahlungen) plus vollständige Smart-Contract-Fähigkeiten, native Token und erweiterte kryptografische Funktionen."
         },
         {
-          "question": "Is Ergo a Bitcoin fork?",
-          "answer": "No. Ergo is built from scratch with its own codebase, but it shares philosophical alignment with Bitcoin: fair launch, PoW consensus, UTXO model, and cypherpunk values."
+          "question": "Ist Ergo ein Bitcoin-Fork?",
+          "answer": "Nein. Ergo wurde von Grund auf mit einer eigenen Codebasis entwickelt, teilt aber die philosophische Ausrichtung mit Bitcoin: fairer Start, PoW-Konsens, UTXO-Modell und Cypherpunk-Werte."
         }
       ]
     },
     "ethereum": {
       "name": "Ethereum",
-      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols.",
+      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Kontomodell, PoW vs PoS im Vergleich",
+      "seoDescription": "Vollständiger Vergleich von Ergo und Ethereum: eUTXO vs Kontomodell, vorhersehbare Gebühren, keine Reentrancy-Angriffe, PoW-Sicherheit und nativer Datenschutz mit Sigma Protocols.",
       "summary": {
-        "headline": "Predictable, Secure, and Truly Decentralized",
-        "subheadline": "Ergo offers Ethereum-level programmability without the security pitfalls, unpredictable fees, or centralization risks.",
+        "headline": "Vorhersehbar, sicher und wirklich dezentralisiert",
+        "subheadline": "Ergo bietet Programmierbarkeit auf Ethereum-Niveau ohne die Sicherheitsfallen, unvorhersehbaren Gebühren oder Zentralisierungsrisiken.",
         "points": [
           {
-            "title": "No Reentrancy Attacks",
-            "description": "eUTXO model eliminates entire classes of smart contract vulnerabilities that plague Ethereum"
+            "title": "Keine Reentrancy-Angriffe",
+            "description": "Das eUTXO-Modell eliminiert ganze Klassen von Smart-Contract-Schwachstellen, die Ethereum plagen"
           },
           {
-            "title": "Predictable Fees",
-            "description": "No gas price auctions or MEV extraction - fees are stable and predictable"
+            "title": "Vorhersehbare Gebühren",
+            "description": "Keine Gas-Preis-Auktionen oder MEV-Extraktion – Gebühren sind stabil und vorhersehbar"
           },
           {
-            "title": "True Decentralization",
-            "description": "PoW consensus with GPU mining keeps the network accessible and censorship-resistant"
+            "title": "Echte Dezentralisierung",
+            "description": "PoW-Konsens mit GPU-Mining hält das Netzwerk zugänglich und zensurresistent"
           },
           {
-            "title": "Parallel Execution",
-            "description": "UTXO-based transactions can be validated in parallel, improving throughput"
+            "title": "Parallele Ausführung",
+            "description": "UTXO-basierte Transaktionen können parallel validiert werden, was den Durchsatz verbessert"
           }
         ]
       },
       "sections": [
         {
-          "title": "Security Model",
+          "title": "Sicherheitsmodell",
           "content": "Ethereum",
-          "ergoAdvantage": "No DAO hack, no reentrancy exploits possible. Security by design, not by careful coding."
+          "ergoAdvantage": "Kein DAO-Hack, keine Reentrancy-Exploits möglich. Sicherheit durch Design, nicht durch sorgfältiges Programmieren."
         },
         {
-          "title": "Fee Economics",
+          "title": "Gebührenökonomie",
           "content": "Ethereum",
-          "ergoAdvantage": "Know your fees before you transact. No surprise gas spikes or MEV taxes."
+          "ergoAdvantage": "Kennen Sie Ihre Gebühren, bevor Sie eine Transaktion durchführen. Keine überraschenden Gas-Spitzen oder MEV-Steuern."
         },
         {
-          "title": "Consensus & Decentralization",
+          "title": "Konsens & Dezentralisierung",
           "content": "Ethereum",
-          "ergoAdvantage": "True permissionless participation in consensus. No minimum stake, no validator cartels."
+          "ergoAdvantage": "Echte erlaubnisfreie Teilnahme am Konsens. Kein Mindesteinsatz, keine Validator-Kartelle."
         }
       ],
       "faq": [
         {
-          "question": "What advantages does Ergo have over Ethereum?",
-          "answer": "Ergo offers predictable fees without MEV extraction, eliminates reentrancy attacks by design, provides native privacy via Sigma Protocols, maintains PoW decentralization, and has first-class native tokens without wrapper contracts."
+          "question": "Welche Vorteile hat Ergo gegenüber Ethereum?",
+          "answer": "Ergo bietet vorhersehbare Gebühren ohne MEV-Extraktion, eliminiert Reentrancy-Angriffe durch Design, bietet nativen Datenschutz via Sigma Protocols, erhält PoW-Dezentralisierung und hat erstklassige native Token ohne Wrapper-Contracts."
         },
         {
-          "question": "Can Ergo run Ethereum dApps?",
-          "answer": "Not directly - Ergo uses ErgoScript, not Solidity. However, most DeFi concepts (DEXs, lending, stablecoins) have been implemented on Ergo with often better security properties due to the eUTXO model."
+          "question": "Kann Ergo Ethereum-dApps ausführen?",
+          "answer": "Nicht direkt – Ergo verwendet ErgoScript, nicht Solidity. Die meisten DeFi-Konzepte (DEXs, Kreditvergabe, Stablecoins) wurden jedoch auf Ergo implementiert, oft mit besseren Sicherheitseigenschaften aufgrund des eUTXO-Modells."
         },
         {
-          "question": "Why does Ergo use PoW instead of PoS like Ethereum?",
-          "answer": "PoW provides stronger censorship resistance, fairer distribution (anyone can mine), and proven security. PoS tends toward plutocracy and has shown censorship compliance issues."
+          "question": "Warum verwendet Ergo PoW statt PoS wie Ethereum?",
+          "answer": "PoW bietet stärkere Zensurresistenz, fairere Verteilung (jeder kann minen) und bewährte Sicherheit. PoS neigt zur Plutokratie und hat Probleme mit der Zensur-Compliance gezeigt."
         },
         {
-          "question": "Is Ergo faster than Ethereum?",
-          "answer": "Ergo has ~2 minute blocks vs Ethereum"
+          "question": "Ist Ergo schneller als Ethereum?",
+          "answer": "Ergo hat ~2-Minuten-Blöcke vs. Ethereum"
         }
       ]
     },
     "cardano": {
       "name": "Cardano",
-      "seoTitle": "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
-      "seoDescription": "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy.",
+      "seoTitle": "Ergo vs Cardano 2025: eUTXO-Geschwister mit unterschiedlichen Philosophien",
+      "seoDescription": "Vergleichen Sie Ergo und Cardano: Beide verwenden eUTXO, aber Ergo hat PoW-Konsens, Storage Rent, fairen Start und nativen Sigma Protocols Datenschutz.",
       "summary": {
-        "headline": "eUTXO Siblings with Different DNA",
-        "subheadline": "Both use extended UTXO, but Ergo chose PoW, fair launch, and protocol-level sustainability.",
+        "headline": "eUTXO-Geschwister mit unterschiedlicher DNA",
+        "subheadline": "Beide verwenden erweitertes UTXO, aber Ergo wählte PoW, fairen Start und Nachhaltigkeit auf Protokollebene.",
         "points": [
           {
-            "title": "Proof-of-Work Security",
-            "description": "Ergo uses battle-tested PoW while Cardano relies on PoS with different security assumptions"
+            "title": "Proof-of-Work-Sicherheit",
+            "description": "Ergo verwendet bewährtes PoW, während Cardano auf PoS mit anderen Sicherheitsannahmen setzt"
           },
           {
-            "title": "Fair Launch",
-            "description": "No ICO, no premine, no VC allocation - Ergo"
+            "title": "Fairer Start",
+            "description": "Kein ICO, kein Premine, keine VC-Zuteilung – Ergo"
           },
           {
             "title": "Storage Rent",
-            "description": "Protocol-level sustainability mechanism that Cardano lacks"
+            "description": "Nachhaltigkeitsmechanismus auf Protokollebene, den Cardano fehlt"
           },
           {
-            "title": "Native Privacy",
-            "description": "Sigma Protocols built-in vs Cardano"
+            "title": "Nativer Datenschutz",
+            "description": "Eingebaute Sigma Protocols vs Cardanos separatem Ansatz"
           }
         ]
       },
       "sections": [
         {
-          "title": "Consensus Philosophy",
-          "content": "Cardano chose Proof-of-Stake for energy efficiency and scalability. Ergo chose Proof-of-Work for censorship resistance, fair distribution, and proven security. Both are valid choices with different tradeoffs.",
-          "ergoAdvantage": "PoW means anyone can participate in consensus without minimum stake requirements or delegation."
+          "title": "Konsensphilosophie",
+          "content": "Cardano wählte Proof-of-Stake für Energieeffizienz und Skalierbarkeit. Ergo wählte Proof-of-Work für Zensurresistenz, faire Verteilung und bewährte Sicherheit. Beide sind valide Entscheidungen mit unterschiedlichen Kompromissen.",
+          "ergoAdvantage": "PoW bedeutet, dass jeder ohne Mindest-Einsatz oder Delegationsanforderungen am Konsens teilnehmen kann."
         },
         {
-          "title": "Token Distribution",
-          "content": "Cardano had an ICO and foundation allocation. Ergo had no ICO, no premine, and no VC investors. All ERG is earned through mining, similar to Bitcoin",
-          "ergoAdvantage": "No insider advantage. Everyone competes on equal terms from day one."
+          "title": "Token-Verteilung",
+          "content": "Cardano hatte ein ICO und eine Stiftungszuteilung. Ergo hatte kein ICO, kein Premine und keine VC-Investoren. Alle ERG werden durch Mining verdient, ähnlich wie Bitcoin",
+          "ergoAdvantage": "Kein Insider-Vorteil. Jeder konkurriert von Anfang an zu gleichen Bedingungen."
         },
         {
-          "title": "Privacy Approach",
-          "content": "Cardano is developing Midnight as a separate privacy sidechain. Ergo has Sigma Protocols built into the base layer, enabling privacy features on the main chain without additional infrastructure.",
-          "ergoAdvantage": "Privacy is a first-class feature, not an afterthought on a separate chain."
+          "title": "Datenschutzansatz",
+          "content": "Cardano entwickelt Midnight als separate Datenschutz-Sidechain. Ergo hat Sigma Protocols in die Basisschicht eingebaut, was Datenschutzfunktionen auf der Hauptchain ohne zusätzliche Infrastruktur ermöglicht.",
+          "ergoAdvantage": "Datenschutz ist eine erstklassige Funktion, kein Nachgedanke auf einer separaten Chain."
         }
       ],
       "faq": [
         {
-          "question": "How does Ergo compare to Cardano?",
-          "answer": "Both use eUTXO, but Ergo has PoW consensus, fair launch tokenomics, native privacy via Sigma Protocols, and storage rent for sustainability. Cardano has a larger ecosystem but different philosophical choices."
+          "question": "Wie vergleicht sich Ergo mit Cardano?",
+          "answer": "Beide verwenden eUTXO, aber Ergo hat PoW-Konsens, faire Start-Tokenomics, nativen Datenschutz via Sigma Protocols und Storage Rent für Nachhaltigkeit. Cardano hat ein größeres Ökosystem, traf aber andere philosophische Entscheidungen."
         },
         {
-          "question": "Is Ergo related to Cardano?",
-          "answer": "Yes, historically. Alex Chepurnoy (Ergo"
+          "question": "Ist Ergo mit Cardano verwandt?",
+          "answer": "Ja, historisch gesehen. Alex Chepurnoy (Ergos"
         },
         {
-          "question": "Which is better for DeFi, Ergo or Cardano?",
-          "answer": "Both support DeFi on eUTXO. Ergo has pioneering implementations like ErgoDEX and SigmaUSD. Cardano has more projects due to larger ecosystem. Ergo"
+          "question": "Was ist besser für DeFi, Ergo oder Cardano?",
+          "answer": "Beide unterstützen DeFi auf eUTXO. Ergo hat Pionierimplementierungen wie ErgoDEX und SigmaUSD. Cardano hat mehr Projekte aufgrund des größeren Ökosystems. Ergo"
         }
       ]
     },
     "monero": {
       "name": "Monero",
-      "seoTitle": "Ergo vs Monero 2025: Privacy Approaches Compared",
-      "seoDescription": "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations.",
+      "seoTitle": "Ergo vs Monero 2025: Datenschutzansätze im Vergleich",
+      "seoDescription": "Vergleichen Sie Ergo und Monero Datenschutz: Sigma Protocols vs Ring Signatures, optionaler vs obligatorischer Datenschutz, Smart Contracts und regulatorische Aspekte.",
       "summary": {
-        "headline": "Privacy: Mandatory vs Programmable",
-        "subheadline": "Monero enforces privacy by default. Ergo offers programmable privacy with selective disclosure.",
+        "headline": "Datenschutz: Obligatorisch vs Programmierbar",
+        "subheadline": "Monero erzwingt standardmäßig Datenschutz. Ergo bietet programmierbaren Datenschutz mit selektiver Offenlegung.",
         "points": [
           {
-            "title": "Programmable Privacy",
+            "title": "Programmierbarer Datenschutz",
             "description": "Ergo"
           },
           {
             "title": "Smart Contracts",
-            "description": "Full DeFi capabilities that Monero"
+            "description": "Vollständige DeFi-Fähigkeiten, die Monero"
           },
           {
-            "title": "Regulatory Flexibility",
-            "description": "Optional privacy with audit capabilities vs mandatory opacity"
+            "title": "Regulatorische Flexibilität",
+            "description": "Optionaler Datenschutz mit Prüfungsmöglichkeiten vs obligatorischer Intransparenz"
           },
           {
-            "title": "Fair Launch",
-            "description": "Both had fair launches with no premine - aligned cypherpunk values"
+            "title": "Fairer Start",
+            "description": "Beide hatten faire Starts ohne Premine – gemeinsame Cypherpunk-Werte"
           }
         ]
       },
       "sections": [
         {
-          "title": "Privacy Philosophy",
-          "content": "Monero believes privacy should be mandatory and universal - every transaction is private. Ergo believes privacy should be programmable - users choose their privacy level and can prove specific properties without revealing everything.",
-          "ergoAdvantage": "Selective disclosure enables use cases like tax compliance proofs, age verification, or credit checks without full transparency."
+          "title": "Datenschutzphilosophie",
+          "content": "Monero glaubt, dass Datenschutz obligatorisch und universell sein sollte – jede Transaktion ist privat. Ergo glaubt, dass Datenschutz programmierbar sein sollte – Benutzer wählen ihr Datenschutzniveau und können bestimmte Eigenschaften beweisen, ohne alles offenzulegen.",
+          "ergoAdvantage": "Selektive Offenlegung ermöglicht Anwendungsfälle wie Steuerkonformitätsnachweise, Altersverifizierung oder Bonitätsprüfungen ohne vollständige Transparenz."
         },
         {
-          "title": "Smart Contract Capabilities",
+          "title": "Smart-Contract-Fähigkeiten",
           "content": "Monero",
-          "ergoAdvantage": "Private DEXs, lending protocols, and stablecoins are possible on Ergo but not on Monero."
+          "ergoAdvantage": "Private DEXs, Kreditprotokolle und Stablecoins sind auf Ergo möglich, nicht aber auf Monero."
         },
         {
-          "title": "Regulatory Landscape",
-          "content": "Monero has been delisted from many exchanges due to regulatory pressure on mandatory privacy coins. Ergo",
-          "ergoAdvantage": "Better exchange accessibility while maintaining privacy capabilities for those who need them."
+          "title": "Regulatorisches Umfeld",
+          "content": "Monero wurde aufgrund des regulatorischen Drucks auf obligatorische Datenschutzmünzen von vielen Börsen delistet. Ergo",
+          "ergoAdvantage": "Bessere Börsenzugänglichkeit bei gleichzeitiger Erhaltung der Datenschutzfähigkeiten für diejenigen, die sie benötigen."
         }
       ],
       "faq": [
         {
-          "question": "Is Ergo a privacy coin like Monero?",
-          "answer": "Ergo has strong privacy capabilities via Sigma Protocols, but privacy is optional rather than mandatory. This gives users choice and enables smart contracts that Monero can"
+          "question": "Ist Ergo eine Datenschutzmünze wie Monero?",
+          "answer": "Ergo hat starke Datenschutzfähigkeiten via Sigma Protocols, aber Datenschutz ist optional statt obligatorisch. Das gibt Benutzern die Wahl und ermöglicht Smart Contracts, die Monero nicht kann"
         },
         {
-          "question": "Which is more private, Ergo or Monero?",
-          "answer": "Monero provides stronger default privacy since all transactions are private. Ergo provides programmable privacy - potentially very strong when used, but optional. Different tools for different needs."
+          "question": "Was ist privater, Ergo oder Monero?",
+          "answer": "Monero bietet stärkeren Standard-Datenschutz, da alle Transaktionen privat sind. Ergo bietet programmierbaren Datenschutz – potenziell sehr stark, wenn genutzt, aber optional. Verschiedene Werkzeuge für verschiedene Bedürfnisse."
         },
         {
-          "question": "Can Ergo be used for private transactions?",
-          "answer": "Yes. ErgoMixer and Sigma Protocols enable private transactions. The difference is that Ergo users choose when to use privacy features rather than having them enforced."
+          "question": "Kann Ergo für private Transaktionen verwendet werden?",
+          "answer": "Ja. ErgoMixer und Sigma Protocols ermöglichen private Transaktionen. Der Unterschied besteht darin, dass Ergo-Benutzer wählen, wann sie Datenschutzfunktionen nutzen, anstatt sie aufgezwungen zu bekommen."
         }
       ]
     },
     "zcash": {
       "name": "Zcash",
-      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
-      "seoDescription": "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward.",
+      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Datenschutz",
+      "seoDescription": "Vergleichen Sie Ergo und Zcash: Sigma Protocols vs zk-SNARKs, keine vertrauenswürdige Einrichtung, Smart Contracts, fairer Start vs Gründerbelohnung.",
       "summary": {
-        "headline": "Zero-Knowledge Without Trusted Setup",
-        "subheadline": "Both enable ZK proofs, but Ergo",
+        "headline": "Zero-Knowledge ohne vertrauenswürdige Einrichtung",
+        "subheadline": "Beide ermöglichen ZK-Beweise, aber Ergo",
         "points": [
           {
-            "title": "No Trusted Setup",
-            "description": "Sigma Protocols don"
+            "title": "Keine vertrauenswürdige Einrichtung",
+            "description": "Sigma Protocols benötigen keine"
           },
           {
             "title": "Smart Contracts",
-            "description": "Full DeFi capabilities vs Zcash"
+            "description": "Vollständige DeFi-Fähigkeiten vs Zcashs"
           },
           {
-            "title": "Fair Launch",
-            "description": "No founders reward or dev tax - all coins earned through mining"
+            "title": "Fairer Start",
+            "description": "Keine Gründerbelohnung oder Entwicklersteuer – alle Münzen werden durch Mining verdient"
           },
           {
-            "title": "Composable Privacy",
-            "description": "Privacy features work with smart contracts, not just transfers"
+            "title": "Kombinierbarer Datenschutz",
+            "description": "Datenschutzfunktionen funktionieren mit Smart Contracts, nicht nur mit Überweisungen"
           }
         ]
       },
       "sections": [
         {
-          "title": "Trusted Setup Concern",
+          "title": "Bedenken bezüglich vertrauenswürdiger Einrichtung",
           "content": "Zcash",
-          "ergoAdvantage": "Mathematical security without ceremony trust assumptions."
+          "ergoAdvantage": "Mathematische Sicherheit ohne Vertrauensannahmen bei der Zeremonie."
         },
         {
           "title": "Tokenomics",
-          "content": "Zcash had a 20% ",
-          "ergoAdvantage": "Aligned incentives with no insider advantages."
+          "content": "Zcash hatte eine 20%-",
+          "ergoAdvantage": "Ausgerichtete Anreize ohne Insider-Vorteile."
         }
       ],
       "faq": [
         {
-          "question": "How is Ergo",
-          "answer": "Ergo uses Sigma Protocols (no trusted setup needed), while Zcash uses zk-SNARKs (required trusted setup). Ergo also has full smart contracts while Zcash is limited to transfers."
+          "question": "Wie unterscheidet sich Ergos",
+          "answer": "Ergo verwendet Sigma Protocols (keine vertrauenswürdige Einrichtung erforderlich), während Zcash zk-SNARKs verwendet (vertrauenswürdige Einrichtung erforderlich). Ergo hat auch vollständige Smart Contracts, während Zcash auf Überweisungen beschränkt ist."
         },
         {
-          "question": "Which has better privacy technology?",
-          "answer": "Both are cryptographically sound. zk-SNARKs produce smaller proofs but require trusted setup. Sigma Protocols have no setup risk but larger proofs. Ergo"
+          "question": "Welches hat die bessere Datenschutztechnologie?",
+          "answer": "Beide sind kryptografisch solide. zk-SNARKs erzeugen kleinere Beweise, erfordern aber eine vertrauenswürdige Einrichtung. Sigma Protocols haben kein Einrichtungsrisiko, aber größere Beweise. Ergo"
         }
       ]
     },
     "solana": {
       "name": "Solana",
-      "seoTitle": "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
-      "seoDescription": "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches.",
+      "seoTitle": "Ergo vs Solana 2025: Dezentralisierung vs Geschwindigkeit im Vergleich",
+      "seoDescription": "Vergleichen Sie Ergo und Solana: PoW vs PoS, Dezentralisierung vs TPS, fairer Start vs VC-Finanzierung und Nachhaltigkeitsansätze.",
       "summary": {
-        "headline": "Decentralization Over Speed Theater",
-        "subheadline": "Solana optimizes for TPS. Ergo optimizes for decentralization, security, and sustainability.",
+        "headline": "Dezentralisierung statt Geschwindigkeitstheater",
+        "subheadline": "Solana optimiert für TPS. Ergo optimiert für Dezentralisierung, Sicherheit und Nachhaltigkeit.",
         "points": [
           {
-            "title": "True Decentralization",
-            "description": "GPU mining vs validator hardware requirements that cost $50K+"
+            "title": "Echte Dezentralisierung",
+            "description": "GPU-Mining vs Validator-Hardware-Anforderungen, die 50.000 $+ kosten"
           },
           {
-            "title": "No VC Control",
-            "description": "Fair launch vs massive VC/insider allocation"
+            "title": "Keine VC-Kontrolle",
+            "description": "Fairer Start vs massive VC/Insider-Zuteilung"
           },
           {
-            "title": "Network Stability",
-            "description": "No outages vs Solana"
+            "title": "Netzwerkstabilität",
+            "description": "Keine Ausfälle vs Solanas"
           },
           {
-            "title": "Sustainable Security",
-            "description": "Storage rent vs inflationary staking rewards"
+            "title": "Nachhaltige Sicherheit",
+            "description": "Storage Rent vs inflationäre Staking-Belohnungen"
           }
         ]
       },
       "sections": [
         {
-          "title": "Decentralization Reality",
+          "title": "Dezentralisierungsrealität",
           "content": "Solana",
-          "ergoAdvantage": "Real decentralization means anyone can run a node and mine, not just well-funded validators."
+          "ergoAdvantage": "Echte Dezentralisierung bedeutet, dass jeder einen Node betreiben und minen kann, nicht nur gut finanzierte Validatoren."
         },
         {
-          "title": "Token Distribution",
-          "content": "Solana had significant VC funding and insider allocation. Nearly 50% of tokens went to insiders before public availability. Ergo had no ICO, no premine, no VC - all tokens are mined.",
-          "ergoAdvantage": "No insider advantage. Fair competition from day one."
+          "title": "Token-Verteilung",
+          "content": "Solana hatte erhebliche VC-Finanzierung und Insider-Zuteilung. Nahezu 50% der Token gingen an Insider vor der öffentlichen Verfügbarkeit. Ergo hatte kein ICO, kein Premine, kein VC – alle Token werden geminiert.",
+          "ergoAdvantage": "Kein Insider-Vorteil. Fairer Wettbewerb von Anfang an."
         },
         {
-          "title": "Network Reliability",
-          "content": "Solana has experienced multiple extended outages, sometimes lasting 24+ hours. Ergo has maintained consistent uptime since launch, demonstrating the reliability of PoW consensus.",
-          "ergoAdvantage": "Battle-tested reliability vs experimental high-speed architecture."
+          "title": "Netzwerkzuverlässigkeit",
+          "content": "Solana hat mehrere längere Ausfälle erlebt, manchmal mehr als 24 Stunden lang. Ergo hat seit dem Start eine konsistente Betriebszeit aufrechterhalten und demonstriert die Zuverlässigkeit des PoW-Konsens.",
+          "ergoAdvantage": "Bewährte Zuverlässigkeit vs experimentelle Hochgeschwindigkeitsarchitektur."
         }
       ],
       "faq": [
         {
-          "question": "Why is Ergo slower than Solana?",
-          "answer": "Ergo prioritizes security and decentralization over raw speed. Solana"
+          "question": "Warum ist Ergo langsamer als Solana?",
+          "answer": "Ergo priorisiert Sicherheit und Dezentralisierung über rohe Geschwindigkeit. Solana"
         },
         {
-          "question": "Is Solana more decentralized than Ergo?",
-          "answer": "No. Solana"
+          "question": "Ist Solana dezentraler als Ergo?",
+          "answer": "Nein. Solana"
         }
       ]
     },
     "cbdc": {
       "name": "CBDCs",
-      "seoTitle": "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
-      "seoDescription": "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom.",
+      "seoTitle": "Ergo vs CBDCs 2025: Dezentrales Geld vs digitale Zentralbankwährungen",
+      "seoDescription": "Vergleichen Sie Ergo Blockchain mit digitalen Zentralbankwährungen: Datenschutz, Zensurresistenz, programmierbares Geld und finanzielle Freiheit.",
       "summary": {
-        "headline": "Money Without Masters vs Programmable Control",
-        "subheadline": "CBDCs give central banks unprecedented control. Ergo gives individuals financial sovereignty.",
+        "headline": "Geld ohne Herren vs programmierbarer Kontrolle",
+        "subheadline": "CBDCs geben Zentralbanken beispiellose Kontrolle. Ergo gibt Einzelpersonen finanzielle Souveränität.",
         "points": [
           {
-            "title": "Privacy by Design",
-            "description": "Sigma Protocols for privacy vs total surveillance capability"
+            "title": "Datenschutz durch Design",
+            "description": "Sigma Protocols für Datenschutz vs totale Überwachungsfähigkeit"
           },
           {
-            "title": "Censorship Resistance",
-            "description": "Permissionless transactions vs freezable, controllable money"
+            "title": "Zensurresistenz",
+            "description": "Erlaubnisfreie Transaktionen vs einfrierbare, kontrollierbare Währung"
           },
           {
-            "title": "No Expiration",
-            "description": "Your money doesn"
+            "title": "Kein Ablaufdatum",
+            "description": "Ihr Geld verfällt nicht"
           },
           {
-            "title": "Self-Custody",
-            "description": "You hold your keys vs bank-controlled accounts"
+            "title": "Eigene Verwahrung",
+            "description": "Sie halten Ihre Schlüssel vs bankkontrollierte Konten"
           }
         ]
       },
       "sections": [
         {
-          "title": "Surveillance vs Privacy",
-          "content": "CBDCs give central banks complete visibility into every transaction. They can track, analyze, and profile all spending. Ergo",
-          "ergoAdvantage": "Financial privacy is a human right. Ergo protects it; CBDCs eliminate it."
+          "title": "Überwachung vs Datenschutz",
+          "content": "CBDCs geben Zentralbanken vollständige Sichtbarkeit in jede Transaktion. Sie können alle Ausgaben verfolgen, analysieren und profilieren. Ergo",
+          "ergoAdvantage": "Finanzieller Datenschutz ist ein Menschenrecht. Ergo schützt es; CBDCs eliminieren es."
         },
         {
-          "title": "Programmable Control",
-          "content": "CBDCs can be programmed with spending restrictions, expiration dates, geographic limits, and approved merchant lists. Your money becomes a tool of control. Ergo",
-          "ergoAdvantage": "Smart contracts that empower users, not restrict them."
+          "title": "Programmierbare Kontrolle",
+          "content": "CBDCs können mit Ausgabenbeschränkungen, Ablaufdaten, geografischen Grenzen und genehmigten Händlerlisten programmiert werden. Ihr Geld wird zu einem Kontrollinstrument. Ergo",
+          "ergoAdvantage": "Smart Contracts, die Benutzer stärken, nicht einschränken."
         },
         {
-          "title": "Financial Sovereignty",
-          "content": "With CBDCs, your money exists at the pleasure of the central bank. It can be frozen, seized, or devalued at will. Ergo enables true self-custody where only you control your funds.",
-          "ergoAdvantage": "Not your keys, not your coins. Ergo ensures your keys, your coins."
+          "title": "Finanzielle Souveränität",
+          "content": "Bei CBDCs existiert Ihr Geld nach dem Gutdünken der Zentralbank. Es kann nach Belieben eingefroren, beschlagnahmt oder abgewertet werden. Ergo ermöglicht echte Eigenverwaltung, bei der nur Sie Ihre Gelder kontrollieren.",
+          "ergoAdvantage": "Nicht Ihre Schlüssel, nicht Ihre Münzen. Ergo stellt sicher: Ihre Schlüssel, Ihre Münzen."
         }
       ],
       "faq": [
         {
-          "question": "Why should I care about CBDCs?",
-          "answer": "CBDCs give governments unprecedented control over money: surveillance of all transactions, ability to freeze accounts, programmable restrictions, and potential negative interest rates. They"
+          "question": "Warum sollte ich mich um CBDCs kümmern?",
+          "answer": "CBDCs geben Regierungen beispiellose Kontrolle über Geld: Überwachung aller Transaktionen, Fähigkeit zum Einfrieren von Konten, programmierbare Beschränkungen und potenzielle Negativzinsen. Sie"
         },
         {
-          "question": "How does Ergo protect against CBDC-style control?",
-          "answer": "Ergo is decentralized (no central authority), private (Sigma Protocols), censorship-resistant (PoW mining), and self-custodial (you hold your keys). No one can freeze, expire, or restrict your ERG."
+          "question": "Wie schützt Ergo vor CBDC-artiger Kontrolle?",
+          "answer": "Ergo ist dezentralisiert (keine zentrale Autorität), privat (Sigma Protocols), zensurresistent (PoW-Mining) und selbstverwahrend (Sie halten Ihre Schlüssel). Niemand kann Ihr ERG einfrieren, ablaufen lassen oder einschränken."
         },
         {
-          "question": "Can Ergo and CBDCs coexist?",
-          "answer": "Yes, but they serve opposite purposes. CBDCs are tools of control; Ergo is a tool of freedom. As CBDCs roll out, alternatives like Ergo become more important for preserving financial autonomy."
+          "question": "Können Ergo und CBDCs koexistieren?",
+          "answer": "Ja, aber sie dienen entgegengesetzten Zwecken. CBDCs sind Kontrollinstrumente; Ergo ist ein Freiheitswerkzeug. Wenn CBDCs eingeführt werden, werden Alternativen wie Ergo immer wichtiger für die Erhaltung der finanziellen Autonomie."
         }
       ]
     },
     "vc-chains": {
-      "name": "VC-Funded Chains",
-      "seoTitle": "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
-      "seoDescription": "Compare Ergo",
+      "name": "VC-finanzierte Chains",
+      "seoTitle": "Ergo vs VC-finanzierte Blockchains 2025: Fairer Start vs Insider-Zuteilung",
+      "seoDescription": "Vergleichen Sie Ergos fairen Start mit VC-finanzierten Blockchains: Token-Verteilung, Governance, Anreizausrichtung und langfristige Nachhaltigkeit.",
       "summary": {
-        "headline": "Built for Users, Not Investors",
-        "subheadline": "VC chains optimize for investor returns. Ergo optimizes for user empowerment.",
+        "headline": "Für Benutzer gebaut, nicht für Investoren",
+        "subheadline": "VC-Chains optimieren für Investorenrenditen. Ergo optimiert für die Stärkung der Nutzer.",
         "points": [
           {
-            "title": "Fair Distribution",
-            "description": "All ERG is mined - no insider allocation, no ICO, no premine"
+            "title": "Faire Verteilung",
+            "description": "Alle ERG werden geminiert – keine Insider-Zuteilung, kein ICO, kein Premine"
           },
           {
-            "title": "Aligned Incentives",
-            "description": "No VCs demanding returns, pivots, or token unlocks"
+            "title": "Ausgerichtete Anreize",
+            "description": "Keine VCs, die Renditen, Pivots oder Token-Freischaltungen fordern"
           },
           {
-            "title": "Community Governance",
-            "description": "Decisions made by users and miners, not boardrooms"
+            "title": "Community-Governance",
+            "description": "Entscheidungen werden von Nutzern und Minern getroffen, nicht von Vorstandssitzungen"
           },
           {
-            "title": "Long-term Focus",
-            "description": "Building sustainable technology, not pumping for exits"
+            "title": "Langfristiger Fokus",
+            "description": "Nachhaltige Technologie aufbauen, nicht für Exits pumpen"
           }
         ]
       },
       "sections": [
         {
-          "title": "Token Distribution",
-          "content": "Typical VC chains allocate 40-60% of tokens to insiders: founders, team, advisors, and VCs. These tokens unlock over time, creating constant sell pressure. Ergo has zero insider allocation - all ERG is mined through PoW.",
-          "ergoAdvantage": "No token unlocks, no insider dumps. Supply is predictable and fair."
+          "title": "Token-Verteilung",
+          "content": "Typische VC-Chains weisen 40-60% der Token an Insider zu: Gründer, Team, Berater und VCs. Diese Token werden über Zeit freigeschaltet, was konstanten Verkaufsdruck erzeugt. Ergo hat null Insider-Zuteilung – alle ERG werden durch PoW geminiert.",
+          "ergoAdvantage": "Keine Token-Freischaltungen, keine Insider-Dumps. Das Angebot ist vorhersehbar und fair."
         },
         {
-          "title": "Incentive Alignment",
-          "content": "VC-funded projects must deliver returns to investors. This often means prioritizing token price over technology, rushing to market, or pivoting away from original vision. Ergo",
-          "ergoAdvantage": "Development focused on technology and users, not investor returns."
+          "title": "Anreizausrichtung",
+          "content": "VC-finanzierte Projekte müssen Renditen für Investoren liefern. Das bedeutet oft, den Token-Preis über die Technologie zu stellen, schnell auf den Markt zu kommen oder von der ursprünglichen Vision abzuweichen. Ergo",
+          "ergoAdvantage": "Entwicklung fokussiert auf Technologie und Nutzer, nicht auf Investorenrenditen."
         },
         {
-          "title": "Governance Reality",
-          "content": "Despite ",
-          "ergoAdvantage": "Real decentralization in decision-making, not theater."
+          "title": "Governance-Realität",
+          "content": "Trotz ",
+          "ergoAdvantage": "Echte Dezentralisierung bei der Entscheidungsfindung, kein Theater."
         }
       ],
       "faq": [
         {
-          "question": "What",
-          "answer": "VC funding creates misaligned incentives: projects must deliver investor returns, leading to token dumps, rushed development, and governance controlled by large stakeholders rather than users."
+          "question": "Was",
+          "answer": "VC-Finanzierung schafft falsch ausgerichtete Anreize: Projekte müssen Investorenrenditen liefern, was zu Token-Dumps, gehetzter Entwicklung und Governance führt, die von großen Stakeholdern statt von Nutzern kontrolliert wird."
         },
         {
-          "question": "How is Ergo funded without VCs?",
-          "answer": "Ergo has a treasury funded by a portion of block rewards (similar to Zcash"
+          "question": "Wie wird Ergo ohne VCs finanziert?",
+          "answer": "Ergo hat eine Schatzkammer, die durch einen Teil der Block-Belohnungen finanziert wird (ähnlich wie Zcash"
         },
         {
-          "question": "Why does fair launch matter?",
-          "answer": "Fair launch means everyone competes on equal terms from day one. No insiders got tokens cheaper than you. This creates genuine decentralization and aligned community incentives."
+          "question": "Warum ist ein fairer Start wichtig?",
+          "answer": "Ein fairer Start bedeutet, dass jeder von Anfang an zu gleichen Bedingungen konkurriert. Keine Insider haben Token billiger als Sie bekommen. Das schafft echte Dezentralisierung und ausgerichtete Community-Anreize."
         }
       ]
     },
     "kaspa": {
       "name": "Kaspa",
-      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
-      "seoDescription": "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability.",
+      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Nachhaltigkeit & PoW im Vergleich",
+      "seoDescription": "Ergo vs Kaspa Vergleich: eUTXO Smart Contracts vs reines Zahlungssystem, Storage Rent vs kein Rent, Datenschutzfunktionen und langfristige Nachhaltigkeit.",
       "summary": {
-        "headline": "Smart Contract PoW vs Speed-Focused PoW",
-        "subheadline": "Both are fair-launched PoW chains, but Ergo adds smart contracts, privacy, and sustainability features Kaspa lacks.",
+        "headline": "Smart-Contract-PoW vs geschwindigkeitsfokussiertem PoW",
+        "subheadline": "Beide sind fair gestartete PoW-Chains, aber Ergo fügt Smart Contracts, Datenschutz und Nachhaltigkeitsfunktionen hinzu, die Kaspa fehlen.",
         "points": [
           {
             "title": "Smart Contracts",
-            "description": "Ergo has full smart contract support via ErgoScript; Kaspa is payments-only (smart contracts planned)"
+            "description": "Ergo hat vollständige Smart-Contract-Unterstützung via ErgoScript; Kaspa ist nur für Zahlungen (Smart Contracts geplant)"
           },
           {
-            "title": "Privacy Features",
-            "description": "Ergo offers Sigma Protocols and ErgoMixer; Kaspa has no native privacy"
+            "title": "Datenschutzfunktionen",
+            "description": "Ergo bietet Sigma Protocols und ErgoMixer; Kaspa hat keinen nativen Datenschutz"
           },
           {
-            "title": "Long-term Sustainability",
-            "description": "Ergo has storage rent for post-emission security; Kaspa relies on fees only"
+            "title": "Langfristige Nachhaltigkeit",
+            "description": "Ergo hat Storage Rent für Sicherheit nach der Emission; Kaspa verlässt sich nur auf Gebühren"
           },
           {
             "title": "Light Clients",
-            "description": "Ergo has NiPoPoWs for trustless light clients; Kaspa uses SPV"
+            "description": "Ergo hat NiPoPoWs für vertrauenslose Light Clients; Kaspa verwendet SPV"
           }
         ]
       },
       "sections": [
         {
-          "title": "Smart Contract Capabilities",
-          "content": "Ergo launched with full smart contract support via ErgoScript, enabling DEXs, stablecoins, lending, and complex DeFi. Kaspa launched as a pure payment chain with smart contracts on the roadmap but not yet implemented.",
-          "ergoAdvantage": "Working DeFi ecosystem today vs promised future features."
+          "title": "Smart-Contract-Fähigkeiten",
+          "content": "Ergo wurde mit vollständiger Smart-Contract-Unterstützung via ErgoScript gestartet, was DEXs, Stablecoins, Kreditvergabe und komplexes DeFi ermöglicht. Kaspa wurde als reine Zahlungs-Chain gestartet, mit Smart Contracts auf der Roadmap, aber noch nicht implementiert.",
+          "ergoAdvantage": "Funktionierendes DeFi-Ökosystem heute vs versprochene zukünftige Funktionen."
         },
         {
-          "title": "Mining Accessibility",
+          "title": "Mining-Zugänglichkeit",
           "content": "Ergo",
-          "ergoAdvantage": "GPU mining remains viable, promoting decentralization."
+          "ergoAdvantage": "GPU-Mining bleibt rentabel und fördert Dezentralisierung."
         },
         {
-          "title": "Long-term Sustainability",
-          "content": "Both chains will eventually run out of block rewards. Ergo",
-          "ergoAdvantage": "Storage rent ensures sustainable security budget."
+          "title": "Langfristige Nachhaltigkeit",
+          "content": "Beide Chains werden schließlich keine Block-Belohnungen mehr haben. Ergo",
+          "ergoAdvantage": "Storage Rent stellt ein nachhaltiges Sicherheitsbudget sicher."
         },
         {
-          "title": "Speed vs Security Trade-off",
+          "title": "Geschwindigkeit vs Sicherheitskompromiss",
           "content": "Kaspa",
-          "ergoAdvantage": "Simpler, battle-tested design with light client support."
+          "ergoAdvantage": "Einfacheres, bewährtes Design mit Light-Client-Unterstützung."
         }
       ],
       "faq": [
         {
-          "question": "Is Kaspa faster than Ergo?",
-          "answer": "Kaspa has faster block times (~1 sec vs ~2 min), but Ergo"
+          "question": "Ist Kaspa schneller als Ergo?",
+          "answer": "Kaspa hat schnellere Blockzeiten (~1 Sek. vs ~2 Min.), aber Ergo"
         },
         {
-          "question": "Does Kaspa have smart contracts?",
-          "answer": "Not yet. Kaspa launched as a pure payment chain. Smart contracts are on the roadmap but not implemented. Ergo has had full smart contracts since launch."
+          "question": "Hat Kaspa Smart Contracts?",
+          "answer": "Noch nicht. Kaspa wurde als reine Zahlungs-Chain gestartet. Smart Contracts sind auf der Roadmap, aber noch nicht implementiert. Ergo hat seit dem Start vollständige Smart Contracts."
         },
         {
-          "question": "Which is better for mining?",
-          "answer": "Ergo remains GPU-friendly due to ASIC-resistant Autolykos. Kaspa has seen ASIC development which may centralize mining over time."
+          "question": "Welches ist besser für Mining?",
+          "answer": "Ergo bleibt GPU-freundlich dank ASIC-resistentem Autolykos. Bei Kaspa wurde ASIC-Entwicklung beobachtet, was das Mining über Zeit zentralisieren könnte."
         },
         {
-          "question": "Which has better long-term economics?",
+          "question": "Welches hat die bessere langfristige Wirtschaft?",
           "answer": "Ergo"
         }
       ]
     },
     "ravencoin": {
       "name": "Ravencoin",
-      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
-      "seoDescription": "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability.",
+      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Datenschutz & Token-Funktionen im Vergleich",
+      "seoDescription": "Ergo vs Ravencoin Vergleich: eUTXO Smart Contracts vs asset-fokussiertes Scripting, Datenschutzfunktionen, DeFi-Fähigkeiten und Nachhaltigkeit.",
       "summary": {
-        "headline": "Full DeFi Platform vs Asset-Focused Chain",
-        "subheadline": "Both enable native tokens on PoW, but Ergo adds smart contracts, privacy, and DeFi that Ravencoin can",
+        "headline": "Vollständige DeFi-Plattform vs asset-fokussierte Chain",
+        "subheadline": "Beide ermöglichen native Token auf PoW, aber Ergo fügt Smart Contracts, Datenschutz und DeFi hinzu, die Ravencoin nicht kann",
         "points": [
           {
             "title": "Smart Contracts",
-            "description": "Ergo has Turing-incomplete but powerful ErgoScript; Ravencoin has limited asset scripts"
+            "description": "Ergo hat Turing-unvollständiges, aber mächtiges ErgoScript; Ravencoin hat begrenzte Asset-Scripts"
           },
           {
-            "title": "DeFi Capabilities",
-            "description": "Ergo supports DEXs, lending, stablecoins; Ravencoin is asset issuance only"
+            "title": "DeFi-Fähigkeiten",
+            "description": "Ergo unterstützt DEXs, Kreditvergabe, Stablecoins; Ravencoin ist Asset-Ausgabe only"
           },
           {
-            "title": "Privacy",
-            "description": "Ergo has Sigma Protocols; Ravencoin has no privacy features"
+            "title": "Datenschutz",
+            "description": "Ergo hat Sigma Protocols; Ravencoin hat keine Datenschutzfunktionen"
           },
           {
-            "title": "Sustainability",
-            "description": "Ergo has storage rent; Ravencoin has no long-term security mechanism"
+            "title": "Nachhaltigkeit",
+            "description": "Ergo hat Storage Rent; Ravencoin hat keinen langfristigen Sicherheitsmechanismus"
           }
         ]
       },
       "sections": [
         {
-          "title": "Smart Contract Power",
-          "content": "Ravencoin was designed specifically for asset issuance with limited scripting. Ergo",
-          "ergoAdvantage": "Full DeFi capabilities vs simple asset transfers."
+          "title": "Smart-Contract-Leistung",
+          "content": "Ravencoin wurde speziell für Asset-Ausgabe mit begrenztem Scripting entwickelt. Ergo",
+          "ergoAdvantage": "Vollständige DeFi-Fähigkeiten vs einfache Asset-Übertragungen."
         },
         {
-          "title": "Token Capabilities",
-          "content": "Both support native tokens without smart contracts. Ravencoin has unique features like messaging and restricted assets. Ergo tokens can participate in complex DeFi protocols and smart contracts.",
-          "ergoAdvantage": "Tokens can be used in DeFi, not just transferred."
+          "title": "Token-Fähigkeiten",
+          "content": "Beide unterstützen native Token ohne Smart Contracts. Ravencoin hat einzigartige Funktionen wie Messaging und eingeschränkte Assets. Ergo-Token können an komplexen DeFi-Protokollen und Smart Contracts teilnehmen.",
+          "ergoAdvantage": "Token können im DeFi verwendet werden, nicht nur übertragen werden."
         },
         {
-          "title": "Privacy Features",
-          "content": "Ravencoin has no privacy features. Ergo provides Sigma Protocols for zero-knowledge proofs and ErgoMixer for transaction mixing, enabling private transfers when needed.",
-          "ergoAdvantage": "Optional privacy for sensitive transactions."
+          "title": "Datenschutzfunktionen",
+          "content": "Ravencoin hat keine Datenschutzfunktionen. Ergo bietet Sigma Protocols für Zero-Knowledge-Beweise und ErgoMixer für Transaktionsmischung, was private Überweisungen bei Bedarf ermöglicht.",
+          "ergoAdvantage": "Optionaler Datenschutz für sensible Transaktionen."
         },
         {
-          "title": "Long-term Viability",
-          "content": "Both face the post-emission challenge. Ergo",
-          "ergoAdvantage": "Storage rent ensures long-term security budget."
+          "title": "Langfristige Tragfähigkeit",
+          "content": "Beide sehen sich der Post-Emissions-Herausforderung gegenüber. Ergo",
+          "ergoAdvantage": "Storage Rent stellt langfristiges Sicherheitsbudget sicher."
         }
       ],
       "faq": [
         {
-          "question": "Is Ravencoin better for tokens than Ergo?",
-          "answer": "Ravencoin has specialized token features like messaging and restricted assets. But Ergo tokens can participate in DeFi (DEXs, lending, etc.), making them more useful overall."
+          "question": "Ist Ravencoin besser für Token als Ergo?",
+          "answer": "Ravencoin hat spezialisierte Token-Funktionen wie Messaging und eingeschränkte Assets. Aber Ergo-Token können an DeFi teilnehmen (DEXs, Kreditvergabe usw.), was sie insgesamt nützlicher macht."
         },
         {
-          "question": "Which is better for mining?",
-          "answer": "Both are GPU-mineable. Ravencoin uses KAWPOW, Ergo uses Autolykos. Both resist ASICs, though market conditions affect profitability."
+          "question": "Welches ist besser für Mining?",
+          "answer": "Beide können mit GPUs geminiert werden. Ravencoin verwendet KAWPOW, Ergo verwendet Autolykos. Beide widerstehen ASICs, obwohl die Marktbedingungen die Rentabilität beeinflussen."
         },
         {
-          "question": "Can Ravencoin do DeFi?",
-          "answer": "No. Ravencoin"
+          "question": "Kann Ravencoin DeFi?",
+          "answer": "Nein. Ravencoin"
         },
         {
-          "question": "Which has a larger community?",
-          "answer": "Ravencoin has been around longer and has a larger market cap. Ergo has a more technically active community building DeFi and tools."
+          "question": "Welches hat die größere Community?",
+          "answer": "Ravencoin gibt es länger und hat eine größere Marktkapitalisierung. Ergo hat eine technisch aktivere Community, die DeFi und Tools entwickelt."
         }
       ]
     },
     "litecoin": {
       "name": "Litecoin",
-      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
-      "seoDescription": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities.",
+      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Datenschutz & Funktionen im Vergleich",
+      "seoDescription": "Ergo vs Litecoin Vergleich: eUTXO Smart Contracts vs einfache Zahlungen, Sigma Protocols vs MWEB Datenschutz und DeFi-Fähigkeiten.",
       "summary": {
-        "headline": "Modern Smart Contract PoW vs Classic Payment Coin",
-        "subheadline": "Litecoin is digital silver to Bitcoin",
+        "headline": "Modernes Smart-Contract-PoW vs klassische Zahlungsmünze",
+        "subheadline": "Litecoin ist digitales Silber zu Bitcoins",
         "points": [
           {
             "title": "Smart Contracts",
-            "description": "Ergo has full ErgoScript contracts; Litecoin has Bitcoin-like limited scripting"
+            "description": "Ergo hat vollständige ErgoScript-Verträge; Litecoin hat Bitcoin-ähnliches begrenztes Scripting"
           },
           {
-            "title": "Privacy Approach",
-            "description": "Ergo uses Sigma Protocols (ZK proofs); Litecoin added MWEB (MimbleWimble)"
+            "title": "Datenschutzansatz",
+            "description": "Ergo verwendet Sigma Protocols (ZK-Beweise); Litecoin fügte MWEB (MimbleWimble) hinzu"
           },
           {
             "title": "DeFi",
-            "description": "Ergo has active DEXs and stablecoins; Litecoin has no DeFi"
+            "description": "Ergo hat aktive DEXs und Stablecoins; Litecoin hat kein DeFi"
           },
           {
             "title": "Innovation",
-            "description": "Ergo: research-driven with novel features; Litecoin: conservative Bitcoin fork"
+            "description": "Ergo: forschungsgetrieben mit neuartigen Funktionen; Litecoin: konservativer Bitcoin-Fork"
           }
         ]
       },
       "sections": [
         {
-          "title": "Purpose & Vision",
-          "content": "Litecoin was created as ",
-          "ergoAdvantage": "Built for DeFi and programmable money from day one."
+          "title": "Zweck & Vision",
+          "content": "Litecoin wurde als ",
+          "ergoAdvantage": "Von Anfang an für DeFi und programmierbares Geld entwickelt."
         },
         {
-          "title": "Smart Contract Capabilities",
-          "content": "Litecoin has Bitcoin-like scripting - useful for basic multi-sig but not DeFi. Ergo",
-          "ergoAdvantage": "Full DeFi capabilities vs payment-only functionality."
+          "title": "Smart-Contract-Fähigkeiten",
+          "content": "Litecoin hat Bitcoin-ähnliches Scripting – nützlich für einfaches Multi-Sig, aber nicht für DeFi. Ergo",
+          "ergoAdvantage": "Vollständige DeFi-Fähigkeiten vs nur Zahlungsfunktionalität."
         },
         {
-          "title": "Privacy Features",
-          "content": "Litecoin added MWEB (MimbleWimble Extension Blocks) for optional privacy. Ergo uses Sigma Protocols enabling zero-knowledge proofs. Both offer opt-in privacy with different technical approaches.",
-          "ergoAdvantage": "Sigma Protocols are more flexible for smart contract privacy."
+          "title": "Datenschutzfunktionen",
+          "content": "Litecoin fügte MWEB (MimbleWimble Extension Blocks) für optionalen Datenschutz hinzu. Ergo verwendet Sigma Protocols, die Zero-Knowledge-Beweise ermöglichen. Beide bieten opt-in Datenschutz mit unterschiedlichen technischen Ansätzen.",
+          "ergoAdvantage": "Sigma Protocols sind flexibler für Smart-Contract-Datenschutz."
         },
         {
-          "title": "Mining Decentralization",
-          "content": "Litecoin mining is dominated by ASICs, concentrating hash power. Ergo",
-          "ergoAdvantage": "More decentralized mining participation."
+          "title": "Mining-Dezentralisierung",
+          "content": "Das Litecoin-Mining wird von ASICs dominiert, was die Hashleistung konzentriert. Ergo",
+          "ergoAdvantage": "Dezentralisiertere Mining-Beteiligung."
         }
       ],
       "faq": [
         {
-          "question": "Is Litecoin faster than Ergo?",
-          "answer": "Slightly - 2.5 min vs 2 min blocks. But for DeFi, Ergo"
+          "question": "Ist Litecoin schneller als Ergo?",
+          "answer": "Leicht – 2,5 Min. vs 2 Min. Blöcke. Aber für DeFi ist Ergo"
         },
         {
-          "question": "Which has better privacy?",
-          "answer": "Different approaches. Litecoin uses MWEB (MimbleWimble), Ergo uses Sigma Protocols. Ergo"
+          "question": "Welches hat den besseren Datenschutz?",
+          "answer": "Unterschiedliche Ansätze. Litecoin verwendet MWEB (MimbleWimble), Ergo verwendet Sigma Protocols. Ergo"
         },
         {
-          "question": "Can I do DeFi on Litecoin?",
-          "answer": "No. Litecoin"
+          "question": "Kann ich DeFi auf Litecoin machen?",
+          "answer": "Nein. Litecoin"
         },
         {
-          "question": "Which is more decentralized?",
-          "answer": "Ergo, due to ASIC-resistant mining. Litecoin mining is dominated by ASIC farms, while Ergo remains GPU-mineable."
+          "question": "Welches ist dezentraler?",
+          "answer": "Ergo, aufgrund ASIC-resistenten Minings. Das Litecoin-Mining wird von ASIC-Farmen dominiert, während Ergo GPU-minierbar bleibt."
         }
       ]
     },
     "avalanche": {
       "name": "Avalanche",
-      "seoTitle": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
-      "seoDescription": "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization.",
+      "seoTitle": "Ergo vs Avalanche 2025: Fairer Start PoW vs VC-finanziertes PoS im Vergleich",
+      "seoDescription": "Ergo vs Avalanche Vergleich: fairer Start vs VC-Finanzierung, ASIC-resistentes PoW vs PoS, eUTXO vs Kontomodell und echte Dezentralisierung.",
       "summary": {
-        "headline": "Grassroots PoW vs VC-Backed PoS",
-        "subheadline": "Avalanche raised $290M+ from VCs with insider allocations. Ergo had zero pre-mine, zero VC money - just fair mining from block 1.",
+        "headline": "Graswurzel-PoW vs VC-gesichertem PoS",
+        "subheadline": "Avalanche hat 290 Mio. $+ von VCs mit Insider-Zuteilungen eingesammelt. Ergo hatte null Premine, null VC-Geld – nur faires Mining von Block 1.",
         "points": [
           {
-            "title": "Token Distribution",
-            "description": "Ergo: 100% mined, no pre-mine. Avalanche: 50% to insiders/team/foundation"
+            "title": "Token-Verteilung",
+            "description": "Ergo: 100% geminiert, kein Premine. Avalanche: 50% an Insider/Team/Stiftung"
           },
           {
-            "title": "Consensus",
-            "description": "Ergo: GPU-mineable PoW. Avalanche: PoS requiring 2000 AVAX ($50K+) to validate"
+            "title": "Konsens",
+            "description": "Ergo: GPU-minierbares PoW. Avalanche: PoS erfordert 2000 AVAX (50.000 $+) zur Validierung"
           },
           {
-            "title": "Censorship Resistance",
-            "description": "Ergo: permissionless mining. Avalanche: validators can be identified and pressured"
+            "title": "Zensurresistenz",
+            "description": "Ergo: erlaubnisfreies Mining. Avalanche: Validatoren können identifiziert und unter Druck gesetzt werden"
           },
           {
-            "title": "MEV Protection",
-            "description": "Ergo: no front-running by design. Avalanche: MEV extraction is possible"
+            "title": "MEV-Schutz",
+            "description": "Ergo: kein Front-Running durch Design. Avalanche: MEV-Extraktion ist möglich"
           }
         ]
       },
       "sections": [
         {
-          "title": "Token Distribution & Fairness",
-          "content": "Avalanche conducted multiple funding rounds, raising over $290M from VCs including Andreessen Horowitz, Polychain, and Three Arrows Capital. Approximately 50% of tokens went to team, foundation, and investors. Ergo had zero pre-mine, zero ICO - every ERG was mined through PoW, ensuring no insider advantage.",
-          "ergoAdvantage": "True fair launch with no insider allocation or VC influence."
+          "title": "Token-Verteilung & Fairness",
+          "content": "Avalanche führte mehrere Finanzierungsrunden durch und sammelte über 290 Mio. $ von VCs ein, darunter Andreessen Horowitz, Polychain und Three Arrows Capital. Etwa 50% der Token gingen an Team, Stiftung und Investoren. Ergo hatte null Premine, null ICO – jeder ERG wurde durch PoW geminiert, was keinen Insider-Vorteil sicherstellte.",
+          "ergoAdvantage": "Echter fairer Start ohne Insider-Zuteilung oder VC-Einfluss."
         },
         {
-          "title": "Consensus & Censorship Resistance",
-          "content": "Avalanche uses Proof-of-Stake where validators must stake 2000 AVAX (worth $50,000+). This creates barriers to entry and validators are identifiable, making them targets for regulatory pressure. Ergo",
-          "ergoAdvantage": "Permissionless, anonymous participation in consensus."
+          "title": "Konsens & Zensurresistenz",
+          "content": "Avalanche verwendet Proof-of-Stake, bei dem Validatoren 2000 AVAX (im Wert von 50.000 $+) einsetzen müssen. Das schafft Eintrittsbarrieren und Validatoren sind identifizierbar, was sie zu Zielen für regulatorischen Druck macht. Ergo",
+          "ergoAdvantage": "Erlaubnisfreie, anonyme Teilnahme am Konsens."
         },
         {
           "title": "MEV & Front-Running",
           "content": "Avalanche",
-          "ergoAdvantage": "No MEV extraction means fairer trading for users."
+          "ergoAdvantage": "Keine MEV-Extraktion bedeutet faireren Handel für Nutzer."
         },
         {
-          "title": "Smart Contract Model",
-          "content": "Avalanche uses the EVM with Solidity - familiar to developers but with known issues (reentrancy, MEV). Ergo",
-          "ergoAdvantage": "Safer smart contract execution model."
+          "title": "Smart-Contract-Modell",
+          "content": "Avalanche verwendet die EVM mit Solidity – vertraut für Entwickler, aber mit bekannten Problemen (Reentrancy, MEV). Ergo",
+          "ergoAdvantage": "Sichereres Smart-Contract-Ausführungsmodell."
         }
       ],
       "faq": [
         {
-          "question": "Is Avalanche faster than Ergo?",
-          "answer": "Yes, Avalanche has ~1 second finality vs Ergo"
+          "question": "Ist Avalanche schneller als Ergo?",
+          "answer": "Ja, Avalanche hat ~1 Sekunde Finalität vs Ergo"
         },
         {
-          "question": "Why does VC funding matter?",
-          "answer": "VC-backed chains have insiders who received tokens cheaply and may have influence over development. This creates misaligned incentives. Ergo"
+          "question": "Warum ist VC-Finanzierung wichtig?",
+          "answer": "VC-gestützte Chains haben Insider, die Token günstig bekommen haben und möglicherweise Einfluss auf die Entwicklung haben. Das schafft falsch ausgerichtete Anreize. Ergo"
         },
         {
-          "question": "Can I build the same apps on both?",
-          "answer": "Similar apps, different approaches. Avalanche uses Solidity/EVM, Ergo uses ErgoScript/eUTXO. Ergo"
+          "question": "Kann ich dieselben Apps auf beiden erstellen?",
+          "answer": "Ähnliche Apps, unterschiedliche Ansätze. Avalanche verwendet Solidity/EVM, Ergo verwendet ErgoScript/eUTXO. Ergo"
         },
         {
-          "question": "Which is more decentralized?",
-          "answer": "Ergo. Anyone can mine with a GPU anonymously. Avalanche requires staking $50K+ and validators are identifiable, making them targets for regulation."
+          "question": "Welches ist dezentraler?",
+          "answer": "Ergo. Jeder kann anonym mit einer GPU minen. Avalanche erfordert das Staking von 50.000 $+ und Validatoren sind identifizierbar, was sie zu Zielen für Regulierung macht."
         }
       ]
     },
     "algorand": {
       "name": "Algorand",
-      "seoTitle": "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
-      "seoDescription": "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain.",
+      "seoTitle": "Ergo vs Algorand 2025: Dezentrales PoW vs korporatives PoS im Vergleich",
+      "seoDescription": "Ergo vs Algorand Vergleich: Graswurzel-PoW vs MIT-gestütztes PoS, fairer Start vs Stiftungskontrolle und echte Dezentralisierung vs unternehmerische Blockchain.",
       "summary": {
-        "headline": "Cypherpunk PoW vs Corporate PoS",
-        "subheadline": "Algorand is MIT-backed with foundation-controlled tokenomics. Ergo is community-built with fair distribution and no central authority.",
+        "headline": "Cypherpunk-PoW vs korporativem PoS",
+        "subheadline": "Algorand wird von MIT unterstützt und hat von der Stiftung kontrollierte Tokenomics. Ergo ist community-gebaut mit fairer Verteilung und keiner zentralen Autorität.",
         "points": [
           {
             "title": "Governance",
-            "description": "Ergo: community-driven. Algorand: foundation-controlled with relay node requirements"
+            "description": "Ergo: community-getrieben. Algorand: stiftungskontrolliert mit Relay-Node-Anforderungen"
           },
           {
-            "title": "Token Distribution",
-            "description": "Ergo: 100% mined. Algorand: foundation controls billions of ALGO"
+            "title": "Token-Verteilung",
+            "description": "Ergo: 100% geminiert. Algorand: Stiftung kontrolliert Milliarden von ALGO"
           },
           {
-            "title": "Consensus",
-            "description": "Ergo: permissionless PoW. Algorand: Pure PoS with participation requirements"
+            "title": "Konsens",
+            "description": "Ergo: erlaubnisfreies PoW. Algorand: Pure PoS mit Teilnahmeanforderungen"
           },
           {
-            "title": "Philosophy",
-            "description": "Ergo: cypherpunk, privacy-focused. Algorand: enterprise, compliance-friendly"
+            "title": "Philosophie",
+            "description": "Ergo: Cypherpunk, datenschutzorientiert. Algorand: Unternehmen, compliance-freundlich"
           }
         ]
       },
       "sections": [
         {
-          "title": "Centralization Concerns",
+          "title": "Zentralisierungsbedenken",
           "content": "Algorand",
-          "ergoAdvantage": "Fully decentralized with no foundation-controlled infrastructure."
+          "ergoAdvantage": "Vollständig dezentralisiert ohne stiftungskontrollierte Infrastruktur."
         },
         {
-          "title": "Token Distribution",
+          "title": "Token-Verteilung",
           "content": "Algorand",
-          "ergoAdvantage": "Fair distribution with no central entity controlling supply."
+          "ergoAdvantage": "Faire Verteilung ohne zentrale Einheit, die das Angebot kontrolliert."
         },
         {
-          "title": "Philosophical Approach",
-          "content": "Algorand positions itself for enterprise adoption with compliance-friendly features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
-          "ergoAdvantage": "Built for individual freedom, not corporate compliance."
+          "title": "Philosophischer Ansatz",
+          "content": "Algorand positioniert sich für die Unternehmensadoption mit compliance-freundlichen Funktionen und akademischer Unterstützung vom MIT. Ergo setzt auf Cypherpunk-Werte: Datenschutz, Zensurresistenz und finanzielle Souveränität. Unterschiedliche Zielgruppen, unterschiedliche Designentscheidungen.",
+          "ergoAdvantage": "Für individuelle Freiheit gebaut, nicht für Unternehmens-Compliance."
         },
         {
-          "title": "Smart Contract Capabilities",
-          "content": "Algorand uses TEAL (Transaction Execution Approval Language) and PyTeal. Ergo uses ErgoScript. Both are capable but different. Ergo",
-          "ergoAdvantage": "eUTXO model is safer for financial applications."
+          "title": "Smart-Contract-Fähigkeiten",
+          "content": "Algorand verwendet TEAL (Transaction Execution Approval Language) und PyTeal. Ergo verwendet ErgoScript. Beide sind leistungsfähig, aber unterschiedlich. Ergo",
+          "ergoAdvantage": "Das eUTXO-Modell ist sicherer für Finanzanwendungen."
         }
       ],
       "faq": [
         {
-          "question": "Is Algorand decentralized?",
-          "answer": "Partially. While anyone can run participation nodes, relay nodes are foundation-controlled. The foundation also controls significant token supply. Ergo is fully permissionless with no central infrastructure."
+          "question": "Ist Algorand dezentralisiert?",
+          "answer": "Teilweise. Obwohl jeder Teilnahme-Nodes betreiben kann, werden Relay-Nodes von der Stiftung kontrolliert. Die Stiftung kontrolliert auch erhebliche Token-Vorräte. Ergo ist vollständig erlaubnisfrei ohne zentrale Infrastruktur."
         },
         {
-          "question": "Which is faster?",
-          "answer": "Algorand has ~4 second finality vs Ergo"
+          "question": "Welches ist schneller?",
+          "answer": "Algorand hat ~4 Sekunden Finalität vs Ergo"
         },
         {
-          "question": "Can both do DeFi?",
-          "answer": "Yes, both support DeFi. Algorand has growing DeFi with TEAL contracts. Ergo has active DeFi with unique MEV resistance due to eUTXO model."
+          "question": "Können beide DeFi?",
+          "answer": "Ja, beide unterstützen DeFi. Algorand hat wachsendes DeFi mit TEAL-Contracts. Ergo hat aktives DeFi mit einzigartiger MEV-Resistenz aufgrund des eUTXO-Modells."
         },
         {
-          "question": "Which is better for privacy?",
-          "answer": "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no native privacy features and is designed to be compliance-friendly."
+          "question": "Welches ist besser für Datenschutz?",
+          "answer": "Ergo. Sigma Protocols ermöglichen Zero-Knowledge-Beweise auf L1. Algorand hat keine nativen Datenschutzfunktionen und ist für Compliance-Freundlichkeit ausgelegt."
         },
         {
-          "question": "Why choose Ergo over Algorand?",
-          "answer": "If you value true decentralization, privacy, fair distribution, and cypherpunk principles over speed and enterprise adoption, Ergo aligns better with those values."
+          "question": "Warum Ergo statt Algorand wählen?",
+          "answer": "Wenn Sie echte Dezentralisierung, Datenschutz, faire Verteilung und Cypherpunk-Prinzipien über Geschwindigkeit und Unternehmensadoption stellen, passt Ergo besser zu diesen Werten."
         }
       ]
     }

@@ -41,8 +41,8 @@
       }
     },
     "hub": {
-      "title": "Эрго против Мира",
-      "subtitle": "Понять, как Ergo сравнивается с другими блокчейн платформами. Честно говоря, технические сравнения без маркетингового пушиста.",
+      "title": "Ergo против мира",
+      "subtitle": "Узнайте, как Ergo соотносится с другими блокчейн-платформами. Честные технические сравнения без маркетинговых красивостей.",
       "chooseComparison": "Выберите сравнение",
       "seeFullComparisonTable": "Смотреть полную таблицу сравнения",
       "min": "мин",
@@ -67,16 +67,16 @@
       },
       "whyMatters": "Почему эти сравнения имеют значение",
       "whyMattersSubtitle": "Каждый блокчейн делает компромиссы. Понимание этих компромиссов поможет вам выбрать подходящий инструмент для ваших нужд.",
-      "securityFirst": "Безопасность сначала",
-      "securityFirstDesc": "Модель eUTXO Эрго устраняет все классы уязвимостей, которые влияют на цепочки аккаунтов.",
-      "fairLaunch": "Справедливый запуск",
-      "fairLaunchDesc": "Нет ICO, нет преминки, нет VC. Все ERG заработаны через добычу, как биткойн.",
+      "securityFirst": "Безопасность на первом месте",
+      "securityFirstDesc": "Модель eUTXO Ergo устраняет целые классы уязвимостей, характерных для account-based сетей.",
+      "fairLaunch": "Честный запуск",
+      "fairLaunchDesc": "Без ICO, без премайна, без VC. Весь ERG добывается майнингом, как в Bitcoin.",
       "programmablePrivacy": "Программируемая конфиденциальность",
-      "programmablePrivacyDesc": "Протоколы Sigma позволяют выверять нулевые знания без надежной установки, встроенной в основной протокол.",
-      "readyToBuild": "Готовы построить на Ergo?",
-      "readyToBuildDesc": "Присоединяйтесь к сообществу строителей, создающих будущее децентрализованных финансов.",
-      "startBuilding": "Начать строительство",
-      "exploreEcosystem": "Исследовать Экосистему"
+      "programmablePrivacyDesc": "Sigma-протоколы реализуют zero-knowledge доказательства без trusted setup, встроенные в базовый уровень протокола.",
+      "readyToBuild": "Готовы строить на Ergo?",
+      "readyToBuildDesc": "Присоединяйтесь к сообществу разработчиков, создающих будущее децентрализованных финансов.",
+      "startBuilding": "Начать разработку",
+      "exploreEcosystem": "Исследовать экосистему"
     },
     "detail": {
       "seo": {
@@ -89,41 +89,41 @@
       "allComparisons": "Все сравнения",
       "featureComparison": "Сравнение функций",
       "deepDive": "Глубокое погружение",
-      "ergoAdvantage": "Преимущество Эрго",
-      "relatedInfographics": "Связанная информация",
+      "ergoAdvantage": "Преимущество Ergo",
+      "relatedInfographics": "Связанная инфографика",
       "faq": "Часто задаваемые вопросы",
       "moreComparisons": "Больше сравнений",
       "readyToExperience": "Готовы испытать Ergo?",
       "readyToExperienceDesc": "Присоединяйтесь к тысячам пользователей, которые выбрали децентрализацию, безопасность и финансовую свободу.",
-      "getWallet": "Получить кошелек",
-      "startBuilding": "Начать строительство",
+      "getWallet": "Получить кошелёк",
+      "startBuilding": "Начать разработку",
       "lastUpdated": "Последнее обновление"
     },
     "features": {
       "consensus": "Консенсус",
       "stateModel": "Модель состояния",
-      "smartContracts": "Умные контракты",
+      "smartContracts": "Смарт-контракты",
       "privacy": "Приватность",
       "sustainability": "Устойчивость",
-      "lightClients": "Светлые клиенты",
-      "miningAlgorithm": "Алгоритм добычи",
+      "lightClients": "Лёгкие клиенты",
+      "miningAlgorithm": "Алгоритм майнинга",
       "blockTime": "Время блока",
-      "launchModel": "Запустить модель",
+      "launchModel": "Модель запуска",
       "networkEffect": "Сетевой эффект"
     }
   },
   "comparePageClient": {
-    "breadcrumbTitle": "Эрго против {name}",
-    "heroVs": "против",
-    "heroTitle": "Эрго против",
+    "breadcrumbTitle": "Ergo vs {name}",
+    "heroVs": "vs",
+    "heroTitle": "Ergo vs",
     "sections": {
-      "featureComparison": "Функция",
-      "featureComparisonHighlight": "Сравнение",
+      "featureComparison": "Сравнение",
+      "featureComparisonHighlight": "функций",
       "feature": "Функция",
-      "advantageNote": "указывает на преимущества в этой категории. Последнее обновление:",
-      "deepDive": "Глубоко",
-      "deepDiveHighlight": "Погрузиться",
-      "ergoAdvantage": "Преимущество Эрго",
+      "advantageNote": "обозначает преимущество в данной категории. Последнее обновление:",
+      "deepDive": "Детальный",
+      "deepDiveHighlight": "разбор",
+      "ergoAdvantage": "Преимущество Ergo",
       "relatedArticles": "Связанные",
       "relatedArticlesHighlight": "Статьи",
       "minRead": "мин чтения",
@@ -135,77 +135,77 @@
       "moreComparisonsHighlight": "Сравнения"
     },
     "cta": {
-      "title": "Готовы испытать Ergo?",
-      "description": "Присоединяйтесь к тысячам пользователей, которые выбрали децентрализацию, безопасность и финансовую свободу.",
-      "getWallet": "Получить кошелек",
-      "startBuilding": "Начать строительство"
+      "title": "Готовы попробовать Ergo?",
+      "description": "Присоединяйтесь к тысячам пользователей, выбравших децентрализацию, безопасность и финансовую свободу.",
+      "getWallet": "Получить кошелёк",
+      "startBuilding": "Начать разработку"
     }
   },
   "comparisonsData": {
     "bitcoin": {
-      "name": "Биткоин",
-      "seoTitle": "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Susability Compared",
-      "seoDescription": "Полное сравнение Ergo и Bitcoin: смарт-контрактов eUTXO и простых UTXO, протоколов Sigma, надежности хранения и легких клиентов NiPoWs."
+      "name": "Bitcoin",
+      "seoTitle": "Ergo vs Bitcoin 2025: смарт-контракты, приватность и устойчивость",
+      "seoDescription": "Полное сравнение Ergo и Bitcoin: смарт-контракты eUTXO vs простые UTXO, приватность через Sigma-протоколы, Storage Rent для устойчивости и лёгкие клиенты NiPoPoWs."
     },
     "ethereum": {
       "name": "Ethereum",
-      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Полное сравнение Ergo и Ethereum: модель eUTXO и аккаунта eUTXO, предсказуемые комиссии, отсутствие атак, PoW безопасность и внутренняя конфиденциальность с Sigma Протоколами."
+      "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs account-модель, PoW vs PoS",
+      "seoDescription": "Полное сравнение Ergo и Ethereum: eUTXO vs account-модель, предсказуемые комиссии, защита от reentrancy-атак, PoW-безопасность и нативная приватность через Sigma-протоколы."
     },
     "cardano": {
-      "name": "Кардано",
-      "seoTitle": "Ergo vs Cardano 2025: кузни eUTXO с различными философиями",
-      "seoDescription": "Сравните Ergo и Cardano: оба используют eUTXO, но у Ergo есть PoW консенсус, аренда хранения, честный запуск и конфиденциальность местных протоколов Sigma."
+      "name": "Cardano",
+      "seoTitle": "Ergo vs Cardano 2025: eUTXO-родственники с разной философией",
+      "seoDescription": "Сравнение Ergo и Cardano: обе сети используют eUTXO, но у Ergo PoW-консенсус, Storage Rent, честный запуск и нативная приватность через Sigma-протоколы."
     },
     "monero": {
-      "name": "Монеро",
-      "seoTitle": "Ergo vs Monero 2025: Подходы к конфиденциальности по сравнению",
-      "seoDescription": "Сравните частную информацию Ergo и Monery: Sigma Protocols vs Ring Signatures, optional vs Обязательные конфиденциальности, смарт-контракты и регулирующие соображения."
+      "name": "Monero",
+      "seoTitle": "Ergo vs Monero 2025: сравнение подходов к приватности",
+      "seoDescription": "Сравнение приватности Ergo и Monero: Sigma-протоколы vs Ring Signatures, опциональная vs обязательная приватность, смарт-контракты и регуляторные риски."
     },
     "zcash": {
-      "name": "Зкаш",
-      "seoTitle": "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARK Privacy",
-      "seoDescription": "Сравните Ergo и Zcash: Протоколы Sigma vs zk-SNARKs, не доверенные установки, смарт-контракты, честный старт и вознаграждение основателей."
+      "name": "Zcash",
+      "seoTitle": "Ergo vs Zcash 2025: Sigma-протоколы vs zk-SNARKs",
+      "seoDescription": "Сравнение Ergo и Zcash: Sigma-протоколы vs zk-SNARKs, отсутствие trusted setup, смарт-контракты, честный запуск и отличия в токеномике."
     },
     "solana": {
-      "name": "Солана",
-      "seoTitle": "Эрго против Соланы 2025: Децентрализация против Скорости Торговли",
-      "seoDescription": "Сравните Ergo и Solana: PoW vs PoS, децентрализация против TPS, справедливый запуск и финансирование VC и подходы к устойчивому развитию."
+      "name": "Solana",
+      "seoTitle": "Ergo vs Solana 2025: децентрализация vs скорость",
+      "seoDescription": "Сравнение Ergo и Solana: PoW vs PoS, реальная децентрализация vs TPS, честный запуск vs VC-финансирование и подходы к устойчивости."
     },
     "cbdc": {
-      "name": "CBDCs",
-      "seoTitle": "Эрго против ЦВР 2025: Децентрализованные цифровые валюты Центрального банка",
-      "seoDescription": "Сравните блокчейн Эрго с Центральным банком Цифровые Валюты: конфиденциальность, сопротивление цензуре, программируемые деньги и финансовая свобода."
+      "name": "CBDC",
+      "seoTitle": "Ergo vs CBDC 2025: децентрализованные деньги vs цифровые валюты центробанков",
+      "seoDescription": "Сравнение Ergo с CBDC: приватность, устойчивость к цензуре, программируемые деньги и финансовая свобода."
     },
     "vc-chains": {
-      "name": "Цепочки, финансируемые из VC",
-      "seoTitle": "Ergo vs VC-финансируемые блокчейны 2025: Справедливый запуск против инсайдера",
-      "seoDescription": "Сравните запуск ярмарки Эрго с блокчейнами, финансируемыми за счет ЭП: распределение токенов, управление, выравнивание стимулов и долгосрочную устойчивость."
+      "name": "VC-финансируемые сети",
+      "seoTitle": "Ergo vs VC-блокчейны 2025: честный запуск vs инсайдерские аллокации",
+      "seoDescription": "Сравнение Ergo с VC-финансируемыми блокчейнами: распределение токенов, управление, выравнивание стимулов и долгосрочная устойчивость."
     },
     "kaspa": {
       "name": "Kaspa",
-      "seoTitle": "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
-      "seoDescription": "Ergo vs Kaspa компарая: смарт-контракты eUTXO и чистые платежи, складская аренда без аренды, функции конфиденциальности и долговременная устойчивость."
+      "seoTitle": "Ergo vs Kaspa 2025: смарт-контракты, устойчивость и PoW",
+      "seoDescription": "Сравнение Ergo и Kaspa: eUTXO-смарт-контракты vs «чистые платежи», Storage Rent vs отсутствие механизма, приватность и долгосрочная устойчивость."
     },
     "ravencoin": {
-      "name": "Равенкова",
-      "seoTitle": "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
-      "seoDescription": "Ergo vs Ravencoin сравнение: смарт-контракты eUTXO против сфокусированных на активах, функции конфиденциальности, возможности DeFi и устойчивость."
+      "name": "Ravencoin",
+      "seoTitle": "Ergo vs Ravencoin 2025: смарт-контракты, приватность и токены",
+      "seoDescription": "Сравнение Ergo и Ravencoin: eUTXO-смарт-контракты vs цепочка для выпуска активов, приватность, возможности DeFi и устойчивость."
     },
     "litecoin": {
       "name": "Litecoin",
-      "seoTitle": "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
-      "seoDescription": "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities."
+      "seoTitle": "Ergo vs Litecoin 2025: смарт-контракты, приватность и возможности",
+      "seoDescription": "Сравнение Ergo и Litecoin: eUTXO-смарт-контракты vs простые платежи, Sigma-протоколы vs MWEB-приватность и наличие DeFi-экосистемы."
     },
     "avalanche": {
-      "name": "Лавина",
-      "seoTitle": "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Сравниваются",
-      "seoDescription": "Ergo vs Avalanche сравнение: справедливый запуск против финансирования VC, ASIC-устойчивый PoW vs PoS, модель eUTXO и реальная децентрализация."
+      "name": "Avalanche",
+      "seoTitle": "Ergo vs Avalanche 2025: честный PoW-запуск vs VC-PoS",
+      "seoDescription": "Сравнение Ergo и Avalanche: честный запуск vs VC-финансирование, ASIC-устойчивый PoW vs PoS, eUTXO vs account-модель и реальная децентрализация."
     },
     "algorand": {
       "name": "Algorand",
-      "seoTitle": "Ergo vs Algorand 2025: Децентрализованный PoW vs Corporate PoS Compared",
-      "seoDescription": "Эрго против Алгоренда сравнивают: низовые PoW против MIT PoS, яркий старт и контроль фондов, истинная децентрализация против корпоративного блокчейна."
+      "seoTitle": "Ergo vs Algorand 2025: децентрализованный PoW vs «корпоративный» PoS",
+      "seoDescription": "Сравнение Ergo и Algorand: низовой PoW vs PoS с сильной ролью фонда, честный запуск vs контроль распределения и разные философии децентрализации."
     }
   },
   "comparisonItems": {
@@ -531,12 +531,12 @@
           "ergoAdvantage": "У Ergo PoW‑модель и майнинг на GPU снижают барьеры: больше участников могут реально участвовать в обеспечении безопасности сети."
         },
         {
-          "title": "Token Distribution",
+          "title": "Распределение токенов",
           "content": "Solana привлекала существенное VC‑финансирование и имела заметные инсайдерские аллокации. Ergo стартовал без ICO, премайна и VC — весь ERG добывается майнингом.",
           "ergoAdvantage": "Без инсайдерского преимущества: конкуренция на равных условиях с первого дня."
         },
         {
-          "title": "Network Reliability",
+          "title": "Надёжность сети",
           "content": "У Solana были периоды серьёзных сбоев/остановок сети. Ergo показывает стабильную работу с момента запуска, что отражает зрелость PoW‑консенсуса и более консервативный дизайн.",
           "ergoAdvantage": "Надёжность и предсказуемость важнее максимального TPS — особенно для денег и финансовых протоколов."
         }
@@ -569,7 +569,7 @@
             "description": "Транзакции без разрешений vs деньги, которые можно заморозить и ограничить"
           },
           {
-            "title": "No Expiration",
+            "title": "Без срока действия",
             "description": "Ваши деньги не «сгорают» по таймеру и не ограничиваются правилами эмитента"
           },
           {
@@ -689,7 +689,7 @@
             "description": "У Ergo есть Storage Rent для безопасности после окончания эмиссии; Kaspa рассчитывает в основном на комиссии"
           },
           {
-            "title": "Light Clients",
+            "title": "Лёгкие клиенты",
             "description": "Ergo использует NiPoPoWs для лёгких клиентов без доверия; Kaspa обычно опирается на SPV‑подход"
           }
         ]
@@ -701,7 +701,7 @@
           "ergoAdvantage": "Рабочая DeFi‑платформа уже сейчас, а не «обещания на будущее»."
         },
         {
-          "title": "Mining Accessibility",
+          "title": "Доступность майнинга",
           "content": "Доступность майнинга влияет на децентрализацию. Если ASIC получают существенное преимущество, хешрейт концентрируется в крупных фермах. Ergo использует Autolykos, ориентированный на GPU‑майнинг и снижение ASIC‑преимущества.",
           "ergoAdvantage": "GPU‑майнинг остаётся жизнеспособным, что помогает поддерживать более широкое участие и децентрализацию."
         },
@@ -726,11 +726,11 @@
           "answer": "На момент текущей структуры страницы Kaspa стартовала как платежная сеть; смарт‑контракты заявлены в планах/дорожной карте. Ergo поддерживает смарт‑контракты с момента запуска."
         },
         {
-          "question": "Which is better for mining?",
+          "question": "Что лучше для майнинга?",
           "answer": "Ergo остаётся более дружелюбной к GPU благодаря Autolykos и снижению ASIC‑преимущества. В сетях, где ASIC доминируют, майнинг чаще концентрируется. Поэтому для «домашнего» участия Ergo обычно выглядит привлекательнее."
         },
         {
-          "question": "Which has better long-term economics?",
+          "question": "У какой сети лучше долгосрочная экономика?",
           "answer": "Если смотреть на «жизнь после эмиссии», у Ergo есть протокольный механизм Storage Rent, который помогает поддерживать доход майнеров и контролировать разрастание состояния. Это сильный аргумент в пользу долгосрочной устойчивости."
         }
       ]
@@ -752,7 +752,7 @@
             "description": "Ergo поддерживает DEX, кредитование, стейблкоины; Ravencoin в основном ориентирован на выпуск и передачу активов"
           },
           {
-            "title": "Privacy",
+            "title": "Приватность",
             "description": "У Ergo есть Sigma‑протоколы; у Ravencoin нет нативных инструментов приватности"
           },
           {
@@ -768,12 +768,12 @@
           "ergoAdvantage": "Полноценные DeFi‑сценарии и сложные условия расходования vs в основном «переводы активов»."
         },
         {
-          "title": "Token Capabilities",
+          "title": "Возможности токенов",
           "content": "Обе сети поддерживают нативные токены без обязательного развёртывания контрактов. У Ravencoin есть специализированные функции под активы (например restricted assets/месседжинг). Токены Ergo можно использовать как строительные блоки для DeFi‑протоколов и смарт‑контрактов.",
           "ergoAdvantage": "Токены пригодны не только для передачи, но и для компонуемых финансовых протоколов."
         },
         {
-          "title": "Privacy Features",
+          "title": "Функции приватности",
           "content": "У Ravencoin нет нативных механизмов приватности. В Ergo доступны Sigma‑протоколы (ZK‑доказательства) и инструменты вроде ErgoMixer для повышения приватности транзакций при необходимости.",
           "ergoAdvantage": "Опциональная приватность для чувствительных транзакций и сценариев выборочного раскрытия."
         },
@@ -785,19 +785,19 @@
       ],
       "faq": [
         {
-          "question": "Is Ravencoin better for tokens than Ergo?",
+          "question": "Ravencoin лучше для токенов, чем Ergo?",
           "answer": "Ravencoin имеет специализированные фичи под токенизацию активов (например restricted assets). Но токены в Ergo можно использовать внутри DeFi‑протоколов (DEX, кредитование и т.д.), поэтому для программируемых финансовых сценариев Ergo обычно универсальнее."
         },
         {
-          "question": "Which is better for mining?",
+          "question": "Что лучше для майнинга?",
           "answer": "Обе сети исторически ориентированы на GPU‑майнинг: Ravencoin использует KAWPOW, Ergo — Autolykos. Устойчивость к ASIC и доходность зависят от рынка и реализации, но цель у обеих — не допускать доминирования специализированного железа."
         },
         {
-          "question": "Can Ravencoin do DeFi?",
+          "question": "Может ли Ravencoin использоваться для DeFi?",
           "answer": "В классическом понимании DeFi (DEX, кредитование, стейблкоины на смарт‑контрактах) — нет: Ravencoin больше сфокусирован на выпуске/передаче активов. Ergo изначально строился как платформа программируемых финансов."
         },
         {
-          "question": "Which has a larger community?",
+          "question": "У кого больше сообщество?",
           "answer": "Ravencoin существует дольше и часто имеет более широкую аудиторию вокруг токенизации активов. В Ergo заметно сильное техническое сообщество, ориентированное на DeFi‑экосистему и инструменты разработки."
         }
       ]
@@ -823,49 +823,49 @@
             "description": "У Ergo есть DEX и стейблкоины; у Litecoin нет сопоставимой DeFi‑экосистемы на базовом уровне"
           },
           {
-            "title": "Innovation",
+            "title": "Инновации",
             "description": "Ergo — исследовательский дизайн и новые протокольные фичи; Litecoin — более консервативная линия развития платежной монеты"
           }
         ]
       },
       "sections": [
         {
-          "title": "Purpose & Vision",
+          "title": "Цель и видение",
           "content": "Litecoin создавался как более «лёгкая» и быстрая для платежей альтернатива Bitcoin (с акцентом на простые переводы). Ergo создавался как PoW‑платформа для программируемых денег: смарт‑контракты на eUTXO, нативные токены и расширенная криптография.",
           "ergoAdvantage": "Ergo рассчитан на DeFi и программируемые финансы с первого дня, а не только на платежи."
         },
         {
-          "title": "Smart Contract Capabilities",
+          "title": "Возможности смарт-контрактов",
           "content": "Скриптинг Litecoin близок к Bitcoin: он полезен для базовых сценариев вроде multi‑sig, но не предназначен для DeFi‑протоколов. В Ergo есть ErgoScript и eUTXO‑модель, позволяющие строить сложные финансовые приложения.",
           "ergoAdvantage": "Полноценные DeFi‑возможности и безопасная модель исполнения vs функциональность «платежной монеты»."
         },
         {
-          "title": "Privacy Features",
+          "title": "Функции приватности",
           "content": "Litecoin добавил MWEB (MimbleWimble Extension Blocks) как опциональную приватность. Ergo использует Sigma‑протоколы, позволяющие строить zero‑knowledge доказательства и приватные условия внутри смарт‑контрактов. Оба подхода «opt‑in», но решают задачу разными способами.",
           "ergoAdvantage": "Sigma‑протоколы гибче для приватности в логике смарт‑контрактов и выборочного раскрытия."
         },
         {
-          "title": "Mining Decentralization",
+          "title": "Децентрализация майнинга",
           "content": "Майнинг Litecoin доминируется ASIC‑оборудованием, что часто концентрирует хешрейт в крупных участниках. Ergo использует Autolykos, чтобы снизить ASIC‑преимущество и поддержать участие GPU‑майнеров.",
           "ergoAdvantage": "Более доступный майнинг и потенциально более широкое участие в обеспечении безопасности."
         }
       ],
       "faq": [
         {
-          "question": "Is Litecoin faster than Ergo?",
+          "question": "Litecoin быстрее Ergo?",
           "answer": "По времени блока Litecoin около ~2.5 минуты, у Ergo около ~2 минут. Но для DeFi важнее не только время блока, а модель смарт‑контрактов, безопасность исполнения и предсказуемость комиссий — здесь Ergo даёт больше возможностей."
         },
         {
-          "question": "Which has better privacy?",
+          "question": "У кого лучше приватность?",
           "answer": "Это разные подходы. Litecoin использует MWEB (MimbleWimble), а Ergo — Sigma‑протоколы. В Ergo приватность более «программируемая»: можно строить ZK‑условия и выборочное раскрытие в смарт‑контрактах."
         },
         {
-          "question": "Can I do DeFi on Litecoin?",
+          "question": "Можно ли использовать Litecoin для DeFi?",
           "answer": "В привычном смысле DeFi на базе смарт‑контрактов (DEX, кредитование, стейблкоины) — нет: Litecoin ориентирован на платежи. Ergo изначально предназначен для программируемых финансов."
         },
         {
-          "question": "Which is more decentralized?",
-          "answer": "Ergo, due to ASIC-resistant mining. Litecoin mining is dominated by ASIC farms, while Ergo remains GPU-mineable."
+          "question": "Что более децентрализовано?",
+          "answer": "Ergo — благодаря ASIC-устойчивому майнингу. Майнинг Litecoin доминируется ASIC-фермами, тогда как Ergo по-прежнему доступен для GPU-майнеров."
         }
       ]
     },
@@ -878,61 +878,61 @@
         "subheadline": "Avalanche привлекал крупные раунды и имел инсайдерские аллокации. Ergo стартовал без премайна и без VC — только честный майнинг с первого блока.",
         "points": [
           {
-            "title": "Token Distribution",
+            "title": "Распределение токенов",
             "description": "Ergo: 100% добыто майнингом, без премайна. Avalanche: существенная доля у команды/фондов/инсайдеров (аллокации)"
           },
           {
-            "title": "Consensus",
+            "title": "Консенсус",
             "description": "Ergo: PoW с майнингом на GPU. Avalanche: PoS со входным порогом стейка для валидации"
           },
           {
-            "title": "Censorship Resistance",
+            "title": "Устойчивость к цензуре",
             "description": "Ergo: permissionless‑майнинг. Avalanche: валидаторов легче идентифицировать и на них можно давить"
           },
           {
-            "title": "MEV Protection",
+            "title": "Защита от MEV",
             "description": "Ergo: сложнее для MEV/фронт‑рана по дизайну eUTXO. Avalanche: MEV‑извлечение возможно"
           }
         ]
       },
       "sections": [
         {
-          "title": "Token Distribution & Fairness",
+          "title": "Распределение токенов и честность",
           "content": "Avalanche проходил раунды финансирования и имел распределение токенов между командой/фондами/инвесторами. Это не «плохо» само по себе, но создаёт другой баланс стимулов и риска инсайдерского влияния. Ergo стартовал без премайна и без ICO: каждый ERG появился через майнинг (PoW), что снижает инсайдерское преимущество.",
           "ergoAdvantage": "Честный запуск без премайна и без VC‑влияния на распределение предложения."
         },
         {
-          "title": "Consensus & Censorship Resistance",
+          "title": "Консенсус и устойчивость к цензуре",
           "content": "Avalanche использует Proof‑of‑Stake, где валидация требует существенного стейка и инфраструктуры. Это повышает барьеры входа, а валидаторы как сущности обычно проще идентифицируются, что увеличивает регуляторные риски.",
           "ergoAdvantage": "В Ergo PoW‑модель и permissionless‑участие в майнинге повышают устойчивость к цензуре и снижают барьеры участия."
         },
         {
-          "title": "MEV & Front-Running",
+          "title": "MEV и фронт-ран",
           "content": "В EVM‑совместимых средах (включая экосистему Avalanche) MEV‑сценарии вроде фронт‑рана и сэндвич‑атак возможны и активно эксплуатируются на DeFi‑рынках.",
           "ergoAdvantage": "eUTXO‑модель Ergo делает MEV‑извлечение структурно сложнее, что приводит к более честным условиям торговли для пользователей."
         },
         {
-          "title": "Smart Contract Model",
+          "title": "Модель смарт-контрактов",
           "content": "Avalanche использует EVM и Solidity — это знакомо разработчикам, но несёт типичные риски account‑model (reentrancy‑класс ошибок, сложность предсказуемости исполнения, MEV в DeFi). Ergo использует eUTXO и ErgoScript, что меняет модель проектирования контрактов в сторону большей детерминированности.",
           "ergoAdvantage": "Более безопасная модель исполнения для финансовых сценариев и меньше классовых уязвимостей."
         }
       ],
       "faq": [
         {
-          "question": "Is Avalanche faster than Ergo?",
+          "question": "Avalanche быстрее Ergo?",
           "answer": "По финализации Avalanche может быть быстрее в некоторых режимах, чем Ergo с ~2‑минутными блоками. Но скорость — только один параметр: для денег и DeFi критичны безопасность модели, устойчивость к цензуре и распределение власти."
         },
         {
-          "question": "Why does VC funding matter?",
+          "question": "Почему важно VC-финансирование?",
           "answer": "VC‑финансирование часто означает инсайдерские аллокации и потенциальное влияние на управление/стратегию, а также риск давления продаж из‑за анлоков. У Ergo честный запуск снижает этот класс рисков."
         },
         {
-          "question": "Can I build the same apps on both?",
+          "question": "Можно ли строить одинаковые приложения на обоих?",
           "answer": "Схожие приложения возможны, но подходы разные: Avalanche — Solidity/EVM, Ergo — ErgoScript/eUTXO. В Ergo многие DeFi‑конструкции реализуются иначе, часто с упором на предсказуемость и безопасность исполнения."
         },
         {
-          "question": "Which is more decentralized?",
-          "answer": "Ergo. Anyone can mine with a GPU anonymously. Avalanche requires staking $50K+ and validators are identifiable, making them targets for regulation."
+          "question": "Что более децентрализовано?",
+          "answer": "Ergo. Любой может майнить на GPU анонимно. У Avalanche требуется стейк в размере $50K+ и валидаторы идентифицируемы, что делает их уязвимыми для регуляторного давления."
         }
       ]
     },
@@ -945,65 +945,65 @@
         "subheadline": "Algorand ассоциируется с академической/институциональной моделью и ролью фонда в токеномике. Ergo строится сообществом, с честным распределением и без центрального органа.",
         "points": [
           {
-            "title": "Governance",
+            "title": "Управление",
             "description": "Ergo: сообщество и permissionless‑модель. Algorand: значимая роль фонда и инфраструктурные особенности (например relay‑узлы)"
           },
           {
-            "title": "Token Distribution",
+            "title": "Распределение токенов",
             "description": "Ergo: 100% добыто майнингом. Algorand: существенный объём предложения контролируется структурами экосистемы/фонда"
           },
           {
-            "title": "Consensus",
+            "title": "Консенсус",
             "description": "Ergo: permissionless PoW. Algorand: Pure PoS с иными требованиями участия и распределения ролей"
           },
           {
-            "title": "Philosophy",
+            "title": "Философия",
             "description": "Ergo: cypherpunk‑ценности, приватность и суверенитет. Algorand: фокус на enterprise/институциональное использование"
           }
         ]
       },
       "sections": [
         {
-          "title": "Centralization Concerns",
+          "title": "Риски централизации",
           "content": "У Algorand значимая роль экосистемных структур и инфраструктуры (в частности, архитектура relay/participation узлов исторически обсуждалась как фактор централизации). В PoW‑сетях без централизованной инфраструктуры эти риски иные.",
           "ergoAdvantage": "В Ergo нет фонда, который контролирует критическую инфраструктуру сети, и участие в консенсусе не требует разрешений."
         },
         {
-          "title": "Token Distribution",
+          "title": "Распределение токенов",
           "content": "Распределение токенов влияет на власть и стимулы. В сетях с крупными аллокациями у фонда/инсайдеров возрастает риск влияния на управление и рынок. Ergo распределяется через майнинг, без премайна и без VC‑аллокаций.",
           "ergoAdvantage": "Честное распределение без центрального субъекта, контролирующего значимую долю предложения."
         },
         {
-          "title": "Philosophical Approach",
-          "content": "Algorand positions itself for enterprise adoption with compliance-friendly features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
+          "title": "Философский подход",
+          "content": "Algorand позиционируется для корпоративного применения с compliance-friendly функциями и академической поддержкой от MIT. Ergo придерживается cypherpunk-ценностей: приватность, устойчивость к цензуре и финансовый суверенитет. Разные целевые аудитории — разные проектные решения.",
           "ergoAdvantage": "Ergo строится для финансовой свободы человека, а не для «комплаенса корпораций» как приоритетного сценария."
         },
         {
-          "title": "Smart Contract Capabilities",
+          "title": "Возможности смарт-контрактов",
           "content": "Algorand использует TEAL/PyTeal, Ergo — ErgoScript. Обе платформы позволяют писать смарт‑контракты, но модели исполнения и проектирования отличаются. eUTXO‑подход Ergo даёт больше детерминированности и иной профиль безопасности для финансовых сценариев.",
           "ergoAdvantage": "eUTXO‑модель часто проще анализировать и безопаснее для финансовых приложений, где важны предсказуемость и отсутствие классовых атак."
         }
       ],
       "faq": [
         {
-          "question": "Is Algorand decentralized?",
-          "answer": "Partially. While anyone can run participation nodes, relay nodes are foundation-controlled. The foundation also controls significant token supply. Ergo is fully permissionless with no central infrastructure."
+          "question": "Algorand децентрализован?",
+          "answer": "Частично. Хотя любой может запустить participation-узел, relay-узлы контролируются фондом. Фонд также управляет значительным объёмом предложения токенов. Ergo полностью permissionless и не имеет централизованной инфраструктуры."
         },
         {
-          "question": "Which is faster?",
+          "question": "Что быстрее?",
           "answer": "Algorand может иметь более быструю финализацию (порядка секунд), чем Ergo с ~2‑минутными блоками. Но скорость — не единственный критерий: для денег важны устойчивость к цензуре, распределение власти и безопасность модели."
         },
         {
-          "question": "Can both do DeFi?",
-          "answer": "Yes, both support DeFi. Algorand has growing DeFi with TEAL contracts. Ergo has active DeFi with unique MEV resistance due to eUTXO model."
+          "question": "Обе сети поддерживают DeFi?",
+          "answer": "Да, обе поддерживают DeFi. У Algorand развивающаяся DeFi-экосистема на TEAL-контрактах. У Ergo активная DeFi-экосистема с уникальной устойчивостью к MEV благодаря eUTXO-модели."
         },
         {
-          "question": "Which is better for privacy?",
-          "answer": "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no native privacy features and is designed to be compliance-friendly."
+          "question": "Что лучше для приватности?",
+          "answer": "Ergo. Sigma-протоколы реализуют zero-knowledge доказательства на L1. У Algorand нет нативных инструментов приватности — он ориентирован на compliance."
         },
         {
-          "question": "Why choose Ergo over Algorand?",
-          "answer": "If you value true decentralization, privacy, fair distribution, and cypherpunk principles over speed and enterprise adoption, Ergo aligns better with those values."
+          "question": "Почему выбрать Ergo, а не Algorand?",
+          "answer": "Если вы цените реальную децентрализацию, приватность, честное распределение и cypherpunk-принципы выше скорости и корпоративной ориентации, Ergo лучше соответствует этим ценностям."
         }
       ]
     }

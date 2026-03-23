@@ -1,336 +1,336 @@
 {
   "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about Ergo blockchain, technology, and ecosystem.",
-    "searchPlaceholder": "Search questions...",
-    "noResults": "No questions found matching your search.",
+    "title": "常見問題",
+    "subtitle": "找到關於 Ergo 區塊鏈、技術和生態系統常見問題的答案。",
+    "searchPlaceholder": "搜尋問題...",
+    "noResults": "找不到符合您搜尋的問題。",
     "categories": {
-      "all": "All Questions",
-      "basics": "Basics",
-      "technology": "Technology",
-      "gettingStarted": "Getting Started",
-      "ecosystem": "Ecosystem",
-      "community": "Community"
+      "all": "所有問題",
+      "basics": "基礎知識",
+      "technology": "技術",
+      "gettingStarted": "入門指南",
+      "ecosystem": "生態系統",
+      "community": "社群"
     },
     "questions": {
       "basics": {
         "whatIsErgo": {
-          "q": "What is Ergo?",
-          "a": "Ergo is a next-generation smart contract platform that prioritizes economic freedom through decentralized, censorship-resistant, and secure financial contracts."
+          "q": "什麼是 Ergo？",
+          "a": "Ergo 是新一代智能合約平台，透過去中心化、抗審查且安全的金融合約，優先考慮經濟自由。"
         },
         "howDifferent": {
-          "q": "How is Ergo different from other blockchains?",
-          "a": "Ergo combines proven cryptographic features with innovative approaches like eUTXO model, storage rent, and Sigma protocols for enhanced security and sustainability."
+          "q": "Ergo 與其他區塊鏈有何不同？",
+          "a": "Ergo 將經過驗證的密碼學功能與 eUTXO 模型、儲存租金和 Sigma 協議等創新方法相結合，提供增強的安全性和可持續性。"
         },
         "ergToken": {
-          "q": "What is ERG token?",
-          "a": "ERG is Ergo's native cryptocurrency used for transaction fees, smart contract execution, and storage rent. It has a fixed supply cap of 97.7 million tokens."
+          "q": "什麼是 ERG 代幣？",
+          "a": "ERG 是 Ergo 的原生加密貨幣，用於交易費用、智能合約執行和儲存租金。其固定供應上限為 9770 萬枚代幣。"
         }
       },
       "technologyFaq": {
         "eUTXO": {
-          "q": "What is the eUTXO model?",
-          "a": "Extended UTXO (eUTXO) combines Bitcoin's UTXO security with Ethereum's smart contract expressiveness, enabling more predictable and secure dApps."
+          "q": "什麼是 eUTXO 模型？",
+          "a": "擴展 UTXO（eUTXO）將比特幣的 UTXO 安全性與以太坊的智能合約表現力相結合，實現更可預測且安全的 dApp。"
         },
         "autolykos": {
-          "q": "What is Autolykos consensus?",
-          "a": "Autolykos v2 is Ergo's ASIC-resistant Proof-of-Work algorithm designed to be memory-hard and promote decentralized mining."
+          "q": "什麼是 Autolykos 共識？",
+          "a": "Autolykos v2 是 Ergo 的抗 ASIC 工作量證明演算法，設計為記憶體硬性，以促進去中心化挖礦。"
         },
         "sigmaProtocols": {
-          "q": "What are Sigma protocols?",
-          "a": "Sigma protocols enable powerful cryptographic proofs for privacy and complex smart contracts without revealing sensitive information."
+          "q": "什麼是 Sigma 協議？",
+          "a": "Sigma 協議能夠在不透露敏感資訊的情況下，為隱私和複雜智能合約提供強大的密碼學證明。"
         }
       },
       "gettingStarted": {
         "getErg": {
-          "q": "How do I get ERG tokens?",
-          "a": "You can buy ERG on exchanges like KuCoin, Gate.io, or CoinEx, or earn them through mining or participating in the ecosystem."
+          "q": "如何獲取 ERG 代幣？",
+          "a": "您可以在 KuCoin、Gate.io 或 CoinEx 等交易所購買 ERG，或透過挖礦或參與生態系統獲得。"
         },
         "wallet": {
-          "q": "Which wallet should I use?",
-          "a": "Popular options include Nautilus (browser extension), official mobile wallets, or hardware wallets like Ledger for maximum security."
+          "q": "我應該使用哪個錢包？",
+          "a": "常用選擇包括 Nautilus（瀏覽器擴充功能）、官方行動錢包，或 Ledger 等硬體錢包以獲得最高安全性。"
         },
         "startMining": {
-          "q": "How do I start mining ERG?",
-          "a": "You can mine ERG using GPU miners. Check our mining guide for pool recommendations and setup instructions."
+          "q": "如何開始挖掘 ERG？",
+          "a": "您可以使用 GPU 礦機挖掘 ERG。查看我們的挖礦指南，獲取礦池推薦和設置說明。"
         }
       },
       "ecosystem": {
         "dApps": {
-          "q": "What dApps are available on Ergo?",
-          "a": "Ergo has DeFi protocols like SigmaUSD, DEXs like Spectrum, NFT platforms, and various tools. Explore the ecosystem page for more."
+          "q": "Ergo 上有哪些 dApp？",
+          "a": "Ergo 擁有 SigmaUSD 等 DeFi 協議、Spectrum 等去中心化交易所、NFT 平台和各種工具。查看生態系統頁面了解更多。"
         },
         "defi": {
-          "q": "What DeFi options are available?",
-          "a": "Ergo offers algorithmic stablecoins (SigmaUSD), decentralized exchanges, lending protocols, and yield farming opportunities."
+          "q": "有哪些 DeFi 選項？",
+          "a": "Ergo 提供算法穩定幣（SigmaUSD）、去中心化交易所、借貸協議和收益農耕機會。"
         },
         "nfts": {
-          "q": "Does Ergo support NFTs?",
-          "a": "Yes! Ergo has a vibrant NFT ecosystem with marketplaces, creation tools, and unique features like royalty enforcement."
+          "q": "Ergo 支援 NFT 嗎？",
+          "a": "支援！Ergo 擁有充滿活力的 NFT 生態系統，包括市場、創作工具和版稅執行等獨特功能。"
         }
       },
       "community": {
         "getHelp": {
-          "q": "Where can I get help?",
-          "a": "Join our Discord, Telegram, or visit the Ergo Forum. The community is welcoming and always ready to help newcomers."
+          "q": "在哪裡可以獲得幫助？",
+          "a": "加入我們的 Discord、Telegram 或訪問 Ergo 論壇。社群非常友好，隨時準備幫助新手。"
         },
         "contribute": {
-          "q": "How can I contribute to Ergo?",
-          "a": "You can contribute through development, documentation, community support, content creation, or applying for ecosystem grants."
+          "q": "如何為 Ergo 做出貢獻？",
+          "a": "您可以透過開發、文件編寫、社群支援、內容創作或申請生態系統資助來做出貢獻。"
         },
         "stayUpdated": {
-          "q": "How do I stay updated with Ergo news?",
-          "a": "Follow @ergoplatformorg on Twitter, join our Discord/Telegram, subscribe to the newsletter, or check the official blog."
+          "q": "如何保持對 Ergo 新聞的關注？",
+          "a": "在 Twitter 上追蹤 @ergoplatformorg，加入我們的 Discord/Telegram，訂閱電子報，或查看官方部落格。"
         }
       }
     }
   },
   "faqPage": {
     "title": "Ergo",
-    "titleHighlight": "FAQ",
-    "subtitle": "Find answers to common questions about Ergo",
-    "questionsCount": "{count} questions",
+    "titleHighlight": "常見問題",
+    "subtitle": "找到關於 Ergo 的常見問題答案",
+    "questionsCount": "{count} 個問題",
     "tabs": {
-      "beginner": "Beginner",
-      "technical": "Technical"
+      "beginner": "初學者",
+      "technical": "技術"
     },
     "search": {
-      "placeholder": "Search questions...",
-      "ariaLabel": "Search FAQ questions"
+      "placeholder": "搜尋問題...",
+      "ariaLabel": "搜尋常見問題"
     },
     "filters": {
-      "all": "All"
+      "all": "全部"
     },
     "categories": {
-      "basics": "Basics",
-      "technology": "Technology",
-      "gettingStarted": "Getting Started",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "general": "General",
-      "economics": "Economics",
-      "wallets": "Wallets",
-      "mining": "Mining"
+      "basics": "基礎知識",
+      "technology": "技術",
+      "gettingStarted": "入門指南",
+      "ecosystem": "生態系統",
+      "community": "社群",
+      "general": "一般",
+      "economics": "經濟學",
+      "wallets": "錢包",
+      "mining": "挖礦"
     },
     "levels": {
-      "beginner": "beginner",
-      "technical": "technical"
+      "beginner": "初學者",
+      "technical": "技術"
     },
     "noResults": {
-      "title": "No questions found",
-      "subtitle": "Try a different search or category"
+      "title": "找不到問題",
+      "subtitle": "請嘗試不同的搜尋或類別"
     },
     "relatedResources": {
-      "title": "Still have questions?",
+      "title": "還有問題嗎？",
       "qaHub": {
-        "title": "Q&A Hub",
-        "description": "Browse community questions and detailed answers"
+        "title": "問答中心",
+        "description": "瀏覽社群問題和詳細答案"
       },
       "glossary": {
-        "title": "Glossary",
-        "description": "Learn Ergo terminology and concepts"
+        "title": "術語表",
+        "description": "學習 Ergo 術語和概念"
       },
       "askCommunity": {
-        "title": "Ask Community",
-        "description": "Get help from the Ergo community on Discord"
+        "title": "詢問社群",
+        "description": "在 Discord 上獲得 Ergo 社群的幫助"
       }
     },
     "cta": {
-      "title": "Stay updated",
-      "description": "Get new FAQs, guides, and important network updates delivered to your inbox."
+      "title": "保持更新",
+      "description": "將新的常見問題、指南和重要的網路更新直接發送到您的收件匣。"
     },
     "seo": {
-      "title": "Ergo FAQ — Answers to 50+ Common Questions | Ergo",
-      "description": "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy, eUTXO, ErgoScript — find what you need in seconds.",
-      "ogTitle": "Ergo FAQ — Answers to 50+ Common Questions",
-      "ogDescription": "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy — find what you need in seconds.",
-      "twitterTitle": "Ergo FAQ — Answers to 50+ Common Questions",
-      "twitterDescription": "50+ answered questions about Ergo. Wallets, mining, DeFi, privacy — find answers in seconds."
+      "title": "Ergo 常見問題 — 50+ 常見問題解答 | Ergo",
+      "description": "50+ 個關於 Ergo 區塊鏈的已回答問題。錢包、挖礦、DeFi、隱私、eUTXO、ErgoScript——幾秒鐘內找到您需要的內容。",
+      "ogTitle": "Ergo 常見問題 — 50+ 常見問題解答",
+      "ogDescription": "50+ 個關於 Ergo 區塊鏈的已回答問題。錢包、挖礦、DeFi、隱私——幾秒鐘內找到您需要的內容。",
+      "twitterTitle": "Ergo 常見問題 — 50+ 常見問題解答",
+      "twitterDescription": "50+ 個關於 Ergo 的問題。錢包、挖礦、DeFi、隱私——幾秒鐘內找到答案。"
     },
     "schema": {
       "breadcrumbs": {
-        "faq": "FAQ"
+        "faq": "常見問題"
       }
     }
   },
   "learnFaq": {
-    "title": "Learn FAQ",
-    "description": "Frequently asked questions about learning Ergo",
-    "subtitle": "Common questions and detailed answers"
+    "title": "學習常見問題",
+    "description": "關於學習 Ergo 的常見問題",
+    "subtitle": "常見問題和詳細答案"
   },
   "startFaq": {
-    "title": "Getting Started FAQ",
-    "description": "Essential questions for newcomers to Ergo",
-    "subtitle": "Your first steps with Ergo blockchain"
+    "title": "入門常見問題",
+    "description": "Ergo 新手的重要問題",
+    "subtitle": "您在 Ergo 區塊鏈上的第一步"
   },
   "faqData": {
     "beginner-what-is-ergo": {
-      "question": "What is Ergo in simple terms?",
-      "answer": "Ergo is a secure Proof-of-Work blockchain for powerful smart contracts, enabling decentralized financial applications. Think of it as digital money (ERG) with programmable rules."
+      "question": "用簡單的話說，什麼是 Ergo？",
+      "answer": "Ergo 是一個安全的工作量證明區塊鏈，擁有強大的智能合約功能，能夠實現去中心化金融應用。可以把它想象成具有可程式化規則的數位貨幣（ERG）。"
     },
     "beginner-is-ergo-company": {
-      "question": "Is Ergo a company?",
-      "answer": "No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network."
+      "question": "Ergo 是一家公司嗎？",
+      "answer": "不，Ergo 是一個去中心化的開源協議。Ergo 基金會是一個支持開發的非營利社群機構，但不控制網路。"
     },
     "beginner-fair-launch": {
-      "question": "What does a ",
-      "answer": "Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one."
+      "question": "什麼是「公平發行」？",
+      "answer": "Ergo 沒有進行首次代幣發行（ICO）或為創辦人預挖代幣。這確保了更公平的分配，因為從第一天起，每個人都有平等的機會透過挖礦獲得 ERG。"
     },
     "beginner-ergo-vs-btc-eth": {
-      "question": "How is Ergo different from Bitcoin or Ethereum?",
-      "answer": "vs. Bitcoin: Ergo supports advanced smart contracts, not just currency. \\n vs. Ethereum: Ergo uses the eUTXO model for enhanced security and predictable fees, and remains Proof-of-Work."
+      "question": "Ergo 與 Bitcoin 或 Ethereum 有何不同？",
+      "answer": "相比 Bitcoin：Ergo 支援進階智能合約，而不僅僅是貨幣。相比 Ethereum：Ergo 使用 eUTXO 模型提供增強的安全性和可預測的費用，並保持工作量證明機制。"
     },
     "beginner-eutxo": {
-      "question": "What is eUTXO?",
-      "answer": "The Extended UTXO model attaches data and logic directly to "
+      "question": "什麼是 eUTXO？",
+      "answer": "擴展 UTXO 模型將資料和邏輯直接附加到輸出（盒子），使智能合約能夠以更安全、可預測的方式運行，同時保持比特幣 UTXO 模型的安全優勢。"
     },
     "beginner-ergoscript": {
-      "question": "What is ErgoScript?",
-      "answer": "ErgoScript is the powerful and secure programming language for writing smart contracts on Ergo. You do not need to know code to use Ergo; it"
+      "question": "什麼是 ErgoScript？",
+      "answer": "ErgoScript 是在 Ergo 上編寫智能合約的強大且安全的程式語言。使用 Ergo 不需要了解程式碼——ErgoScript 是為開發者準備的底層工具。"
     },
     "beginner-sigma-protocols": {
-      "question": "What are Sigma Protocols?",
-      "answer": "These are advanced zero-knowledge proofs built into Ergo"
+      "question": "什麼是 Sigma 協議？",
+      "answer": "這些是內建於 Ergo 的先進零知識證明，可在不透露機密的情況下進行隱私保護交易和複雜的認證方案，例如環形簽名和多重簽名。"
     },
     "beginner-erg-use": {
-      "question": "What is the ERG coin used for?",
-      "answer": "ERG is used for transaction fees, collateral for stablecoins (SigmaUSD), participating in DeFi applications, powering dApps (NFTs, gaming), and incentivizing miners."
+      "question": "ERG 幣的用途是什麼？",
+      "answer": "ERG 用於交易費用、穩定幣（SigmaUSD）的抵押品、參與 DeFi 應用、支持 dApp（NFT、遊戲），以及激勵礦工。"
     },
     "beginner-get-erg": {
-      "question": "How can I get ERG?",
-      "answer": "You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing."
+      "question": "如何獲取 ERG？",
+      "answer": "您可以在各種加密貨幣交易所購買 ERG，透過點對點交易，或透過挖礦獲得。投資前請做好自己的研究。"
     },
     "beginner-wallet": {
-      "question": "Which wallet is best for beginners?",
-      "answer": "The official mobile wallets (Android/iOS) or the Nautilus Wallet (browser extension) are excellent, user-friendly starting points."
+      "question": "哪個錢包最適合初學者？",
+      "answer": "官方行動錢包（Android/iOS）或 Nautilus Wallet（瀏覽器擴充功能）是出色且用戶友好的起點。"
     },
     "beginner-dapps": {
-      "question": "What kinds of dApps are on Ergo?",
-      "answer": "Ergo"
+      "question": "Ergo 上有哪些類型的 dApp？",
+      "answer": "Ergo 擁有多種 dApp，包括 Spectrum Finance（DEX）、SigmaUSD（穩定幣）、ErgoMixer（隱私工具）、NFT 市場以及遊戲應用。"
     },
     "beginner-ergomixer": {
-      "question": "What is ErgoMixer?",
-      "answer": "ErgoMixer is a non-custodial service that increases your transaction privacy by mixing your ERG with others, making it difficult to trace your transaction history."
+      "question": "什麼是 ErgoMixer？",
+      "answer": "ErgoMixer 是一個非托管服務，透過將您的 ERG 與其他人的 ERG 混合來增加交易隱私，使追蹤您的交易歷史變得困難。"
     },
     "beginner-governance": {
-      "question": "Who governs Ergo?",
-      "answer": "Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support."
+      "question": "誰治理 Ergo？",
+      "answer": "Ergo 是去中心化且由社群驅動的。協議變更透過 Ergo 改進提案（EIP）進行討論和正式化，由礦工表示支持。"
     },
     "beginner-contribute": {
-      "question": "How can I contribute if I",
-      "answer": "You can help with community support, content creation (articles, videos), translation, testing dApps, or simply spreading awareness about Ergo."
+      "question": "如果我不懂技術，如何做出貢獻？",
+      "answer": "您可以透過社群支援、內容創作（文章、影片）、翻譯、測試 dApp 或僅僅傳播對 Ergo 的認知來提供幫助。"
     },
     "tech-what-is-ergo": {
-      "question": "What is Ergo?",
-      "answer": "Ergo is a programmable blockchain protocol engineered for the development of decentralized applications (dApps), with a pronounced emphasis on creating an efficient, secure, and accessible environment for implementing financial contracts. Launched in 2019, the platform distinctively merges the security advantages of Bitcoin"
+      "question": "什麼是 Ergo？",
+      "answer": "Ergo 是一個可程式化的區塊鏈協議，專為開發去中心化應用（dApp）而設計，特別強調為實施金融合約創建高效、安全且易於存取的環境。該平台於 2019 年啟動，獨特地將 Bitcoin 的安全優勢與先進的智能合約能力相結合。"
     },
     "tech-ergo-vision": {
-      "question": "What is the main goal or vision of Ergo?",
-      "answer": "The overarching vision of Ergo is to furnish tools that promote economic freedom for ordinary individuals by offering secure, accessible, and decentralized financial instruments. This mission is supported by a commitment to creating a resilient platform engineered for long-term viability, capable of adapting to new challenges and incorporating novel ideas through its self-amendable protocol."
+      "question": "Ergo 的主要目標或願景是什麼？",
+      "answer": "Ergo 的總體願景是通過提供安全、可存取且去中心化的金融工具，為普通人促進經濟自由。這一使命得到了建立長期可行的強健平台的承諾的支持，能夠透過其自我修正協議適應新挑戰並融入新穎想法。"
     },
     "tech-ergo-principles": {
-      "question": "What are the core principles of the Ergo Platform?",
-      "answer": "Ergo operates under several core principles: Organic and Non-Breaking Development (protocol modifications undergo approval by miners, users, and projects), Open-Source and Permissive Licensing, Privacy and Trustless Environments, Community-Driven governance (Ergo Treasury benefits the community), and Focus on Long-Term Survivability through researched solutions and self-amendable protocol design."
+      "question": "Ergo 平台的核心原則是什麼？",
+      "answer": "Ergo 遵循幾項核心原則：有機且非破壞性的開發（協議修改需獲得礦工、用戶和專案的批准）、開源和寬鬆許可、隱私和無信任環境、社群驅動的治理（Ergo 金庫惠及社群），以及通過研究解決方案和自我修正協議設計專注於長期生存能力。"
     },
     "tech-ergo-manifesto": {
-      "question": "What is the Ergo Manifesto and its key ideas on privacy?",
-      "answer": "The Ergo Manifesto, authored by co-founder Alex Chepurnoy, articulates that financial privacy is a fundamental human right. Key ideas include: privacy as a tool for survival and protection against authoritarian control, defense against financial asset seizure, recognition that regulation stability isn"
+      "question": "什麼是 Ergo 宣言？其關於隱私的核心思想是什麼？",
+      "answer": "由共同創辦人 Alex Chepurnoy 撰寫的 Ergo 宣言闡明，金融隱私是基本人權。核心思想包括：隱私作為對抗威權控制的生存和保護工具，防止金融資產被沒收，以及認識到監管穩定性需要平衡透明度和隱私。"
     },
     "tech-why-named-ergo": {
-      "question": "Why is it named ",
-      "answer": "The name "
+      "question": "為什麼命名為「Ergo」？",
+      "answer": "「Ergo」這個名稱源自拉丁語，意思是「因此」或「所以」，反映了該項目基於第一原則和嚴格邏輯推理構建區塊鏈技術的承諾。"
     },
     "tech-ergo-launch": {
-      "question": "When was Ergo launched? Was there an ICO?",
-      "answer": "Ergo\\"
+      "question": "Ergo 是何時啟動的？有 ICO 嗎？",
+      "answer": "Ergo 於 2019 年 7 月 1 日啟動，沒有 ICO 或預挖。這確保了公平發行，礦工從第一天起就有機會獲得 ERG。"
     },
     "tech-consensus-mechanism": {
-      "question": "What consensus mechanism does Ergo use?",
-      "answer": "Ergo employs a Proof-of-Work (PoW) consensus mechanism using the Autolykos algorithm. PoW was chosen for its "
+      "question": "Ergo 使用什麼共識機制？",
+      "answer": "Ergo 使用基於 Autolykos 演算法的工作量證明（PoW）共識機制。選擇 PoW 是因為其經過驗證的安全性、去中心化特性以及對公平挖礦的支持。"
     },
     "tech-autolykos-algorithm": {
-      "question": "What is Autolykos and how is it different?",
-      "answer": "Autolykos is Ergo"
+      "question": "什麼是 Autolykos 演算法？它有何不同？",
+      "answer": "Autolykos 是 Ergo 自己的 PoW 演算法，設計為記憶體硬性和抗 ASIC。不同之處在於：它獎勵獨立挖礦（與礦池相比），使用記憶體密集型操作防止 ASIC 主導，並且對普通 GPU 礦工保持公平。"
     },
     "tech-eutxo-model": {
-      "question": "What is the eUTXO model and how does it differ from Bitcoin",
-      "answer": "The Extended UTXO (eUTXO) model builds on Bitcoin\\"
+      "question": "eUTXO 模型是什麼？它與 Bitcoin 的 UTXO 有何不同？",
+      "answer": "擴展 UTXO（eUTXO）模型在 Bitcoin UTXO 的基礎上擴展，允許盒子（輸出）攜帶任意資料和執行邏輯（ErgoScript 合約）。這使智能合約能夠在保持 UTXO 安全優勢的同時運行——確定性執行、可預測費用和並行處理。"
     },
     "tech-eutxo-advantages": {
-      "question": "What are the advantages of eUTXO for Ergo?",
-      "answer": "eUTXO provides: Enhanced Privacy (one-time objects), Scalability and Parallel Processing, better Interoperability with off-chain protocols, Transaction Cost Predictability (stable fees around 0.0011 ERG), Security and Determinism (isolated contract execution), Local Reasoning and Off-Chain Validation, and Expressive Smart Contracts on a secure foundation."
+      "question": "eUTXO 對 Ergo 的優勢是什麼？",
+      "answer": "eUTXO 提供：增強隱私（一次性物件）、可擴展性和並行處理、更好的與鏈外協議的互操作性、交易成本可預測性（約 0.0011 ERG 的穩定費用）、安全性和確定性（隔離的合約執行）、本地推理和鏈外驗證，以及在安全基礎上的富有表現力的智能合約。"
     },
     "tech-smart-contracts-ergo": {
-      "question": "What are smart contracts on Ergo?",
-      "answer": "Smart contracts on Ergo are self-executing code that automatically enforce predefined terms. Every "
+      "question": "Ergo 上的智能合約是什麼？",
+      "answer": "Ergo 上的智能合約是自動執行預定義條款的自執行代碼。每個 Ergo 盒子（輸出）都包含一個 ErgoScript 條件，必須滿足才能花費資金。這使得無需信任的金融協議成為可能。"
     },
     "tech-ergoscript-features": {
-      "question": "What is ErgoScript and what are its key features?",
-      "answer": "ErgoScript is Ergo"
+      "question": "什麼是 ErgoScript？它的主要特性是什麼？",
+      "answer": "ErgoScript 是 Ergo 用於可程式化貨幣的合約語言，具有：形式可驗證的代碼、嚴格類型系統、內建密碼學原語（Sigma 協議）、函數式程式設計範式以及可預測的執行成本。合約可審計且可預測，設計避免全域可變狀態和典型的重入模式。"
     },
     "tech-ergoscript-vs-solidity": {
-      "question": "How does ErgoScript compare to Solidity?",
-      "answer": "ErgoScript (Ergo/eUTXO) vs Solidity (Ethereum/Account): ErgoScript emphasizes security and expressiveness with built-in cryptographic primitives, while Solidity focuses on ease of use. ErgoScript is Scala-based and functional, Solidity is JavaScript-like. ErgoScript offers more predictable costs and native privacy features, while Solidity has a larger ecosystem and more development tools currently available."
+      "question": "ErgoScript 與 Solidity 如何比較？",
+      "answer": "ErgoScript（Ergo/eUTXO）vs Solidity（Ethereum/帳戶）：ErgoScript 強調安全性和表現力，具有內建密碼學原語，而 Solidity 注重易用性。ErgoScript 基於 Scala 且是函數式的，Solidity 類似 JavaScript。ErgoScript 提供更可預測的成本和原生隱私功能，而 Solidity 目前擁有更大的生態系統和更多開發工具。"
     },
     "tech-boxes-ergoscript": {
-      "question": "What are ",
-      "answer": "Boxes are Ergo"
+      "question": "什麼是 Ergo 中的「盒子」？",
+      "answer": "盒子是 Ergo 的 UTXO（未花費交易輸出）。每個盒子包含：ERG 數量、可選代幣、任意資料（寄存器）和 ErgoScript 保護條件。盒子一旦創建就是不可變的，只能作為交易輸入被整個花費。"
     },
     "tech-sigma-protocols": {
-      "question": "What are Sigma Protocols and how do they enhance privacy?",
-      "answer": "Sigma Protocols are efficient, composable zero-knowledge proofs that allow proving knowledge of secrets without revealing them. They enable: multi-signature wallets, ring signatures (for anonymity), threshold signatures, atomic swaps, and power ErgoMixer. They"
+      "question": "什麼是 Sigma 協議？它們如何增強隱私？",
+      "answer": "Sigma 協議是高效的、可組合的零知識證明，允許在不透露機密的情況下證明知識。它們能夠實現：多重簽名錢包、環形簽名（用於匿名）、門限簽名、原子交換，並為 ErgoMixer 提供支持。它們是 Ergo 隱私和高級認證的基礎。"
     },
     "tech-zero-knowledge-proofs": {
-      "question": "Does Ergo offer Zero-Knowledge Proofs?",
-      "answer": "Yes, Ergo provides robust support for discrete log-based zero-knowledge proofs through Sigma Protocols. These are actively used for privacy-preserving features, complex authentication schemes, and applications like ErgoMixer. ErgoScript is described as being "
+      "question": "Ergo 提供零知識證明嗎？",
+      "answer": "是的，Ergo 透過 Sigma 協議為基於離散對數的零知識證明提供強健支持。這些積極用於隱私保護功能、複雜認證方案和 ErgoMixer 等應用。ErgoScript 被描述為「零知識語言」。"
     },
     "tech-ergomixer": {
-      "question": "What is ErgoMixer and how does it work?",
-      "answer": "ErgoMixer is a non-custodial, non-interactive token mixing service that enhances transaction privacy by obscuring links between sender and receiver addresses. It uses Sigma Protocols (ring signatures) to combine user transactions with others or decoys. Being non-custodial means users retain control of private keys, and non-interactive means no real-time coordination with other users is required."
+      "question": "什麼是 ErgoMixer？它是如何運作的？",
+      "answer": "ErgoMixer 是一個非托管、非互動的代幣混合服務，透過模糊發送者和接收者地址之間的連結來增強交易隱私。它使用 Sigma 協議（環形簽名）將用戶交易與其他人或誘餌組合。非托管意味著用戶保留私鑰控制，非互動意味著不需要與其他用戶進行即時協調。"
     },
     "tech-privacy-optional": {
-      "question": "Is privacy on Ergo optional or mandatory?",
-      "answer": "Privacy on Ergo is optional, not mandatory. This allows flexibility for diverse use cases - some applications need transparency (like charities), while others require privacy. Optional privacy enables rich smart contract functionality, broader adoption, regulatory navigation, and user autonomy. Users can choose privacy tools like ErgoMixer when needed."
+      "question": "Ergo 上的隱私是可選的還是強制的？",
+      "answer": "Ergo 上的隱私是可選的，而非強制的。這允許多種使用場景的靈活性——一些應用需要透明度（如慈善機構），而其他應用需要隱私。可選隱私使豐富的智能合約功能、更廣泛的採用、監管導航和用戶自主性成為可能。用戶可以在需要時選擇 ErgoMixer 等隱私工具。"
     },
     "tech-storage-rent": {
-      "question": "What is ",
-      "answer": "Storage rent is a fee levied on UTXOs inactive for 4+ years (approximately 0.14 ERG per typical box every 4 years). It exists to: prevent blockchain bloat by recycling "
+      "question": "什麼是「儲存租金」？",
+      "answer": "儲存租金是對超過 4 年未活動的 UTXO 徵收的費用（每 4 年每個典型盒子約 0.14 ERG）。它的存在是為了：透過回收「粉塵」盒子防止區塊鏈膨脹，在發行結束後為礦工提供持續的收入來源，以及激勵用戶整合未使用的輸出。"
     },
     "tech-long-term-survivability": {
-      "question": "How does Ergo aim for long-term survivability and self-amendability?",
-      "answer": "Ergo ensures survivability through: researched solutions to minimize security risks, sustainable economic model (storage rent + emission schedule), robust PoW consensus, and self-amendable protocol design. Changes require approval from miners, users, and projects through the EIP (Ergo Improvement Proposal) process, promoting organic, non-breaking development."
+      "question": "Ergo 如何實現長期生存能力和自我修正性？",
+      "answer": "Ergo 透過以下方式確保生存能力：最小化安全風險的研究解決方案、可持續的經濟模型（儲存租金 + 發行時程）、強健的 PoW 共識和自我修正協議設計。變更需要透過 EIP（Ergo 改進提案）流程獲得礦工、用戶和專案的批准，促進有機、非破壞性的開發。"
     },
     "tech-nipopows": {
-      "question": "What are NIPoPoWs and how does Ergo use them?",
-      "answer": "Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) allow efficient verification of blockchain events without downloading the full chain. Ergo uses them for: ultra-light clients (mobile wallets), trustless cross-chain bridges, and efficient sidechains. They enable logarithmic-size proofs instead of linear, making verification much faster and lighter."
+      "question": "什麼是 NIPoPoWs？Ergo 如何使用它們？",
+      "answer": "非互動工作量證明證明（NIPoPoWs）允許在不下載完整鏈的情況下高效驗證區塊鏈事件。Ergo 將它們用於：超輕客戶端（行動錢包）、無需信任的跨鏈橋和高效的側鏈。它們實現對數大小的證明而非線性大小，使驗證更快且更輕量。"
     },
     "tech-tokenomics": {
-      "question": "What is Ergo",
-      "answer": "ERG has a fixed supply cap of ~97.7 million coins. Emission started at 75 ERG/block, decreasing over time. No ICO or pre-mine occurred. The Ergo Foundation receives 4.43% of total supply over the emission period. Storage rent provides sustainable long-term miner rewards after emission ends."
+      "question": "Ergo 的代幣經濟學是什麼？",
+      "answer": "ERG 的固定供應上限約為 9770 萬枚。發行從每塊 75 ERG 開始，隨時間遞減。沒有 ICO 或預挖。Ergo 基金會在發行期間獲得總供應量的 4.43%。發行結束後，儲存租金為礦工提供可持續的長期獎勵。"
     },
     "tech-sigmausd": {
-      "question": "What is SigmaUSD?",
-      "answer": "SigmaUSD is Ergo"
+      "question": "什麼是 SigmaUSD？",
+      "answer": "SigmaUSD 是 Ergo 上的算法穩定幣協議。它使用 AgeUSD 模型，其中 SigUSD（穩定幣）由 ERG 超額抵押支持，SigRSV（儲備幣）承擔波動性。所有操作都通過智能合約執行，使用 Oracle 池的 ERG/USD 價格饋送。"
     },
     "tech-oracle-pools": {
-      "question": "What are Oracle Pools?",
-      "answer": "Oracle Pools are Ergo"
+      "question": "什麼是 Oracle 池？",
+      "answer": "Oracle 池是 Ergo 的去中心化資料饋送系統，為智能合約提供鏈外資料（如價格）。多個獨立的 Oracle 運算子提交資料，共識機制過濾異常值並發布聚合結果。它們是協議原生的，任何合約都可以使用，無需特殊許可。"
     },
     "tech-spectrum-dex": {
-      "question": "What is Spectrum DEX?",
-      "answer": "Spectrum (formerly ErgoDEX) is a decentralized exchange on Ergo using AMM (Automated Market Maker) pools. It supports token swaps, liquidity provision, and yield farming. The eUTXO model enables features like partial order filling and better MEV resistance compared to account-based DEXs."
+      "question": "什麼是 Spectrum DEX？",
+      "answer": "Spectrum（前身為 ErgoDEX）是 Ergo 上使用 AMM（自動做市商）池的去中心化交易所。它支持代幣交換、提供流動性和收益農耕。eUTXO 模型使部分訂單成交和比基於帳戶的 DEX 更好的抗 MEV 性等功能成為可能。"
     },
     "tech-rosen-bridge": {
-      "question": "What is Rosen Bridge?",
-      "answer": "Rosen Bridge is a trustless cross-chain bridge connecting Ergo to other blockchains (Cardano, Bitcoin, Ethereum). It uses a federated model with watchers and guards to ensure security. NIPoPoWs enable efficient verification of cross-chain transactions."
+      "question": "什麼是 Rosen Bridge？",
+      "answer": "Rosen Bridge 是連接 Ergo 和其他區塊鏈（Cardano、Bitcoin、Ethereum）的無需信任的跨鏈橋。它使用帶有觀察者和守衛的聯合模型來確保安全。NIPoPoWs 實現跨鏈交易的高效驗證。"
     },
     "tech-mining-requirements": {
-      "question": "What hardware do I need to mine Ergo?",
-      "answer": "Ergo mining requires a GPU with at least 4GB VRAM (6GB+ recommended). Popular choices include NVIDIA RTX 3060 Ti, RTX 3070, or AMD RX 6600 XT. The Autolykos algorithm is memory-hard and ASIC-resistant, keeping mining accessible to regular GPU owners."
+      "question": "挖掘 Ergo 需要什麼硬體？",
+      "answer": "Ergo 挖礦需要至少 4GB VRAM（推薦 6GB+）的 GPU。熱門選擇包括 NVIDIA RTX 3060 Ti、RTX 3070 或 AMD RX 6600 XT。Autolykos 演算法是記憶體硬性且抗 ASIC，使普通 GPU 礦工能夠繼續參與。"
     },
     "tech-mining-pools": {
-      "question": "Which mining pools support Ergo?",
-      "answer": "Popular Ergo mining pools include: GetBlok, 2Miners, HeroMiners, WoolyPooly, F2Pool, and Nanopool. Each has different fee structures (typically 1-2%), payout methods (PPLNS, PPS+), and server locations. Solo mining is also viable for larger operations."
+      "question": "哪些礦池支持 Ergo？",
+      "answer": "熱門的 Ergo 礦池包括：GetBlok、2Miners、HeroMiners、WoolyPooly、F2Pool 和 Nanopool。每個礦池有不同的費用結構（通常 1-2%）、支付方式（PPLNS、PPS+）和伺服器位置。對於較大規模的操作，獨立挖礦也是可行的。"
     }
   }
 }

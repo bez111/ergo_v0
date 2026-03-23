@@ -1,219 +1,219 @@
 {
   "community": {
     "hero": {
-      "title": "ERGO COMMUNITY",
-      "description": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "title": "ERGO TOPLULUĞU",
+      "description": "Merkeziyetsiz finansın geleceğini inşa eden tutkulu geliştiriciler, araştırmacılar ve meraklılarla bağlantı kurun. Ergo'nun evrimini şekillendirmede sesiniz önemlidir."
     },
     "platforms": {
-      "title": "COMMUNICATION HUBS",
+      "title": "İLETİŞİM MERKEZLERİ",
       "labels": {
-        "members": "Members",
-        "activity": "Activity"
+        "members": "Üyeler",
+        "activity": "Aktivite"
       },
       "discord": {
         "name": "Discord",
-        "description": "Real-time discussions, AMA sessions, technical support",
+        "description": "Gerçek zamanlı tartışmalar, AMA oturumları, teknik destek",
         "members": "15K+",
-        "activity": "24/7",
-        "buttonText": "Join Discord",
+        "activity": "7/24",
+        "buttonText": "Discord'a Katıl",
         "features": {
-          "liveChat": "Live Chat",
-          "voiceChannels": "Voice Channels",
-          "developerSupport": "Developer Support",
-          "communityEvents": "Community Events"
+          "liveChat": "Canlı Sohbet",
+          "voiceChannels": "Sesli Kanallar",
+          "developerSupport": "Geliştirici Desteği",
+          "communityEvents": "Topluluk Etkinlikleri"
         }
       },
       "telegram": {
         "name": "Telegram",
-        "description": "Quick updates, announcements, global community",
+        "description": "Hızlı güncellemeler, duyurular, küresel topluluk",
         "members": "12K+",
-        "activity": "Active",
-        "buttonText": "Join Telegram",
+        "activity": "Aktif",
+        "buttonText": "Telegram'a Katıl",
         "features": {
-          "instantUpdates": "Instant Updates",
-          "mobileFirst": "Mobile First",
-          "globalReach": "Global Reach",
-          "newsAlerts": "News & Alerts"
+          "instantUpdates": "Anlık Güncellemeler",
+          "mobileFirst": "Mobil Öncelikli",
+          "globalReach": "Küresel Erişim",
+          "newsAlerts": "Haberler ve Uyarılar"
         }
       },
       "reddit": {
         "name": "Reddit",
-        "description": "In-depth discussions, memes, community content",
+        "description": "Derinlemesine tartışmalar, mizah, topluluk içerikleri",
         "members": "8K+",
-        "activity": "Daily",
-        "buttonText": "Visit r/ergonauts",
+        "activity": "Günlük",
+        "buttonText": "r/ergonauts'u Ziyaret Et",
         "features": {
-          "longFormPosts": "Long-form Posts",
-          "communityVoting": "Community Voting",
-          "memesContent": "Memes & Content",
-          "discussions": "Discussions"
+          "longFormPosts": "Uzun Form Yazılar",
+          "communityVoting": "Topluluk Oylaması",
+          "memesContent": "Mizah ve İçerik",
+          "discussions": "Tartışmalar"
         }
       },
       "forum": {
         "name": "ErgoForum",
-        "description": "Technical discussions, EIPs, governance",
+        "description": "Teknik tartışmalar, EIP'ler, yönetişim",
         "members": "3K+",
-        "activity": "Weekly",
-        "buttonText": "Visit Forum",
+        "activity": "Haftalık",
+        "buttonText": "Forumu Ziyaret Et",
         "features": {
-          "technicalDeepDives": "Technical Deep-dives",
-          "governance": "Governance",
-          "eipDiscussions": "EIP Discussions",
-          "research": "Research"
+          "technicalDeepDives": "Teknik Derinlemesine İncelemeler",
+          "governance": "Yönetişim",
+          "eipDiscussions": "EIP Tartışmaları",
+          "research": "Araştırma"
         }
       }
     },
     "contributions": {
-      "title": "CONTRIBUTION MATRIX",
-      "description": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+      "title": "KATKI MATRİSİ",
+      "description": "Her katkı Ergo ekosistemini güçlendirir. Etki yaratmak için kendi yolunuzu bulun.",
       "types": {
         "development": {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
+          "title": "Geliştirme",
+          "description": "dApp'ler, araçlar ve altyapı oluşturun",
           "tasks": {
-            "smartContracts": "Smart Contracts",
-            "frontendApps": "Frontend Apps",
-            "toolsLibraries": "Tools & Libraries"
+            "smartContracts": "Akıllı Sözleşmeler",
+            "frontendApps": "Ön Yüz Uygulamaları",
+            "toolsLibraries": "Araçlar ve Kütüphaneler"
           }
         },
         "content": {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
+          "title": "İçerik Oluşturma",
+          "description": "Makaleler, videolar, öğreticiler, belgeler",
           "tasks": {
-            "technicalWriting": "Technical Writing",
-            "videoContent": "Video Content",
-            "tutorials": "Tutorials"
+            "technicalWriting": "Teknik Yazarlık",
+            "videoContent": "Video İçeriği",
+            "tutorials": "Öğreticiler"
           }
         },
         "support": {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
+          "title": "Topluluk Desteği",
+          "description": "Yeni gelenlere yardım edin ve soruları yanıtlayın",
           "tasks": {
-            "userSupport": "User Support",
-            "onboarding": "Onboarding",
-            "mentoring": "Mentoring"
+            "userSupport": "Kullanıcı Desteği",
+            "onboarding": "Uyum Süreci",
+            "mentoring": "Mentorluk"
           }
         },
         "governance": {
-          "title": "Governance",
-          "description": "Participate in protocol decisions",
+          "title": "Yönetişim",
+          "description": "Protokol kararlarına katılın",
           "tasks": {
-            "eipReviews": "EIP Reviews",
-            "voting": "Voting",
-            "proposals": "Proposals"
+            "eipReviews": "EIP İncelemeleri",
+            "voting": "Oylama",
+            "proposals": "Öneriler"
           }
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
+          "title": "Altyapı",
+          "description": "Düğüm çalıştırın, madencilik yapın, ağı destekleyin",
           "tasks": {
-            "nodeOperation": "Node Operation",
-            "mining": "Mining",
-            "networkSecurity": "Network Security"
+            "nodeOperation": "Düğüm İşletimi",
+            "mining": "Madencilik",
+            "networkSecurity": "Ağ Güvenliği"
           }
         },
         "research": {
-          "title": "Research",
-          "description": "Protocol research and improvements",
+          "title": "Araştırma",
+          "description": "Protokol araştırması ve iyileştirmeleri",
           "tasks": {
-            "academicResearch": "Academic Research",
-            "protocolAnalysis": "Protocol Analysis",
-            "innovation": "Innovation"
+            "academicResearch": "Akademik Araştırma",
+            "protocolAnalysis": "Protokol Analizi",
+            "innovation": "İnovasyon"
           }
         }
       }
     },
     "guidelines": {
-      "title": "COMMUNITY PROTOCOL",
+      "title": "TOPLULUK PROTOKOLÜ",
       "encouraged": {
-        "title": "Encouraged Behavior",
+        "title": "Teşvik Edilen Davranışlar",
         "items": {
-          "respectfulDiscussions": "Respectful and constructive discussions",
-          "helpingNewcomers": "Helping newcomers and sharing knowledge",
-          "contributingProjects": "Contributing to projects and documentation",
-          "constructiveFeedback": "Providing constructive feedback",
-          "followingGuidelines": "Following community guidelines"
+          "respectfulDiscussions": "Saygılı ve yapıcı tartışmalar",
+          "helpingNewcomers": "Yeni gelenlere yardım etmek ve bilgi paylaşmak",
+          "contributingProjects": "Projelere ve belgelere katkı sağlamak",
+          "constructiveFeedback": "Yapıcı geri bildirim sağlamak",
+          "followingGuidelines": "Topluluk kurallarına uymak"
         }
       },
       "discouraged": {
-        "title": "Discouraged Behavior",
+        "title": "Caydırılan Davranışlar",
         "items": {
-          "spamContent": "Spam, flooding, or off-topic content",
-          "misinformation": "Spreading misinformation or FUD",
-          "personalAttacks": "Personal attacks or harassment",
-          "selfPromotion": "Excessive self-promotion",
-          "violatingRules": "Violating platform-specific rules"
+          "spamContent": "Spam, taşma veya konu dışı içerik",
+          "misinformation": "Yanlış bilgi veya FUD yaymak",
+          "personalAttacks": "Kişisel saldırılar veya taciz",
+          "selfPromotion": "Aşırı öz tanıtım",
+          "violatingRules": "Platforma özgü kurallara uymamak"
         }
       }
     },
     "cta": {
-      "title": "READY TO CONNECT?",
-      "description": "Join thousands of developers, researchers, and enthusiasts building the future of DeFi",
-      "joinDiscord": "Join Discord",
-      "exploreMore": "Explore More"
+      "title": "BAĞLANTIYA HAZIR MISINIZ?",
+      "description": "DeFi'nin geleceğini inşa eden binlerce geliştirici, araştırmacı ve meraklıya katılın",
+      "joinDiscord": "Discord'a Katıl",
+      "exploreMore": "Daha Fazlasını Keşfet"
     }
   },
   "communityClient": {
     "hero": {
       "title": "ERGO",
-      "titleHighlight": "COMMUNITY",
-      "subtitle": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "titleHighlight": "TOPLULUĞU",
+      "subtitle": "Merkeziyetsiz finansın geleceğini inşa eden tutkulu geliştiriciler, araştırmacılar ve meraklılarla bağlantı kurun. Ergo'nun evrimini şekillendirmede sesiniz önemlidir."
     },
     "platforms": {
-      "sectionTitle": "COMMUNICATION HUBS",
-      "followers": "Followers",
-      "updates": "Updates"
+      "sectionTitle": "İLETİŞİM MERKEZLERİ",
+      "followers": "Takipçiler",
+      "updates": "Güncellemeler"
     },
     "platformGroups": [
       {
-        "title": "Real-time & Operations",
-        "subtitle": "Live support, quick updates, breaking news"
+        "title": "Gerçek Zamanlı ve Operasyonlar",
+        "subtitle": "Canlı destek, hızlı güncellemeler, son dakika haberleri"
       },
       {
-        "title": "Deep Content & Research",
-        "subtitle": "Tutorials, essays, EIPs, governance"
+        "title": "Derin İçerik ve Araştırma",
+        "subtitle": "Öğreticiler, denemeler, EIP'ler, yönetişim"
       },
       {
-        "title": "Community & Discovery",
-        "subtitle": "Discussions, visual content, discovery"
+        "title": "Topluluk ve Keşif",
+        "subtitle": "Tartışmalar, görsel içerik, keşif"
       }
     ],
     "contributions": {
-      "sectionTitle": "CONTRIBUTION MATRIX",
-      "subtitle": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
-      "clickForGuide": "Click for detailed guide"
+      "sectionTitle": "KATKI MATRİSİ",
+      "subtitle": "Her katkı Ergo ekosistemini güçlendirir. Etki yaratmak için kendi yolunuzu bulun.",
+      "clickForGuide": "Ayrıntılı kılavuz için tıklayın"
     },
     "guidelines": {
-      "sectionTitle": "COMMUNITY PROTOCOL",
+      "sectionTitle": "TOPLULUK PROTOKOLÜ",
       "positive": {
-        "title": "Encouraged Behavior",
+        "title": "Teşvik Edilen Davranışlar",
         "items": [
-          "Respectful and constructive discussions",
-          "Helping newcomers and sharing knowledge",
-          "Contributing to projects and documentation",
-          "Providing constructive feedback",
-          "Following community guidelines"
+          "Saygılı ve yapıcı tartışmalar",
+          "Yeni gelenlere yardım etmek ve bilgi paylaşmak",
+          "Projelere ve belgelere katkı sağlamak",
+          "Yapıcı geri bildirim sağlamak",
+          "Topluluk kurallarına uymak"
         ]
       },
       "negative": {
-        "title": "Discouraged Behavior",
+        "title": "Caydırılan Davranışlar",
         "items": [
-          "Spam, flooding, or off-topic content",
-          "Spreading misinformation or FUD",
-          "Personal attacks or harassment",
-          "Excessive self-promotion",
-          "Violating platform-specific rules"
+          "Spam, taşma veya konu dışı içerik",
+          "Yanlış bilgi veya FUD yaymak",
+          "Kişisel saldırılar veya taciz",
+          "Aşırı öz tanıtım",
+          "Platforma özgü kurallara uymamak"
         ]
       }
     },
     "cta": {
-      "title": "Stay",
-      "titleHighlight": "Connected",
-      "subtitle": "Get the latest updates, announcements, and community highlights delivered to your inbox",
-      "emailPlaceholder": "Enter your email address",
-      "subscribe": "Subscribe",
-      "thankYou": "Thank you for subscribing!",
-      "confirmationMessage": "You'll receive updates about the Ergo community."
+      "title": "Bağlı",
+      "titleHighlight": "Kalın",
+      "subtitle": "En son güncellemeleri, duyuruları ve topluluk öne çıkanlarını gelen kutunuza alın",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "subscribe": "Abone Ol",
+      "thankYou": "Abone olduğunuz için teşekkürler!",
+      "confirmationMessage": "Ergo topluluğuyla ilgili güncellemeler alacaksınız."
     }
   }
 }

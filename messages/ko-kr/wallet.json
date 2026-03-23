@@ -1,319 +1,319 @@
 {
   "wallet": {
-    "title": "Wallets",
-    "subtitle": "Secure your ERG",
-    "description": "Secure wallets for Ergo",
-    "download": "Download",
-    "webWallet": "Web Wallet",
-    "mobileWallet": "Mobile Wallet",
-    "desktopWallet": "Desktop Wallet",
-    "hardwareWallet": "Hardware Wallet",
+    "title": "지갑",
+    "subtitle": "ERG를 안전하게 보관하세요",
+    "description": "Ergo를 위한 안전한 지갑",
+    "download": "다운로드",
+    "webWallet": "웹 지갑",
+    "mobileWallet": "모바일 지갑",
+    "desktopWallet": "데스크톱 지갑",
+    "hardwareWallet": "하드웨어 지갑",
     "seo": {
-      "title": "Wallets - Secure ERG Storage | Ergo Platform",
-      "description": "Find the best Ergo wallets for secure ERG storage and transactions.",
-      "keywords": "Ergo wallet, ERG storage, Nautilus, SAFEW, mobile wallet",
-      "ogTitle": "Ergo Wallets - Secure ERG Storage",
-      "ogDescription": "Find the best Ergo wallets for secure ERG storage and transactions.",
-      "twitterTitle": "Ergo Wallets - Secure ERG Storage",
-      "twitterDescription": "Find the best Ergo wallets for secure ERG storage and transactions."
+      "title": "지갑 - 안전한 ERG 보관 | Ergo 플랫폼",
+      "description": "안전한 ERG 보관 및 거래를 위한 최고의 Ergo 지갑을 찾으세요.",
+      "keywords": "Ergo 지갑, ERG 보관, Nautilus, SAFEW, 모바일 지갑",
+      "ogTitle": "Ergo 지갑 - 안전한 ERG 보관",
+      "ogDescription": "안전한 ERG 보관 및 거래를 위한 최고의 Ergo 지갑을 찾으세요.",
+      "twitterTitle": "Ergo 지갑 - 안전한 ERG 보관",
+      "twitterDescription": "안전한 ERG 보관 및 거래를 위한 최고의 Ergo 지갑을 찾으세요."
     },
     "types": {
       "mobile": {
-        "title": "Mobile Wallets",
-        "description": "Wallets for iOS and Android"
+        "title": "모바일 지갑",
+        "description": "iOS 및 Android용 지갑"
       },
       "desktop": {
-        "title": "Desktop Wallets",
-        "description": "Wallets for Windows, Mac, and Linux"
+        "title": "데스크톱 지갑",
+        "description": "Windows, Mac, Linux용 지갑"
       },
       "hardware": {
-        "title": "Hardware Wallets",
-        "description": "Cold storage solutions"
+        "title": "하드웨어 지갑",
+        "description": "콜드 스토리지 솔루션"
       },
       "web": {
-        "title": "Web Wallets",
-        "description": "Browser-based wallets"
+        "title": "웹 지갑",
+        "description": "브라우저 기반 지갑"
       }
     },
     "features": {
-      "security": "Security",
-      "usability": "Ease of Use",
-      "features": "Features",
-      "platforms": "Platforms"
+      "security": "보안",
+      "usability": "사용 편의성",
+      "features": "기능",
+      "platforms": "플랫폼"
     },
     "recommended": {
-      "title": "Recommended Wallets",
-      "description": "Our top picks for different use cases"
+      "title": "추천 지갑",
+      "description": "다양한 사용 사례를 위한 최고의 선택"
     },
-    "security_first": "Security First",
+    "security_first": "보안 우선",
     "desktop_mobile_mobile_browser_extension_browser": "Desktop\",\n  mobile: \"Mobile\",\n  \"browser-extension\": \"Browser",
     "hardware_paper_paper_node_node": "Hardware\",\n  paper: \"paper\",\n  node: \"node",
     "chrome_firefox_android_ios": "Chrome\", \"Firefox\", \"Android\", \"iOS",
     "windows_macos_linux": "Windows\", \"macOS\", \"Linux",
-    "full_node_integration_enhanced_privacy": "Full Node Integration\", \"Enhanced Privacy\", \"Offline Vault\", \"Token Management",
+    "full_node_integration_enhanced_privacy": "풀 노드 통합\", \"향상된 프라이버시\", \"오프라인 볼트\", \"토큰 관리",
     "desktop_isofficial_true_isrecommended_true": "Desktop\",\n    isOfficial: true,\n    isRecommended: true,\n    websiteUrl: \"https://satergo.com/",
-    "ergomixer_privacy_quick_setup_no_download_required": "ErgoMixer Privacy\", \"Quick Setup\", \"No Download Required",
+    "ergomixer_privacy_quick_setup_no_download_required": "ErgoMixer 프라이버시\", \"빠른 설정\", \"다운로드 불필요",
     "browser_websiteurl_https_safew_org": "Browser\",\n    websiteUrl: \"https://safew.org/",
-    "multi_signature_mobile_first_user_friendly": "Multi-Signature\", \"Mobile-first\", \"User-friendly",
-    "cold_storage_physical_confirmation_recovery_phrase": "Cold Storage\", \"Physical Confirmation\", \"Recovery Phrase",
+    "multi_signature_mobile_first_user_friendly": "다중 서명\", \"모바일 우선\", \"사용자 친화적",
+    "cold_storage_physical_confirmation_recovery_phrase": "콜드 스토리지\", \"물리적 확인\", \"복구 문구",
     "hardware_websiteurl_https_www_ledger_com": "Hardware\",\n    websiteUrl: \"https://www.ledger.com/",
-    "cold_storage_no_internet_required_printable_keys": "Cold Storage\", \"No Internet Required\", \"Printable Keys",
-    "full_node_integration_cli_api_access_cold_storage": "Full Node Integration\", \"CLI/API Access\", \"Cold Storage",
-    "offline_key_generation_and_storage": "Offline key generation and storage for maximum security.",
+    "cold_storage_no_internet_required_printable_keys": "콜드 스토리지\", \"인터넷 불필요\", \"출력 가능한 키",
+    "full_node_integration_cli_api_access_cold_storage": "풀 노드 통합\", \"CLI/API 접근\", \"콜드 스토리지",
+    "offline_key_generation_and_storage": "최대 보안을 위한 오프라인 키 생성 및 저장.",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
-      "name": "Ergo Wallets",
-      "description": "Collection of secure wallets for Ergo blockchain",
+      "name": "Ergo 지갑",
+      "description": "Ergo 블록체인을 위한 안전한 지갑 모음",
       "wallets": {
         "nautilus": {
-          "name": "Nautilus Wallet",
-          "description": "Feature-rich browser extension wallet for Ergo with dApp connectivity"
+          "name": "Nautilus 지갑",
+          "description": "dApp 연결성이 있는 Ergo용 기능 풍부한 브라우저 확장 지갑"
         },
         "satergo": {
-          "name": "Satergo Wallet",
-          "description": "Desktop wallet with full node integration and advanced features"
+          "name": "Satergo 지갑",
+          "description": "풀 노드 통합 및 고급 기능이 있는 데스크톱 지갑"
         }
       }
     },
     "faq": {
       "items": [
         {
-          "question": "What is the best Ergo wallet?",
-          "answer": "The best Ergo wallet depends on your needs: Nautilus (browser extension) is great for DeFi and dApp interactions, Ergo Mobile Wallet is ideal for everyday phone use, and SAFEW offers advanced features for power users. For maximum security, use a Ledger hardware wallet with Nautilus."
+          "question": "최고의 Ergo 지갑은 무엇인가요?",
+          "answer": "최고의 Ergo 지갑은 필요에 따라 다릅니다: Nautilus (브라우저 확장)는 DeFi 및 dApp 상호작용에 적합하고, Ergo 모바일 지갑은 일상적인 휴대폰 사용에 이상적이며, SAFEW는 고급 사용자를 위한 고급 기능을 제공합니다. 최대 보안을 위해 Nautilus와 함께 Ledger 하드웨어 지갑을 사용하세요."
         },
         {
-          "question": "Is Nautilus wallet safe?",
-          "answer": "Nautilus is a secure non-custodial wallet. Your keys are stored locally and encrypted, and the project is open-source. Always back up your 15-word seed phrase securely—if you lose it, you lose access to your funds."
+          "question": "Nautilus 지갑은 안전한가요?",
+          "answer": "Nautilus는 안전한 비수탁 지갑입니다. 키는 로컬에 저장되어 암호화되며 프로젝트는 오픈 소스입니다. 항상 15단어 시드 문구를 안전하게 백업하세요—잃어버리면 자금에 접근할 수 없게 됩니다."
         },
         {
-          "question": "Can I use Ledger with Ergo?",
-          "answer": "Yes. Ergo is supported on Ledger hardware wallets. Using Ledger with Nautilus keeps your private keys on the device and is a strong option for long-term storage."
+          "question": "Ergo에서 Ledger를 사용할 수 있나요?",
+          "answer": "네. Ergo는 Ledger 하드웨어 지갑에서 지원됩니다. Nautilus와 함께 Ledger를 사용하면 개인 키가 장치에 보관되며 장기 보관에 좋은 옵션입니다."
         },
         {
-          "question": "How do I back up my Ergo wallet?",
-          "answer": "When you create a wallet you receive a 15-word seed phrase. Write it down on paper (never store it digitally) and keep it in multiple safe locations. Never share it—anyone with the phrase controls your funds."
+          "question": "Ergo 지갑을 어떻게 백업하나요?",
+          "answer": "지갑을 만들면 15단어 시드 문구를 받습니다. 종이에 적어 두고 (디지털로 저장하지 마세요) 여러 안전한 장소에 보관하세요. 절대 공유하지 마세요—문구를 가진 사람은 누구든 자금을 통제할 수 있습니다."
         },
         {
-          "question": "Which wallet supports Ergo NFTs?",
-          "answer": "Nautilus is a popular choice for Ergo NFTs thanks to marketplace integrations (e.g. SkyHarbor). SAFEW also supports NFTs with an advanced token viewer."
+          "question": "어떤 지갑이 Ergo NFT를 지원하나요?",
+          "answer": "Nautilus는 마켓플레이스 통합 (예: SkyHarbor) 덕분에 Ergo NFT에 인기 있는 선택입니다. SAFEW도 고급 토큰 뷰어로 NFT를 지원합니다."
         }
       ]
     },
     "ui": {
-      "features": "Features",
-      "visitWebsite": "Visit Website",
-      "download": "Download",
-      "securityTitle": "Security First",
-      "securityNote": "Always download wallets from official sources and verify checksums for maximum security.",
-      "platforms": "Platforms",
-      "users": "Users",
-      "rating": "Rating",
-      "recommended": "Recommended",
-      "official": "Official",
-      "allWallets": "All Wallets",
-      "filterBy": "Filter by:",
-      "searchWallets": "Search wallets...",
-      "noWalletsFound": "No wallets found matching your criteria."
+      "features": "기능",
+      "visitWebsite": "웹사이트 방문",
+      "download": "다운로드",
+      "securityTitle": "보안 우선",
+      "securityNote": "최대 보안을 위해 항상 공식 소스에서 지갑을 다운로드하고 체크섬을 확인하세요.",
+      "platforms": "플랫폼",
+      "users": "사용자",
+      "rating": "평점",
+      "recommended": "추천",
+      "official": "공식",
+      "allWallets": "모든 지갑",
+      "filterBy": "필터 기준:",
+      "searchWallets": "지갑 검색...",
+      "noWalletsFound": "기준에 맞는 지갑이 없습니다."
     }
   },
   "walletClient": {
     "hero": {
       "title": "Ergo",
-      "titleHighlight": "Wallets",
-      "subtitle": "Secure your ERG with production-ready wallets",
-      "description": "From browser extensions to hardware devices - choose the perfect wallet for your security needs. All wallets are non-custodial, giving you full control of your funds."
+      "titleHighlight": "지갑",
+      "subtitle": "프로덕션 준비가 된 지갑으로 ERG를 안전하게 보관하세요",
+      "description": "브라우저 확장에서 하드웨어 장치까지 - 보안 요구에 맞는 완벽한 지갑을 선택하세요. 모든 지갑은 비수탁형으로 자금을 완전히 통제할 수 있습니다."
     },
     "quickStart": {
-      "title": "Quick Start",
+      "title": "빠른 시작",
       "nautilus": {
-        "name": "Nautilus Wallet",
-        "subtitle": "Browser - Most Popular"
+        "name": "Nautilus 지갑",
+        "subtitle": "브라우저 - 가장 인기"
       },
       "satergo": {
-        "name": "Satergo Wallet",
-        "subtitle": "Desktop - Full Node"
+        "name": "Satergo 지갑",
+        "subtitle": "데스크톱 - 풀 노드"
       },
       "ledger": {
-        "name": "Ledger Hardware",
-        "subtitle": "Hardware - Maximum Security"
+        "name": "Ledger 하드웨어",
+        "subtitle": "하드웨어 - 최대 보안"
       }
     },
     "security": {
-      "title": "Security First",
-      "subtitle": "Best practices for wallet safety",
-      "description": "Always download wallets from official sources and verify checksums for maximum security.",
+      "title": "보안 우선",
+      "subtitle": "지갑 안전을 위한 모범 사례",
+      "description": "최대 보안을 위해 항상 공식 소스에서 지갑을 다운로드하고 체크섬을 확인하세요.",
       "tips": {
-        "verifyChecksums": "Verify checksums after download",
-        "officialSources": "Download only from official sources",
-        "backupSeedPhrase": "Backup your seed phrase securely offline"
+        "verifyChecksums": "다운로드 후 체크섬 확인",
+        "officialSources": "공식 소스에서만 다운로드",
+        "backupSeedPhrase": "시드 문구를 오프라인에서 안전하게 백업"
       }
     },
     "allWallets": {
-      "title": "All Wallets",
-      "subtitle": "secure options for storing your ERG"
+      "title": "모든 지갑",
+      "subtitle": "ERG를 저장하는 안전한 옵션"
     },
     "labels": {
-      "recommended": "Recommended",
-      "loading": "Loading wallets...",
-      "download": "Download",
-      "visit": "Visit",
+      "recommended": "추천",
+      "loading": "지갑 불러오는 중...",
+      "download": "다운로드",
+      "visit": "방문",
       "securityLevels": {
-        "high": "High",
-        "veryHigh": "Very High",
-        "maximum": "Maximum"
+        "high": "높음",
+        "veryHigh": "매우 높음",
+        "maximum": "최대"
       },
       "walletTypes": {
-        "hot": "Hot",
-        "cold": "Cold",
-        "hybrid": "Hybrid"
+        "hot": "핫",
+        "cold": "콜드",
+        "hybrid": "하이브리드"
       }
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
-      "subtitle": "Now that you have a wallet, get some ERG and explore the ecosystem",
+      "title": "다음",
+      "titleHighlight": "단계",
+      "subtitle": "지갑이 생겼으니, ERG를 얻고 에코시스템을 탐색하세요",
       "getErg": {
-        "title": "Get ERG",
-        "subtitle": "Buy ERG Tokens",
-        "description": "Purchase ERG from exchanges or DEXs"
+        "title": "ERG 받기",
+        "subtitle": "ERG 토큰 구매",
+        "description": "거래소 또는 DEX에서 ERG 구매"
       },
       "learnMore": {
-        "title": "Learn More",
-        "subtitle": "Documentation",
-        "description": "Deep dive into Ergo's technology"
+        "title": "더 알아보기",
+        "subtitle": "문서",
+        "description": "Ergo의 기술 심층 탐구"
       }
     },
     "emailCapture": {
-      "title": "Wallet Security Tips",
-      "description": "Get the latest wallet security updates, best practices, and safety tips delivered to your inbox"
+      "title": "지갑 보안 팁",
+      "description": "최신 지갑 보안 업데이트, 모범 사례 및 안전 팁을 받은 편지함으로 받아보세요"
     },
     "wallets": {
       "nautilus": {
-        "name": "Nautilus Wallet",
-        "description": "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
+        "name": "Nautilus 지갑",
+        "description": "dApp 연결성 및 고급 DeFi 기능을 갖춘 기능 풍부한 브라우저 확장 지갑",
         "features": [
-          "dApp Integration",
-          "Hardware Wallet Support",
-          "Multi-signature",
-          "Token Management",
-          "DeFi Ready"
+          "dApp 통합",
+          "하드웨어 지갑 지원",
+          "다중 서명",
+          "토큰 관리",
+          "DeFi 준비됨"
         ]
       },
       "satergo": {
-        "name": "Satergo Wallet",
-        "description": "Desktop wallet with full node integration and advanced privacy features",
+        "name": "Satergo 지갑",
+        "description": "풀 노드 통합 및 고급 프라이버시 기능을 갖춘 데스크톱 지갑",
         "features": [
-          "Full Node",
-          "ErgoMixer Integration",
-          "Advanced Privacy",
-          "Multi-Account",
-          "Cold Storage"
+          "풀 노드",
+          "ErgoMixer 통합",
+          "고급 프라이버시",
+          "다중 계정",
+          "콜드 스토리지"
         ]
       },
       "ergo-wallet-android": {
-        "name": "Ergo Wallet (Android)",
-        "description": "Official mobile wallet for Android with QR scanning and simple interface",
+        "name": "Ergo 지갑 (Android)",
+        "description": "QR 스캔 및 간단한 인터페이스를 갖춘 Android용 공식 모바일 지갑",
         "features": [
-          "QR Scanning",
-          "Simple Interface",
-          "Backup & Restore",
-          "Multi-language",
-          "Offline Signing"
+          "QR 스캔",
+          "간단한 인터페이스",
+          "백업 및 복원",
+          "다국어",
+          "오프라인 서명"
         ]
       },
       "ergo-wallet-ios": {
-        "name": "Ergo Wallet (iOS)",
-        "description": "Official mobile wallet for iOS with intuitive design and secure storage",
+        "name": "Ergo 지갑 (iOS)",
+        "description": "직관적인 디자인과 안전한 저장을 갖춘 iOS용 공식 모바일 지갑",
         "features": [
           "Touch ID",
           "Face ID",
-          "iCloud Backup",
-          "Simple Interface",
-          "Secure Enclave"
+          "iCloud 백업",
+          "간단한 인터페이스",
+          "보안 엔클레이브"
         ]
       },
       "safew": {
         "name": "SAFEW",
-        "description": "Simple And Fast Ergo Wallet - lightweight desktop wallet with essential features",
+        "description": "필수 기능을 갖춘 경량 데스크톱 지갑 - Simple And Fast Ergo Wallet",
         "features": [
-          "Lightweight",
-          "Fast Sync",
-          "Multiple Accounts",
-          "Token Support",
-          "Simple UI"
+          "경량",
+          "빠른 동기화",
+          "다중 계정",
+          "토큰 지원",
+          "간단한 UI"
         ]
       },
       "ledger": {
-        "name": "Ledger Hardware Wallet",
-        "description": "Cold storage solution with Ergo support for maximum security",
+        "name": "Ledger 하드웨어 지갑",
+        "description": "최대 보안을 위한 Ergo 지원 콜드 스토리지 솔루션",
         "features": [
-          "Cold Storage",
-          "Hardware Security",
-          "PIN Protection",
-          "Recovery Phrase",
-          "Offline Signing"
+          "콜드 스토리지",
+          "하드웨어 보안",
+          "PIN 보호",
+          "복구 문구",
+          "오프라인 서명"
         ]
       },
       "ergo-paper-wallet": {
-        "name": "Ergo Paper Wallet",
-        "description": "Generate secure paper wallets for cold storage of ERG",
+        "name": "Ergo 종이 지갑",
+        "description": "ERG의 콜드 스토리지를 위한 안전한 종이 지갑 생성",
         "features": [
-          "Offline Generation",
-          "Cold Storage",
-          "No Registration",
-          "Open Source",
-          "Maximum Security"
+          "오프라인 생성",
+          "콜드 스토리지",
+          "등록 없음",
+          "오픈 소스",
+          "최대 보안"
         ]
       }
     },
     "categories": {
-      "Desktop": "Desktop",
-      "Mobile": "Mobile",
-      "Browser": "Browser",
-      "Hardware": "Hardware",
-      "Paper": "Paper"
+      "Desktop": "데스크톱",
+      "Mobile": "모바일",
+      "Browser": "브라우저",
+      "Hardware": "하드웨어",
+      "Paper": "종이"
     },
     "securityLevels": {
-      "High": "High",
-      "Very High": "Very High",
-      "Maximum": "Maximum"
+      "High": "높음",
+      "Very High": "매우 높음",
+      "Maximum": "최대"
     },
     "walletTypes": {
-      "Hot": "Hot",
-      "Cold": "Cold",
-      "Hybrid": "Hybrid"
+      "Hot": "핫",
+      "Cold": "콜드",
+      "Hybrid": "하이브리드"
     }
   },
   "walletsData": {
     "nautilus": {
-      "description": "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
-      "name": "Nautilus Wallet"
+      "description": "dApp 연결성 및 고급 DeFi 기능을 갖춘 기능 풍부한 브라우저 확장 지갑",
+      "name": "Nautilus 지갑"
     },
     "satergo": {
-      "description": "Desktop wallet with full node integration and advanced privacy features",
-      "name": "Satergo Wallet"
+      "description": "풀 노드 통합 및 고급 프라이버시 기능을 갖춘 데스크톱 지갑",
+      "name": "Satergo 지갑"
     },
     "ergo-wallet-android": {
-      "description": "Official mobile wallet for Android with QR scanning and simple interface",
-      "name": "Ergo Wallet (Android)"
+      "description": "QR 스캔 및 간단한 인터페이스를 갖춘 Android용 공식 모바일 지갑",
+      "name": "Ergo 지갑 (Android)"
     },
     "ergo-wallet-ios": {
-      "description": "Official mobile wallet for iOS with intuitive design and secure storage",
-      "name": "Ergo Wallet (iOS)"
+      "description": "직관적인 디자인과 안전한 저장을 갖춘 iOS용 공식 모바일 지갑",
+      "name": "Ergo 지갑 (iOS)"
     },
     "safew": {
-      "description": "Simple And Fast Ergo Wallet - lightweight desktop wallet with essential features",
+      "description": "필수 기능을 갖춘 경량 데스크톱 지갑 - Simple And Fast Ergo Wallet",
       "name": "SAFEW"
     },
     "ledger": {
-      "description": "Cold storage solution with Ergo support for maximum security",
-      "name": "Ledger Hardware Wallet"
+      "description": "최대 보안을 위한 Ergo 지원 콜드 스토리지 솔루션",
+      "name": "Ledger 하드웨어 지갑"
     },
     "ergo-paper-wallet": {
-      "description": "Generate secure paper wallets for cold storage of ERG",
-      "name": "Ergo Paper Wallet"
+      "description": "ERG의 콜드 스토리지를 위한 안전한 종이 지갑 생성",
+      "name": "Ergo 종이 지갑"
     }
   }
 }

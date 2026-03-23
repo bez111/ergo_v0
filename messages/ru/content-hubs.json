@@ -3,8 +3,8 @@
     "how-to-build-defi-on-ergo": {
       "query": "Как построить DeFi на Ergo?",
       "shortAnswer": "Создание DeFi на Ergo начинается с понимания модели eUTXO и ErgoScript. В отличие от цепей, основанных на учетных записях, модель коробки Ergo обеспечивает детерминированное исполнение, отсутствие MEV по дизайну и предсказуемые затраты на газ. Используйте Oracle пулы для ценовых фидов, а также рычаги существующих моделей Spectrum Finance и SigmaUSD.",
-      "seoTitle": "How to Build DeFi on Ergo: Complete Developer Guide",
-      "seoDescription": "Step-by-step guide to building decentralized finance applications on Ergo using eUTXO, ErgoScript, and Oracle Pools. No MEV, predictable fees.",
+      "seoTitle": "Как создать DeFi на Ergo: полное руководство для разработчиков",
+      "seoDescription": "Пошаговое руководство по созданию децентрализованных финансовых приложений на Ergo с использованием eUTXO, ErgoScript и Oracle Pools. Без MEV, предсказуемые комиссии.",
       "category": "DeFi",
       "keyPoints": [
         "Learn eUTXO fundamentals - boxes hold value, data, and spending conditions",
@@ -14,8 +14,8 @@
     "what-is-eutxo": {
       "query": "Что такое eUTXO и как это работает?",
       "shortAnswer": "eUTXO (Extended Unspent Transaction Output) — это умная контрактная модель Ergo, расширяющая UTXO Bitcoin с программируемой логикой. Каждый 'box' содержит ERG, токены, регистры данных и скрипт охраны. Транзакции потребляют ящики и создают новые, что позволяет детерминировать выполнение, параллельную обработку и не возвращать атаки.",
-      "seoTitle": "What is eUTXO? Extended UTXO Model Explained",
-      "seoDescription": "Learn how Ergo",
+      "seoTitle": "Что такое eUTXO? Расширенная модель UTXO объяснена",
+      "seoDescription": "Узнайте, как расширенная модель UTXO в Ergo обеспечивает безопасные смарт-контракты без глобального состояния.",
       "category": "Technology",
       "keyPoints": [
         "Boxes = UTXOs with superpowers: value + tokens + data + script",
@@ -27,8 +27,8 @@
     "ergo-vs-ethereum-for-defi": {
       "query": "Is Ergo better than Ethereum for DeFi?",
       "shortAnswer": "Ergo предлагает структурные преимущества для DeFi: нет извлечения MEV, детерминированные затраты на газ и нет вторжения из-за eUTXO. Ethereum имеет больше экосистем и ликвидности. Выберите Ergo для критичных приложений, справедливой торговли и предсказуемых расходов. Выберите Ethereum для максимальной компостильности с существующими протоколами.",
-      "seoTitle": "Ergo vs Ethereum for DeFi: Which is Better?",
-      "seoDescription": "Compare Ergo and Ethereum for DeFi development. MEV resistance, gas costs, security models, and ecosystem differences explained.",
+      "seoTitle": "Ergo против Ethereum для DeFi: что лучше?",
+      "seoDescription": "Сравнение Ergo и Ethereum для разработки DeFi. Защита от MEV, стоимость газа, модели безопасности и различия в экосистеме.",
       "category": "DeFi",
       "keyPoints": [
         "Ergo: No MEV, no front-running, no sandwich attacks",
@@ -41,8 +41,8 @@
     "is-ergo-better-than-monero-for-privacy": {
       "query": "Ergo лучше, чем Monero для приватности?",
       "shortAnswer": "Различные модели приватности для различных нужд. Monero обеспечивает постоянную, конфиденциальность протокола с сигнатурами. Ergo предлагает необязательную конфиденциальность через протоколы Sigma с выборочным раскрытием информации - вы можете доказать все что угодно без раскрытия данных. Ergo превосходит по программе конфиденциальность (частные смарт-контракты), в то время как Monero превосходит при простых частных трансфертах.",
-      "seoTitle": "Ergo vs Monero Privacy: Which is Better?",
-      "seoDescription": "Compare Ergo and Monero privacy features. Sigma Protocols vs ring signatures, programmable privacy vs always-on privacy explained.",
+      "seoTitle": "Ergo против Monero: приватность. Что лучше?",
+      "seoDescription": "Сравнение функций приватности Ergo и Monero. Sigma Protocols против кольцевых подписей, программируемая приватность против всегда включённой.",
       "category": "Privacy",
       "keyPoints": [
         "Monero: Always-on privacy, ring signatures, stealth addresses",
@@ -55,8 +55,8 @@
     "what-are-sigma-protocols": {
       "query": "Что такое Sigma протоколы и как они работают?",
       "shortAnswer": "Протоколы Sigma являются надежными системами, которые позволяют вам доказать утверждения о данных, не раскрывая сами данные. В Эрго они встроены в ErgoScript, что позволяет использовать смарт-контракты, сохраняющие конфиденциальность. Вы можете подтвердить свой собственный фонд, выполнить условия, или принадлежать группе - все без раскрытия вашей личности или точных значений.",
-      "seoTitle": "What are Sigma Protocols? Zero-Knowledge Proofs on Ergo",
-      "seoDescription": "Learn how Sigma Protocols enable privacy-preserving smart contracts on Ergo. Zero-knowledge proofs, selective disclosure, and programmable privacy.",
+      "seoTitle": "Что такое Sigma Protocols? Доказательства с нулевым разглашением на Ergo",
+      "seoDescription": "Как Sigma Protocols обеспечивают смарт-контракты с сохранением приватности на Ergo. Доказательства с нулевым разглашением, выборочное раскрытие и программируемая приватность.",
       "category": "Privacy",
       "keyPoints": [
         "Zero-knowledge: prove something is true without revealing why",
@@ -81,8 +81,8 @@
     "how-to-escape-financial-repression-with-ergo": {
       "query": "Как избежать финансовых репрессий с Эрго?",
       "shortAnswer": "Ergo предоставляет инструменты для финансового суверенитета: самохранение без третьих лиц, цензуростойкие транзакции через PoW, факультативную конфиденциальность с Sigma Протоколами и программируемые деньги без разрешения. В отличие от цепочек с использованием VC, Эрго не имеет центрального органа, который может заморозить средства или соблюдать санкции. Ваши ключи, ваши монеты, ваша свобода.",
-      "seoTitle": "How to Escape Financial Repression with Ergo",
-      "seoDescription": "Use Ergo for financial freedom: self-custody, censorship resistance, optional privacy. No banks, no VC control, no permission needed.",
+      "seoTitle": "Как уйти от финансовых репрессий с Ergo",
+      "seoDescription": "Используйте Ergo для финансовой свободы: самохранение, устойчивость к цензуре, опциональная приватность. Без банков, без контроля VC.",
       "category": "Philosophy",
       "keyPoints": [
         "Self-custody: no banks, no intermediaries, no permission needed",
@@ -95,8 +95,8 @@
     "why-ergo-fair-launch-matters": {
       "query": "Почему Эрго имеет значение на честном запуске?",
       "shortAnswer": "У Эрго не было преддобычи, нет ICO, нет VC распределения. 100% ERG приходит из добычи. Это означает, что не сбрасывают на вас инсайдеров, не контролирующих управление VC, нет оснований для мажоритарной ставки. Справедливый запуск создает подлинную децентрализацию - сеть принадлежит майнерам и пользователям, а не ранним инвесторам, стремящимся выйти из ликвидности.",
-      "seoTitle": "Why Ergo",
-      "seoDescription": "Ergo",
+      "seoTitle": "Почему честный запуск Ergo важен",
+      "seoDescription": "Ergo запустился без премайна, ICO и VC-алокаций. 100% ERG добыто майнингом — основа настоящей децентрализации.",
       "category": "Philosophy",
       "keyPoints": [
         "No pre-mine: zero coins existed before mining started",
@@ -109,8 +109,8 @@
     "how-to-mine-ergo": {
       "query": "Как добыть Эрго?",
       "shortAnswer": "Ergo использует алгоритм Autolykos v2, жесткий память, ASIC-устойчивый PoW. Вы можете добывать с помощью потребительского GPU (4GB+ VRAM). Шаги: получите кошелек, выберите программу майнинга (lolMiner, T-Rex, Nanominer), присоединяйтесь к пулу (Herominers, 2Miners, Nanopool), настройте вашего майнера с адресом пула и кошельком. Возможна добыча соло, но пулы обеспечивают steadier доход.",
-      "seoTitle": "How to Mine Ergo: Complete GPU Mining Guide",
-      "seoDescription": "Start mining Ergo with your GPU. Autolykos v2 setup guide: wallet, software, pools, configuration. ASIC-resistant, 4GB+ VRAM.",
+      "seoTitle": "Как майнить Ergo: полное руководство по GPU-майнингу",
+      "seoDescription": "Начните майнить Ergo на GPU. Руководство по Autolykos v2: кошелёк, ПО, пулы, настройка. ASIC-устойчивый, 4GB+ VRAM.",
       "category": "Mining",
       "keyPoints": [
         "GPU mining: works with 4GB+ VRAM cards (AMD/NVIDIA)",
@@ -123,8 +123,8 @@
     "what-is-autolykos": {
       "query": "Что такое Автоликос и как он работает?",
       "shortAnswer": "Компания Autolykos — это алгоритм проверки памяти, разработанный для работы с GPU, который требует значительных объемов оперативной памяти (~2.5GB), что делает развитие ASIC неэкономичным. Алгоритм способствует децентрализации добычи полезных ископаемых и их доступности для потребительского оборудования.",
-      "seoTitle": "What is Autolykos? Ergo",
-      "seoDescription": "Autolykos explained: Ergo",
+      "seoTitle": "Что такое Autolykos? Алгоритм майнинга Ergo",
+      "seoDescription": "Autolykos объяснён: memory-hard PoW алгоритм Ergo, ASIC-устойчивость, GPU-доступность и децентрализованный майнинг.",
       "category": "Mining",
       "keyPoints": [
         "Memory-hard: requires RAM, not just raw compute power",
@@ -137,8 +137,8 @@
     "what-is-storage-rent": {
       "query": "Что такое аренда на складе на Ergo?",
       "shortAnswer": "Аренда хранилища – это решение Эрго для государственного пузырька. Коробки (UTXO), которые остаются непотраченными на протяжении 4+ лет, могут иметь небольшую комиссию, вычитаемую майнерами. Это стимулирует очистку неиспользуемого состояния, дает долгосрочные доходы майнеров после завершения эмиссии и сохраняет блокчейн устойчивым. Потерянные монеты в конце концов возвращаются к обращению вместо того, чтобы навсегда блокироваться.",
-      "seoTitle": "What is Storage Rent? Ergo",
-      "seoDescription": "Storage rent on Ergo: how it prevents blockchain bloat, provides miner revenue, and recovers lost coins. 4-year grace period explained.",
+      "seoTitle": "Что такое Storage Rent на Ergo? Устойчивость блокчейна",
+      "seoDescription": "Storage Rent на Ergo: как предотвращает разрастание блокчейна, обеспечивает доход майнеров и возвращает потерянные монеты. 4-летний льготный период.",
       "category": "Technology",
       "keyPoints": [
         "4-year grace period: no rent for actively used boxes",
@@ -165,8 +165,8 @@
     "what-is-mev-resistance": {
       "query": "Что такое MEV сопротивление и почему Эрго его имеет?",
       "shortAnswer": "MEV (Maximal Extractable Value) это прибыль извлекаемая из переупорядочивания, вставки или цензуры транзакций - атаки на мышление и сэндвич. Модель Ergo's eUTXO обеспечивает структурное сопротивление MEV: ссылки на транзакции конкретные ящики (UTXO), что значительно сложнее переупорядочить. Нет общего состояния для использования в цепочках, основанных на учетных записях.",
-      "seoTitle": "What is MEV Resistance? Why Ergo Has No Front-Running",
-      "seoDescription": "MEV resistance on Ergo: how eUTXO prevents front-running, sandwich attacks, and value extraction. No dark forest, fair trading.",
+      "seoTitle": "Что такое защита от MEV? Почему в Ergo нет фронт-раннинга",
+      "seoDescription": "Защита от MEV на Ergo: как eUTXO предотвращает фронт-раннинг, сэндвич-атаки и извлечение ценности. Нет тёмного леса, честная торговля.",
       "category": "Technology",
       "keyPoints": [
         "MEV = value extracted by manipulating transaction order",
@@ -180,8 +180,8 @@
     "how-to-get-started-with-ergo": {
       "query": "Как начать работу с Ergo?",
       "shortAnswer": "Начните с получения кошелька (Nautilus для браузера, Terminus для мобильных устройств). Сделайте резервное копирование ключевой фразы в автономном режиме. Получите ERG с обменного пункта. , KuCoin) или DEX (Spectrum). Сделайте тестовую транзакцию. Затем изучите: попробуйте DeFi на Spectrum, проверьте NFT, или погрузитесь в технологию, если вы строите.",
-      "seoTitle": "How to Get Started with Ergo: Beginner",
-      "seoDescription": "Start using Ergo: wallet setup, buying ERG, first transaction. Complete beginner",
+      "seoTitle": "Как начать работу с Ergo: руководство для начинающих",
+      "seoDescription": "Начните использовать Ergo: настройка кошелька, покупка ERG, первая транзакция. Полное руководство для начинающих.",
       "category": "Getting Started",
       "keyPoints": [
         "Wallet: Nautilus (browser), Terminus (mobile), Satergo (desktop)",
@@ -194,8 +194,8 @@
     "where-to-buy-ergo": {
       "query": "Где купить ERG?",
       "shortAnswer": "ERG доступен на централизованных биржах (Gate.io, KuCoin, Bitmart) и децентрализованных биржах (Spectrum Finance on Ergo, Rosen Bridge from other chains). Для самохранения, купите на бирже и выведите на Ваш кошелек Nautilus или Terminus. Для максимальной децентрализации используйте DEX Spectrum с кошельком, не являющимся хранителем.",
-      "seoTitle": "Where to Buy ERG: Exchanges and DEX Guide",
-      "seoDescription": "Buy ERG on Gate.io, KuCoin, or Spectrum DEX. Complete guide to purchasing Ergo tokens safely.",
+      "seoTitle": "Где купить ERG: биржи и DEX гид",
+      "seoDescription": "Купите ERG на Gate.io, KuCoin или Spectrum DEX. Полное руководство по безопасной покупке токенов Ergo.",
       "category": "Getting Started",
       "keyPoints": [
         "Centralized: Gate.io, KuCoin, Bitmart, CoinEx",
@@ -208,8 +208,8 @@
     "is-ergo-a-good-investment": {
       "query": "Неужели Эрго хороший капитал?",
       "shortAnswer": "Это не финансовый совет. Ergo имеет мощные базовые принципы: справедливый запуск (без дампа VC), инновационные технологии (eUTXO, Sigma Protocols, NiPoPoW), активное развитие и этические циферпунки. Это меньший проект по ограничению рынка с более высоким риском/вознаграждением, чем установленные цепочки. Исследуйте тщательно, понимайте технологию и никогда не вкладывайте больше, чем вы можете позволить себе потерять.",
-      "seoTitle": "Is Ergo a Good Investment? Fundamentals Analysis",
-      "seoDescription": "Ergo investment analysis: fair launch, technology, development activity. Not financial advice - research guide for potential investors.",
+      "seoTitle": "Является ли Ergo хорошей инвестицией? Фундаментальный анализ",
+      "seoDescription": "Анализ инвестиций в Ergo: честный запуск, технология, активность разработки. Не финансовый совет — исследовательский гид для потенциальных инвесторов.",
       "category": "Getting Started",
       "keyPoints": [
         "Fair launch: no insider allocations to dump",
@@ -236,8 +236,8 @@
     "what-is-sigmausd": {
       "query": "Что такое SigmaUSD и как он работает?",
       "shortAnswer": "SigmaUSD это алгоритм Эргоса, привязанный к доллару США и поддерживаемый ERG резервами. В нем используется протокол AgeUS: пользователи mint SigUSE, депонировав ERG, а держатели SigRSV обеспечивают резервные накопления и поглощение волатильности. Резервный коэффициент (400-800%) обеспечивает стабильность. Нет централизованного эмитента, никаких банковских счетов - чистый криптовалютный залог.",
-      "seoTitle": "What is SigmaUSD? Ergo",
-      "seoDescription": "SigmaUSD explained: ERG-backed stablecoin using AgeUSD protocol. 400-800% reserve ratio, decentralized, no bank backing.",
+      "seoTitle": "Что такое SigmaUSD? Стейблкоин Ergo",
+      "seoDescription": "SigmaUSD объяснён: стейблкоин, обеспеченный ERG, по протоколу AgeUSD. Резервное соотношение 400-800%, децентрализован, без банковского обеспечения.",
       "category": "DeFi",
       "keyPoints": [
         "Algorithmic: no centralized issuer or bank backing",
@@ -250,8 +250,8 @@
     "what-is-rosen-bridge": {
       "query": "Что такое мост Розен?",
       "shortAnswer": "Мост Rosen является межсетевым протоколом Эрго для бесконтрольных перемещений активов между блокчейнами. Он соединяет Ergo с Cardano, Bitcoin (Runes) и Dogecoin. В отличие от централизованных мостов, Rosen использует децентрализованную часовую сеть и многостороннюю безопасность.",
-      "seoTitle": "What is Rosen Bridge? Cross-Chain on Ergo",
-      "seoDescription": "Rosen Bridge: trustless cross-chain transfers between Ergo, Cardano, Bitcoin, Dogecoin. Decentralized watcher network.",
+      "seoTitle": "Что такое Rosen Bridge? Кросс-чейн на Ergo",
+      "seoDescription": "Rosen Bridge: доверенные кросс-чейн переводы между Ergo, Cardano, Bitcoin, Dogecoin. Децентрализованная сеть наблюдателей.",
       "category": "DeFi",
       "keyPoints": [
         "Cross-chain: Ergo <-> Cardano, Bitcoin, Dogecoin",
@@ -264,8 +264,8 @@
     "what-is-ergo-blockchain": {
       "query": "Что такое Ergo blockchain?",
       "shortAnswer": "Ergo - это честно запущенный блокчейн \"Доказательство работы\" с расширенными умными контрактами. Она сочетает в себе модель безопасности Bitcoin (UTXO, PoW) с программируемостью Ethereum-стилем через модель eUTXO и ErgoScript. Никаких домых, нет ICO, нет контроля VC - построены циферопанками для финансовой свободы.",
-      "seoTitle": "What is Ergo Blockchain? Complete Introduction",
-      "seoDescription": "Ergo is a fair-launched PoW blockchain with eUTXO smart contracts, Sigma Protocols privacy, and long-term sustainability features.",
+      "seoTitle": "Что такое блокчейн Ergo? Полное введение",
+      "seoDescription": "Ergo — честно запущенный PoW-блокчейн с eUTXO смарт-контрактами, приватностью Sigma Protocols и функциями долгосрочной устойчивости.",
       "category": "Getting Started",
       "keyPoints": [
         "Proof-of-Work with Autolykos (ASIC-resistant, GPU-friendly)",
@@ -279,8 +279,8 @@
     "how-to-buy-erg": {
       "query": "Как купить криптовалюту ERG?",
       "shortAnswer": "Купить ERG на централизованных биржах (KuCoin, Gate.io, CoinEx) или децентрализованных биржах (Spectrum Finance). Сначала создайте кошелек (Nautilus рекомендуется), затем приобретите ERG и выйдите на ваш кошелек. Никогда не оставляйте большие суммы на биржах - ключ к самохранению.",
-      "seoTitle": "How to Buy ERG: Complete Guide to Purchasing Ergo",
-      "seoDescription": "Step-by-step guide to buying ERG cryptocurrency. Exchanges, wallets, and security best practices for Ergo purchases.",
+      "seoTitle": "Как купить ERG: полное руководство по покупке Ergo",
+      "seoDescription": "Пошаговое руководство по покупке криптовалюты ERG. Биржи, кошельки и лучшие практики безопасности при покупке Ergo.",
       "category": "Getting Started",
       "keyPoints": [
         "Centralized: KuCoin, Gate.io, CoinEx, Bitpanda",
@@ -294,8 +294,8 @@
     "what-wallet-for-ergo": {
       "query": "Какой лучший кошелек для Ergo?",
       "shortAnswer": "Nautilus - самый популярный кошелек Ergo - расширение браузера, поддерживающее все функции Ergo, включая токены, NFT, и подключение dApp. Для мобильных устройств используйте Терминал. Для максимальной безопасности используйте Nautilus с аппаратным кошельком Ledger. Всегда резервное копирование ключевой фразы в автономном режиме.",
-      "seoTitle": "Best Ergo Wallet: Nautilus, Terminus, and More",
-      "seoDescription": "Compare Ergo wallets: Nautilus (browser), Terminus (mobile), SAFEW (desktop), and Ledger hardware wallet support.",
+      "seoTitle": "Лучший кошелёк для Ergo: Nautilus, Terminus и другие",
+      "seoDescription": "Сравнение кошельков Ergo: Nautilus (браузер), Terminus (мобильный), SAFEW (десктоп) и поддержка аппаратного кошелька Ledger.",
       "category": "Getting Started",
       "keyPoints": [
         "Nautilus: Browser extension, full-featured, dApp support",
@@ -309,8 +309,8 @@
     "is-ergo-safe": {
       "query": "Безопасный и безопасный Эрго?",
       "shortAnswer": "Да, Эрго очень безопасно. Он использует Proof-Work (ту же модель безопасности, что и Bitcoin), так и не взломан, а модель eUTXO устраняет все классы смарт-контрактных уязвимостей. Код является открытым исходным кодом и проверяется экспертами. Ваша безопасность также зависит от правильного управления seed флагами.",
-      "seoTitle": "Is Ergo Safe? Security Analysis",
-      "seoDescription": "Ergo security explained: PoW consensus, eUTXO safety, open-source code, and best practices for protecting your ERG.",
+      "seoTitle": "Безопасен ли Ergo? Анализ безопасности",
+      "seoDescription": "Безопасность Ergo: консенсус PoW, безопасность eUTXO, открытый исходный код и лучшие практики защиты ваших ERG.",
       "category": "Getting Started",
       "keyPoints": [
         "PoW consensus: proven security model (like Bitcoin)",
@@ -324,8 +324,8 @@
     "what-is-ergoscript": {
       "query": "Что такое ErgoScript и как он работает?",
       "shortAnswer": "ErgoScript - это умный язык контракта Эрго - функциональный язык, основанный на Scala, который компилируется в ErgoTree для выполнения цепочки. В отличие от солидарности, ErgoScript не комплектуется дизайном, обеспечивая предсказуемые затраты на исполнение и упрощение формальной проверки. Достаточно мощный для сложного DeFi и достаточно безопасный для аудита.",
-      "seoTitle": "What is ErgoScript? Ergo Smart Contract Language",
-      "seoDescription": "ErgoScript: Ergo",
+      "seoTitle": "Что такое ErgoScript? Язык смарт-контрактов Ergo",
+      "seoDescription": "ErgoScript — функциональный язык смарт-контрактов Ergo на основе Scala с нативной поддержкой Sigma Protocols и детерминированным исполнением.",
       "category": "Technology",
       "keyPoints": [
         "Scala-based functional language",
@@ -339,8 +339,8 @@
     "what-is-storage-rent-ergo": {
       "query": "Что такое аренда на складе на Ergo?",
       "shortAnswer": "Аренда хранилища — это механизм долговременной устойчивости. Это предотвращает обрыв состояния, возвращает потерянные монеты, и гарантирует, что майнеры получают доход даже после окончания выбросов. Это похоже на оплату аренды места для хранения блокчейна.",
-      "seoTitle": "What is Storage Rent on Ergo? Blockchain Sustainability",
-      "seoDescription": "Storage rent on Ergo: how it prevents state bloat, recirculates lost coins, and ensures long-term miner incentives.",
+      "seoTitle": "Что такое Storage Rent на Ergo? Устойчивость блокчейна",
+      "seoDescription": "Storage Rent на Ergo: как предотвращает разрастание состояния, возвращает потерянные монеты и обеспечивает долгосрочные стимулы майнеров.",
       "category": "Technology",
       "keyPoints": [
         "~4 years of inactivity triggers rent",
@@ -370,8 +370,8 @@
     "why-ergo-sustainable": {
       "query": "Почему Эрго устойчиво долговременно?",
       "shortAnswer": "Компания Эрго предназначена для обеспечения устойчивости на 100+ лет с помощью трех основных компонентов: добыча автоликоса (ярмарка, устойчивая к воздействию ASIC), NiPoWs (эффективные легкие клиенты), складская аренда (предотвращает взрыв, минералов). В отличие от цепей, зависящих от бесконечного роста, экономика Эрго работает даже при стабильном или сокращающемся использовании.",
-      "seoTitle": "Why is Ergo Sustainable? Long-Term Blockchain Design",
-      "seoDescription": "Ergo",
+      "seoTitle": "Почему Ergo устойчив долгосрочно? Дизайн блокчейна",
+      "seoDescription": "Как Ergo обеспечивает устойчивость на 100+ лет: Autolykos, NiPoPoWs и Storage Rent. Блокчейн, работающий без бесконечного роста.",
       "category": "Philosophy",
       "keyPoints": [
         "Autolykos: ASIC-resistant, decentralized mining",
@@ -385,8 +385,8 @@
     "is-ergo-mining-profitable": {
       "query": "Является ли Эрго добывающей прибылью в 2025 году?",
       "shortAnswer": "Выгода от добычи Эрго зависит от стоимости электроэнергии, эффективности GPU и цены ERG. Используйте калькуляторы добычи с определенными затратами на оборудование и питание. Ergo является одним из наиболее прибыльных GPU-mineable монет благодаря тому, что Autolykos является устойчивым к ASIC.",
-      "seoTitle": "Is Ergo Mining Profitable in 2025? Calculator & Guide",
-      "seoDescription": "Ergo mining profitability analysis: GPU requirements, electricity costs, and calculators. Is ERG mining worth it?",
+      "seoTitle": "Выгоден ли майнинг Ergo в 2025? Калькулятор и гид",
+      "seoDescription": "Анализ доходности майнинга Ergo: требования к GPU, стоимость электроэнергии и калькуляторы. Стоит ли майнить ERG?",
       "category": "Mining",
       "keyPoints": [
         "Depends on: electricity cost, GPU, ERG price",
@@ -400,8 +400,8 @@
     "best-gpu-for-ergo-mining": {
       "query": "Что такое GPU для добычи Ergo?",
       "shortAnswer": "Популярные возможности NVIDIA RTX 3060 Ti, 3070, 3080 и AMD RX 6800 XT. Минимальное требование VRAM. Лучший GPU зависит от вашего бюджета, стоимости электроэнергии и наличия. Эффективность (хэштрейт на ватку) важнее хэшта.",
-      "seoTitle": "Best GPU for Ergo Mining: NVIDIA vs AMD Comparison",
-      "seoDescription": "Best GPUs for Ergo mining: RTX 3060 Ti, 3070, 3080, RX 6800 XT. Comparison of hashrate, efficiency, and value.",
+      "seoTitle": "Лучший GPU для майнинга Ergo: NVIDIA против AMD",
+      "seoDescription": "Лучшие GPU для майнинга Ergo: RTX 3060 Ti, 3070, 3080, RX 6800 XT. Сравнение хешрейта, эффективности и ценности.",
       "category": "Mining",
       "keyPoints": [
         "NVIDIA: RTX 3060 Ti, 3070, 3080 popular",
@@ -430,8 +430,8 @@
     "how-to-use-spectrum-dex": {
       "query": "Как использовать Spectrum DEX на Ergo?",
       "shortAnswer": "Подключите ваш кошелек Nautilus к Spectrum Finance, выберите токены для замены, проверьте курс и проскальзывание, а затем подтвердите. Spectrum использует пулы ликвидности AMM для мгновенных сделок. Вы также можете обеспечить ликвидность для получения комиссии. Все сделки атомарны - они полностью или не полностью завершены, без предварительного запуска.",
-      "seoTitle": "How to Use Spectrum DEX: Ergo Decentralized Exchange Guide",
-      "seoDescription": "Step-by-step guide to using Spectrum Finance DEX on Ergo. Swap tokens, provide liquidity, earn fees.",
+      "seoTitle": "Как использовать Spectrum DEX: руководство по децентрализованной бирже Ergo",
+      "seoDescription": "Пошаговое руководство по использованию Spectrum Finance DEX на Ergo. Обменивайте токены, предоставляйте ликвидность, зарабатывайте комиссии.",
       "category": "DeFi",
       "keyPoints": [
         "Connect Nautilus wallet to spectrum.fi",
@@ -445,8 +445,8 @@
     "how-to-provide-liquidity-ergo": {
       "query": "Как обеспечить ликвидность на Эрго?",
       "shortAnswer": "На Spectrum Finance, выберите пул, одинаковую стоимость обоих токенов, и получите LP токены, представляющие вашу акцию. Вы зарабатываете часть всех торговых комиссий. Вывод средств в любое время, возвращая токены LP. Имейте в виду, что непостоянная потеря, если цены токена значительно разнятся.",
-      "seoTitle": "How to Provide Liquidity on Ergo: Earn Trading Fees",
-      "seoDescription": "Guide to providing liquidity on Ergo DEX. Deposit tokens, earn fees, understand impermanent loss.",
+      "seoTitle": "Как предоставить ликвидность на Ergo: зарабатывайте комиссии",
+      "seoDescription": "Руководство по предоставлению ликвидности на DEX Ergo. Вносите токены, зарабатывайте комиссии, разберитесь в непостоянных потерях.",
       "category": "DeFi",
       "keyPoints": [
         "Choose pool on Spectrum Finance",
@@ -460,8 +460,8 @@
     "how-to-use-sigmausd": {
       "query": "Как использовать SigmaUSD stablecoin?",
       "shortAnswer": "SigmaUSD это алгоритм Эргоса, привязанный к USD. Помогите его, депонируя ERG в качестве залога на sigmausd. o. Используйте для стабильного хранения значений, торговых пар или DeFi. Обмен в любое время для ERG. Протокол использует SigRSV для поглощения волатильности - держатели SigRSV принимают на себя риск потенциальной прибыли.",
-      "seoTitle": "How to Use SigmaUSD: Ergo Stablecoin Guide",
-      "seoDescription": "Guide to minting and using SigmaUSD stablecoin on Ergo. Collateral, redemption, and SigRSV explained.",
+      "seoTitle": "Как использовать SigmaUSD: руководство по стейблкоину Ergo",
+      "seoDescription": "Руководство по выпуску и использованию стейблкоина SigmaUSD на Ergo. Залог, погашение и SigRSV объяснены.",
       "category": "DeFi",
       "keyPoints": [
         "Mint on sigmausd.io with ERG collateral",
@@ -475,8 +475,8 @@
     "why-proof-of-work-matters": {
       "query": "Почему вопрос о допуске на работу имеет значение для децентрализации?",
       "shortAnswer": "Доказательство о работе обеспечивает сильнейшее сопротивление цензуре, потому что любой может добывать без разрешения. В отличие от PoS, где валидаторы могут быть идентифицированы и под давлением, PoW майнеры анонимны и заменены. Стоимость энергии создает реальный якорь, который не может быть захвачен регуляторами или инсайдерами.",
-      "seoTitle": "Why Proof-of-Work Matters for Decentralization",
-      "seoDescription": "Proof-of-Work and censorship resistance: why PoW provides stronger decentralization than Proof-of-Stake.",
+      "seoTitle": "Почему Proof-of-Work важен для децентрализации",
+      "seoDescription": "Proof-of-Work и устойчивость к цензуре: почему PoW обеспечивает более сильную децентрализацию, чем Proof-of-Stake.",
       "category": "Philosophy",
       "keyPoints": [
         "Permissionless: anyone can mine",
@@ -488,8 +488,8 @@
     "is-pow-better-than-pos": {
       "query": "Доказательна ли работа лучше, чем доказательство собственности?",
       "shortAnswer": "Каждый из них имеет торгово-офф. PoW обеспечивает более сильную цензурную стойкость, справедливое распределение и не получает богатую динамику. PoS является более энергоэффективным, но централизирует вокруг крупных компаний и является более уязвимым к регуляторному давлению. Для обеспечения финансовой свободы и децентрализации ПВ имеет высший уровень; для чистой эффективности ПС выигрывает.",
-      "seoTitle": "Proof-of-Work vs Proof-of-Stake: Which is Better?",
-      "seoDescription": "PoW vs PoS comparison: censorship resistance, energy efficiency, decentralization, and security tradeoffs.",
+      "seoTitle": "Proof-of-Work против Proof-of-Stake: что лучше?",
+      "seoDescription": "Сравнение PoW и PoS: устойчивость к цензуре, энергоэффективность, децентрализация и компромиссы безопасности.",
       "category": "Philosophy",
       "keyPoints": [
         "PoW: Stronger censorship resistance",
@@ -518,8 +518,8 @@
     "why-no-vc-funding-matters": {
       "query": "Почему Эрго не имеет никакого значения для финансирования VC?",
       "shortAnswer": "Цепочки, финансируемые с использованием ЭТ, имеют неправильные стимулы: ВЦ нуждаются в выходах, поэтому они стремятся к показу над веществом, централизованному контролю и дампу токенов. Компания Ergo's предлагает полный спектр услуг по организации ярмарки, а не инсайдерам и корпоративному управлению.",
-      "seoTitle": "Why No VC Funding Matters: Ergo",
-      "seoDescription": "Why Ergo",
+      "seoTitle": "Почему отсутствие VC-финансирования важно для Ergo",
+      "seoDescription": "Почему честный запуск Ergo без VC создаёт настоящую децентрализацию: правильные стимулы, нет инсайдерских дампов, нет корпоративного управления.",
       "category": "Philosophy",
       "keyPoints": [
         "No insider token allocations",
@@ -533,8 +533,8 @@
     "how-is-ergo-different-from-bitcoin": {
       "query": "Как Ergo отличается от Bitcoin?",
       "shortAnswer": "Ergo расширяет модель Bitcoin с смарт-контрактами. Оба используют PoW и UTXO, но Ergo добавляет: eUTXO для программируемых боксов, ErgoScript для смарт-контрактов, Протоколы Sigma для обеспечения конфиденциальности, аренды хранилища для устойчивости, а также NiPoWs для легких клиентов. Подумайте о Ergo как \"Bitcoin с умными контрактами выполнено правильно.\"",
-      "seoTitle": "Ergo vs Bitcoin: Key Differences Explained",
-      "seoDescription": "How Ergo differs from Bitcoin: eUTXO smart contracts, Sigma Protocols privacy, storage rent, and NiPoPoWs.",
+      "seoTitle": "Ergo против Bitcoin: ключевые отличия",
+      "seoDescription": "Чем Ergo отличается от Bitcoin: смарт-контракты eUTXO, приватность Sigma Protocols, Storage Rent и NiPoPoWs.",
       "category": "Technology",
       "keyPoints": [
         "Same: PoW consensus, UTXO model, fair launch",
@@ -548,8 +548,8 @@
     "ergo-vs-cardano-comparison": {
       "query": "В чем разница между Эрго и Карданом?",
       "shortAnswer": "Ergo: PoW (Autolykos), fair launch, no VC funding, storage rent. Кардано: PoS (Ouroboros), финансируется ВЦ и более крупная экосистема. Эрго приоритизирует децентрализацию и устойчивость; Кардано приоритизирует академический строгость и институциональное принятие.",
-      "seoTitle": "Ergo vs Cardano: eUTXO Siblings Compared",
-      "seoDescription": "Ergo vs Cardano comparison: PoW vs PoS, fair launch vs VC funding, and different approaches to eUTXO.",
+      "seoTitle": "Ergo против Cardano: два eUTXO блокчейна",
+      "seoDescription": "Сравнение Ergo и Cardano: PoW против PoS, честный запуск против VC-финансирования и разные подходы к eUTXO.",
       "category": "Technology",
       "keyPoints": [
         "Both: eUTXO smart contract model",
@@ -563,8 +563,8 @@
     "ergo-vs-solana-comparison": {
       "query": "Как Ergo сравнивает с Solana?",
       "shortAnswer": "Противоположные философские принципы: Солана: PoS, финансируемая ВХ, фокусирующиеся на скорости, централизованные валидаторы. Эрго: PoW, справедливый старт, ориентированный на безопасность, децентрализованный горнодобывающий сектор, 100% сверхурочный. Солана проводит децентрализацию на скорость; Эрго приоритизирует сопротивление безопасности и цензуре над сырьем.",
-      "seoTitle": "Ergo vs Solana: Decentralization vs Speed",
-      "seoDescription": "Ergo vs Solana comparison: PoW vs PoS, fair launch vs VC funding, security vs speed tradeoffs.",
+      "seoTitle": "Ergo против Solana: децентрализация против скорости",
+      "seoDescription": "Сравнение Ergo и Solana: PoW против PoS, честный запуск против VC-финансирования, безопасность против скорости.",
       "category": "Technology",
       "keyPoints": [
         "Solana: PoS with centralized validators",
@@ -593,8 +593,8 @@
     "is-ergo-anonymous": {
       "query": "Анонимный Эрго?",
       "shortAnswer": "Не по умолчанию, но это может быть. Базовые Ergo транзакции являются псевдонимом (адреса видимы, а не имена). Для анонимности используйте ErgoMixer для разрушения ссылок на транзакции, Sigma протоколы для подтверждения нулевых знаний и правильную операционную безопасность. Ergo предлагает \"конфиденциальность по требованию\", а не конфиденциальность вроде Monero.",
-      "seoTitle": "Is Ergo Anonymous? Privacy Options Explained",
-      "seoDescription": "Ergo anonymity: pseudonymous by default with optional privacy tools. ErgoMixer, Sigma Protocols, and operational security.",
+      "seoTitle": "Анонимен ли Ergo? Варианты приватности",
+      "seoDescription": "Анонимность Ergo: псевдонимный по умолчанию с опциональными инструментами приватности. ErgoMixer, Sigma Protocols и операционная безопасность.",
       "category": "Privacy",
       "keyPoints": [
         "Pseudonymous by default (addresses, not names)",
@@ -608,8 +608,8 @@
     "what-is-ergomixer": {
       "query": "Что такое ErgoMixer и как он работает?",
       "shortAnswer": "ErgoMixer - это не хранитель, не заслуживающий доверия сервис смешивания, который нарушает связь между адресами ввода и вывода. Оно использует Sigma протоколы для того, чтобы доказать, что вы имеете право на выведение, не раскрывая какой депозит был вашим. В отличие от централизованных микшеров, нет надежной стороны, которая могла бы украсть средства или хранить бревна.",
-      "seoTitle": "What is ErgoMixer? Non-Custodial Mixing on Ergo",
-      "seoDescription": "ErgoMixer: trustless, non-custodial transaction mixing using Sigma Protocols. How it works and why it",
+      "seoTitle": "Что такое ErgoMixer? Некастодиальное микширование на Ergo",
+      "seoDescription": "ErgoMixer: доверенное, некастодиальное микширование транзакций с использованием Sigma Protocols. Как это работает и зачем нужно.",
       "category": "Privacy",
       "keyPoints": [
         "Non-custodial: You control your funds",
@@ -2305,209 +2305,209 @@
   },
   "infographicItems": {
     "what-we-are-fighting-against-financial-repression-stack": {
-      "title": "What We",
-      "shortDescription": "Layered view of the financial repression stack and how Ergo answers with censorship-resistant settlement, open programmability and privacy on demand.",
-      "subtitle": "The Financial Repression Stack — and what Ergo offers instead."
+      "title": "С чем мы боремся: стек финансовых репрессий",
+      "shortDescription": "Многоуровневый вид стека финансовых репрессий и то, как Ergo отвечает устойчивым к цензуре расчётом, открытым программированием и конфиденциальностью по требованию.",
+      "subtitle": "Стек финансовых репрессий — и что предлагает Ergo вместо этого."
     },
     "powered-by-builders-designed-for-freedom": {
-      "title": "Powered by Builders. Designed for Freedom.",
-      "shortDescription": "Three-layer Ergo pyramid showing miners securing the base layer, builders shipping tools and dApps, and freedom seekers owning their finance.",
-      "subtitle": "A three-layer Ergo pyramid of miners, builders and freedom seekers aligned around money without masters."
+      "title": "Создано разработчиками. Разработано для свободы.",
+      "shortDescription": "Трёхслойная пирамида Ergo: майнеры защищают базовый слой, разработчики создают инструменты и dApps, а сторонники свободы владеют своими финансами.",
+      "subtitle": "Трёхслойная пирамида Ergo из майнеров, разработчиков и ищущих свободу, объединённых вокруг денег без хозяев."
     },
     "mev-resistance-vs-dark-forest": {
-      "title": "MEV-Resistance vs the ",
-      "shortDescription": "How global DeFi ",
-      "subtitle": "Contrasting global DeFi "
+      "title": "Защита от MEV против тёмного леса",
+      "shortDescription": "Как глобальный DeFi страдает от MEV-извлечения и как eUTXO Ergo создаёт структурно более честную среду.",
+      "subtitle": "Сравнение глобального DeFi-тёмного леса с честной eUTXO-средой Ergo."
     },
     "smart-contract-l1-tree": {
-      "title": "Smart-Contract L1 Tree",
-      "shortDescription": "How Bitcoin, Ethereum, Cardano and Ergo differ in smart-contract state models, determinism, audit complexity, expressiveness and hidden global state risk.",
-      "subtitle": "Tracing smart-contract L1 evolution from Bitcoin"
+      "title": "Дерево смарт-контрактных L1",
+      "shortDescription": "Как Bitcoin, Ethereum, Cardano и Ergo различаются по моделям состояния смарт-контрактов, детерминизму, сложности аудита и скрытым рискам глобального состояния.",
+      "subtitle": "Эволюция смарт-контрактных L1 от Bitcoin до eUTXO."
     },
     "ergo-vs-privacy-coins": {
-      "title": "Ergo vs Privacy Coins",
-      "shortDescription": "How Ergo, Monero, Zcash and L2 mixers differ in privacy models, programmability, selective disclosure, auditability and fair-launch tokenomics.",
-      "subtitle": "Comparing Ergo, Monero, Zcash and L2 mixers on privacy models, programmability, auditability and tokenomics."
+      "title": "Ergo против монет приватности",
+      "shortDescription": "Как Ergo, Monero, Zcash и L2 миксеры различаются по моделям приватности, программируемости, выборочному раскрытию, аудитируемости и токеномике.",
+      "subtitle": "Сравнение Ergo, Monero, Zcash и L2 миксеров по моделям приватности, программируемости и токеномике."
     },
     "pow-vs-pos-censorship-and-attack-surface": {
-      "title": "PoW vs PoS: Censorship & Attack Surface",
-      "shortDescription": "How PoW, classic PoS and validator committees differ in censorship power, cartel risk, regulatory pressure and user resistance tools.",
-      "subtitle": "Comparing miners, stakers and validator committees on who can censor, how cartels form and how systems react under pressure."
+      "title": "PoW против PoS: цензура и поверхность атаки",
+      "shortDescription": "Как PoW, классический PoS и комитеты валидаторов различаются по мощности цензуры, риску картелей и инструментам сопротивления пользователей.",
+      "subtitle": "Сравнение майнеров, стейкеров и комитетов валидаторов: кто может цензурировать и как системы реагируют под давлением."
     },
     "eutxo-vs-accounts-vs-classic-utxo": {
-      "title": "eUTXO vs Accounts vs Classic UTXO",
-      "shortDescription": "How classic UTXO, global accounts and Ergo",
-      "subtitle": "Comparing Bitcoin-style UTXO, global accounts and Ergo"
+      "title": "eUTXO против Accounts против классического UTXO",
+      "shortDescription": "Как классический UTXO, глобальные аккаунты и расширенная eUTXO-модель Ergo различаются по безопасности, детерминизму и возможностям смарт-контрактов.",
+      "subtitle": "Сравнение Bitcoin-style UTXO, глобальных аккаунтов и eUTXO Ergo."
     },
     "privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins": {
-      "title": "Privacy, But Auditable",
-      "shortDescription": "How mixers, classic privacy coins and Ergo",
-      "subtitle": "Three ways to do on-chain privacy — and why Ergo chooses Sigma Protocols."
+      "title": "Приватность, но аудитируемая",
+      "shortDescription": "Как миксеры, классические монеты приватности и Sigma Protocols Ergo различаются по подходу к on-chain конфиденциальности.",
+      "subtitle": "Три способа on-chain приватности — и почему Ergo выбирает Sigma Protocols."
     },
     "where-ergo-fits-among-major-chains": {
-      "title": "Where Ergo Fits Among Major Chains",
-      "shortDescription": "Scatterplot comparing Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDCs and typical VC chains across launch model, programmability, DeFi and privacy.",
-      "subtitle": "Sound money, smart contracts, and privacy in one PoW L1."
+      "title": "Где Ergo находится среди крупных сетей",
+      "shortDescription": "Диаграмма рассеивания, сравнивающая Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDC и типичные VC-сети по модели запуска, программируемости, DeFi и приватности.",
+      "subtitle": "Твёрдые деньги, смарт-контракты и приватность в одном PoW L1."
     },
     "ergo-vs-zcash-zk-without-ceremony": {
-      "title": "Ergo vs Zcash: ZK Without Ceremony",
-      "shortDescription": "Side-by-side infographic comparing Ergo’s Sigma-based, trustless privacy and smart contracts with Zcash’s trusted-setup-based ZK model.",
-      "subtitle": "Sigma-based privacy and smart contracts without trusted setup."
+      "title": "Ergo против Zcash: ZK без доверенной настройки",
+      "shortDescription": "Сравнение Sigma-based доверенной приватности и смарт-контрактов Ergo с ZK-моделью Zcash на основе доверенной настройки.",
+      "subtitle": "Sigma-based приватность и смарт-контракты без доверенной настройки."
     },
     "ergo-vs-solana-tps-vs-sovereignty": {
-      "title": "Ergo vs Solana: TPS vs Sovereignty",
-      "shortDescription": "Infographic comparing Ergo’s high decentralization and sovereignty with Solana’s maximum throughput focus, including hardware, funding and design trade-offs.",
-      "subtitle": "High throughput or high decentralization — pick your side."
+      "title": "Ergo против Solana: TPS против суверенитета",
+      "shortDescription": "Сравнение высокой децентрализации и суверенитета Ergo с максимальной пропускной способностью Solana, включая оборудование, финансирование и компромиссы дизайна.",
+      "subtitle": "Высокая пропускная способность или высокая децентрализация — выбирайте сторону."
     },
     "ergo-vs-cardano-two-eutxo-paths": {
-      "title": "Ergo vs Cardano: Two eUTXO Paths",
-      "shortDescription": "Infographic comparing Ergo and Cardano as two eUTXO chains with the same research roots but different choices on consensus, launch, privacy and sustainability.",
-      "subtitle": "Same research roots, different choices on consensus, launch, and sustainability."
+      "title": "Ergo против Cardano: два пути eUTXO",
+      "shortDescription": "Сравнение Ergo и Cardano как двух eUTXO-цепочек с одними исследовательскими корнями, но разными выборами по консенсусу, запуску, приватности и устойчивости.",
+      "subtitle": "Одни исследовательские корни, разные выборы по консенсусу, запуску и устойчивости."
     },
-    "ergo-vs-litecoin-digital-silver-vs-programmable-money": {
-      "title": "Ergo vs Litecoin: Digital Silver vs Programmable Money",
-      "shortDescription": "Infographic comparing Ergo as programmable PoW money for DeFi and alternative economic systems with Litecoin as digital silver / faster Bitcoin focused on payments.",
-      "subtitle": "From “fast Bitcoin” payments to PoW smart-contract DeFi."
+    “ergo-vs-litecoin-digital-silver-vs-programmable-money”: {
+      “title”: “Ergo vs Litecoin: цифровое серебро vs программируемые деньги”,
+      “shortDescription”: “Инфографика, сравнивающая Ergo как программируемые PoW-деньги для DeFi и альтернативных экономических систем с Litecoin как цифровым серебром / более быстрым Bitcoin, ориентированным на платежи.”,
+      “subtitle”: “От платежей «быстрый Bitcoin» до PoW DeFi со смарт-контрактами.”
     },
-    "ergo-vs-monero-privacy-modes": {
-      "title": "Ergo vs Monero: Privacy Modes",
-      "shortDescription": "Infographic comparing Monero’s always-on payment privacy with Ergo’s optional, programmable privacy for DeFi, smart contracts and selective disclosure.",
-      "subtitle": "Always-on payment privacy vs programmable privacy for DeFi."
+    “ergo-vs-monero-privacy-modes”: {
+      “title”: “Ergo vs Monero: режимы конфиденциальности”,
+      “shortDescription”: “Инфографика, сравнивающая постоянную конфиденциальность платежей Monero с опциональной, программируемой конфиденциальностью Ergo для DeFi, смарт-контрактов и избирательного раскрытия данных.”,
+      “subtitle”: “Постоянная конфиденциальность платежей vs программируемая конфиденциальность для DeFi.”
     },
-    "ergo-vs-ethereum-same-power-less-pain": {
-      "title": "Ergo vs Ethereum: Same Power, Less Pain",
-      "shortDescription": "Infographic comparing Ergo and Ethereum on state model, MEV and fees, consensus power structure and privacy, showing how eUTXO aims for similar programmability with fewer account-model headaches.",
-      "subtitle": "Smart contracts and DeFi without account-model headaches and MEV wars."
+    “ergo-vs-ethereum-same-power-less-pain”: {
+      “title”: “Ergo vs Ethereum: те же возможности, меньше проблем”,
+      “shortDescription”: “Инфографика, сравнивающая Ergo и Ethereum по модели состояния, MEV и комиссиям, структуре консенсуса и конфиденциальности — как eUTXO обеспечивает аналогичную программируемость без головной боли с аккаунт-моделью.”,
+      “subtitle”: “Смарт-контракты и DeFi без проблем аккаунт-модели и MEV-войн.”
     },
-    "ergo-vs-major-l1s-feature-checklist": {
-      "title": "Ergo vs Major L1s – Feature Checklist",
-      "shortDescription": "Side-by-side matrix for Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across consensus, launch, privacy, storage rent, MEV and more.",
-      "subtitle": "Consensus, launch, privacy, storage rent, MEV — all in one table."
+    “ergo-vs-major-l1s-feature-checklist”: {
+      “title”: “Ergo vs крупные L1 — таблица функций”,
+      “shortDescription”: “Сравнительная матрица Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, типичной VC-цепочки, CBDC и Ergo по консенсусу, запуску, конфиденциальности, Storage Rent, MEV и другим параметрам.”,
+      “subtitle”: “Консенсус, запуск, конфиденциальность, Storage Rent, MEV — всё в одной таблице.”
     },
-    "ergo-vs-avalanche-funding-story-and-power-structure": {
-      "title": "Ergo vs Avalanche: Funding Story and Power Structure",
-      "shortDescription": "Infographic comparing Ergo’s $0 VC, 100% mined distribution with Avalanche’s hundreds of millions in venture funding, and how that shapes consensus, control and incentives.",
-      "subtitle": "$0 VC and 100% mined vs hundreds of millions in venture funding."
+    “ergo-vs-avalanche-funding-story-and-power-structure”: {
+      “title”: “Ergo vs Avalanche: история финансирования и структура власти”,
+      “shortDescription”: “Инфографика, сравнивающая $0 VC и 100% добытое распределение Ergo с сотнями миллионов долларов венчурного финансирования Avalanche и то, как это формирует консенсус, контроль и стимулы.”,
+      “subtitle”: “$0 VC и 100% добытые монеты vs сотни миллионов в венчурном финансировании.”
     },
-    "ergo-vs-bitcoin-bitcoin-with-the-missing-pieces": {
-      "title": "Ergo vs Bitcoin: Bitcoin With the Missing Pieces",
-      "shortDescription": "Infographic comparing simple UTXO Bitcoin money with Ergo’s eUTXO, smart contracts, privacy and storage rent — like adding missing layers on top of the Bitcoin brick.",
-      "subtitle": "From simple UTXO money to programmable, sustainable PoW DeFi."
+    “ergo-vs-bitcoin-bitcoin-with-the-missing-pieces”: {
+      “title”: “Ergo vs Bitcoin: Bitcoin с недостающими элементами”,
+      “shortDescription”: “Инфографика, сравнивающая простые UTXO-деньги Bitcoin с eUTXO, смарт-контрактами, конфиденциальностью и Storage Rent Ergo — как добавление недостающих слоёв поверх Bitcoin-кирпича.”,
+      “subtitle”: “От простых UTXO-денег к программируемому, устойчивому PoW DeFi.”
     },
-    "ergo-vs-cbdcs-control-vs-sovereignty": {
-      "title": "Ergo vs CBDCs: Control vs Sovereignty",
-      "shortDescription": "Infographic contrasting self-custodied programmable money on Ergo with centrally controlled CBDCs across ownership, privacy, censorship and monetary policy.",
-      "subtitle": "Central bank scripts vs self-custodied programmable money."
+    “ergo-vs-cbdcs-control-vs-sovereignty”: {
+      “title”: “Ergo vs CBDC: контроль vs суверенитет”,
+      “shortDescription”: “Инфографика, противопоставляющая самохраняемые программируемые деньги на Ergo с централизованно контролируемыми CBDC по праву собственности, конфиденциальности, цензуре и денежной политике.”,
+      “subtitle”: “Скрипты центрального банка vs самохраняемые программируемые деньги.”
     },
-    "ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi": {
-      "title": "Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi",
-      "shortDescription": "Infographic comparing Ergo and Ravencoin as PoW token platforms, from simple asset issuance to a full programmable DeFi stack with privacy and advanced features.",
-      "subtitle": "From simple asset issuance to a full PoW DeFi platform."
+    “ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi”: {
+      “title”: “Ergo vs Ravencoin: токены на PoW — базовые vs полный DeFi”,
+      “shortDescription”: “Инфографика, сравнивающая Ergo и Ravencoin как PoW-платформы токенов — от простой эмиссии активов до полного программируемого DeFi-стека с конфиденциальностью и расширенными функциями.”,
+      “subtitle”: “От простой эмиссии активов до полноценной PoW DeFi-платформы.”
     },
-    "ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow": {
-      "title": "Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW",
-      "shortDescription": "Infographic comparing Ergo’s programmable eUTXO DeFi stack with Kaspa’s high-throughput PoW payments layer built on a BlockDAG.",
-      "subtitle": "From pure PoW payments to a full programmable DeFi platform."
+    “ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow”: {
+      “title”: “Ergo vs Kaspa: программируемый PoW vs высокопроизводительный PoW”,
+      “shortDescription”: “Инфографика, сравнивающая программируемый eUTXO DeFi-стек Ergo с высокопроизводительным PoW-платёжным слоем Kaspa на основе BlockDAG.”,
+      “subtitle”: “От чистых PoW-платежей до полноценной программируемой DeFi-платформы.”
     },
-    "autolykos-mining-without-masters": {
-      "title": "Autolykos: Mining Without Masters",
-      "shortDescription": "How Ergo",
-      "subtitle": "Ergo"
+    “autolykos-mining-without-masters”: {
+      “title”: “Autolykos: майнинг без хозяев”,
+      “shortDescription”: “Как Ergo сохраняет майнинг доступным для GPU через ASIC-устойчивый алгоритм Autolykos, не допуская монополизации хешрейта.”,
+      “subtitle”: “Ergo держит майнинг открытым для всех через ASIC-устойчивый Autolykos.”
     },
-    "who-starts-with-the-coins-vc-allocation-vs-ergo-supply": {
-      "title": "Who Starts With the Coins?",
-      "shortDescription": "How typical VC chains reserve large token chunks for insiders while Ergo",
-      "subtitle": "Comparing VC chain token allocation with Ergo"
+    “who-starts-with-the-coins-vc-allocation-vs-ergo-supply”: {
+      “title”: “Кто начинает с монетами?”,
+      “shortDescription”: “Как типичные VC-цепочки резервируют большие пакеты токенов для инсайдеров, тогда как Ergo распределяет 100% монет через майнинг с первого дня.”,
+      “subtitle”: “Сравнение распределения токенов VC-цепочек с моделью Ergo.”
     },
-    "how-is-security-maintained-pos-vs-ergo-autolykos": {
-      "title": "How Is Security Maintained?",
-      "shortDescription": "How network security and rewards differ between typical Proof-of-Stake staking and Ergo",
-      "subtitle": "Comparing PoS staking wealth concentration with Ergo"
+    “how-is-security-maintained-pos-vs-ergo-autolykos”: {
+      “title”: “Как поддерживается безопасность?”,
+      “shortDescription”: “Как безопасность сети и вознаграждения различаются между типичным стейкингом Proof-of-Stake и Autolykos-майнингом Ergo.”,
+      “subtitle”: “Сравнение концентрации богатства при PoS-стейкинге с подходом Ergo на Autolykos.”
     },
-    "how-it-starts-vc-chain-vs-ergo": {
-      "title": "How It Starts: VC Chain vs Ergo",
-      "shortDescription": "How a typical VC-backed blockchain launch contrasts with Ergo",
-      "subtitle": "Who really gets in early? Comparing VC chain funnels with Ergo"
+    “how-it-starts-vc-chain-vs-ergo”: {
+      “title”: “Как всё начинается: VC-цепочка vs Ergo”,
+      “shortDescription”: “Как типичный запуск блокчейна с венчурным финансированием противопоставляется честному запуску Ergo без инсайдерских аллокаций.”,
+      “subtitle”: “Кто реально входит первым? Сравнение воронок VC-цепочек с Ergo.”
     },
-    "engineered-for-global-settlement-ergo": {
-      "title": "Engineered for Global Settlement",
-      "shortDescription": "How Ergo",
-      "subtitle": "Fast, low-cost, MEV-resistant settlement built on Ergo."
+    “engineered-for-global-settlement-ergo”: {
+      “title”: “Создан для глобального расчёта”,
+      “shortDescription”: “Как Ergo обеспечивает быстрые, дешёвые и MEV-устойчивые расчёты через eUTXO, детерминированные транзакции и Storage Rent.”,
+      “subtitle”: “Быстрые, дешёвые, MEV-устойчивые расчёты на Ergo.”
     },
-    "ergo-blockchain-research-driven-cypherpunk-aligned": {
-      "title": "Ergo Blockchain: Research-Driven & Cypherpunk-Aligned",
-      "shortDescription": "Fair-launched Proof-of-Work blockchain with eUTXO smart contracts, Sigma Protocols privacy and a sustainability stack built for cypherpunks.",
-      "subtitle": "Built for Sustainability, Privacy, and Verifiable Rules. A Fair-Launched Proof-of-Work Platform."
+    “ergo-blockchain-research-driven-cypherpunk-aligned”: {
+      “title”: “Блокчейн Ergo: на основе исследований, в духе шифропанка”,
+      “shortDescription”: “Блокчейн с честным запуском и Proof-of-Work, eUTXO смарт-контрактами, конфиденциальностью на Sigma Protocols и стеком устойчивости, созданным для шифропанков.”,
+      “subtitle”: “Создан для устойчивости, конфиденциальности и проверяемых правил. Платформа с честным запуском на Proof-of-Work.”
     },
-    "blockchain-matrix-where-ergo-actually-fits": {
-      "title": "Blockchain Matrix: Where Ergo Actually Fits",
-      "shortDescription": "Matrix comparing Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, a typical VC chain and Ergo across consensus, launch, privacy, MEV resistance, storage rent and fees.",
-      "subtitle": "Comparing consensus, launches, privacy and incentives across major chains."
+    “blockchain-matrix-where-ergo-actually-fits”: {
+      “title”: “Матрица блокчейнов: где реально находится Ergo”,
+      “shortDescription”: “Матрица, сравнивающая Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, типичную VC-цепочку и Ergo по консенсусу, запуску, конфиденциальности, MEV-устойчивости, Storage Rent и комиссиям.”,
+      “subtitle”: “Сравнение консенсуса, запусков, конфиденциальности и стимулов крупнейших цепочек.”
     },
-    "money-without-masters-ergo-vs-banks-and-vc-crypto": {
-      "title": "Money Without Masters",
-      "shortDescription": "How Ergo",
-      "subtitle": "Open, programmable, censorship-resistant finance. Built on Ergo."
+    “money-without-masters-ergo-vs-banks-and-vc-crypto”: {
+      “title”: “Деньги без хозяев”,
+      “shortDescription”: “Как Ergo обеспечивает открытые, программируемые, устойчивые к цензуре финансы без банков, VC и централизованного контроля.”,
+      “subtitle”: “Открытые, программируемые, устойчивые к цензуре финансы. На базе Ergo.”
     },
-    "ergo-subblock-technology-boosting-throughput-with-parallelism": {
-      "title": "Ergo",
-      "shortDescription": "How key blocks and subblocks let Ergo increase transaction capacity and confirmation speed without sacrificing security.",
-      "subtitle": "How key blocks and subblocks increase transaction capacity and confirmation speed."
+    “ergo-subblock-technology-boosting-throughput-with-parallelism”: {
+      “title”: “Ergo: технология подблоков — повышение пропускной способности через параллелизм”,
+      “shortDescription”: “Как ключевые блоки и подблоки позволяют Ergo увеличивать транзакционную мощность и скорость подтверждений без ущерба для безопасности.”,
+      “subtitle”: “Как ключевые блоки и подблоки повышают пропускную способность и скорость подтверждений.”
     },
-    "ergo-oracle-pools-decentralized-reliable-real-world-data": {
-      "title": "Ergo",
-      "shortDescription": "How decentralized oracle pools aggregate multiple sources into on-chain data boxes for robust, trustless feeds.",
-      "subtitle": "Decentralized oracle pools for robust, trustless real-world data feeds."
+    “ergo-oracle-pools-decentralized-reliable-real-world-data”: {
+      “title”: “Ergo: пулы оракулов — децентрализованные надёжные данные реального мира”,
+      “shortDescription”: “Как децентрализованные пулы оракулов агрегируют множество источников в on-chain боксы данных для надёжных фидов без доверия.”,
+      “subtitle”: “Децентрализованные пулы оракулов для надёжных фидов данных реального мира без доверия.”
     },
-    "ergo-nipopows-scalable-trustless-light-clients": {
-      "title": "Ergo NiPoPoWs: The Key to Scalable, Trustless Light Clients",
-      "shortDescription": "How NiPoPoWs let light clients verify PoW security with tiny superblock proofs for mobile, sidechains and bridges.",
-      "subtitle": "Verify PoW security with tiny superblock proofs for mobile, sidechains and bridges."
+    “ergo-nipopows-scalable-trustless-light-clients”: {
+      “title”: “Ergo NiPoPoWs: ключ к масштабируемым лёгким клиентам без доверия”,
+      “shortDescription”: “Как NiPoPoWs позволяют лёгким клиентам верифицировать безопасность PoW с помощью компактных суперблоковых доказательств для мобильных устройств, сайдчейнов и мостов.”,
+      “subtitle”: “Верификация безопасности PoW с компактными суперблоковыми доказательствами для мобильных устройств, сайдчейнов и мостов.”
     },
-    "ergo-privacy-non-interactive-efficient": {
-      "title": "Ergo Privacy: Non-Interactive & Efficient",
-      "shortDescription": "How Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs provide built-in privacy on Ergo without trusted third parties.",
-      "subtitle": "Built-in privacy using Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs."
+    “ergo-privacy-non-interactive-efficient”: {
+      “title”: “Конфиденциальность Ergo: неинтерактивная и эффективная”,
+      “shortDescription”: “Как Sigma Protocols, eUTXO, ErgoMixer и NiPoPoWs обеспечивают встроенную конфиденциальность на Ergo без доверенных третьих сторон.”,
+      “subtitle”: “Встроенная конфиденциальность с использованием Sigma Protocols, eUTXO, ErgoMixer и NiPoPoWs.”
     },
-    "ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners": {
-      "title": "Ergo Storage Rent: Preventing Blockchain Bloat & Rewarding Miners",
-      "shortDescription": "How storage rent cleans up state bloat, keeps Ergo nodes lean and rewards miners beyond block rewards.",
-      "subtitle": "How storage rent keeps the state lean and rewards miners long-term."
+    “ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners”: {
+      “title”: “Storage Rent Ergo: предотвращение разрастания блокчейна и вознаграждение майнеров”,
+      “shortDescription”: “Как Storage Rent устраняет разрастание состояния, поддерживает ноды Ergo компактными и вознаграждает майнеров помимо блоковых наград.”,
+      “subtitle”: “Как Storage Rent поддерживает состояние компактным и вознаграждает майнеров в долгосрочной перспективе.”
     },
-    "ergo-eutxo-model-bitcoin-security-smart-contract-flexibility": {
-      "title": "Ergo",
-      "shortDescription": "How Ergo",
-      "subtitle": "Bitcoin"
+    “ergo-eutxo-model-bitcoin-security-smart-contract-flexibility”: {
+      “title”: “Ergo: модель eUTXO — безопасность Bitcoin и гибкость смарт-контрактов”,
+      “shortDescription”: “Как Ergo объединяет UTXO-безопасность Bitcoin с возможностями смарт-контрактов через расширенную модель eUTXO.”,
+      “subtitle”: “Bitcoin-безопасность встречается с гибкостью смарт-контрактов в модели eUTXO.”
     },
-    "ergoscript-cypherpunk-code-of-freedom": {
-      "title": "ErgoScript: The Cypherpunk Code of Freedom",
-      "shortDescription": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization.",
-      "subtitle": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization."
+    “ergoscript-cypherpunk-code-of-freedom”: {
+      “title”: “ErgoScript: шифропанк-код свободы”,
+      “shortDescription”: “Как eUTXO, строгие принципы проектирования и Sigma Protocols превращают ErgoScript в инструмент децентрализации.”,
+      “subtitle”: “Как eUTXO, строгие принципы проектирования и Sigma Protocols превращают ErgoScript в инструмент децентрализации.”
     },
-    "ergo-blockchain-introduction-fundamentals": {
-      "title": "Ergo Blockchain: Introduction & Fundamentals",
-      "shortDescription": "High-level introduction to the Ergo blockchain: PoW smart contracts, eUTXO, Autolykos and Sigma Protocols.",
-      "subtitle": "A quick overview of Ergo"
+    “ergo-blockchain-introduction-fundamentals”: {
+      “title”: “Блокчейн Ergo: введение и основы”,
+      “shortDescription”: “Вводное описание блокчейна Ergo: PoW смарт-контракты, eUTXO, Autolykos и Sigma Protocols.”,
+      “subtitle”: “Краткий обзор Ergo: что это, как работает и почему это важно.”
     },
-    "three-pillars-ergos-sustainability": {
-      "title": "The Three Pillars of Ergo",
-      "shortDescription": "How Autolykos mining, NiPoPoWs light clients and storage rent form Ergo",
-      "subtitle": "Protocol-level mechanisms that keep Ergo viable and accessible for the long run."
+    “three-pillars-ergos-sustainability”: {
+      “title”: “Три столпа устойчивости Ergo”,
+      “shortDescription”: “Как майнинг Autolykos, лёгкие клиенты NiPoPoWs и Storage Rent формируют три столпа устойчивости Ergo.”,
+      “subtitle”: “Механизмы уровня протокола, обеспечивающие жизнеспособность и доступность Ergo в долгосрочной перспективе.”
     },
-    "who-actually-needs-ergo": {
-      "title": "Who Actually Needs Ergo?",
-      "shortDescription": "Who actually needs Ergo today: builders, miners, privacy-focused users and cypherpunk OGs.",
-      "subtitle": "Real people behind the tech: builders, miners, privacy users and cypherpunks."
+    “who-actually-needs-ergo”: {
+      “title”: “Кому реально нужен Ergo?”,
+      “shortDescription”: “Кому сегодня нужен Ergo: разработчики, майнеры, пользователи, ориентированные на конфиденциальность, и шифропанки-ветераны.”,
+      “subtitle”: “Реальные люди за технологией: разработчики, майнеры, пользователи конфиденциальности и шифропанки.”
     },
-    "vc-chain-vs-ergo-fair-launch": {
-      "title": "Fair & Secure: VC Chain vs Ergo at a Glance",
-      "shortDescription": "How Ergo",
-      "subtitle": "How Ergo"
+    “vc-chain-vs-ergo-fair-launch”: {
+      “title”: “Честность и безопасность: VC-цепочка vs Ergo — быстрый обзор”,
+      “shortDescription”: “Как Ergo обеспечивает подлинную децентрализацию через честный запуск, тогда как VC-цепочки концентрируют власть в руках инсайдеров.”,
+      “subtitle”: “Как Ergo отличается от типичных VC-цепочек по запуску, распределению и контролю.”
     },
-    "ergo-babel-fees-pay-with-any-token": {
-      "title": "Babel Fees: Pay Transaction Fees with Any Token",
-      "shortDescription": "How Ergo",
-      "subtitle": "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands."
+    “ergo-babel-fees-pay-with-any-token”: {
+      “title”: “Babel Fees: платите комиссии за транзакции любым токеном”,
+      “shortDescription”: “Как Ergo позволяет платить комиссии за транзакции в любом токене через механизм Babel Fees, устраняя необходимость держать ERG для каждой операции.”,
+      “subtitle”: “Абстракция газа через eUTXO: платите комиссии тем токеном, который у вас есть, а не тем, что требует протокол.”
     }
   },
   "glossaryTerms": {

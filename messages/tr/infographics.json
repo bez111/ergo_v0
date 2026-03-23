@@ -1,158 +1,158 @@
 {
   "infographicDetail": {
     "seo": {
-      "titleSuffix": "Ergo Infographics",
+      "titleSuffix": "Ergo İnfografikleri",
       "notFound": {
-        "title": "Infographic Not Found",
-        "description": "The requested infographic could not be found."
+        "title": "İnfografik Bulunamadı",
+        "description": "İstenen infografik bulunamadı."
       }
     },
-    "backToInfographics": "Back to Infographics",
-    "published": "Published",
-    "minRead": "min read",
-    "tags": "Tags",
+    "backToInfographics": "İnfografiklere Geri Dön",
+    "published": "Yayımlandı",
+    "minRead": "dk okuma",
+    "tags": "Etiketler",
     "exploreMore": {
-      "title": "Explore More Ergo Infographics",
-      "description": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
-      "button": "Browse All Infographics"
+      "title": "Daha Fazla Ergo İnfografiği Keşfedin",
+      "description": "Ergo'nun PoW'u, eUTXO akıllı sözleşmeleri, depolama kirası, gizlilik ve daha fazlası için görsel kılavuzları keşfedin.",
+      "button": "Tüm İnfografiklere Gözat"
     }
   },
   "infographicsPage": {
     "seo": {
-      "title": "Ergo Blockchain Infographics — Visual Guides to PoW, DeFi, Storage Rent & Privacy",
-      "description": "Discover visual explainers of Ergo: PoW consensus, eUTXO smart contracts, storage rent, Sigma privacy, NiPoPoWs and more. Save, share, and reuse with attribution.",
-      "keywords": "Ergo infographics, blockchain visual guides, Ergo PoW explained, eUTXO diagrams, storage rent visualization, Sigma protocols infographic, NiPoPoWs explained, Ergo vs VC chains, Autolykos mining, ErgoScript tutorial, oracle pools diagram, blockchain education, visual learning, Ergo ecosystem"
+      "title": "Ergo Blockchain İnfografikleri — PoW, DeFi, Depolama Kirası ve Gizlilik için Görsel Kılavuzlar",
+      "description": "Ergo'nun görsel açıklayıcılarını keşfedin: PoW konsensüsü, eUTXO akıllı sözleşmeleri, depolama kirası, Sigma gizliliği, NiPoPoWs ve daha fazlası. Kaydedin, paylaşın ve atıfla yeniden kullanın.",
+      "keywords": "Ergo infografikleri, blok zinciri görsel kılavuzları, Ergo PoW açıklaması, eUTXO diyagramları, depolama kirası görselleştirme, Sigma protokolleri infografik, NiPoPoWs açıklaması, Ergo vs VC zincirleri, Autolykos madenciliği, ErgoScript öğreticisi, oracle havuzları diyagramı, blok zinciri eğitimi, görsel öğrenme, Ergo ekosistemi"
     },
     "schema": {
       "collection": {
-        "name": "Ergo Blockchain Infographics",
-        "description": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement. Save, share, and reuse them with attribution to ergoblockchain.org."
+        "name": "Ergo Blockchain İnfografikleri",
+        "description": "Ergo'nun PoW'u, eUTXO akıllı sözleşmeleri, depolama kirası, gizlilik ve küresel uzlaşma için görsel kılavuzlar. ergoblockchain.org'a atıfla kaydedin, paylaşın ve yeniden kullanın."
       },
       "breadcrumbs": {
-        "infographics": "Infographics"
+        "infographics": "İnfografikler"
       },
       "itemList": {
-        "name": "Ergo Blockchain Infographics Collection",
-        "description": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement."
+        "name": "Ergo Blockchain İnfografikleri Koleksiyonu",
+        "description": "Ergo'nun PoW'u, eUTXO akıllı sözleşmeleri, depolama kirası, gizlilik ve küresel uzlaşma için görsel kılavuzlar."
       }
     },
     "breadcrumbs": {
-      "infographics": "Infographics"
+      "infographics": "İnfografikler"
     },
     "hero": {
       "title": "Ergo Blockchain",
-      "titleHighlight": "Infographics",
-      "subtitle": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.",
-      "subtitleSecondLine": "Save, share, and reuse them with attribution to ergoblockchain.org.",
-      "description": "This hub collects visual explainers for the most important parts of the Ergo protocol: consensus, tokenomics, DeFi, privacy, light clients and more. Every infographic comes with a full-text breakdown so you can learn, teach and build with Ergo.",
-      "learnBasics": "Learn the basics"
+      "titleHighlight": "İnfografikleri",
+      "subtitle": "Ergo'nun PoW'u, eUTXO akıllı sözleşmeleri, depolama kirası, gizlilik ve küresel uzlaşma için görsel kılavuzlar.",
+      "subtitleSecondLine": "ergoblockchain.org'a atıfla kaydedin, paylaşın ve yeniden kullanın.",
+      "description": "Bu merkez, Ergo protokolünün en önemli bölümleri için görsel açıklayıcılar toplar: konsensüs, tokenomik, DeFi, gizlilik, hafif istemciler ve daha fazlası. Her infografik, Ergo ile öğrenebilmeniz, öğretebilmeniz ve inşa edebilmeniz için tam metin açıklamasıyla birlikte gelir.",
+      "learnBasics": "Temelleri öğren"
     },
     "filters": {
-      "searchPlaceholder": "Search infographics (e.g. 'storage rent', 'NiPoPoWs', 'VC chains')",
-      "filters": "Filters",
-      "sortNewest": "Newest",
-      "sortPopular": "Most popular",
+      "searchPlaceholder": "İnfografiklerde ara (örn. 'depolama kirası', 'NiPoPoWs', 'VC zincirleri')",
+      "filters": "Filtreler",
+      "sortNewest": "En Yeni",
+      "sortPopular": "En Popüler",
       "sortAZ": "A-Z"
     },
     "grid": {
-      "noResults": "No infographics found",
-      "noResultsDescription": "Try adjusting your filters or search terms.",
-      "resetFilters": "Reset filters",
-      "viewInfographic": "View infographic"
+      "noResults": "İnfografik bulunamadı",
+      "noResultsDescription": "Filtrelerinizi veya arama terimlerinizi değiştirmeyi deneyin.",
+      "resetFilters": "Filtreleri sıfırla",
+      "viewInfographic": "İnfografiği görüntüle"
     },
     "pagination": {
-      "previous": "Previous",
-      "next": "Next"
+      "previous": "Önceki",
+      "next": "Sonraki"
     },
     "card": {
-      "new": "New",
-      "visualGuide": "Visual guide"
+      "new": "Yeni",
+      "visualGuide": "Görsel kılavuz"
     },
     "shareMenu": {
-      "share": "Share",
-      "download": "Download",
-      "shareTitle": "Share",
-      "shareDescription": "Pick where to share this infographic. Help other cypherpunks find fair-launch chains.",
-      "shareOn": "Share on",
-      "copyLink": "Copy link",
-      "linkCopied": "Link copied",
-      "linkCopiedToast": "Thanks for spreading Ergo.",
-      "downloadTitle": "Download",
-      "downloadDescription": "Choose the best format for reusing this infographic across social, blogs and decks.",
-      "pngStandard": "PNG - Standard (1920x1080)",
-      "pngStandardDesc": "Landscape PNG for desktop and social feeds",
-      "embedCode": "Embed code (HTML)",
-      "embedCodeDesc": "Copy HTML snippet to embed this infographic",
-      "embedCopied": "Embed code copied to your clipboard.",
-      "close": "Close"
+      "share": "Paylaş",
+      "download": "İndir",
+      "shareTitle": "Paylaş",
+      "shareDescription": "Bu infografiği nerede paylaşacağınızı seçin. Diğer cypherpunk'ların adil başlangıçlı zincirleri bulmasına yardımcı olun.",
+      "shareOn": "Paylaş:",
+      "copyLink": "Bağlantıyı kopyala",
+      "linkCopied": "Bağlantı kopyalandı",
+      "linkCopiedToast": "Ergo'yu yaydığınız için teşekkürler.",
+      "downloadTitle": "İndir",
+      "downloadDescription": "Bu infografiği sosyal medya, bloglar ve sunumlarda yeniden kullanmak için en iyi formatı seçin.",
+      "pngStandard": "PNG - Standart (1920x1080)",
+      "pngStandardDesc": "Masaüstü ve sosyal akışlar için yatay PNG",
+      "embedCode": "Gömme kodu (HTML)",
+      "embedCodeDesc": "Bu infografiği gömmek için HTML kod parçacığını kopyalayın",
+      "embedCopied": "Gömme kodu panonuza kopyalandı.",
+      "close": "Kapat"
     },
     "howToUse": {
-      "title": "How to use these infographics",
+      "title": "Bu infografikleri nasıl kullanabilirsiniz",
       "reuse": {
-        "title": "Reuse Freely",
-        "description": "You can reuse any infographic in presentations, blog posts or educational materials."
+        "title": "Özgürce Yeniden Kullanın",
+        "description": "Herhangi bir infografiği sunumlarda, blog yazılarında veya eğitim materyallerinde yeniden kullanabilirsiniz."
       },
       "credit": {
-        "title": "Credit & Link Back",
-        "description": "Please credit ergoblockchain.org and link back to the original page."
+        "title": "Kaynak Gösterin ve Geri Bağlantı Verin",
+        "description": "Lütfen ergoblockchain.org'u kaynak gösterin ve orijinal sayfaya geri bağlantı verin."
       },
       "branding": {
-        "title": "Custom Branding",
-        "description": "If you want editable source files or custom branding, contact the Ergo community."
+        "title": "Özel Marka Kimliği",
+        "description": "Düzenlenebilir kaynak dosyalar veya özel marka kimliği istiyorsanız Ergo topluluğuyla iletişime geçin."
       },
-      "learnMore": "Learn more about Ergo",
-      "joinCommunity": "Join the community"
+      "learnMore": "Ergo hakkında daha fazla bilgi edinin",
+      "joinCommunity": "Topluluğa katılın"
     },
     "relatedResources": {
-      "title": "Related Resources",
+      "title": "İlgili Kaynaklar",
       "questions": {
-        "title": "Common Questions",
+        "title": "Sık Sorulan Sorular",
         "items": [
           {
             "href": "/questions/what-is-ergo",
-            "text": "What is Ergo blockchain?"
+            "text": "Ergo blok zinciri nedir?"
           },
           {
             "href": "/questions/what-is-eutxo",
-            "text": "What is the eUTXO model?"
+            "text": "eUTXO modeli nedir?"
           },
           {
             "href": "/questions/what-is-mev-resistance",
-            "text": "How does MEV resistance work?"
+            "text": "MEV direnci nasıl çalışır?"
           },
           {
             "href": "/questions/what-is-storage-rent",
-            "text": "What is storage rent?"
+            "text": "Depolama kirası nedir?"
           }
         ],
-        "viewAll": "View all questions"
+        "viewAll": "Tüm soruları görüntüle"
       },
       "playbooks": {
-        "title": "Playbooks & Guides",
+        "title": "Kılavuzlar ve Rehberler",
         "items": [
           {
             "href": "/playbooks/first-transaction-10-minutes",
-            "text": "First Ergo transaction (10-minute start)"
+            "text": "İlk Ergo işlemi (10 dakikalık başlangıç)"
           },
           {
             "href": "/playbooks/start-mining-ergo",
-            "text": "Start mining Ergo"
+            "text": "Ergo madenciliğine başla"
           },
           {
             "href": "/playbooks/build-defi-on-ergo",
-            "text": "Build DeFi on Ergo"
+            "text": "Ergo üzerinde DeFi inşa et"
           },
           {
             "href": "/playbooks/private-transaction-ergomixer",
-            "text": "Private transactions with ErgoMixer"
+            "text": "ErgoMixer ile gizli işlemler"
           }
         ],
-        "viewAll": "View all playbooks"
+        "viewAll": "Tüm kılavuzları görüntüle"
       }
     },
     "emailCapture": {
-      "title": "Stay Updated on Ergo Visual Resources",
-      "description": "Get notified when we publish new infographics, visual guides, and educational content about Ergo blockchain."
+      "title": "Ergo Görsel Kaynakları Hakkında Güncel Kalın",
+      "description": "Ergo blok zinciri hakkında yeni infografikler, görsel kılavuzlar ve eğitim içeriği yayımladığımızda bildirim alın."
     }
   }
 }

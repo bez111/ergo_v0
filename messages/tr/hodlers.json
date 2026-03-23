@@ -1,110 +1,110 @@
 {
   "holdersPage": {
     "hero": {
-      "title": "Store wealth. Keep privacy. Stay sovereign.",
-      "subtitle": "Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.",
-      "cta": "Get an Ergo Wallet",
-      "whyDifferent": "Why Ergo is Different"
+      "title": "Servetini sakla. Gizliliğini koru. Egemenliğini koru.",
+      "subtitle": "Bitcoin'in kanıtlanmış güvenliği + Akıllı sözleşmeler + İsteğe bağlı gizlilik. Sabit arz, adil başlangıç, kurumsal kontrol yok.",
+      "cta": "Ergo Cüzdanı Edinin",
+      "whyDifferent": "Ergo Neden Farklıdır"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "hodlers": "For Hodlers"
+      "home": "Ana Sayfa",
+      "hodlers": "Hodler'lar için"
     },
     "seo": {
-      "title": "Hold ERG — Sound Money with No Pre-mine | Ergo",
-      "description": "Why hold ERG? Fixed supply (97.7M), fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
+      "title": "ERG Tut — Ön Madenciliksiz Sağlam Para | Ergo",
+      "description": "Neden ERG tutmalısınız? Sabit arz (97.7M), adil başlangıç, VC kontrolü yok. Bitcoin güvenliği + akıllı sözleşmeler + isteğe bağlı gizlilik. Cüzdanlar, tokenomik ve daha fazlası.",
       "keywords": [
-        "hold ERG",
-        "Ergo investment",
-        "sound money",
-        "cryptocurrency holders",
-        "Bitcoin alternative",
-        "fair launch",
-        "no pre-mine",
-        "store of value",
-        "financial sovereignty",
-        "ERG tokenomics"
+        "ERG tut",
+        "Ergo yatırım",
+        "sağlam para",
+        "kripto para sahipleri",
+        "Bitcoin alternatifi",
+        "adil başlangıç",
+        "ön madencilik yok",
+        "değer saklama",
+        "finansal egemenlik",
+        "ERG tokenomik"
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Network Hashrate" },
-      "activeAddresses": { "label": "Active Addresses" },
+      "networkHashrate": { "label": "Ağ Hash Gücü" },
+      "activeAddresses": { "label": "Aktif Adresler" },
       "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG Supply", "trend": "{remaining}M left" },
-      "avgBlockTime": { "label": "Avg Block Time" },
-      "activeNodes": { "label": "Active Nodes" }
+      "ergSupply": { "label": "ERG Arzı", "trend": "{remaining}M kaldı" },
+      "avgBlockTime": { "label": "Ortalama Blok Süresi" },
+      "activeNodes": { "label": "Aktif Düğümler" }
     },
     "heroComparisons": [
       {
-        "title": "Mining Access",
-        "ergo": "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
-        "others": "BTC: ASICs only / ETH: Proof-of-Stake"
+        "title": "Madencilik Erişimi",
+        "ergo": "GPU dostu. ASIC dirençli. Herkes ağı güvence altına alabilir.",
+        "others": "BTC: Yalnızca ASIC'ler / ETH: Proof-of-Stake"
       },
       {
-        "title": "Fair Launch",
-        "ergo": "0% pre-mine. 0% VC allocation. 100% fair distribution.",
-        "others": "BTC: Fair / ETH: 70M premined"
+        "title": "Adil Başlangıç",
+        "ergo": "%0 ön madencilik. %0 VC tahsisi. %100 adil dağıtım.",
+        "others": "BTC: Adil / ETH: 70M ön madencilik"
       },
       {
-        "title": "Long-term Security",
-        "ergo": "Storage rent ensures miners get paid forever. Built for decades.",
-        "others": "BTC: Fees only / ETH: Token burn"
+        "title": "Uzun Vadeli Güvenlik",
+        "ergo": "Depolama kirası madencilerin sonsuza kadar ödeme almasını sağlar. On yıllar için tasarlandı.",
+        "others": "BTC: Yalnızca ücretler / ETH: Token yakma"
       }
     ],
     "coreValues": {
       "soundMoney": {
-        "title": "Sound Money",
-        "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
-        "highlight": "Protect your wealth"
+        "title": "Sağlam Para",
+        "description": "97.7M maksimum arz. Enflasyon yok. VC'ler sizi çiğnemiyor. 2019'dan bu yana kanıtlanmış Proof-of-Work güvenliği.",
+        "highlight": "Servetinizi koruyun"
       },
       "smartContracts": {
-        "title": "Smart Contracts",
-        "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
-        "highlight": "Utility without risk"
+        "title": "Akıllı Sözleşmeler",
+        "description": "Gerçekten çalışan DeFi, DEX'ler, stablecoin'ler. Bitcoin düzeyinde güvenlikle programlanabilir para.",
+        "highlight": "Risk olmadan kullanım"
       },
       "programmablePrivacy": {
-        "title": "Programmable Privacy",
-        "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
-        "highlight": "Your data, your choice"
+        "title": "Programlanabilir Gizlilik",
+        "description": "İstediğinizi gizleyin. Gerekeni gösterin. Güvenilir kurulum veya arka kapı olmadan isteğe bağlı gizlilik.",
+        "highlight": "Veriniz, sizin seçiminiz"
       },
       "fairAccessible": {
-        "title": "Fair & Accessible",
-        "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
-        "highlight": "True decentralization"
+        "title": "Adil ve Erişilebilir",
+        "description": "Sıfır ön madencilik. Sıfır VC tahsisi. Sıfır kurumsal kontrol. İlk günden itibaren %100 topluluk odaklı.",
+        "highlight": "Gerçek merkeziyetsizleşme"
       }
     },
     "comparison": {
-      "title": "How ERG Compares",
+      "title": "ERG Nasıl Karşılaştırılır",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "Kriter",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "Deep dive: Detailed comparison",
+      "deepDive": "Derinlemesine inceleme: Ayrıntılı karşılaştırma",
       "rows": [
         {
-          "criterion": "Monetary Policy",
+          "criterion": "Para Politikası",
           "bitcoin": {
             "status": "good",
-            "text": "Fixed 21M supply"
+            "text": "Sabit 21M arz"
           },
           "ethereum": {
             "status": "warning",
-            "text": "Changing tokenomics"
+            "text": "Değişen tokenomik"
           },
           "monero": {
             "status": "warning",
-            "text": "Tail emission"
+            "text": "Kuyruk emisyonu"
           },
           "ergo": {
             "status": "good",
-            "text": "Fixed 97M supply"
+            "text": "Sabit 97M arz"
           }
         },
         {
-          "criterion": "Security Model",
+          "criterion": "Güvenlik Modeli",
           "bitcoin": {
             "status": "good",
             "text": "Proof-of-Work"
@@ -123,215 +123,215 @@
           }
         },
         {
-          "criterion": "Privacy Features",
+          "criterion": "Gizlilik Özellikleri",
           "bitcoin": {
             "status": "bad",
-            "text": "Transparent"
+            "text": "Şeffaf"
           },
           "ethereum": {
             "status": "bad",
-            "text": "Transparent"
+            "text": "Şeffaf"
           },
           "monero": {
             "status": "good",
-            "text": "Always private"
+            "text": "Her zaman gizli"
           },
           "ergo": {
             "status": "good",
-            "text": "Optional privacy"
+            "text": "İsteğe bağlı gizlilik"
           }
         },
         {
-          "criterion": "Smart Contracts",
+          "criterion": "Akıllı Sözleşmeler",
           "bitcoin": {
             "status": "bad",
-            "text": "Very limited"
+            "text": "Çok sınırlı"
           },
           "ethereum": {
             "status": "good",
-            "text": "Full featured"
+            "text": "Tam özellikli"
           },
           "monero": {
             "status": "bad",
-            "text": "None"
+            "text": "Yok"
           },
           "ergo": {
             "status": "good",
-            "text": "eUTXO model"
+            "text": "eUTXO modeli"
           }
         },
         {
-          "criterion": "Fair Launch",
+          "criterion": "Adil Başlangıç",
           "bitcoin": {
             "status": "good",
-            "text": "No premine"
+            "text": "Ön madencilik yok"
           },
           "ethereum": {
             "status": "warning",
-            "text": "70M premine"
+            "text": "70M ön madencilik"
           },
           "monero": {
             "status": "good",
-            "text": "No premine"
+            "text": "Ön madencilik yok"
           },
           "ergo": {
             "status": "good",
-            "text": "No premine"
+            "text": "Ön madencilik yok"
           }
         }
       ]
     },
     "liveMetrics": {
-      "title": "Live Network Health",
-      "subtitle": "Live on-chain data (updated in real time)"
+      "title": "Canlı Ağ Sağlığı",
+      "subtitle": "Canlı zincir içi veriler (gerçek zamanlı güncellenir)"
     },
     "useCasesSection": {
-      "title": "What can I actually DO with Ergo?",
+      "title": "Ergo ile gerçekte ne YAPABİLİRİM?",
       "items": [
         {
-          "title": "Store Value Long-term",
-          "description": "Cold storage wallets with hardware support"
+          "title": "Uzun Vadeli Değer Saklama",
+          "description": "Donanım destekli soğuk depolama cüzdanları"
         },
         {
-          "title": "Use DeFi Protocols",
-          "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+          "title": "DeFi Protokollerini Kullanma",
+          "description": "Ergo, Cardano ve diğer blok zincirleri için zincirler arası köprü"
         },
         {
-          "title": "Send Private Transactions",
-          "description": "Optional privacy for sensitive transfers"
+          "title": "Gizli İşlem Gönderme",
+          "description": "Hassas transferler için isteğe bağlı gizlilik"
         },
         {
-          "title": "Support the Network",
-          "description": "Mining, running nodes, community participation"
+          "title": "Ağı Destekleme",
+          "description": "Madencilik, düğüm çalıştırma, topluluk katılımı"
         }
       ]
     },
     "chooseYourPath": {
-      "title": "Choose Your",
-      "titleHighlight": "Path",
+      "title": "Yolunuzu",
+      "titleHighlight": "Seçin",
       "buyHold": {
-        "title": "Buy & Hold",
-        "description": "Get ERG and store securely"
+        "title": "Al ve Tut",
+        "description": "ERG edinin ve güvenli şekilde saklayın"
       },
       "exploreDeFi": {
-        "title": "Explore DeFi",
-        "description": "Put your ERG to work"
+        "title": "DeFi'yi Keşfet",
+        "description": "ERG'nizi çalıştırın"
       },
       "startMining": {
-        "title": "Start Mining",
-        "description": "Secure the network, earn rewards"
+        "title": "Madenciliğe Başla",
+        "description": "Ağı güvence altına alın, ödül kazanın"
       },
       "buildDapps": {
-        "title": "Build dApps",
-        "description": "Create the future"
+        "title": "dApp İnşa Et",
+        "description": "Geleceği yaratın"
       },
       "interestedInMining": {
-        "title": "Interested in mining?",
-        "description": "Earn ERG by securing the network with your GPU"
+        "title": "Madenciliğe ilgi duyuyor musunuz?",
+        "description": "GPU'nuzla ağı güvence altına alarak ERG kazanın"
       }
     },
     "faq": {
-      "title": "Holders FAQ",
+      "title": "Hodler'lar için SSS",
       "questions": {
         "0": {
-          "question": "What makes ERG different from Bitcoin?",
-          "answer": "ERG extends Bitcoin's security model with smart contracts, optional privacy, and storage rent for long-term sustainability. Same PoW security, more functionality."
+          "question": "ERG'yi Bitcoin'den farklı kılan nedir?",
+          "answer": "ERG, Bitcoin'in güvenlik modelini akıllı sözleşmeler, isteğe bağlı gizlilik ve uzun vadeli sürdürülebilirlik için depolama kirası ile genişletir. Aynı PoW güvenliği, daha fazla işlevsellik."
         },
         "1": {
-          "question": "Is ERG a good long-term investment?",
-          "answer": "ERG has strong fundamentals: fixed supply, fair launch, real utility through DeFi. Always DYOR and never invest more than you can afford to lose."
+          "question": "ERG iyi bir uzun vadeli yatırım mı?",
+          "answer": "ERG güçlü temellere sahiptir: sabit arz, adil başlangıç, DeFi aracılığıyla gerçek fayda. Her zaman DYOR yapın ve kaybetmeyi göze aldığınızdan fazlasını yatırmayın."
         },
         "2": {
-          "question": "How do I store ERG safely?",
-          "answer": "Use Nautilus wallet for convenience or Ledger hardware wallet for maximum security. Never share your seed phrase."
+          "question": "ERG'yi nasıl güvenli şekilde saklayabilirim?",
+          "answer": "Kolaylık için Nautilus cüzdanını veya maksimum güvenlik için Ledger donanım cüzdanını kullanın. Tohum ifadenizi asla paylaşmayın."
         },
         "3": {
-          "question": "Can I earn yield on my ERG?",
-          "answer": "Yes! You can provide liquidity on Spectrum DEX, use ErgoPad launchpad, or participate in various DeFi protocols."
+          "question": "ERG'mden getiri kazanabilir miyim?",
+          "answer": "Evet! Spectrum DEX'te likidite sağlayabilir, ErgoPad launchpad'ini kullanabilir veya çeşitli DeFi protokollerine katılabilirsiniz."
         },
         "4": {
-          "question": "Is Ergo a security or commodity?",
-          "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, community-driven project. The fair launch and Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective."
+          "question": "Ergo bir menkul kıymet mi yoksa emtia mı?",
+          "answer": "Ergo, 2019 yılında ön madencilik, ICO ve VC finansmanı olmadan adil bir şekilde başlatıldı. Bitcoin gibi merkeziyetsiz, topluluk odaklı bir projedir. Adil başlangıç ve Proof-of-Work konsensüsü, onu düzenleyici açıdan Bitcoin'e benzer kılar."
         },
         "5": {
-          "question": "Who controls the Ergo project?",
-          "answer": "No single entity controls Ergo. It's maintained by the Ergo Foundation, core developers, and community contributors. All development is open-source on GitHub. The community votes on major protocol changes."
+          "question": "Ergo projesini kim kontrol eder?",
+          "answer": "Hiçbir tek varlık Ergo'yu kontrol etmez. Ergo Vakfı, çekirdek geliştiriciler ve topluluk katkıcıları tarafından sürdürülmektedir. Tüm geliştirme GitHub'da açık kaynaktır. Topluluk, büyük protokol değişikliklerini oylar."
         },
         "6": {
-          "question": "What happens when mining rewards end?",
-          "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a storage rent mechanism that recycles lost coins. This creates sustainable long-term security without inflation."
+          "question": "Madencilik ödülleri sona erdiğinde ne olur?",
+          "answer": "Ergo, 2027 yılı civarında sona erecek 8 yıllık bir emisyon takvimine sahiptir. Bundan sonra madenciler, işlem ücretleri ve kaybolan paraları geri dönüştüren bir depolama kirası mekanizmasıyla teşvik edilir. Bu, enflasyon olmadan sürdürülebilir uzun vadeli güvenlik oluşturur."
         },
         "7": {
-          "question": "Where can I buy and store ERG?",
-          "answer": "ERG is available on major exchanges like KuCoin, Gate.io, and CoinEx. For storage, use Nautilus Wallet or hardware wallets. See our complete buying guide at /use/get-erg."
+          "question": "ERG'yi nereden satın alabilir ve saklayabilirim?",
+          "answer": "ERG, KuCoin, Gate.io ve CoinEx gibi büyük borsalarda mevcuttur. Depolama için Nautilus Cüzdanı veya donanım cüzdanları kullanın. Eksiksiz satın alma rehberimizi /use/get-erg adresinde bulabilirsiniz."
         },
         "8": {
-          "question": "Is Ergo's privacy legal to use?",
-          "answer": "Ergo's privacy features are optional and designed for legitimate use cases like business confidentiality and personal financial privacy. Always check your local regulations. The technology itself is similar to other privacy-preserving cryptocurrencies and compliance tools are available for institutions."
+          "question": "Ergo'nun gizlilik özelliklerini kullanmak yasal mı?",
+          "answer": "Ergo'nun gizlilik özellikleri isteğe bağlıdır ve iş gizliliği ve kişisel finansal gizlilik gibi meşru kullanım durumları için tasarlanmıştır. Her zaman yerel mevzuatınızı kontrol edin. Teknolojinin kendisi diğer gizlilik koruyan kripto paralara benzerdir ve kurumlar için uyumluluk araçları mevcuttur."
         }
       }
     }
   },
   "holdersData": {
     "mining-access": {
-      "title": "Mining Access"
+      "title": "Madencilik Erişimi"
     },
     "fair-launch": {
-      "title": "Fair Launch"
+      "title": "Adil Başlangıç"
     },
     "long-term-security": {
-      "title": "Long-term Security"
+      "title": "Uzun Vadeli Güvenlik"
     },
     "sound-money": {
-      "title": "Sound Money",
-      "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019."
+      "title": "Sağlam Para",
+      "description": "97.7M maksimum arz. Enflasyon yok. VC'ler sizi çiğnemiyor. 2019'dan bu yana kanıtlanmış Proof-of-Work güvenliği."
     },
     "smart-contracts": {
-      "title": "Smart Contracts",
-      "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security."
+      "title": "Akıllı Sözleşmeler",
+      "description": "Gerçekten çalışan DeFi, DEX'ler, stablecoin'ler. Bitcoin düzeyinde güvenlikle programlanabilir para."
     },
     "programmable-privacy": {
-      "title": "Programmable Privacy",
-      "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors."
+      "title": "Programlanabilir Gizlilik",
+      "description": "İstediğinizi gizleyin. Gerekeni gösterin. Güvenilir kurulum veya arka kapı olmadan isteğe bağlı gizlilik."
     },
     "fair-accessible": {
-      "title": "Fair & Accessible",
-      "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one."
+      "title": "Adil ve Erişilebilir",
+      "description": "Sıfır ön madencilik. Sıfır VC tahsisi. Sıfır kurumsal kontrol. İlk günden itibaren %100 topluluk odaklı."
     },
     "store-value": {
-      "title": "Store Value Long-term",
-      "description": "Cold storage wallets with hardware support"
+      "title": "Uzun Vadeli Değer Saklama",
+      "description": "Donanım destekli soğuk depolama cüzdanları"
     },
     "use-defi": {
-      "title": "Use DeFi Protocols",
-      "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+      "title": "DeFi Protokollerini Kullanma",
+      "description": "Ergo, Cardano ve diğer blok zincirleri için zincirler arası köprü"
     },
     "private-transactions": {
-      "title": "Send Private Transactions",
-      "description": "Optional privacy for sensitive transfers"
+      "title": "Gizli İşlem Gönderme",
+      "description": "Hassas transferler için isteğe bağlı gizlilik"
     },
     "support-network": {
-      "title": "Support the Network",
-      "description": "Mining, running nodes, community participation"
+      "title": "Ağı Destekleme",
+      "description": "Madencilik, düğüm çalıştırma, topluluk katılımı"
     },
     "security-commodity": {
-      "question": "Is Ergo a security or commodity?",
+      "question": "Ergo bir menkul kıymet mi yoksa emtia mı?",
       "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
     },
     "different-from-bitcoin": {
-      "question": "How is Ergo different from Bitcoin?",
+      "question": "Ergo Bitcoin'den nasıl farklıdır?",
       "answer": "Ergo shares Bitcoin"
     },
     "who-controls": {
-      "question": "Who controls the Ergo project?",
+      "question": "Ergo projesini kim kontrol eder?",
       "answer": "No single entity controls Ergo. It"
     },
     "mining-rewards-end": {
-      "question": "What happens when mining rewards end?",
+      "question": "Madencilik ödülleri sona erdiğinde ne olur?",
       "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
     },
     "buy-store": {
-      "question": "Where can I buy and store ERG?",
+      "question": "ERG'yi nereden satın alabilir ve saklayabilirim?",
       "answer": "ERG is available on major exchanges like <a href=\\"
     },
     "privacy-legal": {

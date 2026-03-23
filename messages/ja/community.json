@@ -1,219 +1,219 @@
 {
   "community": {
     "hero": {
-      "title": "ERGO COMMUNITY",
-      "description": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "title": "ERGOコミュニティ",
+      "description": "分散型金融の未来を構築している情熱的な開発者、研究者、愛好家とつながろう。Ergoの進化を形作るあなたの声が重要です。"
     },
     "platforms": {
-      "title": "COMMUNICATION HUBS",
+      "title": "コミュニケーションハブ",
       "labels": {
-        "members": "Members",
-        "activity": "Activity"
+        "members": "メンバー",
+        "activity": "アクティビティ"
       },
       "discord": {
         "name": "Discord",
-        "description": "Real-time discussions, AMA sessions, technical support",
+        "description": "リアルタイムの議論、AMAセッション、技術サポート",
         "members": "15K+",
         "activity": "24/7",
-        "buttonText": "Join Discord",
+        "buttonText": "Discordに参加する",
         "features": {
-          "liveChat": "Live Chat",
-          "voiceChannels": "Voice Channels",
-          "developerSupport": "Developer Support",
-          "communityEvents": "Community Events"
+          "liveChat": "ライブチャット",
+          "voiceChannels": "音声チャンネル",
+          "developerSupport": "開発者サポート",
+          "communityEvents": "コミュニティイベント"
         }
       },
       "telegram": {
         "name": "Telegram",
-        "description": "Quick updates, announcements, global community",
+        "description": "クイックアップデート、お知らせ、グローバルコミュニティ",
         "members": "12K+",
-        "activity": "Active",
-        "buttonText": "Join Telegram",
+        "activity": "アクティブ",
+        "buttonText": "Telegramに参加する",
         "features": {
-          "instantUpdates": "Instant Updates",
-          "mobileFirst": "Mobile First",
-          "globalReach": "Global Reach",
-          "newsAlerts": "News & Alerts"
+          "instantUpdates": "即時アップデート",
+          "mobileFirst": "モバイルファースト",
+          "globalReach": "グローバルリーチ",
+          "newsAlerts": "ニュース＆アラート"
         }
       },
       "reddit": {
         "name": "Reddit",
-        "description": "In-depth discussions, memes, community content",
+        "description": "深い議論、ミーム、コミュニティコンテンツ",
         "members": "8K+",
-        "activity": "Daily",
-        "buttonText": "Visit r/ergonauts",
+        "activity": "毎日",
+        "buttonText": "r/ergonautsを訪問する",
         "features": {
-          "longFormPosts": "Long-form Posts",
-          "communityVoting": "Community Voting",
-          "memesContent": "Memes & Content",
-          "discussions": "Discussions"
+          "longFormPosts": "長文投稿",
+          "communityVoting": "コミュニティ投票",
+          "memesContent": "ミーム＆コンテンツ",
+          "discussions": "議論"
         }
       },
       "forum": {
         "name": "ErgoForum",
-        "description": "Technical discussions, EIPs, governance",
+        "description": "技術的な議論、EIP、ガバナンス",
         "members": "3K+",
-        "activity": "Weekly",
-        "buttonText": "Visit Forum",
+        "activity": "毎週",
+        "buttonText": "フォーラムを訪問する",
         "features": {
-          "technicalDeepDives": "Technical Deep-dives",
-          "governance": "Governance",
-          "eipDiscussions": "EIP Discussions",
-          "research": "Research"
+          "technicalDeepDives": "技術的な深掘り",
+          "governance": "ガバナンス",
+          "eipDiscussions": "EIP議論",
+          "research": "研究"
         }
       }
     },
     "contributions": {
-      "title": "CONTRIBUTION MATRIX",
-      "description": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+      "title": "コントリビューションマトリクス",
+      "description": "すべてのコントリビューションがErgoエコシステムを強化します。インパクトを与えるためのあなたのパスを見つけよう。",
       "types": {
         "development": {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
+          "title": "開発",
+          "description": "dApps、ツール、インフラストラクチャを構築する",
           "tasks": {
-            "smartContracts": "Smart Contracts",
-            "frontendApps": "Frontend Apps",
-            "toolsLibraries": "Tools & Libraries"
+            "smartContracts": "スマートコントラクト",
+            "frontendApps": "フロントエンドアプリ",
+            "toolsLibraries": "ツール＆ライブラリ"
           }
         },
         "content": {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
+          "title": "コンテンツ制作",
+          "description": "記事、動画、チュートリアル、ドキュメント",
           "tasks": {
-            "technicalWriting": "Technical Writing",
-            "videoContent": "Video Content",
-            "tutorials": "Tutorials"
+            "technicalWriting": "技術ライティング",
+            "videoContent": "動画コンテンツ",
+            "tutorials": "チュートリアル"
           }
         },
         "support": {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
+          "title": "コミュニティサポート",
+          "description": "新参者を助け、質問に答える",
           "tasks": {
-            "userSupport": "User Support",
-            "onboarding": "Onboarding",
-            "mentoring": "Mentoring"
+            "userSupport": "ユーザーサポート",
+            "onboarding": "オンボーディング",
+            "mentoring": "メンタリング"
           }
         },
         "governance": {
-          "title": "Governance",
-          "description": "Participate in protocol decisions",
+          "title": "ガバナンス",
+          "description": "プロトコルの決定に参加する",
           "tasks": {
-            "eipReviews": "EIP Reviews",
-            "voting": "Voting",
-            "proposals": "Proposals"
+            "eipReviews": "EIPレビュー",
+            "voting": "投票",
+            "proposals": "提案"
           }
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
+          "title": "インフラストラクチャ",
+          "description": "ノードの運用、マイニング、ネットワークサポート",
           "tasks": {
-            "nodeOperation": "Node Operation",
-            "mining": "Mining",
-            "networkSecurity": "Network Security"
+            "nodeOperation": "ノード運用",
+            "mining": "マイニング",
+            "networkSecurity": "ネットワークセキュリティ"
           }
         },
         "research": {
-          "title": "Research",
-          "description": "Protocol research and improvements",
+          "title": "研究",
+          "description": "プロトコル研究と改善",
           "tasks": {
-            "academicResearch": "Academic Research",
-            "protocolAnalysis": "Protocol Analysis",
-            "innovation": "Innovation"
+            "academicResearch": "学術研究",
+            "protocolAnalysis": "プロトコル分析",
+            "innovation": "イノベーション"
           }
         }
       }
     },
     "guidelines": {
-      "title": "COMMUNITY PROTOCOL",
+      "title": "コミュニティプロトコル",
       "encouraged": {
-        "title": "Encouraged Behavior",
+        "title": "奨励される行動",
         "items": {
-          "respectfulDiscussions": "Respectful and constructive discussions",
-          "helpingNewcomers": "Helping newcomers and sharing knowledge",
-          "contributingProjects": "Contributing to projects and documentation",
-          "constructiveFeedback": "Providing constructive feedback",
-          "followingGuidelines": "Following community guidelines"
+          "respectfulDiscussions": "敬意を持った建設的な議論",
+          "helpingNewcomers": "新参者を助け、知識を共有する",
+          "contributingProjects": "プロジェクトとドキュメントにコントリビュートする",
+          "constructiveFeedback": "建設的なフィードバックを提供する",
+          "followingGuidelines": "コミュニティガイドラインに従う"
         }
       },
       "discouraged": {
-        "title": "Discouraged Behavior",
+        "title": "禁止される行動",
         "items": {
-          "spamContent": "Spam, flooding, or off-topic content",
-          "misinformation": "Spreading misinformation or FUD",
-          "personalAttacks": "Personal attacks or harassment",
-          "selfPromotion": "Excessive self-promotion",
-          "violatingRules": "Violating platform-specific rules"
+          "spamContent": "スパム、フラッディング、スレッド外のコンテンツ",
+          "misinformation": "誤情報やFUDの拡散",
+          "personalAttacks": "個人攻撃やハラスメント",
+          "selfPromotion": "過度な自己宣伝",
+          "violatingRules": "プラットフォーム固有のルール違反"
         }
       }
     },
     "cta": {
-      "title": "READY TO CONNECT?",
-      "description": "Join thousands of developers, researchers, and enthusiasts building the future of DeFi",
-      "joinDiscord": "Join Discord",
-      "exploreMore": "Explore More"
+      "title": "つながる準備はできてる？",
+      "description": "DeFiの未来を構築している数千人の開発者、研究者、愛好家に参加しよう",
+      "joinDiscord": "Discordに参加する",
+      "exploreMore": "もっと探索する"
     }
   },
   "communityClient": {
     "hero": {
       "title": "ERGO",
-      "titleHighlight": "COMMUNITY",
-      "subtitle": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "titleHighlight": "コミュニティ",
+      "subtitle": "分散型金融の未来を構築している情熱的な開発者、研究者、愛好家とつながろう。Ergoの進化を形作るあなたの声が重要です。"
     },
     "platforms": {
-      "sectionTitle": "COMMUNICATION HUBS",
-      "followers": "Followers",
-      "updates": "Updates"
+      "sectionTitle": "コミュニケーションハブ",
+      "followers": "フォロワー",
+      "updates": "アップデート"
     },
     "platformGroups": [
       {
-        "title": "Real-time & Operations",
-        "subtitle": "Live support, quick updates, breaking news"
+        "title": "リアルタイム＆オペレーション",
+        "subtitle": "ライブサポート、クイックアップデート、速報"
       },
       {
-        "title": "Deep Content & Research",
-        "subtitle": "Tutorials, essays, EIPs, governance"
+        "title": "ディープコンテンツ＆研究",
+        "subtitle": "チュートリアル、論考、EIP、ガバナンス"
       },
       {
-        "title": "Community & Discovery",
-        "subtitle": "Discussions, visual content, discovery"
+        "title": "コミュニティ＆ディスカバリー",
+        "subtitle": "議論、ビジュアルコンテンツ、発見"
       }
     ],
     "contributions": {
-      "sectionTitle": "CONTRIBUTION MATRIX",
-      "subtitle": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
-      "clickForGuide": "Click for detailed guide"
+      "sectionTitle": "コントリビューションマトリクス",
+      "subtitle": "すべてのコントリビューションがErgoエコシステムを強化します。インパクトを与えるためのあなたのパスを見つけよう。",
+      "clickForGuide": "詳細ガイドはここをクリック"
     },
     "guidelines": {
-      "sectionTitle": "COMMUNITY PROTOCOL",
+      "sectionTitle": "コミュニティプロトコル",
       "positive": {
-        "title": "Encouraged Behavior",
+        "title": "奨励される行動",
         "items": [
-          "Respectful and constructive discussions",
-          "Helping newcomers and sharing knowledge",
-          "Contributing to projects and documentation",
-          "Providing constructive feedback",
-          "Following community guidelines"
+          "敬意を持った建設的な議論",
+          "新参者を助け、知識を共有する",
+          "プロジェクトとドキュメントにコントリビュートする",
+          "建設的なフィードバックを提供する",
+          "コミュニティガイドラインに従う"
         ]
       },
       "negative": {
-        "title": "Discouraged Behavior",
+        "title": "禁止される行動",
         "items": [
-          "Spam, flooding, or off-topic content",
-          "Spreading misinformation or FUD",
-          "Personal attacks or harassment",
-          "Excessive self-promotion",
-          "Violating platform-specific rules"
+          "スパム、フラッディング、スレッド外のコンテンツ",
+          "誤情報やFUDの拡散",
+          "個人攻撃やハラスメント",
+          "過度な自己宣伝",
+          "プラットフォーム固有のルール違反"
         ]
       }
     },
     "cta": {
-      "title": "Stay",
-      "titleHighlight": "Connected",
-      "subtitle": "Get the latest updates, announcements, and community highlights delivered to your inbox",
-      "emailPlaceholder": "Enter your email address",
-      "subscribe": "Subscribe",
-      "thankYou": "Thank you for subscribing!",
-      "confirmationMessage": "You'll receive updates about the Ergo community."
+      "title": "つながった",
+      "titleHighlight": "まま",
+      "subtitle": "最新のアップデート、お知らせ、コミュニティのハイライトをメールでお届けします",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "subscribe": "購読する",
+      "thankYou": "購読ありがとうございます！",
+      "confirmationMessage": "Ergoコミュニティのアップデートをお届けします。"
     }
   }
 }

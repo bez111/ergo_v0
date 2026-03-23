@@ -1,37 +1,37 @@
 {
   "blog": {
     "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "subtitle": "En son haberler ve güncellemeler",
+    "description": "Ergo'dan en son haberler ve güncellemeler",
+    "readMore": "Devamını Oku",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "Teknoloji",
+      "ecosystem": "Ekosistem",
+      "community": "Topluluk",
+      "announcements": "Duyurular",
+      "all": "Tüm Yazılar",
+      "development": "Geliştirme",
+      "technical": "Teknik",
+      "education": "Eğitim"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "Blog - Ergo Haberleri ve Güncellemeleri | Ergo Platform",
+      "description": "Ergo blok zinciri ekibinden en son haberleri, güncellemeleri ve içgörüleri okuyun.",
+      "keywords": "Ergo blog, blok zinciri haberleri, güncellemeler, makaleler"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "Öne Çıkan Yazılar",
+      "readMore": "Devamını Oku"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "Son Yazılar",
+      "viewAll": "Tüm Yazıları Görüntüle"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "Bültene Abone Ol",
+      "description": "En son güncellemeleri gelen kutunuza alın",
+      "placeholder": "E-posta adresinizi girin",
+      "subscribe": "Abone Ol"
     }
   }
 }

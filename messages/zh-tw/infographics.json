@@ -1,158 +1,158 @@
 {
   "infographicDetail": {
     "seo": {
-      "titleSuffix": "Ergo Infographics",
+      "titleSuffix": "Ergo 資訊圖表",
       "notFound": {
-        "title": "Infographic Not Found",
-        "description": "The requested infographic could not be found."
+        "title": "找不到資訊圖表",
+        "description": "找不到所請求的資訊圖表。"
       }
     },
-    "backToInfographics": "Back to Infographics",
-    "published": "Published",
-    "minRead": "min read",
-    "tags": "Tags",
+    "backToInfographics": "返回資訊圖表",
+    "published": "發布於",
+    "minRead": "分鐘閱讀",
+    "tags": "標籤",
     "exploreMore": {
-      "title": "Explore More Ergo Infographics",
-      "description": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
-      "button": "Browse All Infographics"
+      "title": "探索更多 Ergo 資訊圖表",
+      "description": "探索 Ergo 的 PoW、eUTXO 智能合約、儲存租金、隱私等視覺指南。",
+      "button": "瀏覽所有資訊圖表"
     }
   },
   "infographicsPage": {
     "seo": {
-      "title": "Ergo Blockchain Infographics — Visual Guides to PoW, DeFi, Storage Rent & Privacy",
-      "description": "Discover visual explainers of Ergo: PoW consensus, eUTXO smart contracts, storage rent, Sigma privacy, NiPoPoWs and more. Save, share, and reuse with attribution.",
-      "keywords": "Ergo infographics, blockchain visual guides, Ergo PoW explained, eUTXO diagrams, storage rent visualization, Sigma protocols infographic, NiPoPoWs explained, Ergo vs VC chains, Autolykos mining, ErgoScript tutorial, oracle pools diagram, blockchain education, visual learning, Ergo ecosystem"
+      "title": "Ergo 區塊鏈資訊圖表 — PoW、DeFi、儲存租金與隱私視覺指南",
+      "description": "探索 Ergo 的視覺解說：PoW 共識、eUTXO 智能合約、儲存租金、Sigma 隱私、NIPoPoWs 等。可保存、分享和署名後再利用。",
+      "keywords": "Ergo 資訊圖表, 區塊鏈視覺指南, Ergo PoW 解說, eUTXO 圖解, 儲存租金視覺化, Sigma 協議資訊圖表, NIPoPoWs 解說, Ergo vs 創投鏈, Autolykos 挖礦, ErgoScript 教程, Oracle 池圖解, 區塊鏈教育, 視覺學習, Ergo 生態系統"
     },
     "schema": {
       "collection": {
-        "name": "Ergo Blockchain Infographics",
-        "description": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement. Save, share, and reuse them with attribution to ergoblockchain.org."
+        "name": "Ergo 區塊鏈資訊圖表",
+        "description": "Ergo PoW、eUTXO 智能合約、儲存租金、隱私和全球結算的視覺指南。可保存、分享，署名 ergoblockchain.org 後再利用。"
       },
       "breadcrumbs": {
-        "infographics": "Infographics"
+        "infographics": "資訊圖表"
       },
       "itemList": {
-        "name": "Ergo Blockchain Infographics Collection",
-        "description": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement."
+        "name": "Ergo 區塊鏈資訊圖表合集",
+        "description": "Ergo PoW、eUTXO 智能合約、儲存租金、隱私和全球結算的視覺指南。"
       }
     },
     "breadcrumbs": {
-      "infographics": "Infographics"
+      "infographics": "資訊圖表"
     },
     "hero": {
-      "title": "Ergo Blockchain",
-      "titleHighlight": "Infographics",
-      "subtitle": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.",
-      "subtitleSecondLine": "Save, share, and reuse them with attribution to ergoblockchain.org.",
-      "description": "This hub collects visual explainers for the most important parts of the Ergo protocol: consensus, tokenomics, DeFi, privacy, light clients and more. Every infographic comes with a full-text breakdown so you can learn, teach and build with Ergo.",
-      "learnBasics": "Learn the basics"
+      "title": "Ergo 區塊鏈",
+      "titleHighlight": "資訊圖表",
+      "subtitle": "Ergo PoW、eUTXO 智能合約、儲存租金、隱私和全球結算的視覺指南。",
+      "subtitleSecondLine": "可保存、分享，署名 ergoblockchain.org 後再利用。",
+      "description": "此中心收集了 Ergo 協議最重要部分的視覺解說：共識、代幣經濟學、DeFi、隱私、輕客戶端等。每個資訊圖表都附有全文分解，讓您可以學習、教授和在 Ergo 上構建。",
+      "learnBasics": "學習基礎知識"
     },
     "filters": {
-      "searchPlaceholder": "Search infographics (e.g. 'storage rent', 'NiPoPoWs', 'VC chains')",
-      "filters": "Filters",
-      "sortNewest": "Newest",
-      "sortPopular": "Most popular",
+      "searchPlaceholder": "搜尋資訊圖表（例如「儲存租金」、「NIPoPoWs」、「創投鏈」）",
+      "filters": "篩選",
+      "sortNewest": "最新",
+      "sortPopular": "最受歡迎",
       "sortAZ": "A-Z"
     },
     "grid": {
-      "noResults": "No infographics found",
-      "noResultsDescription": "Try adjusting your filters or search terms.",
-      "resetFilters": "Reset filters",
-      "viewInfographic": "View infographic"
+      "noResults": "未找到資訊圖表",
+      "noResultsDescription": "請嘗試調整您的篩選條件或搜尋詞。",
+      "resetFilters": "重置篩選",
+      "viewInfographic": "查看資訊圖表"
     },
     "pagination": {
-      "previous": "Previous",
-      "next": "Next"
+      "previous": "上一頁",
+      "next": "下一頁"
     },
     "card": {
-      "new": "New",
-      "visualGuide": "Visual guide"
+      "new": "新增",
+      "visualGuide": "視覺指南"
     },
     "shareMenu": {
-      "share": "Share",
-      "download": "Download",
-      "shareTitle": "Share",
-      "shareDescription": "Pick where to share this infographic. Help other cypherpunks find fair-launch chains.",
-      "shareOn": "Share on",
-      "copyLink": "Copy link",
-      "linkCopied": "Link copied",
-      "linkCopiedToast": "Thanks for spreading Ergo.",
-      "downloadTitle": "Download",
-      "downloadDescription": "Choose the best format for reusing this infographic across social, blogs and decks.",
-      "pngStandard": "PNG - Standard (1920x1080)",
-      "pngStandardDesc": "Landscape PNG for desktop and social feeds",
-      "embedCode": "Embed code (HTML)",
-      "embedCodeDesc": "Copy HTML snippet to embed this infographic",
-      "embedCopied": "Embed code copied to your clipboard.",
-      "close": "Close"
+      "share": "分享",
+      "download": "下載",
+      "shareTitle": "分享",
+      "shareDescription": "選擇分享此資訊圖表的位置。幫助其他密碼龐克找到公平發行的鏈。",
+      "shareOn": "分享至",
+      "copyLink": "複製連結",
+      "linkCopied": "連結已複製",
+      "linkCopiedToast": "感謝傳播 Ergo。",
+      "downloadTitle": "下載",
+      "downloadDescription": "選擇在社交媒體、部落格和簡報中重複使用此資訊圖表的最佳格式。",
+      "pngStandard": "PNG - 標準（1920x1080）",
+      "pngStandardDesc": "桌面和社交媒體的橫向 PNG",
+      "embedCode": "嵌入代碼（HTML）",
+      "embedCodeDesc": "複製 HTML 片段以嵌入此資訊圖表",
+      "embedCopied": "嵌入代碼已複製到剪貼簿。",
+      "close": "關閉"
     },
     "howToUse": {
-      "title": "How to use these infographics",
+      "title": "如何使用這些資訊圖表",
       "reuse": {
-        "title": "Reuse Freely",
-        "description": "You can reuse any infographic in presentations, blog posts or educational materials."
+        "title": "自由再利用",
+        "description": "您可以在演講、部落格文章或教育材料中再利用任何資訊圖表。"
       },
       "credit": {
-        "title": "Credit & Link Back",
-        "description": "Please credit ergoblockchain.org and link back to the original page."
+        "title": "署名並回鏈",
+        "description": "請署名 ergoblockchain.org 並回鏈至原始頁面。"
       },
       "branding": {
-        "title": "Custom Branding",
-        "description": "If you want editable source files or custom branding, contact the Ergo community."
+        "title": "自訂品牌",
+        "description": "如果您需要可編輯的原始檔案或自訂品牌，請聯繫 Ergo 社群。"
       },
-      "learnMore": "Learn more about Ergo",
-      "joinCommunity": "Join the community"
+      "learnMore": "了解更多關於 Ergo",
+      "joinCommunity": "加入社群"
     },
     "relatedResources": {
-      "title": "Related Resources",
+      "title": "相關資源",
       "questions": {
-        "title": "Common Questions",
+        "title": "常見問題",
         "items": [
           {
             "href": "/questions/what-is-ergo",
-            "text": "What is Ergo blockchain?"
+            "text": "什麼是 Ergo 區塊鏈？"
           },
           {
             "href": "/questions/what-is-eutxo",
-            "text": "What is the eUTXO model?"
+            "text": "什麼是 eUTXO 模型？"
           },
           {
             "href": "/questions/what-is-mev-resistance",
-            "text": "How does MEV resistance work?"
+            "text": "抗 MEV 是如何運作的？"
           },
           {
             "href": "/questions/what-is-storage-rent",
-            "text": "What is storage rent?"
+            "text": "什麼是儲存租金？"
           }
         ],
-        "viewAll": "View all questions"
+        "viewAll": "查看所有問題"
       },
       "playbooks": {
-        "title": "Playbooks & Guides",
+        "title": "操作手冊與指南",
         "items": [
           {
             "href": "/playbooks/first-transaction-10-minutes",
-            "text": "First Ergo transaction (10-minute start)"
+            "text": "第一筆 Ergo 交易（10 分鐘入門）"
           },
           {
             "href": "/playbooks/start-mining-ergo",
-            "text": "Start mining Ergo"
+            "text": "開始挖掘 Ergo"
           },
           {
             "href": "/playbooks/build-defi-on-ergo",
-            "text": "Build DeFi on Ergo"
+            "text": "在 Ergo 上構建 DeFi"
           },
           {
             "href": "/playbooks/private-transaction-ergomixer",
-            "text": "Private transactions with ErgoMixer"
+            "text": "使用 ErgoMixer 進行私密交易"
           }
         ],
-        "viewAll": "View all playbooks"
+        "viewAll": "查看所有操作手冊"
       }
     },
     "emailCapture": {
-      "title": "Stay Updated on Ergo Visual Resources",
-      "description": "Get notified when we publish new infographics, visual guides, and educational content about Ergo blockchain."
+      "title": "掌握 Ergo 視覺資源最新動態",
+      "description": "當我們發布新的資訊圖表、視覺指南和有關 Ergo 區塊鏈的教育內容時，獲取通知。"
     }
   }
 }

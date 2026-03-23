@@ -1,21 +1,21 @@
 {
   "newsletter": {
-    "title": "Stay Updated",
-    "subtitle": "Get the latest Ergo news and updates",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "Enter your email address",
-    "subscribe": "Subscribe",
-    "interests": "Interests (optional)",
-    "privacyNotice": "By subscribing, you agree to our",
-    "privacyPolicy": "Privacy Policy",
+    "title": "Güncel Kalın",
+    "subtitle": "En son Ergo haberlerini ve güncellemelerini alın",
+    "emailLabel": "E-posta Adresi",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "subscribe": "Abone Ol",
+    "interests": "İlgi Alanları (isteğe bağlı)",
+    "privacyNotice": "Abone olarak kabul etmiş olursunuz",
+    "privacyPolicy": "Gizlilik Politikası",
     "alreadySubscribed": {
-      "title": "You're subscribed!"
+      "title": "Abonesiniz!"
     },
     "segments": {
-      "developers": "Developers",
-      "miners": "Miners",
-      "investors": "Investors",
-      "general": "General News"
+      "developers": "Geliştiriciler",
+      "miners": "Madenciler",
+      "investors": "Yatırımcılar",
+      "general": "Genel Haberler"
     }
   }
 }

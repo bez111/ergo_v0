@@ -2,78 +2,78 @@
   "manifesto": {
     "title": "MANIFESTO",
     "content": {
-      "paragraph1": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
-      "paragraph2": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
-      "paragraph3": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
-      "paragraph4": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
-      "conclusion": "This is not just technology. This is resistance."
+      "paragraph1": "Artan gözetim ve kontrolün hâkim olduğu bir dünyada, finansal özgürlük ve gizlilik için ayaktayız.",
+      "paragraph2": "Ergo, orijinal kripto devrimini besleyen temel ilkeler üzerine inşa edilmiştir: sıradan insanları güçlendiren açık, izinsiz ve güvenli sistemler.",
+      "paragraph3": "Güç merkezileşmesini reddediyoruz. Gözetim devletini reddediyoruz. Finansal sistemlerimizin kurumsal ele geçirilmesini reddediyoruz.",
+      "paragraph4": "Ergo, insanlara sözleşmeli para — programlanabilir, özel ve durdurulamaz — aracılığıyla finansal etkileşimlerini güvence altına alma araçlarını sunar.",
+      "conclusion": "Bu sadece teknoloji değil. Bu bir direniştir."
     }
   },
   "corePillars": {
-    "title": "CORE PILLARS",
-    "subtitle": "Ergo combines proven principles with cutting-edge cryptography",
+    "title": "TEMEL DİREKLER",
+    "subtitle": "Ergo, kanıtlanmış ilkeleri son teknoloji kriptografiyle birleştirir",
     "pillars": {
       "security": {
-        "title": "SECURITY (POW)",
-        "description": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone."
+        "title": "GÜVENLİK (POW)",
+        "description": "ASIC dirençli Autolykos v2 PoW, herkes için güçlü merkeziyetsizleşme, adil madencilik ve uzun vadeli güvenlik sağlar."
       },
       "programmability": {
-        "title": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
-        "description": "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model."
+        "title": "PROGRAMLANABİLİRLİK (eUTXO + ERGOSCRIPT)",
+        "description": "ErgoScript ve gelişmiş eUTXO modeli tarafından desteklenen, biçimsel olarak doğrulanabilir, ifade zengin ve güvenli sözleşmeler."
       },
       "sustainability": {
-        "title": "SUSTAINABILITY (STORAGE RENT)",
-        "description": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat."
+        "title": "SÜRDÜRÜLEBİLİRLİK (DEPOLAMA KİRASI)",
+        "description": "Depolama kirası ve öngörülebilir maliyetler, uzun vadeli ağ sağlığını korur ve blok zinciri şişmesini önler."
       },
       "privacy": {
-        "title": "PRIVACY",
-        "description": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions."
+        "title": "GİZLİLİK",
+        "description": "Sigma protokollerini kullanan protokol düzeyinde gizlilik — gizli dApp'ler ve işlemler sağlar."
       },
       "oraclePools": {
-        "title": "ORACLE POOLS",
-        "description": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives."
+        "title": "ORACLE HAVUZLARI",
+        "description": "İlk gerçek anlamda merkeziyetsiz oracle havuzları — yerleşik teşviklerle güvenilir, izinsiz zincir dışı veri erişimi."
       },
       "devFriendly": {
-        "title": "DEV FRIENDLY",
-        "description": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative."
+        "title": "GELİŞTİRİCİ DOSTU",
+        "description": "Dünya standartlarında belgeler, açık araçlar ve canlı, işbirlikçi bir topluluk, Ergo üzerinde geliştirmeyi kolay ve yenilikçi kılar."
       }
     }
   },
   "whyErgo": {
-    "title": "WHY ERGO?",
-    "subtitle": "A resilient blockchain platform combining proven principles with cutting-edge innovation",
+    "title": "NEDEN ERGO?",
+    "subtitle": "Kanıtlanmış ilkeleri son teknoloji yenilikle birleştiren dayanıklı bir blok zinciri platformu",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "FAIR & SECURE",
-        "subtitle": "Proof-of-Work Foundation",
-        "description": "No ICO. No VC. No premine. Memory-hard mining → broad participation and durable security."
+        "title": "ADIL VE GÜVENLİ",
+        "subtitle": "İş Kanıtı Temeli",
+        "description": "ICO yok. VC yok. Ön madencilik yok. Bellek yoğun madencilik → geniş katılım ve kalıcı güvenlik."
       },
       "powerfulAndFlexible": {
-        "title": "POWERFUL & FLEXIBLE",
-        "subtitle": "Advanced Smart Contracts",
-        "description": "eUTXO + ErgoScript deliver deterministic, composable logic without a hidden global state."
+        "title": "GÜÇLÜ VE ESNEK",
+        "subtitle": "Gelişmiş Akıllı Sözleşmeler",
+        "description": "eUTXO + ErgoScript, gizli bir küresel durum olmaksızın deterministik, birleştirilebilir mantık sunar."
       },
       "sustainable": {
-        "title": "SUSTAINABLE",
-        "subtitle": "Built to Last",
-        "description": "Storage Rent cleans forgotten state and funds miners with predictable costs for decades."
+        "title": "SÜRDÜRÜLEBİLİR",
+        "subtitle": "Uzun Ömürlü Tasarım",
+        "description": "Storage Rent unutulan durumu temizler ve madencileri onlarca yıl öngörülebilir maliyetlerle destekler."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PRIVACY FIRST",
-        "subtitle": "Auditable, Optional Privacy",
-        "description": "Sigma-protocols enable selective disclosure and ring/threshold proofs when needed."
+        "title": "GİZLİLİK ÖNCELİKLİ",
+        "subtitle": "Denetlenebilir, İsteğe Bağlı Gizlilik",
+        "description": "Sigma protokolleri, gerektiğinde seçici açıklama ve halka/eşik kanıtlarını etkinleştirir."
       },
       "community": {
-        "title": "COMMUNITY DRIVEN",
-        "subtitle": "Open Source, No Foundation Tax",
-        "description": "Global contributors and EIPs drive the roadmap—not token treasuries."
+        "title": "TOPLULUK ODAKLI",
+        "subtitle": "Açık Kaynak, Vakıf Vergisi Yok",
+        "description": "Küresel katkıcılar ve EIP'ler yol haritasını belirler — token hazineleri değil."
       },
       "developer": {
-        "title": "DEVELOPER FRIENDLY",
-        "subtitle": "Docs, Tools, Templates",
-        "description": "Playground, CI templates, explorer APIs—ship contracts fast and safely."
+        "title": "GELİŞTİRİCİ DOSTU",
+        "subtitle": "Belgeler, Araçlar, Şablonlar",
+        "description": "Oyun alanı, CI şablonları, gezgin API'leri — sözleşmeleri hızlı ve güvenli şekilde gönderin."
       }
     }
   }

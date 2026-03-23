@@ -1,96 +1,96 @@
 {
   "minersPage": {
     "hero": {
-      "title": "Mine with GPUs. Earn forever. Stay profitable.",
-      "subtitle": "ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.",
-      "cta": "Start Mining Ergo",
-      "checkProfitability": "Check Profitability",
-      "whyMine": "Why mine Ergo instead of other coins?"
+      "title": "GPU'larla madencilik yapın. Sonsuza kadar kazanın. Kârlı kalın.",
+      "subtitle": "ASIC dirençli algoritma. Adil ödüller. Depolama kirası, emisyonlar sona erdikten sonra madencilere ödeme yapmaya devam eder.",
+      "cta": "Ergo Madenciliğine Başla",
+      "checkProfitability": "Kârlılığı Kontrol Et",
+      "whyMine": "Neden diğer coinler yerine Ergo madenciliği yapmalısınız?"
     },
     "stats": {
-      "networkHashrate": "Network Hashrate",
-      "blockReward": "Block Reward",
-      "blockTime": "Block Time",
-      "activeMiners": "Active Miners",
-      "miningPools": "Mining Pools"
+      "networkHashrate": "Ağ Hash Gücü",
+      "blockReward": "Blok Ödülü",
+      "blockTime": "Blok Süresi",
+      "activeMiners": "Aktif Madenciler",
+      "miningPools": "Madencilik Havuzları"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "miners": "For Miners"
+      "home": "Ana Sayfa",
+      "miners": "Madenciler için"
     },
     "metrics": {
-      "networkHashrate": { "label": "Network Hashrate", "comment": "Network hashrate → competition & security" },
-      "difficulty": { "label": "Difficulty", "comment": "Difficulty → baseline for profitability" },
-      "blockTime": { "label": "Block Time", "comment": "Consistent block times = predictable rewards" },
-      "blockReward": { "label": "Block Reward", "comment": "Block reward + fees → total miner revenue", "trend": "{remaining}M left" },
-      "activeMiners": { "label": "Active Miners", "comment": "Healthy miner distribution" },
-      "miningPools": { "label": "Mining Pools", "comment": "Multiple pool options for decentralization" }
+      "networkHashrate": { "label": "Ağ Hash Gücü", "comment": "Ağ hash gücü → rekabet ve güvenlik" },
+      "difficulty": { "label": "Zorluk", "comment": "Zorluk → kârlılık için temel" },
+      "blockTime": { "label": "Blok Süresi", "comment": "Tutarlı blok süreleri = öngörülebilir ödüller" },
+      "blockReward": { "label": "Blok Ödülü", "comment": "Blok ödülü + ücretler → toplam madenci geliri", "trend": "{remaining}M kaldı" },
+      "activeMiners": { "label": "Aktif Madenciler", "comment": "Sağlıklı madenci dağılımı" },
+      "miningPools": { "label": "Madencilik Havuzları", "comment": "Merkeziyetsizleşme için birden fazla havuz seçeneği" }
     },
     "coreValues": {
       "asicResistant": {
-        "title": "ASIC-Resistant",
-        "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive.",
-        "highlight": "Level playing field"
+        "title": "ASIC Dirençli",
+        "description": "Yalnızca GPU madenciliği. ASIC yok. Sizi dışlayan endüstriyel çiftlik yok. Oyun bilgisayarınız rekabetçi kalır.",
+        "highlight": "Eşit rekabet ortamı"
       },
       "fairLaunch": {
-        "title": "Fair Launch",
-        "description": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one.",
-        "highlight": "No insider dumps"
+        "title": "Adil Başlangıç",
+        "description": "Sıfır ön madencilik. Sıfır geliştirici vergisi. Sıfır VC tahsisi. Her ERG, ilk günden bu yana adil şekilde çıkarıldı.",
+        "highlight": "İçeriden satış yok"
       },
       "realUseCases": {
-        "title": "Real Use Cases",
-        "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value.",
-        "highlight": "Sustainable demand"
+        "title": "Gerçek Kullanım Alanları",
+        "description": "DeFi, DEX'ler, gizlilik özellikleri gerçek talep yaratır. Yalnızca spekülasyon değil — değeri artıran gerçek fayda.",
+        "highlight": "Sürdürülebilir talep"
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Built-in mechanism ensuring miners get paid beyond block rewards. Long-term sustainability by design.",
-        "highlight": "Future-proof"
+        "title": "Depolama Kirası",
+        "description": "Madencilerin blok ödüllerinin ötesinde ödeme almasını sağlayan yerleşik mekanizma. Tasarımdan uzun vadeli sürdürülebilirlik.",
+        "highlight": "Geleceğe hazır"
       }
     },
     "calculator": {
-      "title": "Mining",
-      "titleHighlight": "Profitability",
-      "titleSuffix": "Calculator",
-      "subtitle": "Calculate your potential earnings mining Ergo",
-      "hashrate": "Hashrate (MH/s)",
-      "power": "Power Consumption (W)",
-      "electricity": "Electricity Cost ($/kWh)",
-      "ergPrice": "ERG Price (USD)",
-      "dailyErgMined": "Daily ERG Mined",
-      "dailyRevenue": "Daily Revenue",
-      "dailyPowerCost": "Daily Power Cost",
-      "dailyProfit": "Daily Profit",
-      "monthly": "Monthly",
-      "yearly": "Yearly",
-      "roiTime": "ROI Time (GPU @ $500)",
-      "note": "Calculations are estimates based on current network difficulty and price.",
-      "gpuPresets": "Popular GPU Presets:",
-      "readyToStart": "Ready to start mining?",
-      "poolFee": "Pool Fee (%)",
-      "monthlyProfit": "Monthly Profit",
-      "yearlyProfit": "Yearly Profit"
+      "title": "Madencilik",
+      "titleHighlight": "Kârlılık",
+      "titleSuffix": "Hesaplayıcısı",
+      "subtitle": "Ergo madenciliğinden potansiyel kazancınızı hesaplayın",
+      "hashrate": "Hash Gücü (MH/s)",
+      "power": "Güç Tüketimi (W)",
+      "electricity": "Elektrik Maliyeti ($/kWh)",
+      "ergPrice": "ERG Fiyatı (USD)",
+      "dailyErgMined": "Günlük Çıkarılan ERG",
+      "dailyRevenue": "Günlük Gelir",
+      "dailyPowerCost": "Günlük Güç Maliyeti",
+      "dailyProfit": "Günlük Kâr",
+      "monthly": "Aylık",
+      "yearly": "Yıllık",
+      "roiTime": "Yatırım Geri Dönüş Süresi (GPU @ $500)",
+      "note": "Hesaplamalar, mevcut ağ zorluğuna ve fiyata dayalı tahminlerdir.",
+      "gpuPresets": "Popüler GPU Ön Ayarları:",
+      "readyToStart": "Madenciliğe başlamaya hazır mısınız?",
+      "poolFee": "Havuz Ücreti (%)",
+      "monthlyProfit": "Aylık Kâr",
+      "yearlyProfit": "Yıllık Kâr"
     },
     "pools": {
-      "title": "Mining",
-      "titleHighlight": "Pools",
-      "titleSuffix": "Directory",
-      "hashrate": "Hashrate",
-      "miners": "Miners",
-      "minPayout": "Min Payout",
-      "payment": "Payment",
-      "noPoolsFound": "No pools match your criteria"
+      "title": "Madencilik",
+      "titleHighlight": "Havuzları",
+      "titleSuffix": "Dizini",
+      "hashrate": "Hash Gücü",
+      "miners": "Madenciler",
+      "minPayout": "Min Ödeme",
+      "payment": "Ödeme",
+      "noPoolsFound": "Kriterlerinizle eşleşen havuz yok"
     },
     "software": {
-      "title": "Mining",
-      "titleHighlight": "Software",
+      "title": "Madencilik",
+      "titleHighlight": "Yazılımı",
       "headers": {
-        "software": "Software",
-        "gpuSupport": "GPU Support",
-        "devFee": "Dev Fee",
-        "bestFor": "Best For"
+        "software": "Yazılım",
+        "gpuSupport": "GPU Desteği",
+        "devFee": "Geliştirici Ücreti",
+        "bestFor": "En İyi Olduğu Durum"
       },
-      "newToMining": "New to mining? Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.",
+      "newToMining": "Madenciliğe yeni misiniz? En kolay kurulum için NBMiner (karma rig'ler) veya T-Rex (yalnızca NVIDIA) ile başlayın.",
       "items": [
         {
           "name": "NBMiner",
@@ -99,7 +99,7 @@
             "AMD"
           ],
           "fee": "2%",
-          "recommended": "Best for mixed rigs"
+          "recommended": "Karma rig'ler için en iyi"
         },
         {
           "name": "T-Rex",
@@ -107,7 +107,7 @@
             "NVIDIA"
           ],
           "fee": "1%",
-          "recommended": "Best for NVIDIA cards"
+          "recommended": "NVIDIA kartlar için en iyi"
         },
         {
           "name": "TeamRedMiner",
@@ -115,7 +115,7 @@
             "AMD"
           ],
           "fee": "2%",
-          "recommended": "Best for AMD cards"
+          "recommended": "AMD kartlar için en iyi"
         },
         {
           "name": "lolMiner",
@@ -124,7 +124,7 @@
             "AMD"
           ],
           "fee": "1%",
-          "recommended": "Advanced users"
+          "recommended": "İleri düzey kullanıcılar"
         }
       ]
     },
@@ -136,9 +136,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
           "features": [
-            "Auto-exchange",
-            "Mobile app",
-            "API access"
+            "Otomatik değişim",
+            "Mobil uygulama",
+            "API erişimi"
           ]
         },
         {
@@ -147,9 +147,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "0.1 ERG",
           "features": [
-            "24/7 Support",
-            "Telegram bot",
-            "Email alerts"
+            "7/24 Destek",
+            "Telegram botu",
+            "E-posta uyarıları"
           ]
         },
         {
@@ -158,9 +158,9 @@
           "paymentSystem": "PROP",
           "minPayout": "0.5 ERG",
           "features": [
-            "SSL support",
-            "Worker stats",
-            "Discord bot"
+            "SSL desteği",
+            "İşçi istatistikleri",
+            "Discord botu"
           ]
         },
         {
@@ -169,9 +169,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
           "features": [
-            "Solo mining",
-            "Telegram bot",
-            "MEV rewards"
+            "Solo madencilik",
+            "Telegram botu",
+            "MEV ödülleri"
           ]
         },
         {
@@ -180,9 +180,9 @@
           "paymentSystem": "PPS+",
           "minPayout": "1 ERG",
           "features": [
-            "Mobile app",
-            "Multi-coin",
-            "Instant payments"
+            "Mobil uygulama",
+            "Çok coinli",
+            "Anında ödemeler"
           ]
         },
         {
@@ -191,9 +191,9 @@
           "paymentSystem": "PPLNS",
           "minPayout": "1 ERG",
           "features": [
-            "Email notifications",
+            "E-posta bildirimleri",
             "API",
-            "Multi-language"
+            "Çok dilli"
           ]
         }
       ]
@@ -202,70 +202,70 @@
       "items": [
         {
           "step": "01",
-          "title": "Check Your Hardware",
-          "description": "Verify GPU compatibility and power requirements for optimal mining performance.",
+          "title": "Donanımınızı Kontrol Edin",
+          "description": "Optimum madencilik performansı için GPU uyumluluğunu ve güç gereksinimlerini doğrulayın.",
           "details": [
-            "NVIDIA GTX 1060 6GB+ or AMD RX 580 8GB+",
-            "Minimum 4GB VRAM required",
-            "Stable power supply (80+ Gold recommended)",
-            "Adequate cooling and ventilation"
+            "NVIDIA GTX 1060 6GB+ veya AMD RX 580 8GB+",
+            "Minimum 4GB VRAM gerekli",
+            "Kararlı güç kaynağı (80+ Gold önerilir)",
+            "Yeterli soğutma ve havalandırma"
           ],
-          "duration": "5 min"
+          "duration": "5 dk"
         },
         {
           "step": "02",
-          "title": "Choose Mining Setup",
-          "description": "Decide between solo mining or joining a pool based on your hashrate and preferences.",
+          "title": "Madencilik Kurulumunu Seçin",
+          "description": "Hash gücünüze ve tercihlerinize göre solo madencilik veya havuza katılma arasında karar verin.",
           "details": [
-            "Solo mining: Full block rewards but irregular payouts",
-            "Pool mining: Regular payouts but shared rewards",
-            "Recommended pools: Herominers, Woolypooly, 2Miners",
-            "Consider pool fees (typically 1-2%)"
+            "Solo madencilik: Tam blok ödülleri ancak düzensiz ödemeler",
+            "Havuz madenciliği: Düzenli ödemeler ancak paylaşılan ödüller",
+            "Önerilen havuzlar: Herominers, Woolypooly, 2Miners",
+            "Havuz ücretlerini göz önünde bulundurun (genellikle %1-2)"
           ],
-          "duration": "10 min"
+          "duration": "10 dk"
         },
         {
           "step": "03",
-          "title": "Download & Configure",
-          "description": "Get mining software and configure it for your hardware and chosen pool.",
+          "title": "İndirin ve Yapılandırın",
+          "description": "Madencilik yazılımını edinin ve donanımınız ve seçtiğiniz havuz için yapılandırın.",
           "details": [
-            "Download T-Rex (NVIDIA) or lolMiner (AMD/NVIDIA)",
-            "Configure pool address and wallet",
-            "Set optimal core clock and memory settings",
-            "Test with low intensity first"
+            "T-Rex (NVIDIA) veya lolMiner (AMD/NVIDIA) indirin",
+            "Havuz adresi ve cüzdanı yapılandırın",
+            "Optimum çekirdek saati ve bellek ayarlarını yapın",
+            "Önce düşük yoğunlukla test edin"
           ],
-          "duration": "15 min"
+          "duration": "15 dk"
         },
         {
           "step": "04",
-          "title": "Start Mining",
-          "description": "Launch the miner and monitor your earnings and hardware performance.",
+          "title": "Madenciliğe Başlayın",
+          "description": "Madenciyi başlatın ve kazancınızı ve donanım performansınızı izleyin.",
           "details": [
-            "Monitor GPU temperature and power draw",
-            "Check pool dashboard for shares",
-            "Optimize settings over time",
-            "Set up monitoring alerts"
+            "GPU sıcaklığını ve güç çekimini izleyin",
+            "Paylar için havuz kontrol panelini kontrol edin",
+            "Ayarları zamanla optimize edin",
+            "İzleme uyarıları kurun"
           ],
-          "duration": "Ongoing"
+          "duration": "Sürekli"
         }
       ]
     },
     "comparison": {
-      "title": "How ERG Mining Compares",
+      "title": "ERG Madenciliği Nasıl Karşılaştırılır",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "Kriter",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "Deep dive: Detailed comparison",
+      "deepDive": "Derinlemesine inceleme: Ayrıntılı karşılaştırma",
       "rows": [
         {
-          "criterion": "Mining Hardware",
+          "criterion": "Madencilik Donanımı",
           "bitcoin": {
             "status": "bad",
-            "text": "ASIC-only"
+            "text": "Yalnızca ASIC"
           },
           "ethereum": {
             "status": "warning",
@@ -273,289 +273,289 @@
           },
           "monero": {
             "status": "good",
-            "text": "CPU/GPU friendly"
+            "text": "CPU/GPU dostu"
           },
           "ergo": {
             "status": "good",
-            "text": "GPU-optimized"
+            "text": "GPU optimize"
           }
         },
         {
-          "criterion": "Block Reward",
+          "criterion": "Blok Ödülü",
           "bitcoin": {
             "status": "warning",
-            "text": "Halving every 4y"
+            "text": "Her 4 yılda yarılanma"
           },
           "ethereum": {
             "status": "bad",
-            "text": "No mining"
+            "text": "Madencilik yok"
           },
           "monero": {
             "status": "good",
-            "text": "Tail emission"
+            "text": "Kuyruk emisyonu"
           },
           "ergo": {
             "status": "good",
-            "text": "9 ERG + fees"
+            "text": "9 ERG + ücretler"
           }
         },
         {
-          "criterion": "Future Incentives",
+          "criterion": "Gelecek Teşvikler",
           "bitcoin": {
             "status": "warning",
-            "text": "Fees only"
+            "text": "Yalnızca ücretler"
           },
           "ethereum": {
             "status": "bad",
-            "text": "No mining"
+            "text": "Madencilik yok"
           },
           "monero": {
             "status": "good",
-            "text": "Perpetual rewards"
+            "text": "Sürekli ödüller"
           },
           "ergo": {
             "status": "good",
-            "text": "Storage rent"
+            "text": "Depolama kirası"
           }
         },
         {
-          "criterion": "Network Utility",
+          "criterion": "Ağ Kullanımı",
           "bitcoin": {
             "status": "good",
-            "text": "Store of value"
+            "text": "Değer saklama"
           },
           "ethereum": {
             "status": "good",
-            "text": "Smart contracts"
+            "text": "Akıllı sözleşmeler"
           },
           "monero": {
             "status": "good",
-            "text": "Privacy payments"
+            "text": "Gizlilik ödemeleri"
           },
           "ergo": {
             "status": "good",
-            "text": "DeFi + Privacy"
+            "text": "DeFi + Gizlilik"
           }
         },
         {
-          "criterion": "Mining Accessibility",
+          "criterion": "Madencilik Erişilebilirliği",
           "bitcoin": {
             "status": "bad",
-            "text": "Industrial scale"
+            "text": "Endüstriyel ölçek"
           },
           "ethereum": {
             "status": "bad",
-            "text": "No mining"
+            "text": "Madencilik yok"
           },
           "monero": {
             "status": "good",
-            "text": "Home mining"
+            "text": "Ev madenciliği"
           },
           "ergo": {
             "status": "good",
-            "text": "GPU rigs viable"
+            "text": "GPU rig'leri uygulanabilir"
           }
         }
       ]
     },
     "tools": {
-      "openTool": "Open Tool",
-      "viewGuide": "View Guide",
+      "openTool": "Aracı Aç",
+      "viewGuide": "Kılavuzu Görüntüle",
       "items": [
         {
-          "name": "Mining Profitability Calculator",
-          "description": "Calculate potential earnings based on your hardware and electricity costs."
+          "name": "Madencilik Kârlılık Hesaplayıcısı",
+          "description": "Donanımınıza ve elektrik maliyetlerinize göre potansiyel kazançları hesaplayın."
         },
         {
-          "name": "Official Mining Guide",
-          "description": "Comprehensive setup guide for beginners and advanced miners."
+          "name": "Resmi Madencilik Kılavuzu",
+          "description": "Yeni başlayanlar ve ileri düzey madenciler için kapsamlı kurulum kılavuzu."
         },
         {
-          "name": "Autolykos Algorithm",
-          "description": "Learn about Ergo's ASIC-resistant Proof-of-Work algorithm."
+          "name": "Autolykos Algoritması",
+          "description": "Ergo'nun ASIC dirençli Proof-of-Work algoritması hakkında bilgi edinin."
         },
         {
-          "name": "Storage Rent Economics",
-          "description": "How storage rent ensures long-term miner incentives."
+          "name": "Depolama Kirası Ekonomisi",
+          "description": "Depolama kirasının uzun vadeli madenci teşviklerini nasıl sağladığı."
         }
       ]
     },
     "joinNetwork": {
-      "title": "Join the",
-      "titleHighlight": "Network",
+      "title": "Ağa",
+      "titleHighlight": "Katılın",
       "startMining": {
-        "title": "Start Mining Now",
-        "subtitle": "Complete Guide"
+        "title": "Şimdi Madenciliğe Başla",
+        "subtitle": "Eksiksiz Kılavuz"
       },
       "joinChat": {
-        "title": "Join Miners' Chat",
-        "subtitle": "Community Support"
+        "title": "Madenciler Sohbetine Katıl",
+        "subtitle": "Topluluk Desteği"
       },
       "learnEconomics": {
-        "title": "Learn Economics",
-        "subtitle": "Long-term Viability"
+        "title": "Ekonomiyi Öğren",
+        "subtitle": "Uzun Vadeli Uygulanabilirlik"
       },
       "holdLongTerm": {
-        "title": "Want to hold long-term?",
-        "description": "Learn about ERG as a store of value and investment"
+        "title": "Uzun vadeli tutmak ister misiniz?",
+        "description": "ERG'yi değer saklama ve yatırım olarak öğrenin"
       }
     },
     "faq": {
-      "title": "Mining FAQ",
+      "title": "Madencilik SSS",
       "questions": {
         "0": {
-          "question": "What hardware do I need to mine ERG?",
-          "answer": "Any modern GPU with 4GB+ VRAM can mine ERG efficiently. AMD and NVIDIA cards both work well. Popular choices include RTX 3070, RTX 4070, and RX 6800."
+          "question": "ERG madenciliği için hangi donanıma ihtiyacım var?",
+          "answer": "4GB+ VRAM'a sahip herhangi bir modern GPU, ERG'yi verimli şekilde çıkarabilir. AMD ve NVIDIA kartların ikisi de iyi çalışır. Popüler seçenekler RTX 3070, RTX 4070 ve RX 6800'dür."
         },
         "1": {
-          "question": "Which mining software should I use?",
-          "answer": "lolMiner and T-Rex are the most popular options for ERG mining. Both are free (with dev fee) and support Windows and Linux."
+          "question": "Hangi madencilik yazılımını kullanmalıyım?",
+          "answer": "lolMiner ve T-Rex, ERG madenciliği için en popüler seçeneklerdir. Her ikisi de ücretsizdir (geliştirici ücreti ile) ve Windows ve Linux'u destekler."
         },
         "2": {
-          "question": "What is the current block reward?",
-          "answer": "The current block reward is dynamically adjusted. Check the network stats above for the latest reward amount."
+          "question": "Mevcut blok ödülü nedir?",
+          "answer": "Mevcut blok ödülü dinamik olarak ayarlanır. En son ödül miktarı için yukarıdaki ağ istatistiklerini kontrol edin."
         },
         "3": {
-          "question": "Is solo mining profitable?",
-          "answer": "For most miners, pool mining is more consistent. Solo mining requires significant hashrate to find blocks regularly."
+          "question": "Solo madencilik kârlı mı?",
+          "answer": "Çoğu madenci için havuz madenciliği daha tutarlıdır. Solo madencilik, blokları düzenli olarak bulmak için önemli miktarda hash gücü gerektirir."
         },
         "4": {
-          "question": "Is Ergo still profitable to mine?",
-          "answer": "Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. Use a mining calculator to estimate earnings. Many miners find Ergo profitable due to lower competition compared to major coins."
+          "question": "Ergo madenciliği hâlâ kârlı mı?",
+          "answer": "Kârlılık elektrik maliyetlerinize, donanım verimliliğinize ve mevcut ağ zorluğuna bağlıdır. Kazançları tahmin etmek için madencilik hesaplayıcısı kullanın. Pek çok madenci, büyük coinlere kıyasla daha az rekabet nedeniyle Ergo'yu kârlı buluyor."
         },
         "5": {
-          "question": "Will ASICs come to Ergo?",
-          "answer": "Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining accessible to GPU miners."
+          "question": "Ergo'ya ASIC'ler gelir mi?",
+          "answer": "Ergo, bellek yoğun hesaplamalar aracılığıyla ASIC dirençli olacak şekilde özel olarak tasarlanmış Autolykos algoritmasını kullanır. ASIC'ler merkeziyetsizleşmeyi tehdit ederse algoritma güncellenebilir. Topluluk, madenciliği GPU madencilerine erişilebilir tutmaya kararlıdır."
         },
         "6": {
-          "question": "How stable is the Ergo development team?",
-          "answer": "Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. The project is open-source with regular updates and a clear roadmap. Check the GitHub activity and join Discord to see the active community."
+          "question": "Ergo geliştirme ekibi ne kadar kararlı?",
+          "answer": "Ergo, deneyimli kriptograflar ve blok zinciri araştırmacıları tarafından yönetilen güçlü, aktif bir geliştirme ekibine sahiptir. Proje, düzenli güncellemeler ve net bir yol haritasıyla açık kaynaklıdır. GitHub aktivitesini kontrol edin ve aktif topluluğu görmek için Discord'a katılın."
         },
         "7": {
-          "question": "How does storage rent affect miners?",
-          "answer": "Storage rent is a unique mechanism that provides miners with income beyond block rewards. When emissions end, miners will continue earning from storage rent collected from dormant boxes. This ensures long-term network security and miner profitability."
+          "question": "Depolama kirası madencileri nasıl etkiler?",
+          "answer": "Depolama kirası, madencilere blok ödüllerinin ötesinde gelir sağlayan benzersiz bir mekanizmadır. Emisyonlar sona erdiğinde, madenciler uyuyan kutulardan toplanan depolama kirasından kazanmaya devam edecektir. Bu, uzun vadeli ağ güvenliği ve madenci kârlılığını sağlar."
         }
       }
     }
   },
   "mining": {
-    "title": "Mining Ergo (ERG)",
-    "description": "Learn how to mine ERG using the Autolykos proof of work algorithm",
-    "subDescription": "Start mining ERG today with our complete guide. Setup, profitability calculator and pool recommendations.",
+    "title": "Ergo (ERG) Madenciliği",
+    "description": "Autolykos iş kanıtı algoritmasını kullanarak ERG'yi nasıl çıkaracağınızı öğrenin",
+    "subDescription": "Eksiksiz kılavuzumuzla bugün ERG madenciliğine başlayın. Kurulum, kârlılık hesaplayıcısı ve havuz önerileri.",
     "seo": {
-      "title": "Mining ERG - Complete Ergo Mining Guide | Autolykos PoW",
-      "description": "Complete guide to mining Ergo (ERG) cryptocurrency. Learn about Autolykos algorithm, mining setup, profitability, and best mining pools.",
-      "keywords": "mining ERG, Ergo mining, Autolykos, proof of work, mining pools, GPU mining, mining profitability",
+      "title": "ERG Madenciliği - Eksiksiz Ergo Madencilik Kılavuzu | Autolykos PoW",
+      "description": "Ergo (ERG) kripto para madenciliği için eksiksiz kılavuz. Autolykos algoritması, madencilik kurulumu, kârlılık ve en iyi madencilik havuzları hakkında bilgi edinin.",
+      "keywords": "ERG madenciliği, Ergo madenciliği, Autolykos, iş kanıtı, madencilik havuzları, GPU madenciliği, madencilik kârlılığı",
       "openGraph": {
-        "title": "Mining ERG - Complete Guide",
-        "description": "Start mining Ergo cryptocurrency with our comprehensive guide",
-        "imageAlt": "Ergo Mining Guide"
+        "title": "ERG Madenciliği - Eksiksiz Kılavuz",
+        "description": "Kapsamlı kılavuzumuzla Ergo kripto para madenciliğine başlayın",
+        "imageAlt": "Ergo Madencilik Kılavuzu"
       },
       "twitter": {
-        "title": "Mining ERG - Complete Guide",
-        "description": "Learn how to mine Ergo (ERG) cryptocurrency"
+        "title": "ERG Madenciliği - Eksiksiz Kılavuz",
+        "description": "Ergo (ERG) kripto parasını nasıl çıkaracağınızı öğrenin"
       }
     },
     "cta": {
-      "calculator": "Mining Calculator"
+      "calculator": "Madencilik Hesaplayıcısı"
     },
     "networkStats": {
-      "title": "Network Stats",
-      "hashrate": "Hashrate",
-      "blockTime": "Block Time",
-      "reward": "Block Reward",
-      "miners": "Active Miners"
+      "title": "Ağ İstatistikleri",
+      "hashrate": "Hash Gücü",
+      "blockTime": "Blok Süresi",
+      "reward": "Blok Ödülü",
+      "miners": "Aktif Madenciler"
     },
     "tabs": {
-      "overview": "Overview",
-      "setup": "Setup Guide",
-      "pools": "Mining Pools",
-      "profitability": "Profitability",
-      "gettingStarted": "Getting Started",
-      "hardware": "Hardware",
-      "calculator": "Calculator",
-      "help": "Help"
+      "overview": "Genel Bakış",
+      "setup": "Kurulum Kılavuzu",
+      "pools": "Madencilik Havuzları",
+      "profitability": "Kârlılık",
+      "gettingStarted": "Başlarken",
+      "hardware": "Donanım",
+      "calculator": "Hesaplayıcı",
+      "help": "Yardım"
     },
     "stats": {
       "hashrate": "210 TH/s",
-      "blockTime": "2 min",
+      "blockTime": "2 dk",
       "reward": "1.2 ERG",
       "miners": "12,847"
     },
     "seoSchema": {
-      "name": "How to Mine Ergo (ERG)",
-      "description": "Complete guide for mining Ergo cryptocurrency using GPU",
+      "name": "Ergo (ERG) Nasıl Çıkarılır",
+      "description": "GPU kullanarak Ergo kripto para madenciliği için eksiksiz kılavuz",
       "supply": {
-        "gpu": "Graphics Card (GPU)",
-        "software": "Mining Software",
-        "wallet": "Ergo Wallet"
+        "gpu": "Grafik Kartı (GPU)",
+        "software": "Madencilik Yazılımı",
+        "wallet": "Ergo Cüzdanı"
       },
       "tool": {
-        "miner": "Mining Software",
-        "pool": "Mining Pool"
+        "miner": "Madencilik Yazılımı",
+        "pool": "Madencilik Havuzu"
       },
       "steps": {
         "compatibility": {
-          "name": "Check GPU Compatibility",
-          "text": "Ensure your GPU has at least 4GB memory"
+          "name": "GPU Uyumluluğunu Kontrol Et",
+          "text": "GPU'nuzun en az 4GB belleği olduğundan emin olun"
         },
         "download": {
-          "name": "Download Mining Software",
-          "text": "Get compatible miner like NBMiner or TeamRedMiner"
+          "name": "Madencilik Yazılımını İndir",
+          "text": "NBMiner veya TeamRedMiner gibi uyumlu bir madenci edinin"
         },
         "pool": {
-          "name": "Choose Mining Pool",
-          "text": "Select a mining pool with good hashrate and low fees"
+          "name": "Madencilik Havuzu Seçin",
+          "text": "İyi hash gücüne ve düşük ücretlere sahip bir madencilik havuzu seçin"
         },
         "configure": {
-          "name": "Configure Miner",
-          "text": "Set pool address and wallet in miner configuration"
+          "name": "Madenciyi Yapılandır",
+          "text": "Madenci yapılandırmasında havuz adresini ve cüzdanı ayarlayın"
         },
         "start": {
-          "name": "Start Mining",
-          "text": "Run the miner and monitor your hashrate"
+          "name": "Madenciliğe Başlayın",
+          "text": "Madenciyi çalıştırın ve hash gücünüzü izleyin"
         }
       },
       "calculator": {
-        "name": "Ergo Mining Calculator",
-        "description": "Calculate your potential mining profits"
+        "name": "Ergo Madencilik Hesaplayıcısı",
+        "description": "Potansiyel madencilik kârlarınızı hesaplayın"
       }
     },
     "faq": {
       "profitability": {
-        "question": "Is mining ERG profitable?",
-        "answer": "Profitability depends on electricity costs, hardware efficiency, and ERG price. Use our calculator to estimate."
+        "question": "ERG madenciliği kârlı mı?",
+        "answer": "Kârlılık elektrik maliyetlerine, donanım verimliliğine ve ERG fiyatına bağlıdır. Tahmin için hesaplayıcımızı kullanın."
       },
       "bestGpu": {
-        "question": "What's the best GPU for mining ERG?",
-        "answer": "AMD RX 6800 XT and NVIDIA RTX 3070 offer excellent efficiency for Autolykos."
+        "question": "ERG madenciliği için en iyi GPU hangisidir?",
+        "answer": "AMD RX 6800 XT ve NVIDIA RTX 3070, Autolykos için mükemmel verimlilik sunar."
       },
       "whichPool": {
-        "question": "Which mining pool should I use?",
-        "answer": "Popular pools include HeroMiners, 2Miners, and WoolyPooly. Choose based on fees and location."
+        "question": "Hangi madencilik havuzunu kullanmalıyım?",
+        "answer": "Popüler havuzlar arasında HeroMiners, 2Miners ve WoolyPooly yer alır. Ücretlere ve konuma göre seçin."
       },
       "earnings": {
-        "question": "How much can I earn?",
-        "answer": "Earnings vary based on hashrate, network difficulty, and ERG price. Check our calculator for estimates."
+        "question": "Ne kadar kazanabilirim?",
+        "answer": "Kazançlar hash gücüne, ağ zorluğuna ve ERG fiyatına göre değişir. Tahminler için hesaplayıcımızı kontrol edin."
       }
     }
   },
   "minersData": {
     "asic-resistant": {
-      "title": "ASIC-Resistant",
-      "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive."
+      "title": "ASIC Dirençli",
+      "description": "Yalnızca GPU madenciliği. ASIC yok. Sizi dışlayan endüstriyel çiftlik yok. Oyun bilgisayarınız rekabetçi kalır."
     },
     "fair-launch": {
-      "title": "Fair Launch",
-      "description": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one."
+      "title": "Adil Başlangıç",
+      "description": "Sıfır ön madencilik. Sıfır geliştirici vergisi. Sıfır VC tahsisi. Her ERG, ilk günden bu yana adil şekilde çıkarıldı."
     },
     "real-use-cases": {
-      "title": "Real Use Cases",
-      "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value."
+      "title": "Gerçek Kullanım Alanları",
+      "description": "DeFi, DEX'ler, gizlilik özellikleri gerçek talep yaratır. Yalnızca spekülasyon değil — değeri artıran gerçek fayda."
     },
     "long-term-economics": {
-      "title": "Long-term Economics",
-      "description": "Storage rent pays miners forever. When emissions end, you still earn. Built for decades, not pump & dump."
+      "title": "Uzun Vadeli Ekonomi",
+      "description": "Depolama kirası madencilere sonsuza kadar ödeme yapar. Emisyonlar sona erdiğinde, hâlâ kazanırsınız. On yıllar için inşa edildi, pump & dump için değil."
     },
     "getblok": {
       "name": "GetBlok"
@@ -588,40 +588,40 @@
       "name": "lolMiner"
     },
     "calculator": {
-      "description": "Calculate potential earnings based on your hardware and electricity costs.",
-      "name": "Mining Profitability Calculator"
+      "description": "Donanımınıza ve elektrik maliyetlerinize göre potansiyel kazançları hesaplayın.",
+      "name": "Madencilik Kârlılık Hesaplayıcısı"
     },
     "guide": {
-      "description": "Comprehensive setup guide for beginners and advanced miners.",
-      "name": "Official Mining Guide"
+      "description": "Yeni başlayanlar ve ileri düzey madenciler için kapsamlı kurulum kılavuzu.",
+      "name": "Resmi Madencilik Kılavuzu"
     },
     "autolykos": {
       "description": "Learn about Ergo",
-      "name": "Autolykos Algorithm"
+      "name": "Autolykos Algoritması"
     },
     "storage-rent": {
-      "question": "How does storage rent affect miners?",
+      "question": "Depolama kirası madencileri nasıl etkiler?",
       "answer": "Storage rent creates a sustainable fee mechanism that benefits miners long-term. Unused UTXOs pay rent over time, which goes to miners as additional rewards beyond block emissions. This ensures miner incentives continue after the emission schedule ends. Learn more about <a href=\\"
     },
     "profitable": {
-      "question": "Is Ergo still profitable to mine?",
+      "question": "Ergo madenciliği hâlâ kârlı mı?",
       "answer": "Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. Use a <a href=\\"
     },
     "asics": {
-      "question": "Will ASICs come to Ergo?",
+      "question": "Ergo'ya ASIC'ler gelir mi?",
       "answer": "Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining accessible to GPU miners. Read more about <a href=\\"
     },
     "team": {
-      "question": "How stable is the Ergo development team?",
+      "question": "Ergo geliştirme ekibi ne kadar kararlı?",
       "answer": "Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. The project is open-source with regular updates and a clear roadmap. Check the <a href=\\"
     },
     "pools": {
-      "question": "Which mining pools support Ergo?",
-      "answer": "Popular Ergo mining pools include Herominers, Woolypooly, 2Miners, Nanopool, and F2Pool. Each has different fee structures and payout methods. Solo mining is also viable for larger operations. See the complete pool comparison on this page for details."
+      "question": "Hangi madencilik havuzları Ergo'yu destekler?",
+      "answer": "Popüler Ergo madencilik havuzları arasında Herominers, Woolypooly, 2Miners, Nanopool ve F2Pool yer alır. Her birinin farklı ücret yapıları ve ödeme yöntemleri vardır. Daha büyük işlemler için solo madencilik de mümkündür. Ayrıntılar için bu sayfadaki eksiksiz havuz karşılaştırmasına bakın."
     },
     "hardware": {
       "question": "What",
-      "answer": "You need a GPU with at least 4GB VRAM. NVIDIA GTX 1060 6GB or AMD RX 580 8GB are good starting points. More powerful cards like RTX 3070+ or RX 6700 XT+ will be more profitable. Check the hardware guide on this page for detailed recommendations and optimization tips."
+      "answer": "En az 4GB VRAM'a sahip bir GPU'ya ihtiyacınız var. NVIDIA GTX 1060 6GB veya AMD RX 580 8GB iyi başlangıç noktalarıdır. RTX 3070+ veya RX 6700 XT+ gibi daha güçlü kartlar daha kârlı olacaktır. Ayrıntılı öneriler ve optimizasyon ipuçları için bu sayfadaki donanım kılavuzunu kontrol edin."
     }
   }
 }

@@ -1,158 +1,158 @@
 {
   "infographicDetail": {
     "seo": {
-      "titleSuffix": "Ergo Infographics",
+      "titleSuffix": "Ergo Infografiken",
       "notFound": {
-        "title": "Infographic Not Found",
-        "description": "The requested infographic could not be found."
+        "title": "Infografik nicht gefunden",
+        "description": "Die angeforderte Infografik konnte nicht gefunden werden."
       }
     },
-    "backToInfographics": "Back to Infographics",
-    "published": "Published",
-    "minRead": "min read",
+    "backToInfographics": "Zurück zu Infografiken",
+    "published": "Veröffentlicht",
+    "minRead": "Min. Lesezeit",
     "tags": "Tags",
     "exploreMore": {
-      "title": "Explore More Ergo Infographics",
-      "description": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
-      "button": "Browse All Infographics"
+      "title": "Weitere Ergo-Infografiken erkunden",
+      "description": "Entdecken Sie visuelle Anleitungen zu Ergos PoW, eUTXO-Smart-Contracts, Speichermiete, Datenschutz und mehr.",
+      "button": "Alle Infografiken durchsuchen"
     }
   },
   "infographicsPage": {
     "seo": {
-      "title": "Ergo Blockchain Infographics — Visual Guides to PoW, DeFi, Storage Rent & Privacy",
-      "description": "Discover visual explainers of Ergo: PoW consensus, eUTXO smart contracts, storage rent, Sigma privacy, NiPoPoWs and more. Save, share, and reuse with attribution.",
-      "keywords": "Ergo infographics, blockchain visual guides, Ergo PoW explained, eUTXO diagrams, storage rent visualization, Sigma protocols infographic, NiPoPoWs explained, Ergo vs VC chains, Autolykos mining, ErgoScript tutorial, oracle pools diagram, blockchain education, visual learning, Ergo ecosystem"
+      "title": "Ergo Blockchain Infografiken — Visuelle Anleitungen zu PoW, DeFi, Speichermiete & Datenschutz",
+      "description": "Entdecken Sie visuelle Erklärungen zu Ergo: PoW-Konsens, eUTXO-Smart-Contracts, Speichermiete, Sigma-Datenschutz, NiPoPoWs und mehr. Speichern, teilen und weiterverwenden mit Quellenangabe.",
+      "keywords": "Ergo Infografiken, visuelle Blockchain-Anleitungen, Ergo PoW erklärt, eUTXO-Diagramme, Speichermiete-Visualisierung, Sigma Protocols Infografik, NiPoPoWs erklärt, Ergo vs. VC-Chains, Autolykos-Mining, ErgoScript-Tutorial, Oracle-Pools-Diagramm, Blockchain-Bildung, visuelles Lernen, Ergo-Ökosystem"
     },
     "schema": {
       "collection": {
-        "name": "Ergo Blockchain Infographics",
-        "description": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement. Save, share, and reuse them with attribution to ergoblockchain.org."
+        "name": "Ergo Blockchain Infografiken",
+        "description": "Visuelle Anleitungen zu Ergos PoW, eUTXO-Smart-Contracts, Speichermiete, Datenschutz und globalem Settlement. Speichern, teilen und wiederverwenden mit Quellenangabe zu ergoblockchain.org."
       },
       "breadcrumbs": {
-        "infographics": "Infographics"
+        "infographics": "Infografiken"
       },
       "itemList": {
-        "name": "Ergo Blockchain Infographics Collection",
-        "description": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement."
+        "name": "Ergo Blockchain Infografiken-Sammlung",
+        "description": "Visuelle Anleitungen zu Ergos PoW, eUTXO-Smart-Contracts, Speichermiete, Datenschutz und globalem Settlement."
       }
     },
     "breadcrumbs": {
-      "infographics": "Infographics"
+      "infographics": "Infografiken"
     },
     "hero": {
       "title": "Ergo Blockchain",
-      "titleHighlight": "Infographics",
-      "subtitle": "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.",
-      "subtitleSecondLine": "Save, share, and reuse them with attribution to ergoblockchain.org.",
-      "description": "This hub collects visual explainers for the most important parts of the Ergo protocol: consensus, tokenomics, DeFi, privacy, light clients and more. Every infographic comes with a full-text breakdown so you can learn, teach and build with Ergo.",
-      "learnBasics": "Learn the basics"
+      "titleHighlight": "Infografiken",
+      "subtitle": "Visuelle Anleitungen zu Ergos PoW, eUTXO-Smart-Contracts, Speichermiete, Datenschutz und globalem Settlement.",
+      "subtitleSecondLine": "Speichern, teilen und wiederverwenden mit Quellenangabe zu ergoblockchain.org.",
+      "description": "Dieser Hub sammelt visuelle Erklärungen zu den wichtigsten Teilen des Ergo-Protokolls: Konsens, Tokenomics, DeFi, Datenschutz, Light Clients und mehr. Jede Infografik enthält eine vollständige Textaufschlüsselung, damit Sie mit Ergo lernen, lehren und entwickeln können.",
+      "learnBasics": "Grundlagen erlernen"
     },
     "filters": {
-      "searchPlaceholder": "Search infographics (e.g. 'storage rent', 'NiPoPoWs', 'VC chains')",
-      "filters": "Filters",
-      "sortNewest": "Newest",
-      "sortPopular": "Most popular",
+      "searchPlaceholder": "Infografiken suchen (z.B. 'Speichermiete', 'NiPoPoWs', 'VC-Chains')",
+      "filters": "Filter",
+      "sortNewest": "Neueste",
+      "sortPopular": "Beliebteste",
       "sortAZ": "A-Z"
     },
     "grid": {
-      "noResults": "No infographics found",
-      "noResultsDescription": "Try adjusting your filters or search terms.",
-      "resetFilters": "Reset filters",
-      "viewInfographic": "View infographic"
+      "noResults": "Keine Infografiken gefunden",
+      "noResultsDescription": "Versuchen Sie, Ihre Filter oder Suchbegriffe anzupassen.",
+      "resetFilters": "Filter zurücksetzen",
+      "viewInfographic": "Infografik ansehen"
     },
     "pagination": {
-      "previous": "Previous",
-      "next": "Next"
+      "previous": "Zurück",
+      "next": "Weiter"
     },
     "card": {
-      "new": "New",
-      "visualGuide": "Visual guide"
+      "new": "Neu",
+      "visualGuide": "Visueller Leitfaden"
     },
     "shareMenu": {
-      "share": "Share",
-      "download": "Download",
-      "shareTitle": "Share",
-      "shareDescription": "Pick where to share this infographic. Help other cypherpunks find fair-launch chains.",
-      "shareOn": "Share on",
-      "copyLink": "Copy link",
-      "linkCopied": "Link copied",
-      "linkCopiedToast": "Thanks for spreading Ergo.",
-      "downloadTitle": "Download",
-      "downloadDescription": "Choose the best format for reusing this infographic across social, blogs and decks.",
-      "pngStandard": "PNG - Standard (1920x1080)",
-      "pngStandardDesc": "Landscape PNG for desktop and social feeds",
-      "embedCode": "Embed code (HTML)",
-      "embedCodeDesc": "Copy HTML snippet to embed this infographic",
-      "embedCopied": "Embed code copied to your clipboard.",
-      "close": "Close"
+      "share": "Teilen",
+      "download": "Herunterladen",
+      "shareTitle": "Teilen",
+      "shareDescription": "Wählen Sie, wo Sie diese Infografik teilen möchten. Helfen Sie anderen Cypherpunks, Fair-Launch-Chains zu finden.",
+      "shareOn": "Teilen auf",
+      "copyLink": "Link kopieren",
+      "linkCopied": "Link kopiert",
+      "linkCopiedToast": "Danke fürs Verbreiten von Ergo.",
+      "downloadTitle": "Herunterladen",
+      "downloadDescription": "Wählen Sie das beste Format zur Wiederverwendung dieser Infografik in sozialen Medien, Blogs und Präsentationen.",
+      "pngStandard": "PNG – Standard (1920x1080)",
+      "pngStandardDesc": "Querformat-PNG für Desktop und soziale Feeds",
+      "embedCode": "Einbettungscode (HTML)",
+      "embedCodeDesc": "HTML-Snippet kopieren, um diese Infografik einzubetten",
+      "embedCopied": "Einbettungscode in die Zwischenablage kopiert.",
+      "close": "Schließen"
     },
     "howToUse": {
-      "title": "How to use these infographics",
+      "title": "So verwenden Sie diese Infografiken",
       "reuse": {
-        "title": "Reuse Freely",
-        "description": "You can reuse any infographic in presentations, blog posts or educational materials."
+        "title": "Frei wiederverwenden",
+        "description": "Sie können jede Infografik in Präsentationen, Blogbeiträgen oder Lehrmaterialien verwenden."
       },
       "credit": {
-        "title": "Credit & Link Back",
-        "description": "Please credit ergoblockchain.org and link back to the original page."
+        "title": "Quellenangabe & Verlinkung",
+        "description": "Bitte geben Sie ergoblockchain.org als Quelle an und verlinken Sie zur Originalseite."
       },
       "branding": {
-        "title": "Custom Branding",
-        "description": "If you want editable source files or custom branding, contact the Ergo community."
+        "title": "Individuelles Branding",
+        "description": "Wenn Sie bearbeitbare Quelldateien oder individuelles Branding wünschen, wenden Sie sich an die Ergo-Community."
       },
-      "learnMore": "Learn more about Ergo",
-      "joinCommunity": "Join the community"
+      "learnMore": "Mehr über Ergo erfahren",
+      "joinCommunity": "Der Community beitreten"
     },
     "relatedResources": {
-      "title": "Related Resources",
+      "title": "Verwandte Ressourcen",
       "questions": {
-        "title": "Common Questions",
+        "title": "Häufige Fragen",
         "items": [
           {
             "href": "/questions/what-is-ergo",
-            "text": "What is Ergo blockchain?"
+            "text": "Was ist die Ergo-Blockchain?"
           },
           {
             "href": "/questions/what-is-eutxo",
-            "text": "What is the eUTXO model?"
+            "text": "Was ist das eUTXO-Modell?"
           },
           {
             "href": "/questions/what-is-mev-resistance",
-            "text": "How does MEV resistance work?"
+            "text": "Wie funktioniert MEV-Resistenz?"
           },
           {
             "href": "/questions/what-is-storage-rent",
-            "text": "What is storage rent?"
+            "text": "Was ist Speichermiete?"
           }
         ],
-        "viewAll": "View all questions"
+        "viewAll": "Alle Fragen ansehen"
       },
       "playbooks": {
-        "title": "Playbooks & Guides",
+        "title": "Playbooks & Anleitungen",
         "items": [
           {
             "href": "/playbooks/first-transaction-10-minutes",
-            "text": "First Ergo transaction (10-minute start)"
+            "text": "Erste Ergo-Transaktion (10-Minuten-Start)"
           },
           {
             "href": "/playbooks/start-mining-ergo",
-            "text": "Start mining Ergo"
+            "text": "Mit dem Ergo-Mining beginnen"
           },
           {
             "href": "/playbooks/build-defi-on-ergo",
-            "text": "Build DeFi on Ergo"
+            "text": "DeFi auf Ergo aufbauen"
           },
           {
             "href": "/playbooks/private-transaction-ergomixer",
-            "text": "Private transactions with ErgoMixer"
+            "text": "Private Transaktionen mit ErgoMixer"
           }
         ],
-        "viewAll": "View all playbooks"
+        "viewAll": "Alle Playbooks ansehen"
       }
     },
     "emailCapture": {
-      "title": "Stay Updated on Ergo Visual Resources",
-      "description": "Get notified when we publish new infographics, visual guides, and educational content about Ergo blockchain."
+      "title": "Über Ergo-Visualressourcen informiert bleiben",
+      "description": "Erhalten Sie Benachrichtigungen, wenn wir neue Infografiken, visuelle Anleitungen und Bildungsinhalte über die Ergo-Blockchain veröffentlichen."
     }
   }
 }

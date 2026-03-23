@@ -1,15 +1,15 @@
 {
   "events": {
-    "title": "Community Events",
-    "subtitle": "Join Ergo community events",
-    "description": "Discover hackathons, meetups, and conferences in the Ergo ecosystem",
-    "upcoming": "Upcoming Events",
-    "past": "Past Events",
-    "register": "Register",
-    "learnMore": "Learn More",
-    "noEvents": "No events scheduled at the moment. Check back soon!",
-    "hackathons": "Hackathons",
-    "meetups": "Meetups",
-    "conferences": "Conferences"
+    "title": "活動",
+    "subtitle": "加入 Ergo 社群活動",
+    "description": "探索 Ergo 生態系統中的黑客松、見面會和會議",
+    "upcoming": "即將舉行的活動",
+    "past": "過往活動",
+    "register": "立即報名",
+    "learnMore": "了解更多",
+    "noEvents": "目前沒有安排活動。請稍後回來查看！",
+    "hackathons": "黑客松",
+    "meetups": "見面會",
+    "conferences": "會議"
   }
 }

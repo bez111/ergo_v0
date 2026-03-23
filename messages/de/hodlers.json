@@ -1,110 +1,110 @@
 {
   "holdersPage": {
     "hero": {
-      "title": "Store wealth. Keep privacy. Stay sovereign.",
-      "subtitle": "Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.",
-      "cta": "Get an Ergo Wallet",
-      "whyDifferent": "Why Ergo is Different"
+      "title": "Vermögen sichern. Privatsphäre wahren. Souverän bleiben.",
+      "subtitle": "Bitcoins bewährte Sicherheit + Smart Contracts + Optionaler Datenschutz. Feste Gesamtmenge, fairer Start, keine Unternehmenskontrolle.",
+      "cta": "Ergo-Wallet erhalten",
+      "whyDifferent": "Warum Ergo anders ist"
     },
     "breadcrumbs": {
-      "home": "Home",
-      "hodlers": "For Hodlers"
+      "home": "Startseite",
+      "hodlers": "Für Hodler"
     },
     "seo": {
-      "title": "Hold ERG — Sound Money with No Pre-mine | Ergo",
-      "description": "Why hold ERG? Fixed supply (97.7M), fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
+      "title": "ERG halten — Solides Geld ohne Premine | Ergo",
+      "description": "Warum ERG halten? Feste Gesamtmenge (97,7M), fairer Start, keine VC-Kontrolle. Bitcoin-Sicherheit + Smart Contracts + optionaler Datenschutz. Wallets, Tokenomics & mehr.",
       "keywords": [
-        "hold ERG",
-        "Ergo investment",
-        "sound money",
-        "cryptocurrency holders",
-        "Bitcoin alternative",
-        "fair launch",
-        "no pre-mine",
-        "store of value",
-        "financial sovereignty",
-        "ERG tokenomics"
+        "ERG halten",
+        "Ergo Investition",
+        "solides Geld",
+        "Kryptowährungshalter",
+        "Bitcoin-Alternative",
+        "fairer Start",
+        "kein Premine",
+        "Wertaufbewahrung",
+        "finanzielle Souveränität",
+        "ERG Tokenomics"
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Network Hashrate" },
-      "activeAddresses": { "label": "Active Addresses" },
+      "networkHashrate": { "label": "Netzwerk-Hashrate" },
+      "activeAddresses": { "label": "Aktive Adressen" },
       "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG Supply", "trend": "{remaining}M left" },
-      "avgBlockTime": { "label": "Avg Block Time" },
-      "activeNodes": { "label": "Active Nodes" }
+      "ergSupply": { "label": "ERG-Gesamtmenge", "trend": "{remaining}M verbleibend" },
+      "avgBlockTime": { "label": "Durchschn. Blockzeit" },
+      "activeNodes": { "label": "Aktive Nodes" }
     },
     "heroComparisons": [
       {
-        "title": "Mining Access",
-        "ergo": "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
-        "others": "BTC: ASICs only / ETH: Proof-of-Stake"
+        "title": "Mining-Zugang",
+        "ergo": "GPU-freundlich. ASIC-resistent. Jeder kann das Netzwerk absichern.",
+        "others": "BTC: Nur ASICs / ETH: Proof-of-Stake"
       },
       {
-        "title": "Fair Launch",
-        "ergo": "0% pre-mine. 0% VC allocation. 100% fair distribution.",
-        "others": "BTC: Fair / ETH: 70M premined"
+        "title": "Fairer Start",
+        "ergo": "0% Premine. 0% VC-Zuteilung. 100% faire Verteilung.",
+        "others": "BTC: Fair / ETH: 70M vorgeschürft"
       },
       {
-        "title": "Long-term Security",
-        "ergo": "Storage rent ensures miners get paid forever. Built for decades.",
-        "others": "BTC: Fees only / ETH: Token burn"
+        "title": "Langfristige Sicherheit",
+        "ergo": "Speichermiete stellt sicher, dass Miner dauerhaft bezahlt werden. Gebaut für Jahrzehnte.",
+        "others": "BTC: Nur Gebühren / ETH: Token-Verbrennung"
       }
     ],
     "coreValues": {
       "soundMoney": {
-        "title": "Sound Money",
-        "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
-        "highlight": "Protect your wealth"
+        "title": "Solides Geld",
+        "description": "97,7M maximale Gesamtmenge. Keine Inflation. Keine VCs, die auf Sie abwerfen. Proof-of-Work-Sicherheit seit 2019 bewährt.",
+        "highlight": "Schützen Sie Ihr Vermögen"
       },
       "smartContracts": {
         "title": "Smart Contracts",
-        "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
-        "highlight": "Utility without risk"
+        "description": "DeFi, DEXs, Stablecoins, die wirklich funktionieren. Programmierbares Geld mit Bitcoin-Sicherheitsniveau.",
+        "highlight": "Nützlichkeit ohne Risiko"
       },
       "programmablePrivacy": {
-        "title": "Programmable Privacy",
-        "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
-        "highlight": "Your data, your choice"
+        "title": "Programmierbarer Datenschutz",
+        "description": "Verbergen Sie, was Sie wollen. Zeigen Sie, was Sie müssen. Optionaler Datenschutz ohne vertrauenswürdige Einrichtung oder Hintertüren.",
+        "highlight": "Ihre Daten, Ihre Wahl"
       },
       "fairAccessible": {
-        "title": "Fair & Accessible",
-        "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
-        "highlight": "True decentralization"
+        "title": "Fair & Zugänglich",
+        "description": "Null Premine. Null VC-Zuteilung. Null Unternehmenskontrolle. 100% community-getrieben seit dem ersten Tag.",
+        "highlight": "Echte Dezentralisierung"
       }
     },
     "comparison": {
-      "title": "How ERG Compares",
+      "title": "Wie ERG abschneidet",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "Kriterium",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "Deep dive: Detailed comparison",
+      "deepDive": "Detaillierter Vergleich",
       "rows": [
         {
-          "criterion": "Monetary Policy",
+          "criterion": "Geldpolitik",
           "bitcoin": {
             "status": "good",
-            "text": "Fixed 21M supply"
+            "text": "Feste 21M Gesamtmenge"
           },
           "ethereum": {
             "status": "warning",
-            "text": "Changing tokenomics"
+            "text": "Sich ändernde Tokenomics"
           },
           "monero": {
             "status": "warning",
-            "text": "Tail emission"
+            "text": "Endlos-Emission"
           },
           "ergo": {
             "status": "good",
-            "text": "Fixed 97M supply"
+            "text": "Feste 97M Gesamtmenge"
           }
         },
         {
-          "criterion": "Security Model",
+          "criterion": "Sicherheitsmodell",
           "bitcoin": {
             "status": "good",
             "text": "Proof-of-Work"
@@ -123,7 +123,7 @@
           }
         },
         {
-          "criterion": "Privacy Features",
+          "criterion": "Datenschutzfunktionen",
           "bitcoin": {
             "status": "bad",
             "text": "Transparent"
@@ -134,204 +134,204 @@
           },
           "monero": {
             "status": "good",
-            "text": "Always private"
+            "text": "Immer privat"
           },
           "ergo": {
             "status": "good",
-            "text": "Optional privacy"
+            "text": "Optionaler Datenschutz"
           }
         },
         {
           "criterion": "Smart Contracts",
           "bitcoin": {
             "status": "bad",
-            "text": "Very limited"
+            "text": "Sehr eingeschränkt"
           },
           "ethereum": {
             "status": "good",
-            "text": "Full featured"
+            "text": "Vollständig ausgestattet"
           },
           "monero": {
             "status": "bad",
-            "text": "None"
+            "text": "Keine"
           },
           "ergo": {
             "status": "good",
-            "text": "eUTXO model"
+            "text": "eUTXO-Modell"
           }
         },
         {
-          "criterion": "Fair Launch",
+          "criterion": "Fairer Start",
           "bitcoin": {
             "status": "good",
-            "text": "No premine"
+            "text": "Kein Premine"
           },
           "ethereum": {
             "status": "warning",
-            "text": "70M premine"
+            "text": "70M Premine"
           },
           "monero": {
             "status": "good",
-            "text": "No premine"
+            "text": "Kein Premine"
           },
           "ergo": {
             "status": "good",
-            "text": "No premine"
+            "text": "Kein Premine"
           }
         }
       ]
     },
     "liveMetrics": {
-      "title": "Live Network Health",
-      "subtitle": "Live on-chain data (updated in real time)"
+      "title": "Live-Netzwerkstatus",
+      "subtitle": "Live On-Chain-Daten (in Echtzeit aktualisiert)"
     },
     "useCasesSection": {
-      "title": "What can I actually DO with Ergo?",
+      "title": "Was kann ich mit Ergo tatsächlich TUN?",
       "items": [
         {
-          "title": "Store Value Long-term",
-          "description": "Cold storage wallets with hardware support"
+          "title": "Langfristig Wert speichern",
+          "description": "Cold-Storage-Wallets mit Hardware-Unterstützung"
         },
         {
-          "title": "Use DeFi Protocols",
-          "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+          "title": "DeFi-Protokolle nutzen",
+          "description": "Kettenübergreifende Brücke für Ergo, Cardano und andere Blockchains"
         },
         {
-          "title": "Send Private Transactions",
-          "description": "Optional privacy for sensitive transfers"
+          "title": "Private Transaktionen senden",
+          "description": "Optionaler Datenschutz für sensible Überweisungen"
         },
         {
-          "title": "Support the Network",
-          "description": "Mining, running nodes, community participation"
+          "title": "Das Netzwerk unterstützen",
+          "description": "Mining, Node-Betrieb, Community-Teilnahme"
         }
       ]
     },
     "chooseYourPath": {
-      "title": "Choose Your",
-      "titleHighlight": "Path",
+      "title": "Wählen Sie Ihren",
+      "titleHighlight": "Weg",
       "buyHold": {
-        "title": "Buy & Hold",
-        "description": "Get ERG and store securely"
+        "title": "Kaufen & Halten",
+        "description": "ERG erhalten und sicher aufbewahren"
       },
       "exploreDeFi": {
-        "title": "Explore DeFi",
-        "description": "Put your ERG to work"
+        "title": "DeFi erkunden",
+        "description": "Ihr ERG für sich arbeiten lassen"
       },
       "startMining": {
-        "title": "Start Mining",
-        "description": "Secure the network, earn rewards"
+        "title": "Mining starten",
+        "description": "Netzwerk absichern, Belohnungen verdienen"
       },
       "buildDapps": {
-        "title": "Build dApps",
-        "description": "Create the future"
+        "title": "dApps entwickeln",
+        "description": "Die Zukunft gestalten"
       },
       "interestedInMining": {
-        "title": "Interested in mining?",
-        "description": "Earn ERG by securing the network with your GPU"
+        "title": "Am Mining interessiert?",
+        "description": "ERG verdienen, indem Sie das Netzwerk mit Ihrer GPU absichern"
       }
     },
     "faq": {
-      "title": "Holders FAQ",
+      "title": "FAQ für Halter",
       "questions": {
         "0": {
-          "question": "What makes ERG different from Bitcoin?",
-          "answer": "ERG extends Bitcoin's security model with smart contracts, optional privacy, and storage rent for long-term sustainability. Same PoW security, more functionality."
+          "question": "Was macht ERG anders als Bitcoin?",
+          "answer": "ERG erweitert Bitcoins Sicherheitsmodell durch Smart Contracts, optionalen Datenschutz und Speichermiete für langfristige Nachhaltigkeit. Gleiche PoW-Sicherheit, mehr Funktionalität."
         },
         "1": {
-          "question": "Is ERG a good long-term investment?",
-          "answer": "ERG has strong fundamentals: fixed supply, fair launch, real utility through DeFi. Always DYOR and never invest more than you can afford to lose."
+          "question": "Ist ERG eine gute langfristige Investition?",
+          "answer": "ERG hat starke Grundlagen: feste Gesamtmenge, fairer Start, echter Nutzen durch DeFi. Führen Sie immer eigene Recherchen durch und investieren Sie niemals mehr, als Sie sich leisten können zu verlieren."
         },
         "2": {
-          "question": "How do I store ERG safely?",
-          "answer": "Use Nautilus wallet for convenience or Ledger hardware wallet for maximum security. Never share your seed phrase."
+          "question": "Wie speichere ich ERG sicher?",
+          "answer": "Verwenden Sie das Nautilus-Wallet für Bequemlichkeit oder ein Ledger-Hardware-Wallet für maximale Sicherheit. Teilen Sie niemals Ihre Seed-Phrase."
         },
         "3": {
-          "question": "Can I earn yield on my ERG?",
-          "answer": "Yes! You can provide liquidity on Spectrum DEX, use ErgoPad launchpad, or participate in various DeFi protocols."
+          "question": "Kann ich mit meinem ERG Rendite erzielen?",
+          "answer": "Ja! Sie können Liquidität auf Spectrum DEX bereitstellen, das ErgoPad-Launchpad nutzen oder an verschiedenen DeFi-Protokollen teilnehmen."
         },
         "4": {
-          "question": "Is Ergo a security or commodity?",
-          "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, community-driven project. The fair launch and Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective."
+          "question": "Ist Ergo ein Wertpapier oder eine Ware?",
+          "answer": "Ergo wurde 2019 fair gestartet, ohne Premine, ohne ICO und ohne VC-Finanzierung. Wie Bitcoin ist es ein dezentrales, community-getriebenes Projekt. Der faire Start und der Proof-of-Work-Konsens machen es aus regulatorischer Sicht Bitcoin ähnlich."
         },
         "5": {
-          "question": "Who controls the Ergo project?",
-          "answer": "No single entity controls Ergo. It's maintained by the Ergo Foundation, core developers, and community contributors. All development is open-source on GitHub. The community votes on major protocol changes."
+          "question": "Wer kontrolliert das Ergo-Projekt?",
+          "answer": "Keine einzelne Einheit kontrolliert Ergo. Es wird von der Ergo Foundation, Kernentwicklern und Community-Mitwirkenden gepflegt. Alle Entwicklungen sind Open Source auf GitHub. Die Community stimmt über wesentliche Protokolländerungen ab."
         },
         "6": {
-          "question": "What happens when mining rewards end?",
-          "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a storage rent mechanism that recycles lost coins. This creates sustainable long-term security without inflation."
+          "question": "Was passiert, wenn die Mining-Belohnungen enden?",
+          "answer": "Ergo hat einen 8-jährigen Emissionsplan, der etwa 2027 endet. Danach werden Miner durch Transaktionsgebühren und einen Speichermietmechanismus angereizt, der verlorene Münzen recycelt. Dies schafft langfristige Sicherheit ohne Inflation."
         },
         "7": {
-          "question": "Where can I buy and store ERG?",
-          "answer": "ERG is available on major exchanges like KuCoin, Gate.io, and CoinEx. For storage, use Nautilus Wallet or hardware wallets. See our complete buying guide at /use/get-erg."
+          "question": "Wo kann ich ERG kaufen und aufbewahren?",
+          "answer": "ERG ist auf großen Börsen wie KuCoin, Gate.io und CoinEx erhältlich. Zur Aufbewahrung verwenden Sie Nautilus Wallet oder Hardware-Wallets. Vollständige Kaufanleitung unter /use/get-erg."
         },
         "8": {
-          "question": "Is Ergo's privacy legal to use?",
-          "answer": "Ergo's privacy features are optional and designed for legitimate use cases like business confidentiality and personal financial privacy. Always check your local regulations. The technology itself is similar to other privacy-preserving cryptocurrencies and compliance tools are available for institutions."
+          "question": "Ist Ergos Datenschutz legal nutzbar?",
+          "answer": "Ergos Datenschutzfunktionen sind optional und für legitime Anwendungsfälle wie geschäftliche Vertraulichkeit und persönliche finanzielle Privatsphäre konzipiert. Überprüfen Sie stets Ihre lokalen Vorschriften. Die Technologie selbst ähnelt anderen datenschutzwahrenden Kryptowährungen, und Compliance-Tools sind für Institutionen verfügbar."
         }
       }
     }
   },
   "holdersData": {
     "mining-access": {
-      "title": "Mining Access"
+      "title": "Mining-Zugang"
     },
     "fair-launch": {
-      "title": "Fair Launch"
+      "title": "Fairer Start"
     },
     "long-term-security": {
-      "title": "Long-term Security"
+      "title": "Langfristige Sicherheit"
     },
     "sound-money": {
-      "title": "Sound Money",
-      "description": "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019."
+      "title": "Solides Geld",
+      "description": "97,7M maximale Gesamtmenge. Keine Inflation. Keine VCs, die auf Sie abwerfen. Proof-of-Work-Sicherheit seit 2019 bewährt."
     },
     "smart-contracts": {
       "title": "Smart Contracts",
-      "description": "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security."
+      "description": "DeFi, DEXs, Stablecoins, die wirklich funktionieren. Programmierbares Geld mit Bitcoin-Sicherheitsniveau."
     },
     "programmable-privacy": {
-      "title": "Programmable Privacy",
-      "description": "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors."
+      "title": "Programmierbarer Datenschutz",
+      "description": "Verbergen Sie, was Sie wollen. Zeigen Sie, was Sie müssen. Optionaler Datenschutz ohne vertrauenswürdige Einrichtung oder Hintertüren."
     },
     "fair-accessible": {
-      "title": "Fair & Accessible",
-      "description": "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one."
+      "title": "Fair & Zugänglich",
+      "description": "Null Premine. Null VC-Zuteilung. Null Unternehmenskontrolle. 100% community-getrieben seit dem ersten Tag."
     },
     "store-value": {
-      "title": "Store Value Long-term",
-      "description": "Cold storage wallets with hardware support"
+      "title": "Langfristig Wert speichern",
+      "description": "Cold-Storage-Wallets mit Hardware-Unterstützung"
     },
     "use-defi": {
-      "title": "Use DeFi Protocols",
-      "description": "Cross-chain bridge for Ergo, Cardano, and other blockchains"
+      "title": "DeFi-Protokolle nutzen",
+      "description": "Kettenübergreifende Brücke für Ergo, Cardano und andere Blockchains"
     },
     "private-transactions": {
-      "title": "Send Private Transactions",
-      "description": "Optional privacy for sensitive transfers"
+      "title": "Private Transaktionen senden",
+      "description": "Optionaler Datenschutz für sensible Überweisungen"
     },
     "support-network": {
-      "title": "Support the Network",
-      "description": "Mining, running nodes, community participation"
+      "title": "Das Netzwerk unterstützen",
+      "description": "Mining, Node-Betrieb, Community-Teilnahme"
     },
     "security-commodity": {
-      "question": "Is Ergo a security or commodity?",
+      "question": "Ist Ergo ein Wertpapier oder eine Ware?",
       "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
     },
     "different-from-bitcoin": {
-      "question": "How is Ergo different from Bitcoin?",
+      "question": "Wie unterscheidet sich Ergo von Bitcoin?",
       "answer": "Ergo shares Bitcoin"
     },
     "who-controls": {
-      "question": "Who controls the Ergo project?",
+      "question": "Wer kontrolliert das Ergo-Projekt?",
       "answer": "No single entity controls Ergo. It"
     },
     "mining-rewards-end": {
-      "question": "What happens when mining rewards end?",
+      "question": "Was passiert, wenn die Mining-Belohnungen enden?",
       "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
     },
     "buy-store": {
-      "question": "Where can I buy and store ERG?",
+      "question": "Wo kann ich ERG kaufen und aufbewahren?",
       "answer": "ERG is available on major exchanges like <a href=\\"
     },
     "privacy-legal": {

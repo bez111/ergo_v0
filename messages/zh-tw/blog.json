@@ -1,37 +1,37 @@
 {
   "blog": {
-    "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "title": "部落格",
+    "subtitle": "最新消息與更新",
+    "description": "來自 Ergo 的最新消息與更新",
+    "readMore": "閱讀更多",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "技術",
+      "ecosystem": "生態系統",
+      "community": "社群",
+      "announcements": "公告",
+      "all": "所有文章",
+      "development": "開發",
+      "technical": "技術",
+      "education": "教育"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "部落格 - Ergo 新聞與更新 | Ergo 平台",
+      "description": "閱讀來自 Ergo 區塊鏈團隊的最新消息、更新與見解。",
+      "keywords": "Ergo 部落格, 區塊鏈新聞, 更新, 文章"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "精選文章",
+      "readMore": "閱讀更多"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "最新文章",
+      "viewAll": "查看所有文章"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "訂閱電子報",
+      "description": "將最新更新直接發送到您的收件匣",
+      "placeholder": "請輸入您的電子郵件",
+      "subscribe": "訂閱"
     }
   }
 }
