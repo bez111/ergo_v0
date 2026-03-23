@@ -1,251 +1,251 @@
 {
   "start": {
-    "title": "Get Started",
-    "subtitle": "Begin your Ergo journey",
-    "description": "Begin your journey with Ergo",
+    "title": "はじめる",
+    "subtitle": "Ergoの旅を始めよう",
+    "description": "Ergoとの旅を始める",
     "seo": {
-      "title": "Get Started - Begin with Ergo | Ergo Platform",
-      "description": "Start using Ergo blockchain: wallets, exchanges, and resources for beginners.",
-      "keywords": "get started Ergo, beginner guide, Ergo wallet, how to start"
+      "title": "はじめる - Ergoを始める | Ergoプラットフォーム",
+      "description": "Ergoブロックチェーンを使い始める：初心者向けウォレット、取引所、リソース。",
+      "keywords": "Ergoはじめる, 初心者ガイド, Ergoウォレット, 始め方"
     },
     "schema": {
-      "name": "Getting Started with Ergo Blockchain",
+      "name": "Ergoブロックチェーンを始める",
       "faq": {
         "items": [
           {
-            "question": "How do I get started with Ergo?",
-            "answer": "Download a wallet like Nautilus, buy ERG from an exchange, and make your first transaction. Our step-by-step guide walks you through each step."
+            "question": "Ergoを始めるにはどうすればいいですか？",
+            "answer": "Nautilusなどのウォレットをダウンロードし、取引所でERGを購入し、最初のトランザクションを行いましょう。ステップバイステップガイドで各ステップを説明します。"
           },
           {
-            "question": "What wallet should I use?",
-            "answer": "For most users, we recommend Nautilus browser extension for desktop or Ergo Mobile for iOS/Android. Both are secure and support all Ergo features."
+            "question": "どのウォレットを使うべきですか？",
+            "answer": "ほとんどのユーザーには、デスクトップにはNautilusブラウザ拡張機能、iOS/AndroidにはErgo Mobileをお勧めします。両方とも安全でErgoのすべての機能をサポートしています。"
           },
           {
-            "question": "Where can I buy ERG?",
-            "answer": "ERG is available on exchanges like KuCoin and Gate.io, or you can use decentralized exchanges like ErgoDEX for more privacy."
+            "question": "ERGはどこで購入できますか？",
+            "answer": "ERGはKuCoinやGate.ioのような取引所で購入できます。プライバシーを重視する場合はErgoDEXのような分散型取引所を利用できます。"
           },
           {
-            "question": "Is Ergo suitable for beginners?",
-            "answer": "Yes! Our getting started guide is designed for complete beginners. No prior crypto experience is required."
+            "question": "Ergoは初心者に適していますか？",
+            "answer": "はい！入門ガイドは完全な初心者向けに設計されています。暗号通貨の事前知識は不要です。"
           }
         ]
       }
     },
     "page": {
       "breadcrumbs": {
-        "start": "Start"
+        "start": "はじめる"
       },
       "aria": {
-        "downloadWallet": "Download {wallet} wallet",
-        "tradeErgOn": "Trade ERG on {exchange}"
+        "downloadWallet": "{wallet}ウォレットをダウンロード",
+        "tradeErgOn": "{exchange}でERGをトレード"
       },
       "disclaimer": {
-        "title": "Disclaimer",
-        "text": "Links are informational. Do your own research. Trading involves risk."
+        "title": "免責事項",
+        "text": "リンクは参考情報です。自己調査を行ってください。トレーディングにはリスクが伴います。"
       },
       "hero": {
-        "title": "Start Using",
+        "title": "使い始める",
         "titleHighlight": "Ergo",
-        "subtitle": "Get started with Ergo blockchain in 3 simple steps",
-        "description": "Download a wallet, buy ERG tokens, and send your first transaction. Join the decentralized finance revolution with predictable fees and enhanced security."
+        "subtitle": "3つの簡単なステップでErgoブロックチェーンを始める",
+        "description": "ウォレットをダウンロードし、ERGトークンを購入し、最初のトランザクションを送りましょう。予測可能な手数料とセキュリティ強化で分散型金融革命に参加しよう。"
       },
       "quickFacts": {
-        "title": "Quick Facts",
+        "title": "クイックファクト",
         "items": [
           {
-            "title": "Secure by Design",
-            "description": "Non-custodial wallets give you full control of your funds"
+            "title": "設計から安全",
+            "description": "非カストディアルウォレットで資金の完全なコントロールを維持"
           },
           {
-            "title": "Low Fees",
-            "description": "Predictable fees around $0.01 per transaction"
+            "title": "低手数料",
+            "description": "トランザクションあたり約$0.01の予測可能な手数料"
           },
           {
-            "title": "Fast Confirmation",
-            "description": "Transactions confirm in approximately 2 minutes"
+            "title": "高速確認",
+            "description": "トランザクションは約2分で確認される"
           }
         ]
       },
       "steps": [
         {
           "number": "01",
-          "title": "Download a Wallet",
-          "description": "Choose a secure wallet to store your ERG tokens",
+          "title": "ウォレットをダウンロード",
+          "description": "ERGトークンを保管する安全なウォレットを選ぶ",
           "wallets": [
             {
               "name": "Nautilus",
-              "type": "Browser Extension",
-              "description": "Most popular Ergo wallet with dApp support and advanced features",
+              "type": "ブラウザ拡張機能",
+              "description": "dAppsサポートと高度な機能を持つ最も人気のあるErgoウォレット",
               "recommended": true,
-              "buttonText": "Download Nautilus"
+              "buttonText": "Nautilusをダウンロード"
             },
             {
               "name": "Ergo Mobile",
               "type": "iOS & Android",
-              "description": "Official mobile wallet with secure storage and easy transactions",
+              "description": "安全なストレージと簡単なトランザクション機能を持つ公式モバイルウォレット",
               "recommended": false,
-              "buttonText": "Get Ergo Mobile"
+              "buttonText": "Ergo Mobileを入手"
             },
             {
               "name": "SAFEW",
-              "type": "Web Wallet",
-              "description": "Simple web-based wallet for quick access and beginners",
+              "type": "ウェブウォレット",
+              "description": "クイックアクセスと初心者向けのシンプルなウェブベースウォレット",
               "recommended": false,
-              "buttonText": "Open SAFEW"
+              "buttonText": "SAFEWを開く"
             }
           ]
         },
         {
           "number": "02",
-          "title": "Buy ERG Tokens",
-          "description": "Purchase ERG from exchanges or DEXs",
+          "title": "ERGトークンを購入",
+          "description": "取引所またはDEXでERGを購入する",
           "exchanges": [
             {
               "name": "KuCoin",
-              "type": "Spot - ~0.1% fees",
-              "description": "Large centralized exchange with high liquidity and ERG/USDT pair",
-              "buttonText": "Trade ERG on KuCoin"
+              "type": "スポット - ~0.1%手数料",
+              "description": "ERG/USDTペアで高い流動性を持つ大型中央集権型取引所",
+              "buttonText": "KuCoinでERGをトレード"
             },
             {
               "name": "Gate.io",
-              "type": "Spot - ~0.2% fees",
-              "description": "Global exchange with multiple ERG trading pairs and good volume",
-              "buttonText": "Trade ERG on Gate.io"
+              "type": "スポット - ~0.2%手数料",
+              "description": "複数のERGトレーディングペアと良好なボリュームを持つグローバル取引所",
+              "buttonText": "Gate.ioでERGをトレード"
             },
             {
               "name": "ErgoDEX",
-              "type": "No KYC - ~0.3% fees",
-              "description": "Native Ergo DEX with full decentralization and privacy",
-              "buttonText": "Open ErgoDEX"
+              "type": "KYCなし - ~0.3%手数料",
+              "description": "完全な分散化とプライバシーを持つネイティブErgo DEX",
+              "buttonText": "ErgoDEXを開く"
             }
           ],
-          "disclaimer": "Links are informational. Do your own research. Trading involves risk."
+          "disclaimer": "リンクは参考情報です。自己調査を行ってください。トレーディングにはリスクが伴います。"
         },
         {
           "number": "03",
-          "title": "Send Your First Transaction",
-          "description": "Test your wallet by sending ERG",
+          "title": "最初のトランザクションを送る",
+          "description": "ERGを送ってウォレットをテストする",
           "proTips": {
-            "title": "Pro Tips",
-            "subtitle": "Best practices for success"
+            "title": "プロのヒント",
+            "subtitle": "成功のためのベストプラクティス"
           },
           "tips": [
-            "Start with a small test amount (0.1 ERG)",
-            "Transaction fees are typically ~0.001-0.002 ERG ($0.01)",
-            "Transactions confirm in ~2 minutes",
-            "Always double-check the recipient address"
+            "少額のテスト金額（0.1 ERG）から始める",
+            "トランザクション手数料は通常~0.001-0.002 ERG ($0.01)",
+            "トランザクションは~2分で確認される",
+            "必ず受信者アドレスを再確認する"
           ]
         }
       ],
       "badges": {
-        "recommended": "Recommended"
+        "recommended": "おすすめ"
       },
       "whatsNext": {
-        "title": "What's Next?",
-        "description": "Now that you have ERG, explore the Ergo ecosystem",
+        "title": "次は？",
+        "description": "ERGを手に入れたら、Ergoエコシステムを探索しましょう",
         "dapps": {
-          "title": "Explore dApps",
-          "subtitle": "Ecosystem Applications",
-          "description": "Discover decentralized applications built on Ergo"
+          "title": "dAppsを探索する",
+          "subtitle": "エコシステムアプリケーション",
+          "description": "Ergoで構築された分散型アプリケーションを発見する"
         },
         "docs": {
-          "title": "Learn More",
-          "subtitle": "Technical Documentation",
-          "description": "Deep dive into Ergo's technology and features"
+          "title": "詳しく学ぶ",
+          "subtitle": "技術ドキュメント",
+          "description": "Ergoの技術と機能を深く掘り下げる"
         }
       },
       "finalCta": {
-        "title": "Get Started with Ergo",
-        "description": "Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+        "title": "Ergoを始める",
+        "description": "最新のアップデート、初心者向けガイド、ステップバイステップチュートリアルをメールでお届けします"
       }
     },
     "quiz": {
-      "title": "Discover Your Ergo Profile",
-      "subtitle": "Find your path",
-      "description": "Answer a few questions to get personalized recommendations for your Ergo journey.",
+      "title": "あなたのErgoプロフィールを発見する",
+      "subtitle": "あなたのパスを見つける",
+      "description": "いくつかの質問に答えてErgoの旅のパーソナライズされた推奨を受け取りましょう。",
       "seo": {
-        "title": "Ergo Quiz | Find Your Path in Blockchain",
-        "description": "Take our interactive quiz to discover your ideal path in the Ergo ecosystem. Whether you're a developer, miner, investor, or enthusiast, get personalized recommendations.",
-        "keywords": "ergo quiz, blockchain quiz, crypto personality test, find your path, ergo ecosystem, interactive quiz",
-        "ogTitle": "Ergo Quiz — Discover Your Blockchain Path",
-        "ogDescription": "Interactive quiz to find your perfect role in the Ergo ecosystem.",
-        "ogAlt": "Ergo Quiz",
-        "twitterTitle": "Find Your Path in Ergo | Interactive Quiz",
-        "twitterDescription": "Developer? Miner? Investor? Take the quiz to find your perfect fit."
+        "title": "Ergoクイズ | ブロックチェーンでのパスを見つける",
+        "description": "インタラクティブクイズでErgoエコシステムにおける理想的なパスを発見しましょう。開発者、マイナー、投資家、愛好家のいずれでも、パーソナライズされた推奨が得られます。",
+        "keywords": "Ergoクイズ, ブロックチェーンクイズ, 暗号通貨パーソナリティテスト, パスを見つける, Ergoエコシステム, インタラクティブクイズ",
+        "ogTitle": "Ergoクイズ — ブロックチェーンパスを発見する",
+        "ogDescription": "Ergoエコシステムで完璧な役割を見つけるインタラクティブクイズ。",
+        "ogAlt": "Ergoクイズ",
+        "twitterTitle": "Ergoでのパスを見つける | インタラクティブクイズ",
+        "twitterDescription": "開発者？マイナー？投資家？クイズで完璧な適合を見つけよう。"
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Quiz"
+          "quiz": "クイズ"
         },
         "quiz": {
-          "name": "Ergo Ecosystem Path Finder Quiz",
-          "description": "Interactive quiz to help users find their ideal path in the Ergo ecosystem",
-          "educationalLevel": "Beginner",
-          "learningResourceType": "Quiz",
+          "name": "Ergoエコシステムパスファインダークイズ",
+          "description": "ユーザーがErgoエコシステムで理想的なパスを見つけるのを助けるインタラクティブクイズ",
+          "educationalLevel": "初心者",
+          "learningResourceType": "クイズ",
           "timeRequired": "PT5M"
         }
       },
-      "startButton": "Start Quiz",
-      "restartButton": "Restart Quiz",
-      "previousButton": "Previous",
-      "nextButton": "Next",
-      "progress": "Question {current} of {total}",
+      "startButton": "クイズを始める",
+      "restartButton": "クイズを再開する",
+      "previousButton": "前へ",
+      "nextButton": "次へ",
+      "progress": "質問 {current} / {total}",
       "results": {
-        "title": "Your Results",
-        "yourProfile": "Your Profile",
-        "matchScore": "{score}% Match",
-        "recommendedTools": "Recommended Tools",
-        "nextSteps": "Next Steps",
-        "communityChannels": "Community Channels"
+        "title": "あなたの結果",
+        "yourProfile": "あなたのプロフィール",
+        "matchScore": "{score}%マッチ",
+        "recommendedTools": "おすすめツール",
+        "nextSteps": "次のステップ",
+        "communityChannels": "コミュニティチャンネル"
       },
       "cta": {
-        "title": "Ready to Start Your Journey?",
-        "description": "Get updates and tips tailored to your Ergo profile."
+        "title": "旅を始める準備はできていますか？",
+        "description": "あなたのErgoプロフィールに合わせたアップデートとヒントを受け取る。"
       },
       "questions": [
         {
           "id": "q1",
-          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "question": "ブロックチェーン技術とErgoに主に何が引き付けますか？",
           "options": [
             {
-              "text": "Investment potential and financial opportunities",
+              "text": "投資ポテンシャルと金融機会",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Building applications and contributing to new technologies",
+              "text": "アプリケーションの構築と新技術への貢献",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Supporting network security and earning rewards through hardware",
+              "text": "ネットワークセキュリティのサポートとハードウェアによる報酬獲得",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Collecting, creating, or trading unique digital items and art",
+              "text": "ユニークなデジタルアイテムやアートのコレクション、制作、取引",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Using new financial tools for borrowing, lending, or trading",
+              "text": "借入、貸付、取引のための新しい金融ツールの使用",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Enhancing my financial privacy and anonymity",
+              "text": "金融プライバシーと匿名性の向上",
               "profiles": [
                 "privacy"
               ]
             },
             {
-              "text": "I'm new and just want to learn the basics first!",
+              "text": "初心者で、まず基本を学びたい！",
               "profiles": [
                 "learner"
               ]
@@ -254,10 +254,10 @@
         },
         {
           "id": "q2",
-          "question": "How would you describe your technical comfort level?",
+          "question": "技術的なスキルレベルはどのくらいですか？",
           "options": [
             {
-              "text": "Very comfortable; I can code or manage complex systems",
+              "text": "とても快適；コーディングや複雑なシステムの管理ができる",
               "profiles": [
                 "developer",
                 "miner",
@@ -265,7 +265,7 @@
               ]
             },
             {
-              "text": "Moderately comfortable; I can learn new software and follow guides",
+              "text": "ある程度快適；新しいソフトウェアを学んでガイドに従える",
               "profiles": [
                 "defi",
                 "nft",
@@ -273,7 +273,7 @@
               ]
             },
             {
-              "text": "Not very technical; I prefer simple and user-friendly applications",
+              "text": "あまり技術的でない；シンプルでユーザーフレンドリーなアプリを好む",
               "profiles": [
                 "investor",
                 "learner",
@@ -284,42 +284,42 @@
         },
         {
           "id": "q3",
-          "question": "What kind of activity within Ergo are you most interested in?",
+          "question": "Ergo内でどんな活動に最も興味がありますか？",
           "options": [
             {
-              "text": "Growing my assets and exploring financial instruments",
+              "text": "資産を増やし、金融商品を探索する",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Creating new tools, dApps, or smart contracts",
+              "text": "新しいツール、dApps、スマートコントラクトを作成する",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Securing the network and earning ERG",
+              "text": "ネットワークを守りERGを獲得する",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Exploring digital art and collectibles",
+              "text": "デジタルアートとコレクタブルを探索する",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Deeply understanding the technology and its principles",
+              "text": "技術とその原則を深く理解する",
               "profiles": [
                 "learner",
                 "developer"
               ]
             },
             {
-              "text": "Protecting my financial privacy",
+              "text": "金融プライバシーを守る",
               "profiles": [
                 "privacy"
               ]
@@ -328,29 +328,29 @@
         },
         {
           "id": "q4",
-          "question": "If you're interested in finance/investment, what's your approach to new financial technologies?",
+          "question": "金融・投資に興味がある場合、新しい金融技術へのアプローチは？",
           "options": [
             {
-              "text": "Looking for established, lower-risk ways to engage",
+              "text": "確立された低リスクの方法を探している",
               "profiles": [
                 "investor"
               ]
             },
             {
-              "text": "Exploring DeFi opportunities while understanding the risks",
+              "text": "リスクを理解しながらDeFiの機会を探索する",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Interested in cutting-edge, experimental financial tools",
+              "text": "最先端の実験的な金融ツールに興味がある",
               "profiles": [
                 "defi",
                 "developer"
               ]
             },
             {
-              "text": "Not particularly interested in financial aspects",
+              "text": "金融的な側面には特に興味がない",
               "profiles": [
                 "learner",
                 "nft",
@@ -361,36 +361,36 @@
         },
         {
           "id": "q5",
-          "question": "If you want to contribute, what type of participation inspires you most?",
+          "question": "コントリビュートしたい場合、どんな参加方法が最もインスピレーションを与えますか？",
           "options": [
             {
-              "text": "Writing code and building software",
+              "text": "コードを書き、ソフトウェアを構築する",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Creating educational content, art, or marketing materials",
+              "text": "教育コンテンツ、アート、マーケティング素材を作成する",
               "profiles": [
                 "nft",
                 "learner"
               ]
             },
             {
-              "text": "Helping others in the community and answering questions",
+              "text": "コミュニティの他者を助け、質問に答える",
               "profiles": [
                 "learner"
               ]
             },
             {
-              "text": "Participating in governance discussions and proposals",
+              "text": "ガバナンスの議論と提案に参加する",
               "profiles": [
                 "developer",
                 "privacy"
               ]
             },
             {
-              "text": "Supporting network infrastructure",
+              "text": "ネットワークインフラをサポートする",
               "profiles": [
                 "miner"
               ]
@@ -401,48 +401,48 @@
       "profiles": {
         "developer": {
           "id": "developer",
-          "name": "Aspiring Developer",
-          "title": "BUILD THE FUTURE",
-          "description": "You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.",
+          "name": "開発者志望",
+          "title": "未来を構築せよ",
+          "description": "あなたは革新的なアプリケーションの開発や最先端技術への貢献に引き付けられています！ErgoのパワフルなErgoScriptとeUTXOモデルは、安全で効率的なdAppsを構築するための独自の機会を提供します。",
           "icon": "💻",
           "color": "from-primary to-orange-500",
           "tools": [
             {
-              "category": "Documentation & Learning",
+              "category": "ドキュメントと学習",
               "items": [
                 {
                   "name": "ErgoDocs",
-                  "description": "Comprehensive developer documentation",
+                  "description": "包括的な開発者ドキュメント",
                   "link": "/build/docs"
                 },
                 {
                   "name": "ErgoScript Primer",
-                  "description": "Learn Ergo's smart contract language",
+                  "description": "Ergoのスマートコントラクト言語を学ぶ",
                   "link": "/build/tutorials"
                 },
                 {
                   "name": "Ergo Playgrounds",
-                  "description": "Interactive coding environment",
+                  "description": "インタラクティブなコーディング環境",
                   "link": "/build/playground"
                 }
               ]
             },
             {
-              "category": "Development Tools",
+              "category": "開発ツール",
               "items": [
                 {
                   "name": "AppKit",
-                  "description": "Java/Scala development toolkit",
+                  "description": "Java/Scala開発ツールキット",
                   "link": "/build/tools/appkit"
                 },
                 {
                   "name": "Fleet SDK",
-                  "description": "TypeScript SDK for Ergo",
+                  "description": "Ergo向けTypeScript SDK",
                   "link": "/build/tools/fleet"
                 },
                 {
                   "name": "Sigma-Rust",
-                  "description": "Rust implementation of Sigma protocols",
+                  "description": "SigmaプロトコルのRust実装",
                   "link": "/build/tools/sigma-rust"
                 }
               ]
@@ -450,29 +450,29 @@
           ],
           "nextSteps": [
             {
-              "text": "Explore Developer Documentation",
+              "text": "開発者ドキュメントを探索する",
               "link": "/build/docs"
             },
             {
-              "text": "Try the ErgoScript Playground",
+              "text": "ErgoScriptプレイグラウンドを試す",
               "link": "/build/playground"
             },
             {
-              "text": "Join Developer Discord Channels",
+              "text": "開発者Discordチャンネルに参加する",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "text": "Check Out Developer Grants",
+              "text": "開発者グラントを確認する",
               "link": "/build/grants"
             }
           ],
           "communityChannels": [
             {
-              "name": "Developer Discord",
+              "name": "開発者Discord",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "ErgoForum - Development",
+              "name": "ErgoForum - 開発",
               "link": "https://ergoforum.org"
             },
             {
@@ -483,58 +483,58 @@
         },
         "defi": {
           "id": "defi",
-          "name": "DeFi Explorer",
-          "title": "DECENTRALIZED FINANCE PIONEER",
-          "description": "You're ready to explore innovative financial instruments and opportunities that Ergo's decentralized world offers! Discover new ways to manage assets, earn returns, and participate in the future of finance.",
+          "name": "DeFiエクスプローラー",
+          "title": "分散型金融の先駆者",
+          "description": "あなたはErgoの分散型世界が提供する革新的な金融商品と機会を探索する準備ができています！資産の管理、リターンの獲得、そして金融の未来への参加において新しい方法を発見しましょう。",
           "icon": "🏦",
           "color": "from-primary to-amber-500",
           "tools": [
             {
-              "category": "Wallets",
+              "category": "ウォレット",
               "items": [
                 {
                   "name": "Nautilus Wallet",
-                  "description": "Browser extension wallet",
+                  "description": "ブラウザ拡張ウォレット",
                   "link": "/wallet"
                 },
                 {
-                  "name": "Official Mobile Wallets",
-                  "description": "iOS and Android apps",
+                  "name": "公式モバイルウォレット",
+                  "description": "iOSとAndroidアプリ",
                   "link": "/wallet"
                 }
               ]
             },
             {
-              "category": "DeFi Platforms",
+              "category": "DeFiプラットフォーム",
               "items": [
                 {
                   "name": "Spectrum Finance",
-                  "description": "Decentralized exchange (DEX)",
+                  "description": "分散型取引所（DEX）",
                   "link": "https://spectrum.fi"
                 },
                 {
                   "name": "SigmaUSD",
-                  "description": "Algorithmic stablecoin protocol",
+                  "description": "アルゴリズム型ステーブルコインプロトコル",
                   "link": "/ecosystem/projects/sigmausd"
                 },
                 {
                   "name": "Duckpools",
-                  "description": "Lending and borrowing platform",
+                  "description": "レンディング・ボローイングプラットフォーム",
                   "link": "/ecosystem/projects/duckpools"
                 }
               ]
             },
             {
-              "category": "Analytics",
+              "category": "アナリティクス",
               "items": [
                 {
                   "name": "ergo.watch",
-                  "description": "Network and DeFi analytics",
+                  "description": "ネットワークとDeFiアナリティクス",
                   "link": "https://ergo.watch"
                 },
                 {
                   "name": "Ergo Explorer",
-                  "description": "Blockchain explorer",
+                  "description": "ブロックチェーンエクスプローラー",
                   "link": "/ecosystem/explorers"
                 }
               ]
@@ -542,81 +542,81 @@
           ],
           "nextSteps": [
             {
-              "text": "Get a Wallet",
+              "text": "ウォレットを取得する",
               "link": "/wallet"
             },
             {
-              "text": "Explore Spectrum Finance",
+              "text": "Spectrum Financeを探索する",
               "link": "https://spectrum.fi"
             },
             {
-              "text": "Learn About SigmaUSD",
+              "text": "SigmaUSDについて学ぶ",
               "link": "/ecosystem/projects/sigmausd"
             },
             {
-              "text": "Join DeFi Discussions",
+              "text": "DeFiディスカッションに参加する",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "DeFi Discord Channels",
+              "name": "DeFi Discordチャンネル",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Trading Community",
+              "name": "トレーディングコミュニティ",
               "link": "/community/trading"
             },
             {
-              "name": "DeFi Discussions",
+              "name": "DeFiディスカッション",
               "link": "https://ergoforum.org"
             }
           ]
         },
         "investor": {
           "id": "investor",
-          "name": "Strategic Investor",
-          "title": "GROWING YOUR PORTFOLIO",
-          "description": "You're interested in the investment potential of Ergo! Whether you're looking to hold, trade, or stake, Ergo offers unique opportunities in the cryptocurrency space.",
+          "name": "戦略的投資家",
+          "title": "ポートフォリオを成長させよ",
+          "description": "あなたはErgoの投資可能性に興味があります！保有、取引、ステーキングのいずれを探している場合でも、Ergoは暗号通貨空間において独自の機会を提供します。",
           "icon": "📈",
           "color": "from-primary to-amber-600",
           "tools": [
             {
-              "category": "Exchanges",
+              "category": "取引所",
               "items": [
                 {
                   "name": "KuCoin",
-                  "description": "Major exchange listing ERG",
+                  "description": "ERGを取扱う主要取引所",
                   "link": "https://www.kucoin.com"
                 },
                 {
                   "name": "Gate.io",
-                  "description": "Popular exchange for ERG",
+                  "description": "ERGの人気取引所",
                   "link": "https://www.gate.io"
                 },
                 {
                   "name": "Spectrum DEX",
-                  "description": "Decentralized trading",
+                  "description": "分散型取引",
                   "link": "https://spectrum.fi"
                 }
               ]
             },
             {
-              "category": "Research & Analysis",
+              "category": "リサーチ・分析",
               "items": [
                 {
                   "name": "Ergo Watch",
-                  "description": "Network analytics",
+                  "description": "ネットワークアナリティクス",
                   "link": "https://ergo.watch"
                 },
                 {
-                  "name": "Token Economics",
-                  "description": "ERG tokenomics info",
+                  "name": "トークンエコノミクス",
+                  "description": "ERGトークノミクス情報",
                   "link": "/tokenomics"
                 },
                 {
-                  "name": "Emission Schedule",
-                  "description": "ERG distribution plan",
+                  "name": "発行スケジュール",
+                  "description": "ERG配布計画",
                   "link": "/tokenomics#emission"
                 }
               ]
@@ -624,76 +624,76 @@
           ],
           "nextSteps": [
             {
-              "text": "Learn About ERG Tokenomics",
+              "text": "ERGトークノミクスを学ぶ",
               "link": "/tokenomics"
             },
             {
-              "text": "Find Exchange Listings",
+              "text": "取引所一覧を確認する",
               "link": "/use/get-erg"
             },
             {
-              "text": "Understand Staking Options",
+              "text": "ステーキングオプションを理解する",
               "link": "/use/staking"
             },
             {
-              "text": "Join Investor Community",
+              "text": "投資家コミュニティに参加する",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "Trading Discord",
+              "name": "トレーディングDiscord",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Price Discussion",
+              "name": "価格ディスカッション",
               "link": "/community/trading"
             },
             {
-              "name": "Investor Chat",
+              "name": "投資家チャット",
               "link": "https://t.me/ergoplatform"
             }
           ]
         },
         "miner": {
           "id": "miner",
-          "name": "Network Guardian",
-          "title": "SECURING THE BLOCKCHAIN",
-          "description": "You're interested in supporting Ergo's network security while earning rewards! Ergo uses the Autolykos v2 algorithm, which is ASIC-resistant and designed for fair mining.",
+          "name": "ネットワークの守護者",
+          "title": "ブロックチェーンを守れ",
+          "description": "あなたは報酬を得ながらErgoのネットワークセキュリティをサポートすることに興味があります！ErgoはASIC耐性を持ち、公平なマイニングのために設計されたAutolykos v2アルゴリズムを使用しています。",
           "icon": "⛏️",
           "color": "from-primary to-amber-600",
           "tools": [
             {
-              "category": "Mining Information",
+              "category": "マイニング情報",
               "items": [
                 {
-                  "name": "Autolykos v2 Guide",
-                  "description": "Understanding the algorithm",
+                  "name": "Autolykos v2 ガイド",
+                  "description": "アルゴリズムを理解する",
                   "link": "/miners"
                 },
                 {
-                  "name": "Mining Pools",
-                  "description": "Popular Ergo mining pools",
+                  "name": "マイニングプール",
+                  "description": "人気のErgoマイニングプール",
                   "link": "/miners#pools"
                 },
                 {
-                  "name": "Profitability Calculator",
-                  "description": "Estimate mining returns",
+                  "name": "収益性計算機",
+                  "description": "マイニングリターンを見積もる",
                   "link": "/miners#calculator"
                 }
               ]
             },
             {
-              "category": "Mining Software",
+              "category": "マイニングソフトウェア",
               "items": [
                 {
-                  "name": "Official Miner",
-                  "description": "Reference implementation",
+                  "name": "公式マイナー",
+                  "description": "リファレンス実装",
                   "link": "/miners#mining-guide"
                 },
                 {
-                  "name": "Community Miners",
-                  "description": "Third-party mining software",
+                  "name": "コミュニティマイナー",
+                  "description": "サードパーティのマイニングソフトウェア",
                   "link": "/miners#mining-guide"
                 }
               ]
@@ -701,71 +701,71 @@
           ],
           "nextSteps": [
             {
-              "text": "Learn About Autolykos v2",
+              "text": "Autolykos v2について学ぶ",
               "link": "/technology/secure-pow"
             },
             {
-              "text": "Find Mining Pools",
+              "text": "マイニングプールを探す",
               "link": "/miners#pools"
             },
             {
-              "text": "Calculate Mining Profitability",
+              "text": "マイニング収益性を計算する",
               "link": "/miners#calculator"
             },
             {
-              "text": "Join Mining Community",
+              "text": "マイニングコミュニティに参加する",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "Mining Discord Channels",
+              "name": "マイニングDiscordチャンネル",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Mining Pools Community",
+              "name": "マイニングプールコミュニティ",
               "link": "/miners#pools"
             },
             {
-              "name": "Technical Support",
+              "name": "テクニカルサポート",
               "link": "https://ergoforum.org"
             }
           ]
         },
         "nft": {
           "id": "nft",
-          "name": "NFT Enthusiast",
-          "title": "DIGITAL ART COLLECTOR",
-          "description": "You're excited about unique digital items, art, and collectibles! Ergo's NFT ecosystem offers innovative marketplaces and creation tools with low fees and high security.",
+          "name": "NFTエンスージアスト",
+          "title": "デジタルアートコレクター",
+          "description": "あなたはユニークなデジタルアイテム、アート、コレクティブルに興奮しています！ErgoのNFTエコシステムは、低手数料と高いセキュリティを備えた革新的なマーケットプレイスと作成ツールを提供します。",
           "icon": "🎨",
           "color": "from-primary to-amber-500",
           "tools": [
             {
-              "category": "NFT Marketplaces",
+              "category": "NFTマーケットプレイス",
               "items": [
                 {
                   "name": "Ergo Auction House",
-                  "description": "Premier NFT marketplace",
+                  "description": "プレミアNFTマーケットプレイス",
                   "link": "/ecosystem/projects/auction-house"
                 },
                 {
                   "name": "SkyHarbor",
-                  "description": "NFT trading platform",
+                  "description": "NFT取引プラットフォーム",
                   "link": "/ecosystem/projects/skyharbor"
                 }
               ]
             },
             {
-              "category": "Creation Tools",
+              "category": "作成ツール",
               "items": [
                 {
                   "name": "TokenJay",
-                  "description": "NFT minting platform",
+                  "description": "NFTミンティングプラットフォーム",
                   "link": "/ecosystem/projects/tokenjay"
                 },
                 {
                   "name": "Ergo Utils",
-                  "description": "NFT creation utilities",
+                  "description": "NFT作成ユーティリティ",
                   "link": "/ecosystem/tools"
                 }
               ]
@@ -773,71 +773,71 @@
           ],
           "nextSteps": [
             {
-              "text": "Explore Ergo Auction House",
+              "text": "Ergo Auction Houseを探索する",
               "link": "/ecosystem/projects/auction-house"
             },
             {
-              "text": "Learn About NFT Creation",
+              "text": "NFT作成について学ぶ",
               "link": "/ecosystem/projects/tokenjay"
             },
             {
-              "text": "Browse NFT Collections",
+              "text": "NFTコレクションを閲覧する",
               "link": "/ecosystem/nfts"
             },
             {
-              "text": "Join NFT Community",
+              "text": "NFTコミュニティに参加する",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "NFT Discord Channels",
+              "name": "NFT Discordチャンネル",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Artist Community",
+              "name": "アーティストコミュニティ",
               "link": "/community/artists"
             },
             {
-              "name": "Collector Groups",
+              "name": "コレクターグループ",
               "link": "/community/collectors"
             }
           ]
         },
         "privacy": {
           "id": "privacy",
-          "name": "Privacy Advocate",
-          "title": "FINANCIAL PRIVACY CHAMPION",
-          "description": "You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.",
+          "name": "プライバシー擁護者",
+          "title": "金融プライバシーの守護者",
+          "description": "あなたは金融プライバシーを重視し、取引履歴を守りたいと考えています！ErgoはSigmaプロトコルに基づく最先端のプライバシーツールを提供し、トラストレスで安全なプライバシー強化を実現します。",
           "icon": "🔒",
           "color": "from-primary to-amber-600",
           "tools": [
             {
-              "category": "Privacy Tools",
+              "category": "プライバシーツール",
               "items": [
                 {
                   "name": "ErgoMixer",
-                  "description": "Non-custodial transaction mixer",
+                  "description": "ノンカストディアルトランザクションミキサー",
                   "link": "/ecosystem/projects/ergomixer"
                 },
                 {
-                  "name": "Stealth Addresses",
-                  "description": "Enhanced address privacy",
+                  "name": "ステルスアドレス",
+                  "description": "強化されたアドレスプライバシー",
                   "link": "/technology/privacy-features"
                 }
               ]
             },
             {
-              "category": "Educational Resources",
+              "category": "教育リソース",
               "items": [
                 {
-                  "name": "Sigma Protocols Guide",
-                  "description": "Understanding privacy tech",
+                  "name": "Sigmaプロトコルガイド",
+                  "description": "プライバシー技術を理解する",
                   "link": "/technology/privacy-features"
                 },
                 {
-                  "name": "Privacy Best Practices",
-                  "description": "How to stay private",
+                  "name": "プライバシーのベストプラクティス",
+                  "description": "プライバシーを守る方法",
                   "link": "/learn/privacy"
                 }
               ]
@@ -845,76 +845,76 @@
           ],
           "nextSteps": [
             {
-              "text": "Learn About ErgoMixer",
+              "text": "ErgoMixerについて学ぶ",
               "link": "/ecosystem/projects/ergomixer"
             },
             {
-              "text": "Understand Sigma Protocols",
+              "text": "Sigmaプロトコルを理解する",
               "link": "/technology/privacy-features"
             },
             {
-              "text": "Read Privacy Best Practices",
+              "text": "プライバシーのベストプラクティスを読む",
               "link": "/learn/privacy"
             },
             {
-              "text": "Join Privacy Discussions",
+              "text": "プライバシーディスカッションに参加する",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "Privacy Discord Channels",
+              "name": "プライバシーDiscordチャンネル",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "ErgoMixer Community",
+              "name": "ErgoMixerコミュニティ",
               "link": "/ecosystem/projects/ergomixer"
             },
             {
-              "name": "Technical Discussions",
+              "name": "テクニカルディスカッション",
               "link": "https://ergoforum.org"
             }
           ]
         },
         "learner": {
           "id": "learner",
-          "name": "Curious Learner",
-          "title": "KNOWLEDGE SEEKER",
-          "description": "You're new to Ergo and want to understand the fundamentals first! Perfect - learning the basics will help you make informed decisions about how to engage with the ecosystem.",
+          "name": "好奇心旺盛な学習者",
+          "title": "知識の探求者",
+          "description": "あなたはErgoに初めて触れ、まず基本を理解したいと考えています！基礎を学ぶことで、エコシステムへの関わり方について情報に基づいた決断ができるようになります。",
           "icon": "📚",
           "color": "from-primary to-amber-500",
           "tools": [
             {
-              "category": "Educational Resources",
+              "category": "教育リソース",
               "items": [
                 {
-                  "name": "FAQ for Beginners",
-                  "description": "Common questions answered",
+                  "name": "初心者向けFAQ",
+                  "description": "よくある質問への回答",
                   "link": "/start/faq"
                 },
                 {
-                  "name": "Quick Introduction",
-                  "description": "Ergo overview",
+                  "name": "クイック入門",
+                  "description": "Ergoの概要",
                   "link": "/start/introduction"
                 },
                 {
-                  "name": "Ergonaut Handbook",
-                  "description": "Comprehensive guide",
+                  "name": "Ergonautハンドブック",
+                  "description": "包括的なガイド",
                   "link": "/learn/handbook"
                 }
               ]
             },
             {
-              "category": "Community Support",
+              "category": "コミュニティサポート",
               "items": [
                 {
-                  "name": "Newcomer Channels",
-                  "description": "Beginner-friendly discussions",
+                  "name": "新規ユーザーチャンネル",
+                  "description": "初心者向けディスカッション",
                   "link": "/community"
                 },
                 {
-                  "name": "Learning Groups",
-                  "description": "Study groups and mentorship",
+                  "name": "学習グループ",
+                  "description": "スタディグループとメンターシップ",
                   "link": "/community/learning"
                 }
               ]
@@ -922,719 +922,719 @@
           ],
           "nextSteps": [
             {
-              "text": "Read the FAQ for Beginners",
+              "text": "初心者向けFAQを読む",
               "link": "/start/faq"
             },
             {
-              "text": "Take the Quick Introduction",
+              "text": "クイック入門を受ける",
               "link": "/start/introduction"
             },
             {
-              "text": "Join Newcomer Community",
+              "text": "新規ユーザーコミュニティに参加する",
               "link": "/community"
             },
             {
-              "text": "Explore the Learning Hub",
+              "text": "学習ハブを探索する",
               "link": "/learn"
             }
           ],
           "communityChannels": [
             {
-              "name": "General Discord",
+              "name": "一般Discord",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Newcomer Support",
+              "name": "新規ユーザーサポート",
               "link": "/community/newcomers"
             },
             {
-              "name": "Learning Groups",
+              "name": "学習グループ",
               "link": "/community/learning"
             }
           ]
         }
       },
       "ui": {
-        "pageTitle": "ERGO PATH FINDER",
-        "pageSubtitle": "DISCOVER YOUR PLACE IN THE ECOSYSTEM",
-        "introDescription": "Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will help you identify which aspects of Ergo might interest you most and guide you to personalized resources.",
-        "introPrompt": "Answer a few simple questions to find your path: Are you a future",
+        "pageTitle": "ERGOパスファインダー",
+        "pageSubtitle": "エコシステムでのあなたの場所を見つけよう",
+        "introDescription": "Ergoへようこそ！広大なエコシステムに初めて触れ、どこから始めればいいか迷っていますか？この短いクイズで、Ergoのどの側面が最も興味深いかを特定し、パーソナライズされたリソースへ案内します。",
+        "introPrompt": "いくつかの簡単な質問に答えてあなたのパスを見つけましょう：あなたは将来",
         "roles": {
-          "investor": "Investor",
-          "developer": "Developer",
-          "miner": "Miner",
-          "nftEnthusiast": "NFT Enthusiast",
-          "defiUser": "DeFi User"
+          "investor": "投資家",
+          "developer": "開発者",
+          "miner": "マイナー",
+          "nftEnthusiast": "NFTエンスージアスト",
+          "defiUser": "DeFiユーザー"
         },
-        "orSomethingElse": "or something else?",
-        "startButton": "START QUIZ",
-        "questionOf": "QUESTION {current} OF {total}",
-        "percentComplete": "{percent}% COMPLETE",
-        "previousButton": "PREVIOUS",
-        "nextButton": "NEXT",
-        "restartButton": "RESTART QUIZ",
-        "resultsTitle": "YOUR ERGO PROFILE",
-        "matchPercentage": "{percent}% MATCH",
-        "recommendedTools": "RECOMMENDED TOOLS",
-        "yourNextSteps": "YOUR NEXT STEPS",
-        "joinCommunity": "JOIN THE COMMUNITY",
-        "takeQuizAgain": "Take Quiz Again",
+        "orSomethingElse": "それとも他の何かですか？",
+        "startButton": "クイズを始める",
+        "questionOf": "質問 {current} / {total}",
+        "percentComplete": "{percent}% 完了",
+        "previousButton": "前へ",
+        "nextButton": "次へ",
+        "restartButton": "クイズをリセット",
+        "resultsTitle": "あなたのErgoプロフィール",
+        "matchPercentage": "{percent}% マッチ",
+        "recommendedTools": "おすすめのツール",
+        "yourNextSteps": "次のステップ",
+        "joinCommunity": "コミュニティに参加する",
+        "takeQuizAgain": "クイズをもう一度",
         "exploreEcosystem": {
-          "title": "Explore Ecosystem",
-          "subtitle": "Discover Projects",
-          "description": "Discover the growing ecosystem of applications, tools, and services built on Ergo"
+          "title": "エコシステムを探索する",
+          "subtitle": "プロジェクトを発見する",
+          "description": "Ergoで構築されたアプリケーション、ツール、サービスの成長するエコシステムを発見しましょう"
         },
-        "ctaTitle": "Stay Updated",
-        "ctaDescription": "Get personalized Ergo content based on your interests delivered to your inbox.",
-        "getStarted": "Get Started",
-        "retakeQuiz": "Retake Quiz",
-        "quickStart": "Quick Start",
-        "recommendedToolsResources": "Recommended Tools & Resources",
-        "whatsNextTitle": "What's",
-        "whatsNextDescription": "Explore more of what Ergo has to offer",
-        "viewFullEcosystem": "View Full Ecosystem",
-        "whatsNextTitleHighlight": "Next",
-        "whatsNextSubtitle": "Join the Ergo community and connect with others who share your interests",
+        "ctaTitle": "最新情報をキャッチ",
+        "ctaDescription": "あなたの興味に基づいたErgoのパーソナライズされたコンテンツを受信箱にお届けします。",
+        "getStarted": "始める",
+        "retakeQuiz": "クイズを再受験",
+        "quickStart": "クイックスタート",
+        "recommendedToolsResources": "おすすめのツールとリソース",
+        "whatsNextTitle": "次は",
+        "whatsNextDescription": "Ergoが提供するものをさらに探索しましょう",
+        "viewFullEcosystem": "全エコシステムを見る",
+        "whatsNextTitleHighlight": "何？",
+        "whatsNextSubtitle": "Ergoコミュニティに参加し、同じ興味を持つ人々とつながりましょう",
         "continueLearning": {
-          "title": "Continue Learning",
-          "subtitle": "Documentation",
-          "description": "Deep dive into Ergo's technology and learn how to build on the platform"
+          "title": "学習を続ける",
+          "subtitle": "ドキュメント",
+          "description": "Ergoの技術を深く掘り下げ、プラットフォーム上での構築方法を学びましょう"
         }
       }
     },
     "comparison": {
       "seo": {
-        "title": "Ergo vs Other Blockchains - Detailed Comparison",
-        "description": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "keywords": "Ergo comparison, blockchain comparison, Bitcoin vs Ergo, Ethereum vs Ergo, UTXO vs account model",
-        "ogTitle": "Ergo vs Other Blockchains - Detailed Comparison",
-        "ogDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "ogAlt": "Ergo blockchain comparison chart",
-        "twitterTitle": "Ergo vs Other Blockchains - Detailed Comparison",
-        "twitterDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols."
+        "title": "Ergo対他のブロックチェーン - 詳細比較",
+        "description": "ErgoをBitcoin、Ethereum、Cardanoと比較します。Extended UTXOとSigmaプロトコルの独自の利点を理解しましょう。",
+        "keywords": "Ergo比較, ブロックチェーン比較, BitcoinとErgo, EthereumとErgo, UTXOとアカウントモデル",
+        "ogTitle": "Ergo対他のブロックチェーン - 詳細比較",
+        "ogDescription": "ErgoをBitcoin、Ethereum、Cardanoと比較します。Extended UTXOとSigmaプロトコルの独自の利点を理解しましょう。",
+        "ogAlt": "Ergoブロックチェーン比較チャート",
+        "twitterTitle": "Ergo対他のブロックチェーン - 詳細比較",
+        "twitterDescription": "ErgoをBitcoin、Ethereum、Cardanoと比較します。Extended UTXOとSigmaプロトコルの独自の利点を理解しましょう。"
       },
       "schema": {
         "breadcrumbs": {
-          "comparison": "Comparison"
+          "comparison": "比較"
         },
         "faq": {
           "items": [
             {
-              "question": "How is Ergo different from Bitcoin?",
-              "answer": "While sharing Bitcoin's UTXO model and PoW consensus, Ergo adds smart contracts, Storage Rent, and NiPoPoWs for advanced functionality."
+              "question": "ErgoはBitcoinとどう違いますか？",
+              "answer": "BitcoinのUTXOモデルとPoWコンセンサスを共有しながら、Ergoはスマートコントラクト、Storage Rent、NiPoPoWsを追加して高度な機能を実現しています。"
             },
             {
-              "question": "What advantages does Ergo have over Ethereum?",
-              "answer": "Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining."
+              "question": "ErgoはEthereumに対してどのような優位性がありますか？",
+              "answer": "Ergoは予測可能な手数料、再入攻撃なし、並列トランザクション処理、エネルギー効率の高いPoWマイニングを提供します。"
             },
             {
-              "question": "How does Ergo compare to Cardano?",
-              "answer": "Both use eUTXO, but Ergo has PoW consensus, Storage Rent, and no VC funding, making it more decentralized and sustainable."
+              "question": "ErgoはCardanoとどう比較されますか？",
+              "answer": "両者ともeUTXOを使用していますが、ErgoはPoWコンセンサス、Storage Rent、VC資金なしで、より分散化されサステナブルです。"
             }
           ]
         }
       },
       "keyDifferentiators": {
         "0": {
-          "title": "Security & Predictability",
-          "ergo": "eUTXO model provides predictable execution costs and eliminates many attack vectors like reentrancy",
-          "others": "Account-based models are prone to reentrancy attacks and unpredictable gas costs"
+          "title": "セキュリティと予測可能性",
+          "ergo": "eUTXOモデルは予測可能な実行コストを提供し、再入攻撃などの多くの攻撃ベクターを排除します",
+          "others": "アカウントベースのモデルは再入攻撃や予測不能なガスコストに弱い"
         },
         "1": {
-          "title": "Smart Contract Design",
-          "ergo": "ErgoScript enables powerful contracts with built-in cryptographic primitives and formal verification",
-          "others": "Most platforms require external libraries and complex implementations for advanced cryptography"
+          "title": "スマートコントラクト設計",
+          "ergo": "ErgoScriptは組み込み暗号プリミティブと形式検証による強力なコントラクトを実現します",
+          "others": "ほとんどのプラットフォームは高度な暗号化に外部ライブラリと複雑な実装が必要です"
         },
         "2": {
-          "title": "Scalability & Efficiency",
-          "ergo": "Parallel transaction processing and efficient light clients via NIPoPoWs",
-          "others": "Sequential processing and resource-intensive light client implementations"
+          "title": "スケーラビリティと効率性",
+          "ergo": "並列トランザクション処理とNIPoPoWsによる効率的なライトクライアント",
+          "others": "逐次処理とリソース集約型のライトクライアント実装"
         },
         "3": {
-          "title": "Long-term Sustainability",
-          "ergo": "Storage rent mechanism prevents blockchain bloat and ensures miner incentives beyond block rewards",
-          "others": "Growing state size and uncertain long-term economics after emission ends"
+          "title": "長期的なサステナビリティ",
+          "ergo": "Storage rentメカニズムがブロックチェーンの肥大化を防ぎ、ブロック報酬を超えたマイナーインセンティブを確保します",
+          "others": "増大するステートサイズと排出終了後の不確かな長期経済性"
         }
       }
     },
     "faq": {
       "seo": {
-        "title": "Ergo FAQ - Frequently Asked Questions",
-        "description": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "keywords": "Ergo FAQ, blockchain questions, cryptocurrency FAQ, smart contracts FAQ, mining FAQ",
-        "ogTitle": "Ergo FAQ - Frequently Asked Questions",
-        "ogDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "ogAlt": "Ergo FAQ - Frequently Asked Questions",
-        "twitterTitle": "Ergo FAQ - Frequently Asked Questions",
-        "twitterDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more."
+        "title": "Ergo FAQ - よくある質問",
+        "description": "Ergoブロックチェーン、ウォレット、マイニング、スマートコントラクトなどに関するよくある質問への回答を見つけましょう。",
+        "keywords": "Ergo FAQ, ブロックチェーンの質問, 暗号通貨FAQ, スマートコントラクトFAQ, マイニングFAQ",
+        "ogTitle": "Ergo FAQ - よくある質問",
+        "ogDescription": "Ergoブロックチェーン、ウォレット、マイニング、スマートコントラクトなどに関するよくある質問への回答を見つけましょう。",
+        "ogAlt": "Ergo FAQ - よくある質問",
+        "twitterTitle": "Ergo FAQ - よくある質問",
+        "twitterDescription": "Ergoブロックチェーン、ウォレット、マイニング、スマートコントラクトなどに関するよくある質問への回答を見つけましょう。"
       }
     },
     "community": {
       "seo": {
-        "title": "Ergo Community - Join the Ecosystem",
-        "description": "Connect with the Ergo community through Discord, Telegram, Reddit, and other channels. Get involved in development and governance.",
-        "keywords": "Ergo community, Discord, Telegram, Reddit, blockchain community, cryptocurrency community",
-        "ogTitle": "Join the Ergo Community",
-        "ogDescription": "Connect with developers, miners, traders, and enthusiasts building on Ergo",
-        "ogAlt": "Ergo Community",
-        "twitterTitle": "Ergo Community - Get Involved",
-        "twitterDescription": "Join thousands of developers, miners, and enthusiasts in the Ergo ecosystem"
+        "title": "Ergoコミュニティ - エコシステムに参加する",
+        "description": "Discord、Telegram、Redditなどのチャンネルを通じてErgoコミュニティとつながりましょう。開発とガバナンスに参加してください。",
+        "keywords": "Ergoコミュニティ, Discord, Telegram, Reddit, ブロックチェーンコミュニティ, 暗号通貨コミュニティ",
+        "ogTitle": "Ergoコミュニティに参加する",
+        "ogDescription": "Ergoで構築する開発者、マイナー、トレーダー、エンスージアストとつながりましょう",
+        "ogAlt": "Ergoコミュニティ",
+        "twitterTitle": "Ergoコミュニティ - 参加する",
+        "twitterDescription": "Ergoエコシステムの何千もの開発者、マイナー、エンスージアストに参加しましょう"
       },
       "schema": {
         "breadcrumbs": {
-          "community": "Community"
+          "community": "コミュニティ"
         },
         "faq": {
           "items": [
             {
-              "question": "How do I join the Ergo community?",
-              "answer": "Join Discord for real-time chat, Telegram for updates, Reddit for discussions, or GitHub to contribute. All channels are open and welcoming to newcomers."
+              "question": "Ergoコミュニティに参加するにはどうすればいいですか？",
+              "answer": "リアルタイムチャットにはDiscord、更新情報にはTelegram、ディスカッションにはReddit、貢献にはGitHubに参加してください。すべてのチャンネルは開かれており、新規ユーザーを歓迎します。"
             },
             {
-              "question": "What is the main Ergo community platform?",
-              "answer": "Discord is the most active platform, with dedicated channels for development, mining, trading, and general discussion."
+              "question": "Ergoのメインコミュニティプラットフォームは何ですか？",
+              "answer": "Discordが最も活発なプラットフォームで、開発、マイニング、トレーディング、一般的なディスカッション用の専用チャンネルがあります。"
             },
             {
-              "question": "Can I contribute to Ergo without coding?",
-              "answer": "Yes. You can contribute with content, translations, community support, testing, documentation, or governance discussions."
+              "question": "コーディングなしにErgoに貢献できますか？",
+              "answer": "はい。コンテンツ、翻訳、コミュニティサポート、テスト、ドキュメント、またはガバナンスディスカッションで貢献できます。"
             },
             {
-              "question": "Are there regional Ergo communities?",
-              "answer": "Yes. There are active regional communities in multiple languages, with dedicated groups and channels."
+              "question": "地域のErgoコミュニティはありますか？",
+              "answer": "はい。複数の言語で活発な地域コミュニティがあり、専用グループとチャンネルがあります。"
             }
           ]
         }
       },
       "contributions": {
         "0": {
-          "title": "Development",
-          "description": "Contribute to core protocol development",
-          "tasks": "Core development, Bug fixes, Feature implementation"
+          "title": "開発",
+          "description": "コアプロトコル開発に貢献する",
+          "tasks": "コア開発、バグ修正、機能実装"
         },
         "1": {
-          "title": "Documentation",
-          "description": "Help improve documentation and guides",
-          "tasks": "Writing guides, Translation, API documentation"
+          "title": "ドキュメント",
+          "description": "ドキュメントとガイドの改善を助ける",
+          "tasks": "ガイド執筆、翻訳、APIドキュメント"
         },
         "2": {
-          "title": "Community Support",
-          "description": "Help new users and answer questions",
-          "tasks": "Discord support, Forum moderation, User onboarding"
+          "title": "コミュニティサポート",
+          "description": "新しいユーザーを助け、質問に答える",
+          "tasks": "Discordサポート、フォーラムモデレーション、ユーザーオンボーディング"
         },
         "3": {
-          "title": "Governance",
-          "description": "Participate in protocol governance",
-          "tasks": "EIP discussions, Voting, Proposal creation"
+          "title": "ガバナンス",
+          "description": "プロトコルガバナンスに参加する",
+          "tasks": "EIPディスカッション、投票、提案作成"
         },
         "4": {
-          "title": "Infrastructure",
-          "description": "Run nodes and maintain infrastructure",
-          "tasks": "Node operation, Mining pools, Network monitoring"
+          "title": "インフラストラクチャ",
+          "description": "ノードを実行しインフラを維持する",
+          "tasks": "ノード運用、マイニングプール、ネットワーク監視"
         },
         "5": {
-          "title": "Marketing",
-          "description": "Promote Ergo and educate others",
-          "tasks": "Content creation, Social media, Event organization"
+          "title": "マーケティング",
+          "description": "Ergoを宣伝し他者を教育する",
+          "tasks": "コンテンツ作成、ソーシャルメディア、イベント組織"
         }
       },
       "marketingGuide": {
         "seo": {
-          "title": "Community Marketing Playbook | Ergo Platform",
-          "description": "Learn how to amplify Ergo content across all channels. 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics."
+          "title": "コミュニティマーケティングプレイブック | Ergo Platform",
+          "description": "すべてのチャンネルでErgoコンテンツを拡散する方法を学びましょう。7つのコアマーケティングチャンネル、実証済みのエンゲージメント戦術、最適なタイミング戦略、および成功指標。"
         },
         "breadcrumbs": {
-          "start": "Start",
-          "community": "Community",
-          "marketing": "Marketing Guide"
+          "start": "スタート",
+          "community": "コミュニティ",
+          "marketing": "マーケティングガイド"
         },
         "hero": {
-          "title": "Community Marketing Playbook",
-          "subtitle": "Want to help Ergo grow? This guide shows you how to amplify Ergo content across all channels and turn every announcement into a coordinated community effort that drives real engagement.",
-          "description": "You'll learn about 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics. Everything you need to start contributing to Ergo's marketing today.",
+          "title": "コミュニティマーケティングプレイブック",
+          "subtitle": "Ergoの成長を助けたいですか？このガイドでは、すべてのチャンネルでErgoコンテンツを拡散し、すべての発表を実際のエンゲージメントを生む協調的なコミュニティ活動に変える方法を紹介します。",
+          "description": "7つのコアマーケティングチャンネル、実証済みのエンゲージメント戦術、最適なタイミング戦略、成功指標について学びます。今日からErgoのマーケティングへの貢献を始めるために必要なすべてです。",
           "buttons": {
-            "startBlog": "Start with Blog Content",
-            "exploreInfographics": "Explore Infographics"
+            "startBlog": "ブログコンテンツから始める",
+            "exploreInfographics": "インフォグラフィクスを探索する"
           },
-          "coreChannelsTitle": "Core Channels"
+          "coreChannelsTitle": "コアチャンネル"
         },
         "quickStart": {
-          "title": "Get Started in 3 Steps",
+          "title": "3つのステップで始める",
           "steps": [
             {
-              "title": "Step 1",
-              "subtitle": "Join Discord + Telegram",
-              "description": "Start by joining core communities where you can learn from experienced marketers and coordinate your efforts with others.",
-              "hoverText": "Start Here"
+              "title": "ステップ1",
+              "subtitle": "DiscordとTelegramに参加する",
+              "description": "経験豊富なマーケターから学び、他の人と活動を調整できるコアコミュニティに参加することから始めましょう。",
+              "hoverText": "ここから始める"
             },
             {
-              "title": "Step 2",
-              "subtitle": "Pick ONE channel (Twitter / Reddit)",
-              "description": "Choose one platform you're comfortable with and master it before expanding. Quality engagement on one channel beats spreading yourself thin.",
-              "hoverText": "Focus First"
+              "title": "ステップ2",
+              "subtitle": "1つのチャンネルを選ぶ（TwitterまたはReddit）",
+              "description": "使いやすいプラットフォームを1つ選び、拡大する前にマスターしましょう。1つのチャンネルでの質の高いエンゲージメントは、あちこちに手を出すよりも効果的です。",
+              "hoverText": "まず集中する"
             },
             {
-              "title": "Step 3",
-              "subtitle": "Follow 5-step workflow below",
-              "description": "Use the proven amplification strategy to turn every blog post into a coordinated community-wide conversation that helps Ergo grow.",
-              "hoverText": "Scale Up"
+              "title": "ステップ3",
+              "subtitle": "下記の5ステップのワークフローに従う",
+              "description": "実証済みの拡散戦略を使って、すべてのブログ投稿をErgoの成長に貢献するコミュニティ全体の会話に変えましょう。",
+              "hoverText": "スケールアップ"
             }
           ]
         },
         "navigation": {
-          "title": "On this page:",
-          "jumpTo": "Jump to"
+          "title": "このページの内容：",
+          "jumpTo": "ジャンプ"
         },
-        "guideTitle": "Your Step-by-Step Guide",
+        "guideTitle": "ステップバイステップガイド",
         "coreChannels": [
           {
             "name": "ergoblockchain.org",
-            "description": "Article in blog + internal links",
-            "actionText": "Visit Blog"
+            "description": "ブログ記事＋内部リンク",
+            "actionText": "ブログを訪問"
           },
           {
             "name": "Beehiiv Newsletter",
-            "description": "Digest or dedicated issue",
-            "actionText": "Subscribe"
+            "description": "ダイジェストまたは専用号",
+            "actionText": "購読する"
           },
           {
             "name": "Telegram",
-            "description": "Marketing Community",
-            "actionText": "Join Channel"
+            "description": "マーケティングコミュニティ",
+            "actionText": "チャンネルに参加"
           },
           {
             "name": "Ergo Discord",
             "description": "#announcements, #general, #dev, #research",
-            "actionText": "Join Discord"
+            "actionText": "Discordに参加"
           },
           {
             "name": "Reddit r/ergonauts",
-            "description": "Community discussions",
-            "actionText": "Visit Subreddit"
+            "description": "コミュニティディスカッション",
+            "actionText": "Subredditを訪問"
           },
           {
             "name": "X (Twitter)",
-            "description": "Thread/tweet series + link",
-            "actionText": "Follow @BuildOnErgo"
+            "description": "スレッド/ツイートシリーズ＋リンク",
+            "actionText": "@BuildOnErgoをフォロー"
           }
         ],
         "guideSteps": {
           "whyMatters": {
-            "title": "Why Your Help Matters",
-            "description": "How community members like you drive Ergo's growth",
-            "intro": "Your voice matters. Community-driven marketing is the backbone of Ergo's growth. Unlike traditional marketing, your authentic contributions build genuine relationships and trust.",
-            "keyBenefitsTitle": "Key Benefits:",
+            "title": "あなたの助けが重要な理由",
+            "description": "あなたのようなコミュニティメンバーがErgoの成長を牽引する方法",
+            "intro": "あなたの声は重要です。コミュニティ主導のマーケティングはErgoの成長の骨格です。従来のマーケティングとは異なり、あなたの本物の貢献は本物の関係と信頼を築きます。",
+            "keyBenefitsTitle": "主な利点：",
             "points": [
-              "Your authentic voice carries more weight than corporate messaging",
-              "You understand Ergo's technology deeply and can explain it better",
-              "Your decentralized efforts match Ergo's decentralized philosophy",
-              "You can reach audiences that traditional marketing can't",
-              "You create lasting engagement through genuine conversations"
+              "あなたの本物の声は企業のメッセージより重みがある",
+              "あなたはErgoの技術を深く理解し、よりうまく説明できる",
+              "あなたの分散した取り組みはErgoの分散した哲学と一致する",
+              "あなたは従来のマーケティングが届かないオーディエンスに届ける",
+              "あなたは本物の会話を通じて永続的なエンゲージメントを生み出す"
             ],
-            "checklistTitle": "Quick Start Checklist:",
+            "checklistTitle": "クイックスタートチェックリスト：",
             "actionItems": [
               {
-                "text": "Join Ergo Discord for real-time community discussions",
+                "text": "リアルタイムのコミュニティディスカッションのためにErgo Discordに参加する",
                 "priority": "high"
               },
               {
-                "text": "Follow @BuildOnErgo on Twitter for developer updates",
+                "text": "開発者アップデートのためにTwitterで@BuildOnErgoをフォローする",
                 "priority": "high"
               },
               {
-                "text": "Join ErgoSocials Telegram for marketing coordination",
+                "text": "マーケティング調整のためにErgoSocials Telegramに参加する",
                 "priority": "high"
               },
               {
-                "text": "Subscribe to ergoblockchain.org blog for source content",
+                "text": "ソースコンテンツのためにergoblockchain.orgブログを購読する",
                 "priority": "medium"
               },
               {
-                "text": "Join r/ergonauts subreddit for Reddit marketing practice",
+                "text": "Redditマーケティングの練習のためにr/ergonauts subredditに参加する",
                 "priority": "medium"
               },
               {
-                "text": "Subscribe to Beehiiv newsletter for weekly content digest",
+                "text": "週刊コンテンツダイジェストのためにBeehiivニュースレターを購読する",
                 "priority": "low"
               }
             ],
             "priorityLabels": {
-              "high": "high priority",
-              "medium": "medium priority",
-              "low": "low priority"
+              "high": "高優先度",
+              "medium": "中優先度",
+              "low": "低優先度"
             }
           },
           "coreChannels": {
-            "title": "Where to Share Ergo Content",
-            "description": "Start with these essential channels",
-            "intro": "These are the core channels where you can share Ergo content. Start here, then explore extended distribution channels below:",
-            "strategyTitle": "Pro Strategy:",
-            "strategy": "When new content is published on ergoblockchain.org, share it across these channels within 24-48 hours for maximum impact.",
+            "title": "Ergoコンテンツをどこでシェアするか",
+            "description": "これらの必須チャンネルから始める",
+            "intro": "これらはErgoコンテンツをシェアできるコアチャンネルです。ここから始め、下記の拡張配信チャンネルを探索してください：",
+            "strategyTitle": "プロ戦略：",
+            "strategy": "ergoblockchain.orgに新しいコンテンツが公開されたら、最大の効果のために24-48時間以内にこれらのチャンネルでシェアしてください。",
             "tips": [
-              "Customize your content for each platform's audience",
-              "Use platform-specific features (Twitter threads, Reddit formatting)",
-              "Cross-reference between channels to build a cohesive narrative",
-              "Track engagement to see what works best for you"
+              "各プラットフォームのオーディエンスに合わせてコンテンツをカスタマイズする",
+              "プラットフォーム固有の機能を使用する（Twitterスレッド、Redditフォーマット）",
+              "チャンネル間でクロスリファレンスして一貫したナラティブを構築する",
+              "エンゲージメントを追跡して何が最もうまく機能するかを確認する"
             ]
           },
           "contentStrategy": {
-            "title": "How to Amplify New Content",
-            "description": "Turn every blog post into a community-wide conversation",
-            "intro": "When new Ergo content is published, here's how you can help amplify it across the community:",
-            "workflowTitle": "5-Step Workflow:",
+            "title": "新しいコンテンツを拡散する方法",
+            "description": "すべてのブログ投稿をコミュニティ全体の会話に変える",
+            "intro": "新しいErgoコンテンツが公開されたとき、コミュニティ全体に拡散するためにできることは次のとおりです：",
+            "workflowTitle": "5ステップのワークフロー：",
             "workflow": [
               {
-                "title": "Source Content",
-                "description": "Start with ergoblockchain.org blog post or announcement",
-                "time": "Day 0"
+                "title": "ソースコンテンツ",
+                "description": "ergoblockchain.orgのブログ投稿またはアナウンスから始める",
+                "time": "0日目"
               },
               {
-                "title": "Newsletter Integration",
-                "description": "Include in next Beehiiv digest or create dedicated issue",
-                "time": "Day 1-2"
+                "title": "ニュースレター統合",
+                "description": "次のBeehiivダイジェストに含めるか専用号を作成する",
+                "time": "1-2日目"
               },
               {
-                "title": "Social Media Cascade",
-                "description": "Share across Telegram, Discord, Twitter with platform-specific angles",
-                "time": "Day 1-3"
+                "title": "ソーシャルメディアカスケード",
+                "description": "プラットフォーム固有の角度でTelegram、Discord、Twitterでシェアする",
+                "time": "1-3日目"
               },
               {
-                "title": "Reddit Strategy",
-                "description": "Cross-post to relevant subreddits with community-specific context",
-                "time": "Day 2-7"
+                "title": "Reddit戦略",
+                "description": "コミュニティ固有のコンテキストで関連するsubredditsにクロスポストする",
+                "time": "2-7日目"
               },
               {
-                "title": "Long-form Content",
-                "description": "Create Twitter Articles or LinkedIn posts for deeper engagement",
-                "time": "Week 1-2"
+                "title": "長文コンテンツ",
+                "description": "より深いエンゲージメントのためにTwitter ArticlesまたはLinkedIn投稿を作成する",
+                "time": "1-2週目"
               }
             ],
-            "examplesTitle": "Real Examples:",
+            "examplesTitle": "実例：",
             "examples": [
-              "New ErgoScript tutorial -> Developer-focused Reddit posts + Discord #dev discussion",
-              "Mining update -> r/gpumining + r/cryptomining with profitability analysis",
-              "DeFi protocol launch -> r/defi + Twitter thread with comparison charts"
+              "新しいErgoScriptチュートリアル -> 開発者向けReddit投稿 + Discord #devディスカッション",
+              "マイニングアップデート -> r/gpumining + r/cryptomining（収益性分析付き）",
+              "DeFiプロトコル公開 -> r/defi + 比較チャート付きTwitterスレッド"
             ]
           },
           "redditMastery": {
-            "title": "How to Share on Reddit",
-            "description": "Navigate Reddit's unique culture to help Ergo grow",
-            "intro": "Reddit requires a different approach. Your success comes from providing value to the community, not just promoting Ergo.",
-            "bestPracticesTitle": "Best Practices:",
+            "title": "Redditでシェアする方法",
+            "description": "Redditのユニークな文化を理解してErgoの成長を助ける",
+            "intro": "Redditは異なるアプローチが必要です。成功はErgoを宣伝するだけでなく、コミュニティに価値を提供することから来ます。",
+            "bestPracticesTitle": "ベストプラクティス：",
             "bestPractices": [
-              "Always read community rules before posting",
-              "Engage with other posts before sharing your own",
-              "Use descriptive, non-promotional titles",
-              "Explain why your content is relevant to that community",
-              "Respond to comments within 2-4 hours",
-              "Follow the 80/20 rule: 80% engagement, 20% promotion"
+              "投稿前に必ずコミュニティルールを読む",
+              "自分のコンテンツをシェアする前に他の投稿にエンゲージする",
+              "説明的で非プロモーション的なタイトルを使用する",
+              "コンテンツがそのコミュニティに関連する理由を説明する",
+              "2-4時間以内にコメントに返信する",
+              "80/20ルールに従う：80%エンゲージメント、20%プロモーション"
             ],
-            "timingTitle": "Optimal Timing:",
+            "timingTitle": "最適なタイミング：",
             "timing": {
-              "General Crypto": "Weekdays 9-11 AM EST, 2-4 PM EST",
-              "Technical/Dev": "Tuesday-Thursday, avoid Mondays and Fridays",
-              "Mining": "Sunday evenings, Wednesday mornings",
-              "Economics": "Monday-Wednesday for serious discussions"
+              "General Crypto": "平日 午前9-11時 EST、午後2-4時 EST",
+              "Technical/Dev": "火曜日から木曜日、月曜日と金曜日を避ける",
+              "Mining": "日曜日の夜、水曜日の朝",
+              "Economics": "真剣なディスカッションには月曜日から水曜日"
             },
-            "showMoreSubreddits": "+{count} more subreddits",
-            "showLess": "Show less"
+            "showMoreSubreddits": "+{count} 個のsubreddit",
+            "showLess": "表示を減らす"
           },
           "engagementTactics": {
-            "title": "How to Create Engaging Content",
-            "description": "Build meaningful conversations that help people discover Ergo",
-            "intro": "Great marketing sparks conversations. Here's how you can create engaging content that helps people discover Ergo:",
+            "title": "魅力的なコンテンツの作り方",
+            "description": "Ergoを発見する人々を助ける意味のある会話を構築する",
+            "intro": "素晴らしいマーケティングは会話を生み出します。Ergoを発見する人々を助ける魅力的なコンテンツを作成する方法は次のとおりです：",
             "tactics": [
               {
-                "name": "Question-Driven Posts",
-                "description": "Start with thought-provoking questions",
+                "name": "質問主導の投稿",
+                "description": "考えさせる質問から始める",
                 "examples": [
-                  "What's your biggest challenge with current DeFi protocols?",
-                  "How do you think privacy coins will evolve in the next 5 years?",
-                  "What would convince you to switch from Ethereum to Ergo?"
+                  "現在のDeFiプロトコルで最大の課題は何ですか？",
+                  "次の5年間でプライバシーコインはどのように進化すると思いますか？",
+                  "EthereumからErgoに乗り換えるよう説得するのは何ですか？"
                 ]
               },
               {
-                "name": "Comparison Content",
-                "description": "Position Ergo against alternatives",
+                "name": "比較コンテンツ",
+                "description": "Ergoを代替手段と対比させる",
                 "examples": [
-                  "Ergo vs Ethereum: Transaction costs breakdown",
-                  "eUTXO vs Account model: Security implications",
-                  "Autolykos vs other mining algorithms: Efficiency analysis"
+                  "Ergo対Ethereum：トランザクションコストの内訳",
+                  "eUTXO対アカウントモデル：セキュリティの意味",
+                  "Autolykos対他のマイニングアルゴリズム：効率性分析"
                 ]
               },
               {
-                "name": "Educational Series",
-                "description": "Create multi-part content that builds audience",
+                "name": "教育シリーズ",
+                "description": "オーディエンスを構築するマルチパートコンテンツを作成する",
                 "examples": [
-                  "ErgoScript Basics: 5-part tutorial series",
-                  "History of Money: Weekly deep-dives",
-                  "DeFi Security: Case studies and lessons"
+                  "ErgoScript基礎：5パートチュートリアルシリーズ",
+                  "お金の歴史：週刊ディープダイブ",
+                  "DeFiセキュリティ：ケーススタディと教訓"
                 ]
               }
             ],
-            "responseStrategyTitle": "Response Strategy:",
+            "responseStrategyTitle": "レスポンス戦略：",
             "responseStrategy": [
-              "Acknowledge every comment within 4 hours",
-              "Ask follow-up questions to extend conversations",
-              "Tag relevant experts when technical questions arise",
-              "Share additional resources in comments",
-              "Create follow-up posts based on popular questions"
+              "4時間以内にすべてのコメントを認識する",
+              "会話を延ばすためにフォローアップの質問をする",
+              "技術的な質問が生じたら関連する専門家にタグ付けする",
+              "コメントに追加リソースをシェアする",
+              "人気のある質問に基づいてフォローアップ投稿を作成する"
             ]
           },
           "timingOptimization": {
-            "title": "When to Post for Maximum Impact",
-            "description": "Timing strategies to maximize your reach",
-            "intro": "When you post matters. Here's when to share content for maximum visibility:",
-            "scheduleTitle": "Optimal Schedule:",
+            "title": "最大のインパクトのためにいつ投稿するか",
+            "description": "リーチを最大化するためのタイミング戦略",
+            "intro": "投稿するタイミングが重要です。最大の可視性のためにコンテンツをシェアするタイミングは次のとおりです：",
+            "scheduleTitle": "最適なスケジュール：",
             "schedule": {
-              "Blog Posts": "Tuesdays 10 AM EST - highest engagement for technical content",
-              "Newsletter": "Bi-weekly Thursdays - allows time for blog content integration",
-              "Twitter": "Daily 9 AM, 1 PM, 6 PM EST - matches global audience peaks",
-              "Reddit": "Platform-specific timing based on subreddit analytics",
-              "Discord": "Real-time engagement, peak hours 7-10 PM EST",
-              "Telegram": "Follow news cycle, immediate for breaking updates"
+              "Blog Posts": "火曜日 午前10時 EST - 技術コンテンツへの最高のエンゲージメント",
+              "Newsletter": "隔週木曜日 - ブログコンテンツ統合のための時間を確保",
+              "Twitter": "毎日 午前9時、午後1時、午後6時 EST - グローバルオーディエンスのピークに対応",
+              "Reddit": "subredditアナリティクスに基づくプラットフォーム固有のタイミング",
+              "Discord": "リアルタイムエンゲージメント、ピーク時間 午後7-10時 EST",
+              "Telegram": "ニュースサイクルに従い、速報は即時"
             },
-            "frequencyTitle": "Frequency Guidelines:",
+            "frequencyTitle": "頻度ガイドライン：",
             "frequency": [
-              "Quality over quantity - better to post less frequently with high value",
-              "Maintain consistent presence without overwhelming audiences",
-              "Batch content creation for efficiency",
-              "Leave gaps for community-generated discussions",
-              "Adjust frequency based on engagement metrics"
+              "量より質 - 高い価値で頻度を下げて投稿する方が良い",
+              "オーディエンスを圧倒することなく一貫した存在感を維持する",
+              "効率のためにコンテンツ作成をバッチ処理する",
+              "コミュニティ生成のディスカッションのためのギャップを残す",
+              "エンゲージメント指標に基づいて頻度を調整する"
             ],
-            "toolsTitle": "Recommended Tools:",
+            "toolsTitle": "おすすめのツール：",
             "tools": [
-              "Buffer/Hootsuite for scheduling",
-              "Reddit analytics for optimal posting times",
-              "Twitter Analytics for audience insights",
-              "Discord bots for engagement tracking"
+              "スケジューリングにはBuffer/Hootsuite",
+              "最適な投稿時間にはRedditアナリティクス",
+              "オーディエンスインサイトにはTwitter Analytics",
+              "エンゲージメント追跡にはDiscordボット"
             ]
           },
           "measurementSuccess": {
-            "title": "How to Know If You're Helping",
-            "description": "Track your impact and see what works",
-            "intro": "Want to know if your efforts are making a difference? Focus on these metrics that indicate real community growth:",
+            "title": "貢献しているかどうかを知る方法",
+            "description": "インパクトを追跡して何が機能するかを確認する",
+            "intro": "あなたの取り組みが効果を上げているかどうかを知りたいですか？実際のコミュニティ成長を示すこれらの指標に注目してください：",
             "keyMetrics": [
               {
-                "category": "Engagement Quality",
+                "category": "エンゲージメントの質",
                 "metrics": [
-                  "Comment depth and thoughtfulness",
-                  "Question quality in responses",
-                  "Cross-platform conversation continuation"
+                  "コメントの深さと思慮深さ",
+                  "返信の質問の質",
+                  "クロスプラットフォームの会話継続"
                 ]
               },
               {
-                "category": "Community Growth",
+                "category": "コミュニティ成長",
                 "metrics": [
-                  "New Discord/Telegram members",
-                  "Developer GitHub activity",
-                  "Ecosystem project mentions"
+                  "新しいDiscord/Telegramメンバー",
+                  "開発者のGitHubアクティビティ",
+                  "エコシステムプロジェクトへの言及"
                 ]
               },
               {
-                "category": "Content Performance",
+                "category": "コンテンツパフォーマンス",
                 "metrics": [
-                  "Time spent reading",
-                  "Share-to-view ratio",
-                  "Follow-up question generation"
+                  "読書時間",
+                  "シェア対ビュー比率",
+                  "フォローアップ質問の生成"
                 ]
               },
               {
-                "category": "Business Impact",
+                "category": "ビジネスインパクト",
                 "metrics": [
-                  "Website traffic from social",
-                  "Developer tool downloads",
-                  "Ecosystem adoption metrics"
+                  "ソーシャルからのウェブサイトトラフィック",
+                  "開発者ツールのダウンロード",
+                  "エコシステム採用指標"
                 ]
               }
             ],
-            "analyticsToolsTitle": "Analytics Tools:",
+            "analyticsToolsTitle": "アナリティクスツール：",
             "analyticsTools": [
-              "Google Analytics for website traffic attribution",
-              "Social media native analytics",
-              "Discord/Telegram member growth tracking",
-              "GitHub activity monitoring for developer interest"
+              "ウェブサイトトラフィック帰属のためのGoogle Analytics",
+              "ソーシャルメディアネイティブアナリティクス",
+              "Discord/Telegramメンバー成長追跡",
+              "開発者の関心のためのGitHubアクティビティ監視"
             ],
-            "optimizationTitle": "Optimization Process:",
+            "optimizationTitle": "最適化プロセス：",
             "optimization": [
-              "Weekly review of top-performing content",
-              "Monthly analysis of channel effectiveness",
-              "Quarterly strategy adjustments based on data",
-              "A/B testing for content formats and timing"
+              "トップパフォーマンスコンテンツの週次レビュー",
+              "チャンネル効果の月次分析",
+              "データに基づく四半期戦略調整",
+              "コンテンツフォーマットとタイミングのA/Bテスト"
             ]
           }
         },
         "redditCategories": [
           {
-            "title": "General Crypto",
-            "description": "For crypto comparisons, DeFi, PoW, network economics"
+            "title": "一般暗号通貨",
+            "description": "暗号比較、DeFi、PoW、ネットワーク経済学のため"
           },
           {
-            "title": "Privacy / Cypherpunk",
-            "description": "Privacy, programmable privacy, crypto-anarchy"
+            "title": "プライバシー / サイファーパンク",
+            "description": "プライバシー、プログラマブルプライバシー、クリプトアナーキー"
           },
           {
-            "title": "Mining & PoW",
-            "description": "ERG mining, PoW vs PoS, mining economics"
+            "title": "マイニングとPoW",
+            "description": "ERGマイニング、PoW対PoS、マイニング経済学"
           },
           {
-            "title": "Economics & History",
-            "description": "Perfect for History of Money series"
+            "title": "経済学と歴史",
+            "description": "お金の歴史シリーズに最適"
           },
           {
-            "title": "Dev & Tech",
-            "description": "eUTXO, ErgoScript, Sigma protocols, dev guides"
+            "title": "開発とテック",
+            "description": "eUTXO、ErgoScript、Sigmaプロトコル、開発ガイド"
           }
         ],
         "additionalPlatforms": {
-          "title": "More Places to Share",
-          "subtitle": "Once you're comfortable with core channels, explore these additional platforms. Each one requires a different approach - customize your content for each platform's audience.",
+          "title": "シェアする場所をもっと",
+          "subtitle": "コアチャンネルに慣れたら、これらの追加プラットフォームを探索してください。それぞれ異なるアプローチが必要です - 各プラットフォームのオーディエンスに合わせてコンテンツをカスタマイズしてください。",
           "categories": [
             {
-              "title": "Crypto-Native Platforms",
+              "title": "暗号ネイティブプラットフォーム",
               "platforms": [
                 {
                   "name": "Bitcointalk.org",
-                  "description": "ANN threads, research posts, mining/wallet guides",
-                  "actionText": "Visit Forum"
+                  "description": "ANNスレッド、リサーチ投稿、マイニング/ウォレットガイド",
+                  "actionText": "フォーラムを訪問"
                 },
                 {
                   "name": "Medium",
-                  "description": "Mirror best articles with canonical link",
-                  "actionText": "Publish Article"
+                  "description": "カノニカルリンク付きで最良の記事をミラーリング",
+                  "actionText": "記事を公開"
                 },
                 {
                   "name": "Mirror.xyz",
-                  "description": "Web3-native blog for research/essays",
-                  "actionText": "Create Post"
+                  "description": "リサーチ/エッセイ向けのWeb3ネイティブブログ",
+                  "actionText": "投稿を作成"
                 },
                 {
                   "name": "HackerNoon",
-                  "description": "Long-form research in crypto/blockchain section",
-                  "actionText": "Submit Article"
+                  "description": "暗号/ブロックチェーンセクションの長文リサーチ",
+                  "actionText": "記事を投稿"
                 },
                 {
                   "name": "Dev.to",
-                  "description": "Technical articles for builders (eUTXO, off-chain, oracles)",
-                  "actionText": "Publish Tutorial"
+                  "description": "ビルダー向けの技術記事（eUTXO、オフチェーン、オラクル）",
+                  "actionText": "チュートリアルを公開"
                 }
               ]
             },
             {
-              "title": "Tech & Product Platforms",
+              "title": "テクとプロダクトプラットフォーム",
               "platforms": [
                 {
                   "name": "Hacker News",
-                  "description": "Strong, non-clickbait articles (history of money, eUTXO, privacy)",
-                  "actionText": "Submit Story"
+                  "description": "強力で非クリックベイトな記事（お金の歴史、eUTXO、プライバシー）",
+                  "actionText": "ストーリーを投稿"
                 },
                 {
                   "name": "Lobsters",
-                  "description": "Technical posts on cryptography, PoW, protocols",
-                  "actionText": "Submit Link"
+                  "description": "暗号、PoW、プロトコルに関する技術投稿",
+                  "actionText": "リンクを投稿"
                 },
                 {
                   "name": "Indie Hackers",
-                  "description": "Articles on building tools and ecosystems",
-                  "actionText": "Share Story"
+                  "description": "ツールとエコシステムの構築に関する記事",
+                  "actionText": "ストーリーをシェア"
                 },
                 {
                   "name": "Stack Overflow / Bitcoin.SE",
-                  "description": "Q&A with links as sources (not for posting articles)",
-                  "actionText": "Answer Questions"
+                  "description": "ソースとしてリンク付きのQ&A（記事投稿には向かない）",
+                  "actionText": "質問に答える"
                 }
               ]
             },
             {
-              "title": "Social & Content Platforms",
+              "title": "ソーシャルとコンテンツプラットフォーム",
               "platforms": [
                 {
                   "name": "Farcaster",
-                  "description": "Channels: /crypto, /bitcoin, /defi, /privacy",
-                  "actionText": "Join Network"
+                  "description": "チャンネル：/crypto、/bitcoin、/defi、/privacy",
+                  "actionText": "ネットワークに参加"
                 },
                 {
                   "name": "Nostr",
-                  "description": "Notes with key points and link",
-                  "actionText": "Publish Note"
+                  "description": "キーポイントとリンク付きのノート",
+                  "actionText": "ノートを公開"
                 },
                 {
                   "name": "Lens Protocol",
-                  "description": "Web3-native audience for research content",
-                  "actionText": "Create Post"
+                  "description": "リサーチコンテンツ向けのWeb3ネイティブオーディエンス",
+                  "actionText": "投稿を作成"
                 },
                 {
                   "name": "YouTube",
-                  "description": "Short summary videos (2-5 min) per key article",
-                  "actionText": "Create Video"
+                  "description": "各主要記事の短い要約動画（2-5分）",
+                  "actionText": "動画を作成"
                 }
               ]
             }
           ],
-          "tipsTitle": "Tips for Using Extended Channels:",
+          "tipsTitle": "拡張チャンネルを使用するためのヒント：",
           "tips": [
             {
-              "strong": "Customize your angle:",
-              "text": "Share history of money articles in economics/philosophy subreddits; privacy content in privacy/cypherpunk communities; eUTXO content on dev platforms and Hacker News"
+              "strong": "角度をカスタマイズする：",
+              "text": "お金の歴史の記事は経済学/哲学のsubredditで；プライバシーコンテンツはプライバシー/サイファーパンクコミュニティで；eUTXOコンテンツは開発プラットフォームとHacker Newsで"
             },
             {
-              "strong": "Vary your formats:",
-              "text": "Try full cross-posts (Reddit, Mirror, Medium), thread summaries with links, or visual content (diagrams, quotes) with source links"
+              "strong": "フォーマットを変える：",
+              "text": "完全なクロスポスト（Reddit、Mirror、Medium）、リンク付きのスレッドサマリー、またはソースリンク付きのビジュアルコンテンツ（図、引用）を試してみてください"
             },
             {
-              "strong": "Take your time:",
-              "text": "Don't try to share everything in one day. Build a habit: for each new article, make 5-10 meaningful posts across different places over a few days"
+              "strong": "時間をかける：",
+              "text": "1日で全部シェアしようとしないでください。習慣を作りましょう：新しい記事ごとに、数日間にわたってさまざまな場所に5-10の意味のある投稿をしてください"
             }
           ]
         },
         "faq": {
-          "title": "Frequently Asked Questions",
-          "usefulLinksTitle": "Useful Links:",
+          "title": "よくある質問",
+          "usefulLinksTitle": "役立つリンク：",
           "questions": [
             {
-              "question": "I'm new to marketing. Where should I start?",
-              "answer": "Start with Step 1: Join Discord (discord.gg/ergo-platform) and see how other community members share content. Then pick ONE channel you're comfortable with - usually Twitter or Reddit - and practice the strategies from this guide for 2 weeks before expanding."
+              "question": "マーケティング初心者です。どこから始めればいいですか？",
+              "answer": "ステップ1から始めましょう：Discord（discord.gg/ergo-platform）に参加し、他のコミュニティメンバーがコンテンツをシェアする方法を見てください。次に、使いやすいチャンネルを1つ選び（通常TwitterまたはReddit）、このガイドの戦略を2週間練習してから拡大してください。"
             },
             {
-              "question": "Where do I find content to share?",
-              "answer": "Start with ergoblockchain.org/blog for official content. Subscribe to the Beehiiv newsletter for weekly digests. Follow @BuildOnErgo for developer updates. Join ErgoSocials Telegram to coordinate with other marketers. Never share content you don't understand - ask questions in Discord first."
+              "question": "シェアするコンテンツはどこで見つければいいですか？",
+              "answer": "公式コンテンツにはergoblockchain.org/blogから始めてください。週刊ダイジェストにはBeehiivニュースレターを購読してください。開発者アップデートには@BuildOnErgoをフォローしてください。他のマーケターと調整するためにErgoSocials Telegramに参加してください。理解できないコンテンツはシェアしないでください - まずDiscordで質問してください。"
             },
             {
-              "question": "How do I succeed on Reddit without getting banned?",
-              "answer": "Follow the 80/20 rule: spend 80% of your time commenting on others' posts, 20% sharing your own content. Read subreddit rules carefully - each has different requirements. Start with r/ergonauts to practice, then expand to crypto subreddits like r/CryptoCurrency. Always explain why your content matters to that specific community."
+              "question": "Redditでバンされずに成功するにはどうすればいいですか？",
+              "answer": "80/20ルールに従ってください：時間の80%を他の人の投稿へのコメントに使い、20%を自分のコンテンツのシェアに使います。subredditのルールを注意深く読んでください - それぞれ異なる要件があります。まずr/ergonautsで練習し、次にr/CryptoCurrencyのような暗号subredditsに拡大してください。そのコミュニティにとってコンテンツが重要な理由を常に説明してください。"
             },
             {
-              "question": "How much time do I need to commit?",
-              "answer": "Start with just 30 minutes daily: 10 minutes reading new content, 10 minutes engaging on Discord/Twitter, 10 minutes posting/commenting. As you get comfortable, you can batch content creation (1 hour weekly) and focus on real-time engagement. Quality beats quantity - it's better to do less consistently than burn out."
+              "question": "どのくらいの時間をコミットする必要がありますか？",
+              "answer": "まず毎日30分から始めましょう：新しいコンテンツを読むのに10分、Discord/Twitterでエンゲージするのに10分、投稿/コメントに10分。慣れてきたら、コンテンツ作成をバッチ処理（週1時間）して、リアルタイムエンゲージメントに集中できます。質は量より重要です - 燃え尽きるよりも少なく継続的にやる方が良いです。"
             },
             {
-              "question": "How do I know if I'm making a difference?",
-              "answer": "Focus on engagement quality: Are people asking follow-up questions? Are your posts generating discussions? Are community members mentioning Ergo more often? Track Discord member growth, Twitter engagement rates, and Reddit upvote ratios. Success means more people learning about Ergo, not just more views."
+              "question": "自分が差を生んでいるかどうかをどうやって知れますか？",
+              "answer": "エンゲージメントの質に注目してください：人々はフォローアップの質問をしていますか？あなたの投稿はディスカッションを生み出していますか？コミュニティメンバーはErgoについてより頻繁に言及していますか？Discordメンバーの成長、Twitterエンゲージメント率、Redditのアップボート比率を追跡してください。成功とは、ただ多くのビューを得ることではなく、より多くの人がErgoについて学ぶことです。"
             },
             {
-              "question": "What mistakes should I avoid?",
-              "answer": "Don't spam the same content across platforms without customization. Don't argue with critics - engage constructively or ignore. Don't share content you can't explain. Don't neglect community rules. Don't expect immediate results - community building takes months, not days."
+              "question": "避けるべき間違いは何ですか？",
+              "answer": "カスタマイズなしに同じコンテンツをプラットフォーム全体にスパムしないでください。批評家と議論しないでください - 建設的に関わるか無視してください。説明できないコンテンツをシェアしないでください。コミュニティのルールを無視しないでください。即時の結果を期待しないでください - コミュニティ構築は日ではなく月がかかります。"
             }
           ]
         },
         "finalCta": {
-          "title": "Ready to",
-          "titleHighlight": "Help",
-          "titleEnd": "Ergo Grow?",
-          "subtitle": "Start implementing these strategies today and make a real impact on Ergo's growth",
+          "title": "準備はできていますか",
+          "titleHighlight": "貢献する",
+          "titleEnd": "Ergoの成長に？",
+          "subtitle": "今日からこれらの戦略を実施し、Ergoの成長に実際の影響を与えましょう",
           "discord": {
-            "title": "Join Marketing Discord",
-            "members": "15K+ Active Members",
-            "description": "Connect with experienced community marketers, share strategies, and get feedback on your campaigns in #marketing channel"
+            "title": "マーケティングDiscordに参加する",
+            "members": "15K+ アクティブメンバー",
+            "description": "経験豊富なコミュニティマーケターとつながり、戦略をシェアし、#marketingチャンネルでキャンペーンのフィードバックを得る"
           },
           "sourceContent": {
-            "title": "Get Source Content",
-            "frequency": "Fresh Weekly Posts",
-            "description": "Start with ergoblockchain.org blog posts and announcements - your primary source for authentic, high-quality content to amplify"
+            "title": "ソースコンテンツを取得する",
+            "frequency": "新鮮な週刊投稿",
+            "description": "ergoblockchain.orgのブログ投稿とアナウンスから始めましょう - 拡散するための本物の高品質コンテンツのプライマリソース"
           }
         },
         "emailCta": {
-          "title": "Stay Updated on Marketing",
-          "description": "Get notified about new marketing strategies, community growth tactics, and engagement best practices"
+          "title": "マーケティングの最新情報をキャッチ",
+          "description": "新しいマーケティング戦略、コミュニティ成長戦術、エンゲージメントのベストプラクティスに関する通知を受け取る"
         }
       }
     },

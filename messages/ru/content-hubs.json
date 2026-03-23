@@ -25,7 +25,7 @@
       ]
     },
     "ergo-vs-ethereum-for-defi": {
-      "query": "Is Ergo better than Ethereum for DeFi?",
+      "query": "Ergo лучше Ethereum для DeFi?",
       "shortAnswer": "Ergo предлагает структурные преимущества для DeFi: нет извлечения MEV, детерминированные затраты на газ и нет вторжения из-за eUTXO. Ethereum имеет больше экосистем и ликвидности. Выберите Ergo для критичных приложений, справедливой торговли и предсказуемых расходов. Выберите Ethereum для максимальной компостильности с существующими протоколами.",
       "seoTitle": "Ergo против Ethereum для DeFi: что лучше?",
       "seoDescription": "Сравнение Ergo и Ethereum для разработки DeFi. Защита от MEV, стоимость газа, модели безопасности и различия в экосистеме.",
@@ -545,7 +545,7 @@
     },
     "ergo-vs-cardano-comparison": {
       "query": "В чем разница между Эрго и Карданом?",
-      "shortAnswer": "Ergo: PoW (Autolykos), fair launch, no VC funding, storage rent. Кардано: PoS (Ouroboros), финансируется ВЦ и более крупная экосистема. Эрго приоритизирует децентрализацию и устойчивость; Кардано приоритизирует академический строгость и институциональное принятие.",
+      "shortAnswer": "Ergo: PoW (Autolykos), честный запуск, без VC-финансирования, Storage Rent. Cardano: PoS (Ouroboros), финансирование от VC и более крупная экосистема. Ergo приоритизирует децентрализацию и устойчивость; Cardano — академическую строгость и институциональное принятие.",
       "seoTitle": "Ergo против Cardano: два eUTXO блокчейна",
       "seoDescription": "Сравнение Ergo и Cardano: PoW против PoS, честный запуск против VC-финансирования и разные подходы к eUTXO.",
       "category": "Technology",
@@ -635,7 +635,7 @@
     },
     "what-are-ergo-nfts": {
       "query": "Как работают NFTs на Ergo?",
-      "shortAnswer": "Ergo NFTs — это родные токены с количеством 1, что делает каждый уникальный токен, в отличие от Ethereum, где NFTT нуждаются в смарт-контрактах, Ergo NFTs — это граждане первого протокола. Mint for minimum fees (~0.001 ERG), trade on SkyHarbor marketplace and enjoy full eUTXO security. NFTT can include rich metdata and royalties.",
+      "shortAnswer": "Ergo NFT — это нативные токены с количеством 1, что делает каждый из них уникальным. В отличие от Ethereum, где NFT требуют смарт-контрактов, NFT на Ergo — полноправные граждане протокола. Минтинг с минимальными комиссиями (~0.001 ERG), торговля на маркетплейсе SkyHarbor и полная безопасность eUTXO. NFT могут включать богатые метаданные и роялти.",
       "seoTitle": "Как работают NFT на Ergo? Нативные токены NFT",
       "seoDescription": "NFT на Ergo: нативные токены, низкие комиссии за минтинг, маркетплейс SkyHarbor. Отличия NFT на Ergo от Ethereum.",
       "category": "Technology",

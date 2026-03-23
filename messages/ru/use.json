@@ -551,7 +551,7 @@
             "name": "Onramper",
             "description": "Агрегатор: покупайте ERG с фиатом с помощью 20+ провайдеров и 130+ методов оплаты. Быстрое, глобальное и легкое."
           },
-          "visitButton": "Visit {name}"
+          "visitButton": "Перейти на {name}"
         }
       },
       "cex": {
@@ -682,7 +682,7 @@
       }
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
+      "title": "Алгоритмические стейблкоины",
       "subtitle": "Хранилище стабильных значений без централизованного управления",
       "description": "Стабилизация с использованием инновационного протокола AgeUSD, децентрализованная, прозрачная и устойчивость.",
       "lastUpdated": "Последнее обновление:",
@@ -879,7 +879,7 @@
       "schema": {
         "breadcrumbs": {
           "useCases": "Варианты использования",
-          "algorithmicStablecoins": "Algorithmic Stablecoins"
+          "algorithmicStablecoins": "Алгоритмические стейблкоины"
         },
         "techArticle": {
           "headline": "Алгоритмические стаблеры на Ergo",
@@ -907,7 +907,7 @@
               "text": "Установить кошелёк Ergo как Nautilus или SAFEW"
             },
             "getErg": {
-              "name": "Get ERG tokens",
+              "name": "Получить токены ERG",
               "text": "Получить ERG с бирж или DEXs"
             },
             "accessSigmaUsd": {
@@ -1009,7 +1009,7 @@
           }
         },
         "ergomixer": {
-          "title": "ErgoMixer Protocol",
+          "title": "Протокол ErgoMixer",
           "howItWorks": {
             "title": "Как это работает",
             "points": {
@@ -1033,7 +1033,7 @@
           }
         },
         "codeExample": {
-          "title": "Sigma Protocol Example",
+          "title": "Пример протокола Sigma",
           "description": "Доказательство нулевого знания смешиванию"
         }
       },
@@ -1204,7 +1204,7 @@
           "description": "Непередаваемые токены, которые представляют собой заработанную репутацию"
         },
         "sybilResistance": {
-          "title": "Sybil Resistance",
+          "title": "Защита от Sybil-атак",
           "description": "Предотвратить подделку личных данных и обеспечить личное голосование 1 голос"
         },
         "verifiableCredentials": {
@@ -1256,7 +1256,7 @@
             }
           },
           "sybilResistance": {
-            "title": "Sybil Resistance"
+            "title": "Защита от Sybil-атак"
           }
         },
         "codeExample": {
@@ -1583,10 +1583,10 @@
         "canonicalPath": "/use/daos-alternative-economies"
       },
       "seo": {
-        "title": "DAOs & Alternative Economies on Ergo | Децентрализованное управление",
+        "title": "DAO и альтернативные экономики на Ergo | Децентрализованное управление",
         "description": "Постройте DAO и альтернативные экономические системы в Эрго.",
         "keywords": "DAOs, Децентрализованное управление, альтернативные экономики, Paideia, управление казначейством, в рамках цепи голосования, Эрго ДАО",
-        "ogTitle": "DAOs & Alternative Economies on Ergo",
+        "ogTitle": "DAO и альтернативные экономики на Ergo",
         "ogDescription": "Общинное управление и альтернативные экономические системы на Ergo blockchain.",
         "twitterTitle": "DAO на Ergo",
         "twitterDescription": "Создание децентрализованных организаций с Пайдейей"
@@ -1608,7 +1608,7 @@
       },
       "navigation": {
         "daoFeatures": "Функции DAO",
-        "liveDaos": "Live DAOs",
+        "liveDaos": "Активные DAO",
         "faq": "ЧАВО"
       },
       "features": {
@@ -1631,7 +1631,7 @@
           "description": "Модульные компоненты DAO для пользовательских моделей управления"
         },
         "tokenEconomies": {
-          "title": "Token Economies",
+          "title": "Экономика токенов",
           "description": "Создавать пользовательские токены со встроенными экономическими моделями"
         },
         "reputationSystems": {
@@ -1675,7 +1675,7 @@
               "point1": "Стоимость = квадрат голосов",
               "point2": "Уменьшает влияние китов",
               "point3": "Справедливое распределение",
-              "point4": "Sybil resistant"
+              "point4": "Защита от Sybil-атак"
             }
           },
           "proposalLifecycle": {
@@ -1688,7 +1688,7 @@
         }
       },
       "projects": {
-        "title": "Live DAOs",
+        "title": "Активные DAO",
         "subtitle": "Активные DAO на Ergo",
         "paideia": {
           "name": "Paideia",
@@ -1830,7 +1830,7 @@
           "description": "Хранить метаданные NFT непосредственно в цепи для истинного постоянства и децентрализации"
         },
         "protocolRoyalties": {
-          "title": "Protocol Royalties",
+          "title": "Протокольные роялти",
           "description": "Выполняемые роялти на уровне протокола, гарантируя, что создатели всегда получают вознаграждение"
         },
         "dynamicNfts": {
@@ -1916,7 +1916,7 @@
           "description": "Децентрализованная аукционная платформа для использования редких цифровых активов",
           "status": "Онлайн",
           "features": {
-            "feature1": "Russian auctions",
+            "feature1": "Английские аукционы",
             "feature2": "Голландские аукционы",
             "feature3": "Зарезервированные цены"
           }
@@ -2002,10 +2002,10 @@
         "canonicalPath": "/use/oracles-data-feeds"
       },
       "seo": {
-        "title": "Oracles & Data Feeds на Ergo | Децентрализованная инфраструктура данных",
+        "title": "Оракулы и каналы данных на Ergo | Децентрализованная инфраструктура данных",
         "description": "Подключение реальных данных к блокчейну Ergo. Децентрализованные пулы, ценовые фиды, пользовательские источники данных для DeFi и рынка прогнозирования.",
         "keywords": "оракулы, ленты данных, пулы оракул, ценовые фиды, внешние данные, орлаки DeFi, Эрго оракул",
-        "ogTitle": "Oracles & Data Feeds на Ergo",
+        "ogTitle": "Оракулы и каналы данных на Ergo",
         "ogDescription": "Поставление реальных данных по всему миру с децентрализованными оракулярными пулами.",
         "twitterTitle": "Ораклы на Эрго",
         "twitterDescription": "Децентрализованные оракульные пулы для надежных каналов данных"
@@ -2606,7 +2606,7 @@
           "description": "Испытанные умные контракты с официальной проверкой"
         },
         {
-          "title": "Lightning Fast",
+          "title": "Молниеносная скорость",
           "description": "Подвторая транзакция с минимальными комиссиями"
         }
       ],
@@ -2652,7 +2652,7 @@
     "subtitle": "Решения для бесперебойной работы"
   },
   "useDaos": {
-    "title": "DAOs & Governance",
+    "title": "DAO и управление",
     "description": "Децентрализованные автономные организации на Ergo",
     "subtitle": "Принятие решений на уровне общин"
   },
@@ -2662,7 +2662,7 @@
     "subtitle": "Играть от игры и от NFT"
   },
   "useGetErg": {
-    "title": "Get ERG",
+    "title": "Получить ERG",
     "description": "Как приобрести токены ERG различными методами",
     "subtitle": "Обмены, горнодобывающая деятельность и возможности для заработка"
   },
@@ -2728,7 +2728,7 @@
       "metaverse": "Метавселенная"
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
+      "title": "Алгоритмические стейблкоины",
       "subtitle": "Хранилище стабильных значений без централизованного управления",
       "description": "Превышение обеспеченного Steecoins с инновационным протоколом AgeUSD."
     },
@@ -2795,7 +2795,7 @@
     }
   },
   "getErg": {
-    "title": "Get ERG - Купить криптовалюту Ergo",
+    "title": "Получить ERG - Купить криптовалюту Ergo",
     "description": "Найти где купить ERG токены на биржах, DEX и P2P",
     "seo": {
       "title": "Get ERG - Как купить криптовалюту Ergo | Руководство по обмену",
@@ -2803,7 +2803,7 @@
       "keywords": "купить обмены ERG, Ergo, получить ERG токены, ERG трейдинг, криптовалютный обмен, DEX Ergo"
     },
     "hero": {
-      "title": "Get ERG",
+      "title": "Получить ERG",
       "subtitle": "Ваш шлюз в Экосистему Эрго",
       "description": "Узнайте, где покупать, торговать и хранить ERG токены",
       "cta": {

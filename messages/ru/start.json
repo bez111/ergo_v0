@@ -760,7 +760,7 @@
               "items": [
                 {
                   "name": "TokenJay",
-                  "description": "NFT minting platform",
+                  "description": "Платформа для минтинга NFT",
                   "link": "/ecosystem/projects/tokenjay"
                 },
                 {
@@ -3132,7 +3132,7 @@
               },
               "sigmausd": {
                 "name": "SigmaUSD",
-                "description": "Algorithmic stablecoin protocol"
+                "description": "Алгоритмический протокол стейблкоина"
               },
               "duckpools": {
                 "name": "Декпулы",
@@ -3285,7 +3285,7 @@
             "items": {
               "tokenjay": {
                 "name": "TokenJay",
-                "description": "NFT minting platform"
+                "description": "Платформа для минтинга NFT"
               },
               "utils": {
                 "name": "Ergo Utils",

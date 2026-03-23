@@ -513,7 +513,7 @@
       },
       "badges": {
         "soon": "bald",
-        "bounty": "bounty"
+        "bounty": "Prämie"
       },
       "whatsNext": {
         "title": "Was kommt als Nächstes?",
@@ -1420,7 +1420,7 @@
           "description": "Native Unterstützung für Wrapped Token mit 1:1-Hinterlegung"
         },
         "atomicSwaps": {
-          "title": "Atomic Swaps",
+          "title": "Atomare Tauschvorgänge",
           "description": "Direkte Peer-to-Peer-Cross-Chain-Tausche ohne Intermediäre"
         }
       },
@@ -2716,9 +2716,9 @@
       "governance": "Governance",
       "community": "Community",
       "nft": "NFT",
-      "royalties": "Royalties",
+      "royalties": "Lizenzgebühren",
       "dynamic": "Dynamisch",
-      "oracles": "Oracles",
+      "oracles": "Orakel",
       "dataFeeds": "Daten-Feeds",
       "prediction": "Prognose",
       "identity": "Identität",

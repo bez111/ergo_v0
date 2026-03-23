@@ -74,7 +74,7 @@
               "icon": "Cpu"
             },
             {
-              "label": "Storage Rent",
+              "label": "Speichermiete",
               "icon": "Database"
             },
             {
@@ -91,7 +91,7 @@
           "title": "Layer 2 / Erweiterungen",
           "items": [
             {
-              "label": "Subblocks",
+              "label": "Subblöcke",
               "icon": "Rocket"
             },
             {
@@ -115,7 +115,7 @@
       },
       "resources": [
         {
-          "title": "Ergo Docs",
+          "title": "Ergo-Dokumentation",
           "href": "/docs",
           "icon": "Book"
         },
@@ -168,34 +168,34 @@
           "id": "sigma-protocols",
           "question": "Welche Datenschutzfunktionen bietet Ergo nativ?",
           "answer": "Sigma-Protokolle bieten native Zero-Knowledge-Beweise, Ring-Signaturen, Multisig-/Schwellenwert-Schemata und private Zahlungen ohne externe Hacks. Dies vereinfacht die Entwicklung vertraulicher dApps.",
-          "tag": "Privacy",
+          "tag": "Datenschutz",
           "link": "/technology/privacy-features"
         },
         {
           "id": "nipopows",
           "question": "Wie ermöglichen NIPoPoWs sofortige Mobile-Wallet-Synchronisierung?",
           "answer": "\"Winzige\" Blockchain-Beweise, die Light Clients, sofortige mobile Synchronisierung und vertrauensfreie Cross-Chain-Bridges ohne vollständige Nodes ermöglichen.",
-          "tag": "Light clients",
+          "tag": "Light Clients",
           "link": "/technology/nipopows"
         },
         {
           "id": "oracle-pools",
           "question": "Warum sind Ergos Oracle Pools sicherer als Chainlink?",
           "answer": "Protokollnative, komponierbare Daten-Feeds ohne zentralen Betreiber — kein einzelner Bestechungs- oder Ausfall-Punkt. Können in jeden Vertrag eingesteckt werden.",
-          "tag": "Oracles",
+          "tag": "Orakel",
           "link": "/technology/oracle-pools"
         },
         {
           "id": "subblocks",
           "question": "Wie erreichen Subblocks Transaktionsbestätigungen unter einer Sekunde?",
           "answer": "Blöcke in schnelle \"Sub-Blöcke\" aufteilen beschleunigt Zahlungs- und dApp-Bestätigung ohne vertrauenswürdige Sequenzer. Layer-1-Skalierung mit schnelleren wahrgenommenen Bestätigungen; Finalität folgt dem Basis-Konsens.",
-          "tag": "Scaling"
+          "tag": "Skalierung"
         },
         {
           "id": "tokens-nfts",
           "question": "Wie erstellt man Token und NFTs auf Ergo ohne Smart Contracts?",
           "answer": "Ja — die Ausgabe erfolgt nativ auf der Protokollebene, in einer einzigen Transaktion. Echte native Assets sind sofort mit dApps komponierbar.",
-          "tag": "Tokens & NFTs",
+          "tag": "Token & NFTs",
           "link": "/technology/native-tokens"
         }
       ],
@@ -250,7 +250,7 @@
           "description": "Speicherschwerer Proof-of-Work-Algorithmus"
         },
         "storageRent": {
-          "name": "Storage Rent",
+          "name": "Speichermiete",
           "description": "Nachhaltige Blockchain-State-Verwaltung"
         },
         "nipopows": {
@@ -267,7 +267,7 @@
         "description": "Umfassende Liste der Ergo-Blockchain-Technologiefunktionen einschließlich eUTXO, ErgoScript, Autolykos PoW und mehr."
       },
       "speakable": {
-        "headline": "Ergo Technology Stack",
+        "headline": "Ergo-Technologie-Stack",
         "summary": "Ergo verwendet eUTXO-Modell für parallele Ausführung, ErgoScript für sichere Verträge und Sigma-Protokolle für Datenschutz"
       },
       "faq": {
@@ -541,7 +541,7 @@
         }
       },
       "storageRent": {
-        "title": "Storage Rent",
+        "title": "Speichermiete",
         "description": "Wirtschaftsmodell für Blockchain-Nachhaltigkeit",
         "details": {
           "sustainable": {
@@ -1393,7 +1393,7 @@
       }
     },
     "storageRent": {
-      "title": "Storage Rent",
+      "title": "Speichermiete",
       "subtitle": "Was ist Storage Rent?",
       "description": "Ergos Storage-Rent-System gewährleistet langfristige Netzwerkgesundheit durch Verhinderung von Blockchain-Bloat und Schaffung vorhersehbarer Kosten für Datenspeicherung.",
       "seo": {
@@ -1866,7 +1866,7 @@
       ]
     },
     "subblocks": {
-      "title": "Subblocks",
+      "title": "Subblöcke",
       "subtitle": "Revolutionäre Layer-1-Skalierungslösung mit Transaktionsbestätigungen unter einer Sekunde",
       "description": "Subblocks ermöglichen nahezu sofortige Transaktionsendgültigkeit ohne Einbußen bei Dezentralisierung oder Sicherheit. Erleben Sie Blockchain-Geschwindigkeit, die traditionellen Zahlungssystemen entspricht.",
       "lastUpdated": "Zuletzt aktualisiert",
@@ -2107,7 +2107,7 @@
       "on_this_page_classname": "On this page\" className=",
       "technology_item_https_ergoblockchain_org": "Technology', item: 'https://ergoblockchain.org/technology",
       "techarticle_headline": "TechArticle', headline:",
-      "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO explained: security, parallelism, programmability, and use cases.",
+      "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO erklärt: Sicherheit, Parallelität, Programmierbarkeit und Anwendungsfälle.",
       "organization_name_ergo_foundation_url": "Organization', name: 'Ergo Foundation', url: 'https://ergoblockchain.org",
       "organization_name_ergo_platform_url": "Organization', name: 'Ergo Platform', url: 'https://ergoblockchain.org",
       "on_this_page": "Auf dieser Seite",
@@ -2633,7 +2633,7 @@
         "learnMore": "Mehr erfahren über das",
         "eutxoLink": "eUTXO-Modell",
         "and": "und wie",
-        "storageRentLink": "Storage Rent",
+        "storageRentLink": "Speichermiete",
         "sustainableEconomics": "nachhaltige Netzwerkökonomie unterstützt"
       },
       "algorithm": {
@@ -2735,7 +2735,7 @@
           "whitepaper": "Whitepaper"
         },
         "relatedText": "Verwandt",
-        "storageRentLink": "Storage Rent",
+        "storageRentLink": "Speichermiete",
         "adaptiveEmissionLink": "Adaptive Emission & Governance"
       },
       "howTo": {
@@ -3119,7 +3119,7 @@
             "paradigm": "Funktional",
             "security": "eUTXO + Formal",
             "verification": "Eingebaut",
-            "privacy": "Sigma Protocols"
+            "privacy": "Sigma-Protokolle"
           },
           "solidity": {
             "paradigm": "Imperativ",
@@ -3547,7 +3547,7 @@
       },
       "technologies": {
         "sigmaProtocols": {
-          "title": "Sigma Protocols",
+          "title": "Sigma-Protokolle",
           "description": "Leistungsstarke Datenschutztools wie Ring-Signaturen und Zero-Knowledge-Beweise auf Protokollebene aktivieren.",
           "features": {
             "zeroKnowledge": "Zero-Knowledge-Beweise",
@@ -3803,7 +3803,7 @@
           ]
         },
         "storage-rent": {
-          "name": "Storage Rent",
+          "name": "Speichermiete",
           "description": "Wirtschaftlicher Mechanismus für Blockchain-Nachhaltigkeit",
           "details": [
             "Verhindert Blockchain-Zustandsaufblähung",
@@ -4426,7 +4426,7 @@
       "relatedTitle": "Verwandte Technologien"
     },
     "storageRent": {
-      "title": "Storage Rent",
+      "title": "Speichermiete",
       "subtitle": "Was ist Storage Rent?",
       "description": "Ergos Storage-Rent-System gewährleistet langfristige Netzwerkgesundheit durch Verhinderung von Blockchain-Aufblähung und schafft vorhersehbare Kosten für Datenspeicherung.",
       "seo": {
@@ -5146,7 +5146,7 @@
       ]
     },
     "storage-rent": {
-      "title": "Storage Rent",
+      "title": "Speichermiete",
       "description": "Nachhaltige Blockchain-Wirtschaft durch Zustandsrecycling – ruhende Münzen zahlen kleine Gebühren, um das Netzwerk sicher zu halten",
       "shortDescription": "Langfristige Nachhaltigkeit durch Zustandsrecycling",
       "keywords": "storage rent,nachhaltigkeit,zustandsaufblähung,miner-einnahmen,tokenomics,demurrage,skalierbarkeit,dezentralisierung",
@@ -5206,7 +5206,7 @@
       ]
     },
     "subblocks": {
-      "title": "Subblocks",
+      "title": "Subblöcke",
       "description": "Layer-1-Skalierungslösung, die Sub-Sekunden-Transaktionsbestätigungen bei gleichzeitiger vollständiger Sicherheit erreicht",
       "shortDescription": "Sub-Sekunden-Bestätigungen auf Layer 1",
       "keywords": "subblocks,skalierung,schnelle bestätigungen,layer 1,durchsatz",

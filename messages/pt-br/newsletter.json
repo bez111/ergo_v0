@@ -1,21 +1,21 @@
 {
   "newsletter": {
-    "title": "Stay Updated",
-    "subtitle": "Get the latest Ergo news and updates",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "Enter your email address",
-    "subscribe": "Subscribe",
-    "interests": "Interests (optional)",
-    "privacyNotice": "By subscribing, you agree to our",
-    "privacyPolicy": "Privacy Policy",
+    "title": "Fique Atualizado",
+    "subtitle": "Receba as últimas notícias e atualizações sobre Ergo",
+    "emailLabel": "Endereço de E-mail",
+    "emailPlaceholder": "Digite seu endereço de e-mail",
+    "subscribe": "Assinar",
+    "interests": "Interesses (opcional)",
+    "privacyNotice": "Ao assinar, você concorda com nossa",
+    "privacyPolicy": "Política de Privacidade",
     "alreadySubscribed": {
-      "title": "You're subscribed!"
+      "title": "Você está inscrito!"
     },
     "segments": {
-      "developers": "Developers",
-      "miners": "Miners",
-      "investors": "Investors",
-      "general": "General News"
+      "developers": "Desenvolvedores",
+      "miners": "Mineradores",
+      "investors": "Investidores",
+      "general": "Notícias Gerais"
     }
   }
 }

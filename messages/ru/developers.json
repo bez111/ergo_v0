@@ -280,7 +280,7 @@
         "description": "Проверять транзакции и блоки"
       },
       "faucet": {
-        "title": "Testnet Faucet",
+        "title": "Тестовый кран",
         "description": "Получить тест ERG для разработки"
       },
       "vscode": {
@@ -319,7 +319,7 @@
         },
         {
           "criterion": "Комиссия и прогнозируемость",
-          "bitcoin": "Volatile",
+          "bitcoin": "Нестабильные",
           "ethereum": "Высокий, непредсказуемый",
           "ergo": "Нет, предсказуемый"
         }
@@ -332,7 +332,7 @@
       "metrics": {
         "hashrate": "Хэшраст",
         "txDay": "ТХ/день",
-        "nodes": "Nodes",
+        "nodes": "Узлы",
         "tvl": "TVL",
         "supply": "Снабжение",
         "emission": "Выбросы"
@@ -433,7 +433,7 @@
         "title": "Ergo Ecosystem — dApps, кошельки, инструменты, DeFi",
         "description": "Изучение экосистемы Эрго: децентрализованные приложения, кошельки, инструменты конфиденциальности, протоколы DeFi, SDK и инфраструктура.",
         "keywords": "экосистема Эрго, DeFi, NFTs, dApps, блокчейн проекты",
-        "ogTitle": "Ergo Ecosystem",
+        "ogTitle": "Экосистема Ergo",
         "ogDescription": "Каталог приложений Ergo dApps, кошельки, инфраструктура и инструменты."
       },
       "filters": {
@@ -785,7 +785,7 @@
         }
       },
       "nipopows": {
-        "title": "НИПОВ",
+        "title": "NIPoPoWs",
         "description": "Неинтерактивные доказательства проверки работы",
         "details": {
           "instantMobileSync": {
@@ -934,7 +934,7 @@
   "playground": {
     "title": "Живая площадка",
     "interactive": "Интерактивный",
-    "reset": "Reset",
+    "reset": "Сбросить",
     "component": "Компонент",
     "codeEditor": "Редактор кода",
     "livePreview": "Просмотр в реальном времени",

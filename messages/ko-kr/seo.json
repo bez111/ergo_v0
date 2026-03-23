@@ -72,9 +72,9 @@
     "discord": "Discord",
     "telegram": "Telegram",
     "twitter": "Twitter",
-    "allRightsReserved": "ALL RIGHTS RESERVED.",
-    "copyright": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED.",
-    "openSource": "ERGO IS AN OPEN-SOURCE PROJECT.",
-    "contributeOnGithub": "CONTRIBUTE ON GITHUB"
+    "allRightsReserved": "모든 권리 보유.",
+    "copyright": "© {{year}} ERGO PLATFORM. 모든 권리 보유.",
+    "openSource": "ERGO는 오픈소스 프로젝트입니다.",
+    "contributeOnGithub": "GITHUB에서 기여하기"
   }
 }

@@ -1,86 +1,86 @@
 {
   "faq": {
-    "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about Ergo blockchain, technology, and ecosystem.",
-    "searchPlaceholder": "Search questions...",
-    "noResults": "No questions found matching your search.",
+    "title": "Domande Frequenti",
+    "subtitle": "Trova risposte alle domande comuni sulla blockchain Ergo, la tecnologia e l'ecosistema.",
+    "searchPlaceholder": "Cerca domande...",
+    "noResults": "Nessuna domanda trovata corrispondente alla tua ricerca.",
     "categories": {
-      "all": "All Questions",
-      "basics": "Basics",
-      "technology": "Technology",
-      "gettingStarted": "Getting Started",
-      "ecosystem": "Ecosystem",
-      "community": "Community"
+      "all": "Tutte le Domande",
+      "basics": "Basi",
+      "technology": "Tecnologia",
+      "gettingStarted": "Per Iniziare",
+      "ecosystem": "Ecosistema",
+      "community": "Comunità"
     },
     "questions": {
       "basics": {
         "whatIsErgo": {
-          "q": "What is Ergo?",
-          "a": "Ergo is a next-generation smart contract platform that prioritizes economic freedom through decentralized, censorship-resistant, and secure financial contracts."
+          "q": "Cos'è Ergo?",
+          "a": "Ergo è una piattaforma di smart contract di nuova generazione che dà priorità alla libertà economica attraverso contratti finanziari decentralizzati, resistenti alla censura e sicuri."
         },
         "howDifferent": {
-          "q": "How is Ergo different from other blockchains?",
-          "a": "Ergo combines proven cryptographic features with innovative approaches like eUTXO model, storage rent, and Sigma protocols for enhanced security and sustainability."
+          "q": "In cosa si differenzia Ergo dalle altre blockchain?",
+          "a": "Ergo combina funzionalità crittografiche comprovate con approcci innovativi come il modello eUTXO, lo storage rent e i protocolli Sigma per una maggiore sicurezza e sostenibilità."
         },
         "ergToken": {
-          "q": "What is ERG token?",
-          "a": "ERG is Ergo's native cryptocurrency used for transaction fees, smart contract execution, and storage rent. It has a fixed supply cap of 97.7 million tokens."
+          "q": "Cos'è il token ERG?",
+          "a": "ERG è la criptovaluta nativa di Ergo utilizzata per le commissioni di transazione, l'esecuzione degli smart contract e lo storage rent. Ha un'offerta massima fissa di 97,7 milioni di token."
         }
       },
       "technologyFaq": {
         "eUTXO": {
-          "q": "What is the eUTXO model?",
-          "a": "Extended UTXO (eUTXO) combines Bitcoin's UTXO security with Ethereum's smart contract expressiveness, enabling more predictable and secure dApps."
+          "q": "Cos'è il modello eUTXO?",
+          "a": "L'UTXO Esteso (eUTXO) combina la sicurezza UTXO di Bitcoin con l'espressività degli smart contract di Ethereum, consentendo dApp più prevedibili e sicure."
         },
         "autolykos": {
-          "q": "What is Autolykos consensus?",
-          "a": "Autolykos v2 is Ergo's ASIC-resistant Proof-of-Work algorithm designed to be memory-hard and promote decentralized mining."
+          "q": "Cos'è il consenso Autolykos?",
+          "a": "Autolykos v2 è l'algoritmo Proof-of-Work resistente agli ASIC di Ergo, progettato per essere memory-hard e promuovere il mining decentralizzato."
         },
         "sigmaProtocols": {
-          "q": "What are Sigma protocols?",
-          "a": "Sigma protocols enable powerful cryptographic proofs for privacy and complex smart contracts without revealing sensitive information."
+          "q": "Cosa sono i protocolli Sigma?",
+          "a": "I protocolli Sigma abilitano potenti prove crittografiche per la privacy e smart contract complessi senza rivelare informazioni sensibili."
         }
       },
       "gettingStarted": {
         "getErg": {
-          "q": "How do I get ERG tokens?",
-          "a": "You can buy ERG on exchanges like KuCoin, Gate.io, or CoinEx, or earn them through mining or participating in the ecosystem."
+          "q": "Come posso ottenere token ERG?",
+          "a": "Puoi acquistare ERG su exchange come KuCoin, Gate.io o CoinEx, oppure guadagnarlo tramite mining o partecipando all'ecosistema."
         },
         "wallet": {
-          "q": "Which wallet should I use?",
-          "a": "Popular options include Nautilus (browser extension), official mobile wallets, or hardware wallets like Ledger for maximum security."
+          "q": "Quale portafoglio dovrei usare?",
+          "a": "Le opzioni più diffuse includono Nautilus (estensione browser), portafogli mobile ufficiali o hardware wallet come Ledger per la massima sicurezza."
         },
         "startMining": {
-          "q": "How do I start mining ERG?",
-          "a": "You can mine ERG using GPU miners. Check our mining guide for pool recommendations and setup instructions."
+          "q": "Come inizio a minare ERG?",
+          "a": "Puoi minare ERG usando miner GPU. Consulta la nostra guida al mining per consigli sui pool e istruzioni di configurazione."
         }
       },
       "ecosystem": {
         "dApps": {
-          "q": "What dApps are available on Ergo?",
-          "a": "Ergo has DeFi protocols like SigmaUSD, DEXs like Spectrum, NFT platforms, and various tools. Explore the ecosystem page for more."
+          "q": "Quali dApp sono disponibili su Ergo?",
+          "a": "Ergo ha protocolli DeFi come SigmaUSD, DEX come Spectrum, piattaforme NFT e vari strumenti. Esplora la pagina dell'ecosistema per saperne di più."
         },
         "defi": {
-          "q": "What DeFi options are available?",
-          "a": "Ergo offers algorithmic stablecoins (SigmaUSD), decentralized exchanges, lending protocols, and yield farming opportunities."
+          "q": "Quali opzioni DeFi sono disponibili?",
+          "a": "Ergo offre stablecoin algoritmiche (SigmaUSD), exchange decentralizzati, protocolli di prestito e opportunità di yield farming."
         },
         "nfts": {
-          "q": "Does Ergo support NFTs?",
-          "a": "Yes! Ergo has a vibrant NFT ecosystem with marketplaces, creation tools, and unique features like royalty enforcement."
+          "q": "Ergo supporta gli NFT?",
+          "a": "Sì! Ergo ha un vivace ecosistema NFT con marketplace, strumenti di creazione e funzionalità uniche come l'applicazione delle royalty."
         }
       },
       "community": {
         "getHelp": {
-          "q": "Where can I get help?",
-          "a": "Join our Discord, Telegram, or visit the Ergo Forum. The community is welcoming and always ready to help newcomers."
+          "q": "Dove posso ottenere aiuto?",
+          "a": "Unisciti al nostro Discord, Telegram, o visita il Forum Ergo. La comunità è accogliente e sempre pronta ad aiutare i nuovi arrivati."
         },
         "contribute": {
-          "q": "How can I contribute to Ergo?",
-          "a": "You can contribute through development, documentation, community support, content creation, or applying for ecosystem grants."
+          "q": "Come posso contribuire a Ergo?",
+          "a": "Puoi contribuire attraverso lo sviluppo, la documentazione, il supporto alla comunità, la creazione di contenuti o facendo domanda per i grant dell'ecosistema."
         },
         "stayUpdated": {
-          "q": "How do I stay updated with Ergo news?",
-          "a": "Follow @ergoplatformorg on Twitter, join our Discord/Telegram, subscribe to the newsletter, or check the official blog."
+          "q": "Come rimango aggiornato sulle notizie di Ergo?",
+          "a": "Segui @ergoplatformorg su Twitter, unisciti al nostro Discord/Telegram, iscriviti alla newsletter o controlla il blog ufficiale."
         }
       }
     }
@@ -88,64 +88,64 @@
   "faqPage": {
     "title": "Ergo",
     "titleHighlight": "FAQ",
-    "subtitle": "Find answers to common questions about Ergo",
-    "questionsCount": "{count} questions",
+    "subtitle": "Trova risposte alle domande comuni su Ergo",
+    "questionsCount": "{count} domande",
     "tabs": {
-      "beginner": "Beginner",
-      "technical": "Technical"
+      "beginner": "Principiante",
+      "technical": "Tecnico"
     },
     "search": {
-      "placeholder": "Search questions...",
-      "ariaLabel": "Search FAQ questions"
+      "placeholder": "Cerca domande...",
+      "ariaLabel": "Cerca domande FAQ"
     },
     "filters": {
-      "all": "All"
+      "all": "Tutte"
     },
     "categories": {
-      "basics": "Basics",
-      "technology": "Technology",
-      "gettingStarted": "Getting Started",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "general": "General",
-      "economics": "Economics",
-      "wallets": "Wallets",
+      "basics": "Basi",
+      "technology": "Tecnologia",
+      "gettingStarted": "Per Iniziare",
+      "ecosystem": "Ecosistema",
+      "community": "Comunità",
+      "general": "Generale",
+      "economics": "Economia",
+      "wallets": "Portafogli",
       "mining": "Mining"
     },
     "levels": {
-      "beginner": "beginner",
-      "technical": "technical"
+      "beginner": "principiante",
+      "technical": "tecnico"
     },
     "noResults": {
-      "title": "No questions found",
-      "subtitle": "Try a different search or category"
+      "title": "Nessuna domanda trovata",
+      "subtitle": "Prova una ricerca o categoria diversa"
     },
     "relatedResources": {
-      "title": "Still have questions?",
+      "title": "Hai ancora domande?",
       "qaHub": {
-        "title": "Q&A Hub",
-        "description": "Browse community questions and detailed answers"
+        "title": "Hub Q&A",
+        "description": "Sfoglia le domande della comunità e le risposte dettagliate"
       },
       "glossary": {
-        "title": "Glossary",
-        "description": "Learn Ergo terminology and concepts"
+        "title": "Glossario",
+        "description": "Impara la terminologia e i concetti di Ergo"
       },
       "askCommunity": {
-        "title": "Ask Community",
-        "description": "Get help from the Ergo community on Discord"
+        "title": "Chiedi alla Comunità",
+        "description": "Ottieni aiuto dalla comunità Ergo su Discord"
       }
     },
     "cta": {
-      "title": "Stay updated",
-      "description": "Get new FAQs, guides, and important network updates delivered to your inbox."
+      "title": "Rimani aggiornato",
+      "description": "Ricevi nuove FAQ, guide e importanti aggiornamenti di rete nella tua casella di posta."
     },
     "seo": {
-      "title": "Ergo FAQ — Answers to 50+ Common Questions | Ergo",
-      "description": "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy, eUTXO, ErgoScript — find what you need in seconds.",
-      "ogTitle": "Ergo FAQ — Answers to 50+ Common Questions",
-      "ogDescription": "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy — find what you need in seconds.",
-      "twitterTitle": "Ergo FAQ — Answers to 50+ Common Questions",
-      "twitterDescription": "50+ answered questions about Ergo. Wallets, mining, DeFi, privacy — find answers in seconds."
+      "title": "Ergo FAQ — Risposte a 50+ Domande Comuni | Ergo",
+      "description": "50+ domande con risposte sulla blockchain Ergo. Portafogli, mining, DeFi, privacy, eUTXO, ErgoScript — trova quello che ti serve in pochi secondi.",
+      "ogTitle": "Ergo FAQ — Risposte a 50+ Domande Comuni",
+      "ogDescription": "50+ domande con risposte sulla blockchain Ergo. Portafogli, mining, DeFi, privacy — trova quello che ti serve in pochi secondi.",
+      "twitterTitle": "Ergo FAQ — Risposte a 50+ Domande Comuni",
+      "twitterDescription": "50+ domande con risposte su Ergo. Portafogli, mining, DeFi, privacy — trova le risposte in pochi secondi."
     },
     "schema": {
       "breadcrumbs": {
@@ -154,183 +154,183 @@
     }
   },
   "learnFaq": {
-    "title": "Learn FAQ",
-    "description": "Frequently asked questions about learning Ergo",
-    "subtitle": "Common questions and detailed answers"
+    "title": "FAQ su come imparare",
+    "description": "Domande frequenti su come imparare Ergo",
+    "subtitle": "Domande comuni e risposte dettagliate"
   },
   "startFaq": {
-    "title": "Getting Started FAQ",
-    "description": "Essential questions for newcomers to Ergo",
-    "subtitle": "Your first steps with Ergo blockchain"
+    "title": "FAQ per iniziare",
+    "description": "Domande essenziali per i nuovi arrivati su Ergo",
+    "subtitle": "I tuoi primi passi con la blockchain Ergo"
   },
   "faqData": {
     "beginner-what-is-ergo": {
-      "question": "What is Ergo in simple terms?",
-      "answer": "Ergo is a secure Proof-of-Work blockchain for powerful smart contracts, enabling decentralized financial applications. Think of it as digital money (ERG) with programmable rules."
+      "question": "Cos'è Ergo in termini semplici?",
+      "answer": "Ergo è una blockchain Proof-of-Work sicura per smart contract potenti, che consente applicazioni finanziarie decentralizzate. Pensala come denaro digitale (ERG) con regole programmabili."
     },
     "beginner-is-ergo-company": {
-      "question": "Is Ergo a company?",
-      "answer": "No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network."
+      "question": "Ergo è un'azienda?",
+      "answer": "No, Ergo è un protocollo decentralizzato e open-source. La Ergo Foundation è un ente comunitario senza scopo di lucro che supporta lo sviluppo ma non controlla la rete."
     },
     "beginner-fair-launch": {
-      "question": "What does a ",
-      "answer": "Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one."
+      "question": "Cosa significa",
+      "answer": "Ergo non ha avuto alcuna Initial Coin Offering (ICO) né token pre-minati per i fondatori. Questo garantisce una distribuzione più equa, poiché tutti hanno avuto pari opportunità di acquisire ERG attraverso il mining dal primo giorno."
     },
     "beginner-ergo-vs-btc-eth": {
-      "question": "How is Ergo different from Bitcoin or Ethereum?",
-      "answer": "vs. Bitcoin: Ergo supports advanced smart contracts, not just currency. \\n vs. Ethereum: Ergo uses the eUTXO model for enhanced security and predictable fees, and remains Proof-of-Work."
+      "question": "In cosa si differenzia Ergo da Bitcoin o Ethereum?",
+      "answer": "vs. Bitcoin: Ergo supporta smart contract avanzati, non solo valuta. \\n vs. Ethereum: Ergo utilizza il modello eUTXO per maggiore sicurezza e commissioni prevedibili, e rimane Proof-of-Work."
     },
     "beginner-eutxo": {
-      "question": "What is eUTXO?",
-      "answer": "The Extended UTXO model attaches data and logic directly to "
+      "question": "Cos'è eUTXO?",
+      "answer": "Il modello UTXO Esteso allega dati e logica direttamente a"
     },
     "beginner-ergoscript": {
-      "question": "What is ErgoScript?",
-      "answer": "ErgoScript is the powerful and secure programming language for writing smart contracts on Ergo. You do not need to know code to use Ergo; it"
+      "question": "Cos'è ErgoScript?",
+      "answer": "ErgoScript è il potente e sicuro linguaggio di programmazione per scrivere smart contract su Ergo. Non è necessario conoscere il codice per usare Ergo; è"
     },
     "beginner-sigma-protocols": {
-      "question": "What are Sigma Protocols?",
-      "answer": "These are advanced zero-knowledge proofs built into Ergo"
+      "question": "Cosa sono i Protocolli Sigma?",
+      "answer": "Sono prove a conoscenza zero avanzate integrate in Ergo"
     },
     "beginner-erg-use": {
-      "question": "What is the ERG coin used for?",
-      "answer": "ERG is used for transaction fees, collateral for stablecoins (SigmaUSD), participating in DeFi applications, powering dApps (NFTs, gaming), and incentivizing miners."
+      "question": "A cosa serve la moneta ERG?",
+      "answer": "ERG viene utilizzato per le commissioni di transazione, il collaterale per le stablecoin (SigmaUSD), la partecipazione alle applicazioni DeFi, il funzionamento delle dApp (NFT, gaming) e l'incentivazione dei minatori."
     },
     "beginner-get-erg": {
-      "question": "How can I get ERG?",
-      "answer": "You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing."
+      "question": "Come posso ottenere ERG?",
+      "answer": "Puoi acquisire ERG su vari exchange di criptovalute, tramite scambi peer-to-peer o attraverso il mining. Fai sempre le tue ricerche prima di investire."
     },
     "beginner-wallet": {
-      "question": "Which wallet is best for beginners?",
-      "answer": "The official mobile wallets (Android/iOS) or the Nautilus Wallet (browser extension) are excellent, user-friendly starting points."
+      "question": "Quale portafoglio è migliore per i principianti?",
+      "answer": "I portafogli mobile ufficiali (Android/iOS) o il Nautilus Wallet (estensione browser) sono ottimi punti di partenza facili da usare."
     },
     "beginner-dapps": {
-      "question": "What kinds of dApps are on Ergo?",
+      "question": "Che tipo di dApp ci sono su Ergo?",
       "answer": "Ergo"
     },
     "beginner-ergomixer": {
-      "question": "What is ErgoMixer?",
-      "answer": "ErgoMixer is a non-custodial service that increases your transaction privacy by mixing your ERG with others, making it difficult to trace your transaction history."
+      "question": "Cos'è ErgoMixer?",
+      "answer": "ErgoMixer è un servizio non-custodial che aumenta la privacy delle tue transazioni mescolando i tuoi ERG con quelli di altri, rendendo difficile tracciare la cronologia delle tue transazioni."
     },
     "beginner-governance": {
-      "question": "Who governs Ergo?",
-      "answer": "Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support."
+      "question": "Chi governa Ergo?",
+      "answer": "Ergo è decentralizzata e guidata dalla comunità. Le modifiche al protocollo vengono discusse e formalizzate attraverso le Ergo Improvement Proposals (EIP), con i minatori che segnalano il supporto."
     },
     "beginner-contribute": {
-      "question": "How can I contribute if I",
-      "answer": "You can help with community support, content creation (articles, videos), translation, testing dApps, or simply spreading awareness about Ergo."
+      "question": "Come posso contribuire se",
+      "answer": "Puoi aiutare con il supporto alla comunità, la creazione di contenuti (articoli, video), la traduzione, il test delle dApp o semplicemente diffondendo la consapevolezza su Ergo."
     },
     "tech-what-is-ergo": {
-      "question": "What is Ergo?",
-      "answer": "Ergo is a programmable blockchain protocol engineered for the development of decentralized applications (dApps), with a pronounced emphasis on creating an efficient, secure, and accessible environment for implementing financial contracts. Launched in 2019, the platform distinctively merges the security advantages of Bitcoin"
+      "question": "Cos'è Ergo?",
+      "answer": "Ergo è un protocollo blockchain programmabile progettato per lo sviluppo di applicazioni decentralizzate (dApp), con un'enfasi pronunciata sulla creazione di un ambiente efficiente, sicuro e accessibile per l'implementazione di contratti finanziari. Lanciata nel 2019, la piattaforma unisce distintivamente i vantaggi di sicurezza di Bitcoin"
     },
     "tech-ergo-vision": {
-      "question": "What is the main goal or vision of Ergo?",
-      "answer": "The overarching vision of Ergo is to furnish tools that promote economic freedom for ordinary individuals by offering secure, accessible, and decentralized financial instruments. This mission is supported by a commitment to creating a resilient platform engineered for long-term viability, capable of adapting to new challenges and incorporating novel ideas through its self-amendable protocol."
+      "question": "Qual è l'obiettivo principale o la visione di Ergo?",
+      "answer": "La visione generale di Ergo è fornire strumenti che promuovano la libertà economica per gli individui comuni offrendo strumenti finanziari sicuri, accessibili e decentralizzati. Questa missione è supportata dall'impegno a creare una piattaforma resiliente progettata per la longevità a lungo termine, capace di adattarsi a nuove sfide e incorporare idee nuove attraverso il suo protocollo auto-emendabile."
     },
     "tech-ergo-principles": {
-      "question": "What are the core principles of the Ergo Platform?",
-      "answer": "Ergo operates under several core principles: Organic and Non-Breaking Development (protocol modifications undergo approval by miners, users, and projects), Open-Source and Permissive Licensing, Privacy and Trustless Environments, Community-Driven governance (Ergo Treasury benefits the community), and Focus on Long-Term Survivability through researched solutions and self-amendable protocol design."
+      "question": "Quali sono i principi fondamentali della Piattaforma Ergo?",
+      "answer": "Ergo opera secondo diversi principi fondamentali: Sviluppo Organico e Non Dirompente (le modifiche al protocollo richiedono l'approvazione di minatori, utenti e progetti), Licenze Open-Source e Permissive, Privacy e Ambienti Trustless, Governance Guidata dalla Comunità (il Tesoro Ergo beneficia la comunità) e Focus sulla Sopravvivenza a Lungo Termine attraverso soluzioni studiate e design del protocollo auto-emendabile."
     },
     "tech-ergo-manifesto": {
-      "question": "What is the Ergo Manifesto and its key ideas on privacy?",
-      "answer": "The Ergo Manifesto, authored by co-founder Alex Chepurnoy, articulates that financial privacy is a fundamental human right. Key ideas include: privacy as a tool for survival and protection against authoritarian control, defense against financial asset seizure, recognition that regulation stability isn"
+      "question": "Cos'è il Manifesto Ergo e le sue idee chiave sulla privacy?",
+      "answer": "Il Manifesto Ergo, scritto dal co-fondatore Alex Chepurnoy, afferma che la privacy finanziaria è un diritto umano fondamentale. Le idee chiave includono: la privacy come strumento di sopravvivenza e protezione contro il controllo autoritario, difesa contro il sequestro di asset finanziari, riconoscimento che la stabilità normativa non è"
     },
     "tech-why-named-ergo": {
-      "question": "Why is it named ",
-      "answer": "The name "
+      "question": "Perché si chiama",
+      "answer": "Il nome"
     },
     "tech-ergo-launch": {
-      "question": "When was Ergo launched? Was there an ICO?",
+      "question": "Quando è stato lanciato Ergo? C'è stata una ICO?",
       "answer": "Ergo\\"
     },
     "tech-consensus-mechanism": {
-      "question": "What consensus mechanism does Ergo use?",
-      "answer": "Ergo employs a Proof-of-Work (PoW) consensus mechanism using the Autolykos algorithm. PoW was chosen for its "
+      "question": "Quale meccanismo di consenso usa Ergo?",
+      "answer": "Ergo impiega un meccanismo di consenso Proof-of-Work (PoW) usando l'algoritmo Autolykos. Il PoW è stato scelto per la sua"
     },
     "tech-autolykos-algorithm": {
-      "question": "What is Autolykos and how is it different?",
-      "answer": "Autolykos is Ergo"
+      "question": "Cos'è Autolykos e in cosa si differenzia?",
+      "answer": "Autolykos è Ergo"
     },
     "tech-eutxo-model": {
-      "question": "What is the eUTXO model and how does it differ from Bitcoin",
-      "answer": "The Extended UTXO (eUTXO) model builds on Bitcoin\\"
+      "question": "Cos'è il modello eUTXO e in cosa differisce da Bitcoin",
+      "answer": "Il modello UTXO Esteso (eUTXO) si basa su Bitcoin\\"
     },
     "tech-eutxo-advantages": {
-      "question": "What are the advantages of eUTXO for Ergo?",
-      "answer": "eUTXO provides: Enhanced Privacy (one-time objects), Scalability and Parallel Processing, better Interoperability with off-chain protocols, Transaction Cost Predictability (stable fees around 0.0011 ERG), Security and Determinism (isolated contract execution), Local Reasoning and Off-Chain Validation, and Expressive Smart Contracts on a secure foundation."
+      "question": "Quali sono i vantaggi di eUTXO per Ergo?",
+      "answer": "eUTXO fornisce: Privacy Migliorata (oggetti monouso), Scalabilità ed Elaborazione Parallela, migliore Interoperabilità con protocolli off-chain, Prevedibilità del Costo delle Transazioni (commissioni stabili intorno a 0,0011 ERG), Sicurezza e Determinismo (esecuzione isolata del contratto), Ragionamento Locale e Validazione Off-Chain, e Smart Contract Espressivi su una base sicura."
     },
     "tech-smart-contracts-ergo": {
-      "question": "What are smart contracts on Ergo?",
-      "answer": "Smart contracts on Ergo are self-executing code that automatically enforce predefined terms. Every "
+      "question": "Cosa sono gli smart contract su Ergo?",
+      "answer": "Gli smart contract su Ergo sono codice auto-eseguibile che applica automaticamente termini predefiniti. Ogni"
     },
     "tech-ergoscript-features": {
-      "question": "What is ErgoScript and what are its key features?",
-      "answer": "ErgoScript is Ergo"
+      "question": "Cos'è ErgoScript e quali sono le sue caratteristiche principali?",
+      "answer": "ErgoScript è Ergo"
     },
     "tech-ergoscript-vs-solidity": {
-      "question": "How does ErgoScript compare to Solidity?",
-      "answer": "ErgoScript (Ergo/eUTXO) vs Solidity (Ethereum/Account): ErgoScript emphasizes security and expressiveness with built-in cryptographic primitives, while Solidity focuses on ease of use. ErgoScript is Scala-based and functional, Solidity is JavaScript-like. ErgoScript offers more predictable costs and native privacy features, while Solidity has a larger ecosystem and more development tools currently available."
+      "question": "Come si confronta ErgoScript con Solidity?",
+      "answer": "ErgoScript (Ergo/eUTXO) vs Solidity (Ethereum/Account): ErgoScript enfatizza sicurezza ed espressività con primitive crittografiche integrate, mentre Solidity si concentra sulla facilità d'uso. ErgoScript è basato su Scala ed è funzionale, Solidity è simile a JavaScript. ErgoScript offre costi più prevedibili e funzionalità di privacy native, mentre Solidity ha un ecosistema più ampio e più strumenti di sviluppo attualmente disponibili."
     },
     "tech-boxes-ergoscript": {
-      "question": "What are ",
-      "answer": "Boxes are Ergo"
+      "question": "Cosa sono",
+      "answer": "I box sono Ergo"
     },
     "tech-sigma-protocols": {
-      "question": "What are Sigma Protocols and how do they enhance privacy?",
-      "answer": "Sigma Protocols are efficient, composable zero-knowledge proofs that allow proving knowledge of secrets without revealing them. They enable: multi-signature wallets, ring signatures (for anonymity), threshold signatures, atomic swaps, and power ErgoMixer. They"
+      "question": "Cosa sono i Protocolli Sigma e come migliorano la privacy?",
+      "answer": "I Protocolli Sigma sono prove a conoscenza zero efficienti e componibili che consentono di dimostrare la conoscenza di segreti senza rivelarli. Abilitano: portafogli multi-firma, ring signature (per l'anonimato), firme a soglia, atomic swap e potenziano ErgoMixer. Sono"
     },
     "tech-zero-knowledge-proofs": {
-      "question": "Does Ergo offer Zero-Knowledge Proofs?",
-      "answer": "Yes, Ergo provides robust support for discrete log-based zero-knowledge proofs through Sigma Protocols. These are actively used for privacy-preserving features, complex authentication schemes, and applications like ErgoMixer. ErgoScript is described as being "
+      "question": "Ergo offre prove a conoscenza zero?",
+      "answer": "Sì, Ergo fornisce un robusto supporto per prove a conoscenza zero basate su logaritmo discreto attraverso i Protocolli Sigma. Queste sono attivamente utilizzate per funzionalità di preservazione della privacy, schemi di autenticazione complessi e applicazioni come ErgoMixer. ErgoScript è descritto come"
     },
     "tech-ergomixer": {
-      "question": "What is ErgoMixer and how does it work?",
-      "answer": "ErgoMixer is a non-custodial, non-interactive token mixing service that enhances transaction privacy by obscuring links between sender and receiver addresses. It uses Sigma Protocols (ring signatures) to combine user transactions with others or decoys. Being non-custodial means users retain control of private keys, and non-interactive means no real-time coordination with other users is required."
+      "question": "Cos'è ErgoMixer e come funziona?",
+      "answer": "ErgoMixer è un servizio di mixing di token non-custodial e non-interattivo che migliora la privacy delle transazioni oscurando i collegamenti tra gli indirizzi del mittente e del destinatario. Utilizza i Protocolli Sigma (ring signature) per combinare le transazioni degli utenti con altre o con esche. Essere non-custodial significa che gli utenti mantengono il controllo delle chiavi private, e non-interattivo significa che non è richiesto alcun coordinamento in tempo reale con altri utenti."
     },
     "tech-privacy-optional": {
-      "question": "Is privacy on Ergo optional or mandatory?",
-      "answer": "Privacy on Ergo is optional, not mandatory. This allows flexibility for diverse use cases - some applications need transparency (like charities), while others require privacy. Optional privacy enables rich smart contract functionality, broader adoption, regulatory navigation, and user autonomy. Users can choose privacy tools like ErgoMixer when needed."
+      "question": "La privacy su Ergo è opzionale o obbligatoria?",
+      "answer": "La privacy su Ergo è opzionale, non obbligatoria. Questo consente flessibilità per diversi casi d'uso: alcune applicazioni necessitano di trasparenza (come le organizzazioni benefiche), mentre altre richiedono privacy. La privacy opzionale abilita funzionalità di smart contract ricche, adozione più ampia, gestione normativa e autonomia dell'utente. Gli utenti possono scegliere strumenti di privacy come ErgoMixer quando necessario."
     },
     "tech-storage-rent": {
-      "question": "What is ",
-      "answer": "Storage rent is a fee levied on UTXOs inactive for 4+ years (approximately 0.14 ERG per typical box every 4 years). It exists to: prevent blockchain bloat by recycling "
+      "question": "Cos'è",
+      "answer": "Lo storage rent è una commissione applicata agli UTXO inattivi per 4+ anni (circa 0,14 ERG per box tipico ogni 4 anni). Esiste per: prevenire il bloat della blockchain riciclando"
     },
     "tech-long-term-survivability": {
-      "question": "How does Ergo aim for long-term survivability and self-amendability?",
-      "answer": "Ergo ensures survivability through: researched solutions to minimize security risks, sustainable economic model (storage rent + emission schedule), robust PoW consensus, and self-amendable protocol design. Changes require approval from miners, users, and projects through the EIP (Ergo Improvement Proposal) process, promoting organic, non-breaking development."
+      "question": "Come Ergo punta alla sopravvivenza a lungo termine e all'auto-emendabilità?",
+      "answer": "Ergo garantisce la sopravvivenza attraverso: soluzioni studiate per minimizzare i rischi di sicurezza, modello economico sostenibile (storage rent + programma di emissione), consenso PoW robusto e design del protocollo auto-emendabile. Le modifiche richiedono l'approvazione di minatori, utenti e progetti attraverso il processo EIP (Ergo Improvement Proposal), promuovendo lo sviluppo organico e non dirompente."
     },
     "tech-nipopows": {
-      "question": "What are NIPoPoWs and how does Ergo use them?",
-      "answer": "Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) allow efficient verification of blockchain events without downloading the full chain. Ergo uses them for: ultra-light clients (mobile wallets), trustless cross-chain bridges, and efficient sidechains. They enable logarithmic-size proofs instead of linear, making verification much faster and lighter."
+      "question": "Cosa sono i NIPoPoW e come li usa Ergo?",
+      "answer": "Le Non-Interactive Proofs of Proof-of-Work (NIPoPoW) consentono la verifica efficiente degli eventi blockchain senza scaricare l'intera catena. Ergo le usa per: client ultra-leggeri (portafogli mobile), bridge cross-chain trustless e sidechain efficienti. Consentono prove di dimensione logaritmica invece che lineare, rendendo la verifica molto più veloce e leggera."
     },
     "tech-tokenomics": {
-      "question": "What is Ergo",
-      "answer": "ERG has a fixed supply cap of ~97.7 million coins. Emission started at 75 ERG/block, decreasing over time. No ICO or pre-mine occurred. The Ergo Foundation receives 4.43% of total supply over the emission period. Storage rent provides sustainable long-term miner rewards after emission ends."
+      "question": "Qual è la tokenomics di Ergo",
+      "answer": "ERG ha un'offerta massima fissa di ~97,7 milioni di monete. L'emissione è iniziata a 75 ERG/blocco, diminuendo nel tempo. Non sono avvenute ICO né pre-mine. La Ergo Foundation riceve il 4,43% dell'offerta totale nel periodo di emissione. Lo storage rent fornisce ricompense sostenibili a lungo termine per i minatori dopo la fine dell'emissione."
     },
     "tech-sigmausd": {
-      "question": "What is SigmaUSD?",
-      "answer": "SigmaUSD is Ergo"
+      "question": "Cos'è SigmaUSD?",
+      "answer": "SigmaUSD è Ergo"
     },
     "tech-oracle-pools": {
-      "question": "What are Oracle Pools?",
-      "answer": "Oracle Pools are Ergo"
+      "question": "Cosa sono gli Oracle Pool?",
+      "answer": "Gli Oracle Pool sono Ergo"
     },
     "tech-spectrum-dex": {
-      "question": "What is Spectrum DEX?",
-      "answer": "Spectrum (formerly ErgoDEX) is a decentralized exchange on Ergo using AMM (Automated Market Maker) pools. It supports token swaps, liquidity provision, and yield farming. The eUTXO model enables features like partial order filling and better MEV resistance compared to account-based DEXs."
+      "question": "Cos'è Spectrum DEX?",
+      "answer": "Spectrum (ex ErgoDEX) è un exchange decentralizzato su Ergo che utilizza pool AMM (Automated Market Maker). Supporta scambi di token, fornitura di liquidità e yield farming. Il modello eUTXO abilita funzionalità come il riempimento parziale degli ordini e una migliore resistenza al MEV rispetto ai DEX basati su account."
     },
     "tech-rosen-bridge": {
-      "question": "What is Rosen Bridge?",
-      "answer": "Rosen Bridge is a trustless cross-chain bridge connecting Ergo to other blockchains (Cardano, Bitcoin, Ethereum). It uses a federated model with watchers and guards to ensure security. NIPoPoWs enable efficient verification of cross-chain transactions."
+      "question": "Cos'è Rosen Bridge?",
+      "answer": "Rosen Bridge è un bridge cross-chain trustless che connette Ergo ad altre blockchain (Cardano, Bitcoin, Ethereum). Utilizza un modello federato con watcher e guard per garantire la sicurezza. I NIPoPoW abilitano la verifica efficiente delle transazioni cross-chain."
     },
     "tech-mining-requirements": {
-      "question": "What hardware do I need to mine Ergo?",
-      "answer": "Ergo mining requires a GPU with at least 4GB VRAM (6GB+ recommended). Popular choices include NVIDIA RTX 3060 Ti, RTX 3070, or AMD RX 6600 XT. The Autolykos algorithm is memory-hard and ASIC-resistant, keeping mining accessible to regular GPU owners."
+      "question": "Quale hardware mi serve per minare Ergo?",
+      "answer": "Il mining di Ergo richiede una GPU con almeno 4 GB di VRAM (6 GB+ consigliati). Scelte popolari includono NVIDIA RTX 3060 Ti, RTX 3070 o AMD RX 6600 XT. L'algoritmo Autolykos è memory-hard e resistente agli ASIC, mantenendo il mining accessibile ai normali proprietari di GPU."
     },
     "tech-mining-pools": {
-      "question": "Which mining pools support Ergo?",
-      "answer": "Popular Ergo mining pools include: GetBlok, 2Miners, HeroMiners, WoolyPooly, F2Pool, and Nanopool. Each has different fee structures (typically 1-2%), payout methods (PPLNS, PPS+), and server locations. Solo mining is also viable for larger operations."
+      "question": "Quali pool di mining supportano Ergo?",
+      "answer": "I pool di mining Ergo più popolari includono: GetBlok, 2Miners, HeroMiners, WoolyPooly, F2Pool e Nanopool. Ciascuno ha strutture di commissioni diverse (tipicamente 1-2%), metodi di pagamento (PPLNS, PPS+) e posizioni dei server. Il mining in solitaria è praticabile anche per operazioni più grandi."
     }
   }
 }
