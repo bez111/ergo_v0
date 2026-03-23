@@ -31,7 +31,7 @@
           "a": "不是。Ergo 是一个去中心化的开源协议。Ergo 基金会是一个支持生态发展的非营利社区组织，但并不控制网络。"
         },
         "fairLaunch": {
-          "q": "什么叫"公平发行"？",
+          "q": "什么叫\"公平发行\"？",
           "a": "Ergo 没有 ICO，也没有为创始人预挖代币。这确保了更公平的分配，因为每个人从第一天起就有平等机会通过挖矿获得 ERG。"
         }
       },
@@ -126,7 +126,7 @@
         },
         "whatIsEutxo": {
           "q": "什么是 eUTXO？",
-          "a": "扩展 UTXO 模型把数据和逻辑直接附加到"货币盒（box）"上，从而提升智能合约安全性、手续费可预测性，并比账户模型更容易扩展。"
+          "a": "扩展 UTXO 模型把数据和逻辑直接附加到\"货币盒（box）\"上，从而提升智能合约安全性、手续费可预测性，并比账户模型更容易扩展。"
         },
         "whatIsErgoscript": {
           "q": "什么是 ErgoScript？",
@@ -227,7 +227,7 @@
       "answer": "不是。Ergo 是一个去中心化、开源的协议。Ergo 基金会是一个支持生态发展的非营利社区组织，但它并不控制网络。"
     },
     "beginner-fair-launch": {
-      "question": ""公平发行（fair launch）"是什么意思？",
+      "question": "\"公平发行（fair launch）\"是什么意思？",
       "answer": "Ergo 没有 ICO、没有创始人预挖，也没有私募配额。所有人从主网启动那一刻起，都只能通过挖矿平等获得 ERG，这带来了更公平的分配。"
     },
     "beginner-ergo-vs-btc-eth": {
@@ -236,7 +236,7 @@
     },
     "beginner-eutxo": {
       "question": "什么是 eUTXO？",
-      "answer": "扩展 UTXO（eUTXO）模型把数据和逻辑直接绑定到"货币盒（box）"上，从而提升智能合约的安全性、手续费可预测性，并比账户模型更容易扩展。"
+      "answer": "扩展 UTXO（eUTXO）模型把数据和逻辑直接绑定到\"货币盒（box）\"上，从而提升智能合约的安全性、手续费可预测性，并比账户模型更容易扩展。"
     },
     "beginner-ergoscript": {
       "question": "什么是 ErgoScript？",
@@ -291,12 +291,12 @@
       "answer": "Ergo 宣言由联合创始人 Alex Chepurnoy 撰写，强调金融隐私是基本人权。核心观点包括：隐私是对抗专制控制的生存工具，能防止资产被没收；监管环境并非永远稳定；应通过 ErgoMixer 和 Sigma 协议等非托管、去中心化工具来捍卫隐私。"
     },
     "tech-why-named-ergo": {
-      "question": "为什么叫做 "Ergo"？",
-      "answer": ""Ergo" 这个名字有多重含义：在拉丁语中意为"因此"，象征逻辑一致性与高效运转；在希腊语中 "ἔργον" 意为"工作"，呼应工作量证明；同时也联想到人体工学（ergonomics），强调易用性。代币符号 ERG 也与物理中的"尔格（erg）"能量单位呼应。"
+      "question": "为什么叫做 \"Ergo\"？",
+      "answer": "\"Ergo\" 这个名字有多重含义：在拉丁语中意为\"因此\"，象征逻辑一致性与高效运转；在希腊语中 \"ἔργον\" 意为\"工作\"，呼应工作量证明；同时也联想到人体工学（ergonomics），强调易用性。代币符号 ERG 也与物理中的\"尔格（erg）\"能量单位呼应。"
     },
     "tech-ergo-launch": {
       "question": "Ergo 什么时候上线的？有没有 ICO？",
-      "answer": "Ergo 主网于 2019 年 7 月 1 日上线，最初想法可追溯到 2016 年。Ergo 没有 ICO、没有预挖、也没有私募销售——这是一个"公平发行"的项目，ERG 主要通过挖矿获得。Ergo 基金会在整个发行周期中获得 4.43% 的货币基数，用于生态发展。"
+      "answer": "Ergo 主网于 2019 年 7 月 1 日上线，最初想法可追溯到 2016 年。Ergo 没有 ICO、没有预挖、也没有私募销售——这是一个\"公平发行\"的项目，ERG 主要通过挖矿获得。Ergo 基金会在整个发行周期中获得 4.43% 的货币基数，用于生态发展。"
     },
     "tech-consensus-mechanism": {
       "question": "Ergo 使用什么共识机制？",
@@ -308,7 +308,7 @@
     },
     "tech-eutxo-model": {
       "question": "什么是 eUTXO 模型？它与比特币 UTXO 或以太坊账户模型有何不同？",
-      "answer": "扩展 UTXO（eUTXO）在比特币的 UTXO 之上增加了丰富的数据和逻辑能力。与比特币有限脚本或以太坊可变账户余额不同，eUTXO 使用可以容纳数值、复杂脚本和寄存器数据的"盒子"，在保留 UTXO 并行性和可预测费用优势的同时，实现复杂智能合约。"
+      "answer": "扩展 UTXO（eUTXO）在比特币的 UTXO 之上增加了丰富的数据和逻辑能力。与比特币有限脚本或以太坊可变账户余额不同，eUTXO 使用可以容纳数值、复杂脚本和寄存器数据的\"盒子\"，在保留 UTXO 并行性和可预测费用优势的同时，实现复杂智能合约。"
     },
     "tech-eutxo-advantages": {
       "question": "eUTXO 给 Ergo 带来哪些优势？",
@@ -316,7 +316,7 @@
     },
     "tech-smart-contracts-ergo": {
       "question": "Ergo 上的智能合约是什么？",
-      "answer": "Ergo 上的智能合约是自动执行的代码，会强制执行预先定义的条款。每一个"币"（UTXO/box）都由一段 ErgoScript 程序保护，规定其花费条件。这种"契约式货币"范式把逻辑与资产本身紧密绑定，可实现资产抵押代币、衍生品、托管服务和去中心化小额信贷等复杂金融工具。"
+      "answer": "Ergo 上的智能合约是自动执行的代码，会强制执行预先定义的条款。每一个\"币\"（UTXO/box）都由一段 ErgoScript 程序保护，规定其花费条件。这种\"契约式货币\"范式把逻辑与资产本身紧密绑定，可实现资产抵押代币、衍生品、托管服务和去中心化小额信贷等复杂金融工具。"
     },
     "tech-ergoscript-features": {
       "question": "什么是 ErgoScript？它有哪些关键特性？",
@@ -327,7 +327,7 @@
       "answer": "ErgoScript（Ergo/eUTXO）与 Solidity（以太坊/账户模型）在设计理念上不同：ErgoScript 更强调安全性和内置密码学原语，而 Solidity 更偏向易用性。ErgoScript 基于 Scala、偏函数式；Solidity 类似 JavaScript。ErgoScript 提供更可预测的费用与原生隐私特性，而 Solidity 拥有更大的生态和更多现成工具。"
     },
     "tech-boxes-ergoscript": {
-      "question": "ErgoScript 中的"盒子（box）"是什么？",
+      "question": "ErgoScript 中的\"盒子（box）\"是什么？",
       "answer": "盒子是 Ergo 的增强型 UTXO。每个盒子包含：价值（ERG 或代币）、守护脚本（花费条件）以及寄存器中的任意数据。盒子因此可以携带状态，并参与复杂 dApp 逻辑。智能合约从输入盒子读取数据，再创建带有更新数据的新输出盒子，从而描述状态转换。"
     },
     "tech-sigma-protocols": {
@@ -336,7 +336,7 @@
     },
     "tech-zero-knowledge-proofs": {
       "question": "Ergo 是否支持零知识证明？",
-      "answer": "是的。Ergo 通过 Sigma 协议为离散对数型零知识证明提供强大支持，被广泛用于隐私功能、复杂认证方案以及诸如 ErgoMixer 等应用。ErgoScript 被形容为"基于 Σ‑协议"的语言，即零知识能力被编织进合约执行过程。"
+      "answer": "是的。Ergo 通过 Sigma 协议为离散对数型零知识证明提供强大支持，被广泛用于隐私功能、复杂认证方案以及诸如 ErgoMixer 等应用。ErgoScript 被形容为\"基于 Σ‑协议\"的语言，即零知识能力被编织进合约执行过程。"
     },
     "tech-ergomixer": {
       "question": "什么是 ErgoMixer？它如何工作？",

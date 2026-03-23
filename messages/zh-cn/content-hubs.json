@@ -12,7 +12,7 @@
     },
     "what-is-eutxo": {
       "query": "什么是 eUTXO，它如何工作？",
-      "shortAnswer": "eUTXO（扩展未花费交易输出）是 Ergo 的智能合约模型，在比特币 UTXO 的基础上加入可编程逻辑。每个“box”包含 ERG、代币、数据寄存器和守卫脚本。交易消耗旧的 box 并创建新的，从而实现确定性执行、并行处理并避免重入攻击。",
+      "shortAnswer": "eUTXO（扩展未花费交易输出）是 Ergo 的智能合约模型，在比特币 UTXO 的基础上加入可编程逻辑。每个\"box\"包含 ERG、代币、数据寄存器和守卫脚本。交易消耗旧的 box 并创建新的，从而实现确定性执行、并行处理并避免重入攻击。",
       "keyPoints": [
         "Box = 升级版 UTXO：价值 + 代币 + 数据 + 脚本",
         "确定性：在发送交易前即可知道执行成本",
@@ -33,7 +33,7 @@
     },
     "is-ergo-better-than-monero-for-privacy": {
       "query": "在隐私方面，Ergo 比 Monero 更好吗？",
-      "shortAnswer": "二者针对的需求不同。Monero 采用始终开启的协议级隐私（环签名、隐身地址），适合简单的私密转账。Ergo 提供基于 Sigma 协议的可选隐私，可在保持审计性的同时实现可编程隐私（私密智能合约）和选择性披露。因此 Monero 擅长“总是匿名的支付”，而 Ergo 擅长“在需要时可证明又可隐藏的复杂逻辑”。",
+      "shortAnswer": "二者针对的需求不同。Monero 采用始终开启的协议级隐私（环签名、隐身地址），适合简单的私密转账。Ergo 提供基于 Sigma 协议的可选隐私，可在保持审计性的同时实现可编程隐私（私密智能合约）和选择性披露。因此 Monero 擅长\"总是匿名的支付\"，而 Ergo 擅长\"在需要时可证明又可隐藏的复杂逻辑\"。",
       "keyPoints": [
         "Monero：默认匿名，环签名 + 隐身地址",
         "Ergo：可选隐私，通过 Sigma 协议实现选择性披露",
@@ -46,7 +46,7 @@
       "query": "什么是 Sigma 协议？它们如何工作？",
       "shortAnswer": "Sigma 协议是一类零知识证明系统，可以在不泄露数据本身的前提下证明关于数据的陈述为真。在 Ergo 上，它们被内置进 ErgoScript，使开发者可以构建隐私保护型智能合约。你可以证明自己拥有资金、满足条件或属于某个群体，而无需暴露真实身份或精确数值。",
       "keyPoints": [
-        "零知识：证明“某件事为真”，而不泄露原因",
+        "零知识：证明\"某件事为真\"，而不泄露原因",
         "深度集成 ErgoScript，作为一等隐私原语",
         "支持选择性披露——只暴露必要的信息",
         "典型用例：环签名、门限签名、私密投票等"
@@ -93,7 +93,7 @@
         "eUTXO：交易绑定具体 UTXO，限制重排空间",
         "无共享全局状态，抢跑与三明治很难实现",
         "执行可预测：在发送前就知道交易结果",
-        "更公平的交易环境——没有“暗黑森林”"
+        "更公平的交易环境——没有\"暗黑森林\""
       ]
     },
     "how-to-get-started-with-ergo": {
@@ -123,7 +123,7 @@
       "shortAnswer": "Ergo 是一个公平发行的 PoW 区块链，结合 eUTXO 智能合约模型、Sigma 协议隐私以及长期可持续性的经济设计。它在比特币安全模型的基础上扩展出强大的可编程能力，同时坚持无预挖、无 VC 控制和研究驱动的协议演进。",
       "keyPoints": [
         "PoW 区块链，安全模型与比特币一脉相承",
-        "eUTXO 模型带来可编程的“盒子”和安全的智能合约",
+        "eUTXO 模型带来可编程的\"盒子\"和安全的智能合约",
         "Sigma 协议提供原生隐私与零知识证明",
         "公平发行：无预挖、无 ICO、无 VC 配额",
         "存储租金与 NiPoPoWs 等特性面向长期可持续性"
@@ -191,7 +191,7 @@
       "subtitle": "没有 MEV、无需许可的去中心化金融",
       "heroStatement": "让普通用户，而不是提取者，真正受益的 DeFi。",
       "introduction": "Ergo 对 DeFi 的处理方式与以太坊等基于账户的公链有本质不同。基于 eUTXO 模型，Ergo 从根本上消除了传统 DeFi 中的整类漏洞：无抢跑、无三明治攻击、无 MEV 提取。每笔交易的费用在发送前就已确定。每笔交易的执行结果完全符合预期。这不是细微改进——而是让 DeFi 真正适合普通用户而非 MEV 机器人的结构性优势。",
-      "whatMakesUnique": "以太坊 DeFi 已成为用户遭受 MEV 提取者猎杀的"暗黑森林"，而 Ergo 的 eUTXO 模型构建了一个本质上更公平的环境。交易引用具体的盒子（UTXO），使重排攻击极难实现。Oracle Pools 提供无单点故障的去中心化价格喂价。由于 Ergo 是公平启动的 PoW 链，没有 VC 卡特尔控制治理或从协议中抽取价值。",
+      "whatMakesUnique": "以太坊 DeFi 已成为用户遭受 MEV 提取者猎杀的\"暗黑森林\"，而 Ergo 的 eUTXO 模型构建了一个本质上更公平的环境。交易引用具体的盒子（UTXO），使重排攻击极难实现。Oracle Pools 提供无单点故障的去中心化价格喂价。由于 Ergo 是公平启动的 PoW 链，没有 VC 卡特尔控制治理或从协议中抽取价值。",
       "keyDifferentiators": [
         "无 MEV 提取：设计上无法被抢跑或三明治攻击",
         "可预测费用：在发送前就知道自己要支付多少（约 $0.01）",
@@ -443,7 +443,7 @@
       "title": "Ergo 哲学",
       "subtitle": "为金融自由而生的密码朋克价值观",
       "heroStatement": "无主人的货币。无需许可的金融。",
-      "introduction": "Ergo 不仅仅是一条区块链——它是对加密货币应有形态的宣言。在大多数"加密"项目都由 VC 支持、经过预挖、为抽取而设计的世界里，Ergo 代表着回归第一性原理。无预挖。无 ICO。无 VC 配额。100% 的 ERG 通过挖矿产生，就像 Bitcoin 一样。这不是理想主义；这是真正去中心化的基础。当没有内部人群体控制多数代币时，治理才是真正去中心化的。当没有需要套现的 VC 时，开发才为用户服务，而不是为投资人服务。",
+      "introduction": "Ergo 不仅仅是一条区块链——它是对加密货币应有形态的宣言。在大多数\"加密\"项目都由 VC 支持、经过预挖、为抽取而设计的世界里，Ergo 代表着回归第一性原理。无预挖。无 ICO。无 VC 配额。100% 的 ERG 通过挖矿产生，就像 Bitcoin 一样。这不是理想主义；这是真正去中心化的基础。当没有内部人群体控制多数代币时，治理才是真正去中心化的。当没有需要套现的 VC 时，开发才为用户服务，而不是为投资人服务。",
       "whatMakesUnique": "Ergo 由那些记得 Bitcoin 为何而生的人构建：为强权主导、牺牲普通人的金融体系提供替代方案。Ergo 宣言阐述了为普通人打造金融工具的愿景，而不仅仅服务于老练的交易者或富裕投资者。隐私是一项权利，而不是可被监管消除的功能。自我托管是默认选项，而不是可选项。技术被设计为始终可访问——抗 ASIC 挖矿、轻客户端、低手续费——以确保参与不限于有资源的人。",
       "keyDifferentiators": [
         "公平启动：无预挖、无 ICO、无 VC 份额",
@@ -1115,220 +1115,220 @@
       "readyDescription": "完成该 playbook，并加入 Ergo 社区。"
     }
   },
-  “infographicItems”: {
-    “what-we-are-fighting-against-financial-repression-stack”: {
-      “title”: “我们在对抗什么”,
-      “shortDescription”: “金融压制体系的层级视图，以及 Ergo 如何以抗审查结算、开放可编程性和按需隐私作出回应。”,
-      “subtitle”: “金融压制体系——以及 Ergo 的替代方案。”
+  "infographicItems": {
+    "what-we-are-fighting-against-financial-repression-stack": {
+      "title": "我们在对抗什么",
+      "shortDescription": "金融压制体系的层级视图，以及 Ergo 如何以抗审查结算、开放可编程性和按需隐私作出回应。",
+      "subtitle": "金融压制体系——以及 Ergo 的替代方案。"
     },
-    “powered-by-builders-designed-for-freedom”: {
-      “title”: “由建设者驱动。为自由而设计。”,
-      “shortDescription”: “Ergo 三层金字塔：矿工保护基础层，建设者交付工具和 dApp，自由追求者掌控自己的金融。”,
-      “subtitle”: “由矿工、建设者和自由追求者组成的 Ergo 三层金字塔，共同围绕无主人的货币凝聚。”
+    "powered-by-builders-designed-for-freedom": {
+      "title": "由建设者驱动。为自由而设计。",
+      "shortDescription": "Ergo 三层金字塔：矿工保护基础层，建设者交付工具和 dApp，自由追求者掌控自己的金融。",
+      "subtitle": "由矿工、建设者和自由追求者组成的 Ergo 三层金字塔，共同围绕无主人的货币凝聚。"
     },
-    “mev-resistance-vs-dark-forest”: {
-      “title”: “MEV 抵抗 vs 暗黑森林”,
-      “shortDescription”: “全球 DeFi 如何陷入 MEV 提取困境，以及 Ergo 的结构性解决方案。”,
-      “subtitle”: “对比全球 DeFi 的 MEV 问题与 Ergo 的公平交易环境。”
+    "mev-resistance-vs-dark-forest": {
+      "title": "MEV 抵抗 vs 暗黑森林",
+      "shortDescription": "全球 DeFi 如何陷入 MEV 提取困境，以及 Ergo 的结构性解决方案。",
+      "subtitle": "对比全球 DeFi 的 MEV 问题与 Ergo 的公平交易环境。"
     },
-    “smart-contract-l1-tree”: {
-      “title”: “智能合约 L1 演化树”,
-      “shortDescription”: “Bitcoin、Ethereum、Cardano 与 Ergo 在智能合约状态模型、确定性、审计复杂度、表达能力及隐性全局状态风险上的差异。”,
-      “subtitle”: “追溯智能合约 L1 从 Bitcoin 的演化历程”
+    "smart-contract-l1-tree": {
+      "title": "智能合约 L1 演化树",
+      "shortDescription": "Bitcoin、Ethereum、Cardano 与 Ergo 在智能合约状态模型、确定性、审计复杂度、表达能力及隐性全局状态风险上的差异。",
+      "subtitle": "追溯智能合约 L1 从 Bitcoin 的演化历程"
     },
-    “ergo-vs-privacy-coins”: {
-      “title”: “Ergo vs 隐私币”,
-      “shortDescription”: “Ergo、Monero、Zcash 与 L2 混币器在隐私模型、可编程性、选择性披露、可审计性和公平启动代币经济学上的差异。”,
-      “subtitle”: “从隐私模型、可编程性、可审计性和代币经济学维度对比 Ergo、Monero、Zcash 与 L2 混币器。”
+    "ergo-vs-privacy-coins": {
+      "title": "Ergo vs 隐私币",
+      "shortDescription": "Ergo、Monero、Zcash 与 L2 混币器在隐私模型、可编程性、选择性披露、可审计性和公平启动代币经济学上的差异。",
+      "subtitle": "从隐私模型、可编程性、可审计性和代币经济学维度对比 Ergo、Monero、Zcash 与 L2 混币器。"
     },
-    “pow-vs-pos-censorship-and-attack-surface”: {
-      “title”: “PoW vs PoS：审查能力与攻击面”,
-      “shortDescription”: “PoW、经典 PoS 与验证者委员会在审查能力、卡特尔风险、监管压力和用户抵抗工具上的差异。”,
-      “subtitle”: “对比矿工、质押者和验证者委员会：谁能审查、卡特尔如何形成、系统如何在压力下响应。”
+    "pow-vs-pos-censorship-and-attack-surface": {
+      "title": "PoW vs PoS：审查能力与攻击面",
+      "shortDescription": "PoW、经典 PoS 与验证者委员会在审查能力、卡特尔风险、监管压力和用户抵抗工具上的差异。",
+      "subtitle": "对比矿工、质押者和验证者委员会：谁能审查、卡特尔如何形成、系统如何在压力下响应。"
     },
-    “eutxo-vs-accounts-vs-classic-utxo”: {
-      “title”: “eUTXO vs 账户模型 vs 经典 UTXO”,
-      “shortDescription”: “经典 UTXO、全局账户与 Ergo eUTXO 模型的对比分析。”,
-      “subtitle”: “对比比特币风格 UTXO、全局账户与 Ergo eUTXO 模型”
+    "eutxo-vs-accounts-vs-classic-utxo": {
+      "title": "eUTXO vs 账户模型 vs 经典 UTXO",
+      "shortDescription": "经典 UTXO、全局账户与 Ergo eUTXO 模型的对比分析。",
+      "subtitle": "对比比特币风格 UTXO、全局账户与 Ergo eUTXO 模型"
     },
-    “privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins”: {
-      “title”: “隐私，但可审计”,
-      “shortDescription”: “混币器、经典隐私币与 Ergo Sigma 协议在链上隐私实现方式上的对比。”,
-      “subtitle”: “实现链上隐私的三种方式——以及 Ergo 为何选择 Sigma 协议。”
+    "privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins": {
+      "title": "隐私，但可审计",
+      "shortDescription": "混币器、经典隐私币与 Ergo Sigma 协议在链上隐私实现方式上的对比。",
+      "subtitle": "实现链上隐私的三种方式——以及 Ergo 为何选择 Sigma 协议。"
     },
-    “where-ergo-fits-among-major-chains”: {
-      “title”: “Ergo 在主流公链中的定位”,
-      “shortDescription”: “散点图对比 Ergo、Bitcoin、Ethereum、Monero、Cardano、Solana、CBDC 与典型 VC 链在启动模式、可编程性、DeFi 和隐私上的差异。”,
-      “subtitle”: “一条 PoW L1 上的健全货币、智能合约与隐私。”
+    "where-ergo-fits-among-major-chains": {
+      "title": "Ergo 在主流公链中的定位",
+      "shortDescription": "散点图对比 Ergo、Bitcoin、Ethereum、Monero、Cardano、Solana、CBDC 与典型 VC 链在启动模式、可编程性、DeFi 和隐私上的差异。",
+      "subtitle": "一条 PoW L1 上的健全货币、智能合约与隐私。"
     },
-    “ergo-vs-zcash-zk-without-ceremony”: {
-      “title”: “Ergo vs Zcash：无需仪式的零知识证明”,
-      “shortDescription”: “并排对比 Ergo 基于 Sigma 的无需信任的隐私与智能合约，以及 Zcash 基于可信设置的零知识证明模型。”,
-      “subtitle”: “无需可信设置的 Sigma 隐私与智能合约。”
+    "ergo-vs-zcash-zk-without-ceremony": {
+      "title": "Ergo vs Zcash：无需仪式的零知识证明",
+      "shortDescription": "并排对比 Ergo 基于 Sigma 的无需信任的隐私与智能合约，以及 Zcash 基于可信设置的零知识证明模型。",
+      "subtitle": "无需可信设置的 Sigma 隐私与智能合约。"
     },
-    “ergo-vs-solana-tps-vs-sovereignty”: {
-      “title”: “Ergo vs Solana：TPS vs 主权”,
-      “shortDescription”: “信息图对比 Ergo 的高度去中心化与主权，以及 Solana 对最大吞吐量的专注，涵盖硬件、资金和设计权衡。”,
-      “subtitle”: “高吞吐量还是高去中心化——选择你的立场。”
+    "ergo-vs-solana-tps-vs-sovereignty": {
+      "title": "Ergo vs Solana：TPS vs 主权",
+      "shortDescription": "信息图对比 Ergo 的高度去中心化与主权，以及 Solana 对最大吞吐量的专注，涵盖硬件、资金和设计权衡。",
+      "subtitle": "高吞吐量还是高去中心化——选择你的立场。"
     },
-    “ergo-vs-cardano-two-eutxo-paths”: {
-      “title”: “Ergo vs Cardano：两条 eUTXO 之路”,
-      “shortDescription”: “信息图对比 Ergo 与 Cardano 这两条 eUTXO 链：同源于研究，却在共识、启动、隐私和可持续性上做出不同选择。”,
-      “subtitle”: “同源于研究，在共识、启动和可持续性上做出不同选择。”
+    "ergo-vs-cardano-two-eutxo-paths": {
+      "title": "Ergo vs Cardano：两条 eUTXO 之路",
+      "shortDescription": "信息图对比 Ergo 与 Cardano 这两条 eUTXO 链：同源于研究，却在共识、启动、隐私和可持续性上做出不同选择。",
+      "subtitle": "同源于研究，在共识、启动和可持续性上做出不同选择。"
     },
-    “ergo-vs-litecoin-digital-silver-vs-programmable-money”: {
-      “title”: “Ergo vs Litecoin：数字白银 vs 可编程货币”,
-      “shortDescription”: “信息图对比 Ergo 作为面向 DeFi 和替代经济体系的可编程 PoW 货币，以及 Litecoin 作为专注支付的数字白银/更快 Bitcoin。”,
-      “subtitle”: “从”快速 Bitcoin”支付到 PoW 智能合约 DeFi。”
+    "ergo-vs-litecoin-digital-silver-vs-programmable-money": {
+      "title": "Ergo vs Litecoin：数字白银 vs 可编程货币",
+      "shortDescription": "信息图对比 Ergo 作为面向 DeFi 和替代经济体系的可编程 PoW 货币，以及 Litecoin 作为专注支付的数字白银/更快 Bitcoin。",
+      "subtitle": "从\"快速 Bitcoin\"支付到 PoW 智能合约 DeFi。"
     },
-    “ergo-vs-monero-privacy-modes”: {
-      “title”: “Ergo vs Monero：隐私模式”,
-      “shortDescription”: “信息图对比 Monero 始终开启的支付隐私，以及 Ergo 面向 DeFi、智能合约和选择性披露的可选可编程隐私。”,
-      “subtitle”: “始终开启的支付隐私 vs 面向 DeFi 的可编程隐私。”
+    "ergo-vs-monero-privacy-modes": {
+      "title": "Ergo vs Monero：隐私模式",
+      "shortDescription": "信息图对比 Monero 始终开启的支付隐私，以及 Ergo 面向 DeFi、智能合约和选择性披露的可选可编程隐私。",
+      "subtitle": "始终开启的支付隐私 vs 面向 DeFi 的可编程隐私。"
     },
-    “ergo-vs-ethereum-same-power-less-pain”: {
-      “title”: “Ergo vs Ethereum：同等能力，更少痛苦”,
-      “shortDescription”: “信息图对比 Ergo 与 Ethereum 在状态模型、MEV 与手续费、共识权力结构和隐私上的差异，展示 eUTXO 如何以更少账户模型麻烦实现类似的可编程性。”,
-      “subtitle”: “无账户模型麻烦和 MEV 大战的智能合约与 DeFi。”
+    "ergo-vs-ethereum-same-power-less-pain": {
+      "title": "Ergo vs Ethereum：同等能力，更少痛苦",
+      "shortDescription": "信息图对比 Ergo 与 Ethereum 在状态模型、MEV 与手续费、共识权力结构和隐私上的差异，展示 eUTXO 如何以更少账户模型麻烦实现类似的可编程性。",
+      "subtitle": "无账户模型麻烦和 MEV 大战的智能合约与 DeFi。"
     },
-    “ergo-vs-major-l1s-feature-checklist”: {
-      “title”: “Ergo vs 主流 L1——功能对比清单”,
-      “shortDescription”: “Bitcoin、Ethereum、Cardano、Monero、Zcash、Solana、典型 VC 链、CBDC 与 Ergo 在共识、启动、隐私、存储租金、MEV 等维度的并排矩阵对比。”,
-      “subtitle”: “共识、启动、隐私、存储租金、MEV——尽在一张表。”
+    "ergo-vs-major-l1s-feature-checklist": {
+      "title": "Ergo vs 主流 L1——功能对比清单",
+      "shortDescription": "Bitcoin、Ethereum、Cardano、Monero、Zcash、Solana、典型 VC 链、CBDC 与 Ergo 在共识、启动、隐私、存储租金、MEV 等维度的并排矩阵对比。",
+      "subtitle": "共识、启动、隐私、存储租金、MEV——尽在一张表。"
     },
-    “ergo-vs-avalanche-funding-story-and-power-structure”: {
-      “title”: “Ergo vs Avalanche：资金故事与权力结构”,
-      “shortDescription”: “信息图对比 Ergo 的零 VC 资金、100% 挖矿分发与 Avalanche 数亿风投资金，以及这如何塑造共识、控制权和激励机制。”,
-      “subtitle”: “零 VC 资金与 100% 挖矿产生 vs 数亿风投资金。”
+    "ergo-vs-avalanche-funding-story-and-power-structure": {
+      "title": "Ergo vs Avalanche：资金故事与权力结构",
+      "shortDescription": "信息图对比 Ergo 的零 VC 资金、100% 挖矿分发与 Avalanche 数亿风投资金，以及这如何塑造共识、控制权和激励机制。",
+      "subtitle": "零 VC 资金与 100% 挖矿产生 vs 数亿风投资金。"
     },
-    “ergo-vs-bitcoin-bitcoin-with-the-missing-pieces”: {
-      “title”: “Ergo vs Bitcoin：补全缺失拼图的 Bitcoin”,
-      “shortDescription”: “信息图对比简单 UTXO 的 Bitcoin 货币与 Ergo 的 eUTXO、智能合约、隐私和存储租金——如同在 Bitcoin 砖块上叠加缺失的层级。”,
-      “subtitle”: “从简单 UTXO 货币到可编程、可持续的 PoW DeFi。”
+    "ergo-vs-bitcoin-bitcoin-with-the-missing-pieces": {
+      "title": "Ergo vs Bitcoin：补全缺失拼图的 Bitcoin",
+      "shortDescription": "信息图对比简单 UTXO 的 Bitcoin 货币与 Ergo 的 eUTXO、智能合约、隐私和存储租金——如同在 Bitcoin 砖块上叠加缺失的层级。",
+      "subtitle": "从简单 UTXO 货币到可编程、可持续的 PoW DeFi。"
     },
-    “ergo-vs-cbdcs-control-vs-sovereignty”: {
-      “title”: “Ergo vs CBDC：控制 vs 主权”,
-      “shortDescription”: “信息图对比 Ergo 上自托管的可编程货币与中央控制的 CBDC，涵盖所有权、隐私、审查和货币政策。”,
-      “subtitle”: “央行脚本 vs 自托管可编程货币。”
+    "ergo-vs-cbdcs-control-vs-sovereignty": {
+      "title": "Ergo vs CBDC：控制 vs 主权",
+      "shortDescription": "信息图对比 Ergo 上自托管的可编程货币与中央控制的 CBDC，涵盖所有权、隐私、审查和货币政策。",
+      "subtitle": "央行脚本 vs 自托管可编程货币。"
     },
-    “ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi”: {
-      “title”: “Ergo vs Ravencoin：PoW 上的代币——基础 vs 完整 DeFi”,
-      “shortDescription”: “信息图对比 Ergo 与 Ravencoin 作为 PoW 代币平台：从简单资产发行到具备隐私和高级功能的完整可编程 DeFi 栈。”,
-      “subtitle”: “从简单资产发行到完整 PoW DeFi 平台。”
+    "ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi": {
+      "title": "Ergo vs Ravencoin：PoW 上的代币——基础 vs 完整 DeFi",
+      "shortDescription": "信息图对比 Ergo 与 Ravencoin 作为 PoW 代币平台：从简单资产发行到具备隐私和高级功能的完整可编程 DeFi 栈。",
+      "subtitle": "从简单资产发行到完整 PoW DeFi 平台。"
     },
-    “ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow”: {
-      “title”: “Ergo vs Kaspa：可编程 PoW vs 高吞吐量 PoW”,
-      “shortDescription”: “信息图对比 Ergo 的可编程 eUTXO DeFi 栈与 Kaspa 基于 BlockDAG 构建的高吞吐量 PoW 支付层。”,
-      “subtitle”: “从纯 PoW 支付到完整可编程 DeFi 平台。”
+    "ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow": {
+      "title": "Ergo vs Kaspa：可编程 PoW vs 高吞吐量 PoW",
+      "shortDescription": "信息图对比 Ergo 的可编程 eUTXO DeFi 栈与 Kaspa 基于 BlockDAG 构建的高吞吐量 PoW 支付层。",
+      "subtitle": "从纯 PoW 支付到完整可编程 DeFi 平台。"
     },
-    “autolykos-mining-without-masters”: {
-      “title”: “Autolykos”,
-      “shortDescription”: “抗 ASIC 挖矿算法，确保公平、去中心化的网络安全。”,
-      “subtitle”: “无主人的挖矿”
+    "autolykos-mining-without-masters": {
+      "title": "Autolykos",
+      "shortDescription": "抗 ASIC 挖矿算法，确保公平、去中心化的网络安全。",
+      "subtitle": "无主人的挖矿"
     },
-    “who-starts-with-the-coins-vc-allocation-vs-ergo-supply”: {
-      “title”: “谁最初拥有代币？”,
-      “shortDescription”: “典型 VC 链如何为内部人预留大量代币，而 Ergo 实现 100% 公平分发。”,
-      “subtitle”: “对比 VC 链代币分配与 Ergo 的公平供应模型”
+    "who-starts-with-the-coins-vc-allocation-vs-ergo-supply": {
+      "title": "谁最初拥有代币？",
+      "shortDescription": "典型 VC 链如何为内部人预留大量代币，而 Ergo 实现 100% 公平分发。",
+      "subtitle": "对比 VC 链代币分配与 Ergo 的公平供应模型"
     },
-    “how-is-security-maintained-pos-vs-ergo-autolykos”: {
-      “title”: “安全性如何维护？”,
-      “shortDescription”: “典型权益证明质押与 Ergo Autolykos 在网络安全和奖励上的差异。”,
-      “subtitle”: “对比 PoS 质押财富集中与 Ergo 去中心化安全模型”
+    "how-is-security-maintained-pos-vs-ergo-autolykos": {
+      "title": "安全性如何维护？",
+      "shortDescription": "典型权益证明质押与 Ergo Autolykos 在网络安全和奖励上的差异。",
+      "subtitle": "对比 PoS 质押财富集中与 Ergo 去中心化安全模型"
     },
-    “how-it-starts-vc-chain-vs-ergo”: {
-      “title”: “从起点看：VC 链 vs Ergo”,
-      “shortDescription”: “典型 VC 支持的区块链启动与 Ergo 公平启动的对比。”,
-      “subtitle”: “谁真正能早期参与？对比 VC 链漏斗与 Ergo 的开放启动”
+    "how-it-starts-vc-chain-vs-ergo": {
+      "title": "从起点看：VC 链 vs Ergo",
+      "shortDescription": "典型 VC 支持的区块链启动与 Ergo 公平启动的对比。",
+      "subtitle": "谁真正能早期参与？对比 VC 链漏斗与 Ergo 的开放启动"
     },
-    “engineered-for-global-settlement-ergo”: {
-      “title”: “为全球结算而工程化”,
-      “shortDescription”: “Ergo 如何通过 eUTXO、低手续费和 MEV 抵抗实现全球结算层。”,
-      “subtitle”: “基于 Ergo 构建的快速、低成本、抗 MEV 结算。”
+    "engineered-for-global-settlement-ergo": {
+      "title": "为全球结算而工程化",
+      "shortDescription": "Ergo 如何通过 eUTXO、低手续费和 MEV 抵抗实现全球结算层。",
+      "subtitle": "基于 Ergo 构建的快速、低成本、抗 MEV 结算。"
     },
-    “ergo-blockchain-research-driven-cypherpunk-aligned”: {
-      “title”: “Ergo 区块链：研究驱动，密码朋克精神”,
-      “shortDescription”: “公平启动的工作量证明区块链，具备 eUTXO 智能合约、Sigma 协议隐私和为密码朋克打造的可持续性栈。”,
-      “subtitle”: “为可持续性、隐私和可验证规则而构建。公平启动的工作量证明平台。”
+    "ergo-blockchain-research-driven-cypherpunk-aligned": {
+      "title": "Ergo 区块链：研究驱动，密码朋克精神",
+      "shortDescription": "公平启动的工作量证明区块链，具备 eUTXO 智能合约、Sigma 协议隐私和为密码朋克打造的可持续性栈。",
+      "subtitle": "为可持续性、隐私和可验证规则而构建。公平启动的工作量证明平台。"
     },
-    “blockchain-matrix-where-ergo-actually-fits”: {
-      “title”: “区块链矩阵：Ergo 的真实定位”,
-      “shortDescription”: “矩阵对比 Bitcoin、Ethereum、Monero、Zcash、Cardano、Solana、典型 VC 链与 Ergo 在共识、启动、隐私、MEV 抵抗、存储租金和手续费上的差异。”,
-      “subtitle”: “对比主流公链的共识、启动、隐私和激励机制。”
+    "blockchain-matrix-where-ergo-actually-fits": {
+      "title": "区块链矩阵：Ergo 的真实定位",
+      "shortDescription": "矩阵对比 Bitcoin、Ethereum、Monero、Zcash、Cardano、Solana、典型 VC 链与 Ergo 在共识、启动、隐私、MEV 抵抗、存储租金和手续费上的差异。",
+      "subtitle": "对比主流公链的共识、启动、隐私和激励机制。"
     },
-    “money-without-masters-ergo-vs-banks-and-vc-crypto”: {
-      “title”: “无主人的货币”,
-      “shortDescription”: “Ergo 如何与银行和 VC 加密货币形成对比，提供真正开放的可编程金融。”,
-      “subtitle”: “开放、可编程、抗审查的金融。基于 Ergo 构建。”
+    "money-without-masters-ergo-vs-banks-and-vc-crypto": {
+      "title": "无主人的货币",
+      "shortDescription": "Ergo 如何与银行和 VC 加密货币形成对比，提供真正开放的可编程金融。",
+      "subtitle": "开放、可编程、抗审查的金融。基于 Ergo 构建。"
     },
-    “ergo-subblock-technology-boosting-throughput-with-parallelism”: {
-      “title”: “Ergo 子块技术”,
-      “shortDescription”: “关键块与子块如何让 Ergo 在不牺牲安全性的前提下提升交易容量和确认速度。”,
-      “subtitle”: “关键块与子块如何提升交易容量和确认速度。”
+    "ergo-subblock-technology-boosting-throughput-with-parallelism": {
+      "title": "Ergo 子块技术",
+      "shortDescription": "关键块与子块如何让 Ergo 在不牺牲安全性的前提下提升交易容量和确认速度。",
+      "subtitle": "关键块与子块如何提升交易容量和确认速度。"
     },
-    “ergo-oracle-pools-decentralized-reliable-real-world-data”: {
-      “title”: “Ergo Oracle 池”,
-      “shortDescription”: “去中心化 Oracle 池如何将多个来源聚合为链上数据盒子，以提供稳健、无需信任的数据喂价。”,
-      “subtitle”: “用于稳健、无需信任的现实世界数据喂价的去中心化 Oracle 池。”
+    "ergo-oracle-pools-decentralized-reliable-real-world-data": {
+      "title": "Ergo Oracle 池",
+      "shortDescription": "去中心化 Oracle 池如何将多个来源聚合为链上数据盒子，以提供稳健、无需信任的数据喂价。",
+      "subtitle": "用于稳健、无需信任的现实世界数据喂价的去中心化 Oracle 池。"
     },
-    “ergo-nipopows-scalable-trustless-light-clients”: {
-      “title”: “Ergo NiPoPoWs：可扩展、无需信任轻客户端的关键”,
-      “shortDescription”: “NiPoPoWs 如何让轻客户端通过微小的超级块证明验证 PoW 安全性，适用于移动端、侧链和跨链桥。”,
-      “subtitle”: “通过微小超级块证明验证 PoW 安全性，适用于移动端、侧链和跨链桥。”
+    "ergo-nipopows-scalable-trustless-light-clients": {
+      "title": "Ergo NiPoPoWs：可扩展、无需信任轻客户端的关键",
+      "shortDescription": "NiPoPoWs 如何让轻客户端通过微小的超级块证明验证 PoW 安全性，适用于移动端、侧链和跨链桥。",
+      "subtitle": "通过微小超级块证明验证 PoW 安全性，适用于移动端、侧链和跨链桥。"
     },
-    “ergo-privacy-non-interactive-efficient”: {
-      “title”: “Ergo 隐私：非交互式且高效”,
-      “shortDescription”: “Sigma 协议、eUTXO、ErgoMixer 和 NiPoPoWs 如何在 Ergo 上提供无需可信第三方的内置隐私。”,
-      “subtitle”: “使用 Sigma 协议、eUTXO、ErgoMixer 和 NiPoPoWs 的内置隐私。”
+    "ergo-privacy-non-interactive-efficient": {
+      "title": "Ergo 隐私：非交互式且高效",
+      "shortDescription": "Sigma 协议、eUTXO、ErgoMixer 和 NiPoPoWs 如何在 Ergo 上提供无需可信第三方的内置隐私。",
+      "subtitle": "使用 Sigma 协议、eUTXO、ErgoMixer 和 NiPoPoWs 的内置隐私。"
     },
-    “ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners”: {
-      “title”: “Ergo 存储租金”,
-      “shortDescription”: “存储租金如何防止区块链膨胀，同时为矿工提供可持续的费用奖励。”,
-      “subtitle”: “防止区块链膨胀，奖励矿工”
+    "ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners": {
+      "title": "Ergo 存储租金",
+      "shortDescription": "存储租金如何防止区块链膨胀，同时为矿工提供可持续的费用奖励。",
+      "subtitle": "防止区块链膨胀，奖励矿工"
     },
-    “ergo-eutxo-model-bitcoin-security-smart-contract-flexibility”: {
-      “title”: “Ergo eUTXO 模型”,
-      “shortDescription”: “比特币的安全模型结合智能合约的灵活性。”,
-      “subtitle”: “比特币安全性，智能合约灵活性”
+    "ergo-eutxo-model-bitcoin-security-smart-contract-flexibility": {
+      "title": "Ergo eUTXO 模型",
+      "shortDescription": "比特币的安全模型结合智能合约的灵活性。",
+      "subtitle": "比特币安全性，智能合约灵活性"
     },
-    “ergoscript-cypherpunk-code-of-freedom”: {
-      “title”: “ErgoScript：自由的密码朋克代码”,
-      “shortDescription”: “自由的密码朋克代码 - Ergo 的智能合约语言。”,
-      “subtitle”: “自由的密码朋克代码”
+    "ergoscript-cypherpunk-code-of-freedom": {
+      "title": "ErgoScript：自由的密码朋克代码",
+      "shortDescription": "自由的密码朋克代码 - Ergo 的智能合约语言。",
+      "subtitle": "自由的密码朋克代码"
     },
-    “ergo-blockchain-introduction-fundamentals”: {
-      “title”: “Ergo 区块链：介绍与基础”,
-      “shortDescription”: “Ergo 区块链的高层次介绍：PoW 智能合约、eUTXO、Autolykos 和 Sigma 协议。”,
-      “subtitle”: “Ergo 快速概览”
+    "ergo-blockchain-introduction-fundamentals": {
+      "title": "Ergo 区块链：介绍与基础",
+      "shortDescription": "Ergo 区块链的高层次介绍：PoW 智能合约、eUTXO、Autolykos 和 Sigma 协议。",
+      "subtitle": "Ergo 快速概览"
     },
-    “three-pillars-ergos-sustainability”: {
-      “title”: “Ergo 的三大支柱”,
-      “shortDescription”: “Autolykos 挖矿、NiPoPoWs 轻客户端和存储租金如何共同构成 Ergo 的可持续性框架。”,
-      “subtitle”: “使 Ergo 长期可行且可访问的协议级机制。”
+    "three-pillars-ergos-sustainability": {
+      "title": "Ergo 的三大支柱",
+      "shortDescription": "Autolykos 挖矿、NiPoPoWs 轻客户端和存储租金如何共同构成 Ergo 的可持续性框架。",
+      "subtitle": "使 Ergo 长期可行且可访问的协议级机制。"
     },
-    “who-actually-needs-ergo”: {
-      “title”: “谁真正需要 Ergo？”,
-      “shortDescription”: “当今真正需要 Ergo 的人：建设者、矿工、注重隐私的用户和密码朋克元老。”,
-      “subtitle”: “技术背后的真实人群：建设者、矿工、隐私用户和密码朋克。”
+    "who-actually-needs-ergo": {
+      "title": "谁真正需要 Ergo？",
+      "shortDescription": "当今真正需要 Ergo 的人：建设者、矿工、注重隐私的用户和密码朋克元老。",
+      "subtitle": "技术背后的真实人群：建设者、矿工、隐私用户和密码朋克。"
     },
-    “vc-chain-vs-ergo-fair-launch”: {
-      “title”: “公平与安全：VC 链 vs Ergo 一览”,
-      “shortDescription”: “Ergo 公平启动如何与典型 VC 链的代币分配形成对比。”,
-      “subtitle”: “Ergo 公平启动模型与 VC 链的结构性差异”
+    "vc-chain-vs-ergo-fair-launch": {
+      "title": "公平与安全：VC 链 vs Ergo 一览",
+      "shortDescription": "Ergo 公平启动如何与典型 VC 链的代币分配形成对比。",
+      "subtitle": "Ergo 公平启动模型与 VC 链的结构性差异"
     },
-    “ergo-babel-fees-pay-with-any-token”: {
-      “title”: “Babel 手续费：用任意代币支付交易费”,
-      “shortDescription”: “Ergo 如何通过 eUTXO 实现用任意代币支付手续费的 Gas 抽象机制。”,
-      “subtitle”: “通过 eUTXO 实现 Gas 抽象：用你持有的代币支付手续费，而非协议要求的代币。”
+    "ergo-babel-fees-pay-with-any-token": {
+      "title": "Babel 手续费：用任意代币支付交易费",
+      "shortDescription": "Ergo 如何通过 eUTXO 实现用任意代币支付手续费的 Gas 抽象机制。",
+      "subtitle": "通过 eUTXO 实现 Gas 抽象：用你持有的代币支付手续费，而非协议要求的代币。"
     }
   },
   "glossaryTerms": {
     "eutxo": {
       "term": "eUTXO 模型",
       "shortDefinition": "扩展未花费交易输出——Ergo 的可编程 UTXO 模型，将比特币级安全性与智能合约能力结合在一起。",
-      "definition": "eUTXO（Extended Unspent Transaction Output）是 Ergo 的状态模型，在比特币简单的 UTXO 设计之上扩展出可编程的“盒子”，其中可以包含数据、代币和智能合约逻辑。与基于账户的模型不同，eUTXO 交易消耗特定的输出并创建新的输出，从而实现并行处理、确定性执行，并在设计上消除重入攻击。",
+      "definition": "eUTXO（Extended Unspent Transaction Output）是 Ergo 的状态模型，在比特币简单的 UTXO 设计之上扩展出可编程的\"盒子\"，其中可以包含数据、代币和智能合约逻辑。与基于账户的模型不同，eUTXO 交易消耗特定的输出并创建新的输出，从而实现并行处理、确定性执行，并在设计上消除重入攻击。",
       "keyPoints": [
-        "每个“盒子”都可以同时承载 ERG、代币以及寄存器 R0–R9 中的任意数据",
+        "每个\"盒子\"都可以同时承载 ERG、代币以及寄存器 R0–R9 中的任意数据",
         "交易原子性地消耗旧盒子并创建新盒子",
         "没有共享全局状态，天然支持并行验证",
         "通过设计消除重入攻击",
@@ -1372,7 +1372,7 @@
         "无需可信设置（区别于很多 zk‑SNARK 系统）",
         "作为 ErgoScript 的原生原语，可在任何智能合约中使用",
         "可组合：支持 AND、OR、门限（THRESHOLD）等组合逻辑",
-        "支持选择性披露——例如证明“已成年”而不泄露出生日期",
+        "支持选择性披露——例如证明\"已成年\"而不泄露出生日期",
         "驱动 ErgoMixer 等隐私应用"
       ],
       "technicalDetails": "Ergo 中的 Sigma 协议支持 Schnorr 签名、Diffie‑Hellman 元组以及它们的组合。ErgoScript 中 `proveDlog(x)` 用于证明离散对数的知识，`proveDHTuple(g,h,u,v)` 用于证明 DDH 关系。这些原语可通过 AND（&&）、OR（||）和 `atLeast` 门限操作组合出复杂的花费条件。",
