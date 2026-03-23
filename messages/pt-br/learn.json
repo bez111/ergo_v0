@@ -1,1046 +1,1014 @@
 {
   "learn": {
-    "title": "Learn",
-    "subtitle": "Educational resources for everyone",
-    "description": "Educational resources for Ergo blockchain",
-    "schema": "Learn Ergo Blockchain - Educational Resources",
+    "title": "Aprenda",
+    "subtitle": "Recursos educacionais para todos",
+    "description": "Recursos educacionais para a blockchain Ergo",
+    "schema": "Aprenda Ergo Blockchain - Recursos Educacionais",
     "seo": {
-      "title": "Learn - Ergo Blockchain Education | Ergo Platform",
-      "description": "Learn about Ergo blockchain technology, smart contracts, and development.",
-      "keywords": "Ergo education, blockchain learning, tutorials, documentation",
-      "ogTitle": "Learn Ergo Blockchain",
-      "ogDescription": "Educational resources, tutorials, and guides for learning Ergo blockchain technology.",
-      "twitterTitle": "Learn Ergo Blockchain",
-      "twitterDescription": "Educational resources, tutorials, and guides for learning Ergo blockchain."
+      "title": "Aprenda - Educação sobre Ergo Blockchain | Ergo Platform",
+      "description": "Aprenda sobre a tecnologia blockchain Ergo, contratos inteligentes e desenvolvimento.",
+      "keywords": "educação Ergo, aprendizado blockchain, tutoriais, documentação",
+      "ogTitle": "Aprenda Ergo Blockchain",
+      "ogDescription": "Recursos educacionais, tutoriais e guias para aprender a tecnologia blockchain Ergo.",
+      "twitterTitle": "Aprenda Ergo Blockchain",
+      "twitterDescription": "Recursos educacionais, tutoriais e guias para aprender a blockchain Ergo."
     },
     "glossaryTermPage": {
       "seo": {
         "notFound": {
-          "title": "Term Not Found",
-          "description": "The requested glossary term could not be found."
+          "title": "Termo não encontrado",
+          "description": "O termo do glossário solicitado não foi encontrado."
         },
-        "titleTemplate": "What is {term}? | Ergo Glossary",
-        "imageAltTemplate": "{term} — Ergo Glossary"
+        "titleTemplate": "O que é {term}? | Glossário Ergo",
+        "imageAltTemplate": "{term} — Glossário Ergo"
       },
       "schema": {
-        "definedTermSetName": "Ergo Blockchain Glossary",
-        "headlineTemplate": "What is {term}?",
+        "definedTermSetName": "Glossário Blockchain Ergo",
+        "headlineTemplate": "O que é {term}?",
         "proficiency": {
-          "beginner": "Beginner",
-          "intermediate": "Intermediate",
-          "advanced": "Advanced"
+          "beginner": "Iniciante",
+          "intermediate": "Intermediário",
+          "advanced": "Avançado"
         }
       }
     },
     "common": {
-      "learnMore": "Learn More"
+      "learnMore": "Saiba mais"
     },
     "resources": {
-      "tutorials": "Tutorials",
-      "videos": "Videos",
-      "articles": "Articles",
-      "documentation": "Documentation",
+      "tutorials": "Tutoriais",
+      "videos": "Vídeos",
+      "articles": "Artigos",
+      "documentation": "Documentação",
       "faq": {
-        "title": "Frequently Asked Questions",
-        "description": "Common questions about Ergo blockchain",
-        "difficulty": "Beginner",
-        "duration": "15 minutes"
+        "title": "Perguntas Frequentes",
+        "description": "Perguntas comuns sobre a blockchain Ergo",
+        "difficulty": "Iniciante",
+        "duration": "15 minutos"
       },
       "research": {
-        "title": "Research Papers",
-        "description": "Academic research and whitepapers",
-        "difficulty": "Advanced",
-        "duration": "60+ minutes"
+        "title": "Artigos de Pesquisa",
+        "description": "Pesquisa acadêmica e whitepapers",
+        "difficulty": "Avançado",
+        "duration": "60+ minutos"
       }
     },
     "faq": {
       "categories": {
-        "title": "Categories",
-        "general": "General",
-        "technology": "Technology",
-        "economics": "Economics",
-        "ecosystem": "Ecosystem",
-        "wallets": "Wallets",
-        "troubleshooting": "Troubleshooting"
+        "title": "Categorias",
+        "general": "Geral",
+        "technology": "Tecnologia",
+        "economics": "Economia",
+        "ecosystem": "Ecossistema",
+        "wallets": "Carteiras",
+        "troubleshooting": "Solução de problemas"
       },
-      "searchPlaceholder": "Search FAQ...",
-      "expandAll": "Expand All",
-      "collapseAll": "Collapse All"
+      "searchPlaceholder": "Pesquisar FAQ...",
+      "expandAll": "Expandir tudo",
+      "collapseAll": "Recolher tudo"
     },
     "research": {
-      "research_by_category": "Research by Category",
-      "join_the_discussion": "Join the Discussion",
-      "ergo_whitepaper_description_the_core": "Ergo Whitepaper\",\n    description: \"The core technical paper describing Ergo's design, principles, and protocol innovations.\",\n    url: \"https://ergoplatform.org/docs/whitepaper.pdf\",\n    category: \"Core Protocol",
-      "extended_utxo_eutxo_model_description": "Extended UTXO (eUTXO) Model\",\n    description:",
-      "sigma_protocols_description_the_cryptographic": "Sigma Protocols\",\n    description: \"The cryptographic backbone of privacy and ring signatures in Ergo.\",\n    url: \"https://ergoplatform.org/docs/sigma-protocol.pdf\",\n    category: \"Cryptography",
-      "autolykos_ergo_pow_algorithm_description": "Autolykos: Ergo PoW Algorithm\",\n    description: \"A novel, ASIC-resistant Proof-of-Work consensus mechanism.\",\n    url: \"https://ergoplatform.org/docs/Autolykos.pdf\",\n    category: \"Consensus",
-      "nipopows_description_research_on_cross": "NIPoPoWs\",\n    description: \"Research on cross-chain, lightweight validation protocols for trustless interoperability.\",\n    url: \"https://nipopows.com/\",\n    category: \"Interoperability",
-      "formal_security_protocol_analysis_icon": "Formal Security & Protocol Analysis\",\n    icon: Shield,\n    color:",
-      "ergoscript_foundations_and_security_url": "ErgoScript: Foundations and Security\", url: \"https://ergoplatform.org/docs/ErgoScript.pdf",
-      "security_properties_of_eutxo_based": "Security Properties of eUTXO-based Smart Contracts\", url:",
-      "privacy_zero_knowledge_icon_eye_color": "Privacy & Zero-Knowledge\",\n    icon: Eye,\n    color:",
-      "zero_knowledge_proofs_in_sigma_protocols_url": "Zero-Knowledge Proofs in Sigma Protocols\", url:",
-      "ring_signatures_for_blockchain_privacy": "Ring Signatures for Blockchain Privacy",
-      "defi_economic_models_icon_database_color": "DeFi & Economic Models\",\n    icon: Database,\n    color:",
-      "composable_defi_primitives_on_eutxo_url": "Composable DeFi Primitives on eUTXO\", url:",
-      "on_chain_lending_lets_and_oracles_url": "On-chain Lending, LETS, and Oracles\", url:",
-      "storage_rent_blockchain_sustainability_icon": "Storage Rent & Blockchain Sustainability\",\n    icon: FileText,\n    color:",
-      "ergo_storage_rent_model_url": "Ergo Storage Rent Model\", url: \"https://ergoplatform.org/docs/storage-rent.pdf",
-      "efficient_blockchain_state_management_url": "Efficient Blockchain State Management\", url:",
-      "ergoscript_documentation_url_https_ergoplatform": "ErgoScript Documentation\", url: \"https://ergoplatform.org/docs/ergoscript.pdf",
-      "node_implementation_url_https_github": "Node Implementation\", url: \"https://github.com/ergoplatform/ergo",
-      "sigma_rust_cryptography_library_url": "Sigma-Rust Cryptography Library\", url: \"https://github.com/ergoplatform/sigma-rust",
-      "ergomixer_technical_overview_url": "ErgoMixer Technical Overview\", url:",
-      "learn_item_https_ergoblockchain_org_learn": "Learn\", item: \"https://ergoblockchain.org/learn",
-      "research_item_https_ergoblockchain_org": "Research\", item: \"https://ergoblockchain.org/learn/research",
-      "learn_href_learn": "Learn\", href: \"/learn",
-      "research_href_learn_research": "Research\", href: \"/learn/research",
-      "read_ergo_whitepaper_description_core": "Read Ergo Whitepaper\",\n                              description: \"Core protocol design and philosophy",
-      "explore_research_library_description_cryptography": "Explore Research Library\",\n                              description: \"Cryptography, consensus, and architecture",
-      "join_the_community_description_discuss": "Join the Community\",\n                              description: \"Discuss research and collaborate",
-      "the_core_technical_paper_describing_ergo": "The core technical paper describing Ergo",
-      "extended_utxo_eutxo_model": "Extended UTXO (eUTXO) Model",
-      "by_iohk_cardano_ergo_researchers": "By IOHK/Cardano & Ergo researchers—the definitive paper on the eUTXO paradigm.",
-      "the_cryptographic_backbone_of_privacy": "The cryptographic backbone of privacy and ring signatures in Ergo.",
-      "autolykos_ergo_pow_algorithm": "Autolykos: Ergo PoW Algorithm",
-      "a_novel_asic_resistant_proof": "A novel, ASIC-resistant Proof-of-Work consensus mechanism.",
-      "research_on_cross_chain_lightweight": "Research on cross-chain, lightweight validation protocols for trustless interoperability.",
-      "formal_security_protocol_analysis": "Formal Security & Protocol Analysis",
-      "ergoscript_foundations_and_security": "ErgoScript: Foundations and Security",
-      "security_properties_of_eutxo_based_smart_contracts": "Security Properties of eUTXO-based Smart Contracts",
-      "privacy_zero_knowledge": "Privacy & Zero-Knowledge",
-      "zero_knowledge_proofs_in_sigma_protocols": "Zero-Knowledge Proofs in Sigma Protocols",
-      "defi_economic_models": "DeFi & Economic Models",
-      "composable_defi_primitives_on_eutxo": "Composable DeFi Primitives on eUTXO",
-      "on_chain_lending_lets_and_oracles": "On-chain Lending, LETS, and Oracles",
-      "storage_rent_blockchain_sustainability": "Storage Rent & Blockchain Sustainability",
-      "ergo_storage_rent_model": "Ergo Storage Rent Model",
-      "efficient_blockchain_state_management": "Efficient Blockchain State Management",
-      "ergoscript_documentation": "ErgoScript Documentation",
-      "sigma_rust_cryptography_library": "Sigma-Rust Cryptography Library",
-      "ergomixer_technical_overview": "ErgoMixer Technical Overview",
-      "core_protocol_design_and_philosophy": "Core protocol design and philosophy",
-      "cryptography_consensus_and_architecture": "Cryptography, consensus, and architecture",
-      "discuss_research_and_collaborate": "Discuss research and collaborate",
-      "academic_groundwork_and_technical_papers": "Academic groundwork and technical papers that underpin Ergo's protocol, security, and economics.",
-      "curated_links_to_whitepapers_formal": "Curated links to whitepapers, formal analyses, and developer resources.",
-      "have_an_idea_or_want": "Have an idea or want to contribute? Join community channels to discuss research and collaborate.",
-      "peer_reviewed_research_publications_on": "Peer-reviewed research publications on Ergo's innovative blockchain technology.\",\n    url: \"https://ergoblockchain.org/learn/research\",\n    siteName: \"Ergo Platform",
-      "scholarlyarticle_id_https_ergoblockchain_org": "ScholarlyArticle\",\n    \"@id\": \"https://ergoblockchain.org/learn/research\",\n    name: \"Ergo Platform Research Collection\",\n    description: \"Collection of academic research papers on Ergo blockchain technology",
-      "organization_name_ergo_research_team": "Organization\",\n      name: \"Ergo Research Team",
+      "research_by_category": "Pesquisa por categoria",
+      "join_the_discussion": "Participe da discussão",
+      "ergo_whitepaper_description_the_core": "Whitepaper Ergo\",\n    description: \"O documento técnico fundamental que descreve o design, os princípios e as inovações do protocolo Ergo.\",\n    url: \"https://ergoplatform.org/docs/whitepaper.pdf\",\n    category: \"Protocolo principal",
+      "extended_utxo_eutxo_model_description": "Modelo UTXO estendido (eUTXO)\",\n    description:",
+      "sigma_protocols_description_the_cryptographic": "Protocolos Sigma\",\n    description: \"A base criptográfica da privacidade e das assinaturas em anel no Ergo.\",\n    url: \"https://ergoplatform.org/docs/sigma-protocol.pdf\",\n    category: \"Criptografia",
+      "autolykos_ergo_pow_algorithm_description": "Autolykos: Algoritmo PoW do Ergo\",\n    description: \"Um inovador mecanismo de consenso Proof-of-Work resistente a ASICs.\",\n    url: \"https://ergoplatform.org/docs/Autolykos.pdf\",\n    category: \"Consenso",
+      "nipopows_description_research_on_cross": "NIPoPoWs\",\n    description: \"Pesquisa sobre protocolos de validação leve cross-chain para interoperabilidade sem confiança.\",\n    url: \"https://nipopows.com/\",\n    category: \"Interoperabilidade",
+      "formal_security_protocol_analysis_icon": "Segurança formal e análise de protocolo\",\n    icon: Shield,\n    color:",
+      "ergoscript_foundations_and_security_url": "ErgoScript: Fundamentos e Segurança\", url: \"https://ergoplatform.org/docs/ErgoScript.pdf",
+      "security_properties_of_eutxo_based": "Propriedades de segurança de contratos inteligentes baseados em eUTXO\", url:",
+      "privacy_zero_knowledge_icon_eye_color": "Privacidade e Zero-Knowledge\",\n    icon: Eye,\n    color:",
+      "zero_knowledge_proofs_in_sigma_protocols_url": "Provas de conhecimento zero nos protocolos Sigma\", url:",
+      "ring_signatures_for_blockchain_privacy": "Assinaturas em anel para privacidade blockchain",
+      "defi_economic_models_icon_database_color": "DeFi e modelos econômicos\",\n    icon: Database,\n    color:",
+      "composable_defi_primitives_on_eutxo_url": "Primitivas DeFi combináveis em eUTXO\", url:",
+      "on_chain_lending_lets_and_oracles_url": "Empréstimos on-chain, LETS e oráculos\", url:",
+      "storage_rent_blockchain_sustainability_icon": "Storage Rent e sustentabilidade blockchain\",\n    icon: FileText,\n    color:",
+      "ergo_storage_rent_model_url": "Modelo de Storage Rent do Ergo\", url: \"https://ergoplatform.org/docs/storage-rent.pdf",
+      "efficient_blockchain_state_management_url": "Gerenciamento eficiente do estado da blockchain\", url:",
+      "ergoscript_documentation_url_https_ergoplatform": "Documentação ErgoScript\", url: \"https://ergoplatform.org/docs/ergoscript.pdf",
+      "node_implementation_url_https_github": "Implementação do nó\", url: \"https://github.com/ergoplatform/ergo",
+      "sigma_rust_cryptography_library_url": "Biblioteca criptográfica Sigma-Rust\", url: \"https://github.com/ergoplatform/sigma-rust",
+      "ergomixer_technical_overview_url": "Visão técnica geral do ErgoMixer\", url:",
+      "learn_item_https_ergoblockchain_org_learn": "Aprender\", item: \"https://ergoblockchain.org/learn",
+      "research_item_https_ergoblockchain_org": "Pesquisa\", item: \"https://ergoblockchain.org/learn/research",
+      "learn_href_learn": "Aprender\", href: \"/learn",
+      "research_href_learn_research": "Pesquisa\", href: \"/learn/research",
+      "read_ergo_whitepaper_description_core": "Leia o Whitepaper Ergo\",\n                              description: \"Design do protocolo principal e filosofia",
+      "explore_research_library_description_cryptography": "Explore a Biblioteca de Pesquisa\",\n                              description: \"Criptografia, consenso e arquitetura",
+      "join_the_community_description_discuss": "Junte-se à Comunidade\",\n                              description: \"Discuta pesquisa e colabore",
+      "the_core_technical_paper_describing_ergo": "O documento técnico fundamental que descreve o Ergo",
+      "extended_utxo_eutxo_model": "Modelo UTXO estendido (eUTXO)",
+      "by_iohk_cardano_ergo_researchers": "Por pesquisadores da IOHK/Cardano e Ergo — o documento definitivo sobre o paradigma eUTXO.",
+      "the_cryptographic_backbone_of_privacy": "A base criptográfica da privacidade e das assinaturas em anel no Ergo.",
+      "autolykos_ergo_pow_algorithm": "Autolykos: Algoritmo PoW do Ergo",
+      "a_novel_asic_resistant_proof": "Um inovador mecanismo de consenso Proof-of-Work resistente a ASICs.",
+      "research_on_cross_chain_lightweight": "Pesquisa sobre protocolos de validação leve cross-chain para interoperabilidade sem confiança.",
+      "formal_security_protocol_analysis": "Segurança formal e análise de protocolo",
+      "ergoscript_foundations_and_security": "ErgoScript: Fundamentos e Segurança",
+      "security_properties_of_eutxo_based_smart_contracts": "Propriedades de segurança de contratos inteligentes baseados em eUTXO",
+      "privacy_zero_knowledge": "Privacidade e Zero-Knowledge",
+      "zero_knowledge_proofs_in_sigma_protocols": "Provas de conhecimento zero nos protocolos Sigma",
+      "defi_economic_models": "DeFi e modelos econômicos",
+      "composable_defi_primitives_on_eutxo": "Primitivas DeFi combináveis em eUTXO",
+      "on_chain_lending_lets_and_oracles": "Empréstimos on-chain, LETS e oráculos",
+      "storage_rent_blockchain_sustainability": "Storage Rent e sustentabilidade blockchain",
+      "ergo_storage_rent_model": "Modelo de Storage Rent do Ergo",
+      "efficient_blockchain_state_management": "Gerenciamento eficiente do estado da blockchain",
+      "ergoscript_documentation": "Documentação ErgoScript",
+      "sigma_rust_cryptography_library": "Biblioteca criptográfica Sigma-Rust",
+      "ergomixer_technical_overview": "Visão técnica geral do ErgoMixer",
+      "core_protocol_design_and_philosophy": "Design do protocolo principal e filosofia",
+      "cryptography_consensus_and_architecture": "Criptografia, consenso e arquitetura",
+      "discuss_research_and_collaborate": "Discuta pesquisa e colabore",
+      "academic_groundwork_and_technical_papers": "Fundamentos acadêmicos e documentos técnicos que sustentam o protocolo, a segurança e a economia do Ergo.",
+      "curated_links_to_whitepapers_formal": "Links selecionados para whitepapers, análises formais e recursos para desenvolvedores.",
+      "have_an_idea_or_want": "Tem uma ideia ou quer contribuir? Junte-se aos canais da comunidade para discutir pesquisa e colaborar.",
+      "peer_reviewed_research_publications_on": "Publicações de pesquisa revisadas por pares sobre a inovadora tecnologia blockchain do Ergo.\",\n    url: \"https://ergoblockchain.org/learn/research\",\n    siteName: \"Ergo Platform",
+      "scholarlyarticle_id_https_ergoblockchain_org": "ScholarlyArticle\",\n    \"@id\": \"https://ergoblockchain.org/learn/research\",\n    name: \"Coleção de pesquisas da Ergo Platform\",\n    description: \"Coleção de artigos de pesquisa acadêmica sobre tecnologia blockchain Ergo",
+      "organization_name_ergo_research_team": "Organization\",\n      name: \"Equipe de pesquisa Ergo",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
-      "blockchain_cryptography_consensus_algorithms_smart": "Blockchain\", \"Cryptography\", \"Consensus Algorithms\", \"Smart Contracts",
-      "dataset_name_ergo_research_papers": "Dataset\",\n    name: \"Ergo Research Papers Dataset\",\n    description: \"Collection of peer-reviewed papers on Ergo blockchain",
-      "what_research_topics_does_ergo": "What research topics does Ergo cover?\",\n      answer: \"Ergo research covers consensus algorithms (Autolykos), cryptography (Sigma protocols), smart contracts (ErgoScript), storage rent economics, and NIPoPoWs.",
-      "are_ergo_papers_peer_reviewed": "Are Ergo papers peer-reviewed?\",\n      answer: \"Yes, core Ergo research papers are peer-reviewed and published in academic conferences and journals.",
-      "ergo_research_papers_blockchain_academic": "Ergo Research Papers | Blockchain Academic Publications",
-      "ergo_research_academic_blockchain_papers": "Ergo Research | Academic Blockchain Papers",
-      "peer_reviewed_research_publications_on_ergo": "Peer-reviewed research publications on Ergo",
-      "ergo_research_papers_academic_publications": "Ergo Research Papers | Academic Publications",
-      "collection_of_academic_research_papers": "Collection of academic research papers on Ergo blockchain technology",
-      "collection_of_peer_reviewed_papers": "Collection of peer-reviewed papers on Ergo blockchain"
+      "blockchain_cryptography_consensus_algorithms_smart": "Blockchain\", \"Criptografia\", \"Algoritmos de consenso\", \"Contratos inteligentes",
+      "dataset_name_ergo_research_papers": "Dataset\",\n    name: \"Dataset de artigos de pesquisa Ergo\",\n    description: \"Coleção de artigos revisados por pares sobre blockchain Ergo",
+      "what_research_topics_does_ergo": "Quais tópicos de pesquisa o Ergo cobre?\",\n      answer: \"A pesquisa Ergo cobre algoritmos de consenso (Autolykos), criptografia (protocolos Sigma), contratos inteligentes (ErgoScript), economia do storage rent e NIPoPoWs.",
+      "are_ergo_papers_peer_reviewed": "Os artigos Ergo são revisados por pares?\",\n      answer: \"Sim, os principais artigos de pesquisa Ergo são revisados por pares e publicados em conferências acadêmicas e periódicos.",
+      "ergo_research_papers_blockchain_academic": "Artigos de pesquisa Ergo | Publicações acadêmicas blockchain",
+      "ergo_research_academic_blockchain_papers": "Pesquisa Ergo | Artigos acadêmicos blockchain",
+      "peer_reviewed_research_publications_on_ergo": "Publicações de pesquisa revisadas por pares sobre o Ergo",
+      "ergo_research_papers_academic_publications": "Artigos de pesquisa Ergo | Publicações acadêmicas",
+      "collection_of_academic_research_papers": "Coleção de artigos de pesquisa acadêmica sobre tecnologia blockchain Ergo",
+      "collection_of_peer_reviewed_papers": "Coleção de artigos revisados por pares sobre blockchain Ergo"
     },
     "guides": {
-      "confidential_transactions": "Confidential Transactions",
-      "practical_use_cases": "Practical Use Cases",
-      "confidential_defi_protocols": "Confidential DeFi protocols",
-      "sigma_protocols_are_advanced_cryptographic": "Sigma protocols are advanced cryptographic tools that enable zero-knowledge proofs, allowing users to prove statements without revealing information. This is the foundation for privacy in Ergo smart contracts.",
-      "ergomixer_is_a_privacy_tool": "ErgoMixer is a privacy tool that allows users to mix their ERG and tokens, breaking the on-chain link between sender and receiver. This enhances transaction privacy and fungibility.",
-      "using_sigma_protocols_and_custom": "Using Sigma protocols and custom scripts, users can create confidential transactions and privacy-preserving dApps on Ergo.",
-      "ergo_s_privacy_features_empower": "Ergo's privacy features empower users to control their data and financial privacy on the blockchain.",
+      "confidential_transactions": "Transações confidenciais",
+      "practical_use_cases": "Casos de uso práticos",
+      "confidential_defi_protocols": "Protocolos DeFi confidenciais",
+      "sigma_protocols_are_advanced_cryptographic": "Os protocolos Sigma são ferramentas criptográficas avançadas que permitem provas de conhecimento zero, permitindo que os usuários provem afirmações sem revelar informações. Esta é a base da privacidade nos contratos inteligentes Ergo.",
+      "ergomixer_is_a_privacy_tool": "ErgoMixer é uma ferramenta de privacidade que permite aos usuários misturar seus ERG e tokens, quebrando o link on-chain entre remetente e destinatário. Isso melhora a privacidade das transações e a fungibilidade.",
+      "using_sigma_protocols_and_custom": "Usando protocolos Sigma e scripts personalizados, os usuários podem criar transações confidenciais e dApps que preservam a privacidade no Ergo.",
+      "ergo_s_privacy_features_empower": "Os recursos de privacidade do Ergo capacitam os usuários a controlar seus dados e privacidade financeira na blockchain.",
       "consensus": {
-        "consensus_in_ergo": "Consensus in Ergo",
-        "what_is_autolykos": "What is Autolykos?",
-        "prevents_centralization_of_mining_power": "Prevents centralization of mining power",
-        "ensures_network_security_through_fair_competition": "Ensures network security through fair competition",
-        "energy_efficient_compared_to_traditional_pow": "Energy-efficient compared to traditional PoW",
-        "why_pow": "Why PoW?",
-        "ergo_uses_autolykos_a_unique": "Ergo uses Autolykos, a unique, ASIC-resistant Proof-of-Work (PoW) algorithm. This ensures fair mining and decentralization, while keeping the network secure and energy-efficient.",
-        "autolykos_is_a_memory_hard": "Autolykos is a memory-hard PoW algorithm designed to be resistant to ASICs and favor GPU miners. It helps maintain decentralization and prevents mining centralization.",
-        "proof_of_work_is_a": "Proof-of-Work is a proven consensus mechanism that secures the network, enables permissionless participation, and aligns incentives for honest behavior."
+        "consensus_in_ergo": "Consenso no Ergo",
+        "what_is_autolykos": "O que é Autolykos?",
+        "prevents_centralization_of_mining_power": "Previne a centralização do poder de mineração",
+        "ensures_network_security_through_fair_competition": "Garante a segurança da rede por meio de competição justa",
+        "energy_efficient_compared_to_traditional_pow": "Eficiente em termos de energia em comparação com o PoW tradicional",
+        "why_pow": "Por que PoW?",
+        "ergo_uses_autolykos_a_unique": "O Ergo usa Autolykos, um algoritmo Proof-of-Work (PoW) único e resistente a ASICs. Isso garante mineração justa e descentralização, mantendo a rede segura e eficiente em termos de energia.",
+        "autolykos_is_a_memory_hard": "Autolykos é um algoritmo PoW memory-hard projetado para ser resistente a ASICs e favorecer mineradores GPU. Ajuda a manter a descentralização e previne a centralização da mineração.",
+        "proof_of_work_is_a": "O Proof-of-Work é um mecanismo de consenso comprovado que protege a rede, permite participação sem permissão e alinha incentivos para comportamento honesto."
       },
       "oraclePool": {
-        "how_oracle_pools_work": "How Oracle Pools Work",
-        "multiple_oracles_submit_data_e": "Multiple oracles submit data (e.g., price feeds) to the pool.",
-        "decentralized_and_trustless_data_feeds": "Decentralized and trustless data feeds",
-        "lower_costs_for_dapps": "Lower costs for dApps",
-        "resistant_to_manipulation_and_single": "Resistant to manipulation and single points of failure",
-        "practical_use_cases": "Practical Use Cases",
-        "stablecoins_e_g_sigmausd": "Stablecoins (e.g., SigmaUSD)",
-        "oracles_bring_real_world_data": "Oracles bring real-world data to the blockchain. Ergo pioneered Oracle Pools, making data feeds decentralized, secure, and affordable for dApps.",
-        "oracle_pools_are_a_core": "Oracle Pools are a core innovation of Ergo, enabling a new generation of decentralized applications."
+        "how_oracle_pools_work": "Como funcionam os pools de oráculos",
+        "multiple_oracles_submit_data_e": "Vários oráculos enviam dados (ex.: feeds de preços) para o pool.",
+        "decentralized_and_trustless_data_feeds": "Feeds de dados descentralizados e sem confiança",
+        "lower_costs_for_dapps": "Custos menores para dApps",
+        "resistant_to_manipulation_and_single": "Resistente a manipulação e pontos únicos de falha",
+        "practical_use_cases": "Casos de uso práticos",
+        "stablecoins_e_g_sigmausd": "Stablecoins (ex.: SigmaUSD)",
+        "oracles_bring_real_world_data": "Os oráculos trazem dados do mundo real para a blockchain. O Ergo foi pioneiro nos pools de oráculos, tornando os feeds de dados descentralizados, seguros e acessíveis para dApps.",
+        "oracle_pools_are_a_core": "Os pools de oráculos são uma inovação fundamental do Ergo, permitindo uma nova geração de aplicações descentralizadas."
       },
       "storageRent": {
-        "how_storage_rent_works": "How Storage Rent Works",
-        "fees_are_collected_by_miners": "Fees are collected by miners, incentivizing them to maintain the network.",
-        "unclaimed_or_abandoned_boxes_are": "Unclaimed or abandoned boxes are eventually recycled, freeing up space.",
-        "prevents_blockchain_bloat": "Prevents blockchain bloat",
-        "encourages_active_participation": "Encourages active participation",
-        "ensures_long_term_sustainability": "Ensures long-term sustainability",
-        "storage_rent_is_a_unique": "Storage rent is a unique feature that helps Ergo remain efficient and sustainable for years to come."
+        "how_storage_rent_works": "Como funciona o storage rent",
+        "fees_are_collected_by_miners": "As taxas são coletadas pelos mineradores, incentivando-os a manter a rede.",
+        "unclaimed_or_abandoned_boxes": "Caixas não reclamadas ou abandonadas são eventualmente recicladas, liberando espaço.",
+        "prevents_blockchain_bloat": "Previne o inchaço da blockchain",
+        "encourages_active_participation": "Incentiva a participação ativa",
+        "ensures_long_term_sustainability": "Garante sustentabilidade a longo prazo",
+        "storage_rent_is_a_unique": "O storage rent é uma característica única que ajuda o Ergo a permanecer eficiente e sustentável nos próximos anos."
       },
-      "what_is_a_utxo": "What is a UTXO?",
-      "unspent_transaction_output": "Unspent Transaction Output",
-      "what_is_eutxo": "What is eUTXO?",
-      "high": "High",
-      "the_extended_utxo_eutxo_model": "The extended UTXO (eUTXO) model is the foundation of Ergo. It combines the simplicity and security of Bitcoin's UTXO with the programmability of smart contracts.",
-      "utxo_stands_for": "UTXO stands for",
-      "in_ergo_a_simple_payment": "In Ergo, a simple payment is a box locked by a script that only the recipient can unlock. More complex contracts (like multi-sig, oracles, or DeFi) are possible by adding logic to the box script and storing extra data.",
-      "ergo_educational_guides": "Ergo Educational Guides",
-      "want_to_suggest_your_own": "Want to suggest your own guide or improve existing materials?",
-      "contribute_to_the_documentation": "Contribute to the documentation",
-      "what_is_eutxo_and_why": "What is eUTXO and Why Does It Matter?\",\n    description: \"A deep dive into the extended UTXO model at the core of Ergo.",
-      "how_ergoscript_works_the_basics": "How ErgoScript Works: The Basics",
-      "what_is_an_oracle_pool": "What is an Oracle Pool?",
-      "how_fees_work_in_ergo": "How Fees Work in Ergo",
-      "ergo_glossary_description_terms_and": "Ergo Glossary\",\n    description: \"Terms and definitions every ecosystem participant should know.",
-      "history_and_mission_of_ergo": "History and Mission of Ergo",
-      "what_is_eutxo_and_why_does_it_matter": "What is eUTXO and Why Does It Matter?",
-      "a_deep_dive_into_the": "A deep dive into the extended UTXO model at the core of Ergo.",
-      "an_explanation_of_ergoscript_syntax": "An explanation of ErgoScript syntax and capabilities for smart contracts.",
-      "the_role_and_structure_of": "The role and structure of oracles in the Ergo ecosystem.",
-      "principles_of_fee_calculation_and": "Principles of fee calculation and distribution in the network.",
-      "ergo_vs_cardano_a_comparison": "Ergo vs Cardano: A Comparison",
-      "terms_and_definitions_every_ecosystem": "Terms and definitions every ecosystem participant should know.",
-      "the_project": "The project",
-      "dive_into_the_fundamental_concepts": "Dive into the fundamental concepts, architecture, and technologies of the Ergo blockchain. Here you'll find explanations, comparisons, glossaries, and the best educational materials.",
-      "how_ergoscript_works": "How ErgoScript Works",
-      "simple_auditable_syntax": "Simple, auditable syntax",
-      "native_support_for_zero_knowledge_proofs": "Native support for zero-knowledge proofs",
-      "flexible_and_secure_smart_contracts": "Flexible and secure smart contracts",
-      "efficient_execution_and_low_fees": "Efficient execution and low fees",
-      "example_basic_ownership": "Example: Basic Ownership",
-      "decentralized_exchanges": "Decentralized exchanges",
-      "privacy_preserving_contracts": "Privacy-preserving contracts",
-      "oracles_and_data_feeds": "Oracles and data feeds",
-      "ergoscript_is_a_powerful_yet": "ErgoScript is a powerful, yet simple, smart contract language for the Ergo blockchain. It is based on Sigma protocols, enabling advanced cryptography and privacy.",
-      "ergoscript_s_design_makes_it": "ErgoScript's design makes it possible to build secure, efficient, and privacy-focused dApps on Ergo.",
-      "how_storage_rent_works": "How Storage Rent Works",
-      "fees_are_collected_by_miners": "Fees are collected by miners, incentivizing them to maintain the network.",
-      "unclaimed_or_abandoned_boxes_are": "Unclaimed or abandoned boxes are eventually recycled, freeing up space.",
-      "prevents_blockchain_bloat": "Prevents blockchain bloat",
-      "encourages_active_participation": "Encourages active participation",
-      "ensures_long_term_sustainability": "Ensures long-term sustainability",
-      "storage_rent_is_a_unique": "Storage rent is a unique feature that helps Ergo remain efficient and sustainable for years to come.",
+      "what_is_a_utxo": "O que é um UTXO?",
+      "unspent_transaction_output": "Saída de transação não gasta",
+      "what_is_eutxo": "O que é eUTXO?",
+      "high": "Alto",
+      "the_extended_utxo_eutxo_model": "O modelo UTXO estendido (eUTXO) é a base do Ergo. Combina a simplicidade e segurança do UTXO do Bitcoin com a programabilidade dos contratos inteligentes.",
+      "utxo_stands_for": "UTXO significa",
+      "in_ergo_a_simple_payment": "No Ergo, um pagamento simples é uma caixa bloqueada por um script que só o destinatário pode desbloquear. Contratos mais complexos (como multi-sig, oráculos ou DeFi) são possíveis adicionando lógica ao script da caixa e armazenando dados extras.",
+      "ergo_educational_guides": "Guias educacionais Ergo",
+      "want_to_suggest_your_own": "Quer sugerir seu próprio guia ou melhorar os materiais existentes?",
+      "contribute_to_the_documentation": "Contribua com a documentação",
+      "what_is_eutxo_and_why": "O que é eUTXO e por que é importante?\",\n    description: \"Uma análise aprofundada do modelo UTXO estendido no centro do Ergo.",
+      "how_ergoscript_works_the_basics": "Como funciona o ErgoScript: o básico",
+      "what_is_an_oracle_pool": "O que é um pool de oráculos?",
+      "how_fees_work_in_ergo": "Como funcionam as taxas no Ergo",
+      "ergo_glossary_description_terms_and": "Glossário Ergo\",\n    description: \"Termos e definições que todo participante do ecossistema deve conhecer.",
+      "history_and_mission_of_ergo": "História e missão do Ergo",
+      "what_is_eutxo_and_why_does_it_matter": "O que é eUTXO e por que é importante?",
+      "a_deep_dive_into_the": "Uma análise aprofundada do modelo UTXO estendido no centro do Ergo.",
+      "an_explanation_of_ergoscript_syntax": "Uma explicação da sintaxe e das capacidades do ErgoScript para contratos inteligentes.",
+      "the_role_and_structure_of": "O papel e a estrutura dos oráculos no ecossistema Ergo.",
+      "principles_of_fee_calculation_and": "Princípios de cálculo de taxas e distribuição na rede.",
+      "ergo_vs_cardano_a_comparison": "Ergo vs Cardano: uma comparação",
+      "terms_and_definitions_every_ecosystem": "Termos e definições que todo participante do ecossistema deve conhecer.",
+      "the_project": "O projeto",
+      "dive_into_the_fundamental_concepts": "Aprofunde-se nos conceitos fundamentais, arquitetura e tecnologias da blockchain Ergo. Aqui você encontrará explicações, comparações, glossários e os melhores materiais educacionais.",
+      "how_ergoscript_works": "Como funciona o ErgoScript",
+      "simple_auditable_syntax": "Sintaxe simples e auditável",
+      "native_support_for_zero_knowledge_proofs": "Suporte nativo para provas de conhecimento zero",
+      "flexible_and_secure_smart_contracts": "Contratos inteligentes flexíveis e seguros",
+      "efficient_execution_and_low_fees": "Execução eficiente e taxas baixas",
+      "example_basic_ownership": "Exemplo: Propriedade básica",
+      "decentralized_exchanges": "Exchanges descentralizadas",
+      "privacy_preserving_contracts": "Contratos que preservam a privacidade",
+      "oracles_and_data_feeds": "Oráculos e feeds de dados",
+      "ergoscript_is_a_powerful_yet": "ErgoScript é uma linguagem poderosa, mas simples, para contratos inteligentes na blockchain Ergo. É baseado em protocolos Sigma, permitindo criptografia avançada e privacidade.",
+      "ergoscript_s_design_makes_it": "O design do ErgoScript torna possível construir dApps seguros, eficientes e focados em privacidade no Ergo.",
+      "how_storage_rent_works": "Como funciona o storage rent",
+      "fees_are_collected_by_miners": "As taxas são coletadas pelos mineradores, incentivando-os a manter a rede.",
+      "unclaimed_or_abandoned_boxes_are": "Caixas não reclamadas ou abandonadas são eventualmente recicladas, liberando espaço.",
+      "prevents_blockchain_bloat": "Previne o inchaço da blockchain",
+      "encourages_active_participation": "Incentiva a participação ativa",
+      "ensures_long_term_sustainability": "Garante sustentabilidade a longo prazo",
+      "storage_rent_is_a_unique": "O storage rent é uma característica única que ajuda o Ergo a permanecer eficiente e sustentável nos próximos anos.",
       "privacy": {
-        "confidential_transactions": "Confidential Transactions",
-        "practical_use_cases": "Practical Use Cases",
-        "confidential_defi_protocols": "Confidential DeFi protocols",
-        "sigma_protocols_are_advanced_cryptographic": "Sigma protocols are advanced cryptographic tools that enable zero-knowledge proofs, allowing users to prove statements without revealing information. This is the foundation for privacy in Ergo smart contracts.",
-        "ergomixer_is_a_privacy_tool": "ErgoMixer is a privacy tool that allows users to mix their ERG and tokens, breaking the on-chain link between sender and receiver. This enhances transaction privacy and fungibility.",
-        "using_sigma_protocols_and_custom": "Using Sigma protocols and custom scripts, users can create confidential transactions and privacy-preserving dApps on Ergo.",
-        "ergo_s_privacy_features_empower": "Ergo's privacy features empower users to control their data and financial privacy on the blockchain."
+        "confidential_transactions": "Transações confidenciais",
+        "practical_use_cases": "Casos de uso práticos",
+        "confidential_defi_protocols": "Protocolos DeFi confidenciais",
+        "sigma_protocols_are_advanced_cryptographic": "Os protocolos Sigma são ferramentas criptográficas avançadas que permitem provas de conhecimento zero, permitindo que os usuários provem afirmações sem revelar informações. Esta é a base da privacidade nos contratos inteligentes Ergo.",
+        "ergomixer_is_a_privacy_tool": "ErgoMixer é uma ferramenta de privacidade que permite aos usuários misturar seus ERG e tokens, quebrando o link on-chain entre remetente e destinatário. Isso melhora a privacidade das transações e a fungibilidade.",
+        "using_sigma_protocols_and_custom": "Usando protocolos Sigma e scripts personalizados, os usuários podem criar transações confidenciais e dApps que preservam a privacidade no Ergo.",
+        "ergo_s_privacy_features_empower": "Os recursos de privacidade do Ergo capacitam os usuários a controlar seus dados e privacidade financeira na blockchain."
       },
-      "how_oracle_pools_work": "How Oracle Pools Work",
-      "multiple_oracles_submit_data_e": "Multiple oracles submit data (e.g., price feeds) to the pool.",
-      "decentralized_and_trustless_data_feeds": "Decentralized and trustless data feeds",
-      "lower_costs_for_dapps": "Lower costs for dApps",
-      "resistant_to_manipulation_and_single": "Resistant to manipulation and single points of failure",
-      "stablecoins_e_g_sigmausd": "Stablecoins (e.g., SigmaUSD)",
-      "oracles_bring_real_world_data": "Oracles bring real-world data to the blockchain. Ergo pioneered Oracle Pools, making data feeds decentralized, secure, and affordable for dApps.",
-      "oracle_pools_are_a_core": "Oracle Pools are a core innovation of Ergo, enabling a new generation of decentralized applications.",
-      "consensus_in_ergo": "Consensus in Ergo",
-      "what_is_autolykos": "What is Autolykos?",
-      "prevents_centralization_of_mining_power": "Prevents centralization of mining power",
-      "ensures_network_security_through_fair_competition": "Ensures network security through fair competition",
-      "energy_efficient_compared_to_traditional_pow": "Energy-efficient compared to traditional PoW",
-      "why_pow": "Why PoW?",
-      "ergo_uses_autolykos_a_unique": "Ergo uses Autolykos, a unique, ASIC-resistant Proof-of-Work (PoW) algorithm. This ensures fair mining and decentralization, while keeping the network secure and energy-efficient.",
-      "autolykos_is_a_memory_hard": "Autolykos is a memory-hard PoW algorithm designed to be resistant to ASICs and favor GPU miners. It helps maintain decentralization and prevents mining centralization.",
-      "proof_of_work_is_a": "Proof-of-Work is a proven consensus mechanism that secures the network, enables permissionless participation, and aligns incentives for honest behavior.",
-      "in_depth_technical_guides_for": "In-depth technical guides for Ergo blockchain. Learn eUTXO model, consensus mechanisms, privacy features, oracle pools, and storage rent. Expert tutorials for developers.",
-      "deep_dive_into_ergo_s": "Deep dive into Ergo's technology with comprehensive guides and tutorials.\",\n    url: \"https://ergoblockchain.org/learn/guides\",\n    siteName: \"Ergo Platform",
-      "expert_tutorials_on_eutxo_consensus": "Expert tutorials on eUTXO, consensus, privacy, and more.",
-      "collectionpage_id_https_ergoblockchain_org": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/learn/guides\",\n    name: \"Ergo Technical Guides Collection\",\n    description: \"Collection of technical guides and tutorials for Ergo blockchain",
-      "techarticle_name_eutxo_model_guide": "TechArticle\",\n        name: \"eUTXO Model Guide\",\n        url: \"https://ergoblockchain.org/learn/guides/eutxo",
-      "techarticle_name_consensus_protocol_guide": "TechArticle\",\n        name: \"Consensus Protocol Guide\",\n        url: \"https://ergoblockchain.org/learn/guides/consensus",
-      "techarticle_name_privacy_features_guide": "TechArticle\",\n        name: \"Privacy Features Guide\",\n        url: \"https://ergoblockchain.org/learn/guides/privacy-features",
-      "what_technical_guides_are_available": "What technical guides are available?\",\n      answer: \"We offer guides on eUTXO model, consensus mechanisms, privacy features, oracle pools, storage rent, ErgoScript, and more technical topics.",
-      "how_often_are_guides_updated": "How often are guides updated?\",\n      answer: \"Guides are regularly updated to reflect the latest Ergo developments and community feedback.",
-      "ergo_technical_guides_defi_mining": "Ergo Technical Guides | DeFi, Mining & Development Tutorials",
-      "ergo_technical_guides_expert_blockchain_tutorials": "Ergo Technical Guides | Expert Blockchain Tutorials",
-      "ergo_technical_guides_learn_blockchain": "Ergo Technical Guides | Learn Blockchain",
-      "collection_of_technical_guides_and": "Collection of technical guides and tutorials for Ergo blockchain"
+      "how_oracle_pools_work": "Como funcionam os pools de oráculos",
+      "multiple_oracles_submit_data_e": "Vários oráculos enviam dados (ex.: feeds de preços) para o pool.",
+      "decentralized_and_trustless_data_feeds": "Feeds de dados descentralizados e sem confiança",
+      "lower_costs_for_dapps": "Custos menores para dApps",
+      "resistant_to_manipulation_and_single": "Resistente a manipulação e pontos únicos de falha",
+      "stablecoins_e_g_sigmausd": "Stablecoins (ex.: SigmaUSD)",
+      "oracles_bring_real_world_data": "Os oráculos trazem dados do mundo real para a blockchain. O Ergo foi pioneiro nos pools de oráculos, tornando os feeds de dados descentralizados, seguros e acessíveis para dApps.",
+      "oracle_pools_are_a_core": "Os pools de oráculos são uma inovação fundamental do Ergo, permitindo uma nova geração de aplicações descentralizadas.",
+      "consensus_in_ergo": "Consenso no Ergo",
+      "what_is_autolykos": "O que é Autolykos?",
+      "prevents_centralization_of_mining_power": "Previne a centralização do poder de mineração",
+      "ensures_network_security_through_fair_competition": "Garante a segurança da rede por meio de competição justa",
+      "energy_efficient_compared_to_traditional_pow": "Eficiente em termos de energia em comparação com o PoW tradicional",
+      "why_pow": "Por que PoW?",
+      "ergo_uses_autolykos_a_unique": "O Ergo usa Autolykos, um algoritmo Proof-of-Work (PoW) único e resistente a ASICs. Isso garante mineração justa e descentralização, mantendo a rede segura e eficiente em termos de energia.",
+      "autolykos_is_a_memory_hard": "Autolykos é um algoritmo PoW memory-hard projetado para ser resistente a ASICs e favorecer mineradores GPU. Ajuda a manter a descentralização e previne a centralização da mineração.",
+      "proof_of_work_is_a": "O Proof-of-Work é um mecanismo de consenso comprovado que protege a rede, permite participação sem permissão e alinha incentivos para comportamento honesto.",
+      "in_depth_technical_guides_for": "Guias técnicos aprofundados para a blockchain Ergo. Aprenda o modelo eUTXO, mecanismos de consenso, recursos de privacidade, pools de oráculos e storage rent. Tutoriais especializados para desenvolvedores.",
+      "deep_dive_into_ergo_s": "Análise aprofundada da tecnologia Ergo com guias e tutoriais abrangentes.\",\n    url: \"https://ergoblockchain.org/learn/guides\",\n    siteName: \"Ergo Platform",
+      "expert_tutorials_on_eutxo_consensus": "Tutoriais especializados sobre eUTXO, consenso, privacidade e mais.",
+      "collectionpage_id_https_ergoblockchain_org": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/learn/guides\",\n    name: \"Coleção de guias técnicos Ergo\",\n    description: \"Coleção de guias técnicos e tutoriais para blockchain Ergo",
+      "techarticle_name_eutxo_model_guide": "TechArticle\",\n        name: \"Guia do modelo eUTXO\",\n        url: \"https://ergoblockchain.org/learn/guides/eutxo",
+      "techarticle_name_consensus_protocol_guide": "TechArticle\",\n        name: \"Guia do protocolo de consenso\",\n        url: \"https://ergoblockchain.org/learn/guides/consensus",
+      "techarticle_name_privacy_features_guide": "TechArticle\",\n        name: \"Guia de recursos de privacidade\",\n        url: \"https://ergoblockchain.org/learn/guides/privacy-features",
+      "what_technical_guides_are_available": "Quais guias técnicos estão disponíveis?\",\n      answer: \"Oferecemos guias sobre o modelo eUTXO, mecanismos de consenso, recursos de privacidade, pools de oráculos, storage rent, ErgoScript e outros tópicos técnicos.",
+      "how_often_are_guides_updated": "Com que frequência os guias são atualizados?\",\n      answer: \"Os guias são atualizados regularmente para refletir os desenvolvimentos mais recentes do Ergo e o feedback da comunidade.",
+      "ergo_technical_guides_defi_mining": "Guias técnicos Ergo | Tutoriais DeFi, Mineração e Desenvolvimento",
+      "ergo_technical_guides_expert_blockchain_tutorials": "Guias técnicos Ergo | Tutoriais blockchain especializados",
+      "ergo_technical_guides_learn_blockchain": "Guias técnicos Ergo | Aprenda blockchain",
+      "collection_of_technical_guides_and": "Coleção de guias técnicos e tutoriais para blockchain Ergo"
     },
     "learnErgoscript": {
-      "title": "Learn ErgoScript",
-      "subtitle": "Master Ergo's smart contract language",
-      "description": "Comprehensive guide to learning ErgoScript, Ergo's powerful smart contract programming language.",
-      "lastUpdated": "Last updated",
+      "title": "Aprenda ErgoScript",
+      "subtitle": "Domine a linguagem de contratos inteligentes do Ergo",
+      "description": "Guia abrangente para aprender ErgoScript, a poderosa linguagem de programação de contratos inteligentes do Ergo.",
+      "lastUpdated": "Última atualização",
       "features": {
-        "title": "Why Learn ErgoScript?",
-        "subtitle": "Powerful features for blockchain development",
+        "title": "Por que aprender ErgoScript?",
+        "subtitle": "Recursos poderosos para desenvolvimento blockchain",
         "secure": {
-          "title": "Secure by Design",
-          "description": "Built-in security features and formal verification capabilities"
+          "title": "Seguro por design",
+          "description": "Recursos de segurança integrados e capacidades de verificação formal"
         }
       },
       "buttons": {
-        "startTutorial": "Start Tutorial",
-        "documentation": "Documentation"
+        "startTutorial": "Iniciar tutorial",
+        "documentation": "Documentação"
       },
       "cta": {
-        "title": "Ready to Start Coding?",
-        "subtitle": "Begin your ErgoScript journey today",
+        "title": "Pronto para começar a programar?",
+        "subtitle": "Comece sua jornada com ErgoScript hoje",
         "buttons": {
-          "startLearning": "Start Learning",
-          "joinCommunity": "Join Community"
+          "startLearning": "Começar a aprender",
+          "joinCommunity": "Entrar na comunidade"
         }
       }
     },
-    "browseFaq": "Browse FAQ",
+    "browseFaq": "Ver FAQ",
     "sections": {
-      "basics": "Blockchain Basics",
+      "basics": "Conceitos básicos de blockchain",
       "ergoScript": "ErgoScript",
-      "development": "Development",
-      "research": "Research"
+      "development": "Desenvolvimento",
+      "research": "Pesquisa"
     },
     "categories": {
       "basics": {
-        "title": "Basics",
-        "description": "Start your journey with blockchain fundamentals"
+        "title": "Básico",
+        "description": "Comece sua jornada com os fundamentos da blockchain"
       },
       "advanced": {
-        "title": "Advanced",
-        "description": "Deep dive into technical concepts"
+        "title": "Avançado",
+        "description": "Aprofunde-se nos conceitos técnicos"
       },
       "development": {
-        "title": "Development",
-        "description": "Learn to build on Ergo"
+        "title": "Desenvolvimento",
+        "description": "Aprenda a construir no Ergo"
       },
       "economics": {
-        "title": "Economics",
-        "description": "Understand Ergo's economic model"
+        "title": "Economia",
+        "description": "Entenda o modelo econômico do Ergo"
       }
     },
     "paths": {
       "beginner": {
-        "title": "Beginner Path",
-        "description": "New to blockchain? Start here"
+        "title": "Trilha para iniciantes",
+        "description": "Novo na blockchain? Comece aqui"
       },
       "developer": {
-        "title": "Developer Path",
-        "description": "Learn to build dApps on Ergo"
+        "title": "Trilha para desenvolvedores",
+        "description": "Aprenda a criar dApps no Ergo"
       },
       "trader": {
-        "title": "Trader Path",
-        "description": "Master DeFi and trading"
+        "title": "Trilha para traders",
+        "description": "Domine DeFi e trading"
       }
     },
-    "learn_more": "Learn more",
-    "start_your_journey_with_our": "Start your journey with our beginner-friendly introduction",
-    "new_to_ergo": "New to Ergo?",
-    "get_started": "Get Started",
-    "join_the_community": "Join the Community",
-    "connect_with_other_developers_and_get_help": "Connect with other developers and get help",
-    "connect_with_other_developers_and": "Connect with other developers and get help from the Ergo community",
+    "learn_more": "Saiba mais",
+    "start_your_journey_with_our": "Comece sua jornada com nossa introdução amigável para iniciantes",
+    "new_to_ergo": "Novo no Ergo?",
+    "get_started": "Começar",
+    "join_the_community": "Entrar na comunidade",
+    "connect_with_other_developers_and_get_help": "Conecte-se com outros desenvolvedores e obtenha ajuda",
+    "connect_with_other_developers_and": "Conecte-se com outros desenvolvedores e obtenha ajuda da comunidade Ergo",
     "ergoscript": {
-      "your_path_to_ergoscript_mastery": "Your Path to ErgoScript Mastery",
-      "ergoscript_language_fundamentals": "ErgoScript language fundamentals",
-      "advanced_contract_logic_patterns": "Advanced contract logic patterns",
-      "tokens_nfts_and_sigma_protocols": "Tokens, NFTs, and Sigma-protocols",
-      "multi_stage_dapps_and_defi": "Multi-stage dApps and DeFi",
-      "testing_and_security_best_practices": "Testing and security best practices",
-      "powerful_expressive_description_enables_complex": "Powerful & Expressive\",\n      description: \"Enables complex DeFi, multi-stage protocols, and unique dApps",
-      "leverage_eutxo_description_only_ergoscript": "Leverage eUTXO\",\n      description: \"Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
-      "built_in_cryptography_description_native": "Built-in Cryptography\",\n      description: \"Native support for Sigma-protocols, privacy, and advanced access schemes",
-      "new_to_smart_contracts_description": "New to Smart Contracts\",\n      description: \"Step-by-step explanations of core blockchain and smart contract concepts",
-      "blockchain_basics_smart_contract_fundamentals": "Blockchain basics\", \"Smart contract fundamentals\", \"eUTXO introduction",
-      "experienced_blockchain_developers_description_discover": "Experienced Blockchain Developers\",\n      description: \"Discover eUTXO, new safe patterns, and advanced contract design",
-      "security_best_practices_advanced_cryptography": "Security best practices\", \"Advanced cryptography",
-      "scala_functional_programmers_description": "Scala/Functional Programmers\",\n      description:",
-      "functional_paradigms_type_safety_immutable": "Functional paradigms\", \"Type safety\", \"Immutable data structures",
-      "defi_enthusiasts_description_build_the": "DeFi Enthusiasts\",\n      description: \"Build the next generation of decentralized financial applications",
-      "dex_protocols_lending_platforms_algorithmic": "DEX protocols\", \"Lending platforms\", \"Algorithmic stablecoins",
-      "foundations_of_ergo_and_ergoscript": "Foundations of Ergo and ErgoScript",
-      "introduction_to_ergo_the_eutxo_model_duration": "Introduction to Ergo & the eUTXO Model\", duration:",
-      "what_is_ergoscript_philosophy_and": "What is ErgoScript? Philosophy and Design Goals\", duration:",
-      "setting_up_your_ergoscript_development": "Setting Up Your ErgoScript Development Environment\", duration:",
-      "basic_syntax_data_types_operators_duration": "Basic Syntax, Data Types, Operators\", duration:",
-      "boxes_registers_context_variables_duration": "Boxes, Registers, Context Variables\", duration:",
-      "anatomy_of_an_ergo_transaction_duration": "Anatomy of an Ergo Transaction\", duration:",
-      "creating_basic_contracts": "Creating Basic Contracts",
-      "always_true_duration": "Always True\"', duration:",
-      "time_locked_contracts_duration": "Time-Locked Contracts\", duration:",
-      "ergotree_compilation_duration": "ErgoTree & Compilation\", duration:",
-      "fees_transaction_size_duration": "Fees & Transaction Size\", duration:",
-      "working_with_data_and_tokens": "Working with Data and Tokens",
-      "reading_writing_registers_duration": "Reading/Writing Registers\", duration:",
-      "handling_erg_native_tokens_duration": "Handling ERG & Native Tokens\", duration:",
-      "minting_burning_tokens_duration": "Minting/Burning Tokens\", duration:",
-      "nfts_in_ergoscript_duration": "NFTs in ErgoScript\", duration:",
-      "intermediate_contract_logic": "Intermediate Contract Logic",
-      "multi_stage_contracts_state_transitions_duration": "Multi-Stage Contracts & State Transitions\", duration:",
-      "using_oracles_duration": "Using Oracles\", duration:",
-      "basic_escrow_duration": "Basic Escrow\", duration:",
-      "sigma_protocols_proofs_of_knowledge_duration": "Sigma Protocols & Proofs of Knowledge\", duration:",
-      "daos_voting_duration": "DAOs & Voting\", duration:",
-      "advanced_ergoscript_cryptography": "Advanced ErgoScript & Cryptography",
-      "ring_signatures_mixing_duration": "Ring Signatures, Mixing\", duration:",
-      "threshold_signatures_duration": "Threshold Signatures\", duration:",
-      "designing_defi_primitives_duration": "Designing DeFi Primitives\", duration:",
-      "gas_optimization_script_complexity_duration": "Gas Optimization & Script Complexity\", duration:",
-      "advanced_context_extensions_duration": "Advanced Context Extensions\", duration:",
-      "testing_debugging_best_practices": "Testing, Debugging & Best Practices",
-      "unit_integration_testing_duration": "Unit & Integration Testing\", duration:",
-      "debugging_techniques_duration": "Debugging Techniques\", duration:",
-      "pitfalls_vulnerabilities_duration": "Pitfalls & Vulnerabilities\", duration:",
-      "secure_development_best_practices_duration": "Secure Development Best Practices\", duration:",
-      "practical_projects_dapp_examples": "Practical Projects & dApp Examples",
-      "nft_marketplace_duration": "NFT Marketplace\", duration:",
-      "decentralized_lottery_duration": "Decentralized Lottery\", duration:",
-      "defi_lending_protocol_duration": "DeFi Lending Protocol\", duration:",
-      "privacy_preserving_payment_channel_duration": "Privacy-Preserving Payment Channel\", duration:",
-      "custom_oracle_implementation_duration": "Custom Oracle Implementation\", duration:",
-      "what_development_tools_do_i_need_answer": "What development tools do I need?\",\n      answer:",
-      "your_first_contract_always_true": "Your First Contract: \"Always True\"",
-      "secure_by_design": "Secure by Design",
-      "powerful_expressive": "Powerful & Expressive",
-      "enables_complex_defi_multi_stage": "Enables complex DeFi, multi-stage protocols, and unique dApps",
-      "only_ergoscript_unlocks_the_full": "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
-      "built_in_cryptography": "Built-in Cryptography",
-      "native_support_for_sigma_protocols": "Native support for Sigma-protocols, privacy, and advanced access schemes",
-      "new_to_smart_contracts": "New to Smart Contracts",
-      "step_by_step_explanations_of": "Step-by-step explanations of core blockchain and smart contract concepts",
-      "experienced_blockchain_developers": "Experienced Blockchain Developers",
-      "discover_eutxo_new_safe_patterns": "Discover eUTXO, new safe patterns, and advanced contract design",
-      "scala_functional_programmers": "Scala/Functional Programmers",
-      "build_the_next_generation_of": "Build the next generation of decentralized financial applications",
-      "introduction_to_ergo_the_eutxo_model": "Introduction to Ergo & the eUTXO Model",
-      "what_is_ergoscript_philosophy_and_design_goals": "What is ErgoScript? Philosophy and Design Goals",
-      "setting_up_your_ergoscript_development_environment": "Setting Up Your ErgoScript Development Environment",
-      "basic_syntax_data_types_operators": "Basic Syntax, Data Types, Operators",
-      "boxes_registers_context_variables": "Boxes, Registers, Context Variables",
-      "anatomy_of_an_ergo_transaction": "Anatomy of an Ergo Transaction",
-      "your_first_contract": "Your First Contract:",
-      "time_locked_contracts": "Time-Locked Contracts",
-      "ergotree_compilation": "ErgoTree & Compilation",
-      "fees_transaction_size": "Fees & Transaction Size",
-      "reading_writing_registers": "Reading/Writing Registers",
-      "handling_erg_native_tokens": "Handling ERG & Native Tokens",
-      "minting_burning_tokens": "Minting/Burning Tokens",
-      "nfts_in_ergoscript": "NFTs in ErgoScript",
-      "token_standards_eip_004": "Token Standards (EIP-004)",
-      "multi_stage_contracts_state_transitions": "Multi-Stage Contracts & State Transitions",
-      "sigma_protocols_proofs_of_knowledge": "Sigma Protocols & Proofs of Knowledge",
-      "ring_signatures_mixing": "Ring Signatures, Mixing",
-      "designing_defi_primitives": "Designing DeFi Primitives",
-      "gas_optimization_script_complexity": "Gas Optimization & Script Complexity",
-      "advanced_context_extensions": "Advanced Context Extensions",
-      "unit_integration_testing": "Unit & Integration Testing",
-      "pitfalls_vulnerabilities": "Pitfalls & Vulnerabilities",
-      "secure_development_best_practices": "Secure Development Best Practices",
-      "decentralized_lottery": "Decentralized Lottery",
-      "defi_lending_protocol": "DeFi Lending Protocol",
-      "privacy_preserving_payment_channel": "Privacy-Preserving Payment Channel",
-      "custom_oracle_implementation": "Custom Oracle Implementation",
-      "scala_functional_programmers_description_ergoscript": "Scala/Functional Programmers\",\n      description: \"ErgoScript",
-      "your_first_contract_always_true_duration": "Your First Contract: \"Always True\"', duration:",
-      "what_development_tools_do_i_need_answer_you": "What development tools do I need?\",\n      answer:\n        \"You",
-      "ergoscript_tutorial_series": "ErgoScript Tutorial Series",
-      "master_ergoscript_your_path_to": "Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo",
-      "step_by_step_tutorials_covering": "Step-by-step tutorials covering everything from basics to advanced DeFi protocols, designed for developers of all experience levels.",
-      "your_first_ergoscript_contract": "Your First ErgoScript Contract",
-      "why_learn_ergoscript": "Why Learn ErgoScript?",
-      "who_is_this_tutorial_series_for": "Who Is This Tutorial Series For?",
-      "what_you_will_learn": "What You Will Learn",
-      "tutorial_series_structure": "Tutorial Series Structure",
-      "frequently_asked_questions": "Frequently Asked Questions",
-      "ready_to_master_ergoscript": "Ready to Master ErgoScript?",
-      "join_our_community_of_developers": "Join our community of developers building the future of decentralized applications on Ergo. Start your journey from beginner to expert with our comprehensive tutorial series.",
-      "start_learning_now": "Start Learning Now",
-      "master_ergoscript_programming_language_build": "Master ErgoScript programming language. Build secure smart contracts on Ergo blockchain with zero-knowledge proofs, multi-stage protocols, and advanced cryptography.",
-      "build_powerful_defi_applications_with": "Build powerful DeFi applications with ErgoScript's advanced features.",
-      "course_id_https_ergoblockchain_org": "Course\",\n    \"@id\": \"https://ergoblockchain.org/learn/ergoscript\",\n    name: \"ErgoScript Programming Course\",\n    description: \"Learn to build smart contracts with ErgoScript",
+      "your_path_to_ergoscript_mastery": "Seu caminho para dominar o ErgoScript",
+      "ergoscript_language_fundamentals": "Fundamentos da linguagem ErgoScript",
+      "advanced_contract_logic_patterns": "Padrões de lógica de contrato avançada",
+      "tokens_nfts_and_sigma_protocols": "Tokens, NFTs e protocolos Sigma",
+      "multi_stage_dapps_and_defi": "dApps multi-estágio e DeFi",
+      "testing_and_security_best_practices": "Melhores práticas de teste e segurança",
+      "powerful_expressive_description_enables_complex": "Poderoso e expressivo\",\n      description: \"Permite DeFi complexo, protocolos multi-estágio e dApps únicos",
+      "leverage_eutxo_description_only_ergoscript": "Aproveite o eUTXO\",\n      description: \"Apenas o ErgoScript desbloqueia todo o poder do eUTXO: custos previsíveis, estado local, componibilidade",
+      "built_in_cryptography_description_native": "Criptografia integrada\",\n      description: \"Suporte nativo para protocolos Sigma, privacidade e esquemas de acesso avançados",
+      "new_to_smart_contracts_description": "Novo em contratos inteligentes\",\n      description: \"Explicações passo a passo dos conceitos fundamentais de blockchain e contratos inteligentes",
+      "blockchain_basics_smart_contract_fundamentals": "Conceitos básicos de blockchain\", \"Fundamentos de contratos inteligentes\", \"Introdução ao eUTXO",
+      "experienced_blockchain_developers_description_discover": "Desenvolvedores blockchain experientes\",\n      description: \"Descubra o eUTXO, novos padrões seguros e design de contratos avançados",
+      "security_best_practices_advanced_cryptography": "Melhores práticas de segurança\", \"Criptografia avançada",
+      "scala_functional_programmers_description": "Programadores Scala/funcionais\",\n      description:",
+      "functional_paradigms_type_safety_immutable": "Paradigmas funcionais\", \"Segurança de tipos\", \"Estruturas de dados imutáveis",
+      "defi_enthusiasts_description_build_the": "Entusiastas de DeFi\",\n      description: \"Construa a próxima geração de aplicações financeiras descentralizadas",
+      "dex_protocols_lending_platforms_algorithmic": "Protocolos DEX\", \"Plataformas de empréstimo\", \"Stablecoins algorítmicas",
+      "foundations_of_ergo_and_ergoscript": "Fundamentos do Ergo e do ErgoScript",
+      "introduction_to_ergo_the_eutxo_model_duration": "Introdução ao Ergo e ao modelo eUTXO\", duration:",
+      "what_is_ergoscript_philosophy_and": "O que é ErgoScript? Filosofia e objetivos de design\", duration:",
+      "setting_up_your_ergoscript_development": "Configurando seu ambiente de desenvolvimento ErgoScript\", duration:",
+      "basic_syntax_data_types_operators_duration": "Sintaxe básica, tipos de dados, operadores\", duration:",
+      "boxes_registers_context_variables_duration": "Caixas, registros, variáveis de contexto\", duration:",
+      "anatomy_of_an_ergo_transaction_duration": "Anatomia de uma transação Ergo\", duration:",
+      "creating_basic_contracts": "Criando contratos básicos",
+      "always_true_duration": "Sempre verdadeiro\"', duration:",
+      "time_locked_contracts_duration": "Contratos com bloqueio de tempo\", duration:",
+      "ergotree_compilation_duration": "ErgoTree e compilação\", duration:",
+      "fees_transaction_size_duration": "Taxas e tamanho da transação\", duration:",
+      "working_with_data_and_tokens": "Trabalhando com dados e tokens",
+      "reading_writing_registers_duration": "Leitura/escrita de registros\", duration:",
+      "handling_erg_native_tokens_duration": "Manuseio de ERG e tokens nativos\", duration:",
+      "minting_burning_tokens_duration": "Criação/queima de tokens\", duration:",
+      "nfts_in_ergoscript_duration": "NFTs no ErgoScript\", duration:",
+      "intermediate_contract_logic": "Lógica de contrato intermediária",
+      "multi_stage_contracts_state_transitions_duration": "Contratos multi-estágio e transições de estado\", duration:",
+      "using_oracles_duration": "Usando oráculos\", duration:",
+      "basic_escrow_duration": "Custódia básica\", duration:",
+      "sigma_protocols_proofs_of_knowledge_duration": "Protocolos Sigma e provas de conhecimento\", duration:",
+      "daos_voting_duration": "DAOs e votação\", duration:",
+      "advanced_ergoscript_cryptography": "ErgoScript avançado e criptografia",
+      "ring_signatures_mixing_duration": "Assinaturas em anel, mixing\", duration:",
+      "threshold_signatures_duration": "Assinaturas de limiar\", duration:",
+      "designing_defi_primitives_duration": "Projetando primitivas DeFi\", duration:",
+      "gas_optimization_script_complexity_duration": "Otimização de gás e complexidade de scripts\", duration:",
+      "advanced_context_extensions_duration": "Extensões de contexto avançadas\", duration:",
+      "testing_debugging_best_practices": "Testes, depuração e melhores práticas",
+      "unit_integration_testing_duration": "Testes unitários e de integração\", duration:",
+      "debugging_techniques_duration": "Técnicas de depuração\", duration:",
+      "pitfalls_vulnerabilities_duration": "Armadilhas e vulnerabilidades\", duration:",
+      "secure_development_best_practices_duration": "Melhores práticas de desenvolvimento seguro\", duration:",
+      "practical_projects_dapp_examples": "Projetos práticos e exemplos de dApps",
+      "nft_marketplace_duration": "Mercado de NFTs\", duration:",
+      "decentralized_lottery_duration": "Loteria descentralizada\", duration:",
+      "defi_lending_protocol_duration": "Protocolo de empréstimo DeFi\", duration:",
+      "privacy_preserving_payment_channel_duration": "Canal de pagamento com preservação de privacidade\", duration:",
+      "custom_oracle_implementation_duration": "Implementação personalizada de oráculo\", duration:",
+      "what_development_tools_do_i_need_answer": "Quais ferramentas de desenvolvimento preciso?\",\n      answer:",
+      "your_first_contract_always_true": "Seu primeiro contrato: \"Sempre verdadeiro\"",
+      "secure_by_design": "Seguro por design",
+      "powerful_expressive": "Poderoso e expressivo",
+      "enables_complex_defi_multi_stage": "Permite DeFi complexo, protocolos multi-estágio e dApps únicos",
+      "only_ergoscript_unlocks_the_full": "Apenas o ErgoScript desbloqueia todo o poder do eUTXO: custos previsíveis, estado local, componibilidade",
+      "built_in_cryptography": "Criptografia integrada",
+      "native_support_for_sigma_protocols": "Suporte nativo para protocolos Sigma, privacidade e esquemas de acesso avançados",
+      "new_to_smart_contracts": "Novo em contratos inteligentes",
+      "step_by_step_explanations_of": "Explicações passo a passo dos conceitos fundamentais de blockchain e contratos inteligentes",
+      "experienced_blockchain_developers": "Desenvolvedores blockchain experientes",
+      "discover_eutxo_new_safe_patterns": "Descubra o eUTXO, novos padrões seguros e design de contratos avançados",
+      "scala_functional_programmers": "Programadores Scala/funcionais",
+      "build_the_next_generation_of": "Construa a próxima geração de aplicações financeiras descentralizadas",
+      "introduction_to_ergo_the_eutxo_model": "Introdução ao Ergo e ao modelo eUTXO",
+      "what_is_ergoscript_philosophy_and_design_goals": "O que é ErgoScript? Filosofia e objetivos de design",
+      "setting_up_your_ergoscript_development_environment": "Configurando seu ambiente de desenvolvimento ErgoScript",
+      "basic_syntax_data_types_operators": "Sintaxe básica, tipos de dados, operadores",
+      "boxes_registers_context_variables": "Caixas, registros, variáveis de contexto",
+      "anatomy_of_an_ergo_transaction": "Anatomia de uma transação Ergo",
+      "your_first_contract": "Seu primeiro contrato:",
+      "time_locked_contracts": "Contratos com bloqueio de tempo",
+      "ergotree_compilation": "ErgoTree e compilação",
+      "fees_transaction_size": "Taxas e tamanho da transação",
+      "reading_writing_registers": "Leitura/escrita de registros",
+      "handling_erg_native_tokens": "Manuseio de ERG e tokens nativos",
+      "minting_burning_tokens": "Criação/queima de tokens",
+      "nfts_in_ergoscript": "NFTs no ErgoScript",
+      "token_standards_eip_004": "Padrões de tokens (EIP-004)",
+      "multi_stage_contracts_state_transitions": "Contratos multi-estágio e transições de estado",
+      "sigma_protocols_proofs_of_knowledge": "Protocolos Sigma e provas de conhecimento",
+      "ring_signatures_mixing": "Assinaturas em anel, mixing",
+      "designing_defi_primitives": "Projetando primitivas DeFi",
+      "gas_optimization_script_complexity": "Otimização de gás e complexidade de scripts",
+      "advanced_context_extensions": "Extensões de contexto avançadas",
+      "unit_integration_testing": "Testes unitários e de integração",
+      "pitfalls_vulnerabilities": "Armadilhas e vulnerabilidades",
+      "secure_development_best_practices": "Melhores práticas de desenvolvimento seguro",
+      "decentralized_lottery": "Loteria descentralizada",
+      "defi_lending_protocol": "Protocolo de empréstimo DeFi",
+      "privacy_preserving_payment_channel": "Canal de pagamento com preservação de privacidade",
+      "custom_oracle_implementation": "Implementação personalizada de oráculo",
+      "scala_functional_programmers_description_ergoscript": "Programadores Scala/funcionais\",\n      description: \"ErgoScript",
+      "your_first_contract_always_true_duration": "Seu primeiro contrato: \"Sempre verdadeiro\"', duration:",
+      "what_development_tools_do_i_need_answer_you": "Quais ferramentas de desenvolvimento preciso?\",\n      answer:\n        \"Você",
+      "ergoscript_tutorial_series": "Série de tutoriais ErgoScript",
+      "master_ergoscript_your_path_to": "Domine o ErgoScript: seu caminho para criar contratos inteligentes seguros e poderosos no Ergo",
+      "step_by_step_tutorials_covering": "Tutoriais passo a passo cobrindo tudo, desde o básico até protocolos DeFi avançados, projetados para desenvolvedores de todos os níveis de experiência.",
+      "your_first_ergoscript_contract": "Seu primeiro contrato ErgoScript",
+      "why_learn_ergoscript": "Por que aprender ErgoScript?",
+      "who_is_this_tutorial_series_for": "Para quem é esta série de tutoriais?",
+      "what_you_will_learn": "O que você aprenderá",
+      "tutorial_series_structure": "Estrutura da série de tutoriais",
+      "frequently_asked_questions": "Perguntas frequentes",
+      "ready_to_master_ergoscript": "Pronto para dominar o ErgoScript?",
+      "join_our_community_of_developers": "Junte-se à nossa comunidade de desenvolvedores construindo o futuro das aplicações descentralizadas no Ergo. Comece sua jornada de iniciante a especialista com nossa série de tutoriais abrangentes.",
+      "start_learning_now": "Começar a aprender agora",
+      "master_ergoscript_programming_language_build": "Domine a linguagem de programação ErgoScript. Crie contratos inteligentes seguros na blockchain Ergo com provas de conhecimento zero, protocolos multi-estágio e criptografia avançada.",
+      "build_powerful_defi_applications_with": "Crie aplicações DeFi poderosas com os recursos avançados do ErgoScript.",
+      "course_id_https_ergoblockchain_org": "Course\",\n    \"@id\": \"https://ergoblockchain.org/learn/ergoscript\",\n    name: \"Curso de programação ErgoScript\",\n    description: \"Aprenda a criar contratos inteligentes com ErgoScript",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
-      "smart_contracts_blockchain_programming_ergoscript": "Smart Contracts\", \"Blockchain Programming\", \"ErgoScript\", \"DeFi Development",
+      "smart_contracts_blockchain_programming_ergoscript": "Contratos inteligentes\", \"Programação blockchain\", \"ErgoScript\", \"Desenvolvimento DeFi",
       "courseinstance_coursemode_online_courseworkload": "CourseInstance\",\n      courseMode: \"Online\",\n      courseWorkload:",
-      "what_is_ergoscript_answer_ergoscript": "What is ErgoScript?\",\n      answer: \"ErgoScript is a powerful, protocol-friendly smart contract language based on Sigma protocols, enabling complex DeFi applications with built-in zero-knowledge proofs.",
-      "what_can_i_build_with": "What can I build with ErgoScript?\",\n      answer: \"DEXs, lending protocols, NFT marketplaces, DAOs, oracle pools, privacy tools, and any complex financial contract.",
-      "learn_ergoscript_smart_contract_programming": "Learn ErgoScript | Smart Contract Programming Tutorial",
-      "ergoscript_programming_tutorial_build_on_ergo": "ErgoScript Programming Tutorial | Build on Ergo",
-      "learn_ergoscript_smart_contract_development": "Learn ErgoScript | Smart Contract Development",
-      "build_powerful_defi_applications_with_ergoscript": "Build powerful DeFi applications with ErgoScript",
-      "learn_to_build_smart_contracts_with_ergoscript": "Learn to build smart contracts with ErgoScript"
+      "what_is_ergoscript_answer_ergoscript": "O que é ErgoScript?\",\n      answer: \"ErgoScript é uma poderosa linguagem de contratos inteligentes compatível com protocolo, baseada em protocolos Sigma, permitindo aplicações DeFi complexas com provas de conhecimento zero integradas.",
+      "what_can_i_build_with": "O que posso criar com ErgoScript?\",\n      answer: \"DEXs, protocolos de empréstimo, mercados de NFTs, DAOs, pools de oráculos, ferramentas de privacidade e qualquer contrato financeiro complexo.",
+      "learn_ergoscript_smart_contract_programming": "Aprenda ErgoScript | Tutorial de programação de contratos inteligentes",
+      "ergoscript_programming_tutorial_build_on_ergo": "Tutorial de programação ErgoScript | Construa no Ergo",
+      "learn_ergoscript_smart_contract_development": "Aprenda ErgoScript | Desenvolvimento de contratos inteligentes",
+      "build_powerful_defi_applications_with_ergoscript": "Crie aplicações DeFi poderosas com ErgoScript",
+      "learn_to_build_smart_contracts_with_ergoscript": "Aprenda a criar contratos inteligentes com ErgoScript"
     },
-    "how_do_i_learn_ergoscript": "How do I learn ErgoScript?\",\n      answer: \"Start with the ErgoScript tutorial series that covers basics to advanced concepts. Practice with examples, use the playground, and reference the documentation for comprehensive learning.",
-    "what_resources_are_available_for": "What resources are available for learning Ergo?\",\n      answer: \"Ergo offers tutorials, comprehensive FAQ, research papers, video courses, developer documentation, community guides, and hands-on playgrounds for all skill levels.",
-    "how_long_does_it_take_to_learn_ergoscript_answer": "How long does it take to learn ErgoScript?\",\n      answer:",
-    "is_programming_experience_required_answer": "Is programming experience required?\",\n      answer: \"Basic programming knowledge helps but isn't required for understanding concepts. For ErgoScript development, familiarity with functional programming and cryptography is beneficial.",
-    "learn_ergo_educational_resources": "Learn Ergo - Educational Resources",
-    "learn_ergo_master_blockchain_development": "Learn Ergo - Master Blockchain Development",
-    "course_id_https_ergoblockchain_org": "Course',\n    '@id': 'https://ergoblockchain.org/learn#course',\n    name: 'Ergo Blockchain Learning Path',\n    description: 'Comprehensive education on Ergo blockchain technology, from basics to advanced development",
+    "how_do_i_learn_ergoscript": "Como aprendo ErgoScript?\",\n      answer: \"Comece com a série de tutoriais ErgoScript que cobre desde o básico até conceitos avançados. Pratique com exemplos, use o playground e consulte a documentação para um aprendizado abrangente.",
+    "what_resources_are_available_for": "Quais recursos estão disponíveis para aprender Ergo?\",\n      answer: \"O Ergo oferece tutoriais, FAQ abrangente, artigos de pesquisa, cursos em vídeo, documentação para desenvolvedores, guias da comunidade e playgrounds práticos para todos os níveis de habilidade.",
+    "how_long_does_it_take_to_learn_ergoscript_answer": "Quanto tempo leva para aprender ErgoScript?\",\n      answer:",
+    "is_programming_experience_required_answer": "É necessária experiência em programação?\",\n      answer: \"O conhecimento básico de programação ajuda, mas não é necessário para entender os conceitos. Para o desenvolvimento ErgoScript, é útil a familiaridade com programação funcional e criptografia.",
+    "learn_ergo_educational_resources": "Aprenda Ergo - Recursos educacionais",
+    "learn_ergo_master_blockchain_development": "Aprenda Ergo - Domine o desenvolvimento blockchain",
+    "course_id_https_ergoblockchain_org": "Course',\n    '@id': 'https://ergoblockchain.org/learn#course',\n    name: 'Trilha de aprendizado da blockchain Ergo',\n    description: 'Educação abrangente sobre tecnologia blockchain Ergo, do básico ao desenvolvimento avançado",
     "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
-    "audience_audiencetype_developers_crypto_enthusiasts": "Audience',\n      audienceType: 'Developers, Crypto Enthusiasts, Blockchain Students",
-    "beginner_to_expert": "Beginner to Expert",
-    "courseinstance_name_ergoscript_tutorial_series": "CourseInstance',\n        name: 'ErgoScript Tutorial Series',\n        description: 'Master ErgoScript: Your path to building secure and powerful smart contracts',\n        courseMode: 'online',\n        duration:",
-    "courseinstance_name_comprehensive_faq_description": "CourseInstance',\n        name: 'Comprehensive FAQ',\n        description: 'Everything you need to know about Ergo blockchain, technology, and ecosystem',\n        courseMode: 'online",
-    "courseinstance_name_research_papers_description": "CourseInstance',\n        name: 'Research Papers',\n        description: 'Deep dive into the academic research and technical papers behind Ergo',\n        courseMode: 'online",
-    "learningresource_name_ergoscript_tutorial_series": "LearningResource',\n          name: 'ErgoScript Tutorial Series',\n          description: 'Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo, step by step',\n          learningResourceType: 'Tutorial',\n          timeRequired:",
-    "beginner_to_expert_teaches_ergoscript": "Beginner to Expert',\n          teaches: 'ErgoScript smart contract development",
-    "learningresource_name_comprehensive_faq_description": "LearningResource',\n          name: 'Comprehensive FAQ',\n          description: 'Everything you need to know about Ergo blockchain, technology, and ecosystem in one place',\n          learningResourceType: 'Reference',\n          url: 'https://ergoblockchain.org/learn/faq',\n          educationalLevel: 'All Levels',\n          teaches: 'Ergo blockchain fundamentals and advanced concepts",
-    "learningresource_name_research_papers_description": "LearningResource',\n          name: 'Research Papers',\n          description: 'Deep dive into the academic research and technical papers behind Ergo\\'s innovations',\n          learningResourceType: 'Academic Publication',\n          url: 'https://ergoblockchain.org/learn/research',\n          educationalLevel: 'Advanced',\n          teaches: 'Blockchain research and cryptographic protocols",
+    "audience_audiencetype_developers_crypto_enthusiasts": "Audience',\n      audienceType: 'Desenvolvedores, entusiastas de cripto, estudantes de blockchain",
+    "beginner_to_expert": "De iniciante a especialista",
+    "courseinstance_name_ergoscript_tutorial_series": "CourseInstance',\n        name: 'Série de tutoriais ErgoScript',\n        description: 'Domine o ErgoScript: seu caminho para criar contratos inteligentes seguros e poderosos',\n        courseMode: 'online',\n        duration:",
+    "courseinstance_name_comprehensive_faq_description": "CourseInstance',\n        name: 'FAQ abrangente',\n        description: 'Tudo que você precisa saber sobre blockchain Ergo, tecnologia e ecossistema',\n        courseMode: 'online",
+    "courseinstance_name_research_papers_description": "CourseInstance',\n        name: 'Artigos de pesquisa',\n        description: 'Mergulho profundo na pesquisa acadêmica e nos documentos técnicos por trás do Ergo',\n        courseMode: 'online",
+    "learningresource_name_ergoscript_tutorial_series": "LearningResource',\n          name: 'Série de tutoriais ErgoScript',\n          description: 'Domine o ErgoScript: seu caminho para criar contratos inteligentes seguros e poderosos no Ergo, passo a passo',\n          learningResourceType: 'Tutorial',\n          timeRequired:",
+    "beginner_to_expert_teaches_ergoscript": "De iniciante a especialista',\n          teaches: 'desenvolvimento de contratos inteligentes ErgoScript",
+    "learningresource_name_comprehensive_faq_description": "LearningResource',\n          name: 'FAQ abrangente',\n          description: 'Tudo que você precisa saber sobre blockchain Ergo, tecnologia e ecossistema em um só lugar',\n          learningResourceType: 'Reference',\n          url: 'https://ergoblockchain.org/learn/faq',\n          educationalLevel: 'Todos os níveis',\n          teaches: 'Fundamentos da blockchain Ergo e conceitos avançados",
+    "learningresource_name_research_papers_description": "LearningResource',\n          name: 'Artigos de pesquisa',\n          description: 'Mergulho profundo na pesquisa acadêmica e nos documentos técnicos por trás das inovações do Ergo',\n          learningResourceType: 'Academic Publication',\n          url: 'https://ergoblockchain.org/learn/research',\n          educationalLevel: 'Avançado',\n          teaches: 'Pesquisa blockchain e protocolos criptográficos",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "learn_item_https_ergoblockchain_org_learn": "Learn',\n        item: 'https://ergoblockchain.org/learn",
-    "comprehensive_learning_resources_for_ergo": "Comprehensive learning resources for Ergo blockchain. From beginner guides to advanced ErgoScript development.",
-    "ergoscript_tutorials_faq_research_papers": "ErgoScript tutorials, FAQ, research papers, and comprehensive guides for all levels.",
-    "comprehensive_education_on_ergo_blockchain": "Comprehensive education on Ergo blockchain technology, from basics to advanced development",
-    "master_ergoscript_your_path_to": "Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo, step by step",
-    "everything_you_need_to_know": "Everything you need to know about Ergo blockchain, technology, and ecosystem in one place",
-    "deep_dive_into_the_academic": "Deep dive into the academic research and technical papers behind Ergo\\",
+    "learn_item_https_ergoblockchain_org_learn": "Aprenda',\n        item: 'https://ergoblockchain.org/learn",
+    "comprehensive_learning_resources_for_ergo": "Recursos de aprendizado abrangentes para blockchain Ergo. De guias para iniciantes ao desenvolvimento avançado com ErgoScript.",
+    "ergoscript_tutorials_faq_research_papers": "Tutoriais ErgoScript, FAQ, artigos de pesquisa e guias abrangentes para todos os níveis.",
+    "comprehensive_education_on_ergo_blockchain": "Educação abrangente sobre tecnologia blockchain Ergo, do básico ao desenvolvimento avançado",
+    "master_ergoscript_your_path_to": "Domine o ErgoScript: seu caminho para criar contratos inteligentes seguros e poderosos no Ergo, passo a passo",
+    "everything_you_need_to_know": "Tudo que você precisa saber sobre blockchain Ergo, tecnologia e ecossistema em um só lugar",
+    "deep_dive_into_the_academic": "Mergulho profundo na pesquisa acadêmica e nos documentos técnicos por trás do Ergo\\",
     "hub": {
-      "badge": "Ergo Learning Hub",
-      "title": "Master Ergo Development",
-      "subtitle": "Learn ErgoScript, eUTXO smart contracts, and Sigma protocols through hands-on tutorials and expert mentorship.",
-      "description": "From beginner wallet setup to advanced privacy dApps — structured paths with real projects and community support.",
+      "badge": "Hub de aprendizado Ergo",
+      "title": "Domine o Desenvolvimento Ergo",
+      "subtitle": "Aprenda ErgoScript, contratos inteligentes eUTXO e protocolos Sigma por meio de tutoriais práticos e mentoria especializada.",
+      "description": "Da configuração inicial de carteira para iniciantes a dApps avançados de privacidade — trilhas estruturadas com projetos reais e suporte da comunidade.",
       "seo": {
-        "title": "Learn Ergo Development — ErgoScript Tutorials & Smart Contracts",
-        "description": "Master ErgoScript, eUTXO smart contracts, and Sigma protocols through hands-on tutorials, structured learning paths, and community mentorship.",
-        "keywords": "ErgoScript tutorial, Ergo smart contracts, eUTXO programming, Sigma protocols guide, blockchain development course, Ergo developer tutorial, Ergo dApp development",
-        "ogImageAlt": "Ergo Learn — Build with Sigma Protocols"
+        "title": "Aprenda Desenvolvimento Ergo — Tutoriais ErgoScript e Contratos Inteligentes",
+        "description": "Domine ErgoScript, contratos inteligentes eUTXO e protocolos Sigma por meio de tutoriais práticos, trilhas de aprendizado estruturadas e mentoria da comunidade.",
+        "keywords": "tutorial ErgoScript, contratos inteligentes Ergo, programação eUTXO, guia protocolos Sigma, curso de desenvolvimento blockchain, tutorial desenvolvedor Ergo, desenvolvimento dApp Ergo",
+        "ogImageAlt": "Aprenda Ergo — Construa com Protocolos Sigma"
       },
       "schema": {
         "course": {
-          "name": "Ergo Learning Hub",
-          "description": "A structured set of paths that teach Ergo fundamentals, developer tooling, privacy design, and research-grade economics.",
-          "audienceType": "Developers, founders, researchers, privacy builders",
-          "educationalLevel": "Beginner to advanced",
+          "name": "Hub de aprendizado Ergo",
+          "description": "Um conjunto estruturado de trilhas que ensinam fundamentos do Ergo, ferramentas para desenvolvedores, design de privacidade e economia em nível de pesquisa.",
+          "audienceType": "Desenvolvedores, fundadores, pesquisadores, construtores de privacidade",
+          "educationalLevel": "De iniciante a avançado",
           "instances": [
-            {
-              "name": "ErgoScript Builder Path",
-              "description": "Hands-on lessons for ErgoScript patterns, determinism, and deployment.",
-              "duration": "PT20H"
-            },
-            {
-              "name": "Privacy & Sigma Protocols",
-              "description": "Interactive explainer of Σ-protocols, mixers, and selective disclosure flows."
-            },
-            {
-              "name": "Research & Tokenomics Library",
-              "description": "Original whitepapers, Storage Rent models, and Autolykos research decks."
-            }
+            { "name": "Trilha de construtores ErgoScript", "description": "Lições práticas para padrões ErgoScript, determinismo e implantação.", "duration": "PT20H" },
+            { "name": "Privacidade e Protocolos Sigma", "description": "Explicador interativo de Σ-protocolos, mixers e fluxos de divulgação seletiva." },
+            { "name": "Biblioteca de pesquisa e tokenomics", "description": "Whitepapers originais, modelos de Storage Rent e apresentações de pesquisa sobre Autolykos." }
           ]
         }
       },
-      "startButton": "Start",
+      "startButton": "Iniciar",
       "quickReference": {
-        "title": "Quick Reference",
+        "title": "Referência rápida",
         "items": {
           "visualGuides": {
-            "name": "Visual Guides",
-            "subtitle": "Infographics that explain Ergo at a glance"
+            "name": "Guias visuais",
+            "subtitle": "Infográficos que explicam o Ergo em resumo"
           },
           "glossary": {
-            "name": "Glossary",
-            "subtitle": "Ergo terminology & core concepts"
+            "name": "Glossário",
+            "subtitle": "Terminologia Ergo e conceitos fundamentais"
           },
           "playbooks": {
             "name": "Playbooks",
-            "subtitle": "Step-by-step paths for DeFi, privacy, mining"
+            "subtitle": "Trilhas passo a passo para DeFi, privacidade, mineração"
           },
           "devPatterns": {
-            "name": "Dev Patterns",
-            "subtitle": "Smart-contract patterns & reusable blueprints"
+            "name": "Padrões de desenvolvimento",
+            "subtitle": "Padrões de contratos inteligentes e blueprints reutilizáveis"
           }
         }
       },
       "tracks": {
-        "curatedPathway": "Curated pathway",
-        "stackTitle": "Stack you will touch",
+        "curatedPathway": "Trilha selecionada",
+        "stackTitle": "Stack que você utilizará",
         "stackLabels": {
           "core": "Core",
-          "tooling": "Tooling",
-          "mentors": "Mentors",
-          "deliverable": "Deliverable"
+          "tooling": "Ferramentas",
+          "mentors": "Mentores",
+          "deliverable": "Entregável"
         },
         "foundations": {
-          "label": "Foundations",
-          "badge": "Start here",
-          "description": "Learn what makes Ergo different, how wallets stay sovereign, and why Storage Rent keeps the chain sustainable.",
+          "label": "Fundamentos",
+          "badge": "Comece aqui",
+          "description": "Aprenda o que torna o Ergo diferente, como as carteiras mantêm a soberania e por que o Storage Rent mantém a chain sustentável.",
           "bullets": [
-            "Fair-launch DNA + key principles",
-            "Wallet security + on-chain habits",
-            "eUTXO vs account mindset shift"
+            "DNA do lançamento justo + princípios fundamentais",
+            "Segurança da carteira + hábitos on-chain",
+            "eUTXO vs mudança de mentalidade de conta"
           ],
-          "cta": "Beginner path",
+          "cta": "Trilha para iniciantes",
           "stack": {
-            "core": "Wallets · Storage Rent · eUTXO",
+            "core": "Carteiras · Storage Rent · eUTXO",
             "tooling": "Nautilus · SAFEW · Explorer",
-            "mentors": "Community channels",
-            "deliverable": "Secure wallet setup"
+            "mentors": "Canais da comunidade",
+            "deliverable": "Configuração segura de carteira"
           }
         },
         "developer": {
-          "label": "Developers",
-          "badge": "Code",
-          "description": "Hands-on ErgoScript tutorials, VS Code snippets, and full-stack reference dApps.",
+          "label": "Desenvolvedores",
+          "badge": "Código",
+          "description": "Tutoriais práticos de ErgoScript, snippets para VS Code e dApps de referência full-stack.",
           "bullets": [
-            "Playground + AppKit workflow",
-            "Contract templates you can fork",
-            "Wallet + explorer integration"
+            "Fluxo de trabalho Playground + AppKit",
+            "Templates de contratos que você pode fazer fork",
+            "Integração carteira + explorer"
           ],
-          "cta": "Open dev guide",
+          "cta": "Abrir guia de desenvolvedor",
           "stack": {
             "core": "eUTXO · ErgoScript · Sigma",
             "tooling": "Playground · AppKit · Explorer",
-            "mentors": "Discord office hours",
-            "deliverable": "Ship a compliant dApp"
+            "mentors": "Horário de escritório no Discord",
+            "deliverable": "Lance um dApp em conformidade"
           }
         },
         "topics": {
-          "label": "Topics",
-          "badge": "Explore",
-          "description": "Curated topic clusters that group related concepts, articles, and resources together.",
+          "label": "Tópicos",
+          "badge": "Explorar",
+          "description": "Clusters de tópicos selecionados que agrupam conceitos relacionados, artigos e recursos.",
           "bullets": [
-            "Privacy & Sigma Protocols",
-            "Mining & Autolykos",
-            "DeFi & Smart Contracts"
+            "Privacidade e protocolos Sigma",
+            "Mineração e Autolykos",
+            "DeFi e contratos inteligentes"
           ],
-          "cta": "Browse topics",
+          "cta": "Navegar pelos tópicos",
           "stack": {
-            "core": "Topic clusters · Related content",
-            "tooling": "Articles · Glossary · Guides",
-            "mentors": "Community curators",
-            "deliverable": "Deep topic understanding"
+            "core": "Clusters de tópicos · Conteúdo relacionado",
+            "tooling": "Artigos · Glossário · Guias",
+            "mentors": "Curadores da comunidade",
+            "deliverable": "Compreensão aprofundada dos tópicos"
           }
         },
         "privacy": {
-          "label": "Privacy",
+          "label": "Privacidade",
           "badge": "Sigma",
-          "description": "Master Σ-protocols, mixers, and selective disclosure flows for auditable privacy.",
+          "description": "Domine Σ-protocolos, mixers e fluxos de divulgação seletiva para privacidade auditável.",
           "bullets": [
-            "Sigma protocols explained visually",
-            "ErgoMixer + compliance toolkit",
-            "Selective disclosure playbook"
+            "Protocolos Sigma explicados visualmente",
+            "ErgoMixer + kit de ferramentas de conformidade",
+            "Playbook de divulgação seletiva"
           ],
-          "cta": "Explore privacy stack",
+          "cta": "Explorar stack de privacidade",
           "stack": {
-            "core": "Σ-protocols · ZK proofs · Mixers",
+            "core": "Σ-protocolos · Provas ZK · Mixers",
             "tooling": "ErgoMixer · Stealth pools",
-            "mentors": "Privacy researchers",
-            "deliverable": "Compliant privacy dApp"
+            "mentors": "Pesquisadores de privacidade",
+            "deliverable": "dApp de privacidade em conformidade"
           }
         },
         "research": {
-          "label": "Research",
-          "badge": "Deep dive",
-          "description": "Whitepapers, Storage Rent models, and Autolykos research decks.",
+          "label": "Pesquisa",
+          "badge": "Mergulho profundo",
+          "description": "Whitepapers, modelos de Storage Rent e apresentações de pesquisa sobre Autolykos.",
           "bullets": [
-            "Tokenomics + demurrage models",
-            "Autolykos & NiPoPoWs papers",
-            "Governance proposals archive"
+            "Modelos de tokenomics + demurrage",
+            "Artigos sobre Autolykos e NiPoPoWs",
+            "Arquivo de propostas de governança"
           ],
-          "cta": "Download papers",
+          "cta": "Baixar artigos",
           "stack": {
-            "core": "Economics · Consensus · NIPoPoWs",
-            "tooling": "Research papers · Models",
-            "mentors": "Core researchers",
-            "deliverable": "Research contribution"
+            "core": "Economia · Consenso · NIPoPoWs",
+            "tooling": "Artigos de pesquisa · Modelos",
+            "mentors": "Pesquisadores principais",
+            "deliverable": "Contribuição para pesquisa"
           }
         }
       },
       "faq": {
-        "title": "Frequently asked questions",
+        "title": "Perguntas frequentes",
         "items": [
           {
-            "question": "How do I get started if I'm brand new?",
-            "answer": "Install Nautilus or SAFEW, back up your seed offline, grab a small amount of ERG, and run through the Beginner Path. It covers wallet hygiene, Storage Rent basics, and how to interact with dApps safely."
+            "question": "Como começo se sou completamente novo?",
+            "answer": "Instale o Nautilus ou o SAFEW, faça backup da sua seed offline, adquira uma pequena quantidade de ERG e percorra a Trilha para Iniciantes. Ela cobre higiene de carteira, conceitos básicos de Storage Rent e como interagir com dApps com segurança."
           },
           {
-            "question": "What makes Ergo learning different from other L1s?",
-            "answer": "Ergo combines a research-first roadmap with real-world tooling. You get deterministic contracts (eUTXO), optional privacy (Σ-protocols), and sustainable economics (Storage Rent) without corporate gatekeepers."
+            "question": "O que torna o aprendizado Ergo diferente de outros L1s?",
+            "answer": "O Ergo combina um roadmap orientado à pesquisa com ferramentas do mundo real. Você obtém contratos determinísticos (eUTXO), privacidade opcional (Σ-protocolos) e economia sustentável (Storage Rent) sem intermediários corporativos."
           },
           {
-            "question": "Is ErgoScript hard to learn?",
-            "answer": "If you've written Solidity or Rust, ErgoScript will feel familiar. The curated builder path walks through patterns, and AppKit handles most boilerplate so you can focus on business logic."
+            "question": "ErgoScript é difícil de aprender?",
+            "answer": "Se você já escreveu Solidity ou Rust, o ErgoScript parecerá familiar. A trilha de construtor selecionada percorre os padrões, e o AppKit cuida da maior parte do boilerplate para que você possa se concentrar na lógica de negócios."
           },
           {
-            "question": "Where can I ask questions live?",
-            "answer": "Join the weekly mentor hours on Discord or pop into the #dev or #academy channels any time. Core contributors hang out there and review repos frequently."
+            "question": "Onde posso fazer perguntas ao vivo?",
+            "answer": "Junte-se às horas de mentoria semanais no Discord ou entre nos canais #dev ou #academy a qualquer momento. Contribuidores principais estão lá e revisam repositórios frequentemente."
           }
         ]
       },
       "nextSteps": {
-        "badge": "Next steps",
-        "title": "Continue Your Journey",
+        "badge": "Próximos passos",
+        "title": "Continue sua jornada",
         "exploreEcosystem": {
-          "title": "Explore Ecosystem",
-          "subtitle": "Discover Applications",
-          "description": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo"
+          "title": "Explorar ecossistema",
+          "subtitle": "Descubra aplicações",
+          "description": "Encontre protocolos DeFi, carteiras, plataformas NFT e outros dApps construídos no Ergo"
         },
         "useErgo": {
-          "title": "Use Ergo",
-          "subtitle": "Practical Guides",
-          "description": "Step-by-step guides for wallets, DeFi, mining, bridges, and more"
+          "title": "Usar Ergo",
+          "subtitle": "Guias práticos",
+          "description": "Guias passo a passo para carteiras, DeFi, mineração, bridges e mais"
         }
       },
       "cta": {
-        "title": "Level Up Your Blockchain Skills",
-        "description": "Get notified about new tutorials, workshops, and learning resources for Ergo development"
+        "title": "Melhore suas habilidades em blockchain",
+        "description": "Receba notificações sobre novos tutoriais, workshops e recursos de aprendizado para desenvolvimento Ergo"
       }
     },
     "glossaryHub": {
       "title": "Ergo",
-      "titleHighlight": "Glossary",
-      "termsCount": "+ terms",
-      "categoriesCount": "categories",
-      "subtitle": "Master Ergo terminology in one searchable reference.",
-      "searchPlaceholder": "Search terms...",
-      "allCategories": "All Categories",
-      "level": "Level:",
-      "allLevels": "All levels",
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced",
-      "popular": "Popular:",
+      "titleHighlight": "Glossário",
+      "termsCount": "+ termos",
+      "categoriesCount": "categorias",
+      "subtitle": "Domine a terminologia Ergo em uma referência pesquisável.",
+      "searchPlaceholder": "Pesquisar termos...",
+      "allCategories": "Todas as categorias",
+      "level": "Nível:",
+      "allLevels": "Todos os níveis",
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado",
+      "popular": "Populares:",
       "noResults": {
-        "title": "No terms found",
-        "description": "Try adjusting your search or filters"
+        "title": "Nenhum termo encontrado",
+        "description": "Tente ajustar sua pesquisa ou filtros"
       },
-      "viewDetails": "View details",
+      "viewDetails": "Ver detalhes",
       "cta": {
-        "title": "Start Building on Ergo",
-        "description": "Ready to put your knowledge into practice? Explore our developer documentation and start building."
+        "title": "Comece a construir no Ergo",
+        "description": "Pronto para colocar seu conhecimento em prática? Explore nossa documentação para desenvolvedores e comece a construir."
       }
     },
     "glossaryPage": {
       "seo": {
-        "title": "Ergo Glossary — 250+ Blockchain Terms Explained | Ergo",
-        "description": "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols — your complete Ergo & crypto glossary. Search, filter, learn.",
-        "keywords": "Ergo glossary, blockchain terminology, eUTXO explained, NiPoPoWs meaning, Sigma Protocols definition, ErgoScript, storage rent explained, cryptocurrency terms, blockchain definitions",
-        "imageAlt": "Ergo Blockchain Glossary"
+        "title": "Glossário Ergo — Mais de 250 termos blockchain explicados | Ergo",
+        "description": "Mais de 250 termos blockchain explicados de forma simples. De eUTXO a protocolos Sigma — seu glossário completo Ergo e cripto. Pesquise, filtre, aprenda.",
+        "keywords": "glossário Ergo, terminologia blockchain, eUTXO explicado, significado NiPoPoWs, definição protocolos Sigma, ErgoScript, storage rent explicado, termos criptomoedas, definições blockchain",
+        "imageAlt": "Glossário Blockchain Ergo"
       },
       "schema": {
         "definedTermSet": {
-          "name": "Ergo Blockchain Glossary",
-          "description": "Comprehensive glossary of Ergo blockchain terminology and concepts."
+          "name": "Glossário Blockchain Ergo",
+          "description": "Glossário abrangente de terminologia e conceitos da blockchain Ergo."
         },
         "itemList": {
-          "name": "Ergo Blockchain Terms",
-          "description": "List of key terms and concepts in the Ergo blockchain ecosystem."
+          "name": "Termos blockchain Ergo",
+          "description": "Lista de termos e conceitos-chave no ecossistema blockchain Ergo."
         }
       }
     },
     "researchPage": {
-      "title": "Research Papers",
-      "titleHighlight": "& Documentation",
-      "subtitle": "Explore the academic foundations of Ergo's innovative blockchain technology",
+      "title": "Artigos de pesquisa",
+      "titleHighlight": "e documentação",
+      "subtitle": "Explore as bases acadêmicas da inovadora tecnologia blockchain do Ergo",
       "seo": {
-        "title": "Ergo Research Papers | Blockchain Academic Publications",
-        "description": "Academic research papers on Ergo blockchain. Peer-reviewed publications on consensus algorithms, cryptography, smart contracts, and distributed systems.",
-        "keywords": "blockchain research, ergo papers, academic publications, cryptography research, consensus algorithms, distributed systems, peer reviewed, scientific papers",
+        "title": "Artigos de pesquisa Ergo | Publicações acadêmicas blockchain",
+        "description": "Artigos de pesquisa acadêmica sobre blockchain Ergo. Publicações revisadas por pares sobre algoritmos de consenso, criptografia, contratos inteligentes e sistemas distribuídos.",
+        "keywords": "pesquisa blockchain, artigos Ergo, publicações acadêmicas, pesquisa criptografia, algoritmos de consenso, sistemas distribuídos, revisado por pares, artigos científicos",
         "openGraph": {
-          "title": "Ergo Research | Academic Blockchain Papers",
-          "description": "Peer-reviewed research publications on Ergo's innovative blockchain technology.",
-          "imageAlt": "Ergo Research"
+          "title": "Pesquisa Ergo | Artigos acadêmicos blockchain",
+          "description": "Publicações de pesquisa revisadas por pares sobre a inovadora tecnologia blockchain do Ergo.",
+          "imageAlt": "Pesquisa Ergo"
         },
         "twitter": {
-          "title": "Ergo Research Papers | Academic Publications",
-          "description": "Scientific research on blockchain consensus, cryptography, and smart contracts."
+          "title": "Artigos de pesquisa Ergo | Publicações acadêmicas",
+          "description": "Pesquisa científica sobre consenso blockchain, criptografia e contratos inteligentes."
         }
       },
       "schema": {
-        "breadcrumbs": {
-          "research": "Research"
-        },
+        "breadcrumbs": { "research": "Pesquisa" },
         "scholarlyArticle": {
-          "name": "Ergo Platform Research Collection",
-          "description": "Collection of academic research papers on Ergo blockchain technology",
-          "authorName": "Ergo Research Team",
-          "about": "Blockchain, Cryptography, Consensus Algorithms, Smart Contracts"
+          "name": "Coleção de pesquisas da Ergo Platform",
+          "description": "Coleção de artigos de pesquisa acadêmica sobre tecnologia blockchain Ergo",
+          "authorName": "Equipe de pesquisa Ergo",
+          "about": "Blockchain, Criptografia, Algoritmos de consenso, Contratos inteligentes"
         },
         "faq": {
           "items": [
-            {
-              "question": "What research topics does Ergo cover?",
-              "answer": "Ergo research covers consensus algorithms (Autolykos), cryptography (Sigma protocols), smart contracts (ErgoScript), storage rent economics, and NiPoPoWs."
-            },
-            {
-              "question": "Are Ergo papers peer-reviewed?",
-              "answer": "Yes, core Ergo research papers are peer-reviewed and published in academic conferences and journals."
-            },
-            {
-              "question": "Can I contribute to Ergo research?",
-              "answer": "Yes. Ergo welcomes academic collaboration—reach out if you're interested in blockchain research."
-            }
+            { "question": "Quais tópicos de pesquisa o Ergo cobre?", "answer": "A pesquisa Ergo cobre algoritmos de consenso (Autolykos), criptografia (protocolos Sigma), contratos inteligentes (ErgoScript), economia do storage rent e NiPoPoWs." },
+            { "question": "Os artigos Ergo são revisados por pares?", "answer": "Sim, os principais artigos de pesquisa Ergo são revisados por pares e publicados em conferências acadêmicas e periódicos." },
+            { "question": "Posso contribuir para a pesquisa Ergo?", "answer": "Sim. O Ergo bem-vinda colaboração acadêmica — entre em contato se você estiver interessado em pesquisa blockchain." }
           ]
         }
       },
       "badges": {
-        "papers": "papers",
-        "resources": "resources"
+        "papers": "artigos",
+        "resources": "recursos"
       },
       "categories": {
-        "all": "All",
-        "coreProtocol": "Core Protocol & Architecture",
-        "privacy": "Privacy & Zero-Knowledge",
-        "economics": "Economic Models & DeFi",
-        "consensus": "Consensus & Mining",
-        "advanced": "Advanced Topics & Theory"
+        "all": "Todos",
+        "coreProtocol": "Protocolo principal e arquitetura",
+        "privacy": "Privacidade e Zero-Knowledge",
+        "economics": "Modelos econômicos e DeFi",
+        "consensus": "Consenso e mineração",
+        "advanced": "Tópicos avançados e teoria"
       },
       "featuredPapers": {
-        "title": "Featured Papers",
-        "downloadPdf": "Download PDF"
+        "title": "Artigos em destaque",
+        "downloadPdf": "Baixar PDF"
       },
       "keyPapers": [
         {
-          "title": "Ergo: A Resilient Platform For Contractual Money",
-          "description": "The foundational whitepaper describing Ergo's architecture, eUTXO model, and key innovations.",
-          "category": "Core Protocol"
+          "title": "Ergo: Uma Plataforma Resiliente para Dinheiro Contratual",
+          "description": "O whitepaper fundamental descrevendo a arquitetura do Ergo, o modelo eUTXO e as inovações-chave.",
+          "category": "Protocolo principal"
         },
         {
-          "title": "ErgoScript Language & Sigma Protocols",
-          "description": "Technical paper on ErgoScript language design and zero-knowledge proof integration.",
-          "category": "Cryptography"
+          "title": "Linguagem ErgoScript e Protocolos Sigma",
+          "description": "Documento técnico sobre o design da linguagem ErgoScript e a integração de provas de conhecimento zero.",
+          "category": "Criptografia"
         },
         {
-          "title": "Multi-Stage Contracts in UTXO Model",
-          "description": "Research on implementing complex multi-stage contracts using the UTXO model.",
-          "category": "Architecture"
+          "title": "Contratos Multi-estágio no Modelo UTXO",
+          "description": "Pesquisa sobre a implementação de contratos multi-estágio complexos usando o modelo UTXO.",
+          "category": "Arquitetura"
         },
         {
-          "title": "Advanced ErgoScript Tutorial",
-          "description": "Comprehensive guide to advanced ErgoScript programming patterns and best practices.",
-          "category": "Development"
+          "title": "Tutorial Avançado de ErgoScript",
+          "description": "Guia abrangente sobre padrões avançados de programação ErgoScript e melhores práticas.",
+          "category": "Desenvolvimento"
         },
         {
-          "title": "Zerojoin: Privacy-Preserving Mixing",
-          "description": "Research on combining Zerocoin and CoinJoin for enhanced transaction privacy.",
-          "category": "Privacy"
+          "title": "Zerojoin: Mixing com Preservação de Privacidade",
+          "description": "Pesquisa sobre a combinação de Zerocoin e CoinJoin para maior privacidade de transações.",
+          "category": "Privacidade"
         },
         {
-          "title": "Non-Interactive Proofs of Proof-of-Work",
-          "description": "Foundational research on NIPoPoWs enabling light clients and cross-chain verification.",
-          "category": "Cryptography"
+          "title": "Provas Não Interativas de Proof-of-Work",
+          "description": "Pesquisa fundamental sobre NIPoPoWs permitindo clientes leves e verificação cross-chain.",
+          "category": "Criptografia"
         }
       ],
       "browseByCategory": {
-        "title": "Browse by Category",
-        "viewPaper": "View Paper"
+        "title": "Navegar por categoria",
+        "viewPaper": "Ver artigo"
       },
       "developerResources": {
-        "title": "Developer Resources",
-        "subtitle": "Technical documentation and implementation references",
+        "title": "Recursos para desenvolvedores",
+        "subtitle": "Documentação técnica e referências de implementação",
         "items": [
           {
-            "title": "ErgoScript Documentation"
+            "title": "Documentação ErgoScript"
           },
           {
-            "title": "Protocol Specifications"
+            "title": "Especificações do protocolo"
           },
           {
-            "title": "Node Implementation"
+            "title": "Implementação do nó"
           },
           {
-            "title": "Sigma-Rust Cryptography Library"
+            "title": "Biblioteca criptográfica Sigma-Rust"
           },
           {
-            "title": "ErgoMixer Technical Overview"
+            "title": "Visão técnica geral do ErgoMixer"
           }
         ]
       },
       "communityResearch": {
-        "title": "Community Research",
-        "subtitle": "Contribute to Ergo's research ecosystem",
+        "title": "Pesquisa da comunidade",
+        "subtitle": "Contribua para o ecossistema de pesquisa do Ergo",
         "items": [
           {
-            "title": "Research Bounties",
-            "description": "Earn rewards for contributing research"
+            "title": "Recompensas de pesquisa",
+            "description": "Ganhe recompensas contribuindo com pesquisa"
           },
           {
-            "title": "EIP Process",
-            "description": "Participate in Ergo Improvement Proposals"
+            "title": "Processo EIP",
+            "description": "Participe das Propostas de Melhoria do Ergo"
           },
           {
-            "title": "Academic Collaboration",
-            "description": "Partner with universities and research institutions"
+            "title": "Colaboração acadêmica",
+            "description": "Faça parceria com universidades e instituições de pesquisa"
           }
         ],
-        "joinResearch": "Join Research Community",
-        "viewEips": "View EIPs"
+        "joinResearch": "Entrar na comunidade de pesquisa",
+        "viewEips": "Ver EIPs"
       },
       "cta": {
-        "title": "Dive Deeper Into Ergo Research",
-        "description": "Get updates on new research papers, academic collaborations, and breakthrough discoveries in blockchain technology."
+        "title": "Aprofunde-se na pesquisa Ergo",
+        "description": "Receba atualizações sobre novos artigos de pesquisa, colaborações acadêmicas e descobertas revolucionárias em tecnologia blockchain."
       },
-      "curatedLinks": "Curated links to whitepapers, formal analyses, and developer resources.",
-      "keyDocuments": "Key Documents",
-      "readPaper": "Read Paper",
+      "curatedLinks": "Links selecionados para whitepapers, análises formais e recursos para desenvolvedores.",
+      "keyDocuments": "Documentos-chave",
+      "readPaper": "Ler artigo",
       "quickStart": {
-        "title": "Quick Start",
-        "readWhitepaper": "Read Ergo Whitepaper",
-        "exploreLibrary": "Explore Research Library",
-        "joinCommunity": "Join the Community"
+        "title": "Início rápido",
+        "readWhitepaper": "Ler whitepaper Ergo",
+        "exploreLibrary": "Explorar biblioteca de pesquisa",
+        "joinCommunity": "Entrar na comunidade"
       },
       "buttons": {
-        "keyDocuments": "Key Documents",
-        "community": "Community"
+        "keyDocuments": "Documentos-chave",
+        "community": "Comunidade"
       }
     },
     "ergoscriptPage": {
       "title": "ErgoScript",
-      "subtitle": "Smart Contract Language for the Future",
-      "description": "ErgoScript is a powerful, secure smart contract language built on Sigma protocols and the extended UTXO model. Create complex financial contracts with built-in privacy, predictable fees, and mathematical guarantees.",
+      "subtitle": "A Linguagem de Contratos Inteligentes do Futuro",
+      "description": "ErgoScript é uma linguagem poderosa e segura para contratos inteligentes construída sobre protocolos Sigma e o modelo UTXO estendido. Crie contratos financeiros complexos com privacidade integrada, taxas previsíveis e garantias matemáticas.",
       "seo": {
-        "title": "Learn ErgoScript | Smart Contract Programming Tutorial",
-        "description": "Master the ErgoScript programming language. Build secure smart contracts on Ergo with Sigma protocols and the extended UTXO model.",
-        "keywords": "ergoscript tutorial, smart contract programming, blockchain development, ergo coding, defi development, sigma protocols, zero knowledge, contract language",
+        "title": "Aprenda ErgoScript | Tutorial de programação de contratos inteligentes",
+        "description": "Domine a linguagem de programação ErgoScript. Crie contratos inteligentes seguros no Ergo com protocolos Sigma e o modelo UTXO estendido.",
+        "keywords": "tutorial ergoscript, programação contratos inteligentes, desenvolvimento blockchain, programação ergo, desenvolvimento defi, protocolos sigma, conhecimento zero, linguagem de contratos",
         "openGraph": {
-          "title": "ErgoScript Programming Tutorial | Build on Ergo",
-          "description": "Complete guide to ErgoScript smart contract development. From basics to advanced DeFi.",
-          "imageAlt": "ErgoScript Tutorial"
+          "title": "Tutorial de programação ErgoScript | Construa no Ergo",
+          "description": "Guia completo para desenvolvimento de contratos inteligentes ErgoScript. Do básico ao DeFi avançado.",
+          "imageAlt": "Tutorial ErgoScript"
         },
         "twitter": {
-          "title": "Learn ErgoScript | Smart Contract Development",
-          "description": "Build powerful DeFi applications with ErgoScript's advanced features."
+          "title": "Aprenda ErgoScript | Desenvolvimento de contratos inteligentes",
+          "description": "Crie aplicações DeFi poderosas com os recursos avançados do ErgoScript."
         }
       },
       "schema": {
-        "breadcrumbs": {
-          "ergoscript": "ErgoScript"
-        },
+        "breadcrumbs": { "ergoscript": "ErgoScript" },
         "course": {
-          "name": "ErgoScript Programming Course",
-          "description": "Learn to build smart contracts with ErgoScript",
-          "educationalLevel": "Intermediate",
-          "teaches": "Smart Contracts, Blockchain Programming, ErgoScript, DeFi Development",
+          "name": "Curso de programação ErgoScript",
+          "description": "Aprenda a criar contratos inteligentes com ErgoScript",
+          "educationalLevel": "Intermediário",
+          "teaches": "Contratos inteligentes, Programação blockchain, ErgoScript, Desenvolvimento DeFi",
           "timeRequired": "PT40H"
         },
         "faq": {
           "items": [
-            {
-              "question": "What is ErgoScript?",
-              "answer": "ErgoScript is a protocol-friendly smart contract language based on Sigma protocols, enabling complex DeFi applications with built-in zero-knowledge proofs."
-            },
-            {
-              "question": "Is ErgoScript difficult to learn?",
-              "answer": "ErgoScript has a learning curve but offers powerful safety properties. Developers familiar with functional programming often find it intuitive."
-            },
-            {
-              "question": "What can I build with ErgoScript?",
-              "answer": "DEXs, lending protocols, NFT marketplaces, DAOs, oracle pools, privacy tools, and any complex financial contract."
-            }
+            { "question": "O que é ErgoScript?", "answer": "ErgoScript é uma linguagem de contratos inteligentes compatível com protocolo, baseada em protocolos Sigma, permitindo aplicações DeFi complexas com provas de conhecimento zero integradas." },
+            { "question": "ErgoScript é difícil de aprender?", "answer": "ErgoScript tem uma curva de aprendizado, mas oferece propriedades de segurança poderosas. Desenvolvedores familiarizados com programação funcional geralmente o acham intuitivo." },
+            { "question": "O que posso criar com ErgoScript?", "answer": "DEXs, protocolos de empréstimo, mercados de NFTs, DAOs, pools de oráculos, ferramentas de privacidade e qualquer contrato financeiro complexo." }
           ]
         }
       },
-      "heroDescription": "Type-safe, Sigma protocol-native, and purpose-built for financial contracts.",
+      "heroDescription": "Com segurança de tipos, nativo de protocolos Sigma e criado para contratos financeiros.",
       "buttons": {
-        "startLearning": "Start Learning",
-        "viewOnGithub": "View on GitHub"
+        "startLearning": "Começar a aprender",
+        "viewOnGithub": "Ver no GitHub"
       },
       "quickStart": {
-        "title": "Quick Start",
-        "playgroundTitle": "Try Playground",
-        "playgroundDescription": "Interactive ErgoScript environment",
-        "documentationTitle": "Read Tutorial",
-        "documentationDescription": "Step-by-step guide",
-        "examplesTitle": "View Examples",
-        "examplesDescription": "Real contract patterns"
+        "title": "Início rápido",
+        "playgroundTitle": "Experimentar Playground",
+        "playgroundDescription": "Ambiente interativo ErgoScript",
+        "documentationTitle": "Ler tutorial",
+        "documentationDescription": "Guia passo a passo",
+        "examplesTitle": "Ver exemplos",
+        "examplesDescription": "Padrões de contratos reais"
       },
       "features": {
-        "title": "Why ErgoScript?",
-        "subtitle": "Purpose-built for secure smart contracts",
+        "title": "Por que ErgoScript?",
+        "subtitle": "Criado para contratos inteligentes seguros",
         "items": [
           {
-            "title": "Sigma Protocols",
-            "description": "Built-in zero-knowledge proofs for privacy and complex multi-party contracts",
+            "title": "Protocolos Sigma",
+            "description": "Provas de conhecimento zero integradas para privacidade e contratos complexos multi-partes",
             "icon": "Shield"
           },
           {
-            "title": "UTXO Model",
-            "description": "Extended UTXO model with data and logic attached to boxes for enhanced security",
+            "title": "Modelo UTXO",
+            "description": "Modelo UTXO estendido com dados e lógica anexados a caixas para segurança aprimorada",
             "icon": "Box"
           },
           {
-            "title": "Functional Programming",
-            "description": "Immutable data structures and functional paradigms for safer smart contracts",
+            "title": "Programação funcional",
+            "description": "Estruturas de dados imutáveis e paradigmas funcionais para contratos inteligentes mais seguros",
             "icon": "Code"
           },
           {
-            "title": "Oracle Integration",
-            "description": "Native oracle support for real-world data integration without external dependencies",
+            "title": "Integração de oráculos",
+            "description": "Suporte nativo a oráculos para integração de dados do mundo real sem dependências externas",
             "icon": "Database"
           },
           {
-            "title": "Multi-Stage Contracts",
-            "description": "Complex contracts that evolve through multiple stages with different conditions",
+            "title": "Contratos multi-estágio",
+            "description": "Contratos complexos que evoluem por múltiplos estágios com diferentes condições",
             "icon": "Layers"
           },
           {
-            "title": "Predictable Fees",
-            "description": "Know exact execution costs before deployment with deterministic fee calculation",
+            "title": "Taxas previsíveis",
+            "description": "Conheça os custos exatos de execução antes da implantação com cálculo determinístico de taxas",
             "icon": "Zap"
           }
         ]
       },
       "codeExamples": {
-        "title": "Learn by Example",
+        "title": "Aprenda por exemplo",
         "tabs": {
-          "basics": "Basics",
-          "advanced": "Advanced",
+          "basics": "Básico",
+          "advanced": "Avançado",
           "defi": "DeFi"
         }
       },
       "learningPath": {
-        "title": "Learning Path",
-        "subtitle": "From beginner to advanced ErgoScript developer",
+        "title": "Trilha de aprendizado",
+        "subtitle": "De iniciante a desenvolvedor ErgoScript avançado",
         "beginner": {
-          "badge": "Beginner",
-          "title": "Foundations",
-          "description": "Start with the basics of ErgoScript and the UTXO model"
+          "badge": "Iniciante",
+          "title": "Fundamentos",
+          "description": "Comece com o básico do ErgoScript e o modelo UTXO"
         },
         "intermediate": {
-          "badge": "Intermediate",
-          "title": "Patterns & Protocols",
-          "description": "Learn common patterns and build real applications"
+          "badge": "Intermediário",
+          "title": "Padrões e protocolos",
+          "description": "Aprenda padrões comuns e crie aplicações reais"
         },
         "advanced": {
-          "badge": "Advanced",
-          "title": "Complex Systems",
-          "description": "Master advanced techniques and protocol design"
+          "badge": "Avançado",
+          "title": "Sistemas complexos",
+          "description": "Domine técnicas avançadas e design de protocolos"
         }
       },
       "resources": {
-        "title": "Resources",
-        "documentation": "Documentation",
-        "tutorials": "Tutorials",
-        "examples": "Examples"
+        "title": "Recursos",
+        "documentation": "Documentação",
+        "tutorials": "Tutoriais",
+        "examples": "Exemplos"
       },
       "faq": {
-        "title": "Frequently Asked Questions"
+        "title": "Perguntas frequentes"
       },
       "cta": {
-        "title": "Ready to Build?",
-        "description": "Get ErgoScript updates, tutorials, and development tips delivered to your inbox."
+        "title": "Pronto para construir?",
+        "description": "Receba atualizações do ErgoScript, tutoriais e dicas de desenvolvimento na sua caixa de entrada."
       },
       "tutorials": {
-        "title": "Tutorials",
+        "title": "Tutoriais",
         "items": [
           {
-            "title": "Hello World Contract",
-            "description": "Your first ErgoScript contract - basic syntax and structure",
-            "difficulty": "Beginner",
+            "title": "Contrato Hello World",
+            "description": "Seu primeiro contrato ErgoScript - sintaxe e estrutura básica",
+            "difficulty": "Iniciante",
             "time": "15 min",
             "link": "/docs/ergoscript/hello-world"
           },
           {
-            "title": "Token Minting",
-            "description": "Create and manage custom tokens on Ergo blockchain",
-            "difficulty": "Intermediate",
+            "title": "Criação de tokens",
+            "description": "Crie e gerencie tokens personalizados na blockchain Ergo",
+            "difficulty": "Intermediário",
             "time": "30 min",
             "link": "/docs/ergoscript/token-minting"
           },
           {
-            "title": "Multi-Signature Wallet",
-            "description": "Build a secure multi-sig wallet with ErgoScript",
-            "difficulty": "Advanced",
+            "title": "Carteira multi-assinatura",
+            "description": "Construa uma carteira multi-sig segura com ErgoScript",
+            "difficulty": "Avançado",
             "time": "45 min",
             "link": "/docs/ergoscript/multisig"
           },
           {
-            "title": "Oracle Data Usage",
-            "description": "Integrate external data sources into your contracts",
-            "difficulty": "Intermediate",
+            "title": "Uso de dados de oráculos",
+            "description": "Integre fontes de dados externas em seus contratos",
+            "difficulty": "Intermediário",
             "time": "25 min",
             "link": "/docs/ergoscript/oracles"
           }
@@ -1048,239 +1016,239 @@
       },
       "faqs": [
         {
-          "question": "What makes ErgoScript different from Solidity?",
-          "answer": "ErgoScript is based on the extended UTXO model, making it more secure and predictable than account-based models. It uses functional programming principles, has built-in zero-knowledge proofs, and offers deterministic fee calculation."
+          "question": "O que diferencia o ErgoScript do Solidity?",
+          "answer": "ErgoScript é baseado no modelo UTXO estendido, tornando-o mais seguro e previsível do que modelos baseados em conta. Usa princípios de programação funcional, tem provas de conhecimento zero integradas e oferece cálculo determinístico de taxas."
         },
         {
-          "question": "Do I need to know Scala to write ErgoScript?",
-          "answer": "While ErgoScript is inspired by Scala, you don't need prior Scala knowledge. The syntax is designed to be accessible to developers familiar with any modern programming language. However, understanding functional programming concepts helps."
+          "question": "Preciso conhecer Scala para escrever ErgoScript?",
+          "answer": "Embora o ErgoScript seja inspirado em Scala, você não precisa de conhecimento prévio de Scala. A sintaxe foi projetada para ser acessível a desenvolvedores familiarizados com qualquer linguagem de programação moderna. No entanto, entender conceitos de programação funcional ajuda."
         },
         {
-          "question": "How do I test ErgoScript contracts?",
-          "answer": "You can test contracts using the Ergo Playground, local testnet, or the official Ergo testing framework. The Ergo SDK provides comprehensive testing tools for contract development and debugging."
+          "question": "Como testo contratos ErgoScript?",
+          "answer": "Você pode testar contratos usando o Ergo Playground, testnet local ou o framework de testes oficial do Ergo. O SDK Ergo fornece ferramentas de teste abrangentes para desenvolvimento e depuração de contratos."
         },
         {
-          "question": "What are the gas fees like for ErgoScript?",
-          "answer": "ErgoScript contracts have predictable, low fees typically under $0.01. The extended UTXO model allows for efficient execution and the ability to calculate exact costs before deployment."
+          "question": "Como são as taxas de gás para ErgoScript?",
+          "answer": "Os contratos ErgoScript têm taxas previsíveis e baixas, tipicamente abaixo de $0,01. O modelo UTXO estendido permite execução eficiente e a capacidade de calcular custos exatos antes da implantação."
         },
         {
-          "question": "Can I build DeFi protocols with ErgoScript?",
-          "answer": "Yes! ErgoScript is perfect for DeFi. Examples include SigmaUSD (algorithmic stablecoin), DEXs like ErgoDEX, and various DeFi primitives. The language's security features make it ideal for financial applications."
+          "question": "Posso criar protocolos DeFi com ErgoScript?",
+          "answer": "Sim! ErgoScript é perfeito para DeFi. Exemplos incluem SigmaUSD (stablecoin algorítmico), DEXs como ErgoDEX e várias primitivas DeFi. Os recursos de segurança da linguagem a tornam ideal para aplicações financeiras."
         }
       ],
-      "viewExamples": "View Examples",
-      "faqTitle": "Frequently Asked Questions"
+      "viewExamples": "Ver exemplos",
+      "faqTitle": "Perguntas Frequentes"
     }
   },
   "learnErgoscript": {
-    "title": "Learn ErgoScript",
-    "description": "Comprehensive guide to Ergo's smart contract language",
-    "subtitle": "Master blockchain programming with ErgoScript",
+    "title": "Aprenda ErgoScript",
+    "description": "Guia abrangente para a linguagem de contratos inteligentes do Ergo",
+    "subtitle": "Domine a programação blockchain com ErgoScript",
     "whyLearnFeatures": {
       "secureByDesign": {
-        "title": "Secure by Design",
-        "description": "Built-in security and formal verifiability, minimizing smart contract risks"
+        "title": "Seguro por design",
+        "description": "Segurança integrada e verificabilidade formal, minimizando riscos de contratos inteligentes"
       },
       "powerfulExpressive": {
-        "title": "Powerful & Expressive",
-        "description": "Enables complex DeFi, multi-stage protocols, and unique dApps"
+        "title": "Poderoso e expressivo",
+        "description": "Permite DeFi complexo, protocolos multi-estágio e dApps únicos"
       },
       "leverageEutxo": {
-        "title": "Leverage eUTXO",
-        "description": "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability"
+        "title": "Aproveite o eUTXO",
+        "description": "Apenas o ErgoScript desbloqueia todo o poder do eUTXO: custos previsíveis, estado local, componibilidade"
       },
       "builtInCryptography": {
-        "title": "Built-in Cryptography",
-        "description": "Native support for Sigma-protocols, privacy, and advanced access schemes"
+        "title": "Criptografia integrada",
+        "description": "Suporte nativo para protocolos Sigma, privacidade e esquemas de acesso avançados"
       }
     },
     "faqs": {
       "needPriorExperience": {
-        "question": "Do I need prior blockchain experience to start?",
-        "answer": "No! Our tutorial series starts from the basics and gradually builds up complexity. We explain blockchain and smart contract concepts as we go, making it accessible for complete beginners."
+        "question": "Preciso de experiência blockchain prévia para começar?",
+        "answer": "Não! Nossa série de tutoriais começa do básico e aumenta gradualmente a complexidade. Explicamos conceitos de blockchain e contratos inteligentes à medida que avançamos, tornando-o acessível para iniciantes completos."
       },
       "ergoScriptDifferentFromSolidity": {
-        "question": "How is ErgoScript different from Solidity?",
-        "answer": "ErgoScript is based on Scala and designed for the eUTXO model, offering better security guarantees, predictable costs, and native support for advanced cryptography like Sigma protocols. It's more functional and mathematically rigorous than Solidity."
+        "question": "Como o ErgoScript é diferente do Solidity?",
+        "answer": "ErgoScript é baseado em Scala e projetado para o modelo eUTXO, oferecendo melhores garantias de segurança, custos previsíveis e suporte nativo para criptografia avançada como protocolos Sigma. É mais funcional e matematicamente rigoroso do que o Solidity."
       },
       "developmentTools": {
-        "question": "What development tools do I need?",
-        "answer": "You'll need a text editor, the Ergo node software, and optionally the ErgoScript compiler. We provide detailed setup instructions in Module 1.3 to get you started with the complete development environment."
+        "question": "Quais ferramentas de desenvolvimento preciso?",
+        "answer": "Você precisará de um editor de texto, o software do nó Ergo e opcionalmente o compilador ErgoScript. Fornecemos instruções detalhadas de configuração no Módulo 1.3 para você começar com o ambiente de desenvolvimento completo."
       },
       "completeSeriesDuration": {
-        "question": "How long does it take to complete the entire series?",
-        "answer": "The complete series contains approximately 32 hours of content. Depending on your pace and prior experience, you can expect to complete it in 4-8 weeks with consistent study."
+        "question": "Quanto tempo leva para completar a série inteira?",
+        "answer": "A série completa contém aproximadamente 32 horas de conteúdo. Dependendo do seu ritmo e experiência prévia, você pode esperar concluí-la em 4 a 8 semanas com estudo consistente."
       }
     },
     "targetAudience": {
       "newToSmartContracts": {
-        "title": "New to Smart Contracts",
-        "description": "Step-by-step explanations of core blockchain and smart contract concepts",
-        "examples": "Blockchain basics, Smart contract fundamentals, eUTXO introduction"
+        "title": "Novo em contratos inteligentes",
+        "description": "Explicações passo a passo dos conceitos fundamentais de blockchain e contratos inteligentes",
+        "examples": "Conceitos básicos de blockchain, Fundamentos de contratos inteligentes, Introdução ao eUTXO"
       },
       "experiencedDevelopers": {
-        "title": "Experienced Blockchain Developers",
-        "description": "Discover eUTXO, new safe patterns, and advanced contract design",
-        "examples": "eUTXO patterns, Security best practices, Advanced cryptography"
+        "title": "Desenvolvedores blockchain experientes",
+        "description": "Descubra o eUTXO, novos padrões seguros e design de contratos avançados",
+        "examples": "Padrões eUTXO, Melhores práticas de segurança, Criptografia avançada"
       },
       "scalaFunctionalProgrammers": {
-        "title": "Scala/Functional Programmers",
-        "description": "ErgoScript's syntax and philosophy will feel familiar—apply your skills easily",
-        "examples": "Functional paradigms, Type safety, Immutable data structures"
+        "title": "Programadores Scala/funcionais",
+        "description": "A sintaxe e filosofia do ErgoScript parecerão familiares — aplique suas habilidades com facilidade",
+        "examples": "Paradigmas funcionais, Segurança de tipos, Estruturas de dados imutáveis"
       },
       "defiEnthusiasts": {
-        "title": "DeFi Enthusiasts",
-        "description": "Build the next generation of decentralized financial applications",
-        "examples": "DEX protocols, Lending platforms, Algorithmic stablecoins"
+        "title": "Entusiastas de DeFi",
+        "description": "Construa a próxima geração de aplicações financeiras descentralizadas",
+        "examples": "Protocolos DEX, Plataformas de empréstimo, Stablecoins algorítmicas"
       }
     },
     "modules": {
       "foundations": {
-        "title": "Foundations of Ergo and ErgoScript",
+        "title": "Fundamentos do Ergo e do ErgoScript",
         "number": 1,
         "totalDuration": "185 min",
         "lessons": {
           "0": {
-            "title": "Introduction to Ergo & the eUTXO Model",
+            "title": "Introdução ao Ergo e ao modelo eUTXO",
             "duration": "20 min",
-            "level": "Beginner"
+            "level": "Iniciante"
           },
           "1": {
-            "title": "What is ErgoScript? Philosophy and Design Goals",
+            "title": "O que é ErgoScript? Filosofia e objetivos de design",
             "duration": "15 min",
-            "level": "Beginner"
+            "level": "Iniciante"
           },
           "2": {
-            "title": "Setting Up Your ErgoScript Development Environment",
+            "title": "Configurando seu ambiente de desenvolvimento ErgoScript",
             "duration": "30 min",
-            "level": "Beginner"
+            "level": "Iniciante"
           },
           "3": {
-            "title": "Basic Syntax, Data Types, Operators",
+            "title": "Sintaxe básica, tipos de dados, operadores",
             "duration": "40 min",
-            "level": "Beginner"
+            "level": "Iniciante"
           },
           "4": {
-            "title": "Boxes, Registers, Context Variables",
+            "title": "Caixas, registros, variáveis de contexto",
             "duration": "45 min",
-            "level": "Beginner"
+            "level": "Iniciante"
           }
         }
       }
     }
   },
   "learnGuides": {
-    "title": "Learning Guides",
-    "description": "Step-by-step tutorials and educational content",
-    "subtitle": "Comprehensive learning resources"
+    "title": "Guias de aprendizado",
+    "description": "Tutoriais passo a passo e conteúdo educacional",
+    "subtitle": "Recursos de aprendizado abrangentes"
   },
   "learnGuidesConsensus": {
-    "title": "Consensus Guide",
-    "description": "Understanding Ergo's consensus mechanism and Autolykos",
-    "subtitle": "Deep dive into proof-of-work consensus"
+    "title": "Guia de consenso",
+    "description": "Entendendo o mecanismo de consenso do Ergo e o Autolykos",
+    "subtitle": "Mergulho profundo no consenso proof-of-work"
   },
   "learnGuidesOraclePool": {
-    "title": "Oracle Pool Guide",
-    "description": "How to use and create oracle pools on Ergo",
-    "subtitle": "Decentralized data feeds tutorial"
+    "title": "Guia de pools de oráculos",
+    "description": "Como usar e criar pools de oráculos no Ergo",
+    "subtitle": "Tutorial de feeds de dados descentralizados"
   },
   "learnGuidesPrivacyFeatures": {
-    "title": "Privacy Features Guide",
-    "description": "Using Sigma protocols and privacy tools on Ergo",
-    "subtitle": "Protect your financial privacy"
+    "title": "Guia de recursos de privacidade",
+    "description": "Usando protocolos Sigma e ferramentas de privacidade no Ergo",
+    "subtitle": "Proteja sua privacidade financeira"
   },
   "learnGuidesStorageRent": {
-    "title": "Storage Rent Guide",
-    "description": "Understanding Ergo's storage rent mechanism",
-    "subtitle": "Sustainable blockchain storage economics"
+    "title": "Guia de storage rent",
+    "description": "Entendendo o mecanismo de storage rent do Ergo",
+    "subtitle": "Economia sustentável de armazenamento blockchain"
   },
   "learnResearch": {
-    "title": "Research Papers",
-    "description": "Academic research and whitepapers about Ergo",
-    "subtitle": "Scientific foundation of Ergo technology"
+    "title": "Artigos de pesquisa",
+    "description": "Pesquisa acadêmica e whitepapers sobre o Ergo",
+    "subtitle": "Base científica da tecnologia Ergo"
   },
   "glossary": {
     "seo": {
-      "title": "Ergo Glossary - 250+ Blockchain Terms Explained | Ergo",
-      "description": "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols - your complete Ergo & crypto glossary. Search, filter, learn.",
-      "keywords": "Ergo glossary, blockchain terminology, eUTXO explained, NiPoPoWs meaning, Sigma Protocols definition, ErgoScript tutorial, storage rent explained, cryptocurrency terms, blockchain definitions"
+      "title": "Glossário Ergo - Mais de 250 termos blockchain explicados | Ergo",
+      "description": "Mais de 250 termos blockchain explicados de forma simples. De eUTXO a protocolos Sigma - seu glossário completo Ergo e cripto. Pesquise, filtre, aprenda.",
+      "keywords": "glossário Ergo, terminologia blockchain, eUTXO explicado, significado NiPoPoWs, definição protocolos Sigma, tutorial ErgoScript, storage rent explicado, termos criptomoedas, definições blockchain"
     },
     "title": "Ergo",
-    "titleHighlight": "Glossary",
-    "subtitle": "Master Ergo terminology in one searchable reference.",
+    "titleHighlight": "Glossário",
+    "subtitle": "Domine a terminologia Ergo em uma referência pesquisável.",
     "stats": {
-      "terms": "terms",
-      "categories": "categories"
+      "terms": "termos",
+      "categories": "categorias"
     },
     "search": {
-      "placeholder": "Search terms...",
-      "ariaLabel": "Search glossary terms"
+      "placeholder": "Pesquisar termos...",
+      "ariaLabel": "Pesquisar termos do glossário"
     },
     "filters": {
-      "allCategories": "All Categories",
-      "level": "Level:",
-      "allLevels": "All levels",
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "allCategories": "Todas as categorias",
+      "level": "Nível:",
+      "allLevels": "Todos os níveis",
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
     },
-    "popular": "Popular:",
+    "popular": "Populares:",
     "noResults": {
-      "message": "No terms found matching your criteria.",
-      "clearFilters": "Clear filters"
+      "message": "Nenhum termo encontrado que corresponda aos seus critérios.",
+      "clearFilters": "Limpar filtros"
     },
     "cta": {
-      "title": "Ready to Build on Ergo?",
-      "description": "Now that you understand the terminology, dive into the documentation and start building decentralized applications.",
-      "devDocs": "Developer Docs",
-      "learningHub": "Learning Hub"
+      "title": "Pronto para construir no Ergo?",
+      "description": "Agora que você entende a terminologia, mergulhe na documentação e comece a construir aplicações descentralizadas.",
+      "devDocs": "Documentação para desenvolvedores",
+      "learningHub": "Hub de aprendizado"
     },
     "emailCapture": {
-      "title": "Learn More About Ergo",
-      "description": "Get educational content, terminology guides, and blockchain insights delivered to your inbox."
+      "title": "Saiba mais sobre o Ergo",
+      "description": "Receba conteúdo educacional, guias de terminologia e insights sobre blockchain na sua caixa de entrada."
     },
     "breadcrumbs": {
-      "learn": "Learn",
-      "glossary": "Glossary"
+      "learn": "Aprenda",
+      "glossary": "Glossário"
     }
   },
   "glossaryTermPage": {
-    "whatIs": "What is",
+    "whatIs": "O que é",
     "share": {
-      "titleTemplate": "What is {term}?",
-      "tweetTextTemplate": "What is {term}?"
+      "titleTemplate": "O que é {term}?",
+      "tweetTextTemplate": "O que é {term}?"
     },
     "buttons": {
-      "share": "Share",
-      "copy": "Copy link",
-      "copied": "Copied"
+      "share": "Compartilhar",
+      "copy": "Copiar link",
+      "copied": "Copiado"
     },
     "sections": {
-      "keyPoints": "Key Points",
-      "useCases": "Use Cases",
-      "technicalDetails": "Technical Details",
-      "relatedInfographics": "Related",
-      "relatedInfographicsHighlight": "Infographics",
-      "relatedArticles": "Related",
-      "relatedArticlesHighlight": "Articles",
-      "faq": "Frequently Asked",
-      "faqHighlight": "Questions",
-      "questionsAbout": "Questions about",
-      "relatedTopics": "Related",
-      "relatedTopicsHighlight": "Topics",
-      "exploreTopic": "Explore topic",
-      "exploreMoreTerms": "Explore More",
-      "exploreMoreTermsHighlight": "Terms"
+      "keyPoints": "Pontos-chave",
+      "useCases": "Casos de uso",
+      "technicalDetails": "Detalhes técnicos",
+      "relatedInfographics": "Infográficos",
+      "relatedInfographicsHighlight": "relacionados",
+      "relatedArticles": "Artigos",
+      "relatedArticlesHighlight": "relacionados",
+      "faq": "Perguntas",
+      "faqHighlight": "frequentes",
+      "questionsAbout": "Perguntas sobre",
+      "relatedTopics": "Tópicos",
+      "relatedTopicsHighlight": "relacionados",
+      "exploreTopic": "Explorar tópico",
+      "exploreMoreTerms": "Explorar mais",
+      "exploreMoreTermsHighlight": "termos"
     },
     "boxesCta": {
-      "title": "Ready to Build with Ergo Boxes?",
-      "description": "Apply what you've learned about boxes and start building real DeFi on Ergo.",
-      "documentation": "Documentation",
-      "glossary": "Glossary"
+      "title": "Pronto para construir com caixas Ergo?",
+      "description": "Aplique o que aprendeu sobre caixas e comece a construir DeFi real no Ergo.",
+      "documentation": "Documentação",
+      "glossary": "Glossário"
     },
     "emailCapture": {
-      "title": "Master Ergo Terminology",
-      "description": "Get more educational content and deep dives into Ergo technology delivered to your inbox."
+      "title": "Domine a terminologia Ergo",
+      "description": "Receba mais conteúdo educacional e análises aprofundadas sobre a tecnologia Ergo na sua caixa de entrada."
     }
   }
 }
