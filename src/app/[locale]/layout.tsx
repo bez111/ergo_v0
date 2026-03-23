@@ -90,8 +90,11 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
   };
 }
 
+// Only pre-build EN and zh-CN statically; all other locales render on-demand (SSR)
+const STATIC_LOCALES = ['en', 'zh-cn'] as const;
+
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return STATIC_LOCALES.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
