@@ -1,37 +1,37 @@
 {
   "blog": {
     "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "subtitle": "Ultime notizie e aggiornamenti",
+    "description": "Ultime notizie e aggiornamenti da Ergo",
+    "readMore": "Leggi di più",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "Tecnologia",
+      "ecosystem": "Ecosistema",
+      "community": "Comunità",
+      "announcements": "Annunci",
+      "all": "Tutti i post",
+      "development": "Sviluppo",
+      "technical": "Tecnico",
+      "education": "Educazione"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "Blog - Notizie e Aggiornamenti Ergo | Ergo Platform",
+      "description": "Leggi le ultime notizie, aggiornamenti e approfondimenti dal team Ergo blockchain.",
+      "keywords": "blog Ergo, notizie blockchain, aggiornamenti, articoli"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "Post in Evidenza",
+      "readMore": "Leggi di più"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "Post Recenti",
+      "viewAll": "Vedi tutti i post"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "Iscriviti alla Newsletter",
+      "description": "Ricevi gli ultimi aggiornamenti nella tua casella di posta",
+      "placeholder": "Inserisci la tua email",
+      "subscribe": "Iscriviti"
     }
   }
 }

@@ -1,219 +1,219 @@
 {
   "community": {
     "hero": {
-      "title": "ERGO COMMUNITY",
-      "description": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "title": "COMUNITÀ ERGO",
+      "description": "Connettiti con sviluppatori appassionati, ricercatori ed entusiasti che costruiscono il futuro della finanza decentralizzata. La tua voce conta nel plasmare l'evoluzione di Ergo."
     },
     "platforms": {
-      "title": "COMMUNICATION HUBS",
+      "title": "HUB DI COMUNICAZIONE",
       "labels": {
-        "members": "Members",
-        "activity": "Activity"
+        "members": "Membri",
+        "activity": "Attività"
       },
       "discord": {
         "name": "Discord",
-        "description": "Real-time discussions, AMA sessions, technical support",
+        "description": "Discussioni in tempo reale, sessioni AMA, supporto tecnico",
         "members": "15K+",
         "activity": "24/7",
-        "buttonText": "Join Discord",
+        "buttonText": "Unisciti a Discord",
         "features": {
-          "liveChat": "Live Chat",
-          "voiceChannels": "Voice Channels",
-          "developerSupport": "Developer Support",
-          "communityEvents": "Community Events"
+          "liveChat": "Chat in diretta",
+          "voiceChannels": "Canali vocali",
+          "developerSupport": "Supporto sviluppatori",
+          "communityEvents": "Eventi della comunità"
         }
       },
       "telegram": {
         "name": "Telegram",
-        "description": "Quick updates, announcements, global community",
+        "description": "Aggiornamenti rapidi, annunci, comunità globale",
         "members": "12K+",
-        "activity": "Active",
-        "buttonText": "Join Telegram",
+        "activity": "Attivo",
+        "buttonText": "Unisciti a Telegram",
         "features": {
-          "instantUpdates": "Instant Updates",
+          "instantUpdates": "Aggiornamenti istantanei",
           "mobileFirst": "Mobile First",
-          "globalReach": "Global Reach",
-          "newsAlerts": "News & Alerts"
+          "globalReach": "Portata globale",
+          "newsAlerts": "Notizie e avvisi"
         }
       },
       "reddit": {
         "name": "Reddit",
-        "description": "In-depth discussions, memes, community content",
+        "description": "Discussioni approfondite, meme, contenuti della comunità",
         "members": "8K+",
-        "activity": "Daily",
-        "buttonText": "Visit r/ergonauts",
+        "activity": "Giornaliero",
+        "buttonText": "Visita r/ergonauts",
         "features": {
-          "longFormPosts": "Long-form Posts",
-          "communityVoting": "Community Voting",
-          "memesContent": "Memes & Content",
-          "discussions": "Discussions"
+          "longFormPosts": "Post di lunga forma",
+          "communityVoting": "Votazione della comunità",
+          "memesContent": "Meme e contenuti",
+          "discussions": "Discussioni"
         }
       },
       "forum": {
         "name": "ErgoForum",
-        "description": "Technical discussions, EIPs, governance",
+        "description": "Discussioni tecniche, EIP, governance",
         "members": "3K+",
-        "activity": "Weekly",
-        "buttonText": "Visit Forum",
+        "activity": "Settimanale",
+        "buttonText": "Visita il Forum",
         "features": {
-          "technicalDeepDives": "Technical Deep-dives",
+          "technicalDeepDives": "Approfondimenti tecnici",
           "governance": "Governance",
-          "eipDiscussions": "EIP Discussions",
-          "research": "Research"
+          "eipDiscussions": "Discussioni EIP",
+          "research": "Ricerca"
         }
       }
     },
     "contributions": {
-      "title": "CONTRIBUTION MATRIX",
-      "description": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
+      "title": "MATRICE DEI CONTRIBUTI",
+      "description": "Ogni contributo rafforza l'ecosistema Ergo. Trova il tuo percorso per fare la differenza.",
       "types": {
         "development": {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
+          "title": "Sviluppo",
+          "description": "Costruisci dApp, strumenti e infrastrutture",
           "tasks": {
-            "smartContracts": "Smart Contracts",
-            "frontendApps": "Frontend Apps",
-            "toolsLibraries": "Tools & Libraries"
+            "smartContracts": "Smart Contract",
+            "frontendApps": "App Frontend",
+            "toolsLibraries": "Strumenti e librerie"
           }
         },
         "content": {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
+          "title": "Creazione di contenuti",
+          "description": "Articoli, video, tutorial, documentazione",
           "tasks": {
-            "technicalWriting": "Technical Writing",
-            "videoContent": "Video Content",
-            "tutorials": "Tutorials"
+            "technicalWriting": "Scrittura tecnica",
+            "videoContent": "Contenuti video",
+            "tutorials": "Tutorial"
           }
         },
         "support": {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
+          "title": "Supporto alla comunità",
+          "description": "Aiuta i nuovi arrivati e rispondi alle domande",
           "tasks": {
-            "userSupport": "User Support",
+            "userSupport": "Supporto utenti",
             "onboarding": "Onboarding",
             "mentoring": "Mentoring"
           }
         },
         "governance": {
           "title": "Governance",
-          "description": "Participate in protocol decisions",
+          "description": "Partecipa alle decisioni del protocollo",
           "tasks": {
-            "eipReviews": "EIP Reviews",
-            "voting": "Voting",
-            "proposals": "Proposals"
+            "eipReviews": "Revisioni EIP",
+            "voting": "Votazione",
+            "proposals": "Proposte"
           }
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
+          "title": "Infrastruttura",
+          "description": "Gestisci nodi, mining, supporto di rete",
           "tasks": {
-            "nodeOperation": "Node Operation",
+            "nodeOperation": "Gestione nodi",
             "mining": "Mining",
-            "networkSecurity": "Network Security"
+            "networkSecurity": "Sicurezza di rete"
           }
         },
         "research": {
-          "title": "Research",
-          "description": "Protocol research and improvements",
+          "title": "Ricerca",
+          "description": "Ricerca e miglioramenti del protocollo",
           "tasks": {
-            "academicResearch": "Academic Research",
-            "protocolAnalysis": "Protocol Analysis",
-            "innovation": "Innovation"
+            "academicResearch": "Ricerca accademica",
+            "protocolAnalysis": "Analisi del protocollo",
+            "innovation": "Innovazione"
           }
         }
       }
     },
     "guidelines": {
-      "title": "COMMUNITY PROTOCOL",
+      "title": "PROTOCOLLO DELLA COMUNITÀ",
       "encouraged": {
-        "title": "Encouraged Behavior",
+        "title": "Comportamento incoraggiato",
         "items": {
-          "respectfulDiscussions": "Respectful and constructive discussions",
-          "helpingNewcomers": "Helping newcomers and sharing knowledge",
-          "contributingProjects": "Contributing to projects and documentation",
-          "constructiveFeedback": "Providing constructive feedback",
-          "followingGuidelines": "Following community guidelines"
+          "respectfulDiscussions": "Discussioni rispettose e costruttive",
+          "helpingNewcomers": "Aiutare i nuovi arrivati e condividere conoscenze",
+          "contributingProjects": "Contribuire a progetti e documentazione",
+          "constructiveFeedback": "Fornire feedback costruttivi",
+          "followingGuidelines": "Seguire le linee guida della comunità"
         }
       },
       "discouraged": {
-        "title": "Discouraged Behavior",
+        "title": "Comportamento scoraggiato",
         "items": {
-          "spamContent": "Spam, flooding, or off-topic content",
-          "misinformation": "Spreading misinformation or FUD",
-          "personalAttacks": "Personal attacks or harassment",
-          "selfPromotion": "Excessive self-promotion",
-          "violatingRules": "Violating platform-specific rules"
+          "spamContent": "Spam, flooding o contenuti fuori tema",
+          "misinformation": "Diffondere disinformazione o FUD",
+          "personalAttacks": "Attacchi personali o molestie",
+          "selfPromotion": "Auto-promozione eccessiva",
+          "violatingRules": "Violazione delle regole specifiche della piattaforma"
         }
       }
     },
     "cta": {
-      "title": "READY TO CONNECT?",
-      "description": "Join thousands of developers, researchers, and enthusiasts building the future of DeFi",
-      "joinDiscord": "Join Discord",
-      "exploreMore": "Explore More"
+      "title": "PRONTO A CONNETTERTI?",
+      "description": "Unisciti a migliaia di sviluppatori, ricercatori ed entusiasti che costruiscono il futuro del DeFi",
+      "joinDiscord": "Unisciti a Discord",
+      "exploreMore": "Esplora di più"
     }
   },
   "communityClient": {
     "hero": {
-      "title": "ERGO",
-      "titleHighlight": "COMMUNITY",
-      "subtitle": "Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution."
+      "title": "COMUNITÀ",
+      "titleHighlight": "ERGO",
+      "subtitle": "Connettiti con sviluppatori appassionati, ricercatori ed entusiasti che costruiscono il futuro della finanza decentralizzata. La tua voce conta nel plasmare l'evoluzione di Ergo."
     },
     "platforms": {
-      "sectionTitle": "COMMUNICATION HUBS",
-      "followers": "Followers",
-      "updates": "Updates"
+      "sectionTitle": "HUB DI COMUNICAZIONE",
+      "followers": "Follower",
+      "updates": "Aggiornamenti"
     },
     "platformGroups": [
       {
-        "title": "Real-time & Operations",
-        "subtitle": "Live support, quick updates, breaking news"
+        "title": "Tempo reale e operazioni",
+        "subtitle": "Supporto live, aggiornamenti rapidi, notizie urgenti"
       },
       {
-        "title": "Deep Content & Research",
-        "subtitle": "Tutorials, essays, EIPs, governance"
+        "title": "Contenuti approfonditi e ricerca",
+        "subtitle": "Tutorial, saggi, EIP, governance"
       },
       {
-        "title": "Community & Discovery",
-        "subtitle": "Discussions, visual content, discovery"
+        "title": "Comunità e scoperta",
+        "subtitle": "Discussioni, contenuti visivi, scoperta"
       }
     ],
     "contributions": {
-      "sectionTitle": "CONTRIBUTION MATRIX",
-      "subtitle": "Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.",
-      "clickForGuide": "Click for detailed guide"
+      "sectionTitle": "MATRICE DEI CONTRIBUTI",
+      "subtitle": "Ogni contributo rafforza l'ecosistema Ergo. Trova il tuo percorso per fare la differenza.",
+      "clickForGuide": "Clicca per la guida dettagliata"
     },
     "guidelines": {
-      "sectionTitle": "COMMUNITY PROTOCOL",
+      "sectionTitle": "PROTOCOLLO DELLA COMUNITÀ",
       "positive": {
-        "title": "Encouraged Behavior",
+        "title": "Comportamento incoraggiato",
         "items": [
-          "Respectful and constructive discussions",
-          "Helping newcomers and sharing knowledge",
-          "Contributing to projects and documentation",
-          "Providing constructive feedback",
-          "Following community guidelines"
+          "Discussioni rispettose e costruttive",
+          "Aiutare i nuovi arrivati e condividere conoscenze",
+          "Contribuire a progetti e documentazione",
+          "Fornire feedback costruttivi",
+          "Seguire le linee guida della comunità"
         ]
       },
       "negative": {
-        "title": "Discouraged Behavior",
+        "title": "Comportamento scoraggiato",
         "items": [
-          "Spam, flooding, or off-topic content",
-          "Spreading misinformation or FUD",
-          "Personal attacks or harassment",
-          "Excessive self-promotion",
-          "Violating platform-specific rules"
+          "Spam, flooding o contenuti fuori tema",
+          "Diffondere disinformazione o FUD",
+          "Attacchi personali o molestie",
+          "Auto-promozione eccessiva",
+          "Violazione delle regole specifiche della piattaforma"
         ]
       }
     },
     "cta": {
-      "title": "Stay",
-      "titleHighlight": "Connected",
-      "subtitle": "Get the latest updates, announcements, and community highlights delivered to your inbox",
-      "emailPlaceholder": "Enter your email address",
-      "subscribe": "Subscribe",
-      "thankYou": "Thank you for subscribing!",
-      "confirmationMessage": "You'll receive updates about the Ergo community."
+      "title": "Rimani",
+      "titleHighlight": "Connesso",
+      "subtitle": "Ricevi gli ultimi aggiornamenti, annunci e momenti salienti della comunità nella tua casella di posta",
+      "emailPlaceholder": "Inserisci il tuo indirizzo email",
+      "subscribe": "Iscriviti",
+      "thankYou": "Grazie per l'iscrizione!",
+      "confirmationMessage": "Riceverai aggiornamenti sulla comunità Ergo."
     }
   }
 }

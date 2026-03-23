@@ -1,198 +1,198 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "Join a movement for open, programmable, and censorship-resistant finance.",
-    "description": "The globally-neutral settlement layer for programmable money.",
-    "message1": "Money Without Masters",
-    "message2": "Global Settlement Layer",
-    "message3": "Digital Freedom Platform",
-    "message4": "Decentralized By Design",
-    "exploreErgo": "Explore Ergo",
-    "chooseYourPath": "Choose Your Path",
-    "startHere": "Start Here",
+    "subtitle": "Unisciti a un movimento per una finanza aperta, programmabile e resistente alla censura.",
+    "description": "Il livello di regolamento globalmente neutrale per il denaro programmabile.",
+    "message1": "Denaro Senza Padroni",
+    "message2": "Livello di Regolamento Globale",
+    "message3": "Piattaforma per la Libertà Digitale",
+    "message4": "Decentralizzato per Progettazione",
+    "exploreErgo": "Esplora Ergo",
+    "chooseYourPath": "Scegli il Tuo Percorso",
+    "startHere": "Inizia Qui",
     "aria": {
-      "keyFeatures": "Key features of Ergo blockchain"
+      "keyFeatures": "Caratteristiche principali della blockchain Ergo"
     },
     "features": {
-      "securePow": "Secure PoW",
-      "smartContracts": "Smart Contracts",
+      "securePow": "PoW Sicuro",
+      "smartContracts": "Smart Contract",
       "privacy": "Privacy",
-      "eutxoModel": "eUTXO Model"
+      "eutxoModel": "Modello eUTXO"
     }
   },
   "buildForScale": {
-    "titlePrefix": "Engineered for",
-    "titleHighlight": "global",
-    "titleSuffix": "censorship-resistant settlement",
-    "subtitle": "Sound Money principles, Open Money access.",
+    "titlePrefix": "Progettato per",
+    "titleHighlight": "globale",
+    "titleSuffix": "regolamento resistente alla censura",
+    "subtitle": "Principi di Denaro Sano, accesso a Denaro Aperto.",
     "bullets": {
-      "0": "eUTXO = parallel, conflict-free flows",
-      "1": "Predictable fees & clear spend conditions",
-      "2": "MEV-resistant design (local ordering)"
+      "0": "eUTXO = flussi paralleli e senza conflitti",
+      "1": "Commissioni prevedibili e condizioni di spesa chiare",
+      "2": "Design resistente al MEV (ordinamento locale)"
     },
-    "resultLabel": "The result:",
-    "resultText": "Financial infrastructure that actually works.",
+    "resultLabel": "Il risultato:",
+    "resultText": "Infrastruttura finanziaria che funziona davvero.",
     "stats": {
       "blockTime": {
         "value": "~2 min",
-        "label": "Block time",
-        "hint": "Fast, predictable finality"
+        "label": "Tempo di blocco",
+        "hint": "Finalità rapida e prevedibile"
       },
       "mev": {
-        "value": "MEV-resistant",
+        "value": "Resistente al MEV",
         "label": "Front-running",
-        "hint": "Local ordering, no global priority auctions"
+        "hint": "Ordinamento locale, nessuna asta di priorità globale"
       },
       "fee": {
         "value": "≈ $0.01",
-        "label": "Typical fee",
-        "hint": "Pennies, not dollars"
+        "label": "Commissione tipica",
+        "hint": "Centesimi, non dollari"
       },
       "ergoscript": {
         "value": "ErgoScript",
-        "label": "Smart contracts",
-        "hint": "Short, auditable logic"
+        "label": "Smart contract",
+        "hint": "Logica breve e verificabile"
       }
     }
   },
   "madeForMassAdoption": {
-    "titlePrefix": "Choose your",
-    "titleMiddle": "path. Build your",
-    "titleSuffix": "future",
-    "subtitle": "Find your role in the decentralized economy",
-    "startHereCta": "Start here",
+    "titlePrefix": "Scegli il tuo",
+    "titleMiddle": "percorso. Costruisci il tuo",
+    "titleSuffix": "futuro",
+    "subtitle": "Trova il tuo ruolo nell'economia decentralizzata",
+    "startHereCta": "Inizia qui",
     "paths": {
       "freedomSeekers": {
-        "title": "Freedom seekers",
-        "description": "Control your money. Private transactions when needed. No banks, no permissions, just freedom.",
-        "cta": "Get started"
+        "title": "Cercatori di libertà",
+        "description": "Controlla il tuo denaro. Transazioni private quando necessario. Nessuna banca, nessun permesso, solo libertà.",
+        "cta": "Inizia"
       },
       "cypherpunks": {
-        "title": "Cypherpunks",
-        "description": "Build unstoppable smart contracts with ErgoScript. Create privacy-preserving dApps that actually work.",
-        "cta": "Start building"
+        "title": "Cypherpunk",
+        "description": "Crea smart contract inarrestabili con ErgoScript. Sviluppa dApp che proteggono la privacy e funzionano davvero.",
+        "cta": "Inizia a costruire"
       },
       "miners": {
-        "title": "Miners",
-        "description": "GPU-friendly mining that stays decentralized. Secure the network, earn rewards, resist ASICs.",
-        "cta": "Start mining"
+        "title": "Minatori",
+        "description": "Mining GPU-friendly che rimane decentralizzato. Proteggi la rete, guadagna ricompense, resisti agli ASIC.",
+        "cta": "Inizia a minare"
       },
       "community": {
-        "title": "Community",
-        "description": "No VCs, no pre-mine, no corporate control. Built by the community, for the community since 2019.",
-        "cta": "Join us"
+        "title": "Comunità",
+        "description": "Nessun VC, nessun pre-mine, nessun controllo aziendale. Costruito dalla comunità, per la comunità dal 2019.",
+        "cta": "Unisciti a noi"
       }
     }
   },
   "poweredByErgoHome": {
-    "titlePrefix": "Powered by",
-    "titleHighlight1": "builders",
-    "titleMiddle": "Designed for",
-    "titleHighlight2": "freedom & privacy",
-    "subtitle": "Open-source, decentralized, permissionless",
-    "visitProject": "Visit Project",
-    "viewAllCta": "Explore all projects"
+    "titlePrefix": "Alimentato da",
+    "titleHighlight1": "costruttori",
+    "titleMiddle": "Progettato per",
+    "titleHighlight2": "libertà e privacy",
+    "subtitle": "Open-source, decentralizzato, senza permessi",
+    "visitProject": "Visita il Progetto",
+    "viewAllCta": "Esplora tutti i progetti"
   },
   "joinCommunityHome": {
-    "titlePrefix": "Where",
-    "titleHighlight": "cypherpunks",
-    "titleSuffix": "still build",
-    "subtitle": "Active community shipping real tools, not hype.",
-    "cta": "Join community",
+    "titlePrefix": "Dove i",
+    "titleHighlight": "cypherpunk",
+    "titleSuffix": "costruiscono ancora",
+    "subtitle": "Una comunità attiva che produce strumenti reali, non hype.",
+    "cta": "Unisciti alla comunità",
     "channels": {
       "discord": {
-        "desc": "Join our community",
-        "members": "Active daily"
+        "desc": "Unisciti alla nostra comunità",
+        "members": "Attivo ogni giorno"
       },
       "github": {
-        "desc": "Contribute to the code",
+        "desc": "Contribuisci al codice",
         "members": "Open source"
       },
       "telegram": {
-        "desc": "Chat with the community",
-        "members": "Global reach"
+        "desc": "Chatta con la comunità",
+        "members": "Portata globale"
       },
       "twitter": {
-        "desc": "Follow latest updates",
-        "members": "Daily updates"
+        "desc": "Segui gli ultimi aggiornamenti",
+        "members": "Aggiornamenti giornalieri"
       }
     }
   },
   "faqSimpleHome": {
-    "titleHighlight": "Common",
-    "titleSuffix": "questions",
-    "subtitle": "Everything you need to know to get started",
-    "learnMore": "Learn more",
+    "titleHighlight": "Domande",
+    "titleSuffix": "frequenti",
+    "subtitle": "Tutto quello che devi sapere per iniziare",
+    "learnMore": "Scopri di più",
     "items": {
       "0": {
-        "q": "What is Ergo in one sentence?",
-        "a": "Ergo is a secure, open-source PoW blockchain for programmable, censorship-resistant money using the eUTXO model."
+        "q": "Cos'è Ergo in una frase?",
+        "a": "Ergo è una blockchain PoW open-source e sicura per denaro programmabile e resistente alla censura che utilizza il modello eUTXO."
       },
       "1": {
-        "q": "How do I get started (wallet + first transaction)?",
-        "a": "Install a supported wallet, back up your seed offline, get ERG (DEX/exchange/faucet), then send your first test transaction."
+        "q": "Come inizio (portafoglio + prima transazione)?",
+        "a": "Installa un portafoglio supportato, fai un backup del seed offline, ottieni ERG (DEX/exchange/faucet), poi invia la tua prima transazione di prova."
       },
       "2": {
-        "q": "How much are network fees and who gets them?",
-        "a": "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load."
+        "q": "Quanto costano le commissioni di rete e chi le riceve?",
+        "a": "Le commissioni tipiche sono ≈ $0,01 e vanno ai minatori per l'elaborazione dei blocchi; la commissione esatta viene mostrata prima della conferma. Le commissioni variano con il carico della rete."
       },
       "3": {
-        "q": "What makes Ergo different from other smart-contract chains?",
-        "a": "Ergo uses the eUTXO model for safer composition and predictable parallel execution, plus ErgoScript and Sigma protocols for short, auditable contracts and optional privacy tooling."
+        "q": "Cosa rende Ergo diverso dalle altre blockchain con smart contract?",
+        "a": "Ergo utilizza il modello eUTXO per una composizione più sicura ed esecuzione parallela prevedibile, oltre a ErgoScript e protocolli Sigma per contratti brevi, verificabili e strumenti di privacy opzionali."
       },
       "4": {
-        "q": "How is Ergo secured?",
-        "a": "Ergo is secured by the Autolykos Proof-of-Work algorithm, open code, and community audits. Users should keep seed phrases offline, verify downloads/URLs, and prefer hardware wallets."
+        "q": "Come è protetta Ergo?",
+        "a": "Ergo è protetta dall'algoritmo Autolykos Proof-of-Work, codice aperto e audit della comunità. Gli utenti dovrebbero mantenere le frasi seed offline, verificare download/URL e preferire hardware wallet."
       },
       "5": {
-        "q": "What risks should I know before using Ergo?",
-        "a": "Self-custody means irreversible transactions; markets are volatile; third-party dApps carry smart-contract and operational risk; watch for phishing."
+        "q": "Quali rischi devo conoscere prima di usare Ergo?",
+        "a": "Il self-custody implica transazioni irreversibili; i mercati sono volatili; le dApp di terze parti comportano rischi di smart contract e operativi; attenzione al phishing."
       }
     }
   },
   "valueProposition": {
-    "title": "Why Choose",
+    "title": "Perché scegliere",
     "titleHighlight": "Ergo?",
-    "subtitle": "The only blockchain that combines proven security, advanced smart contracts, and user sovereignty without compromise.",
+    "subtitle": "L'unica blockchain che combina sicurezza comprovata, smart contract avanzati e sovranità dell'utente senza compromessi.",
     "items": [
       {
         "icon": "Shield",
-        "title": "Bitcoin-Level Security",
-        "description": "Proven Proof-of-Work consensus with ASIC resistance ensures true decentralization and network security.",
-        "benefit": "Your funds are protected by cryptographic guarantees",
-        "stat": "99.9% uptime since launch"
+        "title": "Sicurezza a livello Bitcoin",
+        "description": "Il consenso Proof-of-Work comprovato con resistenza agli ASIC garantisce vera decentralizzazione e sicurezza della rete.",
+        "benefit": "I tuoi fondi sono protetti da garanzie crittografiche",
+        "stat": "99,9% di uptime dal lancio"
       },
       {
         "icon": "Zap",
-        "title": "Smart Contracts Done Right",
-        "description": "eUTXO model combines Bitcoin's security with Ethereum's programmability—without the trade-offs.",
-        "benefit": "Build DeFi applications with confidence",
-        "stat": "Zero contract exploits to date"
+        "title": "Smart Contract Fatti Bene",
+        "description": "Il modello eUTXO combina la sicurezza di Bitcoin con la programmabilità di Ethereum — senza compromessi.",
+        "benefit": "Costruisci applicazioni DeFi con fiducia",
+        "stat": "Zero exploit di contratti finora"
       },
       {
         "icon": "Eye",
-        "title": "Privacy by Design",
-        "description": "Sigma protocols provide mathematical privacy guarantees while maintaining auditability.",
-        "benefit": "Control your financial privacy",
-        "stat": "Cryptographically secure privacy"
+        "title": "Privacy per Progettazione",
+        "description": "I protocolli Sigma forniscono garanzie matematiche di privacy pur mantenendo la verificabilità.",
+        "benefit": "Controlla la tua privacy finanziaria",
+        "stat": "Privacy crittograficamente sicura"
       },
       {
         "icon": "Coins",
-        "title": "Fair & Sustainable",
-        "description": "No pre-mine, no VCs, plus storage rent mechanism ensures long-term blockchain health.",
-        "benefit": "Truly community-owned blockchain",
-        "stat": "100% fair launch"
+        "title": "Equo e Sostenibile",
+        "description": "Nessun pre-mine, nessun VC, più il meccanismo di storage rent garantisce la salute a lungo termine della blockchain.",
+        "benefit": "Blockchain veramente di proprietà della comunità",
+        "stat": "100% lancio equo"
       }
     ]
   },
   "testimonials": {
-    "title": "What the Community Says",
-    "subtitle": "Hear from developers, miners, and users building on Ergo",
+    "title": "Cosa dice la Comunità",
+    "subtitle": "Ascolta sviluppatori, minatori e utenti che costruiscono su Ergo",
     "items": [
       {
-        "quote": "Ergo represents the future of decentralized finance - combining Bitcoin's security with Ethereum's programmability, plus unique innovations like storage rent and built-in privacy.",
+        "quote": "Ergo rappresenta il futuro della finanza decentralizzata - combinando la sicurezza di Bitcoin con la programmabilità di Ethereum, più innovazioni uniche come lo storage rent e la privacy integrata.",
         "author": "Alex Chepurnoy",
-        "role": "Core Developer & Co-founder",
+        "role": "Sviluppatore Core & Co-fondatore",
         "avatar": "AC",
         "social": {
           "icon": "Github",
@@ -200,9 +200,9 @@
         }
       },
       {
-        "quote": "The eUTXO model is a breakthrough that solves many of the scalability and security issues we see in other blockchains. Ergo's approach to smart contracts is elegant and powerful.",
+        "quote": "Il modello eUTXO è una svolta che risolve molti problemi di scalabilità e sicurezza che vediamo in altre blockchain. L'approccio di Ergo agli smart contract è elegante e potente.",
         "author": "Kushti Research",
-        "role": "Blockchain Researcher",
+        "role": "Ricercatore Blockchain",
         "avatar": "KR",
         "social": {
           "icon": "Twitter",
@@ -210,9 +210,9 @@
         }
       },
       {
-        "quote": "As a miner, I love that Ergo remains committed to fair, ASIC-resistant mining. The Autolykos algorithm ensures true decentralization without the energy waste of other PoW chains.",
-        "author": "Mining Pool Operator",
-        "role": "Community Validator",
+        "quote": "Come minatore, apprezzo che Ergo rimanga fedele al mining equo e resistente agli ASIC. L'algoritmo Autolykos garantisce la vera decentralizzazione senza lo spreco energetico di altre catene PoW.",
+        "author": "Operatore di Mining Pool",
+        "role": "Validatore della Comunità",
         "avatar": "MP",
         "social": {
           "icon": "Twitter",
@@ -220,9 +220,9 @@
         }
       },
       {
-        "quote": "Ergo's oracle pools are the missing piece of the DeFi puzzle. Finally, we have truly decentralized, reliable data feeds that don't depend on centralized providers.",
-        "author": "DeFi Builder",
-        "role": "dApp Developer",
+        "quote": "I pool di oracle di Ergo sono il tassello mancante del puzzle DeFi. Finalmente abbiamo feed di dati veramente decentralizzati e affidabili che non dipendono da provider centralizzati.",
+        "author": "Costruttore DeFi",
+        "role": "Sviluppatore dApp",
         "avatar": "DB",
         "social": {
           "icon": "Github",
@@ -230,9 +230,9 @@
         }
       },
       {
-        "quote": "The privacy features in Ergo are game-changing. Sigma protocols provide mathematical guarantees for confidentiality while maintaining the transparency needed for verification.",
-        "author": "Privacy Advocate",
-        "role": "Security Researcher",
+        "quote": "Le funzionalità di privacy di Ergo sono rivoluzionarie. I protocolli Sigma forniscono garanzie matematiche di riservatezza pur mantenendo la trasparenza necessaria per la verifica.",
+        "author": "Sostenitore della Privacy",
+        "role": "Ricercatore di Sicurezza",
         "avatar": "PA",
         "social": {
           "icon": "Linkedin",
@@ -240,9 +240,9 @@
         }
       },
       {
-        "quote": "Ergo's commitment to academic rigor and peer-reviewed research sets it apart. Every feature is built on solid theoretical foundations, not just hype.",
-        "author": "Academic Researcher",
-        "role": "Computer Science Professor",
+        "quote": "L'impegno di Ergo per il rigore accademico e la ricerca peer-reviewed la distingue. Ogni funzionalità è costruita su solide fondamenta teoriche, non solo hype.",
+        "author": "Ricercatore Accademico",
+        "role": "Professore di Informatica",
         "avatar": "AR",
         "social": {
           "icon": "Linkedin",
@@ -252,31 +252,31 @@
     ]
   },
   "socialProof": {
-    "title": "Trusted by the Community",
+    "title": "Fidato dalla Comunità",
     "stats": [
       {
         "icon": "Users",
-        "value": "Active",
-        "label": "Community",
-        "description": "Developers, miners, and users worldwide"
+        "value": "Attivo",
+        "label": "Comunità",
+        "description": "Sviluppatori, minatori e utenti in tutto il mondo"
       },
       {
         "icon": "TrendingUp",
-        "value": "Growing",
-        "label": "Ecosystem",
-        "description": "Expanding ecosystem value"
+        "value": "In crescita",
+        "label": "Ecosistema",
+        "description": "Valore dell'ecosistema in espansione"
       },
       {
         "icon": "Activity",
-        "value": "99.9%",
+        "value": "99,9%",
         "label": "Uptime",
-        "description": "Network reliability since launch"
+        "description": "Affidabilità della rete dal lancio"
       },
       {
         "icon": "DollarSign",
-        "value": "Secure",
+        "value": "Sicuro",
         "label": "DeFi",
-        "description": "Proven smart contract security"
+        "description": "Sicurezza degli smart contract comprovata"
       }
     ],
     "trustedBy": [
@@ -289,287 +289,287 @@
     ]
   },
   "featureComparison": {
-    "title": "How Ergo Compares",
-    "subtitle": "See how Ergo stacks up against other blockchains",
+    "title": "Come si Confronta Ergo",
+    "subtitle": "Vedi come Ergo si misura rispetto ad altre blockchain",
     "features": [
       {
-        "name": "Consensus",
-        "ergo": "Proof-of-Work (ASIC-resistant)",
-        "bitcoin": "Proof-of-Work (ASIC-dominated)",
+        "name": "Consenso",
+        "ergo": "Proof-of-Work (resistente agli ASIC)",
+        "bitcoin": "Proof-of-Work (dominato dagli ASIC)",
         "ethereum": "Proof-of-Stake"
       },
       {
-        "name": "Smart Contracts",
-        "ergo": "eUTXO with ErgoScript",
-        "bitcoin": "Very Limited",
-        "ethereum": "Account-based with Solidity"
+        "name": "Smart Contract",
+        "ergo": "eUTXO con ErgoScript",
+        "bitcoin": "Molto limitato",
+        "ethereum": "Account-based con Solidity"
       },
       {
         "name": "Privacy",
-        "ergo": "Built-in Sigma Protocols",
-        "bitcoin": "Transparent (needs mixers)",
-        "ethereum": "Transparent"
+        "ergo": "Protocolli Sigma integrati",
+        "bitcoin": "Trasparente (richiede mixer)",
+        "ethereum": "Trasparente"
       },
       {
-        "name": "Sustainability",
-        "ergo": "Storage Rent mechanism",
-        "bitcoin": "Fees only (long-term)",
-        "ethereum": "Token burning"
+        "name": "Sostenibilità",
+        "ergo": "Meccanismo Storage Rent",
+        "bitcoin": "Solo commissioni (lungo termine)",
+        "ethereum": "Burning di token"
       },
       {
-        "name": "Light Clients",
-        "ergo": "NIPoPoWs (cryptographic proofs)",
-        "bitcoin": "SPV (less secure)",
-        "ethereum": "Requires trusted nodes"
+        "name": "Client Leggeri",
+        "ergo": "NIPoPoW (prove crittografiche)",
+        "bitcoin": "SPV (meno sicuro)",
+        "ethereum": "Richiede nodi fidati"
       }
     ]
   },
   "ecosystemSection": {
-    "title": "Ecosystem",
-    "subtitle": "Discover the growing ecosystem of projects and applications built on Ergo.",
+    "title": "Ecosistema",
+    "subtitle": "Scopri il crescente ecosistema di progetti e applicazioni costruiti su Ergo.",
     "projects": [
       {
         "name": "Spectrum Finance",
-        "description": "Decentralized exchange and liquidity protocol",
+        "description": "Exchange decentralizzato e protocollo di liquidità",
         "category": "DeFi",
         "url": "/ecosystem/spectrum"
       },
       {
         "name": "SigmaUSD",
-        "description": "Algorithmic stablecoin protocol",
+        "description": "Protocollo stablecoin algoritmico",
         "category": "Stablecoin",
         "url": "/ecosystem/sigmausd"
       },
       {
         "name": "Rosen Bridge",
-        "description": "Cross-chain bridge for Ergo and other networks",
-        "category": "Infrastructure",
+        "description": "Bridge cross-chain per Ergo e altre reti",
+        "category": "Infrastruttura",
         "url": "/ecosystem/rosen-bridge"
       },
       {
         "name": "ErgoMixer",
-        "description": "Non-custodial mixing service for privacy",
+        "description": "Servizio di mixing non-custodial per la privacy",
         "category": "Privacy",
         "url": "/ecosystem/ergomixer"
       }
     ],
-    "viewAll": "View All Projects"
+    "viewAll": "Vedi Tutti i Progetti"
   },
   "communitySection": {
-    "title": "Community",
-    "subtitle": "Join the Ergo community and be part of building the future of blockchain.",
+    "title": "Comunità",
+    "subtitle": "Unisciti alla comunità Ergo e partecipa alla costruzione del futuro della blockchain.",
     "links": [
       {
         "name": "Discord",
-        "description": "Join our community chat",
+        "description": "Unisciti alla nostra chat comunitaria",
         "icon": "Discord",
         "url": "https://discord.gg/ergo"
       },
       {
         "name": "Twitter",
-        "description": "Follow for updates",
+        "description": "Segui per gli aggiornamenti",
         "icon": "Twitter",
         "url": "https://x.com/BuildOnErgo"
       },
       {
         "name": "Forum",
-        "description": "Discuss and propose ideas",
+        "description": "Discuti e proponi idee",
         "icon": "MessageSquare",
         "url": "https://ergoforum.org"
       },
       {
         "name": "GitHub",
-        "description": "Contribute to the code",
+        "description": "Contribuisci al codice",
         "icon": "Github",
         "url": "https://github.com/ergoplatform"
       }
     ],
-    "joinCommunity": "Join the Community",
-    "readyToContribute": "Ready to contribute?",
-    "readyToContributeDesc": "Ergo is an open platform where anyone can contribute. Join us in building the future of blockchain.",
-    "getInvolved": "Get Involved"
+    "joinCommunity": "Unisciti alla Comunità",
+    "readyToContribute": "Pronto a contribuire?",
+    "readyToContributeDesc": "Ergo è una piattaforma aperta dove chiunque può contribuire. Unisciti a noi nella costruzione del futuro della blockchain.",
+    "getInvolved": "Partecipa"
   },
   "finalCta": {
-    "title": "Join the Ergo Builders List",
-    "description": "Weekly builder updates: guides, patterns, tools. No spam.",
+    "title": "Unisciti alla Lista dei Costruttori Ergo",
+    "description": "Aggiornamenti settimanali per costruttori: guide, pattern, strumenti. Nessuno spam.",
     "social": {
-      "followTitle": "Follow for daily updates",
-      "twitterAria": "Follow us on Twitter",
-      "telegramAria": "Join our Telegram",
-      "discordAria": "Join our Discord"
+      "followTitle": "Segui per aggiornamenti giornalieri",
+      "twitterAria": "Seguici su Twitter",
+      "telegramAria": "Unisciti al nostro Telegram",
+      "discordAria": "Unisciti al nostro Discord"
     },
     "alreadyOnList": {
-      "title": "You're on the list ✓",
-      "subtitle": "Thanks for being part of the Ergo builders community!"
+      "title": "Sei nella lista ✓",
+      "subtitle": "Grazie per far parte della comunità dei costruttori Ergo!"
     },
     "errors": {
-      "invalidEmail": "Please enter a valid email address",
-      "subscriptionFailed": "Subscription failed. Please try again.",
-      "network": "Network error. Please try again."
+      "invalidEmail": "Inserisci un indirizzo email valido",
+      "subscriptionFailed": "Iscrizione fallita. Riprova.",
+      "network": "Errore di rete. Riprova."
     },
     "form": {
-      "placeholder": "your@email.com",
-      "emailLabel": "Email address",
-      "ariaLabel": "Newsletter subscription form",
-      "submitLabel": "Subscribe",
-      "subscribingLabel": "Subscribing..."
+      "placeholder": "tua@email.com",
+      "emailLabel": "Indirizzo email",
+      "ariaLabel": "Modulo di iscrizione alla newsletter",
+      "submitLabel": "Iscriviti",
+      "subscribingLabel": "Iscrizione in corso..."
     },
     "subscribed": {
-      "label": "✓ Subscribed",
-      "description": "Welcome to the Ergo builders community!"
+      "label": "✓ Iscritto",
+      "description": "Benvenuto nella comunità dei costruttori Ergo!"
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "INIZIA CON ERGO",
+    "subtitle": "Scegli il tuo percorso e inizia il tuo viaggio nell'ecosistema Ergo",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing",
+        "title": "Per Sviluppatori",
+        "description": "Costruisci applicazioni DeFi avanzate e dApp con ErgoScript",
+        "cta": "Inizia a Sviluppare",
         "links": {
-          "documentation": "Documentation",
-          "technology": "Technology",
-          "useCases": "Use Cases"
+          "documentation": "Documentazione",
+          "technology": "Tecnologia",
+          "useCases": "Casi d'uso"
         }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining",
+        "title": "Per Minatori",
+        "description": "Unisciti alla rete di mining Autolykos resistente agli ASIC",
+        "cta": "Inizia a Minare",
         "links": {
-          "miningDocs": "Mining Docs",
-          "miningPools": "Mining Pools",
-          "calculator": "Profitability Calculator"
+          "miningDocs": "Documentazione Mining",
+          "miningPools": "Pool di Mining",
+          "calculator": "Calcolatore di Redditività"
         }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet",
+        "title": "Per Utenti",
+        "description": "Esplora l'ecosistema e inizia a usare Ergo",
+        "cta": "Ottieni Portafoglio",
         "links": {
-          "wallets": "Wallets",
-          "ecosystem": "Ecosystem",
-          "buyErg": "Buy ERG"
+          "wallets": "Portafogli",
+          "ecosystem": "Ecosistema",
+          "buyErg": "Acquista ERG"
         }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing",
+        "title": "Per Investitori",
+        "description": "Scopri le opportunità di investimento nell'ecosistema Ergo",
+        "cta": "Scopri gli Investimenti",
         "links": {
-          "whatIsErgo": "What is Ergo",
-          "projects": "Projects",
-          "community": "Community"
+          "whatIsErgo": "Cos'è Ergo",
+          "projects": "Progetti",
+          "community": "Comunità"
         }
       }
     }
   },
   "blogSection": {
-    "title": "LATEST FROM THE ERGO BLOG",
-    "subtitle": "Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem",
-    "viewAllPosts": "View All Posts"
+    "title": "ULTIME DAL BLOG ERGO",
+    "subtitle": "Resta aggiornato con le ultime notizie, approfondimenti tecnici e aggiornamenti della comunità dall'ecosistema Ergo",
+    "viewAllPosts": "Visualizza Tutti i Post"
   },
   "subscribeSection": {
-    "title": "STAY IN THE LOOP",
-    "subtitle": "Get Ergo releases, grants, dev calls, and top articles delivered weekly",
+    "title": "RESTA AGGIORNATO",
+    "subtitle": "Ricevi rilasci Ergo, grant, chiamate dev e articoli di punta ogni settimana",
     "socialLinks": {
       "discord": "Discord",
       "twitter": "Twitter",
       "telegram": "Telegram"
     },
-    "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+    "privacyNotice": "Rispettiamo la tua privacy. La tua email è utilizzata solo per gli aggiornamenti Ergo e non sarà mai condivisa con terze parti. Puoi annullare l'iscrizione in qualsiasi momento con un solo clic."
   },
   "ecosystemShowcase": {
-    "title": "Decentralize Everything",
-    "exploreEcosystem": "EXPLORE ECOSYSTEM",
+    "title": "Decentralizza Tutto",
+    "exploreEcosystem": "ESPLORA ECOSISTEMA",
     "categories": {
       "defi": "DEFI",
       "privacy": "PRIVACY",
-      "stable": "STABLE ASSETS",
+      "stable": "ASSET STABILI",
       "gaming": "GAMING"
     },
     "projects": {
       "rosenBridge": {
         "title": "Rosen Bridge",
-        "subtitle": "Connecting Ergo's Ecosystem",
-        "description": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
-        "cta": "VISIT ROSEN BRIDGE",
+        "subtitle": "Collegare l'Ecosistema di Ergo",
+        "description": "Trasferisci asset senza soluzione di continuità tra Ergo e altre blockchain leader come Bitcoin, Ethereum, Cardano e BSC con Rosen Bridge. Il nostro sistema sicuro Watcher & Guard sblocca la liquidità cross-chain e nuove possibilità DeFi.",
+        "cta": "VISITA ROSEN BRIDGE",
         "stats": {
           "crossChain": {
             "label": "Cross-Chain",
-            "value": "BTC, ETH, ADA, BSC & more"
+            "value": "BTC, ETH, ADA, BSC e altri"
           },
           "secureBridge": {
-            "label": "Secure Bridge",
-            "value": "Watcher & Guard Model"
+            "label": "Bridge Sicuro",
+            "value": "Modello Watcher & Guard"
           },
           "unlockLiquidity": {
-            "label": "Unlock Liquidity",
-            "value": "Access New Markets"
+            "label": "Sblocca Liquidità",
+            "value": "Accedi a Nuovi Mercati"
           }
         }
       },
       "ergoMixer": {
         "title": "ErgoMixer",
-        "subtitle": "Non-Custodial Privacy Protocol",
-        "description": "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
-        "cta": "LEARN ABOUT PRIVACY ON ERGO",
+        "subtitle": "Protocollo Privacy Non-Custodial",
+        "description": "ErgoMixer offre soluzioni di privacy all'avanguardia usando protocolli Sigma e ring signature. Goditi la completa privacy finanziaria mantenendo la conformità normativa attraverso funzionalità di trasparenza opzionale.",
+        "cta": "SCOPRI LA PRIVACY SU ERGO",
         "stats": {
           "mixedVolume": {
-            "label": "Mixed Volume",
-            "value": "$3.7M"
+            "label": "Volume Mixato",
+            "value": "$3,7M"
           },
           "privacyScore": {
-            "label": "Privacy Score",
-            "value": "99.9%"
+            "label": "Punteggio Privacy",
+            "value": "99,9%"
           },
           "transactions": {
-            "label": "Transactions",
+            "label": "Transazioni",
             "value": "25K+"
           }
         }
       },
       "sigmaUSD": {
         "title": "SigmaUSD",
-        "subtitle": "Algorithmic Stablecoin Protocol",
-        "description": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
-        "cta": "EXPLORE SIGMAUSD",
+        "subtitle": "Protocollo Stablecoin Algoritmico",
+        "description": "SigmaUSD è un protocollo stablecoin algoritmico garantito da criptovalute costruito su Ergo. Fornisce un modo decentralizzato per creare valore stabile senza dipendere dai sistemi bancari tradizionali o riserve centralizzate.",
+        "cta": "ESPLORA SIGMAUSD",
         "stats": {
           "stabilityScore": {
-            "label": "Stability Score",
-            "value": "99.2%"
+            "label": "Punteggio Stabilità",
+            "value": "99,2%"
           },
           "totalSupply": {
-            "label": "Total Supply",
-            "value": "$2.1M"
+            "label": "Fornitura Totale",
+            "value": "$2,1M"
           },
           "collateralRatio": {
-            "label": "Collateral Ratio",
+            "label": "Rapporto di Collaterale",
             "value": "400%"
           }
         }
       },
       "gaming": {
-        "title": "Ergo Gaming Ecosystem",
-        "subtitle": "Blockchain Gaming Platform",
-        "description": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
-        "cta": "START GAMING ON ERGO",
+        "title": "Ecosistema Gaming Ergo",
+        "subtitle": "Piattaforma di Gaming Blockchain",
+        "description": "Vivi il futuro del gaming con la vera proprietà degli asset, meccaniche play-to-earn e tornei decentralizzati. Alimentato dall'infrastruttura blockchain efficiente e sicura di Ergo.",
+        "cta": "INIZIA A GIOCARE SU ERGO",
         "stats": {
           "activeGames": {
-            "label": "Active Games",
+            "label": "Giochi Attivi",
             "value": "12"
           },
           "players": {
-            "label": "Players",
+            "label": "Giocatori",
             "value": "5K+"
           },
           "gameAssets": {
-            "label": "Game Assets",
+            "label": "Asset di Gioco",
             "value": "10K+"
           },
           "rewardsPaid": {
-            "label": "Rewards Paid",
+            "label": "Premi Pagati",
             "value": "$250K"
           }
         }
@@ -577,79 +577,79 @@
     }
   },
   "ctaSection": {
-    "title": "Ready to Build the Future?",
-    "subtitle": "Join the Ergo ecosystem and be part of the decentralized revolution",
+    "title": "Pronto a Costruire il Futuro?",
+    "subtitle": "Unisciti all'ecosistema Ergo e fai parte della rivoluzione decentralizzata",
     "actions": {
       "getStarted": {
-        "title": "Get Started",
-        "description": "Set up wallet & buy ERG",
-        "label": "START NOW"
+        "title": "Inizia",
+        "description": "Configura portafoglio e acquista ERG",
+        "label": "INIZIA ORA"
       },
       "developers": {
-        "title": "For Developers",
-        "description": "Build on Ergo",
-        "label": "START BUILDING"
+        "title": "Per Sviluppatori",
+        "description": "Costruisci su Ergo",
+        "label": "INIZIA A COSTRUIRE"
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Secure the network",
-        "label": "START MINING"
+        "title": "Per Minatori",
+        "description": "Proteggi la rete",
+        "label": "INIZIA A MINARE"
       }
     }
   },
   "whatMakesDifferent": {
-    "title": "WHAT MAKES ERGO DIFFERENT",
-    "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a sustainable, secure, and truly decentralized platform",
+    "title": "COSA RENDE ERGO DIVERSO",
+    "subtitle": "Ergo combina tecniche crittografiche comprovate con un design blockchain innovativo per creare una piattaforma sostenibile, sicura e veramente decentralizzata",
     "features": {
       "fairLaunch": {
-        "title": "FAIR LAUNCH & PROOF-OF-WORK",
-        "description": "Launched with no ICO or premine, secured by Autolykos v2 - an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one."
+        "title": "LANCIO EQUO & PROOF-OF-WORK",
+        "description": "Lanciato senza ICO o premine, protetto da Autolykos v2 - un algoritmo Proof-of-Work resistente agli ASIC ed efficiente dal punto di vista energetico che garantisce distribuzione equa e sicurezza robusta fin dal primo giorno."
       },
       "eutxoErgoscript": {
-        "title": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
-        "description": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi."
+        "title": "eUTXO & ERGOSCRIPT PER DEFI AVANZATO",
+        "description": "Il modello UTXO esteso combinato con il nostro potente linguaggio, ErgoScript, abilita applicazioni finanziarie altamente sicure, prevedibili ed espressive, spingendo i confini del DeFi."
       },
       "storageRent": {
-        "title": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
-        "description": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient."
+        "title": "STORAGE RENT PER LA SOSTENIBILITÀ A LUNGO TERMINE",
+        "description": "Un meccanismo innovativo che garantisce la salute della rete e costi operativi prevedibili riciclando le commissioni dai dati inutilizzati (\"dust\") ai minatori, prevenendo il bloat e mantenendo la catena efficiente."
       },
       "researchDriven": {
-        "title": "RESEARCH-DRIVEN INNOVATION",
-        "description": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity."
+        "title": "INNOVAZIONE GUIDATA DALLA RICERCA",
+        "description": "Costruito su ricerca accademica peer-reviewed e principi fondamentali, Ergo promuove soluzioni robuste e rivoluzionarie progettate per la longevità nel mondo reale."
       },
       "privacy": {
-        "title": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
-        "description": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions."
+        "title": "PRIVACY OPZIONALE ROBUSTA (Σ-PROTOCOLLI)",
+        "description": "Ergo offre funzionalità di privacy flessibili alimentate dai protocolli Sigma, abilitando multi-firme sicure, ring signature e prove a conoscenza zero per opzioni di riservatezza su misura nelle transazioni."
       },
       "communityLed": {
-        "title": "COMMUNITY-LED DEVELOPMENT",
-        "description": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control."
+        "title": "SVILUPPO GUIDATO DALLA COMUNITÀ",
+        "description": "Un progetto open-source veramente decentralizzato dove lo sviluppo è guidato da appassionati membri della comunità e sviluppatori in tutto il mondo, garantendo che il protocollo rimanga libero dal controllo centralizzato."
       }
     }
   },
   "quickActions": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path to explore the Ergo ecosystem",
+    "title": "INIZIA CON ERGO",
+    "subtitle": "Scegli il tuo percorso per esplorare l'ecosistema Ergo",
     "actions": {
       "getWallet": {
-        "title": "GET WALLET",
-        "description": "Set up your Ergo wallet"
+        "title": "OTTIENI PORTAFOGLIO",
+        "description": "Configura il tuo portafoglio Ergo"
       },
       "buyErg": {
-        "title": "BUY ERG",
-        "description": "Purchase Ergo tokens"
+        "title": "ACQUISTA ERG",
+        "description": "Acquista token Ergo"
       },
       "tryDapp": {
-        "title": "TRY A DAPP",
-        "description": "Explore decentralized apps"
+        "title": "PROVA UNA DAPP",
+        "description": "Esplora app decentralizzate"
       },
       "mineErg": {
-        "title": "MINE ERG",
-        "description": "Secure the network"
+        "title": "MINA ERG",
+        "description": "Proteggi la rete"
       },
       "joinCommunity": {
-        "title": "JOIN COMMUNITY",
-        "description": "Connect with Ergo users"
+        "title": "UNISCITI ALLA COMUNITÀ",
+        "description": "Connettiti con gli utenti Ergo"
       }
     }
   }

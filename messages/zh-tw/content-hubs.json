@@ -2,375 +2,375 @@
   "questionsData": {},
   "topicsData": {
     "ergo-defi": {
-      "title": "DeFi on Ergo",
-      "subtitle": "Decentralized Finance Without MEV, Without Permission",
-      "heroStatement": "DeFi that actually works for users, not extractors.",
-      "introduction": "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo eliminates entire categories of exploits that plague traditional DeFi: no front-running, no sandwich attacks, no MEV extraction. Every transaction's cost is known before you send it. Every trade executes exactly as expected. This isn't a minor improvement - it's a structural advantage that makes DeFi actually usable for regular people, not just sophisticated traders with MEV bots.",
-      "whatMakesUnique": "While Ethereum DeFi has become a 'dark forest' where users are hunted by MEV extractors, Ergo's eUTXO model creates a fundamentally fairer environment. Transactions reference specific boxes (UTXOs), making reordering attacks impractical. Oracle Pools provide decentralized price feeds without single points of failure. And because Ergo is PoW with fair launch, there's no VC cartel controlling governance or extracting value from the protocol.",
+      "title": "Ergo 上的 DeFi",
+      "subtitle": "去中心化金融，無 MEV，無需許可",
+      "heroStatement": "真正為用戶服務的 DeFi，而非剝削者。",
+      "introduction": "Ergo 對 DeFi 的方法與 Ethereum 等基於帳戶的鏈有根本性的不同。建立在 eUTXO 模型之上，Ergo 消除了困擾傳統 DeFi 的整類漏洞：無搶先交易、無三明治攻擊、無 MEV 提取。每筆交易的成本在發送前即可知曉。每筆交易都會按預期執行。這不只是小改進——這是一種結構性優勢，使 DeFi 真正對普通人可用，而不僅僅是擁有 MEV 機器人的複雜交易者。",
+      "whatMakesUnique": "當 Ethereum DeFi 已成為用戶被 MEV 提取者追捕的「黑暗森林」時，Ergo 的 eUTXO 模型創造了一個從根本上更公平的環境。交易引用特定的盒子（UTXOs），使重新排序攻擊不切實際。預言機池提供去中心化的價格饋送，無單一故障點。而且因為 Ergo 是具有公平發行的 PoW，沒有風投集團控制治理或從協議中提取價值。",
       "keyDifferentiators": [
-        "No MEV extraction: transactions can't be front-run or sandwiched by design",
-        "Predictable fees: know exactly what you'll pay before sending (~$0.01)",
-        "Deterministic execution: transactions either fully succeed or fully fail",
-        "Decentralized oracles: Oracle Pools provide trustless price feeds",
-        "Fair launch: no VC allocation, no insider advantages"
+        "無 MEV 提取：交易在設計上不能被搶先交易或夾擊",
+        "可預測費用：發送前確切知道您將支付的金額（約 $0.01）",
+        "確定性執行：交易要麼完全成功，要麼完全失敗",
+        "去中心化預言機：預言機池提供無需信任的價格饋送",
+        "公平發行：無 VC 分配，無內部人優勢"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Understanding Ergo DeFi",
-          "description": "Core concepts and how it differs from EVM DeFi"
+          "title": "了解 Ergo DeFi",
+          "description": "核心概念及其與 EVM DeFi 的差異"
         },
         {
           "id": "ecosystem",
-          "title": "DeFi Ecosystem",
-          "description": "DEXs, stablecoins, lending, and more"
+          "title": "DeFi 生態系統",
+          "description": "DEX、穩定幣、借貸等"
         },
         {
           "id": "build",
-          "title": "Build DeFi Apps",
-          "description": "Developer resources and patterns"
+          "title": "構建 DeFi 應用",
+          "description": "開發者資源和模式"
         },
         {
           "id": "philosophy",
-          "title": "DeFi Philosophy",
-          "description": "Why fair DeFi matters"
+          "title": "DeFi 哲學",
+          "description": "公平 DeFi 為何重要"
         }
       ],
       "keyTerms": [
         {
           "term": "eUTXO",
           "slug": "eutxo",
-          "shortDefinition": "Extended UTXO model that enables smart contracts while maintaining Bitcoin-like security"
+          "shortDefinition": "擴展 UTXO 模型，在保持類 Bitcoin 安全性的同時啟用智能合約"
         },
         {
-          "term": "MEV Resistance",
+          "term": "MEV 抗性",
           "slug": "mev-resistance",
-          "shortDefinition": "Structural protection against front-running and sandwich attacks"
+          "shortDefinition": "針對搶先交易和三明治攻擊的結構性保護"
         },
         {
-          "term": "Oracle Pools",
+          "term": "預言機池",
           "slug": "oracle-pools",
-          "shortDefinition": "Decentralized system for bringing off-chain data to smart contracts"
+          "shortDefinition": "將鏈下數據帶到智能合約的去中心化系統"
         },
         {
           "term": "SigmaUSD",
           "slug": "sigmausd",
-          "shortDefinition": "Algorithmic stablecoin backed by ERG reserves"
+          "shortDefinition": "由 ERG 儲備支持的算法穩定幣"
         },
         {
-          "term": "Babel Fees",
+          "term": "Babel 費用",
           "slug": "babel-fees",
-          "shortDefinition": "Pay transaction fees in any token, not just ERG"
+          "shortDefinition": "使用任何代幣支付交易費用，而非僅限 ERG"
         },
         {
-          "term": "Boxes",
+          "term": "盒子",
           "slug": "boxes",
-          "shortDefinition": "eUTXO containers holding value, tokens, and smart contract data"
+          "shortDefinition": "保存價值、代幣和智能合約數據的 eUTXO 容器"
         }
       ]
     },
     "ergo-privacy": {
-      "title": "Privacy on Ergo",
-      "subtitle": "Programmable Privacy with Sigma Protocols",
-      "heroStatement": "Privacy is not about hiding. It",
-      "introduction": "Ergo takes a unique approach to blockchain privacy: optional, programmable, and provable. Unlike always-on privacy coins that hide everything, Ergo's Sigma Protocols let you prove things about your data without revealing the data itself. You can prove you're over 18 without showing your birthdate. Prove you have sufficient funds without revealing your balance. Prove membership in a group without identifying yourself. This is privacy that works in the real world - where sometimes you need to prove compliance while protecting your details.",
-      "whatMakesUnique": "Most privacy solutions force a binary choice: full transparency or full opacity. Ergo's Sigma Protocols enable selective disclosure - reveal exactly what's needed, nothing more. This isn't just academic cryptography; it's built into ErgoScript as a first-class primitive. Every smart contract can incorporate zero-knowledge proofs. ErgoMixer provides non-interactive, non-custodial mixing. And because privacy is optional, Ergo remains accessible to regulated entities while empowering individuals.",
+      "title": "Ergo 上的隱私",
+      "subtitle": "使用 Sigma 協議的可程式化隱私",
+      "heroStatement": "隱私不是關於隱藏。它",
+      "introduction": "Ergo 對區塊鏈隱私採取獨特方式：可選的、可程式化的和可證明的。與隱藏一切的強制隱私幣不同，Ergo 的 Sigma 協議讓您可以在不揭露數據本身的情況下證明關於您數據的事情。您可以在不顯示出生日期的情況下證明您已年滿 18 歲。在不揭露餘額的情況下證明您有足夠的資金。在不識別自己的情況下證明群組成員資格。這是在現實世界中有效的隱私——有時您需要在保護詳細信息的同時證明合規性。",
+      "whatMakesUnique": "大多數隱私解決方案強制二元選擇：完全透明或完全不透明。Ergo 的 Sigma 協議實現選擇性披露——確切揭露所需的內容，不多也不少。這不僅僅是學術密碼學；它作為一等原語內置於 ErgoScript 中。每個智能合約都可以包含零知識證明。ErgoMixer 提供非互動式、非託管混幣。而且因為隱私是可選的，Ergo 對受監管實體保持可訪問性，同時賦予個人權力。",
       "keyDifferentiators": [
-        "Sigma Protocols: native zero-knowledge proofs in every smart contract",
-        "Selective disclosure: prove statements without revealing underlying data",
-        "ErgoMixer: non-custodial, non-interactive token mixing",
-        "Programmable privacy: build custom privacy logic into dApps",
-        "Optional by design: transparent when needed, private when required"
+        "Sigma 協議：每個智能合約中的原生零知識證明",
+        "選擇性披露：在不揭露底層數據的情況下證明陳述",
+        "ErgoMixer：非託管、非互動式代幣混幣",
+        "可程式化隱私：將自定義隱私邏輯構建到 dApp 中",
+        "設計上的可選性：需要時透明，需要時私密"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Understanding Ergo Privacy",
-          "description": "How privacy works on Ergo"
+          "title": "了解 Ergo 隱私",
+          "description": "Ergo 上隱私如何運作"
         },
         {
           "id": "sigma",
-          "title": "Sigma Protocols",
-          "description": "Zero-knowledge proofs explained"
+          "title": "Sigma 協議",
+          "description": "零知識證明解釋"
         },
         {
           "id": "tools",
-          "title": "Privacy Tools",
-          "description": "ErgoMixer and other privacy applications"
+          "title": "隱私工具",
+          "description": "ErgoMixer 和其他隱私應用"
         },
         {
           "id": "philosophy",
-          "title": "Privacy Philosophy",
-          "description": "Why privacy matters for freedom"
+          "title": "隱私哲學",
+          "description": "隱私為何對自由重要"
         }
       ],
       "keyTerms": [
         {
-          "term": "Sigma Protocols",
+          "term": "Sigma 協議",
           "slug": "sigma-protocols",
-          "shortDefinition": "Zero-knowledge proof systems for proving statements without revealing data"
+          "shortDefinition": "用於在不揭露數據的情況下證明陳述的零知識證明系統"
         },
         {
           "term": "ErgoMixer",
           "slug": "ergomixer",
-          "shortDefinition": "Non-interactive, non-custodial token mixing service"
+          "shortDefinition": "非互動式、非託管代幣混幣服務"
         },
         {
-          "term": "Zero-Knowledge Proofs",
+          "term": "零知識證明",
           "slug": "zero-knowledge-proofs",
-          "shortDefinition": "Cryptographic proofs that reveal nothing except the truth of a statement"
+          "shortDefinition": "除了陳述的真實性之外不揭露任何內容的密碼學證明"
         },
         {
-          "term": "Selective Disclosure",
+          "term": "選擇性披露",
           "slug": "selective-disclosure",
-          "shortDefinition": "Revealing only specific data while keeping the rest private"
+          "shortDefinition": "只揭露特定數據，同時保持其餘部分私密"
         },
         {
-          "term": "Ring Signatures",
+          "term": "環簽名",
           "slug": "ring-signatures",
-          "shortDefinition": "Signatures that prove group membership without identifying the signer"
+          "shortDefinition": "在不識別簽名者的情況下證明群組成員資格的簽名"
         }
       ]
     },
     "ergo-mining": {
-      "title": "Mining Ergo",
-      "subtitle": "Fair, Accessible, ASIC-Resistant Proof-of-Work",
-      "heroStatement": "Mining without masters. Proof-of-Work for everyone.",
-      "introduction": "Ergo's Autolykos algorithm represents a return to Bitcoin's original vision: mining accessible to regular people with consumer hardware. Unlike Bitcoin's ASIC-dominated mining or Ethereum's move to PoS, Ergo maintains GPU-friendly, memory-hard Proof-of-Work. This isn't nostalgia - it's a deliberate design choice for decentralization. When anyone can mine with their gaming PC, no single entity can dominate hashrate. When mining is distributed, censorship resistance is real.",
-      "whatMakesUnique": "Autolykos v2 is memory-hard, requiring significant RAM that makes ASIC development uneconomical. The algorithm was designed by cryptographers, not as an afterthought. Storage rent provides sustainable miner revenue after emission ends - solving Bitcoin's long-term security budget problem. And Ergo's fair launch means miners aren't competing against VC-subsidized insiders; everyone started from zero.",
+      "title": "挖掘 Ergo",
+      "subtitle": "公平、可訪問、抗 ASIC 的工作量證明",
+      "heroStatement": "無主人的挖礦。人人可用的工作量證明。",
+      "introduction": "Ergo 的 Autolykos 算法代表回歸 Bitcoin 的原始願景：使用消費者硬件的普通人可以訪問的挖礦。與 Bitcoin 的 ASIC 主導挖礦或 Ethereum 轉向 PoS 不同，Ergo 保持 GPU 友好、內存難的工作量證明。這不是懷舊——這是去中心化的刻意設計選擇。當任何人都可以用遊戲電腦挖礦時，沒有任何單一實體可以主導算力。當挖礦分散時，抗審查性是真實的。",
+      "whatMakesUnique": "Autolykos v2 是內存難的，需要大量 RAM，使 ASIC 開發在經濟上不可行。該算法由密碼學家設計，而非事後考慮。儲存租金在發行結束後提供可持續的礦工收入——解決了 Bitcoin 的長期安全預算問題。而且 Ergo 的公平發行意味著礦工不是在與風投資助的內部人競爭；每個人都從零開始。",
       "keyDifferentiators": [
-        "ASIC-resistant: Autolykos keeps mining accessible to GPU miners",
-        "Memory-hard: requires RAM, not just raw compute power",
-        "Storage rent: sustainable miner income after block rewards end",
-        "Fair launch: no pre-mine advantage for anyone",
-        "Pool mining: Autolykos v2 enables pool participation"
+        "抗 ASIC：Autolykos 保持 GPU 礦工的挖礦可訪問性",
+        "內存難：需要 RAM，而不僅僅是原始算力",
+        "儲存租金：區塊獎勵結束後的可持續礦工收入",
+        "公平發行：任何人都沒有預挖優勢",
+        "礦池挖礦：Autolykos v2 啟用礦池參與"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Understanding Ergo Mining",
-          "description": "How Autolykos works and why it matters"
+          "title": "了解 Ergo 挖礦",
+          "description": "Autolykos 如何運作及其重要性"
         },
         {
           "id": "setup",
-          "title": "Mining Setup",
-          "description": "Hardware, software, and pool selection"
+          "title": "挖礦設置",
+          "description": "硬件、軟件和礦池選擇"
         },
         {
           "id": "economics",
-          "title": "Mining Economics",
-          "description": "Profitability, rewards, and sustainability"
+          "title": "挖礦經濟學",
+          "description": "盈利能力、獎勵和可持續性"
         },
         {
           "id": "philosophy",
-          "title": "PoW Philosophy",
-          "description": "Why Proof-of-Work matters"
+          "title": "PoW 哲學",
+          "description": "工作量證明為何重要"
         }
       ],
       "keyTerms": [
         {
-          "term": "Storage Rent",
+          "term": "儲存租金",
           "slug": "storage-rent",
-          "shortDefinition": "Fee mechanism providing sustainable miner revenue"
+          "shortDefinition": "提供可持續礦工收入的費用機制"
         },
         {
-          "term": "Proof-of-Work",
+          "term": "工作量證明",
           "slug": "proof-of-work",
-          "shortDefinition": "Consensus mechanism where miners expend energy to secure the network"
+          "shortDefinition": "礦工消耗能量以保護網路的共識機制"
         },
         {
-          "term": "Emission Schedule",
+          "term": "發行計劃",
           "slug": "emission-schedule",
-          "shortDefinition": "The predetermined release of new ERG through mining"
+          "shortDefinition": "通過挖礦預定發行新 ERG"
         },
         {
-          "term": "Memory-Hard",
+          "term": "內存難",
           "slug": "memory-hard",
-          "shortDefinition": "Algorithm requiring significant RAM, resisting ASIC optimization"
+          "shortDefinition": "需要大量 RAM 的算法，抵抗 ASIC 優化"
         }
       ]
     },
     "ergo-technology": {
-      "title": "Ergo Technology",
-      "subtitle": "Research-Driven Innovation for Real-World Use",
-      "heroStatement": "Technology that solves real problems, not hype cycles.",
-      "introduction": "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO eliminates MEV and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to every smart contract. The result is a blockchain that's simultaneously more secure, more scalable, and more private than its competitors.",
-      "whatMakesUnique": "Most blockchains copy Ethereum's account model or Bitcoin's simple scripts. Ergo charts a different path: extending Bitcoin's UTXO model with rich smart contract capabilities while maintaining its security properties. ErgoScript is a functional language, not imperative like Solidity - this makes contracts easier to verify and harder to exploit. NiPoPoWs enable truly trustless light clients and efficient cross-chain bridges. These aren't incremental improvements; they're architectural advantages.",
+      "title": "Ergo 技術",
+      "subtitle": "研究驅動的現實世界創新",
+      "heroStatement": "解決真實問題的技術，而非炒作周期。",
+      "introduction": "Ergo 的技術棧代表了多年學術研究轉化為實際區塊鏈創新的成果。每個主要組件——eUTXO、ErgoScript、NiPoPoWs、Sigma 協議——都來自同行評審的密碼學研究。這不是為了技術而技術；每項創新都解決了特定問題。eUTXO 消除了 MEV 並啟用並行處理。NiPoPoWs 將區塊鏈證明從千兆字節壓縮到千字節。Sigma 協議將零知識證明帶到每個智能合約。結果是一個同時比競爭對手更安全、更可擴展和更私密的區塊鏈。",
+      "whatMakesUnique": "大多數區塊鏈複製 Ethereum 的帳戶模型或 Bitcoin 的簡單腳本。Ergo 走了一條不同的路：用豐富的智能合約能力擴展 Bitcoin 的 UTXO 模型，同時保持其安全屬性。ErgoScript 是一種函數式語言，而非像 Solidity 那樣的命令式語言——這使合約更容易驗證且更難利用。NiPoPoWs 使真正無需信任的輕客戶端和高效的跨鏈橋成為可能。這些不是增量改進；它們是架構優勢。",
       "keyDifferentiators": [
-        "eUTXO: smart contracts with Bitcoin-level security guarantees",
-        "ErgoScript: functional, verifiable smart contract language",
-        "NiPoPoWs: logarithmic proof compression for light clients",
-        "Sigma Protocols: native zero-knowledge proofs",
-        "Research-driven: peer-reviewed cryptography, not marketing"
+        "eUTXO：具有 Bitcoin 級別安全保證的智能合約",
+        "ErgoScript：函數式、可驗證的智能合約語言",
+        "NiPoPoWs：輕客戶端的對數證明壓縮",
+        "Sigma 協議：原生零知識證明",
+        "研究驅動：同行評審密碼學，而非市場營銷"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Technology Overview",
-          "description": "The Ergo technology stack"
+          "title": "技術概覽",
+          "description": "Ergo 技術棧"
         },
         {
           "id": "eutxo",
-          "title": "eUTXO Model",
-          "description": "Extended UTXO explained"
+          "title": "eUTXO 模型",
+          "description": "擴展 UTXO 解釋"
         },
         {
           "id": "scripting",
-          "title": "Smart Contracts",
-          "description": "ErgoScript and contract development"
+          "title": "智能合約",
+          "description": "ErgoScript 和合約開發"
         },
         {
           "id": "scaling",
-          "title": "Scaling & Light Clients",
-          "description": "NiPoPoWs and future scaling"
+          "title": "擴展和輕客戶端",
+          "description": "NiPoPoWs 和未來擴展"
         }
       ],
       "keyTerms": [
         {
           "term": "eUTXO",
           "slug": "eutxo",
-          "shortDefinition": "Extended UTXO model combining Bitcoin security with smart contract flexibility"
+          "shortDefinition": "結合 Bitcoin 安全性和智能合約靈活性的擴展 UTXO 模型"
         },
         {
           "term": "ErgoScript",
           "slug": "ergoscript",
-          "shortDefinition": "Functional smart contract language with native Sigma Protocol support"
+          "shortDefinition": "具有原生 Sigma 協議支持的函數式智能合約語言"
         },
         {
           "term": "NiPoPoWs",
           "slug": "nipopows",
-          "shortDefinition": "Proofs that compress blockchain history to kilobytes"
+          "shortDefinition": "將區塊鏈歷史壓縮到千字節的證明"
         },
         {
-          "term": "Boxes",
+          "term": "盒子",
           "slug": "boxes",
-          "shortDefinition": "eUTXO containers holding value, tokens, and contract data"
+          "shortDefinition": "保存價值、代幣和合約數據的 eUTXO 容器"
         },
         {
-          "term": "Subblocks",
+          "term": "子塊",
           "slug": "subblocks",
-          "shortDefinition": "Technology for faster transaction confirmations"
+          "shortDefinition": "用於更快交易確認的技術"
         },
         {
-          "term": "Velvet Forks",
+          "term": "絲絨分叉",
           "slug": "velvet-forks",
-          "shortDefinition": "Soft protocol upgrades without hard forks"
+          "shortDefinition": "無需硬分叉的軟協議升級"
         }
       ]
     },
     "ergo-philosophy": {
-      "title": "Ergo Philosophy",
-      "subtitle": "Cypherpunk Values for Financial Freedom",
-      "heroStatement": "Money without masters. Finance without permission.",
-      "introduction": "Ergo isn't just a blockchain - it's a statement about what cryptocurrency should be. In a world where most 'crypto' projects are VC-backed, pre-mined, and designed for extraction, Ergo represents a return to first principles. No pre-mine. No ICO. No VC allocation. 100% of ERG comes from mining, just like Bitcoin. This isn't idealism; it's the foundation for genuine decentralization. When no insider group controls a majority of tokens, governance is actually decentralized. When there's no VC exit to fund, development serves users, not investors.",
-      "whatMakesUnique": "Ergo was built by people who remember why Bitcoin was created: to provide an alternative to a financial system that serves the powerful at the expense of everyone else. The Ergo Manifesto articulates a vision of financial tools for ordinary people, not just sophisticated traders or wealthy investors. Privacy is a right, not a feature to be regulated away. Self-custody is the default, not an option. And the technology is designed to remain accessible - ASIC-resistant mining, light clients, low fees - so that participation isn't limited to those with resources.",
+      "title": "Ergo 哲學",
+      "subtitle": "密碼朋克的金融自由價值觀",
+      "heroStatement": "無主人的貨幣。無需許可的金融。",
+      "introduction": "Ergo 不僅僅是一個區塊鏈——它是關於加密貨幣應該是什麼的宣言。在大多數「加密」項目由風投支持、預挖且為提取而設計的世界中，Ergo 代表回歸第一性原則。無預挖。無 ICO。無 VC 分配。100% 的 ERG 來自挖礦，就像 Bitcoin 一樣。這不是理想主義；這是真正去中心化的基礎。當沒有內部人群體控制大多數代幣時，治理才是真正去中心化的。當沒有 VC 退出需要資助時，開發服務於用戶，而非投資者。",
+      "whatMakesUnique": "Ergo 由記得 Bitcoin 為何被創造的人建立：提供一個替代服務於有權勢者而犧牲其他所有人的金融系統的選擇。Ergo 宣言闡明了為普通人提供金融工具的願景，而不僅僅是複雜的交易者或富有的投資者。隱私是一種權利，而不是一個可以被監管掉的功能。自我托管是默認，而不是一個選項。技術設計為保持可訪問性——抗 ASIC 挖礦、輕客戶端、低費用——使參與不僅限於有資源的人。",
       "keyDifferentiators": [
-        "Fair launch: no pre-mine, no ICO, no VC allocation",
-        "Cypherpunk values: privacy, self-custody, censorship resistance",
-        "Community-owned: no controlling foundation or company",
-        "Accessible: designed for ordinary people, not just institutions",
-        "Long-term thinking: sustainability over short-term gains"
+        "公平發行：無預挖、無 ICO、無 VC 分配",
+        "密碼朋克價值觀：隱私、自我托管、抗審查",
+        "社區擁有：無控制性基金會或公司",
+        "可訪問：為普通人設計，而不僅僅是機構",
+        "長遠思考：可持續性優先於短期收益"
       ],
       "sections": [
         {
           "id": "manifesto",
-          "title": "The Ergo Manifesto",
-          "description": "Core principles and vision"
+          "title": "Ergo 宣言",
+          "description": "核心原則和願景"
         },
         {
           "id": "fair-launch",
-          "title": "Fair Launch",
-          "description": "Why distribution matters"
+          "title": "公平發行",
+          "description": "為何分配重要"
         },
         {
           "id": "freedom",
-          "title": "Financial Freedom",
-          "description": "Tools for sovereignty"
+          "title": "金融自由",
+          "description": "主權工具"
         }
       ],
       "keyTerms": [
         {
-          "term": "Fair Launch",
+          "term": "公平發行",
           "slug": "fair-launch",
-          "shortDefinition": "No pre-mine, no ICO, no insider allocation - 100% mined"
+          "shortDefinition": "無預挖、無 ICO、無內部人分配——100% 挖礦"
         },
         {
-          "term": "Cypherpunk",
+          "term": "密碼朋克",
           "slug": "cypherpunk",
-          "shortDefinition": "Movement advocating privacy and cryptography for social change"
+          "shortDefinition": "倡導隱私和密碼學進行社會變革的運動"
         },
         {
-          "term": "Self-Custody",
+          "term": "自我托管",
           "slug": "self-custody",
-          "shortDefinition": "Holding your own keys, controlling your own assets"
+          "shortDefinition": "持有自己的密鑰，控制自己的資產"
         },
         {
-          "term": "Censorship Resistance",
+          "term": "抗審查",
           "slug": "censorship-resistance",
-          "shortDefinition": "Ability to transact without permission from any authority"
+          "shortDefinition": "無需任何機構許可即可交易的能力"
         },
         {
-          "term": "Financial Sovereignty",
+          "term": "金融主權",
           "slug": "financial-sovereignty",
-          "shortDefinition": "Complete control over your financial life"
+          "shortDefinition": "對您的金融生活的完全控制"
         }
       ]
     },
     "ergo-sustainability": {
-      "title": "Ergo Sustainability",
-      "subtitle": "Built to Last: Long-Term Economics and Security",
-      "heroStatement": "A blockchain designed for centuries, not quarters.",
-      "introduction": "Most blockchains face a fundamental problem: what happens when block rewards run out? Bitcoin's security budget relies on fees that may not materialize. PoS chains depend on perpetual inflation. Ergo solves this with storage rent - a small fee on dormant UTXOs that provides sustainable miner revenue forever. Combined with a carefully designed emission schedule and state management, Ergo is built for genuine long-term sustainability, not just the next market cycle.",
-      "whatMakesUnique": "Storage rent isn't just about miner revenue - it's about blockchain health. By incentivizing the cleanup of unused state, Ergo prevents the bloat that makes full nodes increasingly expensive to run. Lost coins gradually return to circulation instead of being locked forever. And because rent is only charged on boxes untouched for 4+ years, active users are unaffected. This is sustainability through design, not hope.",
+      "title": "Ergo 可持續性",
+      "subtitle": "建立持久：長期經濟學和安全性",
+      "heroStatement": "為幾個世紀設計的區塊鏈，而非幾個季度。",
+      "introduction": "大多數區塊鏈面臨一個根本問題：當區塊獎勵耗盡時會發生什麼？Bitcoin 的安全預算依賴於可能無法實現的費用。PoS 鏈依賴永久通脹。Ergo 通過儲存租金解決了這個問題——對休眠 UTXO 收取的小額費用，永遠為礦工提供可持續收入。結合精心設計的發行計劃和狀態管理，Ergo 為真正的長期可持續性而建立，而不僅僅是下一個市場周期。",
+      "whatMakesUnique": "儲存租金不僅僅關於礦工收入——它關乎區塊鏈健康。通過激勵清理未使用的狀態，Ergo 防止了使全節點越來越昂貴的膨脹。丟失的硬幣逐漸回到流通，而不是永遠鎖定。而且因為租金只對超過 4 年未動的盒子收取，活躍用戶不受影響。這是通過設計實現的可持續性，而非希望。",
       "keyDifferentiators": [
-        "Storage rent: sustainable miner revenue after emission ends",
-        "State cleanup: incentivizes removing unused data",
-        "Lost coin recovery: dormant coins return to circulation",
-        "Predictable emission: known supply schedule",
-        "Full node affordability: manageable state size forever"
+        "儲存租金：發行結束後的可持續礦工收入",
+        "狀態清理：激勵刪除未使用數據",
+        "丟失硬幣回收：休眠硬幣返回流通",
+        "可預測發行：已知的供應計劃",
+        "全節點可負擔性：永遠可管理的狀態大小"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Sustainability Overview",
-          "description": "How Ergo ensures long-term viability"
+          "title": "可持續性概覽",
+          "description": "Ergo 如何確保長期可行性"
         },
         {
           "id": "storage-rent",
-          "title": "Storage Rent",
-          "description": "The key sustainability mechanism"
+          "title": "儲存租金",
+          "description": "關鍵可持續性機制"
         },
         {
           "id": "economics",
-          "title": "Economic Model",
-          "description": "Emission, fees, and incentives"
+          "title": "經濟模型",
+          "description": "發行、費用和激勵"
         },
         {
           "id": "future",
-          "title": "Long-Term Vision",
-          "description": "Ergo in 50+ years"
+          "title": "長期願景",
+          "description": "50 年以上的 Ergo"
         }
       ],
       "keyTerms": [
         {
-          "term": "Storage Rent",
+          "term": "儲存租金",
           "slug": "storage-rent",
-          "shortDefinition": "Fee on dormant boxes providing sustainable miner revenue"
+          "shortDefinition": "對休眠盒子收取的費用，提供可持續礦工收入"
         },
         {
-          "term": "Emission Schedule",
+          "term": "發行計劃",
           "slug": "emission-schedule",
-          "shortDefinition": "Predetermined release of new ERG through mining"
+          "shortDefinition": "通過挖礦預定發行新 ERG"
         },
         {
-          "term": "State Bloat",
+          "term": "狀態膨脹",
           "slug": "state-bloat",
-          "shortDefinition": "Growth of blockchain state making nodes expensive"
+          "shortDefinition": "使節點昂貴的區塊鏈狀態增長"
         },
         {
-          "term": "Adaptive Emission",
+          "term": "自適應發行",
           "slug": "adaptive-emission",
-          "shortDefinition": "Dynamic adjustment of block rewards based on conditions"
+          "shortDefinition": "根據條件動態調整區塊獎勵"
         }
       ]
     }
@@ -379,120 +379,120 @@
   "patternsData": {},
   "questionsHub": {
     "hero": {
-      "title": "Your Questions,",
-      "titleHighlight": "Answered",
-      "subtitle": "Find expert answers to common questions about Ergo blockchain. Each answer links to deep-dive resources for further learning.",
-      "searchPlaceholder": "Search questions..."
+      "title": "您的問題，",
+      "titleHighlight": "已解答",
+      "subtitle": "尋找關於 Ergo 區塊鏈常見問題的專家解答。每個解答均鏈接到深度資源以供進一步學習。",
+      "searchPlaceholder": "搜尋問題..."
     },
     "filters": {
       "categories": [
-        { "id": "all", "label": "All Questions" },
-        { "id": "DeFi", "label": "DeFi & Trading" },
-        { "id": "Privacy", "label": "Privacy" },
-        { "id": "Mining", "label": "Mining" },
-        { "id": "Technology", "label": "Technology" },
-        { "id": "Philosophy", "label": "Philosophy & Freedom" },
-        { "id": "Getting Started", "label": "Getting Started" }
+        { "id": "all", "label": "所有問題" },
+        { "id": "DeFi", "label": "DeFi 與交易" },
+        { "id": "Privacy", "label": "隱私" },
+        { "id": "Mining", "label": "挖礦" },
+        { "id": "Technology", "label": "技術" },
+        { "id": "Philosophy", "label": "哲學與自由" },
+        { "id": "Getting Started", "label": "入門" }
       ],
       "personas": [
-        { "id": "all", "label": "Everyone" },
-        { "id": "builder", "label": "Builders" },
-        { "id": "miner", "label": "Miners" },
-        { "id": "investor", "label": "Investors" },
-        { "id": "freedom_seeker", "label": "Freedom Seekers" },
-        { "id": "cypherpunk", "label": "Cypherpunks" },
-        { "id": "general", "label": "General" }
+        { "id": "all", "label": "所有人" },
+        { "id": "builder", "label": "建設者" },
+        { "id": "miner", "label": "礦工" },
+        { "id": "investor", "label": "投資者" },
+        { "id": "freedom_seeker", "label": "自由尋求者" },
+        { "id": "cypherpunk", "label": "密碼朋克" },
+        { "id": "general", "label": "一般" }
       ]
     },
     "aria": {
-      "filtersGroup": "Filter questions",
-      "categoryFilter": "Category filter",
-      "filterByCategory": "Filter by {category}",
-      "mostPopularList": "Most popular questions",
-      "filteredList": "Filtered questions"
+      "filtersGroup": "篩選問題",
+      "categoryFilter": "類別篩選",
+      "filterByCategory": "按 {category} 篩選",
+      "mostPopularList": "最受歡迎的問題",
+      "filteredList": "篩選後的問題"
     },
     "featured": {
-      "title": "Most Popular Questions"
+      "title": "最受歡迎的問題"
     },
     "results": {
-      "questionsFound": "Question",
-      "questionsFoundPlural": "Questions",
-      "found": "Found"
+      "questionsFound": "個問題",
+      "questionsFoundPlural": "個問題",
+      "found": "找到"
     },
     "noResults": {
-      "message": "No questions match your search.",
-      "clearFilters": "Clear filters"
+      "message": "沒有與您的搜尋相符的問題。",
+      "clearFilters": "清除篩選"
     },
     "category": {
-      "questions": "questions",
-      "showLess": "Show less",
-      "showAll": "Show all"
+      "questions": "個問題",
+      "showLess": "顯示較少",
+      "showAll": "顯示全部"
     },
     "intent": {
-      "how_to": "How-to",
-      "what_is": "Explainer",
-      "compare": "Comparison",
-      "problem": "Solution",
-      "philosophy": "Philosophy"
+      "how_to": "操作指南",
+      "what_is": "解釋說明",
+      "compare": "比較",
+      "problem": "解決方案",
+      "philosophy": "哲學"
     },
     "cta": {
-      "title": "Can't find your question?",
-      "description": "Join our community on Discord or Telegram and ask directly. Our community is always happy to help.",
-      "joinCommunity": "Join Community",
-      "browseGlossary": "Browse Glossary"
+      "title": "找不到您的問題？",
+      "description": "加入我們在 Discord 或 Telegram 上的社群並直接提問。我們的社群隨時樂於提供幫助。",
+      "joinCommunity": "加入社群",
+      "browseGlossary": "瀏覽術語表"
     }
   },
   "questionsPage": {
     "seo": {
-      "title": "Ergo Q&A Hub: Answers to Your Blockchain Questions",
-      "description": "Find answers to common questions about Ergo blockchain: DeFi, privacy, mining, technology, and getting started. Expert answers with deep-dive resources.",
-      "keywords": "Ergo FAQ, Ergo questions, eUTXO explained, Ergo DeFi, Ergo mining, Ergo privacy, blockchain questions"
+      "title": "Ergo 問答中心：您的區塊鏈問題解答",
+      "description": "尋找關於 Ergo 區塊鏈常見問題的解答：DeFi、隱私、挖礦、技術和入門。專家解答和深度資源。",
+      "keywords": "Ergo 常見問題, Ergo 問題, eUTXO 解釋, Ergo DeFi, Ergo 挖礦, Ergo 隱私, 區塊鏈問題"
     },
     "schema": {
       "itemList": {
-        "name": "Ergo Q&A Directory",
-        "description": "Comprehensive answers to common Ergo blockchain questions"
+        "name": "Ergo 問答目錄",
+        "description": "Ergo 區塊鏈常見問題的全面解答"
       },
       "collection": {
-        "name": "Ergo Q&A Hub",
-        "description": "Expert answers to questions about Ergo blockchain"
+        "name": "Ergo 問答中心",
+        "description": "Ergo 區塊鏈問題的專家解答"
       },
       "breadcrumbs": {
-        "questions": "Q&A Hub"
+        "questions": "問答中心"
       }
     }
   },
   "topicsPage": {
     "seo": {
-      "title": "Ergo Topics — DeFi, Privacy, Mining & More | Ergo",
-      "description": "Explore Ergo by topic. Deep dives into DeFi, privacy, mining, eUTXO, smart contracts. Curated resources, guides & infographics.",
-      "keywords": "Ergo topics, Ergo DeFi, Ergo privacy, Ergo mining, eUTXO guide, blockchain topics, cryptocurrency knowledge hub"
+      "title": "Ergo 主題 — DeFi、隱私、挖礦等 | Ergo",
+      "description": "按主題探索 Ergo。深度探討 DeFi、隱私、挖礦、eUTXO、智能合約。精選資源、指南和資訊圖表。",
+      "keywords": "Ergo 主題, Ergo DeFi, Ergo 隱私, Ergo 挖礦, eUTXO 指南, 區塊鏈主題, 加密貨幣知識中心"
     },
     "schema": {
       "itemList": {
-        "name": "Ergo Topic Clusters",
-        "description": "Comprehensive topic guides for Ergo blockchain"
+        "name": "Ergo 主題群",
+        "description": "Ergo 區塊鏈的全面主題指南"
       },
       "collection": {
-        "name": "Ergo Topics Hub",
-        "description": "Explore Ergo blockchain by topic - DeFi, Privacy, Mining, Smart Contracts and more"
+        "name": "Ergo 主題中心",
+        "description": "按主題探索 Ergo 區塊鏈——DeFi、隱私、挖礦、智能合約等"
       },
       "breadcrumbs": {
-        "topics": "Topics"
+        "topics": "主題"
       },
       "faq": {
         "items": [
           {
-            "question": "What topics can I learn about Ergo?",
-            "answer": "Ergo topics include DeFi, Privacy & Sigma Protocols, Mining & Autolykos, Smart Contracts & ErgoScript, Governance & DAOs, and Cross-Chain Bridges."
+            "question": "我可以學習哪些關於 Ergo 的主題？",
+            "answer": "Ergo 主題包括 DeFi、隱私與 Sigma 協議、挖礦與 Autolykos、智能合約與 ErgoScript、治理與 DAO，以及跨鏈橋。"
           },
           {
-            "question": "Where should I start learning about Ergo?",
-            "answer": "Start with the eUTXO Model topic to understand Ergo's foundation, then explore DeFi or Privacy depending on your interests."
+            "question": "我應該從哪裡開始學習 Ergo？",
+            "answer": "從 eUTXO 模型主題開始了解 Ergo 的基礎，然後根據您的興趣探索 DeFi 或隱私。"
           },
           {
-            "question": "How is Ergo different from Ethereum?",
-            "answer": "Ergo uses eUTXO (not accounts), Proof-of-Work (not PoS), native tokens (not ERC-20), and Sigma Protocols for privacy. Explore the Technology topics for deep dives."
+            "question": "Ergo 與 Ethereum 有何不同？",
+            "answer": "Ergo 使用 eUTXO（非帳戶）、工作量證明（非 PoS）、原生代幣（非 ERC-20）和 Sigma 協議用於隱私。探索技術主題進行深度了解。"
           }
         ]
       }
@@ -500,292 +500,292 @@
   },
   "topicsHub": {
     "hero": {
-      "title": "Explore Ergo by",
-      "titleHighlight": "Topic",
-      "subtitle": "Deep dives into every major part of Ergo. Each topic hub brings together guides, docs, infographics, glossary terms, and practical playbooks.",
-      "topicHubs": "Topic Hubs",
-      "comprehensiveCoverage": "Comprehensive Coverage"
+      "title": "按",
+      "titleHighlight": "主題",
+      "subtitle": "深度探討 Ergo 的每個主要部分。每個主題中心匯集了指南、文件、資訊圖表、術語表術語和實用手冊。",
+      "topicHubs": "主題中心",
+      "comprehensiveCoverage": "全面覆蓋"
     },
     "card": {
-      "keyTerms": "key terms",
-      "guidesAndDocs": "guides & docs",
-      "articles": "articles",
-      "infographics": "infographics",
-      "openHub": "Open hub"
+      "keyTerms": "個關鍵術語",
+      "guidesAndDocs": "指南與文件",
+      "articles": "篇文章",
+      "infographics": "個資訊圖表",
+      "openHub": "打開中心"
     },
     "cta": {
-      "title": "Looking for something specific?",
-      "description": "Try our Q&A hub for quick answers or browse the glossary for term definitions.",
-      "browseQA": "Browse Q&A",
-      "viewGlossary": "View Glossary"
+      "title": "在尋找特定內容？",
+      "description": "嘗試我們的問答中心獲取快速解答，或瀏覽術語表了解術語定義。",
+      "browseQA": "瀏覽問答",
+      "viewGlossary": "查看術語表"
     }
   },
   "patternsHub": {
     "hero": {
       "title": "ErgoScript",
-      "titleHighlight": "Patterns",
-      "subtitle": "Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship. From token mechanics to DeFi primitives.",
-      "searchPlaceholder": "Search patterns (e.g., 'swap', 'multisig', 'oracle')..."
+      "titleHighlight": "模式",
+      "subtitle": "Ergo 經過實戰測試的智能合約模式。複製、調整和發佈。從代幣機制到 DeFi 原語。",
+      "searchPlaceholder": "搜尋模式（例如「swap」、「multisig」、「oracle」）..."
     },
     "aria": {
-      "filtersGroup": "Filter patterns",
-      "categoryFilter": "Category filter",
-      "patternsList": "Developer patterns"
+      "filtersGroup": "篩選模式",
+      "categoryFilter": "類別篩選",
+      "patternsList": "開發者模式"
     },
     "filters": {
-      "allCategories": "All Categories"
+      "allCategories": "所有類別"
     },
     "categoryLabels": {
-      "token-mechanics": "Token Mechanics",
-      "time-locks-access": "Time Locks & Access Control",
-      "multisig-governance": "Multisig & Governance",
-      "defi-primitives": "DeFi Primitives",
-      "oracle-integration": "Oracle Integration",
-      "ergo-native": "Ergo-Native Features",
-      "privacy-sigma": "Privacy & Sigma Protocols"
+      "token-mechanics": "代幣機制",
+      "time-locks-access": "時間鎖和訪問控制",
+      "multisig-governance": "多重簽名和治理",
+      "defi-primitives": "DeFi 原語",
+      "oracle-integration": "預言機集成",
+      "ergo-native": "Ergo 原生功能",
+      "privacy-sigma": "隱私和 Sigma 協議"
     },
     "categoryDescriptions": {
-      "token-mechanics": "Create, manage, and control token supply on Ergo",
-      "time-locks-access": "Time-based locks and conditional spending patterns",
-      "multisig-governance": "Multi-party authorization and DAO structures",
-      "defi-primitives": "Building blocks for decentralized finance",
-      "oracle-integration": "Connect smart contracts to real-world data",
-      "ergo-native": "Patterns unique to Ergo: Babel fees, storage rent, eUTXO state machines",
-      "privacy-sigma": "Sigma Protocol patterns for optional privacy"
+      "token-mechanics": "在 Ergo 上創建、管理和控制代幣供應",
+      "time-locks-access": "基於時間的鎖和條件支出模式",
+      "multisig-governance": "多方授權和 DAO 結構",
+      "defi-primitives": "去中心化金融的構建模塊",
+      "oracle-integration": "將智能合約連接到真實世界數據",
+      "ergo-native": "Ergo 特有的模式：Babel 費用、儲存租金、eUTXO 狀態機",
+      "privacy-sigma": "用於可選隱私的 Sigma 協議模式"
     },
     "difficulty": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "高級"
     },
     "grid": {
-      "noResults": "No patterns found",
-      "noResultsDescription": "Try adjusting your filters or search terms.",
-      "viewPattern": "View pattern"
+      "noResults": "未找到模式",
+      "noResultsDescription": "嘗試調整您的篩選或搜尋條件。",
+      "viewPattern": "查看模式"
     },
     "cta": {
-      "title": "Ready to Build?",
-      "description": "Start with the patterns, dive into documentation, or join the developer community for support.",
-      "developerDocs": "Developer Docs",
-      "buildDefiPlaybook": "Build DeFi Playbook"
+      "title": "準備好開發了嗎？",
+      "description": "從模式開始，深入文件，或加入開發者社群獲得支持。",
+      "developerDocs": "開發者文件",
+      "buildDefiPlaybook": "構建 DeFi 手冊"
     }
   },
   "playbooksHub": {
     "hero": {
-      "title": "Ergo Playbooks",
-      "subtitle": "Curated guides for every use case. Each playbook combines infographics, articles, and actionable steps.",
-      "description": "Start from your first Ergo transaction and move step-by-step towards mining, DeFi, and building your own applications.",
-      "startButton": "Start with first transaction",
-      "browseQA": "Browse Q&A"
+      "title": "Ergo 手冊",
+      "subtitle": "每個使用案例的精選指南。每本手冊結合了資訊圖表、文章和可操作的步驟。",
+      "description": "從您的第一筆 Ergo 交易開始，逐步走向挖礦、DeFi 和構建您自己的應用程序。",
+      "startButton": "從第一筆交易開始",
+      "browseQA": "瀏覽問答"
     },
     "aria": {
-      "filterByCategoryGroup": "Filter playbooks by category",
-      "showAllPlaybooks": "Show all playbooks",
-      "filterByCluster": "Filter by {cluster}",
-      "playbooksList": "Available playbooks"
+      "filterByCategoryGroup": "按類別篩選手冊",
+      "showAllPlaybooks": "顯示所有手冊",
+      "filterByCluster": "按 {cluster} 篩選",
+      "playbooksList": "可用手冊"
     },
     "clusters": {
       "defi": "DeFi",
-      "privacy": "Privacy",
-      "mining": "Mining",
-      "sustainability": "Sustainability",
-      "vc-alternative": "VC Alternative",
-      "global-settlement": "Global Settlement",
-      "developer": "Developer",
-      "investor": "Investor"
+      "privacy": "隱私",
+      "mining": "挖礦",
+      "sustainability": "可持續性",
+      "vc-alternative": "VC 替代方案",
+      "global-settlement": "全球結算",
+      "developer": "開發者",
+      "investor": "投資者"
     },
     "featured": {
-      "title": "Featured playbooks"
+      "title": "精選手冊"
     },
     "filters": {
-      "all": "All"
+      "all": "全部"
     },
     "card": {
-      "steps": "steps"
+      "steps": "個步驟"
     },
-    "noResults": "No playbooks in this category yet.",
+    "noResults": "此類別中暫無手冊。",
     "cta": {
-      "title": "Can't find what you're looking for?",
-      "description": "Explore our documentation, join the community, or suggest a new playbook.",
-      "browseDocs": "Browse Docs",
-      "joinCommunity": "Join Community"
+      "title": "找不到您要找的內容？",
+      "description": "探索我們的文件，加入社群，或建議新手冊。",
+      "browseDocs": "瀏覽文件",
+      "joinCommunity": "加入社群"
     }
   },
   "playbooksPage": {
     "seo": {
-      "title": "Ergo Playbooks — Step-by-Step Guides for DeFi, Privacy & Mining | Ergo",
-      "description": "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials.",
-      "keywords": "Ergo playbooks, Ergo guides, Ergo tutorials, DeFi guide, crypto privacy guide, GPU mining guide, Ergo development, blockchain tutorials"
+      "title": "Ergo 手冊 — DeFi、隱私和挖礦的逐步指南 | Ergo",
+      "description": "在 Ergo 上構建的逐步指南。DeFi、隱私、挖礦、NFT——選擇您的路徑並開始發佈。精選資源和教程。",
+      "keywords": "Ergo 手冊, Ergo 指南, Ergo 教程, DeFi 指南, 加密隱私指南, GPU 挖礦指南, Ergo 開發, 區塊鏈教程"
     },
     "schema": {
       "itemList": {
-        "name": "Ergo Development Playbooks",
-        "description": "Step-by-step guides for building on Ergo blockchain. DeFi, privacy, mining, NFTs and more."
+        "name": "Ergo 開發手冊",
+        "description": "在 Ergo 區塊鏈上構建的逐步指南。DeFi、隱私、挖礦、NFT 等。"
       },
       "collection": {
-        "name": "Ergo Playbooks",
-        "description": "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials."
+        "name": "Ergo 手冊",
+        "description": "在 Ergo 上構建的逐步指南。DeFi、隱私、挖礦、NFT——選擇您的路徑並開始發佈。精選資源和教程。"
       },
       "breadcrumbs": {
-        "playbooks": "Playbooks"
+        "playbooks": "手冊"
       }
     }
   },
   "patternsPage": {
     "seo": {
-      "title": "ErgoScript Patterns — 18 Copy-Paste Smart Contracts | Ergo",
-      "description": "18 ready-to-use ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Copy, paste, deploy. Production-ready code examples.",
-      "keywords": "ErgoScript patterns, Ergo smart contracts, ErgoScript examples, eUTXO patterns, Ergo developer, blockchain patterns, DeFi patterns, copy paste smart contracts"
+      "title": "ErgoScript 模式 — 18 個複製貼上智能合約 | Ergo",
+      "description": "18 個即用型 ErgoScript 模式。時間鎖、多重簽名、AMM、預言機等。複製、貼上、部署。生產就緒的程式碼示例。",
+      "keywords": "ErgoScript 模式, Ergo 智能合約, ErgoScript 示例, eUTXO 模式, Ergo 開發者, 區塊鏈模式, DeFi 模式, 複製貼上智能合約"
     },
     "schema": {
       "itemList": {
-        "name": "ErgoScript Smart Contract Patterns",
-        "description": "Collection of ready-to-use ErgoScript patterns for building secure smart contracts on Ergo blockchain."
+        "name": "ErgoScript 智能合約模式",
+        "description": "用於在 Ergo 區塊鏈上構建安全智能合約的即用型 ErgoScript 模式集合。"
       },
       "collection": {
-        "name": "ErgoScript Developer Patterns",
-        "description": "18 ready-to-use ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Copy, paste, deploy."
+        "name": "ErgoScript 開發者模式",
+        "description": "18 個用於時間鎖、多重簽名、AMM、預言機等的即用型 ErgoScript 模式。複製、貼上、部署。"
       },
       "breadcrumbs": {
-        "patterns": "Dev Patterns"
+        "patterns": "開發模式"
       }
     }
   },
   "topicPage": {
     "breadcrumbs": {
-      "topics": "Topics"
+      "topics": "主題"
     },
     "schema": {
       "breadcrumbs": {
-        "topics": "Topics"
+        "topics": "主題"
       },
       "definedTermSet": {
-        "name": "{topic} Key Terms",
-        "description": "Essential terminology for understanding {topic}"
+        "name": "{topic} 關鍵術語",
+        "description": "理解 {topic} 的基本術語"
       },
       "resources": {
-        "name": "{topic} Resources",
-        "description": "Comprehensive resources for {topic}"
+        "name": "{topic} 資源",
+        "description": "{topic} 的全面資源"
       },
       "resourceSections": {
-        "startHere": "Start Here",
-        "buildWithIt": "Build With It",
-        "philosophy": "Philosophy",
-        "visuals": "Visuals"
+        "startHere": "從這裡開始",
+        "buildWithIt": "用它構建",
+        "philosophy": "哲學",
+        "visuals": "視覺內容"
       }
     },
     "cta": {
-      "title": "Ready to dive deeper?",
-      "description": "Join our community to ask questions, share ideas, and connect with other Ergo enthusiasts.",
-      "joinCommunity": "Join Community",
-      "exploreAllTopics": "Explore All Topics"
+      "title": "準備好深入探索？",
+      "description": "加入我們的社群提問、分享想法，並與其他 Ergo 愛好者聯繫。",
+      "joinCommunity": "加入社群",
+      "exploreAllTopics": "探索所有主題"
     },
     "relatedContent": {
-      "title": "Related Resources",
-      "subtitle": "Explore more content in this topic cluster"
+      "title": "相關資源",
+      "subtitle": "探索此主題群中的更多內容"
     },
     "emailCapture": {
-      "title": "Master {topic}",
-      "description": "Get weekly insights on Ergo technology, tutorials, and ecosystem updates."
+      "title": "掌握 {topic}",
+      "description": "每週獲取關於 Ergo 技術、教程和生態系統更新的見解。"
     },
-    "share": "Share",
-    "copyLink": "Copy link",
-    "copied": "Copied!",
-    "keyDifferentiators": "Key Differentiators",
+    "share": "分享",
+    "copyLink": "複製鏈接",
+    "copied": "已複製！",
+    "keyDifferentiators": "主要差異化特點",
     "startHere": {
-      "title": "Start Here",
-      "description": "Essential resources to understand the fundamentals."
+      "title": "從這裡開始",
+      "description": "了解基礎知識的必備資源。"
     },
     "buildWithIt": {
-      "title": "Build With It",
-      "description": "Developer documentation, patterns, and guides."
+      "title": "用它構建",
+      "description": "開發者文件、模式和指南。"
     },
     "philosophy": {
-      "title": "Philosophy & Narrative",
-      "description": "The vision and principles behind the technology."
+      "title": "哲學與敘事",
+      "description": "技術背後的願景和原則。"
     },
     "visualGuides": {
-      "title": "Visual Guides",
-      "description": "Infographics and visual explanations to share.",
-      "viewAll": "View all infographics"
+      "title": "視覺指南",
+      "description": "可分享的資訊圖表和視覺解釋。",
+      "viewAll": "查看所有資訊圖表"
     },
-    "keyTerms": "Key Terms",
-    "frequentlyAsked": "Frequently Asked",
-    "relatedTopics": "Related Topics",
+    "keyTerms": "關鍵術語",
+    "frequentlyAsked": "常見問題",
+    "relatedTopics": "相關主題",
     "latestArticles": {
-      "title": "Latest Articles",
-      "description": "Recent blog posts related to this topic.",
-      "viewAll": "View all articles"
+      "title": "最新文章",
+      "description": "與此主題相關的最新部落格文章。",
+      "viewAll": "查看所有文章"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next"
+      "title": "接下來",
+      "titleHighlight": "是什麼"
     }
   },
   "questionPage": {
     "breadcrumbs": {
-      "questions": "Questions"
+      "questions": "問題"
     },
-    "share": "Share",
-    "answer": "Answer",
-    "quickFacts": "Quick Facts",
-    "resources": "Resources",
-    "relatedQuestions": "Related Questions",
-    "exploreMore": "Explore More",
-    "exploreTopic": "Explore This Topic",
-    "exploreTopicDescription": "Deep dive into all {category} resources",
-    "joinCommunity": "Join Community",
-    "browseAllQuestions": "Browse All Questions",
-    "shareTitle": "Share this question",
-    "copyLink": "Copy link",
-    "copied": "Copied!",
-    "readTime": "min read",
-    "lastUpdated": "Last updated",
+    "share": "分享",
+    "answer": "解答",
+    "quickFacts": "快速事實",
+    "resources": "資源",
+    "relatedQuestions": "相關問題",
+    "exploreMore": "探索更多",
+    "exploreTopic": "探索此主題",
+    "exploreTopicDescription": "深入探索所有 {category} 資源",
+    "joinCommunity": "加入社群",
+    "browseAllQuestions": "瀏覽所有問題",
+    "shareTitle": "分享此問題",
+    "copyLink": "複製鏈接",
+    "copied": "已複製！",
+    "readTime": "分鐘閱讀",
+    "lastUpdated": "最後更新",
     "resourceTypes": {
-      "doc": "Documentation",
-      "blog": "Blog Article",
-      "playbook": "Playbook",
-      "infographic": "Infographic",
-      "glossary": "Glossary",
-      "compare": "Comparison",
-      "technology": "Technology"
+      "doc": "文件",
+      "blog": "部落格文章",
+      "playbook": "手冊",
+      "infographic": "資訊圖表",
+      "glossary": "術語表",
+      "compare": "比較",
+      "technology": "技術"
     },
     "intentLabels": {
-      "how_to": "How-to Guide",
-      "what_is": "Explainer",
-      "compare": "Comparison",
-      "problem": "Solution",
-      "philosophy": "Philosophy"
+      "how_to": "操作指南",
+      "what_is": "解釋說明",
+      "compare": "比較",
+      "problem": "解決方案",
+      "philosophy": "哲學"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next"
+      "title": "接下來",
+      "titleHighlight": "是什麼"
     },
     "emailCapture": {
-      "title": "Have More Questions?",
-      "description": "Get answers, guides, and updates delivered to your inbox."
+      "title": "還有更多問題？",
+      "description": "獲取解答、指南和更新，發送到您的收件匣。"
     }
   },
   "patternPage": {
     "breadcrumbs": {
-      "devPatterns": "Dev Patterns"
+      "devPatterns": "開發模式"
     },
-    "viewCode": "View Code",
-    "problem": "Problem",
-    "solution": "Solution",
-    "howItWorks": "How It Works",
-    "codeExamples": "Code Examples",
-    "useCases": "Use Cases",
-    "securityConsiderations": "Security Considerations",
-    "realWorldImplementations": "Real-World Implementations",
-    "resources": "Resources",
-    "feeConsiderations": "Fee Considerations",
-    "relatedPatterns": "Related Patterns",
+    "viewCode": "查看程式碼",
+    "problem": "問題",
+    "solution": "解決方案",
+    "howItWorks": "如何運作",
+    "codeExamples": "程式碼示例",
+    "useCases": "使用案例",
+    "securityConsiderations": "安全注意事項",
+    "realWorldImplementations": "真實世界實現",
+    "resources": "資源",
+    "feeConsiderations": "費用注意事項",
+    "relatedPatterns": "相關模式",
     "difficulty": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced",
-      "expert": "Expert"
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "高級",
+      "expert": "專家"
     },
     "languages": {
       "ergoscript": "ErgoScript",
@@ -794,294 +794,294 @@
       "rust": "Rust"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
+      "title": "接下來",
+      "titleHighlight": "是什麼",
       "browsePatterns": {
-        "title": "Browse All Patterns",
-        "subtitle": "patterns available"
+        "title": "瀏覽所有模式",
+        "subtitle": "個可用模式"
       },
       "explorePlaybooks": {
-        "title": "Explore Playbooks",
-        "subtitle": "Step-by-step guides"
+        "title": "探索手冊",
+        "subtitle": "逐步指南"
       },
       "builderResources": {
-        "title": "Builder Resources",
-        "subtitle": "Full dev toolkit"
+        "title": "建設者資源",
+        "subtitle": "完整開發工具包"
       }
     },
     "emailCapture": {
-      "title": "Master Ergo Development",
-      "description": "Get pattern updates, new tutorials, and advanced ErgoScript techniques delivered to your inbox."
+      "title": "掌握 Ergo 開發",
+      "description": "獲取模式更新、新教程和高級 ErgoScript 技術，發送到您的收件匣。"
     }
   },
   "playbookPage": {
     "breadcrumbs": {
-      "playbooks": "Playbooks"
+      "playbooks": "手冊"
     },
-    "allPlaybooks": "All Playbooks",
-    "browseAllPlaybooks": "Browse All Playbooks",
-    "overview": "Overview",
-    "steps": "Steps",
-    "relatedResources": "Related Resources",
-    "relatedPlaybooks": "Related Playbooks",
-    "relatedInfographics": "Related Infographics",
-    "relatedArticles": "Related Articles",
-    "stepOf": "Step {current} of {total}",
-    "markComplete": "Mark as Complete",
-    "completed": "Completed",
-    "nextStep": "Next Step",
-    "previousStep": "Previous Step",
-    "problem": "Problem",
-    "solution": "Solution",
-    "stepsTitle": "Steps to Complete",
-    "stepByStepGuide": "Step-by-Step Guide",
-    "viewStep": "View step",
-    "hideStep": "Hide step",
-    "resources": "Resources",
-    "keyTerms": "Key Terms",
+    "allPlaybooks": "所有手冊",
+    "browseAllPlaybooks": "瀏覽所有手冊",
+    "overview": "概覽",
+    "steps": "步驟",
+    "relatedResources": "相關資源",
+    "relatedPlaybooks": "相關手冊",
+    "relatedInfographics": "相關資訊圖表",
+    "relatedArticles": "相關文章",
+    "stepOf": "第 {current} 步，共 {total} 步",
+    "markComplete": "標記為完成",
+    "completed": "已完成",
+    "nextStep": "下一步",
+    "previousStep": "上一步",
+    "problem": "問題",
+    "solution": "解決方案",
+    "stepsTitle": "完成步驟",
+    "stepByStepGuide": "逐步指南",
+    "viewStep": "查看步驟",
+    "hideStep": "隱藏步驟",
+    "resources": "資源",
+    "keyTerms": "關鍵術語",
     "difficulty": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "高級"
     },
     "progress": {
-      "title": "Your Progress",
-      "stepsCompleted": "of",
-      "stepsWord": "steps completed",
-      "allComplete": "All steps completed!"
+      "title": "您的進度",
+      "stepsCompleted": "/",
+      "stepsWord": "步驟已完成",
+      "allComplete": "所有步驟已完成！"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
+      "title": "接下來",
+      "titleHighlight": "是什麼",
       "morePlaybooks": {
-        "title": "More Playbooks",
-        "subtitle": "Continue learning"
+        "title": "更多手冊",
+        "subtitle": "繼續學習"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "subtitle": "Code examples"
+        "title": "開發模式",
+        "subtitle": "程式碼示例"
       },
       "buildOnErgo": {
-        "title": "Build on Ergo",
-        "subtitle": "Developer hub"
+        "title": "在 Ergo 上構建",
+        "subtitle": "開發者中心"
       }
     },
     "emailCapture": {
-      "title": "Complete Your Learning",
-      "description": "Get playbook updates, new guides, and step-by-step tutorials delivered to your inbox."
+      "title": "完成您的學習",
+      "description": "獲取手冊更新、新指南和逐步教程，發送到您的收件匣。"
     },
     "finalCta": {
-      "completedTitle": "Congratulations!",
-      "completedDescription": "You've completed this playbook. Ready for the next challenge?",
-      "readyTitle": "Ready to Get Started?",
-      "readyDescription": "Complete this playbook and join the Ergo community."
+      "completedTitle": "恭喜！",
+      "completedDescription": "您已完成此手冊。準備好迎接下一個挑戰了嗎？",
+      "readyTitle": "準備好開始了嗎？",
+      "readyDescription": "完成此手冊並加入 Ergo 社群。"
     }
   },
   "infographicItems": {
     "what-we-are-fighting-against-financial-repression-stack": {
-      "title": "What We",
-      "shortDescription": "Layered view of the financial repression stack and how Ergo answers with censorship-resistant settlement, open programmability and privacy on demand.",
-      "subtitle": "The Financial Repression Stack — and what Ergo offers instead."
+      "title": "我們在對抗什麼",
+      "shortDescription": "金融壓制堆棧的分層視圖，以及 Ergo 如何以抗審查結算、開放可程式化性和按需隱私回應。",
+      "subtitle": "金融壓制堆棧——以及 Ergo 提供的替代方案。"
     },
     "powered-by-builders-designed-for-freedom": {
-      "title": "Powered by Builders. Designed for Freedom.",
-      "shortDescription": "Three-layer Ergo pyramid showing miners securing the base layer, builders shipping tools and dApps, and freedom seekers owning their finance.",
-      "subtitle": "A three-layer Ergo pyramid of miners, builders and freedom seekers aligned around money without masters."
+      "title": "由建設者驅動。為自由設計。",
+      "shortDescription": "三層 Ergo 金字塔，顯示礦工保護基礎層、建設者發佈工具和 dApp，以及自由尋求者掌控自己的金融。",
+      "subtitle": "圍繞無主人貨幣統一的礦工、建設者和自由尋求者的三層 Ergo 金字塔。"
     },
     "mev-resistance-vs-dark-forest": {
-      "title": "MEV-Resistance vs the ",
-      "shortDescription": "How global DeFi ",
-      "subtitle": "Contrasting global DeFi "
+      "title": "MEV 抗性 vs 黑暗森林",
+      "shortDescription": "全球 DeFi 如何",
+      "subtitle": "對比全球 DeFi"
     },
     "smart-contract-l1-tree": {
-      "title": "Smart-Contract L1 Tree",
-      "shortDescription": "How Bitcoin, Ethereum, Cardano and Ergo differ in smart-contract state models, determinism, audit complexity, expressiveness and hidden global state risk.",
-      "subtitle": "Tracing smart-contract L1 evolution from Bitcoin"
+      "title": "智能合約 L1 演化樹",
+      "shortDescription": "Bitcoin、Ethereum、Cardano 和 Ergo 在智能合約狀態模型、確定性、審計複雜性、表達能力和隱藏全局狀態風險方面的差異。",
+      "subtitle": "追蹤從 Bitcoin 開始的智能合約 L1 演化"
     },
     "ergo-vs-privacy-coins": {
-      "title": "Ergo vs Privacy Coins",
-      "shortDescription": "How Ergo, Monero, Zcash and L2 mixers differ in privacy models, programmability, selective disclosure, auditability and fair-launch tokenomics.",
-      "subtitle": "Comparing Ergo, Monero, Zcash and L2 mixers on privacy models, programmability, auditability and tokenomics."
+      "title": "Ergo vs 隱私幣",
+      "shortDescription": "Ergo、Monero、Zcash 和 L2 混幣器在隱私模型、可程式化性、選擇性披露、可審計性和公平發行代幣經濟學方面的差異。",
+      "subtitle": "在隱私模型、可程式化性、可審計性和代幣經濟學方面比較 Ergo、Monero、Zcash 和 L2 混幣器。"
     },
     "pow-vs-pos-censorship-and-attack-surface": {
-      "title": "PoW vs PoS: Censorship & Attack Surface",
-      "shortDescription": "How PoW, classic PoS and validator committees differ in censorship power, cartel risk, regulatory pressure and user resistance tools.",
-      "subtitle": "Comparing miners, stakers and validator committees on who can censor, how cartels form and how systems react under pressure."
+      "title": "PoW vs PoS：審查和攻擊面",
+      "shortDescription": "PoW、傳統 PoS 和驗證者委員會在審查能力、卡特爾風險、監管壓力和用戶抵抗工具方面的差異。",
+      "subtitle": "比較礦工、質押者和驗證者委員會，了解誰可以審查、卡特爾如何形成以及系統在壓力下的反應。"
     },
     "eutxo-vs-accounts-vs-classic-utxo": {
-      "title": "eUTXO vs Accounts vs Classic UTXO",
-      "shortDescription": "How classic UTXO, global accounts and Ergo",
-      "subtitle": "Comparing Bitcoin-style UTXO, global accounts and Ergo"
+      "title": "eUTXO vs 帳戶 vs 傳統 UTXO",
+      "shortDescription": "傳統 UTXO、全局帳戶和 Ergo 如何",
+      "subtitle": "比較 Bitcoin 風格 UTXO、全局帳戶和 Ergo"
     },
     "privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins": {
-      "title": "Privacy, But Auditable",
-      "shortDescription": "How mixers, classic privacy coins and Ergo",
-      "subtitle": "Three ways to do on-chain privacy — and why Ergo chooses Sigma Protocols."
+      "title": "隱私，但可審計",
+      "shortDescription": "混幣器、傳統隱私幣和 Ergo 如何",
+      "subtitle": "三種鏈上隱私方式——以及 Ergo 為何選擇 Sigma 協議。"
     },
     "where-ergo-fits-among-major-chains": {
-      "title": "Where Ergo Fits Among Major Chains",
-      "shortDescription": "Scatterplot comparing Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDCs and typical VC chains across launch model, programmability, DeFi and privacy.",
-      "subtitle": "Sound money, smart contracts, and privacy in one PoW L1."
+      "title": "Ergo 在主要鏈中的定位",
+      "shortDescription": "比較 Ergo、Bitcoin、Ethereum、Monero、Cardano、Solana、CBDC 和典型 VC 鏈在發行模型、可程式化性、DeFi 和隱私方面的散點圖。",
+      "subtitle": "一個 PoW L1 中的健全貨幣、智能合約和隱私。"
     },
     "ergo-vs-zcash-zk-without-ceremony": {
-      "title": "Ergo vs Zcash: ZK Without Ceremony",
-      "shortDescription": "Side-by-side infographic comparing Ergo’s Sigma-based, trustless privacy and smart contracts with Zcash’s trusted-setup-based ZK model.",
-      "subtitle": "Sigma-based privacy and smart contracts without trusted setup."
+      "title": "Ergo vs Zcash：無儀式的 ZK",
+      "shortDescription": "並排資訊圖表，比較 Ergo 基於 Sigma 的無需信任隱私和智能合約與 Zcash 基於可信設置的 ZK 模型。",
+      "subtitle": "基於 Sigma 的隱私和智能合約，無需可信設置。"
     },
     "ergo-vs-solana-tps-vs-sovereignty": {
-      "title": "Ergo vs Solana: TPS vs Sovereignty",
-      "shortDescription": "Infographic comparing Ergo’s high decentralization and sovereignty with Solana’s maximum throughput focus, including hardware, funding and design trade-offs.",
-      "subtitle": "High throughput or high decentralization — pick your side."
+      "title": "Ergo vs Solana：TPS vs 主權",
+      "shortDescription": "資訊圖表比較 Ergo 的高去中心化和主權與 Solana 的最大吞吐量關注點，包括硬件、資金和設計權衡。",
+      "subtitle": "高吞吐量還是高去中心化——選擇您的立場。"
     },
     "ergo-vs-cardano-two-eutxo-paths": {
-      "title": "Ergo vs Cardano: Two eUTXO Paths",
-      "shortDescription": "Infographic comparing Ergo and Cardano as two eUTXO chains with the same research roots but different choices on consensus, launch, privacy and sustainability.",
-      "subtitle": "Same research roots, different choices on consensus, launch, and sustainability."
+      "title": "Ergo vs Cardano：兩條 eUTXO 路徑",
+      "shortDescription": "資訊圖表比較 Ergo 和 Cardano 作為具有相同研究根源但在共識、發行、隱私和可持續性方面做出不同選擇的兩條 eUTXO 鏈。",
+      "subtitle": "相同的研究根源，在共識、發行和可持續性方面做出不同選擇。"
     },
     "ergo-vs-litecoin-digital-silver-vs-programmable-money": {
-      "title": "Ergo vs Litecoin: Digital Silver vs Programmable Money",
-      "shortDescription": "Infographic comparing Ergo as programmable PoW money for DeFi and alternative economic systems with Litecoin as digital silver / faster Bitcoin focused on payments.",
-      "subtitle": "From “fast Bitcoin” payments to PoW smart-contract DeFi."
+      "title": "Ergo vs Litecoin：數字銀 vs 可程式化貨幣",
+      "shortDescription": "資訊圖表比較 Ergo 作為 DeFi 和替代經濟系統的可程式化 PoW 貨幣與 Litecoin 作為數字銀/更快 Bitcoin 專注於支付。",
+      "subtitle": "從「快速 Bitcoin」支付到 PoW 智能合約 DeFi。"
     },
     "ergo-vs-monero-privacy-modes": {
-      "title": "Ergo vs Monero: Privacy Modes",
-      "shortDescription": "Infographic comparing Monero’s always-on payment privacy with Ergo’s optional, programmable privacy for DeFi, smart contracts and selective disclosure.",
-      "subtitle": "Always-on payment privacy vs programmable privacy for DeFi."
+      "title": "Ergo vs Monero：隱私模式",
+      "shortDescription": "資訊圖表比較 Monero 的強制開啟支付隱私與 Ergo 用於 DeFi、智能合約和選擇性披露的可選可程式化隱私。",
+      "subtitle": "強制開啟支付隱私 vs DeFi 的可程式化隱私。"
     },
     "ergo-vs-ethereum-same-power-less-pain": {
-      "title": "Ergo vs Ethereum: Same Power, Less Pain",
-      "shortDescription": "Infographic comparing Ergo and Ethereum on state model, MEV and fees, consensus power structure and privacy, showing how eUTXO aims for similar programmability with fewer account-model headaches.",
-      "subtitle": "Smart contracts and DeFi without account-model headaches and MEV wars."
+      "title": "Ergo vs Ethereum：同等能力，更少痛苦",
+      "shortDescription": "資訊圖表比較 Ergo 和 Ethereum 在狀態模型、MEV 和費用、共識權力結構和隱私方面，展示 eUTXO 如何以較少的帳戶模型麻煩實現類似的可程式化性。",
+      "subtitle": "智能合約和 DeFi，無帳戶模型麻煩和 MEV 戰爭。"
     },
     "ergo-vs-major-l1s-feature-checklist": {
-      "title": "Ergo vs Major L1s – Feature Checklist",
-      "shortDescription": "Side-by-side matrix for Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across consensus, launch, privacy, storage rent, MEV and more.",
-      "subtitle": "Consensus, launch, privacy, storage rent, MEV — all in one table."
+      "title": "Ergo vs 主要 L1——功能清單",
+      "shortDescription": "Bitcoin、Ethereum、Cardano、Monero、Zcash、Solana、典型 VC 鏈、CBDC 和 Ergo 在共識、發行、隱私、儲存租金、MEV 等方面的並排矩陣。",
+      "subtitle": "共識、發行、隱私、儲存租金、MEV——全部在一張表中。"
     },
     "ergo-vs-avalanche-funding-story-and-power-structure": {
-      "title": "Ergo vs Avalanche: Funding Story and Power Structure",
-      "shortDescription": "Infographic comparing Ergo’s $0 VC, 100% mined distribution with Avalanche’s hundreds of millions in venture funding, and how that shapes consensus, control and incentives.",
-      "subtitle": "$0 VC and 100% mined vs hundreds of millions in venture funding."
+      "title": "Ergo vs Avalanche：資金故事和權力結構",
+      "shortDescription": "資訊圖表比較 Ergo 的 $0 VC、100% 挖礦分配與 Avalanche 數億風險投資，以及這如何塑造共識、控制和激勵。",
+      "subtitle": "$0 VC 和 100% 挖礦 vs 數億風險投資。"
     },
     "ergo-vs-bitcoin-bitcoin-with-the-missing-pieces": {
-      "title": "Ergo vs Bitcoin: Bitcoin With the Missing Pieces",
-      "shortDescription": "Infographic comparing simple UTXO Bitcoin money with Ergo’s eUTXO, smart contracts, privacy and storage rent — like adding missing layers on top of the Bitcoin brick.",
-      "subtitle": "From simple UTXO money to programmable, sustainable PoW DeFi."
+      "title": "Ergo vs Bitcoin：帶有缺失部分的 Bitcoin",
+      "shortDescription": "資訊圖表比較簡單 UTXO Bitcoin 貨幣與 Ergo 的 eUTXO、智能合約、隱私和儲存租金——就像在 Bitcoin 磚塊上添加缺失層。",
+      "subtitle": "從簡單 UTXO 貨幣到可程式化、可持續的 PoW DeFi。"
     },
     "ergo-vs-cbdcs-control-vs-sovereignty": {
-      "title": "Ergo vs CBDCs: Control vs Sovereignty",
-      "shortDescription": "Infographic contrasting self-custodied programmable money on Ergo with centrally controlled CBDCs across ownership, privacy, censorship and monetary policy.",
-      "subtitle": "Central bank scripts vs self-custodied programmable money."
+      "title": "Ergo vs CBDC：控制 vs 主權",
+      "shortDescription": "資訊圖表對比 Ergo 上的自我托管可程式化貨幣與央行控制的 CBDC 在所有權、隱私、審查和貨幣政策方面。",
+      "subtitle": "央行腳本 vs 自我托管的可程式化貨幣。"
     },
     "ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi": {
-      "title": "Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi",
-      "shortDescription": "Infographic comparing Ergo and Ravencoin as PoW token platforms, from simple asset issuance to a full programmable DeFi stack with privacy and advanced features.",
-      "subtitle": "From simple asset issuance to a full PoW DeFi platform."
+      "title": "Ergo vs Ravencoin：PoW 上的代幣——基礎 vs 完整 DeFi",
+      "shortDescription": "資訊圖表比較 Ergo 和 Ravencoin 作為 PoW 代幣平台，從簡單資產發行到具有隱私和高級功能的完整可程式化 DeFi 堆棧。",
+      "subtitle": "從簡單資產發行到完整 PoW DeFi 平台。"
     },
     "ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow": {
-      "title": "Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW",
-      "shortDescription": "Infographic comparing Ergo’s programmable eUTXO DeFi stack with Kaspa’s high-throughput PoW payments layer built on a BlockDAG.",
-      "subtitle": "From pure PoW payments to a full programmable DeFi platform."
+      "title": "Ergo vs Kaspa：可程式化 PoW vs 高吞吐量 PoW",
+      "shortDescription": "資訊圖表比較 Ergo 的可程式化 eUTXO DeFi 堆棧與 Kaspa 建立在 BlockDAG 上的高吞吐量 PoW 支付層。",
+      "subtitle": "從純 PoW 支付到完整可程式化 DeFi 平台。"
     },
     "autolykos-mining-without-masters": {
-      "title": "Autolykos: Mining Without Masters",
-      "shortDescription": "How Ergo",
+      "title": "Autolykos：無主人的挖礦",
+      "shortDescription": "Ergo 如何",
       "subtitle": "Ergo"
     },
     "who-starts-with-the-coins-vc-allocation-vs-ergo-supply": {
-      "title": "Who Starts With the Coins?",
-      "shortDescription": "How typical VC chains reserve large token chunks for insiders while Ergo",
-      "subtitle": "Comparing VC chain token allocation with Ergo"
+      "title": "誰開始持有硬幣？",
+      "shortDescription": "典型 VC 鏈如何為內部人保留大量代幣，而 Ergo 如何",
+      "subtitle": "比較 VC 鏈代幣分配與 Ergo"
     },
     "how-is-security-maintained-pos-vs-ergo-autolykos": {
-      "title": "How Is Security Maintained?",
-      "shortDescription": "How network security and rewards differ between typical Proof-of-Stake staking and Ergo",
-      "subtitle": "Comparing PoS staking wealth concentration with Ergo"
+      "title": "安全性如何維護？",
+      "shortDescription": "典型 PoS 質押和 Ergo 之間網路安全和獎勵的差異",
+      "subtitle": "比較 PoS 質押財富集中與 Ergo"
     },
     "how-it-starts-vc-chain-vs-ergo": {
-      "title": "How It Starts: VC Chain vs Ergo",
-      "shortDescription": "How a typical VC-backed blockchain launch contrasts with Ergo",
-      "subtitle": "Who really gets in early? Comparing VC chain funnels with Ergo"
+      "title": "如何開始：VC 鏈 vs Ergo",
+      "shortDescription": "典型 VC 支持的區塊鏈發行如何與 Ergo 形成對比",
+      "subtitle": "誰真正能早期進入？比較 VC 鏈漏斗與 Ergo"
     },
     "engineered-for-global-settlement-ergo": {
-      "title": "Engineered for Global Settlement",
-      "shortDescription": "How Ergo",
-      "subtitle": "Fast, low-cost, MEV-resistant settlement built on Ergo."
+      "title": "為全球結算而設計",
+      "shortDescription": "Ergo 如何",
+      "subtitle": "建立在 Ergo 上的快速、低成本、抗 MEV 結算。"
     },
     "ergo-blockchain-research-driven-cypherpunk-aligned": {
-      "title": "Ergo Blockchain: Research-Driven & Cypherpunk-Aligned",
-      "shortDescription": "Fair-launched Proof-of-Work blockchain with eUTXO smart contracts, Sigma Protocols privacy and a sustainability stack built for cypherpunks.",
-      "subtitle": "Built for Sustainability, Privacy, and Verifiable Rules. A Fair-Launched Proof-of-Work Platform."
+      "title": "Ergo 區塊鏈：研究驅動且密碼朋克對齊",
+      "shortDescription": "具有 eUTXO 智能合約、Sigma 協議隱私和為密碼朋克構建的可持續性堆棧的公平發行工作量證明區塊鏈。",
+      "subtitle": "為可持續性、隱私和可驗證規則而構建。公平發行的工作量證明平台。"
     },
     "blockchain-matrix-where-ergo-actually-fits": {
-      "title": "Blockchain Matrix: Where Ergo Actually Fits",
-      "shortDescription": "Matrix comparing Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, a typical VC chain and Ergo across consensus, launch, privacy, MEV resistance, storage rent and fees.",
-      "subtitle": "Comparing consensus, launches, privacy and incentives across major chains."
+      "title": "區塊鏈矩陣：Ergo 實際的定位",
+      "shortDescription": "矩陣比較 Bitcoin、Ethereum、Monero、Zcash、Cardano、Solana、典型 VC 鏈和 Ergo 在共識、發行、隱私、MEV 抗性、儲存租金和費用方面。",
+      "subtitle": "比較主要鏈的共識、發行、隱私和激勵。"
     },
     "money-without-masters-ergo-vs-banks-and-vc-crypto": {
-      "title": "Money Without Masters",
-      "shortDescription": "How Ergo",
-      "subtitle": "Open, programmable, censorship-resistant finance. Built on Ergo."
+      "title": "無主人的貨幣",
+      "shortDescription": "Ergo 如何",
+      "subtitle": "開放、可程式化、抗審查的金融。建立在 Ergo 上。"
     },
     "ergo-subblock-technology-boosting-throughput-with-parallelism": {
       "title": "Ergo",
-      "shortDescription": "How key blocks and subblocks let Ergo increase transaction capacity and confirmation speed without sacrificing security.",
-      "subtitle": "How key blocks and subblocks increase transaction capacity and confirmation speed."
+      "shortDescription": "關鍵塊和子塊如何讓 Ergo 在不犧牲安全性的情況下提高交易容量和確認速度。",
+      "subtitle": "關鍵塊和子塊如何提高交易容量和確認速度。"
     },
     "ergo-oracle-pools-decentralized-reliable-real-world-data": {
       "title": "Ergo",
-      "shortDescription": "How decentralized oracle pools aggregate multiple sources into on-chain data boxes for robust, trustless feeds.",
-      "subtitle": "Decentralized oracle pools for robust, trustless real-world data feeds."
+      "shortDescription": "去中心化預言機池如何將多個來源聚合到鏈上數據盒子中，以獲得強大、無需信任的饋送。",
+      "subtitle": "用於強大、無需信任的真實世界數據饋送的去中心化預言機池。"
     },
     "ergo-nipopows-scalable-trustless-light-clients": {
-      "title": "Ergo NiPoPoWs: The Key to Scalable, Trustless Light Clients",
-      "shortDescription": "How NiPoPoWs let light clients verify PoW security with tiny superblock proofs for mobile, sidechains and bridges.",
-      "subtitle": "Verify PoW security with tiny superblock proofs for mobile, sidechains and bridges."
+      "title": "Ergo NiPoPoWs：可擴展無需信任輕客戶端的關鍵",
+      "shortDescription": "NiPoPoWs 如何讓輕客戶端使用微型超級塊證明驗證 PoW 安全性，用於移動端、側鏈和橋。",
+      "subtitle": "使用微型超級塊證明驗證 PoW 安全性，用於移動端、側鏈和橋。"
     },
     "ergo-privacy-non-interactive-efficient": {
-      "title": "Ergo Privacy: Non-Interactive & Efficient",
-      "shortDescription": "How Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs provide built-in privacy on Ergo without trusted third parties.",
-      "subtitle": "Built-in privacy using Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs."
+      "title": "Ergo 隱私：非互動且高效",
+      "shortDescription": "Sigma 協議、eUTXO、ErgoMixer 和 NiPoPoWs 如何在 Ergo 上提供內置隱私而無需可信第三方。",
+      "subtitle": "使用 Sigma 協議、eUTXO、ErgoMixer 和 NiPoPoWs 的內置隱私。"
     },
     "ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners": {
-      "title": "Ergo Storage Rent: Preventing Blockchain Bloat & Rewarding Miners",
-      "shortDescription": "How storage rent cleans up state bloat, keeps Ergo nodes lean and rewards miners beyond block rewards.",
-      "subtitle": "How storage rent keeps the state lean and rewards miners long-term."
+      "title": "Ergo 儲存租金：防止區塊鏈膨脹並獎勵礦工",
+      "shortDescription": "儲存租金如何清理狀態膨脹、保持 Ergo 節點精簡並在區塊獎勵之外獎勵礦工。",
+      "subtitle": "儲存租金如何保持狀態精簡並長期獎勵礦工。"
     },
     "ergo-eutxo-model-bitcoin-security-smart-contract-flexibility": {
       "title": "Ergo",
-      "shortDescription": "How Ergo",
+      "shortDescription": "Ergo 如何",
       "subtitle": "Bitcoin"
     },
     "ergoscript-cypherpunk-code-of-freedom": {
-      "title": "ErgoScript: The Cypherpunk Code of Freedom",
-      "shortDescription": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization.",
-      "subtitle": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization."
+      "title": "ErgoScript：密碼朋克的自由程式碼",
+      "shortDescription": "eUTXO、嚴格設計原則和 Sigma 協議如何將 ErgoScript 變成去中心化的武器。",
+      "subtitle": "eUTXO、嚴格設計原則和 Sigma 協議如何將 ErgoScript 變成去中心化的武器。"
     },
     "ergo-blockchain-introduction-fundamentals": {
-      "title": "Ergo Blockchain: Introduction & Fundamentals",
-      "shortDescription": "High-level introduction to the Ergo blockchain: PoW smart contracts, eUTXO, Autolykos and Sigma Protocols.",
-      "subtitle": "A quick overview of Ergo"
+      "title": "Ergo 區塊鏈：介紹與基礎",
+      "shortDescription": "Ergo 區塊鏈的高層次介紹：PoW 智能合約、eUTXO、Autolykos 和 Sigma 協議。",
+      "subtitle": "Ergo 快速概覽"
     },
     "three-pillars-ergos-sustainability": {
-      "title": "The Three Pillars of Ergo",
-      "shortDescription": "How Autolykos mining, NiPoPoWs light clients and storage rent form Ergo",
-      "subtitle": "Protocol-level mechanisms that keep Ergo viable and accessible for the long run."
+      "title": "Ergo 的三大支柱",
+      "shortDescription": "Autolykos 挖礦、NiPoPoWs 輕客戶端和儲存租金如何構成 Ergo",
+      "subtitle": "保持 Ergo 長期可行且可訪問的協議級機制。"
     },
     "who-actually-needs-ergo": {
-      "title": "Who Actually Needs Ergo?",
-      "shortDescription": "Who actually needs Ergo today: builders, miners, privacy-focused users and cypherpunk OGs.",
-      "subtitle": "Real people behind the tech: builders, miners, privacy users and cypherpunks."
+      "title": "誰真正需要 Ergo？",
+      "shortDescription": "今天誰真正需要 Ergo：建設者、礦工、注重隱私的用戶和密碼朋克老手。",
+      "subtitle": "技術背後的真實人群：建設者、礦工、隱私用戶和密碼朋克。"
     },
     "vc-chain-vs-ergo-fair-launch": {
-      "title": "Fair & Secure: VC Chain vs Ergo at a Glance",
-      "shortDescription": "How Ergo",
-      "subtitle": "How Ergo"
+      "title": "公平且安全：VC 鏈 vs Ergo 一覽",
+      "shortDescription": "Ergo 如何",
+      "subtitle": "Ergo 如何"
     },
     "ergo-babel-fees-pay-with-any-token": {
-      "title": "Babel Fees: Pay Transaction Fees with Any Token",
-      "shortDescription": "How Ergo",
-      "subtitle": "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands."
+      "title": "Babel 費用：使用任何代幣支付交易費用",
+      "shortDescription": "Ergo 如何",
+      "subtitle": "通過 eUTXO 的 Gas 抽象：使用您持有的代幣支付費用，而非協議要求的代幣。"
     }
   },
   "glossaryTerms": {}

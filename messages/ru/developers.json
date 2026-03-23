@@ -496,7 +496,7 @@
         },
         "sigmaUSD": {
           "title": "SigmaUSD",
-          "subtitle": "Algorithmic Stablecoin Protocol",
+          "subtitle": "Алгоритмический протокол стейблкоина",
           "description": "SigmaUSD - это криптовалютный алгоритмный протокол, созданный на Ergo. Он предоставляет децентрализованный способ создания стабильной стоимости без использования традиционных банковских систем или централизованных резервов.",
           "stats": {
             "stabilityScore": {
@@ -798,7 +798,7 @@
           },
           "cryptographicSecurity": {
             "title": "Криптографическая безопасность",
-            "description": "Mathematically proven security guarantees"
+            "description": "Математически доказанные гарантии безопасности"
           }
         }
       },

@@ -603,7 +603,7 @@
           },
           "aster": {
             "name": "Aster",
-            "description": "Decentralized perpetual contracts exchange"
+            "description": "Децентрализованная биржа бессрочных контрактов"
           }
         },
         "goToSwap": "Перейти к замене"

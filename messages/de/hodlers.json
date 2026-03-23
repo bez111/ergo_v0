@@ -316,27 +316,27 @@
     },
     "security-commodity": {
       "question": "Ist Ergo ein Wertpapier oder eine Ware?",
-      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+      "answer": "Ergo wurde 2019 fair gestartet, ohne Premine, ohne ICO und ohne VC-Finanzierung. Wie Bitcoin ist es ein dezentrales, community-getriebenes Projekt. Der faire Start und der Proof-of-Work-Konsens machen es aus regulatorischer Sicht Bitcoin ähnlich."
     },
     "different-from-bitcoin": {
       "question": "Wie unterscheidet sich Ergo von Bitcoin?",
-      "answer": "Ergo shares Bitcoin"
+      "answer": "Ergo teilt Bitcoins Philosophie des fairen Starts und der PoW-Sicherheit, fügt aber Smart Contracts via ErgoScript, optionalen Datenschutz durch Sigma Protocols, Speichermiete für langfristige Nachhaltigkeit und NiPoPoWs für Light Clients hinzu."
     },
     "who-controls": {
       "question": "Wer kontrolliert das Ergo-Projekt?",
-      "answer": "No single entity controls Ergo. It"
+      "answer": "Keine einzelne Einheit kontrolliert Ergo. Es wird von der Ergo Foundation, Kernentwicklern und Community-Mitwirkenden gepflegt. Alle Entwicklungen sind Open Source auf GitHub. Die Community stimmt über wesentliche Protokolländerungen ab."
     },
     "mining-rewards-end": {
       "question": "Was passiert, wenn die Mining-Belohnungen enden?",
-      "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
+      "answer": "Ergo hat einen 8-jährigen Emissionsplan, der etwa 2027 endet. Danach werden Miner durch Transaktionsgebühren und einen Speichermietmechanismus angereizt, der verlorene Münzen recycelt. Dies schafft langfristige Sicherheit ohne Inflation."
     },
     "buy-store": {
       "question": "Wo kann ich ERG kaufen und aufbewahren?",
-      "answer": "ERG is available on major exchanges like <a href=\\"
+      "answer": "ERG ist auf großen Börsen wie KuCoin, Gate.io und CoinEx erhältlich. Zur Aufbewahrung verwenden Sie Nautilus Wallet oder Hardware-Wallets. Vollständige Kaufanleitung unter /use/get-erg."
     },
     "privacy-legal": {
-      "question": "Is Ergo",
-      "answer": "Ergo"
+      "question": "Ist Ergos Datenschutz legal nutzbar?",
+      "answer": "Ergos Datenschutzfunktionen sind optional und für legitime Anwendungsfälle wie geschäftliche Vertraulichkeit und persönliche finanzielle Privatsphäre konzipiert. Überprüfen Sie stets Ihre lokalen Vorschriften. Die Technologie selbst ähnelt anderen datenschutzwahrenden Kryptowährungen, und Compliance-Tools sind für Institutionen verfügbar."
     }
   }
 }

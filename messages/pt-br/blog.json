@@ -1,37 +1,37 @@
 {
   "blog": {
     "title": "Blog",
-    "subtitle": "Latest news and updates",
-    "description": "Latest news and updates from Ergo",
-    "readMore": "Read More",
+    "subtitle": "Últimas notícias e atualizações",
+    "description": "Últimas notícias e atualizações da Ergo",
+    "readMore": "Leia mais",
     "categories": {
-      "technology": "Technology",
-      "ecosystem": "Ecosystem",
-      "community": "Community",
-      "announcements": "Announcements",
-      "all": "All Posts",
-      "development": "Development",
-      "technical": "Technical",
-      "education": "Education"
+      "technology": "Tecnologia",
+      "ecosystem": "Ecossistema",
+      "community": "Comunidade",
+      "announcements": "Anúncios",
+      "all": "Todas as postagens",
+      "development": "Desenvolvimento",
+      "technical": "Técnico",
+      "education": "Educação"
     },
     "seo": {
-      "title": "Blog - Ergo News & Updates | Ergo Platform",
-      "description": "Read the latest news, updates, and insights from the Ergo blockchain team.",
-      "keywords": "Ergo blog, blockchain news, updates, articles"
+      "title": "Blog - Notícias e Atualizações Ergo | Ergo Platform",
+      "description": "Leia as últimas notícias, atualizações e insights da equipe Ergo blockchain.",
+      "keywords": "blog Ergo, notícias blockchain, atualizações, artigos"
     },
     "featured": {
-      "title": "Featured Posts",
-      "readMore": "Read More"
+      "title": "Postagens em Destaque",
+      "readMore": "Leia mais"
     },
     "recent": {
-      "title": "Recent Posts",
-      "viewAll": "View All Posts"
+      "title": "Postagens Recentes",
+      "viewAll": "Ver todas as postagens"
     },
     "newsletter": {
-      "title": "Subscribe to Newsletter",
-      "description": "Get the latest updates delivered to your inbox",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
+      "title": "Assinar Newsletter",
+      "description": "Receba as últimas atualizações na sua caixa de entrada",
+      "placeholder": "Digite seu email",
+      "subscribe": "Assinar"
     }
   }
 }

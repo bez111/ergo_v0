@@ -1140,7 +1140,7 @@
       }
     },
     "comparison": {
-      "title": "Как Ergo Compares",
+      "title": "Как Ergo соотносится с другими",
       "description": "Узнайте, как технологическое окружение Эрго работает против других платформ",
       "features": {
         "model": "Модель консенсуса",
@@ -1632,24 +1632,24 @@
         "viewOnGitHub": "Посмотреть на GitHub"
       },
       "multiple_transactions_can_be_processed": "Несколько транзакций могут быть обработаны одновременно",
-      "no_global_state_means_fewer_attack_vectors": "Нет глобального состояния означает меньшее количество векторов атаки",
+      "no_global_state_means_fewer_attack_vectors": "Отсутствие глобального состояния означает меньше векторов атаки",
       "smart_contract_support": "Поддержка смарт-контрактов",
       "full_programmability_with_predictable_execution": "Полная программируемость с предсказуемым исполнением",
       "how_eutxo_works": "Как работает eUTXO",
       "value_amount_of_erg": "Значение (количество ERG)",
       "guard_script_spending_conditions": "Скрипт защиты (условия расходов)",
       "additional_data_for_smart_contracts": "Дополнительные данные (для смарт-контрактов)",
-      "custom_tokens_and_nfts": "Пользовательские токены и NFTs",
-      "why_is_eutxo_better_than": "Почему eUTXO лучше, чем модели на базе аккаунтов? ,\n      ответ: \"eUTXO позволяет осуществлять параллельную обработку транзакций, устраняет двойные расходы на уровне протокола и обеспечивает более предсказуемые структуры комиссий.",
-      "can_i_build_complex_dapps": "Могу ли я построить сложные dApps с eUTXO?\",\n      ответ: \"Абсолютно. eUTXO поддерживает сложные умные контракты при сохранении безопасности и простоты модели UTXO.",
-      "next_generation_unspent_transaction_output": "Непотраченная модель вывода транзакций следующего поколения для параллельных смарт-контрактов и композиционных DeFi",
+      "custom_tokens_and_nfts": "Пользовательские токены и NFT",
+      "why_is_eutxo_better_than": "Почему eUTXO лучше, чем модели на основе аккаунтов?\",\n      ответ: \"eUTXO позволяет параллельную обработку транзакций, устраняет двойные расходы на уровне протокола и обеспечивает более предсказуемые структуры комиссий.",
+      "can_i_build_complex_dapps": "Могу ли я создавать сложные dApp с eUTXO?\",\n      ответ: \"Абсолютно. eUTXO поддерживает сложные смарт-контракты, сохраняя безопасность и простоту модели UTXO.",
+      "next_generation_unspent_transaction_output": "Модель непотраченных выходов транзакций нового поколения для параллельных смарт-контрактов и компонуемого DeFi",
       "what_is_eutxo": "Что такое eUTXO?",
-      "the_extended_unspent_transaction_output": "Модель расширенного непотраченного вывода транзакций (eUTXO) является эволюцией UTXO модели Bitcoin, улучшает интеллектуальные контрактные возможности, сохраняя безопасность и простоту оригинального дизайна.",
-      "unlike_account_based_models_like": "В отличие от моделей на основе учетной записи (таких как Ethereum), eUTXO позволяет обрабатывать параллельные транзакции, устраняет двойные расходы на уровне протокола и обеспечивает более предсказуемую структуру комиссий.",
-      "in_the_eutxo_model_each": "В модели eUTXO каждый вывод транзакций может содержать:",
-      "this_structure_allows_for_complex": "Эта структура позволяет заключать сложные смарт-контракты при сохранении безопасности и предсказуемости модели UTXO. Каждый вывод является автономным и может быть обработан самостоятельно, что позволяет выполнять настоящее параллельное исполнение.",
+      "the_extended_unspent_transaction_output": "Расширенная модель непотраченных выходов транзакций (eUTXO) является эволюцией модели UTXO Bitcoin, дополненной возможностями смарт-контрактов при сохранении безопасности и простоты оригинального дизайна.",
+      "unlike_account_based_models_like": "В отличие от моделей на основе аккаунтов (как Ethereum), eUTXO обеспечивает параллельную обработку транзакций, устраняет двойные расходы на уровне протокола и предоставляет более предсказуемую структуру комиссий.",
+      "in_the_eutxo_model_each": "В модели eUTXO каждый выход транзакции может содержать:",
+      "this_structure_allows_for_complex": "Эта структура позволяет создавать сложные смарт-контракты, сохраняя безопасность и предсказуемость модели UTXO. Каждый выход является самодостаточным и может обрабатываться независимо, что обеспечивает истинное параллельное исполнение.",
       "frequently_asked_questions": "Часто задаваемые вопросы",
-      "learn_more_about_eutxo": "Подробнее о eUTXO",
+      "learn_more_about_eutxo": "Узнать больше о eUTXO",
       "view_on_github": "Посмотреть на GitHub"
     },
     "nipopows": {
@@ -1803,7 +1803,7 @@
         },
         {
           "question": "Каким образом NIPoPoW ведут себя под режами?",
-          "answer": "Light clients should follow the finality window, if reorg occurs within that window, a new proof can supersede the previous one."
+          "answer": "Лёгкие клиенты должны наблюдать за окном финальности. Если реорганизация происходит в пределах этого окна, новое доказательство может заменить предыдущее."
         },
         {
           "question": "Нужны ли NIPoW специальные заголовки или параметры?",
@@ -2282,7 +2282,7 @@
       "the_class_of_reentrancy_vulnerabilities": "В eUTXO отсутствует класс уязвимостей повторного входа, общих для учетных систем",
       "deterministic_execution_description_computational_complexity": "Deterministic Execution\",\n    description: \"Computational complexity is predictable, though network fees are market-driven",
       "utxo_concurrency_description_parallel_transaction": "UTXO Concurrency\",\n    описание: \"Параллельная обработка транзакций с шаблонами batcher для сценариев высокой совместимости",
-      "what_about_throughput_and_scaling": "What about throughput and scaling for high-demand applications?\",\n      answer: \"The eUTXO model enables parallel transaction processing. For high-contention scenarios like DEXs, batcher/aggregator patterns can collect multiple orders and execute them in batches, effectively scaling throughput while maintaining the security guarantees.",
+      "what_about_throughput_and_scaling": "Как насчёт пропускной способности и масштабирования для приложений с высокой нагрузкой?\",\n      answer: \"Модель eUTXO обеспечивает параллельную обработку транзакций. Для сценариев с высокой конкуренцией, например DEX, паттерны batcher/aggregator могут собирать несколько ордеров и исполнять их пакетами, эффективно масштабируя пропускную способность при сохранении гарантий безопасности.",
       "can_i_build_complex_defi": "Могу ли я создавать сложные DeFi приложения с ErgoScript?\",\n      ответить: \"Да\". ErgoScript поддерживает сложные финансовые инструменты, в том числе DEXs, Steecoins, протоколы кредитования и продвинутые контракты NFT. Декларирующая модель и родные криптографические примитивы часто делают сложные протоколы проще для реализации и аудита, чем для систем бухгалтерского учета.",
       "technology_item_https_ergoblockchain_org": "Технология\",\n              элемент: \"https://ergoblockchain.org/technology",
       "ergoscript_item_https_ergoblockchain_org": "ErgoScript»,\n              пункт: \"https://ergoblockchain.org/technology/ergoscript",
@@ -2837,7 +2837,7 @@
     "smart_contracts_run_independently_without": "Умные контракты действуют независимо от глобальных конфликтов состояний.",
     "build_complex_defi_applications_from": "Создавайте сложные приложения DeFi из простых и повторно используемых компонентов.",
     "bitcoin_level_security": "Безопасность Bitcoin-уровня",
-    "mathematically_prove_your_smart_contracts": "Mathematically prove your smart contracts are secure and bug-free.",
+    "mathematically_prove_your_smart_contracts": "Математически докажите, что ваши смарт-контракты безопасны и не содержат ошибок.",
     "native_zero_knowledge_proofs_and": "Нативные доказательства нулевого знания и посылки подписей для конфиденциальных сделок.",
     "safe_by_design": "Безопасность по дизайну",
     "prevents_common_vulnerabilities_like_reentrancy": "Предотвращает распространенные уязвимости, такие как атаки повторного входа и непредвиденное поведение.",
@@ -3583,7 +3583,7 @@
         "openSource": "Открытый исходный код, экспертно-рецензированная криптография",
         "composable": "Совместимо с другими функциями Ergo",
         "builtInProtocol": "Встроенный в протокол, не добавленный как последующая мысль",
-        "mathematicalSecurity": "Mathematically proven security guarantees"
+        "mathematicalSecurity": "Математически доказанные гарантии безопасности"
       },
       "useCasesSection": {
         "title": "Что вы можете делать с конфиденциальности Ergo",
