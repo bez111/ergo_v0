@@ -3,6 +3,161 @@
     "title": "Teknoloji",
     "subtitle": "Finansın geleceği için gelişmiş blok zinciri teknolojisi",
     "description": "Ergo'nun yenilikçi blok zinciri teknolojisini keşfedin",
+    "ergo_technology_description": "Ergo Technology\",\n    description:",
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
+    "explore_ergo_s_technology_stack": "Ergo'nun teknoloji yığınını keşfedin: eUTXO, ErgoScript, Autolykos PoW, Depolama Kirası, Sigma Protokolleri, NIPoPoWs.",
+    "frequently_asked_questions": "Sıkça Sorulan Sorular",
+    "go_to_docs": "Belgelere Git",
+    "extended_utxo_model_that_enables": "Paralel akıllı sözleşme yürütmeyi ve birleştirilebilir DeFi uygulamalarını mümkün kılan Genişletilmiş UTXO modeli. Bitcoin'i korurken yeniden giriş saldırılarını ortadan kaldırır",
+    "parallel_execution_description_smart_contracts": "Paralel Yürütme\", description: \"Akıllı sözleşmeler küresel durum çakışmaları olmadan bağımsız olarak çalışır.",
+    "composability_description_build_complex_defi": "Birleştirilebilirlik\", description: \"Basit, yeniden kullanılabilir bileşenlerden karmaşık DeFi uygulamaları oluşturun.",
+    "bitcoin_level_security_description_inherits": "Bitcoin Düzeyinde Güvenlik\", description: \"UTXO'nun savaşta test edilmiş çift harcama korumasını devralır.",
+    "built_in_privacy_description_native": "Yerleşik Gizlilik\", description: \"Gizli işlemler için yerel sıfır bilgi kanıtları ve halka imzaları.",
+    "safe_by_design_description_prevents": "Tasarımla Güvenli\", description: \"Yeniden giriş saldırıları ve beklenmedik davranışlar gibi yaygın güvenlik açıklarını önler.",
+    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"Ağ katılımını demokratikleştiren enerji verimli, ASIC'e dirençli madencilik algoritması. Ağı merkezi olmayan ve herkese erişilebilir tutmak için GPU madenciliği için tasarlanmıştır.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
+    "energy_efficient_description_memory_hard": "Enerji Verimli\", description: \"Bellek yoğun algoritma, geleneksel PoW'a kıyasla güç tüketimini azaltır.",
+    "solo_mining_friendly_description_low": "Solo Madenciliğe Uygun\", description: \"Düşük giriş engeli, bireysel madencilerin kârlı bir şekilde katılmasını sağlar.",
+    "asic_resistant_description_optimized_for": "ASIC'e Dirençli\", description: \"Madencilik merkezileşmesini önlemek için tüketici GPU'larına optimize edilmiştir.",
+    "storage_rent_description": "Depolama Kirası\",\n    description:",
+    "sustainable_blockchain_description_automatic_cleanup": "Sürdürülebilir Blok Zinciri\", description: \"Kullanılmayan verilerin otomatik temizlenmesi blok zincirini hafif ve verimli tutar.",
+    "perpetual_security_description_miners_receive": "Kalıcı Güvenlik\", description: \"Madenciler sonsuza kadar ödül alır, bu da uzun vadeli ağ güvenliğini sağlar.",
+    "resource_efficient_description_maintains_lightweight": "Kaynak Verimli\", description: \"Mütevazı donanımda çalışan hafif blok zincirini korur.",
+    "sigma_protocols_description_built_in": "Sigma Protokolleri\",\n    description:\n      \"Yerleşik sıfır bilgi kanıtları, üçüncü taraf çözümleri veya karmaşık kurulumlar olmadan gizliliği koruyan işlemleri ve gelişmiş kriptografik özellikleri etkinleştirir.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
+    "optional_privacy_description_choose_between": "İsteğe Bağlı Gizlilik\", description: \"Gerektiğinde şeffaf veya gizli işlemler arasında seçim yapın.",
+    "developer_friendly_description_simple_apis": "Geliştirici Dostu\", description: \"Herhangi bir uygulamaya gizlilik özellikleri eklemek için basit API'ler.",
+    "instant_mobile_sync_description_full": "Anında Mobil Senkronizasyon\", description: \"Minimum veriyle tam güvenlik - herhangi bir cihazda saniyeler içinde senkronize edin.",
+    "trustless_bridges_description_connect_to": "Güvensiz Köprüler\", description: \"Merkezi doğrulayıcılar olmadan diğer blok zincirlerine bağlanın.",
+    "cryptographic_security_description_mathematical_proofs": "Kriptografik Güvenlik\", description: \"Matematiksel kanıtlar hafif istemciler için tam düğüm düzeyinde güvenlik sağlar.",
+    "subblocks_in_development_description": "Alt Bloklar (Geliştirme Aşamasında)\",\n    description:",
+    "sub_second_confirmations_description_near": "Saniyenin Altında Onaylar\", description: \"Geliştirilmiş kullanıcı deneyimi için anlık işlem kesinliği.",
+    "full_blockchain_security_without_trusted": "Güvenilir aracılar olmadan tam blok zinciri güvenliği.",
+    "seamless_integration_description_works_with": "Sorunsuz Entegrasyon\", description: \"Mevcut altyapıyla çalışır - köprü veya yan zincire gerek yok.",
+    "native_tokens_nfts_description_create": "Yerel Tokenlar ve NFT'ler\",\n    description:\n      \"Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok - sadece basit, güvenli ve uygun maliyetli yerel varlıklar.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
+    "one_click_creation_description_issue": "Tek Tıkla Oluşturma\", description: \"Tek bir işlemde token, stablecoin veya NFT çıkarın.",
+    "defi_ready_description_native_integration": "DeFi'ye Hazır\", description: \"Tüm Ergo uygulamaları ve protokolleriyle yerel entegrasyon.",
+    "true_native_assets_description_first": "Gerçek Yerel Varlıklar\", description: \"Protokol düzeyinde güvenlik garantilerine sahip birinci sınıf tokenlar.",
+    "oracle_pools_description_decentralized_price": "Oracle Havuzları\",\n    description:\n      \"Protokole yerleşik merkezi olmayan fiyat akışları ve veri kahinleri. Tek başarısızlık noktası yok, merkezi operatör yok - sadece DeFi için güvenilir, birleştirilebilir veriler.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
+    "reliable_price_feeds_description_consensus": "Güvenilir Fiyat Akışları\", description: \"Mutabakattabanlı veri toplama doğru, manipülasyona dirençli fiyatlar sağlar.",
+    "universal_compatibility_description_any_smart": "Evrensel Uyumluluk\", description: \"Herhangi bir akıllı sözleşme, özel entegrasyonlar olmadan oracle verilerine erişebilir.",
+    "fully_decentralized_description_no_central": "Tamamen Merkezi Olmayan\", description: \"Veri boru hattında merkezi otorite veya tek başarısızlık noktası yok.",
+    "backward_compatible_description_no_forced": "Geriye Dönük Uyumlu\", description: \"Zorunlu yükseltme yok, zincir savaşı yok.",
+    "future_proof_description_adopt_innovations": "Geleceğe Hazır\", description: \"Yenilikleri kendi hızınızda benimseyin.",
+    "gradual_adoption_description_evolutionary_not": "Kademeli Benimseme\", description: \"Devrimsel değil evrimsel değişiklikler.",
+    "adaptive_emission_governance_description_consensus": "Uyarlanabilir Emisyon ve Yönetişim\",\n    description:\n      \"Topluluk katkısıyla ekonomik parametrelerin mutabakata dayalı ayarlanması (örn. madenci oylaması).\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
+    "parameter_tuning_description_economic_variables": "Parametre Ayarı\", description: \"Ekonomik değişkenler ayarlanabilir.",
+    "economic_flexibility_description_adapt_to": "Ekonomik Esneklik\", description: \"Değişen ağ ihtiyaçlarına uyum sağlayın.",
+    "community_input_description_discussions_and": "Topluluk Katkısı\", description: \"Tartışmalar ve kararlar topluluğu içerir.",
+    "dive_into_ergo_docs_href_docs_color": "Ergo Belgelerine Dalın\",\n          href: \"/docs\",\n    color:",
+    "see_ecosystem_apps_href_ecosystem_color": "Ekosistem Uygulamalarını Görün\",\n    href: \"/ecosystem\",\n    color:",
+    "adaptive_emission_governance": "Uyarlanabilir Emisyon ve Yönetişim",
+    "what_makes_ergo_s_eutxo": "Ergo'nun eUTXO modeli hesap tabanlı blok zincirlerine kıyasla ne gibi üstünlükler sağlar?\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScript akıllı sözleşme güvenlik açıklarını nasıl önler?\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "Autolykos neden merkezi olmayan ve enerji verimli olarak kabul edilir?\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "Depolama Kirası blok zinciri sürdürülebilirliğini nasıl çözer?\",\n      tag: \"Depolama",
+    "what_privacy_features_does_ergo": "Ergo yerel olarak hangi gizlilik özelliklerini sunar?\",\n      tag: \"Gizlilik",
+    "why_are_ergo_s_oracle": "Ergo'nun Oracle Havuzları neden Chainlink'ten daha güvenlidir?\",\n      tag: \"Oracle'lar",
+    "how_do_subblocks_achieve_sub": "Alt Bloklar saniyenin altında işlem onaylarını nasıl başarır?\",\n      tag: \"Ölçekleme",
+    "how_to_create_tokens_and": "Akıllı sözleşmeler olmadan Ergo'da token ve NFT nasıl oluşturulur?\",\n      tag: \"Token ve NFT'ler",
+    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
+    "research_in_development": "Araştırma/Geliştirme aşamasında",
+    "decentralized_mixers_and_privacy_tools": "Merkezi olmayan karıştırıcılar ve gizlilik araçları (yasal durumu kontrol edin)\",\n                              \"DAO'lar ve yönetişim sistemleri",
+    "infrastructure_apps": "Altyapı ve Uygulamalar",
+    "ergo_docs_href_docs": "Ergo Belgeleri\", href: \"/docs",
+    "whitepaper_href_https_ergoplatform_org": "Teknik Rapor\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
+    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
+    "dev_tutorials_href_docs_developers_tutorials": "Geliştirici Öğreticileri\", href: \"/docs/developers/tutorials",
+    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
+    "smart_contracts_run_independently_without": "Akıllı sözleşmeler küresel durum çakışmaları olmadan bağımsız olarak çalışır.",
+    "build_complex_defi_applications_from": "Basit, yeniden kullanılabilir bileşenlerden karmaşık DeFi uygulamaları oluşturun.",
+    "bitcoin_level_security": "Bitcoin Düzeyinde Güvenlik",
+    "mathematically_prove_your_smart_contracts": "Akıllı sözleşmelerinizin güvenli ve hatasız olduğunu matematiksel olarak kanıtlayın.",
+    "native_zero_knowledge_proofs_and": "Gizli işlemler için yerel sıfır bilgi kanıtları ve halka imzaları.",
+    "safe_by_design": "Tasarımla Güvenli",
+    "prevents_common_vulnerabilities_like_reentrancy": "Yeniden giriş saldırıları ve beklenmedik davranışlar gibi yaygın güvenlik açıklarını önler.",
+    "energy_efficient_asic_resistant_mining": "Ağ katılımını demokratikleştiren enerji verimli, ASIC'e dirençli madencilik algoritması. Ağı merkezi olmayan ve herkese erişilebilir tutmak için GPU madenciliği için tasarlanmıştır.",
+    "memory_hard_algorithm_reduces_power": "Bellek yoğun algoritma, geleneksel PoW'a kıyasla güç tüketimini azaltır.",
+    "low_barrier_to_entry_enables": "Düşük giriş engeli, bireysel madencilerin kârlı bir şekilde katılmasını sağlar.",
+    "optimized_for_consumer_gpus_to": "Madencilik merkezileşmesini önlemek için tüketici GPU'larına optimize edilmiştir.",
+    "revolutionary_economic_model_that_prevents": "Blok zinciri şişmesini önleyen devrimsel ekonomik model. Etkin olmayan coinler 4 yıl sonra minimum kira öder, bu da sürdürülebilir blok zinciri boyutu ve kalıcı madenci ödülleri sağlar.",
+    "sustainable_blockchain": "Sürdürülebilir Blok Zinciri",
+    "automatic_cleanup_of_unused_data": "Kullanılmayan verilerin otomatik temizlenmesi blok zincirini hafif ve verimli tutar.",
+    "miners_receive_rewards_forever_ensuring": "Madenciler sonsuza kadar ödül alır, bu da uzun vadeli ağ güvenliğini sağlar.",
+    "maintains_lightweight_blockchain_that_runs": "Mütevazı donanımda çalışan hafif blok zincirini korur.",
+    "built_in_zero_knowledge_proofs": "Yerleşik sıfır bilgi kanıtları, üçüncü taraf çözümleri veya karmaşık kurulumlar olmadan gizliliği koruyan işlemleri ve gelişmiş kriptografik özellikleri etkinleştirir.",
+    "choose_between_transparent_or_confidential": "Gerektiğinde şeffaf veya gizli işlemler arasında seçim yapın.",
+    "simple_apis_to_add_privacy": "Herhangi bir uygulamaya gizlilik özellikleri eklemek için basit API'ler.",
+    "full_security_with_minimal_data": "Minimum veriyle tam güvenlik - herhangi bir cihazda saniyeler içinde senkronize edin.",
+    "connect_to_other_blockchains_without": "Merkezi doğrulayıcılar olmadan diğer blok zincirlerine bağlanın.",
+    "cryptographic_security": "Kriptografik Güvenlik",
+    "mathematical_proofs_ensure_full_node": "Matematiksel kanıtlar hafif istemciler için tam düğüm düzeyinde güvenlik sağlar.",
+    "subblocks_in_development": "Alt Bloklar (Geliştirme Aşamasında)",
+    "sub_second_confirmations": "Saniyenin Altında Onaylar",
+    "near_instant_transaction_finality_for": "Geliştirilmiş kullanıcı deneyimi için anlık işlem kesinliği.",
+    "works_with_existing_infrastructure_no": "Mevcut altyapıyla çalışır - köprü veya yan zincire gerek yok.",
+    "create_and_trade_tokens_and": "Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok - sadece basit, güvenli ve uygun maliyetli yerel varlıklar.",
+    "issue_tokens_stablecoins_or_nfts": "Tek bir işlemde token, stablecoin veya NFT çıkarın.",
+    "native_integration_with_all_ergo": "Tüm Ergo uygulamaları ve protokolleriyle yerel entegrasyon.",
+    "first_class_tokens_with_protocol": "Protokol düzeyinde güvenlik garantilerine sahip birinci sınıf tokenlar.",
+    "decentralized_price_feeds_and_data": "Protokole yerleşik merkezi olmayan fiyat akışları ve veri kahinleri. Tek başarısızlık noktası yok, merkezi operatör yok - sadece DeFi için güvenilir, birleştirilebilir veriler.",
+    "consensus_based_data_aggregation_ensures": "Mutabakata dayalı veri toplama doğru, manipülasyona dirençli fiyatlar sağlar.",
+    "universal_compatibility": "Evrensel Uyumluluk",
+    "any_smart_contract_can_access": "Herhangi bir akıllı sözleşme, özel entegrasyonlar olmadan oracle verilerine erişebilir.",
+    "no_central_authority_or_single": "Veri boru hattında merkezi otorite veya tek başarısızlık noktası yok.",
+    "no_forced_upgrades_no_chain_wars": "Zorunlu yükseltme yok, zincir savaşı yok.",
+    "adopt_innovations_at_your_own_pace": "Yenilikleri kendi hızınızda benimseyin.",
+    "evolutionary_not_revolutionary_changes": "Devrimsel değil evrimsel değişiklikler.",
+    "consensus_driven_tuning_of_economic": "Topluluk katkısıyla ekonomik parametrelerin mutabakata dayalı ayarlanması (örn. madenci oylaması).",
+    "economic_variables_can_be_adjusted": "Ekonomik değişkenler ayarlanabilir.",
+    "adapt_to_changing_network_needs": "Değişen ağ ihtiyaçlarına uyum sağlayın.",
+    "discussions_and_decisions_involve_the_community": "Tartışmalar ve kararlar topluluğu içerir.",
+    "see_ecosystem_apps": "Ekosistem Uygulamalarını Gör",
+    "sigma_protocols_provide_native_zero": "Sigma protokolleri yerel sıfır bilgi kanıtları, halka imzaları sağlar,",
+    "advanced_blockchain_infrastructure_for_scalable": "Ölçeklenebilir DeFi, güvenli akıllı sözleşmeler ve gerçek merkeziyetsizlik için gelişmiş blok zinciri altyapısı.",
+    "ergo_tech_stack_overview": "Ergo Teknoloji Yığınına Genel Bakış",
+    "ready_to_explore_ergo_tech": "Ergo Teknolojisini Keşfetmeye Hazır mısınız?",
+    "dive_deeper_into_the_docs": "Belgelere daha derine inin veya en gelişmiş UTXO blok zinciri üzerinde geliştirmeye başlayın.",
+    "discover_ergo_s_advanced_blockchain": "Ergo\\'nun gelişmiş blok zinciri teknolojisini keşfedin: paralel akıllı sözleşmeler için eUTXO modeli, ErgoScript programlama dili, sıfır bilgi kanıtları için Sigma protokolleri ve ASIC'e dirençli Autolykos madenciliği.",
+    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript akıllı sözleşmeleri', 'Sigma protokolleri', 'Autolykos madenciliği', 'blok zinciri teknolojisi', 'akıllı sözleşme programlama', 'NIPoPoWs', 'depolama kirası', 'iş kanıtı', 'DeFi altyapısı",
+    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
+    "ergo_technology_overview": "Ergo Teknolojisine Genel Bakış",
+    "ergo_technology_next_generation_blockchain": "Ergo Technology - Next Generation Blockchain",
+    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
+    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
+    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
+    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
+    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
+    "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Model', description: 'Extended UTXO model enabling parallel execution",
+    "thing_name_ergoscript_description_secure": "Thing', name: 'ErgoScript', description: 'Secure, declarative language for programmable money",
+    "thing_name_sigma_protocols_description": "Thing', name: 'Sigma Protocols', description: 'Native zero-knowledge proofs and privacy features",
+    "thing_name_autolykos_description_memory": "Thing', name: 'Autolykos', description: 'Memory-hard Proof of Work algorithm",
+    "thing_name_storage_rent_description": "Thing', name: 'Storage Rent', description: 'Sustainable blockchain state management",
+    "thing_name_nipopows_description_non": "Thing', name: 'NIPoPoWs', description: 'Non-Interactive Proofs of Proof-of-Work",
+    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
+    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
+    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
+    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
+    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
+    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
+    "answer_text": "Answer',\n          text:",
+    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
+    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
+    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
+    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
+    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
+    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
+    "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
+    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
+    "ergo_blockchain_technology_eutxo_smart": "Ergo Blok Zinciri Teknolojisi | eUTXO Akıllı Sözleşmeler ve Sigma Protokolleri",
+    "ergo_technology_stack_building_the_future": "Ergo Teknoloji Yığını - Geleceği İnşa Etmek",
+    "advanced_blockchain_technology_eutxo_ergoscript": "Gelişmiş blok zinciri teknolojisi: eUTXO, ErgoScript, gizlilik özellikleri ve sürdürülebilir PoW.",
+    "eutxo_model_ergoscript_sigma_protocols": "eUTXO modeli, ErgoScript, Sigma protokolleri, NIPoPoWs - son teknoloji blok zinciri teknolojisi.",
+    "comprehensive_overview_of_ergo": "Comprehensive overview of Ergo\\",
+    "extended_utxo_model_enabling_parallel_execution": "Paralel yürütmeyi mümkün kılan Genişletilmiş UTXO modeli",
+    "secure_declarative_language_for_programmable_money": "Programlanabilir para için güvenli, bildirimsel dil",
+    "native_zero_knowledge_proofs_and_privacy_features": "Yerel sıfır bilgi kanıtları ve gizlilik özellikleri",
+    "memory_hard_proof_of_work_algorithm": "Bellek yoğun İş Kanıtı algoritması",
+    "sustainable_blockchain_state_management": "Sürdürülebilir blok zinciri durum yönetimi",
+    "non_interactive_proofs_of_proof_of_work": "İş Kanıtının Etkileşimsiz Kanıtları",
     "sections": {
       "useCases": "Kullanım Alanları",
       "architecture": "Mimari",
@@ -317,6 +472,53 @@
         "explore": "Özellikleri Keşfet",
         "documentation": "Belgeleri Görüntüle"
       }
+    },
+    "innovations": {
+      "title": "Temel Yenilikler",
+      "items": {
+        "utxo": {
+          "title": "Genişletilmiş UTXO",
+          "description": "Bitcoin'in güvenliğini Ethereum'un ifade gücüyle birleştirir"
+        },
+        "sigma": {
+          "title": "Sigma Protokolleri",
+          "description": "Gizlilik ve kimlik doğrulama için yerleşik sıfır bilgi kanıtları"
+        },
+        "contracts": {
+          "title": "Çok Aşamalı Sözleşmeler",
+          "description": "Önceden tanımlanmış aşamalar boyunca gelişen karmaşık akıllı sözleşmeler"
+        },
+        "emission": {
+          "title": "Uyarlanabilir Emisyon",
+          "description": "Uzun vadeli istikrar için tasarlanmış düzgün emisyon eğrisi"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Ergo Nasıl Karşılaştırılır",
+      "description": "Ergo'nun teknolojisinin diğer platformlarla nasıl örtüştüğünü görün",
+      "features": {
+        "model": "Mutabakat Modeli",
+        "contracts": "Akıllı Sözleşmeler",
+        "privacy": "Gizlilik Özellikleri",
+        "scalability": "Ölçeklenebilirlik",
+        "sustainability": "Sürdürülebilirlik"
+      }
+    },
+    "roadmap": {
+      "title": "Teknoloji Yol Haritası",
+      "description": "Devam eden gelişmeler ve gelecekteki iyileştirmeler",
+      "phases": {
+        "current": "Mevcut Odak",
+        "next": "Sonraki Aşama",
+        "future": "Gelecek Vizyonu"
+      }
+    },
+    "cta": {
+      "title": "İnşa Etmeye Hazır mısınız?",
+      "description": "En gelişmiş blok zinciri platformu üzerinde geliştirmeye başlayın",
+      "documentation": "Belgeleri Görüntüle",
+      "github": "GitHub'ı Keşfet"
     },
     "features": {
       "eutxo": {
@@ -1117,53 +1319,6 @@
           }
         }
       }
-    },
-    "innovations": {
-      "title": "Temel Yenilikler",
-      "items": {
-        "utxo": {
-          "title": "Genişletilmiş UTXO",
-          "description": "Bitcoin'in güvenliğini Ethereum'un ifade gücüyle birleştirir"
-        },
-        "sigma": {
-          "title": "Sigma Protokolleri",
-          "description": "Gizlilik ve kimlik doğrulama için yerleşik sıfır bilgi kanıtları"
-        },
-        "contracts": {
-          "title": "Çok Aşamalı Sözleşmeler",
-          "description": "Önceden tanımlanmış aşamalar boyunca gelişen karmaşık akıllı sözleşmeler"
-        },
-        "emission": {
-          "title": "Uyarlanabilir Emisyon",
-          "description": "Uzun vadeli istikrar için tasarlanmış düzgün emisyon eğrisi"
-        }
-      }
-    },
-    "comparison": {
-      "title": "Ergo Nasıl Karşılaştırılır",
-      "description": "Ergo'nun teknolojisinin diğer platformlarla nasıl örtüştüğünü görün",
-      "features": {
-        "model": "Mutabakat Modeli",
-        "contracts": "Akıllı Sözleşmeler",
-        "privacy": "Gizlilik Özellikleri",
-        "scalability": "Ölçeklenebilirlik",
-        "sustainability": "Sürdürülebilirlik"
-      }
-    },
-    "roadmap": {
-      "title": "Teknoloji Yol Haritası",
-      "description": "Devam eden gelişmeler ve gelecekteki iyileştirmeler",
-      "phases": {
-        "current": "Mevcut Odak",
-        "next": "Sonraki Aşama",
-        "future": "Gelecek Vizyonu"
-      }
-    },
-    "cta": {
-      "title": "İnşa Etmeye Hazır mısınız?",
-      "description": "En gelişmiş blok zinciri platformu üzerinde geliştirmeye başlayın",
-      "documentation": "Belgeleri Görüntüle",
-      "github": "GitHub'ı Keşfet"
     },
     "nativeTokens": {
       "title": "Yerel Tokenlar ve NFT'ler",
@@ -2359,9 +2514,6 @@
       "explore_ergoscript_and_start_developing": "ErgoScript'i keşfedin ve bugün güvenli akıllı sözleşmeler geliştirmeye başlayın.",
       "try_playground": "Oyun Alanını Dene"
     },
-    "ergo_technology_description": "Ergo Technology\",\n    description:",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
-    "explore_ergo_s_technology_stack": "Ergo'nun teknoloji yığınını keşfedin: eUTXO, ErgoScript, Autolykos PoW, Depolama Kirası, Sigma Protokolleri, NIPoPoWs.",
     "adaptiveEmission": {
       "title": "Uyarlanabilir Emisyon",
       "subtitle": "Esnek Para Politikası",
@@ -2772,194 +2924,6 @@
           }
         }
       }
-    },
-    "frequently_asked_questions": "Sıkça Sorulan Sorular",
-    "go_to_docs": "Belgelere Git",
-    "extended_utxo_model_that_enables": "Paralel akıllı sözleşme yürütmeyi ve birleştirilebilir DeFi uygulamalarını mümkün kılan Genişletilmiş UTXO modeli. Bitcoin'i korurken yeniden giriş saldırılarını ortadan kaldırır",
-    "parallel_execution_description_smart_contracts": "Paralel Yürütme\", description: \"Akıllı sözleşmeler küresel durum çakışmaları olmadan bağımsız olarak çalışır.",
-    "composability_description_build_complex_defi": "Birleştirilebilirlik\", description: \"Basit, yeniden kullanılabilir bileşenlerden karmaşık DeFi uygulamaları oluşturun.",
-    "bitcoin_level_security_description_inherits": "Bitcoin Düzeyinde Güvenlik\", description: \"UTXO'nun savaşta test edilmiş çift harcama korumasını devralır.",
-    "built_in_privacy_description_native": "Yerleşik Gizlilik\", description: \"Gizli işlemler için yerel sıfır bilgi kanıtları ve halka imzaları.",
-    "safe_by_design_description_prevents": "Tasarımla Güvenli\", description: \"Yeniden giriş saldırıları ve beklenmedik davranışlar gibi yaygın güvenlik açıklarını önler.",
-    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"Ağ katılımını demokratikleştiren enerji verimli, ASIC'e dirençli madencilik algoritması. Ağı merkezi olmayan ve herkese erişilebilir tutmak için GPU madenciliği için tasarlanmıştır.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
-    "energy_efficient_description_memory_hard": "Enerji Verimli\", description: \"Bellek yoğun algoritma, geleneksel PoW'a kıyasla güç tüketimini azaltır.",
-    "solo_mining_friendly_description_low": "Solo Madenciliğe Uygun\", description: \"Düşük giriş engeli, bireysel madencilerin kârlı bir şekilde katılmasını sağlar.",
-    "asic_resistant_description_optimized_for": "ASIC'e Dirençli\", description: \"Madencilik merkezileşmesini önlemek için tüketici GPU'larına optimize edilmiştir.",
-    "storage_rent_description": "Depolama Kirası\",\n    description:",
-    "sustainable_blockchain_description_automatic_cleanup": "Sürdürülebilir Blok Zinciri\", description: \"Kullanılmayan verilerin otomatik temizlenmesi blok zincirini hafif ve verimli tutar.",
-    "perpetual_security_description_miners_receive": "Kalıcı Güvenlik\", description: \"Madenciler sonsuza kadar ödül alır, bu da uzun vadeli ağ güvenliğini sağlar.",
-    "resource_efficient_description_maintains_lightweight": "Kaynak Verimli\", description: \"Mütevazı donanımda çalışan hafif blok zincirini korur.",
-    "sigma_protocols_description_built_in": "Sigma Protokolleri\",\n    description:\n      \"Yerleşik sıfır bilgi kanıtları, üçüncü taraf çözümleri veya karmaşık kurulumlar olmadan gizliliği koruyan işlemleri ve gelişmiş kriptografik özellikleri etkinleştirir.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
-    "optional_privacy_description_choose_between": "İsteğe Bağlı Gizlilik\", description: \"Gerektiğinde şeffaf veya gizli işlemler arasında seçim yapın.",
-    "developer_friendly_description_simple_apis": "Geliştirici Dostu\", description: \"Herhangi bir uygulamaya gizlilik özellikleri eklemek için basit API'ler.",
-    "instant_mobile_sync_description_full": "Anında Mobil Senkronizasyon\", description: \"Minimum veriyle tam güvenlik - herhangi bir cihazda saniyeler içinde senkronize edin.",
-    "trustless_bridges_description_connect_to": "Güvensiz Köprüler\", description: \"Merkezi doğrulayıcılar olmadan diğer blok zincirlerine bağlanın.",
-    "cryptographic_security_description_mathematical_proofs": "Kriptografik Güvenlik\", description: \"Matematiksel kanıtlar hafif istemciler için tam düğüm düzeyinde güvenlik sağlar.",
-    "subblocks_in_development_description": "Alt Bloklar (Geliştirme Aşamasında)\",\n    description:",
-    "sub_second_confirmations_description_near": "Saniyenin Altında Onaylar\", description: \"Geliştirilmiş kullanıcı deneyimi için anlık işlem kesinliği.",
-    "full_blockchain_security_without_trusted": "Güvenilir aracılar olmadan tam blok zinciri güvenliği.",
-    "seamless_integration_description_works_with": "Sorunsuz Entegrasyon\", description: \"Mevcut altyapıyla çalışır - köprü veya yan zincire gerek yok.",
-    "native_tokens_nfts_description_create": "Yerel Tokenlar ve NFT'ler\",\n    description:\n      \"Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok - sadece basit, güvenli ve uygun maliyetli yerel varlıklar.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
-    "one_click_creation_description_issue": "Tek Tıkla Oluşturma\", description: \"Tek bir işlemde token, stablecoin veya NFT çıkarın.",
-    "defi_ready_description_native_integration": "DeFi'ye Hazır\", description: \"Tüm Ergo uygulamaları ve protokolleriyle yerel entegrasyon.",
-    "true_native_assets_description_first": "Gerçek Yerel Varlıklar\", description: \"Protokol düzeyinde güvenlik garantilerine sahip birinci sınıf tokenlar.",
-    "oracle_pools_description_decentralized_price": "Oracle Havuzları\",\n    description:\n      \"Protokole yerleşik merkezi olmayan fiyat akışları ve veri kahinleri. Tek başarısızlık noktası yok, merkezi operatör yok - sadece DeFi için güvenilir, birleştirilebilir veriler.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
-    "reliable_price_feeds_description_consensus": "Güvenilir Fiyat Akışları\", description: \"Mutabakattabanlı veri toplama doğru, manipülasyona dirençli fiyatlar sağlar.",
-    "universal_compatibility_description_any_smart": "Evrensel Uyumluluk\", description: \"Herhangi bir akıllı sözleşme, özel entegrasyonlar olmadan oracle verilerine erişebilir.",
-    "fully_decentralized_description_no_central": "Tamamen Merkezi Olmayan\", description: \"Veri boru hattında merkezi otorite veya tek başarısızlık noktası yok.",
-    "backward_compatible_description_no_forced": "Geriye Dönük Uyumlu\", description: \"Zorunlu yükseltme yok, zincir savaşı yok.",
-    "future_proof_description_adopt_innovations": "Geleceğe Hazır\", description: \"Yenilikleri kendi hızınızda benimseyin.",
-    "gradual_adoption_description_evolutionary_not": "Kademeli Benimseme\", description: \"Devrimsel değil evrimsel değişiklikler.",
-    "adaptive_emission_governance_description_consensus": "Uyarlanabilir Emisyon ve Yönetişim\",\n    description:\n      \"Topluluk katkısıyla ekonomik parametrelerin mutabakata dayalı ayarlanması (örn. madenci oylaması).\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
-    "parameter_tuning_description_economic_variables": "Parametre Ayarı\", description: \"Ekonomik değişkenler ayarlanabilir.",
-    "economic_flexibility_description_adapt_to": "Ekonomik Esneklik\", description: \"Değişen ağ ihtiyaçlarına uyum sağlayın.",
-    "community_input_description_discussions_and": "Topluluk Katkısı\", description: \"Tartışmalar ve kararlar topluluğu içerir.",
-    "dive_into_ergo_docs_href_docs_color": "Ergo Belgelerine Dalın\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "Ekosistem Uygulamalarını Görün\",\n    href: \"/ecosystem\",\n    color:",
-    "adaptive_emission_governance": "Uyarlanabilir Emisyon ve Yönetişim",
-    "what_makes_ergo_s_eutxo": "Ergo'nun eUTXO modeli hesap tabanlı blok zincirlerine kıyasla ne gibi üstünlükler sağlar?\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "ErgoScript akıllı sözleşme güvenlik açıklarını nasıl önler?\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "Autolykos neden merkezi olmayan ve enerji verimli olarak kabul edilir?\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "Depolama Kirası blok zinciri sürdürülebilirliğini nasıl çözer?\",\n      tag: \"Depolama",
-    "what_privacy_features_does_ergo": "Ergo yerel olarak hangi gizlilik özelliklerini sunar?\",\n      tag: \"Gizlilik",
-    "why_are_ergo_s_oracle": "Ergo'nun Oracle Havuzları neden Chainlink'ten daha güvenlidir?\",\n      tag: \"Oracle'lar",
-    "how_do_subblocks_achieve_sub": "Alt Bloklar saniyenin altında işlem onaylarını nasıl başarır?\",\n      tag: \"Ölçekleme",
-    "how_to_create_tokens_and": "Akıllı sözleşmeler olmadan Ergo'da token ve NFT nasıl oluşturulur?\",\n      tag: \"Token ve NFT'ler",
-    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
-    "research_in_development": "Araştırma/Geliştirme aşamasında",
-    "decentralized_mixers_and_privacy_tools": "Merkezi olmayan karıştırıcılar ve gizlilik araçları (yasal durumu kontrol edin)\",\n                              \"DAO'lar ve yönetişim sistemleri",
-    "infrastructure_apps": "Altyapı ve Uygulamalar",
-    "ergo_docs_href_docs": "Ergo Belgeleri\", href: \"/docs",
-    "whitepaper_href_https_ergoplatform_org": "Teknik Rapor\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
-    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
-    "dev_tutorials_href_docs_developers_tutorials": "Geliştirici Öğreticileri\", href: \"/docs/developers/tutorials",
-    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
-    "smart_contracts_run_independently_without": "Akıllı sözleşmeler küresel durum çakışmaları olmadan bağımsız olarak çalışır.",
-    "build_complex_defi_applications_from": "Basit, yeniden kullanılabilir bileşenlerden karmaşık DeFi uygulamaları oluşturun.",
-    "bitcoin_level_security": "Bitcoin Düzeyinde Güvenlik",
-    "mathematically_prove_your_smart_contracts": "Akıllı sözleşmelerinizin güvenli ve hatasız olduğunu matematiksel olarak kanıtlayın.",
-    "native_zero_knowledge_proofs_and": "Gizli işlemler için yerel sıfır bilgi kanıtları ve halka imzaları.",
-    "safe_by_design": "Tasarımla Güvenli",
-    "prevents_common_vulnerabilities_like_reentrancy": "Yeniden giriş saldırıları ve beklenmedik davranışlar gibi yaygın güvenlik açıklarını önler.",
-    "energy_efficient_asic_resistant_mining": "Ağ katılımını demokratikleştiren enerji verimli, ASIC'e dirençli madencilik algoritması. Ağı merkezi olmayan ve herkese erişilebilir tutmak için GPU madenciliği için tasarlanmıştır.",
-    "memory_hard_algorithm_reduces_power": "Bellek yoğun algoritma, geleneksel PoW'a kıyasla güç tüketimini azaltır.",
-    "low_barrier_to_entry_enables": "Düşük giriş engeli, bireysel madencilerin kârlı bir şekilde katılmasını sağlar.",
-    "optimized_for_consumer_gpus_to": "Madencilik merkezileşmesini önlemek için tüketici GPU'larına optimize edilmiştir.",
-    "revolutionary_economic_model_that_prevents": "Blok zinciri şişmesini önleyen devrimsel ekonomik model. Etkin olmayan coinler 4 yıl sonra minimum kira öder, bu da sürdürülebilir blok zinciri boyutu ve kalıcı madenci ödülleri sağlar.",
-    "sustainable_blockchain": "Sürdürülebilir Blok Zinciri",
-    "automatic_cleanup_of_unused_data": "Kullanılmayan verilerin otomatik temizlenmesi blok zincirini hafif ve verimli tutar.",
-    "miners_receive_rewards_forever_ensuring": "Madenciler sonsuza kadar ödül alır, bu da uzun vadeli ağ güvenliğini sağlar.",
-    "maintains_lightweight_blockchain_that_runs": "Mütevazı donanımda çalışan hafif blok zincirini korur.",
-    "built_in_zero_knowledge_proofs": "Yerleşik sıfır bilgi kanıtları, üçüncü taraf çözümleri veya karmaşık kurulumlar olmadan gizliliği koruyan işlemleri ve gelişmiş kriptografik özellikleri etkinleştirir.",
-    "choose_between_transparent_or_confidential": "Gerektiğinde şeffaf veya gizli işlemler arasında seçim yapın.",
-    "simple_apis_to_add_privacy": "Herhangi bir uygulamaya gizlilik özellikleri eklemek için basit API'ler.",
-    "full_security_with_minimal_data": "Minimum veriyle tam güvenlik - herhangi bir cihazda saniyeler içinde senkronize edin.",
-    "connect_to_other_blockchains_without": "Merkezi doğrulayıcılar olmadan diğer blok zincirlerine bağlanın.",
-    "cryptographic_security": "Kriptografik Güvenlik",
-    "mathematical_proofs_ensure_full_node": "Matematiksel kanıtlar hafif istemciler için tam düğüm düzeyinde güvenlik sağlar.",
-    "subblocks_in_development": "Alt Bloklar (Geliştirme Aşamasında)",
-    "sub_second_confirmations": "Saniyenin Altında Onaylar",
-    "near_instant_transaction_finality_for": "Geliştirilmiş kullanıcı deneyimi için anlık işlem kesinliği.",
-    "works_with_existing_infrastructure_no": "Mevcut altyapıyla çalışır - köprü veya yan zincire gerek yok.",
-    "create_and_trade_tokens_and": "Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok - sadece basit, güvenli ve uygun maliyetli yerel varlıklar.",
-    "issue_tokens_stablecoins_or_nfts": "Tek bir işlemde token, stablecoin veya NFT çıkarın.",
-    "native_integration_with_all_ergo": "Tüm Ergo uygulamaları ve protokolleriyle yerel entegrasyon.",
-    "first_class_tokens_with_protocol": "Protokol düzeyinde güvenlik garantilerine sahip birinci sınıf tokenlar.",
-    "decentralized_price_feeds_and_data": "Protokole yerleşik merkezi olmayan fiyat akışları ve veri kahinleri. Tek başarısızlık noktası yok, merkezi operatör yok - sadece DeFi için güvenilir, birleştirilebilir veriler.",
-    "consensus_based_data_aggregation_ensures": "Mutabakata dayalı veri toplama doğru, manipülasyona dirençli fiyatlar sağlar.",
-    "universal_compatibility": "Evrensel Uyumluluk",
-    "any_smart_contract_can_access": "Herhangi bir akıllı sözleşme, özel entegrasyonlar olmadan oracle verilerine erişebilir.",
-    "no_central_authority_or_single": "Veri boru hattında merkezi otorite veya tek başarısızlık noktası yok.",
-    "no_forced_upgrades_no_chain_wars": "Zorunlu yükseltme yok, zincir savaşı yok.",
-    "adopt_innovations_at_your_own_pace": "Yenilikleri kendi hızınızda benimseyin.",
-    "evolutionary_not_revolutionary_changes": "Devrimsel değil evrimsel değişiklikler.",
-    "consensus_driven_tuning_of_economic": "Topluluk katkısıyla ekonomik parametrelerin mutabakata dayalı ayarlanması (örn. madenci oylaması).",
-    "economic_variables_can_be_adjusted": "Ekonomik değişkenler ayarlanabilir.",
-    "adapt_to_changing_network_needs": "Değişen ağ ihtiyaçlarına uyum sağlayın.",
-    "discussions_and_decisions_involve_the_community": "Tartışmalar ve kararlar topluluğu içerir.",
-    "see_ecosystem_apps": "Ekosistem Uygulamalarını Gör",
-    "sigma_protocols_provide_native_zero": "Sigma protokolleri yerel sıfır bilgi kanıtları, halka imzaları sağlar,",
-    "advanced_blockchain_infrastructure_for_scalable": "Ölçeklenebilir DeFi, güvenli akıllı sözleşmeler ve gerçek merkeziyetsizlik için gelişmiş blok zinciri altyapısı.",
-    "ergo_tech_stack_overview": "Ergo Teknoloji Yığınına Genel Bakış",
-    "ready_to_explore_ergo_tech": "Ergo Teknolojisini Keşfetmeye Hazır mısınız?",
-    "dive_deeper_into_the_docs": "Belgelere daha derine inin veya en gelişmiş UTXO blok zinciri üzerinde geliştirmeye başlayın.",
-    "discover_ergo_s_advanced_blockchain": "Ergo\\'nun gelişmiş blok zinciri teknolojisini keşfedin: paralel akıllı sözleşmeler için eUTXO modeli, ErgoScript programlama dili, sıfır bilgi kanıtları için Sigma protokolleri ve ASIC'e dirençli Autolykos madenciliği.",
-    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript akıllı sözleşmeleri', 'Sigma protokolleri', 'Autolykos madenciliği', 'blok zinciri teknolojisi', 'akıllı sözleşme programlama', 'NIPoPoWs', 'depolama kirası', 'iş kanıtı', 'DeFi altyapısı",
-    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
-    "ergo_technology_overview": "Ergo Teknolojisine Genel Bakış",
-    "ergo_technology_next_generation_blockchain": "Ergo Technology - Next Generation Blockchain",
-    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
-    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
-    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
-    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Model', description: 'Extended UTXO model enabling parallel execution",
-    "thing_name_ergoscript_description_secure": "Thing', name: 'ErgoScript', description: 'Secure, declarative language for programmable money",
-    "thing_name_sigma_protocols_description": "Thing', name: 'Sigma Protocols', description: 'Native zero-knowledge proofs and privacy features",
-    "thing_name_autolykos_description_memory": "Thing', name: 'Autolykos', description: 'Memory-hard Proof of Work algorithm",
-    "thing_name_storage_rent_description": "Thing', name: 'Storage Rent', description: 'Sustainable blockchain state management",
-    "thing_name_nipopows_description_non": "Thing', name: 'NIPoPoWs', description: 'Non-Interactive Proofs of Proof-of-Work",
-    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
-    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
-    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
-    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
-    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
-    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
-    "answer_text": "Answer',\n          text:",
-    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
-    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
-    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
-    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
-    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
-    "ergo_blockchain_technology_eutxo_smart": "Ergo Blok Zinciri Teknolojisi | eUTXO Akıllı Sözleşmeler ve Sigma Protokolleri",
-    "ergo_technology_stack_building_the_future": "Ergo Teknoloji Yığını - Geleceği İnşa Etmek",
-    "advanced_blockchain_technology_eutxo_ergoscript": "Gelişmiş blok zinciri teknolojisi: eUTXO, ErgoScript, gizlilik özellikleri ve sürdürülebilir PoW.",
-    "eutxo_model_ergoscript_sigma_protocols": "eUTXO modeli, ErgoScript, Sigma protokolleri, NIPoPoWs - son teknoloji blok zinciri teknolojisi.",
-    "comprehensive_overview_of_ergo": "Comprehensive overview of Ergo\\",
-    "extended_utxo_model_enabling_parallel_execution": "Paralel yürütmeyi mümkün kılan Genişletilmiş UTXO modeli",
-    "secure_declarative_language_for_programmable_money": "Programlanabilir para için güvenli, bildirimsel dil",
-    "native_zero_knowledge_proofs_and_privacy_features": "Yerel sıfır bilgi kanıtları ve gizlilik özellikleri",
-    "memory_hard_proof_of_work_algorithm": "Bellek yoğun İş Kanıtı algoritması",
-    "sustainable_blockchain_state_management": "Sürdürülebilir blok zinciri durum yönetimi",
-    "non_interactive_proofs_of_proof_of_work": "İş Kanıtının Etkileşimsiz Kanıtları",
-    "ergoscriptPageOld": {
-      "features": [
-        {
-          "title": "Formal Verification Support",
-          "description": "Supports formal verification and auditability via declarative constraints and first-class crypto primitives"
-        },
-        {
-          "title": "eUTXO Security Model",
-          "description": "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO"
-        },
-        {
-          "title": "Deterministic Execution",
-          "description": "Computational complexity is predictable, though network fees are market-driven"
-        },
-        {
-          "title": "Native Sigma Protocols",
-          "description": "First-class support for multi-signature, threshold, and ring-signature constructions"
-        },
-        {
-          "title": "UTXO Concurrency",
-          "description": "Parallel transaction processing with batcher patterns for high-contention scenarios"
-        },
-        {
-          "title": "Restricted Computation",
-          "description": "Non-Turing-complete within scripts for safety, yet sequences can express complex behaviors"
-        }
-      ],
-      "useCases": [
-        "Non-custodial DeFi protocols",
-        "Custom multi-signature wallets",
-        "Auctions and DAOs",
-        "Oracle systems",
-        "Privacy tools and mixers",
-        "Advanced NFT contracts"
-      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -3465,1264 +3429,1300 @@
       }
     },
     "privacyFeatures": {
-      "title": "Privacy Features",
-      "subtitle": "Privacy by choice and selective disclosure",
-      "description": "Financial freedom and privacy go hand in hand. Ergo bakes privacy features directly into its core — not as an afterthought.",
-      "lastUpdated": "Last updated",
-      "skipToContent": "Skip to content",
+      "title": "Gizlilik Özellikleri",
+      "subtitle": "Tercihle gizlilik ve seçici açıklama",
+      "description": "Finansal özgürlük ve gizlilik el ele gider. Ergo, gizlilik özelliklerini sonradan ekleme olarak değil, doğrudan çekirdeğine yerleştirir.",
+      "lastUpdated": "Son güncelleme",
+      "skipToContent": "İçeriğe atla",
       "seo": {
-        "title": "Ergo Privacy — Sigma Protocols, Mixer, Confidential Assets",
-        "description": "Ergo bakes privacy into the protocol: Sigma protocols, ring/threshold signatures, ErgoMixer, confidential assets and selective disclosure.",
-        "keywords": "Ergo privacy,Sigma protocols,ring signatures,zero-knowledge proofs,ErgoMixer,confidential transactions",
+        "title": "Ergo Gizliliği — Sigma Protokolleri, Miksleyici, Gizli Varlıklar",
+        "description": "Ergo gizliliği protokole yerleştirir: Sigma protokolleri, halka/eşik imzaları, ErgoMixer, gizli varlıklar ve seçici açıklama.",
+        "keywords": "Ergo gizlilik,Sigma protokolleri,halka imzaları,sıfır bilgi ispatları,ErgoMixer,gizli işlemler",
         "faq": {
           "whatFeatures": {
-            "question": "What privacy features does Ergo offer?",
-            "answer": "Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance."
+            "question": "Ergo hangi gizlilik özelliklerini sunuyor?",
+            "answer": "Ergo; Sigma protokolleri, halka imzaları, sıfır bilgi ispatları ve gizli işlemler dahil çok sayıda gizlilik özelliği sunmaktadır. Bu teknolojiler güvenlik ve uyumluluğu korurken gizlilik koruyucu işlemleri mümkün kılar."
           },
           "howSigmaWorks": {
-            "question": "How do Sigma protocols work?",
-            "answer": "Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation."
+            "question": "Sigma protokolleri nasıl çalışır?",
+            "answer": "Sigma protokolleri, değerleri açıklamadan gizli değerler hakkında ifadeleri kanıtlamaya olanak tanıyan sıfır bilgi ispat sistemleridir. Gizlilik koruyucu kimlik doğrulama ve işlem doğrulamayı mümkün kılarlar."
           },
           "regulatoryCompliant": {
-            "question": "Are Ergo's privacy features regulatory compliant?",
-            "answer": "Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default."
+            "question": "Ergo'nun gizlilik özellikleri yasal düzenlemelere uygun mu?",
+            "answer": "Evet, Ergo'nun gizlilik özellikleri yasal düzenlemelere uyumlu olacak şekilde tasarlanmıştır. Seçici açıklama yetenekleri sağlarlar; bu, kullanıcıların varsayılan olarak gizliliği korurken gerektiğinde işlem ayrıntılarını açıklamalarına olanak tanır."
           }
         }
       },
       "buttons": {
-        "explorePrivacy": "Explore Privacy",
-        "tryErgoMixer": "Try ErgoMixer"
+        "explorePrivacy": "Gizliliği Keşfet",
+        "tryErgoMixer": "ErgoMixer'ı Dene"
       },
       "navigation": {
-        "what": "What",
-        "technologies": "Technologies",
-        "useCases": "Use cases",
-        "faq": "FAQ"
+        "what": "Nedir",
+        "technologies": "Teknolojiler",
+        "useCases": "Kullanım alanları",
+        "faq": "SSS"
       },
       "privacyLevels": {
-        "title": "Privacy Levels",
+        "title": "Gizlilik Seviyeleri",
         "basic": {
-          "title": "Basic Privacy",
-          "description": "Standard transactions with pseudonymous addresses",
+          "title": "Temel Gizlilik",
+          "description": "Takma ad adresli standart işlemler",
           "features": {
-            "pseudonymous": "Pseudonymous addresses",
-            "utxoBenefits": "UTXO model benefits",
-            "basicPrivacy": "Basic transaction privacy"
+            "pseudonymous": "Takma ad adresler",
+            "utxoBenefits": "UTXO model avantajları",
+            "basicPrivacy": "Temel işlem gizliliği"
           }
         },
         "enhanced": {
-          "title": "Enhanced Privacy",
-          "description": "Using ErgoMixer for transaction mixing and unlinkability",
+          "title": "Gelişmiş Gizlilik",
+          "description": "İşlem karıştırma ve bağlantısızlık için ErgoMixer kullanımı",
           "features": {
-            "mixing": "Transaction mixing",
-            "unlinkability": "Address unlinkability",
-            "amountObfuscation": "Amount obfuscation"
+            "mixing": "İşlem karıştırma",
+            "unlinkability": "Adres bağlantısızlığı",
+            "amountObfuscation": "Miktar gizleme"
           }
         },
         "maximum": {
-          "title": "Maximum Privacy",
-          "description": "Sigma protocols with zero-knowledge proofs and ring signatures",
+          "title": "Maksimum Gizlilik",
+          "description": "Sıfır bilgi ispatları ve halka imzalarıyla Sigma protokolleri",
           "features": {
-            "zeroKnowledge": "Zero-knowledge proofs",
-            "ringSignatures": "Ring signatures",
-            "confidentialAssets": "Confidential assets",
-            "privateContracts": "Private smart contracts"
+            "zeroKnowledge": "Sıfır bilgi ispatları",
+            "ringSignatures": "Halka imzaları",
+            "confidentialAssets": "Gizli varlıklar",
+            "privateContracts": "Özel akıllı sözleşmeler"
           }
         }
       },
       "bestPractices": {
-        "title": "Limits & Best Practices",
-        "offChainAnalysis": "Off-chain network/behavior analysis can deanonymize users.",
-        "useDelays": "Use delays, avoid back-and-forth patterns, don't reuse addresses.",
-        "checkAnonymitySet": "Check the current anonymity set size before mixing."
+        "title": "Sınırlar ve En İyi Uygulamalar",
+        "offChainAnalysis": "Zincir dışı ağ/davranış analizi kullanıcıların anonimliğini ortadan kaldırabilir.",
+        "useDelays": "Gecikme kullanın, ileri geri kalıplarından kaçının, adresleri yeniden kullanmayın.",
+        "checkAnonymitySet": "Karıştırmadan önce mevcut anonimlik kümesi boyutunu kontrol edin."
       },
       "whyPrivacyMatters": {
-        "title": "Why Privacy Matters",
-        "description1": "In an increasingly digital world, financial privacy is not about hiding wrongdoing — it's about protecting your fundamental rights. Privacy enables freedom of expression, protects against discrimination, and ensures that your financial activities remain your own business.",
-        "description2": "Ergo recognizes that privacy and transparency can coexist. You should have the choice to keep your transactions private while still participating in a transparent, auditable blockchain ecosystem."
+        "title": "Gizlilik Neden Önemlidir",
+        "description1": "Giderek dijitalleşen bir dünyada finansal gizlilik, yanlış bir şey saklamakla değil temel haklarınızı korumakla ilgilidir. Gizlilik, ifade özgürlüğünü mümkün kılar, ayrımcılığa karşı korur ve finansal faaliyetlerinizin yalnızca size ait kalmasını sağlar.",
+        "description2": "Ergo, gizliliğin ve şeffaflığın bir arada var olabileceğini kabul eder. Şeffaf, denetlenebilir bir blok zinciri ekosistemine katılmaya devam ederken işlemlerinizi gizli tutma seçeneğine sahip olmalısınız."
       },
       "technologiesSection": {
-        "title": "Key Privacy Technologies",
-        "docsLink": "docs"
+        "title": "Temel Gizlilik Teknolojileri",
+        "docsLink": "belgeler"
       },
       "technologies": {
         "sigmaProtocols": {
-          "title": "Sigma Protocols",
-          "description": "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
+          "title": "Sigma Protokolleri",
+          "description": "Protokol düzeyinde halka imzaları ve sıfır bilgi ispatları gibi güçlü gizlilik araçlarını etkinleştirir.",
           "features": {
-            "zeroKnowledge": "Zero-knowledge proofs",
-            "ringSignatures": "Ring signatures",
-            "thresholdSignatures": "Threshold signatures",
-            "composablePrivacy": "Composable privacy"
+            "zeroKnowledge": "Sıfır bilgi ispatları",
+            "ringSignatures": "Halka imzaları",
+            "thresholdSignatures": "Eşik imzaları",
+            "composablePrivacy": "Birleştirilebilir gizlilik"
           }
         },
         "ergoMixer": {
           "title": "ErgoMixer",
-          "description": "On-chain, non-custodial mixing for transaction privacy and anonymity.",
+          "description": "İşlem gizliliği ve anonimliği için zincir üzeri, saklama hizmeti sunmayan karıştırma.",
           "features": {
-            "nonCustodial": "Non-custodial mixing",
-            "onChain": "On-chain privacy",
-            "tokenSupport": "Token mixing support",
-            "configurableAnonymity": "Configurable anonymity"
+            "nonCustodial": "Saklama hizmeti sunmayan karıştırma",
+            "onChain": "Zincir üzeri gizlilik",
+            "tokenSupport": "Token karıştırma desteği",
+            "configurableAnonymity": "Yapılandırılabilir anonimlik"
           }
         },
         "confidentialAssets": {
-          "title": "Confidential Assets",
-          "description": "Issue tokens with hidden amounts and rules for maximum privacy.",
+          "title": "Gizli Varlıklar",
+          "description": "Maksimum gizlilik için gizli miktarlar ve kurallarla token çıkarın.",
           "features": {
-            "hiddenAmounts": "Hidden token amounts",
-            "privateContracts": "Private smart contracts",
-            "confidentialTransactions": "Confidential transactions",
-            "selectiveDisclosure": "Selective disclosure"
+            "hiddenAmounts": "Gizli token miktarları",
+            "privateContracts": "Özel akıllı sözleşmeler",
+            "confidentialTransactions": "Gizli işlemler",
+            "selectiveDisclosure": "Seçici açıklama"
           }
         }
       },
       "advantages": {
-        "noTrustedSetup": "No trusted setup needed — pure cryptographic security",
-        "flexibleFeatures": "Flexible privacy features usable in dApps, DeFi, and NFTs",
-        "openSource": "Open-source, peer-reviewed cryptography",
-        "composable": "Composable with other Ergo features",
-        "builtInProtocol": "Built into the protocol, not added as afterthought",
-        "mathematicalSecurity": "Mathematically proven security guarantees"
+        "noTrustedSetup": "Güvenilir kurulum gerekmez — saf kriptografik güvenlik",
+        "flexibleFeatures": "dApp'lerde, DeFi'de ve NFT'lerde kullanılabilen esnek gizlilik özellikleri",
+        "openSource": "Açık kaynaklı, emsal değerlendirmeli kriptografi",
+        "composable": "Diğer Ergo özellikleriyle birleştirilebilir",
+        "builtInProtocol": "Sonradan ekleme yerine protokole yerleştirilmiş",
+        "mathematicalSecurity": "Matematiksel olarak kanıtlanmış güvenlik güvenceleri"
       },
       "useCasesSection": {
-        "title": "What You Can Do with Ergo Privacy",
-        "guideLink": "guide"
+        "title": "Ergo Gizliliği ile Neler Yapabilirsiniz",
+        "guideLink": "rehber"
       },
       "useCases": {
         "privateTransactions": {
-          "title": "Private Transactions",
-          "description": "Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
+          "title": "Özel İşlemler",
+          "description": "Güçlü zincir üzeri anonimlik elde etmek için ERG ve tokenlarınızı karıştırın (mevcut anonimlik kümesi dahilinde)",
           "example": "ErgoMixer"
         },
         "confidentialDefi": {
-          "title": "Confidential DeFi",
-          "description": "Build DeFi applications with private balances and logic",
-          "example": "Private DEX orders"
+          "title": "Gizli DeFi",
+          "description": "Özel bakiyeler ve mantıkla DeFi uygulamaları oluşturun",
+          "example": "Özel DEX emirleri"
         },
         "anonymousVoting": {
-          "title": "Anonymous Voting",
-          "description": "Create DAOs and voting systems with secret ballots",
-          "example": "DAO governance"
+          "title": "Anonim Oylama",
+          "description": "Gizli oylarla DAO'lar ve oylama sistemleri oluşturun",
+          "example": "DAO yönetişimi"
         },
         "privateNfts": {
-          "title": "Private NFTs",
-          "description": "NFTs with hidden metadata or ownership information",
-          "example": "Confidential collectibles"
+          "title": "Özel NFT'ler",
+          "description": "Gizli meta veri veya sahiplik bilgisine sahip NFT'ler",
+          "example": "Gizli koleksiyonlar"
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Sıkça Sorulan Sorular",
         "privacyLevel": {
-          "question": "What level of privacy does Ergo offer? Is it just coin mixing?",
-          "answer": "Ergo offers multi-layered privacy, not just a single feature. At its core are Sigma protocols—powerful cryptography that allows data to be hidden. On top of this runs ErgoMixer (non-custodial community tool), the first non-interactive and trustless mixer in the eUTXO space. It helps break the link between your transactions, providing strong anonymity on-chain."
+          "question": "Ergo ne düzeyde gizlilik sunar? Yalnızca coin karıştırma mı?",
+          "answer": "Ergo, tek bir özellikten ibaret olmayan çok katmanlı gizlilik sunar. Temelinde Sigma protokolleri yer alır — verilerin gizlenmesine olanak tanıyan güçlü kriptografi. Bunun üzerinde, eUTXO alanındaki ilk etkileşimsiz ve güven gerektirmeyen miksleyici olan ErgoMixer (saklama hizmeti sunmayan topluluk aracı) çalışır. İşlemleriniz arasındaki bağlantıyı kırmaya yardımcı olarak zincir üzerinde güçlü anonimlik sağlar."
         },
         "suspicious": {
-          "question": "If I use privacy features, won't my transactions look suspicious?",
-          "answer": "On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion."
+          "question": "Gizlilik özelliklerini kullansam işlemlerim şüpheli görünmez mi?",
+          "answer": "Aksine. Gizlilik araçları Ergo ekosisteminin temel bir parçası olduğundan bunları kullanmak normaldir. Çok sayıda kişi coinlerini karıştırdığında, içine kolayca karışılabilen büyük bir anonimlik kümesi oluştururlar. Ergo'da finansal verilerinizi korumak şüphe nedeni değil, standart bir uygulamadır."
         },
         "criminals": {
-          "question": "Doesn't this kind of privacy attract criminals?",
-          "answer": "Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling."
+          "question": "Bu tür gizlilik suçluları çekmez mi?",
+          "answer": "Gizlilik temel bir haktır, suçluluk itirafı değil. Pencerenize perde takmak yasa dışı bir şey yaptığınız anlamına gelmez. İşletmeler ticaret sırları ve bordro için gizliliğe, bireyler ise kendilerini takip ve profillemeden korumak için gizliliğe ihtiyaç duyar."
         },
         "auditProof": {
-          "question": "What if I need to prove a transaction for taxes or an audit?",
-          "answer": "Ergo applies a 'privacy by choice' approach with selective disclosure. When needed, you can provide viewing keys for specific transactions to an auditor or regulator without revealing your entire financial history."
+          "question": "Vergi veya denetim için bir işlemi kanıtlamam gerekirse ne olur?",
+          "answer": "Ergo, seçici açıklamayla 'tercihle gizlilik' yaklaşımı uygular. Gerektiğinde, tüm finansal geçmişinizi açıklamadan belirli işlemler için bir denetçi veya düzenleyiciye görüntüleme anahtarları sağlayabilirsiniz."
         }
       },
       "cta": {
-        "title": "Privacy by Design, Security by Default",
-        "description": "Ergo's privacy features aren't just add-ons — they're fundamental to the platform's architecture. Experience true financial freedom with cryptographically proven privacy.",
+        "title": "Tasarım Gereği Gizlilik, Varsayılan Olarak Güvenlik",
+        "description": "Ergo'nun gizlilik özellikleri yalnızca eklenti değildir — platformun mimarisinin temeli. Kriptografik olarak kanıtlanmış gizlilikle gerçek finansal özgürlüğü deneyimleyin.",
         "buttons": {
-          "tryErgoMixer": "Try ErgoMixer (non-custodial community tool)",
-          "privacyDocs": "Privacy Documentation"
+          "tryErgoMixer": "ErgoMixer'ı Dene (saklama hizmeti sunmayan topluluk aracı)",
+          "privacyDocs": "Gizlilik Belgeleri"
         }
       },
       "howTo": {
-        "title": "How to increase privacy with ErgoMixer",
-        "description": "High-level steps to improve on-chain privacy using ErgoMixer with delays and larger anonymity sets.",
+        "title": "ErgoMixer ile gizlilik nasıl artırılır",
+        "description": "Gecikmeler ve daha büyük anonimlik kümeleriyle ErgoMixer kullanarak zincir üzeri gizliliği iyileştirmeye yönelik üst düzey adımlar.",
         "steps": {
           "prepareFunds": {
-            "title": "Prepare funds",
-            "description": "Split funds and avoid address reuse."
+            "title": "Fonları hazırla",
+            "description": "Fonları böl ve adres yeniden kullanımından kaçın."
           },
           "runMix": {
-            "title": "Run mix",
-            "description": "Choose round count/delay for larger anonymity set."
+            "title": "Karıştırmayı çalıştır",
+            "description": "Daha büyük anonimlik kümesi için tur sayısını/gecikmeyi seçin."
           },
           "waitAndSpend": {
-            "title": "Wait & spend",
-            "description": "Spend after a delay; avoid direct linkability."
+            "title": "Bekle ve harca",
+            "description": "Bir gecikmeden sonra harca; doğrudan bağlanabilirlikten kaçın."
           }
         }
       }
     },
     "map": {
       "seo": {
-        "title": "Ergo Technology Map | Interactive Blockchain Architecture",
-        "description": "Explore Ergo's technology stack visually. Interactive map of blockchain components, protocols, and innovations. Understand how eUTXO, ErgoScript, and Sigma protocols work together.",
-        "keywords": "Ergo technology map, blockchain architecture, eUTXO model, ErgoScript, Sigma protocols, interactive visualization",
-        "ogTitle": "Interactive Ergo Technology Map",
-        "ogDescription": "Visual exploration of Ergo's blockchain technology stack and architecture.",
-        "ogAlt": "Ergo Technology Interactive Map",
-        "twitterTitle": "Ergo Technology Map | Interactive Architecture",
-        "twitterDescription": "Explore Ergo's technology stack visually. eUTXO, ErgoScript, Sigma protocols."
+        "title": "Ergo Teknoloji Haritası | Etkileşimli Blok Zinciri Mimarisi",
+        "description": "Ergo'nun teknoloji yığınını görsel olarak keşfedin. Blok zinciri bileşenlerinin, protokollerinin ve yeniliklerinin etkileşimli haritası. eUTXO, ErgoScript ve Sigma protokollerinin nasıl birlikte çalıştığını anlayın.",
+        "keywords": "Ergo teknoloji haritası, blok zinciri mimarisi, eUTXO modeli, ErgoScript, Sigma protokolleri, etkileşimli görselleştirme",
+        "ogTitle": "Etkileşimli Ergo Teknoloji Haritası",
+        "ogDescription": "Ergo'nun blok zinciri teknoloji yığınının ve mimarisinin görsel keşfi.",
+        "ogAlt": "Ergo Teknolojisi Etkileşimli Haritası",
+        "twitterTitle": "Ergo Teknoloji Haritası | Etkileşimli Mimari",
+        "twitterDescription": "Ergo'nun teknoloji yığınını görsel olarak keşfedin. eUTXO, ErgoScript, Sigma protokolleri."
       },
-      "title": "Ergo: How Protocol Technologies Connect",
-      "subtitle": "7-minute interactive map of blockchain architecture and component relationships",
+      "title": "Ergo: Protokol Teknolojileri Nasıl Bağlanır",
+      "subtitle": "Blok zinciri mimarisinin ve bileşen ilişkilerinin 7 dakikalık etkileşimli haritası",
       "ui": {
         "actions": {
-          "exploreAllTechnology": "Explore All Technology",
-          "developerDocs": "Developer Docs"
+          "exploreAllTechnology": "Tüm Teknolojiyi Keşfet",
+          "developerDocs": "Geliştirici Belgeleri"
         },
         "sections": {
-          "coreTechnologies": "Core Technologies"
+          "coreTechnologies": "Temel Teknolojiler"
         },
         "modal": {
           "tabs": {
-            "overview": "Overview",
-            "technical": "Technical",
-            "usage": "Usage"
+            "overview": "Genel Bakış",
+            "technical": "Teknik",
+            "usage": "Kullanım"
           },
           "headings": {
-            "keyFeatures": "Key Features",
-            "specifications": "Specifications",
-            "useCases": "Use Cases",
-            "connectedTechnologies": "Connected Technologies"
+            "keyFeatures": "Temel Özellikler",
+            "specifications": "Özellikler",
+            "useCases": "Kullanım Alanları",
+            "connectedTechnologies": "Bağlantılı Teknolojiler"
           }
         },
         "emailCapture": {
-          "title": "Stay Updated on Ergo Technology",
-          "description": "Get the latest technical insights, protocol updates, and development news delivered to your inbox."
+          "title": "Ergo Teknolojisinden Haberdar Olun",
+          "description": "En son teknik içgörüleri, protokol güncellemelerini ve geliştirme haberlerini gelen kutunuza alın."
         }
       },
       "nodes": {
         "eutxo": {
-          "name": "eUTXO Model",
-          "description": "Extended UTXO with smart contract capabilities",
+          "name": "eUTXO Modeli",
+          "description": "Akıllı sözleşme yeteneklerine sahip Genişletilmiş UTXO",
           "details": [
-            "Extends Bitcoin's UTXO with registers and guard scripts",
-            "Enables parallel transaction processing",
-            "Provides predictable execution costs",
-            "Supports complex multi-stage contracts"
+            "Bitcoin'in UTXO'sunu yazmaçlar ve koruma betikleriyle genişletir",
+            "Paralel işlem işlemeyi mümkün kılar",
+            "Öngörülebilir yürütme maliyetleri sağlar",
+            "Karmaşık çok aşamalı sözleşmeleri destekler"
           ],
           "specifications": [
-            "EIP-0001: eUTXO Model Specification",
-            "Box structure with R0-R9 registers",
-            "ErgoTree guard script validation"
+            "EIP-0001: eUTXO Model Spesifikasyonu",
+            "R0-R9 yazmaçlarıyla kutu yapısı",
+            "ErgoTree koruma betiği doğrulaması"
           ],
           "useCases": [
-            "DEX order books with atomic swaps",
-            "Multi-signature wallets and vaults",
-            "Time-locked contracts and vesting"
+            "Atomik takaslarla DEX emir defterleri",
+            "Çoklu imza cüzdanları ve kasaları",
+            "Zaman kilitli sözleşmeler ve hak kazanma"
           ]
         },
         "ergoscript": {
           "name": "ErgoScript",
-          "description": "Functional smart contract language",
+          "description": "İşlevsel akıllı sözleşme dili",
           "details": [
-            "Scala-based functional programming language",
-            "Built-in cryptographic primitives",
-            "Formal verification support",
-            "Compiles to ErgoTree bytecode"
+            "Scala tabanlı işlevsel programlama dili",
+            "Yerleşik kriptografik temel öğeler",
+            "Resmi doğrulama desteği",
+            "ErgoTree bayt koduna derlenir"
           ],
           "specifications": [
-            "ErgoScript Language Reference",
-            "Sigma protocol integration",
-            "Type system and safety guarantees"
+            "ErgoScript Dil Referansı",
+            "Sigma protokolü entegrasyonu",
+            "Tür sistemi ve güvenlik güvenceleri"
           ],
           "useCases": [
-            "Complex DeFi protocols",
-            "Privacy-preserving applications",
-            "DAO governance contracts"
+            "Karmaşık DeFi protokolleri",
+            "Gizlilik koruyucu uygulamalar",
+            "DAO yönetişim sözleşmeleri"
           ]
         },
         "ergotree": {
           "name": "ErgoTree",
-          "description": "Compiled smart contract bytecode",
+          "description": "Derlenmiş akıllı sözleşme bayt kodu",
           "details": [
-            "Serialized representation of ErgoScript",
-            "Executed by Ergo nodes for validation",
-            "Deterministic and reproducible",
-            "Optimized for efficient verification"
+            "ErgoScript'in serileştirilmiş temsili",
+            "Doğrulama için Ergo düğümleri tarafından yürütülür",
+            "Deterministik ve yeniden üretilebilir",
+            "Verimli doğrulama için optimize edilmiş"
           ]
         },
         "sigma-protocols": {
-          "name": "Sigma Protocols",
-          "description": "Zero-knowledge proof system",
+          "name": "Sigma Protokolleri",
+          "description": "Sıfır bilgi ispat sistemi",
           "details": [
-            "Non-interactive zero-knowledge proofs",
-            "No trusted setup required",
-            "Composable with other protocols",
-            "Built into ErgoScript natively"
+            "Etkileşimsiz sıfır bilgi ispatları",
+            "Güvenilir kurulum gerekmez",
+            "Diğer protokollerle birleştirilebilir",
+            "ErgoScript'e yerleşik olarak entegre"
           ],
           "specifications": [
-            "Sigma Protocol Specification",
-            "Fiat-Shamir transformation",
-            "Schnorr signature integration"
+            "Sigma Protokolü Spesifikasyonu",
+            "Fiat-Shamir dönüşümü",
+            "Schnorr imzası entegrasyonu"
           ],
           "useCases": [
-            "Ring signatures for privacy",
-            "Threshold signatures for multisig",
-            "Anonymous voting systems"
+            "Gizlilik için halka imzaları",
+            "Çoklu imza için eşik imzaları",
+            "Anonim oylama sistemleri"
           ]
         },
         "autolykos": {
           "name": "Autolykos",
-          "description": "ASIC-resistant PoW algorithm",
+          "description": "ASIC dirençli İK algoritması",
           "details": [
-            "Memory-hard algorithm favoring GPUs",
-            "ASIC-resistant design for decentralization",
-            "Energy-efficient compared to SHA-256",
-            "Adjustable difficulty for stable block times"
+            "GPU'ları tercih eden bellek yoğun algoritma",
+            "Merkeziyetsizlik için ASIC dirençli tasarım",
+            "SHA-256'ya kıyasla enerji verimli",
+            "Kararlı blok süreleri için ayarlanabilir zorluk"
           ],
           "specifications": [
-            "Autolykos v2 Algorithm Paper",
-            "Memory requirements and parameters",
-            "Difficulty adjustment mechanism"
+            "Autolykos v2 Algoritma Makalesi",
+            "Bellek gereksinimleri ve parametreleri",
+            "Zorluk ayarlama mekanizması"
           ]
         },
         "nipopows": {
-          "name": "NIPoPoWs",
-          "description": "Non-Interactive Proofs of Proof-of-Work",
+          "name": "NIPoPoW'lar",
+          "description": "İş Kanıtının Etkileşimsiz İspatları",
           "details": [
-            "Logarithmic proof size for blockchain state",
-            "Enables efficient light clients",
-            "Cryptographically secure verification",
-            "No need to download full blockchain"
+            "Blok zinciri durumu için logaritmik ispat boyutu",
+            "Verimli hafif istemcileri mümkün kılar",
+            "Kriptografik olarak güvenli doğrulama",
+            "Tam blok zincirini indirmeye gerek yok"
           ],
           "specifications": [
-            "NIPoPoW Research Paper",
-            "Superblock structure",
-            "Security proofs and guarantees"
+            "NIPoPoW Araştırma Makalesi",
+            "Üst blok yapısı",
+            "Güvenlik ispatları ve güvenceler"
           ],
           "useCases": [
-            "Mobile wallet synchronization",
-            "Cross-chain bridge verification",
-            "IoT device blockchain access"
+            "Mobil cüzdan senkronizasyonu",
+            "Zincirler arası köprü doğrulaması",
+            "IoT cihazının blok zincirine erişimi"
           ]
         },
         "storage-rent": {
-          "name": "Storage Rent",
-          "description": "Economic mechanism for blockchain sustainability",
+          "name": "Depolama Kirası",
+          "description": "Blok zinciri sürdürülebilirliği için ekonomik mekanizma",
           "details": [
-            "Prevents blockchain state bloat",
-            "Recycles fees from unused UTXOs",
-            "Ensures long-term miner incentives",
-            "Predictable storage costs"
+            "Blok zinciri durumu şişmesini önler",
+            "Kullanılmayan UTXO'lardan ücretleri geri dönüştürür",
+            "Uzun vadeli madenci teşviklerini güvence altına alır",
+            "Öngörülebilir depolama maliyetleri"
           ],
           "specifications": [
-            "EIP-0006: Storage Rent Specification",
-            "Fee calculation mechanism",
-            "UTXO lifecycle management"
+            "EIP-0006: Depolama Kirası Spesifikasyonu",
+            "Ücret hesaplama mekanizması",
+            "UTXO yaşam döngüsü yönetimi"
           ]
         },
         "native-tokens": {
-          "name": "Native Tokens",
-          "description": "First-class multi-asset support",
+          "name": "Yerel Tokenlar",
+          "description": "Birinci sınıf çok varlıklı destek",
           "details": [
-            "No smart contracts needed for tokens",
-            "Built into the protocol layer",
-            "Efficient storage and transfer",
-            "Rich metadata support for NFTs"
+            "Tokenlar için akıllı sözleşme gerekmez",
+            "Protokol katmanına yerleştirilmiş",
+            "Verimli depolama ve transfer",
+            "NFT'ler için zengin meta veri desteği"
           ],
           "useCases": [
-            "Stablecoins and governance tokens",
-            "NFT collections and marketplaces",
-            "DeFi protocol tokens"
+            "Stablecoin'ler ve yönetim tokenleri",
+            "NFT koleksiyonları ve pazaryerleri",
+            "DeFi protokol tokenleri"
           ]
         }
       },
       "categories": {
-        "all": "All Technologies",
-        "core": "Core Protocol",
-        "consensus": "Consensus Layer",
-        "features": "Key Features",
-        "infrastructure": "Infrastructure"
+        "all": "Tüm Teknolojiler",
+        "core": "Temel Protokol",
+        "consensus": "Mutabakat Katmanı",
+        "features": "Temel Özellikler",
+        "infrastructure": "Altyapı"
       },
       "legend": {
-        "title": "Legend",
-        "core": "Core Protocol",
-        "consensus": "Consensus Layer",
-        "features": "Key Features",
-        "infrastructure": "Infrastructure",
-        "directConnection": "Direct Connection",
-        "relation": "Related Technology"
+        "title": "Açıklama",
+        "core": "Temel Protokol",
+        "consensus": "Mutabakat Katmanı",
+        "features": "Temel Özellikler",
+        "infrastructure": "Altyapı",
+        "directConnection": "Doğrudan Bağlantı",
+        "relation": "İlgili Teknoloji"
       },
       "tldr": {
-        "title": "Key Technologies at a Glance",
-        "eutxo": "Extended UTXO provides security + smart contract expressiveness",
-        "ergoscript": "Functional language with built-in cryptographic primitives",
-        "autolykos": "ASIC-resistant consensus ensuring decentralization",
-        "sigma": "Zero-knowledge proofs without trusted setup",
-        "storageRent": "Sustainable economics preventing blockchain bloat",
-        "nipopows": "Efficient light clients with cryptographic security",
-        "nativeTokens": "First-class multi-asset support at protocol level"
+        "title": "Bir Bakışta Temel Teknolojiler",
+        "eutxo": "Genişletilmiş UTXO, güvenlik + akıllı sözleşme ifade gücü sağlar",
+        "ergoscript": "Yerleşik kriptografik temel öğelere sahip işlevsel dil",
+        "autolykos": "Merkeziyetsizliği güvence altına alan ASIC dirençli mutabakat",
+        "sigma": "Güvenilir kurulum olmadan sıfır bilgi ispatları",
+        "storageRent": "Blok zinciri şişmesini önleyen sürdürülebilir ekonomi",
+        "nipopows": "Kriptografik güvenlikle verimli hafif istemciler",
+        "nativeTokens": "Protokol düzeyinde birinci sınıf çok varlıklı destek"
       },
       "transactionLifecycle": {
-        "title": "Transaction Lifecycle",
-        "subtitle": "How transactions flow through Ergo's architecture",
+        "title": "İşlem Yaşam Döngüsü",
+        "subtitle": "İşlemlerin Ergo mimarisinden nasıl geçtiği",
         "steps": {
           "creation": {
-            "title": "Transaction Creation",
-            "description": "User creates inputs and outputs with ErgoScript conditions"
+            "title": "İşlem Oluşturma",
+            "description": "Kullanıcı ErgoScript koşullarıyla girdiler ve çıktılar oluşturur"
           },
           "validation": {
-            "title": "Script Validation",
-            "description": "ErgoScript and Sigma protocols verify transaction conditions"
+            "title": "Betik Doğrulama",
+            "description": "ErgoScript ve Sigma protokolleri işlem koşullarını doğrular"
           },
           "mining": {
-            "title": "Block Inclusion",
-            "description": "Miner includes transaction in block using Autolykos PoW"
+            "title": "Bloğa Dahil Etme",
+            "description": "Madenci, Autolykos İK kullanarak işlemi bloğa dahil eder"
           },
           "finalization": {
-            "title": "Network Finalization",
-            "description": "Transaction becomes part of immutable blockchain state"
+            "title": "Ağ Kesinleştirmesi",
+            "description": "İşlem değiştirilemez blok zinciri durumunun bir parçası olur"
           },
           "proof": {
-            "title": "Light Client Proof",
-            "description": "NIPoPoW enables efficient verification without full node"
+            "title": "Hafif İstemci İspatı",
+            "description": "NIPoPoW, tam düğüm olmadan verimli doğrulamayı mümkün kılar"
           }
         }
       },
       "dappPatterns": {
-        "title": "Common dApp Patterns",
-        "subtitle": "Proven architectural patterns for Ergo applications",
+        "title": "Yaygın dApp Kalıpları",
+        "subtitle": "Ergo uygulamaları için kanıtlanmış mimari kalıplar",
         "dex": {
-          "title": "DEX Order Pattern",
-          "description": "Atomic swap execution using box chaining",
+          "title": "DEX Emir Kalıbı",
+          "description": "Kutu zincirleme kullanılarak atomik takas yürütmesi",
           "steps": [
-            "Create order box with swap conditions",
-            "Matcher finds compatible orders",
-            "ErgoScript validates trade terms",
-            "New boxes created with swapped assets"
+            "Takas koşullarıyla emir kutusu oluştur",
+            "Eşleştirici uyumlu emirleri bulur",
+            "ErgoScript ticaret koşullarını doğrular",
+            "Takas edilmiş varlıklarla yeni kutular oluşturulur"
           ]
         },
         "oracle": {
-          "title": "Oracle Pool Pattern",
-          "description": "Decentralized data feed consensus",
+          "title": "Oracle Havuzu Kalıbı",
+          "description": "Merkeziyetsiz veri akışı mutabakatı",
           "steps": [
-            "Oracles collect off-chain data",
-            "Sigma protocols prove authenticity",
-            "Pool contract validates consensus",
-            "Verified data published on-chain"
+            "Oracle'lar zincir dışı veri toplar",
+            "Sigma protokolleri özgünlüğü kanıtlar",
+            "Havuz sözleşmesi mutabakatı doğrular",
+            "Doğrulanmış veriler zincir üzerinde yayınlanır"
           ]
         },
         "dao": {
-          "title": "DAO Voting Pattern",
-          "description": "Governance with quorum and timeouts",
+          "title": "DAO Oylama Kalıbı",
+          "description": "Yeterli sayı ve zaman aşımı ile yönetişim",
           "steps": [
-            "Proposal box created with conditions",
-            "Voting period with token locking",
-            "Quorum threshold verification",
-            "Execution or timeout handling"
+            "Koşullarla teklif kutusu oluşturulur",
+            "Token kilitlemeyle oylama dönemi",
+            "Yeterli sayı eşiği doğrulaması",
+            "Yürütme veya zaman aşımı yönetimi"
           ]
         }
       },
       "strengths": {
-        "title": "Strengths & Trade-offs",
+        "title": "Güçlü Yönler ve Değiş Tokuşlar",
         "advantages": {
-          "title": "Key Advantages",
+          "title": "Temel Avantajlar",
           "predictable": {
-            "title": "Predictable Execution",
-            "description": "eUTXO eliminates gas price auctions and reentrancy attacks"
+            "title": "Öngörülebilir Yürütme",
+            "description": "eUTXO, gaz fiyatı açık artırmalarını ve yeniden giriş saldırılarını ortadan kaldırır"
           },
           "verifiable": {
-            "title": "Formal Verifiability",
-            "description": "ErgoScript enables mathematical proof of contract correctness"
+            "title": "Resmi Doğrulanabilirlik",
+            "description": "ErgoScript, sözleşme doğruluğunun matematiksel ispatını mümkün kılar"
           },
           "parallel": {
-            "title": "Parallel Processing",
-            "description": "UTXO model allows concurrent transaction validation"
+            "title": "Paralel İşleme",
+            "description": "UTXO modeli eşzamanlı işlem doğrulamasına olanak tanır"
           },
           "cryptography": {
-            "title": "Built-in Cryptography",
-            "description": "Native Sigma protocols for advanced privacy features"
+            "title": "Yerleşik Kriptografi",
+            "description": "Gelişmiş gizlilik özellikleri için yerel Sigma protokolleri"
           }
         },
         "tradeoffs": {
-          "title": "Design Trade-offs",
+          "title": "Tasarım Değiş Tokuşları",
           "learning": {
-            "title": "Learning Curve",
-            "description": "Functional paradigm requires different thinking than account-based"
+            "title": "Öğrenme Eğrisi",
+            "description": "İşlevsel paradigma, hesap tabanlıdan farklı düşünce tarzı gerektirir"
           },
           "ux": {
-            "title": "UX Complexity",
-            "description": "Box management adds complexity but enables powerful patterns"
+            "title": "Kullanıcı Deneyimi Karmaşıklığı",
+            "description": "Kutu yönetimi karmaşıklık ekler ancak güçlü kalıpları mümkün kılar"
           },
           "storage": {
-            "title": "Storage Costs",
-            "description": "Storage rent ensures sustainability but requires active management"
+            "title": "Depolama Maliyetleri",
+            "description": "Depolama kirası sürdürülebilirliği sağlar ancak aktif yönetim gerektirir"
           },
           "ecosystem": {
-            "title": "Ecosystem Maturity",
-            "description": "Newer ecosystem with growing but smaller developer tooling"
+            "title": "Ekosistem Olgunluğu",
+            "description": "Büyüyen ancak daha küçük geliştirici araçlarıyla daha yeni ekosistem"
           }
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Sıkça Sorulan Sorular",
         "items": {
           "0": {
-            "question": "How does eUTXO differ from Bitcoin's UTXO model?",
-            "answer": "eUTXO extends Bitcoin's UTXO with registers (R0-R9) for data storage and ErgoTree guard scripts for programmable spending conditions. This enables smart contracts while maintaining UTXO's security and parallelism benefits."
+            "question": "eUTXO, Bitcoin'in UTXO modelinden nasıl farklıdır?",
+            "answer": "eUTXO, Bitcoin'in UTXO'sunu veri depolama için yazmaçlar (R0-R9) ve programlanabilir harcama koşulları için ErgoTree koruma betikleriyle genişletir. Bu, UTXO'nun güvenlik ve paralellik avantajlarını korurken akıllı sözleşmeleri mümkün kılar."
           },
           "1": {
-            "question": "What makes Sigma protocols special for blockchain?",
-            "answer": "Sigma protocols provide zero-knowledge proofs without trusted setup, enabling privacy features like ring signatures and confidential transactions. They're built directly into ErgoScript, making advanced cryptography accessible to developers."
+            "question": "Sigma protokollerini blok zinciri için özel kılan nedir?",
+            "answer": "Sigma protokolleri, güvenilir kurulum olmadan sıfır bilgi ispatları sağlayarak halka imzaları ve gizli işlemler gibi gizlilik özelliklerini mümkün kılar. ErgoScript'e doğrudan yerleştirilmiştir, bu da gelişmiş kriptografiyi geliştiriciler için erişilebilir kılar."
           },
           "2": {
-            "question": "Why does Ergo need Storage Rent?",
-            "answer": "Storage Rent prevents blockchain bloat by recycling fees from unused UTXOs back to miners. This ensures long-term sustainability and predictable storage costs, solving the 'state explosion' problem other blockchains face."
+            "question": "Ergo neden Depolama Kirasına ihtiyaç duyar?",
+            "answer": "Depolama Kirası, kullanılmayan UTXO'lardan ücretleri madencilere geri dönüştürerek blok zinciri şişmesini önler. Bu, uzun vadeli sürdürülebilirliği sağlar ve öngörülebilir depolama maliyetleri sunar; diğer blok zincirlerinin karşılaştığı 'durum patlaması' sorununu çözer."
           },
           "3": {
-            "question": "How do light clients trust the network without full validation?",
-            "answer": "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) provide cryptographically secure proofs that a transaction is included in the blockchain. Light clients can verify these logarithmic-size proofs without downloading the entire chain."
+            "question": "Hafif istemciler tam doğrulama olmadan ağa nasıl güvenir?",
+            "answer": "NIPoPoW'lar (İş Kanıtının Etkileşimsiz İspatları), bir işlemin blok zincirine dahil edildiğine dair kriptografik olarak güvenli ispatlar sağlar. Hafif istemciler, tüm zinciri indirmeden bu logaritmik boyutlu ispatları doğrulayabilir."
           },
           "4": {
-            "question": "What are the main dApp development patterns on Ergo?",
-            "answer": "Key patterns include: Order books for DEXs using box chaining, Oracle pools for data feeds with consensus mechanisms, DAO governance with voting and quorum logic, and Multi-stage contracts for complex workflows."
+            "question": "Ergo'daki temel dApp geliştirme kalıpları nelerdir?",
+            "answer": "Temel kalıplar şunlardır: Kutu zincirleme kullanan DEX'ler için emir defterleri, mutabakat mekanizmaları içeren veri akışları için Oracle havuzları, oylama ve yeterli sayı mantığı içeren DAO yönetişimi ve karmaşık iş akışları için çok aşamalı sözleşmeler."
           },
           "5": {
-            "question": "How does Autolykos ensure decentralization?",
-            "answer": "Autolykos is memory-hard and ASIC-resistant, favoring consumer GPUs over specialized hardware. This keeps mining accessible to individuals and prevents centralization in ASIC farms."
+            "question": "Autolykos merkeziyetsizliği nasıl güvence altına alır?",
+            "answer": "Autolykos bellek yoğundur ve ASIC dirençlidir; özel donanım yerine tüketici GPU'larını tercih eder. Bu, madenciliği bireylere erişilebilir tutar ve ASIC çiftliklerinde merkezileşmeyi önler."
           },
           "6": {
-            "question": "What are Ergo's scalability characteristics?",
-            "answer": "eUTXO enables parallel transaction processing, NIPoPoWs provide efficient light clients, and Storage Rent prevents state bloat. Layer 2 solutions can leverage these properties for further scaling."
+            "question": "Ergo'nun ölçeklenebilirlik özellikleri nelerdir?",
+            "answer": "eUTXO paralel işlem işlemeyi mümkün kılar, NIPoPoW'lar verimli hafif istemciler sağlar ve Depolama Kirası durum şişmesini önler. Katman 2 çözümleri daha fazla ölçekleme için bu özelliklerden yararlanabilir."
           },
           "7": {
-            "question": "How do native tokens work without smart contracts?",
-            "answer": "Native tokens are built into the protocol layer, stored directly in UTXO boxes. This provides efficient creation, transfer, and management without requiring smart contract deployment or execution."
+            "question": "Yerel tokenlar akıllı sözleşmeler olmadan nasıl çalışır?",
+            "answer": "Yerel tokenlar, protokol katmanına yerleştirilmiş olup doğrudan UTXO kutularında saklanır. Bu, akıllı sözleşme dağıtımı veya yürütmesi gerektirmeden verimli oluşturma, transfer ve yönetim sağlar."
           }
         }
       },
       "glossary": {
-        "title": "Technical Glossary",
+        "title": "Teknik Sözlük",
         "terms": {
-          "eutxo": "Extended UTXO model with registers and programmable spending conditions",
-          "box": "Ergo's equivalent of Bitcoin UTXO, containing value and data in registers",
-          "ergoscript": "Functional smart contract language with built-in cryptographic primitives",
-          "ergotree": "Compiled bytecode representation of ErgoScript contracts",
-          "sigmaProtocol": "Zero-knowledge proof system enabling privacy without trusted setup",
-          "autolykos": "ASIC-resistant Proof-of-Work algorithm ensuring mining decentralization",
-          "nipopow": "Non-Interactive Proofs enabling efficient light client verification",
-          "storageRent": "Economic mechanism preventing blockchain bloat through UTXO recycling",
-          "nativeToken": "First-class tokens built into protocol without smart contracts",
-          "lightClient": "Blockchain client that verifies transactions without full node data"
+          "eutxo": "Yazmaçlara ve programlanabilir harcama koşullarına sahip Genişletilmiş UTXO modeli",
+          "box": "Ergo'nun Bitcoin UTXO eşdeğeri; yazmaçlarda değer ve veri içerir",
+          "ergoscript": "Yerleşik kriptografik temel öğelere sahip işlevsel akıllı sözleşme dili",
+          "ergotree": "ErgoScript sözleşmelerinin derlenmiş bayt kodu temsili",
+          "sigmaProtocol": "Güvenilir kurulum olmadan gizliliği mümkün kılan sıfır bilgi ispat sistemi",
+          "autolykos": "Madencilik merkeziyetsizliğini güvence altına alan ASIC dirençli İş Kanıtı algoritması",
+          "nipopow": "Verimli hafif istemci doğrulamasını mümkün kılan Etkileşimsiz İspatlar",
+          "storageRent": "UTXO geri dönüşümü yoluyla blok zinciri şişmesini önleyen ekonomik mekanizma",
+          "nativeToken": "Akıllı sözleşmeler olmadan protokole yerleştirilmiş birinci sınıf tokenlar",
+          "lightClient": "Tam düğüm verisi olmadan işlemleri doğrulayan blok zinciri istemcisi"
         }
       },
       "furtherReading": {
-        "title": "Further Reading",
-        "subtitle": "Dive deeper into Ergo's technology",
-        "ergoscript": "ErgoScript Guide",
-        "eutxo": "eUTXO Deep Dive",
-        "documentation": "Technical Documentation",
-        "sourceCode": "Source Code",
+        "title": "Daha Fazla Okuma",
+        "subtitle": "Ergo'nun teknolojisine daha derin dalın",
+        "ergoscript": "ErgoScript Rehberi",
+        "eutxo": "eUTXO Derin İncelemesi",
+        "documentation": "Teknik Belgeler",
+        "sourceCode": "Kaynak Kodu",
         "descriptions": {
-          "ergoscript": "Learn the smart contract language",
-          "eutxo": "Extended UTXO architecture",
-          "documentation": "Technical specifications",
-          "sourceCode": "GitHub repositories"
+          "ergoscript": "Akıllı sözleşme dilini öğrenin",
+          "eutxo": "Genişletilmiş UTXO mimarisi",
+          "documentation": "Teknik özellikler",
+          "sourceCode": "GitHub depoları"
         }
       }
+    },
+    "ergoscriptPageOld": {
+      "features": [
+        {
+          "title": "Resmi Doğrulama Desteği",
+          "description": "Bildirimsel kısıtlamalar ve birinci sınıf kripto temel öğeler aracılığıyla resmi doğrulama ve denetimi destekler"
+        },
+        {
+          "title": "eUTXO Güvenlik Modeli",
+          "description": "Hesap tabanlı sistemlerde yaygın olan yeniden giriş güvenlik açıkları sınıfı eUTXO'da bulunmaz"
+        },
+        {
+          "title": "Deterministik Yürütme",
+          "description": "Hesaplama karmaşıklığı öngörülebilirdir, ancak ağ ücretleri piyasa tarafından belirlenir"
+        },
+        {
+          "title": "Yerel Sigma Protokolleri",
+          "description": "Çok imzalı, eşikli ve halka imza yapıları için birinci sınıf destek"
+        },
+        {
+          "title": "UTXO Eşzamanlılığı",
+          "description": "Yüksek çekişmeli senaryolar için toplu işleme kalıplarıyla paralel işlem işleme"
+        },
+        {
+          "title": "Kısıtlı Hesaplama",
+          "description": "Güvenlik için betikler içinde Turing tam değil, ancak diziler karmaşık davranışları ifade edebilir"
+        }
+      ],
+      "useCases": [
+        "Saklama hizmeti sunmayan DeFi protokolleri",
+        "Özel çoklu imza cüzdanları",
+        "Açık artırmalar ve DAO'lar",
+        "Oracle sistemleri",
+        "Gizlilik araçları ve miksleyiciler",
+        "Gelişmiş NFT sözleşmeleri"
+      ]
     }
   },
   "technologyPages": {
     "securePow": {
-      "title": "Secure PoW",
-      "subtitle": "ASIC-resistant Autolykos v2 algorithm ensuring fair mining and network security",
+      "title": "Güvenli İK",
+      "subtitle": "Adil madenciliği ve ağ güvenliğini sağlayan ASIC dirençli Autolykos v2 algoritması",
       "seo": {
-        "title": "Autolykos Mining Algorithm | ASIC-Resistant GPU Mining on Ergo",
-        "description": "Mine Ergo with GPUs using Autolykos v2 - the energy-efficient, ASIC-resistant algorithm. Start solo mining ERG profitably with consumer hardware. Complete mining guide included.",
-        "keywords": "autolykos, ergo mining, ASIC resistant, GPU mining, proof of work, secure mining algorithm"
+        "title": "Autolykos Madencilik Algoritması | Ergo'da ASIC Dirençli GPU Madenciliği",
+        "description": "Autolykos v2 ile Ergo'yu GPU'larla mine edin — enerji verimli, ASIC dirençli algoritma. Tüketici donanımıyla ERG madenciliğine başlayın. Eksiksiz madencilik rehberi dahil.",
+        "keywords": "autolykos, ergo madenciliği, ASIC dirençli, GPU madenciliği, iş kanıtı, güvenli madencilik algoritması"
       },
       "features": {
         "0": {
-          "title": "ASIC-Resistant",
-          "description": "Memory-hard algorithm prevents ASIC dominance and keeps mining decentralized"
+          "title": "ASIC Dirençli",
+          "description": "Bellek yoğun algoritma ASIC hakimiyetini önler ve madenciliği merkeziyetsiz tutar"
         },
         "1": {
-          "title": "Energy Efficient",
-          "description": "More efficient than Bitcoin's SHA-256 while maintaining security guarantees"
+          "title": "Enerji Verimli",
+          "description": "Güvenlik güvencelerini korurken Bitcoin'in SHA-256'sından daha verimli"
         },
         "2": {
-          "title": "Fair Mining",
-          "description": "GPU-friendly design ensures anyone can participate in network security"
+          "title": "Adil Madencilik",
+          "description": "GPU dostu tasarım herkesin ağ güvenliğine katılmasını sağlar"
         }
       },
       "networkStats": {
         "0": {
-          "label": "Network Hashrate",
-          "value": "12.5 TH/s",
-          "change": "+5.2%"
+          "label": "Ağ Hash Hızı",
+          "value": "12,5 TH/s",
+          "change": "+%5,2"
         },
         "1": {
-          "label": "Active Miners",
-          "value": "2,847",
-          "change": "+12.1%"
+          "label": "Aktif Madenciler",
+          "value": "2.847",
+          "change": "+%12,1"
         },
         "2": {
-          "label": "Block Time",
-          "value": "2.0 min",
-          "change": "Stable"
+          "label": "Blok Süresi",
+          "value": "2,0 dk",
+          "change": "Kararlı"
         },
         "3": {
-          "label": "Difficulty",
-          "value": "1.2P",
-          "change": "+3.8%"
+          "label": "Zorluk",
+          "value": "1,2P",
+          "change": "+%3,8"
         }
       },
-      "benefitsTitle": "Why Autolykos Matters",
+      "benefitsTitle": "Autolykos Neden Önemlidir",
       "benefits": {
-        "0": "Prevents mining centralization through ASIC resistance",
-        "1": "Reduces energy consumption compared to traditional PoW",
-        "2": "Enables profitable mining with consumer hardware",
-        "3": "Maintains network security through memory-hard puzzles",
-        "4": "Supports fair distribution of mining rewards",
-        "5": "Future-proofs against mining hardware monopolies"
+        "0": "ASIC direnci aracılığıyla madencilik merkezileşmesini önler",
+        "1": "Geleneksel İK'ya kıyasla enerji tüketimini azaltır",
+        "2": "Tüketici donanımıyla karlı madenciliği mümkün kılar",
+        "3": "Bellek yoğun bulmacalar aracılığıyla ağ güvenliğini korur",
+        "4": "Madencilik ödüllerinin adil dağılımını destekler",
+        "5": "Madencilik donanımı tekellerine karşı geleceğe hazır"
       },
-      "miningCommandTitle": "Start Mining",
+      "miningCommandTitle": "Madenciliğe Başla",
       "exampleCommand": "ergominer --pool stratum+tcp://pool.example.com:4444 --wallet YOUR_WALLET_ADDRESS",
-      "faqTitle": "Frequently Asked Questions",
+      "faqTitle": "Sıkça Sorulan Sorular",
       "faq": {
         "0": {
-          "question": "What is Autolykos?",
-          "answer": "Autolykos v2 is Ergo's memory-hard Proof-of-Work algorithm designed to be ASIC-resistant and GPU-friendly, keeping mining decentralized."
+          "question": "Autolykos nedir?",
+          "answer": "Autolykos v2, ASIC dirençli ve GPU dostu olacak şekilde tasarlanmış, madenciliği merkeziyetsiz tutan Ergo'nun bellek yoğun İş Kanıtı algoritmasıdır."
         },
         "1": {
-          "question": "Why is Autolykos ASIC-resistant?",
-          "answer": "Autolykos requires significant memory bandwidth making ASIC development economically unviable while remaining efficient on consumer GPUs."
+          "question": "Autolykos neden ASIC dirençlidir?",
+          "answer": "Autolykos, tüketici GPU'larında verimli kalmaya devam ederken ASIC geliştirmeyi ekonomik açıdan uygulanamaz hale getiren önemli düzeyde bellek bant genişliği gerektirir."
         },
         "2": {
-          "question": "How energy efficient is Autolykos?",
-          "answer": "Autolykos is more energy-efficient than Bitcoin's SHA-256, requiring less electricity per hash while maintaining security."
+          "question": "Autolykos ne kadar enerji verimlidir?",
+          "answer": "Autolykos, güvenliği korurken hash başına daha az elektrik gerektirerek Bitcoin'in SHA-256'sından daha enerji verimlidir."
         },
         "3": {
-          "question": "Can I mine Ergo with my GPU?",
-          "answer": "Yes! Autolykos is designed for GPU mining. Most modern GPUs can mine ERG profitably, making it accessible to home miners."
+          "question": "Ergo'yu GPU'mla mine edebilir miyim?",
+          "answer": "Evet! Autolykos GPU madenciliği için tasarlanmıştır. Çoğu modern GPU, ev madencileri için erişilebilir kılarak karlı biçimde ERG mine edebilir."
         },
         "4": {
-          "question": "How does Autolykos prevent centralization?",
-          "answer": "The memory-hard nature of Autolykos makes it expensive to develop specialized ASICs, keeping mining accessible to individual miners with consumer hardware."
+          "question": "Autolykos merkezileşmeyi nasıl önler?",
+          "answer": "Autolykos'un bellek yoğun yapısı, özel ASIC'ler geliştirmeyi pahalı kılar; böylece madencilik tüketici donanımına sahip bireysel madenciler için erişilebilir kalır."
         },
         "5": {
-          "question": "What hardware do I need to mine Ergo?",
-          "answer": "You need a modern GPU with at least 4GB VRAM. Popular choices include NVIDIA RTX series and AMD RX series graphics cards."
+          "question": "Ergo'yu mine etmek için hangi donanıma ihtiyacım var?",
+          "answer": "En az 4 GB VRAM'e sahip modern bir GPU'ya ihtiyacınız var. Popüler seçenekler arasında NVIDIA RTX serisi ve AMD RX serisi ekran kartları yer alır."
         }
       },
-      "ctaTitle": "Ready to Start Mining?",
+      "ctaTitle": "Madenciliğe Başlamaya Hazır mısınız?",
       "ctaButtons": {
-        "readGuide": "Mining Guide",
-        "viewCode": "View on GitHub"
+        "readGuide": "Madencilik Rehberi",
+        "viewCode": "GitHub'da Görüntüle"
       }
     },
     "eutxoModel": {
-      "title": "eUTXO Model",
-      "subtitle": "The foundation of Ergo's advanced smart contract capabilities",
-      "description": "Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality via ErgoScript, enabling parallel execution and eliminating entire classes of vulnerabilities.",
+      "title": "eUTXO Modeli",
+      "subtitle": "Ergo'nun gelişmiş akıllı sözleşme yeteneklerinin temeli",
+      "description": "Genişletilmiş UTXO, Bitcoin'in kanıtlanmış güvenlik modelini ErgoScript aracılığıyla güçlü akıllı sözleşme işlevselliğiyle birleştirir; paralel yürütmeyi mümkün kılar ve tüm güvenlik açığı sınıflarını ortadan kaldırır.",
       "seo": {
-        "title": "eUTXO Model: Parallel Smart Contracts | Ergo",
-        "description": "Learn how Ergo's Extended UTXO model enables parallel execution, MEV resistance, and composable DeFi. No re-entrancy attacks by design.",
-        "keywords": "eUTXO, Extended UTXO, UTXO model, parallel execution, smart contracts, MEV resistance, composability, Ergo blockchain, DeFi security, box model"
+        "title": "eUTXO Modeli: Paralel Akıllı Sözleşmeler | Ergo",
+        "description": "Ergo'nun Genişletilmiş UTXO modelinin paralel yürütmeyi, MEV direncini ve birleştirilebilir DeFi'yi nasıl mümkün kıldığını öğrenin. Tasarım gereği yeniden giriş saldırısı yok.",
+        "keywords": "eUTXO, Genişletilmiş UTXO, UTXO modeli, paralel yürütme, akıllı sözleşmeler, MEV direnci, birleştirilebilirlik, Ergo blok zinciri, DeFi güvenliği, kutu modeli"
       },
       "buttons": {
-        "learnMore": "Learn More",
-        "viewCode": "View Code"
+        "learnMore": "Daha Fazla Bilgi",
+        "viewCode": "Kodu Görüntüle"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "exploreEutxo": {
-          "title": "Explore eUTXO",
-          "description": "Interactive visualization of the model"
+          "title": "eUTXO'yu Keşfet",
+          "description": "Modelin etkileşimli görselleştirmesi"
         },
         "developerGuide": {
-          "title": "Developer Guide",
-          "description": "Build with eUTXO patterns"
+          "title": "Geliştirici Rehberi",
+          "description": "eUTXO kalıplarıyla inşa et"
         },
         "joinCommunity": {
-          "title": "Join Community",
-          "description": "Get help from experienced developers"
+          "title": "Topluluğa Katıl",
+          "description": "Deneyimli geliştiricilerden yardım alın"
         }
       },
-      "featuresTitle": "Key Features",
+      "featuresTitle": "Temel Özellikler",
       "features": {
         "0": {
-          "title": "Box-Based State",
-          "description": "Each UTXO is a 'box' containing value, data, and a guarding script that defines spending conditions."
+          "title": "Kutu Tabanlı Durum",
+          "description": "Her UTXO, değer, veri ve harcama koşullarını tanımlayan bir koruma betiği içeren bir 'kutu'dur."
         },
         "1": {
-          "title": "Immutable Data",
-          "description": "Boxes are immutable — once created, they cannot be modified, only consumed and new ones created."
+          "title": "Değiştirilemez Veri",
+          "description": "Kutular değiştirilemez — bir kez oluşturulduktan sonra değiştirilemez, yalnızca tüketilebilir ve yenileri oluşturulabilir."
         },
         "2": {
-          "title": "No Re-entrancy",
-          "description": "The UTXO model eliminates re-entrancy attacks by design — no mutable state to exploit."
+          "title": "Yeniden Giriş Yok",
+          "description": "UTXO modeli tasarım gereği yeniden giriş saldırılarını ortadan kaldırır — istismar edilecek değişken durum yoktur."
         },
         "3": {
-          "title": "Parallel Execution",
-          "description": "Transactions touching different boxes can execute in parallel, improving scalability."
+          "title": "Paralel Yürütme",
+          "description": "Farklı kutulara dokunan işlemler paralel yürütülebilir; bu da ölçeklenebilirliği artırır."
         },
         "4": {
-          "title": "Local Verification",
-          "description": "Smart contracts only need to verify their own inputs, not global blockchain state."
+          "title": "Yerel Doğrulama",
+          "description": "Akıllı sözleşmeler yalnızca kendi girdilerini doğrulamak zorundadır, küresel blok zinciri durumunu değil."
         },
         "5": {
-          "title": "Composable Protocols",
-          "description": "Complex DeFi protocols built from simple, reusable box patterns."
+          "title": "Birleştirilebilir Protokoller",
+          "description": "Basit, yeniden kullanılabilir kutu kalıplarından oluşturulmuş karmaşık DeFi protokolleri."
         }
       },
-      "comparisonTitle": "eUTXO vs Account Model",
+      "comparisonTitle": "eUTXO ile Hesap Modeli Karşılaştırması",
       "comparisonHeaders": {
-        "aspect": "Aspect",
-        "eutxo": "eUTXO Model",
-        "account": "Account Model",
-        "advantage": "Advantage"
+        "aspect": "Boyut",
+        "eutxo": "eUTXO Modeli",
+        "account": "Hesap Modeli",
+        "advantage": "Avantaj"
       },
       "comparison": {
         "0": {
-          "aspect": "State Management",
-          "eutxo": "No global balances — only unspent outputs",
-          "account": "Global state with account balances and storage",
+          "aspect": "Durum Yönetimi",
+          "eutxo": "Küresel bakiye yok — yalnızca harcanmamış çıktılar",
+          "account": "Hesap bakiyeleri ve depolama alanıyla küresel durum",
           "advantage": "eUTXO"
         },
         "1": {
-          "aspect": "Security",
-          "eutxo": "No re-entrancy attacks, predictable costs",
-          "account": "Vulnerable to re-entrancy, unpredictable gas",
+          "aspect": "Güvenlik",
+          "eutxo": "Yeniden giriş saldırısı yok, öngörülebilir maliyetler",
+          "account": "Yeniden girişe karşı savunmasız, öngörülemeyen gaz",
           "advantage": "eUTXO"
         },
         "2": {
-          "aspect": "Parallelism",
-          "eutxo": "Independent boxes enable parallel processing",
-          "account": "State contention forces sequential processing",
+          "aspect": "Paralellik",
+          "eutxo": "Bağımsız kutular paralel işlemeyi mümkün kılar",
+          "account": "Durum çekişmesi sıralı işlemeyi zorlar",
           "advantage": "eUTXO"
         },
         "3": {
-          "aspect": "Privacy",
-          "eutxo": "Natural transaction privacy through separate boxes",
-          "account": "All balances publicly visible",
+          "aspect": "Gizlilik",
+          "eutxo": "Ayrı kutular aracılığıyla doğal işlem gizliliği",
+          "account": "Tüm bakiyeler herkese açık",
           "advantage": "eUTXO"
         },
         "4": {
-          "aspect": "Composability",
-          "eutxo": "Modular outputs compose into complex protocols",
-          "account": "Monolithic contracts with complex interactions",
-          "advantage": "Tie"
+          "aspect": "Birleştirilebilirlik",
+          "eutxo": "Modüler çıktılar karmaşık protokollere dönüşür",
+          "account": "Karmaşık etkileşimli tek parça sözleşmeler",
+          "advantage": "Berabere"
         }
       },
-      "useCasesTitle": "Real-World Use Cases",
+      "useCasesTitle": "Gerçek Dünya Kullanım Alanları",
       "useCases": {
         "0": {
-          "title": "DEX Order Books",
-          "description": "Each order is a separate box, enabling parallel matching and atomic swaps",
+          "title": "DEX Emir Defterleri",
+          "description": "Her emir ayrı bir kutudur; paralel eşleştirme ve atomik takasları mümkün kılar",
           "example": "Spectrum Finance"
         },
         "1": {
-          "title": "Lending Protocols",
-          "description": "Collateral locked in boxes with clear liquidation conditions",
+          "title": "Borç Verme Protokolleri",
+          "description": "Net tasfiye koşullarıyla kutulara kilitlenmiş teminat",
           "example": "DuckPools"
         },
         "2": {
-          "title": "Stablecoins",
-          "description": "Reserve boxes track collateral independently for each position",
+          "title": "Stablecoin'ler",
+          "description": "Rezerv kutuları her pozisyon için teminatı bağımsız takip eder",
           "example": "SigmaUSD"
         },
         "3": {
-          "title": "NFT Auctions",
-          "description": "Bid boxes compete without blocking each other",
-          "example": "Ergo Auction House"
+          "title": "NFT Açık Artırmaları",
+          "description": "Teklif kutuları birbirini engellemeden rekabet eder",
+          "example": "Ergo Açık Artırma Evi"
         }
       },
-      "codeExampleTitle": "Simple Yet Powerful",
-      "codeExampleDescription": "The eUTXO model simplifies smart contract development by treating everything as boxes with clear spending conditions. No complex state management, no re-entrancy concerns — just straightforward logic.",
+      "codeExampleTitle": "Basit Ama Güçlü",
+      "codeExampleDescription": "eUTXO modeli, her şeyi net harcama koşullarına sahip kutular olarak ele alarak akıllı sözleşme geliştirmeyi basitleştirir. Karmaşık durum yönetimi yok, yeniden giriş endişesi yok — sadece basit mantık.",
       "codeExampleBenefits": {
-        "0": "Predictable execution costs",
-        "1": "Natural transaction batching",
-        "2": "Built-in multi-sig support",
-        "3": "Atomic multi-asset swaps"
+        "0": "Öngörülebilir yürütme maliyetleri",
+        "1": "Doğal işlem toplu işleme",
+        "2": "Yerleşik çoklu imza desteği",
+        "3": "Atomik çok varlıklı takaslar"
       },
-      "faqTitle": "Frequently Asked Questions",
+      "faqTitle": "Sıkça Sorulan Sorular",
       "faq": {
         "0": {
-          "question": "How is eUTXO different from Bitcoin's basic UTXO?",
-          "answer": "While Bitcoin's UTXO model only tracks value transfers, Ergo's eUTXO extends this with arbitrary data storage in boxes and Turing-complete smart contracts via ErgoScript. This enables complex DeFi applications while keeping UTXO benefits."
+          "question": "eUTXO, Bitcoin'in temel UTXO'sundan nasıl farklıdır?",
+          "answer": "Bitcoin'in UTXO modeli yalnızca değer transferlerini takip ederken Ergo'nun eUTXO'su bunu kutularda keyfi veri depolama ve ErgoScript aracılığıyla Turing tam akıllı sözleşmelerle genişletir. Bu, UTXO avantajlarını korurken karmaşık DeFi uygulamalarını mümkün kılar."
         },
         "1": {
-          "question": "Can eUTXO handle complex DeFi applications?",
-          "answer": "Yes! Ergo has DEXes (Spectrum), lending protocols, stablecoins (SigmaUSD), and more. The eUTXO model actually makes these more secure by preventing re-entrancy and enabling parallel execution."
+          "question": "eUTXO karmaşık DeFi uygulamalarını yönetebilir mi?",
+          "answer": "Evet! Ergo'da DEX'ler (Spectrum), borç verme protokolleri, stablecoin'ler (SigmaUSD) ve daha fazlası mevcuttur. eUTXO modeli aslında yeniden girişi önleyerek ve paralel yürütmeyi mümkün kılarak bunları daha güvenli hale getirir."
         },
         "2": {
-          "question": "Why is the eUTXO model more scalable?",
-          "answer": "Independent boxes enable parallel transaction processing. Unlike account models where state contention forces sequential execution, eUTXO transactions touching different boxes can run simultaneously."
+          "question": "eUTXO modeli neden daha ölçeklenebilir?",
+          "answer": "Bağımsız kutular paralel işlem işlemeyi mümkün kılar. Durum çekişmesinin sıralı yürütmeyi zorladığı hesap modellerinden farklı olarak, farklı kutulara dokunan eUTXO işlemleri eş zamanlı çalışabilir."
         },
         "3": {
-          "question": "How do smart contracts work in eUTXO?",
-          "answer": "Each box has a guard script that defines its spending conditions. When spending a box, the script is executed with provided inputs. If it returns true, the box can be spent. This is simpler and more predictable than account-based execution."
+          "question": "eUTXO'da akıllı sözleşmeler nasıl çalışır?",
+          "answer": "Her kutunun harcama koşullarını tanımlayan bir koruma betiği vardır. Bir kutu harcanırken betik, sağlanan girdilerle yürütülür. Doğru döndürürse kutu harcanabilir. Bu, hesap tabanlı yürütmeden daha basit ve daha öngörülebilirdir."
         }
       },
-      "relatedTitle": "Continue Learning",
-      "relatedSubtitle": "Explore related Ergo technologies",
-      "exampleLabel": "Example"
+      "relatedTitle": "Öğrenmeye Devam Et",
+      "relatedSubtitle": "İlgili Ergo teknolojilerini keşfet",
+      "exampleLabel": "Örnek"
     },
     "velvetForks": {
-      "title": "Velvet Forks",
-      "subtitle": "Backward-compatible protocol upgrades",
-      "description": "Enable protocol evolution without breaking changes or forced upgrades. Velvet forks allow gradual feature adoption while preserving ecosystem stability.",
+      "title": "Kadife Çatallar",
+      "subtitle": "Geriye dönük uyumlu protokol yükseltmeleri",
+      "description": "Değişiklikleri bozmadan veya zorla yükseltme olmadan protokol evrimini mümkün kılın. Kadife çatallar, ekosistem kararlılığını korurken kademeli özellik benimsemesine izin verir.",
       "seo": {
-        "title": "Velvet Forks: Backward-Compatible Protocol Upgrades | Ergo",
-        "description": "Learn how Ergo enables protocol evolution without breaking changes through velvet forks. Gradual feature adoption while preserving ecosystem stability.",
-        "keywords": "velvet forks, protocol upgrades, backward compatibility, blockchain evolution, soft fork, hard fork"
+        "title": "Kadife Çatallar: Geriye Dönük Uyumlu Protokol Yükseltmeleri | Ergo",
+        "description": "Ergo'nun kadife çatallar aracılığıyla değişiklikleri bozmadan protokol evrimini nasıl mümkün kıldığını öğrenin. Ekosistem kararlılığını korurken kademeli özellik benimsemesi.",
+        "keywords": "kadife çatallar, protokol yükseltmeleri, geriye dönük uyumluluk, blok zinciri evrimi, yumuşak çatal, sert çatal"
       },
       "buttons": {
-        "readDocumentation": "Read Documentation",
-        "exploreOther": "Explore Other Technologies"
+        "readDocumentation": "Belgeleri Oku",
+        "exploreOther": "Diğer Teknolojileri Keşfet"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "steps": {
           "0": {
             "number": "01",
-            "title": "Learn Concepts",
-            "description": "Understand velvet fork principles"
+            "title": "Kavramları Öğren",
+            "description": "Kadife çatal prensiplerini anlayın"
           },
           "1": {
             "number": "02",
-            "title": "View Examples",
-            "description": "See velvet forks in action"
+            "title": "Örnekleri Görüntüle",
+            "description": "Kadife çatalları uygulamada görün"
           },
           "2": {
             "number": "03",
-            "title": "Join Discussion",
-            "description": "Participate in governance"
+            "title": "Tartışmaya Katıl",
+            "description": "Yönetişime katılın"
           }
         }
       },
-      "featuresTitle": "Key Features",
-      "featuresSubtitle": "Why velvet forks are the future of blockchain protocol upgrades",
+      "featuresTitle": "Temel Özellikler",
+      "featuresSubtitle": "Kadife çatalların neden blok zinciri protokol yükseltmelerinin geleceği olduğu",
       "features": {
         "0": {
-          "title": "Backward Compatibility",
-          "description": "No breaking changes for existing applications and infrastructure"
+          "title": "Geriye Dönük Uyumluluk",
+          "description": "Mevcut uygulamalar ve altyapı için değişiklik kıran yok"
         },
         "1": {
-          "title": "Gradual Adoption",
-          "description": "New features can be adopted incrementally by the network"
+          "title": "Kademeli Benimseme",
+          "description": "Yeni özellikler ağ tarafından aşamalı olarak benimsenebilir"
         },
         "2": {
-          "title": "Flexible Updates",
-          "description": "Protocol parameters can be adjusted without hard forks"
+          "title": "Esnek Güncellemeler",
+          "description": "Protokol parametreleri sert çatal olmadan ayarlanabilir"
         },
         "3": {
-          "title": "Community Consensus",
-          "description": "Changes require broad community agreement and miner support"
+          "title": "Topluluk Mutabakatı",
+          "description": "Değişiklikler geniş topluluk anlaşması ve madenci desteği gerektirir"
         },
         "4": {
-          "title": "Security Preservation",
-          "description": "Maintains network security while enabling protocol evolution"
+          "title": "Güvenlik Korunumu",
+          "description": "Protokol evrimini mümkün kılırken ağ güvenliğini korur"
         },
         "5": {
-          "title": "Reduced Risk",
-          "description": "Lower risk of network splits and ecosystem fragmentation"
+          "title": "Azaltılmış Risk",
+          "description": "Ağ bölünmesi ve ekosistem parçalanması riski düşük"
         }
       },
-      "howItWorksTitle": "How It Works",
-      "howItWorksSubtitle": "The velvet fork process ensures smooth protocol evolution",
+      "howItWorksTitle": "Nasıl Çalışır",
+      "howItWorksSubtitle": "Kadife çatal süreci sorunsuz protokol evrimini güvence altına alır",
       "howItWorks": {
         "0": {
-          "title": "Proposal Phase",
-          "description": "Community proposes protocol improvements through EIPs"
+          "title": "Teklif Aşaması",
+          "description": "Topluluk, EIP'ler aracılığıyla protokol iyileştirmeleri önerir"
         },
         "1": {
-          "title": "Discussion & Review",
-          "description": "Technical review and community discussion"
+          "title": "Tartışma ve İnceleme",
+          "description": "Teknik inceleme ve topluluk tartışması"
         },
         "2": {
-          "title": "Implementation",
-          "description": "Developers implement backward-compatible changes"
+          "title": "Uygulama",
+          "description": "Geliştiriciler geriye dönük uyumlu değişiklikler uygular"
         },
         "3": {
-          "title": "Gradual Activation",
-          "description": "Network adopts features without forced upgrades"
+          "title": "Kademeli Etkinleştirme",
+          "description": "Ağ, zorla yükseltme olmadan özellikleri benimser"
         }
       },
-      "comparisonTitle": "Fork Comparison",
-      "comparisonSubtitle": "Understanding different approaches to blockchain protocol upgrades",
+      "comparisonTitle": "Çatal Karşılaştırması",
+      "comparisonSubtitle": "Blok zinciri protokol yükseltmelerine farklı yaklaşımları anlama",
       "comparison": {
         "hardFork": {
-          "title": "Hard Fork",
-          "description": "Breaking changes that require all nodes to upgrade",
+          "title": "Sert Çatal",
+          "description": "Tüm düğümlerin yükseltilmesini gerektiren değişiklik kıran güncellemeler",
           "pros": [
-            "Complete protocol redesign possible",
-            "Can fix fundamental issues"
+            "Tam protokol yeniden tasarımı mümkün",
+            "Temel sorunları düzeltebilir"
           ],
           "cons": [
-            "Risk of network split",
-            "Requires coordinated upgrade"
+            "Ağ bölünmesi riski",
+            "Koordineli yükseltme gerektirir"
           ]
         },
         "softFork": {
-          "title": "Soft Fork",
-          "description": "Backward-compatible changes that tighten rules",
+          "title": "Yumuşak Çatal",
+          "description": "Kuralları sıkılaştıran geriye dönük uyumlu değişiklikler",
           "pros": [
-            "Maintains backward compatibility",
-            "No forced upgrades required"
+            "Geriye dönük uyumluluğu korur",
+            "Zorla yükseltme gerekmez"
           ],
           "cons": [
-            "Limited to rule tightening",
-            "Cannot add new features easily"
+            "Yalnızca kural sıkılaştırmayla sınırlı",
+            "Kolayca yeni özellik ekleyemez"
           ]
         },
         "velvetFork": {
-          "title": "Velvet Fork",
-          "description": "Ergo's approach: gradual feature introduction with full compatibility",
+          "title": "Kadife Çatal",
+          "description": "Ergo'nun yaklaşımı: tam uyumluluğu olan kademeli özellik tanıtımı",
           "pros": [
-            "No breaking changes ever",
-            "Gradual feature adoption",
-            "Preserves ecosystem stability"
+            "Hiçbir zaman değişiklik kırılmaz",
+            "Kademeli özellik benimsemesi",
+            "Ekosistem kararlılığını korur"
           ],
           "tradeoffs": [
-            "Slower feature rollout",
-            "Requires careful design"
+            "Daha yavaş özellik kullanıma sunumu",
+            "Dikkatli tasarım gerektirir"
           ]
         }
       },
-      "useCasesTitle": "Use Cases",
-      "useCasesSubtitle": "Real-world applications of velvet fork technology",
+      "useCasesTitle": "Kullanım Alanları",
+      "useCasesSubtitle": "Kadife çatal teknolojisinin gerçek dünya uygulamaları",
       "useCases": {
         "0": {
-          "title": "Light Client Upgrades",
-          "description": "Enable new features for light clients without breaking existing implementations"
+          "title": "Hafif İstemci Yükseltmeleri",
+          "description": "Mevcut uygulamaları bozmadan hafif istemciler için yeni özellikler etkinleştirin"
         },
         "1": {
-          "title": "Privacy Enhancements",
-          "description": "Gradually introduce new privacy features while maintaining backward compatibility"
+          "title": "Gizlilik Geliştirmeleri",
+          "description": "Geriye dönük uyumluluğu korurken yeni gizlilik özelliklerini kademeli olarak tanıtın"
         },
         "2": {
-          "title": "Smart Contract Evolution",
-          "description": "Upgrade ErgoScript capabilities without requiring ecosystem-wide changes"
+          "title": "Akıllı Sözleşme Evrimi",
+          "description": "Ekosistem genelinde değişiklikler gerektirmeden ErgoScript yeteneklerini yükseltin"
         }
       },
-      "faqTitle": "Frequently Asked Questions",
-      "faqSubtitle": "Common questions about velvet forks and their implementation",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "faqSubtitle": "Kadife çatallar ve uygulamaları hakkında sık sorulan sorular",
       "faq": {
         "0": {
-          "question": "What exactly is a velvet fork?",
-          "answer": "A velvet fork is Ergo's approach to protocol upgrades that maintains complete backward compatibility while enabling new features. Unlike hard or soft forks, velvet forks never break existing functionality."
+          "question": "Kadife çatal tam olarak nedir?",
+          "answer": "Kadife çatal, yeni özellikler etkinleştirirken tam geriye dönük uyumluluğu koruyan Ergo'nun protokol yükseltme yaklaşımıdır. Sert veya yumuşak çatalların aksine, kadife çatallar hiçbir zaman mevcut işlevselliği bozmaz."
         },
         "1": {
-          "question": "How do velvet forks differ from soft forks?",
-          "answer": "While soft forks tighten existing rules, velvet forks can add entirely new features without affecting nodes that don't upgrade. This allows for more flexible protocol evolution."
+          "question": "Kadife çatallar yumuşak çatallardan nasıl farklıdır?",
+          "answer": "Yumuşak çatallar mevcut kuralları sıkılaştırırken, kadife çatallar yükseltme yapmayan düğümleri etkilemeden tamamen yeni özellikler ekleyebilir. Bu, daha esnek protokol evrimine olanak tanır."
         },
         "2": {
-          "question": "Are velvet forks secure?",
-          "answer": "Yes, velvet forks maintain the same security guarantees as the base protocol. New features are designed to be optional and don't compromise the security of existing functionality."
+          "question": "Kadife çatallar güvenli mi?",
+          "answer": "Evet, kadife çatallar temel protokolle aynı güvenlik güvencelerini korur. Yeni özellikler isteğe bağlı olacak şekilde tasarlanmıştır ve mevcut işlevselliğin güvenliğini tehlikeye atmaz."
         },
         "3": {
-          "question": "Do I need to upgrade my node for velvet forks?",
-          "answer": "No, upgrades are optional. Your node will continue to work normally, though you won't have access to new features until you choose to upgrade."
+          "question": "Kadife çatallar için düğümümü yükseltmem gerekiyor mu?",
+          "answer": "Hayır, yükseltmeler isteğe bağlıdır. Düğümünüz normal çalışmaya devam eder; yükseltmeyi tercih edene kadar yeni özelliklere erişemezsiniz."
         }
       },
-      "relatedTitle": "Related Technologies"
+      "relatedTitle": "İlgili Teknolojiler"
     },
     "storageRent": {
-      "title": "Storage Rent",
-      "subtitle": "What is Storage Rent?",
-      "description": "Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.",
+      "title": "Depolama Kirası",
+      "subtitle": "Depolama Kirası Nedir?",
+      "description": "Ergo'nun depolama kirası sistemi, blok zinciri şişmesini önleyerek ve veri depolama için öngörülebilir bir maliyet oluşturarak uzun vadeli ağ sağlığını güvence altına alır.",
       "seo": {
-        "title": "Storage Rent Explained | Sustainable Blockchain Economics on Ergo",
-        "description": "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
-        "ogTitle": "Storage Rent | The Solution to Blockchain Sustainability",
-        "ogDescription": "How Ergo prevents blockchain bloat while ensuring perpetual network security through Storage Rent.",
-        "twitterTitle": "Storage Rent | Solving Blockchain Bloat Forever",
-        "twitterDescription": "Sustainable economics: automatic cleanup, perpetual miner rewards, efficient blockchain."
+        "title": "Depolama Kirası Açıklandı | Ergo'da Sürdürülebilir Blok Zinciri Ekonomisi",
+        "description": "Blok zinciri şişmesini sonsuza dek çözen devrim niteliğinde ekonomik model. Depolama Kirasının sürdürülebilir blok zinciri boyutunu, kalıcı madenci ödüllerini ve verimli kaynak kullanımını nasıl sağladığını öğrenin.",
+        "ogTitle": "Depolama Kirası | Blok Zinciri Sürdürülebilirliği Çözümü",
+        "ogDescription": "Ergo'nun kalıcı ağ güvenliğini sağlarken blok zinciri şişmesini nasıl önlediği.",
+        "twitterTitle": "Depolama Kirası | Blok Zinciri Şişmesini Sonsuza Dek Çözme",
+        "twitterDescription": "Sürdürülebilir ekonomi: otomatik temizlik, kalıcı madenci ödülleri, verimli blok zinciri."
       },
       "problems": [
         {
-          "title": "Blockchain Bloat",
-          "description": "Traditional blockchains grow indefinitely, making full node operation increasingly expensive",
-          "stats": "~500GB/year growth"
+          "title": "Blok Zinciri Şişmesi",
+          "description": "Geleneksel blok zincirleri süresiz büyür; tam düğüm işletimini giderek pahalı hale getirir",
+          "stats": "~500 GB/yıl büyüme"
         },
         {
-          "title": "Lost Coins",
-          "description": "Millions in lost or forgotten coins create permanent blockchain overhead",
-          "stats": "~20% of supply"
+          "title": "Kayıp Coinler",
+          "description": "Kayıp veya unutulmuş coinlerdeki milyonlar kalıcı blok zinciri yükü oluşturur",
+          "stats": "~%20 arz"
         },
         {
-          "title": "Miner Revenue",
-          "description": "Block rewards decrease over time, threatening long-term security",
-          "stats": "-50% every 4 years"
+          "title": "Madenci Geliri",
+          "description": "Blok ödülleri zamanla azalır ve uzun vadeli güvenliği tehdit eder",
+          "stats": "Her 4 yılda -%50"
         }
       ],
       "benefits": [
-        "Prevents unlimited blockchain growth",
-        "Creates sustainable miner revenue",
-        "Protects network decentralization",
-        "Cleans up lost/forgotten coins",
-        "Makes costs predictable",
-        "Aligns incentives"
+        "Sınırsız blok zinciri büyümesini önler",
+        "Sürdürülebilir madenci geliri oluşturur",
+        "Ağ merkeziyetsizliğini korur",
+        "Kayıp/unutulmuş coinleri temizler",
+        "Maliyetleri öngörülebilir kılar",
+        "Teşvikleri hizalar"
       ],
       "timeline": [
         {
-          "year": "Box Created",
-          "status": "Active UTXO",
-          "description": "Normal operation, no rent accrual",
-          "details": "Any transaction resets the 4-year timer"
+          "year": "Kutu Oluşturuldu",
+          "status": "Aktif UTXO",
+          "description": "Normal işlem, kira tahakkuku yok",
+          "details": "Herhangi bir işlem 4 yıllık sayacı sıfırlar"
         },
         {
-          "year": "4 Years Later",
-          "status": "Rent begins accruing",
-          "description": "Small fee charged for continued storage",
-          "details": "~0.14 ERG per 4-year period"
+          "year": "4 Yıl Sonra",
+          "status": "Kira tahakkuku başlıyor",
+          "description": "Sürekli depolama için küçük ücret alınır",
+          "details": "4 yıllık dönem başına ~0,14 ERG"
         },
         {
-          "year": "Box Depleted",
-          "status": "Eligible for miner claim",
-          "description": "If rent isn't paid, remaining value goes to miners",
-          "details": "Funds return to active circulation"
+          "year": "Kutu Tükendi",
+          "status": "Madenci talebi için uygun",
+          "description": "Kira ödenmezse kalan değer madencilere gider",
+          "details": "Fonlar aktif dolaşıma geri döner"
         }
       ],
       "schema": {
         "techArticle": {
-          "headline": "Storage Rent: Sustainable Blockchain Economics",
-          "description": "How Storage Rent solves blockchain bloat and ensures long-term sustainability"
+          "headline": "Depolama Kirası: Sürdürülebilir Blok Zinciri Ekonomisi",
+          "description": "Depolama Kirasının blok zinciri şişmesini nasıl çözdüğü ve uzun vadeli sürdürülebilirliği nasıl sağladığı"
         },
         "faq": {
           "what": {
-            "question": "What is Storage Rent?",
-            "answer": "Storage Rent is a mechanism where unused coins pay a minimal fee after 4 years of inactivity, preventing blockchain bloat and providing permanent miner rewards beyond emission."
+            "question": "Depolama Kirası nedir?",
+            "answer": "Depolama Kirası, kullanılmayan coinlerin 4 yıllık hareketsizlikten sonra minimum bir ücret ödemesini sağlayan; blok zinciri şişmesini önleyen ve emisyon sonrası kalıcı madenci ödülleri sağlayan bir mekanizmadır."
           },
           "cost": {
-            "question": "How much does Storage Rent cost?",
-            "answer": "Storage Rent costs approximately 0.14 ERG per UTXO every 4 years. Active users never pay rent as any transaction resets the timer."
+            "question": "Depolama Kirası ne kadar tutar?",
+            "answer": "Depolama Kirası, her 4 yılda bir UTXO başına yaklaşık 0,14 ERG'e mal olur. Herhangi bir işlem sayacı sıfırladığından aktif kullanıcılar hiçbir zaman kira ödemez."
           },
           "importance": {
-            "question": "Why is Storage Rent important?",
-            "answer": "Storage Rent ensures blockchain sustainability by preventing unlimited growth, keeping the network lightweight, and providing perpetual security through miner rewards after emission ends."
+            "question": "Depolama Kirası neden önemlidir?",
+            "answer": "Depolama Kirası, sınırsız büyümeyi önleyerek, ağı hafif tutarak ve emisyon sona erdikten sonra madenci ödülleri aracılığıyla kalıcı güvenlik sağlayarak blok zinciri sürdürülebilirliğini güvence altına alır."
           }
         }
       }
     },
     "nativeTokens": {
-      "title": "Native Tokens & NFTs",
-      "subtitle": "Create and trade tokens and NFTs directly at the protocol level",
-      "description": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
-      "details": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
-      "lastUpdated": "Last updated",
+      "title": "Yerel Tokenlar ve NFT'ler",
+      "subtitle": "Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin",
+      "description": "Akıllı sözleşmeye gerek yok — sadece basit, güvenli ve uygun maliyetli yerel varlıklar. Tek bir işlemde protokol düzeyinde güvenlik güvencesiyle token, stablecoin veya NFT çıkarın.",
+      "details": "Akıllı sözleşmeye gerek yok — sadece basit, güvenli ve uygun maliyetli yerel varlıklar. Tek bir işlemde protokol düzeyinde güvenlik güvencesiyle token, stablecoin veya NFT çıkarın.",
+      "lastUpdated": "Son güncelleme",
       "buttons": {
-        "exploreNftEcosystem": "Explore NFT Ecosystem",
-        "tokenApiDocs": "Token API Docs"
+        "exploreNftEcosystem": "NFT Ekosistemini Keşfet",
+        "tokenApiDocs": "Token API Belgeleri"
       },
       "navigation": {
-        "keyFeatures": "Key features",
-        "assetTypes": "Asset types",
-        "useCases": "Use cases",
-        "faq": "FAQ"
+        "keyFeatures": "Temel özellikler",
+        "assetTypes": "Varlık türleri",
+        "useCases": "Kullanım alanları",
+        "faq": "SSS"
       },
       "keyMetrics": {
-        "title": "Key Metrics",
+        "title": "Temel Metrikler",
         "tokenCreation": {
-          "name": "Token Creation",
+          "name": "Token Oluşturma",
           "value": "1 TX",
-          "description": "Single transaction creation"
+          "description": "Tek işlemle oluşturma"
         },
         "creationCost": {
-          "name": "Creation Cost",
+          "name": "Oluşturma Maliyeti",
           "value": "~$0.01",
-          "description": "Minimal fees in ERG"
+          "description": "ERG cinsinden minimum ücret"
         },
         "protocolSecurity": {
-          "name": "Protocol Security",
+          "name": "Protokol Güvenliği",
           "value": "100%",
-          "description": "First-class assets"
+          "description": "Birinci sınıf varlıklar"
         },
         "tokenTypes": {
-          "name": "Token Types",
+          "name": "Token Türleri",
           "value": "∞",
-          "description": "Unlimited possibilities"
+          "description": "Sınırsız olasılıklar"
         }
       },
       "whyNativeAssets": {
-        "title": "Why Native Assets?",
-        "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
+        "title": "Neden Yerel Varlıklar?",
+        "subtitle": "Karmaşık akıllı sözleşme gerektiren diğer blok zincirlerinin aksine Ergo, özel tokenlara birinci sınıf vatandaş gibi davranır"
       },
       "featuresSection": {
-        "title": "Why Native Assets?",
-        "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
+        "title": "Neden Yerel Varlıklar?",
+        "subtitle": "Karmaşık akıllı sözleşme gerektiren diğer blok zincirlerinin aksine Ergo, özel tokenlara birinci sınıf vatandaş gibi davranır"
       },
       "features": {
         "0": {
-          "title": "Protocol-Level Support",
-          "description": "Native tokens are first-class citizens, as secure as ERG itself"
+          "title": "Protokol Düzeyinde Destek",
+          "description": "Yerel tokenlar birinci sınıf vatandaşlardır; ERG'nin kendisi kadar güvenlidir"
         },
         "1": {
-          "title": "No Smart Contracts",
-          "description": "Create tokens without complex code or contracts"
+          "title": "Akıllı Sözleşme Yok",
+          "description": "Karmaşık kod veya sözleşme olmadan token oluşturun"
         },
         "2": {
-          "title": "Instant Creation",
-          "description": "Issue tokens in a single transaction"
+          "title": "Anlık Oluşturma",
+          "description": "Tek bir işlemde token çıkarın"
         },
         "3": {
-          "title": "Low Cost",
-          "description": "Minimal fees for token creation and transfers"
+          "title": "Düşük Maliyet",
+          "description": "Token oluşturma ve transferleri için minimum ücret"
         },
         "4": {
-          "title": "Rich Metadata",
-          "description": "Store token data directly on-chain"
+          "title": "Zengin Meta Veri",
+          "description": "Token verilerini doğrudan zincir üzerinde saklayın"
         },
         "5": {
-          "title": "Cross-Chain Ready",
-          "description": "Built for multi-chain interoperability"
+          "title": "Zincirler Arası Hazır",
+          "description": "Çok zincirli birlikte çalışabilirlik için tasarlanmış"
         }
       },
       "assetTypes": {
-        "title": "Asset Types",
-        "subtitle": "Create any type of digital asset with native protocol support"
+        "title": "Varlık Türleri",
+        "subtitle": "Yerel protokol desteğiyle her türlü dijital varlık oluşturun"
       },
       "tabs": {
-        "tokens": "Fungible Tokens",
-        "nfts": "NFTs",
-        "stablecoins": "Stablecoins"
+        "tokens": "Değiştirilebilir Tokenlar",
+        "nfts": "NFT'ler",
+        "stablecoins": "Stablecoin'ler"
       },
       "useCasesSection": {
-        "title": "Use Cases",
-        "subtitle": "Applications that benefit from native token creation"
+        "title": "Kullanım Alanları",
+        "subtitle": "Yerel token oluşturmadan yararlanan uygulamalar"
       },
       "useCases": {
         "0": {
-          "title": "Fungible Tokens",
-          "description": "Create custom currencies and utility tokens"
+          "title": "Değiştirilebilir Tokenlar",
+          "description": "Özel para birimleri ve yardımcı tokenlar oluşturun"
         },
         "1": {
-          "title": "NFT Collections",
-          "description": "Launch digital art and collectibles"
+          "title": "NFT Koleksiyonları",
+          "description": "Dijital sanat ve koleksiyonlar başlatın"
         },
         "2": {
-          "title": "Stablecoins",
-          "description": "Issue stable assets with protocol security"
+          "title": "Stablecoin'ler",
+          "description": "Protokol güvenliğiyle kararlı varlıklar çıkarın"
         },
         "3": {
-          "title": "Asset Tokenization",
-          "description": "Tokenize real-world assets on-chain"
+          "title": "Varlık Tokenizasyonu",
+          "description": "Gerçek dünya varlıklarını zincir üzerinde tokenize edin"
         }
       },
       "codeExample": {
-        "title": "Simple Token Creation",
-        "subtitle": "Create tokens with just a few lines of code",
+        "title": "Basit Token Oluşturma",
+        "subtitle": "Birkaç satır kodla token oluşturun",
         "code": "// Token creation parameters\nval tokenName = \"MyToken\"\nval tokenDescription = \"My awesome token on Ergo\"\nval tokenDecimals = 2\nval tokenAmount = 1000000L\n\n// Create token in a single transaction\nval token = Minting.issueToken(\n  ergoClient = client,\n  tokenName = tokenName,\n  tokenDescription = tokenDescription,\n  tokenAmount = tokenAmount,\n  tokenDecimals = tokenDecimals,\n  mintingAddress = address,\n  txFee = Parameters.MinFee\n)\n\n// Token is now live on the blockchain!\nprintln(s\"Token ID: ${token.getId}\")\nprintln(s\"Token created in TX: ${token.creationTx}\")",
-        "note": "No smart contract deployment, no complex setup - just simple, native token creation."
+        "note": "Akıllı sözleşme dağıtımı yok, karmaşık kurulum yok — sadece basit, yerel token oluşturma."
       },
       "ecosystem": {
-        "title": "Token Ecosystem",
-        "subtitle": "A thriving ecosystem of tools and platforms for native tokens",
+        "title": "Token Ekosistemi",
+        "subtitle": "Yerel tokenlar için araç ve platformlardan oluşan gelişen bir ekosistem",
         "marketplaces": {
-          "title": "Marketplaces",
-          "skyHarbor": "SkyHarbor - NFT marketplace",
+          "title": "Pazaryerleri",
+          "skyHarbor": "SkyHarbor - NFT pazaryeri",
           "spectrum": "Spectrum - Token DEX",
-          "auctionHouse": "ErgoAuctionHouse - Auction platform"
+          "auctionHouse": "ErgoAuctionHouse - Açık artırma platformu"
         },
         "creationTools": {
-          "title": "Creation Tools",
-          "ergoMixer": "ErgoMixer - Privacy tokens",
-          "tokenMinter": "Ergo Token Minter - Simple UI",
-          "blitzTcg": "Blitz TCG - Gaming tokens"
+          "title": "Oluşturma Araçları",
+          "ergoMixer": "ErgoMixer - Gizlilik tokenleri",
+          "tokenMinter": "Ergo Token Minter - Basit arayüz",
+          "blitzTcg": "Blitz TCG - Oyun tokenleri"
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "tokenApi": "Token API - REST endpoints",
-          "explorer": "Explorer - Token tracking",
-          "wallets": "Wallets - Native support"
+          "title": "Altyapı",
+          "tokenApi": "Token API - REST uç noktaları",
+          "explorer": "Explorer - Token takibi",
+          "wallets": "Cüzdanlar - Yerel destek"
         }
       },
       "faq": {
         "0": {
-          "question": "What are native tokens on Ergo?",
-          "answer": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself."
+          "question": "Ergo'daki yerel tokenlar nedir?",
+          "answer": "Yerel tokenlar, akıllı sözleşmeler olmadan protokol düzeyinde doğrudan oluşturulup takas edilebilen Ergo'daki birinci sınıf varlıklardır. ERG'nin kendisiyle aynı güvenlik güvencelerine sahiptirler."
         },
         "1": {
-          "question": "How much does it cost to create a token?",
-          "answer": "Creating a token on Ergo costs approximately $0.01 in transaction fees. This is significantly cheaper than other blockchains that require smart contract deployment."
+          "question": "Token oluşturmanın maliyeti ne kadardır?",
+          "answer": "Ergo'da token oluşturmak işlem ücretleri cinsinden yaklaşık 0,01 dolara mal olur. Bu, akıllı sözleşme dağıtımı gerektiren diğer blok zincirlerinden önemli ölçüde daha ucuzdur."
         },
         "2": {
-          "question": "Can I create NFTs on Ergo?",
-          "answer": "Yes, NFTs are created as native tokens with a supply of 1. They support rich metadata including images, descriptions, and custom properties stored on IPFS."
+          "question": "Ergo'da NFT oluşturabilir miyim?",
+          "answer": "Evet, NFT'ler 1 arzla yerel token olarak oluşturulur. IPFS'de depolanan görseller, açıklamalar ve özel özellikler dahil zengin meta veri desteğine sahiptirler."
         },
         "3": {
-          "question": "Are native tokens compatible with DeFi?",
-          "answer": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements."
+          "question": "Yerel tokenlar DeFi ile uyumlu mu?",
+          "answer": "Evet, yerel tokenlar tam DeFi uyumluluğuna sahiptir ve özel entegrasyon gereksinimleri olmadan tüm Ergo uygulama ve protokollerinde kullanılabilir."
         }
       },
       "cta": {
-        "title": "Start Creating Native Assets",
-        "subtitle": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer",
+        "title": "Yerel Varlık Oluşturmaya Başlayın",
+        "subtitle": "Ergo'nun yerel varlık katmanında zaten token ve NFT çıkarmış binlerce yaratıcıya katılın",
         "buttons": {
-          "readDocumentation": "Read Documentation",
-          "learnAboutAgeUsd": "Learn About AgeUSD"
+          "readDocumentation": "Belgeleri Oku",
+          "learnAboutAgeUsd": "AgeUSD Hakkında Bilgi Al"
         }
       },
       "seo": {
-        "title": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
-        "description": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets on Ergo blockchain.",
-        "keywords": "native tokens, NFTs, blockchain assets, ergo tokens, token creation, non-fungible tokens, protocol-level assets, token issuance, ergo NFTs, digital assets",
-        "ogTitle": "Native Tokens & NFTs on Ergo - Protocol-Level Assets",
-        "ogDescription": "Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.",
-        "twitterTitle": "Native Tokens & NFTs - First-Class Ergo Assets",
-        "twitterDescription": "Create tokens & NFTs at protocol level. One-click creation, ~$0.01 cost, 100% secure."
+        "title": "Yerel Tokenlar ve NFT'ler - Birinci Sınıf Varlıklar | Ergo Blok Zinciri",
+        "description": "Protokol düzeyinde token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok — Ergo blok zincirinde basit, güvenli ve uygun maliyetli yerel varlıklar.",
+        "keywords": "yerel tokenlar, NFT'ler, blok zinciri varlıkları, ergo tokenleri, token oluşturma, değiştirilemez tokenlar, protokol düzeyi varlıklar, token çıkarma, ergo NFT'leri, dijital varlıklar",
+        "ogTitle": "Ergo'da Yerel Tokenlar ve NFT'ler - Protokol Düzeyi Varlıklar",
+        "ogDescription": "Tek işlemde token ve NFT çıkarın. Akıllı sözleşme gerekmez — protokol güvenliğiyle birinci sınıf varlıklar.",
+        "twitterTitle": "Yerel Tokenlar ve NFT'ler - Birinci Sınıf Ergo Varlıkları",
+        "twitterDescription": "Protokol düzeyinde token ve NFT oluşturun. Tek tıkla oluşturma, ~0,01 $ maliyet, %100 güvenli."
       },
-      "useCasesTitle": "Use Cases",
+      "useCasesTitle": "Kullanım Alanları",
       "tabContent": {
-        "tokens": "Create fungible tokens for currencies, rewards, governance, and more. Each token inherits the full security of the Ergo protocol.",
-        "nfts": "Issue unique digital assets with rich metadata. Perfect for art, collectibles, and digital property rights.",
-        "stablecoins": "Build stable assets with protocol-level security. No complex smart contracts required."
+        "tokens": "Para birimleri, ödüller, yönetişim ve daha fazlası için değiştirilebilir tokenlar oluşturun. Her token, Ergo protokolünün tam güvenliğini miras alır.",
+        "nfts": "Zengin meta veriyle benzersiz dijital varlıklar çıkarın. Sanat, koleksiyonlar ve dijital mülkiyet hakları için idealdir.",
+        "stablecoins": "Protokol düzeyi güvenliğiyle kararlı varlıklar oluşturun. Karmaşık akıllı sözleşme gerekmez."
       },
-      "faqTitle": "Frequently Asked Questions",
-      "ctaTitle": "Ready to Create Tokens?",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "ctaTitle": "Token Oluşturmaya Hazır mısınız?",
       "ctaButtons": {
-        "readGuide": "Read the Guide",
-        "viewCode": "View on GitHub"
+        "readGuide": "Rehberi Oku",
+        "viewCode": "GitHub'da Görüntüle"
       },
       "schema": {
         "techArticle": {
-          "headline": "Native Tokens & NFTs: First-Class Assets on Ergo",
-          "description": "Comprehensive guide to creating and managing native tokens and NFTs on Ergo blockchain",
+          "headline": "Yerel Tokenlar ve NFT'ler: Ergo'da Birinci Sınıf Varlıklar",
+          "description": "Ergo blok zincirinde yerel tokenlar ve NFT'ler oluşturmaya ve yönetmeye kapsamlı rehber",
           "steps": {
-            "name": "How to Create Native Tokens on Ergo",
-            "description": "Step-by-step guide to creating tokens on Ergo blockchain",
+            "name": "Ergo'da Yerel Tokenlar Nasıl Oluşturulur",
+            "description": "Ergo blok zincirinde token oluşturmaya adım adım rehber",
             "defineParameters": {
-              "name": "Define Token Parameters",
-              "text": "Set token name, description, amount, and decimals"
+              "name": "Token Parametrelerini Tanımla",
+              "text": "Token adı, açıklaması, miktarı ve ondalık basamakları belirleyin"
             },
             "createTransaction": {
-              "name": "Create Transaction",
-              "text": "Build a minting transaction with token parameters"
+              "name": "İşlem Oluştur",
+              "text": "Token parametreleriyle basım işlemi oluşturun"
             },
             "submitNetwork": {
-              "name": "Submit to Network",
-              "text": "Send the transaction to create your token instantly"
+              "name": "Ağa Gönder",
+              "text": "Tokenınızı anında oluşturmak için işlemi gönderin"
             }
           }
         },
         "faq": {
           "whatAre": {
-            "question": "What are native tokens on Ergo?",
-            "answer": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself."
+            "question": "Ergo'daki yerel tokenlar nedir?",
+            "answer": "Yerel tokenlar, akıllı sözleşmeler olmadan protokol düzeyinde doğrudan oluşturulup takas edilebilen Ergo'daki birinci sınıf varlıklardır. ERG'nin kendisiyle aynı güvenlik güvencelerine sahiptirler."
           },
           "cost": {
-            "question": "How much does it cost to create a token?",
-            "answer": "Creating a token on Ergo costs approximately $0.01 in transaction fees. This is significantly cheaper than other blockchains that require smart contract deployment."
+            "question": "Token oluşturmanın maliyeti ne kadardır?",
+            "answer": "Ergo'da token oluşturmak işlem ücretleri cinsinden yaklaşık 0,01 dolara mal olur. Bu, akıllı sözleşme dağıtımı gerektiren diğer blok zincirlerinden önemli ölçüde daha ucuzdur."
           },
           "nfts": {
-            "question": "Can I create NFTs on Ergo?",
-            "answer": "Yes, NFTs are created as native tokens with a supply of 1. They support rich metadata including images, descriptions, and custom properties stored on IPFS."
+            "question": "Ergo'da NFT oluşturabilir miyim?",
+            "answer": "Evet, NFT'ler 1 arzla yerel token olarak oluşturulur. IPFS'de depolanan görseller, açıklamalar ve özel özellikler dahil zengin meta veri desteğine sahiptirler."
           },
           "code": {
-            "question": "Do I need to code to create tokens?",
-            "answer": "No, you can create tokens using simple UI tools or with just a few lines of code. The process is as simple as sending a transaction with token parameters."
+            "question": "Token oluşturmak için kod yazmam gerekiyor mu?",
+            "answer": "Hayır, basit arayüz araçları kullanarak veya yalnızca birkaç satır kodla token oluşturabilirsiniz. Süreç, token parametreleriyle bir işlem göndermek kadar basittir."
           },
           "defi": {
-            "question": "Are native tokens compatible with DeFi?",
-            "answer": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements."
+            "question": "Yerel tokenlar DeFi ile uyumlu mu?",
+            "answer": "Evet, yerel tokenlar tam DeFi uyumluluğuna sahiptir ve özel entegrasyon gereksinimleri olmadan tüm Ergo uygulama ve protokollerinde kullanılabilir."
           }
         }
       }

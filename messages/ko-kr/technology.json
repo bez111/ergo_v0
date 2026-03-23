@@ -3,6 +3,161 @@
     "title": "기술",
     "subtitle": "금융의 미래를 위한 고급 블록체인 기술",
     "description": "Ergo의 혁신적인 블록체인 기술을 탐색하세요",
+    "ergo_technology_description": "Ergo Technology\",\n    description:",
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
+    "explore_ergo_s_technology_stack": "Ergo의 기술 스택을 탐색하세요: eUTXO, ErgoScript, Autolykos PoW, 스토리지 렌트, 시그마 프로토콜, NIPoPoWs.",
+    "frequently_asked_questions": "자주 묻는 질문",
+    "go_to_docs": "문서 보기",
+    "extended_utxo_model_that_enables": "병렬 스마트 컨트랙트 실행과 조합 가능한 DeFi 애플리케이션을 가능하게 하는 확장 UTXO 모델. Bitcoin의 보안을 유지하면서 재진입 공격을 방지합니다",
+    "parallel_execution_description_smart_contracts": "병렬 실행\", description: \"스마트 컨트랙트는 전역 상태 충돌 없이 독립적으로 실행됩니다.",
+    "composability_description_build_complex_defi": "조합성\", description: \"간단하고 재사용 가능한 구성 요소로 복잡한 DeFi 애플리케이션을 구축합니다.",
+    "bitcoin_level_security_description_inherits": "비트코인 수준의 보안\", description: \"UTXO의 검증된 이중 지불 방지 기능을 상속합니다.",
+    "built_in_privacy_description_native": "내장 프라이버시\", description: \"기밀 거래를 위한 네이티브 영지식 증명 및 링 서명.",
+    "safe_by_design_description_prevents": "설계상 안전\", description: \"재진입 공격과 예상치 못한 동작 같은 일반적인 취약점을 방지합니다.",
+    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"네트워크 참여를 민주화하는 에너지 효율적인 ASIC 저항 채굴 알고리즘. GPU 채굴을 위해 설계되어 네트워크를 분산화되고 모두가 접근 가능하게 유지합니다.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
+    "energy_efficient_description_memory_hard": "에너지 효율적\", description: \"메모리 하드 알고리즘은 기존 PoW에 비해 전력 소비를 줄입니다.",
+    "solo_mining_friendly_description_low": "솔로 채굴 친화적\", description: \"낮은 진입 장벽으로 개인 채굴자가 수익적으로 참여할 수 있습니다.",
+    "asic_resistant_description_optimized_for": "ASIC 저항\", description: \"채굴 중앙화를 방지하기 위해 소비자 GPU에 최적화되었습니다.",
+    "storage_rent_description": "스토리지 렌트\",\n    description:",
+    "sustainable_blockchain_description_automatic_cleanup": "지속 가능한 블록체인\", description: \"미사용 데이터의 자동 정리로 블록체인을 가볍고 효율적으로 유지합니다.",
+    "perpetual_security_description_miners_receive": "영구적인 보안\", description: \"채굴자는 영원히 보상을 받아 장기적인 네트워크 보안을 보장합니다.",
+    "resource_efficient_description_maintains_lightweight": "자원 효율적\", description: \"적당한 하드웨어에서 실행되는 경량 블록체인을 유지합니다.",
+    "sigma_protocols_description_built_in": "시그마 프로토콜\",\n    description:\n      \"내장 영지식 증명은 제3자 솔루션이나 복잡한 설정 없이 프라이버시 보호 거래와 고급 암호화 기능을 가능하게 합니다.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
+    "optional_privacy_description_choose_between": "선택적 프라이버시\", description: \"필요에 따라 투명하거나 기밀 거래를 선택합니다.",
+    "developer_friendly_description_simple_apis": "개발자 친화적\", description: \"모든 애플리케이션에 프라이버시 기능을 추가하는 간단한 API.",
+    "instant_mobile_sync_description_full": "즉각적인 모바일 동기화\", description: \"최소한의 데이터로 완전한 보안 - 모든 기기에서 몇 초 만에 동기화.",
+    "trustless_bridges_description_connect_to": "신뢰가 필요 없는 브릿지\", description: \"중앙화된 검증자 없이 다른 블록체인에 연결합니다.",
+    "cryptographic_security_description_mathematical_proofs": "암호학적 보안\", description: \"수학적 증명으로 라이트 클라이언트에 풀 노드 수준의 보안을 보장합니다.",
+    "subblocks_in_development_description": "서브블록(개발 중)\",\n    description:",
+    "sub_second_confirmations_description_near": "1초 미만 확인\", description: \"향상된 사용자 경험을 위한 거의 즉각적인 거래 최종성.",
+    "full_blockchain_security_without_trusted": "신뢰된 중간자 없는 완전한 블록체인 보안.",
+    "seamless_integration_description_works_with": "원활한 통합\", description: \"기존 인프라와 호환 - 브릿지나 사이드체인 불필요.",
+    "native_tokens_nfts_description_create": "네이티브 토큰 & NFT\",\n    description:\n      \"프로토콜 레벨에서 직접 토큰과 NFT를 생성하고 거래합니다. 스마트 컨트랙트가 필요 없습니다 - 단순하고 안전하며 비용 효율적인 네이티브 자산.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
+    "one_click_creation_description_issue": "원클릭 생성\", description: \"단일 거래로 토큰, 스테이블코인 또는 NFT를 발행합니다.",
+    "defi_ready_description_native_integration": "DeFi 준비 완료\", description: \"모든 Ergo 애플리케이션 및 프로토콜과의 네이티브 통합.",
+    "true_native_assets_description_first": "진정한 네이티브 자산\", description: \"프로토콜 레벨 보안 보장을 갖춘 일급 토큰.",
+    "oracle_pools_description_decentralized_price": "오라클 풀\",\n    description:\n      \"프로토콜에 내장된 분산형 가격 피드 및 데이터 오라클. 단일 실패 지점 없음, 중앙화된 운영자 없음 - DeFi를 위한 신뢰할 수 있는 조합 가능한 데이터.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
+    "reliable_price_feeds_description_consensus": "신뢰할 수 있는 가격 피드\", description: \"합의 기반 데이터 집계로 정확하고 조작 저항적인 가격을 보장합니다.",
+    "universal_compatibility_description_any_smart": "범용 호환성\", description: \"모든 스마트 컨트랙트가 특별한 통합 없이 오라클 데이터에 접근할 수 있습니다.",
+    "fully_decentralized_description_no_central": "완전 분산화\", description: \"데이터 파이프라인에 중앙 권한이나 단일 실패 지점이 없습니다.",
+    "backward_compatible_description_no_forced": "하위 호환성\", description: \"강제 업그레이드 없음, 체인 전쟁 없음.",
+    "future_proof_description_adopt_innovations": "미래 대비\", description: \"자신의 속도로 혁신을 채택합니다.",
+    "gradual_adoption_description_evolutionary_not": "점진적 채택\", description: \"혁명적이 아닌 진화적 변화.",
+    "adaptive_emission_governance_description_consensus": "적응형 발행 & 거버넌스\",\n    description:\n      \"커뮤니티 입력과 함께 경제 매개변수의 합의 기반 조정(예: 채굴자 투표).\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
+    "parameter_tuning_description_economic_variables": "매개변수 조정\", description: \"경제 변수를 조정할 수 있습니다.",
+    "economic_flexibility_description_adapt_to": "경제적 유연성\", description: \"변화하는 네트워크 요구에 적응합니다.",
+    "community_input_description_discussions_and": "커뮤니티 입력\", description: \"논의와 결정에 커뮤니티가 참여합니다.",
+    "dive_into_ergo_docs_href_docs_color": "Ergo 문서로 들어가기\",\n          href: \"/docs\",\n    color:",
+    "see_ecosystem_apps_href_ecosystem_color": "에코시스템 앱 보기\",\n    href: \"/ecosystem\",\n    color:",
+    "adaptive_emission_governance": "적응형 발행 & 거버넌스",
+    "what_makes_ergo_s_eutxo": "Ergo의 eUTXO 모델이 계정 기반 블록체인보다 우수한 이유는?\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScript가 스마트 컨트랙트 취약점을 어떻게 방지하나요?\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "Autolykos가 분산화되고 에너지 효율적이라고 여겨지는 이유는?\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "스토리지 렌트가 블록체인 지속 가능성 문제를 어떻게 해결하나요?\",\n      tag: \"Storage",
+    "what_privacy_features_does_ergo": "Ergo는 기본적으로 어떤 프라이버시 기능을 제공하나요?\",\n      tag: \"Privacy",
+    "why_are_ergo_s_oracle": "Ergo의 오라클 풀이 Chainlink보다 더 안전한 이유는?\",\n      tag: \"Oracles",
+    "how_do_subblocks_achieve_sub": "서브블록이 1초 미만의 거래 확인을 어떻게 달성하나요?\",\n      tag: \"Scaling",
+    "how_to_create_tokens_and": "스마트 컨트랙트 없이 Ergo에서 토큰과 NFT를 어떻게 생성하나요?\",\n      tag: \"Tokens & NFTs",
+    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
+    "research_in_development": "연구/개발 중",
+    "decentralized_mixers_and_privacy_tools": "분산형 믹서 및 프라이버시 도구(법적 상태 확인)\",\n                              \"DAO & 거버넌스 시스템",
+    "infrastructure_apps": "인프라 & 앱",
+    "ergo_docs_href_docs": "Ergo 문서\", href: \"/docs",
+    "whitepaper_href_https_ergoplatform_org": "백서\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
+    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
+    "dev_tutorials_href_docs_developers_tutorials": "개발자 튜토리얼\", href: \"/docs/developers/tutorials",
+    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
+    "smart_contracts_run_independently_without": "스마트 컨트랙트는 전역 상태 충돌 없이 독립적으로 실행됩니다.",
+    "build_complex_defi_applications_from": "간단하고 재사용 가능한 구성 요소로 복잡한 DeFi 애플리케이션을 구축합니다.",
+    "bitcoin_level_security": "비트코인 수준의 보안",
+    "mathematically_prove_your_smart_contracts": "스마트 컨트랙트가 안전하고 버그가 없음을 수학적으로 증명합니다.",
+    "native_zero_knowledge_proofs_and": "기밀 거래를 위한 네이티브 영지식 증명 및 링 서명.",
+    "safe_by_design": "설계상 안전",
+    "prevents_common_vulnerabilities_like_reentrancy": "재진입 공격과 예상치 못한 동작 같은 일반적인 취약점을 방지합니다.",
+    "energy_efficient_asic_resistant_mining": "네트워크 참여를 민주화하는 에너지 효율적인 ASIC 저항 채굴 알고리즘. GPU 채굴을 위해 설계되어 네트워크를 분산화되고 모두가 접근 가능하게 유지합니다.",
+    "memory_hard_algorithm_reduces_power": "메모리 하드 알고리즘은 기존 PoW에 비해 전력 소비를 줄입니다.",
+    "low_barrier_to_entry_enables": "낮은 진입 장벽으로 개인 채굴자가 수익적으로 참여할 수 있습니다.",
+    "optimized_for_consumer_gpus_to": "채굴 중앙화를 방지하기 위해 소비자 GPU에 최적화되었습니다.",
+    "revolutionary_economic_model_that_prevents": "블록체인 팽창을 방지하는 혁명적인 경제 모델. 비활성 코인은 4년 후 최소한의 렌트를 지불하여 지속 가능한 블록체인 크기와 영구적인 채굴자 보상을 보장합니다.",
+    "sustainable_blockchain": "지속 가능한 블록체인",
+    "automatic_cleanup_of_unused_data": "미사용 데이터의 자동 정리로 블록체인을 가볍고 효율적으로 유지합니다.",
+    "miners_receive_rewards_forever_ensuring": "채굴자는 영원히 보상을 받아 장기적인 네트워크 보안을 보장합니다.",
+    "maintains_lightweight_blockchain_that_runs": "적당한 하드웨어에서 실행되는 경량 블록체인을 유지합니다.",
+    "built_in_zero_knowledge_proofs": "내장 영지식 증명은 제3자 솔루션이나 복잡한 설정 없이 프라이버시 보호 거래와 고급 암호화 기능을 가능하게 합니다.",
+    "choose_between_transparent_or_confidential": "필요에 따라 투명하거나 기밀 거래를 선택합니다.",
+    "simple_apis_to_add_privacy": "모든 애플리케이션에 프라이버시 기능을 추가하는 간단한 API.",
+    "full_security_with_minimal_data": "최소한의 데이터로 완전한 보안 - 모든 기기에서 몇 초 만에 동기화.",
+    "connect_to_other_blockchains_without": "중앙화된 검증자 없이 다른 블록체인에 연결합니다.",
+    "cryptographic_security": "암호학적 보안",
+    "mathematical_proofs_ensure_full_node": "수학적 증명으로 라이트 클라이언트에 풀 노드 수준의 보안을 보장합니다.",
+    "subblocks_in_development": "서브블록(개발 중)",
+    "sub_second_confirmations": "1초 미만 확인",
+    "near_instant_transaction_finality_for": "향상된 사용자 경험을 위한 거의 즉각적인 거래 최종성.",
+    "works_with_existing_infrastructure_no": "기존 인프라와 호환 - 브릿지나 사이드체인 불필요.",
+    "create_and_trade_tokens_and": "프로토콜 레벨에서 직접 토큰과 NFT를 생성하고 거래합니다. 스마트 컨트랙트가 필요 없습니다 - 단순하고 안전하며 비용 효율적인 네이티브 자산.",
+    "issue_tokens_stablecoins_or_nfts": "단일 거래로 토큰, 스테이블코인 또는 NFT를 발행합니다.",
+    "native_integration_with_all_ergo": "모든 Ergo 애플리케이션 및 프로토콜과의 네이티브 통합.",
+    "first_class_tokens_with_protocol": "프로토콜 레벨 보안 보장을 갖춘 일급 토큰.",
+    "decentralized_price_feeds_and_data": "프로토콜에 내장된 분산형 가격 피드 및 데이터 오라클. 단일 실패 지점 없음, 중앙화된 운영자 없음 - DeFi를 위한 신뢰할 수 있는 조합 가능한 데이터.",
+    "consensus_based_data_aggregation_ensures": "합의 기반 데이터 집계로 정확하고 조작 저항적인 가격을 보장합니다.",
+    "universal_compatibility": "범용 호환성",
+    "any_smart_contract_can_access": "모든 스마트 컨트랙트가 특별한 통합 없이 오라클 데이터에 접근할 수 있습니다.",
+    "no_central_authority_or_single": "데이터 파이프라인에 중앙 권한이나 단일 실패 지점이 없습니다.",
+    "no_forced_upgrades_no_chain_wars": "강제 업그레이드 없음, 체인 전쟁 없음.",
+    "adopt_innovations_at_your_own_pace": "자신의 속도로 혁신을 채택합니다.",
+    "evolutionary_not_revolutionary_changes": "혁명적이 아닌 진화적 변화.",
+    "consensus_driven_tuning_of_economic": "커뮤니티 입력과 함께 경제 매개변수의 합의 기반 조정(예: 채굴자 투표).",
+    "economic_variables_can_be_adjusted": "경제 변수를 조정할 수 있습니다.",
+    "adapt_to_changing_network_needs": "변화하는 네트워크 요구에 적응합니다.",
+    "discussions_and_decisions_involve_the_community": "논의와 결정에 커뮤니티가 참여합니다.",
+    "see_ecosystem_apps": "에코시스템 앱 보기",
+    "sigma_protocols_provide_native_zero": "시그마 프로토콜은 네이티브 영지식 증명, 링 서명을 제공합니다,",
+    "advanced_blockchain_infrastructure_for_scalable": "확장 가능한 DeFi, 안전한 스마트 컨트랙트 및 진정한 분산화를 위한 고급 블록체인 인프라.",
+    "ergo_tech_stack_overview": "Ergo 기술 스택 개요",
+    "ready_to_explore_ergo_tech": "Ergo 기술을 탐색할 준비가 되셨나요?",
+    "dive_deeper_into_the_docs": "문서를 더 깊이 탐구하거나 가장 진보된 UTXO 블록체인에서 구축을 시작하세요.",
+    "discover_ergo_s_advanced_blockchain": "Ergo의 고급 블록체인 기술을 발견하세요: 병렬 스마트 컨트랙트를 위한 eUTXO 모델, ErgoScript 프로그래밍 언어, 영지식 증명을 위한 시그마 프로토콜, ASIC 저항 Autolykos 채굴.",
+    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript smart contracts', 'Sigma protocols', 'Autolykos mining', 'blockchain technology', 'smart contract programming', 'NIPoPoWs', 'storage rent', 'proof of work', 'DeFi infrastructure",
+    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
+    "ergo_technology_overview": "Ergo 기술 개요",
+    "ergo_technology_next_generation_blockchain": "Ergo Technology - Next Generation Blockchain",
+    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
+    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
+    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
+    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
+    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
+    "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Model', description: 'Extended UTXO model enabling parallel execution",
+    "thing_name_ergoscript_description_secure": "Thing', name: 'ErgoScript', description: 'Secure, declarative language for programmable money",
+    "thing_name_sigma_protocols_description": "Thing', name: 'Sigma Protocols', description: 'Native zero-knowledge proofs and privacy features",
+    "thing_name_autolykos_description_memory": "Thing', name: 'Autolykos', description: 'Memory-hard Proof of Work algorithm",
+    "thing_name_storage_rent_description": "Thing', name: 'Storage Rent', description: 'Sustainable blockchain state management",
+    "thing_name_nipopows_description_non": "Thing', name: 'NIPoPoWs', description: 'Non-Interactive Proofs of Proof-of-Work",
+    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
+    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
+    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
+    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
+    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
+    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
+    "answer_text": "Answer',\n          text:",
+    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
+    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
+    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
+    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
+    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
+    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
+    "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
+    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
+    "ergo_blockchain_technology_eutxo_smart": "Ergo 블록체인 기술 | eUTXO 스마트 컨트랙트 & 시그마 프로토콜",
+    "ergo_technology_stack_building_the_future": "Ergo 기술 스택 - 미래 구축",
+    "advanced_blockchain_technology_eutxo_ergoscript": "고급 블록체인 기술: eUTXO, ErgoScript, 프라이버시 기능, 지속 가능한 PoW.",
+    "eutxo_model_ergoscript_sigma_protocols": "eUTXO 모델, ErgoScript, 시그마 프로토콜, NIPoPoWs - 최첨단 블록체인 기술.",
+    "comprehensive_overview_of_ergo": "Comprehensive overview of Ergo\\",
+    "extended_utxo_model_enabling_parallel_execution": "병렬 실행을 가능하게 하는 확장 UTXO 모델",
+    "secure_declarative_language_for_programmable_money": "프로그래머블 머니를 위한 안전하고 선언적인 언어",
+    "native_zero_knowledge_proofs_and_privacy_features": "네이티브 영지식 증명 및 프라이버시 기능",
+    "memory_hard_proof_of_work_algorithm": "메모리 하드 작업 증명 알고리즘",
+    "sustainable_blockchain_state_management": "지속 가능한 블록체인 상태 관리",
+    "non_interactive_proofs_of_proof_of_work": "비상호작용 작업 증명의 증명",
     "sections": {
       "useCases": "사용 사례",
       "architecture": "아키텍처",
@@ -317,6 +472,53 @@
         "explore": "기능 탐색",
         "documentation": "문서 보기"
       }
+    },
+    "innovations": {
+      "title": "주요 혁신",
+      "items": {
+        "utxo": {
+          "title": "확장 UTXO",
+          "description": "Bitcoin의 보안과 Ethereum의 표현력을 결합합니다"
+        },
+        "sigma": {
+          "title": "시그마 프로토콜",
+          "description": "프라이버시 및 인증을 위한 내장 영지식 증명"
+        },
+        "contracts": {
+          "title": "다단계 컨트랙트",
+          "description": "미리 정의된 단계를 통해 발전하는 복잡한 스마트 컨트랙트"
+        },
+        "emission": {
+          "title": "적응형 발행",
+          "description": "장기적인 안정성을 위해 설계된 부드러운 발행 곡선"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Ergo 비교",
+      "description": "Ergo의 기술이 다른 플랫폼과 어떻게 비교되는지 확인하세요",
+      "features": {
+        "model": "합의 모델",
+        "contracts": "스마트 컨트랙트",
+        "privacy": "프라이버시 기능",
+        "scalability": "확장성",
+        "sustainability": "지속 가능성"
+      }
+    },
+    "roadmap": {
+      "title": "기술 로드맵",
+      "description": "진행 중인 개발과 미래 개선 사항",
+      "phases": {
+        "current": "현재 중점",
+        "next": "다음 단계",
+        "future": "미래 비전"
+      }
+    },
+    "cta": {
+      "title": "구축할 준비가 되셨나요?",
+      "description": "가장 발전된 블록체인 플랫폼에서 개발을 시작하세요",
+      "documentation": "문서 보기",
+      "github": "GitHub 탐색"
     },
     "features": {
       "eutxo": {
@@ -1117,53 +1319,6 @@
           }
         }
       }
-    },
-    "innovations": {
-      "title": "주요 혁신",
-      "items": {
-        "utxo": {
-          "title": "확장 UTXO",
-          "description": "Bitcoin의 보안과 Ethereum의 표현력을 결합합니다"
-        },
-        "sigma": {
-          "title": "시그마 프로토콜",
-          "description": "프라이버시 및 인증을 위한 내장 영지식 증명"
-        },
-        "contracts": {
-          "title": "다단계 컨트랙트",
-          "description": "미리 정의된 단계를 통해 발전하는 복잡한 스마트 컨트랙트"
-        },
-        "emission": {
-          "title": "적응형 발행",
-          "description": "장기적인 안정성을 위해 설계된 부드러운 발행 곡선"
-        }
-      }
-    },
-    "comparison": {
-      "title": "Ergo 비교",
-      "description": "Ergo의 기술이 다른 플랫폼과 어떻게 비교되는지 확인하세요",
-      "features": {
-        "model": "합의 모델",
-        "contracts": "스마트 컨트랙트",
-        "privacy": "프라이버시 기능",
-        "scalability": "확장성",
-        "sustainability": "지속 가능성"
-      }
-    },
-    "roadmap": {
-      "title": "기술 로드맵",
-      "description": "진행 중인 개발과 미래 개선 사항",
-      "phases": {
-        "current": "현재 중점",
-        "next": "다음 단계",
-        "future": "미래 비전"
-      }
-    },
-    "cta": {
-      "title": "구축할 준비가 되셨나요?",
-      "description": "가장 발전된 블록체인 플랫폼에서 개발을 시작하세요",
-      "documentation": "문서 보기",
-      "github": "GitHub 탐색"
     },
     "nativeTokens": {
       "title": "네이티브 토큰 & NFT",
@@ -2359,9 +2514,6 @@
       "explore_ergoscript_and_start_developing": "ErgoScript를 탐색하고 오늘 안전한 스마트 컨트랙트 개발을 시작하세요.",
       "try_playground": "플레이그라운드 시도"
     },
-    "ergo_technology_description": "Ergo Technology\",\n    description:",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
-    "explore_ergo_s_technology_stack": "Ergo의 기술 스택을 탐색하세요: eUTXO, ErgoScript, Autolykos PoW, 스토리지 렌트, 시그마 프로토콜, NIPoPoWs.",
     "adaptiveEmission": {
       "title": "적응형 발행",
       "subtitle": "유연한 통화 정책",
@@ -2772,194 +2924,6 @@
           }
         }
       }
-    },
-    "frequently_asked_questions": "자주 묻는 질문",
-    "go_to_docs": "문서 보기",
-    "extended_utxo_model_that_enables": "병렬 스마트 컨트랙트 실행과 조합 가능한 DeFi 애플리케이션을 가능하게 하는 확장 UTXO 모델. Bitcoin의 보안을 유지하면서 재진입 공격을 방지합니다",
-    "parallel_execution_description_smart_contracts": "병렬 실행\", description: \"스마트 컨트랙트는 전역 상태 충돌 없이 독립적으로 실행됩니다.",
-    "composability_description_build_complex_defi": "조합성\", description: \"간단하고 재사용 가능한 구성 요소로 복잡한 DeFi 애플리케이션을 구축합니다.",
-    "bitcoin_level_security_description_inherits": "비트코인 수준의 보안\", description: \"UTXO의 검증된 이중 지불 방지 기능을 상속합니다.",
-    "built_in_privacy_description_native": "내장 프라이버시\", description: \"기밀 거래를 위한 네이티브 영지식 증명 및 링 서명.",
-    "safe_by_design_description_prevents": "설계상 안전\", description: \"재진입 공격과 예상치 못한 동작 같은 일반적인 취약점을 방지합니다.",
-    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"네트워크 참여를 민주화하는 에너지 효율적인 ASIC 저항 채굴 알고리즘. GPU 채굴을 위해 설계되어 네트워크를 분산화되고 모두가 접근 가능하게 유지합니다.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
-    "energy_efficient_description_memory_hard": "에너지 효율적\", description: \"메모리 하드 알고리즘은 기존 PoW에 비해 전력 소비를 줄입니다.",
-    "solo_mining_friendly_description_low": "솔로 채굴 친화적\", description: \"낮은 진입 장벽으로 개인 채굴자가 수익적으로 참여할 수 있습니다.",
-    "asic_resistant_description_optimized_for": "ASIC 저항\", description: \"채굴 중앙화를 방지하기 위해 소비자 GPU에 최적화되었습니다.",
-    "storage_rent_description": "스토리지 렌트\",\n    description:",
-    "sustainable_blockchain_description_automatic_cleanup": "지속 가능한 블록체인\", description: \"미사용 데이터의 자동 정리로 블록체인을 가볍고 효율적으로 유지합니다.",
-    "perpetual_security_description_miners_receive": "영구적인 보안\", description: \"채굴자는 영원히 보상을 받아 장기적인 네트워크 보안을 보장합니다.",
-    "resource_efficient_description_maintains_lightweight": "자원 효율적\", description: \"적당한 하드웨어에서 실행되는 경량 블록체인을 유지합니다.",
-    "sigma_protocols_description_built_in": "시그마 프로토콜\",\n    description:\n      \"내장 영지식 증명은 제3자 솔루션이나 복잡한 설정 없이 프라이버시 보호 거래와 고급 암호화 기능을 가능하게 합니다.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
-    "optional_privacy_description_choose_between": "선택적 프라이버시\", description: \"필요에 따라 투명하거나 기밀 거래를 선택합니다.",
-    "developer_friendly_description_simple_apis": "개발자 친화적\", description: \"모든 애플리케이션에 프라이버시 기능을 추가하는 간단한 API.",
-    "instant_mobile_sync_description_full": "즉각적인 모바일 동기화\", description: \"최소한의 데이터로 완전한 보안 - 모든 기기에서 몇 초 만에 동기화.",
-    "trustless_bridges_description_connect_to": "신뢰가 필요 없는 브릿지\", description: \"중앙화된 검증자 없이 다른 블록체인에 연결합니다.",
-    "cryptographic_security_description_mathematical_proofs": "암호학적 보안\", description: \"수학적 증명으로 라이트 클라이언트에 풀 노드 수준의 보안을 보장합니다.",
-    "subblocks_in_development_description": "서브블록(개발 중)\",\n    description:",
-    "sub_second_confirmations_description_near": "1초 미만 확인\", description: \"향상된 사용자 경험을 위한 거의 즉각적인 거래 최종성.",
-    "full_blockchain_security_without_trusted": "신뢰된 중간자 없는 완전한 블록체인 보안.",
-    "seamless_integration_description_works_with": "원활한 통합\", description: \"기존 인프라와 호환 - 브릿지나 사이드체인 불필요.",
-    "native_tokens_nfts_description_create": "네이티브 토큰 & NFT\",\n    description:\n      \"프로토콜 레벨에서 직접 토큰과 NFT를 생성하고 거래합니다. 스마트 컨트랙트가 필요 없습니다 - 단순하고 안전하며 비용 효율적인 네이티브 자산.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
-    "one_click_creation_description_issue": "원클릭 생성\", description: \"단일 거래로 토큰, 스테이블코인 또는 NFT를 발행합니다.",
-    "defi_ready_description_native_integration": "DeFi 준비 완료\", description: \"모든 Ergo 애플리케이션 및 프로토콜과의 네이티브 통합.",
-    "true_native_assets_description_first": "진정한 네이티브 자산\", description: \"프로토콜 레벨 보안 보장을 갖춘 일급 토큰.",
-    "oracle_pools_description_decentralized_price": "오라클 풀\",\n    description:\n      \"프로토콜에 내장된 분산형 가격 피드 및 데이터 오라클. 단일 실패 지점 없음, 중앙화된 운영자 없음 - DeFi를 위한 신뢰할 수 있는 조합 가능한 데이터.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
-    "reliable_price_feeds_description_consensus": "신뢰할 수 있는 가격 피드\", description: \"합의 기반 데이터 집계로 정확하고 조작 저항적인 가격을 보장합니다.",
-    "universal_compatibility_description_any_smart": "범용 호환성\", description: \"모든 스마트 컨트랙트가 특별한 통합 없이 오라클 데이터에 접근할 수 있습니다.",
-    "fully_decentralized_description_no_central": "완전 분산화\", description: \"데이터 파이프라인에 중앙 권한이나 단일 실패 지점이 없습니다.",
-    "backward_compatible_description_no_forced": "하위 호환성\", description: \"강제 업그레이드 없음, 체인 전쟁 없음.",
-    "future_proof_description_adopt_innovations": "미래 대비\", description: \"자신의 속도로 혁신을 채택합니다.",
-    "gradual_adoption_description_evolutionary_not": "점진적 채택\", description: \"혁명적이 아닌 진화적 변화.",
-    "adaptive_emission_governance_description_consensus": "적응형 발행 & 거버넌스\",\n    description:\n      \"커뮤니티 입력과 함께 경제 매개변수의 합의 기반 조정(예: 채굴자 투표).\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
-    "parameter_tuning_description_economic_variables": "매개변수 조정\", description: \"경제 변수를 조정할 수 있습니다.",
-    "economic_flexibility_description_adapt_to": "경제적 유연성\", description: \"변화하는 네트워크 요구에 적응합니다.",
-    "community_input_description_discussions_and": "커뮤니티 입력\", description: \"논의와 결정에 커뮤니티가 참여합니다.",
-    "dive_into_ergo_docs_href_docs_color": "Ergo 문서로 들어가기\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "에코시스템 앱 보기\",\n    href: \"/ecosystem\",\n    color:",
-    "adaptive_emission_governance": "적응형 발행 & 거버넌스",
-    "what_makes_ergo_s_eutxo": "Ergo의 eUTXO 모델이 계정 기반 블록체인보다 우수한 이유는?\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "ErgoScript가 스마트 컨트랙트 취약점을 어떻게 방지하나요?\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "Autolykos가 분산화되고 에너지 효율적이라고 여겨지는 이유는?\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "스토리지 렌트가 블록체인 지속 가능성 문제를 어떻게 해결하나요?\",\n      tag: \"Storage",
-    "what_privacy_features_does_ergo": "Ergo는 기본적으로 어떤 프라이버시 기능을 제공하나요?\",\n      tag: \"Privacy",
-    "why_are_ergo_s_oracle": "Ergo의 오라클 풀이 Chainlink보다 더 안전한 이유는?\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "서브블록이 1초 미만의 거래 확인을 어떻게 달성하나요?\",\n      tag: \"Scaling",
-    "how_to_create_tokens_and": "스마트 컨트랙트 없이 Ergo에서 토큰과 NFT를 어떻게 생성하나요?\",\n      tag: \"Tokens & NFTs",
-    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
-    "research_in_development": "연구/개발 중",
-    "decentralized_mixers_and_privacy_tools": "분산형 믹서 및 프라이버시 도구(법적 상태 확인)\",\n                              \"DAO & 거버넌스 시스템",
-    "infrastructure_apps": "인프라 & 앱",
-    "ergo_docs_href_docs": "Ergo 문서\", href: \"/docs",
-    "whitepaper_href_https_ergoplatform_org": "백서\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
-    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
-    "dev_tutorials_href_docs_developers_tutorials": "개발자 튜토리얼\", href: \"/docs/developers/tutorials",
-    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
-    "smart_contracts_run_independently_without": "스마트 컨트랙트는 전역 상태 충돌 없이 독립적으로 실행됩니다.",
-    "build_complex_defi_applications_from": "간단하고 재사용 가능한 구성 요소로 복잡한 DeFi 애플리케이션을 구축합니다.",
-    "bitcoin_level_security": "비트코인 수준의 보안",
-    "mathematically_prove_your_smart_contracts": "스마트 컨트랙트가 안전하고 버그가 없음을 수학적으로 증명합니다.",
-    "native_zero_knowledge_proofs_and": "기밀 거래를 위한 네이티브 영지식 증명 및 링 서명.",
-    "safe_by_design": "설계상 안전",
-    "prevents_common_vulnerabilities_like_reentrancy": "재진입 공격과 예상치 못한 동작 같은 일반적인 취약점을 방지합니다.",
-    "energy_efficient_asic_resistant_mining": "네트워크 참여를 민주화하는 에너지 효율적인 ASIC 저항 채굴 알고리즘. GPU 채굴을 위해 설계되어 네트워크를 분산화되고 모두가 접근 가능하게 유지합니다.",
-    "memory_hard_algorithm_reduces_power": "메모리 하드 알고리즘은 기존 PoW에 비해 전력 소비를 줄입니다.",
-    "low_barrier_to_entry_enables": "낮은 진입 장벽으로 개인 채굴자가 수익적으로 참여할 수 있습니다.",
-    "optimized_for_consumer_gpus_to": "채굴 중앙화를 방지하기 위해 소비자 GPU에 최적화되었습니다.",
-    "revolutionary_economic_model_that_prevents": "블록체인 팽창을 방지하는 혁명적인 경제 모델. 비활성 코인은 4년 후 최소한의 렌트를 지불하여 지속 가능한 블록체인 크기와 영구적인 채굴자 보상을 보장합니다.",
-    "sustainable_blockchain": "지속 가능한 블록체인",
-    "automatic_cleanup_of_unused_data": "미사용 데이터의 자동 정리로 블록체인을 가볍고 효율적으로 유지합니다.",
-    "miners_receive_rewards_forever_ensuring": "채굴자는 영원히 보상을 받아 장기적인 네트워크 보안을 보장합니다.",
-    "maintains_lightweight_blockchain_that_runs": "적당한 하드웨어에서 실행되는 경량 블록체인을 유지합니다.",
-    "built_in_zero_knowledge_proofs": "내장 영지식 증명은 제3자 솔루션이나 복잡한 설정 없이 프라이버시 보호 거래와 고급 암호화 기능을 가능하게 합니다.",
-    "choose_between_transparent_or_confidential": "필요에 따라 투명하거나 기밀 거래를 선택합니다.",
-    "simple_apis_to_add_privacy": "모든 애플리케이션에 프라이버시 기능을 추가하는 간단한 API.",
-    "full_security_with_minimal_data": "최소한의 데이터로 완전한 보안 - 모든 기기에서 몇 초 만에 동기화.",
-    "connect_to_other_blockchains_without": "중앙화된 검증자 없이 다른 블록체인에 연결합니다.",
-    "cryptographic_security": "암호학적 보안",
-    "mathematical_proofs_ensure_full_node": "수학적 증명으로 라이트 클라이언트에 풀 노드 수준의 보안을 보장합니다.",
-    "subblocks_in_development": "서브블록(개발 중)",
-    "sub_second_confirmations": "1초 미만 확인",
-    "near_instant_transaction_finality_for": "향상된 사용자 경험을 위한 거의 즉각적인 거래 최종성.",
-    "works_with_existing_infrastructure_no": "기존 인프라와 호환 - 브릿지나 사이드체인 불필요.",
-    "create_and_trade_tokens_and": "프로토콜 레벨에서 직접 토큰과 NFT를 생성하고 거래합니다. 스마트 컨트랙트가 필요 없습니다 - 단순하고 안전하며 비용 효율적인 네이티브 자산.",
-    "issue_tokens_stablecoins_or_nfts": "단일 거래로 토큰, 스테이블코인 또는 NFT를 발행합니다.",
-    "native_integration_with_all_ergo": "모든 Ergo 애플리케이션 및 프로토콜과의 네이티브 통합.",
-    "first_class_tokens_with_protocol": "프로토콜 레벨 보안 보장을 갖춘 일급 토큰.",
-    "decentralized_price_feeds_and_data": "프로토콜에 내장된 분산형 가격 피드 및 데이터 오라클. 단일 실패 지점 없음, 중앙화된 운영자 없음 - DeFi를 위한 신뢰할 수 있는 조합 가능한 데이터.",
-    "consensus_based_data_aggregation_ensures": "합의 기반 데이터 집계로 정확하고 조작 저항적인 가격을 보장합니다.",
-    "universal_compatibility": "범용 호환성",
-    "any_smart_contract_can_access": "모든 스마트 컨트랙트가 특별한 통합 없이 오라클 데이터에 접근할 수 있습니다.",
-    "no_central_authority_or_single": "데이터 파이프라인에 중앙 권한이나 단일 실패 지점이 없습니다.",
-    "no_forced_upgrades_no_chain_wars": "강제 업그레이드 없음, 체인 전쟁 없음.",
-    "adopt_innovations_at_your_own_pace": "자신의 속도로 혁신을 채택합니다.",
-    "evolutionary_not_revolutionary_changes": "혁명적이 아닌 진화적 변화.",
-    "consensus_driven_tuning_of_economic": "커뮤니티 입력과 함께 경제 매개변수의 합의 기반 조정(예: 채굴자 투표).",
-    "economic_variables_can_be_adjusted": "경제 변수를 조정할 수 있습니다.",
-    "adapt_to_changing_network_needs": "변화하는 네트워크 요구에 적응합니다.",
-    "discussions_and_decisions_involve_the_community": "논의와 결정에 커뮤니티가 참여합니다.",
-    "see_ecosystem_apps": "에코시스템 앱 보기",
-    "sigma_protocols_provide_native_zero": "시그마 프로토콜은 네이티브 영지식 증명, 링 서명을 제공합니다,",
-    "advanced_blockchain_infrastructure_for_scalable": "확장 가능한 DeFi, 안전한 스마트 컨트랙트 및 진정한 분산화를 위한 고급 블록체인 인프라.",
-    "ergo_tech_stack_overview": "Ergo 기술 스택 개요",
-    "ready_to_explore_ergo_tech": "Ergo 기술을 탐색할 준비가 되셨나요?",
-    "dive_deeper_into_the_docs": "문서를 더 깊이 탐구하거나 가장 진보된 UTXO 블록체인에서 구축을 시작하세요.",
-    "discover_ergo_s_advanced_blockchain": "Ergo의 고급 블록체인 기술을 발견하세요: 병렬 스마트 컨트랙트를 위한 eUTXO 모델, ErgoScript 프로그래밍 언어, 영지식 증명을 위한 시그마 프로토콜, ASIC 저항 Autolykos 채굴.",
-    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript smart contracts', 'Sigma protocols', 'Autolykos mining', 'blockchain technology', 'smart contract programming', 'NIPoPoWs', 'storage rent', 'proof of work', 'DeFi infrastructure",
-    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
-    "ergo_technology_overview": "Ergo 기술 개요",
-    "ergo_technology_next_generation_blockchain": "Ergo Technology - Next Generation Blockchain",
-    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
-    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
-    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
-    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Model', description: 'Extended UTXO model enabling parallel execution",
-    "thing_name_ergoscript_description_secure": "Thing', name: 'ErgoScript', description: 'Secure, declarative language for programmable money",
-    "thing_name_sigma_protocols_description": "Thing', name: 'Sigma Protocols', description: 'Native zero-knowledge proofs and privacy features",
-    "thing_name_autolykos_description_memory": "Thing', name: 'Autolykos', description: 'Memory-hard Proof of Work algorithm",
-    "thing_name_storage_rent_description": "Thing', name: 'Storage Rent', description: 'Sustainable blockchain state management",
-    "thing_name_nipopows_description_non": "Thing', name: 'NIPoPoWs', description: 'Non-Interactive Proofs of Proof-of-Work",
-    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
-    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
-    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
-    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
-    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
-    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
-    "answer_text": "Answer',\n          text:",
-    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
-    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
-    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
-    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
-    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
-    "ergo_blockchain_technology_eutxo_smart": "Ergo 블록체인 기술 | eUTXO 스마트 컨트랙트 & 시그마 프로토콜",
-    "ergo_technology_stack_building_the_future": "Ergo 기술 스택 - 미래 구축",
-    "advanced_blockchain_technology_eutxo_ergoscript": "고급 블록체인 기술: eUTXO, ErgoScript, 프라이버시 기능, 지속 가능한 PoW.",
-    "eutxo_model_ergoscript_sigma_protocols": "eUTXO 모델, ErgoScript, 시그마 프로토콜, NIPoPoWs - 최첨단 블록체인 기술.",
-    "comprehensive_overview_of_ergo": "Comprehensive overview of Ergo\\",
-    "extended_utxo_model_enabling_parallel_execution": "병렬 실행을 가능하게 하는 확장 UTXO 모델",
-    "secure_declarative_language_for_programmable_money": "프로그래머블 머니를 위한 안전하고 선언적인 언어",
-    "native_zero_knowledge_proofs_and_privacy_features": "네이티브 영지식 증명 및 프라이버시 기능",
-    "memory_hard_proof_of_work_algorithm": "메모리 하드 작업 증명 알고리즘",
-    "sustainable_blockchain_state_management": "지속 가능한 블록체인 상태 관리",
-    "non_interactive_proofs_of_proof_of_work": "비상호작용 작업 증명의 증명",
-    "ergoscriptPageOld": {
-      "features": [
-        {
-          "title": "형식 검증 지원",
-          "description": "선언적 제약과 1등급 암호학적 기본 요소를 통한 형식 검증 및 감사 가능성 지원"
-        },
-        {
-          "title": "eUTXO 보안 모델",
-          "description": "계정 기반 시스템에서 흔한 재진입 취약성 클래스가 eUTXO에는 존재하지 않음"
-        },
-        {
-          "title": "결정론적 실행",
-          "description": "계산 복잡성은 예측 가능하지만 네트워크 수수료는 시장 기반으로 결정"
-        },
-        {
-          "title": "네이티브 Sigma Protocols",
-          "description": "다중 서명, 임계, 링 서명 구성에 대한 1등급 지원"
-        },
-        {
-          "title": "UTXO 동시성",
-          "description": "고경합 시나리오를 위한 배치 패턴을 사용한 병렬 트랜잭션 처리"
-        },
-        {
-          "title": "제한된 계산",
-          "description": "안전을 위해 스크립트 내에서는 비-튜링 완전하지만 시퀀스는 복잡한 동작을 표현 가능"
-        }
-      ],
-      "useCases": [
-        "비수탁 DeFi 프로토콜",
-        "커스텀 다중 서명 지갑",
-        "경매 및 DAO",
-        "오라클 시스템",
-        "프라이버시 도구 및 믹서",
-        "고급 NFT 컨트랙트"
-      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -4026,703 +3990,739 @@
           "sourceCode": "GitHub 저장소"
         }
       }
+    },
+    "ergoscriptPageOld": {
+      "features": [
+        {
+          "title": "형식 검증 지원",
+          "description": "선언적 제약과 1등급 암호학적 기본 요소를 통한 형식 검증 및 감사 가능성 지원"
+        },
+        {
+          "title": "eUTXO 보안 모델",
+          "description": "계정 기반 시스템에서 흔한 재진입 취약성 클래스가 eUTXO에는 존재하지 않음"
+        },
+        {
+          "title": "결정론적 실행",
+          "description": "계산 복잡성은 예측 가능하지만 네트워크 수수료는 시장 기반으로 결정"
+        },
+        {
+          "title": "네이티브 Sigma Protocols",
+          "description": "다중 서명, 임계, 링 서명 구성에 대한 1등급 지원"
+        },
+        {
+          "title": "UTXO 동시성",
+          "description": "고경합 시나리오를 위한 배치 패턴을 사용한 병렬 트랜잭션 처리"
+        },
+        {
+          "title": "제한된 계산",
+          "description": "안전을 위해 스크립트 내에서는 비-튜링 완전하지만 시퀀스는 복잡한 동작을 표현 가능"
+        }
+      ],
+      "useCases": [
+        "비수탁 DeFi 프로토콜",
+        "커스텀 다중 서명 지갑",
+        "경매 및 DAO",
+        "오라클 시스템",
+        "프라이버시 도구 및 믹서",
+        "고급 NFT 컨트랙트"
+      ]
     }
   },
   "technologyPages": {
     "securePow": {
-      "title": "Secure PoW",
-      "subtitle": "ASIC-resistant Autolykos v2 algorithm ensuring fair mining and network security",
+      "title": "안전한 PoW",
+      "subtitle": "공정한 채굴과 네트워크 보안을 보장하는 ASIC 저항 Autolykos v2 알고리즘",
       "seo": {
-        "title": "Autolykos Mining Algorithm | ASIC-Resistant GPU Mining on Ergo",
-        "description": "Mine Ergo with GPUs using Autolykos v2 - the energy-efficient, ASIC-resistant algorithm. Start solo mining ERG profitably with consumer hardware. Complete mining guide included.",
-        "keywords": "autolykos, ergo mining, ASIC resistant, GPU mining, proof of work, secure mining algorithm"
+        "title": "Autolykos 채굴 알고리즘 | Ergo의 ASIC 저항 GPU 채굴",
+        "description": "Autolykos v2를 사용하여 GPU로 Ergo를 채굴하세요 — 에너지 효율적이고 ASIC 저항적인 알고리즘. 소비자용 하드웨어로 수익성 있게 ERG를 채굴하세요. 완전한 채굴 가이드 포함.",
+        "keywords": "autolykos, ergo 채굴, ASIC 저항, GPU 채굴, 작업 증명, 안전한 채굴 알고리즘"
       },
       "features": {
         "0": {
-          "title": "ASIC-Resistant",
-          "description": "Memory-hard algorithm prevents ASIC dominance and keeps mining decentralized"
+          "title": "ASIC 저항",
+          "description": "메모리 집약적 알고리즘이 ASIC 지배를 방지하고 채굴을 탈중앙화 상태로 유지"
         },
         "1": {
-          "title": "Energy Efficient",
-          "description": "More efficient than Bitcoin's SHA-256 while maintaining security guarantees"
+          "title": "에너지 효율",
+          "description": "보안 보장을 유지하면서 Bitcoin의 SHA-256보다 더 효율적"
         },
         "2": {
-          "title": "Fair Mining",
-          "description": "GPU-friendly design ensures anyone can participate in network security"
+          "title": "공정한 채굴",
+          "description": "GPU 친화적 설계로 누구나 네트워크 보안에 참여 가능"
         }
       },
       "networkStats": {
         "0": {
-          "label": "Network Hashrate",
+          "label": "네트워크 해시레이트",
           "value": "12.5 TH/s",
           "change": "+5.2%"
         },
         "1": {
-          "label": "Active Miners",
+          "label": "활성 채굴자",
           "value": "2,847",
           "change": "+12.1%"
         },
         "2": {
-          "label": "Block Time",
-          "value": "2.0 min",
-          "change": "Stable"
+          "label": "블록 시간",
+          "value": "2.0분",
+          "change": "안정"
         },
         "3": {
-          "label": "Difficulty",
+          "label": "난이도",
           "value": "1.2P",
           "change": "+3.8%"
         }
       },
-      "benefitsTitle": "Why Autolykos Matters",
+      "benefitsTitle": "Autolykos가 중요한 이유",
       "benefits": {
-        "0": "Prevents mining centralization through ASIC resistance",
-        "1": "Reduces energy consumption compared to traditional PoW",
-        "2": "Enables profitable mining with consumer hardware",
-        "3": "Maintains network security through memory-hard puzzles",
-        "4": "Supports fair distribution of mining rewards",
-        "5": "Future-proofs against mining hardware monopolies"
+        "0": "ASIC 저항을 통한 채굴 중앙화 방지",
+        "1": "기존 PoW에 비해 에너지 소비 감소",
+        "2": "소비자용 하드웨어로 수익성 있는 채굴 가능",
+        "3": "메모리 집약적 퍼즐을 통한 네트워크 보안 유지",
+        "4": "채굴 보상의 공정한 분배 지원",
+        "5": "채굴 하드웨어 독점에 대한 미래 대비"
       },
-      "miningCommandTitle": "Start Mining",
+      "miningCommandTitle": "채굴 시작",
       "exampleCommand": "ergominer --pool stratum+tcp://pool.example.com:4444 --wallet YOUR_WALLET_ADDRESS",
-      "faqTitle": "Frequently Asked Questions",
+      "faqTitle": "자주 묻는 질문",
       "faq": {
         "0": {
-          "question": "What is Autolykos?",
-          "answer": "Autolykos v2 is Ergo's memory-hard Proof-of-Work algorithm designed to be ASIC-resistant and GPU-friendly, keeping mining decentralized."
+          "question": "Autolykos란 무엇인가요?",
+          "answer": "Autolykos v2는 ASIC 저항적이고 GPU 친화적으로 설계된 Ergo의 메모리 집약적 작업 증명 알고리즘으로, 채굴을 탈중앙화 상태로 유지합니다."
         },
         "1": {
-          "question": "Why is Autolykos ASIC-resistant?",
-          "answer": "Autolykos requires significant memory bandwidth making ASIC development economically unviable while remaining efficient on consumer GPUs."
+          "question": "Autolykos가 ASIC 저항적인 이유는 무엇인가요?",
+          "answer": "Autolykos는 상당한 메모리 대역폭이 필요하여 ASIC 개발을 경제적으로 불가능하게 만들면서 소비자용 GPU에서는 효율적으로 유지됩니다."
         },
         "2": {
-          "question": "How energy efficient is Autolykos?",
-          "answer": "Autolykos is more energy-efficient than Bitcoin's SHA-256, requiring less electricity per hash while maintaining security."
+          "question": "Autolykos는 얼마나 에너지 효율적인가요?",
+          "answer": "Autolykos는 Bitcoin의 SHA-256보다 에너지 효율이 높아 보안을 유지하면서 해시당 전력 소비가 적습니다."
         },
         "3": {
-          "question": "Can I mine Ergo with my GPU?",
-          "answer": "Yes! Autolykos is designed for GPU mining. Most modern GPUs can mine ERG profitably, making it accessible to home miners."
+          "question": "GPU로 Ergo를 채굴할 수 있나요?",
+          "answer": "네! Autolykos는 GPU 채굴을 위해 설계되었습니다. 대부분의 최신 GPU로 ERG를 수익성 있게 채굴할 수 있어 홈 채굴자들이 쉽게 접근할 수 있습니다."
         },
         "4": {
-          "question": "How does Autolykos prevent centralization?",
-          "answer": "The memory-hard nature of Autolykos makes it expensive to develop specialized ASICs, keeping mining accessible to individual miners with consumer hardware."
+          "question": "Autolykos는 어떻게 중앙화를 방지하나요?",
+          "answer": "Autolykos의 메모리 집약적 특성으로 인해 전문 ASIC 개발이 비용이 많이 들어, 소비자용 하드웨어를 가진 개인 채굴자들이 채굴에 계속 접근할 수 있습니다."
         },
         "5": {
-          "question": "What hardware do I need to mine Ergo?",
-          "answer": "You need a modern GPU with at least 4GB VRAM. Popular choices include NVIDIA RTX series and AMD RX series graphics cards."
+          "question": "Ergo를 채굴하려면 어떤 하드웨어가 필요한가요?",
+          "answer": "최소 4GB VRAM을 갖춘 최신 GPU가 필요합니다. 인기 있는 선택으로는 NVIDIA RTX 시리즈와 AMD RX 시리즈 그래픽 카드가 있습니다."
         }
       },
-      "ctaTitle": "Ready to Start Mining?",
+      "ctaTitle": "채굴을 시작할 준비가 되셨나요?",
       "ctaButtons": {
-        "readGuide": "Mining Guide",
-        "viewCode": "View on GitHub"
+        "readGuide": "채굴 가이드",
+        "viewCode": "GitHub에서 보기"
       }
     },
     "eutxoModel": {
-      "title": "eUTXO Model",
-      "subtitle": "The foundation of Ergo's advanced smart contract capabilities",
-      "description": "Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality via ErgoScript, enabling parallel execution and eliminating entire classes of vulnerabilities.",
+      "title": "eUTXO 모델",
+      "subtitle": "Ergo의 고급 스마트 컨트랙트 기능의 기반",
+      "description": "확장 UTXO는 Bitcoin의 검증된 보안 모델을 ErgoScript를 통한 강력한 스마트 컨트랙트 기능과 결합하여 병렬 실행을 가능하게 하고 전체 취약성 클래스를 제거합니다.",
       "seo": {
-        "title": "eUTXO Model: Parallel Smart Contracts | Ergo",
-        "description": "Learn how Ergo's Extended UTXO model enables parallel execution, MEV resistance, and composable DeFi. No re-entrancy attacks by design.",
-        "keywords": "eUTXO, Extended UTXO, UTXO model, parallel execution, smart contracts, MEV resistance, composability, Ergo blockchain, DeFi security, box model"
+        "title": "eUTXO 모델: 병렬 스마트 컨트랙트 | Ergo",
+        "description": "Ergo의 확장 UTXO 모델이 어떻게 병렬 실행, MEV 저항, 조합 가능한 DeFi를 가능하게 하는지 알아보세요. 설계에 의한 재진입 공격 없음.",
+        "keywords": "eUTXO, 확장 UTXO, UTXO 모델, 병렬 실행, 스마트 컨트랙트, MEV 저항, 조합 가능성, Ergo 블록체인, DeFi 보안, 박스 모델"
       },
       "buttons": {
-        "learnMore": "Learn More",
-        "viewCode": "View Code"
+        "learnMore": "더 알아보기",
+        "viewCode": "코드 보기"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "빠른 시작",
         "exploreEutxo": {
-          "title": "Explore eUTXO",
-          "description": "Interactive visualization of the model"
+          "title": "eUTXO 탐색",
+          "description": "모델의 인터랙티브 시각화"
         },
         "developerGuide": {
-          "title": "Developer Guide",
-          "description": "Build with eUTXO patterns"
+          "title": "개발자 가이드",
+          "description": "eUTXO 패턴으로 구축"
         },
         "joinCommunity": {
-          "title": "Join Community",
-          "description": "Get help from experienced developers"
+          "title": "커뮤니티 참여",
+          "description": "경험 많은 개발자들에게 도움 받기"
         }
       },
-      "featuresTitle": "Key Features",
+      "featuresTitle": "주요 기능",
       "features": {
         "0": {
-          "title": "Box-Based State",
-          "description": "Each UTXO is a 'box' containing value, data, and a guarding script that defines spending conditions."
+          "title": "박스 기반 상태",
+          "description": "각 UTXO는 가치, 데이터, 지출 조건을 정의하는 가드 스크립트를 포함하는 「박스」입니다."
         },
         "1": {
-          "title": "Immutable Data",
-          "description": "Boxes are immutable — once created, they cannot be modified, only consumed and new ones created."
+          "title": "불변 데이터",
+          "description": "박스는 불변입니다 — 생성된 후에는 수정할 수 없으며 소비되고 새로운 것이 생성될 뿐입니다."
         },
         "2": {
-          "title": "No Re-entrancy",
-          "description": "The UTXO model eliminates re-entrancy attacks by design — no mutable state to exploit."
+          "title": "재진입 없음",
+          "description": "UTXO 모델은 설계에 의해 재진입 공격을 제거합니다 — 악용할 가변 상태가 없습니다."
         },
         "3": {
-          "title": "Parallel Execution",
-          "description": "Transactions touching different boxes can execute in parallel, improving scalability."
+          "title": "병렬 실행",
+          "description": "서로 다른 박스를 건드리는 트랜잭션은 병렬로 실행되어 확장성을 향상시킵니다."
         },
         "4": {
-          "title": "Local Verification",
-          "description": "Smart contracts only need to verify their own inputs, not global blockchain state."
+          "title": "로컬 검증",
+          "description": "스마트 컨트랙트는 글로벌 블록체인 상태가 아닌 자체 입력만 검증하면 됩니다."
         },
         "5": {
-          "title": "Composable Protocols",
-          "description": "Complex DeFi protocols built from simple, reusable box patterns."
+          "title": "조합 가능한 프로토콜",
+          "description": "단순하고 재사용 가능한 박스 패턴으로 구축된 복잡한 DeFi 프로토콜."
         }
       },
-      "comparisonTitle": "eUTXO vs Account Model",
+      "comparisonTitle": "eUTXO vs 계정 모델",
       "comparisonHeaders": {
-        "aspect": "Aspect",
-        "eutxo": "eUTXO Model",
-        "account": "Account Model",
-        "advantage": "Advantage"
+        "aspect": "측면",
+        "eutxo": "eUTXO 모델",
+        "account": "계정 모델",
+        "advantage": "장점"
       },
       "comparison": {
         "0": {
-          "aspect": "State Management",
-          "eutxo": "No global balances — only unspent outputs",
-          "account": "Global state with account balances and storage",
+          "aspect": "상태 관리",
+          "eutxo": "글로벌 잔액 없음 — 미사용 출력만 있음",
+          "account": "계정 잔액과 스토리지를 갖춘 글로벌 상태",
           "advantage": "eUTXO"
         },
         "1": {
-          "aspect": "Security",
-          "eutxo": "No re-entrancy attacks, predictable costs",
-          "account": "Vulnerable to re-entrancy, unpredictable gas",
+          "aspect": "보안",
+          "eutxo": "재진입 공격 없음, 예측 가능한 비용",
+          "account": "재진입에 취약, 예측 불가능한 가스",
           "advantage": "eUTXO"
         },
         "2": {
-          "aspect": "Parallelism",
-          "eutxo": "Independent boxes enable parallel processing",
-          "account": "State contention forces sequential processing",
+          "aspect": "병렬성",
+          "eutxo": "독립 박스가 병렬 처리 가능",
+          "account": "상태 경합으로 순차 처리 강제",
           "advantage": "eUTXO"
         },
         "3": {
-          "aspect": "Privacy",
-          "eutxo": "Natural transaction privacy through separate boxes",
-          "account": "All balances publicly visible",
+          "aspect": "프라이버시",
+          "eutxo": "별도 박스를 통한 자연스러운 트랜잭션 프라이버시",
+          "account": "모든 잔액이 공개적으로 보임",
           "advantage": "eUTXO"
         },
         "4": {
-          "aspect": "Composability",
-          "eutxo": "Modular outputs compose into complex protocols",
-          "account": "Monolithic contracts with complex interactions",
-          "advantage": "Tie"
+          "aspect": "조합 가능성",
+          "eutxo": "모듈식 출력이 복잡한 프로토콜로 조합",
+          "account": "복잡한 상호작용을 가진 모놀리식 컨트랙트",
+          "advantage": "동등"
         }
       },
-      "useCasesTitle": "Real-World Use Cases",
+      "useCasesTitle": "실제 사용 사례",
       "useCases": {
         "0": {
-          "title": "DEX Order Books",
-          "description": "Each order is a separate box, enabling parallel matching and atomic swaps",
+          "title": "DEX 주문서",
+          "description": "각 주문은 별도 박스로 병렬 매칭과 원자 스왑 가능",
           "example": "Spectrum Finance"
         },
         "1": {
-          "title": "Lending Protocols",
-          "description": "Collateral locked in boxes with clear liquidation conditions",
+          "title": "대출 프로토콜",
+          "description": "명확한 청산 조건으로 박스에 담보 잠금",
           "example": "DuckPools"
         },
         "2": {
-          "title": "Stablecoins",
-          "description": "Reserve boxes track collateral independently for each position",
+          "title": "스테이블코인",
+          "description": "리저브 박스가 각 포지션에 대해 독립적으로 담보 추적",
           "example": "SigmaUSD"
         },
         "3": {
-          "title": "NFT Auctions",
-          "description": "Bid boxes compete without blocking each other",
+          "title": "NFT 경매",
+          "description": "입찰 박스들이 서로를 차단하지 않고 경쟁",
           "example": "Ergo Auction House"
         }
       },
-      "codeExampleTitle": "Simple Yet Powerful",
-      "codeExampleDescription": "The eUTXO model simplifies smart contract development by treating everything as boxes with clear spending conditions. No complex state management, no re-entrancy concerns — just straightforward logic.",
+      "codeExampleTitle": "단순하지만 강력한",
+      "codeExampleDescription": "eUTXO 모델은 모든 것을 명확한 지출 조건을 가진 박스로 취급하여 스마트 컨트랙트 개발을 단순화합니다. 복잡한 상태 관리도 없고 재진입 우려도 없습니다 — 단순한 로직만 있습니다.",
       "codeExampleBenefits": {
-        "0": "Predictable execution costs",
-        "1": "Natural transaction batching",
-        "2": "Built-in multi-sig support",
-        "3": "Atomic multi-asset swaps"
+        "0": "예측 가능한 실행 비용",
+        "1": "자연스러운 트랜잭션 배치",
+        "2": "내장 다중 서명 지원",
+        "3": "원자 다중 자산 스왑"
       },
-      "faqTitle": "Frequently Asked Questions",
+      "faqTitle": "자주 묻는 질문",
       "faq": {
         "0": {
-          "question": "How is eUTXO different from Bitcoin's basic UTXO?",
-          "answer": "While Bitcoin's UTXO model only tracks value transfers, Ergo's eUTXO extends this with arbitrary data storage in boxes and Turing-complete smart contracts via ErgoScript. This enables complex DeFi applications while keeping UTXO benefits."
+          "question": "eUTXO는 Bitcoin의 기본 UTXO와 어떻게 다른가요?",
+          "answer": "Bitcoin의 UTXO 모델은 가치 전송만 추적하는 반면, Ergo의 eUTXO는 박스의 임의 데이터 저장과 ErgoScript를 통한 튜링 완전 스마트 컨트랙트로 이를 확장합니다. UTXO 이점을 유지하면서 복잡한 DeFi 애플리케이션을 가능하게 합니다."
         },
         "1": {
-          "question": "Can eUTXO handle complex DeFi applications?",
-          "answer": "Yes! Ergo has DEXes (Spectrum), lending protocols, stablecoins (SigmaUSD), and more. The eUTXO model actually makes these more secure by preventing re-entrancy and enabling parallel execution."
+          "question": "eUTXO는 복잡한 DeFi 애플리케이션을 처리할 수 있나요?",
+          "answer": "네! Ergo에는 DEX(Spectrum), 대출 프로토콜, 스테이블코인(SigmaUSD) 등이 있습니다. eUTXO 모델은 재진입을 방지하고 병렬 실행을 가능하게 하여 이것들을 더 안전하게 만듭니다."
         },
         "2": {
-          "question": "Why is the eUTXO model more scalable?",
-          "answer": "Independent boxes enable parallel transaction processing. Unlike account models where state contention forces sequential execution, eUTXO transactions touching different boxes can run simultaneously."
+          "question": "eUTXO 모델이 더 확장 가능한 이유는 무엇인가요?",
+          "answer": "독립 박스는 병렬 트랜잭션 처리를 가능하게 합니다. 상태 경합이 순차 실행을 강제하는 계정 모델과 달리, 서로 다른 박스를 건드리는 eUTXO 트랜잭션은 동시에 실행될 수 있습니다."
         },
         "3": {
-          "question": "How do smart contracts work in eUTXO?",
-          "answer": "Each box has a guard script that defines its spending conditions. When spending a box, the script is executed with provided inputs. If it returns true, the box can be spent. This is simpler and more predictable than account-based execution."
+          "question": "eUTXO에서 스마트 컨트랙트는 어떻게 작동하나요?",
+          "answer": "각 박스에는 지출 조건을 정의하는 가드 스크립트가 있습니다. 박스를 지출할 때 스크립트가 제공된 입력으로 실행됩니다. true를 반환하면 박스를 지출할 수 있습니다. 이는 계정 기반 실행보다 더 단순하고 예측 가능합니다."
         }
       },
-      "relatedTitle": "Continue Learning",
-      "relatedSubtitle": "Explore related Ergo technologies",
-      "exampleLabel": "Example"
+      "relatedTitle": "계속 배우기",
+      "relatedSubtitle": "관련 Ergo 기술 탐색",
+      "exampleLabel": "예시"
     },
     "velvetForks": {
-      "title": "Velvet Forks",
-      "subtitle": "Backward-compatible protocol upgrades",
-      "description": "Enable protocol evolution without breaking changes or forced upgrades. Velvet forks allow gradual feature adoption while preserving ecosystem stability.",
+      "title": "벨벳 포크",
+      "subtitle": "하위 호환 프로토콜 업그레이드",
+      "description": "호환성을 깨는 변경이나 강제 업그레이드 없이 프로토콜 발전을 가능하게 합니다. 벨벳 포크는 생태계 안정성을 유지하면서 점진적인 기능 채택을 허용합니다.",
       "seo": {
-        "title": "Velvet Forks: Backward-Compatible Protocol Upgrades | Ergo",
-        "description": "Learn how Ergo enables protocol evolution without breaking changes through velvet forks. Gradual feature adoption while preserving ecosystem stability.",
-        "keywords": "velvet forks, protocol upgrades, backward compatibility, blockchain evolution, soft fork, hard fork"
+        "title": "벨벳 포크: 하위 호환 프로토콜 업그레이드 | Ergo",
+        "description": "벨벳 포크를 통해 Ergo가 호환성을 깨는 변경 없이 프로토콜 발전을 가능하게 하는 방법을 알아보세요. 생태계 안정성을 유지하면서 점진적인 기능 채택.",
+        "keywords": "벨벳 포크, 프로토콜 업그레이드, 하위 호환성, 블록체인 발전, 소프트 포크, 하드 포크"
       },
       "buttons": {
-        "readDocumentation": "Read Documentation",
-        "exploreOther": "Explore Other Technologies"
+        "readDocumentation": "문서 읽기",
+        "exploreOther": "다른 기술 탐색"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "빠른 시작",
         "steps": {
           "0": {
             "number": "01",
-            "title": "Learn Concepts",
-            "description": "Understand velvet fork principles"
+            "title": "개념 학습",
+            "description": "벨벳 포크 원칙 이해"
           },
           "1": {
             "number": "02",
-            "title": "View Examples",
-            "description": "See velvet forks in action"
+            "title": "예시 보기",
+            "description": "벨벳 포크 실제 동작 확인"
           },
           "2": {
             "number": "03",
-            "title": "Join Discussion",
-            "description": "Participate in governance"
+            "title": "토론 참여",
+            "description": "거버넌스에 참여"
           }
         }
       },
-      "featuresTitle": "Key Features",
-      "featuresSubtitle": "Why velvet forks are the future of blockchain protocol upgrades",
+      "featuresTitle": "주요 기능",
+      "featuresSubtitle": "벨벳 포크가 블록체인 프로토콜 업그레이드의 미래인 이유",
       "features": {
         "0": {
-          "title": "Backward Compatibility",
-          "description": "No breaking changes for existing applications and infrastructure"
+          "title": "하위 호환성",
+          "description": "기존 애플리케이션과 인프라에 대한 호환성 파괴 없음"
         },
         "1": {
-          "title": "Gradual Adoption",
-          "description": "New features can be adopted incrementally by the network"
+          "title": "점진적 채택",
+          "description": "새로운 기능을 네트워크에서 점진적으로 채택 가능"
         },
         "2": {
-          "title": "Flexible Updates",
-          "description": "Protocol parameters can be adjusted without hard forks"
+          "title": "유연한 업데이트",
+          "description": "하드 포크 없이 프로토콜 매개변수 조정 가능"
         },
         "3": {
-          "title": "Community Consensus",
-          "description": "Changes require broad community agreement and miner support"
+          "title": "커뮤니티 합의",
+          "description": "변경 사항은 광범위한 커뮤니티 동의와 채굴자 지지 필요"
         },
         "4": {
-          "title": "Security Preservation",
-          "description": "Maintains network security while enabling protocol evolution"
+          "title": "보안 유지",
+          "description": "프로토콜 발전을 가능하게 하면서 네트워크 보안 유지"
         },
         "5": {
-          "title": "Reduced Risk",
-          "description": "Lower risk of network splits and ecosystem fragmentation"
+          "title": "위험 감소",
+          "description": "네트워크 분할 및 생태계 분열 위험 감소"
         }
       },
-      "howItWorksTitle": "How It Works",
-      "howItWorksSubtitle": "The velvet fork process ensures smooth protocol evolution",
+      "howItWorksTitle": "작동 방식",
+      "howItWorksSubtitle": "벨벳 포크 프로세스는 원활한 프로토콜 발전을 보장합니다",
       "howItWorks": {
         "0": {
-          "title": "Proposal Phase",
-          "description": "Community proposes protocol improvements through EIPs"
+          "title": "제안 단계",
+          "description": "커뮤니티가 EIP를 통해 프로토콜 개선 제안"
         },
         "1": {
-          "title": "Discussion & Review",
-          "description": "Technical review and community discussion"
+          "title": "토론 및 검토",
+          "description": "기술적 검토 및 커뮤니티 토론"
         },
         "2": {
-          "title": "Implementation",
-          "description": "Developers implement backward-compatible changes"
+          "title": "구현",
+          "description": "개발자들이 하위 호환 변경 사항 구현"
         },
         "3": {
-          "title": "Gradual Activation",
-          "description": "Network adopts features without forced upgrades"
+          "title": "점진적 활성화",
+          "description": "강제 업그레이드 없이 네트워크가 기능 채택"
         }
       },
-      "comparisonTitle": "Fork Comparison",
-      "comparisonSubtitle": "Understanding different approaches to blockchain protocol upgrades",
+      "comparisonTitle": "포크 비교",
+      "comparisonSubtitle": "블록체인 프로토콜 업그레이드에 대한 다양한 접근 방식 이해",
       "comparison": {
         "hardFork": {
-          "title": "Hard Fork",
-          "description": "Breaking changes that require all nodes to upgrade",
+          "title": "하드 포크",
+          "description": "모든 노드가 업그레이드해야 하는 호환성 파괴 변경",
           "pros": [
-            "Complete protocol redesign possible",
-            "Can fix fundamental issues"
+            "완전한 프로토콜 재설계 가능",
+            "근본적인 문제 수정 가능"
           ],
           "cons": [
-            "Risk of network split",
-            "Requires coordinated upgrade"
+            "네트워크 분할 위험",
+            "조율된 업그레이드 필요"
           ]
         },
         "softFork": {
-          "title": "Soft Fork",
-          "description": "Backward-compatible changes that tighten rules",
+          "title": "소프트 포크",
+          "description": "규칙을 강화하는 하위 호환 변경",
           "pros": [
-            "Maintains backward compatibility",
-            "No forced upgrades required"
+            "하위 호환성 유지",
+            "강제 업그레이드 불필요"
           ],
           "cons": [
-            "Limited to rule tightening",
-            "Cannot add new features easily"
+            "규칙 강화만 가능",
+            "새로운 기능 추가 어려움"
           ]
         },
         "velvetFork": {
-          "title": "Velvet Fork",
-          "description": "Ergo's approach: gradual feature introduction with full compatibility",
+          "title": "벨벳 포크",
+          "description": "Ergo의 접근 방식: 완전한 호환성을 유지하면서 점진적 기능 도입",
           "pros": [
-            "No breaking changes ever",
-            "Gradual feature adoption",
-            "Preserves ecosystem stability"
+            "호환성 파괴 없음",
+            "점진적 기능 채택",
+            "생태계 안정성 유지"
           ],
           "tradeoffs": [
-            "Slower feature rollout",
-            "Requires careful design"
+            "느린 기능 출시",
+            "신중한 설계 필요"
           ]
         }
       },
-      "useCasesTitle": "Use Cases",
-      "useCasesSubtitle": "Real-world applications of velvet fork technology",
+      "useCasesTitle": "사용 사례",
+      "useCasesSubtitle": "벨벳 포크 기술의 실제 응용",
       "useCases": {
         "0": {
-          "title": "Light Client Upgrades",
-          "description": "Enable new features for light clients without breaking existing implementations"
+          "title": "라이트 클라이언트 업그레이드",
+          "description": "기존 구현을 깨지 않고 라이트 클라이언트에 새로운 기능 추가"
         },
         "1": {
-          "title": "Privacy Enhancements",
-          "description": "Gradually introduce new privacy features while maintaining backward compatibility"
+          "title": "프라이버시 향상",
+          "description": "하위 호환성을 유지하면서 새로운 프라이버시 기능 점진적 도입"
         },
         "2": {
-          "title": "Smart Contract Evolution",
-          "description": "Upgrade ErgoScript capabilities without requiring ecosystem-wide changes"
+          "title": "스마트 컨트랙트 발전",
+          "description": "생태계 전체 변경 없이 ErgoScript 기능 업그레이드"
         }
       },
-      "faqTitle": "Frequently Asked Questions",
-      "faqSubtitle": "Common questions about velvet forks and their implementation",
+      "faqTitle": "자주 묻는 질문",
+      "faqSubtitle": "벨벳 포크와 구현에 관한 일반적인 질문",
       "faq": {
         "0": {
-          "question": "What exactly is a velvet fork?",
-          "answer": "A velvet fork is Ergo's approach to protocol upgrades that maintains complete backward compatibility while enabling new features. Unlike hard or soft forks, velvet forks never break existing functionality."
+          "question": "벨벳 포크란 정확히 무엇인가요?",
+          "answer": "벨벳 포크는 새로운 기능을 가능하게 하면서 완전한 하위 호환성을 유지하는 Ergo의 프로토콜 업그레이드 접근 방식입니다. 하드 포크나 소프트 포크와 달리 벨벳 포크는 기존 기능을 절대 깨지 않습니다."
         },
         "1": {
-          "question": "How do velvet forks differ from soft forks?",
-          "answer": "While soft forks tighten existing rules, velvet forks can add entirely new features without affecting nodes that don't upgrade. This allows for more flexible protocol evolution."
+          "question": "벨벳 포크는 소프트 포크와 어떻게 다른가요?",
+          "answer": "소프트 포크가 기존 규칙을 강화하는 반면, 벨벳 포크는 업그레이드하지 않은 노드에 영향을 미치지 않고 완전히 새로운 기능을 추가할 수 있습니다. 이를 통해 더 유연한 프로토콜 발전이 가능합니다."
         },
         "2": {
-          "question": "Are velvet forks secure?",
-          "answer": "Yes, velvet forks maintain the same security guarantees as the base protocol. New features are designed to be optional and don't compromise the security of existing functionality."
+          "question": "벨벳 포크는 안전한가요?",
+          "answer": "네, 벨벳 포크는 기본 프로토콜과 동일한 보안 보장을 유지합니다. 새로운 기능은 선택적으로 설계되어 기존 기능의 보안을 손상시키지 않습니다."
         },
         "3": {
-          "question": "Do I need to upgrade my node for velvet forks?",
-          "answer": "No, upgrades are optional. Your node will continue to work normally, though you won't have access to new features until you choose to upgrade."
+          "question": "벨벳 포크를 위해 노드를 업그레이드해야 하나요?",
+          "answer": "아니요, 업그레이드는 선택 사항입니다. 노드는 계속 정상 작동하지만 업그레이드를 선택하기 전까지는 새로운 기능에 접근할 수 없습니다."
         }
       },
-      "relatedTitle": "Related Technologies"
+      "relatedTitle": "관련 기술"
     },
     "storageRent": {
-      "title": "Storage Rent",
-      "subtitle": "What is Storage Rent?",
-      "description": "Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.",
+      "title": "스토리지 렌트",
+      "subtitle": "스토리지 렌트란 무엇인가요?",
+      "description": "Ergo의 스토리지 렌트 시스템은 블록체인 비대화를 방지하고 데이터 저장에 예측 가능한 비용을 창출하여 장기적인 네트워크 건강을 보장합니다.",
       "seo": {
-        "title": "Storage Rent Explained | Sustainable Blockchain Economics on Ergo",
-        "description": "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
-        "ogTitle": "Storage Rent | The Solution to Blockchain Sustainability",
-        "ogDescription": "How Ergo prevents blockchain bloat while ensuring perpetual network security through Storage Rent.",
-        "twitterTitle": "Storage Rent | Solving Blockchain Bloat Forever",
-        "twitterDescription": "Sustainable economics: automatic cleanup, perpetual miner rewards, efficient blockchain."
+        "title": "스토리지 렌트 설명 | Ergo의 지속 가능한 블록체인 경제학",
+        "description": "블록체인 비대화를 영구적으로 해결하는 혁신적인 경제 모델. 스토리지 렌트가 지속 가능한 블록체인 크기, 영구적인 채굴자 보상 및 효율적인 자원 사용을 보장하는 방법을 알아보세요.",
+        "ogTitle": "스토리지 렌트 | 블록체인 지속 가능성의 해결책",
+        "ogDescription": "Ergo가 스토리지 렌트를 통해 영구적인 네트워크 보안을 보장하면서 블록체인 비대화를 방지하는 방법.",
+        "twitterTitle": "스토리지 렌트 | 블록체인 비대화를 영구적으로 해결",
+        "twitterDescription": "지속 가능한 경제학: 자동 정리, 영구적인 채굴자 보상, 효율적인 블록체인."
       },
       "problems": [
         {
-          "title": "Blockchain Bloat",
-          "description": "Traditional blockchains grow indefinitely, making full node operation increasingly expensive",
-          "stats": "~500GB/year growth"
+          "title": "블록체인 비대화",
+          "description": "기존 블록체인은 무한히 성장하여 풀 노드 운영이 점점 더 비싸집니다",
+          "stats": "~500GB/년 성장"
         },
         {
-          "title": "Lost Coins",
-          "description": "Millions in lost or forgotten coins create permanent blockchain overhead",
-          "stats": "~20% of supply"
+          "title": "분실된 코인",
+          "description": "분실되거나 잊혀진 수백만 코인이 영구적인 블록체인 오버헤드를 생성합니다",
+          "stats": "~공급량의 20%"
         },
         {
-          "title": "Miner Revenue",
-          "description": "Block rewards decrease over time, threatening long-term security",
-          "stats": "-50% every 4 years"
+          "title": "채굴자 수익",
+          "description": "블록 보상이 시간이 지남에 따라 감소하여 장기적 보안을 위협합니다",
+          "stats": "4년마다 -50%"
         }
       ],
       "benefits": [
-        "Prevents unlimited blockchain growth",
-        "Creates sustainable miner revenue",
-        "Protects network decentralization",
-        "Cleans up lost/forgotten coins",
-        "Makes costs predictable",
-        "Aligns incentives"
+        "무제한 블록체인 성장 방지",
+        "지속 가능한 채굴자 수익 창출",
+        "네트워크 탈중앙화 보호",
+        "분실/잊혀진 코인 정리",
+        "비용을 예측 가능하게 만들기",
+        "인센티브 정렬"
       ],
       "timeline": [
         {
-          "year": "Box Created",
-          "status": "Active UTXO",
-          "description": "Normal operation, no rent accrual",
-          "details": "Any transaction resets the 4-year timer"
+          "year": "박스 생성",
+          "status": "활성 UTXO",
+          "description": "정상 작동, 렌트 발생 없음",
+          "details": "모든 트랜잭션이 4년 타이머를 재설정"
         },
         {
-          "year": "4 Years Later",
-          "status": "Rent begins accruing",
-          "description": "Small fee charged for continued storage",
-          "details": "~0.14 ERG per 4-year period"
+          "year": "4년 후",
+          "status": "렌트 발생 시작",
+          "description": "지속적인 저장에 대한 소액 수수료 부과",
+          "details": "~4년 기간당 0.14 ERG"
         },
         {
-          "year": "Box Depleted",
-          "status": "Eligible for miner claim",
-          "description": "If rent isn't paid, remaining value goes to miners",
-          "details": "Funds return to active circulation"
+          "year": "박스 소진",
+          "status": "채굴자 청구 가능",
+          "description": "렌트가 지불되지 않으면 남은 가치가 채굴자에게 귀속",
+          "details": "자금이 활성 유통으로 복귀"
         }
       ],
       "schema": {
         "techArticle": {
-          "headline": "Storage Rent: Sustainable Blockchain Economics",
-          "description": "How Storage Rent solves blockchain bloat and ensures long-term sustainability"
+          "headline": "스토리지 렌트: 지속 가능한 블록체인 경제학",
+          "description": "스토리지 렌트가 블록체인 비대화를 해결하고 장기적 지속 가능성을 보장하는 방법"
         },
         "faq": {
           "what": {
-            "question": "What is Storage Rent?",
-            "answer": "Storage Rent is a mechanism where unused coins pay a minimal fee after 4 years of inactivity, preventing blockchain bloat and providing permanent miner rewards beyond emission."
+            "question": "스토리지 렌트란 무엇인가요?",
+            "answer": "스토리지 렌트는 사용하지 않는 코인이 4년간 비활성 상태 후 최소한의 수수료를 지불하는 메커니즘으로, 블록체인 비대화를 방지하고 발행 이후에도 영구적인 채굴자 보상을 제공합니다."
           },
           "cost": {
-            "question": "How much does Storage Rent cost?",
-            "answer": "Storage Rent costs approximately 0.14 ERG per UTXO every 4 years. Active users never pay rent as any transaction resets the timer."
+            "question": "스토리지 렌트 비용은 얼마인가요?",
+            "answer": "스토리지 렌트는 4년마다 UTXO당 약 0.14 ERG가 소요됩니다. 모든 트랜잭션이 타이머를 재설정하므로 활성 사용자는 렌트를 지불하지 않습니다."
           },
           "importance": {
-            "question": "Why is Storage Rent important?",
-            "answer": "Storage Rent ensures blockchain sustainability by preventing unlimited growth, keeping the network lightweight, and providing perpetual security through miner rewards after emission ends."
+            "question": "스토리지 렌트가 중요한 이유는 무엇인가요?",
+            "answer": "스토리지 렌트는 무제한 성장을 방지하고 네트워크를 경량으로 유지하며 발행 종료 후 채굴자 보상을 통한 영구적 보안을 제공하여 블록체인 지속 가능성을 보장합니다."
           }
         }
       }
     },
     "nativeTokens": {
-      "title": "Native Tokens & NFTs",
-      "subtitle": "Create and trade tokens and NFTs directly at the protocol level",
-      "description": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
-      "details": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
-      "lastUpdated": "Last updated",
+      "title": "네이티브 토큰 및 NFT",
+      "subtitle": "프로토콜 수준에서 직접 토큰과 NFT를 생성하고 거래",
+      "description": "스마트 컨트랙트 불필요 - 단순하고 안전하며 비용 효율적인 네이티브 자산. 프로토콜 수준의 보안 보장과 함께 단일 트랜잭션으로 토큰, 스테이블코인, NFT를 발행하세요.",
+      "details": "스마트 컨트랙트 불필요 - 단순하고 안전하며 비용 효율적인 네이티브 자산. 프로토콜 수준의 보안 보장과 함께 단일 트랜잭션으로 토큰, 스테이블코인, NFT를 발행하세요.",
+      "lastUpdated": "최종 업데이트",
       "buttons": {
-        "exploreNftEcosystem": "Explore NFT Ecosystem",
-        "tokenApiDocs": "Token API Docs"
+        "exploreNftEcosystem": "NFT 생태계 탐색",
+        "tokenApiDocs": "토큰 API 문서"
       },
       "navigation": {
-        "keyFeatures": "Key features",
-        "assetTypes": "Asset types",
-        "useCases": "Use cases",
+        "keyFeatures": "주요 기능",
+        "assetTypes": "자산 유형",
+        "useCases": "사용 사례",
         "faq": "FAQ"
       },
       "keyMetrics": {
-        "title": "Key Metrics",
+        "title": "주요 지표",
         "tokenCreation": {
-          "name": "Token Creation",
+          "name": "토큰 생성",
           "value": "1 TX",
-          "description": "Single transaction creation"
+          "description": "단일 트랜잭션 생성"
         },
         "creationCost": {
-          "name": "Creation Cost",
+          "name": "생성 비용",
           "value": "~$0.01",
-          "description": "Minimal fees in ERG"
+          "description": "ERG의 최소 수수료"
         },
         "protocolSecurity": {
-          "name": "Protocol Security",
+          "name": "프로토콜 보안",
           "value": "100%",
-          "description": "First-class assets"
+          "description": "1등급 자산"
         },
         "tokenTypes": {
-          "name": "Token Types",
+          "name": "토큰 유형",
           "value": "∞",
-          "description": "Unlimited possibilities"
+          "description": "무한한 가능성"
         }
       },
       "whyNativeAssets": {
-        "title": "Why Native Assets?",
-        "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
+        "title": "네이티브 자산이 왜 중요한가요?",
+        "subtitle": "복잡한 스마트 컨트랙트가 필요한 다른 블록체인과 달리 Ergo는 커스텀 토큰을 1등급 시민으로 취급합니다"
       },
       "featuresSection": {
-        "title": "Why Native Assets?",
-        "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
+        "title": "네이티브 자산이 왜 중요한가요?",
+        "subtitle": "복잡한 스마트 컨트랙트가 필요한 다른 블록체인과 달리 Ergo는 커스텀 토큰을 1등급 시민으로 취급합니다"
       },
       "features": {
         "0": {
-          "title": "Protocol-Level Support",
-          "description": "Native tokens are first-class citizens, as secure as ERG itself"
+          "title": "프로토콜 수준 지원",
+          "description": "네이티브 토큰은 ERG 자체만큼 안전한 1등급 시민"
         },
         "1": {
-          "title": "No Smart Contracts",
-          "description": "Create tokens without complex code or contracts"
+          "title": "스마트 컨트랙트 불필요",
+          "description": "복잡한 코드나 컨트랙트 없이 토큰 생성"
         },
         "2": {
-          "title": "Instant Creation",
-          "description": "Issue tokens in a single transaction"
+          "title": "즉시 생성",
+          "description": "단일 트랜잭션으로 토큰 발행"
         },
         "3": {
-          "title": "Low Cost",
-          "description": "Minimal fees for token creation and transfers"
+          "title": "낮은 비용",
+          "description": "토큰 생성 및 전송에 최소한의 수수료"
         },
         "4": {
-          "title": "Rich Metadata",
-          "description": "Store token data directly on-chain"
+          "title": "풍부한 메타데이터",
+          "description": "토큰 데이터를 온체인에 직접 저장"
         },
         "5": {
-          "title": "Cross-Chain Ready",
-          "description": "Built for multi-chain interoperability"
+          "title": "크로스체인 준비",
+          "description": "멀티체인 상호운용성을 위해 구축"
         }
       },
       "assetTypes": {
-        "title": "Asset Types",
-        "subtitle": "Create any type of digital asset with native protocol support"
+        "title": "자산 유형",
+        "subtitle": "네이티브 프로토콜 지원으로 모든 유형의 디지털 자산 생성"
       },
       "tabs": {
-        "tokens": "Fungible Tokens",
-        "nfts": "NFTs",
-        "stablecoins": "Stablecoins"
+        "tokens": "대체 가능 토큰",
+        "nfts": "NFT",
+        "stablecoins": "스테이블코인"
       },
       "useCasesSection": {
-        "title": "Use Cases",
-        "subtitle": "Applications that benefit from native token creation"
+        "title": "사용 사례",
+        "subtitle": "네이티브 토큰 생성의 혜택을 받는 애플리케이션"
       },
       "useCases": {
         "0": {
-          "title": "Fungible Tokens",
-          "description": "Create custom currencies and utility tokens"
+          "title": "대체 가능 토큰",
+          "description": "커스텀 화폐 및 유틸리티 토큰 생성"
         },
         "1": {
-          "title": "NFT Collections",
-          "description": "Launch digital art and collectibles"
+          "title": "NFT 컬렉션",
+          "description": "디지털 아트와 수집품 출시"
         },
         "2": {
-          "title": "Stablecoins",
-          "description": "Issue stable assets with protocol security"
+          "title": "스테이블코인",
+          "description": "프로토콜 보안으로 안정적인 자산 발행"
         },
         "3": {
-          "title": "Asset Tokenization",
-          "description": "Tokenize real-world assets on-chain"
+          "title": "자산 토큰화",
+          "description": "실물 자산을 온체인에 토큰화"
         }
       },
       "codeExample": {
-        "title": "Simple Token Creation",
-        "subtitle": "Create tokens with just a few lines of code",
+        "title": "단순한 토큰 생성",
+        "subtitle": "몇 줄의 코드로 토큰 생성",
         "code": "// Token creation parameters\nval tokenName = \"MyToken\"\nval tokenDescription = \"My awesome token on Ergo\"\nval tokenDecimals = 2\nval tokenAmount = 1000000L\n\n// Create token in a single transaction\nval token = Minting.issueToken(\n  ergoClient = client,\n  tokenName = tokenName,\n  tokenDescription = tokenDescription,\n  tokenAmount = tokenAmount,\n  tokenDecimals = tokenDecimals,\n  mintingAddress = address,\n  txFee = Parameters.MinFee\n)\n\n// Token is now live on the blockchain!\nprintln(s\"Token ID: ${token.getId}\")\nprintln(s\"Token created in TX: ${token.creationTx}\")",
-        "note": "No smart contract deployment, no complex setup - just simple, native token creation."
+        "note": "스마트 컨트랙트 배포도 복잡한 설정도 없습니다 - 단순하고 네이티브한 토큰 생성."
       },
       "ecosystem": {
-        "title": "Token Ecosystem",
-        "subtitle": "A thriving ecosystem of tools and platforms for native tokens",
+        "title": "토큰 생태계",
+        "subtitle": "네이티브 토큰을 위한 도구와 플랫폼의 번성하는 생태계",
         "marketplaces": {
-          "title": "Marketplaces",
-          "skyHarbor": "SkyHarbor - NFT marketplace",
-          "spectrum": "Spectrum - Token DEX",
-          "auctionHouse": "ErgoAuctionHouse - Auction platform"
+          "title": "마켓플레이스",
+          "skyHarbor": "SkyHarbor - NFT 마켓플레이스",
+          "spectrum": "Spectrum - 토큰 DEX",
+          "auctionHouse": "ErgoAuctionHouse - 경매 플랫폼"
         },
         "creationTools": {
-          "title": "Creation Tools",
-          "ergoMixer": "ErgoMixer - Privacy tokens",
-          "tokenMinter": "Ergo Token Minter - Simple UI",
-          "blitzTcg": "Blitz TCG - Gaming tokens"
+          "title": "생성 도구",
+          "ergoMixer": "ErgoMixer - 프라이버시 토큰",
+          "tokenMinter": "Ergo Token Minter - 단순 UI",
+          "blitzTcg": "Blitz TCG - 게임 토큰"
         },
         "infrastructure": {
-          "title": "Infrastructure",
-          "tokenApi": "Token API - REST endpoints",
-          "explorer": "Explorer - Token tracking",
-          "wallets": "Wallets - Native support"
+          "title": "인프라",
+          "tokenApi": "Token API - REST 엔드포인트",
+          "explorer": "Explorer - 토큰 추적",
+          "wallets": "지갑 - 네이티브 지원"
         }
       },
       "faq": {
         "0": {
-          "question": "What are native tokens on Ergo?",
-          "answer": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself."
+          "question": "Ergo의 네이티브 토큰이란 무엇인가요?",
+          "answer": "네이티브 토큰은 스마트 컨트랙트 없이 프로토콜 수준에서 직접 생성하고 거래할 수 있는 Ergo의 1등급 자산입니다. ERG 자체와 동일한 보안 보장을 받습니다."
         },
         "1": {
-          "question": "How much does it cost to create a token?",
-          "answer": "Creating a token on Ergo costs approximately $0.01 in transaction fees. This is significantly cheaper than other blockchains that require smart contract deployment."
+          "question": "토큰을 생성하는 데 비용이 얼마인가요?",
+          "answer": "Ergo에서 토큰을 생성하는 데는 트랜잭션 수수료로 약 $0.01이 소요됩니다. 스마트 컨트랙트 배포가 필요한 다른 블록체인보다 훨씬 저렴합니다."
         },
         "2": {
-          "question": "Can I create NFTs on Ergo?",
-          "answer": "Yes, NFTs are created as native tokens with a supply of 1. They support rich metadata including images, descriptions, and custom properties stored on IPFS."
+          "question": "Ergo에서 NFT를 생성할 수 있나요?",
+          "answer": "네, NFT는 공급량이 1인 네이티브 토큰으로 생성됩니다. IPFS에 저장된 이미지, 설명 및 커스텀 속성을 포함한 풍부한 메타데이터를 지원합니다."
         },
         "3": {
-          "question": "Are native tokens compatible with DeFi?",
-          "answer": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements."
+          "question": "네이티브 토큰은 DeFi와 호환되나요?",
+          "answer": "네, 네이티브 토큰은 완전한 DeFi 호환성을 가지며 특별한 통합 요구 사항 없이 모든 Ergo 애플리케이션과 프로토콜에서 사용할 수 있습니다."
         }
       },
       "cta": {
-        "title": "Start Creating Native Assets",
-        "subtitle": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer",
+        "title": "네이티브 자산 생성 시작",
+        "subtitle": "이미 Ergo의 네이티브 자산 레이어에서 토큰과 NFT를 발행한 수천 명의 크리에이터와 함께하세요",
         "buttons": {
-          "readDocumentation": "Read Documentation",
-          "learnAboutAgeUsd": "Learn About AgeUSD"
+          "readDocumentation": "문서 읽기",
+          "learnAboutAgeUsd": "AgeUSD에 대해 알아보기"
         }
       },
       "seo": {
-        "title": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
-        "description": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets on Ergo blockchain.",
-        "keywords": "native tokens, NFTs, blockchain assets, ergo tokens, token creation, non-fungible tokens, protocol-level assets, token issuance, ergo NFTs, digital assets",
-        "ogTitle": "Native Tokens & NFTs on Ergo - Protocol-Level Assets",
-        "ogDescription": "Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.",
-        "twitterTitle": "Native Tokens & NFTs - First-Class Ergo Assets",
-        "twitterDescription": "Create tokens & NFTs at protocol level. One-click creation, ~$0.01 cost, 100% secure."
+        "title": "네이티브 토큰 및 NFT - 1등급 자산 | Ergo 블록체인",
+        "description": "프로토콜 수준에서 직접 토큰과 NFT를 생성하고 거래하세요. 스마트 컨트랙트 불필요 - Ergo 블록체인의 단순하고 안전하며 비용 효율적인 네이티브 자산.",
+        "keywords": "네이티브 토큰, NFT, 블록체인 자산, ergo 토큰, 토큰 생성, 대체 불가능한 토큰, 프로토콜 수준 자산, 토큰 발행, ergo NFT, 디지털 자산",
+        "ogTitle": "Ergo의 네이티브 토큰 및 NFT - 프로토콜 수준 자산",
+        "ogDescription": "단일 트랜잭션으로 토큰과 NFT를 발행하세요. 스마트 컨트랙트 불필요, 프로토콜 보안을 갖춘 1등급 자산.",
+        "twitterTitle": "네이티브 토큰 및 NFT - 1등급 Ergo 자산",
+        "twitterDescription": "프로토콜 수준에서 토큰 및 NFT 생성. 원클릭 생성, ~$0.01 비용, 100% 안전."
       },
-      "useCasesTitle": "Use Cases",
+      "useCasesTitle": "사용 사례",
       "tabContent": {
-        "tokens": "Create fungible tokens for currencies, rewards, governance, and more. Each token inherits the full security of the Ergo protocol.",
-        "nfts": "Issue unique digital assets with rich metadata. Perfect for art, collectibles, and digital property rights.",
-        "stablecoins": "Build stable assets with protocol-level security. No complex smart contracts required."
+        "tokens": "화폐, 보상, 거버넌스 등을 위한 대체 가능 토큰 생성. 각 토큰은 Ergo 프로토콜의 완전한 보안을 상속받습니다.",
+        "nfts": "풍부한 메타데이터가 있는 고유한 디지털 자산 발행. 아트, 수집품, 디지털 재산권에 완벽합니다.",
+        "stablecoins": "프로토콜 수준의 보안으로 안정적인 자산 구축. 복잡한 스마트 컨트랙트 불필요."
       },
-      "faqTitle": "Frequently Asked Questions",
-      "ctaTitle": "Ready to Create Tokens?",
+      "faqTitle": "자주 묻는 질문",
+      "ctaTitle": "토큰을 생성할 준비가 되셨나요?",
       "ctaButtons": {
-        "readGuide": "Read the Guide",
-        "viewCode": "View on GitHub"
+        "readGuide": "가이드 읽기",
+        "viewCode": "GitHub에서 보기"
       },
       "schema": {
         "techArticle": {
-          "headline": "Native Tokens & NFTs: First-Class Assets on Ergo",
-          "description": "Comprehensive guide to creating and managing native tokens and NFTs on Ergo blockchain",
+          "headline": "네이티브 토큰 및 NFT: Ergo의 1등급 자산",
+          "description": "Ergo 블록체인에서 네이티브 토큰과 NFT를 생성하고 관리하는 종합 가이드",
           "steps": {
-            "name": "How to Create Native Tokens on Ergo",
-            "description": "Step-by-step guide to creating tokens on Ergo blockchain",
+            "name": "Ergo에서 네이티브 토큰을 만드는 방법",
+            "description": "Ergo 블록체인에서 토큰을 생성하는 단계별 가이드",
             "defineParameters": {
-              "name": "Define Token Parameters",
-              "text": "Set token name, description, amount, and decimals"
+              "name": "토큰 매개변수 정의",
+              "text": "토큰 이름, 설명, 수량 및 소수점 자리수 설정"
             },
             "createTransaction": {
-              "name": "Create Transaction",
-              "text": "Build a minting transaction with token parameters"
+              "name": "트랜잭션 생성",
+              "text": "토큰 매개변수로 민팅 트랜잭션 구축"
             },
             "submitNetwork": {
-              "name": "Submit to Network",
-              "text": "Send the transaction to create your token instantly"
+              "name": "네트워크에 제출",
+              "text": "즉시 토큰을 생성하기 위해 트랜잭션 전송"
             }
           }
         },
         "faq": {
           "whatAre": {
-            "question": "What are native tokens on Ergo?",
-            "answer": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself."
+            "question": "Ergo의 네이티브 토큰이란 무엇인가요?",
+            "answer": "네이티브 토큰은 스마트 컨트랙트 없이 프로토콜 수준에서 직접 생성하고 거래할 수 있는 Ergo의 1등급 자산입니다. ERG 자체와 동일한 보안 보장을 받습니다."
           },
           "cost": {
-            "question": "How much does it cost to create a token?",
-            "answer": "Creating a token on Ergo costs approximately $0.01 in transaction fees. This is significantly cheaper than other blockchains that require smart contract deployment."
+            "question": "토큰을 생성하는 데 비용이 얼마인가요?",
+            "answer": "Ergo에서 토큰을 생성하는 데는 트랜잭션 수수료로 약 $0.01이 소요됩니다. 스마트 컨트랙트 배포가 필요한 다른 블록체인보다 훨씬 저렴합니다."
           },
           "nfts": {
-            "question": "Can I create NFTs on Ergo?",
-            "answer": "Yes, NFTs are created as native tokens with a supply of 1. They support rich metadata including images, descriptions, and custom properties stored on IPFS."
+            "question": "Ergo에서 NFT를 생성할 수 있나요?",
+            "answer": "네, NFT는 공급량이 1인 네이티브 토큰으로 생성됩니다. IPFS에 저장된 이미지, 설명 및 커스텀 속성을 포함한 풍부한 메타데이터를 지원합니다."
           },
           "code": {
-            "question": "Do I need to code to create tokens?",
-            "answer": "No, you can create tokens using simple UI tools or with just a few lines of code. The process is as simple as sending a transaction with token parameters."
+            "question": "토큰을 생성하려면 코딩이 필요한가요?",
+            "answer": "아니요, 단순한 UI 도구를 사용하거나 몇 줄의 코드로 토큰을 생성할 수 있습니다. 이 과정은 토큰 매개변수가 있는 트랜잭션을 전송하는 것만큼 간단합니다."
           },
           "defi": {
-            "question": "Are native tokens compatible with DeFi?",
-            "answer": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements."
+            "question": "네이티브 토큰은 DeFi와 호환되나요?",
+            "answer": "네, 네이티브 토큰은 완전한 DeFi 호환성을 가지며 특별한 통합 요구 사항 없이 모든 Ergo 애플리케이션과 프로토콜에서 사용할 수 있습니다."
           }
         }
       }
