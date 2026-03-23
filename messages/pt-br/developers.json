@@ -1,997 +1,997 @@
 {
   "developersPage": {
     "breadcrumbs": {
-      "home": "Home",
-      "developers": "Developers"
+      "home": "Início",
+      "developers": "Desenvolvedores"
     },
     "seo": {
-      "title": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API | Build on Ergo",
-      "description": "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). Predictable costs and optional privacy with Sigma protocols.",
+      "title": "Desenvolvedores Ergo — ErgoScript, SDKs, Padrões eUTXO & API | Construa na Ergo",
+      "description": "Construa dApps seguros na Ergo. Aprenda ErgoScript, explore padrões eUTXO, acesse SDKs (Fleet, AppKit, sigma-rust). Custos previsíveis e privacidade opcional com protocolos Sigma.",
       "keywords": [
-        "Ergo developers",
+        "desenvolvedores Ergo",
         "ErgoScript",
         "eUTXO",
-        "smart contracts",
-        "build on Ergo",
-        "Ergo SDK",
+        "contratos inteligentes",
+        "construir na Ergo",
+        "SDK Ergo",
         "Fleet SDK",
         "sigma-rust",
         "AppKit",
-        "blockchain development",
-        "Sigma protocols",
-        "Ergo API",
-        "dApp development",
-        "Ergo patterns",
-        "Ergo playbooks",
-        "DeFi development",
-        "Ergo grants",
-        "ErgoScript tutorial"
+        "desenvolvimento blockchain",
+        "protocolos Sigma",
+        "API Ergo",
+        "desenvolvimento dApp",
+        "padrões Ergo",
+        "playbooks Ergo",
+        "desenvolvimento DeFi",
+        "bolsas Ergo",
+        "tutorial ErgoScript"
       ]
     },
     "schema": {
       "techArticle": {
-        "headline": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API",
-        "description": "Developer hub for building on Ergo: ErgoScript, SDKs, eUTXO patterns, and practical resources.",
+        "headline": "Desenvolvedores Ergo — ErgoScript, SDKs, Padrões eUTXO & API",
+        "description": "Hub de desenvolvedores para construir na Ergo: ErgoScript, SDKs, padrões eUTXO e recursos práticos.",
         "keywords": [
-          "Ergo developers",
+          "desenvolvedores Ergo",
           "ErgoScript",
           "eUTXO",
-          "smart contracts",
-          "Ergo SDK",
+          "contratos inteligentes",
+          "SDK Ergo",
           "Fleet SDK",
           "AppKit",
           "sigma-rust"
         ],
-        "proficiencyLevel": "Beginner",
-        "technicalAudience": "Developers, Engineers, Technical Founders",
+        "proficiencyLevel": "Iniciante",
+        "technicalAudience": "Desenvolvedores, Engenheiros, Fundadores Técnicos",
         "about": [
           { "name": "ErgoScript" },
-          { "name": "eUTXO Model" },
-          { "name": "Sigma Protocols" },
-          { "name": "Blockchain Development" },
-          { "name": "Smart Contracts" }
+          { "name": "Modelo eUTXO" },
+          { "name": "Protocolos Sigma" },
+          { "name": "Desenvolvimento Blockchain" },
+          { "name": "Contratos Inteligentes" }
         ]
       },
       "itemList": {
-        "name": "Ergo Core Technologies",
-        "description": "Index of Ergo blockchain technologies and features for developers"
+        "name": "Tecnologias Centrais da Ergo",
+        "description": "Índice de tecnologias e funcionalidades da blockchain Ergo para desenvolvedores"
       },
       "howTo": {
-        "name": "Start Building on Ergo",
-        "description": "Quick start guide for Ergo blockchain development with Fleet SDK",
+        "name": "Comece a Construir na Ergo",
+        "description": "Guia de início rápido para desenvolvimento na blockchain Ergo com Fleet SDK",
         "steps": [
           {
-            "name": "Install Fleet SDK",
-            "text": "Add Fleet SDK to your JavaScript/TypeScript project (npm install @fleet-sdk/core).",
+            "name": "Instalar o Fleet SDK",
+            "text": "Adicione o Fleet SDK ao seu projeto JavaScript/TypeScript (npm install @fleet-sdk/core).",
             "url": "https://fleet-sdk.github.io/docs/"
           },
           {
-            "name": "Connect to Ergo testnet",
-            "text": "Connect to Ergo testnet and get test ERG from the faucet to start experimenting.",
+            "name": "Conectar à testnet da Ergo",
+            "text": "Conecte-se à testnet da Ergo e obtenha ERG de teste do faucet para começar a experimentar.",
             "url": "https://testnet.ergofaucet.org/"
           },
           {
-            "name": "Build your first transaction",
-            "text": "Create, sign, and submit your first Ergo transaction with Fleet SDK.",
+            "name": "Construir sua primeira transação",
+            "text": "Crie, assine e envie sua primeira transação Ergo com o Fleet SDK.",
             "url": "/patterns"
           },
           {
-            "name": "Deploy a smart contract",
-            "text": "Write ErgoScript and deploy contracts to testnet to verify behavior end-to-end.",
+            "name": "Implantar um contrato inteligente",
+            "text": "Escreva ErgoScript e implante contratos na testnet para verificar o comportamento de ponta a ponta.",
             "url": "/learn/ergoscript"
           },
           {
-            "name": "Join the developer community",
-            "text": "Join Discord to get help, feedback, and connect with other builders.",
+            "name": "Participe da comunidade de desenvolvedores",
+            "text": "Entre no Discord para obter ajuda, feedback e conectar-se com outros construtores.",
             "url": "https://discord.gg/ergo-platform-668903786361651200"
           }
         ]
       }
     },
     "hero": {
-      "badge": "Developer Hub",
-      "title": "Build DeFi that doesn't break",
-      "subtitle": "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs. Built-in privacy.",
+      "badge": "Hub de Desenvolvedores",
+      "title": "Construa DeFi que não quebra",
+      "subtitle": "Segurança nível Bitcoin encontra contratos inteligentes. Sem ataques de reentrância. Sem estado oculto. Custos previsíveis. Privacidade integrada.",
       "buttons": {
-        "startLearning": "Start Learning",
-        "browsePatterns": "Browse Patterns",
-        "docs": "Docs"
+        "startLearning": "Começar a Aprender",
+        "browsePatterns": "Explorar Padrões",
+        "docs": "Documentação"
       }
     },
     "whyBuild": {
-      "title": "Why Build on",
+      "title": "Por que Construir na",
       "titleHighlight": "Ergo",
       "items": [
         {
-          "title": "eUTXO Model: No Surprises",
-          "description": "No reentrancy attacks. No MEV exploitation. No hidden global state. Know exactly what your contract will cost before execution."
+          "title": "Modelo eUTXO: Sem Surpresas",
+          "description": "Sem ataques de reentrância. Sem exploração de MEV. Sem estado global oculto. Saiba exatamente quanto custará seu contrato antes da execução."
         },
         {
-          "title": "Sigma Protocols: Privacy Without PhD",
-          "description": "Built-in zero-knowledge proofs. Add privacy features without cryptography expertise. Ring signatures, threshold proofs, all native."
+          "title": "Protocolos Sigma: Privacidade Sem PhD",
+          "description": "Provas de conhecimento zero integradas. Adicione recursos de privacidade sem experiência em criptografia. Assinaturas em anel, provas de limiar, tudo nativo."
         },
         {
-          "title": "Proof-of-Work: No Chain Halts",
-          "description": "No rollbacks. No governance attacks. No validator cartels. Battle-tested security that just works."
+          "title": "Proof-of-Work: Sem Interrupções na Rede",
+          "description": "Sem reversões. Sem ataques de governança. Sem cartéis de validadores. Segurança testada em batalha que simplesmente funciona."
         },
         {
-          "title": "Fair Launch: No Corporate BS",
-          "description": "Zero VC premines. Zero foundation tax. Build on a chain where the community actually owns the network."
+          "title": "Lançamento Justo: Sem Enrolação Corporativa",
+          "description": "Zero pré-mineração de VC. Zero taxa de fundação. Construa em uma rede onde a comunidade realmente detém o controle."
         }
       ]
     },
     "quickStart": {
-      "title": "Quick Start with",
+      "title": "Início Rápido com",
       "titleHighlight": "Fleet SDK",
-      "subtitle": "Get from zero to your first Ergo transaction in 3 steps",
-      "readFullDocs": "Read full Fleet SDK documentation",
+      "subtitle": "Do zero à sua primeira transação Ergo em 3 passos",
+      "readFullDocs": "Leia a documentação completa do Fleet SDK",
       "steps": [
         {
           "step": 1,
-          "title": "Install Fleet SDK",
-          "description": "Add Fleet SDK to your JavaScript/TypeScript project"
+          "title": "Instalar o Fleet SDK",
+          "description": "Adicione o Fleet SDK ao seu projeto JavaScript/TypeScript"
         },
         {
           "step": 2,
-          "title": "Connect to Ergo",
-          "description": "Initialize connection to Ergo network"
+          "title": "Conectar à Ergo",
+          "description": "Inicialize a conexão com a rede Ergo"
         },
         {
           "step": 3,
-          "title": "Build Transaction",
-          "description": "Create your first Ergo transaction"
+          "title": "Construir Transação",
+          "description": "Crie sua primeira transação Ergo"
         }
       ]
     },
     "technologyIndex": {
-      "title": "Technology",
-      "titleHighlight": "Index",
-      "subtitle": "Complete reference to Ergo's core technologies",
-      "viewAll": "View All Technologies",
+      "title": "Índice de",
+      "titleHighlight": "Tecnologias",
+      "subtitle": "Referência completa das tecnologias centrais da Ergo",
+      "viewAll": "Ver Todas as Tecnologias",
       "items": [
         {
           "slug": "eutxo-model",
-          "title": "eUTXO Model",
-          "description": "Parallel smart contracts"
+          "title": "Modelo eUTXO",
+          "description": "Contratos inteligentes paralelos"
         },
         {
           "slug": "ergoscript",
           "title": "ErgoScript",
-          "description": "Safe smart contracts"
+          "description": "Contratos inteligentes seguros"
         },
         {
           "slug": "secure-pow",
           "title": "Autolykos PoW",
-          "description": "ASIC-resistant mining"
+          "description": "Mineração resistente a ASIC"
         },
         {
           "slug": "storage-rent",
           "title": "Storage Rent",
-          "description": "State sustainability"
+          "description": "Sustentabilidade do estado"
         },
         {
           "slug": "privacy-features",
-          "title": "Sigma Protocols",
-          "description": "Zero-knowledge proofs"
+          "title": "Protocolos Sigma",
+          "description": "Provas de conhecimento zero"
         },
         {
           "slug": "nipopows",
           "title": "NIPoPoWs",
-          "description": "Light clients & bridges"
+          "description": "Clientes leves e pontes"
         },
         {
           "slug": "oracle-pools",
           "title": "Oracle Pools",
-          "description": "Decentralized data feeds"
+          "description": "Feeds de dados descentralizados"
         },
         {
           "slug": "native-tokens",
-          "title": "Native Tokens",
-          "description": "Protocol-level tokens"
+          "title": "Tokens Nativos",
+          "description": "Tokens em nível de protocolo"
         },
         {
           "slug": "babel-fees",
           "title": "Babel Fees",
-          "description": "Pay fees with any token"
+          "description": "Pague taxas com qualquer token"
         },
         {
           "slug": "subblocks",
-          "title": "Subblocks",
-          "description": "Fast confirmations"
+          "title": "Subblocos",
+          "description": "Confirmações rápidas"
         },
         {
           "slug": "velvet-forks",
           "title": "Velvet Forks",
-          "description": "Seamless upgrades"
+          "description": "Atualizações sem interrupção"
         },
         {
           "slug": "adaptive-emission",
-          "title": "Adaptive Emission",
-          "description": "Monetary policy"
+          "title": "Emissão Adaptativa",
+          "description": "Política monetária"
         }
       ]
     },
     "sdks": {
       "title": "SDKs &",
-      "titleHighlight": "Libraries",
-      "subtitle": "Choose the SDK for your preferred language",
-      "recommended": "Recommended",
+      "titleHighlight": "Bibliotecas",
+      "subtitle": "Escolha o SDK para sua linguagem preferida",
+      "recommended": "Recomendado",
       "items": [
         {
           "name": "Fleet SDK",
           "language": "TypeScript / JavaScript",
-          "description": "Most popular SDK for web apps and Node.js projects",
+          "description": "SDK mais popular para aplicações web e projetos Node.js",
           "recommended": true
         },
         {
           "name": "AppKit",
           "language": "Java / Scala / Kotlin",
-          "description": "JVM SDK for backend services and Android apps"
+          "description": "SDK JVM para serviços backend e aplicações Android"
         },
         {
           "name": "sigma-rust",
           "language": "Rust",
-          "description": "High-performance Rust implementation"
+          "description": "Implementação Rust de alta performance"
         },
         {
           "name": "ergpy",
           "language": "Python",
-          "description": "Python wrapper for Ergo development"
+          "description": "Wrapper Python para desenvolvimento Ergo"
         }
       ]
     },
     "learningResources": {
-      "title": "Learning",
-      "titleHighlight": "Resources",
-      "subtitle": "Structured paths to master Ergo development",
-      "explore": "Explore",
+      "title": "Recursos de",
+      "titleHighlight": "Aprendizado",
+      "subtitle": "Caminhos estruturados para dominar o desenvolvimento Ergo",
+      "explore": "Explorar",
       "items": [
         {
-          "title": "ErgoScript Course",
-          "description": "Learn the fundamentals of ErgoScript programming",
-          "tag": "Start Here"
+          "title": "Curso ErgoScript",
+          "description": "Aprenda os fundamentos da programação ErgoScript",
+          "tag": "Comece Aqui"
         },
         {
-          "title": "Dev Patterns",
-          "description": "Copy-paste smart contract blueprints",
-          "tag": "Code"
+          "title": "Padrões de Dev",
+          "description": "Modelos de contratos inteligentes prontos para copiar",
+          "tag": "Código"
         },
         {
           "title": "Playbooks",
-          "description": "Step-by-step development guides",
-          "tag": "Guides"
+          "description": "Guias de desenvolvimento passo a passo",
+          "tag": "Guias"
         },
         {
-          "title": "Glossary",
-          "description": "Key terms and concepts explained",
-          "tag": "Reference"
+          "title": "Glossário",
+          "description": "Termos e conceitos principais explicados",
+          "tag": "Referência"
         }
       ]
     },
     "devTools": {
-      "title": "Developer",
-      "titleHighlight": "Tools",
+      "title": "Ferramentas de",
+      "titleHighlight": "Desenvolvimento",
       "explorer": {
         "title": "Explorer",
-        "description": "Inspect transactions & blocks"
+        "description": "Inspecione transações e blocos"
       },
       "faucet": {
-        "title": "Testnet Faucet",
-        "description": "Get test ERG for development"
+        "title": "Faucet Testnet",
+        "description": "Obtenha ERG de teste para desenvolvimento"
       },
       "vscode": {
-        "title": "VSCode Extension",
-        "description": "ErgoScript syntax highlighting"
+        "title": "Extensão VSCode",
+        "description": "Realce de sintaxe ErgoScript"
       }
     },
     "comparison": {
-      "title": "Why Ergo is",
-      "titleHighlight": "Different",
+      "title": "Por que a Ergo é",
+      "titleHighlight": "Diferente",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "Critério",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "ergo": "Ergo"
       },
-      "readMore": "Read: eUTXO vs Accounts",
+      "readMore": "Leia: eUTXO vs Contas",
       "rows": [
         {
-          "criterion": "Base Model",
+          "criterion": "Modelo Base",
           "bitcoin": "UTXO",
-          "ethereum": "Account",
+          "ethereum": "Conta",
           "ergo": "eUTXO"
         },
         {
-          "criterion": "Smart Contract Safety",
-          "bitcoin": "Limited",
-          "ethereum": "Reentrancy risks",
-          "ergo": "Predictable, safer"
+          "criterion": "Segurança dos Contratos Inteligentes",
+          "bitcoin": "Limitada",
+          "ethereum": "Riscos de reentrância",
+          "ergo": "Previsível, mais seguro"
         },
         {
-          "criterion": "Privacy Features (L1)",
-          "bitcoin": "Transparent",
-          "ethereum": "Transparent",
-          "ergo": "Optional (Sigma)"
+          "criterion": "Recursos de Privacidade (L1)",
+          "bitcoin": "Transparente",
+          "ethereum": "Transparente",
+          "ergo": "Opcional (Sigma)"
         },
         {
-          "criterion": "Fees & Predictability",
-          "bitcoin": "Volatile",
-          "ethereum": "High, unpredictable",
-          "ergo": "Low, predictable"
+          "criterion": "Taxas e Previsibilidade",
+          "bitcoin": "Volátil",
+          "ethereum": "Alta, imprevisível",
+          "ergo": "Baixa, previsível"
         }
       ]
     },
     "networkHealth": {
-      "title": "Live Network",
-      "titleHighlight": "Health",
-      "subtitle": "Stable base layer = reliable smart contracts",
+      "title": "Saúde da Rede",
+      "titleHighlight": "em Tempo Real",
+      "subtitle": "Camada base estável = contratos inteligentes confiáveis",
       "metrics": {
         "hashrate": "Hashrate",
-        "txDay": "TX/Day",
-        "nodes": "Nodes",
+        "txDay": "TX/Dia",
+        "nodes": "Nós",
         "tvl": "TVL",
-        "supply": "Supply",
-        "emission": "Emission"
+        "supply": "Oferta",
+        "emission": "Emissão"
       },
-      "emissionLeft": "{amount}M left"
+      "emissionLeft": "{amount}M restantes"
     },
     "community": {
-      "title": "Join the",
-      "titleHighlight": "Community",
-      "subtitle": "Get help from core developers and connect with other builders",
+      "title": "Junte-se à",
+      "titleHighlight": "Comunidade",
+      "subtitle": "Obtenha ajuda de desenvolvedores centrais e conecte-se com outros construtores",
       "discord": {
-        "title": "Developer Discord",
-        "subtitle": "Real-time support",
-        "description": "Get direct help from core developers in dedicated #dev channels."
+        "title": "Discord de Desenvolvedores",
+        "subtitle": "Suporte em tempo real",
+        "description": "Obtenha ajuda direta de desenvolvedores centrais nos canais #dev dedicados."
       },
       "github": {
         "title": "GitHub",
-        "subtitle": "Open source",
-        "description": "Explore the codebase and contribute to core protocols."
+        "subtitle": "Código aberto",
+        "description": "Explore o código-fonte e contribua com os protocolos centrais."
       }
     },
     "faq": {
-      "title": "Developer",
-      "titleHighlight": "FAQ",
+      "title": "FAQ de",
+      "titleHighlight": "Desenvolvedores",
       "items": [
         {
-          "question": "How do I start building on Ergo?",
-          "answer": "Start by learning ErgoScript fundamentals, set up the Ergo development environment (Scala/JavaScript SDKs), explore example contracts on GitHub, and join the developer Discord for support. The /learn section has structured paths for new developers."
+          "question": "Como começo a construir na Ergo?",
+          "answer": "Comece aprendendo os fundamentos do ErgoScript, configure o ambiente de desenvolvimento Ergo (SDKs Scala/JavaScript), explore contratos de exemplo no GitHub e entre no Discord de desenvolvedores para obter suporte. A seção /learn tem caminhos estruturados para novos desenvolvedores."
         },
         {
-          "question": "What programming languages can I use for Ergo?",
-          "answer": "ErgoScript is the native smart contract language. For app development, use: Scala/Java (Appkit SDK), JavaScript/TypeScript (Fleet SDK), Rust (sigma-rust), or Python (ergpy). Most developers start with Fleet SDK for web apps."
+          "question": "Quais linguagens de programação posso usar para a Ergo?",
+          "answer": "ErgoScript é a linguagem nativa de contratos inteligentes. Para desenvolvimento de aplicações, use: Scala/Java (Appkit SDK), JavaScript/TypeScript (Fleet SDK), Rust (sigma-rust) ou Python (ergpy). A maioria dos desenvolvedores começa com o Fleet SDK para aplicações web."
         },
         {
-          "question": "Is ErgoScript hard to learn?",
-          "answer": "ErgoScript has a learning curve different from Solidity. It's functional and declarative rather than imperative. If you know Scala or functional programming, it's easier. The eUTXO model requires new thinking but prevents entire classes of bugs (no reentrancy)."
+          "question": "ErgoScript é difícil de aprender?",
+          "answer": "ErgoScript tem uma curva de aprendizado diferente do Solidity. É funcional e declarativo em vez de imperativo. Se você conhece Scala ou programação funcional, é mais fácil. O modelo eUTXO requer um novo raciocínio, mas previne classes inteiras de bugs (sem reentrância)."
         },
         {
-          "question": "What makes Ergo different for developers?",
-          "answer": "Ergo offers: eUTXO model (no reentrancy attacks, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design."
+          "question": "O que torna a Ergo diferente para desenvolvedores?",
+          "answer": "A Ergo oferece: modelo eUTXO (sem ataques de reentrância, custos previsíveis), Protocolos Sigma (primitivas de privacidade integradas), NiPoPoWs (clientes leves) e taxas previsíveis de ~$0,01. Contratos inteligentes são mais seguros por design."
         },
         {
-          "question": "Where can I find ErgoScript code examples?",
-          "answer": "Check the /patterns page for copy-paste ready contract patterns, /playbooks for step-by-step guides, and docs.ergoplatform.com for the official reference. GitHub repos of ecosystem projects provide real-world examples."
+          "question": "Onde posso encontrar exemplos de código ErgoScript?",
+          "answer": "Confira a página /patterns para padrões de contrato prontos para copiar, /playbooks para guias passo a passo e docs.ergoplatform.com para a referência oficial. Repositórios GitHub de projetos do ecossistema fornecem exemplos do mundo real."
         },
         {
-          "question": "Are there grants for Ergo developers?",
-          "answer": "Yes! The Ergo Foundation offers grants for open-source projects, dApps, tooling, and research. Apply via GitHub or join the developer community to discuss your project first."
+          "question": "Existem bolsas para desenvolvedores Ergo?",
+          "answer": "Sim! A Ergo Foundation oferece bolsas para projetos de código aberto, dApps, ferramentas e pesquisa. Candidate-se via GitHub ou participe da comunidade de desenvolvedores para discutir seu projeto primeiro."
         }
       ]
     },
     "cta": {
-      "title": "Ready to Build?",
-      "subtitle": "Start with the ErgoScript course, explore patterns, and join the developer Discord.",
-      "startCourse": "Start ErgoScript Course",
-      "exploreEcosystem": "Explore Ecosystem"
+      "title": "Pronto para Construir?",
+      "subtitle": "Comece com o curso ErgoScript, explore padrões e junte-se ao Discord de desenvolvedores.",
+      "startCourse": "Iniciar Curso ErgoScript",
+      "exploreEcosystem": "Explorar Ecossistema"
     },
     "emailCapture": {
-      "title": "Developer Updates",
-      "description": "Get notified about new SDKs, ErgoScript features, and ecosystem developments."
+      "title": "Atualizações para Desenvolvedores",
+      "description": "Receba notificações sobre novos SDKs, recursos do ErgoScript e desenvolvimentos do ecossistema."
     }
   },
   "docs": {
-    "title": "Documentation",
-    "subtitle": "Technical documentation and guides",
-    "description": "Comprehensive documentation for developers and users.",
+    "title": "Documentação",
+    "subtitle": "Documentação técnica e guias",
+    "description": "Documentação abrangente para desenvolvedores e usuários.",
     "sections": {
-      "gettingStarted": "Getting Started",
-      "apiReference": "API Reference",
-      "tutorials": "Tutorials",
-      "examples": "Examples"
+      "gettingStarted": "Primeiros Passos",
+      "apiReference": "Referência de API",
+      "tutorials": "Tutoriais",
+      "examples": "Exemplos"
     }
   },
   "docsMenu": {
     "introduction": {
-      "title": "Introduction",
-      "whyErgo": "Why Ergo",
-      "keyFeatures": "Key Features",
+      "title": "Introdução",
+      "whyErgo": "Por que Ergo",
+      "keyFeatures": "Recursos Principais",
       "roadmap": "Roadmap",
-      "researchWhitepapers": "Research & Whitepapers",
-      "entities": "Entities",
-      "wallets": "Wallets",
-      "resources": "Resources",
-      "contribute": "Contribute",
-      "events": "Events",
-      "glossary": "Glossary",
+      "researchWhitepapers": "Pesquisa e Whitepapers",
+      "entities": "Entidades",
+      "wallets": "Carteiras",
+      "resources": "Recursos",
+      "contribute": "Contribuir",
+      "events": "Eventos",
+      "glossary": "Glossário",
       "faq": "FAQ"
     },
     "ecosystem": {
-      "title": "Ecosystem",
-      "subtitle": "Discover the Ergo ecosystem",
-      "description": "Explore the growing Ergo ecosystem",
-      "infrastructure": "Infrastructure",
-      "applications": "Applications",
-      "financial": "Financial",
+      "title": "Ecossistema",
+      "subtitle": "Descubra o ecossistema Ergo",
+      "description": "Explore o crescente ecossistema Ergo",
+      "infrastructure": "Infraestrutura",
+      "applications": "Aplicações",
+      "financial": "Financeiro",
       "nfts": "NFTs",
       "seo": {
-        "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
-        "description": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
-        "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
-        "ogTitle": "Ergo Ecosystem",
-        "ogDescription": "Directory of Ergo dApps, wallets, infrastructure and tools."
+        "title": "Ecossistema Ergo — dApps, carteiras, ferramentas, DeFi",
+        "description": "Explore o ecossistema Ergo: aplicações descentralizadas, carteiras, ferramentas de privacidade, protocolos DeFi, SDKs e infraestrutura.",
+        "keywords": "ecossistema Ergo, DeFi, NFTs, dApps, projetos blockchain",
+        "ogTitle": "Ecossistema Ergo",
+        "ogDescription": "Diretório de dApps, carteiras, infraestrutura e ferramentas da Ergo."
       },
       "filters": {
-        "all": "All",
+        "all": "Todos",
         "defi": "DeFi",
-        "privacy": "Privacy",
-        "infrastructure": "Infrastructure",
+        "privacy": "Privacidade",
+        "infrastructure": "Infraestrutura",
         "nft": "NFTs",
-        "gaming": "Gaming",
-        "wallets": "Wallets",
-        "tools": "Tools",
+        "gaming": "Jogos",
+        "wallets": "Carteiras",
+        "tools": "Ferramentas",
         "dao": "DAOs",
-        "oracles": "Oracles",
-        "stable": "Stable"
+        "oracles": "Oráculos",
+        "stable": "Estáveis"
       },
       "search": {
-        "placeholder": "Search projects...",
-        "resultsCount": "{count} projects"
+        "placeholder": "Buscar projetos...",
+        "resultsCount": "{count} projetos"
       },
       "projects": {
         "rosenBridge": {
           "title": "Rosen Bridge",
-          "subtitle": "Connecting Ergo's Ecosystem",
-          "description": "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+          "subtitle": "Conectando o Ecossistema Ergo",
+          "description": "Transfira ativos perfeitamente entre Ergo e outras blockchains líderes como Bitcoin, Ethereum, Cardano e BSC com o Rosen Bridge. Nosso sistema seguro de Watchers e Guards desbloqueia liquidez cross-chain e novas possibilidades DeFi.",
           "stats": {
             "crossChain": {
               "label": "Cross-Chain",
-              "value": "BTC, ETH, ADA, BSC & more"
+              "value": "BTC, ETH, ADA, BSC e mais"
             },
             "secureBridge": {
-              "label": "Secure Bridge",
-              "value": "Watcher & Guard Model"
+              "label": "Ponte Segura",
+              "value": "Modelo Watcher & Guard"
             },
             "unlockLiquidity": {
-              "label": "Unlock Liquidity",
-              "value": "Access New Markets"
+              "label": "Desbloquear Liquidez",
+              "value": "Acesse Novos Mercados"
             }
           },
-          "cta": "VISIT ROSEN BRIDGE"
+          "cta": "VISITAR ROSEN BRIDGE"
         },
         "ergoMixer": {
           "title": "ErgoMixer",
-          "subtitle": "Non-Custodial Privacy Protocol",
-          "description": "Mix your ERG and tokens privately using zero-knowledge proofs. ErgoMixer is the first non-interactive, non-custodial mixer in the crypto space.",
+          "subtitle": "Protocolo de Privacidade Não Custodial",
+          "description": "Misture seus ERG e tokens de forma privada usando provas de conhecimento zero. ErgoMixer é o primeiro mixer não interativo e não custodial no espaço cripto.",
           "stats": {
             "mixedVolume": {
-              "label": "Mixed Volume",
-              "value": "10,000+ ERG"
+              "label": "Volume Misturado",
+              "value": "10.000+ ERG"
             },
             "privacyScore": {
-              "label": "Privacy Score",
-              "value": "99.9%"
+              "label": "Pontuação de Privacidade",
+              "value": "99,9%"
             },
             "transactions": {
-              "label": "Transactions",
-              "value": "5,000+"
+              "label": "Transações",
+              "value": "5.000+"
             }
           },
-          "cta": "LEARN ABOUT PRIVACY ON ERGO"
+          "cta": "SAIBA SOBRE PRIVACIDADE NA ERGO"
         },
         "sigmaUSD": {
           "title": "SigmaUSD",
-          "subtitle": "Algorithmic Stablecoin Protocol",
-          "description": "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+          "subtitle": "Protocolo de Stablecoin Algorítmica",
+          "description": "SigmaUSD é um protocolo de stablecoin algorítmica lastreada em cripto construído na Ergo. Fornece uma forma descentralizada de criar valor estável sem depender de sistemas bancários tradicionais ou reservas centralizadas.",
           "stats": {
             "stabilityScore": {
-              "label": "Stability Score",
-              "value": "99.8%"
+              "label": "Pontuação de Estabilidade",
+              "value": "99,8%"
             },
             "totalSupply": {
-              "label": "Total Supply",
-              "value": "$2.5M+"
+              "label": "Oferta Total",
+              "value": "$2,5M+"
             },
             "collateralRatio": {
-              "label": "Collateral Ratio",
+              "label": "Razão de Colateral",
               "value": "400-800%"
             }
           },
-          "cta": "EXPLORE SIGMAUSD"
+          "cta": "EXPLORAR SIGMAUSD"
         },
         "gaming": {
-          "title": "Ergo Gaming Ecosystem",
-          "subtitle": "Blockchain Gaming Platform",
-          "description": "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+          "title": "Ecossistema de Jogos Ergo",
+          "subtitle": "Plataforma de Jogos Blockchain",
+          "description": "Experimente o futuro dos jogos com verdadeira propriedade de ativos, mecânicas play-to-earn e torneios descentralizados. Alimentado pela infraestrutura eficiente e segura da blockchain Ergo.",
           "stats": {
             "activeGames": {
-              "label": "Active Games",
+              "label": "Jogos Ativos",
               "value": "12+"
             },
             "players": {
-              "label": "Players",
-              "value": "5,000+"
+              "label": "Jogadores",
+              "value": "5.000+"
             },
             "rewardsPaid": {
-              "label": "Rewards Paid",
+              "label": "Recompensas Pagas",
               "value": "$50K+"
             }
           },
-          "cta": "START GAMING ON ERGO"
+          "cta": "COMEÇAR A JOGAR NA ERGO"
         }
       },
-      "privacy": "Privacy",
-      "ai": "AI",
+      "privacy": "Privacidade",
+      "ai": "IA",
       "daos": "DAOs",
-      "tooling": "Tooling",
-      "standards": "Standards",
+      "tooling": "Ferramentas",
+      "standards": "Padrões",
       "projectPage": {
         "breadcrumbs": {
-          "ecosystem": "Ecosystem"
+          "ecosystem": "Ecossistema"
         },
         "buttons": {
-          "visitProject": "Visit project",
+          "visitProject": "Visitar projeto",
           "github": "GitHub",
           "twitter": "Twitter",
-          "docs": "Docs",
-          "community": "Community",
-          "backToEcosystem": "Back to Ecosystem"
+          "docs": "Documentação",
+          "community": "Comunidade",
+          "backToEcosystem": "Voltar ao Ecossistema"
         },
         "status": {
-          "operational": "Operational",
-          "testing": "Testing",
-          "prototype": "Prototype",
-          "notOperating": "Not operating"
+          "operational": "Operacional",
+          "testing": "Em Teste",
+          "prototype": "Protótipo",
+          "notOperating": "Não operando"
         },
         "sections": {
-          "keyFeatures": "Key Features",
-          "builtWith": "Built With Ergo Technology",
-          "relatedArticles": "Related Articles",
-          "viewAll": "View all",
-          "faq": "Frequently Asked Questions",
-          "relatedProjects": "Related {category} Projects",
-          "minRead": "{time} min read"
+          "keyFeatures": "Recursos Principais",
+          "builtWith": "Construído com Tecnologia Ergo",
+          "relatedArticles": "Artigos Relacionados",
+          "viewAll": "Ver todos",
+          "faq": "Perguntas Frequentes",
+          "relatedProjects": "Projetos {category} Relacionados",
+          "minRead": "{time} min de leitura"
         },
         "cta": {
-          "title": "Explore More dApps",
-          "description": "Discover the full Ergo ecosystem with DeFi, wallets, tools, and more.",
-          "primaryButton": "View All Projects",
-          "secondaryButton": "Start Building"
+          "title": "Explore Mais dApps",
+          "description": "Descubra o ecossistema completo da Ergo com DeFi, carteiras, ferramentas e muito mais.",
+          "primaryButton": "Ver Todos os Projetos",
+          "secondaryButton": "Começar a Construir"
         }
       },
       "grants": {
-        "title": "Ergo Grants Program",
-        "subtitle": "Funding for Blockchain Projects",
-        "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-        "lastUpdated": "Last updated",
+        "title": "Programa de Bolsas Ergo",
+        "subtitle": "Financiamento para Projetos Blockchain",
+        "description": "Obtenha financiamento para seu projeto Ergo. Bolsas para desenvolvedores, pesquisadores e construtores da comunidade. Construa DeFi, infraestrutura, ferramentas e aplicações na blockchain Ergo.",
+        "lastUpdated": "Última atualização",
         "buttons": {
-          "applyNow": "Apply Now",
-          "viewProjects": "View Projects"
+          "applyNow": "Candidatar Agora",
+          "viewProjects": "Ver Projetos"
         },
         "features": {
-          "title": "What We Fund",
-          "subtitle": "Supporting innovation and development in the Ergo ecosystem",
+          "title": "O que Financiamos",
+          "subtitle": "Apoiando inovação e desenvolvimento no ecossistema Ergo",
           "funding": {
-            "title": "Developer Support",
-            "description": "Funding for innovative dApps, tools, and infrastructure projects"
+            "title": "Suporte ao Desenvolvedor",
+            "description": "Financiamento para dApps inovadores, ferramentas e projetos de infraestrutura"
           },
           "research": {
-            "title": "Research Funding",
-            "description": "Support for academic research and protocol improvements"
+            "title": "Financiamento de Pesquisa",
+            "description": "Apoio para pesquisa acadêmica e melhorias de protocolo"
           },
           "community": {
-            "title": "Community Projects",
-            "description": "Grants for community-driven initiatives and educational content"
+            "title": "Projetos Comunitários",
+            "description": "Bolsas para iniciativas comunitárias e conteúdo educacional"
           },
           "innovation": {
-            "title": "Innovation Grants",
-            "description": "Special funding for breakthrough ideas and experimental projects"
+            "title": "Bolsas de Inovação",
+            "description": "Financiamento especial para ideias inovadoras e projetos experimentais"
           }
         },
         "cta": {
-          "title": "Ready to Build on Ergo?",
-          "subtitle": "Start preparing your project proposal and join our community to stay updated",
+          "title": "Pronto para Construir na Ergo?",
+          "subtitle": "Comece a preparar a proposta do seu projeto e junte-se à nossa comunidade para se manter atualizado",
           "buttons": {
-            "applyGrant": "Apply for Grant",
-            "joinCommunity": "Join Community"
+            "applyGrant": "Candidatar-se à Bolsa",
+            "joinCommunity": "Entrar na Comunidade"
           }
         },
         "seo": {
-          "title": "Ergo Grants Program | Funding for Blockchain Projects",
-          "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-          "ogTitle": "Ergo Grants - Fund Your Blockchain Innovation",
-          "ogDescription": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
-          "twitterTitle": "Ergo Grants Program | Get Funded",
-          "twitterDescription": "Funding for developers building on Ergo. Apply for grants today."
+          "title": "Programa de Bolsas Ergo | Financiamento para Projetos Blockchain",
+          "description": "Obtenha financiamento para seu projeto Ergo. Bolsas para desenvolvedores, pesquisadores e construtores da comunidade. Construa DeFi, infraestrutura, ferramentas e aplicações na blockchain Ergo.",
+          "ogTitle": "Bolsas Ergo - Financie sua Inovação Blockchain",
+          "ogDescription": "Candidate-se a bolsas para construir na Ergo. Suporte para desenvolvedores, pesquisadores e iniciativas comunitárias.",
+          "twitterTitle": "Programa de Bolsas Ergo | Seja Financiado",
+          "twitterDescription": "Financiamento para desenvolvedores construindo na Ergo. Candidate-se a bolsas hoje."
         },
-        "whatToExpect": "What to Expect",
-        "grantsFeatures": "Grants Program Features",
-        "supportingInnovation": "Supporting innovation and development in the Ergo ecosystem"
+        "whatToExpect": "O que Esperar",
+        "grantsFeatures": "Recursos do Programa de Bolsas",
+        "supportingInnovation": "Apoiando inovação e desenvolvimento no ecossistema Ergo"
       },
       "infographicPage": {
         "breadcrumbs": {
-          "infographics": "Infographics"
+          "infographics": "Infográficos"
         },
         "meta": {
-          "minRead": "{time} min read"
+          "minRead": "{time} min de leitura"
         },
         "image": {
-          "clickToEnlarge": "Click to Enlarge",
-          "fullSize": "Full Size"
+          "clickToEnlarge": "Clique para Ampliar",
+          "fullSize": "Tamanho Completo"
         },
         "share": {
-          "title": "Share this infographic",
-          "subtitle": "help others discover Ergo",
+          "title": "Compartilhe este infográfico",
+          "subtitle": "ajude outros a descobrir a Ergo",
           "telegram": "Telegram",
           "pinterest": "Pinterest",
-          "download": "Download",
-          "copyLink": "Copy link",
-          "copied": "Copied!"
+          "download": "Baixar",
+          "copyLink": "Copiar link",
+          "copied": "Copiado!"
         },
         "sections": {
-          "about": "About This Infographic",
-          "systemsCompared": "Systems Compared",
-          "keyPoints": "Key Points",
-          "howToRead": "How to Read This Infographic",
-          "relatedTopics": "Related Topics"
+          "about": "Sobre Este Infográfico",
+          "systemsCompared": "Sistemas Comparados",
+          "keyPoints": "Pontos Principais",
+          "howToRead": "Como Ler Este Infográfico",
+          "relatedTopics": "Tópicos Relacionados"
         },
         "cta": {
-          "title": "Explore More Ergo Infographics",
-          "description": "Discover visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and more.",
-          "button": "Browse All Infographics"
+          "title": "Explore Mais Infográficos da Ergo",
+          "description": "Descubra guias visuais sobre PoW, contratos inteligentes eUTXO, storage rent, privacidade e muito mais da Ergo.",
+          "button": "Ver Todos os Infográficos"
         }
       },
       "map": {
-        "title": "Ergo Ecosystem Map",
-        "subtitle": "Interactive DeFi & dApp Directory",
-        "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+        "title": "Mapa do Ecossistema Ergo",
+        "subtitle": "Diretório Interativo de DeFi & dApps",
+        "description": "Explore visualmente o ecossistema completo da Ergo. Mapa interativo de protocolos DeFi, plataformas NFT, carteiras, infraestrutura e ferramentas de desenvolvimento. Descubra 50+ projetos ativos.",
         "seo": {
-          "title": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
-          "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
-          "ogTitle": "Interactive Ergo Ecosystem Map | 50+ Projects",
-          "ogDescription": "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
-          "twitterTitle": "Ergo Ecosystem Map | Visual Project Explorer",
-          "twitterDescription": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure."
+          "title": "Mapa do Ecossistema Ergo | Diretório Interativo de DeFi & dApps",
+          "description": "Explore visualmente o ecossistema completo da Ergo. Mapa interativo de protocolos DeFi, plataformas NFT, carteiras, infraestrutura e ferramentas de desenvolvimento. Descubra 50+ projetos ativos.",
+          "ogTitle": "Mapa Interativo do Ecossistema Ergo | 50+ Projetos",
+          "ogDescription": "Exploração visual de todos os projetos Ergo. DeFi, NFTs, carteiras, infraestrutura mapeados.",
+          "twitterTitle": "Mapa do Ecossistema Ergo | Explorador Visual de Projetos",
+          "twitterDescription": "Visualização interativa de 50+ projetos Ergo. Explore DeFi, NFTs, infraestrutura."
         }
       }
     },
     "developers": {
-      "title": "Developers",
-      "gettingStarted": "Getting Started",
-      "ergoscriptLanguages": "ErgoScript Languages",
-      "dataModelApis": "Data Model & APIs",
-      "cryptographicPrimitives": "Cryptographic Primitives",
-      "infrastructure": "Infrastructure",
-      "tooling": "Tooling",
-      "tutorials": "Tutorials",
-      "bountiesGrants": "Bounties & Grants",
-      "communitySupport": "Community Support",
-      "students": "Students",
-      "resources": "Resources"
+      "title": "Desenvolvedores",
+      "gettingStarted": "Primeiros Passos",
+      "ergoscriptLanguages": "Linguagens ErgoScript",
+      "dataModelApis": "Modelo de Dados & APIs",
+      "cryptographicPrimitives": "Primitivas Criptográficas",
+      "infrastructure": "Infraestrutura",
+      "tooling": "Ferramentas",
+      "tutorials": "Tutoriais",
+      "bountiesGrants": "Recompensas & Bolsas",
+      "communitySupport": "Suporte Comunitário",
+      "students": "Estudantes",
+      "resources": "Recursos"
     },
     "miners": {
-      "title": "Miners",
-      "miningGuides": "Mining Guides",
-      "poolMining": "Pool Mining",
-      "soloMining": "Solo Mining",
+      "title": "Mineradores",
+      "miningGuides": "Guias de Mineração",
+      "poolMining": "Mineração em Pool",
+      "soloMining": "Mineração Solo",
       "hardware": "Hardware",
       "software": "Software",
-      "troubleshooting": "Troubleshooting"
+      "troubleshooting": "Solução de Problemas"
     },
     "features": {
       "ergoscript": {
         "title": "ErgoScript",
-        "description": "Secure, declarative language for programmable money",
+        "description": "Linguagem segura e declarativa para dinheiro programável",
         "details": {
           "verification": {
-            "title": "Formal Verification",
-            "description": "Mathematically provable contract behavior"
+            "title": "Verificação Formal",
+            "description": "Comportamento de contratos matematicamente comprovável"
           },
           "privacy": {
-            "title": "Built-in Privacy",
-            "description": "Zero-knowledge proofs and confidential transactions"
+            "title": "Privacidade Integrada",
+            "description": "Provas de conhecimento zero e transações confidenciais"
           },
           "safety": {
-            "title": "Type Safety",
-            "description": "Compile-time guarantees prevent runtime errors"
+            "title": "Segurança de Tipos",
+            "description": "Garantias em tempo de compilação evitam erros de execução"
           }
         }
       },
       "autolykos": {
         "title": "Autolykos",
-        "description": "ASIC-resistant Proof-of-Work algorithm",
+        "description": "Algoritmo Proof-of-Work resistente a ASIC",
         "details": {
           "efficiency": {
-            "title": "Energy Efficient",
-            "description": "More efficient than traditional PoW algorithms"
+            "title": "Eficiência Energética",
+            "description": "Mais eficiente que algoritmos PoW tradicionais"
           },
           "solo": {
-            "title": "Solo Mining Friendly",
-            "description": "Designed for individual miners, not just pools"
+            "title": "Amigável à Mineração Solo",
+            "description": "Projetado para mineradores individuais, não apenas pools"
           },
           "asic": {
-            "title": "ASIC Resistant",
-            "description": "Memory-hard algorithm prevents ASIC dominance"
+            "title": "Resistente a ASIC",
+            "description": "Algoritmo memory-hard previne dominância de ASICs"
           }
         }
       },
       "eutxo": {
-        "title": "Extended UTXO",
-        "description": "Parallel smart contracts with Bitcoin-like security",
+        "title": "UTXO Estendido",
+        "description": "Contratos inteligentes paralelos com segurança similar ao Bitcoin",
         "details": {
           "parallel": {
-            "title": "Parallel Execution",
-            "description": "Multiple contracts execute simultaneously without conflicts"
+            "title": "Execução Paralela",
+            "description": "Múltiplos contratos executam simultaneamente sem conflitos"
           },
           "composability": {
-            "title": "Composability",
-            "description": "Contracts can be combined like Lego blocks"
+            "title": "Composabilidade",
+            "description": "Contratos podem ser combinados como blocos de Lego"
           },
           "security": {
-            "title": "Security",
-            "description": "Eliminates reentrancy attacks and global state issues"
+            "title": "Segurança",
+            "description": "Elimina ataques de reentrância e problemas de estado global"
           }
         }
       },
       "storageRent": {
         "title": "Storage Rent",
-        "description": "Sustainable blockchain economics",
+        "description": "Economia blockchain sustentável",
         "details": {
           "sustainable": {
-            "title": "Sustainable Growth",
-            "description": "Prevents unlimited blockchain growth"
+            "title": "Crescimento Sustentável",
+            "description": "Previne crescimento ilimitado da blockchain"
           },
           "rewards": {
-            "title": "Perpetual Rewards",
-            "description": "Miners earn fees even after emission ends"
+            "title": "Recompensas Perpétuas",
+            "description": "Mineradores ganham taxas mesmo após o fim da emissão"
           },
           "prevention": {
-            "title": "Bloat Prevention",
-            "description": "Automatic cleanup of abandoned funds"
+            "title": "Prevenção de Inchaço",
+            "description": "Limpeza automática de fundos abandonados"
           }
         }
       },
       "sigmaProtocols": {
-        "title": "Sigma Protocols",
-        "description": "Advanced cryptographic primitives",
+        "title": "Protocolos Sigma",
+        "description": "Primitivas criptográficas avançadas",
         "details": {
           "optionalPrivacy": {
-            "title": "Optional Privacy",
-            "description": "Choose between transparent and private transactions"
+            "title": "Privacidade Opcional",
+            "description": "Escolha entre transações transparentes e privadas"
           },
           "advancedSecurity": {
-            "title": "Advanced Security",
-            "description": "Zero-knowledge proofs and threshold signatures"
+            "title": "Segurança Avançada",
+            "description": "Provas de conhecimento zero e assinaturas de limiar"
           },
           "developerFriendly": {
-            "title": "Developer Friendly",
-            "description": "Built-in cryptographic tools for dApps"
+            "title": "Amigável ao Desenvolvedor",
+            "description": "Ferramentas criptográficas integradas para dApps"
           }
         }
       },
       "nipopows": {
         "title": "NIPoPoWs",
-        "description": "Non-Interactive Proofs of Proof-of-Work",
+        "description": "Provas Não Interativas de Proof-of-Work",
         "details": {
           "instantMobileSync": {
-            "title": "Instant Mobile Sync",
-            "description": "Light clients sync in seconds, not hours"
+            "title": "Sincronização Móvel Instantânea",
+            "description": "Clientes leves sincronizam em segundos, não horas"
           },
           "trustlessBridges": {
-            "title": "Trustless Bridges",
-            "description": "Cross-chain bridges without trusted third parties"
+            "title": "Pontes Sem Confiança",
+            "description": "Pontes cross-chain sem terceiros confiáveis"
           },
           "cryptographicSecurity": {
-            "title": "Cryptographic Security",
-            "description": "Mathematically proven security guarantees"
+            "title": "Segurança Criptográfica",
+            "description": "Garantias de segurança matematicamente comprovadas"
           }
         }
       },
       "subblocks": {
-        "title": "Subblocks",
-        "description": "Sub-second confirmations with L1 security",
+        "title": "Subblocos",
+        "description": "Confirmações abaixo de um segundo com segurança L1",
         "details": {
           "subSecondConfirmations": {
-            "title": "Sub-Second Confirmations",
-            "description": "Payments confirm in milliseconds"
+            "title": "Confirmações Abaixo de Um Segundo",
+            "description": "Pagamentos confirmam em milissegundos"
           },
           "layer1Security": {
-            "title": "Layer 1 Security",
-            "description": "Same security as the main blockchain"
+            "title": "Segurança da Camada 1",
+            "description": "Mesma segurança da blockchain principal"
           },
           "seamlessIntegration": {
-            "title": "Seamless Integration",
-            "description": "Works with existing Ergo infrastructure"
+            "title": "Integração Perfeita",
+            "description": "Funciona com a infraestrutura Ergo existente"
           }
         }
       },
       "nativeTokens": {
-        "title": "Native Tokens",
-        "description": "First-class digital assets",
+        "title": "Tokens Nativos",
+        "description": "Ativos digitais de primeira classe",
         "details": {
           "oneClickCreation": {
-            "title": "One-Click Creation",
-            "description": "Issue tokens in a single transaction"
+            "title": "Criação com Um Clique",
+            "description": "Emita tokens em uma única transação"
           },
           "defiReady": {
-            "title": "DeFi Ready",
-            "description": "Native compatibility with all DeFi protocols"
+            "title": "Pronto para DeFi",
+            "description": "Compatibilidade nativa com todos os protocolos DeFi"
           },
           "trueNativeAssets": {
-            "title": "True Native Assets",
-            "description": "Protocol-level security, not contract-based"
+            "title": "Ativos Verdadeiramente Nativos",
+            "description": "Segurança em nível de protocolo, não baseada em contratos"
           }
         }
       },
       "oraclePools": {
         "title": "Oracle Pools",
-        "description": "Decentralized data feeds",
+        "description": "Feeds de dados descentralizados",
         "details": {
           "reliablePriceFeeds": {
-            "title": "Reliable Price Feeds",
-            "description": "Accurate, tamper-proof price data"
+            "title": "Feeds de Preços Confiáveis",
+            "description": "Dados de preços precisos e resistentes a adulteração"
           },
           "universalCompatibility": {
-            "title": "Universal Compatibility",
-            "description": "Works with any smart contract"
+            "title": "Compatibilidade Universal",
+            "description": "Funciona com qualquer contrato inteligente"
           },
           "fullyDecentralized": {
-            "title": "Fully Decentralized",
-            "description": "No single point of failure or control"
+            "title": "Totalmente Descentralizado",
+            "description": "Sem ponto único de falha ou controle"
           }
         }
       },
       "velvetForks": {
         "title": "Velvet Forks",
-        "description": "Smooth protocol upgrades",
+        "description": "Atualizações de protocolo suaves",
         "details": {
           "backwardCompatible": {
-            "title": "Backward Compatible",
-            "description": "Existing contracts continue working"
+            "title": "Compatível com Versões Anteriores",
+            "description": "Contratos existentes continuam funcionando"
           },
           "futureProof": {
-            "title": "Future Proof",
-            "description": "Enables gradual adoption of new features"
+            "title": "À Prova do Futuro",
+            "description": "Permite adoção gradual de novos recursos"
           },
           "gradualAdoption": {
-            "title": "Gradual Adoption",
-            "description": "Changes activate over time, not instantly"
+            "title": "Adoção Gradual",
+            "description": "Mudanças ativam ao longo do tempo, não instantaneamente"
           }
         }
       },
       "adaptiveEmission": {
-        "title": "Adaptive Emission",
-        "description": "Flexible monetary policy",
+        "title": "Emissão Adaptativa",
+        "description": "Política monetária flexível",
         "details": {
           "parameterTuning": {
-            "title": "Parameter Tuning",
-            "description": "Community can adjust emission parameters"
+            "title": "Ajuste de Parâmetros",
+            "description": "A comunidade pode ajustar os parâmetros de emissão"
           },
           "economicFlexibility": {
-            "title": "Economic Flexibility",
-            "description": "Respond to changing economic conditions"
+            "title": "Flexibilidade Econômica",
+            "description": "Responde a condições econômicas em mudança"
           },
           "communityInput": {
-            "title": "Community Input",
-            "description": "Democratic governance of monetary policy"
+            "title": "Participação da Comunidade",
+            "description": "Governança democrática da política monetária"
           }
         }
       }
     },
     "map": {
-      "title": "Technology Architecture Map",
-      "subtitle": "Interactive visualization of how Ergo's technologies work together",
+      "title": "Mapa de Arquitetura Tecnológica",
+      "subtitle": "Visualização interativa de como as tecnologias da Ergo funcionam em conjunto",
       "seo": {
-        "title": "Ergo Technology Map | Interactive Blockchain Architecture Visualization",
-        "description": "Explore Ergo's technology ecosystem through an interactive map. See how ErgoScript, Autolykos, eUTXO, Sigma Protocols, and other components connect to create a powerful blockchain platform.",
-        "keywords": "ergo technology map, blockchain architecture, interactive visualization, ergoscript connections, technology ecosystem, blockchain components",
-        "ogTitle": "Ergo Technology Map - Interactive Architecture Overview",
-        "ogDescription": "Visualize how Ergo's advanced technologies connect and interact in our comprehensive technology map.",
-        "ogAlt": "Ergo Technology Architecture Map",
-        "twitterTitle": "Explore Ergo's Technology Map",
-        "twitterDescription": "Interactive visualization of Ergo's blockchain architecture and component connections."
+        "title": "Mapa Tecnológico da Ergo | Visualização Interativa da Arquitetura Blockchain",
+        "description": "Explore o ecossistema tecnológico da Ergo através de um mapa interativo. Veja como ErgoScript, Autolykos, eUTXO, Protocolos Sigma e outros componentes se conectam para criar uma poderosa plataforma blockchain.",
+        "keywords": "mapa tecnológico ergo, arquitetura blockchain, visualização interativa, conexões ergoscript, ecossistema tecnológico, componentes blockchain",
+        "ogTitle": "Mapa Tecnológico da Ergo - Visão Geral Interativa da Arquitetura",
+        "ogDescription": "Visualize como as tecnologias avançadas da Ergo se conectam e interagem em nosso mapa tecnológico abrangente.",
+        "ogAlt": "Mapa de Arquitetura Tecnológica da Ergo",
+        "twitterTitle": "Explore o Mapa Tecnológico da Ergo",
+        "twitterDescription": "Visualização interativa da arquitetura blockchain da Ergo e conexões entre componentes."
       },
       "categories": {
-        "all": "All Technologies",
-        "core": "Core Technologies",
-        "consensus": "Consensus",
-        "features": "Features",
-        "infrastructure": "Infrastructure"
+        "all": "Todas as Tecnologias",
+        "core": "Tecnologias Centrais",
+        "consensus": "Consenso",
+        "features": "Recursos",
+        "infrastructure": "Infraestrutura"
       },
       "legend": {
-        "title": "Legend",
-        "core": "Core Technologies",
-        "consensus": "Consensus Mechanism",
-        "features": "Advanced Features",
-        "infrastructure": "Infrastructure Layer",
-        "directConnection": "Direct Integration",
-        "relation": "Related Technology"
+        "title": "Legenda",
+        "core": "Tecnologias Centrais",
+        "consensus": "Mecanismo de Consenso",
+        "features": "Recursos Avançados",
+        "infrastructure": "Camada de Infraestrutura",
+        "directConnection": "Integração Direta",
+        "relation": "Tecnologia Relacionada"
       },
       "details": {
-        "keyFeatures": "Key Features",
-        "connections": "Connected Technologies",
-        "learnMore": "Learn More",
-        "close": "Close"
+        "keyFeatures": "Recursos Principais",
+        "connections": "Tecnologias Conectadas",
+        "learnMore": "Saiba Mais",
+        "close": "Fechar"
       }
     }
   },
   "docsResources": {},
   "playground": {
-    "title": "Live Playground",
-    "interactive": "Interactive",
-    "reset": "Reset",
-    "component": "Component",
-    "codeEditor": "Code Editor",
-    "livePreview": "Live Preview",
+    "title": "Playground ao Vivo",
+    "interactive": "Interativo",
+    "reset": "Redefinir",
+    "component": "Componente",
+    "codeEditor": "Editor de Código",
+    "livePreview": "Pré-visualização ao Vivo",
     "properties": {
-      "variant": "Variant",
-      "size": "Size",
-      "disabled": "Disabled",
-      "loading": "Loading",
-      "hoverable": "Hoverable",
-      "bordered": "Bordered"
+      "variant": "Variante",
+      "size": "Tamanho",
+      "disabled": "Desabilitado",
+      "loading": "Carregando",
+      "hoverable": "Com Hover",
+      "bordered": "Com Borda"
     },
     "templates": {
-      "primaryButton": "Primary Button",
-      "featureCard": "Feature Card",
-      "statusBadge": "Status Badge"
+      "primaryButton": "Botão Primário",
+      "featureCard": "Card de Recurso",
+      "statusBadge": "Badge de Status"
     },
-    "editCode": "Edit the code to see live preview",
-    "errorRendering": "Error rendering component",
-    "codeEmpty": "Code cannot be empty",
-    "enable": "Enable",
-    "poweredBy": "Powered by Ergo UI Kit",
+    "editCode": "Edite o código para ver a pré-visualização ao vivo",
+    "errorRendering": "Erro ao renderizar componente",
+    "codeEmpty": "O código não pode estar vazio",
+    "enable": "Habilitar",
+    "poweredBy": "Desenvolvido pelo Ergo UI Kit",
     "components": {
-      "button": "Button",
+      "button": "Botão",
       "card": "Card",
       "badge": "Badge",
-      "grid": "Grid"
+      "grid": "Grade"
     },
     "variants": {
-      "default": "Default",
-      "outline": "Outline",
-      "ghost": "Ghost",
-      "destructive": "Destructive"
+      "default": "Padrão",
+      "outline": "Contorno",
+      "ghost": "Fantasma",
+      "destructive": "Destrutivo"
     },
     "sizes": {
-      "sm": "Small",
-      "default": "Default",
-      "lg": "Large",
-      "icon": "Icon"
+      "sm": "Pequeno",
+      "default": "Padrão",
+      "lg": "Grande",
+      "icon": "Ícone"
     }
   },
   "resources": {
     "ergoscript": {
-      "title": "ErgoScript Tutorial Series",
-      "description": "Master ErgoScript: your path to creating secure and powerful smart contracts on Ergo, step by step.",
-      "difficulty": "Beginner to Expert",
-      "duration": "20+ hours"
+      "title": "Série de Tutoriais ErgoScript",
+      "description": "Domine o ErgoScript: seu caminho para criar contratos inteligentes seguros e poderosos na Ergo, passo a passo.",
+      "difficulty": "Iniciante a Especialista",
+      "duration": "20+ horas"
     },
     "faq": {
-      "title": "Comprehensive FAQ",
-      "description": "Everything you need to know about the Ergo blockchain, technologies, and ecosystem in one place.",
-      "difficulty": "All Levels",
-      "duration": "Reference"
+      "title": "FAQ Abrangente",
+      "description": "Tudo o que você precisa saber sobre a blockchain Ergo, tecnologias e ecossistema em um só lugar.",
+      "difficulty": "Todos os Níveis",
+      "duration": "Referência"
     },
     "research": {
-      "title": "Research Papers",
-      "description": "Deep dive into academic research and technical papers that form the foundation of Ergo innovations.",
-      "difficulty": "Advanced",
-      "duration": "Varies"
+      "title": "Artigos de Pesquisa",
+      "description": "Mergulhe fundo em pesquisas acadêmicas e artigos técnicos que formam a base das inovações da Ergo.",
+      "difficulty": "Avançado",
+      "duration": "Variável"
     }
   },
   "sections": {
-    "learningResources": "Learning Resources"
+    "learningResources": "Recursos de Aprendizado"
   }
 }

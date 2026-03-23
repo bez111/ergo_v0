@@ -80,7 +80,7 @@
       "security_properties_of_eutxo_based": "Security Properties of eUTXO-based Smart Contracts\", url:",
       "privacy_zero_knowledge_icon_eye_color": "Privacy & Zero-Knowledge\",\n    icon: Eye,\n    color:",
       "zero_knowledge_proofs_in_sigma_protocols_url": "Zero-Knowledge Proofs in Sigma Protocols\", url:",
-      "ring_signatures_for_blockchain_privacy": "Ring Signatures for Blockchain Privacy",
+      "ring_signatures_for_blockchain_privacy": "Signatures en anneau pour la confidentialité blockchain",
       "defi_economic_models_icon_database_color": "DeFi & Economic Models\",\n    icon: Database,\n    color:",
       "composable_defi_primitives_on_eutxo_url": "Composable DeFi Primitives on eUTXO\", url:",
       "on_chain_lending_lets_and_oracles_url": "On-chain Lending, LETS, and Oracles\", url:",
@@ -393,7 +393,7 @@
       "privacy_preserving_payment_channel_duration": "Privacy-Preserving Payment Channel\", duration:",
       "custom_oracle_implementation_duration": "Custom Oracle Implementation\", duration:",
       "what_development_tools_do_i_need_answer": "What development tools do I need?\",\n      answer:",
-      "your_first_contract_always_true": "Votre premier contrat : «\u00a0Always True\u00a0»",
+      "your_first_contract_always_true": "Votre premier contrat : « Always True »",
       "secure_by_design": "Sécurisé par conception",
       "powerful_expressive": "Puissant & Expressif",
       "enables_complex_defi_multi_stage": "Permet des protocoles DeFi complexes, multi-étapes et des dApps uniques",
@@ -565,7 +565,7 @@
           "cta": "Parcours débutant",
           "stack": {
             "core": "Portefeuilles · Storage Rent · eUTXO",
-            "tooling": "Nautilus · SAFEW · Explorer",
+            "tooling": "Nautilus · SAFEW · Explorateur",
             "mentors": "Canaux communautaires",
             "deliverable": "Configuration de portefeuille sécurisé"
           }
@@ -582,7 +582,7 @@
           "cta": "Ouvrir le guide dev",
           "stack": {
             "core": "eUTXO · ErgoScript · Sigma",
-            "tooling": "Playground · AppKit · Explorer",
+            "tooling": "Playground · AppKit · Explorateur",
             "mentors": "Heures de bureau Discord",
             "deliverable": "Livrer une dApp conforme"
           }

@@ -2,375 +2,375 @@
   "questionsData": {},
   "topicsData": {
     "ergo-defi": {
-      "title": "DeFi on Ergo",
-      "subtitle": "Decentralized Finance Without MEV, Without Permission",
-      "heroStatement": "DeFi that actually works for users, not extractors.",
-      "introduction": "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo eliminates entire categories of exploits that plague traditional DeFi: no front-running, no sandwich attacks, no MEV extraction. Every transaction's cost is known before you send it. Every trade executes exactly as expected. This isn't a minor improvement - it's a structural advantage that makes DeFi actually usable for regular people, not just sophisticated traders with MEV bots.",
-      "whatMakesUnique": "While Ethereum DeFi has become a 'dark forest' where users are hunted by MEV extractors, Ergo's eUTXO model creates a fundamentally fairer environment. Transactions reference specific boxes (UTXOs), making reordering attacks impractical. Oracle Pools provide decentralized price feeds without single points of failure. And because Ergo is PoW with fair launch, there's no VC cartel controlling governance or extracting value from the protocol.",
+      "title": "DeFi su Ergo",
+      "subtitle": "Finanza Decentralizzata Senza MEV, Senza Permessi",
+      "heroStatement": "DeFi che funziona davvero per gli utenti, non per gli estrattori.",
+      "introduction": "L'approccio di Ergo alla DeFi è fondamentalmente diverso dalle chain basate su account come Ethereum. Costruita sul modello eUTXO, Ergo elimina intere categorie di exploit che affliggono la DeFi tradizionale: nessun front-running, nessun attacco sandwich, nessuna estrazione MEV. Il costo di ogni transazione è noto prima di inviarla. Ogni scambio si esegue esattamente come previsto. Non è un miglioramento minore — è un vantaggio strutturale che rende la DeFi davvero utilizzabile per le persone comuni, non solo per trader sofisticati con bot MEV.",
+      "whatMakesUnique": "Mentre la DeFi di Ethereum è diventata una 'foresta oscura' dove gli utenti vengono cacciati da estrattori MEV, il modello eUTXO di Ergo crea un ambiente fondamentalmente più equo. Le transazioni fanno riferimento a box (UTXO) specifici, rendendo impraticabili gli attacchi di riordinamento. Le Oracle Pool forniscono feed di prezzi decentralizzati senza singoli punti di guasto. E poiché Ergo è PoW con lancio equo, non c'è nessun cartello VC che controlla la governance o estrae valore dal protocollo.",
       "keyDifferentiators": [
-        "No MEV extraction: transactions can't be front-run or sandwiched by design",
-        "Predictable fees: know exactly what you'll pay before sending (~$0.01)",
-        "Deterministic execution: transactions either fully succeed or fully fail",
-        "Decentralized oracles: Oracle Pools provide trustless price feeds",
-        "Fair launch: no VC allocation, no insider advantages"
+        "Nessuna estrazione MEV: le transazioni non possono essere front-run o sandwicheate by design",
+        "Fee prevedibili: conosci esattamente quanto pagherai prima di inviare (~$0.01)",
+        "Esecuzione deterministica: le transazioni o riescono completamente o falliscono completamente",
+        "Oracle decentralizzati: le Oracle Pool forniscono feed di prezzi trustless",
+        "Lancio equo: nessuna allocazione VC, nessun vantaggio insider"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Understanding Ergo DeFi",
-          "description": "Core concepts and how it differs from EVM DeFi"
+          "title": "Capire la DeFi su Ergo",
+          "description": "Concetti fondamentali e come si differenzia dalla DeFi EVM"
         },
         {
           "id": "ecosystem",
-          "title": "DeFi Ecosystem",
-          "description": "DEXs, stablecoins, lending, and more"
+          "title": "Ecosistema DeFi",
+          "description": "DEX, stablecoin, prestiti e altro"
         },
         {
           "id": "build",
-          "title": "Build DeFi Apps",
-          "description": "Developer resources and patterns"
+          "title": "Costruisci App DeFi",
+          "description": "Risorse per sviluppatori e pattern"
         },
         {
           "id": "philosophy",
-          "title": "DeFi Philosophy",
-          "description": "Why fair DeFi matters"
+          "title": "Filosofia DeFi",
+          "description": "Perché una DeFi equa è importante"
         }
       ],
       "keyTerms": [
         {
           "term": "eUTXO",
           "slug": "eutxo",
-          "shortDefinition": "Extended UTXO model that enables smart contracts while maintaining Bitcoin-like security"
+          "shortDefinition": "Modello UTXO esteso che abilita gli smart contract mantenendo la sicurezza simile a Bitcoin"
         },
         {
-          "term": "MEV Resistance",
+          "term": "Resistenza MEV",
           "slug": "mev-resistance",
-          "shortDefinition": "Structural protection against front-running and sandwich attacks"
+          "shortDefinition": "Protezione strutturale contro attacchi front-running e sandwich"
         },
         {
-          "term": "Oracle Pools",
+          "term": "Oracle Pool",
           "slug": "oracle-pools",
-          "shortDefinition": "Decentralized system for bringing off-chain data to smart contracts"
+          "shortDefinition": "Sistema decentralizzato per portare dati off-chain agli smart contract"
         },
         {
           "term": "SigmaUSD",
           "slug": "sigmausd",
-          "shortDefinition": "Algorithmic stablecoin backed by ERG reserves"
+          "shortDefinition": "Stablecoin algoritmico garantito da riserve ERG"
         },
         {
-          "term": "Babel Fees",
+          "term": "Babel Fee",
           "slug": "babel-fees",
-          "shortDefinition": "Pay transaction fees in any token, not just ERG"
+          "shortDefinition": "Paga le fee di transazione con qualsiasi token, non solo ERG"
         },
         {
-          "term": "Boxes",
+          "term": "Box",
           "slug": "boxes",
-          "shortDefinition": "eUTXO containers holding value, tokens, and smart contract data"
+          "shortDefinition": "Contenitori eUTXO che contengono valore, token e dati degli smart contract"
         }
       ]
     },
     "ergo-privacy": {
-      "title": "Privacy on Ergo",
-      "subtitle": "Programmable Privacy with Sigma Protocols",
-      "heroStatement": "Privacy is not about hiding. It",
-      "introduction": "Ergo takes a unique approach to blockchain privacy: optional, programmable, and provable. Unlike always-on privacy coins that hide everything, Ergo's Sigma Protocols let you prove things about your data without revealing the data itself. You can prove you're over 18 without showing your birthdate. Prove you have sufficient funds without revealing your balance. Prove membership in a group without identifying yourself. This is privacy that works in the real world - where sometimes you need to prove compliance while protecting your details.",
-      "whatMakesUnique": "Most privacy solutions force a binary choice: full transparency or full opacity. Ergo's Sigma Protocols enable selective disclosure - reveal exactly what's needed, nothing more. This isn't just academic cryptography; it's built into ErgoScript as a first-class primitive. Every smart contract can incorporate zero-knowledge proofs. ErgoMixer provides non-interactive, non-custodial mixing. And because privacy is optional, Ergo remains accessible to regulated entities while empowering individuals.",
+      "title": "Privacy su Ergo",
+      "subtitle": "Privacy Programmabile con i Sigma Protocol",
+      "heroStatement": "La privacy non riguarda il nascondersi. Riguarda",
+      "introduction": "Ergo adotta un approccio unico alla privacy blockchain: opzionale, programmabile e dimostrabile. A differenza delle privacy coin always-on che nascondono tutto, i Sigma Protocol di Ergo ti permettono di dimostrare cose sui tuoi dati senza rivelare i dati stessi. Puoi dimostrare di avere più di 18 anni senza mostrare la tua data di nascita. Dimostrare di avere fondi sufficienti senza rivelare il tuo saldo. Dimostrare l'appartenenza a un gruppo senza identificarti. Questa è una privacy che funziona nel mondo reale — dove a volte è necessario dimostrare la conformità proteggendo i propri dettagli.",
+      "whatMakesUnique": "La maggior parte delle soluzioni di privacy forza una scelta binaria: piena trasparenza o piena opacità. I Sigma Protocol di Ergo abilitano la divulgazione selettiva — rivela esattamente ciò che è necessario, nient'altro. Non si tratta solo di crittografia accademica; è incorporata in ErgoScript come primitiva di prima classe. Ogni smart contract può incorporare prove a conoscenza zero. ErgoMixer fornisce mixing non-interattivo e non-custodiale. E poiché la privacy è opzionale, Ergo rimane accessibile alle entità regolamentate empoderando al contempo gli individui.",
       "keyDifferentiators": [
-        "Sigma Protocols: native zero-knowledge proofs in every smart contract",
-        "Selective disclosure: prove statements without revealing underlying data",
-        "ErgoMixer: non-custodial, non-interactive token mixing",
-        "Programmable privacy: build custom privacy logic into dApps",
-        "Optional by design: transparent when needed, private when required"
+        "Sigma Protocol: prove a conoscenza zero native in ogni smart contract",
+        "Divulgazione selettiva: dimostra affermazioni senza rivelare i dati sottostanti",
+        "ErgoMixer: mixing di token non-custodiale e non-interattivo",
+        "Privacy programmabile: costruisci logica privacy personalizzata nelle dApp",
+        "Opzionale by design: trasparente quando necessario, privato quando richiesto"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Understanding Ergo Privacy",
-          "description": "How privacy works on Ergo"
+          "title": "Capire la Privacy su Ergo",
+          "description": "Come funziona la privacy su Ergo"
         },
         {
           "id": "sigma",
-          "title": "Sigma Protocols",
-          "description": "Zero-knowledge proofs explained"
+          "title": "Sigma Protocol",
+          "description": "Prove a conoscenza zero spiegate"
         },
         {
           "id": "tools",
-          "title": "Privacy Tools",
-          "description": "ErgoMixer and other privacy applications"
+          "title": "Strumenti Privacy",
+          "description": "ErgoMixer e altre applicazioni privacy"
         },
         {
           "id": "philosophy",
-          "title": "Privacy Philosophy",
-          "description": "Why privacy matters for freedom"
+          "title": "Filosofia della Privacy",
+          "description": "Perché la privacy è importante per la libertà"
         }
       ],
       "keyTerms": [
         {
-          "term": "Sigma Protocols",
+          "term": "Sigma Protocol",
           "slug": "sigma-protocols",
-          "shortDefinition": "Zero-knowledge proof systems for proving statements without revealing data"
+          "shortDefinition": "Sistemi di prove a conoscenza zero per dimostrare affermazioni senza rivelare dati"
         },
         {
           "term": "ErgoMixer",
           "slug": "ergomixer",
-          "shortDefinition": "Non-interactive, non-custodial token mixing service"
+          "shortDefinition": "Servizio di mixing di token non-interattivo e non-custodiale"
         },
         {
-          "term": "Zero-Knowledge Proofs",
+          "term": "Prove a Conoscenza Zero",
           "slug": "zero-knowledge-proofs",
-          "shortDefinition": "Cryptographic proofs that reveal nothing except the truth of a statement"
+          "shortDefinition": "Prove crittografiche che non rivelano nulla eccetto la verità di un'affermazione"
         },
         {
-          "term": "Selective Disclosure",
+          "term": "Divulgazione Selettiva",
           "slug": "selective-disclosure",
-          "shortDefinition": "Revealing only specific data while keeping the rest private"
+          "shortDefinition": "Rivelare solo dati specifici mantenendo il resto privato"
         },
         {
-          "term": "Ring Signatures",
+          "term": "Firme Ring",
           "slug": "ring-signatures",
-          "shortDefinition": "Signatures that prove group membership without identifying the signer"
+          "shortDefinition": "Firme che provano l'appartenenza a un gruppo senza identificare il firmatario"
         }
       ]
     },
     "ergo-mining": {
       "title": "Mining Ergo",
-      "subtitle": "Fair, Accessible, ASIC-Resistant Proof-of-Work",
-      "heroStatement": "Mining without masters. Proof-of-Work for everyone.",
-      "introduction": "Ergo's Autolykos algorithm represents a return to Bitcoin's original vision: mining accessible to regular people with consumer hardware. Unlike Bitcoin's ASIC-dominated mining or Ethereum's move to PoS, Ergo maintains GPU-friendly, memory-hard Proof-of-Work. This isn't nostalgia - it's a deliberate design choice for decentralization. When anyone can mine with their gaming PC, no single entity can dominate hashrate. When mining is distributed, censorship resistance is real.",
-      "whatMakesUnique": "Autolykos v2 is memory-hard, requiring significant RAM that makes ASIC development uneconomical. The algorithm was designed by cryptographers, not as an afterthought. Storage rent provides sustainable miner revenue after emission ends - solving Bitcoin's long-term security budget problem. And Ergo's fair launch means miners aren't competing against VC-subsidized insiders; everyone started from zero.",
+      "subtitle": "Proof-of-Work Equo, Accessibile e Resistente agli ASIC",
+      "heroStatement": "Mining senza padroni. Proof-of-Work per tutti.",
+      "introduction": "L'algoritmo Autolykos di Ergo rappresenta un ritorno alla visione originale di Bitcoin: mining accessibile alle persone comuni con hardware consumer. A differenza del mining dominato dagli ASIC di Bitcoin o del passaggio di Ethereum al PoS, Ergo mantiene un Proof-of-Work GPU-friendly e memory-hard. Non è nostalgia — è una scelta di design deliberata per la decentralizzazione. Quando chiunque può minare con il proprio PC da gaming, nessuna singola entità può dominare l'hashrate. Quando il mining è distribuito, la resistenza alla censura è reale.",
+      "whatMakesUnique": "Autolykos v2 è memory-hard, richiedendo RAM significativa che rende lo sviluppo di ASIC antieconomico. L'algoritmo è stato progettato da crittografi, non come ripensamento. Lo storage rent fornisce entrate sostenibili ai miner dopo la fine delle emissioni — risolvendo il problema del budget di sicurezza a lungo termine di Bitcoin. E il lancio equo di Ergo significa che i miner non competono contro insider sovvenzionati da VC; tutti sono partiti da zero.",
       "keyDifferentiators": [
-        "ASIC-resistant: Autolykos keeps mining accessible to GPU miners",
-        "Memory-hard: requires RAM, not just raw compute power",
-        "Storage rent: sustainable miner income after block rewards end",
-        "Fair launch: no pre-mine advantage for anyone",
-        "Pool mining: Autolykos v2 enables pool participation"
+        "Resistente agli ASIC: Autolykos mantiene il mining accessibile ai miner GPU",
+        "Memory-hard: richiede RAM, non solo potenza di calcolo grezza",
+        "Storage rent: entrate sostenibili per i miner dopo la fine delle ricompense sui blocchi",
+        "Lancio equo: nessun vantaggio pre-mine per nessuno",
+        "Mining in pool: Autolykos v2 abilita la partecipazione alle pool"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Understanding Ergo Mining",
-          "description": "How Autolykos works and why it matters"
+          "title": "Capire il Mining Ergo",
+          "description": "Come funziona Autolykos e perché è importante"
         },
         {
           "id": "setup",
-          "title": "Mining Setup",
-          "description": "Hardware, software, and pool selection"
+          "title": "Configurazione Mining",
+          "description": "Hardware, software e selezione della pool"
         },
         {
           "id": "economics",
-          "title": "Mining Economics",
-          "description": "Profitability, rewards, and sustainability"
+          "title": "Economia del Mining",
+          "description": "Redditività, ricompense e sostenibilità"
         },
         {
           "id": "philosophy",
-          "title": "PoW Philosophy",
-          "description": "Why Proof-of-Work matters"
+          "title": "Filosofia PoW",
+          "description": "Perché il Proof-of-Work è importante"
         }
       ],
       "keyTerms": [
         {
           "term": "Storage Rent",
           "slug": "storage-rent",
-          "shortDefinition": "Fee mechanism providing sustainable miner revenue"
+          "shortDefinition": "Meccanismo di fee che fornisce entrate sostenibili ai miner"
         },
         {
           "term": "Proof-of-Work",
           "slug": "proof-of-work",
-          "shortDefinition": "Consensus mechanism where miners expend energy to secure the network"
+          "shortDefinition": "Meccanismo di consenso in cui i miner spendono energia per proteggere la rete"
         },
         {
-          "term": "Emission Schedule",
+          "term": "Programma di Emissione",
           "slug": "emission-schedule",
-          "shortDefinition": "The predetermined release of new ERG through mining"
+          "shortDefinition": "Il rilascio predeterminato di nuovi ERG attraverso il mining"
         },
         {
           "term": "Memory-Hard",
           "slug": "memory-hard",
-          "shortDefinition": "Algorithm requiring significant RAM, resisting ASIC optimization"
+          "shortDefinition": "Algoritmo che richiede RAM significativa, resistendo all'ottimizzazione ASIC"
         }
       ]
     },
     "ergo-technology": {
-      "title": "Ergo Technology",
-      "subtitle": "Research-Driven Innovation for Real-World Use",
-      "heroStatement": "Technology that solves real problems, not hype cycles.",
-      "introduction": "Ergo's technology stack represents years of academic research translated into practical blockchain innovation. Every major component - eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols - comes from peer-reviewed cryptographic research. This isn't technology for technology's sake; each innovation solves specific problems. eUTXO eliminates MEV and enables parallel processing. NiPoPoWs compress blockchain proofs from gigabytes to kilobytes. Sigma Protocols bring zero-knowledge proofs to every smart contract. The result is a blockchain that's simultaneously more secure, more scalable, and more private than its competitors.",
-      "whatMakesUnique": "Most blockchains copy Ethereum's account model or Bitcoin's simple scripts. Ergo charts a different path: extending Bitcoin's UTXO model with rich smart contract capabilities while maintaining its security properties. ErgoScript is a functional language, not imperative like Solidity - this makes contracts easier to verify and harder to exploit. NiPoPoWs enable truly trustless light clients and efficient cross-chain bridges. These aren't incremental improvements; they're architectural advantages.",
+      "title": "Tecnologia Ergo",
+      "subtitle": "Innovazione Guidata dalla Ricerca per Uso nel Mondo Reale",
+      "heroStatement": "Tecnologia che risolve problemi reali, non cicli di hype.",
+      "introduction": "Lo stack tecnologico di Ergo rappresenta anni di ricerca accademica tradotta in innovazione blockchain pratica. Ogni componente principale — eUTXO, ErgoScript, NiPoPoW, Sigma Protocol — proviene da ricerca crittografica peer-reviewed. Non è tecnologia fine a se stessa; ogni innovazione risolve problemi specifici. eUTXO elimina MEV e abilita l'elaborazione parallela. I NiPoPoW comprimono le prove blockchain da gigabyte a kilobyte. I Sigma Protocol portano le prove a conoscenza zero in ogni smart contract. Il risultato è una blockchain simultaneamente più sicura, più scalabile e più privata dei suoi concorrenti.",
+      "whatMakesUnique": "La maggior parte delle blockchain copia il modello account di Ethereum o i semplici script di Bitcoin. Ergo traccia una strada diversa: estendendo il modello UTXO di Bitcoin con ricche capacità di smart contract mantenendo le sue proprietà di sicurezza. ErgoScript è un linguaggio funzionale, non imperativo come Solidity — questo rende i contratti più facili da verificare e più difficili da sfruttare. I NiPoPoW abilitano client leggeri veramente trustless e bridge cross-chain efficienti. Non sono miglioramenti incrementali; sono vantaggi architetturali.",
       "keyDifferentiators": [
-        "eUTXO: smart contracts with Bitcoin-level security guarantees",
-        "ErgoScript: functional, verifiable smart contract language",
-        "NiPoPoWs: logarithmic proof compression for light clients",
-        "Sigma Protocols: native zero-knowledge proofs",
-        "Research-driven: peer-reviewed cryptography, not marketing"
+        "eUTXO: smart contract con garanzie di sicurezza a livello Bitcoin",
+        "ErgoScript: linguaggio di smart contract funzionale e verificabile",
+        "NiPoPoW: compressione logaritmica delle prove per client leggeri",
+        "Sigma Protocol: prove a conoscenza zero native",
+        "Guidato dalla ricerca: crittografia peer-reviewed, non marketing"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Technology Overview",
-          "description": "The Ergo technology stack"
+          "title": "Panoramica della Tecnologia",
+          "description": "Lo stack tecnologico di Ergo"
         },
         {
           "id": "eutxo",
-          "title": "eUTXO Model",
-          "description": "Extended UTXO explained"
+          "title": "Modello eUTXO",
+          "description": "UTXO esteso spiegato"
         },
         {
           "id": "scripting",
-          "title": "Smart Contracts",
-          "description": "ErgoScript and contract development"
+          "title": "Smart Contract",
+          "description": "ErgoScript e sviluppo di contratti"
         },
         {
           "id": "scaling",
-          "title": "Scaling & Light Clients",
-          "description": "NiPoPoWs and future scaling"
+          "title": "Scaling e Client Leggeri",
+          "description": "NiPoPoW e futuro scaling"
         }
       ],
       "keyTerms": [
         {
           "term": "eUTXO",
           "slug": "eutxo",
-          "shortDefinition": "Extended UTXO model combining Bitcoin security with smart contract flexibility"
+          "shortDefinition": "Modello UTXO esteso che combina sicurezza Bitcoin con flessibilità degli smart contract"
         },
         {
           "term": "ErgoScript",
           "slug": "ergoscript",
-          "shortDefinition": "Functional smart contract language with native Sigma Protocol support"
+          "shortDefinition": "Linguaggio di smart contract funzionale con supporto nativo ai Sigma Protocol"
         },
         {
-          "term": "NiPoPoWs",
+          "term": "NiPoPoW",
           "slug": "nipopows",
-          "shortDefinition": "Proofs that compress blockchain history to kilobytes"
+          "shortDefinition": "Prove che comprimono la storia della blockchain a kilobyte"
         },
         {
-          "term": "Boxes",
+          "term": "Box",
           "slug": "boxes",
-          "shortDefinition": "eUTXO containers holding value, tokens, and contract data"
+          "shortDefinition": "Contenitori eUTXO che contengono valore, token e dati dei contratti"
         },
         {
-          "term": "Subblocks",
+          "term": "Subblock",
           "slug": "subblocks",
-          "shortDefinition": "Technology for faster transaction confirmations"
+          "shortDefinition": "Tecnologia per conferme di transazioni più veloci"
         },
         {
-          "term": "Velvet Forks",
+          "term": "Velvet Fork",
           "slug": "velvet-forks",
-          "shortDefinition": "Soft protocol upgrades without hard forks"
+          "shortDefinition": "Aggiornamenti soft del protocollo senza hard fork"
         }
       ]
     },
     "ergo-philosophy": {
-      "title": "Ergo Philosophy",
-      "subtitle": "Cypherpunk Values for Financial Freedom",
-      "heroStatement": "Money without masters. Finance without permission.",
-      "introduction": "Ergo isn't just a blockchain - it's a statement about what cryptocurrency should be. In a world where most 'crypto' projects are VC-backed, pre-mined, and designed for extraction, Ergo represents a return to first principles. No pre-mine. No ICO. No VC allocation. 100% of ERG comes from mining, just like Bitcoin. This isn't idealism; it's the foundation for genuine decentralization. When no insider group controls a majority of tokens, governance is actually decentralized. When there's no VC exit to fund, development serves users, not investors.",
-      "whatMakesUnique": "Ergo was built by people who remember why Bitcoin was created: to provide an alternative to a financial system that serves the powerful at the expense of everyone else. The Ergo Manifesto articulates a vision of financial tools for ordinary people, not just sophisticated traders or wealthy investors. Privacy is a right, not a feature to be regulated away. Self-custody is the default, not an option. And the technology is designed to remain accessible - ASIC-resistant mining, light clients, low fees - so that participation isn't limited to those with resources.",
+      "title": "Filosofia Ergo",
+      "subtitle": "Valori Cypherpunk per la Libertà Finanziaria",
+      "heroStatement": "Denaro senza padroni. Finanza senza permessi.",
+      "introduction": "Ergo non è solo una blockchain — è una dichiarazione su cosa dovrebbe essere la criptovaluta. In un mondo dove la maggior parte dei progetti 'crypto' sono VC-backed, pre-minati e progettati per l'estrazione, Ergo rappresenta un ritorno ai principi fondamentali. Nessun pre-mine. Nessuna ICO. Nessuna allocazione VC. Il 100% degli ERG proviene dal mining, proprio come Bitcoin. Non è idealismo; è la base per una vera decentralizzazione. Quando nessun gruppo insider controlla la maggioranza dei token, la governance è davvero decentralizzata. Quando non c'è nessuna exit VC da finanziare, lo sviluppo serve gli utenti, non gli investitori.",
+      "whatMakesUnique": "Ergo è stata costruita da persone che ricordano perché Bitcoin è stato creato: per fornire un'alternativa a un sistema finanziario che serve i potenti a spese di tutti gli altri. Il Manifesto Ergo articola una visione di strumenti finanziari per le persone comuni, non solo per trader sofisticati o investitori ricchi. La privacy è un diritto, non una funzionalità da regolamentare. L'auto-custodia è il default, non un'opzione. E la tecnologia è progettata per rimanere accessibile — mining resistente agli ASIC, client leggeri, fee basse — in modo che la partecipazione non sia limitata a chi ha risorse.",
       "keyDifferentiators": [
-        "Fair launch: no pre-mine, no ICO, no VC allocation",
-        "Cypherpunk values: privacy, self-custody, censorship resistance",
-        "Community-owned: no controlling foundation or company",
-        "Accessible: designed for ordinary people, not just institutions",
-        "Long-term thinking: sustainability over short-term gains"
+        "Lancio equo: nessun pre-mine, nessuna ICO, nessuna allocazione VC",
+        "Valori cypherpunk: privacy, auto-custodia, resistenza alla censura",
+        "Proprietà della comunità: nessuna foundation o azienda di controllo",
+        "Accessibile: progettato per le persone comuni, non solo per le istituzioni",
+        "Pensiero a lungo termine: sostenibilità rispetto ai guadagni a breve termine"
       ],
       "sections": [
         {
           "id": "manifesto",
-          "title": "The Ergo Manifesto",
-          "description": "Core principles and vision"
+          "title": "Il Manifesto Ergo",
+          "description": "Principi fondamentali e visione"
         },
         {
           "id": "fair-launch",
-          "title": "Fair Launch",
-          "description": "Why distribution matters"
+          "title": "Lancio Equo",
+          "description": "Perché la distribuzione è importante"
         },
         {
           "id": "freedom",
-          "title": "Financial Freedom",
-          "description": "Tools for sovereignty"
+          "title": "Libertà Finanziaria",
+          "description": "Strumenti per la sovranità"
         }
       ],
       "keyTerms": [
         {
-          "term": "Fair Launch",
+          "term": "Lancio Equo",
           "slug": "fair-launch",
-          "shortDefinition": "No pre-mine, no ICO, no insider allocation - 100% mined"
+          "shortDefinition": "Nessun pre-mine, nessuna ICO, nessuna allocazione insider — 100% minato"
         },
         {
           "term": "Cypherpunk",
           "slug": "cypherpunk",
-          "shortDefinition": "Movement advocating privacy and cryptography for social change"
+          "shortDefinition": "Movimento che sostiene privacy e crittografia per il cambiamento sociale"
         },
         {
-          "term": "Self-Custody",
+          "term": "Auto-Custodia",
           "slug": "self-custody",
-          "shortDefinition": "Holding your own keys, controlling your own assets"
+          "shortDefinition": "Detenere le proprie chiavi, controllare i propri asset"
         },
         {
-          "term": "Censorship Resistance",
+          "term": "Resistenza alla Censura",
           "slug": "censorship-resistance",
-          "shortDefinition": "Ability to transact without permission from any authority"
+          "shortDefinition": "Capacità di effettuare transazioni senza il permesso di alcuna autorità"
         },
         {
-          "term": "Financial Sovereignty",
+          "term": "Sovranità Finanziaria",
           "slug": "financial-sovereignty",
-          "shortDefinition": "Complete control over your financial life"
+          "shortDefinition": "Controllo completo sulla propria vita finanziaria"
         }
       ]
     },
     "ergo-sustainability": {
-      "title": "Ergo Sustainability",
-      "subtitle": "Built to Last: Long-Term Economics and Security",
-      "heroStatement": "A blockchain designed for centuries, not quarters.",
-      "introduction": "Most blockchains face a fundamental problem: what happens when block rewards run out? Bitcoin's security budget relies on fees that may not materialize. PoS chains depend on perpetual inflation. Ergo solves this with storage rent - a small fee on dormant UTXOs that provides sustainable miner revenue forever. Combined with a carefully designed emission schedule and state management, Ergo is built for genuine long-term sustainability, not just the next market cycle.",
-      "whatMakesUnique": "Storage rent isn't just about miner revenue - it's about blockchain health. By incentivizing the cleanup of unused state, Ergo prevents the bloat that makes full nodes increasingly expensive to run. Lost coins gradually return to circulation instead of being locked forever. And because rent is only charged on boxes untouched for 4+ years, active users are unaffected. This is sustainability through design, not hope.",
+      "title": "Sostenibilità Ergo",
+      "subtitle": "Costruita per Durare: Economia e Sicurezza a Lungo Termine",
+      "heroStatement": "Una blockchain progettata per i secoli, non i trimestri.",
+      "introduction": "La maggior parte delle blockchain affronta un problema fondamentale: cosa succede quando le ricompense sui blocchi si esauriscono? Il budget di sicurezza di Bitcoin si basa sulle fee che potrebbero non materializzarsi. Le chain PoS dipendono dall'inflazione perpetua. Ergo risolve questo con lo storage rent — una piccola fee sui UTXO dormienti che fornisce entrate sostenibili ai miner per sempre. Combinato con un programma di emissione accuratamente progettato e la gestione dello stato, Ergo è costruita per una vera sostenibilità a lungo termine, non solo per il prossimo ciclo di mercato.",
+      "whatMakesUnique": "Lo storage rent non riguarda solo le entrate dei miner — riguarda la salute della blockchain. Incentivando la pulizia dello stato inutilizzato, Ergo previene il bloat che rende sempre più costoso gestire nodi completi. Le monete perse ritornano gradualmente in circolazione invece di essere bloccate per sempre. E poiché l'affitto viene addebitato solo sulle box non toccate per 4+ anni, gli utenti attivi non ne sono influenzati. Questa è sostenibilità attraverso il design, non la speranza.",
       "keyDifferentiators": [
-        "Storage rent: sustainable miner revenue after emission ends",
-        "State cleanup: incentivizes removing unused data",
-        "Lost coin recovery: dormant coins return to circulation",
-        "Predictable emission: known supply schedule",
-        "Full node affordability: manageable state size forever"
+        "Storage rent: entrate sostenibili per i miner dopo la fine delle emissioni",
+        "Pulizia dello stato: incentiva la rimozione dei dati inutilizzati",
+        "Recupero monete perse: le monete dormienti ritornano in circolazione",
+        "Emissione prevedibile: programma di offerta noto",
+        "Accessibilità nodi completi: dimensione dello stato gestibile per sempre"
       ],
       "sections": [
         {
           "id": "overview",
-          "title": "Sustainability Overview",
-          "description": "How Ergo ensures long-term viability"
+          "title": "Panoramica della Sostenibilità",
+          "description": "Come Ergo garantisce la fattibilità a lungo termine"
         },
         {
           "id": "storage-rent",
           "title": "Storage Rent",
-          "description": "The key sustainability mechanism"
+          "description": "Il meccanismo chiave di sostenibilità"
         },
         {
           "id": "economics",
-          "title": "Economic Model",
-          "description": "Emission, fees, and incentives"
+          "title": "Modello Economico",
+          "description": "Emissione, fee e incentivi"
         },
         {
           "id": "future",
-          "title": "Long-Term Vision",
-          "description": "Ergo in 50+ years"
+          "title": "Visione a Lungo Termine",
+          "description": "Ergo tra 50+ anni"
         }
       ],
       "keyTerms": [
         {
           "term": "Storage Rent",
           "slug": "storage-rent",
-          "shortDefinition": "Fee on dormant boxes providing sustainable miner revenue"
+          "shortDefinition": "Fee sulle box dormienti che fornisce entrate sostenibili ai miner"
         },
         {
-          "term": "Emission Schedule",
+          "term": "Programma di Emissione",
           "slug": "emission-schedule",
-          "shortDefinition": "Predetermined release of new ERG through mining"
+          "shortDefinition": "Rilascio predeterminato di nuovi ERG attraverso il mining"
         },
         {
           "term": "State Bloat",
           "slug": "state-bloat",
-          "shortDefinition": "Growth of blockchain state making nodes expensive"
+          "shortDefinition": "Crescita dello stato della blockchain che rende i nodi costosi"
         },
         {
-          "term": "Adaptive Emission",
+          "term": "Emissione Adattiva",
           "slug": "adaptive-emission",
-          "shortDefinition": "Dynamic adjustment of block rewards based on conditions"
+          "shortDefinition": "Regolazione dinamica delle ricompense sui blocchi in base alle condizioni"
         }
       ]
     }
@@ -379,120 +379,120 @@
   "patternsData": {},
   "questionsHub": {
     "hero": {
-      "title": "Your Questions,",
-      "titleHighlight": "Answered",
-      "subtitle": "Find expert answers to common questions about Ergo blockchain. Each answer links to deep-dive resources for further learning.",
-      "searchPlaceholder": "Search questions..."
+      "title": "Le Tue Domande,",
+      "titleHighlight": "Risposte",
+      "subtitle": "Trova risposte esperte alle domande comuni sulla blockchain Ergo. Ogni risposta si collega a risorse di approfondimento per ulteriore apprendimento.",
+      "searchPlaceholder": "Cerca domande..."
     },
     "filters": {
       "categories": [
-        { "id": "all", "label": "All Questions" },
-        { "id": "DeFi", "label": "DeFi & Trading" },
+        { "id": "all", "label": "Tutte le Domande" },
+        { "id": "DeFi", "label": "DeFi e Trading" },
         { "id": "Privacy", "label": "Privacy" },
         { "id": "Mining", "label": "Mining" },
-        { "id": "Technology", "label": "Technology" },
-        { "id": "Philosophy", "label": "Philosophy & Freedom" },
-        { "id": "Getting Started", "label": "Getting Started" }
+        { "id": "Technology", "label": "Tecnologia" },
+        { "id": "Philosophy", "label": "Filosofia e Libertà" },
+        { "id": "Getting Started", "label": "Per Iniziare" }
       ],
       "personas": [
-        { "id": "all", "label": "Everyone" },
-        { "id": "builder", "label": "Builders" },
-        { "id": "miner", "label": "Miners" },
-        { "id": "investor", "label": "Investors" },
-        { "id": "freedom_seeker", "label": "Freedom Seekers" },
-        { "id": "cypherpunk", "label": "Cypherpunks" },
-        { "id": "general", "label": "General" }
+        { "id": "all", "label": "Tutti" },
+        { "id": "builder", "label": "Builder" },
+        { "id": "miner", "label": "Miner" },
+        { "id": "investor", "label": "Investitori" },
+        { "id": "freedom_seeker", "label": "Cercatori di Libertà" },
+        { "id": "cypherpunk", "label": "Cypherpunk" },
+        { "id": "general", "label": "Generale" }
       ]
     },
     "aria": {
-      "filtersGroup": "Filter questions",
-      "categoryFilter": "Category filter",
-      "filterByCategory": "Filter by {category}",
-      "mostPopularList": "Most popular questions",
-      "filteredList": "Filtered questions"
+      "filtersGroup": "Filtra domande",
+      "categoryFilter": "Filtro categoria",
+      "filterByCategory": "Filtra per {category}",
+      "mostPopularList": "Domande più popolari",
+      "filteredList": "Domande filtrate"
     },
     "featured": {
-      "title": "Most Popular Questions"
+      "title": "Domande Più Popolari"
     },
     "results": {
-      "questionsFound": "Question",
-      "questionsFoundPlural": "Questions",
-      "found": "Found"
+      "questionsFound": "Domanda",
+      "questionsFoundPlural": "Domande",
+      "found": "Trovate"
     },
     "noResults": {
-      "message": "No questions match your search.",
-      "clearFilters": "Clear filters"
+      "message": "Nessuna domanda corrisponde alla tua ricerca.",
+      "clearFilters": "Rimuovi filtri"
     },
     "category": {
-      "questions": "questions",
-      "showLess": "Show less",
-      "showAll": "Show all"
+      "questions": "domande",
+      "showLess": "Mostra meno",
+      "showAll": "Mostra tutto"
     },
     "intent": {
-      "how_to": "How-to",
-      "what_is": "Explainer",
-      "compare": "Comparison",
-      "problem": "Solution",
-      "philosophy": "Philosophy"
+      "how_to": "Come fare",
+      "what_is": "Spiegazione",
+      "compare": "Confronto",
+      "problem": "Soluzione",
+      "philosophy": "Filosofia"
     },
     "cta": {
-      "title": "Can't find your question?",
-      "description": "Join our community on Discord or Telegram and ask directly. Our community is always happy to help.",
-      "joinCommunity": "Join Community",
-      "browseGlossary": "Browse Glossary"
+      "title": "Non trovi la tua domanda?",
+      "description": "Unisciti alla nostra comunità su Discord o Telegram e chiedi direttamente. La nostra comunità è sempre felice di aiutare.",
+      "joinCommunity": "Unisciti alla Comunità",
+      "browseGlossary": "Sfoglia il Glossario"
     }
   },
   "questionsPage": {
     "seo": {
-      "title": "Ergo Q&A Hub: Answers to Your Blockchain Questions",
-      "description": "Find answers to common questions about Ergo blockchain: DeFi, privacy, mining, technology, and getting started. Expert answers with deep-dive resources.",
-      "keywords": "Ergo FAQ, Ergo questions, eUTXO explained, Ergo DeFi, Ergo mining, Ergo privacy, blockchain questions"
+      "title": "Hub Q&A Ergo: Risposte alle Tue Domande sulla Blockchain",
+      "description": "Trova risposte alle domande comuni sulla blockchain Ergo: DeFi, privacy, mining, tecnologia e come iniziare. Risposte esperte con risorse di approfondimento.",
+      "keywords": "FAQ Ergo, domande Ergo, eUTXO spiegato, DeFi Ergo, mining Ergo, privacy Ergo, domande blockchain"
     },
     "schema": {
       "itemList": {
-        "name": "Ergo Q&A Directory",
-        "description": "Comprehensive answers to common Ergo blockchain questions"
+        "name": "Directory Q&A Ergo",
+        "description": "Risposte complete alle domande comuni sulla blockchain Ergo"
       },
       "collection": {
-        "name": "Ergo Q&A Hub",
-        "description": "Expert answers to questions about Ergo blockchain"
+        "name": "Hub Q&A Ergo",
+        "description": "Risposte esperte alle domande sulla blockchain Ergo"
       },
       "breadcrumbs": {
-        "questions": "Q&A Hub"
+        "questions": "Hub Q&A"
       }
     }
   },
   "topicsPage": {
     "seo": {
-      "title": "Ergo Topics — DeFi, Privacy, Mining & More | Ergo",
-      "description": "Explore Ergo by topic. Deep dives into DeFi, privacy, mining, eUTXO, smart contracts. Curated resources, guides & infographics.",
-      "keywords": "Ergo topics, Ergo DeFi, Ergo privacy, Ergo mining, eUTXO guide, blockchain topics, cryptocurrency knowledge hub"
+      "title": "Argomenti Ergo — DeFi, Privacy, Mining e Altro | Ergo",
+      "description": "Esplora Ergo per argomento. Approfondimenti su DeFi, privacy, mining, eUTXO, smart contract. Risorse curate, guide e infografiche.",
+      "keywords": "argomenti Ergo, DeFi Ergo, privacy Ergo, mining Ergo, guida eUTXO, argomenti blockchain, hub conoscenza crypto"
     },
     "schema": {
       "itemList": {
-        "name": "Ergo Topic Clusters",
-        "description": "Comprehensive topic guides for Ergo blockchain"
+        "name": "Cluster Argomenti Ergo",
+        "description": "Guide complete per argomenti sulla blockchain Ergo"
       },
       "collection": {
-        "name": "Ergo Topics Hub",
-        "description": "Explore Ergo blockchain by topic - DeFi, Privacy, Mining, Smart Contracts and more"
+        "name": "Hub Argomenti Ergo",
+        "description": "Esplora la blockchain Ergo per argomento — DeFi, Privacy, Mining, Smart Contract e altro"
       },
       "breadcrumbs": {
-        "topics": "Topics"
+        "topics": "Argomenti"
       },
       "faq": {
         "items": [
           {
-            "question": "What topics can I learn about Ergo?",
-            "answer": "Ergo topics include DeFi, Privacy & Sigma Protocols, Mining & Autolykos, Smart Contracts & ErgoScript, Governance & DAOs, and Cross-Chain Bridges."
+            "question": "Quali argomenti posso imparare su Ergo?",
+            "answer": "Gli argomenti di Ergo includono DeFi, Privacy e Sigma Protocol, Mining e Autolykos, Smart Contract e ErgoScript, Governance e DAO, e Bridge Cross-Chain."
           },
           {
-            "question": "Where should I start learning about Ergo?",
-            "answer": "Start with the eUTXO Model topic to understand Ergo's foundation, then explore DeFi or Privacy depending on your interests."
+            "question": "Da dove dovrei iniziare a imparare Ergo?",
+            "answer": "Inizia con l'argomento Modello eUTXO per capire le basi di Ergo, poi esplora DeFi o Privacy a seconda dei tuoi interessi."
           },
           {
-            "question": "How is Ergo different from Ethereum?",
-            "answer": "Ergo uses eUTXO (not accounts), Proof-of-Work (not PoS), native tokens (not ERC-20), and Sigma Protocols for privacy. Explore the Technology topics for deep dives."
+            "question": "Come è diverso Ergo da Ethereum?",
+            "answer": "Ergo usa eUTXO (non account), Proof-of-Work (non PoS), token nativi (non ERC-20) e Sigma Protocol per la privacy. Esplora gli argomenti Tecnologia per approfondimenti."
           }
         ]
       }
@@ -500,292 +500,292 @@
   },
   "topicsHub": {
     "hero": {
-      "title": "Explore Ergo by",
-      "titleHighlight": "Topic",
-      "subtitle": "Deep dives into every major part of Ergo. Each topic hub brings together guides, docs, infographics, glossary terms, and practical playbooks.",
-      "topicHubs": "Topic Hubs",
-      "comprehensiveCoverage": "Comprehensive Coverage"
+      "title": "Esplora Ergo per",
+      "titleHighlight": "Argomento",
+      "subtitle": "Approfondimenti su ogni parte principale di Ergo. Ogni hub di argomenti riunisce guide, docs, infografiche, termini del glossario e playbook pratici.",
+      "topicHubs": "Hub Argomenti",
+      "comprehensiveCoverage": "Copertura Completa"
     },
     "card": {
-      "keyTerms": "key terms",
-      "guidesAndDocs": "guides & docs",
-      "articles": "articles",
-      "infographics": "infographics",
-      "openHub": "Open hub"
+      "keyTerms": "termini chiave",
+      "guidesAndDocs": "guide e docs",
+      "articles": "articoli",
+      "infographics": "infografiche",
+      "openHub": "Apri hub"
     },
     "cta": {
-      "title": "Looking for something specific?",
-      "description": "Try our Q&A hub for quick answers or browse the glossary for term definitions.",
-      "browseQA": "Browse Q&A",
-      "viewGlossary": "View Glossary"
+      "title": "Cerchi qualcosa di specifico?",
+      "description": "Prova il nostro hub Q&A per risposte rapide o sfoglia il glossario per le definizioni dei termini.",
+      "browseQA": "Sfoglia Q&A",
+      "viewGlossary": "Visualizza Glossario"
     }
   },
   "patternsHub": {
     "hero": {
-      "title": "ErgoScript",
-      "titleHighlight": "Patterns",
-      "subtitle": "Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship. From token mechanics to DeFi primitives.",
-      "searchPlaceholder": "Search patterns (e.g., 'swap', 'multisig', 'oracle')..."
+      "title": "Pattern",
+      "titleHighlight": "ErgoScript",
+      "subtitle": "Pattern di smart contract battle-tested per Ergo. Copia, adatta e distribuisci. Dalla meccanica dei token alle primitive DeFi.",
+      "searchPlaceholder": "Cerca pattern (es. 'swap', 'multisig', 'oracle')..."
     },
     "aria": {
-      "filtersGroup": "Filter patterns",
-      "categoryFilter": "Category filter",
-      "patternsList": "Developer patterns"
+      "filtersGroup": "Filtra pattern",
+      "categoryFilter": "Filtro categoria",
+      "patternsList": "Pattern per sviluppatori"
     },
     "filters": {
-      "allCategories": "All Categories"
+      "allCategories": "Tutte le Categorie"
     },
     "categoryLabels": {
-      "token-mechanics": "Token Mechanics",
-      "time-locks-access": "Time Locks & Access Control",
-      "multisig-governance": "Multisig & Governance",
-      "defi-primitives": "DeFi Primitives",
-      "oracle-integration": "Oracle Integration",
-      "ergo-native": "Ergo-Native Features",
-      "privacy-sigma": "Privacy & Sigma Protocols"
+      "token-mechanics": "Meccanica dei Token",
+      "time-locks-access": "Time Lock e Controllo Accessi",
+      "multisig-governance": "Multisig e Governance",
+      "defi-primitives": "Primitive DeFi",
+      "oracle-integration": "Integrazione Oracle",
+      "ergo-native": "Funzionalità Native Ergo",
+      "privacy-sigma": "Privacy e Sigma Protocol"
     },
     "categoryDescriptions": {
-      "token-mechanics": "Create, manage, and control token supply on Ergo",
-      "time-locks-access": "Time-based locks and conditional spending patterns",
-      "multisig-governance": "Multi-party authorization and DAO structures",
-      "defi-primitives": "Building blocks for decentralized finance",
-      "oracle-integration": "Connect smart contracts to real-world data",
-      "ergo-native": "Patterns unique to Ergo: Babel fees, storage rent, eUTXO state machines",
-      "privacy-sigma": "Sigma Protocol patterns for optional privacy"
+      "token-mechanics": "Crea, gestisci e controlla l'offerta di token su Ergo",
+      "time-locks-access": "Pattern di blocchi temporali e spesa condizionale",
+      "multisig-governance": "Autorizzazione multi-parte e strutture DAO",
+      "defi-primitives": "Mattoni per la finanza decentralizzata",
+      "oracle-integration": "Connetti smart contract a dati del mondo reale",
+      "ergo-native": "Pattern unici di Ergo: Babel fee, storage rent, macchine a stati eUTXO",
+      "privacy-sigma": "Pattern dei Sigma Protocol per privacy opzionale"
     },
     "difficulty": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzato"
     },
     "grid": {
-      "noResults": "No patterns found",
-      "noResultsDescription": "Try adjusting your filters or search terms.",
-      "viewPattern": "View pattern"
+      "noResults": "Nessun pattern trovato",
+      "noResultsDescription": "Prova a modificare i filtri o i termini di ricerca.",
+      "viewPattern": "Visualizza pattern"
     },
     "cta": {
-      "title": "Ready to Build?",
-      "description": "Start with the patterns, dive into documentation, or join the developer community for support.",
-      "developerDocs": "Developer Docs",
-      "buildDefiPlaybook": "Build DeFi Playbook"
+      "title": "Pronto a Costruire?",
+      "description": "Inizia con i pattern, approfondisci la documentazione o unisciti alla comunità degli sviluppatori per supporto.",
+      "developerDocs": "Docs per Sviluppatori",
+      "buildDefiPlaybook": "Playbook DeFi per Costruire"
     }
   },
   "playbooksHub": {
     "hero": {
-      "title": "Ergo Playbooks",
-      "subtitle": "Curated guides for every use case. Each playbook combines infographics, articles, and actionable steps.",
-      "description": "Start from your first Ergo transaction and move step-by-step towards mining, DeFi, and building your own applications.",
-      "startButton": "Start with first transaction",
-      "browseQA": "Browse Q&A"
+      "title": "Playbook Ergo",
+      "subtitle": "Guide curate per ogni caso d'uso. Ogni playbook combina infografiche, articoli e passi pratici.",
+      "description": "Inizia dalla tua prima transazione Ergo e avanzati passo dopo passo verso il mining, DeFi e la costruzione delle tue applicazioni.",
+      "startButton": "Inizia con la prima transazione",
+      "browseQA": "Sfoglia Q&A"
     },
     "aria": {
-      "filterByCategoryGroup": "Filter playbooks by category",
-      "showAllPlaybooks": "Show all playbooks",
-      "filterByCluster": "Filter by {cluster}",
-      "playbooksList": "Available playbooks"
+      "filterByCategoryGroup": "Filtra playbook per categoria",
+      "showAllPlaybooks": "Mostra tutti i playbook",
+      "filterByCluster": "Filtra per {cluster}",
+      "playbooksList": "Playbook disponibili"
     },
     "clusters": {
       "defi": "DeFi",
       "privacy": "Privacy",
       "mining": "Mining",
-      "sustainability": "Sustainability",
-      "vc-alternative": "VC Alternative",
-      "global-settlement": "Global Settlement",
-      "developer": "Developer",
-      "investor": "Investor"
+      "sustainability": "Sostenibilità",
+      "vc-alternative": "Alternativa VC",
+      "global-settlement": "Regolamento Globale",
+      "developer": "Sviluppatore",
+      "investor": "Investitore"
     },
     "featured": {
-      "title": "Featured playbooks"
+      "title": "Playbook in evidenza"
     },
     "filters": {
-      "all": "All"
+      "all": "Tutti"
     },
     "card": {
-      "steps": "steps"
+      "steps": "passi"
     },
-    "noResults": "No playbooks in this category yet.",
+    "noResults": "Nessun playbook in questa categoria ancora.",
     "cta": {
-      "title": "Can't find what you're looking for?",
-      "description": "Explore our documentation, join the community, or suggest a new playbook.",
-      "browseDocs": "Browse Docs",
-      "joinCommunity": "Join Community"
+      "title": "Non trovi quello che cerchi?",
+      "description": "Esplora la nostra documentazione, unisciti alla comunità o suggerisci un nuovo playbook.",
+      "browseDocs": "Sfoglia Docs",
+      "joinCommunity": "Unisciti alla Comunità"
     }
   },
   "playbooksPage": {
     "seo": {
-      "title": "Ergo Playbooks — Step-by-Step Guides for DeFi, Privacy & Mining | Ergo",
-      "description": "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials.",
-      "keywords": "Ergo playbooks, Ergo guides, Ergo tutorials, DeFi guide, crypto privacy guide, GPU mining guide, Ergo development, blockchain tutorials"
+      "title": "Playbook Ergo — Guide Passo Passo per DeFi, Privacy e Mining | Ergo",
+      "description": "Guide passo passo per costruire su Ergo. DeFi, privacy, mining, NFT — scegli il tuo percorso e inizia a distribuire. Risorse e tutorial curati.",
+      "keywords": "playbook Ergo, guide Ergo, tutorial Ergo, guida DeFi, guida privacy crypto, guida mining GPU, sviluppo Ergo, tutorial blockchain"
     },
     "schema": {
       "itemList": {
-        "name": "Ergo Development Playbooks",
-        "description": "Step-by-step guides for building on Ergo blockchain. DeFi, privacy, mining, NFTs and more."
+        "name": "Playbook di Sviluppo Ergo",
+        "description": "Guide passo passo per costruire sulla blockchain Ergo. DeFi, privacy, mining, NFT e altro."
       },
       "collection": {
-        "name": "Ergo Playbooks",
-        "description": "Step-by-step guides for building on Ergo. DeFi, privacy, mining, NFTs — choose your path and start shipping. Curated resources & tutorials."
+        "name": "Playbook Ergo",
+        "description": "Guide passo passo per costruire su Ergo. DeFi, privacy, mining, NFT — scegli il tuo percorso e inizia a distribuire. Risorse e tutorial curati."
       },
       "breadcrumbs": {
-        "playbooks": "Playbooks"
+        "playbooks": "Playbook"
       }
     }
   },
   "patternsPage": {
     "seo": {
-      "title": "ErgoScript Patterns — 18 Copy-Paste Smart Contracts | Ergo",
-      "description": "18 ready-to-use ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Copy, paste, deploy. Production-ready code examples.",
-      "keywords": "ErgoScript patterns, Ergo smart contracts, ErgoScript examples, eUTXO patterns, Ergo developer, blockchain patterns, DeFi patterns, copy paste smart contracts"
+      "title": "Pattern ErgoScript — 18 Smart Contract Copia-Incolla | Ergo",
+      "description": "18 pattern ErgoScript pronti all'uso. Time-lock, multi-sig, AMM, oracle e altro. Copia, incolla, distribuisci. Esempi di codice production-ready.",
+      "keywords": "pattern ErgoScript, smart contract Ergo, esempi ErgoScript, pattern eUTXO, sviluppatore Ergo, pattern blockchain, pattern DeFi, smart contract copia-incolla"
     },
     "schema": {
       "itemList": {
-        "name": "ErgoScript Smart Contract Patterns",
-        "description": "Collection of ready-to-use ErgoScript patterns for building secure smart contracts on Ergo blockchain."
+        "name": "Pattern di Smart Contract ErgoScript",
+        "description": "Raccolta di pattern ErgoScript pronti all'uso per costruire smart contract sicuri sulla blockchain Ergo."
       },
       "collection": {
-        "name": "ErgoScript Developer Patterns",
-        "description": "18 ready-to-use ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Copy, paste, deploy."
+        "name": "Pattern per Sviluppatori ErgoScript",
+        "description": "18 pattern ErgoScript pronti all'uso per time-lock, multi-sig, AMM, oracle e altro. Copia, incolla, distribuisci."
       },
       "breadcrumbs": {
-        "patterns": "Dev Patterns"
+        "patterns": "Pattern Dev"
       }
     }
   },
   "topicPage": {
     "breadcrumbs": {
-      "topics": "Topics"
+      "topics": "Argomenti"
     },
     "schema": {
       "breadcrumbs": {
-        "topics": "Topics"
+        "topics": "Argomenti"
       },
       "definedTermSet": {
-        "name": "{topic} Key Terms",
-        "description": "Essential terminology for understanding {topic}"
+        "name": "Termini Chiave {topic}",
+        "description": "Terminologia essenziale per capire {topic}"
       },
       "resources": {
-        "name": "{topic} Resources",
-        "description": "Comprehensive resources for {topic}"
+        "name": "Risorse {topic}",
+        "description": "Risorse complete per {topic}"
       },
       "resourceSections": {
-        "startHere": "Start Here",
-        "buildWithIt": "Build With It",
-        "philosophy": "Philosophy",
-        "visuals": "Visuals"
+        "startHere": "Inizia Qui",
+        "buildWithIt": "Costruisci Con Esso",
+        "philosophy": "Filosofia",
+        "visuals": "Visivi"
       }
     },
     "cta": {
-      "title": "Ready to dive deeper?",
-      "description": "Join our community to ask questions, share ideas, and connect with other Ergo enthusiasts.",
-      "joinCommunity": "Join Community",
-      "exploreAllTopics": "Explore All Topics"
+      "title": "Pronto ad approfondire?",
+      "description": "Unisciti alla nostra comunità per fare domande, condividere idee e connetterti con altri appassionati Ergo.",
+      "joinCommunity": "Unisciti alla Comunità",
+      "exploreAllTopics": "Esplora Tutti gli Argomenti"
     },
     "relatedContent": {
-      "title": "Related Resources",
-      "subtitle": "Explore more content in this topic cluster"
+      "title": "Risorse Correlate",
+      "subtitle": "Esplora altri contenuti in questo cluster di argomenti"
     },
     "emailCapture": {
-      "title": "Master {topic}",
-      "description": "Get weekly insights on Ergo technology, tutorials, and ecosystem updates."
+      "title": "Padroneggia {topic}",
+      "description": "Ricevi approfondimenti settimanali sulla tecnologia Ergo, tutorial e aggiornamenti dell'ecosistema."
     },
-    "share": "Share",
-    "copyLink": "Copy link",
-    "copied": "Copied!",
-    "keyDifferentiators": "Key Differentiators",
+    "share": "Condividi",
+    "copyLink": "Copia link",
+    "copied": "Copiato!",
+    "keyDifferentiators": "Differenziatori Chiave",
     "startHere": {
-      "title": "Start Here",
-      "description": "Essential resources to understand the fundamentals."
+      "title": "Inizia Qui",
+      "description": "Risorse essenziali per capire i fondamentali."
     },
     "buildWithIt": {
-      "title": "Build With It",
-      "description": "Developer documentation, patterns, and guides."
+      "title": "Costruisci Con Esso",
+      "description": "Documentazione per sviluppatori, pattern e guide."
     },
     "philosophy": {
-      "title": "Philosophy & Narrative",
-      "description": "The vision and principles behind the technology."
+      "title": "Filosofia e Narrativa",
+      "description": "La visione e i principi alla base della tecnologia."
     },
     "visualGuides": {
-      "title": "Visual Guides",
-      "description": "Infographics and visual explanations to share.",
-      "viewAll": "View all infographics"
+      "title": "Guide Visive",
+      "description": "Infografiche e spiegazioni visive da condividere.",
+      "viewAll": "Vedi tutte le infografiche"
     },
-    "keyTerms": "Key Terms",
-    "frequentlyAsked": "Frequently Asked",
-    "relatedTopics": "Related Topics",
+    "keyTerms": "Termini Chiave",
+    "frequentlyAsked": "Domande Frequenti",
+    "relatedTopics": "Argomenti Correlati",
     "latestArticles": {
-      "title": "Latest Articles",
-      "description": "Recent blog posts related to this topic.",
-      "viewAll": "View all articles"
+      "title": "Articoli Recenti",
+      "description": "Post del blog recenti relativi a questo argomento.",
+      "viewAll": "Vedi tutti gli articoli"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next"
+      "title": "Cosa c'è",
+      "titleHighlight": "Dopo"
     }
   },
   "questionPage": {
     "breadcrumbs": {
-      "questions": "Questions"
+      "questions": "Domande"
     },
-    "share": "Share",
-    "answer": "Answer",
-    "quickFacts": "Quick Facts",
-    "resources": "Resources",
-    "relatedQuestions": "Related Questions",
-    "exploreMore": "Explore More",
-    "exploreTopic": "Explore This Topic",
-    "exploreTopicDescription": "Deep dive into all {category} resources",
-    "joinCommunity": "Join Community",
-    "browseAllQuestions": "Browse All Questions",
-    "shareTitle": "Share this question",
-    "copyLink": "Copy link",
-    "copied": "Copied!",
-    "readTime": "min read",
-    "lastUpdated": "Last updated",
+    "share": "Condividi",
+    "answer": "Risposta",
+    "quickFacts": "Fatti Rapidi",
+    "resources": "Risorse",
+    "relatedQuestions": "Domande Correlate",
+    "exploreMore": "Esplora di Più",
+    "exploreTopic": "Esplora Questo Argomento",
+    "exploreTopicDescription": "Approfondimento in tutte le risorse di {category}",
+    "joinCommunity": "Unisciti alla Comunità",
+    "browseAllQuestions": "Sfoglia Tutte le Domande",
+    "shareTitle": "Condividi questa domanda",
+    "copyLink": "Copia link",
+    "copied": "Copiato!",
+    "readTime": "min di lettura",
+    "lastUpdated": "Ultimo aggiornamento",
     "resourceTypes": {
-      "doc": "Documentation",
-      "blog": "Blog Article",
+      "doc": "Documentazione",
+      "blog": "Articolo Blog",
       "playbook": "Playbook",
-      "infographic": "Infographic",
-      "glossary": "Glossary",
-      "compare": "Comparison",
-      "technology": "Technology"
+      "infographic": "Infografica",
+      "glossary": "Glossario",
+      "compare": "Confronto",
+      "technology": "Tecnologia"
     },
     "intentLabels": {
-      "how_to": "How-to Guide",
-      "what_is": "Explainer",
-      "compare": "Comparison",
-      "problem": "Solution",
-      "philosophy": "Philosophy"
+      "how_to": "Guida Pratica",
+      "what_is": "Spiegazione",
+      "compare": "Confronto",
+      "problem": "Soluzione",
+      "philosophy": "Filosofia"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next"
+      "title": "Cosa c'è",
+      "titleHighlight": "Dopo"
     },
     "emailCapture": {
-      "title": "Have More Questions?",
-      "description": "Get answers, guides, and updates delivered to your inbox."
+      "title": "Hai Altre Domande?",
+      "description": "Ricevi risposte, guide e aggiornamenti nella tua casella di posta."
     }
   },
   "patternPage": {
     "breadcrumbs": {
-      "devPatterns": "Dev Patterns"
+      "devPatterns": "Pattern Dev"
     },
-    "viewCode": "View Code",
-    "problem": "Problem",
-    "solution": "Solution",
-    "howItWorks": "How It Works",
-    "codeExamples": "Code Examples",
-    "useCases": "Use Cases",
-    "securityConsiderations": "Security Considerations",
-    "realWorldImplementations": "Real-World Implementations",
-    "resources": "Resources",
-    "feeConsiderations": "Fee Considerations",
-    "relatedPatterns": "Related Patterns",
+    "viewCode": "Visualizza Codice",
+    "problem": "Problema",
+    "solution": "Soluzione",
+    "howItWorks": "Come Funziona",
+    "codeExamples": "Esempi di Codice",
+    "useCases": "Casi d'Uso",
+    "securityConsiderations": "Considerazioni di Sicurezza",
+    "realWorldImplementations": "Implementazioni del Mondo Reale",
+    "resources": "Risorse",
+    "feeConsiderations": "Considerazioni sulle Fee",
+    "relatedPatterns": "Pattern Correlati",
     "difficulty": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced",
-      "expert": "Expert"
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzato",
+      "expert": "Esperto"
     },
     "languages": {
       "ergoscript": "ErgoScript",
@@ -794,294 +794,294 @@
       "rust": "Rust"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
+      "title": "Cosa c'è",
+      "titleHighlight": "Dopo",
       "browsePatterns": {
-        "title": "Browse All Patterns",
-        "subtitle": "patterns available"
+        "title": "Sfoglia Tutti i Pattern",
+        "subtitle": "pattern disponibili"
       },
       "explorePlaybooks": {
-        "title": "Explore Playbooks",
-        "subtitle": "Step-by-step guides"
+        "title": "Esplora Playbook",
+        "subtitle": "Guide passo passo"
       },
       "builderResources": {
-        "title": "Builder Resources",
-        "subtitle": "Full dev toolkit"
+        "title": "Risorse per Builder",
+        "subtitle": "Kit completo per sviluppatori"
       }
     },
     "emailCapture": {
-      "title": "Master Ergo Development",
-      "description": "Get pattern updates, new tutorials, and advanced ErgoScript techniques delivered to your inbox."
+      "title": "Padroneggia lo Sviluppo Ergo",
+      "description": "Ricevi aggiornamenti sui pattern, nuovi tutorial e tecniche ErgoScript avanzate nella tua casella di posta."
     }
   },
   "playbookPage": {
     "breadcrumbs": {
-      "playbooks": "Playbooks"
+      "playbooks": "Playbook"
     },
-    "allPlaybooks": "All Playbooks",
-    "browseAllPlaybooks": "Browse All Playbooks",
-    "overview": "Overview",
-    "steps": "Steps",
-    "relatedResources": "Related Resources",
-    "relatedPlaybooks": "Related Playbooks",
-    "relatedInfographics": "Related Infographics",
-    "relatedArticles": "Related Articles",
-    "stepOf": "Step {current} of {total}",
-    "markComplete": "Mark as Complete",
-    "completed": "Completed",
-    "nextStep": "Next Step",
-    "previousStep": "Previous Step",
-    "problem": "Problem",
-    "solution": "Solution",
-    "stepsTitle": "Steps to Complete",
-    "stepByStepGuide": "Step-by-Step Guide",
-    "viewStep": "View step",
-    "hideStep": "Hide step",
-    "resources": "Resources",
-    "keyTerms": "Key Terms",
+    "allPlaybooks": "Tutti i Playbook",
+    "browseAllPlaybooks": "Sfoglia Tutti i Playbook",
+    "overview": "Panoramica",
+    "steps": "Passi",
+    "relatedResources": "Risorse Correlate",
+    "relatedPlaybooks": "Playbook Correlati",
+    "relatedInfographics": "Infografiche Correlate",
+    "relatedArticles": "Articoli Correlati",
+    "stepOf": "Passo {current} di {total}",
+    "markComplete": "Segna come Completato",
+    "completed": "Completato",
+    "nextStep": "Passo Successivo",
+    "previousStep": "Passo Precedente",
+    "problem": "Problema",
+    "solution": "Soluzione",
+    "stepsTitle": "Passi da Completare",
+    "stepByStepGuide": "Guida Passo Passo",
+    "viewStep": "Visualizza passo",
+    "hideStep": "Nascondi passo",
+    "resources": "Risorse",
+    "keyTerms": "Termini Chiave",
     "difficulty": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzato"
     },
     "progress": {
-      "title": "Your Progress",
-      "stepsCompleted": "of",
-      "stepsWord": "steps completed",
-      "allComplete": "All steps completed!"
+      "title": "Il Tuo Progresso",
+      "stepsCompleted": "di",
+      "stepsWord": "passi completati",
+      "allComplete": "Tutti i passi completati!"
     },
     "whatsNext": {
-      "title": "What's",
-      "titleHighlight": "Next",
+      "title": "Cosa c'è",
+      "titleHighlight": "Dopo",
       "morePlaybooks": {
-        "title": "More Playbooks",
-        "subtitle": "Continue learning"
+        "title": "Altri Playbook",
+        "subtitle": "Continua ad imparare"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "subtitle": "Code examples"
+        "title": "Pattern Dev",
+        "subtitle": "Esempi di codice"
       },
       "buildOnErgo": {
-        "title": "Build on Ergo",
-        "subtitle": "Developer hub"
+        "title": "Costruisci su Ergo",
+        "subtitle": "Hub sviluppatori"
       }
     },
     "emailCapture": {
-      "title": "Complete Your Learning",
-      "description": "Get playbook updates, new guides, and step-by-step tutorials delivered to your inbox."
+      "title": "Completa il Tuo Apprendimento",
+      "description": "Ricevi aggiornamenti sui playbook, nuove guide e tutorial passo passo nella tua casella di posta."
     },
     "finalCta": {
-      "completedTitle": "Congratulations!",
-      "completedDescription": "You've completed this playbook. Ready for the next challenge?",
-      "readyTitle": "Ready to Get Started?",
-      "readyDescription": "Complete this playbook and join the Ergo community."
+      "completedTitle": "Congratulazioni!",
+      "completedDescription": "Hai completato questo playbook. Pronto per la prossima sfida?",
+      "readyTitle": "Pronto per Iniziare?",
+      "readyDescription": "Completa questo playbook e unisciti alla comunità Ergo."
     }
   },
   "infographicItems": {
     "what-we-are-fighting-against-financial-repression-stack": {
-      "title": "What We",
-      "shortDescription": "Layered view of the financial repression stack and how Ergo answers with censorship-resistant settlement, open programmability and privacy on demand.",
-      "subtitle": "The Financial Repression Stack — and what Ergo offers instead."
+      "title": "Contro Cosa Combattiamo",
+      "shortDescription": "Visione stratificata dello stack di repressione finanziaria e come Ergo risponde con regolamento resistente alla censura, programmabilità aperta e privacy su richiesta.",
+      "subtitle": "Lo Stack di Repressione Finanziaria — e cosa offre invece Ergo."
     },
     "powered-by-builders-designed-for-freedom": {
-      "title": "Powered by Builders. Designed for Freedom.",
-      "shortDescription": "Three-layer Ergo pyramid showing miners securing the base layer, builders shipping tools and dApps, and freedom seekers owning their finance.",
-      "subtitle": "A three-layer Ergo pyramid of miners, builders and freedom seekers aligned around money without masters."
+      "title": "Alimentato dai Builder. Progettato per la Libertà.",
+      "shortDescription": "Piramide Ergo a tre livelli che mostra i miner che proteggono il layer base, i builder che distribuiscono strumenti e dApp, e i cercatori di libertà che gestiscono le proprie finanze.",
+      "subtitle": "Una piramide Ergo a tre livelli di miner, builder e cercatori di libertà allineati attorno al denaro senza padroni."
     },
     "mev-resistance-vs-dark-forest": {
-      "title": "MEV-Resistance vs the ",
-      "shortDescription": "How global DeFi ",
-      "subtitle": "Contrasting global DeFi "
+      "title": "Resistenza MEV vs la ",
+      "shortDescription": "Come la DeFi globale ",
+      "subtitle": "Contrasto tra la DeFi globale "
     },
     "smart-contract-l1-tree": {
-      "title": "Smart-Contract L1 Tree",
-      "shortDescription": "How Bitcoin, Ethereum, Cardano and Ergo differ in smart-contract state models, determinism, audit complexity, expressiveness and hidden global state risk.",
-      "subtitle": "Tracing smart-contract L1 evolution from Bitcoin"
+      "title": "Albero L1 degli Smart Contract",
+      "shortDescription": "Come Bitcoin, Ethereum, Cardano ed Ergo differiscono nei modelli di stato degli smart contract, determinismo, complessità di audit, espressività e rischio di stato globale nascosto.",
+      "subtitle": "Tracciare l'evoluzione degli smart contract L1 da Bitcoin"
     },
     "ergo-vs-privacy-coins": {
-      "title": "Ergo vs Privacy Coins",
-      "shortDescription": "How Ergo, Monero, Zcash and L2 mixers differ in privacy models, programmability, selective disclosure, auditability and fair-launch tokenomics.",
-      "subtitle": "Comparing Ergo, Monero, Zcash and L2 mixers on privacy models, programmability, auditability and tokenomics."
+      "title": "Ergo vs Privacy Coin",
+      "shortDescription": "Come Ergo, Monero, Zcash e i mixer L2 differiscono nei modelli di privacy, programmabilità, divulgazione selettiva, auditabilità e tokenomics con lancio equo.",
+      "subtitle": "Confronto tra Ergo, Monero, Zcash e mixer L2 su modelli di privacy, programmabilità, auditabilità e tokenomics."
     },
     "pow-vs-pos-censorship-and-attack-surface": {
-      "title": "PoW vs PoS: Censorship & Attack Surface",
-      "shortDescription": "How PoW, classic PoS and validator committees differ in censorship power, cartel risk, regulatory pressure and user resistance tools.",
-      "subtitle": "Comparing miners, stakers and validator committees on who can censor, how cartels form and how systems react under pressure."
+      "title": "PoW vs PoS: Censura e Superficie di Attacco",
+      "shortDescription": "Come PoW, PoS classico e comitati di validatori differiscono nel potere di censura, rischio di cartello, pressione normativa e strumenti di resistenza degli utenti.",
+      "subtitle": "Confronto tra miner, staker e comitati di validatori su chi può censurare, come si formano i cartelli e come i sistemi reagiscono sotto pressione."
     },
     "eutxo-vs-accounts-vs-classic-utxo": {
-      "title": "eUTXO vs Accounts vs Classic UTXO",
-      "shortDescription": "How classic UTXO, global accounts and Ergo",
-      "subtitle": "Comparing Bitcoin-style UTXO, global accounts and Ergo"
+      "title": "eUTXO vs Account vs UTXO Classico",
+      "shortDescription": "Come UTXO classico, account globali ed Ergo",
+      "subtitle": "Confronto tra UTXO in stile Bitcoin, account globali ed Ergo"
     },
     "privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins": {
-      "title": "Privacy, But Auditable",
-      "shortDescription": "How mixers, classic privacy coins and Ergo",
-      "subtitle": "Three ways to do on-chain privacy — and why Ergo chooses Sigma Protocols."
+      "title": "Privacy, Ma Verificabile",
+      "shortDescription": "Come mixer, privacy coin classici ed Ergo",
+      "subtitle": "Tre modi per fare privacy on-chain — e perché Ergo sceglie i Sigma Protocol."
     },
     "where-ergo-fits-among-major-chains": {
-      "title": "Where Ergo Fits Among Major Chains",
-      "shortDescription": "Scatterplot comparing Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDCs and typical VC chains across launch model, programmability, DeFi and privacy.",
-      "subtitle": "Sound money, smart contracts, and privacy in one PoW L1."
+      "title": "Dove si Colloca Ergo tra le Chain Principali",
+      "shortDescription": "Scatterplot che confronta Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDC e chain VC tipiche su modello di lancio, programmabilità, DeFi e privacy.",
+      "subtitle": "Moneta sana, smart contract e privacy in un unico PoW L1."
     },
     "ergo-vs-zcash-zk-without-ceremony": {
-      "title": "Ergo vs Zcash: ZK Without Ceremony",
-      "shortDescription": "Side-by-side infographic comparing Ergo’s Sigma-based, trustless privacy and smart contracts with Zcash’s trusted-setup-based ZK model.",
-      "subtitle": "Sigma-based privacy and smart contracts without trusted setup."
+      "title": "Ergo vs Zcash: ZK Senza Cerimonia",
+      "shortDescription": "Infografica side-by-side che confronta la privacy trustless basata su Sigma di Ergo e gli smart contract con il modello ZK di Zcash basato su trusted setup.",
+      "subtitle": "Privacy basata su Sigma e smart contract senza trusted setup."
     },
     "ergo-vs-solana-tps-vs-sovereignty": {
-      "title": "Ergo vs Solana: TPS vs Sovereignty",
-      "shortDescription": "Infographic comparing Ergo’s high decentralization and sovereignty with Solana’s maximum throughput focus, including hardware, funding and design trade-offs.",
-      "subtitle": "High throughput or high decentralization — pick your side."
+      "title": "Ergo vs Solana: TPS vs Sovranità",
+      "shortDescription": "Infografica che confronta l'alta decentralizzazione e sovranità di Ergo con il focus sul massimo throughput di Solana, inclusi trade-off di hardware, finanziamento e design.",
+      "subtitle": "Alto throughput o alta decentralizzazione — scegli la tua parte."
     },
     "ergo-vs-cardano-two-eutxo-paths": {
-      "title": "Ergo vs Cardano: Two eUTXO Paths",
-      "shortDescription": "Infographic comparing Ergo and Cardano as two eUTXO chains with the same research roots but different choices on consensus, launch, privacy and sustainability.",
-      "subtitle": "Same research roots, different choices on consensus, launch, and sustainability."
+      "title": "Ergo vs Cardano: Due Percorsi eUTXO",
+      "shortDescription": "Infografica che confronta Ergo e Cardano come due chain eUTXO con le stesse radici di ricerca ma scelte diverse su consenso, lancio, privacy e sostenibilità.",
+      "subtitle": "Stesse radici di ricerca, scelte diverse su consenso, lancio e sostenibilità."
     },
     "ergo-vs-litecoin-digital-silver-vs-programmable-money": {
-      "title": "Ergo vs Litecoin: Digital Silver vs Programmable Money",
-      "shortDescription": "Infographic comparing Ergo as programmable PoW money for DeFi and alternative economic systems with Litecoin as digital silver / faster Bitcoin focused on payments.",
-      "subtitle": "From “fast Bitcoin” payments to PoW smart-contract DeFi."
+      "title": "Ergo vs Litecoin: Argento Digitale vs Denaro Programmabile",
+      "shortDescription": "Infografica che confronta Ergo come denaro PoW programmabile per DeFi e sistemi economici alternativi con Litecoin come argento digitale / Bitcoin più veloce focalizzato sui pagamenti.",
+      "subtitle": "Da pagamenti 'Bitcoin veloce' alla DeFi PoW con smart contract."
     },
     "ergo-vs-monero-privacy-modes": {
-      "title": "Ergo vs Monero: Privacy Modes",
-      "shortDescription": "Infographic comparing Monero’s always-on payment privacy with Ergo’s optional, programmable privacy for DeFi, smart contracts and selective disclosure.",
-      "subtitle": "Always-on payment privacy vs programmable privacy for DeFi."
+      "title": "Ergo vs Monero: Modalità Privacy",
+      "shortDescription": "Infografica che confronta la privacy dei pagamenti always-on di Monero con la privacy opzionale e programmabile di Ergo per DeFi, smart contract e divulgazione selettiva.",
+      "subtitle": "Privacy dei pagamenti always-on vs privacy programmabile per DeFi."
     },
     "ergo-vs-ethereum-same-power-less-pain": {
-      "title": "Ergo vs Ethereum: Same Power, Less Pain",
-      "shortDescription": "Infographic comparing Ergo and Ethereum on state model, MEV and fees, consensus power structure and privacy, showing how eUTXO aims for similar programmability with fewer account-model headaches.",
-      "subtitle": "Smart contracts and DeFi without account-model headaches and MEV wars."
+      "title": "Ergo vs Ethereum: Stessa Potenza, Meno Dolore",
+      "shortDescription": "Infografica che confronta Ergo ed Ethereum su modello di stato, MEV e fee, struttura del potere di consenso e privacy, mostrando come eUTXO mira a una programmabilità simile con meno problemi del modello account.",
+      "subtitle": "Smart contract e DeFi senza i problemi del modello account e le guerre MEV."
     },
     "ergo-vs-major-l1s-feature-checklist": {
-      "title": "Ergo vs Major L1s – Feature Checklist",
-      "shortDescription": "Side-by-side matrix for Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across consensus, launch, privacy, storage rent, MEV and more.",
-      "subtitle": "Consensus, launch, privacy, storage rent, MEV — all in one table."
+      "title": "Ergo vs Principali L1 – Checklist Funzionalità",
+      "shortDescription": "Matrice side-by-side per Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, una chain VC tipica, CBDC ed Ergo su consenso, lancio, privacy, storage rent, MEV e altro.",
+      "subtitle": "Consenso, lancio, privacy, storage rent, MEV — tutto in una tabella."
     },
     "ergo-vs-avalanche-funding-story-and-power-structure": {
-      "title": "Ergo vs Avalanche: Funding Story and Power Structure",
-      "shortDescription": "Infographic comparing Ergo’s $0 VC, 100% mined distribution with Avalanche’s hundreds of millions in venture funding, and how that shapes consensus, control and incentives.",
-      "subtitle": "$0 VC and 100% mined vs hundreds of millions in venture funding."
+      "title": "Ergo vs Avalanche: Storia dei Finanziamenti e Struttura del Potere",
+      "shortDescription": "Infografica che confronta la distribuzione $0 VC e 100% minata di Ergo con i centinaia di milioni in venture funding di Avalanche, e come ciò plasma consenso, controllo e incentivi.",
+      "subtitle": "$0 VC e 100% minato vs centinaia di milioni in venture funding."
     },
     "ergo-vs-bitcoin-bitcoin-with-the-missing-pieces": {
-      "title": "Ergo vs Bitcoin: Bitcoin With the Missing Pieces",
-      "shortDescription": "Infographic comparing simple UTXO Bitcoin money with Ergo’s eUTXO, smart contracts, privacy and storage rent — like adding missing layers on top of the Bitcoin brick.",
-      "subtitle": "From simple UTXO money to programmable, sustainable PoW DeFi."
+      "title": "Ergo vs Bitcoin: Bitcoin con i Pezzi Mancanti",
+      "shortDescription": "Infografica che confronta il semplice denaro UTXO Bitcoin con eUTXO di Ergo, smart contract, privacy e storage rent — come aggiungere i livelli mancanti sopra il mattone Bitcoin.",
+      "subtitle": "Da semplice denaro UTXO a DeFi PoW programmabile e sostenibile."
     },
     "ergo-vs-cbdcs-control-vs-sovereignty": {
-      "title": "Ergo vs CBDCs: Control vs Sovereignty",
-      "shortDescription": "Infographic contrasting self-custodied programmable money on Ergo with centrally controlled CBDCs across ownership, privacy, censorship and monetary policy.",
-      "subtitle": "Central bank scripts vs self-custodied programmable money."
+      "title": "Ergo vs CBDC: Controllo vs Sovranità",
+      "shortDescription": "Infografica che contrasta il denaro programmabile auto-custodito su Ergo con i CBDC centralmente controllati su proprietà, privacy, censura e politica monetaria.",
+      "subtitle": "Script delle banche centrali vs denaro programmabile auto-custodito."
     },
     "ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi": {
-      "title": "Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi",
-      "shortDescription": "Infographic comparing Ergo and Ravencoin as PoW token platforms, from simple asset issuance to a full programmable DeFi stack with privacy and advanced features.",
-      "subtitle": "From simple asset issuance to a full PoW DeFi platform."
+      "title": "Ergo vs Ravencoin: Token su PoW – Base vs DeFi Completa",
+      "shortDescription": "Infografica che confronta Ergo e Ravencoin come piattaforme di token PoW, dall'emissione semplice di asset a uno stack DeFi completamente programmabile con privacy e funzionalità avanzate.",
+      "subtitle": "Dall'emissione semplice di asset a una piattaforma DeFi PoW completa."
     },
     "ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow": {
-      "title": "Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW",
-      "shortDescription": "Infographic comparing Ergo’s programmable eUTXO DeFi stack with Kaspa’s high-throughput PoW payments layer built on a BlockDAG.",
-      "subtitle": "From pure PoW payments to a full programmable DeFi platform."
+      "title": "Ergo vs Kaspa: PoW Programmabile vs PoW ad Alto Throughput",
+      "shortDescription": "Infografica che confronta lo stack DeFi eUTXO programmabile di Ergo con il layer di pagamenti PoW ad alto throughput di Kaspa costruito su un BlockDAG.",
+      "subtitle": "Da puri pagamenti PoW a una piattaforma DeFi programmabile completa."
     },
     "autolykos-mining-without-masters": {
-      "title": "Autolykos: Mining Without Masters",
-      "shortDescription": "How Ergo",
+      "title": "Autolykos: Mining Senza Padroni",
+      "shortDescription": "Come Ergo",
       "subtitle": "Ergo"
     },
     "who-starts-with-the-coins-vc-allocation-vs-ergo-supply": {
-      "title": "Who Starts With the Coins?",
-      "shortDescription": "How typical VC chains reserve large token chunks for insiders while Ergo",
-      "subtitle": "Comparing VC chain token allocation with Ergo"
+      "title": "Chi Inizia con le Monete?",
+      "shortDescription": "Come le chain VC tipiche riservano grandi quantità di token per gli insider mentre Ergo",
+      "subtitle": "Confronto dell'allocazione dei token delle chain VC con Ergo"
     },
     "how-is-security-maintained-pos-vs-ergo-autolykos": {
-      "title": "How Is Security Maintained?",
-      "shortDescription": "How network security and rewards differ between typical Proof-of-Stake staking and Ergo",
-      "subtitle": "Comparing PoS staking wealth concentration with Ergo"
+      "title": "Come si Mantiene la Sicurezza?",
+      "shortDescription": "Come la sicurezza della rete e le ricompense differiscono tra lo staking PoS tipico ed Ergo",
+      "subtitle": "Confronto tra la concentrazione di ricchezza dello staking PoS ed Ergo"
     },
     "how-it-starts-vc-chain-vs-ergo": {
-      "title": "How It Starts: VC Chain vs Ergo",
-      "shortDescription": "How a typical VC-backed blockchain launch contrasts with Ergo",
-      "subtitle": "Who really gets in early? Comparing VC chain funnels with Ergo"
+      "title": "Come Inizia: Chain VC vs Ergo",
+      "shortDescription": "Come un tipico lancio di blockchain VC-backed contrasta con Ergo",
+      "subtitle": "Chi entra davvero presto? Confronto tra i funnel delle chain VC ed Ergo"
     },
     "engineered-for-global-settlement-ergo": {
-      "title": "Engineered for Global Settlement",
-      "shortDescription": "How Ergo",
-      "subtitle": "Fast, low-cost, MEV-resistant settlement built on Ergo."
+      "title": "Progettato per il Regolamento Globale",
+      "shortDescription": "Come Ergo",
+      "subtitle": "Regolamento veloce, a basso costo e resistente al MEV costruito su Ergo."
     },
     "ergo-blockchain-research-driven-cypherpunk-aligned": {
-      "title": "Ergo Blockchain: Research-Driven & Cypherpunk-Aligned",
-      "shortDescription": "Fair-launched Proof-of-Work blockchain with eUTXO smart contracts, Sigma Protocols privacy and a sustainability stack built for cypherpunks.",
-      "subtitle": "Built for Sustainability, Privacy, and Verifiable Rules. A Fair-Launched Proof-of-Work Platform."
+      "title": "Blockchain Ergo: Guidata dalla Ricerca e Allineata ai Cypherpunk",
+      "shortDescription": "Blockchain Proof-of-Work con lancio equo, smart contract eUTXO, privacy con Sigma Protocol e uno stack di sostenibilità costruito per i cypherpunk.",
+      "subtitle": "Costruita per Sostenibilità, Privacy e Regole Verificabili. Una Piattaforma Proof-of-Work con Lancio Equo."
     },
     "blockchain-matrix-where-ergo-actually-fits": {
-      "title": "Blockchain Matrix: Where Ergo Actually Fits",
-      "shortDescription": "Matrix comparing Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, a typical VC chain and Ergo across consensus, launch, privacy, MEV resistance, storage rent and fees.",
-      "subtitle": "Comparing consensus, launches, privacy and incentives across major chains."
+      "title": "Matrice Blockchain: Dove si Colloca Davvero Ergo",
+      "shortDescription": "Matrice che confronta Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, una chain VC tipica ed Ergo su consenso, lancio, privacy, resistenza MEV, storage rent e fee.",
+      "subtitle": "Confronto di consenso, lanci, privacy e incentivi tra le principali chain."
     },
     "money-without-masters-ergo-vs-banks-and-vc-crypto": {
-      "title": "Money Without Masters",
-      "shortDescription": "How Ergo",
-      "subtitle": "Open, programmable, censorship-resistant finance. Built on Ergo."
+      "title": "Denaro Senza Padroni",
+      "shortDescription": "Come Ergo",
+      "subtitle": "Finanza aperta, programmabile e resistente alla censura. Costruita su Ergo."
     },
     "ergo-subblock-technology-boosting-throughput-with-parallelism": {
       "title": "Ergo",
-      "shortDescription": "How key blocks and subblocks let Ergo increase transaction capacity and confirmation speed without sacrificing security.",
-      "subtitle": "How key blocks and subblocks increase transaction capacity and confirmation speed."
+      "shortDescription": "Come i blocchi chiave e i subblock permettono a Ergo di aumentare la capacità di transazione e la velocità di conferma senza sacrificare la sicurezza.",
+      "subtitle": "Come i blocchi chiave e i subblock aumentano la capacità di transazione e la velocità di conferma."
     },
     "ergo-oracle-pools-decentralized-reliable-real-world-data": {
       "title": "Ergo",
-      "shortDescription": "How decentralized oracle pools aggregate multiple sources into on-chain data boxes for robust, trustless feeds.",
-      "subtitle": "Decentralized oracle pools for robust, trustless real-world data feeds."
+      "shortDescription": "Come le oracle pool decentralizzate aggregano più fonti in box di dati on-chain per feed robusti e trustless.",
+      "subtitle": "Oracle pool decentralizzate per feed dati del mondo reale robusti e trustless."
     },
     "ergo-nipopows-scalable-trustless-light-clients": {
-      "title": "Ergo NiPoPoWs: The Key to Scalable, Trustless Light Clients",
-      "shortDescription": "How NiPoPoWs let light clients verify PoW security with tiny superblock proofs for mobile, sidechains and bridges.",
-      "subtitle": "Verify PoW security with tiny superblock proofs for mobile, sidechains and bridges."
+      "title": "Ergo NiPoPoW: La Chiave per Client Leggeri Scalabili e Trustless",
+      "shortDescription": "Come i NiPoPoW permettono ai client leggeri di verificare la sicurezza PoW con minuscole prove di superblocco per mobile, sidechain e bridge.",
+      "subtitle": "Verifica la sicurezza PoW con minuscole prove di superblocco per mobile, sidechain e bridge."
     },
     "ergo-privacy-non-interactive-efficient": {
-      "title": "Ergo Privacy: Non-Interactive & Efficient",
-      "shortDescription": "How Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs provide built-in privacy on Ergo without trusted third parties.",
-      "subtitle": "Built-in privacy using Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs."
+      "title": "Privacy Ergo: Non-Interattiva ed Efficiente",
+      "shortDescription": "Come i Sigma Protocol, eUTXO, ErgoMixer e NiPoPoW forniscono privacy integrata su Ergo senza terze parti di fiducia.",
+      "subtitle": "Privacy integrata usando Sigma Protocol, eUTXO, ErgoMixer e NiPoPoW."
     },
     "ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners": {
-      "title": "Ergo Storage Rent: Preventing Blockchain Bloat & Rewarding Miners",
-      "shortDescription": "How storage rent cleans up state bloat, keeps Ergo nodes lean and rewards miners beyond block rewards.",
-      "subtitle": "How storage rent keeps the state lean and rewards miners long-term."
+      "title": "Storage Rent Ergo: Prevenire il Bloat della Blockchain e Ricompensare i Miner",
+      "shortDescription": "Come lo storage rent pulisce il bloat dello stato, mantiene i nodi Ergo snelli e ricompensa i miner oltre le ricompense sui blocchi.",
+      "subtitle": "Come lo storage rent mantiene lo stato snello e ricompensa i miner a lungo termine."
     },
     "ergo-eutxo-model-bitcoin-security-smart-contract-flexibility": {
       "title": "Ergo",
-      "shortDescription": "How Ergo",
+      "shortDescription": "Come Ergo",
       "subtitle": "Bitcoin"
     },
     "ergoscript-cypherpunk-code-of-freedom": {
-      "title": "ErgoScript: The Cypherpunk Code of Freedom",
-      "shortDescription": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization.",
-      "subtitle": "How eUTXO, strict design principles and Sigma Protocols turn ErgoScript into a weapon of decentralization."
+      "title": "ErgoScript: Il Codice Cypherpunk della Libertà",
+      "shortDescription": "Come eUTXO, principi di design rigorosi e Sigma Protocol trasformano ErgoScript in un'arma di decentralizzazione.",
+      "subtitle": "Come eUTXO, principi di design rigorosi e Sigma Protocol trasformano ErgoScript in un'arma di decentralizzazione."
     },
     "ergo-blockchain-introduction-fundamentals": {
-      "title": "Ergo Blockchain: Introduction & Fundamentals",
-      "shortDescription": "High-level introduction to the Ergo blockchain: PoW smart contracts, eUTXO, Autolykos and Sigma Protocols.",
-      "subtitle": "A quick overview of Ergo"
+      "title": "Blockchain Ergo: Introduzione e Fondamentali",
+      "shortDescription": "Introduzione di alto livello alla blockchain Ergo: smart contract PoW, eUTXO, Autolykos e Sigma Protocol.",
+      "subtitle": "Una rapida panoramica di Ergo"
     },
     "three-pillars-ergos-sustainability": {
-      "title": "The Three Pillars of Ergo",
-      "shortDescription": "How Autolykos mining, NiPoPoWs light clients and storage rent form Ergo",
-      "subtitle": "Protocol-level mechanisms that keep Ergo viable and accessible for the long run."
+      "title": "I Tre Pilastri di Ergo",
+      "shortDescription": "Come il mining Autolykos, i client leggeri NiPoPoW e lo storage rent formano la sostenibilità di Ergo",
+      "subtitle": "Meccanismi a livello di protocollo che mantengono Ergo vitale e accessibile nel lungo periodo."
     },
     "who-actually-needs-ergo": {
-      "title": "Who Actually Needs Ergo?",
-      "shortDescription": "Who actually needs Ergo today: builders, miners, privacy-focused users and cypherpunk OGs.",
-      "subtitle": "Real people behind the tech: builders, miners, privacy users and cypherpunks."
+      "title": "Chi ha Davvero Bisogno di Ergo?",
+      "shortDescription": "Chi ha davvero bisogno di Ergo oggi: builder, miner, utenti attenti alla privacy e cypherpunk OG.",
+      "subtitle": "Persone reali dietro la tecnologia: builder, miner, utenti privacy e cypherpunk."
     },
     "vc-chain-vs-ergo-fair-launch": {
-      "title": "Fair & Secure: VC Chain vs Ergo at a Glance",
-      "shortDescription": "How Ergo",
-      "subtitle": "How Ergo"
+      "title": "Equo e Sicuro: Chain VC vs Ergo in Sintesi",
+      "shortDescription": "Come Ergo",
+      "subtitle": "Come Ergo"
     },
     "ergo-babel-fees-pay-with-any-token": {
-      "title": "Babel Fees: Pay Transaction Fees with Any Token",
-      "shortDescription": "How Ergo",
-      "subtitle": "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands."
+      "title": "Babel Fee: Paga le Fee di Transazione con Qualsiasi Token",
+      "shortDescription": "Come Ergo",
+      "subtitle": "Astrazione del gas tramite eUTXO: paga le fee nel token che possiedi, non quello che il protocollo richiede."
     }
   },
   "glossaryTerms": {}

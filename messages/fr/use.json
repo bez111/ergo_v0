@@ -135,7 +135,7 @@
         },
         "standardPayment": {
           "title": "Paiement standard en ERG",
-          "description": "En général, les frais de transaction sur le réseau Ergo sont payés en ERG, la monnaie native de la plateforme. Le montant des frais dépend de la «\u00a0taille\u00a0» de la transaction en octets et de la congestion actuelle du réseau, mais généralement, les frais Ergo visent à être prévisibles grâce au modèle eUTXO."
+          "description": "En général, les frais de transaction sur le réseau Ergo sont payés en ERG, la monnaie native de la plateforme. Le montant des frais dépend de la « taille » de la transaction en octets et de la congestion actuelle du réseau, mais généralement, les frais Ergo visent à être prévisibles grâce au modèle eUTXO."
         }
       },
       "introduction": {
@@ -176,28 +176,28 @@
         "details": {
           "userOffer": {
             "title": "Offre de l'utilisateur",
-            "description": "Un utilisateur souhaitant payer des frais avec des tokens crée une «\u00a0sortie\u00a0» spéciale dans sa transaction, souvent appelée «\u00a0boîte de frais Babel\u00a0». Dans cette boîte, il offre une certaine quantité de ses tokens en échange de la couverture de ses frais ERG par quelqu'un d'autre."
+            "description": "Un utilisateur souhaitant payer des frais avec des tokens crée une « sortie » spéciale dans sa transaction, souvent appelée « boîte de frais Babel ». Dans cette boîte, il offre une certaine quantité de ses tokens en échange de la couverture de ses frais ERG par quelqu'un d'autre."
           },
           "intermediaries": {
             "title": "Rôle des intermédiaires (mineurs, bots, services)",
             "steps": {
               "detecting": {
                 "title": "1. Détection de l'offre",
-                "description": "Les mineurs ou des bots/services spécialisés (intermédiaires) analysent le réseau à la recherche de ces «\u00a0boîtes de frais Babel\u00a0»."
+                "description": "Les mineurs ou des bots/services spécialisés (intermédiaires) analysent le réseau à la recherche de ces « boîtes de frais Babel »."
               },
               "executing": {
                 "title": "2. Exécution de l'échange",
-                "description": "Si l'offre de tokens est rentable (c'est-à-dire que la valeur marchande des tokens offerts est supérieure ou égale au montant des frais ERG plus un petit bénéfice pour l'intermédiaire), l'intermédiaire «\u00a0remplit\u00a0» cette offre."
+                "description": "Si l'offre de tokens est rentable (c'est-à-dire que la valeur marchande des tokens offerts est supérieure ou égale au montant des frais ERG plus un petit bénéfice pour l'intermédiaire), l'intermédiaire « remplit » cette offre."
               },
               "paying": {
                 "title": "3. Paiement des frais ERG",
-                "description": "L'intermédiaire prend les tokens offerts de la «\u00a0boîte de frais Babel\u00a0» et paie les frais de transaction requis en ERG aux mineurs qui incluent la transaction dans un bloc."
+                "description": "L'intermédiaire prend les tokens offerts de la « boîte de frais Babel » et paie les frais de transaction requis en ERG aux mineurs qui incluent la transaction dans un bloc."
               }
             }
           },
           "market": {
             "title": "Mécanisme de marché",
-            "description": "L'efficacité des Babel Fees pour un token spécifique dépend de l'existence d'un «\u00a0marché\u00a0» pour celui-ci — ce qui signifie qu'il doit y avoir des intermédiaires prêts à accepter ces tokens en échange d'ERG à un certain taux. Plus un token est populaire, plus il y a de chances qu'il soit accepté pour le paiement des frais."
+            "description": "L'efficacité des Babel Fees pour un token spécifique dépend de l'existence d'un « marché » pour celui-ci — ce qui signifie qu'il doit y avoir des intermédiaires prêts à accepter ces tokens en échange d'ERG à un certain taux. Plus un token est populaire, plus il y a de chances qu'il soit accepté pour le paiement des frais."
           }
         }
       },
@@ -252,7 +252,7 @@
           },
           "exchangeRates": {
             "title": "Taux de change",
-            "description": "Le «\u00a0prix\u00a0» ou taux de change auquel vos tokens sont acceptés pour couvrir les frais ERG sera déterminé par les conditions du marché et les offres des intermédiaires."
+            "description": "Le « prix » ou taux de change auquel vos tokens sont acceptés pour couvrir les frais ERG sera déterminé par les conditions du marché et les offres des intermédiaires."
           },
           "howToUse": {
             "title": "Comment utiliser",
@@ -268,7 +268,7 @@
         },
         "questions": {
           "adoption": "Dans quelle mesure les Babel Fees sont-ils actuellement adoptés par les mineurs/intermédiaires ?",
-          "markets": "Existe-t-il des «\u00a0marchés\u00a0» actifs et liquides pour de nombreux tokens utilisables pour les Babel Fees ?",
+          "markets": "Existe-t-il des « marchés » actifs et liquides pour de nombreux tokens utilisables pour les Babel Fees ?",
           "development": "Y a-t-il un travail en cours pour améliorer ou étendre le mécanisme des Babel Fees ?"
         },
         "checkUpdates": "Consulter les dernières mises à jour sur EIP-0019"
@@ -575,7 +575,7 @@
             "description": "CEX mondial avec la paire ERG/USDT disponible."
           },
           "coinex": {
-            "name": "Coinex",
+            "name": "CoinEx",
             "description": "Exchange supportant ERG/USDT sans KYC requis."
           }
         },
@@ -610,7 +610,7 @@
       },
       "security": {
         "title": "Restez toujours en sécurité",
-        "description": "Après avoir acquis de l'ERG sur un exchange, il est crucial de le retirer vers un portefeuille personnel dont vous contrôlez les clés privées. Souvenez-vous du mantra crypto : «\u00a0Pas vos clés, pas votre crypto.\u00a0»",
+        "description": "Après avoir acquis de l'ERG sur un exchange, il est crucial de le retirer vers un portefeuille personnel dont vous contrôlez les clés privées. Souvenez-vous du mantra crypto : « Pas vos clés, pas votre crypto. »",
         "findWallet": "Trouvez un portefeuille sécurisé ici"
       },
       "schema": {
@@ -618,9 +618,21 @@
           "name": "Répertoire des exchanges ERG",
           "description": "Liste complète des exchanges où vous pouvez acheter des tokens ERG",
           "items": [
-            { "name": "KuCoin", "url": "https://www.kucoin.com", "description": "Exchange majeur avec une liquidité ERG élevée" },
-            { "name": "Gate.io", "url": "https://www.gate.io", "description": "Exchange populaire supportant ERG" },
-            { "name": "CoinEx", "url": "https://www.coinex.com", "description": "Exchange avec des paires de trading ERG" }
+            {
+              "name": "KuCoin",
+              "url": "https://www.kucoin.com",
+              "description": "Exchange majeur avec une liquidité ERG élevée"
+            },
+            {
+              "name": "Gate.io",
+              "url": "https://www.gate.io",
+              "description": "Exchange populaire supportant ERG"
+            },
+            {
+              "name": "CoinEx",
+              "url": "https://www.coinex.com",
+              "description": "Exchange avec des paires de trading ERG"
+            }
           ]
         },
         "faq": {
@@ -1408,7 +1420,7 @@
           "description": "Support natif des tokens enveloppés avec adossement 1:1"
         },
         "atomicSwaps": {
-          "title": "Atomic Swaps",
+          "title": "Échanges atomiques",
           "description": "Échanges inter-chaînes pair-à-pair directs sans intermédiaires"
         }
       },
@@ -2118,7 +2130,7 @@
           }
         },
         "defiNetwork": {
-          "name": "DeFi Oracle Network",
+          "name": "Réseau Oracle DeFi",
           "description": "Oracles spécialisés pour les protocoles DeFi",
           "status": "En développement",
           "features": {
@@ -2500,7 +2512,7 @@
       "software": {
         "0": {
           "name": "T-Rex Miner",
-          "type": "NVIDIA GPU",
+          "type": "GPU NVIDIA",
           "features": {
             "0": "Haute performance",
             "1": "Configuration facile",
@@ -2510,7 +2522,7 @@
         },
         "1": {
           "name": "TeamRedMiner",
-          "type": "AMD GPU",
+          "type": "GPU AMD",
           "features": {
             "0": "Optimisé pour AMD",
             "1": "Minage stable",
@@ -2712,8 +2724,8 @@
       "identity": "Identité",
       "reputation": "Réputation",
       "did": "DID",
-      "gaming": "Gaming",
-      "metaverse": "Metaverse"
+      "gaming": "Jeux",
+      "metaverse": "Métavers"
     },
     "stablecoins": {
       "title": "Stablecoins algorithmiques",

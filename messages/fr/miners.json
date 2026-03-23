@@ -19,12 +19,31 @@
       "miners": "Pour les mineurs"
     },
     "metrics": {
-      "networkHashrate": { "label": "Hashrate du réseau", "comment": "Hashrate du réseau → compétition & sécurité" },
-      "difficulty": { "label": "Difficulté", "comment": "Difficulté → base pour la rentabilité" },
-      "blockTime": { "label": "Temps de bloc", "comment": "Temps de bloc réguliers = récompenses prévisibles" },
-      "blockReward": { "label": "Récompense de bloc", "comment": "Récompense de bloc + frais → revenu total du mineur", "trend": "{remaining}M restants" },
-      "activeMiners": { "label": "Mineurs actifs", "comment": "Distribution saine des mineurs" },
-      "miningPools": { "label": "Pools de minage", "comment": "Plusieurs options de pool pour la décentralisation" }
+      "networkHashrate": {
+        "label": "Hashrate du réseau",
+        "comment": "Hashrate du réseau → compétition & sécurité"
+      },
+      "difficulty": {
+        "label": "Difficulté",
+        "comment": "Difficulté → base pour la rentabilité"
+      },
+      "blockTime": {
+        "label": "Temps de bloc",
+        "comment": "Temps de bloc réguliers = récompenses prévisibles"
+      },
+      "blockReward": {
+        "label": "Récompense de bloc",
+        "comment": "Récompense de bloc + frais → revenu total du mineur",
+        "trend": "{remaining}M restants"
+      },
+      "activeMiners": {
+        "label": "Mineurs actifs",
+        "comment": "Distribution saine des mineurs"
+      },
+      "miningPools": {
+        "label": "Pools de minage",
+        "comment": "Plusieurs options de pool pour la décentralisation"
+      }
     },
     "coreValues": {
       "asicResistant": {

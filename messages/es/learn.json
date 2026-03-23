@@ -42,7 +42,15 @@
       "documentation": "Documentación",
       "faq": {
         "title": "Preguntas Frecuentes",
-        "description": "Preguntas frecuentes sobre el aprendizaje de Ergo"
+        "description": "Preguntas frecuentes sobre el aprendizaje de Ergo",
+        "difficulty": "Principiante",
+        "duration": "15 minutos"
+      },
+      "research": {
+        "title": "Papeles de Investigación",
+        "description": "Investigación académica y whitepapers",
+        "difficulty": "Avanzado",
+        "duration": "60+ minutos"
       }
     },
     "learnHub": {

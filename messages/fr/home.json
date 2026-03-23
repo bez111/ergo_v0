@@ -40,11 +40,11 @@
       },
       "mev": {
         "value": "Résistant au MEV",
-        "label": "Front-running",
+        "label": "Pas de front-running",
         "hint": "Ordonnancement local, pas d'enchères de priorité globales"
       },
       "fee": {
-        "value": "≈ $0.01",
+        "value": "≈ 0,01 $",
         "label": "Frais typiques",
         "hint": "Des centimes, pas des dollars"
       },
@@ -570,7 +570,7 @@
           },
           "rewardsPaid": {
             "label": "Récompenses versées",
-            "value": "$250K"
+            "value": "250K $"
           }
         }
       }

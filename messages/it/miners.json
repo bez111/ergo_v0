@@ -1,130 +1,120 @@
 {
   "minersPage": {
     "hero": {
-      "title": "Mine with GPUs. Earn forever. Stay profitable.",
-      "subtitle": "ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.",
-      "cta": "Start Mining Ergo",
-      "checkProfitability": "Check Profitability",
-      "whyMine": "Why mine Ergo instead of other coins?"
+      "title": "Mina con le GPU. Guadagna per sempre. Rimani redditizio.",
+      "subtitle": "Algoritmo resistente agli ASIC. Ricompense eque. Lo storage rent mantiene i miner pagati dopo la fine delle emissioni.",
+      "cta": "Inizia a minare Ergo",
+      "checkProfitability": "Controlla la redditività",
+      "whyMine": "Perché minare Ergo invece di altre monete?"
     },
     "stats": {
-      "networkHashrate": "Network Hashrate",
-      "blockReward": "Block Reward",
-      "blockTime": "Block Time",
-      "activeMiners": "Active Miners",
-      "miningPools": "Mining Pools"
+      "networkHashrate": "Hashrate di rete",
+      "blockReward": "Ricompensa blocco",
+      "blockTime": "Tempo blocco",
+      "activeMiners": "Miner attivi",
+      "miningPools": "Pool di mining"
     },
     "breadcrumbs": {
       "home": "Home",
-      "miners": "For Miners"
+      "miners": "Per i miner"
     },
     "metrics": {
-      "networkHashrate": { "label": "Network Hashrate", "comment": "Network hashrate → competition & security" },
-      "difficulty": { "label": "Difficulty", "comment": "Difficulty → baseline for profitability" },
-      "blockTime": { "label": "Block Time", "comment": "Consistent block times = predictable rewards" },
-      "blockReward": { "label": "Block Reward", "comment": "Block reward + fees → total miner revenue", "trend": "{remaining}M left" },
-      "activeMiners": { "label": "Active Miners", "comment": "Healthy miner distribution" },
-      "miningPools": { "label": "Mining Pools", "comment": "Multiple pool options for decentralization" }
+      "networkHashrate": { "label": "Hashrate di rete", "comment": "Hashrate di rete → competizione e sicurezza" },
+      "difficulty": { "label": "Difficoltà", "comment": "Difficoltà → base per la redditività" },
+      "blockTime": { "label": "Tempo blocco", "comment": "Tempi di blocco costanti = ricompense prevedibili" },
+      "blockReward": { "label": "Ricompensa blocco", "comment": "Ricompensa blocco + commissioni → ricavo totale miner", "trend": "{remaining}M rimasti" },
+      "activeMiners": { "label": "Miner attivi", "comment": "Distribuzione sana dei miner" },
+      "miningPools": { "label": "Pool di mining", "comment": "Molteplici opzioni di pool per la decentralizzazione" }
     },
     "coreValues": {
       "asicResistant": {
-        "title": "ASIC-Resistant",
-        "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive.",
-        "highlight": "Level playing field"
+        "title": "Resistente agli ASIC",
+        "description": "Mining solo GPU. Nessun ASIC. Nessuna farm industriale che ti esclude. La tua scheda gaming rimane competitiva.",
+        "highlight": "Campo di gioco livellato"
       },
       "fairLaunch": {
-        "title": "Fair Launch",
-        "description": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one.",
-        "highlight": "No insider dumps"
+        "title": "Lancio equo",
+        "description": "Zero pre-mine. Zero tassa per gli sviluppatori. Zero allocazione VC. Ogni ERG è stato minato equamente dal primo giorno.",
+        "highlight": "Nessun dump da insider"
       },
       "realUseCases": {
-        "title": "Real Use Cases",
-        "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value.",
-        "highlight": "Sustainable demand"
+        "title": "Casi d'uso reali",
+        "description": "DeFi, DEX, funzionalità privacy creano una domanda reale. Non solo speculazione - utilità concreta che genera valore.",
+        "highlight": "Domanda sostenibile"
       },
       "storageRent": {
-        "title": "Storage Rent",
-        "description": "Built-in mechanism ensuring miners get paid beyond block rewards. Long-term sustainability by design.",
-        "highlight": "Future-proof"
+        "title": "Storage rent",
+        "description": "Meccanismo integrato che garantisce ai miner di essere pagati oltre le ricompense dei blocchi. Sostenibilità a lungo termine by design.",
+        "highlight": "A prova di futuro"
       }
     },
     "calculator": {
-      "title": "Mining",
-      "titleHighlight": "Profitability",
-      "titleSuffix": "Calculator",
-      "subtitle": "Calculate your potential earnings mining Ergo",
+      "title": "Calcolatore di",
+      "titleHighlight": "redditività",
+      "titleSuffix": "del mining",
+      "subtitle": "Calcola i tuoi guadagni potenziali minando Ergo",
       "hashrate": "Hashrate (MH/s)",
-      "power": "Power Consumption (W)",
-      "electricity": "Electricity Cost ($/kWh)",
-      "ergPrice": "ERG Price (USD)",
-      "dailyErgMined": "Daily ERG Mined",
-      "dailyRevenue": "Daily Revenue",
-      "dailyPowerCost": "Daily Power Cost",
-      "dailyProfit": "Daily Profit",
-      "monthly": "Monthly",
-      "yearly": "Yearly",
-      "roiTime": "ROI Time (GPU @ $500)",
-      "note": "Calculations are estimates based on current network difficulty and price.",
-      "gpuPresets": "Popular GPU Presets:",
-      "readyToStart": "Ready to start mining?",
-      "poolFee": "Pool Fee (%)",
-      "monthlyProfit": "Monthly Profit",
-      "yearlyProfit": "Yearly Profit"
+      "power": "Consumo energetico (W)",
+      "electricity": "Costo elettricità ($/kWh)",
+      "ergPrice": "Prezzo ERG (USD)",
+      "dailyErgMined": "ERG minati al giorno",
+      "dailyRevenue": "Ricavo giornaliero",
+      "dailyPowerCost": "Costo energia giornaliero",
+      "dailyProfit": "Profitto giornaliero",
+      "monthly": "Mensile",
+      "yearly": "Annuale",
+      "roiTime": "Tempo di ROI (GPU @ $500)",
+      "note": "I calcoli sono stime basate sulla difficoltà attuale della rete e il prezzo.",
+      "gpuPresets": "Preset GPU popolari:",
+      "readyToStart": "Pronto per iniziare a minare?",
+      "poolFee": "Commissione pool (%)",
+      "monthlyProfit": "Profitto mensile",
+      "yearlyProfit": "Profitto annuale"
     },
     "pools": {
-      "title": "Mining",
-      "titleHighlight": "Pools",
-      "titleSuffix": "Directory",
+      "title": "Directory dei",
+      "titleHighlight": "pool",
+      "titleSuffix": "di mining",
       "hashrate": "Hashrate",
-      "miners": "Miners",
-      "minPayout": "Min Payout",
-      "payment": "Payment",
-      "noPoolsFound": "No pools match your criteria"
+      "miners": "Miner",
+      "minPayout": "Pagamento minimo",
+      "payment": "Pagamento",
+      "noPoolsFound": "Nessun pool corrisponde ai tuoi criteri"
     },
     "software": {
-      "title": "Mining",
-      "titleHighlight": "Software",
+      "title": "Software di",
+      "titleHighlight": "mining",
       "headers": {
         "software": "Software",
-        "gpuSupport": "GPU Support",
-        "devFee": "Dev Fee",
-        "bestFor": "Best For"
+        "gpuSupport": "Supporto GPU",
+        "devFee": "Commissione sviluppatore",
+        "bestFor": "Ideale per"
       },
-      "newToMining": "New to mining? Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.",
+      "newToMining": "Nuovo al mining? Inizia con NBMiner (rig misti) o T-Rex (solo NVIDIA) per la configurazione più semplice.",
       "items": [
         {
           "name": "NBMiner",
-          "gpus": [
-            "NVIDIA",
-            "AMD"
-          ],
+          "gpus": ["NVIDIA", "AMD"],
           "fee": "2%",
-          "recommended": "Best for mixed rigs"
+          "recommended": "Ideale per rig misti"
         },
         {
           "name": "T-Rex",
-          "gpus": [
-            "NVIDIA"
-          ],
+          "gpus": ["NVIDIA"],
           "fee": "1%",
-          "recommended": "Best for NVIDIA cards"
+          "recommended": "Ideale per schede NVIDIA"
         },
         {
           "name": "TeamRedMiner",
-          "gpus": [
-            "AMD"
-          ],
+          "gpus": ["AMD"],
           "fee": "2%",
-          "recommended": "Best for AMD cards"
+          "recommended": "Ideale per schede AMD"
         },
         {
           "name": "lolMiner",
-          "gpus": [
-            "NVIDIA",
-            "AMD"
-          ],
+          "gpus": ["NVIDIA", "AMD"],
           "fee": "1%",
-          "recommended": "Advanced users"
+          "recommended": "Utenti avanzati"
         }
       ]
     },
@@ -135,66 +125,42 @@
           "fee": "1%",
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
-          "features": [
-            "Auto-exchange",
-            "Mobile app",
-            "API access"
-          ]
+          "features": ["Auto-exchange", "App mobile", "Accesso API"]
         },
         {
           "name": "2Miners",
           "fee": "1%",
           "paymentSystem": "PPLNS",
           "minPayout": "0.1 ERG",
-          "features": [
-            "24/7 Support",
-            "Telegram bot",
-            "Email alerts"
-          ]
+          "features": ["Supporto 24/7", "Bot Telegram", "Avvisi email"]
         },
         {
           "name": "HeroMiners",
           "fee": "0.9%",
           "paymentSystem": "PROP",
           "minPayout": "0.5 ERG",
-          "features": [
-            "SSL support",
-            "Worker stats",
-            "Discord bot"
-          ]
+          "features": ["Supporto SSL", "Statistiche worker", "Bot Discord"]
         },
         {
           "name": "WoolyPooly",
           "fee": "0.9%",
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
-          "features": [
-            "Solo mining",
-            "Telegram bot",
-            "MEV rewards"
-          ]
+          "features": ["Mining solo", "Bot Telegram", "Ricompense MEV"]
         },
         {
           "name": "F2Pool",
           "fee": "2%",
           "paymentSystem": "PPS+",
           "minPayout": "1 ERG",
-          "features": [
-            "Mobile app",
-            "Multi-coin",
-            "Instant payments"
-          ]
+          "features": ["App mobile", "Multi-moneta", "Pagamenti istantanei"]
         },
         {
           "name": "Nanopool",
           "fee": "1%",
           "paymentSystem": "PPLNS",
           "minPayout": "1 ERG",
-          "features": [
-            "Email notifications",
-            "API",
-            "Multi-language"
-          ]
+          "features": ["Notifiche email", "API", "Multilingue"]
         }
       ]
     },
@@ -202,426 +168,346 @@
       "items": [
         {
           "step": "01",
-          "title": "Check Your Hardware",
-          "description": "Verify GPU compatibility and power requirements for optimal mining performance.",
+          "title": "Controlla il tuo hardware",
+          "description": "Verifica la compatibilità della GPU e i requisiti di alimentazione per prestazioni di mining ottimali.",
           "details": [
-            "NVIDIA GTX 1060 6GB+ or AMD RX 580 8GB+",
-            "Minimum 4GB VRAM required",
-            "Stable power supply (80+ Gold recommended)",
-            "Adequate cooling and ventilation"
+            "NVIDIA GTX 1060 6GB+ o AMD RX 580 8GB+",
+            "Minimo 4GB di VRAM richiesti",
+            "Alimentatore stabile (80+ Gold consigliato)",
+            "Raffreddamento e ventilazione adeguati"
           ],
           "duration": "5 min"
         },
         {
           "step": "02",
-          "title": "Choose Mining Setup",
-          "description": "Decide between solo mining or joining a pool based on your hashrate and preferences.",
+          "title": "Scegli la configurazione di mining",
+          "description": "Decidi tra mining solo o pool in base al tuo hashrate e alle tue preferenze.",
           "details": [
-            "Solo mining: Full block rewards but irregular payouts",
-            "Pool mining: Regular payouts but shared rewards",
-            "Recommended pools: Herominers, Woolypooly, 2Miners",
-            "Consider pool fees (typically 1-2%)"
+            "Mining solo: ricompense di blocco complete ma pagamenti irregolari",
+            "Mining in pool: pagamenti regolari ma ricompense condivise",
+            "Pool consigliati: Herominers, Woolypooly, 2Miners",
+            "Considera le commissioni del pool (tipicamente 1-2%)"
           ],
           "duration": "10 min"
         },
         {
           "step": "03",
-          "title": "Download & Configure",
-          "description": "Get mining software and configure it for your hardware and chosen pool.",
+          "title": "Scarica e configura",
+          "description": "Ottieni il software di mining e configuralo per il tuo hardware e il pool scelto.",
           "details": [
-            "Download T-Rex (NVIDIA) or lolMiner (AMD/NVIDIA)",
-            "Configure pool address and wallet",
-            "Set optimal core clock and memory settings",
-            "Test with low intensity first"
+            "Scarica T-Rex (NVIDIA) o lolMiner (AMD/NVIDIA)",
+            "Configura l'indirizzo del pool e il wallet",
+            "Imposta le impostazioni ottimali del clock core e della memoria",
+            "Testa prima con bassa intensità"
           ],
           "duration": "15 min"
         },
         {
           "step": "04",
-          "title": "Start Mining",
-          "description": "Launch the miner and monitor your earnings and hardware performance.",
+          "title": "Inizia a minare",
+          "description": "Avvia il miner e monitora i tuoi guadagni e le prestazioni hardware.",
           "details": [
-            "Monitor GPU temperature and power draw",
-            "Check pool dashboard for shares",
-            "Optimize settings over time",
-            "Set up monitoring alerts"
+            "Monitora la temperatura della GPU e il consumo energetico",
+            "Controlla il dashboard del pool per le condivisioni",
+            "Ottimizza le impostazioni nel tempo",
+            "Configura avvisi di monitoraggio"
           ],
-          "duration": "Ongoing"
+          "duration": "In corso"
         }
       ]
     },
     "comparison": {
-      "title": "How ERG Mining Compares",
+      "title": "Come si confronta il mining di ERG",
       "headers": {
-        "criterion": "Criterion",
+        "criterion": "Criterio",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
         "monero": "Monero",
         "ergo": "Ergo"
       },
-      "deepDive": "Deep dive: Detailed comparison",
+      "deepDive": "Approfondimento: confronto dettagliato",
       "rows": [
         {
-          "criterion": "Mining Hardware",
-          "bitcoin": {
-            "status": "bad",
-            "text": "ASIC-only"
-          },
-          "ethereum": {
-            "status": "warning",
-            "text": "Proof-of-Stake"
-          },
-          "monero": {
-            "status": "good",
-            "text": "CPU/GPU friendly"
-          },
-          "ergo": {
-            "status": "good",
-            "text": "GPU-optimized"
-          }
+          "criterion": "Hardware di mining",
+          "bitcoin": { "status": "bad", "text": "Solo ASIC" },
+          "ethereum": { "status": "warning", "text": "Proof-of-Stake" },
+          "monero": { "status": "good", "text": "CPU/GPU friendly" },
+          "ergo": { "status": "good", "text": "Ottimizzato per GPU" }
         },
         {
-          "criterion": "Block Reward",
-          "bitcoin": {
-            "status": "warning",
-            "text": "Halving every 4y"
-          },
-          "ethereum": {
-            "status": "bad",
-            "text": "No mining"
-          },
-          "monero": {
-            "status": "good",
-            "text": "Tail emission"
-          },
-          "ergo": {
-            "status": "good",
-            "text": "9 ERG + fees"
-          }
+          "criterion": "Ricompensa blocco",
+          "bitcoin": { "status": "warning", "text": "Halving ogni 4 anni" },
+          "ethereum": { "status": "bad", "text": "Nessun mining" },
+          "monero": { "status": "good", "text": "Emissione residua" },
+          "ergo": { "status": "good", "text": "9 ERG + commissioni" }
         },
         {
-          "criterion": "Future Incentives",
-          "bitcoin": {
-            "status": "warning",
-            "text": "Fees only"
-          },
-          "ethereum": {
-            "status": "bad",
-            "text": "No mining"
-          },
-          "monero": {
-            "status": "good",
-            "text": "Perpetual rewards"
-          },
-          "ergo": {
-            "status": "good",
-            "text": "Storage rent"
-          }
+          "criterion": "Incentivi futuri",
+          "bitcoin": { "status": "warning", "text": "Solo commissioni" },
+          "ethereum": { "status": "bad", "text": "Nessun mining" },
+          "monero": { "status": "good", "text": "Ricompense perpetue" },
+          "ergo": { "status": "good", "text": "Storage rent" }
         },
         {
-          "criterion": "Network Utility",
-          "bitcoin": {
-            "status": "good",
-            "text": "Store of value"
-          },
-          "ethereum": {
-            "status": "good",
-            "text": "Smart contracts"
-          },
-          "monero": {
-            "status": "good",
-            "text": "Privacy payments"
-          },
-          "ergo": {
-            "status": "good",
-            "text": "DeFi + Privacy"
-          }
+          "criterion": "Utilità della rete",
+          "bitcoin": { "status": "good", "text": "Riserva di valore" },
+          "ethereum": { "status": "good", "text": "Smart contract" },
+          "monero": { "status": "good", "text": "Pagamenti privati" },
+          "ergo": { "status": "good", "text": "DeFi + Privacy" }
         },
         {
-          "criterion": "Mining Accessibility",
-          "bitcoin": {
-            "status": "bad",
-            "text": "Industrial scale"
-          },
-          "ethereum": {
-            "status": "bad",
-            "text": "No mining"
-          },
-          "monero": {
-            "status": "good",
-            "text": "Home mining"
-          },
-          "ergo": {
-            "status": "good",
-            "text": "GPU rigs viable"
-          }
+          "criterion": "Accessibilità al mining",
+          "bitcoin": { "status": "bad", "text": "Scala industriale" },
+          "ethereum": { "status": "bad", "text": "Nessun mining" },
+          "monero": { "status": "good", "text": "Mining domestico" },
+          "ergo": { "status": "good", "text": "Rig GPU validi" }
         }
       ]
     },
     "tools": {
-      "openTool": "Open Tool",
-      "viewGuide": "View Guide",
+      "openTool": "Apri strumento",
+      "viewGuide": "Vedi guida",
       "items": [
         {
-          "name": "Mining Profitability Calculator",
-          "description": "Calculate potential earnings based on your hardware and electricity costs."
+          "name": "Calcolatore di redditività del mining",
+          "description": "Calcola i guadagni potenziali in base al tuo hardware e ai costi dell'elettricità."
         },
         {
-          "name": "Official Mining Guide",
-          "description": "Comprehensive setup guide for beginners and advanced miners."
+          "name": "Guida ufficiale al mining",
+          "description": "Guida di configurazione completa per principianti e miner avanzati."
         },
         {
-          "name": "Autolykos Algorithm",
-          "description": "Learn about Ergo's ASIC-resistant Proof-of-Work algorithm."
+          "name": "Algoritmo Autolykos",
+          "description": "Scopri l'algoritmo Proof-of-Work resistente agli ASIC di Ergo."
         },
         {
-          "name": "Storage Rent Economics",
-          "description": "How storage rent ensures long-term miner incentives."
+          "name": "Economia dello storage rent",
+          "description": "Come lo storage rent garantisce incentivi a lungo termine per i miner."
         }
       ]
     },
     "joinNetwork": {
-      "title": "Join the",
-      "titleHighlight": "Network",
+      "title": "Unisciti alla",
+      "titleHighlight": "rete",
       "startMining": {
-        "title": "Start Mining Now",
-        "subtitle": "Complete Guide"
+        "title": "Inizia a minare ora",
+        "subtitle": "Guida completa"
       },
       "joinChat": {
-        "title": "Join Miners' Chat",
-        "subtitle": "Community Support"
+        "title": "Unisciti alla chat dei miner",
+        "subtitle": "Supporto della community"
       },
       "learnEconomics": {
-        "title": "Learn Economics",
-        "subtitle": "Long-term Viability"
+        "title": "Studia l'economia",
+        "subtitle": "Viabilità a lungo termine"
       },
       "holdLongTerm": {
-        "title": "Want to hold long-term?",
-        "description": "Learn about ERG as a store of value and investment"
+        "title": "Vuoi tenere a lungo termine?",
+        "description": "Scopri ERG come riserva di valore e investimento"
       }
     },
     "faq": {
-      "title": "Mining FAQ",
+      "title": "FAQ sul mining",
       "questions": {
         "0": {
-          "question": "What hardware do I need to mine ERG?",
-          "answer": "Any modern GPU with 4GB+ VRAM can mine ERG efficiently. AMD and NVIDIA cards both work well. Popular choices include RTX 3070, RTX 4070, and RX 6800."
+          "question": "Quale hardware mi serve per minare ERG?",
+          "answer": "Qualsiasi GPU moderna con 4GB+ di VRAM può minare ERG in modo efficiente. Le schede AMD e NVIDIA funzionano entrambe bene. Scelte popolari includono RTX 3070, RTX 4070 e RX 6800."
         },
         "1": {
-          "question": "Which mining software should I use?",
-          "answer": "lolMiner and T-Rex are the most popular options for ERG mining. Both are free (with dev fee) and support Windows and Linux."
+          "question": "Quale software di mining devo usare?",
+          "answer": "lolMiner e T-Rex sono le opzioni più popolari per il mining di ERG. Entrambi sono gratuiti (con commissione sviluppatore) e supportano Windows e Linux."
         },
         "2": {
-          "question": "What is the current block reward?",
-          "answer": "The current block reward is dynamically adjusted. Check the network stats above for the latest reward amount."
+          "question": "Qual è la ricompensa attuale del blocco?",
+          "answer": "La ricompensa attuale del blocco viene regolata dinamicamente. Controlla le statistiche di rete sopra per l'importo più recente."
         },
         "3": {
-          "question": "Is solo mining profitable?",
-          "answer": "For most miners, pool mining is more consistent. Solo mining requires significant hashrate to find blocks regularly."
+          "question": "Il mining solo è redditizio?",
+          "answer": "Per la maggior parte dei miner, il mining in pool è più costante. Il mining solo richiede un hashrate significativo per trovare blocchi regolarmente."
         },
         "4": {
-          "question": "Is Ergo still profitable to mine?",
-          "answer": "Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. Use a mining calculator to estimate earnings. Many miners find Ergo profitable due to lower competition compared to major coins."
+          "question": "Minare Ergo è ancora redditizio?",
+          "answer": "La redditività dipende dai costi dell'elettricità, dall'efficienza dell'hardware e dalla difficoltà attuale della rete. Usa un calcolatore di mining per stimare i guadagni. Molti miner trovano Ergo redditizio grazie alla minore concorrenza rispetto alle monete principali."
         },
         "5": {
-          "question": "Will ASICs come to Ergo?",
-          "answer": "Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining accessible to GPU miners."
+          "question": "Gli ASIC arriveranno su Ergo?",
+          "answer": "Ergo usa l'algoritmo Autolykos appositamente progettato per essere resistente agli ASIC tramite calcoli memory-hard. L'algoritmo può essere aggiornato se gli ASIC minacciano la decentralizzazione. La community è impegnata a mantenere il mining accessibile ai miner GPU."
         },
         "6": {
-          "question": "How stable is the Ergo development team?",
-          "answer": "Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. The project is open-source with regular updates and a clear roadmap. Check the GitHub activity and join Discord to see the active community."
+          "question": "Quanto è stabile il team di sviluppo di Ergo?",
+          "answer": "Ergo ha un team di sviluppo forte e attivo guidato da crittografi esperti e ricercatori blockchain. Il progetto è open-source con aggiornamenti regolari e una roadmap chiara. Controlla l'attività su GitHub e unisciti a Discord per vedere la community attiva."
         },
         "7": {
-          "question": "How does storage rent affect miners?",
-          "answer": "Storage rent is a unique mechanism that provides miners with income beyond block rewards. When emissions end, miners will continue earning from storage rent collected from dormant boxes. This ensures long-term network security and miner profitability."
+          "question": "Come influisce lo storage rent sui miner?",
+          "answer": "Lo storage rent è un meccanismo unico che fornisce ai miner un reddito oltre le ricompense dei blocchi. Quando le emissioni terminano, i miner continueranno a guadagnare dallo storage rent raccolto dalle box dormienti. Questo garantisce la sicurezza della rete a lungo termine e la redditività dei miner."
         }
       }
     }
   },
   "mining": {
-    "title": "Mining Ergo (ERG)",
-    "description": "Learn how to mine ERG using the Autolykos proof of work algorithm",
-    "subDescription": "Start mining ERG today with our complete guide. Setup, profitability calculator and pool recommendations.",
+    "title": "Mining di Ergo (ERG)",
+    "description": "Scopri come minare ERG usando l'algoritmo proof of work Autolykos",
+    "subDescription": "Inizia a minare ERG oggi con la nostra guida completa. Configurazione, calcolatore di redditività e raccomandazioni sui pool.",
     "seo": {
-      "title": "Mining ERG - Complete Ergo Mining Guide | Autolykos PoW",
-      "description": "Complete guide to mining Ergo (ERG) cryptocurrency. Learn about Autolykos algorithm, mining setup, profitability, and best mining pools.",
-      "keywords": "mining ERG, Ergo mining, Autolykos, proof of work, mining pools, GPU mining, mining profitability",
+      "title": "Mining ERG - Guida completa al mining Ergo | Autolykos PoW",
+      "description": "Guida completa per minare Ergo (ERG). Scopri l'algoritmo Autolykos, la configurazione del mining, la redditività e i migliori pool di mining.",
+      "keywords": "mining ERG, mining Ergo, Autolykos, proof of work, pool di mining, mining GPU, redditività del mining",
       "openGraph": {
-        "title": "Mining ERG - Complete Guide",
-        "description": "Start mining Ergo cryptocurrency with our comprehensive guide",
-        "imageAlt": "Ergo Mining Guide"
+        "title": "Mining ERG - Guida completa",
+        "description": "Inizia a minare Ergo con la nostra guida completa",
+        "imageAlt": "Guida al mining Ergo"
       },
       "twitter": {
-        "title": "Mining ERG - Complete Guide",
-        "description": "Learn how to mine Ergo (ERG) cryptocurrency"
+        "title": "Mining ERG - Guida completa",
+        "description": "Scopri come minare Ergo (ERG)"
       }
     },
     "cta": {
-      "calculator": "Mining Calculator"
+      "calculator": "Calcolatore di mining"
     },
     "networkStats": {
-      "title": "Network Stats",
+      "title": "Statistiche di rete",
       "hashrate": "Hashrate",
-      "blockTime": "Block Time",
-      "reward": "Block Reward",
-      "miners": "Active Miners"
+      "blockTime": "Tempo blocco",
+      "reward": "Ricompensa blocco",
+      "miners": "Miner attivi"
     },
     "tabs": {
-      "overview": "Overview",
-      "setup": "Setup Guide",
-      "pools": "Mining Pools",
-      "profitability": "Profitability",
-      "gettingStarted": "Getting Started",
+      "overview": "Panoramica",
+      "setup": "Guida alla configurazione",
+      "pools": "Pool di mining",
+      "profitability": "Redditività",
+      "gettingStarted": "Per iniziare",
       "hardware": "Hardware",
-      "calculator": "Calculator",
-      "help": "Help"
+      "calculator": "Calcolatore",
+      "help": "Aiuto"
     },
     "stats": {
       "hashrate": "210 TH/s",
       "blockTime": "2 min",
       "reward": "1.2 ERG",
-      "miners": "12,847"
+      "miners": "12.847"
     },
     "seoSchema": {
-      "name": "How to Mine Ergo (ERG)",
-      "description": "Complete guide for mining Ergo cryptocurrency using GPU",
+      "name": "Come minare Ergo (ERG)",
+      "description": "Guida completa per minare Ergo usando una GPU",
       "supply": {
-        "gpu": "Graphics Card (GPU)",
-        "software": "Mining Software",
-        "wallet": "Ergo Wallet"
+        "gpu": "Scheda grafica (GPU)",
+        "software": "Software di mining",
+        "wallet": "Wallet Ergo"
       },
       "tool": {
-        "miner": "Mining Software",
-        "pool": "Mining Pool"
+        "miner": "Software di mining",
+        "pool": "Pool di mining"
       },
       "steps": {
         "compatibility": {
-          "name": "Check GPU Compatibility",
-          "text": "Ensure your GPU has at least 4GB memory"
+          "name": "Verifica la compatibilità della GPU",
+          "text": "Assicurati che la tua GPU abbia almeno 4GB di memoria"
         },
         "download": {
-          "name": "Download Mining Software",
-          "text": "Get compatible miner like NBMiner or TeamRedMiner"
+          "name": "Scarica il software di mining",
+          "text": "Ottieni un miner compatibile come NBMiner o TeamRedMiner"
         },
         "pool": {
-          "name": "Choose Mining Pool",
-          "text": "Select a mining pool with good hashrate and low fees"
+          "name": "Scegli un pool di mining",
+          "text": "Seleziona un pool di mining con buon hashrate e commissioni basse"
         },
         "configure": {
-          "name": "Configure Miner",
-          "text": "Set pool address and wallet in miner configuration"
+          "name": "Configura il miner",
+          "text": "Imposta l'indirizzo del pool e il wallet nella configurazione del miner"
         },
         "start": {
-          "name": "Start Mining",
-          "text": "Run the miner and monitor your hashrate"
+          "name": "Inizia a minare",
+          "text": "Avvia il miner e monitora il tuo hashrate"
         }
       },
       "calculator": {
-        "name": "Ergo Mining Calculator",
-        "description": "Calculate your potential mining profits"
+        "name": "Calcolatore di mining Ergo",
+        "description": "Calcola i tuoi potenziali profitti dal mining"
       }
     },
     "faq": {
       "profitability": {
-        "question": "Is mining ERG profitable?",
-        "answer": "Profitability depends on electricity costs, hardware efficiency, and ERG price. Use our calculator to estimate."
+        "question": "Minare ERG è redditizio?",
+        "answer": "La redditività dipende dai costi dell'elettricità, dall'efficienza dell'hardware e dal prezzo dell'ERG. Usa il nostro calcolatore per stimare."
       },
       "bestGpu": {
-        "question": "What's the best GPU for mining ERG?",
-        "answer": "AMD RX 6800 XT and NVIDIA RTX 3070 offer excellent efficiency for Autolykos."
+        "question": "Qual è la migliore GPU per minare ERG?",
+        "answer": "AMD RX 6800 XT e NVIDIA RTX 3070 offrono un'eccellente efficienza per Autolykos."
       },
       "whichPool": {
-        "question": "Which mining pool should I use?",
-        "answer": "Popular pools include HeroMiners, 2Miners, and WoolyPooly. Choose based on fees and location."
+        "question": "Quale pool di mining devo usare?",
+        "answer": "I pool popolari includono HeroMiners, 2Miners e WoolyPooly. Scegli in base alle commissioni e alla posizione."
       },
       "earnings": {
-        "question": "How much can I earn?",
-        "answer": "Earnings vary based on hashrate, network difficulty, and ERG price. Check our calculator for estimates."
+        "question": "Quanto posso guadagnare?",
+        "answer": "I guadagni variano in base all'hashrate, alla difficoltà della rete e al prezzo dell'ERG. Controlla il nostro calcolatore per le stime."
       }
     }
   },
   "minersData": {
     "asic-resistant": {
-      "title": "ASIC-Resistant",
-      "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive."
+      "title": "Resistente agli ASIC",
+      "description": "Mining solo GPU. Nessun ASIC. Nessuna farm industriale che ti esclude. La tua scheda gaming rimane competitiva."
     },
     "fair-launch": {
-      "title": "Fair Launch",
-      "description": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one."
+      "title": "Lancio equo",
+      "description": "Zero pre-mine. Zero tassa per gli sviluppatori. Zero allocazione VC. Ogni ERG è stato minato equamente dal primo giorno."
     },
     "real-use-cases": {
-      "title": "Real Use Cases",
-      "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value."
+      "title": "Casi d'uso reali",
+      "description": "DeFi, DEX, funzionalità privacy creano una domanda reale. Non solo speculazione - utilità concreta che genera valore."
     },
     "long-term-economics": {
-      "title": "Long-term Economics",
-      "description": "Storage rent pays miners forever. When emissions end, you still earn. Built for decades, not pump & dump."
+      "title": "Economia a lungo termine",
+      "description": "Lo storage rent paga i miner per sempre. Quando le emissioni finiscono, guadagni ancora. Costruito per decenni, non per pump & dump."
     },
-    "getblok": {
-      "name": "GetBlok"
-    },
-    "2miners": {
-      "name": "2Miners"
-    },
-    "herominers": {
-      "name": "HeroMiners"
-    },
-    "woolypooly": {
-      "name": "WoolyPooly"
-    },
-    "f2pool": {
-      "name": "F2Pool"
-    },
-    "nanopool": {
-      "name": "Nanopool"
-    },
-    "nbminer": {
-      "name": "NBMiner"
-    },
-    "trex": {
-      "name": "T-Rex"
-    },
-    "teamredminer": {
-      "name": "TeamRedMiner"
-    },
-    "lolminer": {
-      "name": "lolMiner"
-    },
+    "getblok": { "name": "GetBlok" },
+    "2miners": { "name": "2Miners" },
+    "herominers": { "name": "HeroMiners" },
+    "woolypooly": { "name": "WoolyPooly" },
+    "f2pool": { "name": "F2Pool" },
+    "nanopool": { "name": "Nanopool" },
+    "nbminer": { "name": "NBMiner" },
+    "trex": { "name": "T-Rex" },
+    "teamredminer": { "name": "TeamRedMiner" },
+    "lolminer": { "name": "lolMiner" },
     "calculator": {
-      "description": "Calculate potential earnings based on your hardware and electricity costs.",
-      "name": "Mining Profitability Calculator"
+      "description": "Calcola i guadagni potenziali in base al tuo hardware e ai costi dell'elettricità.",
+      "name": "Calcolatore di redditività del mining"
     },
     "guide": {
-      "description": "Comprehensive setup guide for beginners and advanced miners.",
-      "name": "Official Mining Guide"
+      "description": "Guida di configurazione completa per principianti e miner avanzati.",
+      "name": "Guida ufficiale al mining"
     },
     "autolykos": {
-      "description": "Learn about Ergo",
-      "name": "Autolykos Algorithm"
+      "description": "Scopri Ergo",
+      "name": "Algoritmo Autolykos"
     },
     "storage-rent": {
-      "question": "How does storage rent affect miners?",
-      "answer": "Storage rent creates a sustainable fee mechanism that benefits miners long-term. Unused UTXOs pay rent over time, which goes to miners as additional rewards beyond block emissions. This ensures miner incentives continue after the emission schedule ends. Learn more about <a href=\\"
+      "question": "Come influisce lo storage rent sui miner?",
+      "answer": "Lo storage rent crea un meccanismo di commissioni sostenibile che avvantaggia i miner a lungo termine. Gli UTXO inutilizzati pagano un affitto nel tempo, che va ai miner come ricompense aggiuntive oltre le emissioni del blocco. Questo garantisce che gli incentivi per i miner continuino dopo la fine del programma di emissioni. Scopri di più su <a href=\\"
     },
     "profitable": {
-      "question": "Is Ergo still profitable to mine?",
-      "answer": "Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. Use a <a href=\\"
+      "question": "Minare Ergo è ancora redditizio?",
+      "answer": "La redditività dipende dai costi dell'elettricità, dall'efficienza dell'hardware e dalla difficoltà attuale della rete. Usa un <a href=\\"
     },
     "asics": {
-      "question": "Will ASICs come to Ergo?",
-      "answer": "Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining accessible to GPU miners. Read more about <a href=\\"
+      "question": "Gli ASIC arriveranno su Ergo?",
+      "answer": "Ergo usa l'algoritmo Autolykos appositamente progettato per essere resistente agli ASIC tramite calcoli memory-hard. L'algoritmo può essere aggiornato se gli ASIC minacciano la decentralizzazione. La community è impegnata a mantenere il mining accessibile ai miner GPU. Leggi di più su <a href=\\"
     },
     "team": {
-      "question": "How stable is the Ergo development team?",
-      "answer": "Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. The project is open-source with regular updates and a clear roadmap. Check the <a href=\\"
+      "question": "Quanto è stabile il team di sviluppo di Ergo?",
+      "answer": "Ergo ha un team di sviluppo forte e attivo guidato da crittografi esperti e ricercatori blockchain. Il progetto è open-source con aggiornamenti regolari e una roadmap chiara. Controlla <a href=\\"
     },
     "pools": {
-      "question": "Which mining pools support Ergo?",
-      "answer": "Popular Ergo mining pools include Herominers, Woolypooly, 2Miners, Nanopool, and F2Pool. Each has different fee structures and payout methods. Solo mining is also viable for larger operations. See the complete pool comparison on this page for details."
+      "question": "Quali pool di mining supportano Ergo?",
+      "answer": "I pool di mining Ergo popolari includono Herominers, Woolypooly, 2Miners, Nanopool e F2Pool. Ognuno ha strutture di commissioni e metodi di pagamento diversi. Il mining solo è anche praticabile per operazioni più grandi. Vedi il confronto completo dei pool su questa pagina per i dettagli."
     },
     "hardware": {
-      "question": "What",
-      "answer": "You need a GPU with at least 4GB VRAM. NVIDIA GTX 1060 6GB or AMD RX 580 8GB are good starting points. More powerful cards like RTX 3070+ or RX 6700 XT+ will be more profitable. Check the hardware guide on this page for detailed recommendations and optimization tips."
+      "question": "Quale",
+      "answer": "Hai bisogno di una GPU con almeno 4GB di VRAM. NVIDIA GTX 1060 6GB o AMD RX 580 8GB sono buoni punti di partenza. Schede più potenti come RTX 3070+ o RX 6700 XT+ saranno più redditizie. Controlla la guida hardware su questa pagina per raccomandazioni dettagliate e suggerimenti di ottimizzazione."
     }
   }
 }

@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Hashrate du réseau" },
-      "activeAddresses": { "label": "Adresses actives" },
-      "defiTvl": { "label": "TVL DeFi" },
-      "ergSupply": { "label": "Offre ERG", "trend": "{remaining}M restants" },
-      "avgBlockTime": { "label": "Temps de bloc moyen" },
-      "activeNodes": { "label": "Nœuds actifs" }
+      "networkHashrate": {
+        "label": "Hashrate du réseau"
+      },
+      "activeAddresses": {
+        "label": "Adresses actives"
+      },
+      "defiTvl": {
+        "label": "TVL DeFi"
+      },
+      "ergSupply": {
+        "label": "Offre ERG",
+        "trend": "{remaining}M restants"
+      },
+      "avgBlockTime": {
+        "label": "Temps de bloc moyen"
+      },
+      "activeNodes": {
+        "label": "Nœuds actifs"
+      }
     },
     "heroComparisons": [
       {
@@ -316,27 +329,27 @@
     },
     "security-commodity": {
       "question": "Ergo est-il un titre ou une marchandise ?",
-      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+      "answer": "Ergo a été lancé équitablement en 2019 sans pré-minage, sans ICO et sans financement VC. Comme Bitcoin, c'est un projet décentralisé et piloté par la communauté. Le lancement équitable et le consensus Proof-of-Work le rendent similaire à Bitcoin du point de vue réglementaire."
     },
     "different-from-bitcoin": {
       "question": "En quoi Ergo est-il différent de Bitcoin ?",
-      "answer": "Ergo shares Bitcoin"
+      "answer": "Ergo partage le modèle de sécurité Proof-of-Work de Bitcoin mais ajoute des contrats intelligents via le modèle eUTXO, une confidentialité optionnelle via les Sigma Protocols et le Storage Rent pour la durabilité à long terme."
     },
     "who-controls": {
       "question": "Qui contrôle le projet Ergo ?",
-      "answer": "No single entity controls Ergo. It"
+      "answer": "Aucune entité unique ne contrôle Ergo. Il est maintenu par la Fondation Ergo, les développeurs principaux et les contributeurs communautaires. Tout le développement est open-source sur GitHub. La communauté vote sur les principaux changements de protocole."
     },
     "mining-rewards-end": {
       "question": "Que se passe-t-il quand les récompenses de minage prennent fin ?",
-      "answer": "Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees and a <a href=\\"
+      "answer": "Ergo dispose d'un calendrier d'émission de 8 ans se terminant vers 2027. Après cela, les mineurs sont incités par les frais de transaction et un mécanisme de <a href='/use/storage-rent'>Storage Rent</a> qui recycle les coins perdus. Cela crée une sécurité durable à long terme sans inflation."
     },
     "buy-store": {
       "question": "Où puis-je acheter et stocker des ERG ?",
-      "answer": "ERG is available on major exchanges like <a href=\\"
+      "answer": "ERG est disponible sur les principales plateformes comme <a href='https://www.kucoin.com'>KuCoin</a>, <a href='https://www.gate.io'>Gate.io</a> et <a href='https://www.coinex.com'>CoinEx</a>. Pour le stockage, utilisez Nautilus Wallet ou des portefeuilles matériels. Consultez notre <a href='/use/get-erg'>guide d'achat complet</a>."
     },
     "privacy-legal": {
-      "question": "Is Ergo",
-      "answer": "Ergo"
+      "question": "L'utilisation de la confidentialité d'Ergo est-elle légale ?",
+      "answer": "Les fonctionnalités de confidentialité d'Ergo sont optionnelles et conçues pour des cas d'usage légitimes comme la confidentialité commerciale et la vie privée financière personnelle. Vérifiez toujours vos réglementations locales. La technologie est similaire à d'autres cryptomonnaies préservant la confidentialité."
     }
   }
 }

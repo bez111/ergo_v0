@@ -45,11 +45,21 @@
         "proficiencyLevel": "Débutant",
         "technicalAudience": "Développeurs, Ingénieurs, Fondateurs techniques",
         "about": [
-          { "name": "ErgoScript" },
-          { "name": "Modèle eUTXO" },
-          { "name": "Protocoles Sigma" },
-          { "name": "Développement blockchain" },
-          { "name": "Contrats intelligents" }
+          {
+            "name": "ErgoScript"
+          },
+          {
+            "name": "Modèle eUTXO"
+          },
+          {
+            "name": "Protocoles Sigma"
+          },
+          {
+            "name": "Développement blockchain"
+          },
+          {
+            "name": "Contrats intelligents"
+          }
         ]
       },
       "itemList": {

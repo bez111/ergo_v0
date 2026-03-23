@@ -386,22 +386,64 @@
     },
     "filters": {
       "categories": [
-        { "id": "all", "label": "Toutes les questions" },
-        { "id": "DeFi", "label": "DeFi & Trading" },
-        { "id": "Privacy", "label": "Confidentialité" },
-        { "id": "Mining", "label": "Minage" },
-        { "id": "Technology", "label": "Technologie" },
-        { "id": "Philosophy", "label": "Philosophie & Liberté" },
-        { "id": "Getting Started", "label": "Premiers pas" }
+        {
+          "id": "all",
+          "label": "Toutes les questions"
+        },
+        {
+          "id": "DeFi",
+          "label": "DeFi & Trading"
+        },
+        {
+          "id": "Privacy",
+          "label": "Confidentialité"
+        },
+        {
+          "id": "Mining",
+          "label": "Minage"
+        },
+        {
+          "id": "Technology",
+          "label": "Technologie"
+        },
+        {
+          "id": "Philosophy",
+          "label": "Philosophie & Liberté"
+        },
+        {
+          "id": "Getting Started",
+          "label": "Premiers pas"
+        }
       ],
       "personas": [
-        { "id": "all", "label": "Tout le monde" },
-        { "id": "builder", "label": "Constructeurs" },
-        { "id": "miner", "label": "Mineurs" },
-        { "id": "investor", "label": "Investisseurs" },
-        { "id": "freedom_seeker", "label": "Chercheurs de liberté" },
-        { "id": "cypherpunk", "label": "Cypherpunks" },
-        { "id": "general", "label": "Général" }
+        {
+          "id": "all",
+          "label": "Tout le monde"
+        },
+        {
+          "id": "builder",
+          "label": "Constructeurs"
+        },
+        {
+          "id": "miner",
+          "label": "Mineurs"
+        },
+        {
+          "id": "investor",
+          "label": "Investisseurs"
+        },
+        {
+          "id": "freedom_seeker",
+          "label": "Chercheurs de liberté"
+        },
+        {
+          "id": "cypherpunk",
+          "label": "Cypherpunks"
+        },
+        {
+          "id": "general",
+          "label": "Général"
+        }
       ]
     },
     "aria": {
@@ -627,7 +669,7 @@
         "description": "Guides étape par étape pour construire sur Ergo. DeFi, confidentialité, minage, NFTs — choisissez votre voie et commencez à déployer. Ressources & tutoriels sélectionnés."
       },
       "breadcrumbs": {
-        "playbooks": "Playbooks"
+        "playbooks": "Guides pratiques"
       }
     }
   },
@@ -744,7 +786,7 @@
     "resourceTypes": {
       "doc": "Documentation",
       "blog": "Article de blog",
-      "playbook": "Playbook",
+      "playbook": "Guide pratique",
       "infographic": "Infographie",
       "glossary": "Glossaire",
       "compare": "Comparaison",
@@ -816,7 +858,7 @@
   },
   "playbookPage": {
     "breadcrumbs": {
-      "playbooks": "Playbooks"
+      "playbooks": "Guides pratiques"
     },
     "allPlaybooks": "Tous les playbooks",
     "browseAllPlaybooks": "Parcourir tous les playbooks",
