@@ -427,38 +427,38 @@
         "question": "隐私如何在Ergo上工作？",
         "answer": "Ergo 使用 Sigma 协议提供高级隐私功能，包括环形签名和零知识证明。ErgoMixer 允许对ERG 和令牌进行非交互式非拘禁混合处理。"
       },
-      "items": {
-        "0": {
+      "items": [
+        {
           "id": "全天候！",
           "question": "是什么使得在Ergo 上的 DeFi 不同？",
           "answer": "Ergo的eUTXO模型为 DeFi提供了更高的安全性和复合性。 智能合约更具可预测性，成本更具决定性，并行交易处理能够更好的可伸缩性。此外，可选的隐私功能保护您的财务数据。"
         },
-        "1": {
+        {
           "id": "启动-使用-ergo",
           "question": "如何开始使用 Ergo 应用程序？",
           "answer": "1. 获取一个 Ergo 钱包，如Nautilus 或 SAFEW. 2. 从交易所获取ERG 令牌。 探索我们生态系统中的 dApps 。4. 加入Discord 或 Telegram 上的社区寻求帮助。"
         },
-        "2": {
+        {
           "id": "ergo-vs-ethereum",
           "question": "Ergo 如何比较以太坊作为dApp的比较？",
           "answer": "Ergo使用eUTXO模型(相对于Etherum账户模型)，提供更好的安全性、并行处理和可预见的费用。 ErgoScript 通过设计和正规的验证能力更安全。本地代币不需要智能合同，使其更便宜和更安全。"
         },
-        "3": {
+        {
           "id": "隐私功能",
           "question": "Ergo的隐私功能是否合法？",
           "answer": "Ergo 通过 Sigma 协议提供可选的隐私功能。用户应该检查他们的本地条例。 隐私权在协议一级用于商业保密、个人财务隐私和遵守数据保护法等合法用途。"
         },
-        "4": {
+        {
           "id": "挖掘盈利中",
           "question": "开采ERG是否仍然有利可图？",
           "answer": "开采利润取决于您的电力成本、硬件效率和ERG价格。Ergo 的ASIC抗性自动操作算法使得GPU可以开采。 使用采矿计算器根据当前网络难度估计您的潜在回报。"
         },
-        "5": {
+        {
           "id": "开发者资源",
           "question": "开发者可获得哪些资源？",
           "answer": "Ergo 提供了全面的开发者资源：ErgoScript 文档和教程、多语言SDK（Scala、JS、Python）、用于dApp开发的AppKit、活跃的开发者社区与支持、面向生态系统项目的资助计划。"
         }
-      }
+      ]
     },
     "getErg": {
       "title": "获取ERG",
