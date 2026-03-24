@@ -4,86 +4,86 @@
     "subtitle": "Scopri l'ecosistema Ergo",
     "description": "Esplora il crescente ecosistema Ergo",
     "sections": {
-      "dapps": "Applicazioni decentralizzate",
-      "tools": "Strumenti per sviluppatori",
-      "services": "Servizi e infrastrutture"
+      "dapps": "Applicazioni Decentralizzate",
+      "tools": "Strumenti per Sviluppatori",
+      "services": "Servizi e Infrastruttura"
     },
     "grants": {
       "hero": {
-        "title": "Programma Ergo Grants",
+        "title": "Programma di Sovvenzioni Ergo",
         "description": "Finanziamenti per sviluppatori, ricercatori e innovatori che costruiscono il futuro della finanza decentralizzata su Ergo"
       },
       "subscribe": {
-        "placeholder": "Inserisci la tua email per aggiornamenti",
-        "button": "Avvisami",
-        "success": "Grazie! Ti avviseremo quando il programma di grant sarà avviato."
+        "placeholder": "Inserisci la tua email per gli aggiornamenti",
+        "button": "Notificami",
+        "success": "Grazie! Ti avviseremo quando il programma di sovvenzioni sarà lanciato."
       },
       "features": {
         "title": "Cosa aspettarsi",
-        "subtitle": "Caratteristiche del programma Grants",
+        "subtitle": "Caratteristiche del Programma di Sovvenzioni",
         "description": "Supporto all'innovazione e allo sviluppo nell'ecosistema Ergo",
         "items": [
           {
-            "title": "Supporto agli sviluppatori",
+            "title": "Supporto agli Sviluppatori",
             "description": "Finanziamenti per dApp, strumenti e progetti infrastrutturali innovativi",
             "icon": "Zap"
           },
           {
-            "title": "Finanziamento della ricerca",
-            "description": "Supporto per la ricerca accademica e i miglioramenti del protocollo",
+            "title": "Finanziamento della Ricerca",
+            "description": "Supporto alla ricerca accademica e ai miglioramenti del protocollo",
             "icon": "Target"
           },
           {
-            "title": "Progetti della community",
-            "description": "Grant per iniziative guidate dalla community e contenuti educativi",
+            "title": "Progetti Comunitari",
+            "description": "Sovvenzioni per iniziative guidate dalla comunità e contenuti educativi",
             "icon": "Users"
           },
           {
-            "title": "Grant per l'innovazione",
-            "description": "Finanziamenti speciali per idee innovative e progetti sperimentali",
+            "title": "Sovvenzioni per l'Innovazione",
+            "description": "Finanziamenti speciali per idee rivoluzionarie e progetti sperimentali",
             "icon": "Lightbulb"
           }
         ]
       },
       "cta": {
-        "title": "Pronti a costruire su Ergo?",
-        "description": "Inizia a preparare la proposta del tuo progetto e unisciti alla nostra community per restare aggiornato",
+        "title": "Pronto a costruire su Ergo?",
+        "description": "Inizia a preparare la proposta del tuo progetto e unisciti alla nostra comunità per restare aggiornato",
         "buttons": {
-          "discord": "Unisciti alla community Discord",
-          "learn": "Scopri Ergo"
+          "discord": "Unisciti alla comunità Discord",
+          "learn": "Scopri di più su Ergo"
         }
       }
     },
     "grantsPage": {
       "seo": {
-        "title": "Programma Ergo Grants | Finanziamenti per progetti blockchain",
-        "description": "Ottieni finanziamenti per il tuo progetto Ergo. Grant per sviluppatori, ricercatori e costruttori della community. Crea strumenti, infrastrutture e applicazioni sulla blockchain Ergo.",
-        "keywords": "ergo grants, finanziamento blockchain, grant sviluppatori, crypto grants, finanziamento progetto, grant open source",
-        "ogTitle": "Ergo Grants - Finanzia la tua innovazione blockchain",
-        "ogDescription": "Richiedi grant per costruire su Ergo. Supporto per sviluppatori, ricercatori e iniziative della community.",
-        "ogAlt": "Programma Ergo Grants",
-        "twitterTitle": "Programma Ergo Grants | Ottieni finanziamenti",
-        "twitterDescription": "Finanziamenti per sviluppatori che costruiscono su Ergo. Richiedi grant e resta aggiornato."
+        "title": "Programma di Sovvenzioni Ergo | Finanziamenti per Progetti Blockchain",
+        "description": "Ottieni finanziamenti per il tuo progetto Ergo. Sovvenzioni per sviluppatori, ricercatori e costruttori di comunità. Costruisci strumenti, infrastrutture e applicazioni sulla blockchain Ergo.",
+        "keywords": "sovvenzioni ergo, finanziamento blockchain, sovvenzioni sviluppatori, sovvenzioni cripto, finanziamento progetto, sovvenzioni open source",
+        "ogTitle": "Sovvenzioni Ergo - Finanzia la tua Innovazione Blockchain",
+        "ogDescription": "Richiedi sovvenzioni per costruire su Ergo. Supporto per sviluppatori, ricercatori e iniziative comunitarie.",
+        "ogAlt": "Programma di Sovvenzioni Ergo",
+        "twitterTitle": "Programma di Sovvenzioni Ergo | Ottieni Finanziamenti",
+        "twitterDescription": "Finanziamenti per sviluppatori che costruiscono su Ergo. Richiedi sovvenzioni e resta aggiornato."
       },
       "schema": {
         "financialService": {
-          "name": "Programma Ergo Grants",
+          "name": "Programma di Sovvenzioni Ergo",
           "description": "Programma di finanziamento per progetti che costruiscono sulla blockchain Ergo",
-          "audienceType": "Sviluppatori, Ricercatori, Costruttori della community"
+          "audienceType": "Sviluppatori, Ricercatori, Costruttori di Comunità"
         },
         "faq": {
           "items": [
             {
-              "question": "Chi può richiedere i grant Ergo?",
-              "answer": "Sviluppatori, ricercatori, costruttori della community e organizzazioni che lavorano a progetti che avvantaggiano l'ecosistema Ergo possono richiedere grant."
+              "question": "Chi può richiedere le sovvenzioni Ergo?",
+              "answer": "Sviluppatori, ricercatori, costruttori di comunità e organizzazioni che lavorano su progetti a beneficio dell'ecosistema Ergo possono richiedere sovvenzioni."
             },
             {
               "question": "Quali tipi di progetti vengono finanziati?",
-              "answer": "Protocolli DeFi, strumenti per sviluppatori, infrastrutture, contenuti educativi, iniziative della community e progetti di ricerca che fanno avanzare la tecnologia Ergo."
+              "answer": "Protocolli DeFi, strumenti per sviluppatori, infrastrutture, contenuti educativi, iniziative comunitarie e progetti di ricerca che fanno avanzare la tecnologia Ergo."
             },
             {
-              "question": "Quanti finanziamenti sono disponibili?",
-              "answer": "Gli importi dei grant variano in base alla portata e all'impatto del progetto, dai piccoli grant della community ai finanziamenti sostanziali per progetti infrastrutturali principali."
+              "question": "Quanto finanziamento è disponibile?",
+              "answer": "Gli importi delle sovvenzioni variano in base alla portata e all'impatto del progetto, da piccole sovvenzioni comunitarie a finanziamenti sostanziali per i principali progetti infrastrutturali."
             }
           ]
         }
@@ -91,37 +91,37 @@
     },
     "mapPage": {
       "seo": {
-        "title": "Mappa dell'ecosistema Ergo | Directory interattiva DeFi e dApp",
-        "description": "Esplora visivamente l'intero ecosistema Ergo. Mappa interattiva di protocolli DeFi, piattaforme NFT, wallet, infrastrutture e strumenti per sviluppatori.",
-        "keywords": "ecosistema ergo, mappa defi, directory dapp, ecosistema blockchain, progetti ergo, mappa interattiva, ecosistema crypto",
-        "ogTitle": "Mappa interattiva dell'ecosistema Ergo | 50+ progetti",
-        "ogDescription": "Esplorazione visiva dei progetti Ergo: DeFi, NFT, wallet e infrastrutture.",
-        "ogAlt": "Mappa interattiva dell'ecosistema Ergo",
-        "twitterTitle": "Mappa dell'ecosistema Ergo | Esplora i progetti visualmente",
+        "title": "Mappa dell'Ecosistema Ergo | Directory Interattiva DeFi e dApp",
+        "description": "Esplora visivamente l'ecosistema Ergo completo. Mappa interattiva di protocolli DeFi, piattaforme NFT, portafogli, infrastrutture e strumenti per sviluppatori.",
+        "keywords": "ecosistema ergo, mappa defi, directory dapp, ecosistema blockchain, progetti ergo, mappa interattiva, ecosistema cripto",
+        "ogTitle": "Mappa Interattiva dell'Ecosistema Ergo | 50+ Progetti",
+        "ogDescription": "Esplorazione visiva dei progetti Ergo: DeFi, NFT, portafogli e infrastrutture.",
+        "ogAlt": "Mappa Interattiva dell'Ecosistema Ergo",
+        "twitterTitle": "Mappa dell'Ecosistema Ergo | Esploratore Visivo di Progetti",
         "twitterDescription": "Visualizzazione interattiva dei progetti Ergo. Esplora DeFi, NFT e infrastrutture."
       },
       "schema": {
         "webApp": {
-          "name": "Mappa interattiva dell'ecosistema Ergo",
-          "description": "Esploratore visivo per i progetti e le applicazioni della blockchain Ergo"
+          "name": "Mappa Interattiva dell'Ecosistema Ergo",
+          "description": "Esploratore visivo di progetti e applicazioni della blockchain Ergo"
         },
         "dataset": {
-          "name": "Dataset dei progetti dell'ecosistema Ergo",
+          "name": "Dataset dei Progetti dell'Ecosistema Ergo",
           "description": "Dataset completo dei progetti che costruiscono sulla blockchain Ergo"
         },
         "faq": {
           "items": [
             {
-              "question": "Cos'è la mappa dell'ecosistema Ergo?",
-              "answer": "Una visualizzazione interattiva che mostra i progetti, i protocolli e le applicazioni attivi costruiti sulla blockchain Ergo, organizzati per categoria."
+              "question": "Cos'è la Mappa dell'Ecosistema Ergo?",
+              "answer": "Una visualizzazione interattiva che mostra i progetti attivi, i protocolli e le applicazioni costruite sulla blockchain Ergo, organizzati per categoria."
             },
             {
               "question": "Quanti progetti ci sono nell'ecosistema Ergo?",
-              "answer": "L'ecosistema Ergo include 50+ progetti attivi tra DeFi, NFT, wallet, infrastrutture, strumenti per sviluppatori e iniziative della community."
+              "answer": "L'ecosistema Ergo include oltre 50 progetti attivi in DeFi, NFT, portafogli, infrastrutture, strumenti per sviluppatori e iniziative comunitarie."
             },
             {
               "question": "Come aggiungo il mio progetto alla mappa?",
-              "answer": "Invia il tuo progetto tramite il modulo di invio dell'ecosistema o contatta la Ergo Foundation per essere incluso nella mappa."
+              "answer": "Invia il tuo progetto tramite il modulo di invio dell'ecosistema o contatta la Fondazione Ergo per essere incluso nella mappa dell'ecosistema."
             },
             {
               "question": "La mappa dell'ecosistema viene aggiornata regolarmente?",
@@ -138,36 +138,36 @@
         },
         "collection": {
           "name": "Ecosistema Ergo",
-          "description": "Directory completa di dApp, wallet e strumenti costruiti sulla blockchain Ergo"
+          "description": "Directory completa di dApp, portafogli e strumenti costruiti sulla blockchain Ergo"
         },
         "faq": {
           "items": [
             {
               "question": "Cos'è l'ecosistema Ergo?",
-              "answer": "L'ecosistema Ergo è composto da protocolli DeFi, marketplace NFT, strumenti per sviluppatori, wallet e progetti della community costruiti sulla blockchain Ergo."
+              "answer": "L'ecosistema Ergo comprende protocolli DeFi, marketplace NFT, strumenti per sviluppatori, portafogli e progetti comunitari costruiti sulla blockchain Ergo."
             },
             {
               "question": "Quali progetti DeFi ci sono su Ergo?",
-              "answer": "I principali progetti DeFi includono SigmaUSD (stablecoin algoritmica), ErgoDEX (DEX), protocolli di prestito e oracle pool."
+              "answer": "I principali progetti DeFi includono SigmaUSD (stablecoin algoritmica), ErgoDEX (DEX), protocolli di prestito e pool di oracoli."
             },
             {
-              "question": "Quali wallet supportano Ergo?",
-              "answer": "I wallet Ergo più diffusi includono Nautilus, Satergo, SAFEW ed Ergo Mobile Wallet."
+              "question": "Quali portafogli supportano Ergo?",
+              "answer": "I portafogli Ergo più popolari includono Nautilus, Satergo, SAFEW ed Ergo Mobile Wallet."
             },
             {
               "question": "Ci sono marketplace NFT su Ergo?",
-              "answer": "Sì. Ergo ha marketplace NFT come SkyHarbor per il minting e il trading di NFT con commissioni ridotte."
+              "answer": "Sì. Ergo ha marketplace NFT come SkyHarbor per coniare e scambiare NFT con commissioni ridotte."
             }
           ]
         }
       }
     },
     "seo": {
-      "title": "Ecosistema - Progetti blockchain Ergo | Ergo Platform",
+      "title": "Ecosistema - Progetti Ergo Blockchain | Ergo Platform",
       "description": "Scopri il fiorente ecosistema Ergo: protocolli DeFi, marketplace NFT, strumenti e applicazioni.",
       "keywords": "ecosistema Ergo, DeFi, NFT, dApp, progetti blockchain",
-      "ogTitle": "Ecosistema Ergo - Progetti e applicazioni blockchain",
-      "ogDescription": "Esplora DeFi, NFT, wallet e strumenti per sviluppatori nell'ecosistema Ergo."
+      "ogTitle": "Ecosistema Ergo - Progetti e Applicazioni Blockchain",
+      "ogDescription": "Esplora DeFi, NFT, portafogli e strumenti per sviluppatori nell'ecosistema Ergo."
     },
     "categories": {
       "defi": {
@@ -183,35 +183,35 @@
         "description": "Strumenti di sviluppo e infrastrutture"
       },
       "wallets": {
-        "title": "Wallet",
-        "description": "Wallet per conservare e gestire ERG"
+        "title": "Portafogli",
+        "description": "Portafogli per conservare e gestire ERG"
       },
       "gaming": {
         "title": "Gaming",
-        "description": "Giochi blockchain e progetti metaverse"
+        "description": "Giochi blockchain e progetti metaverso"
       },
       "social": {
         "title": "Social",
-        "description": "Piattaforme social e community"
+        "description": "Piattaforme social e comunità"
       }
     },
     "stats": {
-      "projects": "Progetti attivi",
-      "activeProjects": "Progetti attivi",
+      "projects": "Progetti Attivi",
+      "activeProjects": "Progetti Attivi",
       "categories": "Categorie",
-      "status": "Progetti live",
+      "status": "Progetti Attivi",
       "developers": "Sviluppatori",
-      "tvl": "Total Value Locked",
-      "users": "Utenti attivi"
+      "tvl": "Valore Totale Bloccato",
+      "users": "Utenti Attivi"
     },
     "filters": {
       "all": "Tutti",
       "defi": "DeFi",
       "infrastructure": "Infrastruttura",
-      "oracles": "Oracle",
+      "oracles": "Oracoli",
       "privacy": "Privacy",
       "nft": "NFT",
-      "wallets": "Wallet",
+      "wallets": "Portafogli",
       "dao": "DAO",
       "gaming": "Gaming",
       "tools": "Strumenti"
@@ -221,46 +221,46 @@
       "resultsCount": "{count} progetti"
     },
     "featuredProjects": {
-      "title": "Progetti in evidenza",
+      "title": "Progetti in Evidenza",
       "badge": "IN EVIDENZA"
     },
     "featured": {
-      "title": "Progetti in evidenza",
-      "viewAll": "Visualizza tutti i progetti"
+      "title": "Progetti in Evidenza",
+      "viewAll": "Visualizza Tutti i Progetti"
     },
     "cta": {
       "title": "Costruisci su Ergo",
       "description": "Unisciti all'ecosistema e costruisci il futuro della blockchain",
-      "startBuilding": "Inizia a costruire",
-      "viewGrants": "Visualizza i grant"
+      "startBuilding": "Inizia a Costruire",
+      "viewGrants": "Visualizza Sovvenzioni"
     },
     "mining": {
       "no_pools_match_your_criteria": "Nessun pool corrisponde ai tuoi criteri",
-      "new_to_mining": "Nuovo al mining?",
+      "new_to_mining": "Nuovo nel mining?",
       "best_for": "Ideale per",
-      "ready_to_start_mining": "Pronto a iniziare il mining?",
+      "ready_to_start_mining": "Pronto per iniziare il mining?",
       "getblok_category_large_url_https": "GetBlok\",\n      category: \"large\",\n      url: \"https://ergo.getblok.io\",\n      location: \"Global\",\n      fee:",
       "pplns_minpayout": "PPLNS\",\n      minPayout:",
-      "auto_exchange_mobile_app_api_access_ssl_tls": "Auto-exchange\", \"App mobile\", \"Accesso API\", \"SSL/TLS",
-      "auto_exchange_mobile_app": "Auto-exchange\", \"App mobile",
-      "telegram_bot_email_alerts_ddos_protection": "Bot Telegram\", \"Avvisi email\", \"Protezione DDoS",
-      "telegram_bot_email_alerts": "Bot Telegram\", \"Avvisi email\",",
+      "auto_exchange_mobile_app_api_access_ssl_tls": "Auto-exchange\", \"Mobile app\", \"API access\", \"SSL/TLS",
+      "auto_exchange_mobile_app": "Auto-exchange\", \"Mobile App",
+      "telegram_bot_email_alerts_ddos_protection": "Telegram bot\", \"Email alerts\", \"DDoS protection",
+      "telegram_bot_email_alerts": "Telegram Bot\", \"Email Alerts\",",
       "eu_us_asia_ru": "EU\", \"US\", \"Asia\", \"RU",
       "herominers_category_large_url_https": "HeroMiners\",\n      category: \"large\",\n      url: \"https://ergo.herominers.com\",\n      location: \"Global\",\n      fee:",
       "prop_minpayout": "PROP\",\n      minPayout:",
-      "ssl_support_worker_stats_profit": "Supporto SSL\", \"Statistiche worker\", \"Calcolatore di profitto\", \"Bot Discord",
-      "low_fee_discord_bot_profit_calc": "Commissione bassa\", \"Bot Discord\", \"Calcolatore profitto",
+      "ssl_support_worker_stats_profit": "SSL support\", \"Worker stats\", \"Profit calculator\", \"Discord bot",
+      "low_fee_discord_bot_profit_calc": "Low Fee\", \"Discord Bot\", \"Profit Calc",
       "woolypooly_category_medium_url_https": "WoolyPooly\",\n      category: \"medium\",\n      url: \"https://woolypooly.com/en/coin/erg\",\n      location: \"Europe\",\n      fee:",
-      "solo_mining_telegram_bot_mev_rewards_low_latency": "Mining solo\", \"Bot Telegram\", \"Premi MEV\", \"Bassa latenza",
-      "solo_mining_mev_rewards_low_fee": "Mining solo\", \"Premi MEV\", \"Commissione bassa",
+      "solo_mining_telegram_bot_mev_rewards_low_latency": "Solo mining\", \"Telegram bot\", \"MEV rewards\", \"Low latency",
+      "solo_mining_mev_rewards_low_fee": "Solo Mining\", \"MEV Rewards\", \"Low Fee",
       "pps_minpayout": "PPS+\",\n      minPayout:",
-      "mobile_app_multi_coin_instant": "App mobile\", \"Multi-coin\", \"Pagamenti istantanei\", \"Supporto cinese",
-      "multi_coin_instant_pay_mobile_app": "Multi-coin\", \"Pagamento istantaneo\", \"App mobile",
+      "mobile_app_multi_coin_instant": "Mobile app\", \"Multi-coin\", \"Instant payments\", \"Chinese support",
+      "multi_coin_instant_pay_mobile_app": "Multi-coin\", \"Instant Pay\", \"Mobile App",
       "kryptex_pool_category_medium_url": "Kryptex Pool\",\n      category: \"medium\",\n      url: \"https://pool.kryptex.com/erg\",\n      location: \"Europe\",\n      fee:",
-      "mining_os_instant_payouts_profit": "Mining OS\", \"Pagamenti istantanei\", \"Profit switching\", \"Dashboard",
+      "mining_os_instant_payouts_profit": "Mining OS\", \"Instant payouts\", \"Profit switching\", \"Dashboard",
       "mining_os_profit_switch_dashboard": "Mining OS\", \"Profit Switch\", \"Dashboard",
       "nanopool_category_medium_url_https": "Nanopool\",\n      category: \"medium\",\n      url: \"https://ergo.nanopool.org\",\n      location: \"Global\",\n      fee:",
-      "api_access_multi_lang_mobile_app": "Accesso API\", \"Multi-lingua\", \"App mobile",
+      "api_access_multi_lang_mobile_app": "API Access\", \"Multi-lang\", \"Mobile App",
       "eu_us_asia_au": "EU\", \"US\", \"Asia\", \"AU",
       "best_for_mixed_rigs_download": "Ideale per rig misti\",\n      download: \"https://github.com/NebuTech/NBMiner/releases",
       "best_for_nvidia_cards_download": "Ideale per schede NVIDIA\",\n      download: \"https://github.com/trexminer/T-Rex/releases",
@@ -268,61 +268,61 @@
       "advanced_users_download_https_github": "Utenti avanzati\",\n      download: \"https://github.com/Lolliedieb/lolMiner-releases/releases",
       "mining_pools_directory": "DIRECTORY DEI POOL DI MINING",
       "smaller_pools_for_better_decentralization": "Pool più piccoli per una migliore decentralizzazione",
-      "ergo_mining_software_options": "Opzioni software per il mining di Ergo",
-      "all_pools_icon_null_activeclass": "Tutti i pool', \n      icon: null,\n      activeClass:",
-      "for_beginners": "Per principianti",
-      "all_pools": "Tutti i pool",
+      "ergo_mining_software_options": "Opzioni di software di mining Ergo",
+      "all_pools_icon_null_activeclass": "All Pools', \n      icon: null,\n      activeClass:",
+      "for_beginners": "Per Principianti",
+      "all_pools": "Tutti i Pool",
       "fair_launch_asic_resistant_truly": "Lancio equo, resistente agli ASIC, veramente decentralizzato. Trova pool, software e risorse.",
-      "i_m_new_start_here": "Sono nuovo - Inizia qui",
+      "i_m_new_start_here": "Sono nuovo — inizia qui",
       "browse_pools_directory": "Sfoglia la directory dei pool",
-      "start_with_nbminer_mixed_rigs": "Inizia con NBMiner (rig misti) o T-Rex (solo NVIDIA) per la configurazione più semplice.",
+      "start_with_nbminer_mixed_rigs": "Inizia con NBMiner (rig misti) o T-Rex (solo NVIDIA) per una configurazione più semplice.",
       "how_to_choose_a_pool": "Come scegliere un pool?",
-      "beginners_choose_pools_with_good": "Principianti: scegli pool con buon supporto. Avanzati: ottimizza commissioni e posizione del server.",
+      "beginners_choose_pools_with_good": "Principianti: scegli pool con buon supporto. Avanzati: ottimizza le commissioni e la posizione del server.",
       "minimum_requirements": "Requisiti minimi?",
       "depends_on_hashrate_and_electricity_cost": "Dipende dall'hashrate e dal costo dell'elettricità.",
-      "view_all_faqs": "Vedi tutte le FAQ",
+      "view_all_faqs": "Visualizza tutte le FAQ",
       "join_thousands_of_miners_securing": "Unisciti a migliaia di miner che proteggono la rete Ergo. Equo, decentralizzato e redditizio."
     },
     "map": {
-      "title": "Mappa dell'ecosistema Ergo",
-      "subtitle": "Directory interattiva DeFi e dApp",
-      "description": "Esplora visivamente l'intero ecosistema Ergo. Mappa interattiva di protocolli DeFi, piattaforme NFT, wallet, infrastrutture e strumenti per sviluppatori. Scopri 50+ progetti attivi.",
+      "title": "Mappa dell'Ecosistema Ergo",
+      "subtitle": "Directory Interattiva DeFi e dApp",
+      "description": "Esplora visivamente l'ecosistema Ergo completo. Mappa interattiva di protocolli DeFi, piattaforme NFT, portafogli, infrastrutture e strumenti per sviluppatori. Scopri oltre 50 progetti attivi.",
       "lastUpdated": "Ultimo aggiornamento",
       "buttons": {
-        "exploreProjects": "Esplora i progetti",
+        "exploreProjects": "Esplora Progetti",
         "visitSigmaverse": "Visita Sigmaverse"
       },
       "features": {
-        "title": "Caratteristiche dell'ecosistema",
-        "subtitle": "Scopri cosa rende unico l'ecosistema di Ergo",
+        "title": "Caratteristiche dell'Ecosistema",
+        "subtitle": "Scopri cosa rende unico l'ecosistema Ergo",
         "interactive": {
-          "title": "Visualizzazione interattiva",
-          "description": "Esplora i progetti tramite un'interfaccia visiva intuitiva"
+          "title": "Visualizzazione Interattiva",
+          "description": "Esplora i progetti attraverso un'interfaccia visiva intuitiva"
         },
         "comprehensive": {
-          "title": "Copertura completa",
-          "description": "Tutti i progetti e i protocolli attivi in un unico posto"
+          "title": "Copertura Completa",
+          "description": "Tutti i progetti e protocolli attivi in un unico posto"
         },
         "realtime": {
-          "title": "Aggiornamenti in tempo reale",
+          "title": "Aggiornamenti in Tempo Reale",
           "description": "Informazioni e statistiche sui progetti sempre aggiornate"
         }
       },
       "cta": {
-        "title": "Pronto a esplorare?",
+        "title": "Pronto a Esplorare?",
         "subtitle": "Immergiti nel crescente ecosistema Ergo e scopri progetti innovativi",
         "buttons": {
-          "exploreEcosystem": "Esplora l'ecosistema",
+          "exploreEcosystem": "Esplora l'Ecosistema",
           "visitSigmaverse": "Visita Sigmaverse"
         }
       },
       "seo": {
-        "title": "Mappa dell'ecosistema Ergo | Directory interattiva DeFi e dApp",
-        "description": "Esplora visivamente l'intero ecosistema Ergo. Mappa interattiva di protocolli DeFi, piattaforme NFT, wallet, infrastrutture e strumenti per sviluppatori. Scopri 50+ progetti attivi.",
-        "ogTitle": "Mappa interattiva dell'ecosistema Ergo | 50+ progetti",
-        "ogDescription": "Esplorazione visiva di tutti i progetti Ergo. DeFi, NFT, wallet, infrastrutture mappate.",
-        "twitterTitle": "Mappa dell'ecosistema Ergo | Esplora i progetti visualmente",
-        "twitterDescription": "Visualizzazione interattiva di 50+ progetti Ergo. Esplora DeFi, NFT, infrastrutture."
+        "title": "Mappa dell'Ecosistema Ergo | Directory Interattiva DeFi e dApp",
+        "description": "Esplora visivamente l'ecosistema Ergo completo. Mappa interattiva di protocolli DeFi, piattaforme NFT, portafogli, infrastrutture e strumenti per sviluppatori. Scopri oltre 50 progetti attivi.",
+        "ogTitle": "Mappa Interattiva dell'Ecosistema Ergo | 50+ Progetti",
+        "ogDescription": "Esplorazione visiva di tutti i progetti Ergo. DeFi, NFT, portafogli e infrastrutture mappate.",
+        "twitterTitle": "Mappa dell'Ecosistema Ergo | Esploratore Visivo di Progetti",
+        "twitterDescription": "Visualizzazione interattiva di oltre 50 progetti Ergo. Esplora DeFi, NFT e infrastrutture."
       },
       "jump_to": "Vai a:",
       "filter_by_category": "Filtra per categoria:",
@@ -351,31 +351,31 @@
       "sigmarust_category_tools_url_https": "SigmaRust\", category: \"TOOLS\", url: \"https://github.com/ergoplatform/sigma-rust",
       "sigrsv_category_defi_url": "SigRSV\", category: \"DEFI\", url: \"#",
       "defi_infrastructure_oracles_privacy_nft": "DEFI\",\n  \"INFRASTRUCTURE\",\n  \"ORACLES\",\n  \"PRIVACY\",\n  \"NFT\",\n  \"WALLETS\",\n  \"DAO\",\n  \"TOOLS",
-      "suggest_a_project": "Suggerisci un progetto",
+      "suggest_a_project": "Suggerisci un Progetto",
       "no_projects_found": "Nessun progetto trovato",
-      "ergo_ecosystem_interactive_map": "Mappa interattiva dell'ecosistema Ergo",
+      "ergo_ecosystem_interactive_map": "Mappa Interattiva dell'Ecosistema Ergo",
       "webapplication_id_https_ergoblockchain_org": "WebApplication\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem/map\",\n    name: \"Ergo Ecosystem Interactive Map\",\n    description: \"Visual explorer for Ergo blockchain projects and applications\",\n    applicationCategory: \"VisualizationApplication\",\n    operatingSystem: \"Web Browser\",\n    url: \"https://ergoblockchain.org/ecosystem/map",
       "organization_name_ergo_platform_url": "Organization\",\n      name: \"Ergo Platform\",\n      url: \"https://ergoblockchain.org",
-      "what_is_the_ergo_ecosystem": "Cos'è la mappa dell'ecosistema Ergo?\",\n      answer: \"Una visualizzazione interattiva che mostra tutti i progetti, i protocolli e le applicazioni attivi costruiti sulla blockchain Ergo, organizzati per categoria.",
-      "how_many_projects_are_in_the_ergo_ecosystem_answer": "Quanti progetti ci sono nell'ecosistema Ergo?\",\n      answer:",
-      "how_do_i_add_my": "Come aggiungo il mio progetto alla mappa?\",\n      answer: \"Invia il tuo progetto tramite il modulo di invio dell'ecosistema o contatta la Ergo Foundation per essere incluso nella mappa.",
-      "is_the_ecosystem_map_updated": "La mappa dell'ecosistema viene aggiornata regolarmente?\",\n      answer: \"Sì, la mappa dell'ecosistema viene aggiornata regolarmente per includere nuovi progetti e rimuovere quelli inattivi, offrendo una visione accurata dell'ecosistema attivo.",
+      "what_is_the_ergo_ecosystem": "What is the Ergo Ecosystem Map?\",\n      answer: \"An interactive visualization showing all active projects, protocols, and applications built on Ergo blockchain, organized by category.",
+      "how_many_projects_are_in_the_ergo_ecosystem_answer": "How many projects are in the Ergo ecosystem?\",\n      answer:",
+      "how_do_i_add_my": "How do I add my project to the map?\",\n      answer: \"Submit your project through the ecosystem submission form or contact the Ergo Foundation to be included in the ecosystem map.",
+      "is_the_ecosystem_map_updated": "Is the ecosystem map updated regularly?\",\n      answer: \"Yes, the ecosystem map is regularly updated to include new projects and remove inactive ones, providing an accurate view of the active ecosystem.",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "datadownload_encodingformat_application_json_contenturl": "DataDownload\",\n      encodingFormat: \"application/json\",\n      contentUrl: \"https://ergoblockchain.org/api/ecosystem",
       "place_name_global": "Place\",\n      name: \"Global",
-      "ergo_ecosystem_map_interactive_defi_dapp_directory": "Mappa dell'ecosistema Ergo | Directory interattiva DeFi e dApp",
-      "interactive_ergo_ecosystem_map_50_projects": "Mappa interattiva dell'ecosistema Ergo | 50+ progetti",
-      "ergo_ecosystem_map_visual_project_explorer": "Mappa dell'ecosistema Ergo | Esplora i progetti visualmente",
-      "interactive_visualization_of_50_ergo": "Visualizzazione interattiva di 50+ progetti Ergo. Esplora DeFi, NFT, infrastrutture.",
-      "visual_explorer_for_ergo_blockchain": "Esploratore visivo per i progetti e le applicazioni della blockchain Ergo"
+      "ergo_ecosystem_map_interactive_defi_dapp_directory": "Mappa dell'Ecosistema Ergo | Directory Interattiva DeFi e dApp",
+      "interactive_ergo_ecosystem_map_50_projects": "Mappa Interattiva dell'Ecosistema Ergo | 50+ Progetti",
+      "ergo_ecosystem_map_visual_project_explorer": "Mappa dell'Ecosistema Ergo | Esploratore Visivo di Progetti",
+      "interactive_visualization_of_50_ergo": "Visualizzazione interattiva di oltre 50 progetti Ergo. Esplora DeFi, NFT e infrastrutture.",
+      "visual_explorer_for_ergo_blockchain": "Esploratore visivo di progetti e applicazioni della blockchain Ergo"
     },
     "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
     "collectionpage_id_https_ergoblockchain_org": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#collection\",\n    name: \"Ergo Ecosystem\",\n    url: \"https://ergoblockchain.org/ecosystem",
     "website_id_https_ergoblockchain_org_website": "WebSite\", \"@id\": \"https://ergoblockchain.org#website",
     "breadcrumblist_id_https_ergoblockchain_org": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
-    "ecosystem_item_https_ergoblockchain_org_ecosystem": "Ecosistema\", item: \"https://ergoblockchain.org/ecosystem",
-    "what_defi_projects_are_on": "Quali progetti DeFi ci sono su Ergo?\",\n      answer: \"I principali progetti DeFi includono SigmaUSD (stablecoin algoritmica), ErgoDEX (DEX), protocolli di prestito e oracle pool.",
-    "are_there_nft_marketplaces_on": "Ci sono marketplace NFT su Ergo?\",\n      answer: \"Sì, Ergo ha marketplace NFT come SkyHarbor per il minting e il trading di NFT con commissioni ridotte.",
+    "ecosystem_item_https_ergoblockchain_org_ecosystem": "Ecosystem\", item: \"https://ergoblockchain.org/ecosystem",
+    "what_defi_projects_are_on": "What DeFi projects are on Ergo?\",\n      answer: \"Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools.",
+    "are_there_nft_marketplaces_on": "Are there NFT marketplaces on Ergo?\",\n      answer: \"Yes, Ergo has NFT marketplaces like SkyHarbor for minting and trading NFTs with low fees.",
     "home_item_https_ergoblockchain_org": "Home\", item: \"https://ergoblockchain.org/",
     "projectPage": {
       "breadcrumbs": {
@@ -390,8 +390,8 @@
           "a": "{name} offre: {features}."
         },
         "technologies": {
-          "q": "Quali tecnologie Ergo utilizza {name}?",
-          "a": "{name} è costruito utilizzando {technologies}."
+          "q": "Quali tecnologie Ergo usa {name}?",
+          "a": "{name} è costruito con {technologies}."
         }
       },
       "buttons": {
@@ -399,8 +399,8 @@
         "github": "GitHub",
         "twitter": "Twitter",
         "docs": "Documentazione",
-        "community": "Community",
-        "backToEcosystem": "Torna all'ecosistema"
+        "community": "Comunità",
+        "backToEcosystem": "Torna all'Ecosistema"
       },
       "status": {
         "operational": "Operativo",
@@ -409,19 +409,19 @@
         "notOperating": "Non operativo"
       },
       "sections": {
-        "keyFeatures": "Funzionalità principali",
-        "builtWith": "Costruito con la tecnologia Ergo",
-        "relatedArticles": "Articoli correlati",
-        "viewAll": "Vedi tutti",
-        "faq": "Domande frequenti",
-        "relatedProjects": "Progetti {category} correlati",
+        "keyFeatures": "Caratteristiche Principali",
+        "builtWith": "Costruito con la Tecnologia Ergo",
+        "relatedArticles": "Articoli Correlati",
+        "viewAll": "Visualizza tutto",
+        "faq": "Domande Frequenti",
+        "relatedProjects": "Progetti {category} Correlati",
         "minRead": "{time} min di lettura"
       },
       "cta": {
-        "title": "Esplora altre dApp",
-        "description": "Scopri l'intero ecosistema Ergo con DeFi, wallet, strumenti e molto altro.",
-        "primaryButton": "Vedi tutti i progetti",
-        "secondaryButton": "Inizia a costruire"
+        "title": "Esplora Altre dApp",
+        "description": "Scopri l'intero ecosistema Ergo con DeFi, portafogli, strumenti e altro.",
+        "primaryButton": "Visualizza Tutti i Progetti",
+        "secondaryButton": "Inizia a Costruire"
       }
     },
     "infographicPage": {
@@ -437,131 +437,131 @@
       },
       "share": {
         "title": "Condividi questa infografica",
-        "subtitle": "aiuta gli altri a scoprire Ergo",
+        "subtitle": "aiuta altri a scoprire Ergo",
         "telegram": "Telegram",
         "pinterest": "Pinterest",
         "download": "Scarica",
-        "copyLink": "Copia link",
+        "copyLink": "Copia il link",
         "copied": "Copiato!"
       },
       "sections": {
-        "about": "Informazioni su questa infografica",
-        "systemsCompared": "Sistemi confrontati",
-        "keyPoints": "Punti chiave",
-        "howToRead": "Come leggere questa infografica",
-        "relatedTopics": "Argomenti correlati"
+        "about": "Informazioni su Questa Infografica",
+        "systemsCompared": "Sistemi Confrontati",
+        "keyPoints": "Punti Chiave",
+        "howToRead": "Come Leggere Questa Infografica",
+        "relatedTopics": "Argomenti Correlati"
       },
       "cta": {
-        "title": "Esplora altre infografiche Ergo",
-        "description": "Scopri guide visive sul PoW di Ergo, gli smart contract eUTXO, lo storage rent, la privacy e altro ancora.",
-        "button": "Sfoglia tutte le infografiche"
+        "title": "Esplora Altre Infografiche Ergo",
+        "description": "Scopri guide visive sulla PoW di Ergo, gli smart contract eUTXO, lo storage rent, la privacy e altro ancora.",
+        "button": "Sfoglia Tutte le Infografiche"
       }
     }
   },
   "ecosystemPage": {},
   "ecosystemGrants": {
-    "title": "Grant dell'ecosistema",
+    "title": "Sovvenzioni dell'Ecosistema",
     "description": "Opportunità di finanziamento per lo sviluppo dell'ecosistema Ergo",
-    "subtitle": "Costruisci il futuro della blockchain con il supporto della community"
+    "subtitle": "Costruisci il futuro della blockchain con il supporto della comunità"
   },
   "ecosystemMap": {
-    "title": "Mappa dell'ecosistema",
+    "title": "Mappa dell'Ecosistema",
     "description": "Visualizzazione interattiva dell'ecosistema Ergo",
     "subtitle": "Esplora progetti, strumenti e servizi"
   },
   "ecosystemMining": {
-    "title": "Mining nell'ecosistema",
-    "description": "Pool di mining, strumenti e risorse per i miner di Ergo",
+    "title": "Mining dell'Ecosistema",
+    "description": "Pool di mining, strumenti e risorse per i miner Ergo",
     "subtitle": "Tutto ciò di cui hai bisogno per iniziare a minare ERG"
   },
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "Un exchange decentralizzato (DEX) open-source all'avanguardia che opera sulle blockchain Ergo e Cardano. Offre fornitura di liquidità (LP), yield farming e supporta le Babel Fees.",
-      "longDescription": "Spectrum Finance è stato uno dei primi exchange decentralizzati cross-chain costruiti sul modello eUTXO, operando sia su Ergo che su Cardano. La piattaforma ha aperto la strada a diverse innovazioni, tra cui il supporto nativo alle Babel Fees, che consentiva agli utenti di pagare le commissioni di transazione in token diversi da ERG.\n\nIl DEX utilizzava pool AMM (Automated Market Maker) per swap di token senza fiducia, con i fornitori di liquidità che guadagnavano commissioni su tutti i trade. Le funzionalità di yield farming consentivano ricompense aggiuntive in token per i fornitori di liquidità, creando incentivi per una liquidità profonda su tutte le coppie di trading.\n\nIn quanto progetto open-source, Spectrum Finance ha contribuito con codice significativo e ricerche all'ecosistema DeFi eUTXO, dimostrando come applicazioni finanziarie complesse possano essere costruite in modo sicuro su questo modello. Gli smart contract e l'architettura del protocollo continuano a servire come implementazioni di riferimento per i nuovi progetti DeFi.",
+      "description": "Un exchange decentralizzato (DEX) open source all'avanguardia che opera sulle blockchain Ergo e Cardano. Offre fornitura di liquidità (LP), yield farming e supporta le Babel Fees.",
+      "longDescription": "Spectrum Finance è stato uno dei primi exchange decentralizzati cross-chain costruiti sul modello eUTXO, operando sia sulla blockchain Ergo che su quella di Cardano. La piattaforma ha aperto la strada a diverse innovazioni, tra cui il supporto nativo delle Babel Fees, che permetteva agli utenti di pagare le commissioni di transazione in token diversi da ERG.\n\nIl DEX utilizzava pool di market maker automatizzati (AMM) per scambi di token senza fiducia, con i fornitori di liquidità che guadagnavano commissioni da tutte le operazioni. Le funzionalità di yield farming consentivano ricompense aggiuntive in token per i fornitori di liquidità, creando incentivi per una liquidità profonda nelle coppie di trading.\n\nCome progetto open source, Spectrum Finance ha contribuito codice e ricerca significativi all'ecosistema DeFi eUTXO, dimostrando come applicazioni finanziarie complesse potessero essere costruite in modo sicuro su questo modello. Gli smart contract e l'architettura del protocollo continuano a fungere da implementazioni di riferimento per i nuovi progetti DeFi.",
       "features": [
-        "Exchange decentralizzato",
-        "Pool di liquidità",
+        "Exchange Decentralizzato",
+        "Pool di Liquidità",
         "Yield Farming",
         "Supporto Babel Fees",
-        "Trading cross-chain"
+        "Trading Cross-chain"
       ]
     },
     "ergodex": {
       "name": "ErgoDex",
-      "description": "Un exchange decentralizzato (DEX) non custodiale per Ergo e Cardano, che consente trading AMM e order-book tra entrambi gli ecosistemi.",
-      "longDescription": "ErgoDex è un exchange decentralizzato non custodiale pionieristico costruito sul modello eUTXO, che offre trading fluido tra gli ecosistemi Ergo e Cardano. A differenza dei DEX tradizionali che si affidano al matching centralizzato degli ordini, ErgoDex sfrutta le proprietà uniche del modello UTXO esteso per consentire swap atomici trustless senza intermediari.\n\nLa piattaforma supporta sia pool AMM (Automated Market Maker) per la fornitura passiva di liquidità sia il trading tradizionale con order-book per un'esecuzione precisa dei prezzi. Questo approccio ibrido offre flessibilità ai trader mantenendo le garanzie di sicurezza del settlement on-chain. Tutti i trade vengono eseguiti direttamente sulla blockchain, garantendo trasparenza ed eliminando il rischio di controparte.\n\nErgoDex rappresenta un significativo avanzamento nell'infrastruttura DeFi cross-chain. Costruendo su eUTXO piuttosto che su modelli basati su account, l'exchange ottiene risultati di transazione deterministici, commissioni prevedibili e maggiore sicurezza contro le vulnerabilità comuni degli smart contract. I fornitori di liquidità possono guadagnare commissioni sia dalle coppie di trading ERG che ADA, rendendolo un'opzione interessante per la generazione di rendimento su più ecosistemi blockchain.",
+      "description": "Un exchange decentralizzato (DEX) non custodiale per Ergo e Cardano, che consente il trading AMM e per book degli ordini in entrambi gli ecosistemi.",
+      "longDescription": "ErgoDex è un exchange decentralizzato non custodiale pionieristico costruito sul modello eUTXO, che fornisce un trading fluido tra gli ecosistemi Ergo e Cardano. A differenza dei DEX tradizionali che si affidano alla corrispondenza centralizzata degli ordini, ErgoDex sfrutta le proprietà uniche del modello UTXO esteso per abilitare swap atomici senza fiducia e senza intermediari.\n\nLa piattaforma supporta sia i pool di market maker automatizzati (AMM) per la fornitura passiva di liquidità che il trading tradizionale per book degli ordini per un'esecuzione precisa dei prezzi. Questo approccio ibrido offre flessibilità ai trader mantenendo le garanzie di sicurezza del regolamento on-chain. Tutte le operazioni vengono eseguite direttamente sulla blockchain, garantendo trasparenza ed eliminando il rischio di controparte.\n\nErgoDex rappresenta un avanzamento significativo nell'infrastruttura DeFi cross-chain. Costruendo su eUTXO piuttosto che su modelli basati su account, l'exchange raggiunge risultati di transazione deterministici, commissioni prevedibili e maggiore sicurezza contro le comuni vulnerabilità degli smart contract. I fornitori di liquidità possono guadagnare commissioni dalle coppie di trading ERG e ADA, rendendolo un'opzione attraente per la generazione di rendimento in più ecosistemi blockchain.",
       "features": [
         "DEX cross-chain per Ergo e Cardano",
         "Trading non custodiale",
-        "Modelli AMM e order-book",
+        "Modelli AMM e book degli ordini",
         "Fornitura di liquidità per gli ecosistemi ERG e ADA"
       ]
     },
     "sigmausd": {
       "name": "SigmaUSD",
-      "description": "La prima stablecoin basata su eUTXO, che implementa il protocollo AgeUSD. È ancorata al dollaro USA e garantita da ERG con un rapporto di riserva variabile (400%-800%).",
-      "longDescription": "SigmaUSD è una stablecoin algoritmica rivoluzionaria che ha aperto la strada al protocollo AgeUSD sulla blockchain Ergo. Come prima stablecoin costruita sul modello UTXO esteso, dimostra come la finanza decentralizzata possa ottenere stabilità dei prezzi senza affidarsi a riserve centralizzate o terze parti fidate.\n\nIl protocollo mantiene il suo ancoraggio al dollaro attraverso un meccanismo unico a doppio token: SigmaUSD (la stablecoin) e SigRSV (la reserve coin). Gli utenti coniano SigmaUSD depositando ERG come garanzia, mentre i fornitori di riserva coniano SigRSV per assorbire la volatilità dei prezzi. Il sistema mantiene un rapporto di riserva variabile tra il 400% e l'800%, garantendo un'overcollateralizzazione robusta anche durante le fasi di stress del mercato.\n\nCiò che distingue SigmaUSD dalle altre stablecoin è il suo design completamente decentralizzato senza rischio di liquidazione per i singoli utenti. I dati sui prezzi provengono dagli Oracle Pool trustless di Ergo, eliminando la dipendenza da oracle centralizzati. L'intero protocollo gira su smart contract verificati on-chain, con rapporti di riserva trasparenti visibili a chiunque. Questo rende SigmaUSD un'unità di conto stabile ideale per l'ecosistema DeFi di Ergo, consentendo l'archiviazione di valore prevedibile e transazioni senza rischio di controparte.",
+      "description": "La prima stablecoin basata su eUTXO, che implementa il protocollo AgeUSD. È ancorata al dollaro statunitense e garantita da ERG con un rapporto di riserva variabile (400 %–800 %).",
+      "longDescription": "SigmaUSD è una rivoluzionaria stablecoin algoritmica che ha aperto la strada al protocollo AgeUSD sulla blockchain Ergo. Come prima stablecoin costruita sul modello UTXO esteso, dimostra come la finanza decentralizzata possa raggiungere la stabilità dei prezzi senza affidarsi a riserve centralizzate o terze parti fidate.\n\nIl protocollo mantiene il suo ancoraggio al dollaro attraverso un meccanismo a doppio token unico: SigmaUSD (la stablecoin) e SigRSV (la moneta di riserva). Gli utenti coniamo SigmaUSD depositando ERG come garanzia, mentre i fornitori di riserva coniamo SigRSV per assorbire la volatilità dei prezzi. Il sistema mantiene un rapporto di riserva variabile tra il 400 % e l'800 %, garantendo una robusta sovracollateralizzazione anche durante periodi di stress del mercato.\n\nCiò che distingue SigmaUSD da altre stablecoin è il suo design completamente decentralizzato senza rischio di liquidazione per i singoli utenti. I dati dei prezzi provengono dagli Oracle Pools senza fiducia di Ergo, eliminando la dipendenza da oracoli centralizzati. L'intero protocollo funziona su smart contract verificati on-chain, con rapporti di riserva trasparenti visibili a chiunque. Questo rende SigmaUSD un'unità di conto stabile ideale per l'ecosistema DeFi Ergo, consentendo una conservazione del valore e transazioni prevedibili senza rischio di controparte.",
       "features": [
-        "Stablecoin algoritmica",
+        "Stablecoin Algoritmica",
         "Garantita da ERG",
         "Decentralizzata",
-        "Nessun rischio di liquidazione"
+        "Nessun Rischio di Liquidazione"
       ],
       "faq": [
         {
           "question": "Cos'è SigmaUSD?",
-          "answer": "SigmaUSD è una stablecoin algoritmica decentralizzata su Ergo, ancorata al dollaro USA e garantita dalla criptovaluta ERG con un rapporto di riserva del 400-800%."
+          "answer": "SigmaUSD è una stablecoin algoritmica decentralizzata su Ergo, ancorata al dollaro statunitense e garantita dalla criptovaluta ERG con un rapporto di riserva del 400–800 %."
         },
         {
           "question": "In cosa si differenzia SigmaUSD dalle altre stablecoin?",
-          "answer": "A differenza delle stablecoin centralizzate come USDT, SigmaUSD è completamente decentralizzata senza un singolo punto di errore. Utilizza il protocollo AgeUSD con overcollateralizzazione e non ha rischio di liquidazione per gli utenti."
+          "answer": "A differenza delle stablecoin centralizzate come USDT, SigmaUSD è completamente decentralizzata senza punto unico di fallimento. Utilizza il protocollo AgeUSD con sovracollateralizzazione e non ha rischio di liquidazione per gli utenti."
         },
         {
           "question": "Cos'è SigRSV?",
-          "answer": "SigRSV è la reserve coin che garantisce SigmaUSD. I fornitori di riserva coniano SigRSV per guadagnare dall'apprezzamento del prezzo di ERG fornendo stabilità al sistema."
+          "answer": "SigRSV è la moneta di riserva che garantisce SigmaUSD. I fornitori di riserva coniamo SigRSV per trarre vantaggio dall'apprezzamento del prezzo di ERG mentre forniscono stabilità al sistema."
         }
       ]
     },
     "rosen-bridge": {
       "name": "Rosen Bridge",
-      "description": "Un protocollo open-source per trasferimenti di asset cross-chain tra Ergo e altre blockchain come Cardano, Bitcoin Runes e Dogecoin.",
-      "longDescription": "Rosen Bridge è un protocollo cross-chain decentralizzato che consente trasferimenti di asset trustless tra Ergo e multiple reti blockchain tra cui Cardano, Bitcoin, Dogecoin ed Ethereum. Costruito su tecniche crittografiche all'avanguardia come i NiPoPoW (Non-Interactive Proofs of Proof-of-Work), Rosen Bridge elimina la necessità di custodi centralizzati o multisig federati.\n\nIl bridge opera attraverso una rete di Watcher indipendenti che monitorano le transazioni sulle chain collegate. Questi Watcher utilizzano prove crittografiche per verificare i trasferimenti cross-chain senza richiedere fiducia in alcuna singola parte. Il modello di sicurezza del protocollo è progettato per rimanere robusto anche se la maggior parte dei Watcher viene compromessa, grazie agli incentivi economici e alle garanzie crittografiche integrate negli smart contract.\n\nRosen Bridge supporta asset wrapped in entrambe le direzioni, consentendo agli utenti di portare Bitcoin, ADA e altri token nell'ecosistema DeFi di Ergo, abilitando al contempo l'utilizzo di ERG e token nativi di Ergo su altre chain. L'architettura open-source del bridge significa che chiunque può eseguire un nodo Watcher, contribuendo alla sicurezza della rete e guadagnando commissioni. Questo approccio decentralizzato all'interoperabilità cross-chain posiziona Rosen Bridge come infrastruttura critica per il futuro multi-chain del DeFi.",
+      "description": "Un protocollo open source per trasferimenti di asset cross-chain tra Ergo e altre blockchain come Cardano, Bitcoin Runes e Dogecoin.",
+      "longDescription": "Rosen Bridge è un protocollo cross-chain decentralizzato che consente trasferimenti di asset senza fiducia tra Ergo e più reti blockchain, tra cui Cardano, Bitcoin, Dogecoin ed Ethereum. Costruito su tecniche crittografiche all'avanguardia come i NiPoPoW (Non-Interactive Proofs of Proof-of-Work), Rosen Bridge elimina la necessità di custodi centralizzati o multisig federati.\n\nIl bridge opera attraverso una rete di Watcher indipendenti che monitorano le transazioni sulle catene connesse. Questi Watcher utilizzano prove crittografiche per verificare i trasferimenti cross-chain senza richiedere fiducia in nessuna singola parte. Il modello di sicurezza del protocollo è progettato per rimanere robusto anche se la maggioranza dei Watcher viene compromessa, grazie agli incentivi economici e alle garanzie crittografiche integrate negli smart contract.\n\nRosen Bridge supporta asset avvolti in entrambe le direzioni, consentendo agli utenti di portare Bitcoin, ADA e altri token nell'ecosistema DeFi di Ergo, permettendo al contempo a ERG e ai token nativi Ergo di essere utilizzati su altre catene. L'architettura open source del bridge significa che chiunque può eseguire un nodo Watcher, contribuendo alla sicurezza della rete e guadagnando commissioni. Questo approccio decentralizzato all'interoperabilità cross-chain posiziona Rosen Bridge come infrastruttura critica per il futuro multi-catena del DeFi.",
       "features": [
-        "Trasferimenti cross-chain",
-        "Supporto multi-blockchain",
-        "Watcher decentralizzati",
-        "Bridge trustless"
+        "Trasferimenti Cross-chain",
+        "Supporto Multi-blockchain",
+        "Watcher Decentralizzati",
+        "Bridge Senza Fiducia"
       ],
       "faq": [
         {
           "question": "Cos'è Rosen Bridge?",
-          "answer": "Rosen Bridge è un protocollo decentralizzato per il trasferimento di asset tra Ergo e altre blockchain come Cardano, Bitcoin ed Ethereum senza affidarsi a custodi centralizzati."
+          "answer": "Rosen Bridge è un protocollo decentralizzato per trasferire asset tra Ergo e altre blockchain come Cardano, Bitcoin ed Ethereum senza affidarsi a custodi centralizzati."
         },
         {
           "question": "Come funziona Rosen Bridge?",
-          "answer": "Rosen Bridge utilizza una rete di Watcher che verificano crittograficamente le transazioni cross-chain. La tecnologia NiPoPoW consente la verifica trustless senza richiedere i dati completi della blockchain."
+          "answer": "Rosen Bridge utilizza una rete di Watcher che verificano crittograficamente le transazioni cross-chain. La tecnologia NiPoPoW consente la verifica senza fiducia senza richiedere dati completi della blockchain."
         },
         {
           "question": "Quali blockchain supporta Rosen Bridge?",
-          "answer": "Rosen Bridge supporta attualmente Ergo, Cardano, Bitcoin (incluse le Runes), Dogecoin e si sta espandendo a chain aggiuntive."
+          "answer": "Rosen Bridge supporta attualmente Ergo, Cardano, Bitcoin (incluse le Runes), Dogecoin, e si sta espandendo a catene aggiuntive."
         }
       ]
     },
     "ergomixer": {
       "name": "ErgoMixer",
-      "description": "Il primo mixer non interattivo e non custodiale nel settore crypto. Consente agli utenti di inviare token in modo privato utilizzando i Sigma-protocol per una maggiore privacy.",
-      "longDescription": "ErgoMixer è uno strumento di privacy pionieristico che ha introdotto il primo mixer di token non interattivo e non custodiale al mondo. A differenza dei mixer tradizionali che richiedono partecipazione coordinata o operatori fidati, ErgoMixer sfrutta i Sigma Protocol per consentire un'offuscamento trustless delle transazioni.\n\nIl mixer funziona raggruppando le transazioni degli utenti in modo da spezzare il collegamento on-chain tra gli indirizzi del mittente e del destinatario. Gli utenti depositano token nei contratti di mixing e, dopo un numero configurabile di round di mixing, li prelevano verso indirizzi nuovi. L'intero processo è protetto da prove a conoscenza zero costruite sui Sigma Protocol, il che significa che né gli operatori del mixer né gli osservatori della blockchain possono tracciare la connessione tra depositi e prelievi.\n\nErgoMixer supporta non solo ERG ma anche token nativi emessi sulla blockchain Ergo, rendendolo una soluzione di privacy completa per l'intero ecosistema. Il design non interattivo significa che gli utenti non devono essere online contemporaneamente ad altri partecipanti. Ciò rappresenta un significativo avanzamento rispetto alle precedenti implementazioni di mixing e dimostra la potenza delle primitive crittografiche di Ergo per la creazione di applicazioni pratiche per la privacy che rispettano la sovranità degli utenti pur rimanendo compatibili con l'architettura blockchain trasparente.",
+      "description": "Il primo mixer non interattivo e non custodiale dell'industria cripto. Permette agli utenti di inviare token in modo privato utilizzando Sigma-protocol per una maggiore privacy.",
+      "longDescription": "ErgoMixer è uno strumento di privacy pionieristico che ha introdotto il primo mixer di token non interattivo e non custodiale al mondo. A differenza dei mixer tradizionali che richiedono partecipazione coordinata o operatori fidati, ErgoMixer sfrutta i Sigma Protocol per abilitare un'offuscazione delle transazioni completamente senza fiducia.\n\nIl mixer funziona raggruppando le transazioni degli utenti in modo da rompere il collegamento on-chain tra gli indirizzi del mittente e del destinatario. Gli utenti depositano token in contratti di mixing, e dopo un numero configurabile di round di mixing, prelevano verso nuovi indirizzi. L'intero processo è protetto da prove a conoscenza zero costruite sui Sigma Protocol, il che significa che né gli operatori del mixer né gli osservatori della blockchain possono tracciare la connessione tra depositi e prelievi.\n\nErgoMixer supporta non solo ERG ma anche i token nativi emessi sulla blockchain Ergo, rendendolo una soluzione di privacy completa per l'intero ecosistema. Il design non interattivo significa che gli utenti non devono essere online contemporaneamente ad altri partecipanti. Questo rappresenta un avanzamento significativo rispetto alle precedenti implementazioni di mixing e dimostra la potenza delle primitive crittografiche di Ergo per la costruzione di applicazioni di privacy pratiche che rispettano la sovranità degli utenti.",
       "features": [
-        "Mixing non custodiale",
-        "Privacy dei token",
+        "Mixing Non Custodiale",
+        "Privacy dei Token",
         "Sigma Protocol",
-        "Prove a conoscenza zero"
+        "Prove a Conoscenza Zero"
       ],
       "faq": [
         {
           "question": "Cos'è ErgoMixer?",
-          "answer": "ErgoMixer è un mixer di token decentralizzato e non custodiale che utilizza i Sigma Protocol per spezzare i collegamenti delle transazioni, fornendo privacy finanziaria sulla blockchain Ergo."
+          "answer": "ErgoMixer è un mixer di token decentralizzato e non custodiale che utilizza i Sigma Protocol per rompere i collegamenti delle transazioni, fornendo privacy finanziaria sulla blockchain Ergo."
         },
         {
           "question": "ErgoMixer è sicuro da usare?",
@@ -575,420 +575,420 @@
     },
     "nautilus-wallet": {
       "name": "Nautilus Wallet",
-      "description": "Un wallet come estensione browser e mobile per Ergo, focalizzato su privacy, sicurezza ed esperienza utente. Supporta Ledger, wallet multipli e un connettore dApp.",
-      "longDescription": "Nautilus Wallet è il wallet più popolare per l'ecosistema Ergo, offrendo un'esperienza fluida tra estensioni browser e dispositivi mobile. Progettato con privacy e sicurezza come principi fondamentali, Nautilus fornisce agli utenti il controllo completo su ERG e token nativi mantenendo un'interfaccia intuitiva adatta sia ai nuovi arrivati che agli utenti esperti.\n\nIl wallet integra il supporto al wallet hardware Ledger per la massima sicurezza, consentendo agli utenti di archiviare le chiavi private su hardware dedicato godendo della comodità di un'interfaccia wallet moderna. La gestione di wallet multipli consente una facile organizzazione di diversi account, mentre il connettore dApp integrato fornisce accesso con un clic ai protocolli DeFi, ai marketplace NFT e ad altre applicazioni nell'ecosistema Ergo.\n\nNautilus si integra anche con ErgoMixer per la privacy opzionale delle transazioni, dimostrando come i wallet possano migliorare la sovranità degli utenti senza compromettere l'usabilità. Il wallet supporta tutti i token nativi di Ergo, visualizza gli NFT e fornisce monitoraggio del portafoglio in tempo reale. Con il suo codebase open-source e lo sviluppo attivo, Nautilus Wallet rappresenta lo standard d'oro per i wallet di criptovalute che privilegiano il controllo e la privacy degli utenti.",
+      "description": "Un portafoglio estensione browser e mobile per Ergo, incentrato su privacy, sicurezza ed esperienza utente. Supporta Ledger, più portafogli e un connettore dApp.",
+      "longDescription": "Nautilus Wallet è il portafoglio più popolare per l'ecosistema Ergo, offrendo un'esperienza fluida su estensioni browser e dispositivi mobili. Progettato con privacy e sicurezza come principi fondamentali, Nautilus fornisce agli utenti il pieno controllo sui loro ERG e token nativi mantenendo un'interfaccia intuitiva adatta sia ai nuovi arrivati che agli utenti esperti.\n\nIl portafoglio integra il supporto per portafoglio hardware Ledger per la massima sicurezza, consentendo agli utenti di conservare le loro chiavi private su hardware dedicato pur godendo della comodità di un'interfaccia moderna. La gestione di più portafogli consente una facile organizzazione di account diversi, mentre il connettore dApp integrato fornisce accesso con un clic a protocolli DeFi, marketplace NFT e altre applicazioni nell'ecosistema Ergo.\n\nNautilus si integra anche con ErgoMixer per una privacy opzionale delle transazioni, dimostrando come i portafogli possano migliorare la sovranità degli utenti senza compromettere l'usabilità. Il portafoglio supporta tutti i token nativi Ergo, visualizza NFT e fornisce monitoraggio del portafoglio in tempo reale. Con la sua base di codice open source e lo sviluppo attivo, Nautilus Wallet rappresenta il gold standard per i portafogli di criptovalute che danno priorità al controllo e alla privacy degli utenti.",
       "features": [
-        "Estensione browser",
-        "App mobile",
+        "Estensione Browser",
+        "App Mobile",
         "Supporto Ledger",
         "Connettore dApp",
-        "Multi-wallet"
+        "Multi-portafoglio"
       ],
       "faq": [
         {
           "question": "Cos'è Nautilus Wallet?",
-          "answer": "Nautilus è un wallet come estensione browser e mobile per Ergo, che supporta ERG, token nativi, NFT, wallet hardware Ledger e connessioni alle dApp di Ergo."
+          "answer": "Nautilus è un portafoglio estensione browser e mobile per Ergo, che supporta ERG, token nativi, NFT, portafogli hardware Ledger e connessioni alle dApp Ergo."
         },
         {
           "question": "Nautilus Wallet è sicuro?",
-          "answer": "Sì, Nautilus è non custodiale e open-source. Le tue chiavi private sono crittografate localmente e non lasciano mai il tuo dispositivo. Il supporto al wallet hardware aggiunge un ulteriore livello di sicurezza."
+          "answer": "Sì, Nautilus è non custodiale e open source. Le tue chiavi private sono cifrate localmente e non lasciano mai il tuo dispositivo. Il supporto per portafoglio hardware aggiunge un ulteriore livello di sicurezza."
         },
         {
           "question": "Posso usare Nautilus con le app DeFi?",
-          "answer": "Sì, Nautilus ha un connettore dApp integrato che funziona con tutti i principali protocolli DeFi di Ergo inclusi DEX, piattaforme di prestito e marketplace NFT."
+          "answer": "Sì, Nautilus ha un connettore dApp integrato che funziona con tutti i principali protocolli DeFi Ergo, inclusi DEX, piattaforme di prestito e marketplace NFT."
         }
       ]
     },
     "duckpools": {
       "name": "DuckPools",
       "description": "Una piattaforma di prestito collateralizzato con pool di prestito algoritmici. Gli utenti forniscono ERG o asset nativi per guadagnare reddito o prendere in prestito asset contro garanzia ERG.",
-      "longDescription": "DuckPools è un protocollo di prestito decentralizzato che porta la meccanica dei prestiti tradizionali alla blockchain Ergo. La piattaforma consente agli utenti di depositare ERG e altri asset nativi in pool di prestito algoritmici per guadagnare rendimento, mentre i mutuatari possono accedere alla liquidità fornendo posizioni overcollateralizzate.\n\nIl protocollo utilizza gli Oracle Pool di Ergo per feed di prezzi accurati e con fiducia minimizzata, garantendo che i rapporti di garanzia e le soglie di liquidazione rimangano equi e trasparenti. I tassi di interesse si adeguano algoritmicamente in base all'utilizzo del pool, bilanciando offerta e domanda senza intervento manuale. Tutta la logica di prestito viene eseguita tramite smart contract ErgoScript verificati, fornendo risultati deterministici ed eliminando la possibilità di attacchi di reentrancy comuni nei sistemi basati su account.\n\nDuckPools dimostra come il modello eUTXO possa supportare primitive DeFi complesse con garanzie di sicurezza migliorate. Ogni prestito è rappresentato come un UTXO discreto con stato esplicito, rendendo le posizioni facili da verificare. La piattaforma supporta più tipi di garanzia ed è progettata per integrarsi con altri protocolli DeFi di Ergo, consentendo strategie di rendimento componibili in tutto l'ecosistema.",
+      "longDescription": "DuckPools è un protocollo di prestito decentralizzato che porta la meccanica dei prestiti tradizionali alla blockchain Ergo. La piattaforma consente agli utenti di depositare ERG e altri asset nativi in pool di prestito algoritmici per generare rendimento, mentre i mutuatari possono accedere alla liquidità fornendo posizioni sovracollateralizzate.\n\nIl protocollo utilizza gli Oracle Pools di Ergo per feed di prezzi accurati e a fiducia minimizzata, garantendo che i rapporti di garanzia e le soglie di liquidazione rimangano equi e trasparenti. I tassi di interesse si adeguano algoritmicamente in base all'utilizzo del pool, bilanciando domanda e offerta senza intervento manuale. Tutta la logica di prestito viene eseguita tramite smart contract ErgoScript verificati, fornendo risultati deterministici ed eliminando la possibilità di attacchi di rientro comuni nei sistemi basati su account.\n\nDuckPools dimostra come il modello eUTXO possa supportare primitive DeFi complesse con garanzie di sicurezza migliorate. Ogni prestito è rappresentato come un UTXO discreto con stato esplicito, rendendo le posizioni facili da verificare e controllare. La piattaforma supporta più tipi di garanzia ed è progettata per integrarsi con altri protocolli DeFi Ergo, abilitando strategie di rendimento componibili nell'intero ecosistema.",
       "features": [
-        "Pool di prestito",
-        "Prestiti collateralizzati",
-        "Generazione di rendimento",
-        "Supporto asset nativi"
+        "Pool di Prestito",
+        "Prestiti Collateralizzati",
+        "Generazione di Rendimento",
+        "Supporto Asset Nativi"
       ]
     },
     "paideia": {
       "name": "Paideia",
-      "description": "Una suite di strumenti per la creazione e la gestione di Organizzazioni Autonome Decentralizzate (DAO) su Ergo e Cardano con governance e gestione del tesoro.",
-      "longDescription": "Paideia è una piattaforma di infrastruttura DAO completa che consente alle community di creare e gestire organizzazioni decentralizzate sia su Ergo che su Cardano. La piattaforma fornisce tutti gli strumenti essenziali per la governance decentralizzata: creazione di proposte, votazione pesata per token, gestione del tesoro e meccanismi di staking.\n\nA differenza degli strumenti di governance centralizzati, Paideia sfrutta gli smart contract per far rispettare automaticamente gli esiti delle votazioni. Quando una proposta viene approvata, le transazioni del tesoro vengono eseguite in base al voto senza richiedere amministratori fidati. Ciò elimina il rischio di cattura della governance o appropriazione indebita di fondi che affligge molti progetti di criptovalute.\n\nLa piattaforma supporta configurazioni di governance flessibili tra cui requisiti di quorum, periodi di votazione e meccanismi di delega. Le DAO possono emettere token di governance, distribuirli tramite airdrop o piani di vesting e implementare schemi di votazione sofisticati come la votazione quadratica. Il supporto multi-chain di Paideia significa che le organizzazioni possono governare asset e attività sia sull'ecosistema Ergo che su Cardano da un'unica interfaccia.",
+      "description": "Una suite di strumenti per creare e gestire Organizzazioni Autonome Decentralizzate (DAO) su Ergo e Cardano con governance e gestione della tesoreria.",
+      "longDescription": "Paideia è una piattaforma infrastrutturale DAO completa che consente alle comunità di creare e gestire organizzazioni decentralizzate sia sulle blockchain Ergo che Cardano. La piattaforma fornisce tutti gli strumenti essenziali per la governance decentralizzata: creazione di proposte, votazione ponderata per token, gestione della tesoreria e meccanismi di staking.\n\nA differenza degli strumenti di governance centralizzati, Paideia sfrutta gli smart contract per far rispettare automaticamente i risultati delle votazioni. Quando una proposta viene approvata, le transazioni di tesoreria vengono eseguite secondo il voto senza richiedere amministratori fidati. Questo elimina il rischio di cattura della governance o appropriazione indebita di fondi che affligge molti progetti di criptovalute.\n\nLa piattaforma supporta configurazioni di governance flessibili, tra cui requisiti di quorum, periodi di votazione e meccanismi di delega. Le DAO possono emettere token di governance, distribuirli tramite airdrop o calendari di vesting, e implementare schemi di votazione sofisticati come la votazione quadratica. Il supporto multi-catena di Paideia significa che le organizzazioni possono governare asset e attività in entrambi gli ecosistemi Ergo e Cardano da un'interfaccia unificata.",
       "features": [
         "Creazione di DAO",
-        "Strumenti di governance",
-        "Gestione del tesoro",
-        "Votazione sulle proposte",
-        "Multi-chain"
+        "Strumenti di Governance",
+        "Gestione della Tesoreria",
+        "Votazione delle Proposte",
+        "Multi-catena"
       ],
       "faq": [
         {
           "question": "Cos'è Paideia?",
-          "answer": "Paideia è una piattaforma di creazione e gestione di DAO per Ergo e Cardano, che fornisce strumenti per governance, votazione, gestione del tesoro e coordinamento della community."
+          "answer": "Paideia è una piattaforma di creazione e gestione DAO per Ergo e Cardano, che fornisce strumenti per la governance, la votazione, la gestione della tesoreria e il coordinamento comunitario."
         },
         {
           "question": "Chiunque può creare una DAO su Paideia?",
-          "answer": "Sì, Paideia non richiede autorizzazioni. Chiunque può creare una DAO, configurare le regole di governance, emettere token e iniziare a gestire le decisioni della community on-chain."
+          "answer": "Sì, Paideia è senza permessi. Chiunque può creare una DAO, configurare le regole di governance, emettere token e iniziare a gestire le decisioni comunitarie on-chain."
         }
       ]
     },
     "oracle-pools": {
       "name": "Oracle Pools",
-      "description": "Un sistema oracle decentralizzato su Ergo che connette gli smart contract con dati esterni senza la necessità di fidarsi di fonti centralizzate.",
-      "longDescription": "Oracle Pools è la soluzione nativa di Ergo per portare dati esterni on-chain in modo con fiducia minimizzata. A differenza dei servizi oracle centralizzati, gli Oracle Pool di Ergo utilizzano l'aggregazione on-chain e la partecipazione permissionless per creare feed di dati affidabili per i protocolli DeFi, le stablecoin e altre applicazioni di smart contract.\n\nIl sistema funziona consentendo a più operatori oracle indipendenti di inviare punti dati, che vengono poi aggregati on-chain utilizzando la mediana o altri metodi statistici. Questa aggregazione avviene in UTXO trasparenti, il che significa che chiunque può verificare come è stato calcolato il valore finale. I malintenzionati che inviano dati manipolati possono essere identificati e le loro puntate ridotte, creando forti incentivi economici per un comportamento onesto.\n\nGli Oracle Pool alimentano l'infrastruttura critica dell'ecosistema Ergo, inclusi i feed di prezzi di SigmaUSD e vari protocolli DeFi. Il design permissionless significa che nuovi operatori possono unirsi depositando una garanzia, aumentando la decentralizzazione nel tempo. Ogni oracle pool archivia la cronologia dei dati on-chain in eUTXO, fornendo un registro trasparente e verificabile dei movimenti di prezzo che le applicazioni possono consultare per calcoli time-weighted o analisi storiche.",
+      "description": "Un sistema di oracoli decentralizzato su Ergo che connette gli smart contract con dati esterni senza dover fidarsi di fonti centralizzate.",
+      "longDescription": "Oracle Pools è la soluzione nativa di Ergo per portare dati esterni on-chain in modo a fiducia minimizzata. A differenza dei servizi di oracoli centralizzati, gli Oracle Pools di Ergo utilizzano l'aggregazione on-chain e la partecipazione senza permessi per creare feed di dati affidabili per protocolli DeFi, stablecoin e altre applicazioni di smart contract.\n\nIl sistema funziona consentendo a più operatori di oracoli indipendenti di inviare punti dati, che vengono poi aggregati on-chain utilizzando la mediana o altri metodi statistici. Questa aggregazione avviene in UTXO trasparenti, il che significa che chiunque può verificare come è stato calcolato il valore finale. Gli attori malintenzionati che inviano dati manipolati possono essere identificati e i loro stake ridotti, creando forti incentivi economici per un comportamento onesto.\n\nOracle Pools alimenta infrastrutture critiche nell'ecosistema Ergo, inclusi i feed di prezzi di SigmaUSD e vari protocolli DeFi. Il design senza permessi significa che nuovi operatori possono unirsi mettendo in stake una garanzia, aumentando la decentralizzazione nel tempo. Ogni pool di oracoli conserva la sua cronologia dei dati on-chain in eUTXO, fornendo un registro trasparente e verificabile dei movimenti dei prezzi che le applicazioni possono riferimento per calcoli ponderati nel tempo o analisi storica.",
       "features": [
-        "Oracle decentralizzati",
-        "Feed di prezzi",
-        "Dati esterni",
-        "Design trustless"
+        "Oracoli Decentralizzati",
+        "Feed di Prezzi",
+        "Dati Esterni",
+        "Design Senza Fiducia"
       ],
       "faq": [
         {
-          "question": "In cosa differiscono gli Oracle Pool da Chainlink?",
-          "answer": "Gli Oracle Pool eseguono l'aggregazione on-chain piuttosto che off-chain, rendendo il processo completamente trasparente e verificabile. I dati sono archiviati in eUTXO e chiunque può verificare come vengono calcolati i valori."
+          "question": "Come si differenziano gli Oracle Pools da Chainlink?",
+          "answer": "Gli Oracle Pools eseguono l'aggregazione on-chain piuttosto che off-chain, rendendo il processo completamente trasparente e verificabile. I dati sono archiviati in eUTXO, e chiunque può verificare come vengono calcolati i valori."
         },
         {
-          "question": "Posso gestire un nodo oracle?",
-          "answer": "Sì, gli Oracle Pool non richiedono autorizzazioni. Chiunque può depositare una garanzia e diventare un operatore oracle, guadagnando ricompense per la fornitura di dati accurati."
+          "question": "Posso eseguire un nodo oracolo?",
+          "answer": "Sì, gli Oracle Pools sono senza permessi. Chiunque può mettere in stake una garanzia e diventare operatore di oracolo, guadagnando ricompense per la fornitura di dati accurati."
         }
       ]
     },
     "ergo-explorer": {
       "name": "Ergo Explorer",
-      "description": "Il principale block explorer ufficiale per Ergo. Consente agli utenti di tracciare transazioni, blocchi, indirizzi, token e visualizzare le statistiche generali della rete.",
-      "longDescription": "Ergo Explorer è il block explorer ufficiale per la rete Ergo, che fornisce visibilità completa su tutta l'attività on-chain. Gli utenti possono cercare transazioni, blocchi, indirizzi e token, con visualizzazioni dettagliate di ogni componente del modello eUTXO.\n\nL'explorer mostra statistiche della rete in tempo reale tra cui hashrate, difficoltà e tempi dei blocchi, offrendo agli utenti informazioni sulla salute della rete e sull'attività di mining. Gli explorer dei token mostrano tutti gli asset nativi emessi su Ergo, inclusa la loro distribuzione e la cronologia delle transazioni. Per gli sviluppatori, l'explorer fornisce accesso API per interrogare i dati della blockchain in modo programmatico.\n\nLe funzionalità avanzate includono il monitoraggio della mempool, analisi avanzate degli indirizzi e la possibilità di decodificare i contratti ErgoScript. L'explorer si integra con gli Oracle Pool per visualizzare i feed di dati correnti e la loro cronologia. In quanto progetto open-source, Ergo Explorer stabilisce lo standard per la trasparenza nell'ecosistema.",
+      "description": "Il principale block explorer ufficiale per Ergo. Consente agli utenti di tracciare transazioni, blocchi, indirizzi, token e visualizzare statistiche generali della rete.",
+      "longDescription": "Ergo Explorer è il block explorer ufficiale per la rete Ergo, che fornisce una visibilità completa di tutta l'attività on-chain. Gli utenti possono cercare transazioni, blocchi, indirizzi e token, con viste dettagliate di ogni componente del modello eUTXO.\n\nL'explorer mostra statistiche di rete in tempo reale, tra cui hashrate, difficoltà e tempi di blocco, fornendo agli utenti informazioni sulla salute della rete e sull'attività di mining. Gli explorer di token mostrano tutti gli asset nativi emessi su Ergo, inclusa la loro distribuzione e la cronologia delle transazioni. Per gli sviluppatori, l'explorer fornisce accesso API per interrogare i dati della blockchain in modo programmatico.\n\nLe funzionalità avanzate includono il monitoraggio del mempool, analisi avanzate degli indirizzi e la capacità di decodificare i contratti ErgoScript. L'explorer si integra con gli Oracle Pools per visualizzare i feed di dati attuali e la loro cronologia. Come progetto open source, Ergo Explorer stabilisce lo standard per la trasparenza nell'ecosistema.",
       "features": [
-        "Block explorer",
-        "Tracciamento delle transazioni",
-        "Info sui token",
-        "Statistiche della rete",
-        "Ricerca degli indirizzi"
+        "Block Explorer",
+        "Tracciamento Transazioni",
+        "Informazioni Token",
+        "Statistiche di Rete",
+        "Ricerca Indirizzi"
       ]
     },
     "ergopad": {
       "name": "ErgoPad",
-      "description": "Una piattaforma di lancio token (IDO) e raccolta fondi sulla blockchain Ergo. Offre ai possessori di token l'opportunità di partecipare agli IDO.",
-      "longDescription": "ErgoPad era una piattaforma pionieristica di lancio token che ha facilitato le Initial DEX Offering (IDO) per i progetti che costruivano sulla blockchain Ergo. La piattaforma consentiva ai progetti di raccogliere fondi dalla community offrendo ai possessori di token un accesso anticipato a iniziative promettenti dell'ecosistema.\n\nLa piattaforma operava attraverso un modello di staking in cui gli utenti potevano fare staking di token ErgoPad per ottenere tier di allocazione per gli IDO imminenti. I tier di staking più alti fornivano allocazioni maggiori, creando incentivi per l'engagement a lungo termine sulla piattaforma. Diversi progetti di successo sono stati lanciati tramite ErgoPad, contribuendo alla crescita dell'ecosistema Ergo.\n\nMentre ErgoPad non è attualmente operativo, la sua infrastruttura e i suoi smart contract rimangono come contributi open-source all'ecosistema. La piattaforma ha dimostrato come la raccolta fondi decentralizzata potesse funzionare su Ergo, fornendo un modello per futuri progetti launchpad e contribuendo con codice prezioso alla community.",
+      "description": "Una piattaforma di lancio di token (IDO) e raccolta fondi sulla blockchain Ergo. Offre ai possessori di token l'opportunità di partecipare agli IDO.",
+      "longDescription": "ErgoPad era una piattaforma di lancio di token pionieristica che facilitava le Initial DEX Offering (IDO) per i progetti che costruivano sulla blockchain Ergo. La piattaforma consentiva ai progetti di raccogliere fondi dalla comunità mentre dava ai possessori di token un accesso anticipato a promettenti iniziative dell'ecosistema.\n\nLa piattaforma operava attraverso un modello di staking dove gli utenti potevano fare staking di token ErgoPad per ottenere livelli di allocazione per i prossimi IDO. Livelli di staking più alti fornivano allocazioni più grandi, creando incentivi per l'impegno a lungo termine con la piattaforma. Diversi progetti di successo sono stati lanciati tramite ErgoPad, contribuendo alla crescita dell'ecosistema Ergo.\n\nSebbene ErgoPad non sia attualmente operativo, la sua infrastruttura e i suoi smart contract rimangono come contributi open source all'ecosistema. La piattaforma ha dimostrato come la raccolta fondi decentralizzata potesse funzionare su Ergo, fornendo un modello per i futuri progetti launchpad e contribuendo codice prezioso alla comunità.",
       "features": [
-        "Lancio token",
+        "Lancio di Token",
         "Piattaforma IDO",
         "Staking",
-        "Progetti della community"
+        "Progetti Comunitari"
       ]
     },
     "mew-finance": {
       "name": "Mew Finance",
       "description": "Una piattaforma di finanza decentralizzata (DeFi) che offre una suite di applicazioni finanziarie tra cui DEX, marketplace NFT e vari strumenti finanziari.",
-      "longDescription": "Mew Finance è una piattaforma DeFi all-in-one su Ergo, che combina un exchange decentralizzato con un marketplace NFT e strumenti finanziari avanzati. La piattaforma mira a fornire un'esperienza DeFi completa dove gli utenti possono scambiare token, fornire liquidità, fare trading di NFT e accedere a varie opportunità di rendimento in un'unica interfaccia.\n\nIl componente DEX supporta swap di token con commissioni competitive e protezione dallo slippage. I fornitori di liquidità possono fare staking di asset nei pool per guadagnare commissioni di trading e ricompense aggiuntive in token. Il marketplace NFT integrato consente ai creatori di mintare, elencare e fare trading di collezionabili digitali direttamente sulla piattaforma.\n\nMew Finance dimostra la componibilità possibile sul modello eUTXO di Ergo, integrando molteplici primitive DeFi in una piattaforma coesa mantenendo le garanzie di sicurezza dell'esecuzione deterministica degli smart contract.",
+      "longDescription": "Mew Finance è una piattaforma DeFi all-in-one su Ergo, che combina un exchange decentralizzato con un marketplace NFT e strumenti finanziari avanzati. La piattaforma mira a fornire un'esperienza DeFi completa dove gli utenti possono scambiare token, fornire liquidità, fare trading di NFT e accedere a varie opportunità di rendimento in un'unica interfaccia.\n\nIl componente DEX supporta scambi di token con commissioni competitive e protezione dallo slippage. I fornitori di liquidità possono fare staking di asset nei pool per guadagnare commissioni di trading e ricompense aggiuntive in token. Il marketplace NFT integrato consente ai creatori di coniare, listare e scambiare collezioni digitali direttamente sulla piattaforma.\n\nMew Finance dimostra la componibilità possibile sul modello eUTXO di Ergo, integrando più primitive DeFi in una piattaforma coerente mantenendo le garanzie di sicurezza dell'esecuzione deterministica degli smart contract.",
       "features": [
         "DEX",
         "Marketplace NFT",
         "Suite DeFi",
-        "Swap di token"
+        "Scambi di Token"
       ]
     },
     "satergo": {
       "name": "SatErgo",
-      "description": "Un wallet desktop completo per Ergo con la possibilità di integrare un nodo completo per supportare la decentralizzazione della rete. Orientato alla privacy con vault offline.",
-      "longDescription": "SatErgo è un wallet desktop ricco di funzionalità progettato per gli utenti avanzati che desiderano il massimo controllo sulla loro esperienza con Ergo. A differenza dei wallet basati su browser, SatErgo funziona come applicazione nativa su Windows, macOS e Linux, fornendo sicurezza migliorata e la possibilità di eseguire un nodo Ergo completo direttamente all'interno del wallet.\n\nEseguire un nodo completo contribuisce alla decentralizzazione della rete validando indipendentemente tutte le transazioni e i blocchi. Questa verifica trustless significa che gli utenti non si affidano a server di terze parti per confermare i propri saldi o trasmettere transazioni. La funzionalità di vault offline del wallet consente il cold storage creando e firmando transazioni su un computer air-gapped.\n\nSatErgo supporta tutti i token nativi di Ergo e fornisce una cronologia dettagliata delle transazioni con visibilità a livello UTXO. Il design orientato alla privacy include opzioni per la selezione delle monete e la gestione degli indirizzi che aiutano gli utenti a mantenere la privacy finanziaria. Con la sua architettura basata su Java, SatErgo offre coerenza cross-platform mantenendo gli standard di sicurezza attesi da una soluzione self-custody.",
+      "description": "Un portafoglio desktop completo per Ergo con la possibilità di integrare un nodo completo per supportare la decentralizzazione della rete. Incentrato sulla privacy con vault offline.",
+      "longDescription": "SatErgo è un portafoglio desktop ricco di funzionalità progettato per utenti avanzati che desiderano il massimo controllo sulla loro esperienza Ergo. A differenza dei portafogli basati su browser, SatErgo funziona come applicazione nativa su Windows, macOS e Linux, fornendo sicurezza migliorata e la possibilità di eseguire un nodo Ergo completo direttamente nel portafoglio.\n\nEseguire un nodo completo contribuisce alla decentralizzazione della rete validando in modo indipendente tutte le transazioni e i blocchi. Questa verifica senza fiducia significa che gli utenti non dipendono da server di terze parti per confermare i loro saldi o trasmettere transazioni. La funzionalità vault offline del portafoglio abilita il cold storage creando e firmando transazioni su un computer air-gapped.\n\nSatErgo supporta tutti i token nativi Ergo e fornisce una cronologia delle transazioni dettagliata con visibilità a livello di UTXO. Il design incentrato sulla privacy include opzioni per la selezione delle monete e la gestione degli indirizzi che aiutano gli utenti a mantenere la loro privacy finanziaria. Con la sua architettura basata su Java, SatErgo offre coerenza multipiattaforma mantenendo gli standard di sicurezza attesi da una soluzione di auto-custodia.",
       "features": [
-        "Wallet desktop",
-        "Integrazione nodo completo",
-        "Vault offline",
-        "Orientato alla privacy"
+        "Portafoglio Desktop",
+        "Integrazione Nodo Completo",
+        "Vault Offline",
+        "Incentrato sulla Privacy"
       ]
     },
     "safew": {
       "name": "SAFEW",
-      "description": "Un wallet come estensione browser per Ergo che si integra con ErgoMixer per una maggiore privacy delle transazioni.",
-      "longDescription": "SAFEW (Simple And Fast Ergo Wallet) è un wallet come estensione browser orientato alla privacy che si distingue per la sua integrazione nativa con ErgoMixer. Questa integrazione consente agli utenti di mixare i propri token direttamente dall'interfaccia del wallet, spezzando il collegamento on-chain tra le transazioni per una maggiore privacy finanziaria.\n\nIl wallet fornisce tutte le funzionalità standard attese da un moderno wallet di criptovalute: invio e ricezione di ERG e token nativi, visualizzazione della cronologia delle transazioni e connessione alle applicazioni decentralizzate tramite il connettore dApp EIP-12. Ciò che distingue SAFEW è il suo impegno per la privacy degli utenti come funzionalità di primo piano piuttosto che un'aggiunta secondaria.\n\nL'interfaccia di SAFEW è progettata per la semplicità senza sacrificare la funzionalità. Gli utenti possono gestire più indirizzi, visualizzare i saldi dei token e avviare operazioni di mixing con pochi clic. Il codebase open-source consente agli utenti attenti alla sicurezza di verificare il comportamento del wallet, mentre il formato di estensione browser fornisce un accesso conveniente al DeFi di Ergo direttamente dal browser.",
+      "description": "Un portafoglio estensione browser per Ergo che si integra con ErgoMixer per una maggiore privacy delle transazioni.",
+      "longDescription": "SAFEW (Simple And Fast Ergo Wallet) è un portafoglio estensione browser incentrato sulla privacy che si distingue per la sua integrazione nativa con ErgoMixer. Questa integrazione consente agli utenti di mixare i loro token direttamente dall'interfaccia del portafoglio, rompendo il collegamento on-chain tra le transazioni per una maggiore privacy finanziaria.\n\nIl portafoglio fornisce tutte le funzionalità standard attese da un portafoglio di criptovalute moderno: inviare e ricevere ERG e token nativi, visualizzare la cronologia delle transazioni e connettersi ad applicazioni decentralizzate tramite il connettore dApp EIP-12. Ciò che distingue SAFEW è il suo impegno verso la privacy degli utenti come funzionalità di primo piano piuttosto che un ripensamento.\n\nL'interfaccia di SAFEW è progettata per la semplicità senza sacrificare la funzionalità. Gli utenti possono gestire più indirizzi, visualizzare i loro saldi di token e avviare operazioni di mixing con pochi clic. La base di codice open source consente agli utenti attenti alla sicurezza di verificare il comportamento del portafoglio, mentre il formato dell'estensione browser offre un comodo accesso al DeFi Ergo direttamente dal browser.",
       "features": [
-        "Estensione browser",
+        "Estensione Browser",
         "Integrazione ErgoMixer",
-        "Privacy migliorata",
+        "Privacy Potenziata",
         "Supporto dApp"
       ]
     },
     "ergowatch": {
       "name": "ErgoWatch",
-      "description": "Un block explorer analitico che fornisce metriche della rete Ergo, statistiche DeFi (es. TVL), grafici e dashboard per il monitoraggio dell'attività blockchain.",
-      "longDescription": "ErgoWatch è una piattaforma di analisi completa che fornisce approfondimenti sull'ecosistema blockchain Ergo. Mentre l'Ergo Explorer ufficiale si concentra sui dati di transazioni e blocchi, ErgoWatch si specializza in metriche aggregate, tendenze storiche e analisi DeFi che aiutano gli utenti a comprendere la salute e la crescita dell'ecosistema.\n\nLa piattaforma tiene traccia del Total Value Locked (TVL) nei protocolli DeFi di Ergo, fornendo grafici storici e ripartizioni per protocollo. Le metriche della rete includono indirizzi attivi, volumi di transazioni, statistiche sui token e dati di mining. Le dashboard personalizzate visualizzano le tendenze nel tempo, aiutando ricercatori e investitori a prendere decisioni basate sui dati.\n\nL'architettura open-source di ErgoWatch significa che la community può verificare come vengono calcolate le metriche e contribuire miglioramenti. La piattaforma indicizza i dati della blockchain in database interrogabili, consentendo query analitiche complesse che sarebbero impraticabili da eseguire direttamente on-chain. Per sviluppatori e analisti, ErgoWatch fornisce una finestra essenziale sulla salute quantitativa dell'ecosistema Ergo.",
+      "description": "Un block explorer analitico che fornisce metriche di rete Ergo, statistiche DeFi (es. TVL), grafici e dashboard per monitorare l'attività blockchain.",
+      "longDescription": "ErgoWatch è una piattaforma di analisi completa che fornisce approfondimenti profondi sull'ecosistema della blockchain Ergo. Mentre l'Ergo Explorer ufficiale si concentra sui dati di transazioni e blocchi, ErgoWatch è specializzato in metriche aggregate, tendenze storiche e analisi DeFi che aiutano gli utenti a comprendere la salute e la crescita dell'ecosistema.\n\nLa piattaforma traccia il Valore Totale Bloccato (TVL) nei protocolli DeFi di Ergo, fornendo grafici storici e suddivisioni per protocollo. Le metriche di rete includono indirizzi attivi, volumi di transazioni, statistiche sui token e dati di mining. I dashboard personalizzati visualizzano le tendenze nel tempo, aiutando ricercatori e investitori a prendere decisioni basate sui dati.\n\nL'architettura open source di ErgoWatch significa che la comunità può verificare come vengono calcolate le metriche e contribuire miglioramenti. La piattaforma indicizza i dati della blockchain in database interrogabili, abilitando query analitiche complesse che sarebbero impraticabili da eseguire direttamente on-chain. Per sviluppatori e analisti, ErgoWatch fornisce una finestra essenziale sulla salute quantitativa dell'ecosistema Ergo.",
       "features": [
         "Analisi",
         "Metriche DeFi",
-        "Monitoraggio TVL",
-        "Dashboard della rete",
+        "Tracciamento TVL",
+        "Dashboard di Rete",
         "Grafici"
       ]
     },
     "cyberpixels": {
       "name": "CyberPixels",
-      "description": "Un progetto gaming con un gioco in pixel art a mondo aperto con integrazione blockchain (NFT, token personalizzati, marketplace in-game).",
-      "longDescription": "CyberPixels (CyberVerse) è un ambizioso progetto gaming blockchain che costruisce un gioco in pixel art a mondo aperto con una profonda integrazione di Ergo. Il gioco presenta asset basati su NFT, token personalizzati e un marketplace in-game dove i giocatori possono scambiare oggetti e risorse utilizzando l'infrastruttura blockchain di Ergo.\n\nIl progetto sfrutta le capacità di token nativi di Ergo per valute di gioco e proprietà degli oggetti. Ogni oggetto unico esiste come NFT sulla blockchain Ergo, fornendo vera proprietà e consentendo ai giocatori di scambiare asset al di fuori del gioco. Le transazioni deterministiche del modello eUTXO garantiscono che le operazioni del marketplace vengano eseguite atomicamente senza rischio di frode.\n\nCyberPixels rappresenta un'esplorazione di come la tecnologia blockchain possa migliorare il gaming attraverso la proprietà verificabile, le economie guidate dai giocatori e l'interoperabilità. L'estetica pixel art combinata con le meccaniche blockchain mira a creare un gameplay coinvolgente dimostrando al contempo applicazioni pratiche della tecnologia Ergo nell'intrattenimento.",
+      "description": "Un progetto di gioco che presenta un gioco open-world in stile pixel con integrazione blockchain (NFT, token personalizzati, marketplace in-game).",
+      "longDescription": "CyberPixels (CyberVerse) è un ambizioso progetto di gioco blockchain che costruisce un gioco open-world in pixel art con una profonda integrazione Ergo. Il gioco presenta asset basati su NFT, token personalizzati e un marketplace in-game dove i giocatori possono scambiare oggetti e risorse utilizzando l'infrastruttura della blockchain Ergo.\n\nIl progetto sfrutta le capacità dei token nativi di Ergo per le valute in-game e la proprietà degli oggetti. Ogni oggetto unico esiste come NFT sulla blockchain Ergo, fornendo vera proprietà e consentendo ai giocatori di scambiare asset al di fuori del gioco. Le transazioni deterministiche del modello eUTXO garantiscono che gli scambi del marketplace vengano eseguiti atomicamente senza rischio di frode.\n\nCyberPixels rappresenta un'esplorazione di come la tecnologia blockchain possa migliorare il gaming attraverso la proprietà verificabile, le economie guidate dai giocatori e l'interoperabilità. L'estetica pixel art combinata con le meccaniche blockchain mira a creare un gameplay coinvolgente dimostrando al contempo applicazioni pratiche della tecnologia Ergo nell'intrattenimento.",
       "features": [
-        "Gaming blockchain",
+        "Gioco Blockchain",
         "Integrazione NFT",
-        "Marketplace in-game",
+        "Marketplace In-game",
         "Play-to-Earn"
       ]
     },
     "sigmafi": {
       "name": "SigmaFi",
-      "description": "Una suite di contratti finanziari P2P decentralizzati su Ergo, inclusi SigmaBonds per la creazione di obbligazioni di debito P2P.",
-      "longDescription": "SigmaFi è una suite di contratti finanziari peer-to-peer che consente prestiti e mutui diretti tra utenti Ergo senza pool intermediari. Il prodotto di punta, SigmaBonds, consente agli utenti di creare obbligazioni di debito personalizzate con termini flessibili negoziati direttamente tra prestatore e mutuatario.\n\nA differenza dei protocolli di prestito in pool, il modello P2P di SigmaFi offre ai partecipanti il pieno controllo sui termini del prestito inclusi tassi di interesse, durata e requisiti di garanzia. I prestatori possono specificare esattamente quale rendimento richiedono, mentre i mutuatari possono trovare termini adatti alle loro esigenze. Gli smart contract applicano i piani di rimborso e gestiscono la liquidazione della garanzia se necessario.\n\nIl protocollo dimostra le capacità avanzate di ErgoScript per l'implementazione di logica finanziaria complessa. Ogni obbligazione è rappresentata come un UTXO con termini contrattuali incorporati, creando strumenti di debito trasparenti e verificabili. SigmaFi esplora come i concetti finanziari tradizionali come obbligazioni e note possano essere reimmaginati in un contesto trustless e decentralizzato.",
+      "description": "Una suite di contratti finanziari P2P decentralizzati su Ergo, inclusi SigmaBonds per creare obbligazioni di debito P2P.",
+      "longDescription": "SigmaFi è una suite di contratti finanziari peer-to-peer che abilitano prestiti e crediti diretti tra utenti Ergo senza pool intermediari. Il prodotto di punta, SigmaBonds, consente agli utenti di creare obbligazioni di debito personalizzate con termini flessibili negoziati direttamente tra prestatore e mutuatario.\n\nA differenza dei protocolli di prestito in pool, il modello P2P di SigmaFi dà ai partecipanti il pieno controllo sui termini del prestito, inclusi tassi di interesse, durata e requisiti di garanzia. I prestatori possono specificare esattamente i rendimenti che richiedono, mentre i mutuatari possono trovare condizioni adatte alle loro esigenze. Gli smart contract fanno rispettare i piani di rimborso e gestiscono la liquidazione della garanzia se necessario.\n\nIl protocollo dimostra capacità avanzate di ErgoScript per implementare logica finanziaria complessa. Ogni obbligazione è rappresentata come un UTXO con termini contrattuali incorporati, creando strumenti di debito trasparenti e verificabili. SigmaFi esplora come i concetti di finanza tradizionale come obbligazioni e cambiali possano essere reimmaginati in un contesto senza fiducia e decentralizzato.",
       "features": [
         "Prestiti P2P",
-        "Emissione di obbligazioni",
-        "Finanza decentralizzata",
-        "Smart contract"
+        "Emissione di Obbligazioni",
+        "Finanza Decentralizzata",
+        "Smart Contract"
       ]
     },
     "ergoraffle": {
       "name": "ErgoRaffle",
       "description": "Un servizio di crowdfunding con elementi di lotteria, che consente la raccolta fondi per progetti dove i partecipanti possono vincere premi.",
-      "longDescription": "ErgoRaffle è una piattaforma di crowdfunding decentralizzata che combina la raccolta fondi con la meccanica della lotteria. I progetti possono raccogliere fondi vendendo biglietti della lotteria, con i partecipanti che ricevono la possibilità di vincere premi supportando le iniziative in cui credono. L'intero processo gira su smart contract ErgoScript, garantendo equità dimostrabile e distribuzione trasparente dei fondi.\n\nLa piattaforma utilizza le capacità di casualità native di Ergo per selezionare i vincitori in modo verificabile. A differenza delle lotterie tradizionali dove gli utenti devono fidarsi dell'operatore, l'esecuzione on-chain di ErgoRaffle significa che chiunque può verificare che i vincitori siano stati selezionati in modo equo. Questo design trustless elimina la possibilità di manipolazione riducendo al contempo il carico operativo.\n\nErgoRaffle serve come infrastruttura per la raccolta fondi della community, eventi di beneficenza e bootstrap di progetti all'interno dell'ecosistema Ergo. I progetti possono configurare prezzi dei biglietti, strutture dei premi e obiettivi di finanziamento. Quando una lotteria si conclude, gli smart contract distribuiscono automaticamente i fondi al progetto e i premi ai vincitori, creando un meccanismo di crowdfunding auto-esecutivo che non richiede intermediari.",
+      "longDescription": "ErgoRaffle è una piattaforma di crowdfunding decentralizzata che combina la raccolta fondi con la meccanica della lotteria. I progetti possono raccogliere fondi vendendo biglietti della riffa, con i partecipanti che ricevono la possibilità di vincere premi mentre supportano iniziative in cui credono. L'intero processo funziona su smart contract ErgoScript, garantendo equità dimostrabile e distribuzione trasparente dei fondi.\n\nLa piattaforma utilizza le capacità di casualità native di Ergo per selezionare i vincitori in modo verificabile. A differenza delle lotterie tradizionali dove gli utenti devono fidarsi dell'operatore, l'esecuzione on-chain di ErgoRaffle significa che chiunque può verificare che i vincitori siano stati selezionati equamente. Questo design senza fiducia elimina la possibilità di manipolazione riducendo al contempo il carico operativo.\n\nErgoRaffle serve come infrastruttura per la raccolta fondi comunitaria, gli eventi di beneficenza e l'avvio di progetti all'interno dell'ecosistema Ergo. I progetti possono configurare i prezzi dei biglietti, le strutture dei premi e gli obiettivi di finanziamento. Quando una riffa si conclude, gli smart contract distribuiscono automaticamente i fondi al progetto e i premi ai vincitori, creando un meccanismo di crowdfunding auto-esecutivo che non richiede intermediari.",
       "features": [
         "Crowdfunding",
-        "Sistema di lotteria",
-        "Equità dimostrabile",
-        "Finanziamento di progetti"
+        "Sistema Lotteria",
+        "Equità Dimostrabile",
+        "Finanziamento Progetti"
       ]
     },
     "minotaur-wallet": {
       "name": "Minotaur Wallet",
-      "description": "Un wallet mobile per Ergo con funzionalità avanzate come le multi-firme, migliorando la sicurezza nella gestione dei fondi.",
-      "longDescription": "Minotaur Wallet è un wallet mobile per Ergo che si concentra su funzionalità di sicurezza avanzate, in particolare il supporto multi-firma. I wallet multi-sig richiedono l'approvazione di più parti per le transazioni, rendendoli ideali per fondi condivisi, tesorerie organizzative e utenti che desiderano livelli di sicurezza aggiuntivi.\n\nIl wallet implementa le capacità multi-firma native di Ergo tramite i Sigma Protocol, consentendo schemi di firma flessibili. Gli utenti possono configurare firme M-di-N dove qualsiasi M chiave da N firmatari totali possono autorizzare una transazione. Ciò fornisce sia ridondanza di sicurezza che gestione collaborativa dei fondi senza fidarsi di una singola parte con il controllo completo.\n\nMinotaur è progettato per l'uso mobile con un'attenzione all'usabilità. L'interfaccia guida gli utenti attraverso la creazione e la partecipazione a configurazioni multi-sig senza richiedere una conoscenza tecnica approfondita. Per team e organizzazioni che gestiscono fondi condivisi su Ergo, Minotaur fornisce l'infrastruttura essenziale per una gestione sicura e collaborativa degli asset.",
+      "description": "Un portafoglio mobile per Ergo con funzionalità avanzate come le multi-firme, che migliorano la sicurezza nella gestione dei fondi.",
+      "longDescription": "Minotaur Wallet è un portafoglio mobile per Ergo che si concentra su funzionalità di sicurezza avanzate, in particolare il supporto multi-firma. I portafogli multi-sig richiedono che più parti approvino le transazioni, rendendoli ideali per fondi condivisi, tesorerie organizzative e utenti che desiderano livelli di sicurezza aggiuntivi.\n\nIl portafoglio implementa le capacità multi-firma native di Ergo tramite i Sigma Protocol, abilitando schemi di firma flessibili. Gli utenti possono configurare firme M-di-N dove qualsiasi M chiavi da N firmatari totali possono autorizzare una transazione. Questo fornisce sia ridondanza di sicurezza che gestione collaborativa dei fondi senza fidarsi di una singola parte con il pieno controllo.\n\nMinotaur è progettato per l'uso mobile con un'attenzione all'usabilità. L'interfaccia guida gli utenti attraverso la creazione e la partecipazione a configurazioni multi-sig senza richiedere conoscenze tecniche approfondite. Per team e organizzazioni che gestiscono fondi condivisi su Ergo, Minotaur fornisce l'infrastruttura essenziale per la gestione sicura e collaborativa degli asset.",
       "features": [
-        "Wallet mobile",
+        "Portafoglio Mobile",
         "Multi-firma",
-        "Sicurezza migliorata",
-        "Gestione dei fondi"
+        "Sicurezza Potenziata",
+        "Gestione dei Fondi"
       ]
     },
     "guapswap": {
       "name": "GuapSwap",
-      "description": "Un servizio decentralizzato basato su smart contract per lo scambio dei profitti dei miner su Ergo, consentendo lo scambio automatico delle ricompense di mining.",
-      "longDescription": "GuapSwap è uno strumento specializzato per i miner di Ergo che consente la conversione automatica delle ricompense di mining. Quando i miner guadagnano ricompense di blocco in ERG, GuapSwap può automaticamente scambiare una parte in altri token secondo le preferenze configurate, aiutando i miner a gestire i propri guadagni senza intervento manuale.\n\nIl servizio funziona tramite smart contract che eseguono swap basati su regole predefinite. I miner possono configurare quale percentuale delle ricompense scambiare e quali token ricevere, creando strategie automatizzate di dollar-cost averaging o diversificazione. Ciò riduce la difficoltà di gestire attivamente i guadagni del mining.\n\nGuapSwap dimostra l'utilità pratica degli smart contract per la community dei miner. Automatizzando le operazioni comuni, risparmia tempo e consente un'esecuzione coerente delle strategie di swap indipendentemente dalle condizioni di mercato. Lo strumento complementa l'algoritmo di mining Autolykos di Ergo rendendo la gestione delle ricompense più accessibile.",
+      "description": "Un servizio decentralizzato basato su smart contract per scambiare i profitti dei miner su Ergo, consentendo lo scambio automatico delle ricompense di mining.",
+      "longDescription": "GuapSwap è uno strumento specializzato per i miner Ergo che consente la conversione automatica delle ricompense di mining. Quando i miner guadagnano ricompense di blocco in ERG, GuapSwap può scambiare automaticamente una parte in altri token secondo le preferenze configurate, aiutando i miner a gestire il loro reddito senza intervento manuale.\n\nIl servizio funziona tramite smart contract che eseguono scambi basati su regole predefinite. I miner possono configurare quale percentuale di ricompense scambiare e quali token ricevere, creando strategie automatizzate di dollar-cost averaging o diversificazione. Questo riduce la difficoltà di gestire attivamente il reddito da mining.\n\nGuapSwap dimostra l'utilità pratica degli smart contract per la comunità dei miner. Automatizzando le operazioni comuni, fa risparmiare tempo e consente un'esecuzione coerente delle strategie di scambio indipendentemente dalle condizioni di mercato. Lo strumento completa l'algoritmo di mining Autolykos di Ergo rendendo la gestione delle ricompense più accessibile.",
       "features": [
-        "Ricompense di mining",
-        "Auto-swap",
-        "Gestione dei profitti",
-        "Strumenti per miner"
+        "Ricompense di Mining",
+        "Auto-scambio",
+        "Gestione dei Profitti",
+        "Strumenti per Miner"
       ]
     },
     "dexygold": {
       "name": "DexyGold",
-      "description": "Una stablecoin algoritmica ancorata al prezzo dell'oro (XAU/USD), che utilizza signoraggio, oracle di prezzo e garanzia ERG in eccesso.",
-      "longDescription": "DexyGold è una stablecoin algoritmica sperimentale progettata per tracciare il prezzo dell'oro (XAU/USD) utilizzando gli Oracle Pool di Ergo per i dati di prezzo. Il protocollo utilizza meccanismi di signoraggio e overcollateralizzazione per mantenere il suo ancoraggio all'oro, creando una rappresentazione digitale decentralizzata del valore dell'oro.\n\nIl design si basa sulle lezioni di SigmaUSD e altre stablecoin algoritmiche, adattando l'approccio per asset ancorati a materie prime. ERG funge da garanzia, con il protocollo che conia e brucia token per mantenere la stabilità del prezzo. Gli Oracle Pool forniscono feed di prezzo dell'oro trustless che gli smart contract utilizzano per adeguare l'offerta.\n\nDexyGold esplora come la tecnologia blockchain possa creare un'esposizione accessibile ai prezzi dell'oro senza richiedere la custodia fisica o la fiducia in emittenti centralizzati. Il prototipo dimostra la capacità di Ergo di implementare strumenti finanziari sofisticati mantenendo la decentralizzazione e la trasparenza.",
+      "description": "Una stablecoin algoritmica ancorata al prezzo dell'oro (XAU/USD), che utilizza signoraggio, oracoli di prezzo e eccesso di garanzia ERG.",
+      "longDescription": "DexyGold è una stablecoin algoritmica sperimentale progettata per tracciare il prezzo dell'oro (XAU/USD) utilizzando gli Oracle Pools di Ergo per i dati sui prezzi. Il protocollo utilizza meccanismi di signoraggio e sovracollateralizzazione per mantenere il suo ancoraggio all'oro, creando una rappresentazione digitale decentralizzata del valore dell'oro.\n\nIl design si basa sulle lezioni apprese da SigmaUSD e altre stablecoin algoritmiche, adattando l'approccio per gli asset ancorati alle materie prime. ERG funge da garanzia, con il protocollo che conia e brucia token per mantenere la stabilità dei prezzi. Gli Oracle Pools forniscono feed di prezzo dell'oro senza fiducia che gli smart contract utilizzano per adeguare l'offerta.\n\nDexyGold esplora come la tecnologia blockchain possa creare esposizione accessibile ai prezzi dell'oro senza richiedere custodia fisica o fiducia negli emittenti centralizzati. Il prototipo dimostra la capacità di Ergo di implementare strumenti finanziari sofisticati mantenendo la decentralizzazione e la trasparenza.",
       "features": [
-        "Stablecoin ancorata all'oro",
-        "Design algoritmico",
-        "Integrazione oracle",
+        "Stablecoin Ancorata all'Oro",
+        "Design Algoritmico",
+        "Integrazione Oracoli",
         "Garanzia ERG"
       ]
     },
     "sigmao": {
       "name": "SigmaO",
-      "description": "Una piattaforma per il trading di opzioni (Call/Put, Americane/Europee) su token Ergo EIP-4 utilizzando uno stile order book.",
-      "longDescription": "SigmaO è una piattaforma di trading di opzioni decentralizzata che porta i mercati dei derivati alla blockchain Ergo. Il protocollo supporta sia opzioni Call che Put con stili di esercizio americano ed europeo, consentendo sofisticate strategie di copertura e speculazione per i token nativi di Ergo.\n\nLe opzioni sono rappresentate come token EIP-4, rendendole negoziabili su qualsiasi marketplace di Ergo. Il modello order book consente agli scrittori di opzioni di impostare i propri premi e prezzi di esercizio, mentre gli acquirenti possono selezionare contratti che corrispondono alle loro visioni di mercato. Gli smart contract gestiscono l'esercizio delle opzioni automaticamente alla scadenza o quando vengono esercitate anticipatamente (per le opzioni americane).\n\nSigmaO dimostra come i derivati finanziari complessi possano essere implementati sul modello eUTXO. Ogni contratto di opzione codifica i suoi parametri (asset sottostante, prezzo di esercizio, scadenza, tipo di opzione) direttamente nel token, creando strumenti finanziari auto-descrittivi. Questo porta strumenti di trading di livello istituzionale all'ecosistema decentralizzato.",
+      "description": "Una piattaforma per fare trading di opzioni (Call/Put, Americane/Europee) su token Ergo EIP-4 utilizzando uno stile a book degli ordini.",
+      "longDescription": "SigmaO è una piattaforma decentralizzata di trading di opzioni che porta i mercati dei derivati alla blockchain Ergo. Il protocollo supporta sia opzioni Call che Put con stili di esercizio americani ed europei, abilitando sofisticate strategie di copertura e speculazione per i token nativi Ergo.\n\nLe opzioni sono rappresentate come token EIP-4, rendendole scambiabili su qualsiasi marketplace Ergo. Il modello a book degli ordini consente agli scrittori di opzioni di impostare i propri premi e prezzi di esercizio, mentre gli acquirenti possono selezionare contratti che corrispondono alle loro prospettive di mercato. Gli smart contract gestiscono l'esercizio delle opzioni automaticamente alla scadenza o quando esercitate anticipatamente (per le opzioni americane).\n\nSigmaO dimostra come derivati finanziari complessi possano essere implementati sul modello eUTXO. Ogni contratto di opzione codifica i suoi parametri (asset sottostante, prezzo di esercizio, scadenza, tipo di opzione) direttamente nel token, creando strumenti finanziari auto-descrittivi. Questo porta strumenti di trading di livello istituzionale all'ecosistema decentralizzato.",
       "features": [
-        "Trading di opzioni",
+        "Trading di Opzioni",
         "Opzioni Call/Put",
-        "Order book",
+        "Book degli Ordini",
         "Token EIP-4"
       ]
     },
     "blitz-tcg": {
       "name": "Blitz TCG",
       "description": "Un gioco di carte collezionabili (TCG) sulla blockchain Ergo.",
-      "longDescription": "Blitz TCG è un gioco di carte collezionabili basato su blockchain che combina un gameplay competitivo con la vera proprietà digitale tramite NFT di Ergo. Ogni carta esiste come token unico sulla blockchain Ergo, consentendo ai giocatori di possedere, scambiare e collezionare veramente le proprie carte al di fuori di qualsiasi piattaforma centralizzata.\n\nIl gioco sfrutta lo standard token nativo di Ergo per l'emissione delle carte, con diversi livelli di rarità e edizioni limitate che creano valore da collezione. I giocatori possono scambiare carte peer-to-peer sui marketplace di Ergo, e la scarsità dimostrabile delle carte basate su blockchain crea autentici collezionabili digitali piuttosto che licenze revocabili.\n\nBlitz TCG dimostra come la tecnologia blockchain possa migliorare i generi di gioco tradizionali. Il formato competitivo del gioco di carte beneficia della proprietà e della scarsità verificabili, mentre la blockchain Ergo fornisce commissioni basse e transazioni veloci per il trading attivo. Il progetto esplora modelli di gaming blockchain sostenibili che rispettano la proprietà dei giocatori.",
+      "longDescription": "Blitz TCG è un gioco di carte collezionabili basato su blockchain che combina il gameplay competitivo con la vera proprietà digitale tramite NFT Ergo. Ogni carta esiste come token unico sulla blockchain Ergo, consentendo ai giocatori di possedere veramente, scambiare e collezionare le loro carte al di fuori di qualsiasi piattaforma centralizzata.\n\nIl gioco sfrutta lo standard dei token nativi di Ergo per l'emissione delle carte, con diversi livelli di rarità ed edizioni limitate che creano valore collezionabile. I giocatori possono scambiare carte peer-to-peer sui marketplace Ergo, e la scarsità dimostrabile delle carte basate su blockchain crea veri collezionabili digitali piuttosto che licenze revocabili.\n\nBlitz TCG dimostra come la tecnologia blockchain possa migliorare i generi di gioco tradizionali. Il formato competitivo delle carte collezionabili beneficia della proprietà verificabile e della scarsità, mentre la blockchain Ergo fornisce commissioni basse e transazioni veloci per il trading attivo. Il progetto esplora modelli di gioco blockchain sostenibili che rispettano la proprietà dei giocatori.",
       "features": [
-        "Gioco di carte collezionabili",
+        "Gioco di Carte Collezionabili",
         "Carte NFT",
-        "Gioco competitivo",
+        "Gioco Competitivo",
         "Collezionabili"
       ]
     },
     "sigmaverse": {
       "name": "Sigmaverse",
-      "description": "Un portale e directory centralizzati per l'ecosistema dApp di Ergo, che consente agli sviluppatori di elencare le applicazioni e agli utenti di trovare i servizi.",
-      "longDescription": "Sigmaverse è la principale piattaforma di discovery per l'ecosistema Ergo, che funge da directory curata di applicazioni decentralizzate, strumenti e servizi costruiti su Ergo. La piattaforma aiuta gli utenti a navigare nell'ecosistema in crescita categorizzando i progetti e fornendo informazioni essenziali su ciascuna applicazione.\n\nPer i nuovi arrivati su Ergo, Sigmaverse offre un punto di partenza per esplorare i protocolli DeFi disponibili, i wallet, le piattaforme NFT e gli strumenti per sviluppatori. Ogni elenco include descrizioni, link e categorizzazione che aiuta gli utenti a trovare applicazioni pertinenti alle loro esigenze. La directory copre l'intero spettro dei progetti Ergo, dai protocolli consolidati agli esperimenti emergenti.\n\nGli sviluppatori beneficiano di Sigmaverse come canale promozionale per i loro progetti. Inviare un progetto alla directory aumenta la visibilità all'interno della community e aiuta ad attrarre utenti e collaboratori. La piattaforma funge da documentazione vivente della crescita dell'ecosistema Ergo, tracciando l'evoluzione dall'infrastruttura iniziale a un paesaggio applicativo diversificato.",
+      "description": "Un portale e directory centralizzata per l'ecosistema dApp Ergo, che consente agli sviluppatori di elencare applicazioni e agli utenti di trovare servizi.",
+      "longDescription": "Sigmaverse è la principale piattaforma di scoperta per l'ecosistema Ergo, che funge da directory curata di applicazioni decentralizzate, strumenti e servizi costruiti su Ergo. La piattaforma aiuta gli utenti a navigare nel crescente ecosistema categorizzando i progetti e fornendo informazioni essenziali su ogni applicazione.\n\nPer i nuovi arrivati su Ergo, Sigmaverse offre un punto di partenza per esplorare i protocolli DeFi disponibili, i portafogli, le piattaforme NFT e gli strumenti per sviluppatori. Ogni elenco include descrizioni, link e categorizzazione che aiutano gli utenti a trovare applicazioni rilevanti per le loro esigenze. La directory copre l'intero spettro dei progetti Ergo, dai protocolli consolidati agli esperimenti emergenti.\n\nGli sviluppatori beneficiano di Sigmaverse come canale promozionale per i loro progetti. L'invio di un progetto alla directory aumenta la visibilità all'interno della comunità e aiuta ad attrarre utenti e contributori. La piattaforma serve come documentazione vivente della crescita dell'ecosistema Ergo, tracciando l'evoluzione dalla prima infrastruttura a un panorama applicativo diversificato.",
       "features": [
         "Directory dApp",
-        "Elenchi di progetti",
-        "Portale dell'ecosistema",
-        "Piattaforma di discovery"
+        "Elenchi di Progetti",
+        "Portale dell'Ecosistema",
+        "Piattaforma di Scoperta"
       ]
     },
     "ergone": {
       "name": "ErgOne",
-      "description": "Una piattaforma di marketing decentralizzata guidata dalla community per la promozione di Ergo e dei suoi progetti utilizzando il token ERGONE e il Proof-of-Commitment Protocol.",
-      "longDescription": "ErgOne è una piattaforma di marketing decentralizzata che incentiva i membri della community a promuovere Ergo e i progetti dell'ecosistema. La piattaforma utilizza il token ERGONE e un innovativo Proof-of-Commitment Protocol per ricompensare gli sforzi promozionali genuini filtrando al contempo l'engagement di bassa qualità.\n\nI membri della community possono guadagnare token ERGONE completando attività di marketing, creando contenuti e diffondendo la consapevolezza sui progetti Ergo. Il sistema di incentivi basato su token allinea gli sforzi individuali con la crescita dell'ecosistema, creando una forza di marketing distribuita che non si affida a budget di marketing centralizzati.\n\nErgOne dimostra come i token blockchain possano coordinare gli sforzi della community verso obiettivi condivisi. Rendendo il marketing partecipativo e allineato agli incentivi, la piattaforma sfrutta l'entusiasmo della community di Ergo fornendo contributi misurabili alla visibilità e all'adozione dell'ecosistema.",
+      "description": "Una piattaforma di marketing decentralizzata e guidata dalla comunità per promuovere Ergo e i suoi progetti utilizzando il token ERGONE e il Proof-of-Commitment Protocol.",
+      "longDescription": "ErgOne è una piattaforma di marketing decentralizzata che incentiva i membri della comunità a promuovere Ergo e i progetti dell'ecosistema. La piattaforma utilizza il token ERGONE e un innovativo Proof-of-Commitment Protocol per premiare i genuini sforzi promozionali filtrando gli impegni di bassa qualità.\n\nI membri della comunità possono guadagnare token ERGONE completando attività di marketing, creando contenuti e diffondendo la consapevolezza sui progetti Ergo. Il sistema di incentivi basato su token allinea gli sforzi individuali con la crescita dell'ecosistema, creando una forza di marketing distribuita che non dipende da budget di marketing centralizzati.\n\nErgOne dimostra come i token blockchain possano coordinare gli sforzi della comunità verso obiettivi condivisi. Rendendo il marketing partecipativo e allineato agli incentivi, la piattaforma sfrutta l'entusiasmo della comunità Ergo fornendo contributi misurabili alla visibilità e all'adozione dell'ecosistema.",
       "features": [
-        "Piattaforma di marketing",
-        "Guidato dalla community",
-        "Incentivi token",
-        "Promozione di progetti"
+        "Piattaforma di Marketing",
+        "Guidata dalla Comunità",
+        "Incentivi con Token",
+        "Promozione di Progetti"
       ]
     },
     "hodlbox": {
       "name": "Hodlbox",
-      "description": "Una piattaforma che incoraggia il holding a lungo termine di ERG con forzieri del tesoro e varie opzioni di blocco dei fondi, premiando gli utenti con NFT.",
-      "longDescription": "Hodlbox è una piattaforma di risparmio gamificata che incoraggia il holding a lungo termine di ERG attraverso depositi time-locked e ricompense NFT. Gli utenti possono bloccare i propri ERG in \"forzieri del tesoro\" per periodi specificati, ricevendo ricompense NFT uniche al completamento del loro impegno di holding.\n\nLa piattaforma implementa i time-lock tramite smart contract ErgoScript che impediscono il prelievo anticipato. Ciò crea un impegno credibile per il holding a lungo termine, che alcuni utenti trovano utile per mantenere la disciplina degli investimenti. I diversi periodi di blocco offrono ricompense variabili, incentivando impegni più lunghi.\n\nHodlbox aggiunge uno strato di intrattenimento alla pratica seria degli investimenti a lungo termine. La metafora del forziere del tesoro e i collezionabili NFT creano coinvolgimento al di là delle pure meccaniche finanziarie. La piattaforma dimostra come il DeFi possa incorporare elementi di gamification mantenendo un'esecuzione trustless tramite smart contract.",
+      "description": "Una piattaforma che incoraggia il mantenimento a lungo termine di ERG con forzieri del tesoro e varie opzioni di blocco dei fondi, premiando gli utenti con NFT.",
+      "longDescription": "Hodlbox è una piattaforma di risparmio gamificata che incoraggia il mantenimento a lungo termine di ERG attraverso depositi a termine e premi NFT. Gli utenti possono bloccare i loro ERG in «forzieri del tesoro» per periodi specificati, ricevendo premi NFT unici al completamento del loro impegno di mantenimento.\n\nLa piattaforma implementa time-lock tramite smart contract ErgoScript che impediscono i prelievi anticipati. Questo crea un impegno credibile verso il mantenimento a lungo termine, che alcuni utenti trovano utile per mantenere la disciplina di investimento. Diversi periodi di blocco offrono premi variabili, incentivando impegni più lunghi.\n\nHodlbox aggiunge uno strato divertente alla seria pratica dell'investimento a lungo termine. La metafora del forziere del tesoro e gli NFT collezionabili creano coinvolgimento al di là delle pure meccaniche finanziarie. La piattaforma dimostra come il DeFi possa incorporare elementi di gamification mantenendo l'esecuzione senza fiducia tramite smart contract.",
       "features": [
         "Incentivi HODL",
-        "Blocco dei fondi",
-        "Ricompense NFT",
-        "Risparmio a lungo termine"
+        "Blocco dei Fondi",
+        "Premi NFT",
+        "Risparmio a Lungo Termine"
       ]
     },
     "tokenjay": {
       "name": "TokenJay",
-      "description": "Una piattaforma per il trading P2P (peer-to-peer) di token all'interno dell'ecosistema Ergo.",
-      "longDescription": "TokenJay è una piattaforma di trading di token peer-to-peer che consente scambi diretti tra utenti Ergo senza affidarsi ad automated market maker o pool di liquidità. La piattaforma facilita scambi trustless dove gli utenti possono creare e accettare offerte di scambio per ERG e qualsiasi token nativo sulla blockchain Ergo.\n\nA differenza dei DEX basati su AMM dove i prezzi sono determinati dai rapporti dei pool, TokenJay consente ai trader di impostare i propri prezzi e trovare controparti disposte ad accettare quei termini. Questo trading in stile order-book può essere più efficiente in termini di capitale per i grandi trade e fornisce una migliore scoperta del prezzo per i token meno liquidi che potrebbero subire elevato slippage sugli AMM.\n\nLa piattaforma sfrutta il modello eUTXO di Ergo per consentire swap atomici dove entrambi i lati di un trade vengono eseguiti in una singola transazione. Ciò elimina il rischio di controparte poiché i trade vengono completati completamente o non lo sono affatto. TokenJay serve come infrastruttura essenziale per l'economia dei token di Ergo, consentendo la scoperta del prezzo e la liquidità per il crescente ecosistema di asset nativi.",
+      "description": "Una piattaforma di trading di token P2P (peer-to-peer) all'interno dell'ecosistema Ergo.",
+      "longDescription": "TokenJay è una piattaforma di trading di token peer-to-peer che abilita scambi diretti tra utenti Ergo senza affidarsi a market maker automatizzati o pool di liquidità. La piattaforma facilita scambi senza fiducia dove gli utenti possono creare e accettare offerte di trading per ERG e qualsiasi token nativo sulla blockchain Ergo.\n\nA differenza dei DEX basati su AMM dove i prezzi sono determinati dai rapporti del pool, TokenJay consente ai trader di impostare i propri prezzi e trovare controparti disposte ad accettare tali condizioni. Questo trading in stile book degli ordini può essere più efficiente in termini di capitale per le operazioni di grandi dimensioni e fornisce una migliore scoperta dei prezzi per i token meno liquidi che potrebbero subire un elevato slippage sugli AMM.\n\nLa piattaforma sfrutta il modello eUTXO di Ergo per abilitare swap atomici dove entrambi i lati di un'operazione vengono eseguiti in una singola transazione. Questo elimina il rischio di controparte poiché le operazioni vengono completate interamente o per nulla. TokenJay funge da infrastruttura essenziale per l'economia dei token di Ergo, abilitando la scoperta dei prezzi e la liquidità per il crescente ecosistema di asset nativi.",
       "features": [
         "Trading P2P",
-        "Swap di token",
-        "Exchange decentralizzato",
-        "Trading diretto"
+        "Scambi di Token",
+        "Exchange Decentralizzato",
+        "Trading Diretto"
       ]
     },
     "single-tx-swap": {
       "name": "Single Tx Swap",
-      "description": "Uno strumento per eseguire swap di token P2P (peer-to-peer) all'interno di una singola transazione.",
-      "longDescription": "Single Tx Swap è un'utilità che consente scambi atomici di token tra due parti in una singola transazione Ergo. Questo meccanismo trustless garantisce che entrambi i lati di un trade vengano eseguiti completamente o nessuno dei due, eliminando il rischio di controparte insito negli scambi in più passaggi.\n\nLo strumento sfrutta il modello eUTXO di Ergo dove più input e output possono essere combinati in una singola transazione con condizioni di spesa complesse. Gli asset di entrambe le parti vengono consumati come input e ridistribuiti come output secondo i termini concordati. La transazione ha successo solo se tutte le condizioni sono soddisfatte.\n\nSingle Tx Swap fornisce l'infrastruttura essenziale per il trading peer-to-peer trustless. A differenza delle soluzioni basate su escrow che bloccano temporaneamente i fondi, gli swap atomici vengono completati istantaneamente senza periodo di attesa. Questa efficienza rende lo strumento ideale per i trade OTC e gli scambi diretti dove entrambe le parti sono pronte a transare.",
+      "description": "Uno strumento per eseguire scambi di token P2P (peer-to-peer) in una singola transazione.",
+      "longDescription": "Single Tx Swap è uno strumento che abilita scambi atomici di token tra due parti in una singola transazione Ergo. Questo meccanismo senza fiducia garantisce che entrambi i lati di un'operazione vengano eseguiti completamente oppure nessuno dei due, eliminando il rischio di controparte insito negli scambi multi-step.\n\nLo strumento sfrutta il modello eUTXO di Ergo dove più input e output possono essere combinati in una singola transazione con condizioni di spesa complesse. Gli asset di entrambe le parti vengono consumati come input e ridistribuiti come output secondo i termini concordati. La transazione riesce solo se tutte le condizioni sono soddisfatte.\n\nSingle Tx Swap fornisce infrastrutture essenziali per il trading peer-to-peer senza fiducia. A differenza delle soluzioni basate su escrow che bloccano temporaneamente i fondi, gli swap atomici vengono completati istantaneamente senza periodo di attesa. Questa efficienza rende lo strumento ideale per le operazioni OTC e gli scambi diretti dove entrambe le parti sono pronte a concludere la transazione.",
       "features": [
-        "Swap atomici",
-        "Singola transazione",
-        "Scambio P2P",
-        "Esecuzione rapida"
+        "Swap Atomici",
+        "Transazione Singola",
+        "Exchange P2P",
+        "Esecuzione Rapida"
       ]
     },
     "crux-finance": {
       "name": "Crux Finance",
-      "description": "Uno strumento per la gestione del portafoglio crypto all'interno dell'ecosistema Ergo, che consente il tracciamento di P&L, investimenti e la generazione di report fiscali.",
-      "longDescription": "Crux Finance è una piattaforma di gestione del portafoglio e analisi progettata specificamente per l'ecosistema Ergo. La piattaforma aiuta gli utenti a tracciare i propri asset su diversi wallet, calcolare profitti e perdite, monitorare le performance degli investimenti e generare report per la conformità fiscale.\n\nConnettendo gli indirizzi del wallet, gli utenti possono visualizzare valori aggregati del portafoglio, grafici storici delle performance e ripartizioni dettagliate per token. La piattaforma traccia le transazioni automaticamente, calcolando il costo base e i guadagni realizzati per scopi di dichiarazione fiscale. Questa automazione risparmia tempo significativo rispetto al tracciamento manuale, specialmente per i trader attivi e i partecipanti DeFi.\n\nCrux Finance si integra con i protocolli DeFi di Ergo per fornire visualizzazioni complete delle posizioni degli utenti inclusi token LP, ricompense di staking e posizioni di prestito. La comprensione della piattaforma dei protocolli specifici di Ergo significa che può valutare accuratamente le posizioni DeFi complesse. Per gli utenti che devono dichiarare i guadagni in criptovalute, Crux Finance fornisce report esportabili compatibili con i comuni formati di software fiscale.",
+      "description": "Uno strumento per gestire portafogli cripto all'interno dell'ecosistema Ergo, che consente il monitoraggio di P&L, investimenti e la generazione di report fiscali.",
+      "longDescription": "Crux Finance è una piattaforma di gestione del portafoglio e analisi progettata specificamente per l'ecosistema Ergo. La piattaforma aiuta gli utenti a tracciare le loro partecipazioni nei portafogli, calcolare profitti e perdite, monitorare le performance degli investimenti e generare report per la conformità fiscale.\n\nConnettendo gli indirizzi dei portafogli, gli utenti possono visualizzare i valori aggregati del portafoglio, i grafici delle performance storiche e suddivisioni dettagliate per token. La piattaforma traccia le transazioni automaticamente, calcolando la base di costo e le plusvalenze realizzate a fini di dichiarazione fiscale. Questa automazione fa risparmiare un tempo significativo rispetto al tracciamento manuale, specialmente per i trader attivi e i partecipanti DeFi.\n\nCrux Finance si integra con i protocolli DeFi di Ergo per fornire viste complete delle posizioni degli utenti, inclusi i token LP, le ricompense di staking e le posizioni di prestito. La comprensione della piattaforma dei protocolli specifici di Ergo significa che può valutare accuratamente le complesse posizioni DeFi. Per gli utenti che devono dichiarare le plusvalenze sulle criptovalute, Crux Finance fornisce report esportabili compatibili con i formati comuni dei software fiscali.",
       "features": [
-        "Tracciamento del portafoglio",
+        "Monitoraggio del Portafoglio",
         "Analisi P&L",
-        "Report fiscali",
-        "Gestione degli investimenti"
+        "Report Fiscali",
+        "Gestione degli Investimenti"
       ]
     },
     "fleet-sdk": {
       "name": "Fleet SDK",
-      "description": "Una libreria JavaScript progettata per semplificare la creazione e la firma di transazioni sulla blockchain Ergo in applicazioni web e Node.js.",
-      "longDescription": "Fleet SDK è la principale libreria JavaScript/TypeScript per la creazione di applicazioni Ergo. Progettata sia per browser che per ambienti Node.js, Fleet fornisce agli sviluppatori API intuitive per la costruzione di transazioni, l'interazione con smart contract e l'integrazione della funzionalità Ergo nelle applicazioni web.\n\nL'SDK astrae la complessità del modello eUTXO, offrendo builder di alto livello per i pattern di transazione comuni pur esponendo primitive di basso livello per i casi d'uso avanzati. Gli sviluppatori possono creare transazioni multi-asset, interagire con dApp e firmare transazioni usando varie integrazioni di wallet. Il supporto TypeScript fornisce un'eccellente integrazione IDE e il controllo del tipo in fase di compilazione.\n\nFleet alimenta molte applicazioni web e dApp di Ergo, servendo come infrastruttura fondamentale per lo sviluppo frontend. La libreria si integra perfettamente con i connettori di wallet popolari come Nautilus e include utilità per la validazione degli indirizzi, la gestione dei token e la selezione dei box. La documentazione completa e la manutenzione attiva rendono Fleet la scelta consigliata per gli sviluppatori JavaScript che costruiscono su Ergo.",
+      "description": "Una libreria JavaScript progettata per semplificare la creazione e la firma di transazioni sulla blockchain Ergo nelle applicazioni web e Node.js.",
+      "longDescription": "Fleet SDK è la principale libreria JavaScript/TypeScript per costruire applicazioni Ergo. Progettata per ambienti browser e Node.js, Fleet fornisce agli sviluppatori API intuitive per costruire transazioni, interagire con smart contract e integrare le funzionalità Ergo nelle applicazioni web.\n\nL'SDK astrae la complessità del modello eUTXO, offrendo builder di alto livello per i pattern di transazione comuni esponendo al contempo primitive di basso livello per i casi d'uso avanzati. Gli sviluppatori possono creare transazioni multi-asset, interagire con le dApp e firmare transazioni usando varie integrazioni di portafogli. Il supporto TypeScript fornisce un'eccellente integrazione IDE e il controllo dei tipi a tempo di compilazione.\n\nFleet alimenta molte applicazioni web e dApp Ergo, fungendo da infrastruttura fondamentale per lo sviluppo frontend. La libreria si integra perfettamente con i connettori di portafogli popolari come Nautilus e include utilità per la validazione degli indirizzi, la gestione dei token e la selezione delle box. La documentazione completa e la manutenzione attiva rendono Fleet la scelta consigliata per gli sviluppatori JavaScript che costruiscono su Ergo.",
       "features": [
         "SDK JavaScript",
-        "Costruzione di transazioni",
-        "Integrazione web",
+        "Costruzione di Transazioni",
+        "Integrazione Web",
         "Supporto Node.js"
       ]
     },
     "appkit": {
       "name": "AppKit",
-      "description": "Il Software Development Kit (SDK) principale per lo sviluppo di applicazioni su Ergo utilizzando linguaggi di programmazione basati su JVM.",
-      "longDescription": "AppKit è l'SDK ufficiale di Ergo per lo sviluppo basato su JVM, che fornisce agli sviluppatori Scala e Java strumenti completi per la creazione di applicazioni Ergo. Come kit di sviluppo Ergo più maturo, AppKit offre accesso diretto alle funzionalità del protocollo core e funge da implementazione di riferimento per i pattern di sviluppo Ergo.\n\nL'SDK consente agli sviluppatori di costruire e firmare transazioni, compilare contratti ErgoScript, interagire con l'API del nodo Ergo e lavorare con primitive crittografiche. Il design Scala-first di AppKit fornisce API funzionali eleganti che rispecchiano le fondamenta matematiche del modello eUTXO, mentre la compatibilità Java garantisce un'ampia accessibilità.\n\nAppKit è particolarmente potente per i servizi backend, i bot off-chain e le applicazioni che richiedono una profonda integrazione con ErgoScript. L'SDK include strumenti per la compilazione di contratti, algoritmi di selezione dei box e concatenamento delle transazioni. Molti progetti infrastrutturali core di Ergo e protocolli DeFi sono costruiti utilizzando AppKit, rendendolo una conoscenza essenziale per gli sviluppatori Ergo seri.",
+      "description": "Il principale Software Development Kit (SDK) per lo sviluppo di applicazioni su Ergo utilizzando linguaggi di programmazione basati su JVM.",
+      "longDescription": "AppKit è l'SDK ufficiale di Ergo per lo sviluppo basato su JVM, che fornisce agli sviluppatori Scala e Java strumenti completi per costruire applicazioni Ergo. Come il kit di sviluppo Ergo più maturo, AppKit offre accesso diretto alle funzionalità del protocollo centrale e funge da implementazione di riferimento per i pattern di sviluppo Ergo.\n\nL'SDK consente agli sviluppatori di costruire e firmare transazioni, compilare contratti ErgoScript, interagire con l'API del nodo Ergo e lavorare con le primitive crittografiche. Il design Scala-first di AppKit fornisce API funzionali eleganti che rispecchiano i fondamenti matematici del modello eUTXO, mentre la compatibilità Java garantisce un'ampia accessibilità.\n\nAppKit è particolarmente potente per i servizi backend, i bot off-chain e le applicazioni che richiedono una profonda integrazione con ErgoScript. L'SDK include strumenti per la compilazione di contratti, algoritmi di selezione delle box e il concatenamento di transazioni. Molti progetti infrastrutturali centrali di Ergo e protocolli DeFi sono costruiti usando AppKit, rendendolo una conoscenza essenziale per i seri sviluppatori Ergo.",
       "features": [
         "SDK JVM",
         "Supporto Scala/Java",
-        "Sviluppo smart contract",
-        "SDK ufficiale"
+        "Sviluppo di Smart Contract",
+        "SDK Ufficiale"
       ]
     },
     "sigma-rust": {
       "name": "SigmaRust",
       "description": "Un'implementazione dell'interprete ErgoTree in Rust, che fornisce strumenti per lavorare con le transazioni e binding per vari linguaggi.",
-      "longDescription": "SigmaRust è un'implementazione Rust dell'interprete ErgoTree e delle primitive del protocollo Ergo. Questa libreria ad alte prestazioni consente lo sviluppo Ergo in Rust fornendo al contempo binding ad altri linguaggi tra cui JavaScript/WASM, Python e C, rendendola infrastruttura fondamentale per l'ecosistema di sviluppo Ergo multi-linguaggio.\n\nLa libreria implementa la valutazione di ErgoTree, la validazione delle transazioni e la verifica del Sigma Protocol in puro Rust. Il suo target di compilazione WASM alimenta le applicazioni JavaScript che devono verificare o costruire transazioni Ergo nel browser. Ciò consente la firma delle transazioni e l'interazione con i contratti completamente lato client senza dipendenze dal server.\n\nI binding linguistici di SigmaRust significano che gli sviluppatori possono usare linguaggi familiari beneficiando delle garanzie di performance e sicurezza di Rust. I binding Python consentono la prototipazione rapida e l'analisi dei dati, mentre i binding C consentono l'integrazione con praticamente qualsiasi linguaggio di programmazione. SigmaRust rappresenta un'infrastruttura critica che espande lo sviluppo Ergo oltre i linguaggi JVM al più ampio ecosistema di sviluppatori.",
+      "longDescription": "SigmaRust è un'implementazione Rust dell'interprete ErgoTree e delle primitive del protocollo Ergo. Questa libreria ad alte prestazioni abilita lo sviluppo Ergo in Rust fornendo al contempo binding ad altri linguaggi, tra cui JavaScript/WASM, Python e C, rendendola un'infrastruttura fondamentale per l'ecosistema di sviluppo multi-linguaggio Ergo.\n\nLa libreria implementa la valutazione ErgoTree, la validazione delle transazioni e la verifica del Sigma Protocol in Rust puro. Il suo target di compilazione WASM alimenta le applicazioni JavaScript che devono verificare o costruire transazioni Ergo nel browser. Questo abilita la firma delle transazioni interamente lato client e l'interazione con i contratti senza dipendenze dal server.\n\nI binding dei linguaggi di SigmaRust significano che gli sviluppatori possono usare linguaggi familiari beneficiando delle garanzie di prestazioni e sicurezza di Rust. I binding Python abilitano la prototipazione rapida e l'analisi dei dati, mentre i binding C consentono l'integrazione con praticamente qualsiasi linguaggio di programmazione. SigmaRust rappresenta un'infrastruttura critica che espande lo sviluppo Ergo oltre i linguaggi JVM all'ecosistema più ampio degli sviluppatori.",
       "features": [
         "Implementazione Rust",
         "Interprete ErgoTree",
-        "Binding multi-linguaggio",
+        "Binding Multi-linguaggio",
         "Supporto WASM"
       ]
     },
     "gluon": {
       "name": "Gluon",
-      "description": "Un protocollo sviluppato per rafforzare (hardening) le stablecoin esistenti nell'ecosistema Ergo, come SigmaUSD.",
-      "longDescription": "Gluon è un protocollo progettato per migliorare la stabilità e la resilienza delle stablecoin esistenti come SigmaUSD. Il progetto esplora meccanismi per l'\"hardening\" delle stablecoin algoritmiche contro condizioni di mercato estreme e casi limite che possono minacciare la stabilità dell'ancoraggio.\n\nIl protocollo indaga meccanismi di stabilità aggiuntivi che complementano il design AgeUSD, potenzialmente inclusi processi di liquidazione migliorati, tipi di garanzia aggiuntivi o integrazione con altre primitive DeFi. Rafforzando le fondamenta delle stablecoin di Ergo, Gluon mira ad aumentare la fiducia degli utenti e consentire una più ampia adozione.\n\nGluon rappresenta una ricerca in corso sul design sostenibile delle stablecoin sulle blockchain eUTXO. Il progetto contribuisce alla comprensione dell'ecosistema sulla politica monetaria decentralizzata e aiuta a identificare miglioramenti che possono essere incorporati nelle versioni future dei protocolli stablecoin.",
+      "description": "Un protocollo sviluppato per rafforzare (indurire) le stablecoin esistenti nell'ecosistema Ergo, come SigmaUSD.",
+      "longDescription": "Gluon è un protocollo progettato per migliorare la stabilità e la resilienza delle stablecoin esistenti come SigmaUSD. Il progetto esplora meccanismi per «indurire» le stablecoin algoritmiche contro condizioni di mercato estreme e casi limite che possono minacciare la stabilità dell'ancoraggio.\n\nIl protocollo studia meccanismi di stabilità aggiuntivi che complementano il design AgeUSD, potenzialmente includendo processi di liquidazione migliorati, tipi di garanzia aggiuntivi o integrazione con altre primitive DeFi. Rafforzando le basi delle stablecoin Ergo, Gluon mira ad aumentare la fiducia degli utenti e abilitare una più ampia adozione.\n\nGluon rappresenta la ricerca in corso sulla progettazione sostenibile di stablecoin su blockchain eUTXO. Il progetto contribuisce alla comprensione dell'ecosistema sulla politica monetaria decentralizzata e aiuta a identificare miglioramenti che possono essere incorporati nelle future versioni dei protocolli stablecoin.",
       "features": [
-        "Miglioramento stablecoin",
-        "Protocol hardening",
+        "Miglioramento delle Stablecoin",
+        "Indurimento del Protocollo",
         "Infrastruttura DeFi",
-        "Meccanismo di stabilità"
+        "Meccanismo di Stabilità"
       ]
     },
     "chaincash": {
       "name": "ChainCash",
-      "description": "Un framework per la creazione di sistemi monetari P2P decentralizzati su Ergo, che consente agli utenti di emettere le proprie valute garantite da fiducia o garanzia.",
-      "longDescription": "ChainCash è un framework sperimentale per la creazione di sistemi monetari peer-to-peer su Ergo. Il progetto consente agli utenti di emettere le proprie valute garantite da relazioni di fiducia o garanzia, esplorando approcci alternativi alla creazione di denaro e al trasferimento di valore.\n\nIl framework trae ispirazione dai sistemi monetari storici e dai concetti moderni come i sistemi di scambio locale (LETS). Gli utenti possono creare valute garantite dalla loro reputazione all'interno di una community o depositando una garanzia. Ciò consente la sperimentazione con diversi modelli monetari tra cui il credito reciproco, il time banking e le valute della community.\n\nDeveluppato dallo sviluppatore core di Ergo kushti, ChainCash rappresenta una ricerca all'avanguardia sul denaro programmabile. Il progetto dimostra come la tecnologia blockchain possa supportare esperimenti monetari diversi mantenendo trasparenza e prevenendo frodi. Contribuisce alla più ampia missione di Ergo di innovazione finanziaria e inclusione.",
+      "description": "Un framework per creare sistemi monetari P2P decentralizzati su Ergo, consentendo agli utenti di emettere le proprie valute supportate da fiducia o garanzie.",
+      "longDescription": "ChainCash è un framework sperimentale per la creazione di sistemi monetari peer-to-peer su Ergo. Il progetto consente agli utenti di emettere le proprie valute supportate da relazioni di fiducia o garanzie, esplorando approcci alternativi alla creazione di denaro e al trasferimento di valore.\n\nIl framework si ispira ai sistemi monetari storici e ai concetti moderni come i sistemi locali di scambio commerciale (LETS). Gli utenti possono creare valute supportate dalla loro reputazione all'interno di una comunità o depositando garanzie. Questo consente la sperimentazione con diversi modelli monetari, tra cui il credito mutuo, la banca del tempo e le valute comunitarie.\n\nSviluppato dallo sviluppatore principale di Ergo kushti, ChainCash rappresenta una ricerca all'avanguardia sul denaro programmabile. Il progetto dimostra come la tecnologia blockchain possa supportare diverse sperimentazioni monetarie mantenendo la trasparenza e prevenendo le frodi. Contribuisce alla missione più ampia di Ergo di innovazione finanziaria e inclusione.",
       "features": [
         "Denaro P2P",
-        "Valute personalizzate",
-        "Garanzia basata sulla fiducia",
-        "Framework monetario"
+        "Valute Personalizzate",
+        "Supporto Basato sulla Fiducia",
+        "Framework Monetario"
       ]
     },
     "sigrsv": {
       "name": "SigRSV",
-      "description": "La reserve coin per il protocollo stablecoin SigmaUSD. Gli utenti coniano SigRSV depositando ERG nelle riserve e possono trarre profitto dagli aumenti di prezzo di ERG.",
-      "longDescription": "SigRSV è il token di riserva del protocollo stablecoin SigmaUSD, che rappresenta una posizione long a leva su ERG. Quando gli utenti coniano SigRSV, depositano ERG nella riserva, assorbendo la volatilità dei prezzi per mantenere SigmaUSD stabile guadagnando al contempo esposizione all'apprezzamento del prezzo di ERG.\n\nIl meccanismo della reserve coin è elegante: quando il prezzo di ERG sale, la riserva diventa overcollateralizzata e i possessori di SigRSV possono riscattare più ERG di quanto depositato. Al contrario, quando il prezzo di ERG scende, SigRSV assorbe le perdite per mantenere l'ancoraggio di SigmaUSD. Ciò crea un meccanismo di stabilità guidato dal mercato senza richiedere liquidazioni o complesse manipolazioni degli oracle.\n\nSigRSV è interessante per gli utenti che sono rialzisti su ERG e desiderano un'esposizione a leva contribuendo alla stabilità dell'ecosistema. Il protocollo applica limiti al rapporto di riserva (400-800%) che impediscono sia l'eccessiva leva che l'under-collateralizzazione. Il minting e il riscatto avvengono tramite smart contract utilizzando i feed di prezzo degli Oracle Pool, rendendo l'intero processo trasparente e trustless.",
+      "description": "La moneta di riserva per il protocollo stablecoin SigmaUSD. Gli utenti coniamo SigRSV depositando ERG nelle riserve e possono trarre profitto dagli aumenti del prezzo ERG.",
+      "longDescription": "SigRSV è il token di riserva del protocollo stablecoin SigmaUSD, che rappresenta una posizione lunga con leva su ERG. Quando gli utenti coniamo SigRSV, depositano ERG nella riserva, assorbendo la volatilità dei prezzi per mantenere SigmaUSD stabile mentre guadagnano esposizione all'apprezzamento del prezzo ERG.\n\nIl meccanismo della moneta di riserva è elegante: quando il prezzo ERG sale, la riserva diventa sovracollateralizzata e i possessori di SigRSV possono riscattare più ERG di quanti ne abbiano depositati. Al contrario, quando il prezzo ERG scende, SigRSV assorbe le perdite per mantenere l'ancoraggio di SigmaUSD. Questo crea un meccanismo di stabilità guidato dal mercato senza richiedere liquidazioni o manipolazioni complesse degli oracoli.\n\nSigRSV è attraente per gli utenti che sono rialzisti su ERG e desiderano un'esposizione con leva contribuendo alla stabilità dell'ecosistema. Il protocollo applica limiti di rapporto di riserva (400–800 %) che impediscono sia la leva eccessiva che la sottocollateralizzazione. La coniazione e il riscatto avvengono tramite smart contract che utilizzano i feed di prezzo degli Oracle Pool, rendendo l'intero processo trasparente e senza fiducia.",
       "features": [
-        "Reserve coin",
-        "Esposizione a ERG",
-        "Backing SigmaUSD",
-        "Potenziale di rendimento"
+        "Moneta di Riserva",
+        "Esposizione ERG",
+        "Supporto SigmaUSD",
+        "Potenziale di Rendimento"
       ]
     },
     "exle": {
       "name": "EXLE",
-      "description": "Un protocollo di prestito/mutuo all'interno dell'ecosistema Ergo, integrato con Crux Finance.",
-      "longDescription": "EXLE è un protocollo decentralizzato di prestito e mutuo in fase di sviluppo per l'ecosistema Ergo. Il protocollo mira a consentire agli utenti di prestare i propri asset per guadagnare rendimento o prendere in prestito contro garanzia, espandendo le capacità DeFi sul modello eUTXO.\n\nIl progetto si integra con Crux Finance per il tracciamento e l'analisi del portafoglio, consentendo agli utenti di monitorare le loro posizioni di prestito insieme ad altri investimenti Ergo. Questa integrazione dimostra la componibilità possibile all'interno dell'ecosistema DeFi di Ergo, dove più protocolli possono lavorare insieme per fornire servizi finanziari completi.\n\nEXLE rappresenta un'innovazione in corso nel DeFi di Ergo, esplorando come le primitive di prestito tradizionali possano essere adattate all'architettura eUTXO. Lo sviluppo del protocollo contribuisce all'obiettivo di Ergo di fornire una suite completa di strumenti finanziari decentralizzati mantenendo i vantaggi di sicurezza e prevedibilità del modello UTXO esteso.",
+      "description": "Un protocollo di prestito/credito all'interno dell'ecosistema Ergo, integrato con Crux Finance.",
+      "longDescription": "EXLE è un protocollo decentralizzato di prestito e credito in fase di sviluppo per l'ecosistema Ergo. Il protocollo mira a consentire agli utenti di prestare i loro asset per guadagnare rendimento o prendere in prestito contro garanzie, espandendo le capacità DeFi sul modello eUTXO.\n\nIl progetto si integra con Crux Finance per il monitoraggio del portafoglio e l'analisi, consentendo agli utenti di monitorare le loro posizioni di prestito insieme ad altri investimenti Ergo. Questa integrazione dimostra la componibilità possibile all'interno dell'ecosistema DeFi Ergo, dove più protocolli possono lavorare insieme per fornire servizi finanziari completi.\n\nEXLE rappresenta l'innovazione continua nel DeFi Ergo, esplorando come le primitive di prestito tradizionali possano essere adattate all'architettura eUTXO. Lo sviluppo del protocollo contribuisce all'obiettivo di Ergo di fornire una suite completa di strumenti finanziari decentralizzati mantenendo i vantaggi di sicurezza e prevedibilità del modello UTXO esteso.",
       "features": [
-        "Protocollo di prestito",
-        "Mutuo",
+        "Protocollo di Prestito",
+        "Credito",
         "Integrazione DeFi",
         "Integrazione Crux Finance"
       ]
     }
   },
   "ecosystemClient": {
-    "allProjects": "Tutti i progetti",
+    "allProjects": "Tutti i Progetti",
     "noProjectsFound": "Nessun progetto trovato",
-    "learnMore": "Scopri di più",
-    "visitProject": "Visita il progetto",
-    "exploreMore": "Esplora di più",
+    "learnMore": "Scopri di Più",
+    "visitProject": "Visita il Progetto",
+    "exploreMore": "Esplora di Più",
     "technology": {
       "title": "Tecnologia",
       "subtitle": "Scopri la tecnologia che alimenta questi progetti",
       "description": "Approfondisci lo stack tecnologico di Ergo e comprendi le innovazioni che rendono possibili questi progetti."
     },
     "useCases": {
-      "title": "Casi d'uso",
-      "subtitle": "Scopri cosa puoi costruire su Ergo",
-      "description": "Esplora le applicazioni del mondo reale e scopri le possibilità di costruire sulla piattaforma di Ergo."
+      "title": "Casi d'Uso",
+      "subtitle": "Guarda cosa puoi costruire su Ergo",
+      "description": "Esplora applicazioni del mondo reale e scopri le possibilità di costruzione sulla piattaforma Ergo."
     },
     "emailCapture": {
-      "title": "Resta connesso con gli aggiornamenti dell'ecosistema",
-      "description": "Ricevi notifiche su nuove dApp, aggiornamenti dei protocolli e sviluppi dell'ecosistema"
+      "title": "Resta Connesso con gli Aggiornamenti dell'Ecosistema",
+      "description": "Ricevi notifiche sulle nuove dApp, gli aggiornamenti dei protocolli e i sviluppi dell'ecosistema"
     }
   },
   "mapClient": {
     "hero": {
-      "title": "Mappa dell'ecosistema",
-      "subtitle": "Mappa visiva dei progetti, degli strumenti e dei team di Ergo. Esplora i cluster, filtra per categoria e scopri cosa si sta costruendo.",
+      "title": "Mappa dell'Ecosistema",
+      "subtitle": "Mappa visiva di progetti, strumenti e team Ergo. Esplora i cluster, filtra per categoria e scopri cosa viene costruito.",
       "projects": "progetti",
       "categories": "categorie",
-      "trending": "di tendenza"
+      "trending": "in tendenza"
     },
     "buttons": {
-      "browseEcosystem": "Sfoglia l'ecosistema",
-      "suggestProject": "Suggerisci un progetto"
+      "browseEcosystem": "Sfoglia l'Ecosistema",
+      "suggestProject": "Suggerisci un Progetto"
     },
     "controls": {
       "searchPlaceholder": "Cerca progetti...",
-      "trendingLabel": "Di tendenza"
+      "trendingLabel": "In Tendenza"
     },
     "navigation": {
       "jumpTo": "Vai a:",

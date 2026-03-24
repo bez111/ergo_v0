@@ -10,7 +10,7 @@
     },
     "hub": {
       "hero": {
-        "title": "ERGO TECHNOLOGY",
+        "title": "ERGO 技术",
         "description": "高级区块链基础设施，用于可扩展的 DeFi，安全智能合约，以及真正的权力下放。"
       },
       "buttons": {
@@ -230,7 +230,7 @@
       "twitterDescription": "eUTXO 模型，ErgoScript，Sigma 协议， NIPoPoWs - 尖端区块链科技。"
     },
     "schema": {
-      "headline": "Ergo Blockchain Technology Stack",
+      "headline": "Ergo 区块链技术栈",
       "description": "Ergo技术创新的综合概览，包括eUTXO、ErgoScript和Sigma协议",
       "about": {
         "eutxo": {
@@ -267,7 +267,7 @@
         "description": "Ergo 区块链技术功能综合列表，包括 eUTXO、ErgoScript、Autolykos PoW 等。"
       },
       "speakable": {
-        "headline": "Ergo Technology Stack",
+        "headline": "Ergo 技术栈",
         "summary": "Ergo 在并行执行时使用eUTXO模型，ErgoScript 用于安全合同，以及Sigma 隐私协议"
       },
       "faq": {
@@ -470,7 +470,7 @@
         "useCases": {
           "examples": "示例：",
           "defi": {
-            "title": "DeFi Protocols",
+            "title": "DeFi 协议",
             "description": "建立分散化的交易所、借贷平台和马氏体",
             "examples": "DEX, 贷款, 稳定, Yield 耕作。"
           },
@@ -535,7 +535,7 @@
             "description": "进入市场的障碍较小，使得个别矿工能够获利地参与。"
           },
           "asic": {
-            "title": "ASIC Resistant",
+            "title": "抗 ASIC",
             "description": "为消费者GPU优化，以防止采矿集中。"
           }
         }
@@ -991,7 +991,7 @@
               }
             },
             "stablecoins": {
-              "title": "Stablecoins",
+              "title": "稳定币",
               "description": "构建算法或担保品化的稳定性：",
               "features": {
                 "oracleFeeds": "Oracle 价格进纸集成",
@@ -1058,7 +1058,7 @@
             "description": "创建独特的数字艺术、收藏夹和游戏资产"
           },
           "stablecoins": {
-            "title": "Stablecoins",
+            "title": "稳定币",
             "description": "问题算法或抵押品化的马铃薯与oracle 集成"
           },
           "gamingAssets": {
@@ -1159,7 +1159,7 @@
       "title": "准备好建设？",
       "description": "开始开发最先进的区块链平台",
       "documentation": "查看文档",
-      "github": "Explore GitHub"
+      "github": "探索 GitHub"
     },
     "nativeTokens": {
       "title": "原生令牌和 NFT",
@@ -1248,7 +1248,7 @@
             }
           },
           "stablecoins": {
-            "title": "Stablecoins",
+            "title": "稳定币",
             "description": "构建算法或担保品化的稳定性：",
             "features": {
               "0": "Oracle 价格进纸集成",
@@ -1315,7 +1315,7 @@
           "description": "创建独特的数字艺术、收藏夹和游戏资产"
         },
         "stablecoins": {
-          "title": "Stablecoins",
+          "title": "稳定币",
           "description": "问题算法或抵押品化的马铃薯与oracle 集成"
         },
         "gamingAssets": {
@@ -1430,7 +1430,7 @@
       },
       "problems": {
         "bloat": {
-          "title": "Blockchain Bloat",
+          "title": "区块链膨胀",
           "description": "传统区块链累积了一段时间内未使用的数据，导致效率低下和成本较高。",
           "stats": "2TB+ 浪费空间"
         },
@@ -1636,8 +1636,8 @@
       "guard_script_spending_conditions": "警卫脚本 (支出条件)",
       "additional_data_for_smart_contracts": "附加数据(智能合同)",
       "custom_tokens_and_nfts": "自定义令牌和 NFTs",
-      "why_is_eutxo_better_than": "Why is eUTXO better than account-based models?\",\n      answer: \"eUTXO enables parallel transaction processing, eliminates double-spending at the protocol level, and provides more predictable fee structures.",
-      "can_i_build_complex_dapps": "Can I build complex dApps with eUTXO?\",\n      answer: \"Absolutely. eUTXO supports complex smart contracts while maintaining the security and simplicity of the UTXO model.",
+      "why_is_eutxo_better_than": "为什么 eUTXO 优于账户模型？\",\n      answer: \"eUTXO 支持并行交易处理，在协议层面消除双重支付，并提供更可预测的手续费结构。",
+      "can_i_build_complex_dapps": "我能用 eUTXO 构建复杂的 dApp 吗？\",\n      answer: \"当然可以。eUTXO 在保留 UTXO 模型安全性与简洁性的同时，支持复杂的智能合约。",
       "next_generation_unspent_transaction_output": "并行智能合约和可混成的 DeFi 下一代未花费的交易输出模型",
       "what_is_eutxo": "什么是eUTXO？",
       "the_extended_unspent_transaction_output": "扩展未花费交易输出模型是比特币的 UTXO 模型的演变。 通过智能合约能力，同时保持原设计的安全性和简洁性。",
@@ -2098,11 +2098,11 @@
       "what_are_the_main_advantages": "General content",
       "technology_href_technology": "General content",
       "on_this_page_classname": "36",
-      "technology_item_https_ergoblockchain_org": "Technology', item: 'https://ergoblockchain.org/technology",
+      "technology_item_https_ergoblockchain_org": "技术', item: 'https://ergoblockchain.org/technology",
       "techarticle_headline": "TechArticle，标题：",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO解释说：安全、平行、可编程和使用案例。",
-      "organization_name_ergo_foundation_url": "Organization', name: 'Ergo Foundation', url: 'https://ergoblockchain.org",
-      "organization_name_ergo_platform_url": "Organization', name: 'Ergo Platform', url: 'https://ergoblockchain.org",
+      "organization_name_ergo_foundation_url": "组织', name: 'Ergo Foundation', url: 'https://ergoblockchain.org",
+      "organization_name_ergo_platform_url": "组织', name: 'Ergo Platform', url: 'https://ergoblockchain.org",
       "on_this_page": "在本页",
       "ergoscript_code_controlling_spending_conditions": "ErgoScript 代码控制支出条件",
       "user_defined_r4_r9_r0_r3_are_protocol_reserved": "用户定义: R4-R9 (R0-R3 是协议保留)",
@@ -2116,12 +2116,12 @@
       "nfts_asset_registries": "NFTs & 资产注册",
       "each_nft_is_a_unique_box_no_global_ledger_needed": "每个NFT都是唯一的方框，无需全局分类帐。",
       "zero_knowledge_logic_baked_into_core_language": "零知识逻辑嵌入到核心语言",
-      "extended_utxo_smart_contracts_blockchain": "Extended UTXO\",\n    \"smart contracts\",\n    \"blockchain technology\",\n    \"DeFi\",\n    \"parallel processing\",\n    \"re-entrancy protection\",\n    \"Ergo blockchain\",\n    \"UTXO model\",\n    \"cryptocurrency",
+      "extended_utxo_smart_contracts_blockchain": "扩展 UTXO\",\n    \"智能合约\",\n    \"区块链技术\",\n    \"DeFi\",\n    \"并行处理\",\n    \"防重入保护\",\n    \"Ergo 区块链\",\n    \"UTXO 模型\",\n    \"加密货币",
       "discover_the_eutxo_model_a": "发现eUTXO模型，智能合约的安全和可缩放的方法。了解如何Ergo",
       "parallel_secure_smart_contracts_without": "Parallel, 安全的智能合约不会再次进入。Defi的前途。",
-      "what_is_the_eutxo_model": "What is the eUTXO model?\",\n      answer: \"The eUTXO (Extended UTXO) model combines Bitcoin's UTXO security with smart contract capabilities, enabling parallel execution and eliminating reentrancy attacks.",
-      "why_is_eutxo_better_for": "Why is eUTXO better for DeFi?\",\n      answer: \"eUTXO enables composable, predictable smart contracts with deterministic fees, no front-running, and parallel transaction processing for better throughput.",
-      "techarticle_headline_eutxo_model_extended": "TechArticle',\n    headline: 'eUTXO Model: Extended UTXO for Smart Contracts',\n    description: 'Technical guide to the eUTXO model and its advantages for DeFi",
+      "what_is_the_eutxo_model": "什么是 eUTXO 模型？\",\n      answer: \"eUTXO（扩展 UTXO）模型将比特币 UTXO 的安全性与智能合约能力相结合，支持并行执行并消除重入攻击。",
+      "why_is_eutxo_better_for": "为什么 eUTXO 更适合 DeFi？\",\n      answer: \"eUTXO 支持可组合、可预测的智能合约，具有确定性手续费、无抢跑交易以及并行交易处理，从而提升吞吐量。",
+      "techarticle_headline_eutxo_model_extended": "技术文章',\n    headline: 'eUTXO 模型：面向智能合约的扩展 UTXO',\n    description: 'eUTXO 模型及其 DeFi 优势的技术指南",
       "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
       "eutxo_model_explained_parallel_smart": "eUTXO 模型解释 | 没有退货的并行智能合同",
       "master_the_eutxo_model_powering_ergo": "掌握eUTXO模型为Ergo",
@@ -2244,11 +2244,11 @@
       }
     },
     "ergoscriptOld": {
-      "what_is_ergoscript_answer_ergoscript": "What is ErgoScript?\",\n      answer: \"ErgoScript is Ergo's smart contract language based on Sigma protocols. It enables powerful, flexible, and secure smart contracts while maintaining the benefits of the UTXO model.",
-      "is_ergoscript_similar_to_other": "Is ErgoScript similar to other smart contract languages?\",\n      answer: \"ErgoScript is unique, combining functional programming with cryptographic protocols. It's more secure than Solidity, preventing reentrancy attacks by design.",
-      "how_do_i_learn_ergoscript": "How do I learn ErgoScript?\",\n      answer: \"Start with the official tutorials, use the ErgoScript playground for practice, and reference the documentation. Basic Scala knowledge helps but isn't required.",
-      "course_name_ergoscript_programming_course": "Course',\n    name: 'ErgoScript Programming Course',\n    description: 'Learn ErgoScript smart contract language for Ergo blockchain",
-      "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
+      "what_is_ergoscript_answer_ergoscript": "什么是 ErgoScript？\",\n      answer: \"ErgoScript 是 Ergo 基于 Sigma 协议的智能合约语言。它在保留 UTXO 模型优势的同时，支持强大、灵活且安全的智能合约。",
+      "is_ergoscript_similar_to_other": "ErgoScript 与其他智能合约语言相似吗？\",\n      answer: \"ErgoScript 独具特色，将函数式编程与密码学协议相结合。它比 Solidity 更安全，从设计上防止重入攻击。",
+      "how_do_i_learn_ergoscript": "如何学习 ErgoScript？\",\n      answer: \"从官方教程入手，使用 ErgoScript 操场练习，并参考文档。了解基础 Scala 知识会有所帮助，但并非必须。",
+      "course_name_ergoscript_programming_course": "课程',\n    name: 'ErgoScript 编程课程',\n    description: '学习 Ergo 区块链的 ErgoScript 智能合约语言",
+      "organization_name_ergo_platform": "组织',\n      name: 'Ergo Platform",
       "ergoscript_secure_smart_contract_language": "ErgoScript - 安全智能合同语言",
       "learn_ergoscript_smart_contract_language": "学习 Ergo blockchain 的 ErgoScript 智能合同语言",
       "security_first": "优先安全",
@@ -2273,23 +2273,23 @@
       "predictable_moderate": "可预测，中",
       "copy_to_clipboard": "复制到剪贴板",
       "the_class_of_reentrancy_vulnerabilities": "在eUTXO 中缺少基于账户的系统共有的再入账功能类",
-      "deterministic_execution_description_computational_complexity": "Deterministic Execution\",\n    description: \"Computational complexity is predictable, though network fees are market-driven",
-      "utxo_concurrency_description_parallel_transaction": "UTXO Concurrency\",\n    description: \"Parallel transaction processing with batcher patterns for high-contention scenarios",
-      "what_about_throughput_and_scaling": "What about throughput and scaling for high-demand applications?\",\n      answer: \"The eUTXO model enables parallel transaction processing. For high-contention scenarios like DEXs, batcher/aggregator patterns can collect multiple orders and execute them in batches, effectively scaling throughput while maintaining the security guarantees.",
-      "can_i_build_complex_defi": "Can I build complex DeFi applications with ErgoScript?\",\n      answer: \"Yes. ErgoScript supports sophisticated financial instruments including DEXs, stablecoins, lending protocols, and advanced NFT contracts. The declarative model and native cryptographic primitives often make complex protocols simpler to implement and audit than on account-based systems.",
-      "technology_item_https_ergoblockchain_org": "Technology\",\n              item: \"https://ergoblockchain.org/technology",
+      "deterministic_execution_description_computational_complexity": "确定性执行\",\n    description: \"计算复杂度可预测，但网络手续费由市场驱动",
+      "utxo_concurrency_description_parallel_transaction": "UTXO 并发\",\n    description: \"通过批处理模式实现并行交易处理，适用于高竞争场景",
+      "what_about_throughput_and_scaling": "高需求应用的吞吐量和扩展性如何？\",\n      answer: \"eUTXO 模型支持并行交易处理。对于 DEX 等高竞争场景，批处理/聚合器模式可收集多笔订单并批量执行，在保障安全性的同时有效提升吞吐量。",
+      "can_i_build_complex_defi": "我能用 ErgoScript 构建复杂的 DeFi 应用吗？\",\n      answer: \"可以。ErgoScript 支持复杂的金融工具，包括 DEX、稳定币、借贷协议和高级 NFT 合约。其声明式模型和原生密码学原语通常使复杂协议的实现和审计比基于账户的系统更简单。",
+      "technology_item_https_ergoblockchain_org": "技术\",\n              item: \"https://ergoblockchain.org/technology",
       "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
       "technology_href_technology": "General content",
       "ergoscript_href_technology_ergoscript": "General content",
       "on_this_page_classname": "36",
-      "try_online_playground_description_write": "Try Online Playground\",\n                              description: \"Write and test ErgoScript in your browser",
-      "read_documentation_description_comprehensive_guides": "Read Documentation\",\n                              description: \"Comprehensive guides and API references",
-      "join_community_description_get_help": "Join Community\",\n                              description: \"Get help from experienced developers",
+      "try_online_playground_description_write": "在线操场\",\n                              description: \"在浏览器中编写和测试 ErgoScript",
+      "read_documentation_description_comprehensive_guides": "阅读文档\",\n                              description: \"全面的指南和 API 参考",
+      "join_community_description_get_help": "加入社区\",\n                              description: \"向经验丰富的开发者寻求帮助",
       "no_shared_global_state_eliminates": "没有一个共享的全球状态取消了重新进入脆弱程度类",
-      "native_sigma_protocols_description_first": "Native Sigma Protocols\",\n                                  description: \"First-class cryptographic primitives for multi-party signatures",
-      "interactive_playground_description_test_contracts": "Interactive Playground\",\n                                  description: \"Test contracts instantly in your browser without setup",
-      "rich_tooling_ecosystem_description_sdks": "Rich Tooling Ecosystem\",\n                                  description: \"SDKs for Java, JavaScript, Python, and more",
-      "extensive_examples_description_learn_from": "Extensive Examples\",\n                                  description: \"Learn from production-ready contract templates",
+      "native_sigma_protocols_description_first": "原生 Sigma 协议\",\n                                  description: \"面向多方签名的一流密码学原语",
+      "interactive_playground_description_test_contracts": "交互式操场\",\n                                  description: \"无需配置，直接在浏览器中即时测试合约",
+      "rich_tooling_ecosystem_description_sdks": "丰富的工具生态\",\n                                  description: \"支持 Java、JavaScript、Python 等语言的 SDK",
+      "extensive_examples_description_learn_from": "大量示例\",\n                                  description: \"从生产就绪的合约模板中学习",
       "non_custodial_defi_protocols": "非保管的 DeFi 协议",
       "decentralized_oracle_networks": "分散化果园网络",
       "stablecoins_and_native_tokens": "稳定和原生令牌",
@@ -2306,11 +2306,11 @@
       "sdks_apis_url_docs_developers_tooling": "General content",
       "node_js_library_url_https": "General content",
       "like_bitcoin_script_works_with": "像比特币脚本一样，与输出工作而不是账号不同。与BTC不同，脚本对Defi、DAO和复杂合同更强大。",
-      "no_shared_state_no_global": "No Shared State, No Global Variables\",\n                              description: \"Eliminates the reentrancy vulnerability class; mitigates some MEV patterns, but does not fully prevent frontrunning.",
-      "cryptography_first_design_description_sigma": "Cryptography-first Design\",\n                              description: \"Sigma protocols and zero-knowledge proofs are native. No need for external libraries or complex implementations.",
-      "predictable_execution_costs_description_script": "Predictable Execution Costs\",\n                              description: \"Script execution cost is statically bounded; the final network fee is still market-driven (mempool conditions).",
-      "restricted_computation_description_intentionally_limited": "Restricted Computation\",\n                              description: \"Intentionally limited to prevent infinite loops and ensure all contracts terminate predictably.",
-      "declarative_scripting_description_express_what": "Declarative Scripting\",\n                              description: \"Express what you want to achieve rather than how to achieve it. More readable and less error-prone.",
+      "no_shared_state_no_global": "无共享状态，无全局变量\",\n                              description: \"消除重入漏洞类别；缓解部分 MEV 模式，但不能完全防止抢跑交易。",
+      "cryptography_first_design_description_sigma": "密码学优先设计\",\n                              description: \"Sigma 协议和零知识证明是原生支持的，无需外部库或复杂实现。",
+      "predictable_execution_costs_description_script": "可预测的执行成本\",\n                              description: \"脚本执行成本静态有界；最终网络手续费仍由市场驱动（内存池条件）。",
+      "restricted_computation_description_intentionally_limited": "受限计算\",\n                              description: \"有意限制以防止无限循环，确保所有合约可预测地终止。",
+      "declarative_scripting_description_express_what": "声明式脚本\",\n                              description: \"表达您想要实现的目标而非实现方式。更易读，更不容易出错。",
       "on_this_page": "在本页",
       "deterministic_execution": "决定性执行",
       "computational_complexity_is_predictable_though": "计算复杂性是可预测的，尽管网络费用是由市场驱动的",
@@ -2352,8 +2352,8 @@
       "explore_ergoscript_and_start_developing": "探索ErgoScript 并从今天开始开发安全的智能合同。",
       "try_playground": "尝试游乐场"
     },
-    "ergo_technology_description": "Ergo Technology\",\n    description:",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
+    "ergo_technology_description": "Ergo 技术\",\n    description:",
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo 技术 — eUTXO、ErgoScript、Autolykos | ergoblockchain.org",
     "explore_ergo_s_technology_stack": "探索Ergo的技术堆栈：eUTXO、ErgoScript、Autolykos PoW、存储租借、Sigma协议、NIPPOW。",
     "adaptiveEmission": {
       "title": "适应性排放",
@@ -2459,9 +2459,9 @@
       "built_in_privacy_technology_sigma": "内置隐私技术：零知识证明的Sigma协议，匿名交易的ErgoMixer，环形签名和机密DeFi。不需要可信的设置。",
       "native_zero_knowledge_proofs_mixer": "原生的零知识证明，混合协议和位于Ergo blockchain的保密资产。",
       "optional_privacy_for_all_transactions": "使用 Sigma 协议和 ErgoMixer 的所有交易的可选隐私。",
-      "how_does_ergo_implement_privacy": "How does Ergo implement privacy?\",\n      answer: \"Ergo uses Sigma protocols for zero-knowledge proofs, enabling optional privacy features like ErgoMixer, ring signatures, and confidential transactions without trusted setup.",
-      "is_ergo_a_privacy_coin": "Is Ergo a privacy coin?\",\n      answer: \"Ergo offers optional privacy. Users can choose transparent or confidential transactions. Privacy is a feature, not mandatory, maintaining regulatory compliance.",
-      "what_is_ergomixer_answer_ergomixer": "What is ErgoMixer?\",\n      answer: \"ErgoMixer is a non-custodial, trustless mixing protocol that breaks transaction links using Sigma protocols, providing strong privacy without centralized operators.",
+      "how_does_ergo_implement_privacy": "Ergo 如何实现隐私？\",\n      answer: \"Ergo 使用 Sigma 协议进行零知识证明，支持可选隐私功能，如 ErgoMixer、环签名和保密交易，无需可信设置。",
+      "is_ergo_a_privacy_coin": "Ergo 是隐私币吗？\",\n      answer: \"Ergo 提供可选隐私。用户可选择透明或保密交易。隐私是一项功能，而非强制性要求，保持监管合规。",
+      "what_is_ergomixer_answer_ergomixer": "什么是 ErgoMixer？\",\n      answer: \"ErgoMixer 是一个非托管、无需信任的混合协议，使用 Sigma 协议打断交易链接，在没有中心化运营商的情况下提供强大隐私保护。",
       "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
       "ergo_privacy_features_zero_knowledge": "Ergo Privacy 功能 | 零知识证明和保密交易",
       "ergo_privacy_technology_optional_confidentiality": "Ergo Privacy Technology | DeFi 的可选保密",
@@ -2478,49 +2478,49 @@
       "what_you_can_do_with_ergo_privacy": "你可以用Ergo隐私做什么",
       "frequently_asked_questions": "常见问题",
       "privacy_by_design_security_by_default": "设计的隐私，默认安全保护",
-      "sigma_protocols_description_enable_powerful": "Sigma Protocols\",\n    description:\n      \"Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
+      "sigma_protocols_description_enable_powerful": "Sigma 协议\",\n    description:\n      \"在协议层面启用强大的隐私工具，如环签名和零知识证明。",
       "zero_knowledge_proofs_ring_signatures": ", ",
-      "ergomixer_description_on_chain_non": "ErgoMixer\",\n    description: \"On-chain, non-custodial mixing for transaction privacy and anonymity.",
-      "non_custodial_mixing_on_chain": "Non-custodial mixing\",\n      \"On-chain privacy\",\n      \"Token mixing support\",\n      \"Configurable anonymity",
-      "confidential_assets_description_issue_tokens": "Confidential Assets\",\n    description: \"Issue tokens with hidden amounts and rules for maximum privacy.",
-      "hidden_token_amounts_private_smart": "Hidden token amounts\",\n      \"Private smart contracts\",\n      \"Confidential transactions\",\n      \"Selective disclosure",
-      "flexible_privacy_features_usable_in": "Flexible privacy features usable in dApps, DeFi, and NFTs\",\n  \"Open-source, peer-reviewed cryptography\",\n  \"Composable with other Ergo features\",\n  \"Built into the protocol, not added as afterthought\",\n  \"Mathematically proven security guarantees",
-      "private_transactions_description_mix_your": "Private Transactions\",\n    description:\n      \"Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
-      "confidential_defi_description_build_defi": "Confidential DeFi\",\n    description: \"Build DeFi applications with private balances and logic",
-      "anonymous_voting_description_create_daos": "Anonymous Voting\",\n    description: \"Create DAOs and voting systems with secret ballots",
-      "private_nfts_description_nfts_with": "Private NFTs\",\n    description: \"NFTs with hidden metadata or ownership information",
+      "ergomixer_description_on_chain_non": "ErgoMixer\",\n    description: \"链上非托管混币，用于交易隐私和匿名性。",
+      "non_custodial_mixing_on_chain": "非托管混币\",\n      \"链上隐私\",\n      \"代币混合支持\",\n      \"可配置匿名性",
+      "confidential_assets_description_issue_tokens": "保密资产\",\n    description: \"发行具有隐藏金额和规则的代币，实现最大隐私保护。",
+      "hidden_token_amounts_private_smart": "隐藏代币金额\",\n      \"私密智能合约\",\n      \"保密交易\",\n      \"选择性披露",
+      "flexible_privacy_features_usable_in": "可在 dApp、DeFi 和 NFT 中使用的灵活隐私功能\",\n  \"开源、经同行评审的密码学\",\n  \"可与其他 Ergo 功能组合\",\n  \"内置于协议中，而非事后添加\",\n  \"经过数学证明的安全保证",
+      "private_transactions_description_mix_your": "私密交易\",\n    description:\n      \"混合您的 ERG 和代币，实现强大的链上匿名性（在当前匿名集范围内）",
+      "confidential_defi_description_build_defi": "保密 DeFi\",\n    description: \"构建具有私密余额和逻辑的 DeFi 应用",
+      "anonymous_voting_description_create_daos": "匿名投票\",\n    description: \"创建具有秘密投票的 DAO 和投票系统",
+      "private_nfts_description_nfts_with": "私密 NFT\",\n    description: \"具有隐藏元数据或所有权信息的 NFT",
       "confidential_collectibles": "保密的收藏品",
-      "what_level_of_privacy_does": "What level of privacy does Ergo offer? Is it just coin mixing?\",\n    answer:",
-      "if_i_use_privacy_features": "If I use privacy features, won't my transactions look suspicious?\",\n    answer:\n      \"On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion.",
-      "doesn_t_this_kind_of": "Doesn't this kind of privacy attract criminals?\",\n    answer:\n      \"Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling.",
-      "question_name_what_privacy_features": "Question\",\n              name: \"What privacy features does Ergo offer?",
-      "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance.",
-      "question_name_how_do_sigma_protocols_work": "Question\",\n              name: \"How do Sigma protocols work?",
-      "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation.",
-      "question_name_are_ergo_s": "Question\",\n              name: \"Are Ergo's privacy features regulatory compliant?",
-      "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default.",
-      "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
+      "what_level_of_privacy_does": "Ergo 提供什么级别的隐私？仅仅是混币吗？\",\n    answer:",
+      "if_i_use_privacy_features": "如果我使用隐私功能，我的交易会显得可疑吗？\",\n    answer:\n      \"恰恰相反。因为隐私工具是 Ergo 生态的核心部分，使用它们是常态。当许多人混合他们的代币时，会形成一个大的匿名集，很容易融入其中。在 Ergo 上，保护您的财务数据是标准做法，而非怀疑的理由。",
+      "doesn_t_this_kind_of": "这种隐私不会吸引犯罪分子吗？\",\n    answer:\n      \"隐私是一项基本权利，而非罪责的证明。您拉上窗帘并不是因为您在做违法的事。企业需要隐私来保护商业秘密和工资单，个人需要它来保护自己免受追踪和画像。",
+      "question_name_what_privacy_features": "问题\",\n              name: \"Ergo 提供哪些隐私功能？",
+      "answer_text_ergo_offers_multiple": "回答\",\n                text:\n                  \"Ergo 提供多种隐私功能，包括 Sigma 协议、环签名、零知识证明和保密交易。这些技术在保障安全性和合规性的同时，支持保护隐私的交易。",
+      "question_name_how_do_sigma_protocols_work": "问题\",\n              name: \"Sigma 协议如何工作？",
+      "answer_text_sigma_protocols_are": "回答\",\n                text:\n                  \"Sigma 协议是零知识证明系统，允许在不泄露秘密值的情况下证明关于该值的陈述。它们支持保护隐私的身份验证和交易验证。",
+      "question_name_are_ergo_s": "问题\",\n              name: \"Ergo 的隐私功能符合监管要求吗？",
+      "answer_text_yes_ergo_s": "回答\",\n                text:\n                  \"是的，Ergo 的隐私功能旨在符合监管要求。它们提供选择性披露能力，允许用户在需要时披露交易细节，同时默认保持隐私。",
+      "techarticle_id_https_ergoblockchain_org": "技术文章\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo 将隐私写入协议：Sigma协议、环/阈值签名、ErgoMixer、保密资产和选择性披露。",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
+      "organization_name_ergoblockchain_org_url": "组织\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
       "imageobject_url_https_ergoblockchain_org": "General content",
       "ergo_privacy_sigma_protocols_ring": "Ergo privacy,Sigma protocols,铃声签名,零知识证明,ErgoMixer,secretary transactions",
       "thing_name_sigma_protocol": "General content",
       "thing_name_zero_knowledge_proof": "General content",
       "webpage_id_https_ergoblockchain_org_technology": ": ",
       "technology_item_https_ergoblockchain_org": "General content",
-      "privacy_features_item_https_ergoblockchain": "Privacy Features\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
-      "howto_name_how_to_increase": "HowTo\",\n          name: \"How to increase privacy with ErgoMixer\",\n          description: \"High-level steps to improve on-chain privacy using ErgoMixer with delays and larger anonymity sets.",
+      "privacy_features_item_https_ergoblockchain": "隐私功能\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
+      "howto_name_how_to_increase": "操作指南\",\n          name: \"如何使用 ErgoMixer 提升隐私\",\n          description: \"使用 ErgoMixer 通过延迟和更大匿名集提升链上隐私的高层步骤。",
       "prepare_funds_text_split_funds": "General content",
       "run_mix_text_choose_round": "General content",
       "wait_spend_text_spend_after": "General content",
       "technology_href_technology": "General content",
       "privacy_features_href_technology_privacy_features": "General content",
       "on_page_navigation_classname": "45",
-      "basic_privacy_description_standard_transactions": "Basic Privacy\",\n                              description: \"Standard transactions with pseudonymous addresses",
+      "basic_privacy_description_standard_transactions": "基础隐私\",\n                              description: \"使用伪名地址的标准交易",
       "pseudonymous_addresses_utxo_model_benefits": ", ",
-      "enhanced_privacy_description_using_ergomixer": "Enhanced Privacy\",\n                              description: \"Using ErgoMixer for transaction mixing and unlinkability",
+      "enhanced_privacy_description_using_ergomixer": "增强隐私\",\n                              description: \"使用 ErgoMixer 进行交易混合和去关联",
       "transaction_mixing_address_unlinkability_amount": ", ",
-      "maximum_privacy_description_sigma_protocols": "Maximum Privacy\",\n                              description: \"Sigma protocols with zero-knowledge proofs and ring signatures",
+      "maximum_privacy_description_sigma_protocols": "最高隐私\",\n                              description: \"带有零知识证明和环签名的 Sigma 协议",
       "enable_powerful_privacy_tools_like": "在协议一级启用强大的隐私工具，如环形签名和零知识证明。",
       "on_chain_non_custodial_mixing": "在链上，交易隐私和匿名的非拘禁混合。",
       "issue_tokens_with_hidden_amounts": "为最大隐私发布隐藏金额和规则的标记。",
@@ -2774,59 +2774,59 @@
     "bitcoin_level_security_description_inherits": "General content",
     "built_in_privacy_description_native": "General content",
     "safe_by_design_description_prevents": "General content",
-    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
+    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"节能、抗 ASIC 的挖矿算法，使网络参与民主化。专为 GPU 挖矿设计，保持网络去中心化并让所有人都能参与。\",\n    color: \"\",\n    href: \"/technology/secure-pow",
     "energy_efficient_description_memory_hard": "General content",
     "solo_mining_friendly_description_low": "General content",
     "asic_resistant_description_optimized_for": "General content",
-    "storage_rent_description": "Storage Rent\",\n    description:",
+    "storage_rent_description": "存储租金\",\n    description:",
     "sustainable_blockchain_description_automatic_cleanup": "General content",
     "perpetual_security_description_miners_receive": "General content",
     "resource_efficient_description_maintains_lightweight": "General content",
-    "sigma_protocols_description_built_in": "Sigma Protocols\",\n    description:\n      \"Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
+    "sigma_protocols_description_built_in": "Sigma 协议\",\n    description:\n      \"内置零知识证明支持保护隐私的交易和高级密码学功能，无需第三方解决方案或复杂设置。\",\n    color: \"\",\n    href: \"/technology/privacy-features",
     "optional_privacy_description_choose_between": "General content",
     "developer_friendly_description_simple_apis": "General content",
     "instant_mobile_sync_description_full": "General content",
     "trustless_bridges_description_connect_to": "General content",
     "cryptographic_security_description_mathematical_proofs": "General content",
-    "subblocks_in_development_description": "Subblocks (In Development)\",\n    description:",
+    "subblocks_in_development_description": "子块（开发中）\",\n    description:",
     "sub_second_confirmations_description_near": "General content",
     "full_blockchain_security_without_trusted": "完整区块链安全无需信任中介。",
     "seamless_integration_description_works_with": "General content",
-    "native_tokens_nfts_description_create": "Native Tokens & NFTs\",\n    description:\n      \"Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
+    "native_tokens_nfts_description_create": "原生代币和 NFT\",\n    description:\n      \"直接在协议层创建和交易代币及 NFT。无需智能合约——简单、安全且成本效益高的原生资产。\",\n    color: \"\",\n    href: \"/technology/native-tokens",
     "one_click_creation_description_issue": "General content",
     "defi_ready_description_native_integration": "General content",
     "true_native_assets_description_first": "General content",
-    "oracle_pools_description_decentralized_price": "Oracle Pools\",\n    description:\n      \"Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
+    "oracle_pools_description_decentralized_price": "预言机池\",\n    description:\n      \"内置于协议的去中心化价格馈送和数据预言机。无单点故障，无中心化运营商——为 DeFi 提供可靠、可组合的数据。\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
     "reliable_price_feeds_description_consensus": "General content",
     "universal_compatibility_description_any_smart": "General content",
     "fully_decentralized_description_no_central": "General content",
     "backward_compatible_description_no_forced": "General content",
     "future_proof_description_adopt_innovations": "General content",
     "gradual_adoption_description_evolutionary_not": "General content",
-    "adaptive_emission_governance_description_consensus": "Adaptive Emission & Governance\",\n    description:\n      \"Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
+    "adaptive_emission_governance_description_consensus": "自适应发行与治理\",\n    description:\n      \"通过社区参与，基于共识调整经济参数（如矿工投票）。\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
     "parameter_tuning_description_economic_variables": "General content",
     "economic_flexibility_description_adapt_to": "General content",
     "community_input_description_discussions_and": "General content",
-    "dive_into_ergo_docs_href_docs_color": "Dive into Ergo Docs\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "See Ecosystem Apps\",\n    href: \"/ecosystem\",\n    color:",
+    "dive_into_ergo_docs_href_docs_color": "深入 Ergo 文档\",\n          href: \"/docs\",\n    color:",
+    "see_ecosystem_apps_href_ecosystem_color": "查看生态应用\",\n    href: \"/ecosystem\",\n    color:",
     "adaptive_emission_governance": "适应性排放与治理",
-    "what_makes_ergo_s_eutxo": "What makes Ergo's eUTXO model superior to account-based blockchains?\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "How does ErgoScript prevent smart contract vulnerabilities?\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "Why is Autolykos considered decentralized and energy-efficient?\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "How does Storage Rent solve blockchain sustainability?\",\n      tag: \"Storage",
-    "what_privacy_features_does_ergo": "What privacy features does Ergo offer natively?\",\n      tag: \"Privacy",
-    "why_are_ergo_s_oracle": "Why are Ergo's Oracle Pools more secure than Chainlink?\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "How do Subblocks achieve sub-second transaction confirmations?\",\n      tag: \"Scaling",
-    "how_to_create_tokens_and": "How to create tokens and NFTs on Ergo without smart contracts?\",\n      tag: \"Tokens & NFTs",
+    "what_makes_ergo_s_eutxo": "是什么让 Ergo 的 eUTXO 模型优于基于账户的区块链？\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScript 如何防止智能合约漏洞？\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "为什么 Autolykos 被认为是去中心化且节能的？\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "存储租金如何解决区块链可持续性问题？\",\n      tag: \"存储",
+    "what_privacy_features_does_ergo": "Ergo 原生提供哪些隐私功能？\",\n      tag: \"隐私",
+    "why_are_ergo_s_oracle": "为什么 Ergo 的预言机池比 Chainlink 更安全？\",\n      tag: \"预言机",
+    "how_do_subblocks_achieve_sub": "子块如何实现亚秒级交易确认？\",\n      tag: \"扩展",
+    "how_to_create_tokens_and": "如何在 Ergo 上不使用智能合约创建代币和 NFT？\",\n      tag: \"代币和 NFT",
     "answer_text_typeof_f_a_string": "General content",
     "research_in_development": "研究/开发中",
-    "decentralized_mixers_and_privacy_tools": "Decentralized mixers and privacy tools (check legal status)\",\n                              \"DAOs & governance systems",
+    "decentralized_mixers_and_privacy_tools": "去中心化混合器和隐私工具（请查阅法律状态）\",\n                              \"DAO 和治理系统",
     "infrastructure_apps": "基础设施和应用",
     "ergo_docs_href_docs": "General content",
     "whitepaper_href_https_ergoplatform_org": "General content",
     "github_href_https_github_com_ergoplatform": "General content",
     "dev_tutorials_href_docs_developers_tutorials": "General content",
-    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
+    "ergo_technology_category_technology": "Ergo 技术',\n  //   category: 'technology",
     "smart_contracts_run_independently_without": "智能合约在没有全局状态冲突的情况下独立运行。",
     "build_complex_defi_applications_from": "从简单、可重复使用的组件构建复杂的 DeFi 应用程序。",
     "bitcoin_level_security": "比特币级别安全",
@@ -2878,40 +2878,40 @@
     "dive_deeper_into_the_docs": "深入到 docs或在最先进的 UTXO 区块链上开始构建。",
     "discover_ergo_s_advanced_blockchain": "发现 Ergo\\'s advanced blockchain 技术：eUTXO 模型用于并行智能合同，ErgoScript 编程语言，Sigma 协议用于零知识证明，以及ASIC耐用自动开采。",
     "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 智能合同”、“Sigma protocol”、“Autolykos mining”、“blockchain technology”、“智能合同编程”、“NIPPoWs”、“存储租赁”、“工作证明”、“Defi 基础结构”。",
-    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
+    "ergo_technology_stack_building_the": "Ergo 技术栈——构建未来',\n    description: '先进的区块链技术：eUTXO、ErgoScript、隐私功能和可持续 PoW。',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
     "ergo_technology_overview": "Ergo 技术概览",
     "ergo_technology_next_generation_blockchain": "Ergo Technology - 下一代区块chain",
-    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
-    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
-    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
-    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
+    "techarticle_id_https_ergoblockchain_org": "技术文章',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo 区块链技术栈',\n    description: 'Ergo 技术创新的全面概述，包括 eUTXO、ErgoScript 和 Sigma 协议',\n    datePublished:",
+    "organization_name_ergo_platform_url": "组织',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
+    "organization_name_ergo_platform": "组织',\n      name: 'Ergo Platform",
+    "imageobject_url_https_ergoblockchain_org_logo_png": "图像对象',\n        url: 'https://ergoblockchain.org/logo.png",
+    "webpage_id_https_ergoblockchain_org_technology": "网页',\n      '@id': 'https://ergoblockchain.org/technology",
     "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Modell', description: '扩展的 UTXO 模型启用平行执行",
     "thing_name_ergoscript_description_secure": "因此，名称：“ErgoScript”，描述：“安全”，可编程资金的声明语言",
     "thing_name_sigma_protocols_description": "因此，名称：“Sigma Protocols”，描述：“Native non-knowledge proofs和隐私功能",
     "thing_name_autolykos_description_memory": "这就是'，名称：“自动ykos”，描述：“记忆-硬的工作算法证明”",
     "thing_name_storage_rent_description": "因此，名称：“存储租赁”，描述：“可持续区块链状态管理”",
     "thing_name_nipopows_description_non": "因此，名称：“NIPPoWs”，描述：“非交互式工作证明”",
-    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
-    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
-    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
-    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
-    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
-    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
-    "answer_text": "Answer',\n          text:",
-    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
-    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
-    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
-    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
-    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
+    "answer_text_eutxo_splits_the": "回答',\n          text: 'eUTXO 将区块链状态分割为独立的盒子（输出），支持无全局状态的并行智能合约，降低重入风险。dApp 变得可组合：复杂逻辑可从简单输出构建。",
+    "question_name_what_is_ergoscript": "问题',\n        name: '什么是 ErgoScript，为什么它是安全的？",
+    "answer_text_ergoscript_is_ergo": "回答',\n          text: 'ErgoScript 是 Ergo\\",
+    "question_name_why_is_autolykos": "问题',\n        name: '为什么 Autolykos 被认为是去中心化且节能的？",
+    "answer_text_autolykos_is_memory": "回答',\n          text: 'Autolykos 是内存密集型且抗 ASIC 的，对普通矿工更公平。它奖励单独挖矿并减少矿池依赖，以适度的能源消耗保持网络安全。",
+    "question_name_what_is_storage": "问题',\n        name: '什么是存储租金，为什么重要？",
+    "answer_text": "回答',\n          text:",
+    "question_name_what_privacy_and": "问题',\n        name: '内置了哪些隐私和多签功能？",
+    "question_name_what_do_nipopows_enable": "问题',\n        name: 'NIPoPoW 能实现什么？",
+    "answer_text_nipopows_create_tiny": "回答',\n          text: 'NIPoPoW 创建微型区块链证明，允许轻客户端、即时移动同步和无需全节点的无信任跨链桥。",
+    "question_name_what_are_subblocks_and_why_use_them": "问题',\n        name: '什么是子块，为什么使用它们？",
+    "question_name_can_i_issue": "问题',\n        name: '我能不用智能合约发行代币和 NFT 吗？",
+    "home_item_https_ergoblockchain_org": "主页',\n        item: 'https://ergoblockchain.org",
+    "technology_item_https_ergoblockchain_org": "技术',\n        item: 'https://ergoblockchain.org/technology",
+    "ergo_technology_stack_summary_ergo": "Ergo 技术栈',\n    summary: 'Ergo 使用 eUTXO 模型实现并行执行，ErgoScript 用于安全合约，Sigma 协议用于隐私保护',\n    url: 'https://ergoblockchain.org/technology",
     "ergo_blockchain_technology_eutxo_smart": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma 协议",
     "ergo_technology_stack_building_the_future": "Ergo Technology Stack - 构建未来",
     "advanced_blockchain_technology_eutxo_ergoscript": "高级区块链技术：eUTXO、ErgoScript、隐私功能和可持续的 PoW。",
     "eutxo_model_ergoscript_sigma_protocols": "eUTXO 模型，ErgoScript，Sigma 协议， NIPoPoWs - 尖端区块链科技。",
-    "comprehensive_overview_of_ergo": "Comprehensive overview of Ergo\\",
+    "comprehensive_overview_of_ergo": "Ergo 的全面概述\\",
     "extended_utxo_model_enabling_parallel_execution": "扩展 UTXO 模型启用并行执行",
     "secure_declarative_language_for_programmable_money": "可编程资金的安全和声明语言",
     "native_zero_knowledge_proofs_and_privacy_features": "本机零知识证明和隐私功能",
@@ -4000,7 +4000,7 @@
       "furtherReading": {
         "title": "进一步阅读",
         "subtitle": "深入了解埃尔戈的技术",
-        "ergoscript": "ErgoScript Guide",
+        "ergoscript": "ErgoScript 指南",
         "eutxo": "eUTXO 深度潜行",
         "documentation": "技术文件",
         "sourceCode": "源代码",
@@ -4976,12 +4976,12 @@
           "example": "旁观金融公司"
         },
         "1": {
-          "title": "Lending Protocols",
+          "title": "借贷协议",
           "description": "在有明确清算条件的箱子中进行抵押锁定",
           "example": "杜克库"
         },
         "2": {
-          "title": "Stablecoins",
+          "title": "稳定币",
           "description": "每个位置的预留方框跟踪抵押项",
           "example": "西格玛USD"
         },
@@ -5340,7 +5340,7 @@
       "tabs": {
         "tokens": "无形令牌",
         "nfts": "NFTs",
-        "stablecoins": "Stablecoins"
+        "stablecoins": "稳定币"
       },
       "useCasesSection": {
         "title": "使用案例",
@@ -5356,7 +5356,7 @@
           "description": "启动数字艺术和收藏"
         },
         "2": {
-          "title": "Stablecoins",
+          "title": "稳定币",
           "description": "发放带有协议担保的稳定资产"
         },
         "3": {
@@ -5665,7 +5665,7 @@
     "feePaymentOptions": "费用支付选项",
     "options": {
       "erg": {
-        "name": "ERG (Native)",
+        "name": "ERG（原生）",
         "description": "标准费用支付方法"
       },
       "anyToken": {
@@ -5771,7 +5771,7 @@
     },
     "comparison": {
       "title": "费用支付方法比较",
-      "ergFees": "ERG Fees",
+      "ergFees": "ERG 手续费",
       "babelFees": "Babel 费用",
       "alwaysAccepted": "总是接受",
       "primaryMethod": "主要方法",
@@ -5846,7 +5846,7 @@
       "title": "扩展 UTXO 模型",
       "description": "通过扩展 UTXO 模型实现并行执行、可组合性和增强安全性的智能合约",
       "shortDescription": "具有增强安全性的并行智能合约",
-      "keywords": "eutxo,eUTXO,utxo,smart contracts,parallel execution,composability,mev resistance,ethereum comparison,technical",
+      "keywords": "eutxo,eUTXO,utxo,智能合约,并行执行,可组合性,抗 MEV,以太坊对比,技术",
       "details": [
         {
           "title": "并行执行",
@@ -5866,7 +5866,7 @@
       "title": "ErgoScript",
       "description": "具有正式验证和内置加密原语的强大且安全的智能合约语言",
       "shortDescription": "具有正式验证的安全智能合约",
-      "keywords": "ergoscript,ErgoScript,smart contracts,formal verification,sigma protocols,type safety,ergo developers,functional programming",
+      "keywords": "ergoscript,ErgoScript,智能合约,形式验证,sigma 协议,类型安全,ergo 开发者,函数式编程",
       "details": [
         {
           "title": "正式验证",
@@ -5886,7 +5886,7 @@
       "title": "Autolykos 工作量证明",
       "description": "内存密集、抗 ASIC 的挖矿算法，促进去中心化和能源效率",
       "shortDescription": "用于去中心化的抗 ASIC GPU 挖矿",
-      "keywords": "autolykos,proof of work,pow,mining,asic resistant,gpu mining,sustainable pow,decentralization",
+      "keywords": "autolykos,工作量证明,pow,挖矿,抗 ASIC,GPU 挖矿,可持续 PoW,去中心化",
       "details": [
         {
           "title": "高能效",
@@ -5906,7 +5906,7 @@
       "title": "存储租金",
       "description": "通过状态回收实现可持续的区块链经济——休眠硬币支付少量费用以保持网络安全",
       "shortDescription": "通过状态回收实现长期可持续性",
-      "keywords": "storage rent,sustainability,state bloat,miner revenue,tokenomics,demurrage,scalability,decentralization",
+      "keywords": "存储租金,可持续性,状态膨胀,矿工收益,代币经济学,滞留费,可扩展性,去中心化",
       "details": [
         {
           "title": "状态可持续性",
@@ -5926,7 +5926,7 @@
       "title": "Sigma Protocols",
       "description": "无需外部依赖的原生零知识证明、环签名和高级隐私功能",
       "shortDescription": "具有零知识证明的可选隐私",
-      "keywords": "sigma protocols,privacy,zero knowledge proofs,zkp,ring signatures,ergomixer,cryptography,defi privacy",
+      "keywords": "sigma 协议,隐私,零知识证明,zkp,环签名,ergomixer,密码学,defi 隐私",
       "details": [
         {
           "title": "可选隐私",
@@ -5946,7 +5946,7 @@
       "title": "NIPoPoWs",
       "description": "非交互式工作量证明的证明支持即时移动同步和无需信任的跨链桥",
       "shortDescription": "轻型客户端和无需信任的跨链桥",
-      "keywords": "nipopows,light clients,mobile wallet,cross chain,bridges,sidechains,succinct proofs,superblocks",
+      "keywords": "nipopows,轻客户端,移动钱包,跨链,桥,侧链,简洁证明,超级块",
       "details": [
         {
           "title": "即时移动同步",
@@ -5966,7 +5966,7 @@
       "title": "子块",
       "description": "第一层扩展解决方案，在保持完整安全性的同时实现亚秒级交易确认",
       "shortDescription": "第一层上的亚秒级确认",
-      "keywords": "subblocks,scaling,fast confirmations,layer 1,throughput",
+      "keywords": "子块,扩展,快速确认,第一层,吞吐量",
       "details": [
         {
           "title": "亚秒级确认",
@@ -5986,7 +5986,7 @@
       "title": "原生代币与 NFT",
       "description": "协议层面的一流代币支持——在单笔交易中创建代币和 NFT，无需智能合约",
       "shortDescription": "一键代币和 NFT 创建",
-      "keywords": "native tokens,nft,eip4,token creation,digital assets",
+      "keywords": "原生代币,nft,eip4,代币创建,数字资产",
       "details": [
         {
           "title": "一键创建",
@@ -6006,7 +6006,7 @@
       "title": "Oracle 池",
       "description": "内置于协议的去中心化数据源——无需中央运营商的可靠价格数据",
       "shortDescription": "去中心化的链上数据源",
-      "keywords": "oracle pools,oracles,price feeds,data feeds,defi infrastructure,on-chain aggregation,oracle security",
+      "keywords": "预言机池,预言机,价格馈送,数据馈送,defi 基础设施,链上聚合,预言机安全",
       "details": [
         {
           "title": "可靠的价格数据源",
@@ -6026,7 +6026,7 @@
       "title": "Velvet Forks",
       "description": "无需硬分叉升级协议——在保持向后兼容性的同时添加新功能",
       "shortDescription": "无缝的协议升级",
-      "keywords": "velvet forks,soft forks,protocol upgrades,backward compatibility",
+      "keywords": "velvet forks,软分叉,协议升级,向后兼容",
       "details": [
         {
           "title": "向后兼容",
@@ -6046,7 +6046,7 @@
       "title": "自适应排放",
       "description": "可通过社区治理调整的动态货币政策，用于长期经济稳定",
       "shortDescription": "社区治理的货币政策",
-      "keywords": "adaptive emission,tokenomics,monetary policy,governance,emission schedule",
+      "keywords": "自适应发行,代币经济学,货币政策,治理,发行计划",
       "details": [
         {
           "title": "参数调整",
@@ -6066,7 +6066,7 @@
       "title": "Babel Fees",
       "description": "通过自动化中间人使用任何代币而非 ERG 支付交易费用",
       "shortDescription": "用任何代币支付费用",
-      "keywords": "babel fees,transaction fees,ux,token payments,gas abstraction,defi ux,on-chain markets",
+      "keywords": "babel fees,交易手续费,用户体验,代币支付,gas 抽象,defi 用户体验,链上市场",
       "details": [
         {
           "title": "代币灵活性",

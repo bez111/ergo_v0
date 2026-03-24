@@ -138,7 +138,7 @@
     "question_name_why_is_autolykos": "Question',\n        name: 'Autolykosが分散化されエネルギー効率が高いとされる理由は？",
     "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykosはメモリハードかつ ASIC耐性があり、一般のマイナーにとって公平です。ソロマイニングを促進しプール依存を減らし、適度なエネルギー使用でネットワークを安全に保ちます。",
     "question_name_what_is_storage": "Question',\n        name: 'ストレージレントとは何か、なぜ重要なのか？",
-    "answer_text": "Answer',\n          text:",
+    "answer_text": "回答',\n          text:",
     "question_name_what_privacy_and": "Question',\n        name: '組み込みのプライバシーとマルチシグ機能は何か？",
     "question_name_what_do_nipopows_enable": "Question',\n        name: 'NIPoPoWsは何を可能にするか？",
     "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWsはライトクライアント、インスタントモバイル同期、フルノードなしのトラストレスクロスチェーンブリッジを可能にする小さなブロックチェーン証明を作成します。",

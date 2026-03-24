@@ -1,36 +1,36 @@
 {
   "ecosystem": {
     "title": "エコシステム",
-    "subtitle": "Ergoエコシステムを探索する",
-    "description": "成長するErgoエコシステムを探索する",
+    "subtitle": "Ergo エコシステムを探索する",
+    "description": "成長し続ける Ergo エコシステムを探索する",
     "sections": {
       "dapps": "分散型アプリケーション",
       "tools": "開発者ツール",
-      "services": "サービス＆インフラ"
+      "services": "サービスとインフラ"
     },
     "grants": {
       "hero": {
-        "title": "Ergoグラントプログラム",
-        "description": "Ergo上で分散型金融の未来を構築する開発者、研究者、イノベーターへの資金提供"
+        "title": "Ergo グラントプログラム",
+        "description": "Ergo 上で分散型金融の未来を構築する開発者、研究者、イノベーターへの資金提供"
       },
       "subscribe": {
         "placeholder": "更新情報のメールアドレスを入力",
         "button": "通知を受け取る",
-        "success": "ありがとうございます！グラントプログラムの開始時にお知らせします。"
+        "success": "ありがとうございます！グラントプログラムが開始されたらお知らせします。"
       },
       "features": {
         "title": "期待できること",
         "subtitle": "グラントプログラムの特徴",
-        "description": "Ergoエコシステムのイノベーションと開発を支援",
+        "description": "Ergo エコシステムにおけるイノベーションと開発をサポート",
         "items": [
           {
             "title": "開発者サポート",
-            "description": "革新的なdApp、ツール、インフラプロジェクトへの資金提供",
+            "description": "革新的な dApp、ツール、インフラプロジェクトへの資金提供",
             "icon": "Zap"
           },
           {
             "title": "研究資金",
-            "description": "学術研究とプロトコル改善のサポート",
+            "description": "学術研究とプロトコル改善へのサポート",
             "icon": "Target"
           },
           {
@@ -46,44 +46,44 @@
         ]
       },
       "cta": {
-        "title": "Ergoで構築する準備はできていますか？",
-        "description": "プロジェクト提案の準備を始め、コミュニティに参加して最新情報を受け取りましょう",
+        "title": "Ergo 上での構築を始める準備はできましたか？",
+        "description": "プロジェクト提案書の準備を始め、コミュニティに参加して最新情報を入手してください",
         "buttons": {
-          "discord": "Discordコミュニティに参加",
-          "learn": "Ergoについて学ぶ"
+          "discord": "Discord コミュニティに参加",
+          "learn": "Ergo について学ぶ"
         }
       }
     },
     "grantsPage": {
       "seo": {
-        "title": "Ergoグラントプログラム | ブロックチェーンプロジェクトへの資金提供",
-        "description": "Ergoプロジェクトへの資金を獲得。開発者、研究者、コミュニティビルダーへのグラント。Ergoブロックチェーンでツール、インフラ、アプリケーションを構築。",
-        "keywords": "ergo グラント, ブロックチェーン資金, 開発者グラント, 暗号グラント, プロジェクト資金, オープンソースグラント",
-        "ogTitle": "Ergoグラント — ブロックチェーンイノベーションへの資金",
-        "ogDescription": "Ergoで構築するためのグラントを申請。開発者、研究者、コミュニティ取り組みをサポート。",
-        "ogAlt": "Ergoグラントプログラム",
-        "twitterTitle": "Ergoグラントプログラム | 資金を獲得",
-        "twitterDescription": "Ergoで構築する開発者への資金提供。グラントを申請して最新情報を受け取りましょう。"
+        "title": "Ergo グラントプログラム | ブロックチェーンプロジェクトへの資金提供",
+        "description": "Ergo プロジェクトへの資金を獲得。開発者、研究者、コミュニティビルダー向けのグラント。Ergo ブロックチェーン上でツール、インフラ、アプリケーションを構築。",
+        "keywords": "ergo グラント, ブロックチェーン資金, 開発者グラント, 暗号通貨グラント, プロジェクト資金, オープンソースグラント",
+        "ogTitle": "Ergo グラント - ブロックチェーンイノベーションへの資金提供",
+        "ogDescription": "Ergo 上での構築グラントに申請。開発者、研究者、コミュニティの取り組みをサポート。",
+        "ogAlt": "Ergo グラントプログラム",
+        "twitterTitle": "Ergo グラントプログラム | 資金を獲得",
+        "twitterDescription": "Ergo 上で構築する開発者への資金提供。グラントに申請して最新情報を入手。"
       },
       "schema": {
         "financialService": {
-          "name": "Ergoグラントプログラム",
-          "description": "Ergoブロックチェーンで構築するプロジェクトへの資金プログラム",
+          "name": "Ergo グラントプログラム",
+          "description": "Ergo ブロックチェーン上で構築するプロジェクトへの資金提供プログラム",
           "audienceType": "開発者、研究者、コミュニティビルダー"
         },
         "faq": {
           "items": [
             {
-              "question": "Ergoグラントに申請できるのは誰ですか？",
-              "answer": "Ergoエコシステムに利益をもたらすプロジェクトに取り組む開発者、研究者、コミュニティビルダー、組織がグラントを申請できます。"
+              "question": "Ergo グラントに申請できるのは誰ですか？",
+              "answer": "Ergo エコシステムに貢献するプロジェクトに取り組む開発者、研究者、コミュニティビルダー、および組織がグラントに申請できます。"
             },
             {
-              "question": "どのようなプロジェクトが資金を受けられますか？",
-              "answer": "DeFiプロトコル、開発者ツール、インフラ、教育コンテンツ、コミュニティ取り組み、Ergo技術を推進する研究プロジェクトが対象です。"
+              "question": "どのような種類のプロジェクトが資金提供されますか？",
+              "answer": "Ergo 技術を推進する DeFi プロトコル、開発者ツール、インフラ、教育コンテンツ、コミュニティの取り組み、研究プロジェクト。"
             },
             {
-              "question": "どれくらいの資金が利用可能ですか？",
-              "answer": "グラント額はプロジェクトの範囲と影響に基づいて異なり、小規模のコミュニティグラントからコアインフラプロジェクトへの大規模な資金まで様々です。"
+              "question": "利用可能な資金はいくらですか？",
+              "answer": "グラント額はプロジェクトの規模と影響力によって異なり、小規模なコミュニティグラントからコアインフラプロジェクトへの大規模な資金まで幅があります。"
             }
           ]
         }
@@ -91,41 +91,41 @@
     },
     "mapPage": {
       "seo": {
-        "title": "Ergoエコシステムマップ | インタラクティブDeFi＆dAppディレクトリ",
-        "description": "完全なErgoエコシステムをビジュアルで探索。DeFiプロトコル、NFTプラットフォーム、ウォレット、インフラ、開発者ツールのインタラクティブマップ。",
-        "keywords": "ergo エコシステム, defi マップ, dapp ディレクトリ, ブロックチェーンエコシステム, ergo プロジェクト, インタラクティブマップ, 暗号エコシステム",
-        "ogTitle": "Ergoインタラクティブエコシステムマップ | 50以上のプロジェクト",
-        "ogDescription": "Ergoプロジェクトのビジュアル探索：DeFi、NFT、ウォレット、インフラ。",
-        "ogAlt": "Ergoエコシステムインタラクティブマップ",
-        "twitterTitle": "Ergoエコシステムマップ | ビジュアルプロジェクトエクスプローラー",
-        "twitterDescription": "Ergoプロジェクトのインタラクティブビジュアライゼーション。DeFi、NFT、インフラを探索。"
+        "title": "Ergo エコシステムマップ | インタラクティブ DeFi & dApp ディレクトリ",
+        "description": "Ergo エコシステム全体を視覚的に探索。DeFi プロトコル、NFT プラットフォーム、ウォレット、インフラ、開発者ツールのインタラクティブマップ。",
+        "keywords": "ergo エコシステム, defi マップ, dapp ディレクトリ, ブロックチェーンエコシステム, ergo プロジェクト, インタラクティブマップ, 暗号通貨エコシステム",
+        "ogTitle": "インタラクティブ Ergo エコシステムマップ | 50+ プロジェクト",
+        "ogDescription": "Ergo プロジェクトの視覚的探索：DeFi、NFT、ウォレット、インフラ。",
+        "ogAlt": "Ergo エコシステムインタラクティブマップ",
+        "twitterTitle": "Ergo エコシステムマップ | ビジュアルプロジェクトエクスプローラー",
+        "twitterDescription": "Ergo プロジェクトのインタラクティブな視覚化。DeFi、NFT、インフラを探索。"
       },
       "schema": {
         "webApp": {
-          "name": "Ergoエコシステムインタラクティブマップ",
-          "description": "Ergoブロックチェーンプロジェクトとアプリケーションのビジュアルエクスプローラー"
+          "name": "Ergo エコシステムインタラクティブマップ",
+          "description": "Ergo ブロックチェーンプロジェクトとアプリケーションのビジュアルエクスプローラー"
         },
         "dataset": {
-          "name": "Ergoエコシステムプロジェクトデータセット",
-          "description": "Ergoブロックチェーンで構築するプロジェクトの完全なデータセット"
+          "name": "Ergo エコシステムプロジェクトデータセット",
+          "description": "Ergo ブロックチェーン上で構築するプロジェクトの完全なデータセット"
         },
         "faq": {
           "items": [
             {
-              "question": "Ergoエコシステムマップとは何ですか？",
-              "answer": "カテゴリ別に整理された、Ergoブロックチェーン上に構築されたアクティブなプロジェクト、プロトコル、アプリケーションを示すインタラクティブなビジュアライゼーションです。"
+              "question": "Ergo エコシステムマップとは何ですか？",
+              "answer": "Ergo ブロックチェーン上に構築されたすべてのアクティブなプロジェクト、プロトコル、アプリケーションをカテゴリ別に表示するインタラクティブな視覚化ツールです。"
             },
             {
-              "question": "Ergoエコシステムにはいくつのプロジェクトがありますか？",
-              "answer": "ErgoエコシステムにはDeFi、NFT、ウォレット、インフラ、開発者ツール、コミュニティ取り組みにわたる50以上のアクティブなプロジェクトが含まれています。"
+              "question": "Ergo エコシステムにはいくつのプロジェクトがありますか？",
+              "answer": "Ergo エコシステムには、DeFi、NFT、ウォレット、インフラ、開発者ツール、コミュニティの取り組みにわたる 50 以上のアクティブなプロジェクトがあります。"
             },
             {
-              "question": "マップにプロジェクトを追加するにはどうすればよいですか？",
-              "answer": "エコシステム申請フォームを通じてプロジェクトを提出するか、Ergo Foundationに連絡してエコシステムマップに掲載してもらいましょう。"
+              "question": "マップに自分のプロジェクトを追加するにはどうすればよいですか？",
+              "answer": "エコシステム申請フォームからプロジェクトを提出するか、Ergo Foundation に連絡してエコシステムマップに掲載してもらいましょう。"
             },
             {
               "question": "エコシステムマップは定期的に更新されますか？",
-              "answer": "はい。エコシステムマップは新しいプロジェクトを含め、非アクティブなものを削除するために定期的に更新されます。"
+              "answer": "はい。エコシステムマップは定期的に更新され、新しいプロジェクトを追加し、非アクティブなプロジェクトを削除します。"
             }
           ]
         }
@@ -137,37 +137,37 @@
           "ecosystem": "エコシステム"
         },
         "collection": {
-          "name": "Ergoエコシステム",
-          "description": "Ergoブロックチェーン上に構築されたdApp、ウォレット、ツールの完全なディレクトリ"
+          "name": "Ergo エコシステム",
+          "description": "Ergo ブロックチェーン上に構築された dApp、ウォレット、ツールの完全なディレクトリ"
         },
         "faq": {
           "items": [
             {
-              "question": "Ergoエコシステムとは何ですか？",
-              "answer": "ErgoエコシステムはErgoブロックチェーン上に構築されたDeFiプロトコル、NFTマーケットプレイス、開発者ツール、ウォレット、コミュニティプロジェクトで構成されています。"
+              "question": "Ergo エコシステムとは何ですか？",
+              "answer": "Ergo エコシステムは、Ergo ブロックチェーン上に構築された DeFi プロトコル、NFT マーケットプレイス、開発者ツール、ウォレット、コミュニティプロジェクトで構成されています。"
             },
             {
-              "question": "Ergo上にはどのようなDeFiプロジェクトがありますか？",
-              "answer": "主なDeFiプロジェクトにはSigmaUSD（アルゴリズムステーブルコイン）、ErgoDEX（DEX）、レンディングプロトコル、オラクルプールが含まれます。"
+              "question": "Ergo にはどのような DeFi プロジェクトがありますか？",
+              "answer": "主要な DeFi プロジェクトには、SigmaUSD（アルゴリズムステーブルコイン）、ErgoDEX（DEX）、レンディングプロトコル、オラクルプールが含まれます。"
             },
             {
-              "question": "Ergoをサポートするウォレットはどれですか？",
-              "answer": "人気のErgoウォレットにはNautilus、Satergo、SAFEW、Ergoモバイルウォレットが含まれます。"
+              "question": "Ergo をサポートするウォレットはどれですか？",
+              "answer": "人気のある Ergo ウォレットには、Nautilus、Satergo、SAFEW、Ergo Mobile Wallet があります。"
             },
             {
-              "question": "Ergo上にNFTマーケットプレイスはありますか？",
-              "answer": "はい。ErgoにはSkyHarborのような低手数料でNFTをミントしてトレードできるNFTマーケットプレイスがあります。"
+              "question": "Ergo に NFT マーケットプレイスはありますか？",
+              "answer": "はい。Ergo には、低手数料で NFT をミントしたり取引したりできる SkyHarbor のような NFT マーケットプレイスがあります。"
             }
           ]
         }
       }
     },
     "seo": {
-      "title": "エコシステム - Ergoブロックチェーンプロジェクト | Ergoプラットフォーム",
-      "description": "繁栄するErgoエコシステムを発見：DeFiプロトコル、NFTマーケットプレイス、ツール、アプリケーション。",
+      "title": "エコシステム - Ergo ブロックチェーンプロジェクト | Ergo プラットフォーム",
+      "description": "活気ある Ergo エコシステムを探索：DeFi プロトコル、NFT マーケットプレイス、ツール、アプリケーション。",
       "keywords": "Ergo エコシステム, DeFi, NFT, dApp, ブロックチェーンプロジェクト",
-      "ogTitle": "Ergoエコシステム - ブロックチェーンプロジェクト＆アプリケーション",
-      "ogDescription": "ErgoエコシステムのDeFi、NFT、ウォレット、開発者ツールを探索。"
+      "ogTitle": "Ergo エコシステム - ブロックチェーンプロジェクトとアプリケーション",
+      "ogDescription": "Ergo エコシステムの DeFi、NFT、ウォレット、開発者ツールを探索。"
     },
     "categories": {
       "defi": {
@@ -176,7 +176,7 @@
       },
       "nfts": {
         "title": "NFT",
-        "description": "NFTマーケットプレイスとコレクション"
+        "description": "NFT マーケットプレイスとコレクション"
       },
       "tools": {
         "title": "ツール",
@@ -184,7 +184,7 @@
       },
       "wallets": {
         "title": "ウォレット",
-        "description": "ERGの保管と管理のためのウォレット"
+        "description": "ERG を保管・管理するためのウォレット"
       },
       "gaming": {
         "title": "ゲーム",
@@ -218,7 +218,7 @@
     },
     "search": {
       "placeholder": "プロジェクトを検索...",
-      "resultsCount": "{count}件のプロジェクト"
+      "resultsCount": "{count} 件のプロジェクト"
     },
     "featuredProjects": {
       "title": "注目プロジェクト",
@@ -229,16 +229,16 @@
       "viewAll": "すべてのプロジェクトを見る"
     },
     "cta": {
-      "title": "Ergoで構築する",
+      "title": "Ergo 上で構築する",
       "description": "エコシステムに参加してブロックチェーンの未来を構築する",
-      "startBuilding": "構築を始める",
+      "startBuilding": "構築を開始",
       "viewGrants": "グラントを見る"
     },
     "mining": {
-      "no_pools_match_your_criteria": "条件に一致するプールがありません",
+      "no_pools_match_your_criteria": "条件に合うプールがありません",
       "new_to_mining": "マイニング初心者ですか？",
-      "best_for": "最適な用途",
-      "ready_to_start_mining": "マイニングを始める準備はできていますか？",
+      "best_for": "最適な対象",
+      "ready_to_start_mining": "マイニングを始める準備はできましたか？",
       "getblok_category_large_url_https": "GetBlok\",\n      category: \"large\",\n      url: \"https://ergo.getblok.io\",\n      location: \"Global\",\n      fee:",
       "pplns_minpayout": "PPLNS\",\n      minPayout:",
       "auto_exchange_mobile_app_api_access_ssl_tls": "Auto-exchange\", \"Mobile app\", \"API access\", \"SSL/TLS",
@@ -268,36 +268,36 @@
       "advanced_users_download_https_github": "Advanced users\",\n      download: \"https://github.com/Lolliedieb/lolMiner-releases/releases",
       "mining_pools_directory": "マイニングプールディレクトリ",
       "smaller_pools_for_better_decentralization": "より良い分散化のための小規模プール",
-      "ergo_mining_software_options": "Ergoマイニングソフトウェアオプション",
+      "ergo_mining_software_options": "Ergo マイニングソフトウェアオプション",
       "all_pools_icon_null_activeclass": "All Pools', \n      icon: null,\n      activeClass:",
       "for_beginners": "初心者向け",
-      "all_pools": "全プール",
-      "fair_launch_asic_resistant_truly": "フェアローンチ、ASIC耐性、真の分散化。プール、ソフトウェア、リソースを見つけましょう。",
-      "i_m_new_start_here": "初心者はここから始めましょう",
-      "browse_pools_directory": "プールディレクトリを参照",
-      "start_with_nbminer_mixed_rigs": "最も簡単なセットアップには、NBMiner（混合リグ）またはT-Rex（NVIDIAのみ）から始めましょう。",
+      "all_pools": "すべてのプール",
+      "fair_launch_asic_resistant_truly": "フェアローンチ、ASIC 耐性、真の分散化。プール、ソフトウェア、リソースを見つける。",
+      "i_m_new_start_here": "初心者の方はこちらから",
+      "browse_pools_directory": "プールディレクトリを閲覧",
+      "start_with_nbminer_mixed_rigs": "最も簡単なセットアップには NBMiner（混合リグ）または T-Rex（NVIDIA のみ）から始めましょう。",
       "how_to_choose_a_pool": "プールの選び方は？",
-      "beginners_choose_pools_with_good": "初心者：良いサポートのあるプールを選択。上級者：手数料とサーバーの場所を最適化。",
+      "beginners_choose_pools_with_good": "初心者：サポートが充実したプールを選ぶ。上級者：手数料とサーバーの場所を最適化する。",
       "minimum_requirements": "最低要件は？",
-      "depends_on_hashrate_and_electricity_cost": "ハッシュレートと電気代によります。",
-      "view_all_faqs": "すべてのFAQを見る",
-      "join_thousands_of_miners_securing": "Ergoネットワークを保護する何千ものマイナーに参加しましょう。公平で、分散化されていて、収益性があります。"
+      "depends_on_hashrate_and_electricity_cost": "ハッシュレートと電気代によって異なります。",
+      "view_all_faqs": "すべての FAQ を見る",
+      "join_thousands_of_miners_securing": "何千人ものマイナーと一緒に Ergo ネットワークを守りましょう。公正で、分散化されており、収益性があります。"
     },
     "map": {
-      "title": "Ergoエコシステムマップ",
-      "subtitle": "インタラクティブDeFi＆dAppディレクトリ",
-      "description": "完全なErgoエコシステムをビジュアルで探索。DeFiプロトコル、NFTプラットフォーム、ウォレット、インフラ、開発者ツールのインタラクティブマップ。50以上のアクティブなプロジェクトを発見。",
+      "title": "Ergo エコシステムマップ",
+      "subtitle": "インタラクティブ DeFi & dApp ディレクトリ",
+      "description": "Ergo エコシステム全体を視覚的に探索。DeFi プロトコル、NFT プラットフォーム、ウォレット、インフラ、開発者ツールのインタラクティブマップ。50 以上のアクティブなプロジェクトを発見。",
       "lastUpdated": "最終更新",
       "buttons": {
         "exploreProjects": "プロジェクトを探索",
-        "visitSigmaverse": "Sigmaverseを訪問"
+        "visitSigmaverse": "Sigmaverse を訪問"
       },
       "features": {
         "title": "エコシステムの特徴",
-        "subtitle": "Ergoエコシステムをユニークにするものを発見",
+        "subtitle": "Ergo エコシステムのユニークな点を発見する",
         "interactive": {
-          "title": "インタラクティブビジュアライゼーション",
-          "description": "直感的なビジュアルインターフェースを通じてプロジェクトを探索"
+          "title": "インタラクティブな視覚化",
+          "description": "直感的なビジュアルインターフェースでプロジェクトを探索"
         },
         "comprehensive": {
           "title": "包括的なカバレッジ",
@@ -309,20 +309,20 @@
         }
       },
       "cta": {
-        "title": "探索する準備はできていますか？",
-        "subtitle": "成長するErgoエコシステムに飛び込んで革新的なプロジェクトを発見しましょう",
+        "title": "探索する準備はできましたか？",
+        "subtitle": "成長する Ergo エコシステムに深く入り込み、革新的なプロジェクトを発見する",
         "buttons": {
           "exploreEcosystem": "エコシステムを探索",
-          "visitSigmaverse": "Sigmaverseを訪問"
+          "visitSigmaverse": "Sigmaverse を訪問"
         }
       },
       "seo": {
-        "title": "Ergoエコシステムマップ | インタラクティブDeFi＆dAppディレクトリ",
-        "description": "完全なErgoエコシステムをビジュアルで探索。DeFiプロトコル、NFTプラットフォーム、ウォレット、インフラ、開発者ツールのインタラクティブマップ。50以上のアクティブなプロジェクトを発見。",
-        "ogTitle": "Ergoインタラクティブエコシステムマップ | 50以上のプロジェクト",
-        "ogDescription": "全Ergoプロジェクトのビジュアル探索。DeFi、NFT、ウォレット、インフラがマップ化。",
-        "twitterTitle": "Ergoエコシステムマップ | ビジュアルプロジェクトエクスプローラー",
-        "twitterDescription": "50以上のErgoプロジェクトのインタラクティブビジュアライゼーション。DeFi、NFT、インフラを探索。"
+        "title": "Ergo エコシステムマップ | インタラクティブ DeFi & dApp ディレクトリ",
+        "description": "Ergo エコシステム全体を視覚的に探索。DeFi プロトコル、NFT プラットフォーム、ウォレット、インフラ、開発者ツールのインタラクティブマップ。50 以上のアクティブなプロジェクトを発見。",
+        "ogTitle": "インタラクティブ Ergo エコシステムマップ | 50+ プロジェクト",
+        "ogDescription": "すべての Ergo プロジェクトの視覚的探索。DeFi、NFT、ウォレット、インフラをマッピング。",
+        "twitterTitle": "Ergo エコシステムマップ | ビジュアルプロジェクトエクスプローラー",
+        "twitterDescription": "50 以上の Ergo プロジェクトのインタラクティブな視覚化。DeFi、NFT、インフラを探索。"
       },
       "jump_to": "ジャンプ先：",
       "filter_by_category": "カテゴリでフィルター：",
@@ -353,7 +353,7 @@
       "defi_infrastructure_oracles_privacy_nft": "DEFI\",\n  \"INFRASTRUCTURE\",\n  \"ORACLES\",\n  \"PRIVACY\",\n  \"NFT\",\n  \"WALLETS\",\n  \"DAO\",\n  \"TOOLS",
       "suggest_a_project": "プロジェクトを提案",
       "no_projects_found": "プロジェクトが見つかりません",
-      "ergo_ecosystem_interactive_map": "Ergoエコシステムインタラクティブマップ",
+      "ergo_ecosystem_interactive_map": "Ergo エコシステムインタラクティブマップ",
       "webapplication_id_https_ergoblockchain_org": "WebApplication\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem/map\",\n    name: \"Ergo Ecosystem Interactive Map\",\n    description: \"Visual explorer for Ergo blockchain projects and applications\",\n    applicationCategory: \"VisualizationApplication\",\n    operatingSystem: \"Web Browser\",\n    url: \"https://ergoblockchain.org/ecosystem/map",
       "organization_name_ergo_platform_url": "Organization\",\n      name: \"Ergo Platform\",\n      url: \"https://ergoblockchain.org",
       "what_is_the_ergo_ecosystem": "What is the Ergo Ecosystem Map?\",\n      answer: \"An interactive visualization showing all active projects, protocols, and applications built on Ergo blockchain, organized by category.",
@@ -363,11 +363,11 @@
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "datadownload_encodingformat_application_json_contenturl": "DataDownload\",\n      encodingFormat: \"application/json\",\n      contentUrl: \"https://ergoblockchain.org/api/ecosystem",
       "place_name_global": "Place\",\n      name: \"Global",
-      "ergo_ecosystem_map_interactive_defi_dapp_directory": "Ergoエコシステムマップ | インタラクティブDeFi＆dAppディレクトリ",
-      "interactive_ergo_ecosystem_map_50_projects": "Ergoインタラクティブエコシステムマップ | 50以上のプロジェクト",
-      "ergo_ecosystem_map_visual_project_explorer": "Ergoエコシステムマップ | ビジュアルプロジェクトエクスプローラー",
-      "interactive_visualization_of_50_ergo": "50以上のErgoプロジェクトのインタラクティブビジュアライゼーション。DeFi、NFT、インフラを探索。",
-      "visual_explorer_for_ergo_blockchain": "Ergoブロックチェーンプロジェクトとアプリケーションのビジュアルエクスプローラー"
+      "ergo_ecosystem_map_interactive_defi_dapp_directory": "Ergo エコシステムマップ | インタラクティブ DeFi & dApp ディレクトリ",
+      "interactive_ergo_ecosystem_map_50_projects": "インタラクティブ Ergo エコシステムマップ | 50+ プロジェクト",
+      "ergo_ecosystem_map_visual_project_explorer": "Ergo エコシステムマップ | ビジュアルプロジェクトエクスプローラー",
+      "interactive_visualization_of_50_ergo": "50 以上の Ergo プロジェクトのインタラクティブな視覚化。DeFi、NFT、インフラを探索。",
+      "visual_explorer_for_ergo_blockchain": "Ergo ブロックチェーンプロジェクトとアプリケーションのビジュアルエクスプローラー"
     },
     "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
     "collectionpage_id_https_ergoblockchain_org": "CollectionPage\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#collection\",\n    name: \"Ergo Ecosystem\",\n    url: \"https://ergoblockchain.org/ecosystem",
@@ -383,15 +383,15 @@
       },
       "defaultFaq": {
         "whatIs": {
-          "q": "{name}とは何ですか？"
+          "q": "{name} とは何ですか？"
         },
         "features": {
-          "q": "{name}はどのような機能を提供しますか？",
-          "a": "{name}は次を提供します：{features}。"
+          "q": "{name} はどのような機能を提供しますか？",
+          "a": "{name} は次の機能を提供します：{features}。"
         },
         "technologies": {
-          "q": "{name}はどのErgo技術を使用していますか？",
-          "a": "{name}は{technologies}を使用して構築されています。"
+          "q": "{name} はどの Ergo 技術を使用していますか？",
+          "a": "{name} は {technologies} を使用して構築されています。"
         }
       },
       "buttons": {
@@ -406,22 +406,22 @@
         "operational": "稼働中",
         "testing": "テスト中",
         "prototype": "プロトタイプ",
-        "notOperating": "停止中"
+        "notOperating": "未稼働"
       },
       "sections": {
         "keyFeatures": "主な機能",
-        "builtWith": "Ergo技術で構築",
+        "builtWith": "Ergo テクノロジーで構築",
         "relatedArticles": "関連記事",
         "viewAll": "すべて見る",
         "faq": "よくある質問",
-        "relatedProjects": "関連する{category}プロジェクト",
-        "minRead": "{time}分で読める"
+        "relatedProjects": "関連する {category} プロジェクト",
+        "minRead": "{time} 分で読める"
       },
       "cta": {
-        "title": "より多くのdAppを探索",
-        "description": "DeFi、ウォレット、ツールなどを含む完全なErgoエコシステムを発見。",
+        "title": "さらに多くの dApp を探索",
+        "description": "DeFi、ウォレット、ツールなどを含む完全な Ergo エコシステムを発見。",
         "primaryButton": "すべてのプロジェクトを見る",
-        "secondaryButton": "構築を始める"
+        "secondaryButton": "構築を開始"
       }
     },
     "infographicPage": {
@@ -429,7 +429,7 @@
         "infographics": "インフォグラフィック"
       },
       "meta": {
-        "minRead": "{time}分で読める"
+        "minRead": "{time} 分で読める"
       },
       "image": {
         "clickToEnlarge": "クリックして拡大",
@@ -437,7 +437,7 @@
       },
       "share": {
         "title": "このインフォグラフィックをシェア",
-        "subtitle": "Ergoをより多くの人に知ってもらいましょう",
+        "subtitle": "他の人が Ergo を発見できるように",
         "telegram": "Telegram",
         "pinterest": "Pinterest",
         "download": "ダウンロード",
@@ -446,14 +446,14 @@
       },
       "sections": {
         "about": "このインフォグラフィックについて",
-        "systemsCompared": "比較システム",
+        "systemsCompared": "比較されたシステム",
         "keyPoints": "重要なポイント",
         "howToRead": "このインフォグラフィックの読み方",
         "relatedTopics": "関連トピック"
       },
       "cta": {
-        "title": "より多くのErgoインフォグラフィックを探索",
-        "description": "ErgoのPoW、eUTXOスマートコントラクト、ストレージレント、プライバシーなどのビジュアルガイドを発見。",
+        "title": "さらに多くの Ergo インフォグラフィックを探索",
+        "description": "Ergo の PoW、eUTXO スマートコントラクト、ストレージレント、プライバシーなどのビジュアルガイドを発見。",
         "button": "すべてのインフォグラフィックを閲覧"
       }
     }
@@ -461,236 +461,236 @@
   "ecosystemPage": {},
   "ecosystemGrants": {
     "title": "エコシステムグラント",
-    "description": "Ergoエコシステム開発のための資金機会",
-    "subtitle": "コミュニティサポートでブロックチェーンの未来を構築"
+    "description": "Ergo エコシステム開発のための資金機会",
+    "subtitle": "コミュニティのサポートでブロックチェーンの未来を構築"
   },
   "ecosystemMap": {
     "title": "エコシステムマップ",
-    "description": "Ergoエコシステムのインタラクティブビジュアライゼーション",
+    "description": "Ergo エコシステムのインタラクティブな視覚化",
     "subtitle": "プロジェクト、ツール、サービスを探索"
   },
   "ecosystemMining": {
     "title": "エコシステムマイニング",
-    "description": "Ergoマイナーのためのマイニングプール、ツール、リソース",
-    "subtitle": "ERGのマイニングを始めるために必要なすべて"
+    "description": "Ergo マイナー向けのマイニングプール、ツール、リソース",
+    "subtitle": "ERG のマイニングを始めるために必要なすべて"
   },
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "ErgoとCardanoブロックチェーン上で運営される最先端のオープンソース分散型取引所（DEX）。流動性提供（LP）、イールドファーミングをサポートし、Babel手数料をサポート。",
-      "longDescription": "Spectrum FinanceはeUTXOモデル上に構築された最初のクロスチェーン分散型取引所の一つで、ErgoとCardanoブロックチェーン両方で運営されていました。このプラットフォームはネイティブのBabel手数料サポートなど、ユーザーがERG以外のトークンで取引手数料を支払えるようにする革新を先駆けました。\n\nDEXは信頼不要のトークンスワップのための自動マーケットメーカー（AMM）プールを利用し、流動性提供者はすべての取引から手数料を獲得しました。イールドファーミング機能により流動性提供者への追加トークン報酬が可能となり、取引ペア全体の深い流動性へのインセンティブが生まれました。\n\nオープンソースプロジェクトとして、Spectrum FinanceはeUTXO DeFiエコシステムに多大なコードと研究を貢献し、複雑な金融アプリケーションをこのモデル上で安全に構築できることを示しました。プロトコルのスマートコントラクトとアーキテクチャは新しいDeFiプロジェクトのリファレンス実装として機能し続けています。",
+      "description": "Ergo と Cardano ブロックチェーン上で動作する最先端のオープンソース分散型取引所（DEX）。流動性提供（LP）、イールドファーミングを提供し、Babel Fees をサポートする。",
+      "longDescription": "Spectrum Finance は、eUTXO モデル上に構築された最初のクロスチェーン分散型取引所の一つで、Ergo と Cardano の両ブロックチェーンで動作しています。このプラットフォームは、ユーザーが ERG 以外のトークンで取引手数料を支払うことを可能にするネイティブ Babel Fees サポートを含む、いくつかのイノベーションを先導しました。\n\nこの DEX は、トラストレスなトークンスワップのために自動マーケットメーカー（AMM）プールを活用し、流動性提供者はすべての取引から手数料を得ます。イールドファーミング機能により、流動性提供者に追加のトークン報酬が提供され、取引ペア全体で深い流動性へのインセンティブが生まれます。\n\nオープンソースプロジェクトとして、Spectrum Finance は eUTXO DeFi エコシステムに多大なコードと研究を提供し、このモデル上で複雑な金融アプリケーションを安全に構築できることを示しました。プロトコルのスマートコントラクトとアーキテクチャは、新しい DeFi プロジェクトのリファレンス実装として引き続き活用されています。",
       "features": [
         "分散型取引所",
         "流動性プール",
         "イールドファーミング",
-        "Babel手数料サポート",
+        "Babel Fees サポート",
         "クロスチェーン取引"
       ]
     },
     "ergodex": {
       "name": "ErgoDex",
-      "description": "ErgoとCardano向けの非カストディアル分散型取引所（DEX）で、両エコシステムにわたるAMMおよびオーダーブック取引を可能にする。",
-      "longDescription": "ErgoDexはeUTXOモデル上に構築された先駆的な非カストディアル分散型取引所で、ErgoとCardanoエコシステム間のシームレスな取引を提供します。中央集権的なオーダーマッチングに依存する従来のDEXとは異なり、ErgoDexは拡張UTXOモデルのユニークな特性を活用して、仲介者なしの信頼不要なアトミックスワップを実現します。\n\nプラットフォームは受動的な流動性提供のための自動マーケットメーカー（AMM）プールと、正確な価格執行のための従来のオーダーブック取引の両方をサポートしています。このハイブリッドアプローチはオンチェーン決済のセキュリティ保証を維持しながらトレーダーに柔軟性を提供します。すべての取引はブロックチェーン上で直接実行され、透明性を確保し相手方リスクを排除します。\n\nErgoDexはクロスチェーンDeFiインフラにおける重要な進歩を表しています。アカウントベースのモデルではなくeUTXO上に構築することで、取引所は決定論的な取引結果、予測可能な手数料、一般的なスマートコントラクトの脆弱性に対する強化されたセキュリティを実現しています。",
+      "description": "Ergo と Cardano 向けの非カストディアル分散型取引所（DEX）で、両エコシステム間の AMM とオーダーブック取引を可能にする。",
+      "longDescription": "ErgoDex は eUTXO モデル上に構築された先駆的な非カストディアル分散型取引所で、Ergo と Cardano エコシステム間のシームレスな取引を提供します。中央集権的な注文マッチングに依存する従来の DEX とは異なり、ErgoDex は拡張 UTXO モデルの独自の特性を活用して、仲介者なしでトラストレスなアトミックスワップを実現します。\n\nこのプラットフォームは、受動的な流動性提供のための自動マーケットメーカー（AMM）プールと、正確な価格執行のための従来のオーダーブック取引の両方をサポートします。このハイブリッドアプローチはトレーダーに柔軟性を与えながら、オンチェーン決済のセキュリティ保証を維持します。すべての取引はブロックチェーン上で直接実行され、透明性を確保し、カウンターパーティリスクを排除します。\n\nErgoDex はクロスチェーン DeFi インフラの大きな進歩を表しています。アカウントベースのモデルではなく eUTXO 上に構築することで、この取引所は確定的なトランザクション結果、予測可能な手数料、および一般的なスマートコントラクトの脆弱性に対する強化されたセキュリティを実現しています。流動性提供者は ERG と ADA の両取引ペアから手数料を得ることができ、複数のブロックチェーンエコシステムをまたいだ収益創出の魅力的な選択肢となっています。",
       "features": [
-        "ErgoとCardanoのクロスチェーンDEX",
+        "Ergo と Cardano のクロスチェーン DEX",
         "非カストディアル取引",
-        "AMMとオーダーブックモデル",
-        "ERGとADAエコシステムの流動性提供"
+        "AMM とオーダーブックモデル",
+        "ERG と ADA エコシステムの流動性提供"
       ]
     },
     "sigmausd": {
       "name": "SigmaUSD",
-      "description": "初のeUTXOベースのステーブルコインで、AgeUSDプロトコルを実装。米ドルに連動し、変動準備率（400%-800%）でERGに裏付けられている。",
-      "longDescription": "SigmaUSDは画期的なアルゴリズムステーブルコインで、Ergoブロックチェーン上でAgeUSDプロトコルを先駆けました。拡張UTXOモデル上に構築された最初のステーブルコインとして、中央集権的な準備金や信頼できる第三者に依存せずに分散型金融が価格安定を実現できることを示しました。\n\nプロトコルはユニークなデュアルトークンメカニズムで米ドルペッグを維持します：SigmaUSD（ステーブルコイン）とSigRSV（準備コイン）。ユーザーはERGを担保として預けることでSigmaUSDをミントし、準備提供者はSigRSVをミントして価格変動を吸収します。システムは400%から800%の間の変動準備率を維持し、市場のプレッシャー下でも堅牢な過剰担保を確保します。\n\nSigmaUSDを他のステーブルコインと区別するのは完全な分散設計で、個々のユーザーに対して清算リスクがありません。価格データはErgoの信頼不要なオラクルプールから来て、中央集権的なオラクルへの依存を排除します。",
+      "description": "AgeUSD プロトコルを実装した最初の eUTXO ベースのステーブルコイン。米ドルにペッグされ、ERG で裏付けられ、浮動準備比率は 400%-800%。",
+      "longDescription": "SigmaUSD は、Ergo ブロックチェーン上で AgeUSD プロトコルを先導した画期的なアルゴリズムステーブルコインです。拡張 UTXO モデル上に構築された最初のステーブルコインとして、中央集権的な準備金や信頼できる第三者に依存することなく、分散型金融が価格安定性を実現できることを示しています。\n\nこのプロトコルは、独自のデュアルトークンメカニズムによってドルペッグを維持しています：SigmaUSD（ステーブルコイン）と SigRSV（リザーブコイン）。ユーザーは ERG を担保として預け入れることで SigmaUSD をミントし、一方リザーブ提供者は価格変動を吸収するために SigRSV をミントします。システムは 400% から 800% の間の浮動準備比率を維持し、市場のストレス下でも強固な過剰担保を確保します。\n\nSigmaUSD が他のステーブルコインと異なる点は、個々のユーザーに清算リスクがない完全分散型の設計です。価格データは Ergo のトラストレスオラクルプールから取得され、中央集権的なオラクルへの依存をなくしています。プロトコル全体がオンチェーンで検証されたスマートコントラクト上で動作し、誰でも準備比率を確認できます。これにより SigmaUSD は Ergo DeFi エコシステムの理想的な安定した価値単位となり、カウンターパーティリスクなしに予測可能な価値の保存と取引を実現します。",
       "features": [
         "アルゴリズムステーブルコイン",
-        "ERG担保",
+        "ERG 担保",
         "分散型",
         "清算リスクなし"
       ],
       "faq": [
         {
-          "question": "SigmaUSDとは何ですか？",
-          "answer": "SigmaUSDはErgo上の分散型アルゴリズムステーブルコインで、米ドルに連動し、400-800%の準備率でERG暗号通貨に裏付けられています。"
+          "question": "SigmaUSD とは何ですか？",
+          "answer": "SigmaUSD は Ergo 上の分散型アルゴリズムステーブルコインで、米ドルにペッグされ、準備比率 400-800% で ERG 暗号通貨によって裏付けられています。"
         },
         {
-          "question": "SigmaUSDは他のステーブルコインとどう違いますか？",
-          "answer": "USDTのような中央集権的なステーブルコインとは異なり、SigmaUSDは完全に分散化されており、単一障害点がありません。過剰担保のAgeUSDプロトコルを使用し、ユーザーに清算リスクがありません。"
+          "question": "SigmaUSD は他のステーブルコインとどう違いますか？",
+          "answer": "USDT などの中央集権的なステーブルコインとは異なり、SigmaUSD は単一障害点のない完全分散型です。過剰担保を伴う AgeUSD プロトコルを使用し、ユーザーに清算リスクがありません。"
         },
         {
-          "question": "SigRSVとは何ですか？",
-          "answer": "SigRSVはSigmaUSDを支える準備コインです。準備提供者はSigRSVをミントしてERG価格上昇から利益を得ながら、システムに安定性を提供します。"
+          "question": "SigRSV とは何ですか？",
+          "answer": "SigRSV は SigmaUSD を裏付けるリザーブコインです。リザーブ提供者は SigRSV をミントして ERG の価格上昇から利益を得ながら、システムに安定性を提供します。"
         }
       ]
     },
     "rosen-bridge": {
       "name": "Rosen Bridge",
-      "description": "ErgoとCardano、Bitcoin Runes、Dogecoinなどのブロックチェーン間のクロスチェーン資産転送のためのオープンソースプロトコル。",
-      "longDescription": "Rosen Bridgeは分散型クロスチェーンプロトコルで、ErgoとCardano、Bitcoin、Dogecoin、Ethereumを含む複数のブロックチェーンネットワーク間の信頼不要な資産転送を可能にします。NiPoPoWs（作業証明の非対話型証明）などの最先端の暗号技術に基づいて構築され、中央集権的なカストディアンや連合マルチシグの必要性を排除します。\n\nブリッジは接続されたチェーン全体のトランザクションを監視する独立したオブザーバーネットワークを通じて動作します。これらのオブザーバーは暗号証明を使用してクロスチェーン転送を検証し、単一の当事者を信頼する必要がありません。\n\nRosen Bridgeはラップされた資産を双方向でサポートし、ユーザーがBitcoin、ADA、その他のトークンをErgoのDeFiエコシステムに持ち込めると同時に、ERGとErgoネイティブトークンが他のチェーンで使用できるようにします。",
+      "description": "Ergo と Cardano、Bitcoin Runes、Dogecoin などの他のブロックチェーン間のクロスチェーン資産転送のためのオープンソースプロトコル。",
+      "longDescription": "Rosen Bridge は、Ergo と Cardano、Bitcoin、Dogecoin、Ethereum などの複数のブロックチェーンネットワーク間でトラストレスな資産転送を可能にする分散型クロスチェーンプロトコルです。NiPoPoWs（非インタラクティブな作業証明の証明）などの最先端の暗号技術を基盤に、Rosen Bridge は中央集権的なカストディアンや連合マルチシグを必要としません。\n\nこのブリッジは、接続されたチェーン上のトランザクションを監視する独立したウォッチャーのネットワークを通じて動作します。これらのウォッチャーは暗号学的証明を使用してクロスチェーン転送を検証し、いかなる単一の当事者も信頼する必要がありません。プロトコルのセキュリティモデルは、スマートコントラクトに組み込まれた経済的インセンティブと暗号学的保証により、大多数のウォッチャーが攻撃されても堅牢であるように設計されています。\n\nRosen Bridge は双方向のラップ資産をサポートし、ユーザーが Bitcoin、ADA、その他のトークンを Ergo の DeFi エコシステムに持ち込むことを可能にし、また ERG や Ergo ネイティブトークンを他のチェーンで使用できるようにします。ブリッジのオープンソースアーキテクチャにより、誰でもウォッチャーノードを運営してネットワークセキュリティに貢献し、手数料を得ることができます。この分散型のクロスチェーン相互運用性アプローチは、Rosen Bridge を DeFi のマルチチェーンの未来における重要なインフラとして位置づけています。",
       "features": [
         "クロスチェーン転送",
         "マルチブロックチェーンサポート",
-        "分散型オブザーバー",
-        "信頼不要ブリッジ"
+        "分散型ウォッチャー",
+        "トラストレスブリッジ"
       ],
       "faq": [
         {
-          "question": "Rosen Bridgeとは何ですか？",
-          "answer": "Rosen BridgeはErgoとCardano、Bitcoin、Ethereumなどの他のブロックチェーン間で、中央集権的なカストディアンに依存せずに資産を転送するための分散型プロトコルです。"
+          "question": "Rosen Bridge とは何ですか？",
+          "answer": "Rosen Bridge は、中央集権的なカストディアンに依存することなく、Ergo と Cardano、Bitcoin、Ethereum などの他のブロックチェーン間で資産を転送するための分散型プロトコルです。"
         },
         {
-          "question": "Rosen Bridgeはどのように機能しますか？",
-          "answer": "Rosen Bridgeはクロスチェーントランザクションを暗号学的に検証するオブザーバーネットワークを使用します。NiPoPoWs技術により完全なブロックチェーンデータなしで信頼不要な検証が可能です。"
+          "question": "Rosen Bridge はどのように機能しますか？",
+          "answer": "Rosen Bridge は、クロスチェーントランザクションを暗号学的に検証するウォッチャーのネットワークを使用します。NiPoPoWs 技術により、完全なブロックチェーンデータなしでトラストレスな検証が可能です。"
         },
         {
-          "question": "Rosen Bridgeはどのブロックチェーンをサポートしていますか？",
-          "answer": "Rosen BridgeはErgo、Cardano、Bitcoin（Runesを含む）、Dogecoinをサポートしており、より多くのチェーンへの拡張を進めています。"
+          "question": "Rosen Bridge はどのブロックチェーンをサポートしていますか？",
+          "answer": "Rosen Bridge は現在、Ergo、Cardano、Bitcoin（Runes を含む）、Dogecoin をサポートしており、追加のチェーンへの拡張も進めています。"
         }
       ]
     },
     "ergomixer": {
       "name": "ErgoMixer",
-      "description": "暗号業界初の非対話型・非カストディアルミキサー。Sigmaプロトコルを使用してユーザーがトークンを非公開で送信し、プライバシーを強化できる。",
-      "longDescription": "ErgoMixerは世界初の非対話型・非カストディアルトークンミキサーを導入した先駆的なプライバシーツールです。調整された参加や信頼できるオペレーターを必要とする従来のミキサーとは異なり、ErgoMixerはSigmaプロトコルを活用して完全に信頼不要なトランザクション難読化を実現します。\n\nミキサーは送信者と受信者のアドレス間のオンチェーンリンクを断ち切る方法でユーザーのトランザクションをプールすることで機能します。ユーザーはトークンをミキシングコントラクトに預け、設定可能なミキシングラウンドの後、新しいアドレスに引き出します。\n\nErgoMixerはERGだけでなく、Ergoブロックチェーン上で発行されたネイティブトークンもサポートし、エコシステム全体の包括的なプライバシーソリューションとなっています。",
+      "description": "暗号通貨業界初の非インタラクティブかつ非カストディアルのミキサー。Sigma プロトコルを使用してプライバシーを強化したトークンの秘密送信を可能にする。",
+      "longDescription": "ErgoMixer は、世界初の非インタラクティブかつ非カストディアルのトークンミキサーを導入した先駆的なプライバシーツールです。協調参加や信頼できるオペレーターを必要とする従来のミキサーとは異なり、ErgoMixer は Sigma プロトコルを活用して完全にトラストレスなトランザクション難読化を実現します。\n\nこのミキサーは、送信者と受信者のアドレス間のオンチェーンリンクを断ち切る方法でユーザートランザクションをプールします。ユーザーはトークンをミキシングコントラクトに預け入れ、設定可能なミキシングラウンド数を経て新しいアドレスに引き出します。プロセス全体が Sigma プロトコル上に構築されたゼロ知識証明によって保護されており、ミキサーのオペレーターもブロックチェーンの観察者も預け入れと引き出しの間のつながりを追跡できません。\n\nErgoMixer は ERG だけでなく、Ergo ブロックチェーン上で発行されたネイティブトークンもサポートしており、エコシステム全体に包括的なプライバシーソリューションを提供します。非インタラクティブな設計により、ユーザーは他の参加者と同時にオンラインである必要がありません。これは以前のミキシング実装に対する大きな進歩を表しており、透明なブロックチェーンアーキテクチャのコンプライアンスを維持しながらユーザーの主権を尊重する実用的なプライバシーアプリケーションを構築するための Ergo の暗号学的プリミティブの力を示しています。",
       "features": [
         "非カストディアルミキシング",
         "トークンプライバシー",
-        "Sigmaプロトコル",
+        "Sigma プロトコル",
         "ゼロ知識証明"
       ],
       "faq": [
         {
-          "question": "ErgoMixerとは何ですか？",
-          "answer": "ErgoMixerはSigmaプロトコルを使用してトランザクションリンクを断ち切り、Ergoブロックチェーン上で金融プライバシーを提供する分散型・非カストディアルトークンミキサーです。"
+          "question": "ErgoMixer とは何ですか？",
+          "answer": "ErgoMixer は、Sigma プロトコルを使用してトランザクションリンクを断ち切り、Ergo ブロックチェーン上で金融プライバシーを提供する分散型の非カストディアルトークンミキサーです。"
         },
         {
-          "question": "ErgoMixerは安全ですか？",
-          "answer": "はい、ErgoMixerは非カストディアルで、常に資金を管理しています。ミキシングプロセスは数学的にプライバシーを保証する暗号証明を使用し、第三者を信頼する必要がありません。"
+          "question": "ErgoMixer は安全ですか？",
+          "answer": "はい、ErgoMixer は非カストディアルであるため、常に自分の資金をコントロールできます。ミキシングプロセスは数学的にプライバシーを保証する暗号学的証明を使用し、いかなる第三者も信頼する必要がありません。"
         },
         {
-          "question": "どのトークンをミキシングできますか？",
-          "answer": "ErgoMixerはERGとErgoブロックチェーン上のすべてのネイティブトークンをサポートし、エコシステムの包括的なプライバシーソリューションとなっています。"
+          "question": "どのトークンをミックスできますか？",
+          "answer": "ErgoMixer は ERG と Ergo ブロックチェーン上のすべてのネイティブトークンをサポートし、エコシステムの包括的なプライバシーソリューションを提供します。"
         }
       ]
     },
     "nautilus-wallet": {
       "name": "Nautilus Wallet",
-      "description": "プライバシー、セキュリティ、ユーザーエクスペリエンスに重点を置いたErgoのブラウザ拡張機能とモバイルウォレット。Ledger、複数ウォレット、dAppコネクターをサポート。",
-      "longDescription": "Nautilus WalletはErgoエコシステムで最も人気のあるウォレットで、ブラウザ拡張機能とモバイルの両方でシームレスなエクスペリエンスを提供します。プライバシーとセキュリティをコア原則として設計されたNautilusは、初心者と経験豊富なユーザーの両方に適した直感的なインターフェースを維持しながら、ユーザーがERGとネイティブトークンを完全に管理できるようにします。\n\nウォレットはLedgerハードウェアウォレットをサポートし、ユーザーが現代のウォレットインターフェースの利便性を楽しみながら専用ハードウェアにプライベートキーを保存できるようにします。複数のウォレット管理は異なるアカウントの簡単な整理をサポートし、内蔵のdAppコネクターはErgoエコシステムのDeFiプロトコル、NFTマーケットプレイス、その他のアプリケーションへのワンクリックアクセスを提供します。\n\nNautilusはErgoMixerとも統合しており、オプションのトランザクションプライバシーを提供しています。",
+      "description": "プライバシー、セキュリティ、ユーザーエクスペリエンスに焦点を当てた Ergo のブラウザ拡張機能とモバイルウォレット。Ledger、複数ウォレット、dApp コネクターをサポート。",
+      "longDescription": "Nautilus Wallet は Ergo エコシステムで最も人気のあるウォレットで、ブラウザ拡張機能とモバイルデバイス全体でシームレスなエクスペリエンスを提供します。プライバシーとセキュリティをコアな原則として設計された Nautilus は、初心者から経験豊富なユーザーまで適した直感的なインターフェースを維持しながら、ユーザーに ERG とネイティブトークンに対する完全なコントロールを提供します。\n\nこのウォレットは最高のセキュリティのために Ledger ハードウェアウォレットサポートを統合し、ユーザーが現代のウォレットインターフェースの利便性を享受しながら専用ハードウェアに秘密鍵を保管できるようにします。複数ウォレット管理により異なるアカウントの簡単な整理が可能で、内蔵の dApp コネクターは Ergo エコシステム内の DeFi プロトコル、NFT マーケットプレイス、その他のアプリケーションへのワンクリックアクセスを提供します。\n\nNautilus はオプションのトランザクションプライバシーのために ErgoMixer とも統合されており、ウォレットが使いやすさを犠牲にすることなくユーザーの主権を強化できる方法を示しています。ウォレットはすべての Ergo ネイティブトークンをサポートし、NFT を表示し、リアルタイムのポートフォリオトラッキングを提供します。オープンソースのコードベースと活発な開発により、Nautilus Wallet はユーザーコントロールとプライバシーを優先する暗号通貨ウォレットのゴールドスタンダードを代表しています。",
       "features": [
         "ブラウザ拡張機能",
         "モバイルアプリ",
-        "Ledgerサポート",
-        "dAppコネクター",
+        "Ledger サポート",
+        "dApp コネクター",
         "マルチウォレット"
       ],
       "faq": [
         {
-          "question": "Nautilus Walletとは何ですか？",
-          "answer": "NautilusはErgoのブラウザ拡張機能とモバイルウォレットで、ERG、ネイティブトークン、NFT、Ledgerハードウェアウォレット、Ergo dAppへの接続をサポートしています。"
+          "question": "Nautilus Wallet とは何ですか？",
+          "answer": "Nautilus は ERG、ネイティブトークン、NFT、Ledger ハードウェアウォレット、Ergo dApp への接続をサポートする Ergo のブラウザ拡張機能とモバイルウォレットです。"
         },
         {
-          "question": "Nautilus Walletは安全ですか？",
-          "answer": "はい、Nautilusは非カストディアルでオープンソースです。プライベートキーはローカルで暗号化されており、デバイスから離れることはありません。ハードウェアウォレットのサポートにより追加のセキュリティレイヤーが追加されます。"
+          "question": "Nautilus Wallet は安全ですか？",
+          "answer": "はい、Nautilus は非カストディアルでオープンソースです。秘密鍵はローカルで暗号化され、デバイスから離れることはありません。ハードウェアウォレットサポートが追加のセキュリティ層を提供します。"
         },
         {
-          "question": "NautilusをDeFiアプリと一緒に使用できますか？",
-          "answer": "はい、NautilusにはDEX、貸付プラットフォーム、NFTマーケットプレイスを含むすべての主要なErgo DeFiプロトコルと連携する内蔵のdAppコネクターがあります。"
+          "question": "Nautilus を DeFi アプリで使用できますか？",
+          "answer": "はい、Nautilus には DEX、レンディングプラットフォーム、NFT マーケットプレイスを含むすべての主要な Ergo DeFi プロトコルと動作する内蔵 dApp コネクターがあります。"
         }
       ]
     },
     "duckpools": {
       "name": "DuckPools",
-      "description": "アルゴリズム貸付プールを持つ担保付き貸付プラットフォーム。ユーザーはERGまたはネイティブ資産を提供して収益を得るか、ERG担保で資産を借りることができる。",
-      "longDescription": "DuckPoolsはErgoブロックチェーンに従来の貸付メカニズムをもたらす分散型貸付プロトコルです。プラットフォームはユーザーがERGやその他のネイティブ資産をアルゴリズム貸付プールに預けて利回りを得られるようにし、借り手は過剰担保ポジションを提供することで流動性にアクセスできます。\n\nプロトコルはErgoのオラクルプールを使用して正確で信頼最小化された価格フィードを提供し、担保率と清算閾値が公平で透明であることを確保します。金利はプール利用率に基づいて自動的に調整され、人間の介入なしに需給のバランスをとります。\n\nDuckPoolsはeUTXOモデルが強化されたセキュリティ保証で複雑なDeFiプリミティブをサポートできることを示しています。",
+      "description": "アルゴリズムレンディングプールを持つ担保付きレンディングプラットフォーム。ユーザーは ERG またはネイティブ資産を提供して収入を得るか、ERG 担保で資産を借り入れることができる。",
+      "longDescription": "DuckPools は、従来のレンディング機能を Ergo ブロックチェーンに持ち込む分散型レンディングプロトコルです。このプラットフォームにより、ユーザーは ERG や他のネイティブ資産をアルゴリズムレンディングプールに預けて利回りを得ることができ、借り手は過剰担保ポジションを提供することで流動性にアクセスできます。\n\nこのプロトコルは、担保比率と清算しきい値が公正かつ透明に保たれるよう、正確でトラスト最小化された価格データのために Ergo のオラクルプールを使用します。金利は手動介入なしに需給のバランスをとるため、プールの利用率に基づいてアルゴリズムで調整されます。すべてのレンディングロジックは監査済みの ErgoScript スマートコントラクトを通じて実行され、確定的な結果を提供し、アカウントベースシステムに一般的なリエントランシー攻撃の可能性を排除します。\n\nDuckPools は、eUTXO モデルが強化されたセキュリティ保証で複雑な DeFi プリミティブをどのようにサポートできるかを示しています。各ローンは明示的な状態を持つ離散的な UTXO として表現され、ポジションの監査と検証が容易になります。このプラットフォームは複数の担保タイプをサポートし、他の Ergo DeFi プロトコルと統合してエコシステム全体で組み合わせ可能な収益戦略を実現するよう設計されています。",
       "features": [
-        "貸付プール",
-        "担保付き融資",
-        "利回り生成",
+        "レンディングプール",
+        "担保付きローン",
+        "収益生成",
         "ネイティブ資産サポート"
       ]
     },
     "paideia": {
       "name": "Paideia",
-      "description": "ガバナンスと財務管理機能を持つ、ErgoとCardano上でDAO（分散型自律組織）を作成・管理するためのツールスイート。",
-      "longDescription": "PaideiaはErgoとCardanoブロックチェーン上でコミュニティが分散型組織を作成・管理できるようにする包括的なDAOインフラプラットフォームです。プラットフォームは分散型ガバナンスに必要なすべてのツールを提供します：提案作成、トークン加重投票、財務管理、ステーキングメカニズム。\n\n中央集権的なガバナンスツールとは異なり、PaideiaはスマートコントラクトSを活用して投票結果を自動的に執行します。提案が可決されると、財務トランザクションは信頼できる管理者なしに投票に従って実行されます。\n\nプラットフォームはクォーラム要件、投票期間、委任メカニズムなど柔軟なガバナンス設定をサポートしています。",
+      "description": "ガバナンスとトレジャリー管理を備え、Ergo と Cardano 上で分散型自律組織（DAO）を作成・管理するためのツールスイート。",
+      "longDescription": "Paideia は、コミュニティが Ergo と Cardano の両ブロックチェーン上で分散型組織を作成・管理できるようにする包括的な DAO インフラプラットフォームです。このプラットフォームは、分散型ガバナンスのためのすべての必須ツールを提供します：提案の作成、トークン加重投票、トレジャリー管理、ステーキングメカニズム。\n\n中央集権的なガバナンスツールとは異なり、Paideia はスマートコントラクトを活用して投票結果を自動的に執行します。提案が可決されると、信頼できる管理者を必要とせずに投票に従ってトレジャリートランザクションが実行されます。これにより、多くの暗号通貨プロジェクトを悩ますガバナンスの捕捉や資金の流用リスクが排除されます。\n\nこのプラットフォームは、定足数要件、投票期間、委任メカニズムを含む柔軟なガバナンス設定をサポートします。DAO はガバナンストークンを発行し、エアドロップやベスティングスケジュールを通じて配布し、二次方投票などの高度な投票スキームを実装できます。Paideia のマルチチェーンサポートにより、組織は統一されたインターフェースから Ergo と Cardano の両エコシステムの資産と活動を管理できます。",
       "features": [
-        "DAO作成",
+        "DAO 作成",
         "ガバナンスツール",
-        "財務管理",
+        "トレジャリー管理",
         "提案投票",
         "マルチチェーン"
       ],
       "faq": [
         {
-          "question": "Padeiaとは何ですか？",
-          "answer": "PaideiaはErgoとCardanoのDAO作成・管理プラットフォームで、ガバナンス、投票、財務管理、コミュニティ調整のツールを提供します。"
+          "question": "Paideia とは何ですか？",
+          "answer": "Paideia は Ergo と Cardano の DAO 作成・管理プラットフォームで、ガバナンス、投票、トレジャリー管理、コミュニティ調整のためのツールを提供します。"
         },
         {
-          "question": "Paideia上で誰でもDAOを作成できますか？",
-          "answer": "はい、Paidiaはパーミッションレスです。誰でもDAOを作成し、ガバナンスルールを設定し、トークンを発行し、オンチェーンでコミュニティの意思決定の管理を始めることができます。"
+          "question": "誰でも Paideia で DAO を作成できますか？",
+          "answer": "はい、Paideia はパーミッションレスです。誰でも DAO を作成し、ガバナンスルールを設定し、トークンを発行し、オンチェーンでコミュニティの意思決定を管理し始めることができます。"
         }
       ]
     },
     "oracle-pools": {
       "name": "Oracle Pools",
-      "description": "Ergo上の分散型オラクルシステムで、中央集権的なソースを信頼することなくスマートコントラクトを外部データと接続する。",
-      "longDescription": "Oracle PoolsはErgoが外部データを最小限の信頼で信頼性高くオンチェーンに持ち込むためのネイティブソリューションです。中央集権的なオラクルサービスとは異なり、Ergoのオラクルプールはオンチェーン集約とパーミッションレスな参加を使用してDeFiプロトコル、ステーブルコイン、その他のスマートコントラクトアプリケーションのための信頼できるデータフィードを作成します。\n\nシステムは複数の独立したオラクルオペレーターがデータポイントを提出できるようにし、オンチェーンで中央値やその他の統計的方法を使用して集約します。この集約は透明なUTXO内で行われ、最終値がどのように計算されたかを誰でも検証できます。\n\nOracle PoolsはErgoエコシステムの重要なインフラを強化しており、SigmaUSDの価格フィードや様々なDeFiプロトコルを含みます。",
+      "description": "中央集権的なソースを信頼せずにスマートコントラクトを外部データと接続する Ergo 上の分散型オラクルシステム。",
+      "longDescription": "Oracle Pools は、トラスト最小化された方法で外部データをオンチェーンに持ち込む Ergo のネイティブソリューションです。中央集権的なオラクルサービスとは異なり、Ergo のオラクルプールはオンチェーン集約とパーミッションレスな参加を使用して、DeFi プロトコル、ステーブルコイン、その他のスマートコントラクトアプリケーションのための信頼性の高いデータフィードを作成します。\n\nこのシステムは、複数の独立したオラクルオペレーターがデータポイントを提出し、中央値または他の統計的手法を使用してオンチェーンで集約することで機能します。この集約は透明な UTXO で行われ、最終値がどのように計算されたかを誰でも検証できます。操作されたデータを提出する悪意のある行為者は特定され、そのステークがスラッシュされる可能性があり、誠実な行動に対する強力な経済的インセンティブが生まれます。\n\nオラクルプールは、SigmaUSD の価格フィードや各種 DeFi プロトコルを含む Ergo エコシステム全体の重要なインフラを支えています。パーミッションレスな設計により、新しいオペレーターが担保をステークすることで参加でき、時間とともに分散化が進みます。各オラクルプールはそのデータ履歴をオンチェーンの eUTXO に保存し、アプリケーションが時間加重計算や過去の分析に参照できる透明で監査可能な価格変動の記録を提供します。",
       "features": [
         "分散型オラクル",
         "価格フィード",
         "外部データ",
-        "信頼不要設計"
+        "トラストレス設計"
       ],
       "faq": [
         {
-          "question": "Oracle PoolsはChainlinkとどう違いますか？",
-          "answer": "Oracle Poolsはオフチェーンではなくオンチェーンで集約を実行し、プロセスを完全に透明で監査可能にします。データはeUTXOに保存され、誰でも値がどのように計算されたかを検証できます。"
+          "question": "オラクルプールと Chainlink の違いは何ですか？",
+          "answer": "オラクルプールはオフチェーンではなくオンチェーンで集約を行うため、プロセスが完全に透明で監査可能です。データは eUTXO に保存され、値がどのように計算されたかを誰でも検証できます。"
         },
         {
-          "question": "オラクルノードを実行できますか？",
-          "answer": "はい、Oracle Poolsはパーミッションレスです。誰でも担保をステークしてオラクルオペレーターになり、正確なデータを提供することで報酬を獲得できます。"
+          "question": "オラクルノードを運営できますか？",
+          "answer": "はい、オラクルプールはパーミッションレスです。誰でも担保をステークしてオラクルオペレーターになり、正確なデータを提供することで報酬を得ることができます。"
         }
       ]
     },
     "ergo-explorer": {
       "name": "Ergo Explorer",
-      "description": "Ergoの主要な公式ブロックエクスプローラー。ユーザーがトランザクション、ブロック、アドレス、トークンを追跡し、一般的なネットワーク統計を見ることができる。",
-      "longDescription": "Ergo ExplorerはErgoネットワークの公式ブロックチェーンエクスプローラーで、すべてのオンチェーンアクティビティへの包括的な可視性を提供します。ユーザーはトランザクション、ブロック、アドレス、トークンを検索し、eUTXOモデルの各コンポーネントを詳細に確認できます。\n\nエクスプローラーはハッシュレート、難易度、ブロック時間を含むリアルタイムのネットワーク統計を表示し、ユーザーにネットワークの健全性とマイニングアクティビティを知らせます。トークンエクスプローラーはErgo上で発行されたすべてのネイティブ資産をその配布と取引履歴とともに表示します。\n\nErgo Explorerはオープンソースプロジェクトとして、エコシステムの透明性の基準を設定しています。",
+      "description": "Ergo の主要な公式ブロックエクスプローラー。ユーザーはトランザクション、ブロック、アドレス、トークンを追跡し、一般的なネットワーク統計を確認できる。",
+      "longDescription": "Ergo Explorer は Ergo ネットワークの公式ブロックチェーンエクスプローラーで、すべてのオンチェーンアクティビティへの包括的な可視性を提供します。ユーザーはトランザクション、ブロック、アドレス、トークンを検索でき、eUTXO モデルの各コンポーネントの詳細なビューが得られます。\n\nこのエクスプローラーはハッシュレート、難易度、ブロック時間を含むリアルタイムのネットワーク統計を表示し、ユーザーにネットワークの健全性とマイニング活動への洞察を提供します。トークンエクスプローラーは Ergo 上で発行されたすべてのネイティブ資産を表示し、その配布とトランザクション履歴を示します。開発者向けには、ブロックチェーンデータをプログラムでクエリするための API アクセスを提供します。\n\n高度な機能にはメモリプールモニタリング、豊富なアドレス分析、ErgoScript コントラクトをデコードする機能が含まれます。このエクスプローラーはオラクルプールと統合して現在のデータフィードとその履歴を表示します。オープンソースプロジェクトとして、Ergo Explorer はエコシステムの透明性の標準を設定しています。",
       "features": [
         "ブロックエクスプローラー",
         "トランザクション追跡",
         "トークン情報",
         "ネットワーク統計",
-        "アドレス照会"
+        "アドレス検索"
       ]
     },
     "ergopad": {
       "name": "ErgoPad",
-      "description": "Ergoブロックチェーン上のトークン発行（IDO）と資金調達プラットフォーム。トークン保有者にIDOへの参加機会を提供。",
-      "longDescription": "ErgoPadはErgoブロックチェーン上で開発するプロジェクトの初期DEXオファリング（IDO）を提供する先駆的なトークン発行プラットフォームです。プラットフォームはプロジェクトがコミュニティから資金を調達できるようにしながら、トークン保有者に有望なエコシステムイニシアチブへの早期アクセスの機会を提供します。\n\nプラットフォームはステーキングモデルを通じて運営され、ユーザーはErgoPadトークンをステークして来たるIDOの割り当て層を獲得します。より高いステーキング層はより大きな割り当てを提供し、長期的なプラットフォーム参加へのインセンティブを生み出します。\n\nErgoPadは現在稼働していませんが、そのインフラとスマートコントラクトはオープンソースの貢献としてエコシステムに残っています。",
+      "description": "Ergo ブロックチェーン上のトークンローンチ（IDO）と資金調達プラットフォーム。トークン保有者に IDO への参加機会を提供する。",
+      "longDescription": "ErgoPad は、Ergo ブロックチェーン上で構築するプロジェクトのための初期 DEX 提供（IDO）を促進した先駆的なトークンローンチプラットフォームでした。このプラットフォームにより、プロジェクトはコミュニティから資金を調達でき、トークン保有者は有望なエコシステムの取り組みに早期アクセスできました。\n\nこのプラットフォームはステーキングモデルで運営され、ユーザーは ErgoPad トークンをステークして次回の IDO の割り当て枠を獲得できました。より高いステーキング枠はより大きな割り当てを提供し、長期的なプラットフォーム参加へのインセンティブを生み出しました。複数の成功したプロジェクトが ErgoPad を通じてローンチされ、Ergo エコシステムの成長に貢献しました。\n\nErgoPad は現在稼働していませんが、そのインフラとスマートコントラクトはエコシステムへのオープンソースの貢献として残っています。このプラットフォームは分散型の資金調達が Ergo 上でどのように機能するかを示し、将来のローンチパッドプロジェクトのテンプレートを提供し、コミュニティに価値あるコードを貢献しました。",
       "features": [
-        "トークン発行",
-        "IDOプラットフォーム",
+        "トークンローンチ",
+        "IDO プラットフォーム",
         "ステーキング",
         "コミュニティプロジェクト"
       ]
     },
     "mew-finance": {
       "name": "Mew Finance",
-      "description": "DEX、NFTマーケット、様々な金融ツールを含む金融アプリケーションスイートを提供する分散型金融（DeFi）プラットフォーム。",
-      "longDescription": "Mew FinanceはErgo上のオールインワンDeFiプラットフォームで、分散型取引所、NFTマーケットプレイス、高度な金融ツールを組み合わせています。プラットフォームは単一のインターフェースでトークンのスワップ、流動性提供、NFTトレード、様々なイールド機会にアクセスできる包括的なDeFiエクスペリエンスを提供することを目指しています。\n\nDEXコンポーネントは競争力のある手数料とスリッページ保護でトークンスワップをサポートします。流動性提供者はプールに資産をステークして取引手数料と追加のトークン報酬を獲得できます。",
+      "description": "DEX、NFT マーケットプレイス、各種金融ツールを含む金融アプリケーションスイートを提供する分散型金融（DeFi）プラットフォーム。",
+      "longDescription": "Mew Finance は Ergo 上のオールインワン DeFi プラットフォームで、分散型取引所と NFT マーケットプレイスおよび高度な金融ツールを組み合わせています。このプラットフォームは、ユーザーが単一のインターフェースでトークンをスワップし、流動性を提供し、NFT を取引し、様々な収益機会にアクセスできる包括的な DeFi エクスペリエンスを提供することを目指しています。\n\nDEX コンポーネントは競争力のある手数料とスリッページ保護を持つトークンスワップをサポートします。流動性提供者はプールに資産をステークして取引手数料と追加のトークン報酬を得ることができます。統合された NFT マーケットプレイスにより、クリエイターはプラットフォーム上で直接デジタルコレクティブルをミント、リスト、取引できます。\n\nMew Finance は、Ergo の eUTXO モデル上で可能な組み合わせ可能性を示しており、確定的なスマートコントラクト実行のセキュリティ保証を維持しながら、複数の DeFi プリミティブを一貫したプラットフォームに統合しています。",
       "features": [
         "DEX",
-        "NFTマーケット",
-        "DeFiスイート",
+        "NFT マーケットプレイス",
+        "DeFi スイート",
         "トークンスワップ"
       ]
     },
     "satergo": {
       "name": "SatErgo",
-      "description": "ネットワーク分散化をサポートするためにフルノードを統合するオプションを持つErgoの完全なデスクトップウォレット。プライバシーに重点を置き、オフラインボールトを備える。",
-      "longDescription": "SatErgoはErgoエクスペリエンスへの最大限のコントロールを求める上級ユーザー向けに設計された機能豊富なデスクトップウォレットです。ブラウザベースのウォレットとは異なり、SatErgoはWindows、macOS、Linuxでネイティブアプリケーションとして実行され、ウォレット内で直接完全なErgoノードを実行するオプションとともに強化されたセキュリティを提供します。\n\nフルノードの実行はすべてのトランザクションとブロックを独立して検証することでネットワーク分散化に貢献します。この信頼不要な検証はユーザーが残高確認やトランザクションブロードキャストのために第三者サーバーに依存しないことを意味します。\n\nSatErgoはすべてのErgoネイティブトークンをサポートし、UTXOレベルの可視性を持つ詳細なトランザクション履歴を提供します。",
+      "description": "ネットワーク分散化をサポートするためのフルノード統合オプションを持つ包括的な Ergo デスクトップウォレット。プライバシー重視でオフラインボールトを備える。",
+      "longDescription": "SatErgo は、Ergo エクスペリエンスに対する最大限のコントロールを望むパワーユーザー向けに設計された機能豊富なデスクトップウォレットです。ブラウザベースのウォレットとは異なり、SatErgo は Windows、macOS、Linux でネイティブアプリケーションとして動作し、強化されたセキュリティとウォレット内で直接完全な Ergo ノードを実行するオプションを提供します。\n\nフルノードを実行することで、すべてのトランザクションとブロックを独立して検証することでネットワークの分散化に貢献します。このトラストレスな検証により、ユーザーは残高の確認やトランザクションのブロードキャストにサードパーティのサーバーに依存しません。ウォレットのオフラインボールト機能により、エアギャップされたコンピューターでトランザクションを作成して署名することでコールドストレージが可能になります。\n\nSatErgo はすべての Ergo ネイティブトークンをサポートし、UTXO レベルの可視性を持つ詳細なトランザクション履歴を提供します。プライバシー重視の設計には、ユーザーが金融プライバシーを維持するのに役立つコイン選択とアドレス管理オプションが含まれています。Java ベースのアーキテクチャにより、SatErgo はセルフカストディソリューションに期待されるセキュリティ標準を維持しながらクロスプラットフォームの一貫性を提供します。",
       "features": [
         "デスクトップウォレット",
         "フルノード統合",
@@ -700,75 +700,75 @@
     },
     "safew": {
       "name": "SAFEW",
-      "description": "トランザクションプライバシーを強化するためにErgoMixerと統合されたErgoのブラウザ拡張ウォレット。",
-      "longDescription": "SAFEW（Simple And Fast Ergo Wallet）はErgoMixerとのネイティブ統合によって際立つプライバシー重視のブラウザ拡張ウォレットです。この統合によりユーザーはウォレットインターフェースから直接トークンをミキシングし、トランザクション間のオンチェーンリンクを断ち切って金融プライバシーを強化できます。\n\nウォレットは現代の暗号ウォレットに期待されるすべての標準機能を提供します：ERGとネイティブトークンの送受信、トランザクション履歴の確認、EIP-12 dAppコネクターを通じた分散型アプリケーションへの接続。\n\nSAFEWのインターフェースは機能を犠牲にすることなくシンプルに設計されています。オープンソースのコードベースによりセキュリティ意識の高いユーザーはウォレットの動作を検証できます。",
+      "description": "トランザクションプライバシーを強化するために ErgoMixer と統合された Ergo のブラウザ拡張機能ウォレット。",
+      "longDescription": "SAFEW（シンプルで高速な Ergo ウォレット）は、ErgoMixer とのネイティブ統合によって際立つプライバシー重視のブラウザ拡張機能ウォレットです。この統合により、ユーザーはウォレットインターフェースから直接トークンをミックスし、トランザクション間のオンチェーンリンクを断ち切って金融プライバシーを強化できます。\n\nこのウォレットは、現代の暗号通貨ウォレットに期待されるすべての標準機能を提供します：ERG とネイティブトークンの送受信、トランザクション履歴の確認、EIP-12 dApp コネクターを通じた分散型アプリケーションへの接続。SAFEW の特徴は、ユーザープライバシーを後付けではなく一流の機能として重視している点です。\n\nSAFEW のインターフェースは機能性を損なうことなくシンプルに設計されています。ユーザーは数回のクリックで複数のアドレスを管理し、トークン残高を確認し、ミキシング操作を開始できます。オープンソースのコードベースにより、セキュリティ意識の高いユーザーはウォレットの動作を検証でき、ブラウザ拡張機能の形式はブラウザから直接 Ergo DeFi への便利なアクセスを提供します。",
       "features": [
         "ブラウザ拡張機能",
-        "ErgoMixer統合",
-        "強化されたプライバシー",
-        "dAppサポート"
+        "ErgoMixer 統合",
+        "プライバシー強化",
+        "dApp サポート"
       ]
     },
     "ergowatch": {
       "name": "ErgoWatch",
-      "description": "ブロックチェーンアクティビティを監視するためのErgoネットワークメトリクス、DeFi統計（TVLなど）、チャート、ダッシュボードを提供する分析ブロックエクスプローラー。",
-      "longDescription": "ErgoWatchはErgoブロックチェーンエコシステムへの深い洞察を提供する包括的な分析プラットフォームです。公式のErgo Explorerがトランザクションとブロックデータに焦点を当てているのに対し、ErgoWatchはエコシステムの健全性と成長を理解するのに役立つ集計メトリクス、履歴トレンド、DeFi分析に特化しています。\n\nプラットフォームはErgo DeFiプロトコルの総ロック価値（TVL）を追跡し、プロトコル別の履歴チャートと内訳を提供します。ネットワークメトリクスにはアクティブアドレス、トランザクション量、トークン統計、マイニングデータが含まれます。\n\nErgoWatchのオープンソースアーキテクチャにより、コミュニティはメトリクスの計算方法を検証し改善に貢献できます。",
+      "description": "Ergo ネットワークのメトリクス、DeFi 統計（TVL など）、チャート、ブロックチェーンアクティビティを監視するためのダッシュボードを提供する分析ブロックエクスプローラー。",
+      "longDescription": "ErgoWatch は Ergo ブロックチェーンエコシステムへの深い洞察を提供する包括的な分析プラットフォームです。公式の Ergo Explorer がトランザクションとブロックデータに焦点を当てているのに対し、ErgoWatch は集約メトリクス、歴史的トレンド、DeFi 分析を専門とし、ユーザーがエコシステムの健全性と成長を理解するのに役立ちます。\n\nこのプラットフォームは Ergo DeFi プロトコル全体の総ロック価値（TVL）を追跡し、歴史的なチャートとプロトコル別の内訳を提供します。ネットワークメトリクスにはアクティブアドレス、トランザクションボリューム、トークン統計、マイニングデータが含まれます。カスタムダッシュボードは時間の経過とともにトレンドを視覚化し、研究者と投資家がデータ駆動の意思決定を行うのに役立ちます。\n\nErgoWatch のオープンソースアーキテクチャにより、コミュニティはメトリクスの計算方法を検証し、改善に貢献できます。このプラットフォームはブロックチェーンデータをクエリ可能なデータベースにインデックス化し、オンチェーンで直接実行することが現実的でない複雑な分析クエリを可能にします。開発者と分析者にとって、ErgoWatch は Ergo エコシステムの定量的な健全性への重要な窓口を提供します。",
       "features": [
         "分析",
-        "DeFiメトリクス",
-        "TVL追跡",
+        "DeFi メトリクス",
+        "TVL トラッキング",
         "ネットワークダッシュボード",
         "チャート"
       ]
     },
     "cyberpixels": {
       "name": "CyberPixels",
-      "description": "ブロックチェーン統合（NFT、カスタムトークン、ゲーム内マーケットプレイス）を持つオープンワールドピクセルアートゲームプロジェクト。",
-      "longDescription": "CyberPixels（CyberVerse）はErgo統合を深く持つオープンワールドピクセルアートゲームを構築している野心的なブロックチェーンゲームプロジェクトです。ゲームはNFTベースのアセット、カスタムトークン、プレイヤーがErgoブロックチェーンインフラを使用してアイテムやリソースを取引できるゲーム内マーケットプレイスを特徴としています。\n\nプロジェクトはゲーム内通貨とアイテム所有権のためにErgoのネイティブトークン機能を活用します。各ユニークなアイテムはErgoブロックチェーン上のNFTとして存在し、真の所有権を提供してプレイヤーがゲーム外でアセットを取引できるようにします。\n\nCyberPixelsは検証可能な所有権、プレイヤー主導の経済、相互運用性によってゲームをどのように強化できるかについてのブロックチェーン技術の探求を表しています。",
+      "description": "ブロックチェーン統合（NFT、カスタムトークン、ゲーム内マーケットプレイス）を持つオープンワールドのピクセルスタイルゲームプロジェクト。",
+      "longDescription": "CyberPixels（CyberVerse）は、Ergo との深い統合を持つオープンワールドのピクセルアートゲームを構築する野心的なブロックチェーンゲームプロジェクトです。このゲームは NFT ベースの資産、カスタムトークン、ゲーム内マーケットプレイスを特徴とし、プレイヤーは Ergo ブロックチェーンインフラを使用してアイテムやリソースを取引できます。\n\nこのプロジェクトはゲーム内通貨とアイテム所有権のために Ergo のネイティブトークン機能を活用しています。各ユニークなアイテムは Ergo ブロックチェーン上の NFT として存在し、真の所有権を提供し、プレイヤーがゲーム外で資産を取引できるようにします。eUTXO モデルの確定的なトランザクションにより、マーケットプレイスの取引は詐欺リスクなしにアトミックに実行されます。\n\nCyberPixels は、ブロックチェーン技術が検証可能な所有権、プレイヤー駆動の経済、相互運用性を通じてゲームをどのように強化できるかを探求しています。ピクセルアートの美学とブロックチェーンメカニクスの組み合わせは、Ergo 技術のエンターテインメントにおける実用的な応用を示しながら、魅力的なゲームプレイを生み出すことを目指しています。",
       "features": [
         "ブロックチェーンゲーム",
-        "NFT統合",
+        "NFT 統合",
         "ゲーム内マーケットプレイス",
-        "Play-to-Earn"
+        "プレイして稼ぐ"
       ]
     },
     "sigmafi": {
       "name": "SigmaFi",
-      "description": "P2P債務義務を作成するためのSigmaBondsを含む、Ergo上の分散型P2P金融コントラクトのスイート。",
-      "longDescription": "SigmaFiはErgoユーザーが仲介プールなしに直接貸借できるようにするピアツーピア金融コントラクトのスイートです。フラッグシップ製品のSigmaBondsは、ユーザーが貸し手と借り手の間で直接交渉された条件でカスタム債務義務を作成できるようにします。\n\nプールされた貸付プロトコルとは異なり、SigmaFiのP2Pモデルは参加者が金利、期間、担保要件を含む融資条件を完全にコントロールできるようにします。スマートコントラクトは返済スケジュールを執行し、必要に応じて担保清算を処理します。\n\nプロトコルは複雑な金融ロジックを実装する高度なErgoScript機能を示しています。",
+      "description": "P2P の債務義務を作成するための SigmaBonds を含む、Ergo 上の分散型 P2P 金融コントラクトのスイート。",
+      "longDescription": "SigmaFi は、Ergo ユーザー間で仲介プールなしに直接貸し借りを可能にするピアツーピア金融コントラクトのスイートです。フラッグシップ製品の SigmaBonds は、貸し手と借り手の間で直接交渉された柔軟な条件を持つカスタム債務義務をユーザーが作成できるようにします。\n\nプール型レンディングプロトコルとは異なり、SigmaFi の P2P モデルは参加者に金利、期間、担保要件を含むローン条件の完全なコントロールを与えます。貸し手は必要な正確なリターンを指定でき、借り手はニーズに合った条件を見つけることができます。スマートコントラクトは返済スケジュールを執行し、必要な場合は担保の清算を処理します。\n\nこのプロトコルは複雑な金融ロジックを実装するための高度な ErgoScript 機能を示しています。各ボンドはコントラクト条件が埋め込まれた UTXO として表現され、透明で検証可能な債務証書を作成します。SigmaFi は、ボンドや手形などの従来の金融概念がトラストレスで分散型のコンテキストでどのように再構想できるかを探求しています。",
       "features": [
-        "P2P融資",
-        "債券発行",
+        "P2P レンディング",
+        "ボンド発行",
         "分散型金融",
         "スマートコントラクト"
       ]
     },
     "ergoraffle": {
       "name": "ErgoRaffle",
-      "description": "参加者が賞品を獲得できるプロジェクトのための抽選要素を持つクラウドファンディングサービス。",
-      "longDescription": "ErgoRaffleは資金調達と宝くじメカニズムを組み合わせた分散型クラウドファンディングプラットフォームです。プロジェクトは抽選券を販売することで資金を調達でき、参加者は支持するイニシアチブを支援しながら賞品を獲得するチャンスを得ます。プロセス全体はErgoScriptスマートコントラクト上で実行され、証明可能な公平性と透明な資金分配を確保します。\n\nプラットフォームはErgoのネイティブランダム性機能を使用して検証可能な方法で当選者を選択します。ユーザーがオペレーターを信頼しなければならない従来の宝くじとは異なり、ErgoRaffleのオンチェーン実行により誰でも当選者が公正に選ばれたことを検証できます。\n\nErgoRaffleはErgoエコシステム内のコミュニティ資金調達、チャリティ、プロジェクトブートストラップのインフラとして機能します。",
+      "description": "参加者が報酬を獲得できるプロジェクトの資金調達を可能にする、ロッタリー要素を持つクラウドファンディングサービス。",
+      "longDescription": "ErgoRaffle は、資金調達とロッタリーメカニクスを組み合わせた分散型クラウドファンディングプラットフォームです。プロジェクトはラッフルチケットを販売して資金を調達でき、参加者は自分が信じる取り組みをサポートしながら賞品を獲得するチャンスを得ます。プロセス全体は ErgoScript スマートコントラクト上で動作し、証明可能な公平性と透明な資金分配を確保します。\n\nこのプラットフォームは Ergo のネイティブランダム性機能を使用して、検証可能な方法で当選者を選出します。ユーザーがオペレーターを信頼しなければならない従来のロッタリーとは異なり、ErgoRaffle のオンチェーン実行により、誰でも当選者が公平に選ばれたことを検証できます。このトラストレスな設計は操作の可能性を排除しながら、運営上のオーバーヘッドを削減します。\n\nErgoRaffle は Ergo エコシステム内のコミュニティの資金調達、チャリティーイベント、プロジェクトのブートストラップのためのインフラとして機能します。プロジェクトはチケット価格、賞品構造、資金調達目標を設定できます。ラッフルが完了すると、スマートコントラクトはプロジェクトへの資金と当選者への賞品を自動的に配布し、中間者を必要としない自己実行型のクラウドファンディングメカニズムを作り出します。",
       "features": [
         "クラウドファンディング",
-        "宝くじシステム",
+        "ロッタリーシステム",
         "証明可能な公平性",
-        "プロジェクト資金"
+        "プロジェクト資金調達"
       ]
     },
     "minotaur-wallet": {
       "name": "Minotaur Wallet",
-      "description": "資金管理のセキュリティを強化するマルチシグなどの高度な機能を持つErgoモバイルウォレット。",
-      "longDescription": "Minotaur WalletはErgoのモバイルウォレットで、特にマルチシグサポートなどの高度なセキュリティ機能に重点を置いています。マルチシグウォレットは取引の承認に複数の関係者を必要とし、共有資金、組織の財務、追加のセキュリティ層を望むユーザーに最適です。\n\nウォレットはSigmaプロトコルを通じてErgoのネイティブマルチシグ機能を実装し、柔軟な署名スキームをサポートします。ユーザーはM-of-N署名を設定でき、N人の総署名者のうちM人の鍵が取引を承認できます。\n\nMinotaurはモバイル使用のために設計されており、ユーザビリティを重視しています。インターフェースは深い技術知識なしでマルチシグの設定と参加をガイドします。",
+      "description": "資金管理のセキュリティを強化するマルチシグネチャなどの高度な機能を持つ Ergo のモバイルウォレット。",
+      "longDescription": "Minotaur Wallet は、特にマルチシグネチャサポートなどの高度なセキュリティ機能に焦点を当てた Ergo のモバイルウォレットです。マルチシグウォレットは複数の当事者がトランザクションを承認する必要があり、共有資金、組織のトレジャリー、追加のセキュリティ層を求めるユーザーに最適です。\n\nこのウォレットは Sigma プロトコルを通じて Ergo のネイティブマルチシグネチャ機能を実装し、柔軟な署名スキームを可能にします。ユーザーは N 人の合計署名者のうち任意の M 個のキーがトランザクションを承認できる M-of-N 署名を設定できます。これにより、単一の当事者に完全なコントロールを信頼することなく、セキュリティの冗長性と協調的な資金管理が提供されます。\n\nMinotaur はモバイル使用のために設計されており、使いやすさを重視しています。インターフェースは、深い技術的知識を必要とせずにユーザーがマルチシグの設定を作成して参加するよう案内します。Ergo 上で共有資金を管理するチームや組織にとって、Minotaur は安全で協調的な資産管理のための不可欠なインフラを提供します。",
       "features": [
         "モバイルウォレット",
-        "マルチシグ",
-        "強化されたセキュリティ",
+        "マルチシグネチャ",
+        "セキュリティ強化",
         "資金管理"
       ]
     },
     "guapswap": {
       "name": "GuapSwap",
-      "description": "Ergo上のマイナー利益を交換するためのスマートコントラクトベースの分散型サービスで、マイニング報酬の自動変換を可能にする。",
-      "longDescription": "GuapSwapはErgoマイナー向けの専用ツールで、マイニング報酬を自動的に変換します。マイナーがERGでブロック報酬を獲得すると、GuapSwapは設定された好みに基づいて一部を他のトークンに自動的に交換し、人工的な介入なしにマイナーが収入を管理するのを助けます。\n\nサービスは所定のルールに従ってスワップを実行するスマートコントラクトを通じて実行されます。マイナーは交換する報酬の割合と受け取るトークンを設定し、自動化されたDCAまたは多様化戦略を作成できます。\n\nGuapSwapはマイニングコミュニティに対するスマートコントラクトの実用的な有用性を示しています。",
+      "description": "Ergo 上のマイナー利益を交換するためのスマートコントラクトベースの分散型サービスで、マイニング報酬の自動交換を可能にする。",
+      "longDescription": "GuapSwap は Ergo マイナー向けの専門ツールで、マイニング報酬の自動変換を可能にします。マイナーが ERG でブロック報酬を得ると、GuapSwap は設定された設定に従って一部を自動的に他のトークンにスワップし、手動介入なしにマイナーが収入を管理するのを支援します。\n\nこのサービスは事前定義されたルールに基づいてスワップを実行するスマートコントラクトを通じて動作します。マイナーはスワップする報酬のパーセンテージと受け取るトークンを設定でき、自動化されたドルコスト平均法や多様化戦略を作り出します。これによりマイニング収入を積極的に管理する手間が軽減されます。\n\nGuapSwap はマイニングコミュニティへのスマートコントラクトの実用的な有用性を示しています。一般的な操作を自動化することで時間を節約し、市場状況に関わらず一貫したスワップ戦略の実行を可能にします。このツールは報酬管理をよりアクセスしやすくすることで Ergo の Autolykos マイニングアルゴリズムを補完します。",
       "features": [
         "マイニング報酬",
         "自動スワップ",
@@ -778,76 +778,76 @@
     },
     "dexygold": {
       "name": "DexyGold",
-      "description": "鋳造税、価格オラクル、ERGの過剰担保を活用して金価格（XAU/USD）に連動するアルゴリズムステーブルコイン。",
-      "longDescription": "DexyGoldはErgoのオラクルプールを使用して金（XAU/USD）価格データを追跡するよう設計された実験的なアルゴリズムステーブルコインです。プロトコルは鋳造税メカニズムと過剰担保を使用して金ペッグを維持し、金価値の分散型デジタル表現を作成します。\n\n設計はSigmaUSDや他のアルゴリズムステーブルコインからの教訓に基づいており、商品連動資産向けにアプローチを適応させています。ERGが担保として機能し、プロトコルはトークンをミントおよびバーンすることで価格安定性を維持します。\n\nDexyGoldはブロックチェーン技術が実物の保管や中央集権的な発行者を信頼することなく金価格へのアクセス可能なエクスポージャーをどのように作り出せるかを探求しています。",
+      "description": "鋳造税、価格オラクル、過剰な ERG 担保を利用して金価格（XAU/USD）にペッグされたアルゴリズムステーブルコイン。",
+      "longDescription": "DexyGold は、Ergo のオラクルプールの価格データを使用して金価格（XAU/USD）を追跡するよう設計された実験的なアルゴリズムステーブルコインです。このプロトコルは鋳造税メカニズムと過剰担保を使用して金ペッグを維持し、金価格の分散型デジタル表現を作成します。\n\nこの設計は SigmaUSD と他のアルゴリズムステーブルコインからの教訓を基に、コモディティペッグ資産へのアプローチを適用しています。ERG が担保として機能し、プロトコルは価格安定性を維持するためにトークンをミントおよびバーンします。オラクルプールは、スマートコントラクトが供給を調整するために使用するトラストレスな金価格フィードを提供します。\n\nDexyGold は、物理的なカストディや中央集権的な発行者への信頼を必要とせずに、ブロックチェーン技術が金価格へのアクセスしやすい露出を作り出せる方法を探求しています。このプロトタイプは分散化と透明性を維持しながら高度な金融商品を実装する Ergo の能力を示しています。",
       "features": [
-        "金連動ステーブルコイン",
+        "金ペッグステーブルコイン",
         "アルゴリズム設計",
         "オラクル統合",
-        "ERG担保"
+        "ERG 担保"
       ]
     },
     "sigmao": {
       "name": "SigmaO",
-      "description": "オーダーブック形式でErgo EIP-4トークンのオプション（コール/プット、アメリカン/ヨーロピアン）を取引するプラットフォーム。",
-      "longDescription": "SigmaOはErgoブロックチェーンにデリバティブ市場をもたらす分散型オプション取引プラットフォームです。プロトコルはアメリカン形式とヨーロピアン形式の権利行使スタイルを持つコールオプションとプットオプションをサポートし、Ergoネイティブトークンの複雑なヘッジと投機戦略を提供します。\n\nオプションはEIP-4トークンとして表現され、任意のErgoマーケットで取引可能にします。オーダーブックモデルによりオプション売り手が独自のプレミアムと行使価格を設定でき、買い手は市場観に合った契約を選択できます。\n\nSigmaOはeUTXOモデル上で複雑な金融デリバティブを実装する方法を示しています。",
+      "description": "オーダーブックスタイルを使用して Ergo EIP-4 トークンのオプション（コール/プット、アメリカン/ヨーロピアン）を取引するプラットフォーム。",
+      "longDescription": "SigmaO は、デリバティブ市場を Ergo ブロックチェーンに持ち込む分散型オプション取引プラットフォームです。このプロトコルはアメリカンとヨーロピアンの行使スタイルを持つコールとプットオプションの両方をサポートし、Ergo ネイティブトークンの高度なヘッジと投機戦略を可能にします。\n\nオプションは EIP-4 トークンとして表現され、任意の Ergo マーケットプレイスで取引可能です。オーダーブックモデルにより、オプション売り手は自分のプレミアムと行使価格を設定でき、買い手は自分の市場観に合ったコントラクトを選択できます。スマートコントラクトは満期時または早期行使時（アメリカンオプションの場合）にオプション行使を自動的に処理します。\n\nSigmaO は eUTXO モデル上で複雑な金融デリバティブをどのように実装できるかを示しています。各オプションコントラクトはそのパラメーター（原資産、行使価格、満期、オプションタイプ）をトークンに直接エンコードし、自己記述的な金融商品を作り出します。これにより機関グレードの取引ツールが分散型エコシステムにもたらされます。",
       "features": [
         "オプション取引",
-        "コール/プット",
+        "コール/プットオプション",
         "オーダーブック",
-        "EIP-4トークン"
+        "EIP-4 トークン"
       ]
     },
     "blitz-tcg": {
       "name": "Blitz TCG",
-      "description": "Ergoブロックチェーン上の収集型トレーディングカードゲーム（TCG）。",
-      "longDescription": "Blitz TCGはErgo NFTを通じた真のデジタル所有権と競技的なゲームプレイを組み合わせたブロックチェーンベースのトレーディングカードゲームです。各カードはErgoブロックチェーン上のユニークなトークンとして存在し、プレイヤーがどの中央集権的なプラットフォームの外でも真にカードを所有、取引、収集できるようにします。\n\nゲームはカード発行にErgoのネイティブトークン標準を活用し、様々なレアリティレベルと限定版が収集価値を生み出します。プレイヤーはErgoマーケットプレイス上でピアツーピアでカードを取引でき、ブロックチェーンベースのカードの証明可能な希少性が本当のデジタルコレクティブルを作り出します。\n\nBlitz TCGはブロックチェーン技術が従来のゲームジャンルをどのように強化できるかを示しています。",
+      "description": "Ergo ブロックチェーン上のコレクタブルトレーディングカードゲーム（TCG）。",
+      "longDescription": "Blitz TCG は、競技ゲームプレイと Ergo NFT による真のデジタル所有権を組み合わせたブロックチェーンベースのトレーディングカードゲームです。各カードは Ergo ブロックチェーン上のユニークなトークンとして存在し、プレイヤーが中央集権的なプラットフォームに縛られることなくカードを真に所有し、取引し、収集できるようにします。\n\nこのゲームはカードの発行に Ergo のネイティブトークン標準を活用しており、異なるレアリティ階層と限定版がコレクタブルな価値を生み出します。プレイヤーは Ergo マーケットプレイスでピアツーピアでカードを取引でき、ブロックチェーンベースのカードの証明可能な希少性により、取り消し可能なライセンスではなく真のデジタルコレクティブルが生まれます。\n\nBlitz TCG はブロックチェーン技術が検証可能な所有権と希少性によって従来のゲームジャンルをどのように強化できるかを示しています。競技トレーディングカード形式はブロックチェーンのこれらの特性から恩恵を受け、Ergo ブロックチェーンは活発な取引のための低手数料と高速なトランザクションを提供します。このプロジェクトはプレイヤーの所有権を尊重する持続可能なブロックチェーンゲームモデルを探求しています。",
       "features": [
         "トレーディングカードゲーム",
-        "NFTカード",
-        "競技ゲームプレイ",
+        "NFT カード",
+        "競技プレイ",
         "コレクティブル"
       ]
     },
     "sigmaverse": {
       "name": "Sigmaverse",
-      "description": "開発者がアプリケーションをリストアップし、ユーザーがサービスを見つけられるErgo dAppエコシステムの中央ポータルおよびディレクトリ。",
-      "longDescription": "SigmaverseはErgoエコシステムの主要な発見プラットフォームで、Ergo上で構築された分散型アプリケーション、ツール、サービスのキュレートされたディレクトリとして機能します。プラットフォームはプロジェクトをカテゴリ分けし、各アプリケーションの基本情報を提供することで、ユーザーが成長するエコシステムをナビゲートするのを助けます。\n\nErgoの新規ユーザーにとって、Sigmaverseは利用可能なDeFiプロトコル、ウォレット、NFTプラットフォーム、開発者ツールを探索するための出発点を提供します。各リストには説明、リンク、カテゴリが含まれ、ユーザーがニーズに合った関連アプリケーションを見つけるのを助けます。\n\n開発者はSigmaverseをプロジェクトのプロモーションチャンネルとして活用できます。ディレクトリへのプロジェクト提出はコミュニティ内での可視性を高め、ユーザーと貢献者を惹きつけるのに役立ちます。",
+      "description": "開発者がアプリケーションをリストでき、ユーザーがサービスを見つけられる Ergo dApp エコシステムの中央集権的ポータルとディレクトリ。",
+      "longDescription": "Sigmaverse は Ergo エコシステムの主要な発見プラットフォームで、Ergo 上に構築された分散型アプリケーション、ツール、サービスのキュレートされたディレクトリとして機能します。このプラットフォームはプロジェクトをカテゴリ分けして各アプリケーションの基本情報を提供することで、ユーザーが成長し続けるエコシステムをナビゲートするのを助けます。\n\nErgo 初心者のために、Sigmaverse は利用可能な DeFi プロトコル、ウォレット、NFT プラットフォーム、開発者ツールを探索するための出発点を提供します。各リストには説明、リンク、カテゴリ分けが含まれており、ユーザーがニーズに合った関連アプリケーションを見つけられるようにします。このディレクトリは確立されたプロトコルから新興の実験まで、Ergo プロジェクトの全スペクトルをカバーしています。\n\n開発者はプロジェクトのプロモーションチャネルとして Sigmaverse から恩恵を受けます。ディレクトリにプロジェクトを提出することでコミュニティ内での可視性が向上し、ユーザーと貢献者を引き付けるのに役立ちます。このプラットフォームは Ergo エコシステムの成長の生きた記録として機能し、初期インフラから多様なアプリケーション景観への進化を追跡しています。",
       "features": [
-        "dAppディレクトリ",
-        "プロジェクトリスト",
+        "dApp ディレクトリ",
+        "プロジェクトリスティング",
         "エコシステムポータル",
         "発見プラットフォーム"
       ]
     },
     "ergone": {
       "name": "ErgOne",
-      "description": "ERGONEトークンとコミットメント証明プロトコルを使用してErgoとそのプロジェクトの分散型コミュニティ主導マーケティングを促進するプラットフォーム。",
-      "longDescription": "ErgOneはコミュニティメンバーがErgoとエコシステムプロジェクトを宣伝するインセンティブを与える分散型マーケティングプラットフォームです。プラットフォームはERGONEトークンと新しいコミットメント証明プロトコルを使用して低品質な参加をフィルタリングしながら、本物のプロモーション努力に報酬を与えます。\n\nコミュニティメンバーはマーケティングタスクを完了し、コンテンツを作成し、Ergoプロジェクトについての認知を広めることでERGONEトークンを獲得できます。トークンベースのインセンティブシステムは個人の努力をエコシステムの成長に合わせ、中央集権的なマーケティング予算に依存しない分散したマーケティングフォースを作り出します。\n\nErgOneはブロックチェーントークンがコミュニティの努力を共通の目標に向けてどのように調整できるかを示しています。",
+      "description": "ERGONE トークンとコミットメント証明プロトコルを使用して Ergo とそのプロジェクトを促進する分散型コミュニティ主導のマーケティングプラットフォーム。",
+      "longDescription": "ErgOne は、コミュニティメンバーが Ergo とエコシステムプロジェクトを促進するように動機付ける分散型マーケティングプラットフォームです。このプラットフォームは ERGONE トークンと斬新なコミットメント証明プロトコルを使用して、真の促進努力を報い、低品質なエンゲージメントをフィルタリングします。\n\nコミュニティメンバーはマーケティングタスクを完了し、コンテンツを作成し、Ergo プロジェクトへの認知を広めることで ERGONE トークンを獲得できます。トークンベースのインセンティブシステムは個人の努力をエコシステムの成長と一致させ、中央集権的なマーケティング予算に依存しない分散型マーケティング力を生み出します。\n\nErgOne はブロックチェーントークンがコミュニティの努力を共通の目標に向けてどのように調整できるかを示しています。マーケティングを参加的でインセンティブが一致したものにすることで、このプラットフォームは Ergo コミュニティの熱意を活用しながら、エコシステムの可視性と採用に対する測定可能な貢献を提供します。",
       "features": [
         "マーケティングプラットフォーム",
         "コミュニティ主導",
         "トークンインセンティブ",
-        "プロジェクトプロモーション"
+        "プロジェクト促進"
       ]
     },
     "hodlbox": {
       "name": "Hodlbox",
-      "description": "NFTで報酬を与えながら、トレジャーボックスと様々な資金ロックオプションを使用してERGの長期保有を奨励するプラットフォーム。",
-      "longDescription": "Hodlboxは時間ロックされた預金とNFT報酬によってERGの長期保有を奨励するゲーム化された貯蓄プラットフォームです。ユーザーは「トレジャーボックス」にERGを指定期間ロックし、保有コミットメントを完了した後にユニークなNFT報酬を受け取ります。\n\nプラットフォームは早期引き出しを防ぐErgoScriptスマートコントラクトを通じて時間ロックを実装します。これにより信頼できる長期保有コミットメントが作られ、一部のユーザーは投資規律を維持するのに役立つと感じています。異なるロック期間は異なる報酬を提供し、より長いコミットメントにインセンティブを与えます。\n\nHodlboxは長期投資という真剣な実践に娯楽の層を加えています。",
+      "description": "宝箱と様々な資金ロックオプションによって ERG の長期保有を奨励し、NFT でユーザーに報いるプラットフォーム。",
+      "longDescription": "Hodlbox は、時間ロック預金と NFT 報酬を通じて ERG の長期保有を奨励するゲーミフィケーションされた貯蓄プラットフォームです。ユーザーは指定期間「宝箱」に ERG をロックし、保有コミットメントを完了すると独自の NFT 報酬を受け取ることができます。\n\nこのプラットフォームは早期引き出しを防ぐ ErgoScript スマートコントラクトを通じて時間ロックを実装します。これにより長期保有への信頼できるコミットメントが生まれ、投資規律の維持に役立つと感じるユーザーもいます。異なるロック期間は異なる報酬を提供し、より長いコミットメントを奨励します。\n\nHodlbox は長期投資の真剣な実践に娯楽的な層を加えます。宝箱のメタファーと NFT コレクティブルは純粋な金融メカニクスを超えたエンゲージメントを生み出します。このプラットフォームは、スマートコントラクトを通じてトラストレスな実行を維持しながら、DeFi がゲーミフィケーション要素をどのように組み込めるかを示しています。",
       "features": [
-        "HODLインセンティブ",
+        "HODL インセンティブ",
         "資金ロック",
-        "NFT報酬",
+        "NFT 報酬",
         "長期貯蓄"
       ]
     },
     "tokenjay": {
       "name": "TokenJay",
-      "description": "Ergoエコシステム内のP2P（ピアツーピア）トークン取引のプラットフォーム。",
-      "longDescription": "TokenJayはErgoユーザーが自動マーケットメーカーや流動性プールに依存せずに直接取引できるピアツーピアトークン取引プラットフォームです。プラットフォームはERGおよびErgoブロックチェーン上の任意のネイティブトークンの取引オファーをユーザーが作成および受け入れられる信頼不要なスワップを促進します。\n\nAMMベースのDEXとは異なり、TokenJayはトレーダーが自分の価格を設定し、その条件を受け入れる相手方を見つけることができます。このオーダーブック形式の取引は大きな取引でより資本効率的である可能性があり、AMMで高いスリッページに悩まされる可能性がある流動性の低いトークンに対してより良い価格発見を提供します。\n\nプラットフォームはErgoのeUTXOモデルを活用してアトミックスワップを実装し、取引の両側が単一のトランザクションで実行されます。",
+      "description": "Ergo エコシステム内での P2P（ピアツーピア）トークン取引のためのプラットフォーム。",
+      "longDescription": "TokenJay は、自動マーケットメーカーや流動性プールに依存することなく Ergo ユーザー間の直接取引を可能にするピアツーピアトークン取引プラットフォームです。このプラットフォームはトラストレスな交換を促進し、ユーザーは ERG と Ergo ブロックチェーン上の任意のネイティブトークンの取引オファーを作成したり受け入れたりできます。\n\nプール比率によって価格が決まる AMM ベースの DEX とは異なり、TokenJay はトレーダーが自分の価格を設定し、その条件を受け入れる取引相手を見つけられるようにします。このオーダーブックスタイルの取引は大きな取引に対してより資本効率が高く、AMM 上で高いスリッページを被る可能性のある流動性の低いトークンのより良い価格発見を提供します。\n\nこのプラットフォームは Ergo の eUTXO モデルを活用して、取引の両側が単一のトランザクションで実行されるアトミックスワップを可能にします。これにより取引は完全に完了するかまったく完了しないかのどちらかとなり、カウンターパーティリスクが排除されます。TokenJay は Ergo のトークンエコノミーのための不可欠なインフラを提供し、成長するネイティブ資産のエコシステムの価格発見と流動性を実現します。",
       "features": [
-        "P2P取引",
+        "P2P 取引",
         "トークンスワップ",
         "分散型取引所",
         "直接取引"
@@ -855,76 +855,76 @@
     },
     "single-tx-swap": {
       "name": "Single Tx Swap",
-      "description": "単一のトランザクションでP2P（ピアツーピア）トークンスワップを実行するツール。",
-      "longDescription": "Single Tx Swapは2つの当事者が単一のErgoトランザクション内でアトミックトークンスワップを行えるようにするユーティリティツールです。この信頼不要なメカニズムはトランザクションの両側が完全に実行されるか、どちらも実行されないかのどちらかであることを確保し、マルチステップスワップに固有の相手方リスクを排除します。\n\nツールはErgoのeUTXOモデルを活用し、複数の入力と出力を単一のトランザクションで複雑な支出条件と組み合わせることができます。両当事者の資産が入力として消費され、合意された条件に従って出力として再分配されます。すべての条件が満たされた場合にのみ、トランザクションが成功します。\n\nSingle Tx Swapは信頼不要なピアツーピア取引のための必要なインフラを提供します。",
+      "description": "単一のトランザクションで P2P（ピアツーピア）トークンスワップを実行するためのツール。",
+      "longDescription": "Single Tx Swap は、二者間が単一の Ergo トランザクションでアトミックなトークン交換を行えるようにするユーティリティです。このトラストレスなメカニズムにより、取引の両側が完全に実行されるかまったく実行されないかのどちらかとなり、複数ステップの交換に内在するカウンターパーティリスクが排除されます。\n\nこのツールは複数の入力と出力を複雑な支出条件を持つ単一のトランザクションで組み合わせることができる Ergo の eUTXO モデルを活用します。両者の資産は入力として消費され、合意された条件に従って出力として再配布されます。すべての条件が満たされた場合にのみトランザクションは成功します。\n\nSingle Tx Swap はトラストレスなピアツーピア取引のための不可欠なインフラを提供します。一時的に資金をロックするエスクローベースのソリューションとは異なり、アトミックスワップは待機期間なしに即時に完了します。この効率性により、このツールは OTC 取引や両者が取引の準備ができている直接交換に理想的です。",
       "features": [
         "アトミックスワップ",
         "単一トランザクション",
-        "P2Pスワップ",
+        "P2P 交換",
         "高速実行"
       ]
     },
     "crux-finance": {
       "name": "Crux Finance",
-      "description": "Ergoエコシステムでの暗号投資ポートフォリオを管理するツールで、損益の追跡、投資、税務レポートの生成を可能にする。",
-      "longDescription": "Crux FinanceはErgoエコシステム向けに設計されたポートフォリオ管理・分析プラットフォームです。プラットフォームはユーザーがウォレット全体の保有を追跡し、損益を計算し、投資パフォーマンスを監視し、税務コンプライアンスレポートを生成するのを助けます。\n\nウォレットアドレスを接続することで、ユーザーは集計されたポートフォリオ価値、履歴パフォーマンスチャート、トークン別の詳細な内訳を確認できます。プラットフォームは自動的にトランザクションを追跡し、税務申告目的のコスト基準と実現利益を計算します。\n\nCrux FinanceはErgo DeFiプロトコルと統合し、LPトークン、ステーキング報酬、貸付ポジションを含むユーザーポジションの包括的なビューを提供します。",
+      "description": "Ergo エコシステム内の暗号ポートフォリオを管理するためのツールで、P&L、投資の追跡と税務レポートの生成を可能にする。",
+      "longDescription": "Crux Finance は Ergo エコシステム専用に設計されたポートフォリオ管理と分析プラットフォームです。このプラットフォームはユーザーがウォレット全体の保有資産を追跡し、損益を計算し、投資パフォーマンスを監視し、税務コンプライアンスのためのレポートを生成するのを助けます。\n\nウォレットアドレスを接続することで、ユーザーは集約されたポートフォリオ価値、歴史的なパフォーマンスチャート、トークン別の詳細な内訳を確認できます。このプラットフォームはトランザクションを自動的に追跡し、税務申告のためにコスト基準と実現利益を計算します。この自動化により、特にアクティブなトレーダーや DeFi 参加者にとって、手動追跡と比較して大幅な時間節約になります。\n\nCrux Finance は Ergo DeFi プロトコルと統合して、LP トークン、ステーキング報酬、レンディングポジションを含むユーザーポジションの包括的なビューを提供します。このプラットフォームの Ergo 特有のプロトコルへの理解は、複雑な DeFi ポジションを正確に評価できることを意味します。暗号通貨の利益を報告する必要があるユーザーのために、Crux Finance は一般的な税務ソフトウェア形式に対応したエクスポート可能なレポートを提供します。",
       "features": [
         "ポートフォリオ追跡",
-        "損益分析",
+        "P&L 分析",
         "税務レポート",
         "投資管理"
       ]
     },
     "fleet-sdk": {
       "name": "Fleet SDK",
-      "description": "WebアプリケーションとNode.jsでErgoブロックチェーン上のトランザクションの作成と署名を簡素化するJavaScriptライブラリ。",
-      "longDescription": "Fleet SDKはErgoアプリケーションを構築するための推奨JavaScriptTypeScriptライブラリです。ブラウザとNode.js環境の両方向けに設計されたFleetは、トランザクションの構築、スマートコントラクトとのやり取り、WebアプリケーションへのErgo機能の統合のための直感的なAPIを開発者に提供します。\n\nSDKはeUTXOモデルの複雑さを抽象化し、一般的なトランザクションパターンの高レベルビルダーを提供しながら、高度なユースケースの低レベルプリミティブも提供します。開発者はマルチアセットトランザクションを作成し、dAppとやり取りし、様々なウォレット統合を使用してトランザクションに署名できます。TypeScriptサポートにより優れたIDE統合とコンパイル時の型チェックが提供されます。\n\nFleetは多くのErgo WebアプリケーションとdAppを動かしており、フロントエンド開発の基盤インフラとして機能します。",
+      "description": "Web アプリケーションと Node.js で Ergo ブロックチェーン上のトランザクションの作成と署名を簡素化するために設計された JavaScript ライブラリ。",
+      "longDescription": "Fleet SDK は Ergo アプリケーション構築のための主要な JavaScript/TypeScript ライブラリです。ブラウザと Node.js 環境の両方向けに設計された Fleet は、トランザクションの構築、スマートコントラクトとのインタラクション、Ergo 機能の Web アプリケーションへの統合のための直感的な API を開発者に提供します。\n\nこの SDK は eUTXO モデルの複雑さを抽象化し、一般的なトランザクションパターンのための高レベルビルダーを提供しながら、高度なユースケース向けに低レベルのプリミティブも公開しています。開発者はマルチアセットトランザクションを作成し、dApp とインタラクションし、様々なウォレット統合を使用してトランザクションに署名できます。TypeScript サポートにより優れた IDE 統合とコンパイル時の型チェックが提供されます。\n\nFleet は多くの Ergo Web アプリケーションと dApp を支え、フロントエンド開発の基盤インフラとして機能しています。このライブラリは Nautilus などの人気のあるウォレットコネクターとシームレスに統合され、アドレス検証、トークン処理、ボックス選択のユーティリティが含まれています。包括的なドキュメントと積極的なメンテナンスにより、Fleet は Ergo 上で構築する JavaScript 開発者の推奨選択肢となっています。",
       "features": [
         "JavaScript SDK",
         "トランザクション構築",
-        "Web統合",
-        "Node.jsサポート"
+        "Web 統合",
+        "Node.js サポート"
       ]
     },
     "appkit": {
       "name": "AppKit",
-      "description": "JVMベースのプログラミング言語を使用してErgo上でアプリケーションを開発するための主要なソフトウェア開発キット（SDK）。",
-      "longDescription": "AppKitはErgoのJVMベース開発用の公式SDKで、ScalaとJava開発者にErgoアプリケーションを構築するための包括的なツールを提供します。最も成熟したErgo開発ツールキットとして、AppKitはコアプロトコル機能への直接アクセスを提供し、Ergo開発パターンのリファレンス実装として機能します。\n\nSDKにより開発者はトランザクションの構築と署名、ErgoScriptコントラクトのコンパイル、Ergoノードとの対話、暗号プリミティブの使用が可能です。AppKitのScalaファーストの設計はeUTXOモデルの数学的基礎を反映したエレガントな関数型APIを提供しながら、Java互換性により幅広いアクセシビリティを確保します。\n\nAppKitはバックエンドサービス、オフチェーンボット、ErgoScriptとの深い統合を必要とするアプリケーションに特に有用です。",
+      "description": "JVM ベースのプログラミング言語を使用して Ergo 上でアプリケーションを開発するための主要なソフトウェア開発キット（SDK）。",
+      "longDescription": "AppKit は Ergo の公式 JVM 開発 SDK で、Scala と Java の開発者に Ergo アプリケーション構築のための包括的なツールを提供します。最も成熟した Ergo 開発キットとして、AppKit はコアプロトコル機能への直接アクセスを提供し、Ergo 開発パターンのリファレンス実装として機能します。\n\nこの SDK により、開発者はトランザクションの構築と署名、ErgoScript コントラクトのコンパイル、Ergo ノード API とのインタラクション、暗号学的プリミティブの操作が可能になります。AppKit の Scala ファーストの設計は eUTXO モデルの数学的基盤を反映した優雅な関数型 API を提供し、Java の互換性により広いアクセス可能性が確保されています。\n\nAppKit は、バックエンドサービス、オフチェーンボット、ErgoScript との深い統合を必要とするアプリケーションに特に強力です。この SDK にはコントラクトコンパイル、ボックス選択アルゴリズム、トランザクションチェーニングのツールが含まれています。多くのコア Ergo インフラプロジェクトと DeFi プロトコルが AppKit を使用して構築されており、真剣な Ergo 開発者にとって必須の知識となっています。",
       "features": [
         "JVM SDK",
-        "Scala/Javaサポート",
+        "Scala/Java サポート",
         "スマートコントラクト開発",
-        "公式SDK"
+        "公式 SDK"
       ]
     },
     "sigma-rust": {
       "name": "SigmaRust",
-      "description": "RustでのErgoTreeインタープリターの実装で、トランザクションを処理するためのツールと様々な言語バインディングを提供する。",
-      "longDescription": "SigmaRustはErgoTreeインタープリターとErgoプロトコルプリミティブのRust実装です。この高性能ライブラリはRustでのErgo開発を可能にし、JavaScript/WASM、Python、Cを含む他の言語のバインディングも提供し、多言語Ergo開発エコシステムの基礎インフラとなっています。\n\nライブラリはピュアRustでErgoTree評価、トランザクション検証、Sigmaプロトコル検証を実装しています。そのWASMコンパイルターゲットはブラウザ内でErgoトランザクションを検証または構築する必要があるJavaScriptアプリケーションを動かします。これによりサーバー依存なしの完全クライアントサイドのトランザクション署名とコントラクトインタラクションが可能になります。\n\nSigmaRustの言語バインディングは開発者が使い慣れた言語を使用しながらRustのパフォーマンスとセキュリティ保証から恩恵を受けられることを意味します。",
+      "description": "Rust による ErgoTree インタープリターの実装で、トランザクションの操作と各種言語のバインディングのためのツールを提供する。",
+      "longDescription": "SigmaRust は ErgoTree インタープリターと Ergo プロトコルプリミティブの Rust 実装です。この高性能ライブラリは Rust での Ergo 開発を可能にしながら、JavaScript/WASM、Python、C を含む他の言語へのバインディングも提供し、多言語 Ergo 開発エコシステムの基盤インフラとなっています。\n\nこのライブラリは純粋な Rust で ErgoTree の評価、トランザクション検証、Sigma プロトコル検証を実装しています。WASM コンパイルターゲットは、ブラウザで Ergo トランザクションを検証または構築する必要がある JavaScript アプリケーションを支えます。これにより、サーバー依存なしに完全にクライアントサイドのトランザクション署名とコントラクトインタラクションが可能になります。\n\nSigmaRust の言語バインディングにより、開発者は Rust のパフォーマンスとセキュリティ保証の恩恵を受けながら使い慣れた言語を使用できます。Python バインディングは迅速なプロトタイピングとデータ分析を可能にし、C バインディングはほぼすべてのプログラミング言語との統合を可能にします。SigmaRust は Ergo の開発を JVM 言語からより広い開発者エコシステムへと拡張する重要なインフラを代表しています。",
       "features": [
-        "Rust実装",
-        "ErgoTreeインタープリター",
+        "Rust 実装",
+        "ErgoTree インタープリター",
         "多言語バインディング",
-        "WASMサポート"
+        "WASM サポート"
       ]
     },
     "gluon": {
       "name": "Gluon",
-      "description": "Ergoエコシステムの既存のステーブルコイン（SigmaUSDなど）を強化（ハードニング）することを目的としたプロトコル。",
-      "longDescription": "GluonはSigmaUSDなどの既存のステーブルコインの安定性と弾力性を強化することを目的としたプロトコルです。プロジェクトはAgeUSD設計を補完する追加の安定化メカニズムを研究しており、強化された清算プロセス、追加の担保タイプ、または他のDeFiプリミティブとの統合が含まれる可能性があります。\n\nErgoステーブルコインの基盤を強化することで、Gluonはユーザーの信頼を高め、より広い採用を可能にすることを目指しています。\n\nGluonはeUTXOブロックチェーン上の持続可能なステーブルコイン設計に関する継続的な研究を表しており、エコシステムの分散型通貨政策の理解に貢献しています。",
+      "description": "SigmaUSD などの Ergo エコシステム内の既存のステーブルコインを強化（ハードニング）するために開発されたプロトコル。",
+      "longDescription": "Gluon は SigmaUSD などの既存のステーブルコインの安定性と回復力を強化するために設計されたプロトコルです。このプロジェクトは、ペッグの安定性を脅かす可能性のある極端な市場条件やエッジケースに対してアルゴリズムステーブルコインを「ハードニング」するメカニズムを探求しています。\n\nこのプロトコルは、強化された清算プロセス、追加の担保タイプ、または他の DeFi プリミティブとの統合を含む可能性のある、AgeUSD 設計を補完する追加の安定化メカニズムを調査しています。Ergo ステーブルコインの基盤を強化することで、Gluon はユーザーの信頼を高め、より広い採用を実現することを目指しています。\n\nGluon は eUTXO ブロックチェーン上の持続可能なステーブルコイン設計に関する継続的な研究を代表しています。このプロジェクトは分散型の金融政策に関するエコシステムの理解に貢献し、将来のバージョンのステーブルコインプロトコルに組み込まれる可能性のある改善を特定するのに役立ちます。",
       "features": [
         "ステーブルコイン強化",
         "プロトコルハードニング",
-        "DeFiインフラ",
+        "DeFi インフラ",
         "安定化メカニズム"
       ]
     },
     "chaincash": {
       "name": "ChainCash",
-      "description": "Ergo上で分散型P2P通貨システムを作成するフレームワークで、ユーザーが信頼または担保に裏付けられた独自の通貨を発行できるようにする。",
-      "longDescription": "ChainCashはErgo上でピアツーピア通貨システムを作成する実験的なフレームワークです。プロジェクトはユーザーが信頼関係または担保に裏付けられた独自の通貨を発行できるようにし、通貨創造と価値転送の代替アプローチを探求します。\n\nフレームワークは歴史的な通貨システムと現代の概念（地域交換取引システム（LETS）など）からインスピレーションを得ています。ユーザーはコミュニティでの評判によって、または担保を預けることによって裏付けられた通貨を作成できます。これは相互信用、タイムバンキング、コミュニティ通貨などの異なる通貨モデルの実験を可能にします。\n\nErgoコア開発者のkushtiによって開発されたChainCashは、プログラマブルマネーの最前線の研究を表しています。",
+      "description": "ユーザーが信頼または担保によって裏付けられた独自の通貨を発行できる、Ergo 上で分散型 P2P 通貨システムを作成するためのフレームワーク。",
+      "longDescription": "ChainCash は Ergo 上でピアツーピア通貨システムを作成するための実験的なフレームワークです。このプロジェクトは、信頼関係または担保によって裏付けられた独自の通貨をユーザーが発行できるようにし、通貨創出と価値移転への代替アプローチを探求します。\n\nこのフレームワークは歴史的な通貨システムと地域交換取引システム（LETS）などの現代的な概念からインスピレーションを得ています。ユーザーはコミュニティ内での評判または担保の預け入れによって裏付けられた通貨を作成できます。これにより相互信用、時間銀行、コミュニティ通貨などの異なる通貨モデルの実験が可能になります。\n\nErgo コア開発者の kushti によって開発された ChainCash は、プログラマブルマネーに関する最先端の研究を代表しています。このプロジェクトはブロックチェーン技術が透明性を維持し不正を防ぎながら、多様な通貨実験をどのようにサポートできるかを示しています。Ergo の金融イノベーションと金融包摂というより広い使命に貢献しています。",
       "features": [
-        "P2P通貨",
+        "P2P マネー",
         "カスタム通貨",
         "信頼ベースの裏付け",
         "通貨フレームワーク"
@@ -932,52 +932,52 @@
     },
     "sigrsv": {
       "name": "SigRSV",
-      "description": "SigmaUSDステーブルコインプロトコルの準備コイン。ユーザーはERGを準備金庫に預けることでSigRSVをミントし、ERG価格上昇から利益を得ることができる。",
-      "longDescription": "SigRSVはSigmaUSDステーブルコインプロトコルの準備トークンで、ERGのレバレッジドロングポジションを表しています。ユーザーがSigRSVをミントすると、ERGを準備金庫に預け、価格変動を吸収してSigmaUSDを安定させながら、ERG価格上昇へのエクスポージャーを得ます。\n\n準備コインのメカニズムはエレガントです：ERG価格が上昇すると準備金が過剰担保になり、SigRSV保有者は預けた以上のERGを償還できます。逆に、ERG価格が下落するとSigRSVが損失を吸収してSigmaUSDのペッグを維持します。これにより清算や複雑なオラクル操作を必要としない市場主導の安定化メカニズムが生まれます。\n\nSigRSVはERGに強気でエコシステムの安定性に貢献しながらレバレッジエクスポージャーを得たいユーザーにとって魅力的です。",
+      "description": "SigmaUSD ステーブルコインプロトコルのリザーブコイン。ユーザーは ERG をリザーブに預け入れることで SigRSV をミントし、ERG の価格上昇から利益を得ることができる。",
+      "longDescription": "SigRSV は SigmaUSD ステーブルコインプロトコルのリザーブトークンで、ERG へのレバレッジドロングポジションを表しています。ユーザーが SigRSV をミントすると、ERG をリザーブに預け入れ、SigmaUSD を安定に保つために価格変動を吸収しながら、ERG の価格上昇への露出を得ます。\n\nリザーブコインのメカニズムはエレガントです：ERG の価格が上昇すると、リザーブは過剰担保となり、SigRSV 保有者は預け入れた時より多くの ERG を償還できます。逆に、ERG の価格が下落すると、SigRSV は SigmaUSD のペッグを維持するために損失を吸収します。これにより、清算や複雑なオラクル操作を必要としない市場駆動の安定化メカニズムが生まれます。\n\nSigRSV は ERG に対してブルッシュで、エコシステムの安定性に貢献しながらレバレッジド露出を望むユーザーにとって魅力的です。このプロトコルは過剰なレバレッジと担保不足の両方を防ぐ準備比率制限（400-800%）を執行します。ミントと償還はオラクルプールの価格データを使用するスマートコントラクトを通じて行われ、プロセス全体が透明でトラストレスです。",
       "features": [
-        "準備コイン",
-        "ERGエクスポージャー",
-        "SigmaUSDサポート",
-        "利益ポテンシャル"
+        "リザーブコイン",
+        "ERG エクスポージャー",
+        "SigmaUSD 裏付け",
+        "収益ポテンシャル"
       ]
     },
     "exle": {
       "name": "EXLE",
-      "description": "Crux Financeと統合されたErgoエコシステム内の貸付プロトコル。",
-      "longDescription": "EXLEはErgoエコシステム向けに開発中の分散型貸付プロトコルです。プロトコルはユーザーが資産を貸し出して利回りを得るか、担保を提供して借り入れができるようにし、eUTXOモデル上のDeFi機能を拡張することを目指しています。\n\nプロジェクトはポートフォリオ追跡と分析のためにCrux Financeと統合され、ユーザーが他のErgo投資と一緒に貸付ポジションを監視できるようにします。この統合はErgo DeFiエコシステム内で可能な可組み合わせ性を示しており、複数のプロトコルが協力して包括的な金融サービスを提供できます。\n\nEXLEはErgo DeFiの継続的なイノベーションを表しており、従来の貸付プリミティブをeUTXOアーキテクチャに適応させる方法を探求しています。",
+      "description": "Crux Finance と統合された Ergo エコシステム内のレンディング/ボローイングプロトコル。",
+      "longDescription": "EXLE は Ergo エコシステム向けに開発されている分散型レンディングおよびボローイングプロトコルです。このプロトコルは、ユーザーが資産を貸して利回りを得たり、担保を提供して借り入れたりできるようにし、eUTXO モデル上の DeFi 機能を拡張することを目指しています。\n\nこのプロジェクトはポートフォリオ追跡と分析のために Crux Finance と統合されており、ユーザーが他の Ergo 投資と一緒にレンディングポジションを監視できます。この統合は Ergo DeFi エコシステム内で可能な組み合わせ可能性を示しており、複数のプロトコルが連携して包括的な金融サービスを提供できます。\n\nEXLE は Ergo DeFi における継続的なイノベーションを代表しており、従来のレンディングプリミティブを eUTXO アーキテクチャにどのように適応させるかを探求しています。このプロトコルの開発は、拡張 UTXO モデルのセキュリティと予測可能性の利点を維持しながら完全な分散型金融ツールスイートを提供するという Ergo の目標に貢献しています。",
       "features": [
-        "貸付プロトコル",
-        "借り入れ",
-        "DeFi統合",
-        "Crux Finance統合"
+        "レンディングプロトコル",
+        "ボローイング",
+        "DeFi 統合",
+        "Crux Finance 統合"
       ]
     }
   },
   "ecosystemClient": {
     "allProjects": "すべてのプロジェクト",
     "noProjectsFound": "プロジェクトが見つかりません",
-    "learnMore": "詳細を学ぶ",
+    "learnMore": "詳しく見る",
     "visitProject": "プロジェクトを訪問",
     "exploreMore": "さらに探索",
     "technology": {
-      "title": "技術",
-      "subtitle": "これらのプロジェクトを動かす技術を学ぶ",
-      "description": "Ergoの技術スタックを深く掘り下げ、これらのプロジェクトを可能にするイノベーションを理解しましょう。"
+      "title": "テクノロジー",
+      "subtitle": "これらのプロジェクトを支える技術を学ぶ",
+      "description": "Ergo のテクノロジースタックに深く入り込み、これらのプロジェクトを可能にするイノベーションを理解する。"
     },
     "useCases": {
       "title": "ユースケース",
-      "subtitle": "Ergoで何を構築できるかを学ぶ",
-      "description": "実世界のアプリケーションを探索し、Ergoプラットフォームで構築できる可能性を発見しましょう。"
+      "subtitle": "Ergo 上で構築できるものを見る",
+      "description": "実世界のアプリケーションを探索し、Ergo プラットフォーム上での構築の可能性を発見する。"
     },
     "emailCapture": {
-      "title": "エコシステムの更新情報を受け取る",
-      "description": "新しいdApp、プロトコル更新、エコシステムの発展に関する通知を受け取る"
+      "title": "エコシステムの更新情報をキャッチアップ",
+      "description": "新しい dApp、プロトコルの更新、エコシステムの発展について通知を受け取る"
     }
   },
   "mapClient": {
     "hero": {
       "title": "エコシステムマップ",
-      "subtitle": "Ergoプロジェクト、ツール、チームのビジュアルマップ。クラスターを探索し、カテゴリでフィルタリングし、構築されているものを発見しましょう。",
+      "subtitle": "Ergo プロジェクト、ツール、チームのビジュアルマップ。クラスターを探索し、カテゴリでフィルタリングして、構築されているものを発見する。",
       "projects": "プロジェクト",
       "categories": "カテゴリ",
       "trending": "トレンド"
