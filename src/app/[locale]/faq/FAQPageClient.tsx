@@ -74,6 +74,7 @@ export default function FAQPageClient({
   stats 
 }: Props) {
   const t = useTranslations('faqPage')
+  const tFaq = useTranslations('faqData')
   const searchParams = useSearchParams()
   const initialLevel = searchParams.get('level') as FAQLevel | null
   
@@ -87,14 +88,17 @@ export default function FAQPageClient({
 
   const filteredFaqs = useMemo(() => {
     return currentFAQ.filter(faq => {
-      const categoryMatch = activeCategory === "All" || 
+      const categoryMatch = activeCategory === "All" ||
         faq.category.toLowerCase() === activeCategory.toLowerCase()
-      const searchMatch = !searchTerm || 
-        faq.question.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+      const faqEntry = tFaq.raw(faq.id) as { question: string; answer: string } | undefined
+      const question = faqEntry?.question ?? faq.question
+      const answer = faqEntry?.answer ?? faq.answer
+      const searchMatch = !searchTerm ||
+        question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        answer.toLowerCase().includes(searchTerm.toLowerCase())
       return categoryMatch && searchMatch
     })
-  }, [currentFAQ, searchTerm, activeCategory])
+  }, [currentFAQ, searchTerm, activeCategory, tFaq])
 
   const handleLevelChange = (level: FAQLevel) => {
     setActiveLevel(level)
@@ -228,6 +232,9 @@ export default function FAQPageClient({
             {filteredFaqs.length > 0 ? (
               filteredFaqs.map((faq) => {
                 const Icon = categoryIcons[faq.category] || HelpCircle
+                const faqEntry = tFaq.raw(faq.id) as { question: string; answer: string } | undefined
+                const question = faqEntry?.question ?? faq.question
+                const answer = faqEntry?.answer ?? faq.answer
                 return (
                   <motion.div key={faq.id} variants={itemVariants}>
                     <Card className="bg-black/80 border-white/10 hover:border-orange-500/30 transition-all duration-300">
@@ -241,7 +248,7 @@ export default function FAQPageClient({
                           </div>
                           <div className="flex-1">
                             <span className="text-base font-medium text-white group-hover:text-orange-400 transition-colors">
-                              {faq.question}
+                              {question}
                             </span>
                             <div className="flex items-center gap-2 mt-1">
                               <span className="text-xs text-neutral-400 uppercase tracking-wider">
@@ -278,7 +285,7 @@ export default function FAQPageClient({
                             <div className="px-5 pb-5">
                               <div className="ml-11 pt-3 border-t border-white/10">
                                 <p className="text-neutral-300 leading-relaxed whitespace-pre-line">
-                                  {faq.answer}
+                                  {answer}
                                 </p>
                               </div>
                             </div>
