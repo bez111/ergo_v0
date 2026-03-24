@@ -183,6 +183,334 @@
         "低电价是提高利润率的决定性因素",
         "需要综合考虑未来 ERG 的价格预期"
       ]
+    },
+    "how-private-is-ergo": {
+      "query": "Ergo 区块链的隐私性如何？",
+      "shortAnswer": "Ergo 默认不像 Monero 那样私密，但提供强大的可选隐私工具。ErgoMixer 提供非交互式、非托管混币。Sigma Protocols 在智能合约中实现零知识证明。隐身地址可隐藏收款方。关键区别在于：Ergo 的隐私是可编程的——你可以选择何时以及披露多少。",
+      "keyPoints": [
+        "可选隐私：默认透明，需要时可私密",
+        "ErgoMixer：非托管、非交互式代币混币",
+        "Sigma Protocols：在不暴露数据的情况下证明事实",
+        "隐身地址：隐藏交易收款方",
+        "可编程：在智能合约中实现隐私逻辑"
+      ]
+    },
+    "what-is-autolykos": {
+      "query": "Autolykos 是什么，它是如何工作的？",
+      "shortAnswer": "Autolykos 是 Ergo 为 GPU 挖矿设计的内存密集型工作量证明算法。它需要大量 RAM（目前约 2.5GB），使 ASIC 开发在经济上不可行。Autolykos v2（当前版本）在保持抗 ASIC 性的同时支持矿池挖矿。该算法通过保持消费级硬件的竞争力来促进去中心化。",
+      "keyPoints": [
+        "内存密集型：需要 RAM，而不仅仅是原始算力",
+        "抗 ASIC：消费级 GPU 保持竞争力",
+        "v2 升级：启用了矿池挖矿（2021年）",
+        "去中心化：家庭矿工可参与",
+        "公平：无法通过专用硬件获得挖矿优势"
+      ]
+    },
+    "what-is-storage-rent": {
+      "query": "Ergo 上的存储租金是什么？",
+      "shortAnswer": "存储租金是 Ergo 应对状态膨胀的解决方案。未花费超过 4 年的盒子（UTXO）可以被矿工扣除少量费用。这激励清理未使用的状态，在发行结束后为矿工提供长期收入，并保持区块链的可持续性。丢失的代币最终会重新进入流通，而非永久锁定。",
+      "keyPoints": [
+        "4年宽限期：活跃使用的盒子无需支付租金",
+        "矿工收入：区块奖励结束后的可持续收益",
+        "状态清理：激励删除未使用数据",
+        "丢失代币回收：休眠代币逐渐重新进入流通",
+        "可持续性：防止状态无限增长"
+      ]
+    },
+    "what-are-nipopows": {
+      "query": "NiPoPoWs 是什么，为什么它们重要？",
+      "shortAnswer": "NiPoPoWs（非交互式工作量证明的证明）是压缩区块链历史的密码学证明。轻客户端无需下载数 GB 的区块，只需几 KB 数据即可验证链的有效性。这使得真正无需信任的轻钱包、高效的跨链桥和侧链成为可能——且无需信任第三方。",
+      "keyPoints": [
+        "压缩：用千字节而非千兆字节验证链",
+        "无信任轻客户端：无需信任服务器",
+        "跨链桥：跨链的高效验证",
+        "侧链：与主链的安全通信",
+        "移动友好：在资源受限设备上实现完整安全性"
+      ]
+    },
+    "is-ergo-a-good-investment": {
+      "query": "Ergo 是一个好的投资吗？",
+      "shortAnswer": "这不是财务建议。Ergo 拥有强大的基本面：公平发行（无 VC 抛售风险）、创新技术（eUTXO、Sigma Protocols、NiPoPoWs）、活跃的开发以及密码朋克精神。这是一个市值较小的项目，风险/回报比主流链更高。请深入研究，了解技术，切勿投入超出承受能力的资金。",
+      "keyPoints": [
+        "公平发行：无内部人分配可供抛售",
+        "技术：独特创新（eUTXO、Sigma、NiPoPoWs）",
+        "活跃开发：自2019年以来持续进展",
+        "小市值：波动性更高，风险/回报更高",
+        "自行研究：这不是财务建议"
+      ]
+    },
+    "how-ergoscript-works": {
+      "query": "ErgoScript 是如何工作的？",
+      "shortAnswer": "ErgoScript 是 Ergo 的智能合约语言——一种基于 Scala 的函数式 DSL，编译为 ErgoTree。与 Solidity 的命令式风格不同，ErgoScript 是声明式的：你定义交易有效所必须满足的条件。它内置了 Sigma Protocols 支持以实现零知识证明，并在 eUTXO 模型上运行，其中脚本保护盒子。",
+      "keyPoints": [
+        "函数式：声明条件，而非命令式代码",
+        "基于 Scala：JVM 开发者熟悉的语法",
+        "Sigma Protocols：原生零知识证明支持",
+        "盒子保护：脚本保护 UTXO，而非账户",
+        "确定性：可预测的执行，已知的成本"
+      ]
+    },
+    "what-is-sigmausd": {
+      "query": "SigmaUSD 是什么，它是如何工作的？",
+      "shortAnswer": "SigmaUSD 是 Ergo 的算法稳定币，与美元挂钩，由 ERG 储备支持。它使用 AgeUSD 协议：用户通过存入 ERG 铸造 SigUSD，而 SigRSV 持有者提供储备支持并吸收波动。储备率（400-800%）确保稳定性。无中央化发行方，无银行账户——纯加密抵押。",
+      "keyPoints": [
+        "算法化：无中央发行方或银行支持",
+        "ERG 抵押：400-800% 储备率",
+        "SigRSV：储备代币吸收 ERG 波动",
+        "AgeUSD 协议：经过验证的稳定币机制",
+        "去中心化：由智能合约控制"
+      ]
+    },
+    "what-is-rosen-bridge": {
+      "query": "Rosen Bridge 是什么？",
+      "shortAnswer": "Rosen Bridge 是 Ergo 的跨链桥协议，用于区块链之间的无需信任资产转移。它将 Ergo 与 Cardano、Bitcoin（Runes）和 Dogecoin 连接起来。与中心化桥不同，Rosen 使用去中心化的观察者网络和多签安全机制。将资产带入 Ergo 的 DeFi 生态系统，或将 ERG 转移到其他链。",
+      "keyPoints": [
+        "跨链：Ergo <-> Cardano、Bitcoin、Dogecoin",
+        "去中心化：观察者网络，而非中央化托管",
+        "多签安全：分布式密钥管理",
+        "无需信任：在两条链上均可验证",
+        "持续扩展：更多链正在接入"
+      ]
+    },
+    "what-is-storage-rent-ergo": {
+      "query": "Ergo 上的存储租金是什么？",
+      "shortAnswer": "存储租金是 Ergo 实现长期可持续性的机制。未花费约 4 年的盒子（UTXO）需支付少量费用，该费用归矿工所有。这可防止状态膨胀、使丢失的代币重新流通，并确保发行结束后矿工仍有收入。就像为区块链存储空间支付租金一样。",
+      "keyPoints": [
+        "约 4 年不活跃后触发租金",
+        "从盒子价值中扣除少量费用",
+        "防止区块链状态膨胀",
+        "使丢失/遗忘的代币重新流通",
+        "为矿工提供长期收入",
+        "活跃用户不受影响"
+      ]
+    },
+    "what-happens-after-emission": {
+      "query": "所有 ERG 挖完后会发生什么？",
+      "shortAnswer": "当发行结束（约2045年）后，矿工将继续从交易费用和存储租金中获得收益。与仅依赖费用的 Bitcoin 不同，Ergo 的存储租金通过回收不活跃盒子中的代币提供可持续的收入来源。网络无需依赖不断增加的交易量即可保持安全。",
+      "keyPoints": [
+        "发行约在2045年结束",
+        "矿工获得交易费用",
+        "存储租金提供额外收入",
+        "丢失的代币得以重新流通",
+        "无\"安全预算\"危机",
+        "可持续性源于设计"
+      ]
+    },
+    "why-ergo-sustainable": {
+      "query": "为什么 Ergo 具有长期可持续性？",
+      "shortAnswer": "Ergo 通过三大支柱为 100 年以上的可持续性而设计：Autolykos 挖矿（公平、抗 ASIC）、NiPoPoWs（高效轻客户端）和存储租金（防止膨胀、为矿工提供资金）。与依赖无限增长的链不同，即使使用量稳定或下降，Ergo 的经济模型同样有效。",
+      "keyPoints": [
+        "Autolykos：抗 ASIC、去中心化挖矿",
+        "NiPoPoWs：无需信任的轻客户端",
+        "存储租金：可持续的矿工收入",
+        "无状态膨胀积累",
+        "无需无限增长也能运作",
+        "研究驱动、经同行评审的设计"
+      ]
+    },
+    "best-gpu-for-ergo-mining": {
+      "query": "挖掘 Ergo 最好的 GPU 是什么？",
+      "shortAnswer": "对于 Ergo 挖矿，内存带宽高的 GPU 表现最佳。常见选择包括 NVIDIA RTX 3060 Ti、3070、3080 和 AMD RX 6800 XT。最低需要 4GB 显存。最佳 GPU 取决于你的预算、电费和市场供应情况。效率（每瓦哈希率）比原始哈希率更重要。",
+      "keyPoints": [
+        "NVIDIA：RTX 3060 Ti、3070、3080 受欢迎",
+        "AMD：RX 6800 XT、6700 XT 是不错的选择",
+        "最低需要 4GB 显存",
+        "注重效率（MH/s 每瓦）",
+        "考虑二手市场获取性价比",
+        "两个品牌均能很好地支持 Autolykos"
+      ]
+    },
+    "how-miners-earn-on-ergo": {
+      "query": "Ergo 矿工如何赚钱？",
+      "shortAnswer": "Ergo 矿工从三个来源获得收益：区块奖励（新铸 ERG）、交易费用和存储租金。区块奖励会按照发行计划随时间减少，但存储租金确保了即使在所有 ERG 挖完之后仍有长期收入。大多数矿工使用矿池以获得稳定的收益。",
+      "keyPoints": [
+        "区块奖励：新铸 ERG",
+        "交易费用：由用户支付",
+        "存储租金：来自不活跃盒子",
+        "矿池挖矿：稳定的小额收益",
+        "单独挖矿：偶发的大额收益",
+        "以 ERG 结算，可出售或持有"
+      ]
+    },
+    "how-to-use-spectrum-dex": {
+      "query": "如何使用 Ergo 上的 Spectrum DEX？",
+      "shortAnswer": "将你的 Nautilus 钱包连接到 Spectrum Finance，选择要兑换的代币，查看汇率和滑点，然后确认。Spectrum 使用 AMM 流动性池进行即时交易。你也可以提供流动性以赚取手续费。所有交易都是原子性的——要么完全成功，要么完全失败，不可能发生抢先交易。",
+      "keyPoints": [
+        "将 Nautilus 钱包连接到 spectrum.fi",
+        "选择代币和兑换数量",
+        "查看汇率、滑点和费用",
+        "在钱包中确认交易",
+        "提供流动性以赚取手续费",
+        "无抢先交易或 MEV 提取"
+      ]
+    },
+    "how-to-provide-liquidity-ergo": {
+      "query": "如何在 Ergo 上提供流动性？",
+      "shortAnswer": "在 Spectrum Finance 上选择一个流动性池，存入等值的两种代币，即可收到代表你份额的 LP 代币。你将获得所有交易手续费的一部分。随时可通过归还 LP 代币来提取。如果代币价格出现较大分歧，需注意无常损失风险。",
+      "keyPoints": [
+        "在 Spectrum Finance 上选择流动性池",
+        "存入等值的两种代币",
+        "收到 LP 代币作为凭证",
+        "赚取交易手续费份额",
+        "随时可用 LP 代币提取",
+        "风险：价格分歧可能导致无常损失"
+      ]
+    },
+    "how-to-use-sigmausd": {
+      "query": "如何使用 SigmaUSD 稳定币？",
+      "shortAnswer": "SigmaUSD 是 Ergo 与美元挂钩的算法稳定币。在 sigmausd.io 上存入 ERG 作为抵押即可铸造。用于稳定价值储存、交易对或 DeFi。随时可赎回为 ERG。协议使用 SigRSV 吸收波动——SigRSV 持有者承担风险以换取潜在收益。",
+      "keyPoints": [
+        "在 sigmausd.io 用 ERG 抵押铸造",
+        "与约 $1 美元价值挂钩",
+        "由 ERG 储备超额抵押",
+        "随时可赎回为 ERG",
+        "SigRSV 吸收价格波动",
+        "去中心化，无中央发行方"
+      ]
+    },
+    "why-proof-of-work-matters": {
+      "query": "工作量证明为什么对去中心化很重要？",
+      "shortAnswer": "工作量证明提供最强的抗审查性，因为任何人都可以无需许可地参与挖矿。与 PoS 中验证者可被识别和施压不同，PoW 矿工是匿名且可替换的。能源成本创造了一个无法被监管者或内部人控制的现实世界锚点。",
+      "keyPoints": [
+        "无需许可：任何人都可以挖矿",
+        "匿名性：矿工难以被识别/施压",
+        "现实成本：无法被内部人操控",
+        "无\"富者愈富\"的质押动态",
+        "经过验证的安全模型（Bitcoin 自2009年以来）",
+        "设计上的抗审查性"
+      ]
+    },
+    "is-pow-better-than-pos": {
+      "query": "工作量证明比权益证明更好吗？",
+      "shortAnswer": "各有取舍。PoW 提供更强的抗审查性、更公平的分配，以及无\"富者愈富\"的动态。PoS 更节能，但会向大型质押者集中，且更易受监管压力影响。对于金融自由和去中心化，PoW 更优；对于纯粹的效率，PoS 占优。",
+      "keyPoints": [
+        "PoW：更强的抗审查性",
+        "PoW：更公平的分配（无预挖优势）",
+        "PoW：匿名、无需许可的参与",
+        "PoS：更节能",
+        "PoS：向大型质押者集中",
+        "PoS：验证者可被监管/施压"
+      ]
+    },
+    "what-is-financial-repression": {
+      "query": "什么是金融压制，Ergo 如何应对？",
+      "shortAnswer": "金融压制包括资本管制、账户冻结、监控、通货膨胀以及对金融自由的限制。政府使用这些工具来控制公民。Ergo 提供出路：自我托管（无账户冻结）、隐私（无监控）、抗审查（无法封锁交易）和健全货币（无通胀）。",
+      "keyPoints": [
+        "资本管制：Ergo 无国界限制",
+        "账户冻结：自我托管，你掌控密钥",
+        "监控：Sigma Protocols 保护隐私",
+        "通胀：固定供应，可预测的发行",
+        "审查：PoW，无人可封锁交易",
+        "过度 KYC：无需许可的访问"
+      ]
+    },
+    "why-no-vc-funding-matters": {
+      "query": "为什么 Ergo 缺乏 VC 资助很重要？",
+      "shortAnswer": "VC 资助的链存在激励不一致的问题：VC 需要退出，因此他们推动炒作而非实质内容、中央化控制和代币抛售。Ergo 的公平发行意味着没有内部人分配、没有推高价格的压力、没有公司治理。社区控制 Ergo，而非寻求回报的投资者。",
+      "keyPoints": [
+        "无内部人代币分配",
+        "无为 VC 退出而拉升价格的压力",
+        "社区驱动的开发",
+        "无公司治理俘获",
+        "激励一致：建设者，而非投机者",
+        "从第一天起真正去中心化"
+      ]
+    },
+    "how-is-ergo-different-from-bitcoin": {
+      "query": "Ergo 与 Bitcoin 有何不同？",
+      "shortAnswer": "Ergo 在 Bitcoin 模型基础上增加了智能合约。两者都使用 PoW 和 UTXO，但 Ergo 添加了：eUTXO（可编程盒子）、ErgoScript（智能合约）、Sigma Protocols（隐私）、存储租金（可持续性）和 NiPoPoWs（轻客户端）。可以把 Ergo 理解为\"正确实现智能合约的 Bitcoin\"。",
+      "keyPoints": [
+        "相同：PoW 共识、UTXO 模型、公平发行",
+        "Ergo 新增：通过 ErgoScript 实现智能合约",
+        "Ergo 新增：通过 Sigma Protocols 实现隐私",
+        "Ergo 新增：存储租金以实现可持续性",
+        "Ergo 新增：NiPoPoWs 支持轻客户端",
+        "Bitcoin：价值储存；Ergo：可编程价值"
+      ]
+    },
+    "ergo-vs-cardano-comparison": {
+      "query": "Ergo 和 Cardano 有什么区别？",
+      "shortAnswer": "两者都使用 eUTXO，但在共识和理念上有所不同。Ergo：PoW（Autolykos）、公平发行、无 VC 资助、存储租金。Cardano：PoS（Ouroboros）、VC 资助、生态系统更大。Ergo 优先考虑去中心化和可持续性；Cardano 优先考虑学术严谨性和机构采用。",
+      "keyPoints": [
+        "相同：eUTXO 智能合约模型",
+        "Ergo：PoW；Cardano：PoS",
+        "Ergo：公平发行；Cardano：VC 资助",
+        "Ergo：存储租金；Cardano：无租金机制",
+        "Cardano：生态系统更大、资金更充足",
+        "Ergo：更去中心化、密码朋克精神"
+      ]
+    },
+    "ergo-vs-solana-comparison": {
+      "query": "Ergo 与 Solana 相比如何？",
+      "shortAnswer": "截然相反的理念。Solana：PoS、VC 资助、速度优先、中心化验证者、频繁宕机。Ergo：PoW、公平发行、安全优先、去中心化挖矿、100% 正常运行时间。Solana 以去中心化换取速度；Ergo 将安全性和抗审查性置于原始 TPS 之上。",
+      "keyPoints": [
+        "Solana：具有中心化验证者的 PoS",
+        "Ergo：具有去中心化矿工的 PoW",
+        "Solana：VC 资助，内部人分配",
+        "Ergo：公平发行，无预挖",
+        "Solana：速度快但频繁宕机",
+        "Ergo：速度较慢但 100% 正常运行"
+      ]
+    },
+    "can-ergo-be-traced": {
+      "query": "Ergo 交易可以被追踪吗？",
+      "shortAnswer": "默认情况下，Ergo 交易像 Bitcoin 一样是公开的。然而，Ergo 提供隐私工具：用于混币的 ErgoMixer、用于零知识证明的 Sigma Protocols 以及隐身地址。隐私是可选的但功能强大——你可以在不暴露数据本身的情况下证明关于数据的事实。",
+      "keyPoints": [
+        "默认：公开区块链（类似 Bitcoin）",
+        "ErgoMixer：混合交易以保护隐私",
+        "Sigma Protocols：零知识证明",
+        "隐身地址：隐藏收款方",
+        "可选隐私：按需选择",
+        "可在不披露详情的情况下证明合规性"
+      ]
+    },
+    "is-ergo-anonymous": {
+      "query": "Ergo 是匿名的吗？",
+      "shortAnswer": "默认不是，但可以做到。基础 Ergo 交易是伪匿名的（地址可见，非姓名）。如需匿名，可使用 ErgoMixer 打断交易关联、通过 Sigma Protocols 实现零知识证明，并采用适当的操作安全措施。Ergo 提供\"按需隐私\"而非像 Monero 那样的始终开启隐私。",
+      "keyPoints": [
+        "默认伪匿名（地址可见，非姓名）",
+        "ErgoMixer：打断交易关联",
+        "Sigma Protocols：证明而不披露",
+        "隐私是可选的，非强制的",
+        "更适合选择性披露",
+        "操作安全同样重要"
+      ]
+    },
+    "what-is-ergomixer": {
+      "query": "ErgoMixer 是什么，它是如何工作的？",
+      "shortAnswer": "ErgoMixer 是一个非托管、无需信任的混币服务，打断你的输入和输出地址之间的关联。它使用 Sigma Protocols 证明你有权提取，而无需暴露哪笔存款是你的。与中心化混币器不同，没有可能盗窃资金或保留日志的可信第三方。",
+      "keyPoints": [
+        "非托管：你掌控你的资金",
+        "无需信任：运营商无法盗窃或记录日志",
+        "使用 Sigma Protocols 进行证明",
+        "打断交易图关联",
+        "多轮混币以增强隐私",
+        "开源、可验证的代码"
+      ]
+    },
+    "what-can-i-do-with-ergo": {
+      "query": "我可以用 Ergo 做什么？",
+      "shortAnswer": "Ergo 支持完整的生态系统：在 Spectrum DEX 上交易、使用 SigmaUSD 稳定币、通过 ErgoMixer 混合交易、在 SkyHarbor 收集 NFT、用 GPU 挖矿、在 DuckPools 借贷、通过 Rosen 桥接到其他链，以及用 ErgoScript 构建 dApp。这是一个完整的去中心化金融和应用平台。",
+      "keyPoints": [
+        "交易：Spectrum DEX（兑换、流动性）",
+        "稳定价值：SigmaUSD 稳定币",
+        "隐私：ErgoMixer 交易混币",
+        "NFT：SkyHarbor 市场",
+        "挖矿：使用 Autolykos 进行 GPU 挖矿",
+        "开发：ErgoScript 智能合约"
+      ]
+    },
+    "what-are-ergo-nfts": {
+      "query": "Ergo 上的 NFT 是如何工作的？",
+      "shortAnswer": "Ergo NFT 是数量为 1 的原生代币，使每个代币独一无二。与 Ethereum NFT 需要智能合约不同，Ergo NFT 是协议的一等公民。铸造费用极低（约 0.001 ERG），可在 SkyHarbor 市场交易，并享有完整的 eUTXO 安全保障。NFT 可包含丰富的元数据和版税。",
+      "keyPoints": [
+        "原生代币（无需包装合约）",
+        "铸造约 0.001 ERG（几分钱）",
+        "在 SkyHarbor 市场交易",
+        "支持元数据和版税",
+        "与 ERG 本身相同的安全性",
+        "可在智能合约中使用"
+      ]
     }
   },
   "topicsData": {

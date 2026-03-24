@@ -1,5 +1,524 @@
 {
-  "questionsData": {},
+  "questionsData": {
+    "how-to-build-defi-on-ergo": {
+      "query": "Comment construire des DeFi sur Ergo ?",
+      "shortAnswer": "Construire des DeFi sur Ergo commence par la comprehension du modele eUTXO et d'ErgoScript. Contrairement aux chaines basees sur les comptes, le modele de boites d'Ergo offre une execution deterministe, pas de MEV par conception et des couts de gaz previsibles. Utilisez les Oracle Pools pour les flux de prix et tirez parti des modeles existants de Spectrum Finance et SigmaUSD.",
+      "keyPoints": [
+        "Apprendre les fondamentaux eUTXO - les boites contiennent valeur, donnees et conditions de depense",
+        "Maitriser ErgoScript - le langage fonctionnel de smart contracts d'Ergo",
+        "Integrer les Oracle Pools pour des donnees hors-chaine fiables",
+        "Etudier les DeFi existants : Spectrum (DEX), SigmaUSD (stablecoin), DuckPools (pret)"
+      ]
+    },
+    "what-is-eutxo": {
+      "query": "Qu'est-ce que eUTXO et comment cela fonctionne-t-il ?",
+      "shortAnswer": "eUTXO (Extended Unspent Transaction Output) est le modele de smart contracts d'Ergo qui etend l'UTXO de Bitcoin avec une logique programmable. Chaque boite contient des ERG, des tokens, des registres de donnees et un script de garde. Les transactions consomment des boites et en creent de nouvelles, permettant une execution deterministe, un traitement parallele et aucune attaque de reentrancy.",
+      "keyPoints": [
+        "Boites = UTXOs avec super-pouvoirs : valeur + tokens + donnees + script",
+        "Deterministe : cout d'execution connu avant l'envoi",
+        "Parallele : les transactions independantes se traitent simultanement",
+        "Securise : pas de reentrancy, pas de front-running par conception"
+      ]
+    },
+    "ergo-vs-ethereum-for-defi": {
+      "query": "Ergo est-il meilleur qu'Ethereum pour la DeFi ?",
+      "shortAnswer": "Ergo offre des avantages structurels pour la DeFi : pas d'extraction MEV, des couts de gaz deterministes et pas d'attaques de reentrancy grace a eUTXO. Ethereum dispose d'un ecosysteme plus large et de plus de liquidite. Choisissez Ergo pour les applications critiques en matiere de securite, les transactions equitables et les couts previsibles. Choisissez Ethereum pour une composabilite maximale avec les protocoles existants.",
+      "keyPoints": [
+        "Ergo : pas de MEV, pas de front-running, pas d'attaques sandwich",
+        "Ergo : frais previsibles (~0,01 $), connus avant l'envoi",
+        "Ergo : pas de vulnerabilites de reentrancy par conception",
+        "Ethereum : ecosysteme plus large, plus de liquidite, plus d'outils",
+        "Compromis : securite vs taille de l'ecosysteme"
+      ]
+    },
+    "is-ergo-better-than-monero-for-privacy": {
+      "query": "Ergo est-il meilleur que Monero pour la confidentialite ?",
+      "shortAnswer": "Des modeles de confidentialite differents pour des besoins differents. Monero fournit une confidentialite permanente au niveau du protocole avec des signatures en anneau. Ergo offre une confidentialite optionnelle via les Sigma Protocols avec divulgation selective - vous pouvez prouver des choses sur des donnees sans les reveler. Ergo excelle dans la confidentialite programmable (smart contracts prives), tandis que Monero excelle dans les transferts prives simples.",
+      "keyPoints": [
+        "Monero : confidentialite permanente, signatures en anneau, adresses furtives",
+        "Ergo : confidentialite optionnelle via Sigma Protocols, divulgation selective",
+        "Ergo : confidentialite programmable - smart contracts prives possibles",
+        "Monero : UX plus simple pour les paiements prives basiques",
+        "Ergo : peut prouver la conformite sans reveler les details"
+      ]
+    },
+    "what-are-sigma-protocols": {
+      "query": "Que sont les Sigma Protocols et comment fonctionnent-ils ?",
+      "shortAnswer": "Les Sigma Protocols sont des systemes de preuve a connaissance nulle qui vous permettent de prouver des affirmations sur des donnees sans les reveler. Sur Ergo, ils sont integres dans ErgoScript, permettant des smart contracts preservant la confidentialite. Vous pouvez prouver que vous possedez des fonds, remplissez des conditions ou appartenez a un groupe - sans exposer votre identite ni les valeurs exactes.",
+      "keyPoints": [
+        "Connaissance nulle : prouver que quelque chose est vrai sans reveler pourquoi",
+        "Integre dans ErgoScript : primitives de confidentialite de premier ordre",
+        "Divulgation selective : ne reveler que le necessaire",
+        "Cas d'usage : signatures en anneau, signatures a seuil, vote prive"
+      ]
+    },
+    "how-private-is-ergo": {
+      "query": "Quel est le niveau de confidentialite de la blockchain Ergo ?",
+      "shortAnswer": "Ergo n'est pas prive par defaut comme Monero, mais offre de puissants outils de confidentialite optionnels. ErgoMixer fournit un mixage non interactif et non custodial. Les Sigma Protocols permettent des preuves a connaissance nulle dans les smart contracts. Les adresses furtives cachent les destinataires. La difference cle : la confidentialite d'Ergo est programmable - vous choisissez quand et combien reveler.",
+      "keyPoints": [
+        "Confidentialite optionnelle : transparent par defaut, prive quand necessaire",
+        "ErgoMixer : mixage de tokens non custodial et non interactif",
+        "Sigma Protocols : prouver des choses sans reveler les donnees",
+        "Adresses furtives : cacher les destinataires des transactions",
+        "Programmable : logique de confidentialite dans les smart contracts"
+      ]
+    },
+    "how-to-escape-financial-repression-with-ergo": {
+      "query": "Comment echapper a la repression financiere avec Ergo ?",
+      "shortAnswer": "Ergo fournit des outils pour la souverainete financiere : auto-garde sans tiers, transactions resistantes a la censure via PoW, confidentialite optionnelle avec Sigma Protocols et argent programmable sans permission. Contrairement aux chaines financees par des VC, Ergo n'a pas d'autorite centrale pouvant geler des fonds ou se conformer aux sanctions. Vos cles, vos coins, votre liberte.",
+      "keyPoints": [
+        "Auto-garde : pas de banques, pas d'intermediaires, pas de permission requise",
+        "Resistant a la censure : minage PoW, pas de comites de validateurs sous pression",
+        "Confidentialite optionnelle : Sigma Protocols, ErgoMixer pour quand vous en avez besoin",
+        "Lancement equitable : pas de controle VC, pas de pre-mine, propriete communautaire",
+        "Programmable : construisez vos propres outils financiers"
+      ]
+    },
+    "why-ergo-fair-launch-matters": {
+      "query": "Pourquoi le lancement equitable d'Ergo est-il important ?",
+      "shortAnswer": "Ergo n'avait pas de pre-mine, pas d'ICO, pas d'allocation VC. 100 % des ERG proviennent du minage. Cela signifie : pas d'insiders qui vous inondent de tokens, pas de VCs controlant la gouvernance, pas de fondation avec une participation majoritaire. Un lancement equitable cree une veritable decentralisation - le reseau appartient aux mineurs et aux utilisateurs, pas aux premiers investisseurs cherchant une liquidite de sortie.",
+      "keyPoints": [
+        "Pas de pre-mine : zero coins avant le debut du minage",
+        "Pas d'ICO/IEO : pas de vente de tokens aux insiders ou VCs",
+        "Pas d'allocation VC : pas d'investisseurs avec pouvoir de gouvernance",
+        "Veritable decentralisation : reseau appartenant aux participants",
+        "Incentives alignes : constructeurs et utilisateurs, pas d'extracteurs"
+      ]
+    },
+    "how-to-mine-ergo": {
+      "query": "Comment miner Ergo ?",
+      "shortAnswer": "Ergo utilise Autolykos v2, un algorithme PoW resistant aux ASIC et a forte memoire. Vous pouvez miner avec des GPU grand public (4 Go+ de VRAM). Etapes : obtenir un portefeuille, choisir un logiciel de minage (lolMiner, T-Rex, Nanominer), rejoindre un pool (Herominers, 2Miners, Nanopool), configurer votre mineur avec l'adresse du pool et votre portefeuille. Le minage en solo est possible mais les pools offrent des revenus plus stables.",
+      "keyPoints": [
+        "Minage GPU : fonctionne avec des cartes 4 Go+ VRAM (AMD/NVIDIA)",
+        "Resistant aux ASIC : Autolykos v2 egalise les chances",
+        "Minage en pool recommande : recompenses plus stables pour la plupart des mineurs",
+        "Logiciels : lolMiner, T-Rex, Nanominer, SRBMiner",
+        "Rentabilite : verifier les taux actuels sur whattomine.com"
+      ]
+    },
+    "what-is-autolykos": {
+      "query": "Qu'est-ce qu'Autolykos et comment fonctionne-t-il ?",
+      "shortAnswer": "Autolykos est l'algorithme Proof-of-Work a forte memoire d'Ergo, concu pour le minage GPU. Il necessite une RAM importante (actuellement ~2,5 Go), rendant le developpement d'ASIC non economique. Autolykos v2 (version actuelle) permet le minage en pool tout en maintenant la resistance aux ASIC. L'algorithme favorise la decentralisation en gardant le minage accessible au materiel grand public.",
+      "keyPoints": [
+        "A forte memoire : necessite de la RAM, pas seulement de la puissance de calcul brute",
+        "Resistant aux ASIC : les GPU grand public restent competitifs",
+        "Mise a niveau v2 : minage en pool actif (2021)",
+        "Decentralisation : accessible aux mineurs a domicile",
+        "Equitable : pas d'avantage de minage avec du materiel specialise"
+      ]
+    },
+    "what-is-storage-rent": {
+      "query": "Qu'est-ce que le storage rent sur Ergo ?",
+      "shortAnswer": "Le storage rent est la solution d'Ergo contre la surcharge d'etat. Les boites (UTXOs) qui restent non depensees pendant plus de 4 ans peuvent se voir prelever de petits frais par les mineurs. Cela incite au nettoyage des etats inutilises, fournit des revenus a long terme aux mineurs apres la fin de l'emission et maintient la blockchain durable. Les coins perdus reviennent finalement en circulation au lieu d'etre bloques pour toujours.",
+      "keyPoints": [
+        "Periode de grace de 4 ans : pas de loyer pour les boites activement utilisees",
+        "Revenus des mineurs : revenu durable apres la fin des recompenses de blocs",
+        "Nettoyage de l'etat : incite a supprimer les donnees inutilisees",
+        "Recuperation des coins perdus : les coins dormants reviennent progressivement en circulation",
+        "Durabilite : empeche la croissance infinie de l'etat"
+      ]
+    },
+    "what-are-nipopows": {
+      "query": "Que sont les NiPoPoWs et pourquoi sont-ils importants ?",
+      "shortAnswer": "Les NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) sont des preuves cryptographiques qui compriment l'historique de la blockchain. Au lieu de telecharger des gigaoctets de blocs, les clients legers peuvent verifier la chaine avec seulement des kilooctets de donnees. Cela permet de vrais portefeuilles legers sans confiance, des ponts inter-chaines efficaces et des sidechains - le tout sans faire confiance a des tiers.",
+      "keyPoints": [
+        "Compression : verifier la chaine avec des kilooctets, pas des gigaoctets",
+        "Clients legers sans confiance : pas besoin de faire confiance aux serveurs",
+        "Ponts inter-chaines : verification efficace entre les chaines",
+        "Sidechains : communication securisee avec la chaine principale",
+        "Compatible mobile : securite complete sur les appareils a ressources limitees"
+      ]
+    },
+    "what-is-mev-resistance": {
+      "query": "Qu'est-ce que la resistance au MEV et pourquoi Ergo l'a-t-il ?",
+      "shortAnswer": "Le MEV (Maximal Extractable Value) est le profit extrait en reordonnant, inserant ou censurant des transactions - pensez au front-running et aux attaques sandwich. Le modele eUTXO d'Ergo fournit une resistance structurelle au MEV : les transactions referent des boites specifiques (UTXOs), rendant les attaques de reordonnancement beaucoup plus difficiles. Il n'y a pas d'etat global partage a exploiter comme dans les chaines basees sur des comptes.",
+      "keyPoints": [
+        "MEV = valeur extraite en manipulant l'ordre des transactions",
+        "Protection eUTXO : les transactions referent des boites specifiques",
+        "Pas d'etat global : plus difficile de faire du front-run ou du sandwich",
+        "Execution previsible : savoir exactement ce qui va se passer",
+        "Transactions equitables : pas de dynamiques de foret sombre"
+      ]
+    },
+    "how-to-get-started-with-ergo": {
+      "query": "Comment debuter avec Ergo ?",
+      "shortAnswer": "Commencez par obtenir un portefeuille (Nautilus pour navigateur, Terminus pour mobile). Sauvegardez votre phrase de recuperation de facon securisee hors ligne. Obtenez des ERG sur un exchange (Gate.io, KuCoin) ou un DEX (Spectrum). Faites une transaction de test. Ensuite explorez : essayez la DeFi sur Spectrum, decouvrez les NFTs ou plongez dans la technologie si vous etes developpeur.",
+      "keyPoints": [
+        "Portefeuille : Nautilus (navigateur), Terminus (mobile), Satergo (bureau)",
+        "Phrase de recuperation : ecrivez-la, conservez hors ligne, ne la partagez jamais",
+        "Obtenir des ERG : exchanges (Gate.io, KuCoin) ou Spectrum DEX",
+        "Tester : envoyer une petite transaction a vous-meme",
+        "Explorer : DeFi, NFTs, minage ou construction"
+      ]
+    },
+    "where-to-buy-ergo": {
+      "query": "Ou acheter des ERG ?",
+      "shortAnswer": "Les ERG sont disponibles sur les exchanges centralises (Gate.io, KuCoin, Bitmart) et les exchanges decentralises (Spectrum Finance sur Ergo, Rosen Bridge depuis d'autres chaines). Pour l'auto-garde, achetez sur un exchange et retirez vers votre portefeuille Nautilus ou Terminus. Pour une decentralisation maximale, utilisez Spectrum DEX directement avec un portefeuille non custodial.",
+      "keyPoints": [
+        "Centralise : Gate.io, KuCoin, Bitmart, CoinEx",
+        "Decentralise : Spectrum Finance (DEX natif)",
+        "Inter-chaines : Rosen Bridge depuis Cardano, Bitcoin",
+        "Auto-garde : toujours retirer vers votre propre portefeuille",
+        "Verifier : consulter les liens officiels, eviter les arnaques"
+      ]
+    },
+    "is-ergo-a-good-investment": {
+      "query": "Ergo est-il un bon investissement ?",
+      "shortAnswer": "Ce n'est pas un conseil financier. Ergo a de solides fondamentaux : lancement equitable (pas de risque de dump VC), technologie innovante (eUTXO, Sigma Protocols, NiPoPoWs), developpement actif et un ethos cypherpunk. C'est un projet a petite capitalisation boursiere avec un risque/rendement plus eleve que les chaines etablies. Faites vos recherches, comprenez la technologie et n'investissez jamais plus que ce que vous pouvez vous permettre de perdre.",
+      "keyPoints": [
+        "Lancement equitable : pas d'allocations d'insiders a dumper",
+        "Technologie : innovations uniques (eUTXO, Sigma, NiPoPoWs)",
+        "Developpement actif : progres constant depuis 2019",
+        "Small cap : plus grande volatilite, risque/rendement plus eleve",
+        "DYOR : ce n'est pas un conseil financier"
+      ]
+    },
+    "how-ergoscript-works": {
+      "query": "Comment fonctionne ErgoScript ?",
+      "shortAnswer": "ErgoScript est le langage de smart contracts d'Ergo - un DSL fonctionnel base sur Scala qui compile vers ErgoTree. Contrairement au style imperatif de Solidity, ErgoScript est declaratif : vous definissez des conditions qui doivent etre vraies pour qu'une transaction soit valide. Il dispose d'un support integre des Sigma Protocols pour les preuves a connaissance nulle et opere sur le modele eUTXO ou les scripts gardent les boites.",
+      "keyPoints": [
+        "Fonctionnel : conditions declaratives, pas de code imperatif",
+        "Base sur Scala : syntaxe familiere pour les developpeurs JVM",
+        "Sigma Protocols : support natif des preuves a connaissance nulle",
+        "Garde de boites : les scripts protegent les UTXOs, pas les comptes",
+        "Deterministe : execution previsible, couts connus"
+      ]
+    },
+    "what-is-sigmausd": {
+      "query": "Qu'est-ce que SigmaUSD et comment cela fonctionne-t-il ?",
+      "shortAnswer": "SigmaUSD est le stablecoin algorithmique d'Ergo, indexe sur le dollar et garanti par des reserves d'ERG. Il utilise le protocole AgeUSD : les utilisateurs mintent des SigUSD en deposant des ERG, tandis que les detenteurs de SigRSV fournissent la reserve de soutien et absorbent la volatilite. Le ratio de reserve (400-800 %) garantit la stabilite. Pas d'emetteur centralise, pas de comptes bancaires - pur collateral crypto.",
+      "keyPoints": [
+        "Algorithmique : pas d'emetteur centralise ni de garantie bancaire",
+        "Collateral ERG : ratio de reserve 400-800 %",
+        "SigRSV : le token de reserve absorbe la volatilite d'ERG",
+        "Protocole AgeUSD : mecanisme de stablecoin eprouve",
+        "Decentralise : controle par smart contract"
+      ]
+    },
+    "what-is-rosen-bridge": {
+      "query": "Qu'est-ce que Rosen Bridge ?",
+      "shortAnswer": "Rosen Bridge est le protocole de pont inter-chaines d'Ergo pour les transferts d'actifs sans confiance entre blockchains. Il connecte Ergo a Cardano, Bitcoin (Runes) et Dogecoin. Contrairement aux ponts centralises, Rosen utilise un reseau de gardiens decentralises et une securite multi-sig. Apportez des actifs dans l'ecosysteme DeFi d'Ergo ou transferez des ERG vers d'autres chaines.",
+      "keyPoints": [
+        "Inter-chaines : Ergo <-> Cardano, Bitcoin, Dogecoin",
+        "Decentralise : reseau de gardiens, pas de depositaire centralise",
+        "Securite multi-sig : gestion de cles distribuee",
+        "Sans confiance : verification sur les deux chaines",
+        "En croissance : d'autres chaines sont ajoutees"
+      ]
+    },
+    "what-is-ergo-blockchain": {
+      "query": "Qu'est-ce que la blockchain Ergo ?",
+      "shortAnswer": "Ergo est une blockchain Proof-of-Work lancee equitablement avec des capacites avancees de smart contracts. Elle combine le modele de securite de Bitcoin (UTXO, PoW) avec une programmabilite de style Ethereum via le modele eUTXO et ErgoScript. Pas de pre-mine, pas d'ICO, pas de controle VC - construite par des cypherpunks pour la liberte financiere.",
+      "keyPoints": [
+        "Proof-of-Work avec Autolykos (resistant aux ASIC, favorable aux GPU)",
+        "Modele eUTXO : securite Bitcoin + smart contracts",
+        "Lancement equitable : pas de pre-mine, pas d'ICO, pas d'allocation VC",
+        "Confidentialite via Sigma Protocols (preuves a connaissance nulle)",
+        "Storage rent pour la durabilite a long terme",
+        "NiPoPoWs pour les clients legers et les sidechains"
+      ]
+    },
+    "how-to-buy-erg": {
+      "query": "Comment acheter de la cryptomonnaie ERG ?",
+      "shortAnswer": "Achetez des ERG sur des exchanges centralises (KuCoin, Gate.io, CoinEx) ou des exchanges decentralises (Spectrum Finance). Creez d'abord un portefeuille (Nautilus recommande), puis achetez des ERG et retirez-les vers votre portefeuille. Ne laissez jamais de grandes sommes sur les exchanges - l'auto-garde est essentielle.",
+      "keyPoints": [
+        "Centralise : KuCoin, Gate.io, CoinEx, Bitpanda",
+        "Decentralise : Spectrum Finance (echange depuis d'autres tokens)",
+        "Creer d'abord un portefeuille (extension navigateur Nautilus)",
+        "Retirer vers votre portefeuille apres achat",
+        "Ne jamais partager votre phrase de recuperation avec qui que ce soit",
+        "Commencer petit pour apprendre le processus"
+      ]
+    },
+    "what-wallet-for-ergo": {
+      "query": "Quel est le meilleur portefeuille pour Ergo ?",
+      "shortAnswer": "Nautilus est le portefeuille Ergo le plus populaire - une extension de navigateur supportant toutes les fonctionnalites Ergo incluant les tokens, NFTs et connexions dApp. Pour mobile, utilisez Terminus. Pour une securite maximale, associez Nautilus a un portefeuille materiel Ledger. Sauvegardez toujours votre phrase de recuperation hors ligne.",
+      "keyPoints": [
+        "Nautilus : extension navigateur, toutes fonctionnalites, support dApp",
+        "Terminus : portefeuille mobile pour iOS/Android",
+        "SAFEW : portefeuille bureau avec fonctionnalites avancees",
+        "Ledger : portefeuille materiel pour une securite maximale",
+        "Tous supportent ERG, tokens et NFTs",
+        "Sauvegarder la phrase de recuperation avant d'utiliser !"
+      ]
+    },
+    "is-ergo-safe": {
+      "query": "Ergo est-il sur et securise ?",
+      "shortAnswer": "Oui, Ergo est hautement securise. Il utilise Proof-of-Work (le meme modele de securite que Bitcoin), n'a jamais ete pirate et le modele eUTXO elimine des categories entieres de vulnerabilites dans les smart contracts. Le code est open-source et revu par des pairs. Votre securite depend aussi d'une bonne gestion de votre phrase de recuperation.",
+      "keyPoints": [
+        "Consensus PoW : modele de securite eprouve (comme Bitcoin)",
+        "N'a jamais ete attaque avec succes",
+        "eUTXO previent les attaques de reentrancy",
+        "Code open-source, revu par des pairs",
+        "Pas de point de defaillance central",
+        "Votre securite : protegez votre phrase de recuperation !"
+      ]
+    },
+    "what-is-ergoscript": {
+      "query": "Qu'est-ce qu'ErgoScript et comment fonctionne-t-il ?",
+      "shortAnswer": "ErgoScript est le langage de smart contracts d'Ergo - un langage fonctionnel base sur Scala qui compile vers ErgoTree pour l'execution on-chain. Contrairement a Solidity, ErgoScript n'est pas Turing-complet par conception, garantissant des couts d'execution previsibles et une verification formelle plus facile. Il est suffisamment puissant pour des DeFi complexes, mais suffisamment sur pour etre audite.",
+      "keyPoints": [
+        "Langage fonctionnel base sur Scala",
+        "Compile vers ErgoTree (format on-chain)",
+        "Pas Turing-complet : couts previsibles",
+        "Supporte nativement les Sigma Protocols",
+        "Plus facile a auditer que Solidity",
+        "Propulse tous les smart contracts Ergo"
+      ]
+    },
+    "what-is-storage-rent-ergo": {
+      "query": "Qu'est-ce que le storage rent sur Ergo ?",
+      "shortAnswer": "Le storage rent est le mecanisme d'Ergo pour la durabilite a long terme. Les boites (UTXOs) qui restent non depensees pendant ~4 ans paient de petits frais qui vont aux mineurs. Cela empeche la surcharge d'etat, remet en circulation les coins perdus et assure que les mineurs ont des revenus meme apres la fin de l'emission. C'est comme payer un loyer pour l'espace de stockage de la blockchain.",
+      "keyPoints": [
+        "~4 ans d'inactivite declenchent le loyer",
+        "Petits frais deduits de la valeur de la boite",
+        "Empeche la surcharge d'etat de la blockchain",
+        "Remet en circulation les coins perdus/oublies",
+        "Fournit des revenus aux mineurs a long terme",
+        "Utilisateurs actifs non affectes"
+      ]
+    },
+    "what-happens-after-emission": {
+      "query": "Que se passe-t-il quand tous les ERG sont mines ?",
+      "shortAnswer": "Quand l'emission se termine (~2045), les mineurs continueront a gagner des frais de transaction et du storage rent. Contrairement a Bitcoin qui repose uniquement sur les frais, le storage rent d'Ergo fournit un flux de revenus durable en recyclant les coins des boites inactives. Le reseau reste securise sans dependre d'un volume de transactions en constante augmentation.",
+      "keyPoints": [
+        "L'emission se termine approximativement en 2045",
+        "Les mineurs gagnent des frais de transaction",
+        "Le storage rent fournit un revenu supplementaire",
+        "Les coins perdus sont remis en circulation",
+        "Pas de crise de budget de securite",
+        "Durable par conception"
+      ]
+    },
+    "why-ergo-sustainable": {
+      "query": "Pourquoi Ergo est-il durable a long terme ?",
+      "shortAnswer": "Ergo est concu pour une durabilite de 100 ans et plus grace a trois piliers : le minage Autolykos (equitable, resistant aux ASIC), les NiPoPoWs (clients legers efficaces) et le storage rent (empeche la surcharge, finance les mineurs). Contrairement aux chaines dependant d'une croissance infinie, l'economie d'Ergo fonctionne meme avec une utilisation stable ou en baisse.",
+      "keyPoints": [
+        "Autolykos : minage resistant aux ASIC, decentralise",
+        "NiPoPoWs : clients legers sans confiance",
+        "Storage rent : revenus durables pour les mineurs",
+        "Pas d'accumulation de surcharge d'etat",
+        "Fonctionne sans croissance infinie",
+        "Conception basee sur la recherche et revue par des pairs"
+      ]
+    },
+    "is-ergo-mining-profitable": {
+      "query": "Le minage d'Ergo est-il rentable en 2025 ?",
+      "shortAnswer": "La rentabilite du minage d'Ergo depend de votre cout d'electricite, de l'efficacite de votre GPU et du prix de l'ERG. Utilisez des calculateurs de minage avec votre materiel specifique et vos couts d'electricite. Ergo est l'une des cryptomonnaies les plus rentables a miner avec GPU grace a la resistance aux ASIC d'Autolykos. La rentabilite s'ameliore significativement avec une electricite bon marche.",
+      "keyPoints": [
+        "Depend de : cout d'electricite, GPU, prix ERG",
+        "Resistant aux ASIC = minage GPU viable",
+        "Utiliser des calculateurs : whattomine.com, etc.",
+        "L'electricite bon marche est l'avantage cle",
+        "Considerer le potentiel de prix ERG a long terme",
+        "Minage en pool recommande pour des recompenses regulieres"
+      ]
+    },
+    "best-gpu-for-ergo-mining": {
+      "query": "Quel est le meilleur GPU pour le minage Ergo ?",
+      "shortAnswer": "Pour le minage Ergo, les GPU avec une large bande passante memoire sont les plus performants. Les choix populaires incluent NVIDIA RTX 3060 Ti, 3070, 3080 et AMD RX 6800 XT. Minimum 4 Go de VRAM requis. Le meilleur GPU depend de votre budget, du cout de l'electricite et de la disponibilite. L'efficacite (hashrate par watt) compte plus que le hashrate brut.",
+      "keyPoints": [
+        "NVIDIA : RTX 3060 Ti, 3070, 3080 populaires",
+        "AMD : RX 6800 XT, 6700 XT bonnes options",
+        "Minimum 4 Go de VRAM requis",
+        "Se concentrer sur l'efficacite (MH/s par watt)",
+        "Considerer le marche de l'occasion pour la valeur",
+        "Les deux marques fonctionnent bien avec Autolykos"
+      ]
+    },
+    "how-miners-earn-on-ergo": {
+      "query": "Comment les mineurs gagnent-ils de l'argent sur Ergo ?",
+      "shortAnswer": "Les mineurs Ergo gagnent de trois sources : les recompenses de blocs (ERG nouvellement mintes), les frais de transaction et le storage rent. Les recompenses de blocs diminuent avec le temps selon le calendrier d'emission, mais le storage rent assure des revenus a long terme meme apres que tous les ERG soient mines. La plupart des mineurs utilisent des pools pour des paiements reguliers.",
+      "keyPoints": [
+        "Recompenses de blocs : ERG nouvellement mintes",
+        "Frais de transaction : payes par les utilisateurs",
+        "Storage rent : provenant des boites inactives",
+        "Minage en pool : paiements reguliers plus petits",
+        "Minage solo : rares paiements importants",
+        "Recompenses en ERG, vendables ou conservables"
+      ]
+    },
+    "how-to-use-spectrum-dex": {
+      "query": "Comment utiliser Spectrum DEX sur Ergo ?",
+      "shortAnswer": "Connectez votre portefeuille Nautilus a Spectrum Finance, selectionnez les tokens a echanger, examinez le taux et le glissement, puis confirmez. Spectrum utilise des pools de liquidite AMM pour des echanges instantanes. Vous pouvez aussi fournir des liquidites pour gagner des frais. Tous les echanges sont atomiques - ils se completent entierement ou pas du tout, sans front-running possible.",
+      "keyPoints": [
+        "Connecter le portefeuille Nautilus a spectrum.fi",
+        "Selectionner les tokens et le montant a echanger",
+        "Examiner le taux, le glissement et les frais",
+        "Confirmer la transaction dans le portefeuille",
+        "Fournir des liquidites pour gagner des frais",
+        "Pas de front-running ni d'extraction MEV"
+      ]
+    },
+    "how-to-provide-liquidity-ergo": {
+      "query": "Comment fournir des liquidites sur Ergo ?",
+      "shortAnswer": "Sur Spectrum Finance, selectionnez un pool, deposez une valeur egale des deux tokens et recevez des tokens LP representant votre part. Vous gagnez une partie de tous les frais de trading. Retirez a tout moment en retournant les tokens LP. Soyez conscient de la perte impermanente si les prix des tokens divergent significativement.",
+      "keyPoints": [
+        "Choisir un pool sur Spectrum Finance",
+        "Deposer une valeur egale des deux tokens",
+        "Recevoir des tokens LP comme recu",
+        "Gagner une part des frais de trading",
+        "Retirer a tout moment avec les tokens LP",
+        "Risque : perte impermanente si les prix divergent"
+      ]
+    },
+    "how-to-use-sigmausd": {
+      "query": "Comment utiliser le stablecoin SigmaUSD ?",
+      "shortAnswer": "SigmaUSD est le stablecoin algorithmique d'Ergo indexe sur le dollar. Mintez-le en deposant des ERG comme collateral sur sigmausd.io. Utilisez-le pour le stockage de valeur stable, les paires de trading ou la DeFi. Rachetez a tout moment contre des ERG. Le protocole utilise SigRSV pour absorber la volatilite - les detenteurs de SigRSV prennent le risque pour un profit potentiel.",
+      "keyPoints": [
+        "Minter sur sigmausd.io avec du collateral ERG",
+        "Indexe sur ~1 $ USD",
+        "Sur-collateralise par des reserves ERG",
+        "Rachetable a tout moment contre des ERG",
+        "SigRSV absorbe la volatilite des prix",
+        "Decentralise, pas d'emetteur central"
+      ]
+    },
+    "why-proof-of-work-matters": {
+      "query": "Pourquoi Proof-of-Work est-il important pour la decentralisation ?",
+      "shortAnswer": "Proof-of-Work offre la plus forte resistance a la censure parce que n'importe qui peut miner sans permission. Contrairement au PoS ou les validateurs peuvent etre identifies et presses, les mineurs PoW sont anonymes et remplacables. Le cout energetique cree une ancre dans le monde reel qui ne peut pas etre capturee par les regulateurs ou les insiders.",
+      "keyPoints": [
+        "Sans permission : n'importe qui peut miner",
+        "Anonyme : mineurs difficiles a identifier et a presser",
+        "Cout reel : ne peut pas etre manipule par les insiders",
+        "Pas de dynamique les riches s'enrichissent du staking",
+        "Modele de securite eprouve (Bitcoin depuis 2009)",
+        "Resistance a la censure par conception"
+      ]
+    },
+    "is-pow-better-than-pos": {
+      "query": "Proof-of-Work est-il meilleur que Proof-of-Stake ?",
+      "shortAnswer": "Chacun a ses compromis. PoW offre une plus forte resistance a la censure, une distribution plus equitable et pas de dynamiques les riches s'enrichissent. PoS est plus efficace energetiquement mais se centralise autour des grands stakers et est plus vulnerable a la pression reglementaire. Pour la liberte financiere et la decentralisation, PoW est superieur ; pour l'efficacite pure, PoS gagne.",
+      "keyPoints": [
+        "PoW : Resistance a la censure plus forte",
+        "PoW : Distribution plus equitable (pas d'avantage pre-mine)",
+        "PoW : Participation anonyme et sans permission",
+        "PoS : Plus efficace energetiquement",
+        "PoS : Se centralise autour des grands stakers",
+        "PoS : Les validateurs peuvent etre reglementes et presses"
+      ]
+    },
+    "what-is-financial-repression": {
+      "query": "Qu'est-ce que la repression financiere et comment Ergo aide-t-il ?",
+      "shortAnswer": "La repression financiere inclut les controles des capitaux, le gel des comptes, la surveillance, l'inflation et les restrictions sur la liberte financiere. Les gouvernements utilisent ces outils pour controler les citoyens. Ergo offre une echappatoire : l'auto-garde (pas de gel de comptes), la confidentialite (pas de surveillance), la resistance a la censure (pas de transactions bloquees) et une monnaie saine (pas d'inflation).",
+      "keyPoints": [
+        "Controles des capitaux : Ergo est sans frontieres",
+        "Gel des comptes : auto-garde, vous controlez les cles",
+        "Surveillance : Sigma Protocols pour la confidentialite",
+        "Inflation : offre fixe, emission previsible",
+        "Censure : PoW, personne ne peut bloquer les transactions",
+        "Surenchere KYC : acces sans permission"
+      ]
+    },
+    "why-no-vc-funding-matters": {
+      "query": "Pourquoi l'absence de financement VC d'Ergo est-elle importante ?",
+      "shortAnswer": "Les chaines financees par des VC ont des incentives mal alignes : les VCs ont besoin de sorties, donc ils poussent a l'hype plutot qu'a la substance, au controle centralise et aux dumps de tokens. Le lancement equitable d'Ergo signifie pas d'allocations d'insiders, pas de pression pour pomper le prix et pas de gouvernance d'entreprise. La communaute controle Ergo, pas les investisseurs cherchant des rendements.",
+      "keyPoints": [
+        "Pas d'allocations de tokens aux insiders",
+        "Pas de pression pour pomper pour les sorties VC",
+        "Developpement pilote par la communaute",
+        "Pas de capture de gouvernance d'entreprise",
+        "Incentives alignes : constructeurs, pas speculateurs",
+        "Veritable decentralisation des le premier jour"
+      ]
+    },
+    "how-is-ergo-different-from-bitcoin": {
+      "query": "En quoi Ergo est-il different de Bitcoin ?",
+      "shortAnswer": "Ergo etend le modele de Bitcoin avec des smart contracts. Les deux utilisent PoW et UTXO, mais Ergo ajoute : eUTXO pour des boites programmables, ErgoScript pour les smart contracts, Sigma Protocols pour la confidentialite, storage rent pour la durabilite et NiPoPoWs pour les clients legers. Pensez a Ergo comme Bitcoin avec des smart contracts bien faits.",
+      "keyPoints": [
+        "Identique : consensus PoW, modele UTXO, lancement equitable",
+        "Ergo ajoute : smart contracts via ErgoScript",
+        "Ergo ajoute : confidentialite via Sigma Protocols",
+        "Ergo ajoute : storage rent pour la durabilite",
+        "Ergo ajoute : NiPoPoWs pour les clients legers",
+        "Bitcoin : reserve de valeur ; Ergo : valeur programmable"
+      ]
+    },
+    "ergo-vs-cardano-comparison": {
+      "query": "Quelle est la difference entre Ergo et Cardano ?",
+      "shortAnswer": "Les deux utilisent eUTXO, mais different dans le consensus et la philosophie. Ergo : PoW (Autolykos), lancement equitable, pas de financement VC, storage rent. Cardano : PoS (Ouroboros), finance par des VC, ecosysteme plus large. Ergo priorise la decentralisation et la durabilite ; Cardano priorise la rigueur academique et l'adoption institutionnelle.",
+      "keyPoints": [
+        "Les deux : modele de smart contracts eUTXO",
+        "Ergo : PoW ; Cardano : PoS",
+        "Ergo : lancement equitable ; Cardano : finance par des VC",
+        "Ergo : storage rent ; Cardano : pas de mecanisme de loyer",
+        "Cardano : ecosysteme plus large, plus de financement",
+        "Ergo : plus decentralise, ethos cypherpunk"
+      ]
+    },
+    "ergo-vs-solana-comparison": {
+      "query": "Comment Ergo se compare-t-il a Solana ?",
+      "shortAnswer": "Des philosophies opposees. Solana : PoS, finance par des VC, axe sur la vitesse, validateurs centralises, pannes frequentes. Ergo : PoW, lancement equitable, axe sur la securite, minage decentralise, 100 % de disponibilite. Solana echange la decentralisation contre la vitesse ; Ergo priorise la securite et la resistance a la censure sur le TPS brut.",
+      "keyPoints": [
+        "Solana : PoS avec validateurs centralises",
+        "Ergo : PoW avec mineurs decentralises",
+        "Solana : finance par des VC, allocations aux insiders",
+        "Ergo : lancement equitable, pas de pre-mine",
+        "Solana : rapide mais pannes frequentes",
+        "Ergo : plus lent mais 100 % de disponibilite"
+      ]
+    },
+    "can-ergo-be-traced": {
+      "query": "Les transactions Ergo peuvent-elles etre tracees ?",
+      "shortAnswer": "Par defaut, les transactions Ergo sont publiques comme Bitcoin. Cependant, Ergo fournit des outils de confidentialite : ErgoMixer pour le mixage de transactions, Sigma Protocols pour les preuves a connaissance nulle et des adresses furtives. La confidentialite est optionnelle mais puissante - vous pouvez prouver des choses sur des donnees sans les reveler.",
+      "keyPoints": [
+        "Par defaut : blockchain publique (comme Bitcoin)",
+        "ErgoMixer : mixer les transactions pour la confidentialite",
+        "Sigma Protocols : preuves a connaissance nulle",
+        "Adresses furtives : cacher les destinataires",
+        "Confidentialite optionnelle : choisir quand necessaire",
+        "Peut prouver la conformite sans reveler les details"
+      ]
+    },
+    "is-ergo-anonymous": {
+      "query": "Ergo est-il anonyme ?",
+      "shortAnswer": "Pas par defaut, mais il peut l'etre. Les transactions Ergo de base sont pseudonymes (adresses visibles, pas de noms). Pour l'anonymat, utilisez ErgoMixer pour briser les liens de transactions, Sigma Protocols pour les preuves a connaissance nulle et une bonne securite operationnelle. Ergo offre une confidentialite a la demande plutot qu'une confidentialite permanente comme Monero.",
+      "keyPoints": [
+        "Pseudonyme par defaut (adresses, pas de noms)",
+        "ErgoMixer : briser les liens de transactions",
+        "Sigma Protocols : prouver sans reveler",
+        "La confidentialite est optionnelle, pas forcee",
+        "Meilleur pour la divulgation selective",
+        "La securite operationnelle reste importante"
+      ]
+    },
+    "what-is-ergomixer": {
+      "query": "Qu'est-ce qu'ErgoMixer et comment fonctionne-t-il ?",
+      "shortAnswer": "ErgoMixer est un service de mixage non custodial et sans confiance qui brise le lien entre vos adresses d'entree et de sortie. Il utilise les Sigma Protocols pour prouver que vous avez le droit de retirer sans reveler quel depot etait le votre. Contrairement aux mixeurs centralises, il n'y a pas de partie de confiance qui pourrait voler des fonds ou conserver des journaux.",
+      "keyPoints": [
+        "Non custodial : vous controlez vos fonds",
+        "Sans confiance : aucun operateur ne peut voler ou journaliser",
+        "Utilise les Sigma Protocols pour les preuves",
+        "Brise les liens du graphe de transactions",
+        "Plusieurs tours de mixage pour une confidentialite renforcee",
+        "Code open-source, verifiable"
+      ]
+    },
+    "what-can-i-do-with-ergo": {
+      "query": "Que puis-je faire avec Ergo ?",
+      "shortAnswer": "Ergo supporte un ecosysteme complet : trader sur Spectrum DEX, utiliser le stablecoin SigmaUSD, mixer les transactions avec ErgoMixer, collectionner des NFTs sur SkyHarbor, miner avec des GPU, preter et emprunter sur DuckPools, faire des ponts vers d'autres chaines via Rosen et construire des dApps avec ErgoScript. C'est une plateforme complete pour la finance et les applications decentralisees.",
+      "keyPoints": [
+        "Trader : Spectrum DEX (echanges, liquidite)",
+        "Valeur stable : stablecoin SigmaUSD",
+        "Confidentialite : mixage de transactions ErgoMixer",
+        "NFTs : marche SkyHarbor",
+        "Minage : minage GPU avec Autolykos",
+        "Construction : smart contracts ErgoScript"
+      ]
+    },
+    "what-are-ergo-nfts": {
+      "query": "Comment fonctionnent les NFTs sur Ergo ?",
+      "shortAnswer": "Les NFTs Ergo sont des tokens natifs avec une quantite de 1, rendant chacun unique. Contrairement a Ethereum ou les NFTs necessitent des smart contracts, les NFTs Ergo sont des citoyens de premier ordre du protocole. Mintez pour des frais minimaux (~0,001 ERG), tradez sur le marche SkyHarbor et profitez de toute la securite eUTXO. Les NFTs peuvent inclure des metadonnees riches et des royalties.",
+      "keyPoints": [
+        "Tokens natifs (pas de contrats wrapper)",
+        "Minter pour ~0,001 ERG (centimes)",
+        "Trader sur le marche SkyHarbor",
+        "Supportent metadonnees et royalties",
+        "Meme securite qu'ERG lui-meme",
+        "Peuvent etre utilises dans des smart contracts"
+      ]
+    }
+  },
   "topicsData": {
     "ergo-defi": {
       "title": "DeFi sur Ergo",

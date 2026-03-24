@@ -1,5 +1,524 @@
 {
-  "questionsData": {},
+  "questionsData": {
+    "how-to-build-defi-on-ergo": {
+      "query": "Ergo üzerinde DeFi nasıl inşa edilir?",
+      "shortAnswer": "Ergo üzerinde DeFi inşa etmek, eUTXO modelini ve ErgoScript'i anlamakla başlar. Hesap tabanlı zincirlerden farklı olarak Ergo'nun kutu modeli, deterministik yürütme, tasarım gereği MEV yok ve tahmin edilebilir gas maliyetleri sağlar. Fiyat beslemeleri için Oracle Pools kullanın ve Spectrum Finance ile SigmaUSD'den mevcut kalıplardan yararlanın.",
+      "keyPoints": [
+        "eUTXO temellerini öğrenin - kutular değer, veri ve harcama koşullarını tutar",
+        "ErgoScript'i öğrenin - Ergo'nun işlevsel akıllı sözleşme dili",
+        "Güvenilir zincir dışı veriler için Oracle Pools entegre edin",
+        "Mevcut DeFi'yi inceleyin: Spectrum (DEX), SigmaUSD (stablecoin), DuckPools (borç verme)"
+      ]
+    },
+    "what-is-eutxo": {
+      "query": "eUTXO nedir ve nasıl çalışır?",
+      "shortAnswer": "eUTXO (Genişletilmiş Harcanmamış İşlem Çıktısı), Ergo'nun Bitcoin'in UTXO'sunu programlanabilir mantıkla genişleten akıllı sözleşme modelidir. Her 'kutu', ERG, token, veri kayıtları ve bir koruma betiği içerir. İşlemler kutuları tüketir ve yenilerini oluşturur, böylece deterministik yürütme, paralel işleme ve yeniden giriş saldırısı olmaksızın güvenlik sağlanır.",
+      "keyPoints": [
+        "Kutular = süper güçlü UTXO'lar: değer + tokenler + veri + betik",
+        "Deterministik: yürütme maliyeti göndermeden önce bilinir",
+        "Paralel: ilgisiz işlemler eş zamanlı olarak işlenir",
+        "Güvenli: tasarım gereği yeniden giriş yok, ön çalıştırma yok"
+      ]
+    },
+    "ergo-vs-ethereum-for-defi": {
+      "query": "DeFi için Ergo mu Ethereum'dan daha iyi?",
+      "shortAnswer": "Ergo, DeFi için yapısal avantajlar sunar: MEV çıkarımı yok, deterministik gas maliyetleri ve eUTXO sayesinde yeniden giriş saldırısı yok. Ethereum'un daha büyük ekosistemi ve likiditesi var. Güvenlik açısından kritik uygulamalar, adil alım satım ve tahmin edilebilir maliyetler için Ergo'yu seçin. Mevcut protokollerle maksimum bileştirilebilirlik için Ethereum'u seçin.",
+      "keyPoints": [
+        "Ergo: MEV yok, ön çalıştırma yok, sandviç saldırısı yok",
+        "Ergo: Tahmin edilebilir ücretler (~0,01$), göndermeden önce bilinir",
+        "Ergo: Tasarım gereği yeniden giriş açığı yok",
+        "Ethereum: Daha büyük ekosistem, daha fazla likidite, daha fazla araç",
+        "Değiş tokuş: Güvenlik ve ekosistem büyüklüğü"
+      ]
+    },
+    "is-ergo-better-than-monero-for-privacy": {
+      "query": "Gizlilik için Ergo, Monero'dan daha mı iyi?",
+      "shortAnswer": "Farklı ihtiyaçlar için farklı gizlilik modelleri. Monero, halka imzalarıyla her zaman açık, protokol düzeyinde gizlilik sağlar. Ergo, seçici ifşayla Sigma Protokolleri aracılığıyla isteğe bağlı gizlilik sunar - verileri açıklamadan veriler hakkında şeyler kanıtlayabilirsiniz. Ergo, programlanabilir gizlilik (özel akıllı sözleşmeler) konusunda öne çıkarken Monero, basit özel transferlerde mükemmeldir.",
+      "keyPoints": [
+        "Monero: Her zaman açık gizlilik, halka imzaları, gizli adresler",
+        "Ergo: Sigma Protokolleri ile isteğe bağlı gizlilik, seçici ifşa",
+        "Ergo: Programlanabilir gizlilik - özel akıllı sözleşmeler mümkün",
+        "Monero: Temel özel ödemeler için daha basit kullanıcı deneyimi",
+        "Ergo: Ayrıntıları açıklamadan uyum kanıtlayabilir"
+      ]
+    },
+    "what-are-sigma-protocols": {
+      "query": "Sigma Protokolleri nedir ve nasıl çalışır?",
+      "shortAnswer": "Sigma Protokolleri, verilerin kendisini açıklamadan veriler hakkındaki ifadeleri kanıtlamanıza olanak tanıyan sıfır bilgi ispat sistemleridir. Ergo'da bunlar ErgoScript'e yerleşik olup gizliliği koruyan akıllı sözleşmeleri mümkün kılar. Kimliğinizi veya tam değerlerinizi açıklamadan fon sahibi olduğunuzu, koşulları karşıladığınızı veya bir gruba ait olduğunuzu kanıtlayabilirsiniz.",
+      "keyPoints": [
+        "Sıfır bilgi: nedenini açıklamadan bir şeyin doğru olduğunu kanıtlayın",
+        "ErgoScript'e yerleşik: birinci sınıf gizlilik primitifleri",
+        "Seçici ifşa: yalnızca gerekeni açıklayın",
+        "Kullanım alanları: halka imzaları, eşik imzaları, özel oylama"
+      ]
+    },
+    "how-private-is-ergo": {
+      "query": "Ergo blokzinciri ne kadar gizlidir?",
+      "shortAnswer": "Ergo, Monero gibi varsayılan olarak gizli değildir ancak güçlü isteğe bağlı gizlilik araçları sunar. ErgoMixer, etkileşimsiz ve gözetimsiz karıştırma sağlar. Sigma Protokolleri, akıllı sözleşmelerde sıfır bilgi ispat sağlar. Gizli adresler alıcıları gizler. Temel fark: Ergo'nun gizliliği programlanabilirdir - ne zaman ve ne kadar açıklayacağınızı siz seçersiniz.",
+      "keyPoints": [
+        "İsteğe bağlı gizlilik: varsayılan olarak şeffaf, gerektiğinde gizli",
+        "ErgoMixer: gözetimsiz, etkileşimsiz token karıştırma",
+        "Sigma Protokolleri: verileri açıklamadan şeyleri kanıtlayın",
+        "Gizli adresler: işlem alıcılarını gizle",
+        "Programlanabilir: akıllı sözleşmelerde gizlilik mantığı"
+      ]
+    },
+    "how-to-escape-financial-repression-with-ergo": {
+      "query": "Ergo ile finansal baskıdan nasıl kaçınılır?",
+      "shortAnswer": "Ergo, finansal egemenlik için araçlar sağlar: üçüncü taraf olmadan öz-saklama, PoW aracılığıyla sansüre dirençli işlemler, Sigma Protokolleri ile isteğe bağlı gizlilik ve izinsiz programlanabilir para. VC destekli zincirlerden farklı olarak Ergo'nun fonları dondurabilen veya yaptırımlara uyan merkezi bir otoritesi yoktur. Anahtarlarınız, madeni paralarınız, özgürlüğünüz.",
+      "keyPoints": [
+        "Öz-saklama: banka yok, aracı yok, izin gerekmez",
+        "Sansüre dirençli: PoW madenciliği, baskı altına alınacak doğrulayıcı komitesi yok",
+        "İsteğe bağlı gizlilik: Sigma Protokolleri, ihtiyaç duyduğunuzda ErgoMixer",
+        "Adil lansman: VC kontrolü yok, ön madencilik yok, toplum tarafından sahiplenilmiş",
+        "Programlanabilir: kendi finansal araçlarınızı inşa edin"
+      ]
+    },
+    "why-ergo-fair-launch-matters": {
+      "query": "Ergo'nun adil lansmanı neden önemlidir?",
+      "shortAnswer": "Ergo'nun ön madenciliği, ICO'su ve VC tahsisi yoktu. ERG'nin %100'ü madenciliğten geliyor. Bu, size satan içeriden kişi yok, yönetişimi kontrol eden VC yok, çoğunluk hissesine sahip vakıf yok demektir. Adil lansman gerçek merkezi olmayan yapı oluşturur - ağ, çıkış likiditesi arayan erken yatırımcılara değil, madencilere ve kullanıcılara aittir.",
+      "keyPoints": [
+        "Ön madencilik yok: madencilik başlamadan önce sıfır madeni para vardı",
+        "ICO/IEO yok: içeriden kişilere veya VC'lere token satışı yok",
+        "VC tahsisi yok: yönetim gücüne sahip yatırımcı yok",
+        "Gerçek merkezi olmayan yapı: ağ katılımcıların mülkiyetinde",
+        "Uyumlu teşvikler: inşa edenler ve kullanıcılar, çıkarımcılar değil"
+      ]
+    },
+    "how-to-mine-ergo": {
+      "query": "Ergo nasıl madencilik yapılır?",
+      "shortAnswer": "Ergo, bellek yoğun, ASIC dirençli bir PoW algoritması olan Autolykos v2'yi kullanır. Tüketici GPU'larıyla (4 GB+ VRAM) madencilik yapabilirsiniz. Adımlar: bir cüzdan edinin, madencilik yazılımı seçin (lolMiner, T-Rex, Nanominer), bir havuza katılın (Herominers, 2Miners, Nanopool), madencicinizi havuz adresi ve cüzdanla yapılandırın. Tek başına madencilik mümkündür ancak havuzlar daha istikrarlı gelir sağlar.",
+      "keyPoints": [
+        "GPU madenciliği: 4 GB+ VRAM kartlarla çalışır (AMD/NVIDIA)",
+        "ASIC dirençli: Autolykos v2 oyun alanını düzleştirir",
+        "Havuz madenciliği önerilir: çoğu madenci için daha istikrarlı ödüller",
+        "Yazılım: lolMiner, T-Rex, Nanominer, SRBMiner",
+        "Karlılık: mevcut oranlar için whattomine.com'u kontrol edin"
+      ]
+    },
+    "what-is-autolykos": {
+      "query": "Autolykos nedir ve nasıl çalışır?",
+      "shortAnswer": "Autolykos, GPU madenciliği için tasarlanmış Ergo'nun bellek yoğun İş Kanıtı algoritmasıdır. Önemli miktarda RAM gerektirir (şu anda ~2,5 GB), bu da ASIC geliştirmeyi ekonomik olmaktan çıkarır. Autolykos v2 (mevcut sürüm), ASIC direncini korurken havuz madenciliğine izin verir. Algoritma, madenciliği tüketici donanımına erişilebilir tutarak merkezi olmayan yapıyı teşvik eder.",
+      "keyPoints": [
+        "Bellek yoğun: yalnızca ham hesaplama gücü değil, RAM gerektirir",
+        "ASIC dirençli: tüketici GPU'ları rekabetçi kalır",
+        "v2 yükseltmesi: havuz madenciliği etkinleştirildi (2021)",
+        "Merkezi olmayan yapı: ev madencilerine erişilebilir",
+        "Adil: özel donanımdan madencilik avantajı yok"
+      ]
+    },
+    "what-is-storage-rent": {
+      "query": "Ergo'da depolama kirası nedir?",
+      "shortAnswer": "Depolama kirası, Ergo'nun durum şişmesine çözümüdür. 4+ yıl boyunca harcanmamış kalan kutulardan (UTXO'lar) madenciler tarafından küçük bir ücret kesilebilir. Bu, kullanılmayan durumu temizlemeyi teşvik eder, emisyon sona erdikten sonra uzun vadeli madenci geliri sağlar ve blokzinciri sürdürülebilir tutar. Kayıp madeni paralar sonunda sonsuza kadar kilitli kalmak yerine dolaşıma geri döner.",
+      "keyPoints": [
+        "4 yıllık ödemesizlik süresi: aktif kullanılan kutular için kira yok",
+        "Madenci geliri: blok ödülleri sona erdikten sonra sürdürülebilir gelir",
+        "Durum temizliği: kullanılmayan verileri kaldırmayı teşvik eder",
+        "Kayıp madeni para kurtarma: hareketsiz madeni paralar yavaş yavaş dolaşıma geri döner",
+        "Sürdürülebilirlik: sonsuz durum büyümesini önler"
+      ]
+    },
+    "what-are-nipopows": {
+      "query": "NiPoPoW'lar nedir ve neden önemlidir?",
+      "shortAnswer": "NiPoPoW'lar (İş Kanıtının Etkileşimsiz İspatları), blokzinciri geçmişini sıkıştıran kriptografik ispatlardır. Gigabaytlarca blok indirmek yerine, hafif istemciler yalnızca kilobayt veriyle zinciri doğrulayabilir. Bu, üçüncü taraflara güvenmeden güven gerektirmeyen hafif cüzdanları, verimli zincirler arası köprüleri ve yan zincirleri mümkün kılar.",
+      "keyPoints": [
+        "Sıkıştırma: gigabayt değil kilobaytlarla zinciri doğrulayın",
+        "Güvensiz hafif istemciler: sunuculara güvenmeye gerek yok",
+        "Zincirler arası köprüler: zincirler arasında verimli doğrulama",
+        "Yan zincirler: ana zincirle güvenli iletişim",
+        "Mobil dostu: kaynak kısıtlı cihazlarda tam güvenlik"
+      ]
+    },
+    "what-is-mev-resistance": {
+      "query": "MEV direnci nedir ve Ergo neden buna sahiptir?",
+      "shortAnswer": "MEV (Maksimum Çıkarılabilir Değer), işlemleri yeniden sıralayarak, ekleyerek veya sansürleyerek elde edilen kârdır - ön çalıştırma ve sandviç saldırıları gibi. Ergo'nun eUTXO modeli yapısal MEV direnci sağlar: işlemler belirli kutulara (UTXO'lar) atıfta bulunur, bu da yeniden sıralama saldırılarını çok daha zorlaştırır. Hesap tabanlı zincirlerdeki gibi istismar edilecek paylaşımlı küresel durum yoktur.",
+      "keyPoints": [
+        "MEV = işlem sırasını manipüle ederek elde edilen değer",
+        "eUTXO koruması: işlemler belirli kutulara atıfta bulunur",
+        "Küresel durum yok: ön çalıştırma veya sandviç yapmak daha zor",
+        "Tahmin edilebilir yürütme: ne olacağını tam olarak bilin",
+        "Adil alım satım: 'karanlık orman' dinamiği yok"
+      ]
+    },
+    "how-to-get-started-with-ergo": {
+      "query": "Ergo'ya nasıl başlanır?",
+      "shortAnswer": "Bir cüzdan edinerek başlayın (tarayıcı için Nautilus, mobil için Terminus). Tohum ifadenizi güvenli bir şekilde çevrimdışı olarak yedekleyin. Bir borsadan (Gate.io, KuCoin) veya DEX'ten (Spectrum) biraz ERG alın. Bir test işlemi yapın. Ardından keşfedin: Spectrum'da DeFi deneyin, NFT'lere göz atın veya geliştirici olarak teknolojiye dalın.",
+      "keyPoints": [
+        "Cüzdan: Nautilus (tarayıcı), Terminus (mobil), Satergo (masaüstü)",
+        "Tohum ifade: yazıp çevrimdışı saklayın, asla paylaşmayın",
+        "ERG alın: borsalar (Gate.io, KuCoin) veya Spectrum DEX",
+        "Test: kendinize küçük bir işlem gönderin",
+        "Keşfedin: DeFi, NFT'ler, madencilik veya geliştirme"
+      ]
+    },
+    "where-to-buy-ergo": {
+      "query": "ERG nerede satın alınır?",
+      "shortAnswer": "ERG, merkezi borsalarda (Gate.io, KuCoin, Bitmart) ve merkezi olmayan borsalarda (Ergo'da Spectrum Finance, diğer zincirlerden Rosen Bridge) mevcuttur. Öz-saklama için bir borsadan satın alın ve Nautilus veya Terminus cüzdanınıza çekin. Maksimum merkeziyetsizlik için gözetimsiz bir cüzdanla doğrudan Spectrum DEX kullanın.",
+      "keyPoints": [
+        "Merkezi: Gate.io, KuCoin, Bitmart, CoinEx",
+        "Merkezi olmayan: Spectrum Finance (yerel DEX)",
+        "Zincirler arası: Cardano, Bitcoin'den Rosen Bridge",
+        "Öz-saklama: her zaman kendi cüzdanınıza çekin",
+        "Doğrulayın: resmi bağlantıları kontrol edin, dolandırıcılardan kaçının"
+      ]
+    },
+    "is-ergo-a-good-investment": {
+      "query": "Ergo iyi bir yatırım mıdır?",
+      "shortAnswer": "Bu finansal tavsiye değildir. Ergo güçlü temellere sahiptir: adil lansman (VC dökümü riski yok), yenilikçi teknoloji (eUTXO, Sigma Protokolleri, NiPoPoW'lar), aktif geliştirme ve cypherpunk ruhu. Yerleşik zincirlere kıyasla daha yüksek risk/ödül oranına sahip küçük piyasa değerli bir projedir. Kapsamlı araştırma yapın, teknolojiyi anlayın ve asla kaybetmeyi göze alamayacağınızdan fazlasını yatırmayın.",
+      "keyPoints": [
+        "Adil lansman: dökülecek içeriden tahsis yok",
+        "Teknoloji: benzersiz yenilikler (eUTXO, Sigma, NiPoPoW'lar)",
+        "Aktif geliştirme: 2019'dan bu yana tutarlı ilerleme",
+        "Küçük piyasa değeri: daha yüksek oynaklık, daha yüksek risk/ödül",
+        "DYOR: bu finansal tavsiye değildir"
+      ]
+    },
+    "how-ergoscript-works": {
+      "query": "ErgoScript nasıl çalışır?",
+      "shortAnswer": "ErgoScript, Ergo'nun akıllı sözleşme dilidir - ErgoTree'ye derlenen işlevsel, Scala tabanlı bir DSL. Solidity'nin zorunlu tarzının aksine ErgoScript bildirimseldir: bir işlemin geçerli olması için doğru olması gereken koşulları tanımlarsınız. Sıfır bilgi ispatları için yerleşik Sigma Protokol desteğine sahiptir ve betiklerin kutuları koruduğu eUTXO modelinde çalışır.",
+      "keyPoints": [
+        "İşlevsel: zorunlu kod değil, bildirimsel koşullar",
+        "Scala tabanlı: JVM geliştiricileri için tanıdık sözdizimi",
+        "Sigma Protokolleri: yerel sıfır bilgi ispat desteği",
+        "Kutu koruma: betikler UTXO'ları korur, hesapları değil",
+        "Deterministik: tahmin edilebilir yürütme, bilinen maliyetler"
+      ]
+    },
+    "what-is-sigmausd": {
+      "query": "SigmaUSD nedir ve nasıl çalışır?",
+      "shortAnswer": "SigmaUSD, Ergo'nun USD'ye sabitlenmiş ve ERG rezervleriyle desteklenen algoritmik stablecoin'idir. AgeUSD protokolünü kullanır: kullanıcılar ERG yatırarak SigUSD basar, SigRSV sahipleri ise rezerv desteği sağlar ve oynaklığı emer. Rezerv oranı (%400-800) istikrarı sağlar. Merkezi yayıncı yok, banka hesabı yok - saf kripto teminat.",
+      "keyPoints": [
+        "Algoritmik: merkezi yayıncı veya banka desteği yok",
+        "ERG teminatlı: %400-800 rezerv oranı",
+        "SigRSV: rezerv tokeni ERG oynaklığını emer",
+        "AgeUSD protokolü: kanıtlanmış stablecoin mekanizması",
+        "Merkezi olmayan: akıllı sözleşme kontrollü"
+      ]
+    },
+    "what-is-rosen-bridge": {
+      "query": "Rosen Bridge nedir?",
+      "shortAnswer": "Rosen Bridge, blokzincirleri arasında güvensiz varlık transferleri için Ergo'nun zincirler arası köprü protokolüdür. Ergo'yu Cardano, Bitcoin (Runes) ve Dogecoin ile bağlar. Merkezi köprülerin aksine Rosen, merkezi olmayan bir izleyici ağı ve çoklu imza güvenliği kullanır. Varlıkları Ergo'nun DeFi ekosistemine getirin veya ERG'yi diğer zincirlere taşıyın.",
+      "keyPoints": [
+        "Zincirler arası: Ergo <-> Cardano, Bitcoin, Dogecoin",
+        "Merkezi olmayan: izleyici ağı, merkezi saklayıcı değil",
+        "Çoklu imza güvenliği: dağıtık anahtar yönetimi",
+        "Güvensiz: her iki zincirde de doğrulayın",
+        "Büyüyor: daha fazla zincir ekleniyor"
+      ]
+    },
+    "what-is-ergo-blockchain": {
+      "query": "Ergo blokzinciri nedir?",
+      "shortAnswer": "Ergo, gelişmiş akıllı sözleşme yeteneklerine sahip adil lansmanla başlatılmış bir İş Kanıtı blokzinciridir. Bitcoin'in güvenlik modelini (UTXO, PoW) eUTXO modeli ve ErgoScript aracılığıyla Ethereum tarzı programlanabilirlikle birleştirir. Ön madencilik yok, ICO yok, VC kontrolü yok - finansal özgürlük için cypherpunklar tarafından inşa edilmiştir.",
+      "keyPoints": [
+        "Autolykos ile İş Kanıtı (ASIC dirençli, GPU dostu)",
+        "eUTXO modeli: Bitcoin güvenliği + akıllı sözleşmeler",
+        "Adil lansman: ön madencilik yok, ICO yok, VC tahsisi yok",
+        "Sigma Protokolleri (sıfır bilgi ispatları) ile gizlilik",
+        "Uzun vadeli sürdürülebilirlik için depolama kirası",
+        "Hafif istemciler ve yan zincirler için NiPoPoW'lar"
+      ]
+    },
+    "how-to-buy-erg": {
+      "query": "ERG kripto parası nasıl satın alınır?",
+      "shortAnswer": "ERG'yi merkezi borsalarda (KuCoin, Gate.io, CoinEx) veya merkezi olmayan borsalarda (Spectrum Finance) satın alın. Önce bir cüzdan oluşturun (Nautilus önerilir), ardından ERG satın alın ve cüzdanınıza çekin. Asla büyük miktarları borsalarda bırakmayın - öz-saklama çok önemlidir.",
+      "keyPoints": [
+        "Merkezi: KuCoin, Gate.io, CoinEx, Bitpanda",
+        "Merkezi olmayan: Spectrum Finance (diğer tokenlardan değiştir)",
+        "Önce cüzdan oluşturun (Nautilus tarayıcı uzantısı)",
+        "Satın alma sonrası cüzdanınıza çekin",
+        "Tohum ifadenizi asla kimseyle paylaşmayın",
+        "Süreci öğrenmek için küçük başlayın"
+      ]
+    },
+    "what-wallet-for-ergo": {
+      "query": "Ergo için en iyi cüzdan nedir?",
+      "shortAnswer": "Nautilus en popüler Ergo cüzdanıdır - tokenler, NFT'ler ve dApp bağlantıları dahil tüm Ergo özelliklerini destekleyen bir tarayıcı uzantısı. Mobil için Terminus kullanın. Maksimum güvenlik için Nautilus'u bir Ledger donanım cüzdanıyla eşleştirin. Tohum ifadenizi her zaman çevrimdışı olarak yedekleyin.",
+      "keyPoints": [
+        "Nautilus: Tarayıcı uzantısı, tam özellikli, dApp desteği",
+        "Terminus: iOS/Android için mobil cüzdan",
+        "SAFEW: Gelişmiş özellikli masaüstü cüzdan",
+        "Ledger: Maksimum güvenlik için donanım cüzdanı",
+        "Tümü ERG, tokenler ve NFT'leri destekler",
+        "Kullanmadan önce tohum ifadenizi yedekleyin!"
+      ]
+    },
+    "is-ergo-safe": {
+      "query": "Ergo güvenli midir?",
+      "shortAnswer": "Evet, Ergo son derece güvenlidir. İş Kanıtı kullanır (Bitcoin ile aynı güvenlik modeli), hiç hacklenmiş değildir ve eUTXO modeli akıllı sözleşme açıklarının tüm kategorilerini ortadan kaldırır. Kod açık kaynaklı ve akranlar tarafından incelenmiştir. Güvenliğiniz aynı zamanda uygun tohum ifadesi yönetimine de bağlıdır.",
+      "keyPoints": [
+        "PoW mutabakatı: kanıtlanmış güvenlik modeli (Bitcoin gibi)",
+        "Hiç başarılı saldırıya uğramamış",
+        "eUTXO yeniden giriş saldırılarını önler",
+        "Açık kaynaklı, akranlar tarafından incelenmiş kod",
+        "Tek hata noktası yok",
+        "Güvenliğiniz: tohum ifadenizi koruyun!"
+      ]
+    },
+    "what-is-ergoscript": {
+      "query": "ErgoScript nedir ve nasıl çalışır?",
+      "shortAnswer": "ErgoScript, Ergo'nun akıllı sözleşme dilidir - zincir üstü yürütme için ErgoTree'ye derlenen Scala tabanlı, işlevsel bir dil. Solidity'nin aksine ErgoScript, tasarım gereği Turing-tam değildir, bu da tahmin edilebilir yürütme maliyetlerini ve daha kolay biçimsel doğrulamayı sağlar. Karmaşık DeFi için yeterince güçlü ancak denetim için yeterince güvenlidir.",
+      "keyPoints": [
+        "Scala tabanlı işlevsel dil",
+        "ErgoTree'ye derlenir (zincir üstü format)",
+        "Turing-tam değil: tahmin edilebilir maliyetler",
+        "Sigma Protokollerini yerel olarak destekler",
+        "Solidity'den daha kolay denetim",
+        "Tüm Ergo akıllı sözleşmelerine güç verir"
+      ]
+    },
+    "what-is-storage-rent-ergo": {
+      "query": "Ergo'da depolama kirası nedir?",
+      "shortAnswer": "Depolama kirası, Ergo'nun uzun vadeli sürdürülebilirlik mekanizmasıdır. ~4 yıl boyunca harcanmamış kalan kutular (UTXO'lar) küçük bir ücret öder ve bu ücret madencilere gider. Bu, durum şişmesini önler, kayıp madeni paraları geri dolaştırır ve emisyon sona erdikten sonra bile madencilerin gelir elde etmesini sağlar. Blokzinciri depolama alanı için kira ödemek gibidir.",
+      "keyPoints": [
+        "~4 yıllık hareketsizlik kirayı tetikler",
+        "Kutu değerinden küçük ücret kesilir",
+        "Blokzinciri durum şişmesini önler",
+        "Kayıp/unutulmuş madeni paraları geri dolaştırır",
+        "Uzun vadede madenci geliri sağlar",
+        "Aktif kullanıcılar etkilenmez"
+      ]
+    },
+    "what-happens-after-emission": {
+      "query": "Tüm ERG madencilik yapıldığında ne olur?",
+      "shortAnswer": "Emisyon sona erdiğinde (~2045), madenciler işlem ücretleri ve depolama kirasından kazanmaya devam edecek. Yalnızca ücretlere dayanan Bitcoin'in aksine Ergo'nun depolama kirası, hareketsiz kutulardan madeni paraları geri dönüştürerek sürdürülebilir bir gelir akışı sağlar. Ağ, her zaman artan işlem hacmine bağlı kalmadan güvenli kalır.",
+      "keyPoints": [
+        "Emisyon yaklaşık 2045'te sona erer",
+        "Madenciler işlem ücretleri kazanır",
+        "Depolama kirası ek gelir sağlar",
+        "Kayıp madeni paralar geri dolaşıma girer",
+        "'Güvenlik bütçesi' krizi yok",
+        "Tasarımla sürdürülebilir"
+      ]
+    },
+    "why-ergo-sustainable": {
+      "query": "Ergo neden uzun vadeli sürdürülebilirdir?",
+      "shortAnswer": "Ergo, üç sütun aracılığıyla 100+ yıllık sürdürülebilirlik için tasarlanmıştır: Autolykos madenciliği (adil, ASIC dirençli), NiPoPoW'lar (verimli hafif istemciler) ve depolama kirası (şişmeyi önler, madencileri finanse eder). Sonsuz büyümeye bağlı zincirlerin aksine Ergo'nun ekonomisi, istikrarlı veya azalan kullanımla bile çalışır.",
+      "keyPoints": [
+        "Autolykos: ASIC dirençli, merkezi olmayan madencilik",
+        "NiPoPoW'lar: Güvensiz hafif istemciler",
+        "Depolama kirası: Sürdürülebilir madenci geliri",
+        "Durum şişmesi birikimi yok",
+        "Sonsuz büyüme olmadan çalışır",
+        "Araştırma odaklı, akranlar tarafından incelenmiş tasarım"
+      ]
+    },
+    "is-ergo-mining-profitable": {
+      "query": "2025'te Ergo madenciliği karlı mı?",
+      "shortAnswer": "Ergo madenciliğinin karlılığı elektrik maliyetinize, GPU verimliliğinize ve ERG fiyatına bağlıdır. Belirli donanımınız ve güç maliyetlerinizle madencilik hesaplayıcılarını kullanın. Autolykos'un ASIC dirençli olması nedeniyle Ergo, GPU ile madencilik yapılabilecek en karlı madeni paralardan biridir. Ucuz elektrikle karlılık önemli ölçüde artar.",
+      "keyPoints": [
+        "Şunlara bağlıdır: elektrik maliyeti, GPU, ERG fiyatı",
+        "ASIC dirençli = GPU madenciliği yapılabilir",
+        "Hesaplayıcıları kullanın: whattomine.com vb.",
+        "Ucuz elektrik önemli bir avantajdır",
+        "Uzun vadeli ERG fiyat potansiyelini göz önünde bulundurun",
+        "Tutarlı ödüller için havuz madenciliği önerilir"
+      ]
+    },
+    "best-gpu-for-ergo-mining": {
+      "query": "Ergo madenciliği için en iyi GPU nedir?",
+      "shortAnswer": "Ergo madenciliği için yüksek bellek bant genişliğine sahip GPU'lar en iyi performansı gösterir. Popüler seçenekler arasında NVIDIA RTX 3060 Ti, 3070, 3080 ve AMD RX 6800 XT bulunur. Minimum 4 GB VRAM gereklidir. En iyi GPU, bütçenize, elektrik maliyetinize ve kullanılabilirliğe bağlıdır. Ham hash hızından çok verimlilik (watt başına hash hızı) önemlidir.",
+      "keyPoints": [
+        "NVIDIA: RTX 3060 Ti, 3070, 3080 popüler",
+        "AMD: RX 6800 XT, 6700 XT iyi seçenekler",
+        "Minimum 4 GB VRAM gerekli",
+        "Verimliliğe odaklanın (watt başına MH/s)",
+        "Değer için ikinci el piyasayı düşünün",
+        "Her iki marka Autolykos ile iyi çalışır"
+      ]
+    },
+    "how-miners-earn-on-ergo": {
+      "query": "Ergo'da madenciler nasıl para kazanır?",
+      "shortAnswer": "Ergo madencileri üç kaynaktan kazanır: blok ödülleri (yeni basılan ERG), işlem ücretleri ve depolama kirası. Blok ödülleri emisyon programına göre zamanla azalır, ancak depolama kirası tüm ERG madencilik yapıldıktan sonra bile uzun vadeli gelir sağlar. Çoğu madenci tutarlı ödemeler için havuzları kullanır.",
+      "keyPoints": [
+        "Blok ödülleri: yeni basılan ERG",
+        "İşlem ücretleri: kullanıcılar tarafından ödenir",
+        "Depolama kirası: hareketsiz kutulardan",
+        "Havuz madenciliği: tutarlı küçük ödemeler",
+        "Tek başına madencilik: nadir büyük ödemeler",
+        "ERG olarak ödüller, satılabilir veya tutulabilir"
+      ]
+    },
+    "how-to-use-spectrum-dex": {
+      "query": "Ergo'da Spectrum DEX nasıl kullanılır?",
+      "shortAnswer": "Nautilus cüzdanınızı Spectrum Finance'e bağlayın, değiştirmek istediğiniz tokenleri seçin, oranı ve kaymayı gözden geçirin, ardından onaylayın. Spectrum, anlık işlemler için AMM likidite havuzları kullanır. Ücret kazanmak için likidite de sağlayabilirsiniz. Tüm işlemler atomiktir - ya tamamen tamamlanır ya da hiç, ön çalıştırma mümkün değil.",
+      "keyPoints": [
+        "Nautilus cüzdanını spectrum.fi'ye bağlayın",
+        "Değiştirilecek tokenleri ve miktarı seçin",
+        "Oranı, kaymayı ve ücretleri gözden geçirin",
+        "Cüzdanda işlemi onaylayın",
+        "Ücret kazanmak için likidite sağlayın",
+        "Ön çalıştırma veya MEV çıkarımı yok"
+      ]
+    },
+    "how-to-provide-liquidity-ergo": {
+      "query": "Ergo'da likidite nasıl sağlanır?",
+      "shortAnswer": "Spectrum Finance'te bir havuz seçin, her iki tokenin eşit değerini yatırın ve payınızı temsil eden LP tokenleri alın. Tüm işlem ücretlerinin bir kısmını kazanırsınız. LP tokenlerini iade ederek istediğiniz zaman çekin. Token fiyatları önemli ölçüde ayrışırsa kalıcı kayıp riskine dikkat edin.",
+      "keyPoints": [
+        "Spectrum Finance'te havuz seçin",
+        "Her iki tokenin eşit değerini yatırın",
+        "Makbuz olarak LP tokenleri alın",
+        "İşlem ücretlerinden pay kazanın",
+        "LP tokenleriyle istediğiniz zaman çekin",
+        "Risk: fiyatlar ayrışırsa kalıcı kayıp"
+      ]
+    },
+    "how-to-use-sigmausd": {
+      "query": "SigmaUSD stablecoin nasıl kullanılır?",
+      "shortAnswer": "SigmaUSD, USD'ye sabitlenmiş Ergo'nun algoritmik stablecoin'idir. sigmausd.io'da ERG teminatı yatırarak basın. İstikrarlı değer depolama, işlem çiftleri veya DeFi için kullanın. İstediğiniz zaman ERG karşılığında kullanın. Protokol, oynaklığı emmek için SigRSV kullanır - SigRSV sahipleri potansiyel kâr için risk alır.",
+      "keyPoints": [
+        "ERG teminatıyla sigmausd.io'da basın",
+        "~1 ABD Doları değerine sabitlenmiş",
+        "ERG rezervleriyle aşırı teminatlandırılmış",
+        "İstediğiniz zaman ERG karşılığında kullanın",
+        "SigRSV fiyat oynaklığını emer",
+        "Merkezi olmayan, merkezi yayıncı yok"
+      ]
+    },
+    "why-proof-of-work-matters": {
+      "query": "İş Kanıtı, merkezi olmayan yapı için neden önemlidir?",
+      "shortAnswer": "İş Kanıtı, herkesin izinsiz madencilik yapabilmesi nedeniyle en güçlü sansür direncini sağlar. Doğrulayıcıların tanımlanıp baskı altına alınabildiği PoS'un aksine, PoW madencileri anonimdir ve değiştirilebilir. Enerji maliyeti, düzenleyiciler veya içeriden kişiler tarafından ele geçirilemeyen gerçek dünya çıpası oluşturur.",
+      "keyPoints": [
+        "İzinsiz: herkes madencilik yapabilir",
+        "Anonim: madencilerin tanımlanması/baskı altına alınması zor",
+        "Gerçek dünya maliyeti: içeriden kişiler tarafından manipüle edilemez",
+        "Zenginleşen staking dinamiği yok",
+        "Kanıtlanmış güvenlik modeli (2009'dan beri Bitcoin)",
+        "Tasarımla sansür direnci"
+      ]
+    },
+    "is-pow-better-than-pos": {
+      "query": "İş Kanıtı, Hisse Kanıtı'ndan daha iyi midir?",
+      "shortAnswer": "Her birinin değiş tokuşları var. PoW, daha güçlü sansür direnci, daha adil dağıtım ve 'zenginleşen' dinamiği olmaksızın sunar. PoS daha enerji verimlidir ancak büyük staker'lar etrafında merkezileşir ve düzenleyici baskıya karşı daha savunmasızdır. Finansal özgürlük ve merkezi olmayan yapı için PoW üstündür; saf verimlilik için PoS kazanır.",
+      "keyPoints": [
+        "PoW: Daha güçlü sansür direnci",
+        "PoW: Daha adil dağıtım (ön madencilik avantajı yok)",
+        "PoW: Anonim, izinsiz katılım",
+        "PoS: Daha enerji verimli",
+        "PoS: Büyük staker'lar etrafında merkezileşir",
+        "PoS: Doğrulayıcılar düzenlenebilir/baskı altına alınabilir"
+      ]
+    },
+    "what-is-financial-repression": {
+      "query": "Finansal baskı nedir ve Ergo nasıl yardımcı olur?",
+      "shortAnswer": "Finansal baskı; sermaye kontrolleri, hesap dondurma, gözetim, enflasyon ve finansal özgürlük üzerindeki kısıtlamaları içerir. Hükümetler bu araçları vatandaşları kontrol etmek için kullanır. Ergo kaçış yolu sağlar: öz-saklama (hesap dondurma yok), gizlilik (gözetim yok), sansür direnci (engellenen işlem yok) ve sağlam para (enflasyon yok).",
+      "keyPoints": [
+        "Sermaye kontrolleri: Ergo sınırsızdır",
+        "Hesap dondurma: Öz-saklama, anahtarları siz kontrol edersiniz",
+        "Gözetim: Gizlilik için Sigma Protokolleri",
+        "Enflasyon: Sabit arz, tahmin edilebilir emisyon",
+        "Sansür: PoW, kimse işlemleri engelleyemez",
+        "KYC aşımı: İzinsiz erişim"
+      ]
+    },
+    "why-no-vc-funding-matters": {
+      "query": "Ergo'nun VC finansmanı eksikliği neden önemlidir?",
+      "shortAnswer": "VC destekli zincirler uyumsuz teşviklere sahiptir: VC'ler çıkışa ihtiyaç duyduğundan özden çok şişirilme, merkezi kontrol ve token dökümü için baskı yaparlar. Ergo'nun adil lansmanı, içeriden tahsis yok, fiyatı şişirmek için baskı yok ve kurumsal yönetişim yok anlamına gelir. Topluluk Ergo'yu kontrol eder, getiri arayan yatırımcılar değil.",
+      "keyPoints": [
+        "İçeriden token tahsisi yok",
+        "VC çıkışları için fiyatı şişirme baskısı yok",
+        "Topluluk odaklı geliştirme",
+        "Kurumsal yönetişim ele geçirme yok",
+        "Uyumlu teşvikler: inşa edenler, spekülatörler değil",
+        "İlk günden gerçek merkezi olmayan yapı"
+      ]
+    },
+    "how-is-ergo-different-from-bitcoin": {
+      "query": "Ergo Bitcoin'den nasıl farklıdır?",
+      "shortAnswer": "Ergo, Bitcoin'in modelini akıllı sözleşmelerle genişletir. Her ikisi de PoW ve UTXO kullanır, ancak Ergo şunları ekler: programlanabilir kutular için eUTXO, akıllı sözleşmeler için ErgoScript, gizlilik için Sigma Protokolleri, sürdürülebilirlik için depolama kirası ve hafif istemciler için NiPoPoW'lar. Ergo'yu 'doğru yapılmış akıllı sözleşmelerle Bitcoin' olarak düşünün.",
+      "keyPoints": [
+        "Aynı: PoW mutabakatı, UTXO modeli, adil lansman",
+        "Ergo ekler: ErgoScript aracılığıyla akıllı sözleşmeler",
+        "Ergo ekler: Sigma Protokolleri aracılığıyla gizlilik",
+        "Ergo ekler: Sürdürülebilirlik için depolama kirası",
+        "Ergo ekler: Hafif istemciler için NiPoPoW'lar",
+        "Bitcoin: Değer deposu; Ergo: Programlanabilir değer"
+      ]
+    },
+    "ergo-vs-cardano-comparison": {
+      "query": "Ergo ve Cardano arasındaki fark nedir?",
+      "shortAnswer": "Her ikisi de eUTXO kullanır, ancak mutabakat ve felsefe bakımından farklılık gösterirler. Ergo: PoW (Autolykos), adil lansman, VC finansmanı yok, depolama kirası. Cardano: PoS (Ouroboros), VC destekli, daha büyük ekosistem. Ergo merkezi olmayan yapıyı ve sürdürülebilirliği; Cardano akademik titizliği ve kurumsal benimsemeyi önceliklendirir.",
+      "keyPoints": [
+        "Her ikisi: eUTXO akıllı sözleşme modeli",
+        "Ergo: PoW; Cardano: PoS",
+        "Ergo: Adil lansman; Cardano: VC destekli",
+        "Ergo: Depolama kirası; Cardano: Kira mekanizması yok",
+        "Cardano: Daha büyük ekosistem, daha fazla finansman",
+        "Ergo: Daha merkezi olmayan, cypherpunk ruhu"
+      ]
+    },
+    "ergo-vs-solana-comparison": {
+      "query": "Ergo Solana ile nasıl karşılaştırılır?",
+      "shortAnswer": "Zıt felsefeler. Solana: PoS, VC destekli, hız odaklı, merkezi doğrulayıcılar, sık kesintiler. Ergo: PoW, adil lansman, güvenlik odaklı, merkezi olmayan madencilik, %100 çalışma süresi. Solana, hız için merkezi olmayan yapıdan ödün verir; Ergo, ham TPS üzerinden güvenlik ve sansür direncini önceliklendirir.",
+      "keyPoints": [
+        "Solana: Merkezi doğrulayıcılara sahip PoS",
+        "Ergo: Merkezi olmayan madencilere sahip PoW",
+        "Solana: VC destekli, içeriden tahsisler",
+        "Ergo: Adil lansman, ön madencilik yok",
+        "Solana: Hızlı ama sık kesintiler",
+        "Ergo: Daha yavaş ama %100 çalışma süresi"
+      ]
+    },
+    "can-ergo-be-traced": {
+      "query": "Ergo işlemleri takip edilebilir mi?",
+      "shortAnswer": "Varsayılan olarak Ergo işlemleri Bitcoin gibi halka açıktır. Ancak Ergo gizlilik araçları sağlar: işlem karıştırma için ErgoMixer, akıllı sözleşmelerde sıfır bilgi ispatları için Sigma Protokolleri ve gizli adresler. Gizlilik isteğe bağlıdır ancak güçlüdür - verilerin kendisini açıklamadan veriler hakkında şeyler kanıtlayabilirsiniz.",
+      "keyPoints": [
+        "Varsayılan: Halka açık blokzinciri (Bitcoin gibi)",
+        "ErgoMixer: Gizlilik için işlemleri karıştırın",
+        "Sigma Protokolleri: Sıfır bilgi ispatları",
+        "Gizli adresler: Alıcıları gizleyin",
+        "İsteğe bağlı gizlilik: Gerektiğinde seçin",
+        "Ayrıntıları açıklamadan uyum kanıtlayabilirsiniz"
+      ]
+    },
+    "is-ergo-anonymous": {
+      "query": "Ergo anonim midir?",
+      "shortAnswer": "Varsayılan olarak değil, ancak olabilir. Temel Ergo işlemleri takma adlıdır (adresler görünür, isimler değil). Anonimlik için işlem bağlantılarını kırmak amacıyla ErgoMixer kullanın, sıfır bilgi ispatları için Sigma Protokollerini kullanın ve uygun operasyonel güvenliği uygulayın. Ergo, Monero gibi her zaman açık gizlilik yerine 'talep üzerine gizlilik' sunar.",
+      "keyPoints": [
+        "Varsayılan olarak takma adlı (adresler, isimler değil)",
+        "ErgoMixer: İşlem bağlantılarını kırın",
+        "Sigma Protokolleri: Açıklamadan kanıtlayın",
+        "Gizlilik isteğe bağlıdır, zorlanmaz",
+        "Seçici ifşa için daha iyi",
+        "Operasyonel güvenlik hâlâ önemlidir"
+      ]
+    },
+    "what-is-ergomixer": {
+      "query": "ErgoMixer nedir ve nasıl çalışır?",
+      "shortAnswer": "ErgoMixer, giriş ve çıkış adresleriniz arasındaki bağlantıyı kesen gözetimsiz, güvensiz bir karıştırma hizmetidir. Hangi yatırımın sizin olduğunu açıklamadan para çekmeye hakkınız olduğunu kanıtlamak için Sigma Protokollerini kullanır. Merkezi karıştırıcıların aksine fon çalabilecek veya kayıt tutabilecek güvenilen bir taraf yoktur.",
+      "keyPoints": [
+        "Gözetimsiz: Fonlarınızı siz kontrol edersiniz",
+        "Güvensiz: Operatör çalamaz veya kayıt tutamaz",
+        "İspat için Sigma Protokollerini kullanır",
+        "İşlem grafik bağlantılarını kırar",
+        "Daha güçlü gizlilik için birden fazla karıştırma turu",
+        "Açık kaynaklı, doğrulanabilir kod"
+      ]
+    },
+    "what-can-i-do-with-ergo": {
+      "query": "Ergo ile ne yapabilirim?",
+      "shortAnswer": "Ergo tam bir ekosistemi destekler: Spectrum DEX'te alım satım yapın, SigmaUSD stablecoin kullanın, ErgoMixer ile işlemleri karıştırın, SkyHarbor'da NFT toplayın, GPU'larla madencilik yapın, DuckPools'da borç verin/alın, Rosen aracılığıyla diğer zincirlere köprüleyin ve ErgoScript ile dApp'ler oluşturun. Merkezi olmayan finans ve uygulamalar için eksiksiz bir platformdur.",
+      "keyPoints": [
+        "Alım satım: Spectrum DEX (takaslar, likidite)",
+        "İstikrarlı değer: SigmaUSD stablecoin",
+        "Gizlilik: ErgoMixer işlem karıştırma",
+        "NFT'ler: SkyHarbor pazaryeri",
+        "Madencilik: Autolykos ile GPU madenciliği",
+        "İnşa etme: ErgoScript akıllı sözleşmeler"
+      ]
+    },
+    "what-are-ergo-nfts": {
+      "query": "Ergo'da NFT'ler nasıl çalışır?",
+      "shortAnswer": "Ergo NFT'leri, her birini benzersiz kılan miktarı 1 olan yerel tokenlerdir. NFT'lerin akıllı sözleşmelere ihtiyaç duyduğu Ethereum'un aksine Ergo NFT'leri birinci sınıf protokol vatandaşlarıdır. Minimal ücretlerle (~0,001 ERG) basın, SkyHarbor pazarında alım satım yapın ve tam eUTXO güvenliğinin keyfini çıkarın. NFT'ler zengin meta veri ve telif hakları içerebilir.",
+      "keyPoints": [
+        "Yerel tokenler (sarmalayıcı sözleşme yok)",
+        "~0,001 ERG için basın (kuruşlar)",
+        "SkyHarbor pazarında alım satım yapın",
+        "Meta veri ve telif haklarını destekler",
+        "ERG'nin kendisiyle aynı güvenlik",
+        "Akıllı sözleşmelerde kullanılabilir"
+      ]
+    }
+  },
   "topicsData": {
     "ergo-defi": {
       "title": "Ergo Üzerinde DeFi",
