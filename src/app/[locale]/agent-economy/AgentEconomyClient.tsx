@@ -100,22 +100,10 @@ export function AgentEconomyClient() {
                   maxWidth: "60ch",
                 }}
               >
-                {t("hero.description", {
-                  credit: (
-                    <span key="credit" className="text-white font-semibold">
-                      {t("hero.descriptionCredit")}
-                    </span>
-                  ),
-                  programmableRules: (
-                    <span key="rules" className="text-white font-semibold">
-                      {t("hero.descriptionRules")}
-                    </span>
-                  ),
-                  verifiableSettlement: (
-                    <span key="settlement" className="text-white font-semibold">
-                      {t("hero.descriptionSettlement")}
-                    </span>
-                  ),
+                {t.rich("hero.description", {
+                  credit: (chunks) => <span className="text-white font-semibold">{chunks}</span>,
+                  programmableRules: (chunks) => <span className="text-white font-semibold">{chunks}</span>,
+                  verifiableSettlement: (chunks) => <span className="text-white font-semibold">{chunks}</span>,
                 })}
               </p>
 

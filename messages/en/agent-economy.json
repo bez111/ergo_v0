@@ -6,10 +6,7 @@
       "titleStart": "The base layer for",
       "titleHighlight": "autonomous",
       "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need {credit}, {programmableRules}, and {verifiableSettlement} — all without a central counterparty. Ergo is the only settlement layer built for this.",
-      "descriptionCredit": "credit",
-      "descriptionRules": "programmable acceptance rules",
-      "descriptionSettlement": "verifiable settlement",
+      "description": "Autonomous agents need more than payments. They need <credit>credit</credit>, <programmableRules>programmable acceptance rules</programmableRules>, and <verifiableSettlement>verifiable settlement</verifiableSettlement> — all without a central counterparty. Ergo is the only settlement layer built for this.",
       "ctaArchitecture": "See the architecture",
       "ctaDemos": "View demos"
     },
