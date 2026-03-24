@@ -4,6 +4,7 @@
 
 import React, { useState } from "react"
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 import { 
   Zap, 
@@ -44,9 +45,10 @@ import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { BackToTop } from "@/components/ui/back-to-top"
 import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
 import { networkMetrics, formatHashrate, formatDifficulty, formatBlockTime, formatBlockReward, formatActiveMiners, formatMiningPools } from "@/lib/network-metrics"
-import { coreValues, comparison, miningPools, miningSoftware, miningSteps, miningTools } from "./miners-data"
+import { coreValues, miningPools, miningSoftware, miningSteps, miningTools } from "./miners-data"
 
 export function MinersClient() {
+  const t = useTranslations('minersPage')
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   
   // Mining Calculator State
@@ -76,8 +78,8 @@ export function MinersClient() {
   const roiDays = gpuCost / dailyProfit
 
   const breadcrumbItems = [
-    { name: "Home", href: "/" },
-    { name: "For Miners", href: "/miners" }
+    { name: t('breadcrumbs.home'), href: "/" },
+    { name: t('breadcrumbs.miners'), href: "/miners" }
   ]
 
 
@@ -93,55 +95,55 @@ export function MinersClient() {
 
   // Live metrics from centralized network metrics
   const liveMetrics = [
-    { label: "Network Hashrate", value: formatHashrate(networkMetrics), trend: networkMetrics.hashrate.trend, icon: Zap, comment: "Network hashrate → competition & security" },
-    { label: "Difficulty", value: formatDifficulty(networkMetrics), trend: networkMetrics.difficulty.trend, icon: BarChart3, comment: "Difficulty → baseline for profitability" },
-    { label: "Block Time", value: formatBlockTime(networkMetrics), trend: networkMetrics.blockTime.status, icon: Clock, comment: "Consistent block times = predictable rewards" },
-    { label: "Block Reward", value: formatBlockReward(networkMetrics), trend: `${networkMetrics.supply.left}M left`, icon: Coins, comment: "Block reward + fees → total miner revenue" },
-    { label: "Active Miners", value: formatActiveMiners(networkMetrics), trend: networkMetrics.activeMiners.trend, icon: Users, comment: "Healthy miner distribution" },
-    { label: "Mining Pools", value: formatMiningPools(networkMetrics), trend: networkMetrics.miningPools.status, icon: Globe, comment: "Multiple pool options for decentralization" }
+    { label: t('metrics.networkHashrate.label'), value: formatHashrate(networkMetrics), trend: networkMetrics.hashrate.trend, icon: Zap, comment: t('metrics.networkHashrate.comment') },
+    { label: t('metrics.difficulty.label'), value: formatDifficulty(networkMetrics), trend: networkMetrics.difficulty.trend, icon: BarChart3, comment: t('metrics.difficulty.comment') },
+    { label: t('metrics.blockTime.label'), value: formatBlockTime(networkMetrics), trend: networkMetrics.blockTime.status, icon: Clock, comment: t('metrics.blockTime.comment') },
+    { label: t('metrics.blockReward.label'), value: formatBlockReward(networkMetrics), trend: t('metrics.blockReward.trend', { remaining: networkMetrics.supply.left }), icon: Coins, comment: t('metrics.blockReward.comment') },
+    { label: t('metrics.activeMiners.label'), value: formatActiveMiners(networkMetrics), trend: networkMetrics.activeMiners.trend, icon: Users, comment: t('metrics.activeMiners.comment') },
+    { label: t('metrics.miningPools.label'), value: formatMiningPools(networkMetrics), trend: networkMetrics.miningPools.status, icon: Globe, comment: t('metrics.miningPools.comment') }
   ]
 
 
   // FAQ for miners
   const faqs = [
     {
-      q: "Is Ergo still profitable to mine?",
+      q: t('faq.questions.4.question'),
       a: (
         <>
-          Profitability depends on your electricity costs, hardware efficiency, and current network difficulty. 
-          Use our <a href="https://minerstat.com/coin/ERG" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">mining calculator</a> to 
+          Profitability depends on your electricity costs, hardware efficiency, and current network difficulty.
+          Use our <a href="https://minerstat.com/coin/ERG" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">mining calculator</a> to
           estimate earnings. Many miners find Ergo profitable due to lower competition compared to major coins.
         </>
       )
     },
     {
-      q: "Will ASICs come to Ergo?",
+      q: t('faq.questions.5.question'),
       a: (
         <>
-          Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. 
-          The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining 
+          Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations.
+          The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining
           accessible to GPU miners. Read more about <a href="/technology/secure-pow" className="text-orange-400 hover:text-orange-300 underline">Ergo's PoW design</a>.
         </>
       )
     },
     {
-      q: "How stable is the Ergo development team?",
+      q: t('faq.questions.6.question'),
       a: (
         <>
-          Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers. 
-          The project is open-source with regular updates and a clear roadmap. Check the 
-          <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">GitHub activity</a> and 
-          join <a href="https://discord.com/invite/ergo-platform-668903786361651200" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">Discord</a> to 
+          Ergo has a strong, active development team led by experienced cryptographers and blockchain researchers.
+          The project is open-source with regular updates and a clear roadmap. Check the
+          <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">GitHub activity</a> and
+          join <a href="https://discord.com/invite/ergo-platform-668903786361651200" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">Discord</a> to
           see the active community.
         </>
       )
     },
     {
-      q: "How does storage rent affect miners?",
+      q: t('faq.questions.7.question'),
       a: (
         <>
-          Storage rent creates a sustainable fee mechanism that benefits miners long-term. Unused UTXOs pay rent over time, 
-          which goes to miners as additional rewards beyond block emissions. This ensures miner incentives continue after 
+          Storage rent creates a sustainable fee mechanism that benefits miners long-term. Unused UTXOs pay rent over time,
+          which goes to miners as additional rewards beyond block emissions. This ensures miner incentives continue after
           the emission schedule ends. Learn more about <a href="/technology/storage-rent" className="text-orange-400 hover:text-orange-300 underline">storage rent economics</a>.
         </>
       )
@@ -150,18 +152,18 @@ export function MinersClient() {
       q: "Which mining pools support Ergo?",
       a: (
         <>
-          Popular Ergo mining pools include Herominers, Woolypooly, 2Miners, Nanopool, and F2Pool. Each has different 
-          fee structures and payout methods. Solo mining is also viable for larger operations. 
+          Popular Ergo mining pools include Herominers, Woolypooly, 2Miners, Nanopool, and F2Pool. Each has different
+          fee structures and payout methods. Solo mining is also viable for larger operations.
           See our <a href="#pools" className="text-orange-400 hover:text-orange-300 underline">complete pool comparison</a> below for details.
         </>
       )
     },
     {
-      q: "What's the minimum hardware needed?",
+      q: t('faq.questions.0.question'),
       a: (
         <>
-          You need a GPU with at least 4GB VRAM. NVIDIA GTX 1060 6GB or AMD RX 580 8GB are good starting points. 
-          More powerful cards like RTX 3070+ or RX 6700 XT+ will be more profitable. Check our 
+          You need a GPU with at least 4GB VRAM. NVIDIA GTX 1060 6GB or AMD RX 580 8GB are good starting points.
+          More powerful cards like RTX 3070+ or RX 6700 XT+ will be more profitable. Check our
           <a href="#mining-guide" className="text-orange-400 hover:text-orange-300 underline">hardware guide</a> below for detailed recommendations and optimization tips.
         </>
       )
@@ -198,22 +200,22 @@ export function MinersClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Mine with GPUs. Earn forever. Stay profitable.
+                  {t('hero.title')}
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">
-                  ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.
+                  {t('hero.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
                     <Link href="#mining-guide">
                       <Pickaxe className="w-5 h-5 mr-2" />
-                      Start Mining Ergo
+                      {t('hero.cta')}
                     </Link>
                   </Button>
                   <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
                     <a href="https://minerstat.com/coin/ERG" target="_blank" rel="noopener noreferrer">
                       <Calculator className="w-5 h-5 mr-2" />
-                      Check Profitability
+                      {t('hero.checkProfitability')}
                     </a>
                   </Button>
                 </div>
@@ -224,22 +226,30 @@ export function MinersClient() {
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
               >
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-6 text-center text-white">Why mine Ergo instead of other coins?</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">{t('hero.whyMine')}</h3>
                   <div className="grid grid-cols-1 gap-4">
-                    {coreValues.map((value) => (
-                      <div key={value.title} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
-                        <div className="flex items-start gap-3">
-                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
-                            <value.icon className="w-6 h-6" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-white text-lg">{value.title}</h4>
-                            <p className="text-neutral-400 text-sm mb-1">{value.description}</p>
-                            <span className="text-orange-400 text-xs font-medium">{value.highlight}</span>
+                    {([
+                      { key: 'asicResistant', icon: coreValues[0].icon },
+                      { key: 'fairLaunch', icon: coreValues[1].icon },
+                      { key: 'realUseCases', icon: coreValues[2].icon },
+                      { key: 'storageRent', icon: coreValues[3].icon },
+                    ] as const).map(({ key, icon: Icon }) => {
+                      const cv = t.raw(`coreValues.${key}`) as { title: string; description: string; highlight: string }
+                      return (
+                        <div key={key} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                          <div className="flex items-start gap-3">
+                            <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                              <Icon className="w-6 h-6" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-white text-lg">{cv.title}</h4>
+                              <p className="text-neutral-400 text-sm mb-1">{cv.description}</p>
+                              <span className="text-orange-400 text-xs font-medium">{cv.highlight}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      )
+                    })}
                   </div>
                 </div>
               </motion.div>
@@ -314,10 +324,10 @@ export function MinersClient() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4 text-white">
-                Mining <span className="text-orange-400">Profitability</span> Calculator
+                {t('calculator.title')} <span className="text-orange-400">{t('calculator.titleHighlight')}</span> {t('calculator.titleSuffix')}
               </h2>
               <p className="text-xl text-neutral-300">
-                Calculate your potential earnings mining Ergo
+                {t('calculator.subtitle')}
               </p>
             </div>
 
@@ -330,7 +340,7 @@ export function MinersClient() {
                       <div className="flex items-center justify-between mb-3">
                         <label className="text-white font-semibold flex items-center gap-2">
                           <Zap className="w-5 h-5 text-orange-400" />
-                          Hashrate (MH/s)
+                          {t('calculator.hashrate')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">{hashrate}</span>
                       </div>
@@ -353,7 +363,7 @@ export function MinersClient() {
                       <div className="flex items-center justify-between mb-3">
                         <label className="text-white font-semibold flex items-center gap-2">
                           <Cpu className="w-5 h-5 text-orange-400" />
-                          Power Consumption (W)
+                          {t('calculator.power')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">{powerConsumption}W</span>
                       </div>
@@ -376,7 +386,7 @@ export function MinersClient() {
                       <div className="flex items-center justify-between mb-3">
                         <label className="text-white font-semibold flex items-center gap-2">
                           <DollarSign className="w-5 h-5 text-orange-400" />
-                          Electricity Cost ($/kWh)
+                          {t('calculator.electricity')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">${electricityCost.toFixed(3)}</span>
                       </div>
@@ -399,7 +409,7 @@ export function MinersClient() {
                       <div className="flex items-center justify-between mb-3">
                         <label className="text-white font-semibold flex items-center gap-2">
                           <TrendingUp className="w-5 h-5 text-orange-400" />
-                          ERG Price (USD)
+                          {t('calculator.ergPrice')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">${ergPrice.toFixed(2)}</span>
                       </div>
@@ -422,7 +432,7 @@ export function MinersClient() {
                       <div className="flex items-center justify-between mb-3">
                         <label className="text-white font-semibold flex items-center gap-2">
                           <Users className="w-5 h-5 text-orange-400" />
-                          Pool Fee (%)
+                          {t('calculator.poolFee')}
                         </label>
                         <span className="text-orange-400 font-bold text-lg">{poolFee}%</span>
                       </div>
@@ -450,7 +460,7 @@ export function MinersClient() {
                           <Coins className="w-6 h-6 text-orange-400" />
                         </div>
                         <div>
-                          <p className="text-sm text-neutral-400">Daily ERG Mined</p>
+                          <p className="text-sm text-neutral-400">{t('calculator.dailyErgMined')}</p>
                           <p className="text-2xl font-bold text-white">{dailyErgEarned.toFixed(4)} ERG</p>
                         </div>
                       </div>
@@ -461,15 +471,15 @@ export function MinersClient() {
 
                     <div className="bg-black/60 border border-white/10 rounded-2xl p-6 space-y-4">
                       <div className="flex justify-between items-center pb-3 border-b border-neutral-700">
-                        <span className="text-neutral-400">Daily Revenue</span>
+                        <span className="text-neutral-400">{t('calculator.dailyRevenue')}</span>
                         <span className="text-green-400 font-bold">${dailyRevenue.toFixed(2)}</span>
                       </div>
                       <div className="flex justify-between items-center pb-3 border-b border-neutral-700">
-                        <span className="text-neutral-400">Daily Power Cost</span>
+                        <span className="text-neutral-400">{t('calculator.dailyPowerCost')}</span>
                         <span className="text-red-400 font-bold">-${dailyPowerCost.toFixed(2)}</span>
                       </div>
                       <div className="flex justify-between items-center pt-2">
-                        <span className="text-white font-semibold text-lg">Daily Profit</span>
+                        <span className="text-white font-semibold text-lg">{t('calculator.dailyProfit')}</span>
                         <span className={`font-bold text-xl ${dailyProfit > 0 ? 'text-green-400' : 'text-red-400'}`}>
                           ${dailyProfit.toFixed(2)}
                         </span>
@@ -478,13 +488,13 @@ export function MinersClient() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-black/60 border border-white/10 rounded-xl p-4">
-                        <p className="text-sm text-neutral-400 mb-1">Monthly</p>
+                        <p className="text-sm text-neutral-400 mb-1">{t('calculator.monthly')}</p>
                         <p className={`text-xl font-bold ${monthlyProfit > 0 ? 'text-green-400' : 'text-red-400'}`}>
                           ${monthlyProfit.toFixed(2)}
                         </p>
                       </div>
                       <div className="bg-black/60 border border-white/10 rounded-xl p-4">
-                        <p className="text-sm text-neutral-400 mb-1">Yearly</p>
+                        <p className="text-sm text-neutral-400 mb-1">{t('calculator.yearly')}</p>
                         <p className={`text-xl font-bold ${yearlyProfit > 0 ? 'text-green-400' : 'text-red-400'}`}>
                           ${yearlyProfit.toFixed(2)}
                         </p>
@@ -494,7 +504,7 @@ export function MinersClient() {
                     <div className="bg-gradient-to-br from-blue-500/20 to-purple-900/20 border border-blue-500/30 rounded-xl p-4">
                       <div className="flex items-center gap-2 mb-2">
                         <Clock className="w-4 h-4 text-blue-400" />
-                        <p className="text-sm text-neutral-400">ROI Time (GPU @ $500)</p>
+                        <p className="text-sm text-neutral-400">{t('calculator.roiTime')}</p>
                       </div>
                       <p className="text-2xl font-bold text-white">
                         {roiDays > 0 ? `${Math.round(roiDays)} days` : 'Not profitable'}
@@ -508,8 +518,7 @@ export function MinersClient() {
 
                     <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-4">
                       <p className="text-xs text-orange-300 leading-relaxed">
-                        <strong>Note:</strong> Calculations are estimates based on current network difficulty and price. 
-                        Actual earnings may vary with network hashrate changes and ERG price fluctuations.
+                        {t('calculator.note')}
                       </p>
                     </div>
                   </div>
@@ -517,7 +526,7 @@ export function MinersClient() {
 
                 {/* Popular GPU Presets */}
                 <div className="mt-8 pt-8 border-t border-neutral-700">
-                  <p className="text-white font-semibold mb-4">Popular GPU Presets:</p>
+                  <p className="text-white font-semibold mb-4">{t('calculator.gpuPresets')}</p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <button
                       onClick={() => { setHashrate(130); setPowerConsumption(120); }}
@@ -553,7 +562,7 @@ export function MinersClient() {
                 {/* CTA to start mining */}
                 <div className="mt-8 pt-8 border-t border-neutral-700">
                   <div className="bg-gradient-to-r from-green-500/10 to-green-900/10 border border-green-500/30 rounded-2xl p-6 text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">Ready to start mining?</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">{t('calculator.readyToStart')}</h3>
                     <p className="text-neutral-300 mb-4">
                       Follow our step-by-step guide to get your GPU mining ERG in 10 minutes
                     </p>
@@ -580,7 +589,7 @@ export function MinersClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-4 text-white">
-              Mining <span className="text-orange-400">Pools</span> Directory
+              {t('pools.title')} <span className="text-orange-400">{t('pools.titleHighlight')}</span> {t('pools.titleSuffix')}
             </h2>
             <p className="text-center text-neutral-400 mb-8">
               Choose a pool based on fees, features, and your location
@@ -647,19 +656,19 @@ export function MinersClient() {
                     
                     <div className="space-y-3 mb-4">
                       <div className="flex justify-between text-sm">
-                        <span className="text-neutral-400">Hashrate</span>
+                        <span className="text-neutral-400">{t('pools.hashrate')}</span>
                         <span className="text-white font-medium">{pool.hashrate}</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-neutral-400">Miners</span>
+                        <span className="text-neutral-400">{t('pools.miners')}</span>
                         <span className="text-white font-medium">{pool.miners.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-neutral-400">Min Payout</span>
+                        <span className="text-neutral-400">{t('pools.minPayout')}</span>
                         <span className="text-white font-medium">{pool.minPayout}</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span className="text-neutral-400">Payment</span>
+                        <span className="text-neutral-400">{t('pools.payment')}</span>
                         <span className="text-white font-medium">{pool.paymentSystem}</span>
                       </div>
                     </div>
@@ -696,7 +705,7 @@ export function MinersClient() {
 
             {filteredPools.length === 0 && (
               <div className="text-center py-8">
-                <p className="text-neutral-400">No pools match your criteria</p>
+                <p className="text-neutral-400">{t('pools.noPoolsFound')}</p>
               </div>
             )}
           </div>
@@ -712,7 +721,7 @@ export function MinersClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-4 text-white">
-              Mining <span className="text-orange-400">Software</span>
+              {t('software.title')} <span className="text-orange-400">{t('software.titleHighlight')}</span>
             </h2>
             <p className="text-center text-neutral-400 mb-8">
               Choose the right miner for your GPU
@@ -724,30 +733,30 @@ export function MinersClient() {
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-neutral-800">
-                        <th className="text-left p-4 text-sm font-medium text-neutral-400">Software</th>
-                        <th className="text-left p-4 text-sm font-medium text-neutral-400">GPU Support</th>
-                        <th className="text-left p-4 text-sm font-medium text-neutral-400">Dev Fee</th>
-                        <th className="text-left p-4 text-sm font-medium text-neutral-400">Best For</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">{t('software.headers.software')}</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">{t('software.headers.gpuSupport')}</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">{t('software.headers.devFee')}</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">{t('software.headers.bestFor')}</th>
                         <th className="text-left p-4 text-sm font-medium text-neutral-400"></th>
                       </tr>
                     </thead>
                     <tbody>
-                      {miningSoftware.map((software) => (
-                        <tr key={software.name} className="border-b border-neutral-800 last:border-0 hover:bg-neutral-900/30 transition-colors group">
-                          <td className="p-4 font-medium text-white">{software.name}</td>
+                      {(t.raw('software.items') as Array<{ name: string; gpus: string[]; fee: string; recommended: string }>).map((sw, idx) => (
+                        <tr key={sw.name} className="border-b border-neutral-800 last:border-0 hover:bg-neutral-900/30 transition-colors group">
+                          <td className="p-4 font-medium text-white">{sw.name}</td>
                           <td className="p-4">
                             <div className="flex gap-2">
-                              {software.gpus.map(gpu => (
+                              {sw.gpus.map(gpu => (
                                 <Badge key={gpu} variant="outline" className="border-neutral-700 text-xs">
                                   {gpu}
                                 </Badge>
                               ))}
                             </div>
                           </td>
-                          <td className="p-4 text-sm text-neutral-300">{software.fee}</td>
-                          <td className="p-4 text-sm text-neutral-400">{software.recommended}</td>
+                          <td className="p-4 text-sm text-neutral-300">{sw.fee}</td>
+                          <td className="p-4 text-sm text-neutral-400">{sw.recommended}</td>
                           <td className="p-4">
-                            <a href={software.download} target="_blank" rel="noopener noreferrer">
+                            <a href={miningSoftware[idx]?.download} target="_blank" rel="noopener noreferrer">
                               <Button variant="ghost" size="sm" className="text-neutral-400 hover:text-orange-400 group-hover:text-orange-400 transition-colors">
                                 <Download className="w-4 h-4" />
                               </Button>
@@ -764,7 +773,7 @@ export function MinersClient() {
             <div className="mt-6 p-4 bg-orange-500/10 border border-orange-500/30 rounded-xl">
               <p className="text-sm text-orange-300 flex items-start gap-2">
                 <Sparkles className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span><strong>New to mining?</strong> Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.</span>
+                <span>{t('software.newToMining')}</span>
               </p>
             </div>
           </div>
@@ -798,15 +807,21 @@ export function MinersClient() {
                     <caption className="sr-only">Mining platform comparison</caption>
                     <thead>
                       <tr className="border-b border-neutral-700">
-                        <th className="text-left p-4 font-semibold text-orange-400">Criterion</th>
-                        <th className="text-left p-4 font-semibold text-[#F7931A]">Bitcoin</th>
-                        <th className="text-left p-4 font-semibold text-[#627EEA]">Ethereum</th>
-                        <th className="text-left p-4 font-semibold text-[#FF6600]">Monero</th>
-                        <th className="text-left p-4 font-semibold text-orange-400">Ergo</th>
+                        <th className="text-left p-4 font-semibold text-orange-400">{t('comparison.headers.criterion')}</th>
+                        <th className="text-left p-4 font-semibold text-[#F7931A]">{t('comparison.headers.bitcoin')}</th>
+                        <th className="text-left p-4 font-semibold text-[#627EEA]">{t('comparison.headers.ethereum')}</th>
+                        <th className="text-left p-4 font-semibold text-[#FF6600]">{t('comparison.headers.monero')}</th>
+                        <th className="text-left p-4 font-semibold text-orange-400">{t('comparison.headers.ergo')}</th>
                       </tr>
                     </thead>
                     <tbody className="text-neutral-300">
-                      {comparison.map((row, rowIndex) => (
+                      {(t.raw('comparison.rows') as Array<{
+                        criterion: string;
+                        bitcoin: { status: string; text: string };
+                        ethereum: { status: string; text: string };
+                        monero: { status: string; text: string };
+                        ergo: { status: string; text: string };
+                      }>).map((row, rowIndex) => (
                         <tr key={rowIndex} className="border-b border-neutral-800 hover:bg-neutral-800/30">
                           <th scope="row" className="p-4 font-medium text-white">{row.criterion}</th>
                           <td className="p-4 text-sm">
@@ -868,7 +883,7 @@ export function MinersClient() {
 
             <div className="text-center">
               <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
-                <Link href="/start/comparison">Deep dive: Detailed comparison</Link>
+                <Link href="/start/comparison">{t('comparison.deepDive')}</Link>
               </Button>
             </div>
           </div>
@@ -891,38 +906,41 @@ export function MinersClient() {
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {miningSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                >
-                  <Card className="h-full bg-black/80 border border-white/10 rounded-3xl p-6 flex flex-col hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
-                        <step.icon className="w-5 h-5" aria-hidden="true" />
+              {(t.raw('miningSteps.items') as Array<{ step: string; title: string; description: string; details: string[]; duration: string }>).map((step, index) => {
+                const StepIcon = miningSteps[index]?.icon
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.15 }}
+                  >
+                    <Card className="h-full bg-black/80 border border-white/10 rounded-3xl p-6 flex flex-col hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                          {StepIcon && <StepIcon className="w-5 h-5" aria-hidden="true" />}
+                        </div>
+                        <Badge variant="outline" className="bg-black/60 border-orange-500/30 text-orange-400 uppercase tracking-wider">
+                          Step {step.step}
+                        </Badge>
+                        <span className="text-xs text-neutral-400">{step.duration}</span>
                       </div>
-                      <Badge variant="outline" className="bg-black/60 border-orange-500/30 text-orange-400 uppercase tracking-wider">
-                        Step {step.step}
-                      </Badge>
-                      <span className="text-xs text-neutral-400">{step.duration}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                    <p className="text-neutral-300 text-sm mb-4 flex-1">{step.description}</p>
-                    <div className="bg-black/60 border border-white/10 rounded-2xl p-4 mb-4">
-                      <ul className="space-y-2">
-                        {step.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="text-xs text-neutral-300 flex items-start gap-2">
-                            <CheckCircle className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </Card>
-                </motion.div>
-              ))}
+                      <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-neutral-300 text-sm mb-4 flex-1">{step.description}</p>
+                      <div className="bg-black/60 border border-white/10 rounded-2xl p-4 mb-4">
+                        <ul className="space-y-2">
+                          {step.details.map((detail, detailIndex) => (
+                            <li key={detailIndex} className="text-xs text-neutral-300 flex items-start gap-2">
+                              <CheckCircle className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </Card>
+                  </motion.div>
+                )
+              })}
             </div>
 
             <div className="text-center mt-12">
@@ -949,45 +967,49 @@ export function MinersClient() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              {miningTools.map((tool) => (
-                <Card key={tool.name} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300">
-                  <CardContent className="p-8">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
-                        <tool.icon className="w-6 h-6 text-orange-400" />
+              {(t.raw('tools.items') as Array<{ name: string; description: string }>).map((toolItem, idx) => {
+                const tool = miningTools[idx]
+                if (!tool) return null
+                return (
+                  <Card key={toolItem.name} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300">
+                    <CardContent className="p-8">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                          <tool.icon className="w-6 h-6 text-orange-400" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white">
+                          {toolItem.name}
+                        </h3>
                       </div>
-                      <h3 className="text-xl font-bold text-white">
-                        {tool.name}
-                      </h3>
-                    </div>
-                    <p className="text-neutral-300 mb-6">
-                      {tool.description}
-                    </p>
-                    <div className="space-y-3">
-                      {tool.type === 'external' ? (
-                        <a
-                          href={tool.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors group"
-                        >
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          <span>Open Tool</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      ) : (
-                        <Link
-                          href={tool.url}
-                          className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors group"
-                        >
-                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          <span>View Guide</span>
-                        </Link>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      <p className="text-neutral-300 mb-6">
+                        {toolItem.description}
+                      </p>
+                      <div className="space-y-3">
+                        {tool.type === 'external' ? (
+                          <a
+                            href={tool.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors group"
+                          >
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            <span>{t('tools.openTool')}</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        ) : (
+                          <Link
+                            href={tool.url}
+                            className="flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors group"
+                          >
+                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            <span>{t('tools.viewGuide')}</span>
+                          </Link>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                )
+              })}
             </div>
           </div>
         </motion.section>
@@ -995,7 +1017,7 @@ export function MinersClient() {
         {/* FAQ Section */}
         <section className="max-w-5xl mx-auto py-16 px-4">
           <h2 className="text-4xl font-bold text-center mb-8 text-white">
-            FAQ for Miners
+            {t('faq.title')}
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -1030,13 +1052,13 @@ export function MinersClient() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
-              Join the <span className="text-orange-400">Network</span>
+              {t('joinNetwork.title')} <span className="text-orange-400">{t('joinNetwork.titleHighlight')}</span>
             </h2>
             <p className="text-xl text-center text-neutral-300 mb-12">
               Ready to start mining? Choose your next step
             </p>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link 
+              <Link
                 href="/docs/miners/mining-guides"
                 className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
@@ -1047,8 +1069,8 @@ export function MinersClient() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Start Mining Now</h3>
-                        <p className="text-orange-400 text-sm">Complete Guide</p>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">{t('joinNetwork.startMining.title')}</h3>
+                        <p className="text-orange-400 text-sm">{t('joinNetwork.startMining.subtitle')}</p>
                       </div>
                       <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
                     </div>
@@ -1058,8 +1080,8 @@ export function MinersClient() {
                   Step-by-step setup guide with tools and optimization tips
                 </p>
               </Link>
-              
-              <a 
+
+              <a
                 href="https://discord.com/invite/ergo-platform-668903786361651200"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1072,8 +1094,8 @@ export function MinersClient() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Join Miners' Chat</h3>
-                        <p className="text-orange-400 text-sm">Community Support</p>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">{t('joinNetwork.joinChat.title')}</h3>
+                        <p className="text-orange-400 text-sm">{t('joinNetwork.joinChat.subtitle')}</p>
                       </div>
                       <ExternalLink className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
                     </div>
@@ -1084,7 +1106,7 @@ export function MinersClient() {
                 </p>
               </a>
 
-              <Link 
+              <Link
                 href="/technology/storage-rent"
                 className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
@@ -1095,8 +1117,8 @@ export function MinersClient() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Learn Economics</h3>
-                        <p className="text-orange-400 text-sm">Long-term Viability</p>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">{t('joinNetwork.learnEconomics.title')}</h3>
+                        <p className="text-orange-400 text-sm">{t('joinNetwork.learnEconomics.subtitle')}</p>
                       </div>
                       <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
                     </div>
@@ -1119,8 +1141,8 @@ export function MinersClient() {
                   <Coins className="w-6 h-6 text-orange-400" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Want to hold long-term?</p>
-                  <p className="text-neutral-400 text-sm">Learn about ERG as a store of value and investment</p>
+                  <p className="text-white font-semibold">{t('joinNetwork.holdLongTerm.title')}</p>
+                  <p className="text-neutral-400 text-sm">{t('joinNetwork.holdLongTerm.description')}</p>
                 </div>
               </div>
               <Link 

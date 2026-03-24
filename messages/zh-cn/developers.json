@@ -386,6 +386,28 @@
     "emailCapture": {
       "title": "开发者动态",
       "description": "获取新 SDK、ErgoScript 功能及生态系统进展的最新通知。"
+    },
+    "agentEconomy": {
+      "badge": "智能代理经济",
+      "title": "正在为自主智能代理构建应用？",
+      "description": "Ergo 是唯一内置可编程信用、接受谓词和可验证储备的结算层——提供超越基础支付的一切代理所需能力。",
+      "items": {
+        "0": {
+          "title": "代理经济",
+          "description": "为什么 Ergo 是自主经济代理的基础层：信用、票据、可编程信任。",
+          "tag": "概览"
+        },
+        "1": {
+          "title": "代理支付",
+          "description": "技术架构：储备 · 票据 · 追踪器 · 谓词——含 Fleet SDK 代码示例。",
+          "tag": "架构"
+        },
+        "2": {
+          "title": "实时演示",
+          "description": "Ergo 测试网上的三个工作流：API 调用支付、信用系统、社区储备。",
+          "tag": "测试网"
+        }
+      }
     }
   },
   "docs": {

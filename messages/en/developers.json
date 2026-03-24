@@ -389,6 +389,28 @@
     "emailCapture": {
       "title": "Developer Updates",
       "description": "Get notified about new SDKs, ErgoScript features, and ecosystem developments."
+    },
+    "agentEconomy": {
+      "badge": "Agent Economy",
+      "title": "Building for autonomous agents?",
+      "description": "Ergo is the only settlement layer with programmable credit, acceptance predicates, and verifiable reserves built in — everything agents need beyond basic payments.",
+      "items": [
+        {
+          "title": "Agent Economy",
+          "description": "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
+          "tag": "Overview"
+        },
+        {
+          "title": "Agent Payments",
+          "description": "Technical architecture: Reserve · Note · Tracker · Predicate — with Fleet SDK code examples.",
+          "tag": "Architecture"
+        },
+        {
+          "title": "Live Demos",
+          "description": "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
+          "tag": "Testnet"
+        }
+      ]
     }
   },
   "docs": {

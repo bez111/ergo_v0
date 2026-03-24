@@ -3,6 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages, react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { createPortal } from 'react-dom';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from '@/i18n/navigation';
@@ -57,6 +58,7 @@ const RedditIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export function InfographicsClient() {
+  const t = useTranslations('infographicsPage');
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -190,7 +192,7 @@ export function InfographicsClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs
             items={[
-              { name: 'Infographics', href: '/infographics' },
+              { name: t('breadcrumbs.infographics'), href: '/infographics' },
             ]}
             className="mb-8"
           />
@@ -203,25 +205,24 @@ export function InfographicsClient() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ergo Blockchain <span className="text-orange-400">Infographics</span>
+              {t('hero.title')} <span className="text-orange-400">{t('hero.titleHighlight')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-4xl mx-auto">
-              Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.
+              {t('hero.subtitle')}
               <br />
-              Save, share, and reuse them with attribution to ergoblockchain.org.
+              {t('hero.subtitleSecondLine')}
             </p>
             <p className="text-lg text-neutral-400 mb-8 max-w-3xl mx-auto">
-              This hub collects visual explainers for the most important parts of the Ergo protocol: consensus, tokenomics, DeFi, privacy, light clients and more.
-              Every infographic comes with a full-text breakdown so you can learn, teach and build with Ergo.
+              {t('hero.description')}
             </p>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="lg"
               className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black"
               asChild
             >
               <a href="/start/introduction">
-                Learn the basics <ArrowRight className="ml-2 h-4 w-4" />
+                {t('hero.learnBasics')} <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
           </motion.section>
@@ -241,7 +242,7 @@ export function InfographicsClient() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 h-4 w-4" aria-hidden="true" />
                   <input
                     type="search"
-                    placeholder="Search infographics (e.g. 'storage rent', 'NiPoPoWs', 'VC chains')"
+                    placeholder={t('filters.searchPlaceholder')}
                     value={filters.search}
                     onChange={(e) => handleFilterChange('search', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-black/60 border border-white/20 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400"
@@ -272,9 +273,9 @@ export function InfographicsClient() {
                     className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-white focus:outline-none focus:border-orange-400"
                     aria-label="Sort by"
                   >
-                    <option value="newest" className="bg-black">Newest</option>
-                    <option value="popular" className="bg-black">Most popular</option>
-                    <option value="alphabetical" className="bg-black">A–Z</option>
+                    <option value="newest" className="bg-black">{t('filters.sortNewest')}</option>
+                    <option value="popular" className="bg-black">{t('filters.sortPopular')}</option>
+                    <option value="alphabetical" className="bg-black">{t('filters.sortAZ')}</option>
                   </select>
                 </div>
 
@@ -286,7 +287,7 @@ export function InfographicsClient() {
                   className="lg:hidden border-white/20 text-white"
                 >
                   <Filter className="h-4 w-4 mr-2" />
-                  Filters
+                  {t('filters.filters')}
                   <ChevronDown className={`h-4 w-4 ml-2 transition-transform ${isFilterOpen ? 'rotate-180' : ''}`} />
                 </Button>
               </div>
@@ -313,9 +314,9 @@ export function InfographicsClient() {
                       onChange={(e) => handleFilterChange('sort', e.target.value)}
                       className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-white focus:outline-none focus:border-orange-400"
                     >
-                      <option value="newest" className="bg-black">Newest</option>
-                      <option value="popular" className="bg-black">Most popular</option>
-                      <option value="alphabetical" className="bg-black">A–Z</option>
+                      <option value="newest" className="bg-black">{t('filters.sortNewest')}</option>
+                      <option value="popular" className="bg-black">{t('filters.sortPopular')}</option>
+                      <option value="alphabetical" className="bg-black">{t('filters.sortAZ')}</option>
                     </select>
                   </div>
                 </CollapsibleContent>
@@ -359,14 +360,14 @@ export function InfographicsClient() {
             ) : paginatedInfographics.length === 0 ? (
               <div className="text-center py-16">
                 <Grid className="h-16 w-16 text-neutral-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">No infographics found</h3>
-                <p className="text-neutral-400 mb-4">Try adjusting your filters or search terms.</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('grid.noResults')}</h3>
+                <p className="text-neutral-400 mb-4">{t('grid.noResultsDescription')}</p>
                 <Button
                   variant="outline"
                   onClick={() => setFilters({ category: 'all', search: '', sort: 'popular' })}
                   className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black"
                 >
-                  Reset filters
+                  {t('grid.resetFilters')}
                 </Button>
               </div>
             ) : (
@@ -411,7 +412,7 @@ export function InfographicsClient() {
                   className="border-white/20 text-white disabled:opacity-50"
                   aria-label="Go to previous page"
                 >
-                  Previous
+                  {t('pagination.previous')}
                 </Button>
                 
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
@@ -442,7 +443,7 @@ export function InfographicsClient() {
                   className="border-white/20 text-white disabled:opacity-50"
                   aria-label="Go to next page"
                 >
-                  Next
+                  {t('pagination.next')}
                 </Button>
               </nav>
             </motion.section>
@@ -456,42 +457,42 @@ export function InfographicsClient() {
             className="mb-16"
           >
             <div className="bg-black border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-              <h2 className="text-3xl font-bold text-white mb-6 text-center">How to use these infographics</h2>
+              <h2 className="text-3xl font-bold text-white mb-6 text-center">{t('howToUse.title')}</h2>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-orange-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Download className="h-6 w-6 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Reuse Freely</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">{t('howToUse.reuse.title')}</h3>
                   <p className="text-neutral-400">
-                    You can reuse any infographic in presentations, blog posts or educational materials.
+                    {t('howToUse.reuse.description')}
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-orange-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <ExternalLink className="h-6 w-6 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Credit & Link Back</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">{t('howToUse.credit.title')}</h3>
                   <p className="text-neutral-400">
-                    Please credit ergoblockchain.org and link back to the original page.
+                    {t('howToUse.credit.description')}
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-orange-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Share2 className="h-6 w-6 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Custom Branding</h3>
+                  <h3 className="text-lg font-semibold text-white mb-2">{t('howToUse.branding.title')}</h3>
                   <p className="text-neutral-400">
-                    If you want editable source files or custom branding, contact the Ergo community.
+                    {t('howToUse.branding.description')}
                   </p>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline" size="lg" asChild className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black">
-                  <a href="/start/introduction">Learn more about Ergo</a>
+                  <a href="/start/introduction">{t('howToUse.learnMore')}</a>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="border-white/20 text-white hover:bg-white hover:text-black">
-                  <a href="/start/community">Join the community</a>
+                  <a href="/start/community">{t('howToUse.joinCommunity')}</a>
                 </Button>
               </div>
             </div>
@@ -505,7 +506,7 @@ export function InfographicsClient() {
             className="mb-16"
           >
             <div className="bg-black/40 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Related Resources</h2>
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">{t('relatedResources.title')}</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Related Questions */}
                 <div className="bg-black/60 border border-white/10 rounded-2xl p-6">
@@ -513,32 +514,32 @@ export function InfographicsClient() {
                     <div className="w-10 h-10 bg-orange-400/20 rounded-xl flex items-center justify-center">
                       <HelpCircle className="h-5 w-5 text-orange-400" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white">Common Questions</h3>
+                    <h3 className="text-lg font-semibold text-white">{t('relatedResources.questions.title')}</h3>
                   </div>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <a href="/questions/what-is-ergo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> What is Ergo blockchain?
+                      <a href={t('relatedResources.questions.items.0.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.questions.items.0.text')}
                       </a>
                     </li>
                     <li>
-                      <a href="/questions/what-is-eutxo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> What is the eUTXO model?
+                      <a href={t('relatedResources.questions.items.1.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.questions.items.1.text')}
                       </a>
                     </li>
                     <li>
-                      <a href="/questions/what-is-mev-resistance" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> How does MEV resistance work?
+                      <a href={t('relatedResources.questions.items.2.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.questions.items.2.text')}
                       </a>
                     </li>
                     <li>
-                      <a href="/questions/what-is-storage-rent" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> What is storage rent?
+                      <a href={t('relatedResources.questions.items.3.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.questions.items.3.text')}
                       </a>
                     </li>
                   </ul>
                   <a href="/questions" className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 text-sm mt-4 font-medium">
-                    View all questions <ArrowRight className="h-3 w-3" />
+                    {t('relatedResources.questions.viewAll')} <ArrowRight className="h-3 w-3" />
                   </a>
                 </div>
 
@@ -548,32 +549,32 @@ export function InfographicsClient() {
                     <div className="w-10 h-10 bg-orange-400/20 rounded-xl flex items-center justify-center">
                       <BookOpen className="h-5 w-5 text-orange-400" />
                     </div>
-                    <h3 className="text-lg font-semibold text-white">Playbooks & Guides</h3>
+                    <h3 className="text-lg font-semibold text-white">{t('relatedResources.playbooks.title')}</h3>
                   </div>
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <a href="/playbooks/first-ergo-wallet" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> Set up your first Ergo wallet
+                      <a href={t('relatedResources.playbooks.items.0.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.playbooks.items.0.text')}
                       </a>
                     </li>
                     <li>
-                      <a href="/playbooks/start-mining-ergo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> Start mining Ergo
+                      <a href={t('relatedResources.playbooks.items.1.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.playbooks.items.1.text')}
                       </a>
                     </li>
                     <li>
-                      <a href="/playbooks/ergo-defi-basics" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> Ergo DeFi basics
+                      <a href={t('relatedResources.playbooks.items.2.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.playbooks.items.2.text')}
                       </a>
                     </li>
                     <li>
-                      <a href="/playbooks/privacy-on-ergo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
-                        <span className="text-orange-400">→</span> Privacy tools on Ergo
+                      <a href={t('relatedResources.playbooks.items.3.href')} className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> {t('relatedResources.playbooks.items.3.text')}
                       </a>
                     </li>
                   </ul>
                   <a href="/playbooks" className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 text-sm mt-4 font-medium">
-                    View all playbooks <ArrowRight className="h-3 w-3" />
+                    {t('relatedResources.playbooks.viewAll')} <ArrowRight className="h-3 w-3" />
                   </a>
                 </div>
               </div>
@@ -587,8 +588,8 @@ export function InfographicsClient() {
             transition={{ duration: 0.6, delay: 1.2 }}
           >
             <FinalCTASimple
-              title="Stay Updated on Ergo Visual Resources"
-              description="Get notified when we publish new infographics, visual guides, and educational content about Ergo blockchain."
+              title={t('emailCapture.title')}
+              description={t('emailCapture.description')}
             />
           </motion.section>
 
@@ -598,13 +599,14 @@ export function InfographicsClient() {
   );
 }
 
-function InfographicShareMenu({ 
-  infographic, 
-  onDownload 
-}: { 
-  infographic: InfographicMeta; 
+function InfographicShareMenu({
+  infographic,
+  onDownload
+}: {
+  infographic: InfographicMeta;
   onDownload: (infographic: InfographicMeta, size?: string) => void;
 }) {
+  const t = useTranslations('infographicsPage');
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -654,8 +656,8 @@ function InfographicShareMenu({
   ];
 
   const downloadSizes = [
-    { name: "PNG — Standard (1920×1080)", size: "png", description: "Landscape PNG for desktop and social feeds" },
-    { name: "Embed code (HTML)", size: "embed", description: "Copy HTML snippet to embed this infographic" },
+    { name: t('shareMenu.pngStandard'), size: "png", description: t('shareMenu.pngStandardDesc') },
+    { name: t('shareMenu.embedCode'), size: "embed", description: t('shareMenu.embedCodeDesc') },
   ];
 
   const handleShare = (url: string) => {
@@ -668,8 +670,8 @@ function InfographicShareMenu({
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
       toast({
-        title: "Link copied",
-        description: "Thanks for spreading Ergo.",
+        title: t('shareMenu.linkCopied'),
+        description: t('shareMenu.linkCopiedToast'),
         duration: 1500,
       });
     } catch (err) {
@@ -710,7 +712,7 @@ function InfographicShareMenu({
         }}
       >
         <Share2 className="w-4 h-4" />
-        <span>Share</span>
+        <span>{t('shareMenu.share')}</span>
       </Button>
 
       {/* Secondary Download button */}
@@ -726,7 +728,7 @@ function InfographicShareMenu({
           title="Download image"
         >
           <Download className="w-4 h-4" />
-          <span>Download</span>
+          <span>{t('shareMenu.download')}</span>
           <ChevronDown className={`w-3 h-3 transition-transform ${isDownloadModalOpen ? 'rotate-180' : ''}`} />
         </Button>
       </div>
@@ -746,20 +748,20 @@ function InfographicShareMenu({
             aria-labelledby="share-modal-title"
           >
             <div className="mb-2 flex items-center justify-between">
-              <span id="share-modal-title" className="text-sm font-medium text-white">Share</span>
+              <span id="share-modal-title" className="text-sm font-medium text-white">{t('shareMenu.shareTitle')}</span>
               <button
                 type="button"
                 className="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-slate-300 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                 onClick={() => setIsShareModalOpen(false)}
                 aria-label="Close share options"
-                title="Close"
+                title={t('shareMenu.close')}
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             <p className="mb-3 text-xs text-neutral-400">
-              Pick where to share this infographic. Help other cypherpunks find fair-launch chains.
+              {t('shareMenu.shareDescription')}
             </p>
 
             <div className="space-y-2">
@@ -773,9 +775,9 @@ function InfographicShareMenu({
                   }}
                   className="w-full flex items-center justify-between rounded-lg border border-white/10 bg-black/40 px-3 py-2 text-sm text-slate-100 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors"
                   title={`Share on ${social.name}`}
-                  aria-label={`Share on ${social.name}`}
+                  aria-label={`${t('shareMenu.shareOn')} ${social.name}`}
                 >
-                  <span>Share on {social.name}</span>
+                  <span>{t('shareMenu.shareOn')} {social.name}</span>
                   <social.icon className="w-4 h-4" />
                 </button>
               ))}
@@ -787,10 +789,10 @@ function InfographicShareMenu({
                   setIsShareModalOpen(false);
                 }}
                 className="w-full flex items-center justify-between rounded-lg border border-white/10 bg-black/40 px-3 py-2 text-sm text-slate-100 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors"
-                title={copied ? "Link copied" : "Copy link"}
-                aria-label={copied ? "Link copied" : "Copy link"}
+                title={copied ? t('shareMenu.linkCopied') : t('shareMenu.copyLink')}
+                aria-label={copied ? t('shareMenu.linkCopied') : t('shareMenu.copyLink')}
               >
-                <span>{copied ? "Link copied" : "Copy link"}</span>
+                <span>{copied ? t('shareMenu.linkCopied') : t('shareMenu.copyLink')}</span>
                 <Link2 className="w-4 h-4" />
               </button>
             </div>
@@ -814,20 +816,20 @@ function InfographicShareMenu({
             aria-labelledby="download-modal-title"
           >
             <div className="mb-2 flex items-center justify-between">
-              <span id="download-modal-title" className="text-sm font-medium text-white">Download</span>
+              <span id="download-modal-title" className="text-sm font-medium text-white">{t('shareMenu.downloadTitle')}</span>
               <button
                 type="button"
                 className="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-slate-300 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                 onClick={() => setIsDownloadModalOpen(false)}
                 aria-label="Close download options"
-                title="Close"
+                title={t('shareMenu.close')}
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
             <p className="mb-3 text-xs text-neutral-400">
-              Choose the best format for reusing this infographic across social, blogs and decks.
+              {t('shareMenu.downloadDescription')}
             </p>
 
             <div className="space-y-2">
@@ -852,7 +854,7 @@ function InfographicShareMenu({
                     <span>{sizeOption.name}</span>
                     <span className="text-[11px] text-neutral-400">
                       {sizeOption.size === 'embed'
-                        ? (embedCopied ? 'Embed code copied to your clipboard.' : sizeOption.description)
+                        ? (embedCopied ? t('shareMenu.embedCopied') : sizeOption.description)
                         : sizeOption.description}
                     </span>
                   </div>
@@ -874,13 +876,14 @@ function InfographicShareMenu({
   );
 }
 
-function InfographicCard({ 
-  infographic, 
+function InfographicCard({
+  infographic,
   onDownload
-}: { 
-  infographic: InfographicMeta; 
+}: {
+  infographic: InfographicMeta;
   onDownload: (infographic: InfographicMeta, size?: string) => void;
 }) {
+  const t = useTranslations('infographicsPage');
   const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
 
@@ -920,7 +923,7 @@ function InfographicCard({
           <div className="absolute top-3 left-3 z-30">
             <Badge className="bg-orange-500 text-white border-0 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 flex items-center gap-1">
               <Sparkles className="h-3 w-3" />
-              New
+              {t('card.new')}
             </Badge>
           </div>
         )}
@@ -948,7 +951,7 @@ function InfographicCard({
           <div className="absolute inset-0 bg-black/15 flex items-center justify-center z-20">
             <div className="flex items-center gap-2 text-white/80 text-sm font-medium">
               <Eye className="h-4 w-4" />
-              View infographic
+              {t('grid.viewInfographic')}
             </div>
           </div>
         )}
@@ -971,7 +974,7 @@ function InfographicCard({
         
         {/* Meta line under badge */}
         <div className="text-xs text-neutral-400 mb-3">
-          {getShortCategoryLabel(infographic.category)} · Visual guide
+          {getShortCategoryLabel(infographic.category)} · {t('card.visualGuide')}
         </div>
 
         {/* Description - max 2 lines */}

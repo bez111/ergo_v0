@@ -3,6 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { comparisons } from "@/data/comparisons";
 import { infographics, filterInfographics } from "@/data/infographics";
@@ -42,6 +43,7 @@ const itemVariants = {
 };
 
 export function CompareHubClient() {
+  const t = useTranslations("compare.hub");
   const comparisonInfographics = filterInfographics(infographics, {
     category: "comparisons-matrices",
     sort: "popular",
@@ -61,11 +63,10 @@ export function CompareHubClient() {
             >
               <motion.div variants={itemVariants}>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                  Ergo vs <span className="text-orange-400">The World</span>
+                  {t("title")}
                 </h1>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto mb-8">
-                  Understand how Ergo compares to other blockchain platforms.
-                  Honest, technical comparisons with no marketing fluff.
+                  {t("subtitle")}
                 </p>
               </motion.div>
 
@@ -76,19 +77,19 @@ export function CompareHubClient() {
               >
                 <div className="bg-black/60 border border-white/10 rounded-xl p-4 hover:border-orange-400/40 transition-colors">
                   <div className="text-2xl font-bold text-orange-400">PoW</div>
-                  <div className="text-sm text-neutral-400">Consensus</div>
+                  <div className="text-sm text-neutral-400">{t("quickStats.consensus")}</div>
                 </div>
                 <div className="bg-black/60 border border-white/10 rounded-xl p-4 hover:border-orange-400/40 transition-colors">
                   <div className="text-2xl font-bold text-orange-400">eUTXO</div>
-                  <div className="text-sm text-neutral-400">State Model</div>
+                  <div className="text-sm text-neutral-400">{t("quickStats.stateModel")}</div>
                 </div>
                 <div className="bg-black/60 border border-white/10 rounded-xl p-4 hover:border-orange-400/40 transition-colors">
                   <div className="text-2xl font-bold text-orange-400">Fair</div>
-                  <div className="text-sm text-neutral-400">Launch</div>
+                  <div className="text-sm text-neutral-400">{t("quickStats.launch")}</div>
                 </div>
                 <div className="bg-black/60 border border-white/10 rounded-xl p-4 hover:border-orange-400/40 transition-colors">
                   <div className="text-2xl font-bold text-orange-400">Sigma</div>
-                  <div className="text-sm text-neutral-400">Privacy</div>
+                  <div className="text-sm text-neutral-400">{t("quickStats.privacy")}</div>
                 </div>
               </motion.div>
             </motion.section>
@@ -102,18 +103,18 @@ export function CompareHubClient() {
             >
               <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold text-white">
-                  Choose a Comparison
+                  {t("chooseComparison")}
                 </h2>
                 <Link
                   href="/start/comparison"
                   className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-orange-400 transition-colors"
                 >
-                  See full comparison table
+                  {t("seeFullComparisonTable")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Blockchain comparisons">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label={t("aria.comparisonsList")}>
                 {comparisons.map((comparison) => (
                   <motion.div key={comparison.slug} variants={itemVariants} className="h-full" role="listitem">
                     <Link
@@ -139,7 +140,7 @@ export function CompareHubClient() {
                             </div>
                             <div>
                               <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">
-                                Ergo vs {comparison.name}
+                                {t("card.title", { name: comparison.name })}
                               </h3>
                             </div>
                           </div>
@@ -179,11 +180,10 @@ export function CompareHubClient() {
             >
               <motion.div variants={itemVariants} className="text-center mb-12">
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Why These Comparisons <span className="text-orange-400">Matter</span>
+                  {t("whyMatters")}
                 </h2>
                 <p className="text-neutral-400 max-w-2xl mx-auto">
-                  Every blockchain makes tradeoffs. Understanding these tradeoffs helps you
-                  choose the right tool for your needs.
+                  {t("whyMattersSubtitle")}
                 </p>
               </motion.div>
 
@@ -193,10 +193,9 @@ export function CompareHubClient() {
                   className="bg-black/60 border border-white/10 rounded-xl p-6 hover:border-orange-400/40 transition-colors"
                 >
                   <Shield className="w-10 h-10 text-orange-400 mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">Security First</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t("securityFirst")}</h3>
                   <p className="text-neutral-400 text-sm">
-                    Ergo's eUTXO model eliminates entire classes of vulnerabilities that
-                    affect account-based chains.
+                    {t("securityFirstDesc")}
                   </p>
                 </motion.div>
 
@@ -205,10 +204,9 @@ export function CompareHubClient() {
                   className="bg-black/60 border border-white/10 rounded-xl p-6 hover:border-orange-400/40 transition-colors"
                 >
                   <Scale className="w-10 h-10 text-orange-400 mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">Fair Launch</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t("fairLaunch")}</h3>
                   <p className="text-neutral-400 text-sm">
-                    No ICO, no premine, no VC allocation. All ERG is earned through mining,
-                    like Bitcoin.
+                    {t("fairLaunchDesc")}
                   </p>
                 </motion.div>
 
@@ -217,10 +215,9 @@ export function CompareHubClient() {
                   className="bg-black/60 border border-white/10 rounded-xl p-6 hover:border-orange-400/40 transition-colors"
                 >
                   <Eye className="w-10 h-10 text-orange-400 mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">Programmable Privacy</h3>
+                  <h3 className="text-lg font-bold text-white mb-2">{t("programmablePrivacy")}</h3>
                   <p className="text-neutral-400 text-sm">
-                    Sigma Protocols enable zero-knowledge proofs without trusted setup,
-                    built into the core protocol.
+                    {t("programmablePrivacyDesc")}
                   </p>
                 </motion.div>
               </div>
@@ -241,17 +238,17 @@ export function CompareHubClient() {
                 >
                   <div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      Visual comparisons &amp; matrices
+                      {t("visualSection.title")}
                     </h2>
                     <p className="text-neutral-400 text-sm md:text-base max-w-2xl">
-                      Side-by-side Ergo vs other L1 diagrams that are easy to save and share.
+                      {t("visualSection.subtitle")}
                     </p>
                   </div>
                   <Link
                     href="/infographics?category=comparisons-matrices&sort=popular"
                     className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-orange-400 transition-colors"
                   >
-                    View all comparison infographics
+                    {t("visualSection.viewAll")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -259,7 +256,7 @@ export function CompareHubClient() {
                 <div
                   className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
                   role="list"
-                  aria-label="Visual comparison infographics"
+                  aria-label={t("aria.visualComparisonsList")}
                 >
                   {comparisonInfographics.map((info, index) => (
                     <motion.div
@@ -282,11 +279,11 @@ export function CompareHubClient() {
                               variant="outline"
                               className="border-orange-500/40 bg-orange-500/5 text-[10px] font-semibold uppercase tracking-wide text-orange-300"
                             >
-                              Visual guide
+                              {t("visualSection.badge")}
                             </Badge>
                             {info.readingTimeMinutes && (
                               <span className="text-[11px] text-neutral-400">
-                                {info.readingTimeMinutes} min
+                                {info.readingTimeMinutes} {t("min")}
                               </span>
                             )}
                           </div>
@@ -328,24 +325,24 @@ export function CompareHubClient() {
                 className="bg-black border border-white/10 rounded-2xl p-8"
               >
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Build on Ergo?
+                  {t("readyToBuild")}
                 </h2>
                 <p className="text-neutral-300 mb-6 max-w-xl mx-auto">
-                  Join a community of builders creating the future of decentralized finance.
+                  {t("readyToBuildDesc")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     href="/docs/developers"
                     className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl transition-colors"
                   >
-                    Start Building
+                    {t("startBuilding")}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     href="/ecosystem"
                     className="inline-flex items-center justify-center gap-2 border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-xl transition-colors"
                   >
-                    Explore Ecosystem
+                    {t("exploreEcosystem")}
                   </Link>
                 </div>
               </motion.div>

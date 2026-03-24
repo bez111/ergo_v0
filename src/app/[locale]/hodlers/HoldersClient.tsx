@@ -3,6 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages, @typescript-eslint/no-unused-vars */
 
 import React, { useState } from "react"
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
 import { 
@@ -36,31 +37,32 @@ import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
 import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatBlockTime, formatActiveAddresses, formatActiveNodes } from "@/lib/network-metrics"
 
 export function HoldersClient() {
+  const t = useTranslations('holdersPage')
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const breadcrumbItems = [
-    { name: "Home", href: "/" },
-    { name: "For Hodlers", href: "/hodlers" }
+    { name: t('breadcrumbs.home'), href: "/" },
+    { name: t('breadcrumbs.hodlers'), href: "/hodlers" }
   ]
 
   const heroComparisons = [
     {
       icon: Zap,
-      title: "Mining Access",
-      ergo: "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
-      others: "BTC: ASICs only · ETH: Proof-of-Stake"
+      title: t('heroComparisons.0.title'),
+      ergo: t('heroComparisons.0.ergo'),
+      others: t('heroComparisons.0.others')
     },
     {
       icon: Shield,
-      title: "Fair Launch",
-      ergo: "0% pre-mine. 0% VC allocation. 100% fair distribution.",
-      others: "BTC: Fair · ETH: 70M premined"
+      title: t('heroComparisons.1.title'),
+      ergo: t('heroComparisons.1.ergo'),
+      others: t('heroComparisons.1.others')
     },
     {
       icon: TrendingUp,
-      title: "Long-term Security",
-      ergo: "Storage rent ensures miners get paid forever. Built for decades.",
-      others: "BTC: Fees only · ETH: Token burn"
+      title: t('heroComparisons.2.title'),
+      ergo: t('heroComparisons.2.ergo'),
+      others: t('heroComparisons.2.others')
     }
   ]
 
@@ -68,84 +70,84 @@ export function HoldersClient() {
   const coreValues = [
     {
       icon: Shield,
-      title: "Sound Money",
-      description: "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
-      highlight: "Protect your wealth"
+      title: t('coreValues.soundMoney.title'),
+      description: t('coreValues.soundMoney.description'),
+      highlight: t('coreValues.soundMoney.highlight')
     },
     {
       icon: Code,
-      title: "Smart Contracts", 
-      description: "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
-      highlight: "Utility without risk"
+      title: t('coreValues.smartContracts.title'),
+      description: t('coreValues.smartContracts.description'),
+      highlight: t('coreValues.smartContracts.highlight')
     },
     {
       icon: Lock,
-      title: "Programmable Privacy",
-      description: "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
-      highlight: "Your data, your choice"
+      title: t('coreValues.programmablePrivacy.title'),
+      description: t('coreValues.programmablePrivacy.description'),
+      highlight: t('coreValues.programmablePrivacy.highlight')
     },
     {
       icon: Users,
-      title: "Fair & Accessible",
-      description: "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
-      highlight: "True decentralization"
+      title: t('coreValues.fairAccessible.title'),
+      description: t('coreValues.fairAccessible.description'),
+      highlight: t('coreValues.fairAccessible.highlight')
     }
   ]
 
   // Comparison data
   const comparison = [
     {
-      criterion: "Monetary Policy",
-      bitcoin: { status: "good", text: "Fixed 21M supply" },
-      ethereum: { status: "warning", text: "Changing tokenomics" },
-      monero: { status: "warning", text: "Tail emission" },
-      ergo: { status: "good", text: "Fixed 97M supply" }
+      criterion: t('comparison.rows.0.criterion'),
+      bitcoin: { status: "good", text: t('comparison.rows.0.bitcoin.text') },
+      ethereum: { status: "warning", text: t('comparison.rows.0.ethereum.text') },
+      monero: { status: "warning", text: t('comparison.rows.0.monero.text') },
+      ergo: { status: "good", text: t('comparison.rows.0.ergo.text') }
     },
     {
-      criterion: "Security Model",
-      bitcoin: { status: "good", text: "Proof-of-Work" },
-      ethereum: { status: "warning", text: "Proof-of-Stake" },
-      monero: { status: "good", text: "Proof-of-Work" },
-      ergo: { status: "good", text: "Proof-of-Work" }
+      criterion: t('comparison.rows.1.criterion'),
+      bitcoin: { status: "good", text: t('comparison.rows.1.bitcoin.text') },
+      ethereum: { status: "warning", text: t('comparison.rows.1.ethereum.text') },
+      monero: { status: "good", text: t('comparison.rows.1.monero.text') },
+      ergo: { status: "good", text: t('comparison.rows.1.ergo.text') }
     },
     {
-      criterion: "Privacy Features",
-      bitcoin: { status: "bad", text: "Transparent" },
-      ethereum: { status: "bad", text: "Transparent" },
-      monero: { status: "good", text: "Always private" },
-      ergo: { status: "good", text: "Optional privacy" }
+      criterion: t('comparison.rows.2.criterion'),
+      bitcoin: { status: "bad", text: t('comparison.rows.2.bitcoin.text') },
+      ethereum: { status: "bad", text: t('comparison.rows.2.ethereum.text') },
+      monero: { status: "good", text: t('comparison.rows.2.monero.text') },
+      ergo: { status: "good", text: t('comparison.rows.2.ergo.text') }
     },
     {
-      criterion: "Smart Contracts",
-      bitcoin: { status: "bad", text: "Very limited" },
-      ethereum: { status: "good", text: "Full featured" },
-      monero: { status: "bad", text: "None" },
-      ergo: { status: "good", text: "eUTXO model" }
+      criterion: t('comparison.rows.3.criterion'),
+      bitcoin: { status: "bad", text: t('comparison.rows.3.bitcoin.text') },
+      ethereum: { status: "good", text: t('comparison.rows.3.ethereum.text') },
+      monero: { status: "bad", text: t('comparison.rows.3.monero.text') },
+      ergo: { status: "good", text: t('comparison.rows.3.ergo.text') }
     },
     {
-      criterion: "Fair Launch",
-      bitcoin: { status: "good", text: "No premine" },
-      ethereum: { status: "warning", text: "70M premine" },
-      monero: { status: "good", text: "No premine" },
-      ergo: { status: "good", text: "No premine" }
+      criterion: t('comparison.rows.4.criterion'),
+      bitcoin: { status: "good", text: t('comparison.rows.4.bitcoin.text') },
+      ethereum: { status: "warning", text: t('comparison.rows.4.ethereum.text') },
+      monero: { status: "good", text: t('comparison.rows.4.monero.text') },
+      ergo: { status: "good", text: t('comparison.rows.4.ergo.text') }
     }
   ]
 
   // Live metrics from centralized network metrics
   const liveMetrics = [
-    { label: "Network Hashrate", value: formatHashrate(networkMetrics), trend: networkMetrics.hashrate.trend, icon: Zap },
-    { label: "Active Addresses", value: formatActiveAddresses(networkMetrics), trend: networkMetrics.activeAddresses.trend, icon: Users },
-    { label: "DeFi TVL", value: formatTVL(networkMetrics), trend: networkMetrics.defiTVL.trend, icon: TrendingUp },
-    { label: "ERG Supply", value: formatSupplyShort(networkMetrics), trend: `${networkMetrics.supply.left}M left`, icon: Coins },
-    { label: "Avg Block Time", value: formatBlockTime(networkMetrics), trend: networkMetrics.blockTime.status, icon: Clock },
-    { label: "Active Nodes", value: formatActiveNodes(networkMetrics), trend: networkMetrics.activeNodes.trend, icon: Globe }
+    { label: t('metrics.networkHashrate.label'), value: formatHashrate(networkMetrics), trend: networkMetrics.hashrate.trend, icon: Zap },
+    { label: t('metrics.activeAddresses.label'), value: formatActiveAddresses(networkMetrics), trend: networkMetrics.activeAddresses.trend, icon: Users },
+    { label: t('metrics.defiTvl.label'), value: formatTVL(networkMetrics), trend: networkMetrics.defiTVL.trend, icon: TrendingUp },
+    { label: t('metrics.ergSupply.label'), value: formatSupplyShort(networkMetrics), trend: t('metrics.ergSupply.trend', { remaining: networkMetrics.supply.left }), icon: Coins },
+    { label: t('metrics.avgBlockTime.label'), value: formatBlockTime(networkMetrics), trend: networkMetrics.blockTime.status, icon: Clock },
+    { label: t('metrics.activeNodes.label'), value: formatActiveNodes(networkMetrics), trend: networkMetrics.activeNodes.trend, icon: Globe }
   ]
 
   // Use cases for holders
   const useCases = [
     {
-      title: "Store Value Long-term",
-      description: "Cold storage wallets with hardware support",
+      title: t('useCasesSection.items.0.title'),
+      description: t('useCasesSection.items.0.description'),
       icon: Wallet,
       links: [
         { text: "Download Nautilus Wallet", url: "https://github.com/capt-nemo429/nautilus-wallet" },
@@ -153,8 +155,8 @@ export function HoldersClient() {
       ]
     },
     {
-      title: "Use DeFi Protocols",
-      description: "Cross-chain bridge for Ergo, Cardano, and other blockchains",
+      title: t('useCasesSection.items.1.title'),
+      description: t('useCasesSection.items.1.description'),
       icon: TrendingUp,
       links: [
         { text: "Open Rosen Bridge", url: "https://rosenbridge.io" },
@@ -162,8 +164,8 @@ export function HoldersClient() {
       ]
     },
     {
-      title: "Send Private Transactions",
-      description: "Optional privacy for sensitive transfers",
+      title: t('useCasesSection.items.2.title'),
+      description: t('useCasesSection.items.2.description'),
       icon: Eye,
       links: [
         { text: "Privacy Tutorial", url: "/technology/privacy-features" },
@@ -171,8 +173,8 @@ export function HoldersClient() {
       ]
     },
     {
-      title: "Support the Network",
-      description: "Mining, running nodes, community participation",
+      title: t('useCasesSection.items.3.title'),
+      description: t('useCasesSection.items.3.description'),
       icon: Shield,
       links: [
         { text: "Start Mining Guide", url: "/miners" },
@@ -181,69 +183,31 @@ export function HoldersClient() {
     }
   ]
 
-  // FAQ for newcomers
+  // FAQ for newcomers - plain text answers from translation keys
   const faqs = [
     {
-      q: "Is Ergo a security or commodity?",
-      a: (
-        <>
-          Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it's a decentralized, 
-          community-driven project. The <a href="/blog/ergo-manifesto" className="text-orange-400 hover:text-orange-300 underline">fair launch</a> and 
-          Proof-of-Work consensus make it similar to Bitcoin from a regulatory perspective.
-        </>
-      )
+      q: t('faq.questions.4.question'),
+      a: t('faq.questions.4.answer')
     },
     {
-      q: "How is Ergo different from Bitcoin?",
-      a: (
-        <>
-          Ergo shares Bitcoin's Proof-of-Work security and sound money principles, but adds smart contracts via the eUTXO model 
-          and optional privacy through Sigma protocols. Think "Bitcoin with programmability and privacy features." 
-          Read our <a href="/start/comparison" className="text-orange-400 hover:text-orange-300 underline">detailed comparison</a>.
-        </>
-      )
+      q: t('faq.questions.0.question'),
+      a: t('faq.questions.0.answer')
     },
     {
-      q: "Who controls the Ergo project?",
-      a: (
-        <>
-          No single entity controls Ergo. It's maintained by the <a href="https://ergoplatform.org/foundation" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">Ergo Foundation</a>, 
-          core developers, and community contributors. All development is open-source on <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">GitHub</a>. 
-          The community votes on major protocol changes.
-        </>
-      )
+      q: t('faq.questions.5.question'),
+      a: t('faq.questions.5.answer')
     },
     {
-      q: "What happens when mining rewards end?",
-      a: (
-        <>
-          Ergo has an 8-year emission schedule ending around 2027. After that, miners are incentivized by transaction fees 
-          and a <a href="/technology/storage-rent" className="text-orange-400 hover:text-orange-300 underline">storage rent</a> mechanism 
-          that recycles lost coins. This creates sustainable long-term security without inflation.
-        </>
-      )
+      q: t('faq.questions.6.question'),
+      a: t('faq.questions.6.answer')
     },
     {
-      q: "Where can I buy and store ERG?",
-      a: (
-        <>
-          ERG is available on major exchanges like <a href="https://www.kucoin.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">KuCoin</a>, 
-          <a href="https://www.gate.io" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">Gate.io</a>, and 
-          <a href="https://coinex.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">CoinEx</a>. 
-          For storage, use <a href="https://github.com/capt-nemo429/nautilus-wallet" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">Nautilus Wallet</a> or 
-          hardware wallets. See our <a href="/use/get-erg" className="text-orange-400 hover:text-orange-300 underline">complete buying guide</a>.
-        </>
-      )
+      q: t('faq.questions.7.question'),
+      a: t('faq.questions.7.answer')
     },
     {
-      q: "Is Ergo's privacy legal to use?",
-      a: (
-        <>
-          Ergo's privacy features are optional and designed for legitimate use cases like business confidentiality and personal financial privacy. 
-          Always check your local regulations. The technology itself is similar to other privacy-preserving cryptocurrencies and 
-          <a href="/technology/privacy-features" className="text-orange-400 hover:text-orange-300 underline">compliance tools</a> are available for institutions.
-        </>
-      )
+      q: t('faq.questions.8.question'),
+      a: t('faq.questions.8.answer')
     }
   ]
 
@@ -277,17 +241,17 @@ export function HoldersClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Store wealth. Keep privacy. Stay sovereign.
+                  {t('hero.title')}
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">
-                  Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.
+                  {t('hero.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
-                    <Link href="/wallet">Get an Ergo Wallet</Link>
+                    <Link href="/wallet">{t('hero.cta')}</Link>
                   </Button>
                   <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
-                    <Link href="#comparison">Why Ergo is Different</Link>
+                    <Link href="#comparison">{t('hero.whyDifferent')}</Link>
                   </Button>
                 </div>
               </div>
@@ -365,7 +329,7 @@ export function HoldersClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-6 text-white">
-              Why Ergo vs BTC / ETH / XMR?
+              {t('comparison.title')}
             </h2>
             <p className="text-xl text-center text-neutral-300 mb-12">
               If you like BTC for security, ETH for programmability, XMR for privacy — Ergo combines these properties in a single, fair-launch PoW chain.
@@ -377,19 +341,19 @@ export function HoldersClient() {
                   {/* Header */}
                   <div className="font-bold text-white"></div>
                   <div className="text-center">
-                    <div className="font-bold text-white mb-2">Bitcoin</div>
+                    <div className="font-bold text-white mb-2">{t('comparison.headers.bitcoin')}</div>
                     <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto"></div>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-white mb-2">Ethereum</div>
+                    <div className="font-bold text-white mb-2">{t('comparison.headers.ethereum')}</div>
                     <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto"></div>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-white mb-2">Monero</div>
+                    <div className="font-bold text-white mb-2">{t('comparison.headers.monero')}</div>
                     <div className="w-8 h-8 bg-gray-500 rounded-full mx-auto"></div>
                   </div>
                   <div className="text-center">
-                    <div className="font-bold text-orange-400 mb-2">Ergo</div>
+                    <div className="font-bold text-orange-400 mb-2">{t('comparison.headers.ergo')}</div>
                     <div className="w-8 h-8 bg-orange-500 rounded-full mx-auto"></div>
                   </div>
 
@@ -431,7 +395,7 @@ export function HoldersClient() {
 
             <div className="text-center mt-8">
               <Button asChild variant="outline" className="border-orange-500/30 text-orange-400 hover:bg-orange-500/10 hover:border-orange-400/50">
-                <Link href="/start/comparison">Deep dive: Detailed comparison</Link>
+                <Link href="/start/comparison">{t('comparison.deepDive')}</Link>
               </Button>
             </div>
           </div>
@@ -446,10 +410,10 @@ export function HoldersClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-6 text-white">
-              Live Network Health
+              {t('liveMetrics.title')}
             </h2>
             <p className="text-center text-neutral-400 mb-12">
-              Live on-chain data (updated in real time)
+              {t('liveMetrics.subtitle')}
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -488,7 +452,7 @@ export function HoldersClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              What can I actually DO with Ergo?
+              {t('useCasesSection.title')}
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -533,7 +497,7 @@ export function HoldersClient() {
         {/* FAQ Section */}
         <section className="max-w-5xl mx-auto py-16 px-4">
           <h2 className="text-4xl font-bold text-center mb-8 text-white">
-            Common Questions from Newcomers
+            {t('faq.title')}
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -553,9 +517,9 @@ export function HoldersClient() {
                   </CollapsibleTrigger>
                   <CollapsibleContent>
                     <CardContent className="px-6 pb-6 pt-0">
-                      <div className="text-neutral-300 leading-relaxed">
+                      <p className="text-neutral-300 leading-relaxed">
                         {faq.a}
-                      </div>
+                      </p>
                     </CardContent>
                   </CollapsibleContent>
                 </Collapsible>
@@ -568,7 +532,7 @@ export function HoldersClient() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
-              Choose Your <span className="text-orange-400">Path</span>
+              {t('chooseYourPath.title')} <span className="text-orange-400">{t('chooseYourPath.titleHighlight')}</span>
             </h2>
             <p className="text-xl text-center text-neutral-300 mb-12">
               Ready to get started? Pick what interests you most
@@ -582,10 +546,10 @@ export function HoldersClient() {
                   <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
                     <Wallet className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Buy & Hold</h3>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">{t('chooseYourPath.buyHold.title')}</h3>
                 </div>
                 <p className="text-neutral-400 text-sm">
-                  Get ERG and secure your holdings
+                  {t('chooseYourPath.buyHold.description')}
                 </p>
               </Link>
               
@@ -597,10 +561,10 @@ export function HoldersClient() {
                   <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
                     <TrendingUp className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Explore DeFi</h3>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">{t('chooseYourPath.exploreDeFi.title')}</h3>
                 </div>
                 <p className="text-neutral-400 text-sm">
-                  DEXs, lending, and earning opportunities
+                  {t('chooseYourPath.exploreDeFi.description')}
                 </p>
               </Link>
 
@@ -612,10 +576,10 @@ export function HoldersClient() {
                   <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
                     <Zap className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Start Mining</h3>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">{t('chooseYourPath.startMining.title')}</h3>
                 </div>
                 <p className="text-neutral-400 text-sm">
-                  GPU-friendly, ASIC-resistant mining
+                  {t('chooseYourPath.startMining.description')}
                 </p>
               </Link>
 
@@ -627,10 +591,10 @@ export function HoldersClient() {
                   <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
                     <Code className="w-5 h-5 text-orange-400" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Build dApps</h3>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">{t('chooseYourPath.buildDapps.title')}</h3>
                 </div>
                 <p className="text-neutral-400 text-sm">
-                  ErgoScript, SDKs, and dev tools
+                  {t('chooseYourPath.buildDapps.description')}
                 </p>
               </Link>
             </div>
@@ -646,8 +610,8 @@ export function HoldersClient() {
                   <Zap className="w-6 h-6 text-orange-400" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Interested in mining?</p>
-                  <p className="text-neutral-400 text-sm">Earn ERG by securing the network with your GPU</p>
+                  <p className="text-white font-semibold">{t('chooseYourPath.interestedInMining.title')}</p>
+                  <p className="text-neutral-400 text-sm">{t('chooseYourPath.interestedInMining.description')}</p>
                 </div>
               </div>
               <Link 
