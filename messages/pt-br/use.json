@@ -1358,127 +1358,127 @@
       }
     },
     "bridges": {
-      "title": "Cross-Chain Bridges",
-      "subtitle": "Secure, trustless value transfer between blockchains",
-      "description": "Decentralized bridges with multi-signature security, no central custody.",
-      "lastUpdated": "Last updated:",
+      "title": "Pontes Entre Cadeias",
+      "subtitle": "Transferência segura e sem confiança entre blockchains",
+      "description": "Pontes descentralizadas com segurança multisig, sem custódia central.",
+      "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "bridges",
         "ogImage": "/og-bridges.png",
         "canonicalPath": "/use/cross-chain-bridges"
       },
       "seo": {
-        "title": "Cross-Chain Bridges on Ergo | Interoperability Solutions",
-        "description": "Build and use cross-chain bridges on Ergo. Trustless transfers, multi-signature security, and decentralized validators for secure blockchain interoperability.",
-        "keywords": "cross-chain bridges, Rosen Bridge, blockchain interoperability, wrapped assets, atomic swaps, multi-chain, trustless transfers",
-        "ogTitle": "Cross-Chain Bridges on Ergo",
-        "ogDescription": "Secure, trustless value transfer between blockchains with Rosen Bridge.",
-        "twitterTitle": "Cross-Chain Bridges on Ergo",
-        "twitterDescription": "Connect Ergo to the multi-chain ecosystem"
+        "title": "Pontes Entre Cadeias no Ergo | Soluções de Interoperabilidade",
+        "description": "Crie e use pontes entre cadeias no Ergo. Transferências sem confiança, segurança multisig e validadores descentralizados para interoperabilidade blockchain segura.",
+        "keywords": "pontes entre cadeias, Rosen Bridge, interoperabilidade blockchain, ativos embrulhados, trocas atômicas, multi-chain, transferências sem confiança",
+        "ogTitle": "Pontes Entre Cadeias no Ergo",
+        "ogDescription": "Transferência segura e sem confiança entre blockchains com Rosen Bridge.",
+        "twitterTitle": "Pontes Entre Cadeias no Ergo",
+        "twitterDescription": "Conecte o Ergo ao ecossistema multi-chain"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Início Rápido",
         "useRosenBridge": {
-          "name": "Use Rosen Bridge",
-          "description": "Bridge assets between chains"
+          "name": "Usar Rosen Bridge",
+          "description": "Faça ponte de ativos entre cadeias"
         },
         "bridgeDocs": {
-          "name": "Bridge Docs",
-          "description": "Integration documentation"
+          "name": "Documentação da Ponte",
+          "description": "Documentação de integração"
         },
         "developerGuide": {
-          "name": "Developer Guide",
-          "description": "Build bridge applications"
+          "name": "Guia do Desenvolvedor",
+          "description": "Crie aplicações de ponte"
         }
       },
       "navigation": {
-        "keyFeatures": "Key features",
-        "liveBridges": "Live Bridges",
+        "keyFeatures": "Recursos principais",
+        "liveBridges": "Pontes Ativas",
         "faq": "FAQ"
       },
       "features": {
-        "title": "Bridge Features",
-        "subtitle": "Connect Ergo to the multi-chain ecosystem",
+        "title": "Recursos da Ponte",
+        "subtitle": "Conecte o Ergo ao ecossistema multi-chain",
         "trustlessTransfers": {
-          "title": "Trustless Transfers",
-          "description": "Move assets between chains without relying on centralized custodians"
+          "title": "Transferências Sem Confiança",
+          "description": "Mova ativos entre cadeias sem depender de custodiantes centralizados"
         },
         "multiSignatureSecurity": {
-          "title": "Multi-Signature Security",
-          "description": "Decentralized validator sets ensure bridge security and reliability"
+          "title": "Segurança Multisig",
+          "description": "Conjuntos de validadores descentralizados garantem segurança e confiabilidade da ponte"
         },
         "fastFinality": {
-          "title": "Fast Finality",
-          "description": "Quick confirmation times for cross-chain transactions"
+          "title": "Finalidade Rápida",
+          "description": "Tempos de confirmação ágeis para transações entre cadeias"
         },
         "multipleChains": {
-          "title": "Multiple Chains",
-          "description": "Connect to Ethereum, BSC, Cardano, and other major blockchains"
+          "title": "Múltiplas Cadeias",
+          "description": "Conecte-se ao Ethereum, BSC, Cardano e outras blockchains principais"
         },
         "wrappedAssets": {
-          "title": "Wrapped Assets",
-          "description": "Native support for wrapped tokens with 1:1 backing"
+          "title": "Ativos Embrulhados",
+          "description": "Suporte nativo para tokens embrulhados com lastro 1:1"
         },
         "atomicSwaps": {
-          "title": "Atomic Swaps",
-          "description": "Direct peer-to-peer cross-chain exchanges without intermediaries"
+          "title": "Trocas Atômicas",
+          "description": "Trocas diretas ponto-a-ponto entre cadeias sem intermediários"
         }
       },
       "technical": {
-        "title": "How It Works",
-        "subtitle": "Technical architecture of Ergo bridges",
+        "title": "Como Funciona",
+        "subtitle": "Arquitetura técnica das pontes Ergo",
         "tabs": {
-          "overview": "Overview",
+          "overview": "Visão Geral",
           "rosen": "Rosen Bridge",
-          "code": "Code Example"
+          "code": "Exemplo de Código"
         },
         "overview": {
-          "title": "Bridge Architecture",
-          "description": "Cross-chain bridges on Ergo use decentralized validator networks to ensure secure asset transfers:",
+          "title": "Arquitetura da Ponte",
+          "description": "As pontes entre cadeias no Ergo usam redes de validadores descentralizados para garantir transferências seguras de ativos:",
           "points": {
-            "point1": "Lock assets in source chain contracts",
-            "point2": "Validators confirm the lock transaction",
-            "point3": "Mint wrapped tokens on destination chain",
-            "point4": "Multi-sig ensures no single point of failure",
-            "point5": "Oracle pools provide price feeds"
+            "point1": "Bloqueie ativos nos contratos da cadeia de origem",
+            "point2": "Validadores confirmam a transação de bloqueio",
+            "point3": "Cunhe tokens embrulhados na cadeia de destino",
+            "point4": "Multisig garante que não haja ponto único de falha",
+            "point5": "Pools de oráculos fornecem feeds de preços"
           }
         },
         "rosen": {
-          "title": "Rosen Architecture",
+          "title": "Arquitetura Rosen",
           "watchers": {
-            "title": "Watchers",
+            "title": "Observadores",
             "points": {
-              "point1": "Monitor source chain events",
-              "point2": "Report lock transactions",
-              "point3": "Validate bridge requests",
-              "point4": "Decentralized network"
+              "point1": "Monitoram eventos da cadeia de origem",
+              "point2": "Reportam transações de bloqueio",
+              "point3": "Validam solicitações de ponte",
+              "point4": "Rede descentralizada"
             }
           },
           "guards": {
-            "title": "Guards",
+            "title": "Guardiões",
             "points": {
-              "point1": "Sign multi-sig transactions",
-              "point2": "Protect bridge funds",
-              "point3": "Execute minting/burning",
-              "point4": "Consensus required"
+              "point1": "Assinam transações multisig",
+              "point2": "Protegem os fundos da ponte",
+              "point3": "Executam cunhagem/queima",
+              "point4": "Consenso necessário"
             }
           },
           "transferProcess": {
-            "title": "Transfer Process"
+            "title": "Processo de Transferência"
           }
         },
         "codeExample": {
-          "title": "Bridge Contract Example",
-          "description": "Simplified bridge locking contract"
+          "title": "Exemplo de Contrato de Ponte",
+          "description": "Contrato de bloqueio de ponte simplificado"
         }
       },
       "projects": {
-        "title": "Live Bridges",
-        "subtitle": "Active bridge solutions connecting Ergo",
+        "title": "Pontes Ativas",
+        "subtitle": "Soluções de ponte ativas conectando o Ergo",
         "rosenBridge": {
           "name": "Rosen Bridge",
-          "description": "Decentralized bridge connecting Ergo to multiple chains",
-          "status": "Live",
+          "description": "Ponte descentralizada conectando o Ergo a múltiplas cadeias",
+          "status": "Ativo",
           "chains": {
             "chain1": "Cardano",
             "chain2": "Bitcoin",
@@ -1487,8 +1487,8 @@
         },
         "spectrumBridge": {
           "name": "Spectrum Bridge",
-          "description": "Cross-chain liquidity bridge for DeFi applications",
-          "status": "In Development",
+          "description": "Ponte de liquidez entre cadeias para aplicações DeFi",
+          "status": "Em Desenvolvimento",
           "chains": {
             "chain1": "Cardano",
             "chain2": "BSC"
@@ -1496,290 +1496,290 @@
         },
         "graviton": {
           "name": "Graviton",
-          "description": "Multi-chain bridge protocol with oracle validation",
-          "status": "Planned",
+          "description": "Protocolo de ponte multi-chain com validação por oráculos",
+          "status": "Planejado",
           "chains": {
             "chain1": "Ethereum",
             "chain2": "Polygon",
             "chain3": "Avalanche"
           }
         },
-        "visitBridge": "Visit Bridge",
-        "comingSoon": "Coming Soon"
+        "visitBridge": "Visitar Ponte",
+        "comingSoon": "Em Breve"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about cross-chain bridges",
+        "title": "Perguntas Frequentes",
+        "subtitle": "Perguntas comuns sobre pontes entre cadeias",
         "howBridgesWork": {
-          "question": "How do cross-chain bridges work on Ergo?",
-          "answer": "Ergo bridges use a combination of multi-signature wallets, oracle pools, and smart contracts to lock assets on one chain and mint wrapped versions on another. Validators ensure the integrity of cross-chain transactions."
+          "question": "Como funcionam as pontes entre cadeias no Ergo?",
+          "answer": "As pontes Ergo usam uma combinação de carteiras multisig, pools de oráculos e contratos inteligentes para bloquear ativos em uma cadeia e cunhar versões embrulhadas em outra. Validadores garantem a integridade das transações entre cadeias."
         },
         "whatIsRosenBridge": {
-          "question": "What is Rosen Bridge?",
-          "answer": "Rosen Bridge is Ergo's flagship decentralized bridge solution. It uses a network of watchers and guards to facilitate trustless asset transfers between Ergo and other blockchains without central points of failure."
+          "question": "O que é a Rosen Bridge?",
+          "answer": "A Rosen Bridge é a principal solução de ponte descentralizada do Ergo. Ela usa uma rede de observadores e guardiões para facilitar transferências de ativos sem confiança entre o Ergo e outras blockchains sem pontos centrais de falha."
         },
         "areBridgedAssetsSecure": {
-          "question": "Are bridged assets secure?",
-          "answer": "Yes, bridged assets are secured through multi-signature contracts and decentralized validator networks. The original assets are locked in secure contracts, and wrapped versions maintain 1:1 backing."
+          "question": "Os ativos com ponte são seguros?",
+          "answer": "Sim, os ativos com ponte são protegidos por contratos multisig e redes de validadores descentralizados. Os ativos originais são bloqueados em contratos seguros, e as versões embrulhadas mantêm lastro 1:1."
         },
         "whichChainsConnect": {
-          "question": "Which chains can Ergo connect to?",
-          "answer": "Ergo can connect to any blockchain that supports multi-signature wallets or smart contracts. Current bridges support Cardano, Bitcoin, and Ethereum, with more chains being added regularly."
+          "question": "A quais cadeias o Ergo pode se conectar?",
+          "answer": "O Ergo pode se conectar a qualquer blockchain que suporte carteiras multisig ou contratos inteligentes. As pontes atuais suportam Cardano, Bitcoin e Ethereum, com mais cadeias sendo adicionadas regularmente."
         },
         "transferTimes": {
-          "question": "How long do bridge transfers take?",
-          "answer": "Transfer times vary by destination chain. Typically, transfers complete within 10-30 minutes, depending on network congestion and confirmation requirements on both chains."
+          "question": "Quanto tempo levam as transferências de ponte?",
+          "answer": "Os tempos de transferência variam conforme a cadeia de destino. Normalmente, as transferências são concluídas em 10 a 30 minutos, dependendo do congestionamento da rede e dos requisitos de confirmação em ambas as cadeias."
         }
       },
       "cta": {
-        "title": "Ready to Bridge Assets?",
-        "subtitle": "Connect Ergo to the multi-chain ecosystem today.",
-        "useRosenBridge": "Use Rosen Bridge",
-        "tryRosenBridge": "Try Rosen Bridge",
-        "viewCode": "View Code",
-        "developerDocs": "Developer Docs"
+        "title": "Pronto para Fazer Ponte de Ativos?",
+        "subtitle": "Conecte o Ergo ao ecossistema multi-chain hoje.",
+        "useRosenBridge": "Usar Rosen Bridge",
+        "tryRosenBridge": "Experimentar Rosen Bridge",
+        "viewCode": "Ver Código",
+        "developerDocs": "Documentação para Desenvolvedores"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start bridging assets or learn how to build cross-chain applications on Ergo",
+        "titlePrefix": "O que vem",
+        "titleHighlight": "a seguir?",
+        "subtitle": "Comece a fazer ponte de ativos ou aprenda a criar aplicações entre cadeias no Ergo",
         "cards": {
           "useRosenBridge": {
-            "title": "Use Rosen Bridge",
-            "subtitle": "Start Bridging",
-            "description": "Bridge assets between Ergo and other blockchains using the most secure and decentralized bridge protocol"
+            "title": "Usar Rosen Bridge",
+            "subtitle": "Começar a Fazer Ponte",
+            "description": "Faça ponte de ativos entre o Ergo e outras blockchains usando o protocolo de ponte mais seguro e descentralizado"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Build Bridges",
-            "description": "Learn how to integrate cross-chain functionality into your applications and contribute to the bridge ecosystem"
+            "title": "Documentação para Desenvolvedores",
+            "subtitle": "Criar Pontes",
+            "description": "Aprenda a integrar funcionalidades entre cadeias em suas aplicações e contribuir para o ecossistema de pontes"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Cross-Chain Bridges",
-        "description": "Get notified about new bridge integrations, security updates, and cross-chain opportunities."
+        "title": "Fique Atualizado sobre Pontes Entre Cadeias",
+        "description": "Receba notificações sobre novas integrações de pontes, atualizações de segurança e oportunidades entre cadeias."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "crossChainBridges": "Cross-Chain Bridges"
+          "useCases": "Casos de Uso",
+          "crossChainBridges": "Pontes Entre Cadeias"
         },
         "techArticle": {
-          "headline": "Cross-Chain Bridges on Ergo",
-          "description": "Comprehensive guide to cross-chain bridges and interoperability on Ergo blockchain",
-          "keywords": "cross-chain bridges, Rosen Bridge, interoperability, wrapped assets"
+          "headline": "Pontes Entre Cadeias no Ergo",
+          "description": "Guia completo sobre pontes entre cadeias e interoperabilidade na blockchain Ergo",
+          "keywords": "pontes entre cadeias, Rosen Bridge, interoperabilidade, ativos embrulhados"
         }
       }
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "Community governance and alternative economic systems",
-      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing.",
-      "lastUpdated": "Last updated:",
+      "title": "DAOs e Economias Alternativas",
+      "subtitle": "Governança comunitária e sistemas econômicos alternativos",
+      "description": "Infraestrutura DAO composável: tesouro, votação, partilha de lucros.",
+      "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "daos",
         "ogImage": "/og-daos.png",
         "canonicalPath": "/use/daos-alternative-economies"
       },
       "seo": {
-        "title": "DAOs & Alternative Economies on Ergo | Decentralized Governance",
-        "description": "Build DAOs and alternative economic systems on Ergo. Treasury management, on-chain voting, profit sharing, and composable governance infrastructure.",
-        "keywords": "DAOs, decentralized governance, alternative economies, Paideia, treasury management, on-chain voting, Ergo DAO",
-        "ogTitle": "DAOs & Alternative Economies on Ergo",
-        "ogDescription": "Community governance and alternative economic systems on Ergo blockchain.",
-        "twitterTitle": "DAOs on Ergo",
-        "twitterDescription": "Build decentralized organizations with Paideia"
+        "title": "DAOs e Economias Alternativas no Ergo | Governança Descentralizada",
+        "description": "Crie DAOs e sistemas econômicos alternativos no Ergo. Gestão de tesouro, votação na cadeia, partilha de lucros e infraestrutura de governança composável.",
+        "keywords": "DAOs, governança descentralizada, economias alternativas, Paideia, gestão de tesouro, votação na cadeia, Ergo DAO",
+        "ogTitle": "DAOs e Economias Alternativas no Ergo",
+        "ogDescription": "Governança comunitária e sistemas econômicos alternativos na blockchain Ergo.",
+        "twitterTitle": "DAOs no Ergo",
+        "twitterDescription": "Crie organizações descentralizadas com Paideia"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Início Rápido",
         "createDao": {
-          "name": "Create a DAO",
-          "description": "Launch your DAO with Paideia"
+          "name": "Criar uma DAO",
+          "description": "Lance sua DAO com Paideia"
         },
         "daoGuide": {
-          "name": "DAO Guide",
-          "description": "Learn DAO best practices"
+          "name": "Guia de DAO",
+          "description": "Aprenda as melhores práticas de DAO"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build DAO applications"
+          "name": "Documentação para Desenvolvedores",
+          "description": "Crie aplicações DAO"
         }
       },
       "navigation": {
-        "daoFeatures": "DAO features",
-        "liveDaos": "Live DAOs",
+        "daoFeatures": "Recursos de DAO",
+        "liveDaos": "DAOs Ativas",
         "faq": "FAQ"
       },
       "features": {
-        "title": "DAO Features",
-        "subtitle": "Complete toolkit for decentralized organizations",
+        "title": "Recursos de DAO",
+        "subtitle": "Kit de ferramentas completo para organizações descentralizadas",
         "onChainGovernance": {
-          "title": "On-Chain Governance",
-          "description": "Transparent voting and proposal systems with automatic execution"
+          "title": "Governança na Cadeia",
+          "description": "Sistemas de votação e proposta transparentes com execução automática"
         },
         "treasuryManagement": {
-          "title": "Treasury Management",
-          "description": "Decentralized fund management with multi-signature controls"
+          "title": "Gestão de Tesouro",
+          "description": "Gestão descentralizada de fundos com controles multisig"
         },
         "profitSharing": {
-          "title": "Profit Sharing",
-          "description": "Automatic distribution of revenues to DAO members"
+          "title": "Partilha de Lucros",
+          "description": "Distribuição automática de receitas para membros da DAO"
         },
         "composableInfrastructure": {
-          "title": "Composable Infrastructure",
-          "description": "Modular DAO components for custom governance models"
+          "title": "Infraestrutura Composável",
+          "description": "Componentes modulares de DAO para modelos de governança personalizados"
         },
         "tokenEconomies": {
-          "title": "Token Economies",
-          "description": "Create custom tokens with built-in economic models"
+          "title": "Economias de Tokens",
+          "description": "Crie tokens personalizados com modelos econômicos embutidos"
         },
         "reputationSystems": {
-          "title": "Reputation Systems",
-          "description": "Non-transferable reputation tokens for merit-based governance"
+          "title": "Sistemas de Reputação",
+          "description": "Tokens de reputação intransferíveis para governança baseada em mérito"
         }
       },
       "technical": {
-        "title": "DAO Architecture",
-        "subtitle": "How DAOs work on Ergo",
+        "title": "Arquitetura de DAO",
+        "subtitle": "Como as DAOs funcionam no Ergo",
         "tabs": {
-          "overview": "Overview",
-          "governance": "Governance",
-          "code": "Code Example"
+          "overview": "Visão Geral",
+          "governance": "Governança",
+          "code": "Exemplo de Código"
         },
         "overview": {
-          "title": "DAO Components",
-          "description": "Ergo DAOs combine multiple components for complete governance:",
+          "title": "Componentes de DAO",
+          "description": "As DAOs do Ergo combinam múltiplos componentes para governança completa:",
           "points": {
-            "point1": "Governance tokens for voting rights",
-            "point2": "Proposal contracts for decision making",
-            "point3": "Treasury contracts for fund management",
-            "point4": "Distribution contracts for profit sharing",
-            "point5": "Time-locks for security"
+            "point1": "Tokens de governança para direitos de voto",
+            "point2": "Contratos de proposta para tomada de decisões",
+            "point3": "Contratos de tesouro para gestão de fundos",
+            "point4": "Contratos de distribuição para partilha de lucros",
+            "point5": "Bloqueios temporais para segurança"
           }
         },
         "governance": {
-          "title": "Voting Mechanisms",
+          "title": "Mecanismos de Votação",
           "tokenVoting": {
-            "title": "Token Voting",
+            "title": "Votação por Token",
             "points": {
-              "point1": "1 token = 1 vote",
-              "point2": "Delegation supported",
-              "point3": "Snapshot voting",
-              "point4": "No double voting"
+              "point1": "1 token = 1 voto",
+              "point2": "Delegação suportada",
+              "point3": "Votação por instantâneo",
+              "point4": "Sem voto duplo"
             }
           },
           "quadraticVoting": {
-            "title": "Quadratic Voting",
+            "title": "Votação Quadrática",
             "points": {
-              "point1": "Cost = votes squared",
-              "point2": "Reduces whale influence",
-              "point3": "Fair distribution",
-              "point4": "Sybil resistant"
+              "point1": "Custo = votos ao quadrado",
+              "point2": "Reduz influência de baleias",
+              "point3": "Distribuição justa",
+              "point4": "Resistente a Sybil"
             }
           },
           "proposalLifecycle": {
-            "title": "Proposal Lifecycle"
+            "title": "Ciclo de Vida da Proposta"
           }
         },
         "codeExample": {
-          "title": "DAO Voting Contract",
-          "description": "Simplified voting mechanism"
+          "title": "Contrato de Votação DAO",
+          "description": "Mecanismo de votação simplificado"
         }
       },
       "projects": {
-        "title": "Live DAOs",
-        "subtitle": "Active DAOs operating on Ergo",
+        "title": "DAOs Ativas",
+        "subtitle": "DAOs ativas operando no Ergo",
         "paideia": {
           "name": "Paideia",
-          "description": "Complete DAO infrastructure and governance toolkit",
-          "status": "Live",
+          "description": "Infraestrutura completa de DAO e kit de ferramentas de governança",
+          "status": "Ativo",
           "features": {
-            "feature1": "Treasury management",
-            "feature2": "Proposal system",
-            "feature3": "Token distribution"
+            "feature1": "Gestão de tesouro",
+            "feature2": "Sistema de propostas",
+            "feature3": "Distribuição de tokens"
           }
         },
         "ergoPadDao": {
           "name": "ErgoPad DAO",
-          "description": "Community-governed launchpad and incubator",
-          "status": "Live",
+          "description": "Plataforma de lançamento e incubadora governada pela comunidade",
+          "status": "Ativo",
           "features": {
-            "feature1": "Staking governance",
-            "feature2": "Revenue sharing",
-            "feature3": "Project funding"
+            "feature1": "Governança por staking",
+            "feature2": "Partilha de receitas",
+            "feature3": "Financiamento de projetos"
           }
         },
         "sigmaDao": {
           "name": "SigmaDAO",
-          "description": "Experimental DAO for protocol governance",
-          "status": "In Development",
+          "description": "DAO experimental para governança de protocolo",
+          "status": "Em Desenvolvimento",
           "features": {
-            "feature1": "Quadratic voting",
-            "feature2": "Delegation",
-            "feature3": "Time-locked proposals"
+            "feature1": "Votação quadrática",
+            "feature2": "Delegação",
+            "feature3": "Propostas com bloqueio temporal"
           }
         },
-        "visitDao": "Visit DAO",
-        "comingSoon": "Coming Soon"
+        "visitDao": "Visitar DAO",
+        "comingSoon": "Em Breve"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about DAOs on Ergo",
+        "title": "Perguntas Frequentes",
+        "subtitle": "Perguntas comuns sobre DAOs no Ergo",
         "whatMakesErgoIdeal": {
-          "question": "What makes Ergo ideal for DAOs?",
-          "answer": "Ergo's eUTXO model provides superior security for treasury management, ErgoScript enables complex governance logic, and native tokens allow for custom economic models without smart contract risks."
+          "question": "O que torna o Ergo ideal para DAOs?",
+          "answer": "O modelo eUTXO do Ergo fornece segurança superior para gestão de tesouro, o ErgoScript habilita lógica de governança complexa e os tokens nativos permitem modelos econômicos personalizados sem riscos de contratos inteligentes."
         },
         "howPaideiaWorks": {
-          "question": "How does Paideia work?",
-          "answer": "Paideia provides a complete DAO toolkit including proposal creation, on-chain voting, treasury management, and token distribution. It uses ErgoScript for transparent and automatic execution of governance decisions."
+          "question": "Como funciona o Paideia?",
+          "answer": "O Paideia fornece um kit completo de ferramentas DAO incluindo criação de propostas, votação na cadeia, gestão de tesouro e distribuição de tokens. Usa ErgoScript para execução transparente e automática de decisões de governança."
         },
         "canManageRealWorldAssets": {
-          "question": "Can DAOs manage real-world assets?",
-          "answer": "Yes, Ergo DAOs can manage both digital and tokenized real-world assets through oracle integration and legal wrapper structures, enabling hybrid on-chain/off-chain governance models."
+          "question": "As DAOs podem gerenciar ativos do mundo real?",
+          "answer": "Sim, as DAOs do Ergo podem gerenciar ativos digitais e ativos do mundo real tokenizados por meio de integração com oráculos e estruturas jurídicas, habilitando modelos de governança híbridos na cadeia e fora da cadeia."
         },
         "governanceModelsSupported": {
-          "question": "What governance models are supported?",
-          "answer": "Ergo supports various governance models including token-weighted voting, quadratic voting, reputation-based systems, delegated voting, and time-locked proposals with customizable parameters."
+          "question": "Quais modelos de governança são suportados?",
+          "answer": "O Ergo suporta vários modelos de governança incluindo votação ponderada por token, votação quadrática, sistemas baseados em reputação, votação delegada e propostas com bloqueio temporal com parâmetros personalizáveis."
         },
         "howTreasuriesSecured": {
-          "question": "How are DAO treasuries secured?",
-          "answer": "DAO treasuries use multi-signature contracts, time-locks, and spending limits. ErgoScript enables complex security policies that protect funds while allowing legitimate governance actions."
+          "question": "Como os tesouros das DAOs são protegidos?",
+          "answer": "Os tesouros de DAO usam contratos multisig, bloqueios temporais e limites de gastos. O ErgoScript habilita políticas de segurança complexas que protegem os fundos enquanto permitem ações de governança legítimas."
         }
       },
       "cta": {
-        "title": "Ready to Build a DAO?",
-        "subtitle": "Start your decentralized organization on Ergo today.",
-        "tryPaideia": "Try Paideia",
-        "launchWithPaideia": "Launch with Paideia",
-        "viewCode": "View Code",
-        "daoGuide": "DAO Guide"
+        "title": "Pronto para Criar uma DAO?",
+        "subtitle": "Inicie sua organização descentralizada no Ergo hoje.",
+        "tryPaideia": "Experimentar Paideia",
+        "launchWithPaideia": "Lançar com Paideia",
+        "viewCode": "Ver Código",
+        "daoGuide": "Guia de DAO"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building your DAO or learn how to participate in decentralized governance",
+        "titlePrefix": "O que vem",
+        "titleHighlight": "a seguir?",
+        "subtitle": "Comece a criar sua DAO ou aprenda a participar da governança descentralizada",
         "cards": {
           "launchWithPaideia": {
-            "title": "Launch with Paideia",
-            "subtitle": "Start Building",
-            "description": "Create and manage your decentralized autonomous organization with Paideia's comprehensive DAO toolkit"
+            "title": "Lançar com Paideia",
+            "subtitle": "Começar a Criar",
+            "description": "Crie e gerencie sua organização autônoma descentralizada com o kit completo de ferramentas DAO do Paideia"
           },
           "daoGuide": {
-            "title": "DAO Guide",
-            "subtitle": "Learn More",
-            "description": "Explore comprehensive documentation on DAO governance models, treasury management, and best practices"
+            "title": "Guia de DAO",
+            "subtitle": "Saiba Mais",
+            "description": "Explore documentação completa sobre modelos de governança DAO, gestão de tesouro e melhores práticas"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on DAOs",
-        "description": "Get notified about DAO governance updates, treasury innovations, and community initiatives."
+        "title": "Fique Atualizado sobre DAOs",
+        "description": "Receba notificações sobre atualizações de governança DAO, inovações em tesouros e iniciativas comunitárias."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "daosAlternativeEconomies": "DAOs & Alternative Economies"
+          "useCases": "Casos de Uso",
+          "daosAlternativeEconomies": "DAOs e Economias Alternativas"
         }
       }
     },

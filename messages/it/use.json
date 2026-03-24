@@ -618,9 +618,21 @@
           "name": "ERG Exchange Directory",
           "description": "Complete list of exchanges where you can buy ERG tokens",
           "items": [
-            { "name": "KuCoin", "url": "https://www.kucoin.com", "description": "Major exchange with high ERG liquidity" },
-            { "name": "Gate.io", "url": "https://www.gate.io", "description": "Popular exchange supporting ERG" },
-            { "name": "CoinEx", "url": "https://www.coinex.com", "description": "Exchange with ERG trading pairs" }
+            {
+              "name": "KuCoin",
+              "url": "https://www.kucoin.com",
+              "description": "Major exchange with high ERG liquidity"
+            },
+            {
+              "name": "Gate.io",
+              "url": "https://www.gate.io",
+              "description": "Popular exchange supporting ERG"
+            },
+            {
+              "name": "CoinEx",
+              "url": "https://www.coinex.com",
+              "description": "Exchange with ERG trading pairs"
+            }
           ]
         },
         "faq": {
@@ -911,437 +923,437 @@
       }
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, and zero-knowledge proofs for complete privacy.",
-      "lastUpdated": "Last updated:",
+      "title": "Privacy e Riservatezza",
+      "subtitle": "Privacy finanziaria in un mondo sempre più sorvegliato",
+      "description": "Mixer non custodiali, indirizzi stealth e prove a conoscenza zero per la privacy completa.",
+      "lastUpdated": "Ultimo aggiornamento:",
       "meta": {
         "slug": "privacy",
         "ogImage": "/og-privacy.png",
         "canonicalPath": "/use/privacy-confidentiality"
       },
       "seo": {
-        "title": "Privacy & Confidentiality on Ergo | Financial Privacy Solutions",
-        "description": "Build privacy-preserving applications on Ergo. Non-custodial mixers, stealth addresses, zero-knowledge proofs, and ring signatures for complete financial privacy.",
-        "keywords": "privacy, confidentiality, ErgoMixer, stealth addresses, zero-knowledge proofs, ring signatures, financial privacy, anonymous transactions",
-        "ogTitle": "Privacy & Confidentiality on Ergo",
-        "ogDescription": "Financial privacy in an increasingly surveilled world. Non-custodial mixers and zero-knowledge proofs.",
-        "twitterTitle": "Privacy & Confidentiality on Ergo",
-        "twitterDescription": "Build privacy-preserving applications with ErgoMixer and Sigma protocols"
+        "title": "Privacy e Riservatezza su Ergo | Soluzioni di Privacy Finanziaria",
+        "description": "Crea applicazioni che preservano la privacy su Ergo. Mixer non custodiali, indirizzi stealth, prove a conoscenza zero e firme ad anello per la privacy finanziaria completa.",
+        "keywords": "privacy, riservatezza, ErgoMixer, indirizzi stealth, prove a conoscenza zero, firme ad anello, privacy finanziaria, transazioni anonime",
+        "ogTitle": "Privacy e Riservatezza su Ergo",
+        "ogDescription": "Privacy finanziaria in un mondo sempre più sorvegliato. Mixer non custodiali e prove a conoscenza zero.",
+        "twitterTitle": "Privacy e Riservatezza su Ergo",
+        "twitterDescription": "Crea applicazioni che preservano la privacy con ErgoMixer e i protocolli Sigma"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Avvio Rapido",
         "useErgoMixer": {
-          "name": "Use ErgoMixer",
-          "description": "Start mixing coins for privacy"
+          "name": "Usa ErgoMixer",
+          "description": "Inizia a mixare monete per la privacy"
         },
         "privacyGuide": {
-          "name": "Privacy Guide",
-          "description": "Learn privacy best practices"
+          "name": "Guida alla Privacy",
+          "description": "Impara le migliori pratiche di privacy"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build privacy applications"
+          "name": "Documentazione per Sviluppatori",
+          "description": "Crea applicazioni per la privacy"
         }
       },
       "navigation": {
-        "privacyFeatures": "Privacy features",
-        "liveProjects": "Live Projects",
+        "privacyFeatures": "Funzionalità di privacy",
+        "liveProjects": "Progetti Attivi",
         "faq": "FAQ"
       },
       "features": {
-        "title": "Privacy Features",
-        "subtitle": "Comprehensive privacy toolkit for financial sovereignty",
+        "title": "Funzionalità di Privacy",
+        "subtitle": "Kit completo di strumenti per la privacy per la sovranità finanziaria",
         "nonCustodialMixers": {
-          "title": "Non-Custodial Mixers",
-          "description": "Mix coins without trusting third parties using ErgoMixer's advanced protocols"
+          "title": "Mixer Non Custodiali",
+          "description": "Mixa monete senza dover fidare di terze parti usando i protocolli avanzati di ErgoMixer"
         },
         "stealthAddresses": {
-          "title": "Stealth Addresses",
-          "description": "One-time addresses for enhanced transaction privacy and unlinkability"
+          "title": "Indirizzi Stealth",
+          "description": "Indirizzi monouso per una maggiore privacy delle transazioni e impossibilità di collegamento"
         },
         "zeroKnowledgeProofs": {
-          "title": "Zero-Knowledge Proofs",
-          "description": "Prove statements without revealing underlying data using Sigma protocols"
+          "title": "Prove a Conoscenza Zero",
+          "description": "Dimostra affermazioni senza rivelare i dati sottostanti usando i protocolli Sigma"
         },
         "ringSignatures": {
-          "title": "Ring Signatures",
-          "description": "Sign transactions as a member of a group without revealing which member"
+          "title": "Firme ad Anello",
+          "description": "Firma le transazioni come membro di un gruppo senza rivelare quale membro"
         },
         "confidentialAssets": {
-          "title": "Confidential Assets",
-          "description": "Hide asset types and amounts while maintaining verifiability"
+          "title": "Asset Confidenziali",
+          "description": "Nascondi tipi e quantità di asset mantenendo la verificabilità"
         },
         "privacyPools": {
-          "title": "Privacy Pools",
-          "description": "Join privacy-preserving pools for enhanced anonymity sets"
+          "title": "Pool di Privacy",
+          "description": "Unisciti a pool che preservano la privacy per insiemi di anonimato migliorati"
         }
       },
       "technical": {
-        "title": "Technical Implementation",
-        "subtitle": "How privacy technologies work on Ergo",
+        "title": "Implementazione Tecnica",
+        "subtitle": "Come funzionano le tecnologie di privacy su Ergo",
         "tabs": {
-          "overview": "Overview",
+          "overview": "Panoramica",
           "ergomixer": "ErgoMixer",
-          "code": "Code Example"
+          "code": "Esempio di Codice"
         },
         "overview": {
-          "title": "Privacy Technologies",
-          "description": "Ergo provides multiple layers of privacy through cryptographic protocols and smart contract capabilities:",
+          "title": "Tecnologie di Privacy",
+          "description": "Ergo fornisce molteplici livelli di privacy attraverso protocolli crittografici e capacità di smart contract:",
           "points": {
-            "point1": "Sigma protocols for zero-knowledge proofs",
-            "point2": "Ring signatures for signer ambiguity",
-            "point3": "Stealth addresses for receiver privacy",
-            "point4": "CoinJoin++ for transaction mixing",
-            "point5": "Confidential assets for amount privacy"
+            "point1": "Protocolli Sigma per prove a conoscenza zero",
+            "point2": "Firme ad anello per ambiguità del firmatario",
+            "point3": "Indirizzi stealth per la privacy del ricevente",
+            "point4": "CoinJoin++ per il mixing delle transazioni",
+            "point5": "Asset confidenziali per la privacy degli importi"
           }
         },
         "ergomixer": {
-          "title": "ErgoMixer Protocol",
+          "title": "Protocollo ErgoMixer",
           "howItWorks": {
-            "title": "How It Works",
+            "title": "Come Funziona",
             "points": {
-              "point1": "Users create mixing requests",
-              "point2": "Funds locked in mixing contracts",
-              "point3": "Ring signatures hide sender",
-              "point4": "Mixed outputs to new addresses"
+              "point1": "Gli utenti creano richieste di mixing",
+              "point2": "I fondi vengono bloccati in contratti di mixing",
+              "point3": "Le firme ad anello nascondono il mittente",
+              "point4": "Output mixati verso nuovi indirizzi"
             }
           },
           "keyFeatures": {
-            "title": "Key Features",
+            "title": "Funzionalità Principali",
             "points": {
-              "point1": "No trusted coordinator",
-              "point2": "No interaction required",
-              "point3": "Configurable anonymity sets",
-              "point4": "Tor/VPN compatible"
+              "point1": "Nessun coordinatore di fiducia",
+              "point2": "Nessuna interazione richiesta",
+              "point3": "Insiemi di anonimato configurabili",
+              "point4": "Compatibile con Tor/VPN"
             }
           },
           "mixingProcess": {
-            "title": "Mixing Process"
+            "title": "Processo di Mixing"
           }
         },
         "codeExample": {
-          "title": "Sigma Protocol Example",
-          "description": "Zero-knowledge proof for mixing"
+          "title": "Esempio di Protocollo Sigma",
+          "description": "Prova a conoscenza zero per il mixing"
         }
       },
       "projects": {
-        "title": "Privacy Projects",
-        "subtitle": "Privacy-preserving applications on Ergo",
+        "title": "Progetti di Privacy",
+        "subtitle": "Applicazioni che preservano la privacy su Ergo",
         "ergoMixer": {
           "name": "ErgoMixer",
-          "description": "Non-custodial, non-interactive mixer for enhanced privacy",
-          "status": "Live",
+          "description": "Mixer non custodiale e non interattivo per una privacy migliorata",
+          "status": "Attivo",
           "features": {
             "feature1": "CoinJoin++",
-            "feature2": "No trusted setup",
-            "feature3": "Tor support"
+            "feature2": "Nessuna configurazione di fiducia",
+            "feature3": "Supporto Tor"
           }
         },
         "stealthAddresses": {
-          "name": "Stealth Addresses",
-          "description": "One-time payment addresses for transaction privacy",
-          "status": "Live",
+          "name": "Indirizzi Stealth",
+          "description": "Indirizzi di pagamento monouso per la privacy delle transazioni",
+          "status": "Attivo",
           "features": {
-            "feature1": "Unlinkable payments",
-            "feature2": "Receiver privacy",
-            "feature3": "SPV compatible"
+            "feature1": "Pagamenti non collegabili",
+            "feature2": "Privacy del ricevente",
+            "feature3": "Compatibile con SPV"
           }
         },
         "sigmaUsdPrivacy": {
-          "name": "SigmaUSD Privacy",
-          "description": "Privacy features for stablecoin transactions",
-          "status": "In Development",
+          "name": "Privacy SigmaUSD",
+          "description": "Funzionalità di privacy per le transazioni in stablecoin",
+          "status": "In Sviluppo",
           "features": {
-            "feature1": "Private minting",
-            "feature2": "Shielded transfers",
-            "feature3": "Confidential balances"
+            "feature1": "Coniazione privata",
+            "feature2": "Trasferimenti protetti",
+            "feature3": "Saldi confidenziali"
           }
         },
-        "learnMore": "Learn More",
-        "comingSoon": "Coming Soon"
+        "learnMore": "Scopri di Più",
+        "comingSoon": "Prossimamente"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about privacy on Ergo",
+        "title": "Domande Frequenti",
+        "subtitle": "Domande comuni sulla privacy su Ergo",
         "howErgoMixerWorks": {
-          "question": "How does ErgoMixer provide privacy?",
-          "answer": "ErgoMixer uses a CoinJoin++ protocol that allows users to mix their coins with others without trusting a central party. It leverages Ergo's Sigma protocols to create complex spending conditions that ensure privacy while maintaining security."
+          "question": "Come fornisce privacy ErgoMixer?",
+          "answer": "ErgoMixer utilizza un protocollo CoinJoin++ che consente agli utenti di mixare le proprie monete con quelle di altri senza dover fidarsi di una parte centrale. Sfrutta i protocolli Sigma di Ergo per creare condizioni di spesa complesse che garantiscono la privacy mantenendo la sicurezza."
         },
         "whatAreSigmaProtocols": {
-          "question": "What are Sigma protocols?",
-          "answer": "Sigma protocols are a class of zero-knowledge proofs that allow proving knowledge of a secret without revealing it. Ergo's ErgoScript natively supports Sigma protocols, enabling complex privacy-preserving applications without trusted setups."
+          "question": "Cosa sono i protocolli Sigma?",
+          "answer": "I protocolli Sigma sono una classe di prove a conoscenza zero che consentono di dimostrare la conoscenza di un segreto senza rivelarlo. ErgoScript di Ergo supporta nativamente i protocolli Sigma, abilitando applicazioni complesse che preservano la privacy senza configurazioni di fiducia."
         },
         "howStealthAddressesWork": {
-          "question": "How do stealth addresses work on Ergo?",
-          "answer": "Stealth addresses allow receivers to publish a single address while senders generate unique one-time addresses for each payment. This breaks the link between the published address and on-chain transactions, enhancing receiver privacy."
+          "question": "Come funzionano gli indirizzi stealth su Ergo?",
+          "answer": "Gli indirizzi stealth consentono ai riceventi di pubblicare un singolo indirizzo mentre i mittenti generano indirizzi monouso univoci per ogni pagamento. Questo spezza il collegamento tra l'indirizzo pubblicato e le transazioni on-chain, migliorando la privacy del ricevente."
         },
         "isPrivacyOptional": {
-          "question": "Is Ergo privacy optional or mandatory?",
-          "answer": "Ergo provides optional privacy features. Users can choose when to use privacy tools like ErgoMixer or stealth addresses based on their needs, maintaining flexibility while ensuring regulatory compliance when needed."
+          "question": "La privacy su Ergo è opzionale o obbligatoria?",
+          "answer": "Ergo fornisce funzionalità di privacy opzionali. Gli utenti possono scegliere quando utilizzare strumenti di privacy come ErgoMixer o indirizzi stealth in base alle proprie esigenze, mantenendo la flessibilità garantendo al contempo la conformità normativa quando necessario."
         },
         "whatMakesErgoDifferent": {
-          "question": "What makes Ergo's privacy different from other chains?",
-          "answer": "Ergo's eUTXO model naturally provides better privacy than account-based systems. Combined with native Sigma protocols, optional privacy tools, and no trusted setups, Ergo offers a unique balance of privacy, transparency, and compliance."
+          "question": "Cosa rende la privacy di Ergo diversa dalle altre blockchain?",
+          "answer": "Il modello eUTXO di Ergo fornisce naturalmente una migliore privacy rispetto ai sistemi basati su account. Combinato con i protocolli Sigma nativi, gli strumenti di privacy opzionali e l'assenza di configurazioni di fiducia, Ergo offre un equilibrio unico tra privacy, trasparenza e conformità."
         }
       },
       "cta": {
-        "title": "Ready for Financial Privacy?",
-        "subtitle": "Start using privacy tools on Ergo today.",
-        "tryErgoMixer": "Try ErgoMixer",
-        "privacyGuide": "Privacy Guide"
+        "title": "Pronto per la Privacy Finanziaria?",
+        "subtitle": "Inizia a utilizzare gli strumenti di privacy su Ergo oggi.",
+        "tryErgoMixer": "Prova ErgoMixer",
+        "privacyGuide": "Guida alla Privacy"
       },
       "relatedContent": {
-        "title": "Explore Privacy",
-        "subtitle": "Dive deeper into Ergo's privacy features and technology"
+        "title": "Esplora la Privacy",
+        "subtitle": "Approfondisci le funzionalità e la tecnologia di privacy di Ergo"
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo Privacy",
-        "description": "Get notified about privacy features, Sigma Protocols updates, and security innovations."
+        "title": "Resta Aggiornato sulla Privacy di Ergo",
+        "description": "Ricevi notifiche sulle funzionalità di privacy, gli aggiornamenti dei Protocolli Sigma e le innovazioni di sicurezza."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "privacyConfidentiality": "Privacy & Confidentiality"
+          "useCases": "Casi d'Uso",
+          "privacyConfidentiality": "Privacy e Riservatezza"
         },
         "techArticle": {
-          "headline": "Privacy & Confidentiality on Ergo",
-          "description": "Comprehensive guide to privacy technologies and applications on Ergo blockchain",
-          "keywords": "privacy, ErgoMixer, stealth addresses, zero-knowledge proofs"
+          "headline": "Privacy e Riservatezza su Ergo",
+          "description": "Guida completa alle tecnologie e alle applicazioni di privacy sulla blockchain Ergo",
+          "keywords": "privacy, ErgoMixer, indirizzi stealth, prove a conoscenza zero"
         },
         "howTo": {
-          "name": "How to Use Privacy Features on Ergo",
-          "description": "Step-by-step guide to using privacy tools on Ergo",
+          "name": "Come Usare le Funzionalità di Privacy su Ergo",
+          "description": "Guida passo-passo per utilizzare gli strumenti di privacy su Ergo",
           "steps": {
             "setupWallet": {
-              "name": "Set up Ergo wallet",
-              "text": "Install a privacy-focused Ergo wallet"
+              "name": "Configura il portafoglio Ergo",
+              "text": "Installa un portafoglio Ergo orientato alla privacy"
             },
             "accessErgoMixer": {
-              "name": "Access ErgoMixer",
-              "text": "Connect to ErgoMixer through Tor for enhanced privacy"
+              "name": "Accedi a ErgoMixer",
+              "text": "Connettiti a ErgoMixer tramite Tor per una privacy migliorata"
             },
             "configureMixing": {
-              "name": "Configure mixing",
-              "text": "Set mixing rounds and anonymity parameters"
+              "name": "Configura il mixing",
+              "text": "Imposta i round di mixing e i parametri di anonimato"
             },
             "mixCoins": {
-              "name": "Mix coins",
-              "text": "Submit coins for mixing and wait for completion"
+              "name": "Mixa le monete",
+              "text": "Invia le monete per il mixing e attendi il completamento"
             }
           }
         }
       }
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems.",
-      "lastUpdated": "Last updated:",
+      "title": "Identità e Reputazione",
+      "subtitle": "Identità auto-sovrana e reputazione Web3",
+      "description": "Identificatori decentralizzati (DID), resistenza a Sybil, sistemi di reputazione.",
+      "lastUpdated": "Ultimo aggiornamento:",
       "meta": {
         "slug": "identity",
         "ogImage": "/og-identity.png",
         "canonicalPath": "/use/identity-reputation"
       },
       "seo": {
-        "title": "Identity & Reputation on Ergo | Self-Sovereign Identity",
-        "description": "Build decentralized identity and reputation systems on Ergo. DIDs, verifiable credentials, Sybil resistance, and non-transferable reputation tokens.",
-        "keywords": "identity, reputation, DID, self-sovereign identity, verifiable credentials, Sybil resistance, Web3 identity",
-        "ogTitle": "Identity & Reputation on Ergo",
-        "ogDescription": "Self-sovereign identity and Web3 reputation systems.",
-        "twitterTitle": "Identity on Ergo",
-        "twitterDescription": "Decentralized identity and reputation systems"
+        "title": "Identità e Reputazione su Ergo | Identità Auto-Sovrana",
+        "description": "Crea sistemi di identità decentralizzata e reputazione su Ergo. DID, credenziali verificabili, resistenza a Sybil e token di reputazione non trasferibili.",
+        "keywords": "identità, reputazione, DID, identità auto-sovrana, credenziali verificabili, resistenza a Sybil, identità Web3",
+        "ogTitle": "Identità e Reputazione su Ergo",
+        "ogDescription": "Identità auto-sovrana e sistemi di reputazione Web3.",
+        "twitterTitle": "Identità su Ergo",
+        "twitterDescription": "Sistemi di identità decentralizzata e reputazione"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Avvio Rapido",
         "identityGuide": {
-          "name": "Identity Guide",
-          "description": "Learn about SSI on Ergo"
+          "name": "Guida all'Identità",
+          "description": "Scopri SSI su Ergo"
         },
         "didStandards": {
-          "name": "DID Standards",
-          "description": "W3C DID specifications"
+          "name": "Standard DID",
+          "description": "Specifiche DID del W3C"
         },
         "privacyEcosystem": {
-          "name": "Privacy Ecosystem",
-          "description": "Privacy tools and protocols on Ergo"
+          "name": "Ecosistema Privacy",
+          "description": "Strumenti e protocolli di privacy su Ergo"
         },
         "buildIdentityApps": {
-          "name": "Build Identity Apps",
-          "description": "Developer resources"
+          "name": "Crea App di Identità",
+          "description": "Risorse per sviluppatori"
         }
       },
       "navigation": {
-        "identityFeatures": "Identity features",
-        "useCases": "Use Cases",
+        "identityFeatures": "Funzionalità di identità",
+        "useCases": "Casi d'Uso",
         "faq": "FAQ"
       },
       "features": {
-        "title": "Identity Features",
-        "subtitle": "Building blocks for decentralized identity",
+        "title": "Funzionalità di Identità",
+        "subtitle": "Elementi costitutivi per l'identità decentralizzata",
         "selfSovereignIdentity": {
-          "title": "Self-Sovereign Identity",
-          "description": "Control your own identity without relying on centralized authorities"
+          "title": "Identità Auto-Sovrana",
+          "description": "Controlla la tua identità senza dipendere da autorità centralizzate"
         },
         "decentralizedIdentifiers": {
-          "title": "Decentralized Identifiers",
-          "description": "DIDs that work across platforms and applications"
+          "title": "Identificatori Decentralizzati",
+          "description": "DID che funzionano su piattaforme e applicazioni diverse"
         },
         "reputationTokens": {
-          "title": "Reputation Tokens",
-          "description": "Non-transferable tokens that represent earned reputation"
+          "title": "Token di Reputazione",
+          "description": "Token non trasferibili che rappresentano la reputazione guadagnata"
         },
         "sybilResistance": {
-          "title": "Sybil Resistance",
-          "description": "Prevent fake identities and ensure one-person-one-vote"
+          "title": "Resistenza a Sybil",
+          "description": "Previeni identità false e garantisci il principio una-persona-un-voto"
         },
         "verifiableCredentials": {
-          "title": "Verifiable Credentials",
-          "description": "Cryptographic proofs of identity attributes and achievements"
+          "title": "Credenziali Verificabili",
+          "description": "Prove crittografiche degli attributi di identità e dei risultati ottenuti"
         },
         "privacyPreserving": {
-          "title": "Privacy-Preserving",
-          "description": "Selective disclosure of identity information using zero-knowledge proofs"
+          "title": "Preservazione della Privacy",
+          "description": "Divulgazione selettiva delle informazioni di identità usando prove a conoscenza zero"
         }
       },
       "technical": {
-        "title": "Technical Architecture",
-        "subtitle": "How identity systems work on Ergo",
+        "title": "Architettura Tecnica",
+        "subtitle": "Come funzionano i sistemi di identità su Ergo",
         "tabs": {
-          "overview": "Overview",
-          "reputation": "Reputation",
-          "code": "Code Example"
+          "overview": "Panoramica",
+          "reputation": "Reputazione",
+          "code": "Esempio di Codice"
         },
         "overview": {
-          "title": "Identity System",
-          "description": "Ergo enables decentralized identity through:",
+          "title": "Sistema di Identità",
+          "description": "Ergo abilita l'identità decentralizzata attraverso:",
           "points": {
-            "point1": "Cryptographic key pairs for identity",
-            "point2": "On-chain DIDs and credentials",
-            "point3": "Zero-knowledge proofs for privacy",
-            "point4": "Non-transferable reputation tokens",
-            "point5": "Verifiable credential issuance"
+            "point1": "Coppie di chiavi crittografiche per l'identità",
+            "point2": "DID e credenziali on-chain",
+            "point3": "Prove a conoscenza zero per la privacy",
+            "point4": "Token di reputazione non trasferibili",
+            "point5": "Emissione di credenziali verificabili"
           }
         },
         "reputation": {
-          "title": "Reputation System",
+          "title": "Sistema di Reputazione",
           "earning": {
-            "title": "Earning Reputation",
+            "title": "Guadagnare Reputazione",
             "points": {
-              "point1": "Complete verified actions",
-              "point2": "Receive peer endorsements",
-              "point3": "Contribute to protocols",
-              "point4": "Time-based accumulation"
+              "point1": "Completa azioni verificate",
+              "point2": "Ricevi endorsement dai pari",
+              "point3": "Contribuisci ai protocolli",
+              "point4": "Accumulo basato sul tempo"
             }
           },
           "using": {
-            "title": "Using Reputation",
+            "title": "Usare la Reputazione",
             "points": {
-              "point1": "Weighted voting power",
-              "point2": "Access to services",
-              "point3": "Better loan terms",
-              "point4": "Trust signaling"
+              "point1": "Potere di voto ponderato",
+              "point2": "Accesso ai servizi",
+              "point3": "Migliori condizioni di prestito",
+              "point4": "Segnalazione di fiducia"
             }
           },
           "sybilResistance": {
-            "title": "Sybil Resistance"
+            "title": "Resistenza a Sybil"
           }
         },
         "codeExample": {
-          "title": "Reputation Token Example",
-          "description": "Non-transferable reputation NFT"
+          "title": "Esempio di Token di Reputazione",
+          "description": "NFT di reputazione non trasferibile"
         }
       },
       "useCases": {
-        "title": "Identity Use Cases",
-        "subtitle": "Applications for decentralized identity",
+        "title": "Casi d'Uso dell'Identità",
+        "subtitle": "Applicazioni per l'identità decentralizzata",
         "daoGovernance": {
-          "name": "DAO Governance",
-          "description": "Reputation-weighted voting for decentralized organizations",
-          "status": "Concept",
+          "name": "Governance DAO",
+          "description": "Votazione ponderata per reputazione per organizzazioni decentralizzate",
+          "status": "Concetto",
           "features": {
-            "feature1": "Merit-based voting",
-            "feature2": "Delegation systems",
-            "feature3": "Contribution tracking"
+            "feature1": "Votazione basata sul merito",
+            "feature2": "Sistemi di delega",
+            "feature3": "Tracciamento dei contributi"
           }
         },
         "defiCreditScoring": {
-          "name": "DeFi Credit Scoring",
-          "description": "On-chain credit history for under-collateralized loans",
-          "status": "Research",
+          "name": "Credit Scoring DeFi",
+          "description": "Storico del credito on-chain per prestiti sotto-collateralizzati",
+          "status": "Ricerca",
           "features": {
-            "feature1": "Payment history",
-            "feature2": "Risk assessment",
-            "feature3": "Credit limits"
+            "feature1": "Storico dei pagamenti",
+            "feature2": "Valutazione del rischio",
+            "feature3": "Limiti di credito"
           }
         },
         "professionalCredentials": {
-          "name": "Professional Credentials",
-          "description": "Verifiable professional certifications and achievements",
-          "status": "Planned",
+          "name": "Credenziali Professionali",
+          "description": "Certificazioni professionali e risultati verificabili",
+          "status": "Pianificato",
           "features": {
-            "feature1": "Skill verification",
-            "feature2": "Work history",
-            "feature3": "Peer endorsements"
+            "feature1": "Verifica delle competenze",
+            "feature2": "Storico lavorativo",
+            "feature3": "Endorsement dei pari"
           }
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about identity on Ergo",
+        "title": "Domande Frequenti",
+        "subtitle": "Domande comuni sull'identità su Ergo",
         "whatIsSsi": {
-          "question": "What is self-sovereign identity?",
-          "answer": "Self-sovereign identity (SSI) gives individuals control over their digital identity without depending on centralized authorities. Users own their identity data and choose what to share and with whom."
+          "question": "Cos'è l'identità auto-sovrana?",
+          "answer": "L'identità auto-sovrana (SSI) dà agli individui il controllo sulla propria identità digitale senza dipendere da autorità centralizzate. Gli utenti possiedono i propri dati di identità e scelgono cosa condividere e con chi."
         },
         "howReputationTokensWork": {
-          "question": "How do reputation tokens work?",
-          "answer": "Reputation tokens are non-transferable NFTs that represent earned achievements or trust. They cannot be sold or transferred, ensuring reputation must be earned, not bought."
+          "question": "Come funzionano i token di reputazione?",
+          "answer": "I token di reputazione sono NFT non trasferibili che rappresentano risultati o fiducia guadagnati. Non possono essere venduti o trasferiti, garantendo che la reputazione debba essere guadagnata, non acquistata."
         },
         "whatAreDids": {
-          "question": "What are DIDs on Ergo?",
-          "answer": "Decentralized Identifiers (DIDs) on Ergo are unique identifiers anchored on the blockchain. They enable verifiable, self-sovereign digital identity that works across different platforms and applications."
+          "question": "Cosa sono i DID su Ergo?",
+          "answer": "Gli Identificatori Decentralizzati (DID) su Ergo sono identificatori univoci ancorati alla blockchain. Abilitano un'identità digitale verificabile e auto-sovrana che funziona su diverse piattaforme e applicazioni."
         },
         "howPrivacyMaintained": {
-          "question": "How is privacy maintained?",
-          "answer": "Ergo uses zero-knowledge proofs and selective disclosure to maintain privacy. Users can prove attributes about their identity (like being over 18) without revealing the actual data."
+          "question": "Come viene mantenuta la privacy?",
+          "answer": "Ergo utilizza prove a conoscenza zero e divulgazione selettiva per mantenere la privacy. Gli utenti possono dimostrare attributi della propria identità (come avere più di 18 anni) senza rivelare i dati effettivi."
         },
         "canReputationBeUsedForDefi": {
-          "question": "Can reputation be used for DeFi?",
-          "answer": "Yes! On-chain reputation can enable under-collateralized lending, better interest rates, and access to exclusive DeFi services based on proven track record rather than just collateral."
+          "question": "La reputazione può essere usata per il DeFi?",
+          "answer": "Sì! La reputazione on-chain può abilitare prestiti sotto-collateralizzati, tassi di interesse migliori e accesso a servizi DeFi esclusivi basati su uno storico comprovato piuttosto che solo sul collaterale."
         }
       },
       "cta": {
-        "title": "Ready to Build Identity Solutions?",
-        "subtitle": "Create decentralized identity and reputation systems on Ergo.",
-        "startBuilding": "Start Building",
-        "learnMore": "Learn More",
-        "developerDocs": "Developer Docs"
+        "title": "Pronto a Creare Soluzioni di Identità?",
+        "subtitle": "Crea sistemi di identità decentralizzata e reputazione su Ergo.",
+        "startBuilding": "Inizia a Costruire",
+        "learnMore": "Scopri di Più",
+        "developerDocs": "Documentazione per Sviluppatori"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start building or exploring identity solutions on Ergo today",
+        "titlePrefix": "Cosa c'è",
+        "titleHighlight": "dopo?",
+        "subtitle": "Inizia a costruire o esplorare soluzioni di identità su Ergo oggi",
         "cards": {
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build identity and reputation systems on Ergo"
+            "title": "Documentazione per Sviluppatori",
+            "subtitle": "Inizia a Costruire",
+            "description": "Accedi alla documentazione e agli strumenti per creare sistemi di identità e reputazione su Ergo"
           },
           "privacyGuide": {
-            "title": "Privacy Guide",
-            "subtitle": "Learn More",
-            "description": "Understand privacy-preserving identity solutions and their implementation on Ergo"
+            "title": "Guida alla Privacy",
+            "subtitle": "Scopri di Più",
+            "description": "Comprendi le soluzioni di identità che preservano la privacy e la loro implementazione su Ergo"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Digital Identity",
-        "description": "Get notified about self-sovereign identity solutions and privacy-preserving credentials."
+        "title": "Resta Aggiornato sull'Identità Digitale",
+        "description": "Ricevi notifiche sulle soluzioni di identità auto-sovrana e sulle credenziali che preservano la privacy."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "identityReputation": "Identity & Reputation"
+          "useCases": "Casi d'Uso",
+          "identityReputation": "Identità e Reputazione"
         }
       }
     },

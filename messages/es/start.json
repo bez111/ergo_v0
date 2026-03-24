@@ -1071,342 +1071,342 @@
     },
     "community": {
       "seo": {
-        "title": "Ergo Community - Join the Ecosystem",
-        "description": "Connect with the Ergo community through Discord, Telegram, Reddit, and other channels. Get involved in development and governance.",
-        "keywords": "Ergo community, Discord, Telegram, Reddit, blockchain community, cryptocurrency community",
-        "ogTitle": "Join the Ergo Community",
-        "ogDescription": "Connect with developers, miners, traders, and enthusiasts building on Ergo",
-        "ogAlt": "Ergo Community",
-        "twitterTitle": "Ergo Community - Get Involved",
-        "twitterDescription": "Join thousands of developers, miners, and enthusiasts in the Ergo ecosystem"
+        "title": "Comunidad Ergo - Únete al Ecosistema",
+        "description": "Conéctate con la comunidad Ergo a través de Discord, Telegram, Reddit y otros canales. Participa en el desarrollo y la gobernanza.",
+        "keywords": "comunidad Ergo, Discord, Telegram, Reddit, comunidad blockchain, comunidad criptomonedas",
+        "ogTitle": "Únete a la Comunidad Ergo",
+        "ogDescription": "Conéctate con desarrolladores, mineros, traders y entusiastas que construyen en Ergo",
+        "ogAlt": "Comunidad Ergo",
+        "twitterTitle": "Comunidad Ergo - Involúcrate",
+        "twitterDescription": "Únete a miles de desarrolladores, mineros y entusiastas en el ecosistema Ergo"
       },
       "schema": {
         "breadcrumbs": {
-          "community": "Community"
+          "community": "Comunidad"
         },
         "faq": {
           "items": [
             {
-              "question": "How do I join the Ergo community?",
-              "answer": "Join Discord for real-time chat, Telegram for updates, Reddit for discussions, or GitHub to contribute. All channels are open and welcoming to newcomers."
+              "question": "¿Cómo me uno a la comunidad Ergo?",
+              "answer": "Únete a Discord para chat en tiempo real, Telegram para actualizaciones, Reddit para debates o GitHub para contribuir. Todos los canales están abiertos y son acogedores para los recién llegados."
             },
             {
-              "question": "What is the main Ergo community platform?",
-              "answer": "Discord is the most active platform, with dedicated channels for development, mining, trading, and general discussion."
+              "question": "¿Cuál es la principal plataforma de la comunidad Ergo?",
+              "answer": "Discord es la plataforma más activa, con canales dedicados para desarrollo, minería, trading y discusión general."
             },
             {
-              "question": "Can I contribute to Ergo without coding?",
-              "answer": "Yes. You can contribute with content, translations, community support, testing, documentation, or governance discussions."
+              "question": "¿Puedo contribuir a Ergo sin programar?",
+              "answer": "Sí. Puedes contribuir con contenido, traducciones, soporte comunitario, pruebas, documentación o debates de gobernanza."
             },
             {
-              "question": "Are there regional Ergo communities?",
-              "answer": "Yes. There are active regional communities in multiple languages, with dedicated groups and channels."
+              "question": "¿Existen comunidades regionales de Ergo?",
+              "answer": "Sí. Existen comunidades regionales activas en múltiples idiomas, con grupos y canales dedicados."
             }
           ]
         }
       },
       "contributions": {
         "0": {
-          "title": "Development",
-          "description": "Contribute to core protocol development",
-          "tasks": "Core development, Bug fixes, Feature implementation"
+          "title": "Desarrollo",
+          "description": "Contribuye al desarrollo del protocolo central",
+          "tasks": "Desarrollo central, Corrección de errores, Implementación de funciones"
         },
         "1": {
-          "title": "Documentation",
-          "description": "Help improve documentation and guides",
-          "tasks": "Writing guides, Translation, API documentation"
+          "title": "Documentación",
+          "description": "Ayuda a mejorar la documentación y las guías",
+          "tasks": "Redacción de guías, Traducción, Documentación de API"
         },
         "2": {
-          "title": "Community Support",
-          "description": "Help new users and answer questions",
-          "tasks": "Discord support, Forum moderation, User onboarding"
+          "title": "Soporte Comunitario",
+          "description": "Ayuda a nuevos usuarios y responde preguntas",
+          "tasks": "Soporte en Discord, Moderación de foros, Incorporación de usuarios"
         },
         "3": {
-          "title": "Governance",
-          "description": "Participate in protocol governance",
-          "tasks": "EIP discussions, Voting, Proposal creation"
+          "title": "Gobernanza",
+          "description": "Participa en la gobernanza del protocolo",
+          "tasks": "Debates EIP, Votaciones, Creación de propuestas"
         },
         "4": {
-          "title": "Infrastructure",
-          "description": "Run nodes and maintain infrastructure",
-          "tasks": "Node operation, Mining pools, Network monitoring"
+          "title": "Infraestructura",
+          "description": "Ejecuta nodos y mantiene la infraestructura",
+          "tasks": "Operación de nodos, Pools de minería, Monitoreo de red"
         },
         "5": {
           "title": "Marketing",
-          "description": "Promote Ergo and educate others",
-          "tasks": "Content creation, Social media, Event organization"
+          "description": "Promueve Ergo y educa a otros",
+          "tasks": "Creación de contenido, Redes sociales, Organización de eventos"
         }
       },
       "marketingGuide": {
         "seo": {
-          "title": "Community Marketing Playbook | Ergo Platform",
-          "description": "Learn how to amplify Ergo content across all channels. 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics."
+          "title": "Guía de Marketing Comunitario | Plataforma Ergo",
+          "description": "Aprende a amplificar el contenido de Ergo en todos los canales. 7 canales de marketing principales, tácticas de participación probadas, estrategias de temporización óptimas y métricas de éxito."
         },
         "breadcrumbs": {
-          "start": "Start",
-          "community": "Community",
-          "marketing": "Marketing Guide"
+          "start": "Inicio",
+          "community": "Comunidad",
+          "marketing": "Guía de Marketing"
         },
         "hero": {
-          "title": "Community Marketing Playbook",
-          "subtitle": "Want to help Ergo grow? This guide shows you how to amplify Ergo content across all channels and turn every announcement into a coordinated community effort that drives real engagement.",
-          "description": "You'll learn about 7 core marketing channels, proven engagement tactics, optimal timing strategies, and success metrics. Everything you need to start contributing to Ergo's marketing today.",
+          "title": "Guía de Marketing Comunitario",
+          "subtitle": "¿Quieres ayudar a que Ergo crezca? Esta guía te muestra cómo amplificar el contenido de Ergo en todos los canales y convertir cada anuncio en un esfuerzo comunitario coordinado que genera participación real.",
+          "description": "Aprenderás sobre 7 canales de marketing principales, tácticas de participación probadas, estrategias de temporización óptimas y métricas de éxito. Todo lo que necesitas para empezar a contribuir al marketing de Ergo hoy.",
           "buttons": {
-            "startBlog": "Start with Blog Content",
-            "exploreInfographics": "Explore Infographics"
+            "startBlog": "Empieza con Contenido del Blog",
+            "exploreInfographics": "Explora Infografías"
           },
-          "coreChannelsTitle": "Core Channels"
+          "coreChannelsTitle": "Canales Principales"
         },
         "quickStart": {
-          "title": "Get Started in 3 Steps",
+          "title": "Empieza en 3 Pasos",
           "steps": [
             {
-              "title": "Step 1",
-              "subtitle": "Join Discord + Telegram",
-              "description": "Start by joining core communities where you can learn from experienced marketers and coordinate your efforts with others.",
-              "hoverText": "Start Here"
+              "title": "Paso 1",
+              "subtitle": "Únete a Discord + Telegram",
+              "description": "Comienza uniéndote a las comunidades principales donde puedes aprender de los marketers con experiencia y coordinar tus esfuerzos con otros.",
+              "hoverText": "Empieza Aquí"
             },
             {
-              "title": "Step 2",
-              "subtitle": "Pick ONE channel (Twitter / Reddit)",
-              "description": "Choose one platform you're comfortable with and master it before expanding. Quality engagement on one channel beats spreading yourself thin.",
-              "hoverText": "Focus First"
+              "title": "Paso 2",
+              "subtitle": "Elige UN canal (Twitter / Reddit)",
+              "description": "Elige una plataforma con la que te sientas cómodo y domínala antes de expandirte. Una participación de calidad en un canal supera dispersarse demasiado.",
+              "hoverText": "Enfócate Primero"
             },
             {
-              "title": "Step 3",
-              "subtitle": "Follow 5-step workflow below",
-              "description": "Use the proven amplification strategy to turn every blog post into a coordinated community-wide conversation that helps Ergo grow.",
-              "hoverText": "Scale Up"
+              "title": "Paso 3",
+              "subtitle": "Sigue el flujo de trabajo de 5 pasos a continuación",
+              "description": "Usa la estrategia de amplificación probada para convertir cada publicación del blog en una conversación coordinada a nivel comunitario que ayude a crecer a Ergo.",
+              "hoverText": "Escala"
             }
           ]
         },
         "navigation": {
-          "title": "On this page:",
-          "jumpTo": "Jump to"
+          "title": "En esta página:",
+          "jumpTo": "Ir a"
         },
-        "guideTitle": "Your Step-by-Step Guide",
+        "guideTitle": "Tu Guía Paso a Paso",
         "coreChannels": [
           {
             "name": "ergoblockchain.org",
-            "description": "Article in blog + internal links",
-            "actionText": "Visit Blog"
+            "description": "Artículo en blog + enlaces internos",
+            "actionText": "Visitar Blog"
           },
           {
             "name": "Beehiiv Newsletter",
-            "description": "Digest or dedicated issue",
-            "actionText": "Subscribe"
+            "description": "Resumen o número dedicado",
+            "actionText": "Suscribirse"
           },
           {
             "name": "Telegram",
-            "description": "Marketing Community",
-            "actionText": "Join Channel"
+            "description": "Comunidad de Marketing",
+            "actionText": "Unirse al Canal"
           },
           {
             "name": "Ergo Discord",
-            "description": "#announcements, #general, #dev, #research",
-            "actionText": "Join Discord"
+            "description": "#anuncios, #general, #dev, #investigación",
+            "actionText": "Unirse a Discord"
           },
           {
             "name": "Reddit r/ergonauts",
-            "description": "Community discussions",
-            "actionText": "Visit Subreddit"
+            "description": "Debates comunitarios",
+            "actionText": "Visitar Subreddit"
           },
           {
             "name": "X (Twitter)",
-            "description": "Thread/tweet series + link",
-            "actionText": "Follow @BuildOnErgo"
+            "description": "Serie de hilos/tweets + enlace",
+            "actionText": "Seguir @BuildOnErgo"
           }
         ],
         "guideSteps": {
           "whyMatters": {
-            "title": "Why Your Help Matters",
-            "description": "How community members like you drive Ergo's growth",
-            "intro": "Your voice matters. Community-driven marketing is the backbone of Ergo's growth. Unlike traditional marketing, your authentic contributions build genuine relationships and trust.",
-            "keyBenefitsTitle": "Key Benefits:",
+            "title": "Por Qué Tu Ayuda Importa",
+            "description": "Cómo los miembros de la comunidad como tú impulsan el crecimiento de Ergo",
+            "intro": "Tu voz importa. El marketing impulsado por la comunidad es la columna vertebral del crecimiento de Ergo. A diferencia del marketing tradicional, tus contribuciones auténticas construyen relaciones genuinas y confianza.",
+            "keyBenefitsTitle": "Beneficios Clave:",
             "points": [
-              "Your authentic voice carries more weight than corporate messaging",
-              "You understand Ergo's technology deeply and can explain it better",
-              "Your decentralized efforts match Ergo's decentralized philosophy",
-              "You can reach audiences that traditional marketing can't",
-              "You create lasting engagement through genuine conversations"
+              "Tu voz auténtica tiene más peso que los mensajes corporativos",
+              "Entiendes la tecnología de Ergo profundamente y puedes explicarla mejor",
+              "Tus esfuerzos descentralizados se alinean con la filosofía descentralizada de Ergo",
+              "Puedes llegar a audiencias que el marketing tradicional no puede alcanzar",
+              "Creas participación duradera a través de conversaciones genuinas"
             ],
-            "checklistTitle": "Quick Start Checklist:",
+            "checklistTitle": "Lista de Inicio Rápido:",
             "actionItems": [
               {
-                "text": "Join Ergo Discord for real-time community discussions",
+                "text": "Únete al Discord de Ergo para debates comunitarios en tiempo real",
                 "priority": "high"
               },
               {
-                "text": "Follow @BuildOnErgo on Twitter for developer updates",
+                "text": "Sigue @BuildOnErgo en Twitter para actualizaciones de desarrolladores",
                 "priority": "high"
               },
               {
-                "text": "Join ErgoSocials Telegram for marketing coordination",
+                "text": "Únete a ErgoSocials Telegram para coordinación de marketing",
                 "priority": "high"
               },
               {
-                "text": "Subscribe to ergoblockchain.org blog for source content",
+                "text": "Suscríbete al blog de ergoblockchain.org para contenido fuente",
                 "priority": "medium"
               },
               {
-                "text": "Join r/ergonauts subreddit for Reddit marketing practice",
+                "text": "Únete al subreddit r/ergonauts para practicar marketing en Reddit",
                 "priority": "medium"
               },
               {
-                "text": "Subscribe to Beehiiv newsletter for weekly content digest",
+                "text": "Suscríbete al boletín de Beehiiv para el resumen semanal de contenido",
                 "priority": "low"
               }
             ],
             "priorityLabels": {
-              "high": "high priority",
-              "medium": "medium priority",
-              "low": "low priority"
+              "high": "alta prioridad",
+              "medium": "prioridad media",
+              "low": "baja prioridad"
             }
           },
           "coreChannels": {
-            "title": "Where to Share Ergo Content",
-            "description": "Start with these essential channels",
-            "intro": "These are the core channels where you can share Ergo content. Start here, then explore extended distribution channels below:",
-            "strategyTitle": "Pro Strategy:",
-            "strategy": "When new content is published on ergoblockchain.org, share it across these channels within 24-48 hours for maximum impact.",
+            "title": "Dónde Compartir Contenido de Ergo",
+            "description": "Empieza con estos canales esenciales",
+            "intro": "Estos son los canales principales donde puedes compartir contenido de Ergo. Empieza aquí, luego explora los canales de distribución extendida a continuación:",
+            "strategyTitle": "Estrategia Pro:",
+            "strategy": "Cuando se publique contenido nuevo en ergoblockchain.org, compártelo en estos canales en las primeras 24-48 horas para máximo impacto.",
             "tips": [
-              "Customize your content for each platform's audience",
-              "Use platform-specific features (Twitter threads, Reddit formatting)",
-              "Cross-reference between channels to build a cohesive narrative",
-              "Track engagement to see what works best for you"
+              "Personaliza tu contenido para la audiencia de cada plataforma",
+              "Usa funciones específicas de la plataforma (hilos de Twitter, formato de Reddit)",
+              "Haz referencias cruzadas entre canales para construir una narrativa coherente",
+              "Sigue la participación para ver qué funciona mejor para ti"
             ]
           },
           "contentStrategy": {
-            "title": "How to Amplify New Content",
-            "description": "Turn every blog post into a community-wide conversation",
-            "intro": "When new Ergo content is published, here's how you can help amplify it across the community:",
-            "workflowTitle": "5-Step Workflow:",
+            "title": "Cómo Amplificar Nuevo Contenido",
+            "description": "Convierte cada publicación del blog en una conversación a nivel comunitario",
+            "intro": "Cuando se publique nuevo contenido de Ergo, así es cómo puedes ayudar a amplificarlo en la comunidad:",
+            "workflowTitle": "Flujo de Trabajo de 5 Pasos:",
             "workflow": [
               {
-                "title": "Source Content",
-                "description": "Start with ergoblockchain.org blog post or announcement",
-                "time": "Day 0"
+                "title": "Contenido Fuente",
+                "description": "Empieza con la publicación del blog o anuncio de ergoblockchain.org",
+                "time": "Día 0"
               },
               {
-                "title": "Newsletter Integration",
-                "description": "Include in next Beehiiv digest or create dedicated issue",
-                "time": "Day 1-2"
+                "title": "Integración en Boletín",
+                "description": "Incluye en el próximo resumen de Beehiiv o crea un número dedicado",
+                "time": "Día 1-2"
               },
               {
-                "title": "Social Media Cascade",
-                "description": "Share across Telegram, Discord, Twitter with platform-specific angles",
-                "time": "Day 1-3"
+                "title": "Cascada en Redes Sociales",
+                "description": "Comparte en Telegram, Discord, Twitter con ángulos específicos para cada plataforma",
+                "time": "Día 1-3"
               },
               {
-                "title": "Reddit Strategy",
-                "description": "Cross-post to relevant subreddits with community-specific context",
-                "time": "Day 2-7"
+                "title": "Estrategia Reddit",
+                "description": "Publica cruzado en subreddits relevantes con contexto específico de la comunidad",
+                "time": "Día 2-7"
               },
               {
-                "title": "Long-form Content",
-                "description": "Create Twitter Articles or LinkedIn posts for deeper engagement",
-                "time": "Week 1-2"
+                "title": "Contenido de Formato Largo",
+                "description": "Crea artículos de Twitter o publicaciones de LinkedIn para mayor participación",
+                "time": "Semana 1-2"
               }
             ],
-            "examplesTitle": "Real Examples:",
+            "examplesTitle": "Ejemplos Reales:",
             "examples": [
-              "New ErgoScript tutorial -> Developer-focused Reddit posts + Discord #dev discussion",
-              "Mining update -> r/gpumining + r/cryptomining with profitability analysis",
-              "DeFi protocol launch -> r/defi + Twitter thread with comparison charts"
+              "Nuevo tutorial de ErgoScript -> Publicaciones en Reddit para desarrolladores + debate en Discord #dev",
+              "Actualización de minería -> r/gpumining + r/cryptomining con análisis de rentabilidad",
+              "Lanzamiento de protocolo DeFi -> r/defi + hilo de Twitter con gráficos comparativos"
             ]
           },
           "redditMastery": {
-            "title": "How to Share on Reddit",
-            "description": "Navigate Reddit's unique culture to help Ergo grow",
-            "intro": "Reddit requires a different approach. Your success comes from providing value to the community, not just promoting Ergo.",
-            "bestPracticesTitle": "Best Practices:",
+            "title": "Cómo Compartir en Reddit",
+            "description": "Navega por la cultura única de Reddit para ayudar a Ergo a crecer",
+            "intro": "Reddit requiere un enfoque diferente. Tu éxito viene de aportar valor a la comunidad, no solo de promocionar Ergo.",
+            "bestPracticesTitle": "Mejores Prácticas:",
             "bestPractices": [
-              "Always read community rules before posting",
-              "Engage with other posts before sharing your own",
-              "Use descriptive, non-promotional titles",
-              "Explain why your content is relevant to that community",
-              "Respond to comments within 2-4 hours",
-              "Follow the 80/20 rule: 80% engagement, 20% promotion"
+              "Lee siempre las reglas de la comunidad antes de publicar",
+              "Interactúa con otras publicaciones antes de compartir las tuyas",
+              "Usa títulos descriptivos y no promocionales",
+              "Explica por qué tu contenido es relevante para esa comunidad",
+              "Responde comentarios en las primeras 2-4 horas",
+              "Sigue la regla 80/20: 80% participación, 20% promoción"
             ],
-            "timingTitle": "Optimal Timing:",
+            "timingTitle": "Temporización Óptima:",
             "timing": {
-              "General Crypto": "Weekdays 9-11 AM EST, 2-4 PM EST",
-              "Technical/Dev": "Tuesday-Thursday, avoid Mondays and Fridays",
-              "Mining": "Sunday evenings, Wednesday mornings",
-              "Economics": "Monday-Wednesday for serious discussions"
+              "General Crypto": "Días laborables 9-11 AM EST, 2-4 PM EST",
+              "Technical/Dev": "Martes a jueves, evitar lunes y viernes",
+              "Mining": "Domingos por la tarde, miércoles por la mañana",
+              "Economics": "Lunes a miércoles para debates serios"
             },
-            "showMoreSubreddits": "+{count} more subreddits",
-            "showLess": "Show less"
+            "showMoreSubreddits": "+{count} subreddits más",
+            "showLess": "Mostrar menos"
           },
           "engagementTactics": {
-            "title": "How to Create Engaging Content",
-            "description": "Build meaningful conversations that help people discover Ergo",
-            "intro": "Great marketing sparks conversations. Here's how you can create engaging content that helps people discover Ergo:",
+            "title": "Cómo Crear Contenido Atractivo",
+            "description": "Genera conversaciones significativas que ayuden a las personas a descubrir Ergo",
+            "intro": "Un gran marketing genera conversaciones. Aquí te explicamos cómo crear contenido atractivo que ayude a las personas a descubrir Ergo:",
             "tactics": [
               {
-                "name": "Question-Driven Posts",
-                "description": "Start with thought-provoking questions",
+                "name": "Publicaciones con Preguntas",
+                "description": "Empieza con preguntas que inviten a la reflexión",
                 "examples": [
-                  "What's your biggest challenge with current DeFi protocols?",
-                  "How do you think privacy coins will evolve in the next 5 years?",
-                  "What would convince you to switch from Ethereum to Ergo?"
+                  "¿Cuál es tu mayor desafío con los protocolos DeFi actuales?",
+                  "¿Cómo crees que evolucionarán las monedas de privacidad en los próximos 5 años?",
+                  "¿Qué te convencería de cambiar de Ethereum a Ergo?"
                 ]
               },
               {
-                "name": "Comparison Content",
-                "description": "Position Ergo against alternatives",
+                "name": "Contenido Comparativo",
+                "description": "Posiciona Ergo frente a alternativas",
                 "examples": [
-                  "Ergo vs Ethereum: Transaction costs breakdown",
-                  "eUTXO vs Account model: Security implications",
-                  "Autolykos vs other mining algorithms: Efficiency analysis"
+                  "Ergo vs Ethereum: Desglose de costes de transacción",
+                  "eUTXO vs modelo de cuenta: Implicaciones de seguridad",
+                  "Autolykos vs otros algoritmos de minería: Análisis de eficiencia"
                 ]
               },
               {
-                "name": "Educational Series",
-                "description": "Create multi-part content that builds audience",
+                "name": "Serie Educativa",
+                "description": "Crea contenido en múltiples partes que genere audiencia",
                 "examples": [
-                  "ErgoScript Basics: 5-part tutorial series",
-                  "History of Money: Weekly deep-dives",
-                  "DeFi Security: Case studies and lessons"
+                  "Fundamentos de ErgoScript: Serie de tutoriales en 5 partes",
+                  "Historia del Dinero: Análisis en profundidad semanales",
+                  "Seguridad DeFi: Casos de estudio y lecciones"
                 ]
               }
             ],
-            "responseStrategyTitle": "Response Strategy:",
+            "responseStrategyTitle": "Estrategia de Respuesta:",
             "responseStrategy": [
-              "Acknowledge every comment within 4 hours",
-              "Ask follow-up questions to extend conversations",
-              "Tag relevant experts when technical questions arise",
-              "Share additional resources in comments",
-              "Create follow-up posts based on popular questions"
+              "Reconoce cada comentario en las primeras 4 horas",
+              "Haz preguntas de seguimiento para extender las conversaciones",
+              "Etiqueta a expertos relevantes cuando surjan preguntas técnicas",
+              "Comparte recursos adicionales en comentarios",
+              "Crea publicaciones de seguimiento basadas en preguntas populares"
             ]
           },
           "timingOptimization": {
-            "title": "When to Post for Maximum Impact",
-            "description": "Timing strategies to maximize your reach",
-            "intro": "When you post matters. Here's when to share content for maximum visibility:",
-            "scheduleTitle": "Optimal Schedule:",
+            "title": "Cuándo Publicar para Máximo Impacto",
+            "description": "Estrategias de temporización para maximizar tu alcance",
+            "intro": "Cuándo publicas importa. Aquí te explicamos cuándo compartir contenido para máxima visibilidad:",
+            "scheduleTitle": "Horario Óptimo:",
             "schedule": {
-              "Blog Posts": "Tuesdays 10 AM EST - highest engagement for technical content",
-              "Newsletter": "Bi-weekly Thursdays - allows time for blog content integration",
-              "Twitter": "Daily 9 AM, 1 PM, 6 PM EST - matches global audience peaks",
-              "Reddit": "Platform-specific timing based on subreddit analytics",
-              "Discord": "Real-time engagement, peak hours 7-10 PM EST",
-              "Telegram": "Follow news cycle, immediate for breaking updates"
+              "Blog Posts": "Martes 10 AM EST - mayor participación para contenido técnico",
+              "Newsletter": "Quincenal los jueves - permite tiempo para integrar contenido del blog",
+              "Twitter": "Diario 9 AM, 1 PM, 6 PM EST - coincide con picos de audiencia global",
+              "Reddit": "Temporización específica por plataforma según analíticas del subreddit",
+              "Discord": "Participación en tiempo real, horas pico 7-10 PM EST",
+              "Telegram": "Sigue el ciclo de noticias, inmediato para actualizaciones urgentes"
             },
-            "frequencyTitle": "Frequency Guidelines:",
+            "frequencyTitle": "Directrices de Frecuencia:",
             "frequency": [
-              "Quality over quantity - better to post less frequently with high value",
-              "Maintain consistent presence without overwhelming audiences",
-              "Batch content creation for efficiency",
-              "Leave gaps for community-generated discussions",
-              "Adjust frequency based on engagement metrics"
+              "Calidad sobre cantidad - mejor publicar menos frecuentemente con alto valor",
+              "Mantén una presencia constante sin saturar a las audiencias",
+              "Agrupa la creación de contenido para mayor eficiencia",
+              "Deja espacios para debates generados por la comunidad",
+              "Ajusta la frecuencia según las métricas de participación"
             ],
-            "toolsTitle": "Recommended Tools:",
+            "toolsTitle": "Herramientas Recomendadas:",
             "tools": [
-              "Buffer/Hootsuite for scheduling",
-              "Reddit analytics for optimal posting times",
-              "Twitter Analytics for audience insights",
-              "Discord bots for engagement tracking"
+              "Buffer/Hootsuite para programación",
+              "Analíticas de Reddit para horarios de publicación óptimos",
+              "Twitter Analytics para información sobre audiencia",
+              "Bots de Discord para seguimiento de participación"
             ]
           },
           "measurementSuccess": {
