@@ -100,11 +100,7 @@ export function AgentEconomyClient() {
                   maxWidth: "60ch",
                 }}
               >
-                {t.rich("hero.description", {
-                  credit: (chunks) => <span className="text-white font-semibold">{chunks}</span>,
-                  programmableRules: (chunks) => <span className="text-white font-semibold">{chunks}</span>,
-                  verifiableSettlement: (chunks) => <span className="text-white font-semibold">{chunks}</span>,
-                })}
+                {t("hero.description")}
               </p>
 
               <div className="flex flex-wrap gap-4">

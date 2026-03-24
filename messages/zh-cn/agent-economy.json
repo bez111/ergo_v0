@@ -6,7 +6,7 @@
       "titleStart": "面向",
       "titleHighlight": "自主",
       "titleEnd": "经济智能体的基础层。",
-      "description": "自主智能体需要的不仅仅是支付功能。它们需要<credit>信用</credit>、<programmableRules>可编程接受规则</programmableRules>和<verifiableSettlement>可验证的结算</verifiableSettlement>——且无需中心化对手方。Ergo 是唯一专为此而构建的结算层。",
+      "description": "自主智能体需要的不仅仅是支付功能。它们需要信用、可编程接受规则和可验证的结算——且无需中心化对手方。Ergo 是唯一专为此而构建的结算层。",
       "ctaArchitecture": "查看架构",
       "ctaDemos": "浏览演示"
     },
