@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 import {
   Bot,
   CreditCard,
@@ -30,153 +31,6 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const BRAND = "#ff8800"
-
-// ── Demo data ────────────────────────────────────────────────────────────────
-const DEMOS = [
-  {
-    id: "api-call",
-    icon: Bot,
-    status: "testnet",
-    statusLabel: "Live on testnet",
-    title: "Agent buys API call",
-    tagline: "One call. One proof. No persistent account.",
-    description:
-      "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
-    flow: [
-      "Agent creates a note (0.001 ERG face value)",
-      "Note contains: provider address + task hash + deadline",
-      "Provider checks predicate — verified on Ergo testnet",
-      "Provider delivers API response",
-      "Note burned, ERG released to provider",
-    ],
-    why: "This is the atomic unit of agent commerce: one task, one payment, one proof. No identity required.",
-    code: `// Install: npm install @fleet-sdk/core
-import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core"
-
-// Create a payment note for one API call
-const noteBox = new OutputBuilder(
-  1_000_000n,           // 0.001 ERG
-  NOTE_CONTRACT_ADDRESS
-).setAdditionalRegisters({
-  R4: SGroupElement(providerPublicKey), // who receives
-  R5: SLong(BigInt(currentHeight + 100)), // deadline
-  R6: SColl(SByte, sha256(taskDescription)), // task proof
-})
-
-const tx = new TransactionBuilder(currentHeight)
-  .from(myInputs)
-  .to(noteBox)
-  .sendChangeTo(myAddress)
-  .payMinFee()
-  .build()`,
-    links: [
-      { label: "ChainCash reference", url: "https://github.com/kushti/chaincash", external: true },
-      { label: "Fleet SDK docs", url: "https://fleet-sdk.github.io/docs/", external: true },
-      { label: "Architecture", url: "/build/agent-payments#api-call", external: false },
-    ],
-  },
-  {
-    id: "credit",
-    icon: CreditCard,
-    status: "testnet",
-    statusLabel: "Live on testnet",
-    title: "Agent pays on credit",
-    tagline: "Reserve deployed. Notes issued. Tracker monitors.",
-    description:
-      "A reserve is deployed with collateral. Notes are issued against it up to a credit limit. An agent spends notes over time. The tracker monitors total usage. When the threshold is reached, the reserve auto-settles.",
-    flow: [
-      "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
-      "Notes issued against reserve (up to limit)",
-      "Agent transfers notes to providers as payment",
-      "Tracker updates cumulative balance on-chain",
-      "Auto-settlement when balance threshold hit",
-    ],
-    why: "Credit is fundamental to economic efficiency. This implements it without a bank — just contracts and cryptographic proofs.",
-    code: `// Deploy a reserve with credit limit
-const reserveBox = new OutputBuilder(
-  10_000_000_000n,      // 10 ERG collateral
-  RESERVE_CONTRACT_ADDRESS
-).setAdditionalRegisters({
-  R4: SLong(100_000_000_000n), // 100 ERG credit limit
-  R5: SLong(0n),               // total issued so far
-  R6: SGroupElement(controllerKey),
-})
-
-// Notes are issued from this reserve
-// Tracker enforces: issued <= credit_limit
-// Settlement happens when tracker triggers threshold`,
-    links: [
-      { label: "ChainCash paper", url: "https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf", external: true },
-      { label: "Architecture", url: "/build/agent-payments#credit", external: false },
-      { label: "Reserve contract", url: "/build/agent-payments#reserve", external: false },
-    ],
-  },
-  {
-    id: "community",
-    icon: GitBranch,
-    status: "coming",
-    statusLabel: "Coming in Week 3",
-    title: "Community reserve + tracker",
-    tagline: "A local marketplace. A compute co-op. An agent network.",
-    description:
-      "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",
-    flow: [
-      "Community members pool ERG into multi-sig reserve",
-      "Members receive community notes proportional to contribution",
-      "Notes accepted within community per acceptance rules",
-      "Any member can redeem notes for ERG anytime",
-      "Tracker provides public auditability of flows",
-    ],
-    why: "This is the most general form: a programmable local economy. Could be a marketplace, a DAO treasury, or an agent cooperative.",
-    code: `// Multi-sig community reserve
-const communityReserve = new OutputBuilder(
-  TOTAL_POOLED_ERG,
-  MULTISIG_RESERVE_ADDRESS
-).setAdditionalRegisters({
-  R4: SColl(SGroupElement, memberKeys), // 5 members
-  R5: SInt(3),                          // 3-of-5 to redeem
-  R6: SColl(SByte, communityTokenId),   // community token
-})
-
-// Acceptance predicate — members only:
-// { val isMember = memberKeys.exists(pk => proveDlog(pk))
-//   sigmaProp(isMember) }`,
-    links: [
-      { label: "Architecture", url: "/build/agent-payments#community", external: false },
-      { label: "Native Tokens", url: "/technology/native-tokens", external: false },
-      { label: "ErgoScript", url: "/technology/ergoscript", external: false },
-    ],
-  },
-]
-
-// ── Open problems ─────────────────────────────────────────────────────────────
-const OPEN_PROBLEMS = [
-  {
-    id: 1,
-    title: "Agent identity without persistent accounts",
-    desc: "How do agents build reputation across sessions without deanonymisation?",
-  },
-  {
-    id: 2,
-    title: "Note acceptance UX for non-technical agents",
-    desc: "SDK-level abstraction so LLM agents can issue and accept notes with minimal setup.",
-  },
-  {
-    id: 3,
-    title: "Tracker federation across reserves",
-    desc: "Cross-reserve accounting and liquidity — can notes be accepted across different community reserves?",
-  },
-  {
-    id: 4,
-    title: "Agent reputation without centralized oracle",
-    desc: "Verifiable reputation score derived from on-chain history, no trusted third party.",
-  },
-  {
-    id: 5,
-    title: "Local community wallet — one-click deploy",
-    desc: "Spin up a community reserve, issue tokens, and configure acceptance rules in under 5 minutes.",
-  },
-]
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -275,6 +129,8 @@ main().catch(console.error);`
 }
 
 export function DemosClient() {
+  const t = useTranslations('demosPage')
+
   const [expandedCode, setExpandedCode] = useState<string | null>(null)
 
   // ── Playground state ──────────────────────────────────────────────────────
@@ -297,18 +153,18 @@ export function DemosClient() {
         `https://api-testnet.ergoplatform.com/api/v1/boxes/unspent/byAddress/${encodeURIComponent(addr)}?limit=10`
       )
       if (!res.ok) {
-        setPlaygroundError("Address not found on testnet. Make sure it's a valid Ergo testnet address.")
+        setPlaygroundError(t('playground.errorNotFound'))
         return
       }
       const data = await res.json()
       if (!data.items?.length) {
-        setPlaygroundError("No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.")
+        setPlaygroundError(t('playground.errorNoUtxos'))
         return
       }
       setPlaygroundUtxos(data.items)
       setPlaygroundTab('code')
     } catch {
-      setPlaygroundError("Could not reach testnet API. Check your network connection.")
+      setPlaygroundError(t('playground.errorNetwork'))
     } finally {
       setPlaygroundLoading(false)
     }
@@ -334,17 +190,139 @@ export function DemosClient() {
         `https://api.ergoplatform.com/api/v1/addresses/${encodeURIComponent(addr)}/balance/confirmed`
       )
       if (!res.ok) {
-        setLookupError("Address not found or invalid. Check that it's a valid Ergo address.")
+        setLookupError(t('lookup.errorNotFound'))
         return
       }
       const data: AddressBalance = await res.json()
       setLookupResult(data)
     } catch {
-      setLookupError("Could not reach Ergo API. Check your network connection.")
+      setLookupError(t('lookup.errorNetwork'))
     } finally {
       setLookupLoading(false)
     }
   }
+
+  // ── Demo data (icons stay in TSX, text from translations) ─────────────────
+  const DEMOS = [
+    {
+      id: "api-call",
+      icon: Bot,
+      status: "testnet",
+      statusLabel: t('demoItems.apiCall.statusLabel'),
+      title: t('demoItems.apiCall.title'),
+      tagline: t('demoItems.apiCall.tagline'),
+      description: t('demoItems.apiCall.description'),
+      flow: [
+        t('demoItems.apiCall.flow.0'),
+        t('demoItems.apiCall.flow.1'),
+        t('demoItems.apiCall.flow.2'),
+        t('demoItems.apiCall.flow.3'),
+        t('demoItems.apiCall.flow.4'),
+      ],
+      why: t('demoItems.apiCall.why'),
+      code: `// Install: npm install @fleet-sdk/core
+import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core"
+
+// Create a payment note for one API call
+const noteBox = new OutputBuilder(
+  1_000_000n,           // 0.001 ERG
+  NOTE_CONTRACT_ADDRESS
+).setAdditionalRegisters({
+  R4: SGroupElement(providerPublicKey), // who receives
+  R5: SLong(BigInt(currentHeight + 100)), // deadline
+  R6: SColl(SByte, sha256(taskDescription)), // task proof
+})
+
+const tx = new TransactionBuilder(currentHeight)
+  .from(myInputs)
+  .to(noteBox)
+  .sendChangeTo(myAddress)
+  .payMinFee()
+  .build()`,
+      links: [
+        { label: t('demoItems.apiCall.links.chaincashRef'), url: "https://github.com/kushti/chaincash", external: true },
+        { label: t('demoItems.apiCall.links.fleetDocs'), url: "https://fleet-sdk.github.io/docs/", external: true },
+        { label: t('demoItems.apiCall.links.architecture'), url: "/build/agent-payments#api-call", external: false },
+      ],
+    },
+    {
+      id: "credit",
+      icon: CreditCard,
+      status: "testnet",
+      statusLabel: t('demoItems.credit.statusLabel'),
+      title: t('demoItems.credit.title'),
+      tagline: t('demoItems.credit.tagline'),
+      description: t('demoItems.credit.description'),
+      flow: [
+        t('demoItems.credit.flow.0'),
+        t('demoItems.credit.flow.1'),
+        t('demoItems.credit.flow.2'),
+        t('demoItems.credit.flow.3'),
+        t('demoItems.credit.flow.4'),
+      ],
+      why: t('demoItems.credit.why'),
+      code: `// Deploy a reserve with credit limit
+const reserveBox = new OutputBuilder(
+  10_000_000_000n,      // 10 ERG collateral
+  RESERVE_CONTRACT_ADDRESS
+).setAdditionalRegisters({
+  R4: SLong(100_000_000_000n), // 100 ERG credit limit
+  R5: SLong(0n),               // total issued so far
+  R6: SGroupElement(controllerKey),
+})
+
+// Notes are issued from this reserve
+// Tracker enforces: issued <= credit_limit
+// Settlement happens when tracker triggers threshold`,
+      links: [
+        { label: t('demoItems.credit.links.chaincashPaper'), url: "https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf", external: true },
+        { label: t('demoItems.credit.links.architecture'), url: "/build/agent-payments#credit", external: false },
+        { label: t('demoItems.credit.links.reserveContract'), url: "/build/agent-payments#reserve", external: false },
+      ],
+    },
+    {
+      id: "community",
+      icon: GitBranch,
+      status: "coming",
+      statusLabel: t('demoItems.community.statusLabel'),
+      title: t('demoItems.community.title'),
+      tagline: t('demoItems.community.tagline'),
+      description: t('demoItems.community.description'),
+      flow: [
+        t('demoItems.community.flow.0'),
+        t('demoItems.community.flow.1'),
+        t('demoItems.community.flow.2'),
+        t('demoItems.community.flow.3'),
+        t('demoItems.community.flow.4'),
+      ],
+      why: t('demoItems.community.why'),
+      code: `// Multi-sig community reserve
+const communityReserve = new OutputBuilder(
+  TOTAL_POOLED_ERG,
+  MULTISIG_RESERVE_ADDRESS
+).setAdditionalRegisters({
+  R4: SColl(SGroupElement, memberKeys), // 5 members
+  R5: SInt(3),                          // 3-of-5 to redeem
+  R6: SColl(SByte, communityTokenId),   // community token
+})
+
+// Acceptance predicate — members only:
+// { val isMember = memberKeys.exists(pk => proveDlog(pk))
+//   sigmaProp(isMember) }`,
+      links: [
+        { label: t('demoItems.community.links.architecture'), url: "/build/agent-payments#community", external: false },
+        { label: t('demoItems.community.links.nativeTokens'), url: "/technology/native-tokens", external: false },
+        { label: t('demoItems.community.links.ergoScript'), url: "/technology/ergoscript", external: false },
+      ],
+    },
+  ]
+
+  // ── Open problems ─────────────────────────────────────────────────────────
+  const OPEN_PROBLEMS = [0, 1, 2, 3, 4].map((i) => ({
+    id: i + 1,
+    title: t(`openProblems.items.${i}.title`),
+    desc: t(`openProblems.items.${i}.desc`),
+  }))
 
   return (
     <BackgroundWrapper>
@@ -364,7 +342,7 @@ export function DemosClient() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-8">
                 <Play className="w-3.5 h-3.5 text-orange-400" />
                 <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                  Working Demos
+                  {t('hero.badge')}
                 </span>
               </div>
 
@@ -376,8 +354,8 @@ export function DemosClient() {
                   lineHeight: 1.0,
                 }}
               >
-                Working flows,{" "}
-                <span style={{ color: BRAND }}>not mockups.</span>
+                {t('hero.title')}{" "}
+                <span style={{ color: BRAND }}>{t('hero.titleHighlight')}</span>
               </h1>
 
               <p
@@ -388,8 +366,7 @@ export function DemosClient() {
                   maxWidth: "58ch",
                 }}
               >
-                Three composable flows, all running on Ergo testnet. Each includes the contract
-                logic, Fleet SDK code, and the exact steps to reproduce.
+                {t('hero.description')}
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -400,7 +377,7 @@ export function DemosClient() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
                   >
-                    <span>Get testnet ERG</span>
+                    <span>{t('hero.ctaTestnet')}</span>
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 </motion.div>
@@ -409,7 +386,7 @@ export function DemosClient() {
                     href="/build/agent-payments"
                     className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
-                    <span>Architecture</span>
+                    <span>{t('hero.ctaArchitecture')}</span>
                     <ChevronRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -463,7 +440,7 @@ export function DemosClient() {
                         {/* Step-by-step flow */}
                         <div className="mb-7">
                           <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-4">
-                            Step-by-step
+                            {t('demos.stepByStep')}
                           </p>
                           <ol className="space-y-3">
                             {demo.flow.map((step, si) => (
@@ -479,7 +456,7 @@ export function DemosClient() {
 
                         {/* Why this matters */}
                         <div className="rounded-2xl bg-orange-500/5 border border-orange-500/15 p-4">
-                          <p className="text-orange-400/70 font-mono text-xs uppercase tracking-widest mb-2">Why this matters</p>
+                          <p className="text-orange-400/70 font-mono text-xs uppercase tracking-widest mb-2">{t('demos.whyMatters')}</p>
                           <p className="text-neutral-300 text-sm leading-relaxed">{demo.why}</p>
                         </div>
 
@@ -517,13 +494,13 @@ export function DemosClient() {
                           <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/8">
                             <div className="flex items-center gap-2">
                               <Terminal className="w-3.5 h-3.5 text-orange-400" />
-                              <span className="text-neutral-500 font-mono text-xs">Fleet SDK (TypeScript)</span>
+                              <span className="text-neutral-500 font-mono text-xs">{t('demos.codeLabel')}</span>
                             </div>
                             <button
                               onClick={() => setExpandedCode(expandedCode === demo.id ? null : demo.id)}
                               className="text-neutral-500 hover:text-orange-400 font-mono text-xs transition-colors"
                             >
-                              {expandedCode === demo.id ? "collapse" : "expand"}
+                              {expandedCode === demo.id ? t('demos.collapse') : t('demos.expand')}
                             </button>
                           </div>
                           <pre className={`px-4 py-4 text-xs text-neutral-300 font-mono leading-relaxed overflow-x-auto transition-all ${
@@ -536,7 +513,7 @@ export function DemosClient() {
                         {demo.status === "testnet" && (
                           <div className="mt-4 flex items-center gap-2 text-xs text-neutral-500">
                             <CheckCircle className="w-3.5 h-3.5 text-orange-400" />
-                            <span>Tested on Ergo testnet. Get test ERG at{" "}
+                            <span>{t('demos.testedOn')}{" "}
                               <a
                                 href="https://testnet.ergofaucet.org/"
                                 target="_blank"
@@ -565,7 +542,7 @@ export function DemosClient() {
 
               <div>
                 <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                  Open Problems
+                  {t('openProblems.badge')}
                 </p>
                 <h2
                   className="font-extrabold tracking-tight text-white mb-6"
@@ -575,11 +552,10 @@ export function DemosClient() {
                     lineHeight: 1.1,
                   }}
                 >
-                  What&apos;s still unsolved
+                  {t('openProblems.title')}
                 </h2>
                 <p className="text-neutral-400 text-sm leading-relaxed mb-8" style={{ maxWidth: "46ch" }}>
-                  These are the most interesting open problems in agent money. If any of these
-                  resonate — we want to hear from you.
+                  {t('openProblems.description')}
                 </p>
 
                 <div className="flex flex-col gap-3">
@@ -591,7 +567,7 @@ export function DemosClient() {
                       className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-5 py-2.5 rounded-2xl border-2 border-orange-500/40 hover:border-orange-500 transition-all text-xs"
                     >
                       <Github className="w-4 h-4" />
-                      <span>Open an issue</span>
+                      <span>{t('openProblems.openIssue')}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </motion.div>
@@ -601,7 +577,7 @@ export function DemosClient() {
                       className="inline-flex items-center gap-2 text-neutral-400 hover:text-orange-400 font-mono text-xs transition-colors"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
-                      <span>Talk to us about your use case</span>
+                      <span>{t('openProblems.talkToUs')}</span>
                     </Link>
                   </motion.div>
                 </div>
@@ -641,22 +617,22 @@ export function DemosClient() {
               {[
                 {
                   icon: ArrowRight,
-                  title: "Full architecture",
-                  desc: "Reserve · Note · Tracker · Predicate",
+                  title: t('quickLinks.architecture.title'),
+                  desc: t('quickLinks.architecture.desc'),
                   href: "/build/agent-payments",
                   external: false,
                 },
                 {
                   icon: Github,
-                  title: "ChainCash",
-                  desc: "Reference implementation for notes + reserves",
+                  title: t('quickLinks.chaincash.title'),
+                  desc: t('quickLinks.chaincash.desc'),
                   href: "https://github.com/kushti/chaincash",
                   external: true,
                 },
                 {
                   icon: Bot,
-                  title: "Agent Economy",
-                  desc: "Why Ergo is the right base layer",
+                  title: t('quickLinks.agentEconomy.title'),
+                  desc: t('quickLinks.agentEconomy.desc'),
                   href: "/agent-economy",
                   external: false,
                 },
@@ -709,18 +685,17 @@ export function DemosClient() {
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-4">
                   <Code2 className="w-3.5 h-3.5 text-orange-400" />
                   <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                    Testnet playground
+                    {t('playground.badge')}
                   </span>
                 </div>
                 <h2
                   className="font-extrabold tracking-tight text-white mb-3"
                   style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}
                 >
-                  Generate your first agent payment
+                  {t('playground.title')}
                 </h2>
                 <p className="text-gray-400 text-sm max-w-xl mx-auto">
-                  Paste your Ergo testnet address. We fetch your live UTxOs and generate a
-                  ready-to-run Fleet SDK script — pre-filled with your actual data.
+                  {t('playground.description')}
                 </p>
               </div>
 
@@ -730,7 +705,7 @@ export function DemosClient() {
                   type="text"
                   value={playgroundAddress}
                   onChange={(e) => setPlaygroundAddress(e.target.value)}
-                  placeholder="9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)"
+                  placeholder={t('playground.placeholder')}
                   className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-orange-500/50 font-mono"
                   spellCheck={false}
                 />
@@ -744,12 +719,12 @@ export function DemosClient() {
                   ) : (
                     <Play className="w-4 h-4" />
                   )}
-                  {playgroundLoading ? "Fetching…" : "Generate"}
+                  {playgroundLoading ? t('playground.fetching') : t('playground.generate')}
                 </button>
               </form>
 
               <p className="text-center text-gray-600 text-xs mb-8">
-                Need testnet ERG?{" "}
+                {t('playground.needTestnetErg')}{" "}
                 <a
                   href="https://testnet.ergofaucet.org"
                   target="_blank"
@@ -758,7 +733,7 @@ export function DemosClient() {
                 >
                   testnet.ergofaucet.org
                 </a>
-                {" "}— free testnet ERG in seconds.
+                {" "}{t('playground.freeTestnetErg')}
               </p>
 
               {/* Error */}
@@ -792,7 +767,7 @@ export function DemosClient() {
                     >
                       <span className="flex items-center justify-center gap-2">
                         <Code2 className="w-4 h-4" />
-                        Ready-to-run code
+                        {t('playground.tabCode')}
                       </span>
                     </button>
                     <button
@@ -805,7 +780,7 @@ export function DemosClient() {
                     >
                       <span className="flex items-center justify-center gap-2">
                         <Wallet className="w-4 h-4" />
-                        Your UTxOs ({playgroundUtxos.length})
+                        {t('playground.tabUtxos')} ({playgroundUtxos.length})
                       </span>
                     </button>
                   </div>
@@ -829,12 +804,12 @@ export function DemosClient() {
                           {playgroundCopied ? (
                             <>
                               <CheckCircle className="w-3.5 h-3.5 text-green-400" />
-                              <span className="text-green-400">Copied!</span>
+                              <span className="text-green-400">{t('playground.copied')}</span>
                             </>
                           ) : (
                             <>
                               <Copy className="w-3.5 h-3.5" />
-                              Copy
+                              {t('playground.copy')}
                             </>
                           )}
                         </button>
@@ -843,12 +818,12 @@ export function DemosClient() {
                         {generatePlaygroundCode(playgroundAddress, playgroundUtxos)}
                       </pre>
                       <div className="border-t border-white/8 p-4 bg-orange-500/5">
-                        <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">Run it</p>
+                        <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">{t('playground.runIt')}</p>
                         <div className="space-y-1.5 font-mono text-xs text-gray-400">
-                          <p><span className="text-orange-400">1.</span> npm install @fleet-sdk/core</p>
-                          <p><span className="text-orange-400">2.</span> node agent-payment.js</p>
-                          <p><span className="text-orange-400">3.</span> Copy the unsigned TX JSON output</p>
-                          <p><span className="text-orange-400">4.</span> Open Nautilus (testnet mode) → sign → submit</p>
+                          <p><span className="text-orange-400">1.</span> {t('playground.runStep1')}</p>
+                          <p><span className="text-orange-400">2.</span> {t('playground.runStep2')}</p>
+                          <p><span className="text-orange-400">3.</span> {t('playground.runStep3')}</p>
+                          <p><span className="text-orange-400">4.</span> {t('playground.runStep4')}</p>
                         </div>
                       </div>
                     </div>
@@ -860,10 +835,10 @@ export function DemosClient() {
                       {playgroundUtxos.map((utxo, i) => (
                         <div key={utxo.boxId} className="flex items-start justify-between bg-black/40 rounded-xl px-4 py-3">
                           <div className="min-w-0">
-                            <div className="text-xs text-gray-500 font-mono mb-1">Box {i + 1}</div>
+                            <div className="text-xs text-gray-500 font-mono mb-1">{t('playground.boxLabel')} {i + 1}</div>
                             <div className="text-xs text-gray-400 font-mono">{utxo.boxId.slice(0, 24)}…</div>
                             <div className="text-xs text-gray-600 mt-1">
-                              height {utxo.creationHeight} · {utxo.assets?.length ?? 0} token(s)
+                              {t('playground.height')} {utxo.creationHeight} · {utxo.assets?.length ?? 0} {t('playground.tokens')}
                             </div>
                           </div>
                           <div className="text-orange-300 font-mono font-bold text-sm shrink-0 ml-4">
@@ -887,12 +862,12 @@ export function DemosClient() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-4">
                 <Search className="w-3.5 h-3.5 text-orange-400" />
                 <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                  Live on mainnet
+                  {t('lookup.badge')}
                 </span>
               </div>
-              <h2 className="text-2xl font-bold text-white mb-2">Address balance lookup</h2>
+              <h2 className="text-2xl font-bold text-white mb-2">{t('lookup.title')}</h2>
               <p className="text-gray-400 text-sm">
-                Query any Ergo address balance live from the blockchain. Real data, real network.
+                {t('lookup.description')}
               </p>
             </div>
 
@@ -901,7 +876,7 @@ export function DemosClient() {
                 type="text"
                 value={lookupAddress}
                 onChange={(e) => setLookupAddress(e.target.value)}
-                placeholder="9hHDQb26AjnJ...  (paste any Ergo address)"
+                placeholder={t('lookup.placeholder')}
                 className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 focus:outline-none focus:border-orange-500/50 font-mono"
                 spellCheck={false}
               />
@@ -915,7 +890,7 @@ export function DemosClient() {
                 ) : (
                   <Search className="w-4 h-4" />
                 )}
-                {lookupLoading ? "Looking up…" : "Lookup"}
+                {lookupLoading ? t('lookup.lookingUp') : t('lookup.lookup')}
               </button>
             </form>
 
@@ -954,7 +929,7 @@ export function DemosClient() {
                   <div className="ml-auto">
                     <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400">
                       <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                      Confirmed
+                      {t('lookup.confirmed')}
                     </span>
                   </div>
                 </div>
@@ -993,14 +968,14 @@ export function DemosClient() {
 
                 {lookupResult.tokens.length === 0 && (
                   <div className="p-4 text-center text-gray-500 text-sm">
-                    No tokens in this address
+                    {t('lookup.noTokens')}
                   </div>
                 )}
               </motion.div>
             )}
 
             <p className="text-center text-gray-600 text-xs mt-4">
-              Data fetched live from{" "}
+              {t('lookup.dataFetchedFrom')}{" "}
               <code className="text-gray-500">api.ergoplatform.com</code>
             </p>
           </div>
@@ -1009,8 +984,8 @@ export function DemosClient() {
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
         <div id="builder-form">
           <FinalCTASimple
-            title="Your use case doesn't fit?"
-            description="Tell us what you're building. We'll find the right flow or help design a new one."
+            title={t('cta.title')}
+            description={t('cta.description')}
           />
         </div>
 

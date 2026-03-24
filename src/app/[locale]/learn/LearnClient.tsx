@@ -19,127 +19,61 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { useMemo, useState } from "react"
 import Script from "next/script"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { useTranslations } from "next-intl"
 
-const learningTracks = [
-  {
-    id: "foundations",
-    label: "Foundations",
-    badge: "Start here",
-    gradient: "from-orange-500 to-red-500",
-    description: "Learn what makes Ergo different, how wallets stay sovereign, and why Storage Rent keeps the chain sustainable.",
-    bullets: [
-      "Fair-launch DNA + key principles",
-      "Wallet security + on-chain habits",
-      "eUTXO vs account mindset shift"
-    ],
-    cta: { label: "Beginner path", href: "/start/introduction" },
-    stack: {
-      core: "Wallets · Storage Rent · eUTXO",
-      tooling: "Nautilus · SAFEW · Explorer",
-      mentors: "Community channels",
-      deliverable: "Secure wallet setup"
-    }
-  },
-  {
-    id: "developer",
-    label: "Developers",
-    badge: "Code",
-    gradient: "from-green-500 to-cyan-500",
-    description: "Hands-on ErgoScript tutorials, VS Code snippets, and full-stack reference dApps.",
-    bullets: [
-      "Playground + AppKit workflow",
-      "Contract templates you can fork",
-      "Wallet + explorer integration"
-    ],
-    cta: { label: "Open dev guide", href: "/learn/ergoscript" },
-    stack: {
-      core: "eUTXO · ErgoScript · Sigma",
-      tooling: "Playground · AppKit · Explorer",
-      mentors: "Discord office hours",
-      deliverable: "Ship a compliant dApp"
-    }
-  },
-  {
-    id: "topics",
-    label: "Topics",
-    badge: "Explore",
-    gradient: "from-sky-500 to-indigo-500",
-    description: "Curated topic clusters that group related concepts, articles, and resources together.",
-    bullets: [
-      "Privacy & Sigma Protocols",
-      "Mining & Autolykos",
-      "DeFi & Smart Contracts"
-    ],
-    cta: { label: "Browse topics", href: "/topics" },
-    stack: {
-      core: "Topic clusters · Related content",
-      tooling: "Articles · Glossary · Guides",
-      mentors: "Community curators",
-      deliverable: "Deep topic understanding"
-    }
-  },
-  {
-    id: "privacy",
-    label: "Privacy",
-    badge: "Sigma",
-    gradient: "from-purple-500 to-blue-500",
-    description: "Master Σ-protocols, mixers, and selective disclosure flows for auditable privacy.",
-    bullets: [
-      "Sigma protocols explained visually",
-      "ErgoMixer + compliance toolkit",
-      "Selective disclosure playbook"
-    ],
-    cta: { label: "Explore privacy stack", href: "/blog/sigma-protocols-explained" },
-    stack: {
-      core: "Σ-protocols · ZK proofs · Mixers",
-      tooling: "ErgoMixer · Stealth pools",
-      mentors: "Privacy researchers",
-      deliverable: "Compliant privacy dApp"
-    }
-  },
-  {
-    id: "research",
-    label: "Research",
-    badge: "Deep dive",
-    gradient: "from-amber-500 to-lime-500",
-    description: "Whitepapers, Storage Rent models, and Autolykos research decks.",
-    bullets: [
-      "Tokenomics + demurrage models",
-      "Autolykos & NiPoPoWs papers",
-      "Governance proposals archive"
-    ],
-    cta: { label: "Download papers", href: "/learn/research" },
-    stack: {
-      core: "Economics · Consensus · NIPoPoWs",
-      tooling: "Research papers · Models",
-      mentors: "Core researchers",
-      deliverable: "Research contribution"
-    }
-  }
-]
+const trackIds = ["foundations", "developer", "topics", "privacy", "research"] as const
+type TrackId = typeof trackIds[number]
 
-const faqs = [
-  {
-    q: "How do I get started if I’m brand new?",
-    a: "Install Nautilus or SAFEW, back up your seed offline, grab a small amount of ERG, and run through the Beginner Path. It covers wallet hygiene, Storage Rent basics, and how to interact with dApps safely."
-  },
-  {
-    q: "What makes Ergo learning different from other L1s?",
-    a: "Ergo combines a research-first roadmap with real-world tooling. You get deterministic contracts (eUTXO), optional privacy (Σ-protocols), and sustainable economics (Storage Rent) without corporate gatekeepers."
-  },
-  {
-    q: "Is ErgoScript hard to learn?",
-    a: "If you’ve written Solidity or Rust, ErgoScript will feel familiar. The curated builder path walks through patterns, and AppKit handles most boilerplate so you can focus on business logic."
-  },
-  {
-    q: "Where can I ask questions live?",
-    a: "Join the weekly mentor hours on Discord or pop into the #dev or #academy channels any time. Core contributors hang out there and review repos frequently."
-  }
-]
+const trackGradients: Record<TrackId, string> = {
+  foundations: "from-orange-500 to-red-500",
+  developer:   "from-green-500 to-cyan-500",
+  topics:      "from-sky-500 to-indigo-500",
+  privacy:     "from-purple-500 to-blue-500",
+  research:    "from-amber-500 to-lime-500",
+}
+
+const trackCtaHrefs: Record<TrackId, string> = {
+  foundations: "/start/introduction",
+  developer:   "/learn/ergoscript",
+  topics:      "/topics",
+  privacy:     "/blog/sigma-protocols-explained",
+  research:    "/learn/research",
+}
 
 export default function LearnClient() {
-  // Translations available via useTranslations('learn.page') when needed
-  const [activeTrack, setActiveTrack] = useState(learningTracks[0].id)
+  const t = useTranslations("learn.hub")
+  const tLearn = useTranslations("learn")
+
+  const [activeTrack, setActiveTrack] = useState<TrackId>("foundations")
+
+  // Build learning tracks from translations
+  const learningTracks = trackIds.map((id) => ({
+    id,
+    label: t(`tracks.${id}.label`),
+    badge: t(`tracks.${id}.badge`),
+    gradient: trackGradients[id],
+    description: t(`tracks.${id}.description`),
+    bullets: [
+      t(`tracks.${id}.bullets.0`),
+      t(`tracks.${id}.bullets.1`),
+      t(`tracks.${id}.bullets.2`),
+    ],
+    cta: { label: t(`tracks.${id}.cta`), href: trackCtaHrefs[id] },
+    stack: {
+      core:        t(`tracks.${id}.stack.core`),
+      tooling:     t(`tracks.${id}.stack.tooling`),
+      mentors:     t(`tracks.${id}.stack.mentors`),
+      deliverable: t(`tracks.${id}.stack.deliverable`),
+    },
+  }))
+
+  // Build FAQs from translations
+  const faqIndices = [0, 1, 2, 3] as const
+  const faqs = faqIndices.map((i) => ({
+    q: t(`faq.items.${i}.question`),
+    a: t(`faq.items.${i}.answer`),
+  }))
+
   const faqJsonLd = useMemo(() => ({
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -148,29 +82,58 @@ export default function LearnClient() {
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a }
     }))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }), [])
 
   const activeTrackData = learningTracks.find((track) => track.id === activeTrack)!
 
+  // Quick reference items (name + subtitle from translations, href + icon stay static)
+  const quickRefItems = [
+    {
+      name: t("quickReference.items.visualGuides.name"),
+      href: "/infographics",
+      icon: <ImageIcon className="w-6 h-6 text-orange-400" />,
+      subtitle: t("quickReference.items.visualGuides.subtitle"),
+    },
+    {
+      name: t("quickReference.items.glossary.name"),
+      href: "/learn/glossary",
+      icon: <BookOpen className="w-6 h-6 text-orange-400" />,
+      subtitle: t("quickReference.items.glossary.subtitle"),
+    },
+    {
+      name: t("quickReference.items.playbooks.name"),
+      href: "/playbooks",
+      icon: <Layers className="w-6 h-6 text-orange-400" />,
+      subtitle: t("quickReference.items.playbooks.subtitle"),
+    },
+    {
+      name: t("quickReference.items.devPatterns.name"),
+      href: "/patterns",
+      icon: <Cpu className="w-6 h-6 text-orange-400" />,
+      subtitle: t("quickReference.items.devPatterns.subtitle"),
+    },
+  ]
+
   return (
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
-        <Breadcrumbs items={[{ name: "Learn", href: "#" }]} variant="hidden" />
+        <Breadcrumbs items={[{ name: tLearn("title"), href: "#" }]} variant="hidden" />
 
         <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-sm uppercase tracking-[0.4em] text-gray-400 mb-4">Ergo Learning Hub</p>
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">Master Ergo Development</h1>
+                <p className="text-sm uppercase tracking-[0.4em] text-gray-400 mb-4">{t("badge")}</p>
+                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">{t("title")}</h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
-                  Learn ErgoScript, eUTXO smart contracts, and Sigma protocols through hands-on tutorials and expert mentorship.
+                  {t("subtitle")}
                 </p>
                 <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                  From beginner wallet setup to advanced privacy dApps — structured paths with real projects and community support.
+                  {t("description")}
                 </p>
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
-                  <Link href="/start">Start</Link>
+                  <Link href="/start">{t("startButton")}</Link>
                 </Button>
               </div>
               <motion.div
@@ -179,46 +142,21 @@ export default function LearnClient() {
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
               >
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
-                  <h3 className="text-2xl font-bold mb-6 text-center text-white">Quick Reference</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">{t("quickReference.title")}</h3>
                   <div className="grid grid-cols-1 gap-4">
-                    {[
-                      {
-                        name: "Visual Guides",
-                        href: "/infographics",
-                        icon: <ImageIcon className="w-6 h-6 text-orange-400" />,
-                        subtitle: "Infographics that explain Ergo at a glance",
-                      },
-                      {
-                        name: "Glossary",
-                        href: "/learn/glossary",
-                        icon: <BookOpen className="w-6 h-6 text-orange-400" />,
-                        subtitle: "Ergo terminology & core concepts",
-                      },
-                      {
-                        name: "Playbooks",
-                        href: "/playbooks",
-                        icon: <Layers className="w-6 h-6 text-orange-400" />,
-                        subtitle: "Step-by-step paths for DeFi, privacy, mining",
-                      },
-                      {
-                        name: "Dev Patterns",
-                        href: "/patterns",
-                        icon: <Cpu className="w-6 h-6 text-orange-400" />,
-                        subtitle: "Smart-contract patterns & reusable blueprints",
-                      },
-                    ].map((track) => (
+                    {quickRefItems.map((item) => (
                       <Link
-                        key={track.name}
-                        href={track.href}
+                        key={item.name}
+                        href={item.href}
                         className="block p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
                       >
                         <div className="flex items-start gap-3">
                           <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
-                            {track.icon}
+                            {item.icon}
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white text-lg">{track.name}</h4>
-                            <p className="text-sm text-neutral-300 mt-1">{track.subtitle}</p>
+                            <h4 className="font-semibold text-white text-lg">{item.name}</h4>
+                            <p className="text-sm text-neutral-300 mt-1">{item.subtitle}</p>
                           </div>
                         </div>
                       </Link>
@@ -236,7 +174,7 @@ export default function LearnClient() {
               {learningTracks.map((track) => (
                 <button
                   key={track.id}
-                  onClick={() => setActiveTrack(track.id)}
+                  onClick={() => setActiveTrack(track.id as TrackId)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm border transition-all ${
                     activeTrack === track.id ? "bg-white text-black border-white" : "border-white/10 hover:border-white/30 text-white"
                   }`}
@@ -250,7 +188,7 @@ export default function LearnClient() {
 
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-3">Curated pathway</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-3">{t("tracks.curatedPathway")}</p>
                 <h3 className="text-3xl font-bold text-white mb-4">{activeTrackData.label}</h3>
                 <p className="text-gray-300 mb-6">{activeTrackData.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -272,23 +210,23 @@ export default function LearnClient() {
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4">
                 <div className="flex items-center gap-3">
                   <Cpu className="w-5 h-5 text-orange-400" />
-                  <p className="text-sm uppercase tracking-wide text-gray-400">Stack you will touch</p>
+                  <p className="text-sm uppercase tracking-wide text-gray-400">{t("tracks.stackTitle")}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-black/50 border border-white/10">
-                    <p className="text-sm text-gray-400 mb-1">Core</p>
+                    <p className="text-sm text-gray-400 mb-1">{t("tracks.stackLabels.core")}</p>
                     <p className="font-semibold text-white">{activeTrackData.stack.core}</p>
                   </div>
                   <div className="p-4 rounded-xl bg-black/50 border border-white/10">
-                    <p className="text-sm text-gray-400 mb-1">Tooling</p>
+                    <p className="text-sm text-gray-400 mb-1">{t("tracks.stackLabels.tooling")}</p>
                     <p className="font-semibold text-white">{activeTrackData.stack.tooling}</p>
                   </div>
                   <div className="p-4 rounded-xl bg-black/50 border border-white/10">
-                    <p className="text-sm text-gray-400 mb-1">Mentors</p>
+                    <p className="text-sm text-gray-400 mb-1">{t("tracks.stackLabels.mentors")}</p>
                     <p className="font-semibold text-white">{activeTrackData.stack.mentors}</p>
                   </div>
                   <div className="p-4 rounded-xl bg-black/50 border border-white/10">
-                    <p className="text-sm text-gray-400 mb-1">Deliverable</p>
+                    <p className="text-sm text-gray-400 mb-1">{t("tracks.stackLabels.deliverable")}</p>
                     <p className="font-semibold text-white">{activeTrackData.stack.deliverable}</p>
             </div>
           </div>
@@ -300,7 +238,7 @@ export default function LearnClient() {
         <section className="px-4 py-16">
           <div className="max-w-5xl mx-auto">
             <Script id="learn-faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-            <h2 className="text-3xl font-bold text-white text-center mb-8">Frequently asked questions</h2>
+            <h2 className="text-3xl font-bold text-white text-center mb-8">{t("faq.title")}</h2>
             <div className="space-y-4">
               {faqs.map((faq) => (
                 <Card key={faq.q} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
@@ -329,11 +267,11 @@ export default function LearnClient() {
       <section className="px-4 py-16">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <p className="text-sm uppercase tracking-[0.2em] text-gray-400">Next steps</p>
-            <h2 className="text-3xl font-bold text-white mt-3">Continue Your Journey</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-gray-400">{t("nextSteps.badge")}</p>
+            <h2 className="text-3xl font-bold text-white mt-3">{t("nextSteps.title")}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link 
+            <Link
               href="/ecosystem"
               className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
             >
@@ -342,15 +280,15 @@ export default function LearnClient() {
                   <Layers className="w-6 h-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Explore Ecosystem</h3>
-                  <p className="text-orange-400 text-sm">Discover Applications</p>
+                  <h3 className="text-xl font-bold text-white">{t("nextSteps.exploreEcosystem.title")}</h3>
+                  <p className="text-orange-400 text-sm">{t("nextSteps.exploreEcosystem.subtitle")}</p>
                 </div>
               </div>
               <p className="text-neutral-300">
-                Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo
+                {t("nextSteps.exploreEcosystem.description")}
               </p>
             </Link>
-            <Link 
+            <Link
               href="/use"
               className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
             >
@@ -359,12 +297,12 @@ export default function LearnClient() {
                   <ArrowRight className="w-6 h-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Use Ergo</h3>
-                  <p className="text-orange-400 text-sm">Practical Guides</p>
+                  <h3 className="text-xl font-bold text-white">{t("nextSteps.useErgo.title")}</h3>
+                  <p className="text-orange-400 text-sm">{t("nextSteps.useErgo.subtitle")}</p>
                 </div>
               </div>
               <p className="text-neutral-300">
-                Step-by-step guides for wallets, DeFi, mining, bridges, and more
+                {t("nextSteps.useErgo.description")}
               </p>
             </Link>
           </div>
@@ -394,8 +332,8 @@ export default function LearnClient() {
 
       {/* Email Capture Form */}
       <FinalCTASimple
-        title="Level Up Your Blockchain Skills"
-        description="Get notified about new tutorials, workshops, and learning resources for Ergo development"
+        title={t("cta.title")}
+        description={t("cta.description")}
       />
 
     </div>

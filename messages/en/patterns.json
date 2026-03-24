@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript Patterns — Smart Contract Templates for Ergo | ergo.org",
+      "description": "18 battle-tested ErgoScript smart contract patterns. Token mechanics, time-locks, multisig, DeFi primitives, oracle integration. Copy, adapt, and ship."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Patterns",
+      "subtitle": "Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship. From token mechanics to DeFi primitives."
+    },
+    "search": {
+      "placeholder": "Search patterns (e.g., 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Search patterns"
+    },
+    "filters": {
+      "ariaLabel": "Filter patterns",
+      "categoryAriaLabel": "Category filter",
+      "allCategories": "All Categories"
+    },
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "card": {
+      "viewPattern": "View pattern"
+    },
+    "empty": {
+      "heading": "No patterns found",
+      "body": "Try adjusting your filters or search terms."
+    },
+    "cta": {
+      "heading": "Ready to Build?",
+      "body": "Start with the patterns, dive into documentation, or join the developer community for support.",
+      "developerDocs": "Developer Docs",
+      "buildDeFiPlaybook": "Build DeFi Playbook",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Dev Patterns"
+    },
+    "hero": {
+      "viewCode": "View Code"
+    },
+    "sections": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "howItWorks": "How It Works",
+      "codeExamples": "Code Examples",
+      "useCases": "Use Cases",
+      "securityConsiderations": "Security Considerations",
+      "realWorldImplementations": "Real-World Implementations",
+      "resources": "Resources",
+      "feeConsiderations": "Fee Considerations",
+      "relatedPatterns": "Related Patterns"
+    },
+    "copyCode": "Copy code",
+    "whatsNext": {
+      "heading": "What's",
+      "headingAccent": "Next?",
+      "browseAllPatterns": "Browse All Patterns",
+      "browsePatternsSubtitle": "18 patterns available",
+      "explorePlaybooks": "Explore Playbooks",
+      "explorePlaybooksSubtitle": "Step-by-step guides",
+      "builderResources": "Builder Resources",
+      "builderResourcesSubtitle": "Full dev toolkit"
+    },
+    "emailCapture": {
+      "title": "Level Up Your ErgoScript Skills",
+      "description": "Get notified about new patterns, tutorials, and developer resources."
+    }
+  }
+}

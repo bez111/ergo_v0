@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import {
@@ -55,13 +56,15 @@ const difficultyColors: Record<PatternDifficulty, string> = {
   advanced: "bg-orange-500/20 text-orange-400 border-orange-500/30"
 };
 
-const difficultyLabels: Record<PatternDifficulty, string> = {
-  beginner: "Beginner",
-  intermediate: "Intermediate",
-  advanced: "Advanced"
-};
-
 export function PatternsHubClient({ patterns, categories }: Props) {
+  const t = useTranslations('patternsPage');
+
+  const difficultyLabels: Record<PatternDifficulty, string> = {
+    beginner: t('difficulty.beginner'),
+    intermediate: t('difficulty.intermediate'),
+    advanced: t('difficulty.advanced')
+  };
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<PatternCategory | "all">("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState<PatternDifficulty | "all">("all");
@@ -94,12 +97,11 @@ export function PatternsHubClient({ patterns, categories }: Props) {
           >
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                ErgoScript <span className="text-orange-400">Patterns</span>
+                {t('hero.titlePart1')} <span className="text-orange-400">{t('hero.titlePart2')}</span>
               </h1>
-              
+
               <p className="text-xl text-neutral-300 max-w-2xl mx-auto mb-8">
-                Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship.
-                From token mechanics to DeFi primitives.
+                {t('hero.subtitle')}
               </p>
 
               {/* Search */}
@@ -107,11 +109,11 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" />
                 <input
                   type="search"
-                  placeholder="Search patterns (e.g., 'swap', 'multisig', 'oracle')..."
+                  placeholder={t('search.placeholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-black/60 border border-white/10 rounded-2xl text-white placeholder:text-neutral-400 focus:outline-none focus:border-orange-500/50 transition-colors"
-                  aria-label="Search patterns"
+                  aria-label={t('search.ariaLabel')}
                 />
               </div>
             </div>
@@ -125,20 +127,20 @@ export function PatternsHubClient({ patterns, categories }: Props) {
             className="pb-8"
           >
             <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-4" role="group" aria-label="Filter patterns">
+              <div className="flex flex-wrap justify-center gap-4" role="group" aria-label={t('filters.ariaLabel')}>
                 {/* Category Filter */}
-                <div className="flex flex-wrap justify-center gap-2" role="radiogroup" aria-label="Category filter">
+                <div className="flex flex-wrap justify-center gap-2" role="radiogroup" aria-label={t('filters.categoryAriaLabel')}>
                   <Button
                     variant={selectedCategory === "all" ? "default" : "outline"}
                     onClick={() => setSelectedCategory("all")}
-                    className={`min-h-[44px] px-4 py-2 text-sm ${selectedCategory === "all" 
-                      ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
+                    className={`min-h-[44px] px-4 py-2 text-sm ${selectedCategory === "all"
+                      ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500"
                       : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50 active:bg-orange-500/20"
                     }`}
                     role="radio"
                     aria-checked={selectedCategory === "all"}
                   >
-                    All Categories
+                    {t('filters.allCategories')}
                   </Button>
                   {categories.map(cat => {
                     const Icon = categoryIcons[cat.id];
@@ -177,8 +179,8 @@ export function PatternsHubClient({ patterns, categories }: Props) {
               {filteredPatterns.length === 0 ? (
                 <div className="text-center py-16">
                   <Code className="w-16 h-16 text-neutral-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">No patterns found</h3>
-                  <p className="text-neutral-400">Try adjusting your filters or search terms.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('empty.heading')}</h3>
+                  <p className="text-neutral-400">{t('empty.body')}</p>
                 </div>
               ) : (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Developer patterns" aria-live="polite">
@@ -222,7 +224,7 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                                   {pattern.timeToImplement}
                                 </span>
                                 <span className="flex items-center gap-1 text-orange-400 group-hover:translate-x-1 transition-transform">
-                                  View pattern <ArrowRight className="w-3 h-3" />
+                                  {t('card.viewPattern')} <ArrowRight className="w-3 h-3" />
                                 </span>
                               </div>
                             </CardContent>
@@ -250,13 +252,13 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                  Ready to Build?
+                  {t('cta.heading')}
                 </h2>
-                
+
                 <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
-                  Start with the patterns, dive into documentation, or join the developer community for support.
+                  {t('cta.body')}
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
@@ -264,7 +266,7 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                   >
                     <Link href="/docs/developers">
                       <Terminal className="w-4 h-4 mr-2" />
-                      Developer Docs
+                      {t('cta.developerDocs')}
                     </Link>
                   </Button>
                   <Button
@@ -274,7 +276,7 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                   >
                     <Link href="/playbooks/build-defi-on-ergo">
                       <Zap className="w-4 h-4 mr-2" />
-                      Build DeFi Playbook
+                      {t('cta.buildDeFiPlaybook')}
                     </Link>
                   </Button>
                   <Button
@@ -284,7 +286,7 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                   >
                     <Link href="/build/agent-payments">
                       <Bot className="w-4 h-4 mr-2" />
-                      Agent Payments
+                      {t('cta.agentPayments')}
                     </Link>
                   </Button>
                 </div>

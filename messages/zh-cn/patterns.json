@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript 模式 — Ergo 智能合约模板 | ergo.org",
+      "description": "18 个经过实战验证的 ErgoScript 智能合约模式。代币机制、时间锁、多签、DeFi 原语、预言机集成。复制、调整、部署。"
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "模式库",
+      "subtitle": "经过实战验证的 Ergo 智能合约模式。复制、调整、部署。从代币机制到 DeFi 原语，一应俱全。"
+    },
+    "search": {
+      "placeholder": "搜索模式（例如：'swap'、'multisig'、'oracle'）...",
+      "ariaLabel": "搜索模式"
+    },
+    "filters": {
+      "ariaLabel": "筛选模式",
+      "categoryAriaLabel": "按类别筛选",
+      "allCategories": "全部类别"
+    },
+    "difficulty": {
+      "beginner": "入门",
+      "intermediate": "进阶",
+      "advanced": "高级"
+    },
+    "card": {
+      "viewPattern": "查看模式"
+    },
+    "empty": {
+      "heading": "未找到模式",
+      "body": "请尝试调整筛选条件或搜索词。"
+    },
+    "cta": {
+      "heading": "准备好开始构建了吗？",
+      "body": "从模式入手，深入阅读文档，或加入开发者社区获取支持。",
+      "developerDocs": "开发者文档",
+      "buildDeFiPlaybook": "构建 DeFi 实战手册",
+      "agentPayments": "Agent 支付"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "开发模式"
+    },
+    "hero": {
+      "viewCode": "查看代码"
+    },
+    "sections": {
+      "problem": "问题",
+      "solution": "解决方案",
+      "howItWorks": "工作原理",
+      "codeExamples": "代码示例",
+      "useCases": "使用场景",
+      "securityConsiderations": "安全注意事项",
+      "realWorldImplementations": "实际项目应用",
+      "resources": "参考资源",
+      "feeConsiderations": "手续费说明",
+      "relatedPatterns": "相关模式"
+    },
+    "copyCode": "复制代码",
+    "whatsNext": {
+      "heading": "下一步",
+      "headingAccent": "怎么做？",
+      "browseAllPatterns": "浏览全部模式",
+      "browsePatternsSubtitle": "共 18 个模式",
+      "explorePlaybooks": "探索实战手册",
+      "explorePlaybooksSubtitle": "分步操作指南",
+      "builderResources": "构建者资源",
+      "builderResourcesSubtitle": "完整开发工具集"
+    },
+    "emailCapture": {
+      "title": "提升你的 ErgoScript 技能",
+      "description": "获取新模式、教程和开发者资源的最新通知。"
+    }
+  }
+}

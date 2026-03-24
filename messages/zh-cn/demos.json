@@ -1,0 +1,164 @@
+{
+  "demosPage": {
+    "hero": {
+      "badge": "工作演示",
+      "title": "真实可运行的流程，",
+      "titleHighlight": "而非模型图。",
+      "description": "三个可组合的流程，均在 Ergo 测试网上运行。每个示例包含合约逻辑、Fleet SDK 代码以及完整的复现步骤。",
+      "ctaTestnet": "获取测试网 ERG",
+      "ctaArchitecture": "架构说明"
+    },
+    "demos": {
+      "stepByStep": "分步说明",
+      "whyMatters": "为什么重要",
+      "codeLabel": "Fleet SDK (TypeScript)",
+      "collapse": "收起",
+      "expand": "展开",
+      "testedOn": "已在 Ergo 测试网上测试。测试 ERG 获取地址："
+    },
+    "demoItems": {
+      "apiCall": {
+        "statusLabel": "测试网上线",
+        "title": "Agent 购买 API 调用",
+        "tagline": "一次调用。一个证明。无需持久账户。",
+        "description": "自主 Agent 创建一张票据，发送给 API 提供商。提供商在链上验证接受条件并返回响应。无需 API 密钥、账单账户或 Stripe。",
+        "flow": [
+          "Agent 创建一张票据（面值 0.001 ERG）",
+          "票据包含：提供商地址 + 任务哈希 + 截止时间",
+          "提供商检查条件 — 在 Ergo 测试网上验证",
+          "提供商返回 API 响应",
+          "票据销毁，ERG 释放给提供商"
+        ],
+        "why": "这是 Agent 商业的原子单元：一个任务，一次支付，一个证明。无需身份验证。",
+        "links": {
+          "chaincashRef": "ChainCash 参考实现",
+          "fleetDocs": "Fleet SDK 文档",
+          "architecture": "架构说明"
+        }
+      },
+      "credit": {
+        "statusLabel": "测试网上线",
+        "title": "Agent 信用支付",
+        "tagline": "储备已部署。票据已发行。追踪器持续监控。",
+        "description": "部署一个带抵押品的储备合约。票据按信用额度上限发行。Agent 随时间消费票据，追踪器监控总使用量。当达到阈值时，储备自动结算。",
+        "flow": [
+          "储备合约以 10 ERG 抵押 + 100 ERG 信用额度部署",
+          "基于储备发行票据（不超过额度）",
+          "Agent 将票据转给提供商作为支付",
+          "追踪器在链上更新累计余额",
+          "余额达到阈值时自动结算"
+        ],
+        "why": "信用是经济效率的基础。这里无需银行即可实现——仅凭合约和密码学证明。",
+        "links": {
+          "chaincashPaper": "ChainCash 论文",
+          "architecture": "架构说明",
+          "reserveContract": "储备合约"
+        }
+      },
+      "community": {
+        "statusLabel": "第3周上线",
+        "title": "社区储备 + 追踪器",
+        "tagline": "本地市场。算力合作社。Agent 网络。",
+        "description": "一组参与者将 ERG 汇入共享储备。社区票据按比例发行。接受条件定义成员规则。成员可随时从储备中赎回票据换取 ERG。",
+        "flow": [
+          "社区成员将 ERG 汇入多签储备",
+          "成员按贡献比例获得社区票据",
+          "票据按接受规则在社区内流通",
+          "任何成员可随时赎回票据换取 ERG",
+          "追踪器提供资金流的公开可审计性"
+        ],
+        "why": "这是最通用的形式：一个可编程的本地经济体。可以是市场、DAO 金库或 Agent 合作社。",
+        "links": {
+          "architecture": "架构说明",
+          "nativeTokens": "原生代币",
+          "ergoScript": "ErgoScript"
+        }
+      }
+    },
+    "openProblems": {
+      "badge": "开放问题",
+      "title": "尚未解决的挑战",
+      "description": "这些是 Agent 货币领域最有趣的开放性问题。如果其中某个问题引起了你的共鸣——我们希望听到你的想法。",
+      "openIssue": "提交 Issue",
+      "talkToUs": "与我们讨论你的使用场景",
+      "items": [
+        {
+          "title": "无持久账户的 Agent 身份",
+          "desc": "Agent 如何在会话间建立声誉，同时不暴露匿名性？"
+        },
+        {
+          "title": "非技术 Agent 的票据接受 UX",
+          "desc": "SDK 级别的抽象，使 LLM Agent 能以最小配置发行和接受票据。"
+        },
+        {
+          "title": "跨储备的追踪器联邦",
+          "desc": "跨储备记账与流动性——票据能否在不同社区储备之间流通？"
+        },
+        {
+          "title": "无中心化预言机的 Agent 声誉",
+          "desc": "基于链上历史的可验证声誉评分，无需可信第三方。"
+        },
+        {
+          "title": "本地社区钱包——一键部署",
+          "desc": "在 5 分钟内启动社区储备、发行代币并配置接受规则。"
+        }
+      ]
+    },
+    "quickLinks": {
+      "architecture": {
+        "title": "完整架构",
+        "desc": "储备 · 票据 · 追踪器 · 条件"
+      },
+      "chaincash": {
+        "title": "ChainCash",
+        "desc": "票据与储备的参考实现"
+      },
+      "agentEconomy": {
+        "title": "Agent 经济",
+        "desc": "为何 Ergo 是正确的基础层"
+      }
+    },
+    "playground": {
+      "badge": "测试网沙盒",
+      "title": "生成你的第一笔 Agent 支付",
+      "description": "粘贴你的 Ergo 测试网地址，我们将获取你的实时 UTxO 并生成一个预填了真实数据的 Fleet SDK 脚本，可直接运行。",
+      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5...（测试网地址）",
+      "generate": "生成",
+      "fetching": "获取中…",
+      "needTestnetErg": "需要测试网 ERG？",
+      "freeTestnetErg": "— 几秒钟即可获得免费测试网 ERG。",
+      "tabCode": "可直接运行的代码",
+      "tabUtxos": "你的 UTxO",
+      "copied": "已复制！",
+      "copy": "复制",
+      "runIt": "运行方式",
+      "runStep1": "npm install @fleet-sdk/core",
+      "runStep2": "node agent-payment.js",
+      "runStep3": "复制未签名的 TX JSON 输出",
+      "runStep4": "打开 Nautilus（测试网模式）→ 签名 → 提交",
+      "boxLabel": "Box",
+      "height": "高度",
+      "tokens": "代币",
+      "errorNotFound": "在测试网上未找到该地址。请确认这是一个有效的 Ergo 测试网地址。",
+      "errorNoUtxos": "未找到 UTxO。请前往 testnet.ergofaucet.org 获取免费测试网 ERG，仅需 30 秒。",
+      "errorNetwork": "无法连接测试网 API。请检查你的网络连接。"
+    },
+    "lookup": {
+      "badge": "主网实时查询",
+      "title": "地址余额查询",
+      "description": "实时从区块链查询任意 Ergo 地址余额。真实数据，真实网络。",
+      "placeholder": "9hHDQb26AjnJ...（粘贴任意 Ergo 地址）",
+      "lookup": "查询",
+      "lookingUp": "查询中…",
+      "confirmed": "已确认",
+      "noTokens": "该地址没有代币",
+      "dataFetchedFrom": "数据实时来自",
+      "errorNotFound": "地址未找到或无效。请确认这是一个有效的 Ergo 地址。",
+      "errorNetwork": "无法连接 Ergo API。请检查你的网络连接。"
+    },
+    "cta": {
+      "title": "你的使用场景不符合以上示例？",
+      "description": "告诉我们你在构建什么，我们将帮你找到合适的流程或设计一个新的方案。"
+    }
+  }
+}

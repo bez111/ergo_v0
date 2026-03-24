@@ -3,6 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import {
@@ -61,6 +62,7 @@ const languageLabels: Record<string, string> = {
 };
 
 export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: Props) {
+  const t = useTranslations('patternPage');
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [expandedCode, setExpandedCode] = useState<number[]>([0]);
 
@@ -90,7 +92,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
           >
             <Breadcrumbs
               items={[
-                { name: 'Dev Patterns', href: '/patterns' },
+                { name: t('breadcrumbs.devPatterns'), href: '/patterns' },
                 { name: pattern.title, href: `/patterns/${pattern.slug}` }
               ]}
             />
@@ -138,7 +140,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                   className="bg-orange-500 hover:bg-orange-600 text-black font-semibold"
                 >
                   <Code className="w-4 h-4 mr-2" />
-                  View Code
+                  {t('hero.viewCode')}
                 </Button>
                 {pattern.resources.find((r) => r.type === "github") && (
                   <Button
@@ -179,18 +181,18 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                           <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center">
                             <AlertTriangle className="w-4 h-4 text-red-400" />
                           </div>
-                          <h2 className="text-lg font-semibold text-white">Problem</h2>
+                          <h2 className="text-lg font-semibold text-white">{t('sections.problem')}</h2>
                         </div>
                         <p className="text-neutral-300">{pattern.problem}</p>
                       </div>
-                      
+
                       {/* Solution */}
                       <div className="p-6">
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
                             <Zap className="w-4 h-4 text-green-400" />
                           </div>
-                          <h2 className="text-lg font-semibold text-white">Solution</h2>
+                          <h2 className="text-lg font-semibold text-white">{t('sections.solution')}</h2>
                         </div>
                         <p className="text-neutral-300">{pattern.solution}</p>
                       </div>
@@ -207,7 +209,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
               >
                 <Card className="bg-black border border-white/10 rounded-2xl">
                   <CardContent className="p-6">
-                    <h2 className="text-xl font-semibold text-white mb-4">How It Works</h2>
+                    <h2 className="text-xl font-semibold text-white mb-4">{t('sections.howItWorks')}</h2>
                     <ol className="space-y-3">
                       {pattern.howItWorks.map((step, index) => (
                         <li key={index} className="flex gap-3">
@@ -229,7 +231,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <h2 className="text-xl font-semibold text-white mb-4">Code Examples</h2>
+                <h2 className="text-xl font-semibold text-white mb-4">{t('sections.codeExamples')}</h2>
                 <div className="space-y-4">
                   {pattern.codeExamples.map((example, index) => (
                     <Card key={index} className="bg-black border border-white/10 rounded-2xl overflow-hidden">
@@ -261,7 +263,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                               <button
                                 onClick={() => copyCode(example.code, index)}
                                 className="absolute top-3 right-3 p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
-                                aria-label="Copy code"
+                                aria-label={t('copyCode')}
                               >
                                 {copiedIndex === index ? (
                                   <Check className="w-4 h-4 text-green-400" />
@@ -291,7 +293,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
               >
                 <Card className="bg-black border border-white/10 rounded-2xl">
                   <CardContent className="p-6">
-                    <h2 className="text-xl font-semibold text-white mb-4">Use Cases</h2>
+                    <h2 className="text-xl font-semibold text-white mb-4">{t('sections.useCases')}</h2>
                     <ul className="grid md:grid-cols-2 gap-3">
                       {pattern.useCases.map((useCase, index) => (
                         <li key={index} className="flex items-start gap-2">
@@ -315,7 +317,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                     <CardContent className="p-6">
                       <div className="flex items-center gap-2 mb-4">
                         <Shield className="w-5 h-5 text-yellow-400" />
-                        <h2 className="text-xl font-semibold text-white">Security Considerations</h2>
+                        <h2 className="text-xl font-semibold text-white">{t('sections.securityConsiderations')}</h2>
                       </div>
                       <ul className="space-y-2">
                         {pattern.securityNotes.map((note, index) => (
@@ -339,7 +341,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                 >
                   <Card className="bg-black border border-white/10 rounded-2xl">
                     <CardContent className="p-6">
-                      <h2 className="text-xl font-semibold text-white mb-4">Real-World Implementations</h2>
+                      <h2 className="text-xl font-semibold text-white mb-4">{t('sections.realWorldImplementations')}</h2>
                       <div className="space-y-4">
                         {pattern.implementations.map((impl, index) => (
                           <div key={index} className="flex items-start justify-between gap-4 p-4 bg-white/5 rounded-xl">
@@ -377,7 +379,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
               >
                 <Card className="bg-black border border-white/10 rounded-2xl sticky top-24">
                   <CardContent className="p-6">
-                    <h2 className="text-lg font-semibold text-white mb-4">Resources</h2>
+                    <h2 className="text-lg font-semibold text-white mb-4">{t('sections.resources')}</h2>
                     <div className="space-y-2">
                       {pattern.resources.map((resource, index) => {
                         const Icon = resourceIcons[resource.type] || FileText;
@@ -402,7 +404,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                       <div className="mt-6 pt-6 border-t border-white/10">
                         <div className="flex items-center gap-2 mb-2">
                           <Coins className="w-4 h-4 text-neutral-400" />
-                          <span className="text-sm font-medium text-white">Fee Considerations</span>
+                          <span className="text-sm font-medium text-white">{t('sections.feeConsiderations')}</span>
                         </div>
                         <p className="text-sm text-neutral-400">{pattern.feeConsiderations}</p>
                       </div>
@@ -420,7 +422,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                 >
                   <Card className="bg-black border border-white/10 rounded-2xl">
                     <CardContent className="p-6">
-                      <h2 className="text-lg font-semibold text-white mb-4">Related Patterns</h2>
+                      <h2 className="text-lg font-semibold text-white mb-4">{t('sections.relatedPatterns')}</h2>
                       <div className="space-y-2">
                         {relatedPatterns.map((related) => (
                           <Link
@@ -450,7 +452,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
             <Card className="bg-black border border-white/10 rounded-2xl">
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold text-white mb-6 text-center">
-                  What's <span className="text-orange-400">Next?</span>
+                  {t('whatsNext.heading')} <span className="text-orange-400">{t('whatsNext.headingAccent')}</span>
                 </h2>
                 <div className="grid md:grid-cols-3 gap-4">
                   <Link
@@ -461,8 +463,8 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                       <Code className="w-5 h-5 text-orange-400" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-white font-medium group-hover:text-orange-400 transition-colors">Browse All Patterns</span>
-                      <p className="text-xs text-neutral-400">18 patterns available</p>
+                      <span className="text-white font-medium group-hover:text-orange-400 transition-colors">{t('whatsNext.browseAllPatterns')}</span>
+                      <p className="text-xs text-neutral-400">{t('whatsNext.browsePatternsSubtitle')}</p>
                     </div>
                     <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
                   </Link>
@@ -474,8 +476,8 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                       <BookOpen className="w-5 h-5 text-orange-400" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-white font-medium group-hover:text-orange-400 transition-colors">Explore Playbooks</span>
-                      <p className="text-xs text-neutral-400">Step-by-step guides</p>
+                      <span className="text-white font-medium group-hover:text-orange-400 transition-colors">{t('whatsNext.explorePlaybooks')}</span>
+                      <p className="text-xs text-neutral-400">{t('whatsNext.explorePlaybooksSubtitle')}</p>
                     </div>
                     <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
                   </Link>
@@ -487,8 +489,8 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                       <Zap className="w-5 h-5 text-orange-400" />
                     </div>
                     <div className="flex-1">
-                      <span className="text-white font-medium group-hover:text-orange-400 transition-colors">Builder Resources</span>
-                      <p className="text-xs text-neutral-400">Full dev toolkit</p>
+                      <span className="text-white font-medium group-hover:text-orange-400 transition-colors">{t('whatsNext.builderResources')}</span>
+                      <p className="text-xs text-neutral-400">{t('whatsNext.builderResourcesSubtitle')}</p>
                     </div>
                     <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
                   </Link>
@@ -499,8 +501,8 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
 
           {/* Email Capture */}
           <FinalCTASimple
-            title="Level Up Your ErgoScript Skills"
-            description="Get notified about new patterns, tutorials, and developer resources."
+            title={t('emailCapture.title')}
+            description={t('emailCapture.description')}
           />
 
         </div>
