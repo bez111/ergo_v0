@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 import {
   Bot,
   CreditCard,
@@ -25,144 +26,12 @@ import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const BRAND = "#ff8800"
 
-// ── Why Stripe fails agents ─────────────────────────────────────────────────
-const STRIPE_PROBLEMS = [
-  {
-    icon: AlertTriangle,
-    title: "No persistent identity",
-    body: "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes.",
-  },
-  {
-    icon: AlertTriangle,
-    title: "One-time payments only",
-    body: "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor.",
-  },
-  {
-    icon: AlertTriangle,
-    title: "No programmable acceptance",
-    body: "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design.",
-  },
-  {
-    icon: AlertTriangle,
-    title: "Millisecond economics break",
-    body: "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale.",
-  },
-]
+// Icons are React components — kept in TSX, not in JSON
+const STRIPE_PROBLEM_ICONS = [AlertTriangle, AlertTriangle, AlertTriangle, AlertTriangle]
 
-// ── Why Ergo ────────────────────────────────────────────────────────────────
-const WHY_ERGO = [
-  {
-    icon: Shield,
-    title: "eUTXO: verifiable atomicity",
-    body: "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
-    href: "/technology/eutxo-model",
-  },
-  {
-    icon: Code2,
-    title: "ErgoScript: programmable trust",
-    body: "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
-    href: "/technology/ergoscript",
-  },
-  {
-    icon: Coins,
-    title: "Babel Fees: agents don't need ERG",
-    body: "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
-    href: "/technology/babel-fees",
-  },
-  {
-    icon: Lock,
-    title: "Sigma Protocols: private credit",
-    body: "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
-    href: "/technology/privacy-features",
-  },
-  {
-    icon: Zap,
-    title: "Proof-of-Work: no chain halts",
-    body: "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
-    href: "/technology",
-  },
-  {
-    icon: Network,
-    title: "Native tokens: community money",
-    body: "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
-    href: "/technology/native-tokens",
-  },
-]
+const WHY_ERGO_ICONS = [Shield, Code2, Coins, Lock, Zap, Network]
 
-// ── The Stack ───────────────────────────────────────────────────────────────
-const STACK_LAYERS = [
-  {
-    label: "Settlement",
-    sublabel: "Ergo base layer",
-    status: "live",
-    color: "orange",
-    description: "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees",
-  },
-  {
-    label: "Reserves",
-    sublabel: "reserve contracts",
-    status: "live",
-    color: "orange",
-    description: "On-chain capital backing — holds ERG or tokens as collateral for issued notes",
-  },
-  {
-    label: "Trackers",
-    sublabel: "on-chain trackers",
-    status: "live",
-    color: "orange",
-    description: "Verifiable accounting — track balances, credit limits, redemption history",
-  },
-  {
-    label: "Notes",
-    sublabel: "ChainCash / custom contracts",
-    status: "live",
-    color: "orange",
-    description: "Programmable IOUs — issue, transfer, and redeem off-chain money",
-  },
-  {
-    label: "Trust Rules",
-    sublabel: "ErgoScript predicates",
-    status: "live",
-    color: "orange",
-    description: "Acceptance logic — 'accept this note if and only if...' — fully on-chain",
-  },
-  {
-    label: "Reputation",
-    sublabel: "open problem",
-    status: "open",
-    color: "neutral",
-    description: "Agent reputation without a central oracle — active research area",
-  },
-  {
-    label: "Identity",
-    sublabel: "open problem",
-    status: "open",
-    color: "neutral",
-    description: "Persistent agent identity across sessions without deanonymisation",
-  },
-]
-
-// ── Use cases ────────────────────────────────────────────────────────────────
-const USE_CASES = [
-  {
-    icon: Bot,
-    title: "LLM buys inference",
-    flow: "Agent → issues note → API provider accepts predicate → delivers tokens",
-    detail: "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline.",
-  },
-  {
-    icon: CreditCard,
-    title: "Agent pays on credit",
-    flow: "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
-    detail: "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank.",
-  },
-  {
-    icon: GitBranch,
-    title: "Community currency",
-    flow: "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
-    detail: "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules.",
-  },
-]
+const USE_CASE_ICONS = [Bot, CreditCard, GitBranch]
 
 // ── Fade-in animation ────────────────────────────────────────────────────────
 const fadeUp = {
@@ -175,6 +44,18 @@ const fadeUp = {
 }
 
 export function AgentEconomyClient() {
+  const t = useTranslations("agentEconomy")
+
+  const stripeProblemItems = t.raw("stripeProblemItems") as Array<{ title: string; body: string }>
+  const whyErgoItems = t.raw("whyErgoItems") as Array<{ title: string; body: string; href: string }>
+  const stackLayerItems = t.raw("stackLayerItems") as Array<{
+    label: string
+    sublabel: string
+    status: string
+    description: string
+  }>
+  const useCaseItems = t.raw("useCaseItems") as Array<{ title: string; flow: string; detail: string }>
+
   return (
     <BackgroundWrapper>
       <main className="min-h-screen bg-black text-white">
@@ -185,7 +66,7 @@ export function AgentEconomyClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <Breadcrumbs
-              items={[{ name: "Agent Economy", href: "/agent-economy" }]}
+              items={[{ name: t("breadcrumb"), href: "/agent-economy" }]}
               className="mb-10 opacity-70"
             />
 
@@ -194,7 +75,7 @@ export function AgentEconomyClient() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-8">
                 <Bot className="w-3.5 h-3.5 text-orange-400" />
                 <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                  Agent Economy
+                  {t("hero.tag")}
                 </span>
               </div>
 
@@ -206,9 +87,9 @@ export function AgentEconomyClient() {
                   lineHeight: 1.0,
                 }}
               >
-                The base layer for{" "}
-                <span style={{ color: BRAND }}>autonomous</span>
-                <br />economic agents.
+                {t("hero.titleStart")}{" "}
+                <span style={{ color: BRAND }}>{t("hero.titleHighlight")}</span>
+                <br />{t("hero.titleEnd")}
               </h1>
 
               <p
@@ -219,11 +100,23 @@ export function AgentEconomyClient() {
                   maxWidth: "60ch",
                 }}
               >
-                Autonomous agents need more than payments. They need{" "}
-                <span className="text-white font-semibold">credit</span>,{" "}
-                <span className="text-white font-semibold">programmable acceptance rules</span>, and{" "}
-                <span className="text-white font-semibold">verifiable settlement</span> — all without
-                a central counterparty. Ergo is the only settlement layer built for this.
+                {t("hero.description", {
+                  credit: (
+                    <span key="credit" className="text-white font-semibold">
+                      {t("hero.descriptionCredit")}
+                    </span>
+                  ),
+                  programmableRules: (
+                    <span key="rules" className="text-white font-semibold">
+                      {t("hero.descriptionRules")}
+                    </span>
+                  ),
+                  verifiableSettlement: (
+                    <span key="settlement" className="text-white font-semibold">
+                      {t("hero.descriptionSettlement")}
+                    </span>
+                  ),
+                })}
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -232,7 +125,7 @@ export function AgentEconomyClient() {
                     href="/build/agent-payments"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
                   >
-                    <span>See the architecture</span>
+                    <span>{t("hero.ctaArchitecture")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -241,7 +134,7 @@ export function AgentEconomyClient() {
                     href="/demos"
                     className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
-                    <span>View demos</span>
+                    <span>{t("hero.ctaDemos")}</span>
                     <ChevronRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -255,7 +148,7 @@ export function AgentEconomyClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14">
               <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                The Problem
+                {t("problem.sectionLabel")}
               </p>
               <h2
                 className="font-extrabold tracking-tight text-white"
@@ -265,32 +158,35 @@ export function AgentEconomyClient() {
                   lineHeight: 1.1,
                 }}
               >
-                Why existing payment rails{" "}
-                <span className="text-neutral-400">can&apos;t serve agents</span>
+                {t("problem.heading")}{" "}
+                <span className="text-neutral-400">{t("problem.headingMuted")}</span>
               </h2>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {STRIPE_PROBLEMS.map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                >
-                  <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/30 transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="w-9 h-9 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-4">
-                        <item.icon className="w-4 h-4 text-red-400" />
-                      </div>
-                      <h3 className="font-bold text-white mb-2 text-base">{item.title}</h3>
-                      <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+              {stripeProblemItems.map((item, i) => {
+                const Icon = STRIPE_PROBLEM_ICONS[i]
+                return (
+                  <motion.div
+                    key={item.title}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                  >
+                    <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/30 transition-all duration-300">
+                      <CardContent className="p-6">
+                        <div className="w-9 h-9 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center mb-4">
+                          <Icon className="w-4 h-4 text-red-400" />
+                        </div>
+                        <h3 className="font-bold text-white mb-2 text-base">{item.title}</h3>
+                        <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -300,7 +196,7 @@ export function AgentEconomyClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14">
               <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                The Solution
+                {t("solution.sectionLabel")}
               </p>
               <h2
                 className="font-extrabold tracking-tight text-white"
@@ -310,45 +206,48 @@ export function AgentEconomyClient() {
                   lineHeight: 1.1,
                 }}
               >
-                Why Ergo is the right{" "}
-                <span style={{ color: BRAND }}>base layer</span>
+                {t("solution.heading")}{" "}
+                <span style={{ color: BRAND }}>{t("solution.headingHighlight")}</span>
               </h2>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {WHY_ERGO.map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                >
-                  <Link
-                    href={item.href}
-                    className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-3xl"
+              {whyErgoItems.map((item, i) => {
+                const Icon = WHY_ERGO_ICONS[i]
+                return (
+                  <motion.div
+                    key={item.title}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
                   >
-                    <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
-                      <CardContent className="p-6">
-                        <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
-                          <item.icon className="w-5 h-5 text-orange-400" />
-                        </div>
-                        <h3 className="font-bold text-white mb-2 text-base group-hover:text-orange-100 transition-colors">
-                          {item.title}
-                        </h3>
-                        <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-neutral-300 transition-colors">
-                          {item.body}
-                        </p>
-                        <div className="mt-4 flex items-center gap-1 text-orange-500/60 group-hover:text-orange-400 transition-colors text-xs font-mono">
-                          <span>Learn more</span>
-                          <ChevronRight className="w-3 h-3" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={item.href}
+                      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-3xl"
+                    >
+                      <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+                        <CardContent className="p-6">
+                          <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
+                            <Icon className="w-5 h-5 text-orange-400" />
+                          </div>
+                          <h3 className="font-bold text-white mb-2 text-base group-hover:text-orange-100 transition-colors">
+                            {item.title}
+                          </h3>
+                          <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-neutral-300 transition-colors">
+                            {item.body}
+                          </p>
+                          <div className="mt-4 flex items-center gap-1 text-orange-500/60 group-hover:text-orange-400 transition-colors text-xs font-mono">
+                            <span>{t("solution.learnMore")}</span>
+                            <ChevronRight className="w-3 h-3" />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -361,7 +260,7 @@ export function AgentEconomyClient() {
               {/* Left: copy */}
               <div>
                 <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                  The Stack
+                  {t("stack.sectionLabel")}
                 </p>
                 <h2
                   className="font-extrabold tracking-tight text-white mb-6"
@@ -371,21 +270,20 @@ export function AgentEconomyClient() {
                     lineHeight: 1.1,
                   }}
                 >
-                  The agent economy stack
+                  {t("stack.heading")}
                 </h2>
                 <p className="text-neutral-400 leading-relaxed mb-8" style={{ maxWidth: "52ch" }}>
-                  Five layers are live on Ergo today. Two remain open research problems — the most
-                  interesting ones for builders to tackle.
+                  {t("stack.description")}
                 </p>
 
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm">
                     <span className="w-2.5 h-2.5 rounded-full bg-orange-500 flex-shrink-0" />
-                    <span className="text-neutral-300">Live on Ergo mainnet</span>
+                    <span className="text-neutral-300">{t("stack.legendLive")}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <span className="w-2.5 h-2.5 rounded-full bg-neutral-600 flex-shrink-0" />
-                    <span className="text-neutral-300">Open research problem</span>
+                    <span className="text-neutral-300">{t("stack.legendOpen")}</span>
                   </div>
                 </div>
 
@@ -394,7 +292,7 @@ export function AgentEconomyClient() {
                     href="/build/agent-payments"
                     className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-mono text-sm transition-colors group"
                   >
-                    <span>Technical architecture →</span>
+                    <span>{t("stack.linkArchitecture")}</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                   <a
@@ -403,7 +301,7 @@ export function AgentEconomyClient() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-neutral-400 hover:text-neutral-300 font-mono text-sm transition-colors"
                   >
-                    <span>GitHub repos</span>
+                    <span>{t("stack.linkGithub")}</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -411,7 +309,7 @@ export function AgentEconomyClient() {
 
               {/* Right: stack diagram */}
               <div className="space-y-2">
-                {STACK_LAYERS.map((layer, i) => (
+                {stackLayerItems.map((layer, i) => (
                   <motion.div
                     key={layer.label}
                     custom={i}
@@ -450,7 +348,7 @@ export function AgentEconomyClient() {
                         <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
                       ) : (
                         <span className="text-xs font-mono text-neutral-500 flex-shrink-0 mt-0.5 border border-neutral-700 rounded-full px-2 py-0.5">
-                          open
+                          {t("stack.badgeOpen")}
                         </span>
                       )}
                     </div>
@@ -466,7 +364,7 @@ export function AgentEconomyClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14 text-center">
               <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                What you can build
+                {t("useCases.sectionLabel")}
               </p>
               <h2
                 className="font-extrabold tracking-tight text-white"
@@ -476,34 +374,37 @@ export function AgentEconomyClient() {
                   lineHeight: 1.1,
                 }}
               >
-                Three flows. All live on testnet.
+                {t("useCases.heading")}
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {USE_CASES.map((uc, i) => (
-                <motion.div
-                  key={uc.title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                >
-                  <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">
-                    <CardContent className="p-7">
-                      <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-5">
-                        <uc.icon className="w-5 h-5 text-orange-400" />
-                      </div>
-                      <h3 className="font-bold text-white text-lg mb-3">{uc.title}</h3>
-                      <p className="text-orange-400/80 font-mono text-xs mb-4 leading-relaxed border-l-2 border-orange-500/30 pl-3">
-                        {uc.flow}
-                      </p>
-                      <p className="text-neutral-400 text-sm leading-relaxed">{uc.detail}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
+              {useCaseItems.map((uc, i) => {
+                const Icon = USE_CASE_ICONS[i]
+                return (
+                  <motion.div
+                    key={uc.title}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                  >
+                    <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">
+                      <CardContent className="p-7">
+                        <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-5">
+                          <Icon className="w-5 h-5 text-orange-400" />
+                        </div>
+                        <h3 className="font-bold text-white text-lg mb-3">{uc.title}</h3>
+                        <p className="text-orange-400/80 font-mono text-xs mb-4 leading-relaxed border-l-2 border-orange-500/30 pl-3">
+                          {uc.flow}
+                        </p>
+                        <p className="text-neutral-400 text-sm leading-relaxed">{uc.detail}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                )
+              })}
             </div>
 
             <div className="mt-10 text-center">
@@ -511,7 +412,7 @@ export function AgentEconomyClient() {
                 href="/demos"
                 className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-mono text-sm transition-colors group"
               >
-                <span>See all demos with code</span>
+                <span>{t("useCases.linkDemos")}</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
@@ -533,7 +434,7 @@ export function AgentEconomyClient() {
                     <div>
                       <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-6">
                         <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                          BetterMoneyLabs
+                          {t("bml.tag")}
                         </span>
                       </div>
                       <h2
@@ -544,12 +445,10 @@ export function AgentEconomyClient() {
                           lineHeight: 1.15,
                         }}
                       >
-                        We&apos;re building the reference stack.
+                        {t("bml.heading")}
                       </h2>
                       <p className="text-neutral-300 leading-relaxed" style={{ maxWidth: "52ch" }}>
-                        Notes, credit, trackers, reserves, acceptance predicates — and the showcase
-                        for agent-to-agent payments. If you&apos;re building in this space, we want
-                        to talk to you.
+                        {t("bml.description")}
                       </p>
                     </div>
                     <div className="flex flex-col gap-3 md:items-end">
@@ -558,7 +457,7 @@ export function AgentEconomyClient() {
                           href="/build/agent-payments"
                           className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm whitespace-nowrap"
                         >
-                          <span>Technical architecture</span>
+                          <span>{t("bml.ctaArchitecture")}</span>
                           <ArrowRight className="w-4 h-4" />
                         </Link>
                       </motion.div>
@@ -567,7 +466,7 @@ export function AgentEconomyClient() {
                           href="#builder-form"
                           className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/40 hover:border-orange-500 transition-all text-sm whitespace-nowrap"
                         >
-                          <span>Talk to us</span>
+                          <span>{t("bml.ctaTalk")}</span>
                           <ChevronRight className="w-4 h-4" />
                         </Link>
                       </motion.div>
@@ -582,8 +481,8 @@ export function AgentEconomyClient() {
         {/* ── Builder form ────────────────────────────────────────────────── */}
         <div id="builder-form">
           <FinalCTASimple
-            title="Building agents? Talk to us."
-            description="Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+            title={t("finalCta.title")}
+            description={t("finalCta.description")}
           />
         </div>
 

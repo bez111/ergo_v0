@@ -1,0 +1,165 @@
+{
+  "agentEconomy": {
+    "breadcrumb": "智能体经济",
+    "hero": {
+      "tag": "智能体经济",
+      "titleStart": "面向",
+      "titleHighlight": "自主",
+      "titleEnd": "经济智能体的基础层。",
+      "description": "自主智能体需要的不仅仅是支付功能。它们需要{credit}、{programmableRules}和{verifiableSettlement}——且无需中心化对手方。Ergo 是唯一专为此而构建的结算层。",
+      "descriptionCredit": "信用",
+      "descriptionRules": "可编程接受规则",
+      "descriptionSettlement": "可验证的结算",
+      "ctaArchitecture": "查看架构",
+      "ctaDemos": "浏览演示"
+    },
+    "problem": {
+      "sectionLabel": "问题所在",
+      "heading": "为何现有支付轨道",
+      "headingMuted": "无法服务智能体"
+    },
+    "stripeProblemItems": [
+      {
+        "title": "无持久身份",
+        "body": "智能体随时启动消失。Stripe 要求 KYC、账单账户和静态商户 ID——这些对于短暂存在的自主进程而言根本无法适用。"
+      },
+      {
+        "title": "仅支持一次性支付",
+        "body": "智能体需要信用机制：先发行，后兑换。Stripe 没有可编程的 IOU 层。每次微调用都需要往返支付处理器。"
+      },
+      {
+        "title": "无可编程接受条件",
+        "body": "你无法告诉 Stripe\"仅当智能体完成任务 X 并持有凭证 Y 时才接受付款\"。逻辑存在于支付层之外——天生脆弱。"
+      },
+      {
+        "title": "毫秒级经济模型失效",
+        "body": "通过 Stripe 发起一笔 $0.001 的 API 调用，手续费本身就超过了调用价值。这套基础设施根本不是为任何规模的机器间微支付而建的。"
+      }
+    ],
+    "solution": {
+      "sectionLabel": "解决方案",
+      "heading": "为何 Ergo 是正确的",
+      "headingHighlight": "基础层",
+      "learnMore": "了解更多"
+    },
+    "whyErgoItems": [
+      {
+        "title": "eUTXO：可验证的原子性",
+        "body": "每笔交易都是确定性的。智能体在提交前即可知晓确切结果。无重入漏洞，无隐藏全局状态，无 MEV 意外。",
+        "href": "/technology/eutxo-model"
+      },
+      {
+        "title": "ErgoScript：可编程信任",
+        "body": "接受谓词是一等原语。\"仅当任务哈希匹配且截止时间未过时接受此票据\"——一个脚本，链上部署，无需信任。",
+        "href": "/technology/ergoscript"
+      },
+      {
+        "title": "Babel Fees：智能体无需持有 ERG",
+        "body": "智能体可用任意代币支付交易手续费。无需为每个新智能体实例预先充值 ERG 钱包——对于短暂计算任务至关重要。",
+        "href": "/technology/babel-fees"
+      },
+      {
+        "title": "Sigma Protocols：私密信用",
+        "body": "零知识证明是原生支持的。智能体可以证明其持有凭证或完成了任务，而无需透露自身身份。",
+        "href": "/technology/privacy-features"
+      },
+      {
+        "title": "PoW：链路不会中断",
+        "body": "PoW 没有治理紧急停止机制。基于 Ergo 构建的智能体基础设施不会被验证者卡特尔或基金会决策冻结。",
+        "href": "/technology"
+      },
+      {
+        "title": "原生代币：社区货币",
+        "body": "一笔交易即可发行社区货币。票据、追踪器和储备代币均为协议层原生支持——无需自定义 ERC-20 风格的合约。",
+        "href": "/technology/native-tokens"
+      }
+    ],
+    "stack": {
+      "sectionLabel": "技术栈",
+      "heading": "智能体经济技术栈",
+      "description": "今天 Ergo 上已有五层处于上线状态。另有两层仍是开放研究问题——也是最值得开发者探索的方向。",
+      "legendLive": "已在 Ergo 主网上线",
+      "legendOpen": "开放研究问题",
+      "linkArchitecture": "技术架构 →",
+      "linkGithub": "GitHub 仓库",
+      "badgeOpen": "开放"
+    },
+    "stackLayerItems": [
+      {
+        "label": "结算层",
+        "sublabel": "Ergo 基础层",
+        "status": "live",
+        "description": "PoW 最终性，eUTXO 原子性，手续费约 $0.01"
+      },
+      {
+        "label": "储备层",
+        "sublabel": "储备合约",
+        "status": "live",
+        "description": "链上资本支撑——持有 ERG 或代币作为已发行票据的抵押品"
+      },
+      {
+        "label": "追踪层",
+        "sublabel": "链上追踪器",
+        "status": "live",
+        "description": "可验证的账务——追踪余额、信用额度、兑换历史"
+      },
+      {
+        "label": "票据层",
+        "sublabel": "ChainCash / 自定义合约",
+        "status": "live",
+        "description": "可编程 IOU——发行、转让和兑换链下货币"
+      },
+      {
+        "label": "信任规则层",
+        "sublabel": "ErgoScript 谓词",
+        "status": "live",
+        "description": "接受逻辑——\"当且仅当……时接受此票据\"——完全链上执行"
+      },
+      {
+        "label": "声誉层",
+        "sublabel": "开放问题",
+        "status": "open",
+        "description": "无中心化预言机的智能体声誉机制——活跃研究方向"
+      },
+      {
+        "label": "身份层",
+        "sublabel": "开放问题",
+        "status": "open",
+        "description": "跨会话的智能体持久身份，同时避免去匿名化"
+      }
+    ],
+    "useCases": {
+      "sectionLabel": "可以构建什么",
+      "heading": "三种流程。全部在测试网上线。",
+      "linkDemos": "查看所有含代码的演示"
+    },
+    "useCaseItems": [
+      {
+        "title": "LLM 购买推理服务",
+        "flow": "智能体 → 发行票据 → API 提供方接受谓词 → 交付代币",
+        "detail": "一次调用，一个证明，无需持久账户。提供方自行设定接受规则——最小任务哈希、最大信用额度、截止时间。"
+      },
+      {
+        "title": "智能体信用支付",
+        "flow": "储备部署 → 发行票据 → 追踪器监控使用情况 → 自动结算",
+        "detail": "信用额度链上强制执行。无对手方风险——储备合约即是银行。"
+      },
+      {
+        "title": "社区货币",
+        "flow": "储备持有 ERG → 社区发行本地票据 → 接受谓词定义规则",
+        "detail": "本地市场、算力合作社或智能体网络——每个都拥有自己的货币和信任规则。"
+      }
+    ],
+    "bml": {
+      "tag": "BetterMoneyLabs",
+      "heading": "我们正在构建参考技术栈。",
+      "description": "票据、信用、追踪器、储备、接受谓词——以及智能体间支付的示范平台。如果你正在这一领域构建，我们期待与你交流。",
+      "ctaArchitecture": "技术架构",
+      "ctaTalk": "联系我们"
+    },
+    "finalCta": {
+      "title": "正在构建智能体？联系我们。",
+      "description": "告诉我们你在构建什么。我们将在 24 小时内回复并给出具体的下一步——演示、设计会议或代码审查。"
+    }
+  }
+}
