@@ -461,221 +461,221 @@
       ]
     },
     "getErg": {
-      "title": "Acquire ERG",
-      "subtitle": "Your guide to obtaining ERG, the native currency of the Ergo ecosystem. Choose the method that best suits you.",
-      "description": "Buy with fiat, trade on CEX, or swap on DEX — pick the way that's right for you.",
+      "title": "Adquirir ERG",
+      "subtitle": "Seu guia para obter ERG, a moeda nativa do ecossistema Ergo. Escolha o método que melhor se adapta a você.",
+      "description": "Compre com fiat, negocie em CEX ou troque em DEX — escolha o caminho certo para você.",
       "seo": {
-        "title": "How to Get ERG | Buy Ergo on Exchanges & DEXs",
-        "description": "Complete guide to buying ERG tokens. Compare 20+ exchanges, find the best rates, and start trading Ergo. Includes CEX and DEX options with step-by-step instructions.",
-        "keywords": "buy erg, get ergo, erg exchanges, where to buy ergo, erg trading, ergo cryptocurrency, erg token, buy ergo coin",
-        "ogTitle": "Buy ERG - Complete Exchange Guide",
-        "ogDescription": "Find the best exchanges to buy ERG. Compare rates, fees, and get started with Ergo.",
-        "ogAlt": "Buy ERG Guide",
-        "twitterTitle": "Where to Buy ERG | Exchange Guide",
-        "twitterDescription": "Compare 20+ exchanges to buy ERG. Find the best rates and start trading."
+        "title": "Como Obter ERG | Comprar Ergo em Exchanges e DEXs",
+        "description": "Guia completo para comprar tokens ERG. Compare mais de 20 exchanges, encontre as melhores taxas e comece a negociar Ergo. Inclui opções de CEX e DEX com instruções passo a passo.",
+        "keywords": "comprar erg, obter ergo, exchanges de erg, onde comprar ergo, negociação de erg, criptomoeda ergo, token erg, comprar ergo coin",
+        "ogTitle": "Comprar ERG - Guia Completo de Exchanges",
+        "ogDescription": "Encontre as melhores exchanges para comprar ERG. Compare taxas e tarifas e comece com a Ergo.",
+        "ogAlt": "Guia para Comprar ERG",
+        "twitterTitle": "Onde Comprar ERG | Guia de Exchanges",
+        "twitterDescription": "Compare mais de 20 exchanges para comprar ERG. Encontre as melhores taxas e comece a negociar."
       },
       "hero": {
-        "title": "Get",
+        "title": "Obter",
         "titleHighlight": "ERG",
-        "subtitle": "Buy ERG through multiple secure channels",
-        "description": "From fiat on-ramps to decentralized exchanges - choose the method that works best for you. All options provide direct access to ERG tokens for your wallet."
+        "subtitle": "Compre ERG por múltiplos canais seguros",
+        "description": "De rampas de entrada fiat a exchanges descentralizadas - escolha o método que funciona melhor para você. Todas as opções fornecem acesso direto a tokens ERG para sua carteira."
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Início Rápido",
         "buyWithFiat": {
-          "title": "Buy with Fiat",
-          "description": "Credit card & bank transfer via Banxa"
+          "title": "Comprar com Fiat",
+          "description": "Cartão de crédito e transferência bancária via Banxa"
         },
         "tradeOnGate": {
-          "title": "Trade on Gate.io",
-          "description": "Popular CEX with ERG/USDT pair"
+          "title": "Negociar na Gate.io",
+          "description": "CEX popular com par ERG/USDT"
         },
         "dexTrading": {
-          "title": "DEX Trading",
-          "description": "Swap wrapped ERG on various chains"
+          "title": "Negociação em DEX",
+          "description": "Troque ERG encapsulado em várias blockchains"
         }
       },
       "chooseMethod": {
-        "title": "Choose Your Method",
-        "description": "Select the most convenient way to get ERG based on your preferences and location"
+        "title": "Escolha Seu Método",
+        "description": "Selecione a maneira mais conveniente de obter ERG com base em suas preferências e localização"
       },
       "tabs": {
-        "buyWithFiat": "Buy with Fiat",
-        "cex": "Centralized Exchanges",
-        "dex": "Decentralized Exchanges"
+        "buyWithFiat": "Comprar com Fiat",
+        "cex": "Exchanges Centralizadas",
+        "dex": "Exchanges Descentralizadas"
       },
       "buttons": {
-        "buy": "Buy",
-        "trade": "Trade",
-        "swap": "Swap",
-        "buyWithFiat": "Buy with Fiat",
-        "viewExchanges": "View Exchanges"
+        "buy": "Comprar",
+        "trade": "Negociar",
+        "swap": "Trocar",
+        "buyWithFiat": "Comprar com Fiat",
+        "viewExchanges": "Ver Exchanges"
       },
       "badges": {
-        "soon": "soon",
-        "bounty": "bounty"
+        "soon": "em breve",
+        "bounty": "recompensa"
       },
       "whatsNext": {
-        "title": "What's Next?",
-        "description": "Now that you have ERG, explore what you can do with it",
+        "title": "O que vem a seguir?",
+        "description": "Agora que você tem ERG, explore o que pode fazer com ele",
         "useCases": {
-          "title": "Explore Use Cases",
-          "subtitle": "Discover Applications",
-          "description": "Discover all the ways you can use ERG - from DeFi to privacy features"
+          "title": "Explorar Casos de Uso",
+          "subtitle": "Descubra Aplicações",
+          "description": "Descubra todas as maneiras de usar ERG - de DeFi a recursos de privacidade"
         },
         "dapps": {
-          "title": "Try dApps",
-          "subtitle": "Explore Ecosystem",
-          "description": "Start using decentralized applications built on Ergo blockchain"
+          "title": "Experimentar dApps",
+          "subtitle": "Explorar Ecossistema",
+          "description": "Comece a usar aplicações descentralizadas desenvolvidas na blockchain Ergo"
         }
       },
       "finalCta": {
-        "title": "Market Updates & Analysis",
-        "description": "Get the latest ERG market analysis, price alerts, and investment insights delivered to your inbox"
+        "title": "Atualizações e Análises de Mercado",
+        "description": "Receba as mais recentes análises de mercado de ERG, alertas de preços e insights de investimento diretamente na sua caixa de entrada"
       },
       "waysToGetErg": {
-        "title": "Ways to Get ERG",
-        "fiatOnRamp": "Fiat On-Ramp",
-        "cex": "Centralized Exchanges (CEX)",
-        "dex": "Decentralized Exchanges (DEX)"
+        "title": "Maneiras de Obter ERG",
+        "fiatOnRamp": "Rampa de Entrada Fiat",
+        "cex": "Exchanges Centralizadas (CEX)",
+        "dex": "Exchanges Descentralizadas (DEX)"
       },
       "onRamp": {
-        "title": "Buy with Fiat (On-Ramp)",
-        "subtitle": "The easiest way to get ERG is to buy it directly using fiat currency through an on-ramp service.",
+        "title": "Comprar com Fiat (On-Ramp)",
+        "subtitle": "A maneira mais fácil de obter ERG é comprá-lo diretamente usando moeda fiat por meio de um serviço de on-ramp.",
         "services": {
           "banxa": {
             "name": "Banxa",
-            "description": "Buy ERG directly with your credit card or bank transfer. A straightforward way to get started."
+            "description": "Compre ERG diretamente com seu cartão de crédito ou transferência bancária. Uma maneira direta de começar."
           },
           "onramper": {
             "name": "Onramper",
-            "description": "Aggregator: buy ERG with fiat using 20+ providers and 130+ payment methods. Fast, global, and easy."
+            "description": "Agregador: compre ERG com fiat usando mais de 20 provedores e mais de 130 métodos de pagamento. Rápido, global e fácil."
           },
-          "visitButton": "Visit {name}"
+          "visitButton": "Visitar {name}"
         }
       },
       "cex": {
-        "title": "Buy on a Centralized Exchange (CEX)",
-        "subtitle": "Trade for ERG on established cryptocurrency exchanges. This usually requires creating an account and verifying your identity (KYC).",
+        "title": "Comprar em uma Exchange Centralizada (CEX)",
+        "subtitle": "Negocie ERG em exchanges de criptomoedas estabelecidas. Geralmente é necessário criar uma conta e verificar sua identidade (KYC).",
         "exchanges": {
           "gateio": {
             "name": "Gate.io",
-            "description": "High volume CEX with ERG/USDT and ERG/BTC pairs."
+            "description": "CEX de alto volume com pares ERG/USDT e ERG/BTC."
           },
           "kucoin": {
             "name": "KuCoin",
-            "description": "Popular exchange supporting ERG/USDT and ERG/BTC."
+            "description": "Exchange popular com suporte a ERG/USDT e ERG/BTC."
           },
           "mexc": {
             "name": "MEXC",
-            "description": "Known for a wide variety of assets, including ERG/USDT."
+            "description": "Conhecida por uma grande variedade de ativos, incluindo ERG/USDT."
           },
           "htx": {
             "name": "HTX (Huobi)",
-            "description": "Global CEX with ERG/USDT trading pair available."
+            "description": "CEX global com par de negociação ERG/USDT disponível."
           },
           "coinex": {
             "name": "Coinex",
-            "description": "Exchange supporting ERG/USDT with no KYC required."
+            "description": "Exchange com suporte a ERG/USDT sem necessidade de KYC."
           }
         },
-        "tradeButton": "Trade"
+        "tradeButton": "Negociar"
       },
       "dex": {
-        "title": "Swap on a Decentralized Exchange (DEX)",
-        "subtitle": "Use wrapped ERG (rsERG) on other blockchains to swap for assets on decentralized exchanges. This is a more advanced method that requires a compatible wallet.",
+        "title": "Trocar em uma Exchange Descentralizada (DEX)",
+        "subtitle": "Use ERG encapsulado (rsERG) em outras blockchains para trocar por ativos em exchanges descentralizadas. Este é um método mais avançado que requer uma carteira compatível.",
         "exchanges": {
           "aster": {
             "name": "Aster",
-            "description": "Decentralized perpetual contracts exchange"
+            "description": "Exchange descentralizada de contratos perpétuos"
           },
           "hyperliquid": {
             "name": "Hyperliquid",
-            "description": "Trade ERG perpetuals on a decentralized derivatives exchange with deep liquidity."
+            "description": "Negocie perpétuos de ERG em uma exchange descentralizada de derivativos com alta liquidez."
           },
           "pancakeswap": {
             "name": "PancakeSwap",
-            "description": "Swap for rsERG (wrapped ERG) on the Binance Smart Chain."
+            "description": "Troque por rsERG (ERG encapsulado) na Binance Smart Chain."
           },
           "uniswap": {
             "name": "Uniswap",
-            "description": "Trade for rsERG on the Ethereum network."
+            "description": "Negocie por rsERG na rede Ethereum."
           },
           "splash": {
             "name": "Splash",
-            "description": "A DEX on the Cardano network supporting wrapped Ergo assets."
+            "description": "Uma DEX na rede Cardano com suporte a ativos Ergo encapsulados."
           }
         },
-        "goToSwap": "Go to swap"
+        "goToSwap": "Ir para troca"
       },
       "security": {
-        "title": "Always Be Secure",
-        "description": "After acquiring ERG on an exchange, it is crucial to withdraw it to a personal wallet where you control the private keys. Remember the crypto mantra: \"Not your keys, not your crypto.\"",
-        "findWallet": "Find a secure wallet here"
+        "title": "Mantenha-se Sempre Seguro",
+        "description": "Após adquirir ERG em uma exchange, é fundamental retirá-lo para uma carteira pessoal onde você controla as chaves privadas. Lembre-se do mantra cripto: «Não são suas chaves, não é sua cripto.»",
+        "findWallet": "Encontre uma carteira segura aqui"
       },
       "schema": {
         "exchangeList": {
-          "name": "ERG Exchange Directory",
-          "description": "Complete list of exchanges where you can buy ERG tokens",
+          "name": "Diretório de Exchanges de ERG",
+          "description": "Lista completa de exchanges onde você pode comprar tokens ERG",
           "items": [
             {
               "name": "KuCoin",
               "url": "https://www.kucoin.com",
-              "description": "Major exchange with high ERG liquidity"
+              "description": "Exchange principal com alta liquidez de ERG"
             },
             {
               "name": "Gate.io",
               "url": "https://www.gate.io",
-              "description": "Popular exchange supporting ERG"
+              "description": "Exchange popular com suporte a ERG"
             },
             {
               "name": "CoinEx",
               "url": "https://www.coinex.com",
-              "description": "Exchange with ERG trading pairs"
+              "description": "Exchange com pares de negociação de ERG"
             }
           ]
         },
         "faq": {
           "whereToBuy": {
-            "question": "Where can I buy ERG?",
-            "answer": "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, as well as DEXs like Spectrum Finance. Choose based on your region and preferred payment method."
+            "question": "Onde posso comprar ERG?",
+            "answer": "ERG está disponível nas principais exchanges como KuCoin, Gate.io, CoinEx e Huobi, bem como em DEXs como Spectrum Finance. Escolha com base na sua região e método de pagamento preferido."
           },
           "bestExchange": {
-            "question": "What is the best exchange to buy ERG?",
-            "answer": "KuCoin typically has the highest liquidity and volume for ERG trading, but the best exchange depends on your location, verification requirements, and preferred trading pairs."
+            "question": "Qual é a melhor exchange para comprar ERG?",
+            "answer": "KuCoin geralmente tem a maior liquidez e volume para negociação de ERG, mas a melhor exchange depende da sua localização, requisitos de verificação e pares de negociação preferidos."
           },
           "buyWithFiat": {
-            "question": "Can I buy ERG with fiat currency?",
-            "answer": "Yes, some exchanges like KuCoin allow you to buy ERG directly with credit card or bank transfer. Alternatively, you can buy USDT/BTC first and trade for ERG."
+            "question": "Posso comprar ERG com moeda fiat?",
+            "answer": "Sim, algumas exchanges como KuCoin permitem comprar ERG diretamente com cartão de crédito ou transferência bancária. Alternativamente, você pode comprar USDT/BTC primeiro e trocar por ERG."
           },
           "storage": {
-            "question": "How do I store ERG after buying?",
-            "answer": "Store ERG in official wallets like Nautilus (browser), Satergo (desktop), or SAFEW (mobile). Never leave large amounts on exchanges long-term."
+            "question": "Como armazeno ERG após a compra?",
+            "answer": "Armazene ERG em carteiras oficiais como Nautilus (navegador), Satergo (desktop) ou SAFEW (mobile). Nunca deixe grandes quantias em exchanges por longo prazo."
           }
         },
         "howTo": {
-          "name": "How to Buy ERG Tokens",
-          "description": "Step-by-step guide to purchasing Ergo cryptocurrency",
+          "name": "Como Comprar Tokens ERG",
+          "description": "Guia passo a passo para comprar a criptomoeda Ergo",
           "steps": {
             "chooseExchange": {
-              "name": "Choose an exchange",
-              "text": "Select a reputable exchange that lists ERG"
+              "name": "Escolha uma exchange",
+              "text": "Selecione uma exchange confiável que liste ERG"
             },
             "createAccount": {
-              "name": "Create account",
-              "text": "Sign up and complete KYC verification if required"
+              "name": "Crie uma conta",
+              "text": "Cadastre-se e conclua a verificação KYC se necessário"
             },
             "depositFunds": {
-              "name": "Deposit funds",
-              "text": "Add fiat or cryptocurrency to your exchange account"
+              "name": "Deposite fundos",
+              "text": "Adicione fiat ou criptomoeda à sua conta na exchange"
             },
             "buyErg": {
-              "name": "Buy ERG",
-              "text": "Trade your funds for ERG tokens"
+              "name": "Compre ERG",
+              "text": "Troque seus fundos por tokens ERG"
             },
             "withdrawToWallet": {
-              "name": "Withdraw to wallet",
-              "text": "Transfer ERG to your personal wallet for security"
+              "name": "Retire para a carteira",
+              "text": "Transfira ERG para sua carteira pessoal para maior segurança"
             }
           }
         }
@@ -1784,651 +1784,651 @@
       }
     },
     "nfts": {
-      "title": "NFTs & Digital Assets",
-      "subtitle": "True digital ownership, dynamic properties",
-      "description": "On-chain metadata, protocol royalties, programmable NFTs.",
-      "lastUpdated": "Last updated:",
+      "title": "NFTs e Ativos Digitais",
+      "subtitle": "Propriedade digital real, propriedades dinâmicas",
+      "description": "Metadados on-chain, royalties de protocolo, NFTs programáveis.",
+      "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "nfts",
         "ogImage": "/og-nfts.png",
         "canonicalPath": "/use/nfts-digital-assets"
       },
       "seo": {
-        "title": "NFTs & Digital Assets on Ergo | True Digital Ownership",
-        "description": "Create and trade NFTs on Ergo. On-chain metadata, protocol royalties, dynamic NFTs, and programmable digital assets.",
-        "keywords": "NFTs, digital assets, SkyHarbor, on-chain metadata, protocol royalties, dynamic NFTs, Ergo NFT",
-        "ogTitle": "NFTs & Digital Assets on Ergo",
-        "ogDescription": "True digital ownership with on-chain metadata and protocol royalties.",
-        "twitterTitle": "NFTs on Ergo",
-        "twitterDescription": "Create programmable NFTs with on-chain metadata"
+        "title": "NFTs e Ativos Digitais na Ergo | Propriedade Digital Real",
+        "description": "Crie e negocie NFTs na Ergo. Metadados on-chain, royalties de protocolo, NFTs dinâmicos e ativos digitais programáveis.",
+        "keywords": "NFTs, ativos digitais, SkyHarbor, metadados on-chain, royalties de protocolo, NFTs dinâmicos, Ergo NFT",
+        "ogTitle": "NFTs e Ativos Digitais na Ergo",
+        "ogDescription": "Propriedade digital real com metadados on-chain e royalties de protocolo.",
+        "twitterTitle": "NFTs na Ergo",
+        "twitterDescription": "Crie NFTs programáveis com metadados on-chain"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Início Rápido",
         "browseNfts": {
-          "name": "Browse NFTs",
-          "description": "Explore collections on SkyHarbor"
+          "name": "Explorar NFTs",
+          "description": "Descubra coleções no SkyHarbor"
         },
         "createNfts": {
-          "name": "Create NFTs",
-          "description": "Mint your own collection"
+          "name": "Criar NFTs",
+          "description": "Cunhe sua própria coleção"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build NFT applications"
+          "name": "Documentação para Desenvolvedores",
+          "description": "Desenvolva aplicações de NFT"
         }
       },
       "navigation": {
-        "nftFeatures": "NFT features",
+        "nftFeatures": "Recursos de NFT",
         "marketplaces": "Marketplaces",
         "faq": "FAQ"
       },
       "features": {
-        "title": "NFT Features",
-        "subtitle": "Advanced capabilities for digital assets on Ergo",
+        "title": "Recursos de NFT",
+        "subtitle": "Capacidades avançadas para ativos digitais na Ergo",
         "onChainMetadata": {
-          "title": "On-Chain Metadata",
-          "description": "Store NFT metadata directly on-chain for true permanence and decentralization"
+          "title": "Metadados On-Chain",
+          "description": "Armazene metadados de NFT diretamente on-chain para verdadeira permanência e descentralização"
         },
         "protocolRoyalties": {
-          "title": "Protocol Royalties",
-          "description": "Enforceable royalties at the protocol level, ensuring creators always get paid"
+          "title": "Royalties de Protocolo",
+          "description": "Royalties aplicáveis no nível de protocolo, garantindo que os criadores sempre recebam pagamento"
         },
         "dynamicNfts": {
-          "title": "Dynamic NFTs",
-          "description": "Programmable NFTs that can evolve based on conditions or user interactions"
+          "title": "NFTs Dinâmicos",
+          "description": "NFTs programáveis que podem evoluir com base em condições ou interações do usuário"
         },
         "fractionalOwnership": {
-          "title": "Fractional Ownership",
-          "description": "Split NFTs into fungible tokens for shared ownership and liquidity"
+          "title": "Propriedade Fracionada",
+          "description": "Divida NFTs em tokens fungíveis para propriedade compartilhada e liquidez"
         },
         "batchMinting": {
-          "title": "Batch Minting",
-          "description": "Efficient batch minting for collections with minimal transaction costs"
+          "title": "Cunhagem em Lote",
+          "description": "Cunhagem em lote eficiente para coleções com custos mínimos de transação"
         },
         "composableAssets": {
-          "title": "Composable Assets",
-          "description": "NFTs that can interact with DeFi protocols and other smart contracts"
+          "title": "Ativos Composáveis",
+          "description": "NFTs que podem interagir com protocolos DeFi e outros contratos inteligentes"
         }
       },
       "technical": {
-        "title": "Technical Implementation",
-        "subtitle": "How NFTs work on Ergo",
+        "title": "Implementação Técnica",
+        "subtitle": "Como os NFTs funcionam na Ergo",
         "tabs": {
-          "overview": "Overview",
-          "metadata": "Metadata",
-          "code": "Code Example"
+          "overview": "Visão Geral",
+          "metadata": "Metadados",
+          "code": "Exemplo de Código"
         },
         "overview": {
-          "title": "NFT Architecture",
-          "description": "Ergo NFTs are first-class tokens with unique properties:",
+          "title": "Arquitetura de NFT",
+          "description": "Os NFTs da Ergo são tokens de primeira classe com propriedades únicas:",
           "points": {
-            "point1": "Single token with quantity of 1",
-            "point2": "Metadata stored in token registers",
-            "point3": "Programmable through ErgoScript",
-            "point4": "Native royalty enforcement",
-            "point5": "Composable with DeFi protocols"
+            "point1": "Token único com quantidade de 1",
+            "point2": "Metadados armazenados nos registradores do token",
+            "point3": "Programável via ErgoScript",
+            "point4": "Aplicação nativa de royalties",
+            "point5": "Composável com protocolos DeFi"
           }
         },
         "metadata": {
-          "title": "NFT Registers",
+          "title": "Registradores de NFT",
           "standardRegisters": {
-            "title": "Standard Registers",
+            "title": "Registradores Padrão",
             "points": {
-              "point1": "R4: NFT Type/Standard",
-              "point2": "R5: Name",
-              "point3": "R6: Description",
-              "point4": "R7: Image/Media"
+              "point1": "R4: Tipo/Padrão do NFT",
+              "point2": "R5: Nome",
+              "point3": "R6: Descrição",
+              "point4": "R7: Imagem/Mídia"
             }
           },
           "extendedRegisters": {
-            "title": "Extended Registers",
+            "title": "Registradores Estendidos",
             "points": {
-              "point1": "R8: Attributes/Properties",
-              "point2": "R9: Royalty information",
-              "point3": "Custom data structures",
-              "point4": "Dynamic properties"
+              "point1": "R8: Atributos/Propriedades",
+              "point2": "R9: Informações de royalties",
+              "point3": "Estruturas de dados personalizadas",
+              "point4": "Propriedades dinâmicas"
             }
           },
           "metadataStorage": {
-            "title": "Metadata Storage"
+            "title": "Armazenamento de Metadados"
           }
         },
         "codeExample": {
-          "title": "NFT Minting Example",
-          "description": "ErgoScript for NFT creation"
+          "title": "Exemplo de Cunhagem de NFT",
+          "description": "ErgoScript para criação de NFT"
         }
       },
       "projects": {
-        "title": "NFT Marketplaces",
-        "subtitle": "Platforms for trading digital assets on Ergo",
+        "title": "Marketplaces de NFT",
+        "subtitle": "Plataformas para negociar ativos digitais na Ergo",
         "skyHarbor": {
           "name": "SkyHarbor",
-          "description": "Premier NFT marketplace with advanced trading features",
-          "status": "Live",
+          "description": "Marketplace de NFT líder com recursos avançados de negociação",
+          "status": "Ativo",
           "features": {
-            "feature1": "Collection verification",
-            "feature2": "Bulk trading",
-            "feature3": "Royalty enforcement"
+            "feature1": "Verificação de coleções",
+            "feature2": "Negociação em massa",
+            "feature3": "Aplicação de royalties"
           }
         },
         "auctionHouse": {
           "name": "Auction House",
-          "description": "Decentralized auction platform for rare digital assets",
-          "status": "Live",
+          "description": "Plataforma de leilão descentralizada para ativos digitais raros",
+          "status": "Ativo",
           "features": {
-            "feature1": "English auctions",
-            "feature2": "Dutch auctions",
-            "feature3": "Reserve prices"
+            "feature1": "Leilões ingleses",
+            "feature2": "Leilões holandeses",
+            "feature3": "Preços de reserva"
           }
         },
         "lilium": {
           "name": "Lilium",
-          "description": "Art-focused NFT platform with creator tools",
-          "status": "Live",
+          "description": "Plataforma de NFT voltada para arte com ferramentas para criadores",
+          "status": "Ativo",
           "features": {
-            "feature1": "Artist profiles",
-            "feature2": "Curated collections",
-            "feature3": "Social features"
+            "feature1": "Perfis de artistas",
+            "feature2": "Coleções curadas",
+            "feature3": "Recursos sociais"
           }
         },
-        "visitMarketplace": "Visit Marketplace"
+        "visitMarketplace": "Visitar Marketplace"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about NFTs on Ergo",
+        "title": "Perguntas Frequentes",
+        "subtitle": "Dúvidas comuns sobre NFTs na Ergo",
         "whatMakesErgoDifferent": {
-          "question": "What makes Ergo NFTs different?",
-          "answer": "Ergo NFTs are native tokens with on-chain metadata, protocol-level royalties, and programmability through ErgoScript. Unlike simple token standards, Ergo NFTs can have complex behaviors and interact with DeFi protocols."
+          "question": "O que torna os NFTs da Ergo diferentes?",
+          "answer": "Os NFTs da Ergo são tokens nativos com metadados on-chain, royalties no nível de protocolo e programabilidade via ErgoScript. Ao contrário de padrões simples de tokens, os NFTs da Ergo podem ter comportamentos complexos e interagir com protocolos DeFi."
         },
         "howProtocolRoyaltiesWork": {
-          "question": "How do protocol royalties work?",
-          "answer": "Royalties are enforced at the protocol level through smart contracts. Every sale automatically distributes the specified percentage to creators, ensuring they always receive compensation without relying on marketplace compliance."
+          "question": "Como funcionam os royalties de protocolo?",
+          "answer": "Os royalties são aplicados no nível de protocolo por meio de contratos inteligentes. Cada venda distribui automaticamente a porcentagem especificada aos criadores, garantindo que eles sempre recebam compensação sem depender de conformidade dos marketplaces."
         },
         "canStoreDataOnChain": {
-          "question": "Can NFTs store data on-chain?",
-          "answer": "Yes! Ergo NFTs can store metadata directly on-chain, including images (as data URIs), attributes, and descriptions. This ensures permanence without relying on external storage like IPFS."
+          "question": "Os NFTs podem armazenar dados on-chain?",
+          "answer": "Sim! Os NFTs da Ergo podem armazenar metadados diretamente on-chain, incluindo imagens (como URIs de dados), atributos e descrições. Isso garante permanência sem depender de armazenamento externo como IPFS."
         },
         "whatAreDynamicNfts": {
-          "question": "What are dynamic NFTs?",
-          "answer": "Dynamic NFTs can change properties based on conditions like time, user actions, or external data from oracles. Examples include evolving game items, reactive art, or achievement-based collectibles."
+          "question": "O que são NFTs dinâmicos?",
+          "answer": "NFTs dinâmicos podem alterar propriedades com base em condições como tempo, ações do usuário ou dados externos de oráculos. Exemplos incluem itens de jogos em evolução, arte reativa ou colecionáveis baseados em conquistas."
         },
         "howEfficientMinting": {
-          "question": "How efficient is NFT minting on Ergo?",
-          "answer": "Ergo supports batch minting, allowing creators to mint entire collections in a single transaction. The eUTXO model makes this extremely efficient compared to account-based chains."
+          "question": "Quão eficiente é a cunhagem de NFTs na Ergo?",
+          "answer": "A Ergo suporta cunhagem em lote, permitindo que criadores cunhem coleções inteiras em uma única transação. O modelo eUTXO torna isso extremamente eficiente em comparação com blockchains baseadas em contas."
         }
       },
       "cta": {
-        "title": "Ready to Create Digital Assets?",
-        "subtitle": "Start creating and trading NFTs on Ergo today.",
-        "exploreSkyHarbor": "Explore SkyHarbor",
-        "nftGuide": "NFT Guide"
+        "title": "Pronto para Criar Ativos Digitais?",
+        "subtitle": "Comece a criar e negociar NFTs na Ergo hoje.",
+        "exploreSkyHarbor": "Explorar SkyHarbor",
+        "nftGuide": "Guia de NFT"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Learn how to create and manage digital assets on Ergo blockchain",
+        "titlePrefix": "O que vem",
+        "titleHighlight": "a seguir?",
+        "subtitle": "Aprenda a criar e gerenciar ativos digitais na blockchain Ergo",
         "cards": {
           "nftGuide": {
-            "title": "NFT Guide",
-            "subtitle": "Learn More",
-            "description": "Learn how to create, mint, and manage NFTs on Ergo with comprehensive documentation and tutorials"
+            "title": "Guia de NFT",
+            "subtitle": "Saiba Mais",
+            "description": "Aprenda a criar, cunhar e gerenciar NFTs na Ergo com documentação e tutoriais abrangentes"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Explore comprehensive developer documentation and start building NFT applications on Ergo blockchain"
+            "title": "Documentação para Desenvolvedores",
+            "subtitle": "Comece a Desenvolver",
+            "description": "Explore a documentação completa para desenvolvedores e comece a criar aplicações de NFT na blockchain Ergo"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo NFTs",
-        "description": "Get notified about new NFT drops, marketplace updates, and digital asset innovations."
+        "title": "Fique Atualizado sobre NFTs na Ergo",
+        "description": "Receba notificações sobre novos lançamentos de NFT, atualizações de marketplace e inovações em ativos digitais."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "nftsDigitalAssets": "NFTs & Digital Assets"
+          "useCases": "Casos de Uso",
+          "nftsDigitalAssets": "NFTs e Ativos Digitais"
         }
       }
     },
     "oracles": {
-      "title": "Oracles & Data Feeds",
-      "subtitle": "Bringing real-world data on-chain",
-      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets.",
-      "lastUpdated": "Last updated:",
+      "title": "Oráculos e Feeds de Dados",
+      "subtitle": "Trazendo dados do mundo real para a blockchain",
+      "description": "Pools de oráculos descentralizados fornecem dados externos para DeFi e mercados de previsão.",
+      "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "oracles",
         "ogImage": "/og-oracles.png",
         "canonicalPath": "/use/oracles-data-feeds"
       },
       "seo": {
-        "title": "Oracles & Data Feeds on Ergo | Decentralized Data Infrastructure",
-        "description": "Connect real-world data to Ergo blockchain. Decentralized oracle pools, price feeds, custom data sources for DeFi and prediction markets.",
-        "keywords": "oracles, data feeds, oracle pools, price feeds, external data, DeFi oracles, Ergo oracle",
-        "ogTitle": "Oracles & Data Feeds on Ergo",
-        "ogDescription": "Bringing real-world data on-chain with decentralized oracle pools.",
-        "twitterTitle": "Oracles on Ergo",
-        "twitterDescription": "Decentralized oracle pools for reliable data feeds"
+        "title": "Oráculos e Feeds de Dados na Ergo | Infraestrutura de Dados Descentralizada",
+        "description": "Conecte dados do mundo real à blockchain Ergo. Pools de oráculos descentralizados, feeds de preços, fontes de dados personalizadas para DeFi e mercados de previsão.",
+        "keywords": "oráculos, feeds de dados, pools de oráculos, feeds de preços, dados externos, oráculos DeFi, Ergo oracle",
+        "ogTitle": "Oráculos e Feeds de Dados na Ergo",
+        "ogDescription": "Trazendo dados do mundo real para a blockchain com pools de oráculos descentralizados.",
+        "twitterTitle": "Oráculos na Ergo",
+        "twitterDescription": "Pools de oráculos descentralizados para feeds de dados confiáveis"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Início Rápido",
         "viewPriceFeeds": {
-          "name": "View Price Feeds",
-          "description": "Check live oracle data"
+          "name": "Ver Feeds de Preços",
+          "description": "Verifique dados de oráculos em tempo real"
         },
         "runOracle": {
-          "name": "Run an Oracle",
-          "description": "Become a data provider"
+          "name": "Operar um Oráculo",
+          "description": "Torne-se um provedor de dados"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Integrate oracle data"
+          "name": "Documentação para Desenvolvedores",
+          "description": "Integre dados de oráculos"
         }
       },
       "navigation": {
-        "oracleFeatures": "Oracle features",
-        "liveOracles": "Live Oracles",
+        "oracleFeatures": "Recursos de oráculo",
+        "liveOracles": "Oráculos Ativos",
         "faq": "FAQ"
       },
       "features": {
-        "title": "Oracle Features",
-        "subtitle": "Reliable external data for smart contracts",
+        "title": "Recursos de Oráculo",
+        "subtitle": "Dados externos confiáveis para contratos inteligentes",
         "decentralizedPools": {
-          "title": "Decentralized Oracle Pools",
-          "description": "Multiple data providers ensure reliability and prevent manipulation"
+          "title": "Pools de Oráculos Descentralizados",
+          "description": "Múltiplos provedores de dados garantem confiabilidade e previnem manipulação"
         },
         "onChainAggregation": {
-          "title": "On-Chain Aggregation",
-          "description": "Smart contracts aggregate and validate data from multiple sources"
+          "title": "Agregação On-Chain",
+          "description": "Contratos inteligentes agregam e validam dados de múltiplas fontes"
         },
         "priceFeeds": {
-          "title": "Price Feeds",
-          "description": "Real-time price data for DeFi protocols and prediction markets"
+          "title": "Feeds de Preços",
+          "description": "Dados de preços em tempo real para protocolos DeFi e mercados de previsão"
         },
         "customDataSources": {
-          "title": "Custom Data Sources",
-          "description": "Connect any external API or data source to the blockchain"
+          "title": "Fontes de Dados Personalizadas",
+          "description": "Conecte qualquer API externa ou fonte de dados à blockchain"
         },
         "consensusMechanisms": {
-          "title": "Consensus Mechanisms",
-          "description": "Various consensus models for different data reliability requirements"
+          "title": "Mecanismos de Consenso",
+          "description": "Vários modelos de consenso para diferentes requisitos de confiabilidade de dados"
         },
         "incentiveAlignment": {
-          "title": "Incentive Alignment",
-          "description": "Economic incentives ensure accurate and timely data provision"
+          "title": "Alinhamento de Incentivos",
+          "description": "Incentivos econômicos garantem fornecimento de dados precisos e pontuais"
         }
       },
       "technical": {
-        "title": "Oracle Architecture",
-        "subtitle": "How oracle pools work on Ergo",
+        "title": "Arquitetura de Oráculo",
+        "subtitle": "Como os pools de oráculos funcionam na Ergo",
         "tabs": {
-          "overview": "Overview",
-          "pools": "Oracle Pools",
-          "code": "Code Example"
+          "overview": "Visão Geral",
+          "pools": "Pools de Oráculos",
+          "code": "Exemplo de Código"
         },
         "overview": {
-          "title": "Oracle System",
-          "description": "Ergo's oracle system provides reliable external data:",
+          "title": "Sistema de Oráculo",
+          "description": "O sistema de oráculos da Ergo fornece dados externos confiáveis:",
           "points": {
-            "point1": "Decentralized data collection",
-            "point2": "On-chain aggregation and validation",
-            "point3": "Economic incentives for accuracy",
-            "point4": "Flexible consensus mechanisms",
-            "point5": "Support for any data type"
+            "point1": "Coleta descentralizada de dados",
+            "point2": "Agregação e validação on-chain",
+            "point3": "Incentivos econômicos para precisão",
+            "point4": "Mecanismos de consenso flexíveis",
+            "point5": "Suporte para qualquer tipo de dado"
           }
         },
         "pools": {
-          "title": "Pool Architecture",
+          "title": "Arquitetura de Pool",
           "dataCollection": {
-            "title": "Data Collection",
+            "title": "Coleta de Dados",
             "points": {
-              "point1": "Oracle operators fetch data",
-              "point2": "Submit to pool contract",
-              "point3": "Timestamp verification",
-              "point4": "Stake requirement"
+              "point1": "Operadores de oráculo buscam dados",
+              "point2": "Enviam ao contrato do pool",
+              "point3": "Verificação de timestamp",
+              "point4": "Requisito de stake"
             }
           },
           "aggregation": {
-            "title": "Aggregation",
+            "title": "Agregação",
             "points": {
-              "point1": "Collect submissions",
-              "point2": "Calculate median/average",
-              "point3": "Filter outliers",
-              "point4": "Publish final value"
+              "point1": "Coleta de envios",
+              "point2": "Cálculo da mediana/média",
+              "point3": "Filtragem de valores atípicos",
+              "point4": "Publicação do valor final"
             }
           },
           "dataFlow": {
-            "title": "Data Flow"
+            "title": "Fluxo de Dados"
           }
         },
         "codeExample": {
-          "title": "Oracle Contract Example",
-          "description": "Reading oracle data in ErgoScript"
+          "title": "Exemplo de Contrato de Oráculo",
+          "description": "Leitura de dados de oráculo em ErgoScript"
         }
       },
       "projects": {
-        "title": "Live Oracle Solutions",
-        "subtitle": "Active oracle implementations on Ergo",
+        "title": "Soluções de Oráculo Ativas",
+        "subtitle": "Implementações de oráculos ativas na Ergo",
         "oraclePools": {
           "name": "Oracle Pools v2",
-          "description": "Decentralized oracle infrastructure for Ergo",
-          "status": "Live",
+          "description": "Infraestrutura de oráculos descentralizada para a Ergo",
+          "status": "Ativo",
           "features": {
-            "feature1": "ERG/USD feed",
-            "feature2": "ADA/USD feed",
-            "feature3": "Gold price feed"
+            "feature1": "Feed ERG/USD",
+            "feature2": "Feed ADA/USD",
+            "feature3": "Feed de preço do ouro"
           }
         },
         "oracleCore": {
           "name": "Ergo Oracle Core",
-          "description": "Framework for building custom oracle solutions",
-          "status": "Live",
+          "description": "Framework para construção de soluções de oráculo personalizadas",
+          "status": "Ativo",
           "features": {
-            "feature1": "Custom feeds",
-            "feature2": "API integration",
-            "feature3": "Data validation"
+            "feature1": "Feeds personalizados",
+            "feature2": "Integração com API",
+            "feature3": "Validação de dados"
           }
         },
         "defiNetwork": {
           "name": "DeFi Oracle Network",
-          "description": "Specialized oracles for DeFi protocols",
-          "status": "In Development",
+          "description": "Oráculos especializados para protocolos DeFi",
+          "status": "Em Desenvolvimento",
           "features": {
-            "feature1": "Multi-asset feeds",
-            "feature2": "TWAP oracles",
-            "feature3": "Volatility data"
+            "feature1": "Feeds multi-ativo",
+            "feature2": "Oráculos TWAP",
+            "feature3": "Dados de volatilidade"
           }
         },
-        "viewOracle": "View Oracle",
-        "comingSoon": "Coming Soon"
+        "viewOracle": "Ver Oráculo",
+        "comingSoon": "Em Breve"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about oracles on Ergo",
+        "title": "Perguntas Frequentes",
+        "subtitle": "Dúvidas comuns sobre oráculos na Ergo",
         "howOraclePoolsWork": {
-          "question": "How do Ergo oracle pools work?",
-          "answer": "Oracle pools aggregate data from multiple independent providers. Each oracle submits data, and smart contracts calculate the median or weighted average to produce a reliable feed resistant to manipulation."
+          "question": "Como funcionam os pools de oráculos da Ergo?",
+          "answer": "Os pools de oráculos agregam dados de múltiplos provedores independentes. Cada oráculo envia dados, e contratos inteligentes calculam a mediana ou média ponderada para produzir um feed confiável resistente à manipulação."
         },
         "whatDataCanProvide": {
-          "question": "What data can oracles provide?",
-          "answer": "Oracles can provide any external data: price feeds, weather data, sports results, IoT sensor readings, or any API data. The oracle pool framework is flexible enough to support any data type."
+          "question": "Que dados os oráculos podem fornecer?",
+          "answer": "Os oráculos podem fornecer qualquer dado externo: feeds de preços, dados climáticos, resultados esportivos, leituras de sensores IoT ou qualquer dado de API. O framework de pool de oráculos é flexível o suficiente para suportar qualquer tipo de dado."
         },
         "howOperatorsIncentivized": {
-          "question": "How are oracle operators incentivized?",
-          "answer": "Oracle operators earn rewards for providing accurate and timely data. They must stake collateral that can be slashed for malicious behavior, creating economic incentives for honest operation."
+          "question": "Como os operadores de oráculo são incentivados?",
+          "answer": "Os operadores de oráculo ganham recompensas por fornecer dados precisos e pontuais. Eles devem depositar uma garantia que pode ser cortada por comportamento malicioso, criando incentivos econômicos para operação honesta."
         },
         "canCreateOwnOracle": {
-          "question": "Can I create my own oracle?",
-          "answer": "Yes! The Oracle Core framework allows anyone to create custom oracles. You can connect any data source and define your own consensus mechanisms and incentive structures."
+          "question": "Posso criar meu próprio oráculo?",
+          "answer": "Sim! O framework Oracle Core permite que qualquer pessoa crie oráculos personalizados. Você pode conectar qualquer fonte de dados e definir seus próprios mecanismos de consenso e estruturas de incentivos."
         },
         "howReliablePriceFeeds": {
-          "question": "How reliable are oracle price feeds?",
-          "answer": "Ergo's oracle pools use multiple independent data sources and consensus mechanisms to ensure reliability. Historical data shows 99.9%+ uptime with accurate price feeds updated every epoch."
+          "question": "Quão confiáveis são os feeds de preços dos oráculos?",
+          "answer": "Os pools de oráculos da Ergo usam múltiplas fontes de dados independentes e mecanismos de consenso para garantir confiabilidade. Dados históricos mostram disponibilidade superior a 99,9% com feeds de preços precisos atualizados a cada epoch."
         }
       },
       "cta": {
-        "title": "Ready to Use Oracle Data?",
-        "subtitle": "Integrate reliable external data into your smart contracts.",
-        "viewOraclePools": "View Oracle Pools",
-        "developerDocs": "Developer Docs"
+        "title": "Pronto para Usar Dados de Oráculo?",
+        "subtitle": "Integre dados externos confiáveis em seus contratos inteligentes.",
+        "viewOraclePools": "Ver Pools de Oráculos",
+        "developerDocs": "Documentação para Desenvolvedores"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start using or building oracle solutions on Ergo today",
+        "titlePrefix": "O que vem",
+        "titleHighlight": "a seguir?",
+        "subtitle": "Comece a usar ou desenvolver soluções de oráculo na Ergo hoje",
         "cards": {
           "oracleCore": {
             "title": "Oracle Core",
-            "subtitle": "Start Building",
-            "description": "Core off-chain component for Oracle Pools - bootstrap, run, and manage oracle solutions on Ergo"
+            "subtitle": "Comece a Desenvolver",
+            "description": "Componente off-chain principal para Oracle Pools - inicialize, execute e gerencie soluções de oráculo na Ergo"
           },
           "oracleDocumentation": {
-            "title": "Oracle Documentation",
-            "subtitle": "Learn More",
-            "description": "Comprehensive guide to understanding and implementing oracle solutions on Ergo"
+            "title": "Documentação de Oráculos",
+            "subtitle": "Saiba Mais",
+            "description": "Guia abrangente para entender e implementar soluções de oráculo na Ergo"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Oracle Pools",
-        "description": "Get notified about oracle updates, data feed improvements, and DeFi integrations."
+        "title": "Fique Atualizado sobre Oracle Pools",
+        "description": "Receba notificações sobre atualizações de oráculos, melhorias em feeds de dados e integrações DeFi."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "oraclesDataFeeds": "Oracles & Data Feeds"
+          "useCases": "Casos de Uso",
+          "oraclesDataFeeds": "Oráculos e Feeds de Dados"
         }
       }
     },
     "gaming": {
-      "title": "Gaming & Metaverse",
-      "subtitle": "Next-gen gaming assets & digital worlds",
-      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.",
-      "lastUpdated": "Last updated:",
+      "title": "Jogos e Metaverso",
+      "subtitle": "Ativos de jogos de próxima geração e mundos digitais",
+      "description": "Tokens de jogos programáveis, economias movidas por NFT, infraestrutura de metaverso.",
+      "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "gaming",
         "ogImage": "/og-gaming.png",
         "canonicalPath": "/use/gaming-metaverse"
       },
       "seo": {
-        "title": "Gaming & Metaverse on Ergo | Blockchain Gaming",
-        "description": "Build blockchain games and metaverse experiences on Ergo. In-game NFTs, play-to-earn mechanics, dynamic items, and decentralized game economies.",
-        "keywords": "gaming, metaverse, blockchain games, play-to-earn, game NFTs, virtual worlds, Web3 gaming",
-        "ogTitle": "Gaming & Metaverse on Ergo",
-        "ogDescription": "Next-gen gaming assets and digital worlds on Ergo blockchain.",
-        "twitterTitle": "Gaming on Ergo",
-        "twitterDescription": "Build blockchain games with NFTs and play-to-earn"
+        "title": "Jogos e Metaverso na Ergo | Jogos Blockchain",
+        "description": "Desenvolva jogos blockchain e experiências de metaverso na Ergo. NFTs in-game, mecânicas play-to-earn, itens dinâmicos e economias de jogos descentralizadas.",
+        "keywords": "jogos, metaverso, jogos blockchain, play-to-earn, NFTs de jogos, mundos virtuais, Web3 gaming",
+        "ogTitle": "Jogos e Metaverso na Ergo",
+        "ogDescription": "Ativos de jogos de próxima geração e mundos digitais na blockchain Ergo.",
+        "twitterTitle": "Jogos na Ergo",
+        "twitterDescription": "Desenvolva jogos blockchain com NFTs e play-to-earn"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Início Rápido",
         "playGames": {
-          "name": "Play Games",
-          "description": "Explore Ergo gaming ecosystem"
+          "name": "Jogar",
+          "description": "Explore o ecossistema de jogos da Ergo"
         },
         "gameSdk": {
           "name": "Game SDK",
-          "description": "Tools for game developers"
+          "description": "Ferramentas para desenvolvedores de jogos"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build blockchain games"
+          "name": "Documentação para Desenvolvedores",
+          "description": "Desenvolva jogos blockchain"
         }
       },
       "navigation": {
-        "gamingFeatures": "Gaming features",
-        "gameProjects": "Game Projects",
+        "gamingFeatures": "Recursos de jogos",
+        "gameProjects": "Projetos de Jogos",
         "faq": "FAQ"
       },
       "features": {
-        "title": "Gaming Features",
-        "subtitle": "Building blocks for blockchain gaming",
+        "title": "Recursos de Jogos",
+        "subtitle": "Componentes básicos para jogos blockchain",
         "inGameAssets": {
-          "title": "In-Game Assets",
-          "description": "True ownership of game items, characters, and resources as NFTs"
+          "title": "Ativos In-Game",
+          "description": "Propriedade real de itens, personagens e recursos do jogo como NFTs"
         },
         "playToEarn": {
           "title": "Play-to-Earn",
-          "description": "Earn real value through gameplay with tokenized rewards"
+          "description": "Ganhe valor real jogando com recompensas tokenizadas"
         },
         "virtualWorlds": {
-          "title": "Virtual Worlds",
-          "description": "Decentralized metaverse platforms with user-owned land and assets"
+          "title": "Mundos Virtuais",
+          "description": "Plataformas de metaverso descentralizadas com terrenos e ativos pertencentes aos usuários"
         },
         "crossGameItems": {
-          "title": "Cross-Game Items",
-          "description": "Interoperable assets that work across multiple games"
+          "title": "Itens Entre Jogos",
+          "description": "Ativos interoperáveis que funcionam em múltiplos jogos"
         },
         "dynamicNfts": {
-          "title": "Dynamic NFTs",
-          "description": "Game items that evolve based on player actions and achievements"
+          "title": "NFTs Dinâmicos",
+          "description": "Itens de jogo que evoluem com base nas ações e conquistas do jogador"
         },
         "daoGovernance": {
-          "title": "DAO Governance",
-          "description": "Player-owned game economies with community governance"
+          "title": "Governança DAO",
+          "description": "Economias de jogos pertencentes aos jogadores com governança comunitária"
         }
       },
       "technical": {
-        "title": "Game Architecture",
-        "subtitle": "How blockchain gaming works on Ergo",
+        "title": "Arquitetura de Jogos",
+        "subtitle": "Como funcionam os jogos blockchain na Ergo",
         "tabs": {
-          "overview": "Overview",
-          "economy": "Game Economy",
-          "code": "Code Example"
+          "overview": "Visão Geral",
+          "economy": "Economia do Jogo",
+          "code": "Exemplo de Código"
         },
         "overview": {
-          "title": "Gaming Infrastructure",
-          "description": "Ergo provides complete infrastructure for blockchain gaming:",
+          "title": "Infraestrutura de Jogos",
+          "description": "A Ergo fornece infraestrutura completa para jogos blockchain:",
           "points": {
-            "point1": "NFTs for unique game assets",
-            "point2": "Tokens for in-game currencies",
-            "point3": "Smart contracts for game logic",
-            "point4": "Oracles for randomness",
-            "point5": "DAOs for game governance"
+            "point1": "NFTs para ativos únicos do jogo",
+            "point2": "Tokens para moedas in-game",
+            "point3": "Contratos inteligentes para lógica do jogo",
+            "point4": "Oráculos para aleatoriedade",
+            "point5": "DAOs para governança do jogo"
           }
         },
         "economy": {
-          "title": "Token Economy",
+          "title": "Economia de Tokens",
           "gameTokens": {
-            "title": "Game Tokens",
+            "title": "Tokens do Jogo",
             "points": {
-              "point1": "In-game currency",
-              "point2": "Reward tokens",
-              "point3": "Governance tokens",
-              "point4": "Staking mechanisms"
+              "point1": "Moeda in-game",
+              "point2": "Tokens de recompensa",
+              "point3": "Tokens de governança",
+              "point4": "Mecanismos de staking"
             }
           },
           "nftAssets": {
-            "title": "NFT Assets",
+            "title": "Ativos NFT",
             "points": {
-              "point1": "Characters & avatars",
-              "point2": "Items & equipment",
-              "point3": "Land & buildings",
-              "point4": "Achievements & badges"
+              "point1": "Personagens e avatares",
+              "point2": "Itens e equipamentos",
+              "point3": "Terrenos e construções",
+              "point4": "Conquistas e medalhas"
             }
           },
           "playToEarnModel": {
-            "title": "Play-to-Earn Model"
+            "title": "Modelo Play-to-Earn"
           }
         },
         "codeExample": {
-          "title": "Game Item NFT",
-          "description": "Dynamic game item with leveling"
+          "title": "NFT de Item de Jogo",
+          "description": "Item de jogo dinâmico com sistema de níveis"
         }
       },
       "projects": {
-        "title": "Game Projects",
-        "subtitle": "Games building on Ergo",
+        "title": "Projetos de Jogos",
+        "subtitle": "Jogos desenvolvidos na Ergo",
         "blitzTcg": {
           "name": "Blitz TCG",
-          "description": "Trading card game with on-chain card ownership",
-          "status": "In Development",
+          "description": "Jogo de cartas colecionáveis com propriedade on-chain das cartas",
+          "status": "Em Desenvolvimento",
           "features": {
-            "feature1": "Collectible cards",
-            "feature2": "Tournament play",
-            "feature3": "Card trading"
+            "feature1": "Cartas colecionáveis",
+            "feature2": "Torneios",
+            "feature3": "Negociação de cartas"
           }
         },
         "ergoRacer": {
           "name": "ErgoRacer",
-          "description": "Racing game with NFT vehicles and tracks",
-          "status": "Concept",
+          "description": "Jogo de corrida com veículos e pistas NFT",
+          "status": "Conceito",
           "features": {
-            "feature1": "Custom vehicles",
-            "feature2": "Track ownership",
-            "feature3": "Racing leagues"
+            "feature1": "Veículos personalizados",
+            "feature2": "Propriedade de pistas",
+            "feature3": "Ligas de corrida"
           }
         },
         "cyberPunks": {
           "name": "CyberPunks",
-          "description": "Cyberpunk-themed collectible game",
-          "status": "Live",
+          "description": "Jogo colecionável com temática cyberpunk",
+          "status": "Ativo",
           "features": {
-            "feature1": "Unique avatars",
-            "feature2": "Rarity system",
-            "feature3": "Community events"
+            "feature1": "Avatares únicos",
+            "feature2": "Sistema de raridade",
+            "feature3": "Eventos comunitários"
           }
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about gaming on Ergo",
+        "title": "Perguntas Frequentes",
+        "subtitle": "Dúvidas comuns sobre jogos na Ergo",
         "howBlockchainGamesWork": {
-          "question": "How do blockchain games work on Ergo?",
-          "answer": "Ergo games use NFTs for in-game assets and tokens for game currencies. Smart contracts handle game logic, item trading, and reward distribution, ensuring transparent and fair gameplay."
+          "question": "Como funcionam os jogos blockchain na Ergo?",
+          "answer": "Os jogos da Ergo usam NFTs para ativos in-game e tokens para moedas do jogo. Contratos inteligentes gerenciam a lógica do jogo, negociação de itens e distribuição de recompensas, garantindo jogabilidade transparente e justa."
         },
         "whatAreDynamicGameNfts": {
-          "question": "What are dynamic game NFTs?",
-          "answer": "Dynamic NFTs on Ergo can change properties based on gameplay. A sword might gain power with use, or a character might evolve based on achievements, all tracked on-chain through smart contracts."
+          "question": "O que são NFTs dinâmicos de jogos?",
+          "answer": "NFTs dinâmicos na Ergo podem alterar propriedades com base na jogabilidade. Uma espada pode ganhar poder com o uso, ou um personagem pode evoluir com base em conquistas, tudo rastreado on-chain por contratos inteligentes."
         },
         "canAssetsBeUsedAcrossGames": {
-          "question": "Can game assets be used across different games?",
-          "answer": "Yes! Ergo's NFT standard allows assets to be interoperable. Developers can build games that recognize and utilize NFTs from other games, creating a shared gaming metaverse."
+          "question": "Os ativos do jogo podem ser usados em jogos diferentes?",
+          "answer": "Sim! O padrão de NFT da Ergo permite que os ativos sejam interoperáveis. Os desenvolvedores podem criar jogos que reconhecem e utilizam NFTs de outros jogos, criando um metaverso de jogos compartilhado."
         },
         "howPlayToEarnWorks": {
-          "question": "How does play-to-earn work?",
-          "answer": "Players earn tokens or NFTs through gameplay achievements, competitions, or contributions. These digital assets have real value and can be traded on marketplaces or used in other games."
+          "question": "Como funciona o play-to-earn?",
+          "answer": "Os jogadores ganham tokens ou NFTs por meio de conquistas no jogo, competições ou contribuições. Esses ativos digitais têm valor real e podem ser negociados em marketplaces ou usados em outros jogos."
         },
         "whatMakesErgoGoodForGaming": {
-          "question": "What makes Ergo good for gaming?",
-          "answer": "Ergo's low fees, fast transactions, programmable NFTs, and robust smart contracts make it ideal for gaming. The eUTXO model also enables complex game mechanics while maintaining security."
+          "question": "O que torna a Ergo boa para jogos?",
+          "answer": "As taxas baixas, transações rápidas, NFTs programáveis e contratos inteligentes robustos da Ergo a tornam ideal para jogos. O modelo eUTXO também permite mecânicas de jogos complexas mantendo a segurança."
         }
       },
       "cta": {
-        "title": "Ready to Build the Future of Gaming?",
-        "subtitle": "Create blockchain games and metaverse experiences on Ergo.",
-        "exploreGames": "Explore Games",
-        "buildAGame": "Build a Game",
-        "startBuilding": "Start Building"
+        "title": "Pronto para Construir o Futuro dos Jogos?",
+        "subtitle": "Crie jogos blockchain e experiências de metaverso na Ergo.",
+        "exploreGames": "Explorar Jogos",
+        "buildAGame": "Desenvolver um Jogo",
+        "startBuilding": "Comece a Desenvolver"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start playing or building blockchain games on Ergo today",
+        "titlePrefix": "O que vem",
+        "titleHighlight": "a seguir?",
+        "subtitle": "Comece a jogar ou desenvolver jogos blockchain na Ergo hoje",
         "cards": {
           "exploreGames": {
-            "title": "Explore Games",
-            "subtitle": "Start Playing",
-            "description": "Discover and play blockchain games built on Ergo's gaming ecosystem"
+            "title": "Explorar Jogos",
+            "subtitle": "Comece a Jogar",
+            "description": "Descubra e jogue jogos blockchain desenvolvidos no ecossistema de jogos da Ergo"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build your own blockchain games on Ergo"
+            "title": "Documentação para Desenvolvedores",
+            "subtitle": "Comece a Desenvolver",
+            "description": "Acesse documentação e ferramentas para desenvolver seus próprios jogos blockchain na Ergo"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Blockchain Gaming",
-        "description": "Get notified about new games, NFT drops, and gaming ecosystem updates on Ergo."
+        "title": "Fique Atualizado sobre Jogos Blockchain",
+        "description": "Receba notificações sobre novos jogos, lançamentos de NFT e atualizações do ecossistema de jogos na Ergo."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "gamingMetaverse": "Gaming & Metaverse"
+          "useCases": "Casos de Uso",
+          "gamingMetaverse": "Jogos e Metaverso"
         }
       }
     },
     "mining": {
-      "title": "Mining ERG",
-      "subtitle": "Start mining Ergo with our comprehensive guide to pools, hardware, and optimization",
-      "poolsTitle": "Mining Pools",
-      "hardwareTitle": "Hardware Requirements",
-      "softwareTitle": "Mining Software",
-      "optimizationTitle": "Optimization Tips",
-      "ctaTitle": "Ready to Start Mining?",
-      "active": "Active",
-      "inactive": "Inactive",
-      "recommended": "Recommended",
-      "alternative": "Alternative",
-      "poolUrl": "Pool URL",
-      "poolFee": "Pool Fee",
-      "minPayout": "Min Payout",
-      "performance": "Performance",
-      "difficulty": "Difficulty",
-      "download": "Download",
+      "title": "Minerando ERG",
+      "subtitle": "Comece a minerar Ergo com nosso guia abrangente sobre pools, hardware e otimização",
+      "poolsTitle": "Pools de Mineração",
+      "hardwareTitle": "Requisitos de Hardware",
+      "softwareTitle": "Software de Mineração",
+      "optimizationTitle": "Dicas de Otimização",
+      "ctaTitle": "Pronto para Começar a Minerar?",
+      "active": "Ativo",
+      "inactive": "Inativo",
+      "recommended": "Recomendado",
+      "alternative": "Alternativo",
+      "poolUrl": "URL do Pool",
+      "poolFee": "Taxa do Pool",
+      "minPayout": "Pagamento Mínimo",
+      "performance": "Desempenho",
+      "difficulty": "Dificuldade",
+      "download": "Baixar",
       "ctaButtons": {
-        "readGuide": "Read Full Mining Guide",
-        "viewCode": "View Mining Software"
+        "readGuide": "Ler Guia Completo de Mineração",
+        "viewCode": "Ver Software de Mineração"
       },
       "pools": {
         "0": {
@@ -2437,9 +2437,9 @@
           "fee": "1%",
           "minPayout": "1 ERG",
           "features": {
-            "0": "Global servers",
-            "1": "Real-time stats",
-            "2": "Mobile app"
+            "0": "Servidores globais",
+            "1": "Estatísticas em tempo real",
+            "2": "Aplicativo móvel"
           }
         },
         "1": {
@@ -2448,9 +2448,9 @@
           "fee": "1%",
           "minPayout": "0.1 ERG",
           "features": {
-            "0": "Low latency",
-            "1": "Detailed statistics",
-            "2": "Auto-payouts"
+            "0": "Baixa latência",
+            "1": "Estatísticas detalhadas",
+            "2": "Pagamentos automáticos"
           }
         },
         "2": {
@@ -2459,9 +2459,9 @@
           "fee": "0.9%",
           "minPayout": "1 ERG",
           "features": {
-            "0": "Low fees",
-            "1": "High uptime",
-            "2": "Multiple regions"
+            "0": "Taxas baixas",
+            "1": "Alta disponibilidade",
+            "2": "Múltiplas regiões"
           }
         },
         "3": {
@@ -2470,63 +2470,63 @@
           "fee": "1%",
           "minPayout": "0.1 ERG",
           "features": {
-            "0": "Professional service",
-            "1": "Advanced monitoring",
-            "2": "24/7 support"
+            "0": "Serviço profissional",
+            "1": "Monitoramento avançado",
+            "2": "Suporte 24/7"
           }
         }
       },
       "hardware": {
         "gpu": {
-          "category": "GPU Mining",
+          "category": "Mineração com GPU",
           "requirements": {
-            "0": "Minimum 4GB VRAM",
-            "1": "AMD RX 6000+ or NVIDIA RTX 30+",
-            "2": "Stable power supply",
-            "3": "Good cooling system"
+            "0": "Mínimo de 4 GB de VRAM",
+            "1": "AMD RX 6000+ ou NVIDIA RTX 30+",
+            "2": "Fonte de alimentação estável",
+            "3": "Bom sistema de resfriamento"
           },
-          "performance": "High",
-          "difficulty": "Medium"
+          "performance": "Alto",
+          "difficulty": "Médio"
         },
         "cpu": {
-          "category": "CPU Mining",
+          "category": "Mineração com CPU",
           "requirements": {
-            "0": "Modern multi-core processor",
-            "1": "Sufficient RAM (8GB+)",
-            "2": "Stable system"
+            "0": "Processador multi-core moderno",
+            "1": "RAM suficiente (8 GB+)",
+            "2": "Sistema estável"
           },
-          "performance": "Low",
-          "difficulty": "Easy"
+          "performance": "Baixo",
+          "difficulty": "Fácil"
         },
         "memory": {
-          "category": "Memory Requirements",
+          "category": "Requisitos de Memória",
           "requirements": {
-            "0": "16GB RAM recommended",
-            "1": "Fast SSD storage",
-            "2": "Reliable internet connection"
+            "0": "16 GB de RAM recomendado",
+            "1": "Armazenamento SSD rápido",
+            "2": "Conexão de internet confiável"
           },
-          "performance": "Critical",
-          "difficulty": "Easy"
+          "performance": "Crítico",
+          "difficulty": "Fácil"
         }
       },
       "software": {
         "0": {
           "name": "T-Rex Miner",
-          "type": "NVIDIA GPU",
+          "type": "GPU NVIDIA",
           "features": {
-            "0": "High performance",
-            "1": "Easy configuration",
-            "2": "Regular updates"
+            "0": "Alto desempenho",
+            "1": "Configuração fácil",
+            "2": "Atualizações frequentes"
           },
           "link": "https://github.com/trexminer/T-Rex"
         },
         "1": {
           "name": "TeamRedMiner",
-          "type": "AMD GPU",
+          "type": "GPU AMD",
           "features": {
-            "0": "Optimized for AMD",
-            "1": "Stable mining",
-            "2": "Good support"
+            "0": "Otimizado para AMD",
+            "1": "Mineração estável",
+            "2": "Bom suporte"
           },
           "link": "https://github.com/todxx/teamredminer"
         },
@@ -2534,36 +2534,36 @@
           "name": "NBMiner",
           "type": "Universal",
           "features": {
-            "0": "Cross-platform",
-            "1": "User-friendly",
-            "2": "Good documentation"
+            "0": "Multiplataforma",
+            "1": "Fácil de usar",
+            "2": "Boa documentação"
           },
           "link": "https://github.com/NebuTech/NBMiner"
         }
       },
       "optimization": {
         "0": {
-          "category": "Power Efficiency",
+          "category": "Eficiência de Energia",
           "tips": {
-            "0": "Undervolt your GPUs",
-            "1": "Optimize power limits",
-            "2": "Monitor temperatures"
+            "0": "Reduza a voltagem das suas GPUs",
+            "1": "Otimize os limites de energia",
+            "2": "Monitore as temperaturas"
           }
         },
         "1": {
-          "category": "Performance Tuning",
+          "category": "Ajuste de Desempenho",
           "tips": {
-            "0": "Adjust memory clocks",
-            "1": "Fine-tune core clocks",
-            "2": "Use mining profiles"
+            "0": "Ajuste os clocks de memória",
+            "1": "Ajuste fino dos clocks do núcleo",
+            "2": "Use perfis de mineração"
           }
         },
         "2": {
-          "category": "System Optimization",
+          "category": "Otimização do Sistema",
           "tips": {
-            "0": "Use dedicated mining OS",
-            "1": "Disable unnecessary services",
-            "2": "Regular maintenance"
+            "0": "Use um sistema operacional dedicado à mineração",
+            "1": "Desative serviços desnecessários",
+            "2": "Manutenção regular"
           }
         }
       }
@@ -2633,238 +2633,238 @@
   },
   "usePages": {
     "common": {
-      "whatsNext": "What's",
-      "whatsNextHighlight": "Next?",
-      "documentation": "Documentation",
-      "developerDocs": "Developer Docs",
-      "startBuilding": "Start Building",
-      "learnMore": "Learn More"
+      "whatsNext": "O que vem",
+      "whatsNextHighlight": "a seguir?",
+      "documentation": "Documentação",
+      "developerDocs": "Documentação para Desenvolvedores",
+      "startBuilding": "Comece a Desenvolver",
+      "learnMore": "Saiba Mais"
     }
   },
   "useBabelFees": {
     "title": "Babel Fees",
-    "description": "Pay transaction fees in any token on Ergo",
-    "subtitle": "Flexible fee payment system"
+    "description": "Pague taxas de transação em qualquer token na Ergo",
+    "subtitle": "Sistema flexível de pagamento de taxas"
   },
   "useBridges": {
-    "title": "Cross-Chain Bridges",
-    "description": "Connect Ergo with other blockchain networks",
-    "subtitle": "Trustless interoperability solutions"
+    "title": "Bridges Cross-Chain",
+    "description": "Conecte a Ergo com outras redes blockchain",
+    "subtitle": "Soluções de interoperabilidade sem necessidade de confiança"
   },
   "useDaos": {
-    "title": "DAOs & Governance",
-    "description": "Decentralized autonomous organizations on Ergo",
-    "subtitle": "Community-driven decision making"
+    "title": "DAOs e Governança",
+    "description": "Organizações autônomas descentralizadas na Ergo",
+    "subtitle": "Tomada de decisão orientada pela comunidade"
   },
   "useGaming": {
-    "title": "Gaming & Metaverse",
-    "description": "Blockchain gaming and virtual world applications",
-    "subtitle": "Play-to-earn and NFT gaming"
+    "title": "Jogos e Metaverso",
+    "description": "Jogos blockchain e aplicações de mundos virtuais",
+    "subtitle": "Jogos play-to-earn e NFT gaming"
   },
   "useGetErg": {
-    "title": "Get ERG",
-    "description": "How to acquire ERG tokens through various methods",
-    "subtitle": "Exchanges, mining, and earning opportunities"
+    "title": "Obter ERG",
+    "description": "Como adquirir tokens ERG por vários métodos",
+    "subtitle": "Exchanges, mineração e oportunidades de renda"
   },
   "useGuides": {
-    "title": "Use Case Guides",
-    "description": "Practical tutorials for using Ergo applications",
-    "subtitle": "Step-by-step implementation guides"
+    "title": "Guias de Casos de Uso",
+    "description": "Tutoriais práticos para usar aplicações Ergo",
+    "subtitle": "Guias de implementação passo a passo"
   },
   "useIdentity": {
-    "title": "Digital Identity",
-    "description": "Self-sovereign identity solutions on Ergo",
-    "subtitle": "Privacy-preserving identity management"
+    "title": "Identidade Digital",
+    "description": "Soluções de identidade soberana na Ergo",
+    "subtitle": "Gerenciamento de identidade com preservação de privacidade"
   },
   "useMining": {
-    "title": "Mining",
-    "description": "Mining ERG with Autolykos proof-of-work algorithm",
-    "subtitle": "Solo and pool mining guides"
+    "title": "Mineração",
+    "description": "Minerando ERG com o algoritmo proof-of-work Autolykos",
+    "subtitle": "Guias de mineração solo e em pool"
   },
   "useNfts": {
-    "title": "NFTs & Digital Assets",
-    "description": "Create, trade, and manage NFTs on Ergo",
-    "subtitle": "Rich metadata and smart contract capabilities"
+    "title": "NFTs e Ativos Digitais",
+    "description": "Crie, negocie e gerencie NFTs na Ergo",
+    "subtitle": "Metadados ricos e capacidades de contratos inteligentes"
   },
   "useOracles": {
     "title": "Oracle Pools",
-    "description": "Decentralized data feeds for smart contracts",
-    "subtitle": "Reliable off-chain data integration"
+    "description": "Feeds de dados descentralizados para contratos inteligentes",
+    "subtitle": "Integração confiável de dados off-chain"
   },
   "usePrivacy": {
-    "title": "Privacy Applications",
-    "description": "Financial privacy tools and mixing services",
-    "subtitle": "Confidential transactions and asset protection"
+    "title": "Aplicações de Privacidade",
+    "description": "Ferramentas de privacidade financeira e serviços de mistura",
+    "subtitle": "Transações confidenciais e proteção de ativos"
   },
   "useStablecoins": {
     "title": "Stablecoins",
-    "description": "Algorithmic stablecoins built on Ergo",
-    "subtitle": "Decentralized stable value storage"
+    "description": "Stablecoins algorítmicas desenvolvidas na Ergo",
+    "subtitle": "Armazenamento descentralizado de valor estável"
   },
   "useCasesData": {
     "tagLabels": {
       "stablecoin": "Stablecoin",
-      "algorithmic": "Algorithmic",
-      "collateral": "Collateral",
+      "algorithmic": "Algorítmico",
+      "collateral": "Colateral",
       "mixer": "Mixer",
       "stealth": "Stealth",
       "zeroKnowledge": "Zero-Knowledge",
       "bridge": "Bridge",
-      "interoperability": "Interoperability",
+      "interoperability": "Interoperabilidade",
       "multichain": "Multi-chain",
       "dao": "DAO",
-      "governance": "Governance",
-      "community": "Community",
+      "governance": "Governança",
+      "community": "Comunidade",
       "nft": "NFT",
       "royalties": "Royalties",
-      "dynamic": "Dynamic",
-      "oracles": "Oracles",
-      "dataFeeds": "Data feeds",
-      "prediction": "Prediction",
-      "identity": "Identity",
-      "reputation": "Reputation",
+      "dynamic": "Dinâmico",
+      "oracles": "Oráculos",
+      "dataFeeds": "Feeds de dados",
+      "prediction": "Previsão",
+      "identity": "Identidade",
+      "reputation": "Reputação",
       "did": "DID",
-      "gaming": "Gaming",
-      "metaverse": "Metaverse"
+      "gaming": "Jogos",
+      "metaverse": "Metaverso"
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
-      "subtitle": "Stable value storage without centralized control",
-      "description": "Over-collateralized stablecoins with innovative AgeUSD protocol."
+      "title": "Stablecoins Algorítmicas",
+      "subtitle": "Armazenamento de valor estável sem controle centralizado",
+      "description": "Stablecoins sobre-colateralizadas com o inovador protocolo AgeUSD."
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy."
+      "title": "Privacidade e Confidencialidade",
+      "subtitle": "Privacidade financeira em um mundo cada vez mais monitorado",
+      "description": "Mixers não custodiais, endereços stealth, provas de conhecimento zero para privacidade completa."
     },
     "bridges": {
-      "title": "Cross-Chain Bridges",
-      "subtitle": "Secure, trustless value transfer between blockchains",
-      "description": "Decentralized bridges with multi-signature security, no central custody."
+      "title": "Bridges Cross-Chain",
+      "subtitle": "Transferência segura e sem necessidade de confiança entre blockchains",
+      "description": "Bridges descentralizadas com segurança multi-assinatura, sem custódia central."
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "Community governance and alternative economic systems",
-      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing."
+      "title": "DAOs e Economias Alternativas",
+      "subtitle": "Governança comunitária e sistemas econômicos alternativos",
+      "description": "Infraestrutura DAO composável: tesouraria, votação, compartilhamento de lucros."
     },
     "nfts": {
-      "title": "NFTs & Digital Assets",
-      "subtitle": "True digital ownership, dynamic properties",
-      "description": "On-chain metadata, protocol royalties, programmable NFTs."
+      "title": "NFTs e Ativos Digitais",
+      "subtitle": "Propriedade digital real, propriedades dinâmicas",
+      "description": "Metadados on-chain, royalties de protocolo, NFTs programáveis."
     },
     "oracles": {
-      "title": "Oracles & Data Feeds",
-      "subtitle": "Bringing real-world data on-chain",
-      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets."
+      "title": "Oráculos e Feeds de Dados",
+      "subtitle": "Trazendo dados do mundo real para a blockchain",
+      "description": "Pools de oráculos descentralizados fornecem dados externos para DeFi e mercados de previsão."
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems."
+      "title": "Identidade e Reputação",
+      "subtitle": "Identidade soberana e reputação Web3",
+      "description": "Identificadores descentralizados (DID), resistência a Sybil, sistemas de reputação."
     },
     "gaming": {
-      "title": "Gaming & Metaverse",
-      "subtitle": "Next-gen gaming assets & digital worlds",
-      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure."
+      "title": "Jogos e Metaverso",
+      "subtitle": "Ativos de jogos de próxima geração e mundos digitais",
+      "description": "Tokens de jogos programáveis, economias movidas por NFT, infraestrutura de metaverso."
     },
     "faq": {
       "defi-on-ergo": {
-        "question": "What makes DeFi on Ergo different?",
-        "answer": "Ergo's eUTXO model provides superior security and composability for DeFi. Smart contracts are more predictable, costs are deterministic, and parallel transaction processing enables better scalability. Plus, optional privacy features protect your financial data."
+        "question": "O que torna o DeFi na Ergo diferente?",
+        "answer": "O modelo eUTXO da Ergo oferece segurança e composabilidade superiores para DeFi. Os contratos inteligentes são mais previsíveis, os custos são determinísticos e o processamento paralelo de transações permite melhor escalabilidade. Além disso, recursos opcionais de privacidade protegem seus dados financeiros."
       },
       "start-using-ergo": {
-        "question": "How do I start using Ergo applications?",
-        "answer": "1. Get an Ergo wallet like Nautilus or SAFEW\n2. Acquire ERG tokens from exchanges\n3. Explore dApps in our ecosystem\n4. Join the community on Discord or Telegram for help"
+        "question": "Como começo a usar as aplicações da Ergo?",
+        "answer": "1. Obtenha uma carteira Ergo como Nautilus ou SAFEW\n2. Adquira tokens ERG em exchanges\n3. Explore dApps em nosso ecossistema\n4. Entre na comunidade no Discord ou Telegram para obter ajuda"
       },
       "ergo-vs-ethereum": {
-        "question": "How does Ergo compare to Ethereum for dApps?",
-        "answer": "Ergo uses the eUTXO model (vs Ethereum's account model), offering better security, parallel processing, and predictable costs. ErgoScript is more secure by design with formal verification capabilities. Native tokens don't require smart contracts, making them cheaper and safer."
+        "question": "Como a Ergo se compara ao Ethereum para dApps?",
+        "answer": "A Ergo usa o modelo eUTXO (vs o modelo de conta do Ethereum), oferecendo melhor segurança, processamento paralelo e custos previsíveis. O ErgoScript é mais seguro por design com capacidades de verificação formal. Tokens nativos não exigem contratos inteligentes, tornando-os mais baratos e seguros."
       },
       "privacy-features": {
-        "question": "Are Ergo's privacy features legal to use?",
-        "answer": "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+        "question": "Os recursos de privacidade da Ergo são legais?",
+        "answer": "A Ergo fornece recursos opcionais de privacidade por meio de protocolos Sigma. Os usuários devem verificar suas regulamentações locais. A privacidade é implementada no nível de protocolo para usos legítimos, como confidencialidade empresarial, privacidade financeira pessoal e conformidade com leis de proteção de dados."
       },
       "mining-profitable": {
-        "question": "Is mining ERG still profitable?",
-        "answer": "Mining profitability depends on your electricity costs, hardware efficiency, and ERG price. Ergo's ASIC-resistant Autolykos algorithm keeps mining accessible to GPUs. Use mining calculators to estimate your potential returns based on current network difficulty."
+        "question": "Minerar ERG ainda é lucrativo?",
+        "answer": "A lucratividade da mineração depende dos seus custos de eletricidade, eficiência do hardware e preço do ERG. O algoritmo Autolykos resistente a ASIC da Ergo mantém a mineração acessível a GPUs. Use calculadoras de mineração para estimar seus retornos potenciais com base na dificuldade atual da rede."
       },
       "developer-resources": {
-        "question": "What resources are available for developers?",
-        "answer": "Ergo provides comprehensive developer resources:\n• ErgoScript documentation and tutorials\n• SDKs for multiple languages (Scala, JS, Python)\n• AppKit for dApp development\n• Active developer community and support\n• Grants program for ecosystem projects"
+        "question": "Quais recursos estão disponíveis para desenvolvedores?",
+        "answer": "A Ergo oferece recursos abrangentes para desenvolvedores:\n• Documentação e tutoriais de ErgoScript\n• SDKs para múltiplas linguagens (Scala, JS, Python)\n• AppKit para desenvolvimento de dApps\n• Comunidade de desenvolvedores ativa e suporte\n• Programa de grants para projetos do ecossistema"
       }
     }
   },
   "getErg": {
-    "title": "Get ERG - Buy Ergo Cryptocurrency",
-    "description": "Find where to buy ERG tokens on exchanges, DEXs, and P2P platforms",
+    "title": "Obter ERG - Comprar a Criptomoeda Ergo",
+    "description": "Encontre onde comprar tokens ERG em exchanges, DEXs e plataformas P2P",
     "seo": {
-      "title": "Get ERG - How to Buy Ergo Cryptocurrency | Exchange Guide",
-      "description": "Complete guide on where and how to buy ERG tokens. Find the best exchanges, DEXs, and platforms to purchase Ergo cryptocurrency.",
-      "keywords": "buy ERG, Ergo exchanges, get ERG tokens, ERG trading, cryptocurrency exchange, DEX Ergo"
+      "title": "Obter ERG - Como Comprar a Criptomoeda Ergo | Guia de Exchanges",
+      "description": "Guia completo sobre onde e como comprar tokens ERG. Encontre as melhores exchanges, DEXs e plataformas para adquirir a criptomoeda Ergo.",
+      "keywords": "comprar ERG, exchanges de Ergo, obter tokens ERG, negociação de ERG, exchange de criptomoedas, DEX Ergo"
     },
     "hero": {
-      "title": "Get ERG",
-      "subtitle": "Your Gateway to the Ergo Ecosystem",
-      "description": "Discover where to buy, trade, and store ERG tokens",
+      "title": "Obter ERG",
+      "subtitle": "Sua Porta de Entrada para o Ecossistema Ergo",
+      "description": "Descubra onde comprar, negociar e armazenar tokens ERG",
       "cta": {
-        "exploreExchanges": "Explore Exchanges",
-        "viewGuide": "View Guide"
+        "exploreExchanges": "Explorar Exchanges",
+        "viewGuide": "Ver Guia"
       }
     },
     "exchanges": {
       "title": "Exchanges",
-      "centralized": "Centralized Exchanges",
-      "decentralized": "Decentralized Exchanges",
-      "p2p": "P2P Platforms"
+      "centralized": "Exchanges Centralizadas",
+      "decentralized": "Exchanges Descentralizadas",
+      "p2p": "Plataformas P2P"
     },
-    "heroDescription": "Choose from centralized exchanges, decentralized platforms, or peer-to-peer trading to acquire ERG tokens",
-    "subDescription": "Start your Ergo journey by acquiring ERG tokens through trusted exchanges and platforms",
+    "heroDescription": "Escolha entre exchanges centralizadas, plataformas descentralizadas ou negociação peer-to-peer para adquirir tokens ERG",
+    "subDescription": "Inicie sua jornada na Ergo adquirindo tokens ERG por meio de exchanges e plataformas confiáveis",
     "sections": {
       "exchanges": {
-        "title": "Centralized Exchanges",
-        "description": "Trade ERG on established cryptocurrency exchanges with high liquidity",
-        "viewAll": "View All Exchanges",
-        "goToExchange": "Go to Exchange"
+        "title": "Exchanges Centralizadas",
+        "description": "Negocie ERG em exchanges de criptomoedas estabelecidas com alta liquidez",
+        "viewAll": "Ver Todas as Exchanges",
+        "goToExchange": "Ir para a Exchange"
       },
       "dex": {
-        "title": "Decentralized Exchanges",
-        "description": "Trade directly from your wallet without KYC",
-        "viewAll": "View All DEXs",
-        "goToSwap": "Go to Swap",
+        "title": "Exchanges Descentralizadas",
+        "description": "Negocie diretamente da sua carteira sem KYC",
+        "viewAll": "Ver Todas as DEXs",
+        "goToSwap": "Ir para Troca",
         "features": {
-          "noKYC": "No KYC Required",
-          "selfCustody": "Self Custody",
-          "privateTrading": "Private Trading",
-          "directSwap": "Direct Swap"
+          "noKYC": "Sem KYC Necessário",
+          "selfCustody": "Auto-custódia",
+          "privateTrading": "Negociação Privada",
+          "directSwap": "Troca Direta"
         }
       },
       "p2p": {
-        "title": "P2P Platforms",
-        "description": "Trade directly with other users",
-        "viewAll": "View All P2P",
-        "goToPlatform": "Go to Platform",
-        "explorePlatform": "Explore Platform",
+        "title": "Plataformas P2P",
+        "description": "Negocie diretamente com outros usuários",
+        "viewAll": "Ver Todas as P2P",
+        "goToPlatform": "Ir para a Plataforma",
+        "explorePlatform": "Explorar Plataforma",
         "features": {
-          "directTrade": "Direct Trade",
-          "multiplePayments": "Multiple Payment Methods",
-          "escrowProtection": "Escrow Protection",
-          "localCurrency": "Local Currency Support"
+          "directTrade": "Negociação Direta",
+          "multiplePayments": "Múltiplos Métodos de Pagamento",
+          "escrowProtection": "Proteção por Escrow",
+          "localCurrency": "Suporte a Moeda Local"
         }
       },
       "security": {
-        "title": "Security First",
-        "description": "Always store your ERG in a secure wallet after purchase",
-        "findWallet": "Find a Wallet"
+        "title": "Segurança em Primeiro Lugar",
+        "description": "Sempre armazene seu ERG em uma carteira segura após a compra",
+        "findWallet": "Encontrar uma Carteira"
       },
       "centralized": {
-        "title": "Centralized Exchanges",
-        "description": "Traditional exchanges with fiat on-ramps and high liquidity",
-        "viewExchange": "View Exchange",
+        "title": "Exchanges Centralizadas",
+        "description": "Exchanges tradicionais com rampas de entrada fiat e alta liquidez",
+        "viewExchange": "Ver Exchange",
         "features": {
-          "fiatSupport": "Fiat Support",
-          "highLiquidity": "High Liquidity",
-          "userFriendly": "User Friendly",
-          "mobileApp": "Mobile App"
+          "fiatSupport": "Suporte a Fiat",
+          "highLiquidity": "Alta Liquidez",
+          "userFriendly": "Fácil de Usar",
+          "mobileApp": "Aplicativo Móvel"
         }
       }
     },
@@ -2872,139 +2872,139 @@
       "cex": {
         "kucoin": {
           "name": "KuCoin",
-          "description": "Global exchange with ERG/USDT and ERG/BTC pairs"
+          "description": "Exchange global com pares ERG/USDT e ERG/BTC"
         },
         "gateio": {
           "name": "Gate.io",
-          "description": "Major exchange supporting ERG trading"
+          "description": "Exchange principal com suporte à negociação de ERG"
         },
         "coinex": {
           "name": "CoinEx",
-          "description": "User-friendly exchange with ERG pairs"
+          "description": "Exchange fácil de usar com pares de ERG"
         },
         "huobi": {
           "name": "Huobi",
-          "description": "Established exchange with deep ERG liquidity"
+          "description": "Exchange estabelecida com profunda liquidez de ERG"
         },
         "mexc": {
           "name": "MEXC",
-          "description": "Fast-growing exchange with ERG perpetuals"
+          "description": "Exchange em rápido crescimento com perpétuos de ERG"
         },
         "bitmart": {
           "name": "BitMart",
-          "description": "Popular exchange with ERG trading"
+          "description": "Exchange popular com negociação de ERG"
         },
         "tradeogre": {
           "name": "TradeOgre",
-          "description": "Simple exchange for ERG/BTC trading"
+          "description": "Exchange simples para negociação de ERG/BTC"
         },
         "probit": {
           "name": "ProBit",
-          "description": "Korean exchange with ERG support"
+          "description": "Exchange coreana com suporte a ERG"
         }
       },
       "dex": {
         "spectrum": {
           "name": "Spectrum Finance",
-          "description": "Native Ergo DEX with deep liquidity"
+          "description": "DEX nativa da Ergo com alta liquidez"
         },
         "uniswap": {
           "name": "Uniswap",
-          "description": "Trade wrapped ERG on Ethereum"
+          "description": "Negocie ERG encapsulado no Ethereum"
         },
         "splash": {
           "name": "SplashPool",
-          "description": "Cross-chain DEX supporting ERG"
+          "description": "DEX cross-chain com suporte a ERG"
         }
       },
       "p2p": {
         "localcryptos": {
           "name": "LocalCryptos",
-          "description": "P2P platform with escrow service"
+          "description": "Plataforma P2P com serviço de escrow"
         },
         "bisq": {
           "name": "Bisq",
-          "description": "Decentralized P2P trading network"
+          "description": "Rede de negociação P2P descentralizada"
         }
       }
     },
     "features": {
       "liquidity": {
-        "title": "High Liquidity",
-        "description": "Access deep order books and competitive prices"
+        "title": "Alta Liquidez",
+        "description": "Acesse livros de ordens profundos e preços competitivos"
       },
       "security": {
-        "title": "Secure Trading",
-        "description": "Trade on reputable platforms with proven security"
+        "title": "Negociação Segura",
+        "description": "Negocie em plataformas respeitáveis com segurança comprovada"
       },
       "variety": {
-        "title": "Multiple Options",
-        "description": "Choose from CEX, DEX, or P2P based on your needs"
+        "title": "Múltiplas Opções",
+        "description": "Escolha entre CEX, DEX ou P2P com base nas suas necessidades"
       },
       "global": {
-        "title": "Global Access",
-        "description": "Available worldwide with various fiat gateways"
+        "title": "Acesso Global",
+        "description": "Disponível mundialmente com várias opções de entrada fiat"
       }
     },
     "steps": {
-      "title": "How to Buy ERG",
+      "title": "Como Comprar ERG",
       "step1": {
-        "title": "Choose Platform",
-        "description": "Select exchange based on your needs"
+        "title": "Escolher Plataforma",
+        "description": "Selecione a exchange com base nas suas necessidades"
       },
       "step2": {
-        "title": "Create Account",
-        "description": "Sign up and verify if required"
+        "title": "Criar Conta",
+        "description": "Cadastre-se e verifique se necessário"
       },
       "step3": {
-        "title": "Deposit Funds",
-        "description": "Add fiat or crypto to your account"
+        "title": "Depositar Fundos",
+        "description": "Adicione fiat ou cripto à sua conta"
       },
       "step4": {
-        "title": "Buy ERG",
-        "description": "Place order and complete purchase"
+        "title": "Comprar ERG",
+        "description": "Faça um pedido e conclua a compra"
       },
       "step5": {
-        "title": "Withdraw",
-        "description": "Transfer ERG to your wallet"
+        "title": "Retirar",
+        "description": "Transfira ERG para sua carteira"
       }
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Perguntas Frequentes",
       "whereToBy": {
-        "question": "Where can I buy ERG?",
-        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, decentralized exchanges like Spectrum Finance, or P2P platforms."
+        "question": "Onde posso comprar ERG?",
+        "answer": "Você pode comprar ERG em exchanges centralizadas como KuCoin e Gate.io, exchanges descentralizadas como Spectrum Finance, ou plataformas P2P."
       },
       "minAmount": {
-        "question": "What's the minimum amount to buy?",
-        "answer": "Minimum amounts vary by platform. Most exchanges allow purchases starting from $10-20 worth of ERG."
+        "question": "Qual é o valor mínimo para comprar?",
+        "answer": "Os valores mínimos variam por plataforma. A maioria das exchanges permite compras a partir de US$ 10-20 em ERG."
       },
       "fees": {
-        "question": "What are typical fees?",
-        "answer": "Exchange fees range from 0.1% to 0.5% per trade."
+        "question": "Quais são as taxas típicas?",
+        "answer": "As taxas de exchange variam de 0,1% a 0,5% por operação."
       },
       "storage": {
-        "question": "How do I store ERG safely?",
-        "answer": "Use official Ergo wallets like Ergo Wallet, Nautilus, or hardware wallets for maximum security."
+        "question": "Como armazeno ERG com segurança?",
+        "answer": "Use carteiras oficiais da Ergo como Ergo Wallet, Nautilus ou carteiras de hardware para máxima segurança."
       },
       "whereStore": {
-        "question": "Where should I store my ERG?",
-        "answer": "Use official Ergo wallets like Nautilus, SAFEW, or Ergo Mobile for secure storage."
+        "question": "Onde devo armazenar meu ERG?",
+        "answer": "Use carteiras oficiais da Ergo como Nautilus, SAFEW ou Ergo Mobile para armazenamento seguro."
       },
       "minPurchase": {
-        "question": "What's the minimum ERG purchase?",
-        "answer": "Minimum varies by exchange, typically 1-10 ERG."
+        "question": "Qual é a compra mínima de ERG?",
+        "answer": "O mínimo varia por exchange, geralmente de 1 a 10 ERG."
       },
       "time": {
-        "question": "How long does it take?",
-        "answer": "CEX purchases are instant, DEX swaps take 2-5 minutes."
+        "question": "Quanto tempo leva?",
+        "answer": "Compras em CEX são instantâneas; trocas em DEX levam de 2 a 5 minutos."
       }
     },
     "cta": {
-      "title": "Ready to Get Started?",
-      "description": "Choose your preferred method to acquire ERG and join the Ergo ecosystem",
-      "exploreExchanges": "Explore Exchanges",
-      "learnMore": "Learn More About Ergo"
+      "title": "Pronto para Começar?",
+      "description": "Escolha seu método preferido para adquirir ERG e junte-se ao ecossistema Ergo",
+      "exploreExchanges": "Explorar Exchanges",
+      "learnMore": "Saiba Mais sobre a Ergo"
     }
   }
 }

@@ -461,221 +461,221 @@
       ]
     },
     "getErg": {
-      "title": "Acquire ERG",
-      "subtitle": "Your guide to obtaining ERG, the native currency of the Ergo ecosystem. Choose the method that best suits you.",
-      "description": "Buy with fiat, trade on CEX, or swap on DEX — pick the way that's right for you.",
+      "title": "ERG Edinin",
+      "subtitle": "Ergo ekosisteminin yerel para birimi olan ERG'yi edinme rehberiniz. Size en uygun yöntemi seçin.",
+      "description": "Fiat ile satın alın, CEX'te takas edin veya DEX'te swap yapın — size uygun yolu seçin.",
       "seo": {
-        "title": "How to Get ERG | Buy Ergo on Exchanges & DEXs",
-        "description": "Complete guide to buying ERG tokens. Compare 20+ exchanges, find the best rates, and start trading Ergo. Includes CEX and DEX options with step-by-step instructions.",
-        "keywords": "buy erg, get ergo, erg exchanges, where to buy ergo, erg trading, ergo cryptocurrency, erg token, buy ergo coin",
-        "ogTitle": "Buy ERG - Complete Exchange Guide",
-        "ogDescription": "Find the best exchanges to buy ERG. Compare rates, fees, and get started with Ergo.",
-        "ogAlt": "Buy ERG Guide",
-        "twitterTitle": "Where to Buy ERG | Exchange Guide",
-        "twitterDescription": "Compare 20+ exchanges to buy ERG. Find the best rates and start trading."
+        "title": "ERG Nasıl Edinilir | Borsalarda ve DEX'lerde Ergo Satın Alın",
+        "description": "ERG token satın almak için eksiksiz rehber. 20'den fazla borsayı karşılaştırın, en iyi fiyatları bulun ve Ergo ticaretine başlayın. Adım adım talimatlarla CEX ve DEX seçenekleri dahil.",
+        "keywords": "erg satın al, ergo edin, erg borsaları, ergo nereden satın alınır, erg ticareti, ergo kripto para, erg token, ergo coin satın al",
+        "ogTitle": "ERG Satın Al - Eksiksiz Borsa Rehberi",
+        "ogDescription": "ERG satın almak için en iyi borsaları bulun. Fiyatları ve ücretleri karşılaştırın, Ergo'ya başlayın.",
+        "ogAlt": "ERG Satın Alma Rehberi",
+        "twitterTitle": "ERG Nereden Satın Alınır | Borsa Rehberi",
+        "twitterDescription": "ERG satın almak için 20'den fazla borsayı karşılaştırın. En iyi fiyatları bulun ve ticarete başlayın."
       },
       "hero": {
-        "title": "Get",
-        "titleHighlight": "ERG",
-        "subtitle": "Buy ERG through multiple secure channels",
-        "description": "From fiat on-ramps to decentralized exchanges - choose the method that works best for you. All options provide direct access to ERG tokens for your wallet."
+        "title": "ERG",
+        "titleHighlight": "Edinin",
+        "subtitle": "Birden fazla güvenli kanal aracılığıyla ERG satın alın",
+        "description": "Fiat girişlerinden merkeziyetsiz borsalara kadar - size en uygun yöntemi seçin. Tüm seçenekler, cüzdanınız için ERG tokenlarına doğrudan erişim sağlar."
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "buyWithFiat": {
-          "title": "Buy with Fiat",
-          "description": "Credit card & bank transfer via Banxa"
+          "title": "Fiat ile Satın Al",
+          "description": "Banxa aracılığıyla kredi kartı ve banka havalesi"
         },
         "tradeOnGate": {
-          "title": "Trade on Gate.io",
-          "description": "Popular CEX with ERG/USDT pair"
+          "title": "Gate.io'da Takas Et",
+          "description": "ERG/USDT çiftiyle popüler CEX"
         },
         "dexTrading": {
-          "title": "DEX Trading",
-          "description": "Swap wrapped ERG on various chains"
+          "title": "DEX Ticareti",
+          "description": "Çeşitli zincirlerde wrapped ERG swap edin"
         }
       },
       "chooseMethod": {
-        "title": "Choose Your Method",
-        "description": "Select the most convenient way to get ERG based on your preferences and location"
+        "title": "Yönteminizi Seçin",
+        "description": "Tercihlerinize ve konumunuza göre ERG edinmenin en uygun yolunu seçin"
       },
       "tabs": {
-        "buyWithFiat": "Buy with Fiat",
-        "cex": "Centralized Exchanges",
-        "dex": "Decentralized Exchanges"
+        "buyWithFiat": "Fiat ile Satın Al",
+        "cex": "Merkezi Borsalar",
+        "dex": "Merkeziyetsiz Borsalar"
       },
       "buttons": {
-        "buy": "Buy",
-        "trade": "Trade",
-        "swap": "Swap",
-        "buyWithFiat": "Buy with Fiat",
-        "viewExchanges": "View Exchanges"
+        "buy": "Satın Al",
+        "trade": "Takas Et",
+        "swap": "Swap Yap",
+        "buyWithFiat": "Fiat ile Satın Al",
+        "viewExchanges": "Borsaları Görüntüle"
       },
       "badges": {
-        "soon": "soon",
-        "bounty": "bounty"
+        "soon": "yakında",
+        "bounty": "ödül"
       },
       "whatsNext": {
-        "title": "What's Next?",
-        "description": "Now that you have ERG, explore what you can do with it",
+        "title": "Sırada Ne Var?",
+        "description": "ERG edindikten sonra, onunla neler yapabileceğinizi keşfedin",
         "useCases": {
-          "title": "Explore Use Cases",
-          "subtitle": "Discover Applications",
-          "description": "Discover all the ways you can use ERG - from DeFi to privacy features"
+          "title": "Kullanım Senaryolarını Keşfet",
+          "subtitle": "Uygulamaları Keşfet",
+          "description": "DeFi'den gizlilik özelliklerine kadar ERG'yi kullanabileceğiniz tüm yolları keşfedin"
         },
         "dapps": {
-          "title": "Try dApps",
-          "subtitle": "Explore Ecosystem",
-          "description": "Start using decentralized applications built on Ergo blockchain"
+          "title": "dApp'leri Deneyin",
+          "subtitle": "Ekosistemi Keşfet",
+          "description": "Ergo blockchain üzerinde kurulmuş merkeziyetsiz uygulamaları kullanmaya başlayın"
         }
       },
       "finalCta": {
-        "title": "Market Updates & Analysis",
-        "description": "Get the latest ERG market analysis, price alerts, and investment insights delivered to your inbox"
+        "title": "Piyasa Güncellemeleri ve Analizi",
+        "description": "En son ERG piyasa analizini, fiyat uyarılarını ve yatırım içgörülerini gelen kutunuza alın"
       },
       "waysToGetErg": {
-        "title": "Ways to Get ERG",
-        "fiatOnRamp": "Fiat On-Ramp",
-        "cex": "Centralized Exchanges (CEX)",
-        "dex": "Decentralized Exchanges (DEX)"
+        "title": "ERG Edinme Yolları",
+        "fiatOnRamp": "Fiat Girişi",
+        "cex": "Merkezi Borsalar (CEX)",
+        "dex": "Merkeziyetsiz Borsalar (DEX)"
       },
       "onRamp": {
-        "title": "Buy with Fiat (On-Ramp)",
-        "subtitle": "The easiest way to get ERG is to buy it directly using fiat currency through an on-ramp service.",
+        "title": "Fiat ile Satın Al (Giriş)",
+        "subtitle": "ERG edinmenin en kolay yolu, bir giriş hizmeti aracılığıyla doğrudan fiat para birimi kullanarak satın almaktır.",
         "services": {
           "banxa": {
             "name": "Banxa",
-            "description": "Buy ERG directly with your credit card or bank transfer. A straightforward way to get started."
+            "description": "ERG'yi doğrudan kredi kartınız veya banka havalesiyle satın alın. Başlamak için kolay bir yol."
           },
           "onramper": {
             "name": "Onramper",
-            "description": "Aggregator: buy ERG with fiat using 20+ providers and 130+ payment methods. Fast, global, and easy."
+            "description": "Toplayıcı: 20'den fazla sağlayıcı ve 130'dan fazla ödeme yöntemiyle fiat kullanarak ERG satın alın. Hızlı, global ve kolay."
           },
-          "visitButton": "Visit {name}"
+          "visitButton": "{name} Sitesini Ziyaret Et"
         }
       },
       "cex": {
-        "title": "Buy on a Centralized Exchange (CEX)",
-        "subtitle": "Trade for ERG on established cryptocurrency exchanges. This usually requires creating an account and verifying your identity (KYC).",
+        "title": "Merkezi Borsada Satın Al (CEX)",
+        "subtitle": "Köklü kripto para borsalarında ERG için takas yapın. Bu genellikle bir hesap oluşturma ve kimliğinizi doğrulamayı (KYC) gerektirir.",
         "exchanges": {
           "gateio": {
             "name": "Gate.io",
-            "description": "High volume CEX with ERG/USDT and ERG/BTC pairs."
+            "description": "ERG/USDT ve ERG/BTC çiftleriyle yüksek hacimli CEX."
           },
           "kucoin": {
             "name": "KuCoin",
-            "description": "Popular exchange supporting ERG/USDT and ERG/BTC."
+            "description": "ERG/USDT ve ERG/BTC'yi destekleyen popüler borsa."
           },
           "mexc": {
             "name": "MEXC",
-            "description": "Known for a wide variety of assets, including ERG/USDT."
+            "description": "ERG/USDT dahil çok çeşitli varlıklarıyla bilinen borsa."
           },
           "htx": {
             "name": "HTX (Huobi)",
-            "description": "Global CEX with ERG/USDT trading pair available."
+            "description": "ERG/USDT işlem çifti mevcut global CEX."
           },
           "coinex": {
             "name": "Coinex",
-            "description": "Exchange supporting ERG/USDT with no KYC required."
+            "description": "KYC gerektirmeden ERG/USDT destekleyen borsa."
           }
         },
-        "tradeButton": "Trade"
+        "tradeButton": "Takas Et"
       },
       "dex": {
-        "title": "Swap on a Decentralized Exchange (DEX)",
-        "subtitle": "Use wrapped ERG (rsERG) on other blockchains to swap for assets on decentralized exchanges. This is a more advanced method that requires a compatible wallet.",
+        "title": "Merkeziyetsiz Borsada Swap Yap (DEX)",
+        "subtitle": "Merkeziyetsiz borsalarda varlıklarla swap yapmak için diğer blockchain'lerde wrapped ERG (rsERG) kullanın. Bu, uyumlu bir cüzdan gerektiren daha gelişmiş bir yöntemdir.",
         "exchanges": {
           "aster": {
             "name": "Aster",
-            "description": "Decentralized perpetual contracts exchange"
+            "description": "Merkeziyetsiz sürekli sözleşme borsası"
           },
           "hyperliquid": {
             "name": "Hyperliquid",
-            "description": "Trade ERG perpetuals on a decentralized derivatives exchange with deep liquidity."
+            "description": "Derin likiditeye sahip merkeziyetsiz türev borsasında ERG perpetuals ticareti yapın."
           },
           "pancakeswap": {
             "name": "PancakeSwap",
-            "description": "Swap for rsERG (wrapped ERG) on the Binance Smart Chain."
+            "description": "Binance Smart Chain'de rsERG (wrapped ERG) için swap yapın."
           },
           "uniswap": {
             "name": "Uniswap",
-            "description": "Trade for rsERG on the Ethereum network."
+            "description": "Ethereum ağında rsERG için takas yapın."
           },
           "splash": {
             "name": "Splash",
-            "description": "A DEX on the Cardano network supporting wrapped Ergo assets."
+            "description": "Wrapped Ergo varlıklarını destekleyen Cardano ağındaki bir DEX."
           }
         },
-        "goToSwap": "Go to swap"
+        "goToSwap": "Swap'a git"
       },
       "security": {
-        "title": "Always Be Secure",
-        "description": "After acquiring ERG on an exchange, it is crucial to withdraw it to a personal wallet where you control the private keys. Remember the crypto mantra: \"Not your keys, not your crypto.\"",
-        "findWallet": "Find a secure wallet here"
+        "title": "Her Zaman Güvende Olun",
+        "description": "Bir borsada ERG edindikten sonra, özel anahtarları kontrol ettiğiniz kişisel bir cüzdana çekmeniz çok önemlidir. Kripto mantrını unutmayın: 'Anahtarlar sizin değilse, kripto da sizin değil.'",
+        "findWallet": "Güvenli bir cüzdan buradan bulun"
       },
       "schema": {
         "exchangeList": {
-          "name": "ERG Exchange Directory",
-          "description": "Complete list of exchanges where you can buy ERG tokens",
+          "name": "ERG Borsa Dizini",
+          "description": "ERG token satın alabileceğiniz borsaların tam listesi",
           "items": [
             {
               "name": "KuCoin",
               "url": "https://www.kucoin.com",
-              "description": "Major exchange with high ERG liquidity"
+              "description": "Yüksek ERG likiditesiyle büyük borsa"
             },
             {
               "name": "Gate.io",
               "url": "https://www.gate.io",
-              "description": "Popular exchange supporting ERG"
+              "description": "ERG'yi destekleyen popüler borsa"
             },
             {
               "name": "CoinEx",
               "url": "https://www.coinex.com",
-              "description": "Exchange with ERG trading pairs"
+              "description": "ERG işlem çiftlerine sahip borsa"
             }
           ]
         },
         "faq": {
           "whereToBuy": {
-            "question": "Where can I buy ERG?",
-            "answer": "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, as well as DEXs like Spectrum Finance. Choose based on your region and preferred payment method."
+            "question": "ERG nereden satın alabilirim?",
+            "answer": "ERG, KuCoin, Gate.io, CoinEx ve Huobi gibi büyük borsaların yanı sıra Spectrum Finance gibi DEX'lerde mevcuttur. Bölgenize ve tercih ettiğiniz ödeme yöntemine göre seçin."
           },
           "bestExchange": {
-            "question": "What is the best exchange to buy ERG?",
-            "answer": "KuCoin typically has the highest liquidity and volume for ERG trading, but the best exchange depends on your location, verification requirements, and preferred trading pairs."
+            "question": "ERG satın almak için en iyi borsa hangisidir?",
+            "answer": "KuCoin genellikle ERG ticareti için en yüksek likidite ve hacme sahiptir; ancak en iyi borsa konumunuza, doğrulama gereksinimlerinize ve tercih ettiğiniz işlem çiftlerine göre değişir."
           },
           "buyWithFiat": {
-            "question": "Can I buy ERG with fiat currency?",
-            "answer": "Yes, some exchanges like KuCoin allow you to buy ERG directly with credit card or bank transfer. Alternatively, you can buy USDT/BTC first and trade for ERG."
+            "question": "ERG'yi fiat para birimiyle satın alabilir miyim?",
+            "answer": "Evet, KuCoin gibi bazı borsalar kredi kartı veya banka havalesiyle doğrudan ERG satın almanıza olanak tanır. Alternatif olarak önce USDT/BTC satın alıp ERG ile takas edebilirsiniz."
           },
           "storage": {
-            "question": "How do I store ERG after buying?",
-            "answer": "Store ERG in official wallets like Nautilus (browser), Satergo (desktop), or SAFEW (mobile). Never leave large amounts on exchanges long-term."
+            "question": "Satın aldıktan sonra ERG'yi nasıl saklarım?",
+            "answer": "ERG'yi Nautilus (tarayıcı), Satergo (masaüstü) veya SAFEW (mobil) gibi resmi cüzdanlarda saklayın. Büyük miktarları uzun süre borsalarda bırakmayın."
           }
         },
         "howTo": {
-          "name": "How to Buy ERG Tokens",
-          "description": "Step-by-step guide to purchasing Ergo cryptocurrency",
+          "name": "ERG Token Nasıl Satın Alınır",
+          "description": "Ergo kripto parası satın alma adım adım rehberi",
           "steps": {
             "chooseExchange": {
-              "name": "Choose an exchange",
-              "text": "Select a reputable exchange that lists ERG"
+              "name": "Borsa seçin",
+              "text": "ERG listeleyen saygın bir borsa seçin"
             },
             "createAccount": {
-              "name": "Create account",
-              "text": "Sign up and complete KYC verification if required"
+              "name": "Hesap oluşturun",
+              "text": "Kaydolun ve gerekiyorsa KYC doğrulamasını tamamlayın"
             },
             "depositFunds": {
-              "name": "Deposit funds",
-              "text": "Add fiat or cryptocurrency to your exchange account"
+              "name": "Para yatırın",
+              "text": "Borsa hesabınıza fiat veya kripto para ekleyin"
             },
             "buyErg": {
-              "name": "Buy ERG",
-              "text": "Trade your funds for ERG tokens"
+              "name": "ERG satın alın",
+              "text": "Paranızı ERG tokenlarıyla takas edin"
             },
             "withdrawToWallet": {
-              "name": "Withdraw to wallet",
-              "text": "Transfer ERG to your personal wallet for security"
+              "name": "Cüzdana çekin",
+              "text": "Güvenlik için ERG'yi kişisel cüzdanınıza aktarın"
             }
           }
         }
@@ -1784,729 +1784,729 @@
       }
     },
     "nfts": {
-      "title": "NFTs & Digital Assets",
-      "subtitle": "True digital ownership, dynamic properties",
-      "description": "On-chain metadata, protocol royalties, programmable NFTs.",
-      "lastUpdated": "Last updated:",
+      "title": "NFT'ler ve Dijital Varlıklar",
+      "subtitle": "Gerçek dijital sahiplik, dinamik özellikler",
+      "description": "Zincir üstü metadata, protokol telif hakları, programlanabilir NFT'ler.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "nfts",
         "ogImage": "/og-nfts.png",
         "canonicalPath": "/use/nfts-digital-assets"
       },
       "seo": {
-        "title": "NFTs & Digital Assets on Ergo | True Digital Ownership",
-        "description": "Create and trade NFTs on Ergo. On-chain metadata, protocol royalties, dynamic NFTs, and programmable digital assets.",
-        "keywords": "NFTs, digital assets, SkyHarbor, on-chain metadata, protocol royalties, dynamic NFTs, Ergo NFT",
-        "ogTitle": "NFTs & Digital Assets on Ergo",
-        "ogDescription": "True digital ownership with on-chain metadata and protocol royalties.",
-        "twitterTitle": "NFTs on Ergo",
-        "twitterDescription": "Create programmable NFTs with on-chain metadata"
+        "title": "Ergo'da NFT'ler ve Dijital Varlıklar | Gerçek Dijital Sahiplik",
+        "description": "Ergo'da NFT oluşturun ve takas edin. Zincir üstü metadata, protokol telif hakları, dinamik NFT'ler ve programlanabilir dijital varlıklar.",
+        "keywords": "NFT'ler, dijital varlıklar, SkyHarbor, zincir üstü metadata, protokol telif hakları, dinamik NFT'ler, Ergo NFT",
+        "ogTitle": "Ergo'da NFT'ler ve Dijital Varlıklar",
+        "ogDescription": "Zincir üstü metadata ve protokol telif haklarıyla gerçek dijital sahiplik.",
+        "twitterTitle": "Ergo'da NFT'ler",
+        "twitterDescription": "Zincir üstü metadata ile programlanabilir NFT'ler oluşturun"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "browseNfts": {
-          "name": "Browse NFTs",
-          "description": "Explore collections on SkyHarbor"
+          "name": "NFT'lere Göz At",
+          "description": "SkyHarbor'daki koleksiyonları keşfedin"
         },
         "createNfts": {
-          "name": "Create NFTs",
-          "description": "Mint your own collection"
+          "name": "NFT Oluştur",
+          "description": "Kendi koleksiyonunuzu mint edin"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build NFT applications"
+          "name": "Geliştirici Belgeleri",
+          "description": "NFT uygulamaları geliştirin"
         }
       },
       "navigation": {
-        "nftFeatures": "NFT features",
-        "marketplaces": "Marketplaces",
-        "faq": "FAQ"
+        "nftFeatures": "NFT özellikleri",
+        "marketplaces": "Pazaryerleri",
+        "faq": "SSS"
       },
       "features": {
-        "title": "NFT Features",
-        "subtitle": "Advanced capabilities for digital assets on Ergo",
+        "title": "NFT Özellikleri",
+        "subtitle": "Ergo'da dijital varlıklar için gelişmiş yetenekler",
         "onChainMetadata": {
-          "title": "On-Chain Metadata",
-          "description": "Store NFT metadata directly on-chain for true permanence and decentralization"
+          "title": "Zincir Üstü Metadata",
+          "description": "NFT metadata'sını gerçek kalıcılık ve merkeziyetsizlik için doğrudan zincir üstünde saklayın"
         },
         "protocolRoyalties": {
-          "title": "Protocol Royalties",
-          "description": "Enforceable royalties at the protocol level, ensuring creators always get paid"
+          "title": "Protokol Telif Hakları",
+          "description": "Protokol düzeyinde uygulanabilir telif hakları, içerik oluşturucuların her zaman ödeme almasını sağlar"
         },
         "dynamicNfts": {
-          "title": "Dynamic NFTs",
-          "description": "Programmable NFTs that can evolve based on conditions or user interactions"
+          "title": "Dinamik NFT'ler",
+          "description": "Koşullara veya kullanıcı etkileşimlerine göre gelişebilen programlanabilir NFT'ler"
         },
         "fractionalOwnership": {
-          "title": "Fractional Ownership",
-          "description": "Split NFTs into fungible tokens for shared ownership and liquidity"
+          "title": "Kesirli Sahiplik",
+          "description": "NFT'leri paylaşımlı sahiplik ve likidite için değiştirilebilir tokenlara bölün"
         },
         "batchMinting": {
-          "title": "Batch Minting",
-          "description": "Efficient batch minting for collections with minimal transaction costs"
+          "title": "Toplu Mint",
+          "description": "Minimum işlem maliyetiyle koleksiyonlar için verimli toplu mint"
         },
         "composableAssets": {
-          "title": "Composable Assets",
-          "description": "NFTs that can interact with DeFi protocols and other smart contracts"
+          "title": "Birleştirilebilir Varlıklar",
+          "description": "DeFi protokolleri ve diğer akıllı sözleşmelerle etkileşime girebilen NFT'ler"
         }
       },
       "technical": {
-        "title": "Technical Implementation",
-        "subtitle": "How NFTs work on Ergo",
+        "title": "Teknik Uygulama",
+        "subtitle": "NFT'lerin Ergo'da nasıl çalıştığı",
         "tabs": {
-          "overview": "Overview",
+          "overview": "Genel Bakış",
           "metadata": "Metadata",
-          "code": "Code Example"
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "NFT Architecture",
-          "description": "Ergo NFTs are first-class tokens with unique properties:",
+          "title": "NFT Mimarisi",
+          "description": "Ergo NFT'leri benzersiz özelliklere sahip birinci sınıf tokenlar:",
           "points": {
-            "point1": "Single token with quantity of 1",
-            "point2": "Metadata stored in token registers",
-            "point3": "Programmable through ErgoScript",
-            "point4": "Native royalty enforcement",
-            "point5": "Composable with DeFi protocols"
+            "point1": "1 miktarında tek token",
+            "point2": "Token registerlarında saklanan metadata",
+            "point3": "ErgoScript ile programlanabilir",
+            "point4": "Yerel telif hakkı uygulaması",
+            "point5": "DeFi protokolleriyle birleştirilebilir"
           }
         },
         "metadata": {
-          "title": "NFT Registers",
+          "title": "NFT Registerları",
           "standardRegisters": {
-            "title": "Standard Registers",
+            "title": "Standart Registerlar",
             "points": {
-              "point1": "R4: NFT Type/Standard",
-              "point2": "R5: Name",
-              "point3": "R6: Description",
-              "point4": "R7: Image/Media"
+              "point1": "R4: NFT Türü/Standardı",
+              "point2": "R5: Ad",
+              "point3": "R6: Açıklama",
+              "point4": "R7: Görsel/Medya"
             }
           },
           "extendedRegisters": {
-            "title": "Extended Registers",
+            "title": "Genişletilmiş Registerlar",
             "points": {
-              "point1": "R8: Attributes/Properties",
-              "point2": "R9: Royalty information",
-              "point3": "Custom data structures",
-              "point4": "Dynamic properties"
+              "point1": "R8: Nitelikler/Özellikler",
+              "point2": "R9: Telif hakkı bilgisi",
+              "point3": "Özel veri yapıları",
+              "point4": "Dinamik özellikler"
             }
           },
           "metadataStorage": {
-            "title": "Metadata Storage"
+            "title": "Metadata Depolama"
           }
         },
         "codeExample": {
-          "title": "NFT Minting Example",
-          "description": "ErgoScript for NFT creation"
+          "title": "NFT Mint Örneği",
+          "description": "NFT oluşturma için ErgoScript"
         }
       },
       "projects": {
-        "title": "NFT Marketplaces",
-        "subtitle": "Platforms for trading digital assets on Ergo",
+        "title": "NFT Pazaryerleri",
+        "subtitle": "Ergo'da dijital varlık ticareti için platformlar",
         "skyHarbor": {
           "name": "SkyHarbor",
-          "description": "Premier NFT marketplace with advanced trading features",
-          "status": "Live",
+          "description": "Gelişmiş ticaret özellikleriyle öncü NFT pazaryeri",
+          "status": "Canlı",
           "features": {
-            "feature1": "Collection verification",
-            "feature2": "Bulk trading",
-            "feature3": "Royalty enforcement"
+            "feature1": "Koleksiyon doğrulama",
+            "feature2": "Toplu ticaret",
+            "feature3": "Telif hakkı uygulaması"
           }
         },
         "auctionHouse": {
-          "name": "Auction House",
-          "description": "Decentralized auction platform for rare digital assets",
-          "status": "Live",
+          "name": "Açık Artırma Evi",
+          "description": "Nadir dijital varlıklar için merkeziyetsiz açık artırma platformu",
+          "status": "Canlı",
           "features": {
-            "feature1": "English auctions",
-            "feature2": "Dutch auctions",
-            "feature3": "Reserve prices"
+            "feature1": "İngiliz açık artırmaları",
+            "feature2": "Hollanda açık artırmaları",
+            "feature3": "Rezerv fiyatları"
           }
         },
         "lilium": {
           "name": "Lilium",
-          "description": "Art-focused NFT platform with creator tools",
-          "status": "Live",
+          "description": "İçerik oluşturucu araçlarına sahip sanata odaklı NFT platformu",
+          "status": "Canlı",
           "features": {
-            "feature1": "Artist profiles",
-            "feature2": "Curated collections",
-            "feature3": "Social features"
+            "feature1": "Sanatçı profilleri",
+            "feature2": "Küratörlü koleksiyonlar",
+            "feature3": "Sosyal özellikler"
           }
         },
-        "visitMarketplace": "Visit Marketplace"
+        "visitMarketplace": "Pazaryerini Ziyaret Et"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about NFTs on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'daki NFT'ler hakkında sık sorulan sorular",
         "whatMakesErgoDifferent": {
-          "question": "What makes Ergo NFTs different?",
-          "answer": "Ergo NFTs are native tokens with on-chain metadata, protocol-level royalties, and programmability through ErgoScript. Unlike simple token standards, Ergo NFTs can have complex behaviors and interact with DeFi protocols."
+          "question": "Ergo NFT'lerini farklı kılan nedir?",
+          "answer": "Ergo NFT'leri, zincir üstü metadata, protokol düzeyinde telif hakları ve ErgoScript aracılığıyla programlanabilirliğe sahip yerel tokenlar. Basit token standartlarının aksine Ergo NFT'leri karmaşık davranışlara sahip olabilir ve DeFi protokolleriyle etkileşime girebilir."
         },
         "howProtocolRoyaltiesWork": {
-          "question": "How do protocol royalties work?",
-          "answer": "Royalties are enforced at the protocol level through smart contracts. Every sale automatically distributes the specified percentage to creators, ensuring they always receive compensation without relying on marketplace compliance."
+          "question": "Protokol telif hakları nasıl çalışır?",
+          "answer": "Telif hakları akıllı sözleşmeler aracılığıyla protokol düzeyinde uygulanır. Her satış, belirlenen yüzdeyi otomatik olarak içerik oluşturuculara dağıtır; bu sayede pazaryeri uyumuna bağlı kalmadan her zaman ödeme almaları sağlanır."
         },
         "canStoreDataOnChain": {
-          "question": "Can NFTs store data on-chain?",
-          "answer": "Yes! Ergo NFTs can store metadata directly on-chain, including images (as data URIs), attributes, and descriptions. This ensures permanence without relying on external storage like IPFS."
+          "question": "NFT'ler zincir üstünde veri depolayabilir mi?",
+          "answer": "Evet! Ergo NFT'leri görseller (veri URI'leri olarak), nitelikler ve açıklamalar dahil olmak üzere metadata'yı doğrudan zincir üstünde depolayabilir. Bu, IPFS gibi harici depolamaya bağlı kalmadan kalıcılığı sağlar."
         },
         "whatAreDynamicNfts": {
-          "question": "What are dynamic NFTs?",
-          "answer": "Dynamic NFTs can change properties based on conditions like time, user actions, or external data from oracles. Examples include evolving game items, reactive art, or achievement-based collectibles."
+          "question": "Dinamik NFT'ler nedir?",
+          "answer": "Dinamik NFT'ler, zaman, kullanıcı eylemleri veya oracle'lardan gelen harici veriler gibi koşullara göre özelliklerini değiştirebilir. Örnekler arasında gelişen oyun öğeleri, reaktif sanat eserleri veya başarıya dayalı koleksiyon parçaları yer alır."
         },
         "howEfficientMinting": {
-          "question": "How efficient is NFT minting on Ergo?",
-          "answer": "Ergo supports batch minting, allowing creators to mint entire collections in a single transaction. The eUTXO model makes this extremely efficient compared to account-based chains."
+          "question": "Ergo'da NFT mint etmek ne kadar verimlidir?",
+          "answer": "Ergo toplu mint'i destekler; içerik oluşturucuların tek bir işlemde tüm koleksiyonları mint etmesine olanak tanır. eUTXO modeli, hesap tabanlı zincirlere kıyasla bunu son derece verimli kılar."
         }
       },
       "cta": {
-        "title": "Ready to Create Digital Assets?",
-        "subtitle": "Start creating and trading NFTs on Ergo today.",
-        "exploreSkyHarbor": "Explore SkyHarbor",
-        "nftGuide": "NFT Guide"
+        "title": "Dijital Varlık Oluşturmaya Hazır mısınız?",
+        "subtitle": "Ergo'da bugün NFT oluşturmaya ve takas etmeye başlayın.",
+        "exploreSkyHarbor": "SkyHarbor'u Keşfet",
+        "nftGuide": "NFT Rehberi"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Learn how to create and manage digital assets on Ergo blockchain",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "Ergo blockchain'de dijital varlıkları nasıl oluşturacağınızı ve yöneteceğinizi öğrenin",
         "cards": {
           "nftGuide": {
-            "title": "NFT Guide",
-            "subtitle": "Learn More",
-            "description": "Learn how to create, mint, and manage NFTs on Ergo with comprehensive documentation and tutorials"
+            "title": "NFT Rehberi",
+            "subtitle": "Daha Fazla Öğren",
+            "description": "Kapsamlı belgeler ve öğreticilerle Ergo'da NFT oluşturmayı, mint etmeyi ve yönetmeyi öğrenin"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Explore comprehensive developer documentation and start building NFT applications on Ergo blockchain"
+            "title": "Geliştirici Belgeleri",
+            "subtitle": "Geliştirmeye Başla",
+            "description": "Kapsamlı geliştirici belgelerini keşfedin ve Ergo blockchain üzerinde NFT uygulamaları geliştirmeye başlayın"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo NFTs",
-        "description": "Get notified about new NFT drops, marketplace updates, and digital asset innovations."
+        "title": "Ergo NFT'leri Hakkında Güncel Kalın",
+        "description": "Yeni NFT düşüşleri, pazaryeri güncellemeleri ve dijital varlık yenilikleri hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "nftsDigitalAssets": "NFTs & Digital Assets"
+          "useCases": "Kullanım Senaryoları",
+          "nftsDigitalAssets": "NFT'ler ve Dijital Varlıklar"
         }
       }
     },
     "oracles": {
-      "title": "Oracles & Data Feeds",
-      "subtitle": "Bringing real-world data on-chain",
-      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets.",
-      "lastUpdated": "Last updated:",
+      "title": "Oracle'lar ve Veri Akışları",
+      "subtitle": "Gerçek dünya verilerini zincire taşımak",
+      "description": "Merkeziyetsiz oracle havuzları DeFi ve tahmin piyasaları için harici veri sağlar.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "oracles",
         "ogImage": "/og-oracles.png",
         "canonicalPath": "/use/oracles-data-feeds"
       },
       "seo": {
-        "title": "Oracles & Data Feeds on Ergo | Decentralized Data Infrastructure",
-        "description": "Connect real-world data to Ergo blockchain. Decentralized oracle pools, price feeds, custom data sources for DeFi and prediction markets.",
-        "keywords": "oracles, data feeds, oracle pools, price feeds, external data, DeFi oracles, Ergo oracle",
-        "ogTitle": "Oracles & Data Feeds on Ergo",
-        "ogDescription": "Bringing real-world data on-chain with decentralized oracle pools.",
-        "twitterTitle": "Oracles on Ergo",
-        "twitterDescription": "Decentralized oracle pools for reliable data feeds"
+        "title": "Ergo'da Oracle'lar ve Veri Akışları | Merkeziyetsiz Veri Altyapısı",
+        "description": "Gerçek dünya verilerini Ergo blockchain'e bağlayın. DeFi ve tahmin piyasaları için merkeziyetsiz oracle havuzları, fiyat akışları, özel veri kaynakları.",
+        "keywords": "oracle'lar, veri akışları, oracle havuzları, fiyat akışları, harici veri, DeFi oracle'ları, Ergo oracle",
+        "ogTitle": "Ergo'da Oracle'lar ve Veri Akışları",
+        "ogDescription": "Merkeziyetsiz oracle havuzlarıyla gerçek dünya verilerini zincire taşımak.",
+        "twitterTitle": "Ergo'da Oracle'lar",
+        "twitterDescription": "Güvenilir veri akışları için merkeziyetsiz oracle havuzları"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "viewPriceFeeds": {
-          "name": "View Price Feeds",
-          "description": "Check live oracle data"
+          "name": "Fiyat Akışlarını Görüntüle",
+          "description": "Canlı oracle verilerini kontrol edin"
         },
         "runOracle": {
-          "name": "Run an Oracle",
-          "description": "Become a data provider"
+          "name": "Bir Oracle Çalıştır",
+          "description": "Veri sağlayıcı olun"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Integrate oracle data"
+          "name": "Geliştirici Belgeleri",
+          "description": "Oracle verilerini entegre edin"
         }
       },
       "navigation": {
-        "oracleFeatures": "Oracle features",
-        "liveOracles": "Live Oracles",
-        "faq": "FAQ"
+        "oracleFeatures": "Oracle özellikleri",
+        "liveOracles": "Canlı Oracle'lar",
+        "faq": "SSS"
       },
       "features": {
-        "title": "Oracle Features",
-        "subtitle": "Reliable external data for smart contracts",
+        "title": "Oracle Özellikleri",
+        "subtitle": "Akıllı sözleşmeler için güvenilir harici veri",
         "decentralizedPools": {
-          "title": "Decentralized Oracle Pools",
-          "description": "Multiple data providers ensure reliability and prevent manipulation"
+          "title": "Merkeziyetsiz Oracle Havuzları",
+          "description": "Birden fazla veri sağlayıcı güvenilirliği sağlar ve manipülasyonu önler"
         },
         "onChainAggregation": {
-          "title": "On-Chain Aggregation",
-          "description": "Smart contracts aggregate and validate data from multiple sources"
+          "title": "Zincir Üstü Toplama",
+          "description": "Akıllı sözleşmeler birden fazla kaynaktan gelen verileri toplar ve doğrular"
         },
         "priceFeeds": {
-          "title": "Price Feeds",
-          "description": "Real-time price data for DeFi protocols and prediction markets"
+          "title": "Fiyat Akışları",
+          "description": "DeFi protokolleri ve tahmin piyasaları için gerçek zamanlı fiyat verileri"
         },
         "customDataSources": {
-          "title": "Custom Data Sources",
-          "description": "Connect any external API or data source to the blockchain"
+          "title": "Özel Veri Kaynakları",
+          "description": "Herhangi bir harici API veya veri kaynağını blockchain'e bağlayın"
         },
         "consensusMechanisms": {
-          "title": "Consensus Mechanisms",
-          "description": "Various consensus models for different data reliability requirements"
+          "title": "Konsensüs Mekanizmaları",
+          "description": "Farklı veri güvenilirlik gereksinimleri için çeşitli konsensüs modelleri"
         },
         "incentiveAlignment": {
-          "title": "Incentive Alignment",
-          "description": "Economic incentives ensure accurate and timely data provision"
+          "title": "Teşvik Uyumu",
+          "description": "Ekonomik teşvikler doğru ve zamanında veri sağlanmasını güvence altına alır"
         }
       },
       "technical": {
-        "title": "Oracle Architecture",
-        "subtitle": "How oracle pools work on Ergo",
+        "title": "Oracle Mimarisi",
+        "subtitle": "Ergo'da oracle havuzlarının nasıl çalıştığı",
         "tabs": {
-          "overview": "Overview",
-          "pools": "Oracle Pools",
-          "code": "Code Example"
+          "overview": "Genel Bakış",
+          "pools": "Oracle Havuzları",
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "Oracle System",
-          "description": "Ergo's oracle system provides reliable external data:",
+          "title": "Oracle Sistemi",
+          "description": "Ergo'nun oracle sistemi güvenilir harici veri sağlar:",
           "points": {
-            "point1": "Decentralized data collection",
-            "point2": "On-chain aggregation and validation",
-            "point3": "Economic incentives for accuracy",
-            "point4": "Flexible consensus mechanisms",
-            "point5": "Support for any data type"
+            "point1": "Merkeziyetsiz veri toplama",
+            "point2": "Zincir üstü toplama ve doğrulama",
+            "point3": "Doğruluk için ekonomik teşvikler",
+            "point4": "Esnek konsensüs mekanizmaları",
+            "point5": "Her türlü veri tipi için destek"
           }
         },
         "pools": {
-          "title": "Pool Architecture",
+          "title": "Havuz Mimarisi",
           "dataCollection": {
-            "title": "Data Collection",
+            "title": "Veri Toplama",
             "points": {
-              "point1": "Oracle operators fetch data",
-              "point2": "Submit to pool contract",
-              "point3": "Timestamp verification",
-              "point4": "Stake requirement"
+              "point1": "Oracle operatörleri veri çeker",
+              "point2": "Havuz sözleşmesine gönderir",
+              "point3": "Zaman damgası doğrulaması",
+              "point4": "Stake gereksinimi"
             }
           },
           "aggregation": {
-            "title": "Aggregation",
+            "title": "Toplama",
             "points": {
-              "point1": "Collect submissions",
-              "point2": "Calculate median/average",
-              "point3": "Filter outliers",
-              "point4": "Publish final value"
+              "point1": "Gönderilenleri topla",
+              "point2": "Medyan/ortalama hesapla",
+              "point3": "Aykırı değerleri filtrele",
+              "point4": "Son değeri yayınla"
             }
           },
           "dataFlow": {
-            "title": "Data Flow"
+            "title": "Veri Akışı"
           }
         },
         "codeExample": {
-          "title": "Oracle Contract Example",
-          "description": "Reading oracle data in ErgoScript"
+          "title": "Oracle Sözleşme Örneği",
+          "description": "ErgoScript'te oracle verisi okuma"
         }
       },
       "projects": {
-        "title": "Live Oracle Solutions",
-        "subtitle": "Active oracle implementations on Ergo",
+        "title": "Canlı Oracle Çözümleri",
+        "subtitle": "Ergo'daki aktif oracle uygulamaları",
         "oraclePools": {
           "name": "Oracle Pools v2",
-          "description": "Decentralized oracle infrastructure for Ergo",
-          "status": "Live",
+          "description": "Ergo için merkeziyetsiz oracle altyapısı",
+          "status": "Canlı",
           "features": {
-            "feature1": "ERG/USD feed",
-            "feature2": "ADA/USD feed",
-            "feature3": "Gold price feed"
+            "feature1": "ERG/USD akışı",
+            "feature2": "ADA/USD akışı",
+            "feature3": "Altın fiyatı akışı"
           }
         },
         "oracleCore": {
           "name": "Ergo Oracle Core",
-          "description": "Framework for building custom oracle solutions",
-          "status": "Live",
+          "description": "Özel oracle çözümleri geliştirmek için çerçeve",
+          "status": "Canlı",
           "features": {
-            "feature1": "Custom feeds",
-            "feature2": "API integration",
-            "feature3": "Data validation"
+            "feature1": "Özel akışlar",
+            "feature2": "API entegrasyonu",
+            "feature3": "Veri doğrulama"
           }
         },
         "defiNetwork": {
-          "name": "DeFi Oracle Network",
-          "description": "Specialized oracles for DeFi protocols",
-          "status": "In Development",
+          "name": "DeFi Oracle Ağı",
+          "description": "DeFi protokolleri için özelleştirilmiş oracle'lar",
+          "status": "Geliştiriliyor",
           "features": {
-            "feature1": "Multi-asset feeds",
-            "feature2": "TWAP oracles",
-            "feature3": "Volatility data"
+            "feature1": "Çok varlıklı akışlar",
+            "feature2": "TWAP oracle'ları",
+            "feature3": "Volatilite verileri"
           }
         },
-        "viewOracle": "View Oracle",
-        "comingSoon": "Coming Soon"
+        "viewOracle": "Oracle'ı Görüntüle",
+        "comingSoon": "Yakında"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about oracles on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'daki oracle'lar hakkında sık sorulan sorular",
         "howOraclePoolsWork": {
-          "question": "How do Ergo oracle pools work?",
-          "answer": "Oracle pools aggregate data from multiple independent providers. Each oracle submits data, and smart contracts calculate the median or weighted average to produce a reliable feed resistant to manipulation."
+          "question": "Ergo oracle havuzları nasıl çalışır?",
+          "answer": "Oracle havuzları birden fazla bağımsız sağlayıcıdan veri toplar. Her oracle veri gönderir ve akıllı sözleşmeler manipülasyona dayanıklı güvenilir bir akış üretmek için medyan veya ağırlıklı ortalamayı hesaplar."
         },
         "whatDataCanProvide": {
-          "question": "What data can oracles provide?",
-          "answer": "Oracles can provide any external data: price feeds, weather data, sports results, IoT sensor readings, or any API data. The oracle pool framework is flexible enough to support any data type."
+          "question": "Oracle'lar hangi verileri sağlayabilir?",
+          "answer": "Oracle'lar herhangi bir harici veri sağlayabilir: fiyat akışları, hava durumu verileri, spor sonuçları, IoT sensör okumaları veya herhangi bir API verisi. Oracle havuzu çerçevesi her türlü veri tipini destekleyecek kadar esnektir."
         },
         "howOperatorsIncentivized": {
-          "question": "How are oracle operators incentivized?",
-          "answer": "Oracle operators earn rewards for providing accurate and timely data. They must stake collateral that can be slashed for malicious behavior, creating economic incentives for honest operation."
+          "question": "Oracle operatörleri nasıl teşvik edilir?",
+          "answer": "Oracle operatörleri doğru ve zamanında veri sağladıkları için ödül kazanır. Kötü niyetli davranış durumunda cezalandırılabilecek teminat stake etmek zorundadırlar; bu da dürüst işlem için ekonomik teşvik oluşturur."
         },
         "canCreateOwnOracle": {
-          "question": "Can I create my own oracle?",
-          "answer": "Yes! The Oracle Core framework allows anyone to create custom oracles. You can connect any data source and define your own consensus mechanisms and incentive structures."
+          "question": "Kendi oracle'ımı oluşturabilir miyim?",
+          "answer": "Evet! Oracle Core çerçevesi herkesin özel oracle'lar oluşturmasına olanak tanır. Herhangi bir veri kaynağını bağlayabilir ve kendi konsensüs mekanizmalarınızı ve teşvik yapılarınızı tanımlayabilirsiniz."
         },
         "howReliablePriceFeeds": {
-          "question": "How reliable are oracle price feeds?",
-          "answer": "Ergo's oracle pools use multiple independent data sources and consensus mechanisms to ensure reliability. Historical data shows 99.9%+ uptime with accurate price feeds updated every epoch."
+          "question": "Oracle fiyat akışları ne kadar güvenilirdir?",
+          "answer": "Ergo'nun oracle havuzları güvenilirliği sağlamak için birden fazla bağımsız veri kaynağı ve konsensüs mekanizması kullanır. Geçmiş veriler, her epoch güncellenmiş doğru fiyat akışlarıyla %99,9+ çalışma süresi göstermektedir."
         }
       },
       "cta": {
-        "title": "Ready to Use Oracle Data?",
-        "subtitle": "Integrate reliable external data into your smart contracts.",
-        "viewOraclePools": "View Oracle Pools",
-        "developerDocs": "Developer Docs"
+        "title": "Oracle Verisi Kullanmaya Hazır mısınız?",
+        "subtitle": "Akıllı sözleşmelerinize güvenilir harici veri entegre edin.",
+        "viewOraclePools": "Oracle Havuzlarını Görüntüle",
+        "developerDocs": "Geliştirici Belgeleri"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start using or building oracle solutions on Ergo today",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "Ergo'da oracle çözümlerini bugün kullanmaya veya geliştirmeye başlayın",
         "cards": {
           "oracleCore": {
             "title": "Oracle Core",
-            "subtitle": "Start Building",
-            "description": "Core off-chain component for Oracle Pools - bootstrap, run, and manage oracle solutions on Ergo"
+            "subtitle": "Geliştirmeye Başla",
+            "description": "Oracle Havuzları için temel zincir dışı bileşen - Ergo'da oracle çözümlerini başlatın, çalıştırın ve yönetin"
           },
           "oracleDocumentation": {
-            "title": "Oracle Documentation",
-            "subtitle": "Learn More",
-            "description": "Comprehensive guide to understanding and implementing oracle solutions on Ergo"
+            "title": "Oracle Belgeleri",
+            "subtitle": "Daha Fazla Öğren",
+            "description": "Ergo'da oracle çözümlerini anlamak ve uygulamak için kapsamlı rehber"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Oracle Pools",
-        "description": "Get notified about oracle updates, data feed improvements, and DeFi integrations."
+        "title": "Oracle Havuzları Hakkında Güncel Kalın",
+        "description": "Oracle güncellemeleri, veri akışı iyileştirmeleri ve DeFi entegrasyonları hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "oraclesDataFeeds": "Oracles & Data Feeds"
+          "useCases": "Kullanım Senaryoları",
+          "oraclesDataFeeds": "Oracle'lar ve Veri Akışları"
         }
       }
     },
     "gaming": {
-      "title": "Gaming & Metaverse",
-      "subtitle": "Next-gen gaming assets & digital worlds",
-      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.",
-      "lastUpdated": "Last updated:",
+      "title": "Oyun ve Metaverse",
+      "subtitle": "Yeni nesil oyun varlıkları ve dijital dünyalar",
+      "description": "Programlanabilir oyun tokenları, NFT destekli ekonomiler, metaverse altyapısı.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "gaming",
         "ogImage": "/og-gaming.png",
         "canonicalPath": "/use/gaming-metaverse"
       },
       "seo": {
-        "title": "Gaming & Metaverse on Ergo | Blockchain Gaming",
-        "description": "Build blockchain games and metaverse experiences on Ergo. In-game NFTs, play-to-earn mechanics, dynamic items, and decentralized game economies.",
-        "keywords": "gaming, metaverse, blockchain games, play-to-earn, game NFTs, virtual worlds, Web3 gaming",
-        "ogTitle": "Gaming & Metaverse on Ergo",
-        "ogDescription": "Next-gen gaming assets and digital worlds on Ergo blockchain.",
-        "twitterTitle": "Gaming on Ergo",
-        "twitterDescription": "Build blockchain games with NFTs and play-to-earn"
+        "title": "Ergo'da Oyun ve Metaverse | Blockchain Oyunları",
+        "description": "Ergo'da blockchain oyunları ve metaverse deneyimleri oluşturun. Oyun içi NFT'ler, oyna-kazan mekanikleri, dinamik öğeler ve merkeziyetsiz oyun ekonomileri.",
+        "keywords": "oyun, metaverse, blockchain oyunları, oyna-kazan, oyun NFT'leri, sanal dünyalar, Web3 oyunculuğu",
+        "ogTitle": "Ergo'da Oyun ve Metaverse",
+        "ogDescription": "Ergo blockchain'de yeni nesil oyun varlıkları ve dijital dünyalar.",
+        "twitterTitle": "Ergo'da Oyun",
+        "twitterDescription": "NFT'ler ve oyna-kazan özellikleriyle blockchain oyunları geliştirin"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "playGames": {
-          "name": "Play Games",
-          "description": "Explore Ergo gaming ecosystem"
+          "name": "Oyunları Oyna",
+          "description": "Ergo oyun ekosistemini keşfedin"
         },
         "gameSdk": {
-          "name": "Game SDK",
-          "description": "Tools for game developers"
+          "name": "Oyun SDK",
+          "description": "Oyun geliştiricileri için araçlar"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build blockchain games"
+          "name": "Geliştirici Belgeleri",
+          "description": "Blockchain oyunları geliştirin"
         }
       },
       "navigation": {
-        "gamingFeatures": "Gaming features",
-        "gameProjects": "Game Projects",
-        "faq": "FAQ"
+        "gamingFeatures": "Oyun özellikleri",
+        "gameProjects": "Oyun Projeleri",
+        "faq": "SSS"
       },
       "features": {
-        "title": "Gaming Features",
-        "subtitle": "Building blocks for blockchain gaming",
+        "title": "Oyun Özellikleri",
+        "subtitle": "Blockchain oyunculuğunun yapı taşları",
         "inGameAssets": {
-          "title": "In-Game Assets",
-          "description": "True ownership of game items, characters, and resources as NFTs"
+          "title": "Oyun İçi Varlıklar",
+          "description": "NFT olarak oyun öğelerinin, karakterlerin ve kaynakların gerçek sahipliği"
         },
         "playToEarn": {
-          "title": "Play-to-Earn",
-          "description": "Earn real value through gameplay with tokenized rewards"
+          "title": "Oyna-Kazan",
+          "description": "Tokenize ödüllerle oyun oynayarak gerçek değer kazanın"
         },
         "virtualWorlds": {
-          "title": "Virtual Worlds",
-          "description": "Decentralized metaverse platforms with user-owned land and assets"
+          "title": "Sanal Dünyalar",
+          "description": "Kullanıcıya ait arazi ve varlıklarla merkeziyetsiz metaverse platformları"
         },
         "crossGameItems": {
-          "title": "Cross-Game Items",
-          "description": "Interoperable assets that work across multiple games"
+          "title": "Oyunlar Arası Öğeler",
+          "description": "Birden fazla oyunda çalışan birlikte çalışabilir varlıklar"
         },
         "dynamicNfts": {
-          "title": "Dynamic NFTs",
-          "description": "Game items that evolve based on player actions and achievements"
+          "title": "Dinamik NFT'ler",
+          "description": "Oyuncu eylemlerine ve başarılarına göre gelişen oyun öğeleri"
         },
         "daoGovernance": {
-          "title": "DAO Governance",
-          "description": "Player-owned game economies with community governance"
+          "title": "DAO Yönetişimi",
+          "description": "Topluluk yönetişimiyle oyuncu sahipliğindeki oyun ekonomileri"
         }
       },
       "technical": {
-        "title": "Game Architecture",
-        "subtitle": "How blockchain gaming works on Ergo",
+        "title": "Oyun Mimarisi",
+        "subtitle": "Ergo'da blockchain oyunculuğunun nasıl çalıştığı",
         "tabs": {
-          "overview": "Overview",
-          "economy": "Game Economy",
-          "code": "Code Example"
+          "overview": "Genel Bakış",
+          "economy": "Oyun Ekonomisi",
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "Gaming Infrastructure",
-          "description": "Ergo provides complete infrastructure for blockchain gaming:",
+          "title": "Oyun Altyapısı",
+          "description": "Ergo, blockchain oyunculuğu için eksiksiz altyapı sunar:",
           "points": {
-            "point1": "NFTs for unique game assets",
-            "point2": "Tokens for in-game currencies",
-            "point3": "Smart contracts for game logic",
-            "point4": "Oracles for randomness",
-            "point5": "DAOs for game governance"
+            "point1": "Benzersiz oyun varlıkları için NFT'ler",
+            "point2": "Oyun içi para birimleri için tokenlar",
+            "point3": "Oyun mantığı için akıllı sözleşmeler",
+            "point4": "Rastgelelik için oracle'lar",
+            "point5": "Oyun yönetişimi için DAO'lar"
           }
         },
         "economy": {
-          "title": "Token Economy",
+          "title": "Token Ekonomisi",
           "gameTokens": {
-            "title": "Game Tokens",
+            "title": "Oyun Tokenları",
             "points": {
-              "point1": "In-game currency",
-              "point2": "Reward tokens",
-              "point3": "Governance tokens",
-              "point4": "Staking mechanisms"
+              "point1": "Oyun içi para birimi",
+              "point2": "Ödül tokenları",
+              "point3": "Yönetişim tokenları",
+              "point4": "Stake mekanizmaları"
             }
           },
           "nftAssets": {
-            "title": "NFT Assets",
+            "title": "NFT Varlıkları",
             "points": {
-              "point1": "Characters & avatars",
-              "point2": "Items & equipment",
-              "point3": "Land & buildings",
-              "point4": "Achievements & badges"
+              "point1": "Karakterler ve avatarlar",
+              "point2": "Öğeler ve ekipman",
+              "point3": "Arazi ve binalar",
+              "point4": "Başarılar ve rozetler"
             }
           },
           "playToEarnModel": {
-            "title": "Play-to-Earn Model"
+            "title": "Oyna-Kazan Modeli"
           }
         },
         "codeExample": {
-          "title": "Game Item NFT",
-          "description": "Dynamic game item with leveling"
+          "title": "Oyun Öğesi NFT",
+          "description": "Seviye atlama özelliğine sahip dinamik oyun öğesi"
         }
       },
       "projects": {
-        "title": "Game Projects",
-        "subtitle": "Games building on Ergo",
+        "title": "Oyun Projeleri",
+        "subtitle": "Ergo üzerine kurulan oyunlar",
         "blitzTcg": {
           "name": "Blitz TCG",
-          "description": "Trading card game with on-chain card ownership",
-          "status": "In Development",
+          "description": "Zincir üstü kart sahipliğiyle ticaret kartı oyunu",
+          "status": "Geliştiriliyor",
           "features": {
-            "feature1": "Collectible cards",
-            "feature2": "Tournament play",
-            "feature3": "Card trading"
+            "feature1": "Koleksiyon kartları",
+            "feature2": "Turnuva oyunu",
+            "feature3": "Kart ticareti"
           }
         },
         "ergoRacer": {
           "name": "ErgoRacer",
-          "description": "Racing game with NFT vehicles and tracks",
-          "status": "Concept",
+          "description": "NFT araçları ve pistiyle yarış oyunu",
+          "status": "Konsept",
           "features": {
-            "feature1": "Custom vehicles",
-            "feature2": "Track ownership",
-            "feature3": "Racing leagues"
+            "feature1": "Özel araçlar",
+            "feature2": "Pist sahipliği",
+            "feature3": "Yarış ligleri"
           }
         },
         "cyberPunks": {
           "name": "CyberPunks",
-          "description": "Cyberpunk-themed collectible game",
-          "status": "Live",
+          "description": "Cyberpunk temalı koleksiyon oyunu",
+          "status": "Canlı",
           "features": {
-            "feature1": "Unique avatars",
-            "feature2": "Rarity system",
-            "feature3": "Community events"
+            "feature1": "Benzersiz avatarlar",
+            "feature2": "Nadirlik sistemi",
+            "feature3": "Topluluk etkinlikleri"
           }
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about gaming on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'daki oyunlar hakkında sık sorulan sorular",
         "howBlockchainGamesWork": {
-          "question": "How do blockchain games work on Ergo?",
-          "answer": "Ergo games use NFTs for in-game assets and tokens for game currencies. Smart contracts handle game logic, item trading, and reward distribution, ensuring transparent and fair gameplay."
+          "question": "Ergo'da blockchain oyunları nasıl çalışır?",
+          "answer": "Ergo oyunları, oyun içi varlıklar için NFT'leri ve oyun para birimleri için tokenları kullanır. Akıllı sözleşmeler, şeffaf ve adil oynanış sağlayarak oyun mantığını, öğe ticaretini ve ödül dağıtımını yönetir."
         },
         "whatAreDynamicGameNfts": {
-          "question": "What are dynamic game NFTs?",
-          "answer": "Dynamic NFTs on Ergo can change properties based on gameplay. A sword might gain power with use, or a character might evolve based on achievements, all tracked on-chain through smart contracts."
+          "question": "Dinamik oyun NFT'leri nedir?",
+          "answer": "Ergo'daki dinamik NFT'ler, oynanışa göre özelliklerini değiştirebilir. Bir kılıç kullanımla güç kazanabilir veya bir karakter başarılara göre gelişebilir; bunların tamamı akıllı sözleşmeler aracılığıyla zincir üstünde takip edilir."
         },
         "canAssetsBeUsedAcrossGames": {
-          "question": "Can game assets be used across different games?",
-          "answer": "Yes! Ergo's NFT standard allows assets to be interoperable. Developers can build games that recognize and utilize NFTs from other games, creating a shared gaming metaverse."
+          "question": "Oyun varlıkları farklı oyunlarda kullanılabilir mi?",
+          "answer": "Evet! Ergo'nun NFT standardı varlıkların birlikte çalışabilir olmasına olanak tanır. Geliştiriciler, diğer oyunlardan NFT'leri tanıyan ve kullanan oyunlar oluşturarak paylaşılan bir oyun metaverse'ü yaratabilir."
         },
         "howPlayToEarnWorks": {
-          "question": "How does play-to-earn work?",
-          "answer": "Players earn tokens or NFTs through gameplay achievements, competitions, or contributions. These digital assets have real value and can be traded on marketplaces or used in other games."
+          "question": "Oyna-kazan nasıl çalışır?",
+          "answer": "Oyuncular, oyun başarıları, yarışmalar veya katkılar aracılığıyla token veya NFT kazanır. Bu dijital varlıkların gerçek değeri vardır ve pazaryerlerinde takas edilebilir veya diğer oyunlarda kullanılabilir."
         },
         "whatMakesErgoGoodForGaming": {
-          "question": "What makes Ergo good for gaming?",
-          "answer": "Ergo's low fees, fast transactions, programmable NFTs, and robust smart contracts make it ideal for gaming. The eUTXO model also enables complex game mechanics while maintaining security."
+          "question": "Ergo'yu oyunlar için iyi kılan nedir?",
+          "answer": "Ergo'nun düşük ücretleri, hızlı işlemleri, programlanabilir NFT'leri ve sağlam akıllı sözleşmeleri onu oyunculuk için ideal kılar. eUTXO modeli ayrıca güvenliği korurken karmaşık oyun mekaniklerine olanak tanır."
         }
       },
       "cta": {
-        "title": "Ready to Build the Future of Gaming?",
-        "subtitle": "Create blockchain games and metaverse experiences on Ergo.",
-        "exploreGames": "Explore Games",
-        "buildAGame": "Build a Game",
-        "startBuilding": "Start Building"
+        "title": "Oyunun Geleceğini İnşa Etmeye Hazır mısınız?",
+        "subtitle": "Ergo'da blockchain oyunları ve metaverse deneyimleri oluşturun.",
+        "exploreGames": "Oyunları Keşfet",
+        "buildAGame": "Bir Oyun Geliştir",
+        "startBuilding": "Geliştirmeye Başla"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start playing or building blockchain games on Ergo today",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "Ergo'da blockchain oyunları oynamaya veya geliştirmeye bugün başlayın",
         "cards": {
           "exploreGames": {
-            "title": "Explore Games",
-            "subtitle": "Start Playing",
-            "description": "Discover and play blockchain games built on Ergo's gaming ecosystem"
+            "title": "Oyunları Keşfet",
+            "subtitle": "Oynamaya Başla",
+            "description": "Ergo'nun oyun ekosistemi üzerine kurulmuş blockchain oyunlarını keşfedin ve oynayın"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Start Building",
-            "description": "Access documentation and tools to build your own blockchain games on Ergo"
+            "title": "Geliştirici Belgeleri",
+            "subtitle": "Geliştirmeye Başla",
+            "description": "Ergo'da kendi blockchain oyunlarınızı geliştirmek için belgelere ve araçlara erişin"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Blockchain Gaming",
-        "description": "Get notified about new games, NFT drops, and gaming ecosystem updates on Ergo."
+        "title": "Blockchain Oyunculuğu Hakkında Güncel Kalın",
+        "description": "Ergo'daki yeni oyunlar, NFT düşüşleri ve oyun ekosistemi güncellemeleri hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "gamingMetaverse": "Gaming & Metaverse"
+          "useCases": "Kullanım Senaryoları",
+          "gamingMetaverse": "Oyun ve Metaverse"
         }
       }
     },
     "mining": {
-      "title": "Mining ERG",
-      "subtitle": "Start mining Ergo with our comprehensive guide to pools, hardware, and optimization",
-      "poolsTitle": "Mining Pools",
-      "hardwareTitle": "Hardware Requirements",
-      "softwareTitle": "Mining Software",
-      "optimizationTitle": "Optimization Tips",
-      "ctaTitle": "Ready to Start Mining?",
-      "active": "Active",
-      "inactive": "Inactive",
-      "recommended": "Recommended",
-      "alternative": "Alternative",
-      "poolUrl": "Pool URL",
-      "poolFee": "Pool Fee",
-      "minPayout": "Min Payout",
-      "performance": "Performance",
-      "difficulty": "Difficulty",
-      "download": "Download",
+      "title": "ERG Madenciliği",
+      "subtitle": "Havuzlar, donanım ve optimizasyon hakkında kapsamlı rehberimizle Ergo madenciliğine başlayın",
+      "poolsTitle": "Madencilik Havuzları",
+      "hardwareTitle": "Donanım Gereksinimleri",
+      "softwareTitle": "Madencilik Yazılımı",
+      "optimizationTitle": "Optimizasyon İpuçları",
+      "ctaTitle": "Madenciliğe Başlamaya Hazır mısınız?",
+      "active": "Aktif",
+      "inactive": "Aktif Değil",
+      "recommended": "Önerilen",
+      "alternative": "Alternatif",
+      "poolUrl": "Havuz URL'si",
+      "poolFee": "Havuz Ücreti",
+      "minPayout": "Min. Ödeme",
+      "performance": "Performans",
+      "difficulty": "Zorluk",
+      "download": "İndir",
       "ctaButtons": {
-        "readGuide": "Read Full Mining Guide",
-        "viewCode": "View Mining Software"
+        "readGuide": "Tam Madencilik Rehberini Oku",
+        "viewCode": "Madencilik Yazılımını Görüntüle"
       },
       "pools": {
         "0": {
           "name": "HeroMiners",
           "url": "https://ergo.herominers.com",
-          "fee": "1%",
+          "fee": "%1",
           "minPayout": "1 ERG",
           "features": {
-            "0": "Global servers",
-            "1": "Real-time stats",
-            "2": "Mobile app"
+            "0": "Global sunucular",
+            "1": "Gerçek zamanlı istatistikler",
+            "2": "Mobil uygulama"
           }
         },
         "1": {
           "name": "2Miners",
           "url": "https://2miners.com/erg-mining-pool",
-          "fee": "1%",
-          "minPayout": "0.1 ERG",
+          "fee": "%1",
+          "minPayout": "0,1 ERG",
           "features": {
-            "0": "Low latency",
-            "1": "Detailed statistics",
-            "2": "Auto-payouts"
+            "0": "Düşük gecikme",
+            "1": "Ayrıntılı istatistikler",
+            "2": "Otomatik ödemeler"
           }
         },
         "2": {
           "name": "WoolyPooly",
           "url": "https://woolypooly.com/en/coin/erg",
-          "fee": "0.9%",
+          "fee": "%0,9",
           "minPayout": "1 ERG",
           "features": {
-            "0": "Low fees",
-            "1": "High uptime",
-            "2": "Multiple regions"
+            "0": "Düşük ücretler",
+            "1": "Yüksek çalışma süresi",
+            "2": "Çoklu bölgeler"
           }
         },
         "3": {
           "name": "Flypool",
           "url": "https://erg.flypool.org",
-          "fee": "1%",
-          "minPayout": "0.1 ERG",
+          "fee": "%1",
+          "minPayout": "0,1 ERG",
           "features": {
-            "0": "Professional service",
-            "1": "Advanced monitoring",
-            "2": "24/7 support"
+            "0": "Profesyonel hizmet",
+            "1": "Gelişmiş izleme",
+            "2": "7/24 destek"
           }
         }
       },
       "hardware": {
         "gpu": {
-          "category": "GPU Mining",
+          "category": "GPU Madenciliği",
           "requirements": {
             "0": "Minimum 4GB VRAM",
-            "1": "AMD RX 6000+ or NVIDIA RTX 30+",
-            "2": "Stable power supply",
-            "3": "Good cooling system"
+            "1": "AMD RX 6000+ veya NVIDIA RTX 30+",
+            "2": "Kararlı güç kaynağı",
+            "3": "İyi soğutma sistemi"
           },
-          "performance": "High",
-          "difficulty": "Medium"
+          "performance": "Yüksek",
+          "difficulty": "Orta"
         },
         "cpu": {
-          "category": "CPU Mining",
+          "category": "CPU Madenciliği",
           "requirements": {
-            "0": "Modern multi-core processor",
-            "1": "Sufficient RAM (8GB+)",
-            "2": "Stable system"
+            "0": "Modern çok çekirdekli işlemci",
+            "1": "Yeterli RAM (8GB+)",
+            "2": "Kararlı sistem"
           },
-          "performance": "Low",
-          "difficulty": "Easy"
+          "performance": "Düşük",
+          "difficulty": "Kolay"
         },
         "memory": {
-          "category": "Memory Requirements",
+          "category": "Bellek Gereksinimleri",
           "requirements": {
-            "0": "16GB RAM recommended",
-            "1": "Fast SSD storage",
-            "2": "Reliable internet connection"
+            "0": "16GB RAM önerilir",
+            "1": "Hızlı SSD depolama",
+            "2": "Güvenilir internet bağlantısı"
           },
-          "performance": "Critical",
-          "difficulty": "Easy"
+          "performance": "Kritik",
+          "difficulty": "Kolay"
         }
       },
       "software": {
@@ -2514,9 +2514,9 @@
           "name": "T-Rex Miner",
           "type": "NVIDIA GPU",
           "features": {
-            "0": "High performance",
-            "1": "Easy configuration",
-            "2": "Regular updates"
+            "0": "Yüksek performans",
+            "1": "Kolay yapılandırma",
+            "2": "Düzenli güncellemeler"
           },
           "link": "https://github.com/trexminer/T-Rex"
         },
@@ -2524,46 +2524,46 @@
           "name": "TeamRedMiner",
           "type": "AMD GPU",
           "features": {
-            "0": "Optimized for AMD",
-            "1": "Stable mining",
-            "2": "Good support"
+            "0": "AMD için optimize edilmiş",
+            "1": "Kararlı madencilik",
+            "2": "İyi destek"
           },
           "link": "https://github.com/todxx/teamredminer"
         },
         "2": {
           "name": "NBMiner",
-          "type": "Universal",
+          "type": "Evrensel",
           "features": {
-            "0": "Cross-platform",
-            "1": "User-friendly",
-            "2": "Good documentation"
+            "0": "Çapraz platform",
+            "1": "Kullanıcı dostu",
+            "2": "İyi belgeleme"
           },
           "link": "https://github.com/NebuTech/NBMiner"
         }
       },
       "optimization": {
         "0": {
-          "category": "Power Efficiency",
+          "category": "Güç Verimliliği",
           "tips": {
-            "0": "Undervolt your GPUs",
-            "1": "Optimize power limits",
-            "2": "Monitor temperatures"
+            "0": "GPU'larınızı undervolt yapın",
+            "1": "Güç limitlerini optimize edin",
+            "2": "Sıcaklıkları izleyin"
           }
         },
         "1": {
-          "category": "Performance Tuning",
+          "category": "Performans Ayarı",
           "tips": {
-            "0": "Adjust memory clocks",
-            "1": "Fine-tune core clocks",
-            "2": "Use mining profiles"
+            "0": "Bellek saatlerini ayarlayın",
+            "1": "Çekirdek saatlerini ince ayarlayın",
+            "2": "Madencilik profilleri kullanın"
           }
         },
         "2": {
-          "category": "System Optimization",
+          "category": "Sistem Optimizasyonu",
           "tips": {
-            "0": "Use dedicated mining OS",
-            "1": "Disable unnecessary services",
-            "2": "Regular maintenance"
+            "0": "Özel madencilik işletim sistemi kullanın",
+            "1": "Gereksiz servisleri devre dışı bırakın",
+            "2": "Düzenli bakım yapın"
           }
         }
       }
@@ -2633,238 +2633,238 @@
   },
   "usePages": {
     "common": {
-      "whatsNext": "What's",
-      "whatsNextHighlight": "Next?",
-      "documentation": "Documentation",
-      "developerDocs": "Developer Docs",
-      "startBuilding": "Start Building",
-      "learnMore": "Learn More"
+      "whatsNext": "Sırada",
+      "whatsNextHighlight": "Ne Var?",
+      "documentation": "Belgeler",
+      "developerDocs": "Geliştirici Belgeleri",
+      "startBuilding": "Geliştirmeye Başla",
+      "learnMore": "Daha Fazla Öğren"
     }
   },
   "useBabelFees": {
-    "title": "Babel Fees",
-    "description": "Pay transaction fees in any token on Ergo",
-    "subtitle": "Flexible fee payment system"
+    "title": "Babel Ücretleri",
+    "description": "Ergo'da işlem ücretlerini herhangi bir tokenla ödeyin",
+    "subtitle": "Esnek ücret ödeme sistemi"
   },
   "useBridges": {
-    "title": "Cross-Chain Bridges",
-    "description": "Connect Ergo with other blockchain networks",
-    "subtitle": "Trustless interoperability solutions"
+    "title": "Zincirler Arası Köprüler",
+    "description": "Ergo'yu diğer blockchain ağlarıyla bağlayın",
+    "subtitle": "Güvensiz birlikte çalışabilirlik çözümleri"
   },
   "useDaos": {
-    "title": "DAOs & Governance",
-    "description": "Decentralized autonomous organizations on Ergo",
-    "subtitle": "Community-driven decision making"
+    "title": "DAO'lar ve Yönetişim",
+    "description": "Ergo'da merkeziyetsiz otonom organizasyonlar",
+    "subtitle": "Topluluk odaklı karar alma"
   },
   "useGaming": {
-    "title": "Gaming & Metaverse",
-    "description": "Blockchain gaming and virtual world applications",
-    "subtitle": "Play-to-earn and NFT gaming"
+    "title": "Oyun ve Metaverse",
+    "description": "Blockchain oyunculuğu ve sanal dünya uygulamaları",
+    "subtitle": "Oyna-kazan ve NFT oyunculuğu"
   },
   "useGetErg": {
-    "title": "Get ERG",
-    "description": "How to acquire ERG tokens through various methods",
-    "subtitle": "Exchanges, mining, and earning opportunities"
+    "title": "ERG Edinin",
+    "description": "Çeşitli yöntemlerle ERG token edinme rehberi",
+    "subtitle": "Borsalar, madencilik ve kazanma fırsatları"
   },
   "useGuides": {
-    "title": "Use Case Guides",
-    "description": "Practical tutorials for using Ergo applications",
-    "subtitle": "Step-by-step implementation guides"
+    "title": "Kullanım Senaryosu Rehberleri",
+    "description": "Ergo uygulamalarını kullanmak için pratik öğreticiler",
+    "subtitle": "Adım adım uygulama rehberleri"
   },
   "useIdentity": {
-    "title": "Digital Identity",
-    "description": "Self-sovereign identity solutions on Ergo",
-    "subtitle": "Privacy-preserving identity management"
+    "title": "Dijital Kimlik",
+    "description": "Ergo'da öz-egemenlik kimlik çözümleri",
+    "subtitle": "Gizliliği koruyan kimlik yönetimi"
   },
   "useMining": {
-    "title": "Mining",
-    "description": "Mining ERG with Autolykos proof-of-work algorithm",
-    "subtitle": "Solo and pool mining guides"
+    "title": "Madencilik",
+    "description": "Autolykos iş ispatı algoritmasıyla ERG madenciliği",
+    "subtitle": "Solo ve havuz madenciliği rehberleri"
   },
   "useNfts": {
-    "title": "NFTs & Digital Assets",
-    "description": "Create, trade, and manage NFTs on Ergo",
-    "subtitle": "Rich metadata and smart contract capabilities"
+    "title": "NFT'ler ve Dijital Varlıklar",
+    "description": "Ergo'da NFT oluşturun, takas edin ve yönetin",
+    "subtitle": "Zengin metadata ve akıllı sözleşme yetenekleri"
   },
   "useOracles": {
-    "title": "Oracle Pools",
-    "description": "Decentralized data feeds for smart contracts",
-    "subtitle": "Reliable off-chain data integration"
+    "title": "Oracle Havuzları",
+    "description": "Akıllı sözleşmeler için merkeziyetsiz veri akışları",
+    "subtitle": "Güvenilir zincir dışı veri entegrasyonu"
   },
   "usePrivacy": {
-    "title": "Privacy Applications",
-    "description": "Financial privacy tools and mixing services",
-    "subtitle": "Confidential transactions and asset protection"
+    "title": "Gizlilik Uygulamaları",
+    "description": "Finansal gizlilik araçları ve karıştırma hizmetleri",
+    "subtitle": "Gizli işlemler ve varlık koruması"
   },
   "useStablecoins": {
-    "title": "Stablecoins",
-    "description": "Algorithmic stablecoins built on Ergo",
-    "subtitle": "Decentralized stable value storage"
+    "title": "Stablecoin'ler",
+    "description": "Ergo üzerine kurulu algoritmik stablecoin'ler",
+    "subtitle": "Merkeziyetsiz sabit değer depolama"
   },
   "useCasesData": {
     "tagLabels": {
       "stablecoin": "Stablecoin",
-      "algorithmic": "Algorithmic",
-      "collateral": "Collateral",
+      "algorithmic": "Algoritmik",
+      "collateral": "Teminat",
       "mixer": "Mixer",
       "stealth": "Stealth",
-      "zeroKnowledge": "Zero-Knowledge",
-      "bridge": "Bridge",
-      "interoperability": "Interoperability",
-      "multichain": "Multi-chain",
+      "zeroKnowledge": "Sıfır Bilgi",
+      "bridge": "Köprü",
+      "interoperability": "Birlikte Çalışabilirlik",
+      "multichain": "Çok Zincirli",
       "dao": "DAO",
-      "governance": "Governance",
-      "community": "Community",
+      "governance": "Yönetişim",
+      "community": "Topluluk",
       "nft": "NFT",
-      "royalties": "Royalties",
-      "dynamic": "Dynamic",
-      "oracles": "Oracles",
-      "dataFeeds": "Data feeds",
-      "prediction": "Prediction",
-      "identity": "Identity",
-      "reputation": "Reputation",
+      "royalties": "Telif Hakları",
+      "dynamic": "Dinamik",
+      "oracles": "Oracle'lar",
+      "dataFeeds": "Veri akışları",
+      "prediction": "Tahmin",
+      "identity": "Kimlik",
+      "reputation": "İtibar",
       "did": "DID",
-      "gaming": "Gaming",
+      "gaming": "Oyun",
       "metaverse": "Metaverse"
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
-      "subtitle": "Stable value storage without centralized control",
-      "description": "Over-collateralized stablecoins with innovative AgeUSD protocol."
+      "title": "Algoritmik Stablecoin'ler",
+      "subtitle": "Merkezi kontrol olmadan sabit değer depolama",
+      "description": "Yenilikçi AgeUSD protokolüyle fazla teminatlı stablecoin'ler."
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy."
+      "title": "Gizlilik ve Gizlilik",
+      "subtitle": "Giderek artan gözetim dünyasında finansal gizlilik",
+      "description": "Tam gizlilik için gözetim altında olmayan mixer'lar, stealth adresler, sıfır bilgi kanıtları."
     },
     "bridges": {
-      "title": "Cross-Chain Bridges",
-      "subtitle": "Secure, trustless value transfer between blockchains",
-      "description": "Decentralized bridges with multi-signature security, no central custody."
+      "title": "Zincirler Arası Köprüler",
+      "subtitle": "Blockchain'ler arası güvenli, güvensiz değer transferi",
+      "description": "Merkezi saklama olmadan çoklu imza güvenliğiyle merkeziyetsiz köprüler."
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "Community governance and alternative economic systems",
-      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing."
+      "title": "DAO'lar ve Alternatif Ekonomiler",
+      "subtitle": "Topluluk yönetişimi ve alternatif ekonomik sistemler",
+      "description": "Birleştirilebilir DAO altyapısı: hazine, oylama, kâr paylaşımı."
     },
     "nfts": {
-      "title": "NFTs & Digital Assets",
-      "subtitle": "True digital ownership, dynamic properties",
-      "description": "On-chain metadata, protocol royalties, programmable NFTs."
+      "title": "NFT'ler ve Dijital Varlıklar",
+      "subtitle": "Gerçek dijital sahiplik, dinamik özellikler",
+      "description": "Zincir üstü metadata, protokol telif hakları, programlanabilir NFT'ler."
     },
     "oracles": {
-      "title": "Oracles & Data Feeds",
-      "subtitle": "Bringing real-world data on-chain",
-      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets."
+      "title": "Oracle'lar ve Veri Akışları",
+      "subtitle": "Gerçek dünya verilerini zincire taşımak",
+      "description": "Merkeziyetsiz oracle havuzları DeFi ve tahmin piyasaları için harici veri sağlar."
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems."
+      "title": "Kimlik ve İtibar",
+      "subtitle": "Öz-egemenlik kimliği ve Web3 itibarı",
+      "description": "Merkeziyetsiz tanımlayıcılar (DID), Sybil direnci, itibar sistemleri."
     },
     "gaming": {
-      "title": "Gaming & Metaverse",
-      "subtitle": "Next-gen gaming assets & digital worlds",
-      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure."
+      "title": "Oyun ve Metaverse",
+      "subtitle": "Yeni nesil oyun varlıkları ve dijital dünyalar",
+      "description": "Programlanabilir oyun tokenları, NFT destekli ekonomiler, metaverse altyapısı."
     },
     "faq": {
       "defi-on-ergo": {
-        "question": "What makes DeFi on Ergo different?",
-        "answer": "Ergo's eUTXO model provides superior security and composability for DeFi. Smart contracts are more predictable, costs are deterministic, and parallel transaction processing enables better scalability. Plus, optional privacy features protect your financial data."
+        "question": "Ergo'daki DeFi'yi farklı kılan nedir?",
+        "answer": "Ergo'nun eUTXO modeli, DeFi için üstün güvenlik ve birleştirilebilirlik sağlar. Akıllı sözleşmeler daha öngörülebilir, maliyetler deterministik ve paralel işlem işleme daha iyi ölçeklenebilirlik sağlar. Ayrıca isteğe bağlı gizlilik özellikleri finansal verilerinizi korur."
       },
       "start-using-ergo": {
-        "question": "How do I start using Ergo applications?",
-        "answer": "1. Get an Ergo wallet like Nautilus or SAFEW\n2. Acquire ERG tokens from exchanges\n3. Explore dApps in our ecosystem\n4. Join the community on Discord or Telegram for help"
+        "question": "Ergo uygulamalarını kullanmaya nasıl başlarım?",
+        "answer": "1. Nautilus veya SAFEW gibi bir Ergo cüzdanı edinin\n2. Borsalardan ERG token satın alın\n3. Ekosistemimizdeki dApp'leri keşfedin\n4. Yardım için Discord veya Telegram'daki topluluğa katılın"
       },
       "ergo-vs-ethereum": {
-        "question": "How does Ergo compare to Ethereum for dApps?",
-        "answer": "Ergo uses the eUTXO model (vs Ethereum's account model), offering better security, parallel processing, and predictable costs. ErgoScript is more secure by design with formal verification capabilities. Native tokens don't require smart contracts, making them cheaper and safer."
+        "question": "Ergo, dApp'ler için Ethereum ile nasıl karşılaştırılır?",
+        "answer": "Ergo, eUTXO modelini kullanır (Ethereum'un hesap modelinin aksine); bu daha iyi güvenlik, paralel işleme ve öngörülebilir maliyetler sunar. ErgoScript, resmi doğrulama yetenekleriyle tasarım gereği daha güvenlidir. Yerel tokenlar akıllı sözleşme gerektirmediğinden daha ucuz ve güvenlidir."
       },
       "privacy-features": {
-        "question": "Are Ergo's privacy features legal to use?",
-        "answer": "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+        "question": "Ergo'nun gizlilik özelliklerini kullanmak yasal mı?",
+        "answer": "Ergo, Sigma protokolleri aracılığıyla isteğe bağlı gizlilik özellikleri sunar. Kullanıcılar yerel mevzuatlarını kontrol etmelidir. Gizlilik, iş gizliliği, kişisel finansal mahremiyet ve veri koruma yasalarına uyum gibi meşru kullanımlar için protokol düzeyinde uygulanmaktadır."
       },
       "mining-profitable": {
-        "question": "Is mining ERG still profitable?",
-        "answer": "Mining profitability depends on your electricity costs, hardware efficiency, and ERG price. Ergo's ASIC-resistant Autolykos algorithm keeps mining accessible to GPUs. Use mining calculators to estimate your potential returns based on current network difficulty."
+        "question": "ERG madenciliği hâlâ kârlı mı?",
+        "answer": "Madencilik kârlılığı elektrik maliyetlerinize, donanım verimliliğinize ve ERG fiyatına bağlıdır. Ergo'nun ASIC'e dirençli Autolykos algoritması madenciliği GPU'lar için erişilebilir tutar. Mevcut ağ zorluğuna göre potansiyel getirinizi tahmin etmek için madencilik hesaplayıcıları kullanın."
       },
       "developer-resources": {
-        "question": "What resources are available for developers?",
-        "answer": "Ergo provides comprehensive developer resources:\n• ErgoScript documentation and tutorials\n• SDKs for multiple languages (Scala, JS, Python)\n• AppKit for dApp development\n• Active developer community and support\n• Grants program for ecosystem projects"
+        "question": "Geliştiriciler için hangi kaynaklar mevcut?",
+        "answer": "Ergo kapsamlı geliştirici kaynakları sunar:\n• ErgoScript belgeleri ve öğreticiler\n• Birden fazla dil için SDK'lar (Scala, JS, Python)\n• dApp geliştirme için AppKit\n• Aktif geliştirici topluluğu ve destek\n• Ekosistem projeleri için hibe programı"
       }
     }
   },
   "getErg": {
-    "title": "Get ERG - Buy Ergo Cryptocurrency",
-    "description": "Find where to buy ERG tokens on exchanges, DEXs, and P2P platforms",
+    "title": "ERG Edin - Ergo Kripto Parası Satın Alın",
+    "description": "Borsalarda, DEX'lerde ve P2P platformlarında ERG token nereden satın alınır",
     "seo": {
-      "title": "Get ERG - How to Buy Ergo Cryptocurrency | Exchange Guide",
-      "description": "Complete guide on where and how to buy ERG tokens. Find the best exchanges, DEXs, and platforms to purchase Ergo cryptocurrency.",
-      "keywords": "buy ERG, Ergo exchanges, get ERG tokens, ERG trading, cryptocurrency exchange, DEX Ergo"
+      "title": "ERG Edin - Ergo Kripto Parası Nasıl Satın Alınır | Borsa Rehberi",
+      "description": "ERG token nereden ve nasıl satın alınacağına dair eksiksiz rehber. Ergo kripto parası satın almak için en iyi borsaları, DEX'leri ve platformları bulun.",
+      "keywords": "ERG satın al, Ergo borsaları, ERG token edin, ERG ticareti, kripto para borsası, DEX Ergo"
     },
     "hero": {
-      "title": "Get ERG",
-      "subtitle": "Your Gateway to the Ergo Ecosystem",
-      "description": "Discover where to buy, trade, and store ERG tokens",
+      "title": "ERG Edin",
+      "subtitle": "Ergo Ekosistemine Açılan Kapınız",
+      "description": "ERG token nereden satın alınacağını, takas edileceğini ve saklanacağını keşfedin",
       "cta": {
-        "exploreExchanges": "Explore Exchanges",
-        "viewGuide": "View Guide"
+        "exploreExchanges": "Borsaları Keşfet",
+        "viewGuide": "Rehberi Görüntüle"
       }
     },
     "exchanges": {
-      "title": "Exchanges",
-      "centralized": "Centralized Exchanges",
-      "decentralized": "Decentralized Exchanges",
-      "p2p": "P2P Platforms"
+      "title": "Borsalar",
+      "centralized": "Merkezi Borsalar",
+      "decentralized": "Merkeziyetsiz Borsalar",
+      "p2p": "P2P Platformları"
     },
-    "heroDescription": "Choose from centralized exchanges, decentralized platforms, or peer-to-peer trading to acquire ERG tokens",
-    "subDescription": "Start your Ergo journey by acquiring ERG tokens through trusted exchanges and platforms",
+    "heroDescription": "ERG token edinmek için merkezi borsalar, merkeziyetsiz platformlar veya eşler arası ticaret arasından seçin",
+    "subDescription": "Güvenilir borsalar ve platformlar aracılığıyla ERG token edinerek Ergo yolculuğunuza başlayın",
     "sections": {
       "exchanges": {
-        "title": "Centralized Exchanges",
-        "description": "Trade ERG on established cryptocurrency exchanges with high liquidity",
-        "viewAll": "View All Exchanges",
-        "goToExchange": "Go to Exchange"
+        "title": "Merkezi Borsalar",
+        "description": "Yüksek likiditeyle köklü kripto para borsalarında ERG takas edin",
+        "viewAll": "Tüm Borsaları Görüntüle",
+        "goToExchange": "Borsaya Git"
       },
       "dex": {
-        "title": "Decentralized Exchanges",
-        "description": "Trade directly from your wallet without KYC",
-        "viewAll": "View All DEXs",
-        "goToSwap": "Go to Swap",
+        "title": "Merkeziyetsiz Borsalar",
+        "description": "KYC olmadan doğrudan cüzdanınızdan takas yapın",
+        "viewAll": "Tüm DEX'leri Görüntüle",
+        "goToSwap": "Swap'a Git",
         "features": {
-          "noKYC": "No KYC Required",
-          "selfCustody": "Self Custody",
-          "privateTrading": "Private Trading",
-          "directSwap": "Direct Swap"
+          "noKYC": "KYC Gerekmez",
+          "selfCustody": "Öz Saklama",
+          "privateTrading": "Gizli Ticaret",
+          "directSwap": "Doğrudan Swap"
         }
       },
       "p2p": {
-        "title": "P2P Platforms",
-        "description": "Trade directly with other users",
-        "viewAll": "View All P2P",
-        "goToPlatform": "Go to Platform",
-        "explorePlatform": "Explore Platform",
+        "title": "P2P Platformları",
+        "description": "Doğrudan diğer kullanıcılarla takas edin",
+        "viewAll": "Tüm P2P'leri Görüntüle",
+        "goToPlatform": "Platforma Git",
+        "explorePlatform": "Platformu Keşfet",
         "features": {
-          "directTrade": "Direct Trade",
-          "multiplePayments": "Multiple Payment Methods",
-          "escrowProtection": "Escrow Protection",
-          "localCurrency": "Local Currency Support"
+          "directTrade": "Doğrudan Ticaret",
+          "multiplePayments": "Çoklu Ödeme Yöntemleri",
+          "escrowProtection": "Emanet Koruması",
+          "localCurrency": "Yerel Para Birimi Desteği"
         }
       },
       "security": {
-        "title": "Security First",
-        "description": "Always store your ERG in a secure wallet after purchase",
-        "findWallet": "Find a Wallet"
+        "title": "Önce Güvenlik",
+        "description": "Satın aldıktan sonra ERG'nizi her zaman güvenli bir cüzdanda saklayın",
+        "findWallet": "Bir Cüzdan Bul"
       },
       "centralized": {
-        "title": "Centralized Exchanges",
-        "description": "Traditional exchanges with fiat on-ramps and high liquidity",
-        "viewExchange": "View Exchange",
+        "title": "Merkezi Borsalar",
+        "description": "Fiat girişleri ve yüksek likiditeye sahip geleneksel borsalar",
+        "viewExchange": "Borsayı Görüntüle",
         "features": {
-          "fiatSupport": "Fiat Support",
-          "highLiquidity": "High Liquidity",
-          "userFriendly": "User Friendly",
-          "mobileApp": "Mobile App"
+          "fiatSupport": "Fiat Desteği",
+          "highLiquidity": "Yüksek Likidite",
+          "userFriendly": "Kullanıcı Dostu",
+          "mobileApp": "Mobil Uygulama"
         }
       }
     },
@@ -2872,139 +2872,139 @@
       "cex": {
         "kucoin": {
           "name": "KuCoin",
-          "description": "Global exchange with ERG/USDT and ERG/BTC pairs"
+          "description": "ERG/USDT ve ERG/BTC çiftleriyle global borsa"
         },
         "gateio": {
           "name": "Gate.io",
-          "description": "Major exchange supporting ERG trading"
+          "description": "ERG ticaretini destekleyen büyük borsa"
         },
         "coinex": {
           "name": "CoinEx",
-          "description": "User-friendly exchange with ERG pairs"
+          "description": "ERG çiftleriyle kullanıcı dostu borsa"
         },
         "huobi": {
           "name": "Huobi",
-          "description": "Established exchange with deep ERG liquidity"
+          "description": "Derin ERG likiditesiyle köklü borsa"
         },
         "mexc": {
           "name": "MEXC",
-          "description": "Fast-growing exchange with ERG perpetuals"
+          "description": "ERG perpetuals ile hızla büyüyen borsa"
         },
         "bitmart": {
           "name": "BitMart",
-          "description": "Popular exchange with ERG trading"
+          "description": "ERG ticaretiyle popüler borsa"
         },
         "tradeogre": {
           "name": "TradeOgre",
-          "description": "Simple exchange for ERG/BTC trading"
+          "description": "ERG/BTC ticareti için basit borsa"
         },
         "probit": {
           "name": "ProBit",
-          "description": "Korean exchange with ERG support"
+          "description": "ERG desteğiyle Koreli borsa"
         }
       },
       "dex": {
         "spectrum": {
           "name": "Spectrum Finance",
-          "description": "Native Ergo DEX with deep liquidity"
+          "description": "Derin likiditeye sahip yerel Ergo DEX"
         },
         "uniswap": {
           "name": "Uniswap",
-          "description": "Trade wrapped ERG on Ethereum"
+          "description": "Ethereum'da wrapped ERG takas edin"
         },
         "splash": {
           "name": "SplashPool",
-          "description": "Cross-chain DEX supporting ERG"
+          "description": "ERG'yi destekleyen zincirler arası DEX"
         }
       },
       "p2p": {
         "localcryptos": {
           "name": "LocalCryptos",
-          "description": "P2P platform with escrow service"
+          "description": "Emanet hizmetli P2P platformu"
         },
         "bisq": {
           "name": "Bisq",
-          "description": "Decentralized P2P trading network"
+          "description": "Merkeziyetsiz P2P ticaret ağı"
         }
       }
     },
     "features": {
       "liquidity": {
-        "title": "High Liquidity",
-        "description": "Access deep order books and competitive prices"
+        "title": "Yüksek Likidite",
+        "description": "Derin emir defterlerine ve rekabetçi fiyatlara erişin"
       },
       "security": {
-        "title": "Secure Trading",
-        "description": "Trade on reputable platforms with proven security"
+        "title": "Güvenli Ticaret",
+        "description": "Kanıtlanmış güvenliğe sahip saygın platformlarda takas yapın"
       },
       "variety": {
-        "title": "Multiple Options",
-        "description": "Choose from CEX, DEX, or P2P based on your needs"
+        "title": "Çoklu Seçenekler",
+        "description": "İhtiyaçlarınıza göre CEX, DEX veya P2P arasından seçin"
       },
       "global": {
-        "title": "Global Access",
-        "description": "Available worldwide with various fiat gateways"
+        "title": "Global Erişim",
+        "description": "Çeşitli fiat ağ geçitleriyle dünya genelinde kullanılabilir"
       }
     },
     "steps": {
-      "title": "How to Buy ERG",
+      "title": "ERG Nasıl Satın Alınır",
       "step1": {
-        "title": "Choose Platform",
-        "description": "Select exchange based on your needs"
+        "title": "Platform Seçin",
+        "description": "İhtiyaçlarınıza göre borsa seçin"
       },
       "step2": {
-        "title": "Create Account",
-        "description": "Sign up and verify if required"
+        "title": "Hesap Oluşturun",
+        "description": "Kaydolun ve gerekiyorsa doğrulayın"
       },
       "step3": {
-        "title": "Deposit Funds",
-        "description": "Add fiat or crypto to your account"
+        "title": "Para Yatırın",
+        "description": "Hesabınıza fiat veya kripto ekleyin"
       },
       "step4": {
-        "title": "Buy ERG",
-        "description": "Place order and complete purchase"
+        "title": "ERG Satın Alın",
+        "description": "Emir verin ve satın almayı tamamlayın"
       },
       "step5": {
-        "title": "Withdraw",
-        "description": "Transfer ERG to your wallet"
+        "title": "Çekin",
+        "description": "ERG'yi cüzdanınıza aktarın"
       }
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Sıkça Sorulan Sorular",
       "whereToBy": {
-        "question": "Where can I buy ERG?",
-        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, decentralized exchanges like Spectrum Finance, or P2P platforms."
+        "question": "ERG nereden satın alabilirim?",
+        "answer": "ERG'yi KuCoin ve Gate.io gibi merkezi borsalarda, Spectrum Finance gibi merkeziyetsiz borsalarda veya P2P platformlarında satın alabilirsiniz."
       },
       "minAmount": {
-        "question": "What's the minimum amount to buy?",
-        "answer": "Minimum amounts vary by platform. Most exchanges allow purchases starting from $10-20 worth of ERG."
+        "question": "Minimum satın alma miktarı nedir?",
+        "answer": "Minimum miktarlar platforma göre değişir. Çoğu borsa 10-20 dolar değerinde ERG'den başlayan alımlar yapmanıza olanak tanır."
       },
       "fees": {
-        "question": "What are typical fees?",
-        "answer": "Exchange fees range from 0.1% to 0.5% per trade."
+        "question": "Tipik ücretler nelerdir?",
+        "answer": "Borsa ücretleri işlem başına %0,1 ile %0,5 arasında değişir."
       },
       "storage": {
-        "question": "How do I store ERG safely?",
-        "answer": "Use official Ergo wallets like Ergo Wallet, Nautilus, or hardware wallets for maximum security."
+        "question": "ERG'yi güvenli bir şekilde nasıl saklarım?",
+        "answer": "Maksimum güvenlik için Ergo Wallet, Nautilus veya donanım cüzdanları gibi resmi Ergo cüzdanlarını kullanın."
       },
       "whereStore": {
-        "question": "Where should I store my ERG?",
-        "answer": "Use official Ergo wallets like Nautilus, SAFEW, or Ergo Mobile for secure storage."
+        "question": "ERG'mi nerede saklamalıyım?",
+        "answer": "Güvenli saklama için Nautilus, SAFEW veya Ergo Mobile gibi resmi Ergo cüzdanlarını kullanın."
       },
       "minPurchase": {
-        "question": "What's the minimum ERG purchase?",
-        "answer": "Minimum varies by exchange, typically 1-10 ERG."
+        "question": "Minimum ERG satın alma miktarı nedir?",
+        "answer": "Minimum borsa bazında değişir, genellikle 1-10 ERG."
       },
       "time": {
-        "question": "How long does it take?",
-        "answer": "CEX purchases are instant, DEX swaps take 2-5 minutes."
+        "question": "Ne kadar sürer?",
+        "answer": "CEX alımları anlıktır, DEX swap'ları 2-5 dakika sürer."
       }
     },
     "cta": {
-      "title": "Ready to Get Started?",
-      "description": "Choose your preferred method to acquire ERG and join the Ergo ecosystem",
-      "exploreExchanges": "Explore Exchanges",
-      "learnMore": "Learn More About Ergo"
+      "title": "Başlamaya Hazır mısınız?",
+      "description": "ERG edinmek için tercih ettiğiniz yöntemi seçin ve Ergo ekosistemine katılın",
+      "exploreExchanges": "Borsaları Keşfet",
+      "learnMore": "Ergo Hakkında Daha Fazla Öğren"
     }
   }
 }
