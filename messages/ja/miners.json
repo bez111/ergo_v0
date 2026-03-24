@@ -19,12 +19,31 @@
       "miners": "マイナー向け"
     },
     "metrics": {
-      "networkHashrate": { "label": "ネットワークハッシュレート", "comment": "ネットワークハッシュレート → 競争とセキュリティ" },
-      "difficulty": { "label": "難易度", "comment": "難易度 → 収益性のベースライン" },
-      "blockTime": { "label": "ブロック時間", "comment": "一貫したブロック時間 = 予測可能な報酬" },
-      "blockReward": { "label": "ブロック報酬", "comment": "ブロック報酬 + 手数料 → マイナーの総収入", "trend": "{remaining}M残り" },
-      "activeMiners": { "label": "アクティブマイナー", "comment": "健全なマイナー分布" },
-      "miningPools": { "label": "マイニングプール", "comment": "分散化のための複数のプールオプション" }
+      "networkHashrate": {
+        "label": "ネットワークハッシュレート",
+        "comment": "ネットワークハッシュレート → 競争とセキュリティ"
+      },
+      "difficulty": {
+        "label": "難易度",
+        "comment": "難易度 → 収益性のベースライン"
+      },
+      "blockTime": {
+        "label": "ブロック時間",
+        "comment": "一貫したブロック時間 = 予測可能な報酬"
+      },
+      "blockReward": {
+        "label": "ブロック報酬",
+        "comment": "ブロック報酬 + 手数料 → マイナーの総収入",
+        "trend": "{remaining}M残り"
+      },
+      "activeMiners": {
+        "label": "アクティブマイナー",
+        "comment": "健全なマイナー分布"
+      },
+      "miningPools": {
+        "label": "マイニングプール",
+        "comment": "分散化のための複数のプールオプション"
+      }
     },
     "coreValues": {
       "asicResistant": {
@@ -596,7 +615,7 @@
       "name": "公式マイニングガイド"
     },
     "autolykos": {
-      "description": "Learn about Ergo",
+      "description": "Ergoについて学ぶ",
       "name": "Autolykosアルゴリズム"
     },
     "storage-rent": {

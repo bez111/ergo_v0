@@ -1,13 +1,13 @@
 {
   "events": {
     "title": "Community Events",
-    "subtitle": "Join Ergo community events",
-    "description": "Discover hackathons, meetups, and conferences in the Ergo ecosystem",
+    "subtitle": "Partecipa agli eventi della community Ergo",
+    "description": "Scopri hackathon, meetup e conferenze nell'ecosistema Ergo",
     "upcoming": "Upcoming Events",
     "past": "Past Events",
     "register": "Register",
     "learnMore": "Learn More",
-    "noEvents": "No events scheduled at the moment. Check back soon!",
+    "noEvents": "Nessun evento in programma al momento. Ricontrolla presto!",
     "hackathons": "Hackathons",
     "meetups": "Meetups",
     "conferences": "Conferences"

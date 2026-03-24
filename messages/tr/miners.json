@@ -19,12 +19,31 @@
       "miners": "Madenciler için"
     },
     "metrics": {
-      "networkHashrate": { "label": "Ağ Hash Gücü", "comment": "Ağ hash gücü → rekabet ve güvenlik" },
-      "difficulty": { "label": "Zorluk", "comment": "Zorluk → kârlılık için temel" },
-      "blockTime": { "label": "Blok Süresi", "comment": "Tutarlı blok süreleri = öngörülebilir ödüller" },
-      "blockReward": { "label": "Blok Ödülü", "comment": "Blok ödülü + ücretler → toplam madenci geliri", "trend": "{remaining}M kaldı" },
-      "activeMiners": { "label": "Aktif Madenciler", "comment": "Sağlıklı madenci dağılımı" },
-      "miningPools": { "label": "Madencilik Havuzları", "comment": "Merkeziyetsizleşme için birden fazla havuz seçeneği" }
+      "networkHashrate": {
+        "label": "Ağ Hash Gücü",
+        "comment": "Ağ hash gücü → rekabet ve güvenlik"
+      },
+      "difficulty": {
+        "label": "Zorluk",
+        "comment": "Zorluk → kârlılık için temel"
+      },
+      "blockTime": {
+        "label": "Blok Süresi",
+        "comment": "Tutarlı blok süreleri = öngörülebilir ödüller"
+      },
+      "blockReward": {
+        "label": "Blok Ödülü",
+        "comment": "Blok ödülü + ücretler → toplam madenci geliri",
+        "trend": "{remaining}M kaldı"
+      },
+      "activeMiners": {
+        "label": "Aktif Madenciler",
+        "comment": "Sağlıklı madenci dağılımı"
+      },
+      "miningPools": {
+        "label": "Madencilik Havuzları",
+        "comment": "Merkeziyetsizleşme için birden fazla havuz seçeneği"
+      }
     },
     "coreValues": {
       "asicResistant": {
@@ -596,7 +615,7 @@
       "name": "Resmi Madencilik Kılavuzu"
     },
     "autolykos": {
-      "description": "Learn about Ergo",
+      "description": "Ergo hakkında bilgi edinin",
       "name": "Autolykos Algoritması"
     },
     "storage-rent": {

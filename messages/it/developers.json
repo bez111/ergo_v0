@@ -45,11 +45,21 @@
         "proficiencyLevel": "Principiante",
         "technicalAudience": "Sviluppatori, Ingegneri, Founder tecnici",
         "about": [
-          { "name": "ErgoScript" },
-          { "name": "Modello eUTXO" },
-          { "name": "Sigma Protocol" },
-          { "name": "Sviluppo Blockchain" },
-          { "name": "Smart Contract" }
+          {
+            "name": "ErgoScript"
+          },
+          {
+            "name": "Modello eUTXO"
+          },
+          {
+            "name": "Sigma Protocol"
+          },
+          {
+            "name": "Sviluppo Blockchain"
+          },
+          {
+            "name": "Smart Contract"
+          }
         ]
       },
       "itemList": {

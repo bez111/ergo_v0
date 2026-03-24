@@ -50,15 +50,15 @@
     "hardware_paper_paper_node_node": "Hardware\",\n  paper: \"paper\",\n  node: \"node",
     "chrome_firefox_android_ios": "Chrome\", \"Firefox\", \"Android\", \"iOS",
     "windows_macos_linux": "Windows\", \"macOS\", \"Linux",
-    "full_node_integration_enhanced_privacy": "Full Node Integration\", \"Enhanced Privacy\", \"Offline Vault\", \"Token Management",
+    "full_node_integration_enhanced_privacy": "Tam Düğüm Entegrasyonu\", \"Gelişmiş Gizlilik\", \"Çevrimdışı Kasa\", \"Token Yönetimi",
     "desktop_isofficial_true_isrecommended_true": "Desktop\",\n    isOfficial: true,\n    isRecommended: true,\n    websiteUrl: \"https://satergo.com/",
-    "ergomixer_privacy_quick_setup_no_download_required": "ErgoMixer Privacy\", \"Quick Setup\", \"No Download Required",
+    "ergomixer_privacy_quick_setup_no_download_required": "ErgoMixer Gizliliği\", \"Hızlı Kurulum\", \"İndirme Gerektirmez",
     "browser_websiteurl_https_safew_org": "Browser\",\n    websiteUrl: \"https://safew.org/",
-    "multi_signature_mobile_first_user_friendly": "Multi-Signature\", \"Mobile-first\", \"User-friendly",
-    "cold_storage_physical_confirmation_recovery_phrase": "Cold Storage\", \"Physical Confirmation\", \"Recovery Phrase",
+    "multi_signature_mobile_first_user_friendly": "Çoklu İmza\", \"Mobil Öncelikli\", \"Kullanıcı Dostu",
+    "cold_storage_physical_confirmation_recovery_phrase": "Soğuk Depolama\", \"Fiziksel Onay\", \"Kurtarma İfadesi",
     "hardware_websiteurl_https_www_ledger_com": "Hardware\",\n    websiteUrl: \"https://www.ledger.com/",
-    "cold_storage_no_internet_required_printable_keys": "Cold Storage\", \"No Internet Required\", \"Printable Keys",
-    "full_node_integration_cli_api_access_cold_storage": "Full Node Integration\", \"CLI/API Access\", \"Cold Storage",
+    "cold_storage_no_internet_required_printable_keys": "Soğuk Depolama\", \"İnternet Gerektirmez\", \"Yazdırılabilir Anahtarlar",
+    "full_node_integration_cli_api_access_cold_storage": "Tam Düğüm Entegrasyonu\", \"CLI/API Erişimi\", \"Soğuk Depolama",
     "offline_key_generation_and_storage": "Maksimum güvenlik için çevrimdışı anahtar üretimi ve depolama.",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
@@ -68,11 +68,11 @@
       "description": "Ergo blok zinciri için güvenli cüzdanlar koleksiyonu",
       "wallets": {
         "nautilus": {
-          "name": "Nautilus Wallet",
+          "name": "Nautilus Cüzdanı",
           "description": "dApp bağlantısıyla Ergo için özellik dolu tarayıcı uzantısı cüzdanı"
         },
         "satergo": {
-          "name": "Satergo Wallet",
+          "name": "Satergo Cüzdanı",
           "description": "Tam düğüm entegrasyonu ve gelişmiş özellikler içeren masaüstü cüzdanı"
         }
       }
@@ -128,11 +128,11 @@
     "quickStart": {
       "title": "Hızlı Başlangıç",
       "nautilus": {
-        "name": "Nautilus Wallet",
+        "name": "Nautilus Cüzdanı",
         "subtitle": "Tarayıcı - En Popüler"
       },
       "satergo": {
-        "name": "Satergo Wallet",
+        "name": "Satergo Cüzdanı",
         "subtitle": "Masaüstü - Tam Düğüm"
       },
       "ledger": {
@@ -191,7 +191,7 @@
     },
     "wallets": {
       "nautilus": {
-        "name": "Nautilus Wallet",
+        "name": "Nautilus Cüzdanı",
         "description": "dApp bağlantısı ve gelişmiş DeFi özellikleriyle özellik dolu tarayıcı uzantısı cüzdanı",
         "features": [
           "dApp Entegrasyonu",
@@ -202,7 +202,7 @@
         ]
       },
       "satergo": {
-        "name": "Satergo Wallet",
+        "name": "Satergo Cüzdanı",
         "description": "Tam düğüm entegrasyonu ve gelişmiş gizlilik özellikleriyle masaüstü cüzdanı",
         "features": [
           "Tam Düğüm",
@@ -213,7 +213,7 @@
         ]
       },
       "ergo-wallet-android": {
-        "name": "Ergo Wallet (Android)",
+        "name": "Ergo Cüzdanı (Android)",
         "description": "QR tarama ve basit arayüzle Android için resmi mobil cüzdan",
         "features": [
           "QR Tarama",
@@ -224,7 +224,7 @@
         ]
       },
       "ergo-wallet-ios": {
-        "name": "Ergo Wallet (iOS)",
+        "name": "Ergo Cüzdanı (iOS)",
         "description": "Sezgisel tasarım ve güvenli depolama ile iOS için resmi mobil cüzdan",
         "features": [
           "Touch ID",
@@ -289,19 +289,19 @@
   "walletsData": {
     "nautilus": {
       "description": "dApp bağlantısı ve gelişmiş DeFi özellikleriyle özellik dolu tarayıcı uzantısı cüzdanı",
-      "name": "Nautilus Wallet"
+      "name": "Nautilus Cüzdanı"
     },
     "satergo": {
       "description": "Tam düğüm entegrasyonu ve gelişmiş gizlilik özellikleriyle masaüstü cüzdanı",
-      "name": "Satergo Wallet"
+      "name": "Satergo Cüzdanı"
     },
     "ergo-wallet-android": {
       "description": "QR tarama ve basit arayüzle Android için resmi mobil cüzdan",
-      "name": "Ergo Wallet (Android)"
+      "name": "Ergo Cüzdanı (Android)"
     },
     "ergo-wallet-ios": {
       "description": "Sezgisel tasarım ve güvenli depolama ile iOS için resmi mobil cüzdan",
-      "name": "Ergo Wallet (iOS)"
+      "name": "Ergo Cüzdanı (iOS)"
     },
     "safew": {
       "description": "Basit ve Hızlı Ergo Cüzdanı - temel özelliklerle hafif masaüstü cüzdanı",

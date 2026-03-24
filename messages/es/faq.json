@@ -173,7 +173,7 @@
       "answer": "No, Ergo es un protocolo descentralizado de código abierto. La Ergo Foundation es un organismo comunitario sin fines de lucro que apoya el desarrollo, pero no controla la red."
     },
     "beginner-fair-launch": {
-      "question": "What does a ",
+      "question": "¿Qué significa un ",
       "answer": "Ergo no tuvo Oferta Inicial de Monedas (ICO) ni tokens preminados para los fundadores. Esto garantiza una distribución más equitativa, ya que todos tuvieron la misma oportunidad de adquirir ERG a través de la minería desde el primer día."
     },
     "beginner-ergo-vs-btc-eth": {
@@ -182,15 +182,15 @@
     },
     "beginner-eutxo": {
       "question": "¿Qué es eUTXO?",
-      "answer": "The Extended UTXO model attaches data and logic directly to "
+      "answer": "El modelo eUTXO extendido adjunta datos y lógica directamente a "
     },
     "beginner-ergoscript": {
       "question": "¿Qué es ErgoScript?",
-      "answer": "ErgoScript is the powerful and secure programming language for writing smart contracts on Ergo. You do not need to know code to use Ergo; it"
+      "answer": "ErgoScript es el potente y seguro lenguaje de programación para escribir contratos inteligentes en Ergo. No necesitas saber programar para usar Ergo; it"
     },
     "beginner-sigma-protocols": {
       "question": "¿Qué son los Sigma Protocols?",
-      "answer": "These are advanced zero-knowledge proofs built into Ergo"
+      "answer": "Son pruebas avanzadas de conocimiento cero integradas en Ergo"
     },
     "beginner-erg-use": {
       "question": "¿Para qué se usa la moneda ERG?",
@@ -217,12 +217,12 @@
       "answer": "Ergo es descentralizado e impulsado por la comunidad. Los cambios de protocolo se discuten y formalizan a través de las Propuestas de Mejora de Ergo (EIPs), con los mineros señalando su apoyo."
     },
     "beginner-contribute": {
-      "question": "How can I contribute if I",
+      "question": "¿Cómo puedo contribuir si no",
       "answer": "Puedes ayudar con soporte comunitario, creación de contenido (artículos, videos), traducción, prueba de dApps o simplemente difundiendo el conocimiento sobre Ergo."
     },
     "tech-what-is-ergo": {
       "question": "¿Qué es Ergo?",
-      "answer": "Ergo is a programmable blockchain protocol engineered for the development of decentralized applications (dApps), with a pronounced emphasis on creating an efficient, secure, and accessible environment for implementing financial contracts. Launched in 2019, the platform distinctively merges the security advantages of Bitcoin"
+      "answer": "Ergo es un protocolo blockchain programable diseñado para el desarrollo de aplicaciones descentralizadas (dApps), con un énfasis pronunciado en crear un entorno eficiente, seguro y accesible para implementar contratos financieros. Lanzado en 2019, la plataforma fusiona de manera distintiva las ventajas de seguridad de Bitcoin"
     },
     "tech-ergo-vision": {
       "question": "¿Cuál es el objetivo o visión principal de Ergo?",
@@ -234,11 +234,11 @@
     },
     "tech-ergo-manifesto": {
       "question": "¿Qué es el Manifiesto de Ergo y cuáles son sus ideas clave sobre privacidad?",
-      "answer": "The Ergo Manifesto, authored by co-founder Alex Chepurnoy, articulates that financial privacy is a fundamental human right. Key ideas include: privacy as a tool for survival and protection against authoritarian control, defense against financial asset seizure, recognition that regulation stability isn"
+      "answer": "El Manifiesto Ergo, redactado por el cofundador Alex Chepurnoy, expresa que la privacidad financiera es un derecho humano fundamental. Las ideas clave incluyen: la privacidad como herramienta de supervivencia y protección contra el control autoritario, defensa contra la incautación de activos financieros, reconocimiento de que la estabilidad regulatoria no es"
     },
     "tech-why-named-ergo": {
-      "question": "Why is it named ",
-      "answer": "The name "
+      "question": "¿Por qué se llama ",
+      "answer": "El nombre "
     },
     "tech-ergo-launch": {
       "question": "¿Cuándo se lanzó Ergo? ¿Hubo un ICO?",
@@ -246,15 +246,15 @@
     },
     "tech-consensus-mechanism": {
       "question": "¿Qué mecanismo de consenso usa Ergo?",
-      "answer": "Ergo employs a Proof-of-Work (PoW) consensus mechanism using the Autolykos algorithm. PoW was chosen for its "
+      "answer": "Ergo emplea un mecanismo de consenso de Prueba de Trabajo (PoW) utilizando el algoritmo Autolykos. Se eligió PoW por su "
     },
     "tech-autolykos-algorithm": {
       "question": "¿Qué es Autolykos y en qué se diferencia?",
-      "answer": "Autolykos is Ergo"
+      "answer": "Autolykos es el algoritmo de Ergo"
     },
     "tech-eutxo-model": {
-      "question": "What is the eUTXO model and how does it differ from Bitcoin",
-      "answer": "The Extended UTXO (eUTXO) model builds on Bitcoin\\"
+      "question": "¿Qué es el modelo eUTXO y en qué se diferencia de Bitcoin",
+      "answer": "El modelo UTXO extendido (eUTXO) se basa en el modelo de Bitcoin\\"
     },
     "tech-eutxo-advantages": {
       "question": "¿Cuáles son las ventajas de eUTXO para Ergo?",
@@ -262,19 +262,19 @@
     },
     "tech-smart-contracts-ergo": {
       "question": "¿Qué son los contratos inteligentes en Ergo?",
-      "answer": "Smart contracts on Ergo are self-executing code that automatically enforce predefined terms. Every "
+      "answer": "Los contratos inteligentes en Ergo son código autoejectable que aplica automáticamente términos predefinidos. Cada "
     },
     "tech-ergoscript-features": {
       "question": "¿Qué es ErgoScript y cuáles son sus características clave?",
-      "answer": "ErgoScript is Ergo"
+      "answer": "ErgoScript es el lenguaje de Ergo"
     },
     "tech-ergoscript-vs-solidity": {
       "question": "¿Cómo se compara ErgoScript con Solidity?",
       "answer": "ErgoScript (Ergo/eUTXO) vs Solidity (Ethereum/Cuentas): ErgoScript enfatiza la seguridad y expresividad con primitivas criptográficas incorporadas, mientras que Solidity se centra en la facilidad de uso. ErgoScript está basado en Scala y es funcional, mientras que Solidity es similar a JavaScript. ErgoScript ofrece costos más predecibles y características de privacidad nativas, mientras que Solidity tiene un ecosistema más grande y más herramientas de desarrollo disponibles actualmente."
     },
     "tech-boxes-ergoscript": {
-      "question": "What are ",
-      "answer": "Boxes are Ergo"
+      "question": "¿Qué son ",
+      "answer": "Las cajas (boxes) son el modelo de Ergo"
     },
     "tech-sigma-protocols": {
       "question": "¿Qué son los Sigma Protocols y cómo mejoran la privacidad?",
@@ -282,7 +282,7 @@
     },
     "tech-zero-knowledge-proofs": {
       "question": "¿Ofrece Ergo Pruebas de Conocimiento Cero?",
-      "answer": "Yes, Ergo provides robust support for discrete log-based zero-knowledge proofs through Sigma Protocols. These are actively used for privacy-preserving features, complex authentication schemes, and applications like ErgoMixer. ErgoScript is described as being "
+      "answer": "Sí, Ergo ofrece un sólido soporte para pruebas de conocimiento cero basadas en logaritmo discreto a través de los Sigma Protocols. Estos se utilizan activamente para funciones de preservación de la privacidad, esquemas de autenticación complejos y aplicaciones como ErgoMixer. ErgoScript se describe como "
     },
     "tech-ergomixer": {
       "question": "¿Qué es ErgoMixer y cómo funciona?",
@@ -293,8 +293,8 @@
       "answer": "La privacidad en Ergo es opcional, no obligatoria. Esto permite flexibilidad para casos de uso diversos: algunas aplicaciones necesitan transparencia (como organizaciones benéficas), mientras que otras requieren privacidad. La privacidad opcional permite una rica funcionalidad de contratos inteligentes, mayor adopción, navegación regulatoria y autonomía del usuario. Los usuarios pueden elegir herramientas de privacidad como ErgoMixer cuando lo necesiten."
     },
     "tech-storage-rent": {
-      "question": "What is ",
-      "answer": "Storage rent is a fee levied on UTXOs inactive for 4+ years (approximately 0.14 ERG per typical box every 4 years). It exists to: prevent blockchain bloat by recycling "
+      "question": "¿Qué es ",
+      "answer": "El alquiler de almacenamiento es una tarifa aplicada a los UTXOs inactivos durante más de 4 años (aproximadamente 0,14 ERG por caja típica cada 4 años). Existe para: prevenir el bloat del blockchain reciclando "
     },
     "tech-long-term-survivability": {
       "question": "¿Cómo busca Ergo la supervivencia a largo plazo y la auto-enmiendabilidad?",
@@ -305,16 +305,16 @@
       "answer": "Las Pruebas de Proof-of-Work No Interactivas (NIPoPoWs) permiten la verificación eficiente de eventos blockchain sin descargar la cadena completa. Ergo las usa para: clientes ultra-ligeros (wallets móviles), puentes cross-chain sin confianza y cadenas laterales eficientes. Habilitan pruebas de tamaño logarítmico en lugar de lineal, haciendo la verificación mucho más rápida y ligera."
     },
     "tech-tokenomics": {
-      "question": "What is Ergo",
+      "question": "¿Cuál es la tokenómica de Ergo",
       "answer": "ERG tiene un suministro máximo fijo de ~97,7 millones de monedas. La emisión comenzó en 75 ERG/bloque, disminuyendo con el tiempo. No ocurrió ningún ICO ni preminado. La Ergo Foundation recibe el 4,43% del suministro total durante el período de emisión. El storage rent proporciona recompensas sostenibles a largo plazo para los mineros después de que termine la emisión."
     },
     "tech-sigmausd": {
       "question": "¿Qué es SigmaUSD?",
-      "answer": "SigmaUSD is Ergo"
+      "answer": "SigmaUSD es la moneda estable de Ergo"
     },
     "tech-oracle-pools": {
       "question": "¿Qué son los Oracle Pools?",
-      "answer": "Oracle Pools are Ergo"
+      "answer": "Los Oracle Pools son el sistema de oráculos de Ergo"
     },
     "tech-spectrum-dex": {
       "question": "¿Qué es Spectrum DEX?",

@@ -216,7 +216,7 @@
         ]
       },
       "ergo-wallet-android": {
-        "name": "Ergo Wallet (Android)",
+        "name": "Ergo 钱包（Android）",
         "description": "官方 Android 移动端钱包，支持二维码扫描，界面简洁",
         "features": [
           "二维码扫描",
@@ -227,7 +227,7 @@
         ]
       },
       "ergo-wallet-ios": {
-        "name": "Ergo Wallet (iOS)",
+        "name": "Ergo 钱包（iOS）",
         "description": "官方 iOS 移动端钱包，界面直观，存储安全",
         "features": [
           "Touch ID",
@@ -300,11 +300,11 @@
     },
     "ergo-wallet-android": {
       "description": "官方 Android 移动端钱包，支持二维码扫描，界面简洁",
-      "name": "Ergo Wallet (Android)"
+      "name": "Ergo 钱包（Android）"
     },
     "ergo-wallet-ios": {
       "description": "官方 iOS 移动端钱包，界面直观，存储安全",
-      "name": "Ergo Wallet (iOS)"
+      "name": "Ergo 钱包（iOS）"
     },
     "safew": {
       "description": "简单快速的 Ergo 钱包 — 轻量级桌面钱包，具备核心功能",

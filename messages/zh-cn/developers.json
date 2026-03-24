@@ -36,11 +36,21 @@
         "proficiencyLevel": "Beginner",
         "technicalAudience": "Developers, Engineers, Technical Founders",
         "about": [
-          { "name": "ErgoScript" },
-          { "name": "eUTXO Model" },
-          { "name": "Sigma Protocols" },
-          { "name": "Blockchain Development" },
-          { "name": "Smart Contracts" }
+          {
+            "name": "ErgoScript"
+          },
+          {
+            "name": "eUTXO Model"
+          },
+          {
+            "name": "Sigma Protocols"
+          },
+          {
+            "name": "Blockchain Development"
+          },
+          {
+            "name": "Smart Contracts"
+          }
         ]
       },
       "itemList": {
@@ -495,7 +505,7 @@
       "subtitle": "探索 Ergo 生态系统",
       "description": "探索不断增长的 Ergo 生态系统",
       "seo": {
-        "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
+        "title": "Ergo 生态系统 — dApp、钱包、工具、DeFi",
         "description": "探索 Ergo 生态系统：去中心化应用、钱包、隐私工具、DeFi 协议、SDK 与基础设施。",
         "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain 项目",
         "ogTitle": "Ergo Ecosystem",

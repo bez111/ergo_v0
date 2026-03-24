@@ -107,7 +107,15 @@
       "peer_reviewed_research_publications_on_ergo": "關於 Ergo 創新區塊鏈技術的同行評審研究出版物",
       "ergo_research_papers_academic_publications": "Ergo 研究論文 | 學術出版物",
       "collection_of_academic_research_papers": "Ergo 區塊鏈技術學術研究論文集",
-      "collection_of_peer_reviewed_papers": "Ergo 區塊鏈同行評審論文集"
+      "collection_of_peer_reviewed_papers": "Ergo 區塊鏈同行評審論文集",
+      "ring_signatures_for_blockchain_privacy": "Blockchain 隱私的環簽名技術",
+      "learn_item_https_ergoblockchain_org_learn": "Learn\", item: \"https://ergoblockchain.org/learn",
+      "research_item_https_ergoblockchain_org": "Research\", item: \"https://ergoblockchain.org/learn/research",
+      "the_core_technical_paper_describing_ergo": "描述 Ergo 的核心技術論文",
+      "by_iohk_cardano_ergo_researchers": "由 IOHK/Cardano 及 Ergo 研究人員撰寫——關於 eUTXO 典範的權威論文。",
+      "the_cryptographic_backbone_of_privacy": "Ergo 中隱私與環簽名的密碼學核心基礎。",
+      "a_novel_asic_resistant_proof": "一種新型抗 ASIC 的 PoW 共識機制。",
+      "research_on_cross_chain_lightweight": "關於跨鏈輕量級驗證協議的研究，用於無需信任的互操作性。"
     },
     "guides": {
       "confidential_transactions": "機密交易",
@@ -314,13 +322,13 @@
       "leverage_eutxo_description_only_ergoscript": "Leverage eUTXO\",\n      description: \"Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
       "built_in_cryptography_description_native": "Built-in Cryptography\",\n      description: \"Native support for Sigma-protocols, privacy, and advanced access schemes",
       "new_to_smart_contracts_description": "New to Smart Contracts\",\n      description: \"Step-by-step explanations of core blockchain and smart contract concepts",
-      "blockchain_basics_smart_contract_fundamentals": "Blockchain basics\", \"Smart contract fundamentals\", \"eUTXO introduction",
+      "blockchain_basics_smart_contract_fundamentals": "Blockchain 基礎\", \"智能合約基礎\", \"eUTXO 介紹",
       "experienced_blockchain_developers_description_discover": "Experienced Blockchain Developers\",\n      description: \"Discover eUTXO, new safe patterns, and advanced contract design",
-      "security_best_practices_advanced_cryptography": "Security best practices\", \"Advanced cryptography",
+      "security_best_practices_advanced_cryptography": "安全最佳實踐\", \"進階密碼學",
       "scala_functional_programmers_description": "Scala/Functional Programmers\",\n      description:",
-      "functional_paradigms_type_safety_immutable": "Functional paradigms\", \"Type safety\", \"Immutable data structures",
+      "functional_paradigms_type_safety_immutable": "函數式範式\", \"型別安全\", \"不可變資料結構",
       "defi_enthusiasts_description_build_the": "DeFi Enthusiasts\",\n      description: \"Build the next generation of decentralized financial applications",
-      "dex_protocols_lending_platforms_algorithmic": "DEX protocols\", \"Lending platforms\", \"Algorithmic stablecoins",
+      "dex_protocols_lending_platforms_algorithmic": "DEX 協議\", \"借貸平台\", \"演算法穩定幣",
       "foundations_of_ergo_and_ergoscript": "Ergo 和 ErgoScript 的基礎",
       "secure_by_design": "設計安全",
       "powerful_expressive": "強大且富有表現力",
@@ -377,7 +385,46 @@
       "master_ergoscript_programming_language_build": "掌握 ErgoScript 程式語言。在 Ergo 區塊鏈上使用零知識證明、多階段協議和高級密碼學構建安全的智慧合約。",
       "build_powerful_defi_applications_with": "使用 ErgoScript 的高級功能構建強大的 DeFi 應用。",
       "your_first_contract_always_true": "您的第一個合約：「始終為真」",
-      "what_development_tools_do_i_need_answer": "我需要什麼開發工具？"
+      "what_development_tools_do_i_need_answer": "我需要什麼開發工具？",
+      "introduction_to_ergo_the_eutxo_model_duration": "Ergo 與 eUTXO 模型介紹\", duration:",
+      "what_is_ergoscript_philosophy_and": "什麼是 ErgoScript？哲學與設計目標\", duration:",
+      "setting_up_your_ergoscript_development": "設置您的 ErgoScript 開發環境\", duration:",
+      "basic_syntax_data_types_operators_duration": "基本語法、資料型別、運算子\", duration:",
+      "boxes_registers_context_variables_duration": "盒子、暫存器、上下文變數\", duration:",
+      "anatomy_of_an_ergo_transaction_duration": "Ergo 交易的結構\", duration:",
+      "always_true_duration": "Always True\"', duration:",
+      "time_locked_contracts_duration": "時間鎖定合約\", duration:",
+      "ergotree_compilation_duration": "ErgoTree 與編譯\", duration:",
+      "fees_transaction_size_duration": "費用與交易大小\", duration:",
+      "working_with_data_and_tokens": "資料與代幣操作",
+      "reading_writing_registers_duration": "讀取/寫入暫存器\", duration:",
+      "handling_erg_native_tokens_duration": "處理 ERG 與原生代幣\", duration:",
+      "minting_burning_tokens_duration": "鑄造/銷毀代幣\", duration:",
+      "nfts_in_ergoscript_duration": "ErgoScript 中的 NFT\", duration:",
+      "multi_stage_contracts_state_transitions_duration": "多階段合約與狀態轉換\", duration:",
+      "using_oracles_duration": "使用預言機\", duration:",
+      "basic_escrow_duration": "基本託管\", duration:",
+      "sigma_protocols_proofs_of_knowledge_duration": "Sigma 協議與知識證明\", duration:",
+      "daos_voting_duration": "DAO 與投票\", duration:",
+      "ring_signatures_mixing_duration": "環簽名與混幣\", duration:",
+      "threshold_signatures_duration": "門檻簽名\", duration:",
+      "designing_defi_primitives_duration": "設計 DeFi 原語\", duration:",
+      "gas_optimization_script_complexity_duration": "Gas 優化與腳本複雜度\", duration:",
+      "advanced_context_extensions_duration": "進階上下文擴展\", duration:",
+      "unit_integration_testing_duration": "單元與整合測試\", duration:",
+      "debugging_techniques_duration": "除錯技術\", duration:",
+      "pitfalls_vulnerabilities_duration": "陷阱與漏洞\", duration:",
+      "secure_development_best_practices_duration": "安全開發最佳實踐\", duration:",
+      "practical_projects_dapp_examples": "實踐專案與 dApp 範例",
+      "nft_marketplace_duration": "NFT 市集\", duration:",
+      "decentralized_lottery_duration": "去中心化彩票\", duration:",
+      "defi_lending_protocol_duration": "DeFi 借貸協議\", duration:",
+      "privacy_preserving_payment_channel_duration": "隱私保護支付通道\", duration:",
+      "custom_oracle_implementation_duration": "自定義預言機實現\", duration:",
+      "your_first_contract_always_true_duration": "Your First Contract: \"Always True\"', duration:",
+      "ergoscript_programming_tutorial_build_on_ergo": "ErgoScript 程式設計教學 | 在 Ergo 上建構",
+      "build_powerful_defi_applications_with_ergoscript": "使用 ErgoScript 建構強大的 DeFi 應用程式",
+      "learn_to_build_smart_contracts_with_ergoscript": "學習使用 ErgoScript 建構智能合約"
     },
     "how_do_i_learn_ergoscript": "如何學習 ErgoScript？\",\n      answer: \"從涵蓋基礎到高級概念的 ErgoScript 教程系列開始。通過示例練習，使用操場，並參考文檔進行全面學習。",
     "what_resources_are_available_for": "有哪些學習 Ergo 的資源？\",\n      answer: \"Ergo 提供教程、全面的常見問題、研究論文、視頻課程、開發者文檔、社群指南和適合所有技能水平的實踐操場。",
@@ -422,9 +469,19 @@
           "audienceType": "開發者、創始人、研究人員、隱私構建者",
           "educationalLevel": "初學者到高級",
           "instances": [
-            { "name": "ErgoScript 構建路徑", "description": "ErgoScript 模式、確定性和部署的實踐課程。", "duration": "PT20H" },
-            { "name": "隱私與 Sigma 協議", "description": "Σ 協議、混合器和選擇性披露流程的互動解說。" },
-            { "name": "研究與代幣經濟學庫", "description": "原始白皮書、儲存租金模型和 Autolykos 研究資料。" }
+            {
+              "name": "ErgoScript 構建路徑",
+              "description": "ErgoScript 模式、確定性和部署的實踐課程。",
+              "duration": "PT20H"
+            },
+            {
+              "name": "隱私與 Sigma 協議",
+              "description": "Σ 協議、混合器和選擇性披露流程的互動解說。"
+            },
+            {
+              "name": "研究與代幣經濟學庫",
+              "description": "原始白皮書、儲存租金模型和 Autolykos 研究資料。"
+            }
           ]
         }
       },
@@ -646,7 +703,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "research": "研究" },
+        "breadcrumbs": {
+          "research": "研究"
+        },
         "scholarlyArticle": {
           "name": "Ergo 平台研究集",
           "description": "Ergo 區塊鏈技術學術研究論文集",
@@ -655,9 +714,18 @@
         },
         "faq": {
           "items": [
-            { "question": "Ergo 涵蓋哪些研究主題？", "answer": "Ergo 研究涵蓋共識算法（Autolykos）、密碼學（Sigma 協議）、智慧合約（ErgoScript）、儲存租金經濟學和 NiPoPoWs。" },
-            { "question": "Ergo 的論文是同行評審的嗎？", "answer": "是的，Ergo 的核心研究論文經過同行評審，並在學術會議和期刊上發表。" },
-            { "question": "我可以為 Ergo 研究做貢獻嗎？", "answer": "是的。Ergo 歡迎學術合作——如果您對區塊鏈研究感興趣，請聯繫我們。" }
+            {
+              "question": "Ergo 涵蓋哪些研究主題？",
+              "answer": "Ergo 研究涵蓋共識算法（Autolykos）、密碼學（Sigma 協議）、智慧合約（ErgoScript）、儲存租金經濟學和 NiPoPoWs。"
+            },
+            {
+              "question": "Ergo 的論文是同行評審的嗎？",
+              "answer": "是的，Ergo 的核心研究論文經過同行評審，並在學術會議和期刊上發表。"
+            },
+            {
+              "question": "我可以為 Ergo 研究做貢獻嗎？",
+              "answer": "是的。Ergo 歡迎學術合作——如果您對區塊鏈研究感興趣，請聯繫我們。"
+            }
           ]
         }
       },
@@ -791,7 +859,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "ergoscript": "ErgoScript" },
+        "breadcrumbs": {
+          "ergoscript": "ErgoScript"
+        },
         "course": {
           "name": "ErgoScript 程式設計課程",
           "description": "學習使用 ErgoScript 構建智慧合約",
@@ -801,9 +871,18 @@
         },
         "faq": {
           "items": [
-            { "question": "什麼是 ErgoScript？", "answer": "ErgoScript 是一種基於 Sigma 協議的協議友好型智慧合約語言，可實現帶有內建零知識證明的複雜 DeFi 應用。" },
-            { "question": "ErgoScript 難學嗎？", "answer": "ErgoScript 有一定的學習曲線，但提供強大的安全屬性。熟悉函數式程式設計的開發者通常會感覺很直觀。" },
-            { "question": "我可以用 ErgoScript 構建什麼？", "answer": "DEX、借貸協議、NFT 市場、DAO、預言機池、隱私工具和任何複雜的金融合約。" }
+            {
+              "question": "什麼是 ErgoScript？",
+              "answer": "ErgoScript 是一種基於 Sigma 協議的協議友好型智慧合約語言，可實現帶有內建零知識證明的複雜 DeFi 應用。"
+            },
+            {
+              "question": "ErgoScript 難學嗎？",
+              "answer": "ErgoScript 有一定的學習曲線，但提供強大的安全屬性。熟悉函數式程式設計的開發者通常會感覺很直觀。"
+            },
+            {
+              "question": "我可以用 ErgoScript 構建什麼？",
+              "answer": "DEX、借貸協議、NFT 市場、DAO、預言機池、隱私工具和任何複雜的金融合約。"
+            }
           ]
         }
       },

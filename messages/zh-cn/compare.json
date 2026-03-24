@@ -41,7 +41,7 @@
       }
     },
     "hub": {
-      "title": "Ergo vs The World",
+      "title": "Ergo 对抗世界",
       "subtitle": "了解Ergo 如何与其他区块链平台进行比较。诚实、技术比较与无营销流量。",
       "chooseComparison": "选择一个比较",
       "seeFullComparisonTable": "查看完整对比表",
@@ -215,7 +215,7 @@
       "seoDescription": "Ergo 与 Bitcoin 的完整对比：eUTXO 智能合约 vs 简单 UTXO、Sigma 协议隐私、存储租金可持续性以及 NiPoPoWs 轻客户端。",
       "summary": {
         "headline": "Bitcoin",
-        "subheadline": "Ergo extends Bitcoin",
+        "subheadline": "Ergo 扩展 Bitcoin",
         "points": [
           {
             "title": "可编程的 eUTXO",

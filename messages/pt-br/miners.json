@@ -19,12 +19,31 @@
       "miners": "Para mineradores"
     },
     "metrics": {
-      "networkHashrate": { "label": "Hashrate da rede", "comment": "Hashrate da rede → competição e segurança" },
-      "difficulty": { "label": "Dificuldade", "comment": "Dificuldade → base para lucratividade" },
-      "blockTime": { "label": "Tempo de bloco", "comment": "Tempos de bloco consistentes = recompensas previsíveis" },
-      "blockReward": { "label": "Recompensa por bloco", "comment": "Recompensa por bloco + taxas → receita total do minerador", "trend": "{remaining}M restantes" },
-      "activeMiners": { "label": "Mineradores ativos", "comment": "Distribuição saudável de mineradores" },
-      "miningPools": { "label": "Pools de mineração", "comment": "Múltiplas opções de pool para descentralização" }
+      "networkHashrate": {
+        "label": "Hashrate da rede",
+        "comment": "Hashrate da rede → competição e segurança"
+      },
+      "difficulty": {
+        "label": "Dificuldade",
+        "comment": "Dificuldade → base para lucratividade"
+      },
+      "blockTime": {
+        "label": "Tempo de bloco",
+        "comment": "Tempos de bloco consistentes = recompensas previsíveis"
+      },
+      "blockReward": {
+        "label": "Recompensa por bloco",
+        "comment": "Recompensa por bloco + taxas → receita total do minerador",
+        "trend": "{remaining}M restantes"
+      },
+      "activeMiners": {
+        "label": "Mineradores ativos",
+        "comment": "Distribuição saudável de mineradores"
+      },
+      "miningPools": {
+        "label": "Pools de mineração",
+        "comment": "Múltiplas opções de pool para descentralização"
+      }
     },
     "coreValues": {
       "asicResistant": {
@@ -94,25 +113,35 @@
       "items": [
         {
           "name": "NBMiner",
-          "gpus": ["NVIDIA", "AMD"],
+          "gpus": [
+            "NVIDIA",
+            "AMD"
+          ],
           "fee": "2%",
           "recommended": "Melhor para rigs mistos"
         },
         {
           "name": "T-Rex",
-          "gpus": ["NVIDIA"],
+          "gpus": [
+            "NVIDIA"
+          ],
           "fee": "1%",
           "recommended": "Melhor para placas NVIDIA"
         },
         {
           "name": "TeamRedMiner",
-          "gpus": ["AMD"],
+          "gpus": [
+            "AMD"
+          ],
           "fee": "2%",
           "recommended": "Melhor para placas AMD"
         },
         {
           "name": "lolMiner",
-          "gpus": ["NVIDIA", "AMD"],
+          "gpus": [
+            "NVIDIA",
+            "AMD"
+          ],
           "fee": "1%",
           "recommended": "Usuários avançados"
         }
@@ -125,42 +154,66 @@
           "fee": "1%",
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
-          "features": ["Auto-exchange", "App mobile", "Acesso à API"]
+          "features": [
+            "Auto-exchange",
+            "App mobile",
+            "Acesso à API"
+          ]
         },
         {
           "name": "2Miners",
           "fee": "1%",
           "paymentSystem": "PPLNS",
           "minPayout": "0.1 ERG",
-          "features": ["Suporte 24/7", "Bot do Telegram", "Alertas por e-mail"]
+          "features": [
+            "Suporte 24/7",
+            "Bot do Telegram",
+            "Alertas por e-mail"
+          ]
         },
         {
           "name": "HeroMiners",
           "fee": "0.9%",
           "paymentSystem": "PROP",
           "minPayout": "0.5 ERG",
-          "features": ["Suporte SSL", "Estatísticas de worker", "Bot do Discord"]
+          "features": [
+            "Suporte SSL",
+            "Estatísticas de worker",
+            "Bot do Discord"
+          ]
         },
         {
           "name": "WoolyPooly",
           "fee": "0.9%",
           "paymentSystem": "PPLNS",
           "minPayout": "0.5 ERG",
-          "features": ["Mineração solo", "Bot do Telegram", "Recompensas MEV"]
+          "features": [
+            "Mineração solo",
+            "Bot do Telegram",
+            "Recompensas MEV"
+          ]
         },
         {
           "name": "F2Pool",
           "fee": "2%",
           "paymentSystem": "PPS+",
           "minPayout": "1 ERG",
-          "features": ["App mobile", "Multi-moeda", "Pagamentos instantâneos"]
+          "features": [
+            "App mobile",
+            "Multi-moeda",
+            "Pagamentos instantâneos"
+          ]
         },
         {
           "name": "Nanopool",
           "fee": "1%",
           "paymentSystem": "PPLNS",
           "minPayout": "1 ERG",
-          "features": ["Notificações por e-mail", "API", "Multilíngue"]
+          "features": [
+            "Notificações por e-mail",
+            "API",
+            "Multilíngue"
+          ]
         }
       ]
     },
@@ -229,38 +282,98 @@
       "rows": [
         {
           "criterion": "Hardware de mineração",
-          "bitcoin": { "status": "bad", "text": "Somente ASIC" },
-          "ethereum": { "status": "warning", "text": "Proof-of-Stake" },
-          "monero": { "status": "good", "text": "Amigável a CPU/GPU" },
-          "ergo": { "status": "good", "text": "Otimizado para GPU" }
+          "bitcoin": {
+            "status": "bad",
+            "text": "Somente ASIC"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "Proof-of-Stake"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Amigável a CPU/GPU"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Otimizado para GPU"
+          }
         },
         {
           "criterion": "Recompensa por bloco",
-          "bitcoin": { "status": "warning", "text": "Halving a cada 4 anos" },
-          "ethereum": { "status": "bad", "text": "Sem mineração" },
-          "monero": { "status": "good", "text": "Emissão residual" },
-          "ergo": { "status": "good", "text": "9 ERG + taxas" }
+          "bitcoin": {
+            "status": "warning",
+            "text": "Halving a cada 4 anos"
+          },
+          "ethereum": {
+            "status": "bad",
+            "text": "Sem mineração"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Emissão residual"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "9 ERG + taxas"
+          }
         },
         {
           "criterion": "Incentivos futuros",
-          "bitcoin": { "status": "warning", "text": "Somente taxas" },
-          "ethereum": { "status": "bad", "text": "Sem mineração" },
-          "monero": { "status": "good", "text": "Recompensas perpétuas" },
-          "ergo": { "status": "good", "text": "Storage rent" }
+          "bitcoin": {
+            "status": "warning",
+            "text": "Somente taxas"
+          },
+          "ethereum": {
+            "status": "bad",
+            "text": "Sem mineração"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Recompensas perpétuas"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Storage rent"
+          }
         },
         {
           "criterion": "Utilidade da rede",
-          "bitcoin": { "status": "good", "text": "Reserva de valor" },
-          "ethereum": { "status": "good", "text": "Smart contracts" },
-          "monero": { "status": "good", "text": "Pagamentos privados" },
-          "ergo": { "status": "good", "text": "DeFi + Privacidade" }
+          "bitcoin": {
+            "status": "good",
+            "text": "Reserva de valor"
+          },
+          "ethereum": {
+            "status": "good",
+            "text": "Smart contracts"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Pagamentos privados"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "DeFi + Privacidade"
+          }
         },
         {
           "criterion": "Acessibilidade à mineração",
-          "bitcoin": { "status": "bad", "text": "Escala industrial" },
-          "ethereum": { "status": "bad", "text": "Sem mineração" },
-          "monero": { "status": "good", "text": "Mineração doméstica" },
-          "ergo": { "status": "good", "text": "Rigs de GPU viáveis" }
+          "bitcoin": {
+            "status": "bad",
+            "text": "Escala industrial"
+          },
+          "ethereum": {
+            "status": "bad",
+            "text": "Sem mineração"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Mineração doméstica"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Rigs de GPU viáveis"
+          }
         }
       ]
     },
@@ -463,16 +576,36 @@
       "title": "Economia de longo prazo",
       "description": "O storage rent paga os mineradores para sempre. Quando as emissões terminam, você ainda ganha. Construído para décadas, não para pump & dump."
     },
-    "getblok": { "name": "GetBlok" },
-    "2miners": { "name": "2Miners" },
-    "herominers": { "name": "HeroMiners" },
-    "woolypooly": { "name": "WoolyPooly" },
-    "f2pool": { "name": "F2Pool" },
-    "nanopool": { "name": "Nanopool" },
-    "nbminer": { "name": "NBMiner" },
-    "trex": { "name": "T-Rex" },
-    "teamredminer": { "name": "TeamRedMiner" },
-    "lolminer": { "name": "lolMiner" },
+    "getblok": {
+      "name": "GetBlok"
+    },
+    "2miners": {
+      "name": "2Miners"
+    },
+    "herominers": {
+      "name": "HeroMiners"
+    },
+    "woolypooly": {
+      "name": "WoolyPooly"
+    },
+    "f2pool": {
+      "name": "F2Pool"
+    },
+    "nanopool": {
+      "name": "Nanopool"
+    },
+    "nbminer": {
+      "name": "NBMiner"
+    },
+    "trex": {
+      "name": "T-Rex"
+    },
+    "teamredminer": {
+      "name": "TeamRedMiner"
+    },
+    "lolminer": {
+      "name": "lolMiner"
+    },
     "calculator": {
       "description": "Calcule os ganhos potenciais com base no seu hardware e custos de eletricidade.",
       "name": "Calculadora de lucratividade de mineração"

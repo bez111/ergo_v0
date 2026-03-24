@@ -461,7 +461,7 @@
           "stats": {
             "crossChain": {
               "label": "Перекрестная цепь",
-              "value": "BTC, ETH, ADA, BSC & more"
+              "value": "BTC, ETH, ADA, BSC и другие"
             },
             "secureBridge": {
               "label": "Защищенный мост",

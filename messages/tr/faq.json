@@ -173,7 +173,7 @@
       "answer": "Hayır, Ergo merkeziyetsiz, açık kaynaklı bir protokoldür. Ergo Vakfı, geliştirmeyi destekleyen kâr amacı gütmeyen bir topluluk kuruluşudur ancak ağı kontrol etmez."
     },
     "beginner-fair-launch": {
-      "question": "What does a ",
+      "question": "\"Adil lansman\" ne anlama gelir?",
       "answer": "Ergo, kurucular için İlk Para Teklifi (ICO) veya ön madencilik token'ı yapmadı. Bu, daha adil bir dağıtım sağlar; çünkü herkes ilk günden itibaren madencilik yoluyla ERG edinmek için eşit fırsata sahipti."
     },
     "beginner-ergo-vs-btc-eth": {
@@ -182,15 +182,15 @@
     },
     "beginner-eutxo": {
       "question": "eUTXO nedir?",
-      "answer": "The Extended UTXO model attaches data and logic directly to "
+      "answer": "Genişletilmiş UTXO modeli, verileri ve mantığı doğrudan"
     },
     "beginner-ergoscript": {
       "question": "ErgoScript nedir?",
-      "answer": "ErgoScript is the powerful and secure programming language for writing smart contracts on Ergo. You do not need to know code to use Ergo; it"
+      "answer": "ErgoScript, Ergo üzerinde akıllı sözleşmeler yazmak için güçlü ve güvenli bir programlama dilidir. Ergo'yu kullanmak için kod bilmenize gerek yoktur; bu"
     },
     "beginner-sigma-protocols": {
       "question": "Sigma Protokolleri nelerdir?",
-      "answer": "These are advanced zero-knowledge proofs built into Ergo"
+      "answer": "Bunlar, Ergo'nun içine yerleştirilmiş gelişmiş sıfır bilgi kanıtlarıdır"
     },
     "beginner-erg-use": {
       "question": "ERG coin ne için kullanılır?",
@@ -217,12 +217,12 @@
       "answer": "Ergo merkeziyetsiz ve topluluk odaklıdır. Protokol değişiklikleri, madencilerin destek sinyali verdiği Ergo İyileştirme Önerileri (EIP'ler) aracılığıyla tartışılır ve resmileştirilir."
     },
     "beginner-contribute": {
-      "question": "How can I contribute if I",
+      "question": "Bilmiyorsam nasıl katkıda bulunabilirim?",
       "answer": "Topluluk desteği, içerik oluşturma (makaleler, videolar), çeviri, dApp testi veya Ergo hakkında farkındalık yaratma konularında yardımcı olabilirsiniz."
     },
     "tech-what-is-ergo": {
       "question": "Ergo nedir?",
-      "answer": "Ergo is a programmable blockchain protocol engineered for the development of decentralized applications (dApps), with a pronounced emphasis on creating an efficient, secure, and accessible environment for implementing financial contracts. Launched in 2019, the platform distinctively merges the security advantages of Bitcoin"
+      "answer": "Ergo, merkeziyetsiz uygulamaların (dApp) geliştirilmesi için tasarlanmış programlanabilir bir blockchain protokolüdür; finansal sözleşmelerin uygulanması için verimli, güvenli ve erişilebilir bir ortam oluşturmaya özellikle önem verir. 2019'da başlatılan platform, Bitcoin'in güvenlik avantajlarını benzersiz bir şekilde birleştirir"
     },
     "tech-ergo-vision": {
       "question": "Ergo'nun temel hedefi veya vizyonu nedir?",
@@ -234,11 +234,11 @@
     },
     "tech-ergo-manifesto": {
       "question": "Ergo Manifestosu nedir ve gizlilik hakkındaki temel fikirleri nelerdir?",
-      "answer": "The Ergo Manifesto, authored by co-founder Alex Chepurnoy, articulates that financial privacy is a fundamental human right. Key ideas include: privacy as a tool for survival and protection against authoritarian control, defense against financial asset seizure, recognition that regulation stability isn"
+      "answer": "Kurucu ortak Alex Chepurnoy tarafından kaleme alınan Ergo Manifestosu, finansal gizliliğin temel bir insan hakkı olduğunu ifade eder. Temel fikirler şunlardır: hayatta kalma ve otoriter kontrole karşı koruma aracı olarak gizlilik, finansal varlıklara el koyulmasına karşı savunma, düzenleme istikrarının olmadığının kabulü"
     },
     "tech-why-named-ergo": {
-      "question": "Why is it named ",
-      "answer": "The name "
+      "question": "Neden \"Ergo\" adını taşıyor?",
+      "answer": "\"Ergo\" adı"
     },
     "tech-ergo-launch": {
       "question": "Ergo ne zaman başlatıldı? ICO var mıydı?",
@@ -246,15 +246,15 @@
     },
     "tech-consensus-mechanism": {
       "question": "Ergo hangi konsensüs mekanizmasını kullanır?",
-      "answer": "Ergo employs a Proof-of-Work (PoW) consensus mechanism using the Autolykos algorithm. PoW was chosen for its "
+      "answer": "Ergo, Autolykos algoritmasını kullanan bir Proof-of-Work (PoW) konsensüs mekanizması kullanır. PoW şu nedenlerle seçilmiştir:"
     },
     "tech-autolykos-algorithm": {
       "question": "Autolykos nedir ve nasıl farklıdır?",
-      "answer": "Autolykos is Ergo"
+      "answer": "Autolykos, Ergo'nun"
     },
     "tech-eutxo-model": {
-      "question": "What is the eUTXO model and how does it differ from Bitcoin",
-      "answer": "The Extended UTXO (eUTXO) model builds on Bitcoin\\"
+      "question": "eUTXO modeli nedir ve Bitcoin'den nasıl farklıdır?",
+      "answer": "Genişletilmiş UTXO (eUTXO) modeli, Bitcoin'in üzerine inşa edilmiştir"
     },
     "tech-eutxo-advantages": {
       "question": "eUTXO'nun Ergo için avantajları nelerdir?",
@@ -262,19 +262,19 @@
     },
     "tech-smart-contracts-ergo": {
       "question": "Ergo'daki akıllı sözleşmeler nelerdir?",
-      "answer": "Smart contracts on Ergo are self-executing code that automatically enforce predefined terms. Every "
+      "answer": "Ergo üzerindeki akıllı sözleşmeler, önceden tanımlanmış koşulları otomatik olarak uygulayan kendi kendine çalışan kodlardır. Her"
     },
     "tech-ergoscript-features": {
       "question": "ErgoScript nedir ve temel özellikleri nelerdir?",
-      "answer": "ErgoScript is Ergo"
+      "answer": "ErgoScript, Ergo'nun"
     },
     "tech-ergoscript-vs-solidity": {
       "question": "ErgoScript Solidity ile nasıl karşılaştırılır?",
       "answer": "ErgoScript (Ergo/eUTXO) - Solidity (Ethereum/Hesap): ErgoScript, yerleşik kriptografik ilkellerle güvenliği ve ifade zenginliğini ön plana çıkarırken, Solidity kullanım kolaylığına odaklanır. ErgoScript Scala tabanlı ve fonksiyoneldir, Solidity ise JavaScript benzeridir. ErgoScript daha öngörülebilir maliyetler ve yerel gizlilik özellikleri sunarken, Solidity şu anda daha büyük bir ekosisteme ve daha fazla geliştirme aracına sahiptir."
     },
     "tech-boxes-ergoscript": {
-      "question": "What are ",
-      "answer": "Boxes are Ergo"
+      "question": "ErgoScript'te \"box\" nedir?",
+      "answer": "Box'lar, Ergo'nun"
     },
     "tech-sigma-protocols": {
       "question": "Sigma Protokolleri nelerdir ve gizliliği nasıl artırır?",
@@ -282,7 +282,7 @@
     },
     "tech-zero-knowledge-proofs": {
       "question": "Ergo Sıfır-Bilgi Kanıtları sunuyor mu?",
-      "answer": "Yes, Ergo provides robust support for discrete log-based zero-knowledge proofs through Sigma Protocols. These are actively used for privacy-preserving features, complex authentication schemes, and applications like ErgoMixer. ErgoScript is described as being "
+      "answer": "Evet, Ergo, Sigma Protokolleri aracılığıyla ayrık logaritma tabanlı sıfır bilgi kanıtları için güçlü destek sağlar. Bunlar, gizlilik koruyan özellikler, karmaşık kimlik doğrulama şemaları ve ErgoMixer gibi uygulamalarda aktif olarak kullanılmaktadır. ErgoScript şöyle tanımlanmaktadır:"
     },
     "tech-ergomixer": {
       "question": "ErgoMixer nedir ve nasıl çalışır?",
@@ -293,8 +293,8 @@
       "answer": "Ergo'da gizlilik zorunlu değil, isteğe bağlıdır. Bu, çeşitli kullanım senaryoları için esneklik sağlar — bazı uygulamaların şeffaflığa (hayır kurumları gibi) ihtiyacı varken, diğerleri gizliliğe ihtiyaç duyar. İsteğe bağlı gizlilik, zengin akıllı sözleşme işlevselliğini, daha geniş benimsemeyi, düzenleyici uyumu ve kullanıcı özerkliğini mümkün kılar. Kullanıcılar gerektiğinde ErgoMixer gibi gizlilik araçlarını seçebilir."
     },
     "tech-storage-rent": {
-      "question": "What is ",
-      "answer": "Storage rent is a fee levied on UTXOs inactive for 4+ years (approximately 0.14 ERG per typical box every 4 years). It exists to: prevent blockchain bloat by recycling "
+      "question": "\"Depolama kirası\" nedir?",
+      "answer": "Depolama kirası, 4+ yıl boyunca hareketsiz kalan UTXO'lara uygulanan bir ücrettir (her 4 yılda bir tipik bir box başına yaklaşık 0,14 ERG). Şu amaçlarla mevcuttur: kullanılmayan UTXO'ları geri dönüştürerek blockchain şişmesini önlemek"
     },
     "tech-long-term-survivability": {
       "question": "Ergo uzun vadeli hayatta kalınabilirliği ve kendi kendini değiştirebilirliği nasıl hedefler?",
@@ -305,16 +305,16 @@
       "answer": "Non-Interactive Proofs of Proof-of-Work (NIPOPOWs), tam zinciri indirmeden blok zinciri olaylarının verimli şekilde doğrulanmasına olanak tanır. Ergo bunları şunlar için kullanır: ultra-hafif istemciler (mobil cüzdanlar), güvensiz zincirler arası köprüler ve verimli yan zincirler. Doğrulamayı çok daha hızlı ve hafif hale getirerek doğrusal yerine logaritmik boyutlu kanıtlar sağlar."
     },
     "tech-tokenomics": {
-      "question": "What is Ergo",
+      "question": "Ergo'nun tokenomikleri nedir?",
       "answer": "ERG, yaklaşık 97.7 milyon coin sabit arz tavanına sahiptir. Emisyon, blok başına 75 ERG ile başladı ve zamanla azaldı. ICO veya ön madencilik gerçekleşmedi. Ergo Vakfı, emisyon dönemi boyunca toplam arzın %4.43'ünü alır. Depolama kirası, emisyon sona erdikten sonra sürdürülebilir uzun vadeli madenci ödülleri sağlar."
     },
     "tech-sigmausd": {
       "question": "SigmaUSD nedir?",
-      "answer": "SigmaUSD is Ergo"
+      "answer": "SigmaUSD, Ergo'nun"
     },
     "tech-oracle-pools": {
       "question": "Oracle Havuzları nelerdir?",
-      "answer": "Oracle Pools are Ergo"
+      "answer": "Oracle Pools, Ergo'nun"
     },
     "tech-spectrum-dex": {
       "question": "Spectrum DEX nedir?",

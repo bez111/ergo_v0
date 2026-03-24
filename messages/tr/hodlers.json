@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Ağ Hash Gücü" },
-      "activeAddresses": { "label": "Aktif Adresler" },
-      "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG Arzı", "trend": "{remaining}M kaldı" },
-      "avgBlockTime": { "label": "Ortalama Blok Süresi" },
-      "activeNodes": { "label": "Aktif Düğümler" }
+      "networkHashrate": {
+        "label": "Ağ Hash Gücü"
+      },
+      "activeAddresses": {
+        "label": "Aktif Adresler"
+      },
+      "defiTvl": {
+        "label": "DeFi TVL"
+      },
+      "ergSupply": {
+        "label": "ERG Arzı",
+        "trend": "{remaining}M kaldı"
+      },
+      "avgBlockTime": {
+        "label": "Ortalama Blok Süresi"
+      },
+      "activeNodes": {
+        "label": "Aktif Düğümler"
+      }
     },
     "heroComparisons": [
       {
@@ -316,15 +329,15 @@
     },
     "security-commodity": {
       "question": "Ergo bir menkul kıymet mi yoksa emtia mı?",
-      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+      "answer": "Ergo, 2019'da ön madencilik, ICO veya risk sermayesi finansmanı olmaksızın adil bir şekilde başlatıldı. Bitcoin gibi, bu"
     },
     "different-from-bitcoin": {
       "question": "Ergo Bitcoin'den nasıl farklıdır?",
-      "answer": "Ergo shares Bitcoin"
+      "answer": "Ergo, Bitcoin'in"
     },
     "who-controls": {
       "question": "Ergo projesini kim kontrol eder?",
-      "answer": "No single entity controls Ergo. It"
+      "answer": "Hiçbir tek varlık Ergo'yu kontrol etmez. O"
     },
     "mining-rewards-end": {
       "question": "Madencilik ödülleri sona erdiğinde ne olur?",
@@ -335,7 +348,7 @@
       "answer": "ERG is available on major exchanges like <a href=\\"
     },
     "privacy-legal": {
-      "question": "Is Ergo",
+      "question": "Ergo yasal mı?",
       "answer": "Ergo"
     }
   }

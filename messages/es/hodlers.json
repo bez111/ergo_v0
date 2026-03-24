@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Hashrate de la Red" },
-      "activeAddresses": { "label": "Direcciones Activas" },
-      "defiTvl": { "label": "TVL en DeFi" },
-      "ergSupply": { "label": "Suministro de ERG", "trend": "{remaining}M restantes" },
-      "avgBlockTime": { "label": "Tiempo Promedio de Bloque" },
-      "activeNodes": { "label": "Nodos Activos" }
+      "networkHashrate": {
+        "label": "Hashrate de la Red"
+      },
+      "activeAddresses": {
+        "label": "Direcciones Activas"
+      },
+      "defiTvl": {
+        "label": "TVL en DeFi"
+      },
+      "ergSupply": {
+        "label": "Suministro de ERG",
+        "trend": "{remaining}M restantes"
+      },
+      "avgBlockTime": {
+        "label": "Tiempo Promedio de Bloque"
+      },
+      "activeNodes": {
+        "label": "Nodos Activos"
+      }
     },
     "heroComparisons": [
       {
@@ -316,15 +329,15 @@
     },
     "security-commodity": {
       "question": "¿Es Ergo un valor o una materia prima?",
-      "answer": "Ergo launched fairly in 2019 with no premine, no ICO, and no VC funding. Like Bitcoin, it"
+      "answer": "Ergo se lanzó de forma justa en 2019 sin preminado, sin ICO y sin financiamiento de capital de riesgo. Al igual que Bitcoin, it"
     },
     "different-from-bitcoin": {
       "question": "¿Cómo es diferente Ergo de Bitcoin?",
-      "answer": "Ergo shares Bitcoin"
+      "answer": "Ergo comparte con Bitcoin"
     },
     "who-controls": {
       "question": "¿Quién controla el proyecto Ergo?",
-      "answer": "No single entity controls Ergo. It"
+      "answer": "Ninguna entidad única controla Ergo. It"
     },
     "mining-rewards-end": {
       "question": "¿Qué sucede cuando terminan las recompensas de minería?",

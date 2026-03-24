@@ -215,7 +215,7 @@
       "seoDescription": "ErgoとBitcoinの完全比較：eUTXOスマートコントラクト vs シンプルUTXO、Sigma Protocolsプライバシー、ストレージレント持続可能性、NiPoPoWsライトクライアント。",
       "summary": {
         "headline": "Bitcoin",
-        "subheadline": "Ergo extends Bitcoin",
+        "subheadline": "ErgoはBitcoinを拡張し",
         "points": [
           {
             "title": "プログラマブルeUTXO",
@@ -455,7 +455,7 @@
       "seoDescription": "ErgoとZcashの比較：Sigma Protocols vs zk-SNARKs、信頼されたセットアップなし、スマートコントラクト、フェアローンチ vs ファウンダー報酬。",
       "summary": {
         "headline": "信頼されたセットアップなしのゼロ知識",
-        "subheadline": "Both enable ZK proofs, but Ergo",
+        "subheadline": "どちらもZKプルーフを可能にしますが、Ergoは",
         "points": [
           {
             "title": "信頼されたセットアップなし",
@@ -741,7 +741,7 @@
       "seoDescription": "Ergo vs Ravencoin比較：eUTXOスマートコントラクト vs アセット重視スクリプティング、プライバシー機能、DeFi能力、持続可能性。",
       "summary": {
         "headline": "フルDeFiプラットフォーム vs アセット重視チェーン",
-        "subheadline": "Both enable native tokens on PoW, but Ergo adds smart contracts, privacy, and DeFi that Ravencoin can",
+        "subheadline": "どちらもPoW上でネイティブトークンを可能にしますが、ErgoはRavencoinにはないスマートコントラクト、プライバシー、DeFiを追加します",
         "points": [
           {
             "title": "スマートコントラクト",
@@ -808,7 +808,7 @@
       "seoDescription": "Ergo vs Litecoin比較：eUTXOスマートコントラクト vs シンプル決済、Sigma Protocols vs MWEBプライバシー、DeFi能力。",
       "summary": {
         "headline": "モダンなスマートコントラクトPoW vs クラシックな決済コイン",
-        "subheadline": "Litecoin is digital silver to Bitcoin",
+        "subheadline": "LitecoinはBitcoinに対するデジタルシルバーであり",
         "points": [
           {
             "title": "スマートコントラクト",

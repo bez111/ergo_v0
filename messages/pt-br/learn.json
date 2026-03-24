@@ -177,7 +177,8 @@
         "prevents_blockchain_bloat": "Previne o inchaço da blockchain",
         "encourages_active_participation": "Incentiva a participação ativa",
         "ensures_long_term_sustainability": "Garante sustentabilidade a longo prazo",
-        "storage_rent_is_a_unique": "O storage rent é uma característica única que ajuda o Ergo a permanecer eficiente e sustentável nos próximos anos."
+        "storage_rent_is_a_unique": "O storage rent é uma característica única que ajuda o Ergo a permanecer eficiente e sustentável nos próximos anos.",
+        "unclaimed_or_abandoned_boxes_are": "Boxes não reclamadas ou abandonadas são eventualmente recicladas, liberando espaço."
       },
       "what_is_a_utxo": "O que é um UTXO?",
       "unspent_transaction_output": "Saída de transação não gasta",
@@ -506,9 +507,19 @@
           "audienceType": "Desenvolvedores, fundadores, pesquisadores, construtores de privacidade",
           "educationalLevel": "De iniciante a avançado",
           "instances": [
-            { "name": "Trilha de construtores ErgoScript", "description": "Lições práticas para padrões ErgoScript, determinismo e implantação.", "duration": "PT20H" },
-            { "name": "Privacidade e Protocolos Sigma", "description": "Explicador interativo de Σ-protocolos, mixers e fluxos de divulgação seletiva." },
-            { "name": "Biblioteca de pesquisa e tokenomics", "description": "Whitepapers originais, modelos de Storage Rent e apresentações de pesquisa sobre Autolykos." }
+            {
+              "name": "Trilha de construtores ErgoScript",
+              "description": "Lições práticas para padrões ErgoScript, determinismo e implantação.",
+              "duration": "PT20H"
+            },
+            {
+              "name": "Privacidade e Protocolos Sigma",
+              "description": "Explicador interativo de Σ-protocolos, mixers e fluxos de divulgação seletiva."
+            },
+            {
+              "name": "Biblioteca de pesquisa e tokenomics",
+              "description": "Whitepapers originais, modelos de Storage Rent e apresentações de pesquisa sobre Autolykos."
+            }
           ]
         }
       },
@@ -606,7 +617,7 @@
           "cta": "Explorar stack de privacidade",
           "stack": {
             "core": "Σ-protocolos · Provas ZK · Mixers",
-            "tooling": "ErgoMixer · Stealth pools",
+            "tooling": "ErgoMixer · Pools furtivos",
             "mentors": "Pesquisadores de privacidade",
             "deliverable": "dApp de privacidade em conformidade"
           }
@@ -730,7 +741,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "research": "Pesquisa" },
+        "breadcrumbs": {
+          "research": "Pesquisa"
+        },
         "scholarlyArticle": {
           "name": "Coleção de pesquisas da Ergo Platform",
           "description": "Coleção de artigos de pesquisa acadêmica sobre tecnologia blockchain Ergo",
@@ -739,9 +752,18 @@
         },
         "faq": {
           "items": [
-            { "question": "Quais tópicos de pesquisa o Ergo cobre?", "answer": "A pesquisa Ergo cobre algoritmos de consenso (Autolykos), criptografia (protocolos Sigma), contratos inteligentes (ErgoScript), economia do storage rent e NiPoPoWs." },
-            { "question": "Os artigos Ergo são revisados por pares?", "answer": "Sim, os principais artigos de pesquisa Ergo são revisados por pares e publicados em conferências acadêmicas e periódicos." },
-            { "question": "Posso contribuir para a pesquisa Ergo?", "answer": "Sim. O Ergo bem-vinda colaboração acadêmica — entre em contato se você estiver interessado em pesquisa blockchain." }
+            {
+              "question": "Quais tópicos de pesquisa o Ergo cobre?",
+              "answer": "A pesquisa Ergo cobre algoritmos de consenso (Autolykos), criptografia (protocolos Sigma), contratos inteligentes (ErgoScript), economia do storage rent e NiPoPoWs."
+            },
+            {
+              "question": "Os artigos Ergo são revisados por pares?",
+              "answer": "Sim, os principais artigos de pesquisa Ergo são revisados por pares e publicados em conferências acadêmicas e periódicos."
+            },
+            {
+              "question": "Posso contribuir para a pesquisa Ergo?",
+              "answer": "Sim. O Ergo bem-vinda colaboração acadêmica — entre em contato se você estiver interessado em pesquisa blockchain."
+            }
           ]
         }
       },
@@ -875,7 +897,9 @@
         }
       },
       "schema": {
-        "breadcrumbs": { "ergoscript": "ErgoScript" },
+        "breadcrumbs": {
+          "ergoscript": "ErgoScript"
+        },
         "course": {
           "name": "Curso de programação ErgoScript",
           "description": "Aprenda a criar contratos inteligentes com ErgoScript",
@@ -885,9 +909,18 @@
         },
         "faq": {
           "items": [
-            { "question": "O que é ErgoScript?", "answer": "ErgoScript é uma linguagem de contratos inteligentes compatível com protocolo, baseada em protocolos Sigma, permitindo aplicações DeFi complexas com provas de conhecimento zero integradas." },
-            { "question": "ErgoScript é difícil de aprender?", "answer": "ErgoScript tem uma curva de aprendizado, mas oferece propriedades de segurança poderosas. Desenvolvedores familiarizados com programação funcional geralmente o acham intuitivo." },
-            { "question": "O que posso criar com ErgoScript?", "answer": "DEXs, protocolos de empréstimo, mercados de NFTs, DAOs, pools de oráculos, ferramentas de privacidade e qualquer contrato financeiro complexo." }
+            {
+              "question": "O que é ErgoScript?",
+              "answer": "ErgoScript é uma linguagem de contratos inteligentes compatível com protocolo, baseada em protocolos Sigma, permitindo aplicações DeFi complexas com provas de conhecimento zero integradas."
+            },
+            {
+              "question": "ErgoScript é difícil de aprender?",
+              "answer": "ErgoScript tem uma curva de aprendizado, mas oferece propriedades de segurança poderosas. Desenvolvedores familiarizados com programação funcional geralmente o acham intuitivo."
+            },
+            {
+              "question": "O que posso criar com ErgoScript?",
+              "answer": "DEXs, protocolos de empréstimo, mercados de NFTs, DAOs, pools de oráculos, ferramentas de privacidade e qualquer contrato financeiro complexo."
+            }
           ]
         }
       },
