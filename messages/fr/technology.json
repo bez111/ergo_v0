@@ -4855,7 +4855,7 @@
       "techArticle": {
         "headline": "Babel Fees : Payez les frais de transaction avec n'importe quel token",
         "description": "Découvrez comment les Babel Fees permettent aux utilisateurs de payer les frais de transaction Ergo avec n'importe quel token via des intermédiaires automatisés.",
-        "aboutName": "Babel Fees"
+        "aboutName": "Frais Babel"
       },
       "faq": {
         "items": [
@@ -5015,7 +5015,7 @@
     "comparison": {
       "title": "Comparaison des méthodes de paiement des frais",
       "ergFees": "Frais ERG",
-      "babelFees": "Babel Fees",
+      "babelFees": "Frais Babel",
       "alwaysAccepted": "Toujours accepté",
       "primaryMethod": "Méthode principale",
       "predictableStable": "Prévisible et stable",
@@ -5306,7 +5306,7 @@
       ]
     },
     "babel-fees": {
-      "title": "Babel Fees",
+      "title": "Frais Babel",
       "description": "Payez les frais de transaction avec n'importe quel token au lieu d'ERG via des intermédiaires automatisés",
       "shortDescription": "Payez les frais avec n'importe quel token",
       "keywords": "babel fees,frais de transaction,ux,paiements en tokens,abstraction du gaz,ux defi,marchés sur la chaîne",

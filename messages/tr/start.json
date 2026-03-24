@@ -180,8 +180,8 @@
         "quiz": {
           "name": "Ergo Ekosistemi Yol Bulucu Testi",
           "description": "Kullanıcıların Ergo ekosistemindeki ideal yollarını bulmalarına yardımcı olmak için etkileşimli test",
-          "educationalLevel": "Beginner",
-          "learningResourceType": "Quiz",
+          "educationalLevel": "Başlangıç",
+          "learningResourceType": "Sınav",
           "timeRequired": "PT5M"
         }
       },
@@ -2787,7 +2787,7 @@
         "description": "L1 token'ları/NFT'leri"
       },
       "light": {
-        "title": "Light",
+        "title": "Hafif",
         "description": "client'lar (NIPoPoW'lar)"
       }
     },
@@ -3693,7 +3693,7 @@
       "links": {
         "eutxo_model": "eUTXO smart‑contract modeli",
         "autolykos": "Autolykos (ASIC‑dirençli PoW)",
-        "storage_rent": "Storage Rent",
+        "storage_rent": "Depolama Kirası",
         "sigma_privacy": "Sigma destekli gizlilik"
       }
     },
@@ -3721,7 +3721,7 @@
         "description": "Protokol düzeyinde yerleşik gizlilik"
       },
       "storage_rent": {
-        "title": "Storage Rent",
+        "title": "Depolama Kirası",
         "description": "Uzun vadeli sürdürülebilirlik için ekonomik model"
       },
       "light_clients": {
@@ -3758,7 +3758,7 @@
     },
     "technologies": {
       "proof_of_work": {
-        "title": "Proof-of-Work (PoW)",
+        "title": "İş Kanıtı (PoW)",
         "subtitle": "Maksimum güvenlik",
         "description": "Autolykos algoritması ASIC dirençlidir; adil dağılım ve güçlü güvenliği garanti eder."
       },

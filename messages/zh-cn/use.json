@@ -26,7 +26,7 @@
       },
       "filters": {
         "allGuides": "所有指南",
-        "categoryGuides": "{category} Guides",
+        "categoryGuides": "{category} 指南",
         "noGuides": {
           "title": "未找到指南",
           "description": "尝试调整您的搜索条件或过滤条件",
@@ -103,7 +103,7 @@
         "title": "费用支付选项",
         "options": {
           "erg": {
-            "name": "ERG (Native)",
+            "name": "ERG（原生）",
             "description": "传统区块链费用"
           },
           "anyToken": {
@@ -551,7 +551,7 @@
             "name": "Onramper",
             "description": "聚合器：使用20+供应商和130+付款方法使用纤维购买ERG。快速、全局和简单。"
           },
-          "visitButton": "Visit {name}"
+          "visitButton": "访问 {name}"
         }
       },
       "cex": {
@@ -571,7 +571,7 @@
             "description": "已知资产种类繁多，包括ERG/USDT。"
           },
           "htx": {
-            "name": "HTX (Huobi)",
+            "name": "HTX（火币）",
             "description": "带有ERG/USDT交易对的全局CEX。"
           },
           "coinex": {
@@ -803,7 +803,7 @@
           "name": "西格玛USD",
           "description": "使用年龄美元协议在Ergo上的第一个算法",
           "status": "实时模式",
-          "tvl": "$2.5M+",
+          "tvl": "$250万+",
           "features": {
             "feature1": "ERG支持",
             "feature2": "双令牌模型",
@@ -1675,7 +1675,7 @@
               "point1": "成本 = 投票平方",
               "point2": "减少鲸鱼影响",
               "point3": "公平分配",
-              "point4": "Sybil resistant"
+              "point4": "女巫攻击防御"
             }
           },
           "proposalLifecycle": {
@@ -1797,9 +1797,9 @@
         "title": "Ergo上的NFT与数字资产 | 真正的数字所有权",
         "description": "在Ergo上创建和交易NFTs。上链元数据、协议使用费、动态NFT和可编程的数字资产。",
         "keywords": "NFT, digital assets, SkyHarbor, 上链元数据，协议使用费，动态NFT, Ergo NFT",
-        "ogTitle": "NFTs & Digital Assets on Ergo",
+        "ogTitle": "Ergo 上的 NFT 与数字资产",
         "ogDescription": "真正的数字所有权，包括在链上的元数据和协议使用费。",
-        "twitterTitle": "NFTs on Ergo",
+        "twitterTitle": "Ergo 上的 NFT",
         "twitterDescription": "创建带有链上元数据的可编程NFTs"
       },
       "quickStart": {
@@ -2005,7 +2005,7 @@
         "title": "Oracles & Data Feeds on Ergo | 分散化数据基础设施",
         "description": "将实时数据连接到 Ergo 区块链。分散化的oracle 池，价格源，Defi 自定义数据源和预测市场。",
         "keywords": "果园、数据源、果园池、价格源、外部数据、Defi oracles、Ergo oracle",
-        "ogTitle": "Oracles & Data Feeds on Ergo",
+        "ogTitle": "Ergo 上的预言机与数据源",
         "ogDescription": "使用分散的果园池将真实世界数据带到链上。",
         "twitterTitle": "埃尔戈上的Oracles",
         "twitterDescription": "用于可靠数据源的分散化oracle库"
@@ -2120,7 +2120,7 @@
           }
         },
         "oracleCore": {
-          "name": "Ergo Oracle Core",
+          "name": "Ergo 预言机核心",
           "description": "构建自定义步枪解决方案的框架",
           "status": "实时模式",
           "features": {
@@ -2135,7 +2135,7 @@
           "status": "正在开发",
           "features": {
             "feature1": "多资产源",
-            "feature2": "TWAP oracles",
+            "feature2": "TWAP 预言机",
             "feature3": "波动性数据"
           }
         },
@@ -2178,7 +2178,7 @@
         "subtitle": "今天就开始在Ergo上使用或构建Oracle解决方案",
         "cards": {
           "oracleCore": {
-            "title": "Oracle Core",
+            "title": "预言机核心",
             "subtitle": "开始构建",
             "description": "Oracle池的核心链下组件——在Ergo上启动、运行和管理Oracle解决方案"
           },

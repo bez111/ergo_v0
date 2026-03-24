@@ -370,7 +370,7 @@
       "comingSoon": "Yakında"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "{title} hakkında daha fazla bilgi edinin"
     },
     "learnTechnology": {
       "title": "Teknolojiyi Öğren",
@@ -1855,7 +1855,7 @@
         "subtitle": "NFT'lerin Ergo'da nasıl çalıştığı",
         "tabs": {
           "overview": "Genel Bakış",
-          "metadata": "Metadata",
+          "metadata": "Meta Veri",
           "code": "Kod Örneği"
         },
         "overview": {
@@ -2480,7 +2480,7 @@
         "gpu": {
           "category": "GPU Madenciliği",
           "requirements": {
-            "0": "Minimum 4GB VRAM",
+            "0": "Minimum 4 GB VRAM",
             "1": "AMD RX 6000+ veya NVIDIA RTX 30+",
             "2": "Kararlı güç kaynağı",
             "3": "İyi soğutma sistemi"
@@ -2706,8 +2706,8 @@
       "stablecoin": "Stablecoin",
       "algorithmic": "Algoritmik",
       "collateral": "Teminat",
-      "mixer": "Mixer",
-      "stealth": "Stealth",
+      "mixer": "Mikser",
+      "stealth": "Gizli",
       "zeroKnowledge": "Sıfır Bilgi",
       "bridge": "Köprü",
       "interoperability": "Birlikte Çalışabilirlik",

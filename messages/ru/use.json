@@ -276,7 +276,7 @@
       "comparison": {
         "title": "Сравние: ERG Fees vs. Babel Fees",
         "ergFees": {
-          "title": "ERG Fees",
+          "title": "Комиссии ERG",
           "features": {
             "accepted": "Всегда принимается к оплате",
             "reliable": "Основной и наиболее надежный метод",
@@ -2697,7 +2697,7 @@
     "subtitle": "Конфиденциальные сделки и защита активов"
   },
   "useStablecoins": {
-    "title": "Stablecoins",
+    "title": "Стейблкоины",
     "description": "Алгоритмические скейты, построенные на Ergo",
     "subtitle": "Децентрализованное стабильное хранилище значений"
   },

@@ -370,7 +370,7 @@
       "comingSoon": "近日公開"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "{title}について詳しく学ぶ"
     },
     "learnTechnology": {
       "title": "テクノロジーを学ぶ",

@@ -370,7 +370,7 @@
       "comingSoon": "即將推出"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "了解更多關於 {title} 的資訊"
     },
     "learnTechnology": {
       "title": "學習技術",
@@ -803,7 +803,7 @@
           "name": "SigmaUSD",
           "description": "Ergo 上第一個使用 AgeUSD 協議的演算法穩定幣",
           "status": "在線",
-          "tvl": "$2.5M+",
+          "tvl": "$250萬+",
           "features": {
             "feature1": "ERG 支撐",
             "feature2": "雙代幣模型",
@@ -2120,7 +2120,7 @@
           }
         },
         "oracleCore": {
-          "name": "Ergo Oracle Core",
+          "name": "Ergo 預言機核心",
           "description": "用於構建自定義預言機解決方案的框架",
           "status": "上線",
           "features": {
@@ -2130,7 +2130,7 @@
           }
         },
         "defiNetwork": {
-          "name": "DeFi Oracle Network",
+          "name": "DeFi 預言機網路",
           "description": "專為 DeFi 協議設計的預言機",
           "status": "開發中",
           "features": {
@@ -2178,7 +2178,7 @@
         "subtitle": "立即開始在 Ergo 上使用或構建預言機解決方案",
         "cards": {
           "oracleCore": {
-            "title": "Oracle Core",
+            "title": "預言機核心",
             "subtitle": "開始構建",
             "description": "預言機池的核心鏈下組件 — 在 Ergo 上引導、運行和管理預言機解決方案"
           },

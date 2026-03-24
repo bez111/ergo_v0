@@ -1656,8 +1656,8 @@
         "learningResource": {
           "name": "Introdução ao Blockchain Ergo",
           "description": "Recurso educacional para aprender os fundamentos do blockchain Ergo",
-          "learningResourceType": "Presentation",
-          "educationalLevel": "Beginner",
+          "learningResourceType": "Apresentação",
+          "educationalLevel": "Iniciante",
           "teaches": [
             "Blockchain",
             "Smart Contracts",
@@ -1670,7 +1670,7 @@
           "headline": "Introdução ao Blockchain Ergo",
           "description": "Guia abrangente para iniciantes entenderem o Ergo",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "Iniciante"
         }
       }
     },
@@ -2914,7 +2914,7 @@
           "privacy": "L1 base; extensões via Plutus/Hydra"
         },
         "solana": {
-          "consensus": "PoS + Proof of History (Tower BFT)",
+          "consensus": "PoS + Prova de Histórico (Tower BFT)",
           "state_model": "Modelo de conta; runtime Sealevel paralelo",
           "smart_contracts": "Rust / C / C++ (SVM)",
           "issuance": "Sem limite fixo; inflação decrescente",
@@ -3758,7 +3758,7 @@
     },
     "technologies": {
       "proof_of_work": {
-        "title": "Proof-of-Work (PoW)",
+        "title": "Prova de Trabalho (PoW)",
         "subtitle": "Segurança máxima",
         "description": "O algoritmo Autolykos é resistente a ASIC, garantindo distribuição justa e segurança robusta."
       },
@@ -3768,7 +3768,7 @@
         "description": "Permite smart contracts complexos com melhor escalabilidade e taxas previsíveis."
       },
       "sigma_protocols": {
-        "title": "Sigma Protocols",
+        "title": "Protocolos Sigma",
         "subtitle": "Criptografia avançada",
         "description": "Habilita privacidade e primitivas criptográficas avançadas (threshold/multisig, construções do tipo ring)."
       }

@@ -1242,7 +1242,7 @@
             "title": "分享Ergo 内容的位置",
             "description": "从这些基本频道开始",
             "intro": "这些是您可以分享Ergo 内容的核心频道。先在这里开始探索扩展发行频道：",
-            "strategyTitle": "Pro Strategy:",
+            "strategyTitle": "专业策略：",
             "strategy": "当在ergoblockchain.org上发布新内容时，在24-48小时内在这些频道之间共享新内容以获取最大影响。",
             "tips": {
               "0": "为每个平台的受众自定义您的内容",
@@ -1631,8 +1631,8 @@
         "learningResource": {
           "name": "Ergo 区块链简介",
           "description": "学习 Ergo 区块链基础的教育资源",
-          "learningResourceType": "Presentation",
-          "educationalLevel": "Beginner",
+          "learningResourceType": "演示文稿",
+          "educationalLevel": "初学者",
           "teaches": [
             "区块链",
             "智能合约",
@@ -1645,7 +1645,7 @@
           "headline": "Ergo 区块链简介",
           "description": "面向初学者的 Ergo 入门指南",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "初学者"
         }
       }
     },
@@ -1800,7 +1800,7 @@
       "community_icon_users_q_who": "Community\",\n    icon: Users,\n    q: \"Who governs Ergo?\",\n    a: \"Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support.",
       "all_basics_technology_getting_started": ", ",
       "ergo_is_a_secure_proof": "Ergo 是一个强大智能合同的安全工作区块链，启用了分散的金融应用程序。将其视为具有可编程规则的数字货币。",
-      "what_does_a_fair_launch": "What does a \"fair launch\" mean?',\n    a: 'Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.",
+      "what_does_a_fair_launch": "\"公平启动\"是什么意思？',\n    a: 'Ergo 没有进行首次代币发行（ICO），也没有为创始人预挖代币。这确保了更公平的分配，因为从第一天起，每个人都有平等的机会通过挖矿获得 ERG。",
       "the_extended_utxo_model_attaches": "FAQ content",
       "find_answers_to_common_questions": "找到关于埃尔戈、其技术和生态系统的常见问题的答案。如果你找不到你正在寻找的东西，加入我们的社区频道。",
       "everything_you_need_to_know": "你需要在一个地方知道关于Ergo blockchain的一切。",
@@ -2085,8 +2085,8 @@
       "compare_ergo_with_leading_blockchains": "将Ergo 与主要区块链比较",
       "blockchain_comparison": "区块链比较",
       "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"Blockchain Platform Comparison\",\n    description: \"Technical comparison of Ergo with other blockchain platforms",
-      "what_advantages_does_ergo_have": "What advantages does Ergo have over Ethereum?\",\n      answer: \"Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining.",
-      "how_does_ergo_compare_to": "How does Ergo compare to Cardano?\",\n      answer: \"Both use eUTXO, but Ergo has PoW consensus, storage rent, and no VC funding, making it more decentralized and sustainable.",
+      "what_advantages_does_ergo_have": "与以太坊相比，Ergo 有哪些优势？\",\n      answer: \"Ergo 提供可预测的手续费、无重入攻击、并行交易处理以及节能的 PoW 挖矿。",
+      "how_does_ergo_compare_to": "Ergo 与 Cardano 相比如何？\",\n      answer: \"两者都使用 eUTXO，但 Ergo 采用 PoW 共识机制、存储租金模型且无风险投资资金，使其更加去中心化和可持续。",
       "ergo_vs_bitcoin_ethereum_cardano": "Ergo vs Bitcoin, Etherum, Cardano",
       "technical_comparison_of_ergo_vs": "Ergo vs Bitcoin, Etherum, Cardano的技术比较。看看为什么Ergo 很突出。",
       "technical_comparison_of_ergo_with": "Ergo 与其他区块链平台的技术比较"
@@ -2098,10 +2098,10 @@
       "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo Community\",\n    description: \"Global community of developers, miners, and enthusiasts building on Ergo\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "aggregaterating_ratingvalue": "AggregateRating\",\n      ratingValue:",
-      "how_do_i_join_the": "How do I join the Ergo community?\",\n      answer: \"Join our Discord server for real-time chat, Telegram for quick updates, Reddit for discussions, or GitHub to contribute to development. All platforms are open and welcoming to newcomers.",
+      "how_do_i_join_the": "如何加入 Ergo 社区？\",\n      answer: \"加入我们的 Discord 服务器进行实时聊天，通过 Telegram 获取快速更新，在 Reddit 上参与讨论，或在 GitHub 上贡献开发。所有平台均对新人开放并热烈欢迎。",
       "what_is_the_main_ergo_community_platform_answer": "What is the main Ergo community platform?\",\n      answer:",
-      "can_i_contribute_to_ergo": "Can I contribute to Ergo without coding?\",\n      answer: \"Yes! You can contribute through content creation, translations, community management, testing, documentation, or participating in governance discussions.",
-      "are_there_regional_ergo_communities": "Are there regional Ergo communities?\",\n      answer: \"Yes, there are active regional communities in multiple languages including Chinese, Russian, Spanish, Turkish, and more, each with dedicated Telegram groups.",
+      "can_i_contribute_to_ergo": "我可以在不编程的情况下为 Ergo 做贡献吗？\",\n      answer: \"可以！您可以通过内容创作、翻译、社区管理、测试、文档撰写或参与治理讨论来做出贡献。",
+      "are_there_regional_ergo_communities": "是否有地区性的 Ergo 社区？\",\n      answer: \"有，目前有多种语言的活跃地区社区，包括中文、俄语、西班牙语、土耳其语等，每个社区都有专属的 Telegram 群组。",
       "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergo Community Platforms",
       "discord_url_https_discord_gg": "Discord\",\n        url: \"https://discord.gg/ergo-platform\",\n        description:",
       "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"Quick updates and global chat",
@@ -2118,11 +2118,11 @@
       "discussions_and_community_content": "讨论和社区内容",
       "open_source_development": "开源开发"
     },
-    "how_long_does_it_take_to_learn_ergo_answer": "How long does it take to learn Ergo?\",\n      answer:",
+    "how_long_does_it_take_to_learn_ergo_answer": "学习 Ergo 需要多长时间？\",\n      answer:",
     "start_your_ergo_journey_summary": "Start Your Ergo Journey\",\n    summary: \"Choose your personalized path into Ergo blockchain: beginner, developer, miner, or investor\",\n    url: \"https://ergoblockchain.org/start",
     "start_your_journey_with_ergo": "Start Your Journey with Ergo Blockchain',\n    description: 'Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
     "start_with_ergo_learning_paths": "从Ergo开始 - 学习路径",
-    "start_your_ergo_journey_choose": "Start Your Ergo Journey - Choose Your Path',\n    description: 'Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
+    "start_your_ergo_journey_choose": "开启您的 Ergo 之旅 - 选择您的路径',\n    description: '新手？开发者？矿工？投资者？找到您进入 Ergo 的个性化路径。",
     "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
     "howtosupply_name_computer_or_smartphone": "HowToSupply'，名字：“计算机或智能手机",
     "howtosupply_name_internet_connection": "HowToSupply'，名字：“Internet 连接",
@@ -2130,12 +2130,12 @@
     "howtostep_name_choose_your_path": "HowToStep',\n        name: 'Choose Your Path',\n        text: 'Select whether you are new to crypto, want to learn, develop, mine, or invest',\n        url: 'https://ergoblockchain.org/start',\n        image: 'https://ergoblockchain.org/images/start-paths.png",
     "howtostep_name_understand_why_ergo": "HowToStep',\n        name: 'Understand Why Ergo',\n        text: 'Learn about the problems Ergo solves and its unique features',\n        url: 'https://ergoblockchain.org/start/introduction",
     "howtostep_name_learn_security_best": "HowToStep',\n        name: 'Learn Security Best Practices',\n        text: 'Understand essential security practices to protect your assets',\n        url: 'https://ergoblockchain.org/start/security-tips",
-    "course_name_beginner_path_description": "Course',\n          name: 'Beginner Path',\n          description: 'For those new to cryptocurrency and blockchain",
+    "course_name_beginner_path_description": "Course',\n          name: '初学者路径',\n          description: '适合加密货币和区块链新手",
     "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
-    "course_name_developer_path_description": "Course',\n          name: 'Developer Path',\n          description: 'For programmers wanting to build on Ergo",
-    "course_name_miner_path_description": "Course',\n          name: 'Miner Path',\n          description: 'For those interested in mining ERG",
-    "course_name_investor_path_description": "Course',\n          name: 'Investor Path',\n          description: 'For understanding Ergo as an investment",
-    "course_name_learning_path_description": "Course',\n          name: 'Learning Path',\n          description: 'Deep dive into Ergo technology and ecosystem",
+    "course_name_developer_path_description": "Course',\n          name: '开发者路径',\n          description: '适合希望在 Ergo 上开发的程序员",
+    "course_name_miner_path_description": "Course',\n          name: '矿工路径',\n          description: '适合有兴趣挖掘 ERG 的用户",
+    "course_name_investor_path_description": "Course',\n          name: '投资者路径',\n          description: '用于了解 Ergo 作为投资标的",
+    "course_name_learning_path_description": "Course',\n          name: '学习路径',\n          description: '深入探索 Ergo 技术与生态系统",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "从Ergo Blockchain 开始您的旅程",
@@ -2373,7 +2373,7 @@
         "label": "学习路径"
       },
       "quickStart": {
-        "value": "< 30min",
+        "value": "< 30分钟",
         "label": "快速开始"
       },
       "openSource": {
@@ -2515,7 +2515,7 @@
       "keyAdvantage": "密钥优势"
     },
     "platformComparison": {
-      "title": "Blockchain",
+      "title": "区块链",
       "titleHighlight": "平台",
       "subtitle": "比较",
       "detailedLink": "详细1-1对1比较",
@@ -2824,7 +2824,7 @@
       }
     },
     "comparison_table": {
-      "title": "Blockchain",
+      "title": "区块链",
       "platform": "平台",
       "comparison": "比较",
       "caption": "比较(EN)：Ergo Vs BTC/ETH/ADA/SOL/SUI",
@@ -2882,7 +2882,7 @@
           "consensus": "PoS (Ouroboros)",
           "state_model": "eUTXO",
           "smart_contracts": "普勒图斯（哈斯克尔家族），艾克",
-          "issuance": "Max 45B ADA",
+          "issuance": "最多 450 亿 ADA",
           "block_time": "1 秒钟；预期每20秒块清除一次",
           "finality": "通过稳定窗口和 k 块；~20 秒块",
           "distinctive": "eUTXO + 正规方法，Hydra L2",
@@ -3041,7 +3041,7 @@
                 "description": "开发者的全面文档"
               },
               "ergoscript": {
-                "name": "ErgoScript Primer",
+                "name": "ErgoScript 入门",
                 "description": "学习 Ergo 的智能合约语言"
               },
               "playground": {
@@ -3123,7 +3123,7 @@
                 "description": "网络和 DeFi 分析"
               },
               "explorer": {
-                "name": "Ergo Explorer",
+                "name": "Ergo 浏览器",
                 "description": "区块链浏览器"
               }
             }
@@ -3163,7 +3163,7 @@
             "category": "研究与分析",
             "items": {
               "whitepaper": {
-                "name": "Ergo Whitepaper",
+                "name": "Ergo 白皮书",
                 "description": "技术基础"
               },
               "ecosystem": {
@@ -3246,7 +3246,7 @@
             "category": "NFT 市场",
             "items": {
               "auction_house": {
-                "name": "Ergo Auction House",
+                "name": "Ergo 拍卖行",
                 "description": "顶级 NFT 市场"
               },
               "skyharbor": {
@@ -3342,7 +3342,7 @@
                 "description": "Ergo 概述"
               },
               "handbook": {
-                "name": "Ergonaut Handbook",
+                "name": "Ergonaut 手册",
                 "description": "全面指南"
               }
             }

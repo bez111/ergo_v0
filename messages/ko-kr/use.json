@@ -370,7 +370,7 @@
       "comingSoon": "출시 예정"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "{title}에 대해 더 알아보기"
     },
     "learnTechnology": {
       "title": "기술 배우기",
@@ -2130,7 +2130,7 @@
           }
         },
         "defiNetwork": {
-          "name": "DeFi Oracle Network",
+          "name": "DeFi Oracle 네트워크",
           "description": "DeFi 프로토콜을 위한 특화된 오라클",
           "status": "개발 중",
           "features": {

@@ -397,7 +397,7 @@
           "description": "Lenguaje seguro y declarativo para dinero programable"
         },
         "sigma": {
-          "name": "Sigma Protocols",
+          "name": "Protocolos Sigma",
           "description": "Pruebas de conocimiento cero nativas y características de privacidad"
         },
         "autolykos": {
@@ -481,7 +481,7 @@
           "description": "Combina la seguridad de Bitcoin con la expresividad de Ethereum"
         },
         "sigma": {
-          "title": "Sigma Protocols",
+          "title": "Protocolos Sigma",
           "description": "Pruebas de conocimiento cero integradas para privacidad y autenticación"
         },
         "contracts": {
@@ -1061,7 +1061,7 @@
         }
       },
       "sigmaProtocols": {
-        "title": "Sigma Protocols",
+        "title": "Protocolos Sigma",
         "description": "Las pruebas de conocimiento cero integradas permiten transacciones que preservan la privacidad y características criptográficas avanzadas sin soluciones de terceros ni configuraciones complejas.",
         "details": {
           "optionalPrivacy": {
@@ -4734,7 +4734,7 @@
     "description": "Protocolos criptográficos avanzados para la privacidad financiera en la blockchain de Ergo",
     "technologies": {
       "0": {
-        "title": "Sigma Protocols",
+        "title": "Protocolos Sigma",
         "description": "Sistema de pruebas de conocimiento cero que habilita la privacidad sin configuración de confianza",
         "features": {
           "0": "Pruebas de conocimiento cero no interactivas",
@@ -5166,7 +5166,7 @@
       ]
     },
     "privacy-features": {
-      "title": "Sigma Protocols",
+      "title": "Protocolos Sigma",
       "description": "Pruebas de conocimiento cero nativas, firmas de anillo y características avanzadas de privacidad sin dependencias externas",
       "shortDescription": "Privacidad opcional con pruebas de conocimiento cero",
       "keywords": "sigma protocols,privacidad,pruebas de conocimiento cero,zkp,firmas de anillo,ergomixer,criptografía,privacidad defi",

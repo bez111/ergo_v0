@@ -2419,7 +2419,7 @@
       "active": "Aktiv",
       "inactive": "Inaktiv",
       "recommended": "Empfohlen",
-      "alternative": "Alternative",
+      "alternative": "Alternativ",
       "poolUrl": "Pool-URL",
       "poolFee": "Pool-Gebühr",
       "minPayout": "Mindestausschüttung",
@@ -2446,7 +2446,7 @@
           "name": "2Miners",
           "url": "https://2miners.com/erg-mining-pool",
           "fee": "1%",
-          "minPayout": "0.1 ERG",
+          "minPayout": "0,1 ERG",
           "features": {
             "0": "Niedrige Latenz",
             "1": "Detaillierte Statistiken",
@@ -2456,7 +2456,7 @@
         "2": {
           "name": "WoolyPooly",
           "url": "https://woolypooly.com/en/coin/erg",
-          "fee": "0.9%",
+          "fee": "0,9 %",
           "minPayout": "1 ERG",
           "features": {
             "0": "Niedrige Gebühren",
@@ -2468,7 +2468,7 @@
           "name": "Flypool",
           "url": "https://erg.flypool.org",
           "fee": "1%",
-          "minPayout": "0.1 ERG",
+          "minPayout": "0,1 ERG",
           "features": {
             "0": "Professioneller Service",
             "1": "Erweitertes Monitoring",

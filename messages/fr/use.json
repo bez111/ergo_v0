@@ -83,7 +83,7 @@
       }
     },
     "babelFees": {
-      "title": "Babel Fees",
+      "title": "Frais Babel",
       "subtitle": "Payez les frais de transaction avec n'importe quel token, pas seulement l'ERG. Flexibilité révolutionnaire pour les utilisateurs Ergo.",
       "description": "Les Babel Fees (EIP-0019) permettent des paiements de frais transparents avec des tokens natifs, améliorant l'UX et l'utilité des tokens dans l'écosystème.",
       "seo": {
@@ -285,7 +285,7 @@
           }
         },
         "babelFees": {
-          "title": "Babel Fees",
+          "title": "Frais Babel",
           "features": {
             "flexibility": "Offrent flexibilité et commodité",
             "availability": "La disponibilité dépend de la demande du marché des tokens",
@@ -1663,7 +1663,7 @@
           "tokenVoting": {
             "title": "Vote par token",
             "points": {
-              "point1": "1 token = 1 vote",
+              "point1": "1 jeton = 1 vote",
               "point2": "Délégation supportée",
               "point3": "Vote par instantané",
               "point4": "Pas de double vote"
@@ -2642,7 +2642,7 @@
     }
   },
   "useBabelFees": {
-    "title": "Babel Fees",
+    "title": "Frais Babel",
     "description": "Payez les frais de transaction avec n'importe quel token sur Ergo",
     "subtitle": "Système de paiement de frais flexible"
   },

@@ -370,7 +370,7 @@
       "comingSoon": "Próximamente"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "Saber más sobre {title}"
     },
     "learnTechnology": {
       "title": "Aprende la Tecnología",
@@ -1420,7 +1420,7 @@
           "description": "Soporte nativo para tokens envueltos con respaldo 1:1"
         },
         "atomicSwaps": {
-          "title": "Atomic Swaps",
+          "title": "Intercambios atómicos",
           "description": "Intercambios cross-chain peer-to-peer directos sin intermediarios"
         }
       },
@@ -2247,7 +2247,7 @@
           "description": "Propiedad real de objetos, personajes y recursos del juego como NFTs"
         },
         "playToEarn": {
-          "title": "Play-to-Earn",
+          "title": "Jugar para ganar",
           "description": "Gana valor real a través del juego con recompensas tokenizadas"
         },
         "virtualWorlds": {
@@ -2708,10 +2708,10 @@
       "collateral": "Colateral",
       "mixer": "Mezclador",
       "stealth": "Sigilo",
-      "zeroKnowledge": "Zero-Knowledge",
+      "zeroKnowledge": "Conocimiento cero",
       "bridge": "Puente",
       "interoperability": "Interoperabilidad",
-      "multichain": "Multi-chain",
+      "multichain": "Multicadena",
       "dao": "DAO",
       "governance": "Gobernanza",
       "community": "Comunidad",
@@ -2724,7 +2724,7 @@
       "identity": "Identidad",
       "reputation": "Reputación",
       "did": "DID",
-      "gaming": "Gaming",
+      "gaming": "Videojuegos",
       "metaverse": "Metaverso"
     },
     "stablecoins": {

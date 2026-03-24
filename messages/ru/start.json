@@ -969,7 +969,7 @@
         "orSomethingElse": "или что-то еще?",
         "startButton": "НАЧАТЬ QUIZ",
         "questionOf": "ВОПРОС {current} {total}",
-        "percentComplete": "{percent}% COMPLETE",
+        "percentComplete": "{percent}% ЗАВЕРШЕНО",
         "previousButton": "ПРЕДЫДУЩИЙ",
         "nextButton": "СЛЕДУЮЩИЙ",
         "restartButton": "ПЕРЕЗАПУСТИТЬ КЛИЕНТ",
@@ -1267,7 +1267,7 @@
             "title": "Где поделиться контентом Ergo",
             "description": "Начать с этих важных каналов",
             "intro": "Это основные каналы, где вы можете поделиться контентом Ergo. Начните здесь и изучите расширенные каналы распространения:",
-            "strategyTitle": "Pro Strategy:",
+            "strategyTitle": "Профессиональная стратегия:",
             "strategy": "Когда новый контент публикуется на ergoblockchain.org, поделитесь им по этим каналам в течение 24-48 часов для максимального воздействия.",
             "tips": [
               "Настройте контент для аудитории каждой платформы",
@@ -1619,7 +1619,7 @@
         "finalCta": {
           "title": "Готово к",
           "titleHighlight": "Справка",
-          "titleEnd": "Ergo Grow?",
+          "titleEnd": "Ergo расти?",
           "subtitle": "Начните реализацию этих стратегий сегодня и реально повлияйте на рост Эрго",
           "discord": {
             "title": "Присоединиться к маркетингу Discord",
@@ -1645,7 +1645,7 @@
         "keywords": "ergo введение, основы блокчейн, учебник ergo, начинающий криптовалюта, изучающий блокчейн, руководство по ergo, введение defi, основы смарт-контрактов",
         "ogTitle": "Введение в Ergo - Начните свое путешествие по блокчейну",
         "ogDescription": "Удобное для начала руководство по пониманию блокчейна Ergo, его технологии и экосистемы.",
-        "ogAlt": "Ergo Introduction",
+        "ogAlt": "Введение в Ergo",
         "twitterTitle": "Введение в Ergo Blockchain",
         "twitterDescription": "Изучите основы Эрго - будущее программируемых денег."
       },
@@ -1656,7 +1656,7 @@
         "learningResource": {
           "name": "Введение в блокчейн Ergo",
           "description": "Учебный материал по основам блокчейна Ergo",
-          "learningResourceType": "Presentation",
+          "learningResourceType": "Презентация",
           "educationalLevel": "Начальный",
           "teaches": [
             "Блокчейн",
@@ -1670,7 +1670,7 @@
           "headline": "Введение в блокчейн Ergo",
           "description": "Понятный гайд для новичков по Ergo",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "Начинающий"
         }
       }
     },
@@ -1796,7 +1796,7 @@
         "description": "Выберите и настройте ваш кошелек Ergo"
       },
       "getErg": {
-        "title": "Get ERG",
+        "title": "Получить ERG",
         "description": "Купить ERG на биржах"
       },
       "explore": {
@@ -2233,7 +2233,7 @@
           "description": "Выберите путь для начала изучения экосистемы Эрго."
         },
         "getErgoWallet": {
-          "button": "Get Ergo Wallet"
+          "button": "Получить кошелёк Ergo"
         },
         "exploreEcosystem": {
           "button": "Исследовать Экосистему"
@@ -2354,7 +2354,7 @@
         "title": "Ключевые инновации"
       },
       "references": {
-        "autolykos": "Autolykos v2 Algorithm",
+        "autolykos": "Алгоритм Autolykos v2",
         "ergoGithub": "Ergo GitHub"
       }
     }
@@ -2398,7 +2398,7 @@
         "label": "Пути обучения"
       },
       "quickStart": {
-        "value": "< 30min",
+        "value": "< 30 мин",
         "label": "Быстрый старт"
       },
       "openSource": {
@@ -2606,7 +2606,7 @@
   },
   "introductionClient": {
     "hero": {
-      "title": "Ergo Blockchain - PoW eUTXO Smart Contracts & Sigma Protocols",
+      "title": "Ergo Blockchain — PoW eUTXO смарт-контракты и Sigma Protocols",
       "subtitle": "ASIC-устойчивый Layer-1 PoW с eUTXO, удачные контракты и приватность на основе Sigma. Создан для открытых, проверяемых денег."
     },
     "whatIsErgo": {
@@ -2720,7 +2720,7 @@
       "titleHighlight": "Следующий",
       "subtitle": "Начать изучение экосистемы Эрго",
       "wallet": {
-        "title": "Get Ergo Wallet",
+        "title": "Получить кошелёк Ergo",
         "subtitle": "Начать безопасно",
         "description": "Скачайте безопасный кошелек для хранения ERG и взаимодействия с dApps"
       },
@@ -2906,8 +2906,8 @@
         "cardano": {
           "consensus": "PoS (Ouroboros)",
           "state_model": "eUTXO",
-          "smart_contracts": "Plutus (Haskell family), Aiken",
-          "issuance": "Max 45B ADA",
+          "smart_contracts": "Plutus (семейство Haskell), Aiken",
+          "issuance": "Макс. 45 млрд ADA",
           "block_time": "1 с слота; ожидается блок ~ каждые 20 с",
           "finality": "Через окно стабильности и k-блоки; ~20 сек. блоков",
           "distinctive": "eUTXO + формальные методы, Hydra L2",
@@ -3188,7 +3188,7 @@
             "category": "Исследования и аналитика",
             "items": {
               "whitepaper": {
-                "name": "Ergo Whitepaper",
+                "name": "Белая книга Ergo",
                 "description": "Техническая основа"
               },
               "ecosystem": {
@@ -3223,7 +3223,7 @@
             "category": "Информация о добыче",
             "items": {
               "autolykos": {
-                "name": "Autolykos v2 Guide",
+                "name": "Руководство по Autolykos v2",
                 "description": "Понимание алгоритма"
               },
               "pools": {
@@ -3367,7 +3367,7 @@
                 "description": "Ergo обзор"
               },
               "handbook": {
-                "name": "Ergonaut Handbook",
+                "name": "Справочник Ergonaut",
                 "description": "Полное руководство"
               }
             }

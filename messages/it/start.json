@@ -962,7 +962,7 @@
         "roles": {
           "investor": "Investitore",
           "developer": "Sviluppatore",
-          "miner": "Miner",
+          "miner": "Minatore",
           "nftEnthusiast": "Appassionato di NFT",
           "defiUser": "Utente DeFi"
         },
@@ -1082,7 +1082,7 @@
       },
       "schema": {
         "breadcrumbs": {
-          "community": "Community"
+          "community": "Comunità"
         },
         "faq": {
           "items": [
@@ -1144,7 +1144,7 @@
         },
         "breadcrumbs": {
           "start": "Inizio",
-          "community": "Community",
+          "community": "Comunità",
           "marketing": "Guida al Marketing"
         },
         "hero": {
@@ -1656,8 +1656,8 @@
         "learningResource": {
           "name": "Introduzione alla Blockchain Ergo",
           "description": "Risorsa educativa per apprendere i fondamentali della blockchain Ergo",
-          "learningResourceType": "Presentation",
-          "educationalLevel": "Beginner",
+          "learningResourceType": "Presentazione",
+          "educationalLevel": "Principiante",
           "teaches": [
             "Blockchain",
             "Smart Contracts",
@@ -1670,7 +1670,7 @@
           "headline": "Introduzione alla Blockchain Ergo",
           "description": "Guida completa per i principianti per comprendere Ergo",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "Principiante"
         }
       }
     },
@@ -2146,7 +2146,7 @@
     "how_long_does_it_take_to_learn_ergo_answer": "How long does it take to learn Ergo?\",\n      answer:",
     "start_your_ergo_journey_summary": "Start Your Ergo Journey\",\n    summary: \"Choose your personalized path into Ergo blockchain: beginner, developer, miner, or investor\",\n    url: \"https://ergoblockchain.org/start",
     "start_your_journey_with_ergo": "Start Your Journey with Ergo Blockchain',\n    description: 'Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
-    "start_with_ergo_learning_paths": "Start with Ergo - Learning Paths",
+    "start_with_ergo_learning_paths": "Inizia con Ergo - Percorsi di apprendimento",
     "start_your_ergo_journey_choose": "Start Your Ergo Journey - Choose Your Path',\n    description: 'Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
     "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
     "howtosupply_name_computer_or_smartphone": "HowToSupply', name: 'Computer or smartphone",
@@ -2398,7 +2398,7 @@
         "label": "Percorsi di Apprendimento"
       },
       "quickStart": {
-        "value": "< 30min",
+        "value": "< 30 min",
         "label": "Avvio Rapido"
       },
       "openSource": {

@@ -3511,7 +3511,7 @@
       },
       "technologies": {
         "sigmaProtocols": {
-          "title": "Sigma Protocols",
+          "title": "Sigma 프로토콜",
           "description": "프로토콜 수준에서 링 서명 및 영지식 증명과 같은 강력한 프라이버시 도구를 활성화합니다.",
           "features": {
             "zeroKnowledge": "영지식 증명",
@@ -3712,7 +3712,7 @@
           ]
         },
         "sigma-protocols": {
-          "name": "Sigma Protocols",
+          "name": "Sigma 프로토콜",
           "description": "영지식 증명 시스템",
           "details": [
             "비대화형 영지식 증명",

@@ -1658,7 +1658,12 @@
           "description": "Ergoブロックチェーンの基礎を学ぶための教育リソース",
           "learningResourceType": "プレゼンテーション",
           "educationalLevel": "初心者",
-          "teaches": ["ブロックチェーン", "スマートコントラクト", "DeFi", "暗号通貨"],
+          "teaches": [
+            "ブロックチェーン",
+            "スマートコントラクト",
+            "DeFi",
+            "暗号通貨"
+          ],
           "timeRequired": "PT30M"
         },
         "techArticle": {
@@ -2909,7 +2914,7 @@
           "privacy": "ベースL1; Plutus/Hydra経由の拡張"
         },
         "solana": {
-          "consensus": "PoS + Proof of History (Tower BFT)",
+          "consensus": "PoS + プルーフ・オブ・ヒストリー (Tower BFT)",
           "state_model": "アカウントモデル; 並列Sealevelランタイム",
           "smart_contracts": "Rust / C / C++ (SVM)",
           "issuance": "固定キャップなし; 逓減インフレーション",

@@ -1656,8 +1656,8 @@
         "learningResource": {
           "name": "Ergo 블록체인 소개",
           "description": "Ergo 블록체인 기초 학습을 위한 교육 리소스",
-          "learningResourceType": "Presentation",
-          "educationalLevel": "Beginner",
+          "learningResourceType": "프레젠테이션",
+          "educationalLevel": "입문",
           "teaches": [
             "블록체인",
             "스마트 컨트랙트",
@@ -1670,7 +1670,7 @@
           "headline": "Ergo 블록체인 소개",
           "description": "Ergo를 이해하기 위한 초보자용 종합 가이드",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "입문"
         }
       }
     },
@@ -3693,7 +3693,7 @@
       "links": {
         "eutxo_model": "eUTXO 스마트 컨트랙트 모델",
         "autolykos": "Autolykos (ASIC 저항성 PoW)",
-        "storage_rent": "Storage Rent",
+        "storage_rent": "스토리지 렌트",
         "sigma_privacy": "Sigma 기반 프라이버시"
       }
     },
@@ -3721,7 +3721,7 @@
         "description": "프로토콜 수준에서 내장된 프라이버시"
       },
       "storage_rent": {
-        "title": "Storage Rent",
+        "title": "스토리지 렌트",
         "description": "장기적 지속 가능성을 위한 지속 가능한 경제 모델"
       },
       "light_clients": {
@@ -3758,12 +3758,12 @@
     },
     "technologies": {
       "proof_of_work": {
-        "title": "Proof-of-Work (PoW)",
+        "title": "작업 증명 (PoW)",
         "subtitle": "최대 보안",
         "description": "Autolykos 알고리즘은 ASIC 저항성을 가지며 공정한 배포와 강력한 보안을 보장합니다."
       },
       "extended_utxo": {
-        "title": "Extended UTXO",
+        "title": "확장 UTXO",
         "subtitle": "스마트 머니",
         "description": "더 나은 확장성과 예측 가능한 수수료로 복잡한 스마트 컨트랙트를 허용합니다."
       },

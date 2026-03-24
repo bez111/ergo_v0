@@ -4231,7 +4231,7 @@
         "3": {
           "title": "NFT 拍賣",
           "description": "競標 Box 在不互相阻塞的情況下競爭",
-          "example": "Ergo Auction House"
+          "example": "Ergo 拍賣行"
         }
       },
       "codeExampleTitle": "簡單而強大",

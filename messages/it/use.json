@@ -370,7 +370,7 @@
       "comingSoon": "Prossimamente"
     },
     "aria": {
-      "learnMoreAbout": "Learn more about {title}"
+      "learnMoreAbout": "Scopri di più su {title}"
     },
     "learnTechnology": {
       "title": "Impara la Tecnologia",
@@ -507,7 +507,7 @@
       "buttons": {
         "buy": "Acquista",
         "trade": "Scambia",
-        "swap": "Swap",
+        "swap": "Scambia",
         "buyWithFiat": "Acquista con Fiat",
         "viewExchanges": "Visualizza gli Exchange"
       },
@@ -2130,7 +2130,7 @@
           }
         },
         "defiNetwork": {
-          "name": "DeFi Oracle Network",
+          "name": "Rete Oracle DeFi",
           "description": "Oracle specializzati per protocolli DeFi",
           "status": "In Sviluppo",
           "features": {
@@ -2714,7 +2714,7 @@
       "multichain": "Multi-chain",
       "dao": "DAO",
       "governance": "Governance",
-      "community": "Community",
+      "community": "Comunità",
       "nft": "NFT",
       "royalties": "Royalty",
       "dynamic": "Dinamico",

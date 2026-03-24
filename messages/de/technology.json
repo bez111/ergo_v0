@@ -931,7 +931,7 @@
           },
           "creationCost": {
             "name": "Erstellungskosten",
-            "value": "~$0.01",
+            "value": "~$0,01",
             "description": "Minimale Gebühren in ERG"
           },
           "protocolSecurity": {
@@ -1190,7 +1190,7 @@
         },
         "creationCost": {
           "name": "Erstellungskosten",
-          "value": "~$0.01",
+          "value": "~$0,01",
           "description": "Minimale Gebühren in ERG"
         },
         "protocolSecurity": {
@@ -2592,22 +2592,22 @@
         "hashrate": {
           "label": "Netzwerk-Hashrate",
           "value": "15.2 TH/s",
-          "change": "+5.2%"
+          "change": "+5,2 %"
         },
         "miners": {
           "label": "Aktive Miner",
           "value": "12.847",
-          "change": "+2.1%"
+          "change": "+2,1 %"
         },
         "blockTime": {
           "label": "Blockzeit",
-          "value": "2 min",
+          "value": "2 Min.",
           "change": "Stabil"
         },
         "difficulty": {
           "label": "Schwierigkeit",
-          "value": "1.2P",
-          "change": "+1.8%"
+          "value": "1,2P",
+          "change": "+1,8 %"
         }
       },
       "whyPoW": {
@@ -4055,22 +4055,22 @@
         "0": {
           "label": "Netzwerk-Hashrate",
           "value": "12.5 TH/s",
-          "change": "+5.2%"
+          "change": "+5,2 %"
         },
         "1": {
           "label": "Aktive Miner",
           "value": "2.847",
-          "change": "+12.1%"
+          "change": "+12,1 %"
         },
         "2": {
           "label": "Blockzeit",
-          "value": "2.0 min",
+          "value": "2,0 Min.",
           "change": "Stabil"
         },
         "3": {
           "label": "Schwierigkeit",
-          "value": "1.2P",
-          "change": "+3.8%"
+          "value": "1,2P",
+          "change": "+3,8 %"
         }
       },
       "benefitsTitle": "Warum Autolykos wichtig ist",
@@ -4528,7 +4528,7 @@
         },
         "creationCost": {
           "name": "Erstellungskosten",
-          "value": "~$0.01",
+          "value": "~$0,01",
           "description": "Minimale Gebühren in ERG"
         },
         "protocolSecurity": {

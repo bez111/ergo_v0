@@ -1656,8 +1656,8 @@
         "learningResource": {
           "name": "Ergo 區塊鏈簡介",
           "description": "學習 Ergo 區塊鏈基礎知識的教育資源",
-          "learningResourceType": "Presentation",
-          "educationalLevel": "Beginner",
+          "learningResourceType": "簡報",
+          "educationalLevel": "初學者",
           "teaches": [
             "Blockchain",
             "Smart Contracts",
@@ -1670,7 +1670,7 @@
           "headline": "Ergo 區塊鏈簡介",
           "description": "初學者了解 Ergo 的全面指南",
           "datePublished": "2024-01-01",
-          "proficiencyLevel": "Beginner"
+          "proficiencyLevel": "初學者"
         }
       }
     },
@@ -1840,7 +1840,7 @@
     },
     "introductionMeta": {
       "ergo_introduction_description_pow_smart": "Ergo Introduction\",\n    description: \"PoW smart contracts with eUTXO & Sigma Protocols.",
-      "ergo_introduction_pow_smart_contracts": "Ergo Introduction — PoW Smart Contracts, eUTXO, Sigma Protocols",
+      "ergo_introduction_pow_smart_contracts": "Ergo 簡介 — PoW 智慧合約、eUTXO、Sigma Protocols",
       "meet_ergo_a_pow_smart": "認識 Ergo：一個使用 eUTXO 模型和 Sigma 協議的 PoW 智能合約平台。以可預測的成本建構具隱私保護和可審計性的 dApps。",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "具備 eUTXO 和 Sigma 協議的 PoW 智能合約。",
       "techarticle_headline_t": "TechArticle\",\n          headline: t(",
@@ -2143,24 +2143,24 @@
       "discussions_and_community_content": "討論與社群內容",
       "open_source_development": "開源開發"
     },
-    "how_long_does_it_take_to_learn_ergo_answer": "How long does it take to learn Ergo?\",\n      answer:",
+    "how_long_does_it_take_to_learn_ergo_answer": "學習 Ergo 需要多長時間？\",\n      answer:",
     "start_your_ergo_journey_summary": "Start Your Ergo Journey\",\n    summary: \"Choose your personalized path into Ergo blockchain: beginner, developer, miner, or investor\",\n    url: \"https://ergoblockchain.org/start",
     "start_your_journey_with_ergo": "Start Your Journey with Ergo Blockchain',\n    description: 'Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
     "start_with_ergo_learning_paths": "開始使用 Ergo——學習路徑",
-    "start_your_ergo_journey_choose": "Start Your Ergo Journey - Choose Your Path',\n    description: 'Beginner? Developer? Miner? Investor? Find your personalized path into Ergo.",
+    "start_your_ergo_journey_choose": "開啟您的 Ergo 之旅 - 選擇您的路徑',\n    description: '新手？開發者？礦工？投資者？找到您進入 Ergo 的個人化路徑。",
     "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
-    "howtosupply_name_computer_or_smartphone": "HowToSupply', name: 'Computer or smartphone",
-    "howtosupply_name_internet_connection": "HowToSupply', name: 'Internet connection",
-    "howtotool_name_web_browser": "HowToTool', name: 'Web browser",
+    "howtosupply_name_computer_or_smartphone": "HowToSupply', name: '電腦或智慧型手機",
+    "howtosupply_name_internet_connection": "HowToSupply', name: '網際網路連線",
+    "howtotool_name_web_browser": "HowToTool', name: '網頁瀏覽器",
     "howtostep_name_choose_your_path": "HowToStep',\n        name: 'Choose Your Path',\n        text: 'Select whether you are new to crypto, want to learn, develop, mine, or invest',\n        url: 'https://ergoblockchain.org/start',\n        image: 'https://ergoblockchain.org/images/start-paths.png",
     "howtostep_name_understand_why_ergo": "HowToStep',\n        name: 'Understand Why Ergo',\n        text: 'Learn about the problems Ergo solves and its unique features',\n        url: 'https://ergoblockchain.org/start/introduction",
     "howtostep_name_learn_security_best": "HowToStep',\n        name: 'Learn Security Best Practices',\n        text: 'Understand essential security practices to protect your assets',\n        url: 'https://ergoblockchain.org/start/security-tips",
-    "course_name_beginner_path_description": "Course',\n          name: 'Beginner Path',\n          description: 'For those new to cryptocurrency and blockchain",
+    "course_name_beginner_path_description": "Course',\n          name: '初學者路徑',\n          description: '適合加密貨幣和區塊鏈新手",
     "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
-    "course_name_developer_path_description": "Course',\n          name: 'Developer Path',\n          description: 'For programmers wanting to build on Ergo",
-    "course_name_miner_path_description": "Course',\n          name: 'Miner Path',\n          description: 'For those interested in mining ERG",
-    "course_name_investor_path_description": "Course',\n          name: 'Investor Path',\n          description: 'For understanding Ergo as an investment",
-    "course_name_learning_path_description": "Course',\n          name: 'Learning Path',\n          description: 'Deep dive into Ergo technology and ecosystem",
+    "course_name_developer_path_description": "Course',\n          name: '開發者路徑',\n          description: '適合希望在 Ergo 上開發的程式設計師",
+    "course_name_miner_path_description": "Course',\n          name: '礦工路徑',\n          description: '適合有興趣挖掘 ERG 的用戶",
+    "course_name_investor_path_description": "Course',\n          name: '投資者路徑',\n          description: '用於了解 Ergo 作為投資標的",
+    "course_name_learning_path_description": "Course',\n          name: '學習路徑',\n          description: '深入探索 Ergo 技術與生態系統",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "開始您與 Ergo 區塊鏈的旅程",
@@ -2398,7 +2398,7 @@
         "label": "學習路徑"
       },
       "quickStart": {
-        "value": "< 30min",
+        "value": "< 30分鐘",
         "label": "快速入門"
       },
       "openSource": {
@@ -3693,7 +3693,7 @@
       "links": {
         "eutxo_model": "eUTXO 智能合約模型",
         "autolykos": "Autolykos（抗 ASIC 的 PoW）",
-        "storage_rent": "Storage Rent",
+        "storage_rent": "儲存租金",
         "sigma_privacy": "Sigma 驅動的隱私"
       }
     },
@@ -3721,7 +3721,7 @@
         "description": "協議層面內建隱私"
       },
       "storage_rent": {
-        "title": "Storage Rent",
+        "title": "儲存租金",
         "description": "可持續的經濟模型，確保長期可行性"
       },
       "light_clients": {
