@@ -30,112 +30,57 @@ const iconNode = {
 } as const
 
 
-// FAQ data
-const faqs = [
-  {
-    id: "defi-on-ergo",
-    q: "What makes DeFi on Ergo different?",
-    a: "Ergo's eUTXO model provides superior security and composability for DeFi. Smart contracts are more predictable, costs are deterministic, and parallel transaction processing enables better scalability. Plus, optional privacy features protect your financial data."
-  },
-  {
-    id: "start-using-ergo",
-    q: "How do I start using Ergo applications?",
-    a: (
-      <>
-        1. Get an Ergo wallet like Nautilus or SAFEW<br />
-        2. Acquire ERG tokens from exchanges<br />
-        3. Explore dApps in our ecosystem<br />
-        4. Join the community on Discord or Telegram for help
-      </>
-    )
-  },
-  {
-    id: "ergo-vs-ethereum",
-    q: "How does Ergo compare to Ethereum for dApps?",
-    a: "Ergo uses the eUTXO model (vs Ethereum's account model), offering better security, parallel processing, and predictable costs. ErgoScript is more secure by design with formal verification capabilities. Native tokens don't require smart contracts, making them cheaper and safer."
-  },
-  {
-    id: "privacy-features",
-    q: "Are Ergo's privacy features legal to use?",
-    a: "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
-  },
-  {
-    id: "mining-profitable",
-    q: "Is mining ERG still profitable?",
-    a: "Mining profitability depends on your electricity costs, hardware efficiency, and ERG price. Ergo's ASIC-resistant Autolykos algorithm keeps mining accessible to GPUs. Use mining calculators to estimate your potential returns based on current network difficulty."
-  },
-  {
-    id: "developer-resources",
-    q: "What resources are available for developers?",
-    a: (
-      <>
-        Ergo provides comprehensive developer resources:<br />
-        • ErgoScript documentation and tutorials<br />
-        • SDKs for multiple languages (Scala, JS, Python)<br />
-        • AppKit for dApp development<br />
-        • Active developer community and support<br />
-        • Grants program for ecosystem projects
-      </>
-    )
-  }
-]
+// FAQ data moved to use.json translations (faq.items)
 
 export default function UseClient() {
   const t = useTranslations('use')
+  // Helper for dynamic use-case keys (bypasses next-intl strict typing)
+  const ucT = (id: string, field: 'title' | 'subtitle' | 'description') =>
+    (t.raw(id as 'stablecoins') as Record<string, string>)[field] ?? ''
   const localizedPath = useLocalizedPath()
   const useCases = useMemo(() => data, [])
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   // FAQ Section Component
   function FAQSection() {
-    // Helper to convert React nodes to plain text for JSON-LD
-    function nodeToPlainText(node: React.ReactNode): string {
-      if (node === null || node === undefined || node === false) return ""
-      if (typeof node === "string" || typeof node === "number") return String(node)
-      if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
-      if (typeof node === "object" && node !== null && "props" in (node as React.ReactElement)) {
-        const { children } = ((node as React.ReactElement).props as Record<string, unknown>) ?? {}
-        return nodeToPlainText(children as React.ReactNode)
-      }
-      return ""
-    }
+    const faqItems = t.raw('faq.items') as { id: string; question: string; answer: string }[]
 
     const faqJsonLd = useMemo(() => {
-      const items = faqs.map((f) => ({
+      const items = faqItems.map((f) => ({
         "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: typeof f.a === "string" ? f.a : nodeToPlainText(f.a) },
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
       }))
       return { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: items }
-    }, [])
+    }, [faqItems])
 
     return (
       <section aria-labelledby="faq-heading" className="max-w-5xl mx-auto py-16 px-4">
         <Script id="use-faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
         <h2 id="faq-heading" className="text-4xl font-bold text-center mb-8 text-white">
-          Frequently Asked Questions
+          {t('faq.title')}
         </h2>
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {faqItems.map((faq, index) => (
             <Card key={faq.id} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
               <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
                 <CollapsibleTrigger asChild>
                   <button className="w-full">
                     <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
-                      <h3 className="text-lg font-semibold text-left text-white">{faq.q}</h3>
-                      <ChevronDown 
-                        aria-hidden="true" 
+                      <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                      <ChevronDown
+                        aria-hidden="true"
                         className={`w-5 h-5 text-neutral-400 transition-transform ${
                           openFAQ === index ? "rotate-180" : ""
-                        }`} 
+                        }`}
                       />
                     </CardContent>
                   </button>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <CardContent className="px-6 pb-6 pt-0">
-                    <div className="text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>br]:mb-2">
-                      {faq.a}
+                    <div className="text-neutral-300 leading-relaxed">
+                      {faq.answer}
                     </div>
                   </CardContent>
                 </CollapsibleContent>
@@ -170,9 +115,9 @@ export default function UseClient() {
                 </Button>
               </div>
               <p className="mt-4 text-sm text-neutral-400">
-                Why Ergo for DeFi & mining?{" "}
+                {t('whyErgo')}{" "}
                 <Link href="/compare" className="text-orange-400 underline-offset-2 hover:underline">
-                  See how it compares
+                  {t('seeComparison')}
                 </Link>
               </p>
             </div>
@@ -207,12 +152,12 @@ export default function UseClient() {
         <motion.div initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.07 } } }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch" aria-labelledby="all-use-cases">
           {useCases.map((uc) => (
             <motion.div key={uc.id} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }} className="relative h-full">
-              <Link href={`/use/${uc.id}`} aria-label={`Learn more about ${uc.title}`} className="block h-full">
+              <Link href={`/use/${uc.id}`} aria-label={t('aria.learnMoreAbout', { title: ucT(uc.id, 'title') })} className="block h-full">
                 <Card className="relative bg-black/80 border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/90 hover:border-orange-400/40 h-full flex flex-col cursor-pointer group">
                   <CardContent className="p-8 flex-1 flex flex-col">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="p-3 rounded-md bg-orange-500/20 border border-orange-500/30">{iconNode[uc.icon as keyof typeof iconNode]}</div>
-                      <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">{uc.title}</h3>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">{ucT(uc.id, 'title')}</h3>
                     </div>
                     <div className="flex flex-wrap gap-2 mb-2">
                       {uc.tags.slice(0, 3).map((tag) => (
@@ -222,20 +167,13 @@ export default function UseClient() {
                         <span className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">+{uc.tags.length - 3}</span>
                       )}
                     </div>
-                    <p className="text-neutral-400 font-medium mb-1">{uc.subtitle}</p>
-                    <p className="text-neutral-300 text-base mb-5 flex-1">{uc.description}</p>
-                    
+                    <p className="text-neutral-400 font-medium mb-1">{ucT(uc.id, 'subtitle')}</p>
+                    <p className="text-neutral-300 text-base mb-5 flex-1">{ucT(uc.id, 'description')}</p>
+
                     {/* Hover text that appears in bottom right corner */}
                     <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="text-orange-400 font-medium text-right">
-                        {uc.id === 'stablecoins' ? 'Learn More' :
-                         uc.id === 'privacy' ? 'Discover Privacy' :
-                         uc.id === 'bridges' ? 'Connect Chains' :
-                         uc.id === 'daos' ? 'Join Community' :
-                         uc.id === 'nfts' ? 'Create Assets' :
-                         uc.id === 'oracles' ? 'Access Data' :
-                         uc.id === 'identity' ? 'Build Identity' :
-                         uc.id === 'gaming' ? 'Start Gaming' : 'Learn More'}
+                        {((t.raw('hoverTexts') as Record<string, string>)[uc.id]) || t('hoverTexts.default')}
                       </div>
                     </div>
                   </CardContent>
@@ -255,7 +193,7 @@ export default function UseClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Learn the Technology
+              {t('learnTechnology.title')}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Link href="/learn/ergoscript" className="block group">
@@ -266,15 +204,15 @@ export default function UseClient() {
                         <Code className="w-6 h-6 text-orange-400" />
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-                        ErgoScript
+                        {t('learnTechnology.ergoscript.title')}
                       </h3>
                     </div>
                     <p className="text-neutral-300 flex-1">
-                      Learn the smart contract language powering these use cases
+                      {t('learnTechnology.ergoscript.description')}
                     </p>
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="inline-flex items-center text-orange-400 font-medium text-sm">
-                        Start Tutorial
+                        {t('learnTechnology.ergoscript.cta')}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </span>
                     </div>
@@ -290,15 +228,15 @@ export default function UseClient() {
                         <Database className="w-6 h-6 text-orange-400" />
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-                        eUTXO Model
+                        {t('learnTechnology.eutxo.title')}
                       </h3>
                     </div>
                     <p className="text-neutral-300 flex-1">
-                      Understand the foundation that enables these applications
+                      {t('learnTechnology.eutxo.description')}
                     </p>
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="inline-flex items-center text-orange-400 font-medium text-sm">
-                        Learn More
+                        {t('learnTechnology.eutxo.cta')}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </span>
                     </div>
@@ -314,15 +252,15 @@ export default function UseClient() {
                         <Layers className="w-6 h-6 text-orange-400" />
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
-                        All Technology
+                        {t('learnTechnology.allTechnology.title')}
                       </h3>
                     </div>
                     <p className="text-neutral-300 flex-1">
-                      Explore all of Ergo's technical innovations
+                      {t('learnTechnology.allTechnology.description')}
                     </p>
                     <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="inline-flex items-center text-orange-400 font-medium text-sm">
-                        View All
+                        {t('learnTechnology.allTechnology.cta')}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </span>
                     </div>
@@ -340,13 +278,13 @@ export default function UseClient() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
-            What's <span className="text-orange-400">Next?</span>
+            {t('whatsNext.title')}
           </h2>
           <p className="text-xl text-center text-neutral-300 mb-12">
-            Start exploring applications or learn how to build on Ergo
+            {t('whatsNext.subtitle')}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link 
+            <Link
               href="/ecosystem"
               className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
             >
@@ -355,16 +293,16 @@ export default function UseClient() {
                   <Coins className="w-6 h-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Explore Ecosystem</h3>
-                  <p className="text-orange-400 text-sm">Discover Applications</p>
+                  <h3 className="text-xl font-bold text-white">{t('whatsNext.exploreEcosystem.title')}</h3>
+                  <p className="text-orange-400 text-sm">{t('whatsNext.exploreEcosystem.subtitle')}</p>
                 </div>
               </div>
               <p className="text-neutral-300">
-                Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo
+                {t('whatsNext.exploreEcosystem.description')}
               </p>
             </Link>
-            
-            <Link 
+
+            <Link
               href="/docs"
               className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
             >
@@ -373,12 +311,12 @@ export default function UseClient() {
                   <Code className="w-6 h-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">Start Building</h3>
-                  <p className="text-orange-400 text-sm">Developer Resources</p>
+                  <h3 className="text-xl font-bold text-white">{t('whatsNext.startBuilding.title')}</h3>
+                  <p className="text-orange-400 text-sm">{t('whatsNext.startBuilding.subtitle')}</p>
                 </div>
               </div>
               <p className="text-neutral-300">
-                Access documentation, tutorials, and tools to build your own Ergo applications
+                {t('whatsNext.startBuilding.description')}
               </p>
             </Link>
           </div>
@@ -408,8 +346,8 @@ export default function UseClient() {
 
       {/* Email Capture Form */}
       <FinalCTASimple
-        title="Discover New Use Cases"
-        description="Get notified about new practical applications, real-world implementations, and use case studies"
+        title={t('emailCapture.title')}
+        description={t('emailCapture.description')}
       />
 
       </div>
