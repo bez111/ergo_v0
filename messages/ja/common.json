@@ -452,7 +452,17 @@
     "topics_description": "ガイド、FAQ、リソースをテーマ別にまとめたキュレーションされたトピックハブ。",
     "qa_hub_description": "Ergoブロックチェーンに関するコミュニティ主導の質問と回答。",
     "playbooks_description": "DeFi、プライバシー、マイニングなどのためのステップバイステップの道筋。",
-    "dev_patterns_description": "開発者向けのスマートコントラクトパターンと再利用可能な設計図。"
+    "dev_patterns_description": "開発者向けのスマートコントラクトパターンと再利用可能な設計図。",
+    "build_description": "エージェント経済スタックで構築する",
+    "agent_economy_description": "Ergoが自律的な経済エージェントのベースレイヤーである理由：信用、ノート、プログラマブルトラスト。",
+    "agent_payments_description": "技術アーキテクチャ：Reserve · Note · Tracker · Predicate。Fleet SDKコード例付き。",
+    "demos_description": "Ergoテストネットの3つの動作フロー：APIコール決済、信用システム、コミュニティリザーブ。",
+    "build_developers_description": "ErgoScript、SDK（Fleet、AppKit、sigma-rust）、パターン、プレイブック、グラント。",
+    "start_description": "Ergoで旅を始める",
+    "use_description": "実践的なガイドとユーザー向けハウツー",
+    "ecosystem_description": "プロジェクト、ダッシュボード、パートナー",
+    "technology_description": "Ergoのコアとなる技術概念とイノベーション",
+    "learn_description": "教育リソースと学習素材"
   },
   "errors": {
     "network": {

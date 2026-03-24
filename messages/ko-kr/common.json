@@ -452,7 +452,17 @@
     "topics_description": "주제별로 가이드, FAQ 및 리소스를 그룹화한 큐레이션 주제 허브.",
     "qa_hub_description": "Ergo 블록체인에 관한 커뮤니티 기반 질문과 답변.",
     "playbooks_description": "DeFi, 프라이버시, 채굴 등을 위한 단계별 경로.",
-    "dev_patterns_description": "개발자를 위한 스마트 계약 패턴 및 재사용 가능한 블루프린트."
+    "dev_patterns_description": "개발자를 위한 스마트 계약 패턴 및 재사용 가능한 블루프린트.",
+    "build_description": "에이전트 경제 스택으로 구축하세요",
+    "agent_economy_description": "Ergo가 자율 경제 에이전트의 기반 레이어인 이유: 신용, 노트, 프로그래머블 트러스트.",
+    "agent_payments_description": "기술 아키텍처: Reserve · Note · Tracker · Predicate. Fleet SDK 코드 예시 포함.",
+    "demos_description": "Ergo 테스트넷의 세 가지 작동 흐름: API 호출 결제, 신용 시스템, 커뮤니티 리저브.",
+    "build_developers_description": "ErgoScript, SDK(Fleet, AppKit, sigma-rust), 패턴, 플레이북, 보조금.",
+    "start_description": "Ergo와 함께 여정을 시작하세요",
+    "use_description": "실용적인 가이드 및 사용자 방법 안내",
+    "ecosystem_description": "프로젝트, 대시보드 및 파트너",
+    "technology_description": "Ergo의 핵심 기술 개념과 혁신",
+    "learn_description": "교육 리소스 및 학습 자료"
   },
   "errors": {
     "network": {

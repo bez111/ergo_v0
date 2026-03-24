@@ -452,7 +452,17 @@
     "topics_description": "Centros temáticos seleccionados que agrupan guías, preguntas frecuentes y recursos por tema.",
     "qa_hub_description": "Preguntas y respuestas impulsadas por la comunidad sobre la blockchain Ergo.",
     "playbooks_description": "Caminos paso a paso para DeFi, privacidad, minería y más.",
-    "dev_patterns_description": "Patrones de contratos inteligentes y planos reutilizables para desarrolladores."
+    "dev_patterns_description": "Patrones de contratos inteligentes y planos reutilizables para desarrolladores.",
+    "build_description": "Construir sobre el stack de la economía de agentes",
+    "agent_economy_description": "Por qué Ergo es la capa base para agentes económicos autónomos: crédito, notas, confianza programable.",
+    "agent_payments_description": "Arquitectura técnica: Reserve · Note · Tracker · Predicate. Con ejemplos de código Fleet SDK.",
+    "demos_description": "Tres flujos funcionales en la testnet de Ergo: pago de llamada API, sistema de crédito, reserva comunitaria.",
+    "build_developers_description": "ErgoScript, SDKs (Fleet, AppKit, sigma-rust), patrones, guías de estrategia y subvenciones.",
+    "start_description": "Comienza tu viaje con Ergo",
+    "use_description": "Guías prácticas y tutoriales para usuarios",
+    "ecosystem_description": "Proyectos, paneles de control y socios",
+    "technology_description": "Conceptos técnicos fundamentales e innovaciones de Ergo",
+    "learn_description": "Recursos educativos y materiales de aprendizaje"
   },
   "errors": {
     "network": {

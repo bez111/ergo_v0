@@ -391,7 +391,6 @@
     "onboarding quiz": "Onboarding Quiz",
     "join the community": "Join the Community",
     "faq for beginners": "FAQ for Beginners",
-    "faq": "FAQ",
     "use cases": "Use Cases",
     "get erg": "Get ERG",
     "how-to guides": "How-to Guides",
@@ -453,7 +452,17 @@
     "topics_description": "Curated topic hubs grouping guides, FAQs, and resources by theme.",
     "qa_hub_description": "Community-driven questions and answers about Ergo blockchain.",
     "playbooks_description": "Step-by-step paths for DeFi, privacy, mining, and more.",
-    "dev_patterns_description": "Smart-contract patterns and reusable blueprints for developers."
+    "dev_patterns_description": "Smart-contract patterns and reusable blueprints for developers.",
+    "build_description": "Build on the agent economy stack",
+    "agent_economy_description": "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
+    "agent_payments_description": "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.",
+    "demos_description": "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
+    "build_developers_description": "ErgoScript, SDKs (Fleet, AppKit, sigma-rust), patterns, playbooks, and grants.",
+    "start_description": "Begin your journey with Ergo",
+    "use_description": "Practical guides and user how-tos",
+    "ecosystem_description": "Projects, dashboards, and partners",
+    "technology_description": "Core technical concepts and innovations of Ergo",
+    "learn_description": "Educational resources and learning materials"
   },
   "errors": {
     "network": {

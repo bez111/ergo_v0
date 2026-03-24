@@ -452,7 +452,17 @@
     "topics_description": "Kılavuzları, SSS'leri ve kaynakları temaya göre gruplandıran seçilmiş konu merkezleri.",
     "qa_hub_description": "Ergo blockchain hakkında topluluk destekli sorular ve cevaplar.",
     "playbooks_description": "DeFi, gizlilik, madencilik ve daha fazlası için adım adım yollar.",
-    "dev_patterns_description": "Geliştiriciler için akıllı sözleşme kalıpları ve yeniden kullanılabilir planlar."
+    "dev_patterns_description": "Geliştiriciler için akıllı sözleşme kalıpları ve yeniden kullanılabilir planlar.",
+    "build_description": "Ajan ekonomisi yığını üzerinde geliştirin",
+    "agent_economy_description": "Ergo'nun otonom ekonomik ajanlar için neden temel katman olduğu: kredi, notlar, programlanabilir güven.",
+    "agent_payments_description": "Teknik mimari: Reserve · Note · Tracker · Predicate. Fleet SDK kod örnekleriyle.",
+    "demos_description": "Ergo testnet'inde üç çalışan akış: API çağrısı ödemesi, kredi sistemi, topluluk rezervi.",
+    "build_developers_description": "ErgoScript, SDK'lar (Fleet, AppKit, sigma-rust), kalıplar, strateji kılavuzları ve hibeler.",
+    "start_description": "Ergo ile yolculuğunuza başlayın",
+    "use_description": "Pratik kılavuzlar ve kullanıcı nasıl yapılır rehberleri",
+    "ecosystem_description": "Projeler, kontrol panelleri ve ortaklar",
+    "technology_description": "Ergo'nun temel teknik kavramları ve yenilikleri",
+    "learn_description": "Eğitim kaynakları ve öğrenme materyalleri"
   },
   "errors": {
     "network": {

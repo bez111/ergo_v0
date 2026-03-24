@@ -452,7 +452,17 @@
     "topics_description": "Тематические хабы, объединяющие руководства, FAQ и ресурсы по теме.",
     "qa_hub_description": "Общинные вопросы и ответы о блокчейне Ergo.",
     "playbooks_description": "Пошаговые пути для DeFi, приватности, горной промышленности и многое другое.",
-    "dev_patterns_description": "Шаблоны смарт-контрактов и схемы повторного использования для разработчиков."
+    "dev_patterns_description": "Шаблоны смарт-контрактов и схемы повторного использования для разработчиков.",
+    "build_description": "Стройте на стеке агентской экономики",
+    "agent_economy_description": "Почему Ergo является базовым уровнем для автономных экономических агентов: кредит, ноты, программируемое доверие.",
+    "agent_payments_description": "Техническая архитектура: Reserve · Note · Tracker · Predicate. С примерами кода Fleet SDK.",
+    "demos_description": "Три рабочих сценария на тестнете Ergo: оплата API-вызова, кредитная система, общественный резерв.",
+    "build_developers_description": "ErgoScript, SDK (Fleet, AppKit, sigma-rust), паттерны, плейбуки и гранты.",
+    "start_description": "Начните свой путь с Ergo",
+    "use_description": "Практические руководства и инструкции для пользователей",
+    "ecosystem_description": "Проекты, дашборды и партнёры",
+    "technology_description": "Основные технические концепции и инновации Ergo",
+    "learn_description": "Образовательные ресурсы и учебные материалы"
   },
   "errors": {
     "network": {

@@ -455,7 +455,17 @@
     "topics_description": "按主题分组的精选指南、常见问题和资源中心。",
     "qa_hub_description": "关于 Ergo 区块链的社区驱动问答。",
     "playbooks_description": "DeFi、隐私、挖矿等的分步路径。",
-    "dev_patterns_description": "面向开发者的智能合约模式和可重用蓝图。"
+    "dev_patterns_description": "面向开发者的智能合约模式和可重用蓝图。",
+    "build_description": "在代理经济技术栈上构建",
+    "agent_economy_description": "为何 Ergo 是自主经济代理的基础层：信用、票据、可编程信任。",
+    "agent_payments_description": "技术架构：Reserve · Note · Tracker · Predicate。附 Fleet SDK 代码示例。",
+    "demos_description": "在 Ergo 测试网上运行的三个工作流：API 调用支付、信用系统、社区储备。",
+    "build_developers_description": "ErgoScript、SDK（Fleet、AppKit、sigma-rust）、模式、操作手册及资助。",
+    "start_description": "开启您的 Ergo 之旅",
+    "use_description": "实用指南与用户教程",
+    "ecosystem_description": "项目、仪表盘与合作伙伴",
+    "technology_description": "Ergo 的核心技术概念与创新",
+    "learn_description": "教育资源与学习材料"
   },
   "errors": {
     "network": {
