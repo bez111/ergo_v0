@@ -2633,238 +2633,238 @@
   },
   "usePages": {
     "common": {
-      "whatsNext": "What's",
-      "whatsNextHighlight": "Next?",
-      "documentation": "Documentation",
-      "developerDocs": "Developer Docs",
-      "startBuilding": "Start Building",
-      "learnMore": "Learn More"
+      "whatsNext": "다음은",
+      "whatsNextHighlight": "무엇인가요?",
+      "documentation": "문서",
+      "developerDocs": "개발자 문서",
+      "startBuilding": "개발 시작하기",
+      "learnMore": "자세히 알아보기"
     }
   },
   "useBabelFees": {
-    "title": "Babel Fees",
-    "description": "Pay transaction fees in any token on Ergo",
-    "subtitle": "Flexible fee payment system"
+    "title": "Babel 수수료",
+    "description": "Ergo에서 모든 토큰으로 트랜잭션 수수료 지불",
+    "subtitle": "유연한 수수료 결제 시스템"
   },
   "useBridges": {
-    "title": "Cross-Chain Bridges",
-    "description": "Connect Ergo with other blockchain networks",
-    "subtitle": "Trustless interoperability solutions"
+    "title": "크로스체인 브릿지",
+    "description": "Ergo를 다른 블록체인 네트워크와 연결",
+    "subtitle": "신뢰 없는 상호운용성 솔루션"
   },
   "useDaos": {
-    "title": "DAOs & Governance",
-    "description": "Decentralized autonomous organizations on Ergo",
-    "subtitle": "Community-driven decision making"
+    "title": "DAO 및 거버넌스",
+    "description": "Ergo의 탈중앙화 자율 조직",
+    "subtitle": "커뮤니티 주도 의사결정"
   },
   "useGaming": {
-    "title": "Gaming & Metaverse",
-    "description": "Blockchain gaming and virtual world applications",
-    "subtitle": "Play-to-earn and NFT gaming"
+    "title": "게임 및 메타버스",
+    "description": "블록체인 게임 및 가상 세계 애플리케이션",
+    "subtitle": "Play-to-earn 및 NFT 게임"
   },
   "useGetErg": {
-    "title": "Get ERG",
-    "description": "How to acquire ERG tokens through various methods",
-    "subtitle": "Exchanges, mining, and earning opportunities"
+    "title": "ERG 받기",
+    "description": "다양한 방법으로 ERG 토큰을 획득하는 방법",
+    "subtitle": "거래소, 채굴 및 수익 창출 기회"
   },
   "useGuides": {
-    "title": "Use Case Guides",
-    "description": "Practical tutorials for using Ergo applications",
-    "subtitle": "Step-by-step implementation guides"
+    "title": "활용 사례 가이드",
+    "description": "Ergo 애플리케이션 사용을 위한 실용적인 튜토리얼",
+    "subtitle": "단계별 구현 가이드"
   },
   "useIdentity": {
-    "title": "Digital Identity",
-    "description": "Self-sovereign identity solutions on Ergo",
-    "subtitle": "Privacy-preserving identity management"
+    "title": "디지털 신원",
+    "description": "Ergo의 자기주권 신원 솔루션",
+    "subtitle": "프라이버시를 보호하는 신원 관리"
   },
   "useMining": {
-    "title": "Mining",
-    "description": "Mining ERG with Autolykos proof-of-work algorithm",
-    "subtitle": "Solo and pool mining guides"
+    "title": "채굴",
+    "description": "Autolykos 작업증명 알고리즘으로 ERG 채굴",
+    "subtitle": "솔로 및 풀 채굴 가이드"
   },
   "useNfts": {
-    "title": "NFTs & Digital Assets",
-    "description": "Create, trade, and manage NFTs on Ergo",
-    "subtitle": "Rich metadata and smart contract capabilities"
+    "title": "NFT 및 디지털 자산",
+    "description": "Ergo에서 NFT 생성, 거래 및 관리",
+    "subtitle": "풍부한 메타데이터 및 스마트 컨트랙트 기능"
   },
   "useOracles": {
-    "title": "Oracle Pools",
-    "description": "Decentralized data feeds for smart contracts",
-    "subtitle": "Reliable off-chain data integration"
+    "title": "오라클 풀",
+    "description": "스마트 컨트랙트를 위한 탈중앙화 데이터 피드",
+    "subtitle": "신뢰할 수 있는 오프체인 데이터 통합"
   },
   "usePrivacy": {
-    "title": "Privacy Applications",
-    "description": "Financial privacy tools and mixing services",
-    "subtitle": "Confidential transactions and asset protection"
+    "title": "프라이버시 애플리케이션",
+    "description": "금융 프라이버시 도구 및 믹싱 서비스",
+    "subtitle": "기밀 트랜잭션 및 자산 보호"
   },
   "useStablecoins": {
-    "title": "Stablecoins",
-    "description": "Algorithmic stablecoins built on Ergo",
-    "subtitle": "Decentralized stable value storage"
+    "title": "스테이블코인",
+    "description": "Ergo에서 구축된 알고리즘 스테이블코인",
+    "subtitle": "탈중앙화 안정적 가치 저장"
   },
   "useCasesData": {
     "tagLabels": {
-      "stablecoin": "Stablecoin",
-      "algorithmic": "Algorithmic",
-      "collateral": "Collateral",
-      "mixer": "Mixer",
-      "stealth": "Stealth",
-      "zeroKnowledge": "Zero-Knowledge",
-      "bridge": "Bridge",
-      "interoperability": "Interoperability",
-      "multichain": "Multi-chain",
+      "stablecoin": "스테이블코인",
+      "algorithmic": "알고리즘",
+      "collateral": "담보",
+      "mixer": "믹서",
+      "stealth": "스텔스",
+      "zeroKnowledge": "영지식",
+      "bridge": "브릿지",
+      "interoperability": "상호운용성",
+      "multichain": "멀티체인",
       "dao": "DAO",
-      "governance": "Governance",
-      "community": "Community",
+      "governance": "거버넌스",
+      "community": "커뮤니티",
       "nft": "NFT",
-      "royalties": "Royalties",
-      "dynamic": "Dynamic",
-      "oracles": "Oracles",
-      "dataFeeds": "Data feeds",
-      "prediction": "Prediction",
-      "identity": "Identity",
-      "reputation": "Reputation",
+      "royalties": "로열티",
+      "dynamic": "다이나믹",
+      "oracles": "오라클",
+      "dataFeeds": "데이터 피드",
+      "prediction": "예측",
+      "identity": "신원",
+      "reputation": "평판",
       "did": "DID",
-      "gaming": "Gaming",
-      "metaverse": "Metaverse"
+      "gaming": "게임",
+      "metaverse": "메타버스"
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
-      "subtitle": "Stable value storage without centralized control",
-      "description": "Over-collateralized stablecoins with innovative AgeUSD protocol."
+      "title": "알고리즘 스테이블코인",
+      "subtitle": "중앙화 통제 없는 안정적 가치 저장",
+      "description": "혁신적인 AgeUSD 프로토콜을 갖춘 과담보 스테이블코인."
     },
     "privacy": {
-      "title": "Privacy & Confidentiality",
-      "subtitle": "Financial privacy in an increasingly surveilled world",
-      "description": "Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy."
+      "title": "프라이버시 및 기밀성",
+      "subtitle": "감시가 증가하는 세계에서의 금융 프라이버시",
+      "description": "완전한 프라이버시를 위한 비수탁형 믹서, 스텔스 주소, 영지식 증명."
     },
     "bridges": {
-      "title": "Cross-Chain Bridges",
-      "subtitle": "Secure, trustless value transfer between blockchains",
-      "description": "Decentralized bridges with multi-signature security, no central custody."
+      "title": "크로스체인 브릿지",
+      "subtitle": "블록체인 간 안전하고 신뢰 없는 가치 이전",
+      "description": "중앙 수탁 없는 다중 서명 보안을 갖춘 탈중앙화 브릿지."
     },
     "daos": {
-      "title": "DAOs & Alternative Economies",
-      "subtitle": "Community governance and alternative economic systems",
-      "description": "Composable DAO infrastructure: treasury, voting, profit-sharing."
+      "title": "DAO 및 대안 경제",
+      "subtitle": "커뮤니티 거버넌스 및 대안적 경제 시스템",
+      "description": "조합 가능한 DAO 인프라: 재무, 투표, 수익 공유."
     },
     "nfts": {
-      "title": "NFTs & Digital Assets",
-      "subtitle": "True digital ownership, dynamic properties",
-      "description": "On-chain metadata, protocol royalties, programmable NFTs."
+      "title": "NFT 및 디지털 자산",
+      "subtitle": "진정한 디지털 소유권, 동적 속성",
+      "description": "온체인 메타데이터, 프로토콜 로열티, 프로그래머블 NFT."
     },
     "oracles": {
-      "title": "Oracles & Data Feeds",
-      "subtitle": "Bringing real-world data on-chain",
-      "description": "Decentralized oracle pools provide external data for DeFi & prediction markets."
+      "title": "오라클 및 데이터 피드",
+      "subtitle": "실세계 데이터를 온체인으로",
+      "description": "탈중앙화 오라클 풀이 DeFi 및 예측 시장에 외부 데이터를 제공."
     },
     "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems."
+      "title": "신원 및 평판",
+      "subtitle": "자기주권 신원 및 Web3 평판",
+      "description": "탈중앙화 식별자(DID), 시빌 저항성, 평판 시스템."
     },
     "gaming": {
-      "title": "Gaming & Metaverse",
-      "subtitle": "Next-gen gaming assets & digital worlds",
-      "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure."
+      "title": "게임 및 메타버스",
+      "subtitle": "차세대 게임 자산 및 디지털 세계",
+      "description": "프로그래머블 게임 토큰, NFT 기반 경제, 메타버스 인프라."
     },
     "faq": {
       "defi-on-ergo": {
-        "question": "What makes DeFi on Ergo different?",
-        "answer": "Ergo's eUTXO model provides superior security and composability for DeFi. Smart contracts are more predictable, costs are deterministic, and parallel transaction processing enables better scalability. Plus, optional privacy features protect your financial data."
+        "question": "Ergo의 DeFi는 무엇이 다른가요?",
+        "answer": "Ergo의 eUTXO 모델은 DeFi에 탁월한 보안성과 조합성을 제공합니다. 스마트 컨트랙트는 더 예측 가능하고, 비용은 결정론적이며, 병렬 트랜잭션 처리로 더 나은 확장성을 실현합니다. 또한 선택적 프라이버시 기능으로 금융 데이터를 보호합니다."
       },
       "start-using-ergo": {
-        "question": "How do I start using Ergo applications?",
-        "answer": "1. Get an Ergo wallet like Nautilus or SAFEW\n2. Acquire ERG tokens from exchanges\n3. Explore dApps in our ecosystem\n4. Join the community on Discord or Telegram for help"
+        "question": "Ergo 애플리케이션을 어떻게 시작하나요?",
+        "answer": "1. Nautilus나 SAFEW 같은 Ergo 지갑을 받으세요\n2. 거래소에서 ERG 토큰을 구매하세요\n3. 에코시스템의 dApp을 탐색하세요\n4. 도움이 필요하면 Discord나 Telegram 커뮤니티에 참여하세요"
       },
       "ergo-vs-ethereum": {
-        "question": "How does Ergo compare to Ethereum for dApps?",
-        "answer": "Ergo uses the eUTXO model (vs Ethereum's account model), offering better security, parallel processing, and predictable costs. ErgoScript is more secure by design with formal verification capabilities. Native tokens don't require smart contracts, making them cheaper and safer."
+        "question": "dApp 관점에서 Ergo와 Ethereum은 어떻게 다른가요?",
+        "answer": "Ergo는 eUTXO 모델(Ethereum의 계정 모델과 달리)을 사용하여 더 나은 보안성, 병렬 처리 및 예측 가능한 비용을 제공합니다. ErgoScript는 형식 검증 기능으로 설계상 더욱 안전합니다. 네이티브 토큰은 스마트 컨트랙트가 필요 없어 더 저렴하고 안전합니다."
       },
       "privacy-features": {
-        "question": "Are Ergo's privacy features legal to use?",
-        "answer": "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+        "question": "Ergo의 프라이버시 기능은 합법적으로 사용할 수 있나요?",
+        "answer": "Ergo는 Sigma 프로토콜을 통해 선택적 프라이버시 기능을 제공합니다. 사용자는 현지 규정을 확인해야 합니다. 프라이버시는 비즈니스 기밀, 개인 금융 프라이버시, 데이터 보호법 준수 등 합법적 용도를 위해 프로토콜 수준에서 구현됩니다."
       },
       "mining-profitable": {
-        "question": "Is mining ERG still profitable?",
-        "answer": "Mining profitability depends on your electricity costs, hardware efficiency, and ERG price. Ergo's ASIC-resistant Autolykos algorithm keeps mining accessible to GPUs. Use mining calculators to estimate your potential returns based on current network difficulty."
+        "question": "ERG 채굴은 아직 수익성이 있나요?",
+        "answer": "채굴 수익성은 전기 요금, 하드웨어 효율성, ERG 가격에 따라 달라집니다. Ergo의 ASIC 저항성 Autolykos 알고리즘은 GPU 채굴을 접근 가능하게 유지합니다. 채굴 계산기를 사용하여 현재 네트워크 난이도 기준 잠재 수익을 추정하세요."
       },
       "developer-resources": {
-        "question": "What resources are available for developers?",
-        "answer": "Ergo provides comprehensive developer resources:\n• ErgoScript documentation and tutorials\n• SDKs for multiple languages (Scala, JS, Python)\n• AppKit for dApp development\n• Active developer community and support\n• Grants program for ecosystem projects"
+        "question": "개발자를 위한 어떤 리소스가 있나요?",
+        "answer": "Ergo는 포괄적인 개발자 리소스를 제공합니다:\n• ErgoScript 문서 및 튜토리얼\n• 다양한 언어용 SDK (Scala, JS, Python)\n• dApp 개발을 위한 AppKit\n• 활발한 개발자 커뮤니티 및 지원\n• 에코시스템 프로젝트를 위한 그랜트 프로그램"
       }
     }
   },
   "getErg": {
-    "title": "Get ERG - Buy Ergo Cryptocurrency",
-    "description": "Find where to buy ERG tokens on exchanges, DEXs, and P2P platforms",
+    "title": "ERG 받기 - Ergo 암호화폐 구매",
+    "description": "거래소, DEX, P2P 플랫폼에서 ERG 토큰 구매 방법 안내",
     "seo": {
-      "title": "Get ERG - How to Buy Ergo Cryptocurrency | Exchange Guide",
-      "description": "Complete guide on where and how to buy ERG tokens. Find the best exchanges, DEXs, and platforms to purchase Ergo cryptocurrency.",
-      "keywords": "buy ERG, Ergo exchanges, get ERG tokens, ERG trading, cryptocurrency exchange, DEX Ergo"
+      "title": "ERG 받기 - Ergo 암호화폐 구매 방법 | 거래소 가이드",
+      "description": "ERG 토큰을 구매할 수 있는 곳과 방법에 대한 완전한 가이드. 최적의 거래소, DEX 및 플랫폼을 찾아보세요.",
+      "keywords": "ERG 구매, Ergo 거래소, ERG 토큰 받기, ERG 거래, 암호화폐 거래소, DEX Ergo"
     },
     "hero": {
-      "title": "Get ERG",
-      "subtitle": "Your Gateway to the Ergo Ecosystem",
-      "description": "Discover where to buy, trade, and store ERG tokens",
+      "title": "ERG 받기",
+      "subtitle": "Ergo 에코시스템으로의 관문",
+      "description": "ERG 토큰을 구매, 거래하고 보관할 수 있는 곳을 찾아보세요",
       "cta": {
-        "exploreExchanges": "Explore Exchanges",
-        "viewGuide": "View Guide"
+        "exploreExchanges": "거래소 탐색",
+        "viewGuide": "가이드 보기"
       }
     },
     "exchanges": {
-      "title": "Exchanges",
-      "centralized": "Centralized Exchanges",
-      "decentralized": "Decentralized Exchanges",
-      "p2p": "P2P Platforms"
+      "title": "거래소",
+      "centralized": "중앙화 거래소",
+      "decentralized": "탈중앙화 거래소",
+      "p2p": "P2P 플랫폼"
     },
-    "heroDescription": "Choose from centralized exchanges, decentralized platforms, or peer-to-peer trading to acquire ERG tokens",
-    "subDescription": "Start your Ergo journey by acquiring ERG tokens through trusted exchanges and platforms",
+    "heroDescription": "중앙화 거래소, 탈중앙화 플랫폼, 또는 P2P 거래를 통해 ERG 토큰을 획득하세요",
+    "subDescription": "신뢰할 수 있는 거래소와 플랫폼을 통해 ERG 토큰을 획득하여 Ergo 여정을 시작하세요",
     "sections": {
       "exchanges": {
-        "title": "Centralized Exchanges",
-        "description": "Trade ERG on established cryptocurrency exchanges with high liquidity",
-        "viewAll": "View All Exchanges",
-        "goToExchange": "Go to Exchange"
+        "title": "중앙화 거래소",
+        "description": "높은 유동성을 갖춘 검증된 암호화폐 거래소에서 ERG 거래",
+        "viewAll": "모든 거래소 보기",
+        "goToExchange": "거래소 방문"
       },
       "dex": {
-        "title": "Decentralized Exchanges",
-        "description": "Trade directly from your wallet without KYC",
-        "viewAll": "View All DEXs",
-        "goToSwap": "Go to Swap",
+        "title": "탈중앙화 거래소",
+        "description": "KYC 없이 지갑에서 직접 거래",
+        "viewAll": "모든 DEX 보기",
+        "goToSwap": "스왑하러 가기",
         "features": {
-          "noKYC": "No KYC Required",
-          "selfCustody": "Self Custody",
-          "privateTrading": "Private Trading",
-          "directSwap": "Direct Swap"
+          "noKYC": "KYC 불필요",
+          "selfCustody": "자기 수탁",
+          "privateTrading": "프라이빗 거래",
+          "directSwap": "직접 스왑"
         }
       },
       "p2p": {
-        "title": "P2P Platforms",
-        "description": "Trade directly with other users",
-        "viewAll": "View All P2P",
-        "goToPlatform": "Go to Platform",
-        "explorePlatform": "Explore Platform",
+        "title": "P2P 플랫폼",
+        "description": "다른 사용자와 직접 거래",
+        "viewAll": "모든 P2P 보기",
+        "goToPlatform": "플랫폼 방문",
+        "explorePlatform": "플랫폼 탐색",
         "features": {
-          "directTrade": "Direct Trade",
-          "multiplePayments": "Multiple Payment Methods",
-          "escrowProtection": "Escrow Protection",
-          "localCurrency": "Local Currency Support"
+          "directTrade": "직접 거래",
+          "multiplePayments": "다양한 결제 수단",
+          "escrowProtection": "에스크로 보호",
+          "localCurrency": "현지 통화 지원"
         }
       },
       "security": {
-        "title": "Security First",
-        "description": "Always store your ERG in a secure wallet after purchase",
-        "findWallet": "Find a Wallet"
+        "title": "보안 우선",
+        "description": "구매 후 항상 안전한 지갑에 ERG를 보관하세요",
+        "findWallet": "지갑 찾기"
       },
       "centralized": {
-        "title": "Centralized Exchanges",
-        "description": "Traditional exchanges with fiat on-ramps and high liquidity",
-        "viewExchange": "View Exchange",
+        "title": "중앙화 거래소",
+        "description": "법정화폐 온램프 및 높은 유동성을 갖춘 전통적인 거래소",
+        "viewExchange": "거래소 보기",
         "features": {
-          "fiatSupport": "Fiat Support",
-          "highLiquidity": "High Liquidity",
-          "userFriendly": "User Friendly",
-          "mobileApp": "Mobile App"
+          "fiatSupport": "법정화폐 지원",
+          "highLiquidity": "높은 유동성",
+          "userFriendly": "사용자 친화적",
+          "mobileApp": "모바일 앱"
         }
       }
     },
@@ -2872,139 +2872,139 @@
       "cex": {
         "kucoin": {
           "name": "KuCoin",
-          "description": "Global exchange with ERG/USDT and ERG/BTC pairs"
+          "description": "ERG/USDT 및 ERG/BTC 페어를 지원하는 글로벌 거래소"
         },
         "gateio": {
           "name": "Gate.io",
-          "description": "Major exchange supporting ERG trading"
+          "description": "ERG 거래를 지원하는 주요 거래소"
         },
         "coinex": {
           "name": "CoinEx",
-          "description": "User-friendly exchange with ERG pairs"
+          "description": "ERG 페어를 지원하는 사용자 친화적 거래소"
         },
         "huobi": {
           "name": "Huobi",
-          "description": "Established exchange with deep ERG liquidity"
+          "description": "깊은 ERG 유동성을 갖춘 검증된 거래소"
         },
         "mexc": {
           "name": "MEXC",
-          "description": "Fast-growing exchange with ERG perpetuals"
+          "description": "ERG 선물을 지원하는 빠르게 성장하는 거래소"
         },
         "bitmart": {
           "name": "BitMart",
-          "description": "Popular exchange with ERG trading"
+          "description": "ERG 거래를 지원하는 인기 거래소"
         },
         "tradeogre": {
           "name": "TradeOgre",
-          "description": "Simple exchange for ERG/BTC trading"
+          "description": "ERG/BTC 거래를 위한 간단한 거래소"
         },
         "probit": {
           "name": "ProBit",
-          "description": "Korean exchange with ERG support"
+          "description": "ERG를 지원하는 한국 거래소"
         }
       },
       "dex": {
         "spectrum": {
           "name": "Spectrum Finance",
-          "description": "Native Ergo DEX with deep liquidity"
+          "description": "깊은 유동성을 갖춘 네이티브 Ergo DEX"
         },
         "uniswap": {
           "name": "Uniswap",
-          "description": "Trade wrapped ERG on Ethereum"
+          "description": "Ethereum에서 래핑된 ERG 거래"
         },
         "splash": {
           "name": "SplashPool",
-          "description": "Cross-chain DEX supporting ERG"
+          "description": "ERG를 지원하는 크로스체인 DEX"
         }
       },
       "p2p": {
         "localcryptos": {
           "name": "LocalCryptos",
-          "description": "P2P platform with escrow service"
+          "description": "에스크로 서비스를 갖춘 P2P 플랫폼"
         },
         "bisq": {
           "name": "Bisq",
-          "description": "Decentralized P2P trading network"
+          "description": "탈중앙화 P2P 거래 네트워크"
         }
       }
     },
     "features": {
       "liquidity": {
-        "title": "High Liquidity",
-        "description": "Access deep order books and competitive prices"
+        "title": "높은 유동성",
+        "description": "깊은 오더북과 경쟁력 있는 가격에 접근"
       },
       "security": {
-        "title": "Secure Trading",
-        "description": "Trade on reputable platforms with proven security"
+        "title": "안전한 거래",
+        "description": "검증된 보안을 갖춘 신뢰할 수 있는 플랫폼에서 거래"
       },
       "variety": {
-        "title": "Multiple Options",
-        "description": "Choose from CEX, DEX, or P2P based on your needs"
+        "title": "다양한 옵션",
+        "description": "필요에 따라 CEX, DEX, 또는 P2P 중 선택"
       },
       "global": {
-        "title": "Global Access",
-        "description": "Available worldwide with various fiat gateways"
+        "title": "글로벌 접근",
+        "description": "다양한 법정화폐 게이트웨이로 전 세계 이용 가능"
       }
     },
     "steps": {
-      "title": "How to Buy ERG",
+      "title": "ERG 구매 방법",
       "step1": {
-        "title": "Choose Platform",
-        "description": "Select exchange based on your needs"
+        "title": "플랫폼 선택",
+        "description": "필요에 맞는 거래소 선택"
       },
       "step2": {
-        "title": "Create Account",
-        "description": "Sign up and verify if required"
+        "title": "계정 생성",
+        "description": "가입 및 필요 시 인증 완료"
       },
       "step3": {
-        "title": "Deposit Funds",
-        "description": "Add fiat or crypto to your account"
+        "title": "자금 입금",
+        "description": "계정에 법정화폐 또는 암호화폐 추가"
       },
       "step4": {
-        "title": "Buy ERG",
-        "description": "Place order and complete purchase"
+        "title": "ERG 구매",
+        "description": "주문 제출 및 구매 완료"
       },
       "step5": {
-        "title": "Withdraw",
-        "description": "Transfer ERG to your wallet"
+        "title": "출금",
+        "description": "지갑으로 ERG 이체"
       }
     },
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "자주 묻는 질문",
       "whereToBy": {
-        "question": "Where can I buy ERG?",
-        "answer": "You can buy ERG on centralized exchanges like KuCoin and Gate.io, decentralized exchanges like Spectrum Finance, or P2P platforms."
+        "question": "ERG를 어디서 구매할 수 있나요?",
+        "answer": "KuCoin, Gate.io 같은 중앙화 거래소, Spectrum Finance 같은 탈중앙화 거래소, 또는 P2P 플랫폼에서 ERG를 구매할 수 있습니다."
       },
       "minAmount": {
-        "question": "What's the minimum amount to buy?",
-        "answer": "Minimum amounts vary by platform. Most exchanges allow purchases starting from $10-20 worth of ERG."
+        "question": "최소 구매 금액은 얼마인가요?",
+        "answer": "최소 금액은 플랫폼마다 다릅니다. 대부분의 거래소에서는 ERG 기준 $10~20 상당부터 구매 가능합니다."
       },
       "fees": {
-        "question": "What are typical fees?",
-        "answer": "Exchange fees range from 0.1% to 0.5% per trade."
+        "question": "일반적인 수수료는 얼마인가요?",
+        "answer": "거래소 수수료는 거래당 0.1%에서 0.5% 범위입니다."
       },
       "storage": {
-        "question": "How do I store ERG safely?",
-        "answer": "Use official Ergo wallets like Ergo Wallet, Nautilus, or hardware wallets for maximum security."
+        "question": "ERG를 안전하게 보관하려면 어떻게 해야 하나요?",
+        "answer": "최대 보안을 위해 Ergo Wallet, Nautilus 같은 공식 Ergo 지갑이나 하드웨어 지갑을 사용하세요."
       },
       "whereStore": {
-        "question": "Where should I store my ERG?",
-        "answer": "Use official Ergo wallets like Nautilus, SAFEW, or Ergo Mobile for secure storage."
+        "question": "ERG를 어디에 보관해야 하나요?",
+        "answer": "안전한 보관을 위해 Nautilus, SAFEW, 또는 Ergo Mobile 같은 공식 Ergo 지갑을 사용하세요."
       },
       "minPurchase": {
-        "question": "What's the minimum ERG purchase?",
-        "answer": "Minimum varies by exchange, typically 1-10 ERG."
+        "question": "ERG 최소 구매량은 얼마인가요?",
+        "answer": "최소 구매량은 거래소마다 다르며, 일반적으로 1~10 ERG입니다."
       },
       "time": {
-        "question": "How long does it take?",
-        "answer": "CEX purchases are instant, DEX swaps take 2-5 minutes."
+        "question": "얼마나 걸리나요?",
+        "answer": "CEX 구매는 즉시 처리되며, DEX 스왑은 2~5분 소요됩니다."
       }
     },
     "cta": {
-      "title": "Ready to Get Started?",
-      "description": "Choose your preferred method to acquire ERG and join the Ergo ecosystem",
-      "exploreExchanges": "Explore Exchanges",
-      "learnMore": "Learn More About Ergo"
+      "title": "시작할 준비가 되셨나요?",
+      "description": "원하는 방법을 선택하여 ERG를 획득하고 Ergo 에코시스템에 참여하세요",
+      "exploreExchanges": "거래소 탐색",
+      "learnMore": "Ergo에 대해 더 알아보기"
     }
   }
 }

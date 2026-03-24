@@ -160,92 +160,92 @@
       }
     },
     "quiz": {
-      "title": "Discover Your Ergo Profile",
-      "subtitle": "Find your path",
-      "description": "Answer a few questions to get personalized recommendations for your Ergo journey.",
+      "title": "Scopri il Tuo Profilo Ergo",
+      "subtitle": "Trova il tuo percorso",
+      "description": "Rispondi ad alcune domande per ricevere consigli personalizzati per il tuo viaggio in Ergo.",
       "seo": {
-        "title": "Ergo Quiz | Find Your Path in Blockchain",
-        "description": "Take our interactive quiz to discover your ideal path in the Ergo ecosystem. Whether you're a developer, miner, investor, or enthusiast, get personalized recommendations.",
-        "keywords": "ergo quiz, blockchain quiz, crypto personality test, find your path, ergo ecosystem, interactive quiz",
-        "ogTitle": "Ergo Quiz — Discover Your Blockchain Path",
-        "ogDescription": "Interactive quiz to find your perfect role in the Ergo ecosystem.",
-        "ogAlt": "Ergo Quiz",
-        "twitterTitle": "Find Your Path in Ergo | Interactive Quiz",
-        "twitterDescription": "Developer? Miner? Investor? Take the quiz to find your perfect fit."
+        "title": "Quiz Ergo | Trova il Tuo Percorso nella Blockchain",
+        "description": "Fai il nostro quiz interattivo per scoprire il tuo percorso ideale nell'ecosistema Ergo. Che tu sia uno sviluppatore, un miner, un investitore o un appassionato, ricevi consigli personalizzati.",
+        "keywords": "quiz ergo, quiz blockchain, test personalità crypto, trova il tuo percorso, ecosistema ergo, quiz interattivo",
+        "ogTitle": "Quiz Ergo — Scopri il Tuo Percorso nella Blockchain",
+        "ogDescription": "Quiz interattivo per trovare il tuo ruolo ideale nell'ecosistema Ergo.",
+        "ogAlt": "Quiz Ergo",
+        "twitterTitle": "Trova il Tuo Percorso in Ergo | Quiz Interattivo",
+        "twitterDescription": "Sviluppatore? Miner? Investitore? Fai il quiz per trovare il tuo ruolo perfetto."
       },
       "schema": {
         "breadcrumbs": {
           "quiz": "Quiz"
         },
         "quiz": {
-          "name": "Ergo Ecosystem Path Finder Quiz",
-          "description": "Interactive quiz to help users find their ideal path in the Ergo ecosystem",
-          "educationalLevel": "Beginner",
+          "name": "Quiz per Trovare il Percorso nell'Ecosistema Ergo",
+          "description": "Quiz interattivo per aiutare gli utenti a trovare il loro percorso ideale nell'ecosistema Ergo",
+          "educationalLevel": "Principiante",
           "learningResourceType": "Quiz",
           "timeRequired": "PT5M"
         }
       },
-      "startButton": "Start Quiz",
-      "restartButton": "Restart Quiz",
-      "previousButton": "Previous",
-      "nextButton": "Next",
-      "progress": "Question {current} of {total}",
+      "startButton": "Inizia il Quiz",
+      "restartButton": "Ricomincia il Quiz",
+      "previousButton": "Precedente",
+      "nextButton": "Successivo",
+      "progress": "Domanda {current} di {total}",
       "results": {
-        "title": "Your Results",
-        "yourProfile": "Your Profile",
-        "matchScore": "{score}% Match",
-        "recommendedTools": "Recommended Tools",
-        "nextSteps": "Next Steps",
-        "communityChannels": "Community Channels"
+        "title": "I Tuoi Risultati",
+        "yourProfile": "Il Tuo Profilo",
+        "matchScore": "{score}% di Corrispondenza",
+        "recommendedTools": "Strumenti Consigliati",
+        "nextSteps": "Prossimi Passi",
+        "communityChannels": "Canali della Community"
       },
       "cta": {
-        "title": "Ready to Start Your Journey?",
-        "description": "Get updates and tips tailored to your Ergo profile."
+        "title": "Pronto a Iniziare il Tuo Percorso?",
+        "description": "Ricevi aggiornamenti e consigli personalizzati in base al tuo profilo Ergo."
       },
       "questions": [
         {
           "id": "q1",
-          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "question": "Cosa ti attrae principalmente della tecnologia blockchain e di Ergo?",
           "options": [
             {
-              "text": "Investment potential and financial opportunities",
+              "text": "Il potenziale di investimento e le opportunità finanziarie",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Building applications and contributing to new technologies",
+              "text": "Creare applicazioni e contribuire a nuove tecnologie",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Supporting network security and earning rewards through hardware",
+              "text": "Supportare la sicurezza della rete e guadagnare ricompense tramite hardware",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Collecting, creating, or trading unique digital items and art",
+              "text": "Collezionare, creare o scambiare oggetti digitali unici e opere d'arte",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Using new financial tools for borrowing, lending, or trading",
+              "text": "Utilizzare nuovi strumenti finanziari per prestiti, crediti o trading",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Enhancing my financial privacy and anonymity",
+              "text": "Migliorare la mia privacy finanziaria e l'anonimato",
               "profiles": [
                 "privacy"
               ]
             },
             {
-              "text": "I'm new and just want to learn the basics first!",
+              "text": "Sono nuovo e voglio prima imparare le basi!",
               "profiles": [
                 "learner"
               ]
@@ -254,10 +254,10 @@
         },
         {
           "id": "q2",
-          "question": "How would you describe your technical comfort level?",
+          "question": "Come descriveresti il tuo livello di familiarità con la tecnologia?",
           "options": [
             {
-              "text": "Very comfortable; I can code or manage complex systems",
+              "text": "Molto a mio agio; so programmare o gestire sistemi complessi",
               "profiles": [
                 "developer",
                 "miner",
@@ -265,7 +265,7 @@
               ]
             },
             {
-              "text": "Moderately comfortable; I can learn new software and follow guides",
+              "text": "Abbastanza a mio agio; so imparare nuovi software e seguire guide",
               "profiles": [
                 "defi",
                 "nft",
@@ -273,7 +273,7 @@
               ]
             },
             {
-              "text": "Not very technical; I prefer simple and user-friendly applications",
+              "text": "Non molto tecnico; preferisco applicazioni semplici e intuitive",
               "profiles": [
                 "investor",
                 "learner",
@@ -284,42 +284,42 @@
         },
         {
           "id": "q3",
-          "question": "What kind of activity within Ergo are you most interested in?",
+          "question": "Quale tipo di attività in Ergo ti interessa di più?",
           "options": [
             {
-              "text": "Growing my assets and exploring financial instruments",
+              "text": "Far crescere i miei asset ed esplorare strumenti finanziari",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Creating new tools, dApps, or smart contracts",
+              "text": "Creare nuovi strumenti, dApp o smart contract",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Securing the network and earning ERG",
+              "text": "Proteggere la rete e guadagnare ERG",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Exploring digital art and collectibles",
+              "text": "Esplorare l'arte digitale e i collezionabili",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Deeply understanding the technology and its principles",
+              "text": "Comprendere a fondo la tecnologia e i suoi principi",
               "profiles": [
                 "learner",
                 "developer"
               ]
             },
             {
-              "text": "Protecting my financial privacy",
+              "text": "Proteggere la mia privacy finanziaria",
               "profiles": [
                 "privacy"
               ]
@@ -328,29 +328,29 @@
         },
         {
           "id": "q4",
-          "question": "If you're interested in finance/investment, what's your approach to new financial technologies?",
+          "question": "Se sei interessato alla finanza/investimento, qual è il tuo approccio alle nuove tecnologie finanziarie?",
           "options": [
             {
-              "text": "Looking for established, lower-risk ways to engage",
+              "text": "Cerco modi consolidati e a basso rischio per partecipare",
               "profiles": [
                 "investor"
               ]
             },
             {
-              "text": "Exploring DeFi opportunities while understanding the risks",
+              "text": "Esploro le opportunità DeFi comprendendo i rischi",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Interested in cutting-edge, experimental financial tools",
+              "text": "Sono interessato a strumenti finanziari all'avanguardia e sperimentali",
               "profiles": [
                 "defi",
                 "developer"
               ]
             },
             {
-              "text": "Not particularly interested in financial aspects",
+              "text": "Non sono particolarmente interessato agli aspetti finanziari",
               "profiles": [
                 "learner",
                 "nft",
@@ -361,36 +361,36 @@
         },
         {
           "id": "q5",
-          "question": "If you want to contribute, what type of participation inspires you most?",
+          "question": "Se vuoi contribuire, quale tipo di partecipazione ti ispira di più?",
           "options": [
             {
-              "text": "Writing code and building software",
+              "text": "Scrivere codice e sviluppare software",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Creating educational content, art, or marketing materials",
+              "text": "Creare contenuti educativi, arte o materiali di marketing",
               "profiles": [
                 "nft",
                 "learner"
               ]
             },
             {
-              "text": "Helping others in the community and answering questions",
+              "text": "Aiutare gli altri nella community e rispondere alle domande",
               "profiles": [
                 "learner"
               ]
             },
             {
-              "text": "Participating in governance discussions and proposals",
+              "text": "Partecipare a discussioni di governance e proposte",
               "profiles": [
                 "developer",
                 "privacy"
               ]
             },
             {
-              "text": "Supporting network infrastructure",
+              "text": "Supportare l'infrastruttura della rete",
               "profiles": [
                 "miner"
               ]
@@ -401,48 +401,48 @@
       "profiles": {
         "developer": {
           "id": "developer",
-          "name": "Aspiring Developer",
-          "title": "BUILD THE FUTURE",
-          "description": "You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.",
+          "name": "Sviluppatore in Erba",
+          "title": "COSTRUISCI IL FUTURO",
+          "description": "Sei attratto dalla creazione di applicazioni innovative e dal contributo alla tecnologia all'avanguardia! Il potente ErgoScript e il modello eUTXO di Ergo offrono opportunità uniche per costruire dApp sicure ed efficienti.",
           "icon": "💻",
           "color": "from-primary to-orange-500",
           "tools": [
             {
-              "category": "Documentation & Learning",
+              "category": "Documentazione e Apprendimento",
               "items": [
                 {
                   "name": "ErgoDocs",
-                  "description": "Comprehensive developer documentation",
+                  "description": "Documentazione completa per sviluppatori",
                   "link": "/build/docs"
                 },
                 {
                   "name": "ErgoScript Primer",
-                  "description": "Learn Ergo's smart contract language",
+                  "description": "Impara il linguaggio degli smart contract di Ergo",
                   "link": "/build/tutorials"
                 },
                 {
                   "name": "Ergo Playgrounds",
-                  "description": "Interactive coding environment",
+                  "description": "Ambiente di codifica interattivo",
                   "link": "/build/playground"
                 }
               ]
             },
             {
-              "category": "Development Tools",
+              "category": "Strumenti di Sviluppo",
               "items": [
                 {
                   "name": "AppKit",
-                  "description": "Java/Scala development toolkit",
+                  "description": "Toolkit di sviluppo Java/Scala",
                   "link": "/build/tools/appkit"
                 },
                 {
                   "name": "Fleet SDK",
-                  "description": "TypeScript SDK for Ergo",
+                  "description": "SDK TypeScript per Ergo",
                   "link": "/build/tools/fleet"
                 },
                 {
                   "name": "Sigma-Rust",
-                  "description": "Rust implementation of Sigma protocols",
+                  "description": "Implementazione Rust dei protocolli Sigma",
                   "link": "/build/tools/sigma-rust"
                 }
               ]
@@ -450,91 +450,91 @@
           ],
           "nextSteps": [
             {
-              "text": "Explore Developer Documentation",
+              "text": "Esplora la Documentazione per Sviluppatori",
               "link": "/build/docs"
             },
             {
-              "text": "Try the ErgoScript Playground",
+              "text": "Prova il Playground di ErgoScript",
               "link": "/build/playground"
             },
             {
-              "text": "Join Developer Discord Channels",
+              "text": "Unisciti ai Canali Discord per Sviluppatori",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "text": "Check Out Developer Grants",
+              "text": "Scopri i Grant per Sviluppatori",
               "link": "/build/grants"
             }
           ],
           "communityChannels": [
             {
-              "name": "Developer Discord",
+              "name": "Discord Sviluppatori",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "ErgoForum - Development",
+              "name": "ErgoForum - Sviluppo",
               "link": "https://ergoforum.org"
             },
             {
-              "name": "GitHub Organization",
+              "name": "Organizzazione GitHub",
               "link": "https://github.com/ergoplatform"
             }
           ]
         },
         "defi": {
           "id": "defi",
-          "name": "DeFi Explorer",
-          "title": "DECENTRALIZED FINANCE PIONEER",
-          "description": "You're ready to explore innovative financial instruments and opportunities that Ergo's decentralized world offers! Discover new ways to manage assets, earn returns, and participate in the future of finance.",
+          "name": "Esploratore DeFi",
+          "title": "PIONIERE DELLA FINANZA DECENTRALIZZATA",
+          "description": "Sei pronto a esplorare strumenti e opportunità finanziarie innovative che il mondo decentralizzato di Ergo offre! Scopri nuovi modi per gestire asset, guadagnare rendimenti e partecipare al futuro della finanza.",
           "icon": "🏦",
           "color": "from-primary to-amber-500",
           "tools": [
             {
-              "category": "Wallets",
+              "category": "Wallet",
               "items": [
                 {
                   "name": "Nautilus Wallet",
-                  "description": "Browser extension wallet",
+                  "description": "Wallet come estensione del browser",
                   "link": "/wallet"
                 },
                 {
-                  "name": "Official Mobile Wallets",
-                  "description": "iOS and Android apps",
+                  "name": "Wallet Mobile Ufficiali",
+                  "description": "App iOS e Android",
                   "link": "/wallet"
                 }
               ]
             },
             {
-              "category": "DeFi Platforms",
+              "category": "Piattaforme DeFi",
               "items": [
                 {
                   "name": "Spectrum Finance",
-                  "description": "Decentralized exchange (DEX)",
+                  "description": "Exchange decentralizzato (DEX)",
                   "link": "https://spectrum.fi"
                 },
                 {
                   "name": "SigmaUSD",
-                  "description": "Algorithmic stablecoin protocol",
+                  "description": "Protocollo stablecoin algoritmico",
                   "link": "/ecosystem/projects/sigmausd"
                 },
                 {
                   "name": "Duckpools",
-                  "description": "Lending and borrowing platform",
+                  "description": "Piattaforma di prestiti e crediti",
                   "link": "/ecosystem/projects/duckpools"
                 }
               ]
             },
             {
-              "category": "Analytics",
+              "category": "Analitiche",
               "items": [
                 {
                   "name": "ergo.watch",
-                  "description": "Network and DeFi analytics",
+                  "description": "Analisi della rete e della DeFi",
                   "link": "https://ergo.watch"
                 },
                 {
                   "name": "Ergo Explorer",
-                  "description": "Blockchain explorer",
+                  "description": "Esploratore della blockchain",
                   "link": "/ecosystem/explorers"
                 }
               ]
@@ -542,81 +542,81 @@
           ],
           "nextSteps": [
             {
-              "text": "Get a Wallet",
+              "text": "Ottieni un Wallet",
               "link": "/wallet"
             },
             {
-              "text": "Explore Spectrum Finance",
+              "text": "Esplora Spectrum Finance",
               "link": "https://spectrum.fi"
             },
             {
-              "text": "Learn About SigmaUSD",
+              "text": "Scopri SigmaUSD",
               "link": "/ecosystem/projects/sigmausd"
             },
             {
-              "text": "Join DeFi Discussions",
+              "text": "Partecipa alle Discussioni DeFi",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "DeFi Discord Channels",
+              "name": "Canali Discord DeFi",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Trading Community",
+              "name": "Community di Trading",
               "link": "/community/trading"
             },
             {
-              "name": "DeFi Discussions",
+              "name": "Discussioni DeFi",
               "link": "https://ergoforum.org"
             }
           ]
         },
         "investor": {
           "id": "investor",
-          "name": "Strategic Investor",
-          "title": "GROWING YOUR PORTFOLIO",
-          "description": "You're interested in the investment potential of Ergo! Whether you're looking to hold, trade, or stake, Ergo offers unique opportunities in the cryptocurrency space.",
+          "name": "Investitore Strategico",
+          "title": "FAR CRESCERE IL TUO PORTAFOGLIO",
+          "description": "Sei interessato al potenziale di investimento di Ergo! Che tu voglia conservare, fare trading o mettere a frutto i tuoi asset, Ergo offre opportunità uniche nel mercato delle criptovalute.",
           "icon": "📈",
           "color": "from-primary to-amber-600",
           "tools": [
             {
-              "category": "Exchanges",
+              "category": "Exchange",
               "items": [
                 {
                   "name": "KuCoin",
-                  "description": "Major exchange listing ERG",
+                  "description": "Exchange principale che lista ERG",
                   "link": "https://www.kucoin.com"
                 },
                 {
                   "name": "Gate.io",
-                  "description": "Popular exchange for ERG",
+                  "description": "Exchange popolare per ERG",
                   "link": "https://www.gate.io"
                 },
                 {
                   "name": "Spectrum DEX",
-                  "description": "Decentralized trading",
+                  "description": "Trading decentralizzato",
                   "link": "https://spectrum.fi"
                 }
               ]
             },
             {
-              "category": "Research & Analysis",
+              "category": "Ricerca e Analisi",
               "items": [
                 {
                   "name": "Ergo Watch",
-                  "description": "Network analytics",
+                  "description": "Analisi della rete",
                   "link": "https://ergo.watch"
                 },
                 {
                   "name": "Token Economics",
-                  "description": "ERG tokenomics info",
+                  "description": "Informazioni sulla tokenomics di ERG",
                   "link": "/tokenomics"
                 },
                 {
                   "name": "Emission Schedule",
-                  "description": "ERG distribution plan",
+                  "description": "Piano di distribuzione di ERG",
                   "link": "/tokenomics#emission"
                 }
               ]
@@ -624,76 +624,76 @@
           ],
           "nextSteps": [
             {
-              "text": "Learn About ERG Tokenomics",
+              "text": "Scopri la Tokenomics di ERG",
               "link": "/tokenomics"
             },
             {
-              "text": "Find Exchange Listings",
+              "text": "Trova i Listing sugli Exchange",
               "link": "/use/get-erg"
             },
             {
-              "text": "Understand Staking Options",
+              "text": "Comprendi le Opzioni di Staking",
               "link": "/use/staking"
             },
             {
-              "text": "Join Investor Community",
+              "text": "Unisciti alla Community degli Investitori",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "Trading Discord",
+              "name": "Discord Trading",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Price Discussion",
+              "name": "Discussioni sui Prezzi",
               "link": "/community/trading"
             },
             {
-              "name": "Investor Chat",
+              "name": "Chat Investitori",
               "link": "https://t.me/ergoplatform"
             }
           ]
         },
         "miner": {
           "id": "miner",
-          "name": "Network Guardian",
-          "title": "SECURING THE BLOCKCHAIN",
-          "description": "You're interested in supporting Ergo's network security while earning rewards! Ergo uses the Autolykos v2 algorithm, which is ASIC-resistant and designed for fair mining.",
+          "name": "Guardiano della Rete",
+          "title": "PROTEGGERE LA BLOCKCHAIN",
+          "description": "Sei interessato a supportare la sicurezza della rete di Ergo guadagnando ricompense! Ergo utilizza l'algoritmo Autolykos v2, che è resistente agli ASIC e progettato per un mining equo.",
           "icon": "⛏️",
           "color": "from-primary to-amber-600",
           "tools": [
             {
-              "category": "Mining Information",
+              "category": "Informazioni sul Mining",
               "items": [
                 {
-                  "name": "Autolykos v2 Guide",
-                  "description": "Understanding the algorithm",
+                  "name": "Guida ad Autolykos v2",
+                  "description": "Comprensione dell'algoritmo",
                   "link": "/miners"
                 },
                 {
-                  "name": "Mining Pools",
-                  "description": "Popular Ergo mining pools",
+                  "name": "Pool di Mining",
+                  "description": "I più diffusi pool di mining Ergo",
                   "link": "/miners#pools"
                 },
                 {
-                  "name": "Profitability Calculator",
-                  "description": "Estimate mining returns",
+                  "name": "Calcolatore di Redditività",
+                  "description": "Stima i guadagni dal mining",
                   "link": "/miners#calculator"
                 }
               ]
             },
             {
-              "category": "Mining Software",
+              "category": "Software di Mining",
               "items": [
                 {
-                  "name": "Official Miner",
-                  "description": "Reference implementation",
+                  "name": "Miner Ufficiale",
+                  "description": "Implementazione di riferimento",
                   "link": "/miners#mining-guide"
                 },
                 {
-                  "name": "Community Miners",
-                  "description": "Third-party mining software",
+                  "name": "Miner della Community",
+                  "description": "Software di mining di terze parti",
                   "link": "/miners#mining-guide"
                 }
               ]
@@ -701,71 +701,71 @@
           ],
           "nextSteps": [
             {
-              "text": "Learn About Autolykos v2",
+              "text": "Scopri Autolykos v2",
               "link": "/technology/secure-pow"
             },
             {
-              "text": "Find Mining Pools",
+              "text": "Trova Pool di Mining",
               "link": "/miners#pools"
             },
             {
-              "text": "Calculate Mining Profitability",
+              "text": "Calcola la Redditività del Mining",
               "link": "/miners#calculator"
             },
             {
-              "text": "Join Mining Community",
+              "text": "Unisciti alla Community dei Miner",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "Mining Discord Channels",
+              "name": "Canali Discord per il Mining",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Mining Pools Community",
+              "name": "Community dei Pool di Mining",
               "link": "/miners#pools"
             },
             {
-              "name": "Technical Support",
+              "name": "Supporto Tecnico",
               "link": "https://ergoforum.org"
             }
           ]
         },
         "nft": {
           "id": "nft",
-          "name": "NFT Enthusiast",
-          "title": "DIGITAL ART COLLECTOR",
-          "description": "You're excited about unique digital items, art, and collectibles! Ergo's NFT ecosystem offers innovative marketplaces and creation tools with low fees and high security.",
+          "name": "Appassionato di NFT",
+          "title": "COLLEZIONISTA DI ARTE DIGITALE",
+          "description": "Sei entusiasta degli oggetti digitali unici, dell'arte e dei collezionabili! L'ecosistema NFT di Ergo offre marketplace innovativi e strumenti di creazione con commissioni basse e alta sicurezza.",
           "icon": "🎨",
           "color": "from-primary to-amber-500",
           "tools": [
             {
-              "category": "NFT Marketplaces",
+              "category": "Marketplace NFT",
               "items": [
                 {
                   "name": "Ergo Auction House",
-                  "description": "Premier NFT marketplace",
+                  "description": "Il principale marketplace NFT",
                   "link": "/ecosystem/projects/auction-house"
                 },
                 {
                   "name": "SkyHarbor",
-                  "description": "NFT trading platform",
+                  "description": "Piattaforma di trading NFT",
                   "link": "/ecosystem/projects/skyharbor"
                 }
               ]
             },
             {
-              "category": "Creation Tools",
+              "category": "Strumenti di Creazione",
               "items": [
                 {
                   "name": "TokenJay",
-                  "description": "NFT minting platform",
+                  "description": "Piattaforma di minting NFT",
                   "link": "/ecosystem/projects/tokenjay"
                 },
                 {
                   "name": "Ergo Utils",
-                  "description": "NFT creation utilities",
+                  "description": "Utilità per la creazione di NFT",
                   "link": "/ecosystem/tools"
                 }
               ]
@@ -773,71 +773,71 @@
           ],
           "nextSteps": [
             {
-              "text": "Explore Ergo Auction House",
+              "text": "Esplora Ergo Auction House",
               "link": "/ecosystem/projects/auction-house"
             },
             {
-              "text": "Learn About NFT Creation",
+              "text": "Scopri la Creazione di NFT",
               "link": "/ecosystem/projects/tokenjay"
             },
             {
-              "text": "Browse NFT Collections",
+              "text": "Sfoglia le Collezioni NFT",
               "link": "/ecosystem/nfts"
             },
             {
-              "text": "Join NFT Community",
+              "text": "Unisciti alla Community NFT",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "NFT Discord Channels",
+              "name": "Canali Discord NFT",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Artist Community",
+              "name": "Community degli Artisti",
               "link": "/community/artists"
             },
             {
-              "name": "Collector Groups",
+              "name": "Gruppi di Collezionisti",
               "link": "/community/collectors"
             }
           ]
         },
         "privacy": {
           "id": "privacy",
-          "name": "Privacy Advocate",
-          "title": "FINANCIAL PRIVACY CHAMPION",
-          "description": "You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.",
+          "name": "Sostenitore della Privacy",
+          "title": "PALADINO DELLA PRIVACY FINANZIARIA",
+          "description": "Dai valore alla privacy finanziaria e vuoi proteggere la cronologia delle tue transazioni! Ergo offre strumenti all'avanguardia per la privacy basati sui protocolli Sigma per un miglioramento della privacy trustless e sicuro.",
           "icon": "🔒",
           "color": "from-primary to-amber-600",
           "tools": [
             {
-              "category": "Privacy Tools",
+              "category": "Strumenti per la Privacy",
               "items": [
                 {
                   "name": "ErgoMixer",
-                  "description": "Non-custodial transaction mixer",
+                  "description": "Mixer di transazioni non custodiale",
                   "link": "/ecosystem/projects/ergomixer"
                 },
                 {
                   "name": "Stealth Addresses",
-                  "description": "Enhanced address privacy",
+                  "description": "Privacy degli indirizzi avanzata",
                   "link": "/technology/privacy-features"
                 }
               ]
             },
             {
-              "category": "Educational Resources",
+              "category": "Risorse Educative",
               "items": [
                 {
-                  "name": "Sigma Protocols Guide",
-                  "description": "Understanding privacy tech",
+                  "name": "Guida ai Protocolli Sigma",
+                  "description": "Comprensione della tecnologia per la privacy",
                   "link": "/technology/privacy-features"
                 },
                 {
-                  "name": "Privacy Best Practices",
-                  "description": "How to stay private",
+                  "name": "Migliori Pratiche per la Privacy",
+                  "description": "Come mantenere la propria privacy",
                   "link": "/learn/privacy"
                 }
               ]
@@ -845,76 +845,76 @@
           ],
           "nextSteps": [
             {
-              "text": "Learn About ErgoMixer",
+              "text": "Scopri ErgoMixer",
               "link": "/ecosystem/projects/ergomixer"
             },
             {
-              "text": "Understand Sigma Protocols",
+              "text": "Comprendi i Protocolli Sigma",
               "link": "/technology/privacy-features"
             },
             {
-              "text": "Read Privacy Best Practices",
+              "text": "Leggi le Migliori Pratiche per la Privacy",
               "link": "/learn/privacy"
             },
             {
-              "text": "Join Privacy Discussions",
+              "text": "Unisciti alle Discussioni sulla Privacy",
               "link": "https://discord.gg/ergo-platform"
             }
           ],
           "communityChannels": [
             {
-              "name": "Privacy Discord Channels",
+              "name": "Canali Discord sulla Privacy",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "ErgoMixer Community",
+              "name": "Community ErgoMixer",
               "link": "/ecosystem/projects/ergomixer"
             },
             {
-              "name": "Technical Discussions",
+              "name": "Discussioni Tecniche",
               "link": "https://ergoforum.org"
             }
           ]
         },
         "learner": {
           "id": "learner",
-          "name": "Curious Learner",
-          "title": "KNOWLEDGE SEEKER",
-          "description": "You're new to Ergo and want to understand the fundamentals first! Perfect - learning the basics will help you make informed decisions about how to engage with the ecosystem.",
+          "name": "Studente Curioso",
+          "title": "IN CERCA DI CONOSCENZA",
+          "description": "Sei nuovo su Ergo e vuoi prima capire le basi! Ottimo — imparare i fondamentali ti aiuterà a prendere decisioni consapevoli su come interagire con l'ecosistema.",
           "icon": "📚",
           "color": "from-primary to-amber-500",
           "tools": [
             {
-              "category": "Educational Resources",
+              "category": "Risorse Educative",
               "items": [
                 {
-                  "name": "FAQ for Beginners",
-                  "description": "Common questions answered",
+                  "name": "FAQ per Principianti",
+                  "description": "Risposte alle domande più comuni",
                   "link": "/start/faq"
                 },
                 {
-                  "name": "Quick Introduction",
-                  "description": "Ergo overview",
+                  "name": "Introduzione Rapida",
+                  "description": "Panoramica di Ergo",
                   "link": "/start/introduction"
                 },
                 {
                   "name": "Ergonaut Handbook",
-                  "description": "Comprehensive guide",
+                  "description": "Guida completa",
                   "link": "/learn/handbook"
                 }
               ]
             },
             {
-              "category": "Community Support",
+              "category": "Supporto della Community",
               "items": [
                 {
-                  "name": "Newcomer Channels",
-                  "description": "Beginner-friendly discussions",
+                  "name": "Canali per Nuovi Arrivati",
+                  "description": "Discussioni adatte ai principianti",
                   "link": "/community"
                 },
                 {
-                  "name": "Learning Groups",
-                  "description": "Study groups and mentorship",
+                  "name": "Gruppi di Apprendimento",
+                  "description": "Gruppi di studio e mentorship",
                   "link": "/community/learning"
                 }
               ]
@@ -922,33 +922,33 @@
           ],
           "nextSteps": [
             {
-              "text": "Read the FAQ for Beginners",
+              "text": "Leggi le FAQ per Principianti",
               "link": "/start/faq"
             },
             {
-              "text": "Take the Quick Introduction",
+              "text": "Segui l'Introduzione Rapida",
               "link": "/start/introduction"
             },
             {
-              "text": "Join Newcomer Community",
+              "text": "Unisciti alla Community dei Nuovi Arrivati",
               "link": "/community"
             },
             {
-              "text": "Explore the Learning Hub",
+              "text": "Esplora l'Hub dell'Apprendimento",
               "link": "/learn"
             }
           ],
           "communityChannels": [
             {
-              "name": "General Discord",
+              "name": "Discord Generale",
               "link": "https://discord.gg/ergo-platform"
             },
             {
-              "name": "Newcomer Support",
+              "name": "Supporto per Nuovi Arrivati",
               "link": "/community/newcomers"
             },
             {
-              "name": "Learning Groups",
+              "name": "Gruppi di Apprendimento",
               "link": "/community/learning"
             }
           ]
@@ -956,49 +956,49 @@
       },
       "ui": {
         "pageTitle": "ERGO PATH FINDER",
-        "pageSubtitle": "DISCOVER YOUR PLACE IN THE ECOSYSTEM",
-        "introDescription": "Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will help you identify which aspects of Ergo might interest you most and guide you to personalized resources.",
-        "introPrompt": "Answer a few simple questions to find your path: Are you a future",
+        "pageSubtitle": "SCOPRI IL TUO POSTO NELL'ECOSISTEMA",
+        "introDescription": "Benvenuto su Ergo! Sei nuovo nel nostro vasto ecosistema e non sai da dove iniziare? Questo breve quiz ti aiuterà a identificare quali aspetti di Ergo potrebbero interessarti di più e ti guiderà verso risorse personalizzate.",
+        "introPrompt": "Rispondi ad alcune semplici domande per trovare il tuo percorso: sei un futuro",
         "roles": {
-          "investor": "Investor",
-          "developer": "Developer",
+          "investor": "Investitore",
+          "developer": "Sviluppatore",
           "miner": "Miner",
-          "nftEnthusiast": "NFT Enthusiast",
-          "defiUser": "DeFi User"
+          "nftEnthusiast": "Appassionato di NFT",
+          "defiUser": "Utente DeFi"
         },
-        "orSomethingElse": "or something else?",
-        "startButton": "START QUIZ",
-        "questionOf": "QUESTION {current} OF {total}",
-        "percentComplete": "{percent}% COMPLETE",
-        "previousButton": "PREVIOUS",
-        "nextButton": "NEXT",
-        "restartButton": "RESTART QUIZ",
-        "resultsTitle": "YOUR ERGO PROFILE",
-        "matchPercentage": "{percent}% MATCH",
-        "recommendedTools": "RECOMMENDED TOOLS",
-        "yourNextSteps": "YOUR NEXT STEPS",
-        "joinCommunity": "JOIN THE COMMUNITY",
-        "takeQuizAgain": "Take Quiz Again",
+        "orSomethingElse": "o qualcos'altro?",
+        "startButton": "INIZIA IL QUIZ",
+        "questionOf": "DOMANDA {current} DI {total}",
+        "percentComplete": "{percent}% COMPLETATO",
+        "previousButton": "PRECEDENTE",
+        "nextButton": "SUCCESSIVO",
+        "restartButton": "RICOMINCIA IL QUIZ",
+        "resultsTitle": "IL TUO PROFILO ERGO",
+        "matchPercentage": "{percent}% DI CORRISPONDENZA",
+        "recommendedTools": "STRUMENTI CONSIGLIATI",
+        "yourNextSteps": "I TUOI PROSSIMI PASSI",
+        "joinCommunity": "UNISCITI ALLA COMMUNITY",
+        "takeQuizAgain": "Rifai il Quiz",
         "exploreEcosystem": {
-          "title": "Explore Ecosystem",
-          "subtitle": "Discover Projects",
-          "description": "Discover the growing ecosystem of applications, tools, and services built on Ergo"
+          "title": "Esplora l'Ecosistema",
+          "subtitle": "Scopri i Progetti",
+          "description": "Scopri il crescente ecosistema di applicazioni, strumenti e servizi costruiti su Ergo"
         },
-        "ctaTitle": "Stay Updated",
-        "ctaDescription": "Get personalized Ergo content based on your interests delivered to your inbox.",
-        "getStarted": "Get Started",
-        "retakeQuiz": "Retake Quiz",
-        "quickStart": "Quick Start",
-        "recommendedToolsResources": "Recommended Tools & Resources",
-        "whatsNextTitle": "What's",
-        "whatsNextDescription": "Explore more of what Ergo has to offer",
-        "viewFullEcosystem": "View Full Ecosystem",
-        "whatsNextTitleHighlight": "Next",
-        "whatsNextSubtitle": "Join the Ergo community and connect with others who share your interests",
+        "ctaTitle": "Rimani Aggiornato",
+        "ctaDescription": "Ricevi contenuti Ergo personalizzati in base ai tuoi interessi direttamente nella tua casella di posta.",
+        "getStarted": "Inizia",
+        "retakeQuiz": "Rifai il Quiz",
+        "quickStart": "Avvio Rapido",
+        "recommendedToolsResources": "Strumenti e Risorse Consigliati",
+        "whatsNextTitle": "Cosa",
+        "whatsNextDescription": "Esplora tutto ciò che Ergo ha da offrire",
+        "viewFullEcosystem": "Vedi l'Ecosistema Completo",
+        "whatsNextTitleHighlight": "c'è dopo",
+        "whatsNextSubtitle": "Unisciti alla community Ergo e connettiti con altri che condividono i tuoi interessi",
         "continueLearning": {
-          "title": "Continue Learning",
-          "subtitle": "Documentation",
-          "description": "Deep dive into Ergo's technology and learn how to build on the platform"
+          "title": "Continua ad Imparare",
+          "subtitle": "Documentazione",
+          "description": "Approfondisci la tecnologia di Ergo e scopri come costruire sulla piattaforma"
         }
       }
     },
@@ -1864,170 +1864,170 @@
       "educational_resource_for_learning_ergo": "Risorsa educativa per apprendere i fondamentali della blockchain Ergo"
     },
     "quizContent": {
-      "connect_with_your_community": "CONNECT WITH YOUR COMMUNITY",
-      "what_primarily_attracts_you_to": "What primarily attracts you to blockchain technology and Ergo?",
-      "investment_potential_and_financial_opportunities": "Investment potential and financial opportunities",
-      "building_applications_and_contributing_to": "Building applications and contributing to new technologies",
-      "supporting_network_security_and_earning": "Supporting network security and earning rewards through hardware",
-      "collecting_creating_or_trading_unique": "Collecting, creating, or trading unique digital items and art",
-      "using_new_financial_tools_for": "Using new financial tools for borrowing, lending, or trading",
-      "enhancing_my_financial_privacy_and_anonymity": "Enhancing my financial privacy and anonymity",
-      "i_m_new_and_just_want_to_learn_the_basics_first": "I'm new and just want to learn the basics first!",
-      "how_would_you_describe_your": "How would you describe your technical comfort level?",
-      "very_comfortable_i_can_code": "Very comfortable; I can code or manage complex systems",
-      "moderately_comfortable_i_can_learn": "Moderately comfortable; I can learn new software and follow guides",
-      "not_very_technical_i_prefer": "Not very technical; I prefer simple and user-friendly applications",
-      "what_kind_of_activity_within": "What kind of activity within Ergo are you most interested in?",
-      "growing_my_assets_and_exploring": "Growing my assets and exploring financial instruments",
-      "creating_new_tools_dapps_or_smart_contracts": "Creating new tools, dApps, or smart contracts",
-      "securing_the_network_and_earning_erg": "Securing the network and earning ERG",
-      "exploring_digital_art_and_collectibles": "Exploring digital art and collectibles",
-      "deeply_understanding_the_technology_and": "Deeply understanding the technology and its principles",
-      "protecting_my_financial_privacy": "Protecting my financial privacy",
-      "if_you_re_interested_in": "If you're interested in finance/investment, what's your approach to new financial technologies?",
-      "looking_for_established_lower_risk_ways_to_engage": "Looking for established, lower-risk ways to engage",
-      "exploring_defi_opportunities_while_understanding": "Exploring DeFi opportunities while understanding the risks",
-      "interested_in_cutting_edge_experimental": "Interested in cutting-edge, experimental financial tools",
-      "not_particularly_interested_in_financial_aspects": "Not particularly interested in financial aspects",
-      "if_you_want_to_contribute": "If you want to contribute, what type of participation inspires you most?",
-      "writing_code_and_building_software": "Writing code and building software",
-      "creating_educational_content_art_or": "Creating educational content, art, or marketing materials",
-      "helping_others_in_the_community": "Helping others in the community and answering questions",
-      "participating_in_governance_discussions_and": "Participating in governance discussions and proposals",
-      "supporting_network_infrastructure": "Supporting network infrastructure",
-      "aspiring_developer_title_build_the": "Aspiring Developer\",\n    title: \"BUILD THE FUTURE\",\n    description:\n      \"You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.\",\n    icon:",
-      "documentation_learning": "Documentation & Learning",
-      "ergodocs_description_comprehensive_developer_documentation": "ErgoDocs\", description: \"Comprehensive developer documentation\", link: \"/build/docs",
-      "ergoscript_primer_description_learn_ergo": "ErgoScript Primer\", description: \"Learn Ergo's smart contract language\", link: \"/build/tutorials",
-      "ergo_playgrounds_description_interactive_coding": "Ergo Playgrounds\", description: \"Interactive coding environment\", link: \"/build/playground",
-      "appkit_description_java_scala_development": "AppKit\", description: \"Java/Scala development toolkit\", link: \"/build/tools/appkit",
-      "fleet_sdk_description_typescript_sdk": "Fleet SDK\", description: \"TypeScript SDK for Ergo\", link: \"/build/tools/fleet",
-      "sigma_rust_description_rust_implementation": "Sigma-Rust\",\n            description: \"Rust implementation of Sigma protocols\",\n            link: \"/build/tools/sigma-rust",
-      "explore_developer_documentation_link_build_docs": "Explore Developer Documentation\", link: \"/build/docs",
-      "try_the_ergoscript_playground_link": "Try the ErgoScript Playground\", link: \"/build/playground",
-      "join_developer_discord_channels_link": "Join Developer Discord Channels\", link: \"https://discord.gg/ergo-platform",
-      "check_out_developer_grants_link_build_grants": "Check Out Developer Grants\", link: \"/build/grants",
-      "developer_discord_link_https_discord": "Developer Discord\", link: \"https://discord.gg/ergo-platform",
-      "ergoforum_development_link_https_ergoforum_org": "ErgoForum - Development\", link: \"https://ergoforum.org",
-      "github_organization_link_https_github": "GitHub Organization\", link: \"https://github.com/ergoplatform",
-      "spectrum_finance_description_decentralized_exchange": "Spectrum Finance\", description: \"Decentralized exchange (DEX)\", link: \"https://spectrum.fi",
-      "sigmausd_description_algorithmic_stablecoin_protocol": "SigmaUSD\", description: \"Algorithmic stablecoin protocol\", link: \"/ecosystem/projects/sigmausd",
-      "duckpools_description_lending_and_borrowing": "Duckpools\", description: \"Lending and borrowing platform\", link: \"/ecosystem/projects/duckpools",
-      "network_and_defi_analytics_link_https_ergo_watch": "Network and DeFi analytics\", link: \"https://ergo.watch",
-      "ergo_explorer_description_blockchain_explorer": "Ergo Explorer\", description: \"Blockchain explorer\", link: \"/ecosystem/explorers",
-      "learn_about_sigmausd_stablecoin_link": "Learn about SigmaUSD Stablecoin\", link: \"/ecosystem/projects/sigmausd",
-      "try_trading_on_spectrum_finance": "Try Trading on Spectrum Finance\", link: \"https://spectrum.fi",
-      "join_defi_discussions_on_discord": "Join DeFi Discussions on Discord\", link: \"https://discord.gg/ergo-platform",
-      "defi_discord_channels_link_https": "DeFi Discord Channels\", link: \"https://discord.gg/ergo-platform",
-      "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance Community\", link: \"https://spectrum.fi",
-      "sigmausd_community_link_ecosystem_projects": "SigmaUSD Community\", link: \"/ecosystem/projects/sigmausd",
-      "strategic_investor_title_long_term": "Strategic Investor\",\n    title: \"LONG-TERM VALUE BUILDER\",\n    description:\n      \"You're interested in Ergo's long-term potential and want to understand the fundamentals before making investment decisions. Focus on learning about the technology and ecosystem growth.\",\n    icon:",
-      "exchange_listings_description_where_to": "Exchange Listings\", description: \"Where to buy ERG\", link: \"/use/get-erg",
-      "ergo_whitepaper_description_technical_foundation": "Ergo Whitepaper\", description: \"Technical foundation\", link: \"/technology/whitepaper",
-      "ecosystem_overview_description_projects_and": "Ecosystem Overview\", description: \"Projects and growth\", link: \"/ecosystem",
-      "network_statistics_description_real_time": "Network Statistics\", description: \"Real-time metrics\", link: \"/ecosystem/stats",
-      "read_the_ergo_whitepaper_link": "Read the Ergo Whitepaper\", link: \"/technology/whitepaper",
-      "explore_the_ecosystem_link_ecosystem": "Explore the Ecosystem\", link: \"/ecosystem",
-      "learn_about_erg_tokenomics_link_learn_tokenomics": "Learn About ERG Tokenomics\", link: \"/learn/tokenomics",
-      "join_investor_discussions_link_https": "Join Investor Discussions\", link: \"https://discord.gg/ergo-platform",
-      "general_discord_link_https_discord": "General Discord\", link: \"https://discord.gg/ergo-platform",
-      "reddit_community_link_https_reddit_com_r_ergonauts": "Reddit Community\", link: \"https://reddit.com/r/ergonauts",
-      "telegram_group_link_https_t_me_ergoplatform": "Telegram Group\", link: \"https://t.me/ergoplatform",
-      "network_guardian_title_securing_the": "Network Guardian\",\n    title: \"SECURING THE BLOCKCHAIN\",\n    description:",
-      "understanding_the_algorithm_link_use_mining": "Understanding the algorithm\", link: \"/use/mining",
-      "mining_pools_description_popular_ergo": "Mining Pools\", description: \"Popular Ergo mining pools\", link: \"/ecosystem/mining",
-      "official_miner_description_reference_implementation": "Official Miner\", description: \"Reference implementation\", link: \"/use/mining/software",
-      "community_miners_description_third_party": "Community Miners\", description: \"Third-party mining software\", link: \"/use/mining/software",
-      "find_mining_pools_link_ecosystem_mining": "Find Mining Pools\", link: \"/ecosystem/mining",
-      "calculate_mining_profitability_link_use": "Calculate Mining Profitability\", link: \"/use/mining/calculator",
-      "join_mining_community_link_https": "Join Mining Community\", link: \"https://discord.gg/ergo-platform",
-      "mining_discord_channels_link_https": "Mining Discord Channels\", link: \"https://discord.gg/ergo-platform",
-      "mining_pools_community_link_ecosystem_mining": "Mining Pools Community\", link: \"/ecosystem/mining",
-      "technical_support_link_https_ergoforum_org": "Technical Support\", link: \"https://ergoforum.org",
-      "nft_enthusiast_title_digital_art": "NFT Enthusiast\",\n    title: \"DIGITAL ART COLLECTOR\",\n    description:\n      \"You're excited about unique digital items, art, and collectibles! Ergo's NFT ecosystem offers innovative marketplaces and creation tools with low fees and high security.\",\n    icon:",
-      "ergo_auction_house_description_premier": "Ergo Auction House\",\n            description: \"Premier NFT marketplace\",\n            link: \"/ecosystem/projects/auction-house",
-      "skyharbor_description_nft_trading_platform": "SkyHarbor\", description: \"NFT trading platform\", link: \"/ecosystem/projects/skyharbor",
-      "tokenjay_description_nft_minting_platform": "TokenJay\", description: \"NFT minting platform\", link: \"/ecosystem/projects/tokenjay",
-      "ergo_utils_description_nft_creation": "Ergo Utils\", description: \"NFT creation utilities\", link: \"/ecosystem/tools",
-      "explore_ergo_auction_house_link": "Explore Ergo Auction House\", link: \"/ecosystem/projects/auction-house",
-      "learn_about_nft_creation_link": "Learn About NFT Creation\", link: \"/ecosystem/projects/tokenjay",
-      "browse_nft_collections_link_ecosystem_nfts": "Browse NFT Collections\", link: \"/ecosystem/nfts",
-      "join_nft_community_link_https": "Join NFT Community\", link: \"https://discord.gg/ergo-platform",
-      "nft_discord_channels_link_https": "NFT Discord Channels\", link: \"https://discord.gg/ergo-platform",
-      "artist_community_link_community_artists": "Artist Community\", link: \"/community/artists",
-      "collector_groups_link_community_collectors": "Collector Groups\", link: \"/community/collectors",
-      "privacy_advocate_title_financial_privacy": "Privacy Advocate\",\n    title: \"FINANCIAL PRIVACY CHAMPION\",\n    description:\n      \"You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.\",\n    icon:",
-      "ergomixer_description_non_custodial_transaction": "ErgoMixer\", description: \"Non-custodial transaction mixer\", link: \"/ecosystem/projects/ergomixer",
-      "stealth_addresses_description_enhanced_address": "Stealth Addresses\", description: \"Enhanced address privacy\", link: \"/technology/privacy-features",
-      "educational_resources": "Educational Resources",
-      "sigma_protocols_guide_description_understanding": "Sigma Protocols Guide\",\n            description: \"Understanding privacy tech\",\n            link: \"/technology/privacy-features",
-      "privacy_best_practices_description_how": "Privacy Best Practices\", description: \"How to stay private\", link: \"/learn/privacy",
-      "learn_about_ergomixer_link_ecosystem": "Learn About ErgoMixer\", link: \"/ecosystem/projects/ergomixer",
-      "understand_sigma_protocols_link_technology": "Understand Sigma Protocols\", link: \"/technology/privacy-features",
-      "read_privacy_best_practices_link_learn_privacy": "Read Privacy Best Practices\", link: \"/learn/privacy",
-      "join_privacy_discussions_link_https": "Join Privacy Discussions\", link: \"https://discord.gg/ergo-platform",
-      "privacy_discord_channels_link_https": "Privacy Discord Channels\", link: \"https://discord.gg/ergo-platform",
-      "ergomixer_community_link_ecosystem_projects": "ErgoMixer Community\", link: \"/ecosystem/projects/ergomixer",
-      "technical_discussions_link_https_ergoforum_org": "Technical Discussions\", link: \"https://ergoforum.org",
-      "curious_learner_title_knowledge_seeker": "Curious Learner\",\n    title: \"KNOWLEDGE SEEKER\",\n    description:\n      \"You're new to Ergo and want to understand the fundamentals first! Perfect - learning the basics will help you make informed decisions about how to engage with the ecosystem.\",\n    icon:",
-      "faq_for_beginners_description_common": "FAQ for Beginners\", description: \"Common questions answered\", link: \"/start/faq",
-      "quick_introduction_description_ergo_overview": "Quick Introduction\", description: \"Ergo overview\", link: \"/start/introduction",
-      "ergonaut_handbook_description_comprehensive_guide": "Ergonaut Handbook\", description: \"Comprehensive guide\", link: \"/learn/handbook",
-      "newcomer_channels_description_beginner_friendly": "Newcomer Channels\", description: \"Beginner-friendly discussions\", link: \"/community",
-      "learning_groups_description_study_groups": "Learning Groups\", description: \"Study groups and mentorship\", link: \"/community/learning",
-      "read_the_faq_for_beginners_link_start_faq": "Read the FAQ for Beginners\", link: \"/start/faq",
-      "take_the_quick_introduction_link": "Take the Quick Introduction\", link: \"/start/introduction",
-      "join_newcomer_community_link_community": "Join Newcomer Community\", link: \"/community",
-      "explore_the_learning_hub_link_learn": "Explore the Learning Hub\", link: \"/learn",
-      "newcomer_support_link_community_newcomers": "Newcomer Support\", link: \"/community/newcomers",
-      "learning_groups_link_community_learning": "Learning Groups\", link: \"/community/learning",
-      "your_next_steps": "YOUR NEXT STEPS",
-      "build_the_future": "BUILD THE FUTURE",
-      "comprehensive_developer_documentation": "Comprehensive developer documentation",
-      "interactive_coding_environment": "Interactive coding environment",
-      "java_scala_development_toolkit": "Java/Scala development toolkit",
-      "typescript_sdk_for_ergo": "TypeScript SDK for Ergo",
-      "rust_implementation_of_sigma_protocols": "Rust implementation of Sigma protocols",
-      "decentralized_finance_pioneer": "DECENTRALIZED FINANCE PIONEER",
-      "ios_and_android_apps": "iOS and Android apps",
-      "decentralized_exchange_dex": "Decentralized exchange (DEX)",
-      "algorithmic_stablecoin_protocol": "Algorithmic stablecoin protocol",
-      "lending_and_borrowing_platform": "Lending and borrowing platform",
-      "network_and_defi_analytics": "Network and DeFi analytics",
-      "long_term_value_builder": "LONG-TERM VALUE BUILDER",
-      "where_to_buy_erg": "Where to buy ERG",
-      "projects_and_growth": "Projects and growth",
-      "securing_the_blockchain": "SECURING THE BLOCKCHAIN",
-      "understanding_the_algorithm": "Understanding the algorithm",
-      "popular_ergo_mining_pools": "Popular Ergo mining pools",
-      "reference_implementation": "Reference implementation",
-      "third_party_mining_software": "Third-party mining software",
-      "digital_art_collector": "DIGITAL ART COLLECTOR",
-      "premier_nft_marketplace": "Premier NFT marketplace",
-      "nft_creation_utilities": "NFT creation utilities",
-      "financial_privacy_champion": "FINANCIAL PRIVACY CHAMPION",
-      "you_value_financial_privacy_and": "You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.",
-      "non_custodial_transaction_mixer": "Non-custodial transaction mixer",
-      "enhanced_address_privacy": "Enhanced address privacy",
-      "understanding_privacy_tech": "Understanding privacy tech",
-      "how_to_stay_private": "How to stay private",
-      "common_questions_answered": "Common questions answered",
-      "beginner_friendly_discussions": "Beginner-friendly discussions",
-      "study_groups_and_mentorship": "Study groups and mentorship",
-      "discover_your_place_in_the_ecosystem": "DISCOVER YOUR PLACE IN THE ECOSYSTEM",
-      "join_others_who_share_your": "Join others who share your interests and get support on your Ergo journey",
-      "want_to_explore_other_aspects_of_ergo": "WANT TO EXPLORE OTHER ASPECTS OF ERGO?",
-      "explore_entire_ecosystem": "Explore Entire Ecosystem",
-      "take_quiz_again": "Take Quiz Again",
-      "take_our_interactive_quiz_to": "Take our interactive quiz to discover your ideal path in the Ergo ecosystem. Whether you",
-      "ergo_quiz_discover_your_blockchain": "Ergo Quiz - Discover Your Blockchain Path\",\n    description: \"Interactive quiz to find your perfect role in the Ergo ecosystem.\",\n    url: \"https://ergoblockchain.org/start/quiz\",\n    siteName: \"Ergo Platform",
-      "developer_miner_investor_take_the": "Developer? Miner? Investor? Take the quiz to find your perfect fit.",
-      "quiz_id_https_ergoblockchain_org": "Quiz\",\n    \"@id\": \"https://ergoblockchain.org/start/quiz\",\n    name: \"Ergo Ecosystem Path Finder Quiz\",\n    description: \"Interactive quiz to help users find their ideal path in the Ergo ecosystem\",\n    educationalLevel: \"Beginner\",\n    learningResourceType: \"Quiz\",\n    timeRequired:",
-      "ergo_quiz_find_your_path_in_blockchain": "Ergo Quiz | Find Your Path in Blockchain",
-      "ergo_quiz_discover_your_blockchain_path": "Ergo Quiz - Discover Your Blockchain Path",
-      "interactive_quiz_to_find_your": "Interactive quiz to find your perfect role in the Ergo ecosystem.",
-      "find_your_path_in_ergo_interactive_quiz": "Find Your Path in Ergo | Interactive Quiz",
-      "interactive_quiz_to_help_users": "Interactive quiz to help users find their ideal path in the Ergo ecosystem"
+      "connect_with_your_community": "CONNETTITI CON LA TUA COMMUNITY",
+      "what_primarily_attracts_you_to": "Cosa ti attrae principalmente della tecnologia blockchain e di Ergo?",
+      "investment_potential_and_financial_opportunities": "Il potenziale di investimento e le opportunità finanziarie",
+      "building_applications_and_contributing_to": "Creare applicazioni e contribuire a nuove tecnologie",
+      "supporting_network_security_and_earning": "Supportare la sicurezza della rete e guadagnare ricompense tramite hardware",
+      "collecting_creating_or_trading_unique": "Collezionare, creare o scambiare oggetti digitali unici e opere d'arte",
+      "using_new_financial_tools_for": "Utilizzare nuovi strumenti finanziari per prestiti, crediti o trading",
+      "enhancing_my_financial_privacy_and_anonymity": "Migliorare la mia privacy finanziaria e l'anonimato",
+      "i_m_new_and_just_want_to_learn_the_basics_first": "Sono nuovo e voglio prima imparare le basi!",
+      "how_would_you_describe_your": "Come descriveresti il tuo livello di familiarità con la tecnologia?",
+      "very_comfortable_i_can_code": "Molto a mio agio; so programmare o gestire sistemi complessi",
+      "moderately_comfortable_i_can_learn": "Abbastanza a mio agio; so imparare nuovi software e seguire guide",
+      "not_very_technical_i_prefer": "Non molto tecnico; preferisco applicazioni semplici e intuitive",
+      "what_kind_of_activity_within": "Quale tipo di attività in Ergo ti interessa di più?",
+      "growing_my_assets_and_exploring": "Far crescere i miei asset ed esplorare strumenti finanziari",
+      "creating_new_tools_dapps_or_smart_contracts": "Creare nuovi strumenti, dApp o smart contract",
+      "securing_the_network_and_earning_erg": "Proteggere la rete e guadagnare ERG",
+      "exploring_digital_art_and_collectibles": "Esplorare l'arte digitale e i collezionabili",
+      "deeply_understanding_the_technology_and": "Comprendere a fondo la tecnologia e i suoi principi",
+      "protecting_my_financial_privacy": "Proteggere la mia privacy finanziaria",
+      "if_you_re_interested_in": "Se sei interessato alla finanza/investimento, qual è il tuo approccio alle nuove tecnologie finanziarie?",
+      "looking_for_established_lower_risk_ways_to_engage": "Cerco modi consolidati e a basso rischio per partecipare",
+      "exploring_defi_opportunities_while_understanding": "Esploro le opportunità DeFi comprendendo i rischi",
+      "interested_in_cutting_edge_experimental": "Sono interessato a strumenti finanziari all'avanguardia e sperimentali",
+      "not_particularly_interested_in_financial_aspects": "Non sono particolarmente interessato agli aspetti finanziari",
+      "if_you_want_to_contribute": "Se vuoi contribuire, quale tipo di partecipazione ti ispira di più?",
+      "writing_code_and_building_software": "Scrivere codice e sviluppare software",
+      "creating_educational_content_art_or": "Creare contenuti educativi, arte o materiali di marketing",
+      "helping_others_in_the_community": "Aiutare gli altri nella community e rispondere alle domande",
+      "participating_in_governance_discussions_and": "Partecipare a discussioni di governance e proposte",
+      "supporting_network_infrastructure": "Supportare l'infrastruttura della rete",
+      "aspiring_developer_title_build_the": "Sviluppatore in Erba\",\n    title: \"COSTRUISCI IL FUTURO\",\n    description:\n      \"Sei attratto dalla creazione di applicazioni innovative e dal contributo alla tecnologia all'avanguardia! Il potente ErgoScript e il modello eUTXO di Ergo offrono opportunità uniche per costruire dApp sicure ed efficienti.\",\n    icon:",
+      "documentation_learning": "Documentazione e Apprendimento",
+      "ergodocs_description_comprehensive_developer_documentation": "ErgoDocs\", description: \"Documentazione completa per sviluppatori\", link: \"/build/docs",
+      "ergoscript_primer_description_learn_ergo": "ErgoScript Primer\", description: \"Impara il linguaggio degli smart contract di Ergo\", link: \"/build/tutorials",
+      "ergo_playgrounds_description_interactive_coding": "Ergo Playgrounds\", description: \"Ambiente di codifica interattivo\", link: \"/build/playground",
+      "appkit_description_java_scala_development": "AppKit\", description: \"Toolkit di sviluppo Java/Scala\", link: \"/build/tools/appkit",
+      "fleet_sdk_description_typescript_sdk": "Fleet SDK\", description: \"SDK TypeScript per Ergo\", link: \"/build/tools/fleet",
+      "sigma_rust_description_rust_implementation": "Sigma-Rust\",\n            description: \"Implementazione Rust dei protocolli Sigma\",\n            link: \"/build/tools/sigma-rust",
+      "explore_developer_documentation_link_build_docs": "Esplora la Documentazione per Sviluppatori\", link: \"/build/docs",
+      "try_the_ergoscript_playground_link": "Prova il Playground di ErgoScript\", link: \"/build/playground",
+      "join_developer_discord_channels_link": "Unisciti ai Canali Discord per Sviluppatori\", link: \"https://discord.gg/ergo-platform",
+      "check_out_developer_grants_link_build_grants": "Scopri i Grant per Sviluppatori\", link: \"/build/grants",
+      "developer_discord_link_https_discord": "Discord Sviluppatori\", link: \"https://discord.gg/ergo-platform",
+      "ergoforum_development_link_https_ergoforum_org": "ErgoForum - Sviluppo\", link: \"https://ergoforum.org",
+      "github_organization_link_https_github": "Organizzazione GitHub\", link: \"https://github.com/ergoplatform",
+      "spectrum_finance_description_decentralized_exchange": "Spectrum Finance\", description: \"Exchange decentralizzato (DEX)\", link: \"https://spectrum.fi",
+      "sigmausd_description_algorithmic_stablecoin_protocol": "SigmaUSD\", description: \"Protocollo stablecoin algoritmico\", link: \"/ecosystem/projects/sigmausd",
+      "duckpools_description_lending_and_borrowing": "Duckpools\", description: \"Piattaforma di prestiti e crediti\", link: \"/ecosystem/projects/duckpools",
+      "network_and_defi_analytics_link_https_ergo_watch": "Analisi della rete e della DeFi\", link: \"https://ergo.watch",
+      "ergo_explorer_description_blockchain_explorer": "Ergo Explorer\", description: \"Esploratore della blockchain\", link: \"/ecosystem/explorers",
+      "learn_about_sigmausd_stablecoin_link": "Scopri lo Stablecoin SigmaUSD\", link: \"/ecosystem/projects/sigmausd",
+      "try_trading_on_spectrum_finance": "Prova il Trading su Spectrum Finance\", link: \"https://spectrum.fi",
+      "join_defi_discussions_on_discord": "Partecipa alle Discussioni DeFi su Discord\", link: \"https://discord.gg/ergo-platform",
+      "defi_discord_channels_link_https": "Canali Discord DeFi\", link: \"https://discord.gg/ergo-platform",
+      "spectrum_finance_community_link_https_spectrum_fi": "Community di Spectrum Finance\", link: \"https://spectrum.fi",
+      "sigmausd_community_link_ecosystem_projects": "Community SigmaUSD\", link: \"/ecosystem/projects/sigmausd",
+      "strategic_investor_title_long_term": "Investitore Strategico\",\n    title: \"COSTRUTTORE DI VALORE A LUNGO TERMINE\",\n    description:\n      \"Sei interessato al potenziale a lungo termine di Ergo e vuoi capire i fondamentali prima di prendere decisioni di investimento. Concentrati sull'apprendimento della tecnologia e sulla crescita dell'ecosistema.\",\n    icon:",
+      "exchange_listings_description_where_to": "Listing sugli Exchange\", description: \"Dove acquistare ERG\", link: \"/use/get-erg",
+      "ergo_whitepaper_description_technical_foundation": "Whitepaper di Ergo\", description: \"Fondamento tecnico\", link: \"/technology/whitepaper",
+      "ecosystem_overview_description_projects_and": "Panoramica dell'Ecosistema\", description: \"Progetti e crescita\", link: \"/ecosystem",
+      "network_statistics_description_real_time": "Statistiche della Rete\", description: \"Metriche in tempo reale\", link: \"/ecosystem/stats",
+      "read_the_ergo_whitepaper_link": "Leggi il Whitepaper di Ergo\", link: \"/technology/whitepaper",
+      "explore_the_ecosystem_link_ecosystem": "Esplora l'Ecosistema\", link: \"/ecosystem",
+      "learn_about_erg_tokenomics_link_learn_tokenomics": "Scopri la Tokenomics di ERG\", link: \"/learn/tokenomics",
+      "join_investor_discussions_link_https": "Unisciti alle Discussioni degli Investitori\", link: \"https://discord.gg/ergo-platform",
+      "general_discord_link_https_discord": "Discord Generale\", link: \"https://discord.gg/ergo-platform",
+      "reddit_community_link_https_reddit_com_r_ergonauts": "Community Reddit\", link: \"https://reddit.com/r/ergonauts",
+      "telegram_group_link_https_t_me_ergoplatform": "Gruppo Telegram\", link: \"https://t.me/ergoplatform",
+      "network_guardian_title_securing_the": "Guardiano della Rete\",\n    title: \"PROTEGGERE LA BLOCKCHAIN\",\n    description:",
+      "understanding_the_algorithm_link_use_mining": "Comprensione dell'algoritmo\", link: \"/use/mining",
+      "mining_pools_description_popular_ergo": "Pool di Mining\", description: \"I più diffusi pool di mining Ergo\", link: \"/ecosystem/mining",
+      "official_miner_description_reference_implementation": "Miner Ufficiale\", description: \"Implementazione di riferimento\", link: \"/use/mining/software",
+      "community_miners_description_third_party": "Miner della Community\", description: \"Software di mining di terze parti\", link: \"/use/mining/software",
+      "find_mining_pools_link_ecosystem_mining": "Trova Pool di Mining\", link: \"/ecosystem/mining",
+      "calculate_mining_profitability_link_use": "Calcola la Redditività del Mining\", link: \"/use/mining/calculator",
+      "join_mining_community_link_https": "Unisciti alla Community dei Miner\", link: \"https://discord.gg/ergo-platform",
+      "mining_discord_channels_link_https": "Canali Discord per il Mining\", link: \"https://discord.gg/ergo-platform",
+      "mining_pools_community_link_ecosystem_mining": "Community dei Pool di Mining\", link: \"/ecosystem/mining",
+      "technical_support_link_https_ergoforum_org": "Supporto Tecnico\", link: \"https://ergoforum.org",
+      "nft_enthusiast_title_digital_art": "Appassionato di NFT\",\n    title: \"COLLEZIONISTA DI ARTE DIGITALE\",\n    description:\n      \"Sei entusiasta degli oggetti digitali unici, dell'arte e dei collezionabili! L'ecosistema NFT di Ergo offre marketplace innovativi e strumenti di creazione con commissioni basse e alta sicurezza.\",\n    icon:",
+      "ergo_auction_house_description_premier": "Ergo Auction House\",\n            description: \"Il principale marketplace NFT\",\n            link: \"/ecosystem/projects/auction-house",
+      "skyharbor_description_nft_trading_platform": "SkyHarbor\", description: \"Piattaforma di trading NFT\", link: \"/ecosystem/projects/skyharbor",
+      "tokenjay_description_nft_minting_platform": "TokenJay\", description: \"Piattaforma di minting NFT\", link: \"/ecosystem/projects/tokenjay",
+      "ergo_utils_description_nft_creation": "Ergo Utils\", description: \"Utilità per la creazione di NFT\", link: \"/ecosystem/tools",
+      "explore_ergo_auction_house_link": "Esplora Ergo Auction House\", link: \"/ecosystem/projects/auction-house",
+      "learn_about_nft_creation_link": "Scopri la Creazione di NFT\", link: \"/ecosystem/projects/tokenjay",
+      "browse_nft_collections_link_ecosystem_nfts": "Sfoglia le Collezioni NFT\", link: \"/ecosystem/nfts",
+      "join_nft_community_link_https": "Unisciti alla Community NFT\", link: \"https://discord.gg/ergo-platform",
+      "nft_discord_channels_link_https": "Canali Discord NFT\", link: \"https://discord.gg/ergo-platform",
+      "artist_community_link_community_artists": "Community degli Artisti\", link: \"/community/artists",
+      "collector_groups_link_community_collectors": "Gruppi di Collezionisti\", link: \"/community/collectors",
+      "privacy_advocate_title_financial_privacy": "Sostenitore della Privacy\",\n    title: \"PALADINO DELLA PRIVACY FINANZIARIA\",\n    description:\n      \"Dai valore alla privacy finanziaria e vuoi proteggere la cronologia delle tue transazioni! Ergo offre strumenti all'avanguardia per la privacy basati sui protocolli Sigma per un miglioramento della privacy trustless e sicuro.\",\n    icon:",
+      "ergomixer_description_non_custodial_transaction": "ErgoMixer\", description: \"Mixer di transazioni non custodiale\", link: \"/ecosystem/projects/ergomixer",
+      "stealth_addresses_description_enhanced_address": "Stealth Addresses\", description: \"Privacy degli indirizzi avanzata\", link: \"/technology/privacy-features",
+      "educational_resources": "Risorse Educative",
+      "sigma_protocols_guide_description_understanding": "Guida ai Protocolli Sigma\",\n            description: \"Comprensione della tecnologia per la privacy\",\n            link: \"/technology/privacy-features",
+      "privacy_best_practices_description_how": "Migliori Pratiche per la Privacy\", description: \"Come mantenere la propria privacy\", link: \"/learn/privacy",
+      "learn_about_ergomixer_link_ecosystem": "Scopri ErgoMixer\", link: \"/ecosystem/projects/ergomixer",
+      "understand_sigma_protocols_link_technology": "Comprendi i Protocolli Sigma\", link: \"/technology/privacy-features",
+      "read_privacy_best_practices_link_learn_privacy": "Leggi le Migliori Pratiche per la Privacy\", link: \"/learn/privacy",
+      "join_privacy_discussions_link_https": "Unisciti alle Discussioni sulla Privacy\", link: \"https://discord.gg/ergo-platform",
+      "privacy_discord_channels_link_https": "Canali Discord sulla Privacy\", link: \"https://discord.gg/ergo-platform",
+      "ergomixer_community_link_ecosystem_projects": "Community ErgoMixer\", link: \"/ecosystem/projects/ergomixer",
+      "technical_discussions_link_https_ergoforum_org": "Discussioni Tecniche\", link: \"https://ergoforum.org",
+      "curious_learner_title_knowledge_seeker": "Studente Curioso\",\n    title: \"IN CERCA DI CONOSCENZA\",\n    description:\n      \"Sei nuovo su Ergo e vuoi prima capire le basi! Ottimo — imparare i fondamentali ti aiuterà a prendere decisioni consapevoli su come interagire con l'ecosistema.\",\n    icon:",
+      "faq_for_beginners_description_common": "FAQ per Principianti\", description: \"Risposte alle domande più comuni\", link: \"/start/faq",
+      "quick_introduction_description_ergo_overview": "Introduzione Rapida\", description: \"Panoramica di Ergo\", link: \"/start/introduction",
+      "ergonaut_handbook_description_comprehensive_guide": "Ergonaut Handbook\", description: \"Guida completa\", link: \"/learn/handbook",
+      "newcomer_channels_description_beginner_friendly": "Canali per Nuovi Arrivati\", description: \"Discussioni adatte ai principianti\", link: \"/community",
+      "learning_groups_description_study_groups": "Gruppi di Apprendimento\", description: \"Gruppi di studio e mentorship\", link: \"/community/learning",
+      "read_the_faq_for_beginners_link_start_faq": "Leggi le FAQ per Principianti\", link: \"/start/faq",
+      "take_the_quick_introduction_link": "Segui l'Introduzione Rapida\", link: \"/start/introduction",
+      "join_newcomer_community_link_community": "Unisciti alla Community dei Nuovi Arrivati\", link: \"/community",
+      "explore_the_learning_hub_link_learn": "Esplora l'Hub dell'Apprendimento\", link: \"/learn",
+      "newcomer_support_link_community_newcomers": "Supporto per Nuovi Arrivati\", link: \"/community/newcomers",
+      "learning_groups_link_community_learning": "Gruppi di Apprendimento\", link: \"/community/learning",
+      "your_next_steps": "I TUOI PROSSIMI PASSI",
+      "build_the_future": "COSTRUISCI IL FUTURO",
+      "comprehensive_developer_documentation": "Documentazione completa per sviluppatori",
+      "interactive_coding_environment": "Ambiente di codifica interattivo",
+      "java_scala_development_toolkit": "Toolkit di sviluppo Java/Scala",
+      "typescript_sdk_for_ergo": "SDK TypeScript per Ergo",
+      "rust_implementation_of_sigma_protocols": "Implementazione Rust dei protocolli Sigma",
+      "decentralized_finance_pioneer": "PIONIERE DELLA FINANZA DECENTRALIZZATA",
+      "ios_and_android_apps": "App iOS e Android",
+      "decentralized_exchange_dex": "Exchange decentralizzato (DEX)",
+      "algorithmic_stablecoin_protocol": "Protocollo stablecoin algoritmico",
+      "lending_and_borrowing_platform": "Piattaforma di prestiti e crediti",
+      "network_and_defi_analytics": "Analisi della rete e della DeFi",
+      "long_term_value_builder": "COSTRUTTORE DI VALORE A LUNGO TERMINE",
+      "where_to_buy_erg": "Dove acquistare ERG",
+      "projects_and_growth": "Progetti e crescita",
+      "securing_the_blockchain": "PROTEGGERE LA BLOCKCHAIN",
+      "understanding_the_algorithm": "Comprensione dell'algoritmo",
+      "popular_ergo_mining_pools": "I più diffusi pool di mining Ergo",
+      "reference_implementation": "Implementazione di riferimento",
+      "third_party_mining_software": "Software di mining di terze parti",
+      "digital_art_collector": "COLLEZIONISTA DI ARTE DIGITALE",
+      "premier_nft_marketplace": "Il principale marketplace NFT",
+      "nft_creation_utilities": "Utilità per la creazione di NFT",
+      "financial_privacy_champion": "PALADINO DELLA PRIVACY FINANZIARIA",
+      "you_value_financial_privacy_and": "Dai valore alla privacy finanziaria e vuoi proteggere la cronologia delle tue transazioni! Ergo offre strumenti all'avanguardia per la privacy basati sui protocolli Sigma per un miglioramento della privacy trustless e sicuro.",
+      "non_custodial_transaction_mixer": "Mixer di transazioni non custodiale",
+      "enhanced_address_privacy": "Privacy degli indirizzi avanzata",
+      "understanding_privacy_tech": "Comprensione della tecnologia per la privacy",
+      "how_to_stay_private": "Come mantenere la propria privacy",
+      "common_questions_answered": "Risposte alle domande più comuni",
+      "beginner_friendly_discussions": "Discussioni adatte ai principianti",
+      "study_groups_and_mentorship": "Gruppi di studio e mentorship",
+      "discover_your_place_in_the_ecosystem": "SCOPRI IL TUO POSTO NELL'ECOSISTEMA",
+      "join_others_who_share_your": "Unisciti ad altri che condividono i tuoi interessi e ricevi supporto nel tuo percorso su Ergo",
+      "want_to_explore_other_aspects_of_ergo": "VUOI ESPLORARE ALTRI ASPETTI DI ERGO?",
+      "explore_entire_ecosystem": "Esplora l'Intero Ecosistema",
+      "take_quiz_again": "Rifai il Quiz",
+      "take_our_interactive_quiz_to": "Fai il nostro quiz interattivo per scoprire il tuo percorso ideale nell'ecosistema Ergo. Se tu",
+      "ergo_quiz_discover_your_blockchain": "Quiz Ergo - Scopri il Tuo Percorso nella Blockchain\",\n    description: \"Quiz interattivo per trovare il tuo ruolo ideale nell'ecosistema Ergo.\",\n    url: \"https://ergoblockchain.org/start/quiz\",\n    siteName: \"Ergo Platform",
+      "developer_miner_investor_take_the": "Sviluppatore? Miner? Investitore? Fai il quiz per trovare il tuo ruolo perfetto.",
+      "quiz_id_https_ergoblockchain_org": "Quiz\",\n    \"@id\": \"https://ergoblockchain.org/start/quiz\",\n    name: \"Quiz per Trovare il Percorso nell'Ecosistema Ergo\",\n    description: \"Quiz interattivo per aiutare gli utenti a trovare il loro percorso ideale nell'ecosistema Ergo\",\n    educationalLevel: \"Principiante\",\n    learningResourceType: \"Quiz\",\n    timeRequired:",
+      "ergo_quiz_find_your_path_in_blockchain": "Quiz Ergo | Trova il Tuo Percorso nella Blockchain",
+      "ergo_quiz_discover_your_blockchain_path": "Quiz Ergo - Scopri il Tuo Percorso nella Blockchain",
+      "interactive_quiz_to_find_your": "Quiz interattivo per trovare il tuo ruolo ideale nell'ecosistema Ergo.",
+      "find_your_path_in_ergo_interactive_quiz": "Trova il Tuo Percorso in Ergo | Quiz Interattivo",
+      "interactive_quiz_to_help_users": "Quiz interattivo per aiutare gli utenti a trovare il loro percorso ideale nell'ecosistema Ergo"
     },
     "i_m_new_to_crypto": "I'm New to Crypto\",\n    subtitle: \"Start from the basics\",\n    icon: User,\n    color:",
     "why_ergo_exists_description_understand": "Why Ergo Exists\",\n        description: \"Understand the problems we solve\",\n        icon: Zap,\n        href: \"/start/introduction\",\n        duration:",
@@ -2742,119 +2742,119 @@
   },
   "comparison": {
     "hero": {
-      "title": "Platform",
-      "analysis": "Analysis",
-      "subtitle": "Understanding Ergo's Technical Advantages",
-      "description": "Ergo combines the security and predictability of the eUTXO model with the programmability needed for complex smart contracts, and supports light clients via NIPoPoWs.",
+      "title": "Piattaforma",
+      "analysis": "Analisi",
+      "subtitle": "Comprendere i Vantaggi Tecnici di Ergo",
+      "description": "Ergo combina la sicurezza e la prevedibilità del modello eUTXO con la programmabilità necessaria per smart contract complessi, e supporta client leggeri tramite NIPoPoWs.",
       "buttons": {
-        "start_building": "Start Building",
-        "view_comparison": "View Comparison"
+        "start_building": "Inizia a Costruire",
+        "view_comparison": "Visualizza il Confronto"
       }
     },
     "key_features": {
       "predictable_security": {
-        "title": "Predictable & Auditable Security",
-        "description": "No known protocol-level reentrancy class; deterministic execution bounds; friendly to audits"
+        "title": "Sicurezza Prevedibile e Verificabile",
+        "description": "Nessuna classe di reentrancy nota a livello di protocollo; limiti di esecuzione deterministici; adatto agli audit"
       },
       "parallel_execution": {
-        "title": "Parallel Execution",
-        "description": "Independent UTXOs enable parallel execution; shared-box patterns may introduce contention"
+        "title": "Esecuzione Parallela",
+        "description": "Gli UTXO indipendenti abilitano l'esecuzione parallela; i pattern con box condivisi possono introdurre contese"
       },
       "native_privacy": {
-        "title": "Native Privacy",
-        "description": "Σ-protocols and UTXO mixing at the protocol layer"
+        "title": "Privacy Nativa",
+        "description": "Σ-protocols e mixing UTXO a livello di protocollo"
       },
       "native_assets": {
-        "title": "Native L1 Assets",
-        "description": "Native L1 tokens/NFTs (no wrapper contracts)"
+        "title": "Asset Nativi L1",
+        "description": "Token/NFT nativi L1 (nessun contratto wrapper)"
       }
     },
     "vision": {
-      "title": "Why Developers Choose Ergo",
-      "description": "\"Other platforms force you to work around their limitations. Ergo works around yours.\" Experience the difference of building on a platform designed for security, predictability, and developer productivity."
+      "title": "Perché gli Sviluppatori Scelgono Ergo",
+      "description": "«Le altre piattaforme ti costringono a lavorare intorno ai loro limiti. Ergo lavora intorno ai tuoi.» Scopri la differenza di costruire su una piattaforma progettata per la sicurezza, la prevedibilità e la produttività degli sviluppatori."
     },
     "stats": {
       "predictable": {
-        "title": "Predictable",
-        "description": "Fees; no gas price auctions"
+        "title": "Prevedibile",
+        "description": "Commissioni; nessuna asta sul prezzo del gas"
       },
       "no_class": {
-        "title": "No class",
-        "description": "of protocol-level reentrancy"
+        "title": "Nessuna classe",
+        "description": "di reentrancy a livello di protocollo"
       },
       "native": {
-        "title": "Native",
-        "description": "L1 tokens/NFTs"
+        "title": "Nativo",
+        "description": "Token/NFT L1"
       },
       "light": {
-        "title": "Light",
-        "description": "clients (NIPoPoWs)"
+        "title": "Leggero",
+        "description": "client (NIPoPoWs)"
       }
     },
     "problems_vs_solutions": {
-      "title": "The Problem with",
-      "current_platforms": "Current Platforms",
+      "title": "Il Problema con",
+      "current_platforms": "le Piattaforme Attuali",
       "development_nightmares": {
-        "title": "Development Nightmares",
+        "title": "Incubi dello Sviluppo",
         "items": {
-          "unpredictable_gas": "Unpredictable gas costs bankrupting users",
-          "reentrancy_attacks": "Reentrancy attacks draining protocols",
-          "complex_languages": "Complex languages creating security holes",
-          "vc_controlled": "VC-controlled platforms changing rules"
+          "unpredictable_gas": "Costi del gas imprevedibili che mettono in difficoltà gli utenti",
+          "reentrancy_attacks": "Attacchi di reentrancy che prosciugano i protocolli",
+          "complex_languages": "Linguaggi complessi che creano falle nella sicurezza",
+          "vc_controlled": "Piattaforme controllate da VC che cambiano le regole"
         }
       },
       "ergo_solution": {
-        "title": "The Ergo Solution",
+        "title": "La Soluzione Ergo",
         "items": {
-          "predictable_fees": "Predictable fees; auditable execution bounds",
-          "security_by_design": "Security-by-design in the eUTXO model",
-          "ergoscript": "ErgoScript: declarative, explicit state transitions",
-          "community_owned": "Community-owned, fair launch principles"
+          "predictable_fees": "Commissioni prevedibili; limiti di esecuzione verificabili",
+          "security_by_design": "Sicurezza by design nel modello eUTXO",
+          "ergoscript": "ErgoScript: transizioni di stato dichiarative ed esplicite",
+          "community_owned": "Principi di proprietà della community e lancio equo"
         }
       }
     },
     "differentiators": {
-      "title": "What Makes",
+      "title": "Cosa Rende",
       "ergo": "Ergo",
-      "different": "Different",
-      "key_advantage": "Key Advantage",
-      "ergo_advantage": "Ergo Advantage",
-      "others": "Others",
+      "different": "Diverso",
+      "key_advantage": "Vantaggio Chiave",
+      "ergo_advantage": "Vantaggio Ergo",
+      "others": "Gli Altri",
       "vs": "VS",
       "items": {
         "predictable_security": {
-          "title": "Predictable & Auditable Security",
-          "ergo": "No known protocol-level reentrancy class; predictable execution costs",
-          "others": "Reentrancy patterns and gas price auctions common in account models"
+          "title": "Sicurezza Prevedibile e Verificabile",
+          "ergo": "Nessuna classe di reentrancy nota a livello di protocollo; costi di esecuzione prevedibili",
+          "others": "Pattern di reentrancy e aste sul prezzo del gas comuni nei modelli account"
         },
         "native_privacy": {
-          "title": "Native Privacy",
-          "ergo": "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
-          "others": "Often requires external add-ons or trusted services"
+          "title": "Privacy Nativa",
+          "ergo": "Sigma protocols per threshold/multisig e privacy; costruzioni ring-like possibili",
+          "others": "Spesso richiede componenti aggiuntivi esterni o servizi fidati"
         },
         "developer_experience": {
-          "title": "Developer Experience",
-          "ergo": "Declarative ErgoScript with eUTXO reasoning",
-          "others": "Mutable global state; complex reentrancy-safe patterns"
+          "title": "Esperienza dello Sviluppatore",
+          "ergo": "ErgoScript dichiarativo con ragionamento eUTXO",
+          "others": "Stato globale mutabile; pattern complessi sicuri contro la reentrancy"
         },
         "fair_decentralized": {
-          "title": "Fair & Decentralized",
-          "ergo": "Fair PoW launch, ASIC-resistant (GPU-friendly)",
-          "others": "ICO allocations or validator gating"
+          "title": "Equo e Decentralizzato",
+          "ergo": "Lancio PoW equo, resistente agli ASIC (GPU-friendly)",
+          "others": "Allocazioni ICO o controllo dei validator"
         }
       },
       "bottom_cta": {
-        "description": "Experience the difference of building on a platform designed for the future",
-        "button": "Explore Technology"
+        "description": "Scopri la differenza di costruire su una piattaforma progettata per il futuro",
+        "button": "Esplora la Tecnologia"
       }
     },
     "comparison_table": {
       "title": "Blockchain",
-      "platform": "Platform",
-      "comparison": "Comparison",
-      "caption": "Comparison (EN): Ergo Vs BTC/ETH/ADA/SOL/SUI",
+      "platform": "Piattaforma",
+      "comparison": "Confronto",
+      "caption": "Confronto (IT): Ergo vs BTC/ETH/ADA/SOL/SUI",
       "headers": {
-        "parameter": "Parameter",
+        "parameter": "Parametro",
         "ergo": "Ergo",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
@@ -2863,120 +2863,120 @@
         "sui": "Sui"
       },
       "features": {
-        "consensus": "Consensus",
-        "state_model": "State model",
-        "smart_contract_languages": "Smart contract languages",
-        "issuance_max_supply": "Issuance / Max supply",
-        "target_block_time": "Target block/slot time",
-        "finality": "Finality (typical)",
-        "distinctive_features": "Distinctive features",
-        "privacy_features": "Privacy / L1 special features"
+        "consensus": "Consenso",
+        "state_model": "Modello di stato",
+        "smart_contract_languages": "Linguaggi smart contract",
+        "issuance_max_supply": "Emissione / Fornitura massima",
+        "target_block_time": "Tempo target blocco/slot",
+        "finality": "Finalità (tipica)",
+        "distinctive_features": "Caratteristiche distintive",
+        "privacy_features": "Privacy / Caratteristiche speciali L1"
       },
       "values": {
         "ergo": {
           "consensus": "PoW (Autolykos)",
           "state_model": "eUTXO",
           "smart_contracts": "ErgoScript",
-          "issuance": "Max ~97.74M ERG; fixed supply",
+          "issuance": "Max ~97,74M ERG; fornitura fissa",
           "block_time": "≈ 2 min",
-          "finality": "Probabilistic (via confirmations)",
+          "finality": "Probabilistica (tramite conferme)",
           "distinctive": "Storage Rent, NiPoPoWs, Σ-protocols",
-          "privacy": "Built-in Sigma protocols, mixer contracts"
+          "privacy": "Sigma protocols integrati, contratti mixer"
         },
         "bitcoin": {
           "consensus": "PoW (SHA-256d)",
           "state_model": "UTXO",
-          "smart_contracts": "Bitcoin Script (limited)",
-          "issuance": "Max 21M BTC (halvings)",
+          "smart_contracts": "Bitcoin Script (limitato)",
+          "issuance": "Max 21M BTC (dimezzamenti)",
           "block_time": "≈ 10 min",
-          "finality": "Probabilistic (via confirmations)",
-          "distinctive": "Simple UTXO model, high reliability",
-          "privacy": "Limited scripts; privacy via L2/protocols"
+          "finality": "Probabilistica (tramite conferme)",
+          "distinctive": "Modello UTXO semplice, alta affidabilità",
+          "privacy": "Script limitati; privacy tramite L2/protocolli"
         },
         "ethereum": {
           "consensus": "PoS (Beacon/Gasper)",
-          "state_model": "Account model + EVM",
+          "state_model": "Modello account + EVM",
           "smart_contracts": "Solidity, Vyper (EVM)",
-          "issuance": "No hard cap; issuance + burn (EIP-1559)",
-          "block_time": "12 s slot; 32-slot epoch",
-          "finality": "Economic finality ≈ 2 epochs (~13–15 min)",
-          "distinctive": "General EVM platform, EIP-1559 (burn)",
-          "privacy": "Base L1 lacks privacy; zk/privacy on L2"
+          "issuance": "Nessun limite fisso; emissione + burn (EIP-1559)",
+          "block_time": "Slot da 12 s; epoch di 32 slot",
+          "finality": "Finalità economica ≈ 2 epoch (~13–15 min)",
+          "distinctive": "Piattaforma EVM generale, EIP-1559 (burn)",
+          "privacy": "L1 base privo di privacy; zk/privacy su L2"
         },
         "cardano": {
           "consensus": "PoS (Ouroboros)",
           "state_model": "eUTXO",
-          "smart_contracts": "Plutus (Haskell family), Aiken",
+          "smart_contracts": "Plutus (famiglia Haskell), Aiken",
           "issuance": "Max 45B ADA",
-          "block_time": "1 s slot; expected block ≈ every 20 s",
-          "finality": "Through stability window & k-blocks; ~20 s blocks",
-          "distinctive": "eUTXO + formal methods, Hydra L2",
-          "privacy": "Base L1; extensions via Plutus/Hydra"
+          "block_time": "Slot da 1 s; blocco atteso ≈ ogni 20 s",
+          "finality": "Tramite finestra di stabilità e k-block; blocchi ~20 s",
+          "distinctive": "eUTXO + metodi formali, Hydra L2",
+          "privacy": "L1 base; estensioni tramite Plutus/Hydra"
         },
         "solana": {
           "consensus": "PoS + Proof of History (Tower BFT)",
-          "state_model": "Account model; parallel Sealevel runtime",
+          "state_model": "Modello account; runtime parallelo Sealevel",
           "smart_contracts": "Rust / C / C++ (SVM)",
-          "issuance": "No fixed cap; decaying inflation",
-          "block_time": "≈ 400–600 ms slot",
-          "finality": "\"Confirmed\" in 2–3 blocks; \"Finalized\" ≈ 32 blocks",
-          "distinctive": "High throughput, Sealevel, PoH",
-          "privacy": "Base L1; privacy via applications"
+          "issuance": "Nessun limite fisso; inflazione decrescente",
+          "block_time": "Slot ≈ 400–600 ms",
+          "finality": "«Confermato» in 2–3 blocchi; «Finalizzato» ≈ 32 blocchi",
+          "distinctive": "Alto throughput, Sealevel, PoH",
+          "privacy": "L1 base; privacy tramite applicazioni"
         },
         "sui": {
           "consensus": "PoS (Narwhal/Bullshark → Mysticeti)",
-          "state_model": "Object-centric (Move)",
+          "state_model": "Centrato sugli oggetti (Move)",
           "smart_contracts": "Move",
-          "issuance": "Max 10B SUI (scheduled distribution)",
-          "block_time": "Seconds (fast finality for simple tx)",
-          "finality": "BFT finality; typically seconds",
-          "distinctive": "Objects/ownership, parallel tx, Move safety",
-          "privacy": "Base L1; privacy via applications"
+          "issuance": "Max 10B SUI (distribuzione pianificata)",
+          "block_time": "Secondi (finalità rapida per tx semplici)",
+          "finality": "Finalità BFT; tipicamente secondi",
+          "distinctive": "Oggetti/proprietà, tx parallele, sicurezza Move",
+          "privacy": "L1 base; privacy tramite applicazioni"
         }
       },
-      "footer": "Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated: {date}."
+      "footer": "Confronto completo delle principali piattaforme blockchain, inclusi meccanismi di consenso, modelli di stato, capacità smart contract e caratteristiche distintive. Aggiornato: {date}."
     },
     "trust_indicators": {
-      "title": "Trust",
-      "indicators": "Indicators",
+      "title": "Indicatori",
+      "indicators": "di Fiducia",
       "battle_tested": {
-        "title": "Battle-tested since 2019",
-        "description": "Proven security track record"
+        "title": "Collaudato dal 2019",
+        "description": "Comprovato storico di sicurezza"
       },
       "developers": {
-        "title": "100+ developers",
-        "description": "Growing active community"
+        "title": "100+ sviluppatori",
+        "description": "Community attiva in crescita"
       },
       "no_incidents": {
-        "title": "No critical protocol-level incidents",
-        "description": "As of {date}"
+        "title": "Nessun incidente critico a livello di protocollo",
+        "description": "Aggiornato al {date}"
       }
     },
     "faq": {
       "title": "FAQ",
       "items": {
         "eutxo_reentrancy": {
-          "question": "How does eUTXO reduce reentrancy risk?",
-          "answer": "Transactions consume specified UTXOs and cannot be re-entered; the shared-state pattern behind reentrancy is absent."
+          "question": "Come riduce eUTXO il rischio di reentrancy?",
+          "answer": "Le transazioni consumano gli UTXO specificati e non possono essere ri-entrate; il pattern di stato condiviso alla base della reentrancy è assente."
         },
         "predictable_fees": {
-          "question": "Are fees predictable on Ergo?",
-          "answer": "Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions)."
+          "question": "Le commissioni su Ergo sono prevedibili?",
+          "answer": "Il costo dello script è limitato e le commissioni sono prevedibili; non esistono aste sul prezzo del gas (le commissioni finali dipendono dalle condizioni della mempool)."
         },
         "light_clients": {
-          "question": "Does Ergo have light clients?",
-          "answer": "Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients."
+          "question": "Ergo supporta i client leggeri?",
+          "answer": "Sì. I NIPoPoWs abilitano prove sintetiche per client leggeri con fiducia minimizzata."
         }
       }
     },
     "cta": {
-      "title": "Ready to Experience the Difference?",
-      "description": "Join the growing community of developers building secure, predictable, and privacy-focused applications on Ergo.",
+      "title": "Pronto a Scoprire la Differenza?",
+      "description": "Unisciti alla crescente community di sviluppatori che costruiscono applicazioni sicure, prevedibili e orientate alla privacy su Ergo.",
       "buttons": {
-        "start_building": "Start Building Today",
-        "explore_ecosystem": "Explore Ecosystem"
+        "start_building": "Inizia a Costruire Oggi",
+        "explore_ecosystem": "Esplora l'Ecosistema"
       },
-      "footer": "Last updated: {date}. Sources:",
+      "footer": "Ultimo aggiornamento: {date}. Fonti:",
       "links": {
         "autolykos": "Autolykos v2",
         "github": "ergo (GitHub)"
@@ -2986,481 +2986,481 @@
   "quiz": {
     "intro": {
       "title": "ERGO PATH FINDER",
-      "subtitle": "DISCOVER YOUR PLACE IN THE ECOSYSTEM",
-      "description": "Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will help you identify which aspects of Ergo might interest you most and guide you to personalized resources.",
-      "path_description": "Answer a few simple questions to find your path: Are you a future Investor, Developer, Miner, NFT Enthusiast, DeFi User, or something else?",
-      "start_button": "START QUIZ"
+      "subtitle": "SCOPRI IL TUO POSTO NELL'ECOSISTEMA",
+      "description": "Benvenuto in Ergo! Sei nuovo nel nostro vasto ecosistema e non sai da dove cominciare? Questo breve quiz ti aiuterà a identificare quali aspetti di Ergo potrebbero interessarti di più e ti guiderà verso risorse personalizzate.",
+      "path_description": "Rispondi ad alcune semplici domande per trovare il tuo percorso: sei un futuro Investitore, Sviluppatore, Miner, Appassionato di NFT, Utente DeFi, o qualcos'altro?",
+      "start_button": "INIZIA IL QUIZ"
     },
     "progress": {
-      "question": "QUESTION",
-      "of": "OF",
-      "complete": "COMPLETE"
+      "question": "DOMANDA",
+      "of": "DI",
+      "complete": "COMPLETATO"
     },
     "navigation": {
-      "previous": "Previous",
-      "restart": "Restart"
+      "previous": "Precedente",
+      "restart": "Ricomincia"
     },
     "questions": {
       "q1": {
-        "question": "What primarily attracts you to blockchain technology and Ergo?",
+        "question": "Cosa ti attrae principalmente della tecnologia blockchain e di Ergo?",
         "options": {
-          "investment": "Investment potential and financial opportunities",
-          "building": "Building applications and contributing to new technologies",
-          "mining": "Supporting network security and earning rewards through hardware",
-          "nft": "Collecting, creating, or trading unique digital items and art",
-          "defi": "Using new financial tools for borrowing, lending, or trading",
-          "privacy": "Enhancing my financial privacy and anonymity",
-          "learning": "I'm new and just want to learn the basics first!"
+          "investment": "Potenziale di investimento e opportunità finanziarie",
+          "building": "Costruire applicazioni e contribuire a nuove tecnologie",
+          "mining": "Supportare la sicurezza della rete e guadagnare ricompense tramite hardware",
+          "nft": "Collezionare, creare o scambiare oggetti digitali unici e arte",
+          "defi": "Utilizzare nuovi strumenti finanziari per prestiti, mutui o trading",
+          "privacy": "Migliorare la mia privacy finanziaria e anonimato",
+          "learning": "Sono nuovo e voglio solo imparare prima le basi!"
         }
       },
       "q2": {
-        "question": "How would you describe your technical comfort level?",
+        "question": "Come descriveresti il tuo livello di comfort tecnico?",
         "options": {
-          "very_comfortable": "Very comfortable; I can code or manage complex systems",
-          "moderately_comfortable": "Moderately comfortable; I can learn new software and follow guides",
-          "not_technical": "Not very technical; I prefer simple and user-friendly applications"
+          "very_comfortable": "Molto a mio agio; so programmare e gestire sistemi complessi",
+          "moderately_comfortable": "Abbastanza a mio agio; posso imparare nuovi software e seguire guide",
+          "not_technical": "Non molto tecnico; preferisco applicazioni semplici e intuitive"
         }
       },
       "q3": {
-        "question": "What kind of activity within Ergo are you most interested in?",
+        "question": "Quale tipo di attività all'interno di Ergo ti interessa di più?",
         "options": {
-          "growing_assets": "Growing my assets and exploring financial instruments",
-          "creating_tools": "Creating new tools, dApps, or smart contracts",
-          "securing_network": "Securing the network and earning ERG",
-          "digital_art": "Exploring digital art and collectibles",
-          "understanding_tech": "Deeply understanding the technology and its principles",
-          "financial_privacy": "Protecting my financial privacy"
+          "growing_assets": "Far crescere i miei asset ed esplorare strumenti finanziari",
+          "creating_tools": "Creare nuovi strumenti, dApp o smart contract",
+          "securing_network": "Proteggere la rete e guadagnare ERG",
+          "digital_art": "Esplorare arte digitale e oggetti da collezione",
+          "understanding_tech": "Comprendere a fondo la tecnologia e i suoi principi",
+          "financial_privacy": "Proteggere la mia privacy finanziaria"
         }
       },
       "q4": {
-        "question": "If you're interested in finance/investment, what's your approach to new financial technologies?",
+        "question": "Se sei interessato alla finanza/investimenti, qual è il tuo approccio alle nuove tecnologie finanziarie?",
         "options": {
-          "established_low_risk": "Looking for established, lower-risk ways to engage",
-          "defi_opportunities": "Exploring DeFi opportunities while understanding the risks",
-          "cutting_edge": "Interested in cutting-edge, experimental financial tools",
-          "not_interested": "Not particularly interested in financial aspects"
+          "established_low_risk": "Cerco modalità consolidate e a basso rischio per partecipare",
+          "defi_opportunities": "Esploro le opportunità DeFi comprendendo i rischi",
+          "cutting_edge": "Interessato a strumenti finanziari all'avanguardia e sperimentali",
+          "not_interested": "Non particolarmente interessato agli aspetti finanziari"
         }
       },
       "q5": {
-        "question": "If you want to contribute, what type of participation inspires you most?",
+        "question": "Se vuoi contribuire, quale tipo di partecipazione ti ispira di più?",
         "options": {
-          "writing_code": "Writing code and building software",
-          "creating_content": "Creating educational content, art, or marketing materials",
-          "helping_community": "Helping others in the community and answering questions",
-          "governance": "Participating in governance discussions and proposals",
-          "network_infrastructure": "Supporting network infrastructure"
+          "writing_code": "Scrivere codice e costruire software",
+          "creating_content": "Creare contenuti educativi, arte o materiali di marketing",
+          "helping_community": "Aiutare gli altri nella community e rispondere alle domande",
+          "governance": "Partecipare a discussioni di governance e proposte",
+          "network_infrastructure": "Supportare l'infrastruttura di rete"
         }
       }
     },
     "profiles": {
       "developer": {
-        "name": "Aspiring Developer",
-        "title": "BUILD THE FUTURE",
-        "description": "You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.",
+        "name": "Sviluppatore in Erba",
+        "title": "COSTRUISCI IL FUTURO",
+        "description": "Sei attratto dalla creazione di applicazioni innovative e dal contributo a tecnologie all'avanguardia! Il potente ErgoScript di Ergo e il modello eUTXO offrono opportunità uniche per costruire dApp sicure ed efficienti.",
         "tools": {
           "documentation": {
-            "category": "Documentation & Learning",
+            "category": "Documentazione e Apprendimento",
             "items": {
               "ergodocs": {
                 "name": "ErgoDocs",
-                "description": "Comprehensive developer documentation"
+                "description": "Documentazione completa per sviluppatori"
               },
               "ergoscript": {
-                "name": "ErgoScript Primer",
-                "description": "Learn Ergo's smart contract language"
+                "name": "Primer ErgoScript",
+                "description": "Impara il linguaggio smart contract di Ergo"
               },
               "playground": {
                 "name": "Ergo Playgrounds",
-                "description": "Interactive coding environment"
+                "description": "Ambiente di coding interattivo"
               }
             }
           },
           "development": {
-            "category": "Development Tools",
+            "category": "Strumenti di Sviluppo",
             "items": {
               "appkit": {
                 "name": "AppKit",
-                "description": "Java/Scala development toolkit"
+                "description": "Toolkit di sviluppo Java/Scala"
               },
               "fleet": {
                 "name": "Fleet SDK",
-                "description": "TypeScript SDK for Ergo"
+                "description": "SDK TypeScript per Ergo"
               },
               "sigma_rust": {
                 "name": "Sigma-Rust",
-                "description": "Rust implementation of Sigma protocols"
+                "description": "Implementazione Rust dei Sigma protocols"
               }
             }
           }
         },
         "next_steps": {
-          "docs": "Explore Developer Documentation",
-          "playground": "Try the ErgoScript Playground",
-          "discord": "Join Developer Discord Channels",
-          "grants": "Check Out Developer Grants"
+          "docs": "Esplora la Documentazione per Sviluppatori",
+          "playground": "Prova il Playground ErgoScript",
+          "discord": "Unisciti ai Canali Discord degli Sviluppatori",
+          "grants": "Scopri i Grant per Sviluppatori"
         },
         "community": {
-          "discord": "Developer Discord",
-          "forum": "ErgoForum - Development",
-          "github": "GitHub Organization"
+          "discord": "Discord degli Sviluppatori",
+          "forum": "ErgoForum - Sviluppo",
+          "github": "Organizzazione GitHub"
         }
       },
       "defi": {
-        "name": "DeFi Explorer",
-        "title": "DECENTRALIZED FINANCE PIONEER",
-        "description": "You're ready to explore innovative financial instruments and opportunities that Ergo's decentralized world offers! Discover new ways to manage assets, earn returns, and participate in the future of finance.",
+        "name": "Esploratore DeFi",
+        "title": "PIONIERE DELLA FINANZA DECENTRALIZZATA",
+        "description": "Sei pronto ad esplorare gli strumenti e le opportunità finanziarie innovative che il mondo decentralizzato di Ergo offre! Scopri nuovi modi per gestire asset, guadagnare rendimenti e partecipare al futuro della finanza.",
         "tools": {
           "wallets": {
-            "category": "Wallets",
+            "category": "Wallet",
             "items": {
               "nautilus": {
                 "name": "Nautilus Wallet",
-                "description": "Browser extension wallet"
+                "description": "Wallet come estensione browser"
               },
               "mobile": {
-                "name": "Official Mobile Wallets",
-                "description": "iOS and Android apps"
+                "name": "Wallet Mobile Ufficiali",
+                "description": "App per iOS e Android"
               }
             }
           },
           "platforms": {
-            "category": "DeFi Platforms",
+            "category": "Piattaforme DeFi",
             "items": {
               "spectrum": {
                 "name": "Spectrum Finance",
-                "description": "Decentralized exchange (DEX)"
+                "description": "Exchange decentralizzato (DEX)"
               },
               "sigmausd": {
                 "name": "SigmaUSD",
-                "description": "Algorithmic stablecoin protocol"
+                "description": "Protocollo stablecoin algoritmico"
               },
               "duckpools": {
                 "name": "Duckpools",
-                "description": "Lending and borrowing platform"
+                "description": "Piattaforma di prestiti e mutui"
               }
             }
           },
           "analytics": {
-            "category": "Analytics",
+            "category": "Analisi",
             "items": {
               "ergo_watch": {
                 "name": "ergo.watch",
-                "description": "Network and DeFi analytics"
+                "description": "Analisi di rete e DeFi"
               },
               "explorer": {
                 "name": "Ergo Explorer",
-                "description": "Blockchain explorer"
+                "description": "Esploratore blockchain"
               }
             }
           }
         },
         "next_steps": {
-          "wallet": "Install Nautilus Wallet",
-          "sigmausd": "Learn about SigmaUSD Stablecoin",
-          "spectrum": "Try Trading on Spectrum Finance",
-          "discord": "Join DeFi Discussions on Discord"
+          "wallet": "Installa Nautilus Wallet",
+          "sigmausd": "Scopri la Stablecoin SigmaUSD",
+          "spectrum": "Prova il Trading su Spectrum Finance",
+          "discord": "Unisciti alle Discussioni DeFi su Discord"
         },
         "community": {
-          "discord": "DeFi Discord Channels",
-          "spectrum": "Spectrum Finance Community",
-          "sigmausd": "SigmaUSD Community"
+          "discord": "Canali Discord DeFi",
+          "spectrum": "Community Spectrum Finance",
+          "sigmausd": "Community SigmaUSD"
         }
       },
       "investor": {
-        "name": "Strategic Investor",
-        "title": "LONG-TERM VALUE BUILDER",
-        "description": "You're interested in Ergo's long-term potential and want to understand the fundamentals before making investment decisions. Focus on learning about the technology and ecosystem growth.",
+        "name": "Investitore Strategico",
+        "title": "COSTRUTTORE DI VALORE A LUNGO TERMINE",
+        "description": "Sei interessato al potenziale a lungo termine di Ergo e vuoi capire i fondamentali prima di prendere decisioni di investimento. Concentrati sull'apprendimento della tecnologia e sulla crescita dell'ecosistema.",
         "tools": {
           "getting_started": {
-            "category": "Getting Started",
+            "category": "Per Iniziare",
             "items": {
               "wallets": {
-                "name": "Official Wallets",
-                "description": "Secure ERG storage"
+                "name": "Wallet Ufficiali",
+                "description": "Archiviazione sicura di ERG"
               },
               "exchanges": {
-                "name": "Exchange Listings",
-                "description": "Where to buy ERG"
+                "name": "Listing sugli Exchange",
+                "description": "Dove acquistare ERG"
               }
             }
           },
           "research": {
-            "category": "Research & Analytics",
+            "category": "Ricerca e Analisi",
             "items": {
               "whitepaper": {
-                "name": "Ergo Whitepaper",
-                "description": "Technical foundation"
+                "name": "Whitepaper Ergo",
+                "description": "Fondamento tecnico"
               },
               "ecosystem": {
-                "name": "Ecosystem Overview",
-                "description": "Projects and growth"
+                "name": "Panoramica dell'Ecosistema",
+                "description": "Progetti e crescita"
               },
               "stats": {
-                "name": "Network Statistics",
-                "description": "Real-time metrics"
+                "name": "Statistiche di Rete",
+                "description": "Metriche in tempo reale"
               }
             }
           }
         },
         "next_steps": {
-          "whitepaper": "Read the Ergo Whitepaper",
-          "ecosystem": "Explore the Ecosystem",
-          "tokenomics": "Learn About ERG Tokenomics",
-          "discord": "Join Investor Discussions"
+          "whitepaper": "Leggi il Whitepaper Ergo",
+          "ecosystem": "Esplora l'Ecosistema",
+          "tokenomics": "Scopri la Tokenomica di ERG",
+          "discord": "Unisciti alle Discussioni degli Investitori"
         },
         "community": {
-          "discord": "General Discord",
-          "reddit": "Reddit Community",
-          "telegram": "Telegram Group"
+          "discord": "Discord Generale",
+          "reddit": "Community Reddit",
+          "telegram": "Gruppo Telegram"
         }
       },
       "miner": {
-        "name": "Network Guardian",
-        "title": "SECURING THE BLOCKCHAIN",
-        "description": "You're interested in supporting Ergo's network security while earning rewards! Ergo uses the Autolykos v2 algorithm, which is ASIC-resistant and designed for fair mining.",
+        "name": "Guardiano della Rete",
+        "title": "PROTEGGERE LA BLOCKCHAIN",
+        "description": "Sei interessato a supportare la sicurezza della rete Ergo guadagnando ricompense! Ergo utilizza l'algoritmo Autolykos v2, resistente agli ASIC e progettato per il mining equo.",
         "tools": {
           "information": {
-            "category": "Mining Information",
+            "category": "Informazioni sul Mining",
             "items": {
               "autolykos": {
-                "name": "Autolykos v2 Guide",
-                "description": "Understanding the algorithm"
+                "name": "Guida Autolykos v2",
+                "description": "Comprendere l'algoritmo"
               },
               "pools": {
-                "name": "Mining Pools",
-                "description": "Popular Ergo mining pools"
+                "name": "Pool di Mining",
+                "description": "Pool di mining Ergo più popolari"
               },
               "calculator": {
-                "name": "Profitability Calculator",
-                "description": "Estimate mining returns"
+                "name": "Calcolatore di Redditività",
+                "description": "Stima i rendimenti del mining"
               }
             }
           },
           "software": {
-            "category": "Mining Software",
+            "category": "Software di Mining",
             "items": {
               "official": {
-                "name": "Official Miner",
-                "description": "Reference implementation"
+                "name": "Miner Ufficiale",
+                "description": "Implementazione di riferimento"
               },
               "community": {
-                "name": "Community Miners",
-                "description": "Third-party mining software"
+                "name": "Miner della Community",
+                "description": "Software di mining di terze parti"
               }
             }
           }
         },
         "next_steps": {
-          "autolykos": "Learn About Autolykos v2",
-          "pools": "Find Mining Pools",
-          "calculator": "Calculate Mining Profitability",
-          "community": "Join Mining Community"
+          "autolykos": "Scopri Autolykos v2",
+          "pools": "Trova Pool di Mining",
+          "calculator": "Calcola la Redditività del Mining",
+          "community": "Unisciti alla Community dei Miner"
         },
         "community": {
-          "discord": "Mining Discord Channels",
-          "pools": "Mining Pools Community",
-          "support": "Technical Support"
+          "discord": "Canali Discord del Mining",
+          "pools": "Community dei Pool di Mining",
+          "support": "Supporto Tecnico"
         }
       },
       "nft": {
-        "name": "NFT Enthusiast",
-        "title": "DIGITAL ART COLLECTOR",
-        "description": "You're excited about unique digital items, art, and collectibles! Ergo's NFT ecosystem offers innovative marketplaces and creation tools with low fees and high security.",
+        "name": "Appassionato di NFT",
+        "title": "COLLEZIONISTA DI ARTE DIGITALE",
+        "description": "Sei entusiasta degli oggetti digitali unici, dell'arte e dei collezionabili! L'ecosistema NFT di Ergo offre marketplace innovativi e strumenti di creazione con commissioni basse e alta sicurezza.",
         "tools": {
           "marketplaces": {
-            "category": "NFT Marketplaces",
+            "category": "Marketplace NFT",
             "items": {
               "auction_house": {
                 "name": "Ergo Auction House",
-                "description": "Premier NFT marketplace"
+                "description": "Principale marketplace NFT"
               },
               "skyharbor": {
                 "name": "SkyHarbor",
-                "description": "NFT trading platform"
+                "description": "Piattaforma di trading NFT"
               }
             }
           },
           "creation": {
-            "category": "Creation Tools",
+            "category": "Strumenti di Creazione",
             "items": {
               "tokenjay": {
                 "name": "TokenJay",
-                "description": "NFT minting platform"
+                "description": "Piattaforma di minting NFT"
               },
               "utils": {
                 "name": "Ergo Utils",
-                "description": "NFT creation utilities"
+                "description": "Utility per la creazione di NFT"
               }
             }
           }
         },
         "next_steps": {
-          "auction_house": "Explore Ergo Auction House",
-          "creation": "Learn About NFT Creation",
-          "collections": "Browse NFT Collections",
-          "community": "Join NFT Community"
+          "auction_house": "Esplora Ergo Auction House",
+          "creation": "Scopri la Creazione di NFT",
+          "collections": "Sfoglia le Collezioni NFT",
+          "community": "Unisciti alla Community NFT"
         },
         "community": {
-          "discord": "NFT Discord Channels",
-          "artists": "Artist Community",
-          "collectors": "Collector Groups"
+          "discord": "Canali Discord NFT",
+          "artists": "Community degli Artisti",
+          "collectors": "Gruppi di Collezionisti"
         }
       },
       "privacy": {
-        "name": "Privacy Advocate",
-        "title": "FINANCIAL PRIVACY CHAMPION",
-        "description": "You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.",
+        "name": "Sostenitore della Privacy",
+        "title": "CAMPIONE DELLA PRIVACY FINANZIARIA",
+        "description": "Valorizzi la privacy finanziaria e vuoi proteggere la tua cronologia delle transazioni! Ergo offre strumenti di privacy all'avanguardia basati sui Sigma protocols per un miglioramento della privacy trustless e sicuro.",
         "tools": {
           "privacy_tools": {
-            "category": "Privacy Tools",
+            "category": "Strumenti per la Privacy",
             "items": {
               "ergomixer": {
                 "name": "ErgoMixer",
-                "description": "Non-custodial transaction mixer"
+                "description": "Mixer di transazioni non custodial"
               },
               "stealth": {
-                "name": "Stealth Addresses",
-                "description": "Enhanced address privacy"
+                "name": "Indirizzi Stealth",
+                "description": "Privacy avanzata degli indirizzi"
               }
             }
           },
           "educational": {
-            "category": "Educational Resources",
+            "category": "Risorse Educative",
             "items": {
               "sigma": {
-                "name": "Sigma Protocols Guide",
-                "description": "Understanding privacy tech"
+                "name": "Guida ai Sigma Protocols",
+                "description": "Comprendere la tecnologia della privacy"
               },
               "best_practices": {
-                "name": "Privacy Best Practices",
-                "description": "How to stay private"
+                "name": "Best Practice per la Privacy",
+                "description": "Come mantenere la privacy"
               }
             }
           }
         },
         "next_steps": {
-          "ergomixer": "Learn About ErgoMixer",
-          "sigma": "Understand Sigma Protocols",
-          "best_practices": "Read Privacy Best Practices",
-          "discussions": "Join Privacy Discussions"
+          "ergomixer": "Scopri ErgoMixer",
+          "sigma": "Comprendi i Sigma Protocols",
+          "best_practices": "Leggi le Best Practice per la Privacy",
+          "discussions": "Unisciti alle Discussioni sulla Privacy"
         },
         "community": {
-          "discord": "Privacy Discord Channels",
-          "ergomixer": "ErgoMixer Community",
-          "technical": "Technical Discussions"
+          "discord": "Canali Discord sulla Privacy",
+          "ergomixer": "Community ErgoMixer",
+          "technical": "Discussioni Tecniche"
         }
       },
       "learner": {
-        "name": "Curious Learner",
-        "title": "KNOWLEDGE SEEKER",
-        "description": "You're new to Ergo and want to understand the fundamentals first! Perfect - learning the basics will help you make informed decisions about how to engage with the ecosystem.",
+        "name": "Studente Curioso",
+        "title": "CERCATORE DI CONOSCENZA",
+        "description": "Sei nuovo in Ergo e vuoi prima capire i fondamentali! Perfetto — imparare le basi ti aiuterà a prendere decisioni informate su come interagire con l'ecosistema.",
         "tools": {
           "educational": {
-            "category": "Educational Resources",
+            "category": "Risorse Educative",
             "items": {
               "faq": {
-                "name": "FAQ for Beginners",
-                "description": "Common questions answered"
+                "name": "FAQ per Principianti",
+                "description": "Domande comuni con risposta"
               },
               "introduction": {
-                "name": "Quick Introduction",
-                "description": "Ergo overview"
+                "name": "Introduzione Rapida",
+                "description": "Panoramica di Ergo"
               },
               "handbook": {
-                "name": "Ergonaut Handbook",
-                "description": "Comprehensive guide"
+                "name": "Manuale dell'Ergonaut",
+                "description": "Guida completa"
               }
             }
           },
           "community": {
-            "category": "Community Support",
+            "category": "Supporto della Community",
             "items": {
               "newcomer": {
-                "name": "Newcomer Channels",
-                "description": "Beginner-friendly discussions"
+                "name": "Canali per Nuovi Arrivati",
+                "description": "Discussioni amichevoli per principianti"
               },
               "learning_groups": {
-                "name": "Learning Groups",
-                "description": "Study groups and mentorship"
+                "name": "Gruppi di Studio",
+                "description": "Gruppi di studio e mentorship"
               }
             }
           }
         },
         "next_steps": {
-          "faq": "Read the FAQ for Beginners",
-          "introduction": "Take the Quick Introduction",
-          "community": "Join Newcomer Community",
-          "learning_hub": "Explore the Learning Hub"
+          "faq": "Leggi le FAQ per Principianti",
+          "introduction": "Segui l'Introduzione Rapida",
+          "community": "Unisciti alla Community dei Nuovi Arrivati",
+          "learning_hub": "Esplora l'Hub di Apprendimento"
         },
         "community": {
-          "discord": "General Discord",
-          "newcomer": "Newcomer Support",
-          "learning_groups": "Learning Groups"
+          "discord": "Discord Generale",
+          "newcomer": "Supporto per Nuovi Arrivati",
+          "learning_groups": "Gruppi di Studio"
         }
       }
     },
     "results": {
-      "your_path": "YOUR ERGO PATH",
-      "next_steps": "YOUR NEXT STEPS",
+      "your_path": "IL TUO PERCORSO ERGO",
+      "next_steps": "I TUOI PROSSIMI PASSI",
       "community": {
-        "title": "CONNECT WITH YOUR COMMUNITY",
-        "description": "Join others who share your interests and get support on your Ergo journey"
+        "title": "CONNETTITI CON LA TUA COMMUNITY",
+        "description": "Unisciti ad altri che condividono i tuoi interessi e ricevi supporto nel tuo percorso Ergo"
       },
       "explore_more": {
-        "title": "WANT TO EXPLORE OTHER ASPECTS OF ERGO?",
-        "ecosystem": "Explore Entire Ecosystem",
-        "faq": "Read Full FAQ",
-        "community": "Join Main Community"
+        "title": "VUOI ESPLORARE ALTRI ASPETTI DI ERGO?",
+        "ecosystem": "Esplora l'Intero Ecosistema",
+        "faq": "Leggi le FAQ Complete",
+        "community": "Unisciti alla Community Principale"
       },
-      "take_again": "Take Quiz Again"
+      "take_again": "Ripeti il Quiz"
     },
     "quiz": {
-      "title": "Find Your Path in Ergo",
-      "subtitle": "Personalized recommendations based on your interests",
-      "description": "Discover how you can best contribute to and benefit from the Ergo ecosystem",
+      "title": "Trova il Tuo Percorso in Ergo",
+      "subtitle": "Raccomandazioni personalizzate in base ai tuoi interessi",
+      "description": "Scopri come puoi contribuire al meglio all'ecosistema Ergo e trarne vantaggio",
       "questions": [
         {
-          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "question": "Cosa ti attrae principalmente della tecnologia blockchain e di Ergo?",
           "options": [
             {
-              "text": "Investment potential and financial opportunities",
+              "text": "Potenziale di investimento e opportunità finanziarie",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Building applications and contributing to new technologies",
+              "text": "Costruire applicazioni e contribuire a nuove tecnologie",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Supporting network security and earning rewards through hardware",
+              "text": "Supportare la sicurezza della rete e guadagnare ricompense tramite hardware",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Collecting, creating, or trading unique digital items and art",
+              "text": "Collezionare, creare o scambiare oggetti digitali unici e arte",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Using new financial tools for borrowing, lending, or trading",
+              "text": "Utilizzare nuovi strumenti finanziari per prestiti, mutui o trading",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Enhancing my financial privacy and anonymity",
+              "text": "Migliorare la mia privacy finanziaria e anonimato",
               "profiles": [
                 "privacy"
               ]
             },
             {
-              "text": "I'm new and just want to learn the basics first!",
+              "text": "Sono nuovo e voglio solo imparare prima le basi!",
               "profiles": [
                 "beginner"
               ]
@@ -3468,23 +3468,23 @@
           ]
         },
         {
-          "question": "How would you describe your technical comfort level?",
+          "question": "Come descriveresti il tuo livello di comfort tecnico?",
           "options": [
             {
-              "text": "Very comfortable; I can code or manage complex systems",
+              "text": "Molto a mio agio; so programmare e gestire sistemi complessi",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Moderately comfortable; I can learn new software and follow guides",
+              "text": "Abbastanza a mio agio; posso imparare nuovi software e seguire guide",
               "profiles": [
                 "miner",
                 "defi"
               ]
             },
             {
-              "text": "Not very technical; I prefer simple and user-friendly applications",
+              "text": "Non molto tecnico; preferisco applicazioni semplici e intuitive",
               "profiles": [
                 "beginner",
                 "investor"
@@ -3493,41 +3493,41 @@
           ]
         },
         {
-          "question": "What are you most interested in doing with Ergo?",
+          "question": "Cosa ti interessa fare di più con Ergo?",
           "options": [
             {
-              "text": "Growing my assets and exploring financial instruments",
+              "text": "Far crescere i miei asset ed esplorare strumenti finanziari",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Creating new tools, dApps, or smart contracts",
+              "text": "Creare nuovi strumenti, dApp o smart contract",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Securing the network and earning ERG",
+              "text": "Proteggere la rete e guadagnare ERG",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Exploring digital art and collectibles",
+              "text": "Esplorare arte digitale e oggetti da collezione",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Deeply understanding the technology and its principles",
+              "text": "Comprendere a fondo la tecnologia e i suoi principi",
               "profiles": [
                 "beginner"
               ]
             },
             {
-              "text": "Protecting my financial privacy",
+              "text": "Proteggere la mia privacy finanziaria",
               "profiles": [
                 "privacy"
               ]
@@ -3535,29 +3535,29 @@
           ]
         },
         {
-          "question": "What's your risk tolerance when it comes to new financial tools?",
+          "question": "Qual è la tua tolleranza al rischio quando si tratta di nuovi strumenti finanziari?",
           "options": [
             {
-              "text": "Looking for established, lower-risk ways to engage",
+              "text": "Cerco modalità consolidate e a basso rischio per partecipare",
               "profiles": [
                 "investor"
               ]
             },
             {
-              "text": "Exploring DeFi opportunities while understanding the risks",
+              "text": "Esploro le opportunità DeFi comprendendo i rischi",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Interested in cutting-edge, experimental financial tools",
+              "text": "Interessato a strumenti finanziari all'avanguardia e sperimentali",
               "profiles": [
                 "developer",
                 "privacy"
               ]
             },
             {
-              "text": "Not particularly interested in financial aspects",
+              "text": "Non particolarmente interessato agli aspetti finanziari",
               "profiles": [
                 "beginner",
                 "miner",
@@ -3567,36 +3567,36 @@
           ]
         },
         {
-          "question": "How do you prefer to contribute to projects you care about?",
+          "question": "Come preferisci contribuire ai progetti a cui tieni?",
           "options": [
             {
-              "text": "Writing code and building software",
+              "text": "Scrivere codice e costruire software",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Creating educational content, art, or marketing materials",
+              "text": "Creare contenuti educativi, arte o materiali di marketing",
               "profiles": [
                 "nft",
                 "beginner"
               ]
             },
             {
-              "text": "Helping others in the community and answering questions",
+              "text": "Aiutare gli altri nella community e rispondere alle domande",
               "profiles": [
                 "beginner"
               ]
             },
             {
-              "text": "Participating in governance discussions and proposals",
+              "text": "Partecipare a discussioni di governance e proposte",
               "profiles": [
                 "investor",
                 "privacy"
               ]
             },
             {
-              "text": "Supporting network infrastructure",
+              "text": "Supportare l'infrastruttura di rete",
               "profiles": [
                 "miner"
               ]
@@ -3606,240 +3606,240 @@
       ]
     },
     "comparison": {
-      "title": "Platform Comparison",
-      "subtitle": "How Ergo compares to other blockchains",
-      "description": "Understanding Ergo's unique advantages",
+      "title": "Confronto tra Piattaforme",
+      "subtitle": "Come Ergo si confronta con altre blockchain",
+      "description": "Comprendere i vantaggi unici di Ergo",
       "keyDifferentiators": [
         {
-          "title": "Predictable & Auditable Security",
-          "ergo": "No known protocol-level reentrancy class; predictable execution costs",
-          "others": "Reentrancy patterns and gas price auctions common in account models"
+          "title": "Sicurezza Prevedibile e Verificabile",
+          "ergo": "Nessuna classe di reentrancy nota a livello di protocollo; costi di esecuzione prevedibili",
+          "others": "Pattern di reentrancy e aste sul prezzo del gas comuni nei modelli account"
         },
         {
-          "title": "Native Privacy",
-          "ergo": "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
-          "others": "Often requires external add-ons or trusted services"
+          "title": "Privacy Nativa",
+          "ergo": "Sigma protocols per threshold/multisig e privacy; costruzioni ring-like possibili",
+          "others": "Spesso richiede componenti aggiuntivi esterni o servizi fidati"
         },
         {
-          "title": "Developer Experience",
-          "ergo": "Declarative ErgoScript with eUTXO reasoning",
-          "others": "Mutable global state; complex reentrancy-safe patterns"
+          "title": "Esperienza dello Sviluppatore",
+          "ergo": "ErgoScript dichiarativo con ragionamento eUTXO",
+          "others": "Stato globale mutabile; pattern complessi sicuri contro la reentrancy"
         },
         {
-          "title": "Fair & Decentralized",
-          "ergo": "Fair PoW launch, ASIC-resistant (GPU-friendly)",
-          "others": "ICO allocations or validator gating"
+          "title": "Equo e Decentralizzato",
+          "ergo": "Lancio PoW equo, resistente agli ASIC (GPU-friendly)",
+          "others": "Allocazioni ICO o controllo dei validator"
         }
       ]
     },
     "community": {
-      "title": "Join the Community",
-      "subtitle": "Connect with Ergo enthusiasts worldwide",
-      "description": "Be part of the growing Ergo ecosystem",
+      "title": "Unisciti alla Community",
+      "subtitle": "Connettiti con gli appassionati di Ergo in tutto il mondo",
+      "description": "Fai parte del crescente ecosistema Ergo",
       "contributions": [
         {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
-          "tasks": "Smart Contracts, Frontend Apps, Tools & Libraries"
+          "title": "Sviluppo",
+          "description": "Costruisci dApp, strumenti e infrastrutture",
+          "tasks": "Smart Contract, App Frontend, Strumenti e Librerie"
         },
         {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
-          "tasks": "Technical Writing, Video Content, Tutorials"
+          "title": "Creazione di Contenuti",
+          "description": "Articoli, video, tutorial, documentazione",
+          "tasks": "Scrittura Tecnica, Contenuti Video, Tutorial"
         },
         {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
-          "tasks": "User Support, Onboarding, Mentoring"
+          "title": "Supporto alla Community",
+          "description": "Aiuta i nuovi arrivati e rispondi alle domande",
+          "tasks": "Supporto Utenti, Onboarding, Mentoring"
         },
         {
           "title": "Governance",
-          "description": "Participate in protocol decisions",
-          "tasks": "EIP Reviews, Voting, Proposals"
+          "description": "Partecipa alle decisioni sul protocollo",
+          "tasks": "Revisioni EIP, Votazioni, Proposte"
         },
         {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
-          "tasks": "Node Operation, Mining, Network Security"
+          "title": "Infrastruttura",
+          "description": "Esegui nodi, mining, supporto alla rete",
+          "tasks": "Gestione Nodi, Mining, Sicurezza della Rete"
         },
         {
-          "title": "Research",
-          "description": "Protocol research and improvements",
-          "tasks": "Academic Papers, Protocol Analysis, Innovation"
+          "title": "Ricerca",
+          "description": "Ricerca sul protocollo e miglioramenti",
+          "tasks": "Articoli Accademici, Analisi del Protocollo, Innovazione"
         }
       ]
     }
   },
   "introduction": {
     "hero": {
-      "title": "Ergo — PoW smart‑contract platform with eUTXO & Sigma Protocols",
-      "subtitle": "A next‑generation, ASIC‑resistant Proof‑of‑Work platform with predictable, auditable smart contracts and native privacy."
+      "title": "Ergo — piattaforma PoW con smart contract, eUTXO e Sigma Protocols",
+      "subtitle": "Una piattaforma Proof-of-Work di nuova generazione, resistente agli ASIC, con smart contract prevedibili e verificabili e privacy nativa."
     },
     "breadcrumb": {
       "home": "Home",
-      "introduction": "Introduction"
+      "introduction": "Introduzione"
     },
     "schema": {
       "tech_article": {
-        "headline": "Ergo — PoW smart‑contract platform (eUTXO & Sigma Protocols)",
-        "description": "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs."
+        "headline": "Ergo — piattaforma PoW con smart contract (eUTXO e Sigma Protocols)",
+        "description": "Introduzione a Ergo: PoW resistente agli ASIC, smart contract eUTXO, Sigma protocols (ZK), storage rent, NIPoPoWs."
       }
     },
     "what_is_ergo": {
-      "title": "What is",
-      "description_1": "Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.",
-      "description_2": "Its mission is to provide tools for decentralized and accessible financial systems — empowering people with economic freedom without intermediaries. Learn about the",
-      "and": "and",
+      "title": "Cos'è",
+      "description_1": "Ergo è progettato per sviluppare applicazioni decentralizzate (dApp) e contratti finanziari sicuri e potenti. Si basa su un decennio di teoria e sviluppo blockchain, combinando principi consolidati con nuove ricerche.",
+      "description_2": "La sua missione è fornire strumenti per sistemi finanziari decentralizzati e accessibili — dando alle persone libertà economica senza intermediari. Scopri il",
+      "and": "e",
       "links": {
-        "eutxo_model": "eUTXO smart‑contract model",
-        "autolykos": "Autolykos (ASIC‑resistant PoW)",
+        "eutxo_model": "modello smart contract eUTXO",
+        "autolykos": "Autolykos (PoW resistente agli ASIC)",
         "storage_rent": "Storage Rent",
-        "sigma_privacy": "Sigma‑powered privacy"
+        "sigma_privacy": "privacy basata su Sigma"
       }
     },
     "why_ergo": {
-      "title": "Why Ergo?",
+      "title": "Perché Ergo?",
       "items": {
-        "eutxo_contracts": "eUTXO smart contracts with predictable execution",
-        "sigma_protocols": "Sigma (ZK) protocols for threshold/multisig and privacy",
-        "autolykos_pow": "Autolykos — ASIC‑resistant, GPU‑friendly PoW",
-        "storage_rent_nipopows": "Storage Rent and NIPoPoWs (succinct proofs)"
+        "eutxo_contracts": "Smart contract eUTXO con esecuzione prevedibile",
+        "sigma_protocols": "Sigma protocols (ZK) per threshold/multisig e privacy",
+        "autolykos_pow": "Autolykos — PoW resistente agli ASIC, GPU-friendly",
+        "storage_rent_nipopows": "Storage Rent e NIPoPoWs (prove sintetiche)"
       }
     },
     "key_innovation": {
-      "title": "Key Innovation",
-      "description": "Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, creating a unique platform for complex financial applications."
+      "title": "Innovazione Chiave",
+      "description": "Ergo combina la sicurezza del modello UTXO di Bitcoin con l'espressività degli smart contract di Ethereum, creando una piattaforma unica per applicazioni finanziarie complesse."
     },
     "references": {
-      "label": "References",
+      "label": "Riferimenti",
       "autolykos_v2": "Autolykos v2",
       "ergo_github": "ergo (GitHub)"
     },
     "features": {
       "privacy_first": {
-        "title": "Privacy First",
-        "description": "Built-in privacy at the protocol level"
+        "title": "Privacy Prima di Tutto",
+        "description": "Privacy integrata a livello di protocollo"
       },
       "storage_rent": {
         "title": "Storage Rent",
-        "description": "Sustainable economic model for long-term viability"
+        "description": "Modello economico sostenibile per la fattibilità a lungo termine"
       },
       "light_clients": {
-        "title": "Light Clients",
-        "description": "Succinct proofs (NIPoPoWs), near full-node guarantees"
+        "title": "Client Leggeri",
+        "description": "Prove sintetiche (NIPoPoWs), garanzie quasi equivalenti a un nodo completo"
       },
       "fair_launch": {
-        "title": "Fair Launch",
-        "description": "No premine, no ICO, community-driven"
+        "title": "Lancio Equo",
+        "description": "Nessun premine, nessuna ICO, guidato dalla community"
       }
     },
     "principles": {
       "decentralized_first": {
-        "title": "Decentralized First",
-        "description": "Launched fairly with no premine or ICO. Community-driven for maximum decentralization."
+        "title": "Decentralizzazione Prima di Tutto",
+        "description": "Lanciato in modo equo senza premine o ICO. Guidato dalla community per la massima decentralizzazione."
       },
       "secure_reliable": {
-        "title": "Secure & Reliable",
-        "description": "Built on Proof-of-Work consensus (Autolykos) and the innovative eUTXO model."
+        "title": "Sicuro e Affidabile",
+        "description": "Basato sul consenso Proof-of-Work (Autolykos) e sul modello eUTXO innovativo."
       },
       "powerful_contracts": {
-        "title": "Powerful Contracts",
-        "description": "ErgoScript enables secure financial apps that are hard to implement safely in account-based models."
+        "title": "Contratti Potenti",
+        "description": "ErgoScript abilita app finanziarie sicure difficili da implementare in modo sicuro nei modelli basati su account."
       },
       "long_term_focus": {
-        "title": "Long-term Focus",
-        "description": "Designed for resilience with focus on real-world utility over speculation."
+        "title": "Focus a Lungo Termine",
+        "description": "Progettato per la resilienza con focus sull'utilità reale piuttosto che sulla speculazione."
       }
     },
     "core_principles": {
-      "title": "Core",
-      "principles": "Principles",
-      "subtitle": "Built on fundamental values that ensure long-term sustainability and real-world utility"
+      "title": "Principi",
+      "principles": "Fondamentali",
+      "subtitle": "Costruito su valori fondamentali che garantiscono sostenibilità a lungo termine e utilità nel mondo reale"
     },
     "technologies": {
       "proof_of_work": {
         "title": "Proof-of-Work (PoW)",
-        "subtitle": "Maximum security",
-        "description": "Autolykos algorithm is ASIC-resistant, ensuring fair distribution and robust security."
+        "subtitle": "Sicurezza massima",
+        "description": "L'algoritmo Autolykos è resistente agli ASIC, garantendo una distribuzione equa e una sicurezza robusta."
       },
       "extended_utxo": {
-        "title": "Extended UTXO",
-        "subtitle": "Smart money",
-        "description": "Allows complex smart contracts with better scalability and predictable fees."
+        "title": "UTXO Esteso",
+        "subtitle": "Denaro intelligente",
+        "description": "Consente smart contract complessi con migliore scalabilità e commissioni prevedibili."
       },
       "sigma_protocols": {
         "title": "Sigma Protocols",
-        "subtitle": "Advanced cryptography",
-        "description": "Enables privacy and advanced crypto primitives (threshold/multisig, ring-like constructions)."
+        "subtitle": "Crittografia avanzata",
+        "description": "Abilita la privacy e primitive crittografiche avanzate (threshold/multisig, costruzioni ring-like)."
       }
     },
     "key_technologies": {
-      "title": "Key",
-      "technologies": "Technologies",
-      "subtitle": "Advanced cryptography and innovative consensus mechanisms power the Ergo platform"
+      "title": "Tecnologie",
+      "technologies": "Chiave",
+      "subtitle": "Crittografia avanzata e meccanismi di consenso innovativi alimentano la piattaforma Ergo"
     },
-    "learn_more": "Learn More",
+    "learn_more": "Scopri di Più",
     "code_example": {
-      "title": "ErgoScript Example: Time-Locked Contract",
-      "comment_after": "After deadline, only recipient can spend",
-      "comment_before": "Before deadline, only sender can spend"
+      "title": "Esempio ErgoScript: Contratto con Blocco Temporale",
+      "comment_after": "Dopo la scadenza, solo il destinatario può spendere",
+      "comment_before": "Prima della scadenza, solo il mittente può spendere"
     },
     "what_makes_different": {
-      "what_makes": "WHAT MAKES",
-      "ergo_different": "ERGO DIFFERENT",
-      "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable"
+      "what_makes": "COSA RENDE",
+      "ergo_different": "ERGO DIVERSO",
+      "subtitle": "Ergo combina tecniche crittografiche comprovate con un design blockchain innovativo per creare una piattaforma sicura, scalabile e sostenibile"
     },
     "pillars": {
       "fair_launch_pow": {
-        "title": "FAIR LAUNCH & PROOF-OF-WORK",
-        "description": "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one."
+        "title": "LANCIO EQUO E PROOF-OF-WORK",
+        "description": "Lanciato senza ICO o premine, protetto da Autolykos v2 — un algoritmo Proof-of-Work resistente agli ASIC ed efficiente dal punto di vista energetico, che garantisce una distribuzione equa e una sicurezza robusta fin dal primo giorno."
       },
       "eutxo_ergoscript": {
-        "title": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
-        "description": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi."
+        "title": "eUTXO E ERGOSCRIPT PER DEFI AVANZATA",
+        "description": "Il modello UTXO esteso combinato con il nostro potente linguaggio ErgoScript abilita applicazioni finanziarie altamente sicure, prevedibili ed espressive, spingendo i confini della DeFi."
       },
       "storage_rent_sustainability": {
-        "title": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
-        "description": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient."
+        "title": "STORAGE RENT PER LA SOSTENIBILITÀ A LUNGO TERMINE",
+        "description": "Un meccanismo innovativo che garantisce la salute della rete e costi operativi prevedibili riciclando le commissioni dei dati inutilizzati («dust») verso i miner, prevenendo il bloat e mantenendo la chain efficiente."
       },
       "research_driven": {
-        "title": "RESEARCH-DRIVEN INNOVATION",
-        "description": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity."
+        "title": "INNOVAZIONE BASATA SULLA RICERCA",
+        "description": "Basato su ricerca accademica peer-reviewed e principi fondamentali, Ergo promuove soluzioni robuste e innovative progettate per la longevità nel mondo reale."
       },
       "optional_privacy": {
-        "title": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
-        "description": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions."
+        "title": "PRIVACY OPZIONALE ROBUSTA (Σ-PROTOCOLS)",
+        "description": "Ergo offre funzionalità di privacy flessibili basate sui Sigma protocols, abilitando multi-firma sicura, ring signature e zero-knowledge proof per opzioni di riservatezza personalizzate nelle transazioni."
       },
       "community_led": {
-        "title": "COMMUNITY-LED DEVELOPMENT",
-        "description": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control."
+        "title": "SVILUPPO GUIDATO DALLA COMMUNITY",
+        "description": "Un progetto open-source veramente decentralizzato in cui lo sviluppo è guidato da membri appassionati della community e sviluppatori di tutto il mondo, garantendo che il protocollo rimanga libero dal controllo centralizzato."
       }
     },
     "faq": {
       "title": "FAQ",
       "eutxo_model": {
-        "question": "What is the eUTXO model?",
-        "answer": "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs."
+        "question": "Cos'è il modello eUTXO?",
+        "answer": "eUTXO è un'estensione dell'UTXO di Bitcoin che abilita smart contract espressivi e parallelizzabili con costi di esecuzione prevedibili."
       },
       "sigma_protocols": {
-        "question": "What are Sigma protocols on Ergo?",
-        "answer": "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup."
+        "question": "Cosa sono i Sigma protocols su Ergo?",
+        "answer": "I Sigma protocols sono prove crittografiche native che abilitano threshold/multisig e privacy senza setup fidato."
       },
       "proof_of_work": {
-        "question": "Why Proof‑of‑Work for Ergo?",
-        "answer": "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record."
+        "question": "Perché Proof-of-Work per Ergo?",
+        "answer": "Il PoW (Autolykos) mantiene il mining accessibile (resistente agli ASIC), supporta la decentralizzazione e ha una comprovata storia di sicurezza."
       }
     },
     "cta": {
-      "title": "Ready to",
-      "dive_in": "Dive In",
-      "description": "Your journey into the Ergo ecosystem is just a few clicks away. Get a secure wallet and start exploring the future of finance.",
+      "title": "Pronto a",
+      "dive_in": "Immergerti",
+      "description": "Il tuo viaggio nell'ecosistema Ergo è a pochi clic di distanza. Ottieni un wallet sicuro e inizia ad esplorare il futuro della finanza.",
       "buttons": {
-        "get_wallet": "Get an Ergo Wallet",
-        "explore_ecosystem": "Explore Ecosystem",
-        "documentation": "Documentation"
+        "get_wallet": "Ottieni un Wallet Ergo",
+        "explore_ecosystem": "Esplora l'Ecosistema",
+        "documentation": "Documentazione"
       }
     },
-    "last_updated": "Last updated"
+    "last_updated": "Ultimo aggiornamento"
   }
 }

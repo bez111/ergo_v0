@@ -2,461 +2,461 @@
   "use": {
     "defi": {
       "seo": {
-        "title": "DeFi on Ergo — Coming Soon",
-        "description": "Discover decentralized finance opportunities on Ergo. Advanced DeFi protocols, yield strategies, and financial primitives — launching soon.",
-        "keywords": "Ergo DeFi, decentralized finance, yield farming, liquidity pools, smart contracts, blockchain finance",
-        "ogTitle": "DeFi on Ergo — Coming Soon",
-        "ogDescription": "Advanced DeFi protocols and financial primitives on Ergo — launching soon.",
-        "ogAlt": "Ergo DeFi — Coming Soon",
-        "twitterTitle": "DeFi on Ergo — Coming Soon",
-        "twitterDescription": "Advanced DeFi protocols and financial primitives on Ergo — launching soon."
+        "title": "Ergo'da DeFi — Yakında",
+        "description": "Ergo'da merkeziyetsiz finans fırsatlarını keşfedin. Gelişmiş DeFi protokolleri, getiri stratejileri ve finansal ilkeler — yakında başlıyor.",
+        "keywords": "Ergo DeFi, merkeziyetsiz finans, getiri çiftçiliği, likidite havuzları, akıllı sözleşmeler, blockchain finans",
+        "ogTitle": "Ergo'da DeFi — Yakında",
+        "ogDescription": "Ergo'da gelişmiş DeFi protokolleri ve finansal ilkeler — yakında başlıyor.",
+        "ogAlt": "Ergo DeFi — Yakında",
+        "twitterTitle": "Ergo'da DeFi — Yakında",
+        "twitterDescription": "Ergo'da gelişmiş DeFi protokolleri ve finansal ilkeler — yakında başlıyor."
       }
     },
     "guides": {
-      "title": "Ergo Guides",
-      "subtitle": "Master the Ergo ecosystem with comprehensive guides, from wallet setup to advanced smart contract development.",
+      "title": "Ergo Rehberleri",
+      "subtitle": "Cüzdan kurulumundan gelişmiş akıllı sözleşme geliştirmeye kadar kapsamlı rehberlerle Ergo ekosisteminde ustalaşın.",
       "seo": {
-        "title": "Ergo User Guides | Wallets, DeFi, Mining & Trading Tutorials",
-        "description": "Complete collection of Ergo user guides. Learn how to use wallets, trade on DEXs, mine ERG, stake tokens, and navigate the ecosystem. Step-by-step tutorials for all levels.",
-        "keywords": "ergo guides, ergo tutorials, how to use ergo, ergo wallet guide, defi tutorial, mining guide, trading guide, blockchain tutorials",
-        "ogTitle": "Ergo User Guides - Complete Tutorial Collection",
-        "ogDescription": "Master Ergo with our comprehensive guides. Wallets, DeFi, mining, and more.",
-        "twitterTitle": "Ergo Guides | Learn to Use Ergo Ecosystem",
-        "twitterDescription": "Step-by-step tutorials for wallets, DeFi, mining, and trading on Ergo."
+        "title": "Ergo Kullanıcı Rehberleri | Cüzdanlar, DeFi, Madencilik ve Ticaret Eğitimleri",
+        "description": "Ergo kullanıcı rehberlerinin eksiksiz koleksiyonu. Cüzdanların nasıl kullanılacağını, DEX'lerde nasıl işlem yapılacağını, ERG'nin nasıl madencilik yapılacağını, token nasıl stake edileceğini ve ekosistemde nasıl gezineceğinizi öğrenin. Her seviye için adım adım eğitimler.",
+        "keywords": "ergo rehberleri, ergo eğitimleri, ergo nasıl kullanılır, ergo cüzdan rehberi, defi eğitimi, madencilik rehberi, ticaret rehberi, blockchain eğitimleri",
+        "ogTitle": "Ergo Kullanıcı Rehberleri - Eksiksiz Eğitim Koleksiyonu",
+        "ogDescription": "Kapsamlı rehberlerimizle Ergo'da ustalaşın. Cüzdanlar, DeFi, madencilik ve daha fazlası.",
+        "twitterTitle": "Ergo Rehberleri | Ergo Ekosistemini Kullanmayı Öğrenin",
+        "twitterDescription": "Ergo'da cüzdanlar, DeFi, madencilik ve ticaret için adım adım eğitimler."
       },
       "filters": {
-        "allGuides": "All Guides",
-        "categoryGuides": "{category} Guides",
+        "allGuides": "Tüm Rehberler",
+        "categoryGuides": "{category} Rehberleri",
         "noGuides": {
-          "title": "No guides found",
-          "description": "Try adjusting your search or filter criteria",
-          "clearFilters": "Clear Filters"
+          "title": "Rehber bulunamadı",
+          "description": "Arama veya filtre kriterlerinizi ayarlamayı deneyin",
+          "clearFilters": "Filtreleri Temizle"
         }
       },
       "schema": {
         "collection": {
-          "name": "Ergo User Guides Collection",
-          "description": "Comprehensive collection of tutorials for using Ergo blockchain",
+          "name": "Ergo Kullanıcı Rehberleri Koleksiyonu",
+          "description": "Ergo blockchain kullanımı için kapsamlı eğitim koleksiyonu",
           "guides": {
             "wallet": {
-              "name": "Wallet Setup Guide",
-              "description": "How to set up and use Ergo wallets"
+              "name": "Cüzdan Kurulum Rehberi",
+              "description": "Ergo cüzdanlarının nasıl kurulacağı ve kullanılacağı"
             },
             "defi": {
-              "name": "DeFi Trading Guide",
-              "description": "How to trade on Ergo DEXs"
+              "name": "DeFi Ticaret Rehberi",
+              "description": "Ergo DEX'lerinde nasıl işlem yapılır"
             },
             "mining": {
-              "name": "Mining Setup Guide",
-              "description": "How to start mining ERG"
+              "name": "Madencilik Kurulum Rehberi",
+              "description": "ERG madenciliğine nasıl başlanır"
             },
             "nft": {
-              "name": "NFT Guide",
-              "description": "How to buy and sell NFTs on Ergo"
+              "name": "NFT Rehberi",
+              "description": "Ergo'da NFT'ler nasıl alınır ve satılır"
             }
           }
         },
         "faq": {
           "available": {
-            "question": "What guides are available for Ergo?",
-            "answer": "We offer comprehensive guides for wallet setup, DeFi trading, mining, NFT marketplaces, governance participation, and developer tools."
+            "question": "Ergo için hangi rehberler mevcuttur?",
+            "answer": "Cüzdan kurulumu, DeFi ticareti, madencilik, NFT pazaryerleri, yönetişim katılımı ve geliştirici araçları için kapsamlı rehberler sunuyoruz."
           },
           "beginners": {
-            "question": "Are the guides suitable for beginners?",
-            "answer": "Yes, our guides cater to all levels with clear step-by-step instructions, screenshots, and video tutorials where applicable."
+            "question": "Rehberler yeni başlayanlar için uygun mu?",
+            "answer": "Evet, rehberlerimiz net adım adım talimatlar, ekran görüntüleri ve uygulanabilir durumlarda video eğitimleriyle her seviyeye hitap etmektedir."
           },
           "updates": {
-            "question": "How often are guides updated?",
-            "answer": "Guides are regularly updated to reflect the latest features, protocols, and best practices in the Ergo ecosystem."
+            "question": "Rehberler ne sıklıkla güncelleniyor?",
+            "answer": "Rehberler, Ergo ekosistemindeki en son özellikler, protokoller ve en iyi uygulamaları yansıtmak için düzenli olarak güncellenmektedir."
           },
           "help": {
-            "question": "Where can I get help if I'm stuck?",
-            "answer": "Join our Discord or Telegram communities for real-time support, or check the FAQ section in each guide."
+            "question": "Takıldığımda nereden yardım alabilirim?",
+            "answer": "Gerçek zamanlı destek için Discord veya Telegram topluluklarımıza katılın ya da her rehberdeki SSS bölümünü inceleyin."
           }
         },
         "learningResource": {
-          "name": "Ergo User Guide Library",
-          "description": "Educational resources for using Ergo blockchain applications",
-          "level": "Beginner to Advanced",
-          "teaches": "Cryptocurrency Wallets, DeFi Trading, Blockchain Mining, NFT Trading, Smart Contract Interaction"
+          "name": "Ergo Kullanıcı Rehberi Kütüphanesi",
+          "description": "Ergo blockchain uygulamalarını kullanmak için eğitim kaynakları",
+          "level": "Başlangıçtan İleri Düzeye",
+          "teaches": "Kripto Para Cüzdanları, DeFi Ticareti, Blockchain Madenciliği, NFT Ticareti, Akıllı Sözleşme Etkileşimi"
         }
       }
     },
     "babelFees": {
-      "title": "Babel Fees",
-      "subtitle": "Pay transaction fees with any token, not just ERG. Revolutionary flexibility for Ergo users.",
-      "description": "Babel Fees (EIP-0019) enable seamless fee payments using native tokens, enhancing UX and token utility across the ecosystem.",
+      "title": "Babel Ücretleri",
+      "subtitle": "İşlem ücretlerini yalnızca ERG ile değil, herhangi bir tokenla ödeyin. Ergo kullanıcıları için devrim niteliğinde esneklik.",
+      "description": "Babel Ücretleri (EIP-0019), yerel tokenlar kullanılarak kesintisiz ücret ödemelerini mümkün kılarak ekosistem genelinde kullanıcı deneyimini ve token faydasını artırır.",
       "seo": {
-        "title": "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
-        "description": "Learn about Babel Fees on Ergo - pay transaction fees with any token. Understand how this innovative feature enhances UX and token utility.",
-        "keywords": "babel fees, ergo transaction fees, pay fees with tokens, defi fees, blockchain fees, ergo babel, token fees, gas fees alternative",
-        "ogTitle": "Babel Fees on Ergo",
-        "ogDescription": "Pay transaction fees with any token on Ergo. Enhanced UX and token utility.",
-        "twitterTitle": "Babel Fees on Ergo",
-        "twitterDescription": "Pay transaction fees with any token on Ergo"
+        "title": "Ergo'da Babel Ücretleri | İşlem Ücretlerini Herhangi Bir Tokenla Ödeyin",
+        "description": "Ergo'daki Babel Ücretleri hakkında bilgi edinin - işlem ücretlerini herhangi bir tokenla ödeyin. Bu yenilikçi özelliğin kullanıcı deneyimini ve token faydasını nasıl artırdığını anlayın.",
+        "keywords": "babel ücretleri, ergo işlem ücretleri, tokenlarla ücret ödeme, defi ücretleri, blockchain ücretleri, ergo babel, token ücretleri, gas ücreti alternatifi",
+        "ogTitle": "Ergo'da Babel Ücretleri",
+        "ogDescription": "Ergo'da işlem ücretlerini herhangi bir tokenla ödeyin. Gelişmiş kullanıcı deneyimi ve token faydası.",
+        "twitterTitle": "Ergo'da Babel Ücretleri",
+        "twitterDescription": "Ergo'da işlem ücretlerini herhangi bir tokenla ödeyin"
       },
       "buttons": {
-        "howItWorks": "How It Works",
+        "howItWorks": "Nasıl Çalışır",
         "eip0019": "EIP-0019"
       },
       "feeOptions": {
-        "title": "Fee Payment Options",
+        "title": "Ücret Ödeme Seçenekleri",
         "options": {
           "erg": {
-            "name": "ERG (Native)",
-            "description": "Traditional blockchain fees"
+            "name": "ERG (Yerel)",
+            "description": "Geleneksel blockchain ücretleri"
           },
           "anyToken": {
-            "name": "Any Token",
-            "description": "Pay with project tokens"
+            "name": "Herhangi Bir Token",
+            "description": "Proje tokenleriyle ödeme yapın"
           },
           "autoExchange": {
-            "name": "Automatic Exchange",
-            "description": "Seamless token-to-ERG conversion"
+            "name": "Otomatik Dönüşüm",
+            "description": "Sorunsuz token-ERG dönüşümü"
           }
         }
       },
       "whyFees": {
-        "title": "Why Are Transaction Fees Necessary on Ergo?",
-        "description": "Like most blockchains, transaction fees on Ergo play a crucial role. They are needed for:",
+        "title": "Ergo'da İşlem Ücretleri Neden Gereklidir?",
+        "description": "Çoğu blockchain gibi, Ergo'daki işlem ücretleri de kritik bir rol oynar. Şunlar için gereklidirler:",
         "reasons": {
           "miners": {
-            "title": "Rewarding Miners",
-            "description": "Miners expend computational resources to process transactions and secure the network. Fees are part of their compensation."
+            "title": "Madencileri Ödüllendirme",
+            "description": "Madenciler işlemleri işlemek ve ağı güvence altına almak için hesaplama kaynakları harcar. Ücretler, onların tazminatının bir parçasıdır."
           },
           "spam": {
-            "title": "Preventing Spam",
-            "description": "Fees make sending mass volumes of useless transactions economically unviable, protecting the network from congestion."
+            "title": "Spam'ı Önleme",
+            "description": "Ücretler, işe yaramaz işlemlerin toplu gönderimini ekonomik açıdan sürdürülemez kılarak ağı tıkanmadan korur."
           },
           "network": {
-            "title": "Network Operation",
-            "description": "They contribute to maintaining a healthy and functional infrastructure."
+            "title": "Ağ İşleyişi",
+            "description": "Sağlıklı ve işlevsel bir altyapının korunmasına katkıda bulunurlar."
           }
         },
         "standardPayment": {
-          "title": "Standard Payment in ERG",
-          "description": "Typically, transaction fees on the Ergo network are paid in the platform's native coin – ERG. The fee amount depends on the transaction's \"size\" in bytes and current network congestion, but generally, Ergo fees aim to be predictable thanks to the eUTXO model."
+          "title": "ERG ile Standart Ödeme",
+          "description": "Genellikle Ergo ağındaki işlem ücretleri, platformun yerel parası olan ERG ile ödenir. Ücret miktarı işlemin bayt cinsinden 'boyutuna' ve mevcut ağ yoğunluğuna bağlıdır; ancak genel olarak Ergo ücretleri, eUTXO modeli sayesinde öngörülebilir olmayı hedefler."
         }
       },
       "introduction": {
-        "title": "Introducing Babel Fees (EIP-0019): Flexible Fee Payments",
+        "title": "Babel Ücretleri (EIP-0019) Tanıtımı: Esnek Ücret Ödemeleri",
         "whatAre": {
-          "title": "What are Babel Fees?",
-          "description": "Babel Fees are an innovative mechanism on Ergo that allows users to pay transaction fees using native tokens issued on the Ergo blockchain instead of ERG. Imagine being able to pay for postage not just with cash (ERG), but also with valuable collectible stamps (your tokens)."
+          "title": "Babel Ücretleri nedir?",
+          "description": "Babel Ücretleri, kullanıcıların ERG yerine Ergo blockchain üzerinde çıkarılmış yerel tokenlar kullanarak işlem ücretlerini ödemesine olanak tanıyan Ergo'daki yenilikçi bir mekanizmadır. Posta ücreti ödemek için yalnızca nakit (ERG) değil, aynı zamanda değerli koleksiyon pulları (tokenlarınız) kullanabildiğinizi hayal edin."
         },
         "whyCreated": {
-          "title": "Why were Babel Fees created? (The Problem Solved)",
+          "title": "Babel Ücretleri neden oluşturuldu? (Çözülen Sorun)",
           "reasons": {
             "ux": {
-              "title": "Improved User Experience (UX)",
-              "description": "Users holding specific tokens (e.g., tokens of a particular dApp) might not always have enough ERG readily available to pay fees. This creates friction and barriers."
+              "title": "İyileştirilmiş Kullanıcı Deneyimi (UX)",
+              "description": "Belirli tokenlar tutan kullanıcılar (örn. belirli bir dApp'in tokenleri), ücret ödemek için her zaman yeterli ERG'ye sahip olmayabilir. Bu durum sürtünme ve engeller yaratır."
             },
             "utility": {
-              "title": "Increased Token Utility",
-              "description": "Babel Fees significantly enhance the utility of native Ergo tokens, as they can be used for a fundamental network operation – paying fees."
+              "title": "Artan Token Faydası",
+              "description": "Babel Ücretleri, yerel Ergo tokenlarının faydasını önemli ölçüde artırır; çünkü bu tokenlar temel bir ağ işlemi olan ücret ödemesi için kullanılabilir."
             },
             "accessibility": {
-              "title": "dApp Accessibility",
-              "description": "Simplifies interaction with decentralized applications that heavily utilize their own native tokens."
+              "title": "dApp Erişilebilirliği",
+              "description": "Kendi yerel tokenlarını yoğun biçimde kullanan merkeziyetsiz uygulamalarla etkileşimi basitleştirir."
             }
           }
         }
       },
       "howItWorks": {
-        "title": "How Babel Fees Work (Simplified Explanation)",
-        "description": "The Babel Fees mechanism is quite elegant and doesn't require changes to the core protocol regarding how fees are ultimately received (the network still receives fees in ERG).",
+        "title": "Babel Ücretleri Nasıl Çalışır (Basitleştirilmiş Açıklama)",
+        "description": "Babel Ücretleri mekanizması oldukça zarif bir yapıya sahiptir ve ücretlerin nihayetinde nasıl alındığı konusunda temel protokolde değişiklik gerektirmez (ağ hâlâ ücretleri ERG olarak alır).",
         "processFlow": {
-          "title": "Babel Fee Process Flow",
+          "title": "Babel Ücreti İşlem Akışı",
           "steps": {
-            "userOffer": "User offers tokens",
-            "intermediaryDetects": "Intermediary detects",
-            "ergFeePaid": "ERG fee paid"
+            "userOffer": "Kullanıcı token teklif eder",
+            "intermediaryDetects": "Aracı tespit eder",
+            "ergFeePaid": "ERG ücreti ödenir"
           }
         },
         "details": {
           "userOffer": {
-            "title": "User's Offer",
-            "description": "A user wishing to pay a fee with tokens creates a special \"output\" in their transaction, often referred to as a \"Babel fee box.\" In this box, they offer a certain amount of their tokens in exchange for someone else covering their ERG fee."
+            "title": "Kullanıcının Teklifi",
+            "description": "Ücretini tokenlarla ödemek isteyen bir kullanıcı, işleminde genellikle 'Babel ücret kutusu' olarak adlandırılan özel bir 'çıktı' oluşturur. Bu kutuda, bir başkasının ERG ücretini karşılaması karşılığında belirli miktarda token teklif eder."
           },
           "intermediaries": {
-            "title": "Role of Intermediaries (Miners, Bots, Services)",
+            "title": "Aracıların Rolü (Madenciler, Botlar, Hizmetler)",
             "steps": {
               "detecting": {
-                "title": "1. Detecting the Offer",
-                "description": "Miners or specialized bots/services (intermediaries) scan the network for these \"Babel fee boxes.\""
+                "title": "1. Teklifi Tespit Etme",
+                "description": "Madenciler veya özel botlar/hizmetler (aracılar), bu 'Babel ücret kutularını' bulmak için ağı tarar."
               },
               "executing": {
-                "title": "2. Executing the Exchange",
-                "description": "If the token offer is profitable (i.e., the market value of the offered tokens is greater than or equal to the ERG fee amount plus a small profit for the intermediary), the intermediary \"fulfills\" this offer."
+                "title": "2. Dönüşümü Gerçekleştirme",
+                "description": "Token teklifi kârlıysa (yani teklif edilen tokenların piyasa değeri, ERG ücret tutarına artı aracı için küçük bir kâra eşit veya daha fazlaysa), aracı bu teklifi 'karşılar'."
               },
               "paying": {
-                "title": "3. Paying the ERG Fee",
-                "description": "The intermediary takes the offered tokens from the \"Babel fee box\" and pays the required transaction fee in ERG to the miners who include the transaction in a block."
+                "title": "3. ERG Ücretini Ödeme",
+                "description": "Aracı, 'Babel ücret kutusundan' teklif edilen tokenları alır ve işlemi bir bloğa dahil eden madencilere gerekli işlem ücretini ERG olarak öder."
               }
             }
           },
           "market": {
-            "title": "Market Mechanism",
-            "description": "The effectiveness of Babel Fees for a specific token depends on a \"market\" existing for it – meaning there must be intermediaries willing to accept these tokens in exchange for ERG at a certain rate. The more popular a token, the higher the likelihood it will be accepted for fee payment."
+            "title": "Piyasa Mekanizması",
+            "description": "Belirli bir token için Babel Ücretlerinin etkinliği, söz konusu token için bir 'piyasanın' varlığına bağlıdır; yani bu tokenleri belirli bir kur üzerinden ERG karşılığında kabul etmeye istekli aracılar bulunmalıdır. Bir token ne kadar popülerse, ücret ödemesi için kabul edilme olasılığı da o kadar yüksektir."
           }
         }
       },
       "benefits": {
-        "title": "Benefits of Babel Fees",
+        "title": "Babel Ücretlerinin Faydaları",
         "categories": {
           "users": {
-            "title": "For Users",
+            "title": "Kullanıcılar İçin",
             "benefits": {
               "convenience": {
-                "title": "Convenience",
-                "description": "Ability to pay fees with tokens you already own, without needing to first exchange them for ERG."
+                "title": "Kolaylık",
+                "description": "Sahip olduğunuz tokenlarla ücret ödeme imkânı; önce ERG'ye dönüştürmeniz gerekmez."
               },
               "friction": {
-                "title": "Reduced Friction",
-                "description": "Simplifies the use of dApps that are centered around their own tokens."
+                "title": "Azaltılmış Sürtünme",
+                "description": "Kendi tokenları etrafında şekillenmiş dApp'lerin kullanımını basitleştirir."
               }
             }
           },
           "developers": {
-            "title": "For Token Issuers / dApp Developers",
+            "title": "Token Çıkaranlar / dApp Geliştiricileri İçin",
             "benefits": {
               "utility": {
-                "title": "Increased Token Utility",
-                "description": "Makes their tokens more in-demand and integrated into the ecosystem."
+                "title": "Artan Token Faydası",
+                "description": "Tokenlarını daha çok talep görür ve ekosisteme entegre hâle getirir."
               },
               "ux": {
-                "title": "Improved UX",
-                "description": "Better experience for their application users."
+                "title": "İyileştirilmiş Kullanıcı Deneyimi",
+                "description": "Uygulama kullanıcıları için daha iyi bir deneyim."
               }
             }
           },
           "ecosystem": {
-            "title": "For the Ergo Ecosystem",
+            "title": "Ergo Ekosistemi İçin",
             "benefits": {
-              "userFriendly": "A more user-friendly and versatile platform.",
-              "tokenEconomy": "Stimulation of an active token economy."
+              "userFriendly": "Daha kullanıcı dostu ve çok yönlü bir platform.",
+              "tokenEconomy": "Aktif bir token ekonomisinin teşvik edilmesi."
             }
           }
         }
       },
       "practicalConsiderations": {
-        "title": "Practical Considerations for Users",
+        "title": "Kullanıcılar İçin Pratik Değerlendirmeler",
         "considerations": {
           "walletSupport": {
-            "title": "Wallet Support",
-            "description": "Find out which Ergo wallets (e.g., Nautilus Wallet or others) and dApps support the creation of transactions using Babel Fees. This feature may not be available in all wallets."
+            "title": "Cüzdan Desteği",
+            "description": "Hangi Ergo cüzdanlarının (örn. Nautilus Wallet veya diğerleri) ve dApp'lerin Babel Ücretleri kullanarak işlem oluşturmayı desteklediğini öğrenin. Bu özellik tüm cüzdanlarda mevcut olmayabilir."
           },
           "tokenAcceptance": {
-            "title": "Token Acceptance",
-            "description": "Not all tokens may be automatically accepted. This depends on intermediaries being willing to exchange them for ERG."
+            "title": "Token Kabulü",
+            "description": "Tüm tokenlar otomatik olarak kabul edilmeyebilir. Bu durum, aracıların bunları ERG karşılığında değiştirmeye istekli olmasına bağlıdır."
           },
           "exchangeRates": {
-            "title": "Exchange Rates",
-            "description": "The \"price\" or exchange rate at which your tokens are accepted to cover ERG fees will be determined by market conditions and intermediary offers."
+            "title": "Döviz Kurları",
+            "description": "Tokenlarınızın ERG ücretlerini karşılamak amacıyla kabul edileceği 'fiyat' veya döviz kuru, piyasa koşulları ve aracı teklifleri tarafından belirlenecektir."
           },
           "howToUse": {
-            "title": "How to Use",
-            "description": "When constructing a transaction in a compatible wallet or dApp, you might see an option to select a token to pay the fee. The interface will typically show the required amount of tokens based on current market rates."
+            "title": "Nasıl Kullanılır",
+            "description": "Uyumlu bir cüzdan veya dApp'te işlem oluştururken, ücreti ödemek için bir token seçme seçeneği görebilirsiniz. Arayüz genellikle mevcut piyasa kurlarına göre gereken token miktarını gösterecektir."
           }
         }
       },
       "currentStatus": {
-        "title": "Current Status & Future Development of Babel Fees",
+        "title": "Babel Ücretlerinin Mevcut Durumu ve Gelecekteki Gelişimi",
         "alert": {
-          "title": "Important",
-          "description": "This section reflects the current implementation status of Babel Fees. The adoption and availability may vary depending on wallet support and intermediary participation."
+          "title": "Önemli",
+          "description": "Bu bölüm, Babel Ücretlerinin mevcut uygulama durumunu yansıtmaktadır. Benimseme ve kullanılabilirlik, cüzdan desteğine ve aracı katılımına bağlı olarak değişebilir."
         },
         "questions": {
-          "adoption": "How widely are Babel Fees currently adopted by miners/intermediaries?",
-          "markets": "Are there active and liquid \"markets\" for many tokens to be used for Babel Fees?",
-          "development": "Is there ongoing work to improve or expand the Babel Fees mechanism?"
+          "adoption": "Babel Ücretleri şu anda madenciler/aracılar tarafından ne kadar yaygın biçimde benimsenmektedir?",
+          "markets": "Babel Ücretleri için kullanılacak pek çok token için aktif ve likit 'piyasalar' mevcut mu?",
+          "development": "Babel Ücretleri mekanizmasını iyileştirmek veya genişletmek için süregelen çalışmalar var mı?"
         },
-        "checkUpdates": "Check Latest Updates on EIP-0019"
+        "checkUpdates": "EIP-0019 Üzerindeki En Son Güncellemeleri İnceleyin"
       },
       "comparison": {
-        "title": "Comparison: ERG Fees vs. Babel Fees",
+        "title": "Karşılaştırma: ERG Ücretleri ile Babel Ücretleri",
         "ergFees": {
-          "title": "ERG Fees",
+          "title": "ERG Ücretleri",
           "features": {
-            "accepted": "Always accepted for fee payment",
-            "reliable": "Primary and most reliable method",
-            "stable": "Predictable and stable",
-            "supported": "Supported by all wallets and dApps"
+            "accepted": "Ücret ödemesi için her zaman kabul edilir",
+            "reliable": "Birincil ve en güvenilir yöntem",
+            "stable": "Öngörülebilir ve kararlı",
+            "supported": "Tüm cüzdan ve dApp'ler tarafından desteklenir"
           }
         },
         "babelFees": {
-          "title": "Babel Fees",
+          "title": "Babel Ücretleri",
           "features": {
-            "flexibility": "Offer flexibility and convenience",
-            "availability": "Availability depends on token market demand",
-            "intermediary": "Requires intermediary participation",
-            "rates": "May have variable exchange rates"
+            "flexibility": "Esneklik ve kolaylık sunar",
+            "availability": "Kullanılabilirlik token piyasa talebine bağlıdır",
+            "intermediary": "Aracı katılımı gerektirir",
+            "rates": "Değişken döviz kurları olabilir"
           }
         }
       },
       "conclusion": {
-        "title": "Conclusion",
-        "description": "Babel Fees are a significant innovation demonstrating Ergo's flexibility and user-centric approach. They contribute to creating a more convenient and multifaceted ecosystem.",
-        "note": "Keep an eye on updates from your wallets and favorite dApps to learn about their support for this feature!"
+        "title": "Sonuç",
+        "description": "Babel Ücretleri, Ergo'nun esnekliğini ve kullanıcı odaklı yaklaşımını gösteren önemli bir yeniliktir. Daha kullanışlı ve çok boyutlu bir ekosistemin oluşturulmasına katkıda bulunurlar.",
+        "note": "Bu özelliğin desteğini öğrenmek için cüzdanlarınızdan ve favori dApp'lerinizden gelen güncellemeleri takip edin!"
       },
       "cta": {
-        "title": "Ready to Use Babel Fees?",
-        "subtitle": "Experience the flexibility of paying transaction fees with any token",
+        "title": "Babel Ücretlerini Kullanmaya Hazır mısınız?",
+        "subtitle": "İşlem ücretlerini herhangi bir tokenla ödemenin esnekliğini deneyimleyin",
         "buttons": {
-          "exploreWallets": "Explore Supported Wallets",
-          "learnMore": "Learn More About EIP-0019"
+          "exploreWallets": "Desteklenen Cüzdanları Keşfet",
+          "learnMore": "EIP-0019 Hakkında Daha Fazla Bilgi"
         }
       },
       "schema": {
         "techArticle": {
-          "headline": "Babel Fees: Pay Transaction Fees with Any Token",
-          "description": "Technical guide to Ergo's Babel Fees system for flexible transaction fee payments",
+          "headline": "Babel Ücretleri: İşlem Ücretlerini Herhangi Bir Tokenla Ödeyin",
+          "description": "Esnek işlem ücreti ödemeleri için Ergo'nun Babel Ücretleri sistemine teknik rehber",
           "about": {
-            "name": "Blockchain Transaction Fees",
-            "description": "Alternative fee payment methods in blockchain"
+            "name": "Blockchain İşlem Ücretleri",
+            "description": "Blockchain'de alternatif ücret ödeme yöntemleri"
           }
         },
         "faq": {
           "whatAre": {
-            "question": "What are Babel Fees?",
-            "answer": "Babel Fees allow users to pay transaction fees on Ergo using any token instead of ERG, making DeFi more accessible by removing the need to hold ERG for fees."
+            "question": "Babel Ücretleri nedir?",
+            "answer": "Babel Ücretleri, kullanıcıların Ergo'da ERG yerine herhangi bir tokenla işlem ücreti ödemesine olanak tanır; ücretler için ERG tutma zorunluluğunu ortadan kaldırarak DeFi'yi daha erişilebilir kılar."
           },
           "howWork": {
-            "question": "How do Babel Fees work?",
-            "answer": "Service providers accept tokens as payment for fees, then handle the ERG payment to miners behind the scenes, creating a seamless experience for users."
+            "question": "Babel Ücretleri nasıl çalışır?",
+            "answer": "Hizmet sağlayıcılar ücret ödemesi olarak tokenleri kabul eder, ardından arka planda madencilere ERG ödemesini gerçekleştirir; bu sayede kullanıcılar için kesintisiz bir deneyim oluşturur."
           },
           "whichTokens": {
-            "question": "Which tokens can be used for Babel Fees?",
-            "answer": "Any token on Ergo can potentially be used for Babel Fees if a service provider supports it. Popular options include SigUSD, SigRSV, and major Ergo tokens."
+            "question": "Babel Ücretleri için hangi tokenlar kullanılabilir?",
+            "answer": "Ergo üzerindeki herhangi bir token, bir hizmet sağlayıcı destekliyorsa Babel Ücretleri için potansiyel olarak kullanılabilir. Popüler seçenekler arasında SigUSD, SigRSV ve başlıca Ergo tokenları yer alır."
           },
           "expensive": {
-            "question": "Are Babel Fees more expensive than regular fees?",
-            "answer": "Babel Fees may include a small premium to compensate service providers, but the convenience often outweighs the minimal additional cost."
+            "question": "Babel Ücretleri normal ücretlerden daha pahalı mı?",
+            "answer": "Babel Ücretleri, hizmet sağlayıcıları telafi etmek için küçük bir ek ücret içerebilir; ancak sağladığı kolaylık genellikle bu minimal ek maliyetin önüne geçer."
           }
         },
         "howTo": {
-          "name": "How to Use Babel Fees on Ergo",
-          "description": "Step-by-step guide to paying transaction fees with tokens",
+          "name": "Ergo'da Babel Ücretleri Nasıl Kullanılır",
+          "description": "İşlem ücretlerini tokenlarla ödemeye yönelik adım adım rehber",
           "steps": {
             "chooseDapp": {
-              "name": "Choose a supported dApp",
-              "text": "Select a dApp or wallet that supports Babel Fees"
+              "name": "Desteklenen bir dApp seçin",
+              "text": "Babel Ücretlerini destekleyen bir dApp veya cüzdan seçin"
             },
             "selectToken": {
-              "name": "Select fee token",
-              "text": "Choose which token you want to use for paying fees"
+              "name": "Ücret tokenini seçin",
+              "text": "Ücret ödemek için kullanmak istediğiniz tokeni seçin"
             },
             "executeTransaction": {
-              "name": "Execute transaction",
-              "text": "Complete your transaction with automatic fee conversion"
+              "name": "İşlemi gerçekleştirin",
+              "text": "Otomatik ücret dönüşümüyle işleminizi tamamlayın"
             }
           }
         }
       }
     },
-    "title": "Use Cases",
-    "description": "Real-world applications and use cases built on Ergo blockchain",
-    "subtitle": "From DeFi and stablecoins to DAOs and the metaverse, discover how Ergo's technology is building a new era of digital sovereignty.",
+    "title": "Kullanım Alanları",
+    "description": "Ergo blockchain üzerinde geliştirilmiş gerçek dünya uygulamaları ve kullanım alanları",
+    "subtitle": "DeFi ve stabilcoinlerden DAO'lara ve metaevreye kadar Ergo'nun teknolojisinin dijital egemenliğin yeni bir çağını nasıl inşa ettiğini keşfedin.",
     "featuredUseCases": {
-      "title": "Featured Use Cases",
-      "defi": "Decentralized Finance (DeFi)",
-      "nfts": "NFTs & Digital Assets",
-      "privacy": "Privacy Applications"
+      "title": "Öne Çıkan Kullanım Alanları",
+      "defi": "Merkeziyetsiz Finans (DeFi)",
+      "nfts": "NFT'ler ve Dijital Varlıklar",
+      "privacy": "Gizlilik Uygulamaları"
     },
     "buttons": {
-      "exploreEcosystem": "Explore Ecosystem",
-      "startBuilding": "Start Building",
-      "exploreUseCase": "Explore Use Case",
-      "comingSoon": "Coming Soon"
+      "exploreEcosystem": "Ekosistemi Keşfet",
+      "startBuilding": "İnşa Etmeye Başla",
+      "exploreUseCase": "Kullanım Alanını Keşfet",
+      "comingSoon": "Yakında"
     },
     "aria": {
       "learnMoreAbout": "Learn more about {title}"
     },
     "learnTechnology": {
-      "title": "Learn the Technology",
+      "title": "Teknolojiyi Öğren",
       "ergoscript": {
         "title": "ErgoScript",
-        "description": "Learn the smart contract language powering these use cases",
-        "cta": "Start Tutorial"
+        "description": "Bu kullanım alanlarını destekleyen akıllı sözleşme dilini öğrenin",
+        "cta": "Eğitime Başla"
       },
       "eutxo": {
-        "title": "eUTXO Model",
-        "description": "Understand the foundation that enables these applications",
-        "cta": "Learn More"
+        "title": "eUTXO Modeli",
+        "description": "Bu uygulamaları mümkün kılan temeli anlayın",
+        "cta": "Daha Fazla Bilgi"
       },
       "allTechnology": {
-        "title": "All Technology",
-        "description": "Explore all of Ergo's technical innovations",
-        "cta": "View All"
+        "title": "Tüm Teknoloji",
+        "description": "Ergo'nun tüm teknik yeniliklerini keşfedin",
+        "cta": "Tümünü Gör"
       }
     },
     "whatsNext": {
-      "title": "What's Next?",
-      "subtitle": "Start exploring applications or learn how to build on Ergo",
+      "title": "Sırada Ne Var?",
+      "subtitle": "Uygulamaları keşfetmeye başlayın veya Ergo üzerinde nasıl geliştirme yapacağınızı öğrenin",
       "exploreEcosystem": {
-        "title": "Explore Ecosystem",
-        "subtitle": "Discover Applications",
-        "description": "Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo"
+        "title": "Ekosistemi Keşfet",
+        "subtitle": "Uygulamaları Keşfet",
+        "description": "Ergo üzerinde geliştirilmiş DeFi protokollerini, cüzdanları, NFT platformlarını ve diğer dApp'leri bulun"
       },
       "startBuilding": {
-        "title": "Start Building",
-        "subtitle": "Developer Resources",
-        "description": "Access documentation, tutorials, and tools to build your own Ergo applications"
+        "title": "İnşa Etmeye Başla",
+        "subtitle": "Geliştirici Kaynakları",
+        "description": "Kendi Ergo uygulamalarınızı geliştirmek için dokümantasyona, eğitimlere ve araçlara erişin"
       }
     },
     "emailCapture": {
-      "title": "Discover New Use Cases",
-      "description": "Get notified about new practical applications, real-world implementations, and use case studies"
+      "title": "Yeni Kullanım Alanlarını Keşfedin",
+      "description": "Yeni pratik uygulamalar, gerçek dünya implementasyonları ve kullanım alanı çalışmaları hakkında bildirim alın"
     },
-    "allUseCases": "All Use Cases",
+    "allUseCases": "Tüm Kullanım Alanları",
     "faq": {
-      "title": "Frequently Asked Questions",
+      "title": "Sıkça Sorulan Sorular",
       "whatCanDo": {
-        "question": "What can I do with ERG?",
-        "answer": "ERG can be used for DeFi applications, NFT marketplaces, privacy-focused transactions, staking in oracle pools, and paying transaction fees. The Ergo ecosystem offers a wide range of use cases."
+        "question": "ERG ile ne yapabilirim?",
+        "answer": "ERG; DeFi uygulamaları, NFT pazaryerleri, gizlilik odaklı işlemler, oracle havuzlarında stake ve işlem ücretlerinin ödenmesi için kullanılabilir. Ergo ekosistemi geniş bir kullanım alanı yelpazesi sunmaktadır."
       },
       "defiProtocols": {
-        "question": "What DeFi protocols are available on Ergo?",
-        "answer": "Ergo hosts various DeFi protocols including decentralized exchanges (DEXs), lending platforms, stablecoin protocols like SigmaUSD, and more. The ecosystem is continuously growing."
+        "question": "Ergo'da hangi DeFi protokolleri mevcuttur?",
+        "answer": "Ergo; merkeziyetsiz borsalar (DEX'ler), borç verme platformları, SigmaUSD gibi stabilcoin protokolleri ve daha fazlasını barındırmaktadır. Ekosistem sürekli büyümektedir."
       },
       "createNfts": {
-        "question": "Can I create and trade NFTs on Ergo?",
-        "answer": "Yes! Ergo has native NFT support at the protocol level. You can mint, buy, sell, and trade NFTs on platforms like SkyHarbor with low transaction fees."
+        "question": "Ergo'da NFT oluşturabilir ve işlem yapabilir miyim?",
+        "answer": "Evet! Ergo'nun protokol düzeyinde yerel NFT desteği bulunmaktadır. SkyHarbor gibi platformlarda düşük işlem ücretleriyle NFT basabilir, alabilir, satabilir ve takas edebilirsiniz."
       },
       "privacyWork": {
-        "question": "How does privacy work on Ergo?",
-        "answer": "Ergo uses Sigma Protocols for advanced privacy features, including ring signatures and zero-knowledge proofs. ErgoMixer allows non-interactive, non-custodial mixing of ERG and tokens."
+        "question": "Ergo'da gizlilik nasıl çalışır?",
+        "answer": "Ergo, halka imzaları ve sıfır bilgi ispatları dahil gelişmiş gizlilik özellikleri için Sigma Protokollerini kullanır. ErgoMixer, ERG ve tokenların etkileşimsiz, emanetsiz karıştırılmasına olanak tanır."
       },
       "items": [
         {
           "id": "defi-on-ergo",
-          "question": "What makes DeFi on Ergo different?",
-          "answer": "Ergo's eUTXO model provides superior security and composability for DeFi. Smart contracts are more predictable, costs are deterministic, and parallel transaction processing enables better scalability. Plus, optional privacy features protect your financial data."
+          "question": "Ergo'daki DeFi'yi farklı kılan nedir?",
+          "answer": "Ergo'nun eUTXO modeli, DeFi için üstün güvenlik ve bileşilebilirlik sağlar. Akıllı sözleşmeler daha öngörülebilir, maliyetler deterministik ve paralel işlem işleme daha iyi ölçeklenebilirlik sağlar. Ayrıca isteğe bağlı gizlilik özellikleri finansal verilerinizi korur."
         },
         {
           "id": "start-using-ergo",
-          "question": "How do I start using Ergo applications?",
-          "answer": "1. Get an Ergo wallet like Nautilus or SAFEW. 2. Acquire ERG tokens from exchanges. 3. Explore dApps in our ecosystem. 4. Join the community on Discord or Telegram for help."
+          "question": "Ergo uygulamalarını kullanmaya nasıl başlarım?",
+          "answer": "1. Nautilus veya SAFEW gibi bir Ergo cüzdanı edinin. 2. Borsalardan ERG token satın alın. 3. Ekosistemimizdeki dApp'leri keşfedin. 4. Yardım için Discord veya Telegram'daki topluluğa katılın."
         },
         {
           "id": "ergo-vs-ethereum",
-          "question": "How does Ergo compare to Ethereum for dApps?",
-          "answer": "Ergo uses the eUTXO model (vs Ethereum's account model), offering better security, parallel processing, and predictable costs. ErgoScript is more secure by design with formal verification capabilities. Native tokens don't require smart contracts, making them cheaper and safer."
+          "question": "Ergo, dApp'ler için Ethereum ile nasıl karşılaştırılır?",
+          "answer": "Ergo eUTXO modelini (Ethereum'un hesap modeline karşı) kullanır; daha iyi güvenlik, paralel işlem ve öngörülebilir maliyetler sunar. ErgoScript, resmi doğrulama yetenekleriyle tasarım gereği daha güvenlidir. Yerel tokenlar akıllı sözleşme gerektirmez, bu da onları daha ucuz ve güvenli kılar."
         },
         {
           "id": "privacy-features",
-          "question": "Are Ergo's privacy features legal to use?",
-          "answer": "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+          "question": "Ergo'nun gizlilik özellikleri yasal olarak kullanılabilir mi?",
+          "answer": "Ergo, Sigma protokolleri aracılığıyla isteğe bağlı gizlilik özellikleri sunar. Kullanıcılar yerel mevzuatlarını kontrol etmelidir. Gizlilik, iş gizliliği, kişisel finansal mahremiyet ve veri koruma yasalarına uyum gibi meşru kullanımlar için protokol düzeyinde uygulanmaktadır."
         },
         {
           "id": "mining-profitable",
-          "question": "Is mining ERG still profitable?",
-          "answer": "Mining profitability depends on your electricity costs, hardware efficiency, and ERG price. Ergo's ASIC-resistant Autolykos algorithm keeps mining accessible to GPUs. Use mining calculators to estimate your potential returns based on current network difficulty."
+          "question": "ERG madenciliği hâlâ kârlı mı?",
+          "answer": "Madencilik kârlılığı elektrik maliyetlerinize, donanım verimliliğinize ve ERG fiyatına bağlıdır. Ergo'nun ASIC dirençli Autolykos algoritması, madenciliği GPU'lar için erişilebilir tutar. Mevcut ağ zorluğuna göre potansiyel getirilerinizi tahmin etmek için madencilik hesaplayıcılarını kullanın."
         },
         {
           "id": "developer-resources",
-          "question": "What resources are available for developers?",
-          "answer": "Ergo provides comprehensive developer resources: ErgoScript documentation and tutorials, SDKs for multiple languages (Scala, JS, Python), AppKit for dApp development, Active developer community and support, Grants program for ecosystem projects."
+          "question": "Geliştiriciler için hangi kaynaklar mevcuttur?",
+          "answer": "Ergo kapsamlı geliştirici kaynakları sunar: ErgoScript dokümantasyonu ve eğitimleri, birden fazla dil için SDK'lar (Scala, JS, Python), dApp geliştirme için AppKit, aktif geliştirici topluluğu ve desteği, ekosistem projeleri için hibe programı."
         }
       ]
     },
@@ -682,241 +682,241 @@
       }
     },
     "stablecoins": {
-      "title": "Algorithmic Stablecoins",
-      "subtitle": "Stable value storage without centralized control",
-      "description": "Over-collateralized stablecoins with innovative AgeUSD protocol. Decentralized, transparent, and resilient.",
-      "lastUpdated": "Last updated:",
+      "title": "Algoritmik Stabilcoinler",
+      "subtitle": "Merkezi kontrolsüz istikrarlı değer deposu",
+      "description": "Yenilikçi AgeUSD protokolüyle aşırı teminatlı stabilcoinler. Merkeziyetsiz, şeffaf ve dayanıklı.",
+      "lastUpdated": "Son güncelleme:",
       "meta": {
         "slug": "stablecoins",
         "ogImage": "/og-stablecoins.png",
         "canonicalPath": "/use/stablecoins"
       },
       "seo": {
-        "title": "Algorithmic Stablecoins on Ergo | Decentralized Stable Value",
-        "description": "Build and use algorithmic stablecoins on Ergo. Over-collateralized stability with AgeUSD protocol, decentralized governance, and transparent reserves.",
-        "keywords": "algorithmic stablecoins, SigmaUSD, AgeUSD, Ergo stablecoin, decentralized finance, DeFi, stable value, crypto stablecoin",
-        "ogTitle": "Algorithmic Stablecoins on Ergo",
-        "ogDescription": "Stable value storage without centralized control. Over-collateralized stablecoins with innovative AgeUSD protocol.",
-        "twitterTitle": "Algorithmic Stablecoins on Ergo",
-        "twitterDescription": "Build decentralized stablecoins with Ergo's AgeUSD protocol"
+        "title": "Ergo'da Algoritmik Stabilcoinler | Merkeziyetsiz İstikrarlı Değer",
+        "description": "Ergo'da algoritmik stabilcoinler geliştirin ve kullanın. AgeUSD protokolüyle aşırı teminatlı istikrar, merkeziyetsiz yönetişim ve şeffaf rezervler.",
+        "keywords": "algoritmik stabilcoinler, SigmaUSD, AgeUSD, Ergo stabilcoin, merkeziyetsiz finans, DeFi, istikrarlı değer, kripto stabilcoin",
+        "ogTitle": "Ergo'da Algoritmik Stabilcoinler",
+        "ogDescription": "Merkezi kontrolsüz istikrarlı değer deposu. Yenilikçi AgeUSD protokolüyle aşırı teminatlı stabilcoinler.",
+        "twitterTitle": "Ergo'da Algoritmik Stabilcoinler",
+        "twitterDescription": "Ergo'nun AgeUSD protokolüyle merkeziyetsiz stabilcoinler geliştirin"
       },
       "quickStart": {
-        "title": "Quick Start",
+        "title": "Hızlı Başlangıç",
         "useSigmaUsd": {
-          "name": "Use SigmaUSD",
-          "description": "Start using Ergo's native stablecoin"
+          "name": "SigmaUSD Kullan",
+          "description": "Ergo'nun yerel stabilcoinini kullanmaya başlayın"
         },
         "readWhitepaper": {
-          "name": "Read Whitepaper",
-          "description": "Understand the AgeUSD protocol"
+          "name": "Teknik Dokümanı Oku",
+          "description": "AgeUSD protokolünü anlayın"
         },
         "developerDocs": {
-          "name": "Developer Docs",
-          "description": "Build your own stablecoin"
+          "name": "Geliştirici Dokümanları",
+          "description": "Kendi stabilcoinizi geliştirin"
         }
       },
       "navigation": {
-        "keyFeatures": "Key features",
-        "liveProjects": "Live Projects",
-        "faq": "FAQ"
+        "keyFeatures": "Temel özellikler",
+        "liveProjects": "Canlı Projeler",
+        "faq": "SSS"
       },
       "features": {
-        "title": "Key Features",
-        "subtitle": "Why Ergo is the perfect platform for algorithmic stablecoins",
+        "title": "Temel Özellikler",
+        "subtitle": "Ergo'nun algoritmik stabilcoinler için neden mükemmel platform olduğu",
         "overCollateralized": {
-          "title": "Over-Collateralized Stability",
-          "description": "Maintain stable value through robust collateralization mechanisms and algorithmic adjustments"
+          "title": "Aşırı Teminatlı İstikrar",
+          "description": "Güçlü teminat mekanizmaları ve algoritmik düzenlemeler aracılığıyla istikrarlı değeri koruyun"
         },
         "decentralizedGovernance": {
-          "title": "Decentralized Governance",
-          "description": "Community-driven protocol parameters without central authority or single points of failure"
+          "title": "Merkeziyetsiz Yönetişim",
+          "description": "Merkezi otorite veya tek hata noktası olmaksızın topluluk odaklı protokol parametreleri"
         },
         "transparentReserves": {
-          "title": "Transparent Reserves",
-          "description": "On-chain verifiable reserves and real-time collateral ratios for complete transparency"
+          "title": "Şeffaf Rezervler",
+          "description": "Tam şeffaflık için zincir üzerinde doğrulanabilir rezervler ve gerçek zamanlı teminat oranları"
         },
         "efficientLiquidations": {
-          "title": "Efficient Liquidations",
-          "description": "Automated liquidation mechanisms protect protocol solvency during market volatility"
+          "title": "Verimli Tasfiyeler",
+          "description": "Otomatik tasfiye mekanizmaları, piyasa oynaklığı sırasında protokol ödeme gücünü korur"
         },
         "multiAssetCollateral": {
-          "title": "Multi-Asset Collateral",
-          "description": "Support for various collateral types including ERG, wrapped assets, and LP tokens"
+          "title": "Çok Varlıklı Teminat",
+          "description": "ERG, sarılı varlıklar ve LP tokenleri dahil çeşitli teminat türleri için destek"
         },
         "composableDefi": {
-          "title": "Composable DeFi",
-          "description": "Seamlessly integrate with other DeFi protocols for lending, yield farming, and more"
+          "title": "Bileşilebilir DeFi",
+          "description": "Borç verme, getiri çiftçiliği ve daha fazlası için diğer DeFi protokolleriyle sorunsuz entegrasyon"
         }
       },
       "technical": {
-        "title": "Technical Implementation",
-        "subtitle": "How algorithmic stablecoins work on Ergo",
+        "title": "Teknik Uygulama",
+        "subtitle": "Algoritmik stabilcoinlerin Ergo üzerinde nasıl çalıştığı",
         "tabs": {
-          "overview": "Overview",
-          "ageUsd": "AgeUSD Protocol",
-          "code": "Code Example"
+          "overview": "Genel Bakış",
+          "ageUsd": "AgeUSD Protokolü",
+          "code": "Kod Örneği"
         },
         "overview": {
-          "title": "How It Works",
-          "description": "Algorithmic stablecoins on Ergo maintain their peg through smart contract mechanisms that automatically adjust supply and demand based on market conditions.",
+          "title": "Nasıl Çalışır",
+          "description": "Ergo'daki algoritmik stabilcoinler, piyasa koşullarına göre arz ve talebi otomatik olarak ayarlayan akıllı sözleşme mekanizmaları aracılığıyla sabitlemelerini korur.",
           "points": {
-            "point1": "Oracle pools provide reliable price feeds",
-            "point2": "Smart contracts manage collateral and minting",
-            "point3": "Reserve providers absorb volatility",
-            "point4": "Liquidation mechanisms protect solvency",
-            "point5": "Governance tokens enable parameter updates"
+            "point1": "Oracle havuzları güvenilir fiyat akışları sağlar",
+            "point2": "Akıllı sözleşmeler teminat ve basımı yönetir",
+            "point3": "Rezerv sağlayıcılar oynaklığı absorbe eder",
+            "point4": "Tasfiye mekanizmaları ödeme gücünü korur",
+            "point5": "Yönetişim tokenleri parametre güncellemelerini mümkün kılar"
           }
         },
         "ageUsd": {
-          "title": "AgeUSD Protocol Design",
+          "title": "AgeUSD Protokol Tasarımı",
           "sigmaUsd": {
-            "title": "SigmaUSD (Stable)",
+            "title": "SigmaUSD (İstikrarlı)",
             "points": {
-              "point1": "Pegged to $1 USD",
-              "point2": "Backed by ERG reserves",
-              "point3": "Mintable when reserve ratio > 400%",
-              "point4": "Redeemable for $1 worth of ERG"
+              "point1": "1 ABD Dolarına sabitlenmiş",
+              "point2": "ERG rezervleri ile desteklenen",
+              "point3": "Rezerv oranı > %400 olduğunda basılabilir",
+              "point4": "1 ABD Doları değerinde ERG için geri alınabilir"
             }
           },
           "sigmaRsv": {
-            "title": "SigmaRSV (Reserve)",
+            "title": "SigmaRSV (Rezerv)",
             "points": {
-              "point1": "Provides reserve collateral",
-              "point2": "Absorbs ERG price volatility",
-              "point3": "Earns fees from minting/redeeming",
-              "point4": "Profits from ERG appreciation"
+              "point1": "Rezerv teminatı sağlar",
+              "point2": "ERG fiyat oynaklığını absorbe eder",
+              "point3": "Basım/geri alımdan ücret kazanır",
+              "point4": "ERG değer artışından kâr eder"
             }
           },
           "reserveMechanics": {
-            "title": "Reserve Mechanics"
+            "title": "Rezerv Mekanikleri"
           }
         },
         "codeExample": {
-          "title": "ErgoScript Example",
-          "description": "Simplified stablecoin minting contract"
+          "title": "ErgoScript Örneği",
+          "description": "Basitleştirilmiş stabilcoin basım sözleşmesi"
         }
       },
       "projects": {
-        "title": "Live Projects",
-        "subtitle": "Stablecoin projects currently running on Ergo",
+        "title": "Canlı Projeler",
+        "subtitle": "Şu anda Ergo üzerinde çalışan stabilcoin projeleri",
         "sigmaUsd": {
           "name": "SigmaUSD",
-          "description": "The first algorithmic stablecoin on Ergo using the AgeUSD protocol",
-          "status": "Live",
-          "tvl": "$2.5M+",
+          "description": "AgeUSD protokolünü kullanan Ergo üzerindeki ilk algoritmik stabilcoin",
+          "status": "Canlı",
+          "tvl": "$2,5M+",
           "features": {
-            "feature1": "ERG-backed",
-            "feature2": "Dual token model",
-            "feature3": "Reserve ratio protection"
+            "feature1": "ERG destekli",
+            "feature2": "Çift token modeli",
+            "feature3": "Rezerv oranı koruması"
           }
         },
         "gluonGold": {
           "name": "Gluon Gold",
-          "description": "Gold-backed stablecoin leveraging Ergo's oracle pools",
-          "status": "In Development",
+          "description": "Ergo'nun oracle havuzlarından yararlanan altın destekli stabilcoin",
+          "status": "Geliştirme Aşamasında",
           "tvl": "TBD",
           "features": {
-            "feature1": "Gold-pegged",
-            "feature2": "Oracle-powered",
-            "feature3": "Cross-chain compatible"
+            "feature1": "Altına sabitlenmiş",
+            "feature2": "Oracle destekli",
+            "feature3": "Zincirler arası uyumlu"
           }
         },
-        "visitProject": "Visit Project"
+        "visitProject": "Projeyi Ziyaret Et"
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about algorithmic stablecoins on Ergo",
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ergo'daki algoritmik stabilcoinler hakkında sık sorulan sorular",
         "howMaintainPeg": {
-          "question": "How do algorithmic stablecoins maintain their peg?",
-          "answer": "Algorithmic stablecoins on Ergo maintain their peg through a combination of over-collateralization, algorithmic supply adjustments, and market incentives. The AgeUSD protocol uses a dual-token system where reserve providers absorb volatility to maintain stability."
+          "question": "Algoritmik stabilcoinler sabitlemelerini nasıl korur?",
+          "answer": "Ergo'daki algoritmik stabilcoinler, sabitlemelerini aşırı teminat, algoritmik arz düzenlemeleri ve piyasa teşviklerinin kombinasyonu aracılığıyla korur. AgeUSD protokolü, rezerv sağlayıcıların istikrarı korumak için oynaklığı absorbe ettiği çift token sistemi kullanır."
         },
         "whyErgoIdeal": {
-          "question": "What makes Ergo ideal for stablecoins?",
-          "answer": "Ergo's eUTXO model provides superior security for collateral management, native oracle pools ensure reliable price feeds, and ErgoScript enables complex stability mechanisms while maintaining transparency and auditability."
+          "question": "Ergo'yu stabilcoinler için ideal kılan nedir?",
+          "answer": "Ergo'nun eUTXO modeli, teminat yönetimi için üstün güvenlik sağlar, yerel oracle havuzları güvenilir fiyat akışlarını garanti eder ve ErgoScript, şeffaflık ve denetlenebilirliği korurken karmaşık istikrar mekanizmalarını mümkün kılar."
         },
         "howAgeUsdWorks": {
-          "question": "How does the AgeUSD protocol work?",
-          "answer": "AgeUSD uses a reserve pool of ERG collateral and two tokens: SigmaUSD (stable) and SigmaRSV (reserve). Reserve providers mint SigmaRSV to add collateral and earn from fees and price appreciation, while users can mint SigmaUSD when the reserve ratio is healthy."
+          "question": "AgeUSD protokolü nasıl çalışır?",
+          "answer": "AgeUSD, bir ERG teminat havuzu ve iki token kullanır: SigmaUSD (istikrarlı) ve SigmaRSV (rezerv). Rezerv sağlayıcılar teminat eklemek ve ücretler ile fiyat artışından kazanmak için SigmaRSV basar; rezerv oranı sağlıklı olduğunda kullanıcılar SigmaUSD basabilir."
         },
         "risks": {
-          "question": "What are the risks of algorithmic stablecoins?",
-          "answer": "Main risks include under-collateralization during extreme market conditions, oracle manipulation, smart contract bugs, and liquidity crises. Ergo mitigates these through robust reserve requirements, decentralized oracles, and formal verification capabilities."
+          "question": "Algoritmik stabilcoinlerin riskleri nelerdir?",
+          "answer": "Başlıca riskler arasında aşırı piyasa koşullarında yetersiz teminat, oracle manipülasyonu, akıllı sözleşme hataları ve likidite krizleri yer alır. Ergo bu riskleri güçlü rezerv gereksinimleri, merkeziyetsiz oracle'lar ve resmi doğrulama yetenekleriyle azaltır."
         },
         "buildOwn": {
-          "question": "Can I build my own stablecoin on Ergo?",
-          "answer": "Yes! Ergo provides all necessary infrastructure: oracle pools for price feeds, ErgoScript for stability mechanisms, and proven protocols like AgeUSD as reference implementations. The community offers extensive documentation and support."
+          "question": "Ergo üzerinde kendi stabilcoinimi geliştirebilir miyim?",
+          "answer": "Evet! Ergo tüm gerekli altyapıyı sağlar: fiyat akışları için oracle havuzları, istikrar mekanizmaları için ErgoScript ve referans implementasyon olarak AgeUSD gibi kanıtlanmış protokoller. Topluluk kapsamlı dokümantasyon ve destek sunar."
         }
       },
       "cta": {
-        "title": "Ready to Build Stable Value?",
-        "subtitle": "Start using or building algorithmic stablecoins on Ergo today.",
-        "useSigmaUsd": "Use SigmaUSD",
-        "trySignaUsd": "Try SigmaUSD",
-        "viewProtocol": "View Protocol",
-        "developerDocs": "Developer Docs"
+        "title": "İstikrarlı Değer Geliştirmeye Hazır mısınız?",
+        "subtitle": "Bugün Ergo'da algoritmik stabilcoinleri kullanmaya veya geliştirmeye başlayın.",
+        "useSigmaUsd": "SigmaUSD Kullan",
+        "trySignaUsd": "SigmaUSD Dene",
+        "viewProtocol": "Protokolü Görüntüle",
+        "developerDocs": "Geliştirici Dokümanları"
       },
       "whatsNext": {
-        "titlePrefix": "What's",
-        "titleHighlight": "Next?",
-        "subtitle": "Start using or building algorithmic stablecoins on Ergo today",
+        "titlePrefix": "Sırada",
+        "titleHighlight": "Ne Var?",
+        "subtitle": "Bugün Ergo'da algoritmik stabilcoinleri kullanmaya veya geliştirmeye başlayın",
         "cards": {
           "useSigmaUsd": {
-            "title": "Use SigmaUSD",
-            "subtitle": "Start Trading",
-            "description": "Experience the first algorithmic stablecoin on Ergo using the AgeUSD protocol"
+            "title": "SigmaUSD Kullan",
+            "subtitle": "İşlem Yapmaya Başla",
+            "description": "AgeUSD protokolünü kullanan Ergo'daki ilk algoritmik stabilcoini deneyimleyin"
           },
           "developerDocs": {
-            "title": "Developer Docs",
-            "subtitle": "Build Your Own",
-            "description": "Access documentation and tools to build your own stablecoin protocols on Ergo"
+            "title": "Geliştirici Dokümanları",
+            "subtitle": "Kendinizinkini Geliştirin",
+            "description": "Ergo üzerinde kendi stabilcoin protokollerinizi geliştirmek için dokümantasyona ve araçlara erişin"
           }
         }
       },
       "emailCapture": {
-        "title": "Stay Updated on Ergo Stablecoins",
-        "description": "Get notified about SigmaUSD updates, new stablecoin protocols, and DeFi innovations."
+        "title": "Ergo Stabilcoinlerinden Haberdar Olun",
+        "description": "SigmaUSD güncellemeleri, yeni stabilcoin protokolleri ve DeFi yenilikleri hakkında bildirim alın."
       },
       "schema": {
         "breadcrumbs": {
-          "useCases": "Use Cases",
-          "algorithmicStablecoins": "Algorithmic Stablecoins"
+          "useCases": "Kullanım Alanları",
+          "algorithmicStablecoins": "Algoritmik Stabilcoinler"
         },
         "techArticle": {
-          "headline": "Algorithmic Stablecoins on Ergo",
-          "description": "Comprehensive guide to building and using algorithmic stablecoins on Ergo blockchain",
-          "keywords": "algorithmic stablecoins, SigmaUSD, AgeUSD, DeFi, Ergo"
+          "headline": "Ergo'da Algoritmik Stabilcoinler",
+          "description": "Ergo blockchain üzerinde algoritmik stabilcoinler geliştirme ve kullanmaya kapsamlı rehber",
+          "keywords": "algoritmik stabilcoinler, SigmaUSD, AgeUSD, DeFi, Ergo"
         },
         "faq": {
           "items": [
             {
-              "question": "What is SigmaUSD?",
-              "answer": "SigmaUSD is an algorithmic stablecoin on Ergo, backed by ERG collateral and maintained through a reserve ratio mechanism."
+              "question": "SigmaUSD nedir?",
+              "answer": "SigmaUSD, Ergo üzerinde ERG teminatıyla desteklenen ve rezerv oranı mekanizması aracılığıyla korunan algoritmik bir stabilcoindir."
             },
             {
-              "question": "How is SigmaUSD different from other stablecoins?",
-              "answer": "SigmaUSD is fully decentralized with no centralized reserves. It uses an algorithmic approach with ERG as collateral."
+              "question": "SigmaUSD diğer stabilcoinlerden nasıl farklıdır?",
+              "answer": "SigmaUSD, merkezi rezerv bulunmaksızın tamamen merkeziyetsizdir. Teminat olarak ERG kullanan algoritmik bir yaklaşım benimser."
             }
           ]
         },
         "howTo": {
-          "name": "How to Use Algorithmic Stablecoins on Ergo",
-          "description": "Step-by-step guide to using and building stablecoins on Ergo",
+          "name": "Ergo'da Algoritmik Stabilcoinler Nasıl Kullanılır",
+          "description": "Ergo'da stabilcoinleri kullanma ve geliştirmeye yönelik adım adım rehber",
           "steps": {
             "setupWallet": {
-              "name": "Set up Ergo wallet",
-              "text": "Install an Ergo wallet like Nautilus or SAFEW"
+              "name": "Ergo cüzdanını kur",
+              "text": "Nautilus veya SAFEW gibi bir Ergo cüzdanı yükleyin"
             },
             "getErg": {
-              "name": "Get ERG tokens",
-              "text": "Acquire ERG from exchanges or DEXs"
+              "name": "ERG token edin",
+              "text": "Borsalar veya DEX'lerden ERG edinin"
             },
             "accessSigmaUsd": {
-              "name": "Access SigmaUSD",
-              "text": "Visit sigmausd.io to mint or redeem stablecoins"
+              "name": "SigmaUSD'ye eriş",
+              "text": "Stabilcoin basmak veya geri almak için sigmausd.io'yu ziyaret edin"
             },
             "managePositions": {
-              "name": "Manage positions",
-              "text": "Monitor reserve ratios and manage your stable assets"
+              "name": "Pozisyonları yönet",
+              "text": "Rezerv oranlarını izleyin ve istikrarlı varlıklarınızı yönetin"
             }
           }
         }
@@ -2568,66 +2568,66 @@
         }
       }
     },
-    "whyErgo": "Why Ergo for DeFi & mining?",
-    "seeComparison": "See how it compares",
+    "whyErgo": "DeFi ve madencilik için neden Ergo?",
+    "seeComparison": "Nasıl karşılaştırıldığını görün",
     "hoverTexts": {
-      "stablecoins": "Learn More",
-      "privacy": "Discover Privacy",
-      "bridges": "Connect Chains",
-      "daos": "Join Community",
-      "nfts": "Create Assets",
-      "oracles": "Access Data",
-      "identity": "Build Identity",
-      "gaming": "Start Gaming",
-      "default": "Learn More"
+      "stablecoins": "Daha Fazla Bilgi",
+      "privacy": "Gizliliği Keşfet",
+      "bridges": "Zincirleri Bağla",
+      "daos": "Topluluğa Katıl",
+      "nfts": "Varlık Oluştur",
+      "oracles": "Verilere Eriş",
+      "identity": "Kimlik Oluştur",
+      "gaming": "Oynamaya Başla",
+      "default": "Daha Fazla Bilgi"
     },
     "defiConstruction": {
-      "title": "DeFi on Ergo",
-      "subtitle": "The future of decentralized finance is being built on Ergo. Advanced protocols, innovative primitives, and sustainable yields.",
-      "badge": "Coming Soon - Be the first to experience next-generation DeFi",
+      "title": "Ergo'da DeFi",
+      "subtitle": "Merkeziyetsiz finansın geleceği Ergo üzerinde inşa ediliyor. Gelişmiş protokoller, yenilikçi ilkeler ve sürdürülebilir getiriler.",
+      "badge": "Yakında - Yeni nesil DeFi'yi ilk deneyimleyenlerden olun",
       "countdown": {
-        "days": "Days",
-        "hours": "Hours",
-        "minutes": "Minutes",
-        "seconds": "Seconds",
-        "launching": "Estimated Launch"
+        "days": "Gün",
+        "hours": "Saat",
+        "minutes": "Dakika",
+        "seconds": "Saniye",
+        "launching": "Tahmini Lansman"
       },
       "features": [
         {
-          "title": "Advanced AMM",
-          "description": "Next-generation automated market makers with concentrated liquidity"
+          "title": "Gelişmiş AMM",
+          "description": "Yoğunlaştırılmış likiditeye sahip yeni nesil otomatik piyasa yapıcılar"
         },
         {
-          "title": "Yield Farming",
-          "description": "Sustainable yield opportunities with innovative tokenomics"
+          "title": "Getiri Çiftçiliği",
+          "description": "Yenilikçi tokenomics ile sürdürülebilir getiri fırsatları"
         },
         {
-          "title": "Secure Protocols",
-          "description": "Battle-tested smart contracts with formal verification"
+          "title": "Güvenli Protokoller",
+          "description": "Resmi doğrulama ile sınanmış akıllı sözleşmeler"
         },
         {
-          "title": "Lightning Fast",
-          "description": "Sub-second transactions with minimal fees"
+          "title": "Şimşek Hızında",
+          "description": "Minimum ücretlerle saniyenin altında işlemler"
         }
       ],
       "whatsComing": {
-        "title": "What's Coming",
-        "subtitle": "Revolutionary DeFi protocols designed for the next generation of decentralized finance",
+        "title": "Neler Geliyor",
+        "subtitle": "Merkeziyetsiz finansın yeni nesli için tasarlanmış devrimsel DeFi protokolleri",
         "items": [
-          "Comprehensive protocol comparison dashboard",
-          "Real-time TVL and volume tracking",
-          "Cross-chain DeFi opportunities",
-          "Risk assessment tools",
-          "Portfolio management features"
+          "Kapsamlı protokol karşılaştırma paneli",
+          "Gerçek zamanlı TVL ve işlem hacmi takibi",
+          "Zincirler arası DeFi fırsatları",
+          "Risk değerlendirme araçları",
+          "Portföy yönetimi özellikleri"
         ]
       },
       "communityCta": {
-        "title": "Join the Ergo Community",
-        "description": "Connect with developers, traders, and DeFi enthusiasts building the future of finance."
+        "title": "Ergo Topluluğuna Katılın",
+        "description": "Finansın geleceğini inşa eden geliştiriciler, yatırımcılar ve DeFi meraklılarıyla bağlantı kurun."
       },
       "cta": {
-        "title": "Get Notified When We Launch",
-        "description": "Be the first to explore the new DeFi hub. Sign up for updates."
+        "title": "Lansman Olduğunda Haberdar Olun",
+        "description": "Yeni DeFi merkezini ilk keşfedenlerden olun. Güncellemeler için kayıt olun."
       }
     }
   },

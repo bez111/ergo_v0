@@ -2742,119 +2742,119 @@
   },
   "comparison": {
     "hero": {
-      "title": "Platform",
-      "analysis": "Analysis",
-      "subtitle": "Understanding Ergo's Technical Advantages",
-      "description": "Ergo combines the security and predictability of the eUTXO model with the programmability needed for complex smart contracts, and supports light clients via NIPoPoWs.",
+      "title": "平台",
+      "analysis": "分析",
+      "subtitle": "了解 Ergo 的技術優勢",
+      "description": "Ergo 將 eUTXO 模型的安全性與可預測性，與複雜智能合約所需的可程式化能力相結合，並透過 NIPoPoWs 支援輕量客戶端。",
       "buttons": {
-        "start_building": "Start Building",
-        "view_comparison": "View Comparison"
+        "start_building": "開始建構",
+        "view_comparison": "查看比較"
       }
     },
     "key_features": {
       "predictable_security": {
-        "title": "Predictable & Auditable Security",
-        "description": "No known protocol-level reentrancy class; deterministic execution bounds; friendly to audits"
+        "title": "可預測且可審計的安全性",
+        "description": "協議層面無已知的重入漏洞類別；確定性執行邊界；易於審計"
       },
       "parallel_execution": {
-        "title": "Parallel Execution",
-        "description": "Independent UTXOs enable parallel execution; shared-box patterns may introduce contention"
+        "title": "並行執行",
+        "description": "獨立的 UTXO 支援並行執行；共享盒子模式可能引入競爭"
       },
       "native_privacy": {
-        "title": "Native Privacy",
-        "description": "Σ-protocols and UTXO mixing at the protocol layer"
+        "title": "原生隱私",
+        "description": "Σ 協議與協議層的 UTXO 混合"
       },
       "native_assets": {
-        "title": "Native L1 Assets",
-        "description": "Native L1 tokens/NFTs (no wrapper contracts)"
+        "title": "原生 L1 資產",
+        "description": "原生 L1 代幣/NFT（無需包裝合約）"
       }
     },
     "vision": {
-      "title": "Why Developers Choose Ergo",
-      "description": "\"Other platforms force you to work around their limitations. Ergo works around yours.\" Experience the difference of building on a platform designed for security, predictability, and developer productivity."
+      "title": "開發者選擇 Ergo 的原因",
+      "description": "「其他平台迫使你繞過它們的限制。Ergo 繞過的是你的限制。」體驗在專為安全性、可預測性與開發者生產力設計的平台上進行建構的不同之處。"
     },
     "stats": {
       "predictable": {
-        "title": "Predictable",
-        "description": "Fees; no gas price auctions"
+        "title": "可預測",
+        "description": "費用；無 Gas 競價拍賣"
       },
       "no_class": {
-        "title": "No class",
-        "description": "of protocol-level reentrancy"
+        "title": "無此類別",
+        "description": "協議層面的重入漏洞"
       },
       "native": {
-        "title": "Native",
-        "description": "L1 tokens/NFTs"
+        "title": "原生",
+        "description": "L1 代幣/NFT"
       },
       "light": {
-        "title": "Light",
-        "description": "clients (NIPoPoWs)"
+        "title": "輕量",
+        "description": "客戶端（NIPoPoWs）"
       }
     },
     "problems_vs_solutions": {
-      "title": "The Problem with",
-      "current_platforms": "Current Platforms",
+      "title": "問題所在",
+      "current_platforms": "現有平台",
       "development_nightmares": {
-        "title": "Development Nightmares",
+        "title": "開發噩夢",
         "items": {
-          "unpredictable_gas": "Unpredictable gas costs bankrupting users",
-          "reentrancy_attacks": "Reentrancy attacks draining protocols",
-          "complex_languages": "Complex languages creating security holes",
-          "vc_controlled": "VC-controlled platforms changing rules"
+          "unpredictable_gas": "不可預測的 Gas 費用令用戶財務損失",
+          "reentrancy_attacks": "重入攻擊耗盡協議資金",
+          "complex_languages": "複雜語言造成安全漏洞",
+          "vc_controlled": "VC 控制的平台隨意更改規則"
         }
       },
       "ergo_solution": {
-        "title": "The Ergo Solution",
+        "title": "Ergo 解決方案",
         "items": {
-          "predictable_fees": "Predictable fees; auditable execution bounds",
-          "security_by_design": "Security-by-design in the eUTXO model",
-          "ergoscript": "ErgoScript: declarative, explicit state transitions",
-          "community_owned": "Community-owned, fair launch principles"
+          "predictable_fees": "可預測費用；可審計的執行邊界",
+          "security_by_design": "eUTXO 模型內建安全設計",
+          "ergoscript": "ErgoScript：宣告式、明確的狀態轉換",
+          "community_owned": "社群所有，公平啟動原則"
         }
       }
     },
     "differentiators": {
-      "title": "What Makes",
+      "title": "是什麼讓",
       "ergo": "Ergo",
-      "different": "Different",
-      "key_advantage": "Key Advantage",
-      "ergo_advantage": "Ergo Advantage",
-      "others": "Others",
+      "different": "與眾不同",
+      "key_advantage": "核心優勢",
+      "ergo_advantage": "Ergo 優勢",
+      "others": "其他平台",
       "vs": "VS",
       "items": {
         "predictable_security": {
-          "title": "Predictable & Auditable Security",
-          "ergo": "No known protocol-level reentrancy class; predictable execution costs",
-          "others": "Reentrancy patterns and gas price auctions common in account models"
+          "title": "可預測且可審計的安全性",
+          "ergo": "協議層面無已知重入漏洞類別；可預測的執行成本",
+          "others": "帳戶模型中常見重入模式與 Gas 競價拍賣"
         },
         "native_privacy": {
-          "title": "Native Privacy",
-          "ergo": "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
-          "others": "Often requires external add-ons or trusted services"
+          "title": "原生隱私",
+          "ergo": "Sigma 協議支援門限/多簽與隱私；可實現類環簽名構造",
+          "others": "通常需要外部附加組件或受信任的服務"
         },
         "developer_experience": {
-          "title": "Developer Experience",
-          "ergo": "Declarative ErgoScript with eUTXO reasoning",
-          "others": "Mutable global state; complex reentrancy-safe patterns"
+          "title": "開發者體驗",
+          "ergo": "宣告式 ErgoScript 與 eUTXO 推理",
+          "others": "可變全域狀態；複雜的防重入安全模式"
         },
         "fair_decentralized": {
-          "title": "Fair & Decentralized",
-          "ergo": "Fair PoW launch, ASIC-resistant (GPU-friendly)",
-          "others": "ICO allocations or validator gating"
+          "title": "公平且去中心化",
+          "ergo": "公平 PoW 啟動，抗 ASIC（GPU 友好）",
+          "others": "ICO 配額或驗證者門控"
         }
       },
       "bottom_cta": {
-        "description": "Experience the difference of building on a platform designed for the future",
-        "button": "Explore Technology"
+        "description": "體驗在為未來而設計的平台上建構的不同之處",
+        "button": "探索技術"
       }
     },
     "comparison_table": {
-      "title": "Blockchain",
-      "platform": "Platform",
-      "comparison": "Comparison",
-      "caption": "Comparison (EN): Ergo Vs BTC/ETH/ADA/SOL/SUI",
+      "title": "區塊鏈",
+      "platform": "平台",
+      "comparison": "比較",
+      "caption": "比較（EN）：Ergo 對比 BTC/ETH/ADA/SOL/SUI",
       "headers": {
-        "parameter": "Parameter",
+        "parameter": "參數",
         "ergo": "Ergo",
         "bitcoin": "Bitcoin",
         "ethereum": "Ethereum",
@@ -2863,604 +2863,604 @@
         "sui": "Sui"
       },
       "features": {
-        "consensus": "Consensus",
-        "state_model": "State model",
-        "smart_contract_languages": "Smart contract languages",
-        "issuance_max_supply": "Issuance / Max supply",
-        "target_block_time": "Target block/slot time",
-        "finality": "Finality (typical)",
-        "distinctive_features": "Distinctive features",
-        "privacy_features": "Privacy / L1 special features"
+        "consensus": "共識機制",
+        "state_model": "狀態模型",
+        "smart_contract_languages": "智能合約語言",
+        "issuance_max_supply": "發行量／最大供應量",
+        "target_block_time": "目標區塊／插槽時間",
+        "finality": "最終確定性（典型）",
+        "distinctive_features": "特色功能",
+        "privacy_features": "隱私／L1 特殊功能"
       },
       "values": {
         "ergo": {
-          "consensus": "PoW (Autolykos)",
+          "consensus": "PoW（Autolykos）",
           "state_model": "eUTXO",
           "smart_contracts": "ErgoScript",
-          "issuance": "Max ~97.74M ERG; fixed supply",
-          "block_time": "≈ 2 min",
-          "finality": "Probabilistic (via confirmations)",
-          "distinctive": "Storage Rent, NiPoPoWs, Σ-protocols",
-          "privacy": "Built-in Sigma protocols, mixer contracts"
+          "issuance": "最大約 97.74M ERG；固定供應量",
+          "block_time": "≈ 2 分鐘",
+          "finality": "概率性（透過確認數）",
+          "distinctive": "Storage Rent、NiPoPoWs、Σ 協議",
+          "privacy": "內建 Sigma 協議、混幣合約"
         },
         "bitcoin": {
-          "consensus": "PoW (SHA-256d)",
+          "consensus": "PoW（SHA-256d）",
           "state_model": "UTXO",
-          "smart_contracts": "Bitcoin Script (limited)",
-          "issuance": "Max 21M BTC (halvings)",
-          "block_time": "≈ 10 min",
-          "finality": "Probabilistic (via confirmations)",
-          "distinctive": "Simple UTXO model, high reliability",
-          "privacy": "Limited scripts; privacy via L2/protocols"
+          "smart_contracts": "Bitcoin Script（功能有限）",
+          "issuance": "最大 21M BTC（減半機制）",
+          "block_time": "≈ 10 分鐘",
+          "finality": "概率性（透過確認數）",
+          "distinctive": "簡單 UTXO 模型，高可靠性",
+          "privacy": "腳本功能有限；透過 L2／協議實現隱私"
         },
         "ethereum": {
-          "consensus": "PoS (Beacon/Gasper)",
-          "state_model": "Account model + EVM",
-          "smart_contracts": "Solidity, Vyper (EVM)",
-          "issuance": "No hard cap; issuance + burn (EIP-1559)",
-          "block_time": "12 s slot; 32-slot epoch",
-          "finality": "Economic finality ≈ 2 epochs (~13–15 min)",
-          "distinctive": "General EVM platform, EIP-1559 (burn)",
-          "privacy": "Base L1 lacks privacy; zk/privacy on L2"
+          "consensus": "PoS（Beacon/Gasper）",
+          "state_model": "帳戶模型 + EVM",
+          "smart_contracts": "Solidity、Vyper（EVM）",
+          "issuance": "無硬性上限；發行 + 銷毀（EIP-1559）",
+          "block_time": "12 秒插槽；32 插槽週期",
+          "finality": "經濟最終性 ≈ 2 個週期（約 13–15 分鐘）",
+          "distinctive": "通用 EVM 平台，EIP-1559（銷毀）",
+          "privacy": "基礎 L1 缺乏隱私；zk／隱私在 L2 上實現"
         },
         "cardano": {
-          "consensus": "PoS (Ouroboros)",
+          "consensus": "PoS（Ouroboros）",
           "state_model": "eUTXO",
-          "smart_contracts": "Plutus (Haskell family), Aiken",
-          "issuance": "Max 45B ADA",
-          "block_time": "1 s slot; expected block ≈ every 20 s",
-          "finality": "Through stability window & k-blocks; ~20 s blocks",
-          "distinctive": "eUTXO + formal methods, Hydra L2",
-          "privacy": "Base L1; extensions via Plutus/Hydra"
+          "smart_contracts": "Plutus（Haskell 系列）、Aiken",
+          "issuance": "最大 45B ADA",
+          "block_time": "1 秒插槽；預期每約 20 秒出一個區塊",
+          "finality": "透過穩定性窗口與 k 區塊；約 20 秒出塊",
+          "distinctive": "eUTXO + 形式化方法，Hydra L2",
+          "privacy": "基礎 L1；透過 Plutus/Hydra 擴展"
         },
         "solana": {
-          "consensus": "PoS + Proof of History (Tower BFT)",
-          "state_model": "Account model; parallel Sealevel runtime",
-          "smart_contracts": "Rust / C / C++ (SVM)",
-          "issuance": "No fixed cap; decaying inflation",
-          "block_time": "≈ 400–600 ms slot",
-          "finality": "\"Confirmed\" in 2–3 blocks; \"Finalized\" ≈ 32 blocks",
-          "distinctive": "High throughput, Sealevel, PoH",
-          "privacy": "Base L1; privacy via applications"
+          "consensus": "PoS + 歷史證明（Tower BFT）",
+          "state_model": "帳戶模型；並行 Sealevel 執行環境",
+          "smart_contracts": "Rust / C / C++（SVM）",
+          "issuance": "無固定上限；遞減通脹",
+          "block_time": "≈ 400–600 毫秒插槽",
+          "finality": "「已確認」約 2–3 個區塊；「已最終化」≈ 32 個區塊",
+          "distinctive": "高吞吐量、Sealevel、PoH",
+          "privacy": "基礎 L1；透過應用程式實現隱私"
         },
         "sui": {
-          "consensus": "PoS (Narwhal/Bullshark → Mysticeti)",
-          "state_model": "Object-centric (Move)",
+          "consensus": "PoS（Narwhal/Bullshark → Mysticeti）",
+          "state_model": "物件中心（Move）",
           "smart_contracts": "Move",
-          "issuance": "Max 10B SUI (scheduled distribution)",
-          "block_time": "Seconds (fast finality for simple tx)",
-          "finality": "BFT finality; typically seconds",
-          "distinctive": "Objects/ownership, parallel tx, Move safety",
-          "privacy": "Base L1; privacy via applications"
+          "issuance": "最大 10B SUI（計劃性分配）",
+          "block_time": "秒級（簡單交易的快速最終性）",
+          "finality": "BFT 最終性；通常為秒級",
+          "distinctive": "物件／所有權、並行交易、Move 安全性",
+          "privacy": "基礎 L1；透過應用程式實現隱私"
         }
       },
-      "footer": "Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated: {date}."
+      "footer": "主要區塊鏈平台的全面比較，涵蓋共識機制、狀態模型、智能合約能力及特色功能。更新於：{date}。"
     },
     "trust_indicators": {
-      "title": "Trust",
-      "indicators": "Indicators",
+      "title": "信任",
+      "indicators": "指標",
       "battle_tested": {
-        "title": "Battle-tested since 2019",
-        "description": "Proven security track record"
+        "title": "自 2019 年起經受實戰考驗",
+        "description": "經過驗證的安全記錄"
       },
       "developers": {
-        "title": "100+ developers",
-        "description": "Growing active community"
+        "title": "100+ 位開發者",
+        "description": "持續成長的活躍社群"
       },
       "no_incidents": {
-        "title": "No critical protocol-level incidents",
-        "description": "As of {date}"
+        "title": "無協議層面重大事故",
+        "description": "截至 {date}"
       }
     },
     "faq": {
-      "title": "FAQ",
+      "title": "常見問題",
       "items": {
         "eutxo_reentrancy": {
-          "question": "How does eUTXO reduce reentrancy risk?",
-          "answer": "Transactions consume specified UTXOs and cannot be re-entered; the shared-state pattern behind reentrancy is absent."
+          "question": "eUTXO 如何降低重入風險？",
+          "answer": "交易消耗指定的 UTXO 且無法被重新進入；帳戶模型中重入漏洞背後的共享狀態模式在此並不存在。"
         },
         "predictable_fees": {
-          "question": "Are fees predictable on Ergo?",
-          "answer": "Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions)."
+          "question": "Ergo 上的費用是否可預測？",
+          "answer": "腳本成本有上限，費用可預測；不存在 Gas 競價拍賣（最終費用取決於記憶體池狀況）。"
         },
         "light_clients": {
-          "question": "Does Ergo have light clients?",
-          "answer": "Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients."
+          "question": "Ergo 是否支援輕量客戶端？",
+          "answer": "是的。NIPoPoWs 為最小化信任的輕量客戶端提供簡潔的證明。"
         }
       }
     },
     "cta": {
-      "title": "Ready to Experience the Difference?",
-      "description": "Join the growing community of developers building secure, predictable, and privacy-focused applications on Ergo.",
+      "title": "準備好體驗不同了嗎？",
+      "description": "加入不斷成長的開發者社群，在 Ergo 上構建安全、可預測且注重隱私的應用程式。",
       "buttons": {
-        "start_building": "Start Building Today",
-        "explore_ecosystem": "Explore Ecosystem"
+        "start_building": "立即開始建構",
+        "explore_ecosystem": "探索生態系統"
       },
-      "footer": "Last updated: {date}. Sources:",
+      "footer": "最後更新：{date}。來源：",
       "links": {
         "autolykos": "Autolykos v2",
-        "github": "ergo (GitHub)"
+        "github": "ergo（GitHub）"
       }
     }
   },
   "quiz": {
     "intro": {
-      "title": "ERGO PATH FINDER",
-      "subtitle": "DISCOVER YOUR PLACE IN THE ECOSYSTEM",
-      "description": "Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will help you identify which aspects of Ergo might interest you most and guide you to personalized resources.",
-      "path_description": "Answer a few simple questions to find your path: Are you a future Investor, Developer, Miner, NFT Enthusiast, DeFi User, or something else?",
-      "start_button": "START QUIZ"
+      "title": "ERGO 路徑探索",
+      "subtitle": "探索你在生態系統中的位置",
+      "description": "歡迎來到 Ergo！初來乍到這個廣闊的生態系統，不知道從何開始？這個簡短的測驗將幫助你找出最感興趣的 Ergo 面向，並引導你找到個人化的資源。",
+      "path_description": "回答幾個簡單問題來找到你的路徑：你是未來的投資者、開發者、礦工、NFT 愛好者、DeFi 用戶，還是其他角色？",
+      "start_button": "開始測驗"
     },
     "progress": {
-      "question": "QUESTION",
-      "of": "OF",
-      "complete": "COMPLETE"
+      "question": "問題",
+      "of": "共",
+      "complete": "已完成"
     },
     "navigation": {
-      "previous": "Previous",
-      "restart": "Restart"
+      "previous": "上一題",
+      "restart": "重新開始"
     },
     "questions": {
       "q1": {
-        "question": "What primarily attracts you to blockchain technology and Ergo?",
+        "question": "什麼最吸引你接觸區塊鏈技術與 Ergo？",
         "options": {
-          "investment": "Investment potential and financial opportunities",
-          "building": "Building applications and contributing to new technologies",
-          "mining": "Supporting network security and earning rewards through hardware",
-          "nft": "Collecting, creating, or trading unique digital items and art",
-          "defi": "Using new financial tools for borrowing, lending, or trading",
-          "privacy": "Enhancing my financial privacy and anonymity",
-          "learning": "I'm new and just want to learn the basics first!"
+          "investment": "投資潛力與財務機會",
+          "building": "建構應用程式並為新技術做出貢獻",
+          "mining": "透過硬體支持網路安全並賺取獎勵",
+          "nft": "收藏、創作或交易獨特的數位物品與藝術",
+          "defi": "使用新型金融工具進行借貸或交易",
+          "privacy": "提升我的財務隱私與匿名性",
+          "learning": "我是新手，只想先了解基礎知識！"
         }
       },
       "q2": {
-        "question": "How would you describe your technical comfort level?",
+        "question": "你如何描述自己的技術熟練度？",
         "options": {
-          "very_comfortable": "Very comfortable; I can code or manage complex systems",
-          "moderately_comfortable": "Moderately comfortable; I can learn new software and follow guides",
-          "not_technical": "Not very technical; I prefer simple and user-friendly applications"
+          "very_comfortable": "非常熟練；我能編寫程式碼或管理複雜系統",
+          "moderately_comfortable": "中等熟練；我能學習新軟體並跟隨教程操作",
+          "not_technical": "技術能力有限；我偏好簡單易用的應用程式"
         }
       },
       "q3": {
-        "question": "What kind of activity within Ergo are you most interested in?",
+        "question": "你最感興趣的 Ergo 活動類型是什麼？",
         "options": {
-          "growing_assets": "Growing my assets and exploring financial instruments",
-          "creating_tools": "Creating new tools, dApps, or smart contracts",
-          "securing_network": "Securing the network and earning ERG",
-          "digital_art": "Exploring digital art and collectibles",
-          "understanding_tech": "Deeply understanding the technology and its principles",
-          "financial_privacy": "Protecting my financial privacy"
+          "growing_assets": "增值資產並探索金融工具",
+          "creating_tools": "創建新工具、dApp 或智能合約",
+          "securing_network": "保護網路安全並賺取 ERG",
+          "digital_art": "探索數位藝術與收藏品",
+          "understanding_tech": "深入理解技術及其原理",
+          "financial_privacy": "保護我的財務隱私"
         }
       },
       "q4": {
-        "question": "If you're interested in finance/investment, what's your approach to new financial technologies?",
+        "question": "如果你對金融／投資感興趣，你對新型金融技術的態度是什麼？",
         "options": {
-          "established_low_risk": "Looking for established, lower-risk ways to engage",
-          "defi_opportunities": "Exploring DeFi opportunities while understanding the risks",
-          "cutting_edge": "Interested in cutting-edge, experimental financial tools",
-          "not_interested": "Not particularly interested in financial aspects"
+          "established_low_risk": "尋找成熟、風險較低的參與方式",
+          "defi_opportunities": "在了解風險的前提下探索 DeFi 機會",
+          "cutting_edge": "對前沿、實驗性的金融工具感興趣",
+          "not_interested": "對金融面向並不特別感興趣"
         }
       },
       "q5": {
-        "question": "If you want to contribute, what type of participation inspires you most?",
+        "question": "你最希望以哪種方式為你關心的項目做出貢獻？",
         "options": {
-          "writing_code": "Writing code and building software",
-          "creating_content": "Creating educational content, art, or marketing materials",
-          "helping_community": "Helping others in the community and answering questions",
-          "governance": "Participating in governance discussions and proposals",
-          "network_infrastructure": "Supporting network infrastructure"
+          "writing_code": "編寫程式碼並開發軟體",
+          "creating_content": "創作教育內容、藝術或行銷材料",
+          "helping_community": "在社群中幫助他人並回答問題",
+          "governance": "參與治理討論與提案",
+          "network_infrastructure": "支持網路基礎設施"
         }
       }
     },
     "profiles": {
       "developer": {
-        "name": "Aspiring Developer",
-        "title": "BUILD THE FUTURE",
-        "description": "You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.",
+        "name": "未來開發者",
+        "title": "建構未來",
+        "description": "你熱衷於創建創新應用程式並為前沿技術做出貢獻！Ergo 強大的 ErgoScript 與 eUTXO 模型為構建安全高效的 dApp 提供了獨特機會。",
         "tools": {
           "documentation": {
-            "category": "Documentation & Learning",
+            "category": "文件與學習",
             "items": {
               "ergodocs": {
                 "name": "ErgoDocs",
-                "description": "Comprehensive developer documentation"
+                "description": "完整的開發者文件"
               },
               "ergoscript": {
-                "name": "ErgoScript Primer",
-                "description": "Learn Ergo's smart contract language"
+                "name": "ErgoScript 入門",
+                "description": "學習 Ergo 的智能合約語言"
               },
               "playground": {
-                "name": "Ergo Playgrounds",
-                "description": "Interactive coding environment"
+                "name": "Ergo 實驗場",
+                "description": "互動式程式碼環境"
               }
             }
           },
           "development": {
-            "category": "Development Tools",
+            "category": "開發工具",
             "items": {
               "appkit": {
                 "name": "AppKit",
-                "description": "Java/Scala development toolkit"
+                "description": "Java/Scala 開發工具套件"
               },
               "fleet": {
                 "name": "Fleet SDK",
-                "description": "TypeScript SDK for Ergo"
+                "description": "Ergo 的 TypeScript SDK"
               },
               "sigma_rust": {
                 "name": "Sigma-Rust",
-                "description": "Rust implementation of Sigma protocols"
+                "description": "Sigma 協議的 Rust 實現"
               }
             }
           }
         },
         "next_steps": {
-          "docs": "Explore Developer Documentation",
-          "playground": "Try the ErgoScript Playground",
-          "discord": "Join Developer Discord Channels",
-          "grants": "Check Out Developer Grants"
+          "docs": "探索開發者文件",
+          "playground": "嘗試 ErgoScript 實驗場",
+          "discord": "加入開發者 Discord 頻道",
+          "grants": "了解開發者資助計畫"
         },
         "community": {
-          "discord": "Developer Discord",
-          "forum": "ErgoForum - Development",
-          "github": "GitHub Organization"
+          "discord": "開發者 Discord",
+          "forum": "ErgoForum — 開發",
+          "github": "GitHub 組織"
         }
       },
       "defi": {
-        "name": "DeFi Explorer",
-        "title": "DECENTRALIZED FINANCE PIONEER",
-        "description": "You're ready to explore innovative financial instruments and opportunities that Ergo's decentralized world offers! Discover new ways to manage assets, earn returns, and participate in the future of finance.",
+        "name": "DeFi 探索者",
+        "title": "去中心化金融先鋒",
+        "description": "你已準備好探索 Ergo 去中心化世界所提供的創新金融工具與機會！發現管理資產、賺取收益並參與未來金融的新方式。",
         "tools": {
           "wallets": {
-            "category": "Wallets",
+            "category": "錢包",
             "items": {
               "nautilus": {
-                "name": "Nautilus Wallet",
-                "description": "Browser extension wallet"
+                "name": "Nautilus 錢包",
+                "description": "瀏覽器擴充錢包"
               },
               "mobile": {
-                "name": "Official Mobile Wallets",
-                "description": "iOS and Android apps"
+                "name": "官方行動錢包",
+                "description": "iOS 與 Android 應用程式"
               }
             }
           },
           "platforms": {
-            "category": "DeFi Platforms",
+            "category": "DeFi 平台",
             "items": {
               "spectrum": {
                 "name": "Spectrum Finance",
-                "description": "Decentralized exchange (DEX)"
+                "description": "去中心化交易所（DEX）"
               },
               "sigmausd": {
                 "name": "SigmaUSD",
-                "description": "Algorithmic stablecoin protocol"
+                "description": "算法穩定幣協議"
               },
               "duckpools": {
                 "name": "Duckpools",
-                "description": "Lending and borrowing platform"
+                "description": "借貸平台"
               }
             }
           },
           "analytics": {
-            "category": "Analytics",
+            "category": "數據分析",
             "items": {
               "ergo_watch": {
                 "name": "ergo.watch",
-                "description": "Network and DeFi analytics"
+                "description": "網路與 DeFi 數據分析"
               },
               "explorer": {
-                "name": "Ergo Explorer",
-                "description": "Blockchain explorer"
+                "name": "Ergo 瀏覽器",
+                "description": "區塊鏈瀏覽器"
               }
             }
           }
         },
         "next_steps": {
-          "wallet": "Install Nautilus Wallet",
-          "sigmausd": "Learn about SigmaUSD Stablecoin",
-          "spectrum": "Try Trading on Spectrum Finance",
-          "discord": "Join DeFi Discussions on Discord"
+          "wallet": "安裝 Nautilus 錢包",
+          "sigmausd": "了解 SigmaUSD 穩定幣",
+          "spectrum": "在 Spectrum Finance 嘗試交易",
+          "discord": "加入 Discord 上的 DeFi 討論"
         },
         "community": {
-          "discord": "DeFi Discord Channels",
-          "spectrum": "Spectrum Finance Community",
-          "sigmausd": "SigmaUSD Community"
+          "discord": "DeFi Discord 頻道",
+          "spectrum": "Spectrum Finance 社群",
+          "sigmausd": "SigmaUSD 社群"
         }
       },
       "investor": {
-        "name": "Strategic Investor",
-        "title": "LONG-TERM VALUE BUILDER",
-        "description": "You're interested in Ergo's long-term potential and want to understand the fundamentals before making investment decisions. Focus on learning about the technology and ecosystem growth.",
+        "name": "戰略投資者",
+        "title": "長期價值建構者",
+        "description": "你對 Ergo 的長期潛力感興趣，希望在做出投資決策前深入了解基本面。專注於學習技術和生態系統成長。",
         "tools": {
           "getting_started": {
-            "category": "Getting Started",
+            "category": "入門指南",
             "items": {
               "wallets": {
-                "name": "Official Wallets",
-                "description": "Secure ERG storage"
+                "name": "官方錢包",
+                "description": "安全儲存 ERG"
               },
               "exchanges": {
-                "name": "Exchange Listings",
-                "description": "Where to buy ERG"
+                "name": "交易所上架",
+                "description": "購買 ERG 的管道"
               }
             }
           },
           "research": {
-            "category": "Research & Analytics",
+            "category": "研究與分析",
             "items": {
               "whitepaper": {
-                "name": "Ergo Whitepaper",
-                "description": "Technical foundation"
+                "name": "Ergo 白皮書",
+                "description": "技術基礎"
               },
               "ecosystem": {
-                "name": "Ecosystem Overview",
-                "description": "Projects and growth"
+                "name": "生態系統概覽",
+                "description": "項目與成長情況"
               },
               "stats": {
-                "name": "Network Statistics",
-                "description": "Real-time metrics"
+                "name": "網路統計數據",
+                "description": "即時指標"
               }
             }
           }
         },
         "next_steps": {
-          "whitepaper": "Read the Ergo Whitepaper",
-          "ecosystem": "Explore the Ecosystem",
-          "tokenomics": "Learn About ERG Tokenomics",
-          "discord": "Join Investor Discussions"
+          "whitepaper": "閱讀 Ergo 白皮書",
+          "ecosystem": "探索生態系統",
+          "tokenomics": "了解 ERG 代幣經濟學",
+          "discord": "加入投資者討論"
         },
         "community": {
-          "discord": "General Discord",
-          "reddit": "Reddit Community",
-          "telegram": "Telegram Group"
+          "discord": "通用 Discord",
+          "reddit": "Reddit 社群",
+          "telegram": "Telegram 群組"
         }
       },
       "miner": {
-        "name": "Network Guardian",
-        "title": "SECURING THE BLOCKCHAIN",
-        "description": "You're interested in supporting Ergo's network security while earning rewards! Ergo uses the Autolykos v2 algorithm, which is ASIC-resistant and designed for fair mining.",
+        "name": "網路守護者",
+        "title": "保護區塊鏈安全",
+        "description": "你有興趣在賺取獎勵的同時支持 Ergo 的網路安全！Ergo 使用 Autolykos v2 算法，該算法抗 ASIC，專為公平挖礦而設計。",
         "tools": {
           "information": {
-            "category": "Mining Information",
+            "category": "挖礦資訊",
             "items": {
               "autolykos": {
-                "name": "Autolykos v2 Guide",
-                "description": "Understanding the algorithm"
+                "name": "Autolykos v2 指南",
+                "description": "了解算法"
               },
               "pools": {
-                "name": "Mining Pools",
-                "description": "Popular Ergo mining pools"
+                "name": "礦池",
+                "description": "熱門 Ergo 礦池"
               },
               "calculator": {
-                "name": "Profitability Calculator",
-                "description": "Estimate mining returns"
+                "name": "收益計算器",
+                "description": "估算挖礦收益"
               }
             }
           },
           "software": {
-            "category": "Mining Software",
+            "category": "挖礦軟體",
             "items": {
               "official": {
-                "name": "Official Miner",
-                "description": "Reference implementation"
+                "name": "官方礦機",
+                "description": "參考實現"
               },
               "community": {
-                "name": "Community Miners",
-                "description": "Third-party mining software"
+                "name": "社群礦機",
+                "description": "第三方挖礦軟體"
               }
             }
           }
         },
         "next_steps": {
-          "autolykos": "Learn About Autolykos v2",
-          "pools": "Find Mining Pools",
-          "calculator": "Calculate Mining Profitability",
-          "community": "Join Mining Community"
+          "autolykos": "了解 Autolykos v2",
+          "pools": "尋找礦池",
+          "calculator": "計算挖礦收益",
+          "community": "加入礦工社群"
         },
         "community": {
-          "discord": "Mining Discord Channels",
-          "pools": "Mining Pools Community",
-          "support": "Technical Support"
+          "discord": "挖礦 Discord 頻道",
+          "pools": "礦池社群",
+          "support": "技術支援"
         }
       },
       "nft": {
-        "name": "NFT Enthusiast",
-        "title": "DIGITAL ART COLLECTOR",
-        "description": "You're excited about unique digital items, art, and collectibles! Ergo's NFT ecosystem offers innovative marketplaces and creation tools with low fees and high security.",
+        "name": "NFT 愛好者",
+        "title": "數位藝術收藏家",
+        "description": "你對獨特的數位物品、藝術與收藏品充滿熱情！Ergo 的 NFT 生態系統提供創新的市場與創作工具，費用低廉且安全性高。",
         "tools": {
           "marketplaces": {
-            "category": "NFT Marketplaces",
+            "category": "NFT 市場",
             "items": {
               "auction_house": {
-                "name": "Ergo Auction House",
-                "description": "Premier NFT marketplace"
+                "name": "Ergo 拍賣行",
+                "description": "頂級 NFT 市場"
               },
               "skyharbor": {
                 "name": "SkyHarbor",
-                "description": "NFT trading platform"
+                "description": "NFT 交易平台"
               }
             }
           },
           "creation": {
-            "category": "Creation Tools",
+            "category": "創作工具",
             "items": {
               "tokenjay": {
                 "name": "TokenJay",
-                "description": "NFT minting platform"
+                "description": "NFT 鑄造平台"
               },
               "utils": {
                 "name": "Ergo Utils",
-                "description": "NFT creation utilities"
+                "description": "NFT 創作工具集"
               }
             }
           }
         },
         "next_steps": {
-          "auction_house": "Explore Ergo Auction House",
-          "creation": "Learn About NFT Creation",
-          "collections": "Browse NFT Collections",
-          "community": "Join NFT Community"
+          "auction_house": "探索 Ergo 拍賣行",
+          "creation": "了解 NFT 創作",
+          "collections": "瀏覽 NFT 收藏",
+          "community": "加入 NFT 社群"
         },
         "community": {
-          "discord": "NFT Discord Channels",
-          "artists": "Artist Community",
-          "collectors": "Collector Groups"
+          "discord": "NFT Discord 頻道",
+          "artists": "藝術家社群",
+          "collectors": "收藏家群組"
         }
       },
       "privacy": {
-        "name": "Privacy Advocate",
-        "title": "FINANCIAL PRIVACY CHAMPION",
-        "description": "You value financial privacy and want to protect your transaction history! Ergo offers cutting-edge privacy tools built on Sigma protocols for trustless and secure privacy enhancement.",
+        "name": "隱私倡導者",
+        "title": "財務隱私捍衛者",
+        "description": "你重視財務隱私，希望保護自己的交易記錄！Ergo 提供基於 Sigma 協議構建的前沿隱私工具，實現無需信任且安全的隱私增強。",
         "tools": {
           "privacy_tools": {
-            "category": "Privacy Tools",
+            "category": "隱私工具",
             "items": {
               "ergomixer": {
                 "name": "ErgoMixer",
-                "description": "Non-custodial transaction mixer"
+                "description": "非托管式交易混幣器"
               },
               "stealth": {
-                "name": "Stealth Addresses",
-                "description": "Enhanced address privacy"
+                "name": "隱身地址",
+                "description": "增強地址隱私"
               }
             }
           },
           "educational": {
-            "category": "Educational Resources",
+            "category": "教育資源",
             "items": {
               "sigma": {
-                "name": "Sigma Protocols Guide",
-                "description": "Understanding privacy tech"
+                "name": "Sigma 協議指南",
+                "description": "了解隱私技術"
               },
               "best_practices": {
-                "name": "Privacy Best Practices",
-                "description": "How to stay private"
+                "name": "隱私最佳實踐",
+                "description": "如何保持隱私"
               }
             }
           }
         },
         "next_steps": {
-          "ergomixer": "Learn About ErgoMixer",
-          "sigma": "Understand Sigma Protocols",
-          "best_practices": "Read Privacy Best Practices",
-          "discussions": "Join Privacy Discussions"
+          "ergomixer": "了解 ErgoMixer",
+          "sigma": "理解 Sigma 協議",
+          "best_practices": "閱讀隱私最佳實踐",
+          "discussions": "加入隱私討論"
         },
         "community": {
-          "discord": "Privacy Discord Channels",
-          "ergomixer": "ErgoMixer Community",
-          "technical": "Technical Discussions"
+          "discord": "隱私 Discord 頻道",
+          "ergomixer": "ErgoMixer 社群",
+          "technical": "技術討論"
         }
       },
       "learner": {
-        "name": "Curious Learner",
-        "title": "KNOWLEDGE SEEKER",
-        "description": "You're new to Ergo and want to understand the fundamentals first! Perfect - learning the basics will help you make informed decisions about how to engage with the ecosystem.",
+        "name": "好奇的學習者",
+        "title": "知識追求者",
+        "description": "你是 Ergo 新手，希望先了解基礎知識！非常好——學習基礎將幫助你做出明智的決定，了解如何參與生態系統。",
         "tools": {
           "educational": {
-            "category": "Educational Resources",
+            "category": "教育資源",
             "items": {
               "faq": {
-                "name": "FAQ for Beginners",
-                "description": "Common questions answered"
+                "name": "新手常見問題",
+                "description": "常見問題解答"
               },
               "introduction": {
-                "name": "Quick Introduction",
-                "description": "Ergo overview"
+                "name": "快速入門",
+                "description": "Ergo 概覽"
               },
               "handbook": {
-                "name": "Ergonaut Handbook",
-                "description": "Comprehensive guide"
+                "name": "Ergonaut 手冊",
+                "description": "全面指南"
               }
             }
           },
           "community": {
-            "category": "Community Support",
+            "category": "社群支援",
             "items": {
               "newcomer": {
-                "name": "Newcomer Channels",
-                "description": "Beginner-friendly discussions"
+                "name": "新手頻道",
+                "description": "對初學者友善的討論"
               },
               "learning_groups": {
-                "name": "Learning Groups",
-                "description": "Study groups and mentorship"
+                "name": "學習小組",
+                "description": "學習小組與導師計畫"
               }
             }
           }
         },
         "next_steps": {
-          "faq": "Read the FAQ for Beginners",
-          "introduction": "Take the Quick Introduction",
-          "community": "Join Newcomer Community",
-          "learning_hub": "Explore the Learning Hub"
+          "faq": "閱讀新手常見問題",
+          "introduction": "進行快速入門",
+          "community": "加入新手社群",
+          "learning_hub": "探索學習中心"
         },
         "community": {
-          "discord": "General Discord",
-          "newcomer": "Newcomer Support",
-          "learning_groups": "Learning Groups"
+          "discord": "通用 Discord",
+          "newcomer": "新手支援",
+          "learning_groups": "學習小組"
         }
       }
     },
     "results": {
-      "your_path": "YOUR ERGO PATH",
-      "next_steps": "YOUR NEXT STEPS",
+      "your_path": "你的 ERGO 路徑",
+      "next_steps": "你的下一步",
       "community": {
-        "title": "CONNECT WITH YOUR COMMUNITY",
-        "description": "Join others who share your interests and get support on your Ergo journey"
+        "title": "與你的社群建立聯繫",
+        "description": "與志同道合的人交流，在 Ergo 旅程中獲得支持"
       },
       "explore_more": {
-        "title": "WANT TO EXPLORE OTHER ASPECTS OF ERGO?",
-        "ecosystem": "Explore Entire Ecosystem",
-        "faq": "Read Full FAQ",
-        "community": "Join Main Community"
+        "title": "想探索 ERGO 的其他面向嗎？",
+        "ecosystem": "探索完整生態系統",
+        "faq": "閱讀完整常見問題",
+        "community": "加入主要社群"
       },
-      "take_again": "Take Quiz Again"
+      "take_again": "重新參加測驗"
     },
     "quiz": {
-      "title": "Find Your Path in Ergo",
-      "subtitle": "Personalized recommendations based on your interests",
-      "description": "Discover how you can best contribute to and benefit from the Ergo ecosystem",
+      "title": "在 Ergo 找到你的路徑",
+      "subtitle": "根據你的興趣提供個人化建議",
+      "description": "探索如何最好地為 Ergo 生態系統做出貢獻並從中受益",
       "questions": [
         {
-          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "question": "什麼最吸引你接觸區塊鏈技術與 Ergo？",
           "options": [
             {
-              "text": "Investment potential and financial opportunities",
+              "text": "投資潛力與財務機會",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Building applications and contributing to new technologies",
+              "text": "建構應用程式並為新技術做出貢獻",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Supporting network security and earning rewards through hardware",
+              "text": "透過硬體支持網路安全並賺取獎勵",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Collecting, creating, or trading unique digital items and art",
+              "text": "收藏、創作或交易獨特的數位物品與藝術",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Using new financial tools for borrowing, lending, or trading",
+              "text": "使用新型金融工具進行借貸或交易",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Enhancing my financial privacy and anonymity",
+              "text": "提升我的財務隱私與匿名性",
               "profiles": [
                 "privacy"
               ]
             },
             {
-              "text": "I'm new and just want to learn the basics first!",
+              "text": "我是新手，只想先了解基礎知識！",
               "profiles": [
                 "beginner"
               ]
@@ -3468,23 +3468,23 @@
           ]
         },
         {
-          "question": "How would you describe your technical comfort level?",
+          "question": "你如何描述自己的技術熟練度？",
           "options": [
             {
-              "text": "Very comfortable; I can code or manage complex systems",
+              "text": "非常熟練；我能編寫程式碼或管理複雜系統",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Moderately comfortable; I can learn new software and follow guides",
+              "text": "中等熟練；我能學習新軟體並跟隨教程操作",
               "profiles": [
                 "miner",
                 "defi"
               ]
             },
             {
-              "text": "Not very technical; I prefer simple and user-friendly applications",
+              "text": "技術能力有限；我偏好簡單易用的應用程式",
               "profiles": [
                 "beginner",
                 "investor"
@@ -3493,41 +3493,41 @@
           ]
         },
         {
-          "question": "What are you most interested in doing with Ergo?",
+          "question": "你最有興趣在 Ergo 上做什麼？",
           "options": [
             {
-              "text": "Growing my assets and exploring financial instruments",
+              "text": "增值資產並探索金融工具",
               "profiles": [
                 "investor",
                 "defi"
               ]
             },
             {
-              "text": "Creating new tools, dApps, or smart contracts",
+              "text": "創建新工具、dApp 或智能合約",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Securing the network and earning ERG",
+              "text": "保護網路安全並賺取 ERG",
               "profiles": [
                 "miner"
               ]
             },
             {
-              "text": "Exploring digital art and collectibles",
+              "text": "探索數位藝術與收藏品",
               "profiles": [
                 "nft"
               ]
             },
             {
-              "text": "Deeply understanding the technology and its principles",
+              "text": "深入理解技術及其原理",
               "profiles": [
                 "beginner"
               ]
             },
             {
-              "text": "Protecting my financial privacy",
+              "text": "保護我的財務隱私",
               "profiles": [
                 "privacy"
               ]
@@ -3535,29 +3535,29 @@
           ]
         },
         {
-          "question": "What's your risk tolerance when it comes to new financial tools?",
+          "question": "面對新型金融工具，你的風險承受度如何？",
           "options": [
             {
-              "text": "Looking for established, lower-risk ways to engage",
+              "text": "尋找成熟、風險較低的參與方式",
               "profiles": [
                 "investor"
               ]
             },
             {
-              "text": "Exploring DeFi opportunities while understanding the risks",
+              "text": "在了解風險的前提下探索 DeFi 機會",
               "profiles": [
                 "defi"
               ]
             },
             {
-              "text": "Interested in cutting-edge, experimental financial tools",
+              "text": "對前沿、實驗性的金融工具感興趣",
               "profiles": [
                 "developer",
                 "privacy"
               ]
             },
             {
-              "text": "Not particularly interested in financial aspects",
+              "text": "對金融面向並不特別感興趣",
               "profiles": [
                 "beginner",
                 "miner",
@@ -3567,36 +3567,36 @@
           ]
         },
         {
-          "question": "How do you prefer to contribute to projects you care about?",
+          "question": "你偏好以何種方式為你關心的項目做出貢獻？",
           "options": [
             {
-              "text": "Writing code and building software",
+              "text": "編寫程式碼並開發軟體",
               "profiles": [
                 "developer"
               ]
             },
             {
-              "text": "Creating educational content, art, or marketing materials",
+              "text": "創作教育內容、藝術或行銷材料",
               "profiles": [
                 "nft",
                 "beginner"
               ]
             },
             {
-              "text": "Helping others in the community and answering questions",
+              "text": "在社群中幫助他人並回答問題",
               "profiles": [
                 "beginner"
               ]
             },
             {
-              "text": "Participating in governance discussions and proposals",
+              "text": "參與治理討論與提案",
               "profiles": [
                 "investor",
                 "privacy"
               ]
             },
             {
-              "text": "Supporting network infrastructure",
+              "text": "支持網路基礎設施",
               "profiles": [
                 "miner"
               ]
@@ -3606,240 +3606,240 @@
       ]
     },
     "comparison": {
-      "title": "Platform Comparison",
-      "subtitle": "How Ergo compares to other blockchains",
-      "description": "Understanding Ergo's unique advantages",
+      "title": "平台比較",
+      "subtitle": "Ergo 與其他區塊鏈的對比",
+      "description": "了解 Ergo 的獨特優勢",
       "keyDifferentiators": [
         {
-          "title": "Predictable & Auditable Security",
-          "ergo": "No known protocol-level reentrancy class; predictable execution costs",
-          "others": "Reentrancy patterns and gas price auctions common in account models"
+          "title": "可預測且可審計的安全性",
+          "ergo": "協議層面無已知重入漏洞類別；可預測的執行成本",
+          "others": "帳戶模型中常見重入模式與 Gas 競價拍賣"
         },
         {
-          "title": "Native Privacy",
-          "ergo": "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
-          "others": "Often requires external add-ons or trusted services"
+          "title": "原生隱私",
+          "ergo": "Sigma 協議支援門限/多簽與隱私；可實現類環簽名構造",
+          "others": "通常需要外部附加組件或受信任的服務"
         },
         {
-          "title": "Developer Experience",
-          "ergo": "Declarative ErgoScript with eUTXO reasoning",
-          "others": "Mutable global state; complex reentrancy-safe patterns"
+          "title": "開發者體驗",
+          "ergo": "宣告式 ErgoScript 與 eUTXO 推理",
+          "others": "可變全域狀態；複雜的防重入安全模式"
         },
         {
-          "title": "Fair & Decentralized",
-          "ergo": "Fair PoW launch, ASIC-resistant (GPU-friendly)",
-          "others": "ICO allocations or validator gating"
+          "title": "公平且去中心化",
+          "ergo": "公平 PoW 啟動，抗 ASIC（GPU 友好）",
+          "others": "ICO 配額或驗證者門控"
         }
       ]
     },
     "community": {
-      "title": "Join the Community",
-      "subtitle": "Connect with Ergo enthusiasts worldwide",
-      "description": "Be part of the growing Ergo ecosystem",
+      "title": "加入社群",
+      "subtitle": "與全球 Ergo 愛好者建立聯繫",
+      "description": "成為不斷成長的 Ergo 生態系統的一部分",
       "contributions": [
         {
-          "title": "Development",
-          "description": "Build dApps, tools, and infrastructure",
-          "tasks": "Smart Contracts, Frontend Apps, Tools & Libraries"
+          "title": "開發",
+          "description": "建構 dApp、工具與基礎設施",
+          "tasks": "智能合約、前端應用、工具與函式庫"
         },
         {
-          "title": "Content Creation",
-          "description": "Articles, videos, tutorials, documentation",
-          "tasks": "Technical Writing, Video Content, Tutorials"
+          "title": "內容創作",
+          "description": "文章、影片、教程、文件",
+          "tasks": "技術寫作、影片內容、教程"
         },
         {
-          "title": "Community Support",
-          "description": "Help newcomers and answer questions",
-          "tasks": "User Support, Onboarding, Mentoring"
+          "title": "社群支援",
+          "description": "幫助新手並回答問題",
+          "tasks": "用戶支援、引導入門、導師指導"
         },
         {
-          "title": "Governance",
-          "description": "Participate in protocol decisions",
-          "tasks": "EIP Reviews, Voting, Proposals"
+          "title": "治理",
+          "description": "參與協議決策",
+          "tasks": "EIP 審查、投票、提案"
         },
         {
-          "title": "Infrastructure",
-          "description": "Run nodes, mining, network support",
-          "tasks": "Node Operation, Mining, Network Security"
+          "title": "基礎設施",
+          "description": "運行節點、挖礦、網路支援",
+          "tasks": "節點運行、挖礦、網路安全"
         },
         {
-          "title": "Research",
-          "description": "Protocol research and improvements",
-          "tasks": "Academic Papers, Protocol Analysis, Innovation"
+          "title": "研究",
+          "description": "協議研究與改進",
+          "tasks": "學術論文、協議分析、創新"
         }
       ]
     }
   },
   "introduction": {
     "hero": {
-      "title": "Ergo — PoW smart‑contract platform with eUTXO & Sigma Protocols",
-      "subtitle": "A next‑generation, ASIC‑resistant Proof‑of‑Work platform with predictable, auditable smart contracts and native privacy."
+      "title": "Ergo — 具備 eUTXO 與 Sigma 協議的 PoW 智能合約平台",
+      "subtitle": "下一代抗 ASIC 工作量證明平台，具備可預測、可審計的智能合約與原生隱私功能。"
     },
     "breadcrumb": {
-      "home": "Home",
-      "introduction": "Introduction"
+      "home": "首頁",
+      "introduction": "簡介"
     },
     "schema": {
       "tech_article": {
-        "headline": "Ergo — PoW smart‑contract platform (eUTXO & Sigma Protocols)",
-        "description": "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs."
+        "headline": "Ergo — PoW 智能合約平台（eUTXO 與 Sigma 協議）",
+        "description": "Ergo 簡介：抗 ASIC 的 PoW、eUTXO 智能合約、Sigma（零知識）協議、Storage Rent、NIPoPoWs。"
       }
     },
     "what_is_ergo": {
-      "title": "What is",
-      "description_1": "Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.",
-      "description_2": "Its mission is to provide tools for decentralized and accessible financial systems — empowering people with economic freedom without intermediaries. Learn about the",
-      "and": "and",
+      "title": "什麼是",
+      "description_1": "Ergo 專為開發安全且強大的去中心化應用程式（dApp）與金融合約而設計。它建立在十年區塊鏈理論與開發的基礎上，將成熟原則與新研究相結合。",
+      "description_2": "其使命是為去中心化且可及的金融系統提供工具——在無需中介的情況下賦予人們經濟自由。了解",
+      "and": "與",
       "links": {
-        "eutxo_model": "eUTXO smart‑contract model",
-        "autolykos": "Autolykos (ASIC‑resistant PoW)",
+        "eutxo_model": "eUTXO 智能合約模型",
+        "autolykos": "Autolykos（抗 ASIC 的 PoW）",
         "storage_rent": "Storage Rent",
-        "sigma_privacy": "Sigma‑powered privacy"
+        "sigma_privacy": "Sigma 驅動的隱私"
       }
     },
     "why_ergo": {
-      "title": "Why Ergo?",
+      "title": "為什麼選擇 Ergo？",
       "items": {
-        "eutxo_contracts": "eUTXO smart contracts with predictable execution",
-        "sigma_protocols": "Sigma (ZK) protocols for threshold/multisig and privacy",
-        "autolykos_pow": "Autolykos — ASIC‑resistant, GPU‑friendly PoW",
-        "storage_rent_nipopows": "Storage Rent and NIPoPoWs (succinct proofs)"
+        "eutxo_contracts": "具備可預測執行的 eUTXO 智能合約",
+        "sigma_protocols": "用於門限/多簽與隱私的 Sigma（零知識）協議",
+        "autolykos_pow": "Autolykos — 抗 ASIC、GPU 友好的 PoW",
+        "storage_rent_nipopows": "Storage Rent 與 NIPoPoWs（簡潔證明）"
       }
     },
     "key_innovation": {
-      "title": "Key Innovation",
-      "description": "Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, creating a unique platform for complex financial applications."
+      "title": "核心創新",
+      "description": "Ergo 結合了 Bitcoin UTXO 模型的安全性與 Ethereum 智能合約的表達能力，為複雜金融應用打造了獨特平台。"
     },
     "references": {
-      "label": "References",
+      "label": "參考資料",
       "autolykos_v2": "Autolykos v2",
-      "ergo_github": "ergo (GitHub)"
+      "ergo_github": "ergo（GitHub）"
     },
     "features": {
       "privacy_first": {
-        "title": "Privacy First",
-        "description": "Built-in privacy at the protocol level"
+        "title": "隱私優先",
+        "description": "協議層面內建隱私"
       },
       "storage_rent": {
         "title": "Storage Rent",
-        "description": "Sustainable economic model for long-term viability"
+        "description": "可持續的經濟模型，確保長期可行性"
       },
       "light_clients": {
-        "title": "Light Clients",
-        "description": "Succinct proofs (NIPoPoWs), near full-node guarantees"
+        "title": "輕量客戶端",
+        "description": "簡潔證明（NIPoPoWs），接近全節點的保障"
       },
       "fair_launch": {
-        "title": "Fair Launch",
-        "description": "No premine, no ICO, community-driven"
+        "title": "公平啟動",
+        "description": "無預挖、無 ICO，社群驅動"
       }
     },
     "principles": {
       "decentralized_first": {
-        "title": "Decentralized First",
-        "description": "Launched fairly with no premine or ICO. Community-driven for maximum decentralization."
+        "title": "去中心化優先",
+        "description": "以無預挖或 ICO 的方式公平啟動。社群驅動，實現最大程度的去中心化。"
       },
       "secure_reliable": {
-        "title": "Secure & Reliable",
-        "description": "Built on Proof-of-Work consensus (Autolykos) and the innovative eUTXO model."
+        "title": "安全可靠",
+        "description": "基於工作量證明共識（Autolykos）與創新的 eUTXO 模型構建。"
       },
       "powerful_contracts": {
-        "title": "Powerful Contracts",
-        "description": "ErgoScript enables secure financial apps that are hard to implement safely in account-based models."
+        "title": "強大的合約",
+        "description": "ErgoScript 支援安全金融應用，在基於帳戶的模型中難以安全實現這些功能。"
       },
       "long_term_focus": {
-        "title": "Long-term Focus",
-        "description": "Designed for resilience with focus on real-world utility over speculation."
+        "title": "長期導向",
+        "description": "以韌性為設計理念，注重現實世界的實用性而非投機。"
       }
     },
     "core_principles": {
-      "title": "Core",
-      "principles": "Principles",
-      "subtitle": "Built on fundamental values that ensure long-term sustainability and real-world utility"
+      "title": "核心",
+      "principles": "原則",
+      "subtitle": "建立在基本價值觀之上，確保長期可持續性與現實世界的實用性"
     },
     "technologies": {
       "proof_of_work": {
-        "title": "Proof-of-Work (PoW)",
-        "subtitle": "Maximum security",
-        "description": "Autolykos algorithm is ASIC-resistant, ensuring fair distribution and robust security."
+        "title": "工作量證明（PoW）",
+        "subtitle": "最高安全性",
+        "description": "Autolykos 算法抗 ASIC，確保公平分配與穩健的安全性。"
       },
       "extended_utxo": {
-        "title": "Extended UTXO",
-        "subtitle": "Smart money",
-        "description": "Allows complex smart contracts with better scalability and predictable fees."
+        "title": "擴展 UTXO",
+        "subtitle": "智慧貨幣",
+        "description": "支援複雜智能合約，具備更好的可擴展性與可預測費用。"
       },
       "sigma_protocols": {
-        "title": "Sigma Protocols",
-        "subtitle": "Advanced cryptography",
-        "description": "Enables privacy and advanced crypto primitives (threshold/multisig, ring-like constructions)."
+        "title": "Sigma 協議",
+        "subtitle": "進階密碼學",
+        "description": "支援隱私與進階密碼原語（門限/多簽、類環簽名構造）。"
       }
     },
     "key_technologies": {
-      "title": "Key",
-      "technologies": "Technologies",
-      "subtitle": "Advanced cryptography and innovative consensus mechanisms power the Ergo platform"
+      "title": "核心",
+      "technologies": "技術",
+      "subtitle": "先進的密碼學與創新的共識機制為 Ergo 平台提供動力"
     },
-    "learn_more": "Learn More",
+    "learn_more": "了解更多",
     "code_example": {
-      "title": "ErgoScript Example: Time-Locked Contract",
-      "comment_after": "After deadline, only recipient can spend",
-      "comment_before": "Before deadline, only sender can spend"
+      "title": "ErgoScript 示例：時間鎖定合約",
+      "comment_after": "截止日期後，只有接收方可以支出",
+      "comment_before": "截止日期前，只有發送方可以支出"
     },
     "what_makes_different": {
-      "what_makes": "WHAT MAKES",
-      "ergo_different": "ERGO DIFFERENT",
-      "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a platform that's secure, scalable, and sustainable"
+      "what_makes": "是什麼讓",
+      "ergo_different": "ERGO 與眾不同",
+      "subtitle": "Ergo 將經過驗證的密碼學技術與創新的區塊鏈設計相結合，打造出安全、可擴展且可持續的平台"
     },
     "pillars": {
       "fair_launch_pow": {
-        "title": "FAIR LAUNCH & PROOF-OF-WORK",
-        "description": "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one."
+        "title": "公平啟動與工作量證明",
+        "description": "以無 ICO 或預挖的方式啟動，由 Autolykos v2 保護安全——這是一種抗 ASIC 且節能的工作量證明算法，從第一天起就確保公平分配與穩健的安全性。"
       },
       "eutxo_ergoscript": {
-        "title": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
-        "description": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi."
+        "title": "eUTXO 與 ErgoScript 支援進階 DeFi",
+        "description": "擴展 UTXO 模型結合我們強大的語言 ErgoScript，能夠實現高度安全、可預測且具表達能力的金融應用，突破 DeFi 的邊界。"
       },
       "storage_rent_sustainability": {
-        "title": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
-        "description": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient."
+        "title": "Storage Rent 實現長期可持續性",
+        "description": "一種創新機制，透過將未使用數據（「塵埃」）的費用回收給礦工，確保網路健康與可預測的運營成本，防止鏈膨脹並保持鏈的高效運行。"
       },
       "research_driven": {
-        "title": "RESEARCH-DRIVEN INNOVATION",
-        "description": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity."
+        "title": "研究驅動的創新",
+        "description": "建立在同行評審的學術研究與第一性原理之上，Ergo 推動為現實世界的長久應用而設計的穩健、突破性解決方案。"
       },
       "optional_privacy": {
-        "title": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
-        "description": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions."
+        "title": "強大的可選隱私（Σ 協議）",
+        "description": "Ergo 提供由 Sigma 協議驅動的靈活隱私功能，支援安全的多重簽名、環簽名與零知識證明，為交易中的保密性提供客製化選項。"
       },
       "community_led": {
-        "title": "COMMUNITY-LED DEVELOPMENT",
-        "description": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control."
+        "title": "社群主導的開發",
+        "description": "一個真正去中心化的開源項目，開發由全球熱情的社群成員與開發者主導，確保協議保持不受中心化控制。"
       }
     },
     "faq": {
-      "title": "FAQ",
+      "title": "常見問題",
       "eutxo_model": {
-        "question": "What is the eUTXO model?",
-        "answer": "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs."
+        "question": "什麼是 eUTXO 模型？",
+        "answer": "eUTXO 是 Bitcoin UTXO 的擴展，支援具備可預測執行成本的表達性、可並行化智能合約。"
       },
       "sigma_protocols": {
-        "question": "What are Sigma protocols on Ergo?",
-        "answer": "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup."
+        "question": "Ergo 上的 Sigma 協議是什麼？",
+        "answer": "Sigma 協議是原生密碼學證明，無需可信設置即可支援門限/多簽與隱私功能。"
       },
       "proof_of_work": {
-        "question": "Why Proof‑of‑Work for Ergo?",
-        "answer": "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record."
+        "question": "為什麼 Ergo 選擇工作量證明？",
+        "answer": "PoW（Autolykos）保持挖礦的可及性（抗 ASIC），支持去中心化，並具有穩健的安全記錄。"
       }
     },
     "cta": {
-      "title": "Ready to",
-      "dive_in": "Dive In",
-      "description": "Your journey into the Ergo ecosystem is just a few clicks away. Get a secure wallet and start exploring the future of finance.",
+      "title": "準備好",
+      "dive_in": "深入探索",
+      "description": "你進入 Ergo 生態系統的旅程只需幾次點擊。獲取一個安全的錢包，開始探索金融的未來。",
       "buttons": {
-        "get_wallet": "Get an Ergo Wallet",
-        "explore_ecosystem": "Explore Ecosystem",
-        "documentation": "Documentation"
+        "get_wallet": "獲取 Ergo 錢包",
+        "explore_ecosystem": "探索生態系統",
+        "documentation": "文件"
       }
     },
-    "last_updated": "Last updated"
+    "last_updated": "最後更新"
   }
 }
