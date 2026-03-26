@@ -302,7 +302,7 @@
         "name": "スマートコントラクト",
         "ergo": "ErgoScript付きeUTXO",
         "bitcoin": "非常に限定的",
-        "ethereum": "SolidityによるアカウントベースCONTRACT"
+        "ethereum": "Solidityによるアカウントベースコントラクト"
       },
       {
         "name": "プライバシー",
