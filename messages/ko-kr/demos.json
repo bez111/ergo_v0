@@ -1,164 +1,164 @@
 {
   "demosPage": {
     "hero": {
-      "badge": "Working Demos",
-      "title": "Working flows,",
-      "titleHighlight": "not mockups.",
-      "description": "Three composable flows, all running on Ergo testnet. Each includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
-      "ctaTestnet": "Get testnet ERG",
-      "ctaArchitecture": "Architecture"
+      "badge": "작동 데모",
+      "title": "작동하는 플로우,",
+      "titleHighlight": "목업이 아닙니다.",
+      "description": "3가지 조합 가능한 플로우, 모두 Ergo testnet에서 실행 중. 각각 컨트랙트 로직, Fleet SDK 코드, 재현 단계를 포함합니다.",
+      "ctaTestnet": "testnet ERG 받기",
+      "ctaArchitecture": "아키텍처"
     },
     "demos": {
-      "stepByStep": "Step-by-step",
-      "whyMatters": "Why this matters",
+      "stepByStep": "단계별 가이드",
+      "whyMatters": "왜 중요한가",
       "codeLabel": "Fleet SDK (TypeScript)",
-      "collapse": "collapse",
-      "expand": "expand",
-      "testedOn": "Tested on Ergo testnet. Get test ERG at"
+      "collapse": "접기",
+      "expand": "펼치기",
+      "testedOn": "Ergo testnet에서 테스트 완료. 테스트 ERG 받기:"
     },
     "demoItems": {
       "apiCall": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent buys API call",
-        "tagline": "One call. One proof. No persistent account.",
-        "description": "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
+        "statusLabel": "testnet에서 운영 중",
+        "title": "에이전트가 API 호출 구매",
+        "tagline": "한 번의 호출. 하나의 증명. 영구 계정 불필요.",
+        "description": "자율 에이전트가 노트를 생성하고 API 제공자에게 전송합니다. 제공자는 온체인에서 수락 술어를 검증하고 응답을 전달합니다. API 키 없음, 결제 계정 없음, Stripe 없음.",
         "flow": [
-          "Agent creates a note (0.001 ERG face value)",
-          "Note contains: provider address + task hash + deadline",
-          "Provider checks predicate — verified on Ergo testnet",
-          "Provider delivers API response",
-          "Note burned, ERG released to provider"
+          "에이전트가 노트 생성 (액면가 0.001 ERG)",
+          "노트 포함 내용: 제공자 주소 + 작업 해시 + 마감일",
+          "제공자가 술어 확인 — Ergo testnet에서 검증됨",
+          "제공자가 API 응답 전달",
+          "노트 소각, ERG가 제공자에게 전달"
         ],
-        "why": "This is the atomic unit of agent commerce: one task, one payment, one proof. No identity required.",
+        "why": "이것은 에이전트 상거래의 원자 단위입니다: 하나의 작업, 하나의 결제, 하나의 증명. 신원 불필요.",
         "links": {
-          "chaincashRef": "ChainCash reference",
-          "fleetDocs": "Fleet SDK docs",
-          "architecture": "Architecture"
+          "chaincashRef": "ChainCash 레퍼런스",
+          "fleetDocs": "Fleet SDK 문서",
+          "architecture": "아키텍처"
         }
       },
       "credit": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent pays on credit",
-        "tagline": "Reserve deployed. Notes issued. Tracker monitors.",
-        "description": "A reserve is deployed with collateral. Notes are issued against it up to a credit limit. An agent spends notes over time. The tracker monitors total usage. When the threshold is reached, the reserve auto-settles.",
+        "statusLabel": "testnet에서 운영 중",
+        "title": "에이전트가 크레딧으로 결제",
+        "tagline": "리저브 배포 완료. 노트 발행 완료. 트래커 모니터링 중.",
+        "description": "담보와 함께 리저브가 배포됩니다. 크레딧 한도까지 노트가 발행됩니다. 에이전트가 시간이 지남에 따라 노트를 사용합니다. 트래커가 총 사용량을 모니터링합니다. 임계값에 도달하면 리저브가 자동 정산됩니다.",
         "flow": [
-          "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
-          "Notes issued against reserve (up to limit)",
-          "Agent transfers notes to providers as payment",
-          "Tracker updates cumulative balance on-chain",
-          "Auto-settlement when balance threshold hit"
+          "리저브 컨트랙트 배포 (10 ERG + 100 ERG 크레딧 한도)",
+          "리저브에 대해 노트 발행 (한도까지)",
+          "에이전트가 결제 수단으로 노트를 제공자에게 전송",
+          "트래커가 온체인에서 누적 잔액 업데이트",
+          "잔액이 임계값에 도달하면 자동 정산"
         ],
-        "why": "Credit is fundamental to economic efficiency. This implements it without a bank — just contracts and cryptographic proofs.",
+        "why": "크레딧은 경제 효율성의 기본입니다. 은행 없이 이를 구현합니다 — 컨트랙트와 암호학적 증명만으로.",
         "links": {
-          "chaincashPaper": "ChainCash paper",
-          "architecture": "Architecture",
-          "reserveContract": "Reserve contract"
+          "chaincashPaper": "ChainCash 논문",
+          "architecture": "아키텍처",
+          "reserveContract": "리저브 컨트랙트"
         }
       },
       "community": {
-        "statusLabel": "Coming in Week 3",
-        "title": "Community reserve + tracker",
-        "tagline": "A local marketplace. A compute co-op. An agent network.",
-        "description": "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",
+        "statusLabel": "3주차에 출시 예정",
+        "title": "커뮤니티 리저브 + 트래커",
+        "tagline": "로컬 마켓플레이스. 컴퓨트 협동조합. 에이전트 네트워크.",
+        "description": "참여자 그룹이 공유 리저브에 ERG를 풀링합니다. 커뮤니티 노트가 비례적으로 발행됩니다. 수락 술어가 멤버십 규칙을 정의합니다. 멤버는 언제든지 노트를 ERG로 교환할 수 있습니다.",
         "flow": [
-          "Community members pool ERG into multi-sig reserve",
-          "Members receive community notes proportional to contribution",
-          "Notes accepted within community per acceptance rules",
-          "Any member can redeem notes for ERG anytime",
-          "Tracker provides public auditability of flows"
+          "커뮤니티 멤버가 멀티시그 리저브에 ERG 풀링",
+          "멤버는 기여도에 비례한 커뮤니티 노트를 수령",
+          "수락 규칙에 따라 커뮤니티 내에서 노트 수용",
+          "모든 멤버가 언제든지 노트를 ERG로 교환 가능",
+          "트래커가 플로우의 공개 감사 가능성 제공"
         ],
-        "why": "This is the most general form: a programmable local economy. Could be a marketplace, a DAO treasury, or an agent cooperative.",
+        "why": "이것은 가장 일반적인 형태입니다: 프로그래밍 가능한 로컬 경제. 마켓플레이스, DAO 재무, 또는 에이전트 협동조합이 될 수 있습니다.",
         "links": {
-          "architecture": "Architecture",
-          "nativeTokens": "Native Tokens",
+          "architecture": "아키텍처",
+          "nativeTokens": "네이티브 토큰",
           "ergoScript": "ErgoScript"
         }
       }
     },
     "openProblems": {
-      "badge": "Open Problems",
-      "title": "What's still unsolved",
-      "description": "These are the most interesting open problems in agent money. If any of these resonate — we want to hear from you.",
-      "openIssue": "Open an issue",
-      "talkToUs": "Talk to us about your use case",
+      "badge": "미해결 문제",
+      "title": "아직 해결되지 않은 것",
+      "description": "에이전트 머니에서 가장 흥미로운 미해결 문제들입니다. 공감하는 것이 있다면 연락 주세요.",
+      "openIssue": "Issue 생성",
+      "talkToUs": "유스케이스에 대해 상담하기",
       "items": [
         {
-          "title": "Agent identity without persistent accounts",
-          "desc": "How do agents build reputation across sessions without deanonymisation?"
+          "title": "영구 계정 없는 에이전트 신원",
+          "desc": "익명성을 해치지 않으면서 세션 간에 에이전트가 평판을 구축하는 방법은?"
         },
         {
-          "title": "Note acceptance UX for non-technical agents",
-          "desc": "SDK-level abstraction so LLM agents can issue and accept notes with minimal setup."
+          "title": "비기술 에이전트를 위한 노트 수락 UX",
+          "desc": "LLM 에이전트가 최소 설정으로 노트를 발행하고 수락할 수 있는 SDK 수준 추상화."
         },
         {
-          "title": "Tracker federation across reserves",
-          "desc": "Cross-reserve accounting and liquidity — can notes be accepted across different community reserves?"
+          "title": "리저브 간 트래커 페더레이션",
+          "desc": "크로스 리저브 회계 및 유동성 — 서로 다른 커뮤니티 리저브 간에 노트를 수락할 수 있는가?"
         },
         {
-          "title": "Agent reputation without centralized oracle",
-          "desc": "Verifiable reputation score derived from on-chain history, no trusted third party."
+          "title": "중앙 오라클 없는 에이전트 평판",
+          "desc": "온체인 이력에서 도출되는 검증 가능한 평판 점수, 신뢰할 수 있는 제3자 불필요."
         },
         {
-          "title": "Local community wallet — one-click deploy",
-          "desc": "Spin up a community reserve, issue tokens, and configure acceptance rules in under 5 minutes."
+          "title": "로컬 커뮤니티 지갑 — 원클릭 배포",
+          "desc": "커뮤니티 리저브 구축, 토큰 발행, 수락 규칙 설정을 5분 이내에."
         }
       ]
     },
     "quickLinks": {
       "architecture": {
-        "title": "Full architecture",
-        "desc": "Reserve · Note · Tracker · Predicate"
+        "title": "전체 아키텍처",
+        "desc": "리저브 · 노트 · 트래커 · 술어"
       },
       "chaincash": {
         "title": "ChainCash",
-        "desc": "Reference implementation for notes + reserves"
+        "desc": "노트 + 리저브 레퍼런스 구현"
       },
       "agentEconomy": {
-        "title": "Agent Economy",
-        "desc": "Why Ergo is the right base layer"
+        "title": "에이전트 이코노미",
+        "desc": "왜 Ergo가 적합한 베이스 레이어인가"
       }
     },
     "playground": {
-      "badge": "Testnet playground",
-      "title": "Generate your first agent payment",
-      "description": "Paste your Ergo testnet address. We fetch your live UTxOs and generate a ready-to-run Fleet SDK script — pre-filled with your actual data.",
-      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)",
-      "generate": "Generate",
-      "fetching": "Fetching…",
-      "needTestnetErg": "Need testnet ERG?",
-      "freeTestnetErg": "— free testnet ERG in seconds.",
-      "tabCode": "Ready-to-run code",
-      "tabUtxos": "Your UTxOs",
-      "copied": "Copied!",
-      "copy": "Copy",
-      "runIt": "Run it",
+      "badge": "testnet 플레이그라운드",
+      "title": "첫 에이전트 결제 생성",
+      "description": "Ergo testnet 주소를 붙여넣으세요. 라이브 UTxO를 가져와 실제 데이터가 미리 입력된 Fleet SDK 스크립트를 생성합니다.",
+      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet 주소)",
+      "generate": "생성",
+      "fetching": "가져오는 중…",
+      "needTestnetErg": "testnet ERG가 필요하신가요?",
+      "freeTestnetErg": "— 무료 testnet ERG를 몇 초 만에.",
+      "tabCode": "바로 실행 가능한 코드",
+      "tabUtxos": "내 UTxO",
+      "copied": "복사됨!",
+      "copy": "복사",
+      "runIt": "실행하기",
       "runStep1": "npm install @fleet-sdk/core",
       "runStep2": "node agent-payment.js",
-      "runStep3": "Copy the unsigned TX JSON output",
-      "runStep4": "Open Nautilus (testnet mode) → sign → submit",
-      "boxLabel": "Box",
-      "height": "height",
-      "tokens": "token(s)",
-      "errorNotFound": "Address not found on testnet. Make sure it's a valid Ergo testnet address.",
-      "errorNoUtxos": "No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.",
-      "errorNetwork": "Could not reach testnet API. Check your network connection."
+      "runStep3": "미서명 TX JSON 출력 복사",
+      "runStep4": "Nautilus (testnet 모드) 열기 → 서명 → 제출",
+      "boxLabel": "박스",
+      "height": "높이",
+      "tokens": "토큰",
+      "errorNotFound": "testnet에서 주소를 찾을 수 없습니다. 유효한 Ergo testnet 주소인지 확인하세요.",
+      "errorNoUtxos": "UTxO를 찾을 수 없습니다. testnet.ergofaucet.org에서 무료 testnet ERG를 받으세요 — 30초면 됩니다.",
+      "errorNetwork": "testnet API에 연결할 수 없습니다. 네트워크 연결을 확인하세요."
     },
     "lookup": {
-      "badge": "Live on mainnet",
-      "title": "Address balance lookup",
-      "description": "Query any Ergo address balance live from the blockchain. Real data, real network.",
-      "placeholder": "9hHDQb26AjnJ...  (paste any Ergo address)",
-      "lookup": "Lookup",
-      "lookingUp": "Looking up…",
-      "confirmed": "Confirmed",
-      "noTokens": "No tokens in this address",
-      "dataFetchedFrom": "Data fetched live from",
-      "errorNotFound": "Address not found or invalid. Check that it's a valid Ergo address.",
-      "errorNetwork": "Could not reach Ergo API. Check your network connection."
+      "badge": "mainnet에서 운영 중",
+      "title": "주소 잔액 조회",
+      "description": "블록체인에서 모든 Ergo 주소 잔액을 실시간 조회. 실제 데이터, 실제 네트워크.",
+      "placeholder": "9hHDQb26AjnJ...  (Ergo 주소를 붙여넣으세요)",
+      "lookup": "조회",
+      "lookingUp": "조회 중…",
+      "confirmed": "확인됨",
+      "noTokens": "이 주소에 토큰이 없습니다",
+      "dataFetchedFrom": "데이터 출처:",
+      "errorNotFound": "주소를 찾을 수 없거나 유효하지 않습니다. 유효한 Ergo 주소인지 확인하세요.",
+      "errorNetwork": "Ergo API에 연결할 수 없습니다. 네트워크 연결을 확인하세요."
     },
     "cta": {
-      "title": "Your use case doesn't fit?",
-      "description": "Tell us what you're building. We'll find the right flow or help design a new one."
+      "title": "유스케이스에 맞지 않나요?",
+      "description": "무엇을 구축하고 있는지 알려주세요. 적합한 플로우를 찾거나 새로운 것을 설계하는 데 도움을 드리겠습니다."
     }
   }
 }

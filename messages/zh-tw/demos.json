@@ -1,164 +1,164 @@
 {
   "demosPage": {
     "hero": {
-      "badge": "Working Demos",
-      "title": "Working flows,",
-      "titleHighlight": "not mockups.",
-      "description": "Three composable flows, all running on Ergo testnet. Each includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
-      "ctaTestnet": "Get testnet ERG",
-      "ctaArchitecture": "Architecture"
+      "badge": "可運行的示範",
+      "title": "可運行的流程，",
+      "titleHighlight": "不是模型。",
+      "description": "三個可組合的流程，全部在 Ergo testnet 上運行。每個都包含合約邏輯、Fleet SDK 程式碼和精確的重現步驟。",
+      "ctaTestnet": "取得 testnet ERG",
+      "ctaArchitecture": "架構"
     },
     "demos": {
-      "stepByStep": "Step-by-step",
-      "whyMatters": "Why this matters",
+      "stepByStep": "逐步說明",
+      "whyMatters": "為什麼這很重要",
       "codeLabel": "Fleet SDK (TypeScript)",
-      "collapse": "collapse",
-      "expand": "expand",
-      "testedOn": "Tested on Ergo testnet. Get test ERG at"
+      "collapse": "收合",
+      "expand": "展開",
+      "testedOn": "已在 Ergo testnet 上測試。取得測試 ERG："
     },
     "demoItems": {
       "apiCall": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent buys API call",
-        "tagline": "One call. One proof. No persistent account.",
-        "description": "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
+        "statusLabel": "在 testnet 上運行中",
+        "title": "代理購買 API 呼叫",
+        "tagline": "一次呼叫。一個證明。無需永久帳戶。",
+        "description": "自主代理建立一張票據並發送給 API 供應商。供應商在鏈上驗證接受謂詞並交付回應。無需 API 金鑰、無需計費帳戶、無需 Stripe。",
         "flow": [
-          "Agent creates a note (0.001 ERG face value)",
-          "Note contains: provider address + task hash + deadline",
-          "Provider checks predicate — verified on Ergo testnet",
-          "Provider delivers API response",
-          "Note burned, ERG released to provider"
+          "代理建立票據（面值 0.001 ERG）",
+          "票據包含：供應商地址 + 任務雜湊 + 截止日期",
+          "供應商檢查謂詞 — 在 Ergo testnet 上驗證",
+          "供應商交付 API 回應",
+          "票據銷毀，ERG 釋放給供應商"
         ],
-        "why": "This is the atomic unit of agent commerce: one task, one payment, one proof. No identity required.",
+        "why": "這是代理商務的原子單位：一個任務、一筆付款、一個證明。無需身份。",
         "links": {
-          "chaincashRef": "ChainCash reference",
-          "fleetDocs": "Fleet SDK docs",
-          "architecture": "Architecture"
+          "chaincashRef": "ChainCash 參考",
+          "fleetDocs": "Fleet SDK 文件",
+          "architecture": "架構"
         }
       },
       "credit": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent pays on credit",
-        "tagline": "Reserve deployed. Notes issued. Tracker monitors.",
-        "description": "A reserve is deployed with collateral. Notes are issued against it up to a credit limit. An agent spends notes over time. The tracker monitors total usage. When the threshold is reached, the reserve auto-settles.",
+        "statusLabel": "在 testnet 上運行中",
+        "title": "代理以信用付款",
+        "tagline": "準備金已部署。票據已發行。追蹤器監控中。",
+        "description": "以抵押品部署準備金。票據在信用額度內發行。代理隨時間使用票據。追蹤器監控總使用量。當達到閾值時，準備金自動結算。",
         "flow": [
-          "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
-          "Notes issued against reserve (up to limit)",
-          "Agent transfers notes to providers as payment",
-          "Tracker updates cumulative balance on-chain",
-          "Auto-settlement when balance threshold hit"
+          "準備金合約部署（10 ERG + 100 ERG 信用額度）",
+          "對準備金發行票據（達到上限）",
+          "代理將票據轉移給供應商作為付款",
+          "追蹤器在鏈上更新累計餘額",
+          "餘額達到閾值時自動結算"
         ],
-        "why": "Credit is fundamental to economic efficiency. This implements it without a bank — just contracts and cryptographic proofs.",
+        "why": "信用是經濟效率的基礎。這在沒有銀行的情況下實現了它 — 僅靠合約和密碼學證明。",
         "links": {
-          "chaincashPaper": "ChainCash paper",
-          "architecture": "Architecture",
-          "reserveContract": "Reserve contract"
+          "chaincashPaper": "ChainCash 論文",
+          "architecture": "架構",
+          "reserveContract": "準備金合約"
         }
       },
       "community": {
-        "statusLabel": "Coming in Week 3",
-        "title": "Community reserve + tracker",
-        "tagline": "A local marketplace. A compute co-op. An agent network.",
-        "description": "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",
+        "statusLabel": "第三週推出",
+        "title": "社群準備金 + 追蹤器",
+        "tagline": "本地市場。運算合作社。代理網路。",
+        "description": "一組參與者將 ERG 匯集到共享準備金中。社群票據按比例發行。接受謂詞定義成員規則。成員可以隨時將票據兌換為 ERG。",
         "flow": [
-          "Community members pool ERG into multi-sig reserve",
-          "Members receive community notes proportional to contribution",
-          "Notes accepted within community per acceptance rules",
-          "Any member can redeem notes for ERG anytime",
-          "Tracker provides public auditability of flows"
+          "社群成員將 ERG 匯集到多重簽名準備金",
+          "成員按貢獻比例獲得社群票據",
+          "根據接受規則在社群內接受票據",
+          "任何成員可隨時將票據兌換為 ERG",
+          "追蹤器提供流程的公開可審計性"
         ],
-        "why": "This is the most general form: a programmable local economy. Could be a marketplace, a DAO treasury, or an agent cooperative.",
+        "why": "這是最通用的形式：可程式化的本地經濟。可以是市場、DAO 金庫或代理合作社。",
         "links": {
-          "architecture": "Architecture",
-          "nativeTokens": "Native Tokens",
+          "architecture": "架構",
+          "nativeTokens": "原生代幣",
           "ergoScript": "ErgoScript"
         }
       }
     },
     "openProblems": {
-      "badge": "Open Problems",
-      "title": "What's still unsolved",
-      "description": "These are the most interesting open problems in agent money. If any of these resonate — we want to hear from you.",
-      "openIssue": "Open an issue",
-      "talkToUs": "Talk to us about your use case",
+      "badge": "開放問題",
+      "title": "尚未解決的問題",
+      "description": "這些是代理貨幣中最有趣的開放問題。如果其中任何一個引起您的共鳴 — 我們希望聽到您的意見。",
+      "openIssue": "建立 Issue",
+      "talkToUs": "與我們討論您的使用案例",
       "items": [
         {
-          "title": "Agent identity without persistent accounts",
-          "desc": "How do agents build reputation across sessions without deanonymisation?"
+          "title": "無永久帳戶的代理身份",
+          "desc": "代理如何在不去匿名化的情況下跨會話建立聲譽？"
         },
         {
-          "title": "Note acceptance UX for non-technical agents",
-          "desc": "SDK-level abstraction so LLM agents can issue and accept notes with minimal setup."
+          "title": "非技術代理的票據接受 UX",
+          "desc": "SDK 級別的抽象，讓 LLM 代理能以最少設定發行和接受票據。"
         },
         {
-          "title": "Tracker federation across reserves",
-          "desc": "Cross-reserve accounting and liquidity — can notes be accepted across different community reserves?"
+          "title": "跨準備金的追蹤器聯邦",
+          "desc": "跨準備金會計和流動性 — 票據能否在不同社群準備金之間被接受？"
         },
         {
-          "title": "Agent reputation without centralized oracle",
-          "desc": "Verifiable reputation score derived from on-chain history, no trusted third party."
+          "title": "無中心化預言機的代理聲譽",
+          "desc": "從鏈上歷史衍生的可驗證聲譽評分，無需受信任的第三方。"
         },
         {
-          "title": "Local community wallet — one-click deploy",
-          "desc": "Spin up a community reserve, issue tokens, and configure acceptance rules in under 5 minutes."
+          "title": "本地社群錢包 — 一鍵部署",
+          "desc": "建立社群準備金、發行代幣並在 5 分鐘內配置接受規則。"
         }
       ]
     },
     "quickLinks": {
       "architecture": {
-        "title": "Full architecture",
-        "desc": "Reserve · Note · Tracker · Predicate"
+        "title": "完整架構",
+        "desc": "準備金 · 票據 · 追蹤器 · 謂詞"
       },
       "chaincash": {
         "title": "ChainCash",
-        "desc": "Reference implementation for notes + reserves"
+        "desc": "票據 + 準備金的參考實作"
       },
       "agentEconomy": {
-        "title": "Agent Economy",
-        "desc": "Why Ergo is the right base layer"
+        "title": "代理經濟",
+        "desc": "為什麼 Ergo 是正確的基礎層"
       }
     },
     "playground": {
-      "badge": "Testnet playground",
-      "title": "Generate your first agent payment",
-      "description": "Paste your Ergo testnet address. We fetch your live UTxOs and generate a ready-to-run Fleet SDK script — pre-filled with your actual data.",
-      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)",
-      "generate": "Generate",
-      "fetching": "Fetching…",
-      "needTestnetErg": "Need testnet ERG?",
-      "freeTestnetErg": "— free testnet ERG in seconds.",
-      "tabCode": "Ready-to-run code",
-      "tabUtxos": "Your UTxOs",
-      "copied": "Copied!",
-      "copy": "Copy",
-      "runIt": "Run it",
+      "badge": "testnet 遊樂場",
+      "title": "生成您的第一筆代理付款",
+      "description": "貼上您的 Ergo testnet 地址。我們會取得您的即時 UTxO 並生成一個預先填入您實際資料的 Fleet SDK 腳本。",
+      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5...（testnet 地址）",
+      "generate": "生成",
+      "fetching": "擷取中…",
+      "needTestnetErg": "需要 testnet ERG？",
+      "freeTestnetErg": "— 幾秒內取得免費 testnet ERG。",
+      "tabCode": "可直接執行的程式碼",
+      "tabUtxos": "您的 UTxO",
+      "copied": "已複製！",
+      "copy": "複製",
+      "runIt": "執行",
       "runStep1": "npm install @fleet-sdk/core",
       "runStep2": "node agent-payment.js",
-      "runStep3": "Copy the unsigned TX JSON output",
-      "runStep4": "Open Nautilus (testnet mode) → sign → submit",
+      "runStep3": "複製未簽名的 TX JSON 輸出",
+      "runStep4": "開啟 Nautilus（testnet 模式）→ 簽名 → 提交",
       "boxLabel": "Box",
-      "height": "height",
-      "tokens": "token(s)",
-      "errorNotFound": "Address not found on testnet. Make sure it's a valid Ergo testnet address.",
-      "errorNoUtxos": "No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.",
-      "errorNetwork": "Could not reach testnet API. Check your network connection."
+      "height": "高度",
+      "tokens": "代幣",
+      "errorNotFound": "在 testnet 上找不到地址。請確認這是有效的 Ergo testnet 地址。",
+      "errorNoUtxos": "找不到 UTxO。在 testnet.ergofaucet.org 取得免費 testnet ERG — 只需 30 秒。",
+      "errorNetwork": "無法連接 testnet API。請檢查您的網路連線。"
     },
     "lookup": {
-      "badge": "Live on mainnet",
-      "title": "Address balance lookup",
-      "description": "Query any Ergo address balance live from the blockchain. Real data, real network.",
-      "placeholder": "9hHDQb26AjnJ...  (paste any Ergo address)",
-      "lookup": "Lookup",
-      "lookingUp": "Looking up…",
-      "confirmed": "Confirmed",
-      "noTokens": "No tokens in this address",
-      "dataFetchedFrom": "Data fetched live from",
-      "errorNotFound": "Address not found or invalid. Check that it's a valid Ergo address.",
-      "errorNetwork": "Could not reach Ergo API. Check your network connection."
+      "badge": "在 mainnet 上運行中",
+      "title": "地址餘額查詢",
+      "description": "即時從區塊鏈查詢任何 Ergo 地址餘額。真實資料，真實網路。",
+      "placeholder": "9hHDQb26AjnJ...（貼上任何 Ergo 地址）",
+      "lookup": "查詢",
+      "lookingUp": "查詢中…",
+      "confirmed": "已確認",
+      "noTokens": "此地址無代幣",
+      "dataFetchedFrom": "資料即時取得自",
+      "errorNotFound": "找不到地址或地址無效。請確認這是有效的 Ergo 地址。",
+      "errorNetwork": "無法連接 Ergo API。請檢查您的網路連線。"
     },
     "cta": {
-      "title": "Your use case doesn't fit?",
-      "description": "Tell us what you're building. We'll find the right flow or help design a new one."
+      "title": "您的使用案例不適合？",
+      "description": "告訴我們您正在建構什麼。我們會找到合適的流程或幫助設計新的流程。"
     }
   }
 }

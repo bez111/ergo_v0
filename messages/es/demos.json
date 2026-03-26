@@ -1,164 +1,164 @@
 {
   "demosPage": {
     "hero": {
-      "badge": "Working Demos",
-      "title": "Working flows,",
-      "titleHighlight": "not mockups.",
-      "description": "Three composable flows, all running on Ergo testnet. Each includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
-      "ctaTestnet": "Get testnet ERG",
-      "ctaArchitecture": "Architecture"
+      "badge": "Demos funcionales",
+      "title": "Flujos funcionales,",
+      "titleHighlight": "no maquetas.",
+      "description": "Tres flujos componibles, todos ejecutándose en Ergo testnet. Cada uno incluye la lógica del contrato, código Fleet SDK y los pasos exactos para reproducirlo.",
+      "ctaTestnet": "Obtener testnet ERG",
+      "ctaArchitecture": "Arquitectura"
     },
     "demos": {
-      "stepByStep": "Step-by-step",
-      "whyMatters": "Why this matters",
+      "stepByStep": "Paso a paso",
+      "whyMatters": "Por qué importa",
       "codeLabel": "Fleet SDK (TypeScript)",
-      "collapse": "collapse",
-      "expand": "expand",
-      "testedOn": "Tested on Ergo testnet. Get test ERG at"
+      "collapse": "contraer",
+      "expand": "expandir",
+      "testedOn": "Probado en Ergo testnet. Obtén ERG de prueba en"
     },
     "demoItems": {
       "apiCall": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent buys API call",
-        "tagline": "One call. One proof. No persistent account.",
-        "description": "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
+        "statusLabel": "Activo en testnet",
+        "title": "Agente compra llamada API",
+        "tagline": "Una llamada. Una prueba. Sin cuenta permanente.",
+        "description": "Un agente autónomo crea una nota y la envía a un proveedor de API. El proveedor valida el predicado de aceptación en cadena y entrega la respuesta. Sin claves API, sin cuentas de facturación, sin Stripe.",
         "flow": [
-          "Agent creates a note (0.001 ERG face value)",
-          "Note contains: provider address + task hash + deadline",
-          "Provider checks predicate — verified on Ergo testnet",
-          "Provider delivers API response",
-          "Note burned, ERG released to provider"
+          "El agente crea una nota (valor nominal de 0.001 ERG)",
+          "La nota contiene: dirección del proveedor + hash de tarea + fecha límite",
+          "El proveedor verifica el predicado — verificado en Ergo testnet",
+          "El proveedor entrega la respuesta API",
+          "La nota se quema, ERG se libera al proveedor"
         ],
-        "why": "This is the atomic unit of agent commerce: one task, one payment, one proof. No identity required.",
+        "why": "Esta es la unidad atómica del comercio entre agentes: una tarea, un pago, una prueba. Sin identidad requerida.",
         "links": {
-          "chaincashRef": "ChainCash reference",
-          "fleetDocs": "Fleet SDK docs",
-          "architecture": "Architecture"
+          "chaincashRef": "Referencia ChainCash",
+          "fleetDocs": "Documentación Fleet SDK",
+          "architecture": "Arquitectura"
         }
       },
       "credit": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent pays on credit",
-        "tagline": "Reserve deployed. Notes issued. Tracker monitors.",
-        "description": "A reserve is deployed with collateral. Notes are issued against it up to a credit limit. An agent spends notes over time. The tracker monitors total usage. When the threshold is reached, the reserve auto-settles.",
+        "statusLabel": "Activo en testnet",
+        "title": "Agente paga a crédito",
+        "tagline": "Reserva desplegada. Notas emitidas. Rastreador monitoreando.",
+        "description": "Se despliega una reserva con colateral. Se emiten notas hasta un límite de crédito. Un agente gasta notas con el tiempo. El rastreador monitorea el uso total. Cuando se alcanza el umbral, la reserva se liquida automáticamente.",
         "flow": [
-          "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
-          "Notes issued against reserve (up to limit)",
-          "Agent transfers notes to providers as payment",
-          "Tracker updates cumulative balance on-chain",
-          "Auto-settlement when balance threshold hit"
+          "Contrato de reserva desplegado con 10 ERG + 100 ERG límite de crédito",
+          "Notas emitidas contra la reserva (hasta el límite)",
+          "El agente transfiere notas a proveedores como pago",
+          "El rastreador actualiza el saldo acumulado en cadena",
+          "Liquidación automática cuando se alcanza el umbral"
         ],
-        "why": "Credit is fundamental to economic efficiency. This implements it without a bank — just contracts and cryptographic proofs.",
+        "why": "El crédito es fundamental para la eficiencia económica. Esto lo implementa sin un banco — solo contratos y pruebas criptográficas.",
         "links": {
-          "chaincashPaper": "ChainCash paper",
-          "architecture": "Architecture",
-          "reserveContract": "Reserve contract"
+          "chaincashPaper": "Artículo ChainCash",
+          "architecture": "Arquitectura",
+          "reserveContract": "Contrato de reserva"
         }
       },
       "community": {
-        "statusLabel": "Coming in Week 3",
-        "title": "Community reserve + tracker",
-        "tagline": "A local marketplace. A compute co-op. An agent network.",
-        "description": "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",
+        "statusLabel": "Disponible en la semana 3",
+        "title": "Reserva comunitaria + rastreador",
+        "tagline": "Un mercado local. Una cooperativa de cómputo. Una red de agentes.",
+        "description": "Un grupo de participantes agrupa ERG en una reserva compartida. Las notas comunitarias se emiten proporcionalmente. Los predicados de aceptación definen las reglas de membresía. Los miembros pueden canjear notas por ERG en cualquier momento.",
         "flow": [
-          "Community members pool ERG into multi-sig reserve",
-          "Members receive community notes proportional to contribution",
-          "Notes accepted within community per acceptance rules",
-          "Any member can redeem notes for ERG anytime",
-          "Tracker provides public auditability of flows"
+          "Los miembros de la comunidad agrupan ERG en una reserva multifirma",
+          "Los miembros reciben notas comunitarias proporcionales a su contribución",
+          "Las notas son aceptadas dentro de la comunidad según las reglas de aceptación",
+          "Cualquier miembro puede canjear notas por ERG en cualquier momento",
+          "El rastreador proporciona auditabilidad pública de los flujos"
         ],
-        "why": "This is the most general form: a programmable local economy. Could be a marketplace, a DAO treasury, or an agent cooperative.",
+        "why": "Esta es la forma más general: una economía local programable. Puede ser un mercado, una tesorería DAO o una cooperativa de agentes.",
         "links": {
-          "architecture": "Architecture",
-          "nativeTokens": "Native Tokens",
+          "architecture": "Arquitectura",
+          "nativeTokens": "Tokens nativos",
           "ergoScript": "ErgoScript"
         }
       }
     },
     "openProblems": {
-      "badge": "Open Problems",
-      "title": "What's still unsolved",
-      "description": "These are the most interesting open problems in agent money. If any of these resonate — we want to hear from you.",
-      "openIssue": "Open an issue",
-      "talkToUs": "Talk to us about your use case",
+      "badge": "Problemas abiertos",
+      "title": "Lo que aún no está resuelto",
+      "description": "Estos son los problemas abiertos más interesantes en dinero de agentes. Si alguno te interesa, queremos saber de ti.",
+      "openIssue": "Abrir un issue",
+      "talkToUs": "Cuéntanos tu caso de uso",
       "items": [
         {
-          "title": "Agent identity without persistent accounts",
-          "desc": "How do agents build reputation across sessions without deanonymisation?"
+          "title": "Identidad de agente sin cuentas permanentes",
+          "desc": "¿Cómo construyen los agentes reputación entre sesiones sin perder el anonimato?"
         },
         {
-          "title": "Note acceptance UX for non-technical agents",
-          "desc": "SDK-level abstraction so LLM agents can issue and accept notes with minimal setup."
+          "title": "UX de aceptación de notas para agentes no técnicos",
+          "desc": "Abstracción a nivel de SDK para que los agentes LLM puedan emitir y aceptar notas con configuración mínima."
         },
         {
-          "title": "Tracker federation across reserves",
-          "desc": "Cross-reserve accounting and liquidity — can notes be accepted across different community reserves?"
+          "title": "Federación de rastreadores entre reservas",
+          "desc": "Contabilidad y liquidez entre reservas — ¿pueden las notas ser aceptadas entre diferentes reservas comunitarias?"
         },
         {
-          "title": "Agent reputation without centralized oracle",
-          "desc": "Verifiable reputation score derived from on-chain history, no trusted third party."
+          "title": "Reputación de agente sin oráculo centralizado",
+          "desc": "Puntuación de reputación verificable derivada del historial en cadena, sin terceros de confianza."
         },
         {
-          "title": "Local community wallet — one-click deploy",
-          "desc": "Spin up a community reserve, issue tokens, and configure acceptance rules in under 5 minutes."
+          "title": "Billetera comunitaria local — despliegue con un clic",
+          "desc": "Crea una reserva comunitaria, emite tokens y configura reglas de aceptación en menos de 5 minutos."
         }
       ]
     },
     "quickLinks": {
       "architecture": {
-        "title": "Full architecture",
-        "desc": "Reserve · Note · Tracker · Predicate"
+        "title": "Arquitectura completa",
+        "desc": "Reserva · Nota · Rastreador · Predicado"
       },
       "chaincash": {
         "title": "ChainCash",
-        "desc": "Reference implementation for notes + reserves"
+        "desc": "Implementación de referencia para notas + reservas"
       },
       "agentEconomy": {
-        "title": "Agent Economy",
-        "desc": "Why Ergo is the right base layer"
+        "title": "Economía de agentes",
+        "desc": "Por qué Ergo es la capa base correcta"
       }
     },
     "playground": {
-      "badge": "Testnet playground",
-      "title": "Generate your first agent payment",
-      "description": "Paste your Ergo testnet address. We fetch your live UTxOs and generate a ready-to-run Fleet SDK script — pre-filled with your actual data.",
-      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)",
-      "generate": "Generate",
-      "fetching": "Fetching…",
-      "needTestnetErg": "Need testnet ERG?",
-      "freeTestnetErg": "— free testnet ERG in seconds.",
-      "tabCode": "Ready-to-run code",
-      "tabUtxos": "Your UTxOs",
-      "copied": "Copied!",
-      "copy": "Copy",
-      "runIt": "Run it",
+      "badge": "Entorno de pruebas testnet",
+      "title": "Genera tu primer pago de agente",
+      "description": "Pega tu dirección de Ergo testnet. Obtenemos tus UTxO en vivo y generamos un script Fleet SDK precargado con tus datos reales.",
+      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (dirección testnet)",
+      "generate": "Generar",
+      "fetching": "Obteniendo…",
+      "needTestnetErg": "¿Necesitas testnet ERG?",
+      "freeTestnetErg": "— testnet ERG gratis en segundos.",
+      "tabCode": "Código listo para ejecutar",
+      "tabUtxos": "Tus UTxO",
+      "copied": "¡Copiado!",
+      "copy": "Copiar",
+      "runIt": "Ejecutar",
       "runStep1": "npm install @fleet-sdk/core",
       "runStep2": "node agent-payment.js",
-      "runStep3": "Copy the unsigned TX JSON output",
-      "runStep4": "Open Nautilus (testnet mode) → sign → submit",
-      "boxLabel": "Box",
-      "height": "height",
+      "runStep3": "Copia la salida JSON de TX sin firmar",
+      "runStep4": "Abre Nautilus (modo testnet) → firma → envía",
+      "boxLabel": "Caja",
+      "height": "altura",
       "tokens": "token(s)",
-      "errorNotFound": "Address not found on testnet. Make sure it's a valid Ergo testnet address.",
-      "errorNoUtxos": "No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.",
-      "errorNetwork": "Could not reach testnet API. Check your network connection."
+      "errorNotFound": "Dirección no encontrada en testnet. Asegúrate de que sea una dirección válida de Ergo testnet.",
+      "errorNoUtxos": "No se encontraron UTxO. Obtén ERG de testnet gratis en testnet.ergofaucet.org — tarda 30 segundos.",
+      "errorNetwork": "No se pudo conectar con la API de testnet. Verifica tu conexión de red."
     },
     "lookup": {
-      "badge": "Live on mainnet",
-      "title": "Address balance lookup",
-      "description": "Query any Ergo address balance live from the blockchain. Real data, real network.",
-      "placeholder": "9hHDQb26AjnJ...  (paste any Ergo address)",
-      "lookup": "Lookup",
-      "lookingUp": "Looking up…",
-      "confirmed": "Confirmed",
-      "noTokens": "No tokens in this address",
-      "dataFetchedFrom": "Data fetched live from",
-      "errorNotFound": "Address not found or invalid. Check that it's a valid Ergo address.",
-      "errorNetwork": "Could not reach Ergo API. Check your network connection."
+      "badge": "Activo en mainnet",
+      "title": "Consulta de saldo por dirección",
+      "description": "Consulta el saldo de cualquier dirección Ergo en vivo desde la blockchain. Datos reales, red real.",
+      "placeholder": "9hHDQb26AjnJ...  (pega cualquier dirección Ergo)",
+      "lookup": "Consultar",
+      "lookingUp": "Consultando…",
+      "confirmed": "Confirmado",
+      "noTokens": "No hay tokens en esta dirección",
+      "dataFetchedFrom": "Datos obtenidos en vivo de",
+      "errorNotFound": "Dirección no encontrada o inválida. Verifica que sea una dirección Ergo válida.",
+      "errorNetwork": "No se pudo conectar con la API de Ergo. Verifica tu conexión de red."
     },
     "cta": {
-      "title": "Your use case doesn't fit?",
-      "description": "Tell us what you're building. We'll find the right flow or help design a new one."
+      "title": "¿Tu caso de uso no encaja?",
+      "description": "Cuéntanos qué estás construyendo. Encontraremos el flujo adecuado o te ayudaremos a diseñar uno nuevo."
     }
   }
 }

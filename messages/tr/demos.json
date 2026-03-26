@@ -1,164 +1,164 @@
 {
   "demosPage": {
     "hero": {
-      "badge": "Working Demos",
-      "title": "Working flows,",
-      "titleHighlight": "not mockups.",
-      "description": "Three composable flows, all running on Ergo testnet. Each includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
-      "ctaTestnet": "Get testnet ERG",
-      "ctaArchitecture": "Architecture"
+      "badge": "Çalışan Demolar",
+      "title": "Çalışan akışlar,",
+      "titleHighlight": "maket değil.",
+      "description": "Üç birleştirilebilir akış, hepsi Ergo testnet üzerinde çalışıyor. Her biri kontrat mantığını, Fleet SDK kodunu ve yeniden üretmek için gereken adımları içerir.",
+      "ctaTestnet": "testnet ERG al",
+      "ctaArchitecture": "Mimari"
     },
     "demos": {
-      "stepByStep": "Step-by-step",
-      "whyMatters": "Why this matters",
+      "stepByStep": "Adım adım",
+      "whyMatters": "Neden önemli",
       "codeLabel": "Fleet SDK (TypeScript)",
-      "collapse": "collapse",
-      "expand": "expand",
-      "testedOn": "Tested on Ergo testnet. Get test ERG at"
+      "collapse": "daralt",
+      "expand": "genişlet",
+      "testedOn": "Ergo testnet üzerinde test edildi. Test ERG almak için:"
     },
     "demoItems": {
       "apiCall": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent buys API call",
-        "tagline": "One call. One proof. No persistent account.",
-        "description": "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
+        "statusLabel": "testnet'te canlı",
+        "title": "Ajan API çağrısı satın alır",
+        "tagline": "Bir çağrı. Bir kanıt. Kalıcı hesap yok.",
+        "description": "Otonom bir ajan not oluşturur ve API sağlayıcısına gönderir. Sağlayıcı, kabul yüklemini zincir üzerinde doğrular ve yanıtı iletir. API anahtarı yok, fatura hesabı yok, Stripe yok.",
         "flow": [
-          "Agent creates a note (0.001 ERG face value)",
-          "Note contains: provider address + task hash + deadline",
-          "Provider checks predicate — verified on Ergo testnet",
-          "Provider delivers API response",
-          "Note burned, ERG released to provider"
+          "Ajan bir not oluşturur (0.001 ERG nominal değer)",
+          "Not içeriği: sağlayıcı adresi + görev hash'i + son tarih",
+          "Sağlayıcı yüklemi kontrol eder — Ergo testnet'te doğrulandı",
+          "Sağlayıcı API yanıtını iletir",
+          "Not yakılır, ERG sağlayıcıya serbest bırakılır"
         ],
-        "why": "This is the atomic unit of agent commerce: one task, one payment, one proof. No identity required.",
+        "why": "Bu, ajan ticaretinin atomik birimidir: bir görev, bir ödeme, bir kanıt. Kimlik gerekli değil.",
         "links": {
-          "chaincashRef": "ChainCash reference",
-          "fleetDocs": "Fleet SDK docs",
-          "architecture": "Architecture"
+          "chaincashRef": "ChainCash referansı",
+          "fleetDocs": "Fleet SDK belgeleri",
+          "architecture": "Mimari"
         }
       },
       "credit": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent pays on credit",
-        "tagline": "Reserve deployed. Notes issued. Tracker monitors.",
-        "description": "A reserve is deployed with collateral. Notes are issued against it up to a credit limit. An agent spends notes over time. The tracker monitors total usage. When the threshold is reached, the reserve auto-settles.",
+        "statusLabel": "testnet'te canlı",
+        "title": "Ajan krediyle ödeme yapar",
+        "tagline": "Rezerv dağıtıldı. Notlar çıkarıldı. İzleyici izliyor.",
+        "description": "Teminatla bir rezerv dağıtılır. Kredi limitine kadar notlar çıkarılır. Ajan zaman içinde notları harcar. İzleyici toplam kullanımı takip eder. Eşik değerine ulaşıldığında rezerv otomatik olarak kapatılır.",
         "flow": [
-          "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
-          "Notes issued against reserve (up to limit)",
-          "Agent transfers notes to providers as payment",
-          "Tracker updates cumulative balance on-chain",
-          "Auto-settlement when balance threshold hit"
+          "Rezerv kontratı dağıtıldı (10 ERG + 100 ERG kredi limiti)",
+          "Rezerv karşılığı notlar çıkarıldı (limite kadar)",
+          "Ajan, ödeme olarak notları sağlayıcılara aktarır",
+          "İzleyici zincir üzerinde kümülatif bakiyeyi günceller",
+          "Bakiye eşiğine ulaşıldığında otomatik kapanış"
         ],
-        "why": "Credit is fundamental to economic efficiency. This implements it without a bank — just contracts and cryptographic proofs.",
+        "why": "Kredi, ekonomik verimliliğin temelidir. Bu, banka olmadan gerçekleştirir — sadece kontratlar ve kriptografik kanıtlar.",
         "links": {
-          "chaincashPaper": "ChainCash paper",
-          "architecture": "Architecture",
-          "reserveContract": "Reserve contract"
+          "chaincashPaper": "ChainCash makalesi",
+          "architecture": "Mimari",
+          "reserveContract": "Rezerv kontratı"
         }
       },
       "community": {
-        "statusLabel": "Coming in Week 3",
-        "title": "Community reserve + tracker",
-        "tagline": "A local marketplace. A compute co-op. An agent network.",
-        "description": "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",
+        "statusLabel": "3. Haftada geliyor",
+        "title": "Topluluk rezervi + izleyici",
+        "tagline": "Yerel bir pazar yeri. Bir hesaplama kooperatifi. Bir ajan ağı.",
+        "description": "Bir grup katılımcı, paylaşılan bir rezervde ERG havuzlar. Topluluk notları orantılı olarak çıkarılır. Kabul yüklemleri üyelik kurallarını tanımlar. Üyeler istedikleri zaman notları ERG karşılığı kullanabilir.",
         "flow": [
-          "Community members pool ERG into multi-sig reserve",
-          "Members receive community notes proportional to contribution",
-          "Notes accepted within community per acceptance rules",
-          "Any member can redeem notes for ERG anytime",
-          "Tracker provides public auditability of flows"
+          "Topluluk üyeleri çoklu imza rezervine ERG havuzlar",
+          "Üyeler katkılarına orantılı topluluk notları alır",
+          "Kabul kurallarına göre topluluk içinde notlar kabul edilir",
+          "Herhangi bir üye istedikleri zaman notları ERG'ye çevirebilir",
+          "İzleyici akışların kamuya açık denetlenebilirliğini sağlar"
         ],
-        "why": "This is the most general form: a programmable local economy. Could be a marketplace, a DAO treasury, or an agent cooperative.",
+        "why": "Bu en genel formdur: programlanabilir yerel ekonomi. Bir pazar yeri, bir DAO hazinesi veya bir ajan kooperatifi olabilir.",
         "links": {
-          "architecture": "Architecture",
-          "nativeTokens": "Native Tokens",
+          "architecture": "Mimari",
+          "nativeTokens": "Yerel Tokenlar",
           "ergoScript": "ErgoScript"
         }
       }
     },
     "openProblems": {
-      "badge": "Open Problems",
-      "title": "What's still unsolved",
-      "description": "These are the most interesting open problems in agent money. If any of these resonate — we want to hear from you.",
-      "openIssue": "Open an issue",
-      "talkToUs": "Talk to us about your use case",
+      "badge": "Açık Problemler",
+      "title": "Henüz çözülmemiş olanlar",
+      "description": "Bunlar ajan parasındaki en ilginç açık problemlerdir. Bunlardan herhangi biri size hitap ediyorsa — sizden haber almak isteriz.",
+      "openIssue": "Issue aç",
+      "talkToUs": "Kullanım durumunuz hakkında bizimle konuşun",
       "items": [
         {
-          "title": "Agent identity without persistent accounts",
-          "desc": "How do agents build reputation across sessions without deanonymisation?"
+          "title": "Kalıcı hesaplar olmadan ajan kimliği",
+          "desc": "Ajanlar, anonimliği bozmadan oturumlar arasında nasıl itibar oluşturur?"
         },
         {
-          "title": "Note acceptance UX for non-technical agents",
-          "desc": "SDK-level abstraction so LLM agents can issue and accept notes with minimal setup."
+          "title": "Teknik olmayan ajanlar için not kabul UX'i",
+          "desc": "LLM ajanlarının minimum kurulumla not çıkarıp kabul edebilmesi için SDK seviyesinde soyutlama."
         },
         {
-          "title": "Tracker federation across reserves",
-          "desc": "Cross-reserve accounting and liquidity — can notes be accepted across different community reserves?"
+          "title": "Rezervler arası izleyici federasyonu",
+          "desc": "Çapraz rezerv muhasebe ve likidite — notlar farklı topluluk rezervleri arasında kabul edilebilir mi?"
         },
         {
-          "title": "Agent reputation without centralized oracle",
-          "desc": "Verifiable reputation score derived from on-chain history, no trusted third party."
+          "title": "Merkezi oracle olmadan ajan itibarı",
+          "desc": "Zincir üstü geçmişten türetilen doğrulanabilir itibar puanı, güvenilir üçüncü taraf yok."
         },
         {
-          "title": "Local community wallet — one-click deploy",
-          "desc": "Spin up a community reserve, issue tokens, and configure acceptance rules in under 5 minutes."
+          "title": "Yerel topluluk cüzdanı — tek tıkla dağıtım",
+          "desc": "Bir topluluk rezervi kurun, token çıkarın ve kabul kurallarını 5 dakikadan kısa sürede yapılandırın."
         }
       ]
     },
     "quickLinks": {
       "architecture": {
-        "title": "Full architecture",
-        "desc": "Reserve · Note · Tracker · Predicate"
+        "title": "Tam mimari",
+        "desc": "Rezerv · Not · İzleyici · Yüklem"
       },
       "chaincash": {
         "title": "ChainCash",
-        "desc": "Reference implementation for notes + reserves"
+        "desc": "Notlar + rezervler için referans uygulama"
       },
       "agentEconomy": {
-        "title": "Agent Economy",
-        "desc": "Why Ergo is the right base layer"
+        "title": "Ajan Ekonomisi",
+        "desc": "Neden Ergo doğru temel katmandır"
       }
     },
     "playground": {
-      "badge": "Testnet playground",
-      "title": "Generate your first agent payment",
-      "description": "Paste your Ergo testnet address. We fetch your live UTxOs and generate a ready-to-run Fleet SDK script — pre-filled with your actual data.",
-      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet address)",
-      "generate": "Generate",
-      "fetching": "Fetching…",
-      "needTestnetErg": "Need testnet ERG?",
-      "freeTestnetErg": "— free testnet ERG in seconds.",
-      "tabCode": "Ready-to-run code",
-      "tabUtxos": "Your UTxOs",
-      "copied": "Copied!",
-      "copy": "Copy",
-      "runIt": "Run it",
+      "badge": "testnet oyun alanı",
+      "title": "İlk ajan ödemenizi oluşturun",
+      "description": "Ergo testnet adresinizi yapıştırın. Canlı UTxO'larınızı alır ve gerçek verilerinizle önceden doldurulmuş Fleet SDK betiği oluştururuz.",
+      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnet adresi)",
+      "generate": "Oluştur",
+      "fetching": "Alınıyor…",
+      "needTestnetErg": "testnet ERG'ye mi ihtiyacınız var?",
+      "freeTestnetErg": "— saniyeler içinde ücretsiz testnet ERG.",
+      "tabCode": "Çalıştırmaya hazır kod",
+      "tabUtxos": "UTxO'larınız",
+      "copied": "Kopyalandı!",
+      "copy": "Kopyala",
+      "runIt": "Çalıştır",
       "runStep1": "npm install @fleet-sdk/core",
       "runStep2": "node agent-payment.js",
-      "runStep3": "Copy the unsigned TX JSON output",
-      "runStep4": "Open Nautilus (testnet mode) → sign → submit",
-      "boxLabel": "Box",
-      "height": "height",
-      "tokens": "token(s)",
-      "errorNotFound": "Address not found on testnet. Make sure it's a valid Ergo testnet address.",
-      "errorNoUtxos": "No UTxOs found. Get free testnet ERG at testnet.ergofaucet.org — takes 30 seconds.",
-      "errorNetwork": "Could not reach testnet API. Check your network connection."
+      "runStep3": "İmzasız TX JSON çıktısını kopyalayın",
+      "runStep4": "Nautilus (testnet modu) açın → imzalayın → gönderin",
+      "boxLabel": "Kutu",
+      "height": "yükseklik",
+      "tokens": "token(lar)",
+      "errorNotFound": "Adres testnet'te bulunamadı. Geçerli bir Ergo testnet adresi olduğundan emin olun.",
+      "errorNoUtxos": "UTxO bulunamadı. testnet.ergofaucet.org'dan ücretsiz testnet ERG alın — 30 saniye sürer.",
+      "errorNetwork": "testnet API'sine erişilemedi. Ağ bağlantınızı kontrol edin."
     },
     "lookup": {
-      "badge": "Live on mainnet",
-      "title": "Address balance lookup",
-      "description": "Query any Ergo address balance live from the blockchain. Real data, real network.",
-      "placeholder": "9hHDQb26AjnJ...  (paste any Ergo address)",
-      "lookup": "Lookup",
-      "lookingUp": "Looking up…",
-      "confirmed": "Confirmed",
-      "noTokens": "No tokens in this address",
-      "dataFetchedFrom": "Data fetched live from",
-      "errorNotFound": "Address not found or invalid. Check that it's a valid Ergo address.",
-      "errorNetwork": "Could not reach Ergo API. Check your network connection."
+      "badge": "mainnet'te canlı",
+      "title": "Adres bakiye sorgulama",
+      "description": "Herhangi bir Ergo adresinin bakiyesini blok zincirinden canlı sorgulayın. Gerçek veri, gerçek ağ.",
+      "placeholder": "9hHDQb26AjnJ...  (herhangi bir Ergo adresi yapıştırın)",
+      "lookup": "Sorgula",
+      "lookingUp": "Sorgulanıyor…",
+      "confirmed": "Onaylandı",
+      "noTokens": "Bu adreste token yok",
+      "dataFetchedFrom": "Veriler canlı olarak şuradan alındı:",
+      "errorNotFound": "Adres bulunamadı veya geçersiz. Geçerli bir Ergo adresi olduğunu kontrol edin.",
+      "errorNetwork": "Ergo API'sine erişilemedi. Ağ bağlantınızı kontrol edin."
     },
     "cta": {
-      "title": "Your use case doesn't fit?",
-      "description": "Tell us what you're building. We'll find the right flow or help design a new one."
+      "title": "Kullanım durumunuz uymuyor mu?",
+      "description": "Ne inşa ettiğinizi bize söyleyin. Doğru akışı bulacağız veya yeni bir tane tasarlamaya yardımcı olacağız."
     }
   }
 }
