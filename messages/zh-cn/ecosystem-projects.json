@@ -1,0 +1,333 @@
+{
+  "ecosystemProjects": {
+    "spectrum-finance": {
+      "description": "基于Ergo和Cardano区块链的前沿开源去中心化交易所（DEX）。提供流动性供应（LP）、流动性挖矿，并支持Babel Fees。",
+      "features": [
+        "去中心化交易所",
+        "流动性池",
+        "流动性挖矿",
+        "Babel Fees支持",
+        "跨链交易"
+      ]
+    },
+    "ergodex": {
+      "description": "面向Ergo和Cardano的非托管去中心化交易所（DEX），支持AMM和订单簿交易模式。",
+      "features": [
+        "Ergo和Cardano跨链DEX",
+        "非托管交易",
+        "AMM和订单簿模式",
+        "ERG和ADA生态流动性供应"
+      ]
+    },
+    "sigmausd": {
+      "description": "首个基于eUTXO的稳定币，采用AgeUSD协议实现。与美元挂钩，由ERG提供担保，浮动储备率为400%-800%。",
+      "features": [
+        "算法稳定币",
+        "ERG抵押担保",
+        "去中心化",
+        "无清算风险"
+      ]
+    },
+    "rosen-bridge": {
+      "description": "用于Ergo与其他区块链（如Cardano、Bitcoin Runes和Dogecoin）之间跨链资产转移的开源协议。",
+      "features": [
+        "跨链转账",
+        "多链支持",
+        "去中心化观察者",
+        "无需信任的桥接"
+      ]
+    },
+    "ergomixer": {
+      "description": "加密行业首个非交互式、非托管混币器。用户可使用Sigma协议进行私密代币转账，增强隐私保护。",
+      "features": [
+        "非托管混币",
+        "代币隐私",
+        "Sigma协议",
+        "零知识证明"
+      ]
+    },
+    "nautilus-wallet": {
+      "description": "Ergo的浏览器扩展和移动钱包，注重隐私、安全和用户体验。支持Ledger、多钱包和dApp连接器。",
+      "features": [
+        "浏览器扩展",
+        "移动应用",
+        "Ledger支持",
+        "dApp连接器",
+        "多钱包管理"
+      ]
+    },
+    "duckpools": {
+      "description": "具有算法借贷池的抵押借贷平台。用户可以提供ERG或原生资产赚取收益，或以ERG作为抵押品借入资产。",
+      "features": [
+        "借贷池",
+        "抵押贷款",
+        "收益生成",
+        "原生资产支持"
+      ]
+    },
+    "paideia": {
+      "description": "一套用于在Ergo和Cardano上创建和管理去中心化自治组织（DAO）的工具，提供治理和资金管理功能。",
+      "features": [
+        "DAO创建",
+        "治理工具",
+        "资金管理",
+        "提案投票",
+        "多链支持"
+      ]
+    },
+    "oracle-pools": {
+      "description": "Ergo上的去中心化预言机系统，无需信任中心化数据源即可将智能合约与外部数据连接。",
+      "features": [
+        "去中心化预言机",
+        "价格数据源",
+        "外部数据接入",
+        "无需信任设计"
+      ]
+    },
+    "ergo-explorer": {
+      "description": "Ergo的官方区块浏览器。用户可以追踪交易、区块、地址、代币，并查看网络整体统计数据。",
+      "features": [
+        "区块浏览器",
+        "交易追踪",
+        "代币信息",
+        "网络统计",
+        "地址查询"
+      ]
+    },
+    "ergopad": {
+      "description": "Ergo区块链上的代币发行（IDO）和募资平台。代币持有者可参与IDO项目。",
+      "features": [
+        "代币发行",
+        "IDO平台",
+        "质押",
+        "社区项目"
+      ]
+    },
+    "mew-finance": {
+      "description": "去中心化金融（DeFi）平台，提供包括DEX、NFT市场和各种金融工具在内的一站式金融应用。",
+      "features": [
+        "DEX",
+        "NFT市场",
+        "DeFi套件",
+        "代币兑换"
+      ]
+    },
+    "satergo": {
+      "description": "功能全面的Ergo桌面钱包，可选集成全节点以支持网络去中心化。注重隐私，支持离线保险库。",
+      "features": [
+        "桌面钱包",
+        "全节点集成",
+        "离线保险库",
+        "隐私保护"
+      ]
+    },
+    "safew": {
+      "description": "Ergo的浏览器扩展钱包，集成ErgoMixer以增强交易隐私。",
+      "features": [
+        "浏览器扩展",
+        "ErgoMixer集成",
+        "隐私增强",
+        "dApp支持"
+      ]
+    },
+    "ergowatch": {
+      "description": "提供Ergo网络指标、DeFi统计数据（如TVL）、图表和仪表盘的分析型区块浏览器，用于监控区块链活动。",
+      "features": [
+        "数据分析",
+        "DeFi指标",
+        "TVL追踪",
+        "网络仪表盘",
+        "图表"
+      ]
+    },
+    "cyberpixels": {
+      "description": "一款集成区块链的像素风格开放世界游戏项目（NFT、自定义代币、游戏内市场）。",
+      "features": [
+        "区块链游戏",
+        "NFT集成",
+        "游戏内市场",
+        "边玩边赚"
+      ]
+    },
+    "sigmafi": {
+      "description": "Ergo上的一系列去中心化P2P金融合约，包括用于创建P2P债务凭证的SigmaBonds。",
+      "features": [
+        "P2P借贷",
+        "债券发行",
+        "去中心化金融",
+        "智能合约"
+      ]
+    },
+    "ergoraffle": {
+      "description": "带有抽奖元素的众筹服务，参与者在为项目募资的同时可赢取奖励。",
+      "features": [
+        "众筹",
+        "抽奖系统",
+        "可证明公平性",
+        "项目资助"
+      ]
+    },
+    "minotaur-wallet": {
+      "description": "Ergo的移动钱包，支持多重签名等高级功能，增强资金管理安全性。",
+      "features": [
+        "移动钱包",
+        "多重签名",
+        "增强安全性",
+        "资金管理"
+      ]
+    },
+    "guapswap": {
+      "description": "基于智能合约的去中心化矿工收益兑换服务，可自动兑换挖矿奖励。",
+      "features": [
+        "挖矿奖励",
+        "自动兑换",
+        "收益管理",
+        "矿工工具"
+      ]
+    },
+    "dexygold": {
+      "description": "与黄金价格（XAU/USD）挂钩的算法稳定币，利用铸币税机制、价格预言机和超额ERG抵押。",
+      "features": [
+        "黄金挂钩稳定币",
+        "算法设计",
+        "预言机集成",
+        "ERG抵押"
+      ]
+    },
+    "sigmao": {
+      "description": "在Ergo上交易EIP-4代币期权（看涨/看跌、美式/欧式）的平台，采用订单簿模式。",
+      "features": [
+        "期权交易",
+        "看涨/看跌期权",
+        "订单簿",
+        "EIP-4代币"
+      ]
+    },
+    "blitz-tcg": {
+      "description": "基于Ergo区块链的集换式卡牌游戏（TCG）。",
+      "features": [
+        "集换式卡牌游戏",
+        "NFT卡牌",
+        "竞技对战",
+        "收藏品"
+      ]
+    },
+    "sigmaverse": {
+      "description": "Ergo dApp生态系统的门户和目录，开发者可发布应用，用户可发现服务。",
+      "features": [
+        "dApp目录",
+        "项目列表",
+        "生态门户",
+        "发现平台"
+      ]
+    },
+    "ergone": {
+      "description": "去中心化、社区驱动的营销平台，使用ERGONE代币和承诺证明协议推广Ergo及其项目。",
+      "features": [
+        "营销平台",
+        "社区驱动",
+        "代币激励",
+        "项目推广"
+      ]
+    },
+    "hodlbox": {
+      "description": "鼓励长期持有ERG的平台，提供宝箱和多种锁仓选项，以NFT奖励用户。",
+      "features": [
+        "HODL激励",
+        "资金锁定",
+        "NFT奖励",
+        "长期储蓄"
+      ]
+    },
+    "tokenjay": {
+      "description": "Ergo生态系统中的P2P（点对点）代币交易平台。",
+      "features": [
+        "P2P交易",
+        "代币兑换",
+        "去中心化交易所",
+        "直接交易"
+      ]
+    },
+    "single-tx-swap": {
+      "description": "在单笔交易中执行P2P（点对点）代币兑换的工具。",
+      "features": [
+        "原子交换",
+        "单笔交易",
+        "P2P兑换",
+        "快速执行"
+      ]
+    },
+    "crux-finance": {
+      "description": "Ergo生态系统中的加密资产组合管理工具，可追踪盈亏、投资并生成税务报告。",
+      "features": [
+        "投资组合追踪",
+        "盈亏分析",
+        "税务报告",
+        "投资管理"
+      ]
+    },
+    "fleet-sdk": {
+      "description": "JavaScript库，旨在简化Web应用和Node.js中Ergo区块链交易的创建和签名。",
+      "features": [
+        "JavaScript SDK",
+        "交易构建",
+        "Web集成",
+        "Node.js支持"
+      ]
+    },
+    "appkit": {
+      "description": "使用JVM编程语言在Ergo上开发应用的主要软件开发工具包（SDK）。",
+      "features": [
+        "JVM SDK",
+        "Scala/Java支持",
+        "智能合约开发",
+        "官方SDK"
+      ]
+    },
+    "sigma-rust": {
+      "description": "ErgoTree解释器的Rust实现，提供交易处理工具和多语言绑定。",
+      "features": [
+        "Rust实现",
+        "ErgoTree解释器",
+        "多语言绑定",
+        "WASM支持"
+      ]
+    },
+    "gluon": {
+      "description": "旨在强化Ergo生态中现有稳定币（如SigmaUSD）的协议。",
+      "features": [
+        "稳定币增强",
+        "协议加固",
+        "DeFi基础设施",
+        "稳定性机制"
+      ]
+    },
+    "chaincash": {
+      "description": "在Ergo上创建去中心化P2P货币系统的框架，允许用户发行基于信任或抵押品的自有货币。",
+      "features": [
+        "P2P货币",
+        "自定义货币",
+        "信任担保",
+        "货币框架"
+      ]
+    },
+    "sigrsv": {
+      "description": "SigmaUSD稳定币协议的储备币。用户通过向储备池存入ERG来铸造SigRSV，可从ERG价格上涨中获利。",
+      "features": [
+        "储备币",
+        "ERG风险敞口",
+        "SigmaUSD担保",
+        "收益潜力"
+      ]
+    },
+    "exle": {
+      "description": "Ergo生态系统中的借贷协议，与Crux Finance集成。",
+      "features": [
+        "借贷协议",
+        "借款",
+        "DeFi集成",
+        "Crux Finance集成"
+      ]
+    }
+  }
+}

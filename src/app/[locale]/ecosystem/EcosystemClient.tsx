@@ -132,6 +132,7 @@ const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 
 
 export default function EcosystemClient() {
   const t = useTranslations("ecosystem")
+  const tProj = useTranslations("ecosystemProjects")
   const [searchTerm, setSearchTerm] = useState("")
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("ALL")
@@ -266,7 +267,7 @@ export default function EcosystemClient() {
                           {statusConfig[project.status]?.icon}
                         </div>
                       </div>
-                      <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
+                      <p className="text-neutral-400 mb-6 flex-1">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
                       <div className="flex flex-col gap-2 mt-auto">
                         <Button asChild className="w-full bg-orange-500 hover:bg-orange-400 text-white">
                           <Link href={`/ecosystem/${project.slug}`} aria-label={`Learn more about ${project.name}`} className="flex items-center gap-2">
@@ -382,7 +383,7 @@ export default function EcosystemClient() {
                               <span>{statusConfig[project.status]?.label ?? project.status}</span>
                             </div>
                             <div className="col-span-11 md:col-span-4 md:col-start-8">
-                              <p className="text-sm text-neutral-400 line-clamp-2">{project.description}</p>
+                              <p className="text-sm text-neutral-400 line-clamp-2">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
                             </div>
                             <div className="col-span-1 flex justify-end text-orange-400">
                               <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />

@@ -1000,6 +1000,20 @@
       "open": "打开",
       "close": "关闭"
     },
-    "legend": "图例："
+    "legend": "图例：",
+    "categories": {
+      "DEFI": "去中心化金融",
+      "INFRASTRUCTURE": "基础设施",
+      "ORACLES": "预言机",
+      "PRIVACY": "隐私",
+      "NFT": "NFT",
+      "WALLETS": "钱包",
+      "DAO": "DAO",
+      "TOOLS": "工具"
+    },
+    "download": {
+      "png": "PNG",
+      "svg": "SVG"
+    }
   }
 }

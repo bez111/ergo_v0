@@ -1,0 +1,196 @@
+{
+  "buildPage": {
+    "hero": {
+      "tag": "技术架构",
+      "titleStart": "Agent 支付栈：",
+      "titleHighlight": "参考架构",
+      "description": "四个链上原语。三种可组合流程。构建 Ergo 上 Agent 对 Agent 支付所需的一切——从单次 API 调用到完整的社区货币。",
+      "ctaChainCash": "ChainCash 代码库",
+      "ctaCodeExamples": "代码示例",
+      "ctaLiveDemos": "在线演示"
+    },
+    "breadcrumbs": {
+      "agentEconomy": "Agent 经济",
+      "agentPayments": "Agent 支付"
+    },
+    "primitives": {
+      "sectionLabel": "四个核心原语",
+      "heading": "Reserve · Note · Tracker · Predicate",
+      "reserve": {
+        "title": "Reserve",
+        "subtitle": "资本支撑",
+        "description": "一个链上合约，持有 ERG 或代币作为抵押品。任何人都可以随时验证准备金比率。Reserve 就是银行——没有中间人。",
+        "properties": [
+          "持有 ERG / 原生代币",
+          "随时可审计",
+          "按 1:1 或部分准备金支持 Note 发行",
+          "赎回由合约强制执行"
+        ]
+      },
+      "note": {
+        "title": "Note",
+        "subtitle": "可编程 IOU",
+        "description": "代表对 Reserve 索赔权的持有人代币。Note 可以转让、拆分和赎回。Acceptance Predicate 定义谁可以接收或赎回 Note。",
+        "properties": [
+          "持有人票据——不需要身份",
+          "点对点可转让",
+          "可从 Reserve 合约赎回",
+          "可以任何代币计价"
+        ]
+      },
+      "tracker": {
+        "title": "Tracker",
+        "subtitle": "链上记账",
+        "description": "跟踪从 Reserve 发行的所有 Note 的累计余额、信用使用和赎回历史。可以把它看作任何人都可以验证的公共账本。",
+        "properties": [
+          "跟踪已发行与已赎回总量",
+          "强制执行信用额度",
+          "公开可审计",
+          "可与其他合约组合"
+        ]
+      },
+      "predicate": {
+        "title": "Acceptance Predicate",
+        "subtitle": "可编程信任规则",
+        "description": "Agent 接受 Note 作为支付的条件。条件可以包括任务哈希验证、截止日期检查、凭证证明或任何链上数据。",
+        "properties": [
+          "任意接受条件",
+          "任务哈希验证",
+          "截止日期强制执行",
+          "可与 Sigma 证明组合"
+        ]
+      }
+    },
+    "flows": {
+      "sectionLabel": "示例流程",
+      "heading": "三种可组合流程",
+      "seeLiveDemo": "查看在线演示",
+      "apiCall": {
+        "title": "流程 A：Agent 购买 API 调用",
+        "description": "一次调用。一个证明。无需持久账户。",
+        "steps": [
+          { "label": "Agent 创建 Note", "detail": "0.001 ERG 面值，提供者地址在 R4" },
+          { "label": "提供者检查 Predicate", "detail": "验证 Note 价值、Reserve 支持、截止日期" },
+          { "label": "提供者交付响应", "detail": "返回 API 结果，标记 Note 已使用" },
+          { "label": "结算", "detail": "Note 销毁，ERG 从 Reserve 释放给提供者" }
+        ]
+      },
+      "credit": {
+        "title": "流程 B：Agent 信用支付",
+        "description": "部署 Reserve。发行 Note。Tracker 监控。",
+        "steps": [
+          { "label": "部署 Reserve", "detail": "在 Reserve 合约中锁定 ERG 并设定信用额度" },
+          { "label": "发行 Note", "detail": "针对 Reserve 创建 Note，上限为信用额度" },
+          { "label": "Agent 使用 Note", "detail": "Note 转给提供者，Tracker 更新" },
+          { "label": "自动结算", "detail": "达到阈值时，Reserve 自动结算未偿 Note" }
+        ]
+      },
+      "community": {
+        "title": "流程 C：社区 Reserve + Tracker",
+        "description": "本地市场、计算合作社、Agent 网络。",
+        "steps": [
+          { "label": "社区部署 Reserve", "detail": "社区成员池化 ERG" },
+          { "label": "发行社区 Note", "detail": "成员按贡献比例获得 Note" },
+          { "label": "本地商业", "detail": "Note 在社区内流通，Predicate 定义规则" },
+          { "label": "赎回", "detail": "成员随时从 Reserve 赎回 Note 换取 ERG" }
+        ]
+      }
+    },
+    "sdks": {
+      "sectionLabel": "SDK 与工具",
+      "heading": "立即开始构建",
+      "recommended": "推荐",
+      "docs": "文档",
+      "fleetSdk": {
+        "desc": "在浏览器或 Node.js 中构建交易。Agent 支付的最佳起点。"
+      },
+      "sigmaRust": {
+        "desc": "高性能签名和序列化。适合生产环境的 Agent 基础设施。"
+      },
+      "appKit": {
+        "desc": "功能齐全的后端服务 SDK，适用于机器人和服务端 Agent。"
+      },
+      "ergoNodeApi": {
+        "desc": "直接访问节点。提交交易、查询 UTxO、监控地址。"
+      }
+    },
+    "status": {
+      "sectionLabel": "已上线",
+      "heading": "技术栈状态",
+      "description": "五个层级已上线。两个是开放问题。加入 GitHub 讨论——这些是 Agent 货币领域最有趣的未解问题。",
+      "legendLive": "已在 mainnet / testnet 上线",
+      "legendSoon": "即将推出",
+      "legendOpen": "开放研究问题",
+      "live": "已上线",
+      "soon": "即将",
+      "open": "开放",
+      "ergoTestnetFaucet": "Ergo testnet 水龙头",
+      "fleetSdk": "Fleet SDK (TypeScript)",
+      "appKit": "AppKit (JVM)",
+      "sigmaRust": "sigma-rust",
+      "chainCash": "ChainCash 服务器（Note + Reserve）",
+      "ergoNodeApi": "Ergo Node REST API",
+      "starterRepo": "agent-economy-starter 代码库",
+      "identityLayer": "Agent 身份层"
+    },
+    "links": {
+      "ergoDocs": {
+        "title": "Ergo 文档",
+        "desc": "官方开发者文档"
+      },
+      "devPatterns": {
+        "title": "开发模式",
+        "desc": "可复制粘贴的 ErgoScript 蓝图"
+      },
+      "babelFees": {
+        "title": "Babel Fees",
+        "desc": "用任何代币支付手续费——Agent 的关键功能"
+      }
+    },
+    "cta": {
+      "title": "正在构建 Agent？联系我们。",
+      "description": "预约设计会议、获取代码审查或加入构建者名单。我们将在24小时内回复。"
+    }
+  },
+  "quickstartPage": {
+    "breadcrumbBuild": "构建",
+    "breadcrumbQuickstart": "快速入门",
+    "badge": "10分钟以内",
+    "heroTitle1": "第一笔 Agent 支付",
+    "heroTitle2": "在 Ergo testnet 上。",
+    "heroDescription": "无需理论。无需繁琐设置。一个 npm 包、30行代码、一条命令——即可在 Ergo testnet explorer 上看到真实交易。",
+    "prerequisitesTitle": "前提条件",
+    "prereq1": "已安装 Node.js 18+",
+    "prereq2": "一个 testnet 地址（在 Nautilus wallet → Settings → Testnet mode 中创建）",
+    "prereq3": "从 testnet.ergofaucet.org 获取 testnet ERG",
+    "prereq4": "5分钟不受干扰的时间",
+    "copied": "已复制",
+    "copy": "复制",
+    "step1Title": "安装 Fleet SDK",
+    "step1Time": "30秒",
+    "step1Note": "Fleet SDK 是 Ergo 官方的 TypeScript/JS SDK。支持 Node.js 和浏览器。",
+    "step2Title": "创建 agent-pay.js",
+    "step2Time": "2分钟",
+    "step2Note": "此脚本获取你的 testnet UTxO，构建交易，并输出未签名的 TX 对象。",
+    "step3Title": "运行脚本",
+    "step3Time": "10秒",
+    "step3Note": "你将看到未签名交易的 JSON。使用 Nautilus（浏览器）或服务端密钥签名，然后 POST 到 /api/v1/transactions。",
+    "step4Title": "添加 Note（Agent 支付）",
+    "step4Time": "5分钟",
+    "step4Note": "这扩展了基本 TX 以创建 Note —— 一种带有 task hash 寄存器的持有人票据。接收方通过 Reserve 兑换。",
+    "explorerTitle": "在 Explorer 上查看你的 TX",
+    "explorerDescription": "提交后，你的交易将出现在 Ergo testnet explorer 上。在以下地址粘贴你的 TX ID：",
+    "whatsNextTitle": "下一步",
+    "nextCard1Title": "Agent Payments 架构",
+    "nextCard1Desc": "Reserve、Note、Tracker、Acceptance Predicate —— 完整技术参考",
+    "nextCard2Title": "7步指南",
+    "nextCard2Desc": "从环境配置到 mainnet 部署——完整的构建者指南",
+    "nextCard3Title": "在线演示",
+    "nextCard3Desc": "查看 Ergo testnet 上运行的 Agent 支付流程，开源",
+    "nextCard4Title": "GitHub: ergo-agent-economy",
+    "nextCard4Desc": "开源示例：基本支付、Note IOU、Acceptance Predicate",
+    "readMore": "了解更多",
+    "ctaTitle": "准备深入了解？",
+    "ctaDescription": "快速入门让你开始行动。完整架构参考和7步指南正在等你。"
+  }
+}

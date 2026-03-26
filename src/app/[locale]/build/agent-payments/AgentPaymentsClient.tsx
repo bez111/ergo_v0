@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
 import {
@@ -29,13 +30,9 @@ const BRAND = "#ff8800"
 const PRIMITIVES = [
   {
     id: "reserve",
+    tKey: "reserve" as const,
     icon: Database,
-    title: "Reserve",
-    subtitle: "Capital backing",
     color: "orange",
-    description:
-      "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
-    properties: ["Holds ERG / native tokens", "Auditable at any time", "Backs note issuance 1:1 or fractionally", "Redemption enforced by contract"],
     ergoScript: `{
   // Reserve contract: allow withdrawal only
   // if redemption note is burned
@@ -46,13 +43,9 @@ const PRIMITIVES = [
   },
   {
     id: "note",
+    tKey: "note" as const,
     icon: Code2,
-    title: "Note",
-    subtitle: "Programmable IOU",
     color: "orange",
-    description:
-      "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
-    properties: ["Bearer instrument — no identity required", "Transferable peer-to-peer", "Redeemable against reserve contract", "Denomination in any token"],
     ergoScript: `{
   // Note: transferable by holder,
   // redeemable against reserve
@@ -66,13 +59,9 @@ const PRIMITIVES = [
   },
   {
     id: "tracker",
+    tKey: "tracker" as const,
     icon: Layers,
-    title: "Tracker",
-    subtitle: "On-chain accounting",
     color: "orange",
-    description:
-      "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
-    properties: ["Tracks total issued vs redeemed", "Enforces credit limits", "Publicly auditable", "Composable with other contracts"],
     ergoScript: `{
   // Tracker: ensure running total
   // doesn't exceed credit limit
@@ -84,13 +73,9 @@ const PRIMITIVES = [
   },
   {
     id: "predicate",
+    tKey: "predicate" as const,
     icon: Shield,
-    title: "Acceptance Predicate",
-    subtitle: "Programmable trust rule",
     color: "orange",
-    description:
-      "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
-    properties: ["Arbitrary acceptance conditions", "Task hash verification", "Deadline enforcement", "Composable with Sigma proofs"],
     ergoScript: `{
   // Accept note only if:
   // 1. Task hash matches R4
@@ -105,17 +90,11 @@ const PRIMITIVES = [
 ]
 
 // ── Flows ───────────────────────────────────────────────────────────────────
-const FLOWS = [
+const FLOW_DATA = [
   {
     id: "api-call",
-    title: "Flow A: Agent buys API call",
-    description: "One call. One proof. No persistent account.",
-    steps: [
-      { label: "Agent creates note", detail: "0.001 ERG face value, provider address in R4" },
-      { label: "Provider checks predicate", detail: "Verifies note value, reserve backing, deadline" },
-      { label: "Provider delivers response", detail: "Returns API result, marks note as spent" },
-      { label: "Settlement", detail: "Note burned, ERG released from reserve to provider" },
-    ],
+    tKey: "apiCall" as const,
+    stepCount: 4,
     code: `// Fleet SDK: create a note for API payment
 import { TransactionBuilder, OutputBuilder, SAFE_MIN_BOX_VALUE } from "@fleet-sdk/core"
 
@@ -138,14 +117,8 @@ const tx = new TransactionBuilder(currentHeight)
   },
   {
     id: "credit",
-    title: "Flow B: Agent pays on credit",
-    description: "Reserve deployed. Notes issued. Tracker monitors.",
-    steps: [
-      { label: "Deploy reserve", detail: "Lock ERG in reserve contract with credit limit" },
-      { label: "Issue notes", detail: "Create notes against reserve up to credit limit" },
-      { label: "Agent spends notes", detail: "Notes transferred to providers, tracker updated" },
-      { label: "Auto-settlement", detail: "When threshold hit, reserve settles outstanding notes" },
-    ],
+    tKey: "credit" as const,
+    stepCount: 4,
     code: `// Deploy a reserve with 10 ERG, 100 ERG credit limit
 const reserveBox = new OutputBuilder(
   10_000_000_000n, // 10 ERG collateral
@@ -169,14 +142,8 @@ const noteBox = new OutputBuilder(
   },
   {
     id: "community",
-    title: "Flow C: Community reserve + tracker",
-    description: "A local marketplace, a compute co-op, an agent network.",
-    steps: [
-      { label: "Community deploys reserve", detail: "ERG pooled by community members" },
-      { label: "Issue community notes", detail: "Members receive notes proportional to contribution" },
-      { label: "Local commerce", detail: "Notes accepted within community, predicates define rules" },
-      { label: "Redemption", detail: "Members redeem notes for ERG from reserve anytime" },
-    ],
+    tKey: "community" as const,
+    stepCount: 4,
     code: `// Community reserve: multiple funders
 const communityReserve = new OutputBuilder(
   TOTAL_POOLED_ERG,
@@ -203,7 +170,7 @@ const TOOLS = [
   {
     name: "Fleet SDK",
     lang: "TypeScript / JS",
-    desc: "Build transactions in your browser or Node.js. Best starting point for agent payments.",
+    tKey: "fleetSdk" as const,
     url: "https://fleet-sdk.github.io/docs/",
     github: "https://github.com/fleet-sdk/fleet",
     recommended: true,
@@ -211,7 +178,7 @@ const TOOLS = [
   {
     name: "sigma-rust",
     lang: "Rust",
-    desc: "High-performance signing and serialization. Ideal for production agent infrastructure.",
+    tKey: "sigmaRust" as const,
     url: "https://github.com/ergoplatform/sigma-rust",
     github: "https://github.com/ergoplatform/sigma-rust",
     recommended: false,
@@ -219,7 +186,7 @@ const TOOLS = [
   {
     name: "AppKit",
     lang: "JVM (Scala / Java)",
-    desc: "Full-featured SDK for backend services, bots, and server-side agents.",
+    tKey: "appKit" as const,
     url: "https://github.com/ergoplatform/ergo-appkit",
     github: "https://github.com/ergoplatform/ergo-appkit",
     recommended: false,
@@ -227,7 +194,7 @@ const TOOLS = [
   {
     name: "Ergo Node API",
     lang: "REST / OpenAPI",
-    desc: "Direct access to the node. Submit transactions, query UTXOs, watch addresses.",
+    tKey: "ergoNodeApi" as const,
     url: "https://api.ergoplatform.com/api/v1/docs/",
     github: "https://github.com/ergoplatform/ergo",
     recommended: false,
@@ -236,14 +203,14 @@ const TOOLS = [
 
 // ── What's live today ────────────────────────────────────────────────────────
 const STATUS_ITEMS = [
-  { label: "Ergo testnet faucet", status: "live", url: "https://testnet.ergofaucet.org/" },
-  { label: "Fleet SDK (TypeScript)", status: "live", url: "https://fleet-sdk.github.io/docs/" },
-  { label: "AppKit (JVM)", status: "live", url: "https://github.com/ergoplatform/ergo-appkit" },
-  { label: "sigma-rust", status: "live", url: "https://github.com/ergoplatform/sigma-rust" },
-  { label: "ChainCash server (notes + reserves)", status: "live", url: "https://github.com/kushti/chaincash" },
-  { label: "Ergo Node REST API", status: "live", url: "https://api.ergoplatform.com/api/v1/docs/" },
-  { label: "agent-economy-starter repo", status: "soon", url: "#" },
-  { label: "Agent identity layer", status: "open", url: "#" },
+  { tKey: "ergoTestnetFaucet" as const, status: "live", url: "https://testnet.ergofaucet.org/" },
+  { tKey: "fleetSdk" as const, status: "live", url: "https://fleet-sdk.github.io/docs/" },
+  { tKey: "appKit" as const, status: "live", url: "https://github.com/ergoplatform/ergo-appkit" },
+  { tKey: "sigmaRust" as const, status: "live", url: "https://github.com/ergoplatform/sigma-rust" },
+  { tKey: "chainCash" as const, status: "live", url: "https://github.com/kushti/chaincash" },
+  { tKey: "ergoNodeApi" as const, status: "live", url: "https://api.ergoplatform.com/api/v1/docs/" },
+  { tKey: "starterRepo" as const, status: "soon", url: "#" },
+  { tKey: "identityLayer" as const, status: "open", url: "#" },
 ]
 
 const fadeUp = {
@@ -256,6 +223,7 @@ const fadeUp = {
 }
 
 export function AgentPaymentsClient() {
+  const t = useTranslations('buildPage')
   return (
     <BackgroundWrapper>
       <main className="min-h-screen bg-black text-white">
@@ -267,8 +235,8 @@ export function AgentPaymentsClient() {
 
             <Breadcrumbs
               items={[
-                { name: "Agent Economy", href: "/agent-economy" },
-                { name: "Agent Payments", href: "/build/agent-payments" },
+                { name: t('breadcrumbs.agentEconomy'), href: "/agent-economy" },
+                { name: t('breadcrumbs.agentPayments'), href: "/build/agent-payments" },
               ]}
               className="mb-10 opacity-70"
             />
@@ -277,7 +245,7 @@ export function AgentPaymentsClient() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-8">
                 <Terminal className="w-3.5 h-3.5 text-orange-400" />
                 <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                  Technical Architecture
+                  {t('hero.tag')}
                 </span>
               </div>
 
@@ -289,8 +257,8 @@ export function AgentPaymentsClient() {
                   lineHeight: 1.0,
                 }}
               >
-                Agent Payment Stack:{" "}
-                <span style={{ color: BRAND }}>Reference Architecture</span>
+                {t('hero.titleStart')}
+                <span style={{ color: BRAND }}>{t('hero.titleHighlight')}</span>
               </h1>
 
               <p
@@ -301,8 +269,7 @@ export function AgentPaymentsClient() {
                   maxWidth: "60ch",
                 }}
               >
-                Four on-chain primitives. Three composable flows. Everything you need to build
-                agent-to-agent payments on Ergo — from a single API call to a full community currency.
+                {t('hero.description')}
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -314,7 +281,7 @@ export function AgentPaymentsClient() {
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
                   >
                     <Github className="w-4 h-4" />
-                    <span>ChainCash repo</span>
+                    <span>{t('hero.ctaChainCash')}</span>
                   </a>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
@@ -325,7 +292,7 @@ export function AgentPaymentsClient() {
                     className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
                     <Github className="w-4 h-4" />
-                    <span>Code examples</span>
+                    <span>{t('hero.ctaCodeExamples')}</span>
                   </a>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
@@ -333,7 +300,7 @@ export function AgentPaymentsClient() {
                     href="/demos"
                     className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
-                    <span>Live demos</span>
+                    <span>{t('hero.ctaLiveDemos')}</span>
                     <ChevronRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -347,7 +314,7 @@ export function AgentPaymentsClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14">
               <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                The Four Primitives
+                {t('primitives.sectionLabel')}
               </p>
               <h2
                 className="font-extrabold tracking-tight text-white"
@@ -357,7 +324,7 @@ export function AgentPaymentsClient() {
                   lineHeight: 1.1,
                 }}
               >
-                Reserve · Note · Tracker · Predicate
+                {t('primitives.heading')}
               </h2>
             </div>
 
@@ -380,16 +347,16 @@ export function AgentPaymentsClient() {
                           <p.icon className="w-5 h-5 text-orange-400" />
                         </div>
                         <div>
-                          <h3 className="font-bold text-white text-lg leading-tight">{p.title}</h3>
-                          <p className="text-orange-400/70 font-mono text-xs">{p.subtitle}</p>
+                          <h3 className="font-bold text-white text-lg leading-tight">{t(`primitives.${p.tKey}.title`)}</h3>
+                          <p className="text-orange-400/70 font-mono text-xs">{t(`primitives.${p.tKey}.subtitle`)}</p>
                         </div>
                       </div>
 
-                      <p className="text-neutral-400 text-sm leading-relaxed mb-5">{p.description}</p>
+                      <p className="text-neutral-400 text-sm leading-relaxed mb-5">{t(`primitives.${p.tKey}.description`)}</p>
 
                       {/* Properties */}
                       <ul className="space-y-1.5 mb-5">
-                        {p.properties.map((prop) => (
+                        {(t.raw(`primitives.${p.tKey}.properties`) as string[]).map((prop) => (
                           <li key={prop} className="flex items-center gap-2 text-xs text-neutral-300">
                             <CheckCircle className="w-3.5 h-3.5 text-orange-400 flex-shrink-0" />
                             {prop}
@@ -420,7 +387,7 @@ export function AgentPaymentsClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14">
               <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                Sample Flows
+                {t('flows.sectionLabel')}
               </p>
               <h2
                 className="font-extrabold tracking-tight text-white"
@@ -430,12 +397,12 @@ export function AgentPaymentsClient() {
                   lineHeight: 1.1,
                 }}
               >
-                Three composable flows
+                {t('flows.heading')}
               </h2>
             </div>
 
             <div className="space-y-8">
-              {FLOWS.map((flow, fi) => (
+              {FLOW_DATA.map((flow, fi) => (
                 <motion.div
                   key={flow.id}
                   id={flow.id}
@@ -455,12 +422,12 @@ export function AgentPaymentsClient() {
                             className="font-bold text-white mb-2"
                             style={{ fontSize: "clamp(16px, 2vw, 20px)" }}
                           >
-                            {flow.title}
+                            {t(`flows.${flow.tKey}.title`)}
                           </h3>
-                          <p className="text-neutral-400 text-sm mb-7">{flow.description}</p>
+                          <p className="text-neutral-400 text-sm mb-7">{t(`flows.${flow.tKey}.description`)}</p>
 
                           <ol className="space-y-4">
-                            {flow.steps.map((step, si) => (
+                            {(t.raw(`flows.${flow.tKey}.steps`) as { label: string; detail: string }[]).map((step, si) => (
                               <li key={si} className="flex items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                                   <span className="text-orange-400 font-mono text-xs font-bold">
@@ -480,7 +447,7 @@ export function AgentPaymentsClient() {
                               href="/demos"
                               className="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 font-mono text-xs transition-colors group"
                             >
-                              <span>See live demo</span>
+                              <span>{t('flows.seeLiveDemo')}</span>
                               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                             </Link>
                           </div>
@@ -511,7 +478,7 @@ export function AgentPaymentsClient() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14">
               <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                SDKs & Tools
+                {t('sdks.sectionLabel')}
               </p>
               <h2
                 className="font-extrabold tracking-tight text-white"
@@ -521,7 +488,7 @@ export function AgentPaymentsClient() {
                   lineHeight: 1.1,
                 }}
               >
-                Start building today
+                {t('sdks.heading')}
               </h2>
             </div>
 
@@ -550,14 +517,14 @@ export function AgentPaymentsClient() {
                           </div>
                           {tool.recommended && (
                             <span className="text-xs font-mono text-orange-400 border border-orange-500/30 bg-orange-500/10 rounded-full px-2 py-0.5">
-                              recommended
+                              {t('sdks.recommended')}
                             </span>
                           )}
                         </div>
-                        <p className="text-neutral-400 text-sm leading-relaxed mb-4">{tool.desc}</p>
+                        <p className="text-neutral-400 text-sm leading-relaxed mb-4">{t(`sdks.${tool.tKey}.desc`)}</p>
                         <div className="flex items-center gap-3">
                           <span className="inline-flex items-center gap-1 text-neutral-500 group-hover:text-orange-400 font-mono text-xs transition-colors">
-                            <span>Docs</span>
+                            <span>{t('sdks.docs')}</span>
                             <ExternalLink className="w-3 h-3" />
                           </span>
                           <a
@@ -587,7 +554,7 @@ export function AgentPaymentsClient() {
 
               <div>
                 <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                  What&apos;s live
+                  {t('status.sectionLabel')}
                 </p>
                 <h2
                   className="font-extrabold tracking-tight text-white mb-6"
@@ -597,25 +564,24 @@ export function AgentPaymentsClient() {
                     lineHeight: 1.1,
                   }}
                 >
-                  Stack status
+                  {t('status.heading')}
                 </h2>
                 <p className="text-neutral-400 text-sm leading-relaxed mb-8" style={{ maxWidth: "48ch" }}>
-                  Five layers are live. Two are open problems. Join the conversation on GitHub —
-                  these are the most interesting unsolved problems in agent money.
+                  {t('status.description')}
                 </p>
 
                 <div className="flex flex-col gap-2">
                   <div className="flex items-center gap-3 text-sm">
                     <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" />
-                    <span className="text-neutral-300">Live on mainnet / testnet</span>
+                    <span className="text-neutral-300">{t('status.legendLive')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <Circle className="w-4 h-4 text-yellow-500/70 flex-shrink-0" />
-                    <span className="text-neutral-300">Coming soon</span>
+                    <span className="text-neutral-300">{t('status.legendSoon')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <GitBranch className="w-4 h-4 text-neutral-500 flex-shrink-0" />
-                    <span className="text-neutral-300">Open research problem</span>
+                    <span className="text-neutral-300">{t('status.legendOpen')}</span>
                   </div>
                 </div>
               </div>
@@ -623,7 +589,7 @@ export function AgentPaymentsClient() {
               <div className="space-y-2">
                 {STATUS_ITEMS.map((item, i) => (
                   <motion.div
-                    key={item.label}
+                    key={item.tKey}
                     custom={i}
                     initial="hidden"
                     whileInView="visible"
@@ -639,7 +605,7 @@ export function AgentPaymentsClient() {
                       }
                     `}
                   >
-                    <span className="text-white text-sm font-medium">{item.label}</span>
+                    <span className="text-white text-sm font-medium">{t(`status.${item.tKey}`)}</span>
                     <div className="flex items-center gap-2">
                       {item.status === "live" && item.url !== "#" ? (
                         <a
@@ -649,18 +615,18 @@ export function AgentPaymentsClient() {
                           className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 font-mono text-xs transition-colors"
                         >
                           <CheckCircle className="w-3.5 h-3.5" />
-                          <span>live</span>
+                          <span>{t('status.live')}</span>
                           <ExternalLink className="w-3 h-3" />
                         </a>
                       ) : item.status === "live" ? (
                         <span className="inline-flex items-center gap-1 text-orange-400 font-mono text-xs">
                           <CheckCircle className="w-3.5 h-3.5" />
-                          <span>live</span>
+                          <span>{t('status.live')}</span>
                         </span>
                       ) : item.status === "soon" ? (
-                        <span className="text-yellow-500/70 font-mono text-xs">soon</span>
+                        <span className="text-yellow-500/70 font-mono text-xs">{t('status.soon')}</span>
                       ) : (
-                        <span className="text-neutral-500 font-mono text-xs">open</span>
+                        <span className="text-neutral-500 font-mono text-xs">{t('status.open')}</span>
                       )}
                     </div>
                   </motion.div>
@@ -678,27 +644,24 @@ export function AgentPaymentsClient() {
               {[
                 {
                   icon: BookOpen,
-                  title: "Ergo Docs",
-                  desc: "Official developer documentation",
+                  tKey: "ergoDocs" as const,
                   href: "https://docs.ergoplatform.com/",
                   external: true,
                 },
                 {
                   icon: Layers,
-                  title: "Dev Patterns",
-                  desc: "Copy-paste ErgoScript blueprints",
+                  tKey: "devPatterns" as const,
                   href: "/patterns",
                   external: false,
                 },
                 {
                   icon: Coins,
-                  title: "Babel Fees",
-                  desc: "Pay fees in any token — key for agents",
+                  tKey: "babelFees" as const,
                   href: "/technology/babel-fees",
                   external: false,
                 },
               ].map((link, i) => (
-                <motion.div key={link.title} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+                <motion.div key={link.tKey} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
                   {link.external ? (
                     <a href={link.href} target="_blank" rel="noopener noreferrer" className="group block focus:outline-none rounded-2xl">
                       <Card className="bg-black/80 border border-white/8 rounded-2xl group-hover:border-orange-500/30 group-hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
@@ -707,8 +670,8 @@ export function AgentPaymentsClient() {
                             <link.icon className="w-4 h-4 text-orange-400" />
                           </div>
                           <div>
-                            <p className="font-semibold text-white text-sm group-hover:text-orange-100 transition-colors">{link.title}</p>
-                            <p className="text-neutral-500 text-xs">{link.desc}</p>
+                            <p className="font-semibold text-white text-sm group-hover:text-orange-100 transition-colors">{t(`links.${link.tKey}.title`)}</p>
+                            <p className="text-neutral-500 text-xs">{t(`links.${link.tKey}.desc`)}</p>
                           </div>
                           <ExternalLink className="w-3.5 h-3.5 text-neutral-600 group-hover:text-orange-400 ml-auto transition-colors" />
                         </CardContent>
@@ -722,8 +685,8 @@ export function AgentPaymentsClient() {
                             <link.icon className="w-4 h-4 text-orange-400" />
                           </div>
                           <div>
-                            <p className="font-semibold text-white text-sm group-hover:text-orange-100 transition-colors">{link.title}</p>
-                            <p className="text-neutral-500 text-xs">{link.desc}</p>
+                            <p className="font-semibold text-white text-sm group-hover:text-orange-100 transition-colors">{t(`links.${link.tKey}.title`)}</p>
+                            <p className="text-neutral-500 text-xs">{t(`links.${link.tKey}.desc`)}</p>
                           </div>
                           <ChevronRight className="w-4 h-4 text-neutral-600 group-hover:text-orange-400 ml-auto transition-colors" />
                         </CardContent>
@@ -738,8 +701,8 @@ export function AgentPaymentsClient() {
 
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
         <FinalCTASimple
-          title="Building agents? Talk to us."
-          description="Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+          title={t('cta.title')}
+          description={t('cta.description')}
         />
 
       </main>

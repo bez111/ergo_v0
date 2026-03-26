@@ -1000,6 +1000,20 @@
       "open": "Open",
       "close": "Close"
     },
-    "legend": "Legend:"
+    "legend": "Legend:",
+    "categories": {
+      "DEFI": "DEFI",
+      "INFRASTRUCTURE": "INFRASTRUCTURE",
+      "ORACLES": "ORACLES",
+      "PRIVACY": "PRIVACY",
+      "NFT": "NFT",
+      "WALLETS": "WALLETS",
+      "DAO": "DAO",
+      "TOOLS": "TOOLS"
+    },
+    "download": {
+      "png": "PNG",
+      "svg": "SVG"
+    }
   }
 }

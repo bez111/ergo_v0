@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { useTranslations } from "next-intl"
 
 import { ExternalLink, ZoomIn, ZoomOut, RefreshCw, Plus, Star, Download } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -85,6 +86,7 @@ function hexPoints(cx: number, cy: number, r: number) {
 }
 
 function MapClient() {
+  const t = useTranslations('mapClient')
   const [query, setQuery] = useState("")
   const [activeCats, setActiveCats] = useState<string[]>([...categories])
   const [scale, setScale] = useState(1)
@@ -255,23 +257,23 @@ function MapClient() {
         <div className="pt-6 pb-6">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">Ecosystem Map</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">{t('hero.title')}</h1>
               <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
-                Visual map of Ergo projects, tools and teams. Explore clusters, filter by category, and discover what’s being built.
+                {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-3">
-                <div className="px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/50 text-neutral-300"><span className="text-white font-semibold mr-1">{totalProjects}</span>projects</div>
-                <div className="px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/50 text-neutral-300"><span className="text-white font-semibold mr-1">{totalCategories}</span>categories</div>
-                <div className="px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/50 text-neutral-300"><span className="text-white font-semibold mr-1">{trendingCount}</span>trending</div>
+                <div className="px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/50 text-neutral-300"><span className="text-white font-semibold mr-1">{totalProjects}</span>{t('hero.projects')}</div>
+                <div className="px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/50 text-neutral-300"><span className="text-white font-semibold mr-1">{totalCategories}</span>{t('hero.categories')}</div>
+                <div className="px-4 py-2 rounded-lg border border-neutral-700 bg-neutral-900/50 text-neutral-300"><span className="text-white font-semibold mr-1">{trendingCount}</span>{t('hero.trending')}</div>
               </div>
             </div>
             <div className="flex items-center lg:justify-end gap-2">
               <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black">
-                <Link href="/ecosystem" className="inline-flex items-center gap-2">Browse Ecosystem</Link>
+                <Link href="/ecosystem" className="inline-flex items-center gap-2">{t('buttons.browseEcosystem')}</Link>
               </Button>
               <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
                 <Link href="https://forms.gle/placeholder" target="_blank" className="inline-flex items-center gap-2">
-                  <Plus className="w-4 h-4" /> Suggest a Project
+                  <Plus className="w-4 h-4" /> {t('buttons.suggestProject')}
                 </Link>
               </Button>
             </div>
@@ -281,14 +283,14 @@ function MapClient() {
         {/* Controls */}
         <div className="flex flex-col md:flex-row gap-3 items-center mb-4">
           <div className="flex-1 w-full md:w-auto">
-            <Input placeholder="Search projects..." value={query} onChange={(e) => setQuery(e.target.value)} className="bg-neutral-900/80 border-neutral-700 h-11" />
+            <Input placeholder={t('controls.searchPlaceholder')} value={query} onChange={(e) => setQuery(e.target.value)} className="bg-neutral-900/80 border-neutral-700 h-11" />
           </div>
           <div className="flex gap-2">
             <Button variant="outline" onClick={() => setScale((s) => Math.min(2, s + 0.1))} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60"><ZoomIn className="w-4 h-4" /></Button>
             <Button variant="outline" onClick={() => setScale((s) => Math.max(0.5, s - 0.1))} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60"><ZoomOut className="w-4 h-4" /></Button>
             <Button variant="outline" onClick={() => { setScale(1); setOffset({ x: 0, y: 0 }) }} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60"><RefreshCw className="w-4 h-4" /></Button>
             <Button variant="outline" onClick={() => setShowFeatured((v) => !v)} className={`border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 ${showFeatured ? "border-orange-500/50 text-orange-400" : ""}`}>
-              <Star className="w-4 h-4 mr-1" /> Trending
+              <Star className="w-4 h-4 mr-1" /> {t('controls.trendingLabel')}
             </Button>
             <Button variant="outline" onClick={downloadPNG} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60"><Download className="w-4 h-4 mr-1" /> PNG</Button>
             <Button variant="outline" onClick={downloadSVG} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">SVG</Button>
@@ -298,14 +300,14 @@ function MapClient() {
         {/* Jump to cluster (navigation only) */}
         <div className="mb-2 overflow-x-auto -mx-1 px-1">
           <div className="flex flex-nowrap md:flex-wrap gap-1 items-center text-xs text-neutral-400 whitespace-nowrap">
-            <span className="mr-1">Jump to:</span>
+            <span className="mr-1">{t('navigation.jumpTo')}</span>
             {categories.map((c) => (
               <button
                 key={`jump-${c}`}
                 onClick={() => focusCluster(c)}
                 className={`inline-block px-3 py-1 rounded border transition-colors font-medium ${jumpActive === c ? "border-orange-500/70 text-orange-400 bg-orange-500/10" : "border-neutral-700 text-neutral-300 hover:bg-neutral-900/70"}`}
               >
-                {c}
+                {t(`categories.${c}` as 'categories.DEFI')}
               </button>
             ))}
           </div>
@@ -316,7 +318,7 @@ function MapClient() {
 
         {/* Category filters (show/hide) */}
         <div className="flex flex-wrap gap-2 mb-8 items-center">
-          <span className="text-sm text-neutral-400 mr-2 font-semibold">Filter by category:</span>
+          <span className="text-sm text-neutral-400 mr-2 font-semibold">{t('navigation.filterByCategory')}</span>
           {categories.map((c) => {
             const active = activeCats.includes(c)
             return (
@@ -326,7 +328,7 @@ function MapClient() {
                 className={`rounded-full px-4 py-2 border transition-colors font-semibold ${active ? "bg-orange-500/10 border-orange-500/60 text-orange-400 shadow-md" : "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60"}`}
                 style={{ boxShadow: active ? `0 0 0 2px ${catColor[c]}33` : undefined }}
               >
-                {c}
+                {t(`categories.${c}` as 'categories.DEFI')}
               </button>
             )
           })}
@@ -336,7 +338,7 @@ function MapClient() {
               onClick={() => setActiveCats([...categories])}
               className="border-orange-500/40 text-orange-400 hover:bg-orange-500/10 ml-2"
             >
-              Clear
+              {t('navigation.clear')}
             </Button>
           )}
         </div>
@@ -355,7 +357,7 @@ function MapClient() {
             >
               {nodes.length === 0 ? (
                 <div className="absolute inset-0 flex items-center justify-center text-neutral-400">
-                  No projects found
+                  {t('map.noProjectsFound')}
                 </div>
               ) : (
                 <svg ref={svgRef} width="100%" height="100%" viewBox="0 0 1600 1100" className="block">
@@ -382,7 +384,7 @@ function MapClient() {
                       <g key={c.cat}>
                         <polygon points={hexPoints(c.x, c.y, 30)} fill="#0a0a0a" stroke={catColor[c.cat]} strokeOpacity={0.6} strokeWidth={2} />
                         <text x={c.x} y={c.y + 4} textAnchor="middle" fontSize={12} fill="#9CA3AF">
-                          {c.cat}
+                          {t(`categories.${c.cat}` as 'categories.DEFI')}
                         </text>
                       </g>
                     ))}
@@ -432,13 +434,13 @@ function MapClient() {
                                   {n.name}
                                   {n.featured && <Star className="w-3 h-3 text-orange-400" />}
                                 </div>
-                                <div className="text-[11px] text-neutral-300 mb-1">{n.category}</div>
+                                <div className="text-[11px] text-neutral-300 mb-1">{t(`categories.${n.category}` as 'categories.DEFI')}</div>
                                 <a href={n.url} target="_blank" rel="noreferrer" className="text-orange-400 underline inline-flex items-center gap-1">
-                                  Open <ExternalLink className="w-3 h-3" />
+                                  {t('map.open')} <ExternalLink className="w-3 h-3" />
                                 </a>
                                 {isTouch && (
                                   <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); setHovered(null) }} className="ml-2 text-[11px] text-neutral-400 underline">
-                                    Close
+                                    {t('map.close')}
                                   </button>
                                 )}
                               </div>
@@ -456,11 +458,11 @@ function MapClient() {
 
         {/* Legend */}
         <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-neutral-400">
-          <span>Legend:</span>
+          <span>{t('legend')}</span>
           {categories.map((c) => (
             <span key={c} className="inline-flex items-center gap-2">
               <span className="w-3 h-3 rounded-full" style={{ backgroundColor: catColor[c] }} />
-              {c}
+              {t(`categories.${c}` as 'categories.DEFI')}
             </span>
           ))}
         </div>

@@ -20,6 +20,7 @@ import {
   Filter
 } from "lucide-react";
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { TopicHub } from "@/data/topics";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Card, CardContent } from "@/components/ui/card";
@@ -78,17 +79,18 @@ const colorMap: Record<string, { bg: string; border: string; text: string; gradi
 };
 
 export function TopicsHubClient({ topics }: Props) {
+  const t = useTranslations('topicsHub');
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   // Filter categories derived from topic colors/types
   const filterCategories = [
-    { key: "orange", label: "DeFi", icon: Wallet },
-    { key: "purple", label: "Privacy", icon: Shield },
-    { key: "amber", label: "Mining", icon: Pickaxe },
-    { key: "blue", label: "Technology", icon: Code },
-    { key: "rose", label: "Philosophy", icon: Lightbulb },
-    { key: "green", label: "Sustainability", icon: Leaf },
+    { key: "orange", label: t('filters.defi'), icon: Wallet },
+    { key: "purple", label: t('filters.privacy'), icon: Shield },
+    { key: "amber", label: t('filters.mining'), icon: Pickaxe },
+    { key: "blue", label: t('filters.technology'), icon: Code },
+    { key: "rose", label: t('filters.philosophy'), icon: Lightbulb },
+    { key: "green", label: t('filters.sustainability'), icon: Leaf },
   ];
 
   // Filtered topics based on search and filter
@@ -127,22 +129,21 @@ export function TopicsHubClient({ topics }: Props) {
             className="text-center mb-10"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Explore Ergo by <span className="text-orange-400">Topic</span>
+              {t('hero.title')} <span className="text-orange-400">{t('hero.titleHighlight')}</span>
             </h1>
-            
+
             <p className="text-xl text-neutral-300 max-w-3xl mx-auto mb-6">
-              Deep dives into every major part of Ergo. Each topic hub brings together guides, docs,
-              infographics, glossary terms, and practical playbooks.
+              {t('hero.subtitle')}
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center mt-4">
               <Badge variant="outline" className="border-white/20 text-neutral-300">
                 <BookOpen className="w-3 h-3 mr-1" />
-                {topics.length} Topic Hubs
+                {topics.length} {t('hero.topicHubs')}
               </Badge>
               <Badge variant="outline" className="border-white/20 text-neutral-300">
                 <Sparkles className="w-3 h-3 mr-1" />
-                Comprehensive Coverage
+                {t('hero.comprehensiveCoverage')}
               </Badge>
             </div>
           </motion.header>
@@ -159,17 +160,17 @@ export function TopicsHubClient({ topics }: Props) {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500" />
               <input
                 type="text"
-                placeholder="Search topics by name, keyword, or concept..."
+                placeholder={t('search.placeholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-10 py-3 bg-black/60 border border-white/20 rounded-xl text-white placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
-                aria-label="Search topics"
+                aria-label={t('search.ariaLabel')}
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
                   className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-neutral-500 hover:text-white transition-colors"
-                  aria-label="Clear search"
+                  aria-label={t('search.clearLabel')}
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -187,7 +188,7 @@ export function TopicsHubClient({ topics }: Props) {
                 }`}
               >
                 <Filter className="w-3.5 h-3.5" />
-                All
+                {t('filters.all')}
               </button>
               {filterCategories.map(({ key, label, icon: Icon }) => (
                 <button
@@ -212,8 +213,10 @@ export function TopicsHubClient({ topics }: Props) {
                 animate={{ opacity: 1 }}
                 className="text-center text-sm text-neutral-500 mt-4"
               >
-                Showing {filteredTopics.length} of {topics.length} topics
-                {searchQuery && ` for "${searchQuery}"`}
+                {searchQuery
+                  ? t('search.showingFor', { filtered: String(filteredTopics.length), total: String(topics.length), query: searchQuery })
+                  : t('search.showing', { filtered: String(filteredTopics.length), total: String(topics.length) })
+                }
               </motion.p>
             )}
           </motion.section>
@@ -265,12 +268,12 @@ export function TopicsHubClient({ topics }: Props) {
                             {/* Stats */}
                             <div className="flex items-center justify-between pt-4 border-t border-white/10">
                               <div className="flex flex-wrap gap-3 text-xs text-neutral-500">
-                                <span>{topic.keyTerms.length} key terms</span>
-                                <span>{resourceCount} guides &amp; docs</span>
+                                <span>{topic.keyTerms.length} {t('card.keyTerms')}</span>
+                                <span>{resourceCount} {t('card.guidesAndDocs')}</span>
                               </div>
                               <div className="flex items-center gap-2 text-xs text-neutral-400">
                                 <span className="group-hover:text-neutral-200 transition-colors">
-                                  Open hub
+                                  {t('card.openHub')}
                                 </span>
                                 <ArrowRight className={`w-5 h-5 ${colors.text} group-hover:translate-x-1 transition-transform`} />
                               </div>
@@ -292,9 +295,9 @@ export function TopicsHubClient({ topics }: Props) {
                 className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-xl font-semibold text-white mb-2">No topics found</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{t('empty.title')}</h3>
                 <p className="text-neutral-400 mb-6">
-                  Try adjusting your search or filter criteria
+                  {t('empty.description')}
                 </p>
                 <button
                   onClick={() => {
@@ -303,7 +306,7 @@ export function TopicsHubClient({ topics }: Props) {
                   }}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-black rounded-xl transition-colors"
                 >
-                  Clear filters
+                  {t('empty.clearFilters')}
                 </button>
               </motion.div>
             )}
@@ -319,24 +322,24 @@ export function TopicsHubClient({ topics }: Props) {
             <Card className="bg-black/60 border border-white/10 rounded-2xl">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  Looking for something specific?
+                  {t('cta.title')}
                 </h3>
                 <p className="text-neutral-400 mb-6 max-w-md mx-auto">
-                  Try our Q&A hub for quick answers or browse the glossary for term definitions.
+                  {t('cta.description')}
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  <Link 
-                    href="/questions" 
+                  <Link
+                    href="/questions"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors"
                   >
-                    Browse Q&A
+                    {t('cta.browseQA')}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
-                  <Link 
-                    href="/learn/glossary" 
+                  <Link
+                    href="/learn/glossary"
                     className="inline-flex items-center gap-2 px-6 py-3 border border-white/20 text-white hover:bg-white/10 rounded-xl transition-colors"
                   >
-                    View Glossary
+                    {t('cta.viewGlossary')}
                   </Link>
                 </div>
               </CardContent>

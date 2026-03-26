@@ -36,8 +36,8 @@ export const localeConfig = {
 // Load and merge all message files from a locale folder
 async function loadMessages(locale: string): Promise<Record<string, unknown>> {
   const files = [
-    'agent-economy', 'common', 'demos', 'home', 'blog', 'community', 'compare', 'content-hubs',
-    'developers', 'ecosystem', 'events', 'faq', 'hodlers', 'infographics',
+    'agent-economy', 'build', 'common', 'demos', 'home', 'blog', 'community', 'compare', 'content-hubs',
+    'developers', 'ecosystem', 'ecosystem-projects', 'events', 'faq', 'hodlers', 'infographics',
     'learn', 'manifesto', 'miners', 'misc', 'newsletter', 'patterns', 'seo', 'start',
     'technology', 'use', 'wallet'
   ];

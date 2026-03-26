@@ -3,6 +3,7 @@
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 
 import { useState, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import {
@@ -48,17 +49,6 @@ const difficultyColors: Record<string, string> = {
   advanced: "bg-red-500/20 text-red-400 border-red-500/30",
 };
 
-const clusterLabels: Record<string, string> = {
-  defi: "DeFi",
-  privacy: "Privacy",
-  mining: "Mining",
-  sustainability: "Sustainability",
-  "vc-alternative": "VC Alternative",
-  "global-settlement": "Global Settlement",
-  developer: "Developer",
-  investor: "Investor",
-};
-
 // Logical order from simple onboarding to advanced building
 const playbookOrder: Record<string, number> = {
   "first-transaction-10-minutes": 1,
@@ -82,6 +72,7 @@ const difficultyRank: Record<string, number> = {
 };
 
 export function PlaybooksHubClient({ playbooks, clusters }: Props) {
+  const t = useTranslations('playbooksPage');
   const [selectedCluster, setSelectedCluster] = useState<string>("all");
 
   const filteredPlaybooks = useMemo(() => {
@@ -119,15 +110,13 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                 {/* Left column: text + stats */}
                 <div>
                   <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">
-                    Ergo Playbooks
+                    {t('hero.title')}
                   </h1>
                   <p className="text-lg md:text-xl text-neutral-300 mb-4 max-w-2xl">
-                    Curated guides for every use case. Each playbook combines infographics,
-                    articles, and actionable steps.
+                    {t('hero.subtitle')}
                   </p>
                   <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Start from your first Ergo transaction and move step-by-step towards
-                    mining, DeFi, and building your own applications.
+                    {t('hero.description')}
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -136,7 +125,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                       className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50"
                     >
                       <Link href="/playbooks/first-transaction-10-minutes">
-                        Start with first transaction
+                        {t('hero.startButton')}
                       </Link>
                     </Button>
                     <Button
@@ -145,7 +134,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                       className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl"
                     >
                       <Link href="/questions">
-                        Browse Q&A
+                        {t('hero.browseQA')}
                       </Link>
                     </Button>
                   </div>
@@ -160,7 +149,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                 >
                   <div className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <h3 className="text-2xl font-bold mb-4 text-center text-white">
-                      Featured playbooks
+                      {t('hero.featuredTitle')}
                     </h3>
                             <div className="space-y-3">
                       {[
@@ -213,19 +202,19 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             className="pb-8"
           >
             <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-2" role="radiogroup" aria-label="Filter playbooks by category">
+              <div className="flex flex-wrap justify-center gap-2" role="radiogroup" aria-label={t('filters.ariaLabel')}>
                 <Button
                   variant={selectedCluster === "all" ? "default" : "outline"}
                   onClick={() => setSelectedCluster("all")}
-                  className={`min-h-[44px] px-4 py-2 text-sm ${selectedCluster === "all" 
-                    ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
+                  className={`min-h-[44px] px-4 py-2 text-sm ${selectedCluster === "all"
+                    ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500"
                     : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50 active:bg-orange-500/20"
                   }`}
                   role="radio"
                   aria-checked={selectedCluster === "all"}
-                  aria-label="Show all playbooks"
+                  aria-label={t('filters.showAll')}
                 >
-                  All
+                  {t('filters.all')}
                 </Button>
                 {clusters.map((cluster) => {
                   const Icon = iconMap[cluster.icon] || BookOpen;
@@ -286,7 +275,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                                 <div className="flex items-center gap-2 text-[10px] text-neutral-400">
                                   <span>{playbook.timeToComplete}</span>
                                   <span>·</span>
-                                  <span>{playbook.steps.length} steps</span>
+                                  <span>{playbook.steps.length} {t('card.steps')}</span>
                                 </div>
                               </div>
                             </div>
@@ -303,12 +292,12 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                                   variant="outline"
                                   className="text-[9px] px-1.5 py-0 border-white/15 text-neutral-400"
                                 >
-                                  {clusterLabels[playbook.cluster] || playbook.cluster}
+                                  {t(`clusters.${playbook.cluster}` as 'clusters.defi')}
                                 </Badge>
                                 <Badge
                                   className={`text-[9px] px-1.5 py-0 ${difficultyColors[playbook.difficulty]}`}
                                 >
-                                  {playbook.difficulty}
+                                  {t(`difficulty.${playbook.difficulty}` as 'difficulty.beginner')}
                                 </Badge>
                               </div>
                               <ArrowRight
@@ -327,7 +316,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
               {filteredPlaybooks.length === 0 && (
                 <div className="text-center py-12">
                   <BookOpen className="w-12 h-12 text-neutral-600 mx-auto mb-4" />
-                  <p className="text-neutral-400">No playbooks in this category yet.</p>
+                  <p className="text-neutral-400">{t('empty')}</p>
                 </div>
               )}
             </div>
@@ -347,10 +336,10 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                     <Bot className="w-5 h-5 text-orange-400" />
                   </div>
                   <div>
-                    <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-1">New</p>
-                    <h3 className="font-bold text-white text-base">Building for autonomous agents?</h3>
+                    <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-1">{t('agentBanner.badge')}</p>
+                    <h3 className="font-bold text-white text-base">{t('agentBanner.title')}</h3>
                     <p className="text-neutral-400 text-sm mt-1 max-w-xl">
-                      The "Build Agent Economy Apps" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet to mainnet.
+                      {t('agentBanner.description')}
                     </p>
                   </div>
                 </div>
@@ -358,7 +347,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                   href="/playbooks/build-agent-economy-apps"
                   className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm"
                 >
-                  Start Playbook
+                  {t('agentBanner.cta')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -375,23 +364,23 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             <div className="max-w-4xl mx-auto">
               <div className="text-center bg-black border border-white/10 rounded-3xl px-6 py-10 sm:px-10 shadow-xl shadow-black/40">
                 <h2 className="text-3xl font-bold text-white mb-4">
-                  Can't find what you're looking for?
+                  {t('cta.title')}
                 </h2>
                 <p className="text-neutral-400 mb-8">
-                  Explore our documentation, join the community, or suggest a new playbook.
+                  {t('cta.description')}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
                     href="/docs"
                     className="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-black font-semibold transition-colors"
                   >
-                    Browse Docs
+                    {t('cta.browseDocs')}
                   </Link>
                   <Link
                     href="/start/community"
                     className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20 transition-colors"
                   >
-                    Join Community
+                    {t('cta.joinCommunity')}
                   </Link>
                 </div>
               </div>

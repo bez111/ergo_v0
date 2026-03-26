@@ -506,12 +506,33 @@
       "topicHubs": "Topic Hubs",
       "comprehensiveCoverage": "Comprehensive Coverage"
     },
+    "search": {
+      "placeholder": "Search topics by name, keyword, or concept...",
+      "ariaLabel": "Search topics",
+      "clearLabel": "Clear search",
+      "showing": "Showing {filtered} of {total} topics",
+      "showingFor": "Showing {filtered} of {total} topics for \"{query}\""
+    },
+    "filters": {
+      "all": "All",
+      "defi": "DeFi",
+      "privacy": "Privacy",
+      "mining": "Mining",
+      "technology": "Technology",
+      "philosophy": "Philosophy",
+      "sustainability": "Sustainability"
+    },
     "card": {
       "keyTerms": "key terms",
       "guidesAndDocs": "guides & docs",
       "articles": "articles",
       "infographics": "infographics",
       "openHub": "Open hub"
+    },
+    "empty": {
+      "title": "No topics found",
+      "description": "Try adjusting your search or filter criteria",
+      "clearFilters": "Clear filters"
     },
     "cta": {
       "title": "Looking for something specific?",
@@ -629,6 +650,50 @@
       "breadcrumbs": {
         "playbooks": "Playbooks"
       }
+    },
+    "hero": {
+      "title": "Ergo Playbooks",
+      "subtitle": "Curated guides for every use case. Each playbook combines infographics, articles, and actionable steps.",
+      "description": "Start from your first Ergo transaction and move step-by-step towards mining, DeFi, and building your own applications.",
+      "startButton": "Start with first transaction",
+      "browseQA": "Browse Q&A",
+      "featuredTitle": "Featured playbooks"
+    },
+    "filters": {
+      "all": "All",
+      "ariaLabel": "Filter playbooks by category",
+      "showAll": "Show all playbooks"
+    },
+    "card": {
+      "steps": "steps"
+    },
+    "clusters": {
+      "defi": "DeFi",
+      "privacy": "Privacy",
+      "mining": "Mining",
+      "sustainability": "Sustainability",
+      "vc-alternative": "VC Alternative",
+      "global-settlement": "Global Settlement",
+      "developer": "Developer",
+      "investor": "Investor"
+    },
+    "difficulty": {
+      "beginner": "beginner",
+      "intermediate": "intermediate",
+      "advanced": "advanced"
+    },
+    "empty": "No playbooks in this category yet.",
+    "agentBanner": {
+      "badge": "New",
+      "title": "Building for autonomous agents?",
+      "description": "The \"Build Agent Economy Apps\" playbook covers Notes, Reserves, Acceptance Predicates, and Fleet SDK integration — from testnet to mainnet.",
+      "cta": "Start Playbook"
+    },
+    "cta": {
+      "title": "Can't find what you're looking for?",
+      "description": "Explore our documentation, join the community, or suggest a new playbook.",
+      "browseDocs": "Browse Docs",
+      "joinCommunity": "Join Community"
     }
   },
   "patternsPage": {

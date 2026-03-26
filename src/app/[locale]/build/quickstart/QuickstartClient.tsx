@@ -5,6 +5,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 import {
   Terminal,
   Copy,
@@ -93,47 +94,12 @@ const tx = new TransactionBuilder(await getCurrentHeight())
   .payMinFee()
   .build();`
 
-// ── Steps ─────────────────────────────────────────────────────────────────────
-const STEPS = [
-  {
-    number: "01",
-    title: "Install Fleet SDK",
-    time: "30 seconds",
-    icon: Package,
-    code: STEP_2_CODE,
-    language: "bash",
-    note: "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
-  },
-  {
-    number: "02",
-    title: "Create agent-pay.js",
-    time: "2 minutes",
-    icon: Code2,
-    code: STEP_3_CODE,
-    language: "javascript",
-    note: "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
-  },
-  {
-    number: "03",
-    title: "Run the script",
-    time: "10 seconds",
-    icon: Terminal,
-    code: STEP_4_CODE,
-    language: "bash",
-    note: "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
-  },
-  {
-    number: "04",
-    title: "Add a Note (agent payment)",
-    time: "5 minutes",
-    icon: Bot,
-    code: STEP_5_CODE,
-    language: "javascript",
-    note: "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
-  },
-]
+// ── Step icon map ────────────────────────────────────────────────────────────
+const STEP_ICONS = [Package, Code2, Terminal, Bot]
+const STEP_CODES = [STEP_2_CODE, STEP_3_CODE, STEP_4_CODE, STEP_5_CODE]
+const STEP_LANGUAGES = ["bash", "javascript", "bash", "javascript"]
 
-function CodeBlock({ code, language }: { code: string; language: string }) {
+function CodeBlock({ code, language, copiedLabel, copyLabel }: { code: string; language: string; copiedLabel: string; copyLabel: string }) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -153,12 +119,12 @@ function CodeBlock({ code, language }: { code: string; language: string }) {
           {copied ? (
             <>
               <CheckCircle className="w-3.5 h-3.5 text-green-400" />
-              <span className="text-green-400">Copied</span>
+              <span className="text-green-400">{copiedLabel}</span>
             </>
           ) : (
             <>
               <Copy className="w-3.5 h-3.5" />
-              Copy
+              {copyLabel}
             </>
           )}
         </button>
@@ -171,12 +137,35 @@ function CodeBlock({ code, language }: { code: string; language: string }) {
 }
 
 export function QuickstartClient() {
+  const t = useTranslations('quickstartPage')
+
+  const STEPS = [
+    { number: "01", titleKey: "step1Title" as const, timeKey: "step1Time" as const, noteKey: "step1Note" as const },
+    { number: "02", titleKey: "step2Title" as const, timeKey: "step2Time" as const, noteKey: "step2Note" as const },
+    { number: "03", titleKey: "step3Title" as const, timeKey: "step3Time" as const, noteKey: "step3Note" as const },
+    { number: "04", titleKey: "step4Title" as const, timeKey: "step4Time" as const, noteKey: "step4Note" as const },
+  ]
+
+  const PREREQUISITES = [
+    t('prereq1'),
+    t('prereq2'),
+    t('prereq3'),
+    t('prereq4'),
+  ]
+
+  const NEXT_CARDS = [
+    { titleKey: "nextCard1Title" as const, descKey: "nextCard1Desc" as const, href: "/build/agent-payments" },
+    { titleKey: "nextCard2Title" as const, descKey: "nextCard2Desc" as const, href: "/playbooks/build-agent-economy-apps" },
+    { titleKey: "nextCard3Title" as const, descKey: "nextCard3Desc" as const, href: "/demos" },
+    { titleKey: "nextCard4Title" as const, descKey: "nextCard4Desc" as const, href: "https://github.com/bez111/ergo-agent-economy" },
+  ]
+
   return (
     <BackgroundWrapper>
       <Breadcrumbs
         items={[
-          { name: "Build", href: "/build/agent-payments" },
-          { name: "Quickstart", href: "/build/quickstart" },
+          { name: t('breadcrumbBuild'), href: "/build/agent-payments" },
+          { name: t('breadcrumbQuickstart'), href: "/build/quickstart" },
         ]}
         className="mb-10 opacity-70"
       />
@@ -192,7 +181,7 @@ export function QuickstartClient() {
           <motion.div variants={fadeUp} className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium px-4 py-2 rounded-full">
               <Zap className="w-4 h-4" />
-              Under 10 minutes
+              {t('badge')}
             </span>
           </motion.div>
 
@@ -200,17 +189,16 @@ export function QuickstartClient() {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
           >
-            First agent payment
+            {t('heroTitle1')}
             <br />
-            <span className="text-orange-400">on Ergo testnet.</span>
+            <span className="text-orange-400">{t('heroTitle2')}</span>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
           >
-            No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a
-            real transaction on Ergo testnet explorer.
+            {t('heroDescription')}
           </motion.p>
 
           {/* Quick install */}
@@ -236,15 +224,10 @@ export function QuickstartClient() {
         >
           <h2 className="text-white font-semibold mb-4 flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-orange-400" />
-            Prerequisites
+            {t('prerequisitesTitle')}
           </h2>
           <ul className="space-y-2 text-sm text-gray-300">
-            {[
-              "Node.js 18+ installed",
-              "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
-              "Testnet ERG from faucet at testnet.ergofaucet.org",
-              "5 minutes of uninterrupted focus",
-            ].map((item, i) => (
+            {PREREQUISITES.map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <ChevronRight className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
                 {item}
@@ -263,29 +246,32 @@ export function QuickstartClient() {
           viewport={{ once: true }}
           className="space-y-10"
         >
-          {STEPS.map((step, i) => (
-            <motion.div key={i} variants={fadeUp}>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex items-center justify-center w-10 h-10 bg-orange-500/10 border border-orange-500/30 rounded-lg shrink-0">
-                  <step.icon className="w-5 h-5 text-orange-400" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-3">
-                    <span className="text-orange-400/50 font-mono text-sm">{step.number}</span>
-                    <h3 className="text-white font-bold text-lg">{step.title}</h3>
-                    <span className="text-xs text-gray-500 bg-white/5 px-2 py-0.5 rounded-full">
-                      ~{step.time}
-                    </span>
+          {STEPS.map((step, i) => {
+            const StepIcon = STEP_ICONS[i]
+            return (
+              <motion.div key={i} variants={fadeUp}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center justify-center w-10 h-10 bg-orange-500/10 border border-orange-500/30 rounded-lg shrink-0">
+                    <StepIcon className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-orange-400/50 font-mono text-sm">{step.number}</span>
+                      <h3 className="text-white font-bold text-lg">{t(step.titleKey)}</h3>
+                      <span className="text-xs text-gray-500 bg-white/5 px-2 py-0.5 rounded-full">
+                        ~{t(step.timeKey)}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <CodeBlock code={step.code} language={step.language} />
-              <p className="mt-3 text-sm text-gray-400 flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-                {step.note}
-              </p>
-            </motion.div>
-          ))}
+                <CodeBlock code={STEP_CODES[i]} language={STEP_LANGUAGES[i]} copiedLabel={t('copied')} copyLabel={t('copy')} />
+                <p className="mt-3 text-sm text-gray-400 flex items-start gap-2">
+                  <CheckCircle className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                  {t(step.noteKey)}
+                </p>
+              </motion.div>
+            )
+          })}
         </motion.div>
       </section>
 
@@ -300,10 +286,10 @@ export function QuickstartClient() {
         >
           <h2 className="text-white font-bold text-lg mb-3 flex items-center gap-2">
             <ExternalLink className="w-5 h-5 text-orange-400" />
-            See your TX on explorer
+            {t('explorerTitle')}
           </h2>
           <p className="text-gray-300 text-sm mb-4">
-            After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:
+            {t('explorerDescription')}
           </p>
           <code className="block bg-black/40 rounded-lg px-4 py-3 text-sm font-mono text-orange-300">
             https://testnet.ergoplatform.com/transactions/&#123;TX_ID&#125;
@@ -320,42 +306,21 @@ export function QuickstartClient() {
           viewport={{ once: true }}
         >
           <motion.h2 variants={fadeUp} className="text-2xl font-bold text-white mb-6">
-            What's next
+            {t('whatsNextTitle')}
           </motion.h2>
           <div className="grid md:grid-cols-3 gap-4">
-            {[
-              {
-                title: "Agent Payments Architecture",
-                desc: "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
-                href: "/build/agent-payments",
-              },
-              {
-                title: "7-Step Playbook",
-                desc: "From environment setup to mainnet deployment — a full builder guide",
-                href: "/playbooks/build-agent-economy-apps",
-              },
-              {
-                title: "Live Demos",
-                desc: "See working agent payment flows on Ergo testnet, open source",
-                href: "/demos",
-              },
-              {
-                title: "GitHub: ergo-agent-economy",
-                desc: "Open source examples: basic payment, Note IOU, acceptance predicate",
-                href: "https://github.com/bez111/ergo-agent-economy",
-              },
-            ].map((item, i) => (
+            {NEXT_CARDS.map((item, i) => (
               <motion.div key={i} variants={fadeUp}>
                 <Link
                   href={item.href}
                   className="block bg-white/5 border border-white/10 hover:border-orange-500/30 rounded-xl p-5 transition-colors group"
                 >
                   <h3 className="text-white font-semibold mb-2 group-hover:text-orange-400 transition-colors">
-                    {item.title}
+                    {t(item.titleKey)}
                   </h3>
-                  <p className="text-gray-400 text-sm mb-3">{item.desc}</p>
+                  <p className="text-gray-400 text-sm mb-3">{t(item.descKey)}</p>
                   <span className="flex items-center gap-1 text-orange-400 text-sm font-medium">
-                    Read more <ArrowRight className="w-3.5 h-3.5" />
+                    {t('readMore')} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
               </motion.div>
@@ -365,8 +330,8 @@ export function QuickstartClient() {
       </section>
 
       <FinalCTASimple
-        title="Ready to go deeper?"
-        description="The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting."
+        title={t('ctaTitle')}
+        description={t('ctaDescription')}
       />
     </BackgroundWrapper>
   )

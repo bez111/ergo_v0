@@ -1066,23 +1066,44 @@
   },
   "topicsHub": {
     "hero": {
-      "title": "探索Ergo",
-      "titleHighlight": "主题",
-      "subtitle": "深深地深入到埃尔戈的每个主要部分。每个主题中心集合指南、文档、信息图形、术语表和实用游戏书。",
-      "topicHubs": "主题Hub",
-      "comprehensiveCoverage": "综合保险"
+      "title": "按主题探索",
+      "titleHighlight": "Ergo",
+      "subtitle": "深入了解 Ergo 的每个核心领域。每个主题中心汇集指南、文档、信息图、术语表和实用操作手册。",
+      "topicHubs": "个主题中心",
+      "comprehensiveCoverage": "全面覆盖"
+    },
+    "search": {
+      "placeholder": "按名称、关键词或概念搜索主题...",
+      "ariaLabel": "搜索主题",
+      "clearLabel": "清除搜索",
+      "showing": "显示 {total} 个主题中的 {filtered} 个",
+      "showingFor": "显示 {total} 个主题中的 {filtered} 个，搜索：\"{query}\""
+    },
+    "filters": {
+      "all": "全部",
+      "defi": "DeFi",
+      "privacy": "隐私",
+      "mining": "挖矿",
+      "technology": "技术",
+      "philosophy": "理念",
+      "sustainability": "可持续性"
     },
     "card": {
-      "keyTerms": "关键字",
-      "guidesAndDocs": "指南和文档",
+      "keyTerms": "个关键术语",
+      "guidesAndDocs": "篇指南与文档",
       "articles": "文章",
       "infographics": "信息图",
       "openHub": "打开中心"
     },
+    "empty": {
+      "title": "未找到主题",
+      "description": "请尝试调整搜索或筛选条件",
+      "clearFilters": "清除筛选"
+    },
     "cta": {
-      "title": "寻找具体的东西？",
-      "description": "请尝试快速解答或浏览术语表。",
-      "browseQA": "浏览Q&A",
+      "title": "在找具体内容？",
+      "description": "试试我们的问答中心获取快速解答，或浏览术语表查看定义。",
+      "browseQA": "浏览问答",
       "viewGlossary": "查看术语表"
     }
   },
@@ -1195,6 +1216,50 @@
       "breadcrumbs": {
         "playbooks": "实战手册"
       }
+    },
+    "hero": {
+      "title": "Ergo 实战手册",
+      "subtitle": "为每种用例精选的指南。每本手册结合信息图、文章和可操作步骤。",
+      "description": "从您的第一笔 Ergo 交易开始，逐步迈向挖矿、DeFi 和构建您自己的应用。",
+      "startButton": "从第一笔交易开始",
+      "browseQA": "浏览问答",
+      "featuredTitle": "精选手册"
+    },
+    "filters": {
+      "all": "全部",
+      "ariaLabel": "按类别筛选手册",
+      "showAll": "显示所有手册"
+    },
+    "card": {
+      "steps": "步骤"
+    },
+    "clusters": {
+      "defi": "DeFi",
+      "privacy": "隐私",
+      "mining": "挖矿",
+      "sustainability": "可持续性",
+      "vc-alternative": "VC 替代方案",
+      "global-settlement": "全球清算",
+      "developer": "开发者",
+      "investor": "投资者"
+    },
+    "difficulty": {
+      "beginner": "初学者",
+      "intermediate": "中级",
+      "advanced": "高级"
+    },
+    "empty": "该类别暂无手册。",
+    "agentBanner": {
+      "badge": "新功能",
+      "title": "正在构建自主代理？",
+      "description": "「构建代理经济应用」手册涵盖 Notes、Reserves、Acceptance Predicates 和 Fleet SDK 集成——从测试网到主网。",
+      "cta": "开始手册"
+    },
+    "cta": {
+      "title": "找不到您想要的内容？",
+      "description": "浏览我们的文档、加入社区，或建议新的手册。",
+      "browseDocs": "浏览文档",
+      "joinCommunity": "加入社区"
     }
   },
   "patternsPage": {
