@@ -1,332 +1,332 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.",
+      "description": "基於Ergo和Cardano區塊鏈的前沿開源去中心化交易所（DEX）。提供流動性供應（LP）、流動性挖礦，並支援Babel Fees。",
       "features": [
-        "Decentralized Exchange",
-        "Liquidity Pools",
-        "Yield Farming",
-        "Babel Fees Support",
-        "Cross-chain Trading"
+        "去中心化交易所",
+        "流動性池",
+        "流動性挖礦",
+        "Babel Fees支援",
+        "跨鏈交易"
       ]
     },
     "ergodex": {
-      "description": "A non-custodial decentralized exchange (DEX) for Ergo and Cardano, enabling AMM and order-book trading across both ecosystems.",
+      "description": "面向Ergo和Cardano的非託管去中心化交易所（DEX），支援AMM和訂單簿交易模式。",
       "features": [
-        "Cross-chain DEX for Ergo & Cardano",
-        "Non-custodial trading",
-        "AMM and order-book models",
-        "Liquidity provision for ERG and ADA ecosystems"
+        "Ergo和Cardano跨鏈DEX",
+        "非託管交易",
+        "AMM和訂單簿模式",
+        "ERG和ADA生態流動性供應"
       ]
     },
     "sigmausd": {
-      "description": "The first eUTXO-based stablecoin, implementing the AgeUSD protocol. It is pegged to the US dollar and backed by ERG with a floating reserve ratio (400%-800%).",
+      "description": "首個基於eUTXO的穩定幣，採用AgeUSD協議實現。與美元掛鉤，由ERG提供擔保，浮動儲備率為400%-800%。",
       "features": [
-        "Algorithmic Stablecoin",
-        "ERG Collateralized",
-        "Decentralized",
-        "No Liquidation Risk"
+        "演算法穩定幣",
+        "ERG抵押擔保",
+        "去中心化",
+        "無清算風險"
       ]
     },
     "rosen-bridge": {
-      "description": "An open-source protocol for cross-chain asset transfers between Ergo and other blockchains like Cardano, Bitcoin Runes, and Dogecoin.",
+      "description": "用於Ergo與其他區塊鏈（如Cardano、Bitcoin Runes和Dogecoin）之間跨鏈資產轉移的開源協議。",
       "features": [
-        "Cross-chain Transfers",
-        "Multi-blockchain Support",
-        "Decentralized Watchers",
-        "Trustless Bridge"
+        "跨鏈轉帳",
+        "多鏈支援",
+        "去中心化觀察者",
+        "無需信任的橋接"
       ]
     },
     "ergomixer": {
-      "description": "The first non-interactive, non-custodial mixer in the crypto industry. It allows users to privately send tokens using Sigma-protocols for enhanced privacy.",
+      "description": "加密產業首個非互動式、非託管混幣器。使用者可使用Sigma協議進行私密代幣轉帳，增強隱私保護。",
       "features": [
-        "Non-custodial Mixing",
-        "Token Privacy",
-        "Sigma Protocols",
-        "Zero-knowledge Proofs"
+        "非託管混幣",
+        "代幣隱私",
+        "Sigma協議",
+        "零知識證明"
       ]
     },
     "nautilus-wallet": {
-      "description": "A browser extension and mobile wallet for Ergo, focused on privacy, security, and user experience. It supports Ledger, multiple wallets, and a dApp connector.",
+      "description": "Ergo的瀏覽器擴充套件和行動錢包，注重隱私、安全和使用者體驗。支援Ledger、多錢包和dApp連接器。",
       "features": [
-        "Browser Extension",
-        "Mobile App",
-        "Ledger Support",
-        "dApp Connector",
-        "Multi-wallet"
+        "瀏覽器擴充套件",
+        "行動應用程式",
+        "Ledger支援",
+        "dApp連接器",
+        "多錢包管理"
       ]
     },
     "duckpools": {
-      "description": "A collateralized lending platform with algorithmic lending pools. Users provide ERG or native assets to earn income or borrow assets against ERG collateral.",
+      "description": "具有演算法借貸池的抵押借貸平台。使用者可以提供ERG或原生資產賺取收益，或以ERG作為抵押品借入資產。",
       "features": [
-        "Lending Pools",
-        "Collateralized Loans",
-        "Yield Generation",
-        "Native Asset Support"
+        "借貸池",
+        "抵押貸款",
+        "收益生成",
+        "原生資產支援"
       ]
     },
     "paideia": {
-      "description": "A suite of tools for creating and managing Decentralized Autonomous Organizations (DAOs) on Ergo and Cardano with governance and treasury management.",
+      "description": "一套用於在Ergo和Cardano上建立和管理去中心化自治組織（DAO）的工具，提供治理和資金管理功能。",
       "features": [
-        "DAO Creation",
-        "Governance Tools",
-        "Treasury Management",
-        "Proposal Voting",
-        "Multi-chain"
+        "DAO建立",
+        "治理工具",
+        "資金管理",
+        "提案投票",
+        "多鏈支援"
       ]
     },
     "oracle-pools": {
-      "description": "A decentralized oracle system on Ergo that connects smart contracts with external data without needing to trust centralized sources.",
+      "description": "Ergo上的去中心化預言機系統，無需信任中心化資料來源即可將智慧合約與外部資料連接。",
       "features": [
-        "Decentralized Oracles",
-        "Price Feeds",
-        "External Data",
-        "Trustless Design"
+        "去中心化預言機",
+        "價格資料源",
+        "外部資料接入",
+        "無需信任設計"
       ]
     },
     "ergo-explorer": {
-      "description": "The main official block explorer for Ergo. It allows users to track transactions, blocks, addresses, tokens, and view general network statistics.",
+      "description": "Ergo的官方區塊瀏覽器。使用者可以追蹤交易、區塊、地址、代幣，並查看網路整體統計資料。",
       "features": [
-        "Block Explorer",
-        "Transaction Tracking",
-        "Token Info",
-        "Network Statistics",
-        "Address Lookup"
+        "區塊瀏覽器",
+        "交易追蹤",
+        "代幣資訊",
+        "網路統計",
+        "地址查詢"
       ]
     },
     "ergopad": {
-      "description": "A token launch (IDO) and fundraising platform on the Ergo blockchain. It gives token holders the opportunity to participate in IDOs.",
+      "description": "Ergo區塊鏈上的代幣發行（IDO）和募資平台。代幣持有者可參與IDO項目。",
       "features": [
-        "Token Launch",
-        "IDO Platform",
-        "Staking",
-        "Community Projects"
+        "代幣發行",
+        "IDO平台",
+        "質押",
+        "社群項目"
       ]
     },
     "mew-finance": {
-      "description": "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.",
+      "description": "去中心化金融（DeFi）平台，提供包括DEX、NFT市場和各種金融工具在內的一站式金融應用。",
       "features": [
         "DEX",
-        "NFT Marketplace",
-        "DeFi Suite",
-        "Token Swaps"
+        "NFT市場",
+        "DeFi套件",
+        "代幣兌換"
       ]
     },
     "satergo": {
-      "description": "A comprehensive desktop wallet for Ergo with the option to integrate a full node to support network decentralization. Privacy-focused with offline vault.",
+      "description": "功能全面的Ergo桌面錢包，可選整合全節點以支援網路去中心化。注重隱私，支援離線保險庫。",
       "features": [
-        "Desktop Wallet",
-        "Full Node Integration",
-        "Offline Vault",
-        "Privacy Focus"
+        "桌面錢包",
+        "全節點整合",
+        "離線保險庫",
+        "隱私保護"
       ]
     },
     "safew": {
-      "description": "A browser extension wallet for Ergo that integrates with ErgoMixer for enhanced transaction privacy.",
+      "description": "Ergo的瀏覽器擴充錢包，整合ErgoMixer以增強交易隱私。",
       "features": [
-        "Browser Extension",
-        "ErgoMixer Integration",
-        "Privacy Enhanced",
-        "dApp Support"
+        "瀏覽器擴充套件",
+        "ErgoMixer整合",
+        "隱私增強",
+        "dApp支援"
       ]
     },
     "ergowatch": {
-      "description": "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.",
+      "description": "提供Ergo網路指標、DeFi統計資料（如TVL）、圖表和儀表板的分析型區塊瀏覽器，用於監控區塊鏈活動。",
       "features": [
-        "Analytics",
-        "DeFi Metrics",
-        "TVL Tracking",
-        "Network Dashboards",
-        "Charts"
+        "資料分析",
+        "DeFi指標",
+        "TVL追蹤",
+        "網路儀表板",
+        "圖表"
       ]
     },
     "cyberpixels": {
-      "description": "A gaming project featuring an open-world pixel-style game with blockchain integration (NFTs, custom tokens, in-game marketplace).",
+      "description": "一款整合區塊鏈的像素風格開放世界遊戲項目（NFT、自訂代幣、遊戲內市場）。",
       "features": [
-        "Blockchain Gaming",
-        "NFT Integration",
-        "In-game Marketplace",
-        "Play-to-Earn"
+        "區塊鏈遊戲",
+        "NFT整合",
+        "遊戲內市場",
+        "邊玩邊賺"
       ]
     },
     "sigmafi": {
-      "description": "A suite of decentralized P2P financial contracts on Ergo, including SigmaBonds for creating P2P debt obligations.",
+      "description": "Ergo上的一系列去中心化P2P金融合約，包括用於建立P2P債務憑證的SigmaBonds。",
       "features": [
-        "P2P Lending",
-        "Bond Issuance",
-        "Decentralized Finance",
-        "Smart Contracts"
+        "P2P借貸",
+        "債券發行",
+        "去中心化金融",
+        "智慧合約"
       ]
     },
     "ergoraffle": {
-      "description": "A crowdfunding service with lottery elements, allowing fundraising for projects where participants can win rewards.",
+      "description": "帶有抽獎元素的眾籌服務，參與者在為項目募資的同時可贏取獎勵。",
       "features": [
-        "Crowdfunding",
-        "Lottery System",
-        "Provable Fairness",
-        "Project Funding"
+        "眾籌",
+        "抽獎系統",
+        "可證明公平性",
+        "項目資助"
       ]
     },
     "minotaur-wallet": {
-      "description": "A mobile wallet for Ergo with advanced features like multi-signatures, enhancing fund management security.",
+      "description": "Ergo的行動錢包，支援多重簽名等進階功能，增強資金管理安全性。",
       "features": [
-        "Mobile Wallet",
-        "Multi-signature",
-        "Enhanced Security",
-        "Fund Management"
+        "行動錢包",
+        "多重簽名",
+        "增強安全性",
+        "資金管理"
       ]
     },
     "guapswap": {
-      "description": "A decentralized smart contract-based service for swapping miner profits on Ergo, allowing automatic exchange of mining rewards.",
+      "description": "基於智慧合約的去中心化礦工收益兌換服務，可自動兌換挖礦獎勵。",
       "features": [
-        "Mining Rewards",
-        "Auto-swap",
-        "Profit Management",
-        "Miner Tools"
+        "挖礦獎勵",
+        "自動兌換",
+        "收益管理",
+        "礦工工具"
       ]
     },
     "dexygold": {
-      "description": "An algorithmic stablecoin pegged to the price of gold (XAU/USD), utilizing seigniorage, price oracles, and excess ERG collateral.",
+      "description": "與黃金價格（XAU/USD）掛鉤的演算法穩定幣，利用鑄幣稅機制、價格預言機和超額ERG抵押。",
       "features": [
-        "Gold-pegged Stablecoin",
-        "Algorithmic Design",
-        "Oracle Integration",
-        "ERG Collateral"
+        "黃金掛鉤穩定幣",
+        "演算法設計",
+        "預言機整合",
+        "ERG抵押"
       ]
     },
     "sigmao": {
-      "description": "A platform for trading options (Call/Put, American/European) on Ergo EIP-4 tokens using an order book style.",
+      "description": "在Ergo上交易EIP-4代幣期權（看漲/看跌、美式/歐式）的平台，採用訂單簿模式。",
       "features": [
-        "Options Trading",
-        "Call/Put Options",
-        "Order Book",
-        "EIP-4 Tokens"
+        "期權交易",
+        "看漲/看跌期權",
+        "訂單簿",
+        "EIP-4代幣"
       ]
     },
     "blitz-tcg": {
-      "description": "A collectible trading card game (TCG) on the Ergo blockchain.",
+      "description": "基於Ergo區塊鏈的集換式卡牌遊戲（TCG）。",
       "features": [
-        "Trading Card Game",
-        "NFT Cards",
-        "Competitive Play",
-        "Collectibles"
+        "集換式卡牌遊戲",
+        "NFT卡牌",
+        "競技對戰",
+        "收藏品"
       ]
     },
     "sigmaverse": {
-      "description": "A centralized portal and directory for the Ergo dApp ecosystem, allowing developers to list applications and users to find services.",
+      "description": "Ergo dApp生態系統的入口網站和目錄，開發者可發布應用，使用者可發現服務。",
       "features": [
-        "dApp Directory",
-        "Project Listings",
-        "Ecosystem Portal",
-        "Discovery Platform"
+        "dApp目錄",
+        "項目列表",
+        "生態入口",
+        "發現平台"
       ]
     },
     "ergone": {
-      "description": "A decentralized, community-driven marketing platform for promoting Ergo and its projects using the ERGONE token and Proof-of-Commitment Protocol.",
+      "description": "去中心化、社群驅動的行銷平台，使用ERGONE代幣和承諾證明協議推廣Ergo及其項目。",
       "features": [
-        "Marketing Platform",
-        "Community Driven",
-        "Token Incentives",
-        "Project Promotion"
+        "行銷平台",
+        "社群驅動",
+        "代幣激勵",
+        "項目推廣"
       ]
     },
     "hodlbox": {
-      "description": "A platform encouraging long-term holding of ERG with treasure chests and various fund-locking options, rewarding users with NFTs.",
+      "description": "鼓勵長期持有ERG的平台，提供寶箱和多種鎖倉選項，以NFT獎勵使用者。",
       "features": [
-        "HODL Incentives",
-        "Fund Locking",
-        "NFT Rewards",
-        "Long-term Savings"
+        "HODL激勵",
+        "資金鎖定",
+        "NFT獎勵",
+        "長期儲蓄"
       ]
     },
     "tokenjay": {
-      "description": "A platform for P2P (peer-to-peer) token trading within the Ergo ecosystem.",
+      "description": "Ergo生態系統中的P2P（點對點）代幣交易平台。",
       "features": [
-        "P2P Trading",
-        "Token Swaps",
-        "Decentralized Exchange",
-        "Direct Trading"
+        "P2P交易",
+        "代幣兌換",
+        "去中心化交易所",
+        "直接交易"
       ]
     },
     "single-tx-swap": {
-      "description": "A tool for executing P2P (peer-to-peer) token swaps within a single transaction.",
+      "description": "在單筆交易中執行P2P（點對點）代幣兌換的工具。",
       "features": [
-        "Atomic Swaps",
-        "Single Transaction",
-        "P2P Exchange",
-        "Fast Execution"
+        "原子交換",
+        "單筆交易",
+        "P2P兌換",
+        "快速執行"
       ]
     },
     "crux-finance": {
-      "description": "A tool for managing crypto portfolios within the Ergo ecosystem, allowing tracking of P&L, investments, and generating tax reports.",
+      "description": "Ergo生態系統中的加密資產組合管理工具，可追蹤損益、投資並生成稅務報告。",
       "features": [
-        "Portfolio Tracking",
-        "P&L Analysis",
-        "Tax Reports",
-        "Investment Management"
+        "投資組合追蹤",
+        "損益分析",
+        "稅務報告",
+        "投資管理"
       ]
     },
     "fleet-sdk": {
-      "description": "A JavaScript library designed to simplify the creation and signing of transactions on the Ergo blockchain in web applications and Node.js.",
+      "description": "JavaScript函式庫，旨在簡化Web應用和Node.js中Ergo區塊鏈交易的建立和簽名。",
       "features": [
         "JavaScript SDK",
-        "Transaction Building",
-        "Web Integration",
-        "Node.js Support"
+        "交易建構",
+        "Web整合",
+        "Node.js支援"
       ]
     },
     "appkit": {
-      "description": "The primary Software Development Kit (SDK) for developing applications on Ergo using JVM-based programming languages.",
+      "description": "使用JVM程式語言在Ergo上開發應用的主要軟體開發工具包（SDK）。",
       "features": [
         "JVM SDK",
-        "Scala/Java Support",
-        "Smart Contract Development",
-        "Official SDK"
+        "Scala/Java支援",
+        "智慧合約開發",
+        "官方SDK"
       ]
     },
     "sigma-rust": {
-      "description": "An implementation of the ErgoTree interpreter in Rust, providing tools for working with transactions and bindings for various languages.",
+      "description": "ErgoTree直譯器的Rust實作，提供交易處理工具和多語言繫結。",
       "features": [
-        "Rust Implementation",
-        "ErgoTree Interpreter",
-        "Multi-language Bindings",
-        "WASM Support"
+        "Rust實作",
+        "ErgoTree直譯器",
+        "多語言繫結",
+        "WASM支援"
       ]
     },
     "gluon": {
-      "description": "A protocol developed to strengthen (harden) existing stablecoins in the Ergo ecosystem, such as SigmaUSD.",
+      "description": "旨在強化Ergo生態中現有穩定幣（如SigmaUSD）的協議。",
       "features": [
-        "Stablecoin Enhancement",
-        "Protocol Hardening",
-        "DeFi Infrastructure",
-        "Stability Mechanism"
+        "穩定幣增強",
+        "協議加固",
+        "DeFi基礎設施",
+        "穩定性機制"
       ]
     },
     "chaincash": {
-      "description": "A framework for creating decentralized P2P monetary systems on Ergo, allowing users to issue their own currencies backed by trust or collateral.",
+      "description": "在Ergo上建立去中心化P2P貨幣系統的框架，允許使用者發行基於信任或抵押品的自有貨幣。",
       "features": [
-        "P2P Money",
-        "Custom Currencies",
-        "Trust-based Backing",
-        "Monetary Framework"
+        "P2P貨幣",
+        "自訂貨幣",
+        "信任擔保",
+        "貨幣框架"
       ]
     },
     "sigrsv": {
-      "description": "The reserve coin for the SigmaUSD stablecoin protocol. Users mint SigRSV by depositing ERG into reserves and can profit from ERG price increases.",
+      "description": "SigmaUSD穩定幣協議的儲備幣。使用者透過向儲備池存入ERG來鑄造SigRSV，可從ERG價格上漲中獲利。",
       "features": [
-        "Reserve Coin",
-        "ERG Exposure",
-        "SigmaUSD Backing",
-        "Yield Potential"
+        "儲備幣",
+        "ERG風險敞口",
+        "SigmaUSD擔保",
+        "收益潛力"
       ]
     },
     "exle": {
-      "description": "A lending/borrowing protocol within the Ergo ecosystem, integrated with Crux Finance.",
+      "description": "Ergo生態系統中的借貸協議，與Crux Finance整合。",
       "features": [
-        "Lending Protocol",
-        "Borrowing",
-        "DeFi Integration",
-        "Crux Finance Integration"
+        "借貸協議",
+        "借款",
+        "DeFi整合",
+        "Crux Finance整合"
       ]
     }
   }
