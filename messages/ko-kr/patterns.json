@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript 패턴 — Ergo 스마트 계약 템플릿 | ergo.org",
+      "description": "18개의 검증된 ErgoScript 스마트 계약 패턴. 토큰 메커니즘, 타임락, 멀티시그, DeFi 프리미티브, 오라클 통합. 복사, 수정, 배포."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "패턴",
+      "subtitle": "Ergo를 위한 검증된 스마트 계약 패턴. 복사, 수정, 배포. 토큰 메커니즘에서 DeFi 프리미티브까지."
+    },
+    "search": {
+      "placeholder": "패턴 검색 (예: 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "패턴 검색"
+    },
+    "filters": {
+      "ariaLabel": "패턴 필터",
+      "categoryAriaLabel": "카테고리 필터",
+      "allCategories": "모든 카테고리"
+    },
+    "difficulty": {
+      "beginner": "초급",
+      "intermediate": "중급",
+      "advanced": "고급"
+    },
+    "card": {
+      "viewPattern": "패턴 보기"
+    },
+    "empty": {
+      "heading": "패턴을 찾을 수 없습니다",
+      "body": "필터나 검색어를 조정해 보세요."
+    },
+    "cta": {
+      "heading": "구축할 준비가 되셨나요?",
+      "body": "패턴으로 시작하고, 문서를 참조하거나, 개발자 커뮤니티에 참여하세요.",
+      "developerDocs": "개발자 문서",
+      "buildDeFiPlaybook": "DeFi 구축 플레이북",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "개발 패턴"
+    },
+    "hero": {
+      "viewCode": "코드 보기"
+    },
+    "sections": {
+      "problem": "문제",
+      "solution": "솔루션",
+      "howItWorks": "작동 방식",
+      "codeExamples": "코드 예제",
+      "useCases": "사용 사례",
+      "securityConsiderations": "보안 고려사항",
+      "realWorldImplementations": "실제 구현 사례",
+      "resources": "리소스",
+      "feeConsiderations": "수수료 고려사항",
+      "relatedPatterns": "관련 패턴"
+    },
+    "copyCode": "코드 복사",
+    "whatsNext": {
+      "heading": "다음은",
+      "headingAccent": "무엇인가요?",
+      "browseAllPatterns": "모든 패턴 보기",
+      "browsePatternsSubtitle": "18개 패턴 이용 가능",
+      "explorePlaybooks": "플레이북 탐색",
+      "explorePlaybooksSubtitle": "단계별 가이드",
+      "builderResources": "빌더 리소스",
+      "builderResourcesSubtitle": "전체 개발 도구"
+    },
+    "emailCapture": {
+      "title": "ErgoScript 실력을 향상시키세요",
+      "description": "새로운 패턴, 튜토리얼, 개발자 리소스 알림을 받으세요."
+    }
+  }
+}

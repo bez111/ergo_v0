@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "Padrões ErgoScript — Templates de Contratos Inteligentes para Ergo | ergo.org",
+      "description": "18 padrões testados de contratos inteligentes ErgoScript. Mecânicas de tokens, bloqueios temporais, multisig, primitivas DeFi, integração de oráculos. Copie, adapte e implante."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Padrões",
+      "subtitle": "Padrões testados de contratos inteligentes para Ergo. Copie, adapte e implante. De mecânicas de tokens a primitivas DeFi."
+    },
+    "search": {
+      "placeholder": "Buscar padrões (ex.: 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Buscar padrões"
+    },
+    "filters": {
+      "ariaLabel": "Filtrar padrões",
+      "categoryAriaLabel": "Filtro de categoria",
+      "allCategories": "Todas as categorias"
+    },
+    "difficulty": {
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    },
+    "card": {
+      "viewPattern": "Ver padrão"
+    },
+    "empty": {
+      "heading": "Nenhum padrão encontrado",
+      "body": "Tente ajustar os filtros ou termos de busca."
+    },
+    "cta": {
+      "heading": "Pronto para construir?",
+      "body": "Comece com os padrões, consulte a documentação ou junte-se à comunidade de desenvolvedores.",
+      "developerDocs": "Docs para desenvolvedores",
+      "buildDeFiPlaybook": "Guia DeFi",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Padrões de desenvolvimento"
+    },
+    "hero": {
+      "viewCode": "Ver código"
+    },
+    "sections": {
+      "problem": "Problema",
+      "solution": "Solução",
+      "howItWorks": "Como funciona",
+      "codeExamples": "Exemplos de código",
+      "useCases": "Casos de uso",
+      "securityConsiderations": "Considerações de segurança",
+      "realWorldImplementations": "Implementações reais",
+      "resources": "Recursos",
+      "feeConsiderations": "Considerações de taxas",
+      "relatedPatterns": "Padrões relacionados"
+    },
+    "copyCode": "Copiar código",
+    "whatsNext": {
+      "heading": "O que vem",
+      "headingAccent": "a seguir?",
+      "browseAllPatterns": "Ver todos os padrões",
+      "browsePatternsSubtitle": "18 padrões disponíveis",
+      "explorePlaybooks": "Explorar guias",
+      "explorePlaybooksSubtitle": "Guias passo a passo",
+      "builderResources": "Recursos para desenvolvedores",
+      "builderResourcesSubtitle": "Kit completo de desenvolvimento"
+    },
+    "emailCapture": {
+      "title": "Aprimore suas habilidades em ErgoScript",
+      "description": "Receba notificações sobre novos padrões, tutoriais e recursos para desenvolvedores."
+    }
+  }
+}

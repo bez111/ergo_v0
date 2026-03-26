@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "Паттерны ErgoScript — Шаблоны смарт-контрактов для Ergo | ergo.org",
+      "description": "18 проверенных паттернов смарт-контрактов ErgoScript. Механики токенов, временные блокировки, мультисиг, примитивы DeFi, интеграция оракулов. Копируй, адаптируй, деплой."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Паттерны",
+      "subtitle": "Проверенные паттерны смарт-контрактов для Ergo. Копируй, адаптируй, деплой. От механик токенов до примитивов DeFi."
+    },
+    "search": {
+      "placeholder": "Поиск паттернов (напр., 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Поиск паттернов"
+    },
+    "filters": {
+      "ariaLabel": "Фильтр паттернов",
+      "categoryAriaLabel": "Фильтр по категории",
+      "allCategories": "Все категории"
+    },
+    "difficulty": {
+      "beginner": "Начинающий",
+      "intermediate": "Средний",
+      "advanced": "Продвинутый"
+    },
+    "card": {
+      "viewPattern": "Смотреть паттерн"
+    },
+    "empty": {
+      "heading": "Паттерны не найдены",
+      "body": "Попробуйте изменить фильтры или поисковый запрос."
+    },
+    "cta": {
+      "heading": "Готовы строить?",
+      "body": "Начните с паттернов, изучите документацию или присоединяйтесь к сообществу разработчиков.",
+      "developerDocs": "Документация для разработчиков",
+      "buildDeFiPlaybook": "Руководство по DeFi",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Паттерны разработки"
+    },
+    "hero": {
+      "viewCode": "Смотреть код"
+    },
+    "sections": {
+      "problem": "Проблема",
+      "solution": "Решение",
+      "howItWorks": "Как это работает",
+      "codeExamples": "Примеры кода",
+      "useCases": "Варианты использования",
+      "securityConsiderations": "Вопросы безопасности",
+      "realWorldImplementations": "Реальные реализации",
+      "resources": "Ресурсы",
+      "feeConsiderations": "Вопросы комиссий",
+      "relatedPatterns": "Связанные паттерны"
+    },
+    "copyCode": "Копировать код",
+    "whatsNext": {
+      "heading": "Что",
+      "headingAccent": "дальше?",
+      "browseAllPatterns": "Все паттерны",
+      "browsePatternsSubtitle": "18 паттернов доступно",
+      "explorePlaybooks": "Руководства",
+      "explorePlaybooksSubtitle": "Пошаговые инструкции",
+      "builderResources": "Ресурсы разработчика",
+      "builderResourcesSubtitle": "Полный набор инструментов"
+    },
+    "emailCapture": {
+      "title": "Прокачайте навыки ErgoScript",
+      "description": "Получайте уведомления о новых паттернах, туториалах и ресурсах для разработчиков."
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript Muster — Smart-Contract-Vorlagen für Ergo | ergo.org",
+      "description": "18 bewährte ErgoScript-Smart-Contract-Muster. Token-Mechaniken, Zeitsperren, Multisig, DeFi-Primitive, Oracle-Integration. Kopieren, anpassen und deployen."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Muster",
+      "subtitle": "Bewährte Smart-Contract-Muster für Ergo. Kopieren, anpassen und deployen. Von Token-Mechaniken bis DeFi-Primitive."
+    },
+    "search": {
+      "placeholder": "Muster suchen (z.B. 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Muster suchen"
+    },
+    "filters": {
+      "ariaLabel": "Muster filtern",
+      "categoryAriaLabel": "Kategoriefilter",
+      "allCategories": "Alle Kategorien"
+    },
+    "difficulty": {
+      "beginner": "Anfänger",
+      "intermediate": "Fortgeschritten",
+      "advanced": "Experte"
+    },
+    "card": {
+      "viewPattern": "Muster ansehen"
+    },
+    "empty": {
+      "heading": "Keine Muster gefunden",
+      "body": "Versuche, die Filter oder Suchbegriffe anzupassen."
+    },
+    "cta": {
+      "heading": "Bereit zu bauen?",
+      "body": "Starte mit den Mustern, lies die Dokumentation oder tritt der Entwickler-Community bei.",
+      "developerDocs": "Entwickler-Docs",
+      "buildDeFiPlaybook": "DeFi-Leitfaden",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Entwicklungsmuster"
+    },
+    "hero": {
+      "viewCode": "Code ansehen"
+    },
+    "sections": {
+      "problem": "Problem",
+      "solution": "Lösung",
+      "howItWorks": "Funktionsweise",
+      "codeExamples": "Code-Beispiele",
+      "useCases": "Anwendungsfälle",
+      "securityConsiderations": "Sicherheitshinweise",
+      "realWorldImplementations": "Praxis-Implementierungen",
+      "resources": "Ressourcen",
+      "feeConsiderations": "Gebührenhinweise",
+      "relatedPatterns": "Verwandte Muster"
+    },
+    "copyCode": "Code kopieren",
+    "whatsNext": {
+      "heading": "Was kommt",
+      "headingAccent": "als Nächstes?",
+      "browseAllPatterns": "Alle Muster ansehen",
+      "browsePatternsSubtitle": "18 Muster verfügbar",
+      "explorePlaybooks": "Leitfäden erkunden",
+      "explorePlaybooksSubtitle": "Schritt-für-Schritt-Anleitungen",
+      "builderResources": "Builder-Ressourcen",
+      "builderResourcesSubtitle": "Vollständiges Dev-Toolkit"
+    },
+    "emailCapture": {
+      "title": "Verbessere deine ErgoScript-Fähigkeiten",
+      "description": "Erhalte Benachrichtigungen über neue Muster, Tutorials und Entwickler-Ressourcen."
+    }
+  }
+}

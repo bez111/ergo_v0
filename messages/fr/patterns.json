@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "Patterns ErgoScript — Modèles de contrats intelligents pour Ergo | ergo.org",
+      "description": "18 patterns éprouvés de contrats intelligents ErgoScript. Mécaniques de tokens, verrouillages temporels, multisig, primitives DeFi, intégration d'oracles. Copiez, adaptez et déployez."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Patterns",
+      "subtitle": "Patterns éprouvés de contrats intelligents pour Ergo. Copiez, adaptez et déployez. Des mécaniques de tokens aux primitives DeFi."
+    },
+    "search": {
+      "placeholder": "Rechercher des patterns (ex. : 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Rechercher des patterns"
+    },
+    "filters": {
+      "ariaLabel": "Filtrer les patterns",
+      "categoryAriaLabel": "Filtre par catégorie",
+      "allCategories": "Toutes les catégories"
+    },
+    "difficulty": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "card": {
+      "viewPattern": "Voir le pattern"
+    },
+    "empty": {
+      "heading": "Aucun pattern trouvé",
+      "body": "Essayez d'ajuster vos filtres ou termes de recherche."
+    },
+    "cta": {
+      "heading": "Prêt à construire ?",
+      "body": "Commencez avec les patterns, consultez la documentation ou rejoignez la communauté des développeurs.",
+      "developerDocs": "Docs développeur",
+      "buildDeFiPlaybook": "Guide DeFi",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Patterns de développement"
+    },
+    "hero": {
+      "viewCode": "Voir le code"
+    },
+    "sections": {
+      "problem": "Problème",
+      "solution": "Solution",
+      "howItWorks": "Fonctionnement",
+      "codeExamples": "Exemples de code",
+      "useCases": "Cas d'utilisation",
+      "securityConsiderations": "Considérations de sécurité",
+      "realWorldImplementations": "Implémentations réelles",
+      "resources": "Ressources",
+      "feeConsiderations": "Considérations de frais",
+      "relatedPatterns": "Patterns associés"
+    },
+    "copyCode": "Copier le code",
+    "whatsNext": {
+      "heading": "Quelle est la",
+      "headingAccent": "suite ?",
+      "browseAllPatterns": "Voir tous les patterns",
+      "browsePatternsSubtitle": "18 patterns disponibles",
+      "explorePlaybooks": "Explorer les guides",
+      "explorePlaybooksSubtitle": "Guides pas à pas",
+      "builderResources": "Ressources développeur",
+      "builderResourcesSubtitle": "Boîte à outils complète"
+    },
+    "emailCapture": {
+      "title": "Améliorez vos compétences ErgoScript",
+      "description": "Recevez des notifications sur les nouveaux patterns, tutoriels et ressources développeur."
+    }
+  }
+}

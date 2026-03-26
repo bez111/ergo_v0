@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "Pattern ErgoScript — Template di Smart Contract per Ergo | ergo.org",
+      "description": "18 pattern collaudati di smart contract ErgoScript. Meccaniche token, time-lock, multisig, primitive DeFi, integrazione oracle. Copia, adatta e distribuisci."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Pattern",
+      "subtitle": "Pattern collaudati di smart contract per Ergo. Copia, adatta e distribuisci. Dalle meccaniche token alle primitive DeFi."
+    },
+    "search": {
+      "placeholder": "Cerca pattern (es. 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Cerca pattern"
+    },
+    "filters": {
+      "ariaLabel": "Filtra pattern",
+      "categoryAriaLabel": "Filtro categoria",
+      "allCategories": "Tutte le categorie"
+    },
+    "difficulty": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzato"
+    },
+    "card": {
+      "viewPattern": "Vedi pattern"
+    },
+    "empty": {
+      "heading": "Nessun pattern trovato",
+      "body": "Prova a modificare i filtri o i termini di ricerca."
+    },
+    "cta": {
+      "heading": "Pronto a costruire?",
+      "body": "Inizia con i pattern, consulta la documentazione o unisciti alla community degli sviluppatori.",
+      "developerDocs": "Documentazione sviluppatori",
+      "buildDeFiPlaybook": "Guida DeFi",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Pattern di sviluppo"
+    },
+    "hero": {
+      "viewCode": "Vedi codice"
+    },
+    "sections": {
+      "problem": "Problema",
+      "solution": "Soluzione",
+      "howItWorks": "Come funziona",
+      "codeExamples": "Esempi di codice",
+      "useCases": "Casi d'uso",
+      "securityConsiderations": "Considerazioni sulla sicurezza",
+      "realWorldImplementations": "Implementazioni reali",
+      "resources": "Risorse",
+      "feeConsiderations": "Considerazioni sulle commissioni",
+      "relatedPatterns": "Pattern correlati"
+    },
+    "copyCode": "Copia codice",
+    "whatsNext": {
+      "heading": "Cosa c'è",
+      "headingAccent": "dopo?",
+      "browseAllPatterns": "Vedi tutti i pattern",
+      "browsePatternsSubtitle": "18 pattern disponibili",
+      "explorePlaybooks": "Esplora le guide",
+      "explorePlaybooksSubtitle": "Guide passo-passo",
+      "builderResources": "Risorse per sviluppatori",
+      "builderResourcesSubtitle": "Toolkit di sviluppo completo"
+    },
+    "emailCapture": {
+      "title": "Migliora le tue competenze ErgoScript",
+      "description": "Ricevi notifiche su nuovi pattern, tutorial e risorse per sviluppatori."
+    }
+  }
+}

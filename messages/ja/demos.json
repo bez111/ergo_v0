@@ -1,0 +1,164 @@
+{
+  "demosPage": {
+    "hero": {
+      "badge": "動作デモ",
+      "title": "動くフロー、",
+      "titleHighlight": "モックアップではない。",
+      "description": "3つのコンポーザブルなフロー、すべてErgo testnetで稼働中。各デモにはコントラクトロジック、Fleet SDKコード、再現手順が含まれています。",
+      "ctaTestnet": "testnet ERGを取得",
+      "ctaArchitecture": "アーキテクチャ"
+    },
+    "demos": {
+      "stepByStep": "ステップバイステップ",
+      "whyMatters": "なぜこれが重要か",
+      "codeLabel": "Fleet SDK (TypeScript)",
+      "collapse": "折りたたむ",
+      "expand": "展開する",
+      "testedOn": "Ergo testnetでテスト済み。テスト用ERGはこちらで取得："
+    },
+    "demoItems": {
+      "apiCall": {
+        "statusLabel": "testnetで稼働中",
+        "title": "エージェントがAPI呼び出しを購入",
+        "tagline": "1回の呼び出し。1つの証明。永続アカウント不要。",
+        "description": "自律エージェントがノートを作成し、APIプロバイダーに送信します。プロバイダーはオンチェーンで受諾述語を検証し、レスポンスを返します。APIキー不要、課金アカウント不要、Stripe不要。",
+        "flow": [
+          "エージェントがノートを作成（額面0.001 ERG）",
+          "ノートに含まれる情報：プロバイダーアドレス＋タスクハッシュ＋期限",
+          "プロバイダーが述語を検証 — Ergo testnetで確認済み",
+          "プロバイダーがAPIレスポンスを配信",
+          "ノートがバーンされ、ERGがプロバイダーに解放"
+        ],
+        "why": "これはエージェント商取引の最小単位です：1タスク、1支払い、1証明。IDは不要。",
+        "links": {
+          "chaincashRef": "ChainCashリファレンス",
+          "fleetDocs": "Fleet SDKドキュメント",
+          "architecture": "アーキテクチャ"
+        }
+      },
+      "credit": {
+        "statusLabel": "testnetで稼働中",
+        "title": "エージェントがクレジットで支払い",
+        "tagline": "リザーブ展開済み。ノート発行済み。トラッカー監視中。",
+        "description": "担保付きでリザーブがデプロイされます。クレジット上限までノートが発行されます。エージェントが時間の経過とともにノートを使用します。トラッカーが合計使用量を監視します。閾値に達すると、リザーブが自動決済されます。",
+        "flow": [
+          "リザーブコントラクトをデプロイ（10 ERG + 100 ERGクレジット上限）",
+          "リザーブに対してノートを発行（上限まで）",
+          "エージェントがプロバイダーへの支払いとしてノートを転送",
+          "トラッカーがオンチェーンで累積残高を更新",
+          "残高が閾値に達すると自動決済"
+        ],
+        "why": "クレジットは経済効率の基本です。これを銀行なしで実現します — コントラクトと暗号学的証明だけで。",
+        "links": {
+          "chaincashPaper": "ChainCash論文",
+          "architecture": "アーキテクチャ",
+          "reserveContract": "リザーブコントラクト"
+        }
+      },
+      "community": {
+        "statusLabel": "第3週に公開予定",
+        "title": "コミュニティリザーブ + トラッカー",
+        "tagline": "ローカルマーケットプレイス。コンピュートコープ。エージェントネットワーク。",
+        "description": "参加者グループが共有リザーブにERGをプールします。コミュニティノートが比例配分で発行されます。受諾述語がメンバーシップルールを定義します。メンバーはいつでもノートをERGに交換できます。",
+        "flow": [
+          "コミュニティメンバーがマルチシグリザーブにERGをプール",
+          "メンバーは貢献に比例したコミュニティノートを受け取る",
+          "受諾ルールに基づきコミュニティ内でノートが受け入れられる",
+          "メンバーはいつでもノートをERGに交換可能",
+          "トラッカーがフローの公開監査可能性を提供"
+        ],
+        "why": "これは最も一般的な形態です：プログラマブルなローカルエコノミー。マーケットプレイス、DAO財務、またはエージェント協同組合になり得ます。",
+        "links": {
+          "architecture": "アーキテクチャ",
+          "nativeTokens": "ネイティブトークン",
+          "ergoScript": "ErgoScript"
+        }
+      }
+    },
+    "openProblems": {
+      "badge": "未解決の課題",
+      "title": "まだ解決されていないこと",
+      "description": "これらはエージェントマネーにおける最も興味深い未解決の課題です。共感するものがあれば、ぜひご連絡ください。",
+      "openIssue": "Issueを作成",
+      "talkToUs": "ユースケースについて相談する",
+      "items": [
+        {
+          "title": "永続アカウントなしのエージェントID",
+          "desc": "匿名性を損なわずに、セッションをまたいでエージェントがレピュテーションを構築するには？"
+        },
+        {
+          "title": "非技術エージェント向けノート受諾UX",
+          "desc": "LLMエージェントが最小限のセットアップでノートを発行・受諾できるSDKレベルの抽象化。"
+        },
+        {
+          "title": "リザーブ間のトラッカーフェデレーション",
+          "desc": "クロスリザーブの会計と流動性 — 異なるコミュニティリザーブ間でノートを受け入れることは可能か？"
+        },
+        {
+          "title": "中央集権オラクルなしのエージェントレピュテーション",
+          "desc": "オンチェーン履歴から導出される検証可能なレピュテーションスコア、信頼できる第三者不要。"
+        },
+        {
+          "title": "ローカルコミュニティウォレット — ワンクリックデプロイ",
+          "desc": "コミュニティリザーブの立ち上げ、トークン発行、受諾ルールの設定を5分以内で。"
+        }
+      ]
+    },
+    "quickLinks": {
+      "architecture": {
+        "title": "完全なアーキテクチャ",
+        "desc": "リザーブ · ノート · トラッカー · 述語"
+      },
+      "chaincash": {
+        "title": "ChainCash",
+        "desc": "ノート + リザーブのリファレンス実装"
+      },
+      "agentEconomy": {
+        "title": "エージェントエコノミー",
+        "desc": "なぜErgoが最適なベースレイヤーなのか"
+      }
+    },
+    "playground": {
+      "badge": "testnetプレイグラウンド",
+      "title": "最初のエージェント支払いを生成",
+      "description": "Ergo testnetアドレスを貼り付けてください。ライブUTxOを取得し、実データが事前入力されたFleet SDKスクリプトを生成します。",
+      "placeholder": "9fRusAarL1KkrWQVsxSRVYnvWxaAT2A96cKtNn9tvPh5... (testnetアドレス)",
+      "generate": "生成",
+      "fetching": "取得中…",
+      "needTestnetErg": "testnet ERGが必要ですか？",
+      "freeTestnetErg": "— 無料のtestnet ERGを数秒で取得。",
+      "tabCode": "実行可能なコード",
+      "tabUtxos": "あなたのUTxO",
+      "copied": "コピー済み！",
+      "copy": "コピー",
+      "runIt": "実行する",
+      "runStep1": "npm install @fleet-sdk/core",
+      "runStep2": "node agent-payment.js",
+      "runStep3": "未署名TX JSON出力をコピー",
+      "runStep4": "Nautilus（testnetモード）を開く → 署名 → 送信",
+      "boxLabel": "ボックス",
+      "height": "高さ",
+      "tokens": "トークン",
+      "errorNotFound": "testnetでアドレスが見つかりません。有効なErgo testnetアドレスであることを確認してください。",
+      "errorNoUtxos": "UTxOが見つかりません。testnet.ergofaucet.orgで無料のtestnet ERGを取得してください — 30秒で完了。",
+      "errorNetwork": "testnet APIに接続できません。ネットワーク接続を確認してください。"
+    },
+    "lookup": {
+      "badge": "mainnetで稼働中",
+      "title": "アドレス残高照会",
+      "description": "任意のErgoアドレスの残高をブロックチェーンからライブで照会。リアルデータ、リアルネットワーク。",
+      "placeholder": "9hHDQb26AjnJ...（任意のErgoアドレスを貼り付け）",
+      "lookup": "照会",
+      "lookingUp": "照会中…",
+      "confirmed": "確認済み",
+      "noTokens": "このアドレスにトークンはありません",
+      "dataFetchedFrom": "データ取得元：",
+      "errorNotFound": "アドレスが見つからないか無効です。有効なErgoアドレスであることを確認してください。",
+      "errorNetwork": "Ergo APIに接続できません。ネットワーク接続を確認してください。"
+    },
+    "cta": {
+      "title": "ユースケースが合わない？",
+      "description": "何を構築しているか教えてください。最適なフローを見つけるか、新しいものを設計するお手伝いをします。"
+    }
+  }
+}

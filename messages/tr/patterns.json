@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript Kalıpları — Ergo için Akıllı Sözleşme Şablonları | ergo.org",
+      "description": "18 kanıtlanmış ErgoScript akıllı sözleşme kalıbı. Token mekanikleri, zaman kilitleri, multisig, DeFi temelleri, oracle entegrasyonu. Kopyala, uyarla ve dağıt."
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "Kalıpları",
+      "subtitle": "Ergo için kanıtlanmış akıllı sözleşme kalıpları. Kopyala, uyarla ve dağıt. Token mekaniklerinden DeFi temellerine."
+    },
+    "search": {
+      "placeholder": "Kalıp ara (ör. 'swap', 'multisig', 'oracle')...",
+      "ariaLabel": "Kalıp ara"
+    },
+    "filters": {
+      "ariaLabel": "Kalıpları filtrele",
+      "categoryAriaLabel": "Kategori filtresi",
+      "allCategories": "Tüm Kategoriler"
+    },
+    "difficulty": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
+    },
+    "card": {
+      "viewPattern": "Kalıbı görüntüle"
+    },
+    "empty": {
+      "heading": "Kalıp bulunamadı",
+      "body": "Filtreleri veya arama terimlerini ayarlamayı deneyin."
+    },
+    "cta": {
+      "heading": "İnşa etmeye hazır mısınız?",
+      "body": "Kalıplarla başlayın, dokümantasyona göz atın veya geliştirici topluluğuna katılın.",
+      "developerDocs": "Geliştirici Dokümanları",
+      "buildDeFiPlaybook": "DeFi Rehberi",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "Geliştirme Kalıpları"
+    },
+    "hero": {
+      "viewCode": "Kodu Görüntüle"
+    },
+    "sections": {
+      "problem": "Problem",
+      "solution": "Çözüm",
+      "howItWorks": "Nasıl Çalışır",
+      "codeExamples": "Kod Örnekleri",
+      "useCases": "Kullanım Alanları",
+      "securityConsiderations": "Güvenlik Hususları",
+      "realWorldImplementations": "Gerçek Dünya Uygulamaları",
+      "resources": "Kaynaklar",
+      "feeConsiderations": "Ücret Hususları",
+      "relatedPatterns": "İlgili Kalıplar"
+    },
+    "copyCode": "Kodu kopyala",
+    "whatsNext": {
+      "heading": "Sırada",
+      "headingAccent": "ne var?",
+      "browseAllPatterns": "Tüm Kalıpları Gör",
+      "browsePatternsSubtitle": "18 kalıp mevcut",
+      "explorePlaybooks": "Rehberleri Keşfet",
+      "explorePlaybooksSubtitle": "Adım adım rehberler",
+      "builderResources": "Geliştirici Kaynakları",
+      "builderResourcesSubtitle": "Tam geliştirme araç seti"
+    },
+    "emailCapture": {
+      "title": "ErgoScript Becerilerinizi Geliştirin",
+      "description": "Yeni kalıplar, öğretici içerikler ve geliştirici kaynakları hakkında bildirim alın."
+    }
+  }
+}

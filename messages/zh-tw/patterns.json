@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript 模式 — Ergo 智慧合約範本 | ergo.org",
+      "description": "18 個經過驗證的 ErgoScript 智慧合約模式。代幣機制、時間鎖、多簽、DeFi 基礎元件、預言機整合。複製、調整、部署。"
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "模式",
+      "subtitle": "適用於 Ergo 的經過驗證的智慧合約模式。複製、調整、部署。從代幣機制到 DeFi 基礎元件。"
+    },
+    "search": {
+      "placeholder": "搜尋模式（例如：'swap'、'multisig'、'oracle'）...",
+      "ariaLabel": "搜尋模式"
+    },
+    "filters": {
+      "ariaLabel": "篩選模式",
+      "categoryAriaLabel": "類別篩選",
+      "allCategories": "所有類別"
+    },
+    "difficulty": {
+      "beginner": "初學者",
+      "intermediate": "中級",
+      "advanced": "進階"
+    },
+    "card": {
+      "viewPattern": "檢視模式"
+    },
+    "empty": {
+      "heading": "未找到模式",
+      "body": "請嘗試調整篩選條件或搜尋關鍵字。"
+    },
+    "cta": {
+      "heading": "準備好開始建構了嗎？",
+      "body": "從模式開始，查閱文件，或加入開發者社群獲取支援。",
+      "developerDocs": "開發者文件",
+      "buildDeFiPlaybook": "DeFi 建構指南",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "開發模式"
+    },
+    "hero": {
+      "viewCode": "檢視程式碼"
+    },
+    "sections": {
+      "problem": "問題",
+      "solution": "解決方案",
+      "howItWorks": "運作方式",
+      "codeExamples": "程式碼範例",
+      "useCases": "使用案例",
+      "securityConsiderations": "安全注意事項",
+      "realWorldImplementations": "實際應用案例",
+      "resources": "資源",
+      "feeConsiderations": "手續費注意事項",
+      "relatedPatterns": "相關模式"
+    },
+    "copyCode": "複製程式碼",
+    "whatsNext": {
+      "heading": "接下來",
+      "headingAccent": "是什麼？",
+      "browseAllPatterns": "瀏覽所有模式",
+      "browsePatternsSubtitle": "18 個模式可用",
+      "explorePlaybooks": "探索指南手冊",
+      "explorePlaybooksSubtitle": "逐步操作指南",
+      "builderResources": "建構者資源",
+      "builderResourcesSubtitle": "完整開發工具包"
+    },
+    "emailCapture": {
+      "title": "提升您的 ErgoScript 技能",
+      "description": "獲取新模式、教學和開發者資源的通知。"
+    }
+  }
+}

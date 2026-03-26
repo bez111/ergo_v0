@@ -1,0 +1,76 @@
+{
+  "patternsPage": {
+    "seo": {
+      "title": "ErgoScript パターン — Ergo スマートコントラクトテンプレート | ergo.org",
+      "description": "18の実績あるErgoScriptスマートコントラクトパターン。トークンメカニクス、タイムロック、マルチシグ、DeFiプリミティブ、オラクル統合。コピー、カスタマイズ、デプロイ。"
+    },
+    "hero": {
+      "titlePart1": "ErgoScript",
+      "titlePart2": "パターン",
+      "subtitle": "Ergo向けの実績あるスマートコントラクトパターン。コピー、カスタマイズ、デプロイ。トークンメカニクスからDeFiプリミティブまで。"
+    },
+    "search": {
+      "placeholder": "パターンを検索（例：'swap', 'multisig', 'oracle'）...",
+      "ariaLabel": "パターン検索"
+    },
+    "filters": {
+      "ariaLabel": "パターンフィルター",
+      "categoryAriaLabel": "カテゴリフィルター",
+      "allCategories": "すべてのカテゴリ"
+    },
+    "difficulty": {
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "上級"
+    },
+    "card": {
+      "viewPattern": "パターンを見る"
+    },
+    "empty": {
+      "heading": "パターンが見つかりません",
+      "body": "フィルターや検索条件を調整してください。"
+    },
+    "cta": {
+      "heading": "構築を始めましょう",
+      "body": "パターンから始めて、ドキュメントを参照するか、開発者コミュニティに参加してサポートを受けましょう。",
+      "developerDocs": "開発者ドキュメント",
+      "buildDeFiPlaybook": "DeFi構築ハンドブック",
+      "agentPayments": "Agent Payments"
+    }
+  },
+  "patternPage": {
+    "breadcrumbs": {
+      "devPatterns": "開発パターン"
+    },
+    "hero": {
+      "viewCode": "コードを見る"
+    },
+    "sections": {
+      "problem": "課題",
+      "solution": "解決策",
+      "howItWorks": "仕組み",
+      "codeExamples": "コード例",
+      "useCases": "ユースケース",
+      "securityConsiderations": "セキュリティ考慮事項",
+      "realWorldImplementations": "実装事例",
+      "resources": "リソース",
+      "feeConsiderations": "手数料の考慮事項",
+      "relatedPatterns": "関連パターン"
+    },
+    "copyCode": "コードをコピー",
+    "whatsNext": {
+      "heading": "次は",
+      "headingAccent": "何を？",
+      "browseAllPatterns": "すべてのパターンを見る",
+      "browsePatternsSubtitle": "18パターン利用可能",
+      "explorePlaybooks": "ハンドブックを探索",
+      "explorePlaybooksSubtitle": "ステップバイステップガイド",
+      "builderResources": "ビルダーリソース",
+      "builderResourcesSubtitle": "完全な開発ツールキット"
+    },
+    "emailCapture": {
+      "title": "ErgoScriptスキルを向上させよう",
+      "description": "新しいパターン、チュートリアル、開発者リソースの通知を受け取りましょう。"
+    }
+  }
+}
