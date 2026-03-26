@@ -101,7 +101,7 @@ export default function UseClient() {
       {/* Hero Section */}
       <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">{t('title')}</h1>
               <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">{t('description')}</p>
@@ -122,7 +122,7 @@ export default function UseClient() {
               </p>
             </div>
             <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
-              <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+              <div className="bg-black/80 border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">{t('featuredUseCases.title')}</h3>
                 <div className="grid grid-cols-1 gap-4">
                   {[
@@ -286,7 +286,7 @@ export default function UseClient() {
           <div className="grid md:grid-cols-2 gap-6">
             <Link
               href="/ecosystem"
-              className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              className="bg-black/80 border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
@@ -304,7 +304,7 @@ export default function UseClient() {
 
             <Link
               href="/docs"
-              className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              className="bg-black/80 border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">

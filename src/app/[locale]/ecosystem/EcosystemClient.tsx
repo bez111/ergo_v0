@@ -365,9 +365,9 @@ export default function EcosystemClient() {
                           href={`/ecosystem/${project.slug}`}
                           className="block p-4 rounded-lg hover:bg-neutral-800/30 transition-colors"
                         >
-                          <div className="grid grid-cols-12 items-center gap-4">
-                            <div className="col-span-12 md:col-span-3 flex items-center gap-4">
-                              <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
+                          <div className="flex flex-col md:grid md:grid-cols-12 md:items-center gap-2 md:gap-4">
+                            <div className="md:col-span-3 flex items-center gap-3">
+                              <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30 flex-shrink-0">
                                 {(() => {
                                   const IconComponent = projectIcons[project.name] || Activity
                                   return <IconComponent className="w-5 h-5 text-orange-400" aria-hidden="true" focusable="false" />
@@ -375,17 +375,21 @@ export default function EcosystemClient() {
                               </div>
                               <h3 className="font-semibold text-white">{project.name}</h3>
                             </div>
-                            <div className="col-span-6 md:col-span-2">
+                            <div className="flex items-center gap-2 md:col-span-2">
                               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-neutral-800 text-neutral-300 border border-neutral-700">{project.category}</span>
+                              <div className={`flex items-center gap-1 text-xs md:hidden ${statusConfig[project.status]?.color}`}>
+                                {statusConfig[project.status]?.icon}
+                                <span>{statusConfig[project.status]?.label ?? project.status}</span>
+                              </div>
                             </div>
-                            <div className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${statusConfig[project.status]?.color}`}>
+                            <div className={`hidden md:flex md:col-span-2 items-center gap-2 text-sm ${statusConfig[project.status]?.color}`}>
                               {statusConfig[project.status]?.icon}
                               <span>{statusConfig[project.status]?.label ?? project.status}</span>
                             </div>
-                            <div className="col-span-11 md:col-span-4 md:col-start-8">
+                            <div className="md:col-span-4 md:col-start-8">
                               <p className="text-sm text-neutral-400 line-clamp-2">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
                             </div>
-                            <div className="col-span-1 flex justify-end text-orange-400">
+                            <div className="hidden md:flex md:col-span-1 justify-end text-orange-400">
                               <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />
                             </div>
                           </div>
@@ -413,7 +417,7 @@ export default function EcosystemClient() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link
                   href="/technology"
-                  className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
+                  className="group relative bg-black/80 border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
@@ -429,7 +433,7 @@ export default function EcosystemClient() {
 
                 <Link
                   href="/use"
-                  className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
+                  className="group relative bg-black/80 border border-white/10 rounded-2xl md:rounded-3xl p-4 md:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
