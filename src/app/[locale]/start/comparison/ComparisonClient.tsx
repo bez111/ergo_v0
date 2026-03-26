@@ -207,7 +207,7 @@ export default function ComparisonClient() {
             animate="visible"
           >
             <div className="max-w-7xl mx-auto px-4">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 <motion.div variants={itemVariants}>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                     Platform <span className="text-orange-400">Analysis</span>

@@ -14,7 +14,7 @@ export function Footer() {
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
       <div className="container py-6 md:py-8 relative z-20">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary" id="footer-platform">{t("platform") || "PLATFORM"}</div>
             <nav className="flex flex-col gap-px" aria-labelledby="footer-platform">
@@ -90,10 +90,10 @@ export function Footer() {
       </div>
       <div className="border-t border-primary/20 py-6 relative z-20">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-300 font-mono">
+          <p className="text-xs sm:text-sm text-gray-300 font-mono text-center md:text-left">
             © {new Date().getFullYear()} ERGO {t("platform") || "PLATFORM"}. ALL RIGHTS RESERVED.
           </p>
-          <p className="text-sm text-gray-300 font-mono">
+          <p className="text-xs sm:text-sm text-gray-300 font-mono text-center md:text-right">
             {t("openSource") || "ERGO IS AN OPEN-SOURCE PROJECT."}{" "}
             <Link href="https://github.com/ergoplatform" className="text-primary hover:underline">
               {t("contributeOnGithub") || "CONTRIBUTE ON GITHUB"}

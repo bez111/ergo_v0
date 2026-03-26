@@ -694,7 +694,7 @@ export default function QuizClient() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                     {profiles[selectedProfile]!.name}
                   </h1>
                   <p className="text-xl text-neutral-300 mb-8 leading-relaxed">

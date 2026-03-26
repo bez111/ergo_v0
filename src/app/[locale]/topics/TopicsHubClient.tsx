@@ -128,7 +128,7 @@ export function TopicsHubClient({ topics }: Props) {
             transition={{ duration: 0.6 }}
             className="text-center mb-10"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               {t('hero.title')} <span className="text-orange-400">{t('hero.titleHighlight')}</span>
             </h1>
 
@@ -223,7 +223,7 @@ export function TopicsHubClient({ topics }: Props) {
 
           {/* Topics Grid */}
           <section aria-live="polite" aria-atomic="false">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <AnimatePresence mode="popLayout">
                 {filteredTopics.map((topic, index) => {
                   const Icon = iconMap[topic.icon] || Code;

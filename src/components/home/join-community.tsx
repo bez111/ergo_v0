@@ -46,12 +46,12 @@ export function JoinCommunity() {
   ]
 
   return (
-    <section className="py-20">
+    <section className="py-12 md:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
-          <h2 
-            className="font-bold tracking-tight mb-6 flex items-center justify-center gap-4"
+        <div className="text-center mb-10 md:mb-16">
+          <h2
+            className="font-bold tracking-tight mb-6 flex items-center justify-center gap-2 md:gap-4 flex-wrap"
             style={{
               fontSize: 'clamp(32px, 4.5vw, 56px)',
               letterSpacing: '-0.02em',
@@ -60,12 +60,12 @@ export function JoinCommunity() {
           >
             <span className="text-white">{t('titlePrefix')}</span> <span className="text-orange-400">{t('titleHighlight')}</span> <span className="text-white">{t('titleSuffix')}</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-12">
           {channels.map((channel, i) => (
             <Link 
               key={i}
@@ -74,19 +74,19 @@ export function JoinCommunity() {
               rel="noopener noreferrer"
               className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-2xl"
             >
-              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-0.5 p-8 rounded-3xl cursor-pointer h-full">
-                <div className="flex items-start gap-4 mb-4">
-              <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex-shrink-0">
-                    <channel.icon className="w-6 h-6 text-orange-400" />
+              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-0.5 p-4 md:p-8 rounded-2xl md:rounded-3xl cursor-pointer h-full">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 mb-3 md:mb-4">
+              <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex-shrink-0">
+                    <channel.icon className="w-5 h-5 md:w-6 md:h-6 text-orange-400" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors pt-3">
+                  <h3 className="text-lg md:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors md:pt-3 text-center md:text-left">
                     {channel.title}
                   </h3>
                 </div>
                 
-                <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors">{channel.desc}</p>
-                
-                <p className="text-sm text-neutral-500 font-mono group-hover:text-neutral-400 transition-colors">{channel.members}</p>
+                <p className="text-gray-400 mb-3 md:mb-4 group-hover:text-gray-300 transition-colors text-sm md:text-base text-center md:text-left">{channel.desc}</p>
+
+                <p className="text-xs md:text-sm text-neutral-500 font-mono group-hover:text-neutral-400 transition-colors text-center md:text-left">{channel.members}</p>
               </Card>
             </Link>
           ))}

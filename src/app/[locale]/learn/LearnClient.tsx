@@ -125,7 +125,7 @@ export default function LearnClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-sm uppercase tracking-[0.4em] text-gray-400 mb-4">{t("badge")}</p>
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">{t("title")}</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">{t("title")}</h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
                   {t("subtitle")}
                 </p>

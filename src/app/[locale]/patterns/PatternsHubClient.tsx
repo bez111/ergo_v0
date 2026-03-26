@@ -96,7 +96,7 @@ export function PatternsHubClient({ patterns, categories }: Props) {
             className="pt-24 pb-12 text-center"
           >
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                 {t('hero.titlePart1')} <span className="text-orange-400">{t('hero.titlePart2')}</span>
               </h1>
 

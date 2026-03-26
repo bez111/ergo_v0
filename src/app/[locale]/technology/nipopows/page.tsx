@@ -213,7 +213,7 @@ export default function NIPOPOWsPage() {
           <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-6">Succinct proofs of chain work for trust-minimized verification.</p>
                 <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how <GlossaryLink term="proof-of-work" variant="subtle" /> works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
                 <div className="flex flex-col sm:flex-row gap-4">

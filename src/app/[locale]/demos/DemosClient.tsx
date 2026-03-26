@@ -538,7 +538,7 @@ const communityReserve = new OutputBuilder(
         {/* ── Open Problems / Issue Board ───────────────────────────────────── */}
         <section className="py-24 bg-neutral-950/40 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[1fr_1.3fr] gap-16 items-start">
+            <div className="grid lg:grid-cols-[1fr_1.3fr] gap-8 lg:gap-16 items-start">
 
               <div>
                 <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">

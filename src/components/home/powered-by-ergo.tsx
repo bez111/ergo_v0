@@ -33,11 +33,11 @@ export function PoweredByErgo() {
   }))
 
   return (
-    <section className="py-32 relative" aria-labelledby="powered-by-ergo-heading">
+    <section className="py-16 md:py-32 relative overflow-hidden" aria-labelledby="powered-by-ergo-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
-          <h2 
+        <div className="text-center mb-10 md:mb-16">
+          <h2
             id="powered-by-ergo-heading"
             className="font-bold tracking-tight mb-6"
             style={{
@@ -61,7 +61,7 @@ export function PoweredByErgo() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Featured Ergo ecosystem projects">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6" role="list" aria-label="Featured Ergo ecosystem projects">
           {apps.map((app, i) => (
             <Link 
               key={i}
@@ -70,8 +70,8 @@ export function PoweredByErgo() {
               rel={app.url.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-xl"
             >
-              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-3xl transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col cursor-pointer">
-                <div className="p-6 flex-1 flex flex-col">
+              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-2xl md:rounded-3xl transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col cursor-pointer">
+                <div className="p-4 md:p-6 flex-1 flex flex-col">
                   {/* Header with icon, name, category, status */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-4">
@@ -105,7 +105,7 @@ export function PoweredByErgo() {
                   <p className="text-neutral-400 mb-6 flex-1 group-hover:text-neutral-300 transition-colors">{app.desc}</p>
 
                   {/* Visit Project indicator - appears on hover, aligned right */}
-                  <div className="flex items-center justify-end gap-2 text-orange-400 group-hover:text-orange-300 transition-all duration-300 font-semibold mt-auto opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="flex items-center justify-end gap-2 text-orange-400 group-hover:text-orange-300 transition-all duration-300 font-semibold mt-auto opacity-100 md:opacity-0 md:group-hover:opacity-100 transform md:translate-y-2 md:group-hover:translate-y-0">
                     <span>{t('visitProject')}</span>
                   </div>
                 </div>

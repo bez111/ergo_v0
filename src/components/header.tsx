@@ -71,29 +71,27 @@ export function Header() {
       >
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6 md:gap-10">
-            <Link href="/" className="hidden items-center space-x-3 md:flex">
-              <svg 
-                width="36" 
-                height="32" 
-                viewBox="0 0 100 90" 
+            <Link href="/" className="flex items-center space-x-2 md:space-x-3">
+              <svg
+                width="28"
+                height="25"
+                viewBox="0 0 100 90"
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
-                aria-label="Ergo Blockchain logo - hexagon with Sigma symbol"
+                aria-label="Ergo Blockchain logo"
                 className={cn(
-                  "transition-all duration-300",
+                  "transition-all duration-300 md:w-[36px] md:h-[32px]",
                   glitchActive && "ergo-glitch",
                 )}
               >
-                {/* Hectagon */}
                 <polygon points="27.5,6.0289 72.5,6.0289 95,45 72.5,83.9711 27.5,83.9711 5,45"
                          fill="none" stroke="#F97316" strokeWidth="6" strokeLinejoin="miter"/>
-                {/* Σ  */}
                 <path d="M62.2899 55.8772V61.8823H40.456V55.8772H62.2899ZM61.7853 27.5671V33.6059H41.2298V27.5671H61.7853ZM55.8306 44.5397V44.8929L43.4838 61.8823H37.6805V58.3499L48.0928 44.7247L37.6805 31.1332V27.5671H43.4838L55.8306 44.5397Z"
                       fill="#F97316"/>
               </svg>
               <span
                 className={cn(
-                  "font-bold text-xl text-primary transition-all duration-300",
+                  "font-bold text-lg md:text-xl text-primary transition-all duration-300",
                   glitchActive && "ergo-glitch",
                 )}
               >

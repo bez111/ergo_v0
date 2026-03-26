@@ -204,7 +204,7 @@ export function InfographicsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               {t('hero.title')} <span className="text-orange-400">{t('hero.titleHighlight')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-4xl mx-auto">

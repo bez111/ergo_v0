@@ -80,10 +80,9 @@ export function HeroFinal() {
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ 
-        paddingTop: 'clamp(80px, 15vh, 140px)', 
-        paddingBottom: 'clamp(60px, 12vh, 100px)',
-        // Prevent CLS by reserving space
+      style={{
+        paddingTop: 'clamp(64px, 12vh, 140px)',
+        paddingBottom: 'clamp(40px, 8vh, 100px)',
         minHeight: '100svh'
       }}
       role="banner"
@@ -110,26 +109,26 @@ export function HeroFinal() {
 
           {/* Dynamic typing text */}
           <div className="relative max-w-5xl mx-auto">
-            <div className="flex items-start justify-center mb-6">
-              <span 
-                className="text-orange-500 font-mono flex-shrink-0 mr-2"
-                style={{ 
-                  fontSize: 'clamp(32px, 4.5vw, 56px)', 
+            <div className="flex items-start justify-center mb-4 sm:mb-6 px-2 sm:px-0">
+              <span
+                className="text-orange-500 font-mono flex-shrink-0 mr-1 sm:mr-2 hidden sm:inline"
+                style={{
+                  fontSize: 'clamp(24px, 4.5vw, 56px)',
                   fontWeight: 800,
-                  lineHeight: 1
+                  lineHeight: 1.1
                 }}
               >
                 &gt;
               </span>
               <h1 
                 className="text-white font-mono leading-tight text-center"
-                style={{ 
-                  fontSize: 'clamp(32px, 4.5vw, 56px)', 
-                  fontWeight: 800, 
-                  letterSpacing: '-0.02em', 
-                  lineHeight: 1,
-                  maxWidth: '25ch',
-                  whiteSpace: 'nowrap'
+                style={{
+                  fontSize: 'clamp(24px, 4.5vw, 56px)',
+                  fontWeight: 800,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.1,
+                  maxWidth: '100%',
+                  wordBreak: 'break-word'
                 }}
               >
                 <span className="relative" suppressHydrationWarning>
@@ -196,7 +195,7 @@ export function HeroFinal() {
 
           {/* Feature icons */}
           <div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-5xl mt-12"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 w-full max-w-5xl mt-8 sm:mt-12"
             role="list"
             aria-label="Key features of Ergo blockchain"
           >

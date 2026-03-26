@@ -41,10 +41,10 @@ export function MadeForMassAdoption() {
   ]
 
   return (
-    <section id="cypherpunks-freedom" className="py-24 bg-neutral-950/50">
+    <section id="cypherpunks-freedom" className="py-16 md:py-24 bg-neutral-950/50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 
             className="font-bold tracking-tight mb-6"
             style={{
@@ -68,15 +68,15 @@ export function MadeForMassAdoption() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {paths.map((path, i) => (
             <Link 
               key={i}
               href={path.href}
-              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-2xl"
+              className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-2xl md:rounded-2xl min-h-[44px]"
             >
-              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-3xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
-                <div className="p-5">
+              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-2xl md:rounded-3xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
+                <div className="p-4 md:p-5">
                   {/* Icon and Title in same line */}
                   <div className="flex items-center gap-3 mb-3">
                     <div className="flex items-center gap-3">

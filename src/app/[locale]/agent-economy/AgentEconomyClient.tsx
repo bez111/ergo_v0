@@ -239,7 +239,7 @@ export function AgentEconomyClient() {
         {/* ── Architecture Stack ───────────────────────────────────────────── */}
         <section id="architecture" className="py-24 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-16 items-start">
+            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-16 items-start">
 
               {/* Left: copy */}
               <div>

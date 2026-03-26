@@ -62,7 +62,7 @@ export function CompareHubClient() {
               animate="visible"
             >
               <motion.div variants={itemVariants}>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                   {t("title")}
                 </h1>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto mb-8">

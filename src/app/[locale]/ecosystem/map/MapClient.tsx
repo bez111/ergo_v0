@@ -255,10 +255,10 @@ function MapClient() {
         <div className="relative z-10 max-w-7xl mx-auto pt-28 pb-16">
         {/* Hero */}
         <div className="pt-6 pb-6">
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">{t('hero.title')}</h1>
-              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">{t('hero.title')}</h1>
+              <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
                 {t('hero.subtitle')}
               </p>
               <div className="flex flex-wrap gap-3">
@@ -347,13 +347,12 @@ function MapClient() {
         <Card className="bg-black border-neutral-800 rounded-xl">
           <CardContent className="p-2">
             <div
-              className="relative overflow-hidden rounded-lg cursor-grab active:cursor-grabbing bg-black"
+              className="relative overflow-hidden rounded-lg cursor-grab active:cursor-grabbing bg-black h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
               onWheel={onWheel}
               onMouseDown={onMouseDown}
               onMouseMove={onMouseMove}
               onMouseLeave={endDrag}
               onMouseUp={endDrag}
-              style={{ height: 700 }}
             >
               {nodes.length === 0 ? (
                 <div className="absolute inset-0 flex items-center justify-center text-neutral-400">

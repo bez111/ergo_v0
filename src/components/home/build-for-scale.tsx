@@ -54,8 +54,8 @@ export function BuildForScale() {
   ];
 
   return (
-    <section className="py-32 relative">
-      <div className="mx-auto grid max-w-7xl items-start gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:px-8">
+    <section className="py-16 md:py-32 relative overflow-hidden">
+      <div className="mx-auto grid max-w-7xl items-start gap-6 md:gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:px-8">
         <LeftCopy t={t} />
         <RightMetrics items={items} />
       </div>
@@ -119,7 +119,7 @@ function Bullet({ children }: { children: React.ReactNode }) {
 
 function RightMetrics({ items }: { items: StatItem[] }) {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div className="grid grid-cols-2 gap-3 md:gap-4 md:grid-cols-2">
       {items.map((it, i) => (
         <StatCard key={i} {...it} />
       ))}
@@ -145,7 +145,7 @@ function StatCard({ icon, value, label, hint, href }: StatItem) {
     </>
   );
 
-  const className = "group flex min-h-[128px] flex-col rounded-3xl border border-white/10 bg-black/80 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-white/30";
+  const className = "group flex min-h-[112px] md:min-h-[128px] flex-col rounded-2xl md:rounded-3xl border border-white/10 bg-black/80 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-white/30";
 
   if (href) {
     return (

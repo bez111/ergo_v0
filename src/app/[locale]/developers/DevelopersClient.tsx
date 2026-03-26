@@ -137,7 +137,7 @@ export function DevelopersClient() {
                   <Terminal className="w-4 h-4" />
                   {t("hero.badge")}
                 </div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                   {t("hero.title")}
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">

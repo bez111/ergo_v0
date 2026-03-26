@@ -218,7 +218,7 @@ export default function ErgoScriptPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">ErgoScript</h1>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">ErgoScript</h1>
                   <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">Smart Contract Language for the Future</p>
                   <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     ErgoScript is a powerful, secure smart contract language built on Sigma protocols and the extended UTXO model. 

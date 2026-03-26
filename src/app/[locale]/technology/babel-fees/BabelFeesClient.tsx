@@ -59,7 +59,7 @@ export default function BabelFeesClient() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Babel Fees</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">Babel Fees</h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
                   Pay transaction fees with any token
                 </p>

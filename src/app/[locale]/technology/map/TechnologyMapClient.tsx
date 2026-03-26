@@ -526,7 +526,7 @@ export default function TechnologyMapClient() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">{t("title")}</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">{t("title")}</h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">{t("subtitle")}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">

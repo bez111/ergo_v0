@@ -109,7 +109,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left column: text + stats */}
                 <div>
-                  <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-white">
                     {t('hero.title')}
                   </h1>
                   <p className="text-lg md:text-xl text-neutral-300 mb-4 max-w-2xl">
@@ -248,7 +248,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             className="pb-16"
           >
             <div className="max-w-7xl mx-auto">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="list" aria-label="Available playbooks" aria-live="polite">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6" role="list" aria-label="Available playbooks" aria-live="polite">
                 {filteredPlaybooks.map((playbook, index) => {
                   const PlaybookIcon = iconMap[playbook.icon] || BookOpen;
                   return (
