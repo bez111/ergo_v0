@@ -6,8 +6,8 @@ type MessageRecord = Record<string, unknown>;
 // Helper to load all message files from a locale folder
 async function loadMessagesFromFolder(locale: string): Promise<MessageRecord> {
   const messageFiles = [
-    'agent-economy', 'common', 'demos', 'home', 'blog', 'community', 'compare', 'content-hubs',
-    'developers', 'ecosystem', 'events', 'faq', 'hodlers', 'infographics',
+    'agent-economy', 'build', 'common', 'demos', 'home', 'blog', 'community', 'compare', 'content-hubs',
+    'developers', 'ecosystem', 'ecosystem-projects', 'events', 'faq', 'hodlers', 'infographics',
     'learn', 'manifesto', 'miners', 'misc', 'newsletter', 'patterns', 'seo', 'start',
     'technology', 'use', 'wallet'
   ];
