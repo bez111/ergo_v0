@@ -40,9 +40,9 @@
       "usability": "易用性",
       "features": "功能",
       "platforms": "平台",
-      "privacy": "[TODO: Enhanced privacy features]",
-      "tokens": "[TODO: Native token support]",
-      "dapps": "[TODO: dApp integration]"
+      "privacy": "增强隐私功能",
+      "tokens": "原生代币支持",
+      "dapps": "dApp 集成"
     },
     "recommended": {
       "title": "推荐钱包",

@@ -415,82 +415,82 @@
     "subtitle": "技术文档与指南",
     "description": "面向开发者和用户的综合文档。",
     "hero": {
-      "whyErgo": "[TODO: Why Ergo?]",
-      "glossary": "[TODO: Glossary]",
-      "developerHub": "[TODO: Developer Hub]"
+      "whyErgo": "为什么选择 Ergo？",
+      "glossary": "术语表",
+      "developerHub": "Developer Hub"
     },
     "sections": {
       "gettingStarted": "快速入门",
       "coreTechnology": {
-        "title": "[TODO: Core Technology]",
-        "description": "[TODO: Deep dive into Ergo's technical foundations and innovative features that set it apart from other blockchain platforms.]",
+        "title": "核心技术",
+        "description": "Deep dive into Ergo's technical foundations and innovative features that set it apart from other blockchain platforms.",
         "eutxo": {
-          "title": "[TODO: eUTxO Model]",
-          "description": "[TODO: Extended UTXO model for advanced smart contracts]"
+          "title": "eUTxO Model",
+          "description": "Extended UTXO model for advanced smart contracts"
         },
         "nipopows": {
-          "title": "[TODO: NIPoPoWs]",
-          "description": "[TODO: Non-Interactive Proofs of Proof-of-Work for light clients]"
+          "title": "NIPoPoWs",
+          "description": "Non-Interactive Proofs of Proof-of-Work for light clients"
         },
         "ergoscript": {
-          "title": "[TODO: ErgoScript]",
-          "description": "[TODO: Powerful smart contract language with formal verification]"
+          "title": "ErgoScript",
+          "description": "Powerful smart contract language with formal verification"
         },
         "storageRent": {
-          "title": "[TODO: Storage Rent]",
-          "description": "[TODO: Economic incentives for sustainable blockchain storage]"
+          "title": "Storage Rent",
+          "description": "Economic incentives for sustainable blockchain storage"
         },
         "autolykos": {
-          "title": "[TODO: Autolykos]",
-          "description": "[TODO: Memory-hard proof-of-work algorithm]"
+          "title": "Autolykos",
+          "description": "Memory-hard proof-of-work algorithm"
         },
         "privacy": {
-          "title": "[TODO: Privacy Features]",
-          "description": "[TODO: Built-in privacy tools and protocols]"
+          "title": "Privacy Features",
+          "description": "Built-in privacy tools and protocols"
         },
         "lightClients": {
-          "title": "[TODO: Light Clients]",
-          "description": "[TODO: Lightweight blockchain verification]"
+          "title": "Light Clients",
+          "description": "Lightweight blockchain verification"
         }
       },
       "forDevelopers": {
-        "title": "[TODO: For Developers]",
-        "description": "[TODO: Build powerful applications on Ergo with our comprehensive development resources.]",
+        "title": "For Developers",
+        "description": "Build powerful applications on Ergo with our comprehensive development resources.",
         "ergoscript": {
-          "title": "[TODO: ErgoScript Basics]",
-          "description": "[TODO: Learn Ergo's smart contract language with practical examples and tutorials]"
+          "title": "ErgoScript Basics",
+          "description": "Learn Ergo's smart contract language with practical examples and tutorials"
         },
         "apis": {
-          "title": "[TODO: APIs & SDKs]",
-          "description": "[TODO: Integrate with Ergo using our REST APIs, GraphQL, and language-specific SDKs]"
+          "title": "APIs & SDKs",
+          "description": "Integrate with Ergo using our REST APIs, GraphQL, and language-specific SDKs"
         },
         "tutorials": {
-          "title": "[TODO: Development Tutorials]",
-          "description": "[TODO: Step-by-step guides for building dApps, tokens, and complex contracts]"
+          "title": "Development Tutorials",
+          "description": "Step-by-step guides for building dApps, tokens, and complex contracts"
         },
         "tools": {
-          "title": "[TODO: Developer Tools]",
-          "description": "[TODO: IDEs, debuggers, testing frameworks, and deployment tools for Ergo development]"
+          "title": "Developer Tools",
+          "description": "IDEs, debuggers, testing frameworks, and deployment tools for Ergo development"
         }
       },
       "forMiners": {
-        "title": "[TODO: For Miners]",
-        "description": "[TODO: Everything you need to start mining Ergo and secure the network.]",
+        "title": "For Miners",
+        "description": "Everything you need to start mining Ergo and secure the network.",
         "gettingStarted": {
-          "title": "[TODO: Mining Guide]",
-          "description": "[TODO: Complete guide to mining Ergo: hardware, software, and pool selection]"
+          "title": "Mining Guide",
+          "description": "Complete guide to mining Ergo: hardware, software, and pool selection"
         },
         "hardware": {
-          "title": "[TODO: Hardware Requirements]",
-          "description": "[TODO: GPU specifications, memory requirements, and hardware optimization tips]"
+          "title": "Hardware Requirements",
+          "description": "GPU specifications, memory requirements, and hardware optimization tips"
         },
         "pools": {
-          "title": "[TODO: Mining Pools]",
-          "description": "[TODO: Find the best mining pools with detailed comparisons and setup guides]"
+          "title": "Mining Pools",
+          "description": "Find the best mining pools with detailed comparisons and setup guides"
         },
         "profitability": {
-          "title": "[TODO: Mining Profitability]",
-          "description": "[TODO: Calculate earnings, understand costs, and optimize your mining operation]"
+          "title": "Mining Profitability",
+          "description": "Calculate earnings, understand costs, and optimize your mining operation"
         }
       },
       "apiReference": "API 参考",

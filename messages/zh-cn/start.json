@@ -135,7 +135,7 @@
       }
     },
     "quiz": {
-      "title": "发现您的错误资料",
+      "title": "发现您的 Ergo 之路",
       "subtitle": "查找您的路径",
       "description": "回答几个问题以获得你的Ergo旅程的个性化推荐。",
       "seo": {
@@ -1315,21 +1315,21 @@
           },
           "engagementTactics": {
             "title": "如何创建参与内容",
-            "description": "创建有意义的对话来帮助人们发现错误",
-            "intro": "优秀的营销引导对话。下面是如何创建有吸引力的内容，帮助人们发现错误：",
+            "description": "创建有意义的对话来帮助人们发现 Ergo",
+            "intro": "优秀的营销引导对话。以下是如何创建有吸引力的内容，帮助人们了解 Ergo：",
             "tactics": {
               "0": {
-                "name": "由问题驱动的员额",
+                "name": "以问题驱动的帖子",
                 "description": "以发人深思的问题开始",
                 "examples": {
                   "0": "在当前的 DeFi 协议中，您的最大挑战是什么？",
                   "1": "您认为隐私硬币在今后5年中将如何进化？",
-                  "2": "什么可以说服你从以太坊切换到埃尔戈？"
+                  "2": "什么能说服你从以太坊迁移到 Ergo？"
                 }
               },
               "1": {
                 "name": "比较内容",
-                "description": "相对于替代品的位置错误",
+                "description": "相对于替代品定位 Ergo",
                 "examples": {
                   "0": "Ergo vs Etherum: 交易费用明细表",
                   "1": "eUTXO vs 账户模式：安全影响",
@@ -2033,7 +2033,7 @@
     "choose_your_path_into_ergo": "选择你到埃尔戈的路径",
     "pick_what_describes_you_best": "选择你最好的描述，我们将引导你完成你需要知道的一切。",
     "start_from_the_basics": "从基础知识开始",
-    "why_ergo_exists": "为什么错误存在",
+    "why_ergo_exists": "为什么 Ergo 存在",
     "understand_the_problems_we_solve": "了解我们解决的问题",
     "download_and_set_up_securely": "下载并安全设置",
     "try_test_coins": "尝试测试硬币",

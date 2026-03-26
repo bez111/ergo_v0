@@ -405,7 +405,7 @@
     "eutxo model": "модель eUTXO",
     "ergoscript": "ErgoScript",
     "secure pow (autolykos v2)": "Безопасный PoW (Autolykos v2)",
-    "storage rent": "Storage Rent",
+    "storage rent": "Арендная плата за хранение",
     "nipopows": "NiPoPoWs",
     "privacy features (σ-protocols)": "Функции приватности (Σ-протоколы)",
     "learning hub": "Центр обучения",
@@ -484,8 +484,8 @@
     "currentLanguage": "Русский"
   },
   "icu": {
-    "items": "{count, plural, =0 {Нет предметов} one {# # предмет} other {# предметов}}",
-    "minutes": "{count, plural, =0 {Без минут} one {# минут} other {# минут}}"
+    "items": "{count, plural, =0 {Нет предметов} one {# предмет} few {# предмета} many {# предметов} other {# предметов}}",
+    "minutes": "{count, plural, =0 {Без минут} one {# минута} few {# минуты} many {# минут} other {# минут}}"
   },
   "validation": {
     "required": "Поле {field} обязательно для заполнения",

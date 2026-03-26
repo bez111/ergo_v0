@@ -2721,18 +2721,18 @@
         }
       },
       "cta": {
-        "title": "开始挖矿错误",
+        "title": "开始挖矿 Ergo",
         "description": "加入数以千计的 GPU 矿工来保护Ergo — 开始几分钟。",
         "buttons": {
           "miningGuide": "采矿指南",
-          "whitepaper": "白纸"
+          "whitepaper": "白皮书"
         },
         "relatedText": "相关的",
         "storageRentLink": "存储出租器",
         "adaptiveEmissionLink": "适应性排放与治理"
       },
       "howTo": {
-        "title": "开始挖矿错误",
+        "title": "开始挖矿 Ergo",
         "description": "使用GPU启动采掘Ergo的快速步骤。",
         "tools": {
           "gpu": "GPU启用的计算机",
