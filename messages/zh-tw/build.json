@@ -1,196 +1,232 @@
 {
   "buildPage": {
     "hero": {
-      "tag": "Technical Architecture",
-      "titleStart": "Agent Payment Stack: ",
-      "titleHighlight": "Reference Architecture",
-      "description": "Four on-chain primitives. Three composable flows. Everything you need to build agent-to-agent payments on Ergo — from a single API call to a full community currency.",
-      "ctaChainCash": "ChainCash repo",
-      "ctaCodeExamples": "Code examples",
-      "ctaLiveDemos": "Live demos"
+      "tag": "技術架構",
+      "titleStart": "代理支付堆疊：",
+      "titleHighlight": "參考架構",
+      "description": "四個鏈上原語。三個可組合流程。從單一API呼叫到完整的社區貨幣，在Ergo上建構代理對代理支付所需的一切。",
+      "ctaChainCash": "ChainCash儲存庫",
+      "ctaCodeExamples": "程式碼範例",
+      "ctaLiveDemos": "即時演示"
     },
     "breadcrumbs": {
-      "agentEconomy": "Agent Economy",
-      "agentPayments": "Agent Payments"
+      "agentEconomy": "代理經濟",
+      "agentPayments": "代理支付"
     },
     "primitives": {
-      "sectionLabel": "The Four Primitives",
+      "sectionLabel": "四個原語",
       "heading": "Reserve · Note · Tracker · Predicate",
       "reserve": {
         "title": "Reserve",
-        "subtitle": "Capital backing",
-        "description": "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
+        "subtitle": "資本擔保",
+        "description": "一個將ERG或代幣作為抵押品持有的鏈上合約。任何人都可以隨時驗證準備金比率。Reserve就是銀行——無需中間人。",
         "properties": [
-          "Holds ERG / native tokens",
-          "Auditable at any time",
-          "Backs note issuance 1:1 or fractionally",
-          "Redemption enforced by contract"
+          "持有ERG / 原生代幣",
+          "隨時可審計",
+          "以1:1或部分方式支撐Note發行",
+          "合約強制執行贖回"
         ]
       },
       "note": {
         "title": "Note",
-        "subtitle": "Programmable IOU",
-        "description": "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
+        "subtitle": "可程式化IOU",
+        "description": "代表對Reserve的請求權的不記名代幣。Note可以轉移、拆分和贖回。接受Predicate定義誰可以接收或贖回Note。",
         "properties": [
-          "Bearer instrument — no identity required",
-          "Transferable peer-to-peer",
-          "Redeemable against reserve contract",
-          "Denomination in any token"
+          "不記名工具——無需身份",
+          "點對點可轉移",
+          "可對Reserve合約贖回",
+          "以任何代幣計價"
         ]
       },
       "tracker": {
         "title": "Tracker",
-        "subtitle": "On-chain accounting",
-        "description": "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
+        "subtitle": "鏈上會計",
+        "description": "追蹤從Reserve發行的所有Note的累計餘額、信用使用量和贖回歷史。可以把它看作任何人都能驗證的公開帳本。",
         "properties": [
-          "Tracks total issued vs redeemed",
-          "Enforces credit limits",
-          "Publicly auditable",
-          "Composable with other contracts"
+          "追蹤已發行vs已贖回總額",
+          "執行信用限額",
+          "公開可審計",
+          "可與其他合約組合"
         ]
       },
       "predicate": {
         "title": "Acceptance Predicate",
-        "subtitle": "Programmable trust rule",
-        "description": "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
+        "subtitle": "可程式化信任規則",
+        "description": "代理接受Note作為支付的條件。條件可以包括任務雜湊驗證、截止日期檢查、憑證證明或任何鏈上資料。",
         "properties": [
-          "Arbitrary acceptance conditions",
-          "Task hash verification",
-          "Deadline enforcement",
-          "Composable with Sigma proofs"
+          "任意接受條件",
+          "任務雜湊驗證",
+          "截止日期執行",
+          "可與Sigma證明組合"
         ]
       }
     },
     "flows": {
-      "sectionLabel": "Sample Flows",
-      "heading": "Three composable flows",
-      "seeLiveDemo": "See live demo",
+      "sectionLabel": "範例流程",
+      "heading": "三個可組合流程",
+      "seeLiveDemo": "查看即時演示",
       "apiCall": {
-        "title": "Flow A: Agent buys API call",
-        "description": "One call. One proof. No persistent account.",
+        "title": "流程A：代理購買API呼叫",
+        "description": "一次呼叫。一個證明。無需持久帳戶。",
         "steps": [
-          { "label": "Agent creates note", "detail": "0.001 ERG face value, provider address in R4" },
-          { "label": "Provider checks predicate", "detail": "Verifies note value, reserve backing, deadline" },
-          { "label": "Provider delivers response", "detail": "Returns API result, marks note as spent" },
-          { "label": "Settlement", "detail": "Note burned, ERG released from reserve to provider" }
+          {
+            "label": "代理建立Note",
+            "detail": "0.001 ERG面值，R4中的提供者地址"
+          },
+          {
+            "label": "提供者檢查Predicate",
+            "detail": "驗證Note價值、Reserve擔保、截止日期"
+          },
+          {
+            "label": "提供者交付回應",
+            "detail": "返回API結果，將Note標記為已使用"
+          },
+          {
+            "label": "結算",
+            "detail": "Note被銷毀，ERG從Reserve釋放給提供者"
+          }
         ]
       },
       "credit": {
-        "title": "Flow B: Agent pays on credit",
-        "description": "Reserve deployed. Notes issued. Tracker monitors.",
+        "title": "流程B：代理以信用支付",
+        "description": "部署Reserve。發行Note。Tracker監控。",
         "steps": [
-          { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue notes", "detail": "Create notes against reserve up to credit limit" },
-          { "label": "Agent spends notes", "detail": "Notes transferred to providers, tracker updated" },
-          { "label": "Auto-settlement", "detail": "When threshold hit, reserve settles outstanding notes" }
+          {
+            "label": "部署Reserve",
+            "detail": "將ERG鎖定在帶信用限額的Reserve合約中"
+          },
+          {
+            "label": "發行Note",
+            "detail": "在信用限額內對Reserve建立Note"
+          },
+          {
+            "label": "代理使用Note",
+            "detail": "Note轉移給提供者，Tracker更新"
+          },
+          {
+            "label": "自動結算",
+            "detail": "達到閾值時，Reserve結算未清Note"
+          }
         ]
       },
       "community": {
-        "title": "Flow C: Community reserve + tracker",
-        "description": "A local marketplace, a compute co-op, an agent network.",
+        "title": "流程C：社區Reserve + Tracker",
+        "description": "本地市場、運算合作社、代理網路。",
         "steps": [
-          { "label": "Community deploys reserve", "detail": "ERG pooled by community members" },
-          { "label": "Issue community notes", "detail": "Members receive notes proportional to contribution" },
-          { "label": "Local commerce", "detail": "Notes accepted within community, predicates define rules" },
-          { "label": "Redemption", "detail": "Members redeem notes for ERG from reserve anytime" }
+          {
+            "label": "社區部署Reserve",
+            "detail": "社區成員共同匯集ERG"
+          },
+          {
+            "label": "發行社區Note",
+            "detail": "成員按貢獻比例獲得Note"
+          },
+          {
+            "label": "本地商務",
+            "detail": "社區內接受Note，Predicate定義規則"
+          },
+          {
+            "label": "贖回",
+            "detail": "成員隨時可從Reserve贖回Note換取ERG"
+          }
         ]
       }
     },
     "sdks": {
-      "sectionLabel": "SDKs & Tools",
-      "heading": "Start building today",
-      "recommended": "recommended",
-      "docs": "Docs",
+      "sectionLabel": "SDK與工具",
+      "heading": "今天就開始建構",
+      "recommended": "推薦",
+      "docs": "文件",
       "fleetSdk": {
-        "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
+        "desc": "在瀏覽器或Node.js中建構交易。代理支付的最佳起點。"
       },
       "sigmaRust": {
-        "desc": "High-performance signing and serialization. Ideal for production agent infrastructure."
+        "desc": "高效能簽名和序列化。適合生產環境的代理基礎設施。"
       },
       "appKit": {
-        "desc": "Full-featured SDK for backend services, bots, and server-side agents."
+        "desc": "用於後端服務、機器人和伺服器端代理的全功能SDK。"
       },
       "ergoNodeApi": {
-        "desc": "Direct access to the node. Submit transactions, query UTXOs, watch addresses."
+        "desc": "直接存取節點。提交交易、查詢UTxO、監控地址。"
       }
     },
     "status": {
-      "sectionLabel": "What's live",
-      "heading": "Stack status",
-      "description": "Five layers are live. Two are open problems. Join the conversation on GitHub — these are the most interesting unsolved problems in agent money.",
-      "legendLive": "Live on mainnet / testnet",
-      "legendSoon": "Coming soon",
-      "legendOpen": "Open research problem",
-      "live": "live",
-      "soon": "soon",
-      "open": "open",
-      "ergoTestnetFaucet": "Ergo testnet faucet",
+      "sectionLabel": "目前狀態",
+      "heading": "堆疊狀態",
+      "description": "五個層級已上線。兩個是開放問題。加入GitHub上的討論——這些是代理貨幣中最有趣的未解決問題。",
+      "legendLive": "在mainnet / testnet上運行",
+      "legendSoon": "即將推出",
+      "legendOpen": "開放研究問題",
+      "live": "運行中",
+      "soon": "即將",
+      "open": "開放",
+      "ergoTestnetFaucet": "Ergo testnet水龍頭",
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "ChainCash server (notes + reserves)",
+      "chainCash": "ChainCash伺服器（Note + Reserve）",
       "ergoNodeApi": "Ergo Node REST API",
-      "starterRepo": "agent-economy-starter repo",
-      "identityLayer": "Agent identity layer"
+      "starterRepo": "agent-economy-starter儲存庫",
+      "identityLayer": "代理身份層"
     },
     "links": {
       "ergoDocs": {
-        "title": "Ergo Docs",
-        "desc": "Official developer documentation"
+        "title": "Ergo文件",
+        "desc": "官方開發者文件"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "desc": "Copy-paste ErgoScript blueprints"
+        "title": "開發模式",
+        "desc": "可複製貼上的ErgoScript藍圖"
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token — key for agents"
+        "desc": "用任何代幣支付手續費——對代理至關重要"
       }
     },
     "cta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+      "title": "正在建構代理？與我們聯繫。",
+      "description": "預約設計會議、獲取程式碼審查或加入建構者名單。我們將在24小時內回覆。"
     }
   },
   "quickstartPage": {
-    "breadcrumbBuild": "Build",
-    "breadcrumbQuickstart": "Quickstart",
-    "badge": "Under 10 minutes",
-    "heroTitle1": "First agent payment",
-    "heroTitle2": "on Ergo testnet.",
-    "heroDescription": "No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a real transaction on Ergo testnet explorer.",
-    "prerequisitesTitle": "Prerequisites",
-    "prereq1": "Node.js 18+ installed",
-    "prereq2": "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
-    "prereq3": "Testnet ERG from faucet at testnet.ergofaucet.org",
-    "prereq4": "5 minutes of uninterrupted focus",
-    "copied": "Copied",
-    "copy": "Copy",
-    "step1Title": "Install Fleet SDK",
-    "step1Time": "30 seconds",
-    "step1Note": "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
-    "step2Title": "Create agent-pay.js",
-    "step2Time": "2 minutes",
-    "step2Note": "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
-    "step3Title": "Run the script",
-    "step3Time": "10 seconds",
-    "step3Note": "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
-    "step4Title": "Add a Note (agent payment)",
-    "step4Time": "5 minutes",
-    "step4Note": "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
-    "explorerTitle": "See your TX on explorer",
-    "explorerDescription": "After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:",
-    "whatsNextTitle": "What's next",
-    "nextCard1Title": "Agent Payments Architecture",
-    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
-    "nextCard2Title": "7-Step Playbook",
-    "nextCard2Desc": "From environment setup to mainnet deployment — a full builder guide",
-    "nextCard3Title": "Live Demos",
-    "nextCard3Desc": "See working agent payment flows on Ergo testnet, open source",
+    "breadcrumbBuild": "建構",
+    "breadcrumbQuickstart": "快速開始",
+    "badge": "不到10分鐘",
+    "heroTitle1": "第一筆代理支付",
+    "heroTitle2": "在Ergo testnet上。",
+    "heroDescription": "沒有理論。沒有設定儀式。一個npm套件，30行程式碼，一個命令——您就能在Ergo testnet瀏覽器上看到真實交易。",
+    "prerequisitesTitle": "先決條件",
+    "prereq1": "已安裝Node.js 18+",
+    "prereq2": "一個testnet地址（在Nautilus錢包→設定→testnet模式中建立）",
+    "prereq3": "從testnet.ergofaucet.org獲取testnet ERG",
+    "prereq4": "5分鐘不間斷的專注時間",
+    "copied": "已複製",
+    "copy": "複製",
+    "step1Title": "安裝Fleet SDK",
+    "step1Time": "30秒",
+    "step1Note": "Fleet SDK是Ergo的官方TypeScript/JS SDK。可在Node.js和瀏覽器中使用。",
+    "step2Title": "建立agent-pay.js",
+    "step2Time": "2分鐘",
+    "step2Note": "此腳本獲取您的testnet UTxO，建構交易，並輸出未簽名的TX物件。",
+    "step3Title": "執行腳本",
+    "step3Time": "10秒",
+    "step3Note": "您將看到未簽名的交易JSON。使用Nautilus（瀏覽器）或伺服器端金鑰簽名，然後POST到/api/v1/transactions。",
+    "step4Title": "新增Note（代理支付）",
+    "step4Time": "5分鐘",
+    "step4Note": "這擴展了基本TX以建立Note——一個帶有任務雜湊暫存器的不記名工具。接收者對Reserve贖回。",
+    "explorerTitle": "在瀏覽器中查看您的TX",
+    "explorerDescription": "提交後，您的交易會出現在Ergo testnet瀏覽器上。將您的TX ID貼到：",
+    "whatsNextTitle": "下一步",
+    "nextCard1Title": "代理支付架構",
+    "nextCard1Desc": "Reserve、Note、Tracker、Acceptance Predicate——完整的技術參考",
+    "nextCard2Title": "7步驟Playbook",
+    "nextCard2Desc": "從環境設定到mainnet部署——完整的建構者指南",
+    "nextCard3Title": "即時演示",
+    "nextCard3Desc": "在Ergo testnet上查看運行中的代理支付流程，開源",
     "nextCard4Title": "GitHub: ergo-agent-economy",
-    "nextCard4Desc": "Open source examples: basic payment, Note IOU, acceptance predicate",
-    "readMore": "Read more",
-    "ctaTitle": "Ready to go deeper?",
-    "ctaDescription": "The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting."
+    "nextCard4Desc": "開源範例：基本支付、Note IOU、Acceptance Predicate",
+    "readMore": "閱讀更多",
+    "ctaTitle": "準備深入了解？",
+    "ctaDescription": "快速開始讓您動起來。完整的架構參考和7步驟Playbook正等著您。"
   }
 }

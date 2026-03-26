@@ -1,196 +1,232 @@
 {
   "buildPage": {
     "hero": {
-      "tag": "Technical Architecture",
-      "titleStart": "Agent Payment Stack: ",
-      "titleHighlight": "Reference Architecture",
-      "description": "Four on-chain primitives. Three composable flows. Everything you need to build agent-to-agent payments on Ergo — from a single API call to a full community currency.",
-      "ctaChainCash": "ChainCash repo",
-      "ctaCodeExamples": "Code examples",
-      "ctaLiveDemos": "Live demos"
+      "tag": "Teknik Mimari",
+      "titleStart": "Ajan Ödeme Yığını: ",
+      "titleHighlight": "Referans Mimari",
+      "description": "Dört zincir üstü ilkel. Üç birleştirilebilir akış. Tek bir API çağrısından tam bir topluluk para birimine kadar, Ergo üzerinde ajandan ajana ödemeler oluşturmak için ihtiyacınız olan her şey.",
+      "ctaChainCash": "ChainCash deposu",
+      "ctaCodeExamples": "Kod örnekleri",
+      "ctaLiveDemos": "Canlı demolar"
     },
     "breadcrumbs": {
-      "agentEconomy": "Agent Economy",
-      "agentPayments": "Agent Payments"
+      "agentEconomy": "Ajan Ekonomisi",
+      "agentPayments": "Ajan Ödemeleri"
     },
     "primitives": {
-      "sectionLabel": "The Four Primitives",
+      "sectionLabel": "Dört İlkel",
       "heading": "Reserve · Note · Tracker · Predicate",
       "reserve": {
         "title": "Reserve",
-        "subtitle": "Capital backing",
-        "description": "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
+        "subtitle": "Sermaye desteği",
+        "description": "ERG veya tokenleri teminat olarak tutan zincir üstü sözleşme. Herkes reserve oranını istediği zaman doğrulayabilir. Reserve bankadır — aracı yoktur.",
         "properties": [
-          "Holds ERG / native tokens",
-          "Auditable at any time",
-          "Backs note issuance 1:1 or fractionally",
-          "Redemption enforced by contract"
+          "ERG / yerel tokenler tutar",
+          "Her zaman denetlenebilir",
+          "Note ihracını 1:1 veya kısmi olarak destekler",
+          "İtfa sözleşme ile zorunlu kılınır"
         ]
       },
       "note": {
         "title": "Note",
-        "subtitle": "Programmable IOU",
-        "description": "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
+        "subtitle": "Programlanabilir IOU",
+        "description": "Bir Reserve karşısında talebi temsil eden hamiline ait token. Note transferedilebilir, bölünebilir ve itfa edilebilir. Kabul Predicate kimin Note alıp itfa edebileceğini tanımlar.",
         "properties": [
-          "Bearer instrument — no identity required",
-          "Transferable peer-to-peer",
-          "Redeemable against reserve contract",
-          "Denomination in any token"
+          "Hamiline ait araç — kimlik gerekmez",
+          "Eşler arası transfer edilebilir",
+          "Reserve sözleşmesine karşı itfa edilebilir",
+          "Herhangi bir tokenle nominal değer"
         ]
       },
       "tracker": {
         "title": "Tracker",
-        "subtitle": "On-chain accounting",
-        "description": "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
+        "subtitle": "Zincir üstü muhasebe",
+        "description": "Bir Reserve den ihraç edilen tüm Note lar genelinde kümülatif bakiyeleri, kredi kullanımını ve itfa geçmişini izler. Herkesin doğrulayabileceği halka açık bir defter olarak düşünün.",
         "properties": [
-          "Tracks total issued vs redeemed",
-          "Enforces credit limits",
-          "Publicly auditable",
-          "Composable with other contracts"
+          "Toplam ihraç vs itfa edileni izler",
+          "Kredi limitlerini uygular",
+          "Halka açık denetlenebilir",
+          "Diğer sözleşmelerle birleştirilebilir"
         ]
       },
       "predicate": {
         "title": "Acceptance Predicate",
-        "subtitle": "Programmable trust rule",
-        "description": "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
+        "subtitle": "Programlanabilir güven kuralı",
+        "description": "Bir ajanın Note u ödeme olarak kabul edeceği koşul. Koşullar görev hash doğrulaması, son tarih kontrolleri, kimlik kanıtları veya herhangi bir zincir üstü veriyi içerebilir.",
         "properties": [
-          "Arbitrary acceptance conditions",
-          "Task hash verification",
-          "Deadline enforcement",
-          "Composable with Sigma proofs"
+          "Rastgele kabul koşulları",
+          "Görev hash doğrulaması",
+          "Son tarih uygulaması",
+          "Sigma kanıtlarıyla birleştirilebilir"
         ]
       }
     },
     "flows": {
-      "sectionLabel": "Sample Flows",
-      "heading": "Three composable flows",
-      "seeLiveDemo": "See live demo",
+      "sectionLabel": "Örnek Akışlar",
+      "heading": "Üç birleştirilebilir akış",
+      "seeLiveDemo": "Canlı demoyu gör",
       "apiCall": {
-        "title": "Flow A: Agent buys API call",
-        "description": "One call. One proof. No persistent account.",
+        "title": "Akış A: Ajan API çağrısı satın alır",
+        "description": "Bir çağrı. Bir kanıt. Kalıcı hesap yok.",
         "steps": [
-          { "label": "Agent creates note", "detail": "0.001 ERG face value, provider address in R4" },
-          { "label": "Provider checks predicate", "detail": "Verifies note value, reserve backing, deadline" },
-          { "label": "Provider delivers response", "detail": "Returns API result, marks note as spent" },
-          { "label": "Settlement", "detail": "Note burned, ERG released from reserve to provider" }
+          {
+            "label": "Ajan Note oluşturur",
+            "detail": "0.001 ERG nominal değer, R4 te sağlayıcı adresi"
+          },
+          {
+            "label": "Sağlayıcı Predicate i kontrol eder",
+            "detail": "Note değerini, Reserve desteğini, son tarihi doğrular"
+          },
+          {
+            "label": "Sağlayıcı yanıt iletir",
+            "detail": "API sonucunu döndürür, Note u harcandı olarak işaretler"
+          },
+          {
+            "label": "Uzlaşma",
+            "detail": "Note yakılır, ERG Reserve den sağlayıcıya serbest bırakılır"
+          }
         ]
       },
       "credit": {
-        "title": "Flow B: Agent pays on credit",
-        "description": "Reserve deployed. Notes issued. Tracker monitors.",
+        "title": "Akış B: Ajan krediyle öder",
+        "description": "Reserve dağıtılır. Note lar ihraç edilir. Tracker izler.",
         "steps": [
-          { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue notes", "detail": "Create notes against reserve up to credit limit" },
-          { "label": "Agent spends notes", "detail": "Notes transferred to providers, tracker updated" },
-          { "label": "Auto-settlement", "detail": "When threshold hit, reserve settles outstanding notes" }
+          {
+            "label": "Reserve dağıt",
+            "detail": "ERG yi kredi limiti ile Reserve sözleşmesine kilitle"
+          },
+          {
+            "label": "Note ları ihraç et",
+            "detail": "Kredi limitine kadar Reserve e karşı Note oluştur"
+          },
+          {
+            "label": "Ajan Note ları harcar",
+            "detail": "Note lar sağlayıcılara transfer edilir, Tracker güncellenir"
+          },
+          {
+            "label": "Otomatik uzlaşma",
+            "detail": "Eşik aşıldığında Reserve ödenmemiş Note ları kapatır"
+          }
         ]
       },
       "community": {
-        "title": "Flow C: Community reserve + tracker",
-        "description": "A local marketplace, a compute co-op, an agent network.",
+        "title": "Akış C: Topluluk Reserve + Tracker",
+        "description": "Yerel pazar yeri, hesaplama kooperatifi, ajan ağı.",
         "steps": [
-          { "label": "Community deploys reserve", "detail": "ERG pooled by community members" },
-          { "label": "Issue community notes", "detail": "Members receive notes proportional to contribution" },
-          { "label": "Local commerce", "detail": "Notes accepted within community, predicates define rules" },
-          { "label": "Redemption", "detail": "Members redeem notes for ERG from reserve anytime" }
+          {
+            "label": "Topluluk Reserve dağıtır",
+            "detail": "Topluluk üyeleri ERG yi havuzlar"
+          },
+          {
+            "label": "Topluluk Note ları ihraç edilir",
+            "detail": "Üyeler katkılarıyla orantılı Note alır"
+          },
+          {
+            "label": "Yerel ticaret",
+            "detail": "Note lar topluluk içinde kabul edilir, Predicate ler kuralları tanımlar"
+          },
+          {
+            "label": "İtfa",
+            "detail": "Üyeler her zaman Reserve den ERG karşılığında Note ları itfa edebilir"
+          }
         ]
       }
     },
     "sdks": {
-      "sectionLabel": "SDKs & Tools",
-      "heading": "Start building today",
-      "recommended": "recommended",
-      "docs": "Docs",
+      "sectionLabel": "SDK lar ve Araçlar",
+      "heading": "Bugün inşa etmeye başlayın",
+      "recommended": "önerilen",
+      "docs": "Dokümantasyon",
       "fleetSdk": {
-        "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
+        "desc": "Tarayıcınızda veya Node.js de işlem oluşturun. Ajan ödemeleri için en iyi başlangıç noktası."
       },
       "sigmaRust": {
-        "desc": "High-performance signing and serialization. Ideal for production agent infrastructure."
+        "desc": "Yüksek performanslı imzalama ve serileştirme. Üretim ajan altyapısı için ideal."
       },
       "appKit": {
-        "desc": "Full-featured SDK for backend services, bots, and server-side agents."
+        "desc": "Backend servisleri, botlar ve sunucu tarafı ajanlar için tam özellikli SDK."
       },
       "ergoNodeApi": {
-        "desc": "Direct access to the node. Submit transactions, query UTXOs, watch addresses."
+        "desc": "Düğüme doğrudan erişim. İşlem gönderme, UTxO sorgulama, adres izleme."
       }
     },
     "status": {
-      "sectionLabel": "What's live",
-      "heading": "Stack status",
-      "description": "Five layers are live. Two are open problems. Join the conversation on GitHub — these are the most interesting unsolved problems in agent money.",
-      "legendLive": "Live on mainnet / testnet",
-      "legendSoon": "Coming soon",
-      "legendOpen": "Open research problem",
-      "live": "live",
-      "soon": "soon",
-      "open": "open",
-      "ergoTestnetFaucet": "Ergo testnet faucet",
+      "sectionLabel": "Mevcut durum",
+      "heading": "Yığın durumu",
+      "description": "Beş katman canlı. İkisi açık problem. GitHub daki sohbete katılın — bunlar ajan parasındaki en ilginç çözülmemiş problemlerdir.",
+      "legendLive": "mainnet / testnet üzerinde canlı",
+      "legendSoon": "Yakında",
+      "legendOpen": "Açık araştırma problemi",
+      "live": "canlı",
+      "soon": "yakında",
+      "open": "açık",
+      "ergoTestnetFaucet": "Ergo testnet musluğu",
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "ChainCash server (notes + reserves)",
+      "chainCash": "ChainCash sunucusu (Note + Reserve)",
       "ergoNodeApi": "Ergo Node REST API",
-      "starterRepo": "agent-economy-starter repo",
-      "identityLayer": "Agent identity layer"
+      "starterRepo": "agent-economy-starter deposu",
+      "identityLayer": "Ajan kimlik katmanı"
     },
     "links": {
       "ergoDocs": {
-        "title": "Ergo Docs",
-        "desc": "Official developer documentation"
+        "title": "Ergo Dokümanları",
+        "desc": "Resmi geliştirici dokümantasyonu"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "desc": "Copy-paste ErgoScript blueprints"
+        "title": "Geliştirici Kalıpları",
+        "desc": "Kopyala-yapıştır ErgoScript şablonları"
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token — key for agents"
+        "desc": "Herhangi bir tokenle ücret ödeyin — ajanlar için kritik"
       }
     },
     "cta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+      "title": "Ajan mı inşa ediyorsunuz? Bizimle konuşun.",
+      "description": "Tasarım oturumu ayırtın, kod incelemesi alın veya inşaatçı listesine katılın. 24 saat içinde yanıt vereceğiz."
     }
   },
   "quickstartPage": {
-    "breadcrumbBuild": "Build",
-    "breadcrumbQuickstart": "Quickstart",
-    "badge": "Under 10 minutes",
-    "heroTitle1": "First agent payment",
-    "heroTitle2": "on Ergo testnet.",
-    "heroDescription": "No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a real transaction on Ergo testnet explorer.",
-    "prerequisitesTitle": "Prerequisites",
-    "prereq1": "Node.js 18+ installed",
-    "prereq2": "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
-    "prereq3": "Testnet ERG from faucet at testnet.ergofaucet.org",
-    "prereq4": "5 minutes of uninterrupted focus",
-    "copied": "Copied",
-    "copy": "Copy",
-    "step1Title": "Install Fleet SDK",
-    "step1Time": "30 seconds",
-    "step1Note": "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
-    "step2Title": "Create agent-pay.js",
-    "step2Time": "2 minutes",
-    "step2Note": "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
-    "step3Title": "Run the script",
-    "step3Time": "10 seconds",
-    "step3Note": "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
-    "step4Title": "Add a Note (agent payment)",
-    "step4Time": "5 minutes",
-    "step4Note": "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
-    "explorerTitle": "See your TX on explorer",
-    "explorerDescription": "After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:",
-    "whatsNextTitle": "What's next",
-    "nextCard1Title": "Agent Payments Architecture",
-    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
-    "nextCard2Title": "7-Step Playbook",
-    "nextCard2Desc": "From environment setup to mainnet deployment — a full builder guide",
-    "nextCard3Title": "Live Demos",
-    "nextCard3Desc": "See working agent payment flows on Ergo testnet, open source",
+    "breadcrumbBuild": "İnşa",
+    "breadcrumbQuickstart": "Hızlı Başlangıç",
+    "badge": "10 dakikadan az",
+    "heroTitle1": "İlk ajan ödemesi",
+    "heroTitle2": "Ergo testnet üzerinde.",
+    "heroDescription": "Teori yok. Kurulum seremonisi yok. Bir npm paketi, 30 satır, bir komut — ve Ergo testnet gezgininde gerçek bir işlem görürsünüz.",
+    "prerequisitesTitle": "Ön Koşullar",
+    "prereq1": "Node.js 18+ yüklü",
+    "prereq2": "Bir testnet adresi (Nautilus cüzdan → Ayarlar → testnet modunda oluşturun)",
+    "prereq3": "testnet.ergofaucet.org adresinden testnet ERG",
+    "prereq4": "5 dakika kesintisiz odaklanma",
+    "copied": "Kopyalandı",
+    "copy": "Kopyala",
+    "step1Title": "Fleet SDK yı Yükle",
+    "step1Time": "30 saniye",
+    "step1Note": "Fleet SDK, Ergo nun resmi TypeScript/JS SDK sıdır. Node.js ve tarayıcılarda çalışır.",
+    "step2Title": "agent-pay.js oluştur",
+    "step2Time": "2 dakika",
+    "step2Note": "Bu script testnet UTxO larınızı getirir, bir işlem oluşturur ve imzasız TX nesnesini çıktılar.",
+    "step3Title": "Scripti çalıştır",
+    "step3Time": "10 saniye",
+    "step3Note": "İmzasız işlem JSON unu göreceksiniz. Nautilus (tarayıcı) veya sunucu tarafı bir anahtarla imzalayın, ardından /api/v1/transactions a POST edin.",
+    "step4Title": "Note (ajan ödemesi) ekle",
+    "step4Time": "5 dakika",
+    "step4Note": "Bu, temel TX i genişleterek bir Note — görev hash kaydına sahip hamiline ait araç — oluşturur. Alıcı bunu Reserve e karşı itfa eder.",
+    "explorerTitle": "Gezginde TX inizi görün",
+    "explorerDescription": "Gönderdikten sonra işleminiz Ergo testnet gezgininde görünür. TX ID nizi buraya yapıştırın:",
+    "whatsNextTitle": "Sırada ne var",
+    "nextCard1Title": "Ajan Ödemeleri Mimarisi",
+    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — tam teknik referans",
+    "nextCard2Title": "7 Adımlık Playbook",
+    "nextCard2Desc": "Ortam kurulumundan mainnet dağıtımına — tam inşaatçı rehberi",
+    "nextCard3Title": "Canlı Demolar",
+    "nextCard3Desc": "Ergo testnet üzerinde çalışan ajan ödeme akışlarını görün, açık kaynak",
     "nextCard4Title": "GitHub: ergo-agent-economy",
-    "nextCard4Desc": "Open source examples: basic payment, Note IOU, acceptance predicate",
-    "readMore": "Read more",
-    "ctaTitle": "Ready to go deeper?",
-    "ctaDescription": "The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting."
+    "nextCard4Desc": "Açık kaynak örnekler: temel ödeme, Note IOU, Acceptance Predicate",
+    "readMore": "Devamını oku",
+    "ctaTitle": "Daha derine inmeye hazır mısınız?",
+    "ctaDescription": "Hızlı başlangıç sizi harekete geçirir. Tam mimari referans ve 7 adımlık playbook sizi bekliyor."
   }
 }

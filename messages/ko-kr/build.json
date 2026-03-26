@@ -1,196 +1,232 @@
 {
   "buildPage": {
     "hero": {
-      "tag": "Technical Architecture",
-      "titleStart": "Agent Payment Stack: ",
-      "titleHighlight": "Reference Architecture",
-      "description": "Four on-chain primitives. Three composable flows. Everything you need to build agent-to-agent payments on Ergo — from a single API call to a full community currency.",
-      "ctaChainCash": "ChainCash repo",
-      "ctaCodeExamples": "Code examples",
-      "ctaLiveDemos": "Live demos"
+      "tag": "기술 아키텍처",
+      "titleStart": "에이전트 결제 스택: ",
+      "titleHighlight": "레퍼런스 아키텍처",
+      "description": "4가지 온체인 프리미티브. 3가지 조합 가능한 플로우. 단일 API 호출부터 완전한 커뮤니티 통화까지, Ergo에서 에이전트 간 결제를 구축하는 데 필요한 모든 것.",
+      "ctaChainCash": "ChainCash 저장소",
+      "ctaCodeExamples": "코드 예제",
+      "ctaLiveDemos": "라이브 데모"
     },
     "breadcrumbs": {
-      "agentEconomy": "Agent Economy",
-      "agentPayments": "Agent Payments"
+      "agentEconomy": "에이전트 이코노미",
+      "agentPayments": "에이전트 결제"
     },
     "primitives": {
-      "sectionLabel": "The Four Primitives",
+      "sectionLabel": "4가지 프리미티브",
       "heading": "Reserve · Note · Tracker · Predicate",
       "reserve": {
         "title": "Reserve",
-        "subtitle": "Capital backing",
-        "description": "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
+        "subtitle": "자본 담보",
+        "description": "ERG 또는 토큰을 담보로 보유하는 온체인 컨트랙트. 누구나 언제든지 준비금 비율을 검증할 수 있습니다. Reserve는 은행이며, 중개인이 필요 없습니다.",
         "properties": [
-          "Holds ERG / native tokens",
-          "Auditable at any time",
-          "Backs note issuance 1:1 or fractionally",
-          "Redemption enforced by contract"
+          "ERG / 네이티브 토큰 보유",
+          "언제든 감사 가능",
+          "Note 발행을 1:1 또는 부분적으로 뒷받침",
+          "컨트랙트에 의해 상환 집행"
         ]
       },
       "note": {
         "title": "Note",
-        "subtitle": "Programmable IOU",
-        "description": "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
+        "subtitle": "프로그래밍 가능한 IOU",
+        "description": "Reserve에 대한 청구권을 나타내는 무기명 토큰. Note는 전송, 분할, 상환이 가능합니다. 수락 Predicate는 누가 Note를 받거나 상환할 수 있는지 정의합니다.",
         "properties": [
-          "Bearer instrument — no identity required",
-          "Transferable peer-to-peer",
-          "Redeemable against reserve contract",
-          "Denomination in any token"
+          "무기명 증서 — 신원 확인 불필요",
+          "피어투피어 전송 가능",
+          "Reserve 컨트랙트에 대해 상환 가능",
+          "모든 토큰으로 액면가 설정"
         ]
       },
       "tracker": {
         "title": "Tracker",
-        "subtitle": "On-chain accounting",
-        "description": "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
+        "subtitle": "온체인 회계",
+        "description": "Reserve에서 발행된 모든 Note에 걸친 누적 잔액, 신용 사용량, 상환 이력을 추적합니다. 누구나 검증할 수 있는 공개 원장으로 생각하세요.",
         "properties": [
-          "Tracks total issued vs redeemed",
-          "Enforces credit limits",
-          "Publicly auditable",
-          "Composable with other contracts"
+          "발행 대비 상환 총액 추적",
+          "신용 한도 집행",
+          "공개 감사 가능",
+          "다른 컨트랙트와 조합 가능"
         ]
       },
       "predicate": {
         "title": "Acceptance Predicate",
-        "subtitle": "Programmable trust rule",
-        "description": "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
+        "subtitle": "프로그래밍 가능한 신뢰 규칙",
+        "description": "에이전트가 Note를 결제로 수락하는 조건. 조건에는 태스크 해시 검증, 기한 확인, 자격 증명, 또는 모든 온체인 데이터가 포함될 수 있습니다.",
         "properties": [
-          "Arbitrary acceptance conditions",
-          "Task hash verification",
-          "Deadline enforcement",
-          "Composable with Sigma proofs"
+          "임의의 수락 조건",
+          "태스크 해시 검증",
+          "기한 집행",
+          "Sigma 증명과 조합 가능"
         ]
       }
     },
     "flows": {
-      "sectionLabel": "Sample Flows",
-      "heading": "Three composable flows",
-      "seeLiveDemo": "See live demo",
+      "sectionLabel": "샘플 플로우",
+      "heading": "3가지 조합 가능한 플로우",
+      "seeLiveDemo": "라이브 데모 보기",
       "apiCall": {
-        "title": "Flow A: Agent buys API call",
-        "description": "One call. One proof. No persistent account.",
+        "title": "플로우 A: 에이전트가 API 호출 구매",
+        "description": "한 번의 호출. 하나의 증명. 영구 계정 불필요.",
         "steps": [
-          { "label": "Agent creates note", "detail": "0.001 ERG face value, provider address in R4" },
-          { "label": "Provider checks predicate", "detail": "Verifies note value, reserve backing, deadline" },
-          { "label": "Provider delivers response", "detail": "Returns API result, marks note as spent" },
-          { "label": "Settlement", "detail": "Note burned, ERG released from reserve to provider" }
+          {
+            "label": "에이전트가 Note 생성",
+            "detail": "0.001 ERG 액면가, R4에 프로바이더 주소"
+          },
+          {
+            "label": "프로바이더가 Predicate 확인",
+            "detail": "Note 가치, Reserve 담보, 기한 검증"
+          },
+          {
+            "label": "프로바이더가 응답 전달",
+            "detail": "API 결과 반환, Note를 사용됨으로 표시"
+          },
+          {
+            "label": "정산",
+            "detail": "Note 소각, Reserve에서 프로바이더에게 ERG 해제"
+          }
         ]
       },
       "credit": {
-        "title": "Flow B: Agent pays on credit",
-        "description": "Reserve deployed. Notes issued. Tracker monitors.",
+        "title": "플로우 B: 에이전트가 신용으로 결제",
+        "description": "Reserve 배포. Note 발행. Tracker가 모니터링.",
         "steps": [
-          { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue notes", "detail": "Create notes against reserve up to credit limit" },
-          { "label": "Agent spends notes", "detail": "Notes transferred to providers, tracker updated" },
-          { "label": "Auto-settlement", "detail": "When threshold hit, reserve settles outstanding notes" }
+          {
+            "label": "Reserve 배포",
+            "detail": "신용 한도와 함께 ERG를 Reserve 컨트랙트에 잠금"
+          },
+          {
+            "label": "Note 발행",
+            "detail": "신용 한도까지 Reserve에 대해 Note 생성"
+          },
+          {
+            "label": "에이전트가 Note 사용",
+            "detail": "Note가 프로바이더에게 전송되고 Tracker 업데이트"
+          },
+          {
+            "label": "자동 정산",
+            "detail": "임계값 도달 시 Reserve가 미결제 Note를 정산"
+          }
         ]
       },
       "community": {
-        "title": "Flow C: Community reserve + tracker",
-        "description": "A local marketplace, a compute co-op, an agent network.",
+        "title": "플로우 C: 커뮤니티 Reserve + Tracker",
+        "description": "로컬 마켓플레이스, 컴퓨트 협동조합, 에이전트 네트워크.",
         "steps": [
-          { "label": "Community deploys reserve", "detail": "ERG pooled by community members" },
-          { "label": "Issue community notes", "detail": "Members receive notes proportional to contribution" },
-          { "label": "Local commerce", "detail": "Notes accepted within community, predicates define rules" },
-          { "label": "Redemption", "detail": "Members redeem notes for ERG from reserve anytime" }
+          {
+            "label": "커뮤니티가 Reserve 배포",
+            "detail": "커뮤니티 멤버가 ERG를 풀링"
+          },
+          {
+            "label": "커뮤니티 Note 발행",
+            "detail": "멤버가 기여에 비례하여 Note 수령"
+          },
+          {
+            "label": "로컬 상거래",
+            "detail": "커뮤니티 내에서 Note 수락, Predicate가 규칙 정의"
+          },
+          {
+            "label": "상환",
+            "detail": "멤버는 언제든 Reserve에서 ERG로 Note 상환 가능"
+          }
         ]
       }
     },
     "sdks": {
-      "sectionLabel": "SDKs & Tools",
-      "heading": "Start building today",
-      "recommended": "recommended",
-      "docs": "Docs",
+      "sectionLabel": "SDK & 도구",
+      "heading": "오늘부터 빌드를 시작하세요",
+      "recommended": "추천",
+      "docs": "문서",
       "fleetSdk": {
-        "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
+        "desc": "브라우저 또는 Node.js에서 트랜잭션을 구축. 에이전트 결제를 위한 최고의 시작점."
       },
       "sigmaRust": {
-        "desc": "High-performance signing and serialization. Ideal for production agent infrastructure."
+        "desc": "고성능 서명 및 직렬화. 프로덕션 에이전트 인프라에 이상적."
       },
       "appKit": {
-        "desc": "Full-featured SDK for backend services, bots, and server-side agents."
+        "desc": "백엔드 서비스, 봇, 서버사이드 에이전트를 위한 풀 기능 SDK."
       },
       "ergoNodeApi": {
-        "desc": "Direct access to the node. Submit transactions, query UTXOs, watch addresses."
+        "desc": "노드에 직접 접근. 트랜잭션 제출, UTxO 조회, 주소 감시."
       }
     },
     "status": {
-      "sectionLabel": "What's live",
-      "heading": "Stack status",
-      "description": "Five layers are live. Two are open problems. Join the conversation on GitHub — these are the most interesting unsolved problems in agent money.",
-      "legendLive": "Live on mainnet / testnet",
-      "legendSoon": "Coming soon",
-      "legendOpen": "Open research problem",
-      "live": "live",
-      "soon": "soon",
-      "open": "open",
-      "ergoTestnetFaucet": "Ergo testnet faucet",
+      "sectionLabel": "현재 상태",
+      "heading": "스택 상태",
+      "description": "5개 레이어가 가동 중. 2개는 미해결 문제. GitHub에서 대화에 참여하세요 — 에이전트 머니에서 가장 흥미로운 미해결 문제입니다.",
+      "legendLive": "mainnet / testnet에서 가동 중",
+      "legendSoon": "곧 출시",
+      "legendOpen": "미해결 연구 과제",
+      "live": "가동 중",
+      "soon": "곧",
+      "open": "미해결",
+      "ergoTestnetFaucet": "Ergo testnet 파우셋",
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "ChainCash server (notes + reserves)",
+      "chainCash": "ChainCash 서버 (Note + Reserve)",
       "ergoNodeApi": "Ergo Node REST API",
-      "starterRepo": "agent-economy-starter repo",
-      "identityLayer": "Agent identity layer"
+      "starterRepo": "agent-economy-starter 저장소",
+      "identityLayer": "에이전트 신원 레이어"
     },
     "links": {
       "ergoDocs": {
-        "title": "Ergo Docs",
-        "desc": "Official developer documentation"
+        "title": "Ergo 문서",
+        "desc": "공식 개발자 문서"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "desc": "Copy-paste ErgoScript blueprints"
+        "title": "개발 패턴",
+        "desc": "복사하여 사용하는 ErgoScript 블루프린트"
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token — key for agents"
+        "desc": "모든 토큰으로 수수료 지불 — 에이전트에 핵심"
       }
     },
     "cta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+      "title": "에이전트를 구축 중이신가요? 연락주세요.",
+      "description": "디자인 세션 예약, 코드 리뷰, 또는 빌더 목록 가입. 24시간 이내에 답변드립니다."
     }
   },
   "quickstartPage": {
-    "breadcrumbBuild": "Build",
-    "breadcrumbQuickstart": "Quickstart",
-    "badge": "Under 10 minutes",
-    "heroTitle1": "First agent payment",
-    "heroTitle2": "on Ergo testnet.",
-    "heroDescription": "No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a real transaction on Ergo testnet explorer.",
-    "prerequisitesTitle": "Prerequisites",
-    "prereq1": "Node.js 18+ installed",
-    "prereq2": "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
-    "prereq3": "Testnet ERG from faucet at testnet.ergofaucet.org",
-    "prereq4": "5 minutes of uninterrupted focus",
-    "copied": "Copied",
-    "copy": "Copy",
-    "step1Title": "Install Fleet SDK",
-    "step1Time": "30 seconds",
-    "step1Note": "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
-    "step2Title": "Create agent-pay.js",
-    "step2Time": "2 minutes",
-    "step2Note": "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
-    "step3Title": "Run the script",
-    "step3Time": "10 seconds",
-    "step3Note": "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
-    "step4Title": "Add a Note (agent payment)",
-    "step4Time": "5 minutes",
-    "step4Note": "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
-    "explorerTitle": "See your TX on explorer",
-    "explorerDescription": "After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:",
-    "whatsNextTitle": "What's next",
-    "nextCard1Title": "Agent Payments Architecture",
-    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
-    "nextCard2Title": "7-Step Playbook",
-    "nextCard2Desc": "From environment setup to mainnet deployment — a full builder guide",
-    "nextCard3Title": "Live Demos",
-    "nextCard3Desc": "See working agent payment flows on Ergo testnet, open source",
+    "breadcrumbBuild": "빌드",
+    "breadcrumbQuickstart": "퀵스타트",
+    "badge": "10분 이내",
+    "heroTitle1": "첫 에이전트 결제",
+    "heroTitle2": "Ergo testnet에서.",
+    "heroDescription": "이론 없음. 셋업 의식 없음. npm 패키지 하나, 30줄, 명령어 하나 — Ergo testnet 탐색기에서 실제 트랜잭션을 확인하세요.",
+    "prerequisitesTitle": "사전 요구사항",
+    "prereq1": "Node.js 18+ 설치됨",
+    "prereq2": "testnet 주소 (Nautilus 지갑 → 설정 → testnet 모드에서 생성)",
+    "prereq3": "testnet.ergofaucet.org에서 testnet ERG 받기",
+    "prereq4": "집중할 수 있는 5분",
+    "copied": "복사됨",
+    "copy": "복사",
+    "step1Title": "Fleet SDK 설치",
+    "step1Time": "30초",
+    "step1Note": "Fleet SDK는 Ergo의 공식 TypeScript/JS SDK입니다. Node.js와 브라우저에서 작동합니다.",
+    "step2Title": "agent-pay.js 생성",
+    "step2Time": "2분",
+    "step2Note": "이 스크립트는 testnet UTxO를 가져오고, 트랜잭션을 구축하며, 미서명 TX 객체를 출력합니다.",
+    "step3Title": "스크립트 실행",
+    "step3Time": "10초",
+    "step3Note": "미서명 트랜잭션 JSON이 표시됩니다. Nautilus(브라우저) 또는 서버사이드 키로 서명한 후 /api/v1/transactions에 POST하세요.",
+    "step4Title": "Note(에이전트 결제) 추가",
+    "step4Time": "5분",
+    "step4Note": "기본 TX를 확장하여 Note — 태스크 해시 레지스터가 있는 무기명 증서 — 를 생성합니다. 수신자는 Reserve에 대해 상환합니다.",
+    "explorerTitle": "탐색기에서 TX 확인",
+    "explorerDescription": "제출 후 트랜잭션이 Ergo testnet 탐색기에 표시됩니다. TX ID를 여기에 붙여넣으세요:",
+    "whatsNextTitle": "다음 단계",
+    "nextCard1Title": "에이전트 결제 아키텍처",
+    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — 완전한 기술 레퍼런스",
+    "nextCard2Title": "7단계 Playbook",
+    "nextCard2Desc": "환경 설정부터 mainnet 배포까지 — 완전한 빌더 가이드",
+    "nextCard3Title": "라이브 데모",
+    "nextCard3Desc": "Ergo testnet에서 작동하는 에이전트 결제 플로우, 오픈 소스",
     "nextCard4Title": "GitHub: ergo-agent-economy",
-    "nextCard4Desc": "Open source examples: basic payment, Note IOU, acceptance predicate",
-    "readMore": "Read more",
-    "ctaTitle": "Ready to go deeper?",
-    "ctaDescription": "The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting."
+    "nextCard4Desc": "오픈 소스 예제: 기본 결제, Note IOU, Acceptance Predicate",
+    "readMore": "더 읽기",
+    "ctaTitle": "더 깊이 들어갈 준비가 되셨나요?",
+    "ctaDescription": "퀵스타트로 시작하세요. 완전한 아키텍처 레퍼런스와 7단계 Playbook이 기다리고 있습니다."
   }
 }

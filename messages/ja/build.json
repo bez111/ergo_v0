@@ -1,196 +1,232 @@
 {
   "buildPage": {
     "hero": {
-      "tag": "Technical Architecture",
-      "titleStart": "Agent Payment Stack: ",
-      "titleHighlight": "Reference Architecture",
-      "description": "Four on-chain primitives. Three composable flows. Everything you need to build agent-to-agent payments on Ergo — from a single API call to a full community currency.",
-      "ctaChainCash": "ChainCash repo",
-      "ctaCodeExamples": "Code examples",
-      "ctaLiveDemos": "Live demos"
+      "tag": "技術アーキテクチャ",
+      "titleStart": "エージェント決済スタック：",
+      "titleHighlight": "リファレンスアーキテクチャ",
+      "description": "4つのオンチェーンプリミティブ。3つの組み合わせ可能なフロー。単一のAPI呼び出しから完全なコミュニティ通貨まで、Ergo上でエージェント間決済を構築するために必要なすべて。",
+      "ctaChainCash": "ChainCashリポジトリ",
+      "ctaCodeExamples": "コード例",
+      "ctaLiveDemos": "ライブデモ"
     },
     "breadcrumbs": {
-      "agentEconomy": "Agent Economy",
-      "agentPayments": "Agent Payments"
+      "agentEconomy": "エージェントエコノミー",
+      "agentPayments": "エージェント決済"
     },
     "primitives": {
-      "sectionLabel": "The Four Primitives",
+      "sectionLabel": "4つのプリミティブ",
       "heading": "Reserve · Note · Tracker · Predicate",
       "reserve": {
         "title": "Reserve",
-        "subtitle": "Capital backing",
-        "description": "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
+        "subtitle": "資本の裏付け",
+        "description": "ERGまたはトークンを担保として保持するオンチェーンコントラクト。誰でもいつでもリザーブ比率を検証できます。Reserveは銀行であり、仲介者は不要です。",
         "properties": [
-          "Holds ERG / native tokens",
-          "Auditable at any time",
-          "Backs note issuance 1:1 or fractionally",
-          "Redemption enforced by contract"
+          "ERG / ネイティブトークンを保持",
+          "いつでも監査可能",
+          "Note発行を1:1または部分的に裏付け",
+          "コントラクトによって償還を強制"
         ]
       },
       "note": {
         "title": "Note",
-        "subtitle": "Programmable IOU",
-        "description": "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
+        "subtitle": "プログラマブルIOU",
+        "description": "Reserveに対する請求権を表す無記名トークン。Noteは転送、分割、償還が可能です。承認Predicateは誰がNoteを受け取りまたは償還できるかを定義します。",
         "properties": [
-          "Bearer instrument — no identity required",
-          "Transferable peer-to-peer",
-          "Redeemable against reserve contract",
-          "Denomination in any token"
+          "無記名証書 — 本人確認不要",
+          "ピアツーピアで転送可能",
+          "Reserveコントラクトに対して償還可能",
+          "任意のトークンで額面設定"
         ]
       },
       "tracker": {
         "title": "Tracker",
-        "subtitle": "On-chain accounting",
-        "description": "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
+        "subtitle": "オンチェーン会計",
+        "description": "Reserveから発行されたすべてのNoteにわたる累積残高、信用使用量、償還履歴を追跡します。誰でも検証可能な公開台帳と考えてください。",
         "properties": [
-          "Tracks total issued vs redeemed",
-          "Enforces credit limits",
-          "Publicly auditable",
-          "Composable with other contracts"
+          "発行済み vs 償還済みの合計を追跡",
+          "信用限度額を強制",
+          "公開監査可能",
+          "他のコントラクトと組み合わせ可能"
         ]
       },
       "predicate": {
         "title": "Acceptance Predicate",
-        "subtitle": "Programmable trust rule",
-        "description": "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
+        "subtitle": "プログラマブル信頼ルール",
+        "description": "エージェントがNoteを支払いとして受け入れる条件。条件にはタスクハッシュ検証、期限チェック、資格証明、またはあらゆるオンチェーンデータを含めることができます。",
         "properties": [
-          "Arbitrary acceptance conditions",
-          "Task hash verification",
-          "Deadline enforcement",
-          "Composable with Sigma proofs"
+          "任意の受入条件",
+          "タスクハッシュ検証",
+          "期限の強制",
+          "Sigmaプルーフとの組み合わせ可能"
         ]
       }
     },
     "flows": {
-      "sectionLabel": "Sample Flows",
-      "heading": "Three composable flows",
-      "seeLiveDemo": "See live demo",
+      "sectionLabel": "サンプルフロー",
+      "heading": "3つの組み合わせ可能なフロー",
+      "seeLiveDemo": "ライブデモを見る",
       "apiCall": {
-        "title": "Flow A: Agent buys API call",
-        "description": "One call. One proof. No persistent account.",
+        "title": "フローA：エージェントがAPI呼び出しを購入",
+        "description": "1回の呼び出し。1つの証明。永続アカウント不要。",
         "steps": [
-          { "label": "Agent creates note", "detail": "0.001 ERG face value, provider address in R4" },
-          { "label": "Provider checks predicate", "detail": "Verifies note value, reserve backing, deadline" },
-          { "label": "Provider delivers response", "detail": "Returns API result, marks note as spent" },
-          { "label": "Settlement", "detail": "Note burned, ERG released from reserve to provider" }
+          {
+            "label": "エージェントがNoteを作成",
+            "detail": "0.001 ERG額面、R4にプロバイダーアドレス"
+          },
+          {
+            "label": "プロバイダーがPredicateを確認",
+            "detail": "Note価値、Reserve裏付け、期限を検証"
+          },
+          {
+            "label": "プロバイダーがレスポンスを配信",
+            "detail": "API結果を返し、Noteを使用済みとしてマーク"
+          },
+          {
+            "label": "決済",
+            "detail": "Noteがバーンされ、ERGがReserveからプロバイダーに解放"
+          }
         ]
       },
       "credit": {
-        "title": "Flow B: Agent pays on credit",
-        "description": "Reserve deployed. Notes issued. Tracker monitors.",
+        "title": "フローB：エージェントが信用で支払い",
+        "description": "Reserveをデプロイ。Noteを発行。Trackerが監視。",
         "steps": [
-          { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue notes", "detail": "Create notes against reserve up to credit limit" },
-          { "label": "Agent spends notes", "detail": "Notes transferred to providers, tracker updated" },
-          { "label": "Auto-settlement", "detail": "When threshold hit, reserve settles outstanding notes" }
+          {
+            "label": "Reserveをデプロイ",
+            "detail": "信用限度額付きでERGをReserveコントラクトにロック"
+          },
+          {
+            "label": "Noteを発行",
+            "detail": "信用限度額までReserveに対してNoteを作成"
+          },
+          {
+            "label": "エージェントがNoteを使用",
+            "detail": "Noteがプロバイダーに転送され、Trackerが更新"
+          },
+          {
+            "label": "自動決済",
+            "detail": "閾値に達すると、Reserveが未決済Noteを精算"
+          }
         ]
       },
       "community": {
-        "title": "Flow C: Community reserve + tracker",
-        "description": "A local marketplace, a compute co-op, an agent network.",
+        "title": "フローC：コミュニティReserve + Tracker",
+        "description": "ローカルマーケットプレイス、コンピュート協同組合、エージェントネットワーク。",
         "steps": [
-          { "label": "Community deploys reserve", "detail": "ERG pooled by community members" },
-          { "label": "Issue community notes", "detail": "Members receive notes proportional to contribution" },
-          { "label": "Local commerce", "detail": "Notes accepted within community, predicates define rules" },
-          { "label": "Redemption", "detail": "Members redeem notes for ERG from reserve anytime" }
+          {
+            "label": "コミュニティがReserveをデプロイ",
+            "detail": "コミュニティメンバーがERGをプール"
+          },
+          {
+            "label": "コミュニティNoteを発行",
+            "detail": "メンバーは貢献に比例してNoteを受け取り"
+          },
+          {
+            "label": "ローカル商取引",
+            "detail": "コミュニティ内でNoteが受け入れられ、Predicateがルールを定義"
+          },
+          {
+            "label": "償還",
+            "detail": "メンバーはいつでもReserveからERGとNoteを交換可能"
+          }
         ]
       }
     },
     "sdks": {
-      "sectionLabel": "SDKs & Tools",
-      "heading": "Start building today",
-      "recommended": "recommended",
-      "docs": "Docs",
+      "sectionLabel": "SDK & ツール",
+      "heading": "今日から構築を始めよう",
+      "recommended": "推奨",
+      "docs": "ドキュメント",
       "fleetSdk": {
-        "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
+        "desc": "ブラウザまたはNode.jsでトランザクションを構築。エージェント決済の最適な出発点。"
       },
       "sigmaRust": {
-        "desc": "High-performance signing and serialization. Ideal for production agent infrastructure."
+        "desc": "高性能な署名とシリアライゼーション。本番エージェントインフラに最適。"
       },
       "appKit": {
-        "desc": "Full-featured SDK for backend services, bots, and server-side agents."
+        "desc": "バックエンドサービス、ボット、サーバーサイドエージェント向けのフル機能SDK。"
       },
       "ergoNodeApi": {
-        "desc": "Direct access to the node. Submit transactions, query UTXOs, watch addresses."
+        "desc": "ノードへの直接アクセス。トランザクション送信、UTxOクエリ、アドレス監視。"
       }
     },
     "status": {
-      "sectionLabel": "What's live",
-      "heading": "Stack status",
-      "description": "Five layers are live. Two are open problems. Join the conversation on GitHub — these are the most interesting unsolved problems in agent money.",
-      "legendLive": "Live on mainnet / testnet",
-      "legendSoon": "Coming soon",
-      "legendOpen": "Open research problem",
-      "live": "live",
-      "soon": "soon",
-      "open": "open",
-      "ergoTestnetFaucet": "Ergo testnet faucet",
+      "sectionLabel": "稼働状況",
+      "heading": "スタックステータス",
+      "description": "5つのレイヤーが稼働中。2つは未解決の問題。GitHubで議論に参加してください — エージェントマネーにおける最も興味深い未解決問題です。",
+      "legendLive": "mainnet / testnetで稼働中",
+      "legendSoon": "近日公開",
+      "legendOpen": "未解決の研究課題",
+      "live": "稼働中",
+      "soon": "近日",
+      "open": "未解決",
+      "ergoTestnetFaucet": "Ergo testnetフォーセット",
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "ChainCash server (notes + reserves)",
+      "chainCash": "ChainCashサーバー（Note + Reserve）",
       "ergoNodeApi": "Ergo Node REST API",
-      "starterRepo": "agent-economy-starter repo",
-      "identityLayer": "Agent identity layer"
+      "starterRepo": "agent-economy-starterリポジトリ",
+      "identityLayer": "エージェントIDレイヤー"
     },
     "links": {
       "ergoDocs": {
-        "title": "Ergo Docs",
-        "desc": "Official developer documentation"
+        "title": "Ergoドキュメント",
+        "desc": "公式開発者ドキュメント"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "desc": "Copy-paste ErgoScript blueprints"
+        "title": "開発パターン",
+        "desc": "コピー＆ペーストで使えるErgoScriptブループリント"
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token — key for agents"
+        "desc": "任意のトークンで手数料を支払い — エージェントに不可欠"
       }
     },
     "cta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+      "title": "エージェントを構築中ですか？ご相談ください。",
+      "description": "デザインセッションの予約、コードレビュー、またはビルダーリストへの参加。24時間以内に返信します。"
     }
   },
   "quickstartPage": {
-    "breadcrumbBuild": "Build",
-    "breadcrumbQuickstart": "Quickstart",
-    "badge": "Under 10 minutes",
-    "heroTitle1": "First agent payment",
-    "heroTitle2": "on Ergo testnet.",
-    "heroDescription": "No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a real transaction on Ergo testnet explorer.",
-    "prerequisitesTitle": "Prerequisites",
-    "prereq1": "Node.js 18+ installed",
-    "prereq2": "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
-    "prereq3": "Testnet ERG from faucet at testnet.ergofaucet.org",
-    "prereq4": "5 minutes of uninterrupted focus",
-    "copied": "Copied",
-    "copy": "Copy",
-    "step1Title": "Install Fleet SDK",
-    "step1Time": "30 seconds",
-    "step1Note": "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
-    "step2Title": "Create agent-pay.js",
-    "step2Time": "2 minutes",
-    "step2Note": "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
-    "step3Title": "Run the script",
-    "step3Time": "10 seconds",
-    "step3Note": "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
-    "step4Title": "Add a Note (agent payment)",
-    "step4Time": "5 minutes",
-    "step4Note": "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
-    "explorerTitle": "See your TX on explorer",
-    "explorerDescription": "After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:",
-    "whatsNextTitle": "What's next",
-    "nextCard1Title": "Agent Payments Architecture",
-    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
-    "nextCard2Title": "7-Step Playbook",
-    "nextCard2Desc": "From environment setup to mainnet deployment — a full builder guide",
-    "nextCard3Title": "Live Demos",
-    "nextCard3Desc": "See working agent payment flows on Ergo testnet, open source",
+    "breadcrumbBuild": "ビルド",
+    "breadcrumbQuickstart": "クイックスタート",
+    "badge": "10分以内",
+    "heroTitle1": "初めてのエージェント決済",
+    "heroTitle2": "Ergo testnetで。",
+    "heroDescription": "理論なし。セットアップ儀式なし。1つのnpmパッケージ、30行、1つのコマンド — Ergo testnetエクスプローラーで実際のトランザクションを確認できます。",
+    "prerequisitesTitle": "前提条件",
+    "prereq1": "Node.js 18+がインストール済み",
+    "prereq2": "testnetアドレス（Nautilusウォレット → 設定 → testnetモードで作成）",
+    "prereq3": "testnet.ergofaucet.orgからtestnet ERGを取得",
+    "prereq4": "集中できる5分間",
+    "copied": "コピー済み",
+    "copy": "コピー",
+    "step1Title": "Fleet SDKをインストール",
+    "step1Time": "30秒",
+    "step1Note": "Fleet SDKはErgoの公式TypeScript/JS SDKです。Node.jsとブラウザで動作します。",
+    "step2Title": "agent-pay.jsを作成",
+    "step2Time": "2分",
+    "step2Note": "このスクリプトはtestnet UTxOを取得し、トランザクションを構築し、未署名TXオブジェクトを出力します。",
+    "step3Title": "スクリプトを実行",
+    "step3Time": "10秒",
+    "step3Note": "未署名トランザクションJSONが表示されます。Nautilus（ブラウザ）またはサーバーサイドキーで署名し、/api/v1/transactionsにPOSTしてください。",
+    "step4Title": "Note（エージェント決済）を追加",
+    "step4Time": "5分",
+    "step4Note": "基本TXを拡張してNote（タスクハッシュレジスタ付きの無記名証書）を作成します。受信者はReserveに対して償還します。",
+    "explorerTitle": "エクスプローラーでTXを確認",
+    "explorerDescription": "送信後、トランザクションはErgo testnetエクスプローラーに表示されます。TX IDをここに貼り付け：",
+    "whatsNextTitle": "次のステップ",
+    "nextCard1Title": "エージェント決済アーキテクチャ",
+    "nextCard1Desc": "Reserve、Note、Tracker、Acceptance Predicate — 完全な技術リファレンス",
+    "nextCard2Title": "7ステップPlaybook",
+    "nextCard2Desc": "環境構築からmainnetデプロイまで — 完全なビルダーガイド",
+    "nextCard3Title": "ライブデモ",
+    "nextCard3Desc": "Ergo testnetで動作するエージェント決済フローを確認、オープンソース",
     "nextCard4Title": "GitHub: ergo-agent-economy",
-    "nextCard4Desc": "Open source examples: basic payment, Note IOU, acceptance predicate",
-    "readMore": "Read more",
-    "ctaTitle": "Ready to go deeper?",
-    "ctaDescription": "The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting."
+    "nextCard4Desc": "オープンソース例：基本決済、Note IOU、Acceptance Predicate",
+    "readMore": "続きを読む",
+    "ctaTitle": "さらに深く学びたいですか？",
+    "ctaDescription": "クイックスタートで動き始めましょう。完全なアーキテクチャリファレンスと7ステップPlaybookが待っています。"
   }
 }

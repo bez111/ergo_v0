@@ -1,196 +1,232 @@
 {
   "buildPage": {
     "hero": {
-      "tag": "Technical Architecture",
-      "titleStart": "Agent Payment Stack: ",
-      "titleHighlight": "Reference Architecture",
-      "description": "Four on-chain primitives. Three composable flows. Everything you need to build agent-to-agent payments on Ergo — from a single API call to a full community currency.",
-      "ctaChainCash": "ChainCash repo",
-      "ctaCodeExamples": "Code examples",
-      "ctaLiveDemos": "Live demos"
+      "tag": "Architecture Technique",
+      "titleStart": "Stack de Paiement Agent : ",
+      "titleHighlight": "Architecture de Référence",
+      "description": "Quatre primitives on-chain. Trois flux composables. Tout ce dont vous avez besoin pour construire des paiements agent-à-agent sur Ergo — d'un simple appel API à une monnaie communautaire complète.",
+      "ctaChainCash": "Dépôt ChainCash",
+      "ctaCodeExamples": "Exemples de code",
+      "ctaLiveDemos": "Démos en direct"
     },
     "breadcrumbs": {
-      "agentEconomy": "Agent Economy",
-      "agentPayments": "Agent Payments"
+      "agentEconomy": "Économie des Agents",
+      "agentPayments": "Paiements des Agents"
     },
     "primitives": {
-      "sectionLabel": "The Four Primitives",
+      "sectionLabel": "Les Quatre Primitives",
       "heading": "Reserve · Note · Tracker · Predicate",
       "reserve": {
         "title": "Reserve",
-        "subtitle": "Capital backing",
-        "description": "An on-chain contract that holds ERG or tokens as collateral. Anyone can verify the reserve ratio at any time. The reserve is the bank — no middleman.",
+        "subtitle": "Garantie de capital",
+        "description": "Un contrat on-chain qui détient des ERG ou des tokens en garantie. N'importe qui peut vérifier le ratio de réserve à tout moment. La Reserve est la banque — pas d'intermédiaire.",
         "properties": [
-          "Holds ERG / native tokens",
-          "Auditable at any time",
-          "Backs note issuance 1:1 or fractionally",
-          "Redemption enforced by contract"
+          "Détient des ERG / tokens natifs",
+          "Auditable à tout moment",
+          "Garantit l'émission de Note 1:1 ou fractionnellement",
+          "Remboursement imposé par le contrat"
         ]
       },
       "note": {
         "title": "Note",
-        "subtitle": "Programmable IOU",
-        "description": "A bearer token representing a claim against a reserve. Notes can be transferred, split, and redeemed. The acceptance predicate defines who can receive or redeem the note.",
+        "subtitle": "Reconnaissance de dette programmable",
+        "description": "Un token au porteur représentant une créance contre une Reserve. Les Note peuvent être transférés, divisés et remboursés. Le Predicate d'acceptation définit qui peut recevoir ou rembourser le Note.",
         "properties": [
-          "Bearer instrument — no identity required",
-          "Transferable peer-to-peer",
-          "Redeemable against reserve contract",
-          "Denomination in any token"
+          "Instrument au porteur — aucune identité requise",
+          "Transférable de pair à pair",
+          "Remboursable contre le contrat de Reserve",
+          "Dénomination dans n'importe quel token"
         ]
       },
       "tracker": {
         "title": "Tracker",
-        "subtitle": "On-chain accounting",
-        "description": "Tracks cumulative balances, credit usage, and redemption history across all notes issued from a reserve. Think of it as a public ledger that anyone can verify.",
+        "subtitle": "Comptabilité on-chain",
+        "description": "Suit les soldes cumulés, l'utilisation du crédit et l'historique des remboursements pour tous les Note émis depuis une Reserve. Pensez-y comme un registre public que n'importe qui peut vérifier.",
         "properties": [
-          "Tracks total issued vs redeemed",
-          "Enforces credit limits",
-          "Publicly auditable",
-          "Composable with other contracts"
+          "Suit le total émis vs remboursé",
+          "Applique les limites de crédit",
+          "Auditable publiquement",
+          "Composable avec d'autres contrats"
         ]
       },
       "predicate": {
         "title": "Acceptance Predicate",
-        "subtitle": "Programmable trust rule",
-        "description": "The condition under which an agent will accept a note as payment. Conditions can include task hash verification, deadline checks, credential proofs, or any on-chain data.",
+        "subtitle": "Règle de confiance programmable",
+        "description": "La condition sous laquelle un agent acceptera un Note comme paiement. Les conditions peuvent inclure la vérification du hash de tâche, les contrôles de délai, les preuves d'accréditation ou toute donnée on-chain.",
         "properties": [
-          "Arbitrary acceptance conditions",
-          "Task hash verification",
-          "Deadline enforcement",
-          "Composable with Sigma proofs"
+          "Conditions d'acceptation arbitraires",
+          "Vérification du hash de tâche",
+          "Application des délais",
+          "Composable avec les preuves Sigma"
         ]
       }
     },
     "flows": {
-      "sectionLabel": "Sample Flows",
-      "heading": "Three composable flows",
-      "seeLiveDemo": "See live demo",
+      "sectionLabel": "Flux d'Exemple",
+      "heading": "Trois flux composables",
+      "seeLiveDemo": "Voir la démo en direct",
       "apiCall": {
-        "title": "Flow A: Agent buys API call",
-        "description": "One call. One proof. No persistent account.",
+        "title": "Flux A : L'agent achète un appel API",
+        "description": "Un appel. Une preuve. Pas de compte permanent.",
         "steps": [
-          { "label": "Agent creates note", "detail": "0.001 ERG face value, provider address in R4" },
-          { "label": "Provider checks predicate", "detail": "Verifies note value, reserve backing, deadline" },
-          { "label": "Provider delivers response", "detail": "Returns API result, marks note as spent" },
-          { "label": "Settlement", "detail": "Note burned, ERG released from reserve to provider" }
+          {
+            "label": "L'agent crée un Note",
+            "detail": "Valeur nominale de 0,001 ERG, adresse du fournisseur dans R4"
+          },
+          {
+            "label": "Le fournisseur vérifie le Predicate",
+            "detail": "Vérifie la valeur du Note, la garantie Reserve, le délai"
+          },
+          {
+            "label": "Le fournisseur livre la réponse",
+            "detail": "Retourne le résultat API, marque le Note comme dépensé"
+          },
+          {
+            "label": "Règlement",
+            "detail": "Note brûlé, ERG libéré de la Reserve vers le fournisseur"
+          }
         ]
       },
       "credit": {
-        "title": "Flow B: Agent pays on credit",
-        "description": "Reserve deployed. Notes issued. Tracker monitors.",
+        "title": "Flux B : L'agent paie à crédit",
+        "description": "Reserve déployée. Notes émis. Tracker surveille.",
         "steps": [
-          { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue notes", "detail": "Create notes against reserve up to credit limit" },
-          { "label": "Agent spends notes", "detail": "Notes transferred to providers, tracker updated" },
-          { "label": "Auto-settlement", "detail": "When threshold hit, reserve settles outstanding notes" }
+          {
+            "label": "Déployer la Reserve",
+            "detail": "Verrouiller des ERG dans le contrat de Reserve avec limite de crédit"
+          },
+          {
+            "label": "Émettre des Notes",
+            "detail": "Créer des Notes contre la Reserve jusqu'à la limite de crédit"
+          },
+          {
+            "label": "L'agent dépense les Notes",
+            "detail": "Notes transférés aux fournisseurs, Tracker mis à jour"
+          },
+          {
+            "label": "Auto-règlement",
+            "detail": "Au seuil atteint, la Reserve règle les Notes en cours"
+          }
         ]
       },
       "community": {
-        "title": "Flow C: Community reserve + tracker",
-        "description": "A local marketplace, a compute co-op, an agent network.",
+        "title": "Flux C : Reserve communautaire + Tracker",
+        "description": "Un marché local, une coopérative de calcul, un réseau d'agents.",
         "steps": [
-          { "label": "Community deploys reserve", "detail": "ERG pooled by community members" },
-          { "label": "Issue community notes", "detail": "Members receive notes proportional to contribution" },
-          { "label": "Local commerce", "detail": "Notes accepted within community, predicates define rules" },
-          { "label": "Redemption", "detail": "Members redeem notes for ERG from reserve anytime" }
+          {
+            "label": "La communauté déploie la Reserve",
+            "detail": "ERG mutualisés par les membres de la communauté"
+          },
+          {
+            "label": "Émettre des Notes communautaires",
+            "detail": "Les membres reçoivent des Notes proportionnels à leur contribution"
+          },
+          {
+            "label": "Commerce local",
+            "detail": "Notes acceptés au sein de la communauté, les Predicates définissent les règles"
+          },
+          {
+            "label": "Remboursement",
+            "detail": "Les membres remboursent les Notes contre des ERG de la Reserve à tout moment"
+          }
         ]
       }
     },
     "sdks": {
-      "sectionLabel": "SDKs & Tools",
-      "heading": "Start building today",
-      "recommended": "recommended",
-      "docs": "Docs",
+      "sectionLabel": "SDKs & Outils",
+      "heading": "Commencez à construire aujourd'hui",
+      "recommended": "recommandé",
+      "docs": "Documentation",
       "fleetSdk": {
-        "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
+        "desc": "Construisez des transactions dans votre navigateur ou Node.js. Meilleur point de départ pour les paiements d'agents."
       },
       "sigmaRust": {
-        "desc": "High-performance signing and serialization. Ideal for production agent infrastructure."
+        "desc": "Signature et sérialisation haute performance. Idéal pour l'infrastructure d'agents en production."
       },
       "appKit": {
-        "desc": "Full-featured SDK for backend services, bots, and server-side agents."
+        "desc": "SDK complet pour les services backend, bots et agents côté serveur."
       },
       "ergoNodeApi": {
-        "desc": "Direct access to the node. Submit transactions, query UTXOs, watch addresses."
+        "desc": "Accès direct au nœud. Soumettre des transactions, interroger les UTxO, surveiller les adresses."
       }
     },
     "status": {
-      "sectionLabel": "What's live",
-      "heading": "Stack status",
-      "description": "Five layers are live. Two are open problems. Join the conversation on GitHub — these are the most interesting unsolved problems in agent money.",
-      "legendLive": "Live on mainnet / testnet",
-      "legendSoon": "Coming soon",
-      "legendOpen": "Open research problem",
-      "live": "live",
-      "soon": "soon",
-      "open": "open",
-      "ergoTestnetFaucet": "Ergo testnet faucet",
+      "sectionLabel": "État actuel",
+      "heading": "Statut du stack",
+      "description": "Cinq couches sont en ligne. Deux sont des problèmes ouverts. Rejoignez la conversation sur GitHub — ce sont les problèmes non résolus les plus intéressants de la monnaie d'agents.",
+      "legendLive": "En ligne sur mainnet / testnet",
+      "legendSoon": "Bientôt disponible",
+      "legendOpen": "Problème de recherche ouvert",
+      "live": "en ligne",
+      "soon": "bientôt",
+      "open": "ouvert",
+      "ergoTestnetFaucet": "Faucet Ergo testnet",
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "ChainCash server (notes + reserves)",
+      "chainCash": "Serveur ChainCash (Note + Reserve)",
       "ergoNodeApi": "Ergo Node REST API",
-      "starterRepo": "agent-economy-starter repo",
-      "identityLayer": "Agent identity layer"
+      "starterRepo": "Dépôt agent-economy-starter",
+      "identityLayer": "Couche d'identité d'agent"
     },
     "links": {
       "ergoDocs": {
-        "title": "Ergo Docs",
-        "desc": "Official developer documentation"
+        "title": "Documentation Ergo",
+        "desc": "Documentation officielle pour développeurs"
       },
       "devPatterns": {
-        "title": "Dev Patterns",
-        "desc": "Copy-paste ErgoScript blueprints"
+        "title": "Modèles de Développement",
+        "desc": "Modèles ErgoScript à copier-coller"
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token — key for agents"
+        "desc": "Payez les frais dans n'importe quel token — essentiel pour les agents"
       }
     },
     "cta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+      "title": "Vous construisez des agents ? Parlons-en.",
+      "description": "Réservez une session de conception, obtenez une revue de code ou rejoignez la liste des constructeurs. Nous répondrons sous 24 heures."
     }
   },
   "quickstartPage": {
-    "breadcrumbBuild": "Build",
-    "breadcrumbQuickstart": "Quickstart",
-    "badge": "Under 10 minutes",
-    "heroTitle1": "First agent payment",
-    "heroTitle2": "on Ergo testnet.",
-    "heroDescription": "No theory. No setup ceremony. One npm package, 30 lines, one command — and you see a real transaction on Ergo testnet explorer.",
-    "prerequisitesTitle": "Prerequisites",
-    "prereq1": "Node.js 18+ installed",
-    "prereq2": "A testnet address (create one in Nautilus wallet → Settings → Testnet mode)",
-    "prereq3": "Testnet ERG from faucet at testnet.ergofaucet.org",
-    "prereq4": "5 minutes of uninterrupted focus",
-    "copied": "Copied",
-    "copy": "Copy",
-    "step1Title": "Install Fleet SDK",
-    "step1Time": "30 seconds",
-    "step1Note": "Fleet SDK is the official TypeScript/JS SDK for Ergo. Works in Node.js and browsers.",
-    "step2Title": "Create agent-pay.js",
+    "breadcrumbBuild": "Construire",
+    "breadcrumbQuickstart": "Démarrage rapide",
+    "badge": "Moins de 10 minutes",
+    "heroTitle1": "Premier paiement d'agent",
+    "heroTitle2": "sur Ergo testnet.",
+    "heroDescription": "Pas de théorie. Pas de cérémonie de configuration. Un paquet npm, 30 lignes, une commande — et vous voyez une vraie transaction sur l'explorateur Ergo testnet.",
+    "prerequisitesTitle": "Prérequis",
+    "prereq1": "Node.js 18+ installé",
+    "prereq2": "Une adresse testnet (créer dans Nautilus wallet → Paramètres → Mode testnet)",
+    "prereq3": "testnet ERG depuis le faucet sur testnet.ergofaucet.org",
+    "prereq4": "5 minutes de concentration ininterrompue",
+    "copied": "Copié",
+    "copy": "Copier",
+    "step1Title": "Installer Fleet SDK",
+    "step1Time": "30 secondes",
+    "step1Note": "Fleet SDK est le SDK officiel TypeScript/JS pour Ergo. Fonctionne dans Node.js et les navigateurs.",
+    "step2Title": "Créer agent-pay.js",
     "step2Time": "2 minutes",
-    "step2Note": "This script fetches your testnet UTxOs, builds a transaction, and outputs the unsigned TX object.",
-    "step3Title": "Run the script",
-    "step3Time": "10 seconds",
-    "step3Note": "You'll see the unsigned transaction JSON. Sign it with Nautilus (browser) or a server-side key, then POST to /api/v1/transactions.",
-    "step4Title": "Add a Note (agent payment)",
+    "step2Note": "Ce script récupère vos UTxO testnet, construit une transaction et produit l'objet TX non signé.",
+    "step3Title": "Exécuter le script",
+    "step3Time": "10 secondes",
+    "step3Note": "Vous verrez le JSON de transaction non signé. Signez-le avec Nautilus (navigateur) ou une clé côté serveur, puis POST vers /api/v1/transactions.",
+    "step4Title": "Ajouter un Note (paiement d'agent)",
     "step4Time": "5 minutes",
-    "step4Note": "This extends the basic TX to create a Note — a bearer instrument with a task hash register. The receiver redeems it against a Reserve.",
-    "explorerTitle": "See your TX on explorer",
-    "explorerDescription": "After submitting, your transaction appears on Ergo testnet explorer. Paste your TX ID at:",
-    "whatsNextTitle": "What's next",
-    "nextCard1Title": "Agent Payments Architecture",
-    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
-    "nextCard2Title": "7-Step Playbook",
-    "nextCard2Desc": "From environment setup to mainnet deployment — a full builder guide",
-    "nextCard3Title": "Live Demos",
-    "nextCard3Desc": "See working agent payment flows on Ergo testnet, open source",
-    "nextCard4Title": "GitHub: ergo-agent-economy",
-    "nextCard4Desc": "Open source examples: basic payment, Note IOU, acceptance predicate",
-    "readMore": "Read more",
-    "ctaTitle": "Ready to go deeper?",
-    "ctaDescription": "The quickstart gets you moving. The full architecture reference and 7-step playbook are waiting."
+    "step4Note": "Ceci étend la TX de base pour créer un Note — un instrument au porteur avec un registre de hash de tâche. Le destinataire le rembourse contre une Reserve.",
+    "explorerTitle": "Voir votre TX sur l'explorateur",
+    "explorerDescription": "Après soumission, votre transaction apparaît sur l'explorateur Ergo testnet. Collez votre TX ID ici :",
+    "whatsNextTitle": "Et ensuite",
+    "nextCard1Title": "Architecture de Paiement d'Agents",
+    "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — la référence technique complète",
+    "nextCard2Title": "Playbook en 7 Étapes",
+    "nextCard2Desc": "De la configuration de l'environnement au déploiement mainnet — un guide complet pour constructeurs",
+    "nextCard3Title": "Démos en Direct",
+    "nextCard3Desc": "Voir des flux de paiement d'agents fonctionnels sur Ergo testnet, open source",
+    "nextCard4Title": "GitHub : ergo-agent-economy",
+    "nextCard4Desc": "Exemples open source : paiement basique, Note IOU, Acceptance Predicate",
+    "readMore": "Lire la suite",
+    "ctaTitle": "Prêt à aller plus loin ?",
+    "ctaDescription": "Le démarrage rapide vous met en mouvement. La référence d'architecture complète et le playbook en 7 étapes vous attendent."
   }
 }
