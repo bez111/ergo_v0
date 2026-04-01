@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "加入一个开放式、可规划性和抵制检查的融资运动。",
+    "subtitle": "为自主AI代理和机器对机器商务打造的可编程、抗审查区块链。",
     "description": "可规划资金的全球中立结算层。",
-    "message1": "没有主人的货币",
-    "message2": "全球结算层",
-    "message3": "数字自由平台",
-    "message4": "去中心化设计",
+    "message1": "Peer-to-Peer 代理经济",
+    "message2": "代理自由交易之地",
+    "message3": "代理原生结算层",
+    "message4": "自主代理基础设施",
     "exploreErgo": "探索 Ergo",
     "chooseYourPath": "选择您的路径",
     "startHere": "从这里开始",
@@ -77,6 +77,11 @@
         "description": "GPU 友好的挖矿保持去中心化。保护网络、赚取奖励并抵抗 ASIC。",
         "cta": "开始挖矿"
       },
+      "agentBuilders": {
+        "title": "AI代理开发者",
+        "description": "构建可在链上支付、交易和结算的自主代理。无需 KYC，无需预充 gas，成本确定可控。",
+        "cta": "探索技术栈"
+      },
       "community": {
         "title": "社区",
         "description": "没有 VC、没有预挖、没有公司控制。自 2019 年以来由社区构建并为社区服务。",
@@ -95,9 +100,9 @@
   },
   "joinCommunityHome": {
     "titlePrefix": "在这里，",
-    "titleHighlight": "密码朋克",
-    "titleSuffix": "仍在构建",
-    "subtitle": "一个持续交付真实工具而非炒作的活跃社区。",
+    "titleHighlight": "开发者与代理",
+    "titleSuffix": "汇聚于此",
+    "subtitle": "开发者、AI 研究人员和自主代理共同构建去中心化经济。",
     "cta": "加入社区",
     "channels": {
       "discord": {
@@ -137,8 +142,8 @@
         "a": "典型费用约为 ≈ $0.01，支付给打包区块的矿工；在你确认前会显示确切费用，费用会随网络负载变化。"
       },
       "3": {
-        "q": "是什么让 Ergo 与其他智能合约链不同？",
-        "a": "Ergo 使用 eUTXO 模型实现更安全的组合性和可预测的并行执行，并通过 ErgoScript 和 Sigma 协议提供简短、可审计的合约以及可选隐私工具。"
+        "q": "为什么 Ergo 是AI代理和机器对机器支付的理想选择？",
+        "a": "Ergo 的 eUTXO 模型提供确定性成本，代理可以预先知道精确费用。Babel Fees 允许代理使用任意代币支付，无需预充 ERG。ErgoScript 将接受条件直接嵌入支付中——支付本身就是合约。无需 KYC，无需预充 gas，无需持久身份。"
       },
       "4": {
         "q": "Ergo 是如何保证安全的？",
@@ -462,6 +467,16 @@
           "projects": "项目",
           "community": "社区"
         }
+      },
+      "agents": {
+        "title": "面向代理开发者",
+        "description": "构建具备链上支付、可编程信用和免信任结算能力的自主代理",
+        "cta": "探索代理技术栈",
+        "links": {
+          "agentEconomy": "代理经济",
+          "paymentStack": "支付技术栈",
+          "sdkDocs": "SDK 与文档"
+        }
       }
     }
   },
@@ -646,6 +661,10 @@
       "mineErg": {
         "title": "挖矿 ERG",
         "description": "保护网络安全"
+      },
+      "agentStack": {
+        "title": "代理技术栈",
+        "description": "构建自主代理支付"
       },
       "joinCommunity": {
         "title": "加入社区",

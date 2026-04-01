@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "Junte-se a um movimento por finanças abertas, programáveis e resistentes à censura.",
+    "subtitle": "A blockchain programável e resistente à censura construída para agentes autônomos e comércio máquina-a-máquina.",
     "description": "A camada de liquidação globalmente neutra para dinheiro programável.",
-    "message1": "Dinheiro Sem Donos",
-    "message2": "Camada de Liquidação Global",
-    "message3": "Plataforma de Liberdade Digital",
-    "message4": "Descentralizado por Design",
+    "message1": "Economia de Agentes Peer-to-Peer",
+    "message2": "Onde Agentes Transacionam Livremente",
+    "message3": "Camada de Liquidação Nativa para Agentes",
+    "message4": "Infraestrutura para Agentes Autônomos",
     "exploreErgo": "Explorar Ergo",
     "chooseYourPath": "Escolha Seu Caminho",
     "startHere": "Comece Aqui",
@@ -77,6 +77,11 @@
         "description": "Mineração amigável para GPU que permanece descentralizada. Proteja a rede, ganhe recompensas, resista a ASICs.",
         "cta": "Começar a minerar"
       },
+      "agentBuilders": {
+        "title": "Construtores de Agentes",
+        "description": "Construa agentes autônomos que pagam, negociam e liquidam on-chain. Sem KYC, sem bootstrapping de gas, custos determinísticos.",
+        "cta": "Explore a stack"
+      },
       "community": {
         "title": "Comunidade",
         "description": "Sem VCs, sem pré-mineração, sem controle corporativo. Construído pela comunidade, para a comunidade desde 2019.",
@@ -95,9 +100,9 @@
   },
   "joinCommunityHome": {
     "titlePrefix": "Onde os",
-    "titleHighlight": "cypherpunks",
-    "titleSuffix": "ainda constroem",
-    "subtitle": "Comunidade ativa que entrega ferramentas reais, não hype.",
+    "titleHighlight": "construtores e agentes",
+    "titleSuffix": "convergem",
+    "subtitle": "Desenvolvedores, pesquisadores de IA e agentes autônomos construindo a economia descentralizada juntos.",
     "cta": "Entrar na comunidade",
     "channels": {
       "discord": {
@@ -137,8 +142,8 @@
         "a": "As taxas típicas são ≈ $0,01 e vão para os mineradores pelo processamento de blocos; a taxa exata é mostrada antes da confirmação. As taxas variam com a carga da rede."
       },
       "3": {
-        "q": "O que torna Ergo diferente das outras blockchains com contratos inteligentes?",
-        "a": "Ergo usa o modelo eUTXO para composição mais segura e execução paralela previsível, além de ErgoScript e protocolos Sigma para contratos curtos, auditáveis e ferramentas de privacidade opcionais."
+        "q": "Por que Ergo é ideal para agentes de IA e pagamentos máquina-a-máquina?",
+        "a": "O modelo eUTXO da Ergo fornece custos determinísticos para que os agentes saibam as taxas exatas antecipadamente. Babel Fees permitem que agentes paguem em qualquer token sem pré-carregar ERG. ErgoScript incorpora condições de aceitação diretamente nos pagamentos — o pagamento É o contrato. Sem KYC, sem bootstrapping de gas, sem identidade persistente necessária."
       },
       "4": {
         "q": "Como a Ergo é protegida?",
@@ -462,6 +467,16 @@
           "projects": "Projetos",
           "community": "Comunidade"
         }
+      },
+      "agents": {
+        "title": "Para Construtores de Agentes",
+        "description": "Construa agentes autônomos com pagamentos on-chain, crédito programável e liquidação sem confiança",
+        "cta": "Explorar Stack de Agentes",
+        "links": {
+          "agentEconomy": "Economia de Agentes",
+          "paymentStack": "Stack de Pagamentos",
+          "sdkDocs": "SDK & Documentação"
+        }
       }
     }
   },
@@ -646,6 +661,10 @@
       "mineErg": {
         "title": "MINERAR ERG",
         "description": "Proteja a rede"
+      },
+      "agentStack": {
+        "title": "STACK DE AGENTES",
+        "description": "Construa pagamentos autônomos de agentes"
       },
       "joinCommunity": {
         "title": "ENTRAR NA COMUNIDADE",

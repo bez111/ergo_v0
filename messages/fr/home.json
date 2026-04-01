@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "Rejoignez un mouvement pour une finance ouverte, programmable et résistante à la censure.",
+    "subtitle": "La blockchain programmable et résistante à la censure conçue pour les agents autonomes et le commerce machine-à-machine.",
     "description": "La couche de règlement neutre et mondiale pour la monnaie programmable.",
-    "message1": "La monnaie sans maîtres",
-    "message2": "Couche de règlement mondial",
-    "message3": "Plateforme de liberté numérique",
-    "message4": "Décentralisé par conception",
+    "message1": "Peer-to-Peer Agent Economy",
+    "message2": "Là où les agents échangent librement",
+    "message3": "Agent-Native Settlement Layer",
+    "message4": "Infrastructure pour agents autonomes",
     "exploreErgo": "Explorer Ergo",
     "chooseYourPath": "Choisissez votre voie",
     "startHere": "Commencer ici",
@@ -77,6 +77,11 @@
         "description": "Minage adapté aux GPU qui reste décentralisé. Sécurisez le réseau, gagnez des récompenses, résistez aux ASIC.",
         "cta": "Commencer à miner"
       },
+      "agentBuilders": {
+        "title": "Agent Builders",
+        "description": "Créez des agents autonomes qui paient, échangent et règlent on-chain. Pas de KYC, pas de bootstrapping de gas, coûts déterministes.",
+        "cta": "Explorer le stack"
+      },
       "community": {
         "title": "Communauté",
         "description": "Pas de VCs, pas de pré-minage, pas de contrôle corporatif. Construit par la communauté, pour la communauté depuis 2019.",
@@ -95,9 +100,9 @@
   },
   "joinCommunityHome": {
     "titlePrefix": "Là où les",
-    "titleHighlight": "cypherpunks",
-    "titleSuffix": "continuent de construire",
-    "subtitle": "Une communauté active qui livre de vrais outils, pas du battage médiatique.",
+    "titleHighlight": "développeurs & agents",
+    "titleSuffix": "convergent",
+    "subtitle": "Développeurs, chercheurs en IA et agents autonomes construisant ensemble l'économie décentralisée.",
     "cta": "Rejoindre la communauté",
     "channels": {
       "discord": {
@@ -137,8 +142,8 @@
         "a": "Les frais typiques sont ≈ 0,01 $ et vont aux mineurs pour le traitement des blocs ; le montant exact est affiché avant confirmation. Les frais varient selon la charge du réseau."
       },
       "3": {
-        "q": "Qu'est-ce qui différencie Ergo des autres chaînes à contrats intelligents ?",
-        "a": "Ergo utilise le modèle eUTXO pour une composition plus sûre et une exécution parallèle prévisible, plus ErgoScript et les Sigma protocols pour des contrats courts et auditables ainsi que des outils de confidentialité optionnels."
+        "q": "Pourquoi Ergo est-il idéal pour les agents IA et les paiements machine-à-machine ?",
+        "a": "Le modèle eUTXO d'Ergo fournit des coûts déterministes afin que les agents connaissent les frais exacts à l'avance. Babel Fees permet aux agents de payer avec n'importe quel token sans précharger d'ERG. ErgoScript intègre les conditions d'acceptation directement dans les paiements — le paiement EST le contrat. Pas de KYC, pas de bootstrapping de gas, pas d'identité persistante requise."
       },
       "4": {
         "q": "Comment Ergo est-il sécurisé ?",
@@ -462,6 +467,16 @@
           "projects": "Projets",
           "community": "Communauté"
         }
+      },
+      "agents": {
+        "title": "Pour les Agent Builders",
+        "description": "Créez des agents autonomes avec des paiements on-chain, du crédit programmable et un règlement sans confiance",
+        "cta": "Explorer l'Agent Stack",
+        "links": {
+          "agentEconomy": "Agent Economy",
+          "paymentStack": "Payment Stack",
+          "sdkDocs": "SDK & Docs"
+        }
       }
     }
   },
@@ -646,6 +661,10 @@
       "mineErg": {
         "title": "MINER DES ERG",
         "description": "Sécuriser le réseau"
+      },
+      "agentStack": {
+        "title": "AGENT STACK",
+        "description": "Créer des paiements d'agents autonomes"
       },
       "joinCommunity": {
         "title": "REJOINDRE LA COMMUNAUTÉ",

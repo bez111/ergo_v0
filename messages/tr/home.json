@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "Açık, programlanabilir ve sansüre dirençli finans için bir harekete katılın.",
+    "subtitle": "Otonom ajanlar ve makineler arası ticaret için programlanabilir, sansüre dirençli blok zinciri.",
     "description": "Programlanabilir para için küresel olarak tarafsız uzlaşma katmanı.",
-    "message1": "Efendisiz Para",
-    "message2": "Küresel Uzlaşma Katmanı",
-    "message3": "Dijital Özgürlük Platformu",
-    "message4": "Tasarımdan Merkeziyetsiz",
+    "message1": "Peer-to-Peer Ajan Ekonomisi",
+    "message2": "Ajanların Özgürce İşlem Yaptığı Yer",
+    "message3": "Ajan-Yerel Uzlaşma Katmanı",
+    "message4": "Otonom Ajanlar için Altyapı",
     "exploreErgo": "Ergo'yu Keşfet",
     "chooseYourPath": "Yolunuzu Seçin",
     "startHere": "Buradan Başlayın",
@@ -77,6 +77,11 @@
         "description": "Merkeziyetsiz kalan GPU dostu madencilik. Ağı güvence altına alın, ödül kazanın, ASIC'lere karşı koyun.",
         "cta": "Madenciliğe başlayın"
       },
+      "agentBuilders": {
+        "title": "Ajan Geliştiriciler",
+        "description": "Zincir üzerinde ödeme yapan, ticaret yapan ve uzlaşan otonom ajanlar oluşturun. KYC yok, gas ön yüklemesi yok, belirlenebilir maliyetler.",
+        "cta": "Teknik altyapıyı keşfedin"
+      },
       "community": {
         "title": "Topluluk",
         "description": "VC yok, ön madencilik yok, kurumsal kontrol yok. 2019'dan beri topluluk tarafından, topluluk için inşa edildi.",
@@ -95,9 +100,9 @@
   },
   "joinCommunityHome": {
     "titlePrefix": "Cypherpunk'ların",
-    "titleHighlight": "cypherpunk'lar",
-    "titleSuffix": "hâlâ inşa ettiği yer",
-    "subtitle": "Gerçek araçlar gönderen aktif topluluk, abartı değil.",
+    "titleHighlight": "geliştiriciler ve ajanlar",
+    "titleSuffix": "buluşuyor",
+    "subtitle": "Geliştiriciler, yapay zeka araştırmacıları ve otonom ajanlar merkeziyetsiz ekonomiyi birlikte inşa ediyor.",
     "cta": "Topluluğa katılın",
     "channels": {
       "discord": {
@@ -137,8 +142,8 @@
         "a": "Tipik ücretler ≈ $0.01 olup blokları işleyen madencilere gider; onaylamadan önce tam ücret gösterilir. Ücretler ağ yüküne göre değişir."
       },
       "3": {
-        "q": "Ergo'yu diğer akıllı sözleşme zincirlerinden farklı kılan nedir?",
-        "a": "Ergo, daha güvenli bileşim ve öngörülebilir paralel yürütme için eUTXO modelini, ayrıca kısa denetlenebilir sözleşmeler ve isteğe bağlı gizlilik araçları için ErgoScript ve Sigma protokollerini kullanır."
+        "q": "Ergo neden yapay zeka ajanları ve makineler arası ödemeler için idealdir?",
+        "a": "Ergo'nun eUTXO modeli belirlenebilir maliyetler sağlar; ajanlar ücretleri önceden tam olarak bilir. Babel Fees, ajanların ERG ön yüklemesi yapmadan herhangi bir token ile ödeme yapmasına olanak tanır. ErgoScript, kabul koşullarını doğrudan ödemelere gömer — ödemenin kendisi sözleşmedir. KYC yok, gas ön yüklemesi yok, kalıcı kimlik gereksinimi yok."
       },
       "4": {
         "q": "Ergo nasıl güvence altına alınır?",
@@ -462,6 +467,16 @@
           "projects": "Projeler",
           "community": "Topluluk"
         }
+      },
+      "agents": {
+        "title": "Ajan Geliştiriciler için",
+        "description": "Zincir üstü ödemeler, programlanabilir kredi ve güvensiz uzlaşma ile otonom ajanlar oluşturun",
+        "cta": "Ajan Altyapısını Keşfet",
+        "links": {
+          "agentEconomy": "Ajan Ekonomisi",
+          "paymentStack": "Ödeme Altyapısı",
+          "sdkDocs": "SDK ve Belgeler"
+        }
       }
     }
   },
@@ -646,6 +661,10 @@
       "mineErg": {
         "title": "ERG MADENCİLİĞİ YAPIN",
         "description": "Ağı güvence altına alın"
+      },
+      "agentStack": {
+        "title": "AJAN ALTYAPISI",
+        "description": "Otonom ajan ödemeleri oluşturun"
       },
       "joinCommunity": {
         "title": "TOPLULUĞA KATILIN",

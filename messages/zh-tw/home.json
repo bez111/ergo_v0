@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "加入一場開放、可程式化且抗審查金融的運動。",
+    "subtitle": "為自主智能代理和機器對機器商務打造的可程式化、抗審查區塊鏈。",
     "description": "可程式化貨幣的全球中立結算層。",
-    "message1": "無主之錢",
-    "message2": "全球結算層",
-    "message3": "數位自由平台",
-    "message4": "設計即去中心化",
+    "message1": "Peer-to-Peer 代理經濟",
+    "message2": "代理自由交易之處",
+    "message3": "代理原生結算層",
+    "message4": "自主代理基礎設施",
     "exploreErgo": "探索 Ergo",
     "chooseYourPath": "選擇您的路徑",
     "startHere": "從這裡開始",
@@ -77,6 +77,11 @@
         "description": "保持去中心化的 GPU 友好挖礦。保護網路，獲得獎勵，抵制 ASIC。",
         "cta": "開始挖礦"
       },
+      "agentBuilders": {
+        "title": "智能代理開發者",
+        "description": "構建可在鏈上支付、交易和結算的自主代理。無需 KYC，無需預充 gas，成本確定可控。",
+        "cta": "探索技術堆疊"
+      },
       "community": {
         "title": "社群",
         "description": "無創投、無預挖、無企業控制。自 2019 年起由社群為社群而建。",
@@ -95,9 +100,9 @@
   },
   "joinCommunityHome": {
     "titlePrefix": "密碼龐克",
-    "titleHighlight": "仍在此",
-    "titleSuffix": "構建的地方",
-    "subtitle": "活躍的社群正在構建真正的工具，而非炒作。",
+    "titleHighlight": "開發者與代理",
+    "titleSuffix": "匯聚於此",
+    "subtitle": "開發者、AI 研究人員和自主代理共同構建去中心化經濟。",
     "cta": "加入社群",
     "channels": {
       "discord": {
@@ -137,8 +142,8 @@
         "a": "典型費用約為 $0.01，並支付給處理區塊的礦工；確切費用在您確認前顯示。費用隨網路負載而變化。"
       },
       "3": {
-        "q": "Ergo 與其他智能合約鏈有何不同？",
-        "a": "Ergo 使用 eUTXO 模型實現更安全的組合性和可預測的並行執行，加上 ErgoScript 和 Sigma 協議，提供簡短、可審計的合約和可選的隱私工具。"
+        "q": "為什麼 Ergo 是智能代理和機器對機器支付的理想選擇？",
+        "a": "Ergo 的 eUTXO 模型提供確定性成本，代理可以預先知道精確費用。Babel Fees 允許代理使用任何代幣支付，無需預充 ERG。ErgoScript 將接受條件直接嵌入支付中——支付本身就是合約。無需 KYC，無需預充 gas，無需持久身份。"
       },
       "4": {
         "q": "Ergo 是如何保護安全的？",
@@ -462,6 +467,16 @@
           "projects": "專案",
           "community": "社群"
         }
+      },
+      "agents": {
+        "title": "面向代理開發者",
+        "description": "構建具備鏈上支付、可程式化信用和免信任結算能力的自主代理",
+        "cta": "探索代理技術堆疊",
+        "links": {
+          "agentEconomy": "代理經濟",
+          "paymentStack": "支付技術堆疊",
+          "sdkDocs": "SDK 與文件"
+        }
       }
     }
   },
@@ -646,6 +661,10 @@
       "mineErg": {
         "title": "挖掘 ERG",
         "description": "保護網路"
+      },
+      "agentStack": {
+        "title": "代理技術堆疊",
+        "description": "構建自主代理支付"
       },
       "joinCommunity": {
         "title": "加入社群",
