@@ -9,16 +9,16 @@
         "description": "A agentic blockchain para agentes de IA autônomos: PoW + eUTXO para DeFi, pagamentos de agentes de IA, privacidade e dinheiro sólido. Taxas baixas e previsíveis, sem pré-mineração, sem VC – construída por cypherpunks para a liberdade financeira.",
         "keywords": "agentic blockchain, blockchain para agentes de IA, blockchain pagamentos IA autônomos, pagamentos agentes IA, ergo blockchain, finanças descentralizadas, blockchain resistente a MEV, modelo eUTXO, dinheiro resistente à censura, mineração resistente a ASIC, criptomoeda com lançamento justo, dinheiro programável, soberania financeira, blockchain cypherpunk, DeFi, privacidade, dinheiro sólido, ergo agent economy",
         "og": {
-          "title": "Ergo Blockchain — Dinheiro Sem Donos",
-          "description": "Blockchain PoW eUTXO para DeFi, privacidade e dinheiro sólido. Sem MEV, sem controle de VC – construída por cypherpunks para a liberdade financeira.",
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "A blockchain agêntica: PoW + eUTXO + ErgoScript para pagamentos autônomos de agentes de IA, crédito programável e comércio máquina-a-máquina sem confiança.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo Blockchain - Dinheiro Sem Donos"
+          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
         },
         "twitter": {
-          "title": "Ergo Blockchain — Dinheiro Sem Donos",
-          "description": "Blockchain PoW eUTXO para DeFi, privacidade e dinheiro sólido. Sem MEV, sem VC – construída por cypherpunks para a liberdade."
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "A blockchain agêntica: PoW + eUTXO para pagamentos autônomos de agentes de IA, crédito programável e comércio máquina-a-máquina. Sem KYC, sem bootstrapping de gas."
         },
-        "heroImageAlt": "Ergo Platform - Blockchain Resiliente para Dinheiro Contratual"
+        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
       },
       "faq": {
         "items": [
@@ -35,8 +35,8 @@
             "answer": "Ergo tem um fornecimento fixo de 97,7 M de ERG sem pré-mineração e com lançamento justo. É uma blockchain Proof-of-Work com tecnologia única (eUTXO, Sigma Protocols). Como em qualquer criptomoeda, faça sua própria pesquisa e invista apenas o que você pode se dar ao luxo de perder."
           },
           {
-            "question": "O que diferencia Ergo das outras blockchains?",
-            "answer": "Ergo usa o modelo eUTXO para transações resistentes a MEV e previsíveis. Conta com Sigma Protocols para privacidade opcional, Storage Rent para sustentabilidade a longo prazo e Autolykos para mineração GPU resistente a ASIC. Lançamento justo sem financiamento de VC."
+            "question": "Por que Ergo é ideal para agentes de IA e pagamentos máquina-a-máquina?",
+            "answer": "O modelo eUTXO do Ergo fornece custos determinísticos — os agentes conhecem as taxas exatas antecipadamente. Babel Fees permite que os agentes paguem em qualquer token sem pré-carregar ERG. ErgoScript incorpora condições de aceitação diretamente nos pagamentos. Sem KYC, sem bootstrapping de gas, sem identidade persistente necessária. É a única blockchain com todas as quatro primitivas de pagamento para agentes no nível do protocolo."
           },
           {
             "question": "Como começar com Ergo?",

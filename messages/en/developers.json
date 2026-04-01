@@ -5,8 +5,8 @@
       "developers": "Developers"
     },
     "seo": {
-      "title": "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API | Build on Ergo",
-      "description": "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). Predictable costs and optional privacy with Sigma protocols.",
+      "title": "Build for Agents — ErgoScript, Agent Payment SDK, eUTXO Patterns | Ergo Developers",
+      "description": "Build autonomous agent payments on Ergo. Agent-native SDKs (Fleet, ergo-agent-pay), acceptance predicates, programmable credit, Babel Fees. The stack for machine-to-machine commerce.",
       "keywords": [
         "Ergo developers",
         "ErgoScript",
@@ -15,15 +15,21 @@
         "build on Ergo",
         "Ergo SDK",
         "Fleet SDK",
+        "ergo-agent-pay",
+        "agent payments",
+        "AI agent blockchain",
+        "autonomous agent SDK",
+        "acceptance predicates",
+        "Babel Fees",
+        "programmable credit",
+        "machine-to-machine payments",
         "sigma-rust",
         "AppKit",
         "blockchain development",
         "Sigma protocols",
         "Ergo API",
         "dApp development",
-        "Ergo patterns",
-        "Ergo playbooks",
-        "DeFi development",
+        "agentic blockchain",
         "Ergo grants",
         "ErgoScript tutorial"
       ]

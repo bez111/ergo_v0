@@ -9,16 +9,16 @@
         "description": "エージェンティック・ブロックチェーン：DeFi・AIエージェント決済・プライバシー・健全な通貨のためのPoW + eUTXO。予測可能な低手数料、プレマインなし、VCなし——サイファーパンクが金融の自由のために構築。",
         "keywords": "agentic blockchain, エージェンティックブロックチェーン, blockchain for AI agents, AIエージェントブロックチェーン, autonomous AI payments blockchain, 自律型AI決済, AI agent payments, AIエージェント決済, ergo blockchain, Ergoブロックチェーン, decentralized finance, 分散型金融, MEV resistant blockchain, MEV耐性ブロックチェーン, eUTXO model, eUTXOモデル, censorship resistant money, 検閲耐性通貨, ASIC resistant mining, ASIC耐性マイニング, fair launch cryptocurrency, フェアローンチ暗号通貨, programmable money, プログラマブルマネー, financial sovereignty, 金融主権, cypherpunk blockchain, サイファーパンクブロックチェーン, DeFi, privacy, プライバシー, sound money, 健全な通貨, ergo agent economy, Ergoエージェントエコノミー",
         "og": {
-          "title": "Ergoブロックチェーン — 支配者なき通貨",
-          "description": "DeFi・プライバシー・健全な通貨のためのPoW eUTXOブロックチェーン。MEVなし、VC支配なし——サイファーパンクが金融の自由のために構築。",
-          "siteName": "Ergoブロックチェーン",
-          "imageAlt": "Ergoブロックチェーン - 支配者なき通貨"
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "エージェンティック・ブロックチェーン：PoW + eUTXO + ErgoScriptによる自律型AIエージェント決済、プログラマブルクレジット、トラストレスなマシン間取引。",
+          "siteName": "Ergo Blockchain",
+          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
         },
         "twitter": {
-          "title": "Ergoブロックチェーン — 支配者なき通貨",
-          "description": "DeFi・プライバシー・健全な通貨のためのPoW eUTXOブロックチェーン。MEVなし、VCなし——サイファーパンクが自由のために構築。"
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "エージェンティック・ブロックチェーン：PoW + eUTXOによる自律型AIエージェント決済、プログラマブルクレジット、マシン間取引。KYC不要、ガスのブートストラップ不要。"
         },
-        "heroImageAlt": "Ergoプラットフォーム - 契約通貨のための強靭なブロックチェーン"
+        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
       },
       "faq": {
         "items": [
@@ -35,8 +35,8 @@
             "answer": "Ergoの総供給量は9,770万ERGで固定されており、プレマインなし、フェアローンチです。独自技術（eUTXO、Sigma Protocols）を持つPoWブロックチェーンです。他の暗号通貨と同様に、自己調査を行い、損失を許容できる範囲でのみ投資してください。"
           },
           {
-            "question": "Ergoが他のブロックチェーンと異なる点は？",
-            "answer": "ErgoはeUTXOモデルによりMEV耐性のある予測可能なトランザクションを実現します。Sigma Protocolsによるオプションのプライバシー機能、長期的な持続可能性のためのストレージレント、ASIC耐性GPU採掘のためのAutolykosを備えています。VC資金調達なしのフェアローンチです。"
+            "question": "なぜErgoはAIエージェントとマシン間決済に最適なのですか？",
+            "answer": "ErgoのeUTXOモデルは決定論的なコストを提供し、エージェントは正確な手数料を事前に把握できます。Babel Feesにより、エージェントはERGを事前にロードすることなく任意のトークンで支払えます。ErgoScriptは受諾条件を支払いに直接埋め込みます。KYC不要、ガスのブートストラップ不要、永続的なアイデンティティ不要。プロトコルレベルで4つのエージェント決済プリミティブすべてを備えた唯一のブロックチェーンです。"
           },
           {
             "question": "Ergoを始めるには？",

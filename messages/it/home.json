@@ -156,37 +156,37 @@
     }
   },
   "valueProposition": {
-    "title": "Perché scegliere",
+    "title": "Perché gli agenti scelgono",
     "titleHighlight": "Ergo?",
-    "subtitle": "L'unica blockchain che combina sicurezza comprovata, smart contract avanzati e sovranità dell'utente senza compromessi.",
+    "subtitle": "L'unica blockchain con tutte e quattro le primitive di pagamento per agenti a livello di protocollo. Nessun workaround. Nessun hack a livello applicativo.",
     "items": [
       {
-        "icon": "Shield",
-        "title": "Sicurezza a livello Bitcoin",
-        "description": "Il consenso Proof-of-Work comprovato con resistenza agli ASIC garantisce vera decentralizzazione e sicurezza della rete.",
-        "benefit": "I tuoi fondi sono protetti da garanzie crittografiche",
-        "stat": "99,9% di uptime dal lancio"
-      },
-      {
         "icon": "Zap",
-        "title": "Smart Contract Fatti Bene",
-        "description": "Il modello eUTXO combina la sicurezza di Bitcoin con la programmabilità di Ethereum — senza compromessi.",
-        "benefit": "Costruisci applicazioni DeFi con fiducia",
-        "stat": "Zero exploit di contratti finora"
+        "title": "Deterministico per progettazione",
+        "description": "Il modello eUTXO significa che gli agenti conoscono il costo esatto prima dell'invio. Nessun errore di stima del gas, nessun MEV, nessuna reentrancy. La transazione viene eseguita esattamente come costruita — oppure no.",
+        "benefit": "Gli agenti non pagano mai troppo e non falliscono mai inaspettatamente",
+        "stat": "Zero transazioni fallite per gas"
       },
       {
-        "icon": "Eye",
-        "title": "Privacy per Progettazione",
-        "description": "I protocolli Sigma forniscono garanzie matematiche di privacy pur mantenendo la verificabilità.",
-        "benefit": "Controlla la tua privacy finanziaria",
-        "stat": "Privacy crittograficamente sicura"
+        "icon": "Shield",
+        "title": "Il pagamento È il contratto",
+        "description": "ErgoScript incorpora le condizioni di accettazione direttamente nei pagamenti. Nessun servizio di escrow, nessun oracle, nessun server fidato. Il pagamento stesso codifica ciò che deve essere vero per il riscatto.",
+        "benefit": "Verifica dei compiti trustless on-chain",
+        "stat": "Predicati di accettazione integrati"
       },
       {
         "icon": "Coins",
-        "title": "Equo e Sostenibile",
-        "description": "Nessun pre-mine, nessun VC, più il meccanismo di storage rent garantisce la salute a lungo termine della blockchain.",
-        "benefit": "Blockchain veramente di proprietà della comunità",
-        "stat": "100% lancio equo"
+        "title": "Zero Gas Bootstrapping",
+        "description": "Babel Fees consente agli agenti di pagare le commissioni di transazione in qualsiasi token — non solo ERG. Avvia un nuovo agente, consegnagli una Note, e opera immediatamente. Nessun wallet pre-finanziato necessario.",
+        "benefit": "Gli agenti effimeri funzionano immediatamente",
+        "stat": "Paga le commissioni in qualsiasi token"
+      },
+      {
+        "icon": "Eye",
+        "title": "Nessun Kill Switch",
+        "description": "Consenso Proof-of-Work senza multisig di fondazione, senza cartello di validatori, senza pausa di emergenza. Nessun comitato può congelare i fondi degli agenti o fermare la rete. Inarrestabile per progettazione.",
+        "benefit": "Gli agenti operano senza permesso",
+        "stat": "Nessun kill switch di governance"
       }
     ]
   },

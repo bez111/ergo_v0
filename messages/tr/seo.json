@@ -9,16 +9,16 @@
         "description": "Ajanlık blok zinciri (agentic blockchain): DeFi, AI ajan ödemeleri, gizlilik ve sağlam para için PoW + eUTXO. Öngörülebilir düşük ücretler, ön madencilik yok, VC yok — finansal özgürlük için cypherpunk'lar tarafından inşa edildi.",
         "keywords": "ajanlık blok zinciri, agentic blockchain, AI ajanlar için blok zinciri, blockchain for AI agents, özerk AI ödeme blok zinciri, autonomous AI payments blockchain, AI ajan ödemeleri, AI agent payments, ergo blok zinciri, ergo blockchain, merkeziyetsiz finans, decentralized finance, MEV dirençli blok zinciri, MEV resistant blockchain, eUTXO modeli, eUTXO model, sansüre dirençli para, censorship resistant money, ASIC dirençli madencilik, ASIC resistant mining, adil başlangıç kripto parası, fair launch cryptocurrency, programlanabilir para, programmable money, finansal egemenlik, financial sovereignty, cypherpunk blok zinciri, cypherpunk blockchain, DeFi, gizlilik, privacy, sağlam para, sound money, ergo agent economy",
         "og": {
-          "title": "Ergo Blok Zinciri — Efendisiz Para",
-          "description": "DeFi, gizlilik ve sağlam para için PoW eUTXO blok zinciri. MEV yok, VC kontrolü yok — finansal özgürlük için cypherpunk'lar tarafından inşa edildi.",
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "Ajanlık blok zinciri: PoW + eUTXO + ErgoScript ile özerk AI ajan ödemeleri, programlanabilir kredi ve güvensiz makine-makine ticareti.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo Blockchain - Efendisiz Para"
+          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
         },
         "twitter": {
-          "title": "Ergo Blok Zinciri — Efendisiz Para",
-          "description": "DeFi, gizlilik ve sağlam para için PoW eUTXO blok zinciri. MEV yok, VC yok — özgürlük için cypherpunk'lar tarafından inşa edildi."
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "Ajanlık blok zinciri: PoW + eUTXO ile özerk AI ajan ödemeleri, programlanabilir kredi ve makine-makine ticareti. KYC yok, gas bootstrapping yok."
         },
-        "heroImageAlt": "Ergo Platform — Sözleşmeli Para İçin Dayanıklı Blok Zinciri"
+        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
       },
       "faq": {
         "items": [
@@ -35,8 +35,8 @@
             "answer": "Ergo, ön madenciliği ve adil başlangıcı olmayan 97,7 milyon ERG sabit arzına sahiptir. Benzersiz teknolojiye (eUTXO, Sigma Protocols) sahip bir İş Kanıtı blok zinciridir. Her kripto parada olduğu gibi, kendi araştırmanızı yapın ve kaybetmeyi göze alabileceğiniz kadar yatırım yapın."
           },
           {
-            "question": "Ergo'yu diğer blok zincirlerinden farklı kılan nedir?",
-            "answer": "Ergo, MEV dirençli ve öngörülebilir işlemler için eUTXO modelini kullanır. İsteğe bağlı gizlilik için Sigma Protocols, uzun vadeli sürdürülebilirlik için Storage Rent ve ASIC dirençli GPU madenciliği için Autolykos özelliklerine sahiptir. VC finansmanı olmadan adil başlangıç."
+            "question": "Ergo neden AI ajanları ve makine-makine ödemeleri için idealdir?",
+            "answer": "Ergo'nun eUTXO modeli deterministik maliyetler sağlar — ajanlar kesin ücretleri önceden bilir. Babel Fees, ajanların ERG ön yüklemesi yapmadan herhangi bir token ile ödeme yapmasına olanak tanır. ErgoScript, kabul koşullarını doğrudan ödemelere gömer. KYC yok, gas bootstrapping yok, kalıcı kimlik gereksinimi yok. Protokol düzeyinde dört ajan ödeme primitifinin tamamına sahip tek blok zinciridir."
           },
           {
             "question": "Ergo'ya nasıl başlanır?",

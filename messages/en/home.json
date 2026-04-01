@@ -156,37 +156,37 @@
     }
   },
   "valueProposition": {
-    "title": "Why Choose",
+    "title": "Why Agents Choose",
     "titleHighlight": "Ergo?",
-    "subtitle": "The only blockchain that combines proven security, advanced smart contracts, and user sovereignty without compromise.",
+    "subtitle": "The only blockchain with all four agent payment primitives at the protocol level. No workarounds. No application-layer hacks.",
     "items": [
       {
-        "icon": "Shield",
-        "title": "Bitcoin-Level Security",
-        "description": "Proven Proof-of-Work consensus with ASIC resistance ensures true decentralization and network security.",
-        "benefit": "Your funds are protected by cryptographic guarantees",
-        "stat": "99.9% uptime since launch"
-      },
-      {
         "icon": "Zap",
-        "title": "Smart Contracts Done Right",
-        "description": "eUTXO model combines Bitcoin's security with Ethereum's programmability—without the trade-offs.",
-        "benefit": "Build DeFi applications with confidence",
-        "stat": "Zero contract exploits to date"
+        "title": "Deterministic by Design",
+        "description": "eUTXO model means agents know the exact cost before submitting. No gas estimation failures, no MEV, no reentrancy. The transaction either executes exactly as constructed — or doesn't.",
+        "benefit": "Agents never overpay or fail unexpectedly",
+        "stat": "Zero failed-gas transactions"
       },
       {
-        "icon": "Eye",
-        "title": "Privacy by Design",
-        "description": "Sigma protocols provide mathematical privacy guarantees while maintaining auditability.",
-        "benefit": "Control your financial privacy",
-        "stat": "Cryptographically secure privacy"
+        "icon": "Shield",
+        "title": "Payment IS the Contract",
+        "description": "ErgoScript embeds acceptance conditions directly in payments. No escrow service, no oracle, no trusted server. The payment itself encodes what must be true for redemption.",
+        "benefit": "Trustless task verification on-chain",
+        "stat": "Acceptance predicates built-in"
       },
       {
         "icon": "Coins",
-        "title": "Fair & Sustainable",
-        "description": "No pre-mine, no VCs, plus storage rent mechanism ensures long-term blockchain health.",
-        "benefit": "Truly community-owned blockchain",
-        "stat": "100% fair launch"
+        "title": "Zero Gas Bootstrapping",
+        "description": "Babel Fees let agents pay transaction fees in any token — not just ERG. Spin up a new agent, hand it a Note, it transacts immediately. No pre-funded wallet required.",
+        "benefit": "Ephemeral agents work out of the box",
+        "stat": "Pay fees in any token"
+      },
+      {
+        "icon": "Eye",
+        "title": "No Kill Switch",
+        "description": "Proof-of-Work consensus with no foundation multisig, no validator cartel, no emergency pause. No committee can freeze agent funds or halt the network. Unstoppable by design.",
+        "benefit": "Agents operate without permission",
+        "stat": "No governance kill switch"
       }
     ]
   },

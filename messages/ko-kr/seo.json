@@ -9,16 +9,16 @@
         "description": "에이전틱 블록체인(agentic blockchain): DeFi, AI 에이전트 결제, 프라이버시, 건전한 화폐를 위한 PoW + eUTXO. 예측 가능한 낮은 수수료, 사전 채굴 없음, VC 없음 — 금융 자유를 위해 사이퍼펑크들이 만든 블록체인.",
         "keywords": "에이전틱 블록체인, agentic blockchain, AI 에이전트 블록체인, blockchain for AI agents, 자율 AI 결제 블록체인, autonomous AI payments blockchain, AI 에이전트 결제, AI agent payments, 어고 블록체인, ergo blockchain, 탈중앙화 금융, decentralized finance, MEV 저항 블록체인, MEV resistant blockchain, eUTXO 모델, eUTXO model, 검열 저항 화폐, censorship resistant money, ASIC 저항 채굴, ASIC resistant mining, 공정 출시 암호화폐, fair launch cryptocurrency, 프로그래밍 가능한 화폐, programmable money, 금융 주권, financial sovereignty, 사이퍼펑크 블록체인, cypherpunk blockchain, DeFi, 프라이버시, privacy, 건전한 화폐, sound money, ergo agent economy",
         "og": {
-          "title": "Ergo 블록체인 — 주인 없는 화폐",
-          "description": "DeFi, 프라이버시, 건전한 화폐를 위한 PoW eUTXO 블록체인. MEV 없음, VC 통제 없음 — 금융 자유를 위해 사이퍼펑크들이 만들었습니다.",
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "에이전틱 블록체인: PoW + eUTXO + ErgoScript로 구현하는 자율 AI 에이전트 결제, 프로그래밍 가능한 크레딧, 무신뢰 기계 간 거래.",
           "siteName": "Ergo Blockchain",
-          "imageAlt": "Ergo Blockchain - 주인 없는 화폐"
+          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
         },
         "twitter": {
-          "title": "Ergo 블록체인 — 주인 없는 화폐",
-          "description": "DeFi, 프라이버시, 건전한 화폐를 위한 PoW eUTXO 블록체인. MEV 없음, VC 없음 — 자유를 위해 사이퍼펑크들이 만들었습니다."
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "에이전틱 블록체인: PoW + eUTXO로 구현하는 자율 AI 에이전트 결제, 프로그래밍 가능한 크레딧, 기계 간 거래. KYC 없음, 가스 부트스트래핑 없음."
         },
-        "heroImageAlt": "Ergo Platform — 계약적 화폐를 위한 탄탄한 블록체인"
+        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
       },
       "faq": {
         "items": [
@@ -35,8 +35,8 @@
             "answer": "Ergo는 사전 채굴 없이 공정하게 출시된 총 공급량 9,770만 ERG의 고정 공급량을 가집니다. 독자적인 기술(eUTXO, Sigma Protocols)을 갖춘 작업증명 블록체인입니다. 모든 암호화폐와 마찬가지로 직접 조사하고 잃어도 되는 금액만 투자하세요."
           },
           {
-            "question": "Ergo가 다른 블록체인과 다른 점은 무엇인가요?",
-            "answer": "Ergo는 MEV 저항성과 예측 가능한 거래를 위해 eUTXO 모델을 사용합니다. 선택적 프라이버시를 위한 Sigma Protocols, 장기 지속 가능성을 위한 Storage Rent, ASIC 저항 GPU 채굴을 위한 Autolykos를 특징으로 합니다. VC 자금 없는 공정 출시."
+            "question": "Ergo가 AI 에이전트와 기계 간 결제에 이상적인 이유는 무엇인가요?",
+            "answer": "Ergo의 eUTXO 모델은 결정론적 비용을 제공하여 에이전트가 정확한 수수료를 사전에 파악할 수 있습니다. Babel Fees를 통해 에이전트는 ERG를 사전 충전하지 않고도 모든 토큰으로 결제할 수 있습니다. ErgoScript는 수락 조건을 결제에 직접 내장합니다. KYC 없음, 가스 부트스트래핑 없음, 영구적 신원 불필요. 프로토콜 수준에서 네 가지 에이전트 결제 프리미티브를 모두 갖춘 유일한 블록체인입니다."
           },
           {
             "question": "Ergo를 어떻게 시작하나요?",

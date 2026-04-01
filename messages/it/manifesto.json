@@ -41,39 +41,39 @@
   },
   "whyErgo": {
     "title": "PERCHÉ ERGO?",
-    "subtitle": "Una piattaforma blockchain resiliente che combina principi collaudati con innovazione all'avanguardia",
+    "subtitle": "L'unica chain dove gli agenti operano senza identità, prefinanziamento o permesso",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "EQUO E SICURO",
-        "subtitle": "Fondamento Proof-of-Work",
-        "description": "Nessuna ICO. Nessun VC. Nessun premine. Il mining memory-hard garantisce ampia partecipazione e sicurezza duratura."
+        "title": "COSTI DETERMINISTICI",
+        "subtitle": "Vantaggio eUTXO",
+        "description": "Gli agenti conoscono la commissione esatta prima dell'invio. Nessun errore di stima del gas, nessun costo a sorpresa. La transazione viene eseguita come costruita — o per niente."
       },
       "powerfulAndFlexible": {
-        "title": "POTENTE E FLESSIBILE",
-        "subtitle": "Smart Contract Avanzati",
-        "description": "eUTXO + ErgoScript forniscono logica deterministica e componibile senza uno stato globale nascosto."
+        "title": "IL PAGAMENTO È IL CONTRATTO",
+        "subtitle": "ErgoScript Acceptance Predicates",
+        "description": "Le condizioni sono incorporate nel pagamento stesso. Nessun escrow, nessun oracle, nessun server fidato. Il pagamento codifica ciò che deve essere vero per il riscatto."
       },
       "sustainable": {
-        "title": "SOSTENIBILE",
-        "subtitle": "Costruito per Durare",
-        "description": "Lo Storage Rent ripulisce lo stato dimenticato e finanzia i miner con costi prevedibili per decenni."
+        "title": "ZERO GAS BOOTSTRAPPING",
+        "subtitle": "Babel Fees",
+        "description": "Gli agenti pagano le commissioni in qualsiasi token — non solo ERG. Avvia, consegna una Note, opera immediatamente. Nessun wallet prefinanziato necessario."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PRIVACY AL PRIMO POSTO",
-        "subtitle": "Privacy Verificabile e Opzionale",
-        "description": "I Sigma protocol abilitano la divulgazione selettiva e le prove ring/threshold quando necessario."
+        "title": "CREDITO PROGRAMMABILE",
+        "subtitle": "Notes, Reserves, Trackers",
+        "description": "Gli agenti emettono IOU al portatore garantiti da riserve on-chain. I tracker anti-doppia-spesa assicurano l'integrità. Credito locale, regolamento globale."
       },
       "community": {
-        "title": "GUIDATO DALLA COMUNITÀ",
-        "subtitle": "Open Source, Nessuna Tassa Foundation",
-        "description": "Contributori globali e EIP guidano la roadmap — non i treasury di token."
+        "title": "NESSUN KILL SWITCH",
+        "subtitle": "Garanzia Proof-of-Work",
+        "description": "Nessun multisig di fondazione, nessun cartello di validatori, nessuna pausa d'emergenza. Nessun comitato può congelare i fondi degli agenti o fermare la rete."
       },
       "developer": {
-        "title": "AMICHEVOLE PER SVILUPPATORI",
-        "subtitle": "Docs, Strumenti, Template",
-        "description": "Playground, template CI, API dell'explorer — distribuisci contratti velocemente e in sicurezza."
+        "title": "AGENT-READY SDK",
+        "subtitle": "Fleet SDK, MCP, LangChain",
+        "description": "SDK TypeScript e Python con strumenti LangChain, server MCP per Claude e 10 esempi funzionanti — dai pagamenti base all'orchestrazione multi-agente."
       }
     }
   }

@@ -156,37 +156,37 @@
     }
   },
   "valueProposition": {
-    "title": "Neden",
-    "titleHighlight": "Ergo?",
-    "subtitle": "Kanıtlanmış güvenliği, gelişmiş akıllı sözleşmeleri ve kullanıcı egemenliğini taviz vermeden birleştiren tek blok zinciri.",
+    "title": "Ajanlar Neden",
+    "titleHighlight": "Ergo'yu Seçiyor?",
+    "subtitle": "Protokol katmanında dört temel ajan ödeme ilkesinin tamamına sahip tek blok zinciri. Geçici çözüm yok. Uygulama katmanı hileleri yok.",
     "items": [
       {
-        "icon": "Shield",
-        "title": "Bitcoin Düzeyinde Güvenlik",
-        "description": "ASIC direnciyle kanıtlanmış Proof-of-Work konsensüsü, gerçek merkeziyetsizleşme ve ağ güvenliği sağlar.",
-        "benefit": "Fonlarınız kriptografik güvencelerle korunur",
-        "stat": "Başlatılmasından bu yana %99.9 çalışma süresi"
-      },
-      {
         "icon": "Zap",
-        "title": "Doğru Yapılmış Akıllı Sözleşmeler",
-        "description": "eUTXO modeli, Bitcoin'in güvenliğini Ethereum'un programlanabilirliğiyle—ödün vermeden—birleştirir.",
-        "benefit": "DeFi uygulamalarını güvenle inşa edin",
-        "stat": "Bugüne kadar sıfır sözleşme istismarı"
+        "title": "Tasarımdan Deterministik",
+        "description": "eUTXO modeli, ajanların göndermeden önce kesin maliyeti bilmesini sağlar. Gas tahmini hataları yok, MEV yok, reentrancy yok. İşlem tam olarak oluşturulduğu gibi yürütülür — ya da yürütülmez.",
+        "benefit": "Ajanlar asla fazla ödemez veya beklenmedik şekilde başarısız olmaz",
+        "stat": "Sıfır başarısız gas işlemi"
       },
       {
-        "icon": "Eye",
-        "title": "Tasarımdan Gizlilik",
-        "description": "Sigma protokolleri, denetlenebilirliği korurken matematiksel gizlilik güvenceleri sağlar.",
-        "benefit": "Finansal gizliliğinizi kontrol edin",
-        "stat": "Kriptografik olarak güvenli gizlilik"
+        "icon": "Shield",
+        "title": "Ödeme Sözleşmenin Kendisidir",
+        "description": "ErgoScript, kabul koşullarını doğrudan ödemelere gömer. Emanet hizmeti yok, oracle yok, güvenilir sunucu yok. Ödemenin kendisi, itfa için neyin doğru olması gerektiğini kodlar.",
+        "benefit": "Zincir üzerinde güvensiz görev doğrulama",
+        "stat": "Yerleşik kabul koşulları"
       },
       {
         "icon": "Coins",
-        "title": "Adil ve Sürdürülebilir",
-        "description": "Ön madencilik yok, VC yok, artı depolama kirası mekanizması uzun vadeli blok zinciri sağlığını güvence altına alır.",
-        "benefit": "Gerçekten topluluk sahipli blok zinciri",
-        "stat": "%100 adil başlangıç"
+        "title": "Sıfır Gas ile Başlatma",
+        "description": "Babel Fees, ajanların işlem ücretlerini yalnızca ERG ile değil, herhangi bir token ile ödemesini sağlar. Yeni bir ajan başlatın, bir Note verin, anında işlem yapsın. Önceden fonlanmış cüzdan gerekmez.",
+        "benefit": "Geçici ajanlar kutudan çıktığı gibi çalışır",
+        "stat": "Herhangi bir token ile ücret ödeyin"
+      },
+      {
+        "icon": "Eye",
+        "title": "Kapatma Anahtarı Yok",
+        "description": "Proof-of-Work konsensüsü; vakıf multisig'i yok, doğrulayıcı karteli yok, acil durdurma yok. Hiçbir komite ajan fonlarını donduramaz veya ağı durduramaz. Tasarımdan durdurulamaz.",
+        "benefit": "Ajanlar izinsiz çalışır",
+        "stat": "Yönetişim kapatma anahtarı yok"
       }
     ]
   },

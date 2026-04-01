@@ -40,40 +40,40 @@
     }
   },
   "whyErgo": {
-    "title": "为什么选择 Ergo？",
-    "subtitle": "一个韧性强大的区块链平台，将经过验证的原则与前沿创新相结合",
+    "title": "WHY ERGO?",
+    "subtitle": "唯一一条代理无需身份、预充值或许可即可交易的链",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "公平且安全",
-        "subtitle": "工作量证明基础",
-        "description": "无 ICO。无风投。无预挖。内存硬挖矿 → 广泛参与和持久安全。"
+        "title": "DETERMINISTIC COSTS",
+        "subtitle": "eUTXO 优势",
+        "description": "代理在提交前即可知道确切费用。没有 gas 估算失败，没有意外成本。交易按构建方式执行——否则完全不执行。"
       },
       "powerfulAndFlexible": {
-        "title": "强大且灵活",
-        "subtitle": "先进智能合约",
-        "description": "eUTXO + ErgoScript 提供确定性、可组合的逻辑，没有隐藏的全局状态。"
+        "title": "PAYMENT IS THE CONTRACT",
+        "subtitle": "ErgoScript Acceptance Predicates",
+        "description": "条件嵌入在支付本身中。无需托管、无需预言机、无需可信服务器。支付编码了赎回所需的全部条件。"
       },
       "sustainable": {
-        "title": "可持续",
-        "subtitle": "为长远而生",
-        "description": "存储租金清理被遗忘的状态，并以可预测的成本为矿工提供数十年的资金支持。"
+        "title": "ZERO GAS BOOTSTRAPPING",
+        "subtitle": "Babel Fees",
+        "description": "代理可用任意代币支付费用——不仅限于 ERG。启动后交付一张 Note，即可立即交易。无需预充值钱包。"
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "隐私优先",
-        "subtitle": "可审计的可选隐私",
-        "description": "Sigma 协议在需要时支持选择性披露和环/门限证明。"
+        "title": "PROGRAMMABLE CREDIT",
+        "subtitle": "Notes, Reserves, Trackers",
+        "description": "代理发行由链上储备支持的不记名 IOU。防双花追踪器确保完整性。本地信用，全局结算。"
       },
       "community": {
-        "title": "社区驱动",
-        "subtitle": "开源，无基金会税收",
-        "description": "全球贡献者和 EIP 推动路线图——而非代币金库。"
+        "title": "NO KILL SWITCH",
+        "subtitle": "Proof-of-Work 保证",
+        "description": "没有基金会多签、没有验证者卡特尔、没有紧急暂停。任何委员会都无法冻结代理资金或停止网络。"
       },
       "developer": {
-        "title": "开发者友好",
-        "subtitle": "文档、工具、模板",
-        "description": "Playground、CI 模板、区块浏览器 API——快速安全地交付合约。"
+        "title": "AGENT-READY SDK",
+        "subtitle": "Fleet SDK, MCP, LangChain",
+        "description": "TypeScript 和 Python SDK 搭配 LangChain 工具、Claude MCP 服务器，以及 10 个可运行示例——从基础支付到多代理编排。"
       }
     }
   }

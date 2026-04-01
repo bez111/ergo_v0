@@ -9,16 +9,16 @@
         "description": "智能代理區塊鏈：PoW + eUTXO，用於 DeFi、AI 代理支付、隱私和健全貨幣。可預測的低手續費，無預挖，無創投——由密碼龐克為金融自由而構建。",
         "keywords": "agentic blockchain, 智能代理區塊鏈, blockchain for AI agents, AI代理區塊鏈, autonomous AI payments blockchain, 自主AI支付, AI agent payments, AI代理支付, ergo blockchain, Ergo區塊鏈, decentralized finance, 去中心化金融, MEV resistant blockchain, 抗MEV區塊鏈, eUTXO model, eUTXO模型, censorship resistant money, 抗審查貨幣, ASIC resistant mining, 抗ASIC挖礦, fair launch cryptocurrency, 公平發行加密貨幣, programmable money, 可程式化貨幣, financial sovereignty, 金融主權, cypherpunk blockchain, 密碼龐克區塊鏈, DeFi, privacy, 隱私, sound money, 健全貨幣, ergo agent economy, Ergo代理經濟",
         "og": {
-          "title": "Ergo 區塊鏈 — 無主之錢",
-          "description": "用於 DeFi、隱私和健全貨幣的 PoW eUTXO 區塊鏈。無 MEV，無創投控制——由密碼龐克為金融自由而構建。",
-          "siteName": "Ergo 區塊鏈",
-          "imageAlt": "Ergo 區塊鏈 - 無主之錢"
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "智能代理區塊鏈：PoW + eUTXO + ErgoScript，用於自主 AI 代理支付、可程式化信用和無需信任的機器對機器商務。",
+          "siteName": "Ergo Blockchain",
+          "imageAlt": "Ergo — Peer-to-Peer Agent Economy"
         },
         "twitter": {
-          "title": "Ergo 區塊鏈 — 無主之錢",
-          "description": "用於 DeFi、隱私和健全貨幣的 PoW eUTXO 區塊鏈。無 MEV，無創投——由密碼龐克為自由而構建。"
+          "title": "Ergo — Peer-to-Peer Agent Economy",
+          "description": "智能代理區塊鏈：PoW + eUTXO，用於自主 AI 代理支付、可程式化信用和機器對機器商務。無 KYC，無 gas 引導。"
         },
-        "heroImageAlt": "Ergo 平台 - 合約貨幣的堅韌區塊鏈"
+        "heroImageAlt": "Ergo Platform — The Agentic Blockchain for Peer-to-Peer Agent Economy"
       },
       "faq": {
         "items": [
@@ -35,8 +35,8 @@
             "answer": "Ergo 總供應量固定為 9770 萬 ERG，無預挖，公平發行。它是一條擁有獨特技術（eUTXO、Sigma Protocols）的工作量證明區塊鏈。與所有加密貨幣一樣，請自行研究，僅投入您能承受損失的資金。"
           },
           {
-            "question": "Ergo 與其他區塊鏈有何不同？",
-            "answer": "Ergo 採用 eUTXO 模型，實現抗 MEV 的可預測交易。它具備 Sigma Protocols 提供的可選隱私功能、用於長期可持續性的存儲租金機制，以及支援抗 ASIC GPU 挖礦的 Autolykos 演算法。公平發行，無創投融資。"
+            "question": "為什麼 Ergo 是 AI 代理和機器對機器支付的理想選擇？",
+            "answer": "Ergo 的 eUTXO 模型提供確定性成本——代理可以預先知道確切的手續費。Babel Fees 允許代理使用任意代幣支付，無需預載入 ERG。ErgoScript 將接受條件直接嵌入支付中。無需 KYC，無需 gas 引導，無需持久身分。它是唯一在協議層具備全部四種代理支付原語的區塊鏈。"
           },
           {
             "question": "如何開始使用 Ergo？",

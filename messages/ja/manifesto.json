@@ -40,40 +40,40 @@
     }
   },
   "whyErgo": {
-    "title": "なぜErgoなのか？",
-    "subtitle": "実証済みの原則と最先端のイノベーションを組み合わせた強靭なブロックチェーンプラットフォーム",
+    "title": "WHY ERGO?",
+    "subtitle": "エージェントがアイデンティティ、事前資金、許可なしにトランザクションできる唯一のチェーン",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "公平＆安全",
-        "subtitle": "プルーフ・オブ・ワークの基盤",
-        "description": "ICOなし。VCなし。プレマインなし。メモリハードマイニングにより広範な参加と耐久性のあるセキュリティを実現。"
+        "title": "DETERMINISTIC COSTS",
+        "subtitle": "eUTXOアドバンテージ",
+        "description": "エージェントは送信前に正確な手数料を把握できる。ガス推定の失敗も、予期せぬコストもない。トランザクションは構築された通りに実行されるか、まったく実行されないかのどちらかだ。"
       },
       "powerfulAndFlexible": {
-        "title": "強力＆柔軟",
-        "subtitle": "高度なスマートコントラクト",
-        "description": "eUTXO + ErgoScriptが隠れたグローバル状態なしに決定論的でコンポーザブルなロジックを提供する。"
+        "title": "PAYMENT IS THE CONTRACT",
+        "subtitle": "ErgoScript Acceptance Predicates",
+        "description": "条件はペイメント自体に埋め込まれている。エスクローも、オラクルも、信頼されたサーバーも不要。ペイメントが償還に必要な条件をエンコードする。"
       },
       "sustainable": {
-        "title": "持続可能",
-        "subtitle": "長続きする設計",
-        "description": "ストレージレントが忘れられた状態をクリーンアップし、数十年間にわたる予測可能なコストでマイナーに資金を提供する。"
+        "title": "ZERO GAS BOOTSTRAPPING",
+        "subtitle": "Babel Fees",
+        "description": "エージェントはERGだけでなく、任意のトークンで手数料を支払える。起動してノートを渡せば、即座にトランザクションが可能。事前資金ウォレットは不要。"
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "プライバシーファースト",
-        "subtitle": "監査可能なオプションのプライバシー",
-        "description": "Sigma protocolsが必要な時に選択的開示とリング/閾値証明を可能にする。"
+        "title": "PROGRAMMABLE CREDIT",
+        "subtitle": "Notes, Reserves, Trackers",
+        "description": "エージェントはオンチェーンリザーブに裏付けられたベアラーIOUを発行する。アンチ二重支払いトラッカーが整合性を保証。ローカルクレジット、グローバル決済。"
       },
       "community": {
-        "title": "コミュニティ主導",
-        "subtitle": "オープンソース、財団税なし",
-        "description": "世界中のコントリビューターとEIPがロードマップを推進——トークン財務省ではなく。"
+        "title": "NO KILL SWITCH",
+        "subtitle": "Proof-of-Workの保証",
+        "description": "財団のマルチシグも、バリデーターカルテルも、緊急停止もない。いかなる委員会もエージェントの資金を凍結したり、ネットワークを停止したりすることはできない。"
       },
       "developer": {
-        "title": "開発者フレンドリー",
-        "subtitle": "ドキュメント、ツール、テンプレート",
-        "description": "プレイグラウンド、CIテンプレート、エクスプローラーAPI——コントラクトを素早く安全にリリースできる。"
+        "title": "AGENT-READY SDK",
+        "subtitle": "Fleet SDK, MCP, LangChain",
+        "description": "TypeScriptとPython SDKにLangChainツール、Claude用MCPサーバー、そして10の実用サンプル——基本的な支払いからマルチエージェントオーケストレーションまで。"
       }
     }
   }

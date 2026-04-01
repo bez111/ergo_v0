@@ -156,37 +156,37 @@
     }
   },
   "valueProposition": {
-    "title": "為什麼選擇",
+    "title": "代理為何選擇",
     "titleHighlight": "Ergo？",
-    "subtitle": "唯一結合了經過驗證的安全性、進階智能合約和用戶主權而不妥協的區塊鏈。",
+    "subtitle": "唯一在協議層具備全部四種代理支付原語的區塊鏈。無需變通方案，無需應用層補丁。",
     "items": [
       {
-        "icon": "Shield",
-        "title": "比特幣級別的安全性",
-        "description": "經過驗證的工作量證明共識與抗 ASIC 機制確保真正的去中心化和網路安全。",
-        "benefit": "您的資金受到密碼學保證的保護",
-        "stat": "自啟動以來 99.9% 正常運行時間"
-      },
-      {
         "icon": "Zap",
-        "title": "正確實現的智能合約",
-        "description": "eUTXO 模型將比特幣的安全性與以太坊的可程式化相結合——無需妥協。",
-        "benefit": "自信地構建 DeFi 應用",
-        "stat": "迄今零合約漏洞"
+        "title": "確定性設計",
+        "description": "eUTXO 模型意味著代理在提交前就能知道確切成本。無 gas 估算失敗，無 MEV，無重入攻擊。交易要麼完全按照建構執行——要麼不執行。",
+        "benefit": "代理永遠不會多付或意外失敗",
+        "stat": "零 gas 失敗交易"
       },
       {
-        "icon": "Eye",
-        "title": "設計即隱私",
-        "description": "Sigma 協議在維持可審計性的同時提供數學隱私保證。",
-        "benefit": "掌控您的金融隱私",
-        "stat": "密碼學安全的隱私"
+        "icon": "Shield",
+        "title": "支付即合約",
+        "description": "ErgoScript 將接受條件直接嵌入支付中。無需託管服務，無需 oracle，無需可信伺服器。支付本身編碼了贖回所需的條件。",
+        "benefit": "鏈上免信任任務驗證",
+        "stat": "內建接受謂詞"
       },
       {
         "icon": "Coins",
-        "title": "公平且可持續",
-        "description": "無預挖、無創投，加上儲存租金機制確保區塊鏈長期健康。",
-        "benefit": "真正由社群所有的區塊鏈",
-        "stat": "100% 公平發行"
+        "title": "零 Gas 啟動",
+        "description": "Babel Fees 允許代理使用任意代幣支付交易費——不僅限於 ERG。啟動一個新代理，交給它一個 Note，即可立即交易。無需預充錢包。",
+        "benefit": "臨時代理開箱即用",
+        "stat": "使用任意代幣支付費用"
+      },
+      {
+        "icon": "Eye",
+        "title": "無終止開關",
+        "description": "Proof-of-Work 共識，無基金會多簽，無驗證者卡特爾，無緊急暫停。沒有任何委員會能凍結代理資金或停止網路。設計上不可阻擋。",
+        "benefit": "代理無需許可即可運行",
+        "stat": "無治理終止開關"
       }
     ]
   },

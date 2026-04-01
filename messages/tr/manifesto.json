@@ -40,40 +40,40 @@
     }
   },
   "whyErgo": {
-    "title": "NEDEN ERGO?",
-    "subtitle": "Kanıtlanmış ilkeleri son teknoloji yenilikle birleştiren dayanıklı bir blok zinciri platformu",
+    "title": "WHY ERGO?",
+    "subtitle": "Ajanların kimlik, ön finansman veya izin olmadan işlem yapabildiği tek zincir",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "ADIL VE GÜVENLİ",
-        "subtitle": "İş Kanıtı Temeli",
-        "description": "ICO yok. VC yok. Ön madencilik yok. Bellek yoğun madencilik → geniş katılım ve kalıcı güvenlik."
+        "title": "DETERMINISTIC COSTS",
+        "subtitle": "eUTXO Avantajı",
+        "description": "Ajanlar göndermeden önce kesin ücreti bilir. Gas tahmin hataları yok, sürpriz maliyetler yok. İşlem oluşturulduğu şekilde yürütülür — ya da hiç yürütülmez."
       },
       "powerfulAndFlexible": {
-        "title": "GÜÇLÜ VE ESNEK",
-        "subtitle": "Gelişmiş Akıllı Sözleşmeler",
-        "description": "eUTXO + ErgoScript, gizli bir küresel durum olmaksızın deterministik, birleştirilebilir mantık sunar."
+        "title": "PAYMENT IS THE CONTRACT",
+        "subtitle": "ErgoScript Acceptance Predicates",
+        "description": "Koşullar ödemenin kendisine gömülüdür. Emanet yok, oracle yok, güvenilir sunucu yok. Ödeme, geri ödeme için neyin doğru olması gerektiğini kodlar."
       },
       "sustainable": {
-        "title": "SÜRDÜRÜLEBİLİR",
-        "subtitle": "Uzun Ömürlü Tasarım",
-        "description": "Storage Rent unutulan durumu temizler ve madencileri onlarca yıl öngörülebilir maliyetlerle destekler."
+        "title": "ZERO GAS BOOTSTRAPPING",
+        "subtitle": "Babel Fees",
+        "description": "Ajanlar ücretleri yalnızca ERG ile değil, herhangi bir token ile öder. Başlatın, bir Note verin, anında işlem yapar. Önceden finanse edilmiş cüzdan gerekmez."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "GİZLİLİK ÖNCELİKLİ",
-        "subtitle": "Denetlenebilir, İsteğe Bağlı Gizlilik",
-        "description": "Sigma protokolleri, gerektiğinde seçici açıklama ve halka/eşik kanıtlarını etkinleştirir."
+        "title": "PROGRAMMABLE CREDIT",
+        "subtitle": "Notes, Reserves, Trackers",
+        "description": "Ajanlar, zincir üstü rezervlerle desteklenen hamiline IOU'lar ihraç eder. Çift harcama önleyici tracker'lar bütünlüğü sağlar. Yerel kredi, küresel mutabakat."
       },
       "community": {
-        "title": "TOPLULUK ODAKLI",
-        "subtitle": "Açık Kaynak, Vakıf Vergisi Yok",
-        "description": "Küresel katkıcılar ve EIP'ler yol haritasını belirler — token hazineleri değil."
+        "title": "NO KILL SWITCH",
+        "subtitle": "Proof-of-Work Güvencesi",
+        "description": "Vakıf multisig'i yok, doğrulayıcı karteli yok, acil duraklatma yok. Hiçbir komite ajan fonlarını donduramaz veya ağı durduramaz."
       },
       "developer": {
-        "title": "GELİŞTİRİCİ DOSTU",
-        "subtitle": "Belgeler, Araçlar, Şablonlar",
-        "description": "Oyun alanı, CI şablonları, gezgin API'leri — sözleşmeleri hızlı ve güvenli şekilde gönderin."
+        "title": "AGENT-READY SDK",
+        "subtitle": "Fleet SDK, MCP, LangChain",
+        "description": "LangChain araçlarıyla TypeScript ve Python SDK'ları, Claude için MCP sunucusu ve 10 çalışan örnek — temel ödemelerden çok ajanlı orkestrasyona kadar."
       }
     }
   }

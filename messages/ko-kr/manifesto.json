@@ -40,40 +40,40 @@
     }
   },
   "whyErgo": {
-    "title": "왜 ERGO인가?",
-    "subtitle": "검증된 원칙과 최첨단 혁신을 결합한 탄력적인 블록체인 플랫폼",
+    "title": "WHY ERGO?",
+    "subtitle": "에이전트가 신원 확인, 사전 자금 조달, 허가 없이 거래할 수 있는 유일한 체인",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "공정하고 안전한",
-        "subtitle": "작업 증명 기반",
-        "description": "ICO 없음. VC 없음. 사전 채굴 없음. 메모리 하드 채굴 → 광범위한 참여와 내구성 있는 보안."
+        "title": "DETERMINISTIC COSTS",
+        "subtitle": "eUTXO 이점",
+        "description": "에이전트는 제출 전에 정확한 수수료를 알 수 있습니다. 가스 추정 실패도, 예상치 못한 비용도 없습니다. 트랜잭션은 구성된 대로 실행되거나 전혀 실행되지 않습니다."
       },
       "powerfulAndFlexible": {
-        "title": "강력하고 유연한",
-        "subtitle": "고급 스마트 컨트랙트",
-        "description": "eUTXO + ErgoScript는 숨겨진 글로벌 상태 없이 결정론적이고 구성 가능한 로직을 제공합니다."
+        "title": "PAYMENT IS THE CONTRACT",
+        "subtitle": "ErgoScript Acceptance Predicates",
+        "description": "조건이 결제 자체에 내장됩니다. 에스크로도, 오라클도, 신뢰할 수 있는 서버도 필요 없습니다. 결제가 상환에 필요한 조건을 인코딩합니다."
       },
       "sustainable": {
-        "title": "지속 가능한",
-        "subtitle": "오래 가도록 구축",
-        "description": "스토리지 렌트는 잊혀진 상태를 정리하고 수십 년 동안 예측 가능한 비용으로 채굴자에게 자금을 지원합니다."
+        "title": "ZERO GAS BOOTSTRAPPING",
+        "subtitle": "Babel Fees",
+        "description": "에이전트는 ERG뿐만 아니라 모든 토큰으로 수수료를 지불할 수 있습니다. 시작하고 노트를 전달하면 즉시 거래가 가능합니다. 사전 자금 조달된 지갑이 필요 없습니다."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "프라이버시 우선",
-        "subtitle": "감사 가능하고 선택적인 프라이버시",
-        "description": "Sigma 프로토콜은 필요할 때 선택적 공개 및 링/임계값 증명을 가능하게 합니다."
+        "title": "PROGRAMMABLE CREDIT",
+        "subtitle": "Notes, Reserves, Trackers",
+        "description": "에이전트는 온체인 준비금으로 뒷받침되는 무기명 IOU를 발행합니다. 이중 지불 방지 트래커가 무결성을 보장합니다. 로컬 크레딧, 글로벌 결제."
       },
       "community": {
-        "title": "커뮤니티 주도",
-        "subtitle": "오픈 소스, 재단 세금 없음",
-        "description": "글로벌 기여자와 EIP가 로드맵을 이끕니다 — 토큰 금고가 아닌."
+        "title": "NO KILL SWITCH",
+        "subtitle": "Proof-of-Work 보장",
+        "description": "재단 다중 서명도, 검증자 카르텔도, 긴급 중단도 없습니다. 어떤 위원회도 에이전트 자금을 동결하거나 네트워크를 중단할 수 없습니다."
       },
       "developer": {
-        "title": "개발자 친화적",
-        "subtitle": "문서, 도구, 템플릿",
-        "description": "플레이그라운드, CI 템플릿, 익스플로러 API — 빠르고 안전하게 컨트랙트를 출시하세요."
+        "title": "AGENT-READY SDK",
+        "subtitle": "Fleet SDK, MCP, LangChain",
+        "description": "TypeScript 및 Python SDK에 LangChain 도구, Claude용 MCP 서버, 그리고 기본 결제부터 멀티 에이전트 오케스트레이션까지 10개의 실제 예제를 제공합니다."
       }
     }
   }

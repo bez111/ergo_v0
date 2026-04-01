@@ -41,39 +41,39 @@
   },
   "whyErgo": {
     "title": "WHY ERGO?",
-    "subtitle": "A resilient blockchain platform combining proven principles with cutting-edge innovation",
+    "subtitle": "The only chain where agents transact without identity, pre-funding, or permission",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "FAIR & SECURE",
-        "subtitle": "Proof-of-Work Foundation",
-        "description": "No ICO. No VC. No premine. Memory-hard mining → broad participation and durable security."
+        "title": "DETERMINISTIC COSTS",
+        "subtitle": "eUTXO Advantage",
+        "description": "Agents know the exact fee before submitting. No gas estimation failures, no surprise costs. The transaction executes as constructed — or not at all."
       },
       "powerfulAndFlexible": {
-        "title": "POWERFUL & FLEXIBLE",
-        "subtitle": "Advanced Smart Contracts",
-        "description": "eUTXO + ErgoScript deliver deterministic, composable logic without a hidden global state."
+        "title": "PAYMENT IS THE CONTRACT",
+        "subtitle": "ErgoScript Acceptance Predicates",
+        "description": "Conditions are embedded in the payment itself. No escrow, no oracle, no trusted server. The payment encodes what must be true for redemption."
       },
       "sustainable": {
-        "title": "SUSTAINABLE",
-        "subtitle": "Built to Last",
-        "description": "Storage Rent cleans forgotten state and funds miners with predictable costs for decades."
+        "title": "ZERO GAS BOOTSTRAPPING",
+        "subtitle": "Babel Fees",
+        "description": "Agents pay fees in any token — not just ERG. Spin up, hand it a Note, it transacts immediately. No pre-funded wallet needed."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PRIVACY FIRST",
-        "subtitle": "Auditable, Optional Privacy",
-        "description": "Sigma-protocols enable selective disclosure and ring/threshold proofs when needed."
+        "title": "PROGRAMMABLE CREDIT",
+        "subtitle": "Notes, Reserves, Trackers",
+        "description": "Agents issue bearer IOUs backed by on-chain reserves. Anti-double-spend trackers ensure integrity. Local credit, global settlement."
       },
       "community": {
-        "title": "COMMUNITY DRIVEN",
-        "subtitle": "Open Source, No Foundation Tax",
-        "description": "Global contributors and EIPs drive the roadmap—not token treasuries."
+        "title": "NO KILL SWITCH",
+        "subtitle": "Proof-of-Work Guarantee",
+        "description": "No foundation multisig, no validator cartel, no emergency pause. No committee can freeze agent funds or halt the network."
       },
       "developer": {
-        "title": "DEVELOPER FRIENDLY",
-        "subtitle": "Docs, Tools, Templates",
-        "description": "Playground, CI templates, explorer APIs—ship contracts fast and safely."
+        "title": "AGENT-READY SDK",
+        "subtitle": "Fleet SDK, MCP, LangChain",
+        "description": "TypeScript and Python SDKs with LangChain tools, MCP server for Claude, and 10 working examples — from basic payments to multi-agent orchestration."
       }
     }
   }
