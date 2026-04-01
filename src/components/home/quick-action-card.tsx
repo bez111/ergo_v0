@@ -2,7 +2,7 @@
 
 import React from "react"
 import { Link } from "@/i18n/navigation"
-import { Wallet, Layers, Users, CreditCard, Cpu, Code, Zap } from "lucide-react"
+import { Wallet, Layers, Users, CreditCard, Cpu, Code, Zap, Bot } from "lucide-react"
 
 const iconMap = {
   Wallet,
@@ -12,6 +12,7 @@ const iconMap = {
   Users,
   Code,
   Zap,
+  Bot,
 } as const
 
 interface QuickActionCardProps {

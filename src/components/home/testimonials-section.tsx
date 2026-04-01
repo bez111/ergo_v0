@@ -96,13 +96,13 @@ export function TestimonialsSection() {
       }
     },
     {
-      quote: "Ergo's commitment to academic rigor and peer-reviewed research sets it apart. Every feature is built on solid theoretical foundations, not just hype.",
-      author: "Academic Researcher",
-      role: "Computer Science Professor",
-      avatar: "AR",
+      quote: "Ergo is the only chain where agents can transact without pre-funded wallets or KYC. eUTXO gives deterministic costs, Babel Fees remove gas bootstrapping, and ErgoScript turns every payment into a contract. It's agent-native by design.",
+      author: "Agent Economy Builder",
+      role: "AI Infrastructure Developer",
+      avatar: "AE",
       social: {
-        icon: Linkedin,
-        handle: "@academic_research"
+        icon: Github,
+        handle: "@ergo-agent-economy"
       }
     }
   ]

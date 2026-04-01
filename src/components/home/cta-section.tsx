@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Download, Code, Users, Zap } from "lucide-react"
+import { ArrowRight, Download, Code, Users, Zap, Bot } from "lucide-react"
 import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
 
 export function CTASection() {
@@ -62,6 +62,14 @@ export function CTASection() {
       href: "/developers",
       primary: false,
       label: "START BUILDING"
+    },
+    {
+      icon: Bot,
+      title: "For Agent Builders",
+      description: "Agent payment stack",
+      href: "/agent-economy",
+      primary: false,
+      label: "EXPLORE STACK"
     },
     {
       icon: Zap,

@@ -1,7 +1,7 @@
 "use client"
 
 import { Link } from "@/i18n/navigation"
-import { Wallet, Pickaxe, Code, TrendingUp } from "lucide-react"
+import { Wallet, Pickaxe, Code, TrendingUp, Bot } from "lucide-react"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { Card } from "@/components/ui/card"
 import { useTranslations } from "next-intl"
@@ -30,6 +30,13 @@ export function MadeForMassAdoption() {
       desc: t('paths.miners.description'),
       cta: t('paths.miners.cta'),
       href: "/miners"
+    },
+    {
+      icon: Bot,
+      title: t('paths.agentBuilders.title'),
+      desc: t('paths.agentBuilders.description'),
+      cta: t('paths.agentBuilders.cta'),
+      href: "/agent-economy"
     },
     {
       icon: TrendingUp,
@@ -68,7 +75,7 @@ export function MadeForMassAdoption() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
           {paths.map((path, i) => (
             <Link 
               key={i}

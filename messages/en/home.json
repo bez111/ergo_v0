@@ -1,12 +1,12 @@
 {
   "hero": {
     "title": "Ergo",
-    "subtitle": "Join a movement for open, programmable, and censorship-resistant finance.",
+    "subtitle": "The programmable, censorship-resistant blockchain built for autonomous agents and machine-to-machine commerce.",
     "description": "The globally-neutral settlement layer for programmable money.",
-    "message1": "Money Without Masters",
-    "message2": "Global Settlement Layer",
-    "message3": "Digital Freedom Platform",
-    "message4": "Decentralized By Design",
+    "message1": "Peer-to-Peer Agent Economy",
+    "message2": "Where Agents Transact Freely",
+    "message3": "Agent-Native Settlement Layer",
+    "message4": "Infrastructure for Autonomous Agents",
     "exploreErgo": "Explore Ergo",
     "chooseYourPath": "Choose Your Path",
     "startHere": "Start Here",
@@ -77,6 +77,11 @@
         "description": "GPU-friendly mining that stays decentralized. Secure the network, earn rewards, resist ASICs.",
         "cta": "Start mining"
       },
+      "agentBuilders": {
+        "title": "Agent Builders",
+        "description": "Build autonomous agents that pay, trade, and settle on-chain. No KYC, no gas bootstrapping, deterministic costs.",
+        "cta": "Explore the stack"
+      },
       "community": {
         "title": "Community",
         "description": "No VCs, no pre-mine, no corporate control. Built by the community, for the community since 2019.",
@@ -95,9 +100,9 @@
   },
   "joinCommunityHome": {
     "titlePrefix": "Where",
-    "titleHighlight": "cypherpunks",
-    "titleSuffix": "still build",
-    "subtitle": "Active community shipping real tools, not hype.",
+    "titleHighlight": "builders & agents",
+    "titleSuffix": "converge",
+    "subtitle": "Developers, AI researchers, and autonomous agents building the decentralized economy together.",
     "cta": "Join community",
     "channels": {
       "discord": {
@@ -137,8 +142,8 @@
         "a": "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load."
       },
       "3": {
-        "q": "What makes Ergo different from other smart-contract chains?",
-        "a": "Ergo uses the eUTXO model for safer composition and predictable parallel execution, plus ErgoScript and Sigma protocols for short, auditable contracts and optional privacy tooling."
+        "q": "Why is Ergo ideal for AI agents and machine-to-machine payments?",
+        "a": "Ergo's eUTXO model provides deterministic costs so agents know exact fees upfront. Babel Fees let agents pay in any token without pre-loading ERG. ErgoScript embeds acceptance conditions directly in payments — the payment IS the contract. No KYC, no gas bootstrapping, no persistent identity required."
       },
       "4": {
         "q": "How is Ergo secured?",
@@ -462,6 +467,16 @@
           "projects": "Projects",
           "community": "Community"
         }
+      },
+      "agents": {
+        "title": "For Agent Builders",
+        "description": "Build autonomous agents with on-chain payments, programmable credit, and trustless settlement",
+        "cta": "Explore Agent Stack",
+        "links": {
+          "agentEconomy": "Agent Economy",
+          "paymentStack": "Payment Stack",
+          "sdkDocs": "SDK & Docs"
+        }
       }
     }
   },
@@ -646,6 +661,10 @@
       "mineErg": {
         "title": "MINE ERG",
         "description": "Secure the network"
+      },
+      "agentStack": {
+        "title": "AGENT STACK",
+        "description": "Build autonomous agent payments"
       },
       "joinCommunity": {
         "title": "JOIN COMMUNITY",

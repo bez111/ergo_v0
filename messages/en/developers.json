@@ -90,8 +90,8 @@
     },
     "hero": {
       "badge": "Developer Hub",
-      "title": "Build DeFi that doesn't break",
-      "subtitle": "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs. Built-in privacy.",
+      "title": "Build for agents. Build for freedom.",
+      "subtitle": "Agent-native payments, deterministic smart contracts, zero gas bootstrapping. The stack for autonomous machine-to-machine commerce.",
       "buttons": {
         "startLearning": "Start Learning",
         "browsePatterns": "Browse Patterns",

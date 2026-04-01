@@ -41,6 +41,14 @@ export function QuickActions() {
       analytics: "quick-action-mine"
     },
     {
+      title: t('actions.agentStack.title'),
+      description: t('actions.agentStack.description'),
+      iconName: "Bot" as const,
+      href: "/agent-economy",
+      ariaLabel: "Explore the agent payment stack",
+      analytics: "quick-action-agent"
+    },
+    {
       title: t('actions.joinCommunity.title'),
       description: t('actions.joinCommunity.description'),
       iconName: "Users" as const,
@@ -62,7 +70,7 @@ export function QuickActions() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
           {actions.map((action, index) => (
             <QuickActionCard key={action.analytics} action={action} />
           ))}
