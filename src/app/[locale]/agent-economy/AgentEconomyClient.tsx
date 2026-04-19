@@ -18,6 +18,9 @@ import {
   AlertTriangle,
   ExternalLink,
   ChevronRight,
+  Users,
+  Landmark,
+  Cpu,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -459,6 +462,134 @@ export function AgentEconomyClient() {
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ── Who's Building ──────────────────────────────────────────────── */}
+        <section className="py-24 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14 text-center">
+              <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+                Ecosystem
+              </p>
+              <h2
+                className="font-extrabold tracking-tight text-white"
+                style={{
+                  fontSize: "clamp(26px, 3.5vw, 44px)",
+                  letterSpacing: "-0.02em",
+                  lineHeight: 1.1,
+                }}
+              >
+                Who&apos;s Building on Ergo
+              </h2>
+              <p className="text-neutral-400 mt-4 max-w-2xl mx-auto leading-relaxed">
+                Projects and teams actively building agent economy infrastructure on Ergo.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "ChainCash",
+                  icon: Coins,
+                  status: "Mainnet",
+                  description: "Production reference implementation of the Note + Reserve + Tracker payment stack. Community currencies, bearer instruments, and agent credit systems.",
+                  url: "https://github.com/ChainCashLabs/chaincash",
+                },
+                {
+                  name: "BetterMoneyLabs",
+                  icon: Landmark,
+                  status: "Active",
+                  description: "Research and development lab building the financial primitives for autonomous agent commerce on Ergo. Core contributor to ChainCash protocol.",
+                  url: "https://github.com/BetterMoneyLabs",
+                },
+                {
+                  name: "Fleet SDK",
+                  icon: Code2,
+                  status: "Production",
+                  description: "TypeScript SDK for building Ergo transactions. The standard toolkit for agent payment integrations and dApp development.",
+                  url: "https://github.com/fleet-sdk",
+                },
+                {
+                  name: "Spectrum Finance",
+                  icon: Network,
+                  status: "Live",
+                  description: "Cross-chain DEX with automated market making on Ergo. Provides the liquidity layer agents need for token swaps.",
+                  url: "https://spectrum.fi",
+                },
+                {
+                  name: "Rosen Bridge",
+                  icon: GitBranch,
+                  status: "Live",
+                  description: "Multi-chain bridge connecting Ergo to Ethereum, Cardano, and Bitcoin. Enables agents to operate across blockchain ecosystems.",
+                  url: "https://rosen.tech",
+                },
+                {
+                  name: "Agent Payment Demos",
+                  icon: Cpu,
+                  status: "Testnet",
+                  description: "Three working testnet demos: agent buys API call, agent pays on credit, community reserve. Open-source Fleet SDK examples.",
+                  url: "/demos",
+                },
+              ].map((project, i) => {
+                const Icon = project.icon
+                return (
+                  <motion.div
+                    key={project.name}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                  >
+                    <a
+                      href={project.url}
+                      target={project.url.startsWith("/") ? undefined : "_blank"}
+                      rel={project.url.startsWith("/") ? undefined : "noopener noreferrer"}
+                      className="group block h-full"
+                    >
+                      <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">
+                        <CardContent className="p-7">
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center group-hover:bg-orange-500/20 transition-all">
+                              <Icon className="w-5 h-5 text-orange-400" />
+                            </div>
+                            <span className={`text-xs font-mono px-2.5 py-1 rounded-full border ${
+                              project.status === "Mainnet" || project.status === "Production" || project.status === "Live"
+                                ? "text-orange-400 border-orange-500/30 bg-orange-500/10"
+                                : project.status === "Active"
+                                  ? "text-green-400 border-green-500/30 bg-green-500/10"
+                                  : "text-neutral-400 border-neutral-600 bg-neutral-800/50"
+                            }`}>
+                              {project.status}
+                            </span>
+                          </div>
+                          <h3 className="font-bold text-white text-lg mb-2 group-hover:text-orange-100 transition-colors">
+                            {project.name}
+                          </h3>
+                          <p className="text-neutral-400 text-sm leading-relaxed">
+                            {project.description}
+                          </p>
+                          <div className="mt-4 flex items-center gap-1 text-orange-500/60 group-hover:text-orange-400 transition-colors text-xs font-mono">
+                            <span>{project.url.startsWith("/") ? "View demos" : "View project"}</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </a>
+                  </motion.div>
+                )
+              })}
+            </div>
+
+            <div className="mt-10 text-center">
+              <p className="text-neutral-500 text-sm">
+                Building on Ergo?{" "}
+                <a href="#builder-form" className="text-orange-400 hover:text-orange-300 transition-colors">
+                  Get listed
+                </a>
+              </p>
+            </div>
           </div>
         </section>
 
