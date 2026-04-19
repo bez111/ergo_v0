@@ -49,6 +49,17 @@ const nextConfig: NextConfig = {
   // Headers для кеширования и безопасности
   async headers() {
     return [
+      // Vercel preview/production .vercel.app domain: keep out of search index
+      {
+        source: '/(.*)',
+        has: [{ type: 'host', value: '(?<host>.*\\.vercel\\.app)' }],
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
       {
         source: '/(.*)',
         headers: [
@@ -186,12 +197,19 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // ── www canonical redirect ────────────────────────────────────────────
-      // Redirect ergoblockchain.org → www.ergoblockchain.org (production only)
+      // ── Canonical redirects (production only) ─────────────────────────────
       ...(process.env.NODE_ENV === 'production' ? [
+        // ergoblockchain.org → www.ergoblockchain.org
         {
           source: '/:path*',
           has: [{ type: 'host' as const, value: 'ergoblockchain.org' }],
+          destination: 'https://www.ergoblockchain.org/:path*',
+          permanent: true,
+        },
+        // *.vercel.app → www.ergoblockchain.org (prevent duplicate SEO indexing)
+        {
+          source: '/:path*',
+          has: [{ type: 'host' as const, value: '(?<host>.*\\.vercel\\.app)' }],
           destination: 'https://www.ergoblockchain.org/:path*',
           permanent: true,
         },
