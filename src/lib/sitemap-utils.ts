@@ -2,8 +2,12 @@
 import { siteConfig } from '@/config/site-config'
 import { shouldNoIndex } from '@/lib/seo/noindex-config'
 
-// Active locales for sitemaps
-export const sitemapLocales = ['en', 'ru'] as const
+// Active locales for sitemaps — must match i18n/request.ts
+export const sitemapLocales = [
+  'en', 'ru', 'zh-cn', 'zh-tw',
+  'tr', 'ko-kr', 'es', 'pt-br',
+  'ja', 'de', 'fr', 'it'
+] as const
 export type SitemapLocale = typeof sitemapLocales[number]
 
 const BASE_URL = siteConfig.siteUrl

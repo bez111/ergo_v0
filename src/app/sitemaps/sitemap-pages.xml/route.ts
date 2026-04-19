@@ -42,6 +42,13 @@ export async function GET() {
     { url: '/infographics', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/questions', priority: 0.9, changefreq: 'daily' as const },
     { url: '/topics', priority: 0.9, changefreq: 'daily' as const },
+    // Agent Economy & Build
+    { url: '/agent-economy', priority: 0.9, changefreq: 'weekly' as const },
+    { url: '/agent-economy/manifesto', priority: 0.8, changefreq: 'monthly' as const },
+    { url: '/agent-economy/vs', priority: 0.8, changefreq: 'monthly' as const },
+    { url: '/demos', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/build/agent-payments', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/build/quickstart', priority: 0.8, changefreq: 'weekly' as const },
   ]
 
   const sitemap = generateMultilingualSitemap(staticPages)
