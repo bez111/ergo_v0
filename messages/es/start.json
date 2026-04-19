@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Cuestionario"
+          "quiz": "Cuestionario",
+          "start": "Comenzar"
         },
         "quiz": {
           "name": "Quiz de Búsqueda de Camino en el Ecosistema de Ergo",

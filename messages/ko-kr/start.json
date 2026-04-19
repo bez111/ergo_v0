@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "퀴즈"
+          "quiz": "퀴즈",
+          "start": "시작"
         },
         "quiz": {
           "name": "Ergo 생태계 경로 탐색 퀴즈",

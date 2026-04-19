@@ -1805,7 +1805,8 @@
       "this_structure_allows_for_complex": "Cette structure permet des contrats intelligents complexes tout en maintenant la sécurité et la prévisibilité du modèle UTXO. Chaque sortie est autonome et peut être traitée indépendamment, permettant une véritable exécution parallèle.",
       "frequently_asked_questions": "Questions fréquemment posées",
       "learn_more_about_eutxo": "En savoir plus sur eUTXO",
-      "view_on_github": "Voir sur GitHub"
+      "view_on_github": "Voir sur GitHub",
+      "description": "Le modèle Extended UTXO combine la sécurité de Bitcoin avec la programmabilité des contrats intelligents. Exécution parallèle, coûts déterministes, aucune attaque par réentrance."
     },
     "nipopows": {
       "title": "NIPoPoWs",

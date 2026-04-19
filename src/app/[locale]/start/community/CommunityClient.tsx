@@ -195,8 +195,7 @@ export default function CommunityClient() {
     e.preventDefault()
     if (email) {
       setIsSubmitted(true)
-      // Here you would typically send the email to your backend
-      console.log('Email submitted:', email)
+      // TODO: wire up email to backend
       setTimeout(() => {
         setIsSubmitted(false)
         setEmail('')

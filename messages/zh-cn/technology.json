@@ -1646,7 +1646,8 @@
       "this_structure_allows_for_complex": "这种结构允许复杂的智能合约，同时保持UTXO模型的安全性和可预测性。 每项产出都是自成一体的，可以独立处理，从而能够真正的并行执行。",
       "frequently_asked_questions": "常见问题",
       "learn_more_about_eutxo": "了解更多关于 eUTXO",
-      "view_on_github": "在 GitHub 上查看"
+      "view_on_github": "在 GitHub 上查看",
+      "description": "扩展UTXO模型将比特币的安全性与智能合约的可编程性相结合。并行执行、确定性成本、无重入攻击。"
     },
     "nipopows": {
       "title": "NIPPoWs",

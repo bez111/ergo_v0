@@ -1805,7 +1805,8 @@
       "this_structure_allows_for_complex": "這種結構允許複雜的智能合約，同時保持 UTXO 模型的安全性和可預測性。每個輸出都是自包含的，可以獨立處理，從而實現真正的並行執行。",
       "frequently_asked_questions": "常見問題",
       "learn_more_about_eutxo": "了解更多關於 eUTXO 的信息",
-      "view_on_github": "在 GitHub 上查看"
+      "view_on_github": "在 GitHub 上查看",
+      "description": "擴展UTXO模型將比特幣的安全性與智能合約的可編程性相結合。並行執行、確定性成本、無重入攻擊。"
     },
     "nipopows": {
       "title": "NIPoPoWs",

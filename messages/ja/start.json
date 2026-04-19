@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "クイズ"
+          "quiz": "クイズ",
+          "start": "はじめに"
         },
         "quiz": {
           "name": "Ergoエコシステムパスファインダークイズ",

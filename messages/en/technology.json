@@ -1650,7 +1650,8 @@
       "this_structure_allows_for_complex": "This structure allows for complex smart contracts while maintaining the security and predictability of the UTXO model. Each output is self-contained and can be processed independently, enabling true parallel execution.",
       "frequently_asked_questions": "Frequently Asked Questions",
       "learn_more_about_eutxo": "Learn More About eUTXO",
-      "view_on_github": "View on GitHub"
+      "view_on_github": "View on GitHub",
+      "description": "The Extended UTXO model combines Bitcoin's security with smart contract programmability. Parallel execution, deterministic costs, no reentrancy attacks."
     },
     "nipopows": {
       "title": "NIPoPoWs",
@@ -4881,9 +4882,18 @@
         "name": "How to Use Babel Fees",
         "description": "Step-by-step guide to paying transaction fees with any token using Babel Fees",
         "steps": [
-          { "name": "Choose a dApp", "text": "Select a dApp that supports Babel Fees" },
-          { "name": "Select your token", "text": "Choose the token you want to use to pay the fee" },
-          { "name": "Execute transaction", "text": "Complete the transaction—intermediaries handle the ERG conversion" }
+          {
+            "name": "Choose a dApp",
+            "text": "Select a dApp that supports Babel Fees"
+          },
+          {
+            "name": "Select your token",
+            "text": "Choose the token you want to use to pay the fee"
+          },
+          {
+            "name": "Execute transaction",
+            "text": "Complete the transaction—intermediaries handle the ERG conversion"
+          }
         ]
       }
     },
@@ -5082,9 +5092,18 @@
       "shortDescription": "Parallel smart contracts with enhanced security",
       "keywords": "eutxo,eUTXO,utxo,smart contracts,parallel execution,composability,mev resistance,ethereum comparison,technical",
       "details": [
-        { "title": "Parallel Execution", "description": "Process multiple transactions simultaneously without state conflicts" },
-        { "title": "Native Composability", "description": "Build complex DeFi from simple, reusable contract pieces" },
-        { "title": "MEV Resistance", "description": "Deterministic transactions prevent front-running attacks" }
+        {
+          "title": "Parallel Execution",
+          "description": "Process multiple transactions simultaneously without state conflicts"
+        },
+        {
+          "title": "Native Composability",
+          "description": "Build complex DeFi from simple, reusable contract pieces"
+        },
+        {
+          "title": "MEV Resistance",
+          "description": "Deterministic transactions prevent front-running attacks"
+        }
       ]
     },
     "ergoscript": {
@@ -5093,9 +5112,18 @@
       "shortDescription": "Safe smart contracts with formal verification",
       "keywords": "ergoscript,ErgoScript,smart contracts,formal verification,sigma protocols,type safety,ergo developers,functional programming",
       "details": [
-        { "title": "Formal Verification", "description": "Mathematically provable contract correctness" },
-        { "title": "Built-in Privacy", "description": "Native Sigma protocols for zero-knowledge proofs" },
-        { "title": "Type Safety", "description": "Strong typing prevents common vulnerabilities" }
+        {
+          "title": "Formal Verification",
+          "description": "Mathematically provable contract correctness"
+        },
+        {
+          "title": "Built-in Privacy",
+          "description": "Native Sigma protocols for zero-knowledge proofs"
+        },
+        {
+          "title": "Type Safety",
+          "description": "Strong typing prevents common vulnerabilities"
+        }
       ]
     },
     "secure-pow": {
@@ -5104,9 +5132,18 @@
       "shortDescription": "ASIC-resistant GPU mining for decentralization",
       "keywords": "autolykos,proof of work,pow,mining,asic resistant,gpu mining,sustainable pow,decentralization",
       "details": [
-        { "title": "Energy Efficient", "description": "Optimized for consumer GPUs with lower power consumption" },
-        { "title": "Solo Mining Friendly", "description": "Algorithm design reduces pool centralization pressure" },
-        { "title": "ASIC Resistant", "description": "Memory-hard design keeps mining accessible to everyone" }
+        {
+          "title": "Energy Efficient",
+          "description": "Optimized for consumer GPUs with lower power consumption"
+        },
+        {
+          "title": "Solo Mining Friendly",
+          "description": "Algorithm design reduces pool centralization pressure"
+        },
+        {
+          "title": "ASIC Resistant",
+          "description": "Memory-hard design keeps mining accessible to everyone"
+        }
       ]
     },
     "storage-rent": {
@@ -5115,9 +5152,18 @@
       "shortDescription": "Long-term sustainability through state recycling",
       "keywords": "storage rent,sustainability,state bloat,miner revenue,tokenomics,demurrage,scalability,decentralization",
       "details": [
-        { "title": "State Sustainability", "description": "Prevents unlimited blockchain growth and state bloat" },
-        { "title": "Miner Revenue", "description": "Ensures mining rewards continue after emission ends" },
-        { "title": "Lost Coin Recovery", "description": "Recirculates dormant coins back into the economy" }
+        {
+          "title": "State Sustainability",
+          "description": "Prevents unlimited blockchain growth and state bloat"
+        },
+        {
+          "title": "Miner Revenue",
+          "description": "Ensures mining rewards continue after emission ends"
+        },
+        {
+          "title": "Lost Coin Recovery",
+          "description": "Recirculates dormant coins back into the economy"
+        }
       ]
     },
     "privacy-features": {
@@ -5126,9 +5172,18 @@
       "shortDescription": "Optional privacy with zero-knowledge proofs",
       "keywords": "sigma protocols,privacy,zero knowledge proofs,zkp,ring signatures,ergomixer,cryptography,defi privacy",
       "details": [
-        { "title": "Optional Privacy", "description": "Choose when and how much privacy you need" },
-        { "title": "Zero-Knowledge Proofs", "description": "Prove statements without revealing underlying data" },
-        { "title": "Ring Signatures", "description": "Hide transaction origins among multiple signers" }
+        {
+          "title": "Optional Privacy",
+          "description": "Choose when and how much privacy you need"
+        },
+        {
+          "title": "Zero-Knowledge Proofs",
+          "description": "Prove statements without revealing underlying data"
+        },
+        {
+          "title": "Ring Signatures",
+          "description": "Hide transaction origins among multiple signers"
+        }
       ]
     },
     "nipopows": {
@@ -5137,9 +5192,18 @@
       "shortDescription": "Light clients and trustless bridges",
       "keywords": "nipopows,light clients,mobile wallet,cross chain,bridges,sidechains,succinct proofs,superblocks",
       "details": [
-        { "title": "Instant Mobile Sync", "description": "Verify blockchain in seconds, not hours" },
-        { "title": "Trustless Bridges", "description": "Cross-chain communication without trusted intermediaries" },
-        { "title": "Cryptographic Security", "description": "Mathematical proofs, not trust assumptions" }
+        {
+          "title": "Instant Mobile Sync",
+          "description": "Verify blockchain in seconds, not hours"
+        },
+        {
+          "title": "Trustless Bridges",
+          "description": "Cross-chain communication without trusted intermediaries"
+        },
+        {
+          "title": "Cryptographic Security",
+          "description": "Mathematical proofs, not trust assumptions"
+        }
       ]
     },
     "subblocks": {
@@ -5148,9 +5212,18 @@
       "shortDescription": "Sub-second confirmations on Layer 1",
       "keywords": "subblocks,scaling,fast confirmations,layer 1,throughput",
       "details": [
-        { "title": "Sub-Second Confirmations", "description": "Near-instant transaction feedback for better UX" },
-        { "title": "Layer-1 Security", "description": "No trusted sequencers or additional trust assumptions" },
-        { "title": "Seamless Integration", "description": "Works with existing contracts and infrastructure" }
+        {
+          "title": "Sub-Second Confirmations",
+          "description": "Near-instant transaction feedback for better UX"
+        },
+        {
+          "title": "Layer-1 Security",
+          "description": "No trusted sequencers or additional trust assumptions"
+        },
+        {
+          "title": "Seamless Integration",
+          "description": "Works with existing contracts and infrastructure"
+        }
       ]
     },
     "native-tokens": {
@@ -5159,9 +5232,18 @@
       "shortDescription": "One-click token and NFT creation",
       "keywords": "native tokens,nft,eip4,token creation,digital assets",
       "details": [
-        { "title": "One-Click Creation", "description": "Issue tokens in a single transaction, no contract needed" },
-        { "title": "DeFi Ready", "description": "Instantly compatible with all Ergo DeFi protocols" },
-        { "title": "True Native Assets", "description": "Protocol-level support, not smart contract workarounds" }
+        {
+          "title": "One-Click Creation",
+          "description": "Issue tokens in a single transaction, no contract needed"
+        },
+        {
+          "title": "DeFi Ready",
+          "description": "Instantly compatible with all Ergo DeFi protocols"
+        },
+        {
+          "title": "True Native Assets",
+          "description": "Protocol-level support, not smart contract workarounds"
+        }
       ]
     },
     "oracle-pools": {
@@ -5170,9 +5252,18 @@
       "shortDescription": "Decentralized on-chain data feeds",
       "keywords": "oracle pools,oracles,price feeds,data feeds,defi infrastructure,on-chain aggregation,oracle security",
       "details": [
-        { "title": "Reliable Price Feeds", "description": "Aggregated data from multiple independent sources" },
-        { "title": "Protocol Native", "description": "Built into Ergo, not a third-party add-on" },
-        { "title": "Fully Decentralized", "description": "No single point of failure or manipulation" }
+        {
+          "title": "Reliable Price Feeds",
+          "description": "Aggregated data from multiple independent sources"
+        },
+        {
+          "title": "Protocol Native",
+          "description": "Built into Ergo, not a third-party add-on"
+        },
+        {
+          "title": "Fully Decentralized",
+          "description": "No single point of failure or manipulation"
+        }
       ]
     },
     "velvet-forks": {
@@ -5181,9 +5272,18 @@
       "shortDescription": "Seamless protocol upgrades",
       "keywords": "velvet forks,soft forks,protocol upgrades,backward compatibility",
       "details": [
-        { "title": "Backward Compatible", "description": "Old nodes continue working during upgrades" },
-        { "title": "Future Proof", "description": "Add new consensus rules without disruption" },
-        { "title": "Gradual Adoption", "description": "Network upgrades happen organically over time" }
+        {
+          "title": "Backward Compatible",
+          "description": "Old nodes continue working during upgrades"
+        },
+        {
+          "title": "Future Proof",
+          "description": "Add new consensus rules without disruption"
+        },
+        {
+          "title": "Gradual Adoption",
+          "description": "Network upgrades happen organically over time"
+        }
       ]
     },
     "adaptive-emission": {
@@ -5192,9 +5292,18 @@
       "shortDescription": "Community-governed monetary policy",
       "keywords": "adaptive emission,tokenomics,monetary policy,governance,emission schedule",
       "details": [
-        { "title": "Parameter Tuning", "description": "Adjust emission and economic parameters over time" },
-        { "title": "Economic Flexibility", "description": "Respond to changing market conditions" },
-        { "title": "Community Input", "description": "Governance-driven monetary policy decisions" }
+        {
+          "title": "Parameter Tuning",
+          "description": "Adjust emission and economic parameters over time"
+        },
+        {
+          "title": "Economic Flexibility",
+          "description": "Respond to changing market conditions"
+        },
+        {
+          "title": "Community Input",
+          "description": "Governance-driven monetary policy decisions"
+        }
       ]
     },
     "babel-fees": {
@@ -5203,9 +5312,18 @@
       "shortDescription": "Pay fees with any token",
       "keywords": "babel fees,transaction fees,ux,token payments,gas abstraction,defi ux,on-chain markets",
       "details": [
-        { "title": "Token Flexibility", "description": "Use any token to pay transaction fees" },
-        { "title": "Automated Exchange", "description": "Intermediaries handle ERG conversion automatically" },
-        { "title": "Seamless UX", "description": "No need to hold ERG for transactions" }
+        {
+          "title": "Token Flexibility",
+          "description": "Use any token to pay transaction fees"
+        },
+        {
+          "title": "Automated Exchange",
+          "description": "Intermediaries handle ERG conversion automatically"
+        },
+        {
+          "title": "Seamless UX",
+          "description": "No need to hold ERG for transactions"
+        }
       ]
     }
   }

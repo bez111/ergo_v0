@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Quiz"
+          "quiz": "Quiz",
+          "start": "Start"
         },
         "quiz": {
           "name": "Ergo-Ökosystem-Pfadfinder-Quiz",

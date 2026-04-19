@@ -18,69 +18,45 @@ export function CoreWebVitalsTracker() {
     // Dynamic import to avoid SSR issues
     import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       
+      const isDev = process.env.NODE_ENV === 'development'
+
       // Largest Contentful Paint (LCP)
       onLCP((metric: WebVitalsMetric) => {
-        const rating = metric.value <= 2500 ? 'good' : 
+        const rating = metric.value <= 2500 ? 'good' :
                       metric.value <= 4000 ? 'needs-improvement' : 'poor'
-        
-        console.log('LCP:', {
-          value: metric.value,
-          rating
-        })
-        
-        // Send to analytics
+        if (isDev) console.log('LCP:', { value: metric.value, rating })
         sendToAnalytics('LCP', metric.value, rating)
       })
 
       // Interaction to Next Paint (INP) - replaced FID in web-vitals v4
       onINP((metric: WebVitalsMetric) => {
-        const rating = metric.value <= 200 ? 'good' : 
+        const rating = metric.value <= 200 ? 'good' :
                       metric.value <= 500 ? 'needs-improvement' : 'poor'
-        
-        console.log('INP:', {
-          value: metric.value,
-          rating
-        })
-        
+        if (isDev) console.log('INP:', { value: metric.value, rating })
         sendToAnalytics('INP', metric.value, rating)
       })
 
       // Cumulative Layout Shift (CLS)
       onCLS((metric: WebVitalsMetric) => {
-        const rating = metric.value <= 0.1 ? 'good' : 
+        const rating = metric.value <= 0.1 ? 'good' :
                       metric.value <= 0.25 ? 'needs-improvement' : 'poor'
-        
-        console.log('CLS:', {
-          value: metric.value,
-          rating
-        })
-        
+        if (isDev) console.log('CLS:', { value: metric.value, rating })
         sendToAnalytics('CLS', metric.value, rating)
       })
 
       // First Contentful Paint (FCP)
       onFCP((metric: WebVitalsMetric) => {
-        const rating = metric.value <= 1800 ? 'good' : 
+        const rating = metric.value <= 1800 ? 'good' :
                       metric.value <= 3000 ? 'needs-improvement' : 'poor'
-        
-        console.log('FCP:', {
-          value: metric.value,
-          rating
-        })
-        
+        if (isDev) console.log('FCP:', { value: metric.value, rating })
         sendToAnalytics('FCP', metric.value, rating)
       })
 
       // Time to First Byte (TTFB)
       onTTFB((metric: WebVitalsMetric) => {
-        const rating = metric.value <= 800 ? 'good' : 
+        const rating = metric.value <= 800 ? 'good' :
                       metric.value <= 1800 ? 'needs-improvement' : 'poor'
-        
-        console.log('TTFB:', {
-          value: metric.value,
-          rating
-        })
-        
+        if (isDev) console.log('TTFB:', { value: metric.value, rating })
         sendToAnalytics('TTFB', metric.value, rating)
       })
     })

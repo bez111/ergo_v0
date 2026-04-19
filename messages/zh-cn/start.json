@@ -8,7 +8,29 @@
       "description": "开始使用 Ergo blockchain：钱包、交易和初学者的资源。",
       "keywords": "开始Ergo, begner guide, Ergo wallet, 如何启动"
     },
-    "schema": "从Ergo Blockchain 开始",
+    "schema": {
+      "name": "Getting Started with Ergo Blockchain",
+      "faq": {
+        "items": [
+          {
+            "question": "How do I get started with Ergo?",
+            "answer": "Download a wallet like Nautilus, buy ERG from an exchange, and make your first transaction. Our step-by-step guide walks you through each step."
+          },
+          {
+            "question": "What wallet should I use?",
+            "answer": "For most users, we recommend Nautilus browser extension for desktop or Ergo Mobile for iOS/Android. Both are secure and support all Ergo features."
+          },
+          {
+            "question": "Where can I buy ERG?",
+            "answer": "ERG is available on exchanges like KuCoin and Gate.io, or you can use decentralized exchanges like ErgoDEX for more privacy."
+          },
+          {
+            "question": "Is Ergo suitable for beginners?",
+            "answer": "Yes! Our getting started guide is designed for complete beginners. No prior crypto experience is required."
+          }
+        ]
+      }
+    },
     "page": {
       "breadcrumbs": {
         "start": "开始"
@@ -150,7 +172,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "测验"
+          "quiz": "测验",
+          "start": "开始"
         },
         "quiz": {
           "name": "Ergo 生态路径测验",

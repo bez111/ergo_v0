@@ -153,12 +153,9 @@ export function InfographicsClient() {
         const response = await fetch(candidateUrl, { method: "HEAD" });
         if (response.ok) {
           downloadUrl = candidateUrl;
-          console.log(`Using pre-generated ${size} asset:`, candidateUrl);
-        } else {
-          console.log(`Pre-generated ${size} asset not found, falling back to original`);
         }
-      } catch (error) {
-        console.log(`Could not check for ${size} asset, using original`);
+      } catch {
+        // Fall back to original asset
       }
     }
     
@@ -180,8 +177,6 @@ export function InfographicsClient() {
     if (downloadUrl !== infographic.fullImageUrl) {
       setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
     }
-    
-    console.log('Download initiated for:', infographic.title, size ? `(${size})` : '(original)');
   };
 
   return (

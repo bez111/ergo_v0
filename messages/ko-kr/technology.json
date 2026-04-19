@@ -1805,7 +1805,8 @@
       "this_structure_allows_for_complex": "이 구조는 UTXO 모델의 보안과 예측 가능성을 유지하면서 복잡한 스마트 컨트랙트를 가능하게 합니다. 각 출력은 독립적이며 독립적으로 처리될 수 있어 진정한 병렬 실행을 가능하게 합니다.",
       "frequently_asked_questions": "자주 묻는 질문",
       "learn_more_about_eutxo": "eUTXO에 대해 더 알아보기",
-      "view_on_github": "GitHub에서 보기"
+      "view_on_github": "GitHub에서 보기",
+      "description": "확장 UTXO 모델은 비트코인의 보안과 스마트 컨트랙트의 프로그래밍 가능성을 결합합니다. 병렬 실행, 결정론적 비용, 재진입 공격 없음."
     },
     "nipopows": {
       "title": "NIPoPoWs",

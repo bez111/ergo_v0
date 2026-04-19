@@ -1650,7 +1650,8 @@
       "this_structure_allows_for_complex": "Diese Struktur ermöglicht komplexe Smart Contracts bei gleichzeitiger Beibehaltung der Sicherheit und Vorhersehbarkeit des UTXO-Modells. Jeder Ausgang ist in sich geschlossen und kann unabhängig verarbeitet werden, was echte parallele Ausführung ermöglicht.",
       "frequently_asked_questions": "Häufig gestellte Fragen",
       "learn_more_about_eutxo": "Mehr über eUTXO erfahren",
-      "view_on_github": "Auf GitHub ansehen"
+      "view_on_github": "Auf GitHub ansehen",
+      "description": "Das Extended UTXO-Modell kombiniert Bitcoins Sicherheit mit der Programmierbarkeit von Smart Contracts. Parallele Ausführung, deterministische Kosten, keine Reentrancy-Angriffe."
     },
     "nipopows": {
       "title": "NIPoPoWs",

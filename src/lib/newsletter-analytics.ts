@@ -108,7 +108,9 @@ export class NewsletterAnalytics {
   private sendToAnalytics(event: NewsletterEvent) {
     // В реальном проекте здесь был бы вызов к Google Analytics, Mixpanel, etc.
     if (typeof window !== 'undefined') {
-      console.log('📊 Newsletter Analytics:', event)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('📊 Newsletter Analytics:', event)
+      }
       
       // Пример интеграции с Google Analytics
       if (typeof window.gtag === 'function') {

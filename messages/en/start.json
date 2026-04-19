@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Quiz"
+          "quiz": "Quiz",
+          "start": "Start"
         },
         "quiz": {
           "name": "Ergo Ecosystem Path Finder Quiz",
@@ -1658,7 +1659,12 @@
           "description": "Educational resource for learning Ergo blockchain fundamentals",
           "learningResourceType": "Presentation",
           "educationalLevel": "Beginner",
-          "teaches": ["Blockchain", "Smart Contracts", "DeFi", "Cryptocurrency"],
+          "teaches": [
+            "Blockchain",
+            "Smart Contracts",
+            "DeFi",
+            "Cryptocurrency"
+          ],
           "timeRequired": "PT30M"
         },
         "techArticle": {

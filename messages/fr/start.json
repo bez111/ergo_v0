@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Quiz"
+          "quiz": "Quiz",
+          "start": "Démarrer"
         },
         "quiz": {
           "name": "Quiz de découverte de parcours dans l'écosystème Ergo",

@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Тест"
+          "quiz": "Тест",
+          "start": "Старт"
         },
         "quiz": {
           "name": "Тест: путь в экосистеме Ergo",

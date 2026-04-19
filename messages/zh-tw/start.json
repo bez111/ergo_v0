@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "測驗"
+          "quiz": "測驗",
+          "start": "開始"
         },
         "quiz": {
           "name": "Ergo 生態系統路徑探索測驗",

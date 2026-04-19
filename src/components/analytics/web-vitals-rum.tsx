@@ -53,11 +53,10 @@ export function WebVitalsRUM() {
     // Element Timing для LCP кандидатов
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'element') {
+        if (entry.entryType === 'element' && process.env.NODE_ENV === 'development') {
           console.log('📊 Element Timing:', {
             name: entry.name,
             startTime: entry.startTime,
-            // renderTime и loadTime доступны только в специфичных entry типах
             duration: entry.duration
           })
         }

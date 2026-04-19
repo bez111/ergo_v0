@@ -175,7 +175,8 @@
       },
       "schema": {
         "breadcrumbs": {
-          "quiz": "Test"
+          "quiz": "Test",
+          "start": "Başlangıç"
         },
         "quiz": {
           "name": "Ergo Ekosistemi Yol Bulucu Testi",

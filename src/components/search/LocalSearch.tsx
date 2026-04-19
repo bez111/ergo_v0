@@ -124,10 +124,8 @@ export function LocalSearch() {
     try {
       searchIndex.current = buildSearchIndex();
       setError(null);
-      console.log('Search index initialized with', searchIndex.current.length, 'pages');
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : 'Search index build failed');
-      console.error('Search index build error:', e);
     }
   }, []);
 
@@ -345,10 +343,8 @@ export function LocalSearch() {
       return;
     }
     if (error) return;
-    
-    console.log('Searching for:', searchQuery, 'in', searchIndex.current.length, 'pages');
+
     const searchResults = searchInIndex(searchQuery, searchIndex.current);
-    console.log('Found', searchResults.length, 'result groups');
     setResults(searchResults);
     
     // Save to search history

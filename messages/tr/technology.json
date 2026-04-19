@@ -1805,7 +1805,8 @@
       "this_structure_allows_for_complex": "Bu yapı, UTXO modelinin güvenliğini ve öngörülebilirliğini korurken karmaşık akıllı sözleşmelere olanak tanır. Her çıktı bağımsızdır ve bağımsız olarak işlenebilir, bu da gerçek paralel yürütmeyi mümkün kılar.",
       "frequently_asked_questions": "Sıkça Sorulan Sorular",
       "learn_more_about_eutxo": "eUTXO Hakkında Daha Fazla Bilgi Edinin",
-      "view_on_github": "GitHub'da Görüntüle"
+      "view_on_github": "GitHub'da Görüntüle",
+      "description": "Genişletilmiş UTXO modeli, Bitcoin'in güvenliğini akıllı sözleşme programlanabilirliğiyle birleştirir. Paralel yürütme, deterministik maliyetler, yeniden giriş saldırıları yok."
     },
     "nipopows": {
       "title": "NIPoPoW'lar",
