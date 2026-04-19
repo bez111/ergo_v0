@@ -3,7 +3,7 @@
 import { siteConfig } from "@/config/site-config";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script"
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { WebVitals } from "./web-vitals";
 
 /**
@@ -62,20 +62,22 @@ export const event = ({
   });
 };
 
-export function GoogleAnalytics() {
+function GoogleAnalyticsInner() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    // On route/path change, report a pageview
-    // build full path with query
     const query = searchParams?.toString();
     const path = query ? `${pathname}?${query}` : pathname;
     pageview(path);
   }, [pathname, searchParams]);
-  
-  if (!GA_ID) { 
-    return null 
+
+  return null;
+}
+
+export function GoogleAnalytics() {
+  if (!GA_ID) {
+    return null
   }
   return (
     <>
@@ -86,12 +88,11 @@ export function GoogleAnalytics() {
       <Script id="ga4-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);} 
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_ID}', { 
-            anonymize_ip: true, 
+          gtag('config', '${GA_ID}', {
+            anonymize_ip: true,
             page_path: window.location.pathname,
-            // Enhanced measurement for Web Vitals
             send_page_view: true,
             custom_map: {
               'custom_parameter_1': 'metric_id',
@@ -100,6 +101,9 @@ export function GoogleAnalytics() {
           });
         `}
       </Script>
+      <Suspense fallback={null}>
+        <GoogleAnalyticsInner />
+      </Suspense>
       <WebVitals debug={process.env.NODE_ENV === 'development'} />
     </>
   )
