@@ -206,10 +206,11 @@ const nextConfig: NextConfig = {
           destination: 'https://www.ergoblockchain.org/:path*',
           permanent: true,
         },
-        // *.vercel.app → www.ergoblockchain.org (prevent duplicate SEO indexing)
+        // ergo-platform.vercel.app → www.ergoblockchain.org (prevent duplicate SEO)
+        // Matches canonical production vercel alias only, not preview hashes
         {
           source: '/:path*',
-          has: [{ type: 'host' as const, value: '(?<host>.*\\.vercel\\.app)' }],
+          has: [{ type: 'host' as const, value: 'ergo-platform.vercel.app' }],
           destination: 'https://www.ergoblockchain.org/:path*',
           permanent: true,
         },
