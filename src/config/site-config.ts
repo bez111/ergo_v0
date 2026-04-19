@@ -8,5 +8,5 @@ export const siteConfig = {
   beehiivApiKey: process.env.BEEHIIV_API_KEY || '',
   beehiivPublicationId: process.env.BEEHIIV_PUBLICATION_ID || '',
 
-  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || ''
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID || 'G-S4TR1WWM7Q'
 };

@@ -10,6 +10,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { createOrganizationSchema, createWebSiteSchema } from "@/lib/seo/schemas";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { siteConfig } from "@/config/site-config";
 
 
@@ -117,6 +118,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           __html: JSON.stringify([createOrganizationSchema(), createWebSiteSchema()])
         }}
       />
+      <GoogleAnalytics />
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeProvider
           attribute="class"
