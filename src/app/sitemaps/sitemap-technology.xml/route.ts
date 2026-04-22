@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
+import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const technologyPages = [
@@ -18,7 +18,7 @@ export async function GET() {
     { url: '/technology/adaptive-emission', priority: 0.8, changefreq: 'monthly' as const },
   ]
 
-  const sitemap = generateMultilingualSitemap(technologyPages)
+  const sitemap = generateMultilingualSitemap(filterIndexablePages(technologyPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 } 

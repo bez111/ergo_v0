@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { EutxoVsAccountsClient } from "./EutxoVsAccountsClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/eutxo-vs-accounts`
+const PATH = "/blog/eutxo-vs-accounts"
 
 // SEO Configuration
 const SEO = {
@@ -28,14 +28,15 @@ const FAQ_ITEMS = [
   { question: "Where should developers start?", answer: "Begin with the eUTXO intro, ErgoScript examples, and try the eUTXO visualizer to understand explicit state transitions." }
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     openGraph: {
       type: "article",
-      url,
+      url: getCanonicalUrl(PATH, locale),
       siteName: "Ergo Blockchain",
       title: SEO.title,
       description: SEO.description,

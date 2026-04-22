@@ -1,4 +1,5 @@
 import { locales, localeConfig } from '../../i18n/request';
+import { siteConfig } from '@/config/site-config';
 
 interface HreflangTagsProps {
   pathname: string;
@@ -6,7 +7,7 @@ interface HreflangTagsProps {
 }
 
 export default function HreflangTags({ pathname, currentLocale }: HreflangTagsProps) {
-  // Удаляем префикс локали из пути для создания базового пути
+  // Strip locale prefix to get the canonical base path
   const getBasePath = (path: string, locale: string) => {
     if (locale === 'en') return path;
     const localePrefix = `/${locale}`;
@@ -14,7 +15,7 @@ export default function HreflangTags({ pathname, currentLocale }: HreflangTagsPr
   };
 
   const basePath = getBasePath(pathname, currentLocale);
-  const baseUrl = 'https://www.ergoblockchain.org';
+  const baseUrl = siteConfig.siteUrl;
 
   return (
     <>

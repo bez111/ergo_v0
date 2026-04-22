@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
-import { createTechArticleSchema, createHowToSchema, createFAQSchema } from "@/lib/seo"
+import { createTechArticleSchema, createHowToSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 // SEO Configuration
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('ogDescription'),
       images: [SEO.ogImage],
       type: "website",
-      url: `https://www.ergoblockchain.org${SEO.canonicalPath}`,
+      url: getCanonicalUrl(SEO.canonicalPath, locale),
     },
     twitter: {
       card: "summary_large_image",
@@ -32,9 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('twitterDescription'),
       images: [SEO.ogImage],
     },
-    alternates: {
-      canonical: `https://www.ergoblockchain.org${SEO.canonicalPath}`,
-    },
+    alternates: getAlternates(SEO.canonicalPath, locale),
   }
 }
 

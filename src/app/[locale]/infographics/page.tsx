@@ -6,11 +6,13 @@ import { infographics } from "@/data/infographics"
 import {
   createBreadcrumbSchema,
   createCollectionSchema,
+  getAlternates,
+  getCanonicalUrl,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/infographics`
+const PATH = "/infographics"
 
 // SEO Configuration
 const SEO = {
@@ -24,11 +26,13 @@ const SEO = {
   ],
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const url = getCanonicalUrl(PATH, locale)
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     openGraph: {
       type: 'website',
       url,
@@ -56,7 +60,7 @@ export default function InfographicsPage() {
   const infographicsItemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "@id": `${url}#itemlist`,
+    "@id": `${origin}${PATH}#itemlist`,
     name: "Ergo Blockchain Infographics Collection",
     description: "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.",
     numberOfItems: infographics.length,

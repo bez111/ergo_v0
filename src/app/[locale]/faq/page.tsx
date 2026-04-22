@@ -3,12 +3,12 @@ import { Suspense } from "react"
 import { siteConfig } from "@/config/site-config"
 import { faqData, getFAQByLevel, beginnerCategories, technicalCategories } from "@/data/faq"
 import FAQPageClient from "./FAQPageClient"
-import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 86400
 
-const url = `${siteConfig.siteUrl}/faq`
+const PATH = "/faq"
 
 // Helper to create URL-safe slugs from strings
 // const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "")
@@ -23,11 +23,13 @@ const SEO = {
   description: "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy, eUTXO, ErgoScript — find what you need in seconds.",
 }
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const url = getCanonicalUrl(PATH, locale)
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     openGraph: {
       type: "website",
       url,

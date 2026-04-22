@@ -3,22 +3,22 @@ import { getTranslations } from 'next-intl/server'
 import TechnologyClient from './TechnologyClient'
 import { siteConfig } from '@/config/site-config'
 import { technologyTopics, categoryLabels } from '@/data/technology-topics'
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'technology.seo' })
-  
+
   return {
     title: t('title'),
     description: t('description'),
     keywords: t('keywords').split(','),
-    alternates: { canonical: 'https://www.ergoblockchain.org/technology' },
+    alternates: getAlternates('/technology', locale),
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: 'https://www.ergoblockchain.org/technology',
+      url: getCanonicalUrl('/technology', locale),
       siteName: 'Ergo Platform',
       images: [{ url: 'https://www.ergoblockchain.org/og/technology.png', width: 1200, height: 630, alt: t('ogImageAlt') }],
       type: 'website',

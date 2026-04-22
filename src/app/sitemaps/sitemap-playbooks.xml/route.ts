@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { playbooks } from '@/data/playbooks'
-import { generateMultilingualSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
+import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const hubPage = {
@@ -17,7 +17,7 @@ export async function GET() {
   }))
 
   const allPages = [hubPage, ...playbookPages]
-  const sitemap = generateMultilingualSitemap(allPages)
+  const sitemap = generateMultilingualSitemap(filterIndexablePages(allPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

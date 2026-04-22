@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { BuildAgentPaysClient } from "./BuildAgentPaysClient"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/build-agent-pays-for-api`
+const PATH = "/blog/build-agent-pays-for-api"
 
 const SEO = {
   title: "How to Build an Agent That Pays for Its Own API Calls on Ergo",
@@ -19,10 +19,11 @@ const FAQ_ITEMS = [
   { question: "Do agents need ERG to pay transaction fees?", answer: "With Babel Fees, agents can pay fees in any token. For ERG-based payments, a small ERG balance is needed — it can come from the first payment the agent receives." },
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
-    title: SEO.title, description: SEO.description, alternates: { canonical: url }, keywords: SEO.keywords,
-    openGraph: { type: "article", url, siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: "en_US", publishedTime: "2026-03-20T00:00:00Z", authors: ["Developer Relations"] },
+    title: SEO.title, description: SEO.description, alternates: getAlternates(PATH, locale), keywords: SEO.keywords,
+    openGraph: { type: "article", url: getCanonicalUrl(PATH, locale), siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: "en_US", publishedTime: "2026-03-20T00:00:00Z", authors: ["Developer Relations"] },
     twitter: { card: "summary_large_image", title: SEO.title, description: SEO.description, images: [`${origin}${SEO.image}`], site: siteConfig.twitterHandle },
     robots: { index: true, follow: true },
   }

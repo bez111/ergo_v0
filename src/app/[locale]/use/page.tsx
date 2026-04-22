@@ -3,7 +3,7 @@ import UseClient from "./UseClient"
 import { useCases } from "./_data"
 import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createCollectionSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createCollectionSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 600
@@ -13,12 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'use' })
   const title = t('title') + " — DeFi, NFTs, Privacy, Bridges"
   const description = t('description')
-  const url = "https://www.ergoblockchain.org/use"
+  const url = getCanonicalUrl('/use', locale)
   const twitterHandle = siteConfig.twitterHandle
   return {
     title,
     description,
-    alternates: { canonical: url, languages: { "x-default": url, en: url } },
+    alternates: getAlternates('/use', locale),
     openGraph: {
       type: "website",
       url,

@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site-config"
 import { glossaryTerms, getTermBySlug } from "@/data/glossary"
 import { getLocalizedGlossaryTerm, type GlossaryTermsTranslations } from "@/data/glossary-i18n"
 import { GlossaryTermClient } from "./GlossaryTermClient"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
@@ -37,7 +37,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   const origin = siteConfig.siteUrl
-  const url = `${origin}/learn/glossary/${term.slug}`
+  const path = `/learn/glossary/${term.slug}`
+  const url = getCanonicalUrl(path, params.locale)
   const title = term.seoTitle || `What is ${term.term}? | Ergo Glossary`
   const description = term.seoDescription || term.shortDefinition
 
@@ -45,7 +46,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
     title,
     description,
     keywords: term.keywords,
-    alternates: { canonical: url },
+    alternates: getAlternates(path, params.locale),
     openGraph: {
       type: "article",
       url,

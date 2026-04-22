@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
+import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const ecosystemPages = [
@@ -11,7 +11,7 @@ export async function GET() {
     { url: '/ecosystem/duckpools', priority: 0.7, changefreq: 'weekly' as const },
   ]
 
-  const sitemap = generateMultilingualSitemap(ecosystemPages)
+  const sitemap = generateMultilingualSitemap(filterIndexablePages(ecosystemPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

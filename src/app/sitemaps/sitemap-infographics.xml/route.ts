@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { infographics } from '@/data/infographics'
-import { generateMultilingualImageSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
+import { generateMultilingualImageSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const hubPage = {
@@ -22,7 +22,7 @@ export async function GET() {
   }))
 
   const allPages = [hubPage, ...infographicPages]
-  const sitemap = generateMultilingualImageSitemap(allPages)
+  const sitemap = generateMultilingualImageSitemap(filterIndexablePages(allPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

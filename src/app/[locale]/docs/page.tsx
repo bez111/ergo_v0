@@ -3,11 +3,12 @@ import DocsClient from './DocsClient'
 import Script from 'next/script'
 import { generateDocsSchema } from './docs-schema'
 import { getTranslations } from 'next-intl/server'
+import { getAlternates, getCanonicalUrl } from '@/lib/seo'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'docs' })
-  
+
   return {
     title: t('title'),
     description: t('subtitle'),
@@ -16,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('title'),
       description: t('subtitle'),
       type: 'website',
-      url: 'https://www.ergoblockchain.org/docs',
+      url: getCanonicalUrl('/docs', locale),
       images: [{
         url: '/og-docs.png',
         width: 1200,
@@ -41,9 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'max-snippet': -1,
       },
     },
-    alternates: {
-      canonical: 'https://www.ergoblockchain.org/docs'
-    }
+    alternates: getAlternates('/docs', locale),
   }
 }
 

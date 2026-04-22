@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site-config"
 import { comparisons, getComparisonBySlug } from "@/data/comparisons"
 import { getLocalizedComparison, type ComparisonTranslations } from "@/data/comparisons-i18n"
 import { ComparePageClient } from "./ComparePageClient"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
@@ -40,13 +40,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 
   const origin = siteConfig.siteUrl
-  const url = `${origin}/compare/ergo-vs-${comparison.slug}`
+  const path = `/compare/ergo-vs-${comparison.slug}`
+  const url = getCanonicalUrl(path, params.locale)
 
   return {
     title: comparison.seoTitle,
     description: comparison.seoDescription,
     keywords: comparison.keywords,
-    alternates: { canonical: url },
+    alternates: getAlternates(path, params.locale),
     openGraph: {
       type: "article",
       url,

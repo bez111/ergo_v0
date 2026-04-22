@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
 import { ErgoManifestoClient } from "./ErgoManifestoClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 86400
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/ergo-manifesto`
+const PATH = "/blog/ergo-manifesto"
 
 // SEO Configuration
 const SEO = {
@@ -31,14 +31,15 @@ const FAQ_ITEMS = [
   { question: "What are the core principles of the Ergo Manifesto?", answer: "Key principles include: privacy as a human right, decentralization over efficiency, tools for the people (not corporations), resistance to surveillance, and long-term sustainability through fair tokenomics and storage rent." }
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     openGraph: {
       type: "article",
-      url,
+      url: getCanonicalUrl(PATH, locale),
       siteName: "Ergo Blockchain",
       title: SEO.title,
       description: SEO.description,
@@ -67,7 +68,7 @@ export default function ErgoManifestoPage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "@id": `${url}#article`,
+    "@id": `${origin}${PATH}#article`,
     headline: SEO.title,
     description: SEO.description,
     image: `${origin}${SEO.image}`,
@@ -75,7 +76,7 @@ export default function ErgoManifestoPage() {
     dateModified: new Date().toISOString(),
     author: { "@type": "Person", name: "Alexander Chepurnoy (Kushti)", url: `${origin}/about/kushti` },
     publisher: { "@type": "Organization", name: "Ergo Platform", logo: { "@type": "ImageObject", url: `${origin}/logo-ergo.svg` } },
-    mainEntityOfPage: url,
+    mainEntityOfPage: `${origin}${PATH}`,
     wordCount: 2500,
     timeRequired: "PT10M",
     inLanguage: "en",

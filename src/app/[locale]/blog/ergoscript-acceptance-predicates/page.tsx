@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { AcceptancePredicatesClient } from "./AcceptancePredicatesClient"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/ergoscript-acceptance-predicates`
+const PATH = "/blog/ergoscript-acceptance-predicates"
 
 const SEO = {
   title: "ErgoScript Acceptance Predicates: The Missing Primitive for Agent Payments",
@@ -21,13 +21,14 @@ const FAQ_ITEMS = [
   { question: "Why use ErgoScript over Solidity for agent payments?", answer: "ErgoScript conditions are embedded directly in the UTxO — no separate contract deployment, no reentrancy risk, deterministic gas costs, formally verifiable. Solidity escrows are separate contracts with state that can be exploited and gas that's unpredictable." },
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     keywords: SEO.keywords,
-    openGraph: { type: "article", url, siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: "en_US", publishedTime: "2026-03-20T00:00:00Z", authors: ["Developer Relations"], tags: ["ErgoScript", "Agent Economy", "Smart Contracts", "Developer"] },
+    openGraph: { type: "article", url: getCanonicalUrl(PATH, locale), siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: "en_US", publishedTime: "2026-03-20T00:00:00Z", authors: ["Developer Relations"], tags: ["ErgoScript", "Agent Economy", "Smart Contracts", "Developer"] },
     twitter: { card: "summary_large_image", title: SEO.title, description: SEO.description, images: [`${origin}${SEO.image}`], site: siteConfig.twitterHandle },
     robots: { index: true, follow: true },
   }

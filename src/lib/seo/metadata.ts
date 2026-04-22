@@ -7,6 +7,13 @@ import type { PageSEOConfig } from "./types"
 
 const BASE_URL = siteConfig.siteUrl
 
+// Must match src/i18n/request.ts — keep in sync
+const ALL_LOCALES = [
+  'en', 'ru', 'zh-cn', 'zh-tw',
+  'tr', 'ko-kr', 'es', 'pt-br',
+  'ja', 'de', 'fr', 'it'
+] as const
+
 /**
  * Generate locale-aware canonical URL
  */
@@ -18,16 +25,18 @@ export function getCanonicalUrl(path: string, locale: string): string {
 }
 
 /**
- * Generate alternates object with canonical and language alternates
+ * Generate alternates object with canonical and hreflang alternates for all 12 locales
  */
 export function getAlternates(path: string, locale: string) {
+  const languages: Record<string, string> = {}
+  for (const l of ALL_LOCALES) {
+    languages[l] = l === 'en' ? `${BASE_URL}${path}` : `${BASE_URL}/${l}${path}`
+  }
+  languages['x-default'] = `${BASE_URL}${path}`
+
   return {
     canonical: getCanonicalUrl(path, locale),
-    languages: {
-      'en': `${BASE_URL}${path}`,
-      'ru': `${BASE_URL}/ru${path}`,
-      'x-default': `${BASE_URL}${path}`
-    }
+    languages,
   }
 }
 

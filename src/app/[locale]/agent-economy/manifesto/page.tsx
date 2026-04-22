@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { ManifestoClient } from "./ManifestoClient"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/agent-economy/manifesto`
+const PATH = "/agent-economy/manifesto"
 
 const SEO = {
   title: "The Agentic Blockchain Manifesto — Ergo as Base Layer for Autonomous AI Commerce",
@@ -63,15 +63,16 @@ const FAQ_ITEMS = [
   },
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     keywords: SEO.keywords,
     openGraph: {
       type: "article",
-      url,
+      url: getCanonicalUrl(PATH, locale),
       siteName: "Ergo Platform",
       title: SEO.title,
       description: SEO.description,

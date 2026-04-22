@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { SigmaProtocolsClient } from "./SigmaProtocolsClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/sigma-protocols-privacy`
+const PATH = "/blog/sigma-protocols-privacy"
 
 // SEO Configuration
 const SEO = {
@@ -29,14 +29,15 @@ const FAQ_ITEMS = [
   { question: "How do Sigma Protocols compare to ring signatures?", answer: "Sigma Protocols can implement ring signatures and much more. They're more flexible and composable, allowing for complex privacy conditions like threshold signatures and programmable disclosure rules." }
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     openGraph: {
       type: "article",
-      url,
+      url: getCanonicalUrl(PATH, locale),
       siteName: "Ergo Blockchain",
       title: SEO.title,
       description: SEO.description,

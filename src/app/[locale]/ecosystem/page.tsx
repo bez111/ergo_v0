@@ -6,26 +6,28 @@ import {
   createBreadcrumbSchema,
   createFAQSchema,
   createCollectionSchema,
+  getAlternates,
+  getCanonicalUrl,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { siteConfig } from "@/config/site-config"
 
 export const revalidate = 600
 
-export async function generateMetadata({ searchParams, params }: { 
-  searchParams: Promise<Record<string, string | string[]>>, 
-  params: Promise<{ locale: string }> 
+export async function generateMetadata({ searchParams, params }: {
+  searchParams: Promise<Record<string, string | string[]>>,
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const sp = await searchParams
   const { locale } = await params
   const hasQueries = !!sp && Object.keys(sp).length > 0
-  const canonical = `${siteConfig.siteUrl}/ecosystem`
+  const canonical = getCanonicalUrl('/ecosystem', locale)
   const t = await getTranslations({ locale, namespace: 'ecosystem.seo' })
-  
+
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { canonical },
+    alternates: getAlternates('/ecosystem', locale),
     openGraph: {
       type: "website",
       url: canonical,

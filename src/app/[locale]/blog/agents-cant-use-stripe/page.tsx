@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { AgentStripeClient } from "./AgentStripeClient"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/agents-cant-use-stripe`
+const PATH = "/blog/agents-cant-use-stripe"
 
 const SEO = {
   title: "Why AI Agents Can't Use Stripe — and What They Need Instead",
@@ -61,15 +61,16 @@ const FAQ_ITEMS = [
   },
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     keywords: SEO.keywords,
     openGraph: {
       type: "article",
-      url,
+      url: getCanonicalUrl(PATH, locale),
       siteName: "Ergo Platform",
       title: SEO.title,
       description: SEO.description,

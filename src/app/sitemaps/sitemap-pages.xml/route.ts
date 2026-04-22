@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { generateMultilingualSitemap, sitemapHeaders } from '@/lib/sitemap-utils'
+import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
   const staticPages = [
@@ -51,7 +51,7 @@ export async function GET() {
     { url: '/build/quickstart', priority: 0.8, changefreq: 'weekly' as const },
   ]
 
-  const sitemap = generateMultilingualSitemap(staticPages)
+  const sitemap = generateMultilingualSitemap(filterIndexablePages(staticPages))
 
   return new NextResponse(sitemap, { headers: sitemapHeaders })
 }

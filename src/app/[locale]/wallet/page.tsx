@@ -5,6 +5,8 @@ import { BackgroundWrapper } from '@/components/home/background-wrapper'
 import {
   createBreadcrumbSchema,
   createFAQSchema,
+  getAlternates,
+  getCanonicalUrl,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
@@ -41,11 +43,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t('seo.title'),
     description: t('seo.description'),
     keywords: t('seo.keywords'),
-    alternates: { canonical: 'https://www.ergoblockchain.org/wallet' },
+    alternates: getAlternates('/wallet', locale),
     openGraph: {
       title: t('seo.ogTitle'),
       description: t('seo.ogDescription'),
-      url: 'https://www.ergoblockchain.org/wallet',
+      url: getCanonicalUrl('/wallet', locale),
       siteName: 'Ergo Platform',
       images: [{ url: 'https://www.ergoblockchain.org/og/wallets.png', width: 1200, height: 630, alt: 'Ergo Wallets Overview' }],
       type: 'website',

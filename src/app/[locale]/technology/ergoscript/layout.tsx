@@ -4,6 +4,8 @@ import {
   createTechArticleSchema,
   createFAQSchema,
   createSoftwareAppSchema,
+  getAlternates,
+  getCanonicalUrl
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
@@ -34,12 +36,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     keywords: SEO.keywords,
-    alternates: {
-      canonical: `https://www.ergoblockchain.org/technology/${SEO.slug}`,
-    },
+    alternates: getAlternates(`/technology/${SEO.slug}`, locale),
     openGraph: {
       type: "article",
-      url: `https://www.ergoblockchain.org/technology/${SEO.slug}`,
+      url: getCanonicalUrl(`/technology/${SEO.slug}`, locale),
       title,
       description,
       images: [{ url: SEO.ogImage, width: 1200, height: 630 }],

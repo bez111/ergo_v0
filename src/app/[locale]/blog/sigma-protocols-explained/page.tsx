@@ -1,11 +1,11 @@
 import type { Metadata } from "next"
 import { SigmaProtocolsExplainedClient } from "./SigmaProtocolsExplainedClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, createHowToSchema } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, createHowToSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 const origin = siteConfig.siteUrl
-const url = `${origin}/blog/sigma-protocols-explained`
+const PATH = "/blog/sigma-protocols-explained"
 
 // SEO Configuration
 const SEO = {
@@ -39,7 +39,8 @@ const HOWTO_STEPS = [
   { name: "Compare technologies", text: "See how Sigma Protocols differ from other privacy technologies like ZCash and Monero" }
 ]
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
   return {
     title: SEO.title,
     description: SEO.description,
@@ -47,10 +48,10 @@ export function generateMetadata(): Metadata {
     authors: [{ name: "Privacy Team" }],
     creator: "Privacy Team",
     publisher: "Ergo Platform",
-    alternates: { canonical: url },
+    alternates: getAlternates(PATH, locale),
     openGraph: {
       type: "article",
-      url,
+      url: getCanonicalUrl(PATH, locale),
       siteName: "Ergo Platform",
       title: SEO.title,
       description: SEO.description,
