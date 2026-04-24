@@ -27,6 +27,18 @@ export default function robots(): MetadataRoute.Robots {
           '/*?page=2*', // block page=20+
           '/ui-kit*', // internal UI components
           '/test*', // test pages
+          '/wallet/transaction/*', // node API endpoints, not pages
+          '/wallet/transactions',
+          '/wallet/balances',
+          '/wallet/status',
+          '/wallet/init',
+          '/wallet/restore',
+          '/wallet/unlock',
+          '/wallet/deriveNextKey',
+          '/wallet/generateCommitments',
+          '/wallet/testnet-faucet',
+          '/script/*', // node API endpoints
+          '/utxo/*', // node API endpoints
           '/*.json$',
           '/*_buildManifest.js$',
           '/*_middlewareManifest.js$',

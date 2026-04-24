@@ -270,6 +270,137 @@ const nextConfig: NextConfig = {
         destination: '/:locale/technology/babel-fees',
         permanent: true,
       },
+
+      // ── Legacy URL redirects (from old site version, found in Search Console 404s) ──
+
+      // Double locale prefix bug: /ru/ru/* → /ru/*
+      {
+        source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/:locale2(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/:path*',
+        destination: '/:locale/:path*',
+        permanent: true,
+      },
+
+      // Strip .md extension from old docs URLs
+      { source: '/docs/:path*\\.md', destination: '/docs/:path*', permanent: true },
+      { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/docs/:path*\\.md', destination: '/:locale/docs/:path*', permanent: true },
+
+      // Old use-case URLs without /use-cases/ prefix
+      { source: '/use/identity-reputation', destination: '/use/identity', permanent: true },
+      { source: '/use/cross-chain-bridges', destination: '/use/bridges', permanent: true },
+      { source: '/use/gaming-metaverse', destination: '/use/gaming', permanent: true },
+      { source: '/use/daos-alternative-economies', destination: '/use/daos', permanent: true },
+      { source: '/use/oracles-data-feeds', destination: '/use/oracles', permanent: true },
+      { source: '/use/privacy-confidentiality', destination: '/use/privacy', permanent: true },
+      { source: '/use/nfts-digital-assets', destination: '/use/nfts', permanent: true },
+      { source: '/use/mining', destination: '/miners', permanent: true },
+      { source: '/use/staking', destination: '/use', permanent: true },
+      { source: '/use/guides/:path*', destination: '/use', permanent: true },
+      { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/mining', destination: '/:locale/miners', permanent: true },
+
+      // Old technology paths under /docs/developers/ → /technology/
+      { source: '/docs/developers/babel-fees', destination: '/technology/babel-fees', permanent: true },
+      { source: '/docs/developers/storage-rent', destination: '/technology/storage-rent', permanent: true },
+      { source: '/docs/developers/eutxo-model', destination: '/technology/eutxo-model', permanent: true },
+      { source: '/docs/developers/oracles', destination: '/technology/oracle-pools', permanent: true },
+      { source: '/docs/developers/oracles/core', destination: '/technology/oracle-pools', permanent: true },
+      { source: '/docs/developers/light-clients', destination: '/technology/nipopows', permanent: true },
+      { source: '/docs/developers/emission', destination: '/technology/adaptive-emission', permanent: true },
+      { source: '/docs/developers/privacy', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/developers/nipopows', destination: '/technology/nipopows', permanent: true },
+      { source: '/docs/developers/quickstart', destination: '/build/quickstart', permanent: true },
+      { source: '/docs/developers/fleet-sdk', destination: '/build/quickstart', permanent: true },
+      { source: '/docs/developers/sigma', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/developers/multi', destination: '/docs/developers', permanent: true },
+      { source: '/docs/developers/integration', destination: '/docs/developers', permanent: true },
+      { source: '/docs/developers/deployment', destination: '/docs/developers', permanent: true },
+      { source: '/docs/developers/min-fee', destination: '/docs/developers', permanent: true },
+      { source: '/docs/developers/schnorr', destination: '/technology/privacy-features', permanent: true },
+
+      // Old /docs/users/ prefix
+      { source: '/docs/users/storage-rent', destination: '/technology/storage-rent', permanent: true },
+      { source: '/docs/users/privacy', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/users/ergomixer', destination: '/technology/privacy-features', permanent: true },
+
+      // Old /docs/technology/ prefix → /technology/
+      { source: '/docs/technology', destination: '/technology', permanent: true },
+      { source: '/docs/technology/privacy-features', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/technology/autolykos', destination: '/technology/secure-pow', permanent: true },
+      { source: '/docs/technology/ergoscript', destination: '/technology/ergoscript', permanent: true },
+
+      // Old /docs/eco/ → /docs/ecosystem/
+      { source: '/docs/eco/:path*', destination: '/docs/ecosystem/:path*', permanent: true },
+
+      // Old /docs/ergoscript/* → /technology/ergoscript
+      { source: '/docs/ergoscript/:path*', destination: '/technology/ergoscript', permanent: true },
+
+      // Old /docs/sigma-protocols → /technology/privacy-features
+      { source: '/docs/sigma-protocols', destination: '/technology/privacy-features', permanent: true },
+
+      // Old top-level /docs/* legacy pages
+      { source: '/docs/protocol-overview', destination: '/technology', permanent: true },
+      { source: '/docs/privacy', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/tokens', destination: '/technology/native-tokens', permanent: true },
+      { source: '/docs/tokenomics', destination: '/technology/adaptive-emission', permanent: true },
+      { source: '/docs/tokenomics/storage-rent', destination: '/technology/storage-rent', permanent: true },
+      { source: '/docs/governance', destination: '/docs/miners/governance', permanent: true },
+      { source: '/docs/mining', destination: '/miners', permanent: true },
+
+      // Old /docs/miners/* legacy pages
+      { source: '/docs/miners/optimization', destination: '/miners', permanent: true },
+      { source: '/docs/miners/configuration', destination: '/miners', permanent: true },
+      { source: '/docs/miners/solo-vs-pool', destination: '/miners', permanent: true },
+      { source: '/docs/miners/solo-mining', destination: '/miners', permanent: true },
+      { source: '/docs/miners/software', destination: '/miners', permanent: true },
+      { source: '/docs/miners/gpu-comparison', destination: '/miners', permanent: true },
+      { source: '/docs/miners/mining-setup', destination: '/miners', permanent: true },
+      { source: '/docs/miners/hardware', destination: '/miners', permanent: true },
+
+      // Old /docs/introduction/* legacy
+      { source: '/docs/introduction/atomic-swaps', destination: '/technology', permanent: true },
+      { source: '/docs/introduction/foundation/treasury', destination: '/docs/introduction', permanent: true },
+      { source: '/docs/introduction/privacy-features', destination: '/technology/privacy-features', permanent: true },
+
+      // /community/* → /start/community
+      { source: '/community/:path*', destination: '/start/community', permanent: true },
+
+      // /learn/guides/* → /learn
+      { source: '/learn/guides/:path*', destination: '/learn', permanent: true },
+      { source: '/learn/guides', destination: '/learn', permanent: true },
+      { source: '/learn/Handbook', destination: '/learn', permanent: true },
+
+      // /ecosystem/* category pages → /ecosystem
+      { source: '/ecosystems/:path*', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/projects/:slug', destination: '/ecosystem/:slug', permanent: true },
+      { source: '/ecosystem/nfts', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/financial', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/privacy', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/market', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/tools', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/gaming', destination: '/ecosystem', permanent: true },
+
+      // Old blog posts that never existed → /blog hub
+      { source: '/blog/vesting-contracts', destination: '/blog', permanent: true },
+      { source: '/blog/stealth-addresses', destination: '/blog', permanent: true },
+      { source: '/blog/deflationary-tokens', destination: '/blog', permanent: true },
+      { source: '/blog/cross-chain-swaps', destination: '/blog', permanent: true },
+      { source: '/blog/assurance-contracts', destination: '/blog', permanent: true },
+
+      // Misc legacy
+      { source: '/builders', destination: '/developers', permanent: true },
+      { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/builders', destination: '/:locale/developers', permanent: true },
+      { source: '/technology/extended-utxo', destination: '/technology/eutxo-model', permanent: true },
+      { source: '/technology/whitepaper', destination: '/technology', permanent: true },
+      { source: '/tokenomics', destination: '/technology/adaptive-emission', permanent: true },
+      { source: '/transactions', destination: '/technology', permanent: true },
+      { source: '/contribute', destination: '/docs/contribute', permanent: true },
+      { source: '/start/wallet', destination: '/wallet', permanent: true },
+      { source: '/start/security', destination: '/faq', permanent: true },
+      { source: '/start/get-erg', destination: '/use/get-erg', permanent: true },
+      { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/start/get-erg', destination: '/:locale/use/get-erg', permanent: true },
+      { source: '/about/:path*', destination: '/start/community', permanent: true },
+      { source: '/build/smart-contracts', destination: '/build/agent-payments', permanent: true },
+      { source: '/build/tutorials', destination: '/build/quickstart', permanent: true },
+      { source: '/us/get-erg', destination: '/use/get-erg', permanent: true },
     ];
   },
 
