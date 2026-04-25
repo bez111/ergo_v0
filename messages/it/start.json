@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "Portafoglio Web",
-              "description": "Semplice portafoglio web per accesso rapido e principianti",
+              "type": "Wallet Web (Avanzato)",
+              "description": "Wallet web avanzato — verifica attentamente l'URL prima di collegarti (i wallet web hanno rischio di phishing).",
               "recommended": false,
               "buttonText": "Apri SAFEW"
             }

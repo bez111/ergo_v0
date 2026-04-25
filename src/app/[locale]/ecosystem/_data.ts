@@ -116,7 +116,7 @@ Rosen Bridge supports wrapped assets in both directions, allowing users to bring
     category: "PRIVACY", 
     status: "OPERATIONAL", 
     description: "The first non-interactive, non-custodial mixer in the crypto industry. It allows users to privately send tokens using Sigma-protocols for enhanced privacy.", 
-    longDescription: `ErgoMixer is a pioneering privacy tool that introduced the world's first non-interactive, non-custodial token mixer. Unlike traditional mixers that require coordinated participation or trusted operators, ErgoMixer leverages Sigma Protocols to enable completely trustless transaction obfuscation.
+    longDescription: `ErgoMixer is a pioneering privacy tool that pioneered non-interactive, non-custodial token mixing. Unlike traditional mixers that require coordinated participation or trusted operators, ErgoMixer leverages Sigma Protocols to enable completely trustless transaction obfuscation.
 
 The mixer works by pooling user transactions in a way that breaks the on-chain link between sender and recipient addresses. Users deposit tokens into mixing contracts, and after a configurable number of mixing rounds, withdraw to fresh addresses. The entire process is secured by zero-knowledge proofs built on Sigma Protocols, meaning neither the mixer operators nor blockchain observers can trace the connection between deposits and withdrawals.
 
@@ -129,7 +129,7 @@ ErgoMixer supports not just ERG but also native tokens issued on the Ergo blockc
     relatedTags: ["Sigma Protocols", "Privacy", "Zero Knowledge"],
     faq: [
       { question: "What is ErgoMixer?", answer: "ErgoMixer is a decentralized, non-custodial token mixer that uses Sigma Protocols to break transaction links, providing financial privacy on the Ergo blockchain." },
-      { question: "Is ErgoMixer safe to use?", answer: "Yes, ErgoMixer is non-custodial, meaning you always control your funds. The mixing process uses cryptographic proofs that mathematically guarantee privacy without trusting any third party." },
+      { question: "Is ErgoMixer safe to use?", answer: "Yes, ErgoMixer is non-custodial, meaning you always control your funds. The mixing process uses cryptographic proofs that cryptographically protect privacy without trusting any third party." },
       { question: "What tokens can I mix?", answer: "ErgoMixer supports ERG and all native tokens on the Ergo blockchain, making it a comprehensive privacy solution for the ecosystem." }
     ]
   },

@@ -60,7 +60,7 @@ const tldrItems = [
   },
   {
     icon: CheckCircle,
-    title: "ChainCash Is Live on Mainnet",
+    title: "ChainCash Prototype on Ergo",
     description: "The reference implementation is in production on Ergo mainnet. Fleet SDK is on npm. The only thing missing is builders who know these tools exist.",
   },
 ]
@@ -70,7 +70,7 @@ const THESES = [
   "Agents require money primitives, not payment wrappers. The chain that gets this wins the next decade of adoption.",
   "Programmable acceptance turns payments into enforceable contracts. This is the missing layer for autonomous commerce.",
   "Ergo already has the primitives: Notes, Reserves, Trackers, Acceptance Predicates. The gap is developer awareness.",
-  "ChainCash is live. Fleet SDK is ready. The only thing missing is builders.",
+  "ChainCash prototype is open-source. Fleet SDK is ready. The only thing missing is builders.",
 ]
 
 const RAIL_FAILURES = [
@@ -147,7 +147,7 @@ const WHY_ERGO = [
   {
     icon: Shield,
     title: "eUTXO: deterministic by design",
-    body: "Every transaction outcome is known before submission. Agents don't get surprised by gas spikes or state changes mid-flight. No reentrancy. No hidden global state. No MEV. What the simulation says is what happens on-chain.",
+    body: "Every transaction outcome is known before submission. Agents don't get surprised by gas spikes or state changes mid-flight. No reentrancy. No hidden global state. MEV-resistant by design. What the simulation says is what happens on-chain.",
   },
   {
     icon: Code2,
@@ -183,7 +183,7 @@ const DELIVERS_TODAY = [
   "Deterministic execution — know costs before submitting",
   "No reentrancy — each UTxO spent exactly once",
   "Typical agent transaction cost: ~$0.01 on mainnet",
-  "ChainCash live reference implementation (mainnet)",
+  "ChainCash open-source prototype (active R&D)",
   "Fleet SDK (@fleet-sdk/core) published on npm",
   "Testnet demos open source — see /demos",
   "GPU PoW — no validator governance kill switch",
@@ -204,7 +204,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "What is ChainCash?",
-    a: "ChainCash is the production reference implementation of the Reserve + Note + Tracker stack, built by BetterMoneyLabs and live on Ergo mainnet. It demonstrates community currencies, programmable IOUs, and agent payment flows using the primitives described in this manifesto.",
+    a: "ChainCash is the open-source reference implementation (prototype) of the Reserve + Note + Tracker stack, built by BetterMoneyLabs and live on Ergo mainnet. It demonstrates community currencies, programmable IOUs, and agent payment flows using the primitives described in this manifesto.",
   },
   {
     q: "How do Babel Fees solve the bootstrapping problem for agents?",
@@ -212,7 +212,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Is this production-ready or theoretical?",
-    a: "The primitives are production-ready: the eUTXO model, ErgoScript, Babel Fees, and Sigma Protocols are all live on Ergo mainnet. ChainCash is a working mainnet implementation. Fleet SDK is published on npm. The testnet demos at /demos show live transaction flows. What's needed is developer adoption, not further protocol work.",
+    a: "The primitives are production-ready: the eUTXO model, ErgoScript, Babel Fees, and Sigma Protocols are all live on Ergo mainnet. ChainCash is a working prototype. Fleet SDK is published on npm. The testnet demos at /demos show live transaction flows. What's needed is developer adoption, not further protocol work.",
   },
 ]
 
@@ -444,7 +444,7 @@ export function AgentEconomyManifestoClient() {
                   <FileText className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-gray-300 leading-relaxed">
-                      <strong className="text-white">ChainCash</strong> is the production reference implementation of this stack — live on Ergo mainnet, open source, built by BetterMoneyLabs.{" "}
+                      <strong className="text-white">ChainCash</strong> is the open-source reference implementation (prototype) of this stack — live on Ergo mainnet, open source, built by BetterMoneyLabs.{" "}
                       <Link href="/build/agent-payments" className="text-orange-400 hover:text-orange-300 transition-colors">
                         Read the full technical architecture →
                       </Link>

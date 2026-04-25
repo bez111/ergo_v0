@@ -10,7 +10,7 @@ const PATH = "/agent-economy/manifesto"
 const SEO = {
   title: "The Agentic Blockchain Manifesto — Ergo as Base Layer for Autonomous AI Commerce",
   description:
-    "Every AI system will need to pay and be paid. This manifesto explains why the agentic blockchain era demands a new money layer — and why Ergo's eUTXO, ErgoScript, and Babel Fees make it the only viable agentic blockchain.",
+    "Every AI system will need to pay and be paid. This manifesto explains why the agentic blockchain era demands a new money layer — and why Ergo's eUTXO, ErgoScript, and Babel Fees make it a leading agentic blockchain.",
   image: "/og/agent-economy.png",
   keywords: [
     "agentic blockchain",
@@ -59,7 +59,7 @@ const FAQ_ITEMS = [
   {
     question: "What is the ChainCash protocol?",
     answer:
-      "ChainCash is Ergo's production reference implementation of the Note+Reserve+Tracker payment stack. Built by BetterMoneyLabs, it enables community currencies, bearer instruments, and agent credit systems on Ergo mainnet. It is open-source and live.",
+      "ChainCash is an open-source prototype of the Note+Reserve+Tracker payment stack on Ergo, developed by BetterMoneyLabs. It demonstrates community currencies, bearer instruments, and agent credit systems. The repository is active R&D — there are no production releases or security audits yet.",
   },
 ]
 

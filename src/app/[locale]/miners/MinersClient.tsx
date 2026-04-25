@@ -62,9 +62,12 @@ export function MinersClient() {
   const networkHashrateValue = networkMetrics.hashrate.value // TH/s from live metrics
   const blockReward = networkMetrics.blockReward.value // ERG from live metrics
   const blocksPerDay = 720 // ~2 min blocks
-  
+
   // Calculate daily earnings
-  const dailyErgEarned = (hashrate / 1000 / networkHashrateValue) * blockReward * blocksPerDay * (1 - poolFee / 100)
+  // Convert user MH/s to TH/s: 1 TH/s = 1,000,000 MH/s
+  const userHashrateTH = hashrate / 1_000_000
+  const networkShare = userHashrateTH / networkHashrateValue
+  const dailyErgEarned = networkShare * blockReward * blocksPerDay * (1 - poolFee / 100)
   const dailyRevenue = dailyErgEarned * ergPrice
   const dailyPowerCost = (powerConsumption / 1000) * 24 * electricityCost
   const dailyProfit = dailyRevenue - dailyPowerCost

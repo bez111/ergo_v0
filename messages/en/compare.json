@@ -909,7 +909,7 @@
         {
           "title": "MEV & Front-Running",
           "content": "Avalanche",
-          "ergoAdvantage": "No MEV extraction means fairer trading for users."
+          "ergoAdvantage": "MEV-resistant by design extraction means fairer trading for users."
         },
         {
           "title": "Smart Contract Model",

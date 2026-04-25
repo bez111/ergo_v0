@@ -85,9 +85,9 @@
               "buttonText": "获取Ergo Mobile"
             },
             "2": {
-              "name": "天花座",
-              "type": "Web 钱包",
-              "description": "简单的网络钱包快速访问和初学者",
+              "name": "SAFEW",
+              "type": "网页钱包（高级）",
+              "description": "高级网页钱包 — 连接前请仔细核对URL（网页钱包存在钓鱼风险）。",
               "buttonText": "打开 SAFEW"
             }
           }

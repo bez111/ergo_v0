@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "Billetera web",
-              "description": "Billetera web sencilla para acceso rápido y principiantes",
+              "type": "Cartera Web (Avanzada)",
+              "description": "Cartera web avanzada — verifique cuidadosamente la URL antes de conectarse (las carteras web tienen riesgo de phishing).",
               "recommended": false,
               "buttonText": "Abrir SAFEW"
             }

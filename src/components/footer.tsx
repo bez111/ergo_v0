@@ -100,6 +100,23 @@ export function Footer() {
             </Link>
           </p>
         </div>
+        <div className="container mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-mono">
+          <Link href={localizedPath("legal/privacy")} className="text-gray-400 hover:text-primary transition-colors">
+            Privacy
+          </Link>
+          <span className="text-gray-700">·</span>
+          <Link href={localizedPath("legal/terms")} className="text-gray-400 hover:text-primary transition-colors">
+            Terms
+          </Link>
+          <span className="text-gray-700">·</span>
+          <Link href={localizedPath("legal/risk")} className="text-gray-400 hover:text-primary transition-colors">
+            Risk Disclosure
+          </Link>
+          <span className="text-gray-700">·</span>
+          <Link href={localizedPath("legal/security")} className="text-gray-400 hover:text-primary transition-colors">
+            Security
+          </Link>
+        </div>
 
         {/* Scanline effect */}
         {/* <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.2)_50%,transparent_100%)] bg-size-[100%_4px] animate-scanline pointer-events-none"></div> */}

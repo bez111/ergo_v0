@@ -120,6 +120,18 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'cohere-ai', // Cohere
         allow: '/',
       },
+      // SEO scrapers — blocked. They consume crawl budget without driving organic
+      // traffic, and they re-publish our content in their indexes/databases.
+      { userAgent: 'AhrefsBot', disallow: '/' },
+      { userAgent: 'SemrushBot', disallow: '/' },
+      { userAgent: 'SemrushBot-SA', disallow: '/' },
+      { userAgent: 'MJ12bot', disallow: '/' },
+      { userAgent: 'PetalBot', disallow: '/' },
+      { userAgent: 'DotBot', disallow: '/' },
+      { userAgent: 'BLEXBot', disallow: '/' },
+      { userAgent: 'SeekportBot', disallow: '/' },
+      { userAgent: 'MegaIndex.ru', disallow: '/' },
+      { userAgent: 'serpstatbot', disallow: '/' },
     ],
     sitemap: [
       `${baseUrl}/sitemap.xml`,

@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "Web Cüzdanı",
-              "description": "Hızlı erişim ve yeni başlayanlar için basit web tabanlı cüzdan",
+              "type": "Web Cüzdanı (Gelişmiş)",
+              "description": "Gelişmiş web cüzdanı — bağlanmadan önce URL'yi dikkatlice doğrulayın (web cüzdanları kimlik avı riski taşır).",
               "recommended": false,
               "buttonText": "SAFEW'i Aç"
             }

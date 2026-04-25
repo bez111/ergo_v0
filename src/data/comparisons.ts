@@ -1164,7 +1164,7 @@ export const comparisons: ComparisonData[] = [
       {
         title: "MEV & Front-Running",
         content: "Avalanche's account model and fast finality enable MEV extraction - validators and bots can front-run user transactions for profit. Ergo's eUTXO model makes front-running structurally impossible because transaction outputs are deterministic.",
-        ergoAdvantage: "No MEV extraction means fairer trading for users.",
+        ergoAdvantage: "MEV-resistant by design extraction means fairer trading for users.",
       },
       {
         title: "Smart Contract Model",

@@ -209,7 +209,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Is ChainCash production-ready?",
-    a: "Yes. ChainCash is live on Ergo mainnet, open source, built by BetterMoneyLabs. It implements the full Note+Reserve+Tracker stack. Developers can use ChainCash contracts directly or as templates for custom agent payment systems.",
+    a: "Yes. ChainCash is an open-source prototype on Ergo, open source, built by BetterMoneyLabs. It implements the full Note+Reserve+Tracker stack. Developers can use ChainCash contracts directly or as templates for custom agent payment systems.",
   },
 ]
 

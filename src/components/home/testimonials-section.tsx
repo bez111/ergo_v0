@@ -96,7 +96,7 @@ export function TestimonialsSection() {
       }
     },
     {
-      quote: "Ergo is the only chain where agents can transact without pre-funded wallets or KYC. eUTXO gives deterministic costs, Babel Fees remove gas bootstrapping, and ErgoScript turns every payment into a contract. It's agent-native by design.",
+      quote: "Ergo enables agents to transact without pre-funded wallets or KYC. eUTXO gives deterministic costs, Babel Fees remove gas bootstrapping, and ErgoScript turns every payment into a contract. It's agent-native by design.",
       author: "Agent Economy Builder",
       role: "AI Infrastructure Developer",
       avatar: "AE",

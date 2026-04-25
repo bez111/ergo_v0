@@ -163,7 +163,7 @@
       {
         "icon": "Zap",
         "title": "Deterministic by Design",
-        "description": "eUTXO model means agents know the exact cost before submitting. No gas estimation failures, no MEV, no reentrancy. The transaction either executes exactly as constructed — or doesn't.",
+        "description": "eUTXO model means agents know the exact cost before submitting. Deterministic gas costs, MEV-resistant, no reentrancy by design. The transaction either executes exactly as constructed — or doesn't.",
         "benefit": "Agents never overpay or fail unexpectedly",
         "stat": "Zero failed-gas transactions"
       },

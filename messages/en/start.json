@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "Web Wallet",
-              "description": "Simple web-based wallet for quick access and beginners",
+              "type": "Web Wallet (Advanced)",
+              "description": "Advanced web wallet — verify the URL carefully before connecting (web wallets carry phishing risk).",
               "recommended": false,
               "buttonText": "Open SAFEW"
             }

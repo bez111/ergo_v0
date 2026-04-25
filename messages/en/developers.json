@@ -110,7 +110,7 @@
       "items": [
         {
           "title": "eUTXO Model: No Surprises",
-          "description": "No reentrancy attacks. No MEV exploitation. No hidden global state. Know exactly what your contract will cost before execution."
+          "description": "No reentrancy attacks. MEV-resistant by design exploitation. No hidden global state. Know exactly what your contract will cost before execution."
         },
         {
           "title": "Sigma Protocols: Privacy Without PhD",

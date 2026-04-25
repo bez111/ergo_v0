@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "Portefeuille web",
-              "description": "Portefeuille web simple pour un accès rapide et les débutants",
+              "type": "Portefeuille Web (Avancé)",
+              "description": "Portefeuille web avancé — vérifiez soigneusement l'URL avant de vous connecter (les portefeuilles web présentent un risque de phishing).",
               "recommended": false,
               "buttonText": "Ouvrir SAFEW"
             }

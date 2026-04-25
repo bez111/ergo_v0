@@ -332,7 +332,7 @@ export default function UseClient() {
             </div>
             <div>
               <p className="font-semibold text-white text-sm mb-0.5">New use case: Autonomous Agent Payments</p>
-              <p className="text-neutral-400 text-sm">Agents paying agents, programmable credit, community reserves — Ergo is the only chain with this stack built in at the protocol level.</p>
+              <p className="text-neutral-400 text-sm">Agents paying agents, programmable credit, community reserves — Ergo combines this stack at the protocol level.</p>
             </div>
           </div>
           <Link

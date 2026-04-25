@@ -87,7 +87,7 @@ const CRITERIA: CriterionRow[] = [
     criterion: "Note + Reserve stack",
     description: "Protocol-level bearer instruments with collateral backing for agent credit.",
     ergo: "yes",
-    ergoNote: "Note+Reserve+Tracker is a first-class pattern. ChainCash is live mainnet implementation.",
+    ergoNote: "Note+Reserve+Tracker is a first-class pattern. ChainCash is open-source prototype implementation.",
     ethereum: "no",
     ethereumNote: "No equivalent protocol primitive. Would require custom token + escrow + oracle.",
     solana: "no",
@@ -217,17 +217,17 @@ function summaryScore(key: keyof CriterionRow): { yes: number; partial: number; 
 const HIGHLIGHTS = [
   {
     icon: Shield,
-    title: "Only chain with zero reentrancy",
+    title: "Reentrancy-free by design (eUTXO)",
     body: "eUTXO architecture makes reentrancy attacks structurally impossible. Critical for autonomous agent code executing without human oversight.",
   },
   {
     icon: Code2,
-    title: "Only chain with protocol-level acceptance predicates",
+    title: "Native protocol-level acceptance predicates",
     body: "ErgoScript acceptance predicates embed task completion logic directly in payment instruments. No off-chain oracle, no escrow contract, no dispute layer.",
   },
   {
     icon: Coins,
-    title: "Only chain with Babel Fees + Note stack",
+    title: "Combines Babel Fees with the Note stack",
     body: "Agents don't need pre-funded native token wallets. Babel Fees handle gas in any token. The Note+Reserve+Tracker stack is protocol-level, not application-layer.",
   },
   {

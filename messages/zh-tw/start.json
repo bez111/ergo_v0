@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "網頁錢包",
-              "description": "簡單的網頁版錢包，方便快速訪問和初學者使用",
+              "type": "網頁錢包（進階）",
+              "description": "進階網頁錢包 — 連接前請仔細核對URL（網頁錢包存在釣魚風險）。",
               "recommended": false,
               "buttonText": "開啟 SAFEW"
             }

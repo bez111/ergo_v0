@@ -81,12 +81,12 @@ export const topics: TopicHub[] = [
     
     heroStatement: "DeFi that actually works for users, not extractors.",
     
-    introduction: "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo eliminates entire categories of exploits that plague traditional DeFi: no front-running, no sandwich attacks, no MEV extraction. Every transaction's cost is known before you send it. Every trade executes exactly as expected. This isn't a minor improvement - it's a structural advantage that makes DeFi actually usable for regular people, not just sophisticated traders with MEV bots.",
+    introduction: "Ergo's approach to DeFi is fundamentally different from account-based chains like Ethereum. Built on the eUTXO model, Ergo eliminates entire categories of exploits that plague traditional DeFi: eliminates front-running and sandwich attacks by design (no public mempool ordering games). Every transaction's cost is known before you send it. Every trade executes exactly as expected. This isn't a minor improvement - it's a structural advantage that makes DeFi actually usable for regular people, not just sophisticated traders with MEV bots.",
     
     whatMakesUnique: "While Ethereum DeFi has become a 'dark forest' where users are hunted by MEV extractors, Ergo's eUTXO model creates a fundamentally fairer environment. Transactions reference specific boxes (UTXOs), making reordering attacks impractical. Oracle Pools provide decentralized price feeds without single points of failure. And because Ergo is PoW with fair launch, there's no VC cartel controlling governance or extracting value from the protocol.",
     
     keyDifferentiators: [
-      "No MEV extraction: transactions can't be front-run or sandwiched by design",
+      "MEV-resistant by design extraction: transactions can't be front-run or sandwiched by design",
       "Predictable fees: know exactly what you'll pay before sending (~$0.01)",
       "Deterministic execution: transactions either fully succeed or fully fail",
       "Decentralized oracles: Oracle Pools provide trustless price feeds",
@@ -540,12 +540,12 @@ export const topics: TopicHub[] = [
     title: "Agent Economy on Ergo",
     subtitle: "The Base Layer for Autonomous Agent Payments",
     seoTitle: "Agent Economy on Ergo — AI Agent Payments, Notes & Reserves",
-    seoDescription: "Ergo is the only blockchain with all four agent payment primitives at the protocol level: Reserve, Note, Tracker, and Acceptance Predicate. No identity, no gas bootstrapping, no governance kill switch.",
+    seoDescription: "Ergo combines all four agent payment primitives at the protocol level: Reserve, Note, Tracker, and Acceptance Predicate. No identity, no gas bootstrapping, no governance kill switch.",
     keywords: ["agent economy", "AI agent payments", "autonomous agent blockchain", "ergo agent payments", "note reserve tracker", "acceptance predicate", "ChainCash", "Fleet SDK", "machine-to-machine payments", "programmable IOU"],
 
     heroStatement: "Every AI system will need to pay and be paid. Ergo already has the primitives.",
 
-    introduction: "Autonomous AI agents are a fundamentally new kind of economic actor. They transact at machine speed, without persistent identity, at micropayment scale ($0.001 per API call), with conditional acceptance logic that no human-centric payment rail supports. Stripe requires KYC. Lightning requires persistent channels. Ethereum has non-deterministic gas and mandatory ETH pre-funding. Ergo is the only blockchain that satisfies all requirements agents have — at the protocol level, with no application-layer workarounds.",
+    introduction: "Autonomous AI agents are a fundamentally new kind of economic actor. They transact at machine speed, without persistent identity, at micropayment scale ($0.001 per API call), with conditional acceptance logic that no human-centric payment rail supports. Stripe requires KYC. Lightning requires persistent channels. Ethereum has non-deterministic gas and mandatory ETH pre-funding. Ergo is designed to satisfy the requirements agents have — at the protocol level, with no application-layer workarounds.",
 
     whatMakesUnique: "Ergo's agent payment stack consists of four composable UTxO primitives: Reserve (collateral backing), Note (programmable bearer IOU), Tracker (anti-double-spend registry), and Acceptance Predicate (on-chain task completion condition). These aren't features bolted on for AI — they're protocol properties that emerge from eUTXO's deterministic execution, ErgoScript's expressive power, and Babel Fees' gas abstraction. ChainCash is the live mainnet reference implementation.",
 

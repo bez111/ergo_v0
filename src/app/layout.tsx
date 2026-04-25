@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Ergo — The Agentic Blockchain',
-    description: 'PoW + eUTXO + ErgoScript — the only blockchain built for autonomous AI agent payments. No premine. No VC. Just verifiable settlement.',
+    description: 'PoW + eUTXO + ErgoScript — a blockchain designed specifically for autonomous AI agent payments. No premine. No VC. Just verifiable settlement.',
     images: ['/og-image.png'],
     creator: siteConfig.twitterHandle,
   },

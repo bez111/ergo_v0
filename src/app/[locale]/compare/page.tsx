@@ -25,7 +25,7 @@ const SEO = {
 const FAQ_ITEMS = [
   {
     question: "Is Ergo better than Ethereum?",
-    answer: "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant (no front-running), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers. Ergo is better for users who want fair, predictable transactions without MEV extraction."
+    answer: "Ergo and Ethereum serve different purposes. Ergo uses eUTXO model which is MEV-resistant by design (eUTXO + no public mempool ordering games), has predictable fees (~$0.01), and is more secure for DeFi. Ethereum has larger ecosystem and more developers. Ergo is better for users who want fair, predictable transactions without MEV extraction."
   },
   {
     question: "How is Ergo different from Cardano?",

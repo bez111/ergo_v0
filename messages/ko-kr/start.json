@@ -88,8 +88,8 @@
             },
             {
               "name": "SAFEW",
-              "type": "웹 지갑",
-              "description": "빠른 접근과 초보자를 위한 간단한 웹 기반 지갑",
+              "type": "웹 지갑 (고급)",
+              "description": "고급 웹 지갑 — 연결하기 전에 URL을 신중하게 확인하세요(웹 지갑은 피싱 위험이 있습니다).",
               "recommended": false,
               "buttonText": "SAFEW 열기"
             }

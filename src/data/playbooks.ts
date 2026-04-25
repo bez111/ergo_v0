@@ -170,7 +170,7 @@ export const playbooks: Playbook[] = [
       {
         title: "Spectrum Finance",
         description: "Decentralized exchange built on Ergo's eUTXO model with AMM and order book functionality.",
-        outcome: "Processing millions in daily volume with zero exploits",
+        outcome: "Processing significant daily volume with no major exploits to date",
         link: "https://spectrum.fi",
       },
       {

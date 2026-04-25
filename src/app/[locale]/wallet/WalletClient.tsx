@@ -2,7 +2,6 @@
 
 /* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
 
-import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import { Link } from "@/i18n/navigation"
 import { Badge } from "@/components/ui/badge"
@@ -160,13 +159,6 @@ const allWallets: Wallet[] = [
 
 export default function WalletClient() {
   const t = useTranslations("wallet")
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
-
 
   const getSecurityColor = (level: string) => {
     switch (level) {
@@ -184,17 +176,6 @@ export default function WalletClient() {
       case "Hybrid": return "text-purple-400 border-purple-400/30 bg-purple-400/10"
       default: return "text-gray-400 border-gray-400/30 bg-gray-400/10"
     }
-  }
-
-  if (!isClient) {
-    return (
-      <div className="min-h-screen bg-neutral-950 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500 mx-auto mb-4"></div>
-          <p className="text-gray-400 font-mono">Loading wallets...</p>
-        </div>
-      </div>
-    )
   }
 
   return (

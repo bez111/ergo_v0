@@ -59,7 +59,7 @@ const tldrItems = [
   {
     icon: Zap,
     title: "Ergo Is the Only Complete Stack",
-    description: "Reserve + Note + Tracker + Acceptance Predicate + Babel Fees. ChainCash is live on mainnet. Fleet SDK is on npm. The primitives are ready.",
+    description: "Reserve + Note + Tracker + Acceptance Predicate + Babel Fees. ChainCash is an open-source prototype on Ergo. Fleet SDK is on npm. The primitives are ready.",
   },
 ]
 
@@ -67,7 +67,7 @@ const WHATS_WORKING = [
   { title: "Micropayments are technically solved", body: "On Ergo, Solana, and L2s, the cost per transaction is low enough for $0.001-level payments. The gas problem is no longer the bottleneck for micropayments specifically." },
   { title: "No-identity transactions are possible", body: "Any key pair can transact on-chain without KYC. Ephemeral agents can generate keys, transact, and discard keys. This was always true of crypto — it's now being recognized as a feature for agents." },
   { title: "Fleet SDK and tooling exist", body: "Ergo's Fleet SDK (@fleet-sdk/core) makes building agent payments in TypeScript/JavaScript straightforward. Python and Rust SDKs exist. The tooling gap is closing." },
-  { title: "ChainCash is live on mainnet", body: "The Reserve + Note + Tracker stack is not theoretical. ChainCash is deployed on Ergo mainnet, demonstrating programmable IOUs, community currencies, and agent payment flows in production." },
+  { title: "ChainCash is an open-source prototype on Ergo", body: "The Reserve + Note + Tracker stack is not theoretical. ChainCash is an open-source prototype on Ergo, demonstrating programmable IOUs, community currencies, and agent payment flows in production." },
 ]
 
 const WHATS_BROKEN = [
@@ -111,7 +111,7 @@ const PREDICTIONS = [
 
 const FAQ_ITEMS = [
   { q: "What is the state of AI agent payments in 2026?", a: "Micropayments are technically feasible on low-fee chains. The main gaps are: no standard protocol for agent payment flows, near-zero developer awareness of purpose-built primitives (like Ergo's Note/Reserve stack), and no native integration between AI orchestration frameworks and payment layers." },
-  { q: "Which blockchain is most advanced for AI agent payments?", a: "Ergo has the most complete purpose-built stack: Reserve + Note + Tracker + Acceptance Predicate + Babel Fees. ChainCash is live on mainnet. The gap is developer adoption, not technical readiness." },
+  { q: "Which blockchain is most advanced for AI agent payments?", a: "Ergo has the most complete purpose-built stack: Reserve + Note + Tracker + Acceptance Predicate + Babel Fees. ChainCash is an open-source prototype on Ergo. The gap is developer adoption, not technical readiness." },
   { q: "Why aren't AI developers using Ergo for agent payments?", a: "Awareness. Ergo's agent payment primitives are technically ahead, but the developer community building AI agents is primarily familiar with Ethereum and Solana. Ergo's documentation, examples, and community presence in the AI/agent space are still being built out." },
   { q: "What needs to happen for agent payments to become mainstream?", a: "Three things: (1) AI orchestration frameworks (LangChain, AutoGPT, etc.) need native payment APIs; (2) a standard protocol for agent payment flows needs to emerge; (3) developers need working examples they can run in 5 minutes. #3 is solvable now." },
 ]
@@ -481,7 +481,7 @@ export function StateOfAgentPaymentsClient() {
 
           <ShareCTA
             title="The State of On-Chain Agent Payments: 2026 Report"
-            description="Chain-by-chain analysis of the agent payment landscape. Ergo is the only chain with the full stack — and the primitives are ready now."
+            description="Chain-by-chain analysis of the agent payment landscape. Ergo currently offers the most complete stack — and the primitives are ready now."
             url="https://www.ergoblockchain.org/blog/state-of-agent-payments-2026"
           />
 

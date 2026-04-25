@@ -47,7 +47,7 @@ const FAQ_ITEMS = [
   {
     question: "How does Ergo solve agent payment problems?",
     answer:
-      "Ergo provides the Note+Reserve+Tracker stack as protocol-level primitives. Notes are programmable bearer instruments with acceptance predicates. Reserves back the credit. Trackers prevent double-spend. Babel Fees let agents operate without pre-funded ERG wallets. ChainCash is the live mainnet reference implementation.",
+      "Ergo provides the Note+Reserve+Tracker stack as protocol-level primitives. Notes are programmable bearer instruments with acceptance predicates. Reserves back the credit. Trackers prevent double-spend. Babel Fees let agents operate without pre-funded ERG wallets. ChainCash is an open-source reference prototype.",
   },
   {
     question: "What is a programmable IOU for AI agents?",

@@ -1,7 +1,7 @@
 {
   "minersPage": {
     "hero": {
-      "title": "Mine with GPUs. Earn forever. Stay profitable.",
+      "title": "Mine with GPUs. Profitability depends on difficulty, ERG price and your electricity cost — see calculator below.",
       "subtitle": "ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.",
       "cta": "Start Mining Ergo",
       "checkProfitability": "Check Profitability",

@@ -492,15 +492,15 @@ export function AgentEconomyClient() {
                 {
                   name: "ChainCash",
                   icon: Coins,
-                  status: "Mainnet",
-                  description: "Production reference implementation of the Note + Reserve + Tracker payment stack. Community currencies, bearer instruments, and agent credit systems.",
+                  status: "Prototype",
+                  description: "Open-source prototype of the Note + Reserve + Tracker payment stack — community currencies, bearer instruments, and agent credit systems. Active R&D, no production releases yet.",
                   url: "https://github.com/ChainCashLabs/chaincash",
                 },
                 {
                   name: "BetterMoneyLabs",
                   icon: Landmark,
-                  status: "Active",
-                  description: "Research and development lab building the financial primitives for autonomous agent commerce on Ergo. Core contributor to ChainCash protocol.",
+                  status: "Research",
+                  description: "Research lab developing the financial primitives for autonomous agent commerce on Ergo. Core contributor to ChainCash protocol.",
                   url: "https://github.com/BetterMoneyLabs",
                 },
                 {
@@ -557,9 +557,11 @@ export function AgentEconomyClient() {
                             <span className={`text-xs font-mono px-2.5 py-1 rounded-full border ${
                               project.status === "Mainnet" || project.status === "Production" || project.status === "Live"
                                 ? "text-orange-400 border-orange-500/30 bg-orange-500/10"
-                                : project.status === "Active"
+                                : project.status === "Active" || project.status === "Research"
                                   ? "text-green-400 border-green-500/30 bg-green-500/10"
-                                  : "text-neutral-400 border-neutral-600 bg-neutral-800/50"
+                                  : project.status === "Prototype" || project.status === "Testnet"
+                                    ? "text-yellow-400 border-yellow-500/30 bg-yellow-500/10"
+                                    : "text-neutral-400 border-neutral-600 bg-neutral-800/50"
                             }`}>
                               {project.status}
                             </span>

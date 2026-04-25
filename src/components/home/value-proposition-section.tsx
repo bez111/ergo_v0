@@ -87,7 +87,7 @@ export function ValuePropositionSection() {
                 Why Choose <span className="text-orange-400">Ergo?</span>
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                The only blockchain that combines proven security, advanced smart contracts, and user sovereignty without compromise.
+                A blockchain combining proven security, advanced smart contracts, and user sovereignty.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">

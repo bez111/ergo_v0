@@ -49,6 +49,11 @@ export async function GET() {
     { url: '/demos', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/agent-payments', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/quickstart', priority: 0.8, changefreq: 'weekly' as const },
+    // Legal
+    { url: '/legal/privacy', priority: 0.4, changefreq: 'yearly' as const },
+    { url: '/legal/terms', priority: 0.4, changefreq: 'yearly' as const },
+    { url: '/legal/risk', priority: 0.5, changefreq: 'yearly' as const },
+    { url: '/legal/security', priority: 0.4, changefreq: 'yearly' as const },
   ]
 
   const sitemap = generateMultilingualSitemap(filterIndexablePages(staticPages))

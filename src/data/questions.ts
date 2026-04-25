@@ -60,7 +60,7 @@ export const questions: QuestionEntry[] = [
     jsonLdType: "HowTo",
     priority: 1,
     seoTitle: "How to Build DeFi on Ergo: Complete Developer Guide",
-    seoDescription: "Step-by-step guide to building decentralized finance applications on Ergo using eUTXO, ErgoScript, and Oracle Pools. No MEV, predictable fees.",
+    seoDescription: "Step-by-step guide to building decentralized finance applications on Ergo using eUTXO, ErgoScript, and Oracle Pools. MEV-resistant by design, predictable fees.",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26"
   },
@@ -100,9 +100,9 @@ export const questions: QuestionEntry[] = [
     persona: "builder",
     stage: "consideration",
     category: "DeFi",
-    shortAnswer: "Ergo offers structural advantages for DeFi: no MEV extraction, deterministic gas costs, and no reentrancy attacks due to eUTXO. Ethereum has larger ecosystem and liquidity. Choose Ergo for security-critical applications, fair trading, and predictable costs. Choose Ethereum for maximum composability with existing protocols.",
+    shortAnswer: "Ergo offers structural advantages for DeFi: MEV resistance by design, deterministic gas costs, and no reentrancy attacks due to eUTXO. Ethereum has larger ecosystem and liquidity. Choose Ergo for security-critical applications, fair trading, and predictable costs. Choose Ethereum for maximum composability with existing protocols.",
     keyPoints: [
-      "Ergo: No MEV, no front-running, no sandwich attacks",
+      "Ergo: MEV-resistant by design, no front-running, no sandwich attacks",
       "Ergo: Predictable fees (~$0.01), known before sending",
       "Ergo: No reentrancy vulnerabilities by design",
       "Ethereum: Larger ecosystem, more liquidity, more tooling",
@@ -716,7 +716,7 @@ export const questions: QuestionEntry[] = [
     persona: "investor",
     stage: "consideration",
     category: "Getting Started",
-    shortAnswer: "Yes, Ergo is highly secure. It uses Proof-of-Work (the same security model as Bitcoin), has never been hacked, and the eUTXO model eliminates entire classes of smart contract vulnerabilities. The code is open-source and peer-reviewed. Your security also depends on proper seed phrase management.",
+    shortAnswer: "Yes, Ergo is highly secure. It uses Proof-of-Work (the same security model as Bitcoin), has not had a known protocol-level exploit, and the eUTXO model eliminates entire classes of smart contract vulnerabilities. The code is open-source and peer-reviewed. Your security also depends on proper seed phrase management.",
     keyPoints: [
       "PoW consensus: proven security model (like Bitcoin)",
       "Never been successfully attacked",

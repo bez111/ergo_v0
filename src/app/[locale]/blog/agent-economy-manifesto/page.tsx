@@ -53,7 +53,7 @@ const FAQ_ITEMS = [
   {
     question: "What is ChainCash?",
     answer:
-      "ChainCash is the production reference implementation of the Reserve + Note + Tracker stack, built by BetterMoneyLabs and live on Ergo mainnet. It demonstrates community currencies, programmable IOUs, and agent payment flows.",
+      "ChainCash is the open-source reference implementation (prototype) of the Reserve + Note + Tracker stack, built by BetterMoneyLabs and live on Ergo mainnet. It demonstrates community currencies, programmable IOUs, and agent payment flows.",
   },
   {
     question: "What are Babel Fees and why do they matter for agents?",

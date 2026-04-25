@@ -1,0 +1,7 @@
+Contact: mailto:security@ergoplatform.org
+Contact: https://github.com/ergoplatform/ergo/security/advisories/new
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://www.ergoblockchain.org/.well-known/security.txt
+Policy: https://www.ergoblockchain.org/legal/security
+Acknowledgments: https://github.com/ergoplatform/ergo/security/advisories

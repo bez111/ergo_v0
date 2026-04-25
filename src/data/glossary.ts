@@ -8950,7 +8950,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "Why can't AI agents use Stripe or traditional payments?",
-        answer: "Stripe requires KYC, billing accounts, and static merchant IDs. AI agents are ephemeral and identityless. They also need programmable acceptance conditions — 'accept payment only if task X is complete' — which centralized rails cannot provide. Blockchain is the only viable payment layer for autonomous agents.",
+        answer: "Stripe requires KYC, billing accounts, and static merchant IDs. AI agents are ephemeral and identityless. They also need programmable acceptance conditions — 'accept payment only if task X is complete' — which centralized rails cannot provide. Blockchain is a strong payment layer for autonomous agents.",
       },
       {
         question: "Which blockchain is best for AI agent payments?",
@@ -9129,9 +9129,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "chaincash",
     term: "ChainCash",
 
-    shortDefinition: "The production reference implementation of Ergo's Note+Reserve+Tracker agent payment stack — a community currency and bearer instrument protocol by BetterMoneyLabs.",
+    shortDefinition: "The open-source reference implementation (prototype) of Ergo's Note+Reserve+Tracker agent payment stack — a community currency and bearer instrument protocol by BetterMoneyLabs.",
 
-    definition: "ChainCash is an open-source protocol built on Ergo that implements bearer instruments (Notes) backed by ERG Reserves, with a Tracker registry for double-spend prevention. It enables community currencies, agent credit systems, and programmable IOUs without any centralized infrastructure. ChainCash is live on Ergo mainnet, built by BetterMoneyLabs, and serves as the reference implementation for the agent economy payment stack described in Ergo documentation. Developers building agent payment systems can use ChainCash contracts directly or as templates for custom Reserve+Note implementations.",
+    definition: "ChainCash is an open-source protocol built on Ergo that implements bearer instruments (Notes) backed by ERG Reserves, with a Tracker registry for double-spend prevention. It enables community currencies, agent credit systems, and programmable IOUs without any centralized infrastructure. ChainCash is an open-source prototype on Ergo, built by BetterMoneyLabs, and serves as the reference implementation for the agent economy payment stack described in Ergo documentation. Developers building agent payment systems can use ChainCash contracts directly or as templates for custom Reserve+Note implementations.",
 
     keywords: [
       "chaincash ergo",
@@ -9166,7 +9166,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     faq: [
       {
         question: "What is ChainCash?",
-        answer: "ChainCash is a live Ergo protocol for bearer instruments (Notes) backed by ERG Reserves. Built by BetterMoneyLabs, it is the production reference implementation of Ergo's agent economy payment stack. It enables community currencies, agent credit, and programmable IOUs on Ergo mainnet.",
+        answer: "ChainCash is a live Ergo protocol for bearer instruments (Notes) backed by ERG Reserves. Built by BetterMoneyLabs, it is the open-source reference implementation (prototype) of Ergo's agent economy payment stack. It enables community currencies, agent credit, and programmable IOUs on Ergo mainnet.",
       },
       {
         question: "Who built ChainCash?",

@@ -11,7 +11,7 @@ const SEO = {
   title: "The State of On-Chain Agent Payments: 2026 Report",
   description: "Chain-by-chain report card on autonomous agent payment infrastructure. What's working, what's broken, which chain is technically ready, and what builders are actually doing in Q1 2026.",
   image: "/og/agent-economy.png",
-  keywords: ["agent payments 2026", "AI agent payment infrastructure", "on-chain agent payments state", "best blockchain agent payments", "autonomous agent crypto", "ergo vs ethereum agent payments", "agent economy 2026", "ChainCash mainnet", "agent payment report"],
+  keywords: ["agent payments 2026", "AI agent payment infrastructure", "on-chain agent payments state", "best blockchain agent payments", "autonomous agent crypto", "ergo vs ethereum agent payments", "agent economy 2026", "ChainCash prototype", "agent payment report"],
 }
 
 const FAQ_ITEMS = [

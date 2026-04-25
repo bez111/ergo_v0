@@ -14,7 +14,7 @@ export async function generateMetadata({
   return {
     title: "Ergo — The Agentic Blockchain | Agent Economy: Notes, Credit & Programmable Trust",
     description:
-      "Ergo is the agentic blockchain: the base layer for autonomous AI agents that need to pay, receive, and settle without human intermediaries. eUTXO + ErgoScript + Babel Fees = the only viable stack.",
+      "Ergo is the agentic blockchain: the base layer for autonomous AI agents that need to pay, receive, and settle without human intermediaries. eUTXO + ErgoScript + Babel Fees = a uniquely complete stack.",
     keywords: [
       // Agentic blockchain — PRIMARY cluster
       "agentic blockchain",
@@ -128,7 +128,7 @@ const agentEconomySchema = {
       ],
       "programmingLanguage": ["ErgoScript", "TypeScript", "Scala"],
       "operatingSystem": "Ergo Blockchain",
-      "releaseNotes": "Production-ready on Ergo mainnet via ChainCash",
+      "releaseNotes": "Open-source prototype available via ChainCash",
     },
     {
       "@type": "FAQPage",
@@ -163,7 +163,7 @@ const agentEconomySchema = {
           "name": "What is ChainCash?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ChainCash is the reference implementation of Ergo's agent payment stack built by BetterMoneyLabs. It implements Notes and Reserves on Ergo mainnet, enabling programmable bearer instruments backed by ERG or other tokens. Open source and production-ready."
+            "text": "ChainCash is the reference implementation of Ergo's agent payment stack built by BetterMoneyLabs. It implements Notes and Reserves on Ergo mainnet, enabling programmable bearer instruments backed by ERG or other tokens. Open source, active R&D — no production release yet."
           }
         },
         {

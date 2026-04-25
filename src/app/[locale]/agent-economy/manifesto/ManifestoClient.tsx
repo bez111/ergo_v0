@@ -99,7 +99,7 @@ const WHY_ERGO = [
   {
     icon: Shield,
     title: "eUTXO: deterministic by design",
-    body: "Every transaction outcome is known before submission. Agents don't get surprised. No reentrancy. No hidden global state. No MEV. What the simulation says is what happens on-chain.",
+    body: "Every transaction outcome is known before submission. Agents don't get surprised. No reentrancy. No hidden global state. MEV-resistant by design. What the simulation says is what happens on-chain.",
   },
   {
     icon: Code2,
@@ -134,7 +134,7 @@ const THESES = [
   "Agents require money primitives, not payment wrappers. The chain that gets this wins the next decade of adoption.",
   "Programmable acceptance turns payments into enforceable contracts. This is the missing layer for autonomous commerce.",
   "Ergo already has the primitives: Notes, Reserves, Trackers, Acceptance Predicates. The gap is developer awareness.",
-  "ChainCash is live. Fleet SDK is ready. The only thing missing is builders.",
+  "ChainCash prototype is open-source. Fleet SDK is ready. The only thing missing is builders.",
 ]
 
 export function ManifestoClient() {
@@ -307,7 +307,7 @@ export function ManifestoClient() {
           >
             <FileText className="w-6 h-6 text-orange-400 mx-auto mb-3" />
             <p className="text-gray-300 text-sm mb-4">
-              ChainCash is the production reference implementation of this stack — live on Ergo
+              ChainCash is the open-source reference implementation (prototype) of this stack — live on Ergo
               mainnet, open source, built by BetterMoneyLabs.
             </p>
             <Link
@@ -370,7 +370,7 @@ export function ManifestoClient() {
               The stack is ready. <span className="text-orange-400">Are you?</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto mb-8 text-lg">
-              The primitives exist. ChainCash is live. Fleet SDK is published. The only thing
+              The primitives exist. ChainCash prototype is open-source. Fleet SDK is published. The only thing
               missing is builders who understand what autonomous agents actually need from money.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -418,7 +418,7 @@ export function ManifestoClient() {
               "Deterministic execution — know costs before submitting",
               "No reentrancy — each UTxO spent exactly once",
               "Typical agent tx cost: ~$0.01 on mainnet",
-              "ChainCash live reference implementation",
+              "ChainCash prototype reference implementation",
               "Fleet SDK (@fleet-sdk/core) on npm",
               "Testnet demos open source at /demos",
               "GPU PoW — no validator governance kill switch",

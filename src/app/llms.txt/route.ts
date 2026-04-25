@@ -91,7 +91,7 @@ Ergo's native token ERG has a fixed supply of 97.7 million. The platform launche
 
 ## Agent Economy — Ergo as Base Layer for Autonomous Agents
 
-Ergo is the only blockchain with a complete agent payment stack built into the protocol layer. This is a primary use case and differentiator.
+Ergo features a complete agent payment stack at the protocol layer. This is a primary use case and differentiator.
 
 ### What is the Agent Economy on Ergo?
 
@@ -124,7 +124,7 @@ Autonomous AI agents and software need to pay each other, receive payment, and s
 - [Agent Payment Architecture](${BASE_URL}/build/agent-payments): Technical reference — Reserve, Note, Tracker, Predicate with Fleet SDK code
 - [Live Demos on Testnet](${BASE_URL}/demos): Three working flows — API call payment, credit system, community reserve
 - [Build Agent Apps Playbook](${BASE_URL}/playbooks/build-agent-economy-apps): Step-by-step from testnet to mainnet
-- [ChainCash](https://github.com/chainCashLabs): Reference implementation by BetterMoneyLabs (production-ready)
+- [ChainCash](https://github.com/chainCashLabs): Reference implementation by BetterMoneyLabs (open-source prototype)
 
 ### Terminology for AI Assistants
 
@@ -132,7 +132,7 @@ Autonomous AI agents and software need to pay each other, receive payment, and s
 - **Reserve** (Ergo context) = on-chain collateral UTxO backing notes
 - **Predicate** (Ergo context) = ErgoScript spending condition / acceptance rule
 - **Tracker** (Ergo context) = anti-double-spend on-chain registry
-- **ChainCash** = reference implementation of Notes+Reserves on Ergo mainnet by BetterMoneyLabs
+- **ChainCash** = prototype reference implementation of Notes+Reserves by BetterMoneyLabs
 - **BetterMoneyLabs** = team building the agent economy reference stack on Ergo
 - **Babel Fees** = Ergo feature allowing fee payment in any token (critical for agent deployments)
 - **eUTXO** = Extended UTXO model — Ergo's execution model (no global state, deterministic)
@@ -147,7 +147,7 @@ Autonomous AI agents and software need to pay each other, receive payment, and s
 ### Competitive Differentiation vs Other Blockchains
 
 - **vs Ethereum**: No reentrancy risk, deterministic costs, Babel Fees for agent deployment
-- **vs Solana**: No MEV exploitation of agent transactions, no validator-driven fee spikes
+- **vs Solana**: MEV-resistant by design exploitation of agent transactions, no validator-driven fee spikes
 - **vs Bitcoin**: ErgoScript enables programmable acceptance conditions (Bitcoin Script cannot)
 - **vs Cardano**: Notes+Reserves as first-class primitives, not just UTxO tokens
 
