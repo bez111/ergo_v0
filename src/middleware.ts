@@ -25,7 +25,7 @@ const TRACKING_PARAMS = [
   'igshid',
 ];
 
-export default function proxy(request: NextRequest) {
+export default function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
 
   // Strip tracking params and 308-redirect to clean URL.
