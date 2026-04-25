@@ -196,24 +196,17 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
-    // Tracking-param strippers: 308-redirect any URL containing these query keys
-    // to the same URL with the key removed. Runs at the edge BEFORE static cache.
-    const TRACKING_PARAM_KEYS = [
-      'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
-      'utm_id', 'gclid', 'fbclid', 'msclkid', 'mc_cid', 'mc_eid',
-      'yclid', 'dclid', 'mkt_tok', 'igshid',
-    ];
-    const trackingRedirects = TRACKING_PARAM_KEYS.map((key) => ({
-      source: '/:path*',
-      has: [{ type: 'query' as const, key }],
-      destination: '/:path*',
-      permanent: true,
-    }));
-
+    // NOTE: UTM/tracking-param stripping cannot be done via redirects() because
+    // Next.js always appends source query params to the destination — there is
+    // no built-in way to drop them. Middleware also doesn't fire because Vercel
+    // serves prerendered pages directly from CDN (x-vercel-cache: PRERENDER).
+    //
+    // Mitigation strategy:
+    //   1. Locale-aware canonical tags on every page (already done) — Google
+    //      consolidates UTM variants under the canonical URL.
+    //   2. robots.txt: Disallow query patterns + Clean-param for Yandex.
+    //   3. Strip UTM from internal links (no internal link should carry UTM).
     return [
-      // ── Strip tracking params (UTM, gclid, fbclid, etc.) from indexable URLs ──
-      ...trackingRedirects,
-
       // ── Canonical redirects (production only) ─────────────────────────────
       ...(process.env.NODE_ENV === 'production' ? [
         // ergoblockchain.org → www.ergoblockchain.org

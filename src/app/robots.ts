@@ -18,7 +18,23 @@ export default function robots(): MetadataRoute.Robots {
           '/*?filter=*', // block filter parameters
           '/*?view=*', // block view parameters
           '/*?ref=*', // block referrer parameters
-          '/*?utm_*', // block UTM parameters
+          '/*?utm_source=*', // block UTM parameters (each variant)
+          '/*?utm_medium=*',
+          '/*?utm_campaign=*',
+          '/*?utm_term=*',
+          '/*?utm_content=*',
+          '/*?utm_id=*',
+          '/*&utm_*', // UTM as non-first param
+          '/*?gclid=*',
+          '/*?fbclid=*',
+          '/*?msclkid=*',
+          '/*?yclid=*',
+          '/*?dclid=*',
+          '/*?mc_cid=*',
+          '/*?mc_eid=*',
+          '/*?mkt_tok=*',
+          '/*?igshid=*',
+          '/*?_ga=*',
           '/*?page=6', // block deep pagination
           '/*?page=7',
           '/*?page=8',
