@@ -196,7 +196,24 @@ const nextConfig: NextConfig = {
   },
 
   async redirects() {
+    // Tracking-param strippers: 308-redirect any URL containing these query keys
+    // to the same URL with the key removed. Runs at the edge BEFORE static cache.
+    const TRACKING_PARAM_KEYS = [
+      'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
+      'utm_id', 'gclid', 'fbclid', 'msclkid', 'mc_cid', 'mc_eid',
+      'yclid', 'dclid', 'mkt_tok', 'igshid',
+    ];
+    const trackingRedirects = TRACKING_PARAM_KEYS.map((key) => ({
+      source: '/:path*',
+      has: [{ type: 'query' as const, key }],
+      destination: '/:path*',
+      permanent: true,
+    }));
+
     return [
+      // ── Strip tracking params (UTM, gclid, fbclid, etc.) from indexable URLs ──
+      ...trackingRedirects,
+
       // ── Canonical redirects (production only) ─────────────────────────────
       ...(process.env.NODE_ENV === 'production' ? [
         // ergoblockchain.org → www.ergoblockchain.org
