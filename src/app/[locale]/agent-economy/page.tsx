@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { getCanonicalUrl, getAlternates } from "@/lib/seo"
+import { getCanonicalUrl, getAlternates, getOgLocale } from "@/lib/seo"
 import { AgentEconomyClient } from "./AgentEconomyClient"
 
 const BASE_URL = "https://www.ergoblockchain.org"
@@ -78,7 +78,7 @@ export async function generateMetadata({
         },
       ],
       type: "website",
-      locale: locale === "ru" ? "ru_RU" : "en_US",
+      locale: getOgLocale(locale),
     },
     twitter: {
       card: "summary_large_image",
