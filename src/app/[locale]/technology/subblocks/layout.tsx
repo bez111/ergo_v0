@@ -52,6 +52,7 @@ export default function SubblocksLayout({ children }: { children: React.ReactNod
       description: "Research into Ergo's subblock technology for rapid transaction confirmations",
       image: SEO.ogImage,
       datePublished: "2024-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Advanced",
       technicalAudience: "Blockchain researchers and developers",
       about: [

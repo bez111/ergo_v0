@@ -56,6 +56,7 @@ export default function EUTXOModelLayout({ children }: { children: React.ReactNo
       description: "Comprehensive guide to Ergo's eUTXO model for parallel smart contract execution",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Intermediate",
       technicalAudience: "Developers and blockchain researchers",
       about: [

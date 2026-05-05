@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Ergo Platform</ShortName>
+  <Description>Search Ergo blockchain — docs, glossary, blog, agent economy</Description>
+  <Tags>ergo blockchain crypto agent-economy defi</Tags>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="32" height="32" type="image/png">https://www.ergoblockchain.org/icon-32x32.png</Image>
+  <Image width="64" height="64" type="image/png">https://www.ergoblockchain.org/icon-64x64.png</Image>
+  <Url type="text/html"
+       method="get"
+       template="https://www.ergoblockchain.org/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml"
+       rel="self"
+       template="https://www.ergoblockchain.org/opensearch.xml"/>
+  <moz:SearchForm>https://www.ergoblockchain.org/search</moz:SearchForm>
+</OpenSearchDescription>

@@ -3,13 +3,27 @@ import { NextResponse } from 'next/server'
 export const revalidate = 86400 // 24h
 
 const BASE_URL = 'https://www.ergoblockchain.org'
+const LAST_UPDATED = '2026-04-27'
 
 export async function GET() {
   const content = `# Ergo Platform
 
+> Last updated: ${LAST_UPDATED}
+> Canonical URL: ${BASE_URL}/llms.txt
+> Full version with code examples and FAQ: ${BASE_URL}/llms-full.txt
+
 > Ergo is a resilient blockchain platform for contractual money. It combines Bitcoin's security model (Proof-of-Work, UTXO) with advanced smart contract capabilities (ErgoScript, Sigma Protocols) and sustainable on-chain economics (Storage Rent). Ergo enables private, programmable, and censorship-resistant financial contracts without trusted third parties.
 
-Ergo's native token ERG has a fixed supply of 97.7 million. The platform launched in 2019 with a fair launch — no ICO, no VC allocation, no pre-mine. Ergo is fully open-source and community-driven.
+## Key Facts (as of ${LAST_UPDATED})
+
+- **Token**: ERG
+- **Max supply**: 97,739,925 ERG (fixed)
+- **Launch**: July 2019, fair launch — no ICO, no VC, no pre-mine
+- **Consensus**: Proof of Work (Autolykos v2, ASIC-resistant)
+- **Block time**: ~2 minutes
+- **Smart contracts**: ErgoScript on the eUTXO model
+- **License**: Open-source, community-driven (CC0 / MIT)
+- **Network status**: Live since 2019, no chain halts to date
 
 ## Key Technologies
 

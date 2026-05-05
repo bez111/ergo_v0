@@ -53,6 +53,7 @@ export default function OraclePoolsLayout({ children }: { children: React.ReactN
       description: "How Ergo's native oracle pools provide reliable, decentralized price feeds for DeFi",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Intermediate",
       technicalAudience: "DeFi developers",
       about: [

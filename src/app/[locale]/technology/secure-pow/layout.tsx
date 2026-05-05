@@ -53,6 +53,7 @@ export default function SecurePowLayout({ children }: { children: React.ReactNod
       description: "Technical guide to Ergo's ASIC-resistant, GPU-friendly mining algorithm",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Beginner",
       technicalAudience: "Miners and blockchain enthusiasts",
       about: [

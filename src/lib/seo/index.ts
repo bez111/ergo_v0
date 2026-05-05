@@ -28,6 +28,7 @@ export {
   createHubMetadata,
   getCanonicalUrl,
   getAlternates,
+  getOgLocale,
 } from "./metadata"
 
 // Schema generators

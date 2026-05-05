@@ -102,6 +102,7 @@ export default function ManifestoPage() {
       description: SEO.description,
       image: SEO.image,
       datePublished: "2026-03-20",
+      dateModified: "2026-04-27",
       keywords: SEO.keywords,
       proficiencyLevel: "Intermediate",
     }),

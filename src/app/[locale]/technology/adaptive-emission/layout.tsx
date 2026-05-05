@@ -53,6 +53,7 @@ export default function AdaptiveEmissionLayout({ children }: { children: React.R
       description: "How Ergo's emission schedule adapts through miner governance for long-term sustainability",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Intermediate",
       technicalAudience: "Economists and governance researchers",
       about: [

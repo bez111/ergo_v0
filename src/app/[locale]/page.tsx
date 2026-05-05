@@ -10,6 +10,7 @@ import { HeroFinal } from "@/components/home/hero-final"
 import { WhyErgo } from "@/components/home/why-ergo-new"
 import { LiveNetworkStats } from "@/components/home/live-network-stats"
 import { FAQSchema } from "@/components/seo/faq-schema"
+import { ERGProductSchema } from "@/components/seo/erg-product-schema"
 import { PerformanceOptimizations } from "@/components/seo/performance-optimizations"
 import { siteConfig } from '@/config/site-config';
 
@@ -131,10 +132,13 @@ export default async function HomePage({ params }: HomePageProps) {
       />
       
       {/* FAQ Schema */}
-      <FAQSchema 
+      <FAQSchema
         faqs={faqData}
         pageUrl={siteConfig.siteUrl}
       />
+
+      {/* ERG cryptocurrency schema (Product + FinancialProduct) */}
+      <ERGProductSchema />
 
       <main className="min-h-screen bg-black text-white relative overflow-hidden">
         {/* 

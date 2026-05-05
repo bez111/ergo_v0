@@ -138,9 +138,14 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        {/* Google Fonts preconnect removed - fonts are self-hosted via next/font */}
+        {/* Preconnect to third-party origins used in critical render path */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
+        <link rel="preconnect" href="https://vitals.vercel-insights.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://www.ergoblockchain.org" />
         <link rel="preload" href="/og-image.png" as="image" type="image/png" />
+        {/* OpenSearch — lets browsers add Ergo site search to their search bar */}
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Ergo Platform" />
         {renderSchemaScripts([organizationSchema])}
       </head>
       <body className="min-h-screen bg-background font-sans antialiased" suppressHydrationWarning>

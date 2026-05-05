@@ -14,6 +14,30 @@ const ALL_LOCALES = [
   'ja', 'de', 'fr', 'it'
 ] as const
 
+// Open Graph locale codes (ISO 639-1 + ISO 3166-1) per Facebook/OG spec
+const OG_LOCALES: Record<string, string> = {
+  en: 'en_US',
+  ru: 'ru_RU',
+  'zh-cn': 'zh_CN',
+  'zh-tw': 'zh_TW',
+  tr: 'tr_TR',
+  'ko-kr': 'ko_KR',
+  es: 'es_ES',
+  'pt-br': 'pt_BR',
+  ja: 'ja_JP',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  it: 'it_IT',
+}
+
+/**
+ * Get OG locale string for a given app locale.
+ * Falls back to en_US for unknown locales.
+ */
+export function getOgLocale(locale: string): string {
+  return OG_LOCALES[locale] || 'en_US'
+}
+
 /**
  * Generate locale-aware canonical URL
  */

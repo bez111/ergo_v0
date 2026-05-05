@@ -52,6 +52,7 @@ export default function PrivacyFeaturesLayout({ children }: { children: React.Re
       description: "Comprehensive guide to Ergo's privacy features including Sigma protocols and ErgoMixer",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Intermediate",
       technicalAudience: "Privacy advocates and cryptographers",
       about: [

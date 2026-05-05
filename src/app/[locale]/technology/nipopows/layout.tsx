@@ -52,6 +52,7 @@ export default function NipopowsLayout({ children }: { children: React.ReactNode
       description: "How NIPoPoWs enable light clients and trustless cross-chain bridges on Ergo",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Advanced",
       technicalAudience: "Blockchain researchers and developers",
       about: [

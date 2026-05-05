@@ -30,6 +30,7 @@ import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ShareCTA } from "@/components/blog/share-cta"
+import { Byline } from "@/components/blog/byline"
 
 const articleContents = [
   { label: "The Setup: What Agents Are", href: "#setup" },
@@ -240,9 +241,17 @@ export function AgentStripeClient() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               Why AI Agents Can't Use Stripe — and What They Need Instead
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl leading-relaxed mb-8">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl leading-relaxed mb-2">
               Stripe, PayPal, and every payment rail built for humans shares the same fatal flaw for autonomous agents: they assume a persistent identity and a centralized trust layer. Here is what agents actually need from money — and why Ergo already has it.
             </p>
+            <Byline
+              authorName="Ergo Developer Relations"
+              authorRole="Developer Advocate · Ergo Platform"
+              authorTwitter="BuildOnErgo"
+              publishedDate="2026-03-20"
+              modifiedDate="2026-04-27"
+              readMinutes={9}
+            />
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
                 title="Why AI Agents Can't Use Stripe — and What They Need Instead"

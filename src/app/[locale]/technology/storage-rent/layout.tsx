@@ -53,6 +53,7 @@ export default function StorageRentLayout({ children }: { children: React.ReactN
       description: "How storage rent ensures blockchain sustainability and prevents infinite state growth",
       image: SEO.ogImage,
       datePublished: "2023-01-15",
+      dateModified: "2026-04-27",
       proficiencyLevel: "Intermediate",
       technicalAudience: "Developers and economists",
       about: [
