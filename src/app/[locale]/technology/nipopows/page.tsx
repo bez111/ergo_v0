@@ -366,7 +366,7 @@ export default function NIPOPOWsPage() {
                     useCase.external ? (
                       <a 
                         key={useCase.title}
-                        href={`${useCase.href}${useCase.href.includes('?') ? '&' : '?'}utm_source=site&utm_medium=referral&utm_campaign=nipopows`} 
+                        href={`${useCase.href}`} 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         aria-label={`${useCase.title} - ${useCase.example} (opens in a new tab)`}

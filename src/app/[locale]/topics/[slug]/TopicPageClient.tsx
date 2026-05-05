@@ -308,7 +308,7 @@ function AccordionTerm({
             <div className="px-4 pb-4 pt-2 bg-black/60">
               <p className="text-neutral-300 mb-3">{term.shortDefinition}</p>
               <Link
-                href={`/learn/glossary/${term.slug}?utm_source=topic&utm_medium=term&utm_campaign=${topicSlug}`}
+                href={`/learn/glossary/${term.slug}`}
                 className="inline-flex items-center gap-2 text-sm text-orange-400 hover:text-orange-300 transition-colors"
               >
                 Learn more
@@ -841,7 +841,7 @@ function QuestionCard({
 }) {
   return (
     <Link 
-      href={`/questions/${question.slug}?utm_source=topic&utm_medium=question&utm_campaign=${topicSlug}`} 
+      href={`/questions/${question.slug}`} 
       className="group block"
     >
       <div className="flex items-center justify-between gap-4 p-4 bg-black/80 border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
@@ -872,7 +872,7 @@ function FeaturedArticleCard({
   
   return (
     <Link 
-      href={`/blog/${post.slug}?utm_source=topic&utm_medium=article`}
+      href={`/blog/${post.slug}`}
       className="group block"
     >
       <div className="flex flex-col md:flex-row gap-4 p-4 rounded-2xl border border-white/10 hover:border-orange-500/30 transition-all bg-black/60 hover:bg-black/80">

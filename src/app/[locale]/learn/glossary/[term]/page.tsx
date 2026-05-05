@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site-config"
 import { glossaryTerms, getTermBySlug } from "@/data/glossary"
 import { getLocalizedGlossaryTerm, type GlossaryTermsTranslations } from "@/data/glossary-i18n"
 import { GlossaryTermClient } from "./GlossaryTermClient"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
@@ -54,7 +54,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title,
       description,
       images: [{ url: `${origin}/og/glossary-${term.slug}.png`, width: 1200, height: 630, alt: `${term.term} - Ergo Glossary` }],
-      locale: "en_US",
+      locale: getOgLocale(params.locale),
     },
     twitter: {
       card: "summary_large_image",

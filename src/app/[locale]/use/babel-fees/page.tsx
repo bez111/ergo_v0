@@ -9,6 +9,7 @@ import {
   createHowToSchema,
   getAlternates,
   getCanonicalUrl,
+  getOgLocale,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         alt: "Ergo Babel Fees"
       }],
       type: "article",
-      locale: "en_US"
+      locale: getOgLocale(locale)
     },
     twitter: {
       card: "summary_large_image",

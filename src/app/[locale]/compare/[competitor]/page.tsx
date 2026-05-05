@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site-config"
 import { comparisons, getComparisonBySlug } from "@/data/comparisons"
 import { getLocalizedComparison, type ComparisonTranslations } from "@/data/comparisons-i18n"
 import { ComparePageClient } from "./ComparePageClient"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
@@ -55,7 +55,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       title: comparison.seoTitle,
       description: comparison.seoDescription,
       images: [{ url: comparison.ogImage || `${origin}/api/og?title=${encodeURIComponent(`Ergo vs ${comparison.name}`)}&description=${encodeURIComponent(comparison.seoDescription.slice(0, 120))}&category=Comparison`, width: 1200, height: 630, alt: `Ergo vs ${comparison.name} Comparison` }],
-      locale: "en_US",
+      locale: getOgLocale(params.locale),
     },
     twitter: {
       card: "summary_large_image",

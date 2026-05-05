@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { EutxoVsAccountsClient } from "./EutxoVsAccountsClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 const origin = siteConfig.siteUrl
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: SEO.title,
       description: SEO.description,
       images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630 }],
-      locale: "en_US",
+      locale: getOgLocale(locale),
     },
     twitter: {
       card: "summary_large_image",

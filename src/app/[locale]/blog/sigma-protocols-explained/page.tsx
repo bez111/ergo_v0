@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { SigmaProtocolsExplainedClient } from "./SigmaProtocolsExplainedClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, createHowToSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, createHowToSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 const origin = siteConfig.siteUrl
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: SEO.title,
       description: SEO.description,
       images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: "Sigma Protocols Explained - Zero-Knowledge Privacy Made Simple" }],
-      locale: "en_US",
+      locale: getOgLocale(locale),
       publishedTime: "2024-11-14T00:00:00Z",
       modifiedTime: new Date().toISOString(),
       authors: ["Privacy Team"],

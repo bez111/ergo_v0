@@ -3,7 +3,7 @@ import { Suspense } from "react"
 import { siteConfig } from "@/config/site-config"
 import { faqData, getFAQByLevel, beginnerCategories, technicalCategories } from "@/data/faq"
 import FAQPageClient from "./FAQPageClient"
-import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 86400
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: "Ergo FAQ — Answers to 50+ Common Questions",
       description: "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy — find what you need in seconds.",
       images: [{ url: `${siteConfig.siteUrl}/og/faq.png`, width: 1200, height: 630 }],
-      locale: "en_US",
+      locale: getOgLocale(locale),
     },
     twitter: {
       card: "summary_large_image",

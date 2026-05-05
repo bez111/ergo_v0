@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next"
 import DefiUnderConstructionClient from "./DefiUnderConstructionClient"
-import { getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         alt: "Ergo DeFi - Coming Soon"
       }],
       type: "website",
-      locale: "en_US"
+      locale: getOgLocale(locale)
     },
     twitter: {
       card: "summary_large_image",

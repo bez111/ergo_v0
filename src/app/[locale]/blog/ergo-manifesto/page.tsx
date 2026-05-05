@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { ErgoManifestoClient } from "./ErgoManifestoClient"
 import { siteConfig } from "@/config/site-config"
-import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
+import { createBreadcrumbSchema, createFAQSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 86400
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: SEO.title,
       description: SEO.description,
       images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }],
-      locale: "en_US",
+      locale: getOgLocale(locale),
       publishedTime: "2021-04-26T00:00:00Z",
       modifiedTime: new Date().toISOString(),
       authors: ["Alexander Chepurnoy (Kushti)"],

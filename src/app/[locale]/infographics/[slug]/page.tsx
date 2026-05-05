@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getOgLocale } from "@/lib/seo"
 import { notFound } from 'next/navigation';
 import { getMessages } from 'next-intl/server';
 import { UniversalInfographicClient } from '@/components/infographics/UniversalInfographicClient';
@@ -54,7 +55,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
         height: 630,
         alt: infographic.imageAlt
       }],
-      locale: "en_US",
+      locale: getOgLocale(params.locale),
     },
     twitter: {
       card: 'summary_large_image',

@@ -8,6 +8,7 @@ import {
   createCollectionSchema,
   getAlternates,
   getCanonicalUrl,
+  getOgLocale,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: SEO.title,
       description: SEO.description,
       images: [{ url: `${origin}/og/infographics-hub.svg`, width: 1200, height: 630, alt: SEO.title }],
-      locale: "en_US"
+      locale: getOgLocale(locale)
     },
     twitter: {
       card: 'summary_large_image',

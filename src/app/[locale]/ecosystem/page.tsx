@@ -8,6 +8,7 @@ import {
   createCollectionSchema,
   getAlternates,
   getCanonicalUrl,
+  getOgLocale,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { siteConfig } from "@/config/site-config"
@@ -35,7 +36,7 @@ export async function generateMetadata({ searchParams, params }: {
       description: t('ogDescription'),
       images: [{ url: "/og/hubs/ecosystem.png", width: 1200, height: 630 }],
       siteName: "Ergo",
-      locale: "en_US",
+      locale: getOgLocale(locale),
     },
     twitter: { card: "summary_large_image", site: "@ergoplatform", creator: "@ergoplatform" },
     robots: hasQueries ? { index: false, follow: true } : { index: true, follow: true },

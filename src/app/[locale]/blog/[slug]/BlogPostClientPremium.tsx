@@ -153,7 +153,7 @@ function RecommendedInfographics({ tags }: { tags: string[] }) {
         {relatedInfographics.map((infographic) => (
           <Link 
             key={infographic.slug} 
-            href={`/infographics/${infographic.slug}?utm_source=blog&utm_medium=related&utm_campaign=internal_linking`}
+            href={`/infographics/${infographic.slug}`}
             className="group block"
           >
             <Card className="bg-black/60 border border-white/10 rounded-2xl hover:border-orange-400/40 transition-all duration-300 h-full overflow-hidden">
