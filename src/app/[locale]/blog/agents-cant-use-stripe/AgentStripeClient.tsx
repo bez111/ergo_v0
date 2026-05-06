@@ -26,6 +26,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BlogHeroImage } from "@/components/blog/blog-hero-image"
 import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
@@ -230,6 +231,11 @@ export function AgentStripeClient() {
             ]}
             className="mb-8"
           />
+          <BlogHeroImage
+            src="/og/blog/agents-cant-use-stripe.png"
+            alt="Why AI Agents Can't Use Stripe: the barrier to traditional payments for AI agents"
+          />
+
 
           {/* Hero */}
           <motion.div

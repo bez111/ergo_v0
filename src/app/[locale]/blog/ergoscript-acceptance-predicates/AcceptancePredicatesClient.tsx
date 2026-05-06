@@ -23,6 +23,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BlogHeroImage } from "@/components/blog/blog-hero-image"
 import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
@@ -136,6 +137,11 @@ export function AcceptancePredicatesClient() {
             ]}
             className="mb-8"
           />
+          <BlogHeroImage
+            src="/og/blog/ergoscript-acceptance-predicates.png"
+            alt="ErgoScript Acceptance Predicates: Secure L2 integration and verifiable off-chain logic"
+          />
+
 
           {/* Hero */}
           <motion.div

@@ -22,6 +22,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BlogHeroImage } from "@/components/blog/blog-hero-image"
 import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
@@ -99,6 +100,11 @@ export function BuildAgentPaysClient() {
             ]}
             className="mb-8"
           />
+          <BlogHeroImage
+            src="/og/blog/build-agent-pays-for-api.png"
+            alt="Agent pays for API: autonomous machine-to-machine commerce on Ergo"
+          />
+
 
           {/* Hero */}
           <motion.div

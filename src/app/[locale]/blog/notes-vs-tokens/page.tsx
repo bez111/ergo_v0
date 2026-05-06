@@ -10,7 +10,7 @@ const PATH = "/blog/notes-vs-tokens"
 const SEO = {
   title: "Notes vs Tokens: Why Bearer Instruments Matter for AI Agent Payments",
   description: "Ergo has native tokens and Notes (programmable bearer instruments). For simple transfers, tokens work. For agent payment pipelines — conditional, expiring, Reserve-backed — Notes are the right primitive. Here is why.",
-  image: "/og/agent-economy.png",
+  image: "/og/blog/notes-vs-tokens.png",
   keywords: ["ergo notes vs tokens", "bearer instrument blockchain", "programmable IOU ergo", "agent payment primitive", "ergo native tokens", "ChainCash notes", "eUTXO bearer instrument", "conditional payment ergo", "agent economy ergo", "notes reserve tracker"],
 }
 

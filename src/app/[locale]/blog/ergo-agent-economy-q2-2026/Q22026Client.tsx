@@ -26,6 +26,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BlogHeroImage } from "@/components/blog/blog-hero-image"
 import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
@@ -168,6 +169,11 @@ export function Q22026Client() {
             ]}
             className="mb-8"
           />
+          <BlogHeroImage
+            src="/og/blog/ergo-agent-economy-q2-2026.png"
+            alt="Ergo Agent Economy Q2-2026: Quarterly progress report"
+          />
+
 
           {/* Hero */}
           <motion.div

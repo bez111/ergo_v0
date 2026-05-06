@@ -24,6 +24,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BlogHeroImage } from "@/components/blog/blog-hero-image"
 import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
@@ -132,6 +133,11 @@ export function StateOfAgentPaymentsClient() {
             ]}
             className="mb-8"
           />
+          <BlogHeroImage
+            src="/og/blog/state-of-agent-payments-2026.png"
+            alt="State of Agent Payments 2026: Illustrated guide to autonomous machine finance"
+          />
+
 
           {/* Hero */}
           <motion.div

@@ -23,6 +23,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BlogHeroImage } from "@/components/blog/blog-hero-image"
 import { StickyTOC } from "@/components/blog/sticky-toc"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareInline } from "@/components/blog/share-inline"
@@ -120,6 +121,11 @@ export function NotesVsTokensClient() {
             ]}
             className="mb-8"
           />
+          <BlogHeroImage
+            src="/og/blog/notes-vs-tokens.png"
+            alt="Notes vs Tokens: Visual guide to Ergo's eUTXO units"
+          />
+
 
           {/* Hero */}
           <motion.div

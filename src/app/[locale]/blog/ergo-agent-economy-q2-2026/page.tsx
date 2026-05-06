@@ -18,7 +18,7 @@ const SEO = {
   title: "Q2 2026 Update: What Shipped in Ergo's Agent Economy Stack",
   description:
     "Two months after launch — what changed in the Ergo agent economy SDK. Full Note lifecycle, LangChain + OpenAI + CrewAI + AutoGen adapters, 10 working examples, Python package, MCP server. Concrete numbers, working code.",
-  image: "/og/agent-economy.png",
+  image: "/og/blog/ergo-agent-economy-q2-2026.png",
   keywords: [
     "ergo agent economy update",
     "ergo agent economy q2 2026",

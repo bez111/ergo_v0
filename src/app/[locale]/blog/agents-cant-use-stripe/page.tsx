@@ -11,7 +11,7 @@ const SEO = {
   title: "Why AI Agents Can't Use Stripe — and What They Need Instead",
   description:
     "Stripe, PayPal, and every payment rail built for humans shares a fatal flaw for autonomous agents: they assume persistent identity and centralized trust. This post explains what agents actually need from money — and why Ergo already has it.",
-  image: "/og/agent-economy.png",
+  image: "/og/blog/agents-cant-use-stripe.png",
   keywords: [
     "agentic blockchain",
     "agentic blockchain payments",

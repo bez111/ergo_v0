@@ -10,7 +10,7 @@ const PATH = "/blog/ergoscript-acceptance-predicates"
 const SEO = {
   title: "ErgoScript Acceptance Predicates: The Missing Primitive for Agent Payments",
   description: "Acceptance predicates embed task completion conditions directly in the payment UTxO — enforced on-chain by miners, no escrow, no oracle, no dispute resolution. Here is how to implement them.",
-  image: "/og/agent-economy.png",
+  image: "/og/blog/ergoscript-acceptance-predicates.png",
   keywords: ["ergoscript acceptance predicate", "on-chain task verification", "agent payment condition", "blake2b256 ergoscript", "conditional payment blockchain", "ergo agent payment", "trustless task payment", "eUTXO spending condition", "programmable payment ergo", "autonomous agent smart contract"],
 }
 
