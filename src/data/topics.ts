@@ -565,6 +565,7 @@ export const topics: TopicHub[] = [
     ],
 
     startHere: [
+      { type: "blog", title: "Q2 2026: What Shipped in the Stack", url: "/blog/ergo-agent-economy-q2-2026", description: "Latest update: SDK v0.2, 4 AI framework adapters, 10 working examples, Python + MCP packages", badge: "New", priority: 1 },
       { type: "blog", title: "Agent Economy Manifesto", url: "/blog/agent-economy-manifesto", description: "Why every AI agent will need to pay and be paid — and why Ergo already has the primitives", badge: "Start Here", priority: 1 },
       { type: "technology", title: "Agent Payments Architecture", url: "/build/agent-payments", description: "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference", badge: "Architecture", priority: 1 },
       { type: "compare", title: "Ergo vs ETH vs SOL for Agents", url: "/agent-economy/vs", description: "10-criteria comparison across chains for agent-specific requirements", badge: "Comparison", priority: 1 }

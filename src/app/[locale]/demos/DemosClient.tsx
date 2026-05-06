@@ -372,10 +372,21 @@ const communityReserve = new OutputBuilder(
               <div className="flex flex-wrap gap-4">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <a
-                    href="https://testnet.ergofaucet.org/"
+                    href="https://github.com/bez111/ergo-agent-economy"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
+                  >
+                    <Github className="w-4 h-4" />
+                    <span>Clone Starter Repo</span>
+                  </a>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
+                  <a
+                    href="https://testnet.ergofaucet.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
                     <span>{t('hero.ctaTestnet')}</span>
                     <ExternalLink className="w-4 h-4" />
@@ -384,7 +395,7 @@ const communityReserve = new OutputBuilder(
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <Link
                     href="/build/agent-payments"
-                    className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
+                    className="inline-flex items-center gap-2 bg-transparent hover:bg-white/5 text-neutral-300 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-white/15 hover:border-white/30 transition-all text-sm"
                   >
                     <span>{t('hero.ctaArchitecture')}</span>
                     <ChevronRight className="w-4 h-4" />

@@ -18,6 +18,7 @@ import {
   ExternalLink,
   ChevronRight,
   AlertTriangle,
+  Github,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -210,6 +211,47 @@ export function QuickstartClient() {
               {STEP_1_CODE}
             </pre>
           </motion.div>
+        </motion.div>
+      </section>
+
+      {/* ── Skip-the-typing: clone the starter repo ── */}
+      <section className="container mx-auto px-4 pt-4 pb-2 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="rounded-2xl bg-gradient-to-br from-orange-500/8 via-black/80 to-black/80 border border-orange-500/25 p-6 md:p-7"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="flex items-start gap-4 max-w-2xl">
+              <div className="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/30 flex items-center justify-center shrink-0">
+                <Github className="w-5 h-5 text-orange-400" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                  <h3 className="text-white font-bold text-base">Don&apos;t want to type? Clone the starter repo.</h3>
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-orange-400 bg-orange-500/10 border border-orange-500/30 rounded-full px-2 py-0.5">
+                    10 examples
+                  </span>
+                </div>
+                <p className="text-neutral-300 text-sm leading-relaxed">
+                  <code className="font-mono text-orange-300 text-xs">ergo-agent-economy</code> ships 10 working examples (LangChain, OpenAI, CrewAI, AutoGen, Python, MCP) plus three SDK packages — TypeScript, Python, and a Model Context Protocol server. Each example is a self-contained, runnable folder.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://github.com/bez111/ergo-agent-economy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-4 py-2.5 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-xs whitespace-nowrap"
+            >
+              <span>View on GitHub</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+          <pre className="mt-5 font-mono text-xs bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-orange-300 overflow-x-auto">{`git clone https://github.com/bez111/ergo-agent-economy
+cd ergo-agent-economy/examples/01-basic-payment && npm install && npm run start`}</pre>
         </motion.div>
       </section>
 

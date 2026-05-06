@@ -504,10 +504,17 @@ export function AgentEconomyClient() {
                   url: "https://github.com/BetterMoneyLabs",
                 },
                 {
+                  name: "ergo-agent-economy",
+                  icon: Code2,
+                  status: "Active",
+                  description: "Open-source agent payment SDK: ergo-agent-pay (TS), ergo-agent-py (Python), ergo-agent-mcp (MCP server). 10 working examples covering LangChain, OpenAI, CrewAI, AutoGen.",
+                  url: "https://github.com/bez111/ergo-agent-economy",
+                },
+                {
                   name: "Fleet SDK",
                   icon: Code2,
                   status: "Production",
-                  description: "TypeScript SDK for building Ergo transactions. The standard toolkit for agent payment integrations and dApp development.",
+                  description: "TypeScript SDK for building Ergo transactions. The standard toolkit for general dApp development; ergo-agent-pay builds on top of it.",
                   url: "https://github.com/fleet-sdk",
                 },
                 {

@@ -344,6 +344,24 @@ export const blogPosts: BlogPost[] = [
     shares: 0
   },
   {
+    id: 'ergo-agent-economy-q2-2026',
+    slug: 'ergo-agent-economy-q2-2026',
+    title: 'Q2 2026 Update: What Shipped in Ergo’s Agent Economy Stack',
+    excerpt: 'Two months after launch — ergo-agent-pay v0.2 ships the full Note lifecycle, three SDK packages (TypeScript, Python, MCP server), four AI framework adapters (LangChain, OpenAI, CrewAI, AutoGen), and 10 working examples. Concrete numbers, working code.',
+    date: '2026-05-06',
+    lastUpdated: '2026-05-06',
+    author: authors['dev-relations']!,
+    category: 'Vision',
+    readTime: 8,
+    wordCount: 2100,
+    image: '/og/agent-economy.png',
+    tags: ['Agent Economy', 'SDK Update', 'Q2 2026', 'LangChain', 'OpenAI', 'CrewAI', 'AutoGen', 'MCP', 'Python'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
+    shares: 0
+  },
+  {
     id: 'state-of-agent-payments-2026',
     slug: 'state-of-agent-payments-2026',
     title: 'The State of On-Chain Agent Payments: 2026 Report',

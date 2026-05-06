@@ -209,6 +209,65 @@ export function DevelopersClient() {
           </div>
         </section>
 
+        {/* Agent Economy Starter Repo — featured */}
+        <section className="py-12 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-3xl bg-gradient-to-br from-orange-500/8 via-black/80 to-black/80 border border-orange-500/25 p-7 md:p-9"
+            >
+              <div className="grid md:grid-cols-[1fr_auto] gap-6 items-center">
+                <div>
+                  <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-orange-400 bg-orange-500/10 border border-orange-500/30 rounded-full px-2.5 py-1">
+                      Agent Economy · Open Source
+                    </span>
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-green-400 bg-green-500/10 border border-green-500/30 rounded-full px-2.5 py-1">
+                      v0.2 · Active
+                    </span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                    Start from working code: <code className="font-mono text-orange-400">ergo-agent-economy</code>
+                  </h2>
+                  <p className="text-neutral-300 leading-relaxed mb-4 max-w-2xl">
+                    The official starter for autonomous agent payment systems on Ergo. Three SDK packages
+                    (TypeScript, Python, MCP server), 10 self-contained examples covering LangChain, OpenAI
+                    function calling, CrewAI, AutoGen, and the full Reserve / Note / Tracker / Acceptance Predicate lifecycle.
+                  </p>
+                  <div className="flex flex-wrap gap-2 text-xs">
+                    {["LangChain", "OpenAI", "CrewAI", "AutoGen", "MCP", "Python", "Fleet SDK"].map((tag) => (
+                      <span key={tag} className="font-mono text-neutral-400 bg-white/5 border border-white/10 rounded-full px-2.5 py-1">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3 md:items-end">
+                  <a
+                    href="https://github.com/bez111/ergo-agent-economy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-5 py-2.5 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm whitespace-nowrap"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.16-.02-2.11-3.2.69-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.13 0 1.54-.01 2.79-.01 3.17 0 .31.21.68.8.56 4.56-1.52 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                    <span>View on GitHub</span>
+                  </a>
+                  <Link
+                    href="/blog/ergo-agent-economy-q2-2026"
+                    className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-5 py-2.5 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm whitespace-nowrap"
+                  >
+                    <span>Q2 2026 Update</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Quick Start with Fleet SDK */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
