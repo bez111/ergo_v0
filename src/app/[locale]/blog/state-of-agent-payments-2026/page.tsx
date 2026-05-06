@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   return {
     title: SEO.title, description: SEO.description, alternates: getAlternates(PATH, locale), keywords: SEO.keywords,
-    openGraph: { type: "article", url: getCanonicalUrl(PATH, locale), siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: getOgLocale(locale), publishedTime: "2026-03-20T00:00:00Z", authors: ["Developer Relations"] },
+    openGraph: { type: "article", url: getCanonicalUrl(PATH, locale), siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: getOgLocale(locale), publishedTime: "2026-04-15T00:00:00Z", authors: ["Developer Relations"] },
     twitter: { card: "summary_large_image", title: SEO.title, description: SEO.description, images: [`${origin}${SEO.image}`], site: siteConfig.twitterHandle },
     robots: { index: true, follow: true },
   }
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function StateOfAgentPaymentsPage() {
   const schemas = [
-    createTechArticleSchema("/blog/state-of-agent-payments-2026", { headline: SEO.title, description: SEO.description, image: SEO.image, datePublished: "2026-03-20", keywords: SEO.keywords, proficiencyLevel: "Intermediate" }),
+    createTechArticleSchema("/blog/state-of-agent-payments-2026", { headline: SEO.title, description: SEO.description, image: SEO.image, datePublished: "2026-04-15", keywords: SEO.keywords, proficiencyLevel: "Intermediate" }),
     createBreadcrumbSchema([{ name: "Blog", href: "/blog" }, { name: "State of Agent Payments 2026", href: "/blog/state-of-agent-payments-2026" }], false),
     createFAQSchema(FAQ_ITEMS),
   ]

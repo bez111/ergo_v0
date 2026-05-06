@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: SEO.description,
     alternates: getAlternates(PATH, locale),
     keywords: SEO.keywords,
-    openGraph: { type: "article", url: getCanonicalUrl(PATH, locale), siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: getOgLocale(locale), publishedTime: "2026-03-20T00:00:00Z", authors: ["Developer Relations"], tags: ["ErgoScript", "Agent Economy", "Smart Contracts", "Developer"] },
+    openGraph: { type: "article", url: getCanonicalUrl(PATH, locale), siteName: "Ergo Platform", title: SEO.title, description: SEO.description, images: [{ url: `${origin}${SEO.image}`, width: 1200, height: 630, alt: SEO.title }], locale: getOgLocale(locale), publishedTime: "2026-03-12T00:00:00Z", authors: ["Developer Relations"], tags: ["ErgoScript", "Agent Economy", "Smart Contracts", "Developer"] },
     twitter: { card: "summary_large_image", title: SEO.title, description: SEO.description, images: [`${origin}${SEO.image}`], site: siteConfig.twitterHandle },
     robots: { index: true, follow: true },
   }
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function AcceptancePredicatesPage() {
   const schemas = [
-    createTechArticleSchema("/blog/ergoscript-acceptance-predicates", { headline: SEO.title, description: SEO.description, image: SEO.image, datePublished: "2026-03-20", keywords: SEO.keywords, proficiencyLevel: "Advanced" }),
+    createTechArticleSchema("/blog/ergoscript-acceptance-predicates", { headline: SEO.title, description: SEO.description, image: SEO.image, datePublished: "2026-03-12", keywords: SEO.keywords, proficiencyLevel: "Advanced" }),
     createBreadcrumbSchema([{ name: "Blog", href: "/blog" }, { name: "ErgoScript Acceptance Predicates", href: "/blog/ergoscript-acceptance-predicates" }], false),
     createFAQSchema(FAQ_ITEMS),
   ]

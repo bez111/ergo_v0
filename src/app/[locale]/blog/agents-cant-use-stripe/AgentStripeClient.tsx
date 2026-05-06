@@ -254,8 +254,8 @@ export function AgentStripeClient() {
               authorName="Ergo Developer Relations"
               authorRole="Developer Advocate · Ergo Platform"
               authorTwitter="BuildOnErgo"
-              publishedDate="2026-03-20"
-              modifiedDate="2026-04-27"
+              publishedDate="2026-01-23"
+              modifiedDate="2026-01-23"
               readMinutes={9}
             />
             <div className="flex items-center justify-between flex-wrap gap-4">
