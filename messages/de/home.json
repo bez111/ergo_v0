@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "Stack ansehen",
-    "seeFullStack": "Vollständiger Stack"
+    "seeFullStack": "Vollständiger Stack",
+    "badge": "Agent Economy",
+    "heading": "Entwickelt für die",
+    "headingHighlight": "Agent Economy",
+    "body": "Autonome Agenten brauchen mehr als Zahlungen. Ergo verbindet programmierbaren Kredit, Akzeptanzbedingungen und überprüfbare Reserven auf Protokollebene."
   }
 }

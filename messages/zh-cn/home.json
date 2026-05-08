@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "查看技术栈",
-    "seeFullStack": "完整技术栈"
+    "seeFullStack": "完整技术栈",
+    "badge": "智能体经济",
+    "heading": "为",
+    "headingHighlight": "智能体经济而构建",
+    "body": "自主智能体需要的不仅仅是支付。Ergo在协议层面结合了可编程信用、接受谓词和可验证的储备。"
   }
 }

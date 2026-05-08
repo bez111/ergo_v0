@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "查看技術堆疊",
-    "seeFullStack": "完整技術堆疊"
+    "seeFullStack": "完整技術堆疊",
+    "badge": "智能體經濟",
+    "heading": "為",
+    "headingHighlight": "智能體經濟而構建",
+    "body": "自主智能體需要的不僅僅是支付。Ergo在協議層面結合了可編程信用、接受謂詞和可驗證的儲備。"
   }
 }

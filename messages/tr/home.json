@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "Stack'i gör",
-    "seeFullStack": "Tam stack"
+    "seeFullStack": "Tam stack",
+    "badge": "Agent Economy",
+    "heading": "için tasarlandı:",
+    "headingHighlight": "agent ekonomisi",
+    "body": "Otonom ajanlar ödemelerden fazlasına ihtiyaç duyar. Ergo programlanabilir krediyi, kabul önkoşullarını ve doğrulanabilir rezervleri protokol düzeyinde birleştirir."
   }
 }

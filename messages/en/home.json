@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "See the stack",
-    "seeFullStack": "See the full stack"
+    "seeFullStack": "See the full stack",
+    "badge": "Agent Economy",
+    "heading": "Built for the",
+    "headingHighlight": "agent economy",
+    "body": "Autonomous agents need more than payments. Ergo combines programmable credit, acceptance predicates, and verifiable reserves at the protocol level."
   }
 }

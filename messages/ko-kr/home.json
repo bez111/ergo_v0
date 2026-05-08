@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "스택 보기",
-    "seeFullStack": "전체 스택"
+    "seeFullStack": "전체 스택",
+    "badge": "에이전트 이코노미",
+    "heading": "에이전트 이코노미를",
+    "headingHighlight": "위해 설계됨",
+    "body": "자율 에이전트는 결제 이상의 것이 필요합니다. Ergo는 프로그래밍 가능한 신용, 수락 술어, 검증 가능한 리저브를 프로토콜 수준에서 결합합니다."
   }
 }

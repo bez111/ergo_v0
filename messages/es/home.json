@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "Ver el stack",
-    "seeFullStack": "Stack completo"
+    "seeFullStack": "Stack completo",
+    "badge": "Agent Economy",
+    "heading": "Construido para la",
+    "headingHighlight": "agent economy",
+    "body": "Los agentes autónomos necesitan algo más que pagos. Ergo combina crédito programable, predicados de aceptación y reservas verificables a nivel de protocolo."
   }
 }

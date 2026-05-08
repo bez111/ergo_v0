@@ -41,7 +41,7 @@ export function AgentEconomySection() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 mb-5">
               <Bot className="w-3.5 h-3.5 text-orange-400" />
               <span className="text-orange-400 font-mono text-xs uppercase tracking-widest">
-                Agent Economy
+                {t('badge')}
               </span>
             </div>
             <h2
@@ -52,15 +52,14 @@ export function AgentEconomySection() {
                 lineHeight: 1.1,
               }}
             >
-              Built for the{" "}
-              <span style={{ color: BRAND }}>agent economy</span>
+              {t('heading')}{" "}
+              <span style={{ color: BRAND }}>{t('headingHighlight')}</span>
             </h2>
             <p
               className="text-neutral-400 mt-4"
               style={{ fontSize: "clamp(15px, 1.8vw, 18px)", lineHeight: 1.5, maxWidth: "54ch" }}
             >
-              Autonomous agents need more than payments. Ergo is the only settlement layer with
-              programmable credit, acceptance predicates, and verifiable reserves built in.
+              {t('body')}
             </p>
           </div>
 

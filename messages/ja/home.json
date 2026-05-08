@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "スタックを見る",
-    "seeFullStack": "完全なスタック"
+    "seeFullStack": "完全なスタック",
+    "badge": "エージェント経済",
+    "heading": "エージェント経済の",
+    "headingHighlight": "ために構築",
+    "body": "自律エージェントには支払い以上のものが必要です。Ergoはプログラマブル・クレジット、アクセプタンス述語、検証可能なリザーブをプロトコルレベルで統合します。"
   }
 }

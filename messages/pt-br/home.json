@@ -681,6 +681,10 @@
   },
   "agentEconomyHome": {
     "seeStack": "Ver o stack",
-    "seeFullStack": "Stack completo"
+    "seeFullStack": "Stack completo",
+    "badge": "Agent Economy",
+    "heading": "Criado para a",
+    "headingHighlight": "agent economy",
+    "body": "Agentes autônomos precisam de mais do que pagamentos. Ergo combina crédito programável, predicados de aceitação e reservas verificáveis no nível do protocolo."
   }
 }
