@@ -112,6 +112,18 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <>
       <HreflangTags pathname="/" currentLocale={locale} />
+      {/* Patch <html lang> + dir at request time. The root layout in
+          src/app/layout.tsx renders <html> with a static lang="en" because
+          it is prerendered and can't see the locale segment. This inline
+          script — which runs before the body paints and is included in the
+          static HTML for every locale-prefixed page — fixes the attribute
+          for screen readers, SEO and content negotiation. */}
+      <script
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: `(function(){var d=document.documentElement;d.lang=${JSON.stringify(localeConfig.hreflang)};d.dir=${JSON.stringify(isRtl ? "rtl" : "ltr")};})();`,
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
