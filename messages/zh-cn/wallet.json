@@ -171,7 +171,8 @@
         "hot": "热钱包",
         "cold": "冷钱包",
         "hybrid": "混合"
-      }
+      },
+      "verified": "校验日期"
     },
     "whatsNext": {
       "title": "接下来",

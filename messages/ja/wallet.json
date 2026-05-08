@@ -168,7 +168,8 @@
         "hot": "ホット",
         "cold": "コールド",
         "hybrid": "ハイブリッド"
-      }
+      },
+      "verified": "確認日"
     },
     "whatsNext": {
       "title": "次は",

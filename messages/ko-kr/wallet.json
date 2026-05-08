@@ -168,7 +168,8 @@
         "hot": "핫",
         "cold": "콜드",
         "hybrid": "하이브리드"
-      }
+      },
+      "verified": "확인일"
     },
     "whatsNext": {
       "title": "다음",

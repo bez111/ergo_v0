@@ -168,7 +168,8 @@
         "hot": "Chaud",
         "cold": "Froid",
         "hybrid": "Hybride"
-      }
+      },
+      "verified": "Vérifié le"
     },
     "whatsNext": {
       "title": "Et",

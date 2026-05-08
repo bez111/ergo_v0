@@ -46,7 +46,8 @@ const allWallets: Wallet[] = walletRegistry.map((w) => ({
 
 
 export default function WalletClient() {
-  const t = useTranslations("wallet")
+  const t = useTranslations("walletClient")
+  const tw = useTranslations("walletClient.wallets")
 
   const getSecurityColor = (level: string) => {
     switch (level) {
@@ -74,20 +75,19 @@ export default function WalletClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-                Ergo <span className="text-orange-400">Wallets</span>
+                {t("hero.title")} <span className="text-orange-400">{t("hero.titleHighlight")}</span>
               </h1>
               <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
-                Secure your ERG with production-ready wallets
+                {t("hero.subtitle")}
               </p>
               <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                From browser extensions to hardware devices - choose the perfect wallet for your security needs. 
-                All wallets are non-custodial, giving you full control of your funds.
+                {t("hero.description")}
               </p>
             </div>
             <div className="relative z-10">
               <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                  Quick Start
+                  {t("quickStart.title")}
                 </h3>
                 <div className="grid grid-cols-1 gap-4">
                   <a
@@ -101,8 +101,8 @@ export default function WalletClient() {
                         <Chrome className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-white text-lg">Nautilus Wallet</h4>
-                        <p className="text-gray-400 text-sm">Browser • Most Popular</p>
+                        <h4 className="font-semibold text-white text-lg">{t("quickStart.nautilus.name")}</h4>
+                        <p className="text-gray-400 text-sm">{t("quickStart.nautilus.subtitle")}</p>
                       </div>
                     </div>
                   </a>
@@ -118,8 +118,8 @@ export default function WalletClient() {
                         <Monitor className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-white text-lg">Satergo Wallet</h4>
-                        <p className="text-gray-400 text-sm">Desktop • Full Node</p>
+                        <h4 className="font-semibold text-white text-lg">{t("quickStart.satergo.name")}</h4>
+                        <p className="text-gray-400 text-sm">{t("quickStart.satergo.subtitle")}</p>
                       </div>
                     </div>
                   </a>
@@ -135,8 +135,8 @@ export default function WalletClient() {
                         <HardDrive className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-white text-lg">Ledger Hardware</h4>
-                        <p className="text-gray-400 text-sm">Hardware • Maximum Security</p>
+                        <h4 className="font-semibold text-white text-lg">{t("quickStart.ledger.name")}</h4>
+                        <p className="text-gray-400 text-sm">{t("quickStart.ledger.subtitle")}</p>
                       </div>
                     </div>
                   </a>
@@ -156,25 +156,25 @@ export default function WalletClient() {
                 <Shield className="h-6 w-6 text-orange-400" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-xl mb-1">Security First</h3>
-                <p className="text-orange-400/80 text-sm font-medium">Best practices for wallet safety</p>
+                <h3 className="text-white font-bold text-xl mb-1">{t("security.title")}</h3>
+                <p className="text-orange-400/80 text-sm font-medium">{t("security.subtitle")}</p>
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Always download wallets from official sources and verify checksums for maximum security.
+              {t("security.description")}
             </p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-400 leading-relaxed">Verify checksums after download</span>
+                <span className="text-gray-400 leading-relaxed">{t("security.tips.verifyChecksums")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <ShieldCheck className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-400 leading-relaxed">Download only from official sources</span>
+                <span className="text-gray-400 leading-relaxed">{t("security.tips.officialSources")}</span>
               </li>
               <li className="flex items-start gap-3">
                 <Lock className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-400 leading-relaxed">Backup your seed phrase securely offline</span>
+                <span className="text-gray-400 leading-relaxed">{t("security.tips.backupSeedPhrase")}</span>
               </li>
             </ul>
           </div>
@@ -190,10 +190,10 @@ export default function WalletClient() {
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                All Wallets
+                {t("allWallets.title")}
               </h2>
               <p className="text-lg text-gray-400">
-                {allWallets.length} secure options for storing your ERG
+                {allWallets.length} {t("allWallets.subtitle")}
               </p>
             </div>
           </div>
@@ -214,21 +214,21 @@ export default function WalletClient() {
                 >
                   {wallet.isRecommended && (
                     <div className="absolute -top-3 left-6 bg-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
-                      Recommended
+                      {t("labels.recommended")}
                     </div>
                   )}
-                  
+
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                       <IconComponent className="h-6 w-6 text-orange-400" />
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-xl mb-1">{wallet.name}</h3>
+                      <h3 className="text-white font-bold text-xl mb-1">{tw(`${wallet.id}.name`)}</h3>
                       <p className="text-orange-400/80 text-sm font-medium">{wallet.category} · {wallet.platforms.join(", ")}</p>
                     </div>
                   </div>
-                  
-                  <p className="text-gray-400 leading-relaxed mb-4 flex-grow min-h-[60px]">{wallet.description}</p>
+
+                  <p className="text-gray-400 leading-relaxed mb-4 flex-grow min-h-[60px]">{tw(`${wallet.id}.description`)}</p>
 
                   <div className="flex items-center gap-2 mb-3 min-h-[28px] flex-wrap">
                     <Badge className={`text-xs border ${getSecurityColor(wallet.securityLevel)}`}>
@@ -238,7 +238,7 @@ export default function WalletClient() {
                       {wallet.type}
                     </Badge>
                     <Badge className="text-xs border border-white/10 bg-white/5 text-neutral-400 font-mono font-normal">
-                      Verified {wallet.lastVerified}
+                      {t("labels.verified")} {wallet.lastVerified}
                     </Badge>
                   </div>
 
@@ -256,9 +256,9 @@ export default function WalletClient() {
                       size="lg"
                       className="w-full"
                       icon={<IconComponent className="h-5 w-5" />}
-                      ariaLabel={`Download ${wallet.name}`}
+                      ariaLabel={`${t("labels.download")} ${wallet.name}`}
                     >
-                      {wallet.downloadUrl ? `Download ${wallet.name.split(" ")[0]}` : `Visit ${wallet.name.split(" ")[0]}`}
+                      {wallet.downloadUrl ? `${t("labels.download")} ${wallet.name.split(" ")[0]}` : `${t("labels.visit")} ${wallet.name.split(" ")[0]}`}
                     </EnhancedButton>
                   </div>
                 </div>
@@ -271,10 +271,10 @@ export default function WalletClient() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            What's <span className="text-orange-400">Next</span>?
+            {t("whatsNext.title")} <span className="text-orange-400">{t("whatsNext.titleHighlight")}</span>?
           </h2>
           <p className="text-lg text-gray-400 mb-12">
-            Now that you have a wallet, get some ERG and explore the ecosystem
+            {t("whatsNext.subtitle")}
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -287,11 +287,11 @@ export default function WalletClient() {
                   <Shield className="h-6 w-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl mb-1">Get ERG</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">Buy ERG Tokens</p>
+                  <h3 className="text-white font-bold text-xl mb-1">{t("whatsNext.getErg.title")}</h3>
+                  <p className="text-orange-400/80 text-sm font-medium">{t("whatsNext.getErg.subtitle")}</p>
                 </div>
               </div>
-              <p className="text-gray-400 leading-relaxed">Purchase ERG from exchanges or DEXs</p>
+              <p className="text-gray-400 leading-relaxed">{t("whatsNext.getErg.description")}</p>
             </Link>
             
             <Link
@@ -303,20 +303,20 @@ export default function WalletClient() {
                   <Shield className="h-6 w-6 text-orange-400" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl mb-1">Learn More</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">Documentation</p>
+                  <h3 className="text-white font-bold text-xl mb-1">{t("whatsNext.learnMore.title")}</h3>
+                  <p className="text-orange-400/80 text-sm font-medium">{t("whatsNext.learnMore.subtitle")}</p>
                 </div>
               </div>
-              <p className="text-gray-400 leading-relaxed">Deep dive into Ergo's technology</p>
+              <p className="text-gray-400 leading-relaxed">{t("whatsNext.learnMore.description")}</p>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Email Capture Form */}
-      <FinalCTASimple 
-        title="Wallet Security Tips"
-        description="Get the latest wallet security updates, best practices, and safety tips delivered to your inbox"
+      <FinalCTASimple
+        title={t("emailCapture.title")}
+        description={t("emailCapture.description")}
       />
 
     </div>
