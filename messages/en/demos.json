@@ -4,7 +4,7 @@
       "badge": "Working Demos",
       "title": "Working flows,",
       "titleHighlight": "not mockups.",
-      "description": "Three composable flows, all running on Ergo testnet. Each includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
+      "description": "Two composable flows live on Ergo testnet, plus one upcoming. Each live demo includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
       "ctaTestnet": "Get testnet ERG",
       "ctaArchitecture": "Architecture"
     },

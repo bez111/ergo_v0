@@ -132,9 +132,9 @@ const useCases = [
     icon: DollarSign,
   },
   {
-    title: "Spectrum DEX",
-    description: "Decentralized exchange using price feeds for limit orders and liquidations",
-    link: "https://spectrum.fi",
+    title: "DEXs on Ergo",
+    description: "Decentralized exchanges use oracle price feeds for limit orders and liquidations",
+    link: "/ecosystem?category=DeFi",
     icon: BarChart3,
   },
   {

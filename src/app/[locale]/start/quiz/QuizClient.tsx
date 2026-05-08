@@ -245,9 +245,9 @@ const profiles: Record<string, Profile> = {
       {
         category: "DeFi Platforms",
         items: [
-          { name: "Spectrum Finance", description: "Decentralized exchange (DEX)", link: "https://spectrum.fi" },
+          { name: "ErgoDex", description: "Decentralized exchange on Ergo's eUTXO", link: "https://app.ergodex.io" },
           { name: "SigmaUSD", description: "Algorithmic stablecoin protocol", link: "/ecosystem/projects/sigmausd" },
-          { name: "Duckpools", description: "Lending and borrowing platform", link: "/ecosystem/projects/duckpools" },
+          { name: "Duckpools", description: "Lending and borrowing platform (testnet)", link: "/ecosystem/projects/duckpools" },
         ],
       },
       {
@@ -261,12 +261,12 @@ const profiles: Record<string, Profile> = {
     nextSteps: [
       { text: "Install Nautilus Wallet", link: "/wallet" },
       { text: "Learn about SigmaUSD Stablecoin", link: "/ecosystem/projects/sigmausd" },
-      { text: "Try Trading on Spectrum Finance", link: "https://spectrum.fi" },
+      { text: "Try ErgoDex", link: "https://app.ergodex.io" },
       { text: "Join DeFi Discussions on Discord", link: "https://discord.gg/ergo-platform" },
     ],
     communityChannels: [
       { name: "DeFi Discord Channels", link: "https://discord.gg/ergo-platform" },
-      { name: "Spectrum Finance Community", link: "https://spectrum.fi" },
+      { name: "ErgoDex Community", link: "https://app.ergodex.io" },
       { name: "SigmaUSD Community", link: "/ecosystem/projects/sigmausd" },
     ],
   },

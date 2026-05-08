@@ -86,9 +86,9 @@ const REPORT_CARD = [
 ]
 
 const ERGO_LIVE_ITEMS = [
-  "ChainCash: Reserve + Note + Tracker on mainnet",
-  "Fleet SDK (@fleet-sdk/core): TypeScript/JS, npm",
-  "Babel Fees: pay tx fees in any token",
+  "ChainCash: open-source prototype (Reserve + Note + Tracker) — testnet-first, not audited",
+  "Fleet SDK (@fleet-sdk/core): TypeScript/JS, npm — production-ready library",
+  "Babel Fees: pay tx fees in any token — protocol-level",
   "Acceptance predicates: ErgoScript first-class",
   "Testnet demos: open source at /demos",
   "~$0.01 per transaction on mainnet",

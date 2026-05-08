@@ -48,7 +48,7 @@ const tldrItems = [
   {
     icon: Zap,
     title: "Agent Holds Its Own Wallet",
-    description: "The agent generates a keypair, fetches UTxOs from the testnet API, builds a transaction autonomously. No human approves payments.",
+    description: "The agent generates a keypair, fetches UTxOs from the testnet API, and builds the transaction autonomously. (In this tutorial the agent prints an unsigned TX and you sign it via Nautilus or sigma-rust; production unattended signing requires a secure external signer.)",
   },
   {
     icon: CheckCircle,
@@ -58,7 +58,7 @@ const tldrItems = [
   {
     icon: Package,
     title: "No Stripe, No KYC, No Merchant Account",
-    description: "One Fleet SDK transaction. The agent pays, the API verifies on-chain, the response is delivered. Fully autonomous.",
+    description: "One Fleet SDK transaction. The agent pays, the API verifies on-chain, the response is delivered. End-to-end on testnet — no centralized payment processor in the loop.",
   },
 ]
 
@@ -66,7 +66,7 @@ const WHAT_BUILDING = [
   { n: "01", t: "Agent", d: "Node.js script with an Ergo wallet (keypair + testnet ERG)" },
   { n: "02", t: "Paid API", d: "Express server requiring 0.001 ERG per request, checks on-chain payment" },
   { n: "03", t: "Payment flow", d: "Agent sends Ergo TX → API verifies → API responds → Agent processes result" },
-  { n: "04", t: "No human", d: "Agent manages its own wallet. No user approves payments. Fully autonomous." },
+  { n: "04", t: "Testnet flow", d: "Agent builds and submits the TX; signing happens via Nautilus / sigma-rust. Production unattended signing requires a secure external signer." },
 ]
 
 const RUN_STEPS = [
@@ -117,7 +117,7 @@ export function BuildAgentPaysClient() {
               How to Build an Agent That Pays for Its Own API Calls
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl leading-relaxed mb-8">
-              In this tutorial, we build a minimal but complete agent payment system: an autonomous agent that holds an Ergo wallet, calls a paid API, sends an on-chain payment, and receives the API response — all without human intervention. End-to-end, on Ergo testnet, with full source code.
+              In this tutorial, we build a minimal but complete agent payment system: an agent that holds an Ergo wallet, calls a paid API, sends an on-chain payment, and receives the API response — end-to-end on Ergo testnet, with full source code. The tutorial deliberately keeps signing in the loop (via Nautilus or sigma-rust) so you can inspect every transaction; production-grade unattended signing requires a secure external signer.
             </p>
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
@@ -598,7 +598,7 @@ runAgent("the latest Ergo block data").catch(console.error);`}</pre>
 
           <ShareCTA
             title="How to Build an Agent That Pays for Its Own API Calls"
-            description="Full tutorial — agent wallet, paid API service, on-chain payment verification. No Stripe, no KYC, no human approval. Complete source code included."
+            description="Full tutorial — agent wallet, paid API service, on-chain payment verification, end-to-end on Ergo testnet. Complete source code included."
             url="https://www.ergoblockchain.org/blog/build-agent-pays-for-api"
           />
 

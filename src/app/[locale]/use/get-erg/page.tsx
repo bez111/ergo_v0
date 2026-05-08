@@ -69,7 +69,7 @@ export default function GetErgPage() {
   const faqSchema = createFAQSchema([
     {
       question: "Where can I buy ERG?",
-      answer: "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, as well as DEXs like Spectrum Finance. Choose based on your region and preferred payment method.",
+      answer: "ERG is available on major exchanges like KuCoin, Gate.io, CoinEx, and Huobi, as well as on-chain via DEXs such as ErgoDex. (Spectrum Finance, historically a primary DEX, issued a sunset notice and froze its contracts in Feb 2024.) Choose based on your region and preferred payment method.",
     },
     {
       question: "What is the best exchange to buy ERG?",

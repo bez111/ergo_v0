@@ -10,13 +10,6 @@ export const revalidate = 86400
 
 const PATH = "/faq"
 
-// Helper to create URL-safe slugs from strings
-// const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "")
-const firstSentence = (s: string) => {
-  const m = s.replace(/\s+/g, " ").match(/(.+?[.!?])\s/)
-  return (m?.[1] || s).slice(0, 500)
-}
-
 // SEO Configuration
 const SEO = {
   title: "Ergo FAQ — Answers to 50+ Common Questions | Ergo",
@@ -60,10 +53,11 @@ export default function FAQPage() {
   const beginnerCount = beginnerFAQ.length
   const technicalCount = technicalFAQ.length
 
-  // Convert faqData to FAQ items format
+  // Convert faqData to FAQ items format. Use the full answer so the
+  // FAQPage schema matches what's now rendered server-side below.
   const faqItems = faqData.map(q => ({
     question: q.question,
-    answer: firstSentence(q.answer)
+    answer: q.answer,
   }))
 
   const schemas = [
@@ -83,6 +77,61 @@ export default function FAQPage() {
           stats={{ total: totalQuestions, beginner: beginnerCount, technical: technicalCount }}
         />
       </Suspense>
+
+      {/* Server-rendered fallback: every question + answer is always in the
+          HTML so crawlers, screen readers, and no-JS users never see an empty
+          FAQ page. The interactive client UI above provides search/filter for
+          users with JS. */}
+      <section
+        id="all-faq-answers"
+        aria-label="All FAQ answers"
+        className="container max-w-4xl mx-auto px-4 py-16 border-t border-neutral-800"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+          All Questions &amp; Answers
+        </h2>
+        <p className="text-sm text-neutral-400 mb-8">
+          {totalQuestions} questions, fully expanded for screen readers,
+          search engines, and printing. Use the search bar above for an
+          interactive filter.
+        </p>
+
+        {(["beginner", "technical"] as const).map((level) => {
+          const items = level === "beginner" ? beginnerFAQ : technicalFAQ
+          const heading = level === "beginner" ? "Beginner" : "Technical"
+          const cats = level === "beginner" ? beginnerCategories : technicalCategories
+          return (
+            <div key={level} className="mb-12">
+              <h3 className="text-xl font-semibold text-orange-400 mb-4 uppercase tracking-wider">
+                {heading} ({items.length})
+              </h3>
+              {cats.map((cat) => {
+                const inCat = items.filter((q) => q.category === cat)
+                if (inCat.length === 0) return null
+                return (
+                  <div key={cat} className="mb-8">
+                    <h4 className="text-lg font-semibold text-white mb-3">{cat}</h4>
+                    <dl className="space-y-4">
+                      {inCat.map((q) => (
+                        <div
+                          key={q.id}
+                          id={q.id}
+                          className="border border-neutral-800 rounded-lg p-4 bg-neutral-900/40"
+                        >
+                          <dt className="font-semibold text-white mb-2">{q.question}</dt>
+                          <dd className="text-neutral-300 leading-relaxed whitespace-pre-line">
+                            {q.answer}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                )
+              })}
+            </div>
+          )
+        })}
+      </section>
     </>
   )
 }

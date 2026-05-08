@@ -14,10 +14,10 @@ export function EcosystemSection() {
       url: "/ecosystem/projects/ergodex",
     },
     {
-      name: "Spectrum",
-      description: "Liquidity and yield farming protocol",
-      category: "DeFi",
-      url: "/ecosystem/projects/spectrum",
+      name: "Rosen Bridge",
+      description: "Decentralized cross-chain bridge connecting Ergo to Bitcoin, Cardano, and Ethereum",
+      category: "Bridge",
+      url: "/ecosystem/projects/rosen-bridge",
     },
     {
       name: "SigmaUSD",

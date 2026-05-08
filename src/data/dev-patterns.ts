@@ -1220,9 +1220,9 @@ function getLpTokensForDeposit(
     feeConsiderations: "Swap fees typically 0.3%. Transaction fees standard. Consider batching for gas efficiency.",
     
     implementations: [
-      { project: "Spectrum Finance", description: "Production AMM DEX on Ergo", url: "https://spectrum.fi" }
+      { project: "Spectrum Finance (sunset 2024)", description: "Reference AMM implementation on Ergo's eUTXO. Sunset notice issued; contracts frozen since Feb 2024 — not an active venue. Useful as a study of eUTXO AMM design.", url: "https://spectrum.fi/sunset-notice" }
     ],
-    
+
     publishDate: "2025-01-15"
   },
 

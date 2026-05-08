@@ -547,7 +547,7 @@ export const topics: TopicHub[] = [
 
     introduction: "Autonomous AI agents are a fundamentally new kind of economic actor. They transact at machine speed, without persistent identity, at micropayment scale ($0.001 per API call), with conditional acceptance logic that no human-centric payment rail supports. Stripe requires KYC. Lightning requires persistent channels. Ethereum has non-deterministic gas and mandatory ETH pre-funding. Ergo is designed to satisfy the requirements agents have — at the protocol level, with no application-layer workarounds.",
 
-    whatMakesUnique: "Ergo's agent payment stack consists of four composable UTxO primitives: Reserve (collateral backing), Note (programmable bearer IOU), Tracker (anti-double-spend registry), and Acceptance Predicate (on-chain task completion condition). These aren't features bolted on for AI — they're protocol properties that emerge from eUTXO's deterministic execution, ErgoScript's expressive power, and Babel Fees' gas abstraction. ChainCash is the live mainnet reference implementation.",
+    whatMakesUnique: "Ergo's agent payment stack consists of four composable UTxO primitives: Reserve (collateral backing), Note (programmable bearer IOU), Tracker (anti-double-spend registry), and Acceptance Predicate (on-chain task completion condition). These aren't features bolted on for AI — they're protocol properties that emerge from eUTXO's deterministic execution, ErgoScript's expressive power, and Babel Fees' gas abstraction. ChainCash is an open-source prototype reference implementation of this stack — not audited and not production-ready.",
 
     keyDifferentiators: [
       "Notes: programmable bearer IOUs transferable between agents without issuer round-trips",
@@ -561,7 +561,7 @@ export const topics: TopicHub[] = [
       { id: "primitives", title: "The Four Primitives", description: "Reserve, Note, Tracker, Acceptance Predicate" },
       { id: "why-ergo", title: "Why Ergo", description: "What makes Ergo uniquely suited for agent commerce" },
       { id: "build", title: "Build", description: "SDKs, quickstart, examples" },
-      { id: "reference", title: "Reference Implementation", description: "ChainCash on mainnet" }
+      { id: "reference", title: "Reference Implementation", description: "ChainCash — open-source prototype, testnet-first" }
     ],
 
     startHere: [
@@ -593,7 +593,7 @@ export const topics: TopicHub[] = [
       { term: "Tracker", slug: "tracker-anti-double-spend", shortDefinition: "On-chain registry preventing double-redemption of Notes" },
       { term: "Acceptance Predicate", slug: "acceptance-predicate", shortDefinition: "ErgoScript condition encoding task completion in the payment itself" },
       { term: "Babel Fees", slug: "babel-fees-agent", shortDefinition: "Pay transaction fees in any token — agents don't need pre-funded ERG wallets" },
-      { term: "ChainCash", slug: "chaincash", shortDefinition: "Live mainnet reference implementation of the Reserve+Note+Tracker stack" },
+      { term: "ChainCash", slug: "chaincash", shortDefinition: "Open-source prototype reference implementation of the Reserve+Note+Tracker stack — not audited, not production-ready" },
       { term: "Programmable IOU", slug: "programmable-iou", shortDefinition: "A Note with custom acceptance conditions enforced on-chain" },
       { term: "Agent Economy", slug: "agent-economy", shortDefinition: "The emerging system of autonomous AI agents transacting without human intermediaries" }
     ],

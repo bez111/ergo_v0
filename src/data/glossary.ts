@@ -8932,7 +8932,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Babel Fees let agents operate without a pre-funded ERG wallet",
     ],
 
-    technicalDetails: "On Ergo, the agent economy stack consists of four primitives: (1) Reserve — a UTxO holding ERG as collateral; (2) Note — a bearer instrument referencing a Reserve with optional acceptance predicates; (3) Tracker — an anti-double-spend registry; (4) Acceptance Predicate — an ErgoScript condition in the receiver's spending script encoding task completion requirements. ChainCash is the production implementation.",
+    technicalDetails: "On Ergo, the agent economy stack consists of four primitives: (1) Reserve — a UTxO holding ERG as collateral; (2) Note — a bearer instrument referencing a Reserve with optional acceptance predicates; (3) Tracker — an anti-double-spend registry; (4) Acceptance Predicate — an ErgoScript condition in the receiver's spending script encoding task completion requirements. ChainCash is an open-source prototype reference implementation of this stack — not audited and not production-ready.",
 
     useCases: [
       "LLM agent pays $0.001 per API call — no Stripe account needed",
@@ -8971,7 +8971,7 @@ export const glossaryTerms: GlossaryTerm[] = [
 
     shortDefinition: "A programmable IOU on Ergo — a UTxO encoding a payment obligation that can be transferred between agents and redeemed against a Reserve.",
 
-    definition: "In Ergo's agent economy stack, a Note is a bearer instrument implemented as a UTxO box. It references a Reserve box (the collateral backing), contains a value in ERG or tokens, an expiry block height, and an optional acceptance predicate. Notes can be transferred between agents without any issuer involvement — whoever holds the Note can redeem it against the Reserve. The acceptance predicate encodes conditions that must be true at redemption time, enabling trustless payment-for-task flows without off-chain oracles. ChainCash is the production implementation of the Note protocol on Ergo mainnet.",
+    definition: "In Ergo's agent economy stack, a Note is a bearer instrument implemented as a UTxO box. It references a Reserve box (the collateral backing), contains a value in ERG or tokens, an expiry block height, and an optional acceptance predicate. Notes can be transferred between agents without any issuer involvement — whoever holds the Note can redeem it against the Reserve. The acceptance predicate encodes conditions that must be true at redemption time, enabling trustless payment-for-task flows without off-chain oracles. ChainCash is an open-source prototype reference implementation of the Note protocol on Ergo — testnet-first, not audited, not production-ready.",
 
     keywords: [
       "ergo note",
@@ -9166,11 +9166,11 @@ export const glossaryTerms: GlossaryTerm[] = [
     faq: [
       {
         question: "What is ChainCash?",
-        answer: "ChainCash is a live Ergo protocol for bearer instruments (Notes) backed by ERG Reserves. Built by BetterMoneyLabs, it is the open-source reference implementation (prototype) of Ergo's agent economy payment stack. It enables community currencies, agent credit, and programmable IOUs on Ergo mainnet.",
+        answer: "ChainCash is an Ergo protocol design for bearer instruments (Notes) backed by ERG Reserves. Built by BetterMoneyLabs, it is the open-source reference implementation (prototype) of Ergo's agent economy payment stack. It explores community currencies, agent credit, and programmable IOUs on Ergo. It is a research/prototype implementation — not audited and not production-ready.",
       },
       {
         question: "Who built ChainCash?",
-        answer: "ChainCash was built by BetterMoneyLabs. It is open source and live on Ergo mainnet.",
+        answer: "ChainCash was built by BetterMoneyLabs. It is open source. Status: prototype / research implementation — not audited, not production-ready unless a specific audited deployment is explicitly marked as such.",
       },
     ],
 

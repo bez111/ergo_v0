@@ -75,8 +75,8 @@ export const useCases: UseCase[] = [
     featured: true,
     supportedProjects: [
       {
-        name: "Spectrum Finance",
-        url: "https://spectrum.fi",
+        name: "ErgoDex",
+        url: "https://app.ergodex.io",
       },
       {
         name: "SigmaUSD",

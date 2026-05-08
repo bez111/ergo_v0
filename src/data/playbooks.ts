@@ -168,15 +168,15 @@ export const playbooks: Playbook[] = [
     
     caseStudies: [
       {
-        title: "Spectrum Finance",
-        description: "Decentralized exchange built on Ergo's eUTXO model with AMM and order book functionality.",
-        outcome: "Processing significant daily volume with no major exploits to date",
-        link: "https://spectrum.fi",
+        title: "Spectrum Finance (historical)",
+        description: "Decentralized exchange built on Ergo's eUTXO model with AMM and order book functionality. Listed here as a historical reference: Spectrum Finance issued a formal sunset notice and the contracts have been frozen since Feb 2024.",
+        outcome: "Sunset; useful as a study of eUTXO AMM design — not an active venue.",
+        link: "https://spectrum.fi/sunset-notice",
       },
       {
         title: "SigmaUSD",
-        description: "Algorithmic stablecoin using the AgeUSD protocol, fully collateralized by ERG.",
-        outcome: "First algorithmic stablecoin on eUTXO, maintaining peg through market volatility",
+        description: "Algorithmic stablecoin using the AgeUSD protocol, fully collateralized by ERG. Verify current liquidity and venue status before use.",
+        outcome: "First algorithmic stablecoin on eUTXO, maintaining peg through market volatility.",
         link: "https://sigmausd.io",
       },
     ],
@@ -1184,10 +1184,10 @@ export const playbooks: Playbook[] = [
       },
       {
         title: "Use or Hold Your SigUSD",
-        description: "Your SigUSD is now in your wallet. Use it for payments, trading on Spectrum, or simply hold as a stable store of value.",
+        description: "Your SigUSD is now in your wallet. Use it for payments or hold as a stable store of value. Note: Spectrum Finance — historically the main DEX venue for SigUSD — issued a sunset notice and froze its contracts in Feb 2024, so on-chain liquidity is limited. Verify any third-party venue before trading.",
         duration: "Ongoing",
         resources: [
-          { type: "tool", title: "Trade on Spectrum", href: "https://spectrum.fi" },
+          { type: "doc", title: "Spectrum sunset notice", href: "https://spectrum.fi/sunset-notice" },
         ],
       },
       {
@@ -1623,8 +1623,8 @@ export const playbooks: Playbook[] = [
     caseStudies: [
       {
         title: "ChainCash Reference Implementation",
-        description: "ChainCash is the reference implementation of notes + reserves on Ergo, built by BetterMoneyLabs. Open source, production-ready.",
-        outcome: "Programmable credit layer running on Ergo mainnet",
+        description: "ChainCash is the open-source reference implementation of programmable notes + reserves on Ergo, built by BetterMoneyLabs. Status: prototype / research implementation — not audited and not production-ready unless a specific audited deployment is explicitly marked as such.",
+        outcome: "Reference implementation exploring programmable credit primitives on Ergo. Treat all current deployments as testnet / research-grade.",
         link: "https://github.com/chainCashLabs",
       },
     ],

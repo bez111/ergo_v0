@@ -581,7 +581,7 @@ println(s"Token created in TX: \${token.creationTx}")`}</code>
                   <h3 className="text-lg font-semibold text-white mb-4">Marketplaces</h3>
                     <ul className="space-y-2 text-sm text-neutral-400">
                       <li>• SkyHarbor - NFT marketplace</li>
-                      <li>• Spectrum - Token DEX</li>
+                      <li>• ErgoDex - Token DEX</li>
                       <li>• ErgoAuctionHouse - Auction platform</li>
                     </ul>
                 </div>

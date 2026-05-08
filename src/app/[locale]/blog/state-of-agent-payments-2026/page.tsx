@@ -15,8 +15,8 @@ const SEO = {
 }
 
 const FAQ_ITEMS = [
-  { question: "What is the state of AI agent payments in 2026?", answer: "Micropayments are technically feasible. The main gaps: near-zero framework support, no standard protocol, and only Ergo has a full purpose-built stack (Reserve + Note + Tracker + Acceptance Predicate + Babel Fees) live on mainnet." },
-  { question: "Which blockchain is best for AI agent payments in 2026?", answer: "Ergo has the most complete stack: deterministic eUTXO, acceptance predicates, Babel Fees for gas abstraction, and ChainCash as a live reference implementation. The gap is developer awareness, not technical readiness." },
+  { question: "What is the state of AI agent payments in 2026?", answer: "Micropayments are technically feasible. The main gaps: near-zero framework support, no standard protocol, and the most complete purpose-built stack (Reserve + Note + Tracker + Acceptance Predicate + Babel Fees) currently sits on Ergo as an open-source prototype — not yet audited or in production." },
+  { question: "Which blockchain is best for AI agent payments in 2026?", answer: "Ergo has the most complete primitive stack: deterministic eUTXO, acceptance predicates, Babel Fees for gas abstraction, and ChainCash as an open-source reference implementation (prototype). The gap is developer awareness and audit maturity, not core protocol readiness." },
 ]
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

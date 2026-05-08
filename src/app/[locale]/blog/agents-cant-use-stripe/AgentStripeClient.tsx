@@ -211,7 +211,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Is ChainCash production-ready?",
-    a: "Yes. ChainCash is an open-source prototype on Ergo, open source, built by BetterMoneyLabs. It implements the full Note+Reserve+Tracker stack. Developers can use ChainCash contracts directly or as templates for custom agent payment systems.",
+    a: "No — ChainCash is an open-source prototype / research implementation built by BetterMoneyLabs. It implements the full Note + Reserve + Tracker stack and is suitable for testnet experimentation, design study, and templating. It is not audited and should not be treated as production-ready unless a specific deployment is explicitly marked as such.",
   },
 ]
 
