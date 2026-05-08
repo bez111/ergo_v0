@@ -28,9 +28,9 @@
     },
     "coreValues": {
       "asicResistant": {
-        "title": "ASIC-Resistant",
-        "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive.",
-        "highlight": "Level playing field"
+        "title": "ASIC-Resistant by design",
+        "description": "Autolykos v2 is memory-hard and designed to keep mining accessible to GPU operators. Profitability still depends on hardware, electricity, ERG price, difficulty and pool fees — verify with a current calculator before buying hardware.",
+        "highlight": "GPU-friendly"
       },
       "fairLaunch": {
         "title": "Fair Launch",
@@ -38,9 +38,9 @@
         "highlight": "No insider dumps"
       },
       "realUseCases": {
-        "title": "Real Use Cases",
-        "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value.",
-        "highlight": "Sustainable demand"
+        "title": "Active Ecosystem",
+        "description": "DeFi, DEXs, privacy features and the agent economy stack create on-chain activity beyond pure speculation. Demand and price are still subject to broader market conditions.",
+        "highlight": "On-chain activity"
       },
       "storageRent": {
         "title": "Storage Rent",
@@ -542,16 +542,16 @@
   },
   "minersData": {
     "asic-resistant": {
-      "title": "ASIC-Resistant",
-      "description": "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive."
+      "title": "ASIC-Resistant by design",
+      "description": "Autolykos v2 is memory-hard and designed to keep mining accessible to GPU operators. Profitability still depends on hardware, electricity, ERG price, difficulty and pool fees — verify with a current calculator before buying hardware."
     },
     "fair-launch": {
       "title": "Fair Launch",
       "description": "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one."
     },
     "real-use-cases": {
-      "title": "Real Use Cases",
-      "description": "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value."
+      "title": "Active Ecosystem",
+      "description": "DeFi, DEXs, privacy features and the agent economy stack create on-chain activity beyond pure speculation. Demand and price are still subject to broader market conditions."
     },
     "long-term-economics": {
       "title": "Long-term Economics",

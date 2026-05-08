@@ -305,20 +305,20 @@ export const playbooks: Playbook[] = [
   {
     slug: "start-mining-ergo",
     title: "Start Mining Ergo",
-    subtitle: "GPU mining that's actually profitable",
-    
-    seoTitle: "How to Mine Ergo 2025: GPU Mining Guide, Pools, Profitability",
-    seoDescription: "Complete guide to mining Ergo with GPUs. Autolykos algorithm, pool selection, hardware optimization, and profitability calculations.",
+    subtitle: "Evaluate Ergo GPU mining before you commit",
+
+    seoTitle: "How to Mine Ergo: GPU Mining Guide, Pools, Profitability Checklist",
+    seoDescription: "Step-by-step guide to mining Ergo with GPUs: Autolykos algorithm, pool selection, hardware setup — and a realistic profitability checklist (ERG price, electricity, difficulty, fees).",
     keywords: ["ergo mining", "gpu mining", "autolykos", "mining pool", "ergo profitability", "asic resistant mining"],
-    
+
     cluster: "mining",
     difficulty: "beginner",
     timeToComplete: "1-2 days",
-    
-    heroDescription: "Ergo's Autolykos algorithm is ASIC-resistant and GPU-friendly. Mine with your existing hardware, join a decentralized network, and earn ERG while securing the blockchain.",
-    
-    problemStatement: "Bitcoin mining is dominated by ASICs and industrial operations. GPU miners are pushed out. Centralization threatens network security.",
-    solution: "Autolykos keeps mining accessible to individuals with GPUs. Fair distribution, decentralized hashrate, and sustainable economics through Storage Rent.",
+
+    heroDescription: "Ergo's Autolykos v2 is memory-hard and designed to keep mining accessible to GPU operators. Whether mining is worth it for you depends on your electricity cost, hardware efficiency, ERG price, network difficulty and pool fees — verify with a current calculator before buying hardware.",
+
+    problemStatement: "GPU miners need a chain where their hardware is competitive long-term. They also need an honest read on whether current conditions actually pay back their power bill.",
+    solution: "Autolykos v2 keeps the algorithm GPU-friendly. This playbook walks through the setup and gives you a profitability checklist (live calculators, realistic defaults) so you can decide before committing capital.",
     
     steps: [
       {
@@ -482,21 +482,21 @@ export const playbooks: Playbook[] = [
   // ============================================
   {
     slug: "add-ergo-to-portfolio",
-    title: "Add Ergo to Your Portfolio",
-    subtitle: "Fundamental analysis for long-term holders",
-    
-    seoTitle: "Ergo Investment Thesis 2025: Fundamentals, Tokenomics, Long-term Value",
-    seoDescription: "Complete investment analysis of Ergo. Fair launch tokenomics, technical innovation, ecosystem growth, and why ERG deserves a place in your crypto portfolio.",
-    keywords: ["ergo investment", "erg token", "ergo fundamentals", "crypto portfolio", "ergo price", "ergo analysis"],
-    
+    title: "Evaluate Ergo: Fundamentals, Risks, and Custody",
+    subtitle: "A neutral checklist for researching ERG before you commit",
+
+    seoTitle: "How to Evaluate Ergo (ERG): Fundamentals, Risks, Tokenomics, Custody",
+    seoDescription: "Neutral, risk-first research checklist for evaluating Ergo (ERG): tokenomics, technical fundamentals, ecosystem maturity, custody options, and known risks. Not investment advice.",
+    keywords: ["ergo evaluation", "erg research", "ergo fundamentals", "ergo risks", "ergo tokenomics", "ergo custody"],
+
     cluster: "investor",
     difficulty: "beginner",
     timeToComplete: "2-3 hours",
-    
-    heroDescription: "Ergo combines Bitcoin's security model with smart contract capabilities, fair launch distribution, and innovative economics. Here's the fundamental case for ERG.",
-    
-    problemStatement: "Most crypto projects are either technically sound but poorly distributed, or well-marketed but fundamentally weak. Finding genuine value is increasingly difficult.",
-    solution: "Ergo offers a rare combination: peer-reviewed research, fair launch distribution, sustainable economics (Storage Rent), and genuine technical innovation (eUTXO, Sigma Protocols, NiPoPoWs).",
+
+    heroDescription: "This is a neutral research checklist, not investment advice and not a recommendation to buy ERG. It walks through what to read, what to verify, and what risks to weigh before treating ERG as part of any portfolio. Always consult Ergo's Risk Disclosure and consider independent advice for your jurisdiction.",
+
+    problemStatement: "Crypto research is noisy: most write-ups are either marketing or skeptic posts. Builders and curious holders need a sober, repeatable checklist for forming their own view.",
+    solution: "This playbook gives you a structured way to evaluate Ergo: read the technology primary sources, model tokenomics from the actual emission schedule, check ecosystem maturity against the canonical registry, choose a custody approach, and explicitly list the risks before deciding anything.",
     
     steps: [
       {
@@ -556,21 +556,21 @@ export const playbooks: Playbook[] = [
     ],
     
     primaryCTA: {
-      label: "Get ERG",
-      href: "/use/get-erg",
+      label: "Read the Risk Disclosure",
+      href: "/legal/risk",
     },
     secondaryCTA: {
       label: "Technology Deep Dive",
       href: "/technology",
     },
-    
+
     icon: "TrendingUp",
     gradient: "from-blue-500 to-cyan-500",
-    
+
     publishDate: "2025-01-30",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
-  
+
   // ============================================
   // SUSTAINABILITY CLUSTER
   // ============================================

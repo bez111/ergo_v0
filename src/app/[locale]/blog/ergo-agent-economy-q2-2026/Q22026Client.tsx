@@ -196,6 +196,68 @@ export function Q22026Client() {
             audit manifests are published.
           </div>
 
+          {/* Naming / migration map — what to import depending on which layer
+              you are working at. */}
+          <div className="mb-10 rounded-2xl border border-neutral-700 bg-neutral-900/60 p-5">
+            <h3 className="text-base font-semibold text-white mb-2">Naming &amp; migration</h3>
+            <p className="text-sm text-neutral-400 mb-4">
+              The package names below didn&apos;t change during the rebrand — the post-Q2
+              install commands are still valid. What changed is the umbrella: Accord
+              Protocol is now the canonical name for the agreement layer, and Accord
+              specs / canonical packages publish under <code className="px-1 py-0.5 bg-neutral-800 rounded text-xs">@accord-protocol/*</code>. The
+              {" "}<code className="px-1 py-0.5 bg-neutral-800 rounded text-xs">ergo-agent-*</code> packages remain as the Ergo reference rail SDKs.
+            </p>
+            <div className="overflow-x-auto scroll-shadow-x">
+              <table className="w-full min-w-[520px] text-sm border border-neutral-700 rounded-lg">
+                <thead className="bg-neutral-800/60 text-neutral-300">
+                  <tr>
+                    <th className="text-left px-3 py-2 font-semibold">Layer</th>
+                    <th className="text-left px-3 py-2 font-semibold">Canonical name</th>
+                    <th className="text-left px-3 py-2 font-semibold">Use it for</th>
+                  </tr>
+                </thead>
+                <tbody className="text-neutral-300">
+                  <tr className="border-t border-neutral-700">
+                    <td className="px-3 py-2">Umbrella project</td>
+                    <td className="px-3 py-2"><strong className="text-white">Accord Protocol</strong> (testnet beta)</td>
+                    <td className="px-3 py-2">Specs, MCP, Accord/402, verification &amp; settlement receipts.</td>
+                  </tr>
+                  <tr className="border-t border-neutral-700">
+                    <td className="px-3 py-2">Accord canonical packages</td>
+                    <td className="px-3 py-2"><code className="text-orange-300">@accord-protocol/*</code></td>
+                    <td className="px-3 py-2">Cross-rail Accord specs and shared types. Treat as not-yet-audited.</td>
+                  </tr>
+                  <tr className="border-t border-neutral-700">
+                    <td className="px-3 py-2">Ergo reference rail (TS)</td>
+                    <td className="px-3 py-2"><code className="text-orange-300">ergo-agent-pay</code></td>
+                    <td className="px-3 py-2">Issue / pay Notes against a Reserve from a TypeScript agent.</td>
+                  </tr>
+                  <tr className="border-t border-neutral-700">
+                    <td className="px-3 py-2">Ergo reference rail (Python)</td>
+                    <td className="px-3 py-2"><code className="text-orange-300">ergo-agent-py</code></td>
+                    <td className="px-3 py-2">Same primitives from a Python agent (LangChain, CrewAI, etc.).</td>
+                  </tr>
+                  <tr className="border-t border-neutral-700">
+                    <td className="px-3 py-2">MCP server</td>
+                    <td className="px-3 py-2"><code className="text-orange-300">ergo-agent-mcp</code></td>
+                    <td className="px-3 py-2">Expose Ergo agent payments to any MCP-compatible host (e.g. Claude Desktop).</td>
+                  </tr>
+                  <tr className="border-t border-neutral-700">
+                    <td className="px-3 py-2">Reference contracts</td>
+                    <td className="px-3 py-2"><strong className="text-white">ChainCash</strong></td>
+                    <td className="px-3 py-2">Open-source prototype of Note + Reserve + Tracker. Not audited, not production-ready.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-neutral-500 mt-4">
+              Rule of thumb: if you&apos;re reading the cross-rail spec, look under
+              {" "}<code className="px-1 py-0.5 bg-neutral-800 rounded text-[11px]">@accord-protocol/*</code>; if you&apos;re writing an Ergo agent today,
+              the <code className="px-1 py-0.5 bg-neutral-800 rounded text-[11px]">ergo-agent-*</code> packages are the entry point. None of the
+              above are audited yet.
+            </p>
+          </div>
+
           {/* Hero */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

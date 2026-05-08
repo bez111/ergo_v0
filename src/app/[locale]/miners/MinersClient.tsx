@@ -52,10 +52,12 @@ export function MinersClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   
   // Mining Calculator State
+  // ergPrice default reflects an editable conservative example rather than a
+  // promotional figure. Always cross-check against a live market source.
   const [hashrate, setHashrate] = useState(130) // MH/s
   const [powerConsumption, setPowerConsumption] = useState(120) // Watts
-  const [electricityCost, setElectricityCost] = useState(0.10) // USD per kWh
-  const [ergPrice, setErgPrice] = useState(1.50) // USD
+  const [electricityCost, setElectricityCost] = useState(0.12) // USD per kWh
+  const [ergPrice, setErgPrice] = useState(0.30) // USD — editable example, not a forecast
   const [poolFee, setPoolFee] = useState(1) // %
   
   // Network metrics for calculations (use live data where available)
@@ -113,9 +115,9 @@ export function MinersClient() {
       q: t('faq.questions.4.question'),
       a: (
         <>
-          Profitability depends on your electricity costs, hardware efficiency, and current network difficulty.
-          Use our <a href="https://minerstat.com/coin/ERG" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">mining calculator</a> to
-          estimate earnings. Many miners find Ergo profitable due to lower competition compared to major coins.
+          Profitability depends on your electricity cost, hardware efficiency, ERG price, network difficulty, pool fee and applicable taxes — and on current market conditions, which change daily.
+          Cross-check with an external calculator such as <a href="https://minerstat.com/coin/ERG" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">minerstat</a> or <a href="https://whattomine.com/coins/340-erg-autolykos" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">WhatToMine</a> before buying hardware.
+          Mining may be unprofitable on some hardware and electricity rates.
         </>
       )
     },

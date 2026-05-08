@@ -101,7 +101,7 @@ const beginnerFAQ: FAQItem[] = [
   {
     id: "beginner-dapps",
     question: "What kinds of dApps are on Ergo?",
-    answer: "Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more.",
+    answer: "Ergo's ecosystem includes DeFi venues (ErgoDex; SigmaUSD; DuckPools — currently in testing), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen) and an emerging agent-economy stack (Accord Protocol, ChainCash — both testnet/prototype). Spectrum Finance — historically a primary Ergo DEX — issued a sunset notice and froze its contracts in Feb 2024. Always verify current project status before committing funds.",
     category: "Ecosystem",
     level: "beginner"
   },
@@ -303,14 +303,14 @@ const technicalFAQ: FAQItem[] = [
   {
     id: "tech-oracle-pools",
     question: "What are Oracle Pools?",
-    answer: "Oracle Pools are Ergo's decentralized oracle solution. Multiple data providers post data on-chain, and the system aggregates them to produce reliable price feeds. They're used by DeFi protocols like SigmaUSD and Spectrum. The design minimizes single points of failure and manipulation risks.",
+    answer: "Oracle Pools are Ergo's decentralized oracle solution. Multiple data providers post data on-chain, and the system aggregates them to produce reliable price feeds. They're consumed by DeFi protocols on Ergo such as SigmaUSD. The design minimizes single points of failure and manipulation risks.",
     category: "ecosystem",
     level: "technical"
   },
   {
     id: "tech-spectrum-dex",
-    question: "What is Spectrum DEX?",
-    answer: "Spectrum (formerly ErgoDEX) is a decentralized exchange on Ergo using AMM (Automated Market Maker) pools. It supports token swaps, liquidity provision, and yield farming. The eUTXO model enables features like partial order filling and better MEV resistance compared to account-based DEXs.",
+    question: "What was Spectrum Finance?",
+    answer: "Spectrum Finance (formerly ErgoDEX) was an eUTXO AMM and order-book DEX on Ergo and Cardano. The team published a formal sunset notice and the Ergo contracts have been frozen since February 2024 — Spectrum is no longer an active venue. The protocol design remains useful as a study of eUTXO AMM mechanics. For active DEX usage on Ergo today, check the ecosystem registry for current operational status before committing funds.",
     category: "ecosystem",
     level: "technical"
   },

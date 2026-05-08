@@ -110,16 +110,93 @@ export default function AuditPage() {
       </div>
 
       {/* Report Link */}
-      <div className="flex items-center gap-2 mt-8">
-        <ExternalLink className="w-5 h-5 text-cyan-400" />
-        <a
-          href="https://github.com/ergoplatform/ergo/blob/master/docs/security/security_audit_2019.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-cyan-300 underline hover:text-cyan-200 font-semibold"
-        >
-          View Full Audit Report (PDF)
-        </a>
+      <div className="mt-8 space-y-3">
+        <div className="flex items-center gap-2">
+          <ExternalLink className="w-5 h-5 text-cyan-400" />
+          <a
+            href="https://ergoplatform.org/en/blog/2020_01_12_security_audit/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-300 underline hover:text-cyan-200 font-semibold"
+          >
+            Full audit report — published 2020-01-12 on ergoplatform.org
+          </a>
+        </div>
+        <p className="text-xs text-neutral-500">
+          The original 2019 review is published in full as a blog post on the
+          ergoplatform.org domain (the historical Ergo Foundation site). It
+          covers Sigma-protocol proofs, wallet secret storage, and PoW
+          validation as of December 2019.
+        </p>
+      </div>
+
+      {/* Audit maturity matrix — what we can and cannot vouch for today */}
+      <div className="mt-10 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
+          <Shield className="w-5 h-5 text-orange-400" /> Current Audit Coverage
+        </h2>
+        <p className="text-neutral-300 mb-4 text-sm">
+          No current comprehensive audit covers every live dApp, wallet, bridge,
+          and experimental agent SDK in the Ergo ecosystem. This matrix
+          summarises what is and isn&apos;t under audit today.
+        </p>
+        <div className="overflow-x-auto scroll-shadow-x">
+          <table className="w-full min-w-[560px] text-sm border border-neutral-700 rounded-lg">
+            <thead className="bg-neutral-800/60 text-neutral-300">
+              <tr>
+                <th className="text-left px-3 py-2 font-semibold">Component</th>
+                <th className="text-left px-3 py-2 font-semibold">Audit status</th>
+                <th className="text-left px-3 py-2 font-semibold">Notes</th>
+              </tr>
+            </thead>
+            <tbody className="text-neutral-300">
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">Ergo node / protocol (2019 cryptography review)</td>
+                <td className="px-3 py-2 text-green-400">Reviewed 2019</td>
+                <td className="px-3 py-2">Sigma proofs, wallet, PoW validation. Historical — does not cover changes since.</td>
+              </tr>
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">Wallets (Nautilus, SAFEW, Ledger, Satergo, mobile)</td>
+                <td className="px-3 py-2 text-yellow-400">Project-specific</td>
+                <td className="px-3 py-2">Each wallet maintains its own audit/disclosure posture. Verify per-project before storing significant value.</td>
+              </tr>
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">Rosen Bridge</td>
+                <td className="px-3 py-2 text-yellow-400">Project-specific</td>
+                <td className="px-3 py-2">Bridge security is independent of Ergo node audits. Review Rosen&apos;s own publications.</td>
+              </tr>
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">Accord Protocol (testnet)</td>
+                <td className="px-3 py-2 text-red-400">Not audited</td>
+                <td className="px-3 py-2">Mainnet writes are gated by signed audit manifests. Testnet only until then.</td>
+              </tr>
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">ChainCash reference implementation</td>
+                <td className="px-3 py-2 text-red-400">Not audited</td>
+                <td className="px-3 py-2">Open-source prototype / research code. Not production-ready.</td>
+              </tr>
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">Agent SDKs (@accord-protocol/*, ergo-agent-* compatibility)</td>
+                <td className="px-3 py-2 text-red-400">Not audited</td>
+                <td className="px-3 py-2">Reference implementations. Pin versions and review code before mainnet integration.</td>
+              </tr>
+              <tr className="border-t border-neutral-700">
+                <td className="px-3 py-2">Third-party dApps (DEXs, lending, NFT)</td>
+                <td className="px-3 py-2 text-yellow-400">Project-specific</td>
+                <td className="px-3 py-2">Each dApp publishes its own audits (or doesn&apos;t). Always check before committing funds.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-neutral-500 mt-4">
+          For coordinated security disclosures, follow the{" "}
+          <Link href="/legal/security" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+            responsible disclosure policy
+          </Link>
+          . As of 2026-05-08 there are no published advisories on the public
+          GitHub Security Advisories list — disclosures are handled privately
+          until coordinated release.
+        </p>
       </div>
     </div>
   );
