@@ -64,45 +64,71 @@ export function FAQSimple() {
           </p>
         </div>
 
+        {/*
+          All answers are always rendered in HTML for crawler/LLM extraction
+          (SEO + GEO). Visually they're collapsed via CSS max-height/opacity;
+          the toggle button controls aria-expanded for screen reader UX.
+        */}
         <div className="space-y-4">
-          {faqs.map((faq, i) => (
-            <Card 
-              key={i}
-              className="bg-black border-neutral-800 rounded-xl overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full p-6 flex items-center justify-between text-left hover:bg-neutral-900/50 transition-colors"
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i
+            const panelId = `faq-panel-${i}`
+            const buttonId = `faq-button-${i}`
+            return (
+              <Card
+                key={i}
+                className="bg-black border-neutral-800 rounded-xl overflow-hidden"
               >
-                <h3 className="text-lg font-semibold text-white pr-4">
-                  {faq.q}
-                </h3>
-                <ChevronDown 
-                  className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform ${
-                    openIndex === i ? 'rotate-180' : ''
+                <button
+                  id={buttonId}
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  className="w-full p-6 flex items-center justify-between text-left hover:bg-neutral-900/50 transition-colors"
+                >
+                  <h3 className="text-lg font-semibold text-white pr-4">
+                    {faq.q}
+                  </h3>
+                  <ChevronDown
+                    className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  className={`grid transition-all duration-300 ease-out ${
+                    isOpen
+                      ? 'grid-rows-[1fr] opacity-100'
+                      : 'grid-rows-[0fr] opacity-0'
                   }`}
-                />
-              </button>
-              
-              {openIndex === i && (
-                <div className="px-6 pb-6">
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    {faq.a}
-                  </p>
-                  {faq.link && (
-                    <div className="flex justify-end">
-                      <Link
-                        href={faq.link}
-                        className="text-orange-400 hover:text-orange-300 transition-colors font-medium text-sm"
-                      >
-                        {t('learnMore') || 'Learn more'}
-                      </Link>
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-6 pt-0">
+                      <p className="text-gray-300 leading-relaxed mb-4">
+                        {faq.a}
+                      </p>
+                      {faq.link && (
+                        <div className="flex justify-end">
+                          <Link
+                            href={faq.link}
+                            className="text-orange-400 hover:text-orange-300 transition-colors font-medium text-sm"
+                            tabIndex={isOpen ? 0 : -1}
+                          >
+                            {t('learnMore') || 'Learn more'}
+                          </Link>
+                        </div>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
-              )}
-            </Card>
-          ))}
+              </Card>
+            )
+          })}
         </div>
 
       </div>
