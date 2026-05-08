@@ -2,12 +2,12 @@
   "patternsPage": {
     "seo": {
       "title": "ErgoScript Patterns — Smart Contract Templates for Ergo",
-      "description": "18 battle-tested ErgoScript smart contract patterns. Token mechanics, time-locks, multisig, DeFi primitives, oracle integration. Copy, adapt, and ship."
+      "description": "18 ErgoScript smart contract patterns with maturity badges. Token mechanics, time-locks, multisig, DeFi primitives, oracle integration. Copy, adapt, and check the status before shipping to mainnet."
     },
     "hero": {
       "titlePart1": "ErgoScript",
       "titlePart2": "Patterns",
-      "subtitle": "Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship. From token mechanics to DeFi primitives."
+      "subtitle": "Smart contract patterns for Ergo, with maturity badges. Copy, adapt, and check each pattern's status before relying on it for production."
     },
     "search": {
       "placeholder": "Search patterns (e.g., 'swap', 'multisig', 'oracle')...",

@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 const SECURITY_EMAIL = "security@ergoplatform.org"
+const LAST_REVIEWED = "2026-05-08"
 
 export default function SecurityPage() {
   return (
@@ -27,6 +28,9 @@ export default function SecurityPage() {
           <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">Legal</p>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Security &amp; Responsible Disclosure</h1>
           <p className="text-neutral-400 text-sm">For reporting security vulnerabilities</p>
+          <p className="text-neutral-500 text-xs mt-3">
+            <span className="font-mono">Last reviewed:</span> {LAST_REVIEWED}
+          </p>
         </header>
 
         <div className="space-y-6 text-neutral-300 leading-relaxed">
@@ -112,6 +116,21 @@ export default function SecurityPage() {
               <a href="https://github.com/ergoplatform/ergo/security/advisories" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">
                 Ergo&apos;s GitHub Security Advisories page
               </a>.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-white mt-8 mb-3">Acknowledged Reports</h2>
+            <p>
+              As of <span className="font-mono">{LAST_REVIEWED}</span> there are
+              no published advisories on the public list. Coordinated disclosures
+              are handled privately until a fix lands and the reporter consents
+              to publication, at which point they appear on the GitHub
+              Security Advisories page linked above.
+            </p>
+            <p className="mt-3 text-sm text-neutral-400">
+              When a credit is requested, it will be added to this section as
+              well as to the corresponding advisory.
             </p>
           </section>
         </div>

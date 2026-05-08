@@ -23,13 +23,13 @@ export default function TrendingNow(props: TrendingNowProps) {
   }
 
   return (
-    <aside 
-      className="flex flex-col w-full h-full overflow-hidden" 
+    <aside
+      className="flex flex-col w-full h-full overflow-hidden"
       aria-labelledby="trending"
-      aria-label="Trending Now"
+      aria-label="Essential reads"
     >
       <h2 id="trending" className="text-2xl font-bold mb-6 text-white">
-        Trending Now
+        Essential Reads
       </h2>
       <ul className="space-y-4 flex-1 flex flex-col" role="list">
         {posts.map((p, index) => (

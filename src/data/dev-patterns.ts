@@ -15,6 +15,27 @@ export type PatternCategory =
 
 export type PatternDifficulty = 'beginner' | 'intermediate' | 'advanced';
 
+/**
+ * Maturity tag — what this pattern's status is in the wider Ergo ecosystem.
+ * Default ('educational') means: a working teaching example. It does NOT
+ * imply audited, hardened, or production-ready code. Patterns mark a higher
+ * maturity only when an actual deployment can be cited.
+ */
+export type PatternMaturity =
+  | 'educational'        // Default: teaching example, no production claim.
+  | 'tested'             // Used in real testnet / hackathon work.
+  | 'used-historically'  // Was used in a production deployment that has since sunset / frozen.
+  | 'used-in-production' // Currently used by a live mainnet project.
+  | 'audited';           // The pattern itself (or a canonical implementation) carries a published audit.
+
+export const maturityLabels: Record<PatternMaturity, string> = {
+  'educational': 'Educational',
+  'tested': 'Tested',
+  'used-historically': 'Used historically',
+  'used-in-production': 'Used in production',
+  'audited': 'Audited',
+};
+
 export interface CodeExample {
   title: string;
   language: 'ergoscript' | 'scala' | 'typescript' | 'rust';
@@ -37,6 +58,8 @@ export interface DevPattern {
   keywords: string[];
   category: PatternCategory;
   difficulty: PatternDifficulty;
+  /** Defaults to 'educational' if absent. Bump only when a real deployment can be cited. */
+  maturity?: PatternMaturity;
   timeToImplement: string;
   problem: string;
   solution: string;
@@ -1070,11 +1093,12 @@ const signedTx = combineSignatures([sig1, sig2]);`,
     seoTitle: "AMM Liquidity Pool on Ergo: Build a DEX Smart Contract",
     seoDescription: "Create an automated market maker on Ergo. Learn the constant product AMM pattern with ErgoScript for decentralized exchanges.",
     keywords: ["ergo amm", "liquidity pool ergo", "dex ergo", "constant product", "automated market maker"],
-    
+
     category: "defi-primitives",
     difficulty: "intermediate",
+    maturity: "used-historically",
     timeToImplement: "1-2 weeks",
-    
+
     problem: "You need permissionless, always-available liquidity for token trading without order books.",
     
     solution: "Automated Market Makers use a mathematical formula (x * y = k) to price assets. Liquidity providers deposit token pairs and earn fees from trades.",
@@ -1764,9 +1788,9 @@ function calculateAPR(
     feeConsiderations: "Claiming rewards requires transaction. Consider batching claims or minimum claim amounts.",
     
     implementations: [
-      { project: "Spectrum Finance", description: "LP staking rewards", url: "https://spectrum.fi" }
+      { project: "Spectrum Finance (sunset 2024)", description: "Historical reference for LP staking on an eUTXO AMM. Sunset notice issued; contracts frozen since Feb 2024 — useful as a design study, not an active venue.", url: "https://spectrum.fi/sunset-notice" }
     ],
-    
+
     publishDate: "2025-01-15"
   },
 
@@ -1932,7 +1956,7 @@ async function buildTxWithOracle(
     
     implementations: [
       { project: "SigmaUSD", description: "Uses oracle pools for ERG/USD pricing", url: "https://sigmausd.io" },
-      { project: "Spectrum Finance", description: "Oracle integration for DEX", url: "https://spectrum.fi" }
+      { project: "Spectrum Finance (sunset 2024)", description: "Historical reference for oracle integration in an eUTXO DEX. Sunset notice issued; contracts frozen since Feb 2024.", url: "https://spectrum.fi/sunset-notice" }
     ],
     
     publishDate: "2025-01-15"
@@ -2156,9 +2180,10 @@ async function fetchErgUsdPrice(): Promise<number> {
     seoTitle: "Babel Fees on Ergo: Pay Transaction Fees in Any Token",
     seoDescription: "Implement Babel fee boxes on Ergo. Learn how users can pay network fees in any token while miners still receive ERG.",
     keywords: ["ergo babel fees", "pay fees tokens", "gas abstraction", "ux ergo", "fee payment"],
-    
+
     category: "ergo-native",
     difficulty: "intermediate",
+    maturity: "used-in-production",
     timeToImplement: "2-4 hours",
     
     problem: "Users hold tokens but no ERG. They can't transact because they can't pay network fees.",

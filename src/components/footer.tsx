@@ -116,6 +116,10 @@ export function Footer() {
           <Link href={localizedPath("legal/security")} className="text-gray-400 hover:text-primary transition-colors">
             Security
           </Link>
+          <span className="text-gray-700">·</span>
+          <Link href={localizedPath("legal/official-domains")} className="text-gray-400 hover:text-primary transition-colors">
+            Official Domains
+          </Link>
         </div>
 
         {/* Scanline effect */}

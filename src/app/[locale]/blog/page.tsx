@@ -91,16 +91,22 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     redirect(clean)
   }
 
-  // Featured + Trending (exclude duplicate)
-  const featuredPost = blogPosts[0] ?? null
+  // Featured: pick the newest post explicitly flagged `featured: true` so we
+  // can promote a strategic article (e.g. the latest agent-economy update)
+  // instead of always defaulting to whatever sits first in the array.
+  const featuredCandidates = blogPosts
+    .filter((post) => post.featured)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  const featuredPost = featuredCandidates[0] ?? blogPosts[0] ?? null
+
   const trendingPosts = blogPosts
     .filter((post) => post.trending)
     .filter((post) => !featuredPost || post.id !== featuredPost.id)
 
-  // Non-featured, newest first for consistent SEO order
+  // All other posts, newest first.
   const allNonFeatured = blogPosts
-    .slice(1) // Skip first post (used as featured)
-          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .filter((post) => !featuredPost || post.id !== featuredPost.id)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   const total = allNonFeatured.length
   const start = (currentPage - 1) * pageSize
   const end = start + pageSize

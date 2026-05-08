@@ -385,19 +385,26 @@ export default function RoadmapPage() {
           </div>
         </section>
 
-        {/* DeFi Ecosystem Section */}
+        {/* DeFi Ecosystem Section — pointer to canonical registry */}
         <section className="mb-12">
-          {/* Header */}
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
               <Coins className="w-6 h-6 text-brand-primary-400" />
               DeFi Ecosystem
             </h2>
             <p className="text-gray-400 max-w-3xl mx-auto">
-              Every new addition to our growing DeFi ecosystem contributes to the expansion of trustless collateral, the decentralized monetary base, and the supply of derivative assets.
+              Every new addition to the DeFi ecosystem contributes to the expansion of trustless collateral, the decentralized monetary base, and the supply of derivative assets.
+            </p>
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-4">
+              Live status, audit posture and last-verified date for each project live in the canonical{" "}
+              <a href="/ecosystem" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                ecosystem registry
+              </a>{" "}
+              — that&apos;s the single source of truth. The summary cards below
+              are kept brief so they don&apos;t drift out of sync.
             </p>
           </div>
-          
+
           {/* Cards in rows of 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Decentralized Exchanges */}
@@ -584,26 +591,21 @@ export default function RoadmapPage() {
                 </div>
               </div>
           </div>
-          {/* Statistics */}
-          <div className="mt-8 bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-2xl font-bold text-brand-primary-400">25+</div>
-                <div className="text-sm text-gray-400">Live Projects</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-brand-primary-400">6</div>
-                <div className="text-sm text-gray-400">Categories</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-brand-primary-400">15+</div>
-                <div className="text-sm text-gray-400">In Development</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-brand-primary-400">100%</div>
-                <div className="text-sm text-gray-400">Decentralized</div>
-              </div>
-            </div>
+          {/* Pointer to canonical registry — replaces hand-curated "25+ Live
+              Projects / 100% Decentralized" stats which drifted out of sync
+              with reality. The /ecosystem page is the source of truth, with
+              status, last-verified date and verification source per project. */}
+          <div className="mt-8 bg-brand-primary-400/5 border border-brand-primary-400/20 rounded-xl p-6 text-center">
+            <p className="text-gray-300 mb-3">
+              For up-to-date project counts, statuses and last-verified dates,
+              browse the canonical ecosystem registry.
+            </p>
+            <a
+              href="/ecosystem"
+              className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold underline underline-offset-2"
+            >
+              See full ecosystem registry →
+            </a>
           </div>
         </section>
 

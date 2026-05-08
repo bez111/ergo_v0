@@ -1,5 +1,15 @@
+# Ergo Platform — security.txt
+# Per RFC 9116 — https://www.rfc-editor.org/rfc/rfc9116
+#
+# If you have found a security vulnerability affecting
+# ergoblockchain.org or the Ergo node, please report it
+# via one of the channels below. See the policy URL for
+# full disclosure terms (90-day coordinated disclosure
+# is the default).
+
 Contact: mailto:security@ergoplatform.org
 Contact: https://github.com/ergoplatform/ergo/security/advisories/new
+
 Expires: 2027-01-01T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://www.ergoblockchain.org/.well-known/security.txt

@@ -22,7 +22,7 @@ import {
   Shield,
   Bot
 } from "lucide-react";
-import { DevPattern, PatternCategory, PatternDifficulty } from "@/data/dev-patterns";
+import { DevPattern, PatternCategory, PatternDifficulty, PatternMaturity, maturityLabels } from "@/data/dev-patterns";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -54,6 +54,14 @@ const difficultyColors: Record<PatternDifficulty, string> = {
   beginner: "bg-green-500/20 text-green-400 border-green-500/30",
   intermediate: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
   advanced: "bg-orange-500/20 text-orange-400 border-orange-500/30"
+};
+
+const maturityColors: Record<PatternMaturity, string> = {
+  'educational': "bg-neutral-700/40 text-neutral-300 border-neutral-600/40",
+  'tested': "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
+  'used-historically': "bg-yellow-600/20 text-yellow-300 border-yellow-600/30",
+  'used-in-production': "bg-green-500/20 text-green-300 border-green-500/30",
+  'audited': "bg-emerald-500/25 text-emerald-200 border-emerald-500/40",
 };
 
 export function PatternsHubClient({ patterns, categories }: Props) {
@@ -202,9 +210,14 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                                 <div className="w-10 h-10 rounded-xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
                                   <CategoryIcon className="w-5 h-5 text-orange-400" />
                                 </div>
-                                <Badge className={`text-xs ${difficultyColors[pattern.difficulty]}`}>
-                                  {difficultyLabels[pattern.difficulty]}
-                                </Badge>
+                                <div className="flex flex-col items-end gap-1">
+                                  <Badge className={`text-xs ${difficultyColors[pattern.difficulty]}`}>
+                                    {difficultyLabels[pattern.difficulty]}
+                                  </Badge>
+                                  <Badge className={`text-[10px] uppercase tracking-wide ${maturityColors[pattern.maturity ?? 'educational']}`}>
+                                    {maturityLabels[pattern.maturity ?? 'educational']}
+                                  </Badge>
+                                </div>
                               </div>
 
                               {/* Title */}

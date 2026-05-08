@@ -3,6 +3,7 @@
 import React from "react"
 import { Shield, Zap, Database, Lock, Users, Cpu } from "lucide-react"
 import { useTranslations } from "next-intl"
+import { Evidence } from "@/components/seo/Evidence"
 
 export function WhyErgo() {
   const t = useTranslations('whyErgo')
@@ -54,6 +55,13 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("mainFeatures.fairAndSecure.description")}</p>
+                <Evidence
+                  claim="Deterministic eUTXO costs"
+                  sources={[
+                    { label: "eUTXO docs", href: "/technology/eutxo-model" },
+                    { label: "Ergo whitepaper", href: "https://docs.ergoplatform.com/whitepaper.pdf" },
+                  ]}
+                />
               </div>
 
               {/* 2. PRIVACY FIRST */}
@@ -68,6 +76,14 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.privacy.description")}</p>
+                <Evidence
+                  claim="Programmable credit primitives"
+                  sources={[
+                    { label: "Architecture", href: "/build/agent-payments" },
+                    { label: "Accord Protocol repo", href: "https://github.com/bez111/accord-protocol" },
+                  ]}
+                  caveat="Reference implementations (ChainCash, Accord SDKs) are open-source prototypes — not yet audited."
+                />
               </div>
 
               {/* 3. POWERFUL & FLEXIBLE */}
@@ -96,6 +112,13 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("mainFeatures.sustainable.description")}</p>
+                <Evidence
+                  claim="Babel Fees — pay tx fees in any token"
+                  sources={[
+                    { label: "Babel Fees doc", href: "/technology/babel-fees" },
+                    { label: "Pattern reference", href: "/patterns/ergo-babel-fees-box-pattern" },
+                  ]}
+                />
               </div>
 
               {/* 5. DEVELOPER FRIENDLY */}
@@ -124,6 +147,14 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.community.description")}</p>
+                <Evidence
+                  claim="No governance kill switch on Ergo PoW"
+                  sources={[
+                    { label: "Ergo node source", href: "https://github.com/ergoplatform/ergo" },
+                    { label: "Audit & disclosures", href: "/legal/security" },
+                  ]}
+                  caveat="Third-party dApps, bridges and wallets may have their own controls — verify per-project."
+                />
               </div>
             </div>
           </div>
