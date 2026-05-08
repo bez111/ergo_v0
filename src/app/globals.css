@@ -1334,11 +1334,109 @@ th {
   .animate-spin {
     animation: none !important;
   }
-  
+
   .transition-all,
   .transition-colors,
   .transition-opacity,
   .transition-transform {
     transition: none !important;
   }
+}
+
+/* ============================================================
+   Mobile polish layer
+   ============================================================ */
+
+/* iOS — never let inputs trigger zoom (font-size must be ≥16px) */
+@media (max-width: 768px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Better tap feedback — kill the default iOS blue flash */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Eliminate 300ms tap delay on touch */
+a, button, [role="button"], [role="link"], [role="tab"], [role="menuitem"], summary {
+  touch-action: manipulation;
+}
+
+/* iOS safe-area for the sticky header (notch) */
+@supports (padding: max(0px)) {
+  header.sticky,
+  header[class*="sticky"] {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+  /* Anything pinned to the bottom respects the home indicator */
+  .pb-safe {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Long unbreakable strings (URLs, hashes, addresses, code) shouldn't blow out
+   layout on narrow viewports */
+p code,
+li code,
+td code,
+.prose code {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Inline links inside body copy should wrap mid-URL rather than create H-scroll */
+p a[href],
+li a[href] {
+  overflow-wrap: anywhere;
+}
+
+/* Horizontal-overflow hint — fades a soft shadow on the right edge so users
+   know there is more content to swipe to. Apply via class .scroll-shadow-x */
+.scroll-shadow-x {
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to right, rgba(249, 115, 22, 0.18), rgba(249, 115, 22, 0)),
+    linear-gradient(to left, rgba(249, 115, 22, 0.18), rgba(249, 115, 22, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-size: 20px 100%, 20px 100%, 12px 100%, 12px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* Mobile body comfort: keep large hero headings from breaking awkwardly */
+@media (max-width: 480px) {
+  h1, h2 {
+    text-wrap: balance;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+  /* Tighten extreme display sizes that don't cascade */
+  .text-7xl { font-size: 3rem; line-height: 1.05; }
+  .text-8xl { font-size: 3.5rem; line-height: 1.05; }
+  .text-9xl { font-size: 4rem; line-height: 1.05; }
+}
+
+/* Prevent body horizontal scroll caused by stray overflowing children */
+html, body {
+  overflow-x: clip;
+}
+
+/* Modals/Sheets must never exceed the viewport on tiny screens */
+@media (max-width: 360px) {
+  [role="dialog"] {
+    max-width: 100vw;
+  }
+}
+
+/* Smooth, momentum scrolling for any horizontally-scrollable region */
+.overflow-x-auto,
+[class*="overflow-x"] {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }

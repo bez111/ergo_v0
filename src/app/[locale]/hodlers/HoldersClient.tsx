@@ -335,7 +335,7 @@ export function HoldersClient() {
               If you like BTC for security, ETH for programmability, XMR for privacy — Ergo combines these properties in a single, fair-launch PoW chain.
             </p>
             
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto scroll-shadow-x">
               <div className="min-w-[800px] bg-black/80 border border-white/10 rounded-3xl p-6">
                 <div className="grid grid-cols-5 gap-4">
                   {/* Header */}

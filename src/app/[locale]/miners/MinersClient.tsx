@@ -805,7 +805,7 @@ export function MinersClient() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto scroll-shadow-x">
                   <table className="w-full text-sm min-w-[900px]">
                     <caption className="sr-only">Mining platform comparison</caption>
                     <thead>
