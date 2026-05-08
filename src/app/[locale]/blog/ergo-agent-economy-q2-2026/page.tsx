@@ -48,7 +48,7 @@ const FAQ_ITEMS = [
   {
     question: "Which AI agent frameworks now have native Ergo payment support?",
     answer:
-      "LangChain (via asLangChainTool() adapter), OpenAI function calling (via asOpenAIFunction() adapter), CrewAI, and AutoGen all have working examples in the ergo-agent-economy repo. There is also a Python SDK (ergo-agent-py) for non-Node agents and an MCP server (ergo-agent-mcp) so any MCP-compatible client (Claude Desktop, Cursor, etc.) can pay for things on Ergo testnet.",
+      "LangChain (via asLangChainTool() adapter), OpenAI function calling (via asOpenAIFunction() adapter), CrewAI, and AutoGen all have working examples in the Accord Protocol repo (formerly ergo-agent-economy). There is also a Python SDK (ergo-agent-py) for non-Node agents and an MCP server (ergo-agent-mcp) so any MCP-compatible client (Claude Desktop, Cursor, etc.) can pay for things on Ergo testnet.",
   },
   {
     question: "Is the agent payment stack production-ready?",
@@ -58,7 +58,7 @@ const FAQ_ITEMS = [
   {
     question: "Where can I clone and run the examples?",
     answer:
-      "The full repo is at https://github.com/bez111/ergo-agent-economy. Examples are in the examples/ directory: 01-basic-payment, 02-note-payment, 03-acceptance-predicate, 04-orchestrator-budget, 05-api-payment-server, 06-python-agent, 07-streaming-pay, 08-treasury-multisig, 09-crewai-agents, 10-autogen-agent. Each has a self-contained README and runs against Ergo testnet — no mainnet ERG required.",
+      "The full repo is at https://github.com/bez111/accord-protocol. Examples are in the examples/ directory: 01-basic-payment, 02-note-payment, 03-acceptance-predicate, 04-orchestrator-budget, 05-api-payment-server, 06-python-agent, 07-streaming-pay, 08-treasury-multisig, 09-crewai-agents, 10-autogen-agent. Each has a self-contained README and runs against Ergo testnet — no mainnet ERG required.",
   },
   {
     question: "What is the Basis layer mentioned in the repo?",

@@ -451,7 +451,7 @@ export default function RoadmapPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Gluon</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Prototype</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SigmaUSD v2</span>
@@ -477,11 +477,11 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SigmaFi</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Prototype</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Duckpools</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Testing</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">optionPools</span>
@@ -489,7 +489,7 @@ export default function RoadmapPage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">EXLE</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Testing</span>
                   </div>
                 </div>
               </div>

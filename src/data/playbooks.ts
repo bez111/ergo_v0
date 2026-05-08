@@ -1021,108 +1021,12 @@ export const playbooks: Playbook[] = [
     publishDate: "2025-01-01",
   },
 
-  {
-    slug: "provide-liquidity-spectrum",
-    title: "Earn Fees by Providing Liquidity on Spectrum",
-    subtitle: "Put your ERG to work in DeFi liquidity pools",
-    
-    seoTitle: "Provide Liquidity on Ergo: Spectrum Finance Guide",
-    seoDescription: "Earn trading fees by providing liquidity on Spectrum DEX. Step-by-step guide to LP tokens, pools, and impermanent loss.",
-    keywords: ["spectrum finance", "liquidity provider", "ergo defi", "lp tokens", "yield farming", "amm liquidity"],
-    
-    cluster: "defi",
-    difficulty: "intermediate",
-    timeToComplete: "20 minutes",
-    
-    problemStatement: "Holding ERG earns nothing. You want your assets to generate yield, but centralized options require giving up custody and trusting third parties.",
-    solution: "Provide liquidity on Spectrum Finance DEX. Deposit token pairs into pools, earn a share of all trading fees. Non-custodial, permissionless, and you can withdraw anytime.",
-    
-    prerequisites: [
-      "Nautilus wallet connected to Spectrum",
-      "ERG and another token (e.g., SigUSD) for the pair",
-      "Understanding of impermanent loss concept",
-    ],
-    
-    outcomes: [
-      "Understand how AMM liquidity pools work",
-      "Successfully provide liquidity to a pool",
-      "Receive LP tokens representing your share",
-      "Know how to monitor and withdraw",
-    ],
-    
-    steps: [
-      {
-        title: "Understand Liquidity Pools",
-        description: "Pools hold paired tokens (e.g., ERG/SigUSD). Traders swap against the pool. LPs earn fees proportional to their share. Risk: impermanent loss if prices diverge.",
-        duration: "5 minutes",
-        resources: [
-          { type: 'glossary', title: "Liquidity Pool", href: "/learn/glossary/liquidity-pool" },
-          { type: 'glossary', title: "AMM", href: "/learn/glossary/amm" },
-        ]
-      },
-      {
-        title: "Choose a Pool",
-        description: "Go to Spectrum Finance. Browse available pools. Consider: trading volume (more = more fees), token pair (tokens you're comfortable holding), and current APY.",
-        duration: "3 minutes",
-        resources: [
-          { type: 'glossary', title: "DEX", href: "/learn/glossary/dex" },
-        ]
-      },
-      {
-        title: "Deposit Equal Value",
-        description: "Select 'Add Liquidity'. Deposit equal USD value of both tokens. The protocol calculates exact amounts. Review and confirm the transaction.",
-        duration: "5 minutes",
-        resources: [
-          { type: 'question', title: "How to Provide Liquidity", href: "/questions/how-to-provide-liquidity-ergo" },
-        ]
-      },
-      {
-        title: "Receive LP Tokens",
-        description: "After confirmation, you receive LP tokens representing your pool share. These tokens are your receipt - keep them safe to withdraw later.",
-        duration: "2 minutes",
-        resources: []
-      },
-      {
-        title: "Monitor and Withdraw",
-        description: "Check your position periodically. Fees accumulate automatically. To exit, return LP tokens to receive your share of the pool (original tokens + earned fees).",
-        duration: "5 minutes",
-        resources: [
-          { type: 'question', title: "Using Spectrum DEX", href: "/questions/how-to-use-spectrum-dex" },
-        ]
-      },
-    ],
-    
-    relatedInfographicTags: ["DeFi", "liquidity", "AMM", "DEX"],
-    relatedBlogTags: ["defi", "spectrum", "liquidity", "yield"],
-    relatedDocsTags: ["defi", "spectrum", "liquidity"],
-    
-    featuredInfographics: [
-      "mev-resistance-vs-dark-forest",
-    ],
-    
-    caseStudies: [
-      {
-        title: "Spectrum Finance",
-        description: "Leading DEX on Ergo with MEV-resistant AMM design.",
-        outcome: "Trustless trading with no front-running",
-        link: "https://spectrum.fi",
-      },
-    ],
-    
-    primaryCTA: {
-      label: "Go to Spectrum Finance",
-      href: "https://spectrum.fi",
-    },
-    secondaryCTA: {
-      label: "Learn About DeFi on Ergo",
-      href: "/topics/ergo-defi",
-    },
-    
-    icon: "Layers",
-    gradient: "from-blue-500 to-cyan-500",
-    
-    publishDate: "2025-01-01",
-  },
+  // NOTE: "provide-liquidity-spectrum" playbook was removed 2026-05-08.
+  // Spectrum Finance published a formal sunset notice (frozen Feb 2024) and is
+  // winding the project down — keeping a step-by-step "deposit liquidity here"
+  // guide would push users into a closing venue. Inbound links to
+  // /playbooks/provide-liquidity-spectrum are 301-redirected to /use/defi
+  // via next.config.ts so SEO and bookmarks don't 404.
 
   // ============================================
   // NEW PLAYBOOKS - v1.0 additions

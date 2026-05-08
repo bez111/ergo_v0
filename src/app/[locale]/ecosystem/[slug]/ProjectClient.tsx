@@ -23,6 +23,7 @@ import {
   ChevronUp,
   BookOpen,
   ArrowRight,
+  AlertCircle,
 } from "lucide-react"
 import { useState } from "react"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -149,6 +150,11 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
       label: t('status.notOperating'),
       color: "bg-red-500/20 text-red-400 border-red-500/30",
       icon: <Beaker className="w-4 h-4" />
+    },
+    SUNSET: {
+      label: "Sunset",
+      color: "bg-red-500/20 text-red-400 border-red-500/30",
+      icon: <AlertCircle className="w-4 h-4" />
     },
   }
 

@@ -3,7 +3,7 @@ export type EcosystemProject = {
   slug: string
   name: string
   category: string
-  status: "OPERATIONAL" | "TESTING" | "PROTOTYPE" | "NOT_OPERATING"
+  status: "OPERATIONAL" | "TESTING" | "PROTOTYPE" | "NOT_OPERATING" | "SUNSET"
   description: string
   longDescription?: string // Extended SEO-optimized description (150-300 words)
   url: string
@@ -31,13 +31,13 @@ export const projects: EcosystemProject[] = [
     slug: "spectrum-finance",
     name: "Spectrum Finance",
     category: "DEFI",
-    status: "OPERATIONAL",
-    description: "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.", 
-    longDescription: `Spectrum Finance is one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which lets users pay transaction fees in tokens other than ERG.
+    status: "SUNSET",
+    description: "Sunset since February 2024. The team published a formal sunset notice and is winding the project down. Do not deposit liquidity or new funds.",
+    longDescription: `Spectrum Finance was one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which let users pay transaction fees in tokens other than ERG.
 
-The DEX uses automated market maker (AMM) pools for trustless token swaps, with liquidity providers earning fees from all trades. Yield farming features provide additional token rewards for liquidity providers, creating incentives for deep liquidity across trading pairs.
+In February 2024 the protocol was frozen, and the team has since published a formal sunset notice on spectrum.fi/sunset-notice describing the wind-down and the return-of-funds process. The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming.
 
-As an open-source project, Spectrum Finance contributes significant code and research to the eUTXO DeFi ecosystem, demonstrating how complex financial applications can be built securely on this model. Its smart contracts and architecture serve as reference implementations for new DeFi projects.`,
+If you held positions on Spectrum, follow the official sunset notice for current withdrawal guidance. For an active Ergo DEX, see other entries in this ecosystem listing.`,
     url: "https://spectrum.fi",
     github: "https://github.com/spectrum-finance",
     features: ["Decentralized Exchange", "Liquidity Pools", "Yield Farming", "Babel Fees Support", "Cross-chain Trading"],
@@ -745,10 +745,11 @@ EXLE represents ongoing innovation in Ergo DeFi, exploring how traditional lendi
 ]
 
 // Featured = production-ready projects only. Anything in TESTING / PROTOTYPE
-// stays in the main grid with its real status badge — never in featured.
+// / SUNSET / NOT_OPERATING stays in the main grid with its real status badge —
+// never in featured.
 export const featuredProjects: EcosystemProject[] = [
   projects.find(p => p.slug === "rosen-bridge")!,
-  projects.find(p => p.slug === "spectrum-finance")!,
+  projects.find(p => p.slug === "ergodex")!,
   projects.find(p => p.slug === "mew-finance")!,
   projects.find(p => p.slug === "sigmausd")!,
   projects.find(p => p.slug === "paideia")!,
@@ -767,7 +768,7 @@ export const categoryOrder: string[] = [
   "TOOLS",
 ]
 
-export const statusOrder: Array<EcosystemProject["status"]> = ["OPERATIONAL", "TESTING", "PROTOTYPE", "NOT_OPERATING"]
+export const statusOrder: Array<EcosystemProject["status"]> = ["OPERATIONAL", "TESTING", "PROTOTYPE", "NOT_OPERATING", "SUNSET"]
 
 export const categoryNameOrder: Record<string, string[]> = {
   DEFI: [

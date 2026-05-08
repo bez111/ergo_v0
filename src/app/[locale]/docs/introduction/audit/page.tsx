@@ -31,11 +31,13 @@ export default function AuditPage() {
               wallets, bridges, or experimental SDKs (such as ChainCash and the agent-economy stack).
             </p>
             <p>
-              For the current maturity status of every component (node, ErgoScript / Sigma, Sigma Rust, Fleet SDK,
-              wallets, Rosen Bridge, ChainCash, agent-payment SDKs, ecosystem dApps), see the live{" "}
-              <Link href="/audits" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
-                /audits maturity matrix
-              </Link>. To report a security issue, follow the{" "}
+              For current security status, follow the{" "}
+              <a href="https://github.com/ergoplatform/ergo/security/advisories" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                Ergo node security advisories
+              </a>{" "}
+              on GitHub. For ecosystem projects (wallets, bridges, dApps, SDKs) — review the project&apos;s
+              own repository and any audits they publish before committing significant value. To report a
+              security issue here, follow the{" "}
               <Link href="/legal/security" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
                 responsible disclosure policy
               </Link>.

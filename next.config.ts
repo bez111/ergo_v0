@@ -388,6 +388,10 @@ const nextConfig: NextConfig = {
       { source: '/ecosystem/tools', destination: '/ecosystem', permanent: true },
       { source: '/ecosystem/gaming', destination: '/ecosystem', permanent: true },
 
+      // Removed playbook (Spectrum sunset, see playbooks.ts comment) → /use/defi
+      { source: '/playbooks/provide-liquidity-spectrum', destination: '/use/defi', permanent: true },
+      { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/playbooks/provide-liquidity-spectrum', destination: '/:locale/use/defi', permanent: true },
+
       // Old blog posts that never existed → /blog hub
       { source: '/blog/vesting-contracts', destination: '/blog', permanent: true },
       { source: '/blog/stealth-addresses', destination: '/blog', permanent: true },

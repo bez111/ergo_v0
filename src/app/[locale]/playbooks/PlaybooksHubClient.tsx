@@ -57,7 +57,7 @@ const playbookOrder: Record<string, number> = {
   "add-ergo-to-portfolio": 4,
   "private-transaction-ergomixer": 5,
   "start-mining-ergo": 6,
-  "provide-liquidity-spectrum": 7,
+  // "provide-liquidity-spectrum" removed 2026-05-08 (Spectrum sunset)
   "launch-token-on-ergo": 8,
   "sustainable-blockchain-economics": 9,
   "ergo-global-settlement": 10,

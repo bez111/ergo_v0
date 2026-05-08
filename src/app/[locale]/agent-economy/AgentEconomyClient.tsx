@@ -504,11 +504,11 @@ export function AgentEconomyClient() {
                   url: "https://github.com/BetterMoneyLabs",
                 },
                 {
-                  name: "ergo-agent-economy",
+                  name: "Accord Protocol",
                   icon: Code2,
-                  status: "Active",
-                  description: "Open-source agent payment SDK: ergo-agent-pay (TS), ergo-agent-py (Python), ergo-agent-mcp (MCP server). 10 working examples covering LangChain, OpenAI, CrewAI, AutoGen.",
-                  url: "https://github.com/bez111/ergo-agent-economy",
+                  status: "Testnet",
+                  description: "Open-source agreement protocol for autonomous agent work (formerly ergo-agent-economy). Three SDK packages — TypeScript / Python / MCP server — and 10 working examples. Testnet beta; mainnet blocked until signed audit manifests.",
+                  url: "https://github.com/bez111/accord-protocol",
                 },
                 {
                   name: "Fleet SDK",
@@ -520,9 +520,9 @@ export function AgentEconomyClient() {
                 {
                   name: "Spectrum Finance",
                   icon: Network,
-                  status: "Live",
-                  description: "Cross-chain DEX with automated market making on Ergo. Provides the liquidity layer agents need for token swaps.",
-                  url: "https://spectrum.fi",
+                  status: "Sunset",
+                  description: "Pioneered cross-chain AMM DEX on Ergo. Frozen since Feb 2024; team published a formal sunset notice and is winding the project down. Open-source code remains as eUTXO DeFi reference.",
+                  url: "https://spectrum.fi/sunset-notice",
                 },
                 {
                   name: "Rosen Bridge",
@@ -568,7 +568,9 @@ export function AgentEconomyClient() {
                                   ? "text-green-400 border-green-500/30 bg-green-500/10"
                                   : project.status === "Prototype" || project.status === "Testnet"
                                     ? "text-yellow-400 border-yellow-500/30 bg-yellow-500/10"
-                                    : "text-neutral-400 border-neutral-600 bg-neutral-800/50"
+                                    : project.status === "Sunset"
+                                      ? "text-red-400 border-red-500/30 bg-red-500/10"
+                                      : "text-neutral-400 border-neutral-600 bg-neutral-800/50"
                             }`}>
                               {project.status}
                             </span>

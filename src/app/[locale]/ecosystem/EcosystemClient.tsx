@@ -121,10 +121,16 @@ const statusConfig: Record<ProjectStatus, { icon: React.ReactNode; color: string
     color: "text-red-400",
     label: "NOT OPERATING",
   },
+  SUNSET: {
+    icon: <AlertCircle className="w-4 h-4 text-red-400" aria-hidden="true" focusable="false" />,
+    color: "text-red-400",
+    label: "SUNSET",
+  },
 }
 
 const statusLabelMap: Record<string, string> = {
   NOT_OPERATING: "NOT OPERATING",
+  SUNSET: "SUNSET",
 }
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }

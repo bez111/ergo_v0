@@ -33,7 +33,10 @@ import { ShareInline } from "@/components/blog/share-inline"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { Byline } from "@/components/blog/byline"
 
-const REPO = "https://github.com/bez111/ergo-agent-economy"
+// As of 2026-05-08 the repo migrated to bez111/accord-protocol; the old URL
+// 301-redirects, but new links point at the canonical repo directly.
+const REPO = "https://github.com/bez111/accord-protocol"
+const REPO_LEGACY_NAME = "ergo-agent-economy"
 
 const articleContents = [
   { label: "TL;DR", href: "#tldr" },
@@ -175,6 +178,24 @@ export function Q22026Client() {
           />
 
 
+          {/* Updated banner — repo migrated post-publish */}
+          <div className="mb-8 rounded-2xl border border-yellow-500/30 bg-yellow-500/5 px-5 py-4 text-sm text-yellow-100/90 leading-relaxed">
+            <strong className="text-yellow-300 font-semibold">Updated 2026-05-08:</strong>{" "}
+            The {REPO_LEGACY_NAME} repository has been migrated to{" "}
+            <a
+              href={REPO}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-300 underline underline-offset-2 hover:text-yellow-200"
+            >
+              bez111/accord-protocol
+            </a>{" "}
+            — the new umbrella for the agreement protocol used to verify and settle autonomous agent
+            work across Ergo, Rosen, Base/EVM and x402-compatible rails. Old GitHub links 301-redirect
+            to the new repo. Status: <strong>testnet beta</strong> — mainnet use is blocked until signed
+            audit manifests are published.
+          </div>
+
           {/* Hero */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -182,12 +203,15 @@ export function Q22026Client() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-4 flex-wrap">
               <Badge className="bg-orange-500/10 border border-orange-500/30 text-orange-400 font-mono text-xs px-3 py-1">
                 Q2 2026 · Quarterly Update
               </Badge>
               <Badge className="bg-green-500/10 border border-green-500/30 text-green-400 font-mono text-xs px-3 py-1">
                 ergo-agent-pay v0.2
+              </Badge>
+              <Badge className="bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 font-mono text-xs px-3 py-1">
+                now Accord Protocol
               </Badge>
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
@@ -520,7 +544,7 @@ export function Q22026Client() {
                 </div>
                 <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-4">Clone, install, run — under 5 minutes.</h2>
                 <pre className="font-mono text-xs sm:text-sm bg-black border border-white/10 rounded-2xl px-5 py-4 text-orange-300 overflow-x-auto whitespace-pre mb-5"><code>{`git clone ${REPO}
-cd ergo-agent-economy/examples/01-basic-payment
+cd accord-protocol/examples/01-basic-payment
 npm install
 npm run start`}</code></pre>
                 <p className="text-neutral-300 text-sm leading-relaxed mb-5">
@@ -568,7 +592,7 @@ npm run start`}</code></pre>
                 { q: "What changed in Ergo's agent economy stack since the March 2026 launch?", a: "The ergo-agent-pay SDK shipped v0.2 with the full Note lifecycle. Three packages now exist (TypeScript, Python, MCP server). Ten working examples ship with the repo, including LangChain, OpenAI, CrewAI, and AutoGen integrations." },
                 { q: "Which AI agent frameworks now have native Ergo payment support?", a: "LangChain, OpenAI function calling, CrewAI, and AutoGen all have working examples. Plus an MCP server so any MCP-compatible client (Claude Desktop, Cursor) can pay on Ergo testnet." },
                 { q: "Is the agent payment stack production-ready?", a: "Ergo protocol primitives are live on mainnet since 2019. The ergo-agent-pay SDK and ChainCash reference implementation are open-source prototypes — no security audits or production releases yet. Treat them as pre-production code, suitable for testnet development." },
-                { q: "Where can I clone and run the examples?", a: "github.com/bez111/ergo-agent-economy. Each example is self-contained with a README and runs against Ergo testnet — no mainnet ERG required." },
+                { q: "Where can I clone and run the examples?", a: "github.com/bez111/accord-protocol. Each example is self-contained with a README and runs against Ergo testnet — no mainnet ERG required." },
                 { q: "What is the Basis layer?", a: "Off-chain credit and IOU layer built on top of Ergo's on-chain primitives. Off-chain Notes circulate cheaply between trusted parties; on-chain Reserves act as collateral and global settlement when trust isn't enough." },
               ].map((item, i) => (
                 <Card key={i} className="bg-black/80 border border-white/8 rounded-2xl">
