@@ -5,7 +5,7 @@ import matter from "gray-matter"
 import { remark } from "remark"
 import remarkGfm from "remark-gfm"
 import remarkHtml from "remark-html"
-import { AlertTriangle } from "lucide-react"
+import { AlertTriangle, ChevronDown, ListOrdered, Sparkles } from "lucide-react"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -125,12 +125,72 @@ function addHeadingAnchors(html: string): string {
   })
 }
 
+/**
+ * Wrap each H2 + its body in a card-style <section>. Mirrors the visual
+ * pattern used in /blog/babel-fees: heading on its own, content inside a
+ * rounded `bg-black border border-white/20 rounded-3xl p-8` container.
+ *
+ * Operates on the HTML string after markdown → HTML conversion. The resulting
+ * markup is still semantic; the wrapping is purely presentational.
+ */
+function wrapH2Sections(html: string): string {
+  // Split on H2 starts. We preserve any leading content before the first H2.
+  const parts = html.split(/(?=<h2\b)/)
+  if (parts.length <= 1) return html
+  const [intro, ...sections] = parts
+
+  const wrapped = sections
+    .map((sec) => {
+      const m = sec.match(/^(<h2[^>]*>[\s\S]*?<\/h2>)([\s\S]*)$/)
+      if (!m) return sec
+      const [, heading, body] = m
+      const safeBody = (body ?? "").trim()
+      if (!safeBody) return `<section class="md-section">${heading}</section>`
+      return `<section class="md-section">${heading}<div class="md-card">${safeBody}</div></section>`
+    })
+    .join("\n")
+  return (intro ?? "") + wrapped
+}
+
+/** Pull the TL;DR section out of the markdown so we can render it as a card
+ *  grid (icon + title + body), matching the babel-fees TL;DR design. The
+ *  TL;DR section is detected by a `## TL;DR` heading; each entry is an `###`
+ *  sub-heading + paragraph. Returns the pulled items + the body with the
+ *  TL;DR block stripped. */
+function extractTldr(body: string): { tldr: { title: string; body: string }[]; bodyWithoutTldr: string } {
+  const match = body.match(/^##\s+TL;?DR\s*$([\s\S]*?)(?=^##\s+|$(?![\r\n]))/im)
+  if (!match) return { tldr: [], bodyWithoutTldr: body }
+  const block = match[1] ?? ""
+  const items: { title: string; body: string }[] = []
+  const re = /^###\s+(.+?)\s*$([\s\S]*?)(?=^###\s+|$(?![\r\n]))/gim
+  let m: RegExpExecArray | null
+  while ((m = re.exec(block)) !== null) {
+    items.push({ title: (m[1] ?? "").trim(), body: (m[2] ?? "").trim() })
+  }
+  // If no H3 sub-items were found, fall back to first 4 list items.
+  if (items.length === 0) {
+    const listRe = /^[*-]\s+(.+?)$/gm
+    let lm: RegExpExecArray | null
+    while ((lm = listRe.exec(block)) !== null && items.length < 4) {
+      const line = (lm[1] ?? "").trim()
+      const splitIdx = line.indexOf(":")
+      if (splitIdx > 0) {
+        items.push({ title: line.slice(0, splitIdx).trim(), body: line.slice(splitIdx + 1).trim() })
+      } else {
+        items.push({ title: line, body: "" })
+      }
+    }
+  }
+  const bodyWithoutTldr = body.slice(0, match.index!) + body.slice(match.index! + match[0].length)
+  return { tldr: items, bodyWithoutTldr: bodyWithoutTldr.trim() }
+}
+
 async function markdownToHtml(md: string): Promise<string> {
   const file = await remark()
     .use(remarkGfm)
     .use(remarkHtml, { sanitize: false })
     .process(md)
-  return addHeadingAnchors(String(file))
+  return wrapH2Sections(addHeadingAnchors(String(file)))
 }
 
 export interface MarkdownBlogPostProps {
@@ -146,8 +206,10 @@ export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlog
   const { frontMatter, body } = await loadArticle(slug)
   const cleaned = stripLeadingH1(stripAuthoringMeta(body))
   const { faq, bodyWithoutFaq } = extractFaq(cleaned)
-  const bodyHtml = await markdownToHtml(bodyWithoutFaq)
-  const tocItems = buildToc(bodyWithoutFaq)
+  const { tldr, bodyWithoutTldr } = extractTldr(bodyWithoutFaq)
+  const bodyHtml = await markdownToHtml(bodyWithoutTldr)
+  // TOC reflects the post-extraction body (no TL;DR / FAQ in it).
+  const tocItems = buildToc(bodyWithoutTldr)
 
   const canonical = `${ORIGIN}/blog/${slug}`
   const title = frontMatter.title ?? slug
@@ -233,38 +295,100 @@ export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlog
             </aside>
           )}
 
-          {/* Body — markdown rendered server-side. Styled via the
-              .markdown-article class in globals.css (cyber palette, headings
-              with scroll-margin for the StickyTOC, code block styling). */}
+          {/* TL;DR — card grid mirroring babel-fees. Only renders if the
+              markdown actually carries a `## TL;DR` block. */}
+          {tldr.length > 0 && (
+            <section className="mb-12" aria-labelledby="tldr-heading">
+              <h2 id="tldr-heading" className="text-2xl sm:text-3xl font-bold text-white mb-6 flex items-center gap-2">
+                <Sparkles className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                TL;DR
+              </h2>
+              <div className="grid gap-3">
+                {tldr.map((item) => (
+                  <div
+                    key={item.title}
+                    className="bg-black border border-white/10 rounded-xl p-4"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="mt-1 w-2 h-2 rounded-full bg-orange-400 shrink-0" aria-hidden="true" />
+                      <div>
+                        <h3 className="text-base font-semibold text-white mb-1">{item.title}</h3>
+                        {item.body && (
+                          <p className="text-gray-300 text-sm leading-relaxed">{item.body}</p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Article Contents card — fallback for screens narrower than 2xl
+              (matches the babel-fees pattern; the StickyTOC only appears on
+              very wide screens). */}
+          {tocItems.length > 0 && (
+            <section className="mb-12 2xl:hidden">
+              <div className="bg-black/80 border border-orange-500/20 rounded-2xl p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <ListOrdered className="w-5 h-5 text-orange-400" aria-hidden="true" />
+                  <h2 className="text-lg font-semibold text-white m-0">Article Contents</h2>
+                </div>
+                <nav aria-label="Article contents">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm list-none p-0 m-0">
+                    {tocItems.map((item) => (
+                      <li key={item.href} className="m-0">
+                        <a
+                          href={item.href}
+                          className="text-gray-300 hover:text-orange-400 transition-colors py-1 inline-block"
+                        >
+                          → {item.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            </section>
+          )}
+
+          {/* Body — markdown rendered server-side. The post-processing in
+              wrapH2Sections() wraps each H2 + its content in a .md-section /
+              .md-card pair so each section gets the babel-fees-style card
+              treatment. Styles live in globals.css. */}
           <article
             className="markdown-article max-w-none mb-16"
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: bodyHtml }}
           />
 
-          {/* FAQ — fully expanded for screen readers + indexable for SEO,
-              backed by the FAQPage JSON-LD above. Native <details> so it
-              still works without JS. */}
+          {/* FAQ — Card-style accordion matching the babel-fees layout. Uses
+              native <details>/<summary> so it stays SSR-friendly and works
+              without JS. The expanded answer is in the static HTML, backed
+              by the FAQPage JSON-LD above. */}
           {faq.length > 0 && (
             <section
               id="article-faq"
               aria-labelledby="article-faq-heading"
-              className="mb-16 pt-10 border-t border-neutral-800 scroll-mt-28"
+              className="mb-16 scroll-mt-28"
             >
-              <h2 id="article-faq-heading" className="text-2xl sm:text-3xl font-bold text-white mb-6">
-                FAQ
+              <h2 id="article-faq-heading" className="text-2xl sm:text-3xl font-bold text-white mb-8">
+                ❓ Frequently Asked Questions
               </h2>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {faq.map((item) => (
                   <details
                     key={item.q}
-                    className="group border border-neutral-800 rounded-xl bg-black/80 open:bg-neutral-900/40"
+                    className="group bg-black border border-white/10 rounded-2xl"
                   >
-                    <summary className="cursor-pointer list-none p-5 flex items-start justify-between gap-4 text-left">
-                      <span className="font-semibold text-white">{item.q}</span>
-                      <span className="text-orange-400 shrink-0 mt-1 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+                    <summary className="cursor-pointer list-none p-6 flex items-center justify-between gap-4 hover:bg-black/70 transition-colors rounded-2xl">
+                      <h3 className="text-lg font-semibold text-white pr-4 m-0">{item.q}</h3>
+                      <ChevronDown
+                        className="w-5 h-5 text-neutral-400 shrink-0 transition-transform group-open:rotate-180"
+                        aria-hidden="true"
+                      />
                     </summary>
-                    <div className="px-5 pb-5 -mt-1 text-gray-300 leading-relaxed whitespace-pre-line">
+                    <div className="px-6 pb-6 pt-0 text-gray-300 leading-relaxed whitespace-pre-line">
                       {item.a}
                     </div>
                   </details>

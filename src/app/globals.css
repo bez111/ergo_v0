@@ -1572,3 +1572,46 @@ html, body {
   border-radius: 0.5rem;
   margin: 1.5em 0;
 }
+
+/* Card-style section blocks — each H2 inside the article is followed by a
+   .md-card container so the body of the section feels separated, matching
+   /blog/babel-fees. The post-processor in markdown-blog-post.tsx emits
+   <section class="md-section"><h2>...</h2><div class="md-card">...</div></section> */
+.markdown-article .md-section {
+  margin-top: 3rem;
+  scroll-margin-top: 7rem;
+}
+.markdown-article .md-section:first-child { margin-top: 0; }
+.markdown-article .md-section > h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.markdown-article .md-card {
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+@media (max-width: 640px) {
+  .markdown-article .md-card {
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+  }
+}
+.markdown-article .md-card > * + * {
+  margin-top: 1rem;
+}
+.markdown-article .md-card > h3:first-child,
+.markdown-article .md-card > h4:first-child {
+  margin-top: 0;
+}
+.markdown-article .md-card h3 {
+  margin-top: 1.75em;
+}
+.markdown-article .md-card pre,
+.markdown-article .md-card table {
+  /* Pull tables/code blocks slightly outside the card padding so wide tables
+     don't squeeze. -m1 keeps them visually flush with the card edge. */
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
