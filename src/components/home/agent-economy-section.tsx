@@ -57,8 +57,8 @@ export function AgentEconomySection() {
               className="text-neutral-400 mt-4"
               style={{ fontSize: "clamp(15px, 1.8vw, 18px)", lineHeight: 1.5, maxWidth: "54ch" }}
             >
-              Autonomous agents need more than payments. Ergo combines programmable credit,
-              acceptance predicates, and verifiable reserves at the protocol level.
+              Autonomous agents need more than payments. Ergo is the only settlement layer with
+              programmable credit, acceptance predicates, and verifiable reserves built in.
             </p>
           </div>
 

@@ -107,46 +107,28 @@ export function HeroFinal() {
             </p>
           </div>
 
-          {/* Stable semantic H1 — visible AND crawlable, no animation artifact */}
-          <h1
-            className="text-white font-mono leading-tight text-center max-w-5xl mx-auto"
-            style={{
-              fontSize: 'clamp(22px, 4.2vw, 52px)',
-              fontWeight: 800,
-              letterSpacing: '-0.02em',
-              lineHeight: 1.1,
-              wordBreak: 'break-word',
-            }}
-          >
-            Ergo Blockchain for{' '}
-            <span className="text-orange-500">Autonomous Agent Payments</span>
-          </h1>
-
-          {/* Decorative typing animation — separate presentation layer, aria-hidden */}
-          <div
-            className="relative max-w-5xl mx-auto mt-4 sm:mt-6"
-            aria-hidden="true"
-          >
-            <div className="flex items-start justify-center px-2 sm:px-0">
+          {/* Dynamic typing text */}
+          <div className="relative max-w-5xl mx-auto">
+            <div className="flex items-start justify-center mb-4 sm:mb-6 px-2 sm:px-0">
               <span
                 className="text-orange-500 font-mono flex-shrink-0 mr-1 sm:mr-2 hidden sm:inline"
                 style={{
-                  fontSize: 'clamp(18px, 3vw, 32px)',
-                  fontWeight: 700,
-                  lineHeight: 1.2,
+                  fontSize: 'clamp(24px, 4.5vw, 56px)',
+                  fontWeight: 800,
+                  lineHeight: 1.1
                 }}
               >
                 &gt;
               </span>
-              <p
-                className="text-neutral-300 font-mono leading-tight text-center"
+              <h1 
+                className="text-white font-mono leading-tight text-center"
                 style={{
-                  fontSize: 'clamp(18px, 3vw, 32px)',
-                  fontWeight: 700,
-                  letterSpacing: '-0.015em',
-                  lineHeight: 1.2,
+                  fontSize: 'clamp(24px, 4.5vw, 56px)',
+                  fontWeight: 800,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.1,
                   maxWidth: '100%',
-                  wordBreak: 'break-word',
+                  wordBreak: 'break-word'
                 }}
               >
                 <span className="relative" suppressHydrationWarning>
@@ -154,23 +136,23 @@ export function HeroFinal() {
                   <span
                     className={`text-orange-500 ${isClient && showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}
                     suppressHydrationWarning
-                  >
-                    _
+                      >
+                        _
                   </span>
                 </span>
-              </p>
+              </h1>
             </div>
-
-            <p
-              className="text-neutral-300 font-mono mx-auto mt-6 mb-2"
-              style={{
-                fontSize: 'clamp(16px, 2vw, 20px)',
-                lineHeight: 1.5,
-                opacity: 0.85,
-                maxWidth: '62ch',
+            
+            <p 
+              className="text-neutral-300 font-mono mx-auto mb-8"
+              style={{ 
+                fontSize: 'clamp(16px, 2vw, 20px)', 
+                lineHeight: 1.4, 
+                opacity: 0.8,
+                maxWidth: '60ch'
               }}
             >
-              {t('subtitle') || 'Programmable, censorship-resistant Proof-of-Work blockchain. Predictable fees, native privacy, and protocol-level primitives for autonomous agent commerce.'}
+              {t('subtitle') || "Join a movement for open, programmable, and censorship-resistant finance."}
             </p>
           </div>
 
@@ -178,7 +160,7 @@ export function HeroFinal() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto mt-8">
             <CyberButton
               className="inline-flex items-center justify-center gap-3 bg-orange-500 text-black hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 hover:border-orange-600 w-full sm:flex-1"
-              style={{
+              style={{ 
                 height: 'clamp(50px, 8vw, 58px)',
                 fontSize: 'clamp(15px, 2.5vw, 17px)',
                 fontWeight: 600,
@@ -196,7 +178,7 @@ export function HeroFinal() {
 
             <CyberButton
               className="inline-flex items-center justify-center gap-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider w-full sm:flex-1"
-              style={{
+              style={{ 
                 height: 'clamp(50px, 8vw, 58px)',
                 fontSize: 'clamp(15px, 2.5vw, 17px)',
                 fontWeight: 600,
@@ -210,16 +192,6 @@ export function HeroFinal() {
               </Link>
             </CyberButton>
           </div>
-
-          {/* Inline risk notice — visible at point of decision (Trust + YMYL signal) */}
-          <p className="text-xs sm:text-sm text-neutral-400 font-mono text-center max-w-2xl mx-auto mt-5 leading-relaxed px-4">
-            <span className="text-orange-400">⚠</span>{' '}
-            Crypto carries real risks of total loss. Self-custody is irreversible. This is educational content, not financial advice —{' '}
-            <Link href="/legal/risk" className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors">
-              read the full risk disclosure
-            </Link>
-            .
-          </p>
 
           {/* Feature icons */}
           <div 

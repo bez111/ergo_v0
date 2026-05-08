@@ -407,10 +407,7 @@ const nextConfig: NextConfig = {
       { source: '/start/security', destination: '/faq', permanent: true },
       { source: '/start/get-erg', destination: '/use/get-erg', permanent: true },
       { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/start/get-erg', destination: '/:locale/use/get-erg', permanent: true },
-      // Legacy /about/:slug (e.g. /about/kushti) → community. Note: bare /about
-      // is now a real page and must NOT match this — `:slug+` requires at least
-      // one path segment after /about/.
-      { source: '/about/:slug+', destination: '/start/community', permanent: true },
+      { source: '/about/:path*', destination: '/start/community', permanent: true },
       { source: '/build/smart-contracts', destination: '/build/agent-payments', permanent: true },
       { source: '/build/tutorials', destination: '/build/quickstart', permanent: true },
       { source: '/us/get-erg', destination: '/use/get-erg', permanent: true },

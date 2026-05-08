@@ -31,7 +31,7 @@
       "2": "MEV-resistant design (local ordering)"
     },
     "resultLabel": "The result:",
-    "resultText": "Financial infrastructure designed for predictable, auditable settlement.",
+    "resultText": "Financial infrastructure that actually works.",
     "stats": {
       "blockTime": {
         "value": "~2 min",
@@ -183,10 +183,10 @@
       },
       {
         "icon": "Eye",
-        "title": "Permissionless Settlement",
-        "description": "Proof-of-Work consensus without a foundation multisig or validator committee — protocol upgrades are coordinated through soft forks. Designed so agents can transact without a central kill switch.",
+        "title": "No Kill Switch",
+        "description": "Proof-of-Work consensus with no foundation multisig, no validator cartel, no emergency pause. No committee can freeze agent funds or halt the network. Unstoppable by design.",
         "benefit": "Agents operate without permission",
-        "stat": "PoW consensus, no committee"
+        "stat": "No governance kill switch"
       }
     ]
   },

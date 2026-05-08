@@ -101,22 +101,6 @@ export function Footer() {
           </p>
         </div>
         <div className="container mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-mono">
-          <Link href={localizedPath("about")} className="text-gray-400 hover:text-primary transition-colors">
-            About
-          </Link>
-          <span className="text-gray-700">·</span>
-          <Link href={localizedPath("network-status")} className="text-gray-400 hover:text-primary transition-colors">
-            Network Status
-          </Link>
-          <span className="text-gray-700">·</span>
-          <Link href={localizedPath("audits")} className="text-gray-400 hover:text-primary transition-colors">
-            Audits
-          </Link>
-          <span className="text-gray-700">·</span>
-          <Link href={localizedPath("legal/editorial")} className="text-gray-400 hover:text-primary transition-colors">
-            Editorial Policy
-          </Link>
-          <span className="text-gray-700">·</span>
           <Link href={localizedPath("legal/privacy")} className="text-gray-400 hover:text-primary transition-colors">
             Privacy
           </Link>
@@ -132,25 +116,6 @@ export function Footer() {
           <Link href={localizedPath("legal/security")} className="text-gray-400 hover:text-primary transition-colors">
             Security
           </Link>
-        </div>
-
-        {/* Authority / E-E-A-T block — visible content provenance */}
-        <div className="container mt-4 text-center text-[11px] sm:text-xs text-gray-500 font-mono leading-relaxed max-w-3xl mx-auto px-4">
-          Content reviewed by Ergo Platform open-source contributors ·
-          Last reviewed 2026-05-06 ·{" "}
-          <Link href={localizedPath("legal/editorial")} className="text-gray-400 hover:text-primary transition-colors">
-            editorial policy
-          </Link>{" "}
-          ·{" "}
-          <Link href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
-            source code
-          </Link>{" "}
-          ·{" "}
-          <Link href={localizedPath("legal/security")} className="text-gray-400 hover:text-primary transition-colors">
-            security disclosure
-          </Link>
-          <br className="hidden sm:inline" />
-          Educational content about an open-source blockchain protocol — not financial advice.
         </div>
 
         {/* Scanline effect */}
