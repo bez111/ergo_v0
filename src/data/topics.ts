@@ -241,7 +241,7 @@ export const topics: TopicHub[] = [
     
     introduction: "Ergo's Autolykos algorithm represents a return to Bitcoin's original vision: mining accessible to regular people with consumer hardware. Unlike Bitcoin's ASIC-dominated mining or Ethereum's move to PoS, Ergo maintains GPU-friendly, memory-hard Proof-of-Work. This isn't nostalgia - it's a deliberate design choice for decentralization. When anyone can mine with their gaming PC, no single entity can dominate hashrate. When mining is distributed, censorship resistance is real.",
     
-    whatMakesUnique: "Autolykos v2 is memory-hard, requiring significant RAM that makes ASIC development uneconomical. The algorithm was designed by cryptographers, not as an afterthought. Storage rent provides sustainable miner revenue after emission ends - solving Bitcoin's long-term security budget problem. And Ergo's fair launch means miners aren't competing against VC-subsidized insiders; everyone started from zero.",
+    whatMakesUnique: "Autolykos v2 is memory-hard, requiring significant RAM that makes ASIC development uneconomical. The algorithm was designed by cryptographers, not as an afterthought. Storage rent reclaims fees from dormant UTxOs and adds a protocol-level revenue stream for miners alongside emissions and tx fees — addressing the long-term security-budget concern, though long-term outcomes still depend on adoption, fee markets and miner behavior. And Ergo's fair launch means miners aren't competing against VC-subsidized insiders; everyone started from zero.",
     
     keyDifferentiators: [
       "ASIC-resistant: Autolykos keeps mining accessible to GPU miners",
