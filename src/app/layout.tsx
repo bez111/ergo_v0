@@ -124,14 +124,35 @@ export const metadata: Metadata = {
 // JSON-LD via centralized SEO module
 const organizationSchema = createOrganizationSchema()
 
-export default function RootLayout({
+// Read the locale segment from the request URL so the <html lang="..."> tag
+// matches the page content. Without this, /ru, /de, /ja all render with
+// lang="en", which hurts screen readers and SEO.
+async function getLocaleFromHeaders(): Promise<{ lang: string; dir: "ltr" | "rtl" }> {
+  const { headers } = await import("next/headers")
+  const { locales, isRtlLocale } = await import("@/i18n/request")
+  const h = await headers()
+  // Vercel sets x-invoke-path; fall back to x-pathname or referer.
+  const path =
+    h.get("x-invoke-path") ||
+    h.get("x-pathname") ||
+    h.get("next-url") ||
+    ""
+  const seg = (path.split("/")[1] || "").toLowerCase()
+  const matched = (locales as readonly string[]).find((l) => l.toLowerCase() === seg)
+  const lang = matched ?? "en"
+  return { lang, dir: isRtlLocale(lang) ? "rtl" : "ltr" }
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { lang, dir } = await getLocaleFromHeaders()
   return (
-    <html 
-      lang="en"
+    <html
+      lang={lang}
+      dir={dir}
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >

@@ -291,6 +291,60 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
               {project.description}
             </p>
+
+            {/* Transparency strip — exposes the verification metadata so the
+                "Verified YYYY-MM-DD" claim is auditable, not just decorative. */}
+            {(project.lastVerified || project.verificationSource || project.auditStatus !== undefined || project.fundsAtRisk !== undefined) && (
+              <div className="mt-6 rounded-xl border border-neutral-800 bg-neutral-900/40 p-4">
+                <h2 className="sr-only">Verification &amp; risk</h2>
+                <dl className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                  <div>
+                    <dt className="font-mono uppercase tracking-wider text-neutral-500 mb-1">Verified</dt>
+                    <dd className="text-neutral-200">{project.lastVerified ?? "—"}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono uppercase tracking-wider text-neutral-500 mb-1">Source</dt>
+                    <dd className="text-neutral-200 capitalize">
+                      {project.verificationSource
+                        ? project.verificationSource.replace(/-/g, " ")
+                        : "—"}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono uppercase tracking-wider text-neutral-500 mb-1">Audit</dt>
+                    <dd className={`capitalize ${
+                      project.auditStatus === "audited"
+                        ? "text-green-400"
+                        : project.auditStatus === "partial-audit"
+                        ? "text-yellow-400"
+                        : project.auditStatus === "not-audited"
+                        ? "text-red-400"
+                        : "text-neutral-400"
+                    }`}>
+                      {project.auditStatus
+                        ? project.auditStatus.replace(/-/g, " ")
+                        : "unknown"}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono uppercase tracking-wider text-neutral-500 mb-1">Funds at risk</dt>
+                    <dd className={
+                      project.fundsAtRisk === true
+                        ? "text-yellow-400"
+                        : project.fundsAtRisk === false
+                        ? "text-green-400"
+                        : "text-neutral-400"
+                    }>
+                      {project.fundsAtRisk === true
+                        ? "Yes — verify before depositing"
+                        : project.fundsAtRisk === false
+                        ? "No — info only"
+                        : "Unknown"}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            )}
           </motion.header>
 
           {/* Extended Description for SEO */}

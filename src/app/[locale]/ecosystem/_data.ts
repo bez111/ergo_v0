@@ -1,3 +1,19 @@
+/**
+ * How the entry was last verified. The audit specifically asked for this so
+ * users can see *why* a "verified 2026-05-08" badge is trustworthy.
+ *
+ *   - "site"        : opened the project's website / app and confirmed it loaded.
+ *   - "github"      : checked the GitHub repo for recent activity / releases.
+ *   - "team"        : direct confirmation from the project team.
+ *   - "explorer"    : confirmed on-chain activity via an explorer.
+ *   - "sunset-notice": project itself published a sunset notice.
+ *   - "unknown"     : status not independently re-verified; treat as stale.
+ */
+export type VerificationSource = "site" | "github" | "team" | "explorer" | "sunset-notice" | "unknown"
+
+/** Audit posture for the project. Conservative defaults; bump only with citation. */
+export type AuditStatus = "audited" | "partial-audit" | "not-audited" | "unknown"
+
 export type EcosystemProject = {
   id: number
   slug: string
@@ -19,6 +35,14 @@ export type EcosystemProject = {
   /** YYYY-MM-DD — date this entry was last manually verified.
    *  Display on every card so users can judge freshness. */
   lastVerified?: string
+  /** How the entry was verified — see VerificationSource doc. */
+  verificationSource?: VerificationSource
+  /** Audit posture for the project. Conservative default if unknown. */
+  auditStatus?: AuditStatus
+  /** Does interacting with this project put user funds at risk?
+   *  true → the project handles user value (DEX, lending, bridge, custodian).
+   *  false → information / explorer / non-custodial UI only. */
+  fundsAtRisk?: boolean
 }
 
 /** Default verification date — used for any project not explicitly stamped.
@@ -42,7 +66,11 @@ If you held positions on Spectrum, follow the official sunset notice for current
     github: "https://github.com/spectrum-finance",
     features: ["Decentralized Exchange", "Liquidity Pools", "Yield Farming", "Babel Fees Support", "Cross-chain Trading"],
     technologies: ["eUTXO", "ErgoScript", "Babel Fees"],
-    relatedTags: ["Babel Fees", "DeFi", "eUTXO"]
+    relatedTags: ["Babel Fees", "DeFi", "eUTXO"],
+    lastVerified: "2026-05-08",
+    verificationSource: "sunset-notice",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
   { 
     id: 39,
@@ -64,7 +92,11 @@ ErgoDex represents a significant advancement in cross-chain DeFi infrastructure.
       "Liquidity provision for ERG and ADA ecosystems"
     ],
     technologies: ["eUTXO", "ErgoScript"],
-    relatedTags: ["eUTXO", "DeFi", "Smart Contracts"]
+    relatedTags: ["eUTXO", "DeFi", "Smart Contracts"],
+    lastVerified: "2026-05-08",
+    verificationSource: "site",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
   { 
     id: 2, 
@@ -88,10 +120,14 @@ What sets SigmaUSD apart from other stablecoins is its completely decentralized 
       { question: "What is SigmaUSD?", answer: "SigmaUSD is a decentralized algorithmic stablecoin on Ergo, pegged to the US dollar and backed by ERG cryptocurrency with a reserve ratio of 400-800%." },
       { question: "How is SigmaUSD different from other stablecoins?", answer: "Unlike centralized stablecoins like USDT, SigmaUSD is fully decentralized with no single point of failure. It uses the AgeUSD protocol with overcollateralization and has no liquidation risk for users." },
       { question: "What is SigRSV?", answer: "SigRSV is the reserve coin that backs SigmaUSD. Reserve providers mint SigRSV to earn from ERG price appreciation while providing stability to the system." }
-    ]
+    ],
+    lastVerified: "2026-05-08",
+    verificationSource: "site",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
-  { 
-    id: 3, 
+  {
+    id: 3,
     slug: "rosen-bridge",
     name: "Rosen Bridge", 
     category: "INFRASTRUCTURE", 
@@ -114,7 +150,11 @@ Rosen Bridge supports wrapped assets in both directions, allowing users to bring
       { question: "What is Rosen Bridge?", answer: "Rosen Bridge is a decentralized protocol for transferring assets between Ergo and other blockchains like Cardano, Bitcoin, and Ethereum without relying on centralized custodians." },
       { question: "How does Rosen Bridge work?", answer: "Rosen Bridge uses a network of Watchers who cryptographically verify cross-chain transactions. NiPoPoWs technology enables trustless verification without requiring full blockchain data." },
       { question: "What blockchains does Rosen Bridge support?", answer: "Rosen Bridge currently supports Ergo, Cardano, Bitcoin (including Runes), Dogecoin, and is expanding to additional chains." }
-    ]
+    ],
+    lastVerified: "2026-05-08",
+    verificationSource: "site",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
   { 
     id: 4, 
@@ -138,7 +178,11 @@ ErgoMixer supports not just ERG but also native tokens issued on the Ergo blockc
       { question: "What is ErgoMixer?", answer: "ErgoMixer is a decentralized, non-custodial token mixer that uses Sigma Protocols to break transaction links, providing financial privacy on the Ergo blockchain." },
       { question: "Is ErgoMixer safe to use?", answer: "Yes, ErgoMixer is non-custodial, meaning you always control your funds. The mixing process uses cryptographic proofs that cryptographically protect privacy without trusting any third party." },
       { question: "What tokens can I mix?", answer: "ErgoMixer supports ERG and all native tokens on the Ergo blockchain, making it a comprehensive privacy solution for the ecosystem." }
-    ]
+    ],
+    lastVerified: "2026-05-08",
+    verificationSource: "github",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
   { 
     id: 6, 
@@ -163,7 +207,11 @@ Nautilus also integrates with ErgoMixer for optional transaction privacy, demons
       { question: "What is Nautilus Wallet?", answer: "Nautilus is a browser extension and mobile wallet for Ergo, supporting ERG, native tokens, NFTs, Ledger hardware wallets, and connections to Ergo dApps." },
       { question: "Is Nautilus Wallet safe?", answer: "Yes, Nautilus is non-custodial and open-source. Your private keys are encrypted locally and never leave your device. Hardware wallet support adds an extra layer of security." },
       { question: "Can I use Nautilus with DeFi apps?", answer: "Yes, Nautilus has a built-in dApp connector that works with all major Ergo DeFi protocols including DEXs, lending platforms, and NFT marketplaces." }
-    ]
+    ],
+    lastVerified: "2026-05-08",
+    verificationSource: "site",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
   { 
     id: 7, 
@@ -182,10 +230,14 @@ DuckPools demonstrates how the eUTXO model can support complex DeFi primitives w
     twitter: "https://twitter.com/DuckPools",
     features: ["Lending Pools", "Collateralized Loans", "Yield Generation", "Native Asset Support"],
     technologies: ["eUTXO", "ErgoScript", "Oracle Pools"],
-    relatedTags: ["DeFi", "Oracle Pools", "eUTXO", "Smart Contracts"]
+    relatedTags: ["DeFi", "Oracle Pools", "eUTXO", "Smart Contracts"],
+    lastVerified: "2026-05-08",
+    verificationSource: "site",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
-  { 
-    id: 8, 
+  {
+    id: 8,
     slug: "paideia",
     name: "Paideia", 
     category: "DAO", 
@@ -290,10 +342,14 @@ Mew Finance demonstrates the composability possible on Ergo's eUTXO model, integ
     twitter: "https://twitter.com/MewFinance",
     features: ["DEX", "NFT Marketplace", "DeFi Suite", "Token Swaps"],
     technologies: ["eUTXO", "ErgoScript"],
-    relatedTags: ["DeFi", "NFT", "eUTXO"]
+    relatedTags: ["DeFi", "NFT", "eUTXO"],
+    lastVerified: "2026-05-08",
+    verificationSource: "site",
+    auditStatus: "unknown",
+    fundsAtRisk: true,
   },
-  { 
-    id: 14, 
+  {
+    id: 14,
     slug: "satergo",
     name: "SatErgo", 
     category: "WALLETS", 
@@ -703,10 +759,14 @@ Developed by Ergo core developer kushti, ChainCash represents cutting-edge resea
     github: "https://github.com/kushti/chaincash",
     features: ["P2P Money", "Custom Currencies", "Trust-based Backing", "Monetary Framework"],
     technologies: ["eUTXO", "ErgoScript"],
-    relatedTags: ["Research", "Smart Contracts", "Monetary Innovation"]
+    relatedTags: ["Research", "Smart Contracts", "Monetary Innovation"],
+    lastVerified: "2026-05-08",
+    verificationSource: "github",
+    auditStatus: "not-audited",
+    fundsAtRisk: true,
   },
-  { 
-    id: 37, 
+  {
+    id: 37,
     slug: "sigrsv",
     name: "SigRSV", 
     category: "DEFI", 
