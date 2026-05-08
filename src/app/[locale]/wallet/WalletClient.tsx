@@ -22,138 +22,26 @@ import { EnhancedButton } from "@/components/ui/enhanced-button"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 
-interface Wallet {
-  id: string
-  name: string
-  description: string
-  platforms: string[]
-  features: string[]
-  category: "Desktop" | "Mobile" | "Browser" | "Hardware" | "Paper"
-  websiteUrl: string
-  downloadUrl?: string
-  rating: number
-  users: string
-  icon: LucideIcon
-  isRecommended?: boolean
-  securityLevel: "High" | "Very High" | "Maximum"
-  type: "Hot" | "Cold" | "Hybrid"
-  color: string
+// Wallet data sourced from src/data/wallets.ts (single registry).
+// Icon names mapped to lucide components here so the registry stays pure data.
+import { wallets as walletRegistry, type WalletEntry, type WalletIconName } from "@/data/wallets"
+
+const ICON_BY_NAME: Record<WalletIconName, LucideIcon> = {
+  Chrome,
+  Monitor,
+  Smartphone,
+  Apple,
+  Zap,
+  HardDrive,
+  Lock,
 }
 
-const allWallets: Wallet[] = [
-  {
-    id: "nautilus",
-    name: "Nautilus Wallet",
-    description: "Feature-rich browser extension wallet with dApp connectivity and advanced DeFi features",
-    platforms: ["Chrome", "Firefox", "Edge"],
-    features: ["dApp Integration", "Hardware Wallet Support", "Multi-signature", "Token Management", "DeFi Ready"],
-    category: "Browser",
-    isRecommended: true,
-    websiteUrl: "https://github.com/capt-nemo429/nautilus-wallet",
-    downloadUrl: "https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai",
-    rating: 4.8,
-    users: "50K+",
-    icon: Chrome,
-    securityLevel: "High",
-    type: "Hot",
-    color: "from-orange-500/20 to-orange-500/5"
-  },
-  {
-    id: "satergo",
-    name: "Satergo Wallet",
-    description: "Desktop wallet with full node integration and advanced privacy features",
-    platforms: ["Windows", "macOS", "Linux"],
-    features: ["Full Node", "ErgoMixer Integration", "Advanced Privacy", "Multi-Account", "Cold Storage"],
-    category: "Desktop",
-    websiteUrl: "https://satergo.com",
-    downloadUrl: "https://github.com/Satergo/Satergo/releases",
-    rating: 4.9,
-    users: "15K+",
-    icon: Monitor,
-    securityLevel: "Very High",
-    type: "Hybrid",
-    color: "from-cyan-500/20 to-cyan-500/5"
-  },
-  {
-    id: "ergo-wallet-android",
-    name: "Ergo Wallet (Android)",
-    description: "Official mobile wallet for Android with QR scanning and simple interface",
-    platforms: ["Android"],
-    features: ["QR Scanning", "Simple Interface", "Backup & Restore", "Multi-language", "Offline Signing"],
-    category: "Mobile",
-    websiteUrl: "https://ergoplatform.org/en/wallets/",
-    downloadUrl: "https://play.google.com/store/apps/details?id=org.ergoplatform.android",
-    rating: 4.6,
-    users: "25K+",
-    icon: Smartphone,
-    securityLevel: "High",
-    type: "Hot",
-    color: "from-purple-500/20 to-purple-500/5"
-  },
-  {
-    id: "ergo-wallet-ios",
-    name: "Ergo Wallet (iOS)",
-    description: "Official mobile wallet for iOS with intuitive design and secure storage",
-    platforms: ["iOS"],
-    features: ["Touch ID", "Face ID", "iCloud Backup", "Simple Interface", "Secure Enclave"],
-    category: "Mobile",
-    websiteUrl: "https://ergoplatform.org/en/wallets/",
-    downloadUrl: "https://apps.apple.com/app/ergo-wallet/id1542086230",
-    rating: 4.7,
-    users: "20K+",
-    icon: Apple,
-    securityLevel: "High",
-    type: "Hot",
-    color: "from-blue-500/20 to-blue-500/5"
-  },
-  {
-    id: "safew",
-    name: "SAFEW",
-    description: "Simple And Fast Ergo Wallet — browser extension (with optional desktop build). Verify the source URL before installing — web wallets carry phishing risk.",
-    platforms: ["Chrome", "Brave", "Desktop (Electron)"],
-    features: ["dApp Connector", "Multiple Accounts", "Token Support", "Lightweight", "Open Source"],
-    category: "Browser",
-    websiteUrl: "https://github.com/ThierryM1212/SAFEW",
-    downloadUrl: "https://github.com/ThierryM1212/SAFEW/releases",
-    rating: 4.5,
-    users: "8K+",
-    icon: Zap,
-    securityLevel: "High",
-    type: "Hot",
-    color: "from-green-500/20 to-green-500/5"
-  },
-  {
-    id: "ledger",
-    name: "Ledger Hardware Wallet",
-    description: "Cold storage solution with Ergo support for maximum security",
-    platforms: ["Hardware"],
-    features: ["Cold Storage", "Hardware Security", "PIN Protection", "Recovery Phrase", "Offline Signing"],
-    category: "Hardware",
-    isRecommended: true,
-    websiteUrl: "https://www.ledger.com",
-    rating: 4.9,
-    users: "5M+",
-    icon: HardDrive,
-    securityLevel: "Maximum",
-    type: "Cold",
-    color: "from-red-500/20 to-red-500/5"
-  },
-  {
-    id: "ergo-paper-wallet",
-    name: "Ergo Paper Wallet",
-    description: "Generate secure paper wallets for cold storage of ERG",
-    platforms: ["Web"],
-    features: ["Offline Generation", "Cold Storage", "No Registration", "Open Source", "Maximum Security"],
-    category: "Paper",
-    websiteUrl: "https://ergoplatform.org/en/wallets/",
-    rating: 4.8,
-    users: "Used by thousands",
-    icon: Lock,
-    securityLevel: "Maximum",
-    type: "Cold",
-    color: "from-indigo-500/20 to-indigo-500/5"
-  }
-]
+type Wallet = WalletEntry & { icon: LucideIcon }
+
+const allWallets: Wallet[] = walletRegistry.map((w) => ({
+  ...w,
+  icon: ICON_BY_NAME[w.iconName],
+}))
 
 
 
@@ -341,15 +229,24 @@ export default function WalletClient() {
                   </div>
                   
                   <p className="text-gray-400 leading-relaxed mb-4 flex-grow min-h-[60px]">{wallet.description}</p>
-                  
-                  <div className="flex items-center gap-2 mb-6 min-h-[28px]">
+
+                  <div className="flex items-center gap-2 mb-3 min-h-[28px] flex-wrap">
                     <Badge className={`text-xs border ${getSecurityColor(wallet.securityLevel)}`}>
                       {wallet.securityLevel}
                     </Badge>
                     <Badge className={`text-xs border ${getTypeColor(wallet.type)}`}>
                       {wallet.type}
                     </Badge>
+                    <Badge className="text-xs border border-white/10 bg-white/5 text-neutral-400 font-mono font-normal">
+                      Verified {wallet.lastVerified}
+                    </Badge>
                   </div>
+
+                  {wallet.warning && (
+                    <p className="text-[11px] text-yellow-300/80 mb-3 leading-snug">
+                      <span className="text-yellow-400">⚠</span> {wallet.warning}
+                    </p>
+                  )}
                   
                   <div className="mt-auto">
                     <EnhancedButton

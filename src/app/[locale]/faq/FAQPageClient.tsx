@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { useSearchParams } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
 import { 
@@ -239,6 +239,9 @@ export default function FAQPageClient({
                   <motion.div key={faq.id} variants={itemVariants}>
                     <Card className="bg-black/80 border-white/10 hover:border-orange-500/30 transition-all duration-300">
                       <button
+                        type="button"
+                        aria-expanded={expanded === faq.id}
+                        aria-controls={`faq-panel-${faq.id}`}
                         onClick={() => setExpanded(expanded === faq.id ? null : faq.id)}
                         className="w-full p-5 flex justify-between items-start text-left group"
                       >
@@ -274,24 +277,32 @@ export default function FAQPageClient({
                           <ChevronDown className="w-5 h-5 text-neutral-400" />
                         </motion.div>
                       </button>
-                      <AnimatePresence>
-                        {expanded === faq.id && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="overflow-hidden"
-                          >
-                            <div className="px-5 pb-5">
-                              <div className="ml-11 pt-3 border-t border-white/10">
-                                <p className="text-neutral-300 leading-relaxed whitespace-pre-line">
-                                  {answer}
-                                </p>
-                              </div>
+                      {/*
+                        Always render the answer in HTML so crawlers, screen
+                        readers, and LLM extractors can see it. CSS controls
+                        visual collapse via grid-rows transition; aria-hidden
+                        keeps assistive tech in sync with the open/closed state.
+                      */}
+                      <div
+                        id={`faq-panel-${faq.id}`}
+                        role="region"
+                        aria-hidden={expanded !== faq.id}
+                        className={`grid transition-all duration-300 ease-out ${
+                          expanded === faq.id
+                            ? 'grid-rows-[1fr] opacity-100'
+                            : 'grid-rows-[0fr] opacity-0 pointer-events-none'
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="px-5 pb-5">
+                            <div className="ml-11 pt-3 border-t border-white/10">
+                              <p className="text-neutral-300 leading-relaxed whitespace-pre-line">
+                                {answer}
+                              </p>
                             </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                          </div>
+                        </div>
+                      </div>
                     </Card>
                   </motion.div>
                 )

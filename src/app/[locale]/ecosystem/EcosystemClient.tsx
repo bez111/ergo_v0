@@ -55,7 +55,7 @@ import {
   Activity,
   ArrowRight,
 } from "lucide-react"
-import { projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, sortProjectsForListing, type EcosystemProject } from "./_data"
+import { projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, sortProjectsForListing, ECOSYSTEM_LAST_VERIFIED, type EcosystemProject } from "./_data"
 
 type ProjectStatus = EcosystemProject["status"]
 
@@ -267,7 +267,10 @@ export default function EcosystemClient() {
                           {statusConfig[project.status]?.icon}
                         </div>
                       </div>
-                      <p className="text-neutral-400 mb-6 flex-1">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
+                      <p className="text-neutral-400 mb-3 flex-1">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
+                      <p className="text-[11px] text-neutral-500 font-mono mb-4">
+                        Last verified {project.lastVerified ?? ECOSYSTEM_LAST_VERIFIED}
+                      </p>
                       <div className="flex flex-col gap-2 mt-auto">
                         <Button asChild className="w-full bg-orange-500 hover:bg-orange-400 text-white">
                           <Link href={`/ecosystem/${project.slug}`} aria-label={`Learn more about ${project.name}`} className="flex items-center gap-2">

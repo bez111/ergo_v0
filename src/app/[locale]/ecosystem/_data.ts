@@ -16,7 +16,14 @@ export type EcosystemProject = {
   technologies?: string[]
   faq?: Array<{ question: string; answer: string }> // FAQ for key projects
   relatedTags?: string[] // Tags to match with blog posts
+  /** YYYY-MM-DD — date this entry was last manually verified.
+   *  Display on every card so users can judge freshness. */
+  lastVerified?: string
 }
+
+/** Default verification date — used for any project not explicitly stamped.
+ *  Update this when doing the next site-wide ecosystem sweep. */
+export const ECOSYSTEM_LAST_VERIFIED = "2026-05-08"
 
 export const projects: EcosystemProject[] = [
   { 

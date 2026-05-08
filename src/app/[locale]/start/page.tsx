@@ -13,12 +13,21 @@ import {
   createFAQSchema,
 } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { getWalletById } from "@/data/wallets"
 
-// Links (not translated)
+// Wallet links pulled from the central registry — single source of truth.
+// /wallet renders the full list; /start uses 3 IDs by reference.
 const WALLET_LINKS = {
-  nautilus: "https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai",
-  ergoMobile: "https://apps.apple.com/us/app/terminus-wallet-ergo/id1643137927",
-  safew: "https://github.com/ThierryM1212/SAFEW"
+  nautilus: getWalletById("nautilus").downloadUrl!,
+  // "Ergo Mobile" on /start is the official iOS/Android wallet; we link to the
+  // Android Play Store entry (iOS users can find the iOS build via /wallet).
+  ergoMobile: getWalletById("ergo-wallet-android").downloadUrl!,
+  safew: getWalletById("safew").downloadUrl!,
+}
+const WALLET_VERIFIED = {
+  nautilus: getWalletById("nautilus").lastVerified,
+  ergoMobile: getWalletById("ergo-wallet-android").lastVerified,
+  safew: getWalletById("safew").lastVerified,
 }
 
 const EXCHANGE_LINKS = {
@@ -50,32 +59,35 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
       title: t('page.steps.0.title'),
       description: t('page.steps.0.description'),
       wallets: [
-        { 
-          name: "Nautilus", 
-          type: t('page.steps.0.wallets.0.type'), 
-          description: t('page.steps.0.wallets.0.description'), 
-          link: WALLET_LINKS.nautilus, 
-          recommended: true, 
-          buttonText: t('page.steps.0.wallets.0.buttonText'), 
-          icon: Download 
+        {
+          name: "Nautilus",
+          type: t('page.steps.0.wallets.0.type'),
+          description: t('page.steps.0.wallets.0.description'),
+          link: WALLET_LINKS.nautilus,
+          lastVerified: WALLET_VERIFIED.nautilus,
+          recommended: true,
+          buttonText: t('page.steps.0.wallets.0.buttonText'),
+          icon: Download
         },
-        { 
-          name: "Ergo Mobile", 
-          type: t('page.steps.0.wallets.1.type'), 
-          description: t('page.steps.0.wallets.1.description'), 
-          link: WALLET_LINKS.ergoMobile, 
-          recommended: false, 
-          buttonText: t('page.steps.0.wallets.1.buttonText'), 
-          icon: Smartphone 
+        {
+          name: "Ergo Mobile",
+          type: t('page.steps.0.wallets.1.type'),
+          description: t('page.steps.0.wallets.1.description'),
+          link: WALLET_LINKS.ergoMobile,
+          lastVerified: WALLET_VERIFIED.ergoMobile,
+          recommended: false,
+          buttonText: t('page.steps.0.wallets.1.buttonText'),
+          icon: Smartphone
         },
-        { 
-          name: "SAFEW", 
-          type: t('page.steps.0.wallets.2.type'), 
-          description: t('page.steps.0.wallets.2.description'), 
-          link: WALLET_LINKS.safew, 
-          recommended: false, 
-          buttonText: t('page.steps.0.wallets.2.buttonText'), 
-          icon: Globe 
+        {
+          name: "SAFEW",
+          type: t('page.steps.0.wallets.2.type'),
+          description: t('page.steps.0.wallets.2.description'),
+          link: WALLET_LINKS.safew,
+          lastVerified: WALLET_VERIFIED.safew,
+          recommended: false,
+          buttonText: t('page.steps.0.wallets.2.buttonText'),
+          icon: Globe
         }
       ]
     },
@@ -242,7 +254,8 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
                                     <p className="text-orange-400/80 text-sm font-medium">{wallet.type}</p>
                                   </div>
                                 </div>
-                                <p className="text-gray-400 leading-relaxed mb-6">{wallet.description}</p>
+                                <p className="text-gray-400 leading-relaxed mb-3">{wallet.description}</p>
+                                <p className="text-[11px] text-neutral-500 font-mono mb-4">Verified {wallet.lastVerified}</p>
                                 <EnhancedButton href={wallet.link} external={true} variant="primary" size="lg" className="w-full" icon={<wallet.icon className="h-5 w-5" />} ariaLabel={`Download ${wallet.name} wallet`}>{wallet.buttonText}</EnhancedButton>
                               </div>
                             ))}

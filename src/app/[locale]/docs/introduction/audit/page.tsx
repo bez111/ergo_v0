@@ -1,36 +1,61 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import { Shield, FileText, Lock, Cpu, CheckCircle, AlertTriangle, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Shield, FileText, Lock, Cpu, CheckCircle, AlertTriangle, ExternalLink, Info } from "lucide-react";
 
 export default function AuditPage() {
   return (
     <div className="px-4 max-w-3xl mx-auto pb-24">
       {/* Hero Section */}
-      <div className="mb-12">
+      <div className="mb-8">
+        <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">Security · Historical Record</p>
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Security Audit
+          Pre-Launch Security Audit (2019)
         </h1>
-        <p className="text-xl text-gray-400 mb-6">
-          Ergo has successfully passed a security audit of its most critical code components. The audit was performed by Jean-Philippe Aumasson (<a href="https://aumasson.jp/" target="_blank" rel="noopener noreferrer" className="underline text-orange-300 hover:text-orange-200">veorq</a>), a renowned cryptographer.
+        <p className="text-xl text-gray-400 mb-4">
+          This page documents the original pre-mainnet cryptographic audit of Ergo, performed by{" "}
+          <a href="https://aumasson.jp/" target="_blank" rel="noopener noreferrer" className="underline text-orange-300 hover:text-orange-200">Jean-Philippe Aumasson (veorq)</a>{" "}
+          in December 2019, before the protocol went live.
         </p>
-        <p className="text-lg text-gray-300 mb-2">
-          The detailed report is below. No critical issues were found. Key comments and recommendations are summarized for transparency.
-        </p>
+      </div>
+
+      {/* Freshness banner */}
+      <div className="bg-yellow-500/5 border border-yellow-500/30 rounded-xl p-5 mb-8">
+        <div className="flex items-start gap-3">
+          <Info className="w-5 h-5 text-yellow-400 mt-0.5 shrink-0" />
+          <div className="text-sm text-neutral-300 leading-relaxed">
+            <p className="mb-2">
+              <strong className="text-white">This is the original 2019 review</strong> — kept on this page for historical
+              reference. It is <em>not</em> a current security guarantee for the live protocol, ecosystem dApps,
+              wallets, bridges, or experimental SDKs (such as ChainCash and the agent-economy stack).
+            </p>
+            <p>
+              For the current maturity status of every component (node, ErgoScript / Sigma, Sigma Rust, Fleet SDK,
+              wallets, Rosen Bridge, ChainCash, agent-payment SDKs, ecosystem dApps), see the live{" "}
+              <Link href="/audits" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                /audits maturity matrix
+              </Link>. To report a security issue, follow the{" "}
+              <Link href="/legal/security" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+                responsible disclosure policy
+              </Link>.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Summary Section */}
       <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
-          <CheckCircle className="w-5 h-5 text-green-400" /> Summary
+          <CheckCircle className="w-5 h-5 text-green-400" /> Summary (2019)
         </h2>
         <ul className="list-disc pl-6 text-gray-300 space-y-2">
           <li>The audit covered: Sigma protocol proofs, wallet secret storage, and Proof-of-Work validation.</li>
-          <li>No critical vulnerabilities were found.</li>
+          <li>No critical vulnerabilities were found at the time of review.</li>
           <li>Recommendations were made for password policies and parameter validation.</li>
         </ul>
         <div className="text-sm text-gray-400 mt-4">
-          <span className="italic">Ergo security assessment by Jean-Philippe Aumasson on 07/Dec/19</span>
+          <span className="italic">Ergo security assessment by Jean-Philippe Aumasson, 7 December 2019.</span>
         </div>
       </div>
 
