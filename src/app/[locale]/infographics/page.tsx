@@ -98,6 +98,55 @@ export default function InfographicsPage() {
       <Suspense>
         <InfographicsClient />
       </Suspense>
+
+      {/* Server-rendered fallback: every infographic appears in the static HTML
+          so crawlers, screen readers, and no-JS users always see the catalog
+          even before the interactive client UI hydrates. */}
+      <section
+        id="all-infographics"
+        aria-label="All infographics"
+        className="container max-w-5xl mx-auto px-4 py-16 border-t border-neutral-800"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+          All Infographics
+        </h2>
+        <p className="text-sm text-neutral-400 mb-8">
+          {infographics.length} visual explainers, fully indexed for search
+          engines and screen readers. Use the filter UI above for an
+          interactive view.
+        </p>
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0">
+          {infographics.map((item) => (
+            <li key={item.slug} className="border border-neutral-800 rounded-xl bg-neutral-900/40 overflow-hidden">
+              <a
+                href={`/infographics/${item.slug}`}
+                className="block group focus:outline-none focus:ring-2 focus:ring-orange-500/50"
+              >
+                <div className="relative aspect-[16/10] bg-neutral-950">
+                  {/* Native lazy-loaded image keeps the SSR markup simple and
+                      indexable without depending on the JS gallery. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.previewImageUrl}
+                    alt={item.imageAlt || item.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-base font-semibold text-white group-hover:text-orange-300 transition-colors mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-neutral-400 leading-relaxed line-clamp-3">
+                    {item.shortDescription}
+                  </p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   )
 }

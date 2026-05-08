@@ -96,6 +96,36 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
     <>
       {renderSchemaScripts(schemas)}
       <TechnologyClient />
+
+      {/* Server-rendered FAQ — the interactive collapsible above only reveals
+          answers after a click, which hides them from crawlers and screen
+          readers. This block keeps every Q&A in the static HTML. */}
+      <section
+        id="technology-faq-answers"
+        aria-label="Technology FAQ — full answers"
+        className="container max-w-4xl mx-auto px-4 py-16 border-t border-neutral-800"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+          Technology FAQ — full answers
+        </h2>
+        <p className="text-sm text-neutral-400 mb-8">
+          Every question on this page, fully expanded for search engines and
+          screen readers.
+        </p>
+        <dl className="space-y-4">
+          {faqItems.map((item) => (
+            <div
+              key={item.question}
+              className="border border-neutral-800 rounded-lg p-4 bg-neutral-900/40"
+            >
+              <dt className="font-semibold text-white mb-2">{item.question}</dt>
+              <dd className="text-neutral-300 leading-relaxed whitespace-pre-line">
+                {item.answer}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </>
   )
 }

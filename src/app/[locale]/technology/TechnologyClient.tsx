@@ -209,12 +209,14 @@ export default function TechnologyPage() {
     },
     {
       id: "oracle-pools",
-      q: "Why are Ergo's Oracle Pools more secure than Chainlink?",
+      q: "How do Ergo's Oracle Pools differ from Chainlink?",
       tag: "Oracles",
       a: (
         <>
-          Protocol-native, <b>composable</b> data feeds without a central operator — no single point of bribery or
-          failure. Can be plugged into any contract. More: {""}
+          Ergo Oracle Pools are <b>protocol-native, on-chain UTxO-based</b> data feeds with no central operator —
+          composable directly into any ErgoScript contract. Chainlink runs an off-chain decentralized oracle
+          network with on-chain aggregation contracts on multiple EVM chains. Different threat models and trust
+          assumptions; not a strict &quot;more secure&quot; comparison. More: {""}
           <Link href="/technology/oracle-pools" className="underline hover:opacity-80">Oracle Pools</Link>.
         </>
       ),

@@ -81,7 +81,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/bitcoin.svg",
     color: "#F7931A",
     
-    seoTitle: "Ergo vs Bitcoin 2025: Smart Contracts, Privacy & Sustainability Compared",
+    seoTitle: "Ergo vs Bitcoin: Smart Contracts, Privacy & Sustainability Compared",
     seoDescription: "Complete comparison of Ergo and Bitcoin: eUTXO smart contracts vs simple UTXO, Sigma Protocols privacy, storage rent sustainability, and NiPoPoWs light clients.",
     keywords: [
       "ergo vs bitcoin",
@@ -108,7 +108,7 @@ export const comparisons: ComparisonData[] = [
         },
         {
           title: "Long-term Sustainability",
-          description: "Storage rent ensures miner revenue beyond block rewards, solving Bitcoin's security budget problem",
+          description: "Storage rent reclaims fees from dormant UTxOs, giving miners revenue beyond block rewards. This addresses long-term security-budget concerns; outcomes still depend on adoption and fee markets.",
           icon: "TrendingUp",
         },
         {
@@ -135,8 +135,8 @@ export const comparisons: ComparisonData[] = [
       },
       {
         title: "Long-term Security Budget",
-        content: "Bitcoin's block rewards halve every 4 years, eventually relying entirely on transaction fees. This creates uncertainty about long-term miner incentives. Ergo's storage rent reclaims fees from dormant UTXOs, providing a sustainable revenue stream for miners indefinitely.",
-        ergoAdvantage: "Protocol-level solution to the security budget problem that Bitcoin hasn't solved.",
+        content: "Bitcoin's block rewards halve every 4 years, eventually relying entirely on transaction fees. This creates open questions about long-term miner incentives. Ergo's storage rent reclaims fees from dormant UTxOs, adding a protocol-level revenue stream for miners on top of emissions and tx fees.",
+        ergoAdvantage: "A protocol-level mechanism (storage rent) that addresses long-term security-budget concerns; long-term outcomes still depend on adoption, fee markets and miner behavior.",
       },
     ],
     
@@ -162,7 +162,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -174,7 +174,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/ethereum.svg",
     color: "#627EEA",
     
-    seoTitle: "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
+    seoTitle: "Ergo vs Ethereum: eUTXO vs Account Model, PoW vs PoS Compared",
     seoDescription: "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols.",
     keywords: [
       "ergo vs ethereum",
@@ -255,7 +255,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -267,7 +267,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/cardano.svg",
     color: "#2F6DFE",
     
-    seoTitle: "Ergo vs Cardano 2025: eUTXO Cousins with Different Philosophies",
+    seoTitle: "Ergo vs Cardano: eUTXO Cousins with Different Philosophies",
     seoDescription: "Compare Ergo and Cardano: both use eUTXO, but Ergo has PoW consensus, storage rent, fair launch, and native Sigma Protocols privacy.",
     keywords: [
       "ergo vs cardano",
@@ -343,7 +343,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -355,7 +355,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/monero.svg",
     color: "#FF6600",
     
-    seoTitle: "Ergo vs Monero 2025: Privacy Approaches Compared",
+    seoTitle: "Ergo vs Monero: Privacy Approaches Compared",
     seoDescription: "Compare Ergo and Monero privacy: Sigma Protocols vs Ring Signatures, optional vs mandatory privacy, smart contracts, and regulatory considerations.",
     keywords: [
       "ergo vs monero",
@@ -431,7 +431,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -443,7 +443,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/zcash.svg",
     color: "#F4B728",
     
-    seoTitle: "Ergo vs Zcash 2025: Sigma Protocols vs zk-SNARKs Privacy",
+    seoTitle: "Ergo vs Zcash: Sigma Protocols vs zk-SNARKs Privacy",
     seoDescription: "Compare Ergo and Zcash: Sigma Protocols vs zk-SNARKs, no trusted setup, smart contracts, fair launch vs founders reward.",
     keywords: [
       "ergo vs zcash",
@@ -509,7 +509,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -521,7 +521,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/solana.svg",
     color: "#14F195",
     
-    seoTitle: "Ergo vs Solana 2025: Decentralization vs Speed Tradeoffs",
+    seoTitle: "Ergo vs Solana: Decentralization vs Speed Tradeoffs",
     seoDescription: "Compare Ergo and Solana: PoW vs PoS, decentralization vs TPS, fair launch vs VC funding, and sustainability approaches.",
     keywords: [
       "ergo vs solana",
@@ -592,7 +592,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -604,7 +604,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/cbdc.svg",
     color: "#DC2626",
     
-    seoTitle: "Ergo vs CBDCs 2025: Decentralized Money vs Central Bank Digital Currencies",
+    seoTitle: "Ergo vs CBDCs: Decentralized Money vs Central Bank Digital Currencies",
     seoDescription: "Compare Ergo blockchain with Central Bank Digital Currencies: privacy, censorship resistance, programmable money, and financial freedom.",
     keywords: [
       "ergo vs cbdc",
@@ -680,7 +680,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
   
   // ============================================
@@ -692,7 +692,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/vc-chain.svg",
     color: "#8B5CF6",
     
-    seoTitle: "Ergo vs VC-Funded Blockchains 2025: Fair Launch vs Insider Allocation",
+    seoTitle: "Ergo vs VC-Funded Blockchains: Fair Launch vs Insider Allocation",
     seoDescription: "Compare Ergo's fair launch with VC-funded blockchains: token distribution, governance, incentive alignment, and long-term sustainability.",
     keywords: [
       "ergo vs vc chains",
@@ -768,7 +768,7 @@ export const comparisons: ComparisonData[] = [
     ],
     
     publishDate: "2025-01-15",
-    updatedDate: "2025-11-26",
+    updatedDate: "2026-05-08",
   },
 
   // ============================================
@@ -780,7 +780,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/kaspa.svg",
     color: "#49EACB",
     
-    seoTitle: "Ergo vs Kaspa 2025: Smart Contracts, Sustainability & PoW Compared",
+    seoTitle: "Ergo vs Kaspa: Smart Contracts, Sustainability & PoW Compared",
     seoDescription: "Ergo vs Kaspa comparison: eUTXO smart contracts vs pure payments, storage rent vs no rent, privacy features, and long-term sustainability.",
     keywords: [
       "ergo vs kaspa",
@@ -886,7 +886,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/ravencoin.svg",
     color: "#384182",
     
-    seoTitle: "Ergo vs Ravencoin 2025: Smart Contracts, Privacy & Token Features Compared",
+    seoTitle: "Ergo vs Ravencoin: Smart Contracts, Privacy & Token Features Compared",
     seoDescription: "Ergo vs Ravencoin comparison: eUTXO smart contracts vs asset-focused scripting, privacy features, DeFi capabilities, and sustainability.",
     keywords: [
       "ergo vs ravencoin",
@@ -992,7 +992,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/litecoin.svg",
     color: "#345D9D",
     
-    seoTitle: "Ergo vs Litecoin 2025: Smart Contracts, Privacy & Features Compared",
+    seoTitle: "Ergo vs Litecoin: Smart Contracts, Privacy & Features Compared",
     seoDescription: "Ergo vs Litecoin comparison: eUTXO smart contracts vs simple payments, Sigma Protocols vs MWEB privacy, and DeFi capabilities.",
     keywords: [
       "ergo vs litecoin",
@@ -1098,7 +1098,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/avalanche.svg",
     color: "#E84142",
     
-    seoTitle: "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
+    seoTitle: "Ergo vs Avalanche: Fair Launch PoW vs VC-Funded PoS Compared",
     seoDescription: "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization.",
     keywords: [
       "ergo vs avalanche",
@@ -1206,7 +1206,7 @@ export const comparisons: ComparisonData[] = [
     logo: "/logos/algorand.svg",
     color: "#000000",
     
-    seoTitle: "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
+    seoTitle: "Ergo vs Algorand: Decentralized PoW vs Corporate PoS Compared",
     seoDescription: "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain.",
     keywords: [
       "ergo vs algorand",

@@ -11,6 +11,7 @@ import { createOrganizationSchema, createWebSiteSchema } from "@/lib/seo/schemas
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { PartialLocaleNotice } from "@/components/partial-locale-notice";
 import { siteConfig } from "@/config/site-config";
 
 
@@ -132,6 +133,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             </a>
             <div className="relative flex min-h-screen flex-col">
               <Header />
+              <PartialLocaleNotice locale={locale} />
               <main id="main-content" className="flex-1" tabIndex={-1}>
                 {children}
               </main>
