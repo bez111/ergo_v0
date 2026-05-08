@@ -6688,7 +6688,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Earn ERG through block rewards and transaction fees",
       "GPU mining with 4GB+ VRAM (ASIC-resistant)",
       "Can mine solo or join mining pools",
-      "Current block reward: ~27 ERG (decreasing over time)",
+      "Current block reward: 3 ERG, plus tx fees and storage rent",
       "Play a key role in Ergo's decentralization",
     ],
     
@@ -6715,7 +6715,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       },
       {
         question: "How much can Ergo miners earn?",
-        answer: "Mining profitability depends on your GPU hashrate, electricity costs, and ERG price. Use mining calculators to estimate earnings. Current block reward is ~27 ERG, decreasing over time according to the emission schedule.",
+        answer: "Mining profitability depends on your GPU hashrate, electricity cost, ERG price, network difficulty, pool fees and applicable taxes. Cross-check with an external calculator (minerstat, WhatToMine) before buying hardware. The current block reward is 3 ERG, plus transaction fees and storage rent — emissions step down over time per the protocol's schedule. Mining can be unprofitable on some hardware and electricity rates.",
       },
     ],
     

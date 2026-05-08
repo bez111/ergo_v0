@@ -150,7 +150,7 @@ export const targetQuestions = {
         "Circulating Supply": "XX million ERG",
         "Max Supply": "97.7 million ERG",
         "All-Time High": "$18.95 (Nov 2021)",
-        "Mining Reward": "27 ERG per block"
+        "Mining Reward": "3 ERG per block (+ tx fees + storage rent)"
       },
       keywords: ["ergo price", "market cap", "statistics"],
       schema: "statistics"

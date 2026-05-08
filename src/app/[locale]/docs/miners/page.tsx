@@ -116,7 +116,8 @@ export default function MinersResourcesPage() {
               <Coins className="w-5 h-5 text-yellow-400" />
               <span className="text-sm text-gray-400">Block Reward</span>
             </div>
-            <p className="text-2xl font-bold text-white">27 ERG</p>
+            <p className="text-2xl font-bold text-white">3 ERG</p>
+            <p className="text-[10px] text-neutral-500 font-mono mt-1">+ tx fees + storage rent</p>
           </div>
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4">
             <div className="flex items-center gap-2 mb-2">

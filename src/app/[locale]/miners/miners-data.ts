@@ -51,7 +51,7 @@ export const comparison = [
     bitcoin: { status: "warning", text: "Halving every 4y" },
     ethereum: { status: "bad", text: "No mining" },
     monero: { status: "good", text: "Tail emission" },
-    ergo: { status: "good", text: "9 ERG + fees" }
+    ergo: { status: "good", text: "3 ERG + fees + storage rent" }
   },
   {
     criterion: "Future Incentives",
