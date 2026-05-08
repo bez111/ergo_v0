@@ -52,7 +52,7 @@ export default function VelvetForksLayout({ children }: { children: React.ReactN
       headline: "Velvet Forks: Seamless Protocol Upgrades",
       description: "How Ergo enables backward-compatible protocol upgrades without hard forks",
       image: SEO.ogImage,
-      datePublished: "2023-01-15",
+      datePublished: "2025-08-15",
       dateModified: "2026-04-27",
       proficiencyLevel: "Advanced",
       technicalAudience: "Protocol developers and researchers",

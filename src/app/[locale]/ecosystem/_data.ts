@@ -22,15 +22,15 @@ export const projects: EcosystemProject[] = [
   { 
     id: 1, 
     slug: "spectrum-finance",
-    name: "Spectrum Finance", 
-    category: "DEFI", 
-    status: "NOT_OPERATING", 
+    name: "Spectrum Finance",
+    category: "DEFI",
+    status: "OPERATIONAL",
     description: "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.", 
-    longDescription: `Spectrum Finance was one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which allowed users to pay transaction fees in tokens other than ERG.
+    longDescription: `Spectrum Finance is one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which lets users pay transaction fees in tokens other than ERG.
 
-The DEX utilized automated market maker (AMM) pools for trustless token swaps, with liquidity providers earning fees from all trades. Yield farming features enabled additional token rewards for liquidity providers, creating incentives for deep liquidity across trading pairs.
+The DEX uses automated market maker (AMM) pools for trustless token swaps, with liquidity providers earning fees from all trades. Yield farming features provide additional token rewards for liquidity providers, creating incentives for deep liquidity across trading pairs.
 
-As an open-source project, Spectrum Finance contributed significant code and research to the eUTXO DeFi ecosystem, demonstrating how complex financial applications could be built securely on this model. The protocol's smart contracts and architecture continue to serve as reference implementations for new DeFi projects.`,
+As an open-source project, Spectrum Finance contributes significant code and research to the eUTXO DeFi ecosystem, demonstrating how complex financial applications can be built securely on this model. Its smart contracts and architecture serve as reference implementations for new DeFi projects.`,
     url: "https://spectrum.fi",
     github: "https://github.com/spectrum-finance",
     features: ["Decentralized Exchange", "Liquidity Pools", "Yield Farming", "Babel Fees Support", "Cross-chain Trading"],
@@ -737,10 +737,12 @@ EXLE represents ongoing innovation in Ergo DeFi, exploring how traditional lendi
   },
 ]
 
+// Featured = production-ready projects only. Anything in TESTING / PROTOTYPE
+// stays in the main grid with its real status badge — never in featured.
 export const featuredProjects: EcosystemProject[] = [
   projects.find(p => p.slug === "rosen-bridge")!,
+  projects.find(p => p.slug === "spectrum-finance")!,
   projects.find(p => p.slug === "mew-finance")!,
-  projects.find(p => p.slug === "duckpools")!,
   projects.find(p => p.slug === "sigmausd")!,
   projects.find(p => p.slug === "paideia")!,
   projects.find(p => p.slug === "ergoraffle")!,

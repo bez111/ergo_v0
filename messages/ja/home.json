@@ -671,5 +671,16 @@
         "description": "Ergoユーザーとつながる"
       }
     }
+  },
+  "blogSectionHome": {
+    "titleStart": "最新の",
+    "titleMiddle": "",
+    "titleEnd": "ブログ",
+    "subtitle": "Ergoチームによる解説、チュートリアル、最新情報",
+    "viewAll": "すべての記事"
+  },
+  "agentEconomyHome": {
+    "seeStack": "スタックを見る",
+    "seeFullStack": "完全なスタック"
   }
 }

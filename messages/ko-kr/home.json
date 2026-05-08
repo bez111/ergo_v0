@@ -671,5 +671,16 @@
         "description": "Ergo 사용자와 연결"
       }
     }
+  },
+  "blogSectionHome": {
+    "titleStart": "최신",
+    "titleMiddle": "",
+    "titleEnd": "블로그",
+    "subtitle": "Ergo 팀의 인사이트, 튜토리얼, 업데이트",
+    "viewAll": "모든 게시물"
+  },
+  "agentEconomyHome": {
+    "seeStack": "스택 보기",
+    "seeFullStack": "전체 스택"
   }
 }

@@ -671,5 +671,16 @@
         "description": "Conéctate con usuarios de Ergo"
       }
     }
+  },
+  "blogSectionHome": {
+    "titleStart": "Lo último",
+    "titleMiddle": "del",
+    "titleEnd": "blog",
+    "subtitle": "Análisis, tutoriales y novedades del equipo Ergo",
+    "viewAll": "Todos los artículos"
+  },
+  "agentEconomyHome": {
+    "seeStack": "Ver el stack",
+    "seeFullStack": "Stack completo"
   }
 }

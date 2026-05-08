@@ -70,7 +70,7 @@ export default function ErgoScriptLayout({ children }: { children: React.ReactNo
       headline: "ErgoScript: Smart Contract Programming Language",
       description: "Comprehensive guide to building secure smart contracts on Ergo with ErgoScript",
       image: SEO.ogImage,
-      datePublished: "2023-01-15",
+      datePublished: "2025-08-15",
       dateModified: "2026-04-27",
       proficiencyLevel: "Intermediate",
       technicalAudience: "Smart contract developers and blockchain programmers",

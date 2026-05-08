@@ -75,6 +75,9 @@
         "subtitle": "Fleet SDK, MCP, LangChain",
         "description": "TypeScript и Python SDK с инструментами LangChain, MCP-сервер для Claude и 10 рабочих примеров — от простых платежей до мультиагентной оркестрации."
       }
-    }
+    },
+    "titleStart": "Почему",
+    "titleHighlight": "Ergo",
+    "titleEnd": "?"
   }
 }

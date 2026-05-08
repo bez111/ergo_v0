@@ -341,29 +341,44 @@ export default function RoadmapPage() {
               </div>
             </div>
 
-            <div className="bg-red-400/10 rounded-xl p-6">
-              <h3 className="text-xl font-bold text-red-400 mb-4">2024: Future Horizons (In Progress)</h3>
+            <div className="bg-blue-400/10 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-blue-300 mb-4">2024 — Smart Layer Era</h3>
               <div className="space-y-2 text-gray-300">
                 <p><strong>Milestones:</strong></p>
                 <ul className="ml-4 space-y-1">
-                  <li>• ErgoHack VIII - Ergo as a Smart Layer ✓</li>
+                  <li>• ErgoHack VIII — Ergo as a Smart Layer ✓</li>
                   <li>• DAO for Ergo core ✓</li>
                   <li>• Ergo achieved #1 in TVL% of market cap for a PoW chain ✓</li>
                   <li>• Ergo listed on MEXC exchange ✓</li>
                 </ul>
                 <p><strong>Technical Improvements:</strong></p>
                 <ul className="ml-4 space-y-1">
-                  <li>• Successful migration from LevelDB to RocksDB ✓</li>
+                  <li>• Migration from LevelDB to RocksDB ✓</li>
                   <li>• Node 6.0.0-alpha1 release ✓</li>
                   <li>• Sigma protocol updates ✓</li>
-                  <li>• Infrastructure improvements ✓</li>
                 </ul>
-                <p><strong>Ongoing Challenges:</strong></p>
+              </div>
+            </div>
+
+            <div className="bg-orange-400/10 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-orange-300 mb-4">2025–2026: Agent Economy &amp; Beyond</h3>
+              <div className="space-y-2 text-gray-300">
+                <p><strong>Shipped:</strong></p>
                 <ul className="ml-4 space-y-1">
-                  <li>• Scalability Improvements (Layer 1 and Layer 2)</li>
-                  <li>• Usability Enhancements</li>
-                  <li>• Security Strengthening</li>
-                  <li>• Ecosystem Development</li>
+                  <li>• Agent Economy positioning, manifesto, technical reference ✓</li>
+                  <li>• ergo-agent-pay SDK (TypeScript) — v0.1 → v0.2 with full Note lifecycle ✓</li>
+                  <li>• ergo-agent-py (Python SDK) ✓</li>
+                  <li>• ergo-agent-mcp (Model Context Protocol server) ✓</li>
+                  <li>• Framework adapters: LangChain, OpenAI, CrewAI, AutoGen ✓</li>
+                  <li>• 10 working examples on testnet ✓</li>
+                </ul>
+                <p><strong>Ongoing:</strong></p>
+                <ul className="ml-4 space-y-1">
+                  <li>• Production audit of agent payment SDKs</li>
+                  <li>• Standardisation of agent payment discovery (RFC-style spec)</li>
+                  <li>• Hosted reference dApp on testnet</li>
+                  <li>• Scalability improvements (L1 and L2)</li>
+                  <li>• Continued ecosystem development and security strengthening</li>
                 </ul>
               </div>
             </div>

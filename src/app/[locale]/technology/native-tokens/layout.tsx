@@ -51,7 +51,7 @@ export default function NativeTokensLayout({ children }: { children: React.React
       headline: "Native Tokens & NFTs on Ergo Blockchain",
       description: "How to create first-class tokens and NFTs without smart contracts on Ergo",
       image: SEO.ogImage,
-      datePublished: "2023-01-15",
+      datePublished: "2025-08-15",
       dateModified: "2026-04-27",
       proficiencyLevel: "Beginner",
       technicalAudience: "Token creators and NFT artists",

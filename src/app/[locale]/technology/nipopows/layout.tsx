@@ -51,7 +51,7 @@ export default function NipopowsLayout({ children }: { children: React.ReactNode
       headline: "NIPoPoWs: Non-Interactive Proofs of Proof-of-Work",
       description: "How NIPoPoWs enable light clients and trustless cross-chain bridges on Ergo",
       image: SEO.ogImage,
-      datePublished: "2023-01-15",
+      datePublished: "2025-08-15",
       dateModified: "2026-04-27",
       proficiencyLevel: "Advanced",
       technicalAudience: "Blockchain researchers and developers",

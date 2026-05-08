@@ -72,7 +72,7 @@ export default function BabelFeesLayout({ children }: { children: React.ReactNod
       headline: "Babel Fees: Pay Transaction Fees in Any Token",
       description: "How Ergo's Babel Fees enable gasless UX by allowing fee payment in any token",
       image: SEO.ogImage,
-      datePublished: "2023-01-15",
+      datePublished: "2025-08-15",
       dateModified: "2026-04-27",
       proficiencyLevel: "Beginner",
       technicalAudience: "DeFi users and developers",

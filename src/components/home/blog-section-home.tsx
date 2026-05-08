@@ -6,9 +6,21 @@ import { Clock } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CyberButton } from "@/components/animations/cyber-button"
+import { useTranslations, useLocale } from "next-intl"
 import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
 
+// Map our app locales to Intl date locales
+const INTL_LOCALE: Record<string, string> = {
+  en: 'en-US', ru: 'ru-RU', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
+  it: 'it-IT', 'pt-br': 'pt-BR', ja: 'ja-JP', 'ko-kr': 'ko-KR',
+  'zh-cn': 'zh-CN', 'zh-tw': 'zh-TW', tr: 'tr-TR',
+}
+
 export function BlogSectionHome() {
+  const t = useTranslations('blogSectionHome')
+  const locale = useLocale()
+  const intlLocale = INTL_LOCALE[locale] || 'en-US'
+
   // Get 3 latest posts (do not mutate original array)
   const latestPosts = [...blogPosts]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -17,14 +29,14 @@ export function BlogSectionHome() {
   return (
     <section className="py-32 bg-neutral-950/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="flex items-end justify-between mb-12">
           <div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-orange-400">Latest</span> <span className="text-white">from the</span> <span className="text-orange-400">blog</span>
+              <span className="text-orange-400">{t('titleStart')}</span>{t('titleMiddle') ? ' ' : ''}<span className="text-white">{t('titleMiddle')}</span> <span className="text-orange-400">{t('titleEnd')}</span>
             </h2>
             <p className="text-xl text-gray-400">
-              Insights, tutorials, and updates from the Ergo team
+              {t('subtitle')}
             </p>
           </div>
           <CyberButton
@@ -32,7 +44,7 @@ export function BlogSectionHome() {
             asChild
           >
             <Link href="/blog" className="inline-flex items-center">
-              <span>View all articles</span>
+              <span>{t('viewAll')}</span>
             </Link>
           </CyberButton>
         </div>
@@ -115,10 +127,10 @@ export function BlogSectionHome() {
                     </div>
                     <span>•</span>
                     <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric', 
-                        year: 'numeric' 
+                      {new Date(post.date).toLocaleDateString(intlLocale, {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
                       })}
                     </time>
                   </div>

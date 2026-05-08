@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 import { Bot, CreditCard, GitBranch, ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 
@@ -29,6 +30,7 @@ const PILLARS = [
 ]
 
 export function AgentEconomySection() {
+  const t = useTranslations('agentEconomyHome')
   return (
     <section className="py-24 border-t border-white/5 bg-neutral-950/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +73,7 @@ export function AgentEconomySection() {
               href="/agent-economy"
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-5 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm whitespace-nowrap"
             >
-              <span>See the stack</span>
+              <span>{t('seeStack')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
@@ -114,7 +116,7 @@ export function AgentEconomySection() {
               href="/agent-economy"
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
             >
-              <span>See the full stack</span>
+              <span>{t('seeFullStack')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>

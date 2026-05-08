@@ -671,5 +671,16 @@
         "description": "与 Ergo 用户连接"
       }
     }
+  },
+  "blogSectionHome": {
+    "titleStart": "最新",
+    "titleMiddle": "",
+    "titleEnd": "博客",
+    "subtitle": "来自Ergo团队的洞察、教程和更新",
+    "viewAll": "查看所有文章"
+  },
+  "agentEconomyHome": {
+    "seeStack": "查看技术栈",
+    "seeFullStack": "完整技术栈"
   }
 }

@@ -671,5 +671,16 @@
         "description": "Ergo kullanıcılarıyla bağlantı kurun"
       }
     }
+  },
+  "blogSectionHome": {
+    "titleStart": "Son",
+    "titleMiddle": "blog",
+    "titleEnd": "yazıları",
+    "subtitle": "Ergo ekibinden bilgi, eğitim ve güncellemeler",
+    "viewAll": "Tüm yazılar"
+  },
+  "agentEconomyHome": {
+    "seeStack": "Stack'i gör",
+    "seeFullStack": "Tam stack"
   }
 }

@@ -1,7 +1,7 @@
 {
   "patternsPage": {
     "seo": {
-      "title": "ErgoScript Patterns — Smart Contract Templates for Ergo | ergo.org",
+      "title": "ErgoScript Patterns — Smart Contract Templates for Ergo",
       "description": "18 battle-tested ErgoScript smart contract patterns. Token mechanics, time-locks, multisig, DeFi primitives, oracle integration. Copy, adapt, and ship."
     },
     "hero": {

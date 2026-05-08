@@ -24,7 +24,7 @@ export function WhyErgo() {
                 lineHeight: 1
               }}
             >
-              <span className="text-white">Why</span> <span className="text-orange-400">Ergo</span><span className="text-white">?</span>
+              <span className="text-white">{t("titleStart")}</span> <span className="text-orange-400">{t("titleHighlight")}</span><span className="text-white">{t("titleEnd")}</span>
             </h2>
             <p 
               className="text-gray-300 font-light mx-auto mb-12"

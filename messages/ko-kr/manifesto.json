@@ -75,6 +75,9 @@
         "subtitle": "Fleet SDK, MCP, LangChain",
         "description": "TypeScript 및 Python SDK에 LangChain 도구, Claude용 MCP 서버, 그리고 기본 결제부터 멀티 에이전트 오케스트레이션까지 10개의 실제 예제를 제공합니다."
       }
-    }
+    },
+    "titleStart": "왜",
+    "titleHighlight": "Ergo",
+    "titleEnd": "?"
   }
 }

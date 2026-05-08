@@ -671,5 +671,16 @@
         "description": "Общаться с пользователями Ergo"
       }
     }
+  },
+  "blogSectionHome": {
+    "titleStart": "Свежее",
+    "titleMiddle": "в",
+    "titleEnd": "блоге",
+    "subtitle": "Материалы, гайды и обновления от команды Ergo",
+    "viewAll": "Все статьи"
+  },
+  "agentEconomyHome": {
+    "seeStack": "Изучить стек",
+    "seeFullStack": "Полный стек"
   }
 }
