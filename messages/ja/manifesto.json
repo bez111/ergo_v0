@@ -40,38 +40,38 @@
     }
   },
   "whyErgo": {
-    "title": "WHY ERGO?",
-    "subtitle": "エージェントがアイデンティティ、事前資金、許可なしにトランザクションできる唯一のチェーン",
+    "title": "なぜErgoか?",
+    "subtitle": "エージェントがアイデンティティ、事前資金、許可なしにトランザクションを行えるよう設計されたチェーン",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "DETERMINISTIC COSTS",
+        "title": "確定的なコスト",
         "subtitle": "eUTXOアドバンテージ",
         "description": "エージェントは送信前に正確な手数料を把握できる。ガス推定の失敗も、予期せぬコストもない。トランザクションは構築された通りに実行されるか、まったく実行されないかのどちらかだ。"
       },
       "powerfulAndFlexible": {
-        "title": "PAYMENT IS THE CONTRACT",
-        "subtitle": "ErgoScript Acceptance Predicates",
+        "title": "支払いそのものが契約",
+        "subtitle": "ErgoScript の受け入れ述語",
         "description": "条件はペイメント自体に埋め込まれている。エスクローも、オラクルも、信頼されたサーバーも不要。ペイメントが償還に必要な条件をエンコードする。"
       },
       "sustainable": {
-        "title": "ZERO GAS BOOTSTRAPPING",
+        "title": "ゼロ・ガス・ブートストラップ",
         "subtitle": "Babel Fees",
         "description": "エージェントはERGだけでなく、任意のトークンで手数料を支払える。起動してノートを渡せば、即座にトランザクションが可能。事前資金ウォレットは不要。"
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PROGRAMMABLE CREDIT",
+        "title": "プログラマブルな信用",
         "subtitle": "Notes, Reserves, Trackers",
         "description": "エージェントはオンチェーンリザーブに裏付けられたベアラーIOUを発行する。アンチ二重支払いトラッカーが整合性を保証。ローカルクレジット、グローバル決済。"
       },
       "community": {
-        "title": "NO KILL SWITCH",
+        "title": "キル・スイッチなし",
         "subtitle": "Proof-of-Workの保証",
         "description": "財団のマルチシグも、バリデーターカルテルも、緊急停止もない。いかなる委員会もエージェントの資金を凍結したり、ネットワークを停止したりすることはできない。"
       },
       "developer": {
-        "title": "AGENT-READY SDK",
+        "title": "エージェント対応SDK",
         "subtitle": "Fleet SDK, MCP, LangChain",
         "description": "TypeScriptとPython SDKにLangChainツール、Claude用MCPサーバー、そして10の実用サンプル——基本的な支払いからマルチエージェントオーケストレーションまで。"
       }

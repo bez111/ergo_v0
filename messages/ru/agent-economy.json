@@ -1,162 +1,162 @@
 {
   "agentEconomy": {
-    "breadcrumb": "Agent Economy",
+    "breadcrumb": "Экономика агентов",
     "hero": {
-      "tag": "Agent Economy",
-      "titleStart": "The base layer for",
-      "titleHighlight": "autonomous",
-      "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is the only settlement layer built for this.",
-      "ctaArchitecture": "See the architecture",
-      "ctaDemos": "View demos"
+      "tag": "Экономика агентов",
+      "titleStart": "Базовый слой для",
+      "titleHighlight": "автономных",
+      "titleEnd": "экономических агентов.",
+      "description": "Автономным агентам нужны не только платежи. Им нужны кредит, программируемые правила приёма и проверяемые расчёты — без центрального контрагента. Ergo — один из немногих расчётных слоёв с протокольными примитивами, которые это позволяют.",
+      "ctaArchitecture": "Посмотреть архитектуру",
+      "ctaDemos": "Демонстрации"
     },
     "problem": {
-      "sectionLabel": "The Problem",
-      "heading": "Why existing payment rails",
-      "headingMuted": "can't serve agents"
+      "sectionLabel": "Проблема",
+      "heading": "Почему существующие платёжные рельсы",
+      "headingMuted": "не подходят агентам"
     },
     "stripeProblemItems": [
       {
-        "title": "No persistent identity",
-        "body": "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes."
+        "title": "Нет постоянной идентичности",
+        "body": "Агенты появляются и исчезают. Stripe требует KYC, биллинговые аккаунты и статичные ID мерчанта — ничего из этого не работает для эфемерных автономных процессов."
       },
       {
-        "title": "One-time payments only",
-        "body": "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor."
+        "title": "Только разовые платежи",
+        "body": "Агентам нужен кредит: выдать сейчас, погасить позже. У Stripe нет программируемого слоя IOU. Каждый микровызов требует обращения к платёжному процессору."
       },
       {
-        "title": "No programmable acceptance",
-        "body": "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design."
+        "title": "Нет программируемого приёма",
+        "body": "Stripe нельзя сказать: «принять платёж только если агент выполнил задачу X и обладает credential Y». Логика живёт вне платёжного слоя — это хрупко по своей конструкции."
       },
       {
-        "title": "Millisecond economics break",
-        "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
+        "title": "Миллисекундная экономика ломается",
+        "body": "API-вызов за $0.001 через Stripe стоит больше в комиссиях, чем сам вызов. Эти рельсы не были созданы для машинных микроплатежей в любом масштабе."
       }
     ],
     "solution": {
-      "sectionLabel": "The Solution",
-      "heading": "Why Ergo is the right",
-      "headingHighlight": "base layer",
-      "learnMore": "Learn more"
+      "sectionLabel": "Решение",
+      "heading": "Почему Ergo — правильный",
+      "headingHighlight": "базовый слой",
+      "learnMore": "Подробнее"
     },
     "whyErgoItems": [
       {
-        "title": "eUTXO: verifiable atomicity",
-        "body": "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
+        "title": "eUTXO: проверяемая атомарность",
+        "body": "Каждая транзакция детерминирована. Агенты точно знают, что произойдёт до отправки. Никакой реентерабельности, скрытого глобального состояния или сюрпризов от MEV.",
         "href": "/technology/eutxo-model"
       },
       {
-        "title": "ErgoScript: programmable trust",
-        "body": "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
+        "title": "ErgoScript: программируемое доверие",
+        "body": "Предикаты приёма — примитив первого класса. «Принять эту ноту, только если хеш задачи совпадает и дедлайн не прошёл» — один скрипт, on-chain, без доверия.",
         "href": "/technology/ergoscript"
       },
       {
-        "title": "Babel Fees: agents don't need ERG",
-        "body": "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
+        "title": "Babel Fees: агентам не нужен ERG",
+        "body": "Агенты могут платить комиссии в любом токене. Не нужно заранее пополнять ERG-кошелёк для каждого нового экземпляра агента — критично для эфемерных вычислений.",
         "href": "/technology/babel-fees"
       },
       {
-        "title": "Sigma Protocols: private credit",
-        "body": "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
+        "title": "Sigma-протоколы: приватный кредит",
+        "body": "Доказательства с нулевым разглашением — нативно. Агенты могут доказать, что они владеют credential или выполнили задачу, не раскрывая, какой именно агент это сделал.",
         "href": "/technology/privacy-features"
       },
       {
-        "title": "Proof-of-Work: no chain halts",
-        "body": "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
+        "title": "Proof-of-Work: цепь не остановить",
+        "body": "В PoW нет аварийных выключателей со стороны управления. Инфраструктура агентов на Ergo не будет заморожена картелем валидаторов или решением фонда.",
         "href": "/technology"
       },
       {
-        "title": "Native tokens: community money",
-        "body": "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
+        "title": "Нативные токены: коммунальные деньги",
+        "body": "Выпустите валюту сообщества за одну транзакцию. Notes, трекеры и резервные токены — на уровне протокола, никаких самописных контрактов в стиле ERC-20 не нужно.",
         "href": "/technology/native-tokens"
       }
     ],
     "stack": {
-      "sectionLabel": "The Stack",
-      "heading": "The agent economy stack",
-      "description": "Five layers are live on Ergo today. Two remain open research problems — the most interesting ones for builders to tackle.",
-      "legendLive": "Live on Ergo mainnet",
-      "legendOpen": "Open research problem",
-      "linkArchitecture": "Technical architecture →",
-      "linkGithub": "GitHub repos",
+      "sectionLabel": "Стек",
+      "heading": "Стек экономики агентов",
+      "description": "Расчёты и Babel Fees уже работают на mainnet Ergo. Примитивы Reserve / Note / Tracker / Acceptance Predicate доступны как контракты ErgoScript; каноническая референс-реализация (ChainCash) — это open-source прототип, ещё не прошедший аудит. Репутация и устойчивая идентичность остаются открытыми исследовательскими задачами — самыми интересными для разработчиков.",
+      "legendLive": "Живёт на mainnet Ergo",
+      "legendOpen": "Открытая исследовательская задача",
+      "linkArchitecture": "Техническая архитектура →",
+      "linkGithub": "GitHub-репозитории",
       "badgeOpen": "open"
     },
     "stackLayerItems": [
       {
-        "label": "Settlement",
-        "sublabel": "Ergo base layer",
+        "label": "Расчёты",
+        "sublabel": "базовый слой Ergo",
         "status": "live",
-        "description": "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees"
+        "description": "Финализация Proof-of-Work, атомарность eUTXO, комиссии ~$0.01"
       },
       {
-        "label": "Reserves",
-        "sublabel": "reserve contracts",
+        "label": "Резервы",
+        "sublabel": "контракты резервов",
         "status": "live",
-        "description": "On-chain capital backing — holds ERG or tokens as collateral for issued notes"
+        "description": "Капитальное обеспечение on-chain — хранит ERG или токены как обеспечение под выпущенные ноты"
       },
       {
-        "label": "Trackers",
-        "sublabel": "on-chain trackers",
+        "label": "Трекеры",
+        "sublabel": "on-chain трекеры",
         "status": "live",
-        "description": "Verifiable accounting — track balances, credit limits, redemption history"
+        "description": "Проверяемый учёт — отслеживайте балансы, кредитные лимиты, историю погашений"
       },
       {
         "label": "Notes",
-        "sublabel": "ChainCash / custom contracts",
+        "sublabel": "ChainCash / собственные контракты",
         "status": "live",
-        "description": "Programmable IOUs — issue, transfer, and redeem off-chain money"
+        "description": "Программируемые IOU — выпуск, передача и погашение off-chain денег"
       },
       {
-        "label": "Trust Rules",
-        "sublabel": "ErgoScript predicates",
+        "label": "Правила доверия",
+        "sublabel": "предикаты ErgoScript",
         "status": "live",
-        "description": "Acceptance logic — 'accept this note if and only if...' — fully on-chain"
+        "description": "Логика приёма — «принять эту ноту, если и только если…» — полностью on-chain"
       },
       {
-        "label": "Reputation",
-        "sublabel": "open problem",
+        "label": "Репутация",
+        "sublabel": "открытая задача",
         "status": "open",
-        "description": "Agent reputation without a central oracle — active research area"
+        "description": "Репутация агента без центрального оракула — активная исследовательская тема"
       },
       {
-        "label": "Identity",
-        "sublabel": "open problem",
+        "label": "Идентичность",
+        "sublabel": "открытая задача",
         "status": "open",
-        "description": "Persistent agent identity across sessions without deanonymisation"
+        "description": "Устойчивая идентичность агента между сессиями без деанонимизации"
       }
     ],
     "useCases": {
-      "sectionLabel": "What you can build",
-      "heading": "Three flows. All live on testnet.",
-      "linkDemos": "See all demos with code"
+      "sectionLabel": "Что можно построить",
+      "heading": "Три композируемых сценария. Два запущены на testnet, один в работе.",
+      "linkDemos": "Все демо с кодом"
     },
     "useCaseItems": [
       {
-        "title": "LLM buys inference",
-        "flow": "Agent → issues note → API provider accepts predicate → delivers tokens",
-        "detail": "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline."
+        "title": "LLM покупает инференс",
+        "flow": "Агент → выпускает ноту → провайдер API принимает по предикату → выдаёт токены",
+        "detail": "Один вызов, одно доказательство, без постоянного аккаунта. Провайдер сам задаёт правила приёма — минимальный хеш задачи, максимальный кредит, дедлайн."
       },
       {
-        "title": "Agent pays on credit",
-        "flow": "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
-        "detail": "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank."
+        "title": "Агент платит в кредит",
+        "flow": "Резерв развёрнут → ноты выпущены против него → трекер мониторит использование → авто-расчёт",
+        "detail": "Кредитный лимит обеспечен on-chain. Без контрагентского риска — контракт-резерв и есть «банк»."
       },
       {
-        "title": "Community currency",
-        "flow": "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
-        "detail": "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules."
+        "title": "Валюта сообщества",
+        "flow": "Резерв держит ERG → сообщество выпускает локальные ноты → предикаты приёма задают правила",
+        "detail": "Локальный маркетплейс, кооператив вычислений или сеть агентов — у каждого свои деньги и свои правила доверия."
       }
     ],
     "bml": {
       "tag": "BetterMoneyLabs",
-      "heading": "We're building the reference stack.",
-      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent payments. If you're building in this space, we want to talk to you.",
-      "ctaArchitecture": "Technical architecture",
-      "ctaTalk": "Talk to us"
+      "heading": "Мы строим референс-стек.",
+      "description": "Notes, кредит, трекеры, резервы, предикаты приёма — и витрина для платежей агент-агенту. Если вы строите в этом пространстве, мы хотим с вами поговорить.",
+      "ctaArchitecture": "Техническая архитектура",
+      "ctaTalk": "Связаться"
     },
     "finalCta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+      "title": "Строите агентов? Свяжитесь с нами.",
+      "description": "Расскажите, что вы делаете. Мы вернёмся с конкретным следующим шагом — демо, дизайн-сессией или ревью кода."
     }
   }
 }

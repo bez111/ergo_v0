@@ -6,7 +6,7 @@
       "titleStart": "The base layer for",
       "titleHighlight": "autonomous",
       "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is the only settlement layer built for this.",
+      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is one of the few settlement layers with the protocol-level primitives needed for this.",
       "ctaArchitecture": "See the architecture",
       "ctaDemos": "View demos"
     },
@@ -74,7 +74,7 @@
     "stack": {
       "sectionLabel": "The Stack",
       "heading": "The agent economy stack",
-      "description": "Five layers are live on Ergo today. Two remain open research problems — the most interesting ones for builders to tackle.",
+      "description": "Settlement and Babel Fees are live on Ergo mainnet today. Reserve / Note / Tracker / Acceptance Predicate primitives are usable as ErgoScript contracts; the canonical reference implementation (ChainCash) is an open-source prototype, not yet audited. Reputation and persistent identity remain open research problems — the most interesting ones for builders to tackle.",
       "legendLive": "Live on Ergo mainnet",
       "legendOpen": "Open research problem",
       "linkArchitecture": "Technical architecture →",
@@ -127,7 +127,7 @@
     ],
     "useCases": {
       "sectionLabel": "What you can build",
-      "heading": "Three flows. All live on testnet.",
+      "heading": "Three composable flows. Two live on testnet, one upcoming.",
       "linkDemos": "See all demos with code"
     },
     "useCaseItems": [
@@ -156,7 +156,7 @@
     },
     "finalCta": {
       "title": "Building agents? Talk to us.",
-      "description": "Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+      "description": "Tell us what you're building. We'll get back with a concrete next step — demo, design session, or code review."
     }
   }
 }

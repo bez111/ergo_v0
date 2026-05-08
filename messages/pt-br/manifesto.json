@@ -40,38 +40,38 @@
     }
   },
   "whyErgo": {
-    "title": "WHY ERGO?",
-    "subtitle": "A única chain onde agentes transacionam sem identidade, pré-financiamento ou permissão",
+    "title": "POR QUE ERGO?",
+    "subtitle": "Uma chain projetada para agentes transacionarem sem identidade, pré-financiamento ou permissão",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "DETERMINISTIC COSTS",
+        "title": "CUSTOS DETERMINÍSTICOS",
         "subtitle": "Vantagem eUTXO",
         "description": "Agentes sabem a taxa exata antes de enviar. Sem falhas na estimativa de gas, sem custos surpresa. A transação executa conforme construída — ou não executa."
       },
       "powerfulAndFlexible": {
-        "title": "PAYMENT IS THE CONTRACT",
-        "subtitle": "ErgoScript Acceptance Predicates",
+        "title": "O PAGAMENTO É O CONTRATO",
+        "subtitle": "Predicados de aceitação do ErgoScript",
         "description": "As condições são incorporadas no próprio pagamento. Sem escrow, sem oráculo, sem servidor confiável. O pagamento codifica o que deve ser verdadeiro para o resgate."
       },
       "sustainable": {
-        "title": "ZERO GAS BOOTSTRAPPING",
+        "title": "ZERO PRÉ-FINANCIAMENTO DE GAS",
         "subtitle": "Babel Fees",
         "description": "Agentes pagam taxas em qualquer token — não apenas ERG. Inicie, entregue uma Note e ele transaciona imediatamente. Nenhuma carteira pré-financiada necessária."
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PROGRAMMABLE CREDIT",
+        "title": "CRÉDITO PROGRAMÁVEL",
         "subtitle": "Notes, Reserves, Trackers",
         "description": "Agentes emitem IOUs ao portador lastreados por reservas on-chain. Trackers anti-gasto-duplo garantem integridade. Crédito local, liquidação global."
       },
       "community": {
-        "title": "NO KILL SWITCH",
+        "title": "SEM BOTÃO DE DESLIGAR",
         "subtitle": "Garantia Proof-of-Work",
         "description": "Sem multisig de fundação, sem cartel de validadores, sem pausa de emergência. Nenhum comitê pode congelar fundos de agentes ou paralisar a rede."
       },
       "developer": {
-        "title": "AGENT-READY SDK",
+        "title": "SDK PRONTO PARA AGENTES",
         "subtitle": "Fleet SDK, MCP, LangChain",
         "description": "SDKs TypeScript e Python com ferramentas LangChain, servidor MCP para Claude e 10 exemplos funcionais — de pagamentos básicos a orquestração multi-agente."
       }

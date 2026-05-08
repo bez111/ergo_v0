@@ -1,162 +1,162 @@
 {
   "agentEconomy": {
-    "breadcrumb": "Agent Economy",
+    "breadcrumb": "Economía de agentes",
     "hero": {
-      "tag": "Agent Economy",
-      "titleStart": "The base layer for",
-      "titleHighlight": "autonomous",
-      "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is the only settlement layer built for this.",
-      "ctaArchitecture": "See the architecture",
-      "ctaDemos": "View demos"
+      "tag": "Economía de agentes",
+      "titleStart": "La capa base para",
+      "titleHighlight": "agentes",
+      "titleEnd": "económicos autónomos.",
+      "description": "Los agentes autónomos necesitan más que pagos. Necesitan crédito, reglas de aceptación programables y liquidación verificable — todo sin contraparte central. Ergo es una de las pocas capas de liquidación con las primitivas a nivel de protocolo necesarias para esto.",
+      "ctaArchitecture": "Ver la arquitectura",
+      "ctaDemos": "Ver demos"
     },
     "problem": {
-      "sectionLabel": "The Problem",
-      "heading": "Why existing payment rails",
-      "headingMuted": "can't serve agents"
+      "sectionLabel": "El problema",
+      "heading": "Por qué los rieles de pago actuales",
+      "headingMuted": "no pueden servir a los agentes"
     },
     "stripeProblemItems": [
       {
-        "title": "No persistent identity",
-        "body": "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes."
+        "title": "Sin identidad persistente",
+        "body": "Los agentes aparecen y desaparecen. Stripe exige KYC, cuentas de facturación e IDs de comerciante estáticos — nada de eso funciona para procesos autónomos efímeros."
       },
       {
-        "title": "One-time payments only",
-        "body": "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor."
+        "title": "Solo pagos puntuales",
+        "body": "Los agentes necesitan crédito: emitir ahora, redimir después. Stripe no tiene una capa programable de IOU. Cada microllamada requiere una ida y vuelta a un procesador de pagos."
       },
       {
-        "title": "No programmable acceptance",
-        "body": "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design."
+        "title": "Sin aceptación programable",
+        "body": "No puedes decirle a Stripe «acepta el pago solo si el agente completó la tarea X y posee la credencial Y». La lógica vive fuera de la capa de pago — frágil por diseño."
       },
       {
-        "title": "Millisecond economics break",
-        "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
+        "title": "La economía de milisegundos se rompe",
+        "body": "Una llamada de API de 0,001 USD a través de Stripe cuesta más en comisiones que la propia llamada. Estos rieles no se construyeron para micropagos máquina-a-máquina a ninguna escala."
       }
     ],
     "solution": {
-      "sectionLabel": "The Solution",
-      "heading": "Why Ergo is the right",
-      "headingHighlight": "base layer",
-      "learnMore": "Learn more"
+      "sectionLabel": "La solución",
+      "heading": "Por qué Ergo es la",
+      "headingHighlight": "capa base correcta",
+      "learnMore": "Aprende más"
     },
     "whyErgoItems": [
       {
-        "title": "eUTXO: verifiable atomicity",
-        "body": "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
+        "title": "eUTXO: atomicidad verificable",
+        "body": "Cada transacción es determinista. Los agentes saben exactamente qué pasará antes de enviarla. Sin reentrancy, sin estado global oculto, sin sorpresas de MEV.",
         "href": "/technology/eutxo-model"
       },
       {
-        "title": "ErgoScript: programmable trust",
-        "body": "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
+        "title": "ErgoScript: confianza programable",
+        "body": "Los predicados de aceptación son primitivas de primera clase. «Acepta esta nota solo si el hash de la tarea coincide y el plazo no ha vencido» — un script, on-chain, sin confianza.",
         "href": "/technology/ergoscript"
       },
       {
-        "title": "Babel Fees: agents don't need ERG",
-        "body": "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
+        "title": "Babel Fees: los agentes no necesitan ERG",
+        "body": "Los agentes pueden pagar comisiones en cualquier token. No hay que prefinanciar una wallet de ERG para cada nueva instancia de agente — crítico para cómputo efímero.",
         "href": "/technology/babel-fees"
       },
       {
-        "title": "Sigma Protocols: private credit",
-        "body": "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
+        "title": "Sigma Protocols: crédito privado",
+        "body": "Las pruebas de conocimiento cero son nativas. Los agentes pueden probar que poseen una credencial o completaron una tarea sin revelar qué agente son.",
         "href": "/technology/privacy-features"
       },
       {
-        "title": "Proof-of-Work: no chain halts",
-        "body": "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
+        "title": "Proof-of-Work: sin paradas de cadena",
+        "body": "PoW no tiene botones de parada de gobernanza. La infraestructura de agentes sobre Ergo no será congelada por un cártel de validadores ni por una decisión de fundación.",
         "href": "/technology"
       },
       {
-        "title": "Native tokens: community money",
-        "body": "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
+        "title": "Tokens nativos: dinero comunitario",
+        "body": "Emite una moneda comunitaria en una sola transacción. Notes, trackers y tokens de reserva son a nivel de protocolo — sin contratos personalizados estilo ERC-20.",
         "href": "/technology/native-tokens"
       }
     ],
     "stack": {
-      "sectionLabel": "The Stack",
-      "heading": "The agent economy stack",
-      "description": "Five layers are live on Ergo today. Two remain open research problems — the most interesting ones for builders to tackle.",
-      "legendLive": "Live on Ergo mainnet",
-      "legendOpen": "Open research problem",
-      "linkArchitecture": "Technical architecture →",
-      "linkGithub": "GitHub repos",
-      "badgeOpen": "open"
+      "sectionLabel": "El stack",
+      "heading": "El stack de la economía de agentes",
+      "description": "Liquidación y Babel Fees ya están activos en la mainnet de Ergo. Las primitivas Reserve / Note / Tracker / Acceptance Predicate son utilizables como contratos ErgoScript; la implementación de referencia canónica (ChainCash) es un prototipo open source aún no auditado. La reputación y la identidad persistente siguen siendo problemas de investigación abiertos — los más interesantes para que los builders los aborden.",
+      "legendLive": "Activo en la mainnet de Ergo",
+      "legendOpen": "Problema de investigación abierto",
+      "linkArchitecture": "Arquitectura técnica →",
+      "linkGithub": "Repos de GitHub",
+      "badgeOpen": "abierto"
     },
     "stackLayerItems": [
       {
-        "label": "Settlement",
-        "sublabel": "Ergo base layer",
+        "label": "Liquidación",
+        "sublabel": "capa base de Ergo",
         "status": "live",
-        "description": "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees"
+        "description": "Finalidad Proof-of-Work, atomicidad eUTXO, comisiones ~0,01 USD"
       },
       {
-        "label": "Reserves",
-        "sublabel": "reserve contracts",
+        "label": "Reservas",
+        "sublabel": "contratos de reserva",
         "status": "live",
-        "description": "On-chain capital backing — holds ERG or tokens as collateral for issued notes"
+        "description": "Respaldo de capital on-chain — guarda ERG o tokens como colateral para las notas emitidas"
       },
       {
         "label": "Trackers",
-        "sublabel": "on-chain trackers",
+        "sublabel": "trackers on-chain",
         "status": "live",
-        "description": "Verifiable accounting — track balances, credit limits, redemption history"
+        "description": "Contabilidad verificable — saldos, límites de crédito, historial de redenciones"
       },
       {
         "label": "Notes",
-        "sublabel": "ChainCash / custom contracts",
+        "sublabel": "ChainCash / contratos propios",
         "status": "live",
-        "description": "Programmable IOUs — issue, transfer, and redeem off-chain money"
+        "description": "IOU programables — emitir, transferir y redimir dinero off-chain"
       },
       {
-        "label": "Trust Rules",
-        "sublabel": "ErgoScript predicates",
+        "label": "Reglas de confianza",
+        "sublabel": "predicados ErgoScript",
         "status": "live",
-        "description": "Acceptance logic — 'accept this note if and only if...' — fully on-chain"
+        "description": "Lógica de aceptación — «acepta esta nota si y solo si…» — totalmente on-chain"
       },
       {
-        "label": "Reputation",
-        "sublabel": "open problem",
+        "label": "Reputación",
+        "sublabel": "problema abierto",
         "status": "open",
-        "description": "Agent reputation without a central oracle — active research area"
+        "description": "Reputación de agente sin oráculo central — área de investigación activa"
       },
       {
-        "label": "Identity",
-        "sublabel": "open problem",
+        "label": "Identidad",
+        "sublabel": "problema abierto",
         "status": "open",
-        "description": "Persistent agent identity across sessions without deanonymisation"
+        "description": "Identidad de agente persistente entre sesiones sin desanonimización"
       }
     ],
     "useCases": {
-      "sectionLabel": "What you can build",
-      "heading": "Three flows. All live on testnet.",
-      "linkDemos": "See all demos with code"
+      "sectionLabel": "Lo que puedes construir",
+      "heading": "Tres flujos componibles. Dos activos en testnet, uno por venir.",
+      "linkDemos": "Ver todas las demos con código"
     },
     "useCaseItems": [
       {
-        "title": "LLM buys inference",
-        "flow": "Agent → issues note → API provider accepts predicate → delivers tokens",
-        "detail": "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline."
+        "title": "LLM compra inferencia",
+        "flow": "Agente → emite una nota → proveedor de API acepta según el predicado → entrega tokens",
+        "detail": "Una llamada, una prueba, sin cuenta persistente. El proveedor fija sus propias reglas de aceptación — hash mínimo de la tarea, crédito máximo, plazo."
       },
       {
-        "title": "Agent pays on credit",
-        "flow": "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
-        "detail": "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank."
+        "title": "Agente paga a crédito",
+        "flow": "Reserva desplegada → notas emitidas contra ella → tracker monitorea el uso → liquidación automática",
+        "detail": "Límite de crédito impuesto on-chain. Sin riesgo de contraparte — el contrato de reserva es el «banco»."
       },
       {
-        "title": "Community currency",
-        "flow": "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
-        "detail": "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules."
+        "title": "Moneda comunitaria",
+        "flow": "Reserva guarda ERG → la comunidad emite notas locales → los predicados de aceptación definen reglas",
+        "detail": "Un marketplace local, una cooperativa de cómputo o una red de agentes — cada uno con su propio dinero y sus reglas de confianza."
       }
     ],
     "bml": {
       "tag": "BetterMoneyLabs",
-      "heading": "We're building the reference stack.",
-      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent payments. If you're building in this space, we want to talk to you.",
-      "ctaArchitecture": "Technical architecture",
-      "ctaTalk": "Talk to us"
+      "heading": "Estamos construyendo el stack de referencia.",
+      "description": "Notes, crédito, trackers, reservas, predicados de aceptación — y la vitrina para pagos agente-a-agente. Si estás construyendo en este espacio, queremos hablar contigo.",
+      "ctaArchitecture": "Arquitectura técnica",
+      "ctaTalk": "Habla con nosotros"
     },
     "finalCta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+      "title": "¿Construyes agentes? Habla con nosotros.",
+      "description": "Cuéntanos qué estás construyendo. Volveremos con un próximo paso concreto — demo, sesión de diseño o revisión de código."
     }
   }
 }

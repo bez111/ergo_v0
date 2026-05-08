@@ -1,162 +1,162 @@
 {
   "agentEconomy": {
-    "breadcrumb": "Agent Economy",
+    "breadcrumb": "Ajan Ekonomisi",
     "hero": {
-      "tag": "Agent Economy",
-      "titleStart": "The base layer for",
-      "titleHighlight": "autonomous",
-      "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is the only settlement layer built for this.",
-      "ctaArchitecture": "See the architecture",
-      "ctaDemos": "View demos"
+      "tag": "Ajan Ekonomisi",
+      "titleStart": "Otonom",
+      "titleHighlight": "ekonomik ajanlar",
+      "titleEnd": "için temel katman.",
+      "description": "Otonom ajanların ödemeden fazlasına ihtiyacı vardır. Krediye, programlanabilir kabul kurallarına ve doğrulanabilir uzlaşmaya — hepsi merkezi bir karşı taraf olmadan. Ergo, bunun için gereken protokol seviyesindeki primitiflere sahip az sayıdaki uzlaşma katmanından biridir.",
+      "ctaArchitecture": "Mimariyi gör",
+      "ctaDemos": "Demoları gör"
     },
     "problem": {
-      "sectionLabel": "The Problem",
-      "heading": "Why existing payment rails",
-      "headingMuted": "can't serve agents"
+      "sectionLabel": "Sorun",
+      "heading": "Mevcut ödeme rayları neden",
+      "headingMuted": "ajanlara hizmet edemez"
     },
     "stripeProblemItems": [
       {
-        "title": "No persistent identity",
-        "body": "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes."
+        "title": "Kalıcı kimlik yok",
+        "body": "Ajanlar belirir ve kaybolur. Stripe; KYC, fatura hesapları ve statik satıcı kimlikleri ister — bunların hiçbiri kısa ömürlü otonom süreçler için işe yaramaz."
       },
       {
-        "title": "One-time payments only",
-        "body": "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor."
+        "title": "Yalnızca tek seferlik ödemeler",
+        "body": "Ajanlara kredi gerekir: şimdi düzenle, sonra it­fa et. Stripe'ın programlanabilir bir IOU katmanı yoktur. Her mikro çağrı bir ödeme işlemcisine gidip gelmeyi gerektirir."
       },
       {
-        "title": "No programmable acceptance",
-        "body": "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design."
+        "title": "Programlanabilir kabul yok",
+        "body": "Stripe'a «yalnızca ajan X görevini tamamladıysa ve Y kimlik bilgisine sahipse ödemeyi kabul et» diyemezsiniz. Mantık ödeme katmanının dışında yaşar — tasarım gereği kırılgandır."
       },
       {
-        "title": "Millisecond economics break",
-        "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
+        "title": "Milisaniye ekonomisi çöker",
+        "body": "Stripe üzerinden 0,001 dolarlık bir API çağrısı, çağrının kendisinden daha pahalıya patlar. Bu raylar herhangi bir ölçekte makineler arası mikro ödemeler için yapılmamıştı."
       }
     ],
     "solution": {
-      "sectionLabel": "The Solution",
-      "heading": "Why Ergo is the right",
-      "headingHighlight": "base layer",
-      "learnMore": "Learn more"
+      "sectionLabel": "Çözüm",
+      "heading": "Ergo neden doğru",
+      "headingHighlight": "temel katman",
+      "learnMore": "Daha fazla bilgi"
     },
     "whyErgoItems": [
       {
-        "title": "eUTXO: verifiable atomicity",
-        "body": "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
+        "title": "eUTXO: doğrulanabilir atomiklik",
+        "body": "Her işlem deterministiktir. Ajanlar göndermeden önce ne olacağını tam olarak bilir. Yeniden giriş yok, gizli küresel durum yok, MEV sürprizi yok.",
         "href": "/technology/eutxo-model"
       },
       {
-        "title": "ErgoScript: programmable trust",
-        "body": "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
+        "title": "ErgoScript: programlanabilir güven",
+        "body": "Kabul yüklemleri birinci sınıf primitiflerdir. «Yalnızca görev hash'i eşleşiyorsa ve süre dolmadıysa bu notu kabul et» — tek bir betik, zincir üstünde, güvensiz.",
         "href": "/technology/ergoscript"
       },
       {
-        "title": "Babel Fees: agents don't need ERG",
-        "body": "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
+        "title": "Babel Fees: ajanlar ERG'ye ihtiyaç duymaz",
+        "body": "Ajanlar işlem ücretlerini herhangi bir token ile ödeyebilir. Her yeni ajan örneği için bir ERG cüzdanını önceden fonlamaya gerek yoktur — kısa ömürlü bilgi işlem için kritik.",
         "href": "/technology/babel-fees"
       },
       {
-        "title": "Sigma Protocols: private credit",
-        "body": "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
+        "title": "Sigma Protokolleri: özel kredi",
+        "body": "Sıfır bilgi ispatları yerleşiktir. Ajanlar, hangi ajan olduklarını açığa çıkarmadan bir kimlik bilgisine sahip olduklarını ya da bir görevi tamamladıklarını ispatlayabilir.",
         "href": "/technology/privacy-features"
       },
       {
-        "title": "Proof-of-Work: no chain halts",
-        "body": "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
+        "title": "Proof-of-Work: zincir durdurulmaz",
+        "body": "PoW'da yönetişim tarafından gelen acil durdurma düğmesi yoktur. Ergo üzerine kurulu ajan altyapısı, bir doğrulayıcı karteli ya da vakıf kararı tarafından dondurulamaz.",
         "href": "/technology"
       },
       {
-        "title": "Native tokens: community money",
-        "body": "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
+        "title": "Yerel tokenlar: topluluk parası",
+        "body": "Tek bir işlemde topluluk parası çıkarın. Notes, tracker'lar ve rezerv tokenları protokol seviyesindedir — özel ERC-20 tarzı sözleşmelere gerek yoktur.",
         "href": "/technology/native-tokens"
       }
     ],
     "stack": {
-      "sectionLabel": "The Stack",
-      "heading": "The agent economy stack",
-      "description": "Five layers are live on Ergo today. Two remain open research problems — the most interesting ones for builders to tackle.",
-      "legendLive": "Live on Ergo mainnet",
-      "legendOpen": "Open research problem",
-      "linkArchitecture": "Technical architecture →",
-      "linkGithub": "GitHub repos",
-      "badgeOpen": "open"
+      "sectionLabel": "Yığın",
+      "heading": "Ajan ekonomisi yığını",
+      "description": "Uzlaşma ve Babel Fees bugün Ergo ana ağında çalışıyor. Reserve / Note / Tracker / Acceptance Predicate primitifleri ErgoScript sözleşmeleri olarak kullanılabilir; kanonik referans uygulaması (ChainCash) açık kaynaklı bir prototiptir ve henüz denetlenmemiştir. İtibar ve kalıcı kimlik açık araştırma sorunları olarak kalmaya devam ediyor — geliştiriciler için en ilginç olanları.",
+      "legendLive": "Ergo ana ağında çalışıyor",
+      "legendOpen": "Açık araştırma sorunu",
+      "linkArchitecture": "Teknik mimari →",
+      "linkGithub": "GitHub depoları",
+      "badgeOpen": "açık"
     },
     "stackLayerItems": [
       {
-        "label": "Settlement",
-        "sublabel": "Ergo base layer",
+        "label": "Uzlaşma",
+        "sublabel": "Ergo temel katmanı",
         "status": "live",
-        "description": "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees"
+        "description": "Proof-of-Work kesinliği, eUTXO atomikliği, ~0,01 USD ücret"
       },
       {
-        "label": "Reserves",
-        "sublabel": "reserve contracts",
+        "label": "Rezervler",
+        "sublabel": "rezerv sözleşmeleri",
         "status": "live",
-        "description": "On-chain capital backing — holds ERG or tokens as collateral for issued notes"
+        "description": "Zincir üstü sermaye desteği — ihraç edilen notlar için ERG ya da token tutar"
       },
       {
-        "label": "Trackers",
-        "sublabel": "on-chain trackers",
+        "label": "Tracker'lar",
+        "sublabel": "zincir üstü tracker'lar",
         "status": "live",
-        "description": "Verifiable accounting — track balances, credit limits, redemption history"
+        "description": "Doğrulanabilir muhasebe — bakiye, kredi limiti, itfa geçmişi takibi"
       },
       {
         "label": "Notes",
-        "sublabel": "ChainCash / custom contracts",
+        "sublabel": "ChainCash / özel sözleşmeler",
         "status": "live",
-        "description": "Programmable IOUs — issue, transfer, and redeem off-chain money"
+        "description": "Programlanabilir IOU'lar — zincir dışı parayı çıkar, aktar ve itfa et"
       },
       {
-        "label": "Trust Rules",
-        "sublabel": "ErgoScript predicates",
+        "label": "Güven kuralları",
+        "sublabel": "ErgoScript yüklemleri",
         "status": "live",
-        "description": "Acceptance logic — 'accept this note if and only if...' — fully on-chain"
+        "description": "Kabul mantığı — «bu notu yalnızca şu durumda kabul et…» — tamamen zincir üstünde"
       },
       {
-        "label": "Reputation",
-        "sublabel": "open problem",
+        "label": "İtibar",
+        "sublabel": "açık sorun",
         "status": "open",
-        "description": "Agent reputation without a central oracle — active research area"
+        "description": "Merkezi oracle olmadan ajan itibarı — aktif araştırma alanı"
       },
       {
-        "label": "Identity",
-        "sublabel": "open problem",
+        "label": "Kimlik",
+        "sublabel": "açık sorun",
         "status": "open",
-        "description": "Persistent agent identity across sessions without deanonymisation"
+        "description": "Anonimliği bozmadan oturumlar arası kalıcı ajan kimliği"
       }
     ],
     "useCases": {
-      "sectionLabel": "What you can build",
-      "heading": "Three flows. All live on testnet.",
-      "linkDemos": "See all demos with code"
+      "sectionLabel": "Neler inşa edebilirsiniz",
+      "heading": "Üç bileşik akış. İkisi testnet'te canlı, biri yolda.",
+      "linkDemos": "Tüm demoları kodla birlikte gör"
     },
     "useCaseItems": [
       {
-        "title": "LLM buys inference",
-        "flow": "Agent → issues note → API provider accepts predicate → delivers tokens",
-        "detail": "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline."
+        "title": "LLM çıkarım satın alır",
+        "flow": "Ajan → not düzenler → API sağlayıcı yüklem ile kabul eder → token teslim eder",
+        "detail": "Tek çağrı, tek ispat, kalıcı hesap yok. Sağlayıcı kendi kabul kurallarını belirler — minimum görev hash'i, maksimum kredi, son tarih."
       },
       {
-        "title": "Agent pays on credit",
-        "flow": "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
-        "detail": "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank."
+        "title": "Ajan kredi ile öder",
+        "flow": "Rezerv kuruldu → karşılığında notlar düzenlendi → tracker kullanımı izler → otomatik mahsup",
+        "detail": "Kredi limiti zincir üstünde uygulanır. Karşı taraf riski yok — rezerv sözleşmesi «banka»dır."
       },
       {
-        "title": "Community currency",
-        "flow": "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
-        "detail": "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules."
+        "title": "Topluluk parası",
+        "flow": "Rezerv ERG tutar → topluluk yerel notlar düzenler → kabul yüklemleri kuralları belirler",
+        "detail": "Yerel bir pazar yeri, bir işlem kooperatifi ya da bir ajan ağı — her biri kendi parasına ve güven kurallarına sahip."
       }
     ],
     "bml": {
       "tag": "BetterMoneyLabs",
-      "heading": "We're building the reference stack.",
-      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent payments. If you're building in this space, we want to talk to you.",
-      "ctaArchitecture": "Technical architecture",
-      "ctaTalk": "Talk to us"
+      "heading": "Referans yığını biz inşa ediyoruz.",
+      "description": "Notes, kredi, tracker'lar, rezervler, kabul yüklemleri — ve ajandan ajana ödemelerin vitrini. Bu alanda inşa ediyorsanız sizinle konuşmak isteriz.",
+      "ctaArchitecture": "Teknik mimari",
+      "ctaTalk": "Bize ulaşın"
     },
     "finalCta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+      "title": "Ajan mı geliştiriyorsunuz? Konuşalım.",
+      "description": "Ne inşa ettiğinizi anlatın. Somut bir sonraki adımla geri döneriz — demo, tasarım toplantısı veya kod incelemesi."
     }
   }
 }

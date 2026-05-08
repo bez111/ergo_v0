@@ -40,38 +40,38 @@
     }
   },
   "whyErgo": {
-    "title": "WHY ERGO?",
-    "subtitle": "唯一一條代理無需身份、預先注資或許可即可交易的鏈",
+    "title": "為什麼選 ERGO?",
+    "subtitle": "為智能體設計的鏈:無需身分、無需預存資金、無需許可",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "DETERMINISTIC COSTS",
+        "title": "確定性成本",
         "subtitle": "eUTXO 優勢",
         "description": "代理在提交前即可得知確切費用。沒有 gas 估算失敗，沒有意外成本。交易按照建構方式執行——否則完全不執行。"
       },
       "powerfulAndFlexible": {
-        "title": "PAYMENT IS THE CONTRACT",
-        "subtitle": "ErgoScript Acceptance Predicates",
+        "title": "支付即合約",
+        "subtitle": "ErgoScript 接受謂詞",
         "description": "條件嵌入在付款本身中。無需託管、無需預言機、無需受信任的伺服器。付款編碼了贖回所需的全部條件。"
       },
       "sustainable": {
-        "title": "ZERO GAS BOOTSTRAPPING",
+        "title": "零 Gas 啟動",
         "subtitle": "Babel Fees",
         "description": "代理可用任意代幣支付費用——不僅限於 ERG。啟動後交付一張 Note，即可立即交易。無需預先注資的錢包。"
       }
     },
     "additionalFeatures": {
       "privacy": {
-        "title": "PROGRAMMABLE CREDIT",
+        "title": "可程式化信用",
         "subtitle": "Notes, Reserves, Trackers",
         "description": "代理發行由鏈上準備金支持的不記名 IOU。防雙重支付追蹤器確保完整性。本地信用，全域結算。"
       },
       "community": {
-        "title": "NO KILL SWITCH",
+        "title": "無緊急停止開關",
         "subtitle": "Proof-of-Work 保證",
         "description": "沒有基金會多簽、沒有驗證者聯盟、沒有緊急暫停。任何委員會都無法凍結代理資金或停止網路。"
       },
       "developer": {
-        "title": "AGENT-READY SDK",
+        "title": "智能體就緒 SDK",
         "subtitle": "Fleet SDK, MCP, LangChain",
         "description": "TypeScript 與 Python SDK 搭配 LangChain 工具、Claude MCP 伺服器，以及 10 個可運行範例——從基本付款到多代理編排。"
       }

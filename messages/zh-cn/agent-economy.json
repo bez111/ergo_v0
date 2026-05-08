@@ -6,7 +6,7 @@
       "titleStart": "面向",
       "titleHighlight": "自主",
       "titleEnd": "经济智能体的基础层。",
-      "description": "自主智能体需要的不仅仅是支付功能。它们需要信用、可编程接受规则和可验证的结算——且无需中心化对手方。Ergo 是唯一专为此而构建的结算层。",
+      "description": "自主智能体需要的不仅仅是支付功能。它们需要信用、可编程接受规则和可验证的结算——且无需中心化对手方。Ergo 是为数不多在协议层面具备实现这一切所需原语的结算层之一。",
       "ctaArchitecture": "查看架构",
       "ctaDemos": "浏览演示"
     },
@@ -74,7 +74,7 @@
     "stack": {
       "sectionLabel": "技术栈",
       "heading": "智能体经济技术栈",
-      "description": "今天 Ergo 上已有五层处于上线状态。另有两层仍是开放研究问题——也是最值得开发者探索的方向。",
+      "description": "结算层与 Babel Fees 今天已在 Ergo 主网上线。Reserve / Note / Tracker / Acceptance Predicate 原语已可作为 ErgoScript 合约使用；标准参考实现 ChainCash 是开源原型，尚未经过审计。声誉与持久身份仍是开放研究问题——也是最值得开发者探索的方向。",
       "legendLive": "已在 Ergo 主网上线",
       "legendOpen": "开放研究问题",
       "linkArchitecture": "技术架构 →",
@@ -127,7 +127,7 @@
     ],
     "useCases": {
       "sectionLabel": "可以构建什么",
-      "heading": "三种流程。全部在测试网上线。",
+      "heading": "三种可组合的流程。两种已在测试网上线,一种即将推出。",
       "linkDemos": "查看所有含代码的演示"
     },
     "useCaseItems": [
@@ -156,7 +156,7 @@
     },
     "finalCta": {
       "title": "正在构建智能体？联系我们。",
-      "description": "告诉我们你在构建什么。我们将在 24 小时内回复并给出具体的下一步——演示、设计会议或代码审查。"
+      "description": "告诉我们你在构建什么。我们将给出具体的下一步——演示、设计会议或代码审查。"
     }
   }
 }

@@ -1,162 +1,162 @@
 {
   "agentEconomy": {
-    "breadcrumb": "Agent Economy",
+    "breadcrumb": "에이전트 경제",
     "hero": {
-      "tag": "Agent Economy",
-      "titleStart": "The base layer for",
-      "titleHighlight": "autonomous",
-      "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is the only settlement layer built for this.",
-      "ctaArchitecture": "See the architecture",
-      "ctaDemos": "View demos"
+      "tag": "에이전트 경제",
+      "titleStart": "자율적인",
+      "titleHighlight": "경제 에이전트",
+      "titleEnd": "를 위한 베이스 레이어.",
+      "description": "자율 에이전트에게는 결제 이상의 것이 필요합니다. 신용, 프로그래머블 수락 규칙, 검증 가능한 정산 — 모두 중앙 거래상대 없이. Ergo는 이를 위해 필요한 프로토콜 수준의 프리미티브를 갖춘 몇 안 되는 결제 레이어 중 하나입니다.",
+      "ctaArchitecture": "아키텍처 보기",
+      "ctaDemos": "데모 보기"
     },
     "problem": {
-      "sectionLabel": "The Problem",
-      "heading": "Why existing payment rails",
-      "headingMuted": "can't serve agents"
+      "sectionLabel": "문제",
+      "heading": "기존 결제 레일이",
+      "headingMuted": "에이전트를 처리할 수 없는 이유"
     },
     "stripeProblemItems": [
       {
-        "title": "No persistent identity",
-        "body": "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes."
+        "title": "지속적 신원 부재",
+        "body": "에이전트는 생겨났다가 사라집니다. Stripe는 KYC, 청구 계정, 정적인 가맹점 ID를 요구하지만, 어느 것도 일시적인 자율 프로세스에 적합하지 않습니다."
       },
       {
-        "title": "One-time payments only",
-        "body": "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor."
+        "title": "일회성 결제만 가능",
+        "body": "에이전트에게는 신용이 필요합니다. 지금 발행하고, 나중에 정산. Stripe에는 프로그래머블한 IOU 레이어가 없습니다. 마이크로 호출마다 결제 처리자와의 왕복이 필요합니다."
       },
       {
-        "title": "No programmable acceptance",
-        "body": "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design."
+        "title": "프로그래머블한 수락 규칙 없음",
+        "body": "Stripe에 「에이전트가 작업 X를 완료하고 자격 Y를 보유한 경우에만 결제를 받으라」고 지시할 수 없습니다. 로직이 결제 레이어 외부에 있어 설계상 취약합니다."
       },
       {
-        "title": "Millisecond economics break",
-        "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
+        "title": "밀리초 경제가 무너집니다",
+        "body": "Stripe를 통한 0.001달러 API 호출은 호출 자체보다 수수료가 더 비쌉니다. 이 레일은 어떤 규모의 머신 간 마이크로페이먼트도 염두에 두고 만들어지지 않았습니다."
       }
     ],
     "solution": {
-      "sectionLabel": "The Solution",
-      "heading": "Why Ergo is the right",
-      "headingHighlight": "base layer",
-      "learnMore": "Learn more"
+      "sectionLabel": "해결책",
+      "heading": "Ergo가 올바른",
+      "headingHighlight": "베이스 레이어인 이유",
+      "learnMore": "자세히 보기"
     },
     "whyErgoItems": [
       {
-        "title": "eUTXO: verifiable atomicity",
-        "body": "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
+        "title": "eUTXO: 검증 가능한 원자성",
+        "body": "모든 트랜잭션은 결정적입니다. 에이전트는 제출 전에 무엇이 일어날지 정확히 압니다. 재진입도, 숨겨진 글로벌 상태도, MEV 깜짝 사고도 없습니다.",
         "href": "/technology/eutxo-model"
       },
       {
-        "title": "ErgoScript: programmable trust",
-        "body": "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
+        "title": "ErgoScript: 프로그래머블한 신뢰",
+        "body": "수락 술어는 일급 프리미티브입니다. 「작업 해시가 일치하고 마감이 지나지 않은 경우에만 이 노트를 받아라」 — 한 줄의 스크립트, 온체인, 신뢰 불필요.",
         "href": "/technology/ergoscript"
       },
       {
-        "title": "Babel Fees: agents don't need ERG",
-        "body": "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
+        "title": "Babel Fees: 에이전트는 ERG가 필요 없습니다",
+        "body": "에이전트는 어떤 토큰으로든 수수료를 지불할 수 있습니다. 새 에이전트 인스턴스마다 ERG 지갑을 미리 충전할 필요가 없습니다 — 일시적 컴퓨팅에 결정적입니다.",
         "href": "/technology/babel-fees"
       },
       {
-        "title": "Sigma Protocols: private credit",
-        "body": "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
+        "title": "Sigma Protocols: 프라이빗 신용",
+        "body": "영지식 증명이 네이티브로 지원됩니다. 에이전트는 자신이 어떤 에이전트인지 드러내지 않고도 자격 보유나 작업 완료를 증명할 수 있습니다.",
         "href": "/technology/privacy-features"
       },
       {
-        "title": "Proof-of-Work: no chain halts",
-        "body": "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
+        "title": "Proof-of-Work: 체인 정지 없음",
+        "body": "PoW에는 거버넌스 측의 비상 정지 버튼이 없습니다. Ergo 위에 구축된 에이전트 인프라는 검증인 카르텔이나 재단 결정으로 동결되지 않습니다.",
         "href": "/technology"
       },
       {
-        "title": "Native tokens: community money",
-        "body": "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
+        "title": "네이티브 토큰: 커뮤니티 머니",
+        "body": "단 하나의 트랜잭션으로 커뮤니티 화폐를 발행하세요. 노트, 트래커, 리저브 토큰은 프로토콜 수준입니다 — 별도의 ERC-20 스타일 컨트랙트가 필요 없습니다.",
         "href": "/technology/native-tokens"
       }
     ],
     "stack": {
-      "sectionLabel": "The Stack",
-      "heading": "The agent economy stack",
-      "description": "Five layers are live on Ergo today. Two remain open research problems — the most interesting ones for builders to tackle.",
-      "legendLive": "Live on Ergo mainnet",
-      "legendOpen": "Open research problem",
-      "linkArchitecture": "Technical architecture →",
-      "linkGithub": "GitHub repos",
+      "sectionLabel": "스택",
+      "heading": "에이전트 경제 스택",
+      "description": "정산과 Babel Fees는 오늘 Ergo 메인넷에서 가동 중입니다. Reserve / Note / Tracker / Acceptance Predicate 프리미티브는 ErgoScript 컨트랙트로 사용할 수 있으며, 정식 레퍼런스 구현인 ChainCash는 오픈소스 프로토타입이고 아직 감사를 받지 않았습니다. 평판과 지속적 신원은 여전히 열려 있는 연구 과제로 남아 있습니다 — 빌더에게 가장 흥미로운 영역입니다.",
+      "legendLive": "Ergo 메인넷에서 가동 중",
+      "legendOpen": "열린 연구 과제",
+      "linkArchitecture": "기술 아키텍처 →",
+      "linkGithub": "GitHub 리포지토리",
       "badgeOpen": "open"
     },
     "stackLayerItems": [
       {
-        "label": "Settlement",
-        "sublabel": "Ergo base layer",
+        "label": "정산",
+        "sublabel": "Ergo 베이스 레이어",
         "status": "live",
-        "description": "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees"
+        "description": "Proof-of-Work 최종성, eUTXO 원자성, 약 0.01달러 수수료"
       },
       {
-        "label": "Reserves",
-        "sublabel": "reserve contracts",
+        "label": "리저브",
+        "sublabel": "리저브 컨트랙트",
         "status": "live",
-        "description": "On-chain capital backing — holds ERG or tokens as collateral for issued notes"
+        "description": "온체인 자본 담보 — 발행된 노트의 담보로 ERG 또는 토큰을 보유"
       },
       {
-        "label": "Trackers",
-        "sublabel": "on-chain trackers",
+        "label": "트래커",
+        "sublabel": "온체인 트래커",
         "status": "live",
-        "description": "Verifiable accounting — track balances, credit limits, redemption history"
+        "description": "검증 가능한 회계 — 잔액, 신용 한도, 상환 이력 추적"
       },
       {
         "label": "Notes",
-        "sublabel": "ChainCash / custom contracts",
+        "sublabel": "ChainCash / 커스텀 컨트랙트",
         "status": "live",
-        "description": "Programmable IOUs — issue, transfer, and redeem off-chain money"
+        "description": "프로그래머블 IOU — 오프체인 머니 발행, 이전, 상환"
       },
       {
-        "label": "Trust Rules",
-        "sublabel": "ErgoScript predicates",
+        "label": "신뢰 규칙",
+        "sublabel": "ErgoScript 술어",
         "status": "live",
-        "description": "Acceptance logic — 'accept this note if and only if...' — fully on-chain"
+        "description": "수락 로직 — 「조건이 참인 경우에만 이 노트를 받아라」 — 완전 온체인"
       },
       {
-        "label": "Reputation",
-        "sublabel": "open problem",
+        "label": "평판",
+        "sublabel": "열린 과제",
         "status": "open",
-        "description": "Agent reputation without a central oracle — active research area"
+        "description": "중앙 오라클 없는 에이전트 평판 — 활발한 연구 영역"
       },
       {
-        "label": "Identity",
-        "sublabel": "open problem",
+        "label": "신원",
+        "sublabel": "열린 과제",
         "status": "open",
-        "description": "Persistent agent identity across sessions without deanonymisation"
+        "description": "익명성을 해치지 않으면서 세션 간 지속되는 에이전트 신원"
       }
     ],
     "useCases": {
-      "sectionLabel": "What you can build",
-      "heading": "Three flows. All live on testnet.",
-      "linkDemos": "See all demos with code"
+      "sectionLabel": "구축할 수 있는 것",
+      "heading": "조합 가능한 세 가지 플로우. 두 개는 테스트넷에서 가동, 하나는 곧 출시.",
+      "linkDemos": "코드와 함께 모든 데모 보기"
     },
     "useCaseItems": [
       {
-        "title": "LLM buys inference",
-        "flow": "Agent → issues note → API provider accepts predicate → delivers tokens",
-        "detail": "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline."
+        "title": "LLM이 추론을 구매",
+        "flow": "에이전트 → 노트 발행 → API 제공자가 술어로 수락 → 토큰 전달",
+        "detail": "한 번의 호출, 하나의 증명, 영구 계정 불필요. 제공자는 자체 수락 규칙(최소 작업 해시, 최대 신용, 마감)을 설정합니다."
       },
       {
-        "title": "Agent pays on credit",
-        "flow": "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
-        "detail": "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank."
+        "title": "에이전트가 신용으로 결제",
+        "flow": "리저브 배포 → 노트 발행 → 트래커가 사용 모니터링 → 자동 정산",
+        "detail": "신용 한도는 온체인에서 강제됩니다. 거래상대 위험 없음 — 리저브 컨트랙트가 「은행」입니다."
       },
       {
-        "title": "Community currency",
-        "flow": "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
-        "detail": "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules."
+        "title": "커뮤니티 통화",
+        "flow": "리저브가 ERG 보유 → 커뮤니티가 로컬 노트 발행 → 수락 술어가 규칙 정의",
+        "detail": "로컬 마켓플레이스, 컴퓨트 협동조합, 에이전트 네트워크 — 각자의 화폐와 신뢰 규칙을 가집니다."
       }
     ],
     "bml": {
       "tag": "BetterMoneyLabs",
-      "heading": "We're building the reference stack.",
-      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent payments. If you're building in this space, we want to talk to you.",
-      "ctaArchitecture": "Technical architecture",
-      "ctaTalk": "Talk to us"
+      "heading": "레퍼런스 스택을 구축하고 있습니다.",
+      "description": "노트, 신용, 트래커, 리저브, 수락 술어 — 그리고 에이전트 간 결제의 쇼케이스. 이 영역에서 무엇인가를 만들고 있다면 이야기를 나누고 싶습니다.",
+      "ctaArchitecture": "기술 아키텍처",
+      "ctaTalk": "문의하기"
     },
     "finalCta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+      "title": "에이전트를 만들고 있나요? 이야기합시다.",
+      "description": "무엇을 만들고 있는지 알려주세요. 구체적인 다음 단계 — 데모, 디자인 세션, 코드 리뷰 — 를 제안하겠습니다."
     }
   }
 }

@@ -1,162 +1,162 @@
 {
   "agentEconomy": {
-    "breadcrumb": "Agent Economy",
+    "breadcrumb": "智能體經濟",
     "hero": {
-      "tag": "Agent Economy",
-      "titleStart": "The base layer for",
-      "titleHighlight": "autonomous",
-      "titleEnd": "economic agents.",
-      "description": "Autonomous agents need more than payments. They need credit, programmable acceptance rules, and verifiable settlement — all without a central counterparty. Ergo is the only settlement layer built for this.",
-      "ctaArchitecture": "See the architecture",
-      "ctaDemos": "View demos"
+      "tag": "智能體經濟",
+      "titleStart": "面向",
+      "titleHighlight": "自主",
+      "titleEnd": "經濟智能體的基礎層。",
+      "description": "自主智能體需要的不只是支付。它們需要信用、可程式化的接受規則和可驗證的結算——且無需中心化對手方。Ergo 是少數在協定層具備實現這一切所需原語的結算層之一。",
+      "ctaArchitecture": "查看架構",
+      "ctaDemos": "瀏覽展示"
     },
     "problem": {
-      "sectionLabel": "The Problem",
-      "heading": "Why existing payment rails",
-      "headingMuted": "can't serve agents"
+      "sectionLabel": "問題所在",
+      "heading": "為何現有支付軌道",
+      "headingMuted": "無法服務智能體"
     },
     "stripeProblemItems": [
       {
-        "title": "No persistent identity",
-        "body": "Agents spin up and disappear. Stripe requires KYC, billing accounts, and static merchant IDs — none of which work for ephemeral autonomous processes."
+        "title": "沒有持久身分",
+        "body": "智能體隨時啟動消失。Stripe 要求 KYC、帳單帳戶與靜態商家 ID——這些對於短暫存在的自主程序而言根本無法適用。"
       },
       {
-        "title": "One-time payments only",
-        "body": "Agents need credit: issue now, redeem later. Stripe has no programmable IOU layer. Every micro-call requires a round-trip to a payment processor."
+        "title": "僅支援一次性付款",
+        "body": "智能體需要信用機制：先發行,後兌付。Stripe 沒有可程式化的 IOU 層。每次微呼叫都需要往返支付處理者。"
       },
       {
-        "title": "No programmable acceptance",
-        "body": "You can't tell Stripe 'accept payment only if the agent completed task X and holds credential Y.' Logic lives outside the payment layer — fragile by design."
+        "title": "沒有可程式化的接受條件",
+        "body": "你無法告訴 Stripe「僅當智能體完成任務 X 並持有憑證 Y 時才接受付款」。邏輯存在於支付層之外——天生脆弱。"
       },
       {
-        "title": "Millisecond economics break",
-        "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
+        "title": "毫秒級經濟模型失效",
+        "body": "透過 Stripe 發起一筆 $0.001 的 API 呼叫,手續費本身就超過了呼叫價值。這套基礎設施根本不是為任何規模的機器間微支付而建。"
       }
     ],
     "solution": {
-      "sectionLabel": "The Solution",
-      "heading": "Why Ergo is the right",
-      "headingHighlight": "base layer",
-      "learnMore": "Learn more"
+      "sectionLabel": "解決方案",
+      "heading": "為何 Ergo 是正確的",
+      "headingHighlight": "基礎層",
+      "learnMore": "了解更多"
     },
     "whyErgoItems": [
       {
-        "title": "eUTXO: verifiable atomicity",
-        "body": "Every transaction is deterministic. Agents know exactly what will happen before submitting. No reentrancy, no hidden global state, no MEV surprises.",
+        "title": "eUTXO:可驗證的原子性",
+        "body": "每筆交易都是確定性的。智能體在提交前即可知曉確切結果。無重入漏洞、無隱藏全域狀態、無 MEV 意外。",
         "href": "/technology/eutxo-model"
       },
       {
-        "title": "ErgoScript: programmable trust",
-        "body": "Acceptance predicates are first-class primitives. 'Accept this note only if task hash matches and deadline hasn't passed' — one script, on-chain, trustless.",
+        "title": "ErgoScript:可程式化信任",
+        "body": "接受謂詞是一級原語。「僅當任務雜湊符合且截止時間未過時接受此票據」——一個指令稿,鏈上部署,無需信任。",
         "href": "/technology/ergoscript"
       },
       {
-        "title": "Babel Fees: agents don't need ERG",
-        "body": "Agents can pay transaction fees with any token. No need to pre-fund an ERG wallet for every new agent instance — critical for ephemeral compute.",
+        "title": "Babel Fees:智能體無需持有 ERG",
+        "body": "智能體可用任意代幣支付交易手續費。無需為每個新智能體實例預先儲值 ERG 錢包——對於短暫運算任務至關重要。",
         "href": "/technology/babel-fees"
       },
       {
-        "title": "Sigma Protocols: private credit",
-        "body": "Zero-knowledge proofs are native. Agents can prove they hold a credential or completed a task without revealing which agent they are.",
+        "title": "Sigma Protocols:私密信用",
+        "body": "零知識證明是原生支援的。智能體可以證明其持有憑證或完成了任務,而無需揭示自身身分。",
         "href": "/technology/privacy-features"
       },
       {
-        "title": "Proof-of-Work: no chain halts",
-        "body": "PoW has no governance emergency stops. Agent infrastructure built on Ergo won't be frozen by a validator cartel or foundation decision.",
+        "title": "PoW:鏈路不會中斷",
+        "body": "PoW 沒有治理緊急停止機制。基於 Ergo 構建的智能體基礎設施不會被驗證者卡特爾或基金會決策凍結。",
         "href": "/technology"
       },
       {
-        "title": "Native tokens: community money",
-        "body": "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
+        "title": "原生代幣:社群貨幣",
+        "body": "一筆交易即可發行社群貨幣。票據、追蹤器和儲備代幣均為協定層原生支援——無需自訂 ERC-20 風格的合約。",
         "href": "/technology/native-tokens"
       }
     ],
     "stack": {
-      "sectionLabel": "The Stack",
-      "heading": "The agent economy stack",
-      "description": "Five layers are live on Ergo today. Two remain open research problems — the most interesting ones for builders to tackle.",
-      "legendLive": "Live on Ergo mainnet",
-      "legendOpen": "Open research problem",
-      "linkArchitecture": "Technical architecture →",
-      "linkGithub": "GitHub repos",
-      "badgeOpen": "open"
+      "sectionLabel": "技術堆疊",
+      "heading": "智能體經濟技術堆疊",
+      "description": "結算層與 Babel Fees 今日已在 Ergo 主網上線。Reserve / Note / Tracker / Acceptance Predicate 原語可作為 ErgoScript 合約使用;標準參考實作 ChainCash 是開源原型,尚未經過稽核。聲譽與持久身分仍是開放研究問題——也是最值得開發者探索的方向。",
+      "legendLive": "已在 Ergo 主網上線",
+      "legendOpen": "開放研究問題",
+      "linkArchitecture": "技術架構 →",
+      "linkGithub": "GitHub 儲存庫",
+      "badgeOpen": "開放"
     },
     "stackLayerItems": [
       {
-        "label": "Settlement",
-        "sublabel": "Ergo base layer",
+        "label": "結算層",
+        "sublabel": "Ergo 基礎層",
         "status": "live",
-        "description": "Proof-of-Work finality, eUTXO atomicity, ~$0.01 fees"
+        "description": "PoW 最終性,eUTXO 原子性,手續費約 $0.01"
       },
       {
-        "label": "Reserves",
-        "sublabel": "reserve contracts",
+        "label": "儲備層",
+        "sublabel": "儲備合約",
         "status": "live",
-        "description": "On-chain capital backing — holds ERG or tokens as collateral for issued notes"
+        "description": "鏈上資本支撐——持有 ERG 或代幣作為已發行票據的擔保品"
       },
       {
-        "label": "Trackers",
-        "sublabel": "on-chain trackers",
+        "label": "追蹤層",
+        "sublabel": "鏈上追蹤器",
         "status": "live",
-        "description": "Verifiable accounting — track balances, credit limits, redemption history"
+        "description": "可驗證的記帳——追蹤餘額、信用額度、兌付歷史"
       },
       {
-        "label": "Notes",
-        "sublabel": "ChainCash / custom contracts",
+        "label": "票據層",
+        "sublabel": "ChainCash / 自訂合約",
         "status": "live",
-        "description": "Programmable IOUs — issue, transfer, and redeem off-chain money"
+        "description": "可程式化 IOU——發行、轉讓和兌付鏈下貨幣"
       },
       {
-        "label": "Trust Rules",
-        "sublabel": "ErgoScript predicates",
+        "label": "信任規則層",
+        "sublabel": "ErgoScript 謂詞",
         "status": "live",
-        "description": "Acceptance logic — 'accept this note if and only if...' — fully on-chain"
+        "description": "接受邏輯——「當且僅當……時接受此票據」——完全鏈上執行"
       },
       {
-        "label": "Reputation",
-        "sublabel": "open problem",
+        "label": "聲譽層",
+        "sublabel": "開放問題",
         "status": "open",
-        "description": "Agent reputation without a central oracle — active research area"
+        "description": "無中心化預言機的智能體聲譽機制——活躍研究方向"
       },
       {
-        "label": "Identity",
-        "sublabel": "open problem",
+        "label": "身分層",
+        "sublabel": "開放問題",
         "status": "open",
-        "description": "Persistent agent identity across sessions without deanonymisation"
+        "description": "跨工作階段的智能體持久身分,同時避免去匿名化"
       }
     ],
     "useCases": {
-      "sectionLabel": "What you can build",
-      "heading": "Three flows. All live on testnet.",
-      "linkDemos": "See all demos with code"
+      "sectionLabel": "可以建構什麼",
+      "heading": "三種可組合的流程。兩種已在測試網上線,一種即將推出。",
+      "linkDemos": "查看所有附程式碼的展示"
     },
     "useCaseItems": [
       {
-        "title": "LLM buys inference",
-        "flow": "Agent → issues note → API provider accepts predicate → delivers tokens",
-        "detail": "One call, one proof, no persistent account. Provider sets their own acceptance rules — minimum task hash, maximum credit, deadline."
+        "title": "LLM 購買推論服務",
+        "flow": "智能體 → 發行票據 → API 提供方接受謂詞 → 交付代幣",
+        "detail": "一次呼叫,一個證明,無需持久帳戶。提供方自行設定接受規則——最小任務雜湊、最大信用額度、截止時間。"
       },
       {
-        "title": "Agent pays on credit",
-        "flow": "Reserve deployed → notes issued against it → tracker monitors usage → auto-settle",
-        "detail": "Credit limit enforced on-chain. No counterparty risk — the reserve contract is the bank."
+        "title": "智能體信用支付",
+        "flow": "儲備部署 → 發行票據 → 追蹤器監控使用情況 → 自動結算",
+        "detail": "信用額度鏈上強制執行。無對手方風險——儲備合約即是銀行。"
       },
       {
-        "title": "Community currency",
-        "flow": "Reserve holds ERG → community issues local notes → acceptance predicates define rules",
-        "detail": "A local marketplace, a compute cooperative, or an agent network — each with their own money and trust rules."
+        "title": "社群貨幣",
+        "flow": "儲備持有 ERG → 社群發行本地票據 → 接受謂詞定義規則",
+        "detail": "本地市場、算力合作社或智能體網路——每個都擁有自己的貨幣和信任規則。"
       }
     ],
     "bml": {
       "tag": "BetterMoneyLabs",
-      "heading": "We're building the reference stack.",
-      "description": "Notes, credit, trackers, reserves, acceptance predicates — and the showcase for agent-to-agent payments. If you're building in this space, we want to talk to you.",
-      "ctaArchitecture": "Technical architecture",
-      "ctaTalk": "Talk to us"
+      "heading": "我們正在建構參考技術堆疊。",
+      "description": "票據、信用、追蹤器、儲備、接受謂詞——以及智能體間支付的展示平臺。如果你正在這一領域建構,我們期待與你交流。",
+      "ctaArchitecture": "技術架構",
+      "ctaTalk": "聯絡我們"
     },
     "finalCta": {
-      "title": "Building agents? Talk to us.",
-      "description": "Tell us what you're building. We'll reach out within 24 hours with a concrete next step — demo, design session, or code review."
+      "title": "正在建構智能體?聯絡我們。",
+      "description": "告訴我們你在建構什麼。我們將給出具體的下一步——展示、設計會議或程式碼審查。"
     }
   }
 }
