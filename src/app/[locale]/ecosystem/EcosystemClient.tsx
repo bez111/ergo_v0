@@ -203,6 +203,23 @@ export default function EcosystemClient() {
             <p>{t("subtitle")}</p>
           </header>
 
+          {/* DeFi liquidity / scale advisory — keeps user expectations
+              honest. Ergo's DeFi TVL and DEX volume are early-stage; many
+              projects below are technically solid but not deeply liquid.
+              See network-metrics.ts for the snapshot we cite. */}
+          <motion.section className="max-w-7xl mx-auto px-4 pt-8" variants={itemVariants} initial="hidden" animate="visible">
+            <div className="rounded-xl border border-yellow-500/25 bg-yellow-500/5 px-4 py-3 text-sm text-yellow-100/90 leading-snug flex items-start gap-2">
+              <span aria-hidden="true">⚠</span>
+              <span>
+                Ergo&apos;s DeFi ecosystem is <strong>early-stage in liquidity</strong>.
+                A project being marked Operational means the app is reachable
+                — it does not mean it has deep market depth or volume. Always
+                check the venue&apos;s current liquidity, spreads and 24h volume
+                before swapping or providing liquidity.
+              </span>
+            </div>
+          </motion.section>
+
           {/* Featured */}
           <motion.section className="max-w-7xl mx-auto px-4 py-12" variants={itemVariants} initial="hidden" animate="visible">
             <div className="flex justify-between items-center mb-8">

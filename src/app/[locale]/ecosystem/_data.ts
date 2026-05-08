@@ -14,6 +14,27 @@ export type VerificationSource = "site" | "github" | "team" | "explorer" | "suns
 /** Audit posture for the project. Conservative defaults; bump only with citation. */
 export type AuditStatus = "audited" | "partial-audit" | "not-audited" | "unknown"
 
+/**
+ * Result of the most recent reachability / liveness check we performed
+ * against the project's external surface (website, app, repo).
+ *
+ *   - "ok"             : 200 + expected content; everything looks alive.
+ *   - "redirect"       : permanent or temporary redirect we followed and trust.
+ *   - "js-only"        : the URL loads but content only renders client-side.
+ *   - "site-down"      : 5xx or unreachable during last check.
+ *   - "404"            : URL no longer exists.
+ *   - "sunset-notice"  : project itself published a sunset notice.
+ *   - "not-checked"    : we did not independently re-verify; treat as stale.
+ */
+export type VerificationStatus =
+  | "ok"
+  | "redirect"
+  | "js-only"
+  | "site-down"
+  | "404"
+  | "sunset-notice"
+  | "not-checked"
+
 export type EcosystemProject = {
   id: number
   slug: string
@@ -37,6 +58,10 @@ export type EcosystemProject = {
   lastVerified?: string
   /** How the entry was verified — see VerificationSource doc. */
   verificationSource?: VerificationSource
+  /** Most recent reachability/liveness check result. Distinct from
+   *  `verificationSource` (= what kind of check) and `auditStatus`
+   *  (= security posture). */
+  verificationStatus?: VerificationStatus
   /** Audit posture for the project. Conservative default if unknown. */
   auditStatus?: AuditStatus
   /** Does interacting with this project put user funds at risk?
@@ -64,11 +89,18 @@ In February 2024 the protocol was frozen, and the team has since published a for
 If you held positions on Spectrum, follow the official sunset notice for current withdrawal guidance. For an active Ergo DEX, see other entries in this ecosystem listing.`,
     url: "https://spectrum.fi",
     github: "https://github.com/spectrum-finance",
-    features: ["Decentralized Exchange", "Liquidity Pools", "Yield Farming", "Babel Fees Support", "Cross-chain Trading"],
+    features: [
+      "Historical reference: cross-chain DEX (Ergo + Cardano)",
+      "Historical: AMM liquidity pools",
+      "Historical: yield farming",
+      "Historical: Babel Fees support",
+      "Sunset since Feb 2024 — do not use as an active liquidity venue",
+    ],
     technologies: ["eUTXO", "ErgoScript", "Babel Fees"],
     relatedTags: ["Babel Fees", "DeFi", "eUTXO"],
     lastVerified: "2026-05-08",
     verificationSource: "sunset-notice",
+    verificationStatus: "sunset-notice",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -95,6 +127,7 @@ ErgoDex represents a significant advancement in cross-chain DeFi infrastructure.
     relatedTags: ["eUTXO", "DeFi", "Smart Contracts"],
     lastVerified: "2026-05-08",
     verificationSource: "site",
+    verificationStatus: "ok",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -123,6 +156,7 @@ What sets SigmaUSD apart from other stablecoins is its completely decentralized 
     ],
     lastVerified: "2026-05-08",
     verificationSource: "site",
+    verificationStatus: "ok",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -153,6 +187,7 @@ Rosen Bridge supports wrapped assets in both directions, allowing users to bring
     ],
     lastVerified: "2026-05-08",
     verificationSource: "site",
+    verificationStatus: "ok",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -181,6 +216,7 @@ ErgoMixer supports not just ERG but also native tokens issued on the Ergo blockc
     ],
     lastVerified: "2026-05-08",
     verificationSource: "github",
+    verificationStatus: "ok",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -210,6 +246,7 @@ Nautilus also integrates with ErgoMixer for optional transaction privacy, demons
     ],
     lastVerified: "2026-05-08",
     verificationSource: "site",
+    verificationStatus: "ok",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -233,6 +270,7 @@ DuckPools demonstrates how the eUTXO model can support complex DeFi primitives w
     relatedTags: ["DeFi", "Oracle Pools", "eUTXO", "Smart Contracts"],
     lastVerified: "2026-05-08",
     verificationSource: "site",
+    verificationStatus: "ok",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -345,6 +383,9 @@ Mew Finance demonstrates the composability possible on Ergo's eUTXO model, integ
     relatedTags: ["DeFi", "NFT", "eUTXO"],
     lastVerified: "2026-05-08",
     verificationSource: "site",
+    // Site has been intermittently unavailable on recent checks. Keep
+    // status OPERATIONAL but signal the reachability flake to the user.
+    verificationStatus: "site-down",
     auditStatus: "unknown",
     fundsAtRisk: true,
   },
@@ -762,6 +803,7 @@ Developed by Ergo core developer kushti, ChainCash represents cutting-edge resea
     relatedTags: ["Research", "Smart Contracts", "Monetary Innovation"],
     lastVerified: "2026-05-08",
     verificationSource: "github",
+    verificationStatus: "ok",
     auditStatus: "not-audited",
     fundsAtRisk: true,
   },
@@ -804,14 +846,18 @@ EXLE represents ongoing innovation in Ergo DeFi, exploring how traditional lendi
   },
 ]
 
-// Featured = production-ready projects only. Anything in TESTING / PROTOTYPE
-// / SUNSET / NOT_OPERATING stays in the main grid with its real status badge —
-// never in featured.
+// Featured = production-ready, externally-verified projects only. Anything
+// in TESTING / PROTOTYPE / SUNSET / NOT_OPERATING — or with a recent
+// verification check that didn't return clean OK — stays in the main grid
+// with its real status badge but is NOT promoted in the featured strip.
 export const featuredProjects: EcosystemProject[] = [
   projects.find(p => p.slug === "rosen-bridge")!,
   projects.find(p => p.slug === "ergodex")!,
-  projects.find(p => p.slug === "mew-finance")!,
+  // Mew Finance was previously featured but its external site has been
+  // intermittently unavailable (502 during the 2026-05-08 audit pass).
+  // Keep it in the main grid until two consecutive clean checks land.
   projects.find(p => p.slug === "sigmausd")!,
+  projects.find(p => p.slug === "nautilus-wallet")!,
   projects.find(p => p.slug === "paideia")!,
   projects.find(p => p.slug === "ergoraffle")!,
 ].filter(Boolean)

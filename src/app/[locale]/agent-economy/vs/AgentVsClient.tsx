@@ -462,7 +462,7 @@ export function AgentVsClient() {
 
       <FinalCTASimple
         title="The data is clear. Build on Ergo."
-        description="The only chain with zero reentrancy, acceptance predicates, Babel Fees, and Note+Reserve as protocol primitives."
+        description="One of the few chains with zero reentrancy, acceptance predicates, Babel Fees, and Note + Reserve as protocol primitives."
       />
     </BackgroundWrapper>
   )

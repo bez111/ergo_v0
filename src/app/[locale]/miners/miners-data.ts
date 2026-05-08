@@ -76,6 +76,14 @@ export const comparison = [
   }
 ]
 
+// Mining-pool directory.
+//
+// Pool hashrate / miner count fields were previously hand-coded fabrications:
+// the sum of pool hashrates (~11.8 TH/s) was nearly an order of magnitude
+// greater than the verified network hashrate (~1.44 TH/s, see
+// network-metrics.ts). They have been removed. Pool stats are volatile and
+// only authoritative on the pool's own page — the UI should link out and tell
+// users to check there.
 export const miningPools = [
   {
     name: "GetBlok",
@@ -83,8 +91,6 @@ export const miningPools = [
     fee: "1%",
     paymentSystem: "PPLNS",
     minPayout: "0.5 ERG",
-    hashrate: "3.2 TH/s",
-    miners: 2543,
     features: ["Auto-exchange", "Mobile app", "API access"],
     servers: ["EU", "US", "Asia"],
     tags: ["beginner", "popular"]
@@ -95,8 +101,6 @@ export const miningPools = [
     fee: "1%",
     paymentSystem: "PPLNS",
     minPayout: "0.1 ERG",
-    hashrate: "2.7 TH/s",
-    miners: 3218,
     features: ["24/7 Support", "Telegram bot", "Email alerts"],
     servers: ["EU", "US", "Asia", "RU"],
     tags: ["beginner", "support"]
@@ -107,8 +111,6 @@ export const miningPools = [
     fee: "0.9%",
     paymentSystem: "PROP",
     minPayout: "0.5 ERG",
-    hashrate: "2.0 TH/s",
-    miners: 1847,
     features: ["SSL support", "Worker stats", "Discord bot"],
     servers: ["EU", "US", "Asia"],
     tags: ["low-fee", "decentralized"]
@@ -119,8 +121,6 @@ export const miningPools = [
     fee: "0.9%",
     paymentSystem: "PPLNS",
     minPayout: "0.5 ERG",
-    hashrate: "1.5 TH/s",
-    miners: 1234,
     features: ["Solo mining", "Telegram bot", "MEV rewards"],
     servers: ["EU", "US"],
     tags: ["low-fee", "decentralized"]
@@ -131,8 +131,6 @@ export const miningPools = [
     fee: "2%",
     paymentSystem: "PPS+",
     minPayout: "1 ERG",
-    hashrate: "1.3 TH/s",
-    miners: 892,
     features: ["Mobile app", "Multi-coin", "Instant payments"],
     servers: ["Asia", "US", "EU"],
     tags: ["decentralized"]
@@ -143,8 +141,6 @@ export const miningPools = [
     fee: "1%",
     paymentSystem: "PPLNS",
     minPayout: "1 ERG",
-    hashrate: "1.1 TH/s",
-    miners: 1456,
     features: ["Email notifications", "API", "Multi-language"],
     servers: ["EU", "US", "Asia", "AU"],
     tags: ["decentralized"]

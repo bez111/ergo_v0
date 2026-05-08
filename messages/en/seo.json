@@ -36,7 +36,7 @@
           },
           {
             "question": "Why is Ergo ideal for AI agents and machine-to-machine payments?",
-            "answer": "Ergo's eUTXO model provides deterministic costs — agents know exact fees upfront. Babel Fees let agents pay in any token without pre-loading ERG. ErgoScript embeds acceptance conditions directly in payments. No KYC, no gas bootstrapping, no persistent identity required. It's the only chain with all four agent payment primitives at the protocol level."
+            "answer": "Ergo's eUTXO model provides deterministic costs — agents know exact fees upfront. Babel Fees let agents pay in any token without pre-loading ERG. ErgoScript embeds acceptance conditions directly in payments. No KYC, no gas bootstrapping, no persistent identity required. It's one of the few chains where all four agent payment primitives sit at the protocol level."
           },
           {
             "question": "How to get started with Ergo?",

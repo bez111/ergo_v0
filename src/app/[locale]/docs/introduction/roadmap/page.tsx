@@ -420,23 +420,23 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">ErgoDex</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">ErgoAuctionHouse</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SkyHarbor</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">TokenJay</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">PalmyraComDex</span>
-                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Alpha</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                 </div>
               </div>
@@ -454,19 +454,19 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SigmaUSD</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Gluon</span>
-                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Prototype</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SigmaUSD v2</span>
-                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">DexyGold</span>
-                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                 </div>
               </div>
@@ -484,19 +484,19 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SigmaFi</span>
-                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Prototype</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Duckpools</span>
-                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Testing</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">optionPools</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">EXLE</span>
-                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Testing</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                 </div>
               </div>
@@ -514,15 +514,15 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">BlitzTCG</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">CyberVerse</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Cyberverse Multiplayer</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                 </div>
               </div>
@@ -540,19 +540,19 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">SigmaO</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">HodlCoin</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">AuctionCoin</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">OptionCoin</span>
-                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                 </div>
               </div>
@@ -570,23 +570,23 @@ export default function RoadmapPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Oracle Pools</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Rosen Bridge</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">ADA Bridge</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">BTC Bridge</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300 text-sm">Sigma Chains</span>
-                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                    <span className="px-2 py-0.5 bg-neutral-800/40 text-neutral-400 text-[10px] rounded border border-neutral-700/50 font-mono uppercase tracking-wider">see /ecosystem</span>
                   </div>
                 </div>
               </div>

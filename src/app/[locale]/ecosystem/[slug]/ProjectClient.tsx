@@ -294,10 +294,10 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
 
             {/* Transparency strip — exposes the verification metadata so the
                 "Verified YYYY-MM-DD" claim is auditable, not just decorative. */}
-            {(project.lastVerified || project.verificationSource || project.auditStatus !== undefined || project.fundsAtRisk !== undefined) && (
+            {(project.lastVerified || project.verificationSource || project.verificationStatus || project.auditStatus !== undefined || project.fundsAtRisk !== undefined) && (
               <div className="mt-6 rounded-xl border border-neutral-800 bg-neutral-900/40 p-4">
                 <h2 className="sr-only">Verification &amp; risk</h2>
-                <dl className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                <dl className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-xs">
                   <div>
                     <dt className="font-mono uppercase tracking-wider text-neutral-500 mb-1">Verified</dt>
                     <dd className="text-neutral-200">{project.lastVerified ?? "—"}</dd>
@@ -308,6 +308,38 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
                       {project.verificationSource
                         ? project.verificationSource.replace(/-/g, " ")
                         : "—"}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono uppercase tracking-wider text-neutral-500 mb-1">Check result</dt>
+                    <dd className={
+                      project.verificationStatus === "ok"
+                        ? "text-green-400 capitalize"
+                        : project.verificationStatus === "site-down"
+                        ? "text-red-400"
+                        : project.verificationStatus === "404"
+                        ? "text-red-400"
+                        : project.verificationStatus === "sunset-notice"
+                        ? "text-red-400"
+                        : project.verificationStatus === "redirect"
+                        ? "text-yellow-400"
+                        : project.verificationStatus === "js-only"
+                        ? "text-yellow-400"
+                        : "text-neutral-400 capitalize"
+                    }>
+                      {project.verificationStatus === "ok"
+                        ? "OK"
+                        : project.verificationStatus === "site-down"
+                        ? "Site unavailable on last check"
+                        : project.verificationStatus === "404"
+                        ? "404 — page gone"
+                        : project.verificationStatus === "sunset-notice"
+                        ? "Project sunset"
+                        : project.verificationStatus === "redirect"
+                        ? "Followed a redirect"
+                        : project.verificationStatus === "js-only"
+                        ? "Loads JS-only"
+                        : "Not checked"}
                     </dd>
                   </div>
                   <div>

@@ -44,7 +44,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { BackToTop } from "@/components/ui/back-to-top"
 import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
-import { networkMetrics, formatHashrate, formatDifficulty, formatBlockTime, formatBlockReward, formatActiveMiners, formatMiningPools } from "@/lib/network-metrics"
+import { networkMetrics, formatHashrate, formatDifficulty, formatBlockTime, formatBlockReward, formatActiveMiners, formatMiningPools, METRICS_VERIFIED_AT, METRICS_VERIFIED_SOURCE } from "@/lib/network-metrics"
 import { coreValues, miningPools, miningSoftware, miningSteps, miningTools } from "./miners-data"
 
 export function MinersClient() {
@@ -271,13 +271,16 @@ export function MinersClient() {
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-6 text-white">
-              Live Mining Metrics
+              Network Snapshot
             </h2>
             <p className="text-center text-neutral-400 mb-2">
-              Live on-chain data (updated in real time)
+              Manually-verified snapshot — not a live feed.
+            </p>
+            <p className="text-center text-neutral-500 text-xs mb-2">
+              Verified {METRICS_VERIFIED_AT} against {METRICS_VERIFIED_SOURCE}.
             </p>
             <p className="text-center text-orange-400 text-sm mb-12">
-              Hashrate & difficulty → your mining rewards
+              Hashrate &amp; difficulty → your mining rewards. Always cross-check on the explorer before buying hardware.
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -661,14 +664,6 @@ export function MinersClient() {
                     
                     <div className="space-y-3 mb-4">
                       <div className="flex justify-between text-sm">
-                        <span className="text-neutral-400">{t('pools.hashrate')}</span>
-                        <span className="text-white font-medium">{pool.hashrate}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-neutral-400">{t('pools.miners')}</span>
-                        <span className="text-white font-medium">{pool.miners.toLocaleString()}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
                         <span className="text-neutral-400">{t('pools.minPayout')}</span>
                         <span className="text-white font-medium">{pool.minPayout}</span>
                       </div>
@@ -676,6 +671,10 @@ export function MinersClient() {
                         <span className="text-neutral-400">{t('pools.payment')}</span>
                         <span className="text-white font-medium">{pool.paymentSystem}</span>
                       </div>
+                      <p className="text-[11px] text-neutral-500 leading-snug pt-1 border-t border-neutral-800">
+                        Live hashrate / miner count is volatile — verify on the
+                        pool&apos;s own page before mining.
+                      </p>
                     </div>
 
                     <div className="flex flex-wrap gap-1 mb-4">

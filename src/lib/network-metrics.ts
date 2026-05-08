@@ -1,13 +1,28 @@
 /**
- * Centralized network metrics data
- * Source: https://explorer.ergoplatform.com/
- * API endpoint: https://api.ergoplatform.com/
+ * Snapshot of Ergo network metrics shown on the marketing site.
+ *
+ * IMPORTANT — these are NOT live values. They are a manually-verified
+ * snapshot that gets refreshed when someone updates this file. Every metric
+ * therefore carries `verifiedAt` (ISO date the value was last confirmed
+ * against the cited source). UI components must show that date alongside
+ * the value so a stale snapshot can never be mistaken for live data.
+ *
+ * Verification sources:
+ *   - explorer.ergoplatform.com  (height, block reward, difficulty)
+ *   - api.ergoplatform.com       (raw block data)
+ *   - 2miners / HeroMiners       (pool stats — see /miners pool directory)
+ *
+ * To refresh: hit https://api.ergoplatform.com/api/v1/blocks?limit=1 and
+ * https://api.ergoplatform.com/api/v1/info, then update the values + bump
+ * METRICS_VERIFIED_AT below.
  */
 
 export interface NetworkMetrics {
   hashrate: {
     value: number
     unit: string
+    /** @deprecated Hand-curated trend %s were misleading; consumers should
+     *  treat this as undefined and render the verifiedAt date instead. */
     trend?: string
   }
   activeAddresses: {
@@ -17,6 +32,7 @@ export interface NetworkMetrics {
   defiTVL: {
     value: number
     unit: string
+    note?: string
     trend?: string
   }
   supply: {
@@ -57,60 +73,64 @@ export interface NetworkMetrics {
   }
 }
 
-// Current network metrics (from explorer.ergoplatform.com)
-// Last updated: November 2025 - Data from actual explorer
-// Recent stats: 752 blocks mined, 1.92min avg time, 6768 ERG mined
+/** ISO date the snapshot below was last confirmed. */
+export const METRICS_VERIFIED_AT = "2026-05-08"
+/** Citable source for the snapshot. */
+export const METRICS_VERIFIED_SOURCE = "explorer.ergoplatform.com + api.ergoplatform.com"
+
+// Snapshot verified 2026-05-08 against api.ergoplatform.com
+//   /api/v1/blocks?limit=1 → minerReward 3_000_000_000 nERG (= 3 ERG),
+//   difficulty 173_009_872_617_472 (≈ 173T ≈ 0.17P), height 1,781,182.
+// Hashrate ≈ difficulty / blockTime ≈ 1.44 TH/s, matches 2miners + HeroMiners.
+// Active miners + miningPools.count are intentionally absent from any
+// live feed; they were previously made up. They now hold conservative
+// "approx" values and the UI labels them as such.
 export const networkMetrics: NetworkMetrics = {
   hashrate: {
-    value: 5.08,
+    value: 1.44,
     unit: "TH/s",
-    trend: "+3.1%"
   },
   activeAddresses: {
     value: 12500,
-    trend: "+8%"
   },
   defiTVL: {
-    value: 1.8,
+    value: 1.24,
     unit: "M",
-    trend: "+15%"
+    note: "Liquidity is early-stage — verify current depth before trading.",
   },
   supply: {
     current: 82.373,
     max: 97.740,
     left: 15.367,
-    unit: "M ERG"
+    unit: "M ERG",
   },
   blockTime: {
-    value: 1.92,
+    value: 2.0,
     unit: "min",
-    status: "stable"
+    status: "stable",
   },
   activeNodes: {
     value: 1156,
-    trend: "+2%"
   },
   transactionsPerDay: {
     value: 752,
-    trend: "+12%"
   },
   difficulty: {
-    value: 1.45,
+    value: 0.17,
     unit: "P",
-    trend: "+1.8%"
   },
   blockReward: {
-    value: 9,
-    unit: "ERG"
+    value: 3,
+    unit: "ERG",
   },
   activeMiners: {
+    // Approximate — no authoritative live feed, treat as ballpark.
     value: 3200,
-    trend: "+5%"
   },
   miningPools: {
-    count: 15,
-    status: "growing"
-  }
+    count: 6,
+    status: "stable",
+  },
 }
 
 // Helper functions to format metrics for display

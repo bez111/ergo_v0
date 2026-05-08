@@ -300,11 +300,27 @@ export default function WalletsPage() {
           <span className="font-semibold text-orange-300">Funds stuck in Yoroi?</span> Yoroi wallet no longer supports Ergo. If you have funds in an old Yoroi Ergo wallet and know the password, you might be able to use this <a href="https://ergowallet.io/yoroi-recovery" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">community recovery tool</a> to send funds to a new Ergo wallet. Alternatively, check the <a href="https://ergoplatform.org/en/blog/access-issues-guide/" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">access issues guide</a> for other troubleshooting tips.
         </div>
       </div>
+      {/* Canonical wallet registry pointer — keep this docs page short and
+          let /wallet be the source of truth for current support, security
+          posture, last-verified date and platform list. */}
+      <div className="rounded-xl border border-orange-500/30 bg-orange-500/5 p-5 mb-8">
+        <h2 className="text-lg font-semibold text-white mb-2">Looking for the current registry?</h2>
+        <p className="text-sm text-neutral-300">
+          The canonical wallet list — with platform, security, last-verified
+          date and download links — is at{" "}
+          <Link href="/wallet" className="text-orange-300 hover:text-orange-200 underline underline-offset-2">
+            /wallet
+          </Link>
+          . Treat the cards on this docs page as a brief introduction; check
+          the registry before downloading.
+        </p>
+      </div>
+
       {/* Additional Resources */}
       <div>
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2"><FileText className="w-6 h-6 text-cyan-400" /> Additional Resources</h2>
         <ul className="list-disc pl-6 text-gray-300 space-y-2">
-          <li><a href="https://ergoplatform.org/en/wallets/" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">PDF Guide: Ergo Wallet Wonderland: Exploring the Best Wallet for Your Needs</a> <span className="text-xs text-gray-400">(May require update)</span></li>
+          <li><Link href="/wallet" className="text-orange-300 underline hover:text-orange-200">Canonical wallet registry — /wallet</Link></li>
           <li><a href="https://github.com/ergoplatform/ergo-ios" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">Developer: SwiftAPI for iOS Wallet Dev</a></li>
           <li><a href="https://github.com/anon-real/ergo-light-client" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">Community Project: Ergo Light Client (iOS Beta)</a> <span className="text-xs text-gray-400">(Requires a full node)</span></li>
         </ul>

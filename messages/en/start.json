@@ -115,7 +115,7 @@
             {
               "name": "ErgoDEX",
               "type": "No KYC - ~0.3% fees",
-              "description": "Native Ergo DEX with full decentralization and privacy",
+              "description": "Native Ergo DEX with full decentralization and privacy. Note: Ergo's on-chain liquidity is early-stage — check current depth and 24h volume before trading.",
               "buttonText": "Open ErgoDEX"
             }
           ],

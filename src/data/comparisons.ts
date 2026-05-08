@@ -186,12 +186,12 @@ export const comparisons: ComparisonData[] = [
     ],
     
     summary: {
-      headline: "Predictable, Secure, and Truly Decentralized",
-      subheadline: "Ergo offers Ethereum-level programmability without the security pitfalls, unpredictable fees, or centralization risks.",
+      headline: "Predictable, Secure, and Decentralized",
+      subheadline: "Ergo offers Ethereum-class programmability with a different trade-off mix: deterministic fees, no reentrancy by construction, and a PoW security model. The right chain depends on what you're optimising for.",
       points: [
         {
-          title: "No Reentrancy Attacks",
-          description: "eUTXO model eliminates entire classes of smart contract vulnerabilities that plague Ethereum",
+          title: "No Reentrancy by Construction",
+          description: "The eUTXO model removes the reentrancy vulnerability class that account-based VMs have to defend against in application code.",
           icon: "Shield",
         },
         {
@@ -793,7 +793,7 @@ export const comparisons: ComparisonData[] = [
     
     summary: {
       headline: "Smart Contract PoW vs Speed-Focused PoW",
-      subheadline: "Both are fair-launched PoW chains, but Ergo adds smart contracts, privacy, and sustainability features Kaspa lacks.",
+      subheadline: "Both are fair-launched PoW chains. Ergo prioritises smart contracts, native privacy and storage rent; Kaspa prioritises fast confirmation via blockDAG. Different trade-offs for different use cases.",
       points: [
         {
           title: "Smart Contracts",
@@ -899,7 +899,7 @@ export const comparisons: ComparisonData[] = [
     
     summary: {
       headline: "Full DeFi Platform vs Asset-Focused Chain",
-      subheadline: "Both enable native tokens on PoW, but Ergo adds smart contracts, privacy, and DeFi that Ravencoin can't support.",
+      subheadline: "Both enable native tokens on PoW. Ravencoin focuses on asset issuance and transfer; Ergo adds programmable smart contracts via ErgoScript, native privacy and a DeFi stack on top of the same PoW + UTXO foundation.",
       points: [
         {
           title: "Smart Contracts",

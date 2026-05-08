@@ -86,6 +86,37 @@ export default async function UsePage({ params }: { params: Promise<{ locale: st
     <>
       {renderSchemaScripts(schemas)}
       <UseClient />
+
+      {/* Server-rendered FAQ — UseClient renders questions inside a
+          collapsible, so answers are hidden from crawlers and screen readers
+          until interaction. This block keeps every Q&A in static HTML and
+          matches the FAQPage schema above. */}
+      <section
+        id="use-faq-answers"
+        aria-label="Use cases FAQ — full answers"
+        className="container max-w-4xl mx-auto px-4 py-16 border-t border-neutral-800"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+          Use cases FAQ — full answers
+        </h2>
+        <p className="text-sm text-neutral-400 mb-8">
+          Every question on this page, fully expanded for search engines and
+          screen readers.
+        </p>
+        <dl className="space-y-4">
+          {faqItems.map((item) => (
+            <div
+              key={item.question}
+              className="border border-neutral-800 rounded-lg p-4 bg-neutral-900/40"
+            >
+              <dt className="font-semibold text-white mb-2">{item.question}</dt>
+              <dd className="text-neutral-300 leading-relaxed whitespace-pre-line">
+                {item.answer}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
     </>
   )
 }
