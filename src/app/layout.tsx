@@ -124,22 +124,14 @@ export const metadata: Metadata = {
 // JSON-LD via centralized SEO module
 const organizationSchema = createOrganizationSchema()
 
-// Read the locale segment from the request URL so the <html lang="..."> tag
-// matches the page content. Without this, /ru, /de, /ja all render with
-// lang="en", which hurts screen readers and SEO.
+// Read the active locale that middleware injected as `x-locale` so the
+// <html lang="..."> tag matches the page content. Without this, /ru, /de,
+// /ja all render with lang="en", which hurts screen readers and SEO.
 async function getLocaleFromHeaders(): Promise<{ lang: string; dir: "ltr" | "rtl" }> {
   const { headers } = await import("next/headers")
-  const { locales, isRtlLocale } = await import("@/i18n/request")
+  const { isRtlLocale } = await import("@/i18n/request")
   const h = await headers()
-  // Vercel sets x-invoke-path; fall back to x-pathname or referer.
-  const path =
-    h.get("x-invoke-path") ||
-    h.get("x-pathname") ||
-    h.get("next-url") ||
-    ""
-  const seg = (path.split("/")[1] || "").toLowerCase()
-  const matched = (locales as readonly string[]).find((l) => l.toLowerCase() === seg)
-  const lang = matched ?? "en"
+  const lang = h.get("x-locale") || "en"
   return { lang, dir: isRtlLocale(lang) ? "rtl" : "ltr" }
 }
 
