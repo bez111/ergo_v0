@@ -1,13 +1,13 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "基于Ergo和Cardano区块链的前沿开源去中心化交易所（DEX）。提供流动性供应（LP）、流动性挖矿，并支持Babel Fees。",
+      "description": "自 2024 年 2 月起已停运(sunset)——团队发布了正式的停运通知,并正在关闭该项目。历史上是一个跨链 eUTXO DEX(Ergo + Cardano),支持 AMM、流动性挖矿和 Babel Fees。请勿存入流动性或新资金。",
       "features": [
-        "去中心化交易所",
-        "流动性池",
-        "流动性挖矿",
-        "Babel Fees支持",
-        "跨链交易"
+        "历史功能: 跨链 DEX (Ergo + Cardano)",
+        "历史功能: AMM 流动性池",
+        "历史功能: 流动性挖矿",
+        "历史功能: 支持 Babel Fees",
+        "自 2024 年 2 月起停运 — 已不是活跃交易场所"
       ]
     },
     "ergodex": {

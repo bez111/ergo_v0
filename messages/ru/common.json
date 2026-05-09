@@ -357,7 +357,9 @@
       "mainNavigation": "Основная навигация",
       "breadcrumb": "Хлебные крошки",
       "featuredEcosystemProjects": "Избранные проекты экосистемы Ergo"
-    }
+    },
+    "evidence": "Источник",
+    "caveat": "Оговорка"
   },
   "navigation": {
     "home": "Главная",

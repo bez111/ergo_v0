@@ -360,7 +360,9 @@
     },
     "view": "查看",
     "more": "更多",
-    "less": "更少"
+    "less": "更少",
+    "evidence": "来源",
+    "caveat": "注意"
   },
   "navigation": {
     "home": "首页",

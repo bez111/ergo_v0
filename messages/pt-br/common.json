@@ -357,7 +357,9 @@
       "mainNavigation": "Navegação principal",
       "breadcrumb": "Breadcrumb",
       "featuredEcosystemProjects": "Projetos em destaque do ecossistema Ergo"
-    }
+    },
+    "evidence": "Evidência",
+    "caveat": "Ressalva"
   },
   "navigation": {
     "home": "Início",

@@ -1,13 +1,13 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "Ergo 및 Cardano 블록체인에서 운영되는 최첨단 오픈소스 분산형 거래소(DEX). 유동성 공급(LP), 이자 농사, Babel Fees를 지원합니다.",
+      "description": "2024년 2월부터 종료(sunset) — 팀이 공식 종료 공지를 게시하고 프로젝트를 정리 중입니다. 과거에는 AMM, 이익 농사(yield farming), Babel Fees를 지원하는 크로스체인 eUTXO DEX(Ergo + Cardano)였습니다. 유동성이나 새로운 자금을 예치하지 마세요.",
       "features": [
-        "분산형 거래소",
-        "유동성 풀",
-        "이자 농사",
-        "Babel Fees 지원",
-        "크로스체인 거래"
+        "역사적: 크로스체인 DEX (Ergo + Cardano)",
+        "역사적: AMM 유동성 풀",
+        "역사적: 이익 농사",
+        "역사적: Babel Fees 지원",
+        "2024년 2월부터 sunset — 활성 거래소 아님"
       ]
     },
     "ergodex": {

@@ -357,7 +357,9 @@
       "mainNavigation": "主要導覽",
       "breadcrumb": "麵包屑導覽",
       "featuredEcosystemProjects": "精選 Ergo 生態系統專案"
-    }
+    },
+    "evidence": "來源",
+    "caveat": "注意"
   },
   "navigation": {
     "home": "首頁",

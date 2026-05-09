@@ -397,6 +397,64 @@ export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlog
             </section>
           )}
 
+          {/* Sources & status footer — visible references that satisfy
+              Google's helpful-content guidance ("complete description,
+              sourcing and expertise"). Built from front-matter + a small
+              constellation of canonical Ergo / Accord / x402 references
+              that apply to every article in this cluster. */}
+          <section
+            aria-labelledby="article-sources-heading"
+            className="mb-16 rounded-2xl border border-orange-500/20 bg-orange-500/5 p-6"
+          >
+            <h2 id="article-sources-heading" className="text-xl font-bold text-white mb-4">
+              Sources &amp; status
+            </h2>
+            <dl className="text-sm text-gray-300 space-y-3 m-0">
+              {frontMatter.status && (
+                <div>
+                  <dt className="font-semibold text-orange-300 inline">Implementation status. </dt>
+                  <dd className="inline">{frontMatter.status}</dd>
+                </div>
+              )}
+              <div>
+                <dt className="font-semibold text-orange-300 inline">Code &amp; specs. </dt>
+                <dd className="inline">
+                  <a href="https://github.com/bez111/accord-protocol" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Accord Protocol repo</a>
+                  {" · "}
+                  <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Ergo node</a>
+                  {" · "}
+                  <a href="https://docs.ergoplatform.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Ergo docs</a>
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-orange-300 inline">External context. </dt>
+                <dd className="inline">
+                  <a href="https://docs.cdp.coinbase.com/x402/welcome" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">x402 (Coinbase)</a>
+                  {" · "}
+                  <a href="https://stripe.com/use-cases/agentic-commerce" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Stripe Agentic Commerce</a>
+                  {" · "}
+                  <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">MCP</a>
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold text-orange-300 inline">Trust posture. </dt>
+                <dd className="inline">
+                  <a href="/legal/security" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Responsible disclosure</a>
+                  {" · "}
+                  <a href="/legal/risk" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Risk disclosure</a>
+                  {" · "}
+                  <a href="/legal/official-domains" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Official domains</a>
+                </dd>
+              </div>
+              {dateModified && (
+                <div>
+                  <dt className="font-semibold text-orange-300 inline">Last reviewed. </dt>
+                  <dd className="inline font-mono text-neutral-300">{dateModified}</dd>
+                </div>
+              )}
+            </dl>
+          </section>
+
           {/* Share + final CTA */}
           <ShareCTA
             title={title}

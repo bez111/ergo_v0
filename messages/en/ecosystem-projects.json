@@ -1,13 +1,13 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.",
+      "description": "Sunset since February 2024 — the team published a formal sunset notice and is winding the project down. Historically a cross-chain eUTXO DEX (Ergo + Cardano) with AMM, yield farming and Babel Fees support. Do not deposit liquidity or new funds.",
       "features": [
-        "Decentralized Exchange",
-        "Liquidity Pools",
-        "Yield Farming",
-        "Babel Fees Support",
-        "Cross-chain Trading"
+        "Historical: cross-chain DEX (Ergo + Cardano)",
+        "Historical: AMM liquidity pools",
+        "Historical: yield farming",
+        "Historical: Babel Fees support",
+        "Sunset since Feb 2024 — not an active venue"
       ]
     },
     "ergodex": {

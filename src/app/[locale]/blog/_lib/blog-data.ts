@@ -382,8 +382,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'build-agent-pays-for-api',
     slug: 'build-agent-pays-for-api',
-    title: 'Build an AI Agent That Pays for API Calls on Ergo Testnet',
-    excerpt: 'A practical testnet tutorial for building a paid API endpoint that an AI agent can call only after producing a verifiable Ergo payment receipt.',
+    title: 'Architecture Tutorial: Build an AI Agent That Pays for API Calls on Ergo Testnet',
+    excerpt: 'An architecture tutorial for a paid API endpoint that an AI agent can call only after producing a verifiable Ergo payment receipt. Includes mock-mode (runnable without a wallet) and testnet-mode (with Nautilus / sigma-rust signing).',
     date: '2026-03-26',
     lastUpdated: '2026-05-08',
     author: authors['dev-relations']!,

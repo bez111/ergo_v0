@@ -357,7 +357,9 @@
       "mainNavigation": "Hauptnavigation",
       "breadcrumb": "Brotkrumen-Navigation",
       "featuredEcosystemProjects": "Ausgewählte Ergo-Ökosystemprojekte"
-    }
+    },
+    "evidence": "Beleg",
+    "caveat": "Einschränkung"
   },
   "navigation": {
     "home": "Startseite",

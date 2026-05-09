@@ -1,20 +1,25 @@
 ---
-title: "Build an AI Agent That Pays for API Calls on Ergo Testnet"
+title: "Architecture Tutorial: Build an AI Agent That Pays for API Calls on Ergo Testnet"
 slug: "/blog/build-ai-agent-pays-api-ergo-testnet"
-seo_title: "Build an AI Agent That Pays for API Calls on Ergo Testnet"
-meta_description: "Step-by-step tutorial for building a paid API with an AI agent wallet, Ergo testnet payment, on-chain verification, replay protection and an HTTP 402-style flow."
-excerpt: "A practical testnet tutorial for building a paid API endpoint that an AI agent can call only after producing a verifiable Ergo payment receipt."
+seo_title: "Architecture Tutorial: AI Agent Pays for API Calls on Ergo Testnet"
+meta_description: "Architecture tutorial for a paid API and AI agent payment loop on Ergo testnet: HTTP 402 challenge, on-chain payment verification, replay protection and security checklist."
+excerpt: "An architecture tutorial for a paid API endpoint that an AI agent can call only after producing a verifiable Ergo payment receipt. Includes mock-mode and testnet-mode signing notes."
 author: "Ergo Developer Relations"
 date_published: "2026-03-26"
 date_modified: "2026-05-08"
-status: "Tutorial for testnet development. Do not use unaudited SDKs, scripts or example custody flows with real funds."
+status: "Architecture tutorial. Mock mode is fully runnable end-to-end (the 402 challenge, the agent client and the Express server all work). Testnet mode requires a wallet (Nautilus or sigma-rust) and a real explorer/API lookup in verifyErgoPayment(). This is not a mainnet custody guide and not a production security blueprint — do not deploy unaudited code or example custody flows with real funds."
 tags: ["Ergo", "AI agent payments", "API monetization", "x402", "developer tutorial", "testnet"]
 target_keywords: ["build AI agent payments", "paid API with Ergo", "AI agent pays API calls", "HTTP 402 payments", "Ergo testnet tutorial"]
 ---
 
-# Build an AI Agent That Pays for API Calls on Ergo Testnet
+# Architecture Tutorial: Build an AI Agent That Pays for API Calls on Ergo Testnet
 
-**Status as of May 2026:** this tutorial is for testnet development. It demonstrates the architecture of a paid API and agent payment loop. It is not a mainnet custody guide, not a production security blueprint and not a recommendation to deploy unaudited contracts with real funds.
+**Status as of May 2026:** this is an **architecture tutorial**, not a copy-paste production script. It ships in two modes:
+
+- **Mock mode** — `verifyErgoPayment()` returns a stubbed receipt so the Express server, the 402 challenge and the agent client all run end-to-end without a wallet. Use this to learn the shape of the flow.
+- **Testnet mode** — wire `verifyErgoPayment()` to a real explorer/API lookup and sign the transaction via Nautilus or sigma-rust. The tutorial walks through what changes.
+
+It is not a mainnet custody guide, not a production security blueprint and not a recommendation to deploy unaudited contracts with real funds.
 
 A paid API call sounds simple. The agent asks for data, the server charges a small fee, the agent pays, and the server returns the result.
 

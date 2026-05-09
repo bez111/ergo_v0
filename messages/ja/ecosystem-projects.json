@@ -1,13 +1,13 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "ErgoおよびCardanoブロックチェーン上で動作する最先端のオープンソース分散型取引所（DEX）。流動性提供（LP）、イールドファーミング、Babel Feesに対応。",
+      "description": "2024年2月以降サンセット — チームは正式なサンセット通知を発表し、プロジェクトを段階的に終了しています。かつてはAMM、イールドファーミング、Babel Fees対応のクロスチェーンeUTXO DEX(Ergo + Cardano)でした。流動性や新規資金を入れないでください。",
       "features": [
-        "分散型取引所",
-        "流動性プール",
-        "イールドファーミング",
-        "Babel Fees対応",
-        "クロスチェーン取引"
+        "歴史的: クロスチェーン DEX (Ergo + Cardano)",
+        "歴史的: AMM 流動性プール",
+        "歴史的: イールドファーミング",
+        "歴史的: Babel Fees サポート",
+        "2024年2月以降サンセット — アクティブな取引所ではありません"
       ]
     },
     "ergodex": {

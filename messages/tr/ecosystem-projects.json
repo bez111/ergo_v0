@@ -1,148 +1,333 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "Ergo ve Cardano blok zincirleri üzerinde çalışan son teknoloji açık kaynaklı merkeziyetsiz borsa (DEX). Likidite sağlama (LP), verim çiftçiliği ve Babel Fees desteği sunar.",
-      "features": ["Merkeziyetsiz Borsa", "Likidite Havuzları", "Verim Çiftçiliği", "Babel Fees Desteği", "Zincirler Arası Ticaret"]
+      "description": "Şubat 2024'ten beri sunset durumunda — ekip resmi bir sunset bildirimi yayımladı ve projeyi sona erdiriyor. Tarihsel olarak AMM, yield farming ve Babel Fees destekli zincirler arası eUTXO bir DEX'di (Ergo + Cardano). Likidite veya yeni fon yatırmayın.",
+      "features": [
+        "Tarihsel: zincirler arası DEX (Ergo + Cardano)",
+        "Tarihsel: AMM likidite havuzları",
+        "Tarihsel: yield farming",
+        "Tarihsel: Babel Fees desteği",
+        "Şubat 2024'ten beri sunset — aktif bir borsa değil"
+      ]
     },
     "ergodex": {
       "description": "Ergo ve Cardano için saklama gerektirmeyen merkeziyetsiz borsa (DEX). Her iki ekosistemde AMM ve emir defteri ticaretini mümkün kılar.",
-      "features": ["Ergo & Cardano Zincirler Arası DEX", "Saklama gerektirmeyen ticaret", "AMM ve emir defteri modelleri", "ERG ve ADA ekosistemleri için likidite sağlama"]
+      "features": [
+        "Ergo & Cardano Zincirler Arası DEX",
+        "Saklama gerektirmeyen ticaret",
+        "AMM ve emir defteri modelleri",
+        "ERG ve ADA ekosistemleri için likidite sağlama"
+      ]
     },
     "sigmausd": {
       "description": "AgeUSD protokolünü uygulayan ilk eUTXO tabanlı sabit coin. ABD dolarına sabitlenmiş olup değişken teminat oranı (%400-%800) ile ERG tarafından desteklenir.",
-      "features": ["Algoritmik Sabit Coin", "ERG Teminatlı", "Merkeziyetsiz", "Tasfiye Riski Yok"]
+      "features": [
+        "Algoritmik Sabit Coin",
+        "ERG Teminatlı",
+        "Merkeziyetsiz",
+        "Tasfiye Riski Yok"
+      ]
     },
     "rosen-bridge": {
       "description": "Ergo ile Cardano, Bitcoin Runes ve Dogecoin gibi diğer blok zincirleri arasında zincirler arası varlık transferi için açık kaynaklı protokol.",
-      "features": ["Zincirler Arası Transferler", "Çoklu Blok Zinciri Desteği", "Merkeziyetsiz Gözlemciler", "Güvensiz Köprü"]
+      "features": [
+        "Zincirler Arası Transferler",
+        "Çoklu Blok Zinciri Desteği",
+        "Merkeziyetsiz Gözlemciler",
+        "Güvensiz Köprü"
+      ]
     },
     "ergomixer": {
       "description": "Kripto endüstrisindeki ilk etkileşimsiz, saklama gerektirmeyen karıştırıcı. Gelişmiş gizlilik için Sigma protokolleri kullanarak kullanıcıların özel olarak token göndermesine olanak tanır.",
-      "features": ["Saklama Gerektirmeyen Karıştırma", "Token Gizliliği", "Sigma Protokolleri", "Sıfır Bilgi İspatları"]
+      "features": [
+        "Saklama Gerektirmeyen Karıştırma",
+        "Token Gizliliği",
+        "Sigma Protokolleri",
+        "Sıfır Bilgi İspatları"
+      ]
     },
     "nautilus-wallet": {
       "description": "Gizlilik, güvenlik ve kullanıcı deneyimine odaklanan Ergo için tarayıcı eklentisi ve mobil cüzdan. Ledger, çoklu cüzdan ve dApp bağlayıcısını destekler.",
-      "features": ["Tarayıcı Eklentisi", "Mobil Uygulama", "Ledger Desteği", "dApp Bağlayıcı", "Çoklu Cüzdan"]
+      "features": [
+        "Tarayıcı Eklentisi",
+        "Mobil Uygulama",
+        "Ledger Desteği",
+        "dApp Bağlayıcı",
+        "Çoklu Cüzdan"
+      ]
     },
     "duckpools": {
       "description": "Algoritmik borç verme havuzlarına sahip teminatlı borç verme platformu. Kullanıcılar gelir elde etmek için ERG veya yerel varlıklar sağlayabilir ya da ERG teminatı karşılığında varlık ödünç alabilir.",
-      "features": ["Borç Verme Havuzları", "Teminatlı Krediler", "Getiri Üretimi", "Yerel Varlık Desteği"]
+      "features": [
+        "Borç Verme Havuzları",
+        "Teminatlı Krediler",
+        "Getiri Üretimi",
+        "Yerel Varlık Desteği"
+      ]
     },
     "paideia": {
       "description": "Ergo ve Cardano üzerinde DAO (Merkeziyetsiz Otonom Organizasyonlar) oluşturmak ve yönetmek için araç paketi. Yönetişim ve hazine yönetimi içerir.",
-      "features": ["DAO Oluşturma", "Yönetişim Araçları", "Hazine Yönetimi", "Teklif Oylaması", "Çoklu Zincir"]
+      "features": [
+        "DAO Oluşturma",
+        "Yönetişim Araçları",
+        "Hazine Yönetimi",
+        "Teklif Oylaması",
+        "Çoklu Zincir"
+      ]
     },
     "oracle-pools": {
       "description": "Ergo üzerindeki merkeziyetsiz oracle sistemi. Merkezi kaynaklara güvenmeden akıllı sözleşmeleri harici verilerle bağlar.",
-      "features": ["Merkeziyetsiz Oracleler", "Fiyat Beslemeleri", "Harici Veriler", "Güvensiz Tasarım"]
+      "features": [
+        "Merkeziyetsiz Oracleler",
+        "Fiyat Beslemeleri",
+        "Harici Veriler",
+        "Güvensiz Tasarım"
+      ]
     },
     "ergo-explorer": {
       "description": "Ergo'nun ana resmi blok gezgini. Kullanıcıların işlemleri, blokları, adresleri, tokenleri izlemesine ve genel ağ istatistiklerini görüntülemesine olanak tanır.",
-      "features": ["Blok Gezgini", "İşlem Takibi", "Token Bilgisi", "Ağ İstatistikleri", "Adres Arama"]
+      "features": [
+        "Blok Gezgini",
+        "İşlem Takibi",
+        "Token Bilgisi",
+        "Ağ İstatistikleri",
+        "Adres Arama"
+      ]
     },
     "ergopad": {
       "description": "Ergo blok zincirinde token lansmanı (IDO) ve fon toplama platformu. Token sahiplerine IDO'lara katılma fırsatı sunar.",
-      "features": ["Token Lansmanı", "IDO Platformu", "Stake Etme", "Topluluk Projeleri"]
+      "features": [
+        "Token Lansmanı",
+        "IDO Platformu",
+        "Stake Etme",
+        "Topluluk Projeleri"
+      ]
     },
     "mew-finance": {
       "description": "DEX, NFT pazaryeri ve çeşitli finansal araçlar dahil olmak üzere bir DeFi uygulama paketi sunan merkeziyetsiz finans platformu.",
-      "features": ["DEX", "NFT Pazaryeri", "DeFi Paketi", "Token Takası"]
+      "features": [
+        "DEX",
+        "NFT Pazaryeri",
+        "DeFi Paketi",
+        "Token Takası"
+      ]
     },
     "satergo": {
       "description": "Ağ merkeziyetsizliğini desteklemek için tam düğüm entegrasyon seçeneğine sahip kapsamlı Ergo masaüstü cüzdanı. Çevrimdışı kasa ile gizlilik odaklı.",
-      "features": ["Masaüstü Cüzdan", "Tam Düğüm Entegrasyonu", "Çevrimdışı Kasa", "Gizlilik Odaklı"]
+      "features": [
+        "Masaüstü Cüzdan",
+        "Tam Düğüm Entegrasyonu",
+        "Çevrimdışı Kasa",
+        "Gizlilik Odaklı"
+      ]
     },
     "safew": {
       "description": "Gelişmiş işlem gizliliği için ErgoMixer ile entegre Ergo tarayıcı eklentisi cüzdanı.",
-      "features": ["Tarayıcı Eklentisi", "ErgoMixer Entegrasyonu", "Gelişmiş Gizlilik", "dApp Desteği"]
+      "features": [
+        "Tarayıcı Eklentisi",
+        "ErgoMixer Entegrasyonu",
+        "Gelişmiş Gizlilik",
+        "dApp Desteği"
+      ]
     },
     "ergowatch": {
       "description": "Ergo ağ metrikleri, DeFi istatistikleri (ör. TVL), grafikler ve blok zinciri etkinliğini izlemek için panolar sağlayan analitik blok gezgini.",
-      "features": ["Analitik", "DeFi Metrikleri", "TVL Takibi", "Ağ Panoları", "Grafikler"]
+      "features": [
+        "Analitik",
+        "DeFi Metrikleri",
+        "TVL Takibi",
+        "Ağ Panoları",
+        "Grafikler"
+      ]
     },
     "cyberpixels": {
       "description": "Blok zinciri entegrasyonu (NFT, özel tokenler, oyun içi pazaryeri) içeren açık dünya piksel tarzı bir oyun projesi.",
-      "features": ["Blok Zinciri Oyunu", "NFT Entegrasyonu", "Oyun İçi Pazaryeri", "Play-to-Earn"]
+      "features": [
+        "Blok Zinciri Oyunu",
+        "NFT Entegrasyonu",
+        "Oyun İçi Pazaryeri",
+        "Play-to-Earn"
+      ]
     },
     "sigmafi": {
       "description": "P2P borç yükümlülükleri oluşturmak için SigmaBonds dahil Ergo üzerinde merkeziyetsiz P2P finansal sözleşme paketi.",
-      "features": ["P2P Borç Verme", "Tahvil İhracı", "Merkeziyetsiz Finans", "Akıllı Sözleşmeler"]
+      "features": [
+        "P2P Borç Verme",
+        "Tahvil İhracı",
+        "Merkeziyetsiz Finans",
+        "Akıllı Sözleşmeler"
+      ]
     },
     "ergoraffle": {
       "description": "Piyango unsurları içeren kitle fonlama hizmeti. Katılımcıların ödül kazanabileceği proje fon toplama imkanı sunar.",
-      "features": ["Kitle Fonlama", "Piyango Sistemi", "Kanıtlanabilir Adillik", "Proje Fonlaması"]
+      "features": [
+        "Kitle Fonlama",
+        "Piyango Sistemi",
+        "Kanıtlanabilir Adillik",
+        "Proje Fonlaması"
+      ]
     },
     "minotaur-wallet": {
       "description": "Çoklu imza gibi gelişmiş özelliklere sahip Ergo mobil cüzdanı. Fon yönetimi güvenliğini artırır.",
-      "features": ["Mobil Cüzdan", "Çoklu İmza", "Gelişmiş Güvenlik", "Fon Yönetimi"]
+      "features": [
+        "Mobil Cüzdan",
+        "Çoklu İmza",
+        "Gelişmiş Güvenlik",
+        "Fon Yönetimi"
+      ]
     },
     "guapswap": {
       "description": "Ergo'da madenci kârlarını takas etmek için merkeziyetsiz akıllı sözleşme tabanlı hizmet. Madencilik ödüllerinin otomatik değişimini sağlar.",
-      "features": ["Madencilik Ödülleri", "Otomatik Takas", "Kâr Yönetimi", "Madenci Araçları"]
+      "features": [
+        "Madencilik Ödülleri",
+        "Otomatik Takas",
+        "Kâr Yönetimi",
+        "Madenci Araçları"
+      ]
     },
     "dexygold": {
       "description": "Altın fiyatına (XAU/USD) sabitlenmiş algoritmik sabit coin. Senyoraj, fiyat oracleleri ve fazla ERG teminatı kullanır.",
-      "features": ["Altına Sabitlenmiş Sabit Coin", "Algoritmik Tasarım", "Oracle Entegrasyonu", "ERG Teminatı"]
+      "features": [
+        "Altına Sabitlenmiş Sabit Coin",
+        "Algoritmik Tasarım",
+        "Oracle Entegrasyonu",
+        "ERG Teminatı"
+      ]
     },
     "sigmao": {
       "description": "Ergo EIP-4 tokenleri üzerinde emir defteri tarzında opsiyon ticareti (Alım/Satım, Amerikan/Avrupa) platformu.",
-      "features": ["Opsiyon Ticareti", "Alım/Satım Opsiyonları", "Emir Defteri", "EIP-4 Tokenleri"]
+      "features": [
+        "Opsiyon Ticareti",
+        "Alım/Satım Opsiyonları",
+        "Emir Defteri",
+        "EIP-4 Tokenleri"
+      ]
     },
     "blitz-tcg": {
       "description": "Ergo blok zincirinde koleksiyon ticaret kartı oyunu (TCG).",
-      "features": ["Ticaret Kartı Oyunu", "NFT Kartlar", "Rekabetçi Oyun", "Koleksiyonlar"]
+      "features": [
+        "Ticaret Kartı Oyunu",
+        "NFT Kartlar",
+        "Rekabetçi Oyun",
+        "Koleksiyonlar"
+      ]
     },
     "sigmaverse": {
       "description": "Ergo dApp ekosistemi için merkezi portal ve dizin. Geliştiricilerin uygulama listelemesine ve kullanıcıların hizmet bulmasına olanak tanır.",
-      "features": ["dApp Dizini", "Proje Listeleri", "Ekosistem Portalı", "Keşif Platformu"]
+      "features": [
+        "dApp Dizini",
+        "Proje Listeleri",
+        "Ekosistem Portalı",
+        "Keşif Platformu"
+      ]
     },
     "ergone": {
       "description": "ERGONE tokeni ve Proof-of-Commitment Protokolü kullanarak Ergo ve projelerini tanıtmak için merkeziyetsiz, topluluk güdümlü pazarlama platformu.",
-      "features": ["Pazarlama Platformu", "Topluluk Güdümlü", "Token Teşvikleri", "Proje Tanıtımı"]
+      "features": [
+        "Pazarlama Platformu",
+        "Topluluk Güdümlü",
+        "Token Teşvikleri",
+        "Proje Tanıtımı"
+      ]
     },
     "hodlbox": {
       "description": "Hazine sandıkları ve çeşitli fon kilitleme seçenekleriyle ERG'nin uzun vadeli tutulmasını teşvik eden platform. Kullanıcıları NFT ile ödüllendirir.",
-      "features": ["HODL Teşvikleri", "Fon Kilitleme", "NFT Ödülleri", "Uzun Vadeli Birikim"]
+      "features": [
+        "HODL Teşvikleri",
+        "Fon Kilitleme",
+        "NFT Ödülleri",
+        "Uzun Vadeli Birikim"
+      ]
     },
     "tokenjay": {
       "description": "Ergo ekosisteminde P2P (eşler arası) token ticareti platformu.",
-      "features": ["P2P Ticaret", "Token Takası", "Merkeziyetsiz Borsa", "Doğrudan Ticaret"]
+      "features": [
+        "P2P Ticaret",
+        "Token Takası",
+        "Merkeziyetsiz Borsa",
+        "Doğrudan Ticaret"
+      ]
     },
     "single-tx-swap": {
       "description": "Tek bir işlem içinde P2P (eşler arası) token takası gerçekleştirmek için bir araç.",
-      "features": ["Atomik Takaslar", "Tek İşlem", "P2P Değişim", "Hızlı Uygulama"]
+      "features": [
+        "Atomik Takaslar",
+        "Tek İşlem",
+        "P2P Değişim",
+        "Hızlı Uygulama"
+      ]
     },
     "crux-finance": {
       "description": "Ergo ekosisteminde kripto portföy yönetim aracı. Kâr/zarar takibi, yatırım yönetimi ve vergi raporları oluşturma imkanı sunar.",
-      "features": ["Portföy Takibi", "Kâr/Zarar Analizi", "Vergi Raporları", "Yatırım Yönetimi"]
+      "features": [
+        "Portföy Takibi",
+        "Kâr/Zarar Analizi",
+        "Vergi Raporları",
+        "Yatırım Yönetimi"
+      ]
     },
     "fleet-sdk": {
       "description": "Web uygulamaları ve Node.js'de Ergo blok zincirindeki işlemlerin oluşturulmasını ve imzalanmasını kolaylaştırmak için tasarlanmış JavaScript kütüphanesi.",
-      "features": ["JavaScript SDK", "İşlem Oluşturma", "Web Entegrasyonu", "Node.js Desteği"]
+      "features": [
+        "JavaScript SDK",
+        "İşlem Oluşturma",
+        "Web Entegrasyonu",
+        "Node.js Desteği"
+      ]
     },
     "appkit": {
       "description": "JVM tabanlı programlama dilleri kullanarak Ergo üzerinde uygulama geliştirmek için birincil SDK.",
-      "features": ["JVM SDK", "Scala/Java Desteği", "Akıllı Sözleşme Geliştirme", "Resmi SDK"]
+      "features": [
+        "JVM SDK",
+        "Scala/Java Desteği",
+        "Akıllı Sözleşme Geliştirme",
+        "Resmi SDK"
+      ]
     },
     "sigma-rust": {
       "description": "Rust'ta ErgoTree yorumlayıcısı uygulaması. İşlemlerle çalışmak için araçlar ve çeşitli diller için bağlamalar sağlar.",
-      "features": ["Rust Uygulaması", "ErgoTree Yorumlayıcı", "Çoklu Dil Bağlamaları", "WASM Desteği"]
+      "features": [
+        "Rust Uygulaması",
+        "ErgoTree Yorumlayıcı",
+        "Çoklu Dil Bağlamaları",
+        "WASM Desteği"
+      ]
     },
     "gluon": {
       "description": "SigmaUSD gibi Ergo ekosistemindeki mevcut sabit coinleri güçlendirmek (sertleştirmek) için geliştirilmiş protokol.",
-      "features": ["Sabit Coin Güçlendirme", "Protokol Sertleştirme", "DeFi Altyapısı", "Stabilite Mekanizması"]
+      "features": [
+        "Sabit Coin Güçlendirme",
+        "Protokol Sertleştirme",
+        "DeFi Altyapısı",
+        "Stabilite Mekanizması"
+      ]
     },
     "chaincash": {
       "description": "Ergo üzerinde merkeziyetsiz P2P para sistemleri oluşturmak için çerçeve. Kullanıcıların güven veya teminatla desteklenen kendi para birimlerini ihraç etmesine olanak tanır.",
-      "features": ["P2P Para", "Özel Para Birimleri", "Güven Tabanlı Destek", "Para Çerçevesi"]
+      "features": [
+        "P2P Para",
+        "Özel Para Birimleri",
+        "Güven Tabanlı Destek",
+        "Para Çerçevesi"
+      ]
     },
     "sigrsv": {
       "description": "SigmaUSD sabit coin protokolünün yedek coini. Kullanıcılar ERG'yi yedeklere yatırarak SigRSV basar ve ERG fiyat artışlarından kâr edebilir.",
-      "features": ["Yedek Coin", "ERG Maruziyeti", "SigmaUSD Desteği", "Getiri Potansiyeli"]
+      "features": [
+        "Yedek Coin",
+        "ERG Maruziyeti",
+        "SigmaUSD Desteği",
+        "Getiri Potansiyeli"
+      ]
     },
     "exle": {
       "description": "Ergo ekosisteminde Crux Finance ile entegre borç verme/ödünç alma protokolü.",
-      "features": ["Borç Verme Protokolü", "Ödünç Alma", "DeFi Entegrasyonu", "Crux Finance Entegrasyonu"]
+      "features": [
+        "Borç Verme Protokolü",
+        "Ödünç Alma",
+        "DeFi Entegrasyonu",
+        "Crux Finance Entegrasyonu"
+      ]
     }
   }
 }

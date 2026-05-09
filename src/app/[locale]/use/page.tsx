@@ -41,13 +41,13 @@ export default async function UsePage({ params }: { params: Promise<{ locale: st
   const t = await getTranslations({ locale, namespace: 'use' })
   const base = "https://www.ergoblockchain.org/use"
 
-  // FAQ items from translations
-  const faqItems = [
-    { question: t('faq.whatCanDo.question'), answer: t('faq.whatCanDo.answer') },
-    { question: t('faq.defiProtocols.question'), answer: t('faq.defiProtocols.answer') },
-    { question: t('faq.createNfts.question'), answer: t('faq.createNfts.answer') },
-    { question: t('faq.privacyWork.question'), answer: t('faq.privacyWork.answer') },
-  ]
+  // FAQ items — read from `use.faq.items[]` so the SSR fallback below and
+  // the FAQPage schema match exactly what UseClient renders. Previously
+  // the SSR fallback used a different key tree (whatCanDo / defiProtocols /
+  // createNfts / privacyWork) and the visible questions in the client UI
+  // didn't line up with the answers in the fallback section.
+  const rawItems = (t.raw('faq.items') as Array<{ question: string; answer: string }>) ?? []
+  const faqItems = rawItems.map((it) => ({ question: it.question, answer: it.answer }))
 
   // Use cases ItemList (complex, kept structured)
   const useCasesItemList = {

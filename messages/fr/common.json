@@ -357,7 +357,9 @@
       "mainNavigation": "Navigation principale",
       "breadcrumb": "Fil d'Ariane",
       "featuredEcosystemProjects": "Projets phares de l'écosystème Ergo"
-    }
+    },
+    "evidence": "Source",
+    "caveat": "Réserve"
   },
   "navigation": {
     "home": "Accueil",

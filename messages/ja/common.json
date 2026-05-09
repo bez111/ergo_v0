@@ -357,7 +357,9 @@
       "mainNavigation": "メインナビゲーション",
       "breadcrumb": "パンくずリスト",
       "featuredEcosystemProjects": "Ergoエコシステムの注目プロジェクト"
-    }
+    },
+    "evidence": "出典",
+    "caveat": "注意"
   },
   "navigation": {
     "home": "ホーム",

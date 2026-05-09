@@ -28,18 +28,29 @@ export interface EvidenceProps {
   caveat?: string
   /** Optional className for layout tweaks. */
   className?: string
+  /** Localized "Evidence" label (defaults to English). */
+  evidenceLabel?: string
+  /** Localized "Caveat:" prefix (defaults to English). */
+  caveatLabel?: string
 }
 
-export function Evidence({ claim, sources, caveat, className = "" }: EvidenceProps) {
+export function Evidence({
+  claim,
+  sources,
+  caveat,
+  className = "",
+  evidenceLabel = "Evidence",
+  caveatLabel = "Caveat",
+}: EvidenceProps) {
   return (
     <p
       role="note"
-      aria-label={claim ? `Evidence for: ${claim}` : "Evidence"}
+      aria-label={claim ? `${evidenceLabel} for: ${claim}` : evidenceLabel}
       className={`text-xs text-neutral-500 leading-snug mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1 ${className}`}
     >
       <span className="inline-flex items-center gap-1 font-mono uppercase tracking-wider text-neutral-400">
         <Info className="w-3 h-3" aria-hidden="true" />
-        Evidence
+        {evidenceLabel}
       </span>
       {sources.map((s, i) => {
         const isExternal = /^https?:/.test(s.href)
@@ -68,7 +79,7 @@ export function Evidence({ claim, sources, caveat, className = "" }: EvidencePro
       })}
       {caveat && (
         <span className="block w-full text-neutral-500 italic mt-0.5">
-          Caveat: {caveat}
+          {caveatLabel}: {caveat}
         </span>
       )}
     </p>

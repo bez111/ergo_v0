@@ -357,7 +357,9 @@
       "mainNavigation": "Main navigation",
       "breadcrumb": "Breadcrumb",
       "featuredEcosystemProjects": "Featured Ergo ecosystem projects"
-    }
+    },
+    "evidence": "Evidence",
+    "caveat": "Caveat"
   },
   "navigation": {
     "home": "Home",

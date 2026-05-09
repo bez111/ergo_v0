@@ -1,148 +1,333 @@
 {
   "ecosystemProjects": {
     "spectrum-finance": {
-      "description": "Eine hochmoderne Open-Source dezentrale Börse (DEX), die auf den Ergo- und Cardano-Blockchains betrieben wird. Sie bietet Liquiditätsbereitstellung (LP), Yield Farming und Babel Fees-Unterstützung.",
-      "features": ["Dezentrale Börse", "Liquiditätspools", "Yield Farming", "Babel Fees-Unterstützung", "Cross-Chain-Handel"]
+      "description": "Seit Februar 2024 abgeschaltet — das Team hat einen formalen Sunset-Hinweis veröffentlicht und wickelt das Projekt ab. Historisch eine cross-chain eUTXO-DEX (Ergo + Cardano) mit AMM, Yield Farming und Babel Fees. Keine Liquidität oder neue Mittel einzahlen.",
+      "features": [
+        "Historisch: cross-chain DEX (Ergo + Cardano)",
+        "Historisch: AMM-Liquiditäts-Pools",
+        "Historisch: Yield Farming",
+        "Historisch: Babel Fees-Unterstützung",
+        "Sunset seit Feb 2024 — keine aktive Venue"
+      ]
     },
     "ergodex": {
       "description": "Eine nicht-verwahrende dezentrale Börse (DEX) für Ergo und Cardano, die AMM- und Orderbuch-Handel über beide Ökosysteme ermöglicht.",
-      "features": ["Cross-Chain-DEX für Ergo & Cardano", "Nicht-verwahrter Handel", "AMM- und Orderbuch-Modelle", "Liquiditätsbereitstellung für ERG- und ADA-Ökosysteme"]
+      "features": [
+        "Cross-Chain-DEX für Ergo & Cardano",
+        "Nicht-verwahrter Handel",
+        "AMM- und Orderbuch-Modelle",
+        "Liquiditätsbereitstellung für ERG- und ADA-Ökosysteme"
+      ]
     },
     "sigmausd": {
       "description": "Der erste eUTXO-basierte Stablecoin, der das AgeUSD-Protokoll implementiert. Er ist an den US-Dollar gekoppelt und durch ERG mit einer variablen Reservequote (400%-800%) besichert.",
-      "features": ["Algorithmischer Stablecoin", "ERG-besichert", "Dezentralisiert", "Kein Liquidationsrisiko"]
+      "features": [
+        "Algorithmischer Stablecoin",
+        "ERG-besichert",
+        "Dezentralisiert",
+        "Kein Liquidationsrisiko"
+      ]
     },
     "rosen-bridge": {
       "description": "Ein Open-Source-Protokoll für Cross-Chain-Vermögenstransfers zwischen Ergo und anderen Blockchains wie Cardano, Bitcoin Runes und Dogecoin.",
-      "features": ["Cross-Chain-Transfers", "Multi-Blockchain-Unterstützung", "Dezentrale Watcher", "Vertrauenslose Brücke"]
+      "features": [
+        "Cross-Chain-Transfers",
+        "Multi-Blockchain-Unterstützung",
+        "Dezentrale Watcher",
+        "Vertrauenslose Brücke"
+      ]
     },
     "ergomixer": {
       "description": "Der erste nicht-interaktive, nicht-verwahrende Mixer der Kryptoindustrie. Er ermöglicht es Nutzern, Token privat mit Sigma-Protokollen für verbesserte Privatsphäre zu senden.",
-      "features": ["Nicht-verwahrendes Mischen", "Token-Privatsphäre", "Sigma-Protokolle", "Zero-Knowledge-Beweise"]
+      "features": [
+        "Nicht-verwahrendes Mischen",
+        "Token-Privatsphäre",
+        "Sigma-Protokolle",
+        "Zero-Knowledge-Beweise"
+      ]
     },
     "nautilus-wallet": {
       "description": "Eine Browser-Erweiterung und Mobile Wallet für Ergo mit Fokus auf Privatsphäre, Sicherheit und Benutzererfahrung. Unterstützt Ledger, mehrere Wallets und einen dApp-Connector.",
-      "features": ["Browser-Erweiterung", "Mobile App", "Ledger-Unterstützung", "dApp-Connector", "Multi-Wallet"]
+      "features": [
+        "Browser-Erweiterung",
+        "Mobile App",
+        "Ledger-Unterstützung",
+        "dApp-Connector",
+        "Multi-Wallet"
+      ]
     },
     "duckpools": {
       "description": "Eine besicherte Kreditplattform mit algorithmischen Kreditpools. Nutzer stellen ERG oder native Assets bereit, um Erträge zu erzielen, oder leihen Assets gegen ERG-Sicherheiten.",
-      "features": ["Kreditpools", "Besicherte Kredite", "Ertragsgenerierung", "Unterstützung nativer Assets"]
+      "features": [
+        "Kreditpools",
+        "Besicherte Kredite",
+        "Ertragsgenerierung",
+        "Unterstützung nativer Assets"
+      ]
     },
     "paideia": {
       "description": "Ein Werkzeugpaket zur Erstellung und Verwaltung von Dezentralen Autonomen Organisationen (DAO) auf Ergo und Cardano mit Governance und Treasury-Management.",
-      "features": ["DAO-Erstellung", "Governance-Tools", "Treasury-Management", "Abstimmung über Vorschläge", "Multi-Chain"]
+      "features": [
+        "DAO-Erstellung",
+        "Governance-Tools",
+        "Treasury-Management",
+        "Abstimmung über Vorschläge",
+        "Multi-Chain"
+      ]
     },
     "oracle-pools": {
       "description": "Ein dezentrales Oracle-System auf Ergo, das Smart Contracts mit externen Daten verbindet, ohne zentralisierten Quellen vertrauen zu müssen.",
-      "features": ["Dezentrale Orakel", "Preis-Feeds", "Externe Daten", "Vertrauensloses Design"]
+      "features": [
+        "Dezentrale Orakel",
+        "Preis-Feeds",
+        "Externe Daten",
+        "Vertrauensloses Design"
+      ]
     },
     "ergo-explorer": {
       "description": "Der offizielle Haupt-Block-Explorer für Ergo. Er ermöglicht Nutzern die Verfolgung von Transaktionen, Blöcken, Adressen, Token und die Anzeige allgemeiner Netzwerkstatistiken.",
-      "features": ["Block-Explorer", "Transaktionsverfolgung", "Token-Informationen", "Netzwerkstatistiken", "Adresssuche"]
+      "features": [
+        "Block-Explorer",
+        "Transaktionsverfolgung",
+        "Token-Informationen",
+        "Netzwerkstatistiken",
+        "Adresssuche"
+      ]
     },
     "ergopad": {
       "description": "Eine Token-Launch- (IDO) und Fundraising-Plattform auf der Ergo-Blockchain. Sie bietet Token-Inhabern die Möglichkeit, an IDOs teilzunehmen.",
-      "features": ["Token-Launch", "IDO-Plattform", "Staking", "Community-Projekte"]
+      "features": [
+        "Token-Launch",
+        "IDO-Plattform",
+        "Staking",
+        "Community-Projekte"
+      ]
     },
     "mew-finance": {
       "description": "Eine dezentrale Finanzplattform (DeFi), die eine Suite von Finanzanwendungen einschließlich DEX, NFT-Marktplatz und verschiedenen Finanzwerkzeugen bietet.",
-      "features": ["DEX", "NFT-Marktplatz", "DeFi-Suite", "Token-Tausch"]
+      "features": [
+        "DEX",
+        "NFT-Marktplatz",
+        "DeFi-Suite",
+        "Token-Tausch"
+      ]
     },
     "satergo": {
       "description": "Eine umfassende Desktop-Wallet für Ergo mit der Option, einen Full Node zur Unterstützung der Netzwerkdezentralisierung zu integrieren. Datenschutzorientiert mit Offline-Tresor.",
-      "features": ["Desktop-Wallet", "Full-Node-Integration", "Offline-Tresor", "Datenschutzfokus"]
+      "features": [
+        "Desktop-Wallet",
+        "Full-Node-Integration",
+        "Offline-Tresor",
+        "Datenschutzfokus"
+      ]
     },
     "safew": {
       "description": "Eine Browser-Erweiterungs-Wallet für Ergo, die sich mit ErgoMixer für verbesserte Transaktionsprivatsphäre integriert.",
-      "features": ["Browser-Erweiterung", "ErgoMixer-Integration", "Verbesserte Privatsphäre", "dApp-Unterstützung"]
+      "features": [
+        "Browser-Erweiterung",
+        "ErgoMixer-Integration",
+        "Verbesserte Privatsphäre",
+        "dApp-Unterstützung"
+      ]
     },
     "ergowatch": {
       "description": "Ein analytischer Block-Explorer, der Ergo-Netzwerkmetriken, DeFi-Statistiken (z.B. TVL), Diagramme und Dashboards zur Überwachung der Blockchain-Aktivität bereitstellt.",
-      "features": ["Analytik", "DeFi-Metriken", "TVL-Verfolgung", "Netzwerk-Dashboards", "Diagramme"]
+      "features": [
+        "Analytik",
+        "DeFi-Metriken",
+        "TVL-Verfolgung",
+        "Netzwerk-Dashboards",
+        "Diagramme"
+      ]
     },
     "cyberpixels": {
       "description": "Ein Spielprojekt mit einer offenen Pixel-Welt und Blockchain-Integration (NFT, benutzerdefinierte Token, In-Game-Marktplatz).",
-      "features": ["Blockchain-Gaming", "NFT-Integration", "In-Game-Marktplatz", "Play-to-Earn"]
+      "features": [
+        "Blockchain-Gaming",
+        "NFT-Integration",
+        "In-Game-Marktplatz",
+        "Play-to-Earn"
+      ]
     },
     "sigmafi": {
       "description": "Eine Suite dezentraler P2P-Finanzverträge auf Ergo, einschließlich SigmaBonds zur Erstellung von P2P-Schuldverpflichtungen.",
-      "features": ["P2P-Kreditvergabe", "Anleihenemission", "Dezentrale Finanzen", "Smart Contracts"]
+      "features": [
+        "P2P-Kreditvergabe",
+        "Anleihenemission",
+        "Dezentrale Finanzen",
+        "Smart Contracts"
+      ]
     },
     "ergoraffle": {
       "description": "Ein Crowdfunding-Service mit Lotterieelementen, der Fundraising für Projekte ermöglicht, bei denen Teilnehmer Belohnungen gewinnen können.",
-      "features": ["Crowdfunding", "Lotteriesystem", "Nachweisbare Fairness", "Projektfinanzierung"]
+      "features": [
+        "Crowdfunding",
+        "Lotteriesystem",
+        "Nachweisbare Fairness",
+        "Projektfinanzierung"
+      ]
     },
     "minotaur-wallet": {
       "description": "Eine Mobile Wallet für Ergo mit erweiterten Funktionen wie Multi-Signaturen zur Verbesserung der Fondsverwaltungssicherheit.",
-      "features": ["Mobile Wallet", "Multi-Signatur", "Erhöhte Sicherheit", "Fondsverwaltung"]
+      "features": [
+        "Mobile Wallet",
+        "Multi-Signatur",
+        "Erhöhte Sicherheit",
+        "Fondsverwaltung"
+      ]
     },
     "guapswap": {
       "description": "Ein dezentraler Smart-Contract-basierter Dienst zum Tauschen von Miner-Gewinnen auf Ergo, der den automatischen Austausch von Mining-Belohnungen ermöglicht.",
-      "features": ["Mining-Belohnungen", "Auto-Tausch", "Gewinnverwaltung", "Miner-Tools"]
+      "features": [
+        "Mining-Belohnungen",
+        "Auto-Tausch",
+        "Gewinnverwaltung",
+        "Miner-Tools"
+      ]
     },
     "dexygold": {
       "description": "Ein algorithmischer Stablecoin, der an den Goldpreis (XAU/USD) gekoppelt ist und Seigniorage, Preis-Orakel und überschüssige ERG-Sicherheiten nutzt.",
-      "features": ["Gold-gekoppelter Stablecoin", "Algorithmisches Design", "Oracle-Integration", "ERG-Sicherheit"]
+      "features": [
+        "Gold-gekoppelter Stablecoin",
+        "Algorithmisches Design",
+        "Oracle-Integration",
+        "ERG-Sicherheit"
+      ]
     },
     "sigmao": {
       "description": "Eine Plattform für den Optionshandel (Call/Put, Amerikanisch/Europäisch) auf Ergo EIP-4-Token im Orderbuch-Stil.",
-      "features": ["Optionshandel", "Call/Put-Optionen", "Orderbuch", "EIP-4-Token"]
+      "features": [
+        "Optionshandel",
+        "Call/Put-Optionen",
+        "Orderbuch",
+        "EIP-4-Token"
+      ]
     },
     "blitz-tcg": {
       "description": "Ein Sammelkartenspiel (TCG) auf der Ergo-Blockchain.",
-      "features": ["Sammelkartenspiel", "NFT-Karten", "Wettbewerbsspiel", "Sammelstücke"]
+      "features": [
+        "Sammelkartenspiel",
+        "NFT-Karten",
+        "Wettbewerbsspiel",
+        "Sammelstücke"
+      ]
     },
     "sigmaverse": {
       "description": "Ein zentrales Portal und Verzeichnis für das Ergo-dApp-Ökosystem, in dem Entwickler Anwendungen listen und Nutzer Dienste finden können.",
-      "features": ["dApp-Verzeichnis", "Projektlisten", "Ökosystem-Portal", "Entdeckungsplattform"]
+      "features": [
+        "dApp-Verzeichnis",
+        "Projektlisten",
+        "Ökosystem-Portal",
+        "Entdeckungsplattform"
+      ]
     },
     "ergone": {
       "description": "Eine dezentrale, community-getriebene Marketingplattform zur Förderung von Ergo und seinen Projekten unter Verwendung des ERGONE-Tokens und des Proof-of-Commitment-Protokolls.",
-      "features": ["Marketing-Plattform", "Community-getrieben", "Token-Anreize", "Projektförderung"]
+      "features": [
+        "Marketing-Plattform",
+        "Community-getrieben",
+        "Token-Anreize",
+        "Projektförderung"
+      ]
     },
     "hodlbox": {
       "description": "Eine Plattform, die langfristiges Halten von ERG mit Schatztruhen und verschiedenen Fondssperroptionen fördert und Nutzer mit NFT belohnt.",
-      "features": ["HODL-Anreize", "Fondssperre", "NFT-Belohnungen", "Langfristiges Sparen"]
+      "features": [
+        "HODL-Anreize",
+        "Fondssperre",
+        "NFT-Belohnungen",
+        "Langfristiges Sparen"
+      ]
     },
     "tokenjay": {
       "description": "Eine Plattform für den P2P- (Peer-to-Peer) Token-Handel innerhalb des Ergo-Ökosystems.",
-      "features": ["P2P-Handel", "Token-Tausch", "Dezentrale Börse", "Direkter Handel"]
+      "features": [
+        "P2P-Handel",
+        "Token-Tausch",
+        "Dezentrale Börse",
+        "Direkter Handel"
+      ]
     },
     "single-tx-swap": {
       "description": "Ein Tool zur Ausführung von P2P- (Peer-to-Peer) Token-Swaps innerhalb einer einzigen Transaktion.",
-      "features": ["Atomare Swaps", "Einzeltransaktion", "P2P-Austausch", "Schnelle Ausführung"]
+      "features": [
+        "Atomare Swaps",
+        "Einzeltransaktion",
+        "P2P-Austausch",
+        "Schnelle Ausführung"
+      ]
     },
     "crux-finance": {
       "description": "Ein Tool zur Verwaltung von Krypto-Portfolios innerhalb des Ergo-Ökosystems, das die Verfolgung von Gewinnen und Verlusten, Investitionen und die Erstellung von Steuerberichten ermöglicht.",
-      "features": ["Portfolio-Verfolgung", "Gewinn-/Verlustanalyse", "Steuerberichte", "Investitionsmanagement"]
+      "features": [
+        "Portfolio-Verfolgung",
+        "Gewinn-/Verlustanalyse",
+        "Steuerberichte",
+        "Investitionsmanagement"
+      ]
     },
     "fleet-sdk": {
       "description": "Eine JavaScript-Bibliothek, die die Erstellung und Signierung von Transaktionen auf der Ergo-Blockchain in Webanwendungen und Node.js vereinfacht.",
-      "features": ["JavaScript SDK", "Transaktionserstellung", "Web-Integration", "Node.js-Unterstützung"]
+      "features": [
+        "JavaScript SDK",
+        "Transaktionserstellung",
+        "Web-Integration",
+        "Node.js-Unterstützung"
+      ]
     },
     "appkit": {
       "description": "Das primäre Software Development Kit (SDK) zur Entwicklung von Anwendungen auf Ergo mit JVM-basierten Programmiersprachen.",
-      "features": ["JVM SDK", "Scala/Java-Unterstützung", "Smart-Contract-Entwicklung", "Offizielles SDK"]
+      "features": [
+        "JVM SDK",
+        "Scala/Java-Unterstützung",
+        "Smart-Contract-Entwicklung",
+        "Offizielles SDK"
+      ]
     },
     "sigma-rust": {
       "description": "Eine Implementierung des ErgoTree-Interpreters in Rust, die Werkzeuge für die Arbeit mit Transaktionen und Bindings für verschiedene Sprachen bereitstellt.",
-      "features": ["Rust-Implementierung", "ErgoTree-Interpreter", "Multi-Sprach-Bindings", "WASM-Unterstützung"]
+      "features": [
+        "Rust-Implementierung",
+        "ErgoTree-Interpreter",
+        "Multi-Sprach-Bindings",
+        "WASM-Unterstützung"
+      ]
     },
     "gluon": {
       "description": "Ein Protokoll, das entwickelt wurde, um bestehende Stablecoins im Ergo-Ökosystem, wie SigmaUSD, zu stärken (härten).",
-      "features": ["Stablecoin-Verbesserung", "Protokollhärtung", "DeFi-Infrastruktur", "Stabilitätsmechanismus"]
+      "features": [
+        "Stablecoin-Verbesserung",
+        "Protokollhärtung",
+        "DeFi-Infrastruktur",
+        "Stabilitätsmechanismus"
+      ]
     },
     "chaincash": {
       "description": "Ein Framework zur Erstellung dezentraler P2P-Geldsysteme auf Ergo, das es Nutzern ermöglicht, eigene durch Vertrauen oder Sicherheiten gedeckte Währungen auszugeben.",
-      "features": ["P2P-Geld", "Benutzerdefinierte Währungen", "Vertrauensbasierte Deckung", "Geld-Framework"]
+      "features": [
+        "P2P-Geld",
+        "Benutzerdefinierte Währungen",
+        "Vertrauensbasierte Deckung",
+        "Geld-Framework"
+      ]
     },
     "sigrsv": {
       "description": "Die Reservemünze für das SigmaUSD-Stablecoin-Protokoll. Nutzer prägen SigRSV durch Einzahlung von ERG in die Reserven und können von ERG-Preisanstiegen profitieren.",
-      "features": ["Reservemünze", "ERG-Exposition", "SigmaUSD-Deckung", "Ertragspotenzial"]
+      "features": [
+        "Reservemünze",
+        "ERG-Exposition",
+        "SigmaUSD-Deckung",
+        "Ertragspotenzial"
+      ]
     },
     "exle": {
       "description": "Ein Kredit-/Darlehensprotokoll innerhalb des Ergo-Ökosystems, integriert mit Crux Finance.",
-      "features": ["Kreditprotokoll", "Kreditaufnahme", "DeFi-Integration", "Crux Finance-Integration"]
+      "features": [
+        "Kreditprotokoll",
+        "Kreditaufnahme",
+        "DeFi-Integration",
+        "Crux Finance-Integration"
+      ]
     }
   }
 }

@@ -7,7 +7,10 @@ import { Evidence } from "@/components/seo/Evidence"
 
 export function WhyErgo() {
   const t = useTranslations('whyErgo')
-  
+  const tc = useTranslations('common')
+  const evidenceLabel = tc('evidence')
+  const caveatLabel = tc('caveat')
+
   return (
     <section className="py-16 md:py-24 relative overflow-hidden" id="why-ergo">
       {/* Semi-transparent overlay for better text readability */}
@@ -56,6 +59,8 @@ export function WhyErgo() {
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("mainFeatures.fairAndSecure.description")}</p>
                 <Evidence
+                  evidenceLabel={evidenceLabel}
+                  caveatLabel={caveatLabel}
                   claim="Deterministic eUTXO costs"
                   sources={[
                     { label: "eUTXO docs", href: "/technology/eutxo-model" },
@@ -77,6 +82,8 @@ export function WhyErgo() {
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.privacy.description")}</p>
                 <Evidence
+                  evidenceLabel={evidenceLabel}
+                  caveatLabel={caveatLabel}
                   claim="Programmable credit primitives"
                   sources={[
                     { label: "Architecture", href: "/build/agent-payments" },
@@ -113,6 +120,8 @@ export function WhyErgo() {
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("mainFeatures.sustainable.description")}</p>
                 <Evidence
+                  evidenceLabel={evidenceLabel}
+                  caveatLabel={caveatLabel}
                   claim="Babel Fees — pay tx fees in any token"
                   sources={[
                     { label: "Babel Fees doc", href: "/technology/babel-fees" },
@@ -148,6 +157,8 @@ export function WhyErgo() {
                 </div>
                 <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.community.description")}</p>
                 <Evidence
+                  evidenceLabel={evidenceLabel}
+                  caveatLabel={caveatLabel}
                   claim="No governance kill switch on Ergo PoW"
                   sources={[
                     { label: "Ergo node source", href: "https://github.com/ergoplatform/ergo" },

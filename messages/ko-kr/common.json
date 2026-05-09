@@ -357,7 +357,9 @@
       "mainNavigation": "주 내비게이션",
       "breadcrumb": "브레드크럼",
       "featuredEcosystemProjects": "주요 Ergo 생태계 프로젝트"
-    }
+    },
+    "evidence": "출처",
+    "caveat": "주의"
   },
   "navigation": {
     "home": "홈",

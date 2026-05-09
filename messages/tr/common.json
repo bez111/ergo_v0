@@ -357,7 +357,9 @@
       "mainNavigation": "Ana navigasyon",
       "breadcrumb": "Gezinti izi",
       "featuredEcosystemProjects": "Öne çıkan Ergo ekosistemi projeleri"
-    }
+    },
+    "evidence": "Kaynak",
+    "caveat": "Çekince"
   },
   "navigation": {
     "home": "Ana sayfa",

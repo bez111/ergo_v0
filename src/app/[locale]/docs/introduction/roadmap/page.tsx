@@ -101,7 +101,7 @@ export default function RoadmapPage() {
               </div>
               <div className="flex items-center text-green-400">
                 <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>Turing-Complete Smart Contracts:</strong> Allows complex on-chain computations</span>
+                <span><strong>Expressive eUTXO Smart Contracts:</strong> ErgoScript with bounded, analyzable execution — Turing-complete behaviour is reachable across transaction sequences, not inside a single script</span>
               </div>
               <div className="flex items-center text-green-400">
                 <CheckCircle className="w-5 h-5 mr-2" />
@@ -940,7 +940,7 @@ function Layer1Content() {
             <ul className="text-gray-300 space-y-2">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                Turing Complete smart contracts
+                Expressive eUTXO smart contracts (ErgoScript, bounded execution)
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
@@ -1240,7 +1240,7 @@ function Layer2Content() {
             ErgoScript's flexible design allows large parts of transactions to be executed on Layer 2, which are then settled on the Ergo blockchain in a single transaction. For instance, a developer successfully used the eUTXO model to airdrop native tokens to <strong>10,000 addresses simultaneously</strong>.
           </p>
           <p className="text-gray-300 mb-4">
-            ErgoScript features several advancements like time-weighted data, Turing completeness, read-only data inputs, multi-stage contracts, sigma protocols, NIPoPoWs, and more. These enhancements enable a variety of Layer 2 protocols, each addressing scalability issues in their unique way.
+            ErgoScript features several advancements like time-weighted data, multi-stage contracts (where Turing-complete behaviour is reachable across transaction sequences rather than inside a single script), read-only data inputs, sigma protocols, NIPoPoWs, and more. These enhancements enable a variety of Layer 2 protocols, each addressing scalability issues in their unique way.
           </p>
           <div className="bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-lg p-4 border border-purple-400/30">
             <p className="text-purple-200 font-semibold mb-0">
