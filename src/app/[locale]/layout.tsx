@@ -65,10 +65,14 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
       description: t('defaultDescription'),
       images: [
         {
-          url: '/og-image.png',
+          // Absolute URLs — Telegram / WhatsApp ignore relative paths
+          // even when metadataBase is set.
+          url: `${siteConfig.siteUrl}/og-image.png`,
+          secureUrl: `${siteConfig.siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
-          alt: 'Ergo Platform',
+          alt: 'Ergo — The Agentic Blockchain',
+          type: 'image/png',
         },
       ],
     },
@@ -76,7 +80,7 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
       card: 'summary_large_image',
       title: t('defaultTitle'),
       description: t('defaultDescription'),
-      images: ['/og-image.png'],
+      images: [`${siteConfig.siteUrl}/og-image.png`],
       creator: `${siteConfig.twitterHandle}`,
     },
     alternates: {
