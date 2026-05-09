@@ -192,9 +192,49 @@ async function main() {
   await writeFile(join(PUBLIC, "logo-ergo.svg"), svgSource)
   await writeFile(join(PUBLIC, "logo.png"), await renderIcon(1024))
 
-  // OG image — 1200×630 PNG.
+  // OG image — 1200×630 PNG. Written both as the canonical
+  // /og-image.png and at every per-page path the app references but
+  // didn't have a file for. Per-page OG cards are the long-term answer;
+  // until those land, ensure no share-preview crawler ever 404s on us
+  // (Telegram / WhatsApp drop the preview entirely on 404 and fall back
+  // to apple-touch-icon).
   const og = await buildOgImage()
   await writeFile(join(PUBLIC, "og-image.png"), og)
+
+  await ensureDir(join(PUBLIC, "og"))
+  const fallbackOgPaths = [
+    "homepage.png",
+    "agent-payments.png",
+    "comparison.png",
+    "community.png",
+    "defi.png",
+    "demos.png",
+    "ecosystem-map.png",
+    "ergo-features.png",
+    "ergoscript.png",
+    "faq.png",
+    "get-erg.png",
+    "glossary.png",
+    "grants.png",
+    "intro.png",
+    "introduction.png",
+    "quiz.png",
+    "research.png",
+    "technology.png",
+    "wallets.png",
+  ]
+  for (const f of fallbackOgPaths) {
+    await writeFile(join(PUBLIC, "og", f), og)
+  }
+  // SVG fallbacks referenced by some routes — write the same OG card as
+  // an embedded PNG inside an SVG wrapper so the URL resolves.
+  const svgWrapper = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
+  <image width="1200" height="630" xlink:href="data:image/png;base64,${og.toString("base64")}"/>
+</svg>`
+  await writeFile(join(PUBLIC, "og", "blog.svg"), svgWrapper)
+  await writeFile(join(PUBLIC, "og", "blog-default.svg"), svgWrapper)
+  await writeFile(join(PUBLIC, "og", "infographics-hub.svg"), svgWrapper)
 
   console.log("✓ icons + favicon + OG image regenerated")
 }
