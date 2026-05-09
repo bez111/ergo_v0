@@ -477,14 +477,14 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "一个在 Ergo 和 Cardano 区块链上运行的前沿开源去中心化交易所（DEX）。提供流动性提供（LP）、收益耕作，并支持 Babel Fees。",
-      "longDescription": "Spectrum Finance 是最早基于 eUTXO 模型构建的跨链去中心化交易所之一，同时在 Ergo 和 Cardano 区块链上运行。该平台率先推出了多项创新，包括原生 Babel Fees 支持，允许用户以 ERG 以外的代币支付交易费用。\n\n该 DEX 利用自动做市商（AMM）池进行无需信任的代币交换，流动性提供者从所有交易中赚取费用。收益耕作功能为流动性提供者提供额外的代币奖励，为交易对创造深度流动性的激励。\n\n作为一个开源项目，Spectrum Finance 为 eUTXO DeFi 生态系统贡献了大量代码和研究，展示了如何在该模型上安全构建复杂的金融应用程序。该协议的智能合约和架构继续作为新 DeFi 项目的参考实现。",
+      "description": "自 2024 年 2 月起已停运(sunset)——团队发布了正式的停运通知,并正在关闭该项目。历史上是一个跨链 eUTXO DEX(Ergo + Cardano),支持 AMM、流动性挖矿和 Babel Fees。请勿存入流动性或新资金。",
+      "longDescription": "自 2024 年 2 月起已停运(sunset)——团队发布了正式的停运通知,并正在关闭该项目。历史上是一个跨链 eUTXO DEX(Ergo + Cardano),支持 AMM、流动性挖矿和 Babel Fees。请勿存入流动性或新资金。 The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming. If you held positions on Spectrum, follow the official sunset notice on spectrum.fi/sunset-notice for current withdrawal guidance.",
       "features": [
-        "去中心化交易所",
-        "流动性池",
-        "收益耕作",
-        "Babel Fees 支持",
-        "跨链交易"
+        "历史功能: 跨链 DEX (Ergo + Cardano)",
+        "历史功能: AMM 流动性池",
+        "历史功能: 流动性挖矿",
+        "历史功能: 支持 Babel Fees",
+        "自 2024 年 2 月起停运 — 已不是活跃交易场所"
       ]
     },
     "ergodex": {

@@ -477,14 +477,14 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.",
-      "longDescription": "Spectrum Finance was one of the first cross-chain decentralized exchanges built on the eUTXO model, operating across both Ergo and Cardano blockchains. The platform pioneered several innovations including native Babel Fees support, which allowed users to pay transaction fees in tokens other than ERG.\n\nThe DEX utilized automated market maker (AMM) pools for trustless token swaps, with liquidity providers earning fees from all trades. Yield farming features enabled additional token rewards for liquidity providers, creating incentives for deep liquidity across trading pairs.\n\nAs an open-source project, Spectrum Finance contributed significant code and research to the eUTXO DeFi ecosystem, demonstrating how complex financial applications could be built securely on this model. The protocol's smart contracts and architecture continue to serve as reference implementations for new DeFi projects.",
+      "description": "Sunset since February 2024 — the team published a formal sunset notice and is winding the project down. Historically a cross-chain eUTXO DEX (Ergo + Cardano) with AMM, yield farming and Babel Fees support. Do not deposit liquidity or new funds.",
+      "longDescription": "Sunset since February 2024 — the team published a formal sunset notice and is winding the project down. Historically a cross-chain eUTXO DEX (Ergo + Cardano) with AMM, yield farming and Babel Fees support. Do not deposit liquidity or new funds. The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming. If you held positions on Spectrum, follow the official sunset notice on spectrum.fi/sunset-notice for current withdrawal guidance.",
       "features": [
-        "Decentralized Exchange",
-        "Liquidity Pools",
-        "Yield Farming",
-        "Babel Fees Support",
-        "Cross-chain Trading"
+        "Historical: cross-chain DEX (Ergo + Cardano)",
+        "Historical: AMM liquidity pools",
+        "Historical: yield farming",
+        "Historical: Babel Fees support",
+        "Sunset since Feb 2024 — not an active venue"
       ]
     },
     "ergodex": {

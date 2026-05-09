@@ -477,14 +477,14 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "Ergo와 Cardano 블록체인에서 운영되는 최첨단 오픈 소스 탈중앙화 거래소(DEX). 유동성 공급(LP), 수익 농업(yield farming)을 제공하며 Babel Fees를 지원합니다.",
-      "longDescription": "Spectrum Finance는 eUTXO 모델 위에 구축된 최초의 크로스체인 탈중앙화 거래소 중 하나로, Ergo와 Cardano 블록체인 모두에서 운영됩니다. 이 플랫폼은 사용자가 ERG 이외의 토큰으로 거래 수수료를 지불할 수 있게 해주는 네이티브 Babel Fees 지원을 포함한 여러 혁신을 선도했습니다.\n\nDEX는 신뢰가 필요 없는 토큰 스왑을 위한 자동화된 시장 메이커(AMM) 풀을 활용했으며, 유동성 공급자는 모든 거래에서 수수료를 얻었습니다. 수익 농업 기능은 유동성 공급자에게 추가 토큰 보상을 제공하여 거래 쌍 전반에 걸쳐 깊은 유동성을 위한 인센티브를 만들었습니다.\n\n오픈 소스 프로젝트로서 Spectrum Finance는 eUTXO DeFi 에코시스템에 상당한 코드와 연구를 기여했으며, 이 모델 위에서 복잡한 금융 애플리케이션을 안전하게 구축할 수 있음을 입증했습니다. 프로토콜의 스마트 컨트랙트와 아키텍처는 새로운 DeFi 프로젝트의 참조 구현으로 계속 활용됩니다.",
+      "description": "2024년 2월부터 종료(sunset) — 팀이 공식 종료 공지를 게시하고 프로젝트를 정리 중입니다. 과거에는 AMM, 이익 농사(yield farming), Babel Fees를 지원하는 크로스체인 eUTXO DEX(Ergo + Cardano)였습니다. 유동성이나 새로운 자금을 예치하지 마세요.",
+      "longDescription": "2024년 2월부터 종료(sunset) — 팀이 공식 종료 공지를 게시하고 프로젝트를 정리 중입니다. 과거에는 AMM, 이익 농사(yield farming), Babel Fees를 지원하는 크로스체인 eUTXO DEX(Ergo + Cardano)였습니다. 유동성이나 새로운 자금을 예치하지 마세요. The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming. If you held positions on Spectrum, follow the official sunset notice on spectrum.fi/sunset-notice for current withdrawal guidance.",
       "features": [
-        "탈중앙화 거래소",
-        "유동성 풀",
-        "수익 농업",
-        "Babel Fees 지원",
-        "크로스체인 거래"
+        "역사적: 크로스체인 DEX (Ergo + Cardano)",
+        "역사적: AMM 유동성 풀",
+        "역사적: 이익 농사",
+        "역사적: Babel Fees 지원",
+        "2024년 2월부터 sunset — 활성 거래소 아님"
       ]
     },
     "ergodex": {

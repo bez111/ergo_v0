@@ -477,14 +477,14 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "Un exchange décentralisé (DEX) open source de pointe opérant sur les blockchains Ergo et Cardano. Il offre la fourniture de liquidités (LP), le yield farming et prend en charge les Babel Fees.",
-      "longDescription": "Spectrum Finance a été l'un des premiers exchanges décentralisés cross-chain construits sur le modèle eUTXO, opérant à la fois sur les blockchains Ergo et Cardano. La plateforme a été pionnière dans plusieurs innovations, notamment la prise en charge native des Babel Fees, qui permettait aux utilisateurs de payer les frais de transaction en tokens autres que ERG.\n\nLe DEX utilisait des pools de teneurs de marché automatisés (AMM) pour des échanges de tokens sans confiance, les fournisseurs de liquidités gagnant des frais sur tous les trades. Les fonctionnalités de yield farming permettaient des récompenses de tokens supplémentaires pour les fournisseurs de liquidités, créant des incitations pour une liquidité profonde entre les paires de trading.\n\nEn tant que projet open source, Spectrum Finance a contribué du code et des recherches significatifs à l'écosystème DeFi eUTXO, démontrant comment des applications financières complexes pouvaient être construites en toute sécurité sur ce modèle. Les smart contracts et l'architecture du protocole continuent de servir d'implémentations de référence pour les nouveaux projets DeFi.",
+      "description": "En sunset depuis février 2024 — l'équipe a publié une notice formelle de fermeture et procède à l'arrêt du projet. Historiquement une DEX cross-chain eUTXO (Ergo + Cardano) avec AMM, yield farming et support des Babel Fees. Ne déposez pas de liquidité ni de nouveaux fonds.",
+      "longDescription": "En sunset depuis février 2024 — l'équipe a publié une notice formelle de fermeture et procède à l'arrêt du projet. Historiquement une DEX cross-chain eUTXO (Ergo + Cardano) avec AMM, yield farming et support des Babel Fees. Ne déposez pas de liquidité ni de nouveaux fonds. The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming. If you held positions on Spectrum, follow the official sunset notice on spectrum.fi/sunset-notice for current withdrawal guidance.",
       "features": [
-        "Exchange décentralisé",
-        "Pools de liquidités",
-        "Yield Farming",
-        "Support des Babel Fees",
-        "Trading cross-chain"
+        "Historique : DEX cross-chain (Ergo + Cardano)",
+        "Historique : pools AMM de liquidité",
+        "Historique : yield farming",
+        "Historique : support des Babel Fees",
+        "Sunset depuis fév. 2024 — n'est plus une plateforme active"
       ]
     },
     "ergodex": {

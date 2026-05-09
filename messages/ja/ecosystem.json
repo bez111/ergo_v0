@@ -477,14 +477,14 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "Ergo と Cardano ブロックチェーン上で動作する最先端のオープンソース分散型取引所（DEX）。流動性提供（LP）、イールドファーミングを提供し、Babel Fees をサポートする。",
-      "longDescription": "Spectrum Finance は、eUTXO モデル上に構築された最初のクロスチェーン分散型取引所の一つで、Ergo と Cardano の両ブロックチェーンで動作しています。このプラットフォームは、ユーザーが ERG 以外のトークンで取引手数料を支払うことを可能にするネイティブ Babel Fees サポートを含む、いくつかのイノベーションを先導しました。\n\nこの DEX は、トラストレスなトークンスワップのために自動マーケットメーカー（AMM）プールを活用し、流動性提供者はすべての取引から手数料を得ます。イールドファーミング機能により、流動性提供者に追加のトークン報酬が提供され、取引ペア全体で深い流動性へのインセンティブが生まれます。\n\nオープンソースプロジェクトとして、Spectrum Finance は eUTXO DeFi エコシステムに多大なコードと研究を提供し、このモデル上で複雑な金融アプリケーションを安全に構築できることを示しました。プロトコルのスマートコントラクトとアーキテクチャは、新しい DeFi プロジェクトのリファレンス実装として引き続き活用されています。",
+      "description": "2024年2月以降サンセット — チームは正式なサンセット通知を発表し、プロジェクトを段階的に終了しています。かつてはAMM、イールドファーミング、Babel Fees対応のクロスチェーンeUTXO DEX(Ergo + Cardano)でした。流動性や新規資金を入れないでください。",
+      "longDescription": "2024年2月以降サンセット — チームは正式なサンセット通知を発表し、プロジェクトを段階的に終了しています。かつてはAMM、イールドファーミング、Babel Fees対応のクロスチェーンeUTXO DEX(Ergo + Cardano)でした。流動性や新規資金を入れないでください。 The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming. If you held positions on Spectrum, follow the official sunset notice on spectrum.fi/sunset-notice for current withdrawal guidance.",
       "features": [
-        "分散型取引所",
-        "流動性プール",
-        "イールドファーミング",
-        "Babel Fees サポート",
-        "クロスチェーン取引"
+        "歴史的: クロスチェーン DEX (Ergo + Cardano)",
+        "歴史的: AMM 流動性プール",
+        "歴史的: イールドファーミング",
+        "歴史的: Babel Fees サポート",
+        "2024年2月以降サンセット — アクティブな取引所ではありません"
       ]
     },
     "ergodex": {

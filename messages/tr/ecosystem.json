@@ -477,14 +477,14 @@
   "ecosystemData": {
     "spectrum-finance": {
       "name": "Spectrum Finance",
-      "description": "Ergo ve Cardano blokzincirlerinde faaliyet gösteren son teknoloji açık kaynaklı merkeziyetsiz borsa (DEX). Likidite sağlama (LP), yield farming sunar ve Babel Fees'i destekler.",
-      "longDescription": "Spectrum Finance, Ergo ve Cardano blokzincirlerinde faaliyet gösteren eUTXO modeli üzerine inşa edilmiş ilk zincirler arası merkeziyetsiz borsalardan biriydi. Platform, kullanıcıların ERG dışındaki token'larla işlem ücreti ödemesine olanak tanıyan yerel Babel Fees desteği dahil olmak üzere çeşitli yeniliklere öncülük etti.\n\nDEX, güvensiz token takasları için otomatik piyasa yapıcı (AMM) havuzlarını kullandı; likidite sağlayıcılar tüm işlemlerden ücret kazandı. Yield farming özellikleri, likidite sağlayıcılara ek token ödülleri sağlayarak işlem çiftleri genelinde derin likidite için teşvikler yarattı.\n\nAçık kaynaklı bir proje olarak Spectrum Finance, eUTXO DeFi ekosistemine önemli kod ve araştırma katkısında bulundu; bu modelde güvenli bir şekilde nasıl karmaşık finansal uygulamalar oluşturulabileceğini gösterdi. Protokolün akıllı sözleşmeleri ve mimarisi, yeni DeFi projeleri için referans uygulamalar olarak hizmet etmeye devam etmektedir.",
+      "description": "Şubat 2024'ten beri sunset durumunda — ekip resmi bir sunset bildirimi yayımladı ve projeyi sona erdiriyor. Tarihsel olarak AMM, yield farming ve Babel Fees destekli zincirler arası eUTXO bir DEX'di (Ergo + Cardano). Likidite veya yeni fon yatırmayın.",
+      "longDescription": "Şubat 2024'ten beri sunset durumunda — ekip resmi bir sunset bildirimi yayımladı ve projeyi sona erdiriyor. Tarihsel olarak AMM, yield farming ve Babel Fees destekli zincirler arası eUTXO bir DEX'di (Ergo + Cardano). Likidite veya yeni fon yatırmayın. The codebase remains open-source as a reference for eUTXO DeFi, but the deployed venue is no longer recommended for new liquidity, swaps, or yield farming. If you held positions on Spectrum, follow the official sunset notice on spectrum.fi/sunset-notice for current withdrawal guidance.",
       "features": [
-        "Merkeziyetsiz Borsa",
-        "Likidite Havuzları",
-        "Yield Farming",
-        "Babel Fees Desteği",
-        "Zincirler Arası Ticaret"
+        "Tarihsel: zincirler arası DEX (Ergo + Cardano)",
+        "Tarihsel: AMM likidite havuzları",
+        "Tarihsel: yield farming",
+        "Tarihsel: Babel Fees desteği",
+        "Şubat 2024'ten beri sunset — aktif bir borsa değil"
       ]
     },
     "ergodex": {
