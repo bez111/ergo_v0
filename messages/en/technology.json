@@ -5102,7 +5102,7 @@
         },
         {
           "title": "MEV Resistance",
-          "description": "Deterministic transactions prevent front-running attacks"
+          "description": "eUTXO and local ordering reduce common front-running and sandwich-MEV patterns. Not an absolute guarantee — MEV-like behavior can still emerge from mempool policy, oracle design or specific dApp mechanics."
         }
       ]
     },
@@ -5314,7 +5314,7 @@
       "details": [
         {
           "title": "Token Flexibility",
-          "description": "Use any token to pay transaction fees"
+          "description": "Pay transaction fees in any supported token where a Babel box / fee-conversion path exists. Not a guarantee that every token is always accepted everywhere — depends on available Babel-box liquidity and miner inclusion."
         },
         {
           "title": "Automated Exchange",

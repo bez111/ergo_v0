@@ -291,9 +291,32 @@ export default function EcosystemClient() {
                         </div>
                       </div>
                       <p className="text-neutral-400 mb-3 flex-1">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
-                      <p className="text-[11px] text-neutral-500 font-mono mb-4">
-                        Last verified {project.lastVerified ?? ECOSYSTEM_LAST_VERIFIED}
-                      </p>
+                      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-neutral-500 font-mono mb-4">
+                        <span>Last checked {project.lastVerified ?? ECOSYSTEM_LAST_VERIFIED}</span>
+                        {project.verificationStatus === "site-down" && (
+                          <span
+                            className="px-1.5 py-0.5 rounded border border-red-500/40 bg-red-500/10 text-red-300 normal-case"
+                            title="External site did not respond on the most recent reachability check"
+                          >
+                            Site unavailable on last check
+                          </span>
+                        )}
+                        {project.verificationStatus === "404" && (
+                          <span className="px-1.5 py-0.5 rounded border border-red-500/40 bg-red-500/10 text-red-300 normal-case">
+                            URL gone (404)
+                          </span>
+                        )}
+                        {project.verificationStatus === "js-only" && (
+                          <span className="px-1.5 py-0.5 rounded border border-yellow-500/40 bg-yellow-500/10 text-yellow-300 normal-case">
+                            JS-only render
+                          </span>
+                        )}
+                        {project.verificationStatus === "sunset-notice" && (
+                          <span className="px-1.5 py-0.5 rounded border border-red-500/40 bg-red-500/10 text-red-300 normal-case">
+                            Sunset notice published
+                          </span>
+                        )}
+                      </div>
                       <div className="flex flex-col gap-2 mt-auto">
                         <Button asChild className="w-full bg-orange-500 hover:bg-orange-400 text-white">
                           <Link href={`/ecosystem/${project.slug}`} aria-label={`Learn more about ${project.name}`} className="flex items-center gap-2">

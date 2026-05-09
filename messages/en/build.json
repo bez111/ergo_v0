@@ -4,7 +4,7 @@
       "tag": "Technical Architecture",
       "titleStart": "Agent Payment Stack: ",
       "titleHighlight": "Reference Architecture",
-      "description": "Four on-chain primitives. Three composable flows. Everything you need to build agent-to-agent payments on Ergo — from a single API call to a full community currency.",
+      "description": "Reference architecture for testnet builders: four on-chain primitives and three composable flows. Use this as the design map for agent-to-agent payments on Ergo. The base protocol is live; the Reserve / Note / Tracker / Acceptance Predicate stack ships as ErgoScript reference contracts that are testnet-first and not yet audited.",
       "ctaChainCash": "ChainCash repo",
       "ctaCodeExamples": "Code examples",
       "ctaLiveDemos": "Live demos"
@@ -117,7 +117,7 @@
     "status": {
       "sectionLabel": "What's live",
       "heading": "Stack status",
-      "description": "Five layers are live. Two are open problems. Join the conversation on GitHub — these are the most interesting unsolved problems in agent money.",
+      "description": "Settlement and Babel Fees are live on Ergo mainnet. Reserve / Note / Tracker / Acceptance Predicate are usable as ErgoScript reference contracts (testnet-first, not yet audited). Reputation and persistent identity remain open research problems — the most interesting ones for builders to pick up.",
       "legendLive": "Live on mainnet / testnet",
       "legendSoon": "Coming soon",
       "legendOpen": "Open research problem",
@@ -144,12 +144,12 @@
       },
       "babelFees": {
         "title": "Babel Fees",
-        "desc": "Pay fees in any token — key for agents"
+        "desc": "Pay fees in any token where a Babel box / fee-conversion path exists — key UX for agents"
       }
     },
     "cta": {
       "title": "Building agents? Talk to us.",
-      "description": "Book a design session, get code review, or join the builders list. We'll respond within 24 hours."
+      "description": "Book a design session, get code review, or join the builders list. We'll get back with a concrete next step."
     }
   },
   "quickstartPage": {

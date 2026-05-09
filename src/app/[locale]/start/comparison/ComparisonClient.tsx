@@ -334,7 +334,7 @@ export default function ComparisonClient() {
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                      <span className="text-neutral-300">No reentrancy attacks</span>
+                      <span className="text-neutral-300">No protocol-level reentrancy by construction (application bugs still possible)</span>
                     </div>
                   </div>
                 </div>
@@ -617,13 +617,33 @@ export default function ComparisonClient() {
               </div>
               <div className="bg-black/80 border border-white/10 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-200 hover:bg-black/90 hover:border-orange-400/40">
                 <Users className="w-12 h-12 text-orange-400 mx-auto mb-4" aria-hidden="true" />
-                <h3 className="text-lg font-semibold text-white mb-2">100+ developers</h3>
-                <p className="text-neutral-400 text-sm">Growing active community</p>
+                <h3 className="text-lg font-semibold text-white mb-2">100+ contributors</h3>
+                <p className="text-neutral-400 text-sm">
+                  GitHub contributors across{" "}
+                  <a
+                    href="https://github.com/ergoplatform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-400 underline underline-offset-2 hover:text-orange-300"
+                  >
+                    ergoplatform org repos
+                  </a>
+                </p>
               </div>
               <div className="bg-black/80 border border-white/10 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-200 hover:bg-black/90 hover:border-orange-400/40">
                 <Award className="w-12 h-12 text-orange-400 mx-auto mb-4" aria-hidden="true" />
-                <h3 className="text-lg font-semibold text-white mb-2">No critical protocol-level incidents</h3>
-                <p className="text-neutral-400 text-sm">As of {isoDate}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">No critical protocol-level incidents disclosed</h3>
+                <p className="text-neutral-400 text-sm">
+                  As of {isoDate}.{" "}
+                  <a
+                    href="https://github.com/ergoplatform/ergo/security/advisories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-400 underline underline-offset-2 hover:text-orange-300"
+                  >
+                    GitHub Security Advisories
+                  </a>
+                </p>
               </div>
             </div>
           </section>

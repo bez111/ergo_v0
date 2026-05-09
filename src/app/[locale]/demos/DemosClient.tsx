@@ -221,7 +221,11 @@ export function DemosClient() {
       ],
       why: t('demoItems.apiCall.why'),
       code: `// Install: npm install @fleet-sdk/core
+// Pseudo-code — illustrates the shape of a Note creation. Production
+// usage pins the exact Ergo-compatible hash function and the canonical
+// audited script address; do not deploy this snippet as-is.
 import { TransactionBuilder, OutputBuilder } from "@fleet-sdk/core"
+import { blake2b256 } from "@fleet-sdk/crypto"
 
 // Create a payment note for one API call
 const noteBox = new OutputBuilder(
@@ -230,7 +234,7 @@ const noteBox = new OutputBuilder(
 ).setAdditionalRegisters({
   R4: SGroupElement(providerPublicKey), // who receives
   R5: SLong(BigInt(currentHeight + 100)), // deadline
-  R6: SColl(SByte, sha256(taskDescription)), // task proof
+  R6: SColl(SByte, blake2b256(taskDescription)), // task proof — Ergo-native hash
 })
 
 const tx = new TransactionBuilder(currentHeight)

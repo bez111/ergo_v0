@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 // FAQ Content
 const FAQ_ITEMS = [
   { question: "How is Ergo different from Bitcoin?", answer: "While sharing Bitcoin's UTXO model and PoW consensus, Ergo adds smart contracts, storage rent, and NIPoPoWs for advanced functionality." },
-  { question: "What advantages does Ergo have over Ethereum?", answer: "Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining." },
+  { question: "What advantages does Ergo have over Ethereum?", answer: "Ergo offers deterministic fees, removes the protocol-level reentrancy class by construction (application-level bugs are still possible), supports parallel transaction validation, and uses energy-efficient GPU PoW." },
   { question: "How does Ergo compare to Cardano?", answer: "Both use eUTXO, but Ergo has PoW consensus, storage rent, and no VC funding, making it more decentralized and sustainable." }
 ]
 
