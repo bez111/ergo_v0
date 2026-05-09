@@ -110,7 +110,7 @@
       "items": [
         {
           "title": "eUTXO Model: No Surprises",
-          "description": "No reentrancy attacks. MEV-resistant by design exploitation. No hidden global state. Know exactly what your contract will cost before execution."
+          "description": "No protocol-level reentrancy by construction. MEV-resistant by design exploitation. No hidden global state. Know exactly what your contract will cost before execution."
         },
         {
           "title": "Sigma Protocols: Privacy Without PhD",
@@ -374,7 +374,7 @@
         },
         {
           "question": "What makes Ergo different for developers?",
-          "answer": "Ergo offers: eUTXO model (no reentrancy attacks, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design."
+          "answer": "Ergo offers: eUTXO model (no protocol-level reentrancy by construction, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design."
         },
         {
           "question": "Where can I find ErgoScript code examples?",

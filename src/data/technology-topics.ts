@@ -101,7 +101,7 @@ export const technologyTopics: TechnologyTopic[] = [
     details: [
       { icon: Layers, title: "Parallel Execution", description: "Process multiple transactions simultaneously without state conflicts" },
       { icon: LinkIcon, title: "Native Composability", description: "Build complex DeFi from simple, reusable contract pieces" },
-      { icon: Shield, title: "MEV Resistance", description: "Deterministic transactions prevent front-running attacks" },
+      { icon: Shield, title: "MEV Resistance", description: "eUTXO and local ordering reduce common front-running and sandwich-MEV patterns. Not an absolute guarantee — MEV-like behaviour can still emerge in mempool, oracle or dApp design." },
     ],
     keywords: ["eutxo", "eUTXO", "utxo", "smart contracts", "parallel execution", "composability", "mev resistance", "ethereum comparison", "technical"],
     relatedTopics: ["ergoscript", "native-tokens"],

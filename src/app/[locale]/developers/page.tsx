@@ -14,7 +14,7 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 const SEO = {
   path: "/developers",
   title: "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API | Build on Ergo",
-  description: "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). No reentrancy attacks, predictable costs, built-in privacy with Sigma protocols.",
+  description: "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). Removes the protocol-level reentrancy class (application bugs still possible), predictable costs, built-in privacy with Sigma protocols.",
   ogImage: "/og/hubs/developers.png",
   keywords: [
     "Ergo developers", "ErgoScript", "eUTXO", "smart contracts",
@@ -86,7 +86,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "What makes Ergo different for developers?",
-    answer: "Ergo offers: eUTXO model (no reentrancy attacks, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design - you can't lose more than what's in a box."
+    answer: "Ergo offers: eUTXO model (no protocol-level reentrancy by construction, predictable costs), Sigma Protocols (built-in privacy primitives), NiPoPoWs (light clients), and predictable ~$0.01 fees. Smart contracts are safer by design - you can't lose more than what's in a box."
   },
   {
     question: "What is the best SDK for Ergo development?",

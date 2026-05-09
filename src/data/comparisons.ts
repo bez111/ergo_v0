@@ -175,7 +175,7 @@ export const comparisons: ComparisonData[] = [
     color: "#627EEA",
     
     seoTitle: "Ergo vs Ethereum: eUTXO vs Account Model, PoW vs PoS Compared",
-    seoDescription: "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols.",
+    seoDescription: "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no protocol-level reentrancy by construction, PoW security, and native privacy with Sigma Protocols.",
     keywords: [
       "ergo vs ethereum",
       "eutxo vs account model",
@@ -1168,7 +1168,7 @@ export const comparisons: ComparisonData[] = [
       },
       {
         title: "Smart Contract Model",
-        content: "Avalanche uses the EVM with Solidity - familiar to developers but with known issues (reentrancy, MEV). Ergo's ErgoScript on eUTXO is different but offers unique benefits: deterministic execution, parallel processing, and no reentrancy attacks.",
+        content: "Avalanche uses the EVM with Solidity - familiar to developers but with known issues (reentrancy, MEV). Ergo's ErgoScript on eUTXO is different but offers unique benefits: deterministic execution, parallel processing, and no protocol-level reentrancy by construction.",
         ergoAdvantage: "Safer smart contract execution model.",
       },
     ],

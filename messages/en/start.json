@@ -1026,7 +1026,7 @@
             },
             {
               "question": "What advantages does Ergo have over Ethereum?",
-              "answer": "Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining."
+              "answer": "Ergo offers predictable fees, no protocol-level reentrancy by construction, parallel transaction processing, and energy-efficient PoW mining."
             },
             {
               "question": "How does Ergo compare to Cardano?",
@@ -2111,7 +2111,7 @@
       "compare_ergo_with_leading_blockchains": "Compare Ergo with Leading Blockchains",
       "blockchain_comparison": "Blockchain Comparison",
       "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"Blockchain Platform Comparison\",\n    description: \"Technical comparison of Ergo with other blockchain platforms",
-      "what_advantages_does_ergo_have": "What advantages does Ergo have over Ethereum?\",\n      answer: \"Ergo offers predictable fees, no reentrancy attacks, parallel transaction processing, and energy-efficient PoW mining.",
+      "what_advantages_does_ergo_have": "What advantages does Ergo have over Ethereum?\",\n      answer: \"Ergo offers predictable fees, no protocol-level reentrancy by construction, parallel transaction processing, and energy-efficient PoW mining.",
       "how_does_ergo_compare_to": "How does Ergo compare to Cardano?\",\n      answer: \"Both use eUTXO, but Ergo has PoW consensus, storage rent, and no VC funding, making it more decentralized and sustainable.",
       "ergo_vs_bitcoin_ethereum_cardano": "Ergo vs Bitcoin, Ethereum, Cardano",
       "technical_comparison_of_ergo_vs": "Technical comparison of Ergo vs Bitcoin, Ethereum, Cardano. See why Ergo stands out.",
@@ -2474,7 +2474,7 @@
         "points": [
           "Predictable execution costs",
           "Security by design",
-          "No reentrancy attacks"
+          "No protocol-level reentrancy by construction (application bugs still possible)"
         ]
       },
       "productivity": {

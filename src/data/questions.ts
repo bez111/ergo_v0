@@ -71,7 +71,7 @@ export const questions: QuestionEntry[] = [
     persona: "builder",
     stage: "awareness",
     category: "Technology",
-    shortAnswer: "eUTXO (Extended Unspent Transaction Output) is Ergo's smart contract model that extends Bitcoin's UTXO with programmable logic. Each 'box' contains ERG, tokens, data registers, and a guarding script. Transactions consume boxes and create new ones, enabling deterministic execution, parallel processing, and no reentrancy attacks.",
+    shortAnswer: "eUTXO (Extended Unspent Transaction Output) is Ergo's smart contract model that extends Bitcoin's UTXO with programmable logic. Each 'box' contains ERG, tokens, data registers, and a guarding script. Transactions consume boxes and create new ones, enabling deterministic execution, parallel processing, and no protocol-level reentrancy by construction.",
     keyPoints: [
       "Boxes = UTXOs with superpowers: value + tokens + data + script",
       "Deterministic: execution cost known before sending",
@@ -100,7 +100,7 @@ export const questions: QuestionEntry[] = [
     persona: "builder",
     stage: "consideration",
     category: "DeFi",
-    shortAnswer: "Ergo offers structural advantages for DeFi: MEV resistance by design, deterministic gas costs, and no reentrancy attacks due to eUTXO. Ethereum has larger ecosystem and liquidity. Choose Ergo for security-critical applications, fair trading, and predictable costs. Choose Ethereum for maximum composability with existing protocols.",
+    shortAnswer: "Ergo offers structural advantages for DeFi: MEV resistance by design, deterministic gas costs, and no protocol-level reentrancy by construction due to eUTXO. Ethereum has larger ecosystem and liquidity. Choose Ergo for security-critical applications, fair trading, and predictable costs. Choose Ethereum for maximum composability with existing protocols.",
     keyPoints: [
       "Ergo: MEV-resistant by design, no front-running, no sandwich attacks",
       "Ergo: Predictable fees (~$0.01), known before sending",

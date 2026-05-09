@@ -103,7 +103,7 @@ export const playbooks: Playbook[] = [
     difficulty: "intermediate",
     timeToComplete: "2-4 weeks",
     
-    heroDescription: "Ergo's eUTXO model eliminates entire classes of DeFi vulnerabilities. No reentrancy attacks, predictable fees, and parallel execution. Build secure DeFi that actually works.",
+    heroDescription: "Ergo's eUTXO model removes several common DeFi vulnerability classes — including the protocol-level reentrancy class. Application-level bugs are still possible, predictable fees, and parallel execution. Build secure DeFi that actually works.",
     
     problemStatement: "Traditional DeFi on account-based chains is plagued by exploits, unpredictable gas costs, and MEV extraction. Developers spend more time on security audits than building features.",
     solution: "Ergo's eUTXO model provides deterministic execution, no reentrancy by design, and MEV resistance. ErgoScript is expressive yet auditable. Build once, deploy with confidence.",

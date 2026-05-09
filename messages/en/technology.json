@@ -382,7 +382,7 @@
             "title": "Security First",
             "description": "Built-in protection against common smart contract vulnerabilities",
             "benefits": [
-              "No reentrancy attacks possible",
+              "No protocol-level reentrancy by construction (application bugs still possible)",
               "Formal verification support",
               "Type safety guarantees"
             ]
@@ -1651,7 +1651,7 @@
       "frequently_asked_questions": "Frequently Asked Questions",
       "learn_more_about_eutxo": "Learn More About eUTXO",
       "view_on_github": "View on GitHub",
-      "description": "The Extended UTXO model combines Bitcoin's security with smart contract programmability. Parallel execution, deterministic costs, no reentrancy attacks."
+      "description": "The Extended UTXO model combines Bitcoin's security with smart contract programmability. Parallel execution, deterministic costs, no protocol-level reentrancy by construction (application bugs still possible)."
     },
     "nipopows": {
       "title": "NIPoPoWs",
@@ -2985,7 +2985,7 @@
       "keyFeatures": [
         {
           "title": "Security First",
-          "description": "No reentrancy attacks, predictable execution costs, formal verification support"
+          "description": "No protocol-level reentrancy (by construction), predictable execution costs, formal verification support"
         },
         {
           "title": "Expressive Power",

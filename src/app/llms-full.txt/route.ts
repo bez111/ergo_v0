@@ -42,7 +42,7 @@ The platform's native token ERG has a fixed supply of 97,739,924 coins. Ergo int
 ### eUTXO Model
 The Extended UTXO model is Ergo's core data model. Unlike account-based blockchains (Ethereum), where state is stored globally, Ergo stores state in individual "boxes" (UTXOs with attached data and scripts). Each box contains: ERG value, tokens, a protection script (in ErgoScript), and optional registers (R4-R9) for arbitrary data.
 
-Benefits: Parallel execution (no shared state), predictable fees, formally verifiable contracts, no reentrancy attacks, stateless verification.
+Benefits: Parallel execution (no shared state), predictable fees, formally verifiable contracts, no protocol-level reentrancy by construction (application-level bugs still possible), stateless verification.
 
 ### ErgoScript
 ErgoScript is Ergo's smart contract language. It is a subset of Scala, non-Turing-complete (no unbounded loops), based on sigma protocols. Scripts evaluate to true or false — a transaction is valid only if all input boxes' scripts evaluate to true given the spending transaction's context.
@@ -174,7 +174,7 @@ sigmaProp(
 - ChainCash is the open-source prototype reference implementation (by BetterMoneyLabs) — testnet-first, not audited, not production-ready
 - Babel Fees mean agents don't need ERG to operate — can pay fees in any token
 - eUTXO determinism means agents know exact transaction costs before submitting
-- No reentrancy attacks possible — each UTxO can only be spent once
+- No protocol-level reentrancy — each UTxO can only be spent once (application bugs still possible)
 - Typical agent transaction cost: ~$0.01 on mainnet
 - Testnet demos are live and open source at ${BASE_URL}/demos
 - Fleet SDK npm package: @fleet-sdk/core

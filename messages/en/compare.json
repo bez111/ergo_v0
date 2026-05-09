@@ -150,7 +150,7 @@
     "ethereum": {
       "name": "Ethereum",
       "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols."
+      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no protocol-level reentrancy by construction, PoW security, and native privacy with Sigma Protocols."
     },
     "cardano": {
       "name": "Cardano",
@@ -274,7 +274,7 @@
     "ethereum": {
       "name": "Ethereum",
       "seoTitle": "Ergo vs Ethereum 2025: eUTXO vs Account Model, PoW vs PoS Compared",
-      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no reentrancy attacks, PoW security, and native privacy with Sigma Protocols.",
+      "seoDescription": "Complete comparison of Ergo and Ethereum: eUTXO vs account model, predictable fees, no protocol-level reentrancy by construction, PoW security, and native privacy with Sigma Protocols.",
       "summary": {
         "headline": "Predictable, Secure, and Truly Decentralized",
         "subheadline": "Ergo offers Ethereum-level programmability without the security pitfalls, unpredictable fees, or centralization risks.",

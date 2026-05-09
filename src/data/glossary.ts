@@ -1808,7 +1808,7 @@ export const glossaryTerms: GlossaryTerm[] = [
       "Self-executing when conditions are met",
       "Stored on-chain, immutable once deployed",
       "ErgoScript ensures predictable gas costs",
-      "No reentrancy attacks possible on eUTXO",
+      "No protocol-level reentrancy on eUTXO (by construction)",
       "Supports multi-stage protocols",
       "Can interact with Sigma protocols for privacy",
     ],
