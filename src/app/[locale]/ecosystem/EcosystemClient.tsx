@@ -437,6 +437,23 @@ export default function EcosystemClient() {
                             </div>
                             <div className="md:col-span-4 md:col-start-8">
                               <p className="text-sm text-neutral-400 line-clamp-2">{(tProj.raw(project.slug) as Record<string, string>)?.description ?? project.description}</p>
+                              {(project.verificationStatus === "site-down" || project.verificationStatus === "404" || project.verificationStatus === "js-only" || project.verificationStatus === "sunset-notice") && (
+                                <p className="mt-1 text-[10px] font-mono">
+                                  <span
+                                    className={`inline-block px-1.5 py-0.5 rounded border normal-case ${
+                                      project.verificationStatus === "js-only"
+                                        ? "border-yellow-500/40 bg-yellow-500/10 text-yellow-300"
+                                        : "border-red-500/40 bg-red-500/10 text-red-300"
+                                    }`}
+                                    title={`External check on ${project.lastVerified ?? ECOSYSTEM_LAST_VERIFIED}`}
+                                  >
+                                    {project.verificationStatus === "site-down" && "Site unavailable on last check"}
+                                    {project.verificationStatus === "404" && "URL gone (404)"}
+                                    {project.verificationStatus === "js-only" && "JS-only render"}
+                                    {project.verificationStatus === "sunset-notice" && "Sunset notice published"}
+                                  </span>
+                                </p>
+                              )}
                             </div>
                             <div className="hidden md:flex md:col-span-1 justify-end text-orange-400">
                               <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />
