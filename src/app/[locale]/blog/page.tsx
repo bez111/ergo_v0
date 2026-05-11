@@ -306,7 +306,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </section>
 
           {/* Interactive Filters & Articles */}
-          <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
             <Suspense>
               <BlogClientStable
                 posts={blogPosts}

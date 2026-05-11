@@ -205,7 +205,7 @@ export default function BlogClientStable({
                 <div
                   key={post.id}
                   className="animate-scale-in"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  style={{ animationDelay: `${index * 0.05}s`, animationFillMode: "both" }}
                 >
                   <BlogCard post={post} />
                 </div>
