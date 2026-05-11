@@ -34,8 +34,8 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         aria-labelledby={`feat-${post.id}`}
         style={{
           backgroundImage: post.image ? `url(${post.image})` : undefined,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
         }}
       >
