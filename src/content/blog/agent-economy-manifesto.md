@@ -1,255 +1,200 @@
 ---
-title: "The Agent Economy Manifesto: Programmable Money for Autonomous AI"
-slug: "/blog/agent-economy-manifesto-programmable-money"
-seo_title: "The Agent Economy Manifesto: Why Autonomous AI Agents Need Programmable Money"
-meta_description: "A manifesto for AI agent payments: why autonomous agents need programmable settlement, acceptance predicates, credit instruments and verifiable work receipts."
-excerpt: "Autonomous agents will not merely need payment rails. They will need programmable money, bounded credit, verifiable work agreements and settlement receipts."
-author: "Ergo Developer Relations"
+title: "The Agent Economy Manifesto"
+slug: "/blog/agent-economy-manifesto"
+seo_title: "The Agent Economy Manifesto: Programmable Money for Autonomous AI"
+meta_description: "A manifesto for the agent economy: why autonomous AI will need programmable money, bounded credit, work verification and verifiable settlement — not merely payment wrappers."
+excerpt: "Autonomous agents will not merely need payment rails. They will need programmable money — bounded credit, machine-readable terms, work verification and verifiable settlement. This is the agent economy thesis."
+author: "Ergo Platform"
 date_published: "2026-02-12"
-date_modified: "2026-05-08"
-status: "Vision article. Current Accord/ChainCash implementations are testnet-first unless audited."
-tags: ["Agent Economy", "AI agents", "programmable money", "Ergo", "Accord Protocol"]
-target_keywords: ["agent economy manifesto", "AI agents programmable money", "autonomous agent payments", "programmable settlement", "agentic commerce blockchain"]
+date_modified: "2026-05-11"
+tags: ["Agent Economy", "AI agents", "programmable money", "manifesto", "Ergo"]
+target_keywords: ["agent economy manifesto", "AI agents programmable money", "autonomous agent payments", "programmable settlement", "agentic commerce"]
 ---
 
-# The Agent Economy Manifesto: Programmable Money for Autonomous AI
-
-**Updated May 2026:** this manifesto describes the long-term direction. Current Accord Protocol, ChainCash/Basis reference contracts and Ergo agent-payment demos are testnet-first unless an implementation is explicitly audited and marked production-ready.
+# The Agent Economy Manifesto
 
 Autonomous agents are becoming economic actors.
 
-Not legal persons. Not companies. Not humans. Economic actors.
+Not legal persons. Not companies. Not humans. **Economic actors.**
 
-They request data, call APIs, coordinate subtasks, generate outputs, consume compute, sell services and make decisions inside software systems. Today, most of their economic activity is hidden behind a human account. The human pays the SaaS bill. The human holds the card. The human reconciles usage. The human signs every real economic commitment.
+They request data, call APIs, coordinate sub-tasks, generate outputs, consume compute, sell services and make decisions inside software systems. Today most of their economic activity is hidden behind a human account. The human pays the SaaS bill. The human holds the card. The human reconciles usage. The human signs every real economic commitment.
 
 That will not scale.
 
-As agents become more capable, they will need to interact economically with other agents, services and markets. They will need spending limits, receipts, work verification, conditional settlement and credit. They will need money that works at software speed.
+As agents become more capable, they will need to interact economically with other agents, services and markets. They will need spending limits. They will need receipts. They will need work verification, conditional settlement and credit. They will need money that works at software speed.
 
 This is the agent economy thesis:
 
-> Autonomous agents need programmable money, not merely payment wrappers.
+> Autonomous agents need **programmable money**, not merely payment wrappers.
 
 ## Five theses
 
 ### 1. Many autonomous systems will need to pay and be paid
 
-Not every chatbot needs a wallet. But agents that call paid APIs, rent compute, buy data, outsource tasks, sell outputs or coordinate workflows need economic capabilities. If the agent cannot pay, every workflow falls back to the human operator.
+Not every chatbot needs a wallet. But agents that call paid APIs, rent compute, buy data, outsource tasks, sell outputs or coordinate workflows need economic capabilities. If the agent cannot pay, every workflow falls back to the human operator — and the human operator becomes the bottleneck of every machine.
 
 ### 2. Payment alone is not enough
 
-A payment receipt says value moved. It does not say the work was completed. The agent economy needs work agreements, verification receipts and settlement receipts.
+A payment receipt says value moved. It does not say the work was completed. The agent economy needs work agreements, verification receipts and settlement receipts. The interesting unit is not the transaction. It is the contract.
 
 ### 3. Programmable acceptance is the missing primitive
 
-The core question is not “can an agent send money?” It is “can the payment be redeemed only when the agreed condition is satisfied?” That is the role of acceptance predicates.
+The core question is not "can an agent send money?" It is: **can the payment be redeemed only when the agreed condition is satisfied?** That is the difference between a wire transfer and a contract. The agent economy needs the second one.
 
 ### 4. Agents need bounded credit, not unlimited wallets
 
-A safe agent should not hold unrestricted funds. It should receive limited, expiring, purpose-bound instruments. Notes are a natural way to represent that budget.
+A safe agent should not hold unrestricted funds. It should receive limited, expiring, purpose-bound instruments. The history of banking is the history of bounded promises. Agents need bounded promises too.
 
 ### 5. The winning stack will be layered
 
-Stripe, x402, wallets, stablecoins, Ergo, Accord and future protocols will not all do the same job. The winning architecture will compose authorization, payment, work verification, credit and settlement.
+No single product will own the agent economy. Authorization, payment, work verification, credit and settlement will live in different layers — and the systems that win will be the ones that compose cleanly.
 
 ## What agents require from money
 
 ### Machine-readable terms
 
-An agent cannot negotiate a vague invoice. It needs structured terms: price, asset, network, recipient, deadline, refund rule, verifier and task definition.
+An agent cannot negotiate a vague invoice. It needs structured terms: price, asset, network, recipient, deadline, refund rule, verifier and task definition. Anything less is a human-shaped artefact dressed up for software.
 
 ### Low-friction payment
 
-An agent may call hundreds of tools. Payment cannot require manual checkout for every call.
+An agent may call hundreds of tools per minute. Payment cannot require a manual checkout, a CAPTCHA, or a six-step OAuth dance. Friction is the enemy of automation.
 
 ### Deterministic costs
 
-Agents need to know whether a transaction is worth doing before they submit it. Highly variable fees make tiny autonomous payments difficult to plan.
+Agents need to know whether a transaction is worth doing **before** they submit it. Unpredictable fees and gas auctions make tiny autonomous payments difficult to plan and impossible to budget.
 
 ### Bounded spending
 
-An agent should have limits: per task, per counterparty, per day, per asset and per risk category.
+An agent should have limits — per task, per counterparty, per day, per asset, per risk category. The right default is the smallest possible authority that still gets the job done.
 
 ### Work verification
 
-The system must define what counts as acceptable work. This could be objective output, a signed verifier receipt, a proof, a hash commitment or a human-reviewed decision.
+The system must define what counts as acceptable work. This could be objective output, a signed verifier receipt, a cryptographic proof, a hash commitment, or a human-reviewed decision. Without a verification rule, payment becomes a tip.
 
 ### Settlement receipts
 
-Downstream systems need to know what settled. Receipts matter for accounting, dispute handling, audit and reputation.
+Downstream systems need to know what settled. Receipts are not paperwork — they are the substrate of accounting, dispute handling, audit and reputation. A money system without good receipts cannot grow up.
 
 ## Why human payment rails are not enough
 
-Traditional payment systems are designed for persistent identities: people, businesses, bank accounts, cards, merchant accounts, chargebacks and legal recourse. That is appropriate for human commerce.
+Traditional payment systems are designed for persistent identities: people, businesses, bank accounts, cards, merchant accounts, chargebacks, legal recourse. That is appropriate for human commerce.
 
 Agents are different. They may be temporary processes. They may act under delegated authority. They may need to pay for a single API call. They may operate inside a workflow where the counterparty is another agent, not a registered merchant.
 
-This does not mean traditional systems are useless. Stripe and similar platforms will be important for agentic commerce where agents buy goods and services on behalf of humans. But that is not the entire agent economy.
+This does not make traditional systems useless. They will remain important wherever a human authorizes a purchase. But the deeper layer is **autonomous work settlement**: an agent pays another agent or service for a task, and the system itself verifies whether the task was completed.
 
-The deeper layer is autonomous work settlement: an agent pays another agent or service for a task, and the system verifies whether the task was completed.
+That layer cannot be a wrapper around a card network. It has to be money with logic inside it.
 
 ## The four programmable primitives
 
+A small vocabulary is enough to compose most agent economic flows.
+
 ### Reserve
 
-A Reserve is the backing layer. It holds collateral or defines issuance rules. If an orchestrator issues Notes to sub-agents, the Reserve is the source of trust.
+A Reserve is the backing layer. It holds collateral or defines issuance rules. When an orchestrator issues credit to sub-agents, the Reserve is the source of trust.
 
 ### Note
 
-A Note is a programmable bearer instrument. It can represent spendable budget or a claim against a Reserve. It can carry expiry, value and task-specific conditions.
+A Note is a programmable bearer instrument. It can represent spendable budget or a claim against a Reserve. It carries value, expiry and task-specific conditions. Whoever holds the Note can attempt to redeem it — subject to the Note's own rules.
 
 ### Tracker
 
-A Tracker prevents double-redemption and records state changes. In a credit system, avoiding duplicate claims is essential.
+A Tracker prevents double-redemption and records state changes. In a credit system, the difference between integrity and chaos is whether you can stop a Note from being redeemed twice.
 
 ### Acceptance Predicate
 
-An acceptance predicate is the work rule. It can require a task hash, verifier receipt, deadline, signature or other condition before redemption.
+An acceptance predicate is the work rule. It can require a task hash, a verifier receipt, a deadline, a signature, or any composition of these. It is the smart contract that lives **inside** the payment, not next to it.
 
-Together, these primitives make a payment instrument behave like a small contract for work.
+Together, these primitives turn a payment instrument into a small contract for work.
 
 ## Why Ergo fits this design
 
 ### eUTXO makes state explicit
 
-Every box has value, registers and a spending rule. Agents can reason about state transitions before submitting transactions.
+Every box has value, registers and a spending rule. Agents can reason about state transitions before submitting transactions. There is no hidden global state to surprise them mid-flight.
 
 ### ErgoScript puts logic in the payment
 
-The spending condition can encode the acceptance rule. That makes the payment itself programmable.
+The spending condition can encode the acceptance rule. The payment is not a notification to a server somewhere — it is a self-contained contract that miners enforce.
 
-### Babel Fees reduce gas bootstrapping friction
+### Babel Fees reduce gas-bootstrapping friction
 
-Agents should not always need a pre-funded native-token wallet just to operate. Babel Fees can allow fee payment through token conversion mechanisms, subject to market availability and miner/fee conditions.
+Agents should not need a pre-funded native-token wallet just to operate. Babel Fees allow fee payment through token conversion mechanisms wherever a Babel box exists, removing one of the most awkward steps in agent onboarding.
 
 ### Native tokens and Notes compose
 
-Tokens handle ownership. Notes handle programmable credit and settlement. A single application can use both.
+Tokens handle ownership. Notes handle programmable credit and settlement. A single application can use both, in a single transaction, without bridging or wrapping.
 
-### PoW avoids validator-governance pause assumptions
+### PoW means no governance kill switch
 
-A PoW base chain has a different control model from validator or foundation-governed systems. This does not remove all risk, but it is relevant for infrastructure expected to run without centralized emergency switches.
-
-## Where Accord fits
-
-Accord Protocol is the agreement layer above payment rails.
-
-It asks three questions:
-
-1. **Agreement:** what was promised?
-2. **Verification:** was the work accepted?
-3. **Settlement:** how did the economic part settle?
-
-This is why Accord can coexist with multiple rails. A simple paid API may use x402-style payment. A credit-based agent workflow may use Ergo Notes. A stablecoin settlement may use another rail. Accord’s job is to make the work agreement and receipts portable.
-
-## What is ready today, and what is not
-
-### Ready as base primitives
-
-- Ergo mainnet exists.
-- eUTXO and ErgoScript exist.
-- Native tokens exist.
-- Babel Fees exist as a protocol concept.
-- Fleet SDK and other development tools exist.
-
-### Ready for testnet builders
-
-- Accord Protocol reference repo.
-- Ergo agent-payment examples.
-- MCP and framework adapter experiments.
-- Note/Reserve/Tracker demos.
-- Acceptance predicate examples.
-
-### Not yet ready for broad production
-
-- Unaudited Note/Reserve/Tracker contracts.
-- Mainnet credit issuance with user funds.
-- General-purpose agent custody.
-- Standardized discovery and receipts.
-- Mature dispute and refund patterns.
-
-A manifesto is not a security audit. The path from vision to production is testnet, review, audit, manifests, pilots and conservative rollout.
-
-## Counterarguments
-
-### What if x402 wins?
-
-That may help the thesis. x402 standardizes programmatic payment over HTTP. Accord can add work verification and settlement receipts around x402-style flows. Payment standards create demand for agreement standards.
-
-### What if Stripe solves agentic commerce?
-
-Stripe will likely solve a large part of buyer-authorized commerce. That does not eliminate the need for decentralized work settlement, programmable Notes or trust-minimized agent-to-agent credit.
-
-### What if EVM L2s are enough?
-
-EVM systems can implement many of these patterns. The Ergo argument is not that others are incapable; it is that eUTXO, ErgoScript and Notes make this design unusually direct and auditable.
-
-### What if agents do not need credit?
-
-Some agents only need simple payments. But multi-agent workflows, delegated budgets and delayed settlement all benefit from bounded credit instruments. The more agents coordinate, the more credit matters.
-
-### What if users do not trust autonomous payments?
-
-They should be cautious. That is why agent payments need spending limits, receipts, audit gates, human override policies and transparent risk disclosures.
+A PoW base chain has a different control model from validator-governed or foundation-governed systems. Agent infrastructure needs a base layer that nobody can pause by committee. PoW gives that.
 
 ## Principles for the agent economy
 
-1. **No hidden custody.** Users must know who controls funds.
-2. **No unlimited agents.** Every agent needs spending limits.
-3. **No payment without terms.** Price, task, deadline and verifier should be explicit.
-4. **No settlement without receipts.** Payment and work verification should be auditable.
-5. **No production claims without audits.** Demos are not guarantees.
-6. **No single rail absolutism.** The future is layered and interoperable.
-7. **No fake decentralization.** If a server can rewrite the outcome, say so.
+These are not best practices. These are the rules.
+
+1. **No hidden custody.** Users must always know who controls funds.
+2. **No unlimited agents.** Every agent gets explicit spending limits.
+3. **No payment without terms.** Price, task, deadline and verifier are explicit, machine-readable, and signed.
+4. **No settlement without receipts.** Payment and work verification are auditable forever.
+5. **No production claims without audits.** Demos are demos. Audits are audits. Confusing them is malpractice.
+6. **No single-rail absolutism.** The agent economy is layered and interoperable, or it is not the agent economy.
+7. **No fake decentralization.** If a server can rewrite the outcome, the README says so on the first line.
+
+## Counterarguments
+
+### What if existing payment networks solve agentic commerce?
+
+They will solve a large part of buyer-authorized commerce — the part where a human still stands behind every purchase. That does not eliminate the need for trust-minimized work settlement, programmable Notes or agent-to-agent credit. The two layers serve different problems.
+
+### What if EVM systems are enough?
+
+Account-model chains can implement many of these patterns. The argument is not that other systems are incapable. It is that **eUTXO, ErgoScript and Notes make this design unusually direct, auditable and analysable** — and that for agent infrastructure those three properties matter more than ecosystem size.
+
+### What if agents do not need credit?
+
+Some agents will only need simple payments. But the moment agents start coordinating — orchestrators, sub-agents, delegated budgets, delayed settlement — credit instruments become necessary. The more agents cooperate, the more credit matters.
+
+### What if users do not trust autonomous payments?
+
+They should be cautious. That is exactly why agent payments need spending limits, receipts, audit gates, human override policies and transparent risk disclosures. Trust is earned by being honest about what the system can and cannot guarantee.
+
+### What if it is too early?
+
+The rails for the human internet were built before there were users. The rails for the agent economy are being built right now. The question is not whether software agents will need money. It is whether the money they get will be good.
 
 ## The practical call to builders
 
-Build small. Build testnet. Publish code. Show receipts. Write down failure modes. Make demos reproducible. Add tests for replay, expiry, wrong output, wrong receiver, partial work and failed settlement.
+Build small. Build testnet. Publish code. Show receipts. Write down failure modes. Make demos reproducible. Add tests for replay, expiry, wrong output, wrong receiver, partial work and failed settlement. Document what you don't know.
 
-The agent economy does not need more vague claims. It needs working examples that survive scrutiny.
+The agent economy does not need more vague claims. It needs **working examples that survive scrutiny.**
+
+Build the primitives. Test them honestly. Audit them publicly. Ship them slowly. Then build the things that depend on them.
+
+This is the work of the next decade.
 
 ## FAQ
 
 ### What is the agent economy?
 
-The agent economy is the network of economic interactions between software agents, humans, services and markets. It includes paid API calls, tool usage, delegated tasks, compute markets, data access, work verification and settlement.
+The agent economy is the network of economic interactions between software agents, humans, services and markets. It includes paid API calls, tool usage, delegated tasks, compute markets, data access, work verification and settlement between non-human counterparties.
 
 ### Do all AI agents need wallets?
 
-No. Many agents will remain inside human-funded apps. Wallets and payment instruments matter most for agents that buy services, sell work, coordinate subtasks or operate across organizational boundaries.
+No. Many agents will remain inside human-funded apps and never touch money directly. Wallets and programmable payment instruments matter most for agents that buy services, sell work, coordinate sub-tasks, or operate across organisational boundaries.
 
 ### What is programmable money?
 
-Programmable money is value with rules attached: who can spend it, when it expires, what condition must be satisfied, which Reserve backs it and how settlement is recorded.
+Programmable money is value with rules attached: who can spend it, when it expires, what condition must be satisfied for redemption, which Reserve backs it, and how settlement is recorded. It is the difference between a banknote and a contract — both denominate value, but only one knows what it is for.
+
+### Why not just use existing payment networks?
+
+Existing networks are built around persistent human identities, merchant accounts, chargebacks and legal recourse. Agents are often ephemeral, delegated and software-native. Existing networks remain useful for human-authorized commerce. They are not the right substrate for trust-minimized agent-to-agent settlement.
 
 ### Is Ergo the only possible chain for this?
 
-No. Other systems can implement parts of the stack. Ergo’s claim should be that its eUTXO model, ErgoScript, native tokens, Babel Fees and PoW settlement make it unusually well suited for programmable agent-payment instruments.
+No. Other systems can implement parts of the stack. Ergo's claim is that its eUTXO model, ErgoScript, native tokens, Babel Fees and PoW settlement make it **unusually well suited** for programmable agent-payment instruments — not that it is the only home for them.
 
-### Is the current Accord/Ergo agent stack production-ready?
+### What does this manifesto commit to?
 
-No. The base chain is live, but Accord and the reference contracts should be treated as testnet-first until audited. Builders should prototype, test and contribute, not deploy unaudited real-money systems.
-
-## Article JSON-LD draft
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "The Agent Economy Manifesto: Programmable Money for Autonomous AI",
-  "description": "A manifesto for AI agent payments: why autonomous agents need programmable settlement, acceptance predicates, credit instruments and verifiable work receipts.",
-  "datePublished": "2026-02-12",
-  "dateModified": "2026-05-08",
-  "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
-  "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/agent-economy-manifesto-programmable-money",
-  "keywords": ["agent economy", "AI agents", "programmable money", "Ergo", "Accord Protocol"]
-}
-```
-
-## Source notes
-
-- Original article: https://www.ergoblockchain.org/blog/agent-economy-manifesto
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
-- x402 documentation: https://docs.cdp.coinbase.com/x402/welcome
-- Stripe Agentic Commerce: https://stripe.com/use-cases/agentic-commerce
+The thesis. Not a product roadmap, not a token launch, not a guarantee of any specific implementation. The thesis is that programmable money is the foundation of the agent economy, and that the foundation has to be built honestly — primitive by primitive, audit by audit, receipt by receipt.

@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
     wordCount: 2500,
     image: '/og/ergo-manifesto.png',
     tags: ['Manifesto', 'Philosophy', 'Decentralization', 'Financial Freedom', 'Privacy'],
-    featured: true,
+    featured: false,
     trending: true,
     difficulty: 'Beginner',
     shares: 450
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
     wordCount: 2200,
     image: '/og/sigma-protocols-privacy.png',
     tags: ['Sigma Protocols', 'Privacy', 'Zero Knowledge', 'Compliance', 'DeFi Privacy'],
-    featured: true,
+    featured: false,
     trending: true,
     difficulty: 'Intermediate',
     shares: 0
@@ -291,17 +291,17 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'agent-economy-manifesto',
     slug: 'agent-economy-manifesto',
-    title: 'The Agent Economy Manifesto: Programmable Money for Autonomous AI',
+    title: 'The Agent Economy Manifesto',
     excerpt:
-      'Autonomous agents will not merely need payment rails. They will need programmable money, bounded credit, verifiable work agreements and settlement receipts.',
+      'Autonomous agents will not merely need payment rails. They will need programmable money: bounded credit, machine-readable terms, work verification and verifiable settlement.',
     date: '2026-02-12',
-    lastUpdated: '2026-05-08',
-    author: authors['dev-relations']!,
+    lastUpdated: '2026-05-11',
+    author: authors['ergo-team']!,
     category: 'Vision',
     readTime: 12,
     wordCount: 3000,
     image: '/og/blog/agent-economy-manifesto.png',
-    tags: ['Agent Economy', 'AI agents', 'programmable money', 'Ergo', 'Accord Protocol'],
+    tags: ['Agent Economy', 'AI agents', 'programmable money', 'manifesto', 'Ergo'],
     featured: true,
     trending: true,
     difficulty: 'Intermediate',
@@ -356,7 +356,7 @@ export const blogPosts: BlogPost[] = [
     wordCount: 2100,
     image: '/og/blog/ergo-agent-economy-q2-2026.png',
     tags: ['Accord Protocol', 'Ergo', 'AI agent payments', 'MCP', 'x402', 'developer update'],
-    featured: true,
+    featured: false,
     trending: true,
     difficulty: 'Intermediate',
     shares: 0
@@ -374,7 +374,7 @@ export const blogPosts: BlogPost[] = [
     wordCount: 3000,
     image: '/og/blog/state-of-agent-payments-2026.png',
     tags: ['AI agent payments', 'x402', 'Stripe', 'Ergo', 'Accord Protocol', 'machine payments'],
-    featured: true,
+    featured: false,
     trending: true,
     difficulty: 'Intermediate',
     shares: 0
@@ -411,7 +411,7 @@ export const blogPosts: BlogPost[] = [
     wordCount: 2600,
     image: '/og/blog/agents-cant-use-stripe.png',
     tags: ['Stripe', 'agentic commerce', 'AI agent payments', 'x402', 'Ergo', 'Accord Protocol'],
-    featured: true,
+    featured: false,
     trending: true,
     difficulty: 'Intermediate',
     shares: 0
