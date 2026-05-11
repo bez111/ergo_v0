@@ -24,17 +24,17 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-3xl"
+      className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-3xl"
       aria-label={`Read article: ${cleanTitle}`}
     >
       <article
-        className="rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 group-hover:translate-y-[-2px] transition-transform duration-200 aspect-[1200/630] min-h-[360px] sm:min-h-0 flex flex-col relative overflow-hidden group-hover:border-orange-500/30"
+        className="rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 group-hover:translate-y-[-2px] transition-transform duration-200 h-full flex flex-col relative overflow-hidden group-hover:border-orange-500/30"
         itemScope
         itemType="https://schema.org/BlogPosting"
         aria-labelledby={`feat-${post.id}`}
         style={{
           backgroundImage: post.image ? `url(${post.image})` : undefined,
-          backgroundSize: "cover",
+          backgroundSize: "100% 100%",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
