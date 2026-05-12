@@ -267,5 +267,5 @@ The concept is strong, and Ergo’s eUTXO model supports the pattern. Specific N
 ## Source notes
 
 - Original article: https://www.ergoblockchain.org/blog/notes-vs-tokens
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
+- Accord Protocol repo: https://github.com/accord-protocol/accord-protocol
 - Ergo technology page: https://www.ergoblockchain.org/technology

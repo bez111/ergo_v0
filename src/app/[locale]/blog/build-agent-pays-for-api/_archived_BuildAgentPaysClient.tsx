@@ -543,7 +543,7 @@ runAgent("the latest Ergo block data").catch(console.error);`}</pre>
                   <Link href="/build/quickstart" className="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors">
                     Full quickstart →
                   </Link>
-                  <a href="https://github.com/bez111/accord-protocol" target="_blank" rel="noopener noreferrer"
+                  <a href="https://github.com/accord-protocol/accord-protocol" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 text-sm font-medium transition-colors">
                     GitHub examples →
                   </a>

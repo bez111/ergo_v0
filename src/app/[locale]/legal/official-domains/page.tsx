@@ -29,7 +29,7 @@ const websites = [
 
 const githubOrgs = [
   { url: "https://github.com/ergoplatform", role: "Canonical org for the Ergo node, sigma-rust, sigma-state, Fleet SDK, AppKit." },
-  { url: "https://github.com/bez111/accord-protocol", role: "Accord Protocol (testnet beta) — agreement protocol & SDKs." },
+  { url: "https://github.com/accord-protocol/accord-protocol", role: "Accord Protocol (testnet beta) — agreement protocol & SDKs." },
   { url: "https://github.com/chainCashLabs", role: "ChainCash open-source prototype (Reserve + Note + Tracker)." },
 ]
 

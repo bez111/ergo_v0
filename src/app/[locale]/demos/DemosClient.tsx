@@ -376,7 +376,7 @@ const communityReserve = new OutputBuilder(
               <div className="flex flex-wrap gap-4">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <a
-                    href="https://github.com/bez111/ergo-agent-economy"
+                    href="https://github.com/accord-protocol/accord-protocol"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"

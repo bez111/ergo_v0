@@ -574,7 +574,7 @@ export const topics: TopicHub[] = [
     buildWithIt: [
       { type: "doc", title: "10-Minute Quickstart", url: "/build/quickstart", description: "First agent payment on Ergo testnet in under 10 minutes", badge: "Quickstart", priority: 1 },
       { type: "playbook", title: "7-Step Agent Economy Playbook", url: "/playbooks/build-agent-economy-apps", description: "From environment setup to mainnet deployment", badge: "Playbook", priority: 1 },
-      { type: "doc", title: "GitHub: ergo-agent-economy", url: "https://github.com/bez111/ergo-agent-economy", description: "Open source examples: basic payment, Note IOU, acceptance predicate", badge: "Code", priority: 1 },
+      { type: "doc", title: "GitHub: Accord Protocol", url: "https://github.com/accord-protocol/accord-protocol", description: "Open source examples: basic payment, Note IOU, acceptance predicate", badge: "Code", priority: 1 },
       { type: "doc", title: "Live Testnet Demos", url: "/demos", description: "Working agent payment flows — address lookup, live stats", badge: "Demo", priority: 2 }
     ],
 

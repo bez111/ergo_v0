@@ -276,5 +276,5 @@ Ergo’s base chain is live, but Accord, ChainCash/Basis reference contracts and
 - Original article: https://www.ergoblockchain.org/blog/state-of-agent-payments-2026
 - x402 documentation: https://docs.cdp.coinbase.com/x402/welcome
 - Stripe Agentic Commerce: https://stripe.com/use-cases/agentic-commerce
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
+- Accord Protocol repo: https://github.com/accord-protocol/accord-protocol
 - Google helpful content questions: https://developers.google.com/search/docs/fundamentals/creating-helpful-content

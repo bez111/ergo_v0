@@ -230,7 +230,7 @@ export function DevelopersClient() {
                     </span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                    Start from working code: <code className="font-mono text-orange-400">ergo-agent-economy</code>
+                    Start from working code: <code className="font-mono text-orange-400">accord-protocol</code>
                   </h2>
                   <p className="text-neutral-300 leading-relaxed mb-4 max-w-2xl">
                     The official starter for autonomous agent payment systems on Ergo. Three SDK packages
@@ -247,7 +247,7 @@ export function DevelopersClient() {
                 </div>
                 <div className="flex flex-col gap-3 md:items-end">
                   <a
-                    href="https://github.com/bez111/ergo-agent-economy"
+                    href="https://github.com/accord-protocol/accord-protocol"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-5 py-2.5 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm whitespace-nowrap"

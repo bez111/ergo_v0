@@ -489,6 +489,6 @@ A real deployment needs an external signer or wallet policy engine, durable stor
 ## Source notes
 
 - Original article: https://www.ergoblockchain.org/blog/build-agent-pays-for-api
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
+- Accord Protocol repo: https://github.com/accord-protocol/accord-protocol
 - x402 documentation: https://docs.cdp.coinbase.com/x402/welcome
 - Fleet SDK docs: https://fleet-sdk.github.io/docs

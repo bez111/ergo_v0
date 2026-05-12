@@ -94,6 +94,7 @@ export default function IntroductionClient() {
   const technologies = [
     {
       icon: Cpu,
+      href: "/technology/secure-pow",
       title: t("introduction.technologies.pow.title"),
       subtitle: t("introduction.technologies.pow.subtitle"),
       description: t("introduction.technologies.pow.description"),
@@ -101,6 +102,7 @@ export default function IntroductionClient() {
     },
     {
       icon: Layers,
+      href: "/technology/eutxo-model",
       title: t("introduction.technologies.extendedUtxo.title"),
       subtitle: t("introduction.technologies.extendedUtxo.subtitle"),
       description: t("introduction.technologies.extendedUtxo.description"),
@@ -108,6 +110,7 @@ export default function IntroductionClient() {
     },
     {
       icon: Lock,
+      href: "/technology/privacy-features",
       title: t("introduction.technologies.sigmaProtocols.title"),
       subtitle: t("introduction.technologies.sigmaProtocols.subtitle"),
       description: t("introduction.technologies.sigmaProtocols.description"),
@@ -333,7 +336,7 @@ export default function IntroductionClient() {
             {technologies.map((tech, index) => (
               <Link 
                 key={tech.title}
-                href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} 
+                href={tech.href}
                 className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-3xl h-full"
               >
                 <Card className="bg-black/80 border-white/10 rounded-3xl p-6 h-full hover:bg-black/90 hover:border-orange-400/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer flex flex-col min-h-[140px]">
