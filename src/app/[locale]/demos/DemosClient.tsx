@@ -576,7 +576,7 @@ const communityReserve = new OutputBuilder(
                 <div className="flex flex-col gap-3">
                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                     <a
-                      href="https://github.com/kushti/chaincash/issues"
+                      href="https://github.com/accord-protocol/accord-protocol/issues"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-5 py-2.5 rounded-2xl border-2 border-orange-500/40 hover:border-orange-500 transition-all text-xs"
@@ -639,9 +639,9 @@ const communityReserve = new OutputBuilder(
                 },
                 {
                   icon: Github,
-                  title: t('quickLinks.chaincash.title'),
-                  desc: t('quickLinks.chaincash.desc'),
-                  href: "https://github.com/kushti/chaincash",
+                  title: t('quickLinks.accord.title'),
+                  desc: t('quickLinks.accord.desc'),
+                  href: "https://github.com/accord-protocol/accord-protocol",
                   external: true,
                 },
                 {

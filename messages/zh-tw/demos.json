@@ -109,13 +109,13 @@
         "title": "完整架構",
         "desc": "準備金 · 票據 · 追蹤器 · 謂詞"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "票據 + 準備金的參考實作"
-      },
       "agentEconomy": {
         "title": "代理經濟",
         "desc": "為什麼 Ergo 是正確的基礎層"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

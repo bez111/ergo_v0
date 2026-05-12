@@ -109,13 +109,13 @@
         "title": "전체 아키텍처",
         "desc": "리저브 · 노트 · 트래커 · 술어"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "노트 + 리저브 레퍼런스 구현"
-      },
       "agentEconomy": {
         "title": "에이전트 이코노미",
         "desc": "왜 Ergo가 적합한 베이스 레이어인가"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

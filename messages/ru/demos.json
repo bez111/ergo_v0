@@ -109,13 +109,13 @@
         "title": "Полная архитектура",
         "desc": "Резерв · Нота · Трекер · Предикат"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "Эталонная реализация для нот + резервов"
-      },
       "agentEconomy": {
         "title": "Агентная экономика",
         "desc": "Почему Ergo — правильный базовый слой"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

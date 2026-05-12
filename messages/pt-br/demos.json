@@ -109,13 +109,13 @@
         "title": "Arquitetura completa",
         "desc": "Reserva · Nota · Tracker · Predicado"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "Implementação de referência para notas + reservas"
-      },
       "agentEconomy": {
         "title": "Economia de agentes",
         "desc": "Por que Ergo é a camada base certa"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {
