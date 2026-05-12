@@ -87,7 +87,7 @@ export function WhyErgo() {
                   claim="Programmable credit primitives"
                   sources={[
                     { label: "Architecture", href: "/build/agent-payments" },
-                    { label: "Accord Protocol repo", href: "https://github.com/bez111/accord-protocol" },
+                    { label: "Accord Protocol repo", href: "https://github.com/accord-protocol/accord-protocol" },
                   ]}
                   caveat="Reference implementations (ChainCash, Accord SDKs) are open-source prototypes — not yet audited."
                 />

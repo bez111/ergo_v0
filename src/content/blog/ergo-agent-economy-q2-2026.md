@@ -216,6 +216,6 @@ A hosted testnet API that returns HTTP 402, accepts an Accord/402 payment flow, 
 ## Source notes
 
 - Current blog article: https://www.ergoblockchain.org/blog/ergo-agent-economy-q2-2026
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
+- Accord Protocol repo: https://github.com/accord-protocol/accord-protocol
 - x402 documentation: https://docs.cdp.coinbase.com/x402/welcome
 - Article structured data guidance: https://developers.google.com/search/docs/appearance/structured-data/article

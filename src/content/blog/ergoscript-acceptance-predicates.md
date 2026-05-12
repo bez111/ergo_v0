@@ -278,5 +278,5 @@ The simplest useful predicate checks a task hash and a deadline: redeem only if 
 ## Source notes
 
 - Original article: https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
+- Accord Protocol repo: https://github.com/accord-protocol/accord-protocol
 - Ergo technology page: https://www.ergoblockchain.org/technology

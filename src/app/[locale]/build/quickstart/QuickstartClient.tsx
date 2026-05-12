@@ -158,7 +158,7 @@ export function QuickstartClient() {
     { titleKey: "nextCard1Title" as const, descKey: "nextCard1Desc" as const, href: "/build/agent-payments" },
     { titleKey: "nextCard2Title" as const, descKey: "nextCard2Desc" as const, href: "/playbooks/build-agent-economy-apps" },
     { titleKey: "nextCard3Title" as const, descKey: "nextCard3Desc" as const, href: "/demos" },
-    { titleKey: "nextCard4Title" as const, descKey: "nextCard4Desc" as const, href: "https://github.com/bez111/ergo-agent-economy" },
+    { titleKey: "nextCard4Title" as const, descKey: "nextCard4Desc" as const, href: "https://github.com/accord-protocol/accord-protocol" },
   ]
 
   return (
@@ -236,12 +236,12 @@ export function QuickstartClient() {
                   </span>
                 </div>
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  <code className="font-mono text-orange-300 text-xs">ergo-agent-economy</code> ships 10 working examples (LangChain, OpenAI, CrewAI, AutoGen, Python, MCP) plus three SDK packages — TypeScript, Python, and a Model Context Protocol server. Each example is a self-contained, runnable folder.
+                  <code className="font-mono text-orange-300 text-xs">accord-protocol</code> ships 10 working examples (LangChain, OpenAI, CrewAI, AutoGen, Python, MCP) plus three SDK packages — TypeScript, Python, and a Model Context Protocol server. Each example is a self-contained, runnable folder.
                 </p>
               </div>
             </div>
             <a
-              href="https://github.com/bez111/ergo-agent-economy"
+              href="https://github.com/accord-protocol/accord-protocol"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-4 py-2.5 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-xs whitespace-nowrap"
@@ -250,8 +250,8 @@ export function QuickstartClient() {
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
-          <pre className="mt-5 font-mono text-xs bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-orange-300 overflow-x-auto">{`git clone https://github.com/bez111/ergo-agent-economy
-cd ergo-agent-economy/examples/01-basic-payment && npm install && npm run start`}</pre>
+          <pre className="mt-5 font-mono text-xs bg-black/60 border border-white/10 rounded-xl px-4 py-3 text-orange-300 overflow-x-auto">{`git clone https://github.com/accord-protocol/accord-protocol
+cd accord-protocol/examples/01-basic-payment && npm install && npm run start`}</pre>
         </motion.div>
       </section>
 

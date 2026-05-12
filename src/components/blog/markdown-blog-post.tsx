@@ -419,7 +419,7 @@ export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlog
               <div>
                 <dt className="font-semibold text-orange-300 inline">Code &amp; specs. </dt>
                 <dd className="inline">
-                  <a href="https://github.com/bez111/accord-protocol" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Accord Protocol repo</a>
+                  <a href="https://github.com/accord-protocol/accord-protocol" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Accord Protocol repo</a>
                   {" · "}
                   <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Ergo node</a>
                   {" · "}

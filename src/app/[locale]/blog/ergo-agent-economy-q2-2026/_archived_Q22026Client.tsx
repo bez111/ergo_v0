@@ -35,7 +35,7 @@ import { Byline } from "@/components/blog/byline"
 
 // As of 2026-05-08 the repo migrated to bez111/accord-protocol; the old URL
 // 301-redirects, but new links point at the canonical repo directly.
-const REPO = "https://github.com/bez111/accord-protocol"
+const REPO = "https://github.com/accord-protocol/accord-protocol"
 const REPO_LEGACY_NAME = "ergo-agent-economy"
 
 const articleContents = [

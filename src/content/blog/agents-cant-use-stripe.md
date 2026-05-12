@@ -245,4 +245,4 @@ Stripe’s commerce products are production infrastructure. Accord and the Ergo 
 - Stripe Agentic Commerce: https://stripe.com/use-cases/agentic-commerce
 - Stripe pricing: https://stripe.com/pricing
 - x402 documentation: https://docs.cdp.coinbase.com/x402/welcome
-- Accord Protocol repo: https://github.com/bez111/accord-protocol
+- Accord Protocol repo: https://github.com/accord-protocol/accord-protocol
