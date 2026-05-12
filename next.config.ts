@@ -325,6 +325,19 @@ const nextConfig: NextConfig = {
       { source: '/docs/developers/deployment', destination: '/docs/developers', permanent: true },
       { source: '/docs/developers/min-fee', destination: '/docs/developers', permanent: true },
       { source: '/docs/developers/schnorr', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/developers/crypto/sigma-protocols', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/developers/defi/amm', destination: '/docs/ecosystem/financial/dex', permanent: true },
+      { source: '/docs/developers/defi/atomic-swaps', destination: '/docs/ecosystem/financial/defi', permanent: true },
+      { source: '/docs/developers/defi/lending', destination: '/docs/ecosystem/financial/defi', permanent: true },
+      { source: '/docs/developers/defi/sigmausd', destination: '/docs/ecosystem/financial/monetary-systems/sigmausd', permanent: true },
+      { source: '/docs/developers/defi/staking', destination: '/docs/ecosystem/financial/defi', permanent: true },
+      { source: '/docs/developers/tokens/eip4', destination: '/docs/developers/data-model-apis/assets/standards/asset-standard', permanent: true },
+      { source: '/docs/developers/tokens/eip4-nft', destination: '/docs/developers/data-model-apis/assets/nfts', permanent: true },
+      { source: '/docs/developers/tokens/lifecycle', destination: '/docs/developers/data-model-apis/lifecycle', permanent: true },
+      { source: '/docs/developers/tutorials/quick-start', destination: '/build/quickstart', permanent: true },
+      { source: '/docs/developers/ergoscript-languages/basics', destination: '/docs/developers/ergoscript-languages', permanent: true },
+      { source: '/docs/developers/data-model-apis/node-api', destination: '/docs/developers/infrastructure/node', permanent: true },
+      { source: '/docs/developers/tooling/sdks', destination: '/docs/developers/tooling', permanent: true },
 
       // Old /docs/users/ prefix
       { source: '/docs/users/storage-rent', destination: '/technology/storage-rent', permanent: true },
@@ -348,6 +361,8 @@ const nextConfig: NextConfig = {
 
       // Old top-level /docs/* legacy pages
       { source: '/docs/protocol-overview', destination: '/technology', permanent: true },
+      { source: '/docs/protocol/eutxo', destination: '/technology/eutxo-model', permanent: true },
+      { source: '/docs/protocol/velvet-forks', destination: '/technology/velvet-forks', permanent: true },
       { source: '/docs/privacy', destination: '/technology/privacy-features', permanent: true },
       { source: '/docs/tokens', destination: '/technology/native-tokens', permanent: true },
       { source: '/docs/tokenomics', destination: '/technology/adaptive-emission', permanent: true },
@@ -358,17 +373,23 @@ const nextConfig: NextConfig = {
       // Old /docs/miners/* legacy pages
       { source: '/docs/miners/optimization', destination: '/miners', permanent: true },
       { source: '/docs/miners/configuration', destination: '/miners', permanent: true },
+      { source: '/docs/miners/pool-mining', destination: '/docs/miners/mining-guides/pools', permanent: true },
       { source: '/docs/miners/solo-vs-pool', destination: '/miners', permanent: true },
       { source: '/docs/miners/solo-mining', destination: '/miners', permanent: true },
       { source: '/docs/miners/software', destination: '/miners', permanent: true },
+      { source: '/docs/miners/troubleshooting', destination: '/docs/miners/resources', permanent: true },
       { source: '/docs/miners/gpu-comparison', destination: '/miners', permanent: true },
       { source: '/docs/miners/mining-setup', destination: '/miners', permanent: true },
       { source: '/docs/miners/hardware', destination: '/miners', permanent: true },
 
       // Old /docs/introduction/* legacy
+      { source: '/docs/introduction', destination: '/docs', permanent: true },
       { source: '/docs/introduction/atomic-swaps', destination: '/technology', permanent: true },
+      { source: '/docs/introduction/ergoscript', destination: '/technology/ergoscript', permanent: true },
       { source: '/docs/introduction/foundation/treasury', destination: '/docs/introduction', permanent: true },
+      { source: '/docs/introduction/marketing', destination: '/start/community/marketing', permanent: true },
       { source: '/docs/introduction/privacy-features', destination: '/technology/privacy-features', permanent: true },
+      { source: '/docs/introduction/scaling', destination: '/technology', permanent: true },
 
       // /community/* → /start/community
       { source: '/community/:path*', destination: '/start/community', permanent: true },
@@ -403,6 +424,8 @@ const nextConfig: NextConfig = {
       { source: '/builders', destination: '/developers', permanent: true },
       { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/builders', destination: '/:locale/developers', permanent: true },
       { source: '/technology/extended-utxo', destination: '/technology/eutxo-model', permanent: true },
+      { source: '/technology/proof-of-work-(pow)', destination: '/technology/secure-pow', permanent: true },
+      { source: '/technology/sigma-protocols', destination: '/technology/privacy-features', permanent: true },
       { source: '/technology/whitepaper', destination: '/technology', permanent: true },
       { source: '/tokenomics', destination: '/technology/adaptive-emission', permanent: true },
       { source: '/transactions', destination: '/technology', permanent: true },

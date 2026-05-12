@@ -64,15 +64,23 @@ jobs:
             --requests 50 \
             2>&1 | tee internal-links.log
           
-          # Count broken links
-          BROKEN=$(grep -c "BROKEN" internal-links.log || echo "0")
+          # Count only true failures. Next.js legacy redirects return 308 and
+          # are useful for users/search engines, but broken-link-checker reports
+          # them as BROKEN unless it follows the redirect chain.
+          BROKEN=$(awk '/BROKEN/ && $0 !~ /HTTP_308/ {count++} END {print count+0}' internal-links.log)
+          REDIRECTS=$(awk '/BROKEN/ && /HTTP_308/ {count++} END {print count+0}' internal-links.log)
           echo "broken_internal=$BROKEN" >> $GITHUB_OUTPUT
+          echo "redirect_internal=$REDIRECTS" >> $GITHUB_OUTPUT
           
           if [ "$BROKEN" -gt "0" ]; then
             echo "::warning::Found $BROKEN broken internal links"
             echo "Found **$BROKEN** broken internal links" >> $GITHUB_STEP_SUMMARY
           else
             echo "All internal links OK" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "$REDIRECTS" -gt "0" ]; then
+            echo "Found **$REDIRECTS** internal links that resolve through redirects" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Check external links (ecosystem, docs)
@@ -120,6 +128,7 @@ jobs:
           echo "---" >> $GITHUB_STEP_SUMMARY
           echo "### Summary" >> $GITHUB_STEP_SUMMARY
           echo "- Internal broken links: ${{ steps.internal-links.outputs.broken_internal || '0' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Internal redirect links: ${{ steps.internal-links.outputs.redirect_internal || '0' }}" >> $GITHUB_STEP_SUMMARY
           echo "- External broken links: ${{ steps.external-links.outputs.broken_external || '0' }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Fail if critical broken links found
@@ -127,4 +136,3 @@ jobs:
         run: |
           echo "::error::Too many broken internal links found!"
           exit 1
-
