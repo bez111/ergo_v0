@@ -102,7 +102,7 @@ export function TestimonialsSection() {
       avatar: "AE",
       social: {
         icon: Github,
-        handle: "@ergo-agent-economy"
+        handle: "@accord-protocol"
       }
     }
   ]

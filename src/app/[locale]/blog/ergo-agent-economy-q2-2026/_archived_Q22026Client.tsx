@@ -33,10 +33,10 @@ import { ShareInline } from "@/components/blog/share-inline"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { Byline } from "@/components/blog/byline"
 
-// As of 2026-05-08 the repo migrated to bez111/accord-protocol; the old URL
+// As of 2026-05-12 the repo lives at accord-protocol/accord-protocol; the old URL
 // 301-redirects, but new links point at the canonical repo directly.
 const REPO = "https://github.com/accord-protocol/accord-protocol"
-const REPO_LEGACY_NAME = "ergo-agent-economy"
+const REPO_LEGACY_NAME = "former Ergo agent-payment repo"
 
 const articleContents = [
   { label: "TL;DR", href: "#tldr" },
@@ -188,7 +188,7 @@ export function Q22026Client() {
               rel="noopener noreferrer"
               className="text-yellow-300 underline underline-offset-2 hover:text-yellow-200"
             >
-              bez111/accord-protocol
+              accord-protocol/accord-protocol
             </a>{" "}
             — the new umbrella for the agreement protocol used to verify and settle autonomous agent
             work across Ergo, Rosen, Base/EVM and x402-compatible rails. Old GitHub links 301-redirect
@@ -654,7 +654,7 @@ npm run start`}</code></pre>
                 { q: "What changed in Ergo's agent economy stack since the March 2026 launch?", a: "The ergo-agent-pay SDK shipped v0.2 with the full Note lifecycle. Three packages now exist (TypeScript, Python, MCP server). Ten working examples ship with the repo, including LangChain, OpenAI, CrewAI, and AutoGen integrations." },
                 { q: "Which AI agent frameworks now have native Ergo payment support?", a: "LangChain, OpenAI function calling, CrewAI, and AutoGen all have working examples. Plus an MCP server so any MCP-compatible client (Claude Desktop, Cursor) can pay on Ergo testnet." },
                 { q: "Is the agent payment stack production-ready?", a: "Ergo protocol primitives are live on mainnet since 2019. The ergo-agent-pay SDK and ChainCash reference implementation are open-source prototypes — no security audits or production releases yet. Treat them as pre-production code, suitable for testnet development." },
-                { q: "Where can I clone and run the examples?", a: "github.com/bez111/accord-protocol. Each example is self-contained with a README and runs against Ergo testnet — no mainnet ERG required." },
+                { q: "Where can I clone and run the examples?", a: "github.com/accord-protocol/accord-protocol. Each example is self-contained with a README and runs against Ergo testnet — no mainnet ERG required." },
                 { q: "What is the Basis layer?", a: "Off-chain credit and IOU layer built on top of Ergo's on-chain primitives. Off-chain Notes circulate cheaply between trusted parties; on-chain Reserves act as collateral and global settlement when trust isn't enough." },
               ].map((item, i) => (
                 <Card key={i} className="bg-black/80 border border-white/8 rounded-2xl">

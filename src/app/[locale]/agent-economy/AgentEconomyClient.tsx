@@ -507,7 +507,7 @@ export function AgentEconomyClient() {
                   name: "Accord Protocol",
                   icon: Code2,
                   status: "Testnet",
-                  description: "Open-source agreement protocol for autonomous agent work (formerly ergo-agent-economy). Three SDK packages — TypeScript / Python / MCP server — and 10 working examples. Testnet beta; mainnet blocked until signed audit manifests.",
+                  description: "Open-source agreement protocol for autonomous agent work, migrated into the accord-protocol organization. Three SDK packages — TypeScript / Python / MCP server — and 10 working examples. Testnet beta; mainnet blocked until signed audit manifests.",
                   url: "https://github.com/accord-protocol/accord-protocol",
                 },
                 {
