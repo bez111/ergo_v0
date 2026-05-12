@@ -109,13 +109,13 @@
         "title": "完全なアーキテクチャ",
         "desc": "リザーブ · ノート · トラッカー · 述語"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "ノート + リザーブのリファレンス実装"
-      },
       "agentEconomy": {
         "title": "エージェントエコノミー",
         "desc": "なぜErgoが最適なベースレイヤーなのか"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

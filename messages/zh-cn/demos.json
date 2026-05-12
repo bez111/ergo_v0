@@ -109,13 +109,13 @@
         "title": "完整架构",
         "desc": "储备 · 票据 · 追踪器 · 条件"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "票据与储备的参考实现"
-      },
       "agentEconomy": {
         "title": "Agent 经济",
         "desc": "为何 Ergo 是正确的基础层"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

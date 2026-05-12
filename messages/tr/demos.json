@@ -109,13 +109,13 @@
         "title": "Tam mimari",
         "desc": "Rezerv · Not · İzleyici · Yüklem"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "Notlar + rezervler için referans uygulama"
-      },
       "agentEconomy": {
         "title": "Ajan Ekonomisi",
         "desc": "Neden Ergo doğru temel katmandır"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

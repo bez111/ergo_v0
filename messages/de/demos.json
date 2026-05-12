@@ -109,13 +109,13 @@
         "title": "Vollständige Architektur",
         "desc": "Reserve · Note · Tracker · Prädikat"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "Referenzimplementierung für Noten + Reserven"
-      },
       "agentEconomy": {
         "title": "Agentenökonomie",
         "desc": "Warum Ergo die richtige Basisschicht ist"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {

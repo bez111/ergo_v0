@@ -109,13 +109,13 @@
         "title": "Full architecture",
         "desc": "Reserve · Note · Tracker · Predicate"
       },
-      "chaincash": {
-        "title": "ChainCash",
-        "desc": "Reference implementation for notes + reserves"
-      },
       "agentEconomy": {
         "title": "Agent Economy",
         "desc": "Why Ergo is the right base layer"
+      },
+      "accord": {
+        "title": "Accord Protocol",
+        "desc": "Repository, SDKs, demos, and issues"
       }
     },
     "playground": {
