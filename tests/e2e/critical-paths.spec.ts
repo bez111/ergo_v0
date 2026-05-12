@@ -107,17 +107,28 @@ test.describe('Critical User Paths', () => {
 
 test.describe('Performance Metrics', () => {
   test('LCP should be under 2.5s', async ({ page }) => {
-    const metrics = await page.evaluate(() => {
-      return new Promise((resolve) => {
+    await page.goto('/')
+
+    const renderTime = await page.evaluate(() => {
+      return new Promise<number>((resolve) => {
+        const existingEntries = performance.getEntriesByType('largest-contentful-paint')
+        const existingEntry = existingEntries[existingEntries.length - 1]
+        if (existingEntry) {
+          resolve(existingEntry.toJSON().renderTime ?? 0)
+          return
+        }
+
         new PerformanceObserver((list) => {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
-          resolve(lastEntry.toJSON())
+          resolve(lastEntry.toJSON().renderTime ?? 0)
         }).observe({ type: 'largest-contentful-paint', buffered: true })
+
+        setTimeout(() => resolve(Number.POSITIVE_INFINITY), 3000)
       })
     })
     
-    expect(metrics.renderTime).toBeLessThan(2500)
+    expect(renderTime).toBeLessThan(2500)
   })
 
   test('CLS should be under 0.1', async ({ page }) => {
@@ -472,4 +483,4 @@ test.describe('Cross-Page Navigation', () => {
     const count = await tracks.count()
     expect(count).toBeGreaterThan(3)
   })
-}) 
+})
