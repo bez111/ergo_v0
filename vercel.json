@@ -12,6 +12,12 @@
       ]
     }
   ],
-  "rewrites": [],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "ergowatch.ergoblockchain.org" }],
+      "destination": "/agent-economy/metrics"
+    }
+  ],
   "redirects": []
 }

@@ -170,9 +170,10 @@ export default function AgentEconomyMetricsPage() {
                   maxWidth: "62ch",
                 }}
               >
-                ErgoWatch already tracks the chain. This page defines the missing agent-economy layer:
-                agreements, verification receipts, settlement receipts, policy events and bounded credit
-                instruments. No copied ErgoWatch frontend. No fake live numbers.
+                ErgoWatch already tracks the chain. This page is the new-design surface for
+                ergowatch.ergoblockchain.org and defines the missing agent-economy layer: agreements,
+                verification receipts, settlement receipts, policy events and bounded credit instruments.
+                No copied ErgoWatch frontend. No fake live numbers.
               </p>
 
               <div className="flex flex-wrap gap-4">
