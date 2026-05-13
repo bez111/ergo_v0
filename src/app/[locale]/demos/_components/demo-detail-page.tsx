@@ -214,6 +214,63 @@ export function DemoDetailPage({ demo }: { demo: AgentDemo }) {
         <section className="border-t border-white/5 py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Card className="rounded-3xl border border-white/8 bg-black/80">
+              <CardContent className="grid gap-6 p-7 md:p-8 lg:grid-cols-[0.95fr_1.05fr]">
+                <div>
+                  <div className="mb-7 flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
+                      <Terminal className="h-5 w-5 text-orange-400" />
+                    </div>
+                    <div>
+                      <p className="font-mono text-xs uppercase tracking-widest text-orange-400">
+                        Prototype event stream
+                      </p>
+                      <h2 className="text-2xl font-extrabold text-white">What becomes live</h2>
+                    </div>
+                  </div>
+                  <p className="leading-relaxed text-neutral-400">{demo.nextMilestone}</p>
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {demo.eventTypes.map((eventType) => (
+                      <span
+                        key={eventType}
+                        className="rounded-xl border border-orange-500/25 bg-orange-500/10 px-3 py-1.5 font-mono text-xs text-orange-300"
+                      >
+                        {eventType}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="mb-4 flex items-center justify-between gap-4">
+                    <p className="font-mono text-xs uppercase tracking-widest text-neutral-500">
+                      API preview
+                    </p>
+                    <a
+                      href={demo.apiPreviewHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-orange-300 transition-colors hover:text-orange-200"
+                    >
+                      Open JSON
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                  <pre className="overflow-x-auto rounded-2xl border border-white/8 bg-neutral-950 p-5 font-mono text-sm leading-relaxed text-neutral-300">
+                    <code>{`curl https://www.ergoblockchain.org${demo.apiPreviewHref}`}</code>
+                  </pre>
+                  <p className="mt-4 text-sm leading-relaxed text-neutral-500">
+                    This endpoint is prototype telemetry. It is intentionally separate from live
+                    usage counters until demos emit signed receipts.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="border-t border-white/5 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Card className="rounded-3xl border border-white/8 bg-black/80">
               <CardContent className="p-7 md:p-8">
                 <div className="mb-5 flex items-center justify-between gap-4">
                   <div>

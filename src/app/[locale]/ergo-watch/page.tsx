@@ -399,13 +399,13 @@ export default async function ErgoWatchPage() {
                     <span>Open JSON</span>
                     <ExternalLink className="h-4 w-4" />
                   </a>
-                  <Link
-                    href="/agent-economy/metrics"
+                  <a
+                    href="#agent-economy"
                     className="inline-flex items-center gap-2 rounded-2xl border-2 border-white/15 bg-transparent px-6 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-all hover:border-white/30 hover:bg-white/5"
                   >
                     <Bot className="h-4 w-4" />
                     <span>Agent overlay</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
 
@@ -680,9 +680,9 @@ export default async function ErgoWatchPage() {
                 </h2>
               </div>
               <p className="leading-relaxed text-neutral-400">
-                SigmaUSD data is shown only when a source is reachable and labeled. Exact reserve
-                ratio and SigRSV state require AgeUSD bank/oracle box decoding, so they stay
-                unavailable until the on-chain source is wired.
+                SigmaUSD data is shown only when a source is reachable and labeled. The bank-box
+                registers are read from Ergo Explorer; oracle-exact AgeUSD ratios stay separate
+                until the dedicated oracle decoder is wired.
               </p>
             </div>
 
@@ -702,11 +702,16 @@ export default async function ErgoWatchPage() {
                   </div>
                   <div className="shrink-0 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
-                      Source timestamp
+                      Snapshot time
                     </p>
                     <p className="mt-1 font-mono text-xs text-orange-300">
                       {formatSourceTime(snapshot.defi.sigmaUsd.updatedAt)}
                     </p>
+                    {snapshot.defi.sigmaUsd.bankBox.height ? (
+                      <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                        Bank box height #{formatNumber(snapshot.defi.sigmaUsd.bankBox.height)}
+                      </p>
+                    ) : null}
                   </div>
                 </div>
 
@@ -761,6 +766,24 @@ export default async function ErgoWatchPage() {
                     </div>
                   </div>
                   <p className="leading-relaxed text-neutral-400">{snapshot.agentEconomy.note}</p>
+                  <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3">
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                        Prototype events
+                      </p>
+                      <p className="mt-1 font-mono text-sm text-orange-300">
+                        {formatNumber(snapshot.agentEconomy.eventCount)}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3">
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                        Latest event
+                      </p>
+                      <p className="mt-1 font-mono text-sm text-orange-300">
+                        {formatSourceTime(snapshot.agentEconomy.latestEventAt)}
+                      </p>
+                    </div>
+                  </div>
                   <div className="mt-7 flex flex-wrap gap-3">
                     <Link
                       href="/demos/x402-accord-gateway"
@@ -774,6 +797,15 @@ export default async function ErgoWatchPage() {
                     >
                       Credit Note demo
                     </Link>
+                    <a
+                      href="/api/agent-economy/events"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-neutral-300 transition-colors hover:border-orange-500/35 hover:text-orange-300"
+                    >
+                      Event JSON
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
                   </div>
                 </CardContent>
               </Card>

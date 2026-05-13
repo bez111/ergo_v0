@@ -38,6 +38,37 @@ export type ExplorerBlocksResponse = {
   total?: number
 }
 
+export type ExplorerBoxAsset = {
+  tokenId?: string
+  index?: number
+  amount?: number
+  name?: string
+  decimals?: number
+  type?: string
+}
+
+export type ExplorerRegister = {
+  serializedValue?: string
+  sigmaType?: string
+  renderedValue?: string
+}
+
+export type ExplorerBox = {
+  boxId?: string
+  transactionId?: string
+  blockId?: string
+  value?: number
+  creationHeight?: number
+  settlementHeight?: number
+  assets?: ExplorerBoxAsset[]
+  additionalRegisters?: Record<string, ExplorerRegister | string | number>
+}
+
+export type ExplorerBoxesResponse = {
+  items?: ExplorerBox[]
+  total?: number
+}
+
 export type ExplorerV0Info = {
   version?: string
   supply?: number
@@ -65,9 +96,13 @@ export type ErgoWatchSource = {
 }
 
 export type SigmaUsdSnapshot = {
-  status: "partial" | "unavailable"
+  status: "live" | "partial" | "unavailable"
   updatedAt: string | null
   note: string
+  bankBox: {
+    id: string | null
+    height: number | null
+  }
   metrics: ErgoWatchMetric[]
 }
 
@@ -83,7 +118,9 @@ export type AgentEconomyMetric = {
 
 export type AgentEconomySnapshot = {
   status: "prototype"
-  eventStreamStatus: "not_connected"
+  eventStreamStatus: "prototype" | "not_connected"
+  eventCount: number
+  latestEventAt: string | null
   note: string
   metrics: AgentEconomyMetric[]
 }

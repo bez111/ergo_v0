@@ -21,6 +21,9 @@ export type AgentDemo = {
     body: string
   }>
   security: string[]
+  eventTypes: string[]
+  apiPreviewHref: string
+  nextMilestone: string
   sample: string
 }
 
@@ -69,6 +72,10 @@ export const agentDemos: Record<AgentDemoSlug, AgentDemo> = {
       "Payment proof and work proof are separate fields.",
       "Gateway must refuse settlement if verification fails.",
     ],
+    eventTypes: ["agreement.created", "settlement.recorded"],
+    apiPreviewHref: "/api/agent-economy/events",
+    nextMilestone:
+      "Replace static prototype events with signed gateway receipts emitted by the runnable Accord demo.",
     sample: `{
   "agreementId": "acc_402_demo_001",
   "payment": { "scheme": "x402", "status": "satisfied" },
@@ -119,6 +126,10 @@ export const agentDemos: Record<AgentDemoSlug, AgentDemo> = {
       "Agent policy decides before payment is attempted.",
       "Receipts must not leak private prompt content.",
     ],
+    eventTypes: ["agreement.created", "verification.accepted"],
+    apiPreviewHref: "/api/agent-economy/events",
+    nextMilestone:
+      "Connect MCP tool execution to the prototype event stream, then promote only signed receipts to live counters.",
     sample: `{
   "tool": "repo.audit",
   "price": "0.01 ERG",
@@ -169,6 +180,10 @@ export const agentDemos: Record<AgentDemoSlug, AgentDemo> = {
       "Response hashes should avoid exposing private data.",
       "Refund or refusal paths must be documented before mainnet.",
     ],
+    eventTypes: ["agreement.created", "settlement.recorded"],
+    apiPreviewHref: "/api/agent-economy/events",
+    nextMilestone:
+      "Add a mock paid API endpoint that returns the same receipt shape exposed by the event stream.",
     sample: `{
   "route": "/v1/agent/data",
   "agreementId": "acc_api_demo_001",
@@ -219,6 +234,10 @@ export const agentDemos: Record<AgentDemoSlug, AgentDemo> = {
       "Notes must be reserve-backed or policy-bounded.",
       "Redemption must be tied to explicit verification rules.",
     ],
+    eventTypes: ["credit-note.designed", "verification.accepted"],
+    apiPreviewHref: "/api/agent-economy/events",
+    nextMilestone:
+      "Turn the design event into a testnet Note/Reserve/Tracker vector before calling it live.",
     sample: `{
   "noteId": "note_demo_001",
   "budgetCap": "0.1 ERG",

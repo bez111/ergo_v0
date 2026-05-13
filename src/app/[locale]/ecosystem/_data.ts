@@ -436,7 +436,7 @@ SAFEW's interface is designed for simplicity without sacrificing functionality. 
     description: "Historical open-source analytics project for Ergo metrics. The public ErgoWatch site is currently unavailable; use it as a reference, not as a live service.",
     longDescription: `ErgoWatch is a historical open-source analytics project for Ergo network and ecosystem metrics. Its architecture remains useful as a reference for how chain data can be indexed, aggregated and turned into dashboards, but the public ergo.watch surface is currently unavailable and should not be treated as an operational service.
 
-For live site navigation, ergoblockchain.org now exposes a runtime-safe metrics surface at /agent-economy/metrics. That page reads public Ergo Explorer API data directly, caches a network snapshot server-side and marks unavailable sources explicitly instead of forwarding users to a dead analytics endpoint.
+For live site navigation, ergoblockchain.org now exposes a runtime-safe metrics surface at /ergo-watch. That page reads public Ergo Explorer API data directly, caches a network snapshot server-side and marks unavailable sources explicitly instead of forwarding users to a dead analytics endpoint.
 
 The archived ErgoWatch code can still help developers understand prior approaches to indexing blockchain data into queryable databases and calculating higher-level analytics. Any new production-facing analytics layer should verify sources independently, publish timestamps, avoid fake live numbers and clearly distinguish chain metrics from experimental agent-economy overlays.`,
     icon: "🔍", 
