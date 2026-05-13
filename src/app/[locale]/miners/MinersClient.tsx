@@ -44,6 +44,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { BackToTop } from "@/components/ui/back-to-top"
 import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
+import { PersonaPathPanel } from "@/components/persona-path-panel"
 import { networkMetrics, formatHashrate, formatDifficulty, formatBlockTime, formatBlockReward, formatActiveMiners, formatMiningPools, METRICS_VERIFIED_AT, METRICS_VERIFIED_SOURCE } from "@/lib/network-metrics"
 import { coreValues, miningPools, miningSoftware, miningSteps, miningTools } from "./miners-data"
 
@@ -261,6 +262,34 @@ export function MinersClient() {
             </div>
           </div>
         </motion.section>
+
+        <PersonaPathPanel
+          eyebrow="Miner path"
+          title="Turn hardware curiosity into network participation."
+          description="A short route for miners who want setup guidance, live network context, emission data, and deeper pool or solo-mining docs."
+          steps={[
+            {
+              label: "Start mining",
+              description: "Follow the page guide for hardware, software, pools, and first setup.",
+              href: "/miners#mining-guide",
+            },
+            {
+              label: "Watch mining data",
+              description: "Track hashrate, difficulty, block time, reward, and source status.",
+              href: "/ergo-watch#mining",
+            },
+            {
+              label: "Check emission",
+              description: "Understand circulating supply, current block reward, and reductions.",
+              href: "/ergo-watch#emission",
+            },
+            {
+              label: "Read miner docs",
+              description: "Go deeper into pool, solo-mining, node, and troubleshooting guides.",
+              href: "/docs/miners/mining-guides",
+            },
+          ]}
+        />
 
         {/* Live Metrics Section */}
         <motion.section 

@@ -26,6 +26,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { PersonaPathPanel } from "@/components/persona-path-panel"
 
 const BRAND = "#ff8800"
 
@@ -142,6 +143,35 @@ export function AgentEconomyClient() {
             </div>
           </div>
         </section>
+
+        <PersonaPathPanel
+          eyebrow="Agent builder path"
+          title="Go from thesis to runnable proof."
+          description="A practical route for builders who want agent payments, work verification, settlement receipts, and programmable credit without pretending the stack is production-certified."
+          steps={[
+            {
+              label: "Run demos",
+              description: "Start with the visible x402, MCP, API-payment, and credit-note flows.",
+              href: "/demos",
+            },
+            {
+              label: "Read Accord",
+              description: "Review the protocol repo for agreements, receipts, rails, and conformance.",
+              href: "https://github.com/accord-protocol/accord-protocol",
+              external: true,
+            },
+            {
+              label: "Track metrics",
+              description: "See prototype agent-economy status and future event-stream slots.",
+              href: "/ergo-watch#agent-economy",
+            },
+            {
+              label: "Study credit",
+              description: "Follow the bounded Note pattern for agent-issued task credit.",
+              href: "/demos/agent-credit-note",
+            },
+          ]}
+        />
 
         {/* ── Why Stripe/PayPal fails ──────────────────────────────────────── */}
         <section className="py-24 border-t border-white/5">

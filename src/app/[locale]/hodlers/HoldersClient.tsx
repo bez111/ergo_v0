@@ -34,6 +34,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
+import { PersonaPathPanel } from "@/components/persona-path-panel"
 import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatBlockTime, formatActiveAddresses, formatActiveNodes } from "@/lib/network-metrics"
 
 export function HoldersClient() {
@@ -279,6 +280,34 @@ export function HoldersClient() {
             </div>
           </div>
         </motion.section>
+
+        <PersonaPathPanel
+          eyebrow="Freedom seeker path"
+          title="Keep control after the first click."
+          description="A practical route for people who want self-custody, optional privacy, and access without banks or gatekeepers."
+          steps={[
+            {
+              label: "Choose a wallet",
+              description: "Start with self-custody before moving funds or trying apps.",
+              href: "/wallet",
+            },
+            {
+              label: "Learn privacy",
+              description: "Understand optional privacy tools, tradeoffs, and safety basics.",
+              href: "/use/privacy",
+            },
+            {
+              label: "Get ERG",
+              description: "Find practical ways to access ERG and use the network.",
+              href: "/use/get-erg",
+            },
+            {
+              label: "Compare models",
+              description: "See why fair launch, PoW, and eUTXO matter for financial freedom.",
+              href: "/compare",
+            },
+          ]}
+        />
 
         {/* Core Values Section */}
         <motion.section 

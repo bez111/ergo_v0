@@ -49,6 +49,7 @@ import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { PersonaPathPanel } from "@/components/persona-path-panel"
 import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatActiveNodes, formatTransactionsPerDay } from "@/lib/network-metrics"
 
 // Technology Index icons (ordered to match JSON indices 0–11)
@@ -177,6 +178,35 @@ export function DevelopersClient() {
             </div>
           </div>
         </motion.section>
+
+        <PersonaPathPanel
+          eyebrow="Cypherpunk builder path"
+          title="Move from concept to working Ergo code."
+          description="A focused route for developers building privacy-preserving dApps, eUTXO contracts, and agent-era workflows."
+          steps={[
+            {
+              label: "Learn ErgoScript",
+              description: "Start with the contract model and how spending rules work.",
+              href: "/learn/ergoscript",
+            },
+            {
+              label: "Study patterns",
+              description: "Use known eUTXO patterns before inventing your own.",
+              href: "/patterns",
+            },
+            {
+              label: "Install Fleet SDK",
+              description: "Build transactions with the main JS/TS developer toolkit.",
+              href: "https://fleet-sdk.github.io/docs/",
+              external: true,
+            },
+            {
+              label: "Try agent demos",
+              description: "Connect ErgoScript ideas to Accord, receipts, and paid tools.",
+              href: "/demos",
+            },
+          ]}
+        />
 
         {/* Why Build on Ergo */}
         <section className="py-16 px-4">

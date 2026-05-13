@@ -12,6 +12,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { PersonaPathPanel } from "@/components/persona-path-panel"
 import {
   MessageCircle,
   Users,
@@ -308,6 +309,34 @@ export default function CommunityClient() {
               </FadeIn>
             </div>
           </section>
+
+          <PersonaPathPanel
+            eyebrow="Community path"
+            title="Find the right place to contribute."
+            description="A route for people who care about fair launch, public goods, culture, governance, and building with the community rather than around it."
+            steps={[
+              {
+                label: "Join channels",
+                description: "Start with Discord, Telegram, X, forums, and long-form community spaces.",
+                href: "/start/community#communication-hubs",
+              },
+              {
+                label: "Explore projects",
+                description: "See wallets, DeFi, tools, miners, and ecosystem applications.",
+                href: "/ecosystem",
+              },
+              {
+                label: "Read manifesto",
+                description: "Understand the values behind ergonomic money and community-first design.",
+                href: "/blog/ergo-manifesto",
+              },
+              {
+                label: "Contribute",
+                description: "Pick a concrete path across development, docs, support, governance, or marketing.",
+                href: "/start/community#contribution-matrix",
+              },
+            ]}
+          />
 
           {/* Platforms Section - Organized by Function */}
           <section id="communication-hubs" className="py-20 px-4">
