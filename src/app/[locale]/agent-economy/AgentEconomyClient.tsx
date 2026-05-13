@@ -131,10 +131,10 @@ export function AgentEconomyClient() {
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <Link
-                    href="/agent-economy/metrics"
+                    href="/ergo-watch#agent-economy"
                     className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
-                    <span>View metrics</span>
+                    <span>Ergo Watch</span>
                     <BarChart3 className="w-4 h-4" />
                   </Link>
                 </motion.div>
