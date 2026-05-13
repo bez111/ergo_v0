@@ -27,6 +27,8 @@ export const SIGMAUSD_BANK_ADDRESS =
 export const SIGMAUSD_BANK_BOX_API = `${ERGO_EXPLORER_API}/boxes/unspent/byAddress/${SIGMAUSD_BANK_ADDRESS}?limit=10`
 export const SIGUSD_TOKEN_ID = "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04"
 export const SIGRSV_TOKEN_ID = "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"
+export const ERG_USD_ORACLE_NFT_ID = "011d3364de07e5a26f0c4eef0852cddb387039a921b7154ef3cab22c6eda887f"
+export const ERG_USD_ORACLE_BOX_API = `${ERGO_EXPLORER_API}/boxes/unspent/byTokenId/${ERG_USD_ORACLE_NFT_ID}?limit=5`
 
 const BLOCKS_PER_EPOCH = 1024
 const TARGET_BLOCK_INTERVAL_SECONDS = 120
@@ -442,18 +444,26 @@ function getSigmaUsdBankBox(boxes: ExplorerBoxesResponse | null) {
   return candidates.sort((a, b) => (b.value ?? 0) - (a.value ?? 0))[0]
 }
 
+function getOracleBox(boxes: ExplorerBoxesResponse | null, tokenId: string) {
+  return boxes?.items?.find((box) => box.assets?.some((asset) => asset.tokenId === tokenId)) ?? null
+}
+
 function getSigmaUsdSnapshot({
   stablecoins,
   protocol,
   bankBoxes,
+  oracleBoxes,
 }: {
   stablecoins: DefiLlamaStablecoinsResponse | null
   protocol: DefiLlamaProtocolResponse | null
   bankBoxes: ExplorerBoxesResponse | null
+  oracleBoxes: ExplorerBoxesResponse | null
 }): ErgoWatchSnapshot["defi"]["sigmaUsd"] {
   const bankBox = getSigmaUsdBankBox(bankBoxes)
+  const oracleBox = getOracleBox(oracleBoxes, ERG_USD_ORACLE_NFT_ID)
   const onChainSigUsdRaw = getRegisterNumber(bankBox, "R4")
   const onChainSigRsvSupply = getRegisterNumber(bankBox, "R5")
+  const oracleNanoErgPerUsd = getRegisterNumber(oracleBox, "R4")
   const onChainSigUsdSupply =
     typeof onChainSigUsdRaw === "number" && Number.isFinite(onChainSigUsdRaw)
       ? onChainSigUsdRaw / 100
@@ -475,44 +485,67 @@ function getSigmaUsdSnapshot({
     null
   const sigUsdPrice = sigUsdAsset?.price ?? null
   const reserveValueUsd = protocol?.currentChainTvls?.Ergo ?? null
+  const oracleErgUsd =
+    typeof oracleNanoErgPerUsd === "number" && oracleNanoErgPerUsd > 0
+      ? NANO_ERG_IN_ERG / oracleNanoErgPerUsd
+      : null
+  const onChainReserveValueUsd =
+    typeof baseReservesErg === "number" && typeof oracleErgUsd === "number"
+      ? baseReservesErg * oracleErgUsd
+      : null
+  const ageUsdLiabilitiesErg =
+    typeof onChainSigUsdRaw === "number" && typeof oracleNanoErgPerUsd === "number"
+      ? (onChainSigUsdRaw * Math.floor(oracleNanoErgPerUsd / 100)) / NANO_ERG_IN_ERG
+      : null
   const nominalLiabilitiesUsd = onChainSigUsdSupply ?? sigUsdSupply
   const equityUsd =
-    typeof reserveValueUsd === "number" && typeof nominalLiabilitiesUsd === "number"
-      ? reserveValueUsd - nominalLiabilitiesUsd
+    typeof onChainReserveValueUsd === "number" && typeof nominalLiabilitiesUsd === "number"
+      ? onChainReserveValueUsd - nominalLiabilitiesUsd
+      : typeof reserveValueUsd === "number" && typeof nominalLiabilitiesUsd === "number"
+        ? reserveValueUsd - nominalLiabilitiesUsd
+        : null
+  const equityErg =
+    typeof baseReservesErg === "number" && typeof ageUsdLiabilitiesErg === "number"
+      ? baseReservesErg - ageUsdLiabilitiesErg
       : null
   const reserveRatio =
-    typeof reserveValueUsd === "number" &&
-    typeof nominalLiabilitiesUsd === "number" &&
-    nominalLiabilitiesUsd > 0
-      ? (reserveValueUsd / nominalLiabilitiesUsd) * 100
+    typeof baseReservesErg === "number" &&
+    typeof ageUsdLiabilitiesErg === "number" &&
+    ageUsdLiabilitiesErg > 0
+      ? (baseReservesErg / ageUsdLiabilitiesErg) * 100
       : null
   const equityRatio =
-    typeof equityUsd === "number" &&
-    typeof nominalLiabilitiesUsd === "number" &&
-    nominalLiabilitiesUsd > 0
-      ? (equityUsd / nominalLiabilitiesUsd) * 100
+    typeof equityErg === "number" && typeof ageUsdLiabilitiesErg === "number" && ageUsdLiabilitiesErg > 0
+      ? (equityErg / ageUsdLiabilitiesErg) * 100
       : null
   const latestProtocolPoint = protocol?.tvl?.[protocol.tvl.length - 1]
   const updatedAt =
-    bankBox ? new Date().toISOString() : typeof latestProtocolPoint?.date === "number"
+    bankBox || oracleBox ? new Date().toISOString() : typeof latestProtocolPoint?.date === "number"
       ? new Date(latestProtocolPoint.date * 1000).toISOString()
       : null
   const hasPartialData =
     Boolean(bankBox) ||
+    Boolean(oracleBox) ||
     typeof sigUsdSupply === "number" ||
     typeof sigUsdPrice === "number" ||
     typeof reserveValueUsd === "number"
 
   return {
-    status: bankBox ? "live" : hasPartialData ? "partial" : "unavailable",
+    status: bankBox && oracleBox ? "live" : hasPartialData ? "partial" : "unavailable",
     updatedAt,
     bankBox: {
       id: bankBox?.boxId ?? null,
       height: bankBox?.settlementHeight ?? bankBox?.creationHeight ?? null,
     },
+    oracleBox: {
+      id: oracleBox?.boxId ?? null,
+      height: oracleBox?.settlementHeight ?? oracleBox?.creationHeight ?? null,
+    },
     note:
-      bankBox
-        ? `Bank box state is read directly from Ergo Explorer. R4/R5 expose circulating SigUSD/SigRSV; ERG reserves are box value minus minimum box value. Oracle-box exact AgeUSD ratios remain a future decoder step.`
+      bankBox && oracleBox
+        ? "Bank and ERG/USD oracle boxes are read directly from Ergo Explorer. SigUSD/SigRSV use bank R4/R5; liabilities and ratios use the oracle R4 datapoint."
+        : bankBox
+          ? "Bank box state is read directly from Ergo Explorer. Oracle-box exact AgeUSD ratios remain unavailable until the ERG/USD oracle source is reachable."
         : "SigmaUSD exact reserve ratio requires decoding the AgeUSD bank and oracle boxes. Until that source is reachable, reserve ratio, SigRSV supply and ERG base reserves stay unavailable instead of being guessed.",
     metrics: [
       metric(
@@ -532,19 +565,27 @@ function getSigmaUsdSnapshot({
       ),
       metric(
         "sigusd-price",
-        "Market quote",
-        typeof sigUsdPrice === "number" ? formatUsd(sigUsdPrice, 4) : "Unavailable",
-        "Reported DefiLlama market quote when available. This is not an on-chain oracle read or a peg guarantee.",
-        "DefiLlama stablecoins",
-        DEFILLAMA_STABLECOINS_API,
-        typeof sigUsdPrice === "number" ? "live" : "unavailable",
+        "ERG/USD oracle",
+        typeof oracleErgUsd === "number"
+          ? formatUsd(oracleErgUsd, 4)
+          : typeof sigUsdPrice === "number"
+            ? formatUsd(sigUsdPrice, 4)
+            : "Unavailable",
+        typeof oracleErgUsd === "number"
+          ? `On-chain ERG/USD oracle datapoint: ${formatNumber(oracleNanoErgPerUsd)} nanoERG per USD.`
+          : "Reported DefiLlama market quote when available. This is not an on-chain oracle read or a peg guarantee.",
+        typeof oracleErgUsd === "number" ? "ERG/USD oracle box R4" : "DefiLlama stablecoins",
+        typeof oracleErgUsd === "number" ? ERG_USD_ORACLE_BOX_API : DEFILLAMA_STABLECOINS_API,
+        typeof oracleErgUsd === "number" || typeof sigUsdPrice === "number" ? "live" : "unavailable",
       ),
       metric(
         "sigusd-reserve-value",
         "ERG reserves",
-        typeof baseReservesErg === "number" ? `${formatDecimal(baseReservesErg, 4)} ERG` : formatUsd(reserveValueUsd, 0),
         typeof baseReservesErg === "number"
-          ? `On-chain bank-box reserves. DefiLlama reserve TVL: ${formatUsd(reserveValueUsd, 0)}.`
+          ? `${formatDecimal(baseReservesErg, 4)} ERG`
+          : formatUsd(reserveValueUsd, 0),
+        typeof baseReservesErg === "number"
+          ? `On-chain bank-box reserves. Oracle-valued reserve: ${formatUsd(onChainReserveValueUsd, 0)}; DefiLlama TVL: ${formatUsd(reserveValueUsd, 0)}.`
           : "DefiLlama SigmaUSD protocol TVL on Ergo. ERG base reserves require on-chain bank-box decoding.",
         typeof baseReservesErg === "number" ? "SigmaUSD bank box value" : "DefiLlama SigmaUSD protocol",
         typeof baseReservesErg === "number" ? SIGMAUSD_BANK_BOX_API : DEFILLAMA_SIGMAUSD_API,
@@ -565,24 +606,36 @@ function getSigmaUsdSnapshot({
       ),
       metric(
         "sigusd-liabilities",
-        "Nominal liabilities",
-        formatUsd(nominalLiabilitiesUsd, 0),
-        typeof nominalLiabilitiesUsd === "number"
-          ? `Nominal $1 liability per circulating SigUSD. Bank SigUSD token balance: ${formatNumber(bankSigUsdBalance)} raw units.`
+        "Liabilities",
+        typeof ageUsdLiabilitiesErg === "number"
+          ? `${formatDecimal(ageUsdLiabilitiesErg, 4)} ERG`
+          : formatUsd(nominalLiabilitiesUsd, 0),
+        typeof ageUsdLiabilitiesErg === "number"
+          ? `AgeUSD liabilities from bank R4 and oracle R4. Nominal liability: ${formatUsd(nominalLiabilitiesUsd, 0)}. Bank SigUSD token balance: ${formatNumber(bankSigUsdBalance)} raw units.`
+          : typeof nominalLiabilitiesUsd === "number"
+            ? `Nominal $1 liability per circulating SigUSD. Bank SigUSD token balance: ${formatNumber(bankSigUsdBalance)} raw units.`
           : "Exact liabilities require the same on-chain state used by SigmaUSD/AgeUSD contracts.",
-        typeof onChainSigUsdSupply === "number" ? "Derived from bank box R4" : "SigmaUSD on-chain state",
-        typeof onChainSigUsdSupply === "number" ? SIGMAUSD_BANK_BOX_API : "https://github.com/anon-real/sigma-usd",
-        typeof nominalLiabilitiesUsd === "number" ? "derived" : "unavailable",
+        typeof ageUsdLiabilitiesErg === "number"
+          ? "Derived from bank R4 + oracle R4"
+          : typeof onChainSigUsdSupply === "number"
+            ? "Derived from bank box R4"
+            : "SigmaUSD on-chain state",
+        typeof ageUsdLiabilitiesErg === "number" || typeof onChainSigUsdSupply === "number"
+          ? SIGMAUSD_BANK_BOX_API
+          : "https://github.com/anon-real/sigma-usd",
+        typeof ageUsdLiabilitiesErg === "number" || typeof nominalLiabilitiesUsd === "number"
+          ? "derived"
+          : "unavailable",
       ),
       metric(
         "sigusd-equity-ratio",
         "Equity ratio",
         typeof equityRatio === "number" ? `${formatDecimal(equityRatio, 1)}%` : "Unavailable",
         typeof equityRatio === "number"
-          ? `Derived from DefiLlama reserve TVL and on-chain nominal liabilities. Equity proxy: ${formatUsd(equityUsd, 0)}; reserve ratio proxy: ${formatDecimal(reserveRatio, 1)}%.`
+          ? `On-chain equity: ${formatDecimal(equityErg, 4)} ERG (${formatUsd(equityUsd, 0)}). Reserve ratio: ${formatDecimal(reserveRatio, 1)}%.`
           : "Exact equity or reserve ratio is withheld until bank-box and oracle-box decoding is wired.",
-        "Derived SigmaUSD reserve view",
-        DEFILLAMA_SIGMAUSD_API,
+        "Derived from bank box + ERG/USD oracle",
+        ERG_USD_ORACLE_BOX_API,
         typeof equityRatio === "number" ? "derived" : "unavailable",
       ),
     ],
@@ -632,7 +685,15 @@ function getAgentEconomySnapshot(): ErgoWatchSnapshot["agentEconomy"] {
 }
 
 async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
-  const [info, v0Info, blockResponse, stablecoins, sigmaUsdProtocol, sigmaUsdBankBoxes] =
+  const [
+    info,
+    v0Info,
+    blockResponse,
+    stablecoins,
+    sigmaUsdProtocol,
+    sigmaUsdBankBoxes,
+    sigmaUsdOracleBoxes,
+  ] =
     await Promise.all([
       fetchExplorerJson<ExplorerInfo>("/info"),
       fetchExplorerV0Json<ExplorerV0Info>("/info"),
@@ -641,6 +702,9 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       fetchUrlJson<DefiLlamaProtocolResponse>(DEFILLAMA_SIGMAUSD_API),
       fetchExplorerJson<ExplorerBoxesResponse>(
         `/boxes/unspent/byAddress/${SIGMAUSD_BANK_ADDRESS}?limit=10`,
+      ),
+      fetchExplorerJson<ExplorerBoxesResponse>(
+        `/boxes/unspent/byTokenId/${ERG_USD_ORACLE_NFT_ID}?limit=5`,
       ),
     ])
 
@@ -690,10 +754,12 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
     stablecoins,
     protocol: sigmaUsdProtocol,
     bankBoxes: sigmaUsdBankBoxes,
+    oracleBoxes: sigmaUsdOracleBoxes,
   })
   const sigmaUsdStablecoinOk = Boolean(stablecoins)
   const sigmaUsdProtocolOk = Boolean(sigmaUsdProtocol)
   const sigmaUsdBankOk = Boolean(sigmaUsd.bankBox.id)
+  const sigmaUsdOracleOk = Boolean(sigmaUsd.oracleBox.id)
   const sourceStatus = {
     reachable: [
       info,
@@ -702,8 +768,9 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       sigmaUsdStablecoinOk ? stablecoins : null,
       sigmaUsdProtocolOk ? sigmaUsdProtocol : null,
       sigmaUsdBankOk ? sigmaUsdBankBoxes : null,
+      sigmaUsdOracleOk ? sigmaUsdOracleBoxes : null,
     ].filter(Boolean).length,
-    total: 6,
+    total: 7,
   }
   const health = getHealthPanels({
     sourceReachable: sourceStatus.reachable,
@@ -754,6 +821,12 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
         label: "Explorer API / SigmaUSD bank box",
         href: SIGMAUSD_BANK_BOX_API,
         ok: sigmaUsdBankOk,
+      },
+      {
+        id: "erg-usd-oracle-box",
+        label: "Explorer API / ERG-USD oracle box",
+        href: ERG_USD_ORACLE_BOX_API,
+        ok: sigmaUsdOracleOk,
       },
     ],
     chain: {
@@ -938,6 +1011,6 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
 
 export const getErgoWatchSnapshot = unstable_cache(
   buildErgoWatchSnapshot,
-  ["ergo-watch-snapshot-v4"],
+  ["ergo-watch-snapshot-v5"],
   { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
 )

@@ -103,6 +103,10 @@ export type SigmaUsdSnapshot = {
     id: string | null
     height: number | null
   }
+  oracleBox: {
+    id: string | null
+    height: number | null
+  }
   metrics: ErgoWatchMetric[]
 }
 

@@ -373,7 +373,7 @@ export default async function ErgoWatchPage() {
                 >
                   Network analytics.
                   <br />
-                  <span className="text-orange-400">No dead upstream.</span>
+                  <span className="text-orange-400">No fake data.</span>
                 </h1>
 
                 <p
@@ -680,9 +680,9 @@ export default async function ErgoWatchPage() {
                 </h2>
               </div>
               <p className="leading-relaxed text-neutral-400">
-                SigmaUSD data is shown only when a source is reachable and labeled. The bank-box
-                registers are read from Ergo Explorer; oracle-exact AgeUSD ratios stay separate
-                until the dedicated oracle decoder is wired.
+                SigmaUSD data is shown only when a source is reachable and labeled. Bank-box
+                registers and the ERG/USD oracle box are read from Ergo Explorer; secondary data
+                remains clearly marked when used as comparison or fallback.
               </p>
             </div>
 
@@ -710,6 +710,11 @@ export default async function ErgoWatchPage() {
                     {snapshot.defi.sigmaUsd.bankBox.height ? (
                       <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
                         Bank box height #{formatNumber(snapshot.defi.sigmaUsd.bankBox.height)}
+                      </p>
+                    ) : null}
+                    {snapshot.defi.sigmaUsd.oracleBox.height ? (
+                      <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                        Oracle height #{formatNumber(snapshot.defi.sigmaUsd.oracleBox.height)}
                       </p>
                     ) : null}
                   </div>
@@ -843,7 +848,7 @@ export default async function ErgoWatchPage() {
                     Runtime data, explicit degradation.
                   </h2>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+                <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                   {snapshot.sources.map((source) => (
                     <a
                       key={source.id}
