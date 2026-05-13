@@ -27,6 +27,9 @@ export function Footer() {
               <Link href={localizedPath("ecosystem")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("ecosystem") || "Ecosystem"}
               </Link>
+              <Link href={localizedPath("ergo-watch")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Ergo Watch
+              </Link>
               <Link href={localizedPath("compare")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("compare") || "Compare"}
               </Link>

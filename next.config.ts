@@ -127,6 +127,28 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/',
+          has: [{ type: 'host' as const, value: 'ergowatch.ergoblockchain.org' }],
+          destination: '/ergo-watch',
+        },
+        {
+          source: '/metrics',
+          has: [{ type: 'host' as const, value: 'ergowatch.ergoblockchain.org' }],
+          destination: '/ergo-watch',
+        },
+        {
+          source: '/snapshot.json',
+          has: [{ type: 'host' as const, value: 'ergowatch.ergoblockchain.org' }],
+          destination: '/api/ergo-watch',
+        },
+      ],
+    };
+  },
+
   // Webpack оптимизации
   webpack: (config, { dev, isServer }) => {
     // Оптимизация для продакшена

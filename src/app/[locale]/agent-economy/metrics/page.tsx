@@ -334,6 +334,13 @@ export default async function AgentEconomyMetricsPage() {
                   <span>Open JSON snapshot</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
+                <Link
+                  href="/ergo-watch"
+                  className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
+                >
+                  <span>Open Ergo Watch</span>
+                  <BarChart3 className="w-4 h-4" />
+                </Link>
                 <a
                   href={`${ERGO_EXPLORER_API}/info`}
                   target="_blank"

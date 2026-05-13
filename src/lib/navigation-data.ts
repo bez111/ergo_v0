@@ -111,6 +111,11 @@ export const mainNavItems = [
         description: "Interactive visual map of projects, teams, and infrastructure building on Ergo.",
       },
       {
+        title: "Ergo Watch",
+        href: "/ergo-watch",
+        description: "Runtime-safe Ergo network metrics, mining distribution, emission progress, and agent-economy analytics.",
+      },
+      {
         title: "Ecosystem Grants & Funding",
         href: "/ecosystem/grants",
         description: "Grants, bounties, and funding opportunities for ecosystem builders.",

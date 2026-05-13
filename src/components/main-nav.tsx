@@ -67,6 +67,7 @@ export function MainNav() {
       "Projects, dashboards, and partners": "ecosystem_description",
       "One comprehensive directory of wallets, bridges, tools, and community projects.": "explore_dapps_services_description",
       "Interactive visual map of projects, teams, and infrastructure building on Ergo.": "ecosystem_map_description",
+      "Runtime-safe Ergo network metrics, mining distribution, emission progress, and agent-economy analytics.": "ergo_watch_description",
       "Grants, bounties, and funding opportunities for ecosystem builders.": "ecosystem_grants_funding_description",
       // Technology section
       "Core technical concepts and innovations of Ergo": "technology_description",
@@ -200,4 +201,4 @@ export function MainNav() {
       </NavigationMenu>
     </div>
   )
-} 
+}
