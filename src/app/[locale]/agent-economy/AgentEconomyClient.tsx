@@ -437,10 +437,12 @@ export function AgentEconomyClient() {
                   >
                     <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">
                       <CardContent className="p-7">
-                        <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-5">
-                          <Icon className="w-5 h-5 text-orange-400" />
+                        <div className="flex items-center gap-4 mb-5">
+                          <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex shrink-0 items-center justify-center">
+                            <Icon className="w-5 h-5 text-orange-400" />
+                          </div>
+                          <h3 className="font-bold text-white text-lg">{uc.title}</h3>
                         </div>
-                        <h3 className="font-bold text-white text-lg mb-3">{uc.title}</h3>
                         <p className="text-orange-400/80 font-mono text-xs mb-4 leading-relaxed border-l-2 border-orange-500/30 pl-3">
                           {uc.flow}
                         </p>

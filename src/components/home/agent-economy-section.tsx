@@ -93,12 +93,14 @@ export function AgentEconomySection() {
                 className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-3xl"
               >
                 <Card className="h-full bg-black/80 border border-white/8 rounded-3xl group-hover:border-orange-500/40 group-hover:-translate-y-0.5 transition-all duration-300 cursor-pointer p-6">
-                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
-                    <p.icon className="w-5 h-5 text-orange-400" />
+                  <div className="mb-4 flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex shrink-0 items-center justify-center group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
+                      <p.icon className="w-5 h-5 text-orange-400" />
+                    </div>
+                    <h3 className="font-bold text-white text-base group-hover:text-orange-100 transition-colors">
+                      {p.title}
+                    </h3>
                   </div>
-                  <h3 className="font-bold text-white text-base mb-2 group-hover:text-orange-100 transition-colors">
-                    {p.title}
-                  </h3>
                   <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-neutral-300 transition-colors">
                     {p.desc}
                   </p>
