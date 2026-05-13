@@ -26,14 +26,19 @@ import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 const BASE_URL = "https://www.ergoblockchain.org"
 
 export const revalidate = 300
+export const dynamic = "force-dynamic"
 
 const metricIcons = {
+  "circulating-supply": Landmark,
+  "max-supply": ShieldCheck,
+  "emission-remaining": TimerReset,
   "block-height": Network,
   "latest-block": Database,
   epoch: TimerReset,
   "epoch-blocks-left": TimerReset,
   "avg-block-time": Activity,
   "estimated-hashrate": Activity,
+  "explorer-hashrate": Activity,
   difficulty: BarChart3,
   "miner-reward": Landmark,
   "latest-miner": Activity,
@@ -379,6 +384,122 @@ export default async function AgentEconomyMetricsPage() {
                   </Card>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-6 items-stretch">
+              <Card className="bg-black/80 border border-white/8 rounded-3xl">
+                <CardContent className="p-7 md:p-8">
+                  <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+                    Emission / Supply
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-4">
+                    Circulating ERG from Explorer API.
+                  </h2>
+                  <p className="text-neutral-400 leading-relaxed mb-7">
+                    Supply is read from the public Explorer v0 info endpoint. Remaining emission is
+                    derived from the fixed ERG supply cap and shown as a transparent calculation, not
+                    as an invented live metric.
+                  </p>
+
+                  <div className="space-y-5">
+                    <div>
+                      <div className="mb-2 flex justify-between gap-4 font-mono text-xs uppercase tracking-wider">
+                        <span className="text-neutral-500">Circulating</span>
+                        <span className="text-orange-300">
+                          {formatPercent(snapshot.emission.circulatingPercent)}
+                        </span>
+                      </div>
+                      <div className="h-3 overflow-hidden rounded-full bg-white/8">
+                        <div
+                          className="h-full rounded-full bg-orange-500"
+                          style={{
+                            width: `${Math.min(100, Math.max(0, snapshot.emission.circulatingPercent ?? 0))}%`,
+                          }}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid gap-3">
+                      {[
+                        {
+                          label: "Reported circulating",
+                          value:
+                            snapshot.emission.circulatingSupplyErg === null
+                              ? "Unavailable"
+                              : `${formatNumber(Math.round(snapshot.emission.circulatingSupplyErg))} ERG`,
+                        },
+                        {
+                          label: "Fixed max supply",
+                          value: `${formatNumber(snapshot.emission.maxSupplyErg)} ERG`,
+                        },
+                        {
+                          label: "Remaining emission",
+                          value:
+                            snapshot.emission.remainingEmissionErg === null
+                              ? "Unavailable"
+                              : `${formatNumber(Math.round(snapshot.emission.remainingEmissionErg))} ERG`,
+                        },
+                      ].map((item) => (
+                        <div
+                          key={item.label}
+                          className="flex items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3"
+                        >
+                          <span className="text-sm text-neutral-400">{item.label}</span>
+                          <span className="font-mono text-sm text-white">{item.value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-black/80 border border-white/8 rounded-3xl">
+                <CardContent className="p-7 md:p-8">
+                  <div className="mb-6 flex items-start justify-between gap-6">
+                    <div>
+                      <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+                        Runtime-safe
+                      </p>
+                      <h2 className="text-2xl md:text-3xl font-extrabold text-white">
+                        Chain calls happen at runtime, not during build.
+                      </h2>
+                    </div>
+                    <div className="hidden sm:flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
+                      <TimerReset className="h-6 w-6 text-orange-400" />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {snapshot.sources.map((source) => (
+                      <a
+                        key={source.id}
+                        href={source.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-colors hover:border-orange-500/30"
+                      >
+                        <div className="mb-3 flex items-center justify-between gap-3">
+                          <span className="font-mono text-xs uppercase tracking-wider text-orange-300">
+                            {source.ok ? "Reachable" : "Unavailable"}
+                          </span>
+                          <ExternalLink className="h-3.5 w-3.5 text-orange-400" />
+                        </div>
+                        <p className="font-bold text-white">{source.label}</p>
+                      </a>
+                    ))}
+                  </div>
+
+                  <p className="mt-6 text-neutral-400 leading-relaxed">
+                    The page and JSON endpoint are dynamic/cached, so deployment does not wait on
+                    external chain APIs. Visitors get a five-minute snapshot; failed sources degrade
+                    into explicit unavailable states.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>

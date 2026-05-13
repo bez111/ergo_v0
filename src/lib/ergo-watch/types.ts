@@ -38,6 +38,13 @@ export type ExplorerBlocksResponse = {
   total?: number
 }
 
+export type ExplorerV0Info = {
+  version?: string
+  supply?: number
+  transactionAverage?: number
+  hashRate?: number
+}
+
 export type ErgoWatchMetricState = "live" | "derived" | "unavailable"
 
 export type ErgoWatchMetric = {
@@ -79,6 +86,12 @@ export type ErgoWatchSnapshot = {
     latestBlockAge: string
     avgBlockTimeSeconds: number | null
     topMinerShare: number | null
+  }
+  emission: {
+    circulatingSupplyErg: number | null
+    maxSupplyErg: number
+    remainingEmissionErg: number | null
+    circulatingPercent: number | null
   }
   metrics: ErgoWatchMetric[]
   miningDistribution: MiningShare[]

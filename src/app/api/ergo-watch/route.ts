@@ -5,6 +5,7 @@ import {
 } from "@/lib/ergo-watch/snapshot"
 
 export const revalidate = 300
+export const dynamic = "force-dynamic"
 
 export async function GET() {
   const snapshot = await getErgoWatchSnapshot()

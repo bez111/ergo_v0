@@ -5,15 +5,18 @@ import type {
   ExplorerBlocksResponse,
   ExplorerBlock,
   ExplorerInfo,
+  ExplorerV0Info,
   MiningShare,
 } from "./types"
 
 export const ERGO_EXPLORER_API = "https://api.ergoplatform.com/api/v1"
+export const ERGO_EXPLORER_V0_API = "https://api.ergoplatform.com/api/v0"
 export const ERGO_WATCH_REVALIDATE_SECONDS = 300
 export const ERGO_WATCH_SAMPLE_BLOCKS = 100
 
 const BLOCKS_PER_EPOCH = 1024
 const TARGET_BLOCK_INTERVAL_SECONDS = 120
+const MAX_SUPPLY_ERG = 97_739_925
 
 function formatNumber(value: number | undefined | null) {
   if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
@@ -47,6 +50,11 @@ function formatErg(nanoErg: number | undefined | null) {
   return `${formatDecimal(nanoErg / 1_000_000_000, 4)} ERG`
 }
 
+function formatErgAmount(erg: number | undefined | null, maximumFractionDigits = 0) {
+  if (typeof erg !== "number" || !Number.isFinite(erg)) return "Unavailable"
+  return `${formatDecimal(erg, maximumFractionDigits)} ERG`
+}
+
 function formatAge(timestamp: number | undefined | null) {
   if (typeof timestamp !== "number" || !Number.isFinite(timestamp)) return "Timestamp unavailable"
 
@@ -77,6 +85,20 @@ function shortAddress(value: string | undefined | null) {
 async function fetchExplorerJson<T>(path: string) {
   try {
     const response = await fetch(`${ERGO_EXPLORER_API}${path}`, {
+      headers: { accept: "application/json" },
+      next: { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
+    })
+
+    if (!response.ok) return null
+    return (await response.json()) as T
+  } catch {
+    return null
+  }
+}
+
+async function fetchExplorerV0Json<T>(path: string) {
+  try {
+    const response = await fetch(`${ERGO_EXPLORER_V0_API}${path}`, {
       headers: { accept: "application/json" },
       next: { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
     })
@@ -155,8 +177,9 @@ function getMiningDistribution(blocks: ExplorerBlock[]): MiningShare[] {
 }
 
 async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
-  const [info, blockResponse] = await Promise.all([
+  const [info, v0Info, blockResponse] = await Promise.all([
     fetchExplorerJson<ExplorerInfo>("/info"),
+    fetchExplorerV0Json<ExplorerV0Info>("/info"),
     fetchExplorerJson<ExplorerBlocksResponse>(`/blocks?limit=${ERGO_WATCH_SAMPLE_BLOCKS}`),
   ])
 
@@ -177,9 +200,23 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
     typeof latestBlock?.difficulty === "number" && avgBlockTimeSeconds
       ? latestBlock.difficulty / avgBlockTimeSeconds / 1_000_000_000_000
       : null
+  const explorerHashrateTh =
+    typeof v0Info?.hashRate === "number" && Number.isFinite(v0Info.hashRate)
+      ? v0Info.hashRate / 1_000_000_000_000
+      : null
+  const circulatingSupplyErg =
+    typeof v0Info?.supply === "number" && Number.isFinite(v0Info.supply)
+      ? v0Info.supply / 1_000_000_000
+      : null
+  const remainingEmissionErg =
+    typeof circulatingSupplyErg === "number"
+      ? Math.max(0, MAX_SUPPLY_ERG - circulatingSupplyErg)
+      : null
+  const circulatingPercent =
+    typeof circulatingSupplyErg === "number" ? (circulatingSupplyErg / MAX_SUPPLY_ERG) * 100 : null
   const sourceStatus = {
-    reachable: [info, blocks.length ? blockResponse : null].filter(Boolean).length,
-    total: 2,
+    reachable: [info, v0Info, blocks.length ? blockResponse : null].filter(Boolean).length,
+    total: 3,
   }
 
   return {
@@ -200,6 +237,12 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
         href: `${ERGO_EXPLORER_API}/blocks?limit=${ERGO_WATCH_SAMPLE_BLOCKS}`,
         ok: blocks.length > 0,
       },
+      {
+        id: "v0-info",
+        label: "Explorer API v0 / supply",
+        href: `${ERGO_EXPLORER_V0_API}/info`,
+        ok: Boolean(v0Info),
+      },
     ],
     chain: {
       height: latestHeight,
@@ -208,7 +251,41 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       avgBlockTimeSeconds,
       topMinerShare,
     },
+    emission: {
+      circulatingSupplyErg,
+      maxSupplyErg: MAX_SUPPLY_ERG,
+      remainingEmissionErg,
+      circulatingPercent,
+    },
     metrics: [
+      metric(
+        "circulating-supply",
+        "Circulating supply",
+        formatErgAmount(circulatingSupplyErg, 0),
+        "Supply reported by the public Ergo Explorer v0 info endpoint.",
+        "Explorer API v0 / info",
+        `${ERGO_EXPLORER_V0_API}/info`,
+      ),
+      metric(
+        "max-supply",
+        "Max supply",
+        formatErgAmount(MAX_SUPPLY_ERG, 0),
+        "Fixed ERG supply cap used for the emission progress calculation.",
+        "Protocol monetary policy",
+        `${ERGO_EXPLORER_V0_API}/info`,
+        "derived",
+      ),
+      metric(
+        "emission-remaining",
+        "Emission remaining",
+        formatErgAmount(remainingEmissionErg, 0),
+        circulatingPercent
+          ? `${formatDecimal(circulatingPercent, 2)}% of max supply is reported as circulating.`
+          : "Remaining emission is unavailable until supply data is reachable.",
+        "Derived from v0 supply",
+        `${ERGO_EXPLORER_V0_API}/info`,
+        remainingEmissionErg === null ? "unavailable" : "derived",
+      ),
       metric(
         "block-height",
         "Block height",
@@ -259,6 +336,14 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
         "Derived from blocks",
         `${ERGO_EXPLORER_API}/blocks?limit=${ERGO_WATCH_SAMPLE_BLOCKS}`,
         estimatedHashrateTh ? "derived" : "unavailable",
+      ),
+      metric(
+        "explorer-hashrate",
+        "Explorer hashrate",
+        explorerHashrateTh ? `${formatDecimal(explorerHashrateTh)} TH/s` : "Unavailable",
+        "Hashrate reported directly by the Explorer v0 info endpoint.",
+        "Explorer API v0 / info",
+        `${ERGO_EXPLORER_V0_API}/info`,
       ),
       metric(
         "difficulty",
