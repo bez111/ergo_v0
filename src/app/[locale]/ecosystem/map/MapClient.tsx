@@ -24,7 +24,7 @@ const projects = [
   { name: "Mew Finance", category: "DEFI", url: "https://www.mewfinance.com" },
   { name: "SatErgo", category: "WALLETS", url: "https://satergo.com" },
   { name: "SAFEW", category: "WALLETS", url: "https://safew.org" },
-  { name: "ErgoWatch", category: "TOOLS", url: "https://ergo.watch" },
+  { name: "ErgoWatch", category: "TOOLS", url: "https://github.com/abchrisxyz/ergowatch" },
   { name: "ErgoRaffle", category: "DEFI", url: "https://ergoraffle.com" },
   { name: "GuapSwap", category: "TOOLS", url: "#" },
   { name: "Sigmaverse", category: "TOOLS", url: "https://sigmaverse.io" },
@@ -471,4 +471,4 @@ function MapClient() {
   )
 }
 
-export default MapClient 
+export default MapClient

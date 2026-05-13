@@ -4,6 +4,7 @@ import type {
   ErgoWatchMetric,
   ErgoWatchSnapshot,
   ErgoWatchSeriesPoint,
+  ErgoWatchSeriesStats,
   ExplorerBlocksResponse,
   ExplorerBlock,
   ExplorerInfo,
@@ -15,6 +16,7 @@ export const ERGO_EXPLORER_API = "https://api.ergoplatform.com/api/v1"
 export const ERGO_EXPLORER_V0_API = "https://api.ergoplatform.com/api/v0"
 export const ERGO_WATCH_REVALIDATE_SECONDS = 300
 export const ERGO_WATCH_SAMPLE_BLOCKS = 100
+export const ERGO_WATCH_FETCH_TIMEOUT_MS = 10_000
 
 const BLOCKS_PER_EPOCH = 1024
 const TARGET_BLOCK_INTERVAL_SECONDS = 120
@@ -90,30 +92,42 @@ function shortAddress(value: string | undefined | null) {
 }
 
 async function fetchExplorerJson<T>(path: string) {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), ERGO_WATCH_FETCH_TIMEOUT_MS)
+
   try {
     const response = await fetch(`${ERGO_EXPLORER_API}${path}`, {
       headers: { accept: "application/json" },
       next: { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
+      signal: controller.signal,
     })
 
     if (!response.ok) return null
     return (await response.json()) as T
   } catch {
     return null
+  } finally {
+    clearTimeout(timeout)
   }
 }
 
 async function fetchExplorerV0Json<T>(path: string) {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), ERGO_WATCH_FETCH_TIMEOUT_MS)
+
   try {
     const response = await fetch(`${ERGO_EXPLORER_V0_API}${path}`, {
       headers: { accept: "application/json" },
       next: { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
+      signal: controller.signal,
     })
 
     if (!response.ok) return null
     return (await response.json()) as T
   } catch {
     return null
+  } finally {
+    clearTimeout(timeout)
   }
 }
 
@@ -177,6 +191,39 @@ function getNumericSeries(
     .filter((point): point is ErgoWatchSeriesPoint => Boolean(point))
     .slice(0, 48)
     .reverse()
+}
+
+function getSeriesStats(points: ErgoWatchSeriesPoint[]): ErgoWatchSeriesStats {
+  if (!points.length) {
+    return {
+      latest: null,
+      average: null,
+      min: null,
+      max: null,
+      changePercent: null,
+      direction: "unavailable",
+    }
+  }
+
+  const values = points.map((point) => point.value)
+  const latest = values[values.length - 1]
+  const first = values[0]
+  const average = values.reduce((sum, value) => sum + value, 0) / values.length
+  const changePercent = first ? ((latest - first) / first) * 100 : null
+
+  let direction: ErgoWatchSeriesStats["direction"] = "flat"
+  if (changePercent !== null && Math.abs(changePercent) >= 1) {
+    direction = changePercent > 0 ? "up" : "down"
+  }
+
+  return {
+    latest,
+    average,
+    min: Math.min(...values),
+    max: Math.max(...values),
+    changePercent,
+    direction,
+  }
 }
 
 function healthPanel(
@@ -310,6 +357,11 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
     difficulty: getNumericSeries(blocks, (block) => block.difficulty),
     transactions: getNumericSeries(blocks, (block) => block.transactionsCount),
   }
+  const seriesStats = {
+    blockTimeSeconds: getSeriesStats(series.blockTimeSeconds),
+    difficulty: getSeriesStats(series.difficulty),
+    transactions: getSeriesStats(series.transactions),
+  }
   const epochProgress =
     typeof latestHeight === "number" ? `${formatNumber(latestHeight % BLOCKS_PER_EPOCH)} / ${formatNumber(BLOCKS_PER_EPOCH)}` : "Unavailable"
   const epochBlocksLeft =
@@ -386,6 +438,7 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
     },
     health,
     series,
+    seriesStats,
     metrics: [
       metric(
         "circulating-supply",

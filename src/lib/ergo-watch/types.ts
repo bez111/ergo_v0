@@ -81,6 +81,17 @@ export type ErgoWatchHealthPanel = {
   description: string
 }
 
+export type ErgoWatchTrendDirection = "up" | "down" | "flat" | "unavailable"
+
+export type ErgoWatchSeriesStats = {
+  latest: number | null
+  average: number | null
+  min: number | null
+  max: number | null
+  changePercent: number | null
+  direction: ErgoWatchTrendDirection
+}
+
 export type ErgoWatchSnapshot = {
   generatedAt: string
   cacheSeconds: number
@@ -113,6 +124,11 @@ export type ErgoWatchSnapshot = {
     blockTimeSeconds: ErgoWatchSeriesPoint[]
     difficulty: ErgoWatchSeriesPoint[]
     transactions: ErgoWatchSeriesPoint[]
+  }
+  seriesStats: {
+    blockTimeSeconds: ErgoWatchSeriesStats
+    difficulty: ErgoWatchSeriesStats
+    transactions: ErgoWatchSeriesStats
   }
   metrics: ErgoWatchMetric[]
   miningDistribution: MiningShare[]

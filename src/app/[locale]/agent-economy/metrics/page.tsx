@@ -12,6 +12,8 @@ import {
   Network,
   ShieldCheck,
   TimerReset,
+  TrendingDown,
+  TrendingUp,
 } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -21,7 +23,11 @@ import {
   ERGO_EXPLORER_API,
   getErgoWatchSnapshot,
 } from "@/lib/ergo-watch/snapshot"
-import type { ErgoWatchHealthStatus, ErgoWatchSeriesPoint } from "@/lib/ergo-watch/types"
+import type {
+  ErgoWatchHealthStatus,
+  ErgoWatchSeriesPoint,
+  ErgoWatchSeriesStats,
+} from "@/lib/ergo-watch/types"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 
 const BASE_URL = "https://www.ergoblockchain.org"
@@ -136,6 +142,33 @@ function formatSeriesValue(value: number, mode: "seconds" | "integer" | "compact
   return formatNumber(value)
 }
 
+function formatOptionalSeriesValue(
+  value: number | null,
+  mode: "seconds" | "integer" | "compact",
+) {
+  if (value === null) return "Unavailable"
+  return formatSeriesValue(value, mode)
+}
+
+function formatChangePercent(value: number | null) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  const sign = value > 0 ? "+" : ""
+  return `${sign}${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(value)}%`
+}
+
+function trendClass(stats: ErgoWatchSeriesStats) {
+  if (stats.direction === "up") return "text-orange-300"
+  if (stats.direction === "down") return "text-cyan-300"
+  if (stats.direction === "flat") return "text-neutral-300"
+  return "text-neutral-500"
+}
+
+function TrendIcon({ stats }: { stats: ErgoWatchSeriesStats }) {
+  if (stats.direction === "up") return <TrendingUp className="h-4 w-4" />
+  if (stats.direction === "down") return <TrendingDown className="h-4 w-4" />
+  return <Activity className="h-4 w-4" />
+}
+
 function MiniBarChart({
   points,
   mode,
@@ -225,6 +258,23 @@ export async function generateMetadata({
 
 export default async function AgentEconomyMetricsPage() {
   const snapshot = await getErgoWatchSnapshot()
+  const failedHealth = snapshot.health.find(
+    (item) => item.status === "stale" || item.status === "unavailable",
+  )
+  const watchedHealth = snapshot.health.find((item) => item.status === "watch")
+  const overallHealthStatus: ErgoWatchHealthStatus = failedHealth
+    ? failedHealth.status
+    : watchedHealth
+      ? "watch"
+      : "ok"
+  const overallHealthLabel =
+    overallHealthStatus === "ok"
+      ? "Network sample healthy"
+      : overallHealthStatus === "watch"
+        ? "Watch active"
+        : overallHealthStatus === "stale"
+          ? "Chain sample stale"
+          : "Data unavailable"
 
   return (
     <BackgroundWrapper>
@@ -300,6 +350,73 @@ export default async function AgentEconomyMetricsPage() {
                   <span>Back to agent economy</span>
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {[
+                {
+                  label: "Overall sample",
+                  value: overallHealthLabel,
+                  body:
+                    overallHealthStatus === "ok"
+                      ? "Explorer sources, block freshness and sampled block time are inside expected ranges."
+                      : failedHealth?.description ?? watchedHealth?.description ?? "One or more checks needs review.",
+                  status: overallHealthStatus,
+                },
+                {
+                  label: "Current height",
+                  value: formatNumber(snapshot.chain.height),
+                  body: `Latest block observed ${snapshot.chain.latestBlockAge}.`,
+                  status: snapshot.chain.height === null ? "unavailable" : "ok",
+                },
+                {
+                  label: "Sample block time",
+                  value:
+                    snapshot.chain.avgBlockTimeSeconds === null
+                      ? "Unavailable"
+                      : `${formatNumber(snapshot.chain.avgBlockTimeSeconds)}s`,
+                  body: `Computed from ${formatNumber(snapshot.sampleSize)} recent blocks.`,
+                  status:
+                    snapshot.chain.avgBlockTimeSeconds === null
+                      ? "unavailable"
+                      : snapshot.chain.avgBlockTimeSeconds >= 60 &&
+                          snapshot.chain.avgBlockTimeSeconds <= 240
+                        ? "ok"
+                        : "watch",
+                },
+                {
+                  label: "Leading miner",
+                  value: formatPercent(snapshot.chain.topMinerShare),
+                  body: "Share of the sampled blocks mined by the top observed miner.",
+                  status:
+                    snapshot.chain.topMinerShare === null
+                      ? "unavailable"
+                      : snapshot.chain.topMinerShare < 40
+                        ? "ok"
+                        : "watch",
+                },
+              ].map((item) => (
+                <Card key={item.label} className="bg-black/80 border border-white/8 rounded-3xl">
+                  <CardContent className="p-6">
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                        {item.label}
+                      </p>
+                      <span
+                        className={`rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${healthStatusClass(item.status as ErgoWatchHealthStatus)}`}
+                      >
+                        {healthStatusLabel(item.status as ErgoWatchHealthStatus)}
+                      </span>
+                    </div>
+                    <div className="mb-3 text-2xl font-extrabold text-white">{item.value}</div>
+                    <p className="text-sm leading-relaxed text-neutral-400">{item.body}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -420,18 +537,21 @@ export default async function AgentEconomyMetricsPage() {
                   title: "Block time",
                   body: "Observed seconds between adjacent recent blocks.",
                   points: snapshot.series.blockTimeSeconds,
+                  stats: snapshot.seriesStats.blockTimeSeconds,
                   mode: "seconds" as const,
                 },
                 {
                   title: "Transactions per block",
                   body: "Transaction count per sampled recent block.",
                   points: snapshot.series.transactions,
+                  stats: snapshot.seriesStats.transactions,
                   mode: "integer" as const,
                 },
                 {
                   title: "Difficulty",
                   body: "Difficulty reported on each sampled block.",
                   points: snapshot.series.difficulty,
+                  stats: snapshot.seriesStats.difficulty,
                   mode: "compact" as const,
                 },
               ].map((chart) => (
@@ -449,6 +569,40 @@ export default async function AgentEconomyMetricsPage() {
                       </div>
                     </div>
                     <MiniBarChart points={chart.points} mode={chart.mode} />
+                    <div className="mt-5 grid grid-cols-2 gap-2">
+                      {[
+                        {
+                          label: "Average",
+                          value: formatOptionalSeriesValue(chart.stats.average, chart.mode),
+                        },
+                        {
+                          label: "Range",
+                          value:
+                            chart.stats.min === null || chart.stats.max === null
+                              ? "Unavailable"
+                              : `${formatSeriesValue(chart.stats.min, chart.mode)} - ${formatSeriesValue(chart.stats.max, chart.mode)}`,
+                        },
+                      ].map((stat) => (
+                        <div
+                          key={stat.label}
+                          className="rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-2"
+                        >
+                          <p className="mb-1 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                            {stat.label}
+                          </p>
+                          <p className="font-mono text-xs text-white">{stat.value}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div
+                      className={`mt-3 flex items-center justify-between gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-3 py-2 font-mono text-xs ${trendClass(chart.stats)}`}
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <TrendIcon stats={chart.stats} />
+                        Sample change
+                      </span>
+                      <span>{formatChangePercent(chart.stats.changePercent)}</span>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

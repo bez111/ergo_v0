@@ -432,19 +432,24 @@ SAFEW's interface is designed for simplicity without sacrificing functionality. 
     slug: "ergowatch",
     name: "ErgoWatch", 
     category: "TOOLS", 
-    status: "OPERATIONAL", 
-    description: "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.", 
-    longDescription: `ErgoWatch is a comprehensive analytics platform that provides deep insights into the Ergo blockchain ecosystem. While the official Ergo Explorer focuses on transaction and block data, ErgoWatch specializes in aggregated metrics, historical trends, and DeFi analytics that help users understand ecosystem health and growth.
+    status: "NOT_OPERATING",
+    description: "Historical open-source analytics project for Ergo metrics. The public ErgoWatch site is currently unavailable; use it as a reference, not as a live service.",
+    longDescription: `ErgoWatch is a historical open-source analytics project for Ergo network and ecosystem metrics. Its architecture remains useful as a reference for how chain data can be indexed, aggregated and turned into dashboards, but the public ergo.watch surface is currently unavailable and should not be treated as an operational service.
 
-The platform tracks Total Value Locked (TVL) across Ergo DeFi protocols, providing historical charts and breakdowns by protocol. Network metrics include active addresses, transaction volumes, token statistics, and mining data. Custom dashboards visualize trends over time, helping researchers and investors make data-driven decisions.
+For live site navigation, ergoblockchain.org now exposes a runtime-safe metrics surface at /agent-economy/metrics. That page reads public Ergo Explorer API data directly, caches a network snapshot server-side and marks unavailable sources explicitly instead of forwarding users to a dead analytics endpoint.
 
-ErgoWatch's open-source architecture means the community can verify how metrics are calculated and contribute improvements. The platform indexes blockchain data into queryable databases, enabling complex analytical queries that would be impractical to run directly on-chain. For developers and analysts, ErgoWatch provides an essential window into the quantitative health of the Ergo ecosystem.`,
+The archived ErgoWatch code can still help developers understand prior approaches to indexing blockchain data into queryable databases and calculating higher-level analytics. Any new production-facing analytics layer should verify sources independently, publish timestamps, avoid fake live numbers and clearly distinguish chain metrics from experimental agent-economy overlays.`,
     icon: "🔍", 
-    url: "https://ergo.watch",
+    url: "https://github.com/abchrisxyz/ergowatch",
     github: "https://github.com/abchrisxyz/ergowatch",
     features: ["Analytics", "DeFi Metrics", "TVL Tracking", "Network Dashboards", "Charts"],
     technologies: ["eUTXO"],
-    relatedTags: ["Analytics", "DeFi", "Tools"]
+    relatedTags: ["Analytics", "DeFi", "Tools"],
+    lastVerified: "2026-05-13",
+    verificationSource: "github",
+    verificationStatus: "site-down",
+    auditStatus: "unknown",
+    fundsAtRisk: false,
   },
   { 
     id: 17, 
