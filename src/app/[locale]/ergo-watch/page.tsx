@@ -26,6 +26,7 @@ import type {
   ErgoWatchSeriesStats,
 } from "@/lib/ergo-watch/types"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
+import { ErgoWatchLookupPanel } from "./_components/lookup-panel"
 
 const BASE_URL = "https://www.ergoblockchain.org"
 
@@ -40,6 +41,38 @@ function formatNumber(value: number | null | undefined) {
 function formatPercent(value: number | null | undefined) {
   if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
   return `${new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(value)}%`
+}
+
+function formatDecimal(value: number | null | undefined, maximumFractionDigits = 2) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  return new Intl.NumberFormat("en-US", { maximumFractionDigits }).format(value)
+}
+
+function formatUsd(value: number | null | undefined, maximumFractionDigits = 0) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits,
+  }).format(value)
+}
+
+function formatErgValue(value: number | null | undefined, maximumFractionDigits = 2) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  return `${formatDecimal(value, maximumFractionDigits)} ERG`
+}
+
+function formatBytes(value: number | null | undefined) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  if (value < 1024) return `${formatNumber(value)} B`
+  if (value < 1024 * 1024) return `${formatDecimal(value / 1024, 1)} KB`
+  return `${formatDecimal(value / (1024 * 1024), 2)} MB`
+}
+
+function shortHash(value: string | null | undefined) {
+  if (!value) return "Unavailable"
+  if (value.length <= 18) return value
+  return `${value.slice(0, 10)}...${value.slice(-6)}`
 }
 
 function formatSeriesValue(value: number | null, mode: "seconds" | "integer" | "compact") {
@@ -332,8 +365,71 @@ export default async function ErgoWatchPage() {
       icon: ShieldCheck,
     },
   ]
+  const sigmaUsd = snapshot.defi.sigmaUsd
+  const sigmaUsdCalculations = [
+    {
+      label: "Reserve",
+      value: formatErgValue(sigmaUsd.calculations.ergReserves, 4),
+      body: "Bank box value minus the minimum box value.",
+    },
+    {
+      label: "Liabilities",
+      value: formatErgValue(sigmaUsd.calculations.liabilitiesErg, 4),
+      body: "SigUSD supply priced through the ERG/USD oracle box.",
+    },
+    {
+      label: "Reserve ratio",
+      value: formatPercent(sigmaUsd.calculations.reserveRatio),
+      body: "ERG reserves divided by AgeUSD liabilities.",
+    },
+    {
+      label: "Equity",
+      value: formatErgValue(sigmaUsd.calculations.equityErg, 4),
+      body: `${formatUsd(sigmaUsd.calculations.equityUsd, 0)} at the current oracle datapoint.`,
+    },
+    {
+      label: "Oracle price",
+      value: formatUsd(sigmaUsd.calculations.oracleErgUsd, 4),
+      body:
+        sigmaUsd.calculations.oracleNanoErgPerUsd === null
+          ? "Oracle register unavailable."
+          : `${formatNumber(sigmaUsd.calculations.oracleNanoErgPerUsd)} nanoERG per USD.`,
+    },
+    {
+      label: "SigRSV supply",
+      value:
+        sigmaUsd.calculations.sigRsvSupply === null
+          ? "Unavailable"
+          : `${formatNumber(sigmaUsd.calculations.sigRsvSupply)} SigRSV`,
+      body: "Circulating reserve token supply from bank R5.",
+    },
+  ]
+  const sigmaUsdFormulaRows = [
+    {
+      label: "SigUSD supply",
+      value: "bank.R4 / 100",
+    },
+    {
+      label: "ERG/USD",
+      value: "1,000,000,000 / oracle.R4",
+    },
+    {
+      label: "Liabilities",
+      value: "bank.R4 * floor(oracle.R4 / 100) / 1e9",
+    },
+    {
+      label: "Reserve ratio",
+      value: "bank ERG reserve / liabilities ERG",
+    },
+    {
+      label: "Equity ratio",
+      value: "(bank ERG reserve - liabilities ERG) / liabilities ERG",
+    },
+  ]
   const watchSections = [
     { href: "#network", label: "Network" },
+    { href: "#activity", label: "Activity" },
+    { href: "#tokens", label: "Tokens" },
     { href: "#mining", label: "Mining" },
     { href: "#emission", label: "Emission" },
     { href: "#defi", label: "DeFi" },
@@ -542,6 +638,155 @@ export default async function ErgoWatchPage() {
           </div>
         </section>
 
+        <section id="activity" className="scroll-mt-32 py-20 bg-neutral-950/40 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-12 grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+              <div>
+                <p className="mb-3 font-mono text-xs uppercase tracking-widest text-orange-400">
+                  Runtime activity
+                </p>
+                <h2
+                  className="font-extrabold tracking-tight text-white"
+                  style={{
+                    fontSize: "clamp(26px, 3.5vw, 46px)",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Mempool and token signals.
+                </h2>
+              </div>
+              <p className="leading-relaxed text-neutral-400">
+                This layer uses live public Explorer endpoints. If mempool or asset data is
+                unavailable, the dashboard marks it as unavailable instead of filling the gap with
+                stale historical guesses.
+              </p>
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-2">
+              <Card className="bg-black/80 border border-white/8 rounded-3xl">
+                <CardContent className="p-7 md:p-8">
+                  <div className="mb-7 flex items-start justify-between gap-5">
+                    <div>
+                      <p className="mb-2 font-mono text-xs uppercase tracking-widest text-orange-400">
+                        Unconfirmed transactions
+                      </p>
+                      <h3 className="text-2xl font-extrabold text-white">
+                        {snapshot.activity.mempoolTransactions === null
+                          ? "Mempool unavailable"
+                          : `${formatNumber(snapshot.activity.mempoolTransactions)} in mempool`}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+                        Sampled from Explorer v0 unconfirmed transaction data.
+                      </p>
+                    </div>
+                    <span
+                      className={`shrink-0 rounded-full border px-3 py-1 font-mono text-xs uppercase tracking-wider ${metricStateClass(snapshot.activity.status === "live" ? "live" : "unavailable")}`}
+                    >
+                      {snapshot.activity.status}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    {snapshot.activity.unconfirmed.length ? (
+                      snapshot.activity.unconfirmed.map((transaction) => (
+                        <a
+                          key={transaction.id}
+                          href={`https://api.ergoplatform.com/api/v0/transactions/unconfirmed/${transaction.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-colors hover:border-orange-500/30"
+                        >
+                          <div className="mb-2 flex items-center justify-between gap-3">
+                            <p className="font-mono text-sm text-white">{shortHash(transaction.id)}</p>
+                            <ExternalLink className="h-3.5 w-3.5 text-orange-400" />
+                          </div>
+                          <div className="grid gap-2 font-mono text-xs text-neutral-500 sm:grid-cols-4">
+                            <span>{transaction.age}</span>
+                            <span>{formatErgValue(transaction.valueErg, 4)}</span>
+                            <span>
+                              {formatNumber(transaction.inputs)} in / {formatNumber(transaction.outputs)} out
+                            </span>
+                            <span>
+                              {formatNumber(transaction.assetCount)} assets / {formatBytes(transaction.sizeBytes)}
+                            </span>
+                          </div>
+                        </a>
+                      ))
+                    ) : (
+                      <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 text-sm leading-relaxed text-neutral-400">
+                        No unconfirmed transaction sample is reachable right now.
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card id="tokens" className="scroll-mt-32 bg-black/80 border border-white/8 rounded-3xl">
+                <CardContent className="p-7 md:p-8">
+                  <div className="mb-7 flex items-start justify-between gap-5">
+                    <div>
+                      <p className="mb-2 font-mono text-xs uppercase tracking-widest text-orange-400">
+                        Token registry
+                      </p>
+                      <h3 className="text-2xl font-extrabold text-white">
+                        {snapshot.assets.total === null
+                          ? "Assets unavailable"
+                          : `${formatNumber(snapshot.assets.total)} assets indexed`}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+                        Latest asset records exposed by Explorer API. This is a registry signal, not
+                        a popularity ranking.
+                      </p>
+                    </div>
+                    <span
+                      className={`shrink-0 rounded-full border px-3 py-1 font-mono text-xs uppercase tracking-wider ${metricStateClass(snapshot.assets.status === "live" ? "live" : "unavailable")}`}
+                    >
+                      {snapshot.assets.status}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    {snapshot.assets.latest.length ? (
+                      snapshot.assets.latest.map((asset) => (
+                        <a
+                          key={asset.id}
+                          href={`https://api.ergoplatform.com/api/v1/boxes/unspent/byTokenId/${asset.id}?limit=20`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block rounded-2xl border border-white/8 bg-white/[0.03] p-4 transition-colors hover:border-orange-500/30"
+                        >
+                          <div className="mb-2 flex items-center justify-between gap-3">
+                            <div className="min-w-0">
+                              <p className="truncate font-bold text-white">{asset.name}</p>
+                              <p className="truncate font-mono text-xs text-neutral-500">
+                                {shortHash(asset.id)}
+                              </p>
+                            </div>
+                            <ExternalLink className="h-3.5 w-3.5 shrink-0 text-orange-400" />
+                          </div>
+                          <div className="flex flex-wrap gap-2 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                            <span>{asset.type}</span>
+                            <span>Emission {formatNumber(asset.emissionAmount)}</span>
+                            <span>Decimals {formatNumber(asset.decimals)}</span>
+                          </div>
+                        </a>
+                      ))
+                    ) : (
+                      <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 text-sm leading-relaxed text-neutral-400">
+                        Asset registry data is unavailable right now.
+                      </div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-6">
+              <ErgoWatchLookupPanel />
+            </div>
+          </div>
+        </section>
+
         <section id="mining" className="scroll-mt-32 py-20 bg-neutral-950/40 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -746,6 +991,63 @@ export default async function ErgoWatchPage() {
                       </p>
                     </a>
                   ))}
+                </div>
+
+                <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                  {sigmaUsdCalculations.map((item) => (
+                    <div
+                      key={item.label}
+                      className="rounded-2xl border border-white/8 bg-white/[0.03] p-5"
+                    >
+                      <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                        {item.label}
+                      </p>
+                      <p className="mt-2 text-2xl font-extrabold text-white">{item.value}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-neutral-400">{item.body}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+                  <div className="rounded-2xl border border-orange-500/20 bg-orange-500/10 p-5">
+                    <p className="mb-2 font-mono text-xs uppercase tracking-widest text-orange-300">
+                      Calculation policy
+                    </p>
+                    <h4 className="text-xl font-extrabold text-white">No inferred reserves.</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                      SigmaUSD reserve, liability and ratio values are shown only when the bank box
+                      and ERG/USD oracle box are reachable. DefiLlama remains a labeled secondary
+                      comparison source, not the authority for the on-chain ratios.
+                    </p>
+                    <a
+                      href="/api/ergo-watch/sigmausd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 rounded-xl border border-orange-500/35 bg-black/30 px-4 py-2 font-mono text-xs uppercase tracking-wider text-orange-300 transition-colors hover:bg-orange-500/15"
+                    >
+                      Open SigmaUSD JSON
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+
+                  <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5">
+                    <p className="mb-4 font-mono text-xs uppercase tracking-widest text-orange-400">
+                      How it is calculated
+                    </p>
+                    <div className="grid gap-3">
+                      {sigmaUsdFormulaRows.map((item) => (
+                        <div
+                          key={item.label}
+                          className="grid gap-2 rounded-xl border border-white/8 bg-black/30 p-3 sm:grid-cols-[0.35fr_0.65fr] sm:items-center"
+                        >
+                          <p className="font-bold text-white">{item.label}</p>
+                          <p className="overflow-x-auto font-mono text-xs text-neutral-400">
+                            {item.value}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>

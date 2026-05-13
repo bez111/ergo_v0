@@ -76,6 +76,37 @@ export type ExplorerV0Info = {
   hashRate?: number
 }
 
+export type ExplorerAsset = {
+  id?: string
+  boxId?: string
+  emissionAmount?: number
+  name?: string
+  description?: string
+  type?: string
+  decimals?: number
+}
+
+export type ExplorerAssetsResponse = {
+  items?: ExplorerAsset[]
+  total?: number
+}
+
+export type ExplorerUnconfirmedTransaction = {
+  id?: string
+  inputs?: unknown[]
+  outputs?: Array<{
+    value?: number
+    assets?: ExplorerBoxAsset[]
+  }>
+  creationTimestamp?: number
+  size?: number
+}
+
+export type ExplorerUnconfirmedTransactionsResponse = {
+  items?: ExplorerUnconfirmedTransaction[]
+  total?: number
+}
+
 export type ErgoWatchMetricState = "live" | "derived" | "unavailable"
 
 export type ErgoWatchMetric = {
@@ -106,6 +137,20 @@ export type SigmaUsdSnapshot = {
   oracleBox: {
     id: string | null
     height: number | null
+  }
+  calculations: {
+    sigUsdSupply: number | null
+    sigRsvSupply: number | null
+    ergReserves: number | null
+    oracleNanoErgPerUsd: number | null
+    oracleErgUsd: number | null
+    liabilitiesErg: number | null
+    nominalLiabilitiesUsd: number | null
+    reserveValueUsd: number | null
+    equityErg: number | null
+    equityUsd: number | null
+    reserveRatio: number | null
+    equityRatio: number | null
   }
   metrics: ErgoWatchMetric[]
 }
@@ -164,6 +209,25 @@ export type ErgoWatchSeriesStats = {
   direction: ErgoWatchTrendDirection
 }
 
+export type ErgoWatchActivityTransaction = {
+  id: string
+  age: string
+  inputs: number
+  outputs: number
+  valueErg: number
+  assetCount: number
+  sizeBytes: number | null
+}
+
+export type ErgoWatchAssetSummary = {
+  id: string
+  name: string
+  type: string
+  emissionAmount: number | null
+  decimals: number | null
+  boxId: string | null
+}
+
 export type ErgoWatchSnapshot = {
   generatedAt: string
   cacheSeconds: number
@@ -199,6 +263,17 @@ export type ErgoWatchSnapshot = {
   }
   metrics: ErgoWatchMetric[]
   miningDistribution: MiningShare[]
+  activity: {
+    status: "live" | "unavailable"
+    mempoolTransactions: number | null
+    sampleSize: number
+    unconfirmed: ErgoWatchActivityTransaction[]
+  }
+  assets: {
+    status: "live" | "unavailable"
+    total: number | null
+    latest: ErgoWatchAssetSummary[]
+  }
   defi: {
     sigmaUsd: SigmaUsdSnapshot
   }

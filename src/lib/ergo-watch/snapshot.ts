@@ -6,11 +6,13 @@ import type {
   ErgoWatchSnapshot,
   ErgoWatchSeriesPoint,
   ErgoWatchSeriesStats,
+  ExplorerAssetsResponse,
   ExplorerBlocksResponse,
   ExplorerBlock,
   ExplorerBox,
   ExplorerBoxesResponse,
   ExplorerInfo,
+  ExplorerUnconfirmedTransactionsResponse,
   ExplorerV0Info,
   MiningShare,
 } from "./types"
@@ -29,6 +31,8 @@ export const SIGUSD_TOKEN_ID = "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f
 export const SIGRSV_TOKEN_ID = "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"
 export const ERG_USD_ORACLE_NFT_ID = "011d3364de07e5a26f0c4eef0852cddb387039a921b7154ef3cab22c6eda887f"
 export const ERG_USD_ORACLE_BOX_API = `${ERGO_EXPLORER_API}/boxes/unspent/byTokenId/${ERG_USD_ORACLE_NFT_ID}?limit=5`
+export const ERGO_ASSETS_API = `${ERGO_EXPLORER_API}/assets?limit=8`
+export const ERGO_MEMPOOL_UNCONFIRMED_API = `${ERGO_EXPLORER_V0_API}/transactions/unconfirmed?limit=5`
 
 const BLOCKS_PER_EPOCH = 1024
 const TARGET_BLOCK_INTERVAL_SECONDS = 120
@@ -145,7 +149,7 @@ function shortAddress(value: string | undefined | null) {
   return `${value.slice(0, 8)}...${value.slice(-8)}`
 }
 
-async function fetchExplorerJson<T>(path: string) {
+async function fetchExplorerJson<T>(path: string, attempt = 0): Promise<T | null> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), ERGO_WATCH_FETCH_TIMEOUT_MS)
 
@@ -156,16 +160,20 @@ async function fetchExplorerJson<T>(path: string) {
       signal: controller.signal,
     })
 
-    if (!response.ok) return null
+    if (!response.ok) {
+      if (attempt === 0) return fetchExplorerJson<T>(path, 1)
+      return null
+    }
     return (await response.json()) as T
   } catch {
+    if (attempt === 0) return fetchExplorerJson<T>(path, 1)
     return null
   } finally {
     clearTimeout(timeout)
   }
 }
 
-async function fetchExplorerV0Json<T>(path: string) {
+async function fetchExplorerV0Json<T>(path: string, attempt = 0): Promise<T | null> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), ERGO_WATCH_FETCH_TIMEOUT_MS)
 
@@ -176,16 +184,20 @@ async function fetchExplorerV0Json<T>(path: string) {
       signal: controller.signal,
     })
 
-    if (!response.ok) return null
+    if (!response.ok) {
+      if (attempt === 0) return fetchExplorerV0Json<T>(path, 1)
+      return null
+    }
     return (await response.json()) as T
   } catch {
+    if (attempt === 0) return fetchExplorerV0Json<T>(path, 1)
     return null
   } finally {
     clearTimeout(timeout)
   }
 }
 
-async function fetchUrlJson<T>(url: string) {
+async function fetchUrlJson<T>(url: string, attempt = 0): Promise<T | null> {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), ERGO_WATCH_FETCH_TIMEOUT_MS)
 
@@ -196,9 +208,13 @@ async function fetchUrlJson<T>(url: string) {
       signal: controller.signal,
     })
 
-    if (!response.ok) return null
+    if (!response.ok) {
+      if (attempt === 0) return fetchUrlJson<T>(url, 1)
+      return null
+    }
     return (await response.json()) as T
   } catch {
+    if (attempt === 0) return fetchUrlJson<T>(url, 1)
     return null
   } finally {
     clearTimeout(timeout)
@@ -411,6 +427,60 @@ function getMiningDistribution(blocks: ExplorerBlock[]): MiningShare[] {
     .slice(0, 8)
 }
 
+function getActivitySnapshot(
+  unconfirmedTransactions: ExplorerUnconfirmedTransactionsResponse | null,
+): ErgoWatchSnapshot["activity"] {
+  const items = unconfirmedTransactions?.items ?? []
+
+  return {
+    status: unconfirmedTransactions ? "live" : "unavailable",
+    mempoolTransactions:
+      typeof unconfirmedTransactions?.total === "number" ? unconfirmedTransactions.total : null,
+    sampleSize: items.length,
+    unconfirmed: items.slice(0, 5).map((transaction) => {
+      const outputs = transaction.outputs ?? []
+      const valueNanoErg = outputs.reduce((sum, output) => sum + (output.value ?? 0), 0)
+      const assetCount = outputs.reduce((sum, output) => sum + (output.assets?.length ?? 0), 0)
+
+      return {
+        id: transaction.id ?? "unknown",
+        age: formatAge(transaction.creationTimestamp),
+        inputs: transaction.inputs?.length ?? 0,
+        outputs: outputs.length,
+        valueErg: valueNanoErg / NANO_ERG_IN_ERG,
+        assetCount,
+        sizeBytes:
+          typeof transaction.size === "number" && Number.isFinite(transaction.size)
+            ? transaction.size
+            : null,
+      }
+    }),
+  }
+}
+
+function getAssetsSnapshot(assets: ExplorerAssetsResponse | null): ErgoWatchSnapshot["assets"] {
+  const items = assets?.items ?? []
+
+  return {
+    status: assets ? "live" : "unavailable",
+    total: typeof assets?.total === "number" && Number.isFinite(assets.total) ? assets.total : null,
+    latest: items.slice(0, 8).map((asset) => ({
+      id: asset.id ?? "unknown",
+      name: asset.name || "Unnamed asset",
+      type: asset.type || "Unknown",
+      emissionAmount:
+        typeof asset.emissionAmount === "number" && Number.isFinite(asset.emissionAmount)
+          ? asset.emissionAmount
+          : null,
+      decimals:
+        typeof asset.decimals === "number" && Number.isFinite(asset.decimals)
+          ? asset.decimals
+          : null,
+      boxId: asset.boxId ?? null,
+    })),
+  }
+}
+
 function getRegisterNumber(box: ExplorerBox | null, registerId: "R4" | "R5") {
   const register = box?.additionalRegisters?.[registerId]
   if (typeof register === "number" && Number.isFinite(register)) return register
@@ -540,6 +610,20 @@ function getSigmaUsdSnapshot({
     oracleBox: {
       id: oracleBox?.boxId ?? null,
       height: oracleBox?.settlementHeight ?? oracleBox?.creationHeight ?? null,
+    },
+    calculations: {
+      sigUsdSupply: onChainSigUsdSupply,
+      sigRsvSupply: onChainSigRsvSupply,
+      ergReserves: baseReservesErg,
+      oracleNanoErgPerUsd,
+      oracleErgUsd,
+      liabilitiesErg: ageUsdLiabilitiesErg,
+      nominalLiabilitiesUsd,
+      reserveValueUsd: onChainReserveValueUsd,
+      equityErg,
+      equityUsd,
+      reserveRatio,
+      equityRatio,
     },
     note:
       bankBox && oracleBox
@@ -693,6 +777,8 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
     sigmaUsdProtocol,
     sigmaUsdBankBoxes,
     sigmaUsdOracleBoxes,
+    assetsResponse,
+    unconfirmedTransactions,
   ] =
     await Promise.all([
       fetchExplorerJson<ExplorerInfo>("/info"),
@@ -705,6 +791,10 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       ),
       fetchExplorerJson<ExplorerBoxesResponse>(
         `/boxes/unspent/byTokenId/${ERG_USD_ORACLE_NFT_ID}?limit=5`,
+      ),
+      fetchExplorerJson<ExplorerAssetsResponse>("/assets?limit=8"),
+      fetchExplorerV0Json<ExplorerUnconfirmedTransactionsResponse>(
+        "/transactions/unconfirmed?limit=5",
       ),
     ])
 
@@ -760,6 +850,10 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
   const sigmaUsdProtocolOk = Boolean(sigmaUsdProtocol)
   const sigmaUsdBankOk = Boolean(sigmaUsd.bankBox.id)
   const sigmaUsdOracleOk = Boolean(sigmaUsd.oracleBox.id)
+  const assetsOk = Boolean(assetsResponse)
+  const unconfirmedTransactionsOk = Boolean(unconfirmedTransactions)
+  const activity = getActivitySnapshot(unconfirmedTransactions)
+  const assets = getAssetsSnapshot(assetsResponse)
   const sourceStatus = {
     reachable: [
       info,
@@ -769,8 +863,10 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       sigmaUsdProtocolOk ? sigmaUsdProtocol : null,
       sigmaUsdBankOk ? sigmaUsdBankBoxes : null,
       sigmaUsdOracleOk ? sigmaUsdOracleBoxes : null,
+      assetsOk ? assetsResponse : null,
+      unconfirmedTransactionsOk ? unconfirmedTransactions : null,
     ].filter(Boolean).length,
-    total: 7,
+    total: 9,
   }
   const health = getHealthPanels({
     sourceReachable: sourceStatus.reachable,
@@ -827,6 +923,18 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
         label: "Explorer API / ERG-USD oracle box",
         href: ERG_USD_ORACLE_BOX_API,
         ok: sigmaUsdOracleOk,
+      },
+      {
+        id: "assets",
+        label: "Explorer API / latest assets",
+        href: ERGO_ASSETS_API,
+        ok: assetsOk,
+      },
+      {
+        id: "mempool",
+        label: "Explorer API v0 / unconfirmed txs",
+        href: ERGO_MEMPOOL_UNCONFIRMED_API,
+        ok: unconfirmedTransactionsOk,
       },
     ],
     chain: {
@@ -1002,6 +1110,8 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       ),
     ],
     miningDistribution,
+    activity,
+    assets,
     defi: {
       sigmaUsd,
     },
@@ -1011,6 +1121,6 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
 
 export const getErgoWatchSnapshot = unstable_cache(
   buildErgoWatchSnapshot,
-  ["ergo-watch-snapshot-v5"],
+  ["ergo-watch-snapshot-v7"],
   { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
 )
