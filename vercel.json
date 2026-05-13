@@ -16,7 +16,7 @@
     {
       "source": "/",
       "has": [{ "type": "host", "value": "ergowatch.ergoblockchain.org" }],
-      "destination": "/agent-economy/metrics"
+      "destination": "/ergo-watch"
     }
   ],
   "redirects": []
