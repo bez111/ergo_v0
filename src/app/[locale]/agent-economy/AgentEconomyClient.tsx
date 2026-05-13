@@ -63,7 +63,7 @@ export function AgentEconomyClient() {
 
   return (
     <BackgroundWrapper>
-      <main className="min-h-screen bg-black text-white">
+      <main className="min-h-screen text-white">
 
         {/* ── Hero ─────────────────────────────────────────────────────────── */}
         <section className="relative pt-32 pb-24 overflow-hidden">
