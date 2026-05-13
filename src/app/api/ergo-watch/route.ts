@@ -4,7 +4,7 @@ import {
   getErgoWatchSnapshot,
 } from "@/lib/ergo-watch/snapshot"
 
-export const revalidate = ERGO_WATCH_REVALIDATE_SECONDS
+export const revalidate = 300
 
 export async function GET() {
   const snapshot = await getErgoWatchSnapshot()
