@@ -15,40 +15,65 @@ export function MadeForMassAdoption() {
       title: t('paths.freedomSeekers.title'),
       desc: t('paths.freedomSeekers.description'),
       cta: t('paths.freedomSeekers.cta'),
-      href: "/hodlers"
+      href: "/hodlers",
+      steps: [
+        { label: "Wallets", href: "/wallet" },
+        { label: "Privacy", href: "/use/privacy" },
+        { label: "Get ERG", href: "/use/get-erg" },
+      ],
     },
     {
       icon: Code,
       title: t('paths.cypherpunks.title'),
       desc: t('paths.cypherpunks.description'),
       cta: t('paths.cypherpunks.cta'),
-      href: "/developers"
+      href: "/developers",
+      steps: [
+        { label: "Developers", href: "/developers" },
+        { label: "ErgoScript", href: "/technology/ergoscript" },
+        { label: "Patterns", href: "/patterns" },
+      ],
     },
     {
       icon: Pickaxe,
       title: t('paths.miners.title'),
       desc: t('paths.miners.description'),
       cta: t('paths.miners.cta'),
-      href: "/miners"
+      href: "/miners",
+      steps: [
+        { label: "Mining guide", href: "/miners" },
+        { label: "Mining metrics", href: "/ergo-watch#mining" },
+        { label: "Emission", href: "/ergo-watch#emission" },
+      ],
     },
     {
       icon: Bot,
       title: t('paths.agentBuilders.title'),
       desc: t('paths.agentBuilders.description'),
       cta: t('paths.agentBuilders.cta'),
-      href: "/agent-economy"
+      href: "/agent-economy",
+      steps: [
+        { label: "Agent Economy", href: "/agent-economy" },
+        { label: "Demos", href: "/demos" },
+        { label: "Agent metrics", href: "/ergo-watch#agent-economy" },
+      ],
     },
     {
       icon: TrendingUp,
       title: t('paths.community.title'),
       desc: t('paths.community.description'),
       cta: t('paths.community.cta'),
-      href: "/start/community"
+      href: "/start/community",
+      steps: [
+        { label: "Community", href: "/start/community" },
+        { label: "Ecosystem", href: "/ecosystem" },
+        { label: "Manifesto", href: "/blog/ergo-manifesto" },
+      ],
     }
   ]
 
   return (
-    <section id="cypherpunks-freedom" className="py-16 md:py-24 bg-neutral-950/50 overflow-hidden">
+    <section id="choose-path" className="py-16 md:py-24 bg-neutral-950/50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-10 md:mb-16">
@@ -115,6 +140,31 @@ export function MadeForMassAdoption() {
                 </div>
               </Card>
             </Link>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-5">
+          {paths.map((path) => (
+            <div
+              key={`${path.title}-steps`}
+              className="rounded-2xl border border-white/8 bg-black/50 p-3"
+              aria-label={`${path.title} next steps`}
+            >
+              <p className="mb-2 truncate font-mono text-[11px] uppercase tracking-widest text-neutral-500">
+                {path.title}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {path.steps.map((step) => (
+                  <Link
+                    key={step.href}
+                    href={step.href}
+                    className="rounded-full border border-orange-500/20 bg-orange-500/10 px-3 py-1.5 text-xs font-mono text-orange-300 transition-colors hover:border-orange-500/40 hover:bg-orange-500/20 hover:text-orange-200"
+                  >
+                    {step.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 

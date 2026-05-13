@@ -134,6 +134,66 @@ export async function GET() {
       schema: ['Course', 'LearningResource']
     },
     {
+      id: 'freedom-seekers',
+      type: 'page',
+      title: 'Freedom Seekers - Self-Custody, Privacy and Financial Sovereignty',
+      description: 'A path for users who want to control their money: wallets, privacy, getting ERG and long-term self-custody.',
+      url: '/hodlers',
+      absoluteUrl: `${baseUrl}/hodlers`,
+      priority: 0.75,
+      changeFrequency: 'weekly',
+      keywords: 'freedom seekers, self custody, privacy, wallet, get erg, financial sovereignty',
+      schema: ['CollectionPage']
+    },
+    {
+      id: 'cypherpunks',
+      type: 'page',
+      title: 'Cypherpunks - ErgoScript, Privacy and Unstoppable Contracts',
+      description: 'A builder path for cypherpunks: ErgoScript, developer resources, smart-contract patterns and privacy-preserving dApps.',
+      url: '/developers',
+      absoluteUrl: `${baseUrl}/developers`,
+      priority: 0.85,
+      changeFrequency: 'weekly',
+      keywords: 'cypherpunks, ergoscript, developers, privacy dapps, smart contracts, patterns',
+      schema: ['CollectionPage', 'TechArticle']
+    },
+    {
+      id: 'miners',
+      type: 'page',
+      title: 'Miners - GPU-Friendly Proof of Work on Ergo',
+      description: 'Mining path for Ergo: Autolykos, GPU mining, mining guides, hashrate, emission and live mining metrics.',
+      url: '/miners',
+      absoluteUrl: `${baseUrl}/miners`,
+      priority: 0.85,
+      changeFrequency: 'weekly',
+      keywords: 'miners, mining ergo, autolykos, gpu mining, hashrate, emission',
+      schema: ['HowTo', 'CollectionPage']
+    },
+    {
+      id: 'agent-builders',
+      type: 'page',
+      title: 'Agent Builders - Autonomous Agent Payments on Ergo',
+      description: 'A path for building autonomous agents that pay, verify work and settle through Accord, demos and Ergo Watch agent metrics.',
+      url: '/agent-economy',
+      absoluteUrl: `${baseUrl}/agent-economy`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'agent builders, agent economy, accord protocol, x402, mcp, agent payments, programmable credit',
+      schema: ['TechArticle', 'SoftwareApplication']
+    },
+    {
+      id: 'community',
+      type: 'page',
+      title: 'Community - No VC, No Premine, Built by Ergo Contributors',
+      description: 'Community path for people who want to join Ergo: forums, Discord, ecosystem projects, manifesto and contribution channels.',
+      url: '/start/community',
+      absoluteUrl: `${baseUrl}/start/community`,
+      priority: 0.8,
+      changeFrequency: 'weekly',
+      keywords: 'ergo community, no premine, no vc, fair launch, contributors, discord, forum',
+      schema: ['Organization', 'CollectionPage']
+    },
+    {
       id: 'start',
       type: 'page',
       title: 'Start Your Ergo Journey - Beginner\'s Guide',

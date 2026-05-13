@@ -90,6 +90,14 @@ ${glossarySection}
 - ${BASE_URL}/patterns — ErgoScript patterns
 - ${BASE_URL}/docs — Full documentation
 
+## Primary User Paths
+
+- Freedom seekers: ${BASE_URL}/wallet, ${BASE_URL}/use/privacy, ${BASE_URL}/use/get-erg
+- Cypherpunks: ${BASE_URL}/developers, ${BASE_URL}/technology/ergoscript, ${BASE_URL}/patterns
+- Miners: ${BASE_URL}/miners, ${BASE_URL}/ergo-watch#mining, ${BASE_URL}/ergo-watch#emission
+- Agent builders: ${BASE_URL}/agent-economy, ${BASE_URL}/demos, ${BASE_URL}/ergo-watch#agent-economy
+- Community: ${BASE_URL}/start/community, ${BASE_URL}/ecosystem, ${BASE_URL}/blog/ergo-manifesto
+
 ## Agent Economy — Accord/Testnet Reference
 
 ### Overview

@@ -38,6 +38,14 @@ Ergo is a resilient Proof-of-Work blockchain for contractual money. It combines 
 - [Glossary](${BASE_URL}/learn/glossary): blockchain and Ergo terminology
 - [Demos](${BASE_URL}/demos): testnet/mock agent-payment demos and walkthroughs
 
+## Primary User Paths
+
+- Freedom seekers: [Wallets](${BASE_URL}/wallet), [Privacy](${BASE_URL}/use/privacy), [Get ERG](${BASE_URL}/use/get-erg)
+- Cypherpunks: [Developers](${BASE_URL}/developers), [ErgoScript](${BASE_URL}/technology/ergoscript), [Patterns](${BASE_URL}/patterns)
+- Miners: [Mining guide](${BASE_URL}/miners), [Mining metrics](${BASE_URL}/ergo-watch#mining), [Emission](${BASE_URL}/ergo-watch#emission)
+- Agent builders: [Agent Economy](${BASE_URL}/agent-economy), [Demos](${BASE_URL}/demos), [Agent metrics](${BASE_URL}/ergo-watch#agent-economy)
+- Community: [Community](${BASE_URL}/start/community), [Ecosystem](${BASE_URL}/ecosystem), [Manifesto](${BASE_URL}/blog/ergo-manifesto)
+
 ## Technology Pages
 
 - [eUTXO Model](${BASE_URL}/technology/eutxo-model)
