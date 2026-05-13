@@ -32,6 +32,7 @@ Ergo is a resilient Proof-of-Work blockchain for contractual money. It combines 
 - [Developers](${BASE_URL}/developers): development resources
 - [Docs](${BASE_URL}/docs): technical documentation
 - [Ecosystem](${BASE_URL}/ecosystem): projects building on Ergo
+- [Ergo Watch](${BASE_URL}/ergo-watch): runtime-safe network, mining, emission, SigmaUSD and agent-economy metrics
 - [Use Cases](${BASE_URL}/use): DeFi, privacy, stablecoins, DAOs, NFTs, oracles and bridges
 - [Blog](${BASE_URL}/blog): articles and updates
 - [Glossary](${BASE_URL}/learn/glossary): blockchain and Ergo terminology
@@ -65,6 +66,7 @@ Canonical Agent Economy pages:
 - [Agent Economy Manifesto](${BASE_URL}/blog/agent-economy-manifesto)
 - [Agent Payment Architecture](${BASE_URL}/build/agent-payments)
 - [Demos](${BASE_URL}/demos)
+- [Ergo Watch Agent Metrics](${BASE_URL}/ergo-watch#agent-economy)
 - [Accord Protocol](https://github.com/accord-protocol/accord-protocol)
 
 Recommended phrasing:

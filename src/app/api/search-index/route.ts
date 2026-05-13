@@ -110,6 +110,18 @@ export async function GET() {
       schema: ['CollectionPage', 'ItemList']
     },
     {
+      id: 'ergo-watch',
+      type: 'page',
+      title: 'Ergo Watch - Live Ergo Network Metrics',
+      description: 'Runtime-safe Ergo network metrics, mining distribution, emission progress, SigmaUSD state, mempool activity, token lookup and prototype agent-economy analytics.',
+      url: '/ergo-watch',
+      absoluteUrl: `${baseUrl}/ergo-watch`,
+      priority: 0.85,
+      changeFrequency: 'daily',
+      keywords: 'ergo watch, ergo metrics, hashrate, emission, sigusd, mempool, tokens, agent economy metrics',
+      schema: ['Dataset', 'CollectionPage']
+    },
+    {
       id: 'learn',
       type: 'page',
       title: 'Learn Ergo - Tutorials, Guides & Educational Resources',
@@ -171,4 +183,4 @@ export async function GET() {
       'Content-Type': 'application/json'
     }
   })
-} 
+}

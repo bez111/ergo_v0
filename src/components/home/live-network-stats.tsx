@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Activity, Blocks, Zap, TrendingUp, Coins, RefreshCw } from "lucide-react"
+import { Activity, Blocks, Zap, TrendingUp, Coins, RefreshCw, ArrowRight } from "lucide-react"
+import { Link } from "@/i18n/navigation"
 
 interface ErgoV1Info {
   height: number
@@ -157,6 +158,13 @@ export function LiveNetworkStats() {
               value={`${stats.uptimeDays.toLocaleString()} days`}
               sub="since launch"
             />
+            <Link
+              href="/ergo-watch"
+              className="flex shrink-0 items-center gap-2 px-5 py-3 text-xs font-mono uppercase tracking-wider text-orange-400 transition-colors hover:text-orange-300"
+            >
+              <span>Ergo Watch</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
         </div>
       </motion.div>

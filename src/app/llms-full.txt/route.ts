@@ -100,6 +100,7 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
 - ${BASE_URL}/build/agent-payments — Technical reference: primitives, code, SDK comparison
 - ${BASE_URL}/demos — testnet reference demos for agent payment and programmable credit flows
+- ${BASE_URL}/ergo-watch#agent-economy — runtime metrics surface; agent-economy counters remain prototype/status indicators until signed demo receipts are connected
 - ${BASE_URL}/blog/agent-economy-manifesto — canonical manifesto
 - ${BASE_URL}/playbooks/build-agent-economy-apps — builder playbook; use testnet/mock mode unless an audited implementation explicitly allows mainnet
 
@@ -180,6 +181,7 @@ sigmaProp(
 - Current public demos should be treated as mock/testnet examples, not mainnet custody guides
 - Mainnet use remains blocked unless signed audit manifests mark the specific implementation production-ready
 - Testnet/mock demos are available at ${BASE_URL}/demos
+- Runtime network, SigmaUSD, mempool, token and prototype agent-economy metrics are available at ${BASE_URL}/ergo-watch and ${BASE_URL}/api/ergo-watch
 - Fleet SDK npm package: @fleet-sdk/core
 
 ### Relevant Search Queries This Content Answers

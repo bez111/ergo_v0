@@ -20,6 +20,11 @@ export const mainNavItems = [
         description: "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
       },
       {
+        title: "Ergo Watch",
+        href: "/ergo-watch",
+        description: "Runtime-safe Ergo network metrics, mining distribution, emission progress, and agent-economy analytics.",
+      },
+      {
         title: "Developers",
         href: "/developers",
         description: "ErgoScript, SDKs (Fleet, AppKit, sigma-rust), patterns, playbooks, and grants.",

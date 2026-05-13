@@ -568,6 +568,7 @@ export const topics: TopicHub[] = [
       { type: "blog", title: "Agent Economy Manifesto", url: "/blog/agent-economy-manifesto", description: "Why agent commerce needs agreement, verification, policy and programmable settlement", badge: "Start Here", priority: 1 },
       { type: "blog", title: "Q2 2026: What Shipped in the Stack", url: "/blog/ergo-agent-economy-q2-2026", description: "Accord Protocol, testnet demos, SDK packages and audit-gated mainnet roadmap", badge: "Update", priority: 1 },
       { type: "technology", title: "Agent Payments Architecture", url: "/build/agent-payments", description: "Accord flow, receipts, policy and Note/Reserve reference patterns", badge: "Architecture", priority: 1 },
+      { type: "doc", title: "Ergo Watch", url: "/ergo-watch#agent-economy", description: "Live network, SigmaUSD, mempool, token and prototype agent-economy metrics with source status.", badge: "Metrics", priority: 1 },
       { type: "compare", title: "Ergo vs ETH vs SOL for Agents", url: "/agent-economy/vs", description: "10-criteria comparison across chains for agent-specific requirements", badge: "Comparison", priority: 1 }
     ],
 
@@ -575,6 +576,7 @@ export const topics: TopicHub[] = [
       { type: "doc", title: "10-Minute Quickstart", url: "/build/quickstart", description: "First agent payment on Ergo testnet in under 10 minutes", badge: "Quickstart", priority: 1 },
       { type: "playbook", title: "7-Step Agent Economy Playbook", url: "/playbooks/build-agent-economy-apps", description: "From local setup to testnet demos and audit-gated release planning", badge: "Playbook", priority: 1 },
       { type: "doc", title: "GitHub: Accord Protocol", url: "https://github.com/accord-protocol/accord-protocol", description: "Open source examples: basic payment, Note IOU, acceptance predicate", badge: "Code", priority: 1 },
+      { type: "doc", title: "Ergo Watch API", url: "/api/ergo-watch", description: "Runtime JSON snapshot for network, mining, emission, SigmaUSD and agent-economy status.", badge: "JSON", priority: 2 },
       { type: "doc", title: "Live Testnet Demos", url: "/demos", description: "Working agent payment flows — address lookup, live stats", badge: "Demo", priority: 2 }
     ],
 

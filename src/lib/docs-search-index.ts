@@ -353,6 +353,7 @@ export function buildDocsSearchIndex(): DocsSearchIndexItem[] {
     { title: "Use Cases", href: "/use", section: "Platform", excerpt: "Practical guides for wallets, DeFi, mining, bridges, and more", tags: ["DeFi", "Wallets", "Bridges", "Stablecoins"] },
     { title: "Technology", href: "/technology", section: "Platform", excerpt: "Ergo's technical foundations: eUTXO, ErgoScript, NIPoPoWs", tags: ["eUTXO", "ErgoScript", "NIPoPoWs", "Technology"] },
     { title: "Ecosystem", href: "/ecosystem", section: "Platform", excerpt: "Explore Ergo ecosystem: dApps, tools, and community projects", tags: ["Ecosystem", "dApps", "Projects", "Community"] },
+    { title: "Ergo Watch", href: "/ergo-watch", section: "Platform", excerpt: "Live network, mining, emission, SigmaUSD, mempool, token and prototype agent-economy metrics", tags: ["Metrics", "Mining", "SigmaUSD", "Mempool", "Agent Economy"] },
     { title: "Compare Blockchains", href: "/compare", section: "Platform", excerpt: "Compare Ergo with Bitcoin, Ethereum, Cardano, and other L1s", tags: ["Comparison", "Bitcoin", "Ethereum", "Cardano"] },
     { title: "Learning Hub", href: "/learn", section: "Learn", excerpt: "Your starting point for mastering Ergo: guides, glossary, Q&A", tags: ["Learn", "Education", "Guides", "Tutorial"] },
     { title: "Knowledge Base FAQ", href: "/learn/faq", section: "Learn", excerpt: "Technical FAQ covering eUTXO, ErgoScript, privacy, tokenomics", tags: ["FAQ", "Technical", "eUTXO", "Privacy"] },
@@ -435,4 +436,4 @@ export function searchWithTypos(query: string, items: DocsSearchIndexItem[]): Do
   
   // Сортируем по количеству вхождений (больше вхождений = выше в результатах)
   return results.sort((a, b) => b.totalOccurrences - a.totalOccurrences);
-} 
+}
