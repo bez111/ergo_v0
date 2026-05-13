@@ -14,6 +14,8 @@ import type {
 
 export const ERGO_EXPLORER_API = "https://api.ergoplatform.com/api/v1"
 export const ERGO_EXPLORER_V0_API = "https://api.ergoplatform.com/api/v0"
+export const DEFILLAMA_STABLECOINS_API = "https://stablecoins.llama.fi/stablecoins?includePrices=true"
+export const DEFILLAMA_SIGMAUSD_API = "https://api.llama.fi/protocol/sigmausd"
 export const ERGO_WATCH_REVALIDATE_SECONDS = 300
 export const ERGO_WATCH_SAMPLE_BLOCKS = 100
 export const ERGO_WATCH_FETCH_TIMEOUT_MS = 10_000
@@ -21,6 +23,37 @@ export const ERGO_WATCH_FETCH_TIMEOUT_MS = 10_000
 const BLOCKS_PER_EPOCH = 1024
 const TARGET_BLOCK_INTERVAL_SECONDS = 120
 const MAX_SUPPLY_ERG = 97_739_925
+
+type DefiLlamaStablecoinAsset = {
+  name?: string
+  symbol?: string
+  price?: number
+  circulating?: {
+    peggedUSD?: number
+  }
+  chainCirculating?: {
+    Ergo?: {
+      current?: {
+        peggedUSD?: number
+      }
+    }
+  }
+}
+
+type DefiLlamaStablecoinsResponse = {
+  peggedAssets?: DefiLlamaStablecoinAsset[]
+}
+
+type DefiLlamaProtocolResponse = {
+  chain?: string
+  currentChainTvls?: {
+    Ergo?: number
+  }
+  tvl?: Array<{
+    date?: number
+    totalLiquidityUSD?: number
+  }>
+}
 
 function formatNumber(value: number | undefined | null) {
   if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
@@ -39,6 +72,15 @@ function formatCompact(value: number | undefined | null) {
   return new Intl.NumberFormat("en-US", {
     notation: "compact",
     maximumFractionDigits: 2,
+  }).format(value)
+}
+
+function formatUsd(value: number | undefined | null, maximumFractionDigits = 0) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits,
   }).format(value)
 }
 
@@ -117,6 +159,26 @@ async function fetchExplorerV0Json<T>(path: string) {
 
   try {
     const response = await fetch(`${ERGO_EXPLORER_V0_API}${path}`, {
+      headers: { accept: "application/json" },
+      next: { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
+      signal: controller.signal,
+    })
+
+    if (!response.ok) return null
+    return (await response.json()) as T
+  } catch {
+    return null
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
+async function fetchUrlJson<T>(url: string) {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), ERGO_WATCH_FETCH_TIMEOUT_MS)
+
+  try {
+    const response = await fetch(url, {
       headers: { accept: "application/json" },
       next: { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
       signal: controller.signal,
@@ -274,7 +336,7 @@ function getHealthPanels({
       "Source coverage",
       sourceStatus,
       `${sourceReachable}/${sourceTotal}`,
-      "Reachable public Explorer sources used for this snapshot.",
+      "Reachable public runtime sources used for this snapshot.",
     ),
     healthPanel(
       "latest-block",
@@ -337,11 +399,144 @@ function getMiningDistribution(blocks: ExplorerBlock[]): MiningShare[] {
     .slice(0, 8)
 }
 
+function getSigmaUsdSnapshot({
+  stablecoins,
+  protocol,
+}: {
+  stablecoins: DefiLlamaStablecoinsResponse | null
+  protocol: DefiLlamaProtocolResponse | null
+}): ErgoWatchSnapshot["defi"]["sigmaUsd"] {
+  const sigUsdAsset = stablecoins?.peggedAssets?.find((asset) => {
+    const symbol = asset.symbol?.toLowerCase()
+    const name = asset.name?.toLowerCase()
+    return symbol === "sigusd" || name === "sigmausd"
+  })
+  const sigUsdSupply =
+    sigUsdAsset?.chainCirculating?.Ergo?.current?.peggedUSD ??
+    sigUsdAsset?.circulating?.peggedUSD ??
+    null
+  const sigUsdPrice = sigUsdAsset?.price ?? null
+  const reserveValueUsd = protocol?.currentChainTvls?.Ergo ?? null
+  const latestProtocolPoint = protocol?.tvl?.[protocol.tvl.length - 1]
+  const updatedAt =
+    typeof latestProtocolPoint?.date === "number"
+      ? new Date(latestProtocolPoint.date * 1000).toISOString()
+      : null
+  const hasPartialData =
+    typeof sigUsdSupply === "number" ||
+    typeof sigUsdPrice === "number" ||
+    typeof reserveValueUsd === "number"
+
+  return {
+    status: hasPartialData ? "partial" : "unavailable",
+    updatedAt,
+    note:
+      "SigmaUSD exact reserve ratio requires decoding the AgeUSD bank and oracle boxes. Until that source is wired, reserve ratio, SigRSV supply and ERG base reserves stay unavailable instead of being guessed.",
+    metrics: [
+      metric(
+        "sigusd-supply",
+        "SigUSD supply",
+        typeof sigUsdSupply === "number" ? `${formatDecimal(sigUsdSupply, 2)} SigUSD` : "Unavailable",
+        "SigmaUSD circulating amount reported by DefiLlama stablecoin data for Ergo.",
+        "DefiLlama stablecoins",
+        DEFILLAMA_STABLECOINS_API,
+        typeof sigUsdSupply === "number" ? "live" : "unavailable",
+      ),
+      metric(
+        "sigusd-price",
+        "SigUSD price",
+        typeof sigUsdPrice === "number" ? formatUsd(sigUsdPrice, 4) : "Unavailable",
+        "Reported peg price when DefiLlama provides it. This is not an on-chain oracle read.",
+        "DefiLlama stablecoins",
+        DEFILLAMA_STABLECOINS_API,
+        typeof sigUsdPrice === "number" ? "live" : "unavailable",
+      ),
+      metric(
+        "sigusd-reserve-value",
+        "Reserve value",
+        formatUsd(reserveValueUsd, 0),
+        "DefiLlama SigmaUSD protocol TVL on Ergo. ERG base reserves require on-chain bank-box decoding.",
+        "DefiLlama SigmaUSD protocol",
+        DEFILLAMA_SIGMAUSD_API,
+        typeof reserveValueUsd === "number" ? "live" : "unavailable",
+      ),
+      metric(
+        "sigrsv-supply",
+        "SigRSV supply",
+        "Unavailable",
+        "Requires SigmaUSD bank-box state. This page does not infer it from secondary sources.",
+        "SigmaUSD on-chain state",
+        "https://github.com/anon-real/sigma-usd",
+        "unavailable",
+      ),
+      metric(
+        "sigusd-liabilities",
+        "Liabilities",
+        "Unavailable",
+        "Exact liabilities require the same on-chain state used by SigmaUSD/AgeUSD contracts.",
+        "SigmaUSD on-chain state",
+        "https://github.com/anon-real/sigma-usd",
+        "unavailable",
+      ),
+      metric(
+        "sigusd-equity-ratio",
+        "Equity ratio",
+        "Unavailable",
+        "Exact equity or reserve ratio is withheld until bank-box and oracle-box decoding is wired.",
+        "SigmaUSD on-chain state",
+        "https://github.com/anon-real/sigma-usd",
+        "unavailable",
+      ),
+    ],
+  }
+}
+
+function getAgentEconomySnapshot(): ErgoWatchSnapshot["agentEconomy"] {
+  return {
+    status: "prototype",
+    eventStreamStatus: "not_connected",
+    note:
+      "These are honest prototype states, not live counters. They become live after Accord demos emit a timestamped event stream.",
+    metrics: [
+      {
+        id: "agreements",
+        title: "Agreements",
+        value: "Prototype",
+        state: "prototype",
+        description: "Accord Agreement objects exist in the protocol layer; live site counters wait for demo events.",
+      },
+      {
+        id: "verification-receipts",
+        title: "Verification Receipts",
+        value: "Prototype",
+        state: "prototype",
+        description: "Work-verification receipts are planned for x402/MCP/API demos before production metrics.",
+      },
+      {
+        id: "settlement-receipts",
+        title: "Settlement Receipts",
+        value: "Prototype",
+        state: "prototype",
+        description: "Settlement receipts will become live once demo rails publish verifiable settlement events.",
+      },
+      {
+        id: "agent-credit-notes",
+        title: "Agent Credit Notes",
+        value: "Research",
+        state: "research",
+        description: "Bounded, policy-constrained credit Notes remain research until testnet flows are demonstrated.",
+      },
+    ],
+  }
+}
+
 async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
-  const [info, v0Info, blockResponse] = await Promise.all([
+  const [info, v0Info, blockResponse, stablecoins, sigmaUsdProtocol] = await Promise.all([
     fetchExplorerJson<ExplorerInfo>("/info"),
     fetchExplorerV0Json<ExplorerV0Info>("/info"),
     fetchExplorerJson<ExplorerBlocksResponse>(`/blocks?limit=${ERGO_WATCH_SAMPLE_BLOCKS}`),
+    fetchUrlJson<DefiLlamaStablecoinsResponse>(DEFILLAMA_STABLECOINS_API),
+    fetchUrlJson<DefiLlamaProtocolResponse>(DEFILLAMA_SIGMAUSD_API),
   ])
 
   const blocks = blockResponse?.items ?? []
@@ -386,9 +581,22 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       : null
   const circulatingPercent =
     typeof circulatingSupplyErg === "number" ? (circulatingSupplyErg / MAX_SUPPLY_ERG) * 100 : null
+  const sigmaUsd = getSigmaUsdSnapshot({ stablecoins, protocol: sigmaUsdProtocol })
+  const sigmaUsdStablecoinOk = sigmaUsd.metrics.some(
+    (item) => item.id === "sigusd-supply" && item.state !== "unavailable",
+  )
+  const sigmaUsdProtocolOk = sigmaUsd.metrics.some(
+    (item) => item.id === "sigusd-reserve-value" && item.state !== "unavailable",
+  )
   const sourceStatus = {
-    reachable: [info, v0Info, blocks.length ? blockResponse : null].filter(Boolean).length,
-    total: 3,
+    reachable: [
+      info,
+      v0Info,
+      blocks.length ? blockResponse : null,
+      sigmaUsdStablecoinOk ? stablecoins : null,
+      sigmaUsdProtocolOk ? sigmaUsdProtocol : null,
+    ].filter(Boolean).length,
+    total: 5,
   }
   const health = getHealthPanels({
     sourceReachable: sourceStatus.reachable,
@@ -421,6 +629,18 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
         label: "Explorer API v0 / supply",
         href: `${ERGO_EXPLORER_V0_API}/info`,
         ok: Boolean(v0Info),
+      },
+      {
+        id: "defillama-stablecoins",
+        label: "DefiLlama / SigmaUSD supply",
+        href: DEFILLAMA_STABLECOINS_API,
+        ok: sigmaUsdStablecoinOk,
+      },
+      {
+        id: "defillama-sigmausd",
+        label: "DefiLlama / SigmaUSD TVL",
+        href: DEFILLAMA_SIGMAUSD_API,
+        ok: sigmaUsdProtocolOk,
       },
     ],
     chain: {
@@ -596,11 +816,15 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       ),
     ],
     miningDistribution,
+    defi: {
+      sigmaUsd,
+    },
+    agentEconomy: getAgentEconomySnapshot(),
   }
 }
 
 export const getErgoWatchSnapshot = unstable_cache(
   buildErgoWatchSnapshot,
-  ["ergo-watch-snapshot-v1"],
+  ["ergo-watch-snapshot-v2"],
   { revalidate: ERGO_WATCH_REVALIDATE_SECONDS },
 )

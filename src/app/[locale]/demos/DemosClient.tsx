@@ -410,6 +410,69 @@ const communityReserve = new OutputBuilder(
           </div>
         </section>
 
+        <section className="py-12 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="mb-3 text-orange-400 font-mono text-xs uppercase tracking-widest">
+                  Accord demo tracks
+                </p>
+                <h2 className="text-2xl md:text-3xl font-extrabold text-white">
+                  Payment, tools, APIs and credit.
+                </h2>
+              </div>
+              <p className="max-w-xl text-sm leading-relaxed text-neutral-400">
+                These pages describe the runnable flow targets before the live event stream is wired.
+                Mock mode comes first; testnet mode is added only when sources and receipts are reproducible.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {[
+                {
+                  href: "/demos/x402-accord-gateway",
+                  title: "x402 Accord Gateway",
+                  body: "402 challenge, Accord Agreement and receipt bundle.",
+                  icon: Terminal,
+                },
+                {
+                  href: "/demos/mcp-paid-tool",
+                  title: "Paid MCP Tool",
+                  body: "Agent calls a paid tool with policy and receipts.",
+                  icon: Bot,
+                },
+                {
+                  href: "/demos/agent-api-payment",
+                  title: "Agent API Payment",
+                  body: "Paid API call with work verification, not payment-only.",
+                  icon: Coins,
+                },
+                {
+                  href: "/demos/agent-credit-note",
+                  title: "Agent Credit Note",
+                  body: "Bounded credit issued to a sub-agent before settlement.",
+                  icon: CreditCard,
+                },
+              ].map((item) => (
+                <Link key={item.href} href={item.href} className="group block rounded-3xl">
+                  <Card className="h-full bg-black/80 border border-white/8 rounded-3xl transition-all group-hover:-translate-y-0.5 group-hover:border-orange-500/30">
+                    <CardContent className="p-6">
+                      <div className="mb-5 flex items-center gap-4">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
+                          <item.icon className="h-5 w-5 text-orange-400" />
+                        </div>
+                        <ArrowRight className="ml-auto h-4 w-4 text-neutral-600 transition-colors group-hover:text-orange-400" />
+                      </div>
+                      <h3 className="mb-2 font-bold text-white">{item.title}</h3>
+                      <p className="text-sm leading-relaxed text-neutral-400">{item.body}</p>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── 3 Demo Cards ─────────────────────────────────────────────────── */}
         <section className="py-16 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">

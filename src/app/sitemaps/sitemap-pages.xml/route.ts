@@ -49,6 +49,10 @@ export async function GET() {
     { url: '/agent-economy/manifesto', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/agent-economy/vs', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/demos', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/demos/x402-accord-gateway', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/demos/mcp-paid-tool', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/demos/agent-api-payment', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/demos/agent-credit-note', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/agent-payments', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/quickstart', priority: 0.8, changefreq: 'weekly' as const },
     // Legal

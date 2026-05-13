@@ -5,7 +5,6 @@ import {
   Bot,
   Database,
   ExternalLink,
-  GitBranch,
   Landmark,
   Network,
   ShieldCheck,
@@ -180,6 +179,26 @@ function SeriesStatsRow({
   )
 }
 
+function metricStateClass(state: "live" | "derived" | "unavailable" | "prototype" | "research") {
+  if (state === "live") return "border-emerald-500/25 bg-emerald-500/10 text-emerald-300"
+  if (state === "derived") return "border-cyan-500/25 bg-cyan-500/10 text-cyan-300"
+  if (state === "prototype") return "border-orange-500/25 bg-orange-500/10 text-orange-300"
+  if (state === "research") return "border-purple-500/25 bg-purple-500/10 text-purple-300"
+  return "border-white/10 bg-white/5 text-neutral-400"
+}
+
+function formatSourceTime(value: string | null) {
+  if (!value) return "Timestamp unavailable"
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short",
+  }).format(new Date(value))
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -313,6 +332,14 @@ export default async function ErgoWatchPage() {
       icon: ShieldCheck,
     },
   ]
+  const watchSections = [
+    { href: "#network", label: "Network" },
+    { href: "#mining", label: "Mining" },
+    { href: "#emission", label: "Emission" },
+    { href: "#defi", label: "DeFi" },
+    { href: "#agent-economy", label: "Agent Economy" },
+    { href: "#sources", label: "Sources" },
+  ]
 
   return (
     <BackgroundWrapper>
@@ -424,7 +451,23 @@ export default async function ErgoWatchPage() {
           </div>
         </section>
 
-        <section className="pb-20">
+        <section className="sticky top-16 z-30 border-y border-white/8 bg-black/80 backdrop-blur-xl">
+          <div className="mx-auto max-w-7xl overflow-x-auto px-4 sm:px-6 lg:px-8">
+            <nav className="flex min-w-max items-center gap-2 py-3" aria-label="Ergo Watch sections">
+              {watchSections.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-xl border border-white/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-neutral-300 transition-colors hover:border-orange-500/35 hover:bg-orange-500/10 hover:text-orange-300"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </section>
+
+        <section id="network" className="scroll-mt-32 pb-20 pt-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {headlineStats.map((item) => (
@@ -499,10 +542,10 @@ export default async function ErgoWatchPage() {
           </div>
         </section>
 
-        <section className="py-20 bg-neutral-950/40 border-t border-white/5">
+        <section id="mining" className="scroll-mt-32 py-20 bg-neutral-950/40 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-              <Card className="bg-black/80 border border-white/8 rounded-3xl">
+              <Card id="emission" className="scroll-mt-32 bg-black/80 border border-white/8 rounded-3xl">
                 <CardContent className="p-7 md:p-8">
                   <div className="mb-8 flex items-start justify-between gap-6">
                     <div>
@@ -619,76 +662,144 @@ export default async function ErgoWatchPage() {
           </div>
         </section>
 
-        <section className="py-20 border-t border-white/5">
+        <section id="defi" className="scroll-mt-32 py-20 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <p className="mb-3 font-mono text-xs uppercase tracking-widest text-orange-400">
-                Next data layers
-              </p>
-              <h2
-                className="font-extrabold tracking-tight text-white"
-                style={{
-                  fontSize: "clamp(26px, 3.5vw, 46px)",
-                  lineHeight: 1.1,
-                }}
-              >
-                Add only sourced metrics.
-              </h2>
-              <p className="mt-4 max-w-3xl leading-relaxed text-neutral-400">
-                The old ErgoWatch showed broader ecosystem analytics. This replacement will bring
-                them back one by one only when the source is reachable, timestamped and reproducible.
+            <div className="mb-12 grid gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+              <div>
+                <p className="mb-3 font-mono text-xs uppercase tracking-widest text-orange-400">
+                  DeFi / SigmaUSD
+                </p>
+                <h2
+                  className="font-extrabold tracking-tight text-white"
+                  style={{
+                    fontSize: "clamp(26px, 3.5vw, 46px)",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Stablecoin state without fake certainty.
+                </h2>
+              </div>
+              <p className="leading-relaxed text-neutral-400">
+                SigmaUSD data is shown only when a source is reachable and labeled. Exact reserve
+                ratio and SigRSV state require AgeUSD bank/oracle box decoding, so they stay
+                unavailable until the on-chain source is wired.
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-              {[
-                {
-                  title: "SigmaUSD state",
-                  status: "Next",
-                  body: "Reserves, liabilities, equity ratio and stablecoin supply once a reliable source is wired.",
-                  icon: Landmark,
-                },
-                {
-                  title: "DeFi sources",
-                  status: "Planned",
-                  body: "TVL and venue metrics only with explicit source URLs and timestamps.",
-                  icon: BarChart3,
-                },
-                {
-                  title: "Address activity",
-                  status: "Requires index",
-                  body: "Active addresses and address classes require indexed chain data, not Explorer block samples.",
-                  icon: GitBranch,
-                },
-                {
-                  title: "Agent economy",
-                  status: "Prototype",
-                  body: "Accord agreements, verification receipts, settlement receipts and policy events.",
-                  icon: Bot,
-                },
-              ].map((item) => (
-                <Card key={item.title} className="bg-black/80 border border-white/8 rounded-3xl">
-                  <CardContent className="p-6">
-                    <div className="mb-5 flex items-center gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
-                        <item.icon className="h-5 w-5 text-orange-400" />
+            <Card className="bg-black/80 border border-white/8 rounded-3xl">
+              <CardContent className="p-7 md:p-8">
+                <div className="mb-7 flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
+                      <Landmark className="h-6 w-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-extrabold text-white">SigmaUSD state</h3>
+                      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-neutral-400">
+                        {snapshot.defi.sigmaUsd.note}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="shrink-0 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3">
+                    <p className="font-mono text-[10px] uppercase tracking-wider text-neutral-500">
+                      Source timestamp
+                    </p>
+                    <p className="mt-1 font-mono text-xs text-orange-300">
+                      {formatSourceTime(snapshot.defi.sigmaUsd.updatedAt)}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                  {snapshot.defi.sigmaUsd.metrics.map((item) => (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 transition-colors hover:border-orange-500/30"
+                    >
+                      <div className="mb-4 flex items-center justify-between gap-3">
+                        <span
+                          className={`rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${metricStateClass(item.state)}`}
+                        >
+                          {item.state}
+                        </span>
+                        <ExternalLink className="h-3.5 w-3.5 text-orange-400" />
                       </div>
-                      <div>
+                      <p className="font-mono text-xs uppercase tracking-wider text-neutral-500">
+                        {item.title}
+                      </p>
+                      <p className="mt-2 text-2xl font-extrabold text-white">{item.value}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-neutral-400">
+                        {item.description}
+                      </p>
+                    </a>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section id="agent-economy" className="scroll-mt-32 py-20 bg-neutral-950/40 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
+              <Card className="bg-black/80 border border-white/8 rounded-3xl">
+                <CardContent className="p-7 md:p-8">
+                  <div className="mb-7 flex items-start gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
+                      <Bot className="h-6 w-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <p className="mb-2 font-mono text-xs uppercase tracking-widest text-orange-400">
+                        Agent Economy
+                      </p>
+                      <h2 className="text-2xl md:text-3xl font-extrabold text-white">
+                        Prototype metrics, clearly labeled.
+                      </h2>
+                    </div>
+                  </div>
+                  <p className="leading-relaxed text-neutral-400">{snapshot.agentEconomy.note}</p>
+                  <div className="mt-7 flex flex-wrap gap-3">
+                    <Link
+                      href="/demos/x402-accord-gateway"
+                      className="inline-flex items-center gap-2 rounded-xl border border-orange-500/35 bg-orange-500/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-orange-300 transition-colors hover:bg-orange-500/15"
+                    >
+                      x402 gateway demo
+                    </Link>
+                    <Link
+                      href="/demos/agent-credit-note"
+                      className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-neutral-300 transition-colors hover:border-orange-500/35 hover:text-orange-300"
+                    >
+                      Credit Note demo
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {snapshot.agentEconomy.metrics.map((item) => (
+                  <Card key={item.id} className="bg-black/80 border border-white/8 rounded-3xl">
+                    <CardContent className="p-6">
+                      <div className="mb-5 flex items-start justify-between gap-4">
                         <h3 className="font-bold text-white">{item.title}</h3>
-                        <span className="mt-1 inline-flex rounded-full border border-orange-500/25 bg-orange-500/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-orange-300">
-                          {item.status}
+                        <span
+                          className={`rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${metricStateClass(item.state)}`}
+                        >
+                          {item.value}
                         </span>
                       </div>
-                    </div>
-                    <p className="text-sm leading-relaxed text-neutral-400">{item.body}</p>
-                  </CardContent>
-                </Card>
-              ))}
+                      <p className="text-sm leading-relaxed text-neutral-400">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-neutral-950/40 border-t border-white/5">
+        <section id="sources" className="scroll-mt-32 py-20 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Card className="bg-black/80 border border-white/8 rounded-3xl">
               <CardContent className="grid gap-6 p-7 md:p-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
@@ -700,7 +811,7 @@ export default async function ErgoWatchPage() {
                     Runtime data, explicit degradation.
                   </h2>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-3">
+                <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
                   {snapshot.sources.map((source) => (
                     <a
                       key={source.id}

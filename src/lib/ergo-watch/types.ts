@@ -57,6 +57,37 @@ export type ErgoWatchMetric = {
   state: ErgoWatchMetricState
 }
 
+export type ErgoWatchSource = {
+  id: string
+  label: string
+  href: string
+  ok: boolean
+}
+
+export type SigmaUsdSnapshot = {
+  status: "partial" | "unavailable"
+  updatedAt: string | null
+  note: string
+  metrics: ErgoWatchMetric[]
+}
+
+export type AgentEconomyMetricState = "prototype" | "research"
+
+export type AgentEconomyMetric = {
+  id: string
+  title: string
+  value: string
+  state: AgentEconomyMetricState
+  description: string
+}
+
+export type AgentEconomySnapshot = {
+  status: "prototype"
+  eventStreamStatus: "not_connected"
+  note: string
+  metrics: AgentEconomyMetric[]
+}
+
 export type MiningShare = {
   id: string
   label: string
@@ -100,12 +131,7 @@ export type ErgoWatchSnapshot = {
     reachable: number
     total: number
   }
-  sources: Array<{
-    id: string
-    label: string
-    href: string
-    ok: boolean
-  }>
+  sources: ErgoWatchSource[]
   chain: {
     height: number | null
     latestBlockId: string | null
@@ -132,4 +158,8 @@ export type ErgoWatchSnapshot = {
   }
   metrics: ErgoWatchMetric[]
   miningDistribution: MiningShare[]
+  defi: {
+    sigmaUsd: SigmaUsdSnapshot
+  }
+  agentEconomy: AgentEconomySnapshot
 }
