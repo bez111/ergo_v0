@@ -1,8 +1,8 @@
 {
   "minersPage": {
     "hero": {
-      "title": "Mine with GPUs. Profitability depends on difficulty, ERG price and your electricity cost — see calculator below.",
-      "subtitle": "ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.",
+      "title": "Mine ERG with GPUs.",
+      "subtitle": "ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end. Profitability depends on difficulty, ERG price and your electricity cost — check the calculator before buying hardware.",
       "cta": "Start Mining Ergo",
       "checkProfitability": "Check Profitability",
       "whyMine": "Why mine Ergo instead of other coins?"
