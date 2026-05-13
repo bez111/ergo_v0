@@ -20,39 +20,50 @@ import { Card, CardContent } from "@/components/ui/card"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 
 const BASE_URL = "https://www.ergoblockchain.org"
+const ERGO_EXPLORER_API = "https://api.ergoplatform.com/api/v1"
+const BLOCK_INTERVAL_SECONDS = 120
 
-const upstreamMetrics = [
-  {
-    title: "Network parameters",
-    description: "Epoch, proposals, protocol parameters and recent miner vote configuration.",
-    href: "https://ergo.watch/dashboards/network",
-    icon: Network,
-  },
-  {
-    title: "Mining distribution",
-    description: "Hashrate, difficulty, block time and recent miner or pool share.",
-    href: "https://ergo.watch/dashboards/mining",
-    icon: Activity,
-  },
-  {
-    title: "Emission and supply",
-    description: "Circulating supply, current block reward and next reward reduction.",
-    href: "https://ergo.watch/dashboards/emission",
-    icon: BarChart3,
-  },
-  {
-    title: "Address counts",
-    description: "P2PK, contract and reward address counts from indexed chain data.",
-    href: "https://ergo.watch/dashboards/addresses",
-    icon: Database,
-  },
-  {
-    title: "SigmaUSD state",
-    description: "SigUSD, SigRSV, reserves, liabilities, equity, ratio and TVL.",
-    href: "https://ergo.watch/dashboards/sigmausd",
-    icon: Landmark,
-  },
-]
+export const revalidate = 300
+
+type ExplorerInfo = {
+  lastBlockId: string
+  height: number
+  maxBoxGix?: number
+  maxTxGix?: number
+  params?: {
+    height?: number
+    storageFeeFactor?: number
+    minValuePerByte?: number
+    maxBlockSize?: number
+    maxBlockCost?: number
+    blockVersion?: number
+    tokenAccessCost?: number
+    inputCost?: number
+    dataInputCost?: number
+    outputCost?: number
+  }
+}
+
+type ExplorerBlock = {
+  id: string
+  height: number
+  epoch?: number
+  version?: number
+  timestamp?: number
+  transactionsCount?: number
+  miner?: {
+    address?: string
+    name?: string
+  }
+  size?: number
+  difficulty?: number
+  minerReward?: number
+}
+
+type ExplorerBlocksResponse = {
+  items?: ExplorerBlock[]
+  total?: number
+}
 
 const overlayMetrics = [
   {
@@ -87,6 +98,197 @@ const overlayMetrics = [
   },
 ]
 
+function formatNumber(value: number | undefined) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  return new Intl.NumberFormat("en-US").format(value)
+}
+
+function formatCompact(value: number | undefined) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  return new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 2,
+  }).format(value)
+}
+
+function formatBytes(value: number | undefined) {
+  if (typeof value !== "number" || !Number.isFinite(value)) return "Unavailable"
+  if (value < 1024) return `${formatNumber(value)} B`
+  if (value < 1024 * 1024) return `${(value / 1024).toFixed(1)} KB`
+  return `${(value / (1024 * 1024)).toFixed(2)} MB`
+}
+
+function formatErg(nanoErg: number | undefined) {
+  if (typeof nanoErg !== "number" || !Number.isFinite(nanoErg)) return "Unavailable"
+  return `${new Intl.NumberFormat("en-US", {
+    maximumFractionDigits: 4,
+  }).format(nanoErg / 1_000_000_000)} ERG`
+}
+
+function formatAge(timestamp: number | undefined) {
+  if (typeof timestamp !== "number" || !Number.isFinite(timestamp)) return "Timestamp unavailable"
+
+  const seconds = Math.max(0, Math.floor((Date.now() - timestamp) / 1000))
+  if (seconds < 10) return "just now"
+  if (seconds < 60) return `${seconds}s ago`
+
+  const minutes = Math.floor(seconds / 60)
+  if (minutes < 60) return `${minutes}m ago`
+
+  const hours = Math.floor(minutes / 60)
+  if (hours < 48) return `${hours}h ago`
+
+  const days = Math.floor(hours / 24)
+  return `${days}d ago`
+}
+
+function shortHash(value: string | undefined) {
+  if (!value) return "Unavailable"
+  return `${value.slice(0, 10)}...${value.slice(-6)}`
+}
+
+function shortAddress(value: string | undefined) {
+  if (!value) return "Address unavailable"
+  return `${value.slice(0, 8)}...${value.slice(-8)}`
+}
+
+async function fetchExplorerJson<T>(path: string) {
+  try {
+    const response = await fetch(`${ERGO_EXPLORER_API}${path}`, {
+      headers: { accept: "application/json" },
+      next: { revalidate },
+    })
+
+    if (!response.ok) return null
+    return (await response.json()) as T
+  } catch {
+    return null
+  }
+}
+
+async function getDirectChainMetrics() {
+  const [info, blockResponse] = await Promise.all([
+    fetchExplorerJson<ExplorerInfo>("/info"),
+    fetchExplorerJson<ExplorerBlocksResponse>("/blocks?limit=1"),
+  ])
+
+  const latestBlock = blockResponse?.items?.[0]
+  const sourceStatus = [info, latestBlock].filter(Boolean).length
+  const epochProgress =
+    typeof latestBlock?.height === "number"
+      ? `${formatNumber(latestBlock.height % 1024)} / 1,024`
+      : "Unavailable"
+  const estimatedBlocksLeft =
+    typeof latestBlock?.height === "number" ? 1024 - (latestBlock.height % 1024) : undefined
+
+  return {
+    sourceStatus,
+    metrics: [
+      {
+        title: "Block height",
+        value: formatNumber(info?.height ?? latestBlock?.height),
+        description: "Latest indexed mainnet height from the public Ergo Explorer API.",
+        source: "Explorer API / info",
+        href: `${ERGO_EXPLORER_API}/info`,
+        icon: Network,
+      },
+      {
+        title: "Latest block",
+        value: shortHash(latestBlock?.id ?? info?.lastBlockId),
+        description: latestBlock?.timestamp
+          ? `Observed ${formatAge(latestBlock.timestamp)}.`
+          : "Latest block hash from Explorer API.",
+        source: "Explorer API / blocks",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: Database,
+      },
+      {
+        title: "Epoch",
+        value: formatNumber(latestBlock?.epoch),
+        description: `Epoch progress: ${epochProgress}.`,
+        source: "Latest block",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: TimerReset,
+      },
+      {
+        title: "Epoch blocks left",
+        value: formatNumber(estimatedBlocksLeft),
+        description: `Approximate remaining blocks at ${BLOCK_INTERVAL_SECONDS}s target spacing.`,
+        source: "Derived from height",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: TimerReset,
+      },
+      {
+        title: "Latest block txs",
+        value: formatNumber(latestBlock?.transactionsCount),
+        description: "Transaction count in the most recent block returned by Explorer API.",
+        source: "Latest block",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: Activity,
+      },
+      {
+        title: "Difficulty",
+        value: formatCompact(latestBlock?.difficulty),
+        description: "Mining difficulty reported on the latest indexed block.",
+        source: "Latest block",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: BarChart3,
+      },
+      {
+        title: "Miner reward",
+        value: formatErg(latestBlock?.minerReward),
+        description: "Current reward emitted by the latest block sample.",
+        source: "Latest block",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: Landmark,
+      },
+      {
+        title: "Latest miner",
+        value: latestBlock?.miner?.name || "Unknown",
+        description: shortAddress(latestBlock?.miner?.address),
+        source: "Latest block",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: Activity,
+      },
+      {
+        title: "Block size",
+        value: formatBytes(latestBlock?.size),
+        description: "Serialized size of the latest indexed block sample.",
+        source: "Latest block",
+        href: `${ERGO_EXPLORER_API}/blocks?limit=1`,
+        icon: Database,
+      },
+      {
+        title: "Max block size",
+        value: formatBytes(info?.params?.maxBlockSize),
+        description: "Current protocol parameter from Explorer API network info.",
+        source: "Explorer API / info",
+        href: `${ERGO_EXPLORER_API}/info`,
+        icon: Network,
+      },
+      {
+        title: "Min value per byte",
+        value:
+          typeof info?.params?.minValuePerByte === "number"
+            ? `${formatNumber(info.params.minValuePerByte)} nanoERG`
+            : "Unavailable",
+        description: "Minimum box value density from current protocol parameters.",
+        source: "Explorer API / info",
+        href: `${ERGO_EXPLORER_API}/info`,
+        icon: ShieldCheck,
+      },
+      {
+        title: "Storage fee factor",
+        value: formatNumber(info?.params?.storageFeeFactor),
+        description: "Storage rent parameter exposed by the public chain info endpoint.",
+        source: "Explorer API / info",
+        href: `${ERGO_EXPLORER_API}/info`,
+        icon: BarChart3,
+      },
+    ],
+  }
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -95,14 +297,14 @@ export async function generateMetadata({
   const { locale } = await params
 
   return {
-    title: "Agent Economy Metrics | ErgoWatch-powered Network Data + Accord Overlay",
+    title: "Agent Economy Metrics | Direct Ergo Chain Data + Accord Overlay",
     description:
-      "A testnet-first metrics layer for the Ergo Agent Economy: ErgoWatch upstream dashboards for network data plus future Accord agreement, verification, settlement and agent-credit metrics.",
+      "A testnet-first metrics layer for the Ergo Agent Economy: direct public Ergo Explorer API data plus future Accord agreement, verification, settlement and agent-credit metrics.",
     alternates: getAlternates("/agent-economy/metrics", locale),
     openGraph: {
       title: "Agent Economy Metrics on Ergo",
       description:
-        "ErgoWatch powers network visibility. Accord adds agreement, verification, settlement and agent-credit metrics without replacing upstream analytics.",
+        "Direct Ergo chain data plus agreement, verification, settlement and agent-credit metrics for the agent economy.",
       url: getCanonicalUrl("/agent-economy/metrics", locale),
       siteName: "Ergo Blockchain",
       images: [
@@ -120,13 +322,15 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: "Agent Economy Metrics on Ergo",
       description:
-        "ErgoWatch-powered chain visibility plus a testnet-first Accord metrics overlay.",
+        "Direct Ergo chain visibility plus a testnet-first Accord metrics overlay.",
       images: [`${BASE_URL}/og/agent-economy.png`],
     },
   }
 }
 
-export default function AgentEconomyMetricsPage() {
+export default async function AgentEconomyMetricsPage() {
+  const { metrics, sourceStatus } = await getDirectChainMetrics()
+
   return (
     <BackgroundWrapper>
       <main className="min-h-screen text-white">
@@ -153,11 +357,10 @@ export default function AgentEconomyMetricsPage() {
                 className="font-extrabold tracking-tight mb-6 text-white"
                 style={{
                   fontSize: "clamp(36px, 5.5vw, 72px)",
-                  letterSpacing: "-0.025em",
                   lineHeight: 1,
                 }}
               >
-                ErgoWatch data.
+                Direct Ergo chain data.
                 <br />
                 <span className="text-orange-400">Agent metrics overlay.</span>
               </h1>
@@ -170,20 +373,20 @@ export default function AgentEconomyMetricsPage() {
                   maxWidth: "62ch",
                 }}
               >
-                ErgoWatch already tracks the chain. This page is the new-design surface for
-                ergowatch.ergoblockchain.org and defines the missing agent-economy layer: agreements,
-                verification receipts, settlement receipts, policy events and bounded credit instruments.
-                No copied ErgoWatch frontend. No fake live numbers.
+                This is the new-design surface for ergowatch.ergoblockchain.org. It connects
+                directly to public Ergo Explorer API endpoints for chain state, then adds the
+                missing agent-economy layer: agreements, verification receipts, settlement receipts,
+                policy events and bounded credit instruments. No copied frontend. No fake live numbers.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://ergo.watch"
+                  href={`${ERGO_EXPLORER_API}/info`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
                 >
-                  <span>Open ErgoWatch</span>
+                  <span>Open chain API</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
                 <Link
@@ -199,65 +402,63 @@ export default function AgentEconomyMetricsPage() {
 
         <section className="py-20 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-14 items-start">
-              <div>
-                <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
-                  Upstream first
-                </p>
-                <h2
-                  className="font-extrabold tracking-tight text-white mb-6"
-                  style={{
-                    fontSize: "clamp(26px, 3.5vw, 44px)",
-                    letterSpacing: "-0.02em",
-                    lineHeight: 1.1,
-                  }}
-                >
-                  We do not replace ErgoWatch.
-                </h2>
-                <p className="text-neutral-400 leading-relaxed mb-6" style={{ maxWidth: "56ch" }}>
-                  The ErgoWatch backend is MIT licensed and indexes Ergo chain data into PostgreSQL from
-                  a synced Ergo node. Its frontend repository does not currently expose a license, so this
-                  page uses original UI and links to ErgoWatch as the upstream analytics source.
-                </p>
-                <div className="rounded-3xl border border-orange-500/20 bg-orange-500/10 p-5">
-                  <p className="text-white font-semibold leading-relaxed">
-                    Rule: ErgoWatch for network truth. Accord for agent workflow truth. The website
-                    connects both without pretending prototypes are production metrics.
-                  </p>
-                </div>
-              </div>
+            <div className="mb-14">
+              <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+                Direct chain data
+              </p>
+              <h2
+                className="font-extrabold tracking-tight text-white"
+                style={{
+                  fontSize: "clamp(26px, 3.5vw, 44px)",
+                  lineHeight: 1.1,
+                }}
+              >
+                Our own chain visibility layer.
+              </h2>
+              <p className="text-neutral-400 mt-4 max-w-3xl leading-relaxed">
+                Values are read server-side from public Ergo Explorer API endpoints and cached for five
+                minutes. If a source is unreachable, the metric shows Unavailable instead of inventing a
+                number or sending visitors to a dead upstream dashboard.
+              </p>
+              <p className="mt-4 font-mono text-xs uppercase tracking-wider text-orange-300">
+                Sources reachable: {sourceStatus}/2 · {sourceStatus === 2 ? "live/cached" : "partial data"}
+              </p>
+            </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                {upstreamMetrics.map((metric) => (
-                  <a
-                    key={metric.title}
-                    href={metric.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-3xl"
-                  >
-                    <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
-                      <CardContent className="p-6">
-                        <div className="mb-4 flex items-center gap-4">
-                          <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex shrink-0 items-center justify-center group-hover:bg-orange-500/20 group-hover:border-orange-500/40 transition-all">
-                            <metric.icon className="w-5 h-5 text-orange-400" />
-                          </div>
-                          <h3 className="font-bold text-white text-base group-hover:text-orange-100 transition-colors">
-                            {metric.title}
-                          </h3>
-                        </div>
-                        <p className="text-neutral-400 text-sm leading-relaxed group-hover:text-neutral-300 transition-colors">
-                          {metric.description}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {metrics.map((metric) => (
+                <Card
+                  key={metric.title}
+                  className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/35 transition-all duration-300"
+                >
+                  <CardContent className="p-6">
+                    <div className="mb-4 flex items-center gap-4">
+                      <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex shrink-0 items-center justify-center">
+                        <metric.icon className="w-5 h-5 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-white text-base">{metric.title}</h3>
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-orange-400/80">
+                          {metric.source}
                         </p>
-                        <div className="mt-4 flex items-center gap-1 text-orange-500/70 group-hover:text-orange-400 transition-colors text-xs font-mono">
-                          <span>View upstream</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </a>
-                ))}
-              </div>
+                      </div>
+                    </div>
+                    <div className="mb-3 text-3xl font-extrabold tracking-tight text-white">
+                      {metric.value}
+                    </div>
+                    <p className="text-neutral-400 text-sm leading-relaxed">{metric.description}</p>
+                    <a
+                      href={metric.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1 text-orange-500/70 hover:text-orange-400 transition-colors text-xs font-mono"
+                    >
+                      <span>Source</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -272,11 +473,10 @@ export default function AgentEconomyMetricsPage() {
                 className="font-extrabold tracking-tight text-white"
                 style={{
                   fontSize: "clamp(26px, 3.5vw, 44px)",
-                  letterSpacing: "-0.02em",
                   lineHeight: 1.1,
                 }}
               >
-                What ErgoWatch does not count yet.
+                What ordinary chain analytics do not count yet.
               </h2>
               <p className="text-neutral-400 mt-4 max-w-2xl leading-relaxed">
                 These are the metrics that make agent commerce different from ordinary chain analytics.
@@ -318,7 +518,7 @@ export default function AgentEconomyMetricsPage() {
                 {
                   label: "1",
                   title: "Chain state",
-                  body: "Blocks, mining, emission, address and contract state come from existing Ergo analytics sources such as ErgoWatch.",
+                  body: "Blocks, miner rewards, difficulty and protocol parameters come directly from public Ergo chain APIs.",
                 },
                 {
                   label: "2",
