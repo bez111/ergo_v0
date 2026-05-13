@@ -21,6 +21,7 @@ import {
   ERGO_EXPLORER_API,
   getErgoWatchSnapshot,
 } from "@/lib/ergo-watch/snapshot"
+import type { ErgoWatchHealthStatus, ErgoWatchSeriesPoint } from "@/lib/ergo-watch/types"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 
 const BASE_URL = "https://www.ergoblockchain.org"
@@ -107,6 +108,80 @@ function metricStateLabel(state: "live" | "derived" | "unavailable") {
   if (state === "live") return "Live"
   if (state === "derived") return "Derived"
   return "Unavailable"
+}
+
+function healthStatusLabel(status: ErgoWatchHealthStatus) {
+  if (status === "ok") return "OK"
+  if (status === "watch") return "Watch"
+  if (status === "stale") return "Stale"
+  return "Unavailable"
+}
+
+function healthStatusClass(status: ErgoWatchHealthStatus) {
+  if (status === "ok") return "border-emerald-500/25 bg-emerald-500/10 text-emerald-300"
+  if (status === "watch") return "border-orange-500/25 bg-orange-500/10 text-orange-300"
+  if (status === "stale") return "border-red-500/25 bg-red-500/10 text-red-300"
+  return "border-white/10 bg-white/5 text-neutral-400"
+}
+
+function formatSeriesValue(value: number, mode: "seconds" | "integer" | "compact") {
+  if (mode === "seconds") return `${formatNumber(value)}s`
+  if (mode === "compact") {
+    return new Intl.NumberFormat("en-US", {
+      notation: "compact",
+      maximumFractionDigits: 2,
+    }).format(value)
+  }
+
+  return formatNumber(value)
+}
+
+function MiniBarChart({
+  points,
+  mode,
+}: {
+  points: ErgoWatchSeriesPoint[]
+  mode: "seconds" | "integer" | "compact"
+}) {
+  if (!points.length) {
+    return (
+      <div className="flex h-28 items-center justify-center rounded-2xl border border-white/8 bg-white/[0.03] text-sm text-neutral-500">
+        Unavailable
+      </div>
+    )
+  }
+
+  const values = points.map((point) => point.value)
+  const min = Math.min(...values)
+  const max = Math.max(...values)
+  const range = Math.max(1, max - min)
+  const latest = points[points.length - 1]
+
+  return (
+    <div>
+      <div className="mb-4 flex h-28 items-end gap-1 rounded-2xl border border-white/8 bg-white/[0.03] p-3">
+        {points.map((point) => {
+          const height = 12 + ((point.value - min) / range) * 88
+
+          return (
+            <div
+              key={`${point.height}-${point.value}`}
+              className="flex-1 rounded-t bg-orange-500/75"
+              style={{ height: `${height}%` }}
+              title={`#${point.height}: ${formatSeriesValue(point.value, mode)}`}
+            />
+          )
+        })}
+      </div>
+      <div className="flex items-center justify-between gap-4 font-mono text-xs text-neutral-500">
+        <span>#{points[0]?.height}</span>
+        <span className="text-orange-300">
+          Latest: {latest ? formatSeriesValue(latest.value, mode) : "Unavailable"}
+        </span>
+        <span>#{latest?.height}</span>
+      </div>
+    </div>
+  )
 }
 
 export async function generateMetadata({
@@ -256,6 +331,25 @@ export default async function AgentEconomyMetricsPage() {
               </p>
             </div>
 
+            <div className="mb-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {snapshot.health.map((item) => (
+                <Card key={item.id} className="bg-black/80 border border-white/8 rounded-3xl">
+                  <CardContent className="p-5">
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <p className="font-bold text-white">{item.title}</p>
+                      <span
+                        className={`rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${healthStatusClass(item.status)}`}
+                      >
+                        {healthStatusLabel(item.status)}
+                      </span>
+                    </div>
+                    <div className="mb-2 text-2xl font-extrabold text-white">{item.value}</div>
+                    <p className="text-sm leading-relaxed text-neutral-400">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {snapshot.metrics.map((metric) => {
                 const Icon =
@@ -295,6 +389,69 @@ export default async function AgentEconomyMetricsPage() {
                   </Card>
                 )
               })}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-14">
+              <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+                Sample charts
+              </p>
+              <h2
+                className="font-extrabold tracking-tight text-white"
+                style={{
+                  fontSize: "clamp(26px, 3.5vw, 44px)",
+                  lineHeight: 1.1,
+                }}
+              >
+                Last blocks as visible trend lines.
+              </h2>
+              <p className="text-neutral-400 mt-4 max-w-3xl leading-relaxed">
+                These charts are derived from the same cached block sample as the JSON snapshot.
+                They show recent movement without pretending to be a full historical indexer.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-5">
+              {[
+                {
+                  title: "Block time",
+                  body: "Observed seconds between adjacent recent blocks.",
+                  points: snapshot.series.blockTimeSeconds,
+                  mode: "seconds" as const,
+                },
+                {
+                  title: "Transactions per block",
+                  body: "Transaction count per sampled recent block.",
+                  points: snapshot.series.transactions,
+                  mode: "integer" as const,
+                },
+                {
+                  title: "Difficulty",
+                  body: "Difficulty reported on each sampled block.",
+                  points: snapshot.series.difficulty,
+                  mode: "compact" as const,
+                },
+              ].map((chart) => (
+                <Card key={chart.title} className="bg-black/80 border border-white/8 rounded-3xl">
+                  <CardContent className="p-7">
+                    <div className="mb-6 flex items-start justify-between gap-4">
+                      <div>
+                        <p className="font-mono text-xs uppercase tracking-wider text-orange-400 mb-2">
+                          {chart.title}
+                        </p>
+                        <p className="text-sm leading-relaxed text-neutral-400">{chart.body}</p>
+                      </div>
+                      <div className="hidden sm:flex h-11 w-11 items-center justify-center rounded-2xl border border-orange-500/20 bg-orange-500/10">
+                        <BarChart3 className="h-5 w-5 text-orange-400" />
+                      </div>
+                    </div>
+                    <MiniBarChart points={chart.points} mode={chart.mode} />
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

@@ -1,7 +1,9 @@
 import { unstable_cache } from "next/cache"
 import type {
+  ErgoWatchHealthPanel,
   ErgoWatchMetric,
   ErgoWatchSnapshot,
+  ErgoWatchSeriesPoint,
   ExplorerBlocksResponse,
   ExplorerBlock,
   ExplorerInfo,
@@ -72,6 +74,11 @@ function formatAge(timestamp: number | undefined | null) {
   return `${days}d ago`
 }
 
+function getAgeSeconds(timestamp: number | undefined | null) {
+  if (typeof timestamp !== "number" || !Number.isFinite(timestamp)) return null
+  return Math.max(0, Math.floor((Date.now() - timestamp) / 1000))
+}
+
 function shortHash(value: string | undefined | null) {
   if (!value) return "Unavailable"
   return `${value.slice(0, 10)}...${value.slice(-6)}`
@@ -139,6 +146,113 @@ function getAverageBlockTimeSeconds(blocks: ExplorerBlock[]) {
   return Math.round(deltas.reduce((sum, delta) => sum + delta, 0) / deltas.length)
 }
 
+function getBlockTimeSeries(blocks: ExplorerBlock[]): ErgoWatchSeriesPoint[] {
+  return blocks
+    .slice(0, -1)
+    .map((block, index) => {
+      const nextBlock = blocks[index + 1]
+      const value =
+        typeof block.timestamp === "number" && typeof nextBlock.timestamp === "number"
+          ? Math.round((block.timestamp - nextBlock.timestamp) / 1000)
+          : null
+
+      if (value === null || value <= 0 || value > 60 * 60) return null
+      return { height: block.height, value }
+    })
+    .filter((point): point is ErgoWatchSeriesPoint => Boolean(point))
+    .slice(0, 48)
+    .reverse()
+}
+
+function getNumericSeries(
+  blocks: ExplorerBlock[],
+  selector: (block: ExplorerBlock) => number | undefined,
+): ErgoWatchSeriesPoint[] {
+  return blocks
+    .map((block) => {
+      const value = selector(block)
+      if (typeof value !== "number" || !Number.isFinite(value)) return null
+      return { height: block.height, value }
+    })
+    .filter((point): point is ErgoWatchSeriesPoint => Boolean(point))
+    .slice(0, 48)
+    .reverse()
+}
+
+function healthPanel(
+  id: string,
+  title: string,
+  status: ErgoWatchHealthPanel["status"],
+  value: string,
+  description: string,
+): ErgoWatchHealthPanel {
+  return { id, title, status, value, description }
+}
+
+function getHealthPanels({
+  sourceReachable,
+  sourceTotal,
+  latestBlockAgeSeconds,
+  avgBlockTimeSeconds,
+  topMinerShare,
+}: {
+  sourceReachable: number
+  sourceTotal: number
+  latestBlockAgeSeconds: number | null
+  avgBlockTimeSeconds: number | null
+  topMinerShare: number | null
+}): ErgoWatchHealthPanel[] {
+  const sourceStatus =
+    sourceReachable === sourceTotal ? "ok" : sourceReachable === 0 ? "unavailable" : "watch"
+  const latestStatus =
+    latestBlockAgeSeconds === null
+      ? "unavailable"
+      : latestBlockAgeSeconds <= 15 * 60
+        ? "ok"
+        : latestBlockAgeSeconds <= 60 * 60
+          ? "watch"
+          : "stale"
+  const blockTimeStatus =
+    avgBlockTimeSeconds === null
+      ? "unavailable"
+      : avgBlockTimeSeconds >= 60 && avgBlockTimeSeconds <= 240
+        ? "ok"
+        : "watch"
+  const minerStatus =
+    topMinerShare === null ? "unavailable" : topMinerShare < 40 ? "ok" : "watch"
+
+  return [
+    healthPanel(
+      "sources",
+      "Source coverage",
+      sourceStatus,
+      `${sourceReachable}/${sourceTotal}`,
+      "Reachable public Explorer sources used for this snapshot.",
+    ),
+    healthPanel(
+      "latest-block",
+      "Latest block freshness",
+      latestStatus,
+      latestBlockAgeSeconds === null ? "Unavailable" : formatAge(Date.now() - latestBlockAgeSeconds * 1000),
+      "Freshness of the latest block visible through Explorer API.",
+    ),
+    healthPanel(
+      "block-time",
+      "Block time sample",
+      blockTimeStatus,
+      avgBlockTimeSeconds === null ? "Unavailable" : `${formatNumber(avgBlockTimeSeconds)}s`,
+      "Average observed interval across the sampled recent blocks.",
+    ),
+    healthPanel(
+      "miner-concentration",
+      "Top miner share",
+      minerStatus,
+      topMinerShare === null ? "Unavailable" : `${formatDecimal(topMinerShare, 1)}%`,
+      "Share of sampled blocks mined by the leading observed miner.",
+    ),
+  ]
+}
+
 function getMiningDistribution(blocks: ExplorerBlock[]): MiningShare[] {
   const miners = new Map<string, MiningShare>()
 
@@ -187,9 +301,15 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
   const latestBlock = blocks[0]
   const latestHeight = info?.height ?? latestBlock?.height ?? null
   const latestBlockId = latestBlock?.id ?? info?.lastBlockId ?? null
+  const latestBlockAgeSeconds = getAgeSeconds(latestBlock?.timestamp)
   const avgBlockTimeSeconds = getAverageBlockTimeSeconds(blocks)
   const miningDistribution = getMiningDistribution(blocks)
   const topMinerShare = miningDistribution[0]?.share ?? null
+  const series = {
+    blockTimeSeconds: getBlockTimeSeries(blocks),
+    difficulty: getNumericSeries(blocks, (block) => block.difficulty),
+    transactions: getNumericSeries(blocks, (block) => block.transactionsCount),
+  }
   const epochProgress =
     typeof latestHeight === "number" ? `${formatNumber(latestHeight % BLOCKS_PER_EPOCH)} / ${formatNumber(BLOCKS_PER_EPOCH)}` : "Unavailable"
   const epochBlocksLeft =
@@ -218,6 +338,13 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
     reachable: [info, v0Info, blocks.length ? blockResponse : null].filter(Boolean).length,
     total: 3,
   }
+  const health = getHealthPanels({
+    sourceReachable: sourceStatus.reachable,
+    sourceTotal: sourceStatus.total,
+    latestBlockAgeSeconds,
+    avgBlockTimeSeconds,
+    topMinerShare,
+  })
 
   return {
     generatedAt: new Date().toISOString(),
@@ -257,6 +384,8 @@ async function buildErgoWatchSnapshot(): Promise<ErgoWatchSnapshot> {
       remainingEmissionErg,
       circulatingPercent,
     },
+    health,
+    series,
     metrics: [
       metric(
         "circulating-supply",

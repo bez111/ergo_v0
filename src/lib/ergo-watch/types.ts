@@ -66,6 +66,21 @@ export type MiningShare = {
   rewardErg: number
 }
 
+export type ErgoWatchSeriesPoint = {
+  height: number
+  value: number
+}
+
+export type ErgoWatchHealthStatus = "ok" | "watch" | "stale" | "unavailable"
+
+export type ErgoWatchHealthPanel = {
+  id: string
+  title: string
+  status: ErgoWatchHealthStatus
+  value: string
+  description: string
+}
+
 export type ErgoWatchSnapshot = {
   generatedAt: string
   cacheSeconds: number
@@ -92,6 +107,12 @@ export type ErgoWatchSnapshot = {
     maxSupplyErg: number
     remainingEmissionErg: number | null
     circulatingPercent: number | null
+  }
+  health: ErgoWatchHealthPanel[]
+  series: {
+    blockTimeSeconds: ErgoWatchSeriesPoint[]
+    difficulty: ErgoWatchSeriesPoint[]
+    transactions: ErgoWatchSeriesPoint[]
   }
   metrics: ErgoWatchMetric[]
   miningDistribution: MiningShare[]
