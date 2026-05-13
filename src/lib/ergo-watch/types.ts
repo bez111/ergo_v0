@@ -1,0 +1,85 @@
+export type ExplorerInfo = {
+  lastBlockId: string
+  height: number
+  maxBoxGix?: number
+  maxTxGix?: number
+  params?: {
+    height?: number
+    storageFeeFactor?: number
+    minValuePerByte?: number
+    maxBlockSize?: number
+    maxBlockCost?: number
+    blockVersion?: number
+    tokenAccessCost?: number
+    inputCost?: number
+    dataInputCost?: number
+    outputCost?: number
+  }
+}
+
+export type ExplorerBlock = {
+  id: string
+  height: number
+  epoch?: number
+  version?: number
+  timestamp?: number
+  transactionsCount?: number
+  miner?: {
+    address?: string
+    name?: string
+  }
+  size?: number
+  difficulty?: number
+  minerReward?: number
+}
+
+export type ExplorerBlocksResponse = {
+  items?: ExplorerBlock[]
+  total?: number
+}
+
+export type ErgoWatchMetricState = "live" | "derived" | "unavailable"
+
+export type ErgoWatchMetric = {
+  id: string
+  title: string
+  value: string
+  description: string
+  source: string
+  href: string
+  state: ErgoWatchMetricState
+}
+
+export type MiningShare = {
+  id: string
+  label: string
+  address: string | null
+  blocks: number
+  share: number
+  rewardErg: number
+}
+
+export type ErgoWatchSnapshot = {
+  generatedAt: string
+  cacheSeconds: number
+  sampleSize: number
+  sourceStatus: {
+    reachable: number
+    total: number
+  }
+  sources: Array<{
+    id: string
+    label: string
+    href: string
+    ok: boolean
+  }>
+  chain: {
+    height: number | null
+    latestBlockId: string | null
+    latestBlockAge: string
+    avgBlockTimeSeconds: number | null
+    topMinerShare: number | null
+  }
+  metrics: ErgoWatchMetric[]
+  miningDistribution: MiningShare[]
+}
