@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
+import { ScopedMessagesProvider } from "@/components/i18n/scoped-messages-provider"
+import type { Locale } from "@/i18n/request"
 import { getAlternates, getCanonicalUrl } from "@/lib/seo"
 
 interface Props {
@@ -26,6 +28,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function TechnologyLayout({ children }: { children: React.ReactNode }) {
-  return children
+export default async function TechnologyLayout({ children, params }: Props) {
+  const { locale } = await params
+  return (
+    <ScopedMessagesProvider locale={locale as Locale} files={['technology']}>
+      {children}
+    </ScopedMessagesProvider>
+  )
 }

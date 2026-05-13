@@ -1,12 +1,13 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getMessages } from 'next-intl/server'
 import { QuestionPageClient } from './QuestionPageClient'
 import { getQuestionBySlug, getRelatedQuestions, getAllQuestionSlugs, type QuestionEntry } from '@/data/questions'
 import { type QuestionsTranslations } from '@/data/questions-i18n'
 import { siteConfig } from '@/config/site-config'
 import { createBreadcrumbSchema, createFAQSchema, createHowToSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { getScopedMessages } from '@/lib/messages'
+import type { Locale } from '@/i18n/request'
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let question = baseQuestion
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { questionsData?: QuestionsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { questionsData?: QuestionsTranslations }
       question = applyTranslation(baseQuestion, messages?.questionsData)
     } catch {
       // Fallback to English if translations fail
@@ -90,7 +91,7 @@ export default async function QuestionPage({ params }: Props) {
   let translations: QuestionsTranslations | undefined
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { questionsData?: QuestionsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { questionsData?: QuestionsTranslations }
       translations = messages?.questionsData
       question = applyTranslation(baseQuestion, translations)
     } catch {

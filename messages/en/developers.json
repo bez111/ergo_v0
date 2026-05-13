@@ -399,7 +399,7 @@
     "agentEconomy": {
       "badge": "Agent Economy",
       "title": "Building for autonomous agents?",
-      "description": "Ergo is the only settlement layer with programmable credit, acceptance predicates, and verifiable reserves built in — everything agents need beyond basic payments.",
+      "description": "Ergo is a strong reference settlement rail for programmable credit, acceptance predicates, and verifiable reserve-style flows — the layer agents need beyond basic payments.",
       "items": [
         {
           "title": "Agent Economy",
@@ -412,8 +412,8 @@
           "tag": "Architecture"
         },
         {
-          "title": "Live Demos",
-          "description": "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",
+          "title": "Testnet Demos",
+          "description": "Reference flows on Ergo testnet: API call payment, credit system, community reserve.",
           "tag": "Testnet"
         }
       ]

@@ -12,7 +12,9 @@ import { LiveNetworkStats } from "@/components/home/live-network-stats"
 import { FAQSchema } from "@/components/seo/faq-schema"
 import { ERGProductSchema } from "@/components/seo/erg-product-schema"
 import { PerformanceOptimizations } from "@/components/seo/performance-optimizations"
+import { ScopedMessagesProvider } from "@/components/i18n/scoped-messages-provider"
 import { siteConfig } from '@/config/site-config';
+import type { Locale } from '@/i18n/request';
 
 // Lazy-load below-the-fold components for better LCP
 const BuildForScale = dynamic(() => import("@/components/home/build-for-scale").then(mod => mod.BuildForScale), {
@@ -140,6 +142,7 @@ export default async function HomePage({ params }: HomePageProps) {
       {/* ERG cryptocurrency schema (Product + FinancialProduct) */}
       <ERGProductSchema />
 
+      <ScopedMessagesProvider locale={locale as Locale} files={['home', 'manifesto']}>
       <main className="min-h-screen bg-black text-white relative overflow-hidden">
         {/* 
           SOLANA-INSPIRED STRUCTURE + ERGO CYPHERPUNK STYLE
@@ -184,6 +187,7 @@ export default async function HomePage({ params }: HomePageProps) {
         </BackgroundWrapper>
         
       </main>
+      </ScopedMessagesProvider>
     </>
   );
 }

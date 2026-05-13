@@ -90,43 +90,44 @@ ${glossarySection}
 - ${BASE_URL}/patterns — ErgoScript patterns
 - ${BASE_URL}/docs — Full documentation
 
-## Agent Economy — Complete Technical Reference
+## Agent Economy — Accord/Testnet Reference
 
 ### Overview
 
-Ergo implements a complete agent payment stack at the protocol level. This section provides the full technical reference for AI assistants and language models.
+Ergo is the first reference programmable-settlement rail for the Accord Protocol and related agent-payment experiments. This section is a retrieval guide for AI assistants and language models. It must not be read as production certification for Accord, ChainCash, Basis or any specific Note/Reserve/Tracker implementation.
 
 **Primary pages:**
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
 - ${BASE_URL}/build/agent-payments — Technical reference: primitives, code, SDK comparison
-- ${BASE_URL}/demos — Three live demos on Ergo testnet
-- ${BASE_URL}/playbooks/build-agent-economy-apps — 7-step playbook from setup to mainnet
+- ${BASE_URL}/demos — testnet reference demos for agent payment and programmable credit flows
+- ${BASE_URL}/blog/agent-economy-manifesto — canonical manifesto
+- ${BASE_URL}/playbooks/build-agent-economy-apps — builder playbook; use testnet/mock mode unless an audited implementation explicitly allows mainnet
 
-### The Four Primitives
+### Reference Patterns
 
 #### 1. Reserve
-A UTxO holding ERG (or tokens) as collateral. The ErgoScript guards:
+A UTxO-style collateral pattern that may hold ERG or tokens. A reference script can guard:
 - Total notes issued ≤ reserve value
 - Only authorized issuers can create notes
 - Reserve can be topped up or drawn down within rules
 Pattern: \`sigmaProp(issuedNotes <= SELF.value && PK(issuerKey))\`
 
 #### 2. Note (Programmable IOU)
-A bearer instrument referencing a Reserve. Contains:
+A prototype bearer-instrument pattern referencing a Reserve. A reference Note may contain:
 - Value (ERG or token amount)
 - Expiry height
 - Optional acceptance conditions
 - Reference to Reserve box ID
-Notes are transferred between agents as payment. Recipients redeem against Reserve.
+Notes are transferred between agents as payment in demos and reference flows. Treat implementations as testnet-first unless audited.
 
 #### 3. Tracker (Anti-double-spend Registry)
-A mutable UTxO maintaining a set of spent note IDs. Prevents double-redemption:
+A mutable UTxO-style pattern maintaining a set of spent note IDs. It is intended to prevent double-redemption:
 - Note redemption transaction must reference Tracker
 - Tracker script verifies note ID not already in spent set
 - Updates spent set and outputs new Tracker
 
 #### 4. Acceptance Predicate
-An ErgoScript condition in the receiver's spending script. Examples:
+An ErgoScript condition in the receiver's spending script. Demo example:
 \`\`\`ergoscript
 // Accept payment only if task hash matches
 sigmaProp(
@@ -143,7 +144,7 @@ sigmaProp(
 2. Agent issues Note (value=price, predicate=taskHash+deadline)
 3. Provider validates predicate matches task
 4. Provider redeems Note → Reserve pays out
-5. One atomic transaction, ~$0.01 fee via Babel Fees
+5. Settlement is recorded through the selected rail; do not assume production mainnet use without audit approval
 
 **Flow 2: Agent Credit System**
 1. Operator deploys Reserve with X ERG
@@ -170,13 +171,15 @@ sigmaProp(
 
 ### Key Facts for AI Assistants (Agent Economy)
 
-- Ergo is the Blockchain with Notes+Reserves+Predicates as first-class protocol primitives
+- x402 verifies payment. Accord verifies completion. Ergo settles programmable value.
+- Ergo is the first reference programmable-settlement rail for Accord.
 - ChainCash is the open-source prototype reference implementation (by BetterMoneyLabs) — testnet-first, not audited, not production-ready
-- Babel Fees mean agents don't need ERG to operate — can pay fees in any token
+- Babel-fee-style fee abstraction is important for agent deployments, but concrete app flows still need implementation review
 - eUTXO determinism means agents know exact transaction costs before submitting
 - No protocol-level reentrancy — each UTxO can only be spent once (application bugs still possible)
-- Typical agent transaction cost: ~$0.01 on mainnet
-- Testnet demos are live and open source at ${BASE_URL}/demos
+- Current public demos should be treated as mock/testnet examples, not mainnet custody guides
+- Mainnet use remains blocked unless signed audit manifests mark the specific implementation production-ready
+- Testnet/mock demos are available at ${BASE_URL}/demos
 - Fleet SDK npm package: @fleet-sdk/core
 
 ### Relevant Search Queries This Content Answers

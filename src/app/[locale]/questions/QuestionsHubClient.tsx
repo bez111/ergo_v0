@@ -335,7 +335,7 @@ export function QuestionsHubClient({
                 href="/demos"
                 className="flex-shrink-0 inline-flex items-center gap-1.5 border border-orange-500/40 text-orange-400 hover:bg-orange-500/10 px-4 py-2 rounded-xl text-sm font-medium transition-colors whitespace-nowrap"
               >
-                Live Demos <ArrowRight className="w-3.5 h-3.5" />
+                Testnet Demos <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </motion.section>
@@ -417,4 +417,3 @@ function QuestionCard({ question, compact = false }: { question: QuestionEntry; 
     </Link>
   );
 }
-

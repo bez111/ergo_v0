@@ -453,7 +453,7 @@ export default function ErgoScriptPage() {
                           },
                           {
                                   title: "Extensive Examples",
-                                  description: "Learn from production-ready contract templates",
+                                  description: "Learn from reviewed examples and reusable contract templates",
                                   icon: Puzzle,
                           },
                         ].map((feature) => (

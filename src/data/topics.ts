@@ -538,42 +538,42 @@ export const topics: TopicHub[] = [
   {
     slug: "agent-economy",
     title: "Agent Economy on Ergo",
-    subtitle: "The Base Layer for Autonomous Agent Payments",
-    seoTitle: "Agent Economy on Ergo — AI Agent Payments, Notes & Reserves",
-    seoDescription: "Ergo combines all four agent payment primitives at the protocol level: Reserve, Note, Tracker, and Acceptance Predicate. No identity, no gas bootstrapping, no governance kill switch.",
+    subtitle: "Programmable settlement for autonomous agent work",
+    seoTitle: "Agent Economy on Ergo — Accord, Receipts & Programmable Settlement",
+    seoDescription: "Accord models agent work agreements, verification receipts, settlement receipts and wallet policy, with Ergo as the first reference programmable-settlement rail.",
     keywords: ["agent economy", "AI agent payments", "autonomous agent blockchain", "ergo agent payments", "note reserve tracker", "acceptance predicate", "ChainCash", "Fleet SDK", "machine-to-machine payments", "programmable IOU"],
 
-    heroStatement: "Every AI system will need to pay and be paid. Ergo already has the primitives.",
+    heroStatement: "Agents need more than payment: they need agreements, verification, settlement records and spending policy.",
 
-    introduction: "Autonomous AI agents are a fundamentally new kind of economic actor. They transact at machine speed, without persistent identity, at micropayment scale ($0.001 per API call), with conditional acceptance logic that no human-centric payment rail supports. Stripe requires KYC. Lightning requires persistent channels. Ethereum has non-deterministic gas and mandatory ETH pre-funding. Ergo is designed to satisfy the requirements agents have — at the protocol level, with no application-layer workarounds.",
+    introduction: "Autonomous AI agents are a new kind of economic actor. They need to request paid work, prove or authorize payment, verify completion, record settlement and stay inside explicit spending policies. Accord explores this workflow with Ergo as the first reference programmable-settlement rail.",
 
-    whatMakesUnique: "Ergo's agent payment stack consists of four composable UTxO primitives: Reserve (collateral backing), Note (programmable bearer IOU), Tracker (anti-double-spend registry), and Acceptance Predicate (on-chain task completion condition). These aren't features bolted on for AI — they're protocol properties that emerge from eUTXO's deterministic execution, ErgoScript's expressive power, and Babel Fees' gas abstraction. ChainCash is an open-source prototype reference implementation of this stack — not audited and not production-ready.",
+    whatMakesUnique: "Ergo's eUTXO model, ErgoScript, native tokens and Babel-fee-style fee abstraction make it a strong settlement rail for agent workflows. Note/Reserve/Tracker and Acceptance Predicate flows are reference patterns and prototypes unless a specific implementation is audited and explicitly marked production-ready.",
 
     keyDifferentiators: [
-      "Notes: programmable bearer IOUs transferable between agents without issuer round-trips",
-      "Acceptance Predicates: task completion logic enforced on-chain by miners, not your server",
-      "Babel Fees: agents pay fees in any token — zero ERG bootstrapping required",
-      "Deterministic eUTXO: agents know exact costs before submitting — no gas surprises",
-      "PoW: no validator multisig that can freeze agent infrastructure"
+      "Accord Agreements: explicit work terms for autonomous agents",
+      "Verification Receipts: machine-readable proof that work was accepted or rejected",
+      "Settlement Receipts: a durable record of how payment settled",
+      "Agent Wallet Policy: spending caps, allowlists and approval thresholds",
+      "Ergo rail: deterministic eUTXO settlement and expressive ErgoScript"
     ],
 
     sections: [
-      { id: "primitives", title: "The Four Primitives", description: "Reserve, Note, Tracker, Acceptance Predicate" },
-      { id: "why-ergo", title: "Why Ergo", description: "What makes Ergo uniquely suited for agent commerce" },
+      { id: "accord", title: "Accord", description: "Agreement, verification and settlement receipt flow" },
+      { id: "why-ergo", title: "Why Ergo", description: "Why Ergo is the first programmable settlement rail" },
       { id: "build", title: "Build", description: "SDKs, quickstart, examples" },
-      { id: "reference", title: "Reference Implementation", description: "ChainCash — open-source prototype, testnet-first" }
+      { id: "reference", title: "Reference Patterns", description: "Note/Reserve/Tracker prototypes and safety posture" }
     ],
 
     startHere: [
-      { type: "blog", title: "Q2 2026: What Shipped in the Stack", url: "/blog/ergo-agent-economy-q2-2026", description: "Latest update: SDK v0.2, 4 AI framework adapters, 10 working examples, Python + MCP packages", badge: "New", priority: 1 },
-      { type: "blog", title: "Agent Economy Manifesto", url: "/blog/agent-economy-manifesto", description: "Why every AI agent will need to pay and be paid — and why Ergo already has the primitives", badge: "Start Here", priority: 1 },
-      { type: "technology", title: "Agent Payments Architecture", url: "/build/agent-payments", description: "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference", badge: "Architecture", priority: 1 },
+      { type: "blog", title: "Agent Economy Manifesto", url: "/blog/agent-economy-manifesto", description: "Why agent commerce needs agreement, verification, policy and programmable settlement", badge: "Start Here", priority: 1 },
+      { type: "blog", title: "Q2 2026: What Shipped in the Stack", url: "/blog/ergo-agent-economy-q2-2026", description: "Accord Protocol, testnet demos, SDK packages and audit-gated mainnet roadmap", badge: "Update", priority: 1 },
+      { type: "technology", title: "Agent Payments Architecture", url: "/build/agent-payments", description: "Accord flow, receipts, policy and Note/Reserve reference patterns", badge: "Architecture", priority: 1 },
       { type: "compare", title: "Ergo vs ETH vs SOL for Agents", url: "/agent-economy/vs", description: "10-criteria comparison across chains for agent-specific requirements", badge: "Comparison", priority: 1 }
     ],
 
     buildWithIt: [
       { type: "doc", title: "10-Minute Quickstart", url: "/build/quickstart", description: "First agent payment on Ergo testnet in under 10 minutes", badge: "Quickstart", priority: 1 },
-      { type: "playbook", title: "7-Step Agent Economy Playbook", url: "/playbooks/build-agent-economy-apps", description: "From environment setup to mainnet deployment", badge: "Playbook", priority: 1 },
+      { type: "playbook", title: "7-Step Agent Economy Playbook", url: "/playbooks/build-agent-economy-apps", description: "From local setup to testnet demos and audit-gated release planning", badge: "Playbook", priority: 1 },
       { type: "doc", title: "GitHub: Accord Protocol", url: "https://github.com/accord-protocol/accord-protocol", description: "Open source examples: basic payment, Note IOU, acceptance predicate", badge: "Code", priority: 1 },
       { type: "doc", title: "Live Testnet Demos", url: "/demos", description: "Working agent payment flows — address lookup, live stats", badge: "Demo", priority: 2 }
     ],
@@ -635,4 +635,3 @@ export const topicCategories = topics.map(t => ({
   icon: t.icon,
   color: t.color
 }));
-

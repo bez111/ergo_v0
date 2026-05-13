@@ -6,7 +6,7 @@ meta_description: "A manifesto for the agent economy: why autonomous AI will nee
 excerpt: "Autonomous agents will not merely need payment rails. They will need programmable money — bounded credit, machine-readable terms, work verification and verifiable settlement. This is the agent economy thesis."
 author: "Ergo Platform"
 date_published: "2026-02-12"
-date_modified: "2026-05-11"
+date_modified: "2026-05-13"
 tags: ["Agent Economy", "AI agents", "programmable money", "manifesto", "Ergo"]
 target_keywords: ["agent economy manifesto", "AI agents programmable money", "autonomous agent payments", "programmable settlement", "agentic commerce"]
 ---
@@ -84,6 +84,39 @@ Agents are different. They may be temporary processes. They may act under delega
 This does not make traditional systems useless. They will remain important wherever a human authorizes a purchase. But the deeper layer is **autonomous work settlement**: an agent pays another agent or service for a task, and the system itself verifies whether the task was completed.
 
 That layer cannot be a wrapper around a card network. It has to be money with logic inside it.
+
+## Verifiable workflows are table stakes. Programmable credit is the unlock.
+
+A verifiable workflow answers one question:
+
+> Did the work happen?
+
+That matters. Without verification, autonomous payments become blind transfers. Agents need receipts, task hashes, acceptance predicates and settlement proofs.
+
+But verification alone does not create an economy.
+
+The larger unlock comes when agents can issue bounded, programmable credit to each other.
+
+A parent agent should be able to give a sub-agent a budget without handing over a private key. A data provider should be able to accept a redeemable Note instead of requiring immediate settlement. A compute market should be able to price work in small task-conditioned claims. A verifier should be able to release settlement only when the work matches the agreement.
+
+That is the difference between agent payments and an agent economy.
+
+Payments move value.
+
+Verification proves work.
+
+Credit creates economic agency.
+
+On Ergo, this can be expressed through Reserve, Note, Tracker and Acceptance Predicate patterns:
+
+- a Reserve backs the credit;
+- a Note carries the claim;
+- a Tracker prevents double-redemption or records accounting state;
+- an Acceptance Predicate binds redemption to verified work.
+
+This does not mean agents can print unlimited money. Agent-issued credit must be bounded, auditable, policy-constrained and redeemable under explicit rules. The point is not arbitrary credit creation. The point is programmable credit issuance with transparent settlement constraints.
+
+That is where autonomous agents become economic actors instead of payment clients.
 
 ## The four programmable primitives
 

@@ -207,7 +207,7 @@ const STATUS_ITEMS = [
   { tKey: "fleetSdk" as const, status: "live", url: "https://fleet-sdk.github.io/docs/" },
   { tKey: "appKit" as const, status: "live", url: "https://github.com/ergoplatform/ergo-appkit" },
   { tKey: "sigmaRust" as const, status: "live", url: "https://github.com/ergoplatform/sigma-rust" },
-  { tKey: "chainCash" as const, status: "live", url: "https://github.com/kushti/chaincash" },
+  { tKey: "chainCash" as const, status: "open", url: "https://github.com/kushti/chaincash" },
   { tKey: "ergoNodeApi" as const, status: "live", url: "https://api.ergoplatform.com/api/v1/docs/" },
   { tKey: "starterRepo" as const, status: "soon", url: "#" },
   { tKey: "identityLayer" as const, status: "open", url: "#" },
@@ -502,45 +502,42 @@ export function AgentPaymentsClient() {
                   viewport={{ once: true }}
                   variants={fadeUp}
                 >
-                  <a
-                    href={tool.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 rounded-3xl"
-                  >
-                    <Card className="h-full bg-black/80 border border-white/8 rounded-3xl group-hover:border-orange-500/40 group-hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between mb-3">
-                          <div>
-                            <p className="font-bold text-white text-base">{tool.name}</p>
-                            <p className="text-orange-400/70 font-mono text-xs">{tool.lang}</p>
-                          </div>
-                          {tool.recommended && (
-                            <span className="text-xs font-mono text-orange-400 border border-orange-500/30 bg-orange-500/10 rounded-full px-2 py-0.5">
-                              {t('sdks.recommended')}
-                            </span>
-                          )}
+                  <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/40 hover:-translate-y-0.5 transition-all duration-300">
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-3">
+                        <div>
+                          <p className="font-bold text-white text-base">{tool.name}</p>
+                          <p className="text-orange-400/70 font-mono text-xs">{tool.lang}</p>
                         </div>
-                        <p className="text-neutral-400 text-sm leading-relaxed mb-4">{t(`sdks.${tool.tKey}.desc`)}</p>
-                        <div className="flex items-center gap-3">
-                          <span className="inline-flex items-center gap-1 text-neutral-500 group-hover:text-orange-400 font-mono text-xs transition-colors">
-                            <span>{t('sdks.docs')}</span>
-                            <ExternalLink className="w-3 h-3" />
+                        {tool.recommended && (
+                          <span className="text-xs font-mono text-orange-400 border border-orange-500/30 bg-orange-500/10 rounded-full px-2 py-0.5">
+                            {t('sdks.recommended')}
                           </span>
-                          <a
-                            href={tool.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-1 text-neutral-500 hover:text-white font-mono text-xs transition-colors"
-                          >
-                            <Github className="w-3 h-3" />
-                            <span>GitHub</span>
-                          </a>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </a>
+                        )}
+                      </div>
+                      <p className="text-neutral-400 text-sm leading-relaxed mb-4">{t(`sdks.${tool.tKey}.desc`)}</p>
+                      <div className="flex items-center gap-3">
+                        <a
+                          href={tool.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-neutral-500 hover:text-orange-400 font-mono text-xs transition-colors"
+                        >
+                          <span>{t('sdks.docs')}</span>
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                        <a
+                          href={tool.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-neutral-500 hover:text-white font-mono text-xs transition-colors"
+                        >
+                          <Github className="w-3 h-3" />
+                          <span>GitHub</span>
+                        </a>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               ))}
             </div>

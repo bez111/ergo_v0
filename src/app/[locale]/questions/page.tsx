@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
-import { getMessages, getTranslations } from 'next-intl/server'
 import { QuestionsHubClient } from './QuestionsHubClient'
 import { questions, questionCategories, questionPersonas, type QuestionEntry } from '@/data/questions'
 import { type QuestionsTranslations } from '@/data/questions-i18n'
 import { siteConfig } from '@/config/site-config'
+import { getScopedMessages, getTranslations } from '@/lib/messages'
+import type { Locale } from '@/i18n/request'
 import {
   createBreadcrumbSchema,
   createFAQSchema,
@@ -34,7 +35,8 @@ function applyTranslations(qs: QuestionEntry[], translations?: QuestionsTranslat
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'questionsPage.seo' })
+  const messages = await getScopedMessages(locale as Locale, ['content-hubs'])
+  const t = getTranslations(messages, 'questionsPage.seo')
 
   const title = t('title')
   const description = t('description')
@@ -66,7 +68,7 @@ export default async function QuestionsPage({ params }: Props) {
   let localizedQuestions = questions
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { questionsData?: QuestionsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { questionsData?: QuestionsTranslations }
       localizedQuestions = applyTranslations(questions, messages?.questionsData)
     } catch {
       // Fallback to English if translations fail

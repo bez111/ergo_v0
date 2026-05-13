@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { getMessages } from 'next-intl/server'
 import { PatternPageClient } from "./PatternPageClient"
 import { devPatterns, getPatternBySlug, categoryLabels, type DevPattern } from "@/data/dev-patterns"
 import { getLocalizedPatterns, type PatternsTranslations } from "@/data/patterns-i18n"
 import { siteConfig } from "@/config/site-config"
 import { createBreadcrumbSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { getScopedMessages } from "@/lib/messages"
+import type { Locale } from "@/i18n/request"
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let pattern: DevPattern | undefined
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { patternsData?: PatternsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs', 'patterns']) as { patternsData?: PatternsTranslations }
       pattern = getLocalizedPatternBySlug(slug, messages?.patternsData)
     } catch {
       pattern = getPatternBySlug(slug)
@@ -70,7 +71,7 @@ export default async function PatternPage({ params }: Props) {
   let translations: PatternsTranslations | undefined
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { patternsData?: PatternsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs', 'patterns']) as { patternsData?: PatternsTranslations }
       translations = messages?.patternsData
       pattern = getLocalizedPatternBySlug(slug, translations)
     } catch {

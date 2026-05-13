@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getMessages } from 'next-intl/server'
 import { TopicPageClient } from './TopicPageClient'
 import { getTopicBySlug, getAllTopicSlugs, getRelatedTopics, type TopicHub, type TopicResource } from '@/data/topics'
 import { type TopicsTranslations } from '@/data/topics-i18n'
@@ -9,6 +8,8 @@ import { type TopicsTranslations } from '@/data/topics-i18n'
 import { siteConfig } from '@/config/site-config'
 import { createBreadcrumbSchema, createTechArticleSchema, getAlternates } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { getScopedMessages } from '@/lib/messages'
+import type { Locale } from '@/i18n/request'
 
 // Enhanced visual with image data
 export interface EnhancedVisual extends TopicResource {
@@ -72,7 +73,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let topic = baseTopic
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { topicsData?: TopicsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { topicsData?: TopicsTranslations }
       topic = applyTranslation(baseTopic, messages?.topicsData)
     } catch {
       // Fallback to English if translations fail
@@ -118,7 +119,7 @@ export default async function TopicPage({ params }: Props) {
   let translations: TopicsTranslations | undefined
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { topicsData?: TopicsTranslations }
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { topicsData?: TopicsTranslations }
       translations = messages?.topicsData
       topic = applyTranslation(baseTopic, translations)
     } catch {

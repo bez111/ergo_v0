@@ -4,7 +4,7 @@
       "badge": "Working Demos",
       "title": "Working flows,",
       "titleHighlight": "not mockups.",
-      "description": "Two composable flows live on Ergo testnet, plus one upcoming. Each live demo includes the contract logic, Fleet SDK code, and the exact steps to reproduce.",
+      "description": "Agent payments are the first step. The deeper demo path is programmable credit: bounded Notes, policy limits, work verification and settlement receipts on Ergo testnet.",
       "ctaTestnet": "Get testnet ERG",
       "ctaArchitecture": "Architecture"
     },
@@ -18,7 +18,7 @@
     },
     "demoItems": {
       "apiCall": {
-        "statusLabel": "Live on testnet",
+        "statusLabel": "Testnet reference flow",
         "title": "Agent buys API call",
         "tagline": "One call. One proof. No persistent account.",
         "description": "An autonomous agent creates a note, sends it to an API provider. The provider validates the acceptance predicate on-chain and delivers the response. No API keys, no billing accounts, no Stripe.",
@@ -37,18 +37,18 @@
         }
       },
       "credit": {
-        "statusLabel": "Live on testnet",
-        "title": "Agent pays on credit",
-        "tagline": "Reserve deployed. Notes issued. Tracker monitors.",
-        "description": "A reserve is deployed with collateral. Notes are issued against it up to a credit limit. An agent spends notes over time. The tracker monitors total usage. When the threshold is reached, the reserve auto-settles.",
+        "statusLabel": "Testnet reference flow",
+        "title": "Agent issues credit to sub-agent",
+        "tagline": "Reserve deployed. Bounded Notes issued. Tracker monitors.",
+        "description": "A parent agent creates a policy-constrained budget without handing over a private key. Notes are issued against a reserve, spent by a sub-agent, verified by task rules, and redeemed only under explicit settlement constraints.",
         "flow": [
           "Reserve contract deployed with 10 ERG + 100 ERG credit limit",
-          "Notes issued against reserve (up to limit)",
-          "Agent transfers notes to providers as payment",
+          "Bounded Notes issued against reserve (up to limit)",
+          "Sub-agent transfers Notes to providers as task-conditioned credit",
           "Tracker updates cumulative balance on-chain",
-          "Auto-settlement when balance threshold hit"
+          "Redemption happens only after verification rules are satisfied"
         ],
-        "why": "Credit is fundamental to economic efficiency. This implements it without a bank — just contracts and cryptographic proofs.",
+        "why": "Verifiable workflows make payment trustworthy. Programmable credit lets agents coordinate future work before final settlement.",
         "links": {
           "chaincashPaper": "ChainCash paper",
           "architecture": "Architecture",
@@ -144,7 +144,7 @@
       "errorNetwork": "Could not reach testnet API. Check your network connection."
     },
     "lookup": {
-      "badge": "Live on mainnet",
+      "badge": "Mainnet data",
       "title": "Address balance lookup",
       "description": "Query any Ergo address balance live from the blockchain. Real data, real network.",
       "placeholder": "9hHDQb26AjnJ...  (paste any Ergo address)",

@@ -12,9 +12,9 @@ export async function generateMetadata({
   const { locale } = await params
 
   return {
-    title: "Ergo — The Agentic Blockchain | Agent Economy: Notes, Credit & Programmable Trust",
+    title: "Ergo Agent Economy | Accord, Receipts & Programmable Settlement",
     description:
-      "Ergo is the agentic blockchain: the base layer for autonomous AI agents that need to pay, receive, and settle without human intermediaries. eUTXO + ErgoScript + Babel Fees = a uniquely complete stack.",
+      "Ergo is the first reference programmable-settlement rail for Accord: agreements, verification receipts, settlement receipts, wallet policy and testnet-first agent-payment demos.",
     keywords: [
       // Agentic blockchain — PRIMARY cluster
       "agentic blockchain",
@@ -64,9 +64,9 @@ export async function generateMetadata({
     ],
     alternates: getAlternates("/agent-economy", locale),
     openGraph: {
-      title: "Ergo — The Agentic Blockchain | Agent Economy",
+      title: "Ergo Agent Economy | Accord, Receipts & Programmable Settlement",
       description:
-        "Ergo is the agentic blockchain: eUTXO + ErgoScript acceptance predicates + Babel Fees — the only settlement layer where autonomous AI agents can pay, receive, and settle without human intermediaries.",
+        "Accord verifies completion. Ergo settles programmable value. Explore the testnet-first agent-economy architecture, demos and safety posture.",
       url: getCanonicalUrl("/agent-economy", locale),
       siteName: "Ergo Blockchain",
       images: [
@@ -84,7 +84,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: "Agent Economy on Ergo",
       description:
-        "Notes · Credit · Trust Rules · Settlement — the open stack for autonomous agent commerce.",
+        "Agreements · Verification Receipts · Settlement Receipts · Wallet Policy — testnet-first agent commerce on Ergo.",
       images: [`${BASE_URL}/og/agent-economy.png`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
@@ -106,8 +106,8 @@ const agentEconomySchema = {
     {
       "@type": "SoftwareApplication",
       "@id": `${BASE_URL}/agent-economy#software`,
-      "name": "Ergo Agent Economy Stack",
-      "description": "Open-source protocol stack for autonomous AI agent payments on Ergo — the agentic blockchain. Includes programmable notes (IOUs), reserve contracts, trackers, and ErgoScript acceptance predicates.",
+      "name": "Ergo Agent Economy",
+      "description": "Testnet-first agent-economy architecture for Accord on Ergo. It covers work agreements, verification receipts, settlement receipts, wallet policy and prototype Note/Reserve/Tracker patterns.",
       "applicationCategory": "BlockchainApplication",
       "applicationSubCategory": "Agentic Blockchain Infrastructure",
       "keywords": "agentic blockchain, blockchain for AI agents, autonomous agent payments, ergo agentic blockchain, eUTXO AI agents",
@@ -119,10 +119,11 @@ const agentEconomySchema = {
         "description": "Open source, free to use"
       },
       "featureList": [
-        "Programmable Notes (bearer IOUs)",
-        "Reserve Contracts (verifiable backing)",
-        "Acceptance Predicates (ErgoScript conditions)",
-        "Anti-double-spend Trackers",
+        "Accord Agreements",
+        "Verification Receipts",
+        "Settlement Receipts",
+        "Agent Wallet Policy",
+        "Prototype Note/Reserve/Tracker patterns",
         "Babel Fees (pay with any token)",
         "Composable multi-agent flows"
       ],
@@ -139,7 +140,7 @@ const agentEconomySchema = {
           "name": "What is the agent economy on Ergo?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The agent economy on Ergo refers to the infrastructure enabling autonomous AI agents and software to make, receive, and settle payments without human intermediaries. Ergo provides four on-chain primitives: Reserve (backing collateral), Note (programmable IOU), Tracker (anti-double-spend), and Acceptance Predicate (ErgoScript condition for accepting payment)."
+            "text": "The agent economy on Ergo refers to a testnet-first architecture for autonomous software that needs agreements, payment authorization, work verification, settlement records and spending policy. Ergo is the first reference programmable-settlement rail for Accord because eUTXO and ErgoScript fit deterministic settlement flows."
           }
         },
         {
@@ -147,7 +148,7 @@ const agentEconomySchema = {
           "name": "How do AI agents pay each other on blockchain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "On Ergo, AI agents use Notes (bearer instruments) backed by Reserves. An agent issues a Note to pay for a service; the service provider redeems it against the Reserve. Acceptance Predicates in ErgoScript allow agents to specify conditions: 'accept payment only if task hash matches and deadline hasn't passed.' No bank account or identity required."
+            "text": "Current demos model an agent agreement, a payment proof or authorization, a work result, a verification receipt and a settlement receipt. Note/Reserve/Tracker flows are reference patterns and prototypes unless a specific implementation is audited and explicitly marked production-ready."
           }
         },
         {
@@ -155,7 +156,7 @@ const agentEconomySchema = {
           "name": "Why can't AI agents use Stripe or PayPal?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Stripe and PayPal require identity verification, credit history, and legal entities. Autonomous agents have none of these. They also charge percentage fees incompatible with microtransactions, and lack programmable acceptance conditions. Ergo's agent stack requires no identity, supports $0.001 micropayments via Babel Fees, and allows fully programmable acceptance logic."
+            "text": "Stripe and PayPal are designed for human or business accounts, not ephemeral software agents. Accord explores how agents can combine agreement records, payment proofs, verification receipts and settlement receipts without presenting the current demos as production mainnet payment infrastructure."
           }
         },
         {
@@ -163,7 +164,7 @@ const agentEconomySchema = {
           "name": "What is ChainCash?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ChainCash is the reference implementation of Ergo's agent payment stack built by BetterMoneyLabs. It implements Notes and Reserves on Ergo mainnet, enabling programmable bearer instruments backed by ERG or other tokens. Open source, active R&D — no production release yet."
+            "text": "ChainCash is an open-source prototype and research implementation of Note/Reserve-style patterns built by BetterMoneyLabs. It should be treated as testnet-first and not production-ready unless a specific deployment is audited and explicitly marked production-ready."
           }
         },
         {
@@ -179,8 +180,8 @@ const agentEconomySchema = {
     {
       "@type": "TechArticle",
       "@id": `${BASE_URL}/agent-economy#article`,
-      "headline": "Agent Economy on Ergo — The Complete Stack",
-      "description": "How Ergo's eUTXO model, ErgoScript, and Babel Fees combine to form the world's most complete autonomous agent payment infrastructure.",
+      "headline": "Agent Economy on Ergo — Accord and Programmable Settlement",
+      "description": "How Accord uses agreements, verification receipts, settlement receipts and wallet policy with Ergo as the first reference programmable-settlement rail.",
       "about": [
         { "@type": "Thing", "name": "Autonomous Agent Payments" },
         { "@type": "Thing", "name": "AI Agent Economy" },

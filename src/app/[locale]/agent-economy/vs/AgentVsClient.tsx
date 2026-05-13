@@ -14,7 +14,6 @@ import {
   Zap,
   Code2,
   Coins,
-  AlertTriangle,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -167,13 +166,6 @@ const CRITERIA: CriterionRow[] = [
     cardano: "partial",
     cardanoNote: "IOHK/Emurgo/CF have significant governance power. Less decentralized than Ergo.",
   },
-]
-
-const CHAIN_HEADERS = [
-  { key: "ergo", label: "Ergo", color: "orange", highlight: true },
-  { key: "ethereum", label: "Ethereum", color: "blue" },
-  { key: "solana", label: "Solana", color: "purple" },
-  { key: "cardano", label: "Cardano", color: "green" },
 ]
 
 // ── Score icons ──────────────────────────────────────────────────────────────

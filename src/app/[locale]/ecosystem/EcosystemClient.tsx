@@ -526,14 +526,14 @@ export default function EcosystemClient() {
                 </div>
                 <div>
                   <p className="font-semibold text-white text-sm mb-0.5">Building an agent-native dApp?</p>
-                  <p className="text-neutral-400 text-sm">Ergo's agent economy stack — notes, reserves, acceptance predicates — is open to build on. See live demos running on testnet.</p>
+                  <p className="text-neutral-400 text-sm">Ergo's agent economy stack — notes, reserves, acceptance predicates — is open to build on. See testnet reference demos.</p>
                 </div>
               </div>
               <Link
                 href="/demos"
                 className="flex-shrink-0 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-semibold px-5 py-2.5 rounded-xl transition-colors text-sm whitespace-nowrap"
               >
-                Live Demos <ArrowRight className="w-4 h-4" />
+                Testnet Demos <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -548,4 +548,4 @@ export default function EcosystemClient() {
       </BackgroundWrapper>
     </main>
   )
-} 
+}

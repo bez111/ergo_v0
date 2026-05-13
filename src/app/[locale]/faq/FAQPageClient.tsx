@@ -374,7 +374,7 @@ export default function FAQPageClient({
                 </div>
                 <div>
                   <p className="font-semibold text-white text-sm mb-0.5">Questions about autonomous agent payments?</p>
-                  <p className="text-neutral-400 text-sm">See how Ergo's Notes, Reserves, and Acceptance Predicates work together — with working demos on testnet.</p>
+                  <p className="text-neutral-400 text-sm">See how Ergo&apos;s Notes, Reserves, and Acceptance Predicates work together — with working demos on testnet.</p>
                 </div>
               </div>
               <Link
@@ -398,4 +398,3 @@ export default function FAQPageClient({
     </BackgroundWrapper>
   )
 }
-

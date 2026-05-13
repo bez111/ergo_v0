@@ -397,9 +397,9 @@ export default function RoadmapPage() {
             </p>
             <p className="text-sm text-gray-500 max-w-2xl mx-auto mt-4">
               Live status, audit posture and last-verified date for each project live in the canonical{" "}
-              <a href="/ecosystem" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+              <Link href="/ecosystem" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
                 ecosystem registry
-              </a>{" "}
+              </Link>{" "}
               — that&apos;s the single source of truth. The summary cards below
               are kept brief so they don&apos;t drift out of sync.
             </p>
@@ -600,12 +600,12 @@ export default function RoadmapPage() {
               For up-to-date project counts, statuses and last-verified dates,
               browse the canonical ecosystem registry.
             </p>
-            <a
+            <Link
               href="/ecosystem"
               className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-semibold underline underline-offset-2"
             >
               See full ecosystem registry →
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -1546,4 +1546,4 @@ function Layer2Content() {
       </section>
     </div>
   );
-} 
+}

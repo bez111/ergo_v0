@@ -2,15 +2,13 @@
 import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n/request';
-import { getMessages, getTranslations } from '@/lib/messages';
+import { getClientMessages, getTranslations } from '@/lib/messages';
 import { ThemeProvider } from "@/components/theme-provider";
 import { ErrorBoundary } from "@/components/error-boundary";
 import HreflangTags from "@/components/seo/hreflang-tags";
 import { NextIntlClientProvider } from 'next-intl';
-import { createOrganizationSchema, createWebSiteSchema } from "@/lib/seo/schemas";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { siteConfig } from "@/config/site-config";
 
 
@@ -26,7 +24,7 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
     notFound();
   }
 
-  const messages = await getMessages(locale as Locale);
+  const messages = await getClientMessages(locale as Locale);
   const t = getTranslations(messages, 'seo');
   const localeConfig = getLocaleConfig(locale);
 
@@ -109,7 +107,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     notFound();
   }
 
-  const messages = await getMessages(locale as Locale);
+  const messages = await getClientMessages(locale as Locale);
   const localeConfig = getLocaleConfig(locale);
   const isRtl = isRtlLocale(locale);
 
@@ -128,13 +126,6 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           __html: `(function(){var d=document.documentElement;d.lang=${JSON.stringify(localeConfig.hreflang)};d.dir=${JSON.stringify(isRtl ? "rtl" : "ltr")};})();`,
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify([createOrganizationSchema(), createWebSiteSchema()])
-        }}
-      />
-      <GoogleAnalytics />
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeProvider
           attribute="class"
@@ -158,4 +149,4 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       </NextIntlClientProvider>
     </>
   );
-} 
+}

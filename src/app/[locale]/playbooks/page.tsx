@@ -1,10 +1,11 @@
 import { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
 import { playbooks, playbookClusters } from "@/data/playbooks"
 import { PlaybooksHubClient } from "./PlaybooksHubClient"
 import { siteConfig } from "@/config/site-config"
 import { createBreadcrumbSchema, createCollectionSchema, getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { getScopedMessages, getTranslations } from "@/lib/messages"
+import type { Locale } from "@/i18n/request"
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -15,7 +16,8 @@ const url = `${origin}/playbooks`
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'playbooksPage.seo' })
+  const messages = await getScopedMessages(locale as Locale, ['content-hubs'])
+  const t = getTranslations(messages, 'playbooksPage.seo')
 
   const title = t('title')
   const description = t('description')
@@ -44,7 +46,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PlaybooksPage({ params }: Props) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'playbooksPage.seo' })
+  const messages = await getScopedMessages(locale as Locale, ['content-hubs'])
+  const t = getTranslations(messages, 'playbooksPage.seo')
   
   // ItemList schema for playbooks (complex, kept structured)
   const itemListSchema = {

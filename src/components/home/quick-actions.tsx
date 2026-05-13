@@ -71,7 +71,7 @@ export function QuickActions() {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
-          {actions.map((action, index) => (
+          {actions.map((action) => (
             <QuickActionCard key={action.analytics} action={action} />
           ))}
         </div>

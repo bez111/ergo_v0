@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getMessages } from 'next-intl/server';
 import { getPlaybookBySlug, getAllPlaybookSlugs, Playbook } from "@/data/playbooks";
 import { getLocalizedPlaybookBySlug, type PlaybooksTranslations } from "@/data/playbooks-i18n";
 import { PlaybookPageClient } from "./PlaybookPageClient";
 import { SchemaOrg } from "@/components/seo/schema-org";
+import { getScopedMessages } from "@/lib/messages";
+import type { Locale } from "@/i18n/request";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let playbook: Playbook | undefined;
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { playbooksData?: PlaybooksTranslations };
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { playbooksData?: PlaybooksTranslations };
       playbook = getLocalizedPlaybookBySlug(slug, messages?.playbooksData);
     } catch {
       playbook = getPlaybookBySlug(slug);
@@ -151,7 +152,7 @@ export default async function PlaybookPage({ params }: Props) {
   let playbook: Playbook | undefined;
   if (locale !== 'en') {
     try {
-      const messages = await getMessages({ locale }) as { playbooksData?: PlaybooksTranslations };
+      const messages = await getScopedMessages(locale as Locale, ['content-hubs']) as { playbooksData?: PlaybooksTranslations };
       playbook = getLocalizedPlaybookBySlug(slug, messages?.playbooksData);
     } catch {
       playbook = getPlaybookBySlug(slug);
@@ -179,4 +180,3 @@ export default async function PlaybookPage({ params }: Props) {
     </>
   );
 }
-

@@ -18,7 +18,6 @@ import {
   AlertTriangle,
   ExternalLink,
   ChevronRight,
-  Users,
   Landmark,
   Cpu,
 } from "lucide-react"
@@ -36,6 +35,8 @@ const WHY_ERGO_ICONS = [Shield, Code2, Coins, Lock, Zap, Network]
 
 const USE_CASE_ICONS = [Bot, CreditCard, GitBranch]
 
+const CREDIT_UNLOCK_ICONS = [CreditCard, CheckCircle, Landmark]
+
 // ── Fade-in animation ────────────────────────────────────────────────────────
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -51,6 +52,7 @@ export function AgentEconomyClient() {
 
   const stripeProblemItems = t.raw("stripeProblemItems") as Array<{ title: string; body: string }>
   const whyErgoItems = t.raw("whyErgoItems") as Array<{ title: string; body: string; href: string }>
+  const creditUnlockItems = t.raw("creditUnlock.items") as Array<{ title: string; body: string }>
   const stackLayerItems = t.raw("stackLayerItems") as Array<{
     label: string
     sublabel: string
@@ -92,6 +94,7 @@ export function AgentEconomyClient() {
               >
                 {t("hero.titleStart")}{" "}
                 <span style={{ color: BRAND }}>{t("hero.titleHighlight")}</span>
+                {" "}
                 <br />{t("hero.titleEnd")}
               </h1>
 
@@ -174,6 +177,61 @@ export function AgentEconomyClient() {
                   </motion.div>
                 )
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Programmable Credit Unlock ─────────────────────────────────── */}
+        <section className="py-24 bg-neutral-950/40 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-14 items-start">
+              <div>
+                <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+                  {t("creditUnlock.sectionLabel")}
+                </p>
+                <h2
+                  className="font-extrabold tracking-tight text-white mb-6"
+                  style={{
+                    fontSize: "clamp(26px, 3.5vw, 44px)",
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {t("creditUnlock.heading")}
+                </h2>
+                <p className="text-neutral-400 leading-relaxed mb-8" style={{ maxWidth: "56ch" }}>
+                  {t("creditUnlock.description")}
+                </p>
+                <div className="rounded-3xl border border-orange-500/20 bg-orange-500/10 p-5">
+                  <p className="text-white font-semibold leading-relaxed">{t("creditUnlock.formula")}</p>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-4">
+                {creditUnlockItems.map((item, i) => {
+                  const Icon = CREDIT_UNLOCK_ICONS[i]
+                  return (
+                    <motion.div
+                      key={item.title}
+                      custom={i}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={fadeUp}
+                    >
+                      <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/35 transition-all duration-300">
+                        <CardContent className="p-6">
+                          <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center mb-4">
+                            <Icon className="w-5 h-5 text-orange-400" />
+                          </div>
+                          <h3 className="font-bold text-white mb-2 text-base">{item.title}</h3>
+                          <p className="text-neutral-400 text-sm leading-relaxed">{item.body}</p>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </section>

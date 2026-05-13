@@ -12,14 +12,14 @@ export async function generateMetadata({
   return {
     title: "Agent Economy Demos — Working Flows on Ergo Testnet",
     description:
-      "Three working demos: agent buys API call, agent pays on credit, community reserve. All live on Ergo testnet with Fleet SDK code examples and step-by-step instructions.",
+      "Three testnet reference demos: agent buys API call, agent issues credit to a sub-agent, community reserve. Fleet SDK code examples and step-by-step instructions.",
     keywords: [
       // Demo / testnet
       "Ergo agent economy demos",
-      "live blockchain agent demo",
+      "testnet blockchain agent demo",
       "agent payments testnet demo",
       "Fleet SDK working examples",
-      "ErgoScript live demo",
+      "ErgoScript testnet demo",
       "ChainCash demo",
       "eUTXO code examples",
       // AI agent specific
@@ -62,7 +62,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: "Ergo Agent Economy Demos",
       description:
-        "Agent buys API call. Agent pays on credit. Community reserve. All live on Ergo testnet.",
+        "Agent buys API call. Agent issues credit to a sub-agent. Community reserve. Testnet reference flows with code.",
       images: ["https://www.ergoblockchain.org/og/demos.png"],
       creator: "@ergoplatform",
       site: "@ergoplatform",

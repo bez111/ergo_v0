@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Link } from "@/i18n/navigation"
 import { getAlternates, getCanonicalUrl } from "@/lib/seo"
 import { ShieldCheck, AlertTriangle, ExternalLink, Github, MessagesSquare, Globe } from "lucide-react"
 
@@ -133,7 +134,7 @@ export default function OfficialDomainsPage() {
           </ul>
           <p className="text-xs text-neutral-500 mt-3">
             Full wallet registry with maturity, last-verified date and
-            warnings: <a href="/wallet" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">/wallet</a>.
+            warnings: <Link href="/wallet" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">/wallet</Link>.
           </p>
         </section>
 
@@ -159,9 +160,9 @@ export default function OfficialDomainsPage() {
 
         <p className="text-xs text-neutral-500 mt-12">
           See something missing or impersonated? Report via{" "}
-          <a href="/legal/security" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
+          <Link href="/legal/security" className="text-orange-400 hover:text-orange-300 underline underline-offset-2">
             responsible disclosure
-          </a>{" "}
+          </Link>{" "}
           and we&apos;ll add a row.
         </p>
       </article>

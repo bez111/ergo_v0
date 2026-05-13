@@ -4,10 +4,10 @@
       "tag": "Technical Architecture",
       "titleStart": "Agent Payment Stack: ",
       "titleHighlight": "Reference Architecture",
-      "description": "Reference architecture for testnet builders: four on-chain primitives and three composable flows. Use this as the design map for agent-to-agent payments on Ergo. The base protocol is live; the Reserve / Note / Tracker / Acceptance Predicate stack ships as ErgoScript reference contracts that are testnet-first and not yet audited.",
+      "description": "Reference architecture for testnet builders: Accord agreements, verification receipts, settlement receipts, wallet policy and Note/Reserve-style programmable credit patterns. Use this as a design map, not a production mainnet blueprint.",
       "ctaChainCash": "ChainCash repo",
       "ctaCodeExamples": "Code examples",
-      "ctaLiveDemos": "Live demos"
+      "ctaLiveDemos": "Testnet demos"
     },
     "breadcrumbs": {
       "agentEconomy": "Agent Economy",
@@ -64,7 +64,7 @@
     "flows": {
       "sectionLabel": "Sample Flows",
       "heading": "Three composable flows",
-      "seeLiveDemo": "See live demo",
+      "seeLiveDemo": "See testnet demo",
       "apiCall": {
         "title": "Flow A: Agent buys API call",
         "description": "One call. One proof. No persistent account.",
@@ -76,13 +76,13 @@
         ]
       },
       "credit": {
-        "title": "Flow B: Agent pays on credit",
-        "description": "Reserve deployed. Notes issued. Tracker monitors.",
+        "title": "Flow B: Agent issues credit to a sub-agent",
+        "description": "Reserve deployed. Bounded Notes issued. Tracker monitors.",
         "steps": [
           { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue notes", "detail": "Create notes against reserve up to credit limit" },
-          { "label": "Agent spends notes", "detail": "Notes transferred to providers, tracker updated" },
-          { "label": "Auto-settlement", "detail": "When threshold hit, reserve settles outstanding notes" }
+          { "label": "Issue bounded notes", "detail": "Create redeemable Notes against reserve up to credit limit" },
+          { "label": "Sub-agent spends notes", "detail": "Notes transferred to providers only inside the policy envelope" },
+          { "label": "Verified settlement", "detail": "Reserve settles outstanding Notes only under explicit redemption rules" }
         ]
       },
       "community": {
@@ -105,7 +105,7 @@
         "desc": "Build transactions in your browser or Node.js. Best starting point for agent payments."
       },
       "sigmaRust": {
-        "desc": "High-performance signing and serialization. Ideal for production agent infrastructure."
+        "desc": "High-performance signing and serialization for advanced integrations. Use audited custody and policy controls before handling real funds."
       },
       "appKit": {
         "desc": "Full-featured SDK for backend services, bots, and server-side agents."
@@ -115,10 +115,10 @@
       }
     },
     "status": {
-      "sectionLabel": "What's live",
+      "sectionLabel": "Status",
       "heading": "Stack status",
-      "description": "Settlement and Babel Fees are live on Ergo mainnet. Reserve / Note / Tracker / Acceptance Predicate are usable as ErgoScript reference contracts (testnet-first, not yet audited). Reputation and persistent identity remain open research problems — the most interesting ones for builders to pick up.",
-      "legendLive": "Live on mainnet / testnet",
+      "description": "Ergo mainnet provides the base settlement layer. Accord, ChainCash/Basis and Note/Reserve/Tracker reference flows are testnet-first unless a specific implementation is audited and explicitly marked production-ready.",
+      "legendLive": "Available base tooling",
       "legendSoon": "Coming soon",
       "legendOpen": "Open research problem",
       "live": "live",
@@ -128,7 +128,7 @@
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "ChainCash server (notes + reserves)",
+      "chainCash": "ChainCash prototype (notes + reserves)",
       "ergoNodeApi": "Ergo Node REST API",
       "starterRepo": "agent-economy-starter repo",
       "identityLayer": "Agent identity layer"
@@ -184,8 +184,8 @@
     "nextCard1Title": "Agent Payments Architecture",
     "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — the full technical reference",
     "nextCard2Title": "7-Step Playbook",
-    "nextCard2Desc": "From environment setup to mainnet deployment — a full builder guide",
-    "nextCard3Title": "Live Demos",
+    "nextCard2Desc": "From environment setup to testnet demos and audit-gated release planning",
+    "nextCard3Title": "Testnet Demos",
     "nextCard3Desc": "See working agent payment flows on Ergo testnet, open source",
     "nextCard4Title": "GitHub: Accord Protocol",
     "nextCard4Desc": "Open source examples: basic payment, Note IOU, acceptance predicate",

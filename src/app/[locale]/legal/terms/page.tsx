@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Link } from "@/i18n/navigation"
 import { getAlternates, getCanonicalUrl } from "@/lib/seo"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -44,7 +45,7 @@ export default function TermsPage() {
               <strong>Nothing on this Site constitutes financial, investment, tax, or legal advice.</strong>
               Information about ERG, mining, DeFi, NFTs, or other topics is provided for educational purposes only.
               You are solely responsible for your own decisions. Cryptocurrency markets are volatile and risky — see our{" "}
-              <a href="/legal/risk" className="text-orange-400 hover:underline">Risk Disclosure</a>.
+              <Link href="/legal/risk" className="text-orange-400 hover:underline">Risk Disclosure</Link>.
             </p>
           </section>
 
@@ -92,7 +93,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-white mt-8 mb-3">8. Contact</h2>
             <p>
               Questions about these Terms: see our{" "}
-              <a href="/legal/security" className="text-orange-400 hover:underline">Security &amp; Contact</a> page.
+              <Link href="/legal/security" className="text-orange-400 hover:underline">Security &amp; Contact</Link> page.
             </p>
           </section>
         </div>

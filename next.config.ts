@@ -89,7 +89,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.ergoplatform.com https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://vitals.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
           },
           {
             key: 'Cache-Control',
@@ -99,15 +99,6 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
         headers: [
           {
             key: 'Cache-Control',
@@ -157,7 +148,7 @@ const nextConfig: NextConfig = {
             },
             lib: {
               test: /[\\/]node_modules[\\/]/,
-              name(module: any) {
+              name(module: { context?: string }) {
                 const packageName =
                   module.context?.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)?.[1] || 'unknown';
                 return `npm.${packageName.replace('@', '')}`;
@@ -228,6 +219,11 @@ const nextConfig: NextConfig = {
       {
         source: '/use/use-cases/algorithmic-stablecoins',
         destination: '/use/stablecoins',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/privacy',
+        destination: '/use/privacy',
         permanent: true,
       },
       {

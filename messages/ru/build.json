@@ -4,10 +4,10 @@
       "tag": "Техническая архитектура",
       "titleStart": "Стек платежей агентов: ",
       "titleHighlight": "Эталонная архитектура",
-      "description": "Четыре ончейн-примитива. Три компонуемых потока. Всё, что нужно для построения платежей между агентами на Ergo — от одного вызова API до полноценной общественной валюты.",
+      "description": "Референсная архитектура для testnet-разработчиков: Accord agreements, verification receipts, settlement receipts, wallet policy и Note/Reserve-style паттерны программируемого кредита. Это карта дизайна, а не production mainnet blueprint.",
       "ctaChainCash": "Репозиторий ChainCash",
       "ctaCodeExamples": "Примеры кода",
-      "ctaLiveDemos": "Живые демо"
+      "ctaLiveDemos": "Testnet демо"
     },
     "breadcrumbs": {
       "agentEconomy": "Экономика агентов",
@@ -64,7 +64,7 @@
     "flows": {
       "sectionLabel": "Примеры потоков",
       "heading": "Три компонуемых потока",
-      "seeLiveDemo": "Смотреть живое демо",
+      "seeLiveDemo": "Смотреть testnet демо",
       "apiCall": {
         "title": "Поток A: Агент покупает вызов API",
         "description": "Один вызов. Одно доказательство. Без постоянного аккаунта.",
@@ -88,24 +88,24 @@
         ]
       },
       "credit": {
-        "title": "Поток B: Агент платит в кредит",
-        "description": "Reserve развёрнут. Note выпущены. Tracker мониторит.",
+        "title": "Поток B: Агент выпускает кредит суб-агенту",
+        "description": "Reserve развёрнут. Ограниченные Note выпущены. Tracker мониторит.",
         "steps": [
           {
             "label": "Развернуть Reserve",
             "detail": "Заблокировать ERG в контракте Reserve с кредитным лимитом"
           },
           {
-            "label": "Выпустить Note",
-            "detail": "Создать Note против Reserve в пределах кредитного лимита"
+            "label": "Выпустить ограниченные Note",
+            "detail": "Создать погашаемые Note против Reserve в пределах кредитного лимита"
           },
           {
-            "label": "Агент тратит Note",
-            "detail": "Note переданы провайдерам, Tracker обновлён"
+            "label": "Суб-агент тратит Note",
+            "detail": "Note передаются провайдерам только внутри policy envelope"
           },
           {
-            "label": "Авто-расчёт",
-            "detail": "При достижении порога Reserve погашает непогашенные Note"
+            "label": "Проверяемый расчёт",
+            "detail": "Reserve погашает непогашенные Note только по явным правилам redemption"
           }
         ]
       },
@@ -141,7 +141,7 @@
         "desc": "Создавайте транзакции в браузере или Node.js. Лучшая отправная точка для платежей агентов."
       },
       "sigmaRust": {
-        "desc": "Высокопроизводительное подписание и сериализация. Идеально для продакшн-инфраструктуры агентов."
+        "desc": "Высокопроизводительное подписание и сериализация для продвинутых интеграций. Для реальных средств нужны аудит, custody-модель и policy controls."
       },
       "appKit": {
         "desc": "Полнофункциональный SDK для бэкенд-сервисов, ботов и серверных агентов."
@@ -153,8 +153,8 @@
     "status": {
       "sectionLabel": "Текущий статус",
       "heading": "Статус стека",
-      "description": "Пять слоёв работают. Два — открытые проблемы. Присоединяйтесь к обсуждению на GitHub — это самые интересные нерешённые проблемы в деньгах агентов.",
-      "legendLive": "Работает на mainnet / testnet",
+      "description": "Mainnet Ergo даёт базовый слой расчётов. Accord, ChainCash/Basis и Note/Reserve/Tracker reference flows остаются testnet-first, пока конкретная реализация не пройдёт аудит и не будет явно отмечена production-ready.",
+      "legendLive": "Доступные базовые инструменты",
       "legendSoon": "Скоро",
       "legendOpen": "Открытая исследовательская проблема",
       "live": "работает",
@@ -164,7 +164,7 @@
       "fleetSdk": "Fleet SDK (TypeScript)",
       "appKit": "AppKit (JVM)",
       "sigmaRust": "sigma-rust",
-      "chainCash": "Сервер ChainCash (Note + Reserve)",
+      "chainCash": "Прототип ChainCash (Note + Reserve)",
       "ergoNodeApi": "Ergo Node REST API",
       "starterRepo": "Репозиторий agent-economy-starter",
       "identityLayer": "Слой идентификации агентов"
@@ -220,7 +220,7 @@
     "nextCard1Title": "Архитектура платежей агентов",
     "nextCard1Desc": "Reserve, Note, Tracker, Acceptance Predicate — полный технический справочник",
     "nextCard2Title": "7-шаговый Playbook",
-    "nextCard2Desc": "От настройки окружения до деплоя на mainnet — полное руководство для строителей",
+    "nextCard2Desc": "От настройки окружения до testnet демо и audit-gated release planning",
     "nextCard3Title": "Живые демо",
     "nextCard3Desc": "Смотрите работающие потоки платежей агентов на Ergo testnet, открытый исходный код",
     "nextCard4Title": "GitHub: Accord Protocol",

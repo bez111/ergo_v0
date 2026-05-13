@@ -9129,9 +9129,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: "chaincash",
     term: "ChainCash",
 
-    shortDefinition: "The open-source reference implementation (prototype) of Ergo's Note+Reserve+Tracker agent payment stack — a community currency and bearer instrument protocol by BetterMoneyLabs.",
+    shortDefinition: "An open-source prototype/reference implementation of Note+Reserve+Tracker-style agent payment patterns on Ergo by BetterMoneyLabs.",
 
-    definition: "ChainCash is an open-source protocol built on Ergo that implements bearer instruments (Notes) backed by ERG Reserves, with a Tracker registry for double-spend prevention. It enables community currencies, agent credit systems, and programmable IOUs without any centralized infrastructure. ChainCash is an open-source prototype on Ergo, built by BetterMoneyLabs, and serves as the reference implementation for the agent economy payment stack described in Ergo documentation. Developers building agent payment systems can use ChainCash contracts directly or as templates for custom Reserve+Note implementations.",
+    definition: "ChainCash is an open-source prototype built on Ergo that explores bearer instruments (Notes) backed by Reserves, with a Tracker-style registry for double-spend prevention. It is useful as a research/reference implementation for community currencies, agent credit systems, and programmable IOUs, but it is not audited or production-ready unless a specific deployment is explicitly marked as such.",
 
     keywords: [
       "chaincash ergo",
@@ -9140,17 +9140,17 @@ export const glossaryTerms: GlossaryTerm[] = [
       "ergo community currency",
       "chaincash bearer instrument",
       "ergo note protocol",
-      "chaincash mainnet",
+      "chaincash prototype",
       "agent economy reference implementation",
     ],
 
     keyPoints: [
-      "Live on Ergo mainnet — not a prototype",
-      "Open source — contracts and SDK available",
+      "Prototype / research implementation — not production-ready by default",
+      "Open source reference code and patterns",
       "Built by BetterMoneyLabs",
-      "Implements: Reserve, Note, Tracker, and redemption flows",
-      "Enables community currencies backed by ERG",
-      "Reference implementation for agent payment developers",
+      "Explores Reserve, Note, Tracker, and redemption flows",
+      "Useful for community-currency and agent-credit experiments",
+      "Reference material for agent payment developers",
       "Compatible with Fleet SDK and AppKit",
     ],
 
@@ -9354,4 +9354,3 @@ export const glossaryCategories = {
   'mining': { name: 'Mining', icon: 'Pickaxe', color: 'orange' },
   'general': { name: 'General', icon: 'BookOpen', color: 'gray' },
 } as const;
-

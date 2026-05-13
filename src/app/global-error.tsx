@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Home, RefreshCw } from 'lucide-react'
 
 export default function GlobalError({
@@ -38,7 +39,7 @@ export default function GlobalError({
               >
                 <RefreshCw size={16} /> Try Again
               </button>
-              <a
+              <Link
                 href="/"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
@@ -49,7 +50,7 @@ export default function GlobalError({
                 }}
               >
                 <Home size={16} /> Go Home
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -175,7 +175,7 @@ export default function DocsSearchModal({ open, onClose }: { open: boolean; onCl
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [open, flatResults, selected, onClose, showFilters]);
+  }, [open, flatResults, selected, onClose, showFilters, router]);
 
   if (!open) return null;
 
@@ -504,4 +504,4 @@ export default function DocsSearchModal({ open, onClose }: { open: boolean; onCl
       </div>
     </div>
   );
-} 
+}

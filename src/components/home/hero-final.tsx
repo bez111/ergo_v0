@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps, react-hooks/set-state-in-effect */
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { Link } from "@/i18n/navigation"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
@@ -14,13 +14,13 @@ export function HeroFinal() {
   const locale = useLocale()
   
   // Localized hero messages
-  const HERO_MESSAGES = [
+  const HERO_MESSAGES = useMemo(() => [
     t('message1'),
     t('message2'),
     t('message3') || "Digital Freedom Platform", 
     t('message4') || "Decentralized By Design",
-  ]
-  const [typedText, setTypedText] = useState("")
+  ], [t])
+  const [typedText, setTypedText] = useState(HERO_MESSAGES[0] || "")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
   const [showCursor, setShowCursor] = useState(true)
@@ -132,7 +132,7 @@ export function HeroFinal() {
                 }}
               >
                 <span className="relative" suppressHydrationWarning>
-                  {isClient ? typedText : HERO_MESSAGES[0]}
+                  {isClient ? (typedText || HERO_MESSAGES[currentTextIndex] || HERO_MESSAGES[0]) : HERO_MESSAGES[0]}
                   <span
                     className={`text-orange-500 ${isClient && showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}
                     suppressHydrationWarning

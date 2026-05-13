@@ -1047,7 +1047,7 @@ export default function StartPage() {
               </div>
               <div>
                 <p className="font-semibold text-white text-sm mb-0.5">Building something autonomous?</p>
-                <p className="text-neutral-400 text-sm">Ergo is the base layer for agent payments, programmable credit, and autonomous economic flows. See the full stack and live demos.</p>
+                <p className="text-neutral-400 text-sm">Ergo is the base layer for agent payments, programmable credit, and autonomous economic flows. See the full stack and testnet reference demos.</p>
               </div>
             </div>
             <Link

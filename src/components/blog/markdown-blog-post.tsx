@@ -1,6 +1,7 @@
 import "server-only"
 import fs from "node:fs/promises"
 import path from "node:path"
+import { Link } from "@/i18n/navigation"
 import matter from "gray-matter"
 import { remark } from "remark"
 import remarkGfm from "remark-gfm"
@@ -202,7 +203,7 @@ export interface MarkdownBlogPostProps {
   heroImage?: string
 }
 
-export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlogPostProps) {
+export async function MarkdownBlogPost({ slug, heroImage }: MarkdownBlogPostProps) {
   const { frontMatter, body } = await loadArticle(slug)
   const cleaned = stripLeadingH1(stripAuthoringMeta(body))
   const { faq, bodyWithoutFaq } = extractFaq(cleaned)
@@ -439,11 +440,11 @@ export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlog
               <div>
                 <dt className="font-semibold text-orange-300 inline">Trust posture. </dt>
                 <dd className="inline">
-                  <a href="/legal/security" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Responsible disclosure</a>
+                  <Link href="/legal/security" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Responsible disclosure</Link>
                   {" · "}
-                  <a href="/legal/risk" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Risk disclosure</a>
+                  <Link href="/legal/risk" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Risk disclosure</Link>
                   {" · "}
-                  <a href="/legal/official-domains" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Official domains</a>
+                  <Link href="/legal/official-domains" className="text-orange-400 underline underline-offset-2 hover:text-orange-300">Official domains</Link>
                 </dd>
               </div>
               {dateModified && (

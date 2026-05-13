@@ -2332,7 +2332,7 @@
       "test_contracts_instantly_in_your": "Тестируйте контракты мгновенно в вашем браузере без установки",
       "rich_tooling_ecosystem": "Богатая сопутствующая экосистема",
       "sdks_for_java_javascript_python_and_more": "SDK для Java, JavaScript, Python, и многое другое",
-      "learn_from_production_ready_contract_templates": "Ознакомьтесь с готовыми шаблонами контрактов",
+      "learn_from_production_ready_contract_templates": "Изучайте проверенные примеры и переиспользуемые шаблоны контрактов",
       "eutxo_extended_bitcoin_model": "eUTXO – расширенная модель Bitcoin",
       "no_shared_state_no_global_variables": "Нет общего состояния, нет глобальных переменных",
       "eliminates_the_reentrancy_vulnerability_class": "Устраняет уязвимость с повторным доступом; смягчает некоторые модели MEV, но не в полной мере предотвращает передний процесс.",
@@ -3274,7 +3274,7 @@
           },
           {
             "title": "Широкие примеры",
-            "description": "Ознакомьтесь с готовыми шаблонами контрактов",
+            "description": "Изучайте проверенные примеры и переиспользуемые шаблоны контрактов",
             "icon": "Пазл"
           }
         ]

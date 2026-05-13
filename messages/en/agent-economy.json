@@ -33,6 +33,26 @@
         "body": "A $0.001 API call through Stripe costs more in fees than the call itself. The rails weren't built for machine-to-machine micropayments at any scale."
       }
     ],
+    "creditUnlock": {
+      "sectionLabel": "The Unlock",
+      "heading": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+      "description": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+      "formula": "Payments move value. Verification proves work. Credit creates economic agency.",
+      "items": [
+        {
+          "title": "Payments",
+          "body": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout."
+        },
+        {
+          "title": "Verification",
+          "body": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened."
+        },
+        {
+          "title": "Credit",
+          "body": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules."
+        }
+      ]
+    },
     "solution": {
       "sectionLabel": "The Solution",
       "heading": "Why Ergo is the right",
@@ -67,15 +87,15 @@
       },
       {
         "title": "Native tokens: community money",
-        "body": "Issue a community currency in one transaction. Notes, trackers, and reserve tokens are protocol-level — no custom ERC-20-style contracts required.",
+      "body": "Issue native tokens and design Note/Reserve-style payment patterns without ERC-20-style deployment ceremony. Specific agent-payment contracts remain prototype/testnet-first unless audited.",
         "href": "/technology/native-tokens"
       }
     ],
     "stack": {
       "sectionLabel": "The Stack",
       "heading": "The agent economy stack",
-      "description": "Settlement and Babel Fees are live on Ergo mainnet today. Reserve / Note / Tracker / Acceptance Predicate primitives are usable as ErgoScript contracts; the canonical reference implementation (ChainCash) is an open-source prototype, not yet audited. Reputation and persistent identity remain open research problems — the most interesting ones for builders to tackle.",
-      "legendLive": "Live on Ergo mainnet",
+      "description": "Ergo mainnet provides the base settlement layer and Babel-fee-style fee abstraction. Accord, ChainCash/Basis and Note/Reserve/Tracker reference implementations are testnet-first prototypes unless a specific deployment is audited and explicitly marked production-ready.",
+      "legendLive": "Base Ergo capability",
       "legendOpen": "Open research problem",
       "linkArchitecture": "Technical architecture →",
       "linkGithub": "GitHub repos",
@@ -127,7 +147,7 @@
     ],
     "useCases": {
       "sectionLabel": "What you can build",
-      "heading": "Three composable flows. Two live on testnet, one upcoming.",
+      "heading": "Three composable flows. Two testnet reference flows, one upcoming.",
       "linkDemos": "See all demos with code"
     },
     "useCaseItems": [

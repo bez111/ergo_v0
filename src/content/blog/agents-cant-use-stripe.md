@@ -14,7 +14,7 @@ target_keywords: ["AI agents Stripe", "Stripe agentic commerce", "agentic commer
 
 # Why AI Agents Need More Than Stripe: Agentic Commerce vs Autonomous Work Settlement
 
-**Updated May 2026:** this article has been reframed to reflect the current market. Stripe is actively building agentic commerce infrastructure. The argument is not that Stripe is irrelevant. The argument is that buyer-authorized commerce and autonomous work settlement are different layers.
+**Context note:** this article has been reframed to reflect the current market. Stripe is actively building agentic commerce infrastructure. The argument is not that Stripe is irrelevant. The argument is that buyer-authorized commerce and autonomous work settlement are different layers.
 
 The old version of this debate was too simple:
 

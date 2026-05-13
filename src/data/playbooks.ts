@@ -1540,7 +1540,7 @@ export const playbooks: Playbook[] = [
     difficulty: "advanced",
     timeToComplete: "3-6 hours",
 
-    heroDescription: "Ergo is the only settlement layer with programmable credit, acceptance predicates, and verifiable reserves built into the protocol. This playbook walks through the full agent payment stack.",
+    heroDescription: "Ergo is a strong reference settlement layer for programmable credit, acceptance predicates, and verifiable reserve-style flows. This playbook walks through the agent payment stack in testnet-first mode.",
 
     problemStatement: "Autonomous agents can't use Stripe or PayPal — they have no identity, no credit history, no bank account. Ethereum-style account model introduces reentrancy risks. Agents need programmable IOUs, not just coin transfers.",
 
@@ -1573,7 +1573,7 @@ export const playbooks: Playbook[] = [
         duration: "45 min",
         resources: [
           { type: 'doc', title: "Reserve Pattern Code", href: "/build/agent-payments#reserve" },
-          { type: 'doc', title: "Live Demo: API Call Payment", href: "/demos" },
+          { type: 'doc', title: "Testnet Demo: API Call Payment", href: "/demos" },
         ],
       },
       {
@@ -1582,7 +1582,7 @@ export const playbooks: Playbook[] = [
         duration: "45 min",
         resources: [
           { type: 'doc', title: "Note Architecture", href: "/build/agent-payments#note" },
-          { type: 'doc', title: "Live Demo: Credit System", href: "/demos" },
+          { type: 'doc', title: "Testnet Demo: Credit System", href: "/demos" },
           { type: 'technology', title: "ErgoScript", href: "/technology/ergoscript" },
         ],
       },
@@ -1606,8 +1606,8 @@ export const playbooks: Playbook[] = [
         ],
       },
       {
-        title: "Deploy to Mainnet",
-        description: "Move from testnet to mainnet. Review security checklist, get your contract audited, and connect to BetterMoneyLabs ecosystem tools.",
+        title: "Plan an audit-gated release",
+        description: "Stay on testnet until the implementation has a security review, signed audit manifests, conservative limits, and explicit production approval.",
         duration: "Variable",
         resources: [
           { type: 'doc', title: "Agent Economy Ecosystem", href: "/agent-economy" },
@@ -1634,7 +1634,7 @@ export const playbooks: Playbook[] = [
       href: "/build/agent-payments",
     },
     secondaryCTA: {
-      label: "Run Live Demos",
+      label: "Run Testnet Demos",
       href: "/demos",
     },
 
@@ -1673,4 +1673,3 @@ export const playbookClusters = [
   { id: 'developer', name: 'Developer', icon: 'Code', description: 'Build on Ergo' },
   { id: 'investor', name: 'Investor', icon: 'TrendingUp', description: 'Fundamental analysis' },
 ] as const;
-

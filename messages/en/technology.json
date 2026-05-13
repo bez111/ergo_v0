@@ -2297,7 +2297,7 @@
       "native_sigma_protocols_description_first": "Native Sigma Protocols\",\n                                  description: \"First-class cryptographic primitives for multi-party signatures",
       "interactive_playground_description_test_contracts": "Interactive Playground\",\n                                  description: \"Test contracts instantly in your browser without setup",
       "rich_tooling_ecosystem_description_sdks": "Rich Tooling Ecosystem\",\n                                  description: \"SDKs for Java, JavaScript, Python, and more",
-      "extensive_examples_description_learn_from": "Extensive Examples\",\n                                  description: \"Learn from production-ready contract templates",
+      "extensive_examples_description_learn_from": "Extensive Examples\",\n                                  description: \"Learn from reviewed contract examples and reusable templates",
       "non_custodial_defi_protocols": "Non-custodial DeFi protocols",
       "decentralized_oracle_networks": "Decentralized oracle networks",
       "stablecoins_and_native_tokens": "Stablecoins and native tokens",
@@ -2332,7 +2332,7 @@
       "test_contracts_instantly_in_your": "Test contracts instantly in your browser without setup",
       "rich_tooling_ecosystem": "Rich Tooling Ecosystem",
       "sdks_for_java_javascript_python_and_more": "SDKs for Java, JavaScript, Python, and more",
-      "learn_from_production_ready_contract_templates": "Learn from production-ready contract templates",
+      "learn_from_production_ready_contract_templates": "Learn from reviewed contract examples and reusable templates",
       "eutxo_extended_bitcoin_model": "eUTXO – Extended Bitcoin Model",
       "no_shared_state_no_global_variables": "No Shared State, No Global Variables",
       "eliminates_the_reentrancy_vulnerability_class": "Eliminates the reentrancy vulnerability class; mitigates some MEV patterns, but does not fully prevent frontrunning.",
@@ -3274,7 +3274,7 @@
           },
           {
             "title": "Extensive Examples",
-            "description": "Learn from production-ready contract templates",
+            "description": "Learn from reviewed contract examples and reusable templates",
             "icon": "Puzzle"
           }
         ]

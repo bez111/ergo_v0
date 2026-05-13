@@ -68,7 +68,6 @@ function StatCard({
 export function LiveNetworkStats() {
   const [stats, setStats] = useState<LiveStats | null>(null)
   const [loading, setLoading] = useState(true)
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
 
   async function fetchStats() {
     try {
@@ -94,7 +93,6 @@ export function LiveNetworkStats() {
         supplyERG: Math.floor(v0.supply / 1e9),
         uptimeDays,
       })
-      setLastUpdated(new Date())
     } catch {
       // silently fail — show nothing if API unreachable
     } finally {

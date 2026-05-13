@@ -2452,7 +2452,7 @@
       "native_sigma_protocols_description_first": "Protocolli Sigma Nativi\",\n                                  description: \"Primitive crittografiche di prima classe per firme multi-party",
       "interactive_playground_description_test_contracts": "Playground Interattivo\",\n                                  description: \"Testa i contratti istantaneamente nel tuo browser senza configurazione",
       "rich_tooling_ecosystem_description_sdks": "Ricco Ecosistema di Strumenti\",\n                                  description: \"SDK per Java, JavaScript, Python e altro ancora",
-      "extensive_examples_description_learn_from": "Esempi Estesi\",\n                                  description: \"Impara da template di contratti pronti per la produzione",
+      "extensive_examples_description_learn_from": "Esempi Estesi\",\n                                  description: \"Impara da esempi di contratti revisionati e template riutilizzabili",
       "non_custodial_defi_protocols": "Protocolli DeFi non custodial",
       "decentralized_oracle_networks": "Reti di oracoli decentralizzate",
       "stablecoins_and_native_tokens": "Stablecoin e token nativi",
@@ -2487,7 +2487,7 @@
       "test_contracts_instantly_in_your": "Testa i contratti istantaneamente nel tuo browser senza configurazione",
       "rich_tooling_ecosystem": "Ricco Ecosistema di Strumenti",
       "sdks_for_java_javascript_python_and_more": "SDK per Java, JavaScript, Python e altro ancora",
-      "learn_from_production_ready_contract_templates": "Impara da template di contratti pronti per la produzione",
+      "learn_from_production_ready_contract_templates": "Impara da esempi di contratti revisionati e template riutilizzabili",
       "eutxo_extended_bitcoin_model": "eUTXO – Modello Bitcoin Esteso",
       "no_shared_state_no_global_variables": "Nessuno Stato Condiviso, Nessuna Variabile Globale",
       "eliminates_the_reentrancy_vulnerability_class": "Elimina la classe di vulnerabilità re-entrancy; mitiga alcuni pattern MEV, ma non previene completamente il frontrunning.",
@@ -3238,7 +3238,7 @@
           },
           {
             "title": "Esempi Estesi",
-            "description": "Impara da template di contratti pronti per la produzione",
+            "description": "Impara da esempi di contratti revisionati e template riutilizzabili",
             "icon": "Puzzle"
           }
         ]

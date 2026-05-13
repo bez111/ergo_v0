@@ -1,10 +1,11 @@
 import type { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
 import { PatternsHubClient } from "./PatternsHubClient"
 import { devPatterns, categoryLabels, categoryDescriptions, getAllCategories } from "@/data/dev-patterns"
 import { siteConfig } from "@/config/site-config"
 import { createBreadcrumbSchema, createCollectionSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { getScopedMessages, getTranslations } from "@/lib/messages"
+import type { Locale } from "@/i18n/request"
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -15,7 +16,8 @@ const url = `${origin}/patterns`
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'patternsPage.seo' })
+  const messages = await getScopedMessages(locale as Locale, ['content-hubs', 'patterns'])
+  const t = getTranslations(messages, 'patternsPage.seo')
 
   const title = t('title')
   const description = t('description')
