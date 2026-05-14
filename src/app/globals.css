@@ -1430,15 +1430,28 @@ li a[href] {
 /* Buttons / CTAs: their translated label is often a single long token
    ("Erweiterte Einstellungen", "Заинтересованы в решениях", etc.) and
    the surrounding flex layout has no slack on narrow viewports. Allow
-   them to wrap or hyphenate rather than push the parent off-screen. */
+   them to wrap or hyphenate rather than push the parent off-screen.
+   Note: shadcn Button + cyber-button bake `whitespace-nowrap` into the
+   base class — overflow-wrap can't break a line that white-space won't
+   allow, so we explicitly re-enable wrapping at narrow widths. */
 @media (max-width: 640px) {
   button,
   [role="button"],
   a[class*="rounded"],
   a[class*="bg-orange"],
   a[class*="border"][class*="px-"] {
+    white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
+  }
+  /* Long single-token CTA labels in foreign locales must hyphenate when
+     they still won't fit after wrapping. */
+  button > span,
+  [role="button"] > span,
+  a[class*="rounded"] > span,
+  a[class*="bg-orange"] > span {
+    overflow-wrap: anywhere;
+    hyphens: auto;
   }
 }
 
