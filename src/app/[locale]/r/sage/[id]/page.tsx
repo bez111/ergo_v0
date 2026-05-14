@@ -46,10 +46,17 @@ export async function generateMetadata({ params }: ReceiptPageProps): Promise<Me
   }
 }
 
-const SAGE_NETWORK = (process.env.SAGE_NETWORK ?? "testnet") as "mainnet" | "testnet"
-const SAGE_ADDRESS = process.env.SAGE_WALLET_ADDRESS
+// Force per-request rendering so env reads + chain fetches always run
+// against current state — the receipt page is dynamic by nature.
+export const dynamic = "force-dynamic"
+export const revalidate = 0
 
 export default async function SageReceiptPage({ params }: ReceiptPageProps) {
+  // Read env at request time, NOT at module top — Next.js can otherwise
+  // capture an empty value at build time and never refresh it.
+  const SAGE_NETWORK = (process.env.SAGE_NETWORK ?? "testnet") as "mainnet" | "testnet"
+  const SAGE_ADDRESS = process.env.SAGE_WALLET_ADDRESS
+
   const { id } = await params
 
   if (!/^[0-9a-f]{64}$/i.test(id)) notFound()
@@ -59,22 +66,34 @@ export default async function SageReceiptPage({ params }: ReceiptPageProps) {
   // to a box lookup so the page still renders something useful. fetchBox
   // takes SAGE_ADDRESS as a fallback so unspent Note boxes that the
   // standalone /boxes/{id} endpoint misses still resolve via the address
-  // unspent list.
-  const txResult = await fetchTransaction(id, SAGE_NETWORK)
-  if (!txResult.ok || !txResult.tx) {
-    const boxResult = await fetchBox(id, SAGE_NETWORK, SAGE_ADDRESS ?? undefined)
-    if (boxResult.ok && boxResult.box) {
-      return <SettlementPending box={boxResult.box} />
+  // unspent list. Wrap the explorer calls so a transient failure renders
+  // "not confirmed yet" instead of a 500.
+  let txResult, boxResult
+  try {
+    txResult = await fetchTransaction(id, SAGE_NETWORK)
+  } catch (err) {
+    console.error(`[receipt] fetchTransaction(${id}) threw:`, err)
+    txResult = { ok: false, status: 500, error: String(err) } as const
+  }
+  if (!txResult.ok || !("tx" in txResult)) {
+    try {
+      boxResult = await fetchBox(id, SAGE_NETWORK, SAGE_ADDRESS ?? undefined)
+    } catch (err) {
+      console.error(`[receipt] fetchBox(${id}) threw:`, err)
+      boxResult = { ok: false, status: 500, error: String(err) } as const
     }
-    return <NotConfirmedYet txId={id} status={txResult.status} />
+    if (boxResult.ok && "box" in boxResult && boxResult.box) {
+      return <SettlementPending box={boxResult.box} network={SAGE_NETWORK} />
+    }
+    return <NotConfirmedYet txId={id} status={txResult.status} network={SAGE_NETWORK} />
   }
 
-  const tx = txResult.tx
+  const tx = txResult.tx!
   // Validate the tx actually paid Sage. If wallet env isn't set, skip
   // validation (still render — we're optimistic on testnet).
   const paid = SAGE_ADDRESS ? txPaysAddress(tx, SAGE_ADDRESS, 0) : true
   if (!paid) {
-    return <NotASageReceipt txId={id} />
+    return <NotASageReceipt txId={id} network={SAGE_NETWORK} />
   }
 
   const settledAt = new Date(tx.timestamp).toISOString()
@@ -280,7 +299,15 @@ function SchemaJsonLd({
   )
 }
 
-function NotConfirmedYet({ txId, status }: { txId: string; status: number }) {
+function NotConfirmedYet({
+  txId,
+  status,
+  network,
+}: {
+  txId: string
+  status: number
+  network: "mainnet" | "testnet"
+}) {
   return (
     <article className="min-h-screen bg-black text-gray-300 px-4 py-20 flex items-center">
       <div className="max-w-md mx-auto text-center space-y-4 font-mono">
@@ -291,7 +318,7 @@ function NotConfirmedYet({ txId, status }: { txId: string; status: number }) {
           this lingers, check the explorer directly.
         </p>
         <a
-          href={explorerUrl(txId, SAGE_NETWORK)}
+          href={explorerUrl(txId, network)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-orange-500/40 text-orange-300 hover:bg-orange-500/5"
@@ -308,14 +335,19 @@ function NotConfirmedYet({ txId, status }: { txId: string; status: number }) {
 
 function SettlementPending({
   box,
+  network,
 }: {
   box: import("@/lib/sage/explorer/fetch-tx").BoxInfo
+  network: "mainnet" | "testnet"
 }) {
   const settledAt = box.creationTimestamp
     ? new Date(box.creationTimestamp).toLocaleString("en-US", {
         dateStyle: "medium",
         timeStyle: "short",
       })
+    : "—"
+  const heightStr = typeof box.inclusionHeight === "number" && box.inclusionHeight > 0
+    ? box.inclusionHeight.toLocaleString()
     : "—"
   return (
     <article className="min-h-screen bg-black text-gray-200 px-4 py-12 md:py-20">
@@ -360,7 +392,7 @@ function SettlementPending({
         <div className="grid gap-3 md:gap-4 mb-12">
           <KV label="Note box" mono>
             <a
-              href={explorerBoxUrl(box.boxId, SAGE_NETWORK)}
+              href={explorerBoxUrl(box.boxId, network)}
               target="_blank"
               rel="noopener noreferrer"
               className="text-orange-300 hover:text-orange-200 font-mono break-all inline-flex items-center gap-1 group"
@@ -371,7 +403,7 @@ function SettlementPending({
           </KV>
           <KV label="Issuance tx" mono>
             <a
-              href={explorerUrl(box.transactionId, SAGE_NETWORK)}
+              href={explorerUrl(box.transactionId, network)}
               target="_blank"
               rel="noopener noreferrer"
               className="text-orange-300 hover:text-orange-200 font-mono break-all inline-flex items-center gap-1 group"
@@ -381,10 +413,10 @@ function SettlementPending({
             </a>
           </KV>
           <KV label="Value" mono>
-            <span className="text-orange-200">{nanoToErg(box.value)} {SAGE_NETWORK === "testnet" ? "testnet " : ""}ERG</span>
+            <span className="text-orange-200">{nanoToErg(box.value)} {network === "testnet" ? "testnet " : ""}ERG</span>
           </KV>
           <KV label="Block height" mono>
-            <span className="text-gray-200">{box.inclusionHeight.toLocaleString()}</span>
+            <span className="text-gray-200">{heightStr}</span>
           </KV>
           <KV label="Status" mono>
             <span className="text-yellow-300">unspent · awaiting Sage settle</span>
@@ -400,7 +432,13 @@ function SettlementPending({
   )
 }
 
-function NotASageReceipt({ txId }: { txId: string }) {
+function NotASageReceipt({
+  txId,
+  network,
+}: {
+  txId: string
+  network: "mainnet" | "testnet"
+}) {
   return (
     <article className="min-h-screen bg-black text-gray-300 px-4 py-20 flex items-center">
       <div className="max-w-md mx-auto text-center space-y-4 font-mono">
@@ -412,7 +450,7 @@ function NotASageReceipt({ txId }: { txId: string }) {
           different agent.
         </p>
         <a
-          href={explorerUrl(txId, SAGE_NETWORK)}
+          href={explorerUrl(txId, network)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-orange-500/40 text-orange-300 hover:bg-orange-500/5"
