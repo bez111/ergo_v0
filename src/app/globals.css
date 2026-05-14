@@ -1615,3 +1615,14 @@ html, body {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
+
+/* Hide scrollbars on horizontally-scrollable strips while keeping the
+   element scrollable. Used by the live network stats bar on the homepage
+   so the swipe-row doesn't show a visible scrollbar across the page. */
+.scrollbar-hide {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* legacy Edge / IE */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;                /* Chromium / Safari */
+}

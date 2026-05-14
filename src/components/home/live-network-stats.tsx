@@ -117,53 +117,67 @@ export function LiveNetworkStats() {
         transition={{ duration: 0.4, delay: 0.6 }}
         className="border-y border-white/8 bg-black/60 backdrop-blur-sm"
       >
+        {/* Outer flex pins the Ergo Watch CTA to the right at all viewport
+            widths and keeps it OUTSIDE the horizontally scrollable stat
+            strip. Previously the CTA sat inside the scroll container as
+            the last child — on touch devices the swipe to reach it was
+            captured as a scroll gesture instead of a tap, and on desktop
+            the link could fall into the overflow clip zone making the
+            click land on the container, not the anchor. */}
         <div className="container mx-auto px-4">
-          <div className="flex items-center overflow-x-auto scrollbar-hide">
-            {/* Live indicator */}
-            <div className="flex items-center gap-2 px-4 py-3 border-r border-white/10 shrink-0">
-              <Activity className="w-3.5 h-3.5 text-green-400" />
-              <span className="text-green-400 text-xs font-medium uppercase tracking-wider">Live</span>
+          <div className="flex items-stretch gap-2">
+            <div className="flex items-center overflow-x-auto scrollbar-hide flex-1 min-w-0">
+              {/* Live indicator */}
+              <div className="flex items-center gap-2 px-4 py-3 border-r border-white/10 shrink-0">
+                <Activity className="w-3.5 h-3.5 text-green-400" />
+                <span className="text-green-400 text-xs font-medium uppercase tracking-wider">Live</span>
+              </div>
+
+              <StatCard
+                icon={Blocks}
+                label="Block height"
+                value={stats.height.toLocaleString()}
+                live
+              />
+              <StatCard
+                icon={TrendingUp}
+                label="Transactions"
+                value={formatNumber(stats.totalTxs)}
+              />
+              <StatCard
+                icon={Activity}
+                label="Avg tx/day"
+                value={stats.avgTxPerDay.toLocaleString()}
+              />
+              <StatCard
+                icon={Zap}
+                label="Hash rate"
+                value={`${stats.hashRateTH} TH/s`}
+              />
+              <StatCard
+                icon={Coins}
+                label="Circulating"
+                value={`${formatNumber(stats.supplyERG)} ERG`}
+                sub={`of ${formatNumber(MAX_SUPPLY)} max`}
+              />
+              <StatCard
+                icon={RefreshCw}
+                label="Uptime"
+                value={`${stats.uptimeDays.toLocaleString()} days`}
+                sub="since launch"
+              />
             </div>
 
-            <StatCard
-              icon={Blocks}
-              label="Block height"
-              value={stats.height.toLocaleString()}
-              live
-            />
-            <StatCard
-              icon={TrendingUp}
-              label="Transactions"
-              value={formatNumber(stats.totalTxs)}
-            />
-            <StatCard
-              icon={Activity}
-              label="Avg tx/day"
-              value={stats.avgTxPerDay.toLocaleString()}
-            />
-            <StatCard
-              icon={Zap}
-              label="Hash rate"
-              value={`${stats.hashRateTH} TH/s`}
-            />
-            <StatCard
-              icon={Coins}
-              label="Circulating"
-              value={`${formatNumber(stats.supplyERG)} ERG`}
-              sub={`of ${formatNumber(MAX_SUPPLY)} max`}
-            />
-            <StatCard
-              icon={RefreshCw}
-              label="Uptime"
-              value={`${stats.uptimeDays.toLocaleString()} days`}
-              sub="since launch"
-            />
+            {/* Pinned CTA — never inside the scroll container. Button-style
+                background + border so the hit area is unambiguous, with a
+                ≥44px effective touch target (px-4 + py-3 + text + icon). */}
             <Link
               href="/ergo-watch"
-              className="flex shrink-0 items-center gap-2 px-5 py-3 text-xs font-mono uppercase tracking-wider text-orange-400 transition-colors hover:text-orange-300"
+              aria-label="Open the Ergo Watch live network metrics dashboard"
+              className="flex shrink-0 items-center gap-2 self-stretch px-4 py-3 text-xs font-mono uppercase tracking-wider text-orange-400 border-l border-white/10 hover:text-orange-300 hover:bg-orange-500/10 active:bg-orange-500/20 focus-visible:outline-2 focus-visible:outline-orange-400 focus-visible:outline-offset-2 transition-colors"
             >
               <span>Ergo Watch</span>
-              <ArrowRight className="h-3.5 w-3.5" />
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
             </Link>
           </div>
         </div>
