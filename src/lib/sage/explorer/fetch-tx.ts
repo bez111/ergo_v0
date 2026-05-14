@@ -181,6 +181,11 @@ async function fetchBoxFromAddressList(
   // The address's unspent list is small (Sage's wallet, ≤ a few dozen
   // active Notes at any time) — full-scan is fine. Cached so successive
   // hits to nearby boxIds don't re-fetch.
+  //
+  // Note the field-name mismatch: the standalone /boxes/{id} endpoint
+  // returns `inclusionHeight`, but the address-scoped unspent listing
+  // returns `settlementHeight` / `creationHeight` instead. We map the
+  // latter to inclusionHeight so callers get a single shape.
   try {
     const res = await fetch(
       `${apiBase}/boxes/unspent/byAddress/${address}?limit=200`,
@@ -191,10 +196,11 @@ async function fetchBoxFromAddressList(
       items?: Array<{
         boxId: string
         transactionId: string
-        inclusionHeight: number
-        value: number
+        settlementHeight?: number
+        creationHeight?: number
+        value: number | string
         address: string
-        creationTimestamp?: number
+        spentTransactionId?: string | null
       }>
     }
     const lower = boxId.toLowerCase()
@@ -203,12 +209,12 @@ async function fetchBoxFromAddressList(
     return {
       boxId: hit.boxId,
       transactionId: hit.transactionId,
-      inclusionHeight: hit.inclusionHeight,
-      value: hit.value,
+      inclusionHeight: hit.settlementHeight ?? hit.creationHeight ?? 0,
+      value: typeof hit.value === "string" ? Number(hit.value) : hit.value,
       address: hit.address,
-      creationTimestamp: hit.creationTimestamp,
-      spent: false,
-      spentTransactionId: undefined,
+      creationTimestamp: undefined,
+      spent: !!hit.spentTransactionId,
+      spentTransactionId: hit.spentTransactionId ?? undefined,
     }
   } catch {
     return undefined
