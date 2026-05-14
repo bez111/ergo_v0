@@ -31,6 +31,7 @@ import {
   OutputBuilder,
   TransactionBuilder,
 } from "@fleet-sdk/core"
+import { SByte, SColl, SInt } from "@fleet-sdk/serializer"
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ENV_PATH = join(__dirname, ".env")
@@ -69,6 +70,11 @@ async function main() {
 
   if (args.has("--reserve")) {
     await createReserve(key, address)
+    return
+  }
+
+  if (args.has("--issue-note")) {
+    await issueTestNote(key, address)
     return
   }
 
@@ -334,6 +340,177 @@ function nanoToErg(nano) {
   const n = typeof nano === "bigint" ? nano : BigInt(nano)
   const erg = Number(n) / 1e9
   return erg.toFixed(9).replace(/\.?0+$/, "")
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// --issue-note : self-pay helper for end-to-end round-trip testing.
+//
+// Asks production Sage for a fresh quote (premium-trigger /code question),
+// extracts taskHash/receiverAddress/reserveBoxId/deadline/price, builds
+// the Note tx with the same registers ergo-agent-pay would emit
+// (R4=reserveBoxId, R5=expiryHeight, R6=taskHash), signs locally, submits,
+// and prints the resulting note_box_id ready for paste into the widget's
+// PaymentPanel.
+//
+// Self-pay: buyer wallet === Sage's wallet (same mnemonic). Sage
+// verifyPayment doesn't care who issued the Note, only that it matches
+// the agreement's predicate at the right reserve box.
+// ─────────────────────────────────────────────────────────────────────────────
+async function issueTestNote(key, address) {
+  const SAGE_BASE =
+    process.env.SAGE_BASE_URL ?? "https://www.ergoblockchain.org"
+  const PREMIUM_QUESTION =
+    process.env.SAGE_TEST_QUESTION ?? "/code show me a Fleet SDK example"
+
+  console.log("Issuing test Note for end-to-end Sage round-trip…")
+  console.log(`  buyer = seller  ${address}`)
+  console.log(`  via Sage at     ${SAGE_BASE}`)
+  console.log(`  question        "${PREMIUM_QUESTION}"`)
+  console.log("")
+
+  // 1. Get a fresh quote.
+  const quoteRes = await fetch(`${SAGE_BASE}/api/sage/quote`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ question: PREMIUM_QUESTION }),
+  })
+  if (!quoteRes.ok) {
+    throw new Error(`/api/sage/quote returned ${quoteRes.status}: ${await quoteRes.text()}`)
+  }
+  const quoteBody = await quoteRes.json()
+  if (!quoteBody.premium || !quoteBody.quote) {
+    throw new Error(`Sage didn't classify the question as premium: ${JSON.stringify(quoteBody)}`)
+  }
+  const quote = quoteBody.quote
+  console.log("  quote received:")
+  console.log(`    quoteId       ${quote.quoteId}`)
+  console.log(`    receiver      ${quote.receiverAddress}`)
+  console.log(`    reserve       ${quote.reserveBoxId}`)
+  console.log(`    taskHash      ${quote.taskHash}`)
+  console.log(`    price         ${quote.price} ERG`)
+  console.log(`    deadline      ${quote.deadline}`)
+  console.log("")
+
+  if (!/^[0-9a-f]{64}$/i.test(quote.reserveBoxId) || quote.reserveBoxId === "0".repeat(64)) {
+    throw new Error(
+      `Quote returned a placeholder reserve (${quote.reserveBoxId}). Run --reserve first and update SAGE_RESERVE_BOX_ID on Vercel.`,
+    )
+  }
+
+  // 2. Pull our funded UTXOs + chain height.
+  const utxos = await fetchUnspentBoxes(address)
+  if (utxos.length === 0) {
+    throw new Error(`No unspent boxes at ${address}. Fund via ${FAUCET_URL}.`)
+  }
+  const totalAvailable = utxos.reduce((s, b) => s + BigInt(b.value), 0n)
+  console.log(`  funder UTxOs    ${utxos.length}  (${nanoToErg(totalAvailable)} ERG total)`)
+
+  const height = await fetchHeight()
+  console.log(`  chain height    ${height}`)
+
+  // 3. Resolve the +N blocks deadline against current height.
+  const deadlineMatch = /^\+(\d+)\s+blocks?$/.exec(quote.deadline)
+  if (!deadlineMatch) {
+    throw new Error(`Quote has unexpected deadline shape: ${quote.deadline}`)
+  }
+  const expiryBlock = height + Number(deadlineMatch[1])
+  console.log(`  expiry block    ${expiryBlock}  (height + ${deadlineMatch[1]})`)
+
+  // 4. Note value in nanoERG.
+  const valueNano = BigInt(Math.round(Number(quote.price) * 1e9))
+
+  // 5. Build the Note output with R4=reserve, R5=expiry, R6=taskHash —
+  //    exactly the register layout ergo-agent-pay's buildNoteTx emits.
+  const noteOutput = new OutputBuilder(valueNano, quote.receiverAddress)
+    .setAdditionalRegisters({
+      R4: SColl(SByte, hexToBytes(quote.reserveBoxId)).toHex(),
+      R5: SInt(expiryBlock).toHex(),
+      R6: SColl(SByte, hexToBytes(quote.taskHash)).toHex(),
+    })
+
+  const builtTx = new TransactionBuilder(height)
+    .from(utxos)
+    .to(noteOutput)
+    .sendChangeTo(address)
+    .payMinFee()
+    .build()
+
+  // 6. Sign locally.
+  const prover = new Prover()
+  const signedTx = prover.signTransaction(builtTx, [key])
+  console.log(`  signed tx id    ${signedTx.id}`)
+
+  // 7. Submit to public testnet node.
+  const submitPayload =
+    typeof signedTx.toEIP12Object === "function"
+      ? signedTx.toEIP12Object()
+      : signedTx
+  const submitRes = await fetch(`${TESTNET_NODE}/transactions`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(submitPayload),
+  })
+  const submitBody = await submitRes.text()
+  if (!submitRes.ok) {
+    throw new Error(`Node rejected tx (${submitRes.status}): ${submitBody}`)
+  }
+  const txId = submitBody.replace(/^"|"$/g, "")
+  console.log(`  submitted       ${txId}`)
+  console.log(`  explorer        https://testnet.ergoplatform.com/transactions/${txId}`)
+  console.log("")
+
+  // 8. Poll for the Note box id (first output by convention).
+  console.log("Polling explorer for Note confirmation…")
+  let noteBoxId
+  for (let attempt = 0; attempt < 40; attempt++) {
+    const r = await fetch(`${TESTNET_API}/transactions/${txId}`)
+    if (r.ok) {
+      const tx = await r.json()
+      const note = tx.outputs?.[0]
+      if (note?.boxId) {
+        noteBoxId = note.boxId
+        break
+      }
+    }
+    process.stdout.write(".")
+    await sleep(15_000)
+  }
+  console.log("")
+
+  if (!noteBoxId) {
+    console.log("")
+    console.log("  Tx submitted but explorer hasn't indexed it yet. Check manually:")
+    console.log(`  curl -s ${TESTNET_API}/transactions/${txId} | jq`)
+    return
+  }
+
+  console.log("")
+  console.log("──────────────────────────────────────────────────────────────")
+  console.log("  Note issued — paste the box id into Sage's PaymentPanel")
+  console.log("──────────────────────────────────────────────────────────────")
+  console.log(`  note_box_id   ${noteBoxId}`)
+  console.log(`  value         ${nanoToErg(valueNano)} ERG`)
+  console.log(`  task hash     ${quote.taskHash}`)
+  console.log(`  expiry block  ${expiryBlock}`)
+  console.log(`  quoteId       ${quote.quoteId}`)
+  console.log("──────────────────────────────────────────────────────────────")
+  console.log("")
+  console.log("Now in the browser:")
+  console.log(`  1. Open ${SAGE_BASE}`)
+  console.log("  2. Click 'Ask Sage', send the same question:")
+  console.log(`        ${PREMIUM_QUESTION}`)
+  console.log("  3. PaymentPanel opens — paste the note_box_id above and Verify")
+  console.log("  4. Sage verifies on chain → premium answer streams back")
+  console.log("")
+}
+
+function hexToBytes(hex) {
+  if (hex.length % 2 !== 0) throw new Error(`hex string has odd length: ${hex}`)
+  const bytes = new Uint8Array(hex.length / 2)
+  for (let i = 0; i < bytes.length; i++) {
+    bytes[i] = parseInt(hex.slice(i * 2, i * 2 + 2), 16)
+  }
+  return bytes
 }
 
 await main()
