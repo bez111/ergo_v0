@@ -56,10 +56,13 @@ export default async function SageReceiptPage({ params }: ReceiptPageProps) {
 
   // The id can be either a settlement tx (settle() ran) or a Note box id
   // (settle deferred). Try tx first — that's the happy path; fall back
-  // to a box lookup so the page still renders something useful.
+  // to a box lookup so the page still renders something useful. fetchBox
+  // takes SAGE_ADDRESS as a fallback so unspent Note boxes that the
+  // standalone /boxes/{id} endpoint misses still resolve via the address
+  // unspent list.
   const txResult = await fetchTransaction(id, SAGE_NETWORK)
   if (!txResult.ok || !txResult.tx) {
-    const boxResult = await fetchBox(id, SAGE_NETWORK)
+    const boxResult = await fetchBox(id, SAGE_NETWORK, SAGE_ADDRESS ?? undefined)
     if (boxResult.ok && boxResult.box) {
       return <SettlementPending box={boxResult.box} />
     }

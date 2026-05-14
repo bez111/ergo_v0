@@ -110,10 +110,17 @@ export interface FetchBoxResult {
  * `id` param is a Note box id (settle deferred) rather than a settlement
  * tx id — lets the page show the canonical Note tx as the payment proof
  * even before redemption happens.
+ *
+ * The v1 testnet explorer's standalone `/boxes/{id}` endpoint only resolves
+ * SPENT outputs reliably — unspent ones often 404 even though they're
+ * indexed under `/boxes/unspent/byAddress/{addr}`. So when the standalone
+ * lookup misses and we have the seller address, we fall back to the
+ * address-scoped unspent list.
  */
 export async function fetchBox(
   boxId: string,
   network: "testnet" | "mainnet" = "testnet",
+  fallbackAddress?: string,
 ): Promise<FetchBoxResult> {
   if (!/^[0-9a-f]{64}$/i.test(boxId)) {
     return { ok: false, status: 400, error: "box_id must be 64-char hex" }
@@ -123,37 +130,88 @@ export async function fetchBox(
     const res = await fetch(`${base}/boxes/${boxId}`, {
       next: { revalidate: ONE_HOUR },
     })
-    if (res.status === 404) return { ok: false, status: 404, error: "box not found" }
-    if (!res.ok) return { ok: false, status: res.status, error: `explorer ${res.status}` }
-    const raw = (await res.json()) as {
-      boxId: string
-      transactionId: string
-      inclusionHeight: number
-      value: number
-      address: string
-      spentTransactionId?: string | null
-      creationTimestamp?: number
+    if (res.ok) {
+      const raw = (await res.json()) as {
+        boxId: string
+        transactionId: string
+        inclusionHeight: number
+        value: number
+        address: string
+        spentTransactionId?: string | null
+        creationTimestamp?: number
+      }
+      return {
+        ok: true,
+        status: 200,
+        box: {
+          boxId: raw.boxId,
+          transactionId: raw.transactionId,
+          inclusionHeight: raw.inclusionHeight,
+          value: raw.value,
+          address: raw.address,
+          creationTimestamp: raw.creationTimestamp,
+          spent: !!raw.spentTransactionId,
+          spentTransactionId: raw.spentTransactionId ?? undefined,
+        },
+      }
     }
-    return {
-      ok: true,
-      status: 200,
-      box: {
-        boxId: raw.boxId,
-        transactionId: raw.transactionId,
-        inclusionHeight: raw.inclusionHeight,
-        value: raw.value,
-        address: raw.address,
-        creationTimestamp: raw.creationTimestamp,
-        spent: !!raw.spentTransactionId,
-        spentTransactionId: raw.spentTransactionId ?? undefined,
-      },
+    if (res.status !== 404) {
+      return { ok: false, status: res.status, error: `explorer ${res.status}` }
     }
+    // 404 fallback — see header doc.
+    if (fallbackAddress) {
+      const found = await fetchBoxFromAddressList(boxId, fallbackAddress, base)
+      if (found) return { ok: true, status: 200, box: found }
+    }
+    return { ok: false, status: 404, error: "box not found" }
   } catch (err) {
     return {
       ok: false,
       status: 502,
       error: err instanceof Error ? err.message : "explorer fetch failed",
     }
+  }
+}
+
+async function fetchBoxFromAddressList(
+  boxId: string,
+  address: string,
+  apiBase: string,
+): Promise<BoxInfo | undefined> {
+  // The address's unspent list is small (Sage's wallet, ≤ a few dozen
+  // active Notes at any time) — full-scan is fine. Cached so successive
+  // hits to nearby boxIds don't re-fetch.
+  try {
+    const res = await fetch(
+      `${apiBase}/boxes/unspent/byAddress/${address}?limit=200`,
+      { next: { revalidate: 60 } },
+    )
+    if (!res.ok) return undefined
+    const body = (await res.json()) as {
+      items?: Array<{
+        boxId: string
+        transactionId: string
+        inclusionHeight: number
+        value: number
+        address: string
+        creationTimestamp?: number
+      }>
+    }
+    const lower = boxId.toLowerCase()
+    const hit = body.items?.find((b) => b.boxId.toLowerCase() === lower)
+    if (!hit) return undefined
+    return {
+      boxId: hit.boxId,
+      transactionId: hit.transactionId,
+      inclusionHeight: hit.inclusionHeight,
+      value: hit.value,
+      address: hit.address,
+      creationTimestamp: hit.creationTimestamp,
+      spent: false,
+      spentTransactionId: undefined,
+    }
+  } catch {
+    return undefined
   }
 }
 
