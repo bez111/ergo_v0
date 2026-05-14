@@ -8,6 +8,11 @@ export interface SageMessage {
   timestamp: number
   /** Tier the answer was served at — annotates assistant messages. */
   tier?: ChatTier
+  /** When this answer was paid for, the resulting receipt id (Note box id
+   *  or settlement tx). Surfaces a "view receipt" link under the message. */
+  receiptId?: string
+  /** Settlement tx id, if redemption actually settled. */
+  settlementTxId?: string
 }
 
 /** Set when /api/sage/chat returns 402 — widget should open the
@@ -91,6 +96,10 @@ export interface SendOpts {
   /** True when re-sending after a 402 → payment cycle. The user message
    *  is already in state; only a fresh assistant placeholder is appended. */
   resume?: boolean
+  /** Receipt id from successful payment — attached to the assistant
+   *  message so the bubble can render a "view receipt" link. */
+  receiptId?: string
+  settlementTxId?: string
 }
 
 export function useSageChat() {
@@ -148,6 +157,12 @@ export function useSageChat() {
       )
       .map((m) => ({ role: m.role, content: m.content }))
 
+    const placeholderWithReceipt: SageMessage = {
+      ...placeholder,
+      ...(opts.receiptId ? { receiptId: opts.receiptId } : {}),
+      ...(opts.settlementTxId ? { settlementTxId: opts.settlementTxId } : {}),
+    }
+
     setState((s) => {
       const baseMessages = isResume
         ? s.messages.filter(
@@ -161,7 +176,7 @@ export function useSageChat() {
         : [...s.messages, userMessage]
       return {
         ...s,
-        messages: [...baseMessages, placeholder],
+        messages: [...baseMessages, placeholderWithReceipt],
         isStreaming: true,
         error: null,
         paymentRequired: null,

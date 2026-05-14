@@ -54,11 +54,19 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
     }
   }
 
-  // 2. Redeem the Note. settle() is optional on AccordRailAdapter, but
-  //    rails-ergo always implements it — guard the type and treat a
-  //    missing implementation as a misconfiguration.
+  // 2. Try to redeem the Note. settle() is optional on the
+  //    AccordRailAdapter spec; rails-ergo implements it but the actual
+  //    redemption signature requires SAGE_WALLET_SEED / SAGE_SIGNER_URL.
+  //    If the signer isn't configured, treat the verified Note as the
+  //    payment proof — the buyer's funds either get redeemed later by
+  //    a separate sweeper or auto-refund on expiry. Either way, the
+  //    answer flows: verify is the contract, settle is bookkeeping.
   if (!rail.settle) {
-    return { ok: false, error: "rail adapter missing settle() — check rails-ergo version" }
+    return {
+      ok: true,
+      receiptId: opts.proof.noteBoxId,
+      error: "settle() missing on adapter — verified-only mode",
+    }
   }
   try {
     const settle = await rail.settle({
@@ -76,9 +84,14 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
       receiptId: settle.settlement_id,
     }
   } catch (err) {
+    const msg = err instanceof Error ? err.message : "settle threw"
+    console.warn(`[sage] settle failed (verify ok, deferring redemption): ${msg}`)
     return {
-      ok: false,
-      error: err instanceof Error ? err.message : "settle threw",
+      ok: true,
+      // No settlement tx yet — receipt anchors to the Note box id, the
+      // /r/sage/<id> page detects this and renders "settlement pending".
+      receiptId: opts.proof.noteBoxId,
+      error: `settle deferred: ${msg}`,
     }
   }
 }

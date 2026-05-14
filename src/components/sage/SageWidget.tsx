@@ -40,23 +40,32 @@ export function SageWidget() {
     }
   }, [paymentRequired, payment])
 
-  // Once payment lands, resume the chat with the token. payment.status
-  // transitions: paid → (we send) → idle is owned by the cancel/reset
-  // path; we leave the modal showing the success briefly via the
-  // PaymentPanel "PAID" view, then clear here.
+  // Once payment lands, resume the chat with the token AND attach the
+  // receipt id so the assistant bubble renders "view receipt →". We
+  // capture receiptId/settlementTxId from `payment` before reset() — the
+  // hook nulls them on reset, which would race the send() above.
   useEffect(() => {
     if (payment.status !== "paid" || !payment.paymentToken || !paymentRequired) return
     const token = payment.paymentToken
     const question = paymentRequired.question
-    // Small delay so the user sees the green "PAID" confirmation before
-    // we tear the panel down and stream the premium answer.
+    const receiptId = payment.receiptId ?? undefined
+    const settlementTxId = payment.settlementTxId ?? undefined
     const t = setTimeout(() => {
-      void send(question, { paymentToken: token, resume: true })
+      void send(question, { paymentToken: token, resume: true, receiptId, settlementTxId })
       payment.reset()
       clearPaymentRequired()
     }, 900)
     return () => clearTimeout(t)
-  }, [payment.status, payment.paymentToken, paymentRequired, send, payment, clearPaymentRequired])
+  }, [
+    payment.status,
+    payment.paymentToken,
+    payment.receiptId,
+    payment.settlementTxId,
+    paymentRequired,
+    send,
+    payment,
+    clearPaymentRequired,
+  ])
 
   // Auto-scroll to bottom on new content
   useEffect(() => {
@@ -212,6 +221,8 @@ export function SageWidget() {
                       role={m.role}
                       content={m.content}
                       tier={m.tier ?? (i === messages.length - 1 ? currentTier ?? undefined : undefined)}
+                      receiptId={m.receiptId}
+                      settlementTxId={m.settlementTxId}
                       streaming={isStreaming && i === messages.length - 1 && m.role === "assistant"}
                     />
                   ))
@@ -314,11 +325,15 @@ function MessageBubble({
   role,
   content,
   tier,
+  receiptId,
+  settlementTxId,
   streaming,
 }: {
   role: "user" | "assistant"
   content: string
   tier?: "free" | "premium"
+  receiptId?: string
+  settlementTxId?: string
   streaming?: boolean
 }) {
   if (role === "user") {
@@ -331,6 +346,10 @@ function MessageBubble({
     )
   }
 
+  // Receipt anchor: prefer settlement tx (full receipt), fall back to
+  // Note box id (settlement-pending receipt). Either resolves under
+  // /r/sage/<id>.
+  const receiptAnchor = settlementTxId ?? receiptId
   return (
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-1.5">
@@ -353,6 +372,17 @@ function MessageBubble({
           />
         )}
       </div>
+      {!streaming && receiptAnchor && (
+        <a
+          href={`/r/sage/${receiptAnchor}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="self-start mt-1.5 text-[10px] font-mono uppercase tracking-widest text-orange-400/80 hover:text-orange-300 inline-flex items-center gap-1 px-2 py-0.5 rounded border border-orange-500/20 hover:border-orange-500/50 hover:bg-orange-500/5 transition-colors"
+        >
+          <span>view receipt</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      )}
     </div>
   )
 }

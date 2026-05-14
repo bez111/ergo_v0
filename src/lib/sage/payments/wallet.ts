@@ -94,10 +94,14 @@ function buildSigner(): SignerFn {
   const seed = process.env.SAGE_WALLET_SEED
 
   if (remoteUrl) {
+    const token = process.env.SAGE_SIGNER_TOKEN
     return async (unsignedTx) => {
       const res = await fetch(remoteUrl, {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: {
+          "content-type": "application/json",
+          ...(token ? { authorization: `Bearer ${token}` } : {}),
+        },
         body: JSON.stringify({ unsignedTx }),
       })
       if (!res.ok) {
