@@ -1409,17 +1409,37 @@ li a[href] {
   background-attachment: local, local, scroll, scroll;
 }
 
-/* Mobile body comfort: keep large hero headings from breaking awkwardly */
-@media (max-width: 480px) {
-  h1, h2 {
+/* Mobile body comfort: keep headings from breaking awkwardly when
+   translated copy contains long un-hyphenatable tokens — German
+   compounds ("Maschine-zu-Maschine-Zahlungen", "Investitionsmöglich-
+   keiten"), URLs, addresses, etc. Applies to h1–h4 because card
+   sub-titles (h3/h4) are just as overflow-prone as hero headings. */
+@media (max-width: 640px) {
+  h1, h2, h3, h4 {
     text-wrap: balance;
     word-break: break-word;
     overflow-wrap: anywhere;
+    hyphens: auto;
   }
   /* Tighten extreme display sizes that don't cascade */
   .text-7xl { font-size: 3rem; line-height: 1.05; }
   .text-8xl { font-size: 3.5rem; line-height: 1.05; }
   .text-9xl { font-size: 4rem; line-height: 1.05; }
+}
+
+/* Buttons / CTAs: their translated label is often a single long token
+   ("Erweiterte Einstellungen", "Заинтересованы в решениях", etc.) and
+   the surrounding flex layout has no slack on narrow viewports. Allow
+   them to wrap or hyphenate rather than push the parent off-screen. */
+@media (max-width: 640px) {
+  button,
+  [role="button"],
+  a[class*="rounded"],
+  a[class*="bg-orange"],
+  a[class*="border"][class*="px-"] {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
 }
 
 /* Prevent body horizontal scroll caused by stray overflowing children */
