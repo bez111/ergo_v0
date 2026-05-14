@@ -221,28 +221,36 @@ async function createReserve(key, address) {
   console.log("")
 
   // 3. Build the unsigned tx — one output to ourselves, change back, min fee.
-  const unsignedTx = new TransactionBuilder(height)
+  //    .build() (default) returns the Fleet-internal ErgoUnsignedTransaction
+  //    that the Prover knows how to sign. .build("EIP-12") gives the wallet-
+  //    interchange shape — useful for sending to Nautilus, wrong here.
+  const builtTx = new TransactionBuilder(height)
     .from(utxos)
     .to(new OutputBuilder(RESERVE_VALUE_NANO, address))
     .sendChangeTo(address)
     .payMinFee()
-    .build("EIP-12")
+    .build()
 
   // 4. Sign locally with our derived key.
   const prover = new Prover()
   let signedTx
   try {
-    signedTx = prover.signTransaction(unsignedTx, [key])
+    signedTx = prover.signTransaction(builtTx, [key])
   } catch (err) {
     throw new Error(`Local signing failed: ${err instanceof Error ? err.message : String(err)}`)
   }
   console.log(`  signed tx id    ${signedTx.id}`)
 
-  // 5. Submit to a public testnet node.
+  // 5. Submit to a public testnet node. The node accepts the standard
+  //    JSON shape that SignedTransaction.toJSON() / toEIP12Object() emits.
+  const submitPayload =
+    typeof signedTx.toEIP12Object === "function"
+      ? signedTx.toEIP12Object()
+      : signedTx
   const submitRes = await fetch(`${TESTNET_NODE}/transactions`, {
     method: "POST",
     headers: { "content-type": "application/json" },
-    body: JSON.stringify(signedTx),
+    body: JSON.stringify(submitPayload),
   })
   const submitBody = await submitRes.text()
   if (!submitRes.ok) {
