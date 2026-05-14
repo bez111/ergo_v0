@@ -7,10 +7,10 @@
  */
 
 import { createErgoRailAdapter } from "@accord-protocol/rails-ergo"
-import type { ErgoNoteOps } from "@accord-protocol/rails-ergo"
 import type { SagePaymentProof, SageQuote, SageVerificationResult } from "./types"
 import { quoteToAgreement } from "./agreement"
 import { getSageAgent } from "./wallet"
+import { buildSageNoteOps } from "./note-ops"
 
 export interface VerifyOpts {
   quote: SageQuote
@@ -31,9 +31,12 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
   const agreement = quoteToAgreement(opts.quote, opts.question)
 
   const sellerAgent = getSageAgent()
-  // Same TS-private-but-runtime-public pattern as example 16 — see
-  // packages/accord-rails-ergo/README and example 16's seller/tool.ts.
-  const ops = sellerAgent as unknown as ErgoNoteOps
+  // buildSageNoteOps wraps ergo-agent-pay so the v1 explorer's object-
+  // shaped register response (R4 = { serializedValue, sigmaType, ... })
+  // is flattened to the hex string ergo-agent-pay's parser expects.
+  // Without it checkNote dies with "e.slice is not a function" and
+  // rails-ergo maps the error to NOTE_NOT_FOUND.
+  const ops = buildSageNoteOps(sellerAgent)
   const rail = createErgoRailAdapter({ ops })
 
   // 1. Verify the buyer's Note exists, is unredeemed, and matches the
