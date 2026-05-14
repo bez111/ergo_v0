@@ -5,14 +5,14 @@
  * payment modal hook (Sprint 2).
  */
 
-export { buildSageQuote, quoteToAgreement } from "./agreement.js"
-export { decidePremium } from "./gate.js"
-export { verifyAndSettle } from "./verify.js"
-export { getSageAgent, getSageWalletConfig } from "./wallet.js"
+export { buildSageQuote, quoteToAgreement } from "./agreement"
+export { decidePremium } from "./gate"
+export { verifyAndSettle } from "./verify"
+export { getSageAgent, getSageWalletConfig } from "./wallet"
 export type {
   SageQuote,
   SagePaymentProof,
   SageVerificationResult,
   PremiumDecision,
   PremiumReason,
-} from "./types.js"
+} from "./types"

@@ -8,9 +8,9 @@
 
 import { createErgoRailAdapter } from "@accord-protocol/rails-ergo"
 import type { ErgoNoteOps } from "@accord-protocol/rails-ergo"
-import type { SagePaymentProof, SageQuote, SageVerificationResult } from "./types.js"
-import { quoteToAgreement } from "./agreement.js"
-import { getSageAgent } from "./wallet.js"
+import type { SagePaymentProof, SageQuote, SageVerificationResult } from "./types"
+import { quoteToAgreement } from "./agreement"
+import { getSageAgent } from "./wallet"
 
 export interface VerifyOpts {
   quote: SageQuote

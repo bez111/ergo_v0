@@ -13,7 +13,7 @@
  * the first 100 users.
  */
 
-import type { PremiumDecision, PremiumReason } from "./types.js"
+import type { PremiumDecision, PremiumReason } from "./types"
 
 const PREMIUM_COMMANDS = ["/code", "/quote", "/build", "/deep", "/architect"]
 const CODE_REQUEST_HINTS = [

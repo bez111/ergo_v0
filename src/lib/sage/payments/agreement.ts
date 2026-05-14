@@ -9,8 +9,8 @@
 
 import { accordHashV0, type AccordAgreement } from "@accord-protocol/core"
 import { computeTaskHashAsync } from "ergo-agent-pay"
-import type { SageQuote } from "./types.js"
-import { getSageWalletConfig } from "./wallet.js"
+import type { SageQuote } from "./types"
+import { getSageWalletConfig } from "./wallet"
 
 const QUOTE_PRICE_ERG = "0.001"
 const QUOTE_TTL_SECONDS = 600
