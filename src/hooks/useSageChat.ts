@@ -136,7 +136,14 @@ export function useSageChat() {
 
       if (!res.ok || !res.body) {
         const text = await res.text().catch(() => "")
-        throw new Error(text || `HTTP ${res.status}`)
+        let friendly = text || `HTTP ${res.status}`
+        try {
+          const parsed = JSON.parse(text)
+          if (parsed && typeof parsed.error === "string") friendly = parsed.error
+        } catch {
+          // not JSON — keep raw text
+        }
+        throw new Error(friendly)
       }
 
       const reader = res.body.getReader()
