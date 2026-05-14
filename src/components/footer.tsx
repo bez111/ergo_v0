@@ -98,7 +98,7 @@ export function Footer() {
       ],
     },
     {
-      title: t("buildTitle") || "Build",
+      title: "Build",
       links: [
         { label: "Agent Economy", href: localizedPath("agent-economy") },
         { label: "Demos", href: localizedPath("demos") },
@@ -155,7 +155,7 @@ export function Footer() {
               <span className="font-mono font-bold text-lg text-primary tracking-wider">ERGO</span>
             </Link>
             <p className="text-sm text-gray-300 leading-relaxed">
-              {t("tagline") || "Money without masters. Programmable settlement for autonomous agents — censorship-resistant, deterministic, eUTXO-native."}
+              Money without masters. Programmable settlement for autonomous agents — censorship-resistant, deterministic, eUTXO-native.
             </p>
           </div>
 
