@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Send, RotateCcw, Sparkles } from "lucide-react"
 import { useSageChat } from "@/hooks/useSageChat"
+import { useSagePayment } from "@/hooks/useSagePayment"
 import { MessageBody } from "./MessageBody"
+import { PaymentPanel } from "./PaymentPanel"
 
 const STARTER_PROMPTS = [
   "What is the agent economy?",
@@ -18,13 +20,49 @@ export function SageWidget() {
   const [input, setInput] = useState("")
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
-  const { messages, isStreaming, send, cancel, reset } = useSageChat()
+  const {
+    messages,
+    isStreaming,
+    paymentRequired,
+    currentTier,
+    send,
+    cancel,
+    reset,
+    clearPaymentRequired,
+  } = useSageChat()
+  const payment = useSagePayment()
+
+  // When chat flags a question as premium-required, kick off the quote
+  // request immediately so the panel renders the price + address.
+  useEffect(() => {
+    if (paymentRequired && payment.status === "idle") {
+      void payment.requestQuote(paymentRequired.question)
+    }
+  }, [paymentRequired, payment])
+
+  // Once payment lands, resume the chat with the token. payment.status
+  // transitions: paid → (we send) → idle is owned by the cancel/reset
+  // path; we leave the modal showing the success briefly via the
+  // PaymentPanel "PAID" view, then clear here.
+  useEffect(() => {
+    if (payment.status !== "paid" || !payment.paymentToken || !paymentRequired) return
+    const token = payment.paymentToken
+    const question = paymentRequired.question
+    // Small delay so the user sees the green "PAID" confirmation before
+    // we tear the panel down and stream the premium answer.
+    const t = setTimeout(() => {
+      void send(question, { paymentToken: token, resume: true })
+      payment.reset()
+      clearPaymentRequired()
+    }, 900)
+    return () => clearTimeout(t)
+  }, [payment.status, payment.paymentToken, paymentRequired, send, payment, clearPaymentRequired])
 
   // Auto-scroll to bottom on new content
   useEffect(() => {
     if (!scrollRef.current) return
     scrollRef.current.scrollTop = scrollRef.current.scrollHeight
-  }, [messages, isStreaming])
+  }, [messages, isStreaming, paymentRequired])
 
   // Focus input when widget opens
   useEffect(() => {
@@ -143,12 +181,29 @@ export function SageWidget() {
                 </div>
               </div>
 
-              {/* Messages area */}
+              {/* Messages area — replaced by PaymentPanel when premium-required */}
               <div
                 ref={scrollRef}
                 className="flex-1 overflow-y-auto px-4 py-4 space-y-4 scroll-smooth"
               >
-                {messages.length === 0 ? (
+                {paymentRequired ? (
+                  <PaymentPanel
+                    question={paymentRequired.question}
+                    rationale={paymentRequired.rationale}
+                    status={payment.status}
+                    quote={payment.quote}
+                    error={payment.error}
+                    receiptId={payment.receiptId}
+                    settlementTxId={payment.settlementTxId}
+                    onSubmitPayment={(boxId) =>
+                      void payment.submitPayment(boxId, paymentRequired.question)
+                    }
+                    onCancel={() => {
+                      payment.reset()
+                      clearPaymentRequired()
+                    }}
+                  />
+                ) : messages.length === 0 ? (
                   <EmptyState onPick={(p) => onSend(p)} />
                 ) : (
                   messages.map((m, i) => (
@@ -156,19 +211,22 @@ export function SageWidget() {
                       key={i}
                       role={m.role}
                       content={m.content}
+                      tier={m.tier ?? (i === messages.length - 1 ? currentTier ?? undefined : undefined)}
                       streaming={isStreaming && i === messages.length - 1 && m.role === "assistant"}
                     />
                   ))
                 )}
               </div>
 
-              {/* Composer */}
+              {/* Composer — hidden during the payment flow so the user
+                  can't fire a parallel free question while paying for
+                  the previous one. */}
               <form
                 onSubmit={(e) => {
                   e.preventDefault()
                   onSend()
                 }}
-                className="border-t border-orange-500/20 p-3 bg-black/80"
+                className={`border-t border-orange-500/20 p-3 bg-black/80 ${paymentRequired ? "hidden" : ""}`}
               >
                 <div className="flex items-end gap-2">
                   <span className="font-mono text-orange-400 text-sm pb-3 select-none" aria-hidden="true">
@@ -217,7 +275,7 @@ export function SageWidget() {
                   )}
                 </div>
                 <div className="mt-2 px-1 text-[10px] font-mono uppercase tracking-widest text-gray-600">
-                  Sage answers from indexed Ergo docs · Free tier · Beta
+                  Free tier · Deep questions promote to premium · Beta
                 </div>
               </form>
             </motion.div>
@@ -255,10 +313,12 @@ function EmptyState({ onPick }: { onPick: (prompt: string) => void }) {
 function MessageBubble({
   role,
   content,
+  tier,
   streaming,
 }: {
   role: "user" | "assistant"
   content: string
+  tier?: "free" | "premium"
   streaming?: boolean
 }) {
   if (role === "user") {
@@ -278,6 +338,11 @@ function MessageBubble({
           sage
         </span>
         <span className="font-mono text-xs text-gray-700">$</span>
+        {tier === "premium" && (
+          <span className="ml-1 inline-flex items-center px-1.5 py-px rounded border border-orange-500/40 bg-orange-500/10 text-[9px] uppercase tracking-widest text-orange-300 font-mono">
+            premium · paid
+          </span>
+        )}
       </div>
       <div className="text-sm text-gray-200 leading-relaxed font-mono">
         <MessageBody text={content} />
