@@ -15,27 +15,26 @@
  *   → 200 { "signedTx": <signed tx> }
  *   → 401 missing/invalid token
  *   → 403 policy violation (tx exceeds cap or pays unwhitelisted addr)
- *   → 422 signing failed (signer error from fleet-sdk)
+ *   → 422 signing failed
  *
  * See README.md for setup, ngrok / cloudflared / Tailscale Funnel
  * exposure paths, and how to wire SAGE_SIGNER_URL on Vercel.
+ *
+ * Signing implementation: @fleet-sdk/wallet's Prover accepts the
+ * EIP-12 unsigned shape directly (per @fleet-sdk/wallet:
+ * `type UnsignedTransaction = EIP12UnsignedTransaction | ErgoUnsignedTransaction`),
+ * so we don't need a Fleet-internal conversion step.
  */
 
 import "dotenv/config"
 import http from "node:http"
 import crypto from "node:crypto"
-// Fleet SDK references — wire these in once you've validated the service:
-//   import { Mnemonic } from "@fleet-sdk/wallet";
-//   import { ErgoUnsignedTransaction } from "@fleet-sdk/core";
-//   import { TransactionBuilder, SAFE_MIN_BOX_VALUE } from "@fleet-sdk/core";
-// The Fleet SDK signing API surface evolves between minor releases; the
-// final implementation here intentionally stays as a clear scaffold so
-// you can pin the exact version against your @fleet-sdk/wallet revision
-// without reverse-engineering this file.
+import { ErgoHDKey, Prover } from "@fleet-sdk/wallet"
 
 const PORT = Number(process.env.PORT ?? 8911)
 const TOKEN = process.env.SAGE_SIGNER_TOKEN ?? ""
 const SEED = process.env.SAGE_WALLET_SEED ?? ""
+const PASSPHRASE = process.env.SAGE_WALLET_PASSPHRASE ?? ""
 const NETWORK = (process.env.SAGE_NETWORK ?? "testnet").toLowerCase()
 const MAX_SINGLE_TX = BigInt(process.env.SAGE_MAX_SINGLE_TX_NANOERG ?? "10000000")
 const WHITELIST = (process.env.SAGE_WHITELIST_ADDRS ?? "")
@@ -52,11 +51,16 @@ if (!SEED) {
   process.exit(1)
 }
 
-console.log(`Sage signer starting…`)
+// Derive the HD key once at boot — the Prover signs many txs with it.
+const KEY = await ErgoHDKey.fromMnemonic(SEED, PASSPHRASE ? { passphrase: PASSPHRASE } : undefined)
+
+console.log("Sage signer starting…")
 console.log(`  network: ${NETWORK}`)
 console.log(`  port: ${PORT}`)
 console.log(`  policy: max ${MAX_SINGLE_TX} nanoERG/tx, ${WHITELIST.length} whitelisted addr(s)`)
 console.log()
+
+const prover = new Prover()
 
 const server = http.createServer(async (req, res) => {
   if (req.method !== "POST" || req.url !== "/sign") {
@@ -77,7 +81,7 @@ const server = http.createServer(async (req, res) => {
     return
   }
 
-  // Parse body.
+  // Read body (small — single tx, sub-100KB even with many inputs).
   let raw = ""
   req.on("data", (c) => (raw += c))
   req.on("end", async () => {
@@ -99,13 +103,9 @@ const server = http.createServer(async (req, res) => {
     // Policy: spending cap.
     const totalSpend = sumOutputValue(unsigned)
     if (totalSpend > MAX_SINGLE_TX) {
-      audit("REJECT", "tx exceeds spending cap", { totalSpend, cap: String(MAX_SINGLE_TX) })
+      audit("REJECT", "tx exceeds spending cap", { totalSpend: String(totalSpend), cap: String(MAX_SINGLE_TX) })
       res.writeHead(403, { "content-type": "application/json" })
-      res.end(
-        JSON.stringify({
-          error: `tx total ${totalSpend} > cap ${MAX_SINGLE_TX}`,
-        }),
-      )
+      res.end(JSON.stringify({ error: `tx total ${totalSpend} > cap ${MAX_SINGLE_TX}` }))
       return
     }
 
@@ -122,10 +122,10 @@ const server = http.createServer(async (req, res) => {
     }
 
     try {
-      const signed = await signUnsignedTx(unsigned)
-      audit("SIGN", "ok", { txId: signed?.id ?? "(unknown)" })
+      const signed = prover.signTransaction(unsigned, [KEY])
+      audit("SIGN", "ok", { txId: signed?.id ?? "(unknown)", spend: String(totalSpend) })
       res.writeHead(200, { "content-type": "application/json" })
-      res.end(JSON.stringify({ signedTx: signed }))
+      res.end(stringifyWithBigInts({ signedTx: signed }))
     } catch (err) {
       const msg = err instanceof Error ? err.message : "sign failed"
       audit("SIGN_FAIL", msg)
@@ -133,34 +133,23 @@ const server = http.createServer(async (req, res) => {
       res.end(JSON.stringify({ error: msg }))
     }
   })
+
+  req.on("error", (err) => {
+    audit("SIGN_FAIL", `req error: ${err instanceof Error ? err.message : err}`)
+    res.writeHead(400, { "content-type": "application/json" })
+    res.end(JSON.stringify({ error: "request error" }))
+  })
 })
 
 server.listen(PORT, () => {
   console.log(`✓ ready on http://localhost:${PORT}/sign`)
-  console.log(`  expose via: ngrok http ${PORT}  (or cloudflared / Tailscale Funnel)`)
+  console.log(`  expose via: cloudflared tunnel --url http://localhost:${PORT}`)
   console.log(`  set Vercel: SAGE_SIGNER_URL=https://<tunnel>/sign`)
   console.log(`              SAGE_SIGNER_TOKEN=<same as in .env>`)
+  console.log()
 })
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Signing — Fleet SDK wiring stub.
-//
-// This is the only function that needs Fleet SDK; it stays a clean stub
-// so the version you pin can match your @fleet-sdk/wallet revision.
-// Reference: https://github.com/fleet-sdk/fleet/tree/main/packages/wallet
-//
-// Pseudocode:
-//   1. const mnemonic = await Mnemonic.fromPhrase(SEED, PASSPHRASE);
-//   2. const seed = mnemonic.toSeed();
-//   3. const wallet = HDKey.fromSeed(seed).derive(ERGO_DERIVATION_PATH);
-//   4. const prover = new TransactionProver(wallet.privateKey);
-//   5. return await prover.signTransaction(unsignedTx);
-// ─────────────────────────────────────────────────────────────────────────────
-async function signUnsignedTx(_unsigned) {
-  throw new Error(
-    "signUnsignedTx is a stub — see scripts/sage-signer/signer.mjs and the README's 'Implementation' section to wire @fleet-sdk/wallet against your testnet wallet.",
-  )
-}
+// ── helpers ──────────────────────────────────────────────────────────────────
 
 function sumOutputValue(tx) {
   try {
@@ -178,6 +167,18 @@ function uniqueRecipients(tx) {
   } catch {
     return []
   }
+}
+
+/**
+ * JSON.stringify that handles BigInt — Fleet SDK's SignedTransaction
+ * has bigint values on outputs. The Ergo node accepts decimal-string
+ * values, so we coerce on the way out.
+ */
+function stringifyWithBigInts(obj) {
+  return JSON.stringify(obj, (_key, value) => {
+    if (typeof value === "bigint") return value.toString()
+    return value
+  })
 }
 
 function audit(verdict, message, detail) {
