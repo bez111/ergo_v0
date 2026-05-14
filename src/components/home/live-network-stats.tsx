@@ -168,13 +168,21 @@ export function LiveNetworkStats() {
               />
             </div>
 
-            {/* Pinned CTA — never inside the scroll container. Button-style
-                background + border so the hit area is unambiguous, with a
-                ≥44px effective touch target (px-4 + py-3 + text + icon). */}
+            {/* Pinned CTA — never inside the scroll container.
+                Reliability fixes layered in:
+                - min-h-[44px] meets the iOS HIG tap-target minimum.
+                - touch-action: manipulation kills the 300ms double-tap
+                  zoom delay so the tap registers immediately.
+                - translateZ(0) forces its own compositing layer; without
+                  it the parent's backdrop-blur-sm has a known WebKit bug
+                  that swallows pointer events on grandchildren.
+                - relative + z-10 puts it above any framer-motion ghosts
+                  from the parent's enter animation. */}
             <Link
               href="/ergo-watch"
               aria-label="Open the Ergo Watch live network metrics dashboard"
-              className="flex shrink-0 items-center gap-2 self-stretch px-4 py-3 text-xs font-mono uppercase tracking-wider text-orange-400 border-l border-white/10 hover:text-orange-300 hover:bg-orange-500/10 active:bg-orange-500/20 focus-visible:outline-2 focus-visible:outline-orange-400 focus-visible:outline-offset-2 transition-colors"
+              style={{ touchAction: "manipulation", transform: "translateZ(0)" }}
+              className="relative z-10 flex shrink-0 items-center gap-2 self-stretch min-h-[44px] px-4 py-3 text-xs font-mono uppercase tracking-wider text-orange-400 border-l border-white/10 hover:text-orange-300 hover:bg-orange-500/10 active:bg-orange-500/20 focus-visible:outline-2 focus-visible:outline-orange-400 focus-visible:outline-offset-2 transition-colors"
             >
               <span>Ergo Watch</span>
               <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
