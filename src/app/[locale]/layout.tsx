@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { notFound } from 'next/navigation';
 import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n/request';
 import { getClientMessages, getTranslations } from '@/lib/messages';
@@ -10,6 +11,13 @@ import { NextIntlClientProvider } from 'next-intl';
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { siteConfig } from "@/config/site-config";
+
+// Sage chat widget — client-only, lazy-loaded so it doesn't pull
+// framer-motion + the chat hook into the initial bundle.
+const SageWidget = dynamic(
+  () => import("@/components/sage/SageWidget").then((m) => m.SageWidget),
+  { ssr: true },
+);
 
 
 interface LocaleLayoutProps {
@@ -144,6 +152,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
               </main>
               <Footer />
             </div>
+            <SageWidget />
           </ErrorBoundary>
         </ThemeProvider>
       </NextIntlClientProvider>
