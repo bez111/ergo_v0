@@ -91,13 +91,15 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     redirect(clean)
   }
 
-  // Featured: pick the newest post explicitly flagged `featured: true` so we
-  // can promote a strategic article (e.g. the latest agent-economy update)
-  // instead of always defaulting to whatever sits first in the array.
+  // Featured: prefer a `pinned` cornerstone post (the manifesto) over the
+  // newest `featured` update. Pinning means the post stays in the hero
+  // regardless of date — meant for evergreen strategic pieces, not for
+  // recurring updates.
+  const pinnedPost = blogPosts.find((post) => post.pinned)
   const featuredCandidates = blogPosts
-    .filter((post) => post.featured)
+    .filter((post) => post.featured && !post.pinned)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  const featuredPost = featuredCandidates[0] ?? blogPosts[0] ?? null
+  const featuredPost = pinnedPost ?? featuredCandidates[0] ?? blogPosts[0] ?? null
 
   const trendingPosts = blogPosts
     .filter((post) => post.trending)

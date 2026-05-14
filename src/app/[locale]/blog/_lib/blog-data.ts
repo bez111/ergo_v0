@@ -24,6 +24,10 @@ export interface BlogPost {
   tags?: string[]
   trending?: boolean // For trending section
   featured?: boolean // For hero section
+  /** When true, this post is pinned to the featured slot regardless of
+   *  date. Use for cornerstone pieces (the manifesto) that should not
+   *  drop out of the hero just because a newer update was published. */
+  pinned?: boolean
   difficulty?: 'Beginner' | 'Intermediate' | 'Advanced'
   shares?: number // Social proof
 }
@@ -303,6 +307,7 @@ export const blogPosts: BlogPost[] = [
     image: '/og/blog/agent-economy-manifesto.png',
     tags: ['Agent Economy', 'AI agents', 'programmable money', 'manifesto', 'Ergo'],
     featured: true,
+    pinned: true,
     trending: true,
     difficulty: 'Intermediate',
     shares: 0
