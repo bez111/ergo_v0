@@ -156,8 +156,11 @@ export async function POST(req: Request) {
   }
 
   // Premium-eligible question without a token — return 402 so the widget
-  // knows to fetch a quote and open the payment modal.
-  if (!premium) {
+  // knows to fetch a quote and open the payment modal. ONLY if the
+  // Sage wallet is actually configured on this deployment; otherwise
+  // gracefully serve the free tier so the chat keeps working before
+  // testnet env vars are provisioned.
+  if (!premium && process.env.SAGE_WALLET_ADDRESS && process.env.SAGE_RESERVE_BOX_ID) {
     const decision = decidePremium(latestUser, messages)
     if (decision.isPremium) {
       return new Response(
