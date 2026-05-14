@@ -8,6 +8,7 @@
  */
 
 import { NextRequest } from "next/server"
+import { canonicalizeQuestion } from "@/lib/sage/payments/agreement"
 import { verifyAndSettle } from "@/lib/sage/payments/verify"
 import { hashQuestionForToken, signPaymentToken } from "@/lib/sage/payments/token"
 import { checkRateLimit, clientKey } from "@/lib/sage/rate-limit"
@@ -57,10 +58,12 @@ export async function POST(req: NextRequest) {
       quote,
       question,
       proof: { quoteId: quote.quoteId, noteBoxId },
-      // Stand-in task output digest. Sprint 3 will replace this with a
-      // real digest of the answer about-to-be-served, so the verifier
-      // receipt actually attests to what the buyer received.
-      taskOutputDigest: hashQuestionForToken(question),
+      // task_output is the bytes whose blake2b256 hash equals the
+      // Note's R6 (taskHash). The Note was issued with
+      //   R6 = blake2b256(canonicalize(question))
+      // so we send the same canonical string here. NOT the HMAC token-
+      // binding hash — that's a different surface entirely.
+      taskOutputDigest: canonicalizeQuestion(question),
     })
   } catch (err) {
     return jsonError(500, err instanceof Error ? err.message : "verifyAndSettle threw")

@@ -87,16 +87,22 @@ export function quoteToAgreement(quote: SageQuote, question: string): AccordAgre
   }
 }
 
-function canonicalize(question: string): string {
-  // Stable canonicalization so the same question (modulo whitespace +
-  // trailing punctuation) hashes to the same task hash. Matters because
-  // a user might re-issue identical-ish questions across sessions.
+/**
+ * Stable canonicalization so the same question (modulo whitespace +
+ * trailing punctuation) hashes to the same task hash. Exported because
+ * /api/sage/verify-payment needs the SAME canonical bytes to send as
+ * `task_output` — rails-ergo verifies blake2b256(task_output) === R6.
+ */
+export function canonicalizeQuestion(question: string): string {
   return question
     .trim()
     .replace(/\s+/g, " ")
     .replace(/[.!?]+$/, "")
     .toLowerCase()
 }
+
+// Local alias so the rest of the file keeps reading naturally.
+const canonicalize = canonicalizeQuestion
 
 function generateQuoteId(question: string): string {
   // Quote id is hash(question + minute-bucket). Collisions are fine —
