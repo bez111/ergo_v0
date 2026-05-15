@@ -226,8 +226,18 @@ export default async function SageReceiptPage({ params }: ReceiptPageProps) {
           </div>
         </section>
 
-        <footer className="text-xs text-gray-600 font-mono">
-          The question and the answer aren&apos;t stored on chain. Only the settlement is. Sage&apos;s server logs hold neither user identity nor IP.
+        <footer className="text-xs text-gray-600 font-mono space-y-3">
+          <p>
+            The question and the answer aren&apos;t stored on chain. Only the settlement is. Sage&apos;s server logs hold neither user identity nor IP.
+          </p>
+          <p>
+            <Link
+              href="/agent-economy#sage-activity"
+              className="text-orange-400 hover:text-orange-300 underline decoration-orange-500/40"
+            >
+              See all recent Sage settlements →
+            </Link>
+          </p>
         </footer>
       </div>
     </article>

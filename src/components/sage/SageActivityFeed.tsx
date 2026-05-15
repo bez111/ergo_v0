@@ -109,7 +109,7 @@ export function SageActivityFeed() {
   const network = data?.network ?? "testnet"
 
   return (
-    <section className="py-24 border-t border-white/5">
+    <section id="sage-activity" className="py-24 border-t border-white/5 scroll-mt-24">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="flex items-center gap-3 mb-3">
           <div className="text-[10px] uppercase tracking-[0.25em] text-orange-400 font-mono">
