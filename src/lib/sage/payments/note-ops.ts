@@ -82,6 +82,23 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
         return async (boxId: string) =>
           flattenRegisters((await orig.call(target, boxId)) as RawBox)
       }
+      if (prop === "getHeight") {
+        // ergo-agent-pay@0.3.0 reads `data.fullHeight` from /api/v1/info,
+        // but the live testnet explorer returns the field as `height`
+        // (the v1 schema renamed it). Without this override getHeight
+        // returns undefined, TransactionBuilder gets undefined creation
+        // height, the auto-generated change box inherits undefined,
+        // and Fleet's .build() throws UndefinedCreationHeight (which
+        // surfaces as the misleading 'Minting context is undefined'
+        // message). Hit /info ourselves and return the right field.
+        return async () => {
+          const apiBase = "https://api-testnet.ergoplatform.com/api/v1"
+          const r = await fetch(`${apiBase}/info`)
+          if (!r.ok) throw new Error(`explorer /info ${r.status}`)
+          const data = (await r.json()) as { height?: number; fullHeight?: number }
+          return data.fullHeight ?? data.height ?? 0
+        }
+      }
       if (prop === "getUnspentBoxes") {
         // Sage's wallet holds Notes (the unredeemed payments themselves)
         // alongside the fee-coverage UTxOs. ergo-agent-pay's redeemNote
