@@ -55,19 +55,27 @@ function flattenRegisters(box: RawBox): RawBox {
  */
 export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
   // Reach into the private network client. ErgoAgentPay's NetworkClient
-  // has many methods beyond getBox / getHeight — getUnspentBoxes,
-  // submitTx, etc. — that ergo-agent-pay needs internally for redeem
-  // and issuance. Earlier we replaced `network` with a plain object
-  // exposing only the two we cared about, which broke redeemNote with
-  // "this.network.getUnspentBoxes is not a function".
+  // has many methods (getBox, getHeight, getUnspentBoxes, submitTx, …)
+  // that ergo-agent-pay needs internally for verify + redeem.
   //
-  // Fix: wrap the network instance with a Proxy that overrides ONLY
-  // getBox (with the v1-explorer register-format normalizer) and
-  // forwards every other method binding `this` correctly so the
-  // original NetworkClient methods continue to work.
-  const network = (agent as unknown as { network: Record<string, unknown> }).network
+  // We need to intercept ONLY getBox (to flatten the v1-explorer object-
+  // format register response that ergo-agent-pay@0.3 can't parse) and
+  // pass everything else through unchanged.
+  //
+  // A Proxy on the *agent* object doesn't work for this — ergo-agent-pay's
+  // own methods access `this.network` directly via the prototype-bound
+  // `this`, which is the original agent (target of the Proxy), not the
+  // Proxy itself. The Proxy's `get` handler is therefore never invoked
+  // for internal accesses.
+  //
+  // Instead, swap the agent's `network` field in-place with a Proxy that
+  // overrides getBox and forwards everything else with bound `this`.
+  // Internal `this.network.X(...)` calls now hit the wrapped network
+  // directly because the field reference points at the wrapper.
+  const networkCarrier = agent as unknown as { network: Record<string, unknown> }
+  const originalNetwork = networkCarrier.network
 
-  const wrappedNetwork = new Proxy(network, {
+  const wrappedNetwork = new Proxy(originalNetwork, {
     get(target, prop, receiver) {
       if (prop === "getBox") {
         const orig = target.getBox as (id: string) => Promise<unknown>
@@ -75,21 +83,16 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
           flattenRegisters((await orig.call(target, boxId)) as RawBox)
       }
       const value = Reflect.get(target, prop, receiver)
-      return typeof value === "function" ? value.bind(target) : value
+      return typeof value === "function" ? (value as (...a: unknown[]) => unknown).bind(target) : value
     },
   })
 
-  // Outer Proxy on the agent to swap in the wrapped network. Other
-  // properties pass through with `this` preserved.
-  const wrappedAgent: typeof agent = new Proxy(agent, {
-    get(target, prop, receiver) {
-      if (prop === "network") return wrappedNetwork
-      const value = Reflect.get(target, prop, receiver)
-      return typeof value === "function" ? value.bind(target) : value
-    },
-  })
+  // Mutate the field. ergo-agent-pay's methods will see the wrapper from
+  // here on. Idempotent — wrapping a wrapper is a no-op since the inner
+  // Proxy still forwards correctly.
+  networkCarrier.network = wrappedNetwork
 
   // Cast through unknown — same TS-private-but-runtime-public quirk as
   // example 16's seller/tool.ts.
-  return wrappedAgent as unknown as ErgoNoteOps
+  return agent as unknown as ErgoNoteOps
 }
