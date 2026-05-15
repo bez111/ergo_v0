@@ -88,7 +88,9 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
     }
   } catch (err) {
     const msg = err instanceof Error ? err.message : "settle threw"
+    const stack = err instanceof Error && err.stack ? err.stack.split("\n").slice(0, 8).join(" | ") : "(no stack)"
     console.warn(`[sage] settle failed (verify ok, deferring redemption): ${msg}`)
+    console.warn(`[sage] settle stack: ${stack}`)
     return {
       ok: true,
       // No settlement tx yet — receipt anchors to the Note box id, the
