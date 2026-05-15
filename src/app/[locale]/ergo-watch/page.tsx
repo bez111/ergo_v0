@@ -1093,8 +1093,14 @@ export default async function ErgoWatchPage() {
                   </div>
                   <div className="mt-7 flex flex-wrap gap-3">
                     <Link
-                      href="/demos/x402-accord-gateway"
+                      href="/ergo-watch/agents"
                       className="inline-flex items-center gap-2 rounded-xl border border-orange-500/35 bg-orange-500/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-orange-300 transition-colors hover:bg-orange-500/15"
+                    >
+                      Agent registry →
+                    </Link>
+                    <Link
+                      href="/demos/x402-accord-gateway"
+                      className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 font-mono text-xs uppercase tracking-wider text-neutral-300 transition-colors hover:border-orange-500/35 hover:text-orange-300"
                     >
                       x402 gateway demo
                     </Link>
