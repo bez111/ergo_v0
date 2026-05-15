@@ -226,3 +226,109 @@ export function explorerBoxUrl(boxId: string, network: "testnet" | "mainnet" = "
     ? `https://testnet.ergoplatform.com/boxes/${boxId}`
     : `https://explorer.ergoplatform.com/boxes/${boxId}`
 }
+
+export type SageActivityType = "settlement" | "issuance" | "transfer"
+
+export interface SageActivityEvent {
+  txId: string
+  blockHeight: number
+  /** ms epoch */
+  timestamp: number
+  type: SageActivityType
+  /** nanoERG flowing INTO Sage's address from this tx (sum of outputs to Sage) */
+  inflowNanoErg: number
+  /** First input box that carries Note-shape registers (settlement payload). */
+  noteBoxId?: string
+}
+
+export interface SageActivityResult {
+  ok: boolean
+  network: "testnet" | "mainnet"
+  receiver: string
+  total: number
+  events: SageActivityEvent[]
+  error?: string
+}
+
+/**
+ * Fetch the most recent on-chain activity touching Sage's seller address
+ * and classify each tx as a settlement (a Note was redeemed), an
+ * issuance (the wallet issued a Note to itself / Reserve creation), or
+ * a plain transfer. Used by /api/sage/activity to power the live feed.
+ *
+ * The classifier is deliberately heuristic — the explorer doesn't tell us
+ * "this is a settle"; we infer from input shape:
+ *  - any input with R4 + R5 + R6 registers → a Note was the input → settlement
+ *  - else → issuance / transfer (good enough for the feed)
+ */
+export async function fetchSageActivity(
+  receiver: string,
+  limit: number = 10,
+  network: "testnet" | "mainnet" = "testnet",
+): Promise<SageActivityResult> {
+  const base = network === "testnet" ? TESTNET_API : MAINNET_API
+  try {
+    const res = await fetch(
+      `${base}/addresses/${receiver}/transactions?limit=${Math.min(limit, 50)}`,
+      { next: { revalidate: 30 } },
+    )
+    if (!res.ok) {
+      return { ok: false, network, receiver, total: 0, events: [], error: `explorer ${res.status}` }
+    }
+    const body = (await res.json()) as {
+      total?: number
+      items?: Array<{
+        id: string
+        inclusionHeight: number
+        timestamp: number
+        inputs: Array<{
+          boxId: string
+          address?: string
+          value: number
+          additionalRegisters?: Record<string, unknown>
+        }>
+        outputs: Array<{ boxId: string; address?: string; value: number }>
+      }>
+    }
+    const events: SageActivityEvent[] = (body.items ?? []).map((tx) => {
+      const noteInput = tx.inputs.find((inp) => {
+        const regs = inp.additionalRegisters
+        if (!regs || typeof regs !== "object") return false
+        const keys = Object.keys(regs)
+        return keys.includes("R4") && keys.includes("R5") && keys.includes("R6")
+      })
+      const inflow = tx.outputs
+        .filter((o) => o.address === receiver)
+        .reduce((s, o) => s + o.value, 0)
+      const type: SageActivityType = noteInput
+        ? "settlement"
+        : inflow > 0
+          ? "issuance"
+          : "transfer"
+      return {
+        txId: tx.id,
+        blockHeight: tx.inclusionHeight,
+        timestamp: tx.timestamp,
+        type,
+        inflowNanoErg: inflow,
+        noteBoxId: noteInput?.boxId,
+      }
+    })
+    return {
+      ok: true,
+      network,
+      receiver,
+      total: body.total ?? events.length,
+      events,
+    }
+  } catch (err) {
+    return {
+      ok: false,
+      network,
+      receiver,
+      total: 0,
+      events: [],
+      error: err instanceof Error ? err.message : "explorer fetch failed",
+    }
+  }
+}

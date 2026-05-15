@@ -27,6 +27,7 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { PersonaPathPanel } from "@/components/persona-path-panel"
+import { SageActivityFeed } from "@/components/sage/SageActivityFeed"
 
 const BRAND = "#ff8800"
 
@@ -505,6 +506,9 @@ export function AgentEconomyClient() {
             </div>
           </div>
         </section>
+
+        {/* ── Sage Live Activity Feed ──────────────────────────────────────── */}
+        <SageActivityFeed />
 
         {/* ── BetterMoneyLabs CTA ──────────────────────────────────────────── */}
         <section className="py-24 border-t border-white/5">
