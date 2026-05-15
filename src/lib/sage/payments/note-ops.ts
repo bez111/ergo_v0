@@ -82,6 +82,26 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
         return async (boxId: string) =>
           flattenRegisters((await orig.call(target, boxId)) as RawBox)
       }
+      if (prop === "getUnspentBoxes") {
+        // Sage's wallet holds Notes (the unredeemed payments themselves)
+        // alongside the fee-coverage UTxOs. ergo-agent-pay's redeemNote
+        // adds the Note as an explicit input and then asks for unspent
+        // boxes to cover the miner fee — without filtering, the same
+        // Note shows up in both lists and the tx builder dies with
+        // "Box '...' is already included.".
+        // Strip every box with a non-empty additionalRegisters from the
+        // fee-pool — those are Notes / Reserves / Trackers and are not
+        // valid fee-payment material anyway.
+        const orig = target.getUnspentBoxes as (addr: string) => Promise<RawBox[]>
+        return async (addr: string) => {
+          const all = await orig.call(target, addr)
+          return all.filter((b) => {
+            const regs = b.additionalRegisters
+            if (!regs) return true
+            return Object.keys(regs).length === 0
+          })
+        }
+      }
       const value = Reflect.get(target, prop, receiver)
       return typeof value === "function" ? (value as (...a: unknown[]) => unknown).bind(target) : value
     },
