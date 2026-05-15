@@ -2,7 +2,7 @@
 title: "在区块链上发布第一个付费 AI 代理"
 slug: "/blog/shipping-paid-ai-on-chain"
 seo_title: "在区块链上发布第一个付费 AI 代理 — Sage 构建日志"
-meta_description: "Sage 是一个 Claude 礼宾服务，通过 Accord Note 收取 0.001 testnet ERG，在 Ergo testnet 上完全端到端构建。架构、代码表面、我们遇到的三个真实 bug，以及"仅验证"模式的含义。"
+meta_description: 'Sage 是一个 Claude 礼宾服务，通过 Accord Note 收取 0.001 testnet ERG，在 Ergo testnet 上完全端到端构建。架构、代码表面、我们遇到的三个真实 bug，以及"仅验证"模式的含义。'
 excerpt: "Sage 是一个 Claude 礼宾服务，通过 Accord Note 收取 0.001 testnet ERG，在 Ergo 上结算。该网站现在展示了它所倡导的代理经济论文的真实演示。这是构建日志。"
 author: "Ergo Developer Relations"
 date_published: "2026-05-15"
