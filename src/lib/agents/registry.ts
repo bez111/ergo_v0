@@ -88,6 +88,40 @@ export async function listProviders(): Promise<ProviderProfile[]> {
 }
 
 /**
+ * Fetch a single provider manifest by file basename (the .json filename
+ * without extension — e.g. "sage" for sage.json). Returns null if the
+ * file 404s or doesn't conform to the v0 shape, so the detail page can
+ * notFound() cleanly.
+ */
+export async function getProvider(id: string): Promise<ProviderProfile | null> {
+  if (!/^[a-z0-9][a-z0-9_-]{0,63}$/.test(id)) return null
+  try {
+    const res = await fetch(`${REGISTRY_RAW_BASE}/${id}.json`, {
+      next: { revalidate: ONE_HOUR },
+    })
+    if (!res.ok) return null
+    const profile = (await res.json()) as ProviderProfile
+    if (profile.type !== "accord.provider_profile.v0") return null
+    profile.__sourceUrl = `https://github.com/accord-protocol/accord-protocol/blob/main/registry/providers/${id}.json`
+    return profile
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Best-effort slug derivation from a provider_id like
+ * "provider://sage-ergoblockchain" → "sage" (matches the registry file
+ * name). The registry convention is one file per provider, slug-named.
+ */
+export function providerSlugFromId(provider_id: string): string {
+  const tail = provider_id.replace(/^provider:\/\//, "")
+  // "sage-ergoblockchain" → "sage" by convention; fall back to the
+  // dash-prefix if no organization suffix exists.
+  return tail.split("-")[0]
+}
+
+/**
  * Sort: featured first (Sage explicitly), then anything with conformance,
  * then alphabetical by display_name.
  */

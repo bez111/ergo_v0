@@ -61,7 +61,12 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(.*)',
+        // Default security headers — applied to everything EXCEPT the
+        // public embeddable widget surface (`/widget/*` + `/agents.js`),
+        // which needs to be cross-origin iframable from third-party
+        // sites and therefore can't carry frame-ancestors 'none' or
+        // X-Frame-Options: DENY.
+        source: '/((?!widget/|agents\\.js).*)',
         headers: [
           {
             key: 'Strict-Transport-Security',
@@ -95,6 +100,25 @@ const nextConfig: NextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400',
           },
+        ],
+      },
+      {
+        // Public embeddable widget surface — must be iframable from any
+        // origin, but everything else (HSTS, nosniff, etc.) still applies.
+        source: '/(widget/.*|agents\\.js)',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://www.ergoblockchain.org; img-src 'self' data:; frame-ancestors *; base-uri 'self'",
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=60, s-maxage=60, stale-while-revalidate=300',
+          },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
         ],
       },
       {

@@ -25,6 +25,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import {
   bucketCapability,
   listProviders,
+  providerSlugFromId,
   sortProviders,
   type ProviderProfile,
 } from "@/lib/agents/registry"
@@ -225,6 +226,7 @@ function ProviderCard({ provider, highlight }: { provider: ProviderProfile; high
   const isExample = provider.provider_id.startsWith("provider://example")
   const buckets = Array.from(new Set((provider.capabilities ?? []).map(bucketCapability)))
   const conformance = provider.conformance?.last_run_at
+  const slug = providerSlugFromId(provider.provider_id)
   return (
     <div
       className={`flex flex-col p-5 rounded-2xl border transition-colors ${
@@ -235,7 +237,12 @@ function ProviderCard({ provider, highlight }: { provider: ProviderProfile; high
     >
       <div className="flex items-start justify-between gap-3 mb-2">
         <div className="min-w-0">
-          <h3 className="text-base md:text-lg font-bold text-white truncate">{provider.display_name}</h3>
+          <Link
+            href={`/ergo-watch/agents/${slug}`}
+            className="text-base md:text-lg font-bold text-white truncate hover:text-orange-200 transition-colors block"
+          >
+            {provider.display_name}
+          </Link>
           <div className="text-[10px] uppercase tracking-widest text-gray-500 font-mono mt-0.5 truncate">
             {provider.provider_id.replace("provider://", "")}
           </div>
@@ -283,12 +290,18 @@ function ProviderCard({ provider, highlight }: { provider: ProviderProfile; high
       </div>
 
       <div className="mt-auto flex flex-wrap gap-2 text-xs">
+        <Link
+          href={`/ergo-watch/agents/${slug}`}
+          className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 font-mono uppercase tracking-widest text-[10px]"
+        >
+          profile →
+        </Link>
         {provider.homepage && (
           <a
             href={provider.homepage}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 font-mono uppercase tracking-widest text-[10px]"
+            className="inline-flex items-center gap-1 text-gray-500 hover:text-orange-300 font-mono uppercase tracking-widest text-[10px]"
           >
             site <ExternalLink className="w-3 h-3" />
           </a>
