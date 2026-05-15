@@ -24,6 +24,8 @@ interface SageActivityEvent {
   timestamp: number
   type: "settlement" | "issuance" | "transfer"
   inflowNanoErg: number
+  /** For settlement: value of the redeemed Note (= what buyer paid). */
+  paymentNanoErg?: number
   noteBoxId?: string
 }
 
@@ -107,6 +109,9 @@ export function SageActivityFeed() {
   const events = data?.events ?? []
   const settled = events.filter((e) => e.type === "settlement").length
   const network = data?.network ?? "testnet"
+  const totalPaid = events
+    .filter((e) => e.type === "settlement")
+    .reduce((s, e) => s + (e.paymentNanoErg ?? 0), 0)
 
   return (
     <section id="sage-activity" className="py-24 border-t border-white/5 scroll-mt-24">
@@ -129,14 +134,10 @@ export function SageActivityFeed() {
 
         <div className="grid sm:grid-cols-3 gap-3 mb-8">
           <Stat label="Settlements" value={settled.toString()} accent />
-          <Stat label="Tx total (wallet)" value={(data?.total ?? 0).toString()} />
+          <Stat label="Wallet tx total" value={(data?.total ?? 0).toString()} />
           <Stat
-            label="Latest inflow"
-            value={
-              events[0]?.inflowNanoErg
-                ? `${nanoToErg(events[0].inflowNanoErg)} ERG`
-                : "—"
-            }
+            label="Settled value"
+            value={totalPaid > 0 ? `${nanoToErg(totalPaid)} ERG` : "—"}
           />
         </div>
 
@@ -183,7 +184,12 @@ export function SageActivityFeed() {
                 </div>
                 <div className="shrink-0 text-right">
                   <div className="font-mono text-sm text-orange-200">
-                    {nanoToErg(evt.inflowNanoErg)} <span className="text-gray-500 text-[10px] uppercase">erg</span>
+                    {nanoToErg(
+                      isSettlement
+                        ? evt.paymentNanoErg ?? evt.inflowNanoErg
+                        : evt.inflowNanoErg,
+                    )}{" "}
+                    <span className="text-gray-500 text-[10px] uppercase">erg</span>
                   </div>
                   <div className="flex items-center gap-1 text-[10px] uppercase tracking-widest font-mono text-gray-500 group-hover:text-orange-300 mt-0.5">
                     {isSettlement ? "receipt" : "explorer"}

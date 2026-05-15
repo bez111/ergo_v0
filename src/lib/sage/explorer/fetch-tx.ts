@@ -237,6 +237,13 @@ export interface SageActivityEvent {
   type: SageActivityType
   /** nanoERG flowing INTO Sage's address from this tx (sum of outputs to Sage) */
   inflowNanoErg: number
+  /**
+   * For settlements: the value of the redeemed Note (= what the buyer
+   * paid for the premium answer). For other events: undefined. This is
+   * the number worth surfacing in the feed UI — `inflowNanoErg` includes
+   * change boxes when the buyer and seller share an address (test setup).
+   */
+  paymentNanoErg?: number
   /** First input box that carries Note-shape registers (settlement payload). */
   noteBoxId?: string
 }
@@ -311,6 +318,7 @@ export async function fetchSageActivity(
         timestamp: tx.timestamp,
         type,
         inflowNanoErg: inflow,
+        paymentNanoErg: noteInput?.value,
         noteBoxId: noteInput?.boxId,
       }
     })
