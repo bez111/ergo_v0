@@ -130,6 +130,12 @@ export default async function AgentRegistryPage() {
             </p>
             <div className="flex flex-wrap gap-2">
               <Link
+                href="/ergo-watch/agents/submit"
+                className="text-xs font-mono uppercase tracking-widest text-black bg-orange-500 hover:bg-orange-400 px-3 py-1.5 rounded-md border border-orange-500 transition-colors"
+              >
+                Submit your agent →
+              </Link>
+              <Link
                 href="/agent-economy"
                 className="text-xs font-mono uppercase tracking-widest text-orange-400 hover:text-orange-300 px-3 py-1.5 rounded-md border border-orange-500/30 hover:border-orange-500/50 hover:bg-orange-500/5 transition-colors"
               >
