@@ -2,7 +2,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
 import { useTranslations } from "next-intl"
@@ -10,6 +10,7 @@ import {
   Terminal,
   Copy,
   CheckCircle,
+  Circle,
   ArrowRight,
   Bot,
   Package,
@@ -19,10 +20,54 @@ import {
   ChevronRight,
   AlertTriangle,
   Github,
+  RotateCcw,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+
+const QUICKSTART_PROGRESS_KEY = "quickstart-progress-v1"
+
+function useStepProgress(totalSteps: number) {
+  const [done, setDone] = useState<boolean[]>(() => Array(totalSteps).fill(false))
+  const [hydrated, setHydrated] = useState(false)
+  useEffect(() => {
+    setHydrated(true)
+    try {
+      const raw = localStorage.getItem(QUICKSTART_PROGRESS_KEY)
+      if (raw) {
+        const parsed = JSON.parse(raw) as boolean[]
+        if (Array.isArray(parsed) && parsed.length === totalSteps) {
+          setDone(parsed)
+        }
+      }
+    } catch {
+      /* ignore localStorage errors */
+    }
+  }, [totalSteps])
+  function toggle(i: number) {
+    setDone((prev) => {
+      const next = [...prev]
+      next[i] = !next[i]
+      try {
+        localStorage.setItem(QUICKSTART_PROGRESS_KEY, JSON.stringify(next))
+      } catch {
+        /* ignore */
+      }
+      return next
+    })
+  }
+  function reset() {
+    setDone(Array(totalSteps).fill(false))
+    try {
+      localStorage.removeItem(QUICKSTART_PROGRESS_KEY)
+    } catch {
+      /* ignore */
+    }
+  }
+  const completed = done.filter(Boolean).length
+  return { done, hydrated, toggle, reset, completed, total: totalSteps }
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -146,6 +191,8 @@ export function QuickstartClient() {
     { number: "03", titleKey: "step3Title" as const, timeKey: "step3Time" as const, noteKey: "step3Note" as const },
     { number: "04", titleKey: "step4Title" as const, timeKey: "step4Time" as const, noteKey: "step4Note" as const },
   ]
+
+  const progress = useStepProgress(STEPS.length)
 
   const PREREQUISITES = [
     t('prereq1'),
@@ -279,6 +326,51 @@ cd accord-protocol/examples/01-basic-payment && npm install && npm run start`}</
         </motion.div>
       </section>
 
+      {/* ── Progress tracker ── */}
+      <section className="container mx-auto px-4 pt-2 pb-0 max-w-4xl">
+        <div
+          className={`sticky top-4 z-20 mb-6 flex items-center gap-4 rounded-2xl border px-4 py-3 backdrop-blur transition-colors ${
+            progress.completed === progress.total && progress.hydrated
+              ? "border-orange-500/50 bg-orange-500/[0.08]"
+              : "border-white/10 bg-black/70"
+          }`}
+        >
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="text-[10px] uppercase tracking-widest font-mono text-orange-400">
+                Quickstart progress
+              </span>
+              <span className="text-[10px] font-mono text-gray-400">
+                {progress.hydrated ? `${progress.completed} / ${progress.total} done` : "—"}
+              </span>
+              {progress.hydrated && progress.completed === progress.total && (
+                <span className="text-[10px] uppercase tracking-widest font-mono text-orange-300">
+                  · ready to build
+                </span>
+              )}
+            </div>
+            <div className="h-1.5 w-full rounded-full bg-white/5 overflow-hidden">
+              <div
+                className="h-full bg-gradient-to-r from-orange-500 to-orange-300 transition-all duration-500"
+                style={{
+                  width: `${progress.hydrated ? (progress.completed / progress.total) * 100 : 0}%`,
+                }}
+              />
+            </div>
+          </div>
+          {progress.hydrated && progress.completed > 0 && (
+            <button
+              type="button"
+              onClick={progress.reset}
+              className="shrink-0 inline-flex items-center gap-1 text-[10px] uppercase tracking-widest font-mono text-gray-400 hover:text-orange-300 px-2 py-1 rounded border border-white/10 hover:border-orange-500/40 transition-colors"
+            >
+              <RotateCcw className="w-3 h-3" />
+              Reset
+            </button>
+          )}
+        </div>
+      </section>
+
       {/* ── Steps ── */}
       <section className="container mx-auto px-4 py-12 max-w-4xl">
         <motion.div
@@ -290,21 +382,55 @@ cd accord-protocol/examples/01-basic-payment && npm install && npm run start`}</
         >
           {STEPS.map((step, i) => {
             const StepIcon = STEP_ICONS[i]
+            const isDone = progress.hydrated && progress.done[i]
             return (
-              <motion.div key={i} variants={fadeUp}>
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                className={`rounded-2xl border transition-colors p-5 md:p-6 ${
+                  isDone
+                    ? "border-orange-500/40 bg-orange-500/[0.04]"
+                    : "border-white/8 bg-white/[0.015]"
+                }`}
+              >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 bg-orange-500/10 border border-orange-500/30 rounded-lg shrink-0">
-                    <StepIcon className="w-5 h-5 text-orange-400" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3">
+                  <button
+                    type="button"
+                    onClick={() => progress.toggle(i)}
+                    aria-label={isDone ? "Mark step as not done" : "Mark step as done"}
+                    className={`flex items-center justify-center w-10 h-10 rounded-lg shrink-0 transition-colors ${
+                      isDone
+                        ? "bg-orange-500/30 border border-orange-400 text-black"
+                        : "bg-orange-500/10 border border-orange-500/30 text-orange-400 hover:border-orange-500/60"
+                    }`}
+                  >
+                    {isDone ? <CheckCircle className="w-5 h-5" /> : <StepIcon className="w-5 h-5" />}
+                  </button>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 flex-wrap">
                       <span className="text-orange-400/50 font-mono text-sm">{step.number}</span>
-                      <h3 className="text-white font-bold text-lg">{t(step.titleKey)}</h3>
+                      <h3
+                        className={`font-bold text-lg ${isDone ? "text-orange-100 line-through decoration-orange-400/40" : "text-white"}`}
+                      >
+                        {t(step.titleKey)}
+                      </h3>
                       <span className="text-xs text-gray-500 bg-white/5 px-2 py-0.5 rounded-full">
                         ~{t(step.timeKey)}
                       </span>
                     </div>
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => progress.toggle(i)}
+                    className={`hidden sm:inline-flex items-center gap-1 text-[10px] uppercase tracking-widest font-mono px-2.5 py-1 rounded border transition-colors ${
+                      isDone
+                        ? "border-orange-500/50 bg-orange-500/15 text-orange-200"
+                        : "border-white/15 bg-white/[0.02] text-gray-400 hover:border-orange-500/40 hover:text-orange-300"
+                    }`}
+                  >
+                    {isDone ? <CheckCircle className="w-3 h-3" /> : <Circle className="w-3 h-3" />}
+                    {isDone ? "Done" : "Mark done"}
+                  </button>
                 </div>
                 <CodeBlock code={STEP_CODES[i]} language={STEP_LANGUAGES[i]} copiedLabel={t('copied')} copyLabel={t('copy')} />
                 <p className="mt-3 text-sm text-gray-400 flex items-start gap-2">
