@@ -40,11 +40,33 @@ interface ArticleFrontMatter {
 const CONTENT_DIR = path.join(process.cwd(), "src", "content", "blog")
 const ORIGIN = siteConfig.siteUrl
 
-async function loadArticle(slug: string) {
-  const filePath = path.join(CONTENT_DIR, `${slug}.md`)
+/**
+ * Resolve the markdown source for a post in the user's locale.
+ *
+ *   src/content/blog/<locale>/<slug>.md  ← preferred
+ *   src/content/blog/<slug>.md           ← English fallback
+ *
+ * Translated files preserve the original frontmatter shape; only the
+ * `title` / `excerpt` / `meta_description` and body text get localized.
+ * Code blocks, URLs, technical terms (Reserve / Note / Tracker / etc.)
+ * stay verbatim per the translation script.
+ */
+async function loadArticle(slug: string, locale = "en") {
+  const localized = path.join(CONTENT_DIR, locale, `${slug}.md`)
+  const fallback = path.join(CONTENT_DIR, `${slug}.md`)
+  const filePath = locale !== "en" && (await fileExists(localized)) ? localized : fallback
   const raw = await fs.readFile(filePath, "utf-8")
   const { data, content } = matter(raw)
   return { frontMatter: data as ArticleFrontMatter, body: content }
+}
+
+async function fileExists(filePath: string): Promise<boolean> {
+  try {
+    await fs.access(filePath)
+    return true
+  } catch {
+    return false
+  }
 }
 
 /**
@@ -203,8 +225,8 @@ export interface MarkdownBlogPostProps {
   heroImage?: string
 }
 
-export async function MarkdownBlogPost({ slug, heroImage }: MarkdownBlogPostProps) {
-  const { frontMatter, body } = await loadArticle(slug)
+export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlogPostProps) {
+  const { frontMatter, body } = await loadArticle(slug, locale)
   const cleaned = stripLeadingH1(stripAuthoringMeta(body))
   const { faq, bodyWithoutFaq } = extractFaq(cleaned)
   const { tldr, bodyWithoutTldr } = extractTldr(bodyWithoutFaq)
