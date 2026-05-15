@@ -99,6 +99,25 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
           return data.fullHeight ?? data.height ?? 0
         }
       }
+      if (prop === "submitTransaction") {
+        // ergo-agent-pay submits to {explorerBase}/api/v1/transactions,
+        // but the explorer is read-only (404). Tx submission is a NODE
+        // endpoint at /transactions on a node like the public testnet
+        // peer at 213.239.193.208:9052 (same node bootstrap.mjs uses
+        // for Reserve / Note submission and works in production).
+        return async (signedTx: unknown) => {
+          const NODE_URL = process.env.SAGE_NODE_URL ?? "http://213.239.193.208:9052"
+          const r = await fetch(`${NODE_URL}/transactions`, {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(signedTx),
+          })
+          const text = await r.text()
+          if (!r.ok) throw new Error(`node ${r.status}: ${text.slice(0, 200)}`)
+          // Node returns the tx id as a JSON string ("0x...")
+          return text.replace(/^"|"$/g, "")
+        }
+      }
       if (prop === "getUnspentBoxes") {
         // Sage's wallet holds Notes (the unredeemed payments themselves)
         // alongside the fee-coverage UTxOs. ergo-agent-pay's redeemNote
