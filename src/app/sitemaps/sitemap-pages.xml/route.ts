@@ -23,6 +23,7 @@ export async function GET() {
     { url: '/technology/adaptive-emission', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/ecosystem', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/ergo-watch', priority: 0.8, changefreq: 'daily' as const },
+    { url: '/ergo-watch/agents', priority: 0.8, changefreq: 'hourly' as const },
     { url: '/blog', priority: 0.9, changefreq: 'daily' as const },
     { url: '/learn', priority: 0.7, changefreq: 'weekly' as const },
     { url: '/learn/glossary', priority: 0.8, changefreq: 'weekly' as const },
