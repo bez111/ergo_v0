@@ -84,6 +84,25 @@ export const authors: Record<string, Author> = {
 export const blogPosts: BlogPost[] = [
   // Ordered by newest first (for "Newest" sort). Starting 2025-11-11 and stepping 4 days back.
   {
+    id: 'shipping-paid-ai-on-chain',
+    slug: 'shipping-paid-ai-on-chain',
+    title: 'Shipping the first paid AI agent on a blockchain',
+    excerpt:
+      'Sage is a Claude concierge that takes 0.001 testnet ERG via an Accord Note for premium answers, settled on Ergo. The site now demonstrates the agent-economy thesis it argues for. This is the build log.',
+    date: '2026-05-15',
+    lastUpdated: '2026-05-15',
+    author: authors['ergo-team']!,
+    category: 'Build Log',
+    readTime: 11,
+    wordCount: 2700,
+    image: '/og/blog/agent-economy-manifesto.png',
+    tags: ['Agent Economy', 'Accord Protocol', 'Sage', 'build log', 'Ergo testnet', 'AI agent payments', 'Claude'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
+    shares: 0
+  },
+  {
     id: 'ergo-in-5-minutes',
     slug: 'ergo-in-5-minutes',
     title: 'Ergo in 5 Minutes: Why It Matters & How It Works',
