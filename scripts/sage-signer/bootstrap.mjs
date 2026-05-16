@@ -352,9 +352,9 @@ function nanoToErg(nano) {
 // and prints the resulting note_box_id ready for paste into the widget's
 // PaymentPanel.
 //
-// Self-pay: buyer wallet === Sage's wallet (same mnemonic). Sage
-// verifyPayment doesn't care who issued the Note, only that it matches
-// the agreement's predicate at the right reserve box.
+// The issuing wallet can be Sage's own test wallet or any funded testnet
+// buyer wallet. Sage verifyPayment doesn't care who issued the Note, only
+// that it matches the agreement's predicate at the right reserve box.
 // ─────────────────────────────────────────────────────────────────────────────
 async function issueTestNote(key, address) {
   const SAGE_BASE =
@@ -363,7 +363,7 @@ async function issueTestNote(key, address) {
     process.env.SAGE_TEST_QUESTION ?? "/code show me a Fleet SDK example"
 
   console.log("Issuing test Note for end-to-end Sage round-trip…")
-  console.log(`  buyer = seller  ${address}`)
+  console.log(`  buyer wallet    ${address}`)
   console.log(`  via Sage at     ${SAGE_BASE}`)
   console.log(`  question        "${PREMIUM_QUESTION}"`)
   console.log("")
