@@ -414,17 +414,17 @@
                 {
                   "name": "ErgoDocs",
                   "description": "包括的な開発者ドキュメント",
-                  "link": "/build/docs"
+                  "link": "/docs/developers"
                 },
                 {
                   "name": "ErgoScript Primer",
                   "description": "Ergoのスマートコントラクト言語を学ぶ",
-                  "link": "/build/tutorials"
+                  "link": "/docs/developers/tutorials"
                 },
                 {
                   "name": "Ergo Playgrounds",
                   "description": "インタラクティブなコーディング環境",
-                  "link": "/build/playground"
+                  "link": "/docs/developers/tooling/playgrounds"
                 }
               ]
             },
@@ -434,17 +434,17 @@
                 {
                   "name": "AppKit",
                   "description": "Java/Scala開発ツールキット",
-                  "link": "/build/tools/appkit"
+                  "link": "/docs/developers/tooling/frameworks/appkit"
                 },
                 {
                   "name": "Fleet SDK",
                   "description": "Ergo向けTypeScript SDK",
-                  "link": "/build/tools/fleet"
+                  "link": "/docs/developers/tooling/fleet"
                 },
                 {
                   "name": "Sigma-Rust",
                   "description": "SigmaプロトコルのRust実装",
-                  "link": "/build/tools/sigma-rust"
+                  "link": "/docs/developers/tooling/sigma-rust"
                 }
               ]
             }
@@ -452,11 +452,11 @@
           "nextSteps": [
             {
               "text": "開発者ドキュメントを探索する",
-              "link": "/build/docs"
+              "link": "/docs/developers"
             },
             {
               "text": "ErgoScriptプレイグラウンドを試す",
-              "link": "/build/playground"
+              "link": "/docs/developers/tooling/playgrounds"
             },
             {
               "text": "開発者Discordチャンネルに参加する",
@@ -464,7 +464,7 @@
             },
             {
               "text": "開発者グラントを確認する",
-              "link": "/build/grants"
+              "link": "/ecosystem/grants"
             }
           ],
           "communityChannels": [
@@ -516,12 +516,12 @@
                 {
                   "name": "SigmaUSD",
                   "description": "アルゴリズム型ステーブルコインプロトコル",
-                  "link": "/ecosystem/projects/sigmausd"
+                  "link": "/ecosystem/sigmausd"
                 },
                 {
                   "name": "Duckpools",
                   "description": "レンディング・ボローイングプラットフォーム",
-                  "link": "/ecosystem/projects/duckpools"
+                  "link": "/ecosystem/duckpools"
                 }
               ]
             },
@@ -536,7 +536,7 @@
                 {
                   "name": "Ergo Explorer",
                   "description": "ブロックチェーンエクスプローラー",
-                  "link": "/ecosystem/explorers"
+                  "link": "/ecosystem/ergo-explorer"
                 }
               ]
             }
@@ -552,7 +552,7 @@
             },
             {
               "text": "SigmaUSDについて学ぶ",
-              "link": "/ecosystem/projects/sigmausd"
+              "link": "/ecosystem/sigmausd"
             },
             {
               "text": "DeFiディスカッションに参加する",
@@ -566,7 +566,7 @@
             },
             {
               "name": "トレーディングコミュニティ",
-              "link": "/community/trading"
+              "link": "/start/community"
             },
             {
               "name": "DeFiディスカッション",
@@ -613,12 +613,12 @@
                 {
                   "name": "トークンエコノミクス",
                   "description": "ERGトークノミクス情報",
-                  "link": "/tokenomics"
+                  "link": "/technology/adaptive-emission"
                 },
                 {
                   "name": "発行スケジュール",
                   "description": "ERG配布計画",
-                  "link": "/tokenomics#emission"
+                  "link": "/technology/adaptive-emission#emission"
                 }
               ]
             }
@@ -626,7 +626,7 @@
           "nextSteps": [
             {
               "text": "ERGトークノミクスを学ぶ",
-              "link": "/tokenomics"
+              "link": "/technology/adaptive-emission"
             },
             {
               "text": "取引所一覧を確認する",
@@ -634,7 +634,7 @@
             },
             {
               "text": "ステーキングオプションを理解する",
-              "link": "/use/staking"
+              "link": "/use/defi"
             },
             {
               "text": "投資家コミュニティに参加する",
@@ -648,7 +648,7 @@
             },
             {
               "name": "価格ディスカッション",
-              "link": "/community/trading"
+              "link": "/start/community"
             },
             {
               "name": "投資家チャット",
@@ -747,12 +747,12 @@
                 {
                   "name": "Ergo Auction House",
                   "description": "プレミアNFTマーケットプレイス",
-                  "link": "/ecosystem/projects/auction-house"
+                  "link": "/docs/ecosystem/financial/dex/trade-house"
                 },
                 {
                   "name": "SkyHarbor",
                   "description": "NFT取引プラットフォーム",
-                  "link": "/ecosystem/projects/skyharbor"
+                  "link": "/docs/ecosystem/nfts/skyharbor"
                 }
               ]
             },
@@ -762,12 +762,12 @@
                 {
                   "name": "TokenJay",
                   "description": "NFTミンティングプラットフォーム",
-                  "link": "/ecosystem/projects/tokenjay"
+                  "link": "/ecosystem/tokenjay"
                 },
                 {
                   "name": "Ergo Utils",
                   "description": "NFT作成ユーティリティ",
-                  "link": "/ecosystem/tools"
+                  "link": "/docs/ecosystem/tooling"
                 }
               ]
             }
@@ -775,15 +775,15 @@
           "nextSteps": [
             {
               "text": "Ergo Auction Houseを探索する",
-              "link": "/ecosystem/projects/auction-house"
+              "link": "/docs/ecosystem/financial/dex/trade-house"
             },
             {
               "text": "NFT作成について学ぶ",
-              "link": "/ecosystem/projects/tokenjay"
+              "link": "/ecosystem/tokenjay"
             },
             {
               "text": "NFTコレクションを閲覧する",
-              "link": "/ecosystem/nfts"
+              "link": "/docs/ecosystem/nfts"
             },
             {
               "text": "NFTコミュニティに参加する",
@@ -797,11 +797,11 @@
             },
             {
               "name": "アーティストコミュニティ",
-              "link": "/community/artists"
+              "link": "/start/community"
             },
             {
               "name": "コレクターグループ",
-              "link": "/community/collectors"
+              "link": "/start/community"
             }
           ]
         },
@@ -819,7 +819,7 @@
                 {
                   "name": "ErgoMixer",
                   "description": "ノンカストディアルトランザクションミキサー",
-                  "link": "/ecosystem/projects/ergomixer"
+                  "link": "/ecosystem/ergomixer"
                 },
                 {
                   "name": "ステルスアドレス",
@@ -839,7 +839,7 @@
                 {
                   "name": "プライバシーのベストプラクティス",
                   "description": "プライバシーを守る方法",
-                  "link": "/learn/privacy"
+                  "link": "/use/privacy"
                 }
               ]
             }
@@ -847,7 +847,7 @@
           "nextSteps": [
             {
               "text": "ErgoMixerについて学ぶ",
-              "link": "/ecosystem/projects/ergomixer"
+              "link": "/ecosystem/ergomixer"
             },
             {
               "text": "Sigmaプロトコルを理解する",
@@ -855,7 +855,7 @@
             },
             {
               "text": "プライバシーのベストプラクティスを読む",
-              "link": "/learn/privacy"
+              "link": "/use/privacy"
             },
             {
               "text": "プライバシーディスカッションに参加する",
@@ -869,7 +869,7 @@
             },
             {
               "name": "ErgoMixerコミュニティ",
-              "link": "/ecosystem/projects/ergomixer"
+              "link": "/ecosystem/ergomixer"
             },
             {
               "name": "テクニカルディスカッション",
@@ -901,7 +901,7 @@
                 {
                   "name": "Ergonautハンドブック",
                   "description": "包括的なガイド",
-                  "link": "/learn/handbook"
+                  "link": "/learn"
                 }
               ]
             },
@@ -911,12 +911,12 @@
                 {
                   "name": "新規ユーザーチャンネル",
                   "description": "初心者向けディスカッション",
-                  "link": "/community"
+                  "link": "/start/community"
                 },
                 {
                   "name": "学習グループ",
                   "description": "スタディグループとメンターシップ",
-                  "link": "/community/learning"
+                  "link": "/learn"
                 }
               ]
             }
@@ -932,7 +932,7 @@
             },
             {
               "text": "新規ユーザーコミュニティに参加する",
-              "link": "/community"
+              "link": "/start/community"
             },
             {
               "text": "学習ハブを探索する",
@@ -946,11 +946,11 @@
             },
             {
               "name": "新規ユーザーサポート",
-              "link": "/community/newcomers"
+              "link": "/start/community"
             },
             {
               "name": "学習グループ",
-              "link": "/community/learning"
+              "link": "/learn"
             }
           ]
         }
@@ -1817,44 +1817,23 @@
       "community": "コミュニティに参加"
     },
     "faqContent": {
-      "basics_icon_helpcircle_q_what": "基本\",\n    icon: HelpCircle,\n    q: '「フェアローンチ」とは何ですか？',\n    a: 'ErgoにはInitial Coin Offering（ICO）や創設者向けの事前採掘トークンがありませんでした。これにより、誰もが初日からマイニングでERGを取得する平等な機会を持ち、より公平な配布が確保されます。",
-      "basics_icon_helpcircle_q_is": "基本\",\n    icon: HelpCircle,\n    q: \"Ergoは会社ですか？\",\n    a: \"いいえ、Ergoは分散型のオープンソースプロトコルです。Ergo Foundationはネットワークをコントロールしない非営利のコミュニティ組織で、開発をサポートしています。",
-      "basics_icon_helpcircle_q_what_does_a_fair_launch": "基本\",\n    icon: HelpCircle,\n    q: '「フェアローンチ",
-      "technology_icon_cpu_q_what": "テクノロジー\",\n    icon: Cpu,\n    q: \"eUTXOとは何ですか？\",\n    a: 'Extended UTXOモデルはデータとロジックを直接お金の「ボックス」に付加します。これにより、スマートコントラクトのセキュリティ、手数料の予測可能性が向上し、アカウントモデルと比較してより良いスケーラビリティが可能になります。",
-      "getting_started_icon_zap_q": "はじめに\",\n    icon: Zap,\n    q: \"ERGを取得するにはどうすればいいですか？\",\n    a: \"様々な暗号通貨取引所、P2P取引、またはマイニングを通じてERGを取得できます。投資前には必ず自己調査を行ってください。",
-      "ecosystem_icon_users_q_what": "エコシステム\",\n    icon: Users,\n    q: \"Ergoにはどんな種類のdAppsがありますか？\",\n    a: \"ErgoのエコシステムにはDeFiプラットフォーム（Spectrum、Duckpools）、プライバシーツール（ErgoMixer）、NFTマーケットプレイス（SkyHarbor）、クロスチェーンブリッジ（Rosen）などが含まれます。",
-      "community_icon_users_q_who": "コミュニティ\",\n    icon: Users,\n    q: \"Ergoは誰がガバナンスしていますか？\",\n    a: \"Ergoは分散型でコミュニティ主導です。プロトコルの変更はErgo改善提案（EIP）を通じて議論・正式化され、マイナーがサポートをシグナルします。",
       "all_basics_technology_getting_started": "すべて\", \"基本\", \"テクノロジー\", \"はじめに\", \"エコシステム\", \"コミュニティ",
       "ergo_is_a_secure_proof": "Ergoは強力なスマートコントラクトのための安全なProof-of-Workブロックチェーンで、分散型金融アプリケーションを可能にします。プログラマブルなルールを持つデジタルマネー（ERG）と考えてください。",
-      "what_does_a_fair_launch": "「フェアローンチ」とは何ですか？',\n    a: 'ErgoにはInitial Coin Offering（ICO）や創設者向けの事前採掘トークンがありませんでした。これにより、誰もが初日からマイニングでERGを取得する平等な機会を持ち、より公平な配布が確保されます。",
       "the_extended_utxo_model_attaches": "Extended UTXOモデルはデータとロジックを直接お金の「ボックス」に付加します。これにより、スマートコントラクトのセキュリティ、手数料の予測可能性が向上し、アカウントモデルと比較してより良いスケーラビリティが可能になります。",
       "find_answers_to_common_questions": "Ergo、その技術、エコシステムに関するよくある質問への回答を見つけましょう。探しているものが見つからない場合は、コミュニティチャンネルに参加してください。",
       "everything_you_need_to_know": "Ergoブロックチェーンについて知る必要があること全てを一か所で。",
-      "faqpage_id_https_ergoblockchain_org": "FAQPage\",\n    \"@id\": \"https://ergoblockchain.org/start/faq\",\n    name: \"Ergoよくある質問",
-      "question_name_what_is_ergo": "Question\",\n        name: \"Ergoとは何ですか？",
       "answer_text_ergo_is_a": "Answer\",\n          text: \"Ergoは金融コントラクトとDeFiアプリケーション向けに設計された、スマートコントラクトを持つ次世代Proof-of-Workブロックチェーンプラットフォームです。",
-      "question_name_can_i_mine_ergo": "Question\",\n        name: \"Ergoをマイニングできますか？",
       "answer_text": "Answer\",\n          text:",
       "ergo_faq_frequently_asked_questions": "Ergo FAQ | ブロックチェーンについてよくある質問",
       "ergo_faq_all_your_questions_answered": "Ergo FAQ - すべての質問への回答",
       "ergo_faq_quick_answers_to_common_questions": "Ergo FAQ | よくある質問へのクイック回答"
     },
     "introductionMeta": {
-      "ergo_introduction_description_pow_smart": "Ergo紹介\",\n    description: \"eUTXO＆SigmaプロトコルによるPoWスマートコントラクト。",
       "ergo_introduction_pow_smart_contracts": "Ergo紹介 — PoWスマートコントラクト、eUTXO、Sigmaプロトコル",
       "meet_ergo_a_pow_smart": "Ergoのご紹介：eUTXOモデルとSigmaプロトコルを使用したPoWスマートコントラクトプラットフォーム。予測可能なコストでプライバシー対応の監査可能なdAppsを構築しましょう。",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "eUTXO＆SigmaプロトコルによるPoWスマートコントラクト。",
       "techarticle_headline_t": "TechArticle\",\n          headline: t(",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "question_name_t": "Question\",\n              name: t(",
       "answer_text_t": "Answer\",\n                text: t(",
-      "introduction_to_ergo_start_your": "Ergoの紹介 - ブロックチェーンの旅を始める\",\n    description: \"Ergoブロックチェーン、その技術、エコシステムを理解するための初心者向けガイド。\",\n    url: \"https://ergoblockchain.org/start/introduction\",\n    siteName: \"Ergo Platform",
-      "introduction_to_ergo_blockchain_description": "Ergoブロックチェーン入門\",\n    description: \"Ergoの基礎を学ぶ - プログラマブルマネーの未来。",
-      "article_id_https_ergoblockchain_org": "Article\",\n    \"@id\": \"https://ergoblockchain.org/start/introduction\",\n    headline: \"Ergoブロックチェーン入門\",\n    description: \"初心者がErgoを理解するための包括的なガイド",
-      "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
-      "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject\",\n        url: \"https://ergoblockchain.org/logo.png",
-      "learningresource_name_ergo_blockchain_introduction": "LearningResource\",\n    name: \"Ergoブロックチェーン入門\",\n    description: \"Ergoブロックチェーンの基礎を学ぶための教育リソース\",\n    learningResourceType: \"プレゼンテーション\",\n    educationalLevel: \"初心者",
       "blockchain_smart_contracts_defi_cryptocurrency": "ブロックチェーン\", \"スマートコントラクト\", \"DeFi\", \"暗号通貨",
       "introduction_to_ergo_beginner": "Ergoの紹介 | 初心者",
       "introduction_to_ergo_start_your_blockchain_journey": "Ergoの紹介 - ブロックチェーンの旅を始める",
@@ -1896,92 +1875,56 @@
       "helping_others_in_the_community": "コミュニティの他者を助け、質問に答える",
       "participating_in_governance_discussions_and": "ガバナンスの議論と提案に参加する",
       "supporting_network_infrastructure": "ネットワークインフラをサポートする",
-      "aspiring_developer_title_build_the": "開発者志望\",\n    title: \"未来を構築せよ\",\n    description:\n      \"あなたは革新的なアプリケーションの開発や最先端技術への貢献に引き付けられています！ErgoのパワフルなErgoScriptとeUTXOモデルは、安全で効率的なdAppsを構築するための独自の機会を提供します。\",\n    icon:",
       "documentation_learning": "ドキュメントと学習",
-      "ergodocs_description_comprehensive_developer_documentation": "ErgoDocs\", description: \"包括的な開発者ドキュメント\", link: \"/build/docs",
-      "ergoscript_primer_description_learn_ergo": "ErgoScript Primer\", description: \"Ergoのスマートコントラクト言語を学ぶ\", link: \"/build/tutorials",
-      "ergo_playgrounds_description_interactive_coding": "Ergo Playgrounds\", description: \"インタラクティブなコーディング環境\", link: \"/build/playground",
-      "appkit_description_java_scala_development": "AppKit\", description: \"Java/Scala開発ツールキット\", link: \"/build/tools/appkit",
-      "fleet_sdk_description_typescript_sdk": "Fleet SDK\", description: \"Ergo向けTypeScript SDK\", link: \"/build/tools/fleet",
-      "sigma_rust_description_rust_implementation": "Sigma-Rust\",\n            description: \"SigmaプロトコルのRust実装\",\n            link: \"/build/tools/sigma-rust",
-      "explore_developer_documentation_link_build_docs": "開発者ドキュメントを探索する\", link: \"/build/docs",
-      "try_the_ergoscript_playground_link": "ErgoScriptプレイグラウンドを試す\", link: \"/build/playground",
+      "explore_developer_documentation_link_build_docs": "開発者ドキュメントを探索する\", link: \"/docs/developers",
+      "try_the_ergoscript_playground_link": "ErgoScriptプレイグラウンドを試す\", link: \"/docs/developers/tooling/playgrounds",
       "join_developer_discord_channels_link": "開発者Discordチャンネルに参加する\", link: \"https://discord.gg/ergo-platform",
-      "check_out_developer_grants_link_build_grants": "開発者グラントを確認する\", link: \"/build/grants",
+      "check_out_developer_grants_link_build_grants": "開発者グラントを確認する\", link: \"/ecosystem/grants",
       "developer_discord_link_https_discord": "開発者Discord\", link: \"https://discord.gg/ergo-platform",
       "ergoforum_development_link_https_ergoforum_org": "ErgoForum - 開発\", link: \"https://ergoforum.org",
       "github_organization_link_https_github": "GitHub Organization\", link: \"https://github.com/ergoplatform",
-      "spectrum_finance_description_decentralized_exchange": "Spectrum Finance\", description: \"分散型取引所（DEX）\", link: \"https://spectrum.fi",
-      "sigmausd_description_algorithmic_stablecoin_protocol": "SigmaUSD\", description: \"アルゴリズム型ステーブルコインプロトコル\", link: \"/ecosystem/projects/sigmausd",
-      "duckpools_description_lending_and_borrowing": "Duckpools\", description: \"レンディング・ボローイングプラットフォーム\", link: \"/ecosystem/projects/duckpools",
       "network_and_defi_analytics_link_https_ergo_watch": "ネットワークとDeFiアナリティクス\", link: \"https://ergo.watch",
-      "ergo_explorer_description_blockchain_explorer": "Ergo Explorer\", description: \"ブロックチェーンエクスプローラー\", link: \"/ecosystem/explorers",
-      "learn_about_sigmausd_stablecoin_link": "SigmaUSDステーブルコインについて学ぶ\", link: \"/ecosystem/projects/sigmausd",
+      "learn_about_sigmausd_stablecoin_link": "SigmaUSDステーブルコインについて学ぶ\", link: \"/ecosystem/sigmausd",
       "try_trading_on_spectrum_finance": "Spectrum Financeでの取引を試す\", link: \"https://spectrum.fi",
       "join_defi_discussions_on_discord": "DiscordでDeFiディスカッションに参加する\", link: \"https://discord.gg/ergo-platform",
       "defi_discord_channels_link_https": "DeFi Discordチャンネル\", link: \"https://discord.gg/ergo-platform",
       "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Financeコミュニティ\", link: \"https://spectrum.fi",
-      "sigmausd_community_link_ecosystem_projects": "SigmaUSDコミュニティ\", link: \"/ecosystem/projects/sigmausd",
-      "strategic_investor_title_long_term": "戦略的投資家\",\n    title: \"長期価値構築者\",\n    description:\n      \"あなたはErgoの長期的な可能性に興味があり、投資判断を行う前に基礎を理解したいと考えています。技術とエコシステムの成長について学ぶことに集中してください。\",\n    icon:",
-      "exchange_listings_description_where_to": "取引所一覧\", description: \"ERGの購入場所\", link: \"/use/get-erg",
-      "ergo_whitepaper_description_technical_foundation": "Ergoホワイトペーパー\", description: \"技術的基盤\", link: \"/technology/whitepaper",
-      "ecosystem_overview_description_projects_and": "エコシステム概要\", description: \"プロジェクトと成長\", link: \"/ecosystem",
-      "network_statistics_description_real_time": "ネットワーク統計\", description: \"リアルタイム指標\", link: \"/ecosystem/stats",
-      "read_the_ergo_whitepaper_link": "Ergoホワイトペーパーを読む\", link: \"/technology/whitepaper",
+      "sigmausd_community_link_ecosystem_projects": "SigmaUSDコミュニティ\", link: \"/ecosystem/sigmausd",
+      "read_the_ergo_whitepaper_link": "Ergoホワイトペーパーを読む\", link: \"/docs/introduction/research-whitepapers",
       "explore_the_ecosystem_link_ecosystem": "エコシステムを探索する\", link: \"/ecosystem",
-      "learn_about_erg_tokenomics_link_learn_tokenomics": "ERGトークノミクスを学ぶ\", link: \"/learn/tokenomics",
+      "learn_about_erg_tokenomics_link_learn_tokenomics": "ERGトークノミクスを学ぶ\", link: \"/technology/adaptive-emission",
       "join_investor_discussions_link_https": "投資家ディスカッションに参加する\", link: \"https://discord.gg/ergo-platform",
       "general_discord_link_https_discord": "一般Discord\", link: \"https://discord.gg/ergo-platform",
       "reddit_community_link_https_reddit_com_r_ergonauts": "Redditコミュニティ\", link: \"https://reddit.com/r/ergonauts",
       "telegram_group_link_https_t_me_ergoplatform": "Telegramグループ\", link: \"https://t.me/ergoplatform",
-      "network_guardian_title_securing_the": "ネットワークの守護者\",\n    title: \"ブロックチェーンを守れ\",\n    description:",
-      "understanding_the_algorithm_link_use_mining": "アルゴリズムを理解する\", link: \"/use/mining",
-      "mining_pools_description_popular_ergo": "マイニングプール\", description: \"人気のErgoマイニングプール\", link: \"/ecosystem/mining",
-      "official_miner_description_reference_implementation": "公式マイナー\", description: \"リファレンス実装\", link: \"/use/mining/software",
-      "community_miners_description_third_party": "コミュニティマイナー\", description: \"サードパーティのマイニングソフトウェア\", link: \"/use/mining/software",
+      "understanding_the_algorithm_link_use_mining": "アルゴリズムを理解する\", link: \"/miners",
       "find_mining_pools_link_ecosystem_mining": "マイニングプールを探す\", link: \"/ecosystem/mining",
-      "calculate_mining_profitability_link_use": "マイニング収益性を計算する\", link: \"/use/mining/calculator",
+      "calculate_mining_profitability_link_use": "マイニング収益性を計算する\", link: \"/miners",
       "join_mining_community_link_https": "マイニングコミュニティに参加する\", link: \"https://discord.gg/ergo-platform",
       "mining_discord_channels_link_https": "マイニングDiscordチャンネル\", link: \"https://discord.gg/ergo-platform",
       "mining_pools_community_link_ecosystem_mining": "マイニングプールコミュニティ\", link: \"/ecosystem/mining",
       "technical_support_link_https_ergoforum_org": "テクニカルサポート\", link: \"https://ergoforum.org",
-      "nft_enthusiast_title_digital_art": "NFTエンスージアスト\",\n    title: \"デジタルアートコレクター\",\n    description:\n      \"あなたはユニークなデジタルアイテム、アート、コレクティブルに興奮しています！ErgoのNFTエコシステムは、低手数料と高いセキュリティを備えた革新的なマーケットプレイスと作成ツールを提供します。\",\n    icon:",
-      "ergo_auction_house_description_premier": "Ergo Auction House\",\n            description: \"プレミアNFTマーケットプレイス\",\n            link: \"/ecosystem/projects/auction-house",
-      "skyharbor_description_nft_trading_platform": "SkyHarbor\", description: \"NFT取引プラットフォーム\", link: \"/ecosystem/projects/skyharbor",
-      "tokenjay_description_nft_minting_platform": "TokenJay\", description: \"NFTミンティングプラットフォーム\", link: \"/ecosystem/projects/tokenjay",
-      "ergo_utils_description_nft_creation": "Ergo Utils\", description: \"NFT作成ユーティリティ\", link: \"/ecosystem/tools",
-      "explore_ergo_auction_house_link": "Ergo Auction Houseを探索する\", link: \"/ecosystem/projects/auction-house",
-      "learn_about_nft_creation_link": "NFT作成について学ぶ\", link: \"/ecosystem/projects/tokenjay",
-      "browse_nft_collections_link_ecosystem_nfts": "NFTコレクションを閲覧する\", link: \"/ecosystem/nfts",
+      "explore_ergo_auction_house_link": "Ergo Auction Houseを探索する\", link: \"/docs/ecosystem/financial/dex/trade-house",
+      "learn_about_nft_creation_link": "NFT作成について学ぶ\", link: \"/ecosystem/tokenjay",
+      "browse_nft_collections_link_ecosystem_nfts": "NFTコレクションを閲覧する\", link: \"/docs/ecosystem/nfts",
       "join_nft_community_link_https": "NFTコミュニティに参加する\", link: \"https://discord.gg/ergo-platform",
       "nft_discord_channels_link_https": "NFT Discordチャンネル\", link: \"https://discord.gg/ergo-platform",
-      "artist_community_link_community_artists": "アーティストコミュニティ\", link: \"/community/artists",
-      "collector_groups_link_community_collectors": "コレクターグループ\", link: \"/community/collectors",
-      "privacy_advocate_title_financial_privacy": "プライバシー擁護者\",\n    title: \"金融プライバシーの守護者\",\n    description:\n      \"あなたは金融プライバシーを重視し、取引履歴を守りたいと考えています！ErgoはSigmaプロトコルに基づく最先端のプライバシーツールを提供し、トラストレスで安全なプライバシー強化を実現します。\",\n    icon:",
-      "ergomixer_description_non_custodial_transaction": "ErgoMixer\", description: \"ノンカストディアルトランザクションミキサー\", link: \"/ecosystem/projects/ergomixer",
-      "stealth_addresses_description_enhanced_address": "ステルスアドレス\", description: \"強化されたアドレスプライバシー\", link: \"/technology/privacy-features",
+      "artist_community_link_community_artists": "アーティストコミュニティ\", link: \"/start/community",
+      "collector_groups_link_community_collectors": "コレクターグループ\", link: \"/start/community",
       "educational_resources": "教育リソース",
-      "sigma_protocols_guide_description_understanding": "Sigmaプロトコルガイド\",\n            description: \"プライバシー技術を理解する\",\n            link: \"/technology/privacy-features",
-      "privacy_best_practices_description_how": "プライバシーのベストプラクティス\", description: \"プライバシーを守る方法\", link: \"/learn/privacy",
-      "learn_about_ergomixer_link_ecosystem": "ErgoMixerについて学ぶ\", link: \"/ecosystem/projects/ergomixer",
+      "learn_about_ergomixer_link_ecosystem": "ErgoMixerについて学ぶ\", link: \"/ecosystem/ergomixer",
       "understand_sigma_protocols_link_technology": "Sigmaプロトコルを理解する\", link: \"/technology/privacy-features",
-      "read_privacy_best_practices_link_learn_privacy": "プライバシーのベストプラクティスを読む\", link: \"/learn/privacy",
+      "read_privacy_best_practices_link_learn_privacy": "プライバシーのベストプラクティスを読む\", link: \"/use/privacy",
       "join_privacy_discussions_link_https": "プライバシーディスカッションに参加する\", link: \"https://discord.gg/ergo-platform",
       "privacy_discord_channels_link_https": "プライバシーDiscordチャンネル\", link: \"https://discord.gg/ergo-platform",
-      "ergomixer_community_link_ecosystem_projects": "ErgoMixerコミュニティ\", link: \"/ecosystem/projects/ergomixer",
+      "ergomixer_community_link_ecosystem_projects": "ErgoMixerコミュニティ\", link: \"/ecosystem/ergomixer",
       "technical_discussions_link_https_ergoforum_org": "テクニカルディスカッション\", link: \"https://ergoforum.org",
-      "curious_learner_title_knowledge_seeker": "好奇心旺盛な学習者\",\n    title: \"知識の探求者\",\n    description:\n      \"あなたはErgoに初めて触れ、まず基本を理解したいと考えています！基礎を学ぶことで、エコシステムへの関わり方について情報に基づいた決断ができるようになります。\",\n    icon:",
-      "faq_for_beginners_description_common": "初心者向けFAQ\", description: \"よくある質問への回答\", link: \"/start/faq",
-      "quick_introduction_description_ergo_overview": "クイック入門\", description: \"Ergoの概要\", link: \"/start/introduction",
-      "ergonaut_handbook_description_comprehensive_guide": "Ergonautハンドブック\", description: \"包括的なガイド\", link: \"/learn/handbook",
-      "newcomer_channels_description_beginner_friendly": "新規ユーザーチャンネル\", description: \"初心者向けディスカッション\", link: \"/community",
-      "learning_groups_description_study_groups": "学習グループ\", description: \"スタディグループとメンターシップ\", link: \"/community/learning",
       "read_the_faq_for_beginners_link_start_faq": "初心者向けFAQを読む\", link: \"/start/faq",
       "take_the_quick_introduction_link": "クイック入門を受ける\", link: \"/start/introduction",
-      "join_newcomer_community_link_community": "新規ユーザーコミュニティに参加する\", link: \"/community",
+      "join_newcomer_community_link_community": "新規ユーザーコミュニティに参加する\", link: \"/start/community",
       "explore_the_learning_hub_link_learn": "学習ハブを探索する\", link: \"/learn",
-      "newcomer_support_link_community_newcomers": "新規ユーザーサポート\", link: \"/community/newcomers",
-      "learning_groups_link_community_learning": "学習グループ\", link: \"/community/learning",
+      "newcomer_support_link_community_newcomers": "新規ユーザーサポート\", link: \"/start/community",
+      "learning_groups_link_community_learning": "学習グループ\", link: \"/learn",
       "your_next_steps": "次のステップ",
       "build_the_future": "未来を構築せよ",
       "comprehensive_developer_documentation": "包括的な開発者ドキュメント",
@@ -2021,40 +1964,13 @@
       "explore_entire_ecosystem": "エコシステム全体を探索する",
       "take_quiz_again": "クイズをもう一度",
       "take_our_interactive_quiz_to": "インタラクティブクイズを受けてErgoエコシステムでの理想的なパスを発見しましょう。",
-      "ergo_quiz_discover_your_blockchain": "Ergoクイズ - ブロックチェーンパスを発見する\",\n    description: \"Ergoエコシステムで完璧な役割を見つけるインタラクティブクイズ。\",\n    url: \"https://ergoblockchain.org/start/quiz\",\n    siteName: \"Ergo Platform",
       "developer_miner_investor_take_the": "開発者？マイナー？投資家？クイズで完璧な適合を見つけよう。",
-      "quiz_id_https_ergoblockchain_org": "Quiz\",\n    \"@id\": \"https://ergoblockchain.org/start/quiz\",\n    name: \"Ergoエコシステムパスファインダークイズ\",\n    description: \"ユーザーがErgoエコシステムで理想的なパスを見つけるのを助けるインタラクティブクイズ\",\n    educationalLevel: \"初心者\",\n    learningResourceType: \"クイズ\",\n    timeRequired:",
       "ergo_quiz_find_your_path_in_blockchain": "Ergoクイズ | ブロックチェーンでのパスを見つける",
       "ergo_quiz_discover_your_blockchain_path": "Ergoクイズ - ブロックチェーンパスを発見する",
       "interactive_quiz_to_find_your": "Ergoエコシステムで完璧な役割を見つけるインタラクティブクイズ。",
       "find_your_path_in_ergo_interactive_quiz": "Ergoでのパスを見つける | インタラクティブクイズ",
       "interactive_quiz_to_help_users": "ユーザーがErgoエコシステムで理想的なパスを見つけるのを助けるインタラクティブクイズ"
     },
-    "i_m_new_to_crypto": "暗号通貨は初めて\",\n    subtitle: \"基礎から始める\",\n    icon: User,\n    color:",
-    "why_ergo_exists_description_understand": "なぜErgoが存在するのか\",\n        description: \"私たちが解決する問題を理解する\",\n        icon: Zap,\n        href: \"/start/introduction\",\n        duration:",
-    "stay_safe_description_essential_security": "安全を守る\",\n        description: \"必須のセキュリティ実践\",\n        icon: Shield,\n        href: \"/start/security-tips\",\n        duration:",
-    "i_want_to_learn_subtitle": "学びたい\",\n    subtitle: \"Ergoを深く掘り下げる\",\n    icon: BookOpen,\n    color:",
-    "ergo_vs_others_description_compare": "Ergo対他のブロックチェーン\",\n        description: \"Bitcoin、Ethereum、Moneroと比較\",\n        icon: Zap,\n        href: \"/learn/comparison\",\n        duration:",
-    "unique_tech_description_eutxo_sigma": "独自の技術\",\n        description: \"eUTXO、Sigmaプロトコルの説明\",\n        icon: Code,\n        href: \"/technology/features\",\n        duration:",
-    "privacy_features_description_how_ergo": "プライバシー機能\",\n        description: \"Ergoがデータを保護する方法\",\n        icon: Shield,\n        href: \"/learn/censorship-resistance\",\n        duration:",
-    "real_use_cases_description_community": "実際のユースケース\",\n        description: \"コミュニティの成功事例\",\n        icon: User,\n        href: \"/community/stories\",\n        duration:",
-    "i_m_a_developer_subtitle": "開発者です\",\n    subtitle: \"Ergoで構築する\",\n    icon: Code,\n    color:",
-    "hello_world_description_your_first": "Hello World\",\n        description: \"初めてのErgoScriptコントラクト\",\n        icon: Code,\n        href: \"/docs/developers\",\n        duration:",
-    "try_playground_description_interactive_contract": "プレイグラウンドを試す\",\n        description: \"インタラクティブなコントラクトエディタ\",\n        icon: TestTube,\n        href: \"/docs/developers/playground\",\n        duration:",
-    "sdks_tools_description_libraries_for": "SDK＆ツール\",\n        description: \"使用言語向けライブラリ\",\n        icon: Zap,\n        href: \"/docs/developers/tooling\",\n        duration: \"ブラウズ",
-    "join_dev_chat_description_get": "開発者チャットに参加\",\n        description: \"コア開発者からヘルプを得る\",\n        icon: User,\n        href: \"/community/developers\",\n        duration: \"今すぐ",
-    "i_want_to_mine_subtitle": "マイニングしたい\",\n    subtitle: \"ネットワークを守る\",\n    icon: Cpu,\n    color:",
-    "mining_guide_description": "マイニングガイド\",\n        description:",
-    "choose_a_pool_description_compare": "プールを選ぶ\",\n        description: \"プールと手数料を比較\",\n        icon: Zap,\n        href: \"/use/mining-pools\",\n        duration:",
-    "run_a_node_description_advanced": "ノードを実行\",\n        description: \"上級者向け：フルノードのセットアップ\",\n        icon: Shield,\n        href: \"/docs/developers/infrastructure\",\n        duration:",
-    "i_m_an_investor_subtitle": "投資家です\",\n    subtitle: \"資産を理解する\",\n    icon: LineChart,\n    color:",
-    "ecosystem_map_description_what_s": "エコシステムマップ\",\n        description: \"Ergoで構築されているもの\",\n        icon: Zap,\n        href: \"/docs/ecosystem\",\n        duration:",
-    "tokenomics_description_supply_distribution_governance": "トークノミクス\",\n        description: \"供給、配布、ガバナンス\",\n        icon: LineChart,\n        href: \"/docs/introduction/resources\",\n        duration:",
-    "partnerships_description_major_integrations_and": "パートナーシップ\",\n        description: \"主要な統合とユーザー\",\n        icon: User,\n        href: \"/ecosystem/partnerships\",\n        duration:",
-    "track_markets_description_price_volume": "マーケットを追跡\",\n        description: \"価格、取引量、アナリティクス\",\n        icon: LineChart,\n        href: \"/ecosystem/market\",\n        duration: \"ライブ",
-    "learning_paths_icon_target_color": "学習パス\", icon: Target, color:",
-    "quick_start_icon_clock_color": "クイックスタート\", icon: Clock, color:",
-    "open_source_icon_gitbranch_color": "オープンソース\", icon: GitBranch, color:",
     "skip_to_docs": "ドキュメントへスキップ",
     "choose_your_path_into_ergo": "Ergoへの道を選ぶ",
     "pick_what_describes_you_best": "あなたに最も当てはまるものを選んでください。必要なことを全てガイドします。",
@@ -2097,12 +2013,7 @@
       "comparison_item_https_ergoblockchain_org": "比較\", item: \"https://ergoblockchain.org/start/comparison",
       "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "eUTXO対アカウントモデル、PoW対PoS、プライバシーと手数料の比較：Ergo、Ethereum、Bitcoin、Cardano。",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "question_name_how_does_eutxo": "Question\",\n                    name: \"eUTXOはどのように再入リスクを低減しますか？",
-      "question_name_are_fees_predictable_on_ergo": "Question\",\n                    name: \"Ergoの手数料は予測可能ですか？",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"スクリプトコストは制限されており手数料は予測可能です；ガス価格オークションはありません（最終手数料はメンプール状況によって異なります）。",
-      "question_name_does_ergo_have_light_clients": "Question\",\n                    name: \"Ergoにはライトクライアントがありますか？",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"はい。NIPoPoWsはトラストを最小化したライトクライアントのための簡潔な証明を可能にします。",
       "ergo_vs_others_practical_comparison": "Ergo対他のブロックチェーン — 実践的な比較",
       "quick_comparison_of_ergo_vs": "Ergo対アカウントベースチェーンのクイック比較：eUTXO、ASIC耐性PoW（Autolykos）、Sigmaプロトコル、予測可能な手数料、ネイティブL1トークン、ライトクライアント（NIPoPoWs）。",
@@ -2110,29 +2021,14 @@
       "compare_ergo_with_bitcoin_ethereum": "ErgoをBitcoin、Ethereum、Cardanoと比較。技術仕様、コンセンサスメカニズム、スマートコントラクト、スケーラビリティ、ユニークな機能のサイドバイサイド比較。",
       "compare_ergo_with_leading_blockchains": "Ergoを主要ブロックチェーンと比較",
       "blockchain_comparison": "ブロックチェーン比較",
-      "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"ブロックチェーンプラットフォーム比較\",\n    description: \"ErgoとBitcoin、Ethereum、Cardanoを比較",
-      "what_advantages_does_ergo_have": "ErgoはEthereumに対してどのような優位性がありますか？\",\n      answer: \"Ergoは予測可能な手数料、再入攻撃なし、並列トランザクション処理、エネルギー効率の高いPoWマイニングを提供します。",
-      "how_does_ergo_compare_to": "ErgoはCardanoとどう比較されますか？\",\n      answer: \"両者ともeUTXOを使用していますが、ErgoはPoWコンセンサス、ストレージレント、VC資金なしで、より分散化されサステナブルです。",
       "ergo_vs_bitcoin_ethereum_cardano": "Ergo対Bitcoin、Ethereum、Cardano",
       "technical_comparison_of_ergo_vs": "Ergo対Bitcoin、Ethereum、Cardanoの技術比較。Ergoが際立つ理由を確認してください。",
       "technical_comparison_of_ergo_with": "ErgoとBitcoin、Ethereum、Cardanoの技術比較"
     },
-    "community_icon_users_color": "コミュニティ\", icon: Users, color:",
     "get_started": "はじめる",
     "communityMeta": {
       "connect_with_developers_miners_traders": "開発者、マイナー、トレーダー、エンスージアストとつながりましょう。Discord、Telegram、Redditなど。",
-      "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergoコミュニティ\",\n    description: \"Ergoで構築する開発者、マイナー、エンスージアストのグローバルコミュニティ\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
-      "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "aggregaterating_ratingvalue": "AggregateRating\",\n      ratingValue:",
-      "how_do_i_join_the": "Ergoコミュニティに参加するにはどうすればいいですか？\",\n      answer: \"リアルタイムチャットのためにDiscordサーバーに参加し、クイックアップデートはTelegram、ディスカッションはReddit、開発への貢献はGitHubに参加してください。すべてのプラットフォームは開かれており、新規ユーザーを歓迎します。",
-      "what_is_the_main_ergo_community_platform_answer": "Ergoのメインコミュニティプラットフォームは何ですか？\",\n      answer:",
-      "can_i_contribute_to_ergo": "コーディングなしにErgoに貢献できますか？\",\n      answer: \"はい！コンテンツ作成、翻訳、コミュニティ管理、テスト、ドキュメント、またはガバナンスディスカッションへの参加を通じて貢献できます。",
-      "are_there_regional_ergo_communities": "地域のErgoコミュニティはありますか？\",\n      answer: \"はい、中国語、ロシア語、スペイン語、トルコ語など複数の言語で活発な地域コミュニティがあり、それぞれ専用のTelegramグループがあります。",
-      "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergoコミュニティプラットフォーム",
-      "discord_url_https_discord_gg": "Discord\",\n        url: \"https://discord.gg/ergo-platform\",\n        description:",
-      "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"クイックアップデートとグローバルチャット",
-      "reddit_url_https_reddit_com": "Reddit\",\n        url: \"https://reddit.com/r/ergonauts\",\n        description: \"ディスカッションとコミュニティコンテンツ",
-      "github_url_https_github_com": "GitHub\",\n        url: \"https://github.com/ergoplatform\",\n        description: \"オープンソース開発",
       "ergo_community_join_discord_telegram_forums": "Ergoコミュニティ | Discord、Telegram＆フォーラムに参加",
       "connect_with_the_ergo_community": "Ergoコミュニティとつながりましょう。Discord、Telegram、RedditでT15K+のメンバーに参加してください。サポートを受け、ガバナンスに参加し、開発に貢献し、Ergoの未来を形作りましょう。",
       "join_the_ergo_community_15k_active_members": "Ergoコミュニティに参加 | 15K+のアクティブメンバー",
@@ -2144,24 +2040,7 @@
       "discussions_and_community_content": "ディスカッションとコミュニティコンテンツ",
       "open_source_development": "オープンソース開発"
     },
-    "how_long_does_it_take_to_learn_ergo_answer": "Ergoを学ぶのにどのくらいの時間がかかりますか？\",\n      answer:",
-    "start_your_ergo_journey_summary": "Ergoの旅を始める\",\n    summary: \"Ergoブロックチェーンへのパーソナライズされたパスを選ぶ：初心者、開発者、マイナー、投資家\",\n    url: \"https://ergoblockchain.org/start",
-    "start_your_journey_with_ergo": "Ergoブロックチェーンとの旅を始める',\n    description: '初心者、開発者、マイナー、投資家向けのパーソナライズされた学習パス。Ergoへの道を見つけましょう。',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
     "start_with_ergo_learning_paths": "Ergoで始める - 学習パス",
-    "start_your_ergo_journey_choose": "Ergoの旅を始める - パスを選ぶ',\n    description: '初心者？開発者？マイナー？投資家？Ergoへのパーソナライズされたパスを見つけましょう。",
-    "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
-    "howtosupply_name_computer_or_smartphone": "HowToSupply', name: 'コンピューターまたはスマートフォン",
-    "howtosupply_name_internet_connection": "HowToSupply', name: 'インターネット接続",
-    "howtotool_name_web_browser": "HowToTool', name: 'ウェブブラウザ",
-    "howtostep_name_choose_your_path": "HowToStep',\n        name: 'パスを選ぶ',\n        text: '暗号通貨初心者、学びたい、開発したい、マイニングしたい、投資したいのいずれかを選ぶ',\n        url: 'https://ergoblockchain.org/start',\n        image: 'https://ergoblockchain.org/images/start-paths.png",
-    "howtostep_name_understand_why_ergo": "HowToStep',\n        name: 'なぜErgoなのかを理解する',\n        text: 'Ergoが解決する問題とそのユニークな機能について学ぶ',\n        url: 'https://ergoblockchain.org/start/introduction",
-    "howtostep_name_learn_security_best": "HowToStep',\n        name: 'セキュリティのベストプラクティスを学ぶ',\n        text: '資産を保護するための必須セキュリティ実践を理解する',\n        url: 'https://ergoblockchain.org/start/security-tips",
-    "course_name_beginner_path_description": "Course',\n          name: '初心者パス',\n          description: '暗号通貨とブロックチェーンに初めて触れる方向け",
-    "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
-    "course_name_developer_path_description": "Course',\n          name: '開発者パス',\n          description: 'Ergoで構築したいプログラマー向け",
-    "course_name_miner_path_description": "Course',\n          name: 'マイナーパス',\n          description: 'ERGのマイニングに興味がある方向け",
-    "course_name_investor_path_description": "Course',\n          name: '投資家パス',\n          description: '投資としてErgoを理解するための",
-    "course_name_learning_path_description": "Course',\n          name: '学習パス',\n          description: 'Ergoの技術とエコシステムを深く掘り下げる",
     "home_item_https_ergoblockchain_org": "ホーム',\n        item: 'https://ergoblockchain.org",
     "start_item_https_ergoblockchain_org_start": "スタート',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "Ergoブロックチェーンとの旅を始める",

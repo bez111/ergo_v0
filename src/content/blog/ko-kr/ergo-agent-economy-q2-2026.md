@@ -1,6 +1,6 @@
 ---
 title: "Accord 프로토콜 Q2 2026 업데이트: Ergo 에이전트 이코노미 스택에 무엇이 출시되었는가"
-slug: "/blog/accord-protocol-q2-2026-update"
+slug: "/blog/ergo-agent-economy-q2-2026"
 seo_title: "Accord 프로토콜 Q2 2026: AI 에이전트 결제 SDK, MCP 서버 및 Ergo 테스트넷 데모"
 meta_description: "Accord 프로토콜 Q2 2026 업데이트: AI 에이전트 결제 SDK, Ergo Notes, MCP 서버, LangChain/OpenAI/CrewAI/AutoGen 어댑터, 테스트넷 데모 및 감시 게이트 메인넷 로드맵."
 excerpt: "첫 번째 Ergo 에이전트 결제 SDK 출시 후 2개월 만에, Accord 프로토콜은 이제 테스트넷 우선 계약 레이어, 완전한 Note 라이프사이클, 프레임워크 어댑터, MCP 도구 및 10개의 작동하는 예제를 제공합니다."
@@ -208,7 +208,7 @@ HTTP 402를 반환하는 호스팅된 테스트넷 API, Accord/402 결제 흐름
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/accord-protocol-q2-2026-update",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergo-agent-economy-q2-2026",
   "keywords": ["Accord Protocol", "AI agent payments", "Ergo", "MCP", "x402", "testnet"]
 }
 ```

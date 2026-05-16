@@ -132,7 +132,7 @@ out.R4[Int].get == SELF.R4[Int].get`}
               To avoid embedding potentially large script code within the previous stage's script, it's common practice to work with hashes. Instead of checking <code className="bg-neutral-700 px-2 py-0.5 rounded">out.propositionBytes == state_n_code</code>, the script checks <code className="bg-neutral-700 px-2 py-0.5 rounded">blake2b256(out.propositionBytes) == state_n_code_hash</code>, where <code className="bg-neutral-700 px-2 py-0.5 rounded">state_n_code_hash</code> is a known constant hash of the expected script for the next stage. This optimization significantly reduces script size.
             </p>
             <p className="mt-6">
-              Next, we will look at <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/tx-tree" className="text-cyan-400 hover:underline">Transaction Trees</Link>
+              Next, we will look at <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees" className="text-cyan-400 hover:underline">Transaction Trees</Link>
             </p>
           </div>
         </section>

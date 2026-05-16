@@ -122,7 +122,7 @@ export default function NFTsDigitalAssetsPage() {
               "@type": "ListItem", 
               position: 2,
               name: t("schema.breadcrumbs.nftsDigitalAssets"),
-              item: "https://www.ergoblockchain.org/use/nfts-digital-assets"
+              item: "https://www.ergoblockchain.org/use/nfts"
             }
           ]
         }}
@@ -150,7 +150,7 @@ export default function NFTsDigitalAssetsPage() {
           <Breadcrumbs
             items={[
               { name: t("schema.breadcrumbs.useCases"), href: "/use" },
-              { name: t("schema.breadcrumbs.nftsDigitalAssets"), href: "/use/nfts-digital-assets" }
+              { name: t("schema.breadcrumbs.nftsDigitalAssets"), href: "/use/nfts" }
             ]}
             className="mb-8"
           />

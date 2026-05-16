@@ -15,7 +15,7 @@ export default function SubBlocksPage() {
           Subblocks in Ergo
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Reducing confirmation times from 2 minutes to 2 seconds with sub-blocks and ordering blocks.
+          Testing faster provisional inclusion feedback with input blocks while ordering blocks preserve final settlement.
         </p>
         
         {/* Hero Buttons */}
@@ -44,7 +44,7 @@ export default function SubBlocksPage() {
           <h2 className="text-xl font-bold text-blue-400">TLDR</h2>
         </div>
         <p className="text-gray-300 leading-relaxed">
-          With the renaming and introduction of sub-blocks, Ergo now distinguishes between sub-blocks (also called input blocks) and full blocks (now called ordering blocks). This change reduces typical onchain confirmation times from about 2 minutes to roughly 2 seconds, achieving a 17× improvement in detecting transaction failures and transforming the current competitive mempool into a more cooperative environment.
+          Under the 2026 Matrix devnet/test stream, Ergo is testing a split between input blocks (sub-blocks) and ordering blocks. The design targets provisional transaction-inclusion feedback in roughly 1-2 seconds while preserving ordering blocks for final settlement, which would make user feedback about 60× faster than a 2-minute block interval and failure detection up to roughly 180× faster than a 6-minute wait.
         </p>
       </div>
 
@@ -91,7 +91,7 @@ export default function SubBlocksPage() {
                 <CheckCircle className="w-5 h-5" /> Rapid Onchain Confirmations
               </h3>
               <p className="text-gray-300 mb-4">
-                Everyday transactions—such as receiving tokens from DEX swaps or wallet-to-wallet transfers—can now be confirmed in approximately 2 seconds due to the introduction of sub-blocks. These input blocks are produced roughly every second and carry transaction data, allowing dApps and wallets to detect transaction inclusion almost instantly.
+                Everyday transactions—such as receiving tokens from DEX swaps or wallet-to-wallet transfers—are intended to receive provisional inclusion feedback in approximately 1-2 seconds once sub-block support is active. These input blocks are produced roughly every second and carry transaction data, allowing dApps and wallets to detect transaction inclusion almost instantly.
               </p>
               <p className="text-gray-300 mb-4">
                 However, this does not change the overall 2-minute block time for ordering blocks, which are still required for final settlement and consensus. As a result, existing dApps that rely on ordering blocks for confirmation will continue to behave as before.
@@ -106,7 +106,7 @@ export default function SubBlocksPage() {
                 <AlertTriangle className="w-5 h-5" /> Faster Failure Detection
               </h3>
               <p className="text-gray-300">
-                Instead of waiting up to 6 minutes to detect a transaction failure, the new system detects failures in about 2 seconds—a 17× improvement in responsiveness.
+                Instead of waiting up to 6 minutes to detect a transaction failure, the new system is designed to detect failures in about 2 seconds, an improvement of up to roughly 180× in responsiveness.
               </p>
             </div>
             
@@ -127,14 +127,27 @@ export default function SubBlocksPage() {
           
           <div className="bg-gradient-to-r from-indigo-400/10 to-purple-400/10 rounded-xl p-6 border border-indigo-400/20">
             <p className="text-gray-300 mb-4">
-              Ergo's renaming and introduction of sub-blocks (input blocks) paired with ordering blocks significantly improves transaction processing speed and reliability. These changes provide users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network.
+              Ergo's input-block / ordering-block design is intended to improve transaction processing speed and reliability without changing the security role of ordering blocks. The 2026 Matrix implementation is still in devnet/test rollout, so production users should treat sub-blocks as active protocol R&D until release notes state otherwise.
             </p>
             <p className="text-gray-300">
               For a deep dive into the technical details behind these changes, see the <Link href="/docs/introduction/roadmap/sub-blocks/technical-details" className="text-blue-400 hover:text-blue-300 underline">technical details</Link>.
             </p>
           </div>
         </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-white mb-6">Current Rollout Status</h2>
+
+          <div className="bg-cyan-400/10 rounded-xl p-6 border border-cyan-400/20">
+            <p className="text-gray-300 mb-4">
+              In 2026 the input-block work moved under the Matrix implementation and devnet test stream. The latest public notes describe devnet seed-node APIs, Matrix candidate-line merges, miner-facing API work, and remaining serialization, sync, peer-ban, Stratum proxy, and broader testing caveats.
+            </p>
+            <p className="text-gray-300">
+              Practical takeaway: wallets and dApps can prepare for faster provisional feedback, but final production guidance should follow the Ergo node release notes and miner rollout status.
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );
-} 
+}

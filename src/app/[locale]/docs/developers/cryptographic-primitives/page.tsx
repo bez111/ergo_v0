@@ -71,7 +71,7 @@ export default function CryptographicPrimitivesPage() {
           <h3 className="text-2xl font-bold mb-4 text-white">How Sigma Protocols Work</h3>
 
           <p className="text-gray-300 mb-4">
-            At their core, <a href="/docs/developers/cryptographic-primitives/sigma" className="text-orange-400 hover:text-orange-300">Sigma protocols</a> provide a secure way to prove the following properties:
+            At their core, <a href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:text-orange-300">Sigma protocols</a> provide a secure way to prove the following properties:
           </p>
 
           <ol className="list-decimal list-inside space-y-2 text-gray-300 mb-6 ml-4">
@@ -292,7 +292,7 @@ export default function CryptographicPrimitivesPage() {
             <h3 className="text-2xl font-bold mb-4 text-white">Introduction</h3>
 
             <p className="text-gray-300 mb-6">
-              <strong>Sigma protocols</strong> (Σ-protocols) are a class of cryptographic proof systems that play a central role in the Ergo blockchain. These protocols allow a <strong>prover</strong> to convince a <strong>verifier</strong> that they know a value, such as a secret key, without revealing the value itself (a property related to <Link href="/docs/developers/cryptographic-primitives/zero-knowledge-proofs" className="text-orange-400 hover:text-orange-300">zero-knowledge proofs</Link>). Σ-protocols are the foundation for many <Link href="/docs/developers/cryptographic-primitives/zero-knowledge-proofs" className="text-orange-400 hover:text-orange-300">privacy</Link>-preserving and <Link href="/docs/developers/cryptographic-primitives/threshold" className="text-orange-400 hover:text-orange-300">multi-signature</Link> functionalities in Ergo.
+              <strong>Sigma protocols</strong> (Σ-protocols) are a class of cryptographic proof systems that play a central role in the Ergo blockchain. These protocols allow a <strong>prover</strong> to convince a <strong>verifier</strong> that they know a value, such as a secret key, without revealing the value itself (a property related to <Link href="/technology/privacy-features" className="text-orange-400 hover:text-orange-300">zero-knowledge proofs</Link>). Σ-protocols are the foundation for many <Link href="/technology/privacy-features" className="text-orange-400 hover:text-orange-300">privacy</Link>-preserving and <Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">multi-signature</Link> functionalities in Ergo.
             </p>
 
             <p className="text-gray-300 mb-6">
@@ -300,7 +300,7 @@ export default function CryptographicPrimitivesPage() {
             </p>
 
             <p className="text-gray-300 mb-6">
-              Conceptually, Σ-proofs are generalizations of <Link href="/docs/developers/cryptographic-primitives/signing" className="text-orange-400 hover:text-orange-300">digital signatures</Link>. The <strong><Link href="/docs/developers/cryptographic-primitives/schnorr" className="text-orange-400 hover:text-orange-300">Schnorr signature scheme</Link></strong> is the canonical example of a Σ-proof: it allows the recipient to prove knowledge of a secret (<Link href="/docs/developers/cryptographic-primitives/discrete-logarithm" className="text-orange-400 hover:text-orange-300">discrete logarithm</Link>) without revealing it. Σ-proofs in Ergo extend this concept, allowing the creation of more complex cryptographic protocols like <strong><Link href="/docs/developers/cryptographic-primitives/threshold" className="text-orange-400 hover:text-orange-300">multi-signature</Link></strong>, <strong><Link href="/docs/developers/cryptographic-primitives/ring" className="text-orange-400 hover:text-orange-300">ring signatures</Link></strong>, and <strong><Link href="/docs/developers/cryptographic-primitives/threshold" className="text-orange-400 hover:text-orange-300">threshold signatures</Link></strong>.
+              Conceptually, Σ-proofs are generalizations of <Link href="/docs/developers/cryptographic-primitives/signing" className="text-orange-400 hover:text-orange-300">digital signatures</Link>. The <strong><Link href="/docs/developers/cryptographic-primitives/schnorr" className="text-orange-400 hover:text-orange-300">Schnorr signature scheme</Link></strong> is the canonical example of a Σ-proof: it allows the recipient to prove knowledge of a secret (<Link href="/docs/developers/data-model-apis/discrete" className="text-orange-400 hover:text-orange-300">discrete logarithm</Link>) without revealing it. Σ-proofs in Ergo extend this concept, allowing the creation of more complex cryptographic protocols like <strong><Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">multi-signature</Link></strong>, <strong><Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:text-orange-300">ring signatures</Link></strong>, and <strong><Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">threshold signatures</Link></strong>.
             </p>
 
             <h3 className="text-2xl font-bold mb-4 text-white">Elementary Σ-Protocols in ErgoScript</h3>
@@ -329,8 +329,8 @@ export default function CryptographicPrimitivesPage() {
             <p className="text-gray-300 mb-4">Examples include:</p>
 
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <li><strong><Link href="/docs/developers/cryptographic-primitives/ring" className="text-orange-400 hover:text-orange-300">Ring Signatures</Link></strong>: A ring signature is a proof of knowledge of <strong>one</strong> of multiple secrets. For example: Prove knowledge of either secret A or secret B.</li>
-              <li><strong><Link href="/docs/developers/cryptographic-primitives/threshold" className="text-orange-400 hover:text-orange-300">Threshold Signatures</Link></strong>: A threshold signature is a proof that a certain number of secrets are known. For example: Prove knowledge of at least two of three secrets.</li>
+              <li><strong><Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:text-orange-300">Ring Signatures</Link></strong>: A ring signature is a proof of knowledge of <strong>one</strong> of multiple secrets. For example: Prove knowledge of either secret A or secret B.</li>
+              <li><strong><Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">Threshold Signatures</Link></strong>: A threshold signature is a proof that a certain number of secrets are known. For example: Prove knowledge of at least two of three secrets.</li>
             </ul>
 
             <p className="text-gray-300 mb-6">
@@ -370,12 +370,12 @@ val thresholdScript = s"""
 
             <h4 className="text-xl font-bold mb-4 text-white">2. Ring Signatures for Privacy</h4>
             <p className="text-gray-300 mb-4">
-              <Link href="/docs/developers/cryptographic-primitives/ring" className="text-orange-400 hover:text-orange-300">Ring signatures</Link> provide <Link href="/docs/developers/cryptographic-primitives/zero-knowledge-proofs" className="text-orange-400 hover:text-orange-300">privacy</Link> by allowing a user to sign a transaction on behalf of a group without revealing which group member signed it. This is particularly useful for creating anonymous transactions and decentralized mixers, such as <strong><Link href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</Link></strong>. The privacy of ring signatures makes them ideal for applications where anonymity is crucial, such as anonymous donations or private payments.
+              <Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:text-orange-300">Ring signatures</Link> provide <Link href="/technology/privacy-features" className="text-orange-400 hover:text-orange-300">privacy</Link> by allowing a user to sign a transaction on behalf of a group without revealing which group member signed it. This is particularly useful for creating anonymous transactions and decentralized mixers, such as <strong><Link href="/docs/ecosystem/privacy/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</Link></strong>. The privacy of ring signatures makes them ideal for applications where anonymity is crucial, such as anonymous donations or private payments.
             </p>
 
             <h4 className="text-xl font-bold mb-4 text-white">3. Threshold Signatures</h4>
             <p className="text-gray-300 mb-4">
-              <Link href="/docs/developers/cryptographic-primitives/threshold" className="text-orange-400 hover:text-orange-300">Threshold signatures</Link> are critical for decentralized control. For example, a corporate <Link href="/docs/developers/cryptographic-primitives/wallets" className="text-orange-400 hover:text-orange-300">wallet</Link> could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
+              <Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">Threshold signatures</Link> are critical for decentralized control. For example, a corporate <Link href="/docs/developers/cryptographic-primitives/wallets" className="text-orange-400 hover:text-orange-300">wallet</Link> could be protected by a 3-out-of-5 signature scheme, ensuring that no single party can unilaterally control the funds.
             </p>
 
             <h4 className="text-xl font-bold mb-4 text-white">4. Time-Locked Conditions</h4>
@@ -385,7 +385,7 @@ val thresholdScript = s"""
 
             <h4 className="text-xl font-bold mb-4 text-white">5. Decentralized Mixers</h4>
             <p className="text-gray-300 mb-6">
-              <strong><Link href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</Link></strong> is an advanced, non-custodial token <Link href="/docs/developers/cryptographic-primitives/mixer" className="text-orange-400 hover:text-orange-300">mixer</Link> based on Σ-protocols. It leverages ring signatures and <Link href="/docs/developers/cryptographic-primitives/zero-knowledge-proofs" className="text-orange-400 hover:text-orange-300">zero-knowledge proofs</Link> to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. <Link href="/docs/developers/cryptographic-primitives/sigmajoin" className="text-orange-400 hover:text-orange-300">SigmaJoin</Link>, an <Link href="/docs/developers/cryptographic-primitives/off-chain" className="text-orange-400 hover:text-orange-300">off-chain</Link> implementation concept related to ErgoMixer, further extends the idea of trustless and decentralized privacy mechanisms.
+              <strong><Link href="/docs/ecosystem/privacy/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</Link></strong> is an advanced, non-custodial token <Link href="/docs/ecosystem/privacy/ergomixer" className="text-orange-400 hover:text-orange-300">mixer</Link> based on Σ-protocols. It leverages ring signatures and <Link href="/technology/privacy-features" className="text-orange-400 hover:text-orange-300">zero-knowledge proofs</Link> to provide enhanced privacy while ensuring that no third party is needed to manage or approve the mixing process. <Link href="/docs/developers/cryptographic-primitives/zerojoin" className="text-orange-400 hover:text-orange-300">SigmaJoin</Link>, an <Link href="/docs/developers/cryptographic-primitives/off-chain" className="text-orange-400 hover:text-orange-300">off-chain</Link> implementation concept related to ErgoMixer, further extends the idea of trustless and decentralized privacy mechanisms.
             </p>
 
             <hr className="border-neutral-700 my-8" />
@@ -397,7 +397,7 @@ val thresholdScript = s"""
             </p>
 
             <ol className="list-decimal list-inside space-y-2 text-gray-300 mb-6 ml-4">
-              <li><strong>Prover</strong>: The Prover uses the <Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:text-orange-300">ErgoTree</Link> <Link href="/docs/developers/cryptographic-primitives/sigmastate-interpreter" className="text-orange-400 hover:text-orange-300">interpreter</Link> to reduce a high-level spending condition into a SigmaBoolean (the cryptographic proposition that needs to be proven). The SigmaBoolean is then converted into a cryptographic proof using the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md" className="text-orange-400 hover:text-orange-300">Fiat-Shamir transformation</a>, ensuring that the transaction can only be authorized by parties who possess the necessary secrets (such as private keys).</li>
+              <li><strong>Prover</strong>: The Prover uses the <Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:text-orange-300">ErgoTree</Link> <Link href="/docs/developers/tooling/compilers/sigmastate-interpreter" className="text-orange-400 hover:text-orange-300">interpreter</Link> to reduce a high-level spending condition into a SigmaBoolean (the cryptographic proposition that needs to be proven). The SigmaBoolean is then converted into a cryptographic proof using the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/sigma-dsl.md" className="text-orange-400 hover:text-orange-300">Fiat-Shamir transformation</a>, ensuring that the transaction can only be authorized by parties who possess the necessary secrets (such as private keys).</li>
               <li><strong>Verifier</strong>: The Verifier also uses the ErgoTree interpreter to reduce the spending condition into a SigmaBoolean. It then checks the cryptographic proof against this proposition, ensuring that the transaction is valid and all required conditions are met.</li>
             </ol>
 
@@ -419,8 +419,8 @@ val thresholdScript = s"""
 
             <h4 className="text-xl font-bold mb-4 text-white">Applications</h4>
             <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-              <li><strong><Link href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</Link></strong>: A state-of-the-art, non-custodial token mixer using Σ-protocols for privacy and anonymity.</li>
-              <li><strong><Link href="/docs/developers/cryptographic-primitives/sigmajoin" className="text-orange-400 hover:text-orange-300">SigmaJoin</Link></strong>: An off-chain implementation concept related to ErgoMixer for decentralized privacy-preserving transactions.</li>
+              <li><strong><Link href="/docs/ecosystem/privacy/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</Link></strong>: A state-of-the-art, non-custodial token mixer using Σ-protocols for privacy and anonymity.</li>
+              <li><strong><Link href="/docs/developers/cryptographic-primitives/zerojoin" className="text-orange-400 hover:text-orange-300">SigmaJoin</Link></strong>: An off-chain implementation concept related to ErgoMixer for decentralized privacy-preserving transactions.</li>
               <li><strong>Ergo Threshold Signature Contracts</strong>: Use Σ-protocols to create custom multi-signature wallets and contracts.</li>
             </ul>
 
@@ -618,7 +618,7 @@ val thresholdProof = prove {
               <li>• Uses ring signatures and Diffie-Hellman tuples</li>
               <li>• Restores fungibility of digital tokens</li>
               <li>• Provides non-interactive, trustless mixing</li>
-              <li>• Detailed in <a href="/docs/developers/cryptographic-primitives/mixer" className="text-blue-400 hover:text-blue-300 underline">Mixer Protocol</a> documentation</li>
+              <li>• Detailed in <a href="/docs/ecosystem/privacy/ergomixer" className="text-blue-400 hover:text-blue-300 underline">Mixer Protocol</a> documentation</li>
             </ul>
 
             <h3 className="text-2xl font-bold mb-4 text-white">Security Considerations</h3>
@@ -631,10 +631,10 @@ val thresholdProof = prove {
 
             <h3 className="text-2xl font-bold mb-4 text-white">Related Cryptographic Concepts</h3>
             <ul className="text-gray-300 space-y-2 ml-4 mb-6">
-              <li>• <a href="/docs/developers/cryptographic-primitives/discrete-logarithm" className="text-blue-400 hover:text-blue-300 underline">Discrete Logarithm Proofs</a></li>
+              <li>• <a href="/docs/developers/data-model-apis/discrete" className="text-blue-400 hover:text-blue-300 underline">Discrete Logarithm Proofs</a></li>
               <li>• <a href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-blue-400 hover:text-blue-300 underline">Ring Signatures</a></li>
               <li>• <a href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-blue-400 hover:text-blue-300 underline">Threshold Signatures</a></li>
-              <li>• <a href="/docs/developers/cryptographic-primitives/sigma-protocols" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols</a></li>
+              <li>• <a href="/technology/privacy-features" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols</a></li>
             </ul>
 
             <h3 className="text-2xl font-bold mb-4 text-white">Future Research Directions</h3>
@@ -658,7 +658,7 @@ val thresholdProof = prove {
 
             <h3 className="text-2xl font-bold mb-4 text-white">References</h3>
             <ul className="text-gray-300 space-y-2 ml-4 mb-6">
-              <li>• <a href="/docs/developers/cryptographic-primitives/sigma-protocols" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols Overview</a></li>
+              <li>• <a href="/technology/privacy-features" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols Overview</a></li>
               <li>• <a href="/docs/developers/cryptographic-primitives" className="text-blue-400 hover:text-blue-300 underline">Cryptographic Foundations</a></li>
               <li>• Zero-Knowledge Proofs in Ergo (this tab)</li>
               <li>• Academic Papers:</li>
@@ -732,7 +732,7 @@ val thresholdProof = prove {
                   <li>In applications like off-chain code and distributed systems managing the Plasma infrastructure, where privacy-preserving transactions need to verify inclusion or exclusion of certain elements without revealing all details.</li>
                 </ul>
               </li>
-              <li><strong>Documentation Reference</strong>: <a href="/docs/developers/cryptographic-primitives/avl" className="text-blue-400 hover:text-blue-300 underline">AVL Trees in Ergo</a>, <a href="/docs/developers/cryptographic-primitives/plasma" className="text-blue-400 hover:text-blue-300 underline">Plasma</a></li>
+              <li><strong>Documentation Reference</strong>: <a href="/docs/developers/cryptographic-primitives/avl" className="text-blue-400 hover:text-blue-300 underline">AVL Trees in Ergo</a>, <a href="/docs/developers/cryptographic-primitives/avl" className="text-blue-400 hover:text-blue-300 underline">Plasma</a></li>
             </ul>
 
             <h3 className="text-2xl font-bold mb-4 text-white">2. Merkle Trees</h3>

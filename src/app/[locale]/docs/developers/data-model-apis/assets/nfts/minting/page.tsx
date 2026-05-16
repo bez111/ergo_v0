@@ -88,7 +88,7 @@ export default function MintingNFTPage() {
             Standard
           </h2>
           <p className="text-gray-300 mb-4">
-            The standard for artwork issuance on Ergo is <Link href="/docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>. This standard outlines the process of issuing NFTs, including the two different design versions, <Link href="/docs/developers/data-model-apis/assets/nfts/v1v2" className="text-cyan-400 hover:underline">V1 and V2</Link>, and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information.
+            The standard for artwork issuance on Ergo is <Link href="/docs/developers/data-model-apis/assets/nfts/minting/v1-v2" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>. This standard outlines the process of issuing NFTs, including the two different design versions, <Link href="/docs/developers/data-model-apis/assets/nfts/v1v2" className="text-cyan-400 hover:underline">V1 and V2</Link>, and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information.
           </p>
         </div>
 

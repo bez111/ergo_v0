@@ -1,6 +1,6 @@
 ---
 title: "Notes vs Tokens：AI Agent支付的可编程承载工具"
-slug: "/blog/notes-vs-tokens-agent-payments"
+slug: "/blog/notes-vs-tokens"
 seo_title: "Notes vs Tokens：AI Agent支付的可编程承载工具"
 meta_description: "比较 Ergo Notes 和原生代币：当 AI agents 需要可编程 IOU、Reserve 支撑、到期、接受谓词和延迟结算时。"
 excerpt: "代币适合所有权。Notes 更适合自主 agent 工作流中有界、可过期、有条件可赎回的信用。"
@@ -259,7 +259,7 @@ Note 只与其 Reserve、谓词和实现一样好。
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens",
   "keywords": ["Ergo Notes", "native tokens", "AI agent payments", "programmable credit", "bearer instruments"]
 }
 ```

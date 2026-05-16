@@ -368,15 +368,15 @@ export default function SkyHarborPage() {
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-purple-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Discord Community</a>
+                <a href="https://www.skyharbor.io/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Discord Community</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-purple-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Repository</a>
+                <a href="https://www.skyharbor.io/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Repository</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-purple-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Documentation</a>
+                <a href="https://www.skyharbor.io/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Documentation</a>
               </li>
             </ul>
           </div>

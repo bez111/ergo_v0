@@ -50,7 +50,7 @@ export default function DexyGoldPage() {
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Monetary Systems
           </Link>
           <a
-            href="#"
+            href="/docs/ecosystem/financial/monetary-systems/dexygold"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
@@ -375,19 +375,19 @@ export default function DexyGoldPage() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">DexySpec</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">DexySpec</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Dexy Stablecoin Design</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Dexy Stablecoin Design</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Dexy: USD Simplest Stablecoin</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Dexy: USD Simplest Stablecoin</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Dexy Enhancements and Attack Mitigation</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Dexy Enhancements and Attack Mitigation</a>
               </li>
             </ul>
           </div>
@@ -397,19 +397,19 @@ export default function DexyGoldPage() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Join the DexyGold community on Telegram</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Join the DexyGold community on Telegram</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Join the DexyGold community on Discord</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Join the DexyGold community on Discord</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">GitHub Repository</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">GitHub Repository</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Draft Whitepaper</a>
+                <a href="/docs/ecosystem/financial/monetary-systems/dexygold" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Draft Whitepaper</a>
               </li>
             </ul>
           </div>

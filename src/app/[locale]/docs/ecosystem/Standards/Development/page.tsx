@@ -29,7 +29,7 @@ export default function DevelopmentStandardsPage() {
       <h2 className="text-2xl font-bold text-cyan-300 mb-4 mt-8">Resources</h2>
       <ul className="list-disc pl-6 text-gray-300 space-y-2 mb-8">
         <li><a href="./Analytics" className="text-cyan-400 underline">Analytics Integration Guide</a></li>
-        <li><a href="#" className="text-cyan-400 underline">Add your project to the ecosystem</a></li>
+        <li><a href="mailto:contact@ergoplatform.org?subject=Ergo%20ecosystem%20project%20submission" className="text-cyan-400 underline">Add your project to the ecosystem</a></li>
         <li><a href="./Identity-Security" className="text-cyan-400 underline">Security & Identity Standards</a></li>
       </ul>
     </>

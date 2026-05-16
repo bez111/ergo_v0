@@ -265,7 +265,7 @@ export const topics: TopicHub[] = [
     ],
     
     buildWithIt: [
-      { type: "doc", title: "Mining Setup Guide", url: "/docs/miners/mining-setup", description: "Detailed configuration instructions", badge: "Guide", priority: 1 },
+      { type: "doc", title: "Mining Setup Guide", url: "/miners", description: "Detailed configuration instructions", badge: "Guide", priority: 1 },
       { type: "glossary", title: "Autolykos", url: "/learn/glossary/autolykos", description: "Algorithm definition and properties", badge: "Concept", priority: 1 },
       { type: "doc", title: "Pool Selection", url: "/miners#pools", description: "Choosing a mining pool", badge: "Pools", priority: 2 }
     ],

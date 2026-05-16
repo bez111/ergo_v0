@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { Link } from "@/i18n/navigation"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
@@ -13,12 +13,12 @@ export function HeroSection() {
   const t = useTranslations('hero')
   const locale = useLocale()
   
-  const HERO_MESSAGES = [
+  const HERO_MESSAGES = useMemo(() => [
     t('message1') || "Decentralized Money for a Free Society",
     t('message2') || "The globally-neutral settlement layer for programmable money.",
     t('message3') || "The open-source home of digital freedom",
     t('message4') || "Join the movement for decentralized, open-source money",
-  ]
+  ], [t])
   const [typedText, setTypedText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
@@ -52,12 +52,14 @@ export function HeroSection() {
         setTypedText(typedText.slice(0, -1))
         }, 50)
     } else if (!isTyping && typedText.length === 0) {
-      setCurrentTextIndex((prev) => (prev + 1) % HERO_MESSAGES.length)
+        timeout = setTimeout(() => {
+        setCurrentTextIndex((prev) => (prev + 1) % HERO_MESSAGES.length)
         setIsTyping(true)
+        }, 100)
     }
     
     return () => clearTimeout(timeout)
-  }, [typedText, isTyping, currentTextIndex, isClient])
+  }, [typedText, isTyping, currentTextIndex, isClient, HERO_MESSAGES])
 
   // Cursor blinking
   useEffect(() => {
@@ -94,7 +96,7 @@ export function HeroSection() {
           <div className="space-y-4 relative">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
               <span className="relative inline-block font-mono" suppressHydrationWarning>
-                <span className="text-orange-500">&gt;</span> {isClient ? typedText : HERO_MESSAGES[0]}
+                <span className="text-orange-500">&gt;</span> {isClient ? typedText : ""}
                 <span
                   className={`text-orange-500 ${isClient && showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}
                   suppressHydrationWarning

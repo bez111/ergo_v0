@@ -209,8 +209,8 @@ const STATUS_ITEMS = [
   { tKey: "sigmaRust" as const, status: "live", url: "https://github.com/ergoplatform/sigma-rust" },
   { tKey: "chainCash" as const, status: "open", url: "https://github.com/kushti/chaincash" },
   { tKey: "ergoNodeApi" as const, status: "live", url: "https://api.ergoplatform.com/api/v1/docs/" },
-  { tKey: "starterRepo" as const, status: "soon", url: "#" },
-  { tKey: "identityLayer" as const, status: "open", url: "#" },
+  { tKey: "starterRepo" as const, status: "soon", url: "/build/agent-payments" },
+  { tKey: "identityLayer" as const, status: "open", url: "/agent-economy" },
 ]
 
 const fadeUp = {

@@ -13,6 +13,8 @@ import { verifyAndSettle } from "@/lib/sage/payments/verify"
 import { hashQuestionForToken, signPaymentToken } from "@/lib/sage/payments/token"
 import { checkRateLimit, clientKey } from "@/lib/sage/rate-limit"
 import type { SageQuote } from "@/lib/sage/payments/types"
+import { buildSageReceiptBundle, receiptAliases } from "@/lib/sage/receipts/bundle"
+import { saveReceiptBundle } from "@/lib/sage/receipts/storage"
 
 export const runtime = "nodejs"
 export const maxDuration = 60
@@ -73,21 +75,45 @@ export async function POST(req: NextRequest) {
     return jsonError(402, result.error ?? "payment verification failed")
   }
 
-  const token = signPaymentToken({
-    quoteId: quote.quoteId,
-    receiptId: result.receiptId ?? quote.quoteId,
-    questionHash: hashQuestionForToken(question),
+  if (!result.agreement || !result.verificationReceipt || !result.settlementReceipt) {
+    return jsonError(500, "payment verified but receipt artifacts were not produced")
+  }
+
+  const network = (process.env.SAGE_NETWORK ?? "testnet") as "mainnet" | "testnet"
+  const receiptBundle = buildSageReceiptBundle({
+    quote,
+    question,
+    proof: { quoteId: quote.quoteId, noteBoxId },
+    result,
+    agreement: result.agreement,
+    network,
   })
+  const storage = await saveReceiptBundle(receiptBundle, receiptAliases(receiptBundle))
+
+  let token: string
+  try {
+    token = signPaymentToken({
+      quoteId: quote.quoteId,
+      receiptId: result.receiptId ?? quote.quoteId,
+      questionHash: hashQuestionForToken(question),
+    })
+  } catch (err) {
+    return jsonError(500, err instanceof Error ? err.message : "payment token signing failed")
+  }
 
   console.log(
-    `[sage] paid quoteId=${quote.quoteId} receipt=${result.receiptId} settleTx=${result.settlementTxId} q="${question.slice(0, 60).replace(/\s+/g, " ")}"`,
+    `[sage] paid quoteId=${quote.quoteId} receipt=${receiptBundle.id} settleTx=${result.settlementTxId} storage=${storage.ok ? "saved" : storage.skipped ? "skipped" : "failed"} q="${question.slice(0, 60).replace(/\s+/g, " ")}"`,
   )
 
   return jsonOk({
     ok: true,
     paymentToken: token,
-    receiptId: result.receiptId,
+    receiptId: receiptBundle.id,
+    receiptUrl: receiptBundle.public_receipt_url,
+    receiptApiUrl: receiptBundle.api_receipt_url,
     settlementTxId: result.settlementTxId,
+    accordSettlementId: result.accordSettlementId,
+    receiptStorage: storage,
   })
 }
 

@@ -234,7 +234,7 @@ export default function JITCPage() {
               <li><a href="/docs/developers/data-model-apis/composing/wallet-interaction/fees" className="text-orange-400 hover:underline">Transaction Fees</a></li>
               <li><a href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Composition</a></li>
               <li><a href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript Languages</a></li>
-              <li><a href="/docs/technology/scaling" className="text-orange-400 hover:underline">Scaling Solutions</a></li>
+              <li><a href="/docs/introduction/roadmap/scaling-roadmap" className="text-orange-400 hover:underline">Scaling Solutions</a></li>
             </ul>
           </div>
         </div>

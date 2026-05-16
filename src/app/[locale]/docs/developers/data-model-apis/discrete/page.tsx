@@ -47,19 +47,19 @@ export default function DlogProofsPage() {
       <div className="bg-red-400/10 border border-red-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-red-400">Related Cryptographic Concepts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Link href="/docs/developers/cryptographic-primitives/sigma" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Sigma className="w-5 h-5 text-red-400" />
               <h3 className="font-semibold text-red-300 group-hover:underline">Sigma Protocols</h3>
             </div>
           </Link>
-          <Link href="/docs/developers/cryptographic-primitives/threshold" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Users className="w-5 h-5 text-red-400" />
               <h3 className="font-semibold text-red-300 group-hover:underline">Threshold Signatures</h3>
             </div>
           </Link>
-          <Link href="/docs/developers/cryptographic-primitives/ring" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Key className="w-5 h-5 text-red-400" />
               <h3 className="font-semibold text-red-300 group-hover:underline">Ring Signatures</h3>
@@ -92,7 +92,7 @@ proveDlog(pubKey)`}
               <h3 className="font-semibold text-green-300 group-hover:underline">Schnorr Signature Verification</h3>
             </div>
           </Link>
-          <Link href="/docs/developers/cryptographic-primitives/other-signatures/public-keys" className="group block">
+          <Link href="/docs/developers/ergoscript-languages/examples/public-keys" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Key className="w-5 h-5 text-green-400" />
               <h3 className="font-semibold text-green-300 group-hover:underline">Public Key Cryptography</h3>
@@ -132,7 +132,7 @@ proveDlog(pubKey)`}
         <h2 className="text-2xl font-bold mb-4 text-purple-400">References</h2>
         <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
           <li><Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Cryptographic Primitives</Link></li>
-          <li><Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript Capabilities</Link></li>
+          <li><Link href="/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript Capabilities</Link></li>
         </ul>
       </div>
     </div>

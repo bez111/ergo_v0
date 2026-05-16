@@ -1,6 +1,6 @@
 ---
 title: "Notes vs Tokens: AI Agent Ödemeleri İçin Programlanabilir Taşıyıcı Enstrümanlar"
-slug: "/blog/notes-vs-tokens-agent-payments"
+slug: "/blog/notes-vs-tokens"
 seo_title: "Notes vs Tokens: AI Agent Ödemeleri İçin Programlanabilir Taşıyıcı Enstrümanlar"
 meta_description: "Ergo Notes ve yerli token'ları karşılaştırın: AI ajanlarının programlanabilir IOU'lara, Reserve desteğine, sona erme tarihine, kabul yüklemiş ve ertelenmiş kapatmaya ihtiyaç duyduğu durumlar."
 excerpt: "Token'lar sahiplik için harikadır. Note'lar sınırlandırılmış, sona eren, koşullu olarak kullanılabilir otonom ajan iş akışlarındaki kredi için daha iyidir."
@@ -259,7 +259,7 @@ Kavram güçlüdür ve Ergo'nun eUTXO modeli deseni destekler. ChainCash/Basis r
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens",
   "keywords": ["Ergo Notes", "native tokens", "AI agent payments", "programmable credit", "bearer instruments"]
 }
 ```

@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "nfts",
-  ogImage: "/og-nfts.png",
-  canonicalPath: "/use/nfts-digital-assets",
+  ogImage: "/og/use/og-nfts.png",
+  canonicalPath: "/use/nfts",
 }
 
 // i18n Metadata

@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "bridges",
-  ogImage: "/og-bridges.png",
-  canonicalPath: "/use/cross-chain-bridges",
+  ogImage: "/og/use/og-bridges.png",
+  canonicalPath: "/use/bridges",
 }
 
 // i18n Metadata

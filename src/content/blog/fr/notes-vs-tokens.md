@@ -1,6 +1,6 @@
 ---
 title: "Notes vs Tokens : Instruments porteurs programmables pour les paiements des agents IA"
-slug: "/blog/notes-vs-tokens-agent-payments"
+slug: "/blog/notes-vs-tokens"
 seo_title: "Notes vs Tokens : Instruments porteurs programmables pour les paiements des agents IA"
 meta_description: "Comparez les Notes Ergo et les tokens natifs : quand les agents IA ont besoin de créances programmables, de soutien par Reserve, d'expiration, de prédicats d'acceptation et de règlement différé."
 excerpt: "Les tokens sont excellents pour la propriété. Les Notes sont meilleures pour le crédit borné, expirant et conditionnellement remboursable dans les flux de travail des agents autonomes."
@@ -259,7 +259,7 @@ Le concept est solide, et le modèle eUTXO d'Ergo soutient le motif. Des systèm
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens",
   "keywords": ["Ergo Notes", "native tokens", "AI agent payments", "programmable credit", "bearer instruments"]
 }
 ```

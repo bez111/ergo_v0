@@ -390,15 +390,15 @@ export default function LotteriesPage() {
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Discord Community</a>
+                <a href="/docs/ecosystem/financial/degenerate-finance/lotteries" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Discord Community</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">GitHub Repository</a>
+                <a href="/docs/ecosystem/financial/degenerate-finance/lotteries" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">GitHub Repository</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Documentation</a>
+                <a href="/docs/ecosystem/financial/degenerate-finance/lotteries" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Documentation</a>
               </li>
             </ul>
           </div>

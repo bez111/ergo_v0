@@ -676,7 +676,7 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "stablecoins",
-        "ogImage": "/og-stablecoins.png",
+        "ogImage": "/og/use/og-stablecoins.png",
         "canonicalPath": "/use/stablecoins"
       },
       "seo": {
@@ -802,7 +802,7 @@
           "name": "Gluon Gold",
           "description": "Gold-backed stablecoin leveraging Ergo's oracle pools",
           "status": "In Development",
-          "tvl": "TBD",
+          "tvl": "In development",
           "features": {
             "feature1": "Gold-pegged",
             "feature2": "Oracle-powered",
@@ -917,8 +917,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "privacy",
-        "ogImage": "/og-privacy.png",
-        "canonicalPath": "/use/privacy-confidentiality"
+        "ogImage": "/og/use/og-privacy.png",
+        "canonicalPath": "/use/privacy"
       },
       "seo": {
         "title": "Privacy & Confidentiality on Ergo | Financial Privacy Solutions",
@@ -1140,8 +1140,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "identity",
-        "ogImage": "/og-identity.png",
-        "canonicalPath": "/use/identity-reputation"
+        "ogImage": "/og/use/og-identity.png",
+        "canonicalPath": "/use/identity"
       },
       "seo": {
         "title": "Identity & Reputation on Ergo | Self-Sovereign Identity",
@@ -1352,8 +1352,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "bridges",
-        "ogImage": "/og-bridges.png",
-        "canonicalPath": "/use/cross-chain-bridges"
+        "ogImage": "/og/use/og-bridges.png",
+        "canonicalPath": "/use/bridges"
       },
       "seo": {
         "title": "Cross-Chain Bridges on Ergo | Interoperability Solutions",
@@ -1567,8 +1567,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "daos",
-        "ogImage": "/og-daos.png",
-        "canonicalPath": "/use/daos-alternative-economies"
+        "ogImage": "/og/use/og-daos.png",
+        "canonicalPath": "/use/daos"
       },
       "seo": {
         "title": "DAOs & Alternative Economies on Ergo | Decentralized Governance",
@@ -1778,8 +1778,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "nfts",
-        "ogImage": "/og-nfts.png",
-        "canonicalPath": "/use/nfts-digital-assets"
+        "ogImage": "/og/use/og-nfts.png",
+        "canonicalPath": "/use/nfts"
       },
       "seo": {
         "title": "NFTs & Digital Assets on Ergo | True Digital Ownership",
@@ -1986,8 +1986,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "oracles",
-        "ogImage": "/og-oracles.png",
-        "canonicalPath": "/use/oracles-data-feeds"
+        "ogImage": "/og/use/og-oracles.png",
+        "canonicalPath": "/use/oracles"
       },
       "seo": {
         "title": "Oracles & Data Feeds on Ergo | Decentralized Data Infrastructure",
@@ -2195,8 +2195,8 @@
       "lastUpdated": "Last updated:",
       "meta": {
         "slug": "gaming",
-        "ogImage": "/og-gaming.png",
-        "canonicalPath": "/use/gaming-metaverse"
+        "ogImage": "/og/use/og-gaming.png",
+        "canonicalPath": "/use/gaming"
       },
       "seo": {
         "title": "Gaming & Metaverse on Ergo | Blockchain Gaming",

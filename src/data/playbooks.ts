@@ -430,7 +430,7 @@ export const playbooks: Playbook[] = [
         duration: "1 hour",
         resources: [
           { type: 'doc', title: "Ergo vs VC Chains", href: "/compare/ergo-vs-vc-chain" },
-          { type: 'doc', title: "Tokenomics Deep Dive", href: "/docs/tokenomics" },
+          { type: 'doc', title: "Tokenomics Deep Dive", href: "/docs/technology/adaptive-emission" },
         ]
       },
       {
@@ -448,7 +448,7 @@ export const playbooks: Playbook[] = [
         duration: "Ongoing",
         resources: [
           { type: 'link', title: "Community Channels", href: "/start/community" },
-          { type: 'link', title: "Contribute", href: "/contribute" },
+          { type: 'link', title: "Contribute", href: "/docs/contribute" },
         ]
       },
     ],
@@ -616,7 +616,7 @@ export const playbooks: Playbook[] = [
         description: "See how Storage Rent affects tokenomics, miner incentives, and long-term sustainability.",
         duration: "30 minutes",
         resources: [
-          { type: 'doc', title: "Economic Analysis", href: "/docs/tokenomics/storage-rent" },
+          { type: 'doc', title: "Economic Analysis", href: "/docs/technology/adaptive-emission/storage-rent" },
           { type: 'doc', title: "Emission + Rent Model", href: "/learn/glossary/emission-schedule" },
         ]
       },
@@ -1154,7 +1154,7 @@ export const playbooks: Playbook[] = [
         description: "SigmaUSD uses a reserve pool of ERG. SigUSD holders have a claim on the dollar value, while SigRSV holders absorb volatility in exchange for fees. The system maintains 400-800% collateralization.",
         duration: "10 min",
         resources: [
-          { type: "doc", title: "SigmaUSD Explained", href: "/docs/developers/defi/sigmausd" },
+          { type: "doc", title: "SigmaUSD Explained", href: "/docs/ecosystem/financial/monetary-systems/sigmausd" },
           { type: "link", title: "SigmaUSD Whitepaper", href: "https://github.com/ergoplatform/ergo/wiki/SigmaUSD" },
         ],
       },
@@ -1219,7 +1219,7 @@ export const playbooks: Playbook[] = [
     },
     secondaryCTA: {
       label: "Learn How It Works",
-      href: "/docs/developers/defi/sigmausd",
+      href: "/docs/ecosystem/financial/monetary-systems/sigmausd",
     },
     
     icon: "DollarSign",

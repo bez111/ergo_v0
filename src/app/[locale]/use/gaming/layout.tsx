@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "gaming",
-  ogImage: "/og-gaming.png",
-  canonicalPath: "/use/gaming-metaverse",
+  ogImage: "/og/use/og-gaming.png",
+  canonicalPath: "/use/gaming",
 }
 
 // i18n Metadata

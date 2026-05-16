@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "daos",
-  ogImage: "/og-daos.png",
-  canonicalPath: "/use/daos-alternative-economies",
+  ogImage: "/og/use/og-daos.png",
+  canonicalPath: "/use/daos",
 }
 
 // i18n Metadata

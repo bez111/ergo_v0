@@ -103,7 +103,7 @@ export default function SpectrumFinancePage() {
               <h5 className="font-semibold text-orange-300 mb-2">Tutorials</h5>
               <ul className="list-disc pl-6 text-gray-300 text-base mb-4">
                 <li className="mb-1">
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="https://spectrum.fi/" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     Running an off-chain matching bot <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
@@ -112,12 +112,12 @@ export default function SpectrumFinancePage() {
               <h5 className="font-semibold text-cyan-300 mb-2">Papers</h5>
               <ul className="list-disc pl-6 text-gray-300 text-base mb-4">
                 <li className="mb-1">
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="https://spectrum.fi/" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     Extended UTxO in production: Techniques, trade-offs, and finding a better balance <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="https://spectrum.fi/" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     Spectrum Bloom White Paper <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
@@ -126,17 +126,17 @@ export default function SpectrumFinancePage() {
               <h5 className="font-semibold text-green-300 mb-2">Dev-Resources</h5>
               <ul className="list-disc pl-6 text-gray-300 text-base mb-4">
                 <li className="mb-1">
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="https://spectrum.fi/" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     🥇 Contracts Repository: ErgoScript contracts for the DEX. <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="https://spectrum.fi/" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     🥇 Backend Repository: Off-chain services (bots) for matching and execution. <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
                 <li className="mb-1">
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="https://spectrum.fi/" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     EIP-0014: Decentralized Exchange Contracts <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>

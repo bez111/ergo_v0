@@ -485,7 +485,7 @@ scorex {
                   </a>
                 </li>
                 <li>
-                  <a href="/docs/developers/infrastructure/node/protocol/nipopows" 
+                  <a href="/technology/nipopows" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     NiPoPoWS Documentation
                   </a>

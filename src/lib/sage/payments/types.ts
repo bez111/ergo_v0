@@ -14,6 +14,8 @@ export interface SageQuote {
   taskHash: string
   /** Decimal string in ERG — e.g. "0.001". */
   price: string
+  /** ISO string when this quote/agreement was issued. */
+  issuedAt?: string
   /** ISO string when the quote stops being honored. */
   expiresAt: string
   /** Sage's testnet address — receiver of the Note. */
@@ -35,6 +37,14 @@ export interface SageVerificationResult {
   settlementTxId?: string
   /** Receipt id surfaced as /r/sage/<id>. */
   receiptId?: string
+  /** Accord rail settlement id when available. */
+  accordSettlementId?: string
+  /** Full Accord Agreement JSON used for this verification. */
+  agreement?: import("@accord-protocol/core").AccordAgreement
+  /** Full Sage Verification Receipt JSON for this verification. */
+  verificationReceipt?: import("@/lib/sage/receipts/types").SageVerificationReceiptJson
+  /** Full Sage Settlement Receipt JSON, settled or pending. */
+  settlementReceipt?: import("@/lib/sage/receipts/types").SageSettlementReceiptJson
   error?: string
 }
 

@@ -688,7 +688,7 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "stablecoins",
-        "ogImage": "/og-stablecoins.png",
+        "ogImage": "/og/use/og-stablecoins.png",
         "canonicalPath": "/use/stablecoins"
       },
       "seo": {
@@ -929,8 +929,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "privacy",
-        "ogImage": "/og-privacy.png",
-        "canonicalPath": "/use/privacy-confidentiality"
+        "ogImage": "/og/use/og-privacy.png",
+        "canonicalPath": "/use/privacy"
       },
       "seo": {
         "title": "Конфиденциальность и конфиденциальность Ergo | Решения финансовой конфиденциальности",
@@ -1152,8 +1152,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "identity",
-        "ogImage": "/og-identity.png",
-        "canonicalPath": "/use/identity-reputation"
+        "ogImage": "/og/use/og-identity.png",
+        "canonicalPath": "/use/identity"
       },
       "seo": {
         "title": "Идентификация и репутации на Ergo | Самоуверенная личность",
@@ -1364,8 +1364,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "bridges",
-        "ogImage": "/og-bridges.png",
-        "canonicalPath": "/use/cross-chain-bridges"
+        "ogImage": "/og/use/og-bridges.png",
+        "canonicalPath": "/use/bridges"
       },
       "seo": {
         "title": "Межцепные мосты на Ergo | Решения для обеспечения совместимости",
@@ -1579,8 +1579,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "daos",
-        "ogImage": "/og-daos.png",
-        "canonicalPath": "/use/daos-alternative-economies"
+        "ogImage": "/og/use/og-daos.png",
+        "canonicalPath": "/use/daos"
       },
       "seo": {
         "title": "DAO и альтернативные экономики на Ergo | Децентрализованное управление",
@@ -1790,8 +1790,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "nfts",
-        "ogImage": "/og-nfts.png",
-        "canonicalPath": "/use/nfts-digital-assets"
+        "ogImage": "/og/use/og-nfts.png",
+        "canonicalPath": "/use/nfts"
       },
       "seo": {
         "title": "NFTs & Цифровые активы на Ergo | Истинное цифровое владение",
@@ -1998,8 +1998,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "oracles",
-        "ogImage": "/og-oracles.png",
-        "canonicalPath": "/use/oracles-data-feeds"
+        "ogImage": "/og/use/og-oracles.png",
+        "canonicalPath": "/use/oracles"
       },
       "seo": {
         "title": "Оракулы и каналы данных на Ergo | Децентрализованная инфраструктура данных",
@@ -2207,8 +2207,8 @@
       "lastUpdated": "Последнее обновление:",
       "meta": {
         "slug": "gaming",
-        "ogImage": "/og-gaming.png",
-        "canonicalPath": "/use/gaming-metaverse"
+        "ogImage": "/og/use/og-gaming.png",
+        "canonicalPath": "/use/gaming"
       },
       "seo": {
         "title": "Игры и Metaverse на Эрго | Игры в блокчейн",

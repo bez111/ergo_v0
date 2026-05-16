@@ -1,6 +1,6 @@
 ---
 title: "아키텍처 튜토리얼: Ergo 테스트넷에서 API 호출 비용을 지불하는 AI 에이전트 구축"
-slug: "/blog/build-ai-agent-pays-api-ergo-testnet"
+slug: "/blog/build-agent-pays-for-api"
 seo_title: "아키텍처 튜토리얼: Ergo 테스트넷에서 API 호출 비용을 지불하는 AI 에이전트"
 meta_description: "Ergo 테스트넷에서 유료 API 및 AI 에이전트 지불 루프에 대한 아키텍처 튜토리얼: HTTP 402 챌린지, 온체인 결제 검증, 재생 공격 방지 및 보안 체크리스트."
 excerpt: "AI 에이전트가 검증 가능한 Ergo 결제 영수증을 생성한 후에만 호출할 수 있는 유료 API 엔드포인트의 아키텍처 튜토리얼입니다. 모의 모드 및 테스트넷 모드 서명 참고 사항 포함."

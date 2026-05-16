@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       url: getCanonicalUrl('/docs', locale),
       images: [{
-        url: '/og-docs.png',
+        url: '/og/hubs/developers.png',
         width: 1200,
         height: 630,
         alt: 'Ergo Documentation'
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('title'),
       description: t('subtitle'),
-      images: ['/og-docs.png']
+      images: ['/og/hubs/developers.png']
     },
     robots: {
       index: true,

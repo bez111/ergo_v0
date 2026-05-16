@@ -1,6 +1,6 @@
 ---
 title: "Платежи от AI-агентов в 2026 году: x402, Stripe, Ethereum, Solana и Ergo/Accord сравнены"
-slug: "/blog/ai-agent-payments-2026-report"
+slug: "/blog/state-of-agent-payments-2026"
 seo_title: "Платежи от AI-агентов в 2026 году: x402, Stripe, Ethereum, Solana и Ergo сравнены"
 meta_description: "Отчет о платежах от AI-агентов в 2026 году: x402, Stripe Agentic Commerce, Ethereum L2s, Solana, Lightning и Ergo/Accord сравнены по микроплатежам, кредиту, предикатам и расчетам."
 excerpt: "Ландшафт платежей от агентов движется быстро. x402 делает HTTP-платежи практичными, Stripe создает агент-коммерцию, а Ergo/Accord сосредоточивается на проверяемой верификации работы и расчетах."
@@ -266,7 +266,7 @@ Accord затем добавляет словарь протокола:
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agent-payments-2026-report",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/state-of-agent-payments-2026",
   "keywords": ["AI agent payments", "x402", "Stripe Agentic Commerce", "Accord Protocol", "Ergo"]
 }
 ```

@@ -25,7 +25,7 @@ export default function ExtensionSectionPage() {
           In the right place?
         </h3>
         <p className="text-gray-300">
-          Unlike many blockchains that only store <Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transaction</Link> data, Ergo includes a specialized <b>Extension section</b> in each <Link href="/docs/developers/data-model-apis/block" className="text-orange-400 hover:underline">block</Link>. This versatile key-value storage system provides a flexible mechanism to include critical data beyond standard transactions, enabling features like efficient <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">light client</Link> support and future-proofing the blockchain for upgrades.
+          Unlike many blockchains that only store <Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transaction</Link> data, Ergo includes a specialized <b>Extension section</b> in each <Link href="/docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">block</Link>. This versatile key-value storage system provides a flexible mechanism to include critical data beyond standard transactions, enabling features like efficient <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">light client</Link> support and future-proofing the blockchain for upgrades.
         </p>
       </div>
 
@@ -128,7 +128,7 @@ Value: 0x0000000000020000 (Represents a block size of 512 KB)
       <div className="bg-pink-400/10 border border-pink-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-pink-400">Potential Enhancements</h2>
         <ol className="list-decimal list-inside ml-4 space-y-2 text-gray-300">
-          <li><b>Advanced Cryptography:</b> Support for homomorphic encryption or post-quantum signatures within the Extension section. This could enable new privacy-preserving applications and enhance the long-term security of the Ergo blockchain. For example, homomorphic encryption could allow for computations on encrypted data stored in the Extension, enabling new possibilities for confidential transactions and <Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">smart contracts</Link>.</li>
+          <li><b>Advanced Cryptography:</b> Support for homomorphic encryption or post-quantum signatures within the Extension section. This could enable new privacy-preserving applications and enhance the long-term security of the Ergo blockchain. For example, homomorphic encryption could allow for computations on encrypted data stored in the Extension, enabling new possibilities for confidential transactions and <Link href="/technology/ergoscript" className="text-orange-400 hover:underline">smart contracts</Link>.</li>
           <li><b>Dynamic Updates:</b> Mechanisms for updating Extension data more flexibly, potentially through sidechains or layer-2 solutions. This could allow for more efficient and responsive updates to system parameters or other critical information.</li>
           <li><b>Cross-Chain Interoperability:</b> Facilitate interactions with other blockchains by storing proofs or state information. This could enable the development of cross-chain applications and bridges, expanding the utility and reach of the Ergo platform.</li>
         </ol>

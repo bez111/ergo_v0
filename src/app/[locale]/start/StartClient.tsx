@@ -100,7 +100,7 @@ const journeys: Record<Journey, {
         title: "Try Test Coins",
         description: "Get free testnet ERG to practice",
         icon: TestTube,
-        href: "/wallet/testnet-faucet",
+        href: "/wallet",
         duration: "2 min"
       },
       {
@@ -108,7 +108,7 @@ const journeys: Record<Journey, {
         title: "Send First Transaction",
         description: "Learn by doing - send ERG",
         icon: Send,
-        href: "/wallet/send",
+        href: "/wallet",
         duration: "3 min"
       },
       {
@@ -133,7 +133,7 @@ const journeys: Record<Journey, {
         title: "Ergo vs Others",
         description: "Compare with Bitcoin, Ethereum, Monero",
         icon: Zap,
-        href: "/learn/comparison",
+        href: "/start/comparison",
         duration: "10 min"
       },
       {
@@ -141,7 +141,7 @@ const journeys: Record<Journey, {
         title: "Unique Tech",
         description: "eUTXO, Sigma Protocols explained",
         icon: Code,
-        href: "/technology/features",
+        href: "/technology",
         duration: "15 min"
       },
       {
@@ -149,7 +149,7 @@ const journeys: Record<Journey, {
         title: "Privacy Features",
         description: "How Ergo protects your data",
         icon: Shield,
-        href: "/learn/censorship-resistance",
+        href: "/technology/secure-pow",
         duration: "8 min"
       },
       {
@@ -157,7 +157,7 @@ const journeys: Record<Journey, {
         title: "Real Use Cases",
         description: "Community success stories",
         icon: User,
-        href: "/community/stories",
+        href: "/start/community",
         duration: "12 min"
       }
     ]
@@ -182,7 +182,7 @@ const journeys: Record<Journey, {
         title: "Try Playground",
         description: "Interactive contract editor",
         icon: TestTube,
-        href: "/docs/developers/playground",
+        href: "/docs/developers/tooling/playgrounds",
         duration: "10 min"
       },
       {
@@ -198,7 +198,7 @@ const journeys: Record<Journey, {
         title: "Join Dev Chat",
         description: "Get help from core devs",
         icon: User,
-        href: "/community/developers",
+        href: "/start/community",
         duration: "Now"
       }
     ]
@@ -344,7 +344,7 @@ export default function StartPage() {
             title: t('journeys.new.steps.testnet.title'),
             description: t('journeys.new.steps.testnet.description'),
             icon: TestTube,
-            href: "/wallet/testnet-faucet",
+            href: "/wallet",
             duration: "2 min"
           },
           {
@@ -352,7 +352,7 @@ export default function StartPage() {
             title: t('journeys.new.steps.send.title'),
             description: t('journeys.new.steps.send.description'),
             icon: Send,
-            href: "/wallet/send",
+            href: "/wallet",
             duration: "3 min"
           },
           {
@@ -377,7 +377,7 @@ export default function StartPage() {
             title: t('journeys.explore.steps.compare.title'),
             description: t('journeys.explore.steps.compare.description'),
             icon: Zap,
-            href: "/learn/comparison",
+            href: "/start/comparison",
             duration: "10 min"
           },
           {
@@ -385,7 +385,7 @@ export default function StartPage() {
             title: t('journeys.explore.steps.features.title'),
             description: t('journeys.explore.steps.features.description'),
             icon: Code,
-            href: "/technology/features",
+            href: "/technology",
             duration: "15 min"
           },
           {
@@ -393,7 +393,7 @@ export default function StartPage() {
             title: t('journeys.explore.steps.privacy.title'),
             description: t('journeys.explore.steps.privacy.description'),
             icon: Shield,
-            href: "/learn/censorship-resistance",
+            href: "/technology/secure-pow",
             duration: "8 min"
           },
           {
@@ -401,7 +401,7 @@ export default function StartPage() {
             title: t('journeys.explore.steps.stories.title'),
             description: t('journeys.explore.steps.stories.description'),
             icon: User,
-            href: "/community/stories",
+            href: "/start/community",
             duration: "12 min"
           }
         ]
@@ -426,7 +426,7 @@ export default function StartPage() {
             title: t('journeys.build.steps.playground.title'),
             description: t('journeys.build.steps.playground.description'),
             icon: TestTube,
-            href: "/docs/developers/playground",
+            href: "/docs/developers/tooling/playgrounds",
             duration: "10 min"
           },
           {
@@ -442,7 +442,7 @@ export default function StartPage() {
             title: t('journeys.build.steps.community.title'),
             description: t('journeys.build.steps.community.description'),
             icon: User,
-            href: "/community/developers",
+            href: "/start/community",
             duration: "Now"
           }
         ]
@@ -459,7 +459,7 @@ export default function StartPage() {
             title: t('journeys.mine.steps.hardware.title'),
             description: t('journeys.mine.steps.hardware.description'),
             icon: Cpu,
-            href: "/use/mining",
+            href: "/miners",
             duration: "20 min"
           },
           {
@@ -467,7 +467,7 @@ export default function StartPage() {
             title: t('journeys.mine.steps.pool.title'),
             description: t('journeys.mine.steps.pool.description'),
             icon: Zap,
-            href: "/use/mining-pools",
+            href: "/miners-pools",
             duration: "10 min"
           },
           {
@@ -475,7 +475,7 @@ export default function StartPage() {
             title: t('journeys.mine.steps.software.title'),
             description: t('journeys.mine.steps.software.description'),
             icon: LineChart,
-            href: "/use/mining-calculator",
+            href: "/miners-calculator",
             duration: "5 min"
           },
           {

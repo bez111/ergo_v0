@@ -26,7 +26,7 @@ export default function MosaikPage() {
           <span className="font-bold">Back</span>
         </Link>
         <Link
-          href="/docs/developers/tooling/pathways/mosaik/tutorial"
+          href="/docs/developers/tooling/mosaik/tutorial"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <span className="font-bold">Tutorial</span>

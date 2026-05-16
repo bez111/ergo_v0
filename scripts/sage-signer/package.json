@@ -5,7 +5,11 @@
   "type": "module",
   "description": "Local HTTP signer for Sage's Note redemption transactions on Ergo testnet. Lives outside the Next.js app so the signing key never touches Vercel.",
   "scripts": {
-    "start": "node signer.mjs"
+    "start": "node signer.mjs",
+    "bootstrap": "node bootstrap.mjs",
+    "balance": "node bootstrap.mjs --balance",
+    "reserve": "node bootstrap.mjs --reserve",
+    "issue-note": "node bootstrap.mjs --issue-note"
   },
   "dependencies": {
     "@fleet-sdk/core": "^0.12.0",

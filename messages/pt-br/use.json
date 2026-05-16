@@ -688,7 +688,7 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "stablecoins",
-        "ogImage": "/og-stablecoins.png",
+        "ogImage": "/og/use/og-stablecoins.png",
         "canonicalPath": "/use/stablecoins"
       },
       "seo": {
@@ -929,8 +929,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "privacidade",
-        "ogImage": "/og-privacy.png",
-        "canonicalPath": "/use/privacy-confidentiality"
+        "ogImage": "/og/use/og-privacy.png",
+        "canonicalPath": "/use/privacy"
       },
       "seo": {
         "title": "Privacidade e Confidencialidade no Ergo | Soluções de Privacidade Financeira",
@@ -1152,8 +1152,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "identidade",
-        "ogImage": "/og-identity.png",
-        "canonicalPath": "/use/identity-reputation"
+        "ogImage": "/og/use/og-identity.png",
+        "canonicalPath": "/use/identity"
       },
       "seo": {
         "title": "Identidade e Reputação no Ergo | Identidade Soberana",
@@ -1364,8 +1364,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "pontes",
-        "ogImage": "/og-bridges.png",
-        "canonicalPath": "/use/cross-chain-bridges"
+        "ogImage": "/og/use/og-bridges.png",
+        "canonicalPath": "/use/bridges"
       },
       "seo": {
         "title": "Pontes Entre Cadeias no Ergo | Soluções de Interoperabilidade",
@@ -1579,8 +1579,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "daos",
-        "ogImage": "/og-daos.png",
-        "canonicalPath": "/use/daos-alternative-economies"
+        "ogImage": "/og/use/og-daos.png",
+        "canonicalPath": "/use/daos"
       },
       "seo": {
         "title": "DAOs e Economias Alternativas no Ergo | Governança Descentralizada",
@@ -1790,8 +1790,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "nfts",
-        "ogImage": "/og-nfts.png",
-        "canonicalPath": "/use/nfts-digital-assets"
+        "ogImage": "/og/use/og-nfts.png",
+        "canonicalPath": "/use/nfts"
       },
       "seo": {
         "title": "NFTs e Ativos Digitais na Ergo | Propriedade Digital Real",
@@ -1998,8 +1998,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "oracles",
-        "ogImage": "/og-oracles.png",
-        "canonicalPath": "/use/oracles-data-feeds"
+        "ogImage": "/og/use/og-oracles.png",
+        "canonicalPath": "/use/oracles"
       },
       "seo": {
         "title": "Oráculos e Feeds de Dados na Ergo | Infraestrutura de Dados Descentralizada",
@@ -2207,8 +2207,8 @@
       "lastUpdated": "Última atualização:",
       "meta": {
         "slug": "jogos",
-        "ogImage": "/og-gaming.png",
-        "canonicalPath": "/use/gaming-metaverse"
+        "ogImage": "/og/use/og-gaming.png",
+        "canonicalPath": "/use/gaming"
       },
       "seo": {
         "title": "Jogos e Metaverso na Ergo | Jogos Blockchain",

@@ -1,29 +1,17 @@
 /**
  * Public Sage receipt page.
  *
- *   GET /<locale>/r/sage/<settlement_tx_id>
- *
- * Pure server component — fetches the settlement tx from the testnet
- * explorer at request time, validates it pays Sage's wallet, renders a
- * cyberpunk receipt with Schema.org markup so AI engines and search
- * crawlers can index every paid Sage turn as a separate entity.
- *
- * No server-side database needed: the chain is the canonical source of
- * truth. If the tx isn't (yet) on testnet — 404 with an explorer link.
+ * This page deliberately reads from /api/sage/receipt/<id> and does not
+ * reconstruct its own version of the facts. The API route is the single
+ * machine-readable source of truth; this component is only presentation.
  */
 
 import type { Metadata } from "next"
 import Link from "next/link"
+import { headers } from "next/headers"
 import { notFound } from "next/navigation"
 import { ArrowLeft, Check, ExternalLink, Sparkles } from "lucide-react"
-import {
-  explorerBoxUrl,
-  explorerUrl,
-  fetchBox,
-  fetchTransaction,
-  nanoToErg,
-  txPaysAddress,
-} from "@/lib/sage/explorer/fetch-tx"
+import type { SageReceiptBundle } from "@/lib/sage/receipts/types"
 
 interface ReceiptPageProps {
   params: Promise<{ locale: string; id: string }>
@@ -31,217 +19,203 @@ interface ReceiptPageProps {
 
 export async function generateMetadata({ params }: ReceiptPageProps): Promise<Metadata> {
   const { id } = await params
-  const short = id.slice(0, 12) + "…"
+  const short = id.slice(0, 12) + "..."
   return {
     title: `Sage receipt · ${short} — Ergo`,
     description:
-      "Public receipt for a Sage premium-tier answer paid via an Accord Note on Ergo testnet. The settlement transaction is verifiable on-chain.",
+      "Public receipt for a Sage premium-tier answer paid via an Accord Note on Ergo testnet.",
     robots: { index: true, follow: true },
     openGraph: {
       title: `Sage receipt · ${short}`,
-      description:
-        "Premium-tier answer paid in testnet ERG via Accord. Settlement verifiable on-chain.",
+      description: "Premium-tier answer paid in testnet ERG via Accord receipts.",
       type: "article",
     },
   }
 }
 
-// Force per-request rendering so env reads + chain fetches always run
-// against current state — the receipt page is dynamic by nature.
 export const dynamic = "force-dynamic"
 export const revalidate = 0
 
 export default async function SageReceiptPage({ params }: ReceiptPageProps) {
-  // Read env at request time, NOT at module top — Next.js can otherwise
-  // capture an empty value at build time and never refresh it.
-  const SAGE_NETWORK = (process.env.SAGE_NETWORK ?? "testnet") as "mainnet" | "testnet"
-  const SAGE_ADDRESS = process.env.SAGE_WALLET_ADDRESS
-
   const { id } = await params
+  if (!/^[a-zA-Z0-9][a-zA-Z0-9._:-]{5,160}$/.test(id)) notFound()
 
-  if (!/^[0-9a-f]{64}$/i.test(id)) notFound()
+  const receipt = await fetchReceipt(id)
+  if (!receipt) return <NotConfirmedYet id={id} />
 
-  // The id can be either a settlement tx (settle() ran) or a Note box id
-  // (settle deferred). Try tx first — that's the happy path; fall back
-  // to a box lookup so the page still renders something useful. fetchBox
-  // takes SAGE_ADDRESS as a fallback so unspent Note boxes that the
-  // standalone /boxes/{id} endpoint misses still resolve via the address
-  // unspent list. Wrap the explorer calls so a transient failure renders
-  // "not confirmed yet" instead of a 500.
-  let txResult, boxResult
-  try {
-    txResult = await fetchTransaction(id, SAGE_NETWORK)
-  } catch (err) {
-    console.error(`[receipt] fetchTransaction(${id}) threw:`, err)
-    txResult = { ok: false, status: 500, error: String(err) } as const
-  }
-  if (!txResult.ok || !("tx" in txResult)) {
-    try {
-      boxResult = await fetchBox(id, SAGE_NETWORK, SAGE_ADDRESS ?? undefined)
-    } catch (err) {
-      console.error(`[receipt] fetchBox(${id}) threw:`, err)
-      boxResult = { ok: false, status: 500, error: String(err) } as const
-    }
-    if (boxResult.ok && "box" in boxResult && boxResult.box) {
-      return <SettlementPending box={boxResult.box} network={SAGE_NETWORK} />
-    }
-    return <NotConfirmedYet txId={id} status={txResult.status} network={SAGE_NETWORK} />
-  }
-
-  const tx = txResult.tx!
-  // Validate the tx actually paid Sage. If wallet env isn't set, skip
-  // validation (still render — we're optimistic on testnet).
-  const paid = SAGE_ADDRESS ? txPaysAddress(tx, SAGE_ADDRESS, 0) : true
-  if (!paid) {
-    return <NotASageReceipt txId={id} network={SAGE_NETWORK} />
-  }
-
-  const settledAt = new Date(tx.timestamp).toISOString()
-  const settledHuman = new Date(tx.timestamp).toLocaleString("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  })
-
-  // The Note that was redeemed is the first input — that's the box the
-  // seller's settle() spent. Surfacing both txs makes the chain story
-  // legible: "Note tx X created the redeemable box, settle tx Y spent it."
-  const noteInput = tx.inputs[0]
-  const totalToSage = SAGE_ADDRESS
-    ? tx.outputs.filter((o) => o.address === SAGE_ADDRESS).reduce((s, o) => s + o.value, 0)
-    : tx.outputs[0]?.value ?? 0
+  const settled = receipt.status === "settled_on_chain"
+  const title = settled ? "Premium answer · paid" : "Premium answer · settlement pending"
+  const tone = receipt.completeness === "full" ? "Full Accord bundle" : "Chain proof only"
+  const happenedAt = receipt.accord.settlement_receipt_json?.created_at ?? receipt.updated_at
 
   return (
-    <article className="min-h-screen bg-black text-gray-200 px-4 py-12 md:py-20">
-      <SchemaJsonLd
-        txId={id}
-        settledAt={settledAt}
-        priceErg={nanoToErg(totalToSage)}
-      />
+    <article className="min-h-screen bg-black px-4 py-12 text-gray-200 md:py-20">
+      <SchemaJsonLd receipt={receipt} />
 
-      <div className="max-w-3xl mx-auto">
+      <div className="mx-auto max-w-3xl">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-orange-300 font-mono uppercase tracking-widest mb-8 transition-colors"
+          className="mb-8 inline-flex items-center gap-1 font-mono text-xs uppercase tracking-widest text-gray-500 transition-colors hover:text-orange-300"
         >
-          <ArrowLeft className="w-3 h-3" /> ergoblockchain.org
+          <ArrowLeft className="h-3 w-3" /> ergoblockchain.org
         </Link>
 
-        <header className="flex items-center gap-3 mb-2">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/40">
-            <Sparkles className="w-5 h-5 text-orange-400" />
+        <header className="mb-2 flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-orange-500/40 bg-orange-500/15">
+            <Sparkles className="h-5 w-5 text-orange-400" />
           </div>
           <div>
-            <div className="text-[10px] uppercase tracking-widest text-orange-400 font-mono leading-none">
+            <div className="font-mono text-[10px] uppercase leading-none tracking-widest text-orange-400">
               Sage receipt
             </div>
-            <h1 className="text-xl md:text-2xl font-bold text-white font-mono mt-1 leading-none">
-              Premium answer · paid
+            <h1 className="mt-1 font-mono text-xl font-bold leading-none text-white md:text-2xl">
+              {title}
             </h1>
           </div>
         </header>
 
-        <div className="flex items-center gap-2 mb-8 text-xs text-gray-400 font-mono">
-          <Check className="w-3.5 h-3.5 text-orange-400" />
-          <span>Settled on Ergo {SAGE_NETWORK}</span>
+        <div className="mb-8 flex flex-wrap items-center gap-2 font-mono text-xs text-gray-400">
+          {settled ? <Check className="h-3.5 w-3.5 text-orange-400" /> : null}
+          <span>{settled ? `Settled on Ergo ${receipt.network}` : `Verified on Ergo ${receipt.network}`}</span>
           <span className="text-gray-700">·</span>
-          <time dateTime={settledAt}>{settledHuman}</time>
+          <time dateTime={happenedAt}>{formatDate(happenedAt)}</time>
+          <span className="text-gray-700">·</span>
+          <span className={receipt.completeness === "full" ? "text-emerald-300" : "text-yellow-300"}>
+            {tone}
+          </span>
         </div>
 
-        <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-10 max-w-2xl">
-          A user asked Sage — the agent-economy concierge for{" "}
-          <Link href="/" className="text-orange-300 hover:text-orange-200 underline decoration-orange-500/40">
-            ergoblockchain.org
-          </Link>{" "}
-          — a premium-tier question. They paid <strong className="text-orange-200">{nanoToErg(totalToSage)} {SAGE_NETWORK === "testnet" ? "testnet " : ""}ERG</strong> by issuing an Accord Note pinned to a task hash. Sage&apos;s rail adapter verified the Note matched the agreement, ran the upgraded Claude Sonnet 4.6 answer, and redeemed the Note in this transaction.
+        <p className="mb-10 max-w-2xl text-sm leading-relaxed text-gray-300 md:text-base">
+          Sage priced a premium-tier question as an Accord Note, verified the Note
+          against the task hash, and {settled ? "recorded settlement on chain" : "is waiting for note redemption"}.
+          The machine-readable receipt JSON is the source of truth for this page.
         </p>
 
-        <div className="grid gap-3 md:gap-4 mb-12">
-          <KV label="Settlement tx" mono>
-            <a
-              href={explorerUrl(id, SAGE_NETWORK)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-300 hover:text-orange-200 font-mono break-all inline-flex items-center gap-1 group"
-            >
-              <span>{id}</span>
-              <ExternalLink className="w-3 h-3 shrink-0 opacity-50 group-hover:opacity-100" />
-            </a>
+        {receipt.task.question ? (
+          <section className="mb-8 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <h2 className="mb-3 font-mono text-xs uppercase tracking-widest text-orange-400">
+              Agreement task
+            </h2>
+            <p className="whitespace-pre-wrap break-words text-sm leading-relaxed text-gray-200">
+              {receipt.task.question}
+            </p>
+          </section>
+        ) : null}
+
+        <div className="mb-12 grid gap-3 md:gap-4">
+          <KV label={settled ? "Settlement tx" : "Receipt id"} mono>
+            {receipt.chain.settlement_explorer_url && receipt.chain.settlement_tx_id ? (
+              <ExternalAnchor href={receipt.chain.settlement_explorer_url}>
+                {receipt.chain.settlement_tx_id}
+              </ExternalAnchor>
+            ) : (
+              <span className="break-all text-gray-300">{receipt.id}</span>
+            )}
           </KV>
 
-          {noteInput && (
-            <KV label="Redeemed Note" mono>
-              <span className="text-gray-300 font-mono break-all">{noteInput.boxId}</span>
-            </KV>
-          )}
-
-          <KV label="Block height" mono>
-            <span className="text-gray-200">{tx.inclusionHeight.toLocaleString()}</span>
+          <KV label="Note box" mono>
+            <ExternalAnchor href={receipt.chain.note_explorer_url}>{receipt.chain.note_box_id}</ExternalAnchor>
           </KV>
 
-          <KV label="Network" mono>
-            <span className="text-gray-200 uppercase tracking-wider">{SAGE_NETWORK}</span>
+          <KV label="Amount" mono>
+            <span className="text-orange-200">
+              {receipt.chain.payment_erg} {receipt.network === "testnet" ? "testnet " : ""}ERG
+            </span>
           </KV>
 
-          {SAGE_ADDRESS && (
-            <KV label="Sage receiver" mono>
-              <span className="text-gray-300 font-mono break-all text-xs">{SAGE_ADDRESS}</span>
-            </KV>
-          )}
+          <KV label="Task hash" mono>
+            <span className="break-all text-gray-300">{receipt.task.task_hash}</span>
+          </KV>
+
+          <KV label="Agreement" mono>
+            <span className="break-all text-gray-300">
+              {receipt.accord.agreement_json?.agreement_id ?? "not stored"}
+            </span>
+          </KV>
+
+          <KV label="Verification" mono>
+            <span className="break-all text-gray-300">
+              {receipt.accord.verification_receipt_json?.receipt_id ?? "not stored"}
+            </span>
+          </KV>
+
+          <KV label="Settlement" mono>
+            <span className="break-all text-gray-300">
+              {receipt.accord.settlement_receipt_json?.settlement_id ?? "not stored"}
+            </span>
+          </KV>
         </div>
 
-        <section className="mb-12 p-5 rounded-2xl border border-orange-500/20 bg-orange-500/5">
-          <h2 className="text-xs uppercase tracking-widest text-orange-400 font-mono mb-3">
-            What you&apos;re looking at
+        <section className="mb-12 rounded-2xl border border-orange-500/20 bg-orange-500/5 p-5">
+          <h2 className="mb-3 font-mono text-xs uppercase tracking-widest text-orange-400">
+            Machine-readable source
           </h2>
-          <p className="text-sm text-gray-300 leading-relaxed">
-            This is a public receipt for a single premium-tier query Sage answered.
-            Sage is the concierge agent on ergoblockchain.org. It uses{" "}
-            <Link href="/blog/agent-economy-manifesto" className="text-orange-300 hover:text-orange-200 underline decoration-orange-500/40">
-              the same primitives the rest of the site argues for
-            </Link>
-            : an Accord Agreement defines the work, a Note carries the payment,
-            an Acceptance Predicate gates redemption to the agreement&apos;s task hash, and a Settlement Receipt records what closed. Sage is a working demo of the thesis the site explains.
+          <p className="text-sm leading-relaxed text-gray-300">
+            The API endpoint contains the receipt bundle: chain evidence,
+            Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON
+            when durable storage is available.
           </p>
-          <div className="flex flex-wrap gap-2 mt-4">
-            <Link
-              href="/agent-economy"
-              className="text-xs font-mono uppercase tracking-widest text-orange-400 hover:text-orange-300 px-3 py-1.5 rounded-md border border-orange-500/30 hover:border-orange-500/50 hover:bg-orange-500/5 transition-colors"
+          <div className="mt-4 flex flex-wrap gap-2">
+            <a
+              href={`/api/sage/receipt/${encodeURIComponent(receipt.id)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md border border-orange-500/30 px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-orange-400 transition-colors hover:border-orange-500/50 hover:bg-orange-500/5 hover:text-orange-300"
             >
-              Agent economy →
-            </Link>
+              Receipt JSON →
+            </a>
             <Link
               href="/build/agent-payments"
-              className="text-xs font-mono uppercase tracking-widest text-orange-400 hover:text-orange-300 px-3 py-1.5 rounded-md border border-orange-500/30 hover:border-orange-500/50 hover:bg-orange-500/5 transition-colors"
+              className="rounded-md border border-orange-500/30 px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-orange-400 transition-colors hover:border-orange-500/50 hover:bg-orange-500/5 hover:text-orange-300"
             >
               Architecture →
             </Link>
-            <a
-              href="https://github.com/accord-protocol/accord-protocol/tree/main/examples/16-paid-mcp-ergo-testnet"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-mono uppercase tracking-widest text-orange-400 hover:text-orange-300 px-3 py-1.5 rounded-md border border-orange-500/30 hover:border-orange-500/50 hover:bg-orange-500/5 transition-colors"
+            <Link
+              href="/agent-economy"
+              className="rounded-md border border-orange-500/30 px-3 py-1.5 font-mono text-xs uppercase tracking-widest text-orange-400 transition-colors hover:border-orange-500/50 hover:bg-orange-500/5 hover:text-orange-300"
             >
-              Same pattern → example 16
-            </a>
+              Agent economy →
+            </Link>
           </div>
         </section>
 
-        <footer className="text-xs text-gray-600 font-mono space-y-3">
-          <p>
-            The question and the answer aren&apos;t stored on chain. Only the settlement is. Sage&apos;s server logs hold neither user identity nor IP.
-          </p>
-          <p>
-            <Link
-              href="/agent-economy#sage-activity"
-              className="text-orange-400 hover:text-orange-300 underline decoration-orange-500/40"
-            >
-              See all recent Sage settlements →
-            </Link>
-          </p>
+        <footer className="space-y-3 font-mono text-xs text-gray-600">
+          {receipt.completeness === "full" ? (
+            <p>
+              Full receipt bundle loaded from durable storage. Other pages should
+              link here or to the API, not duplicate these facts.
+            </p>
+          ) : (
+            <p>
+              This older receipt is rendered from public chain evidence because
+              no stored bundle was found for this id.
+            </p>
+          )}
+          {receipt.note ? <p>{receipt.note}</p> : null}
         </footer>
       </div>
     </article>
   )
+}
+
+async function fetchReceipt(id: string): Promise<SageReceiptBundle | null> {
+  const h = await headers()
+  const host = h.get("x-forwarded-host") ?? h.get("host")
+  if (!host) return null
+  const proto = host.startsWith("localhost") || host.startsWith("127.0.0.1")
+    ? "http"
+    : h.get("x-forwarded-proto") ?? "https"
+  const res = await fetch(`${proto}://${host}/api/sage/receipt/${encodeURIComponent(id)}`, {
+    cache: "no-store",
+  })
+  if (!res.ok) return null
+  const body = (await res.json()) as unknown
+  if (!isReceiptBundle(body)) return null
+  return body
+}
+
+function isReceiptBundle(value: unknown): value is SageReceiptBundle {
+  return !!value && typeof value === "object" && (value as { type?: string }).type === "sage.receipt_bundle.v1"
 }
 
 function KV({
@@ -254,8 +228,8 @@ function KV({
   mono?: boolean
 }) {
   return (
-    <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-3 px-4 py-3 rounded-lg border border-white/8 bg-white/[0.02]">
-      <span className="text-[10px] uppercase tracking-widest text-gray-500 font-mono md:w-32 shrink-0">
+    <div className="flex flex-col gap-1 rounded-lg border border-white/8 bg-white/[0.02] px-4 py-3 md:flex-row md:items-baseline md:gap-3">
+      <span className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-gray-500 md:w-32">
         {label}
       </span>
       <span className={mono ? "font-mono text-sm" : "text-sm"}>{children}</span>
@@ -263,24 +237,31 @@ function KV({
   )
 }
 
-function SchemaJsonLd({
-  txId,
-  settledAt,
-  priceErg,
-}: {
-  txId: string
-  settledAt: string
-  priceErg: string
-}) {
+function ExternalAnchor({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group inline-flex break-all font-mono text-orange-300 hover:text-orange-200"
+    >
+      <span>{children}</span>
+      <ExternalLink className="ml-1 h-3 w-3 shrink-0 opacity-50 group-hover:opacity-100" />
+    </a>
+  )
+}
+
+function SchemaJsonLd({ receipt }: { receipt: SageReceiptBundle }) {
+  const settledAt = receipt.accord.settlement_receipt_json?.created_at ?? receipt.updated_at
   const ld = {
     "@context": "https://schema.org",
     "@type": "Action",
-    name: "Sage premium-tier answer settlement",
+    name: "Sage premium-tier answer receipt",
     description:
-      "Sage, the agent-economy concierge on ergoblockchain.org, answered a premium-tier question. Payment was made via an Accord Note redeemed in the linked Ergo settlement transaction.",
-    actionStatus: "CompletedActionStatus",
-    startTime: settledAt,
-    endTime: settledAt,
+      "Sage, the agent-economy concierge on ergoblockchain.org, answered a premium-tier question paid via an Accord Note.",
+    actionStatus: receipt.status === "settled_on_chain" ? "CompletedActionStatus" : "ActiveActionStatus",
+    startTime: receipt.created_at,
+    endTime: receipt.status === "settled_on_chain" ? settledAt : undefined,
     agent: {
       "@type": "SoftwareApplication",
       name: "Sage",
@@ -289,16 +270,11 @@ function SchemaJsonLd({
     },
     object: {
       "@type": "MonetaryAmount",
-      value: priceErg,
+      value: receipt.chain.payment_erg,
       currency: "ERG",
-      additionalType: "https://docs.ergoplatform.com/whitepaper.pdf",
     },
-    instrument: {
-      "@type": "CreativeWork",
-      name: "Accord Note",
-      url: "https://github.com/accord-protocol/accord-protocol",
-    },
-    identifier: txId,
+    identifier: receipt.id,
+    url: receipt.public_receipt_url,
   }
   return (
     <script
@@ -309,165 +285,27 @@ function SchemaJsonLd({
   )
 }
 
-function NotConfirmedYet({
-  txId,
-  status,
-  network,
-}: {
-  txId: string
-  status: number
-  network: "mainnet" | "testnet"
-}) {
+function NotConfirmedYet({ id }: { id: string }) {
   return (
-    <article className="min-h-screen bg-black text-gray-300 px-4 py-20 flex items-center">
-      <div className="max-w-md mx-auto text-center space-y-4 font-mono">
-        <div className="text-orange-400 text-xs uppercase tracking-widest">Receipt pending</div>
-        <h1 className="text-2xl text-white font-bold">Settlement tx not confirmed yet</h1>
-        <p className="text-sm text-gray-400 leading-relaxed">
-          Testnet block time is ~2 min. If you just paid, refresh in a moment. If
-          this lingers, check the explorer directly.
+    <article className="flex min-h-screen items-center bg-black px-4 py-20 text-gray-300">
+      <div className="mx-auto max-w-md space-y-4 text-center font-mono">
+        <div className="text-xs uppercase tracking-widest text-orange-400">Receipt pending</div>
+        <h1 className="text-2xl font-bold text-white">Receipt not found yet</h1>
+        <p className="text-sm leading-relaxed text-gray-400">
+          If you just paid, refresh in a moment. The API may still be waiting for
+          durable receipt storage or explorer indexing.
         </p>
-        <a
-          href={explorerUrl(txId, network)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-orange-500/40 text-orange-300 hover:bg-orange-500/5"
-        >
-          Check explorer <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-        <p className="text-[10px] text-gray-700 mt-6">
-          fetch status: {status} · tx: <span className="break-all">{txId}</span>
-        </p>
+        <p className="mt-6 break-all text-[10px] text-gray-700">id: {id}</p>
       </div>
     </article>
   )
 }
 
-function SettlementPending({
-  box,
-  network,
-}: {
-  box: import("@/lib/sage/explorer/fetch-tx").BoxInfo
-  network: "mainnet" | "testnet"
-}) {
-  const settledAt = box.creationTimestamp
-    ? new Date(box.creationTimestamp).toLocaleString("en-US", {
-        dateStyle: "medium",
-        timeStyle: "short",
-      })
-    : "—"
-  const heightStr = typeof box.inclusionHeight === "number" && box.inclusionHeight > 0
-    ? box.inclusionHeight.toLocaleString()
-    : "—"
-  return (
-    <article className="min-h-screen bg-black text-gray-200 px-4 py-12 md:py-20">
-      <div className="max-w-3xl mx-auto">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-orange-300 font-mono uppercase tracking-widest mb-8 transition-colors"
-        >
-          <ArrowLeft className="w-3 h-3" /> ergoblockchain.org
-        </Link>
-
-        <header className="flex items-center gap-3 mb-2">
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/40">
-            <Sparkles className="w-5 h-5 text-orange-400" />
-          </div>
-          <div>
-            <div className="text-[10px] uppercase tracking-widest text-orange-400 font-mono leading-none">
-              Sage receipt
-            </div>
-            <h1 className="text-xl md:text-2xl font-bold text-white font-mono mt-1 leading-none">
-              Premium answer · settlement pending
-            </h1>
-          </div>
-        </header>
-
-        <div className="flex items-center gap-2 mb-8 text-xs text-gray-400 font-mono">
-          <span className="px-2 py-0.5 rounded border border-yellow-500/40 bg-yellow-500/10 text-yellow-300 text-[10px] uppercase tracking-widest">
-            verified · pending redemption
-          </span>
-          <span className="text-gray-700">·</span>
-          <span>{settledAt}</span>
-        </div>
-
-        <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-10 max-w-2xl">
-          The buyer&apos;s Note is on chain and was verified by Sage&apos;s rail adapter.
-          Sage delivered the premium-tier answer. Note redemption (the second
-          on-chain tx) hasn&apos;t happened yet — Sage runs in verify-only mode
-          when the seller signer isn&apos;t configured. The Note auto-refunds to
-          the buyer&apos;s reserve at expiry if it&apos;s not redeemed first.
-        </p>
-
-        <div className="grid gap-3 md:gap-4 mb-12">
-          <KV label="Note box" mono>
-            <a
-              href={explorerBoxUrl(box.boxId, network)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-300 hover:text-orange-200 font-mono break-all inline-flex items-center gap-1 group"
-            >
-              <span>{box.boxId}</span>
-              <ExternalLink className="w-3 h-3 shrink-0 opacity-50 group-hover:opacity-100" />
-            </a>
-          </KV>
-          <KV label="Issuance tx" mono>
-            <a
-              href={explorerUrl(box.transactionId, network)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-300 hover:text-orange-200 font-mono break-all inline-flex items-center gap-1 group"
-            >
-              <span>{box.transactionId}</span>
-              <ExternalLink className="w-3 h-3 shrink-0 opacity-50 group-hover:opacity-100" />
-            </a>
-          </KV>
-          <KV label="Value" mono>
-            <span className="text-orange-200">{nanoToErg(box.value)} {network === "testnet" ? "testnet " : ""}ERG</span>
-          </KV>
-          <KV label="Block height" mono>
-            <span className="text-gray-200">{heightStr}</span>
-          </KV>
-          <KV label="Status" mono>
-            <span className="text-yellow-300">unspent · awaiting Sage settle</span>
-          </KV>
-        </div>
-
-        <footer className="text-xs text-gray-600 font-mono">
-          Once Sage&apos;s signer redeems this Note, the URL above will resolve to
-          the settlement tx; this page upgrades to a settled receipt automatically.
-        </footer>
-      </div>
-    </article>
-  )
-}
-
-function NotASageReceipt({
-  txId,
-  network,
-}: {
-  txId: string
-  network: "mainnet" | "testnet"
-}) {
-  return (
-    <article className="min-h-screen bg-black text-gray-300 px-4 py-20 flex items-center">
-      <div className="max-w-md mx-auto text-center space-y-4 font-mono">
-        <div className="text-orange-400 text-xs uppercase tracking-widest">Not a Sage receipt</div>
-        <h1 className="text-2xl text-white font-bold">This tx isn&apos;t a Sage settlement</h1>
-        <p className="text-sm text-gray-400 leading-relaxed">
-          The transaction exists on chain but its outputs don&apos;t pay Sage&apos;s
-          configured wallet. Either the URL was mistyped or the tx is from a
-          different agent.
-        </p>
-        <a
-          href={explorerUrl(txId, network)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-4 py-2 rounded-lg border border-orange-500/40 text-orange-300 hover:bg-orange-500/5"
-        >
-          See it on explorer <ExternalLink className="w-3.5 h-3.5" />
-        </a>
-      </div>
-    </article>
-  )
+function formatDate(value: string): string {
+  const date = new Date(value)
+  if (Number.isNaN(date.getTime())) return value
+  return date.toLocaleString("en-US", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  })
 }

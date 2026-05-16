@@ -77,7 +77,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       authorRole: data['authorRole'],
       category: data['category'] || 'General',
       tags: data['tags'] || [],
-      image: data['image'] || '/blog-placeholder.jpg',
+      image: data['image'] || '/og/blog-default.svg',
       readingTime: calculateReadingTime(content),
       featured: data['featured'] || false,
       draft: data['draft'] || false,

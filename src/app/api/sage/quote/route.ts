@@ -12,6 +12,7 @@
 import { NextRequest } from "next/server"
 import { buildSageQuote } from "@/lib/sage/payments/agreement"
 import { decidePremium } from "@/lib/sage/payments/gate"
+import { assertPaymentTokenKeyConfigured } from "@/lib/sage/payments/token"
 import { checkRateLimit, clientKey } from "@/lib/sage/rate-limit"
 
 export const runtime = "nodejs"
@@ -46,6 +47,13 @@ export async function POST(req: NextRequest) {
   const decision = decidePremium(question, history)
   if (!decision.isPremium) {
     return jsonOk({ premium: false })
+  }
+
+  try {
+    assertPaymentTokenKeyConfigured()
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : "payment token config error"
+    return jsonError(503, msg)
   }
 
   // Surface the friendly env-var error from getSageWalletConfig as a

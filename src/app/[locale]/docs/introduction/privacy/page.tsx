@@ -35,7 +35,7 @@ export default function PrivacyPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/docs/introduction/privacy-features"
+            href="/technology/privacy-features"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Shield className="w-5 h-5 mr-2" /> Explore Privacy Features
@@ -223,7 +223,7 @@ export default function PrivacyPage() {
             <span className="text-gray-300">NIPoPoWs</span>
           </Link>
           <Link
-            href="/docs/introduction/atomic-swaps"
+            href="/docs/introduction/eutxo"
             className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
           >
             <Globe className="w-5 h-5 mr-2 text-green-400" />

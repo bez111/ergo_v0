@@ -63,7 +63,7 @@ export default function SigmastateInterpreterPage() {
               sigmastate-interpreter
             </a>{' '}
             repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the{' '}
-            <Link href="/docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">
               <em>Sigma Language</em>
             </Link>.
           </p>
@@ -177,7 +177,7 @@ export default function SigmastateInterpreterPage() {
               <ul className="list-disc pl-6 mt-2">
                 <li>
                   A more accessible alternative for JVM-based development (Java/Scala/Kotlin) is{' '}
-                  <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">
                     AppKit
                   </Link>, a thin wrapper around the core components provided by the ErgoScript interpreter and Ergo protocol implementations.
                 </li>
@@ -207,7 +207,7 @@ export default function SigmastateInterpreterPage() {
 
           <p>
             For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed{' '}
-            <Link href="/docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">
               Sigma Language documentation
             </Link>.
           </p>

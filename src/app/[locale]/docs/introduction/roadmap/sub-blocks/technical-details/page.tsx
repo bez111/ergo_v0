@@ -80,7 +80,7 @@ export default function SubBlocksTechnicalDetailsPage() {
           
           <div className="bg-gradient-to-r from-blue-400/10 to-cyan-400/10 rounded-xl p-6 border border-blue-400/20 mb-6">
             <p className="text-gray-300">
-              Following ideas in PRISM, Bitcoin-NG, Tailstorm, and Parallel Proof-of-Work, Ergo introduces a dual-block architecture via a soft fork that maintains backward compatibility.
+              Following ideas in PRISM, Bitcoin-NG, Tailstorm, and Parallel Proof-of-Work, Ergo is testing a dual-block architecture via a backward-compatible soft fork path in the Matrix devnet/test stream.
             </p>
           </div>
         </section>
@@ -100,13 +100,13 @@ export default function SubBlocksTechnicalDetailsPage() {
               <li>• Difficulty <code className="text-cyan-300">D = 2^256 / T</code>, adjusted to maintain ~2-minute block intervals</li>
             </ul>
             <p className="text-gray-300 mb-4">
-              This rule continues to define <strong>ordering blocks</strong>, but Ergo now introduces <strong>input blocks</strong> with a lower difficulty threshold:
+              This rule continues to define <strong>ordering blocks</strong>, while <strong>input blocks</strong> use an easier target so miners can produce them more frequently:
             </p>
             <div className="bg-black/30 rounded-lg p-4 font-mono text-cyan-300 mb-4">
-              H(ib) &lt; t   where   t = T / 64
+              H(ib) &lt; t   where   t ≈ 60–64 × T
             </div>
             <p className="text-gray-300">
-              This allows miners to produce approximately one input block every second, on average, for each ordering block cycle.
+              The multiplier is tuned with the configured ordering-block interval. The 2026 devnet stream has used 60 input blocks per ordering block, targeting roughly one input block per second.
             </p>
           </div>
         </section>

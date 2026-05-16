@@ -62,7 +62,7 @@ export default function TokensPage() {
               <h3 className="text-lg font-semibold text-blue-400">What are first-class citizens?</h3>
             </div>
             <p className="text-gray-300">
-              This means that tokens in Ergo are not just metadata attached to transactions, but they are deeply integrated into the Ergo protocol. They can be manipulated and managed with the same level of support and functionality as the native Ergo token (see <Link href="/docs/developers/eip4" className="text-cyan-400 hover:underline">EIP-0004</Link>).
+              This means that tokens in Ergo are not just metadata attached to transactions, but they are deeply integrated into the Ergo protocol. They can be manipulated and managed with the same level of support and functionality as the native Ergo token (see <Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-0004</Link>).
             </p>
           </div>
 

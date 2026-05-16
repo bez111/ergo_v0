@@ -105,28 +105,28 @@ export default function ErgoScriptPage() {
       description: "Your first ErgoScript contract - basic syntax and structure",
       difficulty: "Beginner",
       time: "15 min",
-      link: "/docs/ergoscript/hello-world",
+      link: "/docs/developers/ergoscript-languages/examples/simple-p2s-app",
     },
     {
       title: "Token Minting",
       description: "Create and manage custom tokens on Ergo blockchain",
       difficulty: "Intermediate",
       time: "30 min",
-      link: "/docs/ergoscript/token-minting",
+      link: "/patterns/ergo-fungible-token-minting-eip4",
     },
     {
       title: "Multi-Signature Wallet",
       description: "Build a secure multi-sig wallet with ErgoScript",
       difficulty: "Advanced",
       time: "45 min",
-      link: "/docs/ergoscript/multisig",
+      link: "/docs/developers/infrastructure/wallets/multisig",
     },
     {
       title: "Oracle Data Usage",
       description: "Integrate external data sources into your contracts",
       difficulty: "Intermediate",
       time: "25 min",
-      link: "/docs/ergoscript/oracles",
+      link: "/technology/oracle-pools",
     },
   ]
 
@@ -240,7 +240,7 @@ export default function ErgoScriptPage() {
                       </h3>
                     <div className="grid grid-cols-1 gap-4">
                       <Link
-                        href="/docs/ergoscript/playground"
+                        href="/docs/developers/tooling/playgrounds"
                         className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
                       >
                         <div className="flex items-start gap-3">
@@ -591,7 +591,7 @@ export default function ErgoScriptPage() {
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
-                  href="/docs/ergoscript/playground"
+                  href="/docs/developers/tooling/playgrounds"
                   className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
                 >
                   <div className="flex items-center gap-4 mb-4">

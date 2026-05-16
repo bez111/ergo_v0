@@ -289,7 +289,7 @@ export default function StorageRentPage() {
             </div>
           </div>
           <p className="text-gray-300 mb-4">
-            For further details on how these fee adjustments are made, check out the <a href="#" className="text-cyan-300 hover:underline">Governance section</a>.
+            For further details on how these fee adjustments are made, check out the <Link href="/docs/miners/governance" className="text-cyan-300 hover:underline">Governance section</Link>.
           </p>
           <div className="bg-orange-400/10 border border-orange-400/20 rounded-lg p-4">
             <h4 className="font-bold text-orange-400 mb-2">Block Reward Calculation</h4>
@@ -310,7 +310,7 @@ export default function StorageRentPage() {
             </div>
           </div>
           <p className="text-gray-300 mt-4">
-            For an academic perspective on this topic, consult the research paper <a href="#" className="text-cyan-300 hover:underline">"A Systematic Approach To Cryptocurrency Fees"</a>.
+            For an academic perspective on this topic, consult the research paper <a href="/api/pdf/documents/A%20Systematic%20Approach%20To%20Cryptocurrency%20Fees.pdf" className="text-cyan-300 hover:underline">"A Systematic Approach To Cryptocurrency Fees"</a>.
           </p>
         </div>
 
@@ -349,7 +349,7 @@ export default function StorageRentPage() {
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             <a
-              href="#"
+              href="/docs/introduction/storage-rent"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
@@ -359,7 +359,7 @@ export default function StorageRentPage() {
               <ExternalLink className="w-4 h-4 ml-auto text-gray-400" />
             </a>
             <a
-              href="#"
+              href="/docs/introduction/storage-rent"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
@@ -369,7 +369,7 @@ export default function StorageRentPage() {
               <ExternalLink className="w-4 h-4 ml-auto text-gray-400" />
             </a>
             <a
-              href="#"
+              href="/docs/introduction/storage-rent"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"

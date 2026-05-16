@@ -1,6 +1,6 @@
 ---
 title: "架构教程：构建在Ergo测试网上为API调用付款的AI代理"
-slug: "/blog/build-ai-agent-pays-api-ergo-testnet"
+slug: "/blog/build-agent-pays-for-api"
 seo_title: "架构教程：在Ergo测试网上为API调用付款的AI代理"
 meta_description: "在Ergo测试网上构建付款API和AI代理付款循环的架构教程：HTTP 402质询、链上付款验证、重放保护和安全检查清单。"
 excerpt: "一个架构教程，介绍AI代理在生成可验证的Ergo付款收据后才能调用的付款API端点。包括模拟模式和测试网模式签名说明。"
@@ -481,7 +481,7 @@ callId提交可能丢失或编码方式与验证程序期望的不同。付款�
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-ai-agent-pays-api-ergo-testnet",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-agent-pays-for-api",
   "keywords": ["Ergo testnet", "AI agent payments", "paid API", "HTTP 402", "x402", "Accord Protocol"]
 }
 ```

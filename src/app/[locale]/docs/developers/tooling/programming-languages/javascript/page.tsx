@@ -130,7 +130,7 @@ export default function JavascriptPage() {
         JavaScript and TypeScript developers can interact with the Ergo blockchain using various libraries and frameworks. Notably, <Link href="/docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">JS/TS bindings for sigma-rust</Link> (via WebAssembly) provide core blockchain interaction capabilities.
       </p>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-        <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">Appkit</Link> was designed as an abstraction layer on top of <Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma</Link>. This gives a lot of freedom on the core level in Sigma, while keeping <Link href="/docs/developers/tooling/api" className="text-cyan-400 hover:underline">dApp-facing APIs</Link> stable.
+        <Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">Appkit</Link> was designed as an abstraction layer on top of <Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma</Link>. This gives a lot of freedom on the core level in Sigma, while keeping <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">dApp-facing APIs</Link> stable.
       </p>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
         With the availability of <Link href="/docs/developers/tooling/sigmajs" className="text-cyan-400 hover:underline">Sigma.js</Link>, <Link href="/docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link> can play the same role for JS/TS.

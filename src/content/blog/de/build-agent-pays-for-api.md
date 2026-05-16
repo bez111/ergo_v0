@@ -1,6 +1,6 @@
 ---
 title: "Architecture-Tutorial: Baue einen KI-Agenten, der API-Aufrufe auf Ergo Testnet bezahlt"
-slug: "/blog/build-ai-agent-pays-api-ergo-testnet"
+slug: "/blog/build-agent-pays-for-api"
 seo_title: "Architecture-Tutorial: KI-Agent bezahlt API-Aufrufe auf Ergo Testnet"
 meta_description: "Architecture-Tutorial für einen bezahlten API-Endpunkt und eine KI-Agent-Zahlungsschleife auf Ergo Testnet: HTTP 402-Anforderung, On-Chain-Zahlungsüberprüfung, Replay-Schutz und Sicherheits-Checkliste."
 excerpt: "Ein Architecture-Tutorial für einen bezahlten API-Endpunkt, den ein KI-Agent nur nach Vorlage eines verifizierbaren Ergo-Zahlungsbelags aufrufen kann. Enthält Hinweise zu Mock-Modus und Testnet-Modus-Signierung."
@@ -481,7 +481,7 @@ Eine echte Bereitstellung benötigt einen externen Signer oder Wallet-Richtlinie
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-ai-agent-pays-api-ergo-testnet",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-agent-pays-for-api",
   "keywords": ["Ergo testnet", "AI agent payments", "paid API", "HTTP 402", "x402", "Accord Protocol"]
 }
 ```

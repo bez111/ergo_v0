@@ -32,14 +32,14 @@ const IMAGES: ImageEntry[] = [
   { pageUrl: '/technology/native-tokens', imageLoc: '/og/technology/native-tokens.png', title: 'Native Tokens on Ergo', caption: 'Tokens as first-class blockchain primitives' },
 
   // Use cases
-  { pageUrl: '/use/stablecoins', imageLoc: '/og/use/og-stablecoins.png', title: 'Algorithmic Stablecoins on Ergo', caption: 'SigmaUSD and decentralized stablecoins' },
-  { pageUrl: '/use/privacy', imageLoc: '/og/use/og-privacy.png', title: 'Privacy on Ergo — Sigma Protocols & Mixers', caption: 'Financial privacy with cryptographic primitives' },
-  { pageUrl: '/use/bridges', imageLoc: '/og/use/og-bridges.png', title: 'Cross-Chain Bridges on Ergo', caption: 'Multi-signature decentralized bridges' },
-  { pageUrl: '/use/daos', imageLoc: '/og/use/og-daos.png', title: 'DAOs & Alternative Economies on Ergo', caption: 'Composable DAO infrastructure' },
-  { pageUrl: '/use/nfts', imageLoc: '/og/use/og-nfts.png', title: 'NFTs & Digital Assets on Ergo', caption: 'On-chain metadata and protocol royalties' },
-  { pageUrl: '/use/oracles', imageLoc: '/og/use/og-oracles.png', title: 'Oracles & Data Feeds on Ergo', caption: 'Real-world data on-chain' },
-  { pageUrl: '/use/identity', imageLoc: '/og/use/og-identity.png', title: 'Identity & Reputation on Ergo', caption: 'Self-sovereign identity systems' },
-  { pageUrl: '/use/gaming', imageLoc: '/og/use/og-gaming.png', title: 'Gaming & Metaverse on Ergo', caption: 'Next-gen gaming assets' },
+  { pageUrl: '/use/stablecoins', imageLoc: '/og/use/og/use/og-stablecoins.png', title: 'Algorithmic Stablecoins on Ergo', caption: 'SigmaUSD and decentralized stablecoins' },
+  { pageUrl: '/use/privacy', imageLoc: '/og/use/og/use/og-privacy.png', title: 'Privacy on Ergo — Sigma Protocols & Mixers', caption: 'Financial privacy with cryptographic primitives' },
+  { pageUrl: '/use/bridges', imageLoc: '/og/use/og/use/og-bridges.png', title: 'Cross-Chain Bridges on Ergo', caption: 'Multi-signature decentralized bridges' },
+  { pageUrl: '/use/daos', imageLoc: '/og/use/og/use/og-daos.png', title: 'DAOs & Alternative Economies on Ergo', caption: 'Composable DAO infrastructure' },
+  { pageUrl: '/use/nfts', imageLoc: '/og/use/og/use/og-nfts.png', title: 'NFTs & Digital Assets on Ergo', caption: 'On-chain metadata and protocol royalties' },
+  { pageUrl: '/use/oracles', imageLoc: '/og/use/og/use/og-oracles.png', title: 'Oracles & Data Feeds on Ergo', caption: 'Real-world data on-chain' },
+  { pageUrl: '/use/identity', imageLoc: '/og/use/og/use/og-identity.png', title: 'Identity & Reputation on Ergo', caption: 'Self-sovereign identity systems' },
+  { pageUrl: '/use/gaming', imageLoc: '/og/use/og/use/og-gaming.png', title: 'Gaming & Metaverse on Ergo', caption: 'Next-gen gaming assets' },
 
   // Hubs
   { pageUrl: '/wallet', imageLoc: '/og/hubs/wallet.png', title: 'Ergo Wallets — 7 Secure Options', caption: 'Hardware, mobile, browser wallet comparison' },

@@ -110,7 +110,7 @@ export default function VelvetForksPage() {
                   {t("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/docs/protocol/velvet-forks">
+                  <Link href="/technology/velvet-forks">
                     <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       {t("buttons.readDocumentation")}
                     </Button>

@@ -1,6 +1,6 @@
 ---
 title: "Warum KI-Agenten mehr als Stripe brauchen: Agentic Commerce vs autonome Arbeitssettlement"
-slug: "/blog/ai-agents-need-more-than-stripe"
+slug: "/blog/agents-cant-use-stripe"
 seo_title: "Warum KI-Agenten mehr als Stripe brauchen: Agentic Commerce vs autonome Arbeitssettlement"
 meta_description: "Stripe, x402 und MPP ermöglichen Agentic Commerce und Machine Payments. Ergo und Accord fügen programmierbare Arbeitsverifikation, Notes, Acceptance Predicates und On-Chain Settlement hinzu."
 excerpt: "Stripe baut ernsthafte Infrastruktur für Agentic Commerce auf. Die verbleibende Lücke ist autonome Arbeitssettlement: programmierbare Akzeptanz, Credit Notes und verifizierbare Quittungen."
@@ -234,7 +234,7 @@ Stripes Commerce-Produkte sind Production-Infrastruktur. Accord und der Ergo Age
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agents-need-more-than-stripe",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/agents-cant-use-stripe",
   "keywords": ["Stripe agentic commerce", "AI agent payments", "x402", "Accord Protocol", "Ergo"]
 }
 ```

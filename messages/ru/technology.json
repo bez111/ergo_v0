@@ -187,8 +187,8 @@
         },
         {
           "id": "subblocks",
-          "question": "Как субблоки достигают подвторого подтверждения транзакций?",
-          "answer": "Разделение блоков на быстрые под-блоки ускоряет платеж и подтверждение dApp без доверенных последовательностей. Масштабирование слоя с более быстрыми подтверждениями; окончательность следует базовому консенсусу.",
+          "question": "Как подблоки дают более быстрый предварительный отклик по транзакциям?",
+          "answer": "Разделение блоков на input-блоки и ordering-блоки ускоряет отклик для платежей и dApp без доверенных секвенсеров. Безопасность Layer 1 по-прежнему следует консенсусу ordering-блоков, а Matrix-реализация проходит devnet/test rollout.",
           "tag": "Масштабирование"
         },
         {
@@ -301,7 +301,7 @@
         },
         "7": {
           "question": "Что такое Subblocks и зачем им пользоваться?",
-          "answer": "Подблоки разделяют блоки на быстрые подблоки, чтобы ускорить платеж и подтвердить dApp без доверенных последовательностей. Это обеспечивает масштабирование слоя 1 с более быстрыми подтверждениями."
+          "answer": "Подблоки разделяют блоки на input-блоки и ordering-блоки, чтобы ускорить отклик для платежей и dApp без доверенных секвенсеров. Это даёт Layer 1 масштабирование с более быстрым предварительным откликом, а финальное урегулирование остаётся за ordering-блоками."
         },
         "8": {
           "question": "Могу ли я выпускать токены и NFT без смарт-контракта?",
@@ -878,11 +878,11 @@
       },
       "subblocks": {
         "title": "Подблоки (В разработке)",
-        "description": "Революционное масштабирующее решение Layer 1, обеспечивающее подтверждение транзакций без ущерба для децентрализации или безопасности.",
+        "description": "Работа по масштабированию Layer 1 в devnet/test-потоке Matrix: более быстрый предварительный сигнал о включении транзакции без отказа от децентрализации и безопасности.",
         "details": {
           "subSecondConfirmations": {
-            "title": "Подвторое подтверждение",
-            "description": "Неограниченность мгновенных транзакций для улучшения работы с пользователями."
+            "title": "Быстрый предварительный отклик",
+            "description": "Почти мгновенный сигнал о включении транзакции, при этом финальное урегулирование остаётся за ordering-блоками."
           },
           "layer1Security": {
             "title": "Безопасность слоя 1",
@@ -1868,13 +1868,13 @@
     },
     "subblocks": {
       "title": "Подблоки",
-      "subtitle": "Революционное решение масштабирования слоя 1, обеспечивающее подтверждение транзакций",
-      "description": "Подблоки позволяют практически мгновенные транзакции окончательно без ущерба для децентрализации или безопасности. Опыт скорости блокчейна, которая соответствует традиционным платежным системам.",
+      "subtitle": "Работа по масштабированию Layer 1 для более быстрого предварительного отклика по транзакциям",
+      "description": "Подблоки тестируются в devnet/test-потоке Matrix, чтобы давать почти мгновенный сигнал о включении транзакции без отказа от децентрализации и безопасности. Финальное урегулирование по-прежнему остаётся за ordering-блоками.",
       "lastUpdated": "Последнее обновление",
       "seo": {
-        "title": "Подблоки технологии | Под-вторые подтверждения на Ergo",
-        "description": "Узнайте о Subblocks на Ergo - революционном масштабировании слоя 1, обеспечивающем подтверждение транзакций в то же время поддерживая полную безопасность блокчейна.",
-        "keywords": "Подблоки, масштабирование слоя 1, подсекундные подтверждения, Ergo blockchain, быстрые транзакции, параллельная обработка"
+        "title": "Подблоки | Быстрый предварительный отклик на Ergo",
+        "description": "Узнайте о подблоках на Ergo: Layer 1 масштабирование для более быстрого предварительного отклика по транзакциям при сохранении безопасности блокчейна.",
+        "keywords": "Подблоки, масштабирование Layer 1, предварительный отклик по транзакциям, Ergo blockchain, быстрые транзакции, параллельная обработка"
       },
       "buttons": {
         "learnMore": "Узнать больше",
@@ -1889,14 +1889,14 @@
       "keyMetrics": {
         "title": "Ключевые метрики",
         "confirmationTime": {
-          "name": "Время подтверждения",
-          "value": "< 1 секунда",
-          "description": "Окончательность подвторой транзакции"
+          "name": "Время отклика",
+          "value": "~1-2 секунды",
+          "description": "Целевой предварительный сигнал о включении"
         },
         "throughputIncrease": {
-          "name": "Увеличение на всем протяжении",
-          "value": "10х",
-          "description": "По сравнению с основной цепью"
+          "name": "Статус внедрения",
+          "value": "Devnet",
+          "description": "Matrix-реализация всё ещё проходит rollout-тестирование"
         },
         "securityModel": {
           "name": "Модель безопасности",
@@ -1911,12 +1911,12 @@
       },
       "featuresSection": {
         "title": "Ключевые функции",
-        "description": "Subblocks объединяют лучшие из обоих миров: безопасность слоя 1 и скорость современных платежных систем"
+        "description": "Подблоки должны совместить безопасность Layer 1 с более быстрым откликом для кошельков и dApp"
       },
       "features": [
         {
-          "title": "Подвторое подтверждение",
-          "description": "Мгновенная транзакция заканчивается для улучшения работы пользователей без ущерба для децентрализации"
+          "title": "Быстрый предварительный отклик",
+          "description": "Почти мгновенный сигнал о включении транзакции для лучшего UX без отказа от децентрализации"
         },
         {
           "title": "Безопасность слоя 1",
@@ -1928,7 +1928,7 @@
         },
         {
           "title": "Параллельная обработка",
-          "description": "Несколько подблоков можно проверить параллельно для увеличения пропускной способности"
+          "description": "Цепочки input-блоков могут снизить воспринимаемую задержку и улучшить распространение транзакций"
         },
         {
           "title": "Адаптивная сложность",
@@ -1963,20 +1963,20 @@
       ],
       "useCasesSection": {
         "title": "Варианты использования",
-        "description": "Приложения, получающие выгоду от подтверждений транзакций"
+        "description": "Приложения, которым полезен более быстрый предварительный отклик по транзакциям"
       },
       "useCases": [
         {
           "title": "DeFi приложения",
-          "description": "Включить высокочастотную торговлю и мгновенные смены с промежуточной окончательностью"
+          "description": "Улучшить UX свапов за счёт быстрого отклика, пока финальное урегулирование остаётся за ordering-блоками"
         },
         {
           "title": "Платежные системы",
-          "description": "Транзакции с точкой продажи с немедленным подтверждением"
+          "description": "POS-сценарии с более быстрым предварительным сигналом об оплате"
         },
         {
           "title": "Играть",
-          "description": "Состояние игры в реальном времени без ожидания подтверждения блоков"
+          "description": "Более быстрый отклик для игрового состояния без ожидания финального ordering-блока"
         },
         {
           "title": "Социальные приложения",
@@ -1990,11 +1990,11 @@
       "faq": [
         {
           "question": "Что такое субблоки?",
-          "answer": "Подблоки - это промежуточные блоки между основными блоками, которые обеспечивают более быстрое подтверждение, сохраняя одну и ту же модель безопасности. Они позволяют получить окончательную отдачу от транзакций без ущерба для децентрализации."
+          "answer": "Подблоки, или input-блоки, — это блок-кандидаты с более лёгкой целью между ordering-блоками. Они задуманы для быстрого предварительного сигнала о включении транзакции, а финальное урегулирование остаётся за ordering-блоками."
         },
         {
           "question": "Насколько быстрыми являются подтверждения подблоков?",
-          "answer": "Подблоки обеспечивают подтверждение в течение примерно 1 секунды по сравнению с основной длиной блока 2 минуты, что обеспечивает быструю окончательность транзакций для улучшения работы пользователя."
+          "answer": "Текущий дизайн целится примерно в 1-2 секунды для предварительного сигнала о включении против 2-минутного cadence ordering-блоков. Это devnet/test rollout, пока release notes не отметят production-ready статус."
         },
         {
           "question": "Требуется ли подблоки жёсткая ветка?",
@@ -2002,16 +2002,16 @@
         },
         {
           "question": "Как подблоки улучшают масштабируемость?",
-          "answer": "Субблоки позволяют увеличить пропускную способность 10x за счет параллельной обработки и более частого производства блоков, поддерживая гарантии безопасности Layer 1."
+          "answer": "Подблоки улучшают воспринимаемую масштабируемость за счёт более частого распространения транзакционных данных и более быстрого отклика для кошельков и dApp, сохраняя гарантии безопасности ordering-блоков Layer 1."
         },
         {
           "question": "Подблоки защищены?",
-          "answer": "Да, подблоки поддерживают ту же модель безопасности, что и главные блоки со скорректированными целями сложности. Они способствуют суммарному весу цепи и защищены тем же консенсусом в отношении PoW."
+          "answer": "Они спроектированы так, чтобы сохранять модель безопасности ordering-блоков, но production-пользователям стоит ориентироваться на release notes ноды: Matrix-реализация всё ещё проходит devnet/test rollout."
         }
       ],
       "cta": {
-        "title": "Готовы к опыту под-вторых подтверждений?",
-        "description": "Присоединяйтесь к будущему блокчейн технологии с помощью блоков - где скорость соответствует безопасности",
+        "title": "Следите за разработкой подблоков",
+        "description": "Отслеживайте rollout Matrix и разбирайтесь, как быстрый предварительный отклик сочетается с моделью безопасности Ergo",
         "buttons": {
           "readTechnicalDetails": "Читать технические детали",
           "exploreOtherTechnologies": "Исследовать другие технологии"
@@ -2105,12 +2105,9 @@
       "how_does_eutxo_handle_shared": "Как eUTXO управляет общим состоянием?\", ответ: \"Общее состояние управляется через \"общие коробки\", что несколько транзакций могут ссылаться. Продвинутые dApps используют такие методы, как загрузка, разделение состояний или прокси без гражданства для минимизации разногласий и поддержания масштабируемости.",
       "what_are_the_main_advantages": "Каковы основные преимущества по сравнению с UTXO Bitcoin? , ответ: \"eUTXO расширяет UTXO Bitcoin с программируемой логикой, пользовательским хранилищем данных в реестрах, и поддержка сложных смарт-контрактов при сохранении преимуществ безопасности и параллелизма модели UTXO.",
       "technology_href_technology": "Технология\", href: \"/technology",
-      "on_this_page_classname": "На этой странице \" название класса=",
       "technology_item_https_ergoblockchain_org": "Технология, элемент: 'https://ergoblockchain.org/technology",
       "techarticle_headline": "Заголовок TechArticle:",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO объяснил: безопасность, параллелизм, программируемость, и варианты использования.",
-      "organization_name_ergo_foundation_url": "Организация, имя: 'Ergo Foundation', url: 'https://ergoblockchain.org",
-      "organization_name_ergo_platform_url": "Организация, имя: 'Ergo Platform', url: 'https://ergoblockchain.org",
       "on_this_page": "На этой странице",
       "ergoscript_code_controlling_spending_conditions": "Код ErgoScript, контролирующий условия расходов",
       "user_defined_r4_r9_r0_r3_are_protocol_reserved": "Пользователь: R4–R9 (R0–R3 зарезервированы для протокола)",
@@ -2252,10 +2249,7 @@
       }
     },
     "ergoscriptOld": {
-      "what_is_ergoscript_answer_ergoscript": "Что такое ErgoScript?\",\n      answer: \"ErgoScript — язык смарт-контрактов Ergo, основанный на Sigma-протоколах. Он обеспечивает мощные, гибкие и безопасные смарт-контракты с сохранением преимуществ модели UTXO.",
-      "is_ergoscript_similar_to_other": "Похож ли ErgoScript на другие языки смарт-контрактов?\",\n      answer: \"ErgoScript уникален: он сочетает функциональное программирование с криптографическими протоколами. Он безопаснее Solidity, предотвращая атаки повторного входа по своей конструкции.",
       "how_do_i_learn_ergoscript": "Как узнать ErgoScript? ,\n      ответ: \"Начните с официальных руководств, используйте игровую площадку ErgoScript для практических занятий и ссылайтесь на документацию. Базовые знания масштаба помогают не требуются, но не требуются.",
-      "course_name_ergoscript_programming_course": "Курс',\n    name: 'Курс программирования на ErgoScript',\n    description: 'Изучение языка смарт-контрактов ErgoScript для блокчейна Ergo",
       "organization_name_ergo_platform": "Организация\",\n      имя: 'Платформа Ergo",
       "ergoscript_secure_smart_contract_language": "ErgoScript - Безопасный язык контракта",
       "learn_ergoscript_smart_contract_language": "Изучите умный язык контракта ErgoScript для блокчейна Ergo",
@@ -2281,23 +2275,17 @@
       "predictable_moderate": "Прогнозируемый, умеренный",
       "copy_to_clipboard": "Копировать в буфер обмена",
       "the_class_of_reentrancy_vulnerabilities": "В eUTXO отсутствует класс уязвимостей повторного входа, общих для учетных систем",
-      "deterministic_execution_description_computational_complexity": "Детерминированное выполнение\",\n    description: \"Вычислительная сложность предсказуема, однако комиссии сети определяются рынком",
       "utxo_concurrency_description_parallel_transaction": "UTXO Concurrency\",\n    описание: \"Параллельная обработка транзакций с шаблонами batcher для сценариев высокой совместимости",
-      "what_about_throughput_and_scaling": "Как насчёт пропускной способности и масштабирования для приложений с высокой нагрузкой?\",\n      answer: \"Модель eUTXO обеспечивает параллельную обработку транзакций. Для сценариев с высокой конкуренцией, например DEX, паттерны batcher/aggregator могут собирать несколько ордеров и исполнять их пакетами, эффективно масштабируя пропускную способность при сохранении гарантий безопасности.",
       "can_i_build_complex_defi": "Могу ли я создавать сложные DeFi приложения с ErgoScript?\",\n      ответить: \"Да\". ErgoScript поддерживает сложные финансовые инструменты, в том числе DEXs, Steecoins, протоколы кредитования и продвинутые контракты NFT. Декларирующая модель и родные криптографические примитивы часто делают сложные протоколы проще для реализации и аудита, чем для систем бухгалтерского учета.",
       "technology_item_https_ergoblockchain_org": "Технология\",\n              элемент: \"https://ergoblockchain.org/technology",
       "ergoscript_item_https_ergoblockchain_org": "ErgoScript»,\n              пункт: \"https://ergoblockchain.org/technology/ergoscript",
       "technology_href_technology": "Технология\", href: \"/technology",
       "ergoscript_href_technology_ergoscript": "ErgoScript\", href: \"/technology/ergoscript",
-      "on_this_page_classname": "На этой странице \" название класса=",
       "try_online_playground_description_write": "Попробуйте Online Playground\",\n                              описание: \"Напишите и протестируйте ErgoScript в вашем браузере",
       "read_documentation_description_comprehensive_guides": "Читать документацию\",\n                              описание: \"Полные руководства и API рекомендации",
-      "join_community_description_get_help": "Присоединиться к сообществу\",\n                              description: \"Получить помощь от опытных разработчиков",
       "no_shared_global_state_eliminates": "Ни одно общее состояние не устраняет уязвимость повторного входа",
       "native_sigma_protocols_description_first": "Родные протоколы Sigma\",\n                                  описание: \"Первое классное криптографическое примитирование для многосторонних подписей",
-      "interactive_playground_description_test_contracts": "Интерактивная площадка\",\n                                  description: \"Тестируйте контракты прямо в браузере без настройки",
       "rich_tooling_ecosystem_description_sdks": "Описание Rich Tooling Ecosystem\",\n                                  описание: \"SDK для Java, JavaScript, Python, и многое другое",
-      "extensive_examples_description_learn_from": "Обширные примеры\",\n                                  description: \"Учитесь на готовых к использованию шаблонах контрактов",
       "non_custodial_defi_protocols": "Не хранящиеся в распоряжении протоколы DeFi",
       "decentralized_oracle_networks": "Децентрализованные сети оракула",
       "stablecoins_and_native_tokens": "Стаблекуны и родные токены",
@@ -2305,20 +2293,7 @@
       "daos_governance_systems": "DAO и системы управления",
       "advanced_nft_contracts": "Расширенные контракты NFT",
       "spv_nipopow_based_protocols": "SPV/NIPoPoW протоколы",
-      "ergoscript_playground_url": "Площадка ErgoScript\", url:",
-      "official_documentation_url_https_docs": "Официальная документация, url: \"https://docs.ergoplatform.com/ergo-script/",
-      "code_examples_tutorials_url_docs": "Примеры кода и Учебные материалы\", url: \"/docs/developers/tutorials",
-      "community_guides_url_learn_guides": "Руководство сообщества\", url: \"/learn/guides",
-      "appkit_for_jvm_android_url": "Appkit для JVM и Android\", url: \"https://github.com/ergoplatform/ergo-appkit",
-      "ergoscript_compiler_url_https_github": "Компилятор ErgoScript\", url: \"https://github.com/ergoplatform/sigmastate-interpreter",
-      "sdks_apis_url_docs_developers_tooling": "SDK & API\", url: \"/docs/developers/tooling",
-      "node_js_library_url_https": "Библиотека Node.js\", url: \"https://github.com/ergoplatform/ergo-ts",
       "like_bitcoin_script_works_with": "Как и скрипт Bitcoin, работает с выходами, а не с аккаунтами. В отличие от BTC, скрипты гораздо более мощны для DeFi, DAO и сложных контрактов.",
-      "no_shared_state_no_global": "Нет общего состояния, нет глобальных переменных\",\n                              description: \"Устраняет класс уязвимостей повторного входа; снижает некоторые паттерны MEV, но не полностью предотвращает фронтраннинг.",
-      "cryptography_first_design_description_sigma": "Криптография на первом месте\",\n                              description: \"Sigma-протоколы и доказательства с нулевым разглашением встроены нативно. Не требуются внешние библиотеки или сложные реализации.",
-      "predictable_execution_costs_description_script": "Предсказуемые затраты на выполнение\",\n                              description: \"Стоимость выполнения скрипта статически ограничена; итоговая комиссия сети по-прежнему определяется рынком (условия мемпула).",
-      "restricted_computation_description_intentionally_limited": "Ограниченные вычисления\",\n                              description: \"Намеренно ограничены для предотвращения бесконечных циклов и обеспечения предсказуемого завершения всех контрактов.",
-      "declarative_scripting_description_express_what": "Declarative Scripting\",\n                              description: \"Express what you want to achieve rather than how to achieve it. Более читаемый и менее подвержен ошибкам.",
       "on_this_page": "На этой странице",
       "deterministic_execution": "Детерминированное исполнение",
       "computational_complexity_is_predictable_though": "Компенсационная сложность предсказуема, хотя сетевые сборы зависят от рынка",
@@ -2468,7 +2443,6 @@
       "native_zero_knowledge_proofs_mixer": "Нативные доказательства нулевого знания, микширующие протоколы и секретные активы, встроенные в блокчейн Ergo.",
       "optional_privacy_for_all_transactions": "Необязательная конфиденциальность для всех транзакций с помощью протоколов Sigma и ErgoMixer.",
       "how_does_ergo_implement_privacy": "Как Ergo реализовать конфиденциальность? ,\n      ответ: \"Ergo использует протоколы сигмы для доказательства нулевого знания, включение дополнительных функций конфиденциальности, таких как ErgoMixer, посылающие подписи, и конфиденциальные транзакции без доверенной установки.",
-      "is_ergo_a_privacy_coin": "Является ли Ergo монетой конфиденциальности?\",\n      answer: \"Ergo предлагает опциональную конфиденциальность. Пользователи могут выбирать между прозрачными и конфиденциальными транзакциями. Конфиденциальность — это функция, а не обязательное требование, что обеспечивает соответствие нормативным требованиям.",
       "what_is_ergomixer_answer_ergomixer": "Что такое ErgoMixer?\",\n      ответ: \"ErgoMixer - это не попечительный, бесправный микс-протокол, который ломает ссылки на транзакции, используя протоколы Sigma, обеспечивая надежную конфиденциальность без централизованных операторов.",
       "organization_name_ergo_platform": "Организация\", имя: 'Платформа Ergo",
       "ergo_privacy_features_zero_knowledge": "Функции конфиденциальности Ergo | Доверительные подтверждения и конфиденциальные транзакции",
@@ -2486,20 +2460,15 @@
       "what_you_can_do_with_ergo_privacy": "Что вы можете делать с конфиденциальности Ergo",
       "frequently_asked_questions": "Часто задаваемые вопросы",
       "privacy_by_design_security_by_default": "Конфиденциальность по дизайну, безопасности по умолчанию",
-      "sigma_protocols_description_enable_powerful": "Sigma Protocols\",\n    description:\n      \"Enable powerful privacy tools like ring signatures and zero-knowledge proof at the protocol level.",
       "zero_knowledge_proofs_ring_signatures": "Доказывание нулевых знаний\", \"Подписи колец\", \"Конфиденциальные активы\", \"Частные смарт-контракты",
-      "ergomixer_description_on_chain_non": "ErgoMixer\",\n    description: «Некастодиальное смешивание on-chain для конфиденциальности и анонимности транзакций».",
       "non_custodial_mixing_on_chain": "Смесь без попечительства\",\n      \"Безопасность в цепочке\",\n      \"Поддержка микширования токенов\",\n      \"Настраиваемая анонимность",
-      "confidential_assets_description_issue_tokens": "Конфиденциальные активы\",\n    description: «Выпуск токенов со скрытыми суммами и правилами для максимальной конфиденциальности».",
       "hidden_token_amounts_private_smart": "Скрытые суммы токен\",\n      \"Частные смарт-контракты\",\n      \"Конфиденциальные транзакции\",\n      \"Выборочное раскрытие",
       "flexible_privacy_features_usable_in": "Гибкие функции конфиденциальности, используемые в dApps, DeFi, и NFTs\",\n  \"Open-source, сверстническая криптография\",\n  \"Совместимо с другими функциями Ergo\",\n  \"Встроен в протокол, не добавленный в качестве последующих размышлений\",\n  \"Mathematically доказанные гарантии безопасности",
       "private_transactions_description_mix_your": "Частные транзакции\",\n    описание:\n      \"Смешайте ERG и токены для достижения сильной анонимности в цепочке (в текущем наборе анонимности)",
       "confidential_defi_description_build_defi": "Confidential DeFi\",\n    описание: \"Создавайте приложения DeFi с частными балансами и логикой",
-      "anonymous_voting_description_create_daos": "Анонимное голосование\",\n    description: «Создание DAO и систем голосования с тайным голосованием»",
       "private_nfts_description_nfts_with": "Частные NFTs\",\n    описание: \"NFTs с скрытыми метаданными или информацией о владельце",
       "confidential_collectibles": "Конфиденциальные коллекции",
       "what_level_of_privacy_does": "Какой уровень конфиденциальности предлагает Ergo? Это просто смешивание монет?\",\n    ответил:",
-      "if_i_use_privacy_features": "Если я использую функции конфиденциальности, не будут ли мои транзакции выглядеть подозрительно?\",\n    answer:\n      «Совсем наоборот. Поскольку инструменты конфиденциальности являются основной частью экосистемы Ergo, их использование является нормой. Когда многие люди смешивают свои монеты, создаётся большой анонимный набор, в котором легко раствориться. В Ergo защита своих финансовых данных — стандартная практика, а не повод для подозрений».",
       "doesn_t_this_kind_of": "Разве такая тайна не привлекает преступников? ,\n    ответ:\n      \"Конфиденциальность является основополагающим правом, а не признанием вины. Вы не используете шторы на вашем окне, потому что вы делаете что-то противозаконное. Предприятиям нужна конфиденциальность для торговых секретов и платежных ведомостей, а частным лицам нужна защита от отслеживания и профилирования.",
       "question_name_what_privacy_features": "Вопрос\",\n              имя: \"Какие функции конфиденциальности предлагает Ergo?",
       "answer_text_ergo_offers_multiple": "Ответ \",\n                текст:\n                  \"Ergo предлагает множество функций конфиденциальности, включая протоколы Sigma, при передаче подписей, доказательств нулевого знания и конфиденциальных сделок. Эти технологии позволяют осуществлять операции по сохранению конфиденциальности, обеспечивая при этом безопасность и соблюдение норм.",
@@ -2509,21 +2478,17 @@
       "answer_text_yes_ergo_s": "Ответ \",\n                текст:\n                  \"Да, Функции конфиденциальности Ergo разработаны так, чтобы они соответствовали нормативным требованиям. Они предоставляют возможность избирательного раскрытия информации, позволяя пользователям раскрывать информацию о транзакциях, когда требуется при сохранении конфиденциальности по умолчанию.",
       "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo вводит конфиденциальность в протокол: протоколы Sigma, ринг/пороговые подписи, ErgoMixer, конфиденциальные активы и избирательное раскрытие.",
-      "organization_name_ergoblockchain_org_url": "Организация\",\n            название: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
       "ergo_privacy_sigma_protocols_ring": "Ergo privacy,Протоколы Sigma,сигнатуры,вычитки нулевых знаний,ErgoMixer,конфиденциальные транзакции",
       "thing_name_sigma_protocol": "Вещь\", имя: \"Протокол Sigma",
       "thing_name_zero_knowledge_proof": "Вещь\", имя: \"Защита нулевого знания\"",
       "webpage_id_https_ergoblockchain_org_technology": "WebPage\", \"@id\": \"https://ergoblockchain.org/technology",
       "technology_item_https_ergoblockchain_org": "Технология\", пункт: \"https://ergoblockchain.org/technology",
       "privacy_features_item_https_ergoblockchain": "Функции конфиденциальности\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
-      "howto_name_how_to_increase": "HowTo\",\n          name: \"How to increase privacy with ErgoMixer\",\n          description: \"High-level steps to improve on-chain privacy using ErgoMixer with delayays and larger anonymity sets.",
       "prepare_funds_text_split_funds": "Подготовка средств\", текст: \"Сплит средства и избежать повторного использования адресов.",
       "run_mix_text_choose_round": "Выполнить микс\", текст: «Выберите округление/задержка для большей анонимности.",
       "wait_spend_text_spend_after": "Подождите и тратите, текст: «Расходы после задержки; избегайте прямой связи.",
       "technology_href_technology": "Технология\", href: \"/technology",
       "privacy_features_href_technology_privacy_features": "Особенности конфиденциальности\", href: \"/technology/privacy-features",
-      "on_page_navigation_classname": "Навигация на странице\" Название класса=",
       "basic_privacy_description_standard_transactions": "Базовая конфиденциальность\",\n                              описание: \"Стандартные транзакции с псевдонимами адресов",
       "pseudonymous_addresses_utxo_model_benefits": "Псевдонимные адреса\", \"Преимущества модели UTXO\", \"Базовая конфиденциальность транзакций",
       "enhanced_privacy_description_using_ergomixer": "Расширенная конфиденциальность\",\n                              описание: \"Использование ErgoMixer для транзакционного микширования и несвязывания",
@@ -2778,42 +2743,28 @@
     "go_to_docs": "Перейти к документации",
     "extended_utxo_model_that_enables": "Расширенная модель UTXO, позволяющая параллельное исполнение смарт-контрактов и компостильное приложение DeFi. Устраняет повторные атаки при сохранении Bitcoin",
     "parallel_execution_description_smart_contracts": "Параллельное выполнение\", описание: \"Smart contracts run independently without global changes conflicts.",
-    "composability_description_build_complex_defi": "Компонуемость\", description: «Создание сложных DeFi-приложений из простых, многократно используемых компонентов».",
     "bitcoin_level_security_description_inherits": "Безопасность Bitcoin-уровня безопасности\", описание: \"Наследует защиту от боя UTXO\".",
     "built_in_privacy_description_native": "Встроенная конфиденциальность\", описание: \"Корректные нулевые знания и сигнатуры для конфиденциальных сделок.",
     "safe_by_design_description_prevents": "Безопасный дизайн\", описание: \"Предотвращает распространенные уязвимости, такие как атаки повторного входа и неожиданные поведения.",
-    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      «Энергоэффективный, ASIC-устойчивый алгоритм майнинга, демократизирующий участие в сети. Разработан для GPU-майнинга, чтобы сеть оставалась децентрализованной и доступной для всех.»,\n    color: \"\",\n    href: \"/technology/secure-pow",
-    "energy_efficient_description_memory_hard": "Энергоэффективность\", description: «Алгоритм с интенсивным использованием памяти снижает энергопотребление по сравнению с традиционным PoW».",
     "solo_mining_friendly_description_low": "Solo Mining Friendly\", описание: \"Low barrier to entry enables individual miners to participate profitable.",
     "asic_resistant_description_optimized_for": "ASIC сопротивляемость\", описание: \"Оптимизировано для потребителей GPUs для предотвращения добычи централизации.",
-    "storage_rent_description": "Арендная плата за хранение\",\n    description:",
     "sustainable_blockchain_description_automatic_cleanup": "Устойчивый блокчейн\", описание: \"Автоматическая очистка неиспользованных данных хранит блокчейн и эффективность.",
-    "perpetual_security_description_miners_receive": "Бессрочная безопасность\", description: «Майнеры получают вознаграждение бессрочно, обеспечивая долгосрочную безопасность сети».",
     "resource_efficient_description_maintains_lightweight": "Эффективный ресурс», описание: «Обеспечивает легкий блокчейн, работающий на скромном оборудовании.",
     "sigma_protocols_description_built_in": "Протоколы сигма\",\n    описание:\n      \"Встроенные нулевые знания позволяют транзакции с сохранением конфиденциальности, а также продвинутые криптографические функции без сторонних решений или сложных настроек. ,\n    цвет: \"\",\n    href: \"/technology/privacy-features",
     "optional_privacy_description_choose_between": "Необязательная конфиденциальность\", описание: \"По мере необходимости выбирайте между прозрачными или конфиденциальными сделками.",
     "developer_friendly_description_simple_apis": "Удобный для разработчиков\", описание: \"Простые API, чтобы добавить функции конфиденциальности в любое приложение.",
     "instant_mobile_sync_description_full": "Мгновенная мобильная синхронизация, описание: \"Полная безопасность с минимальными данными - синхронизация в секундах на любом устройстве.",
     "trustless_bridges_description_connect_to": "Беспечные мосты, описание: «Подключить к другим блокчейнам без централизованных валидаторов.",
-    "cryptographic_security_description_mathematical_proofs": "Cryptographic Security\", description: «Математические доказательства обеспечивают полную безопасность узлов для легких клиентов.",
-    "subblocks_in_development_description": "Подблоки (в разработке)\",\n    description:",
-    "sub_second_confirmations_description_near": "Подвторые подтверждения\", описание: \"Окончательность транзакций в кратчайшие сроки для улучшения работы пользователя.",
+    "sub_second_confirmations_description_near": "Быстрый предварительный отклик\", описание: \"Почти мгновенный сигнал о включении транзакции для лучшего UX.",
     "full_blockchain_security_without_trusted": "Полная безопасность блокчейна без доверенных посредников.",
     "seamless_integration_description_works_with": "Бесшовная Интеграция\", описание: \"Работает с существующей инфраструктурой - no bridges or sidechains нужен.",
-    "native_tokens_nfts_description_create": "Нативные токены и NFT\",\n    description:\n      «Создавайте и обменивайте токены и NFT непосредственно на уровне протокола. Смарт-контракты не требуются — просто простые, безопасные и экономичные нативные активы.»,\n    color: \"\",\n    href: \"/technology/native-tokens",
     "one_click_creation_description_issue": "Создание одного клика\", описание: \"Выпуск токенов, stablecoins, или NFTs в одной транзакции.",
-    "defi_ready_description_native_integration": "Ready\", description: \"Native integration with all Ergo applications and protocols.",
-    "true_native_assets_description_first": "True Native Assets\", description: \"First-class tokens with protocollevel security guarantees.",
     "oracle_pools_description_decentralized_price": "Oracle Pools\",\n    описание:\n      \"Децентрализованные ценовые фиды и оракулы данных, встроенные в протокол. Ни одна точка неудачи, ни централизованные операторы - просто надежные, композиционные данные для DeFi. ,\n    цвет: \"\",\n    href: \"/technology/oracle-pools",
     "reliable_price_feeds_description_consensus": "Надёжная цена кормления\", описание: \"Агрегация данных на основе консенсусов обеспечивает точность, устойчивость к манипуляциям.",
-    "universal_compatibility_description_any_smart": "Универсальная совместимость\", description: «Любой смарт-контракт может получать доступ к данным оракула без специальных интеграций».",
     "fully_decentralized_description_no_central": "Полностью децентрализованное\", описание: \"No central authority or single point of failure in the data pipeline.",
     "backward_compatible_description_no_forced": "Назад совместимый\", описание: \"No forced upgrades, no chain wars.",
     "future_proof_description_adopt_innovations": "Будущее доказательство\", описание: \"Принять инновации в своем собственном темпе.",
-    "gradual_adoption_description_evolutionary_not": "Постепенное внедрение\", description: «Эволюционные, а не революционные изменения».",
-    "adaptive_emission_governance_description_consensus": "Адаптивная эмиссия и управление\",\n    description:\n      «Настройка экономических параметров на основе консенсуса (например, голосование майнеров) с участием сообщества.»,\n    color: \"\",\n    href: \"/technology/adaptive-emission",
     "parameter_tuning_description_economic_variables": "Настройка параметров\", описание: \"Экономические переменные могут быть изменены.",
-    "economic_flexibility_description_adapt_to": "Экономическая гибкость\", description: «Адаптация к меняющимся потребностям сети».",
     "community_input_description_discussions_and": "Информация о сообществе\", описание: \"Обсуждения и решения вовлекают сообщество.",
     "dive_into_ergo_docs_href_docs_color": "Погрузиться в документацию Ergo\",\n          href: \"/docs\",\n    color:",
     "see_ecosystem_apps_href_ecosystem_color": "См. Ecosystem Apps\",\n    href: \"/ecosystem\",\n    color:",
@@ -2824,7 +2775,7 @@
     "how_does_storage_rent_solve": "Как аренда хранилища решает устойчивость блокчейна?\", тег\n      \"Хранилище",
     "what_privacy_features_does_ergo": "Какие функции конфиденциальности предлагает Ergo natively?\",\n      tag: \"Privacy",
     "why_are_ergo_s_oracle": "Почему Oracle пулы Эрго более безопасны, чем Chainlink?\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "Как подблоки обеспечивают подсекундное подтверждение транзакций?\",\n      tag: «Масштабирование»",
+    "how_do_subblocks_achieve_sub": "Как подблоки дают более быстрый предварительный отклик по транзакциям?\",\n      tag: «Масштабирование»",
     "how_to_create_tokens_and": "Как создавать токены и NFTs на Ergo без смарт-контрактов?\",\n      tag: \"Tokens & NFTs",
     "answer_text_typeof_f_a_string": "Ответ\", текст: тип f.a === \"строка",
     "research_in_development": "Исследования/Разработка",
@@ -2834,7 +2785,6 @@
     "whitepaper_href_https_ergoplatform_org": "Белая книга\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
     "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
     "dev_tutorials_href_docs_developers_tutorials": "Dev Учебники\", href: \"/docs/developers/tutorials",
-    "ergo_technology_category_technology": "Ergo Technology',\n  // категория: 'technology",
     "smart_contracts_run_independently_without": "Умные контракты действуют независимо от глобальных конфликтов состояний.",
     "build_complex_defi_applications_from": "Создавайте сложные приложения DeFi из простых и повторно используемых компонентов.",
     "bitcoin_level_security": "Безопасность Bitcoin-уровня",
@@ -2859,8 +2809,8 @@
     "cryptographic_security": "Криптографическая безопасность",
     "mathematical_proofs_ensure_full_node": "Математические доказательства обеспечивают полную безопасность узлов для легких клиентов.",
     "subblocks_in_development": "Подблоки (В разработке)",
-    "sub_second_confirmations": "Подвторое подтверждение",
-    "near_instant_transaction_finality_for": "Неограниченность мгновенных транзакций для улучшения работы с пользователями.",
+    "sub_second_confirmations": "Быстрый предварительный отклик",
+    "near_instant_transaction_finality_for": "Почти мгновенный сигнал о включении транзакции для лучшего UX.",
     "works_with_existing_infrastructure_no": "Работает с существующей инфраструктурой - мостов и сидекоров не требуется.",
     "create_and_trade_tokens_and": "Создавайте и торгуйте токенами и НПТ непосредственно на уровне протокола. Не нужны умные контракты - простые, безопасные и экономичные местные активы.",
     "issue_tokens_stablecoins_or_nfts": "Выпускать токены или NFT-коды в одной транзакции.",
@@ -2886,35 +2836,25 @@
     "dive_deeper_into_the_docs": "Погрузитесь в документацию или начинайте строить самые передовые блокчейны UTXO.",
     "discover_ergo_s_advanced_blockchain": "Откройте для себя передовую технологию блокчейна Ergo: модель eUTXO для параллельных смарт-контрактов, язык программирования ErgoScript, протоколы Sigma для нулевых знаний и ASIC-стойкая добыча автоликоса.",
     "ergoscript_smart_contracts_sigma_protocols": "Smart contracts', 'Sigma protocolykos mining', 'blockchain technology', 'Smart contract programming', 'NIPoPoWs', 'аренда хранилища', 'доказательство работы', 'DeFi инфраструктура",
-    "ergo_technology_stack_building_the": "Стек технологий Ergo - Создание будущего',\n    описание: 'Advanced blockchain technology: eUTXO, ErgoScript, функции конфиденциальности и устойчивый PoW. ,\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
     "ergo_technology_overview": "Обзор технологии Ergo",
     "ergo_technology_next_generation_blockchain": "Технология Ergo - следующее поколение блокчейна",
     "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain. rg/technology#article', Заголовки\n    : 'Стекла технологии Ergo Blockch',\n    описание: 'Полный обзор технологических инноваций Ergo\\'s включая eUTXO, ErgoScript и протоколы Sigma',\n    datePublished:",
-    "organization_name_ergo_platform_url": "Организация',\n      имя: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
     "organization_name_ergo_platform": "Организация\",\n      имя: 'Платформа Ergo",
-    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
     "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
     "thing_name_eutxo_model_description": "Вещи, имя: 'eUTXO модель', описание: 'Расширенная UTXO модель, позволяющая параллельное выполнение",
     "thing_name_ergoscript_description_secure": "Вещи, имя: 'ErgoScript', описание: 'Безопасный, декларативный язык для программируемых денег",
-    "thing_name_sigma_protocols_description": "Вещи, имя: 'Sigma Protocols', description: 'Native zero knowledge proofs and privacy features",
     "thing_name_autolykos_description_memory": "Вещи, имя: \"Автоликос\", описание: \"Алгоритм работы в памяти\"",
     "thing_name_storage_rent_description": "Вещи, имя: 'Аренда хранения', описание: 'Устойчивое управление состоянием блокчейна",
     "thing_name_nipopows_description_non": "Вещи, имя: 'NIPoWs', описание: 'Неинтерактивные проверки проверки работоспособности",
     "answer_text_eutxo_splits_the": "Ответ',\n          текст: 'eUTXO разделяет состояние блокчейна на отдельные ящики (выходы), возможность параллельных смарт-контрактов без глобального состояния и уменьшения рисков повторного доступа. DApps становится компостильным: сложная логика может быть построена из простых выводов.",
     "question_name_what_is_ergoscript": "Вопрос',\n        имя: 'Что такое ErgoScript и почему он защищен?",
     "answer_text_ergoscript_is_ergo": "Ответ\",\n          текст: 'ErgoScript Ergo\\",
-    "question_name_why_is_autolykos": "Вопрос',\n        name: 'Почему Autolykos считается децентрализованным и энергоэффективным?",
     "answer_text_autolykos_is_memory": "Ответ\",\n          текст: 'Автоликос твердый памятью и устойчивый к воздействию ASIC, что делает его справедливым для обычных майнеров. Он вознаграждает добычу соло и уменьшает зависимость пула, обеспечивая безопасность сети при умеренном потреблении энергии.",
-    "question_name_what_is_storage": "Вопрос',\n        name: 'Что такое арендная плата за хранение и почему это важно?",
     "answer_text": "Ответ',\n          text:",
-    "question_name_what_privacy_and": "Вопрос',\n        name: 'Какие функции конфиденциальности и мультиподписи встроены?",
     "question_name_what_do_nipopows_enable": "Вопрос',\n        имя: 'Что включить NIPoW'?",
     "answer_text_nipopows_create_tiny": "Ответ\",\n          текст: 'NIPoWs создают крошечные блокчейны доказательств, которые позволяют легким клиентам, мгновенной мобильной синхронизации и бесконтрольным перекрестным мостам без полных узлов.",
-    "question_name_what_are_subblocks_and_why_use_them": "Вопрос',\n        name: 'Что такое подблоки и зачем их использовать?",
-    "question_name_can_i_issue": "Вопрос',\n        name: 'Можно ли выпускать токены и NFT без смарт-контракта?",
     "home_item_https_ergoblockchain_org": "Главная',\n        item: 'https://ergoblockchain.org",
     "technology_item_https_ergoblockchain_org": "Технологии',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_technology_stack_summary_ergo": "Технологический стек Ergo',\n    summary: 'Ergo использует модель eUTXO для параллельного выполнения, ErgoScript для безопасных контрактов и Sigma-протоколы для конфиденциальности',\n    url: 'https://ergoblockchain.org/technology",
     "ergo_blockchain_technology_eutxo_smart": "Технологии Ergo Blockchain | eUTXO Smart Contracts & Sigma Protocols",
     "ergo_technology_stack_building_the_future": "Стек технологий Эрго - Создание будущего",
     "advanced_blockchain_technology_eutxo_ergoscript": "Расширенная технология блокчейна: eUTXO, ErgoScript, функции конфиденциальности и устойчивый PoW.",
@@ -5208,13 +5148,13 @@
     },
     "subblocks": {
       "title": "Подблоки",
-      "description": "Решение масштабирования L1, обеспечивающее подтверждения за доли секунды при сохранении полной безопасности",
-      "shortDescription": "Подтверждения за доли секунды на L1",
-      "keywords": "подблоки,масштабирование,быстрые подтверждения,первый уровень,пропускная способность",
+      "description": "Работа по масштабированию L1 для более быстрого предварительного отклика по транзакциям при сохранении безопасности ordering-блоков",
+      "shortDescription": "Более быстрый предварительный отклик на L1",
+      "keywords": "подблоки,масштабирование,быстрый предварительный отклик,первый уровень,пропускная способность",
       "details": [
         {
-          "title": "Подтверждения < 1 сек",
-          "description": "Почти мгновенная обратная связь по транзакциям для лучшего UX"
+          "title": "Быстрый предварительный отклик",
+          "description": "Почти мгновенный сигнал о включении транзакции для лучшего UX"
         },
         {
           "title": "Безопасность L1",

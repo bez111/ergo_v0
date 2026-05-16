@@ -46,7 +46,7 @@ export default function BoxRegistersPage() {
             <ol className="list-decimal list-inside space-y-2 text-gray-300">
               <li>The value in NanoErgs (1 Erg = 1000000000 NanoErgs).</li>
               <li>The protection <Link href="/docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">script</Link> (similar to Bitcoin's <code className="bg-neutral-700 px-2 py-1 rounded">scriptPubKey</code>) or "<Link href="/docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">smart contract</Link>", which secures the box's expenditure.</li>
-              <li>Any additional assets or <Link href="/docs/ecosystem/Standards/eip4" className="text-blue-400 hover:text-blue-300 underline">tokens</Link> contained within the box.</li>
+              <li>Any additional assets or <Link href="/docs/developers/data-model-apis/resources/standards" className="text-blue-400 hover:text-blue-300 underline">tokens</Link> contained within the box.</li>
               <li>Details about the box's creation, including the <code className="bg-neutral-700 px-2 py-1 rounded">txId</code> (the ID of the <Link href="/docs/developers/data-model-apis" className="text-blue-400 hover:text-blue-300 underline">transaction</Link> that created the box) and an <Link href="/docs/developers/data-model-apis" className="text-blue-400 hover:text-blue-300 underline">output index</Link>. This information also includes a <code className="bg-neutral-700 px-2 py-1 rounded">maxCreation</code> height parameter set by the box creator (note: this is not the actual creation height; it aids in the creation of "payment channels").</li>
             </ol>
           </div>
@@ -78,7 +78,7 @@ export default function BoxRegistersPage() {
                 </tr>
                 <tr>
                   <td className="border border-neutral-700 px-4 py-3">R2</td>
-                  <td className="border border-neutral-700 px-4 py-3">Assets (<Link href="/docs/ecosystem/Standards/eip4" className="text-blue-400 hover:text-blue-300 underline">Tokens</Link>)</td>
+                  <td className="border border-neutral-700 px-4 py-3">Assets (<Link href="/docs/developers/data-model-apis/resources/standards" className="text-blue-400 hover:text-blue-300 underline">Tokens</Link>)</td>
                   <td className="border border-neutral-700 px-4 py-3"><code className="bg-neutral-700 px-2 py-1 rounded">tokens</code></td>
                 </tr>
                 <tr className="bg-neutral-800/30">
@@ -129,7 +129,7 @@ export default function BoxRegistersPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3 text-green-400">Register R2</h3>
               <p className="text-gray-300">
-                Register R2 contains a collection of <Link href="/docs/ecosystem/Standards/eip4" className="text-blue-400 hover:text-blue-300 underline">tokens</Link> stored in the box. Each token is identified by two elements: a unique token id (<code className="bg-neutral-700 px-2 py-1 rounded">Coll[Byte]</code>) and the quantity (<code className="bg-neutral-700 px-2 py-1 rounded">Long</code>) of the specific token. Use <code className="bg-neutral-700 px-2 py-1 rounded">Box.tokens</code> to access this collection (<code className="bg-neutral-700 px-2 py-1 rounded">Coll[(Coll[Byte], Long)]</code>).
+                Register R2 contains a collection of <Link href="/docs/developers/data-model-apis/resources/standards" className="text-blue-400 hover:text-blue-300 underline">tokens</Link> stored in the box. Each token is identified by two elements: a unique token id (<code className="bg-neutral-700 px-2 py-1 rounded">Coll[Byte]</code>) and the quantity (<code className="bg-neutral-700 px-2 py-1 rounded">Long</code>) of the specific token. Use <code className="bg-neutral-700 px-2 py-1 rounded">Box.tokens</code> to access this collection (<code className="bg-neutral-700 px-2 py-1 rounded">Coll[(Coll[Byte], Long)]</code>).
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function BoxRegistersPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3 text-green-400">Optional Registers R4-R9</h3>
               <p className="text-gray-300 mb-4">
-                These registers can contain any data defined when the box first originates from a transaction. The data could be of any common type found in <Link href="/docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">ErgoScript</Link>, along with more complex types built from Pairs and Collections. These registers may also contain complex types such as <code className="bg-neutral-700 px-2 py-1 rounded">Box</code>, <Link href="/docs/developers/cryptographic-primitives/sigma-protocols" className="text-blue-400 hover:text-blue-300 underline"><code className="bg-neutral-700 px-2 py-1 rounded">SigmaProp</code></Link>, <code className="bg-neutral-700 px-2 py-1 rounded">GroupElement</code>, and <Link href="/docs/developers/cryptographic-primitives/avl" className="text-blue-400 hover:text-blue-300 underline"><code className="bg-neutral-700 px-2 py-1 rounded">AVLTree</code></Link>.
+                These registers can contain any data defined when the box first originates from a transaction. The data could be of any common type found in <Link href="/docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">ErgoScript</Link>, along with more complex types built from Pairs and Collections. These registers may also contain complex types such as <code className="bg-neutral-700 px-2 py-1 rounded">Box</code>, <Link href="/technology/privacy-features" className="text-blue-400 hover:text-blue-300 underline"><code className="bg-neutral-700 px-2 py-1 rounded">SigmaProp</code></Link>, <code className="bg-neutral-700 px-2 py-1 rounded">GroupElement</code>, and <Link href="/docs/developers/cryptographic-primitives/avl" className="text-blue-400 hover:text-blue-300 underline"><code className="bg-neutral-700 px-2 py-1 rounded">AVLTree</code></Link>.
               </p>
               
               <p className="text-gray-300 mb-3">The optional registers can hold any of the following data types:</p>

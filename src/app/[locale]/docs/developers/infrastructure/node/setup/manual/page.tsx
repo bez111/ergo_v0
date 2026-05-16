@@ -102,7 +102,7 @@ scorex {
           
           <p className="text-gray-400 mt-2">
             For more configuration options, see the{" "}
-            <Link href="/docs/developers/infrastructure/node/setup/configuration" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/infrastructure/node/configuration" className="text-cyan-400 hover:underline">
               Configuration Files documentation
             </Link>.
           </p>
@@ -131,7 +131,7 @@ java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf`}
           <ul className="list-disc list-inside ml-6 mt-2 space-y-2">
             <li>The node will start up and begin synchronizing with the Ergo network. This process downloads and validates the blockchain history.</li>
             <li><strong>Synchronization can take a significant amount of time</strong> (hours to days) depending on your hardware, network speed, and the chosen{" "}
-              <Link href="/docs/developers/infrastructure/node/setup/modes" className="text-cyan-400 hover:underline">
+              <Link href="/docs/developers/infrastructure/node/modes" className="text-cyan-400 hover:underline">
                 Node Mode
               </Link>. Be patient.
             </li>
@@ -162,12 +162,12 @@ java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf`}
           </Link>
         </li>
         <li>
-          <Link href="/docs/developers/infrastructure/node/setup/configuration" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/configuration" className="text-cyan-400 hover:underline">
             Node Configuration Files
           </Link>
         </li>
         <li>
-          <Link href="/docs/developers/infrastructure/node/setup/modes" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/modes" className="text-cyan-400 hover:underline">
             Node Modes
           </Link>
         </li>

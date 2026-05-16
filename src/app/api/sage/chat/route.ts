@@ -4,6 +4,7 @@ import { checkRateLimit, clientKey } from "@/lib/sage/rate-limit"
 import { decidePremium } from "@/lib/sage/payments/gate"
 import {
   hashQuestionForToken,
+  isPaymentTokenKeyConfigured,
   verifyPaymentToken,
 } from "@/lib/sage/payments/token"
 
@@ -160,7 +161,12 @@ export async function POST(req: Request) {
   // Sage wallet is actually configured on this deployment; otherwise
   // gracefully serve the free tier so the chat keeps working before
   // testnet env vars are provisioned.
-  if (!premium && process.env.SAGE_WALLET_ADDRESS && process.env.SAGE_RESERVE_BOX_ID) {
+  if (
+    !premium &&
+    process.env.SAGE_WALLET_ADDRESS &&
+    process.env.SAGE_RESERVE_BOX_ID &&
+    isPaymentTokenKeyConfigured()
+  ) {
     const decision = decidePremium(latestUser, messages)
     if (decision.isPremium) {
       return new Response(

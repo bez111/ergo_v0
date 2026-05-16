@@ -31,6 +31,7 @@ export interface BuildQuoteOpts {
 export async function buildSageQuote(opts: BuildQuoteOpts): Promise<SageQuote> {
   const cfg = getSageWalletConfig()
   const taskHash = await computeTaskHashAsync(canonicalize(opts.question))
+  const issuedAt = nowIsoUtc()
 
   const expiresAt = new Date(Date.now() + QUOTE_TTL_SECONDS * 1000)
     .toISOString()
@@ -40,6 +41,7 @@ export async function buildSageQuote(opts: BuildQuoteOpts): Promise<SageQuote> {
     quoteId: opts.quoteId ?? generateQuoteId(opts.question),
     taskHash,
     price: QUOTE_PRICE_ERG,
+    issuedAt,
     expiresAt,
     receiverAddress: cfg.address,
     reserveBoxId: cfg.reserveBoxId,
@@ -56,12 +58,12 @@ export function quoteToAgreement(quote: SageQuote, question: string): AccordAgre
     type: "accord.agreement.v0",
     version: "v0",
     agreement_id: `acc_sage_${quote.quoteId}`,
-    created_at: nowIsoUtc(),
+    created_at: quote.issuedAt ?? nowIsoUtc(),
     buyer: { id: "agent://sage-anonymous-buyer" },
     seller: { id: `agent://ergo-testnet/${quote.receiverAddress}` },
     task: {
       kind: "sage_premium_query",
-      input_ref: question.slice(0, 200),
+      input_ref: question,
       description: "Premium answer from Sage with code-grade depth and Sonnet 4.6 reasoning.",
       output_schema: "sage.premium_answer.v0",
     },

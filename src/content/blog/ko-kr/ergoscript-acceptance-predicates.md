@@ -1,6 +1,6 @@
 ---
 title: "ErgoScript 수락 술어: AI 에이전트 결제를 위한 온체인 작업 검증"
-slug: "/blog/ergoscript-acceptance-predicates-agent-payments"
+slug: "/blog/ergoscript-acceptance-predicates"
 seo_title: "ErgoScript 수락 술어: AI 에이전트 작업 검증을 위한 온체인 조건"
 meta_description: "ErgoScript 수락 술어가 작업 완료 조건을 결제 UTxO 내에 인코딩하여 AI 에이전트가 더 적은 오프체인 신뢰 가정으로 작업을 검증하는 방법을 배웁니다."
 excerpt: "수락 술어는 결제를 조건부 환불 가능한 작업 계약으로 변환합니다: 수신자는 합의된 작업 조건이 충족될 때만 환불할 수 있습니다."
@@ -270,7 +270,7 @@ Ethereum은 조건부 결제 계약을 구현할 수 있지만, 설계는 일반
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates",
   "keywords": ["ErgoScript", "acceptance predicates", "AI agent payments", "eUTXO", "work verification"]
 }
 ```

@@ -56,7 +56,7 @@
         }
       },
       "community": {
-        "statusLabel": "Planned — date TBD",
+        "statusLabel": "Planned reference flow",
         "title": "Community reserve + tracker",
         "tagline": "A local marketplace. A compute co-op. An agent network.",
         "description": "A group of participants pool ERG into a shared reserve. Community notes are issued proportionally. Acceptance predicates define membership rules. Members can redeem notes for ERG at any time from the reserve.",

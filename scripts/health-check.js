@@ -27,7 +27,7 @@ const CRITICAL_PATHS = [
   { path: '/api/health', name: 'Health API', expectedStatus: 200 },
   // Проверка редиректов
   { path: '/Docs', name: 'Old Docs URL', expectedStatus: 404 },
-  { path: '/use/use-cases/privacy', name: 'Old Use Case URL', expectedStatus: 301 },
+  { path: '/use/use-cases/privacy', name: 'Old Use Case URL', expectedStatus: 308 },
 ];
 
 // Цвета для консоли

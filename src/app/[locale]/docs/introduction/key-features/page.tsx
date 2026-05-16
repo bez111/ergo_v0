@@ -86,7 +86,7 @@ export default function KeyFeaturesPage() {
 
   const breadcrumbSchema = createBreadcrumbSchema([
     { name: "Documentation", href: "/docs" },
-    { name: "Introduction", href: "/docs/introduction" },
+    { name: "Introduction", href: "/docs" },
     { name: "Key Features", href: "/docs/introduction/key-features" },
   ])
 

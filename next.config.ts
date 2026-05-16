@@ -94,7 +94,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.ergoplatform.com https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://vitals.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://api.ergoplatform.com https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://vitals.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
           },
           {
             key: 'Cache-Control',
@@ -175,6 +175,11 @@ const nextConfig: NextConfig = {
 
   // Webpack оптимизации
   webpack: (config, { dev, isServer }) => {
+    config.experiments = {
+      ...config.experiments,
+      asyncWebAssembly: true,
+    };
+
     // Оптимизация для продакшена
     if (!dev && !isServer) {
       config.optimization = {
@@ -426,12 +431,12 @@ const nextConfig: NextConfig = {
 
       // Old /docs/introduction/* legacy
       { source: '/docs/introduction', destination: '/docs', permanent: true },
-      { source: '/docs/introduction/atomic-swaps', destination: '/technology', permanent: true },
+      { source: '/docs/introduction/atomic-swaps', destination: '/docs/introduction/eutxo', permanent: true },
       { source: '/docs/introduction/ergoscript', destination: '/technology/ergoscript', permanent: true },
-      { source: '/docs/introduction/foundation/treasury', destination: '/docs/introduction', permanent: true },
+      { source: '/docs/introduction/foundation/treasury', destination: '/docs/introduction/ergo-foundation', permanent: true },
       { source: '/docs/introduction/marketing', destination: '/start/community/marketing', permanent: true },
       { source: '/docs/introduction/privacy-features', destination: '/technology/privacy-features', permanent: true },
-      { source: '/docs/introduction/scaling', destination: '/technology', permanent: true },
+      { source: '/docs/introduction/scaling', destination: '/docs/introduction/roadmap/scaling-roadmap', permanent: true },
 
       // /community/* → /start/community
       { source: '/community/:path*', destination: '/start/community', permanent: true },

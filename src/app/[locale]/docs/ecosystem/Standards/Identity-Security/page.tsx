@@ -26,7 +26,7 @@ export default function IdentitySecurityPage() {
       <h2 className="text-2xl font-bold text-cyan-300 mb-4 mt-8">Resources</h2>
       <ul className="list-disc pl-6 text-gray-300 space-y-2 mb-8">
         <li><a href="./KYA" className="text-cyan-400 underline">KYA Standard</a></li>
-        <li><a href="#" className="text-cyan-400 underline">Security Audit Checklist</a></li>
+        <li><a href="https://owasp.org/www-project-application-security-verification-standard/" className="text-cyan-400 underline">Security Audit Checklist</a></li>
         <li><a href="./Development" className="text-cyan-400 underline">Development Standards & Best Practices</a></li>
       </ul>
     </>

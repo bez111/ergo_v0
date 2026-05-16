@@ -1,6 +1,6 @@
 ---
 title: "ErgoScript 受理谓词：用于AI代理支付的链上工作验证"
-slug: "/blog/ergoscript-acceptance-predicates-agent-payments"
+slug: "/blog/ergoscript-acceptance-predicates"
 seo_title: "ErgoScript 受理谓词：用于AI代理任务验证的链上工作验证"
 meta_description: "了解如何在支付 UTxO 中使用 ErgoScript 受理谓词编码任务完成条件，使 AI 代理能够通过更少的链下信任假设来验证工作。"
 excerpt: "受理谓词将支付转变为有条件可赎回的工作合约：接收方只有在满足约定的任务条件时才能赎回。"
@@ -270,7 +270,7 @@ Ethereum 可以实现条件支付合约，但设计通常是应用程序级别�
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates",
   "keywords": ["ErgoScript", "acceptance predicates", "AI agent payments", "eUTXO", "work verification"]
 }
 ```

@@ -17,7 +17,6 @@
  */
 
 import type { Metadata } from "next"
-import Image from "next/image"
 import { Link } from "@/i18n/navigation"
 import {
   ArrowUpRight,

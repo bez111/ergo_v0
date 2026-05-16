@@ -307,7 +307,7 @@ export const topicClusters = {
     pages: [
       '/use/privacy',
       '/topics/privacy',
-      '/ecosystem/projects/ergomixer'
+      '/ecosystem/ergomixer'
     ]
   },
   
@@ -317,7 +317,7 @@ export const topicClusters = {
       '/learn/ergoscript',
       '/technology/oracle-pools',
       '/use/get-erg',
-      '/ecosystem/projects/spectrum'
+      '/ecosystem/spectrum-finance'
     ]
   },
   
@@ -334,7 +334,7 @@ export const topicClusters = {
     hub: '/use/nfts',
     pages: [
       '/technology/native-tokens',
-      '/ecosystem/projects/auction-house',
+      '/docs/ecosystem/financial/dex/trade-house',
       '/patterns'
     ]
   }

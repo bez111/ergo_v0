@@ -45,7 +45,7 @@
       ";color-scheme:dark";
     iframe.setAttribute("sandbox", "allow-scripts allow-popups allow-popups-to-escape-sandbox");
     mount.appendChild(iframe);
-  } catch (e) {
+  } catch {
     // Fail closed — embed is non-essential.
   }
 })();

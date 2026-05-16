@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     // Utility scripts (CommonJS, not part of the app)
     "scripts/**",
     "PR-DIFFS/**",
+    "public/monaco/**",
   ]),
   // Custom rule overrides
   {

@@ -15,7 +15,7 @@ export default function BlockTransactionsPage() {
 
       <div className="text-gray-300 space-y-6">
         <p className="text-lg">
-          The Transactions section of an Ergo <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">block</Link> is the heart of the blockchain's state changes. It contains a list of all the <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">transactions</Link> that are included and validated within that specific block. These transactions define how <Link href="/docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">tokens</Link> and assets are transferred and how the overall state of the Ergo blockchain evolves.
+          The Transactions section of an Ergo <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">block</Link> is the heart of the blockchain's state changes. It contains a list of all the <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">transactions</Link> that are included and validated within that specific block. These transactions define how <Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">tokens</Link> and assets are transferred and how the overall state of the Ergo blockchain evolves.
         </p>
 
         <div className="mb-8">
@@ -37,9 +37,9 @@ export default function BlockTransactionsPage() {
         <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4 text-orange-400">Function</h2>
           <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
-            <li><b>Value Transfer:</b> Ergo transactions enable users to transfer ERG (Ergo's native token) and other custom <Link href="/docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">tokens</Link>/assets to other users on the network.</li>
+            <li><b>Value Transfer:</b> Ergo transactions enable users to transfer ERG (Ergo's native token) and other custom <Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">tokens</Link>/assets to other users on the network.</li>
             <li><b>State Transition:</b> Each transaction consumes existing <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">unspent boxes</Link> (which hold tokens and assets) and creates new boxes with potentially modified values and ownership. This process updates the state of the <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO set</Link>.</li>
-            <li><b><Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">Smart Contract</Link> Execution:</b> Transactions can trigger the execution of <Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">scripts</Link> within boxes, allowing for complex logic and decentralized applications to be implemented on the Ergo blockchain.</li>
+            <li><b><Link href="/technology/ergoscript" className="text-orange-400 hover:underline">Smart Contract</Link> Execution:</b> Transactions can trigger the execution of <Link href="/technology/ergoscript" className="text-orange-400 hover:underline">scripts</Link> within boxes, allowing for complex logic and decentralized applications to be implemented on the Ergo blockchain.</li>
           </ul>
         </div>
 
@@ -146,7 +146,7 @@ export default function BlockTransactionsPage() {
                 <h3 className="font-semibold text-purple-300">Scripts</h3>
               </div>
               <p className="text-gray-300 text-sm">
-                Programs written in <Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript</Link> (a powerful scripting language) that define the conditions for spending boxes.
+                Programs written in <Link href="/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript</Link> (a powerful scripting language) that define the conditions for spending boxes.
               </p>
             </div>
 

@@ -1,6 +1,6 @@
 ---
 title: "ErgoScript Acceptance Predicates: On-Chain Work Verification for AI Agent Payments"
-slug: "/blog/ergoscript-acceptance-predicates-agent-payments"
+slug: "/blog/ergoscript-acceptance-predicates"
 seo_title: "ErgoScript Acceptance Predicates: On-Chain Task Verification for AI Agent Payments"
 meta_description: "Learn how ErgoScript acceptance predicates encode task-completion conditions inside payment UTxOs, enabling AI agents to verify work with fewer off-chain trust assumptions."
 excerpt: "Acceptance predicates turn a payment into a conditionally redeemable work contract: the receiver can redeem only when the agreed task condition is satisfied."
@@ -270,7 +270,7 @@ The simplest useful predicate checks a task hash and a deadline: redeem only if 
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates",
   "keywords": ["ErgoScript", "acceptance predicates", "AI agent payments", "eUTXO", "work verification"]
 }
 ```

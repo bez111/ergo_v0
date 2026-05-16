@@ -387,7 +387,7 @@ export default function OffTheGridPage() {
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-blue-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Documentation</a>
+                <a href="https://github.com/Telefragged/off-the-grid/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Documentation</a>
               </li>
             </ul>
           </div>

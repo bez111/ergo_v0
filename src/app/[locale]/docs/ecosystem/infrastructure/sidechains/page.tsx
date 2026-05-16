@@ -841,7 +841,7 @@ Each ordering block is valid as an input block, but not vice versa</pre>
                   </section>
                   <section>
                     <h4 className="text-base font-bold mb-2 text-yellow-300">Community Discussion</h4>
-                    <p>See previous <a href="#" className="text-cyan-400 underline">community discussion - Aug 2022</a></p>
+                    <p>See previous <a href="https://www.ergoforum.org/" className="text-cyan-400 underline">community discussion - Aug 2022</a></p>
                   </section>
                 </div>
               </details>

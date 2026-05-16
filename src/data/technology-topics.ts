@@ -107,7 +107,7 @@ export const technologyTopics: TechnologyTopic[] = [
     relatedTopics: ["ergoscript", "native-tokens"],
     relatedPatterns: ["ergo-fungible-token-minting-eip4", "ergo-nft-minting-guide"],
     relatedGlossary: ["eutxo", "utxo", "box"],
-    docsUrl: "/docs/protocol/eutxo",
+    docsUrl: "/technology/eutxo-model",
     githubUrl: "https://github.com/ergoplatform/ergo",
   },
   {
@@ -147,7 +147,7 @@ export const technologyTopics: TechnologyTopic[] = [
     keywords: ["autolykos", "Autolykos", "proof of work", "Proof-of-Work", "pow", "mining", "asic resistant", "ASIC resistance", "gpu mining", "GPU mining Ergo", "sustainable pow", "decentralization"],
     relatedTopics: ["storage-rent", "adaptive-emission"],
     relatedGlossary: ["autolykos", "proof-of-work", "mining"],
-    docsUrl: "/docs/mining",
+    docsUrl: "/miners",
     githubUrl: "https://github.com/ergoplatform/ergo",
     whitepaperSection: "autolykos",
   },
@@ -280,7 +280,7 @@ export const technologyTopics: TechnologyTopic[] = [
     keywords: ["velvet forks", "soft forks", "protocol upgrades", "backward compatibility"],
     relatedTopics: ["nipopows", "subblocks"],
     relatedGlossary: ["velvet-fork", "soft-fork", "hard-fork"],
-    docsUrl: "/docs/protocol/velvet-forks",
+    docsUrl: "/technology/velvet-forks",
   },
   {
     slug: "adaptive-emission",

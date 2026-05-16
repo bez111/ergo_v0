@@ -18,7 +18,7 @@ export default function SigmaRustPage() {
           Back
         </Link>
         <Link
-          href="/docs/developers/tooling/pathways/sigma-rust/constrained"
+          href="/docs/developers/tooling/sigma-rust/constrained"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           Constrained Environments

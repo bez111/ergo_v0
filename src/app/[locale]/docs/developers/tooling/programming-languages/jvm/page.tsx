@@ -71,7 +71,7 @@ export default function JVMPage() {
       <h2 className="text-xl font-bold text-cyan-400 mb-2">AppKit</h2>
       <div className="mb-6">
         <Link
-          href="/docs/developers/tooling/pathways/appkit"
+          href="/docs/developers/tooling/frameworks/appkit"
           className="group bg-neutral-900/50 border border-cyan-700 rounded-xl p-5 flex flex-col items-start hover:bg-cyan-950 transition-colors hover:scale-[1.03] focus:outline-none"
         >
           <h3 className="text-lg font-bold text-cyan-300 mb-1">AppKit</h3>

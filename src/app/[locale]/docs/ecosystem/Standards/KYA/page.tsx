@@ -74,7 +74,7 @@ export default function KYAPage() {
       <ul className="list-disc pl-6 text-gray-300 space-y-1 mb-8">
         <li><a href="https://www.ergoforum.org/t/know-your-assumptions/4198" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">Original KYA Post</a></li>
         <li><a href="https://ergoplatform.org/en/blog/The-Importance-of-Know-Your-Assumptions/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">The Importance of KYA</a></li>
-        <li><a href="https://docs.ergoplatform.com/contribute/standards/kya/#research-paper" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">KYA Research Paper</a></li>
+        <li><a href="https://docs.ergoplatform.com/docs/contribute/standards/kya/#research-paper" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">KYA Research Paper</a></li>
         <li><a href="https://github.com/kushti/kya/blob/master/kya.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">Kushti’s KYA Paper</a></li>
         <li><a href="https://sigmafi.app/#/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">SigmaFi dApp</a></li>
       </ul>

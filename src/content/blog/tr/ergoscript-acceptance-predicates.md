@@ -1,6 +1,6 @@
 ---
 title: "ErgoScript Kabul Yüklemleri: AI Aracı Ödemeleri için Zincir-Üstü İş Doğrulaması"
-slug: "/blog/ergoscript-acceptance-predicates-agent-payments"
+slug: "/blog/ergoscript-acceptance-predicates"
 seo_title: "ErgoScript Kabul Yüklemleri: AI Aracı Görevleri için Zincir-Üstü Doğrulama"
 meta_description: "ErgoScript kabul yüklemlerinin ödeme UTxO'larına görev tamamlama koşullarını nasıl kodladığını ve AI aracılarının daha az zincir-dışı güven varsayımıyla işi nasıl doğrulayabileceğini öğrenin."
 excerpt: "Kabul yüklemleri bir ödemeyi koşullu kullanılabilir bir iş sözleşmesine dönüştürür: alıcı yalnızca üzerinde anlaşılan görev koşulu karşılandığında kullanabilir."
@@ -270,7 +270,7 @@ En basit yararlı yüklem, görev hash'ini ve son tarihi kontrol eder: gönderil
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates",
   "keywords": ["ErgoScript", "acceptance predicates", "AI agent payments", "eUTXO", "work verification"]
 }
 ```

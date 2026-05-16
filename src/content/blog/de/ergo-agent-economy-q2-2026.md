@@ -1,6 +1,6 @@
 ---
 title: "Accord Protocol Q2 2026 Update: Was in Ergos Agent Economy Stack geleistet wurde"
-slug: "/blog/accord-protocol-q2-2026-update"
+slug: "/blog/ergo-agent-economy-q2-2026"
 seo_title: "Accord Protocol Q2 2026: AI Agent Payments SDK, MCP Server und Ergo Testnet Demos"
 meta_description: "Accord Protocol Q2 2026 Update: AI Agent Payment SDKs, Ergo Notes, MCP Server, LangChain/OpenAI/CrewAI/AutoGen Adapter, Testnet Demos und Audit-gesteuerte Mainnet Roadmap."
 excerpt: "Zwei Monate nach der ersten Ergo Agent-Payment SDK Veröffentlichung liefert das Accord Protocol jetzt eine Testnet-zentrierte Agreement-Schicht, volständiger Note-Lebenszyklus, Framework-Adapter, MCP-Tools und zehn funktionierende Beispiele."
@@ -208,7 +208,7 @@ Eine gehostete Testnet-API die HTTP 402 zurückgibt, einen Accord/402 Payment Fl
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/accord-protocol-q2-2026-update",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergo-agent-economy-q2-2026",
   "keywords": ["Accord Protocol", "AI agent payments", "Ergo", "MCP", "x402", "testnet"]
 }
 ```

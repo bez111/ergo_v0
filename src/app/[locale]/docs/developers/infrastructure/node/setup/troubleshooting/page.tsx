@@ -202,7 +202,7 @@ rm -rf .ergo/history`}</pre>
             <h4 className="font-bold text-orange-400 mb-2">Correct Address/Balance Not Displayed</h4>
             <ol className="list-decimal list-inside text-gray-300 text-sm space-y-1">
               <li>Ensure the wallet is synchronized.</li>
-              <li>Derive new addresses as per <a href="/docs/developers/infrastructure/node/setup/swagger" className="text-cyan-400 hover:underline">swagger</a> instructions.</li>
+              <li>Derive new addresses as per <a href="/docs/developers/infrastructure/node/configuration/swagger-ui" className="text-cyan-400 hover:underline">swagger</a> instructions.</li>
               <li>Derive additional addresses during sync.</li>
               <li>If issues persist, restore the wallet on a different client.</li>
             </ol>

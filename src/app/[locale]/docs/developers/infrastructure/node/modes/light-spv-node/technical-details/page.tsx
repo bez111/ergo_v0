@@ -246,13 +246,13 @@ export default function LightSpvTechnicalDetailsPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="/docs/developers/infrastructure/node/protocol/nipopows" 
+                  <a href="/technology/nipopows" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     NIPoPoWs Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="/docs/developers/infrastructure/node/protocol/spv" 
+                  <a href="/docs/developers/infrastructure/node/modes/light-spv-node" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     SPV Protocol Documentation
                   </a>

@@ -124,7 +124,7 @@ function OverviewContent() {
           {/* Mark Glasgow */}
           <div className="bg-neutral-900/50 rounded-xl p-5">
             <h4 className="font-bold text-orange-400 text-lg flex items-center gap-2"><User className="w-5 h-5" /> Mark Glasgow</h4>
-            <p className="text-gray-300">Community management, dev education, Technical Director for Disabled Students UK CIC.<br /><span className="text-gray-400 text-sm">EF duties: Community advocacy, documentation. Salaried for editorial/community work.</span></p>
+            <p className="text-gray-300">Community management, dev education, Technical Director for Disabled Students UK CIC.<br /><span className="text-gray-400 text-sm">EF duties: Community advocacy, documentation. Salaried for editorial/start/community work.</span></p>
           </div>
           {/* Alexander Slesarenko */}
           <div className="bg-neutral-900/50 rounded-xl p-5">
@@ -216,7 +216,7 @@ function OverviewContent() {
         <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 rounded-xl p-6">
           <h2 className="text-3xl font-bold mb-3 flex items-center gap-2"><FileText className="w-7 h-7 text-orange-400" /> Spendings & Transparency</h2>
           <p className="text-gray-300 mb-2">
-            Full, regularly updated breakdowns of Foundation expenditure are available in the <a href="/docs/introduction/foundation/treasury" className="text-orange-400 hover:underline">Treasury section</a>.
+            Full, regularly updated breakdowns of Foundation expenditure are covered in this Foundation overview and linked community resources.
           </p>
       </div>
       </section>

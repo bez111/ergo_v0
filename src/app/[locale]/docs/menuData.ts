@@ -155,11 +155,11 @@ export function getLocalizedMenuData(t: (key: string) => string): MenuSection[] 
         },
         {
           title: t('docsMenu.miners.poolMining'),
-          href: "/docs/miners/pool-mining",
+          href: "/docs/miners/mining-guides/pools",
         },
         {
           title: t('docsMenu.miners.soloMining'),
-          href: "/docs/miners/solo-mining",
+          href: "/docs/miners/mining-guides/solo-mining",
         },
         {
           title: t('docsMenu.miners.hardware'),
@@ -167,11 +167,11 @@ export function getLocalizedMenuData(t: (key: string) => string): MenuSection[] 
         },
         {
           title: t('docsMenu.miners.software'),
-          href: "/docs/miners/software",
+          href: "/docs/miners/mining-guides/software",
         },
         {
           title: t('docsMenu.miners.troubleshooting'),
-          href: "/docs/miners/troubleshooting",
+          href: "/docs/miners/resources",
         },
       ],
     },
@@ -320,11 +320,11 @@ export const menuData = [
       },
       {
         title: "Pool Mining",
-        href: "/docs/miners/pool-mining",
+        href: "/docs/miners/mining-guides/pools",
       },
       {
         title: "Solo Mining",
-        href: "/docs/miners/solo-mining",
+        href: "/docs/miners/mining-guides/solo-mining",
       },
       {
         title: "Hardware",
@@ -332,11 +332,11 @@ export const menuData = [
       },
       {
         title: "Software",
-        href: "/docs/miners/software",
+        href: "/docs/miners/mining-guides/software",
       },
       {
         title: "Troubleshooting",
-        href: "/docs/miners/troubleshooting",
+        href: "/docs/miners/resources",
       },
     ],
   },
