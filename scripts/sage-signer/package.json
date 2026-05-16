@@ -6,6 +6,8 @@
   "description": "Local HTTP signer for Sage's Note redemption transactions on Ergo testnet. Lives outside the Next.js app so the signing key never touches Vercel.",
   "scripts": {
     "start": "node signer.mjs",
+    "health": "node health.mjs",
+    "syntax-check": "node --check signer.mjs && node --check bootstrap.mjs && node --check health.mjs",
     "bootstrap": "node bootstrap.mjs",
     "balance": "node bootstrap.mjs --balance",
     "reserve": "node bootstrap.mjs --reserve",

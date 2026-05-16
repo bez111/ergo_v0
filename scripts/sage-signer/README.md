@@ -50,6 +50,31 @@ vercel env add SAGE_SIGNER_URL production
 vercel --prod --yes
 ```
 
+## Health and Readiness
+
+The signer exposes two lightweight ops endpoints:
+
+```bash
+curl -sS http://127.0.0.1:8911/health
+```
+
+`/health` is unauthenticated and returns only process liveness.
+
+```bash
+curl -sS http://127.0.0.1:8911/ready \
+  -H "Authorization: Bearer $SAGE_SIGNER_TOKEN"
+```
+
+`/ready` is authenticated and returns the signer policy summary plus counters. It does not print the mnemonic, private key, token, or whitelisted addresses.
+
+From the signer directory:
+
+```bash
+npm run health
+```
+
+This checks `/health`, and also `/ready` when `SAGE_SIGNER_TOKEN` is present in `.env`.
+
 ## Protocol
 
 `POST /sign` with body `{ "unsignedTx": <EIP-12 unsigned tx> }`.
@@ -57,6 +82,7 @@ Returns `{ "signedTx": <signed tx> }` on success, `{ "error": "..." }` on failur
 
 The signer also enforces a basic policy:
 - Reject txs that spend more than `SAGE_MAX_SINGLE_TX` nanoERG.
+- Reject oversized request bodies using `SAGE_SIGNER_MAX_BODY_BYTES`.
 - Reject txs whose outputs include addresses not in `SAGE_WHITELIST_ADDRS`.
 - Log every signing decision with timestamp + tx hash for audit.
 

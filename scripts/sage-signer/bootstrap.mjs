@@ -170,7 +170,7 @@ async function pollBalance(address) {
 function printEnvOut(address) {
   console.log("Run these on your Vercel project (one at a time, paste value when prompted):")
   console.log("")
-  console.log(`  cd /Users/alexanderbezkrovny/Desktop/ergo8`)
+  console.log(`  cd /Users/alexanderbezkrovny/Desktop/ergo_v0`)
   console.log(`  vercel env add SAGE_WALLET_ADDRESS production`)
   console.log(`  # paste: ${address}`)
   console.log("")
@@ -307,7 +307,7 @@ async function createReserve(key, address) {
   console.log("")
   console.log("Update Vercel:")
   console.log("")
-  console.log(`  cd /Users/alexanderbezkrovny/Desktop/ergo8`)
+  console.log(`  cd /Users/alexanderbezkrovny/Desktop/ergo_v0`)
   console.log(`  vercel env rm SAGE_RESERVE_BOX_ID production --yes`)
   console.log(`  vercel env add SAGE_RESERVE_BOX_ID production`)
   console.log(`  # paste: ${reserveBoxId}`)

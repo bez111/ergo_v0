@@ -36,6 +36,7 @@ SAGE_WALLET_SEED
 SAGE_SIGNER_TOKEN
 SAGE_NETWORK=testnet
 SAGE_MAX_SINGLE_TX_NANOERG=10000000
+SAGE_SIGNER_MAX_BODY_BYTES=262144
 SAGE_WHITELIST_ADDRS=<comma-separated allowed output addresses>
 ```
 
@@ -67,6 +68,20 @@ vercel --prod --yes
 The URL must end with `/sign` when stored in `SAGE_SIGNER_URL`.
 
 ## Health checks
+
+Check local signer liveness/readiness:
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0/scripts/sage-signer
+npm run health
+```
+
+Expected while the signer is running:
+
+```text
+[sage-signer] health OK
+[sage-signer] ready OK
+```
 
 Check premium quote path:
 
@@ -164,4 +179,3 @@ To restore:
 - Keep testnet wallet funded.
 - Rotate public tunnel URL/token if exposed in a shared channel.
 - Do not upgrade public language from "testnet proof" to "production/mainnet ready" until the audit gate is complete.
-
