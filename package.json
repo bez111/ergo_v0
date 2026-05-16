@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/generate-version.js && node scripts/build-sage-index.mjs && node scripts/sync-monaco.mjs && npx next dev",
-    "build": "node scripts/generate-version.js && node scripts/build-icons.mjs && node scripts/build-sage-index.mjs && node scripts/sync-monaco.mjs && npx next build",
+    "build": "node scripts/generate-version.js && node scripts/build-icons.mjs && node scripts/build-sage-index.mjs && node scripts/sync-monaco.mjs && npx next build --webpack",
     "sage:index": "node scripts/build-sage-index.mjs",
     "sage:wallet": "npm --prefix scripts/sage-signer install && npm --prefix scripts/sage-signer run bootstrap",
     "sage:wallet:balance": "npm --prefix scripts/sage-signer install && npm --prefix scripts/sage-signer run balance",
