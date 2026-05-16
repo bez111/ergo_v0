@@ -2,11 +2,11 @@
 title: "Accord Protocol Q2 2026 Update: What Shipped in Ergo’s Agent Economy Stack"
 slug: "/blog/ergo-agent-economy-q2-2026"
 seo_title: "Accord Protocol Q2 2026: AI Agent Payments SDK, MCP Server and Ergo Testnet Demos"
-meta_description: "Accord Protocol Q2 2026 update: AI agent payment SDKs, Ergo Notes, MCP server, LangChain/OpenAI/CrewAI/AutoGen adapters, testnet demos and audit-gated mainnet roadmap."
-excerpt: "Two months after the first Ergo agent-payment SDK release, Accord Protocol now ships a testnet-first agreement layer, full Note lifecycle, framework adapters, MCP tooling and ten working examples."
+meta_description: "Accord Protocol Q2 2026 update: AI agent payment SDKs, Ergo Notes, MCP tooling, Sage's hosted testnet proof, and the audit-gated mainnet roadmap."
+excerpt: "Accord Protocol now ships a testnet-first agreement layer, full Note lifecycle, framework adapters and MCP tooling, with Sage providing the first hosted testnet proof while full receipt completeness remains next."
 author: "Ergo Developer Relations"
 date_published: "2026-05-06"
-date_modified: "2026-05-08"
+date_modified: "2026-05-16"
 status: "Testnet beta. Mainnet usage of Accord, ChainCash/Basis reference contracts and agent-payment SDK flows remains gated by signed audit manifests."
 tags: ["Accord Protocol", "Ergo", "AI agent payments", "MCP", "x402", "developer update"]
 target_keywords: ["Accord Protocol", "AI agent payments SDK", "Ergo agent payments", "MCP server payments", "x402 work verification", "autonomous agent settlement"]
@@ -32,6 +32,10 @@ The former `ergo-agent-economy` repository has migrated to Accord Protocol. The 
 
 The project is open source and working, but not production-certified. The repo status is explicit: **testnet beta** and **mainnet blocked until signed audit manifests**. Builders should treat the current code as a reference implementation for prototypes, demos and testnet deployments.
 
+### Sage is now the first hosted testnet proof
+
+Since this article first shipped, Sage on ergoblockchain.org has moved from roadmap item to live testnet proof: a 402-style premium flow, a public activity feed, one real Ergo testnet redemption transaction, and a chain-only receipt bundle. The published `@ergoblockchain/sage-widget` v0.1.0 package exposes the activity-feed component. The MCP endpoint is live on Fly while `mcp.ergoblockchain.org` waits on DNS.
+
 ### The Note lifecycle is now implemented end to end
 
 The Ergo rail now covers the full Reserve → Note → Tracker → Acceptance Predicate path: creating a Reserve, issuing Notes, checking Notes, redeeming Notes, settling batches and deploying Tracker state. That is the minimum viable lifecycle for programmable bearer instruments.
@@ -40,9 +44,9 @@ The Ergo rail now covers the full Reserve → Note → Tracker → Acceptance Pr
 
 TypeScript/Node, Python and MCP tooling let builders approach the stack from different runtimes. A JavaScript agent can issue Notes. A Python agent can pay an API. An MCP-compatible host can expose payment tools to an AI assistant or developer environment.
 
-### The next bottleneck is not imagination; it is verification
+### The next bottleneck is not imagination; it is receipt completeness
 
-The next phase is audit, standardization and developer proof: external security review, clear status manifests, a hosted testnet reference dApp, more framework integrations and better conformance tests.
+The next phase is durable receipt storage, signed Agreement / Verification / Settlement JSON, conformance artifacts, external security review, clear status manifests, and more framework integrations.
 
 ## Naming and migration
 
@@ -156,9 +160,9 @@ The top priority is security review. A signed audit manifest should specify the 
 
 Agents need a predictable way to discover payment terms. A future standard could expose `.well-known/accord.json`, HTTP headers or an x402-compatible extension describing price, rail, accepted assets, verification rule and refund policy.
 
-### 3. Hosted testnet reference dApp
+### 3. Hosted testnet reference dApp and receipt completeness
 
-A public demo matters more than another manifesto. A builder should be able to open a page, request a paid task, see a 402-style challenge, pay with a testnet wallet, watch a Note redeem and inspect the receipts.
+Sage now covers the first hosted testnet proof: a builder can open the site, trigger a 402-style premium flow, verify a testnet Note, and inspect a real settlement transaction. The remaining reference-dApp work is stricter Accord/402 conformance: durable Agreement JSON, signed Verification Receipt JSON, signed Settlement Receipt JSON, and a receipt bundle that external tools can verify without relying on article prose.
 
 ### 4. Conformance tests
 
@@ -194,7 +198,7 @@ x402 focuses on payment over HTTP: a resource requires payment, the client submi
 
 ### What should the next demo show?
 
-A hosted testnet API that returns HTTP 402, accepts an Accord/402 payment flow, verifies task completion, emits a verification receipt and settles through an Ergo Note would be the strongest public proof.
+Sage now shows the first version of that flow. The next demo should close the protocol gap: an Accord/402-compatible endpoint that emits signed Agreement, Verification Receipt and Settlement Receipt JSON, stores them durably, publishes conformance evidence, and still settles through an Ergo Note.
 
 ## Article JSON-LD draft
 
@@ -203,9 +207,9 @@ A hosted testnet API that returns HTTP 402, accepts an Accord/402 payment flow, 
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Accord Protocol Q2 2026 Update: What Shipped in Ergo’s Agent Economy Stack",
-  "description": "Accord Protocol Q2 2026 update: AI agent payment SDKs, Ergo Notes, MCP server, framework adapters, testnet demos and audit-gated mainnet roadmap.",
+  "description": "Accord Protocol Q2 2026 update: AI agent payment SDKs, Ergo Notes, MCP tooling, Sage's hosted testnet proof and the audit-gated mainnet roadmap.",
   "datePublished": "2026-05-06",
-  "dateModified": "2026-05-08",
+  "dateModified": "2026-05-16",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
   "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergo-agent-economy-q2-2026",

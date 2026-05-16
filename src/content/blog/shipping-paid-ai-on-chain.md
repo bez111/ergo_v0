@@ -3,10 +3,10 @@ title: "Shipping Sage: a paid AI agent settled on Ergo testnet"
 slug: "/blog/shipping-paid-ai-on-chain"
 seo_title: "Shipping Sage: a paid AI agent settled on Ergo testnet"
 meta_description: "How Sage, the AI concierge on ergoblockchain.org, moved from verify-only paid answers to a real Ergo testnet redemption transaction using the Accord Protocol pattern."
-excerpt: "Sage now has a real Ergo testnet settlement trail: a premium AI answer paid through an Accord-style Note, verified by the rail, and redeemed on-chain. The remaining gap is public signed receipt JSON."
+excerpt: "Sage now has a real Ergo testnet settlement trail: a premium AI answer paid through an Accord-style Note, verified by the rail, redeemed on-chain, and exposed through a chain-only receipt bundle. The remaining gap is public signed receipt JSON."
 author: "Ergo Developer Relations"
 date_published: "2026-05-15"
-date_modified: "2026-05-15"
+date_modified: "2026-05-16"
 tags: ["Agent Economy", "Accord Protocol", "Sage", "build log", "Ergo testnet", "AI agent payments", "Claude", "Fleet SDK"]
 target_keywords: ["paid AI agent on blockchain", "Sage Ergo concierge", "Accord Protocol live demo", "AI agent on-chain payment", "agent economy working demo"]
 ---
@@ -224,7 +224,8 @@ Then come the bigger roadmap items:
 
 - surface the Accord provider registry on the site;
 - show live agent activity in more places;
-- package Sage as a reusable widget;
+- expand the published `@ergoblockchain/sage-widget` v0.1.0 package from activity-feed components into a fuller reusable Sage embed;
+- move the public MCP endpoint from the live Fly URL to `mcp.ergoblockchain.org` once DNS is live;
 - run external audits before any mainnet claims;
 - sign exact script/contract manifests before any controlled mainnet launch.
 

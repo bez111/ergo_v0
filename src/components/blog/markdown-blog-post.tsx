@@ -54,10 +54,32 @@ const ORIGIN = siteConfig.siteUrl
 async function loadArticle(slug: string, locale = "en") {
   const localized = path.join(CONTENT_DIR, locale, `${slug}.md`)
   const fallback = path.join(CONTENT_DIR, `${slug}.md`)
-  const filePath = locale !== "en" && (await fileExists(localized)) ? localized : fallback
+  const fallbackArticle = await readArticleFile(fallback)
+
+  if (locale === "en" || !(await fileExists(localized))) {
+    return fallbackArticle
+  }
+
+  const localizedArticle = await readArticleFile(localized)
+  if (articleTimestamp(fallbackArticle.frontMatter) > articleTimestamp(localizedArticle.frontMatter)) {
+    return fallbackArticle
+  }
+
+  return localizedArticle
+}
+
+async function readArticleFile(filePath: string) {
   const raw = await fs.readFile(filePath, "utf-8")
   const { data, content } = matter(raw)
   return { frontMatter: data as ArticleFrontMatter, body: content }
+}
+
+function articleTimestamp(frontMatter: ArticleFrontMatter): number {
+  const raw = frontMatter.date_modified ?? frontMatter.date_published
+  if (!raw) return 0
+
+  const parsed = Date.parse(raw)
+  return Number.isFinite(parsed) ? parsed : 0
 }
 
 async function fileExists(filePath: string): Promise<boolean> {

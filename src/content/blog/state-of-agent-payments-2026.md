@@ -3,10 +3,10 @@ title: "AI Agent Payments in 2026: x402, Stripe, Ethereum, Solana and Ergo/Accor
 slug: "/blog/state-of-agent-payments-2026"
 seo_title: "AI Agent Payments in 2026: x402, Stripe, Ethereum, Solana and Ergo Compared"
 meta_description: "A 2026 report on AI agent payments: x402, Stripe Agentic Commerce, Ethereum L2s, Solana, Lightning and Ergo/Accord compared across micropayments, credit, predicates and settlement."
-excerpt: "The agent-payment landscape is moving quickly. x402 makes HTTP payments practical, Stripe is building agentic commerce, and Ergo/Accord focuses on programmable work verification and settlement."
+excerpt: "The agent-payment landscape is moving quickly. x402 makes HTTP payments practical, Stripe is building agentic commerce, and Ergo/Accord now has a public Sage testnet proof for programmable settlement."
 author: "Ergo Developer Relations"
 date_published: "2026-04-15"
-date_modified: "2026-05-08"
+date_modified: "2026-05-16"
 status: "Market report and technical comparison. Accord/ChainCash examples referenced here are testnet-first unless audited."
 tags: ["AI agent payments", "x402", "Stripe", "Ergo", "Accord Protocol", "machine payments"]
 target_keywords: ["AI agent payments", "agentic payments", "x402 payments", "Stripe agentic commerce", "machine-to-machine payments", "on-chain agent payments"]
@@ -15,6 +15,8 @@ target_keywords: ["AI agent payments", "agentic payments", "x402 payments", "Str
 # AI Agent Payments in 2026: x402, Stripe, Ethereum, Solana and Ergo/Accord Compared
 
 **Status as of May 2026:** this report separates live base-chain primitives from experimental agent-payment implementations. Ergo’s protocol is live. Accord Protocol, ChainCash/Basis reference contracts and most agent-payment demos are testnet-first until external audit manifests are published.
+
+**Update on 2026-05-16:** Sage now gives Ergo/Accord a public testnet proof: a 402-style premium agent flow, one real Ergo testnet redemption transaction, a chain-only receipt bundle, a published `@ergoblockchain/sage-widget` v0.1.0 activity-feed package, and a live MCP endpoint on Fly while the custom DNS name is pending. The production caveat remains: signed full receipt JSON and audits are still required before mainnet claims.
 
 AI agents can already write code, call APIs, plan tasks, retrieve data and coordinate with other agents. The missing piece is not intelligence. It is economic autonomy.
 
@@ -229,7 +231,7 @@ If you are writing content about this market, stop framing it as one winner repl
 3. Work verification will become the differentiating layer after payment becomes easy.
 4. Most “agent payment” demos will be payments-only and will struggle with refunds and failed work.
 5. Protocols that emit durable receipts will be easier to integrate into accounting, audit and compliance systems.
-6. Trust-minimized Notes and programmable credit will remain niche until a strong public demo proves the use case.
+6. Trust-minimized Notes and programmable credit will move from niche demos toward developer pilots only when public proofs like Sage also add signed receipt completeness, conformance evidence and audits.
 7. The winning architecture will compose human authorization, machine payment, work verification and settlement instead of treating them as one layer.
 
 ## FAQ
@@ -263,7 +265,7 @@ Ergo’s base chain is live, but Accord, ChainCash/Basis reference contracts and
   "headline": "AI Agent Payments in 2026: x402, Stripe, Ethereum, Solana and Ergo/Accord Compared",
   "description": "A 2026 report on AI agent payments: x402, Stripe Agentic Commerce, Ethereum L2s, Solana, Lightning and Ergo/Accord compared across micropayments, credit, predicates and settlement.",
   "datePublished": "2026-04-15",
-  "dateModified": "2026-05-08",
+  "dateModified": "2026-05-16",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
   "mainEntityOfPage": "https://www.ergoblockchain.org/blog/state-of-agent-payments-2026",
