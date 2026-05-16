@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Build Log',
     readTime: 11,
     wordCount: 2700,
-    image: '/og/blog/agent-economy-manifesto.png',
+    image: '/og/blog/shipping-paid-ai-on-chain.jpg',
     tags: ['Agent Economy', 'Accord Protocol', 'Sage', 'build log', 'Ergo testnet', 'AI agent payments', 'Claude'],
     featured: true,
     trending: true,
