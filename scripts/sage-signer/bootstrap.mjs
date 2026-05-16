@@ -495,12 +495,57 @@ async function issueTestNote(key, address) {
   console.log(`  quoteId       ${quote.quoteId}`)
   console.log("──────────────────────────────────────────────────────────────")
   console.log("")
-  console.log("Now in the browser:")
-  console.log(`  1. Open ${SAGE_BASE}`)
-  console.log("  2. Click 'Ask Sage', send the same question:")
-  console.log(`        ${PREMIUM_QUESTION}`)
-  console.log("  3. PaymentPanel opens — paste the note_box_id above and Verify")
-  console.log("  4. Sage verifies on chain → premium answer streams back")
+
+  if (process.env.SAGE_SKIP_VERIFY_AFTER_ISSUE === "1") {
+    console.log("Verify skipped because SAGE_SKIP_VERIFY_AFTER_ISSUE=1.")
+    console.log("To verify manually, POST { quote, question, noteBoxId } to:")
+    console.log(`  ${SAGE_BASE}/api/sage/verify-payment`)
+    console.log("")
+    return
+  }
+
+  console.log("Verifying Note with production Sage…")
+  const verifyRes = await fetch(`${SAGE_BASE}/api/sage/verify-payment`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({
+      quote,
+      question: PREMIUM_QUESTION,
+      noteBoxId,
+    }),
+  })
+  const verifyBodyText = await verifyRes.text()
+  let verifyBody
+  try {
+    verifyBody = JSON.parse(verifyBodyText)
+  } catch {
+    verifyBody = { raw: verifyBodyText }
+  }
+
+  if (!verifyRes.ok) {
+    throw new Error(
+      `/api/sage/verify-payment returned ${verifyRes.status}: ${JSON.stringify(verifyBody)}`,
+    )
+  }
+
+  console.log("")
+  console.log("──────────────────────────────────────────────────────────────")
+  console.log("  Sage verified payment")
+  console.log("──────────────────────────────────────────────────────────────")
+  console.log(`  receipt_id    ${verifyBody.receiptId}`)
+  console.log(`  receipt_url   ${verifyBody.receiptUrl}`)
+  console.log(`  receipt_api   ${verifyBody.receiptApiUrl}`)
+  console.log(`  settlement    ${verifyBody.settlementTxId ?? "pending redemption"}`)
+  console.log(
+    `  storage       ${
+      verifyBody.receiptStorage?.ok
+        ? "saved"
+        : verifyBody.receiptStorage?.skipped
+          ? `skipped (${verifyBody.receiptStorage.reason})`
+          : verifyBody.receiptStorage?.error ?? "unknown"
+    }`,
+  )
+  console.log("──────────────────────────────────────────────────────────────")
   console.log("")
 }
 
