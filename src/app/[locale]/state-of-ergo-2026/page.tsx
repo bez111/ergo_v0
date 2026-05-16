@@ -176,7 +176,7 @@ const NEXT = [
   {
     title: "Embeddable agent widgets everywhere",
     body:
-      "/agents.js script ready. Goal: every Accord-compliant provider's site embeds the live activity widget from ergoblockchain.org/widget — a visible network of paid AI on chain.",
+      "Shipping in two flavors: the iframe drop-in at ergoblockchain.org/agents.js (no install) and the typed React/vanilla npm package @ergoblockchain/sage-widget (v0.1.0 published May 2026). Goal: every Accord-compliant provider's site embeds a live-activity widget — a visible network of paid AI on chain.",
   },
 ]
 

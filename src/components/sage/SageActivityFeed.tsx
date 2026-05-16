@@ -215,6 +215,24 @@ export function SageActivityFeed() {
             How this works →
           </Link>
         </div>
+
+        <div className="mt-4 rounded-xl border border-orange-500/20 bg-orange-500/[0.04] p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+          <div className="text-[10px] uppercase tracking-widest font-mono text-orange-400 shrink-0">
+            Embed it
+          </div>
+          <code className="flex-1 font-mono text-xs text-orange-200 bg-black/40 border border-white/10 rounded px-3 py-2 overflow-x-auto">
+            npm install @ergoblockchain/sage-widget
+          </code>
+          <a
+            href="https://www.npmjs.com/package/@ergoblockchain/sage-widget"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 text-[10px] uppercase tracking-widest font-mono text-orange-300 hover:text-orange-200 px-3 py-1.5 rounded border border-orange-500/30 hover:border-orange-500/50 transition-colors inline-flex items-center gap-1"
+          >
+            npm page
+            <ArrowUpRight className="w-3 h-3" />
+          </a>
+        </div>
       </div>
     </section>
   )

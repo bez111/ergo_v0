@@ -294,6 +294,59 @@ export default async function AgentProfilePage({ params }: PageProps) {
             </Section>
           )}
 
+          {activityEndpoint && (
+            <Section title="Embed in your app">
+              <div className="rounded-2xl border border-orange-500/20 bg-orange-500/[0.04] p-5 space-y-4">
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  Show this provider&apos;s live activity on your own site —
+                  React component, vanilla DOM mount, or zero-install iframe.
+                </p>
+
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-orange-400 font-mono mb-2">
+                    React / Next.js
+                  </div>
+                  <pre className="bg-black/40 border border-white/10 rounded-lg px-3 py-2 text-xs text-orange-200 font-mono overflow-x-auto">
+{`npm install @ergoblockchain/sage-widget
+
+import { SageActivityFeed } from "@ergoblockchain/sage-widget/react"
+<SageActivityFeed limit={5} />`}
+                  </pre>
+                </div>
+
+                <div>
+                  <div className="text-[10px] uppercase tracking-widest text-orange-400 font-mono mb-2">
+                    Zero install (iframe drop-in)
+                  </div>
+                  <pre className="bg-black/40 border border-white/10 rounded-lg px-3 py-2 text-xs text-orange-200 font-mono overflow-x-auto">
+{`<div id="sage-feed"></div>
+<script src="https://www.ergoblockchain.org/agents.js"
+        data-target="#sage-feed" data-height="320" async></script>`}
+                  </pre>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-1">
+                  <a
+                    href="https://www.npmjs.com/package/@ergoblockchain/sage-widget"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[10px] uppercase tracking-widest font-mono text-orange-300 hover:text-orange-200 px-3 py-1.5 rounded-md border border-orange-500/30 hover:border-orange-500/50 transition-colors"
+                  >
+                    npm package <ExternalLink className="w-3 h-3" />
+                  </a>
+                  <a
+                    href="https://github.com/bez111/sage-widget"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[10px] uppercase tracking-widest font-mono text-orange-300 hover:text-orange-200 px-3 py-1.5 rounded-md border border-orange-500/30 hover:border-orange-500/50 transition-colors"
+                  >
+                    source · GitHub <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            </Section>
+          )}
+
           {profile.implementation && (
             <Section title="Implementation">
               {profile.implementation.reference_example && (
