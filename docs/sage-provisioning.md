@@ -192,7 +192,7 @@ Open a PR (or push directly if you have rights) referencing the conformance resu
 
 **Verify-payment returns 402 "INSUFFICIENT_VALUE"** → buyer issued a Note for the wrong amount. Quote is `0.001 ERG`; the Note must carry exactly that. Re-issue.
 
-**`/api/sage/receipt/<id>` returns `completeness: "chain_proof_only"`** → `BLOB_READ_WRITE_TOKEN` was missing when the payment was verified, or the receipt predates full storage. The API can still show public chain evidence, but the full Agreement / Verification / Settlement bundle was not stored.
+**`/api/sage/receipt/<id>` returns `completeness: "chain_proof_only"` instead of `completeness: "full_receipt_bundle"`** → `BLOB_READ_WRITE_TOKEN` was missing when the payment was verified, or the receipt predates full storage. The API can still show public chain evidence, but the full Agreement / Verification / Settlement bundle was not stored.
 
 **Receipt page shows "settlement pending" instead of settled** → expected if the signer isn't running. Either start the signer (Step 6) or accept verify-only mode.
 

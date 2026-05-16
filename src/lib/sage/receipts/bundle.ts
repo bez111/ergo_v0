@@ -35,7 +35,7 @@ export function buildSageReceiptBundle(opts: BuildReceiptBundleOpts): SageReceip
     version: "v1",
     id,
     status,
-    completeness: "full",
+    completeness: "full_receipt_bundle",
     created_at: result.verificationReceipt.created_at,
     updated_at: now,
     network,

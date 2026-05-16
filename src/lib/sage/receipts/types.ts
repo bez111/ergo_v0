@@ -3,7 +3,7 @@ import type { SagePaymentProof, SageQuote } from "@/lib/sage/payments/types"
 
 export type SageReceiptNetwork = "mainnet" | "testnet"
 export type SageReceiptStatus = "settled_on_chain" | "verified_pending_redemption"
-export type SageReceiptCompleteness = "full" | "chain_proof_only"
+export type SageReceiptCompleteness = "full_receipt_bundle" | "full" | "chain_proof_only"
 
 export interface SageReceiptSignature {
   scheme: "sage-hmac-sha256" | "unsigned"

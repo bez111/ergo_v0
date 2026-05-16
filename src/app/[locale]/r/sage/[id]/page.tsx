@@ -44,8 +44,9 @@ export default async function SageReceiptPage({ params }: ReceiptPageProps) {
   if (!receipt) return <NotConfirmedYet id={id} />
 
   const settled = receipt.status === "settled_on_chain"
+  const fullReceiptBundle = isFullReceiptBundle(receipt)
   const title = settled ? "Premium answer · paid" : "Premium answer · settlement pending"
-  const tone = receipt.completeness === "full" ? "Full Accord bundle" : "Chain proof only"
+  const tone = fullReceiptBundle ? "Full Accord bundle" : "Chain proof only"
   const happenedAt = receipt.accord.settlement_receipt_json?.created_at ?? receipt.updated_at
 
   return (
@@ -80,7 +81,7 @@ export default async function SageReceiptPage({ params }: ReceiptPageProps) {
           <span className="text-gray-700">·</span>
           <time dateTime={happenedAt}>{formatDate(happenedAt)}</time>
           <span className="text-gray-700">·</span>
-          <span className={receipt.completeness === "full" ? "text-emerald-300" : "text-yellow-300"}>
+          <span className={fullReceiptBundle ? "text-emerald-300" : "text-yellow-300"}>
             {tone}
           </span>
         </div>
@@ -180,7 +181,7 @@ export default async function SageReceiptPage({ params }: ReceiptPageProps) {
         </section>
 
         <footer className="space-y-3 font-mono text-xs text-gray-600">
-          {receipt.completeness === "full" ? (
+          {fullReceiptBundle ? (
             <p>
               Full receipt bundle loaded from durable storage. Other pages should
               link here or to the API, not duplicate these facts.
@@ -216,6 +217,10 @@ async function fetchReceipt(id: string): Promise<SageReceiptBundle | null> {
 
 function isReceiptBundle(value: unknown): value is SageReceiptBundle {
   return !!value && typeof value === "object" && (value as { type?: string }).type === "sage.receipt_bundle.v1"
+}
+
+function isFullReceiptBundle(receipt: SageReceiptBundle): boolean {
+  return receipt.completeness === "full_receipt_bundle" || receipt.completeness === "full"
 }
 
 function KV({
