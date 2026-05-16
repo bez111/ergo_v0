@@ -373,6 +373,7 @@ export default function RoadmapPage() {
                   <li>• 10 working examples on testnet ✓</li>
                   <li>• Sage hosted testnet reference dApp with real settlement and full receipt storage for new receipts ✓</li>
                   <li>• @ergoblockchain/sage-widget v0.1.0 activity-feed package ✓</li>
+                  <li>• Agent Economy live cockpit and ErgoScript playground WASM build warning cleanup ✓</li>
                 </ul>
                 <p><strong>Ongoing:</strong></p>
                 <ul className="ml-4 space-y-1">
