@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi les agents IA ont besoin de plus que Stripe : Commerce Agentic vs Règlement du Travail Autonome"
-slug: "/blog/ai-agents-need-more-than-stripe"
+slug: "/blog/agents-cant-use-stripe"
 seo_title: "Pourquoi les agents IA ont besoin de plus que Stripe : Commerce Agentic vs Règlement du Travail Autonome"
 meta_description: "Stripe, x402 et MPP activent le commerce agentic et les paiements machine. Ergo et Accord ajoutent la vérification du travail programmable, les Notes, les acceptance predicates et le règlement on-chain."
 excerpt: "Stripe construit une infrastructure sérieuse pour le commerce agentic. L'écart restant est le règlement du travail autonome : acceptation programmable, Notes de crédit et reçus vérifiables."
@@ -234,7 +234,7 @@ Les produits de commerce de Stripe sont une infrastructure de production. Accord
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agents-need-more-than-stripe",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/agents-cant-use-stripe",
   "keywords": ["Stripe agentic commerce", "AI agent payments", "x402", "Accord Protocol", "Ergo"]
 }
 ```

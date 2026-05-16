@@ -14,7 +14,7 @@ interface AppKitCardItem {
 const tutorials = [
   {
     title: "General Example",
-    url: "/docs/developers/tooling/appkit/frameworks/appkit/tutorial",
+    url: "/docs/developers/tooling/frameworks/appkit/tutorial",
     content: "Step-by-step walkthrough for building and sending a transaction using Appkit."
   },
   {

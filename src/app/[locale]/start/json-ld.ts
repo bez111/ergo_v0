@@ -26,7 +26,7 @@ export const howToSchema = () => createHowToSchema({
     {
       name: 'Try Ergo on testnet',
       text: 'Request testnet ERG from the faucet and try simple transactions or dApps so you can practice without risking real funds.',
-      url: 'https://www.ergoblockchain.org/wallet/testnet-faucet',
+      url: 'https://www.ergoblockchain.org/wallet',
     },
   ],
 })

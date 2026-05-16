@@ -1,6 +1,6 @@
 ---
 title: "Notes vs Tokens: Programmierbare Bearer Instrumente für AI-Agent-Zahlungen"
-slug: "/blog/notes-vs-tokens-agent-payments"
+slug: "/blog/notes-vs-tokens"
 seo_title: "Notes vs Tokens: Programmierbare Bearer Instrumente für AI-Agent-Zahlungen"
 meta_description: "Vergleiche Ergo Notes und native Tokens: Wenn AI Agents programmierbare IOUs, Reserve-Backing, Ablauf, Acceptance Predicates und aufgeschobene Abwicklung benötigen."
 excerpt: "Tokens sind hervorragend für Eigentumsrechte. Notes sind besser für begrenzte, ablaufende, bedingt einlösbare Gutschriften in autonomen Agent-Workflows."
@@ -259,7 +259,7 @@ Das Konzept ist stark, und Ergos eUTXO-Modell unterstützt das Muster. Spezifisc
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens",
   "keywords": ["Ergo Notes", "native tokens", "AI agent payments", "programmable credit", "bearer instruments"]
 }
 ```

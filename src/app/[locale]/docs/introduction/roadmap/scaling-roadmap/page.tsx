@@ -132,7 +132,7 @@ export default function RoadmapDiscussionsPage() {
                 <h4 className="text-lg font-semibold text-cyan-400 mb-3">Phase 5: Offloading Solutions</h4>
                 <ul className="text-gray-300 space-y-2">
                   <li>• Propose options for offloading transactions to Layer 2 or sidechains, if not already implemented</li>
-                  <li>• Introduce "Know Your Algorithm" (KYA) as a way to explain security in offloading options in a concise and understandable manner</li>
+                  <li>• Introduce "Know Your Assumptions" (KYA) as a way to explain security in offloading options in a concise and understandable manner</li>
                 </ul>
               </div>
 

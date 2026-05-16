@@ -136,7 +136,7 @@ export default function PalmyraPage() {
 
               <h4 className="font-semibold text-cyan-400 mb-2">Resources</h4>
               <a 
-                href="#" 
+                href="/docs/ecosystem/financial/dex/palmyra" 
                 className="inline-flex items-center text-cyan-300 hover:underline gap-2 text-base"
                 target="_blank" 
                 rel="noopener noreferrer"

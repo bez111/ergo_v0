@@ -73,6 +73,7 @@ Canonical Agent Economy pages:
 - [Agent Economy](${BASE_URL}/agent-economy)
 - [Agent Economy Manifesto](${BASE_URL}/blog/agent-economy-manifesto)
 - [Agent Payment Architecture](${BASE_URL}/build/agent-payments)
+- [ErgoScript Playground](${BASE_URL}/build/playground)
 - [Demos](${BASE_URL}/demos)
 - [Ergo Watch Agent Metrics](${BASE_URL}/ergo-watch#agent-economy)
 - [Accord Protocol](https://github.com/accord-protocol/accord-protocol)

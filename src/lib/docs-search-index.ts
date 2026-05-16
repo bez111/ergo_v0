@@ -175,7 +175,7 @@ export function buildDocsSearchIndex(): DocsSearchIndexItem[] {
         let contentType: DocsSearchIndexItem['type'] = type;
         if (item.href.includes('/blog/')) contentType = 'blog';
         else if (item.href.includes('/api/')) contentType = 'api';
-        else if (item.href.includes('/community/')) contentType = 'community';
+        else if (item.href.includes('/start/community/')) contentType = 'community';
         else if (item.href.includes('/release/')) contentType = 'release';
         else if (item.href.includes('/tutorial/')) contentType = 'tutorial';
         

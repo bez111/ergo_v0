@@ -209,7 +209,7 @@ export const topicClusters: TopicCluster[] = [
       
       // Technology
       { url: '/technology/ergoscript', title: 'ErgoScript Language', type: 'technology', priority: 1 },
-      { url: '/technology/eutxo', title: 'eUTXO Model', type: 'technology', priority: 1 },
+      { url: '/technology/eutxo-model', title: 'eUTXO Model', type: 'technology', priority: 1 },
       
       // Infographics
       { url: '/infographics/ergoscript-cypherpunk-code-of-freedom', title: 'ErgoScript Explained', type: 'infographic', priority: 1 },
@@ -251,7 +251,7 @@ export const topicClusters: TopicCluster[] = [
     },
     supporting: [
       // Technology
-      { url: '/technology/eutxo', title: 'eUTXO Technology', type: 'technology', priority: 1 },
+      { url: '/technology/eutxo-model', title: 'eUTXO Technology', type: 'technology', priority: 1 },
       
       // Comparisons
       { url: '/compare/ergo-vs-cardano', title: 'Ergo vs Cardano (both eUTXO)', type: 'compare', priority: 1 },

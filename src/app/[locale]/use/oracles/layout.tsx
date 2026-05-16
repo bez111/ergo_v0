@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "oracles",
-  ogImage: "/og-oracles.png",
-  canonicalPath: "/use/oracles-data-feeds",
+  ogImage: "/og/use/og-oracles.png",
+  canonicalPath: "/use/oracles",
 }
 
 // i18n Metadata

@@ -7,6 +7,7 @@ This guide takes a fresh ergoblockchain.org deployment from "Sage works in free 
 - A Sage seller wallet on Ergo testnet, funded from the faucet
 - A one-time Reserve box backing all future Note redemptions
 - Vercel env vars provisioned so `/api/sage/{quote,chat,verify-payment}` route premium questions through Accord
+- Vercel Blob storage for full `/api/sage/receipt/<id>` bundles
 - (Optional) The standalone signer running locally so Note **redemption** also happens — without it, Sage runs in verify-only mode (premium answers flow, redemption deferred)
 
 ## Prerequisites
@@ -19,7 +20,7 @@ This guide takes a fresh ergoblockchain.org deployment from "Sage works in free 
 ## Step 1 — Sage seller wallet
 
 1. Open Nautilus, create a new wallet named `sage-testnet-prod`.
-2. **Save the recovery phrase**. You'll need it for Vercel env later.
+2. **Save the recovery phrase**. You'll need it only for the optional local signer, not for Vercel.
 3. Switch Nautilus to testnet (Settings → Network → Testnet).
 4. Copy the testnet address (`9f…`).
 5. Fund the wallet via [testnet.ergoplatform.com/faucet](https://testnet.ergoplatform.com/faucet) — request ~0.15 ERG (covers Reserve creation + buffer).
@@ -29,6 +30,16 @@ Wait ~2 min for faucet tx confirmation.
 ## Step 2 — Create the Reserve
 
 The Reserve is a one-time, on-chain box that backs every Note Sage will redeem. We use the script from Accord example 16:
+
+From this repo you can bootstrap the same flow with:
+
+```bash
+npm run sage:wallet
+npm run sage:wallet:balance
+npm run sage:wallet:reserve
+```
+
+If you prefer to use the Accord example directly:
 
 ```bash
 cd ../ergo-agent-economy/examples/16-paid-mcp-ergo-testnet
@@ -80,6 +91,11 @@ vercel env add SAGE_NETWORK production
 vercel env add SAGE_PAYMENT_HMAC_KEY production
 # paste: <output of step 3>
 
+# Required for full Agreement / Verification / Settlement receipt bundles.
+# Create a Vercel Blob store in the project, then copy its read-write token.
+vercel env add BLOB_READ_WRITE_TOKEN production
+# paste: <Blob read-write token>
+
 # Optional but recommended: signer URL (see step 6 if you want this)
 # vercel env add SAGE_SIGNER_URL production
 # vercel env add SAGE_SIGNER_TOKEN production
@@ -92,6 +108,7 @@ SAGE_WALLET_ADDRESS=<addr>
 SAGE_RESERVE_BOX_ID=<box id>
 SAGE_PAYMENT_HMAC_KEY=<hmac key>
 SAGE_NETWORK=testnet
+BLOB_READ_WRITE_TOKEN=<vercel blob read-write token>
 ```
 
 ## Step 5 — Redeploy
@@ -110,6 +127,8 @@ curl -sN -X POST "https://www.ergoblockchain.org/api/sage/chat" \
 ```
 
 Expected: **HTTP 402** with `{"error":"premium_payment_required",…}`. That means premium routing is now active.
+
+After a successful paid verification, `/api/sage/receipt/<id>` becomes the single machine-readable source of truth for the receipt. It returns the chain evidence plus the stored Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. The public `/r/sage/<id>` page reads that API and only renders it.
 
 ## Step 6 — (Optional) Local signer for full settlement
 
@@ -173,7 +192,9 @@ Open a PR (or push directly if you have rights) referencing the conformance resu
 
 **Verify-payment returns 402 "INSUFFICIENT_VALUE"** → buyer issued a Note for the wrong amount. Quote is `0.001 ERG`; the Note must carry exactly that. Re-issue.
 
-**Receipt page shows "settlement pending" instead of full receipt** → expected if the signer isn't running. Either start the signer (Step 6) or accept verify-only mode.
+**`/api/sage/receipt/<id>` returns `completeness: "chain_proof_only"`** → `BLOB_READ_WRITE_TOKEN` was missing when the payment was verified, or the receipt predates full storage. The API can still show public chain evidence, but the full Agreement / Verification / Settlement bundle was not stored.
+
+**Receipt page shows "settlement pending" instead of settled** → expected if the signer isn't running. Either start the signer (Step 6) or accept verify-only mode.
 
 **`/r/sage/<id>` shows "Settlement tx not confirmed yet"** → testnet tx hasn't propagated. Wait 2 min and refresh, or check the explorer link on the page.
 

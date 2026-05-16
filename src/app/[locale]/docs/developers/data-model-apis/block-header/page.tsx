@@ -37,7 +37,7 @@ export default function BlockHeaderPage() {
               <b>Chain Synchronization:</b> Headers enable efficient synchronization between <Link href="/docs/developers/install" className="text-orange-400 hover:underline">nodes</Link> on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.
             </li>
             <li>
-              <b><Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> requirements.
+              <b><Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/docs/introduction/autolykos" className="text-orange-400 hover:underline">difficulty</Link> requirements.
             </li>
             <li>
               <b>Block Integrity:</b> Headers include hashes that link to other sections of the block (<Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link>, <Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">proofs</Link>, <Link href="/docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">extension</Link>), guaranteeing the integrity of the entire block. Any tampering with the block's content would result in a mismatch of these hashes.
@@ -87,7 +87,7 @@ export default function BlockHeaderPage() {
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">nBits</h3>
-              <p className="text-gray-300 text-sm">Represents the <Link href="/docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> target for the block, determining how hard it was to mine.</p>
+              <p className="text-gray-300 text-sm">Represents the <Link href="/docs/introduction/autolykos" className="text-orange-400 hover:underline">difficulty</Link> target for the block, determining how hard it was to mine.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">

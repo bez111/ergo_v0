@@ -1,6 +1,6 @@
 ---
 title: "Note와 Token: AI 에이전트 결제를 위한 프로그래머블 무기명 증권"
-slug: "/blog/notes-vs-tokens-agent-payments"
+slug: "/blog/notes-vs-tokens"
 seo_title: "Note와 Token: AI 에이전트 결제를 위한 프로그래머블 무기명 증권"
 meta_description: "Ergo Note와 네이티브 토큰 비교: AI 에이전트가 프로그래머블 IOU, Reserve 지원, 만료, 수용 술어 및 연기된 정산이 필요할 때"
 excerpt: "Token은 소유권에 좋습니다. Note는 자율 에이전트 워크플로에서 제한된, 만료되는, 조건부로 상환 가능한 크레딧에 더 적합합니다."
@@ -259,7 +259,7 @@ Note는 Reserve, 술어 및 구현만큼 좋습니다.
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/notes-vs-tokens",
   "keywords": ["Ergo Notes", "native tokens", "AI agent payments", "programmable credit", "bearer instruments"]
 }
 ```

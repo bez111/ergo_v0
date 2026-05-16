@@ -11,6 +11,12 @@ import type { SagePaymentProof, SageQuote, SageVerificationResult } from "./type
 import { quoteToAgreement } from "./agreement"
 import { getSageAgent } from "./wallet"
 import { buildSageNoteOps } from "./note-ops"
+import {
+  buildPendingSettlementReceipt,
+  buildVerificationReceipt,
+  normalizeSettlementReceipt,
+  prefixedAccordHash,
+} from "@/lib/sage/receipts/artifacts"
 
 export interface VerifyOpts {
   quote: SageQuote
@@ -29,6 +35,7 @@ export interface VerifyOpts {
  */
 export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificationResult> {
   const agreement = quoteToAgreement(opts.quote, opts.question)
+  const network = (process.env.SAGE_NETWORK ?? "testnet") as "mainnet" | "testnet"
 
   const sellerAgent = getSageAgent()
   // buildSageNoteOps wraps ergo-agent-pay so the v1 explorer's object-
@@ -57,17 +64,37 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
     }
   }
 
+  const verificationReceipt = buildVerificationReceipt({
+    agreement,
+    quote: opts.quote,
+    question: opts.question,
+    proof: opts.proof,
+    taskOutputDigest: opts.taskOutputDigest,
+  })
+  const verificationReceiptHash = prefixedAccordHash(verificationReceipt)
+
   // 2. Try to redeem the Note. settle() is optional on the
   //    AccordRailAdapter spec; rails-ergo implements it but the actual
   //    redemption signature requires SAGE_WALLET_SEED / SAGE_SIGNER_URL.
   //    If the signer isn't configured, treat the verified Note as the
-  //    payment proof — the buyer's funds either get redeemed later by
-  //    a separate sweeper or auto-refund on expiry. Either way, the
-  //    answer flows: verify is the contract, settle is bookkeeping.
+  //    payment proof and defer redemption. Refund behavior depends on
+  //    the deployed Note path, so the public site should describe this
+  //    as verify-only until a settlement tx exists.
   if (!rail.settle) {
+    const settlementReceipt = buildPendingSettlementReceipt({
+      agreement,
+      quote: opts.quote,
+      proof: opts.proof,
+      network,
+      verificationReceiptHash,
+      settleError: "settle() missing on adapter — verified-only mode",
+    })
     return {
       ok: true,
       receiptId: opts.proof.noteBoxId,
+      agreement,
+      verificationReceipt,
+      settlementReceipt,
       error: "settle() missing on adapter — verified-only mode",
     }
   }
@@ -81,20 +108,44 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
       },
       verification: undefined,
     })
+    const settlementReceipt = normalizeSettlementReceipt({
+      settlement: settle,
+      verificationReceiptHash,
+    })
+    const settlementTxId = settle.tx?.tx_id && /^[0-9a-f]{64}$/i.test(settle.tx.tx_id)
+      ? settle.tx.tx_id
+      : undefined
     return {
       ok: true,
-      settlementTxId: settle.tx?.tx_id,
-      receiptId: settle.settlement_id,
+      settlementTxId,
+      // Public receipt routes stay anchored to the on-chain tx when
+      // settlement exists; otherwise the Note box id remains the anchor.
+      receiptId: settlementTxId ?? opts.proof.noteBoxId,
+      accordSettlementId: settle.settlement_id,
+      agreement,
+      verificationReceipt,
+      settlementReceipt,
     }
   } catch (err) {
     const msg = err instanceof Error ? err.message : "settle threw"
     const stack = err instanceof Error && err.stack ? err.stack.split("\n").slice(0, 8).join(" || ") : "(no stack)"
     console.warn(`[sage] settle failed (verify ok, deferring redemption): ${msg} STACK=${stack}`)
+    const settlementReceipt = buildPendingSettlementReceipt({
+      agreement,
+      quote: opts.quote,
+      proof: opts.proof,
+      network,
+      verificationReceiptHash,
+      settleError: msg,
+    })
     return {
       ok: true,
       // No settlement tx yet — receipt anchors to the Note box id, the
       // /r/sage/<id> page detects this and renders "settlement pending".
       receiptId: opts.proof.noteBoxId,
+      agreement,
+      verificationReceipt,
+      settlementReceipt,
       error: `settle deferred: ${msg}`,
     }
   }

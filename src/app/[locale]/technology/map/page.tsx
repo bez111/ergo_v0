@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "/og-image-technology-map.png",
+          url: "/og/technology.png",
           width: 1200,
           height: 630,
           alt: t("ogAlt"),
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t("twitterTitle"),
       description: t("twitterDescription"),
-      images: ["/og-image-technology-map.png"],
+      images: ["/og/technology.png"],
     },
   };
 }

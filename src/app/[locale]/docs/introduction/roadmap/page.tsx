@@ -366,7 +366,7 @@ export default function RoadmapPage() {
                 <p><strong>Shipped:</strong></p>
                 <ul className="ml-4 space-y-1">
                   <li>• Agent Economy positioning, manifesto, technical reference ✓</li>
-                  <li>• ergo-agent-pay SDK (TypeScript) — v0.1 → v0.2 with full Note lifecycle ✓</li>
+                  <li>• Accord Protocol packages v0.4 and ergo-agent-pay SDK v0.3 with full Note lifecycle ✓</li>
                   <li>• ergo-agent-py (Python SDK) ✓</li>
                   <li>• ergo-agent-mcp (Model Context Protocol server) ✓</li>
                   <li>• Framework adapters: LangChain, OpenAI, CrewAI, AutoGen ✓</li>
@@ -845,7 +845,7 @@ function Layer0Content() {
         <h2 className="text-2xl font-bold text-white mb-6">Sub Blocks</h2>
         <div className="bg-yellow-400/10 rounded-xl p-6">
           <p className="text-gray-300">
-            In the quest for Layer 0 (L0) scalability improvements, one of the most promising advancements is the introduction of "subblocks." These are essentially block candidates with lower proof-of-work difficulty, serving as temporary placeholders that facilitate faster transaction confirmations and optimize network bandwidth. For end-users, this translates into quicker, weakly confirmed transactions—often within 20 seconds—while also making better use of network resources. For a more in-depth look at weak blocks, their advantages, and their role in Ergo's scalability strategy, see this page.
+            In the quest for Layer 0 (L0) scalability improvements, one of the most promising advancements is the Matrix input-block / ordering-block work. These lower-difficulty input blocks are designed to provide faster provisional inclusion feedback and better network bandwidth usage while ordering blocks remain responsible for final settlement. This is active devnet/test work, so production guidance should follow Ergo node release notes.
           </p>
         </div>
       </section>

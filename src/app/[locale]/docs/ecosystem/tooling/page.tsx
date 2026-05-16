@@ -19,49 +19,49 @@ import { Link } from "@/i18n/navigation";
 const toolingSections = [
   {
     title: "Crux Finance",
-    description: "A DeFi tool or protocol in the Ergo ecosystem. (Description coming soon)",
+    description: "Portfolio, trading, accounting, and alerting tools for tracking and managing Ergo DeFi positions from one interface.",
     icon: Wrench,
     color: "text-cyan-400",
     link: "/docs/ecosystem/tooling/crux-finance"
   },
   {
     title: "ErgoNames",
-    description: "A naming service for Ergo addresses and dApps. (Description coming soon)",
+    description: "Decentralized naming for Ergo addresses, letting users register readable names instead of relying on long wallet strings.",
     icon: Star,
     color: "text-yellow-400",
     link: "/docs/ecosystem/tooling/ergonames"
   },
   {
     title: "Celaut",
-    description: "A modular platform for building decentralized applications and systems on Ergo. (Description coming soon)",
+    description: "Peer-to-peer runtime for deploying autonomous services and AI agents with verifiable execution and open coordination.",
     icon: Layers,
     color: "text-purple-400",
     link: "/docs/ecosystem/tooling/celaut"
   },
   {
     title: "Reputation System (Celaut)",
-    description: "A subsystem for managing and tracking user reputation within Celaut. (Description coming soon)",
+    description: "UTXO-based trust layer for Celaut services, recording auditable reputation proofs on Ergo without a central authority.",
     icon: Users,
     color: "text-blue-400",
     link: "/docs/ecosystem/tooling/reputation-system"
   },
   {
     title: "Netnotes",
-    description: "A tool for networked note-taking or collaboration on Ergo. (Description coming soon)",
+    description: "Cross-platform crypto management suite and reactive app framework for wallets, blockchain data, prices, and integrations.",
     icon: Network,
     color: "text-green-400",
     link: "/docs/ecosystem/tooling/netnotes"
   },
   {
     title: "SigmaRand",
-    description: "A randomness oracle or random number generator for Ergo smart contracts. (Description coming soon)",
+    description: "Commit-reveal random number generation service for games, lotteries, and contracts that need fair randomness on Ergo.",
     icon: Puzzle,
     color: "text-pink-400",
     link: "/docs/ecosystem/tooling/sigmarand"
   },
   {
     title: "Moria Finance",
-    description: "A DeFi protocol or tool in the Ergo ecosystem. (Description coming soon)",
+    description: "Smart-contract fund management platform for transparent custody and Bitcoin-backed financial flows on Ergo.",
     icon: Wrench,
     color: "text-orange-400",
     link: "/docs/ecosystem/tooling/moria-finance"
@@ -69,28 +69,28 @@ const toolingSections = [
   // Trading section header will be inserted here
   {
     title: "Arbit (Trading)",
-    description: "A tool or strategy for arbitrage trading on Ergo. (Description coming soon)",
+    description: "Arbitrage interface for finding and executing profitable swaps across decentralized markets on Ergo and Cardano.",
     icon: Star,
     color: "text-yellow-400",
     link: "/docs/ecosystem/tooling/arbit"
   },
   {
     title: "Grid Trading (Trading)",
-    description: "Automated grid trading strategies for Ergo. (Description coming soon)",
+    description: "Overview of non-custodial grid order strategies that automate buy and sell levels through Ergo smart contracts.",
     icon: Layers,
     color: "text-purple-400",
     link: "/docs/ecosystem/tooling/grid-trading"
   },
   {
     title: "Off the Grid (Grid Trading)",
-    description: "A specific grid trading implementation. (Description coming soon)",
+    description: "Decentralized grid trading dApp with an execution bot for matching orders while users keep control of funds.",
     icon: BookOpen,
     color: "text-blue-400",
     link: "/docs/ecosystem/tooling/off-the-grid"
   },
   {
     title: "Tutorial (Off the Grid)",
-    description: "Step-by-step guide for using Off the Grid. (Description coming soon)",
+    description: "Setup guide for installing, configuring, and operating the Off-the-Grid trading bot on Ergo.",
     icon: BookOpen,
     color: "text-green-400",
     link: "/docs/ecosystem/tooling/tutorial"

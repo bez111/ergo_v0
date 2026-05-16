@@ -67,7 +67,7 @@ export default function AutolykosPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/docs/introduction"
+              href="/docs"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -171,18 +171,18 @@ export default function AutolykosPage() {
             <Star className="w-6 h-6 text-orange-400" /> Ergo-First-Year-Token (EFYT)
           </h2>
           <p className="text-gray-300 mb-4">
-            Prior to the mainnet, <span className="font-semibold text-orange-300">Ergo-First-Year-Token</span> (EFYT) was in circulation and swapped with the treasury on launch. For comprehensive insights into EFYT, including its tokenomics and distribution strategy, please visit <a href="#" className="text-cyan-400 underline">this page</a>.
+            Prior to the mainnet, <span className="font-semibold text-orange-300">Ergo-First-Year-Token</span> (EFYT) was in circulation and swapped with the treasury on launch. For comprehensive insights into EFYT, including its tokenomics and distribution strategy, please visit <Link href="/docs/miners" className="text-cyan-400 underline">this page</Link>.
           </p>
           <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-2">
             <li>EFYT was airdropped and listed on Waves DEX in May 2017 (100,000 initial supply).</li>
             <li>EFYT is separate from ERG, which could only be mined after mainnet launch.</li>
             <li>Max supply: <span className="font-semibold text-orange-300">1,970,945.0</span> (10% of first-year ERG emission).</li>
-            <li>EFYT token distribution on <a href="#" className="text-cyan-400 underline">Pywaves</a>, price tracking on <a href="#" className="text-cyan-400 underline">livecoinwatch</a>.</li>
+            <li>EFYT token distribution on <a href="https://pywaves.org/" className="text-cyan-400 underline">Pywaves</a>, price tracking on <a href="https://www.livecoinwatch.com/" className="text-cyan-400 underline">livecoinwatch</a>.</li>
             <li>Redeemable 1:1 for ERG via Waves gateway until July 2021 (1,782,615 ERG redeemed).</li>
             <li>Used for team compensation, expenses, and minimal private investment (500,000 EFYT sold to 3 investors).</li>
           </ul>
           <div className="text-gray-400 text-sm mt-2">
-            Resources: <a href="#" className="text-cyan-400 underline">Kushti on EFYT (2018)</a>, hot wallet: <span className="font-mono text-orange-300">3P3yFxqAeFGnTDvCjeCEyMnMZevJxurKZne</span>, <a href="#" className="text-cyan-400 underline">Background (2019)</a>.
+            Resources: <a href="https://t.me/ergoplatform/3354" className="text-cyan-400 underline">Kushti on EFYT (2018)</a>, hot wallet: <span className="font-mono text-orange-300">3P3yFxqAeFGnTDvCjeCEyMnMZevJxurKZne</span>, <a href="https://ergoplatform.org/en/blog/2019_05_20-curve/" className="text-cyan-400 underline">Background (2019)</a>.
           </div>
         </div>
         {/* Total Supply Section */}
@@ -202,7 +202,7 @@ export default function AutolykosPage() {
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <Shield className="w-6 h-6 text-blue-400" /> Ergo Foundation
           </h2>
-          <p className="text-gray-300 mb-4">The Foundation received <span className="font-semibold text-orange-300">4.43%</span> of total emission for protocol development, ecosystem growth, and social good. <a href="#" className="text-cyan-400 underline">Transparency report</a>.</p>
+          <p className="text-gray-300 mb-4">The Foundation received <span className="font-semibold text-orange-300">4.43%</span> of total emission for protocol development, ecosystem growth, and social good. <Link href="/docs/introduction/ergo-foundation" className="text-cyan-400 underline">Transparency report</Link>.</p>
         </div>
         {/* Mining & Emission Duration Section */}
         <div className="bg-green-400/10 rounded-xl p-6 mb-8">
@@ -220,7 +220,7 @@ export default function AutolykosPage() {
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
             <Coins className="w-6 h-6 text-orange-400" /> Sustaining Ergo Mining
           </h2>
-          <p className="text-gray-300 mb-4">After 2045, miners are incentivized by additional revenue streams (fees, storage rent, etc.) to secure the network. <a href="#" className="text-cyan-400 underline">Learn more</a>.</p>
+          <p className="text-gray-300 mb-4">After 2045, miners are incentivized by additional revenue streams (fees, storage rent, etc.) to secure the network. <Link href="/docs/introduction/storage-rent" className="text-cyan-400 underline">Learn more</Link>.</p>
         </div>
         {/* Unique Aspects Section */}
         <div className="bg-neutral-900/50 rounded-xl p-6 mb-8">
@@ -229,7 +229,7 @@ export default function AutolykosPage() {
           </h2>
           <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-2">
             <li><span className="font-semibold text-cyan-300">Proof of No Premine:</span> Genesis state includes Bitcoin/Ethereum hashes and news headlines for verification (see mainnet.conf).</li>
-            <li><span className="font-semibold text-cyan-300">Verification Process:</span> Emission logic verified with Stainless formal verification tool. <a href="#" className="text-cyan-400 underline">Code section</a>.</li>
+            <li><span className="font-semibold text-cyan-300">Verification Process:</span> Emission logic verified with Stainless formal verification tool. <a href="https://github.com/ergoplatform/ergo" className="text-cyan-400 underline">Code section</a>.</li>
             <li><span className="font-semibold text-cyan-300">No Out-of-Thin-Air Emission:</span> "Coinbase" transaction does not create new tokens out of thin air, ensuring traceability and scarcity.</li>
           </ul>
         </div>
@@ -321,16 +321,6 @@ export default function AutolykosPage() {
               <p className="text-gray-300 mb-4">"Weak blocks" are block candidates with lower difficulty, propagated with new transactions to optimize bandwidth and speed up confirmations. They also help enable efficient sidechains. <a href="../uses/sidechains/weak-blocks.md" className="text-cyan-400 underline">Read more</a>.</p>
             </div>
           </div>
-        </div>
-      </TabsContent>
-
-      {/* Diff. Adjustment Tab */}
-      <TabsContent value="diff-adjustment">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Repeat className="w-6 h-6 text-blue-400" /> Diff. Adjustment
-          </h2>
-          <p className="text-gray-400">Content coming soon...</p>
         </div>
       </TabsContent>
 

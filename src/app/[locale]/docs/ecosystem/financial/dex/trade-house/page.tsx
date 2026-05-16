@@ -138,22 +138,22 @@ export default function TradeHousePage() {
               <h4 className="font-semibold text-cyan-400 mb-2">Resources</h4>
               <ul className="list-disc pl-6 text-gray-300 text-base mb-4">
                 <li>
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="/docs/ecosystem/financial/dex/trade-house" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     Source code <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="/docs/ecosystem/financial/dex/trade-house" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     v2 contracts <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="/docs/ecosystem/financial/dex/trade-house" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     Research & Development: Auction House V2 <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
+                  <a href="/docs/ecosystem/financial/dex/trade-house" className="text-cyan-300 hover:underline inline-flex items-center align-baseline gap-1" target="_blank" rel="noopener noreferrer">
                     Artist Guidelines <ExternalLink className="w-4 h-4 mb-0.5" />
                   </a>
                 </li>

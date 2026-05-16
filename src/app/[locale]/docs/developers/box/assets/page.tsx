@@ -33,12 +33,48 @@ export default function BoxAssetsPage() {
           </div>
         </section>
 
-        {/* Content Placeholder */}
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-8">
           <h2 className="text-2xl font-bold mb-4 text-purple-400">Box Assets Overview</h2>
           <p className="text-gray-300 mb-4">
-            Content coming soon...
+            Ergo boxes can carry ERG and native tokens at the same time. Tokens are first-class ledger objects: they move in transaction outputs just like ERG, and smart contracts can inspect their token IDs and amounts during validation.
           </p>
+          <div className="grid md:grid-cols-2 gap-4 mt-6">
+            <div className="bg-neutral-900/60 border border-neutral-700 rounded-lg p-4">
+              <h3 className="font-semibold text-white mb-2">Native tokens</h3>
+              <p className="text-gray-300 text-sm">
+                A token is identified by the ID of the first input box in the minting transaction. That deterministic rule lets wallets and contracts verify token identity without a separate registry.
+              </p>
+            </div>
+            <div className="bg-neutral-900/60 border border-neutral-700 rounded-lg p-4">
+              <h3 className="font-semibold text-white mb-2">Box limits</h3>
+              <p className="text-gray-300 text-sm">
+                A box can contain multiple assets, but transaction builders should keep outputs compact and avoid unnecessary token dust because every box must remain economical to store.
+              </p>
+            </div>
+            <div className="bg-neutral-900/60 border border-neutral-700 rounded-lg p-4">
+              <h3 className="font-semibold text-white mb-2">NFT metadata</h3>
+              <p className="text-gray-300 text-sm">
+                NFTs are usually represented as native tokens with supply one, plus metadata in registers or ecosystem standards that wallets and marketplaces understand.
+              </p>
+            </div>
+            <div className="bg-neutral-900/60 border border-neutral-700 rounded-lg p-4">
+              <h3 className="font-semibold text-white mb-2">Contract checks</h3>
+              <p className="text-gray-300 text-sm">
+                ErgoScript can require exact token IDs, minimum amounts, or preservation rules across outputs, which makes token-aware protocols possible without custom chain logic.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/docs/developers/data-model-apis/assets/tokens" className="text-purple-300 hover:text-purple-200 underline">
+              Token data model
+            </Link>
+            <Link href="/docs/developers/data-model-apis/assets/nfts/minting" className="text-purple-300 hover:text-purple-200 underline">
+              NFT minting
+            </Link>
+            <Link href="/docs/developers/data-model-apis/registers" className="text-purple-300 hover:text-purple-200 underline">
+              Box registers
+            </Link>
+          </div>
         </div>
       </div>
     </div>

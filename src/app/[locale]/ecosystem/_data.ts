@@ -540,7 +540,7 @@ The service runs through smart contracts that execute swaps based on predefined 
 
 GuapSwap demonstrates practical utility of smart contracts for the mining community. By automating common operations, it saves time and enables consistent execution of swap strategies regardless of market conditions. The tool complements Ergo's Autolykos mining algorithm by making reward management more accessible.`,
     icon: "⛏️", 
-    url: "#",
+    url: "https://github.com/GuapSwap/guapswap",
     github: "https://github.com/GuapSwap/guapswap",
     features: ["Mining Rewards", "Auto-swap", "Profit Management", "Miner Tools"],
     technologies: ["eUTXO", "ErgoScript", "Autolykos"],
@@ -559,7 +559,7 @@ The design builds on lessons from SigmaUSD and other algorithmic stablecoins, ad
 
 DexyGold explores how blockchain technology can create accessible exposure to gold prices without requiring physical custody or trust in centralized issuers. The prototype demonstrates Ergo's capability for implementing sophisticated financial instruments while maintaining decentralization and transparency.`,
     icon: "🥇", 
-    url: "#",
+    url: "/docs/ecosystem/financial/monetary-systems/dexygold",
     features: ["Gold-pegged Stablecoin", "Algorithmic Design", "Oracle Integration", "ERG Collateral"],
     technologies: ["eUTXO", "ErgoScript", "Oracle Pools"],
     relatedTags: ["DeFi", "Oracle Pools", "Stablecoin"]
@@ -632,7 +632,7 @@ Community members can earn ERGONE tokens by completing marketing tasks, creating
 
 ErgOne demonstrates how blockchain tokens can coordinate community efforts toward shared goals. By making marketing participatory and incentive-aligned, the platform harnesses the enthusiasm of the Ergo community while providing measurable contributions to ecosystem visibility and adoption.`,
     icon: "📢", 
-    url: "#",
+    url: "/ecosystem/ergone",
     features: ["Marketing Platform", "Community Driven", "Token Incentives", "Project Promotion"],
     technologies: ["eUTXO", "ErgoScript", "Native Tokens"],
     relatedTags: ["Community", "Marketing", "Native Tokens"]
@@ -650,7 +650,7 @@ The platform implements time-locks through ErgoScript smart contracts that preve
 
 Hodlbox adds an entertaining layer to the serious practice of long-term investing. The treasure chest metaphor and NFT collectibles create engagement beyond pure financial mechanics. The platform demonstrates how DeFi can incorporate gamification elements while maintaining trustless execution through smart contracts.`,
     icon: "📦", 
-    url: "#",
+    url: "/docs/ecosystem/financial/degenerate-finance/hodlbox",
     features: ["HODL Incentives", "Fund Locking", "NFT Rewards", "Long-term Savings"],
     technologies: ["eUTXO", "ErgoScript", "Native Tokens"],
     relatedTags: ["DeFi", "NFT", "Savings"]
@@ -686,7 +686,7 @@ The tool leverages Ergo's eUTXO model where multiple inputs and outputs can be c
 
 Single Tx Swap provides essential infrastructure for trustless peer-to-peer trading. Unlike escrow-based solutions that lock funds temporarily, atomic swaps complete instantly with no waiting period. This efficiency makes the tool ideal for OTC trades and direct exchanges where both parties are ready to transact.`,
     icon: "⚡", 
-    url: "#",
+    url: "/docs/ecosystem/financial/dex/single-tx-swap",
     features: ["Atomic Swaps", "Single Transaction", "P2P Exchange", "Fast Execution"],
     technologies: ["eUTXO", "ErgoScript"],
     relatedTags: ["Trading", "eUTXO", "P2P"]
@@ -801,7 +801,7 @@ The framework draws inspiration from historical monetary systems and modern conc
 
 Developed by Ergo core developer kushti, ChainCash represents cutting-edge research into programmable money. The project demonstrates how blockchain technology can support diverse monetary experiments while maintaining transparency and preventing fraud. It contributes to Ergo's broader mission of financial innovation and inclusion.`,
     icon: "💰", 
-    url: "#",
+    url: "https://github.com/kushti/chaincash",
     github: "https://github.com/kushti/chaincash",
     features: ["P2P Money", "Custom Currencies", "Trust-based Backing", "Monetary Framework"],
     technologies: ["eUTXO", "ErgoScript"],
@@ -825,7 +825,7 @@ The reserve coin mechanism is elegant: when ERG price rises, the reserve becomes
 
 SigRSV is attractive for users who are bullish on ERG and want leveraged exposure while contributing to ecosystem stability. The protocol enforces reserve ratio limits (400-800%) that prevent both excessive leverage and under-collateralization. Minting and redemption occur through smart contracts using Oracle Pool price feeds, making the entire process transparent and trustless.`,
     icon: "🏛️", 
-    url: "#",
+    url: "https://sigmausd.io/#/bank",
     docs: "https://docs.ergoplatform.com/uses/sigmausd/",
     relatedTags: ["DeFi", "Oracle Pools", "eUTXO"],
     features: ["Reserve Coin", "ERG Exposure", "SigmaUSD Backing", "Yield Potential"],
@@ -844,7 +844,7 @@ The project integrates with Crux Finance for portfolio tracking and analytics, a
 
 EXLE represents ongoing innovation in Ergo DeFi, exploring how traditional lending primitives can be adapted to the eUTXO architecture. The protocol's development contributes to Ergo's goal of providing a full suite of decentralized financial tools while maintaining the security and predictability benefits of the extended UTXO model.`,
     icon: "🏪", 
-    url: "#",
+    url: "/docs/ecosystem/financial/defi/exle",
     features: ["Lending Protocol", "Borrowing", "DeFi Integration", "Crux Finance Integration"],
     technologies: ["eUTXO", "ErgoScript"],
     relatedTags: ["DeFi", "eUTXO", "Smart Contracts"]

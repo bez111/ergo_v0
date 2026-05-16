@@ -688,7 +688,7 @@
       "lastUpdated": "最終更新：",
       "meta": {
         "slug": "stablecoins",
-        "ogImage": "/og-stablecoins.png",
+        "ogImage": "/og/use/og-stablecoins.png",
         "canonicalPath": "/use/stablecoins"
       },
       "seo": {
@@ -929,8 +929,8 @@
       "lastUpdated": "最終更新：",
       "meta": {
         "slug": "privacy",
-        "ogImage": "/og-privacy.png",
-        "canonicalPath": "/use/privacy-confidentiality"
+        "ogImage": "/og/use/og-privacy.png",
+        "canonicalPath": "/use/privacy"
       },
       "seo": {
         "title": "Ergoのプライバシーと機密性 | 金融プライバシーソリューション",
@@ -1152,8 +1152,8 @@
       "lastUpdated": "最終更新：",
       "meta": {
         "slug": "identity",
-        "ogImage": "/og-identity.png",
-        "canonicalPath": "/use/identity-reputation"
+        "ogImage": "/og/use/og-identity.png",
+        "canonicalPath": "/use/identity"
       },
       "seo": {
         "title": "Ergoのアイデンティティとレピュテーション | 自己主権アイデンティティ",
@@ -1364,8 +1364,8 @@
       "lastUpdated": "最終更新:",
       "meta": {
         "slug": "bridges",
-        "ogImage": "/og-bridges.png",
-        "canonicalPath": "/use/cross-chain-bridges"
+        "ogImage": "/og/use/og-bridges.png",
+        "canonicalPath": "/use/bridges"
       },
       "seo": {
         "title": "Ergoのクロスチェーンブリッジ | 相互運用ソリューション",
@@ -1579,8 +1579,8 @@
       "lastUpdated": "最終更新:",
       "meta": {
         "slug": "daos",
-        "ogImage": "/og-daos.png",
-        "canonicalPath": "/use/daos-alternative-economies"
+        "ogImage": "/og/use/og-daos.png",
+        "canonicalPath": "/use/daos"
       },
       "seo": {
         "title": "ErgoのDAO・オルタナティブエコノミー | 分散型ガバナンス",
@@ -1790,8 +1790,8 @@
       "lastUpdated": "最終更新:",
       "meta": {
         "slug": "nfts",
-        "ogImage": "/og-nfts.png",
-        "canonicalPath": "/use/nfts-digital-assets"
+        "ogImage": "/og/use/og-nfts.png",
+        "canonicalPath": "/use/nfts"
       },
       "seo": {
         "title": "ErgoのNFT・デジタルアセット | 真のデジタル所有権",
@@ -1998,8 +1998,8 @@
       "lastUpdated": "最終更新:",
       "meta": {
         "slug": "oracles",
-        "ogImage": "/og-oracles.png",
-        "canonicalPath": "/use/oracles-data-feeds"
+        "ogImage": "/og/use/og-oracles.png",
+        "canonicalPath": "/use/oracles"
       },
       "seo": {
         "title": "Ergoのオラクル・データフィード | 分散型データインフラ",
@@ -2207,8 +2207,8 @@
       "lastUpdated": "最終更新:",
       "meta": {
         "slug": "gaming",
-        "ogImage": "/og-gaming.png",
-        "canonicalPath": "/use/gaming-metaverse"
+        "ogImage": "/og/use/og-gaming.png",
+        "canonicalPath": "/use/gaming"
       },
       "seo": {
         "title": "Ergoのゲーム・メタバース | ブロックチェーンゲーム",

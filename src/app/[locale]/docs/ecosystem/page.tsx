@@ -86,7 +86,7 @@ export default function EcosystemPage() {
     {
       name: "ErgoScript",
       description: "A robust, high-level smart contract language for expressive and auditable decentralized logic.",
-      link: "/docs/introduction/ergoscript",
+      link: "/technology/ergoscript",
       icon: Code
     },
     {
@@ -116,7 +116,7 @@ export default function EcosystemPage() {
     {
       name: "Scaling",
       description: "Layer-1 optimizations, stateless clients, and ongoing sharding research for efficient, future-proof growth.",
-      link: "/docs/introduction/scaling",
+      link: "/docs/introduction/roadmap/scaling-roadmap",
       icon: GitBranch
     },
     {

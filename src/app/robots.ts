@@ -52,7 +52,7 @@ export default function robots(): MetadataRoute.Robots {
           '/wallet/unlock',
           '/wallet/deriveNextKey',
           '/wallet/generateCommitments',
-          '/wallet/testnet-faucet',
+          '/wallet',
           '/script/*', // node API endpoints
           '/utxo/*', // node API endpoints
           '/*.json$',

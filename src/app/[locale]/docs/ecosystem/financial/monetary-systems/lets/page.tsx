@@ -38,7 +38,7 @@ export default function LETSPage() {
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Monetary Systems
           </Link>
           <a
-            href="#"
+            href="/docs/ecosystem/financial/monetary-systems/trustless-lets"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-orange-400 hover:text-orange-300 hover:bg-neutral-700"
@@ -282,28 +282,28 @@ export default function LETSPage() {
           <BookOpen className="w-6 h-6 text-blue-400" /> Explore Further
         </h2>
         <div className="grid md:grid-cols-2 gap-4">
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <a href="/docs/ecosystem/financial/monetary-systems/basic-implementation" target="_blank" rel="noopener noreferrer"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition">
             <h4 className="font-bold text-blue-400 mb-2 flex items-center gap-2">
               <FileText className="w-5 h-5" /> Draft Contracts
             </h4>
             <p className="text-gray-300 text-sm">For a basic implementation of LETS, check out our basic implementation guide.</p>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <a href="/docs/ecosystem/financial/monetary-systems/trustless-lets" target="_blank" rel="noopener noreferrer"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition">
             <h4 className="font-bold text-green-400 mb-2 flex items-center gap-2">
               <Shield className="w-5 h-5" /> Trustless LETS
             </h4>
             <p className="text-gray-300 text-sm">Learn more about creating a fully autonomous LETS system with Trustless LETS.</p>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <a href="/docs/ecosystem/financial/defi/mutual-credit" target="_blank" rel="noopener noreferrer"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition">
             <h4 className="font-bold text-purple-400 mb-2 flex items-center gap-2">
               <BookOpen className="w-5 h-5" /> Community Insights
             </h4>
             <p className="text-gray-300 text-sm">Read our blog post for a deeper introduction to LETS.</p>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.ergoforum.org/" target="_blank" rel="noopener noreferrer"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition">
             <h4 className="font-bold text-orange-400 mb-2 flex items-center gap-2">
               <MessageCircle className="w-5 h-5" /> Latest Developments

@@ -71,7 +71,7 @@ export default function ContributePage() {
                   <b>Spread the Word:</b> Help raise awareness about Ergo through social media, content creation (articles, videos), community engagement, and organizing local meetups.
                 </li>
                 <li>
-                  <b>Guide:</b> <Link href="/docs/introduction/marketing" className="text-cyan-400 hover:underline">Marketing Contributions</Link>
+                  <b>Guide:</b> <Link href="/start/community/marketing" className="text-cyan-400 hover:underline">Marketing Contributions</Link>
                 </li>
               </ul>
             </div>

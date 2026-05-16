@@ -70,7 +70,7 @@ export default function CompilersPage() {
       <div className="space-y-6">
         <div className="text-gray-300 mb-8 max-w-3xl">
           There are two implementations of the ErgoScript compiler and ErgoTree interpreter for the{' '}
-          <Link href="/docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">
             <em>'Sigma Language'</em>
           </Link>.
         </div>
@@ -82,7 +82,7 @@ export default function CompilersPage() {
               sigmastate-interpreter
             </Link>{' '}
             for JVM languages which is used by{' '}
-            <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">
               AppKit
             </Link>
           </li>

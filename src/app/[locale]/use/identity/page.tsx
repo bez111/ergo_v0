@@ -154,7 +154,7 @@ export default function IdentityReputationPage() {
               "@type": "ListItem", 
               position: 2,
               name: t("schema.breadcrumbs.identityReputation"),
-              item: "https://www.ergoblockchain.org/use/identity-reputation"
+              item: "https://www.ergoblockchain.org/use/identity"
             }
           ]
         }}
@@ -183,7 +183,7 @@ export default function IdentityReputationPage() {
           <Breadcrumbs
             items={[
               { name: t("schema.breadcrumbs.useCases"), href: "/use" },
-              { name: t("schema.breadcrumbs.identityReputation"), href: "/use/identity-reputation" }
+              { name: t("schema.breadcrumbs.identityReputation"), href: "/use/identity" }
             ]}
             className="mb-8"
           />

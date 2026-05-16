@@ -18,8 +18,8 @@ export default function JDEPage() {
           Back
         </Link>
       </div>
-      <p className="text-gray-300 mb-4">Ergo enables sophisticated dApps via smart contracts written in <a href="/docs/developers/tooling/pathways/ergoscript" className="text-cyan-400 hover:underline">ErgoScript</a>.</p>
-      <p className="text-gray-300 mb-4">Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the <a href="/docs/developers/tooling/pathways/appkit" className="text-cyan-400 hover:underline">AppKit</a> framework) or Rust (using <a href="/docs/developers/tooling/pathways/headless" className="text-cyan-400 hover:underline">HDF</a> or <a href="https://github.com/ergoplatform/sigma-rust" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">sigma-rust</a>).</p>
+      <p className="text-gray-300 mb-4">Ergo enables sophisticated dApps via smart contracts written in <a href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</a>.</p>
+      <p className="text-gray-300 mb-4">Interacting with such smart contracts requires a developer to write code in a language such as Scala (using the <a href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">AppKit</a> framework) or Rust (using <a href="/docs/developers/tooling/frameworks/headless-dapp-framework" className="text-cyan-400 hover:underline">HDF</a> or <a href="https://github.com/ergoplatform/sigma-rust" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">sigma-rust</a>).</p>
       <p className="text-gray-300 mb-4">The <a href="https://github.com/ergoplatform/ergo-jde" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">JSON dApp Environment (JDE)</a> described on this page is another programming tool you can use to interact with Ergo dApps. The differentiating feature of JDE is that its programming language is <b>JSON</b>.</p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Goals</h2>
       <ol className="list-decimal pl-6 text-gray-300 mb-4 space-y-1">

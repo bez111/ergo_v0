@@ -114,7 +114,7 @@ export default function DiffiePage() {
         </div>
 
         <p className="text-gray-300 mb-6">
-          For more information, see <a href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a>.
+          For more information, see <a href="/docs/ecosystem/privacy/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a>.
         </p>
 
         <h3 className="text-2xl font-bold mb-4 text-white">Stealth Addresses</h3>
@@ -129,7 +129,7 @@ export default function DiffiePage() {
         </ul>
 
         <p className="text-gray-300 mb-6">
-          For more details, refer to the <a href="/docs/developers/cryptographic-primitives/stealth-address" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a> page.
+          For more details, refer to the <a href="/docs/ecosystem/privacy/stealth-addresses" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a> page.
         </p>
 
         <hr className="border-neutral-700 my-8" />
@@ -213,8 +213,8 @@ export default function DiffiePage() {
         </p>
 
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-          <li><a href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a></li>
-          <li><a href="/docs/developers/cryptographic-primitives/stealth-address" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a></li>
+          <li><a href="/docs/ecosystem/privacy/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a></li>
+          <li><a href="/docs/ecosystem/privacy/stealth-addresses" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a></li>
         </ul>
       </div>
     </>

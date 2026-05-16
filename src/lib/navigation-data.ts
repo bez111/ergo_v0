@@ -15,6 +15,11 @@ export const mainNavItems = [
         description: "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.",
       },
       {
+        title: "Playground",
+        href: "/build/playground",
+        description: "Compile ErgoScript in the browser with Monaco, Fleet compiler, and sigma-rust WASM.",
+      },
+      {
         title: "Demos",
         href: "/demos",
         description: "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",

@@ -368,11 +368,11 @@ const tx = appkit.newTx()
                </li>
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Bank Wallet</a>
+                 <a href="https://sigmausd.io/#/bank" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Bank Wallet</a>
                </li>
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">SigmaUSD Calculator</a>
+                 <a href="https://sigmausd.io/" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">SigmaUSD Calculator</a>
                </li>
              </ul>
            </div>
@@ -413,11 +413,11 @@ const tx = appkit.newTx()
              <ul className="space-y-2 text-gray-300">
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Noob tries to explain SigmaUSD/RSV (ELI5)</a>
+                 <a href="/docs/ecosystem/financial/monetary-systems/sigmausd" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Noob tries to explain SigmaUSD/RSV (ELI5)</a>
                </li>
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">PSA: sigRSV is not a simple long position</a>
+                 <a href="/docs/ecosystem/financial/monetary-systems/sigmausd" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">PSA: sigRSV is not a simple long position</a>
                </li>
              </ul>
            </div>
@@ -427,19 +427,19 @@ const tx = appkit.newTx()
              <ul className="space-y-2 text-gray-300">
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Ergo Summit 2021 - The IOHK Perspective</a>
+                 <a href="/docs/ecosystem/financial/monetary-systems/sigmausd" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Ergo Summit 2021 - The IOHK Perspective</a>
                </li>
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Overview Video (with diagrams)</a>
+                 <a href="/docs/ecosystem/financial/monetary-systems/sigmausd" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Overview Video (with diagrams)</a>
                </li>
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">YouTube Playlist</a>
+                 <a href="/docs/ecosystem/financial/monetary-systems/sigmausd" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">YouTube Playlist</a>
                </li>
                <li className="flex items-center gap-2">
                  <ExternalLink className="w-4 h-4 text-orange-400" />
-                 <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Buying Guide</a>
+                 <a href="/docs/ecosystem/financial/monetary-systems/sigmausd" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Buying Guide</a>
                </li>
              </ul>
            </div>

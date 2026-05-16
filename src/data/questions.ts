@@ -298,7 +298,7 @@ export const questions: QuestionEntry[] = [
       { type: "glossary", title: "Autolykos", url: "/learn/glossary/autolykos", badge: "Algorithm" },
       { type: "infographic", title: "Autolykos Mining", url: "/infographics/autolykos-mining-without-masters", badge: "Visual" },
       { type: "technology", title: "Secure PoW", url: "/technology/secure-pow", badge: "Technical" },
-      { type: "doc", title: "Mining Setup Guide", url: "/docs/miners/mining-setup", badge: "Documentation" }
+      { type: "doc", title: "Mining Setup Guide", url: "/miners", badge: "Documentation" }
     ],
     relatedQuestions: ["is-ergo-mining-profitable", "what-is-autolykos", "best-gpu-for-ergo-mining"],
     jsonLdType: "HowTo",

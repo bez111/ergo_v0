@@ -1,6 +1,6 @@
 ---
 title: "Accord Protocol Q2 2026 更新：Ergo 代理经济堆栈中的成果"
-slug: "/blog/accord-protocol-q2-2026-update"
+slug: "/blog/ergo-agent-economy-q2-2026"
 seo_title: "Accord Protocol Q2 2026：AI 代理支付 SDK、MCP 服务器和 Ergo 测试网演示"
 meta_description: "Accord Protocol Q2 2026 更新：AI 代理支付 SDK、Ergo Notes、MCP 服务器、LangChain/OpenAI/CrewAI/AutoGen 适配器、测试网演示和审计门控主网路线图。"
 excerpt: "在首个 Ergo 代理支付 SDK 发布两个月后，Accord Protocol 现已推出测试网优先的协议层、完整 Note 生命周期、框架适配器、MCP 工具和十个可运行的示例。"
@@ -208,7 +208,7 @@ x402 关注 HTTP 上的支付：资源需要支付，客户端提交支付负载
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/accord-protocol-q2-2026-update",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergo-agent-economy-q2-2026",
   "keywords": ["Accord Protocol", "AI agent payments", "Ergo", "MCP", "x402", "testnet"]
 }
 ```

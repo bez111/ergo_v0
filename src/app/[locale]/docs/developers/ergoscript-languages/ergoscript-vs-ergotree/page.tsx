@@ -31,10 +31,10 @@ export default function ErgoScriptVsErgoTreePage() {
           <Info className="w-6 h-6 text-orange-400" /> Language Overview
         </h2>
         <p className="text-gray-300 mb-4">
-          <a href="#" className="text-orange-400 underline hover:text-orange-300">ErgoScript</a> is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.
+          <Link href="/docs/developers/ergoscript-languages" className="text-orange-400 underline hover:text-orange-300">ErgoScript</Link> is a high-level, developer-friendly language for writing smart contracts that are then compiled to ErgoTree before being written to the blockchain.
         </p>
         <p className="text-gray-300">
-          The <a href="#" className="text-orange-400 underline hover:text-orange-300">Ergo node</a> does not understand ErgoScript. Instead, it uses a low-level language called <span className="font-bold text-white">ErgoTree</span>, which is a "tree-based" language (somewhat like XML).
+          The <Link href="/docs/developers/infrastructure/node" className="text-orange-400 underline hover:text-orange-300">Ergo node</Link> does not understand ErgoScript. Instead, it uses a low-level language called <span className="font-bold text-white">ErgoTree</span>, which is a "tree-based" language (somewhat like XML).
         </p>
       </div>
 

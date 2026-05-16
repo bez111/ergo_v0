@@ -1438,7 +1438,7 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
               </summary>
               <div className="px-6 pb-6 pt-2 text-gray-300 text-base">
                 <h4 className="font-semibold text-cyan-400 mb-2">Supported Tokens</h4>
-                <p className="text-gray-300 mb-4">You can see a full list of locked assets <a href="#" className="text-cyan-400 underline">here</a>.</p>
+                <p className="text-gray-300 mb-4">You can see a full list of locked assets <a href="https://app.rosen.tech" className="text-cyan-400 underline">here</a>.</p>
                 
                 <Accordion type="multiple" className="mb-8">
                   <AccordionItem value="ergo">

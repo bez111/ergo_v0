@@ -1,6 +1,6 @@
 ---
 title: "KI-Agent-Zahlungen 2026: x402, Stripe, Ethereum, Solana und Ergo/Accord im Vergleich"
-slug: "/blog/ai-agent-payments-2026-report"
+slug: "/blog/state-of-agent-payments-2026"
 seo_title: "KI-Agent-Zahlungen 2026: x402, Stripe, Ethereum, Solana und Ergo im Vergleich"
 meta_description: "Ein Bericht 2026 über KI-Agent-Zahlungen: x402, Stripe Agentic Commerce, Ethereum L2s, Solana, Lightning und Ergo/Accord im Vergleich über Mikrozahlungen, Kredite, Prädikate und Abwicklung."
 excerpt: "Die Landschaft der Agent-Zahlungen entwickelt sich schnell. x402 macht HTTP-Zahlungen praktisch, Stripe baut agentic commerce, und Ergo/Accord konzentriert sich auf programmierbare Arbeitsverifikation und Abwicklung."
@@ -266,7 +266,7 @@ Ergos Basis-Chain ist live, aber Accord, ChainCash/Basis-Referenzkontrakte und A
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agent-payments-2026-report",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/state-of-agent-payments-2026",
   "keywords": ["KI-Agent-Zahlungen", "x402", "Stripe Agentic Commerce", "Accord Protocol", "Ergo"]
 }
 ```

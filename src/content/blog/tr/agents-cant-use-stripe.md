@@ -1,6 +1,6 @@
 ---
 title: "Neden AI Ajanlar Stripe'dan Daha Fazlasına İhtiyaç Duyar: Agentic Commerce vs Otonom İş Mutabakatı"
-slug: "/blog/ai-agents-need-more-than-stripe"
+slug: "/blog/agents-cant-use-stripe"
 seo_title: "Neden AI Ajanlar Stripe'dan Daha Fazlasına İhtiyaç Duyar: Agentic Commerce vs Otonom İş Mutabakatı"
 meta_description: "Stripe, x402 ve MPP agentic commerce ve makine ödemelerini sağlar. Ergo ve Accord programlanabilir iş doğrulaması, Notes, acceptance predicates ve zincirleme mutabakatı ekler."
 excerpt: "Stripe, agentic commerce için ciddi altyapı inşa ediyor. Kalan boşluk otonom iş mutabakatı: programlanabilir kabul, kredi Notes ve doğrulanabilir makbuzlar."
@@ -234,7 +234,7 @@ Stripe'ın ticaret ürünleri üretim altyapısıdır. Accord ve Ergo ajan ödem
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agents-need-more-than-stripe",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/agents-cant-use-stripe",
   "keywords": ["Stripe agentic commerce", "AI agent payments", "x402", "Accord Protocol", "Ergo"]
 }
 ```

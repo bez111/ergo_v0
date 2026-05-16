@@ -78,7 +78,7 @@ export default function RoyaltiesPage() {
               <Link href="/docs/developers/data-model-apis/assets/nfts/eip22" className="text-cyan-400 hover:underline">EIP-0022: Auction Contract</Link>
             </li>
             <li>
-              <Link href="/docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>
+              <Link href="/docs/developers/data-model-apis/assets/nfts/minting/v1-v2" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>
             </li>
           </ul>
         </div>

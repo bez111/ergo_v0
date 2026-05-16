@@ -180,7 +180,7 @@ export default function EUTXOModelPage() {
                     </h3>
                     <div className="grid grid-cols-1 gap-4">
                       <Link
-                        href="/docs/protocol/eutxo"
+                        href="/technology/eutxo-model"
                         className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
                       >
                         <div className="flex items-start gap-3">

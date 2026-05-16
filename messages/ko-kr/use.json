@@ -688,7 +688,7 @@
       "lastUpdated": "마지막 업데이트:",
       "meta": {
         "slug": "stablecoins",
-        "ogImage": "/og-stablecoins.png",
+        "ogImage": "/og/use/og-stablecoins.png",
         "canonicalPath": "/use/stablecoins"
       },
       "seo": {
@@ -929,8 +929,8 @@
       "lastUpdated": "최종 업데이트:",
       "meta": {
         "slug": "privacy",
-        "ogImage": "/og-privacy.png",
-        "canonicalPath": "/use/privacy-confidentiality"
+        "ogImage": "/og/use/og-privacy.png",
+        "canonicalPath": "/use/privacy"
       },
       "seo": {
         "title": "Ergo의 프라이버시 및 기밀성 | 금융 프라이버시 솔루션",
@@ -1152,8 +1152,8 @@
       "lastUpdated": "최종 업데이트:",
       "meta": {
         "slug": "identity",
-        "ogImage": "/og-identity.png",
-        "canonicalPath": "/use/identity-reputation"
+        "ogImage": "/og/use/og-identity.png",
+        "canonicalPath": "/use/identity"
       },
       "seo": {
         "title": "Ergo의 신원 및 평판 | 자기 주권 신원",
@@ -1364,8 +1364,8 @@
       "lastUpdated": "최종 업데이트:",
       "meta": {
         "slug": "bridges",
-        "ogImage": "/og-bridges.png",
-        "canonicalPath": "/use/cross-chain-bridges"
+        "ogImage": "/og/use/og-bridges.png",
+        "canonicalPath": "/use/bridges"
       },
       "seo": {
         "title": "Ergo의 크로스체인 브릿지 | 상호운용성 솔루션",
@@ -1579,8 +1579,8 @@
       "lastUpdated": "최종 업데이트:",
       "meta": {
         "slug": "daos",
-        "ogImage": "/og-daos.png",
-        "canonicalPath": "/use/daos-alternative-economies"
+        "ogImage": "/og/use/og-daos.png",
+        "canonicalPath": "/use/daos"
       },
       "seo": {
         "title": "Ergo의 DAO 및 대안 경제 | 탈중앙화 거버넌스",
@@ -1790,8 +1790,8 @@
       "lastUpdated": "마지막 업데이트:",
       "meta": {
         "slug": "nfts",
-        "ogImage": "/og-nfts.png",
-        "canonicalPath": "/use/nfts-digital-assets"
+        "ogImage": "/og/use/og-nfts.png",
+        "canonicalPath": "/use/nfts"
       },
       "seo": {
         "title": "Ergo의 NFT 및 디지털 자산 | 진정한 디지털 소유권",
@@ -1998,8 +1998,8 @@
       "lastUpdated": "마지막 업데이트:",
       "meta": {
         "slug": "oracles",
-        "ogImage": "/og-oracles.png",
-        "canonicalPath": "/use/oracles-data-feeds"
+        "ogImage": "/og/use/og-oracles.png",
+        "canonicalPath": "/use/oracles"
       },
       "seo": {
         "title": "Ergo의 오라클 및 데이터 피드 | 탈중앙화 데이터 인프라",
@@ -2207,8 +2207,8 @@
       "lastUpdated": "마지막 업데이트:",
       "meta": {
         "slug": "gaming",
-        "ogImage": "/og-gaming.png",
-        "canonicalPath": "/use/gaming-metaverse"
+        "ogImage": "/og/use/og-gaming.png",
+        "canonicalPath": "/use/gaming"
       },
       "seo": {
         "title": "Ergo의 게임 및 메타버스 | 블록체인 게임",

@@ -11,25 +11,25 @@ export function EcosystemSection() {
       name: "ErgoDEX",
       description: "Decentralized exchange for Ergo and Cardano ecosystems",
       category: "DeFi",
-      url: "/ecosystem/projects/ergodex",
+      url: "/ecosystem/ergodex",
     },
     {
       name: "Rosen Bridge",
       description: "Decentralized cross-chain bridge connecting Ergo to Bitcoin, Cardano, and Ethereum",
       category: "Bridge",
-      url: "/ecosystem/projects/rosen-bridge",
+      url: "/ecosystem/rosen-bridge",
     },
     {
       name: "SigmaUSD",
       description: "Algorithmic stablecoin protocol",
       category: "Stablecoin",
-      url: "/ecosystem/projects/sigmausd",
+      url: "/ecosystem/sigmausd",
     },
     {
       name: "Ergo Mixer",
       description: "Non-custodial mixing service for privacy",
       category: "Privacy",
-      url: "/ecosystem/projects/ergomixer",
+      url: "/ecosystem/ergomixer",
     },
   ]
 

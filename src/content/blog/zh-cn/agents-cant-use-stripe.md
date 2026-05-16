@@ -1,6 +1,6 @@
 ---
 title: "为什么 AI 代理需要的不仅仅是 Stripe：代理商务 vs 自主工作结算"
-slug: "/blog/ai-agents-need-more-than-stripe"
+slug: "/blog/agents-cant-use-stripe"
 seo_title: "为什么 AI 代理需要的不仅仅是 Stripe：代理商务 vs 自主工作结算"
 meta_description: "Stripe、x402 和 MPP 支持代理商务和机器支付。Ergo 和 Accord 添加了可编程工作验证、Notes、验收谓词和链上结算。"
 excerpt: "Stripe 正在为代理商务建立重要基础设施。剩余的缺口是自主工作结算：可编程验收、信用 Notes 和可验证收据。"
@@ -234,7 +234,7 @@ Stripe 的商务产品是生产基础设施。Accord 和 Ergo 代理支付参考
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agents-need-more-than-stripe",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/agents-cant-use-stripe",
   "keywords": ["Stripe agentic commerce", "AI agent payments", "x402", "Accord Protocol", "Ergo"]
 }
 ```

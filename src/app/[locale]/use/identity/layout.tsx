@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "identity",
-  ogImage: "/og-identity.png",
-  canonicalPath: "/use/identity-reputation",
+  ogImage: "/og/use/og-identity.png",
+  canonicalPath: "/use/identity",
 }
 
 // i18n Metadata

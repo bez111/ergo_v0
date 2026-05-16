@@ -14,14 +14,14 @@ import { Link } from "@/i18n/navigation";
 const applications = [
   {
     title: "TabbyPOS",
-    description: "Point-of-sale solution for merchants in the Ergo ecosystem. (Description coming soon)",
+    description: "Crypto point-of-sale system for merchants, with dashboards, customer checkout flows, and multi-chain payment support including Ergo.",
     icon: Store,
     color: "text-orange-400",
     link: "/docs/ecosystem/applications/tabbypos"
   },
   {
     title: "ZenGate Global",
-    description: "Global trade and supply chain dApp leveraging Ergo. (Description coming soon)",
+    description: "Blockchain trade and supply-chain platform using Ergo and Cardano for commercial products such as Palmyra ComDEX, Solaris Portal, and Cyberiad.",
     icon: Globe,
     color: "text-green-400",
     link: "/docs/ecosystem/applications/zenGateGlobal"

@@ -16,11 +16,11 @@ export const linkingRules: LinkRule[] = [
   // Technology Core Concepts
   {
     keywords: ['eUTXO', 'eUTXO model', 'extended UTXO'],
-    targetUrl: '/technology/eutxo',
+    targetUrl: '/technology/eutxo-model',
     title: 'Learn about eUTXO Model',
     priority: 10,
     maxLinksPerPage: 2,
-    excludePages: ['/technology/eutxo']
+    excludePages: ['/technology/eutxo-model']
   },
   {
     keywords: ['ErgoScript', 'Ergo Script', 'smart contracts'],

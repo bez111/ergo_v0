@@ -124,7 +124,7 @@ export default function AnalogErgoPage() {
 
               <h4 className="font-semibold text-cyan-400 mb-2">2-Party Atomic Swap</h4>
               <p className="text-gray-300 mb-4">
-                A working python example of a 2-party atomic swap that you can simulate from 2 shell/terminal windows is available at <a href="#" className="text-cyan-300 hover:underline">2pAtomicSwapExample</a>. This might help people reason about the way in which secrets are shared through this protocol and at what steps what data transfer or blockchain interaction is supposed to occur.
+                A working python example of a 2-party atomic swap that you can simulate from 2 shell/terminal windows is available at <Link href="/docs/ecosystem/financial/dex/analog-ergo" className="text-cyan-300 hover:underline">2pAtomicSwapExample</Link>. This might help people reason about the way in which secrets are shared through this protocol and at what steps what data transfer or blockchain interaction is supposed to occur.
               </p>
               <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1 mb-4">
                 <li>Simulate atomic swaps between two parties using cryptographic secrets.</li>

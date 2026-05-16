@@ -65,10 +65,13 @@ function readWalletConfig(): SageWalletConfig {
         "Required env vars:",
         "  SAGE_WALLET_ADDRESS  — Sage's testnet receiver address (9f… for testnet)",
         "  SAGE_RESERVE_BOX_ID  — Reserve box id Sage redeems Notes against",
-        "  SAGE_WALLET_SEED     — BIP-39 mnemonic for redemption-tx signer",
+        "  SAGE_PAYMENT_HMAC_KEY — HMAC key for short-lived premium payment tokens",
+        "Optional env vars:",
+        "  SAGE_SIGNER_URL      — external redemption signer endpoint",
         "  SAGE_NETWORK         — 'testnet' (default) or 'mainnet'",
         "",
-        "Run `npm run sage:wallet` to generate a fresh testnet wallet + Reserve.",
+        "Run `npm run sage:wallet` to generate a fresh testnet wallet.",
+        "Run `npm run sage:wallet:reserve` after funding it to create the Reserve.",
       ].join("\n"),
     )
   }
@@ -83,8 +86,9 @@ function readWalletConfig(): SageWalletConfig {
  * Three supported strategies (auto-selected by env):
  *   1. SAGE_SIGNER_URL set → POST unsigned tx, expect signed tx back.
  *      Works with any external signer service (own KMS, HSM, etc.).
- *   2. SAGE_WALLET_SEED set → derive ed25519 signer from BIP-39 seed
- *      via sigma-rust. Local, lowest latency.
+ *   2. SAGE_WALLET_SEED set in the Next.js deployment → intentionally
+ *      disabled for now; keep the mnemonic in scripts/sage-signer/.env
+ *      and use SAGE_SIGNER_URL instead.
  *   3. Neither set → throws on first sign attempt with a clear message.
  *      This lets the wallet config load without a signer (e.g. for
  *      read-only routes that just need the address).

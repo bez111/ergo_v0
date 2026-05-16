@@ -355,7 +355,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     category: "economics",
     difficulty: "intermediate",
-    docsUrl: "/docs/developers/storage-rent",
+    docsUrl: "/technology/storage-rent",
     learnMoreUrl: "/blog/storage-rent",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26",
@@ -2854,7 +2854,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     difficulty: "beginner",
     
     learnMoreUrl: "/miners",
-    docsUrl: "/docs/mining/autolykos",
+    docsUrl: "/technology/secure-pow",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",
@@ -2905,7 +2905,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "general",
     difficulty: "beginner",
     
-    learnMoreUrl: "/ecosystem/community",
+    learnMoreUrl: "/start/community",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",
@@ -3164,7 +3164,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     difficulty: "beginner",
     
     learnMoreUrl: "/miners",
-    docsUrl: "/docs/mining",
+    docsUrl: "/miners",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",
@@ -4311,7 +4311,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     difficulty: "intermediate",
     
     learnMoreUrl: "/miners",
-    docsUrl: "/docs/mining",
+    docsUrl: "/miners",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",
@@ -6592,7 +6592,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     difficulty: "intermediate",
     
     learnMoreUrl: "/miners",
-    docsUrl: "/docs/mining/autolykos",
+    docsUrl: "/technology/secure-pow",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",
@@ -6723,7 +6723,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     difficulty: "beginner",
     
     learnMoreUrl: "/miners",
-    docsUrl: "/docs/mining",
+    docsUrl: "/miners",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",
@@ -7983,7 +7983,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: "general",
     difficulty: "beginner",
     
-    learnMoreUrl: "/ecosystem/community",
+    learnMoreUrl: "/start/community",
     
     publishDate: "2024-01-01",
     updatedDate: "2025-01-15",

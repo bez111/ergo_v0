@@ -1360,7 +1360,7 @@ export default function EutxoPage() {
               <span className="text-gray-300">UTXO vs Account</span>
             </Link>
             <Link
-              href="/docs/introduction/atomic-swaps"
+              href="/docs/introduction/eutxo"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Zap className="w-5 h-5 mr-2 text-cyan-400" />
@@ -1721,7 +1721,7 @@ export default function EutxoPage() {
               <span className="text-gray-300">UTXO vs Account</span>
             </Link>
             <Link
-              href="/docs/introduction/ergo-cardano"
+              href="/compare/ergo-vs-cardano"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <GitBranch className="w-5 h-5 mr-2 text-cyan-400" />

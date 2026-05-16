@@ -1,6 +1,6 @@
 ---
 title: "Архитектурное руководство: создайте AI-агента, который платит за вызовы API на Ergo Testnet"
-slug: "/blog/build-ai-agent-pays-api-ergo-testnet"
+slug: "/blog/build-agent-pays-for-api"
 seo_title: "Архитектурное руководство: AI-агент платит за вызовы API на Ergo Testnet"
 meta_description: "Архитектурное руководство для платного API-эндпоинта и цикла платежей AI-агента на Ergo testnet: HTTP 402 challenge, проверка платежа в цепи, защита от повторного использования и контрольный список безопасности."
 excerpt: "Архитектурное руководство для платного API-эндпоинта, который AI-агент может вызвать только после создания проверяемого квитанции платежа Ergo. Включает примечания по подписанию в mock-режиме и testnet-режиме."
@@ -481,7 +481,7 @@ Commitment callId может быть отсутствующим или зако
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-ai-agent-pays-api-ergo-testnet",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-agent-pays-for-api",
   "keywords": ["Ergo testnet", "AI agent payments", "paid API", "HTTP 402", "x402", "Accord Protocol"]
 }
 ```

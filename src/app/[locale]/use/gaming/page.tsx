@@ -154,7 +154,7 @@ export default function GamingMetaversePage() {
               "@type": "ListItem", 
               position: 2,
               name: t("schema.breadcrumbs.gamingMetaverse"),
-              item: "https://www.ergoblockchain.org/use/gaming-metaverse"
+              item: "https://www.ergoblockchain.org/use/gaming"
             }
           ]
         }}
@@ -183,7 +183,7 @@ export default function GamingMetaversePage() {
           <Breadcrumbs
             items={[
               { name: t("schema.breadcrumbs.useCases"), href: "/use" },
-              { name: t("schema.breadcrumbs.gamingMetaverse"), href: "/use/gaming-metaverse" }
+              { name: t("schema.breadcrumbs.gamingMetaverse"), href: "/use/gaming" }
             ]}
             className="mb-8"
           />

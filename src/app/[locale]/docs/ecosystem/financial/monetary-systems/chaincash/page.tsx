@@ -384,15 +384,15 @@ export default function ChainCashPage() {
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">ChainCash Whitepaper</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">ChainCash Whitepaper</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Server Documentation</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Server Documentation</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Contracts Repository</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Contracts Repository</a>
               </li>
             </ul>
           </div>
@@ -402,15 +402,15 @@ export default function ChainCashPage() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Ergo Summit - Cypherpunk Finance</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Ergo Summit - Cypherpunk Finance</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">ChainCash - part II - Alex Chepurnoy</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">ChainCash - part II - Alex Chepurnoy</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Join the ChainCash Experiment</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Join the ChainCash Experiment</a>
               </li>
             </ul>
           </div>
@@ -420,15 +420,15 @@ export default function ChainCashPage() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Reserve Mint</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Reserve Mint</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Note Mint</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Note Mint</a>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-orange-400" />
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Note Spending</a>
+                <a href="https://github.com/kushti/chaincash" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Note Spending</a>
               </li>
             </ul>
           </div>

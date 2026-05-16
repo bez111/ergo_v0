@@ -232,7 +232,7 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold text-blue-300 mb-3">Development Tools</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
                   <li><Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust SDK</Link></li>
                   <li><a href="https://github.com/capt-nemo429/fleet" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Fleet (JavaScript) <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 </ul>
@@ -258,7 +258,7 @@ export default function DevelopersGuide() {
                 <h3 className="text-lg font-semibold text-green-300 mb-3">Deployment & Testing</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
                   <li><Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">Deploy & Test on Testnet</Link></li>
-                  <li><Link href="/docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools & Frameworks</Link></li>
+                  <li><Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">Testing Tools & Frameworks</Link></li>
                   <li><a href="https://thierrym1212.github.io/txbuilder/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Transaction Builder <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 </ul>
               </div>
@@ -341,7 +341,7 @@ export default function DevelopersGuide() {
                 <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Documentation</Link></li>
                 <li><a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Try ErgoScript Online <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 <li><Link href="/docs/developers/tutorials" className="text-cyan-400 hover:underline">Step-by-step Tutorials</Link></li>
-                <li><Link href="/docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
+                <li><Link href="/docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
               </ul>
             </div>
           </div>
@@ -355,7 +355,7 @@ export default function DevelopersGuide() {
               <div>
                 <h4 className="text-lg font-semibold text-orange-300 mb-3">Java/Scala</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
                   <li><Link href="/docs/developers/tooling/jde" className="text-cyan-400 hover:underline">JDE (Java Dev Environment)</Link></li>
                 </ul>
               </div>
@@ -363,7 +363,7 @@ export default function DevelopersGuide() {
                 <h4 className="text-lg font-semibold text-blue-300 mb-3">Rust</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
                   <li><Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust SDK</Link></li>
-                  <li><Link href="/docs/developers/tooling/headless" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/frameworks/headless-dapp-framework" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
                 </ul>
               </div>
               <div>
@@ -415,7 +415,7 @@ export default function DevelopersGuide() {
 
           {/* Main Tools Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/docs/developers/tooling/appkit" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/frameworks/appkit" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-colors">
               <Code className="w-8 h-8 text-orange-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-300">AppKit</h3>
               <p className="text-gray-300 text-sm">Java-based development framework for building Ergo applications</p>
@@ -427,7 +427,7 @@ export default function DevelopersGuide() {
               <p className="text-gray-300 text-sm">Rust SDK for ErgoScript development and transaction building</p>
             </Link>
 
-            <Link href="/docs/developers/tooling/headless" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/frameworks/headless-dapp-framework" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-500/30 transition-colors">
               <Globe className="w-8 h-8 text-purple-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300">Headless dApp</h3>
               <p className="text-gray-300 text-sm">Framework for building decentralized applications without UI</p>
@@ -463,9 +463,9 @@ export default function DevelopersGuide() {
               <div>
                 <h4 className="text-lg font-semibold text-blue-300 mb-3">Testing Frameworks</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools Overview</Link></li>
+                  <li><Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">Testing Tools Overview</Link></li>
                   <li><Link href="/docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Debugging Techniques</Link></li>
-                  <li><Link href="/docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
                 </ul>
               </div>
               <div>
@@ -595,9 +595,9 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-orange-300">Official SDKs</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit (Java)</Link></li>
+                  <li><Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">AppKit (Java)</Link></li>
                   <li><Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust</Link></li>
-                  <li><Link href="/docs/developers/tooling/headless" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/frameworks/headless-dapp-framework" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
                   <li><Link href="/docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik UI Toolkit</Link></li>
                   <li><Link href="/docs/developers/tooling/jde" className="text-cyan-400 hover:underline">JDE (Java)</Link></li>
                 </ul>
@@ -613,8 +613,8 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-green-300">Testing & Analysis</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
-                  <li><Link href="/docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
+                  <li><Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">Testing Tools</Link></li>
                   <li><Link href="/docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Debugging Guide</Link></li>
                   <li><a href="https://thierrym1212.github.io/txbuilder/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Transaction Builder <ExternalLink className="inline w-3 h-3 ml-1" /></a></li>
                 </ul>

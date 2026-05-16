@@ -152,7 +152,7 @@ export default function MultisigPage() {
           <p className="text-gray-300 text-sm mb-3">
             For complete details about the Minotaur multisig wallet, including installation instructions and usage guides, please refer to the dedicated documentation.
           </p>
-          <Link href="/docs/developers/infrastructure/wallets/multisig/minotaur-multisig" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/30 rounded-lg transition-colors text-orange-300 hover:text-orange-200">
+          <Link href="/docs/developers/infrastructure/wallets/multisig" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 hover:bg-orange-500/30 border border-orange-500/30 rounded-lg transition-colors text-orange-300 hover:text-orange-200">
             <BookOpen className="w-4 h-4" />
             <span>Read Minotaur MultiSig Guide</span>
             <ArrowRight className="w-4 h-4" />
@@ -228,7 +228,7 @@ export default function MultisigPage() {
           <FileText className="w-6 h-6" /> Additional Resources
         </h2>
         <ul className="space-y-2 text-gray-300">
-          <li><Link href="/docs/developers/infrastructure/wallets/multisig/minotaur-multisig" className="text-orange-400 hover:underline">Minotaur MultiSig Wallet Guide</Link></li>
+          <li><Link href="/docs/developers/infrastructure/wallets/multisig" className="text-orange-400 hover:underline">Minotaur MultiSig Wallet Guide</Link></li>
           <li><Link href="/docs/developers/infrastructure/wallets" className="text-orange-400 hover:underline">Wallet Infrastructure Overview</Link></li>
           <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:underline">Threshold Signatures</Link></li>
           <li><Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript Smart Contracts</Link></li>

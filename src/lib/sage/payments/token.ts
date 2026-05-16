@@ -32,6 +32,14 @@ function getKey(): Buffer {
   return Buffer.from(k, "utf8")
 }
 
+export function isPaymentTokenKeyConfigured(): boolean {
+  return (process.env.SAGE_PAYMENT_HMAC_KEY?.length ?? 0) >= 32
+}
+
+export function assertPaymentTokenKeyConfigured(): void {
+  void getKey()
+}
+
 export function signPaymentToken(payload: Omit<TokenPayload, "issuedAt">): string {
   const full: TokenPayload = { ...payload, issuedAt: Date.now() }
   const body = base64urlEncode(JSON.stringify(full))

@@ -414,17 +414,17 @@
                 {
                   "name": "ErgoDocs",
                   "description": "全面的開發者文檔",
-                  "link": "/build/docs"
+                  "link": "/docs/developers"
                 },
                 {
                   "name": "ErgoScript 入門",
                   "description": "學習 Ergo 的智能合約語言",
-                  "link": "/build/tutorials"
+                  "link": "/docs/developers/tutorials"
                 },
                 {
                   "name": "Ergo 遊樂場",
                   "description": "互動式編程環境",
-                  "link": "/build/playground"
+                  "link": "/docs/developers/tooling/playgrounds"
                 }
               ]
             },
@@ -434,17 +434,17 @@
                 {
                   "name": "AppKit",
                   "description": "Java/Scala 開發工具包",
-                  "link": "/build/tools/appkit"
+                  "link": "/docs/developers/tooling/frameworks/appkit"
                 },
                 {
                   "name": "Fleet SDK",
                   "description": "Ergo 的 TypeScript SDK",
-                  "link": "/build/tools/fleet"
+                  "link": "/docs/developers/tooling/fleet"
                 },
                 {
                   "name": "Sigma-Rust",
                   "description": "Sigma 協議的 Rust 實現",
-                  "link": "/build/tools/sigma-rust"
+                  "link": "/docs/developers/tooling/sigma-rust"
                 }
               ]
             }
@@ -452,11 +452,11 @@
           "nextSteps": [
             {
               "text": "探索開發者文檔",
-              "link": "/build/docs"
+              "link": "/docs/developers"
             },
             {
               "text": "試用 ErgoScript 遊樂場",
-              "link": "/build/playground"
+              "link": "/docs/developers/tooling/playgrounds"
             },
             {
               "text": "加入開發者 Discord 頻道",
@@ -464,7 +464,7 @@
             },
             {
               "text": "了解開發者資助",
-              "link": "/build/grants"
+              "link": "/ecosystem/grants"
             }
           ],
           "communityChannels": [
@@ -516,12 +516,12 @@
                 {
                   "name": "SigmaUSD",
                   "description": "算法穩定幣協議",
-                  "link": "/ecosystem/projects/sigmausd"
+                  "link": "/ecosystem/sigmausd"
                 },
                 {
                   "name": "Duckpools",
                   "description": "借貸平台",
-                  "link": "/ecosystem/projects/duckpools"
+                  "link": "/ecosystem/duckpools"
                 }
               ]
             },
@@ -536,7 +536,7 @@
                 {
                   "name": "Ergo 瀏覽器",
                   "description": "區塊鏈瀏覽器",
-                  "link": "/ecosystem/explorers"
+                  "link": "/ecosystem/ergo-explorer"
                 }
               ]
             }
@@ -552,7 +552,7 @@
             },
             {
               "text": "了解 SigmaUSD",
-              "link": "/ecosystem/projects/sigmausd"
+              "link": "/ecosystem/sigmausd"
             },
             {
               "text": "加入 DeFi 討論",
@@ -566,7 +566,7 @@
             },
             {
               "name": "交易社群",
-              "link": "/community/trading"
+              "link": "/start/community"
             },
             {
               "name": "DeFi 討論",
@@ -613,12 +613,12 @@
                 {
                   "name": "代幣經濟學",
                   "description": "ERG 代幣經濟學資訊",
-                  "link": "/tokenomics"
+                  "link": "/technology/adaptive-emission"
                 },
                 {
                   "name": "發行時間表",
                   "description": "ERG 分配計劃",
-                  "link": "/tokenomics#emission"
+                  "link": "/technology/adaptive-emission#emission"
                 }
               ]
             }
@@ -626,7 +626,7 @@
           "nextSteps": [
             {
               "text": "了解 ERG 代幣經濟學",
-              "link": "/tokenomics"
+              "link": "/technology/adaptive-emission"
             },
             {
               "text": "查找交易所上架",
@@ -634,7 +634,7 @@
             },
             {
               "text": "了解質押選項",
-              "link": "/use/staking"
+              "link": "/use/defi"
             },
             {
               "text": "加入投資者社群",
@@ -648,7 +648,7 @@
             },
             {
               "name": "價格討論",
-              "link": "/community/trading"
+              "link": "/start/community"
             },
             {
               "name": "投資者聊天",
@@ -747,12 +747,12 @@
                 {
                   "name": "Ergo 拍賣行",
                   "description": "頂級 NFT 市場",
-                  "link": "/ecosystem/projects/auction-house"
+                  "link": "/docs/ecosystem/financial/dex/trade-house"
                 },
                 {
                   "name": "SkyHarbor",
                   "description": "NFT 交易平台",
-                  "link": "/ecosystem/projects/skyharbor"
+                  "link": "/docs/ecosystem/nfts/skyharbor"
                 }
               ]
             },
@@ -762,12 +762,12 @@
                 {
                   "name": "TokenJay",
                   "description": "NFT 鑄造平台",
-                  "link": "/ecosystem/projects/tokenjay"
+                  "link": "/ecosystem/tokenjay"
                 },
                 {
                   "name": "Ergo Utils",
                   "description": "NFT 創作工具集",
-                  "link": "/ecosystem/tools"
+                  "link": "/docs/ecosystem/tooling"
                 }
               ]
             }
@@ -775,15 +775,15 @@
           "nextSteps": [
             {
               "text": "探索 Ergo 拍賣行",
-              "link": "/ecosystem/projects/auction-house"
+              "link": "/docs/ecosystem/financial/dex/trade-house"
             },
             {
               "text": "了解 NFT 創作",
-              "link": "/ecosystem/projects/tokenjay"
+              "link": "/ecosystem/tokenjay"
             },
             {
               "text": "瀏覽 NFT 收藏",
-              "link": "/ecosystem/nfts"
+              "link": "/docs/ecosystem/nfts"
             },
             {
               "text": "加入 NFT 社群",
@@ -797,11 +797,11 @@
             },
             {
               "name": "藝術家社群",
-              "link": "/community/artists"
+              "link": "/start/community"
             },
             {
               "name": "收藏家群組",
-              "link": "/community/collectors"
+              "link": "/start/community"
             }
           ]
         },
@@ -819,7 +819,7 @@
                 {
                   "name": "ErgoMixer",
                   "description": "非託管交易混合器",
-                  "link": "/ecosystem/projects/ergomixer"
+                  "link": "/ecosystem/ergomixer"
                 },
                 {
                   "name": "隱身地址",
@@ -839,7 +839,7 @@
                 {
                   "name": "隱私最佳實踐",
                   "description": "如何保持隱私",
-                  "link": "/learn/privacy"
+                  "link": "/use/privacy"
                 }
               ]
             }
@@ -847,7 +847,7 @@
           "nextSteps": [
             {
               "text": "了解 ErgoMixer",
-              "link": "/ecosystem/projects/ergomixer"
+              "link": "/ecosystem/ergomixer"
             },
             {
               "text": "了解 Sigma 協議",
@@ -855,7 +855,7 @@
             },
             {
               "text": "閱讀隱私最佳實踐",
-              "link": "/learn/privacy"
+              "link": "/use/privacy"
             },
             {
               "text": "加入隱私討論",
@@ -869,7 +869,7 @@
             },
             {
               "name": "ErgoMixer 社群",
-              "link": "/ecosystem/projects/ergomixer"
+              "link": "/ecosystem/ergomixer"
             },
             {
               "name": "技術討論",
@@ -901,7 +901,7 @@
                 {
                   "name": "Ergonaut 手冊",
                   "description": "全面指南",
-                  "link": "/learn/handbook"
+                  "link": "/learn"
                 }
               ]
             },
@@ -911,12 +911,12 @@
                 {
                   "name": "新手頻道",
                   "description": "對初學者友好的討論",
-                  "link": "/community"
+                  "link": "/start/community"
                 },
                 {
                   "name": "學習小組",
                   "description": "學習小組和導師制",
-                  "link": "/community/learning"
+                  "link": "/learn"
                 }
               ]
             }
@@ -932,7 +932,7 @@
             },
             {
               "text": "加入新手社群",
-              "link": "/community"
+              "link": "/start/community"
             },
             {
               "text": "探索學習中心",
@@ -946,11 +946,11 @@
             },
             {
               "name": "新手支援",
-              "link": "/community/newcomers"
+              "link": "/start/community"
             },
             {
               "name": "學習小組",
-              "link": "/community/learning"
+              "link": "/learn"
             }
           ]
         }
@@ -1817,44 +1817,23 @@
       "community": "加入社區"
     },
     "faqContent": {
-      "basics_icon_helpcircle_q_what": "基礎知識\",\n    icon: HelpCircle,\n    q: '什麼是「公平發行」？',\n    a: 'Ergo 沒有為創始人進行首次代幣發行（ICO）或預挖代幣。這確保了更公平的分配，因為每個人從第一天起都有平等的機會透過挖礦獲得 ERG。",
-      "basics_icon_helpcircle_q_is": "基礎知識\",\n    icon: HelpCircle,\n    q: \"Ergo 是一家公司嗎？\",\n    a: \"不是，Ergo 是一個去中心化的開源協議。Ergo 基金會是一個非營利社群機構，支持開發但不控制網絡。",
-      "basics_icon_helpcircle_q_what_does_a_fair_launch": "基礎知識\",\n    icon: HelpCircle,\n    q: '什麼是「公平發行",
-      "technology_icon_cpu_q_what": "技術\",\n    icon: Cpu,\n    q: \"什麼是 eUTXO？\",\n    a: '擴展 UTXO 模型直接將數據和邏輯附加到資金「盒子」上。這提高了智能合約的安全性、費用可預測性，並與帳戶模型相比實現了更好的可擴展性。",
-      "getting_started_icon_zap_q": "入門\",\n    icon: Zap,\n    q: \"如何獲得 ERG？\",\n    a: \"您可以在各種加密貨幣交易所、透過點對點交易或挖礦獲取 ERG。投資前請務必進行自己的研究。",
-      "ecosystem_icon_users_q_what": "生態系統\",\n    icon: Users,\n    q: \"Ergo 上有哪些類型的 dApp？\",\n    a: \"Ergo 的生態系統包括 DeFi 平台（Spectrum、Duckpools）、隱私工具（ErgoMixer）、NFT 市場（SkyHarbor）、跨鏈橋（Rosen）等。",
-      "community_icon_users_q_who": "社群\",\n    icon: Users,\n    q: \"誰在治理 Ergo？\",\n    a: \"Ergo 是去中心化且由社群驅動的。協議變更透過 Ergo 改進提案（EIPs）進行討論和正式化，由礦工表達支持。",
       "all_basics_technology_getting_started": "全部\", \"基礎知識\", \"技術\", \"入門\", \"生態系統\", \"社群",
       "ergo_is_a_secure_proof": "Ergo 是一個安全的工作量證明區塊鏈，用於強大的智能合約，支持去中心化金融應用程序。可以將其視為具有可程式化規則的數字貨幣（ERG）。",
-      "what_does_a_fair_launch": "什麼是「公平發行」？',\n    a: 'Ergo 沒有為創始人進行首次代幣發行（ICO）或預挖代幣。這確保了更公平的分配，因為每個人從第一天起都有平等的機會透過挖礦獲得 ERG。",
       "the_extended_utxo_model_attaches": "擴展 UTXO 模型直接將數據和邏輯附加到資金「盒子」上。這提高了智能合約的安全性、費用可預測性，並與帳戶模型相比實現了更好的可擴展性。",
       "find_answers_to_common_questions": "找到關於 Ergo、其技術及生態系統的常見問題解答。如果找不到您要尋找的內容，請加入我們的社群頻道。",
       "everything_you_need_to_know": "在一個地方了解關於 Ergo 區塊鏈的一切知識。",
-      "faqpage_id_https_ergoblockchain_org": "FAQPage\",\n    \"@id\": \"https://ergoblockchain.org/start/faq\",\n    name: \"Ergo 常見問題",
-      "question_name_what_is_ergo": "Question\",\n        name: \"什麼是 Ergo？",
       "answer_text_ergo_is_a": "Answer\",\n          text: \"Ergo 是一個具有智能合約的下一代工作量證明區塊鏈平台，專為金融合約和 DeFi 應用程序設計。",
-      "question_name_can_i_mine_ergo": "Question\",\n        name: \"我可以挖礦 Ergo 嗎？",
       "answer_text": "Answer\",\n          text:",
       "ergo_faq_frequently_asked_questions": "Ergo 常見問題 | 關於區塊鏈的常見問題",
       "ergo_faq_all_your_questions_answered": "Ergo 常見問題 - 所有問題一次解答",
       "ergo_faq_quick_answers_to_common_questions": "Ergo 常見問題 | 常見問題快速解答"
     },
     "introductionMeta": {
-      "ergo_introduction_description_pow_smart": "Ergo Introduction\",\n    description: \"PoW smart contracts with eUTXO & Sigma Protocols.",
       "ergo_introduction_pow_smart_contracts": "Ergo 簡介 — PoW 智慧合約、eUTXO、Sigma Protocols",
       "meet_ergo_a_pow_smart": "認識 Ergo：一個使用 eUTXO 模型和 Sigma 協議的 PoW 智能合約平台。以可預測的成本建構具隱私保護和可審計性的 dApps。",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "具備 eUTXO 和 Sigma 協議的 PoW 智能合約。",
       "techarticle_headline_t": "TechArticle\",\n          headline: t(",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "question_name_t": "Question\",\n              name: t(",
       "answer_text_t": "Answer\",\n                text: t(",
-      "introduction_to_ergo_start_your": "Introduction to Ergo - Start Your Blockchain Journey\",\n    description: \"Beginner-friendly guide to understanding Ergo blockchain, its technology, and ecosystem.\",\n    url: \"https://ergoblockchain.org/start/introduction\",\n    siteName: \"Ergo Platform",
-      "introduction_to_ergo_blockchain_description": "Introduction to Ergo Blockchain\",\n    description: \"Learn the fundamentals of Ergo - the future of programmable money.",
-      "article_id_https_ergoblockchain_org": "Article\",\n    \"@id\": \"https://ergoblockchain.org/start/introduction\",\n    headline: \"Introduction to Ergo Blockchain\",\n    description: \"Comprehensive guide for beginners to understand Ergo",
-      "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
-      "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject\",\n        url: \"https://ergoblockchain.org/logo.png",
-      "learningresource_name_ergo_blockchain_introduction": "LearningResource\",\n    name: \"Ergo Blockchain Introduction\",\n    description: \"Educational resource for learning Ergo blockchain fundamentals\",\n    learningResourceType: \"Presentation\",\n    educationalLevel: \"Beginner",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Cryptocurrency",
       "introduction_to_ergo_beginner": "Ergo 簡介 | 初學者",
       "introduction_to_ergo_start_your_blockchain_journey": "Ergo 簡介——開始您的區塊鏈之旅",
@@ -1896,92 +1875,56 @@
       "helping_others_in_the_community": "幫助社群中的其他人並回答問題",
       "participating_in_governance_discussions_and": "參與治理討論和提案",
       "supporting_network_infrastructure": "支持網絡基礎設施",
-      "aspiring_developer_title_build_the": "有志開發者\",\n    title: \"構建未來\",\n    description:\n      \"您渴望創建創新應用程序並為前沿技術做出貢獻！Ergo 強大的 ErgoScript 和 eUTXO 模型提供了構建安全高效 dApp 的獨特機遇。\",\n    icon:",
       "documentation_learning": "文檔與學習",
-      "ergodocs_description_comprehensive_developer_documentation": "ErgoDocs\", description: \"全面的開發者文檔\", link: \"/build/docs",
-      "ergoscript_primer_description_learn_ergo": "ErgoScript 入門\", description: \"學習 Ergo 的智能合約語言\", link: \"/build/tutorials",
-      "ergo_playgrounds_description_interactive_coding": "Ergo 遊樂場\", description: \"互動式編程環境\", link: \"/build/playground",
-      "appkit_description_java_scala_development": "AppKit\", description: \"Java/Scala 開發工具包\", link: \"/build/tools/appkit",
-      "fleet_sdk_description_typescript_sdk": "Fleet SDK\", description: \"Ergo 的 TypeScript SDK\", link: \"/build/tools/fleet",
-      "sigma_rust_description_rust_implementation": "Sigma-Rust\",\n            description: \"Sigma 協議的 Rust 實現\",\n            link: \"/build/tools/sigma-rust",
-      "explore_developer_documentation_link_build_docs": "探索開發者文檔\", link: \"/build/docs",
-      "try_the_ergoscript_playground_link": "試用 ErgoScript 遊樂場\", link: \"/build/playground",
+      "explore_developer_documentation_link_build_docs": "探索開發者文檔\", link: \"/docs/developers",
+      "try_the_ergoscript_playground_link": "試用 ErgoScript 遊樂場\", link: \"/docs/developers/tooling/playgrounds",
       "join_developer_discord_channels_link": "加入開發者 Discord 頻道\", link: \"https://discord.gg/ergo-platform",
-      "check_out_developer_grants_link_build_grants": "了解開發者資助\", link: \"/build/grants",
+      "check_out_developer_grants_link_build_grants": "了解開發者資助\", link: \"/ecosystem/grants",
       "developer_discord_link_https_discord": "開發者 Discord\", link: \"https://discord.gg/ergo-platform",
       "ergoforum_development_link_https_ergoforum_org": "ErgoForum - 開發\", link: \"https://ergoforum.org",
       "github_organization_link_https_github": "GitHub 組織\", link: \"https://github.com/ergoplatform",
-      "spectrum_finance_description_decentralized_exchange": "Spectrum Finance\", description: \"去中心化交易所（DEX）\", link: \"https://spectrum.fi",
-      "sigmausd_description_algorithmic_stablecoin_protocol": "SigmaUSD\", description: \"算法穩定幣協議\", link: \"/ecosystem/projects/sigmausd",
-      "duckpools_description_lending_and_borrowing": "Duckpools\", description: \"借貸平台\", link: \"/ecosystem/projects/duckpools",
       "network_and_defi_analytics_link_https_ergo_watch": "網絡與 DeFi 分析\", link: \"https://ergo.watch",
-      "ergo_explorer_description_blockchain_explorer": "Ergo 瀏覽器\", description: \"區塊鏈瀏覽器\", link: \"/ecosystem/explorers",
-      "learn_about_sigmausd_stablecoin_link": "了解 SigmaUSD 穩定幣\", link: \"/ecosystem/projects/sigmausd",
+      "learn_about_sigmausd_stablecoin_link": "了解 SigmaUSD 穩定幣\", link: \"/ecosystem/sigmausd",
       "try_trading_on_spectrum_finance": "在 Spectrum Finance 上試用交易\", link: \"https://spectrum.fi",
       "join_defi_discussions_on_discord": "加入 Discord 上的 DeFi 討論\", link: \"https://discord.gg/ergo-platform",
       "defi_discord_channels_link_https": "DeFi Discord 頻道\", link: \"https://discord.gg/ergo-platform",
       "spectrum_finance_community_link_https_spectrum_fi": "Spectrum Finance 社群\", link: \"https://spectrum.fi",
-      "sigmausd_community_link_ecosystem_projects": "SigmaUSD 社群\", link: \"/ecosystem/projects/sigmausd",
-      "strategic_investor_title_long_term": "策略投資者\",\n    title: \"長期價值構建者\",\n    description:\n      \"您對 Ergo 的長期潛力感興趣，並希望在做出投資決策前了解基本面。專注於學習技術和生態系統成長。\",\n    icon:",
-      "exchange_listings_description_where_to": "交易所上架\", description: \"購買 ERG 的場所\", link: \"/use/get-erg",
-      "ergo_whitepaper_description_technical_foundation": "Ergo 白皮書\", description: \"技術基礎\", link: \"/technology/whitepaper",
-      "ecosystem_overview_description_projects_and": "生態系統概覽\", description: \"項目與成長\", link: \"/ecosystem",
-      "network_statistics_description_real_time": "網絡統計\", description: \"即時指標\", link: \"/ecosystem/stats",
-      "read_the_ergo_whitepaper_link": "閱讀 Ergo 白皮書\", link: \"/technology/whitepaper",
+      "sigmausd_community_link_ecosystem_projects": "SigmaUSD 社群\", link: \"/ecosystem/sigmausd",
+      "read_the_ergo_whitepaper_link": "閱讀 Ergo 白皮書\", link: \"/docs/introduction/research-whitepapers",
       "explore_the_ecosystem_link_ecosystem": "探索生態系統\", link: \"/ecosystem",
-      "learn_about_erg_tokenomics_link_learn_tokenomics": "了解 ERG 代幣經濟學\", link: \"/learn/tokenomics",
+      "learn_about_erg_tokenomics_link_learn_tokenomics": "了解 ERG 代幣經濟學\", link: \"/technology/adaptive-emission",
       "join_investor_discussions_link_https": "加入投資者討論\", link: \"https://discord.gg/ergo-platform",
       "general_discord_link_https_discord": "一般 Discord\", link: \"https://discord.gg/ergo-platform",
       "reddit_community_link_https_reddit_com_r_ergonauts": "Reddit 社群\", link: \"https://reddit.com/r/ergonauts",
       "telegram_group_link_https_t_me_ergoplatform": "Telegram 群組\", link: \"https://t.me/ergoplatform",
-      "network_guardian_title_securing_the": "網絡守護者\",\n    title: \"保護區塊鏈安全\",\n    description:",
-      "understanding_the_algorithm_link_use_mining": "了解該算法\", link: \"/use/mining",
-      "mining_pools_description_popular_ergo": "礦池\", description: \"熱門 Ergo 礦池\", link: \"/ecosystem/mining",
-      "official_miner_description_reference_implementation": "官方礦工\", description: \"參考實現\", link: \"/use/mining/software",
-      "community_miners_description_third_party": "社群礦工\", description: \"第三方挖礦軟件\", link: \"/use/mining/software",
+      "understanding_the_algorithm_link_use_mining": "了解該算法\", link: \"/miners",
       "find_mining_pools_link_ecosystem_mining": "查找礦池\", link: \"/ecosystem/mining",
-      "calculate_mining_profitability_link_use": "計算挖礦收益\", link: \"/use/mining/calculator",
+      "calculate_mining_profitability_link_use": "計算挖礦收益\", link: \"/miners",
       "join_mining_community_link_https": "加入挖礦社群\", link: \"https://discord.gg/ergo-platform",
       "mining_discord_channels_link_https": "挖礦 Discord 頻道\", link: \"https://discord.gg/ergo-platform",
       "mining_pools_community_link_ecosystem_mining": "礦池社群\", link: \"/ecosystem/mining",
       "technical_support_link_https_ergoforum_org": "技術支援\", link: \"https://ergoforum.org",
-      "nft_enthusiast_title_digital_art": "NFT 愛好者\",\n    title: \"數字藝術收藏家\",\n    description:\n      \"您對獨特的數字物品、藝術和收藏品感到興奮！Ergo 的 NFT 生態系統提供創新的市場和創作工具，費用低廉且安全性高。\",\n    icon:",
-      "ergo_auction_house_description_premier": "Ergo 拍賣行\",\n            description: \"頂級 NFT 市場\",\n            link: \"/ecosystem/projects/auction-house",
-      "skyharbor_description_nft_trading_platform": "SkyHarbor\", description: \"NFT 交易平台\", link: \"/ecosystem/projects/skyharbor",
-      "tokenjay_description_nft_minting_platform": "TokenJay\", description: \"NFT 鑄造平台\", link: \"/ecosystem/projects/tokenjay",
-      "ergo_utils_description_nft_creation": "Ergo Utils\", description: \"NFT 創作工具集\", link: \"/ecosystem/tools",
-      "explore_ergo_auction_house_link": "探索 Ergo 拍賣行\", link: \"/ecosystem/projects/auction-house",
-      "learn_about_nft_creation_link": "了解 NFT 創作\", link: \"/ecosystem/projects/tokenjay",
-      "browse_nft_collections_link_ecosystem_nfts": "瀏覽 NFT 收藏\", link: \"/ecosystem/nfts",
+      "explore_ergo_auction_house_link": "探索 Ergo 拍賣行\", link: \"/docs/ecosystem/financial/dex/trade-house",
+      "learn_about_nft_creation_link": "了解 NFT 創作\", link: \"/ecosystem/tokenjay",
+      "browse_nft_collections_link_ecosystem_nfts": "瀏覽 NFT 收藏\", link: \"/docs/ecosystem/nfts",
       "join_nft_community_link_https": "加入 NFT 社群\", link: \"https://discord.gg/ergo-platform",
       "nft_discord_channels_link_https": "NFT Discord 頻道\", link: \"https://discord.gg/ergo-platform",
-      "artist_community_link_community_artists": "藝術家社群\", link: \"/community/artists",
-      "collector_groups_link_community_collectors": "收藏家群組\", link: \"/community/collectors",
-      "privacy_advocate_title_financial_privacy": "隱私倡導者\",\n    title: \"金融隱私捍衛者\",\n    description:\n      \"您重視金融隱私並希望保護您的交易歷史！Ergo 提供基於 Sigma 協議的前沿隱私工具，實現無需信任的安全隱私增強。\",\n    icon:",
-      "ergomixer_description_non_custodial_transaction": "ErgoMixer\", description: \"非託管交易混合器\", link: \"/ecosystem/projects/ergomixer",
-      "stealth_addresses_description_enhanced_address": "隱身地址\", description: \"增強地址隱私\", link: \"/technology/privacy-features",
+      "artist_community_link_community_artists": "藝術家社群\", link: \"/start/community",
+      "collector_groups_link_community_collectors": "收藏家群組\", link: \"/start/community",
       "educational_resources": "教育資源",
-      "sigma_protocols_guide_description_understanding": "Sigma 協議指南\",\n            description: \"了解隱私技術\",\n            link: \"/technology/privacy-features",
-      "privacy_best_practices_description_how": "隱私最佳實踐\", description: \"如何保持隱私\", link: \"/learn/privacy",
-      "learn_about_ergomixer_link_ecosystem": "了解 ErgoMixer\", link: \"/ecosystem/projects/ergomixer",
+      "learn_about_ergomixer_link_ecosystem": "了解 ErgoMixer\", link: \"/ecosystem/ergomixer",
       "understand_sigma_protocols_link_technology": "了解 Sigma 協議\", link: \"/technology/privacy-features",
-      "read_privacy_best_practices_link_learn_privacy": "閱讀隱私最佳實踐\", link: \"/learn/privacy",
+      "read_privacy_best_practices_link_learn_privacy": "閱讀隱私最佳實踐\", link: \"/use/privacy",
       "join_privacy_discussions_link_https": "加入隱私討論\", link: \"https://discord.gg/ergo-platform",
       "privacy_discord_channels_link_https": "隱私 Discord 頻道\", link: \"https://discord.gg/ergo-platform",
-      "ergomixer_community_link_ecosystem_projects": "ErgoMixer 社群\", link: \"/ecosystem/projects/ergomixer",
+      "ergomixer_community_link_ecosystem_projects": "ErgoMixer 社群\", link: \"/ecosystem/ergomixer",
       "technical_discussions_link_https_ergoforum_org": "技術討論\", link: \"https://ergoforum.org",
-      "curious_learner_title_knowledge_seeker": "好奇學習者\",\n    title: \"知識探索者\",\n    description:\n      \"您剛接觸 Ergo 並想先了解基礎知識！完美——學習基礎知識將幫助您做出明智的決定，了解如何與生態系統互動。\",\n    icon:",
-      "faq_for_beginners_description_common": "初學者常見問題\", description: \"常見問題解答\", link: \"/start/faq",
-      "quick_introduction_description_ergo_overview": "快速介紹\", description: \"Ergo 概覽\", link: \"/start/introduction",
-      "ergonaut_handbook_description_comprehensive_guide": "Ergonaut 手冊\", description: \"全面指南\", link: \"/learn/handbook",
-      "newcomer_channels_description_beginner_friendly": "新手頻道\", description: \"對初學者友好的討論\", link: \"/community",
-      "learning_groups_description_study_groups": "學習小組\", description: \"學習小組和導師制\", link: \"/community/learning",
       "read_the_faq_for_beginners_link_start_faq": "閱讀初學者常見問題\", link: \"/start/faq",
       "take_the_quick_introduction_link": "參加快速介紹\", link: \"/start/introduction",
-      "join_newcomer_community_link_community": "加入新手社群\", link: \"/community",
+      "join_newcomer_community_link_community": "加入新手社群\", link: \"/start/community",
       "explore_the_learning_hub_link_learn": "探索學習中心\", link: \"/learn",
-      "newcomer_support_link_community_newcomers": "新手支援\", link: \"/community/newcomers",
-      "learning_groups_link_community_learning": "學習小組\", link: \"/community/learning",
+      "newcomer_support_link_community_newcomers": "新手支援\", link: \"/start/community",
+      "learning_groups_link_community_learning": "學習小組\", link: \"/learn",
       "your_next_steps": "您的下一步",
       "build_the_future": "構建未來",
       "comprehensive_developer_documentation": "全面的開發者文檔",
@@ -2021,40 +1964,13 @@
       "explore_entire_ecosystem": "探索整個生態系統",
       "take_quiz_again": "再次參加測驗",
       "take_our_interactive_quiz_to": "參加我們的互動測驗，探索您在 Ergo 生態系統中的理想路徑。無論您",
-      "ergo_quiz_discover_your_blockchain": "Ergo 測驗 - 探索您的區塊鏈路徑\",\n    description: \"互動測驗，幫助您在 Ergo 生態系統中找到完美角色。\",\n    url: \"https://ergoblockchain.org/start/quiz\",\n    siteName: \"Ergo Platform",
       "developer_miner_investor_take_the": "開發者？礦工？投資者？參加測驗找到您的完美定位。",
-      "quiz_id_https_ergoblockchain_org": "Quiz\",\n    \"@id\": \"https://ergoblockchain.org/start/quiz\",\n    name: \"Ergo 生態系統路徑探索測驗\",\n    description: \"互動測驗，幫助用戶在 Ergo 生態系統中找到理想路徑\",\n    educationalLevel: \"初學者\",\n    learningResourceType: \"測驗\",\n    timeRequired:",
       "ergo_quiz_find_your_path_in_blockchain": "Ergo 測驗 | 在區塊鏈中找到您的路徑",
       "ergo_quiz_discover_your_blockchain_path": "Ergo 測驗 - 探索您的區塊鏈路徑",
       "interactive_quiz_to_find_your": "互動測驗，幫助您在 Ergo 生態系統中找到完美角色。",
       "find_your_path_in_ergo_interactive_quiz": "在 Ergo 中找到您的路徑 | 互動測驗",
       "interactive_quiz_to_help_users": "互動測驗，幫助用戶在 Ergo 生態系統中找到理想路徑"
     },
-    "i_m_new_to_crypto": "I'm New to Crypto\",\n    subtitle: \"Start from the basics\",\n    icon: User,\n    color:",
-    "why_ergo_exists_description_understand": "Why Ergo Exists\",\n        description: \"Understand the problems we solve\",\n        icon: Zap,\n        href: \"/start/introduction\",\n        duration:",
-    "stay_safe_description_essential_security": "Stay Safe\",\n        description: \"Essential security practices\",\n        icon: Shield,\n        href: \"/start/security-tips\",\n        duration:",
-    "i_want_to_learn_subtitle": "I Want to Learn\",\n    subtitle: \"Deep dive into Ergo\",\n    icon: BookOpen,\n    color:",
-    "ergo_vs_others_description_compare": "Ergo vs Others\",\n        description: \"Compare with Bitcoin, Ethereum, Monero\",\n        icon: Zap,\n        href: \"/learn/comparison\",\n        duration:",
-    "unique_tech_description_eutxo_sigma": "Unique Tech\",\n        description: \"eUTXO, Sigma Protocols explained\",\n        icon: Code,\n        href: \"/technology/features\",\n        duration:",
-    "privacy_features_description_how_ergo": "Privacy Features\",\n        description: \"How Ergo protects your data\",\n        icon: Shield,\n        href: \"/learn/censorship-resistance\",\n        duration:",
-    "real_use_cases_description_community": "Real Use Cases\",\n        description: \"Community success stories\",\n        icon: User,\n        href: \"/community/stories\",\n        duration:",
-    "i_m_a_developer_subtitle": "I'm a Developer\",\n    subtitle: \"Build on Ergo\",\n    icon: Code,\n    color:",
-    "hello_world_description_your_first": "Hello World\",\n        description: \"Your first ErgoScript contract\",\n        icon: Code,\n        href: \"/docs/developers\",\n        duration:",
-    "try_playground_description_interactive_contract": "Try Playground\",\n        description: \"Interactive contract editor\",\n        icon: TestTube,\n        href: \"/docs/developers/playground\",\n        duration:",
-    "sdks_tools_description_libraries_for": "SDKs & Tools\",\n        description: \"Libraries for your language\",\n        icon: Zap,\n        href: \"/docs/developers/tooling\",\n        duration: \"Browse",
-    "join_dev_chat_description_get": "Join Dev Chat\",\n        description: \"Get help from core devs\",\n        icon: User,\n        href: \"/community/developers\",\n        duration: \"Now",
-    "i_want_to_mine_subtitle": "I Want to Mine\",\n    subtitle: \"Secure the network\",\n    icon: Cpu,\n    color:",
-    "mining_guide_description": "Mining Guide\",\n        description:",
-    "choose_a_pool_description_compare": "Choose a Pool\",\n        description: \"Compare pools and fees\",\n        icon: Zap,\n        href: \"/use/mining-pools\",\n        duration:",
-    "run_a_node_description_advanced": "Run a Node\",\n        description: \"Advanced: full node setup\",\n        icon: Shield,\n        href: \"/docs/developers/infrastructure\",\n        duration:",
-    "i_m_an_investor_subtitle": "I'm an Investor\",\n    subtitle: \"Understand the asset\",\n    icon: LineChart,\n    color:",
-    "ecosystem_map_description_what_s": "Ecosystem Map\",\n        description: \"What's built on Ergo\",\n        icon: Zap,\n        href: \"/docs/ecosystem\",\n        duration:",
-    "tokenomics_description_supply_distribution_governance": "Tokenomics\",\n        description: \"Supply, distribution, governance\",\n        icon: LineChart,\n        href: \"/docs/introduction/resources\",\n        duration:",
-    "partnerships_description_major_integrations_and": "Partnerships\",\n        description: \"Major integrations and users\",\n        icon: User,\n        href: \"/ecosystem/partnerships\",\n        duration:",
-    "track_markets_description_price_volume": "Track Markets\",\n        description: \"Price, volume, analytics\",\n        icon: LineChart,\n        href: \"/ecosystem/market\",\n        duration: \"Live",
-    "learning_paths_icon_target_color": "Learning Paths\", icon: Target, color:",
-    "quick_start_icon_clock_color": "Quick Start\", icon: Clock, color:",
-    "open_source_icon_gitbranch_color": "Open Source\", icon: GitBranch, color:",
     "skip_to_docs": "跳至文件",
     "choose_your_path_into_ergo": "選擇您進入 Ergo 的路徑",
     "pick_what_describes_you_best": "選擇最能描述您的選項，我們將引導您了解所有需要知道的內容。",
@@ -2097,12 +2013,7 @@
       "comparison_item_https_ergoblockchain_org": "Comparison\", item: \"https://ergoblockchain.org/start/comparison",
       "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "eUTXO 與帳戶模型、PoW 與 PoS、隱私及手續費比較：Ergo、Ethereum、Bitcoin、Cardano。",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "question_name_how_does_eutxo": "Question\",\n                    name: \"eUTXO 如何降低重入風險？",
-      "question_name_are_fees_predictable_on_ergo": "Question\",\n                    name: \"Ergo 上的費用是否可預測？",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"Script 費用有上限且手續費可預測；不存在 Gas 競價（最終費用取決於記憶體池狀況）。",
-      "question_name_does_ergo_have_light_clients": "Question\",\n                    name: \"Ergo 是否支援輕客戶端？",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"是的。NIPoPoWs 為最小化信任的輕客戶端提供簡潔的證明。",
       "ergo_vs_others_practical_comparison": "Ergo 與其他鏈的實際比較",
       "quick_comparison_of_ergo_vs": "Ergo 與帳戶型鏈的快速比較：eUTXO、ASIC 抗性 PoW（Autolykos）、Sigma 協議、可預測費用、原生 L1 代幣及輕客戶端（NIPoPoWs）。",
@@ -2110,29 +2021,14 @@
       "compare_ergo_with_bitcoin_ethereum": "比較 Ergo 與 Bitcoin、Ethereum 及 Cardano。技術規格、共識機制、智能合約、可擴展性及獨特功能的並排對比。",
       "compare_ergo_with_leading_blockchains": "比較 Ergo 與主流區塊鏈",
       "blockchain_comparison": "區塊鏈比較",
-      "webpage_id_https_ergoblockchain_org": "WebPage\",\n    \"@id\": \"https://ergoblockchain.org/start/comparison\",\n    name: \"區塊鏈平台比較\",\n    description: \"Ergo 與其他區塊鏈平台的技術比較",
-      "what_advantages_does_ergo_have": "Ergo 相對 Ethereum 有哪些優勢？\",\n      answer: \"Ergo 提供可預測的費用、無重入攻擊、並行交易處理及能源高效的 PoW 挖礦。",
-      "how_does_ergo_compare_to": "Ergo 與 Cardano 相比如何？\",\n      answer: \"兩者均使用 eUTXO，但 Ergo 採用 PoW 共識、Storage Rent，且無風投資金，使其更加去中心化且可持續。",
       "ergo_vs_bitcoin_ethereum_cardano": "Ergo 對比 Bitcoin、Ethereum、Cardano",
       "technical_comparison_of_ergo_vs": "Ergo 與 Bitcoin、Ethereum、Cardano 的技術比較。了解 Ergo 脫穎而出的原因。",
       "technical_comparison_of_ergo_with": "Ergo 與其他區塊鏈平台的技術比較"
     },
-    "community_icon_users_color": "Community\", icon: Users, color:",
     "get_started": "開始使用",
     "communityMeta": {
       "connect_with_developers_miners_traders": "與開發者、礦工、交易者及愛好者建立聯繫。Discord、Telegram、Reddit 及更多。",
-      "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo 社群\",\n    description: \"在 Ergo 上開發的全球開發者、礦工及愛好者社群\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
-      "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
       "aggregaterating_ratingvalue": "AggregateRating\",\n      ratingValue:",
-      "how_do_i_join_the": "如何加入 Ergo 社群？\",\n      answer: \"加入我們的 Discord 伺服器進行即時交流、Telegram 獲取快速更新、Reddit 參與討論，或透過 GitHub 貢獻開發。所有平台對新人開放且友善。",
-      "what_is_the_main_ergo_community_platform_answer": "Ergo 的主要社群平台是什麼？\",\n      answer:",
-      "can_i_contribute_to_ergo": "我可以在不會編程的情況下為 Ergo 做貢獻嗎？\",\n      answer: \"可以！您可以透過內容創作、翻譯、社群管理、測試、文檔或參與治理討論做出貢獻。",
-      "are_there_regional_ergo_communities": "是否有 Ergo 地區社群？\",\n      answer: \"有，多種語言的活躍地區社群，包括中文、俄文、西班牙文、土耳其文等，每種語言都有專屬的 Telegram 群組。",
-      "itemlist_name_ergo_community_platforms": "ItemList\",\n    name: \"Ergo 社群平台",
-      "discord_url_https_discord_gg": "Discord\",\n        url: \"https://discord.gg/ergo-platform\",\n        description:",
-      "telegram_url_https_t_me": "Telegram\",\n        url: \"https://t.me/ergoplatform\",\n        description: \"快速更新與全球交流",
-      "reddit_url_https_reddit_com": "Reddit\",\n        url: \"https://reddit.com/r/ergonauts\",\n        description: \"討論與社群內容",
-      "github_url_https_github_com": "GitHub\",\n        url: \"https://github.com/ergoplatform\",\n        description: \"開源開發",
       "ergo_community_join_discord_telegram_forums": "Ergo 社群 | 加入 Discord、Telegram 及論壇",
       "connect_with_the_ergo_community": "與 Ergo 社群聯繫。加入 Discord 上 15K+ 成員、Telegram、Reddit。獲取支援、參與治理、貢獻開發，共同塑造 Ergo 的未來。",
       "join_the_ergo_community_15k_active_members": "加入 Ergo 社群 | 15K+ 活躍成員",
@@ -2144,24 +2040,7 @@
       "discussions_and_community_content": "討論與社群內容",
       "open_source_development": "開源開發"
     },
-    "how_long_does_it_take_to_learn_ergo_answer": "學習 Ergo 需要多長時間？\",\n      answer:",
-    "start_your_ergo_journey_summary": "Start Your Ergo Journey\",\n    summary: \"Choose your personalized path into Ergo blockchain: beginner, developer, miner, or investor\",\n    url: \"https://ergoblockchain.org/start",
-    "start_your_journey_with_ergo": "Start Your Journey with Ergo Blockchain',\n    description: 'Personalized learning paths for beginners, developers, miners, and investors. Find your way into Ergo.',\n    url: 'https://ergoblockchain.org/start',\n    siteName: 'Ergo Platform",
     "start_with_ergo_learning_paths": "開始使用 Ergo——學習路徑",
-    "start_your_ergo_journey_choose": "開啟您的 Ergo 之旅 - 選擇您的路徑',\n    description: '新手？開發者？礦工？投資者？找到您進入 Ergo 的個人化路徑。",
-    "monetaryamount_currency_usd_value": "MonetaryAmount',\n      currency: 'USD',\n      value:",
-    "howtosupply_name_computer_or_smartphone": "HowToSupply', name: '電腦或智慧型手機",
-    "howtosupply_name_internet_connection": "HowToSupply', name: '網際網路連線",
-    "howtotool_name_web_browser": "HowToTool', name: '網頁瀏覽器",
-    "howtostep_name_choose_your_path": "HowToStep',\n        name: 'Choose Your Path',\n        text: 'Select whether you are new to crypto, want to learn, develop, mine, or invest',\n        url: 'https://ergoblockchain.org/start',\n        image: 'https://ergoblockchain.org/images/start-paths.png",
-    "howtostep_name_understand_why_ergo": "HowToStep',\n        name: 'Understand Why Ergo',\n        text: 'Learn about the problems Ergo solves and its unique features',\n        url: 'https://ergoblockchain.org/start/introduction",
-    "howtostep_name_learn_security_best": "HowToStep',\n        name: 'Learn Security Best Practices',\n        text: 'Understand essential security practices to protect your assets',\n        url: 'https://ergoblockchain.org/start/security-tips",
-    "course_name_beginner_path_description": "Course',\n          name: '初學者路徑',\n          description: '適合加密貨幣和區塊鏈新手",
-    "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
-    "course_name_developer_path_description": "Course',\n          name: '開發者路徑',\n          description: '適合希望在 Ergo 上開發的程式設計師",
-    "course_name_miner_path_description": "Course',\n          name: '礦工路徑',\n          description: '適合有興趣挖掘 ERG 的用戶",
-    "course_name_investor_path_description": "Course',\n          name: '投資者路徑',\n          description: '用於了解 Ergo 作為投資標的",
-    "course_name_learning_path_description": "Course',\n          name: '學習路徑',\n          description: '深入探索 Ergo 技術與生態系統",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "開始您與 Ergo 區塊鏈的旅程",

@@ -1,6 +1,6 @@
 ---
 title: "AI 에이전트는 Stripe 이상이 필요한 이유: 에이전틱 커머스 vs 자율 작업 결제"
-slug: "/blog/ai-agents-need-more-than-stripe"
+slug: "/blog/agents-cant-use-stripe"
 seo_title: "AI 에이전트는 Stripe 이상이 필요한 이유: 에이전틱 커머스 vs 자율 작업 결제"
 meta_description: "Stripe, x402 및 MPP는 에이전틱 커머스 및 머신 페이먼트를 가능하게 합니다. Ergo와 Accord는 프로그래밍 가능한 작업 검증, Note, 수락 술어 및 온체인 결제를 추가합니다."
 excerpt: "Stripe는 에이전틱 커머스를 위한 심각한 인프라를 구축하고 있습니다. 남아있는 갭은 자율 작업 결제입니다: 프로그래밍 가능한 수락, 크레딧 Note 및 검증 가능한 영수증입니다."
@@ -234,7 +234,7 @@ Stripe의 커머스 제품은 프로덕션 인프라입니다. Accord 및 Ergo �
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agents-need-more-than-stripe",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/agents-cant-use-stripe",
   "keywords": ["Stripe agentic commerce", "AI agent payments", "x402", "Accord Protocol", "Ergo"]
 }
 ```

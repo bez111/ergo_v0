@@ -1,6 +1,6 @@
 ---
 title: "Mimari Öğretici: Ergo Testnet'te API Çağrıları için Ödeme Yapan AI Ajanı Oluşturun"
-slug: "/blog/build-ai-agent-pays-api-ergo-testnet"
+slug: "/blog/build-agent-pays-for-api"
 seo_title: "Mimari Öğretici: Ergo Testnet'te API Çağrıları için Ödeme Yapan AI Ajanı"
 meta_description: "Ergo testnet'te ödenen API uç noktası ve AI ajan ödeme döngüsü için mimari öğretici: HTTP 402 challenge, zincir üstü ödeme doğrulaması, tekrar oynatma koruması ve güvenlik kontrol listesi."
 excerpt: "Bir AI ajanın yalnızca doğrulanabilir bir Ergo ödeme makbuzu sunmasından sonra arayabileceği ödenen API uç noktası için mimari öğretici. Mock modu ve testnet modu imza notlarını içerir."
@@ -481,7 +481,7 @@ Gerçek dağıtım harici bir imzacı veya cüzdan politikası motoru, kalıcı 
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-ai-agent-pays-api-ergo-testnet",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/build-agent-pays-for-api",
   "keywords": ["Ergo testnet", "AI agent payments", "paid API", "HTTP 402", "x402", "Accord Protocol"]
 }
 ```

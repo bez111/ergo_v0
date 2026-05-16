@@ -1,6 +1,6 @@
 ---
 title: "2026年AI代理支付：x402、Stripe、以太坊、Solana和Ergo/Accord对比"
-slug: "/blog/ai-agent-payments-2026-report"
+slug: "/blog/state-of-agent-payments-2026"
 seo_title: "2026年AI代理支付：x402、Stripe、以太坊、Solana和Ergo对比"
 meta_description: "2026年AI代理支付报告：x402、Stripe代理商务、以太坊L2、Solana、Lightning和Ergo/Accord在微支付、信用、谓词和结算方面的对比。"
 excerpt: "代理支付生态快速演变。x402使HTTP支付变得实用，Stripe正在构建代理商务，而Ergo/Accord关注可验证工作和结算。"
@@ -266,7 +266,7 @@ Ergo的基础链处于实时运行，但Accord、ChainCash/Basis参考合约和�
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ai-agent-payments-2026-report",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/state-of-agent-payments-2026",
   "keywords": ["AI agent payments", "x402", "Stripe Agentic Commerce", "Accord Protocol", "Ergo"]
 }
 ```

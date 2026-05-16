@@ -25,7 +25,7 @@ const justGettingStartedCards = [
     title: "Introduction",
     content: "Overview of Ergo development and ecosystem.",
     icon: <BookOpen className="w-10 h-10 text-cyan-400" />,
-    url: "/docs/developers/tooling/introduction"
+    url: "/docs/developers/tooling"
   },
   {
     title: "Beginner",
@@ -174,10 +174,10 @@ const courses = [
   }
 ];
 const frameworks = [
-  { title: "AppKit", content: "JVM-based SDK for building Ergo dApps in Scala, Java, or Kotlin. Provides full blockchain and transaction access.", icon: <Cpu className="w-8 h-8 text-blue-400" />, url: "/docs/developers/tooling/appkit" },
+  { title: "AppKit", content: "JVM-based SDK for building Ergo dApps in Scala, Java, or Kotlin. Provides full blockchain and transaction access.", icon: <Cpu className="w-8 h-8 text-blue-400" />, url: "/docs/developers/tooling/frameworks/appkit" },
   { title: "Fleet", content: "Modern TypeScript/JavaScript library for creating and signing Ergo transactions in web and Node.js apps.", icon: <Code className="w-8 h-8 text-green-400" />, url: "/docs/developers/tooling/fleet" },
   { title: "Mosaik", content: "JSON-based UI framework for building cross-platform dApps, rendered natively in supported wallets.", icon: <Layers className="w-8 h-8 text-orange-400" />, url: "/docs/developers/tooling/mosaik" },
-  { title: "Headless dApp Framework", content: "Rust toolkit for building backend-only (headless) dApps and off-chain logic.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/docs/developers/tooling/headless" },
+  { title: "Headless dApp Framework", content: "Rust toolkit for building backend-only (headless) dApps and off-chain logic.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/docs/developers/tooling/frameworks/headless-dapp-framework" },
   { title: "RustKit", content: "(WIP) High-level Rust library for composing and signing Ergo transactions, built on sigma-rust.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/docs/developers/tooling/rustkit" },
   { title: "JDE", content: "JSON dApp Environment: a lightweight environment for running JSON-based dApps.", icon: <FileText className="w-8 h-8 text-cyan-400" />, url: "/docs/developers/tooling/jde" }
 ];

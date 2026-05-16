@@ -1,6 +1,6 @@
 ---
 title: "Prédicats d'acceptation ErgoScript : vérification du travail on-chain pour les paiements d'agents IA"
-slug: "/blog/ergoscript-acceptance-predicates-agent-payments"
+slug: "/blog/ergoscript-acceptance-predicates"
 seo_title: "Prédicats d'acceptation ErgoScript : vérification de tâches on-chain pour les paiements d'agents IA"
 meta_description: "Découvrez comment les prédicats d'acceptation ErgoScript codent les conditions d'accomplissement des tâches dans les UTxOs de paiement, permettant aux agents IA de vérifier le travail avec moins d'hypothèses de confiance hors chaîne."
 excerpt: "Les prédicats d'acceptation transforment un paiement en contrat de travail conditionnellement remboursable : le destinataire ne peut rembourser que lorsque la condition de tâche convenue est satisfaite."
@@ -270,7 +270,7 @@ Le prédicat utile le plus simple vérifie un hash de tâche et une limite de te
   "dateModified": "2026-05-08",
   "author": { "@type": "Organization", "name": "Ergo Developer Relations" },
   "publisher": { "@type": "Organization", "name": "Ergo Platform" },
-  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates-agent-payments",
+  "mainEntityOfPage": "https://www.ergoblockchain.org/blog/ergoscript-acceptance-predicates",
   "keywords": ["ErgoScript", "acceptance predicates", "AI agent payments", "eUTXO", "work verification"]
 }
 ```

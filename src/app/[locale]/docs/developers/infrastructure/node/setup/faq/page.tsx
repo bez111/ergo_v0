@@ -182,7 +182,7 @@ kill -9 $(lsof -t -i:9030)`}</pre>
                 </div>
                 
                 <p className="text-gray-400 text-xs">
-                  Please refer to the section on <Link href="/docs/developers/infrastructure/node/setup/swagger" className="text-cyan-400 hover:underline">swagger</Link> for more information.
+                  Please refer to the section on <Link href="/docs/developers/infrastructure/node/configuration/swagger-ui" className="text-cyan-400 hover:underline">swagger</Link> for more information.
                 </p>
               </div>
             </div>

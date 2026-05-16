@@ -212,7 +212,7 @@ export default function EIP20Page() {
           <h2 className="text-2xl font-bold text-indigo-400">Data Formats</h2>
         </div>
         <p className="text-gray-300 mb-4">
-          The data formats of this EIP are based on a new binary data structure and serialization format called ReducedTransaction, which is described in <a href="/docs/developers/eip19" className="text-orange-400 hover:underline">EIP-0019</a>.
+          The data formats of this EIP are based on a new binary data structure and serialization format called ReducedTransaction, which is described in <a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-0019</a>.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -361,9 +361,9 @@ export default function EIP20Page() {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Related EIPs</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><a href="/docs/developers/eip19" className="text-orange-400 hover:underline">EIP-0019: Cold Wallet Protocol</a></li>
-              <li><a href="/docs/developers/eip25" className="text-orange-400 hover:underline">EIP-0025: Payment Request URI</a></li>
-              <li><a href="/docs/developers/eip17" className="text-orange-400 hover:underline">EIP-0017: Proxy Contracts</a></li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-0019: Cold Wallet Protocol</a></li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards/eip25" className="text-orange-400 hover:underline">EIP-0025: Payment Request URI</a></li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards/eip17" className="text-orange-400 hover:underline">EIP-0017: Proxy Contracts</a></li>
             </ul>
           </div>
           <div>

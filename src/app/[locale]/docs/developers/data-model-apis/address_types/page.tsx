@@ -112,7 +112,7 @@ export default function AddressTypesPage() {
           </p>
 
           <p className="text-gray-300">
-            P2SH is a good candidate for a pre-defined contract template (in terms of <Link href="/docs/developers/eip5" className="text-orange-400 hover:underline">EIP-5</Link>) From this perspective context var id can be a template parameter. So fixing concrete id is not necessary. The template hex can be created once and then used across dApps. Sigma already support ContractTemplate, and the corresponding code can be made available in Fleet via Sigma-js.
+            P2SH is a good candidate for a pre-defined contract template (in terms of <Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-5</Link>) From this perspective context var id can be a template parameter. So fixing concrete id is not necessary. The template hex can be created once and then used across dApps. Sigma already support ContractTemplate, and the corresponding code can be made available in Fleet via Sigma-js.
           </p>
         </div>
       </div>

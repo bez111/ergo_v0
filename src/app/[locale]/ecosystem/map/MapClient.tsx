@@ -26,17 +26,17 @@ const projects = [
   { name: "SAFEW", category: "WALLETS", url: "https://safew.org" },
   { name: "ErgoWatch", category: "TOOLS", url: "https://github.com/abchrisxyz/ergowatch" },
   { name: "ErgoRaffle", category: "DEFI", url: "https://ergoraffle.com" },
-  { name: "GuapSwap", category: "TOOLS", url: "#" },
+  { name: "GuapSwap", category: "TOOLS", url: "https://github.com/GuapSwap/guapswap" },
   { name: "Sigmaverse", category: "TOOLS", url: "https://sigmaverse.io" },
-  { name: "ErgOne", category: "TOOLS", url: "#" },
-  { name: "Hodlbox", category: "DEFI", url: "#" },
-  { name: "TokenJay", category: "DEFI", url: "#" },
-  { name: "Single Tx Swap", category: "TOOLS", url: "#" },
-  { name: "Crux Finance", category: "TOOLS", url: "#" },
+  { name: "ErgOne", category: "TOOLS", url: "/ecosystem/ergone" },
+  { name: "Hodlbox", category: "DEFI", url: "/docs/ecosystem/financial/degenerate-finance/hodlbox" },
+  { name: "TokenJay", category: "DEFI", url: "https://tokenjay.app/" },
+  { name: "Single Tx Swap", category: "TOOLS", url: "/docs/ecosystem/financial/dex/single-tx-swap" },
+  { name: "Crux Finance", category: "TOOLS", url: "https://cruxfinance.io/" },
   { name: "Fleet SDK", category: "TOOLS", url: "https://github.com/fleet-sdk/fleet" },
   { name: "AppKit", category: "TOOLS", url: "https://github.com/ergoplatform/ergo-appkit" },
   { name: "SigmaRust", category: "TOOLS", url: "https://github.com/ergoplatform/sigma-rust" },
-  { name: "SigRSV", category: "DEFI", url: "#" },
+  { name: "SigRSV", category: "DEFI", url: "/docs/ecosystem/financial/monetary-systems/sigmausd" },
 ]
 
 const categories = [
@@ -272,9 +272,9 @@ function MapClient() {
                 <Link href="/ecosystem" className="inline-flex items-center gap-2">{t('buttons.browseEcosystem')}</Link>
               </Button>
               <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                <Link href="https://forms.gle/placeholder" target="_blank" className="inline-flex items-center gap-2">
+                <a href="mailto:contact@ergoplatform.org?subject=Ergo%20ecosystem%20project%20submission" className="inline-flex items-center gap-2">
                   <Plus className="w-4 h-4" /> {t('buttons.suggestProject')}
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

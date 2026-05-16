@@ -204,7 +204,7 @@ export const INTERLINKING_MATRIX = {
   // Хабы (главные страницы разделов)
   hubs: {
     '/docs': {
-      children: ['/docs/introduction', '/docs/ecosystem', '/docs/developers', '/docs/miners'],
+      children: ['/docs/introduction/key-features', '/docs/ecosystem', '/docs/developers', '/docs/miners'],
       related: ['/technology', '/learn', '/use']
     },
     '/ecosystem': {
@@ -246,7 +246,7 @@ export const INTERLINKING_MATRIX = {
 export const REDIRECT_MAP: Record<string, { to: string; code: 301 | 302 | 410 }> = {
   // Исправляем капитализацию
   '/docs': { to: '/docs', code: 301 },
-  '/docs/introduction': { to: '/docs/introduction', code: 301 },
+  '/docs/introduction': { to: '/docs', code: 301 },
   '/docs/ecosystem': { to: '/docs/ecosystem', code: 301 },
   '/docs/developers': { to: '/docs/developers', code: 301 },
   '/docs/miners': { to: '/docs/miners', code: 301 },

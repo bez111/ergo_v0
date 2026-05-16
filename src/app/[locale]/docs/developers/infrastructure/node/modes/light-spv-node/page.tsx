@@ -74,7 +74,7 @@ export default function LightSpvNodePage() {
           </div>
           <div className="space-y-6 text-gray-300">
             <p className="text-lg leading-relaxed">
-              <a href="/docs/developers/infrastructure/node/protocol/spv" 
+              <a href="/docs/developers/infrastructure/node/modes/light-spv-node" 
                  className="text-blue-400 hover:text-blue-300 underline">
                 Simplified Payment Verification (SPV)
               </a> allows for a simplified way of verifying transactions by only downloading and verifying the block headers, 
@@ -230,13 +230,13 @@ export default function LightSpvNodePage() {
             <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="/docs/developers/infrastructure/node/protocol/spv" 
+                  <a href="/docs/developers/infrastructure/node/modes/light-spv-node" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     SPV Protocol Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="/docs/developers/infrastructure/node/protocol/nipopows" 
+                  <a href="/technology/nipopows" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     NIPoPoWs Documentation
                   </a>

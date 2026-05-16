@@ -669,16 +669,6 @@ export default function MinersResourcesPage() {
         </div>
       </TabsContent>
 
-      {/* Adaptive Difficulty Tab */}
-      <TabsContent value="difficulty">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Repeat className="w-6 h-6 text-blue-400" /> Adaptive Difficulty
-          </h2>
-          <p className="text-gray-400">Content coming soon...</p>
-        </div>
-      </TabsContent>
-
       {/* Resources Tab */}
       <TabsContent value="resources">
         <div className="mb-8">

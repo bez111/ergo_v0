@@ -6,8 +6,8 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "privacy",
-  ogImage: "/og-privacy.png",
-  canonicalPath: "/use/privacy-confidentiality",
+  ogImage: "/og/use/og-privacy.png",
+  canonicalPath: "/use/privacy",
 }
 
 // i18n Metadata

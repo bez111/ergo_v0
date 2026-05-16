@@ -48,14 +48,6 @@ export function LCPOptimizer({
         as="image"
         type="image/webp"
       />
-      <link
-        rel="preload"
-        href="/fonts/inter-var.woff2"
-        as="font"
-        type="font/woff2"
-        crossOrigin="anonymous"
-      />
-      
       <div className="hero-container">
         <div className="hero-content">
           <Suspense fallback={<HeroSkeleton />}>

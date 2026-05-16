@@ -75,7 +75,7 @@ export const FORCE_INDEX_PATHS: string[] = [
   '/docs/developers',
   '/docs/ecosystem',
   '/docs/miners',
-  '/docs/introduction',
+  '/docs/introduction/key-features',
   '/docs/contribute',
   '/docs/why-ergo',
   '/docs/resources',
@@ -167,4 +167,3 @@ export const PAGE_ESTIMATES = {
     internal: 10,
   }
 }
-

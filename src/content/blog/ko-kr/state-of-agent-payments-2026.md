@@ -1,6 +1,6 @@
 ---
 title: "2026년 AI 에이전트 결제: x402, Stripe, Ethereum, Solana 및 Ergo/Accord 비교"
-slug: "/blog/ai-agent-payments-2026-report"
+slug: "/blog/state-of-agent-payments-2026"
 seo_title: "2026년 AI 에이전트 결제: x402, Stripe, Ethereum, Solana 및 Ergo 비교"
 meta_description: "2026년 AI 에이전트 결제 리포트: x402, Stripe Agentic Commerce, Ethereum L2, Solana, Lightning 및 Ergo/Accord를 소액결제, 신용, 술어 및 결제 기준으로 비교"
 excerpt: "에이전트 결제 시장이 빠르게 움직이고 있습니다. x402는 HTTP 결제를 실용적으로 만들고, Stripe는 에이전트 상거래를 구축 중이며, Ergo/Accord는 프로그래밍 가능한 작업 검증과 결제에 초점을 맞추고 있습니다."

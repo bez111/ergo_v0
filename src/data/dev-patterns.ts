@@ -739,7 +739,7 @@ const canMint = (stateBox: Box, amount: bigint): boolean => {
     resources: [
       { type: "doc", title: "Sigma Protocols Guide", url: "/docs/developers/crypto/sigma-protocols" },
       { type: "blog", title: "Sigma Protocols Explained", url: "/blog/sigma-protocols-explained" },
-      { type: "doc", title: "Privacy on Ergo", url: "/docs/developers/privacy" }
+      { type: "doc", title: "Privacy on Ergo", url: "/technology/privacy-features" }
     ],
     
     securityNotes: [
@@ -2582,7 +2582,7 @@ async function refreshService(): Promise<void> {
     relatedPatterns: ["ergo-dao-treasury-voting-pattern", "ergo-oracle-pool-median-aggregation", "ergo-amm-liquidity-pool"],
     
     resources: [
-      { type: "doc", title: "Storage Rent", url: "/docs/developers/storage-rent" },
+      { type: "doc", title: "Storage Rent", url: "/technology/storage-rent" },
       { type: "blog", title: "Storage Rent Explained", url: "/blog/storage-rent" }
     ],
     
@@ -3258,7 +3258,7 @@ async function spendOneTimeBox(
     relatedPatterns: ["ergo-sigma-or-access-control", "ergo-babel-fees-box-pattern"],
     
     resources: [
-      { type: "doc", title: "Privacy on Ergo", url: "/docs/developers/privacy" },
+      { type: "doc", title: "Privacy on Ergo", url: "/technology/privacy-features" },
       { type: "blog", title: "Stealth Addresses", url: "/blog/stealth-addresses" },
       { type: "github", title: "ErgoMixer", url: "https://github.com/ergoMixer/ergoMixBack" }
     ],

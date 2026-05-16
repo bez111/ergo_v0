@@ -12,6 +12,7 @@ interface BlogSchemaProps {
 
 export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
   const baseUrl = 'https://www.ergoblockchain.org'
+  const fallbackImage = `${baseUrl}/og/blog-default.svg`
   
   // Enhanced Article Schema with all recommended fields
   const articleSchema = {
@@ -20,7 +21,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "@id": `${baseUrl}/blog/${post.slug}#article`,
     "headline": post.title,
     "description": post.excerpt,
-    "image": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`,
+    "image": post.image ? `${baseUrl}${post.image}` : fallbackImage,
     "datePublished": post.date,
     "dateModified": post.lastUpdated || post.date,
     "mainEntityOfPage": {
@@ -139,7 +140,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`,
+      "url": post.image ? `${baseUrl}${post.image}` : fallbackImage,
       "width": 1200,
       "height": 630
     },
@@ -153,7 +154,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "@type": "BlogPosting",
     "headline": post.title,
     "alternativeHeadline": post.excerpt,
-    "image": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`,
+    "image": post.image ? `${baseUrl}${post.image}` : fallbackImage,
     "datePublished": post.date,
     "dateCreated": post.date,
     "dateModified": post.lastUpdated || post.date,

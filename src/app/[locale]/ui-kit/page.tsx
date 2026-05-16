@@ -116,7 +116,7 @@ export default function UIKitPage() {
                       {t("buttons.getStarted")}
                     </Button>
                   </a>
-                  <a href="https://www.figma.com/community/file/ergo-ui-kit" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.figma.com/start/community/file/ergo-ui-kit" target="_blank" rel="noopener noreferrer">
                     <Button
                       variant="outline"
                       className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
@@ -182,7 +182,7 @@ export default function UIKitPage() {
                     {t("cta.buttons.getStarted")}
                   </Button>
                 </a>
-                <a href="https://www.figma.com/community/file/ergo-ui-kit" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.figma.com/start/community/file/ergo-ui-kit" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"

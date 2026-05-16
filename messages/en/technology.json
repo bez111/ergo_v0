@@ -187,8 +187,8 @@
         },
         {
           "id": "subblocks",
-          "question": "How do Subblocks achieve sub-second transaction confirmations?",
-          "answer": "Splitting blocks into fast \"sub-blocks\" speeds up payment and dApp confirmation without trusted sequencers. Layer-1 scaling with faster perceived confirmations; finality follows base consensus.",
+          "question": "How do Subblocks provide faster provisional transaction feedback?",
+          "answer": "Splitting blocks into input blocks and ordering blocks speeds up payment and dApp feedback without trusted sequencers. Layer-1 security still follows ordering-block consensus and the Matrix implementation is in devnet/test rollout.",
           "tag": "Scaling"
         },
         {
@@ -301,7 +301,7 @@
         },
         "7": {
           "question": "What are Subblocks and why use them?",
-          "answer": "Subblocks split blocks into fast sub-blocks to speed up payment and dApp confirmation without trusted sequencers. This provides Layer-1 scaling with faster perceived confirmations."
+          "answer": "Subblocks split blocks into input blocks and ordering blocks to speed up payment and dApp feedback without trusted sequencers. This provides Layer-1 scaling with faster provisional feedback while final settlement remains anchored by ordering blocks."
         },
         "8": {
           "question": "Can I issue tokens and NFTs without a smart contract?",
@@ -878,11 +878,11 @@
       },
       "subblocks": {
         "title": "Subblocks (In Development)",
-        "description": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization or security.",
+        "description": "Layer 1 scaling work in the Matrix devnet/test stream, designed to provide faster provisional inclusion feedback without sacrificing decentralization or security.",
         "details": {
           "subSecondConfirmations": {
-            "title": "Sub-Second Confirmations",
-            "description": "Near-instant transaction finality for improved user experience."
+            "title": "Fast Provisional Feedback",
+            "description": "Near-instant transaction inclusion feedback while ordering blocks preserve final settlement."
           },
           "layer1Security": {
             "title": "Layer 1 Security",
@@ -1640,8 +1640,6 @@
       "guard_script_spending_conditions": "Guard script (spending conditions)",
       "additional_data_for_smart_contracts": "Additional data (for smart contracts)",
       "custom_tokens_and_nfts": "Custom tokens and NFTs",
-      "why_is_eutxo_better_than": "Why is eUTXO better than account-based models?\",\n      answer: \"eUTXO enables parallel transaction processing, eliminates double-spending at the protocol level, and provides more predictable fee structures.",
-      "can_i_build_complex_dapps": "Can I build complex dApps with eUTXO?\",\n      answer: \"Absolutely. eUTXO supports complex smart contracts while maintaining the security and simplicity of the UTXO model.",
       "next_generation_unspent_transaction_output": "Next-generation Unspent Transaction Output model for parallel smart contracts and composable DeFi",
       "what_is_eutxo": "What is eUTXO?",
       "the_extended_unspent_transaction_output": "The Extended Unspent Transaction Output (eUTXO) model is an evolution of Bitcoin's UTXO model, enhanced with smart contract capabilities while maintaining the security and simplicity of the original design.",
@@ -1868,13 +1866,13 @@
     },
     "subblocks": {
       "title": "Subblocks",
-      "subtitle": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations",
-      "description": "Subblocks enable near-instant transaction finality without sacrificing decentralization or security. Experience blockchain speed that matches traditional payment systems.",
+      "subtitle": "Layer 1 scaling work for faster provisional transaction feedback",
+      "description": "Subblocks are being tested in the Matrix devnet/test stream to provide near-instant transaction inclusion feedback without sacrificing decentralization or security. Ordering blocks remain responsible for final settlement.",
       "lastUpdated": "Last updated",
       "seo": {
-        "title": "Subblocks Technology | Sub-Second Confirmations on Ergo",
-        "description": "Learn about Subblocks on Ergo - revolutionary Layer 1 scaling providing sub-second transaction confirmations while maintaining full blockchain security.",
-        "keywords": "Subblocks, Layer 1 scaling, sub-second confirmations, Ergo blockchain, fast transactions, parallel processing"
+        "title": "Subblocks Technology | Fast Provisional Feedback on Ergo",
+        "description": "Learn about Subblocks on Ergo - Layer 1 scaling work for faster provisional transaction feedback while maintaining full blockchain security.",
+        "keywords": "Subblocks, Layer 1 scaling, provisional transaction feedback, Ergo blockchain, fast transactions, parallel processing"
       },
       "buttons": {
         "learnMore": "Learn More",
@@ -1889,14 +1887,14 @@
       "keyMetrics": {
         "title": "Key Metrics",
         "confirmationTime": {
-          "name": "Confirmation Time",
-          "value": "< 1 second",
-          "description": "Sub-second transaction finality"
+          "name": "Feedback Time",
+          "value": "~1-2 seconds",
+          "description": "Target provisional inclusion feedback"
         },
         "throughputIncrease": {
           "name": "Throughput Increase",
-          "value": "10x",
-          "description": "Compared to main chain"
+          "value": "Devnet",
+          "description": "Matrix implementation is still in rollout testing"
         },
         "securityModel": {
           "name": "Security Model",
@@ -1911,12 +1909,12 @@
       },
       "featuresSection": {
         "title": "Key Features",
-        "description": "Subblocks combine the best of both worlds: the security of Layer 1 and the speed of modern payment systems"
+        "description": "Subblocks aim to combine Layer 1 security with faster wallet and dApp feedback"
       },
       "features": [
         {
-          "title": "Sub-Second Confirmations",
-          "description": "Near-instant transaction finality for improved user experience without sacrificing decentralization"
+          "title": "Fast Provisional Feedback",
+          "description": "Near-instant transaction inclusion feedback for improved user experience without sacrificing decentralization"
         },
         {
           "title": "Layer 1 Security",
@@ -1928,7 +1926,7 @@
         },
         {
           "title": "Parallel Processing",
-          "description": "Multiple subblocks can be validated in parallel for increased throughput"
+          "description": "Input-block chains can reduce perceived latency and improve transaction propagation"
         },
         {
           "title": "Adaptive Difficulty",
@@ -1963,20 +1961,20 @@
       ],
       "useCasesSection": {
         "title": "Use Cases",
-        "description": "Applications that benefit from sub-second transaction confirmations"
+        "description": "Applications that benefit from faster provisional transaction feedback"
       },
       "useCases": [
         {
           "title": "DeFi Applications",
-          "description": "Enable high-frequency trading and instant swaps with sub-second finality"
+          "description": "Improve swap UX with faster inclusion feedback while final settlement remains on ordering blocks"
         },
         {
           "title": "Payment Systems",
-          "description": "Point-of-sale transactions with immediate confirmation"
+          "description": "Point-of-sale flows with faster provisional payment feedback"
         },
         {
           "title": "Gaming",
-          "description": "Real-time game state updates without waiting for block confirmations"
+          "description": "Faster game-state feedback without waiting for full ordering-block settlement"
         },
         {
           "title": "Social Applications",
@@ -1990,11 +1988,11 @@
       "faq": [
         {
           "question": "What are subblocks?",
-          "answer": "Subblocks are intermediate blocks between main blocks that provide faster confirmations while maintaining the same security model. They enable sub-second transaction finality without sacrificing decentralization."
+          "answer": "Subblocks, also called input blocks, are lower-difficulty block candidates between ordering blocks. They are designed to provide faster provisional inclusion feedback while final settlement remains anchored by ordering blocks."
         },
         {
           "question": "How fast are subblock confirmations?",
-          "answer": "Subblocks provide confirmations in approximately 1 second, compared to the 2-minute main block time, enabling near-instant transaction finality for improved user experience."
+          "answer": "The current design targets roughly 1-2 second provisional inclusion feedback compared with the 2-minute ordering-block cadence. Treat this as devnet/test rollout work until release notes mark production readiness."
         },
         {
           "question": "Do subblocks require a hard fork?",
@@ -2002,16 +2000,16 @@
         },
         {
           "question": "How do subblocks improve scalability?",
-          "answer": "Subblocks enable 10x throughput increase through parallel processing and more frequent block production while maintaining Layer 1 security guarantees."
+          "answer": "Subblocks improve perceived scalability by propagating transaction data more frequently and giving wallets and dApps faster inclusion feedback while preserving Layer 1 ordering-block security guarantees."
         },
         {
           "question": "Are subblocks secure?",
-          "answer": "Yes, subblocks maintain the same security model as main blocks with adjusted difficulty targets. They contribute to overall chain weight and are protected by the same PoW consensus."
+          "answer": "They are designed to preserve the ordering-block security model, but production users should follow the node release notes because the Matrix implementation is still in devnet/test rollout."
         }
       ],
       "cta": {
-        "title": "Ready to Experience Sub-Second Confirmations?",
-        "description": "Join the future of blockchain technology with subblocks - where speed meets security",
+        "title": "Follow Subblock Development",
+        "description": "Track the Matrix rollout and learn how faster provisional feedback fits Ergo's security model",
         "buttons": {
           "readTechnicalDetails": "Read Technical Details",
           "exploreOtherTechnologies": "Explore Other Technologies"
@@ -2088,29 +2086,13 @@
       "parallelism_utxo_independent_boxes_enable": "Parallelism\", utxo: \"Independent boxes enable parallel processing\", account: \"State contention forces sequential processing\", advantage: \"eUTXO",
       "global_state_makes_privacy_harder": "Global state makes privacy harder by default\", advantage: \"eUTXO",
       "token_handling_utxo_tokens_are": "Token Handling\", utxo: \"Tokens are first-class citizens in boxes\", account:",
-      "value_description_erg_custom_tokens": "Value\", description: \"ERG + custom tokens",
-      "guarding_script_description_ergoscript_code": "Guarding Script\", description: \"ErgoScript code controlling spending conditions",
-      "metadata_description_creation_height_boxid": "Metadata\", description: \"Creation height, boxId (derived from creating tx)",
-      "inputs_description_consume_existing_boxes": "Inputs\", description: \"Consume existing boxes ('spend' them)",
-      "outputs_description_create_new_boxes": "Outputs\", description: \"Create new boxes with new logic or data",
-      "script_checks_description": "Script Checks\", description:",
-      "state_transition_description_state_changes": "State Transition\", description: \"State changes by consuming and recreating boxes",
-      "defi_with_strong_guarantees_description": "DeFi with Strong Guarantees\", description: \"DEXs, algorithmic stablecoins, trust-minimized lending",
       "spectrum_finance_sigmausd_duckpools": "Spectrum Finance\", \"SigmaUSD\", \"DuckPools",
-      "nfts_asset_registries_description_each": "NFTs & Asset Registries\", description: \"Each NFT is a unique box, no global ledger needed",
       "ergo_auction_house_skyharbor_unique_assets": "Ergo Auction House\", \"SkyHarbor\", \"Unique Assets",
-      "privacy_protocols_description_zero_knowledge": "Privacy Protocols\", description: \"Zero-knowledge logic baked into core language",
       "oracle_pools_governance_compliance_tools": "Oracle Pools\", \"Governance\", \"Compliance Tools",
-      "can_you_port_ethereum_dapps_to_ergo_answer": "Can you port Ethereum dApps to Ergo?\", answer:",
-      "how_does_eutxo_handle_shared": "How does eUTXO handle shared state?\", answer: \"Shared state is managed through 'shared boxes' that multiple transactions can reference. Advanced dApps use techniques like batching, state splitting, or stateless proxies to minimize contention and maintain scalability.",
-      "what_are_the_main_advantages": "What are the main advantages over Bitcoin's UTXO?\", answer: \"eUTXO extends Bitcoin's UTXO with programmable logic, custom data storage in registers, and support for complex smart contracts while maintaining the security and parallelism benefits of the UTXO model.",
       "technology_href_technology": "Technology\", href: \"/technology",
-      "on_this_page_classname": "On this page\" className=",
       "technology_item_https_ergoblockchain_org": "Technology', item: 'https://ergoblockchain.org/technology",
       "techarticle_headline": "TechArticle', headline:",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO explained: security, parallelism, programmability, and use cases.",
-      "organization_name_ergo_foundation_url": "Organization', name: 'Ergo Foundation', url: 'https://ergoblockchain.org",
-      "organization_name_ergo_platform_url": "Organization', name: 'Ergo Platform', url: 'https://ergoblockchain.org",
       "on_this_page": "On this page",
       "ergoscript_code_controlling_spending_conditions": "ErgoScript code controlling spending conditions",
       "user_defined_r4_r9_r0_r3_are_protocol_reserved": "User-defined: R4–R9 (R0–R3 are protocol-reserved)",
@@ -2127,10 +2109,6 @@
       "extended_utxo_smart_contracts_blockchain": "Extended UTXO\",\n    \"smart contracts\",\n    \"blockchain technology\",\n    \"DeFi\",\n    \"parallel processing\",\n    \"re-entrancy protection\",\n    \"Ergo blockchain\",\n    \"UTXO model\",\n    \"cryptocurrency",
       "discover_the_eutxo_model_a": "Discover the eUTXO model, a secure and scalable approach to smart contracts. Learn how Ergo",
       "parallel_secure_smart_contracts_without": "Parallel, secure smart contracts without re-entrancy attacks. The future of DeFi.",
-      "what_is_the_eutxo_model": "What is the eUTXO model?\",\n      answer: \"The eUTXO (Extended UTXO) model combines Bitcoin's UTXO security with smart contract capabilities, enabling parallel execution and eliminating reentrancy attacks.",
-      "why_is_eutxo_better_for": "Why is eUTXO better for DeFi?\",\n      answer: \"eUTXO enables composable, predictable smart contracts with deterministic fees, no front-running, and parallel transaction processing for better throughput.",
-      "techarticle_headline_eutxo_model_extended": "TechArticle',\n    headline: 'eUTXO Model: Extended UTXO for Smart Contracts',\n    description: 'Technical guide to the eUTXO model and its advantages for DeFi",
-      "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
       "eutxo_model_explained_parallel_smart": "eUTXO Model Explained | Parallel Smart Contracts Without Reentrancy",
       "master_the_eutxo_model_powering_ergo": "Master the eUTXO model powering Ergo",
       "eutxo_model_extended_utxo_for_smart_contracts": "eUTXO Model - Extended UTXO for Smart Contracts",
@@ -2252,11 +2230,6 @@
       }
     },
     "ergoscriptOld": {
-      "what_is_ergoscript_answer_ergoscript": "What is ErgoScript?\",\n      answer: \"ErgoScript is Ergo's smart contract language based on Sigma protocols. It enables powerful, flexible, and secure smart contracts while maintaining the benefits of the UTXO model.",
-      "is_ergoscript_similar_to_other": "Is ErgoScript similar to other smart contract languages?\",\n      answer: \"ErgoScript is unique, combining functional programming with cryptographic protocols. It's more secure than Solidity, preventing reentrancy attacks by design.",
-      "how_do_i_learn_ergoscript": "How do I learn ErgoScript?\",\n      answer: \"Start with the official tutorials, use the ErgoScript playground for practice, and reference the documentation. Basic Scala knowledge helps but isn't required.",
-      "course_name_ergoscript_programming_course": "Course',\n    name: 'ErgoScript Programming Course',\n    description: 'Learn ErgoScript smart contract language for Ergo blockchain",
-      "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
       "ergoscript_secure_smart_contract_language": "ErgoScript - Secure Smart Contract Language",
       "learn_ergoscript_smart_contract_language": "Learn ErgoScript smart contract language for Ergo blockchain",
       "security_first": "Security First",
@@ -2281,23 +2254,11 @@
       "predictable_moderate": "Predictable, moderate",
       "copy_to_clipboard": "Copy to clipboard",
       "the_class_of_reentrancy_vulnerabilities": "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO",
-      "deterministic_execution_description_computational_complexity": "Deterministic Execution\",\n    description: \"Computational complexity is predictable, though network fees are market-driven",
-      "utxo_concurrency_description_parallel_transaction": "UTXO Concurrency\",\n    description: \"Parallel transaction processing with batcher patterns for high-contention scenarios",
-      "what_about_throughput_and_scaling": "What about throughput and scaling for high-demand applications?\",\n      answer: \"The eUTXO model enables parallel transaction processing. For high-contention scenarios like DEXs, batcher/aggregator patterns can collect multiple orders and execute them in batches, effectively scaling throughput while maintaining the security guarantees.",
-      "can_i_build_complex_defi": "Can I build complex DeFi applications with ErgoScript?\",\n      answer: \"Yes. ErgoScript supports sophisticated financial instruments including DEXs, stablecoins, lending protocols, and advanced NFT contracts. The declarative model and native cryptographic primitives often make complex protocols simpler to implement and audit than on account-based systems.",
       "technology_item_https_ergoblockchain_org": "Technology\",\n              item: \"https://ergoblockchain.org/technology",
       "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
       "technology_href_technology": "Technology\", href: \"/technology",
       "ergoscript_href_technology_ergoscript": "ErgoScript\", href: \"/technology/ergoscript",
-      "on_this_page_classname": "On this page\" className=",
-      "try_online_playground_description_write": "Try Online Playground\",\n                              description: \"Write and test ErgoScript in your browser",
-      "read_documentation_description_comprehensive_guides": "Read Documentation\",\n                              description: \"Comprehensive guides and API references",
-      "join_community_description_get_help": "Join Community\",\n                              description: \"Get help from experienced developers",
       "no_shared_global_state_eliminates": "No shared global state eliminates reentrancy vulnerability class",
-      "native_sigma_protocols_description_first": "Native Sigma Protocols\",\n                                  description: \"First-class cryptographic primitives for multi-party signatures",
-      "interactive_playground_description_test_contracts": "Interactive Playground\",\n                                  description: \"Test contracts instantly in your browser without setup",
-      "rich_tooling_ecosystem_description_sdks": "Rich Tooling Ecosystem\",\n                                  description: \"SDKs for Java, JavaScript, Python, and more",
-      "extensive_examples_description_learn_from": "Extensive Examples\",\n                                  description: \"Learn from reviewed contract examples and reusable templates",
       "non_custodial_defi_protocols": "Non-custodial DeFi protocols",
       "decentralized_oracle_networks": "Decentralized oracle networks",
       "stablecoins_and_native_tokens": "Stablecoins and native tokens",
@@ -2305,20 +2266,7 @@
       "daos_governance_systems": "DAOs & governance systems",
       "advanced_nft_contracts": "Advanced NFT contracts",
       "spv_nipopow_based_protocols": "SPV/NIPoPoW-based protocols",
-      "ergoscript_playground_url": "ErgoScript Playground\", url:",
-      "official_documentation_url_https_docs": "Official Documentation\", url: \"https://docs.ergoplatform.com/ergo-script/",
-      "code_examples_tutorials_url_docs": "Code Examples & Tutorials\", url: \"/docs/developers/tutorials",
-      "community_guides_url_learn_guides": "Community Guides\", url: \"/learn/guides",
-      "appkit_for_jvm_android_url": "Appkit for JVM & Android\", url: \"https://github.com/ergoplatform/ergo-appkit",
-      "ergoscript_compiler_url_https_github": "ErgoScript Compiler\", url: \"https://github.com/ergoplatform/sigmastate-interpreter",
-      "sdks_apis_url_docs_developers_tooling": "SDKs & APIs\", url: \"/docs/developers/tooling",
-      "node_js_library_url_https": "Node.js Library\", url: \"https://github.com/ergoplatform/ergo-ts",
       "like_bitcoin_script_works_with": "Like Bitcoin Script, works with outputs, not accounts. Unlike BTC, scripts are much more powerful for DeFi, DAO, and complex contracts.",
-      "no_shared_state_no_global": "No Shared State, No Global Variables\",\n                              description: \"Eliminates the reentrancy vulnerability class; mitigates some MEV patterns, but does not fully prevent frontrunning.",
-      "cryptography_first_design_description_sigma": "Cryptography-first Design\",\n                              description: \"Sigma protocols and zero-knowledge proofs are native. No need for external libraries or complex implementations.",
-      "predictable_execution_costs_description_script": "Predictable Execution Costs\",\n                              description: \"Script execution cost is statically bounded; the final network fee is still market-driven (mempool conditions).",
-      "restricted_computation_description_intentionally_limited": "Restricted Computation\",\n                              description: \"Intentionally limited to prevent infinite loops and ensure all contracts terminate predictably.",
-      "declarative_scripting_description_express_what": "Declarative Scripting\",\n                              description: \"Express what you want to achieve rather than how to achieve it. More readable and less error-prone.",
       "on_this_page": "On this page",
       "deterministic_execution": "Deterministic Execution",
       "computational_complexity_is_predictable_though": "Computational complexity is predictable, though network fees are market-driven",
@@ -2360,7 +2308,6 @@
       "explore_ergoscript_and_start_developing": "Explore ErgoScript and start developing secure smart contracts today.",
       "try_playground": "Try Playground"
     },
-    "ergo_technology_description": "Ergo Technology\",\n    description:",
     "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
     "explore_ergo_s_technology_stack": "Explore Ergo’s technology stack: eUTXO, ErgoScript, Autolykos PoW, Storage Rent, Sigma Protocols, NIPoPoWs.",
     "adaptiveEmission": {
@@ -2467,10 +2414,6 @@
       "built_in_privacy_technology_sigma": "Built-in privacy technology: Sigma protocols for zero-knowledge proofs, ErgoMixer for anonymous transactions, ring signatures, and confidential DeFi. No trusted setup required.",
       "native_zero_knowledge_proofs_mixer": "Native zero-knowledge proofs, mixer protocols, and confidential assets built into Ergo blockchain.",
       "optional_privacy_for_all_transactions": "Optional privacy for all transactions using Sigma protocols and ErgoMixer.",
-      "how_does_ergo_implement_privacy": "How does Ergo implement privacy?\",\n      answer: \"Ergo uses Sigma protocols for zero-knowledge proofs, enabling optional privacy features like ErgoMixer, ring signatures, and confidential transactions without trusted setup.",
-      "is_ergo_a_privacy_coin": "Is Ergo a privacy coin?\",\n      answer: \"Ergo offers optional privacy. Users can choose transparent or confidential transactions. Privacy is a feature, not mandatory, maintaining regulatory compliance.",
-      "what_is_ergomixer_answer_ergomixer": "What is ErgoMixer?\",\n      answer: \"ErgoMixer is a non-custodial, trustless mixing protocol that breaks transaction links using Sigma protocols, providing strong privacy without centralized operators.",
-      "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
       "ergo_privacy_features_zero_knowledge": "Ergo Privacy Features | Zero-Knowledge Proofs & Confidential Transactions",
       "ergo_privacy_technology_optional_confidentiality": "Ergo Privacy Technology | Optional Confidentiality for DeFi",
       "ergo_privacy_features_zk_proofs": "Ergo Privacy Features | ZK Proofs Without Trusted Setup",
@@ -2486,49 +2429,27 @@
       "what_you_can_do_with_ergo_privacy": "What You Can Do with Ergo Privacy",
       "frequently_asked_questions": "Frequently Asked Questions",
       "privacy_by_design_security_by_default": "Privacy by Design, Security by Default",
-      "sigma_protocols_description_enable_powerful": "Sigma Protocols\",\n    description:\n      \"Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
       "zero_knowledge_proofs_ring_signatures": "Zero-knowledge proofs\", \"Ring signatures\", \"Confidential assets\", \"Private smart contracts",
-      "ergomixer_description_on_chain_non": "ErgoMixer\",\n    description: \"On-chain, non-custodial mixing for transaction privacy and anonymity.",
       "non_custodial_mixing_on_chain": "Non-custodial mixing\",\n      \"On-chain privacy\",\n      \"Token mixing support\",\n      \"Configurable anonymity",
-      "confidential_assets_description_issue_tokens": "Confidential Assets\",\n    description: \"Issue tokens with hidden amounts and rules for maximum privacy.",
       "hidden_token_amounts_private_smart": "Hidden token amounts\",\n      \"Private smart contracts\",\n      \"Confidential transactions\",\n      \"Selective disclosure",
       "flexible_privacy_features_usable_in": "Flexible privacy features usable in dApps, DeFi, and NFTs\",\n  \"Open-source, peer-reviewed cryptography\",\n  \"Composable with other Ergo features\",\n  \"Built into the protocol, not added as afterthought\",\n  \"Mathematically proven security guarantees",
-      "private_transactions_description_mix_your": "Private Transactions\",\n    description:\n      \"Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
-      "confidential_defi_description_build_defi": "Confidential DeFi\",\n    description: \"Build DeFi applications with private balances and logic",
-      "anonymous_voting_description_create_daos": "Anonymous Voting\",\n    description: \"Create DAOs and voting systems with secret ballots",
-      "private_nfts_description_nfts_with": "Private NFTs\",\n    description: \"NFTs with hidden metadata or ownership information",
       "confidential_collectibles": "Confidential collectibles",
-      "what_level_of_privacy_does": "What level of privacy does Ergo offer? Is it just coin mixing?\",\n    answer:",
-      "if_i_use_privacy_features": "If I use privacy features, won't my transactions look suspicious?\",\n    answer:\n      \"On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion.",
-      "doesn_t_this_kind_of": "Doesn't this kind of privacy attract criminals?\",\n    answer:\n      \"Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling.",
-      "question_name_what_privacy_features": "Question\",\n              name: \"What privacy features does Ergo offer?",
       "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance.",
-      "question_name_how_do_sigma_protocols_work": "Question\",\n              name: \"How do Sigma protocols work?",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation.",
-      "question_name_are_ergo_s": "Question\",\n              name: \"Are Ergo's privacy features regulatory compliant?",
       "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default.",
       "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo bakes privacy into the protocol: Sigma protocols, ring/threshold signatures, ErgoMixer, confidential assets and selective disclosure.",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
       "ergo_privacy_sigma_protocols_ring": "Ergo privacy,Sigma protocols,ring signatures,zero-knowledge proofs,ErgoMixer,confidential transactions",
-      "thing_name_sigma_protocol": "Thing\", name: \"Sigma protocol",
-      "thing_name_zero_knowledge_proof": "Thing\", name: \"Zero-knowledge proof",
       "webpage_id_https_ergoblockchain_org_technology": "WebPage\", \"@id\": \"https://ergoblockchain.org/technology",
       "technology_item_https_ergoblockchain_org": "Technology\", item: \"https://ergoblockchain.org/technology",
       "privacy_features_item_https_ergoblockchain": "Privacy Features\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
-      "howto_name_how_to_increase": "HowTo\",\n          name: \"How to increase privacy with ErgoMixer\",\n          description: \"High-level steps to improve on-chain privacy using ErgoMixer with delays and larger anonymity sets.",
       "prepare_funds_text_split_funds": "Prepare funds\", text: \"Split funds and avoid address reuse.",
       "run_mix_text_choose_round": "Run mix\", text: \"Choose round count/delay for larger anonymity set.",
       "wait_spend_text_spend_after": "Wait & spend\", text: \"Spend after a delay; avoid direct linkability.",
       "technology_href_technology": "Technology\", href: \"/technology",
       "privacy_features_href_technology_privacy_features": "Privacy Features\", href: \"/technology/privacy-features",
-      "on_page_navigation_classname": "On-page navigation\" className=",
-      "basic_privacy_description_standard_transactions": "Basic Privacy\",\n                              description: \"Standard transactions with pseudonymous addresses",
       "pseudonymous_addresses_utxo_model_benefits": "Pseudonymous addresses\", \"UTXO model benefits\", \"Basic transaction privacy",
-      "enhanced_privacy_description_using_ergomixer": "Enhanced Privacy\",\n                              description: \"Using ErgoMixer for transaction mixing and unlinkability",
       "transaction_mixing_address_unlinkability_amount": "Transaction mixing\", \"Address unlinkability\", \"Amount obfuscation",
-      "maximum_privacy_description_sigma_protocols": "Maximum Privacy\",\n                              description: \"Sigma protocols with zero-knowledge proofs and ring signatures",
       "enable_powerful_privacy_tools_like": "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
       "on_chain_non_custodial_mixing": "On-chain, non-custodial mixing for transaction privacy and anonymity.",
       "issue_tokens_with_hidden_amounts": "Issue tokens with hidden amounts and rules for maximum privacy.",
@@ -2777,44 +2698,7 @@
     "frequently_asked_questions": "Frequently Asked Questions",
     "go_to_docs": "Go to Docs",
     "extended_utxo_model_that_enables": "Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin",
-    "parallel_execution_description_smart_contracts": "Parallel Execution\", description: \"Smart contracts run independently without global state conflicts.",
-    "composability_description_build_complex_defi": "Composability\", description: \"Build complex DeFi applications from simple, reusable components.",
-    "bitcoin_level_security_description_inherits": "Bitcoin-Level Security\", description: \"Inherits UTXO's battle-tested double-spend protection.",
-    "built_in_privacy_description_native": "Built-in Privacy\", description: \"Native zero-knowledge proofs and ring signatures for confidential transactions.",
-    "safe_by_design_description_prevents": "Safe by Design\", description: \"Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors.",
-    "autolykos_pow_description_energy_efficient": "Autolykos PoW\",\n    description:\n      \"Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.\",\n    color: \"\",\n    href: \"/technology/secure-pow",
-    "energy_efficient_description_memory_hard": "Energy Efficient\", description: \"Memory-hard algorithm reduces power consumption compared to traditional PoW.",
-    "solo_mining_friendly_description_low": "Solo Mining Friendly\", description: \"Low barrier to entry enables individual miners to participate profitably.",
-    "asic_resistant_description_optimized_for": "ASIC Resistant\", description: \"Optimized for consumer GPUs to prevent mining centralization.",
-    "storage_rent_description": "Storage Rent\",\n    description:",
-    "sustainable_blockchain_description_automatic_cleanup": "Sustainable Blockchain\", description: \"Automatic cleanup of unused data keeps the blockchain lean and efficient.",
-    "perpetual_security_description_miners_receive": "Perpetual Security\", description: \"Miners receive rewards forever, ensuring long-term network security.",
-    "resource_efficient_description_maintains_lightweight": "Resource Efficient\", description: \"Maintains lightweight blockchain that runs on modest hardware.",
-    "sigma_protocols_description_built_in": "Sigma Protocols\",\n    description:\n      \"Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.\",\n    color: \"\",\n    href: \"/technology/privacy-features",
-    "optional_privacy_description_choose_between": "Optional Privacy\", description: \"Choose between transparent or confidential transactions as needed.",
-    "developer_friendly_description_simple_apis": "Developer Friendly\", description: \"Simple APIs to add privacy features to any application.",
-    "instant_mobile_sync_description_full": "Instant Mobile Sync\", description: \"Full security with minimal data - sync in seconds on any device.",
-    "trustless_bridges_description_connect_to": "Trustless Bridges\", description: \"Connect to other blockchains without centralized validators.",
-    "cryptographic_security_description_mathematical_proofs": "Cryptographic Security\", description: \"Mathematical proofs ensure full node-level security for light clients.",
-    "subblocks_in_development_description": "Subblocks (In Development)\",\n    description:",
-    "sub_second_confirmations_description_near": "Sub-Second Confirmations\", description: \"Near-instant transaction finality for improved user experience.",
     "full_blockchain_security_without_trusted": "Full blockchain security without trusted intermediaries.",
-    "seamless_integration_description_works_with": "Seamless Integration\", description: \"Works with existing infrastructure - no bridges or sidechains needed.",
-    "native_tokens_nfts_description_create": "Native Tokens & NFTs\",\n    description:\n      \"Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.\",\n    color: \"\",\n    href: \"/technology/native-tokens",
-    "one_click_creation_description_issue": "One-Click Creation\", description: \"Issue tokens, stablecoins, or NFTs in a single transaction.",
-    "defi_ready_description_native_integration": "DeFi Ready\", description: \"Native integration with all Ergo applications and protocols.",
-    "true_native_assets_description_first": "True Native Assets\", description: \"First-class tokens with protocol-level security guarantees.",
-    "oracle_pools_description_decentralized_price": "Oracle Pools\",\n    description:\n      \"Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.\",\n    color: \"\",\n    href: \"/technology/oracle-pools",
-    "reliable_price_feeds_description_consensus": "Reliable Price Feeds\", description: \"Consensus-based data aggregation ensures accurate, manipulation-resistant prices.",
-    "universal_compatibility_description_any_smart": "Universal Compatibility\", description: \"Any smart contract can access oracle data without special integrations.",
-    "fully_decentralized_description_no_central": "Fully Decentralized\", description: \"No central authority or single point of failure in the data pipeline.",
-    "backward_compatible_description_no_forced": "Backward Compatible\", description: \"No forced upgrades, no chain wars.",
-    "future_proof_description_adopt_innovations": "Future Proof\", description: \"Adopt innovations at your own pace.",
-    "gradual_adoption_description_evolutionary_not": "Gradual Adoption\", description: \"Evolutionary, not revolutionary changes.",
-    "adaptive_emission_governance_description_consensus": "Adaptive Emission & Governance\",\n    description:\n      \"Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.\",\n    color: \"\",\n    href: \"/technology/adaptive-emission",
-    "parameter_tuning_description_economic_variables": "Parameter Tuning\", description: \"Economic variables can be adjusted.",
-    "economic_flexibility_description_adapt_to": "Economic Flexibility\", description: \"Adapt to changing network needs.",
-    "community_input_description_discussions_and": "Community Input\", description: \"Discussions and decisions involve the community.",
     "dive_into_ergo_docs_href_docs_color": "Dive into Ergo Docs\",\n          href: \"/docs\",\n    color:",
     "see_ecosystem_apps_href_ecosystem_color": "See Ecosystem Apps\",\n    href: \"/ecosystem\",\n    color:",
     "adaptive_emission_governance": "Adaptive Emission & Governance",
@@ -2824,7 +2708,7 @@
     "how_does_storage_rent_solve": "How does Storage Rent solve blockchain sustainability?\",\n      tag: \"Storage",
     "what_privacy_features_does_ergo": "What privacy features does Ergo offer natively?\",\n      tag: \"Privacy",
     "why_are_ergo_s_oracle": "Why are Ergo's Oracle Pools more secure than Chainlink?\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "How do Subblocks achieve sub-second transaction confirmations?\",\n      tag: \"Scaling",
+    "how_do_subblocks_achieve_sub": "How do Subblocks provide faster provisional transaction feedback?\",\n      tag: \"Scaling",
     "how_to_create_tokens_and": "How to create tokens and NFTs on Ergo without smart contracts?\",\n      tag: \"Tokens & NFTs",
     "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
     "research_in_development": "Research/In development",
@@ -2834,7 +2718,6 @@
     "whitepaper_href_https_ergoplatform_org": "Whitepaper\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
     "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
     "dev_tutorials_href_docs_developers_tutorials": "Dev Tutorials\", href: \"/docs/developers/tutorials",
-    "ergo_technology_category_technology": "Ergo Technology',\n  //   category: 'technology",
     "smart_contracts_run_independently_without": "Smart contracts run independently without global state conflicts.",
     "build_complex_defi_applications_from": "Build complex DeFi applications from simple, reusable components.",
     "bitcoin_level_security": "Bitcoin-Level Security",
@@ -2859,8 +2742,8 @@
     "cryptographic_security": "Cryptographic Security",
     "mathematical_proofs_ensure_full_node": "Mathematical proofs ensure full node-level security for light clients.",
     "subblocks_in_development": "Subblocks (In Development)",
-    "sub_second_confirmations": "Sub-Second Confirmations",
-    "near_instant_transaction_finality_for": "Near-instant transaction finality for improved user experience.",
+    "sub_second_confirmations": "Fast Provisional Feedback",
+    "near_instant_transaction_finality_for": "Near-instant inclusion feedback for improved user experience.",
     "works_with_existing_infrastructure_no": "Works with existing infrastructure - no bridges or sidechains needed.",
     "create_and_trade_tokens_and": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.",
     "issue_tokens_stablecoins_or_nfts": "Issue tokens, stablecoins, or NFTs in a single transaction.",
@@ -2886,35 +2769,16 @@
     "dive_deeper_into_the_docs": "Dive deeper into the docs or start building on the most advanced UTXO blockchain.",
     "discover_ergo_s_advanced_blockchain": "Discover Ergo\\'s advanced blockchain technology: eUTXO model for parallel smart contracts, ErgoScript programming language, Sigma protocols for zero-knowledge proofs, and ASIC-resistant Autolykos mining.",
     "ergoscript_smart_contracts_sigma_protocols": "ErgoScript smart contracts', 'Sigma protocols', 'Autolykos mining', 'blockchain technology', 'smart contract programming', 'NIPoPoWs', 'storage rent', 'proof of work', 'DeFi infrastructure",
-    "ergo_technology_stack_building_the": "Ergo Technology Stack - Building the Future',\n    description: 'Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.',\n    url: 'https://ergoblockchain.org/technology',\n    siteName: 'Ergo Platform",
     "ergo_technology_overview": "Ergo Technology Overview",
     "ergo_technology_next_generation_blockchain": "Ergo Technology - Next Generation Blockchain",
-    "techarticle_id_https_ergoblockchain_org": "TechArticle',\n    '@id': 'https://ergoblockchain.org/technology#article',\n    headline: 'Ergo Blockchain Technology Stack',\n    description: 'Comprehensive overview of Ergo\\'s technological innovations including eUTXO, ErgoScript, and Sigma protocols',\n    datePublished:",
-    "organization_name_ergo_platform_url": "Organization',\n      name: 'Ergo Platform',\n      url: 'https://ergoblockchain.org",
-    "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
-    "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
     "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "thing_name_eutxo_model_description": "Thing', name: 'eUTXO Model', description: 'Extended UTXO model enabling parallel execution",
-    "thing_name_ergoscript_description_secure": "Thing', name: 'ErgoScript', description: 'Secure, declarative language for programmable money",
-    "thing_name_sigma_protocols_description": "Thing', name: 'Sigma Protocols', description: 'Native zero-knowledge proofs and privacy features",
-    "thing_name_autolykos_description_memory": "Thing', name: 'Autolykos', description: 'Memory-hard Proof of Work algorithm",
-    "thing_name_storage_rent_description": "Thing', name: 'Storage Rent', description: 'Sustainable blockchain state management",
-    "thing_name_nipopows_description_non": "Thing', name: 'NIPoPoWs', description: 'Non-Interactive Proofs of Proof-of-Work",
     "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
-    "question_name_what_is_ergoscript": "Question',\n        name: 'What is ErgoScript and why is it secure?",
     "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript is Ergo\\",
-    "question_name_why_is_autolykos": "Question',\n        name: 'Why is Autolykos considered decentralized and energy-efficient?",
     "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use.",
-    "question_name_what_is_storage": "Question',\n        name: 'What is Storage Rent and why does it matter?",
     "answer_text": "Answer',\n          text:",
-    "question_name_what_privacy_and": "Question',\n        name: 'What privacy and multisig features are built in?",
-    "question_name_what_do_nipopows_enable": "Question',\n        name: 'What do NIPoPoWs enable?",
     "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
-    "question_name_what_are_subblocks_and_why_use_them": "Question',\n        name: 'What are Subblocks and why use them?",
-    "question_name_can_i_issue": "Question',\n        name: 'Can I issue tokens and NFTs without a smart contract?",
     "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "technology_item_https_ergoblockchain_org": "Technology',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_technology_stack_summary_ergo": "Ergo Technology Stack',\n    summary: 'Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy',\n    url: 'https://ergoblockchain.org/technology",
     "ergo_blockchain_technology_eutxo_smart": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma Protocols",
     "ergo_technology_stack_building_the_future": "Ergo Technology Stack - Building the Future",
     "advanced_blockchain_technology_eutxo_ergoscript": "Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.",
@@ -5208,13 +5072,13 @@
     },
     "subblocks": {
       "title": "Subblocks",
-      "description": "Layer-1 scaling solution achieving sub-second transaction confirmations while maintaining full security",
-      "shortDescription": "Sub-second confirmations on Layer 1",
-      "keywords": "subblocks,scaling,fast confirmations,layer 1,throughput",
+      "description": "Layer-1 scaling work for faster provisional transaction feedback while maintaining ordering-block security",
+      "shortDescription": "Faster provisional feedback on Layer 1",
+      "keywords": "subblocks,scaling,fast provisional feedback,layer 1,throughput",
       "details": [
         {
-          "title": "Sub-Second Confirmations",
-          "description": "Near-instant transaction feedback for better UX"
+          "title": "Fast Provisional Feedback",
+          "description": "Near-instant inclusion feedback for better UX"
         },
         {
           "title": "Layer-1 Security",
