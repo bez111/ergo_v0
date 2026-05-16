@@ -14,6 +14,7 @@
     "sage:wallet:reserve": "npm --prefix scripts/sage-signer install && npm --prefix scripts/sage-signer run reserve",
     "sage:wallet:issue-note": "npm --prefix scripts/sage-signer install && npm --prefix scripts/sage-signer run issue-note",
     "sage:signer": "npm --prefix scripts/sage-signer install && npm --prefix scripts/sage-signer start",
+    "sage:conformance": "node scripts/sage-conformance.mjs",
     "icons": "node scripts/build-icons.mjs",
     "start": "npx next start",
     "lint": "eslint",

@@ -3,7 +3,7 @@ title: "Shipping Sage: a paid AI agent settled on Ergo testnet"
 slug: "/blog/shipping-paid-ai-on-chain"
 seo_title: "Shipping Sage: a paid AI agent settled on Ergo testnet"
 meta_description: "How Sage, the AI concierge on ergoblockchain.org, moved from verify-only paid answers to a real Ergo testnet redemption transaction using the Accord Protocol pattern."
-excerpt: "Sage now has a real Ergo testnet settlement trail: a premium AI answer paid through an Accord-style Note, verified by the rail, redeemed on-chain, and exposed through a chain-only receipt bundle. The remaining gap is public signed receipt JSON."
+excerpt: "Sage now has a real Ergo testnet settlement trail and durable full receipt storage for new paid turns: Agreement JSON, Verification Receipt JSON, Settlement Receipt JSON, and a chain-anchored public receipt API."
 author: "Ergo Developer Relations"
 date_published: "2026-05-15"
 date_modified: "2026-05-16"
@@ -31,6 +31,8 @@ f697e4841dd9a0c689d0b83a311130b85a0cfbab123230a6c40284b44c4cafef
 - Live activity feed: <https://www.ergoblockchain.org/api/sage/activity>
 
 This post is the build log: what Sage does, what is proven, what is still deliberately not claimed, and what has to ship next before we can call the Sage pilot a full protocol pass.
+
+Update as of 2026-05-16: durable receipt storage is live for new paid Sage turns. The first settlement transaction above predates that storage layer, so it remains a chain-proof receipt. New post-storage paid turns can now persist the full Agreement, Verification Receipt, and Settlement Receipt bundle in `/api/sage/receipt/<id>`.
 
 ## What Sage Does
 
@@ -118,17 +120,13 @@ This does **not** certify mainnet use.
 
 It also does **not** make the Sage pilot a full Accord protocol `pass` yet.
 
-The missing piece is public receipt completeness. The current public Sage surface proves the chain redemption and exposes machine-readable chain evidence JSON, but it does not yet expose all three signed Accord artifacts as stable machine-readable JSON:
+The remaining piece is conformance evidence. The storage path for full receipt bundles is now implemented, but a protocol pass needs one new paid Sage turn after the Blob deployment, then an external conformance run against the stored bundle.
 
-- Agreement JSON
-- Verification Receipt JSON
-- Settlement Receipt JSON
+The honest status is:
 
-Until those artifacts are public and machine-checkable, the honest status is:
+> On-chain Sage settlement is proven. Full receipt storage is live for new receipts. Signed conformance evidence is still pending.
 
-> On-chain Sage settlement is proven. Full protocol receipt completeness is still pending.
-
-That distinction is important. The chain proof exists. The remaining work is to make the full Accord receipt trail public, signed, stable, and verifiable.
+That distinction is important. Old chain-only receipts cannot be magically upgraded because the original Agreement and signed verification receipt were not stored at the time. New receipts can carry the full bundle.
 
 ## Code Surface
 
@@ -151,9 +149,10 @@ src/lib/sage/
 
 src/app/api/sage/
 ├── activity/route.ts           Public Sage chain activity feed
+├── accord/route.ts             Accord/402 conformance bridge
 ├── chat/route.ts               SSE streaming endpoint, premium-aware
 ├── quote/route.ts              POST { question } -> SageQuote
-├── receipt/[id]/route.ts       Public machine-readable chain proof
+├── receipt/[id]/route.ts       Public machine-readable receipt source of truth
 └── verify-payment/route.ts     POST { quote, question, noteBoxId } -> token
 
 src/app/[locale]/r/sage/[id]/
@@ -199,26 +198,26 @@ The correct posture is still conservative:
 - testnet only;
 - no mainnet certification;
 - no external audit claim;
-- no claim that current public Sage receipts are complete signed Accord artifacts;
+- old pre-storage receipts may remain chain-proof-only;
+- no claim of Accord conformance until the signed artifact is published;
 - no claim that every future deployment is safe by copying this one;
-- signed public receipt JSON still pending.
+- external audit and mainnet manifests still pending.
 
 That is not weakness. It is the difference between a credible build log and marketing.
 
 ## What's Next
 
-The next step is not "prove settlement." That part has happened.
+The next step is not "prove settlement" or "add storage." Those parts have happened.
 
-The next step is to complete the full receipt surface:
+The next step is to turn the implementation into evidence:
 
-- durable storage for the Agreement generated at quote/payment time;
-- signed Verification Receipt JSON;
-- signed Settlement Receipt JSON;
-- receipt IDs visible from the public receipt page;
-- conformance runner pointed at the Sage endpoints;
-- signed conformance artifact published back into the Accord registry.
+- create one new paid Sage turn now that Blob storage is live;
+- confirm `/api/sage/receipt/<id>` returns `completeness: "full_receipt_bundle"`;
+- run the Accord conformance runner against `/api/sage/accord`;
+- sign the conformance artifact;
+- publish the artifact URI in the Accord registry evidence.
 
-After that, Sage can move from "settlement proven" to a full protocol-level pass.
+After that, Sage can move from "settlement proven and storage-ready" to a protocol-level pass.
 
 Then come the bigger roadmap items:
 
@@ -249,7 +248,7 @@ Yes. If `SAGE_SIGNER_URL` and local signing are unavailable, Sage can still run 
 
 ### Is the current Sage pilot a full Accord pass?
 
-Not yet. The chain settlement is real, but the public Sage surface still needs to expose full signed Agreement, Verification Receipt, and Settlement Receipt JSON. Until then, the pilot is best described as settlement-proven but receipt-completeness pending.
+Not yet. The chain settlement is real and full receipt storage is live for new paid turns, but the next public claim needs a signed conformance artifact generated from a post-storage receipt. Until then, the pilot is best described as settlement-proven, storage-ready, and conformance-pending.
 
 ### How is this different from x402?
 

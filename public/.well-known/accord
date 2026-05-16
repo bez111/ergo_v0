@@ -1,0 +1,22 @@
+{
+  "type": "accord.provider_descriptor.v0",
+  "provider": "sage",
+  "name": "Sage",
+  "protocol": "accord",
+  "version": "v0",
+  "status": "conformance_ready",
+  "endpoints": {
+    "accord_402": "https://www.ergoblockchain.org/api/sage/accord",
+    "quote": "https://www.ergoblockchain.org/api/sage/quote",
+    "verify_payment": "https://www.ergoblockchain.org/api/sage/verify-payment",
+    "receipt": "https://www.ergoblockchain.org/api/sage/receipt/{id}",
+    "activity": "https://www.ergoblockchain.org/api/sage/activity"
+  },
+  "rails": [
+    "ergo"
+  ],
+  "evidence": {
+    "receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/{id}",
+    "conformance": "pending:first post-Blob full receipt + signed conformance artifact"
+  }
+}

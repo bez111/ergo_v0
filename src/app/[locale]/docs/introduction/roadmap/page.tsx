@@ -371,12 +371,15 @@ export default function RoadmapPage() {
                   <li>• ergo-agent-mcp (Model Context Protocol server) ✓</li>
                   <li>• Framework adapters: LangChain, OpenAI, CrewAI, AutoGen ✓</li>
                   <li>• 10 working examples on testnet ✓</li>
+                  <li>• Sage hosted testnet reference dApp with real settlement and full receipt storage for new receipts ✓</li>
+                  <li>• @ergoblockchain/sage-widget v0.1.0 activity-feed package ✓</li>
                 </ul>
                 <p><strong>Ongoing:</strong></p>
                 <ul className="ml-4 space-y-1">
                   <li>• Production audit of agent payment SDKs</li>
                   <li>• Standardisation of agent payment discovery (RFC-style spec)</li>
-                  <li>• Hosted reference dApp on testnet</li>
+                  <li>• Accord conformance artifact and registry evidence for Sage</li>
+                  <li>• Embeddable paid Sage widget: chat, quote, verify, receipt link, tenant config</li>
                   <li>• Scalability improvements (L1 and L2)</li>
                   <li>• Continued ecosystem development and security strengthening</li>
                 </ul>

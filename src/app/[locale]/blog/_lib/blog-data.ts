@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'shipping-paid-ai-on-chain',
     title: 'Shipping Sage: a paid AI agent settled on Ergo testnet',
     excerpt:
-      'Sage now has a real Ergo testnet settlement trail: a premium AI answer paid through an Accord-style Note, verified by the rail, redeemed on-chain, and exposed through a chain-only receipt bundle.',
+      'Sage now has a real Ergo testnet settlement trail and durable full receipt storage for new paid turns: Agreement JSON, Verification Receipt JSON, Settlement Receipt JSON, and a public receipt API.',
     date: '2026-05-15',
     lastUpdated: '2026-05-16',
     author: authors['ergo-team']!,
@@ -371,7 +371,7 @@ export const blogPosts: BlogPost[] = [
     id: 'ergo-agent-economy-q2-2026',
     slug: 'ergo-agent-economy-q2-2026',
     title: 'Accord Protocol Q2 2026 Update: What Shipped in Ergo’s Agent Economy Stack',
-    excerpt: 'Accord Protocol now ships a testnet-first agreement layer, full Note lifecycle, framework adapters and MCP tooling, with Sage providing the first hosted testnet proof while full receipt completeness remains next.',
+    excerpt: 'Accord Protocol now ships a testnet-first agreement layer, full Note lifecycle, framework adapters and MCP tooling, with Sage providing the first hosted testnet proof and durable full receipt storage for new paid turns.',
     date: '2026-05-06',
     lastUpdated: '2026-05-16',
     author: authors['dev-relations']!,

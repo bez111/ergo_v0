@@ -3,7 +3,7 @@ title: "Accord Protocol Q2 2026 Update: What Shipped in Ergo’s Agent Economy S
 slug: "/blog/ergo-agent-economy-q2-2026"
 seo_title: "Accord Protocol Q2 2026: AI Agent Payments SDK, MCP Server and Ergo Testnet Demos"
 meta_description: "Accord Protocol Q2 2026 update: AI agent payment SDKs, Ergo Notes, MCP tooling, Sage's hosted testnet proof, and the audit-gated mainnet roadmap."
-excerpt: "Accord Protocol now ships a testnet-first agreement layer, full Note lifecycle, framework adapters and MCP tooling, with Sage providing the first hosted testnet proof while full receipt completeness remains next."
+excerpt: "Accord Protocol now ships a testnet-first agreement layer, full Note lifecycle, framework adapters and MCP tooling, with Sage providing the first hosted testnet proof and durable full receipt storage for new paid turns."
 author: "Ergo Developer Relations"
 date_published: "2026-05-06"
 date_modified: "2026-05-16"
@@ -34,7 +34,7 @@ The project is open source and working, but not production-certified. The repo s
 
 ### Sage is now the first hosted testnet proof
 
-Since this article first shipped, Sage on ergoblockchain.org has moved from roadmap item to live testnet proof: a 402-style premium flow, a public activity feed, one real Ergo testnet redemption transaction, and a chain-only receipt bundle. The published `@ergoblockchain/sage-widget` v0.1.0 package exposes the activity-feed component. The MCP endpoint is live on Fly while `mcp.ergoblockchain.org` waits on DNS.
+Since this article first shipped, Sage on ergoblockchain.org has moved from roadmap item to live testnet proof: a 402-style premium flow, a public activity feed, one real Ergo testnet redemption transaction, and durable full receipt storage for new paid turns. The first settlement receipt remains chain-proof-only because it predates storage. The published `@ergoblockchain/sage-widget` v0.1.0 package exposes the activity-feed component. The MCP endpoint is live on Fly while `mcp.ergoblockchain.org` waits on DNS.
 
 ### The Note lifecycle is now implemented end to end
 
@@ -44,9 +44,9 @@ The Ergo rail now covers the full Reserve → Note → Tracker → Acceptance Pr
 
 TypeScript/Node, Python and MCP tooling let builders approach the stack from different runtimes. A JavaScript agent can issue Notes. A Python agent can pay an API. An MCP-compatible host can expose payment tools to an AI assistant or developer environment.
 
-### The next bottleneck is not imagination; it is receipt completeness
+### The next bottleneck is conformance evidence
 
-The next phase is durable receipt storage, signed Agreement / Verification / Settlement JSON, conformance artifacts, external security review, clear status manifests, and more framework integrations.
+Durable receipt storage is live for new Sage receipts. The next phase is one post-storage paid receipt, a signed conformance artifact, updated registry evidence, external security review, clear status manifests, and more framework integrations.
 
 ## Naming and migration
 
@@ -160,9 +160,9 @@ The top priority is security review. A signed audit manifest should specify the 
 
 Agents need a predictable way to discover payment terms. A future standard could expose `.well-known/accord.json`, HTTP headers or an x402-compatible extension describing price, rail, accepted assets, verification rule and refund policy.
 
-### 3. Hosted testnet reference dApp and receipt completeness
+### 3. Hosted testnet reference dApp and conformance evidence
 
-Sage now covers the first hosted testnet proof: a builder can open the site, trigger a 402-style premium flow, verify a testnet Note, and inspect a real settlement transaction. The remaining reference-dApp work is stricter Accord/402 conformance: durable Agreement JSON, signed Verification Receipt JSON, signed Settlement Receipt JSON, and a receipt bundle that external tools can verify without relying on article prose.
+Sage now covers the first hosted testnet proof: a builder can open the site, trigger a 402-style premium flow, verify a testnet Note, inspect a real settlement transaction, and use durable full receipt storage for new receipts. The remaining reference-dApp work is stricter Accord/402 conformance: one post-storage receipt, a signed conformance artifact, and registry evidence that external tools can verify without relying on article prose.
 
 ### 4. Conformance tests
 
@@ -198,7 +198,7 @@ x402 focuses on payment over HTTP: a resource requires payment, the client submi
 
 ### What should the next demo show?
 
-Sage now shows the first version of that flow. The next demo should close the protocol gap: an Accord/402-compatible endpoint that emits signed Agreement, Verification Receipt and Settlement Receipt JSON, stores them durably, publishes conformance evidence, and still settles through an Ergo Note.
+Sage now shows the first version of that flow. The next demo should close the protocol gap with a post-storage paid receipt, an Accord/402-compatible conformance run, a signed artifact, registry evidence, and the same Ergo Note settlement path.
 
 ## Article JSON-LD draft
 

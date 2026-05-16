@@ -175,10 +175,39 @@ Now Sage redeems Notes for real — receipts will show full settlement with on-c
 Once everything is live and the first end-to-end transaction completes, submit Sage to the public Accord registry:
 
 ```bash
-cd ../ergo-agent-economy
-# registry/providers/sage.json was committed in Sprint 3.4
-# update conformance.last_run_at + result_uri once you've run:
-npx @accord-protocol/conformance --target https://www.ergoblockchain.org/api/sage/quote
+npm run sage:conformance
+
+# If the runner prints "No full_receipt_bundle found yet", create one new
+# paid Sage turn after the Blob deploy and rerun.
+
+# Then sign the generated artifact with the Accord conformance CLI:
+node ../accord-protocol/packages/accord-conformance/dist/cli.js sign \
+  --key-file <private-key-file> \
+  --signer provider://sage \
+  --output artifacts/sage-conformance/<signed>.json \
+  artifacts/sage-conformance/<result>.json
+```
+
+The runner targets the Accord/402 bridge at:
+
+```text
+https://www.ergoblockchain.org/api/sage/accord
+```
+
+It uses the stored receipt bundle from:
+
+```text
+https://www.ergoblockchain.org/api/sage/receipt/<id>
+```
+
+After the signed artifact is published, update the Accord registry:
+
+```bash
+cd ../accord-protocol
+# update registry/providers/sage.json:
+#   conformance.level = "L1"
+#   conformance.last_run_at = <artifact timestamp>
+#   conformance.result_uri = <published signed artifact URI>
 git push origin main
 ```
 
