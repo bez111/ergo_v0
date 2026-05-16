@@ -1,0 +1,167 @@
+# Sage signer ops runbook
+
+Sage can serve paid testnet turns in two modes:
+
+- `verify-only`: Sage verifies the buyer Note and serves the premium answer, but redemption is deferred.
+- `settlement`: Sage verifies the Note, sends an unsigned redemption transaction to the standalone signer, receives a signed transaction, submits it, and stores the receipt bundle.
+
+`verify-only` is a valid degraded mode for the public pilot. It must not be described as final settlement. Receipts should remain `verified_pending_redemption` until an on-chain redemption transaction exists.
+
+## Production posture
+
+- Network: Ergo testnet.
+- Custody: seller signing key must stay outside Vercel.
+- Public claim: testnet proof, not mainnet readiness.
+- Durable receipts: new paid turns should persist full Agreement, Verification Receipt, and Settlement Receipt JSON through Vercel Blob.
+- Conformance: not complete until a post-Blob receipt produces a signed conformance artifact and registry evidence.
+
+## Required secrets
+
+Vercel:
+
+```text
+SAGE_WALLET_ADDRESS
+SAGE_RESERVE_BOX_ID
+SAGE_NETWORK=testnet
+SAGE_PAYMENT_HMAC_KEY
+BLOB_READ_WRITE_TOKEN
+SAGE_SIGNER_URL          optional, settlement mode only
+SAGE_SIGNER_TOKEN        required if SAGE_SIGNER_URL is set
+```
+
+Local signer machine:
+
+```text
+SAGE_WALLET_SEED
+SAGE_SIGNER_TOKEN
+SAGE_NETWORK=testnet
+SAGE_MAX_SINGLE_TX_NANOERG=10000000
+SAGE_WHITELIST_ADDRS=<comma-separated allowed output addresses>
+```
+
+Do not put `SAGE_WALLET_SEED` in Vercel, source code, screenshots, logs, tickets, or prompts.
+
+## Start settlement mode
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0/scripts/sage-signer
+npm install
+npm start
+```
+
+Expose it:
+
+```bash
+cloudflared tunnel --url http://localhost:8911
+```
+
+Set or rotate the Vercel URL:
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0
+vercel env add SAGE_SIGNER_URL production
+vercel env add SAGE_SIGNER_TOKEN production
+vercel --prod --yes
+```
+
+The URL must end with `/sign` when stored in `SAGE_SIGNER_URL`.
+
+## Health checks
+
+Check premium quote path:
+
+```bash
+curl -sS -X POST https://www.ergoblockchain.org/api/sage/quote \
+  -H 'content-type: application/json' \
+  --data '{"question":"/code signer health probe"}'
+```
+
+Check activity feed:
+
+```bash
+curl -sS 'https://www.ergoblockchain.org/api/sage/activity?limit=5'
+```
+
+Check Blob storage is visible to production:
+
+```bash
+curl -sS https://www.ergoblockchain.org/api/sage/receipt/blob-probe-2026-05-16
+```
+
+Expected storage probe before a receipt exists:
+
+```json
+{"ok":false,"error":"receipt not found in blob storage","storage_configured":true}
+```
+
+Check full receipt after a paid turn:
+
+```bash
+curl -sS https://www.ergoblockchain.org/api/sage/receipt/<id>
+```
+
+Expected:
+
+```text
+completeness = full_receipt_bundle
+accord.agreement_json present
+accord.verification_receipt_json present
+accord.settlement_receipt_json present
+```
+
+## Monitoring
+
+Vercel logs:
+
+```bash
+vercel logs --follow | grep "\\[sage\\]"
+```
+
+Useful lines:
+
+```text
+[sage] paid quoteId=... receipt=... settleTx=... storage=saved
+[sage] settle failed (verify ok, deferring redemption): ...
+```
+
+Signer logs should be kept open while settlement mode is active. Any denied signing decision should include enough context to identify the tx policy failure without printing secrets.
+
+## Failure modes
+
+| Symptom | Likely cause | Action |
+| --- | --- | --- |
+| `/api/sage/quote` returns 503 | wallet env missing | verify `SAGE_WALLET_ADDRESS`, `SAGE_RESERVE_BOX_ID`, `SAGE_PAYMENT_HMAC_KEY`, redeploy |
+| verify succeeds but receipt is pending | signer offline or URL invalid | keep degraded verify-only mode, fix tunnel, rotate `SAGE_SIGNER_URL`, redeploy |
+| receipt is `chain_proof_only` | Blob missing when payment was verified, or old receipt | create one new paid turn after Blob is configured |
+| signer returns 401 | token mismatch | rotate both local `SAGE_SIGNER_TOKEN` and Vercel `SAGE_SIGNER_TOKEN` |
+| signer rejects policy | amount or output not allowed | inspect tx policy, `SAGE_MAX_SINGLE_TX_NANOERG`, `SAGE_WHITELIST_ADDRS` |
+| explorer cannot find Note yet | testnet propagation lag | wait 2-5 minutes and retry |
+
+## Failover
+
+To stop settlement safely:
+
+1. Stop the local signer.
+2. Leave Vercel running. Sage falls back to verify-only.
+3. Do not remove existing receipts.
+4. Announce only "verification live, redemption deferred" if describing the state publicly.
+
+To restore:
+
+1. Start signer.
+2. Start tunnel.
+3. Update `SAGE_SIGNER_URL` if tunnel changed.
+4. Redeploy.
+5. Trigger one small paid testnet turn.
+6. Confirm `receiptStorage.ok === true` and either `settlementTxId` exists or the receipt clearly says pending.
+
+## Weekly ops checklist
+
+- Confirm `/api/sage/quote` still returns a premium quote for `/code` probes.
+- Confirm `/api/sage/activity` returns the configured Sage receiver.
+- Confirm Blob storage probe returns `storage_configured: true`.
+- Review Vercel logs for `settle failed`.
+- Keep testnet wallet funded.
+- Rotate public tunnel URL/token if exposed in a shared channel.
+- Do not upgrade public language from "testnet proof" to "production/mainnet ready" until the audit gate is complete.
+

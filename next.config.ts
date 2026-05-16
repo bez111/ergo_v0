@@ -179,6 +179,13 @@ const nextConfig: NextConfig = {
       ...config.experiments,
       asyncWebAssembly: true,
     };
+    config.output = {
+      ...config.output,
+      environment: {
+        ...config.output?.environment,
+        asyncFunction: true,
+      },
+    };
 
     // Оптимизация для продакшена
     if (!dev && !isServer) {

@@ -40,6 +40,69 @@ const USE_CASE_ICONS = [Bot, CreditCard, GitBranch]
 
 const CREDIT_UNLOCK_ICONS = [CreditCard, CheckCircle, Landmark]
 
+const COCKPIT_ITEMS = [
+  {
+    name: "Sage paid turn",
+    status: "Live testnet proof",
+    tone: "live",
+    icon: Bot,
+    metric: "1 real redemption",
+    body: "Premium questions can be priced as Ergo testnet Notes, verified, answered, and redeemed on chain when the signer is online.",
+    href: "#sage-activity",
+    action: "Open activity",
+  },
+  {
+    name: "Receipt source",
+    status: "Storage live",
+    tone: "live",
+    icon: CheckCircle,
+    metric: "Blob-backed bundles",
+    body: "New paid turns can persist Agreement JSON, Verification Receipt JSON, Settlement Receipt JSON, and chain evidence under one receipt API.",
+    href: "/api/sage/receipt/blob-probe-2026-05-16",
+    action: "Probe storage",
+  },
+  {
+    name: "Accord/402 bridge",
+    status: "Conformance pending",
+    tone: "pending",
+    icon: GitBranch,
+    metric: "/api/sage/accord",
+    body: "The bridge is deployed. The remaining gate is one post-storage paid receipt, a signed conformance artifact, and registry evidence.",
+    href: "/api/sage/accord",
+    action: "View descriptor",
+  },
+  {
+    name: "MCP endpoint",
+    status: "Fly live, DNS pending",
+    tone: "pending",
+    icon: Network,
+    metric: "ergoblockchain-mcp",
+    body: "The Streamable HTTP MCP service is deployed on Fly. GitHub remote is prepared locally; custom DNS and repo push are the next ops steps.",
+    href: "https://ergoblockchain-mcp.fly.dev/health",
+    action: "Health check",
+  },
+  {
+    name: "Sage widget",
+    status: "Package track",
+    tone: "live",
+    icon: Cpu,
+    metric: "@ergoblockchain/sage-widget",
+    body: "The public package starts with activity-feed embedding. The paid chat/quote/verify/receipt widget is the next bigger surface.",
+    href: "https://www.npmjs.com/package/@ergoblockchain/sage-widget",
+    action: "Open npm",
+  },
+  {
+    name: "ErgoScript playground",
+    status: "Runtime live",
+    tone: "debt",
+    icon: Code2,
+    metric: "WASM warning debt",
+    body: "The playground works in production. Build still reports the async WASM warning, so this stays tracked as engineering debt.",
+    href: "/build/playground",
+    action: "Try it",
+  },
+]
+
 // ── Fade-in animation ────────────────────────────────────────────────────────
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -173,6 +236,8 @@ export function AgentEconomyClient() {
             },
           ]}
         />
+
+        <LiveCockpit />
 
         {/* ── Why Stripe/PayPal fails ──────────────────────────────────────── */}
         <section className="py-24 border-t border-white/5">
@@ -718,5 +783,101 @@ export function AgentEconomyClient() {
 
       </main>
     </BackgroundWrapper>
+  )
+}
+
+function LiveCockpit() {
+  return (
+    <section id="live-cockpit" className="py-24 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-14 items-start">
+          <div className="lg:sticky lg:top-28">
+            <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-3">
+              Live cockpit
+            </p>
+            <h2
+              className="font-extrabold tracking-tight text-white mb-5"
+              style={{
+                fontSize: "clamp(28px, 4vw, 52px)",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.05,
+              }}
+            >
+              One board for the agent economy stack.
+            </h2>
+            <p className="text-neutral-400 leading-relaxed max-w-xl">
+              Sage receipts, Accord conformance, MCP, the npm widget, and the
+              ErgoScript playground now sit on the same operational map. Green
+              means live testnet proof. Yellow means useful but not a protocol
+              pass yet. Gray means engineering debt we are deliberately tracking.
+            </p>
+
+            <div className="mt-7 rounded-2xl border border-yellow-500/25 bg-yellow-500/[0.04] p-5">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-yellow-300 mt-0.5 shrink-0" />
+                <p className="text-sm text-yellow-50/80 leading-relaxed">
+                  Public posture remains testnet-first. No mainnet readiness
+                  claim until receipt conformance, signed artifacts, registry
+                  evidence, exact script identity, and external audit manifests
+                  are published.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {COCKPIT_ITEMS.map((item, i) => {
+              const Icon = item.icon
+              const external = item.href.startsWith("http")
+              return (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="group min-h-[248px] rounded-2xl border border-white/10 bg-black/70 p-5 hover:border-orange-500/40 hover:bg-orange-500/[0.035] transition-all"
+                >
+                  <div className="flex items-start justify-between gap-4 mb-5">
+                    <div className="w-11 h-11 rounded-xl border border-orange-500/25 bg-orange-500/10 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-orange-300" />
+                    </div>
+                    <span
+                      className={`text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-full border ${
+                        item.tone === "live"
+                          ? "border-orange-500/35 bg-orange-500/10 text-orange-300"
+                          : item.tone === "pending"
+                            ? "border-yellow-500/35 bg-yellow-500/10 text-yellow-200"
+                            : "border-white/10 bg-white/[0.03] text-neutral-400"
+                      }`}
+                    >
+                      {item.status}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-white mb-1 group-hover:text-orange-100 transition-colors">
+                    {item.name}
+                  </h3>
+                  <div className="text-xs font-mono text-orange-300/80 mb-4">
+                    {item.metric}
+                  </div>
+                  <p className="text-sm leading-relaxed text-neutral-400 mb-5">
+                    {item.body}
+                  </p>
+                  <div className="mt-auto inline-flex items-center gap-1 text-[11px] uppercase tracking-widest font-mono text-orange-300 group-hover:text-orange-200">
+                    {item.action}
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </motion.a>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

@@ -10,6 +10,11 @@ This guide takes a fresh ergoblockchain.org deployment from "Sage works in free 
 - Vercel Blob storage for full `/api/sage/receipt/<id>` bundles
 - (Optional) The standalone signer running locally so Note **redemption** also happens — without it, Sage runs in verify-only mode (premium answers flow, redemption deferred)
 
+Operational follow-ups:
+
+- Signer operations: [`docs/sage-signer-ops.md`](./sage-signer-ops.md)
+- Mainnet/audit claim gate: [`docs/mainnet-audit-gate.md`](./mainnet-audit-gate.md)
+
 ## Prerequisites
 
 - Nautilus wallet extension installed in your browser
