@@ -196,10 +196,10 @@ export function AgentEconomyClient() {
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <Link
-                    href="/ergo-watch#agent-economy"
+                    href="/agent-economy/live"
                     className="inline-flex items-center gap-2 bg-transparent hover:bg-orange-500/10 text-orange-400 font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500/50 hover:border-orange-500 transition-all text-sm"
                   >
-                    <span>Ergo Watch</span>
+                    <span>Live Hub</span>
                     <BarChart3 className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -823,6 +823,14 @@ function LiveCockpit() {
                 </p>
               </div>
             </div>
+
+            <Link
+              href="/agent-economy/live"
+              className="mt-5 inline-flex items-center gap-2 rounded-xl border border-orange-500/35 bg-orange-500/10 px-4 py-2.5 font-mono text-xs uppercase tracking-widest text-orange-200 transition-colors hover:border-orange-500/60 hover:bg-orange-500/15"
+            >
+              Open Live Hub
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-4">
