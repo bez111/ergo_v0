@@ -272,7 +272,7 @@ const journeys: Record<Journey, {
         title: "Partnerships",
         description: "Major integrations and users",
         icon: User,
-        href: "/ecosystem/partnerships",
+        href: "/ecosystem",
         duration: "8 min"
       },
       {
@@ -280,7 +280,7 @@ const journeys: Record<Journey, {
         title: "Track Markets",
         description: "Price, volume, analytics",
         icon: LineChart,
-        href: "/ecosystem/market",
+        href: "/ergo-watch",
         duration: "Live"
       }
     ]
@@ -303,7 +303,6 @@ export default function StartPage() {
     "ergo_start_completed",
     {}
   )
-  const [hasMounted, setHasMounted] = useState(false)
   const [isInitialized, setIsInitialized] = useState(false)
 
   // Get localized journeys data
@@ -467,7 +466,7 @@ export default function StartPage() {
             title: t('journeys.mine.steps.pool.title'),
             description: t('journeys.mine.steps.pool.description'),
             icon: Zap,
-            href: "/miners-pools",
+            href: "/miners",
             duration: "10 min"
           },
           {
@@ -475,7 +474,7 @@ export default function StartPage() {
             title: t('journeys.mine.steps.software.title'),
             description: t('journeys.mine.steps.software.description'),
             icon: LineChart,
-            href: "/miners-calculator",
+            href: "/miners",
             duration: "5 min"
           },
           {
@@ -516,7 +515,7 @@ export default function StartPage() {
             title: t('journeys.invest.steps.storage.title'),
             description: t('journeys.invest.steps.storage.description'),
             icon: User,
-            href: "/ecosystem/partnerships",
+            href: "/ecosystem",
             duration: "8 min"
           },
           {
@@ -524,7 +523,7 @@ export default function StartPage() {
             title: t('journeys.invest.steps.defi.title'),
             description: t('journeys.invest.steps.defi.description'),
             icon: LineChart,
-            href: "/ecosystem/market",
+            href: "/ergo-watch",
             duration: "Live"
           }
         ]
@@ -538,9 +537,7 @@ export default function StartPage() {
   const prefersReducedMotion = usePrefersReducedMotion()
   const animationConfig = getAnimationConfig(isMobile, prefersReducedMotion)
 
-  // Prevent hydration mismatch
   useEffect(() => {
-    setHasMounted(true)
     const timer = setTimeout(() => {
       setIsInitialized(true)
     }, 100)
@@ -581,26 +578,10 @@ export default function StartPage() {
     tap: { scale: prefersReducedMotion ? 1 : 0.98 }
   }
 
-  // Prevent hydration issues
-  if (!hasMounted) {
-    return (
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              {t('title') || 'Start Your Journey'}
-            </h1>
-            <p className="text-gray-400">Loading...</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Hidden Breadcrumbs for SEO */}
-      <Breadcrumbs items={[{ name: "Start", href: "#" }]} variant="hidden" />
+      <Breadcrumbs items={[{ name: "Start", href: "/start" }]} variant="hidden" />
       
       {/* Background Effects */}
       {isInitialized && (

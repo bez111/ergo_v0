@@ -71,7 +71,7 @@ mempoolSorting = "random"`}
           <div className="mt-4 p-4 bg-orange-900/30 border border-orange-600/30 rounded-lg">
             <h4 className="text-sm font-semibold text-orange-300 mb-2">Special Considerations</h4>
             <p className="text-sm text-gray-400">
-              Although the minimal fee is a standard, miners can select transactions based on their economic incentives. This means transactions offering higher fees per byte or per execution unit are typically prioritized. However, miners may also choose to include their transactions above others when <Link href="/docs/developers/rent-fees" className="text-orange-400 hover:underline">collecting storage rent</Link>.
+              Although the minimal fee is a standard, miners can select transactions based on their economic incentives. This means transactions offering higher fees per byte or per execution unit are typically prioritized. However, miners may also choose to include their transactions above others when <Link href="/technology/storage-rent" className="text-orange-400 hover:underline">collecting storage rent</Link>.
             </p>
           </div>
         </div>

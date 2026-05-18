@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "網路算力" },
-      "activeAddresses": { "label": "活躍地址" },
-      "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG 供應量", "trend": "剩餘 {remaining}M" },
-      "avgBlockTime": { "label": "平均出塊時間" },
-      "activeNodes": { "label": "活躍節點" }
+      "networkHashrate": {
+        "label": "網路算力"
+      },
+      "activeAddresses": {
+        "label": "活躍地址"
+      },
+      "defiTvl": {
+        "label": "DeFi TVL"
+      },
+      "ergSupply": {
+        "label": "ERG 供應量",
+        "trend": "剩餘 {remaining}M"
+      },
+      "avgBlockTime": {
+        "label": "平均出塊時間"
+      },
+      "activeNodes": {
+        "label": "活躍節點"
+      }
     },
     "heroComparisons": [
       {

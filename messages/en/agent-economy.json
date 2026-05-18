@@ -87,7 +87,7 @@
       },
       {
         "title": "Native tokens: community money",
-      "body": "Issue native tokens and design Note/Reserve-style payment patterns without ERC-20-style deployment ceremony. Specific agent-payment contracts remain prototype/testnet-first unless audited.",
+        "body": "Issue native tokens and design Note/Reserve-style payment patterns without ERC-20-style deployment ceremony. Specific agent-payment contracts remain prototype/testnet-first unless audited.",
         "href": "/technology/native-tokens"
       }
     ],
@@ -130,7 +130,7 @@
         "label": "Trust Rules",
         "sublabel": "ErgoScript predicates",
         "status": "live",
-        "description": "Acceptance logic — 'accept this note if and only if...' — fully on-chain"
+        "description": "Acceptance logic — 'accept this note only under these rules' — fully on-chain"
       },
       {
         "label": "Reputation",

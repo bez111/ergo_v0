@@ -1832,7 +1832,6 @@
       "ergo_introduction_pow_smart_contracts": "Introduction à Ergo — Smart contracts PoW, eUTXO, Sigma Protocols",
       "meet_ergo_a_pow_smart": "Découvrez Ergo : une plateforme de smart contracts PoW utilisant le modèle eUTXO et les protocoles Sigma. Construisez des dApps respectant la confidentialité et auditables avec des coûts prévisibles.",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "Smart contracts PoW avec eUTXO et Sigma Protocols.",
-      "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "answer_text_t": "Answer\",\n                text: t(",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Cryptomonnaie",
       "introduction_to_ergo_beginner": "Introduction à Ergo | Débutant",
@@ -2008,23 +2007,7 @@
     "major_integrations_and_users": "Intégrations majeures et utilisateurs",
     "price_volume_analytics": "Prix, volume, analytiques",
     "take_the_quiz": "Passer le quiz",
-    "get_started": "Commencer",
-    "start_with_ergo_learning_paths": "Commencer avec Ergo - Parcours d'apprentissage",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
-    "start_your_journey_with_ergo_blockchain": "Commencez votre parcours avec Ergo Blockchain",
-    "personalized_learning_paths_for_beginners": "Parcours d'apprentissage personnalisés pour les débutants, les développeurs, les mineurs et les investisseurs. Trouvez votre voie vers Ergo.",
-    "start_your_ergo_journey_choose_your_path": "Commencez votre parcours Ergo - Choisissez votre voie",
-    "beginner_developer_miner_investor_find": "Débutant ? Développeur ? Mineur ? Investisseur ? Trouvez votre chemin personnalisé vers Ergo.",
-    "for_those_new_to_cryptocurrency_and_blockchain": "Pour les nouveaux venus dans le monde des cryptomonnaies et de la blockchain",
-    "for_programmers_wanting_to_build_on_ergo": "Pour les programmeurs souhaitant construire sur Ergo",
-    "for_those_interested_in_mining_erg": "Pour ceux qui souhaitent miner des ERG",
-    "for_understanding_ergo_as_an_investment": "Pour comprendre Ergo comme investissement",
-    "deep_dive_into_ergo_technology_and_ecosystem": "Plongée approfondie dans la technologie et l'écosystème Ergo",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "Start\", item: \"https://ergoblockchain.org/start",
-      "comparison_item_https_ergoblockchain_org": "Comparaison\", item: \"https://ergoblockchain.org/start/comparison",
-      "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "Comparaison des modèles eUTXO vs compte, PoW vs PoS, confidentialité et frais : Ergo, Ethereum, Bitcoin, Cardano.",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"Le coût du script est borné et les frais sont prévisibles ; il n'y a pas d'enchères sur le prix du gas (les frais finaux dépendent des conditions du mempool).",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Oui. Les NIPoPoWs permettent des preuves succinctes pour des clients légers minimisant la confiance.",
@@ -2038,6 +2021,7 @@
       "technical_comparison_of_ergo_vs": "Comparaison technique d'Ergo vs Bitcoin, Ethereum, Cardano. Découvrez pourquoi Ergo se démarque.",
       "technical_comparison_of_ergo_with": "Comparaison technique d'Ergo avec d'autres plateformes blockchain"
     },
+    "get_started": "Commencer",
     "communityMeta": {
       "connect_with_developers_miners_traders": "Connectez-vous avec des développeurs, des mineurs, des traders et des passionnés. Discord, Telegram, Reddit et plus.",
       "aggregaterating_ratingvalue": "AggregateRating\",\n      ratingValue:",
@@ -2051,7 +2035,17 @@
       "quick_updates_and_global_chat": "Mises à jour rapides et chat mondial",
       "discussions_and_community_content": "Discussions et contenu communautaire",
       "open_source_development": "Développement open source"
-    }
+    },
+    "start_with_ergo_learning_paths": "Commencer avec Ergo - Parcours d'apprentissage",
+    "start_your_journey_with_ergo_blockchain": "Commencez votre parcours avec Ergo Blockchain",
+    "personalized_learning_paths_for_beginners": "Parcours d'apprentissage personnalisés pour les débutants, les développeurs, les mineurs et les investisseurs. Trouvez votre voie vers Ergo.",
+    "start_your_ergo_journey_choose_your_path": "Commencez votre parcours Ergo - Choisissez votre voie",
+    "beginner_developer_miner_investor_find": "Débutant ? Développeur ? Mineur ? Investisseur ? Trouvez votre chemin personnalisé vers Ergo.",
+    "for_those_new_to_cryptocurrency_and_blockchain": "Pour les nouveaux venus dans le monde des cryptomonnaies et de la blockchain",
+    "for_programmers_wanting_to_build_on_ergo": "Pour les programmeurs souhaitant construire sur Ergo",
+    "for_those_interested_in_mining_erg": "Pour ceux qui souhaitent miner des ERG",
+    "for_understanding_ergo_as_an_investment": "Pour comprendre Ergo comme investissement",
+    "deep_dive_into_ergo_technology_and_ecosystem": "Plongée approfondie dans la technologie et l'écosystème Ergo"
   },
   "startIntroduction": {
     "title": "Introduction à Ergo",

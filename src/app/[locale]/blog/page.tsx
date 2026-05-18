@@ -3,6 +3,7 @@ import { blogPosts, categories } from "./_lib/blog-data"
 import { BlogHero } from "./_components/blog-hero"
 import TrendingNow from "./_components/trending-now"
 import BlogClientStable from "./_components/blog-client-stable"
+import { BlogCard } from "./_components/blog-card"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
@@ -15,6 +16,33 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 export const revalidate = 300
 const pageSize = 12
 const siteUrl = siteConfig.siteUrl
+
+function BlogListFallback({ posts, total }: { posts: typeof blogPosts; total: number }) {
+  return (
+    <section className="mt-4" aria-labelledby="blog-results-fallback" aria-busy="true">
+      <h2 id="blog-results-fallback" className="sr-only">
+        Latest Articles
+      </h2>
+
+      <div className="mb-16">
+        <div className="flex items-baseline gap-4 mb-8">
+          <h3 className="text-3xl font-bold text-white">Latest Articles</h3>
+          <div className="text-sm text-neutral-400">
+            {total} {total === 1 ? "article" : "articles"}
+          </div>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post, index) => (
+            <div key={post.id}>
+              <BlogCard post={post} priority={index < 3} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = (await searchParams) || {}
@@ -294,7 +322,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </header>
 
           {/* Enhanced FEATURED + TRENDING SECTION */}
-          <section className="mb-12 animate-fade-in" aria-labelledby="content-heading">
+          <section className="mb-12" aria-labelledby="content-heading">
             <h2 id="content-heading" className="sr-only">Featured article and trending posts</h2>
             <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-8 lg:items-stretch">
               <div role="region" aria-labelledby="featured-heading">
@@ -308,8 +336,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </section>
 
           {/* Interactive Filters & Articles */}
-          <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s', animationFillMode: 'both' }}>
-            <Suspense>
+          <div className="mb-12">
+            <Suspense fallback={<BlogListFallback posts={initialList} total={total} />}>
               <BlogClientStable
                 posts={blogPosts}
                 categories={categories.map(cat => ({ id: cat, name: cat }))}

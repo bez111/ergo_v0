@@ -133,8 +133,8 @@ const statusLabelMap: Record<string, string> = {
   SUNSET: "SUNSET",
 }
 
-const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }
-const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }
+const containerVariants = { hidden: { opacity: 1 }, visible: { opacity: 1, transition: { staggerChildren: 0.04 } } }
+const itemVariants = { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
 
 export default function EcosystemClient() {
   const t = useTranslations("ecosystem")
@@ -193,7 +193,7 @@ export default function EcosystemClient() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden" style={{ overflowAnchor: "none" }}>
       {/* Hidden Breadcrumbs for SEO */}
-      <Breadcrumbs items={[{ name: "Ecosystem", href: "#" }]} variant="hidden" />
+      <Breadcrumbs items={[{ name: "Ecosystem", href: "/ecosystem" }]} variant="hidden" />
 
       <BackgroundWrapper>
         <div className="pt-20">

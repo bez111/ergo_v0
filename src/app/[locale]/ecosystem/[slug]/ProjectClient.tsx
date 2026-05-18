@@ -160,7 +160,7 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
 
   const breadcrumbs = [
     { name: t('breadcrumbs.ecosystem'), href: "/ecosystem" },
-    { name: project.name, href: "#" },
+    { name: project.name, href: `/ecosystem/${project.slug}` },
   ]
 
   return (
@@ -620,4 +620,3 @@ export default function ProjectClient({ project, categoryLabel }: ProjectClientP
     </BackgroundWrapper>
   )
 }
-

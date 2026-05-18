@@ -3,103 +3,6 @@
     "title": "技術",
     "subtitle": "為金融未來而生的先進區塊鏈技術",
     "description": "探索 Ergo 的創新區塊鏈技術",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo 技術 — eUTXO、ErgoScript、Autolykos | ergoblockchain.org",
-    "explore_ergo_s_technology_stack": "探索 Ergo 的技術堆疊：eUTXO、ErgoScript、Autolykos PoW、存儲租金、Sigma 協議、NIPoPoWs。",
-    "frequently_asked_questions": "常見問題",
-    "go_to_docs": "前往文件",
-    "extended_utxo_model_that_enables": "擴展 UTXO 模型，支援平行智能合約執行與可組合的 DeFi 應用。消除重入攻擊，同時保持 Bitcoin",
-    "full_blockchain_security_without_trusted": "無需可信中介的完整區塊鏈安全性。",
-    "dive_into_ergo_docs_href_docs_color": "深入 Ergo 文件\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "查看生態系統應用\",\n    href: \"/ecosystem\",\n    color:",
-    "adaptive_emission_governance": "自適應發行與治理",
-    "what_makes_ergo_s_eutxo": "是什麼使 Ergo 的 eUTXO 模型優於帳戶型區塊鏈？\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "ErgoScript 如何防止智能合約漏洞？\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "為何 Autolykos 被認為是去中心化且節能的？\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "存儲租金如何解決區塊鏈的可持續性問題？\",\n      tag: \"Storage",
-    "what_privacy_features_does_ergo": "Ergo 原生提供哪些隱私功能？\",\n      tag: \"Privacy",
-    "why_are_ergo_s_oracle": "為何 Ergo 的預言機池比 Chainlink 更安全？\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "子區塊如何實現亞秒交易確認？\",\n      tag: \"Scaling",
-    "how_to_create_tokens_and": "如何在 Ergo 上無需智能合約創建代幣和 NFT？\",\n      tag: \"Tokens & NFTs",
-    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
-    "research_in_development": "研究中/開發中",
-    "decentralized_mixers_and_privacy_tools": "去中心化混幣器與隱私工具（請確認法律狀態）\",\n                              \"DAOs & 治理系統",
-    "infrastructure_apps": "基礎設施與應用",
-    "ergo_docs_href_docs": "Ergo 文件\", href: \"/docs",
-    "whitepaper_href_https_ergoplatform_org": "白皮書\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
-    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
-    "dev_tutorials_href_docs_developers_tutorials": "開發教程\", href: \"/docs/developers/tutorials",
-    "smart_contracts_run_independently_without": "智能合約獨立運行，無全域狀態衝突。",
-    "build_complex_defi_applications_from": "以簡單、可重用的元件構建複雜的 DeFi 應用。",
-    "bitcoin_level_security": "比特幣級安全性",
-    "mathematically_prove_your_smart_contracts": "用數學方式證明您的智能合約安全且無漏洞。",
-    "native_zero_knowledge_proofs_and": "原生零知識證明與環形簽名，提供保密交易。",
-    "safe_by_design": "設計即安全",
-    "prevents_common_vulnerabilities_like_reentrancy": "防止重入攻擊等常見漏洞及意外行為。",
-    "energy_efficient_asic_resistant_mining": "節能、抗 ASIC 的挖礦算法，使網絡參與民主化。專為 GPU 挖礦設計，保持網絡去中心化且人人可及。",
-    "memory_hard_algorithm_reduces_power": "記憶體密集算法降低傳統 PoW 的能耗。",
-    "low_barrier_to_entry_enables": "低門檻使個人礦工能夠獲利參與。",
-    "optimized_for_consumer_gpus_to": "針對消費級 GPU 優化，防止挖礦中心化。",
-    "revolutionary_economic_model_that_prevents": "防止區塊鏈膨脹的革命性經濟模型。閒置代幣在 4 年後支付少量租金，確保可持續的區塊鏈規模與永久礦工獎勵。",
-    "sustainable_blockchain": "可持續區塊鏈",
-    "automatic_cleanup_of_unused_data": "自動清理未使用數據，保持區塊鏈精簡高效。",
-    "miners_receive_rewards_forever_ensuring": "礦工永久獲得獎勵，確保長期網絡安全。",
-    "maintains_lightweight_blockchain_that_runs": "維持輕量級區塊鏈，可在普通硬件上運行。",
-    "built_in_zero_knowledge_proofs": "內建零知識證明，無需第三方解決方案或複雜設定，即可實現保護隱私的交易與高級密碼學功能。",
-    "choose_between_transparent_or_confidential": "按需選擇透明或保密交易。",
-    "simple_apis_to_add_privacy": "簡單 API 即可為任何應用添加隱私功能。",
-    "full_security_with_minimal_data": "最少數據實現完整安全性——任何設備秒速同步。",
-    "connect_to_other_blockchains_without": "無需中心化驗證者即可連接其他區塊鏈。",
-    "cryptographic_security": "密碼學安全",
-    "mathematical_proofs_ensure_full_node": "數學證明確保輕節點的完整節點級安全性。",
-    "subblocks_in_development": "子區塊（開發中）",
-    "sub_second_confirmations": "亞秒確認",
-    "near_instant_transaction_finality_for": "近即時交易終結，提升用戶體驗。",
-    "works_with_existing_infrastructure_no": "與現有基礎設施兼容——無需橋接或側鏈。",
-    "create_and_trade_tokens_and": "直接在協議層創建和交易代幣與 NFT。無需智能合約——簡單、安全、低成本的原生資產。",
-    "issue_tokens_stablecoins_or_nfts": "單筆交易即可發行代幣、穩定幣或 NFT。",
-    "native_integration_with_all_ergo": "與所有 Ergo 應用和協議原生整合。",
-    "first_class_tokens_with_protocol": "一等代幣，具備協議級安全保障。",
-    "decentralized_price_feeds_and_data": "去中心化價格饋送與數據預言機，內建於協議中。無單點故障，無中心化運營商——為 DeFi 提供可靠、可組合的數據。",
-    "consensus_based_data_aggregation_ensures": "基於共識的數據聚合確保準確、抗操縱的價格。",
-    "universal_compatibility": "通用相容性",
-    "any_smart_contract_can_access": "任何智能合約都可訪問預言機數據，無需特殊整合。",
-    "no_central_authority_or_single": "數據管道中無中央機構或單點故障。",
-    "no_forced_upgrades_no_chain_wars": "無強制升級，無鏈戰。",
-    "adopt_innovations_at_your_own_pace": "按自己的節奏採納創新。",
-    "evolutionary_not_revolutionary_changes": "演化式而非革命式的變革。",
-    "consensus_driven_tuning_of_economic": "由共識驅動的經濟參數調整（如礦工投票），並納入社區意見。",
-    "economic_variables_can_be_adjusted": "可調整的經濟變量。",
-    "adapt_to_changing_network_needs": "適應網絡需求的變化。",
-    "discussions_and_decisions_involve_the_community": "討論與決策均有社區參與。",
-    "see_ecosystem_apps": "查看生態系統應用",
-    "sigma_protocols_provide_native_zero": "Sigma 協議提供原生零知識證明、環形簽名，",
-    "advanced_blockchain_infrastructure_for_scalable": "為可擴展 DeFi、安全智能合約與真正去中心化而打造的先進區塊鏈基礎設施。",
-    "ergo_tech_stack_overview": "Ergo 技術堆疊概覽",
-    "ready_to_explore_ergo_tech": "準備好探索 Ergo 技術了嗎？",
-    "dive_deeper_into_the_docs": "深入文件，或開始在最先進的 UTXO 區塊鏈上構建。",
-    "discover_ergo_s_advanced_blockchain": "探索 Ergo\\'s 先進區塊鏈技術：用於平行智能合約的 eUTXO 模型、ErgoScript 程式語言、用於零知識證明的 Sigma 協議，以及抗 ASIC 的 Autolykos 挖礦。",
-    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 智能合約', 'Sigma 協議', 'Autolykos 挖礦', '區塊鏈技術', '智能合約程式設計', 'NIPoPoWs', '存儲租金', '工作量證明', 'DeFi 基礎設施",
-    "ergo_technology_overview": "Ergo 技術概覽",
-    "ergo_technology_next_generation_blockchain": "Ergo 技術 - 新一代區塊鏈",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "answer_text_eutxo_splits_the": "回答',\n          text: 'eUTXO 將區塊鏈狀態分割為獨立的盒子（輸出），支持無全域狀態的並行智能合約，降低重入風險。dApp 變得可組合：複雜邏輯可從簡單輸出構建。",
-    "answer_text_ergoscript_is_ergo": "回答',\n          text: 'ErgoScript 是 Ergo\\",
-    "answer_text_autolykos_is_memory": "回答',\n          text: 'Autolykos 是記憶體密集型且抗 ASIC 的，對普通礦工更公平。它獎勵單獨挖礦並減少礦池依賴，以適度的能源消耗保持網路安全。",
-    "answer_text": "回答',\n          text:",
-    "answer_text_nipopows_create_tiny": "回答',\n          text: 'NIPoPoW 創建微型區塊鏈證明，允許輕客戶端、即時行動同步和無需完整節點的無信任跨鏈橋。",
-    "home_item_https_ergoblockchain_org": "首頁',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "技術',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_blockchain_technology_eutxo_smart": "Ergo 區塊鏈技術 | eUTXO 智能合約與 Sigma 協議",
-    "ergo_technology_stack_building_the_future": "Ergo 技術堆疊——構建未來",
-    "advanced_blockchain_technology_eutxo_ergoscript": "先進區塊鏈技術：eUTXO、ErgoScript、隱私功能與可持續 PoW。",
-    "eutxo_model_ergoscript_sigma_protocols": "eUTXO 模型、ErgoScript、Sigma 協議、NIPoPoWs——尖端區塊鏈技術。",
-    "comprehensive_overview_of_ergo": "Ergo 的全面概述\\",
-    "extended_utxo_model_enabling_parallel_execution": "支援平行執行的擴展 UTXO 模型",
-    "secure_declarative_language_for_programmable_money": "用於可程式化貨幣的安全宣告式語言",
-    "native_zero_knowledge_proofs_and_privacy_features": "原生零知識證明與隱私功能",
-    "memory_hard_proof_of_work_algorithm": "記憶體密集工作量證明算法",
-    "sustainable_blockchain_state_management": "可持續的區塊鏈狀態管理",
-    "non_interactive_proofs_of_proof_of_work": "非互動式工作量證明的證明",
     "sections": {
       "useCases": "使用案例",
       "architecture": "架構",
@@ -414,53 +317,6 @@
         "explore": "探索功能",
         "documentation": "查看文件"
       }
-    },
-    "innovations": {
-      "title": "關鍵創新",
-      "items": {
-        "utxo": {
-          "title": "擴展 UTXO",
-          "description": "結合比特幣的安全性與以太坊的表達能力"
-        },
-        "sigma": {
-          "title": "Sigma 協議",
-          "description": "內建零知識證明，用於隱私與身份驗證"
-        },
-        "contracts": {
-          "title": "多階段合約",
-          "description": "通過預定義階段演進的複雜智能合約"
-        },
-        "emission": {
-          "title": "自適應發行",
-          "description": "為長期穩定設計的平滑發行曲線"
-        }
-      }
-    },
-    "comparison": {
-      "title": "Ergo 的比較",
-      "description": "查看 Ergo 技術與其他平台的對比",
-      "features": {
-        "model": "共識模型",
-        "contracts": "智能合約",
-        "privacy": "隱私功能",
-        "scalability": "可擴展性",
-        "sustainability": "可持續性"
-      }
-    },
-    "roadmap": {
-      "title": "技術路線圖",
-      "description": "持續進行的開發與未來改進",
-      "phases": {
-        "current": "當前重點",
-        "next": "下一階段",
-        "future": "未來願景"
-      }
-    },
-    "cta": {
-      "title": "準備好構建了嗎？",
-      "description": "在最先進的區塊鏈平台上開始開發",
-      "documentation": "查看文件",
-      "github": "探索 GitHub"
     },
     "features": {
       "eutxo": {
@@ -1261,6 +1117,53 @@
           }
         }
       }
+    },
+    "innovations": {
+      "title": "關鍵創新",
+      "items": {
+        "utxo": {
+          "title": "擴展 UTXO",
+          "description": "結合比特幣的安全性與以太坊的表達能力"
+        },
+        "sigma": {
+          "title": "Sigma 協議",
+          "description": "內建零知識證明，用於隱私與身份驗證"
+        },
+        "contracts": {
+          "title": "多階段合約",
+          "description": "通過預定義階段演進的複雜智能合約"
+        },
+        "emission": {
+          "title": "自適應發行",
+          "description": "為長期穩定設計的平滑發行曲線"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Ergo 的比較",
+      "description": "查看 Ergo 技術與其他平台的對比",
+      "features": {
+        "model": "共識模型",
+        "contracts": "智能合約",
+        "privacy": "隱私功能",
+        "scalability": "可擴展性",
+        "sustainability": "可持續性"
+      }
+    },
+    "roadmap": {
+      "title": "技術路線圖",
+      "description": "持續進行的開發與未來改進",
+      "phases": {
+        "current": "當前重點",
+        "next": "下一階段",
+        "future": "未來願景"
+      }
+    },
+    "cta": {
+      "title": "準備好構建了嗎？",
+      "description": "在最先進的區塊鏈平台上開始開發",
+      "documentation": "查看文件",
+      "github": "探索 GitHub"
     },
     "nativeTokens": {
       "title": "原生代幣與 NFT",
@@ -2186,9 +2089,6 @@
       "spectrum_finance_sigmausd_duckpools": "Spectrum Finance\", \"SigmaUSD\", \"DuckPools",
       "ergo_auction_house_skyharbor_unique_assets": "Ergo Auction House\", \"SkyHarbor\", \"獨特資產",
       "oracle_pools_governance_compliance_tools": "預言機池\", \"治理\", \"合規工具",
-      "technology_href_technology": "技術\", href: \"/technology",
-      "technology_item_https_ergoblockchain_org": "技術', item: 'https://ergoblockchain.org/technology",
-      "techarticle_headline": "TechArticle', headline:",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO 詳解：安全性、並行性、可程式性和使用案例。",
       "on_this_page": "本頁內容",
       "ergoscript_code_controlling_spending_conditions": "控制消費條件的 ErgoScript 代碼",
@@ -2351,10 +2251,6 @@
       "predictable_moderate": "可預測，適中",
       "copy_to_clipboard": "複製到剪貼板",
       "the_class_of_reentrancy_vulnerabilities": "基於帳戶系統常見的重入漏洞類在 eUTXO 中不存在",
-      "technology_item_https_ergoblockchain_org": "技術\",\n              item: \"https://ergoblockchain.org/technology",
-      "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
-      "technology_href_technology": "技術\", href: \"/technology",
-      "ergoscript_href_technology_ergoscript": "ErgoScript\", href: \"/technology/ergoscript",
       "no_shared_global_state_eliminates": "沒有共享全局狀態消除了重入漏洞類",
       "non_custodial_defi_protocols": "非託管 DeFi 協議",
       "decentralized_oracle_networks": "去中心化預言機網絡",
@@ -2405,6 +2301,8 @@
       "explore_ergoscript_and_start_developing": "探索 ErgoScript 並開始今天開發安全的智能合約。",
       "try_playground": "嘗試遊樂場"
     },
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo 技術 — eUTXO、ErgoScript、Autolykos | ergoblockchain.org",
+    "explore_ergo_s_technology_stack": "探索 Ergo 的技術堆疊：eUTXO、ErgoScript、Autolykos PoW、存儲租金、Sigma 協議、NIPoPoWs。",
     "adaptiveEmission": {
       "title": "自適應發行",
       "subtitle": "靈活的貨幣政策",
@@ -2532,17 +2430,11 @@
       "answer_text_ergo_offers_multiple": "答案\",\n                text:\n                  \"Ergo 提供多種隱私功能，包括 Sigma 協議、環簽名、零知識證明和機密交易。這些技術在保持安全性和合規性的同時支持隱私保護交易。",
       "answer_text_sigma_protocols_are": "答案\",\n                text:\n                  \"Sigma 協議是零知識證明系統，允許在不揭示值本身的情況下證明關於秘密值的陳述。它們支持隱私保護的身份驗證和交易驗證。",
       "answer_text_yes_ergo_s": "答案\",\n                text:\n                  \"是的，Ergo 的隱私功能設計為符合監管要求。它們提供選擇性披露功能，允許用戶在需要時向審計員或監管機構披露交易詳情，同時默認維護隱私。",
-      "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo 將隱私內置於協議：Sigma 協議、環/閾值簽名、ErgoMixer、機密資產和選擇性披露。",
       "ergo_privacy_sigma_protocols_ring": "Ergo 隱私,Sigma 協議,環簽名,零知識證明,ErgoMixer,機密交易",
-      "webpage_id_https_ergoblockchain_org_technology": "WebPage\", \"@id\": \"https://ergoblockchain.org/technology",
-      "technology_item_https_ergoblockchain_org": "技術\", item: \"https://ergoblockchain.org/technology",
-      "privacy_features_item_https_ergoblockchain": "隱私功能\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
       "prepare_funds_text_split_funds": "準備資金\", text: \"拆分資金並避免地址重用。",
       "run_mix_text_choose_round": "運行混幣\", text: \"選擇輪次/延遲以獲得更大的匿名集。",
       "wait_spend_text_spend_after": "等待和消費\", text: \"延遲後消費；避免直接可鏈接性。",
-      "technology_href_technology": "技術\", href: \"/technology",
-      "privacy_features_href_technology_privacy_features": "隱私功能\", href: \"/technology/privacy-features",
       "pseudonymous_addresses_utxo_model_benefits": "假名地址\", \"UTXO 模型優勢\", \"基本交易隱私",
       "transaction_mixing_address_unlinkability_amount": "交易混幣\", \"地址不可鏈接性\", \"金額混淆",
       "enable_powerful_privacy_tools_like": "在協議層面支持強大的隱私工具，如環簽名和零知識證明。",
@@ -2789,6 +2681,128 @@
           }
         }
       }
+    },
+    "frequently_asked_questions": "常見問題",
+    "go_to_docs": "前往文件",
+    "extended_utxo_model_that_enables": "擴展 UTXO 模型，支援平行智能合約執行與可組合的 DeFi 應用。消除重入攻擊，同時保持 Bitcoin",
+    "full_blockchain_security_without_trusted": "無需可信中介的完整區塊鏈安全性。",
+    "adaptive_emission_governance": "自適應發行與治理",
+    "what_makes_ergo_s_eutxo": "是什麼使 Ergo 的 eUTXO 模型優於帳戶型區塊鏈？\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScript 如何防止智能合約漏洞？\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "為何 Autolykos 被認為是去中心化且節能的？\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "存儲租金如何解決區塊鏈的可持續性問題？\",\n      tag: \"Storage",
+    "what_privacy_features_does_ergo": "Ergo 原生提供哪些隱私功能？\",\n      tag: \"Privacy",
+    "why_are_ergo_s_oracle": "為何 Ergo 的預言機池比 Chainlink 更安全？\",\n      tag: \"Oracles",
+    "how_do_subblocks_achieve_sub": "子區塊如何實現亞秒交易確認？\",\n      tag: \"Scaling",
+    "how_to_create_tokens_and": "如何在 Ergo 上無需智能合約創建代幣和 NFT？\",\n      tag: \"Tokens & NFTs",
+    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
+    "research_in_development": "研究中/開發中",
+    "decentralized_mixers_and_privacy_tools": "去中心化混幣器與隱私工具（請確認法律狀態）\",\n                              \"DAOs & 治理系統",
+    "infrastructure_apps": "基礎設施與應用",
+    "smart_contracts_run_independently_without": "智能合約獨立運行，無全域狀態衝突。",
+    "build_complex_defi_applications_from": "以簡單、可重用的元件構建複雜的 DeFi 應用。",
+    "bitcoin_level_security": "比特幣級安全性",
+    "mathematically_prove_your_smart_contracts": "用數學方式證明您的智能合約安全且無漏洞。",
+    "native_zero_knowledge_proofs_and": "原生零知識證明與環形簽名，提供保密交易。",
+    "safe_by_design": "設計即安全",
+    "prevents_common_vulnerabilities_like_reentrancy": "防止重入攻擊等常見漏洞及意外行為。",
+    "energy_efficient_asic_resistant_mining": "節能、抗 ASIC 的挖礦算法，使網絡參與民主化。專為 GPU 挖礦設計，保持網絡去中心化且人人可及。",
+    "memory_hard_algorithm_reduces_power": "記憶體密集算法降低傳統 PoW 的能耗。",
+    "low_barrier_to_entry_enables": "低門檻使個人礦工能夠獲利參與。",
+    "optimized_for_consumer_gpus_to": "針對消費級 GPU 優化，防止挖礦中心化。",
+    "revolutionary_economic_model_that_prevents": "防止區塊鏈膨脹的革命性經濟模型。閒置代幣在 4 年後支付少量租金，確保可持續的區塊鏈規模與永久礦工獎勵。",
+    "sustainable_blockchain": "可持續區塊鏈",
+    "automatic_cleanup_of_unused_data": "自動清理未使用數據，保持區塊鏈精簡高效。",
+    "miners_receive_rewards_forever_ensuring": "礦工永久獲得獎勵，確保長期網絡安全。",
+    "maintains_lightweight_blockchain_that_runs": "維持輕量級區塊鏈，可在普通硬件上運行。",
+    "built_in_zero_knowledge_proofs": "內建零知識證明，無需第三方解決方案或複雜設定，即可實現保護隱私的交易與高級密碼學功能。",
+    "choose_between_transparent_or_confidential": "按需選擇透明或保密交易。",
+    "simple_apis_to_add_privacy": "簡單 API 即可為任何應用添加隱私功能。",
+    "full_security_with_minimal_data": "最少數據實現完整安全性——任何設備秒速同步。",
+    "connect_to_other_blockchains_without": "無需中心化驗證者即可連接其他區塊鏈。",
+    "cryptographic_security": "密碼學安全",
+    "mathematical_proofs_ensure_full_node": "數學證明確保輕節點的完整節點級安全性。",
+    "subblocks_in_development": "子區塊（開發中）",
+    "sub_second_confirmations": "亞秒確認",
+    "near_instant_transaction_finality_for": "近即時交易終結，提升用戶體驗。",
+    "works_with_existing_infrastructure_no": "與現有基礎設施兼容——無需橋接或側鏈。",
+    "create_and_trade_tokens_and": "直接在協議層創建和交易代幣與 NFT。無需智能合約——簡單、安全、低成本的原生資產。",
+    "issue_tokens_stablecoins_or_nfts": "單筆交易即可發行代幣、穩定幣或 NFT。",
+    "native_integration_with_all_ergo": "與所有 Ergo 應用和協議原生整合。",
+    "first_class_tokens_with_protocol": "一等代幣，具備協議級安全保障。",
+    "decentralized_price_feeds_and_data": "去中心化價格饋送與數據預言機，內建於協議中。無單點故障，無中心化運營商——為 DeFi 提供可靠、可組合的數據。",
+    "consensus_based_data_aggregation_ensures": "基於共識的數據聚合確保準確、抗操縱的價格。",
+    "universal_compatibility": "通用相容性",
+    "any_smart_contract_can_access": "任何智能合約都可訪問預言機數據，無需特殊整合。",
+    "no_central_authority_or_single": "數據管道中無中央機構或單點故障。",
+    "no_forced_upgrades_no_chain_wars": "無強制升級，無鏈戰。",
+    "adopt_innovations_at_your_own_pace": "按自己的節奏採納創新。",
+    "evolutionary_not_revolutionary_changes": "演化式而非革命式的變革。",
+    "consensus_driven_tuning_of_economic": "由共識驅動的經濟參數調整（如礦工投票），並納入社區意見。",
+    "economic_variables_can_be_adjusted": "可調整的經濟變量。",
+    "adapt_to_changing_network_needs": "適應網絡需求的變化。",
+    "discussions_and_decisions_involve_the_community": "討論與決策均有社區參與。",
+    "see_ecosystem_apps": "查看生態系統應用",
+    "sigma_protocols_provide_native_zero": "Sigma 協議提供原生零知識證明、環形簽名，",
+    "advanced_blockchain_infrastructure_for_scalable": "為可擴展 DeFi、安全智能合約與真正去中心化而打造的先進區塊鏈基礎設施。",
+    "ergo_tech_stack_overview": "Ergo 技術堆疊概覽",
+    "ready_to_explore_ergo_tech": "準備好探索 Ergo 技術了嗎？",
+    "dive_deeper_into_the_docs": "深入文件，或開始在最先進的 UTXO 區塊鏈上構建。",
+    "discover_ergo_s_advanced_blockchain": "探索 Ergo\\'s 先進區塊鏈技術：用於平行智能合約的 eUTXO 模型、ErgoScript 程式語言、用於零知識證明的 Sigma 協議，以及抗 ASIC 的 Autolykos 挖礦。",
+    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 智能合約', 'Sigma 協議', 'Autolykos 挖礦', '區塊鏈技術', '智能合約程式設計', 'NIPoPoWs', '存儲租金', '工作量證明', 'DeFi 基礎設施",
+    "ergo_technology_overview": "Ergo 技術概覽",
+    "ergo_technology_next_generation_blockchain": "Ergo 技術 - 新一代區塊鏈",
+    "answer_text_eutxo_splits_the": "回答',\n          text: 'eUTXO 將區塊鏈狀態分割為獨立的盒子（輸出），支持無全域狀態的並行智能合約，降低重入風險。dApp 變得可組合：複雜邏輯可從簡單輸出構建。",
+    "answer_text_ergoscript_is_ergo": "回答',\n          text: 'ErgoScript 是 Ergo\\",
+    "answer_text_autolykos_is_memory": "回答',\n          text: 'Autolykos 是記憶體密集型且抗 ASIC 的，對普通礦工更公平。它獎勵單獨挖礦並減少礦池依賴，以適度的能源消耗保持網路安全。",
+    "answer_text": "回答',\n          text:",
+    "answer_text_nipopows_create_tiny": "回答',\n          text: 'NIPoPoW 創建微型區塊鏈證明，允許輕客戶端、即時行動同步和無需完整節點的無信任跨鏈橋。",
+    "ergo_blockchain_technology_eutxo_smart": "Ergo 區塊鏈技術 | eUTXO 智能合約與 Sigma 協議",
+    "ergo_technology_stack_building_the_future": "Ergo 技術堆疊——構建未來",
+    "advanced_blockchain_technology_eutxo_ergoscript": "先進區塊鏈技術：eUTXO、ErgoScript、隱私功能與可持續 PoW。",
+    "eutxo_model_ergoscript_sigma_protocols": "eUTXO 模型、ErgoScript、Sigma 協議、NIPoPoWs——尖端區塊鏈技術。",
+    "comprehensive_overview_of_ergo": "Ergo 的全面概述\\",
+    "extended_utxo_model_enabling_parallel_execution": "支援平行執行的擴展 UTXO 模型",
+    "secure_declarative_language_for_programmable_money": "用於可程式化貨幣的安全宣告式語言",
+    "native_zero_knowledge_proofs_and_privacy_features": "原生零知識證明與隱私功能",
+    "memory_hard_proof_of_work_algorithm": "記憶體密集工作量證明算法",
+    "sustainable_blockchain_state_management": "可持續的區塊鏈狀態管理",
+    "non_interactive_proofs_of_proof_of_work": "非互動式工作量證明的證明",
+    "ergoscriptPageOld": {
+      "features": [
+        {
+          "title": "形式驗證支持",
+          "description": "通過聲明式約束和第一類密碼學原語支持形式驗證和可審計性"
+        },
+        {
+          "title": "eUTXO 安全模型",
+          "description": "eUTXO 中不存在基於帳戶系統常見的重入漏洞類"
+        },
+        {
+          "title": "確定性執行",
+          "description": "計算複雜度是可預測的，但網絡費用是市場驅動的"
+        },
+        {
+          "title": "原生 Sigma 協議",
+          "description": "對多重簽名、閾值和環簽名構造的第一類支持"
+        },
+        {
+          "title": "UTXO 並發",
+          "description": "並行交易處理，帶有用於高競爭場景的批次處理模式"
+        },
+        {
+          "title": "受限計算",
+          "description": "腳本內非圖靈完備以確保安全，但序列可以表達複雜行為"
+        }
+      ],
+      "useCases": [
+        "非託管 DeFi 協議",
+        "自定義多重簽名錢包",
+        "拍賣和 DAO",
+        "預言機系統",
+        "隱私工具和混幣器",
+        "高級 NFT 合約"
+      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -3855,42 +3869,6 @@
           "sourceCode": "GitHub 倉庫"
         }
       }
-    },
-    "ergoscriptPageOld": {
-      "features": [
-        {
-          "title": "形式驗證支持",
-          "description": "通過聲明式約束和第一類密碼學原語支持形式驗證和可審計性"
-        },
-        {
-          "title": "eUTXO 安全模型",
-          "description": "eUTXO 中不存在基於帳戶系統常見的重入漏洞類"
-        },
-        {
-          "title": "確定性執行",
-          "description": "計算複雜度是可預測的，但網絡費用是市場驅動的"
-        },
-        {
-          "title": "原生 Sigma 協議",
-          "description": "對多重簽名、閾值和環簽名構造的第一類支持"
-        },
-        {
-          "title": "UTXO 並發",
-          "description": "並行交易處理，帶有用於高競爭場景的批次處理模式"
-        },
-        {
-          "title": "受限計算",
-          "description": "腳本內非圖靈完備以確保安全，但序列可以表達複雜行為"
-        }
-      ],
-      "useCases": [
-        "非託管 DeFi 協議",
-        "自定義多重簽名錢包",
-        "拍賣和 DAO",
-        "預言機系統",
-        "隱私工具和混幣器",
-        "高級 NFT 合約"
-      ]
     }
   },
   "technologyPages": {

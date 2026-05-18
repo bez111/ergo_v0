@@ -50,8 +50,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     ".next/types/**/*.ts",
-    "next.config.js",
-    ".next/dev/types/**/*.ts"
+    "next.config.js"
   ],
   "exclude": [
     "node_modules",

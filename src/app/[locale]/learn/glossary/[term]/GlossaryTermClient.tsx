@@ -199,7 +199,7 @@ export function GlossaryTermClient({ term }: Props) {
                 {term.updatedDate && (
                   <Badge variant="outline" className="border-white/20 text-neutral-400 text-xs">
                     <Clock className="w-3 h-3 mr-1" />
-                    Updated {new Date(term.updatedDate || term.publishDate).toLocaleDateString()}
+                    Updated {new Date(term.updatedDate || term.publishDate).toLocaleDateString("en-US", { timeZone: "UTC" })}
                   </Badge>
                 )}
               </div>
@@ -675,4 +675,3 @@ export function GlossaryTermClient({ term }: Props) {
     </BackgroundWrapper>
   );
 }
-

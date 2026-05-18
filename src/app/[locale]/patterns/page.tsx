@@ -56,7 +56,7 @@ export default function PatternsPage() {
     "@type": "ItemList",
     "@id": `${url}#itemlist`,
     name: "ErgoScript Smart Contract Patterns",
-    description: "Collection of ready-to-use ErgoScript patterns for building secure smart contracts on Ergo blockchain.",
+    description: "Collection of educational ErgoScript patterns for building and reviewing smart contracts on Ergo blockchain.",
     numberOfItems: devPatterns.length,
     itemListElement: devPatterns.map((pattern, index) => ({
       "@type": "ListItem",
@@ -76,7 +76,7 @@ export default function PatternsPage() {
     itemListSchema,
     createCollectionSchema({
       name: "ErgoScript Developer Patterns",
-      description: "18 ready-to-use ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Copy, paste, deploy.",
+      description: "18 educational ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Study, adapt, test, and review.",
       url: "/patterns",
     }),
     createBreadcrumbSchema([{ name: "Patterns", href: "/patterns" }]),

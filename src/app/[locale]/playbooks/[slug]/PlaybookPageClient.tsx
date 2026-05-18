@@ -479,6 +479,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                                           month: "short",
                                           day: "numeric",
                                           year: "numeric",
+                                          timeZone: "UTC",
                                         })}
                                       </span>
                                       {post.readTime && <span>{post.readTime} min read</span>}

@@ -345,7 +345,7 @@ export function ComparePageClient({ comparison }: Props) {
                               <div className="flex items-center gap-3 mt-2 text-xs text-neutral-400">
                                 <span className="flex items-center gap-1">
                                   <Calendar className="w-3 h-3" />
-                                  {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                                  {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
                                 </span>
                                 <span>{post.readTime} min read</span>
                               </div>

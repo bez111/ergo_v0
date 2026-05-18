@@ -32,16 +32,24 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         itemScope
         itemType="https://schema.org/BlogPosting"
         aria-labelledby={`feat-${post.id}`}
-        style={{
-          backgroundImage: post.image ? `url(${post.image})` : undefined,
-          backgroundSize: "100% 100%",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
       >
+        {post.image && (
+          <Image
+            src={post.image}
+            alt=""
+            fill
+            priority
+            loading="eager"
+            fetchPriority="high"
+            sizes="(max-width: 1024px) 100vw, 66vw"
+            className="z-0 object-fill"
+            aria-hidden="true"
+          />
+        )}
+
         {/* Bottom gradient overlay for meta + CTA readability */}
         {post.image && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent z-0" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent z-10" />
         )}
 
         {/* Top Content (spacer) */}
@@ -85,7 +93,8 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
               {new Date(post.date).toLocaleDateString('en-US', { 
                 year: 'numeric', 
                 month: 'short', 
-                day: 'numeric' 
+                day: 'numeric',
+                timeZone: 'UTC',
               })}
             </time>
             

@@ -3,7 +3,7 @@ import { generateMultilingualSitemap, sitemapHeaders, filterIndexablePages } fro
 
 export async function GET() {
   const ecosystemPages = [
-    { url: '/ecosystem/spectrum', priority: 0.7, changefreq: 'weekly' as const },
+    { url: '/ecosystem/spectrum-finance', priority: 0.7, changefreq: 'weekly' as const },
     { url: '/ecosystem/sigmausd', priority: 0.7, changefreq: 'weekly' as const },
     { url: '/ecosystem/rosen-bridge', priority: 0.7, changefreq: 'weekly' as const },
     { url: '/ecosystem/ergomixer', priority: 0.7, changefreq: 'weekly' as const },

@@ -80,7 +80,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     },
     {
       title: 'Sigma Protocols Deep Dive',
-      href: '/topics/privacy',
+      href: '/topics/ergo-privacy',
       description: 'Technical explanation of zero-knowledge proofs',
       type: 'guide',
       readTime: 15,
@@ -306,7 +306,7 @@ export const topicClusters = {
     hub: '/technology/privacy-features',
     pages: [
       '/use/privacy',
-      '/topics/privacy',
+      '/topics/ergo-privacy',
       '/ecosystem/ergomixer'
     ]
   },

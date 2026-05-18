@@ -51,89 +51,92 @@
       },
       "quickFacts": {
         "title": "快速事实",
-        "items": {
-          "0": {
-            "title": "设计安全",
-            "description": "非托管钱包让您完全控制您的资金"
+        "items": [
+          {
+            "title": "Secure by Design",
+            "description": "Non-custodial wallets give you full control of your funds"
           },
-          "1": {
-            "title": "低费用",
-            "description": "每笔交易约0.01美元的预测费用"
+          {
+            "title": "Low Fees",
+            "description": "Predictable fees around $0.01 per transaction"
           },
-          "2": {
-            "title": "快速确认",
-            "description": "大约2分钟内确认交易"
+          {
+            "title": "Fast Confirmation",
+            "description": "Transactions confirm in approximately 2 minutes"
           }
-        }
+        ]
       },
-      "steps": {
-        "0": {
+      "steps": [
+        {
           "number": "01",
-          "title": "下载钱包",
-          "description": "选择一个安全的钱包来存储您的ERG令牌",
-          "wallets": {
-            "0": {
+          "title": "Download a Wallet",
+          "description": "Choose a secure wallet to store your ERG tokens",
+          "wallets": [
+            {
               "name": "Nautilus",
-              "type": "浏览器扩展",
-              "description": "最受欢迎的 Ergo 钱包使用 dApp 支持和高级功能",
-              "buttonText": "下载 Nautilus"
+              "type": "Browser Extension",
+              "description": "Most popular Ergo wallet with dApp support and advanced features",
+              "recommended": true,
+              "buttonText": "Download Nautilus"
             },
-            "1": {
+            {
               "name": "Ergo Mobile",
               "type": "iOS & Android",
-              "description": "带有安全存储和简易交易的官方移动钱包",
-              "buttonText": "获取Ergo Mobile"
+              "description": "Official mobile wallet with secure storage and easy transactions",
+              "recommended": false,
+              "buttonText": "Get Ergo Mobile"
             },
-            "2": {
+            {
               "name": "SAFEW",
-              "type": "网页钱包（高级）",
-              "description": "高级网页钱包 — 连接前请仔细核对URL（网页钱包存在钓鱼风险）。",
-              "buttonText": "打开 SAFEW"
+              "type": "Web Wallet (Advanced)",
+              "description": "Advanced web wallet — verify the URL carefully before connecting (web wallets carry phishing risk).",
+              "recommended": false,
+              "buttonText": "Open SAFEW"
             }
-          }
+          ]
         },
-        "1": {
+        {
           "number": "02",
-          "title": "购买ERG令牌",
-          "description": "从交易所或DEX购买ERG",
-          "exchanges": {
-            "0": {
+          "title": "Buy ERG Tokens",
+          "description": "Purchase ERG from exchanges or DEXs",
+          "exchanges": [
+            {
               "name": "KuCoin",
-              "type": "热点 - ~0.1% 费用",
-              "description": "大型集中交易，流动性强，ERG/USDT 对",
-              "buttonText": "KuCoin上的ERG交易"
+              "type": "Spot - ~0.1% fees",
+              "description": "Large centralized exchange with high liquidity and ERG/USDT pair",
+              "buttonText": "Trade ERG on KuCoin"
             },
-            "1": {
+            {
               "name": "Gate.io",
-              "type": "热点 - ~0.2% 费用",
-              "description": "与多个ERG交易对和体积良好的全局交易",
-              "buttonText": "在网关上交易 ERG"
+              "type": "Spot - ~0.2% fees",
+              "description": "Global exchange with multiple ERG trading pairs and good volume",
+              "buttonText": "Trade ERG on Gate.io"
             },
-            "2": {
-              "name": "ErgodeX",
-              "type": "没有 KYC - ~0.3% 费用",
-              "description": "本土Ergo DEX, 完全分散化和隐私",
-              "buttonText": "打开 ErgodeX"
+            {
+              "name": "ErgoDEX",
+              "type": "No KYC - ~0.3% fees",
+              "description": "Native Ergo DEX with full decentralization and privacy. Note: Ergo's on-chain liquidity is early-stage — check current depth and 24h volume before trading.",
+              "buttonText": "Open ErgoDEX"
             }
-          },
-          "disclaimer": "链接是非正式的。进行自己的研究。交易涉及风险。"
+          ],
+          "disclaimer": "Links are informational. Do your own research. Trading involves risk."
         },
-        "2": {
+        {
           "number": "03",
-          "title": "发送您的第一笔交易",
-          "description": "通过发送ERG测试你的钱包",
+          "title": "Send Your First Transaction",
+          "description": "Test your wallet by sending ERG",
           "proTips": {
-            "title": "专业提示",
-            "subtitle": "成功的最佳做法"
+            "title": "Pro Tips",
+            "subtitle": "Best practices for success"
           },
-          "tips": {
-            "0": "开始时测试金额 (0.1 ERG)",
-            "1": "交易费一般是 ~0.001-0.002 ERG (0.01)",
-            "2": "交易确认在 ~2 分钟内",
-            "3": "总是仔细检查收件人地址"
-          }
+          "tips": [
+            "Start with a small test amount (0.1 ERG)",
+            "Transaction fees are typically ~0.001-0.002 ERG ($0.01)",
+            "Transactions confirm in ~2 minutes",
+            "Always double-check the recipient address"
+          ]
         }
-      },
+      ],
       "badges": {
         "recommended": "推荐的"
       },
@@ -200,202 +203,202 @@
         "title": "准备好开始您的旅程吗？",
         "description": "获取适合您的 Ergo 个人资料的更新和提示。"
       },
-      "questions": {
-        "0": {
-          "id": "1",
-          "question": "什么主要吸引你到 blockchain 技术和 Ergo ？",
-          "options": {
-            "0": {
-              "text": "投资潜力和财政机会",
-              "profiles": {
-                "0": "投资",
-                "1": "defi"
-              }
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "options": [
+            {
+              "text": "Investment potential and financial opportunities",
+              "profiles": [
+                "investor",
+                "defi"
+              ]
             },
-            "1": {
-              "text": "开发应用和促进新技术",
-              "profiles": {
-                "0": "开发者"
-              }
+            {
+              "text": "Building applications and contributing to new technologies",
+              "profiles": [
+                "developer"
+              ]
             },
-            "2": {
-              "text": "支持网络安全并通过硬件获得奖励",
-              "profiles": {
-                "0": "矿工"
-              }
+            {
+              "text": "Supporting network security and earning rewards through hardware",
+              "profiles": [
+                "miner"
+              ]
             },
-            "3": {
-              "text": "收集、创建或交易独特的数字物品和艺术品",
-              "profiles": {
-                "0": "nft"
-              }
+            {
+              "text": "Collecting, creating, or trading unique digital items and art",
+              "profiles": [
+                "nft"
+              ]
             },
-            "4": {
-              "text": "使用新的金融工具进行借贷、借贷或交易",
-              "profiles": {
-                "0": "defi"
-              }
+            {
+              "text": "Using new financial tools for borrowing, lending, or trading",
+              "profiles": [
+                "defi"
+              ]
             },
-            "5": {
-              "text": "加强我的财务隐私和匿名性",
-              "profiles": {
-                "0": "隐私"
-              }
+            {
+              "text": "Enhancing my financial privacy and anonymity",
+              "profiles": [
+                "privacy"
+              ]
             },
-            "6": {
-              "text": "我是新的，只想先学习基础知识！",
-              "profiles": {
-                "0": "学生"
-              }
+            {
+              "text": "I'm new and just want to learn the basics first!",
+              "profiles": [
+                "learner"
+              ]
             }
-          }
+          ]
         },
-        "1": {
-          "id": "2",
-          "question": "你将如何描述你的技术舒适程度？",
-          "options": {
-            "0": {
-              "text": "非常舒适；我可以编程或管理复杂的系统",
-              "profiles": {
-                "0": "开发者",
-                "1": "矿工",
-                "2": "隐私"
-              }
+        {
+          "id": "q2",
+          "question": "How would you describe your technical comfort level?",
+          "options": [
+            {
+              "text": "Very comfortable; I can code or manage complex systems",
+              "profiles": [
+                "developer",
+                "miner",
+                "privacy"
+              ]
             },
-            "1": {
-              "text": "适度舒适；我可以学习新软件并跟随指南",
-              "profiles": {
-                "0": "defi",
-                "1": "nft",
-                "2": "矿工"
-              }
+            {
+              "text": "Moderately comfortable; I can learn new software and follow guides",
+              "profiles": [
+                "defi",
+                "nft",
+                "miner"
+              ]
             },
-            "2": {
-              "text": "技术性不强；我喜欢简单和方便用户的应用程序",
-              "profiles": {
-                "0": "投资",
-                "1": "学生",
-                "2": "nft"
-              }
+            {
+              "text": "Not very technical; I prefer simple and user-friendly applications",
+              "profiles": [
+                "investor",
+                "learner",
+                "nft"
+              ]
             }
-          }
+          ]
         },
-        "2": {
-          "id": "3",
-          "question": "你对埃尔戈的哪种活动最感兴趣？",
-          "options": {
-            "0": {
-              "text": "增加我的资产并探索金融工具",
-              "profiles": {
-                "0": "投资",
-                "1": "defi"
-              }
+        {
+          "id": "q3",
+          "question": "What kind of activity within Ergo are you most interested in?",
+          "options": [
+            {
+              "text": "Growing my assets and exploring financial instruments",
+              "profiles": [
+                "investor",
+                "defi"
+              ]
             },
-            "1": {
-              "text": "创建新工具、dApp或智能合同",
-              "profiles": {
-                "0": "开发者"
-              }
+            {
+              "text": "Creating new tools, dApps, or smart contracts",
+              "profiles": [
+                "developer"
+              ]
             },
-            "2": {
-              "text": "确保网络安全和赚取ERG",
-              "profiles": {
-                "0": "矿工"
-              }
+            {
+              "text": "Securing the network and earning ERG",
+              "profiles": [
+                "miner"
+              ]
             },
-            "3": {
-              "text": "探索数字艺术和收藏品",
-              "profiles": {
-                "0": "nft"
-              }
+            {
+              "text": "Exploring digital art and collectibles",
+              "profiles": [
+                "nft"
+              ]
             },
-            "4": {
-              "text": "深入了解技术及其原则",
-              "profiles": {
-                "0": "学生",
-                "1": "开发者"
-              }
+            {
+              "text": "Deeply understanding the technology and its principles",
+              "profiles": [
+                "learner",
+                "developer"
+              ]
             },
-            "5": {
-              "text": "保护我的财务隐私",
-              "profiles": {
-                "0": "隐私"
-              }
+            {
+              "text": "Protecting my financial privacy",
+              "profiles": [
+                "privacy"
+              ]
             }
-          }
+          ]
         },
-        "3": {
+        {
           "id": "q4",
-          "question": "如果你对融资/投资感兴趣，你对新的金融技术采取什么办法？",
-          "options": {
-            "0": {
-              "text": "寻找既定的、风险较低的参与方式",
-              "profiles": {
-                "0": "投资"
-              }
+          "question": "If you're interested in finance/investment, what's your approach to new financial technologies?",
+          "options": [
+            {
+              "text": "Looking for established, lower-risk ways to engage",
+              "profiles": [
+                "investor"
+              ]
             },
-            "1": {
-              "text": "在了解风险的同时探索DeFi机会",
-              "profiles": {
-                "0": "defi"
-              }
+            {
+              "text": "Exploring DeFi opportunities while understanding the risks",
+              "profiles": [
+                "defi"
+              ]
             },
-            "2": {
-              "text": "对切割边缘感兴趣，实验性金融工具",
-              "profiles": {
-                "0": "defi",
-                "1": "开发者"
-              }
+            {
+              "text": "Interested in cutting-edge, experimental financial tools",
+              "profiles": [
+                "defi",
+                "developer"
+              ]
             },
-            "3": {
-              "text": "对财务方面不特别感兴趣。",
-              "profiles": {
-                "0": "学生",
-                "1": "nft",
-                "2": "矿工"
-              }
+            {
+              "text": "Not particularly interested in financial aspects",
+              "profiles": [
+                "learner",
+                "nft",
+                "miner"
+              ]
             }
-          }
+          ]
         },
-        "4": {
+        {
           "id": "q5",
-          "question": "如果你想要作出贡献，哪一种参与最激发你？",
-          "options": {
-            "0": {
-              "text": "写入代码和构建软件",
-              "profiles": {
-                "0": "开发者"
-              }
+          "question": "If you want to contribute, what type of participation inspires you most?",
+          "options": [
+            {
+              "text": "Writing code and building software",
+              "profiles": [
+                "developer"
+              ]
             },
-            "1": {
-              "text": "创建教育内容、艺术或营销材料",
-              "profiles": {
-                "0": "nft",
-                "1": "学生"
-              }
+            {
+              "text": "Creating educational content, art, or marketing materials",
+              "profiles": [
+                "nft",
+                "learner"
+              ]
             },
-            "2": {
-              "text": "帮助社区中的其他人并回答问题",
-              "profiles": {
-                "0": "学生"
-              }
+            {
+              "text": "Helping others in the community and answering questions",
+              "profiles": [
+                "learner"
+              ]
             },
-            "3": {
-              "text": "参与治理讨论和建议",
-              "profiles": {
-                "0": "开发者",
-                "1": "隐私"
-              }
+            {
+              "text": "Participating in governance discussions and proposals",
+              "profiles": [
+                "developer",
+                "privacy"
+              ]
             },
-            "4": {
-              "text": "支持网络基础设施",
-              "profiles": {
-                "0": "矿工"
-              }
+            {
+              "text": "Supporting network infrastructure",
+              "profiles": [
+                "miner"
+              ]
             }
-          }
+          ]
         }
-      },
+      ],
       "profiles": {
         "developer": {
           "id": "开发者",
@@ -404,80 +407,80 @@
           "description": "您正在创建创新应用程序并为尖端技术做出贡献！ Ergo 强大的 ErgoScript 和 eUTXO 模型为构建安全高效的 dApp 提供了独特机会。",
           "icon": "💻",
           "color": "从初级到orange-500",
-          "tools": {
-            "0": {
-              "category": "文档与学习",
-              "items": {
-                "0": {
+          "tools": [
+            {
+              "category": "Documentation & Learning",
+              "items": [
+                {
                   "name": "ErgoDocs",
-                  "description": "开发者的全面文档",
-                  "link": "/build/文档"
+                  "description": "Comprehensive developer documentation",
+                  "link": "/docs/developers"
                 },
-                "1": {
+                {
                   "name": "ErgoScript Primer",
-                  "description": "学习 Ergo 的智能合同语言",
+                  "description": "Learn Ergo's smart contract language",
                   "link": "/docs/developers/tutorials"
                 },
-                "2": {
-                  "name": "Ergo 游乐场",
-                  "description": "交互式编码环境",
+                {
+                  "name": "Ergo Playgrounds",
+                  "description": "Interactive coding environment",
                   "link": "/docs/developers/tooling/playgrounds"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "开发工具",
-              "items": {
-                "0": {
+            {
+              "category": "Development Tools",
+              "items": [
+                {
                   "name": "AppKit",
-                  "description": "JavaScript 开发工具",
+                  "description": "Java/Scala development toolkit",
                   "link": "/docs/developers/tooling/frameworks/appkit"
                 },
-                "1": {
+                {
                   "name": "Fleet SDK",
-                  "description": "Ergo 的 TypeScript SDK",
+                  "description": "TypeScript SDK for Ergo",
                   "link": "/docs/developers/tooling/fleet"
                 },
-                "2": {
+                {
                   "name": "Sigma-Rust",
-                  "description": "Sigma 协议的 Rust 实现",
+                  "description": "Rust implementation of Sigma protocols",
                   "link": "/docs/developers/tooling/sigma-rust"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "探索开发者文档",
-              "link": "/build/文档"
+          ],
+          "nextSteps": [
+            {
+              "text": "Explore Developer Documentation",
+              "link": "/docs/developers"
             },
-            "1": {
-              "text": "尝试ErgoScript 游戏场",
+            {
+              "text": "Try the ErgoScript Playground",
               "link": "/docs/developers/tooling/playgrounds"
             },
-            "2": {
-              "text": "加入开发者Discord频道",
+            {
+              "text": "Join Developer Discord Channels",
               "link": "https://discord.gg/ergo-platform"
             },
-            "3": {
-              "text": "了解开发者补助金",
+            {
+              "text": "Check Out Developer Grants",
               "link": "/ecosystem/grants"
             }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "开发者Discord",
+          ],
+          "communityChannels": [
+            {
+              "name": "Developer Discord",
               "link": "https://discord.gg/ergo-platform"
             },
-            "1": {
-              "name": "ErgoForum - 开发",
+            {
+              "name": "ErgoForum - Development",
               "link": "https://ergoforum.org"
             },
-            "2": {
-              "name": "GitHub 组织",
+            {
+              "name": "GitHub Organization",
               "link": "https://github.com/ergoplatform"
             }
-          }
+          ]
         },
         "defi": {
           "id": "defi",
@@ -486,90 +489,90 @@
           "description": "你已准备好探索 Ergo 去中心化世界所提供的创新金融工具和机会！探索管理资产、赚取收益和参与金融未来的新方式。",
           "icon": "🏦",
           "color": "从主到amber-500",
-          "tools": {
-            "0": {
-              "category": "钱包",
-              "items": {
-                "0": {
-                  "name": "Nautilus钱包",
-                  "description": "浏览器扩展钱包",
-                  "link": "/钱包"
+          "tools": [
+            {
+              "category": "Wallets",
+              "items": [
+                {
+                  "name": "Nautilus Wallet",
+                  "description": "Browser extension wallet",
+                  "link": "/wallet"
                 },
-                "1": {
-                  "name": "官方移动钱包",
-                  "description": "iOS 和 Android 应用程序",
-                  "link": "/钱包"
+                {
+                  "name": "Official Mobile Wallets",
+                  "description": "iOS and Android apps",
+                  "link": "/wallet"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "Defi 平台",
-              "items": {
-                "0": {
+            {
+              "category": "DeFi Platforms",
+              "items": [
+                {
                   "name": "Spectrum Finance",
-                  "description": "去中心化交易所（DEX）",
-                  "link": "https://specum.fi"
+                  "description": "Decentralized exchange (DEX)",
+                  "link": "https://spectrum.fi"
                 },
-                "1": {
+                {
                   "name": "SigmaUSD",
-                  "description": "算法稳定币协议",
-                  "link": "E/ecosystem/sigmausd"
+                  "description": "Algorithmic stablecoin protocol",
+                  "link": "/ecosystem/sigmausd"
                 },
-                "2": {
-                  "name": "杜克库",
-                  "description": "贷款和借贷平台",
+                {
+                  "name": "Duckpools",
+                  "description": "Lending and borrowing platform",
                   "link": "/ecosystem/duckpools"
                 }
-              }
+              ]
             },
-            "2": {
-              "category": "分析",
-              "items": {
-                "0": {
-                  "name": "Ergo Watch",
-                  "description": "网络和 DeFi 分析",
+            {
+              "category": "Analytics",
+              "items": [
+                {
+                  "name": "ergo.watch",
+                  "description": "Network and DeFi analytics",
                   "link": "https://ergo.watch"
                 },
-                "1": {
+                {
                   "name": "Ergo Explorer",
-                  "description": "区块链浏览器",
-                  "link": "/生态系统/探险者"
+                  "description": "Blockchain explorer",
+                  "link": "/ecosystem/ergo-explorer"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "获取钱包",
-              "link": "/钱包"
+          ],
+          "nextSteps": [
+            {
+              "text": "Get a Wallet",
+              "link": "/wallet"
             },
-            "1": {
-              "text": "探索Spectrum 融资",
-              "link": "https://specum.fi"
+            {
+              "text": "Explore Spectrum Finance",
+              "link": "https://spectrum.fi"
             },
-            "2": {
-              "text": "了解SigmaUSD",
-              "link": "E/ecosystem/sigmausd"
+            {
+              "text": "Learn About SigmaUSD",
+              "link": "/ecosystem/sigmausd"
             },
-            "3": {
-              "text": "加入 DeFi 讨论",
+            {
+              "text": "Join DeFi Discussions",
               "link": "https://discord.gg/ergo-platform"
             }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "DeFi Discord 频道",
+          ],
+          "communityChannels": [
+            {
+              "name": "DeFi Discord Channels",
               "link": "https://discord.gg/ergo-platform"
             },
-            "1": {
-              "name": "贸易社区",
+            {
+              "name": "Trading Community",
               "link": "/start/community"
             },
-            "2": {
-              "name": "Defi 讨论",
+            {
+              "name": "DeFi Discussions",
               "link": "https://ergoforum.org"
             }
-          }
+          ]
         },
         "investor": {
           "id": "投资",
@@ -578,80 +581,80 @@
           "description": "你对 Ergo 的投资潜力感兴趣！无论你想要持有、交易还是质押，Ergo 在加密货币领域提供了独特的机会。",
           "icon": "📈",
           "color": "从主到amber-600",
-          "tools": {
-            "0": {
-              "category": "交易",
-              "items": {
-                "0": {
+          "tools": [
+            {
+              "category": "Exchanges",
+              "items": [
+                {
                   "name": "KuCoin",
-                  "description": "主要交易列出ERG",
+                  "description": "Major exchange listing ERG",
                   "link": "https://www.kucoin.com"
                 },
-                "1": {
+                {
                   "name": "Gate.io",
-                  "description": "热门交换ERG",
+                  "description": "Popular exchange for ERG",
                   "link": "https://www.gate.io"
                 },
-                "2": {
-                  "name": "Spectrum Finance",
-                  "description": "去中心化交易所",
-                  "link": "https://specum.fi"
+                {
+                  "name": "Spectrum DEX",
+                  "description": "Decentralized trading",
+                  "link": "https://spectrum.fi"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "研究与分析",
-              "items": {
-                "0": {
+            {
+              "category": "Research & Analysis",
+              "items": [
+                {
                   "name": "Ergo Watch",
-                  "description": "网络分析",
+                  "description": "Network analytics",
                   "link": "https://ergo.watch"
                 },
-                "1": {
-                  "name": "Token 经济",
-                  "description": "ERG tokenomics 信息",
+                {
+                  "name": "Token Economics",
+                  "description": "ERG tokenomics info",
                   "link": "/technology/adaptive-emission"
                 },
-                "2": {
-                  "name": "排放时间表",
-                  "description": "ERG 分配计划",
-                  "link": "/technology/adaptive-emission#emissions"
+                {
+                  "name": "Emission Schedule",
+                  "description": "ERG distribution plan",
+                  "link": "/technology/adaptive-emission#emission"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "了解ERG Tokenomics",
+          ],
+          "nextSteps": [
+            {
+              "text": "Learn About ERG Tokenomics",
               "link": "/technology/adaptive-emission"
             },
-            "1": {
-              "text": "查找交易列表",
+            {
+              "text": "Find Exchange Listings",
               "link": "/use/get-erg"
             },
-            "2": {
-              "text": "了解Staking 选项",
+            {
+              "text": "Understand Staking Options",
               "link": "/use/defi"
             },
-            "3": {
-              "text": "加入投资者社区",
+            {
+              "text": "Join Investor Community",
               "link": "https://discord.gg/ergo-platform"
             }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "交易Discord",
+          ],
+          "communityChannels": [
+            {
+              "name": "Trading Discord",
               "link": "https://discord.gg/ergo-platform"
             },
-            "1": {
-              "name": "价格讨论",
+            {
+              "name": "Price Discussion",
               "link": "/start/community"
             },
-            "2": {
-              "name": "投资者聊天",
+            {
+              "name": "Investor Chat",
               "link": "https://t.me/ergoplatform"
             }
-          }
+          ]
         },
         "miner": {
           "id": "矿工",
@@ -660,75 +663,75 @@
           "description": "你有兴趣支持 Ergo 的网络安全，同时获得奖励！Ergo 使用 Autolykos v2 算法，该算法具有 ASIC 抗性，专为公平挖矿而设计。",
           "icon": "⛏️",
           "color": "从主到amber-600",
-          "tools": {
-            "0": {
-              "category": "采矿信息",
-              "items": {
-                "0": {
+          "tools": [
+            {
+              "category": "Mining Information",
+              "items": [
+                {
                   "name": "Autolykos v2 Guide",
-                  "description": "理解算法",
-                  "link": "/矿工"
+                  "description": "Understanding the algorithm",
+                  "link": "/miners"
                 },
-                "1": {
-                  "name": "矿池子",
-                  "description": "热门的Ergo矿库",
-                  "link": "/miners#题库"
+                {
+                  "name": "Mining Pools",
+                  "description": "Popular Ergo mining pools",
+                  "link": "/miners#pools"
                 },
-                "2": {
-                  "name": "利润计算器",
-                  "description": "估计矿产回报率",
-                  "link": "/miners#计算器"
+                {
+                  "name": "Profitability Calculator",
+                  "description": "Estimate mining returns",
+                  "link": "/miners#calculator"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "挖掘软件",
-              "items": {
-                "0": {
-                  "name": "官方矿工",
-                  "description": "参考资料落实情况",
+            {
+              "category": "Mining Software",
+              "items": [
+                {
+                  "name": "Official Miner",
+                  "description": "Reference implementation",
                   "link": "/miners#mining-guide"
                 },
-                "1": {
-                  "name": "社区矿工",
-                  "description": "第三方采矿软件",
+                {
+                  "name": "Community Miners",
+                  "description": "Third-party mining software",
                   "link": "/miners#mining-guide"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "学习 Autolykos v2",
+          ],
+          "nextSteps": [
+            {
+              "text": "Learn About Autolykos v2",
               "link": "/technology/secure-pow"
             },
-            "1": {
-              "text": "查找矿库",
-              "link": "/miners#题库"
+            {
+              "text": "Find Mining Pools",
+              "link": "/miners#pools"
             },
-            "2": {
-              "text": "计算采矿获益",
-              "link": "/miners#计算器"
+            {
+              "text": "Calculate Mining Profitability",
+              "link": "/miners#calculator"
             },
-            "3": {
-              "text": "加入采矿社区",
+            {
+              "text": "Join Mining Community",
               "link": "https://discord.gg/ergo-platform"
             }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "挖掘Discord 频道",
+          ],
+          "communityChannels": [
+            {
+              "name": "Mining Discord Channels",
               "link": "https://discord.gg/ergo-platform"
             },
-            "1": {
-              "name": "采矿池社区",
-              "link": "/miners#题库"
+            {
+              "name": "Mining Pools Community",
+              "link": "/miners#pools"
             },
-            "2": {
-              "name": "技术支助",
+            {
+              "name": "Technical Support",
               "link": "https://ergoforum.org"
             }
-          }
+          ]
         },
         "nft": {
           "id": "nft",
@@ -737,70 +740,70 @@
           "description": "你对独特的数字资产、艺术品和收藏品感到兴奋！Ergo 的 NFT 生态系统提供了低费用、高安全性的创新市场和创作工具。",
           "icon": "🎨",
           "color": "从主到amber-500",
-          "tools": {
-            "0": {
-              "category": "NFT 市场",
-              "items": {
-                "0": {
+          "tools": [
+            {
+              "category": "NFT Marketplaces",
+              "items": [
+                {
                   "name": "Ergo Auction House",
-                  "description": "高级NFT市场",
+                  "description": "Premier NFT marketplace",
                   "link": "/docs/ecosystem/financial/dex/trade-house"
                 },
-                "1": {
+                {
                   "name": "SkyHarbor",
-                  "description": "NFT 交易平台",
+                  "description": "NFT trading platform",
                   "link": "/docs/ecosystem/nfts/skyharbor"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "创建工具",
-              "items": {
-                "0": {
+            {
+              "category": "Creation Tools",
+              "items": [
+                {
                   "name": "TokenJay",
-                  "description": "NFT 铸造平台",
+                  "description": "NFT minting platform",
                   "link": "/ecosystem/tokenjay"
                 },
-                "1": {
+                {
                   "name": "Ergo Utils",
-                  "description": "NFT 创建工具",
-                  "link": "/生态系统/工具"
+                  "description": "NFT creation utilities",
+                  "link": "/docs/ecosystem/tooling"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "探索Ergo Auction House",
+          ],
+          "nextSteps": [
+            {
+              "text": "Explore Ergo Auction House",
               "link": "/docs/ecosystem/financial/dex/trade-house"
             },
-            "1": {
-              "text": "了解NFT 创建",
+            {
+              "text": "Learn About NFT Creation",
               "link": "/ecosystem/tokenjay"
             },
-            "2": {
-              "text": "浏览 NFT 收藏",
-              "link": "/生态系统/nfts"
+            {
+              "text": "Browse NFT Collections",
+              "link": "/docs/ecosystem/nfts"
             },
-            "3": {
-              "text": "加入 NFT 社区",
+            {
+              "text": "Join NFT Community",
               "link": "https://discord.gg/ergo-platform"
             }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "NFT Discord 频道",
+          ],
+          "communityChannels": [
+            {
+              "name": "NFT Discord Channels",
               "link": "https://discord.gg/ergo-platform"
             },
-            "1": {
-              "name": "艺术家社区",
+            {
+              "name": "Artist Community",
               "link": "/start/community"
             },
-            "2": {
-              "name": "收藏者组",
-              "link": "/社群/收藏家"
+            {
+              "name": "Collector Groups",
+              "link": "/start/community"
             }
-          }
+          ]
         },
         "privacy": {
           "id": "隐私",
@@ -809,70 +812,70 @@
           "description": "您重视财务隐私，想要保护您的交易记录！Ergo 基于 Sigma 协议提供尖端隐私工具，实现无需信任的安全隐私增强。",
           "icon": "🔒",
           "color": "从主到amber-600",
-          "tools": {
-            "0": {
-              "category": "隐私工具",
-              "items": {
-                "0": {
+          "tools": [
+            {
+              "category": "Privacy Tools",
+              "items": [
+                {
                   "name": "ErgoMixer",
-                  "description": "非监管交易混合器",
+                  "description": "Non-custodial transaction mixer",
                   "link": "/ecosystem/ergomixer"
                 },
-                "1": {
-                  "name": "隐身地址",
-                  "description": "强化地址隐私",
-                  "link": "/technology/privacy功能"
+                {
+                  "name": "Stealth Addresses",
+                  "description": "Enhanced address privacy",
+                  "link": "/technology/privacy-features"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "教育资源",
-              "items": {
-                "0": {
-                  "name": "Sigma 协议指南",
-                  "description": "了解隐私技术",
-                  "link": "/technology/privacy功能"
+            {
+              "category": "Educational Resources",
+              "items": [
+                {
+                  "name": "Sigma Protocols Guide",
+                  "description": "Understanding privacy tech",
+                  "link": "/technology/privacy-features"
                 },
-                "1": {
-                  "name": "隐私最佳做法",
-                  "description": "如何保持私人状态",
+                {
+                  "name": "Privacy Best Practices",
+                  "description": "How to stay private",
                   "link": "/use/privacy"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "学习 ErgoMixer",
+          ],
+          "nextSteps": [
+            {
+              "text": "Learn About ErgoMixer",
               "link": "/ecosystem/ergomixer"
             },
-            "1": {
-              "text": "理解西格玛协议",
-              "link": "/technology/privacy功能"
+            {
+              "text": "Understand Sigma Protocols",
+              "link": "/technology/privacy-features"
             },
-            "2": {
-              "text": "读取隐私最佳做法",
+            {
+              "text": "Read Privacy Best Practices",
               "link": "/use/privacy"
             },
-            "3": {
-              "text": "加入隐私讨论",
+            {
+              "text": "Join Privacy Discussions",
               "link": "https://discord.gg/ergo-platform"
             }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "隐私Discord 频道",
+          ],
+          "communityChannels": [
+            {
+              "name": "Privacy Discord Channels",
               "link": "https://discord.gg/ergo-platform"
             },
-            "1": {
-              "name": "ErgoMixer 社区",
+            {
+              "name": "ErgoMixer Community",
               "link": "/ecosystem/ergomixer"
             },
-            "2": {
-              "name": "技术讨论",
+            {
+              "name": "Technical Discussions",
               "link": "https://ergoforum.org"
             }
-          }
+          ]
         },
         "learner": {
           "id": "学生",
@@ -881,75 +884,75 @@
           "description": "你刚刚接触 Ergo，想先了解基础知识！非常好——学习基础知识将帮助你对如何参与生态系统做出明智的决定。",
           "icon": "📚",
           "color": "从主到amber-500",
-          "tools": {
-            "0": {
-              "category": "教育资源",
-              "items": {
-                "0": {
-                  "name": "给初学者的常见问题",
-                  "description": "常见问题已回答",
+          "tools": [
+            {
+              "category": "Educational Resources",
+              "items": [
+                {
+                  "name": "FAQ for Beginners",
+                  "description": "Common questions answered",
                   "link": "/start/faq"
                 },
-                "1": {
-                  "name": "快速介绍",
-                  "description": "Ergo 概述",
+                {
+                  "name": "Quick Introduction",
+                  "description": "Ergo overview",
                   "link": "/start/introduction"
                 },
-                "2": {
+                {
                   "name": "Ergonaut Handbook",
-                  "description": "全面指南",
+                  "description": "Comprehensive guide",
                   "link": "/learn"
                 }
-              }
+              ]
             },
-            "1": {
-              "category": "社区支持",
-              "items": {
-                "0": {
-                  "name": "新移民频道",
-                  "description": "方便开始的讨论",
-                  "link": "/社区"
+            {
+              "category": "Community Support",
+              "items": [
+                {
+                  "name": "Newcomer Channels",
+                  "description": "Beginner-friendly discussions",
+                  "link": "/start/community"
                 },
-                "1": {
-                  "name": "学习小组",
-                  "description": "研究组和指导",
+                {
+                  "name": "Learning Groups",
+                  "description": "Study groups and mentorship",
                   "link": "/learn"
                 }
-              }
+              ]
             }
-          },
-          "nextSteps": {
-            "0": {
-              "text": "为初学者阅读常见问题",
+          ],
+          "nextSteps": [
+            {
+              "text": "Read the FAQ for Beginners",
               "link": "/start/faq"
             },
-            "1": {
-              "text": "做快速介绍",
+            {
+              "text": "Take the Quick Introduction",
               "link": "/start/introduction"
             },
-            "2": {
-              "text": "加入新来客社区",
-              "link": "/社区"
-            },
-            "3": {
-              "text": "探索学习中心",
-              "link": "/learning"
-            }
-          },
-          "communityChannels": {
-            "0": {
-              "name": "常规Discord",
-              "link": "https://discord.gg/ergo-platform"
-            },
-            "1": {
-              "name": "新人支持",
+            {
+              "text": "Join Newcomer Community",
               "link": "/start/community"
             },
-            "2": {
-              "name": "学习小组",
+            {
+              "text": "Explore the Learning Hub",
               "link": "/learn"
             }
-          }
+          ],
+          "communityChannels": [
+            {
+              "name": "General Discord",
+              "link": "https://discord.gg/ergo-platform"
+            },
+            {
+              "name": "Newcomer Support",
+              "link": "/start/community"
+            },
+            {
+              "name": "Learning Groups",
+              "link": "/learn"
+            }
+          ]
         }
       },
       "ui": {
@@ -1157,104 +1160,104 @@
         },
         "quickStart": {
           "title": "开始于 3 个步骤",
-          "steps": {
-            "0": {
-              "title": "步骤1",
-              "subtitle": "加入 Discord + Telegram",
-              "description": "从加入核心社区开始，您可以从有经验的营销者那里学习，并与其他人协调您的努力。",
-              "hoverText": "从这里开始"
+          "steps": [
+            {
+              "title": "Step 1",
+              "subtitle": "Join Discord + Telegram",
+              "description": "Start by joining core communities where you can learn from experienced marketers and coordinate your efforts with others.",
+              "hoverText": "Start Here"
             },
-            "1": {
-              "title": "步骤2",
-              "subtitle": "选择 ONE 频道 (Twitter / Reddit)",
-              "description": "选择一个您舒适的平台并在扩展前掌握它。一个频道中的优质接触将会对您的自我传播起到作用。",
-              "hoverText": "将焦点放在前"
+            {
+              "title": "Step 2",
+              "subtitle": "Pick ONE channel (Twitter / Reddit)",
+              "description": "Choose one platform you're comfortable with and master it before expanding. Quality engagement on one channel beats spreading yourself thin.",
+              "hoverText": "Focus First"
             },
-            "2": {
-              "title": "步骤3",
-              "subtitle": "关注下面的5步工作流",
-              "description": "使用业经证明的扩大战略，将每个博客文章变成一个协调的全社区对话，以帮助Ergo成长。",
-              "hoverText": "向上缩放"
+            {
+              "title": "Step 3",
+              "subtitle": "Follow 5-step workflow below",
+              "description": "Use the proven amplification strategy to turn every blog post into a coordinated community-wide conversation that helps Ergo grow.",
+              "hoverText": "Scale Up"
             }
-          }
+          ]
         },
         "navigation": {
           "title": "在这个页面：",
           "jumpTo": "跳转到"
         },
         "guideTitle": "你的步进指南",
-        "coreChannels": {
-          "0": {
+        "coreChannels": [
+          {
             "name": "ergoblockchain.org",
-            "description": "博客+内部链接中的文章",
-            "actionText": "访问博客"
+            "description": "Article in blog + internal links",
+            "actionText": "Visit Blog"
           },
-          "1": {
-            "name": "Beehiiv时事通讯",
-            "description": "摘要或专用问题",
-            "actionText": "订阅"
+          {
+            "name": "Beehiiv Newsletter",
+            "description": "Digest or dedicated issue",
+            "actionText": "Subscribe"
           },
-          "2": {
+          {
             "name": "Telegram",
-            "description": "营销社区",
-            "actionText": "加入频道"
+            "description": "Marketing Community",
+            "actionText": "Join Channel"
           },
-          "3": {
+          {
             "name": "Ergo Discord",
-            "description": "#公告，#general, #dev, #research",
-            "actionText": "加入Discord"
+            "description": "#announcements, #general, #dev, #research",
+            "actionText": "Join Discord"
           },
-          "4": {
-            "name": "Reddit r/ergocts",
-            "description": "社区讨论",
-            "actionText": "访问版块"
+          {
+            "name": "Reddit r/ergonauts",
+            "description": "Community discussions",
+            "actionText": "Visit Subreddit"
           },
-          "5": {
+          {
             "name": "X (Twitter)",
-            "description": "线程/推特系列 + 链接",
-            "actionText": "跟随@BuildOnErgo"
+            "description": "Thread/tweet series + link",
+            "actionText": "Follow @BuildOnErgo"
           }
-        },
+        ],
         "guideSteps": {
           "whyMatters": {
             "title": "为什么你的帮助事项",
             "description": "社区成员如何驱动Ergo的增长",
             "intro": "您的声音很重要。社区驱动的营销是埃尔戈增长的支柱。与传统营销不同，您的真正贡献建立了真正的关系和信任。",
             "keyBenefitsTitle": "主要福利：",
-            "points": {
-              "0": "您的真实语音比企业信息更加权重",
-              "1": "你深刻理解埃尔戈的技术，可以更好地解释它",
-              "2": "你的分散努力与Ergo的分散原理匹配",
-              "3": "您可以接触到传统营销不能达到的观众。",
-              "4": "你通过真正的对话创建持久的接触"
-            },
+            "points": [
+              "Your authentic voice carries more weight than corporate messaging",
+              "You understand Ergo's technology deeply and can explain it better",
+              "Your decentralized efforts match Ergo's decentralized philosophy",
+              "You can reach audiences that traditional marketing can't",
+              "You create lasting engagement through genuine conversations"
+            ],
             "checklistTitle": "快速启动核对表：",
-            "actionItems": {
-              "0": {
-                "text": "加入Ergo Discord进行实时社区讨论",
-                "priority": "高"
+            "actionItems": [
+              {
+                "text": "Join Ergo Discord for real-time community discussions",
+                "priority": "high"
               },
-              "1": {
-                "text": "关注@BuildOnErgo 在 Twitter 上获取开发者更新",
-                "priority": "高"
+              {
+                "text": "Follow @BuildOnErgo on Twitter for developer updates",
+                "priority": "high"
               },
-              "2": {
-                "text": "加入ErgoSocials Telegram 以便进行营销协调",
-                "priority": "高"
+              {
+                "text": "Join ErgoSocials Telegram for marketing coordination",
+                "priority": "high"
               },
-              "3": {
-                "text": "订阅源内容的 ergoblockchain.org 博客",
-                "priority": "介质"
+              {
+                "text": "Subscribe to ergoblockchain.org blog for source content",
+                "priority": "medium"
               },
-              "4": {
-                "text": "加入Reddit 版块的营销练习",
-                "priority": "介质"
+              {
+                "text": "Join r/ergonauts subreddit for Reddit marketing practice",
+                "priority": "medium"
               },
-              "5": {
-                "text": "订阅Beehiiv通讯每周内容摘要",
-                "priority": "低"
+              {
+                "text": "Subscribe to Beehiiv newsletter for weekly content digest",
+                "priority": "low"
               }
-            },
+            ],
             "priorityLabels": {
               "high": "高优先级",
               "medium": "中优先级",
@@ -1267,65 +1270,65 @@
             "intro": "这些是您可以分享Ergo 内容的核心频道。先在这里开始探索扩展发行频道：",
             "strategyTitle": "专业策略：",
             "strategy": "当在ergoblockchain.org上发布新内容时，在24-48小时内在这些频道之间共享新内容以获取最大影响。",
-            "tips": {
-              "0": "为每个平台的受众自定义您的内容",
-              "1": "使用平台特定功能(Twitter threads, Reddit 格式)",
-              "2": "各渠道之间的相互参照，以建立一个连贯一致的说明",
-              "3": "跟踪对您最有效的承诺"
-            }
+            "tips": [
+              "Customize your content for each platform's audience",
+              "Use platform-specific features (Twitter threads, Reddit formatting)",
+              "Cross-reference between channels to build a cohesive narrative",
+              "Track engagement to see what works best for you"
+            ]
           },
           "contentStrategy": {
             "title": "如何放大新内容",
             "description": "将每篇博文变成全社区的对话",
             "intro": "当新的 Ergo 内容被发布时，这里你可以帮助在整个社区内放大它：",
             "workflowTitle": "5步工作流：",
-            "workflow": {
-              "0": {
-                "title": "源内容",
-                "description": "以 ergoblockchain.org 博客文章或公告开始",
-                "time": "日 0"
+            "workflow": [
+              {
+                "title": "Source Content",
+                "description": "Start with ergoblockchain.org blog post or announcement",
+                "time": "Day 0"
               },
-              "1": {
-                "title": "新闻短信集成",
-                "description": "包括在下一个 Beehiv 摘要或创建专用问题",
-                "time": "1-2天"
+              {
+                "title": "Newsletter Integration",
+                "description": "Include in next Beehiiv digest or create dedicated issue",
+                "time": "Day 1-2"
               },
-              "2": {
-                "title": "社交媒体连线",
-                "description": "通过 Telegram 分享，Discord 分享，Twitter 具有特定平台角度",
-                "time": "第 1-3 天"
+              {
+                "title": "Social Media Cascade",
+                "description": "Share across Telegram, Discord, Twitter with platform-specific angles",
+                "time": "Day 1-3"
               },
-              "3": {
-                "title": "Reddit 策略",
-                "description": "根据具体社区情况交叉向相关的看板",
-                "time": "第 2-7 天"
+              {
+                "title": "Reddit Strategy",
+                "description": "Cross-post to relevant subreddits with community-specific context",
+                "time": "Day 2-7"
               },
-              "4": {
-                "title": "长式内容",
-                "description": "创建 Twitter 文章或 LinkedIn 文章以进行更深入的参与",
-                "time": "1-2周"
+              {
+                "title": "Long-form Content",
+                "description": "Create Twitter Articles or LinkedIn posts for deeper engagement",
+                "time": "Week 1-2"
               }
-            },
+            ],
             "examplesTitle": "真实示例：",
-            "examples": {
-              "0": "新 ErgoScript 教程 -> 以开发者为中心的 Reddit 帖子 + Discord #dev 讨论",
-              "1": "采矿更新 -> r/gpumining + r/cryptomining with profability analysis",
-              "2": "DeFi 协议启动 -> r/defi + Twitter 线程与比较图表"
-            }
+            "examples": [
+              "New ErgoScript tutorial -> Developer-focused Reddit posts + Discord #dev discussion",
+              "Mining update -> r/gpumining + r/cryptomining with profitability analysis",
+              "DeFi protocol launch -> r/defi + Twitter thread with comparison charts"
+            ]
           },
           "redditMastery": {
             "title": "如何分享到Reddit",
             "description": "浏览Reddit独特的文化来帮助Ergo成长！",
             "intro": "Reddit 需要一个不同的方法。您的成功取决于为社区提供价值，而不仅仅是促进Ergo。",
             "bestPracticesTitle": "最佳做法：",
-            "bestPractices": {
-              "0": "发布前总是阅读社区规则",
-              "1": "在分享您自己的帖子之前与其他帖子",
-              "2": "使用描述性的、非促销性标题",
-              "3": "解释为什么您的内容与该社区有关。",
-              "4": "在 2-4 小时内回复评论",
-              "5": "遵循80/20规则：80%的参与，20%的升级"
-            },
+            "bestPractices": [
+              "Always read community rules before posting",
+              "Engage with other posts before sharing your own",
+              "Use descriptive, non-promotional titles",
+              "Explain why your content is relevant to that community",
+              "Respond to comments within 2-4 hours",
+              "Follow the 80/20 rule: 80% engagement, 20% promotion"
+            ],
             "timingTitle": "最佳时间：",
             "timing": {
               "General Crypto": "每周9-11 点 EST, 2-4 PM EST",
@@ -1340,43 +1343,43 @@
             "title": "如何创建参与内容",
             "description": "创建有意义的对话来帮助人们发现 Ergo",
             "intro": "优秀的营销引导对话。以下是如何创建有吸引力的内容，帮助人们了解 Ergo：",
-            "tactics": {
-              "0": {
-                "name": "以问题驱动的帖子",
-                "description": "以发人深思的问题开始",
-                "examples": {
-                  "0": "在当前的 DeFi 协议中，您的最大挑战是什么？",
-                  "1": "您认为隐私硬币在今后5年中将如何进化？",
-                  "2": "什么能说服你从以太坊迁移到 Ergo？"
-                }
+            "tactics": [
+              {
+                "name": "Question-Driven Posts",
+                "description": "Start with thought-provoking questions",
+                "examples": [
+                  "What's your biggest challenge with current DeFi protocols?",
+                  "How do you think privacy coins will evolve in the next 5 years?",
+                  "What would convince you to switch from Ethereum to Ergo?"
+                ]
               },
-              "1": {
-                "name": "比较内容",
-                "description": "相对于替代品定位 Ergo",
-                "examples": {
-                  "0": "Ergo vs Etherum: 交易费用明细表",
-                  "1": "eUTXO vs 账户模式：安全影响",
-                  "2": "Autolykos与其他采矿算法：效率分析"
-                }
+              {
+                "name": "Comparison Content",
+                "description": "Position Ergo against alternatives",
+                "examples": [
+                  "Ergo vs Ethereum: Transaction costs breakdown",
+                  "eUTXO vs Account model: Security implications",
+                  "Autolykos vs other mining algorithms: Efficiency analysis"
+                ]
               },
-              "2": {
-                "name": "教育系列",
-                "description": "创建构建观众的多部分内容",
-                "examples": {
-                  "0": "ErgoScript 基础： 5部分教程系列",
-                  "1": "金钱史：每周深度",
-                  "2": "Defi 安全：案例研究和课程"
-                }
+              {
+                "name": "Educational Series",
+                "description": "Create multi-part content that builds audience",
+                "examples": [
+                  "ErgoScript Basics: 5-part tutorial series",
+                  "History of Money: Weekly deep-dives",
+                  "DeFi Security: Case studies and lessons"
+                ]
               }
-            },
+            ],
             "responseStrategyTitle": "反应战略：",
-            "responseStrategy": {
-              "0": "在4小时内确认每个评论",
-              "1": "询问后续问题以扩展对话",
-              "2": "出现技术问题时标记相关专家",
-              "3": "在评论中分享额外资源",
-              "4": "创建基于热门问题的后续帖子"
-            }
+            "responseStrategy": [
+              "Acknowledge every comment within 4 hours",
+              "Ask follow-up questions to extend conversations",
+              "Tag relevant experts when technical questions arise",
+              "Share additional resources in comments",
+              "Create follow-up posts based on popular questions"
+            ]
           },
           "timingOptimization": {
             "title": "何时发帖达到最大效果",
@@ -1392,227 +1395,227 @@
               "Telegram": "跟随新闻周期，立即断开更新"
             },
             "frequencyTitle": "频率准则：",
-            "frequency": {
-              "0": "质量高于数量 - 较好地发布更少的高值",
-              "1": "在没有绝大多数受众的情况下保持一贯的存在",
-              "2": "为提高效率批量创建内容",
-              "3": "为社区产生的讨论留下差距",
-              "4": "根据接口指标调整频率"
-            },
+            "frequency": [
+              "Quality over quantity - better to post less frequently with high value",
+              "Maintain consistent presence without overwhelming audiences",
+              "Batch content creation for efficiency",
+              "Leave gaps for community-generated discussions",
+              "Adjust frequency based on engagement metrics"
+            ],
             "toolsTitle": "推荐工具：",
-            "tools": {
-              "0": "缓存/Hootsuite",
-              "1": "Reddit 分析以获得最佳发布时间",
-              "2": "Twitter Analytics for views",
-              "3": "Discord 机器人以便跟踪约定。"
-            }
+            "tools": [
+              "Buffer/Hootsuite for scheduling",
+              "Reddit analytics for optimal posting times",
+              "Twitter Analytics for audience insights",
+              "Discord bots for engagement tracking"
+            ]
           },
           "measurementSuccess": {
             "title": "如果你正在帮忙，如何知道？",
             "description": "跟踪您的影响并看看什么是可行的",
             "intro": "想知道你的努力是否正在起作用？集中注意这些表明社区真正增长的尺度：",
-            "keyMetrics": {
-              "0": {
-                "category": "参与质量",
-                "metrics": {
-                  "0": "评论深度和思考度",
-                  "1": "答复中的问题质量",
-                  "2": "跨平台对话继续"
-                }
+            "keyMetrics": [
+              {
+                "category": "Engagement Quality",
+                "metrics": [
+                  "Comment depth and thoughtfulness",
+                  "Question quality in responses",
+                  "Cross-platform conversation continuation"
+                ]
               },
-              "1": {
-                "category": "社区增长",
-                "metrics": {
-                  "0": "新 Discord / Telegram 成员",
-                  "1": "开发者 GitHub 活动",
-                  "2": "生态系统项目提到了"
-                }
+              {
+                "category": "Community Growth",
+                "metrics": [
+                  "New Discord/Telegram members",
+                  "Developer GitHub activity",
+                  "Ecosystem project mentions"
+                ]
               },
-              "2": {
-                "category": "内容性能：",
-                "metrics": {
-                  "0": "阅读耗时",
-                  "1": "共享对视图比率",
-                  "2": "后续问题生成"
-                }
+              {
+                "category": "Content Performance",
+                "metrics": [
+                  "Time spent reading",
+                  "Share-to-view ratio",
+                  "Follow-up question generation"
+                ]
               },
-              "3": {
-                "category": "业务影响",
-                "metrics": {
-                  "0": "来自社交的网站流量",
-                  "1": "开发者工具下载",
-                  "2": "生态系统采用指标"
-                }
+              {
+                "category": "Business Impact",
+                "metrics": [
+                  "Website traffic from social",
+                  "Developer tool downloads",
+                  "Ecosystem adoption metrics"
+                ]
               }
-            },
+            ],
             "analyticsToolsTitle": "分析工具：",
-            "analyticsTools": {
-              "0": "网站流量归属的 Google 分析",
-              "1": "社交媒体本地分析",
-              "2": "Discord/Telegram 会员增长跟踪",
-              "3": "对开发者兴趣的GitHub 活动监测"
-            },
+            "analyticsTools": [
+              "Google Analytics for website traffic attribution",
+              "Social media native analytics",
+              "Discord/Telegram member growth tracking",
+              "GitHub activity monitoring for developer interest"
+            ],
             "optimizationTitle": "优化过程：",
-            "optimization": {
-              "0": "对最佳内容的每周审查",
-              "1": "每月频道效力分析",
-              "2": "基于数据的季度战略调整",
-              "3": "A/B 内容格式和时间的测试"
-            }
+            "optimization": [
+              "Weekly review of top-performing content",
+              "Monthly analysis of channel effectiveness",
+              "Quarterly strategy adjustments based on data",
+              "A/B testing for content formats and timing"
+            ]
           }
         },
-        "redditCategories": {
-          "0": {
-            "title": "常规加密器",
-            "description": "对于加密比较，Defi, PoW, 网络经济"
+        "redditCategories": [
+          {
+            "title": "General Crypto",
+            "description": "For crypto comparisons, DeFi, PoW, network economics"
           },
-          "1": {
-            "title": "隐私 / Cypherpunk",
-            "description": "隐私，可编程隐私，crypto-anarchy"
+          {
+            "title": "Privacy / Cypherpunk",
+            "description": "Privacy, programmable privacy, crypto-anarchy"
           },
-          "2": {
+          {
             "title": "Mining & PoW",
             "description": "ERG mining, PoW vs PoS, mining economics"
           },
-          "3": {
-            "title": "经济与历史",
-            "description": "完美的金钱历史系列"
+          {
+            "title": "Economics & History",
+            "description": "Perfect for History of Money series"
           },
-          "4": {
-            "title": "开发与技术",
-            "description": "eUTXO, ErgoScript, Sigma agreements, dev 指南"
+          {
+            "title": "Dev & Tech",
+            "description": "eUTXO, ErgoScript, Sigma protocols, dev guides"
           }
-        },
+        ],
         "additionalPlatforms": {
           "title": "更多要分享的地方",
           "subtitle": "一旦您喜欢核心通道，探索这些附加平台。每个平台都需要不同的方法——为每个平台的受众自定义您的内容。",
-          "categories": {
-            "0": {
-              "title": "加密至原生平台",
-              "platforms": {
-                "0": {
+          "categories": [
+            {
+              "title": "Crypto-Native Platforms",
+              "platforms": [
+                {
                   "name": "Bitcointalk.org",
-                  "description": "ANN线程，研究帖子，挖掘/钱包指南",
-                  "actionText": "访问论坛"
+                  "description": "ANN threads, research posts, mining/wallet guides",
+                  "actionText": "Visit Forum"
                 },
-                "1": {
-                  "name": "中",
-                  "description": "使用标准链接镜像最佳文章",
-                  "actionText": "发布文章"
+                {
+                  "name": "Medium",
+                  "description": "Mirror best articles with canonical link",
+                  "actionText": "Publish Article"
                 },
-                "2": {
-                  "name": "米罗尔.xyz",
-                  "description": "网站3原生研究博客/文章",
-                  "actionText": "创建帖子"
+                {
+                  "name": "Mirror.xyz",
+                  "description": "Web3-native blog for research/essays",
+                  "actionText": "Create Post"
                 },
-                "3": {
+                {
                   "name": "HackerNoon",
-                  "description": "加密/区块链部分的长期研究",
-                  "actionText": "提交文章"
+                  "description": "Long-form research in crypto/blockchain section",
+                  "actionText": "Submit Article"
                 },
-                "4": {
-                  "name": "开发者：",
-                  "description": "构造器的技术文章 (eUTXO, 链外、 oracles)",
-                  "actionText": "发布教程"
+                {
+                  "name": "Dev.to",
+                  "description": "Technical articles for builders (eUTXO, off-chain, oracles)",
+                  "actionText": "Publish Tutorial"
                 }
-              }
+              ]
             },
-            "1": {
-              "title": "科技与产品平台",
-              "platforms": {
-                "0": {
-                  "name": "黑客新闻",
-                  "description": "强而非点击的文章(资金历史，eUTXO，隐私)",
-                  "actionText": "提交故事"
+            {
+              "title": "Tech & Product Platforms",
+              "platforms": [
+                {
+                  "name": "Hacker News",
+                  "description": "Strong, non-clickbait articles (history of money, eUTXO, privacy)",
+                  "actionText": "Submit Story"
                 },
-                "1": {
-                  "name": "大厅者",
-                  "description": "加密、PoW、协议方面的技术职位",
-                  "actionText": "提交链接"
+                {
+                  "name": "Lobsters",
+                  "description": "Technical posts on cryptography, PoW, protocols",
+                  "actionText": "Submit Link"
                 },
-                "2": {
+                {
                   "name": "Indie Hackers",
-                  "description": "关于建设工具和生态系统的文章",
-                  "actionText": "分享故事"
+                  "description": "Articles on building tools and ecosystems",
+                  "actionText": "Share Story"
                 },
-                "3": {
-                  "name": "堆栈溢出/比特币.SE",
-                  "description": "具有源链接的Q&A (不是发布文章)",
-                  "actionText": "回答问题"
+                {
+                  "name": "Stack Overflow / Bitcoin.SE",
+                  "description": "Q&A with links as sources (not for posting articles)",
+                  "actionText": "Answer Questions"
                 }
-              }
+              ]
             },
-            "2": {
-              "title": "社交和内容平台",
-              "platforms": {
-                "0": {
+            {
+              "title": "Social & Content Platforms",
+              "platforms": [
+                {
                   "name": "Farcaster",
-                  "description": "频道： /crypto, /bitcoin, /fire, /privacy",
-                  "actionText": "加入网络"
+                  "description": "Channels: /crypto, /bitcoin, /defi, /privacy",
+                  "actionText": "Join Network"
                 },
-                "1": {
+                {
                   "name": "Nostr",
-                  "description": "带有关键点和链接的注释",
-                  "actionText": "发布笔记"
+                  "description": "Notes with key points and link",
+                  "actionText": "Publish Note"
                 },
-                "2": {
-                  "name": "镜头协议",
-                  "description": "网络3本机观众获取研究内容",
-                  "actionText": "创建帖子"
+                {
+                  "name": "Lens Protocol",
+                  "description": "Web3-native audience for research content",
+                  "actionText": "Create Post"
                 },
-                "3": {
+                {
                   "name": "YouTube",
-                  "description": "每篇关键文章简短的摘要视频 (2-5分钟)",
-                  "actionText": "创建视频"
+                  "description": "Short summary videos (2-5 min) per key article",
+                  "actionText": "Create Video"
                 }
-              }
+              ]
             }
-          },
+          ],
           "tipsTitle": "使用扩展频道的提示：",
-          "tips": {
-            "0": {
-              "strong": "自定义您的角度：",
-              "text": "在经济/哲学版块中分享钱文章，隐私/cypherpunk 社区中的隐私内容，Dev平台上的eUTXO 内容和黑客新闻"
+          "tips": [
+            {
+              "strong": "Customize your angle:",
+              "text": "Share history of money articles in economics/philosophy subreddits; privacy content in privacy/cypherpunk communities; eUTXO content on dev platforms and Hacker News"
             },
-            "1": {
-              "strong": "更改您的格式：",
-              "text": "尝试完整的交叉帖子(Reddit, Mirror, 中等)，带链接的线程摘要，或带源链接的视觉内容(图表，引号)"
+            {
+              "strong": "Vary your formats:",
+              "text": "Try full cross-posts (Reddit, Mirror, Medium), thread summaries with links, or visual content (diagrams, quotes) with source links"
             },
-            "2": {
-              "strong": "占用您的时间：",
-              "text": "一天之内不要尝试分享一切。 建立习惯：每篇新文章在几天内在不同地点创造5-10个有意义的帖子"
+            {
+              "strong": "Take your time:",
+              "text": "Don't try to share everything in one day. Build a habit: for each new article, make 5-10 meaningful posts across different places over a few days"
             }
-          }
+          ]
         },
         "faq": {
           "title": "常见问题",
           "usefulLinksTitle": "有用的链接：",
-          "questions": {
-            "0": {
-              "question": "我刚刚开始营销。我应该从哪里开始？",
-              "answer": "第一步：加入 Discord (discord.gg/ergo-platform) 并查看其他社区成员如何分享内容。 然后选择 ONE 频道您很舒服的 - 通常是 Twitter 或 Reddit - 并在扩展前练习本指南中的策略2周。"
+          "questions": [
+            {
+              "question": "I'm new to marketing. Where should I start?",
+              "answer": "Start with Step 1: Join Discord (discord.gg/ergo-platform) and see how other community members share content. Then pick ONE channel you're comfortable with - usually Twitter or Reddit - and practice the strategies from this guide for 2 weeks before expanding."
             },
-            "1": {
-              "question": "我在哪里找到要分享的内容？",
-              "answer": "开始于 ergobblockchain.org/blog，官方内容。订阅每周摘要的 Beehiv 通讯。关注@BuildOnErgo 开发者更新。 加入 ErgoSocials Telegram 与其他市场商家进行协调。永远不要分享您不理解的内容 - 首先在 Discord 中提问。"
+            {
+              "question": "Where do I find content to share?",
+              "answer": "Start with ergoblockchain.org/blog for official content. Subscribe to the Beehiiv newsletter for weekly digests. Follow @BuildOnErgo for developer updates. Join ErgoSocials Telegram to coordinate with other marketers. Never share content you don't understand - ask questions in Discord first."
             },
-            "2": {
-              "question": "在Reddit上我如何成功而不被禁止？",
-              "answer": "遵循80/20规则：您要花80%的时间评论他人的帖子，20%分享您自己的内容。 仔细阅读版块规则 - 每个规则都有不同的要求。 开始练习，然后扩展到像r/CryptoCurrency这样的加密版块。总是解释为什么您的内容对特定社区很重要。"
+            {
+              "question": "How do I succeed on Reddit without getting banned?",
+              "answer": "Follow the 80/20 rule: spend 80% of your time commenting on others' posts, 20% sharing your own content. Read subreddit rules carefully - each has different requirements. Start with r/ergonauts to practice, then expand to crypto subreddits like r/CryptoCurrency. Always explain why your content matters to that specific community."
             },
-            "3": {
-              "question": "我需要多少时间承诺？",
-              "answer": "开始时每天只30分钟：10分钟阅读新内容，10分钟正在使用 Discord/Twitter，10分钟发帖/评论。 当您感到舒适时，您可以批量创建内容(每周1小时)，并侧重于实时介入。 质量拍子数量 - 做得不如烧焦好。"
+            {
+              "question": "How much time do I need to commit?",
+              "answer": "Start with just 30 minutes daily: 10 minutes reading new content, 10 minutes engaging on Discord/Twitter, 10 minutes posting/commenting. As you get comfortable, you can batch content creation (1 hour weekly) and focus on real-time engagement. Quality beats quantity - it's better to do less consistently than burn out."
             },
-            "4": {
-              "question": "我怎么知道如果我在起作用？",
-              "answer": "注重参与质量：人们是否提出后续问题？您的职位是否会产生讨论？ 社区成员是否经常提及Ergo？跟踪Discord成员的增长，Twitter 参与率和 Reddit 支持率。 成功意味着更多的人学习埃尔戈，而不仅仅是更多的看法。"
+            {
+              "question": "How do I know if I'm making a difference?",
+              "answer": "Focus on engagement quality: Are people asking follow-up questions? Are your posts generating discussions? Are community members mentioning Ergo more often? Track Discord member growth, Twitter engagement rates, and Reddit upvote ratios. Success means more people learning about Ergo, not just more views."
             },
-            "5": {
-              "question": "我应该避免什么错误？",
-              "answer": "不要在没有自定义的情况下在平台上垃圾信息相同的内容。不要与评论者争辩――建设性地参与或忽略。 不要分享您无法解释的内容。不要忽略社区规则。不要期望立即的结果――社区建设需要几个月而不是几天。"
+            {
+              "question": "What mistakes should I avoid?",
+              "answer": "Don't spam the same content across platforms without customization. Don't argue with critics - engage constructively or ignore. Don't share content you can't explain. Don't neglect community rules. Don't expect immediate results - community building takes months, not days."
             }
-          }
+          ]
         },
         "finalCta": {
           "title": "准备好",
@@ -1829,7 +1832,6 @@
       "ergo_introduction_pow_smart_contracts": "Ergo Introduction — PoW Smart Contracts, eUTXO, Sigma 协议",
       "meet_ergo_a_pow_smart": "Meet Ergo: a PoW 智能合同平台，使用eUTXO 模型和Sigma 协议。构建隐私意识，可审计的dapps 带有可预测的费用。",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "PoW 智能合同与 eUTXO & Sigma 礼仪。",
-      "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "answer_text_t": "Answer\",\n                text: t(",
       "blockchain_smart_contracts_defi_cryptocurrency": ", ",
       "introduction_to_ergo_beginner": "Ergo 简介 | Beginner",
@@ -1873,11 +1875,6 @@
       "participating_in_governance_discussions_and": "参与治理讨论和建议",
       "supporting_network_infrastructure": "支持网络基础设施",
       "documentation_learning": "文档与学习",
-      "ergodocs_description_comprehensive_developer_documentation": ", link: ",
-      "ergoscript_primer_description_learn_ergo": ", link: ",
-      "ergo_playgrounds_description_interactive_coding": ", link: ",
-      "appkit_description_java_scala_development": ", link: ",
-      "fleet_sdk_description_typescript_sdk": ", link: ",
       "explore_developer_documentation_link_build_docs": "General content",
       "try_the_ergoscript_playground_link": "General content",
       "join_developer_discord_channels_link": "General content",
@@ -1885,21 +1882,13 @@
       "developer_discord_link_https_discord": "General content",
       "ergoforum_development_link_https_ergoforum_org": "General content",
       "github_organization_link_https_github": "General content",
-      "spectrum_finance_description_decentralized_exchange": ", link: ",
-      "sigmausd_description_algorithmic_stablecoin_protocol": ", link: ",
-      "duckpools_description_lending_and_borrowing": ", link: ",
       "network_and_defi_analytics_link_https_ergo_watch": "General content",
-      "ergo_explorer_description_blockchain_explorer": ", link: ",
       "learn_about_sigmausd_stablecoin_link": "General content",
       "try_trading_on_spectrum_finance": "General content",
       "join_defi_discussions_on_discord": "General content",
       "defi_discord_channels_link_https": "General content",
       "spectrum_finance_community_link_https_spectrum_fi": "General content",
       "sigmausd_community_link_ecosystem_projects": "General content",
-      "exchange_listings_description_where_to": ", link: ",
-      "ergo_whitepaper_description_technical_foundation": ", link: ",
-      "ecosystem_overview_description_projects_and": ", link: ",
-      "network_statistics_description_real_time": ", link: ",
       "read_the_ergo_whitepaper_link": "General content",
       "explore_the_ecosystem_link_ecosystem": "General content",
       "learn_about_erg_tokenomics_link_learn_tokenomics": "General content",
@@ -1908,18 +1897,12 @@
       "reddit_community_link_https_reddit_com_r_ergonauts": "General content",
       "telegram_group_link_https_t_me_ergoplatform": "General content",
       "understanding_the_algorithm_link_use_mining": "General content",
-      "mining_pools_description_popular_ergo": ", link: ",
-      "official_miner_description_reference_implementation": ", link: ",
-      "community_miners_description_third_party": ", link: ",
       "find_mining_pools_link_ecosystem_mining": "General content",
       "calculate_mining_profitability_link_use": "General content",
       "join_mining_community_link_https": "General content",
       "mining_discord_channels_link_https": "General content",
       "mining_pools_community_link_ecosystem_mining": "General content",
       "technical_support_link_https_ergoforum_org": "General content",
-      "skyharbor_description_nft_trading_platform": ", link: ",
-      "tokenjay_description_nft_minting_platform": ", link: ",
-      "ergo_utils_description_nft_creation": ", link: ",
       "explore_ergo_auction_house_link": "General content",
       "learn_about_nft_creation_link": "General content",
       "browse_nft_collections_link_ecosystem_nfts": "General content",
@@ -1927,10 +1910,7 @@
       "nft_discord_channels_link_https": "General content",
       "artist_community_link_community_artists": "General content",
       "collector_groups_link_community_collectors": "General content",
-      "ergomixer_description_non_custodial_transaction": ", link: ",
-      "stealth_addresses_description_enhanced_address": ", link: ",
       "educational_resources": "教育资源",
-      "privacy_best_practices_description_how": ", link: ",
       "learn_about_ergomixer_link_ecosystem": "General content",
       "understand_sigma_protocols_link_technology": "General content",
       "read_privacy_best_practices_link_learn_privacy": "General content",
@@ -1938,11 +1918,6 @@
       "privacy_discord_channels_link_https": "General content",
       "ergomixer_community_link_ecosystem_projects": "General content",
       "technical_discussions_link_https_ergoforum_org": "General content",
-      "faq_for_beginners_description_common": ", link: ",
-      "quick_introduction_description_ergo_overview": ", link: ",
-      "ergonaut_handbook_description_comprehensive_guide": ", link: ",
-      "newcomer_channels_description_beginner_friendly": ", link: ",
-      "learning_groups_description_study_groups": ", link: ",
       "read_the_faq_for_beginners_link_start_faq": "General content",
       "take_the_quick_introduction_link": "General content",
       "join_newcomer_community_link_community": "General content",
@@ -2033,9 +2008,6 @@
     "price_volume_analytics": "价格，数量，分析",
     "take_the_quiz": "参加测验",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "General content",
-      "comparison_item_https_ergoblockchain_org": "General content",
-      "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "eUTXO 与帐户模型、PoW vs PoS、隐私和费用比较：Ergo, Etherum, Bitcoin, Cardano。",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions).",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients.",
@@ -2065,12 +2037,6 @@
       "open_source_development": "开源开发"
     },
     "start_with_ergo_learning_paths": "从Ergo开始 - 学习路径",
-    "howtosupply_name_computer_or_smartphone": "HowToSupply'，名字：“计算机或智能手机",
-    "howtosupply_name_internet_connection": "HowToSupply'，名字：“Internet 连接",
-    "howtotool_name_web_browser": "ToToToToToTool'，名称：“Web 浏览器",
-    "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "从Ergo Blockchain 开始您的旅程",
     "personalized_learning_paths_for_beginners": "初学者、开发者、矿工和投资者的个性化学习路径。找出您进入埃尔戈的道路。",
     "start_your_ergo_journey_choose_your_path": "开始你的Ergo Journey - 选择你的路径",
@@ -2378,20 +2344,20 @@
       "developerFirst": {
         "title": "开发者-第一哲学",
         "quote": "其他平台迫使您围绕自己的局限性开展工作。Ergo围绕着自己开展工作。",
-        "points": {
-          "0": "可预测的执行费用",
-          "1": "按设计划分的安全",
-          "2": "没有重新进入的攻击"
-        }
+        "points": [
+          "Predictable execution costs",
+          "Security by design",
+          "No protocol-level reentrancy by construction (application bugs still possible)"
+        ]
       },
       "productivity": {
         "title": "为生产率生成",
         "description": "体验基于开发者生产力平台的差异。",
-        "points": {
-          "0": "声明式 ErgoScript",
-          "1": "支持形式化验证",
-          "2": "丰富的内置加密原语"
-        }
+        "points": [
+          "Declarative ErgoScript",
+          "Formal verification support",
+          "Rich cryptographic primitives"
+        ]
       },
       "testimonial": {
         "quote": "建立在Ergo上的感觉就像拥有超强力。eUTXO模型消除了整个类别的bugs，而ErgoScript 使复杂的加密操作感到很自然。",
@@ -2421,21 +2387,21 @@
       "titleHighlight": "当前平台",
       "nightmares": {
         "title": "开发夜晚会",
-        "points": {
-          "0": "无法预测的气体成本",
-          "1": "退场攻击流失协议",
-          "2": "复杂的语言创建安全漏洞。",
-          "3": "VC控制平台更改规则"
-        }
+        "points": [
+          "Unpredictable gas costs bankrupting users",
+          "Reentrancy attacks draining protocols",
+          "Complex languages creating security holes",
+          "VC-controlled platforms changing rules"
+        ]
       },
       "solution": {
         "title": "Ergo 解决办法",
-        "points": {
-          "0": "可预测的收费；可审计的执行限制",
-          "1": "eUTXO 模型中的安全设计",
-          "2": "ErgoScript: 声明、 明确的状态转换",
-          "3": "社区所有、公平的发射原则"
-        }
+        "points": [
+          "Predictable fees; auditable execution bounds",
+          "Security-by-design in the eUTXO model",
+          "ErgoScript: declarative, explicit state transitions",
+          "Community-owned, fair launch principles"
+        ]
       }
     },
     "differentiators": {
@@ -2475,20 +2441,20 @@
     },
     "faq": {
       "title": "常见问题",
-      "questions": {
-        "0": {
-          "q": "eUTXO 如何降低重新输入风险？",
-          "a": "交易消耗指定的 UTXOs ，不能重新输入；重新输入后的共享状态模式不存在。"
+      "questions": [
+        {
+          "q": "How does eUTXO reduce reentrancy risk?",
+          "a": "Transactions consume specified UTXOs and cannot be re-entered; the shared-state pattern behind reentrancy is absent."
         },
-        "1": {
-          "q": "埃尔戈是否可以预测费用？",
-          "a": "脚本成本是有限制的，费用是可以预测的；没有天然气价格拍卖(最终费用取决于记忆库的条件)。"
+        {
+          "q": "Are fees predictable on Ergo?",
+          "a": "Script cost is bounded and fees are predictable; there are no gas price auctions (final fees depend on mempool conditions)."
         },
-        "2": {
-          "q": "Ergo 有轻型客户端吗？",
-          "a": "是的。NIPPoWs 启用简洁的验证来为可信的最小化的轻型客户端服务。"
+        {
+          "q": "Does Ergo have light clients?",
+          "a": "Yes. NIPoPoWs enable succinct proofs for trust-minimized light clients."
         }
-      }
+      ]
     },
     "whatsNext": {
       "title": "是什么",
@@ -3326,256 +3292,256 @@
       "title": "在Ergo查找您的路径",
       "subtitle": "基于您的兴趣的个性化建议",
       "description": "探索你如何能够最好地为Ergo生态系统做出贡献并从中获益。",
-      "questions": {
-        "0": {
-          "question": "什么主要吸引你到 blockchain 技术和 Ergo ？",
-          "options": {
-            "0": {
-              "text": "投资潜力和财政机会",
-              "profiles": {
-                "0": "投资",
-                "1": "defi"
-              }
+      "questions": [
+        {
+          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "options": [
+            {
+              "text": "Investment potential and financial opportunities",
+              "profiles": [
+                "investor",
+                "defi"
+              ]
             },
-            "1": {
-              "text": "开发应用和促进新技术",
-              "profiles": {
-                "0": "开发者"
-              }
+            {
+              "text": "Building applications and contributing to new technologies",
+              "profiles": [
+                "developer"
+              ]
             },
-            "2": {
-              "text": "支持网络安全并通过硬件获得奖励",
-              "profiles": {
-                "0": "矿工"
-              }
+            {
+              "text": "Supporting network security and earning rewards through hardware",
+              "profiles": [
+                "miner"
+              ]
             },
-            "3": {
-              "text": "收集、创建或交易独特的数字物品和艺术品",
-              "profiles": {
-                "0": "nft"
-              }
+            {
+              "text": "Collecting, creating, or trading unique digital items and art",
+              "profiles": [
+                "nft"
+              ]
             },
-            "4": {
-              "text": "使用新的金融工具进行借贷、借贷或交易",
-              "profiles": {
-                "0": "defi"
-              }
+            {
+              "text": "Using new financial tools for borrowing, lending, or trading",
+              "profiles": [
+                "defi"
+              ]
             },
-            "5": {
-              "text": "加强我的财务隐私和匿名性",
-              "profiles": {
-                "0": "隐私"
-              }
+            {
+              "text": "Enhancing my financial privacy and anonymity",
+              "profiles": [
+                "privacy"
+              ]
             },
-            "6": {
-              "text": "我是新的，只想先学习基础知识！",
-              "profiles": {
-                "0": "初学者"
-              }
+            {
+              "text": "I'm new and just want to learn the basics first!",
+              "profiles": [
+                "beginner"
+              ]
             }
-          }
+          ]
         },
-        "1": {
-          "question": "你将如何描述你的技术舒适程度？",
-          "options": {
-            "0": {
-              "text": "非常舒适；我可以编程或管理复杂的系统",
-              "profiles": {
-                "0": "开发者"
-              }
+        {
+          "question": "How would you describe your technical comfort level?",
+          "options": [
+            {
+              "text": "Very comfortable; I can code or manage complex systems",
+              "profiles": [
+                "developer"
+              ]
             },
-            "1": {
-              "text": "适度舒适；我可以学习新软件并跟随指南",
-              "profiles": {
-                "0": "矿工",
-                "1": "defi"
-              }
+            {
+              "text": "Moderately comfortable; I can learn new software and follow guides",
+              "profiles": [
+                "miner",
+                "defi"
+              ]
             },
-            "2": {
-              "text": "技术性不强；我喜欢简单和方便用户的应用程序",
-              "profiles": {
-                "0": "初学者",
-                "1": "投资"
-              }
+            {
+              "text": "Not very technical; I prefer simple and user-friendly applications",
+              "profiles": [
+                "beginner",
+                "investor"
+              ]
             }
-          }
+          ]
         },
-        "2": {
-          "question": "你对埃尔戈最感兴趣的事情是什么？",
-          "options": {
-            "0": {
-              "text": "增加我的资产并探索金融工具",
-              "profiles": {
-                "0": "投资",
-                "1": "defi"
-              }
+        {
+          "question": "What are you most interested in doing with Ergo?",
+          "options": [
+            {
+              "text": "Growing my assets and exploring financial instruments",
+              "profiles": [
+                "investor",
+                "defi"
+              ]
             },
-            "1": {
-              "text": "创建新工具、dApp或智能合同",
-              "profiles": {
-                "0": "开发者"
-              }
+            {
+              "text": "Creating new tools, dApps, or smart contracts",
+              "profiles": [
+                "developer"
+              ]
             },
-            "2": {
-              "text": "确保网络安全和赚取ERG",
-              "profiles": {
-                "0": "矿工"
-              }
+            {
+              "text": "Securing the network and earning ERG",
+              "profiles": [
+                "miner"
+              ]
             },
-            "3": {
-              "text": "探索数字艺术和收藏品",
-              "profiles": {
-                "0": "nft"
-              }
+            {
+              "text": "Exploring digital art and collectibles",
+              "profiles": [
+                "nft"
+              ]
             },
-            "4": {
-              "text": "深入了解技术及其原则",
-              "profiles": {
-                "0": "初学者"
-              }
+            {
+              "text": "Deeply understanding the technology and its principles",
+              "profiles": [
+                "beginner"
+              ]
             },
-            "5": {
-              "text": "保护我的财务隐私",
-              "profiles": {
-                "0": "隐私"
-              }
+            {
+              "text": "Protecting my financial privacy",
+              "profiles": [
+                "privacy"
+              ]
             }
-          }
+          ]
         },
-        "3": {
-          "question": "新的金融工具有什么风险容忍度？",
-          "options": {
-            "0": {
-              "text": "寻找既定的、风险较低的参与方式",
-              "profiles": {
-                "0": "投资"
-              }
+        {
+          "question": "What's your risk tolerance when it comes to new financial tools?",
+          "options": [
+            {
+              "text": "Looking for established, lower-risk ways to engage",
+              "profiles": [
+                "investor"
+              ]
             },
-            "1": {
-              "text": "在了解风险的同时探索DeFi机会",
-              "profiles": {
-                "0": "defi"
-              }
+            {
+              "text": "Exploring DeFi opportunities while understanding the risks",
+              "profiles": [
+                "defi"
+              ]
             },
-            "2": {
-              "text": "对切割边缘感兴趣，实验性金融工具",
-              "profiles": {
-                "0": "开发者",
-                "1": "隐私"
-              }
+            {
+              "text": "Interested in cutting-edge, experimental financial tools",
+              "profiles": [
+                "developer",
+                "privacy"
+              ]
             },
-            "3": {
-              "text": "对财务方面不特别感兴趣。",
-              "profiles": {
-                "0": "初学者",
-                "1": "矿工",
-                "2": "nft"
-              }
+            {
+              "text": "Not particularly interested in financial aspects",
+              "profiles": [
+                "beginner",
+                "miner",
+                "nft"
+              ]
             }
-          }
+          ]
         },
-        "4": {
-          "question": "你想如何为你关心的项目做贡献？",
-          "options": {
-            "0": {
-              "text": "写入代码和构建软件",
-              "profiles": {
-                "0": "开发者"
-              }
+        {
+          "question": "How do you prefer to contribute to projects you care about?",
+          "options": [
+            {
+              "text": "Writing code and building software",
+              "profiles": [
+                "developer"
+              ]
             },
-            "1": {
-              "text": "创建教育内容、艺术或营销材料",
-              "profiles": {
-                "0": "nft",
-                "1": "初学者"
-              }
+            {
+              "text": "Creating educational content, art, or marketing materials",
+              "profiles": [
+                "nft",
+                "beginner"
+              ]
             },
-            "2": {
-              "text": "帮助社区中的其他人并回答问题",
-              "profiles": {
-                "0": "初学者"
-              }
+            {
+              "text": "Helping others in the community and answering questions",
+              "profiles": [
+                "beginner"
+              ]
             },
-            "3": {
-              "text": "参与治理讨论和建议",
-              "profiles": {
-                "0": "投资",
-                "1": "隐私"
-              }
+            {
+              "text": "Participating in governance discussions and proposals",
+              "profiles": [
+                "investor",
+                "privacy"
+              ]
             },
-            "4": {
-              "text": "支持网络基础设施",
-              "profiles": {
-                "0": "矿工"
-              }
+            {
+              "text": "Supporting network infrastructure",
+              "profiles": [
+                "miner"
+              ]
             }
-          }
+          ]
         }
-      }
+      ]
     },
     "comparison": {
       "title": "平台比较",
       "subtitle": "如何将Ergo 与其他区块链比较",
       "description": "理解Ergo的独特优势",
-      "keyDifferentiators": {
-        "0": {
-          "title": "可预测和可审计的安全",
-          "ergo": "没有已知的协议级别重置类别；可预见的执行费用",
-          "others": "在账户模型中常见的回购模式和天然气价格拍卖方式"
+      "keyDifferentiators": [
+        {
+          "title": "Predictable & Auditable Security",
+          "ergo": "No known protocol-level reentrancy class; predictable execution costs",
+          "others": "Reentrancy patterns and gas price auctions common in account models"
         },
-        "1": {
-          "title": "原生隐私",
-          "ergo": "临界值/多sig 和隐私的西格协议；可以进行环状构造。",
-          "others": "通常需要外部附加组件或信任的服务"
+        {
+          "title": "Native Privacy",
+          "ergo": "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
+          "others": "Often requires external add-ons or trusted services"
         },
-        "2": {
-          "title": "开发者体验",
-          "ergo": "带有eUTXO推理的 Declarative ErgoScript",
-          "others": "易变的全球状况；复杂的重返安全模式"
+        {
+          "title": "Developer Experience",
+          "ergo": "Declarative ErgoScript with eUTXO reasoning",
+          "others": "Mutable global state; complex reentrancy-safe patterns"
         },
-        "3": {
-          "title": "公平与分权化",
-          "ergo": "Fair PoW launch, ASIC-endered (GPU-friendly)",
-          "others": "ICO 配置或验证门"
+        {
+          "title": "Fair & Decentralized",
+          "ergo": "Fair PoW launch, ASIC-resistant (GPU-friendly)",
+          "others": "ICO allocations or validator gating"
         }
-      }
+      ]
     },
     "community": {
       "title": "加入社区",
       "subtitle": "与世界各地的Ergo爱好者联系",
       "description": "成为不断增长的埃尔戈生态系统的一部分",
-      "contributions": {
-        "0": {
-          "title": "贸易和发展会议",
-          "description": "构建dApp、工具和基础设施",
-          "tasks": "智能合同、前端应用、工具和库"
+      "contributions": [
+        {
+          "title": "Development",
+          "description": "Build dApps, tools, and infrastructure",
+          "tasks": "Smart Contracts, Frontend Apps, Tools & Libraries"
         },
-        "1": {
-          "title": "内容创建",
-          "description": "文章、视频、教程、文档",
-          "tasks": "技术写作，视频内容，教程"
+        {
+          "title": "Content Creation",
+          "description": "Articles, videos, tutorials, documentation",
+          "tasks": "Technical Writing, Video Content, Tutorials"
         },
-        "2": {
-          "title": "社区支持",
-          "description": "帮助新移民并回答问题",
-          "tasks": "用户支持、 在登入、 指导"
+        {
+          "title": "Community Support",
+          "description": "Help newcomers and answer questions",
+          "tasks": "User Support, Onboarding, Mentoring"
         },
-        "3": {
-          "title": "治理",
-          "description": "参与协议决定",
-          "tasks": "EIP 审查、投票、提议"
+        {
+          "title": "Governance",
+          "description": "Participate in protocol decisions",
+          "tasks": "EIP Reviews, Voting, Proposals"
         },
-        "4": {
-          "title": "B. 基础设施",
-          "description": "运行节点，采矿，网络支持",
-          "tasks": "节点操作，采矿，网络安全"
+        {
+          "title": "Infrastructure",
+          "description": "Run nodes, mining, network support",
+          "tasks": "Node Operation, Mining, Network Security"
         },
-        "5": {
-          "title": "研究",
-          "description": "B. 礼宾研究和改进",
-          "tasks": "学术论文，《协议分析》，Innovation"
+        {
+          "title": "Research",
+          "description": "Protocol research and improvements",
+          "tasks": "Academic Papers, Protocol Analysis, Innovation"
         }
-      }
+      ]
     }
   },
   "introduction": {

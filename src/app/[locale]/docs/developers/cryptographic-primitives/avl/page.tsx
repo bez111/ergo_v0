@@ -56,7 +56,7 @@ export default function AVLTreesPage() {
             Efficiency and Proof Size of AVL Trees
           </h2>
           <p className="text-gray-300 mb-6">
-            The compact proof sizes of AVL trees significantly contribute to their efficiency. AVL trees in Ergo provide succinct and effective authentication proofs, ensuring streamlined storage and verification processes within the <a href="/docs/protocol-overview" className="text-blue-400 hover:text-blue-300 underline">Ergo blockchain</a>.
+            The compact proof sizes of AVL trees significantly contribute to their efficiency. AVL trees in Ergo provide succinct and effective authentication proofs, ensuring streamlined storage and verification processes within the <a href="/docs" className="text-blue-400 hover:text-blue-300 underline">Ergo blockchain</a>.
           </p>
 
           <div className="space-y-6">

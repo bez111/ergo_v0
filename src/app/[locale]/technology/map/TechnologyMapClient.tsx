@@ -493,22 +493,21 @@ export default function TechnologyMapClient() {
     : technologies.filter(tech => tech.category === activeCategory)
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
         duration: 0.6,
-        staggerChildren: 0.1
+        staggerChildren: 0
       }
     }
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 1, y: 0 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
     }
   }
 
@@ -522,7 +521,7 @@ export default function TechnologyMapClient() {
           className="relative z-10 pb-24"
         >
         {/* Hero Section */}
-        <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
+        <motion.section initial={false} className="pt-28 pb-10 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -626,7 +625,7 @@ export default function TechnologyMapClient() {
                   <motion.div
                     key={tech.id}
                     layout
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={false}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     whileHover={{ scale: 1.02 }}

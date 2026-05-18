@@ -27,7 +27,7 @@ const MonacoEditor = dynamic(() => import("@monaco-editor/react").then((mod) => 
   loading: () => (
     <div className="flex h-[560px] min-h-[420px] items-center justify-center bg-black/40 text-sm text-neutral-400">
       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-      Loading editor
+      Preparing editor
     </div>
   ),
 })
@@ -609,12 +609,12 @@ export function ErgoScriptPlaygroundClient() {
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-neutral-500">Compiler</span>
-                    <span className="text-right font-mono text-xs text-neutral-300">{result?.compiler ?? "loading"}</span>
+                    <span className="text-right font-mono text-xs text-neutral-300">{result?.compiler ?? "pending"}</span>
                   </div>
                   <div className="flex items-center justify-between gap-3">
                     <span className="text-neutral-500">sigma-rust</span>
                     <span className={cn("text-right font-mono text-xs", hasCleanSigmaPass ? "text-emerald-300" : "text-amber-200")}>
-                      {result?.sigmaError ? "WASM parse warning" : result ? "WASM verified" : "loading"}
+                      {result?.sigmaError ? "WASM parse warning" : result ? "WASM verified" : "pending"}
                     </span>
                   </div>
                 </div>
@@ -646,13 +646,30 @@ export function ErgoScriptPlaygroundClient() {
               </pre>
             </div>
 
-            {result ? (
-              <div className="rounded-lg border border-white/10 bg-black/50 px-4">
-                <FieldRow label="P2S" value={result.address} />
-                <FieldRow label="ErgoTree" value={result.ergoTreeHex} />
-                <FieldRow label="Compiled" value={result.compiledAt} mono={false} />
-              </div>
-            ) : null}
+            <div className="min-h-[159px] rounded-lg border border-white/10 bg-black/50 px-4">
+              {result ? (
+                <>
+                  <FieldRow label="P2S" value={result.address} />
+                  <FieldRow label="ErgoTree" value={result.ergoTreeHex} />
+                  <FieldRow label="Compiled" value={result.compiledAt} mono={false} />
+                </>
+              ) : (
+                <div className="grid min-h-[159px] content-center gap-2 py-3 text-sm text-neutral-500">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs uppercase tracking-[0.18em]">P2S</span>
+                    <span className="font-mono text-xs">pending compile</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs uppercase tracking-[0.18em]">ErgoTree</span>
+                    <span className="font-mono text-xs">pending compile</span>
+                  </div>
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs uppercase tracking-[0.18em]">Compiled</span>
+                    <span className="font-mono text-xs">pending compile</span>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <div className="rounded-lg border border-white/10 bg-black/50">
               <div className="flex h-11 items-center justify-between border-b border-white/10 px-4">
@@ -665,6 +682,7 @@ export function ErgoScriptPlaygroundClient() {
                 value={constantsJson}
                 onChange={(event) => setConstantsJson(event.target.value)}
                 spellCheck={false}
+                suppressHydrationWarning
                 className="h-32 w-full resize-none bg-transparent p-4 font-mono text-xs leading-relaxed text-neutral-200 outline-none placeholder:text-neutral-700"
                 placeholder={`{\n  "deadline": "04d00f"\n}`}
               />

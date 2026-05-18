@@ -145,6 +145,7 @@ export function UniversalInfographicClient({ infographic }: UniversalInfographic
       year: 'numeric',
       month: 'short',
       day: 'numeric',
+      timeZone: 'UTC',
     });
   };
 
@@ -651,4 +652,3 @@ export function UniversalInfographicClient({ infographic }: UniversalInfographic
 }
 
 export default UniversalInfographicClient;
-

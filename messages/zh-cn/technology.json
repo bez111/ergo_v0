@@ -35,27 +35,27 @@
       "useCasesTab": {
         "defi": {
           "title": "DeFi & 融资",
-          "items": {
-            "0": "非保管的 DeFi 协议",
-            "1": "自定义多签名钱包",
-            "2": "稳定和原生令牌",
-            "3": "分散化果园网络"
-          }
+          "items": [
+            "Non-custodial DeFi protocols",
+            "Custom multi-signature wallets",
+            "Stablecoins and native tokens",
+            "Decentralized oracle networks"
+          ]
         },
         "privacy": {
           "title": "隐私与治理",
-          "items": {
-            "0": "分散化混合器和隐私工具(检查法律地位)",
-            "1": "DAO 与治理系统"
-          }
+          "items": [
+            "Decentralized mixers and privacy tools (check legal status)",
+            "DAOs & governance systems"
+          ]
         },
         "infrastructure": {
           "title": "基础设施和应用",
-          "items": {
-            "0": "NFT 市场与可组合 dApps",
-            "1": "可缩放的小额付款和即时解决",
-            "2": "跨链桥和轻型钱包"
-          }
+          "items": [
+            "NFT marketplaces & composable dApps",
+            "Scalable micropayments and instant settlement",
+            "Cross-chain bridges & light wallets"
+          ]
         }
       },
       "architectureTab": {
@@ -64,141 +64,141 @@
         "description": "Ergo的结构提供了权力下放、可复合性和内置的隐私――没有权衡。",
         "layer1": {
           "title": "图层 1",
-          "items": {
-            "0": {
+          "items": [
+            {
               "label": "eUTXO & ErgoScript",
-              "icon": "图层"
+              "icon": "Layers"
             },
-            "1": {
+            {
               "label": "Autolykos PoW",
-              "icon": "科普文"
+              "icon": "Cpu"
             },
-            "2": {
-              "label": "存储出租器",
-              "icon": "数据库"
+            {
+              "label": "Storage Rent",
+              "icon": "Database"
             },
-            "3": {
+            {
               "label": "Sigma Protocols",
-              "icon": "锁定"
+              "icon": "Lock"
             },
-            "4": {
-              "label": "原生令牌和 NFT",
-              "icon": "框"
+            {
+              "label": "Native Tokens & NFTs",
+              "icon": "Box"
             }
-          }
+          ]
         },
         "layer2": {
           "title": "图层 2 / 扩展",
-          "items": {
-            "0": {
-              "label": "子块",
-              "icon": "火箭座"
+          "items": [
+            {
+              "label": "Subblocks",
+              "icon": "Rocket"
             },
-            "1": {
-              "label": "NIPPoWs",
-              "icon": "无限的"
+            {
+              "label": "NIPoPoWs",
+              "icon": "Infinity"
             },
-            "2": {
-              "label": "Oracle 题库",
-              "icon": "眼镜"
+            {
+              "label": "Oracle Pools",
+              "icon": "Eye"
             },
-            "3": {
+            {
               "label": "Velvet Forks",
-              "icon": "设置"
+              "icon": "Settings"
             },
-            "4": {
-              "label": "适应性排放与治理",
-              "icon": "圆元签名"
+            {
+              "label": "Adaptive Emission & Governance",
+              "icon": "CircleDollarSign"
             }
-          }
+          ]
         }
       },
-      "resources": {
-        "0": {
+      "resources": [
+        {
           "title": "Ergo Docs",
           "href": "/docs",
-          "icon": "书"
+          "icon": "Book"
         },
-        "1": {
-          "title": "白纸",
+        {
+          "title": "Whitepaper",
           "href": "https://ergoplatform.org/docs/whitepaper.pdf",
-          "icon": "外部链接"
+          "icon": "ExternalLink"
         },
-        "2": {
+        {
           "title": "GitHub",
           "href": "https://github.com/ergoplatform",
-          "icon": "外部链接"
+          "icon": "ExternalLink"
         },
-        "3": {
-          "title": "开发教程",
-          "href": "/docs/开发者/教程",
-          "icon": "右箭头"
+        {
+          "title": "Dev Tutorials",
+          "href": "/docs/developers/tutorials",
+          "icon": "ArrowRight"
         }
-      },
-      "faqs": {
-        "0": {
-          "id": "是什么？ eutxo",
-          "question": "是什么使Ergo的 eUTXO 模型优于基于帐户的区块链？",
-          "answer": "eUTXO 将区块链状态划分为独立的盒子（输出），支持并行智能合约而无需全局状态，降低重入风险。dApp 变得可组合：可以用简单输出构建复杂逻辑。",
+      ],
+      "faqs": [
+        {
+          "id": "what-is-eutxo",
+          "question": "What makes Ergo's eUTXO model superior to account-based blockchains?",
+          "answer": "eUTXO splits the blockchain state into independent \"boxes\" (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs.",
           "tag": "eUTXO",
           "link": "/technology/eutxo-model"
         },
-        "1": {
-          "id": "What is-ergoscript",
-          "question": "ErgoScript 如何防止智能合同的脆弱性？",
-          "answer": "ErgoScript 是可编程资金的合约语言，具有可正式验证的代码、严格类型系统和内置加密原语。合约可审计且可预测——通过设计避免全局可变状态和典型的重入模式。",
+        {
+          "id": "what-is-ergoscript",
+          "question": "How does ErgoScript prevent smart contract vulnerabilities?",
+          "answer": "It's Ergo's contract language for \"money with logic\": formally verifiable code, strict typing, and built-in cryptographic primitives. Contracts are auditable and predictable - design avoids global mutable state and typical reentrancy patterns.",
           "tag": "ErgoScript",
           "link": "/technology/ergoscript"
         },
-        "2": {
+        {
           "id": "autolykos-mining",
-          "question": "为什么Autolykos被认为是分散的和节能的？",
-          "answer": "难度和耐记忆力——对普通矿工的公平。奖励有利于单矿开采和减少对集水池的依赖，保持网络安全并适度使用能源。",
+          "question": "Why is Autolykos considered decentralized and energy-efficient?",
+          "answer": "Memory-hard and ASIC-resistant - fair for ordinary miners. Rewards favor solo mining and reduce pool dependence, keeping the network secure with moderate energy use.",
           "tag": "PoW",
           "link": "/technology/secure-pow"
         },
-        "3": {
-          "id": "存储空间",
-          "question": "如何通过存储租赁解决区块链可持续性？",
-          "answer": "存储租金是一种状态回收机制，闲置硬币开始支付少量费用。这抑制了区块链无限膨胀，并确保矿工在排放结束后仍能获得持续收入。",
-          "tag": "存储",
+        {
+          "id": "storage-rent",
+          "question": "How does Storage Rent solve blockchain sustainability?",
+          "answer": "Unspent coins after ~4 years start paying \"rent\" - this is state recycling: prevents unlimited blockchain growth and ensures miners earn revenue even after emissions end.",
+          "tag": "Storage",
           "link": "/technology/storage-rent"
         },
-        "4": {
+        {
           "id": "sigma-protocols",
-          "question": "Ergo 提供什么隐私功能？",
-          "answer": "Sigma 协议提供了本机零知识证明，环形签名，多重签名/阈值计划，以及没有外部黑客的私人付款。这简化了构建保密dApp。",
-          "tag": "隐私",
-          "link": "/technology/privacy功能"
+          "question": "What privacy features does Ergo offer natively?",
+          "answer": "Sigma protocols provide native zero-knowledge proofs, ring signatures, multisig/threshold schemes, and private payments without external hacks. This simplifies building confidential dApps.",
+          "tag": "Privacy",
+          "link": "/technology/privacy-features"
         },
-        "5": {
+        {
           "id": "nipopows",
-          "question": "NIPPoWs 如何启用即时移动钱包同步？",
-          "answer": "NIPoPoWs 生成微型区块链证明，允许轻型客户端、即时移动同步，以及无需完整节点的无信任跨链桥。",
-          "tag": "轻型客户端",
+          "question": "How do NIPoPoWs enable instant mobile wallet sync?",
+          "answer": "\"Tiny\" blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes.",
+          "tag": "Light clients",
           "link": "/technology/nipopows"
         },
-        "6": {
-          "id": "果园池子",
-          "question": "为什么埃尔戈的Oracle 池比Chainlink更安全？",
-          "answer": "无中央运营商即可编成的协议数据源――没有单一的贿赂或故障点，无法插入任何合同。",
+        {
+          "id": "oracle-pools",
+          "question": "Why are Ergo's Oracle Pools more secure than Chainlink?",
+          "answer": "Protocol-native, composable data feeds without a central operator - no single point of bribery or failure. Can be plugged into any contract.",
           "tag": "Oracles",
-          "link": "/技术/oracle-pools"
+          "link": "/technology/oracle-pools"
         },
-        "7": {
-          "id": "子块",
-          "question": "子块如何实现次级交易确认？",
-          "answer": "子块将区块划分为更快的子块，无需可信排序器即可加速支付和 dApp 确认。这提供了更快的第一层感知扩展。",
-          "tag": "缩放比例"
+        {
+          "id": "subblocks",
+          "question": "How do Subblocks provide faster provisional transaction feedback?",
+          "answer": "Splitting blocks into input blocks and ordering blocks speeds up payment and dApp feedback without trusted sequencers. Layer-1 security still follows ordering-block consensus and the Matrix implementation is in devnet/test rollout.",
+          "tag": "Scaling"
         },
-        "8": {
-          "id": "令牌-nfts",
-          "question": "如何在没有智能合约的情况下在Ergo创建令牌和 NFT？",
-          "answer": "是 - 发行本机在协议层，在一次交易中。真正的本地资产可以即时与 dApp。",
-          "tag": "令牌和 NFTs",
-          "link": "/technology/本地代币"
+        {
+          "id": "tokens-nfts",
+          "question": "How to create tokens and NFTs on Ergo without smart contracts?",
+          "answer": "Yes - issuance is native at the protocol layer, in a single transaction. True native assets are instantly composable with dApps.",
+          "tag": "Tokens & NFTs",
+          "link": "/technology/native-tokens"
         }
-      },
+      ],
       "faqTitle": "常见问题",
       "whatsNext": {
         "title": "下一步是什么？",
@@ -381,53 +381,53 @@
           "security": {
             "title": "优先安全",
             "description": "内置保护免受共同智能合同脆弱性",
-            "benefits": {
-              "0": "无法重新入门攻击",
-              "1": "正式核查支助",
-              "2": "类型安全担保"
-            }
+            "benefits": [
+              "No protocol-level reentrancy by construction (application bugs still possible)",
+              "Formal verification support",
+              "Type safety guarantees"
+            ]
           },
           "expressiveness": {
             "title": "高度表达式",
             "description": "复杂金融合同的丰富语言特点",
-            "benefits": {
-              "0": "Sigma 协议集成",
-              "1": "高级原始加密",
-              "2": "多阶段协议支持"
-            }
+            "benefits": [
+              "Sigma protocols integration",
+              "Advanced cryptographic primitives",
+              "Multi-stage protocols support"
+            ]
           },
           "efficiency": {
             "title": "高效执行",
             "description": "优化业绩和成本效益",
-            "benefits": {
-              "0": "可预测的执行费用",
-              "1": "并行交易处理"
-            }
+            "benefits": [
+              "Predictable execution costs",
+              "Parallel transaction processing"
+            ]
           },
           "cryptography": {
             "title": "本地加密",
             "description": "内置支持高级加密操作",
-            "benefits": {
-              "0": "零知识证明",
-              "1": "环签名",
-              "2": "多签名"
-            }
+            "benefits": [
+              "Zero-knowledge proofs",
+              "Ring signatures",
+              "Multi-signatures"
+            ]
           },
           "composability": {
             "title": "合成设计",
             "description": "从简单组件生成复杂的协议",
-            "benefits": {
-              "0": "模块化合同结构",
-              "1": "可重复使用的代码模式"
-            }
+            "benefits": [
+              "Modular contract architecture",
+              "Reusable code patterns"
+            ]
           },
           "verification": {
             "title": "正式验证",
             "description": "合同正确性的数学证据",
-            "benefits": {
-              "0": "编译时间验证",
-              "1": "运行时安全检查"
-            }
+            "benefits": [
+              "Compile-time verification",
+              "Runtime safety checks"
+            ]
           }
         },
         "examples": {
@@ -606,60 +606,60 @@
         },
         "quickStart": {
           "title": "快速开始",
-          "steps": {
-            "0": {
+          "steps": [
+            {
               "number": "01",
-              "title": "探索实时库",
-              "description": "查看活动的口径池和价格源"
+              "title": "Explore Live Pools",
+              "description": "View active oracle pools and price feeds"
             },
-            "1": {
+            {
               "number": "02",
-              "title": "阅读文档",
-              "description": "学习如何整合Oracle数据"
+              "title": "Read Documentation",
+              "description": "Learn how to integrate oracle data"
             },
-            "2": {
+            {
               "number": "03",
-              "title": "加入网络",
-              "description": "连接到Oracle操作员"
+              "title": "Join Network",
+              "description": "Connect with oracle operators"
             }
-          }
+          ]
         },
         "featuresSection": {
           "title": "关键功能",
           "subtitle": "内置的步枪基础设施为任何应用程序提供可靠、分散的数据源"
         },
-        "features": {
-          "0": {
-            "title": "可靠的价格源",
-            "description": "以共识为基础的数据集合可确保准确的、抵御操纵的价格",
+        "features": [
+          {
+            "title": "Reliable Price Feeds",
+            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices",
             "icon": "TrendingUp"
           },
-          "1": {
-            "title": "通用兼容性",
-            "description": "任何智能合同都可以在没有特殊集成的情况下访问Oracle数据",
-            "icon": "环球座"
+          {
+            "title": "Universal Compatibility",
+            "description": "Any smart contract can access oracle data without special integrations",
+            "icon": "Globe"
           },
-          "2": {
-            "title": "完全分散化",
-            "description": "数据管道中没有中央当局或单一故障点",
-            "icon": "用户"
+          {
+            "title": "Fully Decentralized",
+            "description": "No central authority or single point of failure in the data pipeline",
+            "icon": "Users"
           },
-          "3": {
-            "title": "经济安全",
-            "description": "基于利益的奖励措施确保提供诚实的数据",
-            "icon": "盾牌"
+          {
+            "title": "Economic Security",
+            "description": "Stake-based incentives ensure honest data provision",
+            "icon": "Shield"
           },
-          "4": {
-            "title": "A. 共识机制",
-            "description": "超值检测平均值以获得可靠的数据",
-            "icon": "复选圆"
+          {
+            "title": "Consensus Mechanism",
+            "description": "Outlier detection and averaging for robust data quality",
+            "icon": "CheckCircle"
           },
-          "5": {
-            "title": "低延迟更新",
-            "description": "频繁更新确保Defi 应用程序的数据刷新",
-            "icon": "活动"
+          {
+            "title": "Low Latency Updates",
+            "description": "Frequent updates ensure data freshness for DeFi applications",
+            "icon": "Activity"
           }
-        },
+        ],
         "technicalSection": {
           "title": "技术细节",
           "subtitle": "深深潜入步枪池架构和协商一致机制"
@@ -669,24 +669,24 @@
           "pools": "实时库",
           "details": "二． 执行情况"
         },
-        "technicalDetails": {
-          "0": {
-            "title": "数据聚合",
-            "content": "步枪池使用一种强大的平均机制，通过移除25%的上下提交材料来过滤出外缘。 然后计算其余协商一致数值的平均值。"
+        "technicalDetails": [
+          {
+            "title": "Data Aggregation",
+            "content": "The oracle pool uses a robust averaging mechanism that filters out outliers by removing the top and bottom 25% of submissions, then calculating the average of remaining values for consensus."
           },
-          "1": {
-            "title": "更新触发器",
-            "content": "当价格偏差超过阈值时(例如0.5%)，自上次更新后的最长时间(例如1小时)或达到最低气旋提交时，将公布新的数据。"
+          {
+            "title": "Update Triggers",
+            "content": "New data is published when price deviation exceeds threshold (e.g., 0.5%), maximum time since last update (e.g., 1 hour), or minimum oracle submissions are reached."
           },
-          "2": {
-            "title": "经济安全",
-            "content": "Oracle操作者必须与抵押品相关，对恶意行为进行冲压，对诚实参与给予奖励，为可靠数据提供强有力的经济奖励。"
+          {
+            "title": "Economic Security",
+            "content": "Oracle operators must stake collateral, with slashing for malicious behavior and rewards for honest participation, creating strong economic incentives for reliable data."
           },
-          "3": {
-            "title": "攻击抗性",
-            "content": "对Sybil攻击的保护是通过刺绣过滤防止操纵，而分散化则防止对口径数据进行检查。"
+          {
+            "title": "Attack Resistance",
+            "content": "Sybil attack protection via staking, outlier filtering prevents manipulation, and decentralization prevents censorship of oracle data."
           }
-        },
+        ],
         "livePools": {
           "title": "实时Oracle 题库",
           "subtitle": "目前提供价格种子的口径池。",
@@ -700,101 +700,105 @@
           "statusLive": "实时模式",
           "statusTesting": "测试"
         },
-        "oraclePools": {
-          "0": {
+        "oraclePools": [
+          {
             "name": "ERG/USD",
-            "status": "实时模式",
-            "updateFreq": "5 分钟",
+            "status": "Live",
+            "providers": 14,
+            "updateFreq": "5 min",
             "deviation": "0.5%"
           },
-          "1": {
+          {
             "name": "ADA/USD",
-            "status": "实时模式",
-            "updateFreq": "5 分钟",
+            "status": "Live",
+            "providers": 12,
+            "updateFreq": "5 min",
             "deviation": "0.5%"
           },
-          "2": {
+          {
             "name": "BTC/USD",
-            "status": "实时模式",
-            "updateFreq": "10 分钟",
+            "status": "Live",
+            "providers": 10,
+            "updateFreq": "10 min",
             "deviation": "1%"
           },
-          "3": {
-            "name": "金/美元",
-            "status": "测试",
-            "updateFreq": "30 分钟",
+          {
+            "name": "Gold/USD",
+            "status": "Testing",
+            "providers": 8,
+            "updateFreq": "30 min",
             "deviation": "0.25%"
           }
-        },
+        ],
         "implementation": {
           "architecture": {
             "title": "Oracle 池架构",
             "description": "Oracle 池作为智能合约集合，管理数据汇总、共识和奖励分配。",
-            "items": {
-              "0": "拥有当前价格和元数据的池合同",
-              "1": "提交数据和利害关系担保品的Oracle合同",
-              "2": "筛选超出范围并计算共识的聚合逻辑：",
-              "3": "诚实参与者的奖励分配机制"
-            }
+            "items": [
+              "Pool contract that holds the current price and metadata",
+              "Oracle contracts that submit data and stake collateral",
+              "Aggregation logic that filters outliers and calculates consensus",
+              "Reward distribution mechanism for honest participants"
+            ]
           },
           "integration": {
             "title": "集成指南",
             "description": "任何Ergo 智能合同都可以通过访问Oracle 池箱读取Oracle数据。",
-            "items": {
-              "0": "当前价格",
-              "1": "上次更新的时间戳",
-              "2": "贡献神枪数",
-              "3": "置信区间和偏差度量表"
-            }
+            "items": [
+              "Current price value",
+              "Timestamp of last update",
+              "Number of contributing oracles",
+              "Confidence interval and deviation metrics"
+            ]
           }
         },
         "useCasesSection": {
           "title": "使用案例",
           "subtitle": "实时应用程序，使用 Ergo oracle 池获取可靠的价格数据"
         },
-        "useCases": {
-          "0": {
+        "useCases": [
+          {
             "title": "SigmaUSD Stablecoin",
-            "description": "使用ERG/美元价格进料进行抵押计算的算法马铃薯量",
-            "icon": "美元签名"
+            "description": "Algorithmic stablecoin using ERG/USD price feed for collateral calculations",
+            "icon": "DollarSign"
           },
-          "1": {
-            "title": "光谱深化",
-            "description": "分散化的交易，使用限定订单和清算的价格",
+          {
+            "title": "Spectrum DEX",
+            "description": "Decentralized exchange using price feeds for limit orders and liquidations",
             "icon": "BarChart3"
           },
-          "2": {
+          {
             "title": "Lending Protocols",
-            "description": "以果园价格作为清算门槛的抵押贷款",
-            "icon": "盾牌"
+            "description": "Collateralized lending using oracle prices for liquidation thresholds",
+            "icon": "Shield"
           }
-        },
+        ],
         "faqSection": {
           "title": "常见问题",
           "subtitle": "关于口径池及其实施的常见问题"
         },
-        "faqs": {
-          "0": {
-            "question": "Oracle 池如何确保数据的准确性？",
-            "answer": "Oracle 资源库使用一种协商一致的机制，将多个独立提供商的数据汇总起来，移除出贷人，并公布中值。 这就防止了操纵，并确保可靠的价格原料。"
+        "faqs": [
+          {
+            "question": "How do Oracle Pools ensure data accuracy?",
+            "answer": "Oracle Pools use a consensus mechanism that aggregates data from multiple independent providers, removes outliers, and publishes the median value. This prevents manipulation and ensures reliable price feeds."
           },
-          "1": {
-            "question": "如果一个口径提供了虚假数据，会发生什么情况？",
-            "answer": "Oracle 操作者涉及到可因恶意行为而被冲破的抵押品。 协商一致机制还排除了外界，使得个别坏行为者很难操纵最终价格。"
+          {
+            "question": "What happens if an oracle provides false data?",
+            "answer": "Oracle operators stake collateral that can be slashed for malicious behavior. The consensus mechanism also filters out outliers, making it difficult for individual bad actors to manipulate the final price."
           },
-          "2": {
-            "question": "Oracle 价格多长时间更新？",
-            "answer": "更新频率因池而异，一般从5分钟到1小时不等。 更新是由价格偏离或时间阈值触发的，确保数据更新，同时最大限度地减少不必要的链上交易。"
+          {
+            "question": "How often do oracle prices update?",
+            "answer": "Update frequency varies by pool, typically ranging from 5 minutes to 1 hour. Updates are triggered by price deviations or time thresholds, ensuring data freshness while minimizing unnecessary on-chain transactions."
           },
-          "3": {
-            "question": "任何智能合同都能使用Oracle数据吗？",
-            "answer": "是的，任何Ergo智能合同都可以通过读取口径池箱获得口径数据。 不需要特殊的权限或集成-这是一个内置的协议功能。"
+          {
+            "question": "Can any smart contract use oracle data?",
+            "answer": "Yes, any Ergo smart contract can access oracle data by reading from oracle pool boxes. No special permissions or integrations are required - it's a built-in protocol feature."
           },
-          "4": {
-            "question": "如何成为一个果园操作员？",
-            "answer": "要成为一个果园操作员，您需要运行口径软件、担保品，并向池提交数据。 检查文档的技术要求和设置说明。"
+          {
+            "question": "How do I become an oracle operator?",
+            "answer": "To become an oracle operator, you need to run oracle software, stake collateral, and submit data to the pool. Check the documentation for technical requirements and setup instructions."
           }
-        },
+        ],
         "breadcrumbs": {
           "technology": "技术",
           "oraclePools": "Oracle 题库"
@@ -1240,66 +1244,66 @@
           "standard": {
             "title": "标准令牌",
             "description": "使用可自定义属性创建任何类型的可替换令牌：",
-            "features": {
-              "0": "固定或变量供应",
-              "1": "小数点精度控制",
-              "2": "元数据和描述",
-              "3": "刻录和心灵能力"
-            }
+            "features": [
+              "Fixed or variable supply",
+              "Decimal precision control",
+              "Metadata and descriptions",
+              "Burn and mint capabilities"
+            ]
           },
           "stablecoins": {
             "title": "稳定币",
             "description": "构建算法或担保品化的稳定性：",
-            "features": {
-              "0": "Oracle 价格进纸集成",
-              "1": "抵押管理",
-              "2": "救赎机制",
-              "3": "治理令牌"
-            }
+            "features": [
+              "Oracle price feeds integration",
+              "Collateral management",
+              "Redemption mechanisms",
+              "Governance tokens"
+            ]
           }
         },
         "nfts": {
           "artCollectibles": {
             "title": "艺术和收藏品",
             "description": "使用丰富的元数据创建独特的数字资产：",
-            "features": {
-              "0": "IPFS 图像存储",
-              "1": "2. 忠诚机制",
-              "2": "集合支持",
-              "3": "自定义属性"
-            }
+            "features": [
+              "IPFS image storage",
+              "Royalty mechanisms",
+              "Collection support",
+              "Custom attributes"
+            ]
           },
           "gamingAssets": {
             "title": "游戏资源",
             "description": "构建游戏令牌和收藏夹：",
-            "features": {
-              "0": "字符标记",
-              "1": "游戏内物品",
-              "2": "稀有系统",
-              "3": "跨游戏兼容性"
-            }
+            "features": [
+              "Character tokens",
+              "In-game items",
+              "Rarity systems",
+              "Cross-game compatibility"
+            ]
           }
         },
         "hybrid": {
           "semiFungible": {
             "title": "半变质令牌",
             "description": "使用可互换和不可互换属性创建代币：",
-            "features": {
-              "0": "批量NFTs",
-              "1": "分级所有权",
-              "2": "动态元数据",
-              "3": "条件传输"
-            }
+            "features": [
+              "Batch NFTs",
+              "Fractional ownership",
+              "Dynamic metadata",
+              "Conditional transfers"
+            ]
           },
           "programmable": {
             "title": "可编程资产",
             "description": "将原生令牌与智能合同合并：",
-            "features": {
-              "0": "条件逻辑：",
-              "1": "基于时间的功能",
-              "2": "多签名支持",
-              "3": "Oracle 集成"
-            }
+            "features": [
+              "Conditional logic",
+              "Time-based features",
+              "Multi-signature support",
+              "Oracle integration"
+            ]
           }
         }
       },
@@ -1334,54 +1338,54 @@
         "subtitle": "本机令牌的工具和平台兴旺的生态系统",
         "marketplaces": {
           "title": "市场",
-          "items": {
-            "0": "SkyHarbor - NFT 市场",
-            "1": "谱面 - 令牌 DEX",
-            "2": "ErgoAuctionHouse - 拍卖平台"
-          }
+          "items": [
+            "SkyHarbor - NFT marketplace",
+            "Spectrum - Token DEX",
+            "ErgoAuctionHouse - Auction platform"
+          ]
         },
         "creationTools": {
           "title": "创建工具",
-          "items": {
-            "0": "ErgoMixer - 隐私令牌",
-            "1": "Ergo 令牌矿工 - 简单界面",
-            "2": "Blitz TCG - 游戏令牌"
-          }
+          "items": [
+            "ErgoMixer - Privacy tokens",
+            "Ergo Token Minter - Simple UI",
+            "Blitz TCG - Gaming tokens"
+          ]
         },
         "infrastructure": {
           "title": "B. 基础设施",
-          "items": {
-            "0": "令牌API - REST 端点",
-            "1": "Explorer - 令牌跟踪",
-            "2": "钱包-本机支持"
-          }
+          "items": [
+            "Token API - REST endpoints",
+            "Explorer - Token tracking",
+            "Wallets - Native support"
+          ]
         }
       },
       "faq": {
         "title": "常见问题",
         "subtitle": "关于本地令牌及其执行的常见问题",
-        "items": {
-          "0": {
-            "question": "本地令牌如何与 ERC-20 令牌不同？",
-            "answer": "Ergo上的本地令牌是一流的协议资产，不需要智能合同。 它们有协议一级的安全保证，比需要合同部署和天然气费的ERC-20代币更具成本效益。"
+        "items": [
+          {
+            "question": "How do native tokens differ from ERC-20 tokens?",
+            "answer": "Native tokens on Ergo are first-class protocol assets that don't require smart contracts. They have protocol-level security guarantees and are more cost-effective to create and transfer compared to ERC-20 tokens which require contract deployment and gas fees."
           },
-          "1": {
-            "question": "创建本地令牌的成本是多少？",
-            "answer": "创建本地令牌成本约为0.01美元的ERG费用，这比在其他区块链上部署智能合同便宜得多。 成本仅仅是标准交易费。"
+          {
+            "question": "What's the cost to create a native token?",
+            "answer": "Creating a native token costs approximately $0.01 in ERG fees, which is significantly cheaper than deploying smart contracts on other blockchains. The cost is just the standard transaction fee."
           },
-          "2": {
-            "question": "我能使用丰富的元数据创建NFT吗？",
-            "answer": "是的，本地令牌支持复杂的元数据，包括图像、描述和自定义属性。 您可以通过 IPFS 或其他存储解决方案存储链上的元数据或参考外部数据。"
+          {
+            "question": "Can I create NFTs with rich metadata?",
+            "answer": "Yes, native tokens support complex metadata including images, descriptions, and custom properties. You can store metadata on-chain or reference external data through IPFS or other storage solutions."
           },
-          "3": {
-            "question": "本地令牌是否与所有的Ergo应用程序兼容？",
-            "answer": "是的，本地令牌与所有的Ergo应用程序、钱包和协议普遍兼容。 他们不需要特殊的融合，因为他们被协议当作一流资产。"
+          {
+            "question": "Are native tokens compatible with all Ergo applications?",
+            "answer": "Yes, native tokens are universally compatible with all Ergo applications, wallets, and protocols. They don't require special integrations since they're treated as first-class assets by the protocol."
           },
-          "4": {
-            "question": "如何使用本地令牌创建一个马铃薯？",
-            "answer": "您可以通过将本地令牌与oracle 数据源结合来创建Stablecoin。 AgeUSD stablecoin 就是这种做法的一个例子，它使用了口径池来维持价格稳定。"
+          {
+            "question": "How do I create a stablecoin using native tokens?",
+            "answer": "You can create stablecoins by combining native tokens with oracle data feeds. The AgeUSD stablecoin is an example of this approach, using oracle pools to maintain price stability."
           }
-        }
+        ]
       },
       "cta": {
         "title": "开始创建本地资源",
@@ -1664,30 +1668,33 @@
       },
       "quickStart": {
         "title": "快速开始",
-        "steps": {
-          "0": {
-            "title": "出现事件",
-            "description": "交易或方块出现在Ergo上。"
+        "steps": [
+          {
+            "step": 1,
+            "title": "Event Occurs",
+            "description": "A transaction or block appears on Ergo."
           },
-          "1": {
+          {
+            "step": 2,
             "title": "Proof Generation",
-            "description": "从取样的头上建立了简明的证明。"
+            "description": "A succinct proof is built from sampled headers."
           },
-          "2": {
-            "title": "验证",
-            "description": "任何人都会迅速和毫无可信赖地验证证据。"
+          {
+            "step": 3,
+            "title": "Verification",
+            "description": "Anyone verifies the proof quickly and trustlessly."
           }
-        }
+        ]
       },
       "whatSection": {
         "title": "什么是 NIPPoW？",
         "description": "NIPoPoWs 是加密校验，使您可以在不下载整个链的情况下验证区块链事件——适合移动和跨链使用。",
         "proofSize": "通过从头部取样超级区块，凭证尺寸和校验通过链长按逻辑增长。",
         "comparison": "与典型的SPV相比，NIPPoWs提供正式保证，将竞争链与没有完全状态的累积工作进行比较。",
-        "notes": {
-          "0": "需要观察一个最后窗口来进行简短的重试",
-          "1": "验证取决于当前的网络参数/信头"
-        }
+        "notes": [
+          "Requires observing a finality window for short reorgs",
+          "Proofs depend on current network parameters/headers"
+        ]
       },
       "benefitsSection": {
         "title": "为什么没有 NIPPoWs 关系",
@@ -1696,24 +1703,24 @@
           "description": "Light client should observer a finality windows; new proofs could replace the previously three like if a short reorge."
         }
       },
-      "benefits": {
-        "0": {
-          "title": "互操作性",
-          "description": "启用SPV/NIPPoW风格协议和信任最小化的跨链交互。"
+      "benefits": [
+        {
+          "title": "Interoperability",
+          "description": "Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions."
         },
-        "1": {
-          "title": "轻型客户端",
-          "description": "在移动或网络上安全验证而不下载完整的区块链。"
+        {
+          "title": "Light Clients",
+          "description": "Secure verification on mobile or web without downloading the full blockchain."
         },
-        "2": {
-          "title": "快速验证",
-          "description": "使用紧凑的校验器而不是完整的同步来验证链工作的秒数。"
+        {
+          "title": "Fast Verification",
+          "description": "Verify chain work in seconds using compact proofs instead of full syncs."
         },
-        "3": {
-          "title": "不可信的",
-          "description": "没有信任的继电器或验证器；验证遵循PoW假设。"
+        {
+          "title": "Trustless",
+          "description": "No trusted relays or validators; verification follows PoW assumptions."
         }
-      },
+      ],
       "comparisonSection": {
         "title": "NIPoPoWs与传统验证",
         "description": "NIPoPoWs保留PoW的安全假设，同时将核查数据从整个历史降为紧凑的证明。",
@@ -1729,43 +1736,43 @@
           "advantages": "NIPPoW 优势"
         }
       },
-      "comparisonData": {
-        "0": {
-          "aspect": "验证时间",
-          "traditional": "几天后的小时数(完整同步)",
-          "nipopows": "秒到分钟"
+      "comparisonData": [
+        {
+          "aspect": "Verification Time",
+          "traditional": "Hours to days (full sync)",
+          "nipopows": "Seconds to minutes"
         },
-        "1": {
-          "aspect": "需要数据",
-          "traditional": "整个区块链历史",
-          "nipopows": "小型密码证明"
+        {
+          "aspect": "Data Required",
+          "traditional": "Entire blockchain history",
+          "nipopows": "Small cryptographic proof"
         },
-        "2": {
-          "aspect": "信任要求",
-          "traditional": "信任完整的节点或验证器",
-          "nipopows": "无用的加密验证"
+        {
+          "aspect": "Trust Requirements",
+          "traditional": "Trust full nodes or validators",
+          "nipopows": "Trustless cryptographic verification"
         },
-        "3": {
-          "aspect": "移动兼容性",
-          "traditional": "因大小而不可用",
-          "nipopows": "为移动设备优化"
+        {
+          "aspect": "Mobile Compatibility",
+          "traditional": "Impractical due to size",
+          "nipopows": "Optimized for mobile devices"
         },
-        "4": {
-          "aspect": "安全模式",
-          "traditional": "设计上的差数",
-          "nipopows": "Preserve PoW 参数"
+        {
+          "aspect": "Security model",
+          "traditional": "Varies by design",
+          "nipopows": "Preserves PoW assumptions"
         },
-        "5": {
+        {
           "aspect": "Finality handling",
-          "traditional": "具体执行",
-          "nipopows": "观察窗口；新的验证可以替换"
+          "traditional": "Implementation-specific",
+          "nipopows": "Observe window; new proof can supersede"
         },
-        "6": {
-          "aspect": "状态访问",
-          "traditional": "设备上的完整状态",
-          "nipopows": "事件/工作证明仅限(没有完整状态)"
+        {
+          "aspect": "State access",
+          "traditional": "Full state on device",
+          "nipopows": "Event/work proof only (no full state)"
         }
-      },
+      ],
       "useCasesSection": {
         "title": "实际使用案例",
         "devQuickStart": {
@@ -1776,86 +1783,86 @@
       "faqSection": {
         "title": "常见问题"
       },
-      "faqs": {
-        "0": {
-          "question": "NIPPoWs 如何启用光线客户端？",
-          "answer": "他们让设备使用紧凑的防伪而不是整个历史来验证链条工作，在移动/网络上提供快速同步和安全性。"
+      "faqs": [
+        {
+          "question": "How do NIPoPoWs enable light clients?",
+          "answer": "They let devices verify chain work using compact proofs rather than the full history, providing fast sync and security on mobile/web."
         },
-        "1": {
-          "question": "安全性是否与一个完整节点相比？",
-          "answer": "安全遵循PoW的假设；欺骗需要打破基础加密法或多数工作。"
+        {
+          "question": "Is security comparable to a full node?",
+          "answer": "Security follows PoW assumptions; cheating requires breaking underlying cryptography or majority work."
         },
-        "2": {
-          "question": "这个解锁了什么新应用？",
-          "answer": "最大限度地减少信托桥梁、即时移动机船和高效率的奥兰特设计。"
+        {
+          "question": "What new apps does this unlock?",
+          "answer": "Trust-minimized bridges, instant mobile onboarding, and efficient oracle/sidechain designs."
         },
-        "3": {
-          "question": "我需要加密技术才能使用它吗？",
-          "answer": "没有用户看到更快、更轻松的钱包；开发者通过库和文档集成证据。"
+        {
+          "question": "Do I need crypto expertise to use it?",
+          "answer": "No. Users see faster, lighter wallets; developers integrate proofs via libraries and docs."
         },
-        "4": {
-          "question": "NIPoPoWs 如何在重命名下操作？",
-          "answer": "Light 客户端应该观察一个最终窗口。如果在该窗口内出现reorg，新的证据可以取代上一个窗口。"
+        {
+          "question": "How do NIPoPoWs behave under reorgs?",
+          "answer": "Light clients should observe a finality window. If a reorg occurs within that window, a new proof can supersede the previous one."
         },
-        "5": {
-          "question": "NIPoPoWs 是否需要特殊头部或参数？",
-          "answer": "实现依靠文档中定义的页眉数据和针对协议的结构。使用符合当前网络参数的库。"
+        {
+          "question": "Do NIPoPoWs require special headers or parameters?",
+          "answer": "Implementations rely on header data and protocol-specific structures defined in the docs. Use libraries that match current network parameters."
         },
-        "6": {
-          "question": "恶意方能制造证据吗？",
-          "answer": "不能不违反PoW的假设或加密原始。安全遵循基本的共识模式。"
+        {
+          "question": "Can a malicious party forge a proof?",
+          "answer": "Not without violating PoW assumptions or cryptographic primitives. Security follows the underlying consensus model."
         }
-      },
-      "features": {
-        "0": {
-          "title": "互操作性",
-          "description": "启用SPV/NIPPoW风格协议和信任最小化的跨链交互。"
+      ],
+      "features": [
+        {
+          "title": "Interoperability",
+          "description": "Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions."
         },
-        "1": {
-          "title": "轻型客户端",
-          "description": "在移动或网络上安全验证而不下载完整的区块链。"
+        {
+          "title": "Light Clients",
+          "description": "Secure verification on mobile or web without downloading the full blockchain."
         },
-        "2": {
-          "title": "快速验证",
-          "description": "使用紧凑的校验器而不是完整的同步来验证链工作的秒数。"
+        {
+          "title": "Fast Verification",
+          "description": "Verify chain work in seconds using compact proofs instead of full syncs."
         },
-        "3": {
-          "title": "不可信的",
-          "description": "没有信任的继电器或验证器；验证遵循PoW假设。"
+        {
+          "title": "Trustless",
+          "description": "No trusted relays or validators; verification follows PoW assumptions."
         }
-      },
-      "useCases": {
-        "0": {
-          "title": "交叉链协议",
-          "description": "最小化的信任桥和区块链之间的SPV风格的互操作性。",
+      ],
+      "useCases": [
+        {
+          "title": "Cross-Chain Protocols",
+          "description": "Trust-minimized bridges and SPV-style interoperability between blockchains.",
           "example": "Rosen Bridge"
         },
-        "1": {
-          "title": "移动钱包",
-          "description": "轻型钱包，用简洁的证明来证明链条工作是即时同步的。",
-          "example": "Ergo 移动钱包"
+        {
+          "title": "Mobile Wallets",
+          "description": "Light wallets that prove chain work with succinct proofs for instant sync.",
+          "example": "Ergo Mobile Wallet"
         },
-        "2": {
-          "title": "Oracle 系统",
-          "description": "高效率地核查用于智能合同的外部链数据。",
-          "example": "Oracle 题库"
+        {
+          "title": "Oracle Systems",
+          "description": "Efficient verification of external chain data for smart contracts.",
+          "example": "Oracle Pools"
         },
-        "3": {
+        {
           "title": "Sidechains",
-          "description": "Sidechains能够简明地核查第一层，以保证安全和防伪。",
-          "example": "研究实施情况"
+          "description": "Sidechains can verify Layer 1 succinctly for security and liveness guarantees.",
+          "example": "Research Implementation"
         },
-        "4": {
+        {
           "title": "DeFi Protocols",
-          "description": "快速验证跨链Defi 而不等待完全同步。",
-          "example": "交叉链DEX"
+          "description": "Fast verification for cross-chain DeFi without waiting for full synchronization.",
+          "example": "Cross-Chain DEX"
         },
-        "5": {
-          "title": "付款验证",
-          "description": "商人即时支付确认，但没有运行完整的节点。",
-          "example": "销售点系统"
+        {
+          "title": "Payment Verification",
+          "description": "Instant payment confirmation for merchants without running full nodes.",
+          "example": "Point-of-Sale Systems"
         }
-      }
+      ]
     },
     "subblocks": {
       "title": "子块",
@@ -1904,102 +1911,102 @@
         "title": "关键功能",
         "description": "子块结合了两个世界中最佳的东西：第一层的安全和现代支付系统的速度"
       },
-      "features": {
-        "0": {
-          "title": "子二次确认",
-          "description": "在不牺牲权力下放的情况下改进用户体验的近期交易结束"
+      "features": [
+        {
+          "title": "Fast Provisional Feedback",
+          "description": "Near-instant transaction inclusion feedback for improved user experience without sacrificing decentralization"
         },
-        "1": {
-          "title": "图层 1 安全",
-          "description": "无信任中间人或桥梁的完整区块链安全"
+        {
+          "title": "Layer 1 Security",
+          "description": "Full blockchain security without trusted intermediaries or bridges"
         },
-        "2": {
-          "title": "无缝集成",
-          "description": "利用现有的基础设施运行――不需要任何桥梁或边框"
+        {
+          "title": "Seamless Integration",
+          "description": "Works with existing infrastructure - no bridges or sidechains needed"
         },
-        "3": {
-          "title": "并联处理",
-          "description": "多个子块可以同时验证，以增加传输量。"
+        {
+          "title": "Parallel Processing",
+          "description": "Input-block chains can reduce perceived latency and improve transaction propagation"
         },
-        "4": {
-          "title": "自适应难度",
-          "description": "动态调整确保连续的区块时间，即使散列电量也是如此。"
+        {
+          "title": "Adaptive Difficulty",
+          "description": "Dynamic adjustment ensures consistent block times even with varying hash power"
         },
-        "5": {
-          "title": "矿工奖励",
-          "description": "对子块矿工的额外奖励，同时保持主链安全"
+        {
+          "title": "Miner Incentives",
+          "description": "Additional rewards for subblock miners while maintaining main chain security"
         }
-      },
+      ],
       "technicalSection": {
         "title": "技术细节",
         "description": "理解子块的架构和实现"
       },
-      "technicalDetails": {
-        "0": {
-          "title": "结构",
-          "content": "子块是主要块之间的中间块，可以提供更快的确认。它们与主要块保持相同的安全模型，但是有调整难度目标。"
+      "technicalDetails": [
+        {
+          "title": "Architecture",
+          "content": "Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same security model as main blocks but with adjusted difficulty targets."
         },
-        "1": {
-          "title": "A. 共识机制",
-          "content": "使用经修改的 Autolykos 版本，允许变量难度目标。子块可以在保持与现有基础设施兼容的同时促进整个链重量。"
+        {
+          "title": "Consensus Mechanism",
+          "content": "Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure."
         },
-        "2": {
-          "title": "交易顺序",
-          "content": "子块中的交易是通过时间戳和交易ID的组合来确定的，防止前线运行和确保公平。"
+        {
+          "title": "Transaction Ordering",
+          "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness."
         },
-        "3": {
-          "title": "国家管理",
-          "content": "子块以递增方式更新UTXO设置，允许高效的状态过渡，而不需要完全块验证的间接费用。"
+        {
+          "title": "State Management",
+          "content": "Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead."
         }
-      },
+      ],
       "useCasesSection": {
         "title": "使用案例",
         "description": "从次要交易确认中受益的申请"
       },
-      "useCases": {
-        "0": {
-          "title": "Defi 应用程序",
-          "description": "启用高频交易和即时交换子第二个终结性"
+      "useCases": [
+        {
+          "title": "DeFi Applications",
+          "description": "Improve swap UX with faster inclusion feedback while final settlement remains on ordering blocks"
         },
-        "1": {
-          "title": "支付系统",
-          "description": "随即确认的销售点交易"
+        {
+          "title": "Payment Systems",
+          "description": "Point-of-sale flows with faster provisional payment feedback"
         },
-        "2": {
-          "title": "游戏中",
-          "description": "无需等待区块确认的实时游戏状态更新"
+        {
+          "title": "Gaming",
+          "description": "Faster game-state feedback without waiting for full ordering-block settlement"
         },
-        "3": {
-          "title": "社会应用",
-          "description": "链上即时消息和社交互动"
+        {
+          "title": "Social Applications",
+          "description": "Instant messaging and social interactions on-chain"
         }
-      },
+      ],
       "faqSection": {
         "title": "常见问题",
         "description": "关于子块及其执行的常见问题"
       },
-      "faq": {
-        "0": {
-          "question": "什么是子块？",
-          "answer": "子块是主要块之间的中间块，这些块能够提供更快的确认，同时保持相同的安全模型。它们能够在不牺牲权力下放的情况下完成子第二笔交易。"
+      "faq": [
+        {
+          "question": "What are subblocks?",
+          "answer": "Subblocks, also called input blocks, are lower-difficulty block candidates between ordering blocks. They are designed to provide faster provisional inclusion feedback while final settlement remains anchored by ordering blocks."
         },
-        "1": {
-          "question": "子块确认速度有多快？",
-          "answer": "子块在大约1秒内提供确认，而主块时间为2分钟，使得接近即时交易得以完成，以改善用户体验。"
+        {
+          "question": "How fast are subblock confirmations?",
+          "answer": "The current design targets roughly 1-2 second provisional inclusion feedback compared with the 2-minute ordering-block cadence. Treat this as devnet/test rollout work until release notes mark production readiness."
         },
-        "2": {
-          "question": "子块需要硬叉吗？",
-          "answer": "不，子区块设计成向后兼容。现有的基础设施继续运行，新功能逐步被采纳。"
+        {
+          "question": "Do subblocks require a hard fork?",
+          "answer": "No, subblocks are designed to be backward compatible. Existing infrastructure continues to work while new features are gradually adopted."
         },
-        "3": {
-          "question": "子块如何提高可扩展性？",
-          "answer": "子块通过平行加工和更频繁的区块生产，同时保持第一层安全保障，从而使10X传送速度增加。"
+        {
+          "question": "How do subblocks improve scalability?",
+          "answer": "Subblocks improve perceived scalability by propagating transaction data more frequently and giving wallets and dApps faster inclusion feedback while preserving Layer 1 ordering-block security guarantees."
         },
-        "4": {
-          "question": "子块是否安全？",
-          "answer": "是的，子块保持与调整难度目标的主块相同的安全模型。 它们有助于提高整个链的重量，并且受到同样的PoW共识的保护。"
+        {
+          "question": "Are subblocks secure?",
+          "answer": "They are designed to preserve the ordering-block security model, but production users should follow the node release notes because the Matrix implementation is still in devnet/test rollout."
         }
-      },
+      ],
       "cta": {
         "title": "准备好体验次级确认？",
         "description": "使用子块加入区块链技术的前景 - 速度符合安全",
@@ -2079,25 +2086,9 @@
       "parallelism_utxo_independent_boxes_enable": ", account: ",
       "global_state_makes_privacy_harder": "General content",
       "token_handling_utxo_tokens_are": ", account:",
-      "value_description_erg_custom_tokens": "General content",
-      "guarding_script_description_ergoscript_code": "General content",
-      "metadata_description_creation_height_boxid": "General content",
-      "inputs_description_consume_existing_boxes": "General content",
-      "outputs_description_create_new_boxes": "General content",
-      "script_checks_description": "42",
-      "state_transition_description_state_changes": "General content",
-      "defi_with_strong_guarantees_description": "General content",
       "spectrum_finance_sigmausd_duckpools": ", ",
-      "nfts_asset_registries_description_each": "General content",
       "ergo_auction_house_skyharbor_unique_assets": ", ",
-      "privacy_protocols_description_zero_knowledge": "General content",
       "oracle_pools_governance_compliance_tools": ", ",
-      "can_you_port_ethereum_dapps_to_ergo_answer": "69",
-      "how_does_eutxo_handle_shared": "General content",
-      "what_are_the_main_advantages": "General content",
-      "technology_href_technology": "General content",
-      "technology_item_https_ergoblockchain_org": "技术', item: 'https://ergoblockchain.org/technology",
-      "techarticle_headline": "TechArticle，标题：",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO解释说：安全、平行、可编程和使用案例。",
       "on_this_page": "在本页",
       "ergoscript_code_controlling_spending_conditions": "ErgoScript 代码控制支出条件",
@@ -2115,7 +2106,6 @@
       "extended_utxo_smart_contracts_blockchain": "扩展 UTXO\",\n    \"智能合约\",\n    \"区块链技术\",\n    \"DeFi\",\n    \"并行处理\",\n    \"防重入保护\",\n    \"Ergo 区块链\",\n    \"UTXO 模型\",\n    \"加密货币",
       "discover_the_eutxo_model_a": "发现eUTXO模型，智能合约的安全和可缩放的方法。了解如何Ergo",
       "parallel_secure_smart_contracts_without": "Parallel, 安全的智能合约不会再次进入。Defi的前途。",
-      "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
       "eutxo_model_explained_parallel_smart": "eUTXO 模型解释 | 没有退货的并行智能合同",
       "master_the_eutxo_model_powering_ergo": "掌握eUTXO模型为Ergo",
       "eutxo_model_extended_utxo_for_smart_contracts": "eUTXO 模型 - 智能合同扩展 UTXO",
@@ -2171,64 +2161,64 @@
         "exploreOracles": "浏览实时口径池和数据源",
         "viewLivePools": "访问全面的Oracle文档"
       },
-      "featuresArray": {
-        "0": {
-          "title": "可靠的价格源",
-          "description": "以共识为基础的数据集合可确保准确的、抵御操纵的价格"
+      "featuresArray": [
+        {
+          "title": "Reliable Price Feeds",
+          "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices"
         },
-        "1": {
-          "title": "通用兼容性",
-          "description": "任何智能合同都可以在没有特殊集成的情况下访问Oracle数据"
+        {
+          "title": "Universal Compatibility",
+          "description": "Any smart contract can access oracle data without special integrations"
         },
-        "2": {
-          "title": "完全分散化",
-          "description": "没有中央当局控制数据流或oracle 操作"
+        {
+          "title": "Fully Decentralized",
+          "description": "No central authority controls the data flow or oracle operations"
         },
-        "3": {
-          "title": "经济安全",
-          "description": "奖励Oracles通过经济奖励和惩罚提供准确的数据。"
+        {
+          "title": "Economic Security",
+          "description": "Oracles are incentivized to provide accurate data through economic rewards and penalties"
         },
-        "4": {
-          "title": "A. 共识机制",
-          "description": "在接受数据之前必须商定多个oracles，防止单个故障点"
+        {
+          "title": "Consensus Mechanism",
+          "description": "Multiple oracles must agree before data is accepted, preventing single points of failure"
         },
-        "5": {
-          "title": "低延迟更新",
-          "description": "有效的更新机制确保及时为具有时间敏感性的应用程序提供价格反馈"
+        {
+          "title": "Low Latency Updates",
+          "description": "Efficient update mechanisms ensure timely price feeds for time-sensitive applications"
         }
-      },
-      "howItWorks": {
-        "0": {
-          "title": "数据聚合",
-          "description": "多个oracle 节点从各种来源收集数据"
+      ],
+      "howItWorks": [
+        {
+          "title": "Data Aggregation",
+          "description": "Multiple oracle nodes collect data from various sources"
         },
-        "1": {
-          "title": "更新触发器",
-          "description": "智能合同在价格偏差超过阈值时触发更新"
+        {
+          "title": "Update Triggers",
+          "description": "Smart contracts trigger updates when price deviations exceed thresholds"
         },
-        "2": {
-          "title": "经济安全",
-          "description": "Oracles stocks ERG token and before punishment for providing dailed data"
+        {
+          "title": "Economic Security",
+          "description": "Oracles stake ERG tokens and face penalties for providing bad data"
         },
-        "3": {
-          "title": "攻击抗性",
-          "description": "协商一致的要求使操纵在经济上不可行。"
+        {
+          "title": "Attack Resistance",
+          "description": "Consensus requirements make manipulation economically unfeasible"
         }
-      },
-      "useCases": {
-        "0": {
+      ],
+      "useCases": [
+        {
           "title": "SigmaUSD Stablecoin",
-          "description": "使用ERG/美元价格种子算法马铃声"
+          "description": "Algorithmic stablecoin using ERG/USD price feeds"
         },
-        "1": {
-          "title": "光谱深化",
-          "description": "使用实时价格数据分散化交易"
+        {
+          "title": "Spectrum DEX",
+          "description": "Decentralized exchange with real-time price data"
         },
-        "2": {
+        {
           "title": "Lending Protocols",
-          "description": "担保贷款的担保估价"
+          "description": "Collateral valuation for secure lending"
         }
-      },
+      ],
       "faq": {
         "0": {
           "question": "Oracle 池是什么，它们是如何运作的？",
@@ -2261,10 +2251,6 @@
       "predictable_moderate": "可预测，中",
       "copy_to_clipboard": "复制到剪贴板",
       "the_class_of_reentrancy_vulnerabilities": "在eUTXO 中缺少基于账户的系统共有的再入账功能类",
-      "technology_item_https_ergoblockchain_org": "技术\",\n              item: \"https://ergoblockchain.org/technology",
-      "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
-      "technology_href_technology": "General content",
-      "ergoscript_href_technology_ergoscript": "General content",
       "no_shared_global_state_eliminates": "没有一个共享的全球状态取消了重新进入脆弱程度类",
       "non_custodial_defi_protocols": "非保管的 DeFi 协议",
       "decentralized_oracle_networks": "分散化果园网络",
@@ -2394,34 +2380,33 @@
           }
         }
       },
-      "featuresArray": {
-        "0": {
-          "title": "参数调整",
-          "description": "基于网络条件微调排放参数"
+      "featuresArray": [
+        {
+          "title": "Parameter Tuning",
+          "description": "Fine-tune emission parameters based on network conditions"
         },
-        "1": {
-          "title": "经济灵活性",
-          "description": "适应不断变化的经济条件和要求"
+        {
+          "title": "Economic Flexibility",
+          "description": "Adapt to changing economic conditions and requirements"
         },
-        "2": {
-          "title": "社区输入",
-          "description": "利益攸关方参与货币政策决定"
+        {
+          "title": "Community Input",
+          "description": "Stakeholder participation in monetary policy decisions"
         },
-        "3": {
-          "title": "矿工投票",
-          "description": "矿工参与排放时间表管理"
+        {
+          "title": "Miner Voting",
+          "description": "Miners participate in emission schedule governance"
         },
-        "4": {
-          "title": "逐渐更改",
-          "description": "平滑过渡可以防止经济振动"
+        {
+          "title": "Gradual Changes",
+          "description": "Smooth transitions prevent economic shocks"
         }
-      }
+      ]
     },
     "privacy": {
       "built_in_privacy_technology_sigma": "内置隐私技术：零知识证明的Sigma协议，匿名交易的ErgoMixer，环形签名和机密DeFi。不需要可信的设置。",
       "native_zero_knowledge_proofs_mixer": "原生的零知识证明，混合协议和位于Ergo blockchain的保密资产。",
       "optional_privacy_for_all_transactions": "使用 Sigma 协议和 ErgoMixer 的所有交易的可选隐私。",
-      "organization_name_ergo_platform": "组织'，名称：“Ergo Platform",
       "ergo_privacy_features_zero_knowledge": "Ergo Privacy 功能 | 零知识证明和保密交易",
       "ergo_privacy_technology_optional_confidentiality": "Ergo Privacy Technology | DeFi 的可选保密",
       "ergo_privacy_features_zk_proofs": "错误隐私功能 | ZK 校验没有可信的设置",
@@ -2445,19 +2430,11 @@
       "answer_text_ergo_offers_multiple": "回答\",\n                text:\n                  \"Ergo 提供多种隐私功能，包括 Sigma 协议、环签名、零知识证明和保密交易。这些技术在保障安全性和合规性的同时，支持保护隐私的交易。",
       "answer_text_sigma_protocols_are": "回答\",\n                text:\n                  \"Sigma 协议是零知识证明系统，允许在不泄露秘密值的情况下证明关于该值的陈述。它们支持保护隐私的身份验证和交易验证。",
       "answer_text_yes_ergo_s": "回答\",\n                text:\n                  \"是的，Ergo 的隐私功能旨在符合监管要求。它们提供选择性披露能力，允许用户在需要时披露交易细节，同时默认保持隐私。",
-      "techarticle_id_https_ergoblockchain_org": "技术文章\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo 将隐私写入协议：Sigma协议、环/阈值签名、ErgoMixer、保密资产和选择性披露。",
       "ergo_privacy_sigma_protocols_ring": "Ergo privacy,Sigma protocols,铃声签名,零知识证明,ErgoMixer,secretary transactions",
-      "thing_name_sigma_protocol": "General content",
-      "thing_name_zero_knowledge_proof": "General content",
-      "webpage_id_https_ergoblockchain_org_technology": ": ",
-      "technology_item_https_ergoblockchain_org": "General content",
-      "privacy_features_item_https_ergoblockchain": "隐私功能\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
       "prepare_funds_text_split_funds": "General content",
       "run_mix_text_choose_round": "General content",
       "wait_spend_text_spend_after": "General content",
-      "technology_href_technology": "General content",
-      "privacy_features_href_technology_privacy_features": "General content",
       "pseudonymous_addresses_utxo_model_benefits": ", ",
       "transaction_mixing_address_unlinkability_amount": ", ",
       "enable_powerful_privacy_tools_like": "在协议一级启用强大的隐私工具，如环形签名和零知识证明。",
@@ -2480,28 +2457,28 @@
       "title": "Velvet Forks",
       "subtitle": "平滑协议升级",
       "description": "在没有硬叉的情况下逐步改进协议",
-      "features": {
-        "0": {
-          "title": "后向兼容性",
-          "description": "新功能不会破坏现有功能"
+      "features": [
+        {
+          "title": "Backward Compatible",
+          "description": "New features don't break existing functionality"
         },
-        "1": {
-          "title": "未来证据",
-          "description": "议定书可以在没有争议性分裂的情况下演变。"
+        {
+          "title": "Future Proof",
+          "description": "Protocol can evolve without contentious splits"
         },
-        "2": {
-          "title": "逐渐通过",
-          "description": "当网络支持充足时启用功能"
+        {
+          "title": "Gradual Adoption",
+          "description": "Features activate when sufficient network support exists"
         },
-        "3": {
-          "title": "协商一致的保留",
-          "description": "升级期间保持网络统一"
+        {
+          "title": "Consensus Preservation",
+          "description": "Maintains network unity during upgrades"
         },
-        "4": {
-          "title": "优先安全",
-          "description": "激活功能前严格测试"
+        {
+          "title": "Security First",
+          "description": "Rigorous testing before feature activation"
         }
-      }
+      ]
     },
     "securePow": {
       "title": "Autolykos v2-Secure, Memory-Hard Proff",
@@ -2708,39 +2685,7 @@
     "frequently_asked_questions": "常见问题",
     "go_to_docs": "转到文档",
     "extended_utxo_model_that_enables": "扩展 UTXO 模型，启用并行智能合同执行和可编译的 DeFi 应用程序。在保持比特币的同时消除重新输入攻击",
-    "parallel_execution_description_smart_contracts": "General content",
-    "composability_description_build_complex_defi": "General content",
-    "bitcoin_level_security_description_inherits": "General content",
-    "built_in_privacy_description_native": "General content",
-    "safe_by_design_description_prevents": "General content",
-    "energy_efficient_description_memory_hard": "General content",
-    "solo_mining_friendly_description_low": "General content",
-    "asic_resistant_description_optimized_for": "General content",
-    "sustainable_blockchain_description_automatic_cleanup": "General content",
-    "perpetual_security_description_miners_receive": "General content",
-    "resource_efficient_description_maintains_lightweight": "General content",
-    "optional_privacy_description_choose_between": "General content",
-    "developer_friendly_description_simple_apis": "General content",
-    "instant_mobile_sync_description_full": "General content",
-    "trustless_bridges_description_connect_to": "General content",
-    "cryptographic_security_description_mathematical_proofs": "General content",
-    "sub_second_confirmations_description_near": "General content",
     "full_blockchain_security_without_trusted": "完整区块链安全无需信任中介。",
-    "seamless_integration_description_works_with": "General content",
-    "one_click_creation_description_issue": "General content",
-    "defi_ready_description_native_integration": "General content",
-    "true_native_assets_description_first": "General content",
-    "reliable_price_feeds_description_consensus": "General content",
-    "universal_compatibility_description_any_smart": "General content",
-    "fully_decentralized_description_no_central": "General content",
-    "backward_compatible_description_no_forced": "General content",
-    "future_proof_description_adopt_innovations": "General content",
-    "gradual_adoption_description_evolutionary_not": "General content",
-    "parameter_tuning_description_economic_variables": "General content",
-    "economic_flexibility_description_adapt_to": "General content",
-    "community_input_description_discussions_and": "General content",
-    "dive_into_ergo_docs_href_docs_color": "深入 Ergo 文档\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "查看生态应用\",\n    href: \"/ecosystem\",\n    color:",
     "adaptive_emission_governance": "适应性排放与治理",
     "what_makes_ergo_s_eutxo": "是什么让 Ergo 的 eUTXO 模型优于基于账户的区块链？\",\n      tag: \"eUTXO",
     "how_does_ergoscript_prevent_smart": "ErgoScript 如何防止智能合约漏洞？\",\n      tag: \"ErgoScript",
@@ -2754,10 +2699,6 @@
     "research_in_development": "研究/开发中",
     "decentralized_mixers_and_privacy_tools": "去中心化混合器和隐私工具（请查阅法律状态）\",\n                              \"DAO 和治理系统",
     "infrastructure_apps": "基础设施和应用",
-    "ergo_docs_href_docs": "General content",
-    "whitepaper_href_https_ergoplatform_org": "General content",
-    "github_href_https_github_com_ergoplatform": "General content",
-    "dev_tutorials_href_docs_developers_tutorials": "General content",
     "smart_contracts_run_independently_without": "智能合约在没有全局状态冲突的情况下独立运行。",
     "build_complex_defi_applications_from": "从简单、可重复使用的组件构建复杂的 DeFi 应用程序。",
     "bitcoin_level_security": "比特币级别安全",
@@ -2811,19 +2752,11 @@
     "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 智能合同”、“Sigma protocol”、“Autolykos mining”、“blockchain technology”、“智能合同编程”、“NIPPoWs”、“存储租赁”、“工作证明”、“Defi 基础结构”。",
     "ergo_technology_overview": "Ergo 技术概览",
     "ergo_technology_next_generation_blockchain": "Ergo Technology - 下一代区块chain",
-    "webpage_id_https_ergoblockchain_org_technology": "网页',\n      '@id': 'https://ergoblockchain.org/technology",
-    "thing_name_ergoscript_description_secure": "因此，名称：“ErgoScript”，描述：“安全”，可编程资金的声明语言",
-    "thing_name_sigma_protocols_description": "因此，名称：“Sigma Protocols”，描述：“Native non-knowledge proofs和隐私功能",
-    "thing_name_autolykos_description_memory": "这就是'，名称：“自动ykos”，描述：“记忆-硬的工作算法证明”",
-    "thing_name_storage_rent_description": "因此，名称：“存储租赁”，描述：“可持续区块链状态管理”",
-    "thing_name_nipopows_description_non": "因此，名称：“NIPPoWs”，描述：“非交互式工作证明”",
     "answer_text_eutxo_splits_the": "回答',\n          text: 'eUTXO 将区块链状态分割为独立的盒子（输出），支持无全局状态的并行智能合约，降低重入风险。dApp 变得可组合：复杂逻辑可从简单输出构建。",
     "answer_text_ergoscript_is_ergo": "回答',\n          text: 'ErgoScript 是 Ergo\\",
     "answer_text_autolykos_is_memory": "回答',\n          text: 'Autolykos 是内存密集型且抗 ASIC 的，对普通矿工更公平。它奖励单独挖矿并减少矿池依赖，以适度的能源消耗保持网络安全。",
     "answer_text": "回答',\n          text:",
     "answer_text_nipopows_create_tiny": "回答',\n          text: 'NIPoPoW 创建微型区块链证明，允许轻客户端、即时移动同步和无需全节点的无信任跨链桥。",
-    "home_item_https_ergoblockchain_org": "主页',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "技术',\n        item: 'https://ergoblockchain.org/technology",
     "ergo_blockchain_technology_eutxo_smart": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma 协议",
     "ergo_technology_stack_building_the_future": "Ergo Technology Stack - 构建未来",
     "advanced_blockchain_technology_eutxo_ergoscript": "高级区块链技术：eUTXO、ErgoScript、隐私功能和可持续的 PoW。",
@@ -2836,40 +2769,40 @@
     "sustainable_blockchain_state_management": "可持续区块链状态管理",
     "non_interactive_proofs_of_proof_of_work": "非交互式工作证明书",
     "ergoscriptPageOld": {
-      "features": {
-        "0": {
-          "title": "正式验证支持",
-          "description": "支持通过申报约束和头等加密原始进行正式验证和审计"
+      "features": [
+        {
+          "title": "Formal Verification Support",
+          "description": "Supports formal verification and auditability via declarative constraints and first-class crypto primitives"
         },
-        "1": {
-          "title": "eUTXO 安全模型",
-          "description": "在eUTXO 中缺少基于账户的系统共有的再入账功能类"
+        {
+          "title": "eUTXO Security Model",
+          "description": "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO"
         },
-        "2": {
-          "title": "决定性执行",
-          "description": "计算复杂性是可预测的，尽管网络费用是由市场驱动的"
+        {
+          "title": "Deterministic Execution",
+          "description": "Computational complexity is predictable, though network fees are market-driven"
         },
-        "3": {
-          "title": "本机Sigma 协议",
-          "description": "对多签名、门槛和环签名构造的一流支持"
+        {
+          "title": "Native Sigma Protocols",
+          "description": "First-class support for multi-signature, threshold, and ring-signature constructions"
         },
-        "4": {
-          "title": "UTXO 并发性",
-          "description": "高争议情况下具有批处理模式的并行交易处理"
+        {
+          "title": "UTXO Concurrency",
+          "description": "Parallel transaction processing with batcher patterns for high-contention scenarios"
         },
-        "5": {
-          "title": "受限计算",
-          "description": "脚本中的非Turing-complete for safe，但序列可以表达复杂的行为"
+        {
+          "title": "Restricted Computation",
+          "description": "Non-Turing-complete within scripts for safety, yet sequences can express complex behaviors"
         }
-      },
-      "useCases": {
-        "0": "非保管的 DeFi 协议",
-        "1": "自定义多签名钱包",
-        "2": "拍卖和DAOs",
-        "3": "Oracle系统",
-        "4": "隐私工具和混音器",
-        "5": "高级NFT合同"
-      }
+      ],
+      "useCases": [
+        "Non-custodial DeFi protocols",
+        "Custom multi-signature wallets",
+        "Auctions and DAOs",
+        "Oracle systems",
+        "Privacy tools and mixers",
+        "Advanced NFT contracts"
+      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -2891,32 +2824,32 @@
         "learnErgoScript": "学习 ErgoScript",
         "viewCode": "查看代码"
       },
-      "keyFeatures": {
-        "0": {
-          "title": "优先安全",
-          "description": "不再入场袭击，可预见的执行费用，正式的核查支助"
+      "keyFeatures": [
+        {
+          "title": "Security First",
+          "description": "No protocol-level reentrancy (by construction), predictable execution costs, formal verification support"
         },
-        "1": {
-          "title": "明示权力",
-          "description": "丰富的系统类型，Sigma协议，多阶段合同"
+        {
+          "title": "Expressive Power",
+          "description": "Rich type system, Sigma protocols, multi-stage contracts"
         },
-        "2": {
-          "title": "高成本",
-          "description": "可预测的费用，平行执行，优化为eUTXO"
+        {
+          "title": "Cost Efficient",
+          "description": "Predictable fees, parallel execution, optimized for eUTXO"
         },
-        "3": {
-          "title": "可合成的",
-          "description": "模块化设计，可重复使用组件，协议互操作性"
+        {
+          "title": "Composable",
+          "description": "Modular design, reusable components, protocol interoperability"
         },
-        "4": {
-          "title": "可验证",
-          "description": "数学证明、正式核实、可审计的逻辑。"
+        {
+          "title": "Verifiable",
+          "description": "Mathematical proofs, formal verification, auditable logic"
         },
-        "5": {
-          "title": "本地加密",
-          "description": "内置的 Sigma 协议、 零知识证明、 高级签名"
+        {
+          "title": "Cryptography Native",
+          "description": "Built-in Sigma protocols, zero-knowledge proofs, advanced signatures"
         }
-      },
+      ],
       "tabs": {
         "deepDive": "深度潜行",
         "useCases": "使用案例",
@@ -2944,66 +2877,66 @@
           "code": "{\n  val oracleBox = CONTEXT.dataInputs(0)\n  val price = oracleBox.R4[Long].get\n  val threshold = 100000L // $1000 in cents\n  \n  price > threshold\n}"
         }
       },
-      "technicalDetails": {
-        "0": {
-          "aspect": "语言设计",
-          "detail": "基于带功能编程原则的 Scala"
+      "technicalDetails": [
+        {
+          "aspect": "Language Design",
+          "detail": "Based on Scala with functional programming principles"
         },
-        "1": {
-          "aspect": "执行模型",
-          "detail": "没有共享的全局状态的 eUTXO 模型"
+        {
+          "aspect": "Execution Model",
+          "detail": "eUTXO model with no shared global state"
         },
-        "2": {
-          "aspect": "加密基金会",
-          "detail": "基于零知识证明的 Sigma 协议"
+        {
+          "aspect": "Cryptographic Foundation",
+          "detail": "Built on Sigma protocols for zero-knowledge proofs"
         },
-        "3": {
-          "aspect": "正式验证",
-          "detail": "数学合同正确性"
+        {
+          "aspect": "Formal Verification",
+          "detail": "Mathematical proofs of contract correctness"
         }
-      },
-      "useCases": {
-        "0": {
+      ],
+      "useCases": [
+        {
           "title": "DeFi Protocols",
-          "description": "建立分散化的交易所、借贷平台和农产品协议",
-          "examples": {
-            "0": "SigmaUSD stablecoin",
-            "1": "ErgodeX 交易",
-            "2": "旁观金融公司",
-            "3": "DuckPools 贷款"
-          }
+          "description": "Build decentralized exchanges, lending platforms, and yield farming protocols",
+          "examples": [
+            "SigmaUSD stablecoin",
+            "ErgoDEX exchange",
+            "Spectrum Finance",
+            "DuckPools lending"
+          ]
         },
-        "1": {
-          "title": "Oracle 系统",
-          "description": "为智能合约创建可靠的数据源",
-          "examples": {
-            "0": "价格摩尔",
-            "1": "天气数据",
-            "2": "运动结果",
-            "3": "IOT 传感器"
-          }
+        {
+          "title": "Oracle Systems",
+          "description": "Create reliable data feeds for smart contracts",
+          "examples": [
+            "Price oracles",
+            "Weather data",
+            "Sports results",
+            "IoT sensors"
+          ]
         },
-        "2": {
-          "title": "隐私应用程序",
-          "description": "实现隐私保护智能合同",
-          "examples": {
-            "0": "ErgoMixer",
-            "1": "环签名",
-            "2": "隐形地址",
-            "3": "私人投票"
-          }
+        {
+          "title": "Privacy Applications",
+          "description": "Implement privacy-preserving smart contracts",
+          "examples": [
+            "ErgoMixer",
+            "Ring signatures",
+            "Stealth addresses",
+            "Private voting"
+          ]
         },
-        "3": {
-          "title": "令牌系统",
-          "description": "创建和管理自定义令牌和 NFTs",
-          "examples": {
-            "0": "NFT 市场",
-            "1": "游戏令牌",
-            "2": "忠诚程序",
-            "3": "治理令牌"
-          }
+        {
+          "title": "Token Systems",
+          "description": "Create and manage custom tokens and NFTs",
+          "examples": [
+            "NFT marketplaces",
+            "Gaming tokens",
+            "Loyalty programs",
+            "Governance tokens"
+          ]
         }
-      },
+      ],
       "comparison": {
         "title": "ErgoScript vs. Other Smart Contract 语言",
         "codeComparison": {
@@ -3053,24 +2986,24 @@
       },
       "faq": {
         "title": "常见问题",
-        "items": {
-          "0": {
-            "question": "ErgoScript 如何防止重新进入的攻击？",
-            "answer": "eUTXO 模型删除在账户系统中找到的重新进入类别；每个交易消耗特定的 UTXOs ，不能“重新进入”。 没有共享的全局状态可以在执行过程中被操纵。"
+        "items": [
+          {
+            "question": "How does ErgoScript prevent re-entrancy attacks?",
+            "answer": "The eUTXO model removes the class of re-entrancy found in account systems; each transaction consumes specific UTXOs and cannot be 're-entered'. There's no shared global state that can be manipulated during execution."
           },
-          "1": {
-            "question": "ErgoScript Turing是否像Solid一样完整？",
-            "answer": "ErgoScript 故意不是为了安全和可预测性而在单个脚本内翻转完成(无循环或递归)。 然而，通过能够自我复制和演变的交易序列，都可能有转化的行为。"
+          {
+            "question": "Is ErgoScript Turing-complete like Solidity?",
+            "answer": "ErgoScript is intentionally not Turing-complete within individual scripts (no loops or recursion) for safety and predictability. However, Turing-complete behaviors are possible through sequences of transactions that can self-reproduce and evolve."
           },
-          "2": {
-            "question": "高需求应用程序的通过量和缩放是什么？",
-            "answer": "eUTXO 模型启用并行交易处理。 对于脱氧核糖核酸等高争执情景，批处理/聚合器模式可以收集多个订单并分批执行这些订单，同时在维持安全保证的同时有效地缩放输送量。"
+          {
+            "question": "What about throughput and scaling for high-demand applications?",
+            "answer": "The eUTXO model enables parallel transaction processing. For high-contention scenarios like DEXs, batcher/aggregator patterns can collect multiple orders and execute them in batches, effectively scaling throughput while maintaining the security guarantees."
           },
-          "3": {
-            "question": "我能使用 ErgoScript 构建复杂的 DeFi 应用程序吗？",
-            "answer": "是的，ErgoScript 支持复杂的金融工具，包括DEX、stablecoin、借贷协议和先进的NFT合同。 申报模式和本地原始加密模式往往使复杂的协议执行和审计比以账户为基础的系统更简单。"
+          {
+            "question": "Can I build complex DeFi applications with ErgoScript?",
+            "answer": "Yes. ErgoScript supports sophisticated financial instruments including DEXs, stablecoins, lending protocols, and advanced NFT contracts. The declarative model and native cryptographic primitives often make complex protocols simpler to implement and audit than on account-based systems."
           }
-        }
+        ]
       },
       "cta": {
         "title": "使用 ErgoScript 开始Building",
@@ -3080,61 +3013,61 @@
           "viewDocumentation": "查看文档"
         }
       },
-      "features": {
-        "0": {
-          "title": "正式验证支持",
-          "description": "支持通过申报约束和头等加密原始进行正式验证和审计",
-          "icon": "盾牌"
+      "features": [
+        {
+          "title": "Formal Verification Support",
+          "description": "Supports formal verification and auditability via declarative constraints and first-class crypto primitives",
+          "icon": "Shield"
         },
-        "1": {
-          "title": "eUTXO 安全模型",
-          "description": "在eUTXO 中缺少基于账户的系统共有的再入账功能类",
-          "icon": "锁定"
+        {
+          "title": "eUTXO Security Model",
+          "description": "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO",
+          "icon": "Lock"
         },
-        "2": {
-          "title": "决定性执行",
-          "description": "计算复杂性是可预测的，尽管网络费用是由市场驱动的",
+        {
+          "title": "Deterministic Execution",
+          "description": "Computational complexity is predictable, though network fees are market-driven",
           "icon": "Zap"
         },
-        "3": {
-          "title": "本机Sigma 协议",
-          "description": "对多签名、门槛和环签名构造的一流支持",
-          "icon": "代码"
+        {
+          "title": "Native Sigma Protocols",
+          "description": "First-class support for multi-signature, threshold, and ring-signature constructions",
+          "icon": "Code"
         },
-        "4": {
-          "title": "UTXO 并发性",
-          "description": "高争议情况下具有批处理模式的并行交易处理",
-          "icon": "复选圆"
+        {
+          "title": "UTXO Concurrency",
+          "description": "Parallel transaction processing with batcher patterns for high-contention scenarios",
+          "icon": "CheckCircle"
         },
-        "5": {
-          "title": "受限计算",
-          "description": "脚本中的非Turing-complete for safe，但序列可以表达复杂的行为",
-          "icon": "代码"
+        {
+          "title": "Restricted Computation",
+          "description": "Non-Turing-complete within scripts for safety, yet sequences can express complex behaviors",
+          "icon": "Code"
         }
-      },
+      ],
       "buttons": {
         "learnErgoScript": "学习 ErgoScript",
         "tryPlayground": "尝试游乐场"
       },
       "quickStartSection": {
         "title": "快速开始",
-        "items": {
-          "0": {
-            "title": "尝试在线游戏",
-            "description": "在您的浏览器中写入并测试 ErgoScript",
-            "icon": "终端"
+        "items": [
+          {
+            "title": "Try Online Playground",
+            "description": "Write and test ErgoScript in your browser",
+            "icon": "Terminal"
           },
-          "1": {
-            "title": "阅读文档",
-            "description": "完整指南和 API 参考",
-            "icon": "书签打开"
+          {
+            "title": "Read Documentation",
+            "description": "Comprehensive guides and API references",
+            "icon": "BookOpen"
           },
-          "2": {
-            "title": "加入社区",
-            "description": "从有经验的开发者获得帮助",
-            "icon": "用户"
+          {
+            "title": "Join Community",
+            "description": "Get help from experienced developers",
+            "icon": "Users"
           }
-        }
+        ]
       },
       "sections": {
         "keyFeatures": "关键功能",
@@ -3149,176 +3082,184 @@
       "securityCard": {
         "title": "优先安全",
         "description": "从头开始，以安全为首要关切，从而消除了整个类别的脆弱性。",
-        "items": {
-          "0": {
-            "title": "正式验证支持",
-            "description": "宣言制约因素促成了外部核查工具和审计",
-            "icon": "微瞄准镜"
+        "items": [
+          {
+            "title": "Formal Verification Support",
+            "description": "Declarative constraints enable external verification tools and auditing",
+            "icon": "Microscope"
           },
-          "1": {
-            "title": "eUTXO 安全模型",
-            "description": "没有一个共享的全球状态取消了重新进入脆弱程度类",
-            "icon": "护盾检查"
+          {
+            "title": "eUTXO Security Model",
+            "description": "No shared global state eliminates reentrancy vulnerability class",
+            "icon": "ShieldCheck"
           },
-          "2": {
-            "title": "本机Sigma 协议",
-            "description": "用于多方签名的一流加密原理",
+          {
+            "title": "Native Sigma Protocols",
+            "description": "First-class cryptographic primitives for multi-party signatures",
             "icon": "Zap"
           }
-        }
+        ]
       },
       "developerCard": {
         "title": "开发者体验",
         "description": "设计清晰易于使用，使所有开发者都可以使用复杂的加密操作。",
-        "items": {
-          "0": {
-            "title": "交互式游乐场",
-            "description": "在您的浏览器中立即测试合约，无需设置",
-            "icon": "文件文本"
+        "items": [
+          {
+            "title": "Interactive Playground",
+            "description": "Test contracts instantly in your browser without setup",
+            "icon": "FileText"
           },
-          "1": {
-            "title": "丰富的工具生态系统",
-            "description": "Java、JavaScript、Python和更多的 SDK",
-            "icon": "钥匙卷"
+          {
+            "title": "Rich Tooling Ecosystem",
+            "description": "SDKs for Java, JavaScript, Python, and more",
+            "icon": "KeyRound"
           },
-          "2": {
-            "title": "广泛的示例",
-            "description": "从准备生产的合同模板学习",
-            "icon": "谜题"
+          {
+            "title": "Extensive Examples",
+            "description": "Learn from reviewed contract examples and reusable templates",
+            "icon": "Puzzle"
           }
-        }
+        ]
       },
       "defiCard": {
         "title": "DeFi & 融资",
         "description": "以可预测的费用和正式核查建立安全的财务应用程序。",
-        "items": {
-          "0": {
-            "name": "非保管的 DeFi 协议",
-            "icon": "盾牌"
+        "items": [
+          {
+            "name": "Non-custodial DeFi protocols",
+            "icon": "Shield"
           },
-          "1": {
-            "name": "自定义多签名钱包",
-            "icon": "钥匙卷"
+          {
+            "name": "Custom multi-signature wallets",
+            "icon": "KeyRound"
           },
-          "2": {
-            "name": "分散化果园网络",
-            "icon": "眼镜"
+          {
+            "name": "Decentralized oracle networks",
+            "icon": "Eye"
           },
-          "3": {
-            "name": "稳定和原生令牌",
-            "icon": "硬币"
+          {
+            "name": "Stablecoins and native tokens",
+            "icon": "Coins"
           }
-        }
+        ]
       },
       "privacyCard": {
         "title": "隐私与治理",
         "description": "利用先进的加密技术来解决隐私保护和治理问题。",
-        "items": {
-          "0": {
-            "name": "隐私工具和混音器 (检查您管辖范围内的法律地位)",
-            "icon": "眼镜"
+        "items": [
+          {
+            "name": "Privacy tools and mixers (check legal status in your jurisdiction)",
+            "icon": "Eye"
           },
-          "1": {
-            "name": "DAO 与治理系统",
-            "icon": "用户"
+          {
+            "name": "DAOs & governance systems",
+            "icon": "Users"
           },
-          "2": {
-            "name": "高级NFT合同",
-            "icon": "谜题"
+          {
+            "name": "Advanced NFT contracts",
+            "icon": "Puzzle"
           },
-          "3": {
-            "name": "基于SPV/NIPPoW的协议",
-            "icon": "左箭头"
+          {
+            "name": "SPV/NIPoPoW-based protocols",
+            "icon": "ArrowLeftRight"
           }
-        }
+        ]
       },
       "learningCard": {
         "title": "学习资源",
         "description": "使用交互式教程和全面文档启动您的 ErgoScript 旅程。",
-        "items": {
-          "0": {
-            "name": "ErgoScript 游戏场"
+        "items": [
+          {
+            "name": "ErgoScript Playground",
+            "external": true
           },
-          "1": {
-            "name": "正式文件"
+          {
+            "name": "Official Documentation",
+            "external": true
           },
-          "2": {
-            "name": "代码示例和教程"
+          {
+            "name": "Code Examples & Tutorials",
+            "external": false
           },
-          "3": {
-            "name": "游戏书"
+          {
+            "name": "Playbooks",
+            "external": false
           }
-        }
+        ]
       },
       "toolsCard": {
         "title": "开发者工具",
         "description": "使用 ErgoScript 构建的基本工具和 SDK。",
-        "items": {
-          "0": {
-            "name": "JVM 和 Android 应用包"
+        "items": [
+          {
+            "name": "Appkit for JVM & Android",
+            "external": true
           },
-          "1": {
-            "name": "ErgoScript 编译器"
+          {
+            "name": "ErgoScript Compiler",
+            "external": true
           },
-          "2": {
-            "name": "SDK 和 APIs"
+          {
+            "name": "SDKs & APIs",
+            "external": false
           },
-          "3": {
-            "name": "Node.js 库"
+          {
+            "name": "Node.js Library",
+            "external": true
           }
-        }
+        ]
       },
       "keyAdvantages": {
         "title": "ErgoScript的密钥优势",
         "description": "以安全和数学精确作为核心原则从头上构建。",
-        "items": {
-          "0": {
-            "title": "eUTXO - 扩展比特币模型",
-            "description": "像比特币脚本一样，与输出工作而不是账号不同。与BTC不同，脚本对Defi、DAO和复杂合同更强大。",
-            "icon": "图层"
+        "items": [
+          {
+            "title": "eUTXO - Extended Bitcoin Model",
+            "description": "Like Bitcoin Script, works with outputs, not accounts. Unlike BTC, scripts are much more powerful for DeFi, DAO, and complex contracts.",
+            "icon": "Layers"
           },
-          "1": {
-            "title": "没有共享状态，不存在全局变量",
-            "description": "取消重返脆弱等级；减少某些多边环境协定模式，但并未完全防止前沿。",
-            "icon": "护盾检查"
+          {
+            "title": "No Shared State, No Global Variables",
+            "description": "Eliminates the reentrancy vulnerability class; mitigates some MEV patterns, but does not fully prevent frontrunning.",
+            "icon": "ShieldCheck"
           },
-          "2": {
-            "title": "密码学-第一设计",
-            "description": "西格玛协议和零知识证明是本土的。无需外部图书馆或复杂的执行。",
-            "icon": "锁定"
+          {
+            "title": "Cryptography-first Design",
+            "description": "Sigma protocols and zero-knowledge proofs are native. No need for external libraries or complex implementations.",
+            "icon": "Lock"
           },
-          "3": {
-            "title": "可预测的执行成本",
-            "description": "脚本执行成本被阻止；最后网络费用仍然由市场驱动(备用库条件)。",
+          {
+            "title": "Predictable Execution Costs",
+            "description": "Script execution cost is statically bounded; the final network fee is still market-driven (mempool conditions).",
             "icon": "Zap"
           }
-        }
+        ]
       },
       "philosophy": {
         "title": "哲学与设计",
         "description": "ErgoScript的设计哲学优先考虑安全、可预测性和数学严格性。",
-        "items": {
-          "0": {
-            "title": "受限计算",
-            "description": "有意限制防止无限循环并确保所有合同都可以预测地终止。",
-            "icon": "盾牌"
+        "items": [
+          {
+            "title": "Restricted Computation",
+            "description": "Intentionally limited to prevent infinite loops and ensure all contracts terminate predictably.",
+            "icon": "Shield"
           },
-          "1": {
-            "title": "声明脚本",
-            "description": "表达你想要实现的目标而不是如何实现。更易读和更少的错误。",
-            "icon": "文件文本"
+          {
+            "title": "Declarative Scripting",
+            "description": "Express what you want to achieve rather than how to achieve it. More readable and less error-prone.",
+            "icon": "FileText"
           },
-          "2": {
-            "title": "加密记事本",
-            "description": "认为合同是数学证明而不是必修程序。更安全和更可核查。",
-            "icon": "谜题"
+          {
+            "title": "Crypto Notepad",
+            "description": "Think of contracts as mathematical proofs rather than imperative programs. Safer and more verifiable.",
+            "icon": "Puzzle"
           },
-          "3": {
-            "title": "数学验证",
-            "description": "正规方法和数学证明确保您的合同与预定的工作完全一致。",
-            "icon": "微瞄准镜"
+          {
+            "title": "Mathematical Verification",
+            "description": "Formal methods and mathematical proofs ensure your contracts work exactly as intended.",
+            "icon": "Microscope"
           }
-        }
+        ]
       },
       "comparisonTable": {
         "title": "ErgoScript vs. Other Smart Contract 语言",
@@ -3793,32 +3734,32 @@
         "dex": {
           "title": "DEX 订单模式",
           "description": "使用框链进行Atomic swap执行",
-          "steps": {
-            "0": "创建带交换条件的订单框",
-            "1": "匹配器找到兼容的订单",
-            "2": "ErgoScript 验证交易条款",
-            "3": "用交换资产创建的新框"
-          }
+          "steps": [
+            "Create order box with swap conditions",
+            "Matcher finds compatible orders",
+            "ErgoScript validates trade terms",
+            "New boxes created with swapped assets"
+          ]
         },
         "oracle": {
           "title": "Oracle 池模式",
           "description": "分散化数据源的协商一致意见：",
-          "steps": {
-            "0": "Oracles 收集超链数据",
-            "1": "Sigma 协议证明是真实的",
-            "2": "池合同验证了协商一致意见的有效性",
-            "3": "验证数据在链上发布"
-          }
+          "steps": [
+            "Oracles collect off-chain data",
+            "Sigma protocols prove authenticity",
+            "Pool contract validates consensus",
+            "Verified data published on-chain"
+          ]
         },
         "dao": {
           "title": "DAO 投票模式",
           "description": "法定人数和超时的治理",
-          "steps": {
-            "0": "带条件的提案框",
-            "1": "带令牌锁定的投票期",
-            "2": "定量阈值验证",
-            "3": "执行或超时处理"
-          }
+          "steps": [
+            "Proposal box created with conditions",
+            "Voting period with token locking",
+            "Quorum threshold verification",
+            "Execution or timeout handling"
+          ]
         }
       },
       "strengths": {
@@ -3926,778 +3867,6 @@
           "eutxo": "扩展 UTXO 架构",
           "documentation": "技术规格说明",
           "sourceCode": "GitHub 代码库"
-        }
-      }
-    },
-    "techFeatures": {
-      "eutxoModel": {
-        "title": "eUTXO 模型",
-        "description": "支持并行智能合约执行和可组合 DeFi 应用的扩展 UTXO 模型。在保持 Bitcoin 成熟安全模型的同时消除重入攻击。",
-        "details": {
-          "parallelExecution": {
-            "title": "并行执行",
-            "description": "智能合约在没有全局状态冲突的情况下独立运行。"
-          },
-          "composability": {
-            "title": "可组合性",
-            "description": "从简单、可复用的组件构建复杂的 DeFi 应用。"
-          },
-          "bitcoinSecurity": {
-            "title": "比特币级别安全",
-            "description": "继承 UTXO 经过实战检验的双重花费防护。"
-          }
-        }
-      },
-      "ergoScript": {
-        "title": "ErgoScript",
-        "description": "专为安全性和灵活性设计的强大智能合约语言。内置用于零知识证明的 Sigma 协议，以及支持防弹合约的正式验证功能。",
-        "details": {
-          "formalVerification": {
-            "title": "正式验证",
-            "description": "用数学方式证明您的智能合约安全且无漏洞。"
-          },
-          "builtInPrivacy": {
-            "title": "内置隐私",
-            "description": "用于保密交易的原生零知识证明和环签名。"
-          },
-          "safeByDesign": {
-            "title": "设计安全",
-            "description": "防止重入攻击和意外行为等常见漏洞。"
-          }
-        }
-      },
-      "autolykos": {
-        "title": "Autolykos PoW",
-        "description": "高效节能、抗 ASIC 的挖矿算法，使网络参与民主化。专为 GPU 挖矿设计，保持网络去中心化且人人可参与。",
-        "details": {
-          "energyEfficient": {
-            "title": "高能效",
-            "description": "内存密集型算法与传统 PoW 相比降低了功耗。"
-          },
-          "soloMining": {
-            "title": "单人挖矿友好",
-            "description": "较低的准入门槛让个人矿工可以盈利参与。"
-          },
-          "asicResistant": {
-            "title": "抗 ASIC",
-            "description": "针对消费级 GPU 优化，防止挖矿中心化。"
-          }
-        }
-      },
-      "storageRent": {
-        "title": "存储租金",
-        "description": "防止区块链膨胀的革命性经济模型。闲置硬币在4年后支付少量租金，确保可持续的区块链大小和永久矿工奖励。",
-        "details": {
-          "sustainableBlockchain": {
-            "title": "可持续区块链",
-            "description": "自动清理未使用的数据，使区块链保持精简高效。"
-          },
-          "perpetualSecurity": {
-            "title": "永久安全",
-            "description": "矿工永远获得奖励，确保网络的长期安全。"
-          },
-          "resourceEfficient": {
-            "title": "资源高效",
-            "description": "维护可在普通硬件上运行的轻量级区块链。"
-          }
-        }
-      },
-      "sigmaProtocols": {
-        "title": "Sigma Protocols",
-        "description": "内置零知识证明，无需第三方解决方案或复杂配置即可实现隐私保护交易和高级密码功能。",
-        "details": {
-          "optionalPrivacy": {
-            "title": "可选隐私",
-            "description": "根据需要选择透明或保密的交易。"
-          },
-          "advancedSecurity": {
-            "title": "高级安全",
-            "description": "多签钱包、门限签名和安全投票系统。"
-          },
-          "developerFriendly": {
-            "title": "开发者友好",
-            "description": "简单的 API，为任何应用添加隐私功能。"
-          }
-        }
-      },
-      "sections": {
-        "ledgerModels": "区块链账本模型：UTXO 与账户模型",
-        "transactionFlow": "eUTXO 交易如何运作",
-        "keyDifferences": "eUTXO 与账户模型——关键差异",
-        "useCases": "eUTXO 实践——发光的场景",
-        "faq": "常见问题",
-        "conclusion": "结论：未来属于 eUTXO"
-      },
-      "models": {
-        "utxo": {
-          "title": "UTXO 模型（Bitcoin 风格）",
-          "description": "没有全局余额——只有未花费输出的集合。",
-          "analogy": "类比：像拥有现金钞票/硬币。每笔交易花费一些钞票，创建新的钞票。",
-          "strengths": "优点：",
-          "strengthsText": "简洁性、隐私性、并行处理、更易审计。",
-          "weakness": "缺点：",
-          "weaknessText": "不天然适合有状态的 dApp。"
-        },
-        "account": {
-          "title": "账户模型（Ethereum 风格）",
-          "description": "全局状态：每个账户有余额，合约有自己的数据存储。",
-          "analogy": "类比：像银行账户——所有资产在一处追踪。",
-          "strengths": "优点：",
-          "strengthsText": "直观，灵活适合有状态应用，天然支持图灵完备合约。",
-          "weaknesses": "缺点：",
-          "weaknessesText": "可能存在重入漏洞、不可预测的 gas 消耗、全局状态膨胀。"
-        }
-      },
-      "table": {
-        "aspect": "方面",
-        "eutxo": "eUTXO",
-        "account": "账户",
-        "advantage": "优势"
-      },
-      "conclusion": {
-        "text": "eUTXO 模型是一次量子跃升：它保留了 UTXO 的清晰性、安全性和可扩展性，同时解锁了真正的可编程性。对于希望构建健壮、可审计、面向未来的 dApp 的开发者来说——Ergo 的方法既强大又优雅。",
-        "startBuilding": "开始构建",
-        "exploreEcosystem": "探索生态系统"
-      }
-    },
-    "ergoScriptPage": {
-      "title": "ErgoScript",
-      "subtitle": "智能合约语言",
-      "description": "强大、安全的智能合约语言，内置加密原语和正式验证支持。",
-      "features": {
-        "formalVerification": {
-          "title": "正式验证支持",
-          "description": "通过声明式约束和一流加密原语支持正式验证和可审计性"
-        },
-        "eutxoSecurity": {
-          "title": "eUTXO 安全模型",
-          "description": "账户系统中常见的重入漏洞类在 eUTXO 中不存在"
-        },
-        "deterministicExecution": {
-          "title": "确定性执行",
-          "description": "计算复杂度是可预测的，尽管网络费用由市场决定"
-        },
-        "nativeSigmaProtocols": {
-          "title": "原生 Sigma Protocols",
-          "description": "对多签、门限和环签名构造的一流支持"
-        },
-        "utxoConcurrency": {
-          "title": "UTXO 并发性",
-          "description": "针对高争用场景使用批处理模式的并行交易处理"
-        },
-        "richDataTypes": {
-          "title": "丰富的数据类型",
-          "description": "原生支持复杂数据结构、集合和加密操作"
-        }
-      },
-      "useCases": {
-        "defi": {
-          "title": "DeFi 协议",
-          "description": "去中心化交易所、借贷平台和算法稳定币"
-        },
-        "nfts": {
-          "title": "NFT 市场",
-          "description": "具有复杂所有权和交易逻辑的唯一数字资产"
-        },
-        "governance": {
-          "title": "DAO 治理",
-          "description": "去中心化投票系统和国库管理"
-        },
-        "privacy": {
-          "title": "隐私应用程序",
-          "description": "零知识证明和保密交易"
-        },
-        "oracles": {
-          "title": "Oracle 系统",
-          "description": "去中心化数据源和价格发现机制"
-        },
-        "gaming": {
-          "title": "游戏与元宇宙",
-          "description": "游戏内资产、虚拟经济和边玩边赚机制"
-        }
-      }
-    },
-    "nipopowsPage": {
-      "title": "NIPoPoWs",
-      "subtitle": "非交互式工作量证明的证明",
-      "description": "革命性的密码学证明，无需下载完整区块链即可支持轻型客户端、跨链协议和移动端验证。",
-      "benefits": {
-        "interoperability": {
-          "title": "互操作性",
-          "description": "支持 SPV/NIPoPoW 风格协议和信任最小化的跨链交互。"
-        },
-        "lightClients": {
-          "title": "轻型客户端",
-          "description": "在移动端或网页上无需下载完整区块链即可安全验证。"
-        },
-        "fastVerification": {
-          "title": "快速验证",
-          "description": "使用紧凑证明而非完整同步，在数秒内验证链工作量。"
-        },
-        "trustless": {
-          "title": "无需信任",
-          "description": "无需可信中继或验证器；验证遵循 PoW 假设。"
-        }
-      },
-      "useCases": {
-        "crossChain": {
-          "title": "跨链协议",
-          "description": "信任最小化的跨链桥和 SPV 风格的互操作性。",
-          "example": "Rosen Bridge"
-        },
-        "mobileWallets": {
-          "title": "移动钱包",
-          "description": "使用简洁证明验证链工作量的轻型钱包。",
-          "example": "Ergo 移动端"
-        },
-        "oracleSystems": {
-          "title": "Oracle 系统",
-          "description": "高效验证外部链上数据。",
-          "example": "Oracle 池"
-        },
-        "sidechains": {
-          "title": "侧链",
-          "description": "侧链可以简洁地验证 L1 以保证安全性和活性。",
-          "example": "研究实施"
-        }
-      },
-      "comparison": {
-        "verificationTime": {
-          "aspect": "验证时间",
-          "traditional": "几小时到几天（完整同步）",
-          "nipopows": "数秒到数分钟",
-          "advantage": "NIPoPoWs"
-        },
-        "dataRequired": {
-          "aspect": "所需数据",
-          "traditional": "完整的区块链历史",
-          "nipopows": "小型加密证明",
-          "advantage": "NIPoPoWs"
-        },
-        "trustRequirements": {
-          "aspect": "信任要求",
-          "traditional": "信任完整节点或验证器",
-          "nipopows": "无需信任的加密验证",
-          "advantage": "NIPoPoWs"
-        },
-        "mobileCompatibility": {
-          "aspect": "移动端兼容性",
-          "traditional": "因大小而不切实际",
-          "nipopows": "针对移动设备优化",
-          "advantage": "NIPoPoWs"
-        },
-        "securityModel": {
-          "aspect": "安全模型",
-          "traditional": "因设计而异",
-          "nipopows": "保留 PoW 假设",
-          "advantage": "NIPoPoWs"
-        },
-        "finalityHandling": {
-          "aspect": "最终性处理",
-          "traditional": "具体实现相关",
-          "nipopows": "观察窗口；新证明可替换旧证明",
-          "advantage": "NIPoPoWs"
-        },
-        "stateAccess": {
-          "aspect": "状态访问",
-          "traditional": "设备上的完整状态",
-          "nipopows": "仅事件/工作证明（无完整状态）",
-          "advantage": "视情况而定"
-        }
-      },
-      "workingSteps": {
-        "eventOccurs": {
-          "title": "事件发生",
-          "description": "Ergo 上出现一笔交易或区块。"
-        },
-        "proofGeneration": {
-          "title": "证明生成",
-          "description": "从采样的区块头构建简洁证明。"
-        },
-        "verification": {
-          "title": "验证",
-          "description": "任何人可以快速且无需信任地验证证明。"
-        }
-      }
-    },
-    "privacyFeaturesPage": {
-      "title": "隐私功能",
-      "subtitle": "Sigma Protocols 与保密交易",
-      "description": "内置于 Ergo 协议的高级密码学隐私工具。无需可信设置的零知识证明、环签名和保密交易。",
-      "technologies": {
-        "sigmaProtocols": {
-          "title": "Sigma Protocols",
-          "description": "在协议层面启用强大的隐私工具，如环签名和零知识证明。",
-          "features": {
-            "0": "零知识证明",
-            "1": "环签名",
-            "2": "门限签名",
-            "3": "可组合隐私"
-          }
-        },
-        "ergoMixer": {
-          "title": "ErgoMixer",
-          "description": "链上、非托管混币，用于交易隐私和匿名性。",
-          "features": {
-            "0": "非托管混币",
-            "1": "链上隐私",
-            "2": "代币混币支持",
-            "3": "可配置匿名性"
-          }
-        },
-        "confidentialAssets": {
-          "title": "保密资产",
-          "description": "发行隐藏金额和规则的代币以获得最大隐私。",
-          "features": {
-            "0": "隐藏代币数量",
-            "1": "私有智能合约",
-            "2": "保密交易",
-            "3": "选择性披露"
-          }
-        }
-      },
-      "advantages": "无需可信设置——纯加密安全,在 dApps、DeFi 和 NFT 中可用的灵活隐私功能,开源、经同行评审的加密技术,可与其他 Ergo 功能组合,内置于协议中而非事后添加,经数学证明的安全保证",
-      "useCases": {
-        "privateTransactions": {
-          "title": "私密交易",
-          "description": "混合您的 ERG 和代币以实现强大的链上匿名性（在当前匿名集内）",
-          "example": "ErgoMixer"
-        },
-        "confidentialDefi": {
-          "title": "保密 DeFi",
-          "description": "构建具有私有余额和逻辑的 DeFi 应用",
-          "example": "私密 DEX 订单"
-        },
-        "anonymousVoting": {
-          "title": "匿名投票",
-          "description": "创建具有无记名投票的 DAO 和投票系统",
-          "example": "DAO 治理"
-        },
-        "privateNfts": {
-          "title": "私密 NFT",
-          "description": "带有隐藏元数据或所有权信息的 NFT",
-          "example": "保密收藏品"
-        }
-      }
-    },
-    "oraclePoolsPage": {
-      "title": "Oracle 池",
-      "subtitle": "去中心化价格数据源",
-      "description": "可靠、基于共识的 oracle 系统，为 DeFi 应用提供准确的价格数据，无需中央机构或单点故障。",
-      "features": {
-        "reliablePriceFeeds": {
-          "title": "可靠的价格数据源",
-          "description": "基于共识的数据聚合确保价格准确且抗操纵"
-        },
-        "universalCompatibility": {
-          "title": "通用兼容性",
-          "description": "任何智能合约都可以在无需特殊集成的情况下访问 oracle 数据"
-        },
-        "fullyDecentralized": {
-          "title": "完全去中心化",
-          "description": "数据管道中没有中央机构或单点故障"
-        },
-        "economicSecurity": {
-          "title": "经济安全",
-          "description": "基于质押的激励机制确保诚实的数据提供"
-        },
-        "consensusMechanism": {
-          "title": "共识机制",
-          "description": "异常值检测和平均计算以确保数据质量稳健"
-        },
-        "lowLatencyUpdates": {
-          "title": "低延迟更新",
-          "description": "频繁更新确保 DeFi 应用的数据新鲜度"
-        }
-      },
-      "technicalDetails": {
-        "dataAggregation": {
-          "title": "数据聚合",
-          "content": "oracle 池使用稳健的平均机制，通过去除提交数据中前25%和后25%的异常值来过滤极端值，然后计算剩余值的平均数作为共识结果。"
-        },
-        "updateTriggers": {
-          "title": "更新触发器",
-          "content": "当价格偏差超过阈值（如0.5%）、距上次更新的最长时间（如1小时）或达到最低 oracle 提交数时，将发布新数据。"
-        },
-        "economicSecurity": {
-          "title": "经济安全",
-          "content": "oracle 运营商必须质押抵押品，对恶意行为进行惩罚，对诚实参与给予奖励，为可靠数据创造强大的经济激励。"
-        },
-        "attackResistance": {
-          "title": "抗攻击性",
-          "content": "通过质押防止女巫攻击，异常值过滤防止操纵，去中心化防止对 oracle 数据的审查。"
-        }
-      },
-      "useCases": {
-        "sigmaUsdStablecoin": {
-          "title": "SigmaUSD 稳定币",
-          "description": "使用 ERG/USD 价格数据进行抵押计算的算法稳定币"
-        },
-        "spectrumDex": {
-          "title": "Spectrum DEX",
-          "description": "使用价格数据进行限价订单和清算的去中心化交易所"
-        },
-        "lendingProtocols": {
-          "title": "借贷协议",
-          "description": "使用 oracle 价格作为清算阈值的抵押借贷"
-        }
-      }
-    },
-    "subblocksPage": {
-      "title": "子块",
-      "subtitle": "亚秒级确认",
-      "description": "革命性的扩展解决方案，在完整第一层安全性下提供近即时的交易最终确定性。无需跨链桥，无需妥协。",
-      "features": {
-        "subSecondConfirmations": {
-          "title": "亚秒级确认",
-          "description": "近即时的交易最终确定性，在不牺牲去中心化的前提下改善用户体验"
-        },
-        "layer1Security": {
-          "title": "第一层安全",
-          "description": "无需可信中间人或跨链桥的完整区块链安全"
-        },
-        "seamlessIntegration": {
-          "title": "无缝集成",
-          "description": "与现有基础设施配合使用——无需跨链桥或侧链"
-        },
-        "parallelProcessing": {
-          "title": "并行处理",
-          "description": "多个子块可以并行验证以提高吞吐量"
-        },
-        "adaptiveDifficulty": {
-          "title": "自适应难度",
-          "description": "动态调整确保即使算力波动也能保持稳定的出块时间"
-        },
-        "minerIncentives": {
-          "title": "矿工激励",
-          "description": "为子块矿工提供额外奖励，同时维护主链安全"
-        }
-      },
-      "technicalDetails": {
-        "architecture": {
-          "title": "架构",
-          "content": "子块是主块之间的中间块，提供更快的确认。它们与主块保持相同的安全模型，但难度目标有所调整。"
-        },
-        "consensusMechanism": {
-          "title": "共识机制",
-          "content": "使用允许可变难度目标的改进版 Autolykos。子块为整体链重量做贡献，同时保持与现有基础设施的兼容性。"
-        },
-        "transactionOrdering": {
-          "title": "交易排序",
-          "content": "子块中的交易使用时间戳和交易 ID 的组合进行确定性排序，防止抢先交易并确保公平。"
-        },
-        "stateManagement": {
-          "title": "状态管理",
-          "content": "子块增量更新 UTXO 集合，允许高效的状态转换而无需完整块验证的开销。"
-        }
-      },
-      "useCases": {
-        "defiApplications": {
-          "title": "DeFi 应用",
-          "description": "支持高频交易和亚秒级最终确定性的即时兑换"
-        },
-        "paymentSystems": {
-          "title": "支付系统",
-          "description": "即时确认的销售点交易"
-        },
-        "gaming": {
-          "title": "游戏",
-          "description": "无需等待区块确认的实时游戏状态更新"
-        },
-        "socialApplications": {
-          "title": "社交应用",
-          "description": "链上即时消息和社交互动"
-        }
-      }
-    },
-    "velvetForksPage": {
-      "title": "Velvet Forks",
-      "subtitle": "平滑的协议演进",
-      "description": "革命性的升级机制，无需强制升级或网络分裂即可实现向后兼容的协议改进。",
-      "features": {
-        "backwardCompatible": {
-          "title": "向后兼容",
-          "description": "无强制升级，无链战——新功能与未升级节点共存"
-        },
-        "futureProof": {
-          "title": "面向未来",
-          "description": "按照自己的节奏采用创新，不造成网络中断"
-        },
-        "gradualAdoption": {
-          "title": "渐进采用",
-          "description": "演进式而非革命性的变革——网络平稳演化"
-        },
-        "consensusPreservation": {
-          "title": "共识保护",
-          "description": "即使不同节点版本并存也能维护网络共识"
-        },
-        "securityFirst": {
-          "title": "安全优先",
-          "description": "新功能仅在达到安全多数采用率后才激活"
-        },
-        "developerFriendly": {
-          "title": "开发者友好",
-          "description": "在主网测试新功能而不破坏现有应用程序"
-        }
-      },
-      "useCases": {
-        "nipopowsIntegration": {
-          "title": "NIPoPoWs 集成",
-          "description": "NIPoPoWs 可以作为可选功能添加，支持轻型客户端，而无需强制所有节点支持它们。",
-          "linkText": "了解 NIPoPoWs →"
-        },
-        "privacyEnhancements": {
-          "title": "隐私增强",
-          "description": "环签名或隐身地址等高级隐私功能可以在不破坏现有透明交易的情况下引入。",
-          "linkText": "探索隐私功能 →"
-        },
-        "smartContractExtensions": {
-          "title": "智能合约扩展",
-          "description": "可以为希望使用的开发者添加新的操作码和脚本能力，同时现有合约继续正常运行。",
-          "linkText": "了解 ErgoScript →"
-        },
-        "consensusImprovements": {
-          "title": "共识改进",
-          "description": "对块验证、挖矿算法或网络协议的优化可以逐步测试和采用。",
-          "linkText": "关于 Autolykos →"
-        }
-      }
-    },
-    "adaptiveEmissionPage": {
-      "title": "自适应排放",
-      "subtitle": "灵活的经济参数",
-      "description": "社区驱动的治理系统，通过矿工投票实现参数调整，确保长期可持续性和网络适应性。",
-      "features": {
-        "parameterTuning": {
-          "title": "参数调整",
-          "description": "经济变量可以根据网络状况进行调整"
-        },
-        "economicFlexibility": {
-          "title": "经济灵活性",
-          "description": "无需硬分叉即可适应不断变化的网络需求"
-        },
-        "communityInput": {
-          "title": "社区参与",
-          "description": "讨论和决策涉及整个社区"
-        },
-        "minerVoting": {
-          "title": "矿工投票",
-          "description": "矿工通过区块头对参数变更进行投票"
-        },
-        "gradualChanges": {
-          "title": "渐进变化",
-          "description": "参数平稳调整以防止经济冲击"
-        },
-        "longTermSustainability": {
-          "title": "长期可持续性",
-          "description": "确保即使排放结束后网络安全仍能持续"
-        }
-      },
-      "governance": {
-        "emissionSchedule": {
-          "title": "排放计划",
-          "description": "逐渐减少的排放，伴随周期性削减，以及通过存储租金和交易费实现的排放后可持续性。",
-          "linkText": "了解治理 →"
-        },
-        "storageRentEconomics": {
-          "title": "存储租金经济学",
-          "description": "超过4年未花费的 UTXO 支付存储费用，为矿工提供可持续收入并防止状态膨胀。",
-          "linkText": "存储租金详情 →"
-        },
-        "minerVotingProcess": {
-          "title": "矿工投票流程",
-          "description": "社区提案、1024 轮次投票期、90% 门槛要求和渐进激活。",
-          "linkText": "投票机制 →"
-        },
-        "economicParameters": {
-          "title": "经济参数",
-          "description": "可调参数包括块大小、存储费用系数、最低费用和计算成本限制。",
-          "linkText": "参数详情 →"
-        }
-      },
-      "historicalVotes": {
-        "eip27": {
-          "title": "重新排放软分叉",
-          "description": "延长排放计划以确保网络的长期安全"
-        },
-        "eip37": {
-          "title": "难度调整",
-          "description": "改进的难度调整算法以实现更稳定的出块时间"
-        }
-      }
-    },
-    "nativeTokensPage": {
-      "title": "原生代币与 NFT",
-      "subtitle": "Ergo 上的一流资产",
-      "description": "直接在协议层面创建和交易代币和 NFT。无需智能合约——只需简单、安全且经济高效的原生资产。",
-      "features": {
-        "oneClick": {
-          "title": "一键创建",
-          "description": "在单笔交易中发行代币、稳定币或 NFT，无需智能合约"
-        },
-        "nativeAssets": {
-          "title": "真正的原生资产",
-          "description": "具有协议级安全保证的一流代币，而非基于合约"
-        },
-        "defiReady": {
-          "title": "DeFi 就绪",
-          "description": "与所有 Ergo 应用程序和协议的原生集成"
-        },
-        "costEffective": {
-          "title": "成本低廉",
-          "description": "代币创建和转账的最低费用——只需简单、安全的原生资产"
-        },
-        "richMetadata": {
-          "title": "丰富的元数据",
-          "description": "支持包括图像、描述和自定义属性在内的复杂元数据"
-        },
-        "universalCompatibility": {
-          "title": "通用兼容性",
-          "description": "任何智能合约都可以在无需特殊集成的情况下访问 oracle 数据"
-        }
-      },
-      "useCases": {
-        "defiTokens": {
-          "title": "DeFi 代币",
-          "description": "为 DeFi 协议创建治理代币、实用代币和奖励代币"
-        },
-        "nftCollections": {
-          "title": "NFT 系列",
-          "description": "构建独特的数字艺术品、收藏品和游戏资产"
-        },
-        "stablecoins": {
-          "title": "稳定币",
-          "description": "发行算法或抵押稳定价值代币"
-        },
-        "loyaltyPrograms": {
-          "title": "忠诚度计划",
-          "description": "为企业创建积分和忠诚度代币"
-        },
-        "gameAssets": {
-          "title": "游戏资产",
-          "description": "具有真正所有权的游戏内物品、角色和货币"
-        },
-        "identityTokens": {
-          "title": "身份代币",
-          "description": "声誉系统和身份验证代币"
-        }
-      }
-    },
-    "storageRentPage": {
-      "title": "存储租金",
-      "subtitle": "可持续的区块链经济",
-      "description": "Ergo 的存储租金机制通过回收未使用的输出来防止区块链膨胀并确保长期可持续性。",
-      "problems": {
-        "blockchainBloat": {
-          "title": "区块链膨胀",
-          "description": "传统区块链随着时间积累未使用数据，导致低效和更高成本。",
-          "stats": "浪费空间超过 2TB"
-        },
-        "forgottenWallets": {
-          "title": "遗忘的钱包",
-          "description": "丢失的私钥意味着资金永远被锁定，减少了实际流通的货币供应量。",
-          "stats": "超过 400 万枚丢失的硬币"
-        },
-        "scalabilityIssues": {
-          "title": "可扩展性问题",
-          "description": "不断增长的区块链大小使新节点更难同步并参与网络。",
-          "stats": "需要同步超过 500GB"
-        }
-      },
-      "solutions": {
-        "automaticCleanup": {
-          "title": "自动清理",
-          "description": "存储租金自动从区块链状态中移除旧的未使用输出。"
-        },
-        "fundRecycling": {
-          "title": "资金回收",
-          "description": "遗忘钱包中的硬币通过矿工逐渐返回流通。"
-        },
-        "sustainableGrowth": {
-          "title": "可持续增长",
-          "description": "区块链大小保持可管理，确保网络的长期健康。"
-        }
-      },
-      "howItWorks": {
-        "title": "存储租金如何运作",
-        "steps": {
-          "creation": {
-            "title": "盒子创建",
-            "description": "当您创建 UTXO（盒子）时，它以全额价值开始，无需缴纳租金。"
-          },
-          "aging": {
-            "title": "老化过程",
-            "description": "在4年不活动后，该盒子开始需要缴纳存储租金。"
-          },
-          "collection": {
-            "title": "租金收取",
-            "description": "矿工可以收取租金，逐渐减少盒子价值，直到其被花费或回收。"
-          },
-          "recycling": {
-            "title": "完全回收",
-            "description": "如果租金未缴纳，剩余价值归矿工所有，盒子被移除。"
-          }
-        }
-      }
-    },
-    "eutxoModelPage": {
-      "title": "eUTXO 模型",
-      "subtitle": "用于智能合约的扩展 UTXO",
-      "description": "Ergo 的 eUTXO 模型将 Bitcoin 的安全性与 Ethereum 的可编程性结合，支持并行处理和可预测的费用。",
-      "modelComparison": {
-        "stateManagement": {
-          "aspect": "状态管理",
-          "utxo": "没有全局余额——只有未花费输出",
-          "account": "具有账户余额和存储的全局状态",
-          "advantage": "eUTXO"
-        },
-        "security": {
-          "aspect": "安全性",
-          "utxo": "账户系统中常见的重入漏洞类在 eUTXO 中不存在；脚本执行成本有界",
-          "account": "账户系统典型的重入漏洞类；gas 成本可能不可预测",
-          "advantage": "eUTXO"
-        },
-        "parallelism": {
-          "aspect": "并行性",
-          "utxo": "独立的盒子支持并行处理",
-          "account": "状态争用强制顺序处理",
-          "advantage": "eUTXO"
-        },
-        "privacy": {
-          "aspect": "隐私性",
-          "utxo": "UTXO 混合，Σ 协议用于高级隐私",
-          "account": "全局状态默认使隐私更难实现",
-          "advantage": "eUTXO"
-        },
-        "tokenHandling": {
-          "aspect": "代币处理",
-          "utxo": "代币是盒子中的一等公民",
-          "account": "需要独立的合约逻辑（ERC-20/721）",
-          "advantage": "eUTXO"
-        },
-        "learningCurve": {
-          "aspect": "学习曲线",
-          "utxo": "需要\"以盒子思考\"，不同的范式",
-          "account": "对传统开发者更直观",
-          "advantage": "账户模型"
-        }
-      },
-      "boxComponents": {
-        "value": {
-          "name": "价值",
-          "description": "ERG + 自定义代币"
-        },
-        "guardingScript": {
-          "name": "守卫脚本",
-          "description": "控制花费条件的 ErgoScript 代码"
-        },
-        "registers": {
-          "name": "寄存器（R0–R9）",
-          "description": "用户定义：R4–R9（R0–R3 为协议保留）"
-        },
-        "metadata": {
-          "name": "元数据",
-          "description": "创建高度，boxId（由创建交易派生）"
         }
       }
     }
@@ -5026,39 +4195,39 @@
         "hardFork": {
           "title": "硬叉数",
           "description": "打破需要所有节点升级的更改",
-          "pros": {
-            "0": "可以重新设计完整的协议",
-            "1": "可以修复根本问题"
-          },
-          "cons": {
-            "0": "网络拆分的风险",
-            "1": "需要协调升级"
-          }
+          "pros": [
+            "Complete protocol redesign possible",
+            "Can fix fundamental issues"
+          ],
+          "cons": [
+            "Risk of network split",
+            "Requires coordinated upgrade"
+          ]
         },
         "softFork": {
           "title": "软叉地址",
           "description": "收紧规则的后向兼容更改",
-          "pros": {
-            "0": "维护后向兼容性",
-            "1": "无需强制升级"
-          },
-          "cons": {
-            "0": "限制收紧规则",
-            "1": "无法轻松添加新功能"
-          }
+          "pros": [
+            "Maintains backward compatibility",
+            "No forced upgrades required"
+          ],
+          "cons": [
+            "Limited to rule tightening",
+            "Cannot add new features easily"
+          ]
         },
         "velvetFork": {
           "title": "Velvet Fork",
           "description": "Ergo的方法：逐渐引进具有完全兼容性的功能",
-          "pros": {
-            "0": "未发生任何突发性变化",
-            "1": "渐进功能通过",
-            "2": "保护生态系统的稳定性"
-          },
-          "tradeoffs": {
-            "0": "慢速展开功能",
-            "1": "需要仔细设计"
-          }
+          "pros": [
+            "No breaking changes ever",
+            "Gradual feature adoption",
+            "Preserves ecosystem stability"
+          ],
+          "tradeoffs": [
+            "Slower feature rollout",
+            "Requires careful design"
+          ]
         }
       },
       "useCasesTitle": "使用案例",
@@ -5111,51 +4280,51 @@
         "twitterTitle": "存储出租器 | 永远解决区块链Bloat",
         "twitterDescription": "可持续经济：自动清理，永久矿工奖励，高效区块链。"
       },
-      "problems": {
-        "0": {
-          "title": "区块链膨胀",
-          "description": "传统的区块链无限增长，从而使完整的节点操作更加昂贵。",
-          "stats": "~500GB/年增长"
+      "problems": [
+        {
+          "title": "Blockchain Bloat",
+          "description": "Traditional blockchains grow indefinitely, making full node operation increasingly expensive",
+          "stats": "~500GB/year growth"
         },
-        "1": {
-          "title": "丢失的硬币",
-          "description": "数百万丢失或被遗忘的硬币造成永久性区块链开销。",
-          "stats": "~20% 的供应"
+        {
+          "title": "Lost Coins",
+          "description": "Millions in lost or forgotten coins create permanent blockchain overhead",
+          "stats": "~20% of supply"
         },
-        "2": {
-          "title": "矿工收入",
-          "description": "阻止奖励随着时间的推移而减少，威胁到长期安全",
-          "stats": "-50%/四年"
+        {
+          "title": "Miner Revenue",
+          "description": "Block rewards decrease over time, threatening long-term security",
+          "stats": "-50% every 4 years"
         }
-      },
-      "benefits": {
-        "0": "阻止区块链无限增长",
-        "1": "创建可持续矿工收入",
-        "2": "网络保护",
-        "3": "清除丢失/遗忘的硬币",
-        "4": "提高成本",
-        "5": "调整激励措施"
-      },
-      "timeline": {
-        "0": {
-          "year": "箱子已创建",
-          "status": "活动的 UTXO",
-          "description": "正常操作，无租金权责发生制",
-          "details": "任何交易重置4年计时器"
+      ],
+      "benefits": [
+        "Prevents unlimited blockchain growth",
+        "Creates sustainable miner revenue",
+        "Protects network decentralization",
+        "Cleans up lost/forgotten coins",
+        "Makes costs predictable",
+        "Aligns incentives"
+      ],
+      "timeline": [
+        {
+          "year": "Box Created",
+          "status": "Active UTXO",
+          "description": "Normal operation, no rent accrual",
+          "details": "Any transaction resets the 4-year timer"
         },
-        "1": {
-          "year": "4 年后",
-          "status": "租金开始权重",
-          "description": "继续储存小笔费用",
-          "details": "~0.14 每4年期间ERG"
+        {
+          "year": "4 Years Later",
+          "status": "Rent begins accruing",
+          "description": "Small fee charged for continued storage",
+          "details": "~0.14 ERG per 4-year period"
         },
-        "2": {
-          "year": "已拆除的盒子",
-          "status": "B. 有资格提出矿工索赔",
-          "description": "如果租金没有支付，剩余值则给矿工们。",
-          "details": "资金回到活跃的发行中"
+        {
+          "year": "Box Depleted",
+          "status": "Eligible for miner claim",
+          "description": "If rent isn't paid, remaining value goes to miners",
+          "details": "Funds return to active circulation"
         }
-      },
+      ],
       "schema": {
         "techArticle": {
           "headline": "存储租金：可持续区块链经济",

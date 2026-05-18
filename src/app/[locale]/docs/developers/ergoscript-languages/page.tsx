@@ -81,7 +81,7 @@ export default function ErgoScriptLanguagesPage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Scalability</h4>
-                  <p>In the account model, both storage changes and validity checks happen <b>on-chain</b> during contract execution. In Ergo, <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">transactions</Link> are typically created <b>off-chain</b>, and only the validation checks occur on-chain. This significantly reduces the computational load on validating <Link href="/docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">nodes</Link>. The immutable nature of the transaction graph also allows for various optimizations to improve throughput. Furthermore, Ergo's design facilitates <Link href="/docs/introduction/light-clients" className="text-cyan-400 hover:underline font-semibold">light verifying nodes</Link> (via <Link href="/docs/introduction/nipopows" className="text-cyan-400 hover:underline">NIPoPoWs</Link>), enhancing network <Link href="/docs/technology" className="text-cyan-400 hover:underline">scalability</Link> and accessibility.</p>
+                  <p>In the account model, both storage changes and validity checks happen <b>on-chain</b> during contract execution. In Ergo, <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">transactions</Link> are typically created <b>off-chain</b>, and only the validation checks occur on-chain. This significantly reduces the computational load on validating <Link href="/docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">nodes</Link>. The immutable nature of the transaction graph also allows for various optimizations to improve throughput. Furthermore, Ergo's design facilitates <Link href="/docs/introduction/light-clients" className="text-cyan-400 hover:underline font-semibold">light verifying nodes</Link> (via <Link href="/docs/introduction/nipopows" className="text-cyan-400 hover:underline">NIPoPoWs</Link>), enhancing network <Link href="/technology" className="text-cyan-400 hover:underline">scalability</Link> and accessibility.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Shared State</h4>
@@ -227,7 +227,7 @@ export default function ErgoScriptLanguagesPage() {
               <h3 className="text-lg font-semibold text-orange-400 mb-2">Advanced:</h3>
               <ul className="list-disc pl-6 text-gray-300 space-y-1">
                 <li>Understand <Link href="/docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-cyan-400 hover:underline">ErgoTree Compilation & Serialization</Link>.</li>
-                <li>Explore advanced <Link href="/docs/developers/crypto" className="text-cyan-400 hover:underline">cryptographic protocols</Link>.</li>
+                <li>Explore advanced <Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">cryptographic protocols</Link>.</li>
                 <li>Contribute to open-source projects or build your own dApp.</li>
               </ul>
             </div>
@@ -242,18 +242,18 @@ export default function ErgoScriptLanguagesPage() {
             ErgoScript's foundation on Sigma Protocols allows for powerful cryptographic primitives. However, some advanced structures have specific considerations:
           </div>
           <div className="text-gray-300 mb-6 max-w-2xl">
-            <b>Merkle Trees:</b> While <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-cyan-400 hover:underline">Merkle Trees</Link> are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs <i>within</i> an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The <Link href="/docs/developers/tx/mast-example" className="text-cyan-400 hover:underline">MAST pattern</Link> leverages Merkle trees conceptually, often using <code>executeFromVar</code> for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-cyan-400 hover:underline">Merkle Tree documentation</Link>.
+            <b>Merkle Trees:</b> While <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-cyan-400 hover:underline">Merkle Trees</Link> are fundamental to Ergo's data integrity (e.g., for transactions and extension data), direct verification of arbitrary Merkle proofs <i>within</i> an ErgoScript contract is not natively supported by a single built-in function. Verification typically happens off-chain or relies on specific protocol designs where roots are checked. The <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">MAST pattern</Link> leverages Merkle trees conceptually, often using <code>executeFromVar</code> for on-chain execution of proven branches rather than full proof verification within the script. Developers interested in the general concept and off-chain usage should consult the main <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-cyan-400 hover:underline">Merkle Tree documentation</Link>.
           </div>
 
           <h2 className="text-2xl font-bold text-cyan-400 mb-4">Related Technical Resources</h2>
           <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
             <li><Link href="/docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-cyan-400 hover:underline">ErgoTree Documentation</Link></li>
             <li><Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma Protocols Overview</Link></li>
-            <li><Link href="/docs/developers/schnorr" className="text-cyan-400 hover:underline">Schnorr Signatures</Link></li>
+            <li><Link href="/docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">Schnorr Signatures</Link></li>
             <li><Link href="/docs/introduction/nipopows" className="text-cyan-400 hover:underline">Light Verifying Nodes</Link></li>
             <li><Link href="/docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO Model Explanation</Link></li>
             <li><a href="https://ergoplatform.org/en/whitepaper/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Whitepaper</a></li>
-            <li><Link href="/docs/developers/lang-spec" className="text-cyan-400 hover:underline">ErgoScript Language Specification</Link> (Detailed reference)</li>
+            <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Language Specification</Link> (Detailed reference)</li>
             <li><a href="https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Advanced ErgoScript Tutorial</a></li>
           </ul>
 
@@ -574,7 +574,7 @@ export default function ErgoScriptLanguagesPage() {
             <li><a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">escript.online</a></li>
             <li>Compile ErgoScript directly in your browser with <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Playground</a></li>
             <li>There is also <a href="https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Scastie</a></li>
-            <li><Link href="/docs/developers/tooling/kiosk" className="text-cyan-400 hover:underline">Kiosk</Link> lets anyone play with ErgoScript using a basic web-based UI</li>
+            <li><Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">Kiosk</Link> lets anyone play with ErgoScript using a basic web-based UI</li>
             <li><a href="https://github.com/ergoplatform/ergoscript-compiler" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergoscript-compiler</a></li>
           </ul>
 
@@ -1037,7 +1037,7 @@ export default function ErgoScriptLanguagesPage() {
                   <li><a href="https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Unlocking The Potential Of The UTXO Model</a></li>
                   <li><a href="https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Building A Portable And Reusable (PaR) UTXO dApp Standard</a></li>
                   <li><a href="https://www.ergoforum.org/t/data-inputs-semantics/654" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Data Inputs Semantics</a></li>
-                  <li><Link href="/docs/developers/ergoscript-languages/examples/model-tx" className="text-cyan-400 hover:underline">Model Transaction Example</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">Model Transaction Example</Link></li>
                 </ul>
               </div>
             </section>

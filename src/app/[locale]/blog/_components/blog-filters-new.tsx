@@ -161,6 +161,7 @@ export function BlogFiltersNew({
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
+                suppressHydrationWarning
                 className="h-9 w-44 focus:w-72 transition-all duration-300 rounded-xl bg-black border border-white/10 pl-9 pr-8 text-sm text-white placeholder-white/60 focus:border-orange-400/40 focus:bg-black/90 focus:outline-none"
                 aria-label="Search blog posts"
                 onKeyDown={(e) => {
@@ -203,6 +204,7 @@ export function BlogFiltersNew({
               placeholder="Search posts..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
+              suppressHydrationWarning
               className="hidden"
               onFocus={(e) => {
                 // Simple mobile search - just show the input

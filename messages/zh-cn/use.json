@@ -2592,34 +2592,34 @@
         "seconds": "秒",
         "launching": "预计启动"
       },
-      "features": {
-        "0": {
-          "title": "高级AMM",
-          "description": "后代自动市场制造商，流动资金集中化"
+      "features": [
+        {
+          "title": "Advanced AMM",
+          "description": "Next-generation automated market makers with concentrated liquidity"
         },
-        "1": {
-          "title": "Yield 农业",
-          "description": "使用创新令牌创造可持续产量的机会"
+        {
+          "title": "Yield Farming",
+          "description": "Sustainable yield opportunities with innovative tokenomics"
         },
-        "2": {
-          "title": "安全协议",
-          "description": "经过战斗测试的智能合同，并经过正式验证"
+        {
+          "title": "Secure Protocols",
+          "description": "Transparent smart-contract logic with visible risk notes"
         },
-        "3": {
-          "title": "闪电极速",
-          "description": "极低手续费的亚秒级交易"
+        {
+          "title": "Lightning Fast",
+          "description": "Sub-second transactions with minimal fees"
         }
-      },
+      ],
       "whatsComing": {
         "title": "即将到来的内容",
         "subtitle": "为下一代去中心化金融打造的革命性 DeFi 协议与工具",
-        "items": {
-          "0": "全面协议比较仪表板",
-          "1": "实时TVL和音量跟踪",
-          "2": "跨链Defi 机会",
-          "3": "风险评估工具",
-          "4": "组合管理功能"
-        }
+        "items": [
+          "Comprehensive protocol comparison dashboard",
+          "Real-time TVL and volume tracking",
+          "Cross-chain DeFi opportunities",
+          "Risk assessment tools",
+          "Portfolio management features"
+        ]
       },
       "communityCta": {
         "title": "加入 Ergo 社区",
@@ -2629,62 +2629,6 @@
         "title": "当我们启动时获得通知",
         "description": "成为第一个探索新的 Defi 枢纽的人。注册进行更新。"
       }
-    },
-    "cases": {
-      "stablecoins": {
-        "title": "算法稳定币",
-        "subtitle": "无需中心化控制的稳定价值存储",
-        "description": "采用创新AgeUSD协议的超额抵押稳定币。",
-        "tags": "稳定币,算法,抵押品"
-      },
-      "privacy": {
-        "title": "隐私与保密",
-        "subtitle": "在日益被监控的世界中保护金融隐私",
-        "description": "非托管混币器、隐身地址、零知识证明，实现完全隐私。",
-        "tags": "混币器,隐身,零知识"
-      },
-      "bridges": {
-        "title": "跨链桥",
-        "subtitle": "区块链之间安全、无需信任的价值转移",
-        "description": "采用多重签名安全的去中心化桥接，无需中心化托管。",
-        "tags": "桥接,互操作性,多链"
-      },
-      "daos": {
-        "title": "DAO与替代经济",
-        "subtitle": "社区治理与替代性经济体系",
-        "description": "可组合的DAO基础设施：财库、投票、利润分享。",
-        "tags": "DAO,治理,社区"
-      },
-      "nfts": {
-        "title": "NFT与数字资产",
-        "subtitle": "真正的数字所有权，动态属性",
-        "description": "链上元数据、协议版税、可编程NFT。",
-        "tags": "NFT,版税,动态"
-      },
-      "oracles": {
-        "title": "预言机与数据馈送",
-        "subtitle": "将真实世界数据引入链上",
-        "description": "去中心化预言机池为DeFi和预测市场提供外部数据。",
-        "tags": "预言机,数据馈送,预测"
-      },
-      "identity": {
-        "title": "身份与信誉",
-        "subtitle": "自主身份与Web3信誉",
-        "description": "去中心化标识符(DID)、抗女巫攻击、信誉系统。",
-        "tags": "身份,信誉,DID"
-      },
-      "gaming": {
-        "title": "游戏与元宇宙",
-        "subtitle": "下一代游戏资产与数字世界",
-        "description": "可编程游戏代币、NFT驱动的经济、元宇宙基础设施。",
-        "tags": "游戏,元宇宙,NFT"
-      }
-    },
-    "common": {
-      "exploreCase": "探索用例",
-      "learnMore": "了解更多",
-      "supportedProjects": "支持的项目",
-      "getStarted": "立即开始"
     }
   },
   "usePages": {
@@ -2848,134 +2792,6 @@
         "question": "开发者有哪些可用资源？",
         "answer": "Ergo 提供全面的开发者资源：\n- ErgoScript 文档和教程\n- 多语言 SDK（Scala、JS、Python）\n- 用于 dApp 开发的 AppKit\n- 活跃的开发者社区和支持\n- 生态系统项目资助计划"
       }
-    },
-    "useCases": {
-      "stablecoins": {
-        "title": "算法稳定币",
-        "subtitle": "无需中心化控制的稳定价值存储",
-        "description": "采用创新 AgeUSD 协议的超额抵押稳定币。",
-        "tags": [
-          "稳定币",
-          "算法",
-          "抵押品"
-        ]
-      },
-      "privacy": {
-        "title": "隐私与保密",
-        "subtitle": "在日益被监控的世界中保护金融隐私",
-        "description": "非托管混币器、隐身地址、零知识证明，实现完全隐私。",
-        "tags": [
-          "混币器",
-          "隐身",
-          "零知识"
-        ]
-      },
-      "bridges": {
-        "title": "跨链桥",
-        "subtitle": "区块链之间安全、无需信任的价值转移",
-        "description": "采用多重签名安全的去中心化桥，无需中心化托管。",
-        "tags": [
-          "桥",
-          "互操作性",
-          "多链"
-        ]
-      },
-      "daos": {
-        "title": "DAO 与替代经济",
-        "subtitle": "社区治理与替代经济系统",
-        "description": "可组合的 DAO 基础设施：财库、投票、利润分享。",
-        "tags": [
-          "DAO",
-          "治理",
-          "社区"
-        ]
-      },
-      "nfts": {
-        "title": "NFT 与数字资产",
-        "subtitle": "真正的数字所有权，动态属性",
-        "description": "链上元数据、协议版税、可编程 NFT。",
-        "tags": [
-          "NFT",
-          "版税",
-          "动态"
-        ]
-      },
-      "oracles": {
-        "title": "预言机与数据馈送",
-        "subtitle": "将真实世界数据引入链上",
-        "description": "去中心化预言机池为 DeFi 和预测市场提供外部数据。",
-        "tags": [
-          "预言机",
-          "数据馈送",
-          "预测"
-        ]
-      },
-      "identity": {
-        "title": "身份与信誉",
-        "subtitle": "自主身份与 Web3 信誉",
-        "description": "去中心化标识符 (DID)、女巫攻击抵抗、信誉系统。",
-        "tags": [
-          "身份",
-          "信誉",
-          "DID"
-        ]
-      },
-      "gaming": {
-        "title": "游戏与元宇宙",
-        "subtitle": "下一代游戏资产与数字世界",
-        "description": "可编程游戏代币、NFT 驱动的经济、元宇宙基础设施。",
-        "tags": [
-          "游戏",
-          "元宇宙",
-          "NFT"
-        ]
-      }
-    },
-    "learnTechnology": {
-      "title": "学习技术",
-      "ergoscript": {
-        "title": "ErgoScript",
-        "description": "学习驱动这些用例的智能合约语言",
-        "cta": "开始教程"
-      },
-      "eutxo": {
-        "title": "eUTXO 模型",
-        "description": "理解支持这些应用的基础",
-        "cta": "了解更多"
-      },
-      "allTechnology": {
-        "title": "所有技术",
-        "description": "探索 Ergo 的所有技术创新",
-        "cta": "查看全部"
-      }
-    },
-    "whatsNext": {
-      "title": "接下来？",
-      "subtitle": "开始探索应用或学习如何在 Ergo 上构建",
-      "exploreEcosystem": {
-        "title": "探索生态系统",
-        "subtitle": "发现应用",
-        "description": "查找在 Ergo 上构建的 DeFi 协议、钱包、NFT 平台和其他 dApp"
-      },
-      "startBuilding": {
-        "title": "开始构建",
-        "subtitle": "开发者资源",
-        "description": "访问文档、教程和工具来构建您自己的 Ergo 应用"
-      }
-    },
-    "emailCapture": {
-      "title": "发现新用例",
-      "description": "获取有关新实际应用、现实世界实现和用例研究的通知"
-    },
-    "hoverText": {
-      "stablecoins": "了解更多",
-      "privacy": "发现隐私",
-      "bridges": "连接区块链",
-      "daos": "加入社区",
-      "nfts": "创建资产",
-      "oracles": "访问数据",
-      "identity": "构建身份",
-      "gaming": "开始游戏"
     }
   },
   "getErg": {
@@ -3189,49 +3005,6 @@
       "description": "选择您的首选方法以获取ERG并加入Ergo生态系统",
       "exploreExchanges": "探索交流",
       "learnMore": "了解更多关于埃尔戈的信息"
-    }
-  },
-  "useCases": {
-    "title": "用例",
-    "subtitle": "现实世界的应用",
-    "description": "了解Ergo如何推动DeFi、NFT、隐私和更多创新应用。",
-    "categories": {
-      "defi": {
-        "title": "DeFi应用",
-        "description": "建立在坚实基础上的去中心化金融"
-      },
-      "nfts": {
-        "title": "NFT与数字资产",
-        "description": "具有协议级安全的原生代币和NFT"
-      },
-      "privacy": {
-        "title": "隐私与保密",
-        "description": "内置隐私功能与混币协议"
-      },
-      "bridges": {
-        "title": "跨链桥",
-        "description": "与其他区块链的安全互操作"
-      },
-      "oracles": {
-        "title": "预言机与数据馈送",
-        "description": "可靠的外部数据集成"
-      },
-      "daos": {
-        "title": "DAO与替代经济",
-        "description": "去中心化治理与经济模型"
-      },
-      "stablecoins": {
-        "title": "算法稳定币",
-        "description": "去中心化的稳定价值机制"
-      },
-      "gaming": {
-        "title": "游戏与元宇宙",
-        "description": "区块链游戏与虚拟世界"
-      },
-      "identity": {
-        "title": "身份与信誉",
-        "description": "去中心化身份与信誉系统"
-      }
     }
   }
 }

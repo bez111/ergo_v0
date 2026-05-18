@@ -142,7 +142,7 @@ ErgoDex represents a significant advancement in cross-chain DeFi infrastructure.
 
 The protocol maintains its dollar peg through a unique dual-token mechanism: SigmaUSD (the stablecoin) and SigRSV (the reserve coin). Users mint SigmaUSD by depositing ERG as collateral, while reserve providers mint SigRSV to absorb price volatility. The system maintains a floating reserve ratio between 400% and 800%, ensuring robust overcollateralization even during market stress.
 
-What sets SigmaUSD apart from other stablecoins is its completely decentralized design with no liquidation risk for individual users. Price data comes from Ergo's trustless Oracle Pools, eliminating dependence on centralized oracles. The entire protocol runs on smart contracts verified on-chain, with transparent reserve ratios visible to anyone. This makes SigmaUSD an ideal stable unit of account for the Ergo DeFi ecosystem, enabling predictable value storage and transactions without counterparty risk.`,
+What sets SigmaUSD apart from other stablecoins is its non-custodial design with no per-user liquidation mechanism. Price data comes from Ergo's Oracle Pools, reducing dependence on centralized oracles. The protocol runs on smart contracts verified on-chain, with transparent reserve ratios visible to anyone. This makes SigmaUSD a useful stable unit of account for the Ergo DeFi ecosystem, while users should still account for protocol, liquidity, oracle and market risk.`,
     icon: "💵", 
     url: "https://sigmausd.io/#/",
     docs: "https://docs.ergoplatform.com/uses/sigmausd/",
@@ -259,9 +259,9 @@ Nautilus also integrates with ErgoMixer for optional transaction privacy, demons
     description: "A collateralized lending platform with algorithmic lending pools. Users provide ERG or native assets to earn income or borrow assets against ERG collateral.", 
     longDescription: `DuckPools is a decentralized lending protocol bringing traditional lending mechanics to the Ergo blockchain. The platform enables users to deposit ERG and other native assets into algorithmic lending pools to earn yield, while borrowers can access liquidity by providing overcollateralized positions.
 
-The protocol uses Ergo's Oracle Pools for accurate, trust-minimized price feeds, ensuring that collateral ratios and liquidation thresholds remain fair and transparent. Interest rates adjust algorithmically based on pool utilization, balancing supply and demand without manual intervention. All lending logic executes through audited ErgoScript smart contracts, providing deterministic outcomes and eliminating the possibility of reentrancy attacks common in account-based systems.
+The protocol uses Ergo's Oracle Pools for trust-minimized price feeds, helping collateral ratios and liquidation thresholds remain transparent. Interest rates adjust algorithmically based on pool utilization, balancing supply and demand without manual intervention. Lending logic executes through ErgoScript smart contracts, providing deterministic outcomes and reducing the surface for reentrancy patterns common in account-based systems.
 
-DuckPools demonstrates how the eUTXO model can support complex DeFi primitives with enhanced security guarantees. Each loan is represented as a discrete UTXO with explicit state, making positions easy to audit and verify. The platform supports multiple collateral types and is designed to integrate with other Ergo DeFi protocols, enabling composable yield strategies across the ecosystem.`,
+DuckPools demonstrates how the eUTXO model can support complex DeFi primitives with explicit state. Each loan is represented as a discrete UTXO, making positions easier to inspect and verify. The platform supports multiple collateral types and is designed to integrate with other Ergo DeFi protocols, while users should still treat lending protocols as funds-at-risk DeFi software.`,
     icon: "🦆", 
     url: "https://duckpools.io",
     twitter: "https://twitter.com/DuckPools",

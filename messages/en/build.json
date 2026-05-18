@@ -69,30 +69,66 @@
         "title": "Flow A: Agent buys API call",
         "description": "One call. One proof. No persistent account.",
         "steps": [
-          { "label": "Agent creates note", "detail": "0.001 ERG face value, provider address in R4" },
-          { "label": "Provider checks predicate", "detail": "Verifies note value, reserve backing, deadline" },
-          { "label": "Provider delivers response", "detail": "Returns API result, marks note as spent" },
-          { "label": "Settlement", "detail": "Note burned, ERG released from reserve to provider" }
+          {
+            "label": "Agent creates note",
+            "detail": "0.001 ERG face value, provider address in R4"
+          },
+          {
+            "label": "Provider checks predicate",
+            "detail": "Verifies note value, reserve backing, deadline"
+          },
+          {
+            "label": "Provider delivers response",
+            "detail": "Returns API result, marks note as spent"
+          },
+          {
+            "label": "Settlement",
+            "detail": "Note burned, ERG released from reserve to provider"
+          }
         ]
       },
       "credit": {
         "title": "Flow B: Agent issues credit to a sub-agent",
         "description": "Reserve deployed. Bounded Notes issued. Tracker monitors.",
         "steps": [
-          { "label": "Deploy reserve", "detail": "Lock ERG in reserve contract with credit limit" },
-          { "label": "Issue bounded notes", "detail": "Create redeemable Notes against reserve up to credit limit" },
-          { "label": "Sub-agent spends notes", "detail": "Notes transferred to providers only inside the policy envelope" },
-          { "label": "Verified settlement", "detail": "Reserve settles outstanding Notes only under explicit redemption rules" }
+          {
+            "label": "Deploy reserve",
+            "detail": "Lock ERG in reserve contract with credit limit"
+          },
+          {
+            "label": "Issue bounded notes",
+            "detail": "Create redeemable Notes against reserve up to credit limit"
+          },
+          {
+            "label": "Sub-agent spends notes",
+            "detail": "Notes transferred to providers only inside the policy envelope"
+          },
+          {
+            "label": "Verified settlement",
+            "detail": "Reserve settles outstanding Notes only under explicit redemption rules"
+          }
         ]
       },
       "community": {
         "title": "Flow C: Community reserve + tracker",
         "description": "A local marketplace, a compute co-op, an agent network.",
         "steps": [
-          { "label": "Community deploys reserve", "detail": "ERG pooled by community members" },
-          { "label": "Issue community notes", "detail": "Members receive notes proportional to contribution" },
-          { "label": "Local commerce", "detail": "Notes accepted within community, predicates define rules" },
-          { "label": "Redemption", "detail": "Members redeem notes for ERG from reserve anytime" }
+          {
+            "label": "Community deploys reserve",
+            "detail": "ERG pooled by community members"
+          },
+          {
+            "label": "Issue community notes",
+            "detail": "Members receive notes proportional to contribution"
+          },
+          {
+            "label": "Local commerce",
+            "detail": "Notes accepted within community, predicates define rules"
+          },
+          {
+            "label": "Redemption",
+            "detail": "Members redeem notes for ERG from reserve anytime"
+          }
         ]
       }
     },

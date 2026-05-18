@@ -674,7 +674,7 @@
   },
   "blogSectionHome": {
     "titleStart": "最新",
-    "titleMiddle": "",
+    "titleMiddle": "from the",
     "titleEnd": "博客",
     "subtitle": "来自Ergo团队的洞察、教程和更新",
     "viewAll": "查看所有文章"

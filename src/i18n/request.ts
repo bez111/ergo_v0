@@ -13,8 +13,9 @@ export const localesWithPrefix = locales.filter(locale => locale !== 'en');
 
 export type Locale = typeof locales[number];
 
-// RTL языки
-export const rtlLocales = ['ar'] as const;
+// No active RTL locale is enabled yet. Keep this empty until the locale is
+// also added to `locales`, routing, messages, sitemap, and SEO metadata.
+export const rtlLocales = [] as const;
 
 // Конфигурация локалей с метаданными
 export const localeConfig = {
@@ -22,7 +23,6 @@ export const localeConfig = {
   'fr': { name: 'Français', dir: 'ltr', hreflang: 'fr' },
   'de': { name: 'Deutsch', dir: 'ltr', hreflang: 'de' },
   'es': { name: 'Español', dir: 'ltr', hreflang: 'es' },
-  'ar': { name: 'العربية', dir: 'rtl', hreflang: 'ar' },
   'zh-cn': { name: '简体中文', dir: 'ltr', hreflang: 'zh-CN' },
   'zh-tw': { name: '繁體中文', dir: 'ltr', hreflang: 'zh-TW' },
   'tr': { name: 'Türkçe', dir: 'ltr', hreflang: 'tr' },
@@ -74,4 +74,4 @@ export function getLocaleConfig(locale: string) {
 
 export function getDefaultLocale(): Locale {
   return 'en';
-} 
+}

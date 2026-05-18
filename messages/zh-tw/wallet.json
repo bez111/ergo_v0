@@ -62,7 +62,6 @@
     "offline_key_generation_and_storage": "離線金鑰生成和儲存，實現最高安全性。",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
       "name": "Ergo 錢包",
       "description": "Ergo 區塊鏈的安全錢包合集",

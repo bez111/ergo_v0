@@ -151,7 +151,7 @@ export default function BabelFeesPage() {
           </p>
           
           <p className="text-gray-300">
-            You can see the full documentation <Link href="/docs/developers/data-model-apis/babel-fleet" className="text-orange-400 hover:underline">here</Link>.
+            You can see the full documentation <Link href="/docs/developers/data-model-apis/babel-fees/babel-fleet" className="text-orange-400 hover:underline">here</Link>.
           </p>
         </div>
       </div>

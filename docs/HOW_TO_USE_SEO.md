@@ -1,6 +1,6 @@
 # SEO Guide for ergoblockchain.org
 
-> **NOTE:** This document has been updated to reflect the new centralized SEO approach.  
+> **NOTE:** This document has been updated to reflect the new centralized SEO approach.
 > For the complete technical reference, see [`src/lib/seo/README.md`](../src/lib/seo/README.md).
 
 ---
@@ -30,8 +30,8 @@ export default function YourPage() {
   // 2. JSON-LD schemas via centralized helpers
   const schemas = [
     createBreadcrumbSchema([
-      { name: 'Section', href: '/section' },
-      { name: 'Your Page', href: '/your-page' },
+      { name: 'Technology', href: '/technology' },
+      { name: 'ErgoScript', href: '/technology/ergoscript' },
     ]),
     createFAQSchema([
       { question: 'What is this?', answer: 'This is...' },
@@ -43,7 +43,7 @@ export default function YourPage() {
     <>
       {/* 3. Render all schemas at once */}
       {renderSchemaScripts(schemas)}
-      
+
       {/* Your content */}
       <div>Page content</div>
     </>
@@ -132,7 +132,7 @@ const eventSchema = SchemaTypes.EventSchema({
 })
 
 // Вставка в страницу
-<script 
+<script
   type="application/ld+json"
   dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
 />
@@ -141,10 +141,10 @@ const eventSchema = SchemaTypes.EventSchema({
 ### 2️⃣ **Featured Snippets Оптимизация**
 
 ```typescript
-import { 
-  generateSnippetHTML, 
+import {
+  generateSnippetHTML,
   optimizeForSnippets,
-  targetQuestions 
+  targetQuestions
 } from '@/lib/featured-snippets-optimizer'
 
 // Генерация HTML для Featured Snippets
@@ -153,7 +153,7 @@ const snippetHTML = generateSnippetHTML(
   "howto",
   [
     "1. Download wallet",
-    "2. Choose mining pool", 
+    "2. Choose mining pool",
     "3. Download miner",
     "4. Configure",
     "5. Start mining"
@@ -164,7 +164,7 @@ const snippetHTML = generateSnippetHTML(
 const optimizedContent = optimizeForSnippets(yourContent)
 
 // Использование готовых вопросов
-const miningGuide = targetQuestions.howTo.find(q => 
+const miningGuide = targetQuestions.howTo.find(q =>
   q.question === "How to mine Ergo?"
 )
 
@@ -175,10 +175,10 @@ const miningGuide = targetQuestions.howTo.find(q =>
 ### 3️⃣ **Entity SEO & Knowledge Graph**
 
 ```typescript
-import { 
+import {
   generateKnowledgeGraph,
   addEntityMarkup,
-  calculateEntitySalience 
+  calculateEntitySalience
 } from '@/lib/entity-knowledge-graph'
 
 // Генерация Knowledge Graph
@@ -278,10 +278,10 @@ export const metadata: Metadata = {
 ### 7️⃣ **Мониторинг SEO**
 
 ```typescript
-import { 
+import {
   initPerformanceMonitoring,
   checkKeywordRankings,
-  generateSEOReport 
+  generateSEOReport
 } from '@/lib/seo-monitoring'
 
 // В app/layout.tsx
@@ -315,7 +315,7 @@ import { InternalLinking } from '@/lib/ai-internal-linking'
 
 export async function generateMetadata({ params }) {
   const post = await getPost(params.slug)
-  
+
   return {
     title: `${post.title} | Ergo Blog`,
     description: post.description,
@@ -330,27 +330,27 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPost({ params }) {
   const post = await getPost(params.slug)
-  
+
   // Оптимизация контента
   const optimizedContent = InternalLinking.applyInternalLinks(
     optimizeForSnippets(post.content),
     `/blog/${params.slug}`
   )
-  
+
   // Schema для блога
   const articleSchema = SchemaTypes.SpeakableSchema({
     headline: post.title,
     summary: post.description,
     url: `https://ergoblockchain.org/blog/${params.slug}`
   })
-  
+
   return (
     <>
-      <script 
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      
+
       <article>
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: optimizedContent }} />
@@ -378,16 +378,16 @@ export default function FAQPage() {
   const faqSchema = SchemaTypes.FAQSchema(
     faqs.map(faq => ({ question: faq.q, answer: faq.a }))
   )
-  
+
   const optimizedFAQHTML = generateOptimizedFAQ(faqs)
-  
+
   return (
     <>
-      <script 
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      
+
       <div dangerouslySetInnerHTML={{ __html: optimizedFAQHTML }} />
     </>
   )
@@ -476,4 +476,4 @@ http://localhost:3000/news-sitemap.xml
 3. Проверьте консоль браузера
 4. Используйте Google Search Console
 
-Вопросы? Спрашивайте! 
+Вопросы? Спрашивайте!

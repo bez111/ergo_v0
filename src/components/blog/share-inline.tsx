@@ -67,10 +67,9 @@ export function ShareInline({ title, url, utm = "", className }: ShareInlineProp
   ]
 
   return (
-    <div className={cn("mt-6 flex items-center gap-3", className)}>
-      {/* Оранжевая неактивная кнопка Share */}
-      <div className="h-8 rounded-full px-3 text-xs font-semibold text-black bg-orange-500 shadow-sm cursor-default flex items-center">
-        <Share2 className="mr-1.5 h-3.5 w-3.5" />
+    <div className={cn("mt-6 flex max-w-full flex-wrap items-center gap-2 sm:gap-3", className)}>
+      <div className="flex h-10 items-center rounded-full bg-orange-500 px-3 text-xs font-semibold text-black shadow-sm cursor-default">
+        <Share2 className="mr-1.5 h-4 w-4" />
         Share
       </div>
 
@@ -79,7 +78,7 @@ export function ShareInline({ title, url, utm = "", className }: ShareInlineProp
           key={social.name}
           variant="ghost"
           size="sm"
-          className={cn("h-8 w-8 p-0", social.color)}
+          className={cn("h-10 w-10 p-0", social.color)}
           onClick={() => handleShare(social.url)}
           title={`Share on ${social.name}`}
         >
@@ -90,7 +89,7 @@ export function ShareInline({ title, url, utm = "", className }: ShareInlineProp
       <Button
         variant="ghost"
         size="sm"
-        className="h-8 w-8 p-0 text-orange-400 hover:text-orange-300"
+        className="h-10 w-10 p-0 text-orange-400 hover:text-orange-300"
         onClick={copyLink}
         title="Copy link"
       >

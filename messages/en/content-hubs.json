@@ -386,22 +386,64 @@
     },
     "filters": {
       "categories": [
-        { "id": "all", "label": "All Questions" },
-        { "id": "DeFi", "label": "DeFi & Trading" },
-        { "id": "Privacy", "label": "Privacy" },
-        { "id": "Mining", "label": "Mining" },
-        { "id": "Technology", "label": "Technology" },
-        { "id": "Philosophy", "label": "Philosophy & Freedom" },
-        { "id": "Getting Started", "label": "Getting Started" }
+        {
+          "id": "all",
+          "label": "All Questions"
+        },
+        {
+          "id": "DeFi",
+          "label": "DeFi & Trading"
+        },
+        {
+          "id": "Privacy",
+          "label": "Privacy"
+        },
+        {
+          "id": "Mining",
+          "label": "Mining"
+        },
+        {
+          "id": "Technology",
+          "label": "Technology"
+        },
+        {
+          "id": "Philosophy",
+          "label": "Philosophy & Freedom"
+        },
+        {
+          "id": "Getting Started",
+          "label": "Getting Started"
+        }
       ],
       "personas": [
-        { "id": "all", "label": "Everyone" },
-        { "id": "builder", "label": "Builders" },
-        { "id": "miner", "label": "Miners" },
-        { "id": "investor", "label": "Investors" },
-        { "id": "freedom_seeker", "label": "Freedom Seekers" },
-        { "id": "cypherpunk", "label": "Cypherpunks" },
-        { "id": "general", "label": "General" }
+        {
+          "id": "all",
+          "label": "Everyone"
+        },
+        {
+          "id": "builder",
+          "label": "Builders"
+        },
+        {
+          "id": "miner",
+          "label": "Miners"
+        },
+        {
+          "id": "investor",
+          "label": "Investors"
+        },
+        {
+          "id": "freedom_seeker",
+          "label": "Freedom Seekers"
+        },
+        {
+          "id": "cypherpunk",
+          "label": "Cypherpunks"
+        },
+        {
+          "id": "general",
+          "label": "General"
+        }
       ]
     },
     "aria": {
@@ -545,7 +587,7 @@
     "hero": {
       "title": "ErgoScript",
       "titleHighlight": "Patterns",
-      "subtitle": "Battle-tested smart contract patterns for Ergo. Copy, adapt, and ship. From token mechanics to DeFi primitives.",
+      "subtitle": "Reference smart contract patterns for Ergo. Study, adapt, test, and review. From token mechanics to DeFi primitives.",
       "searchPlaceholder": "Search patterns (e.g., 'swap', 'multisig', 'oracle')..."
     },
     "aria": {
@@ -699,17 +741,17 @@
   "patternsPage": {
     "seo": {
       "title": "ErgoScript Patterns — 18 Copy-Paste Smart Contracts | Ergo",
-      "description": "18 ready-to-use ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Copy, paste, deploy. Production-ready code examples.",
+      "description": "18 educational ErgoScript patterns. Time-locks, multi-sig, AMM, oracles & more. Study, adapt, test, and review before using real funds.",
       "keywords": "ErgoScript patterns, Ergo smart contracts, ErgoScript examples, eUTXO patterns, Ergo developer, blockchain patterns, DeFi patterns, copy paste smart contracts"
     },
     "schema": {
       "itemList": {
         "name": "ErgoScript Smart Contract Patterns",
-        "description": "Collection of ready-to-use ErgoScript patterns for building secure smart contracts on Ergo blockchain."
+        "description": "Collection of educational ErgoScript patterns for building and reviewing smart contracts on Ergo blockchain."
       },
       "collection": {
         "name": "ErgoScript Developer Patterns",
-        "description": "18 ready-to-use ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Copy, paste, deploy."
+        "description": "18 educational ErgoScript patterns for time-locks, multi-sig, AMM, oracles and more. Study, adapt, test, and review."
       },
       "breadcrumbs": {
         "patterns": "Dev Patterns"

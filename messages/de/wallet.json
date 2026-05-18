@@ -62,7 +62,6 @@
     "offline_key_generation_and_storage": "Offline-Schlüsselerstellung und -aufbewahrung für maximale Sicherheit.",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
       "name": "Ergo Wallets",
       "description": "Sammlung sicherer Wallets für die Ergo-Blockchain",

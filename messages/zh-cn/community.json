@@ -164,20 +164,20 @@
       "followers": "关注者",
       "updates": "更新"
     },
-    "platformGroups": {
-      "0": {
-        "title": "实时与运营",
-        "subtitle": "实时支持、快速更新、突发新闻"
+    "platformGroups": [
+      {
+        "title": "Real-time & Operations",
+        "subtitle": "Live support, quick updates, breaking news"
       },
-      "1": {
-        "title": "深度内容与研究",
-        "subtitle": "教程、文章、EIP、治理"
+      {
+        "title": "Deep Content & Research",
+        "subtitle": "Tutorials, essays, EIPs, governance"
       },
-      "2": {
-        "title": "社区与发现",
-        "subtitle": "讨论、视觉内容、发现"
+      {
+        "title": "Community & Discovery",
+        "subtitle": "Discussions, visual content, discovery"
       }
-    },
+    ],
     "contributions": {
       "sectionTitle": "贡献矩阵",
       "subtitle": "每一份贡献都能增强 Ergo 生态系统。找到您的路径，产生影响。",
@@ -187,23 +187,23 @@
       "sectionTitle": "社区准则",
       "positive": {
         "title": "鼓励的行为",
-        "items": {
-          "0": "尊重且有建设性的讨论",
-          "1": "帮助新人并分享知识",
-          "2": "为项目和文档做出贡献",
-          "3": "提供建设性反馈",
-          "4": "遵循社区准则"
-        }
+        "items": [
+          "Respectful and constructive discussions",
+          "Helping newcomers and sharing knowledge",
+          "Contributing to projects and documentation",
+          "Providing constructive feedback",
+          "Following community guidelines"
+        ]
       },
       "negative": {
         "title": "不鼓励的行为",
-        "items": {
-          "0": "垃圾内容、刷屏或偏离主题的内容",
-          "1": "散布错误信息或 FUD",
-          "2": "人身攻击或骚扰",
-          "3": "过度自我宣传",
-          "4": "违反平台特定规则"
-        }
+        "items": [
+          "Spam, flooding, or off-topic content",
+          "Spreading misinformation or FUD",
+          "Personal attacks or harassment",
+          "Excessive self-promotion",
+          "Violating platform-specific rules"
+        ]
       }
     },
     "cta": {

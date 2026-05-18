@@ -815,7 +815,7 @@ export function SigmaProtocolsExplainedClient() {
               },
               {
                 title: "ErgoScript Privacy Examples",
-                href: "/docs/ergoscript/privacy",
+                href: "/technology/privacy-features",
                 description: "Code examples for implementing privacy features with Sigma Protocols",
                 type: "docs",
                 category: "Developer"

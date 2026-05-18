@@ -42,7 +42,7 @@ export default function OnChainNFTPage() {
           <div>
             <h3 className="text-xl font-semibold text-yellow-400 mb-2">Warning</h3>
             <p className="text-gray-300">
-              This method is not yet incorporated in <Link href="/docs/developers/data-model-apis/assets/nfts/eip4" className="text-cyan-400 hover:underline">EIP-0004: Asset Standard</Link>. For more information, refer to this discussion <a href="https://discord.com/channels/668903786361651200/940209605299036170/942656843619106827" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">on Discord</a>.
+              This method is not yet incorporated in <Link href="/docs/developers/data-model-apis/assets/nfts" className="text-cyan-400 hover:underline">EIP-0004: Asset Standard</Link>. For more information, refer to this discussion <a href="https://discord.com/channels/668903786361651200/940209605299036170/942656843619106827" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">on Discord</a>.
             </p>
           </div>
         </div>

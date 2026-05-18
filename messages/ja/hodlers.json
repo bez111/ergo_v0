@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "ネットワークハッシュレート" },
-      "activeAddresses": { "label": "アクティブアドレス" },
-      "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG供給量", "trend": "残り{remaining}M" },
-      "avgBlockTime": { "label": "平均ブロック時間" },
-      "activeNodes": { "label": "アクティブノード" }
+      "networkHashrate": {
+        "label": "ネットワークハッシュレート"
+      },
+      "activeAddresses": {
+        "label": "アクティブアドレス"
+      },
+      "defiTvl": {
+        "label": "DeFi TVL"
+      },
+      "ergSupply": {
+        "label": "ERG供給量",
+        "trend": "残り{remaining}M"
+      },
+      "avgBlockTime": {
+        "label": "平均ブロック時間"
+      },
+      "activeNodes": {
+        "label": "アクティブノード"
+      }
     },
     "heroComparisons": [
       {

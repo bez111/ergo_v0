@@ -112,7 +112,7 @@ export default function DeveloperResourcesHub() {
   return (
     <div className="min-h-screen bg-black text-neutral-100">
       <Breadcrumbs />
-      
+
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -125,7 +125,7 @@ export default function DeveloperResourcesHub() {
               From tutorials to advanced tools, we've got you covered.
             </p>
           </div>
-          
+
           <div className="flex justify-center gap-4 mb-12">
             <Button asChild size="lg">
               <Link href="/docs/developers/tutorials">
@@ -181,22 +181,22 @@ export default function DeveloperResourcesHub() {
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl font-bold mb-8">Quick Links</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/docs/developers/tutorials/quick-start" 
+            <Link href="/developers"
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">Quick Start Guide</div>
               <div className="text-sm text-neutral-400 mt-1">Get started in 5 minutes</div>
             </Link>
-            <Link href="/docs/developers/ergoscript-languages/basics" 
+            <Link href="/docs/developers/ergoscript-languages"
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">ErgoScript Basics</div>
               <div className="text-sm text-neutral-400 mt-1">Learn the fundamentals</div>
             </Link>
-            <Link href="/docs/developers/data-model-apis/node-api" 
+            <Link href="/docs/developers/data-model-apis"
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">API Reference</div>
               <div className="text-sm text-neutral-400 mt-1">Complete API documentation</div>
             </Link>
-            <Link href="/docs/developers/tooling/sdks" 
+            <Link href="/docs/developers/tooling"
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">SDKs & Libraries</div>
               <div className="text-sm text-neutral-400 mt-1">Tools for every language</div>
@@ -209,4 +209,4 @@ export default function DeveloperResourcesHub() {
       <RelatedContent links={relatedContent} title="Additional Resources" />
     </div>
   )
-} 
+}

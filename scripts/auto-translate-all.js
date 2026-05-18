@@ -104,7 +104,7 @@ const translations = {
 };
 
 // Языки для перевода
-const languages = ['ru', 'de', 'fr', 'es', 'it', 'pt-br', 'ja', 'ko-kr', 'zh-cn', 'zh-tw', 'ar', 'tr'];
+const languages = ['ru', 'de', 'fr', 'es', 'it', 'pt-br', 'ja', 'ko-kr', 'zh-cn', 'zh-tw', 'tr'];
 
 // Маппинг языковых кодов
 const langMap = {
@@ -206,4 +206,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { translateLanguage, translateObject }; 
+module.exports = { translateLanguage, translateObject };

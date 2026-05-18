@@ -1832,7 +1832,6 @@
       "ergo_introduction_pow_smart_contracts": "Ergo-Einführung — PoW Smart Contracts, eUTXO, Sigma Protocols",
       "meet_ergo_a_pow_smart": "Lernen Sie Ergo kennen: eine PoW-Smart-Contract-Plattform, die das eUTXO-Modell und Sigma-Protokolle verwendet. Entwickeln Sie datenschutzbewusste, überprüfbare dApps mit vorhersehbaren Kosten.",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "PoW Smart Contracts mit eUTXO & Sigma Protocols.",
-      "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "answer_text_t": "Answer\",\n                text: t(",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Kryptowährung",
       "introduction_to_ergo_beginner": "Einführung in Ergo | Einsteiger",
@@ -2009,9 +2008,6 @@
     "price_volume_analytics": "Preis, Volumen, Analysen",
     "take_the_quiz": "Quiz starten",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "Start\", item: \"https://ergoblockchain.org/start",
-      "comparison_item_https_ergoblockchain_org": "Comparison\", item: \"https://ergoblockchain.org/start/comparison",
-      "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "Vergleich von eUTXO vs. Kontomodellen, PoW vs. PoS, Datenschutz und Gebühren: Ergo, Ethereum, Bitcoin, Cardano.",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"Die Script-Kosten sind begrenzt und die Gebühren sind vorhersehbar; es gibt keine Gas-Preisauktionen (die endgültigen Gebühren hängen von den Mempool-Bedingungen ab).",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Ja. NIPoPoWs ermöglichen kompakte Beweise für vertrauensminimierte Light Clients.",
@@ -2041,8 +2037,6 @@
       "open_source_development": "Open-Source-Entwicklung"
     },
     "start_with_ergo_learning_paths": "Mit Ergo starten – Lernpfade",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "Starte deine Reise mit Ergo Blockchain",
     "personalized_learning_paths_for_beginners": "Personalisierte Lernpfade für Einsteiger, Entwickler, Miner und Investoren. Finde deinen Weg in Ergo.",
     "start_your_ergo_journey_choose_your_path": "Starte deine Ergo-Reise – Wähle deinen Weg",

@@ -170,6 +170,15 @@ function addHeadingAnchors(html: string): string {
   })
 }
 
+/** Tables in longform articles are useful, but on phones their intrinsic
+ * column widths can widen the whole document. Keep the table intact and put
+ * horizontal scrolling on a dedicated wrapper instead. */
+function wrapTables(html: string): string {
+  return html.replace(/<table>([\s\S]*?)<\/table>/g, (_match, inner) => {
+    return `<div class="md-table-scroll scroll-shadow-x"><table>${inner}</table></div>`
+  })
+}
+
 /**
  * Wrap each H2 + its body in a card-style <section>. Mirrors the visual
  * pattern used in /blog/babel-fees: heading on its own, content inside a
@@ -235,7 +244,7 @@ async function markdownToHtml(md: string): Promise<string> {
     .use(remarkGfm)
     .use(remarkHtml, { sanitize: false })
     .process(md)
-  return wrapH2Sections(addHeadingAnchors(String(file)))
+  return wrapH2Sections(wrapTables(addHeadingAnchors(String(file))))
 }
 
 export interface MarkdownBlogPostProps {

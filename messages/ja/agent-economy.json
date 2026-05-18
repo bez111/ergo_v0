@@ -33,6 +33,26 @@
         "body": "Stripe 経由の 0.001 ドルの API コールは、コール自体より手数料が高くつきます。これらのレールは、いかなる規模でもマシン同士のマイクロペイメントを想定していません。"
       }
     ],
+    "creditUnlock": {
+      "sectionLabel": "The Unlock",
+      "heading": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+      "description": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+      "formula": "Payments move value. Verification proves work. Credit creates economic agency.",
+      "items": [
+        {
+          "title": "Payments",
+          "body": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout."
+        },
+        {
+          "title": "Verification",
+          "body": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened."
+        },
+        {
+          "title": "Credit",
+          "body": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules."
+        }
+      ]
+    },
     "solution": {
       "sectionLabel": "ソリューション",
       "heading": "Ergo が正しい",

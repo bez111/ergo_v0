@@ -63,7 +63,7 @@ export default function ManualSetupPage() {
                 </li>
                 <li>
                   <em>Note:</em> Building development versions might require handling SNAPSHOT dependencies. Refer to the build guide and the specific{" "}
-                  <Link href="/docs/developers/infrastructure/node/setup/snapshot" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">
                     SNAPSHOT Dependencies guide
                   </Link>{" "}
                   if you encounter issues.
@@ -172,12 +172,12 @@ java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf`}
           </Link>
         </li>
         <li>
-          <Link href="/docs/developers/infrastructure/node/setup/api" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">
             Node API (Swagger)
           </Link>
         </li>
         <li>
-          <Link href="/docs/developers/infrastructure/node/setup/testnet" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">
             Testnet Guide
           </Link>
         </li>

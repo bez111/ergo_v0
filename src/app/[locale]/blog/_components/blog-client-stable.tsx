@@ -186,7 +186,7 @@ export default function BlogClientStable({
         </h2>
         
         <div className="mb-16">
-          <div className="flex items-baseline gap-4 mb-8 animate-fade-in">
+          <div className="flex items-baseline gap-4 mb-8">
             <h3 className="text-3xl font-bold text-white">
               {search ? `Search Results` : 
                selectedCategory !== 'all' ? `${selectedCategory} Articles` :
@@ -202,12 +202,8 @@ export default function BlogClientStable({
           {filteredPosts.length > 0 ? (
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {filteredPosts.map((post, index) => (
-                <div
-                  key={post.id}
-                  className="animate-scale-in"
-                  style={{ animationDelay: `${index * 0.05}s`, animationFillMode: "both" }}
-                >
-                  <BlogCard post={post} />
+                <div key={post.id}>
+                  <BlogCard post={post} priority={index < 3} />
                 </div>
               ))}
             </div>

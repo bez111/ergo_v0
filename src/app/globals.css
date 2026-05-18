@@ -1574,14 +1574,22 @@ html, body {
   border-top: 1px solid #262626;
   margin: 2.5em 0;
 }
+.markdown-article .md-table-scroll {
+  max-width: 100%;
+  margin: 1.25em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.875rem;
+  -webkit-overflow-scrolling: touch;
+}
 .markdown-article table {
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
   border-collapse: collapse;
   font-size: 0.95em;
-  margin: 1.25em 0;
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  margin: 0;
 }
 .markdown-article thead {
   background: rgba(38, 38, 38, 0.6);
@@ -1642,7 +1650,7 @@ html, body {
   margin-top: 1.75em;
 }
 .markdown-article .md-card pre,
-.markdown-article .md-card table {
+.markdown-article .md-card .md-table-scroll {
   /* Pull tables/code blocks slightly outside the card padding so wide tables
      don't squeeze. -m1 keeps them visually flush with the card edge. */
   margin-left: -0.5rem;

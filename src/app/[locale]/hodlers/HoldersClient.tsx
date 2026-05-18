@@ -229,7 +229,7 @@ export function HoldersClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
         {/* Hidden Breadcrumbs for SEO */}
-        <Breadcrumbs items={[...breadcrumbItems, { name: "For Hodlers", href: "#" }]} variant="hidden" />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "For Hodlers", href: "/hodlers" }]} variant="hidden" />
         
         {/* Hero Section */}
         <motion.section 

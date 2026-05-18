@@ -674,7 +674,7 @@
   },
   "blogSectionHome": {
     "titleStart": "最新の",
-    "titleMiddle": "",
+    "titleMiddle": "from the",
     "titleEnd": "ブログ",
     "subtitle": "Ergoチームによる解説、チュートリアル、最新情報",
     "viewAll": "すべての記事"

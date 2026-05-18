@@ -49,7 +49,7 @@ export async function GET() {
       },
       {
         title: "Mining",
-        url: "/start/mining",
+        url: "/miners",
         description: "Start mining Ergo with Autolykos",
         keywords: ["mining", "autolykos", "gpu mining", "proof of work"],
         content: "Mine Ergo using consumer-grade GPUs with the ASIC-resistant Autolykos algorithm",

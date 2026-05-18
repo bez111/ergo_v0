@@ -75,7 +75,7 @@ export default function RoyaltiesPage() {
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>
-              <Link href="/docs/developers/data-model-apis/assets/nfts/eip22" className="text-cyan-400 hover:underline">EIP-0022: Auction Contract</Link>
+              <Link href="/docs/developers/data-model-apis/assets/nfts" className="text-cyan-400 hover:underline">EIP-0022: Auction Contract</Link>
             </li>
             <li>
               <Link href="/docs/developers/data-model-apis/assets/nfts/minting/v1-v2" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>

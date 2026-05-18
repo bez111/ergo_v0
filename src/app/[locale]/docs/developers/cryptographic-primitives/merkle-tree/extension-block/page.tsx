@@ -224,7 +224,7 @@ assert(proof.valid(Digest32 @@ root))`}
               <ul className="text-gray-300 space-y-2">
                 <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees Overview</a></li>
                 <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree/core" className="text-blue-400 hover:text-blue-300 underline">Core Merkle Tree</a></li>
-                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree/validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a></li>
               </ul>
             </div>
           </div>

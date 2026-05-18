@@ -429,8 +429,8 @@ export const playbooks: Playbook[] = [
         description: "See how Ergo's distribution compares to VC-funded chains. Understand the long-term implications.",
         duration: "1 hour",
         resources: [
-          { type: 'doc', title: "Ergo vs VC Chains", href: "/compare/ergo-vs-vc-chain" },
-          { type: 'doc', title: "Tokenomics Deep Dive", href: "/docs/technology/adaptive-emission" },
+          { type: 'doc', title: "Ergo vs VC Chains", href: "/compare/ergo-vs-vc-chains" },
+          { type: 'doc', title: "Tokenomics Deep Dive", href: "/docs/miners" },
         ]
       },
       {
@@ -438,7 +438,7 @@ export const playbooks: Playbook[] = [
         description: "Learn how Ergo's community-driven governance works without centralized token holders.",
         duration: "30 minutes",
         resources: [
-          { type: 'doc', title: "Governance Model", href: "/docs/governance" },
+          { type: 'doc', title: "Governance Model", href: "/docs/miners/governance" },
           { type: 'link', title: "Ergo Foundation", href: "https://ergoplatform.org/foundation" },
         ]
       },
@@ -616,7 +616,7 @@ export const playbooks: Playbook[] = [
         description: "See how Storage Rent affects tokenomics, miner incentives, and long-term sustainability.",
         duration: "30 minutes",
         resources: [
-          { type: 'doc', title: "Economic Analysis", href: "/docs/technology/adaptive-emission/storage-rent" },
+          { type: 'doc', title: "Economic Analysis", href: "/technology/storage-rent" },
           { type: 'doc', title: "Emission + Rent Model", href: "/learn/glossary/emission-schedule" },
         ]
       },
@@ -700,7 +700,7 @@ export const playbooks: Playbook[] = [
         description: "Understand how to build applications that verify Ergo state without full nodes.",
         duration: "1-2 hours",
         resources: [
-          { type: 'doc', title: "Light Client Guide", href: "/docs/developers/light-clients" },
+          { type: 'doc', title: "Light Client Guide", href: "/technology/nipopows" },
           { type: 'doc', title: "Glossary: Light Clients", href: "/learn/glossary/light-clients" },
         ]
       },
@@ -709,7 +709,7 @@ export const playbooks: Playbook[] = [
         description: "Learn patterns for integrating Ergo verification into other systems and chains.",
         duration: "1 hour",
         resources: [
-          { type: 'doc', title: "Integration Guide", href: "/docs/developers/integration" },
+          { type: 'doc', title: "Integration Guide", href: "/developers" },
           { type: 'link', title: "Developer Resources", href: "/docs/developers" },
         ]
       },
@@ -1065,7 +1065,7 @@ export const playbooks: Playbook[] = [
         duration: "5 min",
         resources: [
           { type: "link", title: "Ergo Node Releases", href: "https://github.com/ergoplatform/ergo/releases" },
-          { type: "doc", title: "Docker Setup", href: "/docs/developers/infrastructure/node/docker" },
+          { type: "doc", title: "Docker Setup", href: "/docs/developers/infrastructure/node" },
         ],
       },
       {
@@ -1073,7 +1073,7 @@ export const playbooks: Playbook[] = [
         description: "Create a configuration file with your settings. Enable the API for wallet connectivity, set memory limits, and configure network ports.",
         duration: "15 min",
         resources: [
-          { type: "doc", title: "Node Configuration", href: "/docs/developers/infrastructure/node/config" },
+          { type: "doc", title: "Node Configuration", href: "/docs/developers/infrastructure/node" },
         ],
       },
       {
@@ -1081,7 +1081,7 @@ export const playbooks: Playbook[] = [
         description: "Launch the node and begin syncing the blockchain. Initial sync takes 4-12 hours depending on your hardware and internet speed.",
         duration: "4-12 hours",
         resources: [
-          { type: "doc", title: "Sync Troubleshooting", href: "/docs/developers/infrastructure/node/troubleshooting" },
+          { type: "doc", title: "Sync Troubleshooting", href: "/docs/developers/infrastructure/node" },
         ],
       },
       {
@@ -1097,7 +1097,7 @@ export const playbooks: Playbook[] = [
         description: "Set up the node as a system service for automatic startup. Monitor health and keep it updated with new releases.",
         duration: "15 min",
         resources: [
-          { type: "doc", title: "Node Maintenance", href: "/docs/developers/infrastructure/node/maintenance" },
+          { type: "doc", title: "Node Maintenance", href: "/docs/developers/infrastructure/node" },
         ],
       },
     ],
@@ -1354,7 +1354,7 @@ export const playbooks: Playbook[] = [
         duration: "30 min",
         resources: [
           { type: "tool", title: "ErgoRaffle", href: "https://ergoraffle.com" },
-          { type: "doc", title: "Fleet SDK", href: "/docs/developers/fleet-sdk" },
+          { type: "doc", title: "Fleet SDK", href: "/docs/developers/tooling/fleet" },
         ],
       },
       {

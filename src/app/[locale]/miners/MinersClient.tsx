@@ -193,13 +193,11 @@ export function MinersClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
         {/* Hidden Breadcrumbs for SEO */}
-        <Breadcrumbs items={[...breadcrumbItems, { name: "For Miners", href: "#" }]} variant="hidden" />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "For Miners", href: "/miners" }]} variant="hidden" />
         
         {/* Hero Section */}
         <motion.section 
-          initial={{ opacity: 0, y: 30 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.7, ease: "easeOut" }} 
+          initial={false}
           className="pt-28 pb-16 px-4"
         >
           <div className="max-w-7xl mx-auto">
@@ -294,9 +292,7 @@ export function MinersClient() {
         {/* Live Metrics Section */}
         <motion.section 
           className="py-16 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          initial={false}
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-6 text-white">
@@ -354,9 +350,7 @@ export function MinersClient() {
         {/* Mining Profitability Calculator */}
         <motion.section 
           className="py-16 px-4 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          initial={false}
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -388,6 +382,7 @@ export function MinersClient() {
                         step="10"
                         value={hashrate}
                         onChange={(e) => setHashrate(Number(e.target.value))}
+                        suppressHydrationWarning
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
                       <div className="flex justify-between text-xs text-neutral-400 mt-1">
@@ -411,6 +406,7 @@ export function MinersClient() {
                         step="10"
                         value={powerConsumption}
                         onChange={(e) => setPowerConsumption(Number(e.target.value))}
+                        suppressHydrationWarning
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
                       <div className="flex justify-between text-xs text-neutral-400 mt-1">
@@ -434,6 +430,7 @@ export function MinersClient() {
                         step="0.01"
                         value={electricityCost}
                         onChange={(e) => setElectricityCost(Number(e.target.value))}
+                        suppressHydrationWarning
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
                       <div className="flex justify-between text-xs text-neutral-400 mt-1">
@@ -457,6 +454,7 @@ export function MinersClient() {
                         step="0.10"
                         value={ergPrice}
                         onChange={(e) => setErgPrice(Number(e.target.value))}
+                        suppressHydrationWarning
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
                       <div className="flex justify-between text-xs text-neutral-400 mt-1">
@@ -480,6 +478,7 @@ export function MinersClient() {
                         step="0.1"
                         value={poolFee}
                         onChange={(e) => setPoolFee(Number(e.target.value))}
+                        suppressHydrationWarning
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
                       <div className="flex justify-between text-xs text-neutral-400 mt-1">

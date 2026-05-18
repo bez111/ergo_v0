@@ -36,7 +36,7 @@ export default function HeadlessFrameworkPage() {
         </div>
       </div>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">What Are Headless dApps?</h2>
-      <p className="text-gray-300 mb-4">Headless dApps represent a novel approach to dApp development, focusing on creating pure, portable, self-contained logic for interacting with on-chain <a href="/docs/developers/intro/scs/smart-contracts-overview" className="text-cyan-400 hover:underline">smart contract protocols</a>.</p>
+      <p className="text-gray-300 mb-4">Headless dApps represent a novel approach to dApp development, focusing on creating pure, portable, self-contained logic for interacting with on-chain <a href="/docs/developers" className="text-cyan-400 hover:underline">smart contract protocols</a>.</p>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
         <li><b>Separation of Concerns:</b> They separate the core dApp logic (reading blockchain state, constructing transactions) from the user interface (frontend). The HDF <i>is</i> the "backend" logic, but without a built-in frontend (hence "headless").</li>
         <li><b>Portability:</b> Because they are self-contained logic (often compiled to WebAssembly or native libraries), headless dApps built with the HDF can run anywhere  desktop OS, mobile OS, browsers, servers, bots, etc.</li>
@@ -72,7 +72,7 @@ export default function HeadlessFrameworkPage() {
           <ul className="list-disc pl-6 mt-1 space-y-1">
             <li>Install the <a href="https://www.rust-lang.org/tools/install" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Rust toolchain</a>.</li>
             <li>Basic understanding of Rust programming.</li>
-            <li>Familiarity with Ergo's <a href="/technology/eutxo-model" className="text-cyan-400 hover:underline">eUTXO model</a> and <a href="/docs/developers/intro/scs/ergoscript" className="text-cyan-400 hover:underline">ErgoScript</a> concepts.</li>
+            <li>Familiarity with Ergo's <a href="/technology/eutxo-model" className="text-cyan-400 hover:underline">eUTXO model</a> and <a href="/docs/developers" className="text-cyan-400 hover:underline">ErgoScript</a> concepts.</li>
           </ul>
         </li>
         <li>

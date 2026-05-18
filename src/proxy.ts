@@ -1,18 +1,124 @@
 import createMiddleware from 'next-intl/middleware';
+import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { routing } from './i18n/routing';
 
 const intlProxy = createMiddleware(routing);
+const agentHubHosts = new Set([
+  'agents.ergoblockchain.org',
+  'agenthub.ergoblockchain.org',
+  'agentichub.ergoblockchain.org',
+]);
+const localePrefixes = new Set([
+  'en', 'ru', 'zh-cn', 'zh-tw',
+  'tr', 'ko-kr', 'es', 'pt-br',
+  'ja', 'de', 'fr', 'it',
+]);
+const legacyRouteRedirects = new Map<string, string>([
+  ['/blog/assurance-contracts', '/patterns/ergo-crowdfunding-assurance-contract'],
+  ['/blog/cross-chain-swaps', '/patterns/ergo-cross-chain-atomic-swap'],
+  ['/blog/deflationary-tokens', '/patterns/ergo-token-burning-supply-control'],
+  ['/blog/stealth-addresses', '/patterns/ergo-privacy-one-time-address'],
+  ['/blog/vesting-contracts', '/patterns/ergo-block-height-time-lock'],
+  ['/compare/ergo-vs-ethereum-classic', '/compare/ergo-vs-ethereum'],
+  ['/compare/ergo-vs-vc-chain', '/compare/ergo-vs-vc-chains'],
+  ['/ecosystem/financial', '/docs/ecosystem/financial'],
+  ['/ecosystem/market', '/ergo-watch'],
+  ['/ecosystem/partnerships', '/ecosystem'],
+  ['/ecosystem/spectrum', '/ecosystem/spectrum-finance'],
+  ['/infographics/storage-rent-vs-state-bloat-ergo', '/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners'],
+  ['/learn/glossary/registers', '/learn/glossary/boxes'],
+  ['/learn/glossary/utxo', '/learn/glossary/eutxo'],
+  ['/miners-calculator', '/miners'],
+  ['/miners-pools', '/miners'],
+  ['/patterns/amm-contracts', '/patterns/ergo-amm-liquidity-pool'],
+  ['/patterns/liquidity-pool', '/patterns/ergo-amm-liquidity-pool'],
+  ['/patterns/multi-signature', '/patterns/ergo-multisig-wallet-m-of-n'],
+  ['/patterns/ring-signatures', '/patterns/ergo-privacy-one-time-address'],
+  ['/patterns/stealth-addresses', '/patterns/ergo-privacy-one-time-address'],
+  ['/patterns/time-locked-contracts', '/patterns/ergo-block-height-time-lock'],
+  ['/playbooks/defi-developer', '/playbooks/build-defi-on-ergo'],
+  ['/playbooks/privacy-developer', '/playbooks/private-transaction-ergomixer'],
+  ['/playbooks/smart-contract-developer', '/patterns'],
+  ['/start/mining', '/miners'],
+  ['/technology/ergomixer', '/use/privacy'],
+  ['/technology/sigma-protocols', '/technology/privacy-features'],
+  ['/topics/ergo-tokenomics', '/topics/ergo-sustainability'],
+  ['/topics/ergoscript', '/topics/ergo-technology'],
+  ['/topics/eutxo', '/topics/ergo-technology'],
+  ['/topics/privacy', '/topics/ergo-privacy'],
+  ['/topics/technology', '/topics/ergo-technology'],
+  ['/use/guides', '/use'],
+  ['/use/storage-rent', '/technology/storage-rent'],
+  ['/экосистема', '/ecosystem'],
+]);
 
 export function proxy(request: NextRequest) {
+  const host = normalizeHost(request.headers.get('host'));
+  const path = request.nextUrl.pathname;
+
+  const agentHubPath = getAgentHubPath(path);
+  if (agentHubHosts.has(host) && agentHubPath) {
+    const url = request.nextUrl.clone();
+    url.pathname = agentHubPath;
+    return NextResponse.rewrite(url);
+  }
+
+  const legacyRedirectPath = getLegacyRedirectPath(path);
+  if (legacyRedirectPath) {
+    const url = request.nextUrl.clone();
+    url.pathname = legacyRedirectPath;
+    return NextResponse.redirect(url, 308);
+  }
+
   return intlProxy(request);
 }
 
+function getAgentHubPath(pathname: string): string | null {
+  const normalized = normalizePathname(pathname);
+  if (normalized === '/') return '/en/agent-economy/live';
+
+  const parts = normalized.split('/').filter(Boolean);
+  const maybeLocale = parts[0];
+  if (maybeLocale && localePrefixes.has(maybeLocale) && parts.length === 1) {
+    return `/${maybeLocale}/agent-economy/live`;
+  }
+
+  return null;
+}
+
+function normalizeHost(value: string | null): string {
+  if (!value) return '';
+  if (value.startsWith('[')) {
+    const end = value.indexOf(']');
+    return end >= 0 ? value.slice(1, end).toLowerCase() : value.toLowerCase();
+  }
+  return value.split(':')[0]?.toLowerCase() ?? '';
+}
+
+function getLegacyRedirectPath(pathname: string): string | null {
+  const normalized = normalizePathname(pathname);
+  const parts = normalized.split('/').filter(Boolean);
+  const maybeLocale = parts[0];
+  const locale = maybeLocale && localePrefixes.has(maybeLocale) ? maybeLocale : null;
+  const route = locale ? `/${parts.slice(1).join('/')}` : normalized;
+  const target = legacyRouteRedirects.get(route);
+
+  if (!target) return null;
+  return locale ? `/${locale}${target}` : target;
+}
+
+function normalizePathname(pathname: string): string {
+  if (pathname !== '/' && pathname.endsWith('/')) {
+    return pathname.slice(0, -1);
+  }
+  return pathname;
+}
+
 export const config = {
-  // Match only internationalized pathnames
+  // Match app routes while excluding APIs, Next internals, Vercel internals,
+  // and static assets with file extensions.
   matcher: [
-    '/',
-    '/(ru)/:path*',
     '/((?!api|_next|_vercel|.*\\..*).*)'
   ]
 };

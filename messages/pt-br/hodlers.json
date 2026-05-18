@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Hashrate da rede" },
-      "activeAddresses": { "label": "Endereços ativos" },
-      "defiTvl": { "label": "TVL DeFi" },
-      "ergSupply": { "label": "Oferta ERG", "trend": "{remaining}M restantes" },
-      "avgBlockTime": { "label": "Tempo médio de bloco" },
-      "activeNodes": { "label": "Nós ativos" }
+      "networkHashrate": {
+        "label": "Hashrate da rede"
+      },
+      "activeAddresses": {
+        "label": "Endereços ativos"
+      },
+      "defiTvl": {
+        "label": "TVL DeFi"
+      },
+      "ergSupply": {
+        "label": "Oferta ERG",
+        "trend": "{remaining}M restantes"
+      },
+      "avgBlockTime": {
+        "label": "Tempo médio de bloco"
+      },
+      "activeNodes": {
+        "label": "Nós ativos"
+      }
     },
     "heroComparisons": [
       {
@@ -86,38 +99,98 @@
       "rows": [
         {
           "criterion": "Política monetária",
-          "bitcoin": { "status": "good", "text": "Oferta fixa de 21M" },
-          "ethereum": { "status": "warning", "text": "Tokenomics variáveis" },
-          "monero": { "status": "warning", "text": "Emissão residual" },
-          "ergo": { "status": "good", "text": "Oferta fixa de 97M" }
+          "bitcoin": {
+            "status": "good",
+            "text": "Oferta fixa de 21M"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "Tokenomics variáveis"
+          },
+          "monero": {
+            "status": "warning",
+            "text": "Emissão residual"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Oferta fixa de 97M"
+          }
         },
         {
           "criterion": "Modelo de segurança",
-          "bitcoin": { "status": "good", "text": "Proof-of-Work" },
-          "ethereum": { "status": "warning", "text": "Proof-of-Stake" },
-          "monero": { "status": "good", "text": "Proof-of-Work" },
-          "ergo": { "status": "good", "text": "Proof-of-Work" }
+          "bitcoin": {
+            "status": "good",
+            "text": "Proof-of-Work"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "Proof-of-Stake"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Proof-of-Work"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Proof-of-Work"
+          }
         },
         {
           "criterion": "Recursos de privacidade",
-          "bitcoin": { "status": "bad", "text": "Transparente" },
-          "ethereum": { "status": "bad", "text": "Transparente" },
-          "monero": { "status": "good", "text": "Sempre privado" },
-          "ergo": { "status": "good", "text": "Privacidade opcional" }
+          "bitcoin": {
+            "status": "bad",
+            "text": "Transparente"
+          },
+          "ethereum": {
+            "status": "bad",
+            "text": "Transparente"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Sempre privado"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Privacidade opcional"
+          }
         },
         {
           "criterion": "Smart contracts",
-          "bitcoin": { "status": "bad", "text": "Muito limitado" },
-          "ethereum": { "status": "good", "text": "Funcionalidade completa" },
-          "monero": { "status": "bad", "text": "Nenhum" },
-          "ergo": { "status": "good", "text": "Modelo eUTXO" }
+          "bitcoin": {
+            "status": "bad",
+            "text": "Muito limitado"
+          },
+          "ethereum": {
+            "status": "good",
+            "text": "Funcionalidade completa"
+          },
+          "monero": {
+            "status": "bad",
+            "text": "Nenhum"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Modelo eUTXO"
+          }
         },
         {
           "criterion": "Lançamento justo",
-          "bitcoin": { "status": "good", "text": "Sem pré-mineração" },
-          "ethereum": { "status": "warning", "text": "70M pré-minerados" },
-          "monero": { "status": "good", "text": "Sem pré-mineração" },
-          "ergo": { "status": "good", "text": "Sem pré-mineração" }
+          "bitcoin": {
+            "status": "good",
+            "text": "Sem pré-mineração"
+          },
+          "ethereum": {
+            "status": "warning",
+            "text": "70M pré-minerados"
+          },
+          "monero": {
+            "status": "good",
+            "text": "Sem pré-mineração"
+          },
+          "ergo": {
+            "status": "good",
+            "text": "Sem pré-mineração"
+          }
         }
       ]
     },
@@ -213,9 +286,15 @@
     }
   },
   "holdersData": {
-    "mining-access": { "title": "Acesso à mineração" },
-    "fair-launch": { "title": "Lançamento justo" },
-    "long-term-security": { "title": "Segurança de longo prazo" },
+    "mining-access": {
+      "title": "Acesso à mineração"
+    },
+    "fair-launch": {
+      "title": "Lançamento justo"
+    },
+    "long-term-security": {
+      "title": "Segurança de longo prazo"
+    },
     "sound-money": {
       "title": "Dinheiro sólido",
       "description": "Oferta máxima de 97,7M. Sem inflação. Sem VCs despejando tokens em você. Segurança Proof-of-Work comprovada desde 2019."

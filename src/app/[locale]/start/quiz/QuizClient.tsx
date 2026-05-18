@@ -534,7 +534,7 @@ export default function QuizClient() {
   return (
     <QuizPageWrapper>
       {/* Hidden Breadcrumbs for SEO */}
-      <Breadcrumbs items={[{ name: 'Start', href: '/start' }, { name: "Quiz", href: "#" }]} variant="hidden" />
+      <Breadcrumbs items={[{ name: 'Start', href: '/start' }, { name: "Quiz", href: "/start/quiz" }]} variant="hidden" />
       
       <AnimatePresence mode="wait">
         {/* Introduction */}

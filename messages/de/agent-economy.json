@@ -33,6 +33,26 @@
         "body": "Ein API-Aufruf für 0,001 USD über Stripe kostet mehr Gebühren als der Aufruf selbst. Diese Schienen wurden nicht für Maschine-zu-Maschine-Mikrozahlungen in irgendeiner Größenordnung gebaut."
       }
     ],
+    "creditUnlock": {
+      "sectionLabel": "The Unlock",
+      "heading": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+      "description": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+      "formula": "Payments move value. Verification proves work. Credit creates economic agency.",
+      "items": [
+        {
+          "title": "Payments",
+          "body": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout."
+        },
+        {
+          "title": "Verification",
+          "body": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened."
+        },
+        {
+          "title": "Credit",
+          "body": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules."
+        }
+      ]
+    },
     "solution": {
       "sectionLabel": "Die Lösung",
       "heading": "Warum Ergo die richtige",

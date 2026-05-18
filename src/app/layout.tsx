@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     default: "Ergo — The Agentic Blockchain for Contractual Money",
     template: "%s | Ergo Platform"
   },
-  description: "Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money without counterparty risk.",
+  description: "Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money with fewer custody assumptions.",
   keywords: [
     "ergo blockchain",
     "agentic blockchain",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     siteName: 'Ergo Platform',
     title: 'Ergo — The Agentic Blockchain for Contractual Money',
-    description: 'Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money without counterparty risk.',
+    description: 'Ergo is the agentic blockchain — PoW + eUTXO + ErgoScript built for autonomous AI agent payments, DeFi, and programmable money with fewer custody assumptions.',
     images: [
       {
         // Absolute URLs — Telegram and several other share-preview
@@ -111,7 +111,6 @@ export const metadata: Metadata = {
       'fr': 'https://www.ergoblockchain.org/fr',
       'de': 'https://www.ergoblockchain.org/de',
       'es': 'https://www.ergoblockchain.org/es',
-      'ar': 'https://www.ergoblockchain.org/ar',
       'zh-CN': 'https://www.ergoblockchain.org/zh-cn',
       'zh-TW': 'https://www.ergoblockchain.org/zh-tw',
       'tr': 'https://www.ergoblockchain.org/tr',
@@ -147,6 +146,8 @@ const siteSchemaGraph = {
   "@graph": [createOrganizationSchema(), createWebSiteSchema()],
 }
 
+const seoMonitorEnabled = process.env.NEXT_PUBLIC_SEO_MONITOR === "true"
+
 export default function RootLayout({
   children,
 }: {
@@ -165,7 +166,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="" />
         <link rel="preconnect" href="https://vitals.vercel-insights.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://www.ergoblockchain.org" />
-        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
         {/* OpenSearch — lets browsers add Ergo site search to their search bar */}
         <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Ergo Platform" />
         {renderSchemaScripts([siteSchemaGraph])}
@@ -174,7 +174,7 @@ export default function RootLayout({
         <Suspense>
           <GoogleAnalytics />
         </Suspense>
-        <SEOMonitor debug={process.env.NODE_ENV === 'development'} />
+        {seoMonitorEnabled ? <SEOMonitor enabled debug={process.env.NODE_ENV === 'development'} /> : null}
         {children}
       </body>
     </html>

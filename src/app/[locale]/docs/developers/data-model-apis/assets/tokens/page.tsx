@@ -159,7 +159,7 @@ export default function TokensPage() {
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li><a href="https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">How to mint a token with Fleet SDK</a></li>
-            <li>Creating a <Link href="/docs/developers/perpetual" className="text-cyan-400 hover:underline">perpetual token</Link> (designed to exist indefinitely, unless it is removed by garbage collection.)</li>
+            <li>Creating a <Link href="/docs/ecosystem/financial/defi/perpetual-tokens" className="text-cyan-400 hover:underline">perpetual token</Link> (designed to exist indefinitely, unless it is removed by garbage collection.)</li>
           </ul>
         </div>
 

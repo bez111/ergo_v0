@@ -25,7 +25,7 @@ export default function DataModelApisResourcesPage() {
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* ErgoTool Card */}
-        <Link href="/docs/developers/data-model-apis/resources/ergotool" className="group">
+        <Link href="/docs/developers/data-model-apis/resources" className="group">
           <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">

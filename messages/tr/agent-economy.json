@@ -33,6 +33,26 @@
         "body": "Stripe üzerinden 0,001 dolarlık bir API çağrısı, çağrının kendisinden daha pahalıya patlar. Bu raylar herhangi bir ölçekte makineler arası mikro ödemeler için yapılmamıştı."
       }
     ],
+    "creditUnlock": {
+      "sectionLabel": "The Unlock",
+      "heading": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+      "description": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+      "formula": "Payments move value. Verification proves work. Credit creates economic agency.",
+      "items": [
+        {
+          "title": "Payments",
+          "body": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout."
+        },
+        {
+          "title": "Verification",
+          "body": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened."
+        },
+        {
+          "title": "Credit",
+          "body": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules."
+        }
+      ]
+    },
     "solution": {
       "sectionLabel": "Çözüm",
       "heading": "Ergo neden doğru",

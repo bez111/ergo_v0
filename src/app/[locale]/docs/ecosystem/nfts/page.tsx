@@ -183,7 +183,7 @@ export default function NFTsPage() {
       ))}
       {/* Minting instructions */}
       <div className="mt-12 text-gray-400 text-base">
-        For instructions on how to mint your own NFTs, refer to the <Link href="/docs/developers/data-model-apis/box/assets/tokens/non-fungible-tokens/minting-a-nft" className="text-cyan-400 hover:underline">developer section</Link>.
+        For instructions on how to mint your own NFTs, refer to the <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">developer section</Link>.
       </div>
     </>
   );

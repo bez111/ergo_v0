@@ -331,11 +331,6 @@
       "interactive_visualization_of_50_ergo": "Interaktive Visualisierung von 50+ Ergo-Projekten. DeFi, NFTs, Infrastruktur erkunden.",
       "visual_explorer_for_ergo_blockchain": "Visueller Explorer für Ergo-Blockchain-Projekte und -Anwendungen"
     },
-    "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
-    "website_id_https_ergoblockchain_org_website": "WebSite\", \"@id\": \"https://ergoblockchain.org#website",
-    "breadcrumblist_id_https_ergoblockchain_org": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
-    "ecosystem_item_https_ergoblockchain_org_ecosystem": "Ecosystem\", item: \"https://ergoblockchain.org/ecosystem",
-    "home_item_https_ergoblockchain_org": "Home\", item: \"https://ergoblockchain.org/",
     "projectPage": {
       "breadcrumbs": {
         "ecosystem": "Ökosystem"
@@ -958,6 +953,20 @@
       "open": "Öffnen",
       "close": "Schließen"
     },
-    "legend": "Legende:"
+    "legend": "Legende:",
+    "categories": {
+      "DEFI": "DEFI",
+      "INFRASTRUCTURE": "INFRASTRUCTURE",
+      "ORACLES": "ORACLES",
+      "PRIVACY": "PRIVACY",
+      "NFT": "NFT",
+      "WALLETS": "WALLETS",
+      "DAO": "DAO",
+      "TOOLS": "TOOLS"
+    },
+    "download": {
+      "png": "PNG",
+      "svg": "SVG"
+    }
   }
 }

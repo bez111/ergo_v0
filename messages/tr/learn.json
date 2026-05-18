@@ -71,10 +71,6 @@
       "research_by_category": "Kategoriye Göre Araştırma",
       "join_the_discussion": "Tartışmaya Katıl",
       "ring_signatures_for_blockchain_privacy": "Blok Zinciri Gizliliği için Halka İmzaları",
-      "learn_item_https_ergoblockchain_org_learn": "Öğren\", item: \"https://ergoblockchain.org/learn",
-      "research_item_https_ergoblockchain_org": "Araştırma\", item: \"https://ergoblockchain.org/learn/research",
-      "learn_href_learn": "Öğren\", href: \"/learn",
-      "research_href_learn_research": "Araştırma\", href: \"/learn/research",
       "the_core_technical_paper_describing_ergo": "Ergo'yu açıklayan temel teknik makale",
       "extended_utxo_eutxo_model": "Genişletilmiş UTXO (eUTXO) Modeli",
       "by_iohk_cardano_ergo_researchers": "IOHK/Cardano ve Ergo araştırmacıları tarafından — eUTXO paradigması üzerine tanımlayıcı makale.",
@@ -111,24 +107,14 @@
       "collection_of_peer_reviewed_papers": "Ergo blok zinciri üzerine hakemli makaleler koleksiyonu"
     },
     "guides": {
+      "confidential_transactions": "Gizli İşlemler",
+      "practical_use_cases": "Pratik Kullanım Durumları",
+      "confidential_defi_protocols": "Gizli DeFi protokolleri",
+      "sigma_protocols_are_advanced_cryptographic": "Sigma protokolleri, kullanıcıların bilgi açıklamadan ifadeleri kanıtlamasına olanak tanıyan sıfır bilgi kanıtlarını etkinleştiren gelişmiş kriptografik araçlardır. Bu, Ergo akıllı sözleşmelerinde gizliliğin temelidir.",
+      "ergomixer_is_a_privacy_tool": "ErgoMixer, kullanıcıların ERG ve token'larını karıştırarak gönderici ve alıcı arasındaki zincir üstü bağlantıyı kesen bir gizlilik aracıdır. Bu, işlem gizliliğini ve değiştirilebilirliği artırır.",
+      "using_sigma_protocols_and_custom": "Sigma protokollerini ve özel betikleri kullanarak Ergo üzerinde gizli işlemler ve gizlilik korumalı dApp'ler oluşturabilirsiniz.",
+      "ergo_s_privacy_features_empower": "Ergo'nun gizlilik özellikleri, kullanıcıların blok zincirinde kendi verilerini ve finansal gizliliklerini kontrol etmelerine olanak tanır.",
       "consensus": {
-        "title": "Konsensüs Mekanizması",
-        "description": "Ergo'nun Autolykos konsensüs algoritmasını anlama",
-        "subtitle": "İş kanıtı konsensüsüne derinlemesine bakış",
-        "sections": {
-          "overview": {
-            "title": "Genel Bakış",
-            "content": "Autolykos, Ergo'nun ASIC dirençli İş Kanıtı konsensüs algoritmasıdır."
-          },
-          "autolykos": {
-            "title": "Autolykos",
-            "content": "Autolykos v2, Ergo blok zincirinde kullanılan mevcut konsensüs algoritmasıdır."
-          },
-          "mining": {
-            "title": "Madencilik",
-            "content": "Ergo madenciliğine nasıl katılacağınızı öğrenin."
-          }
-        },
         "consensus_in_ergo": "Ergo'da Konsensüs",
         "what_is_autolykos": "Autolykos nedir?",
         "prevents_centralization_of_mining_power": "Madencilik gücünün merkezileşmesini önler",
@@ -140,23 +126,6 @@
         "proof_of_work_is_a": "İş Kanıtı, ağı güvence altına alan, izinsiz katılımı mümkün kılan ve dürüst davranış için teşvikleri hizalayan kanıtlanmış bir konsensüs mekanizmasıdır."
       },
       "oraclePool": {
-        "title": "Oracle Havuzları",
-        "description": "Ergo'da oracle havuzlarını kullanma ve oluşturma",
-        "subtitle": "Merkeziyetsiz veri akışı öğreticisi",
-        "sections": {
-          "overview": {
-            "title": "Genel Bakış",
-            "content": "Oracle havuzları, Ergo'nun merkeziyetsiz veri akışı sistemidir."
-          },
-          "howItWorks": {
-            "title": "Nasıl Çalışır",
-            "content": "Oracle havuzlarının verileri nasıl topladığını ve birleştirdiğini öğrenin."
-          },
-          "useCases": {
-            "title": "Kullanım Senaryoları",
-            "content": "Oracle havuzlarının gerçek dünya kullanım senaryolarını keşfedin."
-          }
-        },
         "how_oracle_pools_work": "Kehane Havuzları Nasıl Çalışır",
         "multiple_oracles_submit_data_e": "Birden fazla kehane, havuza veri (örn. fiyat akışları) gönderir.",
         "decentralized_and_trustless_data_feeds": "Merkeziyetsiz ve güvensiz veri akışları",
@@ -168,23 +137,6 @@
         "oracle_pools_are_a_core": "Kehane Havuzları, yeni nesil merkeziyetsiz uygulamaları mümkün kılan Ergo'nun temel bir yeniliğidir."
       },
       "storageRent": {
-        "title": "Depolama Kirası",
-        "description": "Ergo'nun depolama kirası mekanizmasını anlama",
-        "subtitle": "Sürdürülebilir blok zinciri depolama ekonomisi",
-        "sections": {
-          "overview": {
-            "title": "Genel Bakış",
-            "content": "Depolama kirası, Ergo blok zincirinin sürdürülebilirliğini sağlar."
-          },
-          "mechanism": {
-            "title": "Mekanizma",
-            "content": "Depolama kirasının teknik olarak nasıl çalıştığını açıklar."
-          },
-          "implications": {
-            "title": "Çıkarımlar",
-            "content": "Kullanıcılar ve geliştiriciler için depolama kirasının ekonomik çıkarımları."
-          }
-        },
         "how_storage_rent_works": "Depolama Kirası Nasıl Çalışır",
         "fees_are_collected_by_miners": "Ücretler madenciler tarafından toplanır ve ağı sürdürmeleri için teşvik sağlar.",
         "unclaimed_or_abandoned_boxes_are": "Talep edilmemiş veya terk edilmiş kutular eninde sonunda geri dönüştürülerek yer açar.",
@@ -193,39 +145,6 @@
         "ensures_long_term_sustainability": "Uzun vadeli sürdürülebilirliği sağlar",
         "storage_rent_is_a_unique": "Depolama kirası, Ergo'nun yıllarca verimli ve sürdürülebilir kalmasına yardımcı olan benzersiz bir özelliktir."
       },
-      "privacy": {
-        "title": "Gizlilik Özellikleri",
-        "description": "Ergo'da Sigma protokollerini ve gizlilik araçlarını kullanma",
-        "subtitle": "Finansal gizliliğinizi koruyun",
-        "sections": {
-          "overview": {
-            "title": "Genel Bakış",
-            "content": "Ergo, yerleşik olarak gelişmiş gizlilik özellikleri sağlar."
-          },
-          "sigmaProtocols": {
-            "title": "Sigma Protokolleri",
-            "content": "Sıfır bilgi kanıtları ve gizlilik için Sigma protokolleri."
-          },
-          "tools": {
-            "title": "Gizlilik Araçları",
-            "content": "ErgoMixer dahil Ergo'nun gizlilik araçlarını keşfedin."
-          }
-        },
-        "confidential_transactions": "Gizli İşlemler",
-        "practical_use_cases": "Pratik Kullanım Durumları",
-        "confidential_defi_protocols": "Gizli DeFi protokolleri",
-        "sigma_protocols_are_advanced_cryptographic": "Sigma protokolleri, kullanıcıların bilgi açıklamadan ifadeleri kanıtlamasına olanak tanıyan sıfır bilgi kanıtlarını etkinleştiren gelişmiş kriptografik araçlardır. Bu, Ergo akıllı sözleşmelerinde gizliliğin temelidir.",
-        "ergomixer_is_a_privacy_tool": "ErgoMixer, kullanıcıların ERG ve token'larını karıştırarak gönderici ve alıcı arasındaki zincir üstü bağlantıyı kesen bir gizlilik aracıdır. Bu, işlem gizliliğini ve değiştirilebilirliği artırır.",
-        "using_sigma_protocols_and_custom": "Sigma protokollerini ve özel betikleri kullanarak Ergo üzerinde gizli işlemler ve gizlilik korumalı dApp'ler oluşturabilirsiniz.",
-        "ergo_s_privacy_features_empower": "Ergo'nun gizlilik özellikleri, kullanıcıların blok zincirinde kendi verilerini ve finansal gizliliklerini kontrol etmelerine olanak tanır."
-      },
-      "confidential_transactions": "Gizli İşlemler",
-      "practical_use_cases": "Pratik Kullanım Durumları",
-      "confidential_defi_protocols": "Gizli DeFi protokolleri",
-      "sigma_protocols_are_advanced_cryptographic": "Sigma protokolleri, kullanıcıların bilgi açıklamadan ifadeleri kanıtlamasına olanak tanıyan sıfır bilgi kanıtlarını etkinleştiren gelişmiş kriptografik araçlardır. Bu, Ergo akıllı sözleşmelerinde gizliliğin temelidir.",
-      "ergomixer_is_a_privacy_tool": "ErgoMixer, kullanıcıların ERG ve token'larını karıştırarak gönderici ve alıcı arasındaki zincir üstü bağlantıyı kesen bir gizlilik aracıdır. Bu, işlem gizliliğini ve değiştirilebilirliği artırır.",
-      "using_sigma_protocols_and_custom": "Sigma protokollerini ve özel betikleri kullanarak Ergo üzerinde gizli işlemler ve gizlilik korumalı dApp'ler oluşturabilirsiniz.",
-      "ergo_s_privacy_features_empower": "Ergo'nun gizlilik özellikleri, kullanıcıların blok zincirinde kendi verilerini ve finansal gizliliklerini kontrol etmelerine olanak tanır.",
       "what_is_a_utxo": "UTXO nedir?",
       "unspent_transaction_output": "Harcanmamış İşlem Çıktısı",
       "what_is_eutxo": "eUTXO nedir?",
@@ -267,6 +186,15 @@
       "encourages_active_participation": "Aktif katılımı teşvik eder",
       "ensures_long_term_sustainability": "Uzun vadeli sürdürülebilirliği sağlar",
       "storage_rent_is_a_unique": "Depolama kirası, Ergo'nun yıllarca verimli ve sürdürülebilir kalmasına yardımcı olan benzersiz bir özelliktir.",
+      "privacy": {
+        "confidential_transactions": "Gizli İşlemler",
+        "practical_use_cases": "Pratik Kullanım Durumları",
+        "confidential_defi_protocols": "Gizli DeFi protokolleri",
+        "sigma_protocols_are_advanced_cryptographic": "Sigma protokolleri, kullanıcıların bilgi açıklamadan ifadeleri kanıtlamasına olanak tanıyan sıfır bilgi kanıtlarını etkinleştiren gelişmiş kriptografik araçlardır. Bu, Ergo akıllı sözleşmelerinde gizliliğin temelidir.",
+        "ergomixer_is_a_privacy_tool": "ErgoMixer, kullanıcıların ERG ve token'larını karıştırarak gönderici ve alıcı arasındaki zincir üstü bağlantıyı kesen bir gizlilik aracıdır. Bu, işlem gizliliğini ve değiştirilebilirliği artırır.",
+        "using_sigma_protocols_and_custom": "Sigma protokollerini ve özel betikleri kullanarak Ergo üzerinde gizli işlemler ve gizlilik korumalı dApp'ler oluşturabilirsiniz.",
+        "ergo_s_privacy_features_empower": "Ergo'nun gizlilik özellikleri, kullanıcıların blok zincirinde kendi verilerini ve finansal gizliliklerini kontrol etmelerine olanak tanır."
+      },
       "how_oracle_pools_work": "Kehane Havuzları Nasıl Çalışır",
       "multiple_oracles_submit_data_e": "Birden fazla kehane, havuza veri (örn. fiyat akışları) gönderir.",
       "decentralized_and_trustless_data_feeds": "Merkeziyetsiz ve güvensiz veri akışları",
@@ -293,13 +221,8 @@
     },
     "learnErgoscript": {
       "title": "ErgoScript Öğren",
-      "description": "Ergo'nun güçlü akıllı sözleşme programlama dili ErgoScript'i öğrenmek için kapsamlı rehber.",
       "subtitle": "Ergo'nun akıllı sözleşme dilinde ustalaş",
-      "seo": {
-        "title": "ErgoScript Öğren | Ergo Platformu",
-        "description": "Ergo'nun akıllı sözleşme dili ErgoScript'i öğrenin.",
-        "keywords": "ErgoScript öğren, akıllı sözleşmeler, blok zinciri geliştirme"
-      },
+      "description": "Ergo'nun güçlü akıllı sözleşme programlama dili ErgoScript'i öğrenmek için kapsamlı rehber.",
       "lastUpdated": "Son güncelleme",
       "features": {
         "title": "Neden ErgoScript Öğrenmelisiniz?",
@@ -322,34 +245,25 @@
         }
       }
     },
+    "browseFaq": "SSS'ye Göz At",
     "sections": {
-      "featured": "Öne Çıkan",
-      "all": "Tümü",
-      "beginner": "Başlangıç",
-      "intermediate": "Orta",
-      "advanced": "İleri",
       "basics": "Blok Zinciri Temelleri",
       "ergoScript": "ErgoScript",
       "development": "Geliştirme",
       "research": "Araştırma"
     },
     "categories": {
-      "all": "Tümü",
       "basics": {
         "title": "Temel Bilgiler",
         "description": "Blok zinciri temelleriyle yolculuğunuza başlayın"
       },
-      "development": {
-        "title": "Geliştirme",
-        "description": "Ergo üzerinde nasıl inşa edeceğinizi öğrenin"
-      },
-      "defi": "DeFi",
-      "privacy": "Gizlilik",
-      "mining": "Madencilik",
-      "wallets": "Cüzdanlar",
       "advanced": {
         "title": "İleri Düzey",
         "description": "Teknik kavramlara derinlemesine dalın"
+      },
+      "development": {
+        "title": "Geliştirme",
+        "description": "Ergo üzerinde nasıl inşa edeceğinizi öğrenin"
       },
       "economics": {
         "title": "Ekonomi",
@@ -365,16 +279,146 @@
         "title": "Geliştirici Yolu",
         "description": "Ergo üzerinde dApp geliştirmeyi öğrenin"
       },
-      "advanced": {
-        "title": "İleri Yol",
-        "description": "İleri konulara derinlemesine dalış"
-      },
       "trader": {
         "title": "Trader Yolu",
         "description": "DeFi ve ticarette uzmanlaşın"
       }
     },
+    "learn_more": "Daha fazla öğren",
+    "start_your_journey_with_our": "Başlangıç dostu tanıtımımızla yolculuğunuza başlayın",
+    "new_to_ergo": "Ergo'ya yeni misiniz?",
+    "get_started": "Başla",
+    "join_the_community": "Topluluğa Katıl",
+    "connect_with_other_developers_and_get_help": "Diğer geliştiricilerle bağlantı kurun ve yardım alın",
+    "connect_with_other_developers_and": "Diğer geliştiricilerle bağlantı kurun ve Ergo topluluğundan yardım alın",
+    "ergoscript": {
+      "your_path_to_ergoscript_mastery": "ErgoScript Ustalığına Giden Yolunuz",
+      "ergoscript_language_fundamentals": "ErgoScript dil temelleri",
+      "advanced_contract_logic_patterns": "Gelişmiş sözleşme mantık kalıpları",
+      "tokens_nfts_and_sigma_protocols": "Token'lar, NFT'ler ve Sigma protokolleri",
+      "multi_stage_dapps_and_defi": "Çok aşamalı dApp'ler ve DeFi",
+      "testing_and_security_best_practices": "Test etme ve güvenlik en iyi uygulamaları",
+      "blockchain_basics_smart_contract_fundamentals": "Blok zinciri temelleri\", \"Akıllı sözleşme temelleri\", \"eUTXO'ya giriş",
+      "security_best_practices_advanced_cryptography": "Güvenlik en iyi uygulamaları\", \"Gelişmiş kriptografi",
+      "functional_paradigms_type_safety_immutable": "Fonksiyonel paradigmalar\", \"Tip güvenliği\", \"Değişmez veri yapıları",
+      "dex_protocols_lending_platforms_algorithmic": "DEX protokolleri\", \"Borç verme platformları\", \"Algoritmik sabit paralar",
+      "foundations_of_ergo_and_ergoscript": "Ergo ve ErgoScript'in Temelleri",
+      "introduction_to_ergo_the_eutxo_model_duration": "Ergo ve eUTXO Modeline Giriş\", duration:",
+      "what_is_ergoscript_philosophy_and": "ErgoScript nedir? Felsefe ve Tasarım Hedefleri\", duration:",
+      "setting_up_your_ergoscript_development": "ErgoScript Geliştirme Ortamınızı Kurma\", duration:",
+      "basic_syntax_data_types_operators_duration": "Temel Sözdizimi, Veri Türleri, Operatörler\", duration:",
+      "boxes_registers_context_variables_duration": "Kutular, Kayıtlar, Bağlam Değişkenleri\", duration:",
+      "anatomy_of_an_ergo_transaction_duration": "Bir Ergo İşleminin Anatomisi\", duration:",
+      "creating_basic_contracts": "Temel Sözleşmeler Oluşturma",
+      "always_true_duration": "Her Zaman Doğru\"', duration:",
+      "time_locked_contracts_duration": "Zaman Kilitli Sözleşmeler\", duration:",
+      "ergotree_compilation_duration": "ErgoTree ve Derleme\", duration:",
+      "fees_transaction_size_duration": "Ücretler ve İşlem Boyutu\", duration:",
+      "working_with_data_and_tokens": "Veri ve Token'larla Çalışma",
+      "reading_writing_registers_duration": "Kayıt Okuma/Yazma\", duration:",
+      "handling_erg_native_tokens_duration": "ERG ve Yerel Token'ları Yönetme\", duration:",
+      "minting_burning_tokens_duration": "Token Basma/Yakma\", duration:",
+      "nfts_in_ergoscript_duration": "ErgoScript'te NFT'ler\", duration:",
+      "intermediate_contract_logic": "Orta Düzey Sözleşme Mantığı",
+      "multi_stage_contracts_state_transitions_duration": "Çok Aşamalı Sözleşmeler ve Durum Geçişleri\", duration:",
+      "using_oracles_duration": "Kehanet Kullanımı\", duration:",
+      "basic_escrow_duration": "Temel Emanet\", duration:",
+      "sigma_protocols_proofs_of_knowledge_duration": "Sigma Protokolleri ve Bilgi Kanıtları\", duration:",
+      "daos_voting_duration": "DAO'lar ve Oylama\", duration:",
+      "advanced_ergoscript_cryptography": "Gelişmiş ErgoScript ve Kriptografi",
+      "ring_signatures_mixing_duration": "Halka İmzaları, Karıştırma\", duration:",
+      "threshold_signatures_duration": "Eşik İmzaları\", duration:",
+      "designing_defi_primitives_duration": "DeFi Temel Bileşenleri Tasarlama\", duration:",
+      "gas_optimization_script_complexity_duration": "Gaz Optimizasyonu ve Betik Karmaşıklığı\", duration:",
+      "advanced_context_extensions_duration": "Gelişmiş Bağlam Uzantıları\", duration:",
+      "testing_debugging_best_practices": "Test Etme, Hata Ayıklama ve En İyi Uygulamalar",
+      "unit_integration_testing_duration": "Birim ve Entegrasyon Testi\", duration:",
+      "debugging_techniques_duration": "Hata Ayıklama Teknikleri\", duration:",
+      "pitfalls_vulnerabilities_duration": "Tuzaklar ve Güvenlik Açıkları\", duration:",
+      "secure_development_best_practices_duration": "Güvenli Geliştirme En İyi Uygulamaları\", duration:",
+      "practical_projects_dapp_examples": "Pratik Projeler ve dApp Örnekleri",
+      "nft_marketplace_duration": "NFT Pazaryeri\", duration:",
+      "decentralized_lottery_duration": "Merkeziyetsiz Piyango\", duration:",
+      "defi_lending_protocol_duration": "DeFi Borç Verme Protokolü\", duration:",
+      "privacy_preserving_payment_channel_duration": "Gizlilik Korumalı Ödeme Kanalı\", duration:",
+      "custom_oracle_implementation_duration": "Özel Kehane Uygulaması\", duration:",
+      "your_first_contract_always_true": "İlk Sözleşmeniz: 'Her Zaman Doğru'",
+      "secure_by_design": "Tasarım Gereği Güvenli",
+      "powerful_expressive": "Güçlü ve İfade Edici",
+      "enables_complex_defi_multi_stage": "Karmaşık DeFi, çok aşamalı protokoller ve benzersiz dApp'lere olanak tanır",
+      "only_ergoscript_unlocks_the_full": "Yalnızca ErgoScript, eUTXO'nun tüm gücünü açar: öngörülebilir maliyetler, yerel durum, birleştirilebilirlik",
+      "built_in_cryptography": "Yerleşik Kriptografi",
+      "native_support_for_sigma_protocols": "Sigma protokolleri, gizlilik ve gelişmiş erişim şemaları için yerel destek",
+      "new_to_smart_contracts": "Akıllı Sözleşmelere Yeni",
+      "step_by_step_explanations_of": "Temel blok zinciri ve akıllı sözleşme kavramlarının adım adım açıklamaları",
+      "experienced_blockchain_developers": "Deneyimli Blok Zinciri Geliştiricileri",
+      "discover_eutxo_new_safe_patterns": "eUTXO'yu, yeni güvenli kalıpları ve gelişmiş sözleşme tasarımını keşfedin",
+      "scala_functional_programmers": "Scala/Fonksiyonel Programcılar",
+      "build_the_next_generation_of": "Yeni nesil merkeziyetsiz finansal uygulamalar geliştirin",
+      "introduction_to_ergo_the_eutxo_model": "Ergo ve eUTXO Modeline Giriş",
+      "what_is_ergoscript_philosophy_and_design_goals": "ErgoScript nedir? Felsefe ve Tasarım Hedefleri",
+      "setting_up_your_ergoscript_development_environment": "ErgoScript Geliştirme Ortamınızı Kurma",
+      "basic_syntax_data_types_operators": "Temel Sözdizimi, Veri Türleri, Operatörler",
+      "boxes_registers_context_variables": "Kutular, Kayıtlar, Bağlam Değişkenleri",
+      "anatomy_of_an_ergo_transaction": "Bir Ergo İşleminin Anatomisi",
+      "your_first_contract": "İlk Sözleşmeniz:",
+      "time_locked_contracts": "Zaman Kilitli Sözleşmeler",
+      "ergotree_compilation": "ErgoTree ve Derleme",
+      "fees_transaction_size": "Ücretler ve İşlem Boyutu",
+      "reading_writing_registers": "Kayıt Okuma/Yazma",
+      "handling_erg_native_tokens": "ERG ve Yerel Token'ları Yönetme",
+      "minting_burning_tokens": "Token Basma/Yakma",
+      "nfts_in_ergoscript": "ErgoScript'te NFT'ler",
+      "token_standards_eip_004": "Token Standartları (EIP-004)",
+      "multi_stage_contracts_state_transitions": "Çok Aşamalı Sözleşmeler ve Durum Geçişleri",
+      "sigma_protocols_proofs_of_knowledge": "Sigma Protokolleri ve Bilgi Kanıtları",
+      "ring_signatures_mixing": "Halka İmzaları, Karıştırma",
+      "designing_defi_primitives": "DeFi Temel Bileşenleri Tasarlama",
+      "gas_optimization_script_complexity": "Gaz Optimizasyonu ve Betik Karmaşıklığı",
+      "advanced_context_extensions": "Gelişmiş Bağlam Uzantıları",
+      "unit_integration_testing": "Birim ve Entegrasyon Testi",
+      "pitfalls_vulnerabilities": "Tuzaklar ve Güvenlik Açıkları",
+      "secure_development_best_practices": "Güvenli Geliştirme En İyi Uygulamaları",
+      "decentralized_lottery": "Merkeziyetsiz Piyango",
+      "defi_lending_protocol": "DeFi Borç Verme Protokolü",
+      "privacy_preserving_payment_channel": "Gizlilik Korumalı Ödeme Kanalı",
+      "custom_oracle_implementation": "Özel Kehane Uygulaması",
+      "your_first_contract_always_true_duration": "İlk Sözleşmeniz: 'Her Zaman Doğru'', duration:",
+      "ergoscript_tutorial_series": "ErgoScript Öğretici Serisi",
+      "master_ergoscript_your_path_to": "ErgoScript'te Uzmanlaşın: Ergo üzerinde güvenli ve güçlü akıllı sözleşmeler geliştirme yolunuz",
+      "step_by_step_tutorials_covering": "Tüm deneyim seviyelerindeki geliştiriciler için temel bilgilerden gelişmiş DeFi protokollerine kadar her şeyi kapsayan adım adım öğreticiler.",
+      "your_first_ergoscript_contract": "İlk ErgoScript Sözleşmeniz",
+      "why_learn_ergoscript": "Neden ErgoScript Öğrenmelisiniz?",
+      "who_is_this_tutorial_series_for": "Bu Öğretici Serisi Kime Yönelik?",
+      "what_you_will_learn": "Ne Öğreneceksiniz",
+      "tutorial_series_structure": "Öğretici Serisi Yapısı",
+      "frequently_asked_questions": "Sıkça Sorulan Sorular",
+      "ready_to_master_ergoscript": "ErgoScript'te Uzmanlaşmaya Hazır mısınız?",
+      "join_our_community_of_developers": "Ergo üzerinde merkeziyetsiz uygulamaların geleceğini inşa eden geliştirici topluluğumuza katılın. Kapsamlı öğretici serimizle başlangıçtan uzmanlığa yolculuğunuzu başlatın.",
+      "start_learning_now": "Şimdi Öğrenmeye Başla",
+      "master_ergoscript_programming_language_build": "ErgoScript programlama dilinde uzmanlaşın. Sıfır bilgi kanıtları, çok aşamalı protokoller ve gelişmiş kriptografiyle Ergo blok zincirinde güvenli akıllı sözleşmeler geliştirin.",
+      "build_powerful_defi_applications_with": "ErgoScript'in gelişmiş özellikleriyle güçlü DeFi uygulamaları geliştirin.",
+      "smart_contracts_blockchain_programming_ergoscript": "Akıllı Sözleşmeler\", \"Blok Zinciri Programlama\", \"ErgoScript\", \"DeFi Geliştirme",
+      "courseinstance_coursemode_online_courseworkload": "CourseInstance\",\n      courseMode: \"Çevrimiçi\",\n      courseWorkload:",
+      "learn_ergoscript_smart_contract_programming": "ErgoScript Öğren | Akıllı Sözleşme Programlama Öğreticisi",
+      "ergoscript_programming_tutorial_build_on_ergo": "ErgoScript Programlama Öğreticisi | Ergo Üzerinde İnşa Et",
+      "learn_ergoscript_smart_contract_development": "ErgoScript Öğren | Akıllı Sözleşme Geliştirme",
+      "build_powerful_defi_applications_with_ergoscript": "ErgoScript ile güçlü DeFi uygulamaları geliştirin",
+      "learn_to_build_smart_contracts_with_ergoscript": "ErgoScript ile akıllı sözleşmeler geliştirmeyi öğrenin"
+    },
+    "learn_ergo_educational_resources": "Ergo'yu Öğren - Eğitim Kaynakları",
+    "learn_ergo_master_blockchain_development": "Ergo'yu Öğren - Blok Zinciri Geliştirmede Uzmanlaş",
+    "audience_audiencetype_developers_crypto_enthusiasts": "Audience',\n      audienceType: 'Geliştiriciler, Kripto Meraklıları, Blok Zinciri Öğrencileri",
+    "beginner_to_expert": "Başlangıçtan Uzmanlığa",
+    "beginner_to_expert_teaches_ergoscript": "Başlangıçtan Uzmanlığa',\n          teaches: 'ErgoScript akıllı sözleşme geliştirme",
+    "comprehensive_learning_resources_for_ergo": "Ergo blok zinciri için kapsamlı öğrenme kaynakları. Başlangıç rehberlerinden ileri düzey ErgoScript geliştirmeye.",
+    "ergoscript_tutorials_faq_research_papers": "Tüm seviyeler için ErgoScript öğreticileri, SSS, araştırma makaleleri ve kapsamlı rehberler.",
+    "comprehensive_education_on_ergo_blockchain": "Temel bilgilerden ileri düzey geliştirmeye Ergo blok zinciri teknolojisi üzerine kapsamlı eğitim",
+    "master_ergoscript_your_path_to": "ErgoScript'te Uzmanlaşın: Ergo üzerinde güvenli ve güçlü akıllı sözleşmeler adım adım geliştirme yolunuz",
+    "everything_you_need_to_know": "Tek bir yerde Ergo blok zinciri, teknoloji ve ekosistemi hakkında bilmeniz gereken her şey",
+    "deep_dive_into_the_academic": "Ergo'nun arkasındaki akademik araştırma ve teknik makalelere derinlemesine dalış\\",
     "hub": {
+      "badge": "Ergo Öğrenme Merkezi",
       "title": "Ergo Geliştirmede Ustalaşın",
       "subtitle": "Uygulamalı öğreticiler ve uzman mentorlukla ErgoScript, eUTXO akıllı sözleşmeleri ve Sigma protokollerini öğrenin.",
       "description": "Başlangıç seviyesi cüzdan kurulumundan gelişmiş gizlilik dApp'lerine kadar — gerçek projeler ve topluluk desteğiyle yapılandırılmış yollar.",
@@ -382,37 +426,9 @@
         "title": "Ergo Geliştirmeyi Öğren — ErgoScript Öğreticileri ve Akıllı Sözleşmeler",
         "description": "Uygulamalı öğreticiler, yapılandırılmış öğrenme yolları ve topluluk mentorluğuyla ErgoScript, eUTXO akıllı sözleşmeleri ve Sigma protokollerinde uzmanlaşın.",
         "keywords": "ErgoScript öğreticisi, Ergo akıllı sözleşmeleri, eUTXO programlama, Sigma protokolleri rehberi, blok zinciri geliştirme kursu, Ergo geliştirici öğreticisi, Ergo dApp geliştirme",
-        "ogTitle": "Ergo Öğrenme Merkezi",
-        "ogDescription": "Yeni başlayanlardan ileri düzey geliştiricilere kapsamlı Ergo blok zinciri eğitim kaynakları.",
-        "imageAlt": "Ergo Öğrenme Merkezi",
-        "twitterTitle": "Ergo Öğrenme Merkezi",
-        "twitterDescription": "Ergo blok zinciri ve ErgoScript geliştirme için kapsamlı kılavuzlar.",
         "ogImageAlt": "Ergo Öğren — Sigma Protokolleriyle İnşa Et"
       },
       "schema": {
-        "breadcrumbs": {
-          "learn": "Öğren"
-        },
-        "educationalOrganization": {
-          "name": "Ergo Öğrenme Merkezi",
-          "description": "Ergo blok zinciri için kapsamlı eğitim kaynakları platformu"
-        },
-        "faq": {
-          "items": [
-            {
-              "question": "Ergo öğrenmeye nereden başlamalıyım?",
-              "answer": "Ergo'nun eUTXO modelini ve temel ilkelerini kapsayan başlangıç bölümünden başlayın. Ardından etkileşimli kılavuzlara ve öğreticilere geçebilirsiniz."
-            },
-            {
-              "question": "Ergo geliştirmede hangi programlama dilleri kullanılır?",
-              "answer": "ErgoScript akıllı sözleşmeler için birincil dildir. Ayrıca Scala, Kotlin ve JavaScript için SDK'lar mevcuttur."
-            },
-            {
-              "question": "Ergo'yu ücretsiz öğrenebilir miyim?",
-              "answer": "Evet! Bu merkezdeki tüm öğrenme kaynakları ücretsizdir. Resmi belgeler, öğreticiler ve topluluk kılavuzları dahildir."
-            }
-          ]
-        },
         "course": {
           "name": "Ergo Öğrenme Merkezi",
           "description": "Ergo temellerini, geliştirici araçlarını, gizlilik tasarımını ve araştırma düzeyinde ekonomiyi öğreten yapılandırılmış yollar seti.",
@@ -435,23 +451,41 @@
           ]
         }
       },
-      "stats": {
-        "guides": "kılavuz",
-        "tutorials": "öğretici",
-        "contributors": "katkıda bulunan"
+      "startButton": "Başla",
+      "quickReference": {
+        "title": "Hızlı Başvuru",
+        "items": {
+          "visualGuides": {
+            "name": "Görsel Rehberler",
+            "subtitle": "Ergo'yu bir bakışta açıklayan infografikler"
+          },
+          "glossary": {
+            "name": "Sözlük",
+            "subtitle": "Ergo terminolojisi ve temel kavramlar"
+          },
+          "playbooks": {
+            "name": "Oyun Kitapları",
+            "subtitle": "DeFi, gizlilik, madencilik için adım adım yollar"
+          },
+          "devPatterns": {
+            "name": "Geliştirici Kalıpları",
+            "subtitle": "Akıllı sözleşme kalıpları ve yeniden kullanılabilir şablonlar"
+          }
+        }
       },
       "tracks": {
+        "curatedPathway": "Seçilmiş yol",
+        "stackTitle": "Karşılaşacağınız yığın",
+        "stackLabels": {
+          "core": "Çekirdek",
+          "tooling": "Araçlar",
+          "mentors": "Mentorlar",
+          "deliverable": "Çıktı"
+        },
         "foundations": {
-          "title": "Temeller",
-          "description": "Ergo'yu farklı kılan şeyi, cüzdanların nasıl egemenliğini koruduğunu ve Depolama Kirası'nın zinciri nasıl sürdürülebilir tuttuğunu öğrenin.",
-          "badge": "Buradan başlayın",
-          "topics": [
-            "Ergo Nedir?",
-            "eUTXO Modeli",
-            "ERG Tokenomikleri",
-            "Cüzdan Kurulumu"
-          ],
           "label": "Temeller",
+          "badge": "Buradan başlayın",
+          "description": "Ergo'yu farklı kılan şeyi, cüzdanların nasıl egemenliğini koruduğunu ve Depolama Kirası'nın zinciri nasıl sürdürülebilir tuttuğunu öğrenin.",
           "bullets": [
             "Adil lansман DNA'sı + temel ilkeler",
             "Cüzdan güvenliği + zincir üstü alışkanlıklar",
@@ -466,16 +500,9 @@
           }
         },
         "developer": {
-          "title": "Geliştirici",
-          "description": "Uygulamalı ErgoScript öğreticileri, VS Code kod parçacıkları ve tam yığın referans dApp'leri.",
-          "badge": "Kod",
-          "topics": [
-            "ErgoScript Temelleri",
-            "Akıllı Sözleşme Kalıpları",
-            "eUTXO Programlama",
-            "SDK'lar ve Araçlar"
-          ],
           "label": "Geliştiriciler",
+          "badge": "Kod",
+          "description": "Uygulamalı ErgoScript öğreticileri, VS Code kod parçacıkları ve tam yığın referans dApp'leri.",
           "bullets": [
             "Playground + AppKit iş akışı",
             "Çatallanabilir sözleşme şablonları",
@@ -490,16 +517,9 @@
           }
         },
         "topics": {
-          "title": "DeFi Derinlemesine",
-          "description": "İlgili kavramları, makaleleri ve kaynakları bir araya getiren seçilmiş konu kümeleri.",
-          "badge": "Keşfet",
-          "topics": [
-            "DEX Protokolleri",
-            "Oracle Havuzları",
-            "Algoritmik Stablecoinler",
-            "Likidite Madenciliği"
-          ],
           "label": "Konular",
+          "badge": "Keşfet",
+          "description": "İlgili kavramları, makaleleri ve kaynakları bir araya getiren seçilmiş konu kümeleri.",
           "bullets": [
             "Gizlilik ve Sigma Protokolleri",
             "Madencilik ve Autolykos",
@@ -514,16 +534,9 @@
           }
         },
         "privacy": {
-          "title": "Gizlilik Teknolojisi",
-          "description": "Denetlenebilir gizlilik için Σ-protokolleri, karıştırıcılar ve seçici açıklama akışlarında uzmanlaşın.",
-          "badge": "Sigma",
-          "topics": [
-            "Sigma Protokolleri",
-            "Sıfır Bilgi Kanıtları",
-            "ErgoMixer",
-            "Halka İmzaları"
-          ],
           "label": "Gizlilik",
+          "badge": "Sigma",
+          "description": "Denetlenebilir gizlilik için Σ-protokolleri, karıştırıcılar ve seçici açıklama akışlarında uzmanlaşın.",
           "bullets": [
             "Görsel olarak açıklanan Sigma protokolleri",
             "ErgoMixer + uyumluluk araç kiti",
@@ -538,16 +551,9 @@
           }
         },
         "research": {
-          "title": "Araştırma",
-          "description": "Teknik belgeler, Depolama Kirası modelleri ve Autolykos araştırma materyalleri.",
-          "badge": "Derinlemesine dalış",
-          "topics": [
-            "Autolykos Teknik Dokümanı",
-            "NiPoPoWs",
-            "eUTXO Formalizasyonu",
-            "Depolama Kirası Ekonomisi"
-          ],
           "label": "Araştırma",
+          "badge": "Derinlemesine dalış",
+          "description": "Teknik belgeler, Depolama Kirası modelleri ve Autolykos araştırma materyalleri.",
           "bullets": [
             "Tokenomik + demurrage modelleri",
             "Autolykos ve NiPoPoWs makaleleri",
@@ -560,14 +566,6 @@
             "mentors": "Çekirdek araştırmacılar",
             "deliverable": "Araştırma katkısı"
           }
-        },
-        "curatedPathway": "Seçilmiş yol",
-        "stackTitle": "Karşılaşacağınız yığın",
-        "stackLabels": {
-          "core": "Çekirdek",
-          "tooling": "Araçlar",
-          "mentors": "Mentorlar",
-          "deliverable": "Çıktı"
         }
       },
       "faq": {
@@ -592,11 +590,8 @@
         ]
       },
       "nextSteps": {
-        "title": "Yolculuğunuza Devam Edin",
-        "description": "Öğrenmeye başlamaya hazır mısınız?",
-        "startLearning": "Öğrenmeye Başla",
-        "joinCommunity": "Topluluğa Katıl",
         "badge": "Sonraki adımlar",
+        "title": "Yolculuğunuza Devam Edin",
         "exploreEcosystem": {
           "title": "Ekosistemi Keşfet",
           "subtitle": "Uygulamaları Keşfet",
@@ -608,29 +603,6 @@
           "description": "Cüzdanlar, DeFi, madencilik, köprüler ve daha fazlası için adım adım rehberler"
         }
       },
-      "badge": "Ergo Öğrenme Merkezi",
-      "startButton": "Başla",
-      "quickReference": {
-        "title": "Hızlı Başvuru",
-        "items": {
-          "visualGuides": {
-            "name": "Görsel Rehberler",
-            "subtitle": "Ergo'yu bir bakışta açıklayan infografikler"
-          },
-          "glossary": {
-            "name": "Sözlük",
-            "subtitle": "Ergo terminolojisi ve temel kavramlar"
-          },
-          "playbooks": {
-            "name": "Oyun Kitapları",
-            "subtitle": "DeFi, gizlilik, madencilik için adım adım yollar"
-          },
-          "devPatterns": {
-            "name": "Geliştirici Kalıpları",
-            "subtitle": "Akıllı sözleşme kalıpları ve yeniden kullanılabilir şablonlar"
-          }
-        }
-      },
       "cta": {
         "title": "Blok Zinciri Becerilerinizi Yükseltin",
         "description": "Ergo geliştirme için yeni öğreticiler, atölye çalışmaları ve öğrenme kaynakları hakkında bildirim alın"
@@ -638,11 +610,10 @@
     },
     "glossaryHub": {
       "title": "Ergo",
-      "description": "Ergo blok zinciri terminolojisini öğrenin",
-      "subtitle": "Ergo terminolojisini tek bir aranabilir referansta öğrenin.",
       "titleHighlight": "Sözlüğü",
       "termsCount": "+ terim",
       "categoriesCount": "kategori",
+      "subtitle": "Ergo terminolojisini tek bir aranabilir referansta öğrenin.",
       "searchPlaceholder": "Terim ara...",
       "allCategories": "Tüm Kategoriler",
       "level": "Seviye:",
@@ -1028,143 +999,7 @@
       ],
       "viewExamples": "Örnekleri Görüntüle",
       "faqTitle": "Sıkça Sorulan Sorular"
-    },
-    "browseFaq": "SSS'ye Göz At",
-    "ergoscript": {
-      "your_path_to_ergoscript_mastery": "ErgoScript Ustalığına Giden Yolunuz",
-      "ergoscript_language_fundamentals": "ErgoScript dil temelleri",
-      "advanced_contract_logic_patterns": "Gelişmiş sözleşme mantık kalıpları",
-      "tokens_nfts_and_sigma_protocols": "Token'lar, NFT'ler ve Sigma protokolleri",
-      "multi_stage_dapps_and_defi": "Çok aşamalı dApp'ler ve DeFi",
-      "testing_and_security_best_practices": "Test etme ve güvenlik en iyi uygulamaları",
-      "blockchain_basics_smart_contract_fundamentals": "Blok zinciri temelleri\", \"Akıllı sözleşme temelleri\", \"eUTXO'ya giriş",
-      "security_best_practices_advanced_cryptography": "Güvenlik en iyi uygulamaları\", \"Gelişmiş kriptografi",
-      "functional_paradigms_type_safety_immutable": "Fonksiyonel paradigmalar\", \"Tip güvenliği\", \"Değişmez veri yapıları",
-      "dex_protocols_lending_platforms_algorithmic": "DEX protokolleri\", \"Borç verme platformları\", \"Algoritmik sabit paralar",
-      "foundations_of_ergo_and_ergoscript": "Ergo ve ErgoScript'in Temelleri",
-      "introduction_to_ergo_the_eutxo_model_duration": "Ergo ve eUTXO Modeline Giriş\", duration:",
-      "what_is_ergoscript_philosophy_and": "ErgoScript nedir? Felsefe ve Tasarım Hedefleri\", duration:",
-      "setting_up_your_ergoscript_development": "ErgoScript Geliştirme Ortamınızı Kurma\", duration:",
-      "basic_syntax_data_types_operators_duration": "Temel Sözdizimi, Veri Türleri, Operatörler\", duration:",
-      "boxes_registers_context_variables_duration": "Kutular, Kayıtlar, Bağlam Değişkenleri\", duration:",
-      "anatomy_of_an_ergo_transaction_duration": "Bir Ergo İşleminin Anatomisi\", duration:",
-      "creating_basic_contracts": "Temel Sözleşmeler Oluşturma",
-      "always_true_duration": "Her Zaman Doğru\"', duration:",
-      "time_locked_contracts_duration": "Zaman Kilitli Sözleşmeler\", duration:",
-      "ergotree_compilation_duration": "ErgoTree ve Derleme\", duration:",
-      "fees_transaction_size_duration": "Ücretler ve İşlem Boyutu\", duration:",
-      "working_with_data_and_tokens": "Veri ve Token'larla Çalışma",
-      "reading_writing_registers_duration": "Kayıt Okuma/Yazma\", duration:",
-      "handling_erg_native_tokens_duration": "ERG ve Yerel Token'ları Yönetme\", duration:",
-      "minting_burning_tokens_duration": "Token Basma/Yakma\", duration:",
-      "nfts_in_ergoscript_duration": "ErgoScript'te NFT'ler\", duration:",
-      "intermediate_contract_logic": "Orta Düzey Sözleşme Mantığı",
-      "multi_stage_contracts_state_transitions_duration": "Çok Aşamalı Sözleşmeler ve Durum Geçişleri\", duration:",
-      "using_oracles_duration": "Kehanet Kullanımı\", duration:",
-      "basic_escrow_duration": "Temel Emanet\", duration:",
-      "sigma_protocols_proofs_of_knowledge_duration": "Sigma Protokolleri ve Bilgi Kanıtları\", duration:",
-      "daos_voting_duration": "DAO'lar ve Oylama\", duration:",
-      "advanced_ergoscript_cryptography": "Gelişmiş ErgoScript ve Kriptografi",
-      "ring_signatures_mixing_duration": "Halka İmzaları, Karıştırma\", duration:",
-      "threshold_signatures_duration": "Eşik İmzaları\", duration:",
-      "designing_defi_primitives_duration": "DeFi Temel Bileşenleri Tasarlama\", duration:",
-      "gas_optimization_script_complexity_duration": "Gaz Optimizasyonu ve Betik Karmaşıklığı\", duration:",
-      "advanced_context_extensions_duration": "Gelişmiş Bağlam Uzantıları\", duration:",
-      "testing_debugging_best_practices": "Test Etme, Hata Ayıklama ve En İyi Uygulamalar",
-      "unit_integration_testing_duration": "Birim ve Entegrasyon Testi\", duration:",
-      "debugging_techniques_duration": "Hata Ayıklama Teknikleri\", duration:",
-      "pitfalls_vulnerabilities_duration": "Tuzaklar ve Güvenlik Açıkları\", duration:",
-      "secure_development_best_practices_duration": "Güvenli Geliştirme En İyi Uygulamaları\", duration:",
-      "practical_projects_dapp_examples": "Pratik Projeler ve dApp Örnekleri",
-      "nft_marketplace_duration": "NFT Pazaryeri\", duration:",
-      "decentralized_lottery_duration": "Merkeziyetsiz Piyango\", duration:",
-      "defi_lending_protocol_duration": "DeFi Borç Verme Protokolü\", duration:",
-      "privacy_preserving_payment_channel_duration": "Gizlilik Korumalı Ödeme Kanalı\", duration:",
-      "custom_oracle_implementation_duration": "Özel Kehane Uygulaması\", duration:",
-      "your_first_contract_always_true": "İlk Sözleşmeniz: 'Her Zaman Doğru'",
-      "secure_by_design": "Tasarım Gereği Güvenli",
-      "powerful_expressive": "Güçlü ve İfade Edici",
-      "enables_complex_defi_multi_stage": "Karmaşık DeFi, çok aşamalı protokoller ve benzersiz dApp'lere olanak tanır",
-      "only_ergoscript_unlocks_the_full": "Yalnızca ErgoScript, eUTXO'nun tüm gücünü açar: öngörülebilir maliyetler, yerel durum, birleştirilebilirlik",
-      "built_in_cryptography": "Yerleşik Kriptografi",
-      "native_support_for_sigma_protocols": "Sigma protokolleri, gizlilik ve gelişmiş erişim şemaları için yerel destek",
-      "new_to_smart_contracts": "Akıllı Sözleşmelere Yeni",
-      "step_by_step_explanations_of": "Temel blok zinciri ve akıllı sözleşme kavramlarının adım adım açıklamaları",
-      "experienced_blockchain_developers": "Deneyimli Blok Zinciri Geliştiricileri",
-      "discover_eutxo_new_safe_patterns": "eUTXO'yu, yeni güvenli kalıpları ve gelişmiş sözleşme tasarımını keşfedin",
-      "scala_functional_programmers": "Scala/Fonksiyonel Programcılar",
-      "build_the_next_generation_of": "Yeni nesil merkeziyetsiz finansal uygulamalar geliştirin",
-      "introduction_to_ergo_the_eutxo_model": "Ergo ve eUTXO Modeline Giriş",
-      "what_is_ergoscript_philosophy_and_design_goals": "ErgoScript nedir? Felsefe ve Tasarım Hedefleri",
-      "setting_up_your_ergoscript_development_environment": "ErgoScript Geliştirme Ortamınızı Kurma",
-      "basic_syntax_data_types_operators": "Temel Sözdizimi, Veri Türleri, Operatörler",
-      "boxes_registers_context_variables": "Kutular, Kayıtlar, Bağlam Değişkenleri",
-      "anatomy_of_an_ergo_transaction": "Bir Ergo İşleminin Anatomisi",
-      "your_first_contract": "İlk Sözleşmeniz:",
-      "time_locked_contracts": "Zaman Kilitli Sözleşmeler",
-      "ergotree_compilation": "ErgoTree ve Derleme",
-      "fees_transaction_size": "Ücretler ve İşlem Boyutu",
-      "reading_writing_registers": "Kayıt Okuma/Yazma",
-      "handling_erg_native_tokens": "ERG ve Yerel Token'ları Yönetme",
-      "minting_burning_tokens": "Token Basma/Yakma",
-      "nfts_in_ergoscript": "ErgoScript'te NFT'ler",
-      "token_standards_eip_004": "Token Standartları (EIP-004)",
-      "multi_stage_contracts_state_transitions": "Çok Aşamalı Sözleşmeler ve Durum Geçişleri",
-      "sigma_protocols_proofs_of_knowledge": "Sigma Protokolleri ve Bilgi Kanıtları",
-      "ring_signatures_mixing": "Halka İmzaları, Karıştırma",
-      "designing_defi_primitives": "DeFi Temel Bileşenleri Tasarlama",
-      "gas_optimization_script_complexity": "Gaz Optimizasyonu ve Betik Karmaşıklığı",
-      "advanced_context_extensions": "Gelişmiş Bağlam Uzantıları",
-      "unit_integration_testing": "Birim ve Entegrasyon Testi",
-      "pitfalls_vulnerabilities": "Tuzaklar ve Güvenlik Açıkları",
-      "secure_development_best_practices": "Güvenli Geliştirme En İyi Uygulamaları",
-      "decentralized_lottery": "Merkeziyetsiz Piyango",
-      "defi_lending_protocol": "DeFi Borç Verme Protokolü",
-      "privacy_preserving_payment_channel": "Gizlilik Korumalı Ödeme Kanalı",
-      "custom_oracle_implementation": "Özel Kehane Uygulaması",
-      "your_first_contract_always_true_duration": "İlk Sözleşmeniz: 'Her Zaman Doğru'', duration:",
-      "ergoscript_tutorial_series": "ErgoScript Öğretici Serisi",
-      "master_ergoscript_your_path_to": "ErgoScript'te Uzmanlaşın: Ergo üzerinde güvenli ve güçlü akıllı sözleşmeler geliştirme yolunuz",
-      "step_by_step_tutorials_covering": "Tüm deneyim seviyelerindeki geliştiriciler için temel bilgilerden gelişmiş DeFi protokollerine kadar her şeyi kapsayan adım adım öğreticiler.",
-      "your_first_ergoscript_contract": "İlk ErgoScript Sözleşmeniz",
-      "why_learn_ergoscript": "Neden ErgoScript Öğrenmelisiniz?",
-      "who_is_this_tutorial_series_for": "Bu Öğretici Serisi Kime Yönelik?",
-      "what_you_will_learn": "Ne Öğreneceksiniz",
-      "tutorial_series_structure": "Öğretici Serisi Yapısı",
-      "frequently_asked_questions": "Sıkça Sorulan Sorular",
-      "ready_to_master_ergoscript": "ErgoScript'te Uzmanlaşmaya Hazır mısınız?",
-      "join_our_community_of_developers": "Ergo üzerinde merkeziyetsiz uygulamaların geleceğini inşa eden geliştirici topluluğumuza katılın. Kapsamlı öğretici serimizle başlangıçtan uzmanlığa yolculuğunuzu başlatın.",
-      "start_learning_now": "Şimdi Öğrenmeye Başla",
-      "master_ergoscript_programming_language_build": "ErgoScript programlama dilinde uzmanlaşın. Sıfır bilgi kanıtları, çok aşamalı protokoller ve gelişmiş kriptografiyle Ergo blok zincirinde güvenli akıllı sözleşmeler geliştirin.",
-      "build_powerful_defi_applications_with": "ErgoScript'in gelişmiş özellikleriyle güçlü DeFi uygulamaları geliştirin.",
-      "smart_contracts_blockchain_programming_ergoscript": "Akıllı Sözleşmeler\", \"Blok Zinciri Programlama\", \"ErgoScript\", \"DeFi Geliştirme",
-      "courseinstance_coursemode_online_courseworkload": "CourseInstance\",\n      courseMode: \"Çevrimiçi\",\n      courseWorkload:",
-      "learn_ergoscript_smart_contract_programming": "ErgoScript Öğren | Akıllı Sözleşme Programlama Öğreticisi",
-      "ergoscript_programming_tutorial_build_on_ergo": "ErgoScript Programlama Öğreticisi | Ergo Üzerinde İnşa Et",
-      "learn_ergoscript_smart_contract_development": "ErgoScript Öğren | Akıllı Sözleşme Geliştirme",
-      "build_powerful_defi_applications_with_ergoscript": "ErgoScript ile güçlü DeFi uygulamaları geliştirin",
-      "learn_to_build_smart_contracts_with_ergoscript": "ErgoScript ile akıllı sözleşmeler geliştirmeyi öğrenin"
-    },
-    "learn_more": "Daha fazla öğren",
-    "new_to_ergo": "Ergo'ya yeni misiniz?",
-    "get_started": "Başla",
-    "join_the_community": "Topluluğa Katıl",
-    "connect_with_other_developers_and_get_help": "Diğer geliştiricilerle bağlantı kurun ve yardım alın",
-    "connect_with_other_developers_and": "Diğer geliştiricilerle bağlantı kurun ve Ergo topluluğundan yardım alın",
-    "learn_ergo_educational_resources": "Ergo'yu Öğren - Eğitim Kaynakları",
-    "learn_ergo_master_blockchain_development": "Ergo'yu Öğren - Blok Zinciri Geliştirmede Uzmanlaş",
-    "audience_audiencetype_developers_crypto_enthusiasts": "Audience',\n      audienceType: 'Geliştiriciler, Kripto Meraklıları, Blok Zinciri Öğrencileri",
-    "beginner_to_expert": "Başlangıçtan Uzmanlığa",
-    "beginner_to_expert_teaches_ergoscript": "Başlangıçtan Uzmanlığa',\n          teaches: 'ErgoScript akıllı sözleşme geliştirme",
-    "home_item_https_ergoblockchain_org": "Ana Sayfa',\n        item: 'https://ergoblockchain.org",
-    "learn_item_https_ergoblockchain_org_learn": "Öğren',\n        item: 'https://ergoblockchain.org/learn",
-    "comprehensive_learning_resources_for_ergo": "Ergo blok zinciri için kapsamlı öğrenme kaynakları. Başlangıç rehberlerinden ileri düzey ErgoScript geliştirmeye.",
-    "ergoscript_tutorials_faq_research_papers": "Tüm seviyeler için ErgoScript öğreticileri, SSS, araştırma makaleleri ve kapsamlı rehberler.",
-    "comprehensive_education_on_ergo_blockchain": "Temel bilgilerden ileri düzey geliştirmeye Ergo blok zinciri teknolojisi üzerine kapsamlı eğitim",
-    "master_ergoscript_your_path_to": "ErgoScript'te Uzmanlaşın: Ergo üzerinde güvenli ve güçlü akıllı sözleşmeler adım adım geliştirme yolunuz",
-    "everything_you_need_to_know": "Tek bir yerde Ergo blok zinciri, teknoloji ve ekosistemi hakkında bilmeniz gereken her şey",
-    "deep_dive_into_the_academic": "Ergo'nun arkasındaki akademik araştırma ve teknik makalelere derinlemesine dalış\\",
-    "start_your_journey_with_our": "Başlangıç dostu tanıtımımızla yolculuğunuza başlayın"
+    }
   },
   "learnErgoscript": {
     "title": "ErgoScript Öğren",

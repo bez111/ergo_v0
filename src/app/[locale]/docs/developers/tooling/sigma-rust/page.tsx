@@ -24,7 +24,7 @@ export default function SigmaRustPage() {
           Constrained Environments
         </Link>
       </div>
-      <p className="text-gray-300 mb-4">Rust implementation of <a href="/docs/developers/tooling/pathways/sigmastate-interpreter" className="text-cyan-400 hover:underline">ErgoScript (sigmastate-interpreter)</a> cryptocurrency scripting language.</p>
+      <p className="text-gray-300 mb-4">Rust implementation of <a href="/docs/developers/tooling/compilers/sigmastate-interpreter" className="text-cyan-400 hover:underline">ErgoScript (sigmastate-interpreter)</a> cryptocurrency scripting language.</p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Crates</h2>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-2">
         <li><a href="https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">ergo-lib</a> – <a href="https://crates.io/crates/ergo-lib" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">crates.io</a> | <a href="https://docs.rs/crate/ergo-lib" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">docs</a><br/>Overarching crate exposing wallet-related features: chain types (transactions, boxes, etc.), JSON serialization, box selection for tx inputs, tx builder and signing. Exports other crates API, probably the only crate you'd need to import.</li>

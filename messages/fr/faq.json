@@ -173,7 +173,7 @@
       "answer": "Non, Ergo est un protocole décentralisé et open-source. La Fondation Ergo est un organisme communautaire à but non lucratif qui soutient le développement mais ne contrôle pas le réseau."
     },
     "beginner-fair-launch": {
-      "question": "Que signifie un «\u00a0lancement équitable\u00a0» ?",
+      "question": "Que signifie un « lancement équitable » ?",
       "answer": "Ergo n'a eu ni offre initiale de monnaies (ICO) ni tokens pré-minés pour les fondateurs. Cela garantit une distribution plus équitable, car tout le monde a eu une opportunité égale d'acquérir des ERG par le minage dès le premier jour."
     },
     "beginner-ergo-vs-btc-eth": {
@@ -237,8 +237,8 @@
       "answer": "Le Manifeste Ergo, rédigé par le co-fondateur Alex Chepurnoy, affirme que la confidentialité financière est un droit humain fondamental. Les idées clés comprennent : la confidentialité comme outil de survie et de protection contre le contrôle autoritaire, la défense contre la saisie d'actifs financiers, la reconnaissance que la stabilité réglementaire n'est"
     },
     "tech-why-named-ergo": {
-      "question": "Pourquoi s'appelle-t-il «\u00a0Ergo\u00a0» ?",
-      "answer": "Le nom «\u00a0Ergo\u00a0» vient du latin signifiant «\u00a0donc\u00a0» ou «\u00a0par conséquent\u00a0», reflétant la rigueur logique et les fondements mathématiques du projet. C'est aussi un clin d'œil au raisonnement cryptographique formel qui sous-tend la plateforme."
+      "question": "Pourquoi s'appelle-t-il « Ergo » ?",
+      "answer": "Le nom « Ergo » vient du latin signifiant « donc » ou « par conséquent », reflétant la rigueur logique et les fondements mathématiques du projet. C'est aussi un clin d'œil au raisonnement cryptographique formel qui sous-tend la plateforme."
     },
     "tech-ergo-launch": {
       "question": "Quand Ergo a-t-il été lancé ? Y a-t-il eu un ICO ?",
@@ -273,7 +273,7 @@
       "answer": "ErgoScript (Ergo/eUTXO) vs Solidity (Ethereum/Compte) : ErgoScript met l'accent sur la sécurité et l'expressivité avec des primitives cryptographiques intégrées, tandis que Solidity se concentre sur la facilité d'utilisation. ErgoScript est basé sur Scala et fonctionnel, Solidity ressemble à JavaScript. ErgoScript offre des coûts plus prévisibles et des fonctionnalités de confidentialité natives, tandis que Solidity dispose d'un écosystème plus large et de plus d'outils de développement actuellement disponibles."
     },
     "tech-boxes-ergoscript": {
-      "question": "Que sont les «\u00a0boîtes\u00a0» dans ErgoScript ?",
+      "question": "Que sont les « boîtes » dans ErgoScript ?",
       "answer": "Les boîtes sont les UTXOs d'Ergo. Chaque boîte contient une valeur en ERG, des tokens optionnels, des registres de données et un script ErgoScript définissant les conditions de dépense. Elles sont les unités fondamentales de l'état de la blockchain Ergo."
     },
     "tech-sigma-protocols": {
@@ -293,7 +293,7 @@
       "answer": "La confidentialité sur Ergo est optionnelle, pas obligatoire. Cela permet une flexibilité pour divers cas d'usage — certaines applications nécessitent de la transparence (comme les associations caritatives), tandis que d'autres nécessitent de la confidentialité. La confidentialité optionnelle permet une riche fonctionnalité de contrats intelligents, une adoption plus large, la navigation réglementaire et l'autonomie des utilisateurs. Les utilisateurs peuvent choisir des outils de confidentialité comme ErgoMixer si nécessaire."
     },
     "tech-storage-rent": {
-      "question": "Qu'est-ce que le «\u00a0Storage Rent\u00a0» ?",
+      "question": "Qu'est-ce que le « Storage Rent » ?",
       "answer": "Le Storage Rent est une redevance prélevée sur les UTXOs inactifs depuis 4+ ans (environ 0,14 ERG par boîte typique tous les 4 ans). Il existe pour : prévenir le gonflement de la blockchain en recyclant les données orphelines, fournir des revenus durables aux mineurs après la fin des émissions, et inciter les utilisateurs à consolider leurs fonds."
     },
     "tech-long-term-survivability": {

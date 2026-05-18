@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Netzwerk-Hashrate" },
-      "activeAddresses": { "label": "Aktive Adressen" },
-      "defiTvl": { "label": "DeFi TVL" },
-      "ergSupply": { "label": "ERG-Gesamtmenge", "trend": "{remaining}M verbleibend" },
-      "avgBlockTime": { "label": "Durchschn. Blockzeit" },
-      "activeNodes": { "label": "Aktive Nodes" }
+      "networkHashrate": {
+        "label": "Netzwerk-Hashrate"
+      },
+      "activeAddresses": {
+        "label": "Aktive Adressen"
+      },
+      "defiTvl": {
+        "label": "DeFi TVL"
+      },
+      "ergSupply": {
+        "label": "ERG-Gesamtmenge",
+        "trend": "{remaining}M verbleibend"
+      },
+      "avgBlockTime": {
+        "label": "Durchschn. Blockzeit"
+      },
+      "activeNodes": {
+        "label": "Aktive Nodes"
+      }
     },
     "heroComparisons": [
       {

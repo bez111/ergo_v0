@@ -62,7 +62,6 @@
     "offline_key_generation_and_storage": "Geração e armazenamento de chaves offline para máxima segurança.",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
       "name": "Carteiras Ergo",
       "description": "Coleção de carteiras seguras para a blockchain Ergo",

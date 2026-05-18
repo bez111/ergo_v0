@@ -155,8 +155,8 @@ function CodeBlock({ code, language, copiedLabel, copyLabel }: { code: string; l
   }
 
   return (
-    <div className="relative group">
-      <div className="flex items-center justify-between bg-black/60 border border-white/10 rounded-t-lg px-4 py-2">
+    <div className="relative group min-w-0 max-w-full">
+      <div className="flex min-w-0 items-center justify-between bg-black/60 border border-white/10 rounded-t-lg px-4 py-2">
         <span className="text-xs text-gray-500 font-mono">{language}</span>
         <button
           onClick={handleCopy}
@@ -175,7 +175,7 @@ function CodeBlock({ code, language, copiedLabel, copyLabel }: { code: string; l
           )}
         </button>
       </div>
-      <pre className="bg-black/40 border border-t-0 border-white/10 rounded-b-lg p-4 text-sm font-mono text-gray-200 overflow-x-auto leading-relaxed">
+      <pre className="max-w-full bg-black/40 border border-t-0 border-white/10 rounded-b-lg p-4 text-sm font-mono text-gray-200 overflow-x-auto leading-relaxed">
         {code}
       </pre>
     </div>
@@ -254,7 +254,7 @@ export function QuickstartClient() {
             <div className="flex items-center justify-between bg-black/60 border border-white/10 rounded-t-lg px-4 py-2">
               <span className="text-xs text-gray-500 font-mono">bash</span>
             </div>
-            <pre className="bg-black/40 border border-t-0 border-white/10 rounded-b-lg px-4 py-3 text-sm font-mono text-orange-300 text-left">
+            <pre className="max-w-full overflow-x-auto bg-black/40 border border-t-0 border-white/10 rounded-b-lg px-4 py-3 text-sm font-mono text-orange-300 text-left">
               {STEP_1_CODE}
             </pre>
           </motion.div>
@@ -459,7 +459,7 @@ cd accord-protocol/examples/01-basic-payment && npm install && npm run start`}</
           <p className="text-gray-300 text-sm mb-4">
             {t('explorerDescription')}
           </p>
-          <code className="block bg-black/40 rounded-lg px-4 py-3 text-sm font-mono text-orange-300">
+          <code className="block max-w-full overflow-x-auto whitespace-normal break-all bg-black/40 rounded-lg px-4 py-3 text-sm font-mono text-orange-300">
             https://testnet.ergoplatform.com/transactions/&#123;TX_ID&#125;
           </code>
         </motion.div>

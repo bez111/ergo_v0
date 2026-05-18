@@ -37,6 +37,9 @@ SAGE_SIGNER_TOKEN
 SAGE_NETWORK=testnet
 SAGE_MAX_SINGLE_TX_NANOERG=10000000
 SAGE_SIGNER_MAX_BODY_BYTES=262144
+SAGE_SIGNER_MAX_REQUESTS_PER_MINUTE=30
+SAGE_SIGNER_FAILURE_TRIP_THRESHOLD=5
+SAGE_SIGNER_FAILURE_COOLDOWN_MS=300000
 SAGE_WHITELIST_ADDRS=<comma-separated allowed output addresses>
 ```
 
@@ -109,6 +112,27 @@ Expected storage probe before a receipt exists:
 {"ok":false,"error":"receipt not found in blob storage","storage_configured":true}
 ```
 
+Check public signer mode exposed by the site:
+
+```bash
+curl -sS https://www.ergoblockchain.org/api/sage/signer-health
+```
+
+Expected when signer is not configured:
+
+```text
+configured = false
+settlement_mode = verify_only
+```
+
+Expected when settlement signer is live:
+
+```text
+configured = true
+reachable = true
+settlement_mode = settlement_available
+```
+
 Check full receipt after a paid turn:
 
 ```bash
@@ -141,6 +165,26 @@ Useful lines:
 
 Signer logs should be kept open while settlement mode is active. Any denied signing decision should include enough context to identify the tx policy failure without printing secrets.
 
+Authenticated signer metrics:
+
+```bash
+curl -sS http://127.0.0.1:8911/metrics \
+  -H "Authorization: Bearer $SAGE_SIGNER_TOKEN"
+```
+
+Important gauges/counters:
+
+```text
+sage_signer_signed_total
+sage_signer_sign_failed_total
+sage_signer_policy_rejected_total
+sage_signer_rate_limited_total
+sage_signer_consecutive_sign_failures
+sage_signer_circuit_open
+```
+
+If `sage_signer_circuit_open=1`, the signer is failing closed after repeated signing failures. It will cool down automatically after `SAGE_SIGNER_FAILURE_COOLDOWN_MS`.
+
 ## Failure modes
 
 | Symptom | Likely cause | Action |
@@ -150,6 +194,8 @@ Signer logs should be kept open while settlement mode is active. Any denied sign
 | receipt is `chain_proof_only` | Blob missing when payment was verified, or old receipt | create one new paid turn after Blob is configured |
 | signer returns 401 | token mismatch | rotate both local `SAGE_SIGNER_TOKEN` and Vercel `SAGE_SIGNER_TOKEN` |
 | signer rejects policy | amount or output not allowed | inspect tx policy, `SAGE_MAX_SINGLE_TX_NANOERG`, `SAGE_WHITELIST_ADDRS` |
+| signer returns 429 | local signer rate limit | inspect traffic source, raise `SAGE_SIGNER_MAX_REQUESTS_PER_MINUTE` only if expected |
+| signer returns 503 `circuit open` | repeated signing failures | inspect `/ready` ops state and recent `[sage-signer] SIGN_FAIL` lines |
 | explorer cannot find Note yet | testnet propagation lag | wait 2-5 minutes and retry |
 
 ## Failover
@@ -176,6 +222,7 @@ To restore:
 - Confirm `/api/sage/activity` returns the configured Sage receiver.
 - Confirm Blob storage probe returns `storage_configured: true`.
 - Review Vercel logs for `settle failed`.
+- Review signer `/metrics` for failed signing, policy rejects, and circuit-open state.
 - Keep testnet wallet funded.
 - Rotate public tunnel URL/token if exposed in a shared channel.
 - Do not upgrade public language from "testnet proof" to "production/mainnet ready" until the audit gate is complete.

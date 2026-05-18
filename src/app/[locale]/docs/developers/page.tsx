@@ -579,7 +579,7 @@ export default function DevelopersGuide() {
                 <ul className="space-y-2 text-gray-300">
                   <li><Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">Infrastructure Overview</Link></li>
                   <li><Link href="/docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Setup & Config</Link></li>
-                  <li><Link href="/docs/developers/infrastructure/mining" className="text-cyan-400 hover:underline">Mining Integration</Link></li>
+                  <li><Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">Mining Integration</Link></li>
                   <li><Link href="/docs/miners" className="text-cyan-400 hover:underline">Miners Resources</Link></li>
                 </ul>
               </div>
@@ -665,18 +665,18 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-purple-300">Token Standards</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/docs/ecosystem/Standards/eip-0004" className="text-cyan-400 hover:underline">EIP-4: Asset Standard</Link></li>
-                  <li><Link href="/docs/ecosystem/Standards/eip-0021" className="text-cyan-400 hover:underline">EIP-21: Token Verification</Link></li>
-                  <li><Link href="/docs/ecosystem/Standards/eip-0022" className="text-cyan-400 hover:underline">EIP-22: Auction Contract</Link></li>
-                  <li><Link href="/docs/ecosystem/Standards/eip-0024" className="text-cyan-400 hover:underline">EIP-24: Artwork Contract</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-4: Asset Standard</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-21: Token Verification</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-22: Auction Contract</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-24: Artwork Contract</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-green-300">Payment Standards</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/docs/ecosystem/Standards/eip-0020" className="text-cyan-400 hover:underline">EIP-20: ErgoPay</Link></li>
-                  <li><Link href="/docs/ecosystem/Standards/eip-0025" className="text-cyan-400 hover:underline">EIP-25: Payment URI</Link></li>
-                  <li><Link href="/docs/ecosystem/Standards/eip-0017" className="text-cyan-400 hover:underline">EIP-17: Proxy Contracts</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-20: ErgoPay</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-25: Payment URI</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-cyan-400 hover:underline">EIP-17: Proxy Contracts</Link></li>
                 </ul>
               </div>
               <div>

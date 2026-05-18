@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-*', 'react-icons', 'mermaid'],
     webpackBuildWorker: true, // Ускорить сборку
-    optimizeCss: true, // Включаем CSS оптимизацию для лучшего TTFB
   },
 
   // Тяжёлые пакеты — не бандлить в server bundle (иначе превышается лимит Vercel 250MB)
@@ -457,22 +456,23 @@ const nextConfig: NextConfig = {
       { source: '/ecosystems/:path*', destination: '/ecosystem', permanent: true },
       { source: '/ecosystem/projects/:slug', destination: '/ecosystem/:slug', permanent: true },
       { source: '/ecosystem/nfts', destination: '/ecosystem', permanent: true },
-      { source: '/ecosystem/financial', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/financial', destination: '/docs/ecosystem/financial', permanent: true },
       { source: '/ecosystem/privacy', destination: '/ecosystem', permanent: true },
-      { source: '/ecosystem/market', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/market', destination: '/ergo-watch', permanent: true },
       { source: '/ecosystem/tools', destination: '/ecosystem', permanent: true },
       { source: '/ecosystem/gaming', destination: '/ecosystem', permanent: true },
+      { source: '/ecosystem/spectrum', destination: '/ecosystem/spectrum-finance', permanent: true },
 
       // Removed playbook (Spectrum sunset, see playbooks.ts comment) → /use/defi
       { source: '/playbooks/provide-liquidity-spectrum', destination: '/use/defi', permanent: true },
       { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/playbooks/provide-liquidity-spectrum', destination: '/:locale/use/defi', permanent: true },
 
-      // Old blog posts that never existed → /blog hub
-      { source: '/blog/vesting-contracts', destination: '/blog', permanent: true },
-      { source: '/blog/stealth-addresses', destination: '/blog', permanent: true },
-      { source: '/blog/deflationary-tokens', destination: '/blog', permanent: true },
-      { source: '/blog/cross-chain-swaps', destination: '/blog', permanent: true },
-      { source: '/blog/assurance-contracts', destination: '/blog', permanent: true },
+      // Old blog slugs now point at the closest live pattern/reference page.
+      { source: '/blog/vesting-contracts', destination: '/patterns/ergo-block-height-time-lock', permanent: true },
+      { source: '/blog/stealth-addresses', destination: '/patterns/ergo-privacy-one-time-address', permanent: true },
+      { source: '/blog/deflationary-tokens', destination: '/patterns/ergo-token-burning-supply-control', permanent: true },
+      { source: '/blog/cross-chain-swaps', destination: '/patterns/ergo-cross-chain-atomic-swap', permanent: true },
+      { source: '/blog/assurance-contracts', destination: '/patterns/ergo-crowdfunding-assurance-contract', permanent: true },
 
       // Misc legacy
       { source: '/builders', destination: '/developers', permanent: true },
@@ -480,6 +480,7 @@ const nextConfig: NextConfig = {
       { source: '/technology/extended-utxo', destination: '/technology/eutxo-model', permanent: true },
       { source: '/technology/proof-of-work-(pow)', destination: '/technology/secure-pow', permanent: true },
       { source: '/technology/sigma-protocols', destination: '/technology/privacy-features', permanent: true },
+      { source: '/technology/ergomixer', destination: '/use/privacy', permanent: true },
       { source: '/technology/whitepaper', destination: '/technology', permanent: true },
       { source: '/tokenomics', destination: '/technology/adaptive-emission', permanent: true },
       { source: '/transactions', destination: '/technology', permanent: true },
@@ -488,6 +489,24 @@ const nextConfig: NextConfig = {
       { source: '/start/security', destination: '/faq', permanent: true },
       { source: '/start/get-erg', destination: '/use/get-erg', permanent: true },
       { source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/start/get-erg', destination: '/:locale/use/get-erg', permanent: true },
+      { source: '/start/mining', destination: '/miners', permanent: true },
+      { source: '/miners-pools', destination: '/miners', permanent: true },
+      { source: '/miners-calculator', destination: '/miners', permanent: true },
+      { source: '/compare/ergo-vs-vc-chain', destination: '/compare/ergo-vs-vc-chains', permanent: true },
+      { source: '/patterns/time-locked-contracts', destination: '/patterns/ergo-block-height-time-lock', permanent: true },
+      { source: '/patterns/amm-contracts', destination: '/patterns/ergo-amm-liquidity-pool', permanent: true },
+      { source: '/patterns/liquidity-pool', destination: '/patterns/ergo-amm-liquidity-pool', permanent: true },
+      { source: '/patterns/multi-signature', destination: '/patterns/ergo-multisig-wallet-m-of-n', permanent: true },
+      { source: '/patterns/ring-signatures', destination: '/patterns/ergo-privacy-one-time-address', permanent: true },
+      { source: '/patterns/stealth-addresses', destination: '/patterns/ergo-privacy-one-time-address', permanent: true },
+      { source: '/playbooks/defi-developer', destination: '/playbooks/build-defi-on-ergo', permanent: true },
+      { source: '/playbooks/privacy-developer', destination: '/playbooks/private-transaction-ergomixer', permanent: true },
+      { source: '/playbooks/smart-contract-developer', destination: '/patterns', permanent: true },
+      { source: '/topics/ergo-tokenomics', destination: '/topics/ergo-sustainability', permanent: true },
+      { source: '/topics/ergoscript', destination: '/topics/ergo-technology', permanent: true },
+      { source: '/topics/eutxo', destination: '/topics/ergo-technology', permanent: true },
+      { source: '/topics/privacy', destination: '/topics/ergo-privacy', permanent: true },
+      { source: '/topics/technology', destination: '/topics/ergo-technology', permanent: true },
       { source: '/about/:path*', destination: '/start/community', permanent: true },
       { source: '/build/smart-contracts', destination: '/build/agent-payments', permanent: true },
       { source: '/build/tutorials', destination: '/build/quickstart', permanent: true },

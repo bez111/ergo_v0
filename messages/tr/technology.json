@@ -3,103 +3,6 @@
     "title": "Teknoloji",
     "subtitle": "Finansın geleceği için gelişmiş blok zinciri teknolojisi",
     "description": "Ergo'nun yenilikçi blok zinciri teknolojisini keşfedin",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Teknolojisi — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
-    "explore_ergo_s_technology_stack": "Ergo'nun teknoloji yığınını keşfedin: eUTXO, ErgoScript, Autolykos PoW, Depolama Kirası, Sigma Protokolleri, NIPoPoWs.",
-    "frequently_asked_questions": "Sıkça Sorulan Sorular",
-    "go_to_docs": "Belgelere Git",
-    "extended_utxo_model_that_enables": "Paralel akıllı sözleşme yürütmeyi ve birleştirilebilir DeFi uygulamalarını mümkün kılan Genişletilmiş UTXO modeli. Bitcoin'i korurken yeniden giriş saldırılarını ortadan kaldırır",
-    "full_blockchain_security_without_trusted": "Güvenilir aracılar olmadan tam blok zinciri güvenliği.",
-    "dive_into_ergo_docs_href_docs_color": "Ergo Belgelerine Dalın\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "Ekosistem Uygulamalarını Görün\",\n    href: \"/ecosystem\",\n    color:",
-    "adaptive_emission_governance": "Uyarlanabilir Emisyon ve Yönetişim",
-    "what_makes_ergo_s_eutxo": "Ergo'nun eUTXO modeli hesap tabanlı blok zincirlerine kıyasla ne gibi üstünlükler sağlar?\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "ErgoScript akıllı sözleşme güvenlik açıklarını nasıl önler?\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "Autolykos neden merkezi olmayan ve enerji verimli olarak kabul edilir?\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "Depolama Kirası blok zinciri sürdürülebilirliğini nasıl çözer?\",\n      tag: \"Depolama",
-    "what_privacy_features_does_ergo": "Ergo yerel olarak hangi gizlilik özelliklerini sunar?\",\n      tag: \"Gizlilik",
-    "why_are_ergo_s_oracle": "Ergo'nun Oracle Havuzları neden Chainlink'ten daha güvenlidir?\",\n      tag: \"Oracle'lar",
-    "how_do_subblocks_achieve_sub": "Alt Bloklar saniyenin altında işlem onaylarını nasıl başarır?\",\n      tag: \"Ölçekleme",
-    "how_to_create_tokens_and": "Akıllı sözleşmeler olmadan Ergo'da token ve NFT nasıl oluşturulur?\",\n      tag: \"Token ve NFT'ler",
-    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
-    "research_in_development": "Araştırma/Geliştirme aşamasında",
-    "decentralized_mixers_and_privacy_tools": "Merkezi olmayan karıştırıcılar ve gizlilik araçları (yasal durumu kontrol edin)\",\n                              \"DAO'lar ve yönetişim sistemleri",
-    "infrastructure_apps": "Altyapı ve Uygulamalar",
-    "ergo_docs_href_docs": "Ergo Belgeleri\", href: \"/docs",
-    "whitepaper_href_https_ergoplatform_org": "Teknik Rapor\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
-    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
-    "dev_tutorials_href_docs_developers_tutorials": "Geliştirici Öğreticileri\", href: \"/docs/developers/tutorials",
-    "smart_contracts_run_independently_without": "Akıllı sözleşmeler küresel durum çakışmaları olmadan bağımsız olarak çalışır.",
-    "build_complex_defi_applications_from": "Basit, yeniden kullanılabilir bileşenlerden karmaşık DeFi uygulamaları oluşturun.",
-    "bitcoin_level_security": "Bitcoin Düzeyinde Güvenlik",
-    "mathematically_prove_your_smart_contracts": "Akıllı sözleşmelerinizin güvenli ve hatasız olduğunu matematiksel olarak kanıtlayın.",
-    "native_zero_knowledge_proofs_and": "Gizli işlemler için yerel sıfır bilgi kanıtları ve halka imzaları.",
-    "safe_by_design": "Tasarımla Güvenli",
-    "prevents_common_vulnerabilities_like_reentrancy": "Yeniden giriş saldırıları ve beklenmedik davranışlar gibi yaygın güvenlik açıklarını önler.",
-    "energy_efficient_asic_resistant_mining": "Ağ katılımını demokratikleştiren enerji verimli, ASIC'e dirençli madencilik algoritması. Ağı merkezi olmayan ve herkese erişilebilir tutmak için GPU madenciliği için tasarlanmıştır.",
-    "memory_hard_algorithm_reduces_power": "Bellek yoğun algoritma, geleneksel PoW'a kıyasla güç tüketimini azaltır.",
-    "low_barrier_to_entry_enables": "Düşük giriş engeli, bireysel madencilerin kârlı bir şekilde katılmasını sağlar.",
-    "optimized_for_consumer_gpus_to": "Madencilik merkezileşmesini önlemek için tüketici GPU'larına optimize edilmiştir.",
-    "revolutionary_economic_model_that_prevents": "Blok zinciri şişmesini önleyen devrimsel ekonomik model. Etkin olmayan coinler 4 yıl sonra minimum kira öder, bu da sürdürülebilir blok zinciri boyutu ve kalıcı madenci ödülleri sağlar.",
-    "sustainable_blockchain": "Sürdürülebilir Blok Zinciri",
-    "automatic_cleanup_of_unused_data": "Kullanılmayan verilerin otomatik temizlenmesi blok zincirini hafif ve verimli tutar.",
-    "miners_receive_rewards_forever_ensuring": "Madenciler sonsuza kadar ödül alır, bu da uzun vadeli ağ güvenliğini sağlar.",
-    "maintains_lightweight_blockchain_that_runs": "Mütevazı donanımda çalışan hafif blok zincirini korur.",
-    "built_in_zero_knowledge_proofs": "Yerleşik sıfır bilgi kanıtları, üçüncü taraf çözümleri veya karmaşık kurulumlar olmadan gizliliği koruyan işlemleri ve gelişmiş kriptografik özellikleri etkinleştirir.",
-    "choose_between_transparent_or_confidential": "Gerektiğinde şeffaf veya gizli işlemler arasında seçim yapın.",
-    "simple_apis_to_add_privacy": "Herhangi bir uygulamaya gizlilik özellikleri eklemek için basit API'ler.",
-    "full_security_with_minimal_data": "Minimum veriyle tam güvenlik - herhangi bir cihazda saniyeler içinde senkronize edin.",
-    "connect_to_other_blockchains_without": "Merkezi doğrulayıcılar olmadan diğer blok zincirlerine bağlanın.",
-    "cryptographic_security": "Kriptografik Güvenlik",
-    "mathematical_proofs_ensure_full_node": "Matematiksel kanıtlar hafif istemciler için tam düğüm düzeyinde güvenlik sağlar.",
-    "subblocks_in_development": "Alt Bloklar (Geliştirme Aşamasında)",
-    "sub_second_confirmations": "Saniyenin Altında Onaylar",
-    "near_instant_transaction_finality_for": "Geliştirilmiş kullanıcı deneyimi için anlık işlem kesinliği.",
-    "works_with_existing_infrastructure_no": "Mevcut altyapıyla çalışır - köprü veya yan zincire gerek yok.",
-    "create_and_trade_tokens_and": "Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok - sadece basit, güvenli ve uygun maliyetli yerel varlıklar.",
-    "issue_tokens_stablecoins_or_nfts": "Tek bir işlemde token, stablecoin veya NFT çıkarın.",
-    "native_integration_with_all_ergo": "Tüm Ergo uygulamaları ve protokolleriyle yerel entegrasyon.",
-    "first_class_tokens_with_protocol": "Protokol düzeyinde güvenlik garantilerine sahip birinci sınıf tokenlar.",
-    "decentralized_price_feeds_and_data": "Protokole yerleşik merkezi olmayan fiyat akışları ve veri kahinleri. Tek başarısızlık noktası yok, merkezi operatör yok - sadece DeFi için güvenilir, birleştirilebilir veriler.",
-    "consensus_based_data_aggregation_ensures": "Mutabakata dayalı veri toplama doğru, manipülasyona dirençli fiyatlar sağlar.",
-    "universal_compatibility": "Evrensel Uyumluluk",
-    "any_smart_contract_can_access": "Herhangi bir akıllı sözleşme, özel entegrasyonlar olmadan oracle verilerine erişebilir.",
-    "no_central_authority_or_single": "Veri boru hattında merkezi otorite veya tek başarısızlık noktası yok.",
-    "no_forced_upgrades_no_chain_wars": "Zorunlu yükseltme yok, zincir savaşı yok.",
-    "adopt_innovations_at_your_own_pace": "Yenilikleri kendi hızınızda benimseyin.",
-    "evolutionary_not_revolutionary_changes": "Devrimsel değil evrimsel değişiklikler.",
-    "consensus_driven_tuning_of_economic": "Topluluk katkısıyla ekonomik parametrelerin mutabakata dayalı ayarlanması (örn. madenci oylaması).",
-    "economic_variables_can_be_adjusted": "Ekonomik değişkenler ayarlanabilir.",
-    "adapt_to_changing_network_needs": "Değişen ağ ihtiyaçlarına uyum sağlayın.",
-    "discussions_and_decisions_involve_the_community": "Tartışmalar ve kararlar topluluğu içerir.",
-    "see_ecosystem_apps": "Ekosistem Uygulamalarını Gör",
-    "sigma_protocols_provide_native_zero": "Sigma protokolleri yerel sıfır bilgi kanıtları, halka imzaları sağlar,",
-    "advanced_blockchain_infrastructure_for_scalable": "Ölçeklenebilir DeFi, güvenli akıllı sözleşmeler ve gerçek merkeziyetsizlik için gelişmiş blok zinciri altyapısı.",
-    "ergo_tech_stack_overview": "Ergo Teknoloji Yığınına Genel Bakış",
-    "ready_to_explore_ergo_tech": "Ergo Teknolojisini Keşfetmeye Hazır mısınız?",
-    "dive_deeper_into_the_docs": "Belgelere daha derine inin veya en gelişmiş UTXO blok zinciri üzerinde geliştirmeye başlayın.",
-    "discover_ergo_s_advanced_blockchain": "Ergo\\'nun gelişmiş blok zinciri teknolojisini keşfedin: paralel akıllı sözleşmeler için eUTXO modeli, ErgoScript programlama dili, sıfır bilgi kanıtları için Sigma protokolleri ve ASIC'e dirençli Autolykos madenciliği.",
-    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript akıllı sözleşmeleri', 'Sigma protokolleri', 'Autolykos madenciliği', 'blok zinciri teknolojisi', 'akıllı sözleşme programlama', 'NIPoPoWs', 'depolama kirası', 'iş kanıtı', 'DeFi altyapısı",
-    "ergo_technology_overview": "Ergo Teknolojisine Genel Bakış",
-    "ergo_technology_next_generation_blockchain": "Ergo Teknolojisi - Yeni Nesil Blok Zinciri",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO, blok zinciri durumunu bağımsız kutulara (çıktılara) bölerek global durum olmadan paralel akıllı sözleşmeleri mümkün kılar ve yeniden giriş risklerini azaltır. DApp'ler birleştirilebilir hale gelir: karmaşık mantık basit çıktılardan oluşturulabilir.",
-    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript, Ergo\\",
-    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos bellek-yoğun ve ASIC-dirençlidir; bu da onu sıradan madenciler için adil kılar. Tekil madenciliği ödüllendirir ve havuz bağımlılığını azaltarak ağı ılımlı enerji tüketimiyle güvende tutar.",
-    "answer_text": "Answer',\n          text:",
-    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs, tam düğümler olmadan hafif istemcilere, anında mobil senkronizasyona ve güven gerektirmeyen zincirler arası köprülere olanak tanıyan küçük blok zinciri kanıtları oluşturur.",
-    "home_item_https_ergoblockchain_org": "Ana Sayfa',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "Teknoloji',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_blockchain_technology_eutxo_smart": "Ergo Blok Zinciri Teknolojisi | eUTXO Akıllı Sözleşmeler ve Sigma Protokolleri",
-    "ergo_technology_stack_building_the_future": "Ergo Teknoloji Yığını - Geleceği İnşa Etmek",
-    "advanced_blockchain_technology_eutxo_ergoscript": "Gelişmiş blok zinciri teknolojisi: eUTXO, ErgoScript, gizlilik özellikleri ve sürdürülebilir PoW.",
-    "eutxo_model_ergoscript_sigma_protocols": "eUTXO modeli, ErgoScript, Sigma protokolleri, NIPoPoWs - son teknoloji blok zinciri teknolojisi.",
-    "comprehensive_overview_of_ergo": "Ergo\\'nun kapsamlı genel bakışı",
-    "extended_utxo_model_enabling_parallel_execution": "Paralel yürütmeyi mümkün kılan Genişletilmiş UTXO modeli",
-    "secure_declarative_language_for_programmable_money": "Programlanabilir para için güvenli, bildirimsel dil",
-    "native_zero_knowledge_proofs_and_privacy_features": "Yerel sıfır bilgi kanıtları ve gizlilik özellikleri",
-    "memory_hard_proof_of_work_algorithm": "Bellek yoğun İş Kanıtı algoritması",
-    "sustainable_blockchain_state_management": "Sürdürülebilir blok zinciri durum yönetimi",
-    "non_interactive_proofs_of_proof_of_work": "İş Kanıtının Etkileşimsiz Kanıtları",
     "sections": {
       "useCases": "Kullanım Alanları",
       "architecture": "Mimari",
@@ -414,53 +317,6 @@
         "explore": "Özellikleri Keşfet",
         "documentation": "Belgeleri Görüntüle"
       }
-    },
-    "innovations": {
-      "title": "Temel Yenilikler",
-      "items": {
-        "utxo": {
-          "title": "Genişletilmiş UTXO",
-          "description": "Bitcoin'in güvenliğini Ethereum'un ifade gücüyle birleştirir"
-        },
-        "sigma": {
-          "title": "Sigma Protokolleri",
-          "description": "Gizlilik ve kimlik doğrulama için yerleşik sıfır bilgi kanıtları"
-        },
-        "contracts": {
-          "title": "Çok Aşamalı Sözleşmeler",
-          "description": "Önceden tanımlanmış aşamalar boyunca gelişen karmaşık akıllı sözleşmeler"
-        },
-        "emission": {
-          "title": "Uyarlanabilir Emisyon",
-          "description": "Uzun vadeli istikrar için tasarlanmış düzgün emisyon eğrisi"
-        }
-      }
-    },
-    "comparison": {
-      "title": "Ergo Nasıl Karşılaştırılır",
-      "description": "Ergo'nun teknolojisinin diğer platformlarla nasıl örtüştüğünü görün",
-      "features": {
-        "model": "Mutabakat Modeli",
-        "contracts": "Akıllı Sözleşmeler",
-        "privacy": "Gizlilik Özellikleri",
-        "scalability": "Ölçeklenebilirlik",
-        "sustainability": "Sürdürülebilirlik"
-      }
-    },
-    "roadmap": {
-      "title": "Teknoloji Yol Haritası",
-      "description": "Devam eden gelişmeler ve gelecekteki iyileştirmeler",
-      "phases": {
-        "current": "Mevcut Odak",
-        "next": "Sonraki Aşama",
-        "future": "Gelecek Vizyonu"
-      }
-    },
-    "cta": {
-      "title": "İnşa Etmeye Hazır mısınız?",
-      "description": "En gelişmiş blok zinciri platformu üzerinde geliştirmeye başlayın",
-      "documentation": "Belgeleri Görüntüle",
-      "github": "GitHub'ı Keşfet"
     },
     "features": {
       "eutxo": {
@@ -1261,6 +1117,53 @@
           }
         }
       }
+    },
+    "innovations": {
+      "title": "Temel Yenilikler",
+      "items": {
+        "utxo": {
+          "title": "Genişletilmiş UTXO",
+          "description": "Bitcoin'in güvenliğini Ethereum'un ifade gücüyle birleştirir"
+        },
+        "sigma": {
+          "title": "Sigma Protokolleri",
+          "description": "Gizlilik ve kimlik doğrulama için yerleşik sıfır bilgi kanıtları"
+        },
+        "contracts": {
+          "title": "Çok Aşamalı Sözleşmeler",
+          "description": "Önceden tanımlanmış aşamalar boyunca gelişen karmaşık akıllı sözleşmeler"
+        },
+        "emission": {
+          "title": "Uyarlanabilir Emisyon",
+          "description": "Uzun vadeli istikrar için tasarlanmış düzgün emisyon eğrisi"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Ergo Nasıl Karşılaştırılır",
+      "description": "Ergo'nun teknolojisinin diğer platformlarla nasıl örtüştüğünü görün",
+      "features": {
+        "model": "Mutabakat Modeli",
+        "contracts": "Akıllı Sözleşmeler",
+        "privacy": "Gizlilik Özellikleri",
+        "scalability": "Ölçeklenebilirlik",
+        "sustainability": "Sürdürülebilirlik"
+      }
+    },
+    "roadmap": {
+      "title": "Teknoloji Yol Haritası",
+      "description": "Devam eden gelişmeler ve gelecekteki iyileştirmeler",
+      "phases": {
+        "current": "Mevcut Odak",
+        "next": "Sonraki Aşama",
+        "future": "Gelecek Vizyonu"
+      }
+    },
+    "cta": {
+      "title": "İnşa Etmeye Hazır mısınız?",
+      "description": "En gelişmiş blok zinciri platformu üzerinde geliştirmeye başlayın",
+      "documentation": "Belgeleri Görüntüle",
+      "github": "GitHub'ı Keşfet"
     },
     "nativeTokens": {
       "title": "Yerel Tokenlar ve NFT'ler",
@@ -2186,9 +2089,6 @@
       "spectrum_finance_sigmausd_duckpools": "Spectrum Finance\", \"SigmaUSD\", \"DuckPools",
       "ergo_auction_house_skyharbor_unique_assets": "Ergo Açık Artırma Evi\", \"SkyHarbor\", \"Benzersiz Varlıklar",
       "oracle_pools_governance_compliance_tools": "Oracle Havuzları\", \"Yönetişim\", \"Uyumluluk Araçları",
-      "technology_href_technology": "Teknoloji\", href: \"/technology",
-      "technology_item_https_ergoblockchain_org": "Teknoloji', item: 'https://ergoblockchain.org/technology",
-      "techarticle_headline": "TechArticle', headline:",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO açıklandı: güvenlik, paralellik, programlanabilirlik ve kullanım alanları.",
       "on_this_page": "Bu sayfada",
       "ergoscript_code_controlling_spending_conditions": "Harcama koşullarını kontrol eden ErgoScript kodu",
@@ -2351,10 +2251,6 @@
       "predictable_moderate": "Öngörülebilir, orta düzey",
       "copy_to_clipboard": "Panoya kopyala",
       "the_class_of_reentrancy_vulnerabilities": "Hesap tabanlı sistemlerde yaygın olan yeniden giriş güvenlik açığı sınıfı eUTXO'da bulunmaz",
-      "technology_item_https_ergoblockchain_org": "Teknoloji\",\n              item: \"https://ergoblockchain.org/technology",
-      "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
-      "technology_href_technology": "Teknoloji\", href: \"/technology",
-      "ergoscript_href_technology_ergoscript": "ErgoScript\", href: \"/technology/ergoscript",
       "no_shared_global_state_eliminates": "Paylaşılan küresel durum olmaması yeniden giriş güvenlik açığı sınıfını ortadan kaldırır",
       "non_custodial_defi_protocols": "Saklama hizmeti sunmayan DeFi protokolleri",
       "decentralized_oracle_networks": "Merkeziyetsiz oracle ağları",
@@ -2405,6 +2301,8 @@
       "explore_ergoscript_and_start_developing": "ErgoScript'i keşfedin ve bugün güvenli akıllı sözleşmeler geliştirmeye başlayın.",
       "try_playground": "Oyun Alanını Dene"
     },
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo Teknolojisi — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
+    "explore_ergo_s_technology_stack": "Ergo'nun teknoloji yığınını keşfedin: eUTXO, ErgoScript, Autolykos PoW, Depolama Kirası, Sigma Protokolleri, NIPoPoWs.",
     "adaptiveEmission": {
       "title": "Uyarlanabilir Emisyon",
       "subtitle": "Esnek Para Politikası",
@@ -2532,17 +2430,11 @@
       "answer_text_ergo_offers_multiple": "Cevap\",\n                text:\n                  \"Ergo; Sigma protokolleri, halka imzaları, sıfır bilgi ispatları ve gizli işlemler dahil çok sayıda gizlilik özelliği sunmaktadır. Bu teknolojiler güvenlik ve uyumluluğu korurken gizlilik koruyucu işlemleri mümkün kılar.",
       "answer_text_sigma_protocols_are": "Cevap\",\n                text:\n                  \"Sigma protokolleri, değerleri açıklamadan gizli değerler hakkında ifadeleri kanıtlamaya olanak tanıyan sıfır bilgi ispat sistemleridir. Gizlilik koruyucu kimlik doğrulama ve işlem doğrulamayı mümkün kılarlar.",
       "answer_text_yes_ergo_s": "Cevap\",\n                text:\n                  \"Evet, Ergo'nun gizlilik özellikleri yasal düzenlemelere uyumlu olacak şekilde tasarlanmıştır. Seçici açıklama yetenekleri sağlarlar; bu, kullanıcıların varsayılan olarak gizliliği korurken gerektiğinde işlem ayrıntılarını açıklamalarına olanak tanır.",
-      "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo gizliliği protokole yerleştirir: Sigma protokolleri, halka/eşik imzaları, ErgoMixer, gizli varlıklar ve seçici açıklama.",
       "ergo_privacy_sigma_protocols_ring": "Ergo gizlilik,Sigma protokolleri,halka imzaları,sıfır bilgi ispatları,ErgoMixer,gizli işlemler",
-      "webpage_id_https_ergoblockchain_org_technology": "WebPage\", \"@id\": \"https://ergoblockchain.org/technology",
-      "technology_item_https_ergoblockchain_org": "Teknoloji\", item: \"https://ergoblockchain.org/technology",
-      "privacy_features_item_https_ergoblockchain": "Gizlilik Özellikleri\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
       "prepare_funds_text_split_funds": "Fonları hazırla\", text: \"Fonları böl ve adres yeniden kullanımından kaçın.",
       "run_mix_text_choose_round": "Karıştırmayı çalıştır\", text: \"Daha büyük anonimlik kümesi için tur sayısını/gecikmeyi seçin.",
       "wait_spend_text_spend_after": "Bekle ve harca\", text: \"Bir gecikmeden sonra harca; doğrudan bağlanabilirlikten kaçın.",
-      "technology_href_technology": "Teknoloji\", href: \"/technology",
-      "privacy_features_href_technology_privacy_features": "Gizlilik Özellikleri\", href: \"/technology/privacy-features",
       "pseudonymous_addresses_utxo_model_benefits": "Takma ad adresler\", \"UTXO model avantajları\", \"Temel işlem gizliliği",
       "transaction_mixing_address_unlinkability_amount": "İşlem karıştırma\", \"Adres bağlantısızlığı\", \"Miktar gizleme",
       "enable_powerful_privacy_tools_like": "Protokol düzeyinde halka imzaları ve sıfır bilgi ispatları gibi güçlü gizlilik araçlarını etkinleştirir.",
@@ -2789,6 +2681,128 @@
           }
         }
       }
+    },
+    "frequently_asked_questions": "Sıkça Sorulan Sorular",
+    "go_to_docs": "Belgelere Git",
+    "extended_utxo_model_that_enables": "Paralel akıllı sözleşme yürütmeyi ve birleştirilebilir DeFi uygulamalarını mümkün kılan Genişletilmiş UTXO modeli. Bitcoin'i korurken yeniden giriş saldırılarını ortadan kaldırır",
+    "full_blockchain_security_without_trusted": "Güvenilir aracılar olmadan tam blok zinciri güvenliği.",
+    "adaptive_emission_governance": "Uyarlanabilir Emisyon ve Yönetişim",
+    "what_makes_ergo_s_eutxo": "Ergo'nun eUTXO modeli hesap tabanlı blok zincirlerine kıyasla ne gibi üstünlükler sağlar?\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScript akıllı sözleşme güvenlik açıklarını nasıl önler?\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "Autolykos neden merkezi olmayan ve enerji verimli olarak kabul edilir?\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "Depolama Kirası blok zinciri sürdürülebilirliğini nasıl çözer?\",\n      tag: \"Depolama",
+    "what_privacy_features_does_ergo": "Ergo yerel olarak hangi gizlilik özelliklerini sunar?\",\n      tag: \"Gizlilik",
+    "why_are_ergo_s_oracle": "Ergo'nun Oracle Havuzları neden Chainlink'ten daha güvenlidir?\",\n      tag: \"Oracle'lar",
+    "how_do_subblocks_achieve_sub": "Alt Bloklar saniyenin altında işlem onaylarını nasıl başarır?\",\n      tag: \"Ölçekleme",
+    "how_to_create_tokens_and": "Akıllı sözleşmeler olmadan Ergo'da token ve NFT nasıl oluşturulur?\",\n      tag: \"Token ve NFT'ler",
+    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
+    "research_in_development": "Araştırma/Geliştirme aşamasında",
+    "decentralized_mixers_and_privacy_tools": "Merkezi olmayan karıştırıcılar ve gizlilik araçları (yasal durumu kontrol edin)\",\n                              \"DAO'lar ve yönetişim sistemleri",
+    "infrastructure_apps": "Altyapı ve Uygulamalar",
+    "smart_contracts_run_independently_without": "Akıllı sözleşmeler küresel durum çakışmaları olmadan bağımsız olarak çalışır.",
+    "build_complex_defi_applications_from": "Basit, yeniden kullanılabilir bileşenlerden karmaşık DeFi uygulamaları oluşturun.",
+    "bitcoin_level_security": "Bitcoin Düzeyinde Güvenlik",
+    "mathematically_prove_your_smart_contracts": "Akıllı sözleşmelerinizin güvenli ve hatasız olduğunu matematiksel olarak kanıtlayın.",
+    "native_zero_knowledge_proofs_and": "Gizli işlemler için yerel sıfır bilgi kanıtları ve halka imzaları.",
+    "safe_by_design": "Tasarımla Güvenli",
+    "prevents_common_vulnerabilities_like_reentrancy": "Yeniden giriş saldırıları ve beklenmedik davranışlar gibi yaygın güvenlik açıklarını önler.",
+    "energy_efficient_asic_resistant_mining": "Ağ katılımını demokratikleştiren enerji verimli, ASIC'e dirençli madencilik algoritması. Ağı merkezi olmayan ve herkese erişilebilir tutmak için GPU madenciliği için tasarlanmıştır.",
+    "memory_hard_algorithm_reduces_power": "Bellek yoğun algoritma, geleneksel PoW'a kıyasla güç tüketimini azaltır.",
+    "low_barrier_to_entry_enables": "Düşük giriş engeli, bireysel madencilerin kârlı bir şekilde katılmasını sağlar.",
+    "optimized_for_consumer_gpus_to": "Madencilik merkezileşmesini önlemek için tüketici GPU'larına optimize edilmiştir.",
+    "revolutionary_economic_model_that_prevents": "Blok zinciri şişmesini önleyen devrimsel ekonomik model. Etkin olmayan coinler 4 yıl sonra minimum kira öder, bu da sürdürülebilir blok zinciri boyutu ve kalıcı madenci ödülleri sağlar.",
+    "sustainable_blockchain": "Sürdürülebilir Blok Zinciri",
+    "automatic_cleanup_of_unused_data": "Kullanılmayan verilerin otomatik temizlenmesi blok zincirini hafif ve verimli tutar.",
+    "miners_receive_rewards_forever_ensuring": "Madenciler sonsuza kadar ödül alır, bu da uzun vadeli ağ güvenliğini sağlar.",
+    "maintains_lightweight_blockchain_that_runs": "Mütevazı donanımda çalışan hafif blok zincirini korur.",
+    "built_in_zero_knowledge_proofs": "Yerleşik sıfır bilgi kanıtları, üçüncü taraf çözümleri veya karmaşık kurulumlar olmadan gizliliği koruyan işlemleri ve gelişmiş kriptografik özellikleri etkinleştirir.",
+    "choose_between_transparent_or_confidential": "Gerektiğinde şeffaf veya gizli işlemler arasında seçim yapın.",
+    "simple_apis_to_add_privacy": "Herhangi bir uygulamaya gizlilik özellikleri eklemek için basit API'ler.",
+    "full_security_with_minimal_data": "Minimum veriyle tam güvenlik - herhangi bir cihazda saniyeler içinde senkronize edin.",
+    "connect_to_other_blockchains_without": "Merkezi doğrulayıcılar olmadan diğer blok zincirlerine bağlanın.",
+    "cryptographic_security": "Kriptografik Güvenlik",
+    "mathematical_proofs_ensure_full_node": "Matematiksel kanıtlar hafif istemciler için tam düğüm düzeyinde güvenlik sağlar.",
+    "subblocks_in_development": "Alt Bloklar (Geliştirme Aşamasında)",
+    "sub_second_confirmations": "Saniyenin Altında Onaylar",
+    "near_instant_transaction_finality_for": "Geliştirilmiş kullanıcı deneyimi için anlık işlem kesinliği.",
+    "works_with_existing_infrastructure_no": "Mevcut altyapıyla çalışır - köprü veya yan zincire gerek yok.",
+    "create_and_trade_tokens_and": "Protokol düzeyinde doğrudan token ve NFT oluşturun ve takas edin. Akıllı sözleşmeye gerek yok - sadece basit, güvenli ve uygun maliyetli yerel varlıklar.",
+    "issue_tokens_stablecoins_or_nfts": "Tek bir işlemde token, stablecoin veya NFT çıkarın.",
+    "native_integration_with_all_ergo": "Tüm Ergo uygulamaları ve protokolleriyle yerel entegrasyon.",
+    "first_class_tokens_with_protocol": "Protokol düzeyinde güvenlik garantilerine sahip birinci sınıf tokenlar.",
+    "decentralized_price_feeds_and_data": "Protokole yerleşik merkezi olmayan fiyat akışları ve veri kahinleri. Tek başarısızlık noktası yok, merkezi operatör yok - sadece DeFi için güvenilir, birleştirilebilir veriler.",
+    "consensus_based_data_aggregation_ensures": "Mutabakata dayalı veri toplama doğru, manipülasyona dirençli fiyatlar sağlar.",
+    "universal_compatibility": "Evrensel Uyumluluk",
+    "any_smart_contract_can_access": "Herhangi bir akıllı sözleşme, özel entegrasyonlar olmadan oracle verilerine erişebilir.",
+    "no_central_authority_or_single": "Veri boru hattında merkezi otorite veya tek başarısızlık noktası yok.",
+    "no_forced_upgrades_no_chain_wars": "Zorunlu yükseltme yok, zincir savaşı yok.",
+    "adopt_innovations_at_your_own_pace": "Yenilikleri kendi hızınızda benimseyin.",
+    "evolutionary_not_revolutionary_changes": "Devrimsel değil evrimsel değişiklikler.",
+    "consensus_driven_tuning_of_economic": "Topluluk katkısıyla ekonomik parametrelerin mutabakata dayalı ayarlanması (örn. madenci oylaması).",
+    "economic_variables_can_be_adjusted": "Ekonomik değişkenler ayarlanabilir.",
+    "adapt_to_changing_network_needs": "Değişen ağ ihtiyaçlarına uyum sağlayın.",
+    "discussions_and_decisions_involve_the_community": "Tartışmalar ve kararlar topluluğu içerir.",
+    "see_ecosystem_apps": "Ekosistem Uygulamalarını Gör",
+    "sigma_protocols_provide_native_zero": "Sigma protokolleri yerel sıfır bilgi kanıtları, halka imzaları sağlar,",
+    "advanced_blockchain_infrastructure_for_scalable": "Ölçeklenebilir DeFi, güvenli akıllı sözleşmeler ve gerçek merkeziyetsizlik için gelişmiş blok zinciri altyapısı.",
+    "ergo_tech_stack_overview": "Ergo Teknoloji Yığınına Genel Bakış",
+    "ready_to_explore_ergo_tech": "Ergo Teknolojisini Keşfetmeye Hazır mısınız?",
+    "dive_deeper_into_the_docs": "Belgelere daha derine inin veya en gelişmiş UTXO blok zinciri üzerinde geliştirmeye başlayın.",
+    "discover_ergo_s_advanced_blockchain": "Ergo\\'nun gelişmiş blok zinciri teknolojisini keşfedin: paralel akıllı sözleşmeler için eUTXO modeli, ErgoScript programlama dili, sıfır bilgi kanıtları için Sigma protokolleri ve ASIC'e dirençli Autolykos madenciliği.",
+    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript akıllı sözleşmeleri', 'Sigma protokolleri', 'Autolykos madenciliği', 'blok zinciri teknolojisi', 'akıllı sözleşme programlama', 'NIPoPoWs', 'depolama kirası', 'iş kanıtı', 'DeFi altyapısı",
+    "ergo_technology_overview": "Ergo Teknolojisine Genel Bakış",
+    "ergo_technology_next_generation_blockchain": "Ergo Teknolojisi - Yeni Nesil Blok Zinciri",
+    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO, blok zinciri durumunu bağımsız kutulara (çıktılara) bölerek global durum olmadan paralel akıllı sözleşmeleri mümkün kılar ve yeniden giriş risklerini azaltır. DApp'ler birleştirilebilir hale gelir: karmaşık mantık basit çıktılardan oluşturulabilir.",
+    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript, Ergo\\",
+    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos bellek-yoğun ve ASIC-dirençlidir; bu da onu sıradan madenciler için adil kılar. Tekil madenciliği ödüllendirir ve havuz bağımlılığını azaltarak ağı ılımlı enerji tüketimiyle güvende tutar.",
+    "answer_text": "Answer',\n          text:",
+    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs, tam düğümler olmadan hafif istemcilere, anında mobil senkronizasyona ve güven gerektirmeyen zincirler arası köprülere olanak tanıyan küçük blok zinciri kanıtları oluşturur.",
+    "ergo_blockchain_technology_eutxo_smart": "Ergo Blok Zinciri Teknolojisi | eUTXO Akıllı Sözleşmeler ve Sigma Protokolleri",
+    "ergo_technology_stack_building_the_future": "Ergo Teknoloji Yığını - Geleceği İnşa Etmek",
+    "advanced_blockchain_technology_eutxo_ergoscript": "Gelişmiş blok zinciri teknolojisi: eUTXO, ErgoScript, gizlilik özellikleri ve sürdürülebilir PoW.",
+    "eutxo_model_ergoscript_sigma_protocols": "eUTXO modeli, ErgoScript, Sigma protokolleri, NIPoPoWs - son teknoloji blok zinciri teknolojisi.",
+    "comprehensive_overview_of_ergo": "Ergo\\'nun kapsamlı genel bakışı",
+    "extended_utxo_model_enabling_parallel_execution": "Paralel yürütmeyi mümkün kılan Genişletilmiş UTXO modeli",
+    "secure_declarative_language_for_programmable_money": "Programlanabilir para için güvenli, bildirimsel dil",
+    "native_zero_knowledge_proofs_and_privacy_features": "Yerel sıfır bilgi kanıtları ve gizlilik özellikleri",
+    "memory_hard_proof_of_work_algorithm": "Bellek yoğun İş Kanıtı algoritması",
+    "sustainable_blockchain_state_management": "Sürdürülebilir blok zinciri durum yönetimi",
+    "non_interactive_proofs_of_proof_of_work": "İş Kanıtının Etkileşimsiz Kanıtları",
+    "ergoscriptPageOld": {
+      "features": [
+        {
+          "title": "Resmi Doğrulama Desteği",
+          "description": "Bildirimsel kısıtlamalar ve birinci sınıf kripto temel öğeler aracılığıyla resmi doğrulama ve denetimi destekler"
+        },
+        {
+          "title": "eUTXO Güvenlik Modeli",
+          "description": "Hesap tabanlı sistemlerde yaygın olan yeniden giriş güvenlik açıkları sınıfı eUTXO'da bulunmaz"
+        },
+        {
+          "title": "Deterministik Yürütme",
+          "description": "Hesaplama karmaşıklığı öngörülebilirdir, ancak ağ ücretleri piyasa tarafından belirlenir"
+        },
+        {
+          "title": "Yerel Sigma Protokolleri",
+          "description": "Çok imzalı, eşikli ve halka imza yapıları için birinci sınıf destek"
+        },
+        {
+          "title": "UTXO Eşzamanlılığı",
+          "description": "Yüksek çekişmeli senaryolar için toplu işleme kalıplarıyla paralel işlem işleme"
+        },
+        {
+          "title": "Kısıtlı Hesaplama",
+          "description": "Güvenlik için betikler içinde Turing tam değil, ancak diziler karmaşık davranışları ifade edebilir"
+        }
+      ],
+      "useCases": [
+        "Saklama hizmeti sunmayan DeFi protokolleri",
+        "Özel çoklu imza cüzdanları",
+        "Açık artırmalar ve DAO'lar",
+        "Oracle sistemleri",
+        "Gizlilik araçları ve miksleyiciler",
+        "Gelişmiş NFT sözleşmeleri"
+      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -3855,42 +3869,6 @@
           "sourceCode": "GitHub depoları"
         }
       }
-    },
-    "ergoscriptPageOld": {
-      "features": [
-        {
-          "title": "Resmi Doğrulama Desteği",
-          "description": "Bildirimsel kısıtlamalar ve birinci sınıf kripto temel öğeler aracılığıyla resmi doğrulama ve denetimi destekler"
-        },
-        {
-          "title": "eUTXO Güvenlik Modeli",
-          "description": "Hesap tabanlı sistemlerde yaygın olan yeniden giriş güvenlik açıkları sınıfı eUTXO'da bulunmaz"
-        },
-        {
-          "title": "Deterministik Yürütme",
-          "description": "Hesaplama karmaşıklığı öngörülebilirdir, ancak ağ ücretleri piyasa tarafından belirlenir"
-        },
-        {
-          "title": "Yerel Sigma Protokolleri",
-          "description": "Çok imzalı, eşikli ve halka imza yapıları için birinci sınıf destek"
-        },
-        {
-          "title": "UTXO Eşzamanlılığı",
-          "description": "Yüksek çekişmeli senaryolar için toplu işleme kalıplarıyla paralel işlem işleme"
-        },
-        {
-          "title": "Kısıtlı Hesaplama",
-          "description": "Güvenlik için betikler içinde Turing tam değil, ancak diziler karmaşık davranışları ifade edebilir"
-        }
-      ],
-      "useCases": [
-        "Saklama hizmeti sunmayan DeFi protokolleri",
-        "Özel çoklu imza cüzdanları",
-        "Açık artırmalar ve DAO'lar",
-        "Oracle sistemleri",
-        "Gizlilik araçları ve miksleyiciler",
-        "Gelişmiş NFT sözleşmeleri"
-      ]
     }
   },
   "technologyPages": {

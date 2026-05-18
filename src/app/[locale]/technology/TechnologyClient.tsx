@@ -320,15 +320,13 @@ export default function TechnologyPage() {
   <BackgroundWrapper>
       <div className="min-h-screen text-white relative overflow-hidden">
         <div className="container mx-auto px-4 py-16 relative z-10">
-        <Breadcrumbs items={[{ name: "Technology", href: "#" }]} variant="hidden" />
+        <Breadcrumbs items={[{ name: "Technology", href: "/technology" }]} variant="hidden" />
         {/* Hero */}
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <FadeIn>
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+                initial={false}
                 className="mb-8"
               >
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-snug pb-2 align-baseline block text-center">
@@ -339,9 +337,7 @@ export default function TechnologyPage() {
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                initial={false}
                 className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-center"
               >
                 <Link href="/technology/map">
@@ -369,12 +365,9 @@ export default function TechnologyPage() {
         <FadeIn>
           <div className="max-w-7xl mx-auto mb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {techFeatures.map((feature, idx) => (
+              {techFeatures.map((feature) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 + idx * 0.05 }}
                   whileHover={{ scale: 1.03 }}
                   className="group motion-reduce:transform-none motion-reduce:transition-none"
                 >
@@ -412,12 +405,9 @@ export default function TechnologyPage() {
                       </CardHeader>
                       <CardContent className="flex-1 pt-0">
                         <div className="space-y-1.5">
-                          {feature.details.slice(0, 3).map((d, i) => (
+                          {feature.details.slice(0, 3).map((d) => (
                             <motion.div
                               key={d.title}
-                              initial={{ opacity: 0, x: 10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: 0.35 + i * 0.06 }}
                               className="flex items-start gap-2 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none"
                             >
                               {d.icon ? (
@@ -471,15 +461,15 @@ export default function TechnologyPage() {
               <TabsContent value="usecases" className="m-0">
                 {(() => {
                   const containerVariants = {
-                    hidden: { opacity: 0 },
+                    hidden: { opacity: 1 },
                     visible: {
                       opacity: 1,
-                      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+                      transition: { staggerChildren: 0 },
                     },
                   }
                   const itemVariants = {
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
+                    hidden: { opacity: 1, y: 0 },
+                    visible: { opacity: 1, y: 0 },
                   }
                   return (
                     <motion.div
@@ -599,8 +589,8 @@ export default function TechnologyPage() {
                         {/* Resources */}
               <TabsContent value="resources" className="m-0">
                 {(() => {
-                  const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }
-                  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } } }
+                  const containerVariants = { hidden: { opacity: 1 }, visible: { opacity: 1, transition: { staggerChildren: 0 } } }
+                  const itemVariants = { hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }
                   return (
                     <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -733,8 +723,8 @@ export default function TechnologyPage() {
 type Detail = { icon?: React.ElementType; title: string; description: string }
 type TechFeature = { icon: React.ElementType; title: string; description: string; href?: string; details: Detail[] }
 const resources: { title: string; href: string; icon: React.ElementType }[] = [
-      { title: "Ergo Docs", href: "/docs", icon: Book },
+  { title: "Ergo Docs", href: "/docs", icon: Book },
   { title: "Whitepaper", href: "https://ergoplatform.org/docs/whitepaper.pdf", icon: ExternalLink },
   { title: "GitHub", href: "https://github.com/ergoplatform", icon: ExternalLink },
   { title: "Dev Tutorials", href: "/docs/developers/tutorials", icon: ArrowRight },
-] as const 
+] as const

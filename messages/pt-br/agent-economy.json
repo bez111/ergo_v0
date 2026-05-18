@@ -33,6 +33,26 @@
         "body": "Uma chamada de API de US$ 0,001 via Stripe custa mais em taxas do que a própria chamada. Os trilhos não foram feitos para micropagamentos máquina-a-máquina em qualquer escala."
       }
     ],
+    "creditUnlock": {
+      "sectionLabel": "The Unlock",
+      "heading": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+      "description": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+      "formula": "Payments move value. Verification proves work. Credit creates economic agency.",
+      "items": [
+        {
+          "title": "Payments",
+          "body": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout."
+        },
+        {
+          "title": "Verification",
+          "body": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened."
+        },
+        {
+          "title": "Credit",
+          "body": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules."
+        }
+      ]
+    },
     "solution": {
       "sectionLabel": "A Solução",
       "heading": "Por que Ergo é a",

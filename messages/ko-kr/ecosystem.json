@@ -331,11 +331,6 @@
       "interactive_visualization_of_50_ergo": "50개 이상의 Ergo 프로젝트 인터랙티브 시각화. DeFi, NFT, 인프라를 탐색하세요.",
       "visual_explorer_for_ergo_blockchain": "Ergo 블록체인 프로젝트 및 애플리케이션을 위한 시각적 탐색기"
     },
-    "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
-    "website_id_https_ergoblockchain_org_website": "WebSite\", \"@id\": \"https://ergoblockchain.org#website",
-    "breadcrumblist_id_https_ergoblockchain_org": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
-    "ecosystem_item_https_ergoblockchain_org_ecosystem": "Ecosystem\", item: \"https://ergoblockchain.org/ecosystem",
-    "home_item_https_ergoblockchain_org": "Home\", item: \"https://ergoblockchain.org/",
     "projectPage": {
       "breadcrumbs": {
         "ecosystem": "에코시스템"
@@ -958,6 +953,20 @@
       "open": "열기",
       "close": "닫기"
     },
-    "legend": "범례:"
+    "legend": "범례:",
+    "categories": {
+      "DEFI": "DEFI",
+      "INFRASTRUCTURE": "INFRASTRUCTURE",
+      "ORACLES": "ORACLES",
+      "PRIVACY": "PRIVACY",
+      "NFT": "NFT",
+      "WALLETS": "WALLETS",
+      "DAO": "DAO",
+      "TOOLS": "TOOLS"
+    },
+    "download": {
+      "png": "PNG",
+      "svg": "SVG"
+    }
   }
 }

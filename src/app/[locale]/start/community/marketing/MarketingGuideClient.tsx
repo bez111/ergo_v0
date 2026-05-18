@@ -56,7 +56,7 @@ export function MarketingGuideClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
         {/* Hidden Breadcrumbs for SEO */}
-        <Breadcrumbs items={[...breadcrumbItems, { name: "Marketing Guide", href: "#" }]} variant="hidden" />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "Marketing Guide", href: "/start/community/marketing" }]} variant="hidden" />
         
         {/* Hero Section */}
         <motion.section 

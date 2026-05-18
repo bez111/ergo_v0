@@ -19,12 +19,31 @@
       "miners": "For Miners"
     },
     "metrics": {
-      "networkHashrate": { "label": "Network Hashrate", "comment": "Network hashrate → competition & security" },
-      "difficulty": { "label": "Difficulty", "comment": "Difficulty → baseline for profitability" },
-      "blockTime": { "label": "Block Time", "comment": "Consistent block times = predictable rewards" },
-      "blockReward": { "label": "Block Reward", "comment": "Block reward + fees → total miner revenue", "trend": "{remaining}M left" },
-      "activeMiners": { "label": "Active Miners", "comment": "Healthy miner distribution" },
-      "miningPools": { "label": "Mining Pools", "comment": "Multiple pool options for decentralization" }
+      "networkHashrate": {
+        "label": "Network Hashrate",
+        "comment": "Network hashrate → competition & security"
+      },
+      "difficulty": {
+        "label": "Difficulty",
+        "comment": "Difficulty → baseline for profitability"
+      },
+      "blockTime": {
+        "label": "Block Time",
+        "comment": "Consistent block times = predictable rewards"
+      },
+      "blockReward": {
+        "label": "Block Reward",
+        "comment": "Block reward + fees → total miner revenue",
+        "trend": "{remaining}M left"
+      },
+      "activeMiners": {
+        "label": "Active Miners",
+        "comment": "Healthy miner distribution"
+      },
+      "miningPools": {
+        "label": "Mining Pools",
+        "comment": "Multiple pool options for decentralization"
+      }
     },
     "coreValues": {
       "asicResistant": {

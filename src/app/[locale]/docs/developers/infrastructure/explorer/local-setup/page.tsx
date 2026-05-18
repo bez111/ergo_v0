@@ -167,7 +167,7 @@ export default function LocalSetupPage() {
               How to setup the Chain-Grabber module on a Raspberry Pi device
             </p>
             <Link
-              href="/docs/developers/infrastructure/explorer/rpi-blockchain-explorer"
+              href="/docs/developers/infrastructure/explorer"
               className="text-blue-400 hover:text-blue-300 underline text-sm"
             >
               View Guide

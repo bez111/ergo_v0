@@ -2,7 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
 
-import { 
+import {
   ArrowLeft,
   Code,
   ExternalLink,
@@ -29,24 +29,24 @@ export default function TechnicalDetailsPage() {
         <p className="text-xl text-gray-400 mb-6">
           Detailed technical documentation outlining the complete workflow for the full archival node mode in Ergo.
         </p>
-        
+
         {/* Navigation Buttons */}
         <div className="flex flex-wrap gap-4">
-          <Link 
+          <Link
             href="/docs/developers/infrastructure/node/modes/archival-node"
             className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Archival Node
           </Link>
-          <Link 
+          <Link
             href="/docs/developers/infrastructure/node/modes"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <ChevronRight className="w-5 h-5 mr-2" />
             Node Modes Overview
           </Link>
-          <a 
+          <a
             href="https://github.com/ergoplatform/ergo/wiki/Node-Configuration"
             target="_blank"
             rel="noopener noreferrer"
@@ -67,8 +67,8 @@ export default function TechnicalDetailsPage() {
             <h2 className="text-2xl font-semibold text-purple-400">Technical Overview</h2>
           </div>
           <p className="text-gray-300 leading-relaxed">
-            This document outlines the technical workflow for the full archival node mode in Ergo. 
-            The process involves multiple stages of synchronization, validation, and state management 
+            This document outlines the technical workflow for the full archival node mode in Ergo.
+            The process involves multiple stages of synchronization, validation, and state management
             to ensure complete blockchain integrity and security.
           </p>
         </div>
@@ -223,7 +223,7 @@ export default function TechnicalDetailsPage() {
     it may also create UTXOSnapshot
     (e.g. every 30000 blocks like in Ethereum).
     This UTXOSnapshot should be required for mining by Rollerchain*/
-    
+
     if(State().apply(ProgressInfo) == Success((newState, ADProofs))) {
         if("mode"="full" || "mode"=="pruned-full") ADProofs.foreach ( ADProof => History.apply(ADProof))
         if("mode"=="pruned-full" || "mode"=="light-full") drop BlockTransactions and ADProofs older than BlocksToKeep
@@ -255,7 +255,7 @@ export default function TechnicalDetailsPage() {
     it may also create UTXOSnapshot
     (e.g. every 30000 blocks like in Ethereum).
     This UTXOSnapshot should be required for mining by Rollerchain*/
-    
+
     if(State().apply(ProgressInfo) == Success((newState, ADProofs))) {
         if("mode"="full" || "mode"=="pruned-full") ADProofs.foreach ( ADProof => History.apply(ADProof))
         if("mode"=="pruned-full" || "mode"=="light-full") drop BlockTransactions and ADProofs older than BlocksToKeep
@@ -281,28 +281,28 @@ export default function TechnicalDetailsPage() {
           </div>
           <div className="space-y-4">
             <p className="text-gray-300">
-              For more detailed information about the bootstrapping process and modifiers processing, 
+              For more detailed information about the bootstrapping process and modifiers processing,
               please refer to the following resources:
             </p>
             <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="/docs/developers/infrastructure/node/protocol/modifiers-processing" 
+                  <a href="/docs/developers/infrastructure/node/protocol"
                      className="text-blue-400 hover:text-blue-300 underline">
                     Bootstrapping section of modifiers processing
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/ergoplatform/ergo/wiki/Node-Configuration" 
-                     target="_blank" 
+                  <a href="https://github.com/ergoplatform/ergo/wiki/Node-Configuration"
+                     target="_blank"
                      rel="noopener noreferrer"
                      className="text-blue-400 hover:text-blue-300 underline">
                     Ergo Node Configuration Wiki
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/ergoplatform/ergo" 
-                     target="_blank" 
+                  <a href="https://github.com/ergoplatform/ergo"
+                     target="_blank"
                      rel="noopener noreferrer"
                      className="text-blue-400 hover:text-blue-300 underline">
                     Ergo GitHub Repository
@@ -335,4 +335,4 @@ export default function TechnicalDetailsPage() {
       </div>
     </div>
   );
-} 
+}

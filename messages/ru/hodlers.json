@@ -27,12 +27,25 @@
       ]
     },
     "metrics": {
-      "networkHashrate": { "label": "Хешрейт сети" },
-      "activeAddresses": { "label": "Активные адреса" },
-      "defiTvl": { "label": "TVL в DeFi" },
-      "ergSupply": { "label": "Эмиссия ERG", "trend": "осталось {remaining}M" },
-      "avgBlockTime": { "label": "Среднее время блока" },
-      "activeNodes": { "label": "Активные узлы" }
+      "networkHashrate": {
+        "label": "Хешрейт сети"
+      },
+      "activeAddresses": {
+        "label": "Активные адреса"
+      },
+      "defiTvl": {
+        "label": "TVL в DeFi"
+      },
+      "ergSupply": {
+        "label": "Эмиссия ERG",
+        "trend": "осталось {remaining}M"
+      },
+      "avgBlockTime": {
+        "label": "Среднее время блока"
+      },
+      "activeNodes": {
+        "label": "Активные узлы"
+      }
     },
     "heroComparisons": [
       {

@@ -13,7 +13,10 @@ const base = (process.env.SAGE_SIGNER_HEALTH_URL ?? `http://127.0.0.1:${port}`).
 const token = process.env.SAGE_SIGNER_TOKEN ?? ""
 
 await checkHealth()
-if (token) await checkReady()
+if (token) {
+  await checkReady()
+  await checkMetrics()
+}
 
 async function checkHealth() {
   const payload = await fetchJson(`${base}/health`)
@@ -35,6 +38,19 @@ async function checkReady() {
   console.log(
     `[sage-signer] ready OK - network ${payload.network} - signed ${payload.counters?.signed ?? 0}`,
   )
+}
+
+async function checkMetrics() {
+  const res = await fetch(`${base}/metrics`, {
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  })
+  const text = await res.text()
+  if (!res.ok || !text.includes("sage_signer_signed_total")) {
+    throw new Error(`/metrics returned unexpected payload: HTTP ${res.status}: ${text.slice(0, 200)}`)
+  }
+  console.log("[sage-signer] metrics OK")
 }
 
 async function fetchJson(url, init) {

@@ -107,46 +107,46 @@
       "title": "相关资源",
       "questions": {
         "title": "常见问题",
-        "items": {
-          "0": {
+        "items": [
+          {
             "href": "/questions/what-is-ergo",
-            "text": "什么是 Ergo 区块链？"
+            "text": "What is Ergo blockchain?"
           },
-          "1": {
+          {
             "href": "/questions/what-is-eutxo",
-            "text": "什么是 eUTXO 模型？"
+            "text": "What is the eUTXO model?"
           },
-          "2": {
+          {
             "href": "/questions/what-is-mev-resistance",
-            "text": "MEV 抗性是如何工作的？"
+            "text": "How does MEV resistance work?"
           },
-          "3": {
+          {
             "href": "/questions/what-is-storage-rent",
-            "text": "什么是存储租金？"
+            "text": "What is storage rent?"
           }
-        },
+        ],
         "viewAll": "查看全部问题"
       },
       "playbooks": {
         "title": "操作手册与指南",
-        "items": {
-          "0": {
+        "items": [
+          {
             "href": "/playbooks/first-transaction-10-minutes",
-            "text": "Ergo 首笔交易（10 分钟快速开始）"
+            "text": "First Ergo transaction (10-minute start)"
           },
-          "1": {
+          {
             "href": "/playbooks/start-mining-ergo",
-            "text": "开始挖矿 Ergo"
+            "text": "Start mining Ergo"
           },
-          "2": {
+          {
             "href": "/playbooks/build-defi-on-ergo",
-            "text": "在 Ergo 上构建 DeFi"
+            "text": "Build DeFi on Ergo"
           },
-          "3": {
+          {
             "href": "/playbooks/private-transaction-ergomixer",
-            "text": "通过 ErgoMixer 进行隐私交易"
+            "text": "Private transactions with ErgoMixer"
           }
-        },
+        ],
         "viewAll": "查看全部操作手册"
       }
     },

@@ -43,7 +43,7 @@ export default function MultiStageProtocolsPage() {
           <h2 className="text-2xl font-bold text-cyan-400 mb-4">Examples</h2>
           <div className="text-gray-300">
             <p>
-              The concept is illustrated through various examples, including contracts for a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/rock-paper-scissor" className="text-cyan-400 hover:underline">Rock Paper Scissors game with provable fairness</Link>, a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/reversible-address" className="text-cyan-400 hover:underline">Reversible Address with anti-theft features</Link>, and a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/ico" className="text-cyan-400 hover:underline">comprehensive ICO</Link>.
+              The concept is illustrated through various examples, including contracts for a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol" className="text-cyan-400 hover:underline">Rock Paper Scissors game with provable fairness</Link>, a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol" className="text-cyan-400 hover:underline">Reversible Address with anti-theft features</Link>, and a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol" className="text-cyan-400 hover:underline">comprehensive ICO</Link>.
             </p>
           </div>
         </section>

@@ -91,24 +91,24 @@ export default function DataModelApisPage() {
   }, []);
 
   return (
-    <Tabs defaultValue="overview" className="w-full">
-      <TabsList className="grid w-full grid-cols-6 mb-8 bg-neutral-900/50 border border-neutral-700/50">
-        <TabsTrigger value="overview" className="flex items-center gap-2 justify-center">
+    <Tabs defaultValue="overview" className="w-full max-w-full min-w-0">
+      <TabsList className="scroll-shadow-x scrollbar-hide mb-8 flex h-auto w-full max-w-full justify-start gap-1 overflow-x-auto bg-neutral-900/50 border border-neutral-700/50 md:grid md:h-10 md:grid-cols-6 md:overflow-visible md:bg-neutral-900/50">
+        <TabsTrigger value="overview" className="flex shrink-0 items-center gap-2 justify-center">
           <Database className="w-4 h-4" /> Overview
         </TabsTrigger>
-        <TabsTrigger value="box" className="flex items-center gap-2 justify-center">
+        <TabsTrigger value="box" className="flex shrink-0 items-center gap-2 justify-center">
           <Box className="w-4 h-4" /> Box
         </TabsTrigger>
-        <TabsTrigger value="addresses" className="flex items-center gap-2 justify-center">
+        <TabsTrigger value="addresses" className="flex shrink-0 items-center gap-2 justify-center">
           <Key className="w-4 h-4" /> Addresses
         </TabsTrigger>
-        <TabsTrigger value="transactions" className="flex items-center gap-2 justify-center">
+        <TabsTrigger value="transactions" className="flex shrink-0 items-center gap-2 justify-center">
           <Network className="w-4 h-4" /> Transactions
         </TabsTrigger>
-        <TabsTrigger value="block" className="flex items-center gap-2 justify-center">
+        <TabsTrigger value="block" className="flex shrink-0 items-center gap-2 justify-center">
           <Layers className="w-4 h-4" /> Block
         </TabsTrigger>
-        <TabsTrigger value="discrete" className="flex items-center gap-2 justify-center">
+        <TabsTrigger value="discrete" className="flex shrink-0 items-center gap-2 justify-center">
           <Lock className="w-4 h-4" /> DLog Proofs
         </TabsTrigger>
       </TabsList>
@@ -336,7 +336,7 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">5.2 Advanced Transaction Mechanisms</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/chained-transactions" className="text-orange-400 hover:underline">Chained Transactions</Link>: Explore how sequentially dependent transactions can be composed.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Chained Transactions</Link>: Explore how sequentially dependent transactions can be composed.</li>
                   <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree in Transactions</Link>: Understanding how <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle trees</Link> provide data integrity and facilitate efficient proofs.</li>
                   <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Transaction Signing</Link> and <Link href="/docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Backend Signing</Link>: Cryptographic principles and implementations for authenticating transactions.</li>
                   <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link>: Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules.</li>
@@ -348,7 +348,7 @@ export default function DataModelApisPage() {
                 <ul className="list-disc list-inside ml-4">
                   <li><Link href="/docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data Inputs (Read-Only Inputs)</Link>: Access additional data in transactions without spending boxes.</li>
                   <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/fees" className="text-orange-400 hover:underline">Transaction Fees</Link>: Understanding fee structures, ensuring that <Link href="/docs/miners" className="text-orange-400 hover:underline">miners</Link> are incentivized.</li>
-                  <li><Link href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/docs/ecosystem/tooling/babel-fleet" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative tokens.</li>
+                  <li><Link href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/docs/ecosystem/tooling" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative tokens.</li>
                 </ul>
               </div>
             </section>
@@ -391,9 +391,9 @@ export default function DataModelApisPage() {
                 <ul className="list-disc list-inside ml-4">
                   <li><Link href="/docs/developers/data-model-apis/assets/tokens/perpetual" className="text-orange-400 hover:underline">Perpetual Tokens</Link>: Tokens designed to exist indefinitely.</li>
                   <li><Link href="/docs/developers/data-model-apis/assets/tokens/burning" className="text-orange-400 hover:underline">Token Burning</Link>: Permanently removing tokens from circulation.</li>
-                  <li><Link href="/docs/developers/data-model-apis/assets/tokens/singletons" className="text-orange-400 hover:underline">Singletons</Link>: Unique tokens with special properties.</li>
-                  <li><Link href="/docs/ecosystem/Standards/eip22" className="text-orange-400 hover:underline">Auction Contract (EIP-22)</Link>: Standard auction contract implementation details.</li>
-                  <li><Link href="/docs/ecosystem/Standards/eip24" className="text-orange-400 hover:underline">Artwork Contract (EIP-24)</Link>: Specialized standard for managing digital artwork tokens.</li>
+                  <li><Link href="/docs/developers/data-model-apis/assets/tokens" className="text-orange-400 hover:underline">Singletons</Link>: Unique tokens with special properties.</li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">Auction Contract (EIP-22)</Link>: Standard auction contract implementation details.</li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">Artwork Contract (EIP-24)</Link>: Specialized standard for managing digital artwork tokens.</li>
                 </ul>
               </div>
             </section>
@@ -429,9 +429,9 @@ export default function DataModelApisPage() {
                   Ergo defines protocols to streamline user interactions with <Link href="/docs/introduction/wallets" className="text-orange-400 hover:underline">wallets</Link> and applications.
                 </p>
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/docs/ecosystem/Standards/eip20" className="text-orange-400 hover:underline">ErgoPay Protocol (EIP-20)</Link>: Interaction protocol for mobile wallets and dApps.</li>
-                  <li><Link href="/docs/ecosystem/Standards/eip25" className="text-orange-400 hover:underline">Payment Request URI (EIP-25)</Link>: Standard format for payment requests.</li>
-                  <li><Link href="/docs/ecosystem/Standards/eip17" className="text-orange-400 hover:underline">Proxy Contracts (EIP-17)</Link>: Mechanisms to manage funds and logic via intermediary contracts.</li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">ErgoPay Protocol (EIP-20)</Link>: Interaction protocol for mobile wallets and dApps.</li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">Payment Request URI (EIP-25)</Link>: Standard format for payment requests.</li>
+                  <li><Link href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">Proxy Contracts (EIP-17)</Link>: Mechanisms to manage funds and logic via intermediary contracts.</li>
                 </ul>
               </div>
             </section>
@@ -692,7 +692,7 @@ export default function DataModelApisPage() {
                 <li>The box is not just a simple coin; it houses data, code, and <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link>, with all of its contents exclusively stored in the registers.</li>
                 <li>Four pre-defined registers contain the box's monetary value, its protection script (the <Link href="/docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-orange-400 hover:underline">ErgoTree</Link>), and the ID of the transaction that created the box.</li>
                 <li>Each box has a unique ID, derived from the unique contents of the box, including the data of the transaction that created it.</li>
-                <li>Boxes are integral to the Ergo <Link href="/docs/developers/infrastructure" className="text-orange-400 hover:underline">protocol</Link>. The active box set (UTXO set) is authenticated through a <Link href="/docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">hash-based data structure</Link>, facilitating the development of <Link href="/docs/introduction/light-clients" className="text-orange-400 hover:underline">lightweight full nodes</Link>, as detailed in <a href="https://eprint.iacr.org/2016/994" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">this paper</a>.</li>
+                <li>Boxes are integral to the Ergo <Link href="/docs/developers/infrastructure" className="text-orange-400 hover:underline">protocol</Link>. The active box set (UTXO set) is authenticated through a <Link href="/docs/developers/tooling/frameworks" className="text-orange-400 hover:underline">hash-based data structure</Link>, facilitating the development of <Link href="/docs/introduction/light-clients" className="text-orange-400 hover:underline">lightweight full nodes</Link>, as detailed in <a href="https://eprint.iacr.org/2016/994" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">this paper</a>.</li>
                 <li>A box can hold up to six additional <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> (R4-R9) with typed data, accessible by the script.</li>
                 <li>Transactions consist of both <em>input</em> and <em>output</em> boxes.</li>
               </ul>
@@ -1193,4 +1193,4 @@ proveDlog(pubKey)`}
       </TabsContent>
     </Tabs>
   );
-} 
+}

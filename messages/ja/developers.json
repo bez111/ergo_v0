@@ -25,7 +25,13 @@
         "Ergoプレイブック",
         "DeFi開発",
         "Ergoグラント",
-        "ErgoScriptチュートリアル"
+        "ErgoScriptチュートリアル",
+        "Sigma protocols",
+        "Ergo API",
+        "dApp development",
+        "agentic blockchain",
+        "Ergo grants",
+        "ErgoScript tutorial"
       ]
     },
     "schema": {
@@ -45,11 +51,21 @@
         "proficiencyLevel": "初心者",
         "technicalAudience": "開発者、エンジニア、技術系創業者",
         "about": [
-          { "name": "ErgoScript" },
-          { "name": "eUTXOモデル" },
-          { "name": "Sigmaプロトコル" },
-          { "name": "ブロックチェーン開発" },
-          { "name": "スマートコントラクト" }
+          {
+            "name": "ErgoScript"
+          },
+          {
+            "name": "eUTXOモデル"
+          },
+          {
+            "name": "Sigmaプロトコル"
+          },
+          {
+            "name": "ブロックチェーン開発"
+          },
+          {
+            "name": "スマートコントラクト"
+          }
         ]
       },
       "itemList": {
@@ -389,6 +405,28 @@
     "emailCapture": {
       "title": "開発者アップデート",
       "description": "新しいSDK、ErgoScriptの機能、エコシステムの動向についての通知を受け取りましょう。"
+    },
+    "agentEconomy": {
+      "badge": "Agent Economy",
+      "title": "Building for autonomous agents?",
+      "description": "Ergo is a strong reference settlement rail for programmable credit, acceptance predicates, and verifiable reserve-style flows — the layer agents need beyond basic payments.",
+      "items": [
+        {
+          "title": "Agent Economy",
+          "description": "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.",
+          "tag": "Overview"
+        },
+        {
+          "title": "Agent Payments",
+          "description": "Technical architecture: Reserve · Note · Tracker · Predicate — with Fleet SDK code examples.",
+          "tag": "Architecture"
+        },
+        {
+          "title": "Testnet Demos",
+          "description": "Reference flows on Ergo testnet: API call payment, credit system, community reserve.",
+          "tag": "Testnet"
+        }
+      ]
     }
   },
   "docs": {

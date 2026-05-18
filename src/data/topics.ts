@@ -278,7 +278,7 @@ export const topics: TopicHub[] = [
     
     visuals: [
       { type: "infographic", title: "How Security is Maintained", url: "/infographics/how-is-security-maintained-pos-vs-ergo-autolykos", description: "PoS vs Autolykos security comparison", priority: 1 },
-      { type: "infographic", title: "Storage Rent vs State Bloat", url: "/infographics/storage-rent-vs-state-bloat-ergo", description: "How storage rent helps miners", priority: 2 }
+      { type: "infographic", title: "Storage Rent vs State Bloat", url: "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners", description: "How storage rent helps miners", priority: 2 }
     ],
     
     relatedTags: ["mining", "Autolykos", "PoW", "Proof-of-Work", "GPU mining", "ASIC resistant", "hashrate", "pools"],
@@ -423,7 +423,7 @@ export const topics: TopicHub[] = [
     buildWithIt: [
       { type: "playbook", title: "Escape Financial Repression", url: "/playbooks/escape-financial-repression", description: "Practical guide to financial sovereignty", badge: "Guide", priority: 1 },
       { type: "glossary", title: "Fair Launch", url: "/learn/glossary/fair-launch", description: "What fair launch means", badge: "Concept", priority: 1 },
-      { type: "compare", title: "Ergo vs VC Chains", url: "/compare/ergo-vs-vc-chain", description: "Why fair launch matters", badge: "Comparison", priority: 2 }
+      { type: "compare", title: "Ergo vs VC Chains", url: "/compare/ergo-vs-vc-chains", description: "Why fair launch matters", badge: "Comparison", priority: 2 }
     ],
     
     philosophy: [
@@ -505,7 +505,7 @@ export const topics: TopicHub[] = [
     ],
     
     philosophy: [
-      { type: "infographic", title: "Storage Rent vs State Bloat", url: "/infographics/storage-rent-vs-state-bloat-ergo", description: "Why storage rent matters", badge: "Comparison", priority: 1 },
+      { type: "infographic", title: "Storage Rent vs State Bloat", url: "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners", description: "Why storage rent matters", badge: "Comparison", priority: 1 },
       { type: "infographic", title: "Engineered for Global Settlement", url: "/infographics/engineered-for-global-settlement-ergo", description: "Long-term vision", badge: "Vision", priority: 2 }
     ],
     

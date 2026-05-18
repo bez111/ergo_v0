@@ -46,10 +46,32 @@ interface LiveStatusResponse {
     gates_live: number
     gates_total: number
     storage_configured: boolean
+    receipt_storage_healthy?: boolean
     latest_full_receipt_id: string | null
     sage_wallet_event_count: number
     sage_settlement_count: number
+    sage_signer_status?: string
+    mainnet_gate_status?: string
   }
+  mainnet_gate?: {
+    status: string
+    public_claim?: string
+    blockers?: Array<{
+      id: string
+      label: string
+      state: string
+      owner: string
+      detail: string
+    }>
+    required_artifacts?: string[]
+  }
+  lifecycle?: Array<{
+    id: string
+    label: string
+    state: GateState
+    detail: string
+    evidence_href: string
+  }>
   gates: LiveGate[]
   next_actions: Array<{
     id: string
@@ -67,8 +89,11 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "full-receipt-bundle": ShieldCheck,
   "accord-bridge": GitBranch,
   "accord-conformance": CheckCircle2,
+  "sage-signer": ShieldCheck,
+  "sage-widget": CircuitBoard,
   "mcp-fly": Network,
   "mcp-dns": Globe2,
+  "mainnet-audit-gate": AlertTriangle,
   playground: Code2,
 }
 
@@ -177,11 +202,39 @@ export function AgentEconomyLiveClient() {
                   <ShieldCheck className="w-9 h-9 text-orange-300" />
                 </div>
                 <div className="mt-5 grid grid-cols-2 gap-3">
-                  <MiniStat label="Live gates" value={status ? `${status.summary.gates_live}/${status.summary.gates_total}` : "..." } />
+                  <MiniStat label="Live gates" value={status ? `${status.summary.gates_live}/${status.summary.gates_total}` : "pending"} />
                   <MiniStat label="Full receipt" value={status?.summary.latest_full_receipt_id ? "found" : "needed"} />
-                  <MiniStat label="Sage events" value={String(status?.summary.sage_wallet_event_count ?? "...")} />
-                  <MiniStat label="MCP DNS" value={gateStateLabel(gates.find((gate) => gate.id === "mcp-dns")?.state)} />
+                  <MiniStat label="Sage events" value={status ? String(status.summary.sage_wallet_event_count) : "pending"} />
+                  <MiniStat label="Signer" value={status?.summary.sage_signer_status ?? "pending"} />
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-white/10 bg-black/65 p-5 sm:p-6">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
+                    Complete lifecycle
+                  </div>
+                  <h2 className="mt-2 text-2xl font-bold text-white">
+                    From agent intent to verifiable settlement
+                  </h2>
+                </div>
+                <div className="max-w-xl text-sm leading-relaxed text-neutral-400">
+                  This is the public proof path the site is turning into:
+                  quote, Ergo Note, durable receipt, conformance, MCP/tooling,
+                  and finally a closed mainnet gate until audit evidence exists.
+                </div>
+              </div>
+
+              <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+                {(status?.lifecycle ?? fallbackLifecycle()).map((stage, index) => (
+                  <LifecycleStageCard key={stage.id} stage={stage} index={index} />
+                ))}
               </div>
             </div>
           </div>
@@ -288,6 +341,34 @@ export function AgentEconomyLiveClient() {
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
+
+                <div className="rounded-2xl border border-red-500/25 bg-red-500/[0.045] p-5">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <h2 className="font-semibold text-red-50">Mainnet gate</h2>
+                      <p className="mt-2 text-sm leading-relaxed text-red-50/70">
+                        {status?.mainnet_gate?.public_claim ??
+                          "Testnet live proof only until the required evidence is published."}
+                      </p>
+                    </div>
+                    <span className="rounded-full border border-red-500/30 bg-red-500/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-red-100">
+                      {status?.mainnet_gate?.status ?? "closed"}
+                    </span>
+                  </div>
+                  <div className="mt-4 space-y-3">
+                    {(status?.mainnet_gate?.blockers ?? fallbackMainnetBlockers()).slice(0, 4).map((blocker) => (
+                      <div key={blocker.id} className="border-t border-white/10 pt-3">
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="text-sm font-medium text-white">{blocker.label}</div>
+                          <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
+                            {blocker.state}
+                          </div>
+                        </div>
+                        <p className="mt-1 text-xs leading-relaxed text-neutral-400">{blocker.detail}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </aside>
             </div>
           </div>
@@ -296,10 +377,22 @@ export function AgentEconomyLiveClient() {
         <section className="border-y border-white/5 bg-black/50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-5 md:grid-cols-4">
-              <ProofTile icon={ReceiptText} label="Receipt source" value={status?.summary.storage_configured ? "Blob live" : "Not configured"} />
+                <ProofTile
+                  icon={ReceiptText}
+                  label="Receipt source"
+                  value={
+                    status
+                      ? status.summary.receipt_storage_healthy
+                        ? "Blob healthy"
+                        : status.summary.storage_configured
+                          ? "Blob failing"
+                          : "Setup pending"
+                      : "pending"
+                  }
+                />
               <ProofTile icon={CheckCircle2} label="Conformance" value={status?.summary.latest_full_receipt_id ? "Ready to run" : "Blocked"} />
               <ProofTile icon={Network} label="MCP" value={gateStateLabel(gates.find((gate) => gate.id === "mcp-fly")?.state)} />
-              <ProofTile icon={WalletCards} label="Mainnet gate" value={status?.posture.mainnet_ready ? "Open" : "Closed"} />
+              <ProofTile icon={WalletCards} label="Mainnet gate" value={status?.summary.mainnet_gate_status ?? "closed"} />
             </div>
           </div>
         </section>
@@ -337,8 +430,58 @@ function ProofTile({
   )
 }
 
+function LifecycleStageCard({
+  stage,
+  index,
+}: {
+  stage: NonNullable<LiveStatusResponse["lifecycle"]>[number]
+  index: number
+}) {
+  const external = stage.evidence_href.startsWith("http")
+  const content = (
+    <>
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/[0.035] font-mono text-xs text-orange-200">
+          {index + 1}
+        </div>
+        <span className={`rounded-full border px-2 py-1 font-mono text-[10px] uppercase tracking-widest ${STATE_STYLE[stage.state]}`}>
+          {stage.state}
+        </span>
+      </div>
+      <h3 className="mt-4 text-base font-semibold text-white">{stage.label}</h3>
+      <p className="mt-2 min-h-[54px] text-sm leading-relaxed text-neutral-400">{stage.detail}</p>
+      <div className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-orange-300">
+        Evidence
+        {external ? <ExternalLink className="h-3.5 w-3.5" /> : <ArrowRight className="h-3.5 w-3.5" />}
+      </div>
+    </>
+  )
+
+  if (external) {
+    return (
+      <a
+        href={stage.evidence_href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-white/10 bg-white/[0.025] p-4 transition-colors hover:border-orange-500/35 hover:bg-orange-500/[0.035]"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <Link
+      href={stage.evidence_href}
+      className="rounded-2xl border border-white/10 bg-white/[0.025] p-4 transition-colors hover:border-orange-500/35 hover:bg-orange-500/[0.035]"
+    >
+      {content}
+    </Link>
+  )
+}
+
 function gateStateLabel(state?: GateState) {
-  if (!state) return "..."
+  if (!state) return "pending"
   if (state === "live") return "live"
   if (state === "pending") return "pending"
   if (state === "blocked") return "blocked"
@@ -347,12 +490,6 @@ function gateStateLabel(state?: GateState) {
 
 function fallbackActions() {
   return [
-    {
-      id: "mcp-dns",
-      label: "Point mcp.ergoblockchain.org at Fly",
-      owner: "dns",
-      blocked_by_external: true,
-    },
     {
       id: "post-blob-paid-flow",
       label: "Run one new paid Sage flow to create a full receipt bundle",
@@ -374,13 +511,110 @@ function skeletonGates(): LiveGate[] {
     "receipt-storage",
     "full-receipt-bundle",
     "accord-bridge",
+    "sage-signer",
+    "sage-widget",
     "mcp-fly",
     "mcp-dns",
+    "mainnet-audit-gate",
   ].map((id) => ({
     id,
-    label: "Loading gate",
+    label: "Live gate",
     state: "degraded" as const,
-    detail: "Checking live status...",
-    href: "#",
+    detail: "Awaiting first status response",
+    href: "/api/agent-economy/live",
   }))
+}
+
+function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
+  return [
+    {
+      id: "intent",
+      label: "Intent captured",
+      state: "live",
+      detail: "Sage accepts a user question and canonicalizes the task.",
+      evidence_href: "/api/sage/chat",
+    },
+    {
+      id: "quote",
+      label: "Accord quote",
+      state: "live",
+      detail: "The provider endpoint describes payment and receipt expectations.",
+      evidence_href: "/api/sage/accord",
+    },
+    {
+      id: "note",
+      label: "Ergo Note payment",
+      state: "live",
+      detail: "At least one testnet paid flow exists in activity.",
+      evidence_href: "/api/sage/activity",
+    },
+    {
+      id: "receipt",
+      label: "Full receipt bundle",
+      state: "blocked",
+      detail: "Needs one new paid Sage flow after Blob storage.",
+      evidence_href: "/api/sage/receipt/blob-probe-2026-05-16",
+    },
+    {
+      id: "conformance",
+      label: "Accord conformance",
+      state: "blocked",
+      detail: "Blocked by the missing full receipt bundle.",
+      evidence_href: "/api/sage/accord",
+    },
+    {
+      id: "mcp",
+      label: "MCP tool surface",
+      state: "pending",
+      detail: "Fly endpoint works; public DNS is the remaining gate.",
+      evidence_href: "https://ergoblockchain-mcp.fly.dev/health",
+    },
+    {
+      id: "widget",
+      label: "Embeddable widget",
+      state: "pending",
+      detail: "Paid widget code is prepared locally.",
+      evidence_href: "https://github.com/bez111/sage-widget",
+    },
+    {
+      id: "mainnet",
+      label: "Mainnet/audit gate",
+      state: "blocked",
+      detail: "Mainnet language stays closed until audit evidence exists.",
+      evidence_href: "/api/agent-economy/mainnet-gate",
+    },
+  ]
+}
+
+function fallbackMainnetBlockers() {
+  return [
+    {
+      id: "post-blob-full-receipt",
+      label: "Post-Blob full receipt",
+      state: "closed",
+      owner: "wallet",
+      detail: "Run one paid Sage flow after Blob storage.",
+    },
+    {
+      id: "accord-conformance-signed",
+      label: "Signed conformance",
+      state: "closed",
+      owner: "repo",
+      detail: "Run Accord conformance and publish signed evidence.",
+    },
+    {
+      id: "exact-contract-identity",
+      label: "Exact script identity",
+      state: "closed",
+      owner: "audit",
+      detail: "Publish script hashes and artifact manifests.",
+    },
+    {
+      id: "external-audit-manifests",
+      label: "Audit manifests",
+      state: "closed",
+      owner: "audit",
+      detail: "Attach audit scope and signed reviewer identity.",
+    },
+  ]
 }

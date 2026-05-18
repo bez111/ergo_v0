@@ -130,7 +130,8 @@ export function BlogSectionHome() {
                       {new Date(post.date).toLocaleDateString(intlLocale, {
                         month: 'short',
                         day: 'numeric',
-                        year: 'numeric'
+                        year: 'numeric',
+                        timeZone: 'UTC',
                       })}
                     </time>
                   </div>

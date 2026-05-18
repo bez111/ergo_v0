@@ -45,7 +45,7 @@ export default function FormatPage() {
           </ul>
           
           <p className="text-gray-300 mt-4">
-            Each register is an expression in the Sigma language, meaning every register contains a value of a specific type. These types are defined in <Link href="/docs/developers/data-model-apis/types" className="text-orange-400 hover:underline">this document</Link>. The value in a register should be a concrete constant value, not a function of a known output type.
+            Each register is an expression in the Sigma language, meaning every register contains a value of a specific type. These types are defined in <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">this document</Link>. The value in a register should be a concrete constant value, not a function of a known output type.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3 text-purple-300">Additional Registers</h3>

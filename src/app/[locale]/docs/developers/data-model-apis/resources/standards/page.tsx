@@ -174,9 +174,9 @@ export default function StandardsPage() {
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Asset Standards</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
               <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-4: Asset Standard</a> - Token creation and management</li>
-              <li><a href="/docs/developers/eip21" className="text-orange-400 hover:underline">EIP-21: Token Verification</a> - Token authenticity verification</li>
-              <li><a href="/docs/developers/eip22" className="text-orange-400 hover:underline">EIP-22: Auction Contract</a> - Standard auction implementation</li>
-              <li><a href="/docs/developers/eip24" className="text-orange-400 hover:underline">EIP-24: Artwork Contract</a> - Digital artwork management</li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-21: Token Verification</a> - Token authenticity verification</li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-22: Auction Contract</a> - Standard auction implementation</li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-24: Artwork Contract</a> - Digital artwork management</li>
             </ul>
           </div>
           <div>
@@ -184,7 +184,7 @@ export default function StandardsPage() {
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
               <li><a href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">EIP-31: Babel Fees</a> - Token-based fee payment</li>
               <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-5: Contract Templates</a> - Reusable contract patterns</li>
-              <li><a href="/docs/developers/eip6" className="text-orange-400 hover:underline">EIP-6: Multi-Stage Contracts</a> - Complex transaction flows</li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards" className="text-orange-400 hover:underline">EIP-6: Multi-Stage Contracts</a> - Complex transaction flows</li>
             </ul>
           </div>
         </div>

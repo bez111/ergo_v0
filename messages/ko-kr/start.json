@@ -1832,7 +1832,6 @@
       "ergo_introduction_pow_smart_contracts": "Ergo 소개 — PoW 스마트 컨트랙트, eUTXO, 시그마 프로토콜",
       "meet_ergo_a_pow_smart": "Ergo를 만나보세요: eUTXO 모델과 시그마 프로토콜을 사용하는 PoW 스마트 컨트랙트 플랫폼. 예측 가능한 비용으로 프라이버시를 인식하는 감사 가능한 dApp을 빌드하세요.",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "eUTXO 및 시그마 프로토콜을 갖춘 PoW 스마트 컨트랙트.",
-      "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "answer_text_t": "Answer\",\n                text: t(",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Cryptocurrency",
       "introduction_to_ergo_beginner": "Ergo 소개 | 초보자",
@@ -2009,9 +2008,6 @@
     "price_volume_analytics": "가격, 거래량, 분석",
     "take_the_quiz": "퀴즈 풀기",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "시작\", item: \"https://ergoblockchain.org/start",
-      "comparison_item_https_ergoblockchain_org": "비교\", item: \"https://ergoblockchain.org/start/comparison",
-      "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "eUTXO 대 계정 모델, PoW 대 PoS, 프라이버시 및 수수료 비교: Ergo, Ethereum, Bitcoin, Cardano.",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"스크립트 비용은 제한되어 있고 수수료는 예측 가능합니다; 가스 가격 경매는 없습니다 (최종 수수료는 멤풀 상황에 따라 다릅니다).",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"예. NIPoPoW는 신뢰를 최소화한 경량 클라이언트를 위한 간결한 증명을 가능하게 합니다.",
@@ -2041,8 +2037,6 @@
       "open_source_development": "오픈 소스 개발"
     },
     "start_with_ergo_learning_paths": "Ergo로 시작하기 - 학습 경로",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "Ergo 블록체인과 함께 여정 시작하기",
     "personalized_learning_paths_for_beginners": "초보자, 개발자, 채굴자 및 투자자를 위한 맞춤형 학습 경로. Ergo로 나아가는 길을 찾으세요.",
     "start_your_ergo_journey_choose_your_path": "Ergo 여정 시작 - 경로 선택",

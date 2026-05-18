@@ -21,7 +21,7 @@ export default function AssemblerPage() {
         </Link>
       </div>
       <div className="text-lg text-gray-300 mb-6 max-w-2xl">
-        More likely you'll want to use <Link href="/docs/developers/tooling/payments/dApp" className="text-cyan-400 hover:underline">dApp-dev</Link>.
+        More likely you'll want to use <Link href="/docs/developers/tooling/payments" className="text-cyan-400 hover:underline">dApp-dev</Link>.
       </div>
       <div className="text-gray-300 mb-6 max-w-2xl">
         The transaction assembler service allows you to bypass the node requirements for dApps.

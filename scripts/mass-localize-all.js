@@ -183,7 +183,7 @@ const BASE_TRANSLATIONS = {
 };
 
 // Языки для локализации
-const LANGUAGES = ['en', 'ru', 'de', 'fr', 'es', 'it', 'pt-br', 'ja', 'ko-kr', 'zh-cn', 'zh-tw', 'ar', 'tr'];
+const LANGUAGES = ['en', 'ru', 'de', 'fr', 'es', 'it', 'pt-br', 'ja', 'ko-kr', 'zh-cn', 'zh-tw', 'tr'];
 
 // Маппинг языковых кодов
 const LANG_MAP = {
@@ -399,4 +399,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { massLocalizeComponents, updateMessageFiles, createLocalizedComponent }; 
+module.exports = { massLocalizeComponents, updateMessageFiles, createLocalizedComponent };

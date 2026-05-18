@@ -93,7 +93,7 @@ export default function BlockADProofsPage() {
                 <h3 className="font-semibold text-purple-300 group-hover:underline">Merkle Tree</h3>
               </div>
               <p className="text-gray-300 text-sm">
-                A tree-like data structure where each leaf node represents a piece of data (in this case, a transaction or a <Link href="/docs/developers/data-model-apis/box" className="text-orange-400 hover:underline">box</Link>) and each non-leaf node is a hash of its child nodes. This structure allows for efficient verification of data inclusion.
+                A tree-like data structure where each leaf node represents a piece of data (in this case, a transaction or a <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">box</Link>) and each non-leaf node is a hash of its child nodes. This structure allows for efficient verification of data inclusion.
               </p>
             </Link>
           </div>

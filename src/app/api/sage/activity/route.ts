@@ -25,8 +25,15 @@ export async function GET(req: Request) {
 
   if (!SAGE_ADDRESS) {
     return NextResponse.json(
-      { ok: false, error: "SAGE_WALLET_ADDRESS not configured" },
-      { status: 503 },
+      {
+        ok: false,
+        network: SAGE_NETWORK,
+        receiver: "",
+        total: 0,
+        events: [],
+        error: "SAGE_WALLET_ADDRESS not configured",
+      },
+      { headers: { "cache-control": "no-store" } },
     )
   }
 

@@ -3,6 +3,7 @@ import type { SageReceiptAlias, SageReceiptBundle, SageReceiptStorageResult } fr
 
 const RECEIPT_PREFIX = "sage/receipts/v1"
 const ALIAS_PREFIX = "sage/receipt-aliases/v1"
+const PROBE_PATH = `${RECEIPT_PREFIX}/_health/blob-probe-2026-05-16.json`
 const ID_RE = /^[a-zA-Z0-9][a-zA-Z0-9._:-]{5,160}$/
 
 export function isReceiptStorageConfigured(): boolean {
@@ -115,6 +116,63 @@ export async function loadReceiptBundle(id: string): Promise<{
       ok: false,
       configured: true,
       error: error instanceof Error ? error.message : "Vercel Blob read failed",
+    }
+  }
+}
+
+export async function probeReceiptStorage(): Promise<{
+  ok: boolean
+  configured: boolean
+  writable: boolean
+  readable: boolean
+  path?: string
+  error?: string
+  checked_at: string
+}> {
+  const checkedAt = new Date().toISOString().replace(/\.\d{3}Z$/, "Z")
+  if (!isReceiptStorageConfigured()) {
+    return {
+      ok: false,
+      configured: false,
+      writable: false,
+      readable: false,
+      checked_at: checkedAt,
+      error: "BLOB_READ_WRITE_TOKEN is not configured",
+    }
+  }
+
+  const marker = {
+    type: "sage.receipt_storage_probe.v1",
+    checked_at: checkedAt,
+  }
+
+  try {
+    await put(PROBE_PATH, JSON.stringify(marker, null, 2), {
+      access: "private",
+      allowOverwrite: true,
+      contentType: "application/json; charset=utf-8",
+      cacheControlMaxAge: 60,
+    })
+    const readBack = await readJsonBlob<typeof marker>(PROBE_PATH)
+    const readable = readBack?.type === marker.type
+    return {
+      ok: readable,
+      configured: true,
+      writable: true,
+      readable,
+      path: PROBE_PATH,
+      checked_at: checkedAt,
+      ...(readable ? {} : { error: "Blob probe write succeeded but read-back failed" }),
+    }
+  } catch (error) {
+    return {
+      ok: false,
+      configured: true,
+      writable: false,
+      readable: false,
+      path: PROBE_PATH,
+      checked_at: checkedAt,
+      error: error instanceof Error ? error.message : "Vercel Blob probe failed",
     }
   }
 }

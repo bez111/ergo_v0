@@ -62,7 +62,6 @@
     "offline_key_generation_and_storage": "최대 보안을 위한 오프라인 키 생성 및 저장.",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
       "name": "Ergo 지갑",
       "description": "Ergo 블록체인을 위한 안전한 지갑 모음",

@@ -6,10 +6,11 @@ import { BlogPost } from '../_lib/blog-data'
 interface BlogCardProps {
   post: BlogPost
   featured?: boolean
+  priority?: boolean
 }
 
 // ✅ ИСПРАВЛЕНИЕ A11y: Одна большая ссылка вместо nested links
-export function BlogCard({ post, featured = false }: BlogCardProps) {
+export function BlogCard({ post, featured = false, priority = false }: BlogCardProps) {
   const cardImage =
     post.slug === "sigma-protocols-privacy"
       ? "/og/sigma-protocols-privacy.png"
@@ -54,8 +55,8 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
-              priority={featured}
-              fetchPriority={featured ? "high" : "auto"}
+              loading={featured || priority ? "eager" : "lazy"}
+              fetchPriority={featured || priority ? "high" : "auto"}
               decoding="async"
             />
           ) : (
@@ -91,7 +92,8 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               {new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
                 month: 'short',
-                day: 'numeric'
+                day: 'numeric',
+                timeZone: 'UTC',
               }).format(new Date(post.date))}
             </time>
           </div>

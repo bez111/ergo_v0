@@ -120,6 +120,7 @@ export function PatternsHubClient({ patterns, categories }: Props) {
                   placeholder={t('search.placeholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  suppressHydrationWarning
                   className="w-full pl-12 pr-4 py-4 bg-black/60 border border-white/10 rounded-2xl text-white placeholder:text-neutral-400 focus:outline-none focus:border-orange-500/50 transition-colors"
                   aria-label={t('search.ariaLabel')}
                 />
@@ -312,4 +313,3 @@ export function PatternsHubClient({ patterns, categories }: Props) {
     </BackgroundWrapper>
   );
 }
-

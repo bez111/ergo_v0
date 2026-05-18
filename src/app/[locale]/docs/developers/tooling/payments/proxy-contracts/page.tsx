@@ -32,7 +32,7 @@ export default function ProxyContractsPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Proxy Contracts</h2>
       <div className="text-gray-300 mb-6 max-w-2xl">
-        Proxy contracts are a specific <Link href="/docs/developers/tooling/smart-contracts-overview" className="text-cyan-400 hover:underline">smart contract pattern</Link> used on Ergo. They act as intermediaries, allowing users to interact with decentralized applications (dApps) in a controlled and secure manner, especially in scenarios where direct wallet-dApp communication might be complex or limited.
+        Proxy contracts are a specific <Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">smart contract pattern</Link> used on Ergo. They act as intermediaries, allowing users to interact with decentralized applications (dApps) in a controlled and secure manner, especially in scenarios where direct wallet-dApp communication might be complex or limited.
       </div>
 
       <h3 className="text-xl font-bold text-orange-400 mb-2">Origins and Purpose</h3>

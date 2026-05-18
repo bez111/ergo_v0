@@ -58,7 +58,6 @@ const localeNames = {
   'zh-tw': 'Chinese (Traditional)',
   'ja': 'Japanese',
   'ko-kr': 'Korean',
-  'ar': 'Arabic',
   'tr': 'Turkish',
 };
 
@@ -344,4 +343,3 @@ async function main() {
 }
 
 main().catch(console.error);
-

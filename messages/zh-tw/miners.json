@@ -19,12 +19,31 @@
       "miners": "面向礦工"
     },
     "metrics": {
-      "networkHashrate": { "label": "網路算力", "comment": "網路算力 → 競爭與安全性" },
-      "difficulty": { "label": "難度", "comment": "難度 → 收益性的基線" },
-      "blockTime": { "label": "出塊時間", "comment": "一致的出塊時間 = 可預測的獎勵" },
-      "blockReward": { "label": "區塊獎勵", "comment": "區塊獎勵 + 費用 → 礦工總收入", "trend": "剩餘 {remaining}M" },
-      "activeMiners": { "label": "活躍礦工", "comment": "健康的礦工分佈" },
-      "miningPools": { "label": "礦池", "comment": "去中心化的多個礦池選擇" }
+      "networkHashrate": {
+        "label": "網路算力",
+        "comment": "網路算力 → 競爭與安全性"
+      },
+      "difficulty": {
+        "label": "難度",
+        "comment": "難度 → 收益性的基線"
+      },
+      "blockTime": {
+        "label": "出塊時間",
+        "comment": "一致的出塊時間 = 可預測的獎勵"
+      },
+      "blockReward": {
+        "label": "區塊獎勵",
+        "comment": "區塊獎勵 + 費用 → 礦工總收入",
+        "trend": "剩餘 {remaining}M"
+      },
+      "activeMiners": {
+        "label": "活躍礦工",
+        "comment": "健康的礦工分佈"
+      },
+      "miningPools": {
+        "label": "礦池",
+        "comment": "去中心化的多個礦池選擇"
+      }
     },
     "coreValues": {
       "asicResistant": {
@@ -74,7 +93,7 @@
     "pools": {
       "title": "礦池",
       "titleHighlight": "目錄",
-      "titleSuffix": "",
+      "titleSuffix": "Directory",
       "hashrate": "算力",
       "miners": "礦工",
       "minPayout": "最低支付",

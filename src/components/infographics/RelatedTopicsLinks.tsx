@@ -59,8 +59,8 @@ const topicLinkMap: Record<string, { href: string; label: string }> = {
   'ergo in 5 minutes': { href: '/blog/ergo-in-5-minutes', label: 'Ergo in 5 Minutes' },
   
   // Compare pages
-  'vc chains': { href: '/compare/ergo-vs-vc-chain', label: 'Ergo vs VC Chains' },
-  'vc chain': { href: '/compare/ergo-vs-vc-chain', label: 'Ergo vs VC Chains' },
+  'vc chains': { href: '/compare/ergo-vs-vc-chains', label: 'Ergo vs VC Chains' },
+  'vc chain': { href: '/compare/ergo-vs-vc-chains', label: 'Ergo vs VC Chains' },
   'vs bitcoin': { href: '/compare/ergo-vs-bitcoin', label: 'Ergo vs Bitcoin' },
   'vs ethereum': { href: '/compare/ergo-vs-ethereum', label: 'Ergo vs Ethereum' },
   'vs monero': { href: '/compare/ergo-vs-monero', label: 'Ergo vs Monero' },

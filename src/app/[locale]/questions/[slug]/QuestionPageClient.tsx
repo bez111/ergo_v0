@@ -156,7 +156,7 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
               </Badge>
               <Badge variant="outline" className="border-white/20 text-neutral-400 text-xs">
                 <Clock className="w-3 h-3 mr-1" />
-                Updated {new Date(question.updatedDate || question.publishDate).toLocaleDateString()}
+                Updated {new Date(question.updatedDate || question.publishDate).toLocaleDateString("en-US", { timeZone: "UTC" })}
               </Badge>
             </div>
             
@@ -397,4 +397,3 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
     </BackgroundWrapper>
   );
 }
-

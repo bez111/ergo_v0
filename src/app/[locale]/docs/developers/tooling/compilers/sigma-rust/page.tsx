@@ -262,7 +262,7 @@ export default function SigmaRustPage() {
                 </li>
                 <li>
                   See also:{' '}
-                  <Link href="/docs/developers/tooling/programming-languages/others/python/ergo-lib-python" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/tooling/programming-languages/others/python" className="text-cyan-400 hover:underline">
                     ergo-lib-python docs
                   </Link>
                 </li>

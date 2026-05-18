@@ -63,7 +63,7 @@ export default function DefiUnderConstructionClient() {
     {
       icon: Shield,
       title: "Secure Protocols",
-      description: "Battle-tested smart contracts with formal verification",
+      description: "Transparent smart-contract logic with visible risk notes",
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -99,7 +99,7 @@ export default function DefiUnderConstructionClient() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"
               >
-                The future of decentralized finance is being built on Ergo. 
+                The future of decentralized finance is being built on Ergo.{" "}
                 <br className="hidden md:block" />
                 Advanced protocols, innovative primitives, and sustainable yields.
               </motion.p>
@@ -126,15 +126,15 @@ export default function DefiUnderConstructionClient() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold mb-4 text-white">Estimated Launch</h2>
-              <div className="flex justify-center gap-4 md:gap-8">
+              <div className="grid grid-cols-2 justify-items-center gap-3 sm:grid-cols-4 md:gap-8">
                 {[
                   { label: "Days", value: timeLeft.days },
                   { label: "Hours", value: timeLeft.hours },
                   { label: "Minutes", value: timeLeft.minutes },
                   { label: "Seconds", value: timeLeft.seconds }
                 ].map((item, index) => (
-                  <div key={item.label} className="text-center">
-                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 md:p-6 mb-2 min-w-[80px] md:min-w-[100px]">
+                  <div key={item.label} className="w-full max-w-[132px] text-center">
+                    <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-xl p-4 md:p-6 mb-2">
                       <div className="text-2xl md:text-4xl font-bold text-white">
                         {item.value.toString().padStart(2, '0')}
                       </div>

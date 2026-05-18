@@ -55,7 +55,7 @@ export default function BurningTokenPage() {
             <li><strong>Mobile Wallet:</strong> <a href="https://www.tokenjay.app/app/#burntoken" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">TokenJay</a> (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)</li>
             <li><strong>Nautilus:</strong> <a href="https://github.com/ThierryM1212/ergo-token-minter" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Token Minter / Burner</a></li>
             <li><a href="https://github.com/ThierryM1212/SAFEW" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline"><strong>SAFEW</strong></a> supports token burning natively.</li>
-            <li>Send to <code className="bg-neutral-700 px-2 py-1 rounded">4MQyMKvMbnCJG3aJ</code>, a <Link href="/docs/developers/p2s" className="text-cyan-400 hover:underline"><strong>P2S (Pay-to-Script)</strong></Link> representation of a "false" condition, i.e. the box is unspendable.</li>
+            <li>Send to <code className="bg-neutral-700 px-2 py-1 rounded">4MQyMKvMbnCJG3aJ</code>, a <Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline"><strong>P2S (Pay-to-Script)</strong></Link> representation of a "false" condition, i.e. the box is unspendable.</li>
           </ul>
         </div>
 

@@ -34,7 +34,7 @@ export default function BlockHeaderPage() {
           </h2>
           <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
             <li>
-              <b>Chain Synchronization:</b> Headers enable efficient synchronization between <Link href="/docs/developers/install" className="text-orange-400 hover:underline">nodes</Link> on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.
+              <b>Chain Synchronization:</b> Headers enable efficient synchronization between <Link href="/docs/developers/infrastructure/node/setup" className="text-orange-400 hover:underline">nodes</Link> on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.
             </li>
             <li>
               <b><Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/docs/introduction/autolykos" className="text-orange-400 hover:underline">difficulty</Link> requirements.
@@ -135,7 +135,7 @@ export default function BlockHeaderPage() {
               <b><Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output) Set</Link>:</b> The record of all unspent transaction outputs on the blockchain, representing the current distribution of the cryptocurrency.
             </li>
             <li>
-              <b><Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link>:</b> A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain.
+              <b><Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link>:</b> A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain.
             </li>
           </ul>
         </div>

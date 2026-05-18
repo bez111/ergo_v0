@@ -331,11 +331,6 @@
       "interactive_visualization_of_50_ergo": "50 多個 Ergo 項目的互動式視覺化。探索 DeFi、NFT 和基礎設施。",
       "visual_explorer_for_ergo_blockchain": "Ergo 區塊鏈項目和應用程式的視覺化探索器"
     },
-    "itemlist_id_https_ergoblockchain_org": "ItemList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#list\",\n    itemListOrder: \"Ascending",
-    "website_id_https_ergoblockchain_org_website": "WebSite\", \"@id\": \"https://ergoblockchain.org#website",
-    "breadcrumblist_id_https_ergoblockchain_org": "BreadcrumbList\",\n    \"@id\": \"https://ergoblockchain.org/ecosystem#breadcrumbs",
-    "ecosystem_item_https_ergoblockchain_org_ecosystem": "Ecosystem\", item: \"https://ergoblockchain.org/ecosystem",
-    "home_item_https_ergoblockchain_org": "Home\", item: \"https://ergoblockchain.org/",
     "projectPage": {
       "breadcrumbs": {
         "ecosystem": "生態系統"
@@ -958,6 +953,20 @@
       "open": "開啟",
       "close": "關閉"
     },
-    "legend": "圖例："
+    "legend": "圖例：",
+    "categories": {
+      "DEFI": "DEFI",
+      "INFRASTRUCTURE": "INFRASTRUCTURE",
+      "ORACLES": "ORACLES",
+      "PRIVACY": "PRIVACY",
+      "NFT": "NFT",
+      "WALLETS": "WALLETS",
+      "DAO": "DAO",
+      "TOOLS": "TOOLS"
+    },
+    "download": {
+      "png": "PNG",
+      "svg": "SVG"
+    }
   }
 }

@@ -594,6 +594,7 @@ export function LocalSearch() {
             placeholder="Search docs..."
             onClick={() => setIsOpen(true)}
             readOnly
+            style={{ caretColor: "transparent" }}
             className="w-full pl-10 pr-20 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-orange-500/50 transition-colors duration-200 cursor-pointer text-sm"
           />
           {/* Enhanced keyboard shortcut hint */}
@@ -1034,4 +1035,4 @@ export function LocalSearch() {
       )}
     </>
   );
-} 
+}

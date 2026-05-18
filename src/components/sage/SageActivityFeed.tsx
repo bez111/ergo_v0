@@ -144,7 +144,7 @@ export function SageActivityFeed() {
         <div className="rounded-2xl border border-white/8 bg-white/[0.015] divide-y divide-white/5 overflow-hidden">
           {loading && (
             <div className="px-5 py-8 text-sm text-gray-500 font-mono text-center">
-              Loading activity from explorer…
+              Fetching activity from explorer
             </div>
           )}
           {!loading && events.length === 0 && (

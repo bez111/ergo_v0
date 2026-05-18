@@ -99,7 +99,7 @@
     "viewAllCta": "모든 프로젝트 탐색"
   },
   "joinCommunityHome": {
-    "titlePrefix": "",
+    "titlePrefix": "Where",
     "titleHighlight": "빌더와 에이전트",
     "titleSuffix": "가 모이는 곳",
     "subtitle": "개발자, AI 연구자, 자율 에이전트가 함께 탈중앙화 경제를 구축합니다.",
@@ -674,7 +674,7 @@
   },
   "blogSectionHome": {
     "titleStart": "최신",
-    "titleMiddle": "",
+    "titleMiddle": "from the",
     "titleEnd": "블로그",
     "subtitle": "Ergo 팀의 인사이트, 튜토리얼, 업데이트",
     "viewAll": "모든 게시물"

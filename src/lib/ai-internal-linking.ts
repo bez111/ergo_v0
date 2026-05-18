@@ -213,7 +213,7 @@ export function getRelatedContent(
 //     { text: 'documentation', url: '/docs', weight: 6 },
 //     { text: 'getting started', url: '/start', weight: 8 },
 //     { text: 'sigma protocols', url: '/docs/introduction/privacy', weight: 8 },
-//     { text: 'smart contracts', url: '/docs/developers/ergoscript', weight: 8 },
+//     { text: 'smart contracts', url: '/technology/ergoscript', weight: 8 },
 //   ]
   
 //   // Check for priority terms

@@ -96,10 +96,10 @@ export default function UseClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
       {/* Hidden Breadcrumbs for SEO */}
-      <Breadcrumbs items={[{ name: "Use Cases", href: "#" }]} variant="hidden" />
+      <Breadcrumbs items={[{ name: "Use Cases", href: "/use" }]} variant="hidden" />
       
       {/* Hero Section */}
-      <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
+      <motion.section initial={false} className="pt-28 pb-10 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
             <div>
@@ -149,9 +149,9 @@ export default function UseClient() {
       {/* Use Cases Grid */}
       <div className="py-14 px-4 max-w-7xl mx-auto">
         <h2 className="sr-only" id="all-use-cases">{t('allUseCases')}</h2>
-        <motion.div initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.07 } } }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch" aria-labelledby="all-use-cases">
+        <motion.div initial={false} variants={{ hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch" aria-labelledby="all-use-cases">
           {useCases.map((uc) => (
-            <motion.div key={uc.id} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }} className="relative h-full">
+            <motion.div key={uc.id} variants={{ hidden: { opacity: 1, y: 0 }, visible: { opacity: 1, y: 0 } }} className="relative h-full">
               <Link href={`/use/${uc.id}`} aria-label={t('aria.learnMoreAbout', { title: ucT(uc.id, 'title') })} className="block h-full">
                 <Card className="relative bg-black/80 border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/90 hover:border-orange-400/40 h-full flex flex-col cursor-pointer group">
                   <CardContent className="p-8 flex-1 flex flex-col">
@@ -187,9 +187,7 @@ export default function UseClient() {
         {/* Related Content */}
         <motion.section 
           className="py-16 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          initial={false}
         >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-white">
@@ -353,4 +351,4 @@ export default function UseClient() {
       </div>
     </BackgroundWrapper>
   )
-} 
+}

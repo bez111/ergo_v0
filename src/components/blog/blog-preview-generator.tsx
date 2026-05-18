@@ -97,7 +97,8 @@ export function BlogPreviewGenerator({ post, width = 1200, height = 630 }: BlogP
               📅 {new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
                 month: 'short',
-                day: 'numeric'
+                day: 'numeric',
+                timeZone: 'UTC',
               }).format(new Date(post.date))}
             </div>
             

@@ -16,7 +16,7 @@ target_keywords: ["AI agent payments", "agentic payments", "x402 payments", "Str
 
 **Status as of May 2026:** this report separates live base-chain primitives from experimental agent-payment implementations. Ergo’s protocol is live. Accord Protocol, ChainCash/Basis reference contracts and most agent-payment demos are testnet-first until external audit manifests are published.
 
-**Update on 2026-05-16:** Sage now gives Ergo/Accord a public testnet proof: a 402-style premium agent flow, one real Ergo testnet redemption transaction, durable full receipt storage for new paid turns, a published `@ergoblockchain/sage-widget` v0.1.0 activity-feed package, and a live MCP endpoint on Fly while the custom DNS name is pending. The first settlement receipt remains chain-proof-only because it predates storage. The production caveat remains: signed conformance evidence and audits are still required before mainnet claims.
+**Update on 2026-05-18:** Sage now gives Ergo/Accord a public testnet proof: a 402-style premium agent flow, one real Ergo testnet redemption transaction, durable full receipt storage for new paid turns, a published `@ergoblockchain/sage-widget` v0.1.0 activity-feed package, and a live MCP endpoint at `mcp.ergoblockchain.org`. The first settlement receipt remains chain-proof-only because it predates storage. The production caveat remains: signed conformance evidence and audits are still required before mainnet claims.
 
 AI agents can already write code, call APIs, plan tasks, retrieve data and coordinate with other agents. The missing piece is not intelligence. It is economic autonomy.
 

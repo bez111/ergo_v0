@@ -101,8 +101,9 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
   };
 }
 
-// Only pre-build EN and zh-CN statically; all other locales render on-demand (SSR)
-const STATIC_LOCALES = ['en', 'zh-cn'] as const;
+// Pre-build EN statically; localized routes render on-demand so the release
+// build stays reliable while preserving full locale coverage.
+const STATIC_LOCALES = ['en'] as const;
 
 export function generateStaticParams() {
   return STATIC_LOCALES.map((locale) => ({ locale }));

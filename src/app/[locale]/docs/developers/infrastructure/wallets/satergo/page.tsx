@@ -92,7 +92,7 @@ export default function SatergoPage() {
             <Lock className="w-5 h-5 text-yellow-400" /> Satergo Offline Vault
           </h3>
           <p className="text-gray-300 mb-2">
-            Use the <Link href="/docs/developers/infrastructure/wallets/satergo-vault" className="underline hover:text-cyan-400">Satergo Offline Vault</Link> Android app to securely store your encrypted seed phrase and sign transactions via Bluetooth.
+            Use the <Link href="/docs/developers/infrastructure/wallets" className="underline hover:text-cyan-400">Satergo Offline Vault</Link> Android app to securely store your encrypted seed phrase and sign transactions via Bluetooth.
           </p>
         </div>
       </div>

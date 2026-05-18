@@ -120,7 +120,7 @@ export default function BlockTransactionsPage() {
               <ul className="list-disc list-inside ml-4 space-y-1 text-gray-300 text-sm">
                 <li>Whether the inputs refer to valid and unspent boxes.</li>
                 <li>Whether the spending proofs are correct.</li>
-                <li>Whether the transaction adheres to rules related to assets, <Link href="/docs/developers/data-model-apis/composing/wallet-interaction/min-fee" className="text-orange-400 hover:underline">fees</Link>, and block size limits.</li>
+                <li>Whether the transaction adheres to rules related to assets, <Link href="/docs/developers/data-model-apis/composing/wallet-interaction" className="text-orange-400 hover:underline">fees</Link>, and block size limits.</li>
                 <li>Whether the scripts in the inputs are satisfied (using the <code className="bg-neutral-700 px-1.5 py-0.5 rounded text-xs">ErgoInterpreter</code> - see <Link href="/docs/developers/ergoscript-languages/evaluation" className="text-orange-400 hover:underline">ErgoTree Evaluation</Link>).</li>
               </ul>
             </div>

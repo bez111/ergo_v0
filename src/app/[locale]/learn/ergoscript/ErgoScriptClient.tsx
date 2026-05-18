@@ -254,7 +254,7 @@ export default function ErgoScriptPage() {
                       </Link>
                       
                       <Link
-                        href="/docs/ergoscript/tutorial"
+                        href="/technology/ergoscript"
                         className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
                       >
                         <div className="flex items-start gap-3">
@@ -268,7 +268,7 @@ export default function ErgoScriptPage() {
                       </Link>
                       
                       <Link
-                        href="/docs/ergoscript/examples"
+                        href="/technology/ergoscript"
                         className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
                       >
                         <div className="flex items-start gap-3">

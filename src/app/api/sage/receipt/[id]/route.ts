@@ -20,7 +20,11 @@ import {
   type ChainTx,
   type TxBox,
 } from "@/lib/sage/explorer/fetch-tx"
-import { loadReceiptBundle, isValidReceiptLookupId } from "@/lib/sage/receipts/storage"
+import {
+  isValidReceiptLookupId,
+  loadReceiptBundle,
+  probeReceiptStorage,
+} from "@/lib/sage/receipts/storage"
 import type { SageReceiptBundle } from "@/lib/sage/receipts/types"
 
 interface ReceiptRouteProps {
@@ -39,6 +43,24 @@ export async function GET(_req: Request, { params }: ReceiptRouteProps) {
     return NextResponse.json(
       { ok: false, error: "invalid receipt id" },
       { status: 400, headers: noStoreHeaders() },
+    )
+  }
+
+  if (id === "blob-probe-2026-05-16") {
+    const probe = await probeReceiptStorage()
+    return NextResponse.json(
+      {
+        ok: probe.ok,
+        type: "sage.receipt_storage_health.v1",
+        storage_configured: probe.configured,
+        storage_healthy: probe.ok,
+        writable: probe.writable,
+        readable: probe.readable,
+        path: probe.path ?? null,
+        checked_at: probe.checked_at,
+        error: probe.error ?? null,
+      },
+      { status: probe.ok ? 200 : 503, headers: noStoreHeaders() },
     )
   }
 

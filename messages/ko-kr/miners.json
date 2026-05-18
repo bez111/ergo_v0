@@ -19,12 +19,31 @@
       "miners": "채굴자를 위한"
     },
     "metrics": {
-      "networkHashrate": { "label": "네트워크 해시레이트", "comment": "네트워크 해시레이트 → 경쟁 및 보안" },
-      "difficulty": { "label": "난이도", "comment": "난이도 → 수익성의 기준" },
-      "blockTime": { "label": "블록 시간", "comment": "일관된 블록 시간 = 예측 가능한 보상" },
-      "blockReward": { "label": "블록 보상", "comment": "블록 보상 + 수수료 → 총 채굴자 수입", "trend": "{remaining}M 남음" },
-      "activeMiners": { "label": "활성 채굴자", "comment": "건강한 채굴자 분포" },
-      "miningPools": { "label": "채굴 풀", "comment": "탈중앙화를 위한 다양한 풀 옵션" }
+      "networkHashrate": {
+        "label": "네트워크 해시레이트",
+        "comment": "네트워크 해시레이트 → 경쟁 및 보안"
+      },
+      "difficulty": {
+        "label": "난이도",
+        "comment": "난이도 → 수익성의 기준"
+      },
+      "blockTime": {
+        "label": "블록 시간",
+        "comment": "일관된 블록 시간 = 예측 가능한 보상"
+      },
+      "blockReward": {
+        "label": "블록 보상",
+        "comment": "블록 보상 + 수수료 → 총 채굴자 수입",
+        "trend": "{remaining}M 남음"
+      },
+      "activeMiners": {
+        "label": "활성 채굴자",
+        "comment": "건강한 채굴자 분포"
+      },
+      "miningPools": {
+        "label": "채굴 풀",
+        "comment": "탈중앙화를 위한 다양한 풀 옵션"
+      }
     },
     "coreValues": {
       "asicResistant": {

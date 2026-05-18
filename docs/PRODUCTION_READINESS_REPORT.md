@@ -1,3 +1,6 @@
+> [!WARNING]
+> Historical snapshot. This document is an archived implementation or audit note from an earlier site phase. It is not the current release gate and must not be used as evidence that Ergo, Accord, Sage, ChainCash or any related contracts are production-ready or mainnet-ready. Current release status lives in [final-batch-deploy-checklist.md](./final-batch-deploy-checklist.md), [agent-economy-mainnet-gate.md](./agent-economy-mainnet-gate.md), and [mainnet-audit-gate.md](./mainnet-audit-gate.md).
+
 # 🚀 Production Readiness Report
 **Date:** October 17, 2025  
 **Project:** Ergo Blockchain Website  

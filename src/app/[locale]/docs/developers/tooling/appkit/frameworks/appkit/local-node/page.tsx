@@ -54,7 +54,7 @@ export default function LocalNodePage() {
   }
 }`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
-        Here <code>apiKey</code> is the secret key required for API authentication which can be obtained as described <Link href="/docs/developers/tooling/swagger" className="text-cyan-400 hover:underline">here</Link>. And mnemonic is the secret phrase obtained during <Link href="/docs/developers/tooling/wallet" className="text-cyan-400 hover:underline">setup of a new wallet</Link> or if you don't want to set up your node using ergo-tool's <a href="https://github.com/ergoplatform/ergo-tool#supported-commands" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">mnemonic</a> command.
+        Here <code>apiKey</code> is the secret key required for API authentication which can be obtained as described <Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">here</Link>. And mnemonic is the secret phrase obtained during <Link href="/docs/developers/tooling" className="text-cyan-400 hover:underline">setup of a new wallet</Link> or if you don't want to set up your node using ergo-tool's <a href="https://github.com/ergoplatform/ergo-tool#supported-commands" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">mnemonic</a> command.
       </p>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Our example app also reads the amount of NanoErg to put into a new box from command line arguments

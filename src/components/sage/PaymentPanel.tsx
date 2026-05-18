@@ -168,7 +168,7 @@ export function PaymentPanel({
 
           <div>
             <div className="text-[10px] uppercase tracking-widest text-gray-500 font-mono mb-1">
-              Task hash (R5 of the Note)
+              Task hash (R6 of the Note)
             </div>
             <div className="flex items-stretch gap-1">
               <code className="flex-1 min-w-0 text-[10px] text-gray-200 font-mono bg-black/60 border border-white/10 rounded px-2 py-1.5 break-all">
@@ -187,6 +187,10 @@ export function PaymentPanel({
 
           <KV label="Deadline" value={quote.deadline} mono />
           <KV label="Reserve" value={`${quote.reserveBoxId.slice(0, 12)}…`} mono />
+          <p className="text-[11px] leading-relaxed text-gray-500">
+            Full paid receipts are public by receipt id and include the Agreement,
+            Verification Receipt, and Settlement Receipt JSON for this testnet proof.
+          </p>
         </div>
       )}
 

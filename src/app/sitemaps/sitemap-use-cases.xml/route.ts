@@ -14,7 +14,7 @@ export async function GET() {
     { url: '/use/gaming', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/use/get-erg', priority: 0.7, changefreq: 'weekly' as const },
     { url: '/use/babel-fees', priority: 0.7, changefreq: 'monthly' as const },
-    { url: '/use/guides', priority: 0.7, changefreq: 'monthly' as const },
+    { url: '/use', priority: 0.7, changefreq: 'monthly' as const },
   ]
 
   const sitemap = generateMultilingualSitemap(filterIndexablePages(useCasePages))

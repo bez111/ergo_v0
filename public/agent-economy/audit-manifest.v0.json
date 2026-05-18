@@ -1,0 +1,32 @@
+{
+  "type": "ergo.agent_economy.audit_manifest.v0",
+  "version": "v0",
+  "status": "draft",
+  "last_reviewed": "2026-05-17",
+  "scope": {
+    "network": "testnet",
+    "components": [
+      "Sage quote/chat/verify APIs",
+      "Accord Agreement / Verification Receipt / Settlement Receipt bundle",
+      "Ergo Reserve / Note / Tracker / Acceptance Predicate scripts",
+      "Sage signer redemption service",
+      "MCP endpoint",
+      "Sage npm widget"
+    ]
+  },
+  "required_before_mainnet": [
+    "full_receipt_bundle evidence",
+    "signed Accord conformance artifact",
+    "exact script hash manifest",
+    "independent audit scope and findings",
+    "signer operations hardening evidence"
+  ],
+  "artifacts": {
+    "full_receipt_bundle": null,
+    "signed_conformance_result": null,
+    "script_identity_manifest": null,
+    "audit_report": null,
+    "signer_runbook": "https://github.com/bez111/ergo_v0/blob/main/docs/sage-signer-ops.md"
+  },
+  "public_claim": "Testnet live proof only. Not production/mainnet ready."
+}

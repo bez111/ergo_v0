@@ -618,9 +618,21 @@
           "name": "ERG Exchange Directory",
           "description": "Complete list of exchanges where you can buy ERG tokens",
           "items": [
-            { "name": "KuCoin", "url": "https://www.kucoin.com", "description": "Major exchange with high ERG liquidity" },
-            { "name": "Gate.io", "url": "https://www.gate.io", "description": "Popular exchange supporting ERG" },
-            { "name": "CoinEx", "url": "https://www.coinex.com", "description": "Exchange with ERG trading pairs" }
+            {
+              "name": "KuCoin",
+              "url": "https://www.kucoin.com",
+              "description": "Major exchange with high ERG liquidity"
+            },
+            {
+              "name": "Gate.io",
+              "url": "https://www.gate.io",
+              "description": "Popular exchange supporting ERG"
+            },
+            {
+              "name": "CoinEx",
+              "url": "https://www.coinex.com",
+              "description": "Exchange with ERG trading pairs"
+            }
           ]
         },
         "faq": {
@@ -2591,7 +2603,7 @@
         },
         {
           "title": "Secure Protocols",
-          "description": "Battle-tested smart contracts with formal verification"
+          "description": "Transparent smart-contract logic with visible risk notes"
         },
         {
           "title": "Lightning Fast",

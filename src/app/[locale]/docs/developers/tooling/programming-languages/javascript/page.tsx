@@ -50,7 +50,7 @@ const tutorials = [
   {
     title: "📹 Video Tutorial",
     content: "NightOwl dApp Connector React Package",
-    url: "/docs/developers/tooling/dApp",
+    url: "/docs/developers/tooling",
     external: false
   },
   {

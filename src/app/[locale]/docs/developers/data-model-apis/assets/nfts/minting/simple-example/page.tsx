@@ -96,7 +96,7 @@ appKit.mintToken(value, tokenId, tokenName, tokenDesc, mintAmount, decimals, con
             <li><a href="https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/appkit.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoAppKit</a></li>
             <li><a href="https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/ErgoTransaction.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoTransaction</a></li>
             <li><a href="https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/__init__.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-python-appkit module</a></li>
-            <li><Link href="/docs/developers/data-model-apis/assets/nfts/minting/appkit-node" className="text-cyan-400 hover:underline">Building transaction and minting a token using AppKit from Python</Link></li>
+            <li><Link href="/docs/developers/data-model-apis/assets/nfts/minting" className="text-cyan-400 hover:underline">Building transaction and minting a token using AppKit from Python</Link></li>
           </ul>
         </div>
 

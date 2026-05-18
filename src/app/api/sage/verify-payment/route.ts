@@ -89,6 +89,15 @@ export async function POST(req: NextRequest) {
     network,
   })
   const storage = await saveReceiptBundle(receiptBundle, receiptAliases(receiptBundle))
+  if (!storage.ok && receiptStorageRequired()) {
+    console.error(
+      `[sage] paid quoteId=${quote.quoteId} receipt=${receiptBundle.id} storage=failed before token issuance reason=${storage.error ?? storage.reason ?? "unknown"}`,
+    )
+    return jsonError(503, "payment verified but receipt storage failed before premium token issuance", {
+      receiptId: receiptBundle.id,
+      receiptStorage: storage,
+    })
+  }
 
   let token: string
   try {
@@ -135,4 +144,8 @@ function jsonError(status: number, error: string, extras?: Record<string, unknow
         : {}),
     },
   })
+}
+
+function receiptStorageRequired(): boolean {
+  return process.env.SAGE_RECEIPT_STORAGE_REQUIRED === "true" || process.env.VERCEL_ENV === "production"
 }

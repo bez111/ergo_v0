@@ -112,7 +112,7 @@ export default function DataInputsPage() {
             <li><a href="https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Unlocking The Potential Of The UTXO Model</a></li>
             <li><a href="https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Building A Portable And Reusable (PaR) UTXO dApp Standard</a></li>
             <li><a href="https://www.ergoforum.org/t/data-inputs-semantics/654" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Data Inputs Semantics</a></li>
-            <li><Link href="/docs/developers/data-model-apis/model-tx" className="text-orange-400 hover:underline">Model Transaction Example</Link></li>
+            <li><Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">Model Transaction Example</Link></li>
           </ul>
         </div>
 

@@ -1832,7 +1832,6 @@
       "ergo_introduction_pow_smart_contracts": "Ergo紹介 — PoWスマートコントラクト、eUTXO、Sigmaプロトコル",
       "meet_ergo_a_pow_smart": "Ergoのご紹介：eUTXOモデルとSigmaプロトコルを使用したPoWスマートコントラクトプラットフォーム。予測可能なコストでプライバシー対応の監査可能なdAppsを構築しましょう。",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "eUTXO＆SigmaプロトコルによるPoWスマートコントラクト。",
-      "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "answer_text_t": "Answer\",\n                text: t(",
       "blockchain_smart_contracts_defi_cryptocurrency": "ブロックチェーン\", \"スマートコントラクト\", \"DeFi\", \"暗号通貨",
       "introduction_to_ergo_beginner": "Ergoの紹介 | 初心者",
@@ -2009,9 +2008,6 @@
     "price_volume_analytics": "価格、取引量、アナリティクス",
     "take_the_quiz": "クイズを受ける",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "スタート\", item: \"https://ergoblockchain.org/start",
-      "comparison_item_https_ergoblockchain_org": "比較\", item: \"https://ergoblockchain.org/start/comparison",
-      "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "eUTXO対アカウントモデル、PoW対PoS、プライバシーと手数料の比較：Ergo、Ethereum、Bitcoin、Cardano。",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"スクリプトコストは制限されており手数料は予測可能です；ガス価格オークションはありません（最終手数料はメンプール状況によって異なります）。",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"はい。NIPoPoWsはトラストを最小化したライトクライアントのための簡潔な証明を可能にします。",
@@ -2041,8 +2037,6 @@
       "open_source_development": "オープンソース開発"
     },
     "start_with_ergo_learning_paths": "Ergoで始める - 学習パス",
-    "home_item_https_ergoblockchain_org": "ホーム',\n        item: 'https://ergoblockchain.org",
-    "start_item_https_ergoblockchain_org_start": "スタート',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "Ergoブロックチェーンとの旅を始める",
     "personalized_learning_paths_for_beginners": "初心者、開発者、マイナー、投資家向けのパーソナライズされた学習パス。Ergoへの道を見つけましょう。",
     "start_your_ergo_journey_choose_your_path": "Ergoの旅を始める - パスを選ぶ",

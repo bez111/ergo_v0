@@ -107,8 +107,6 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo.home' });
-  
-  console.debug(`Locale: ${locale}`);
 
   // FAQ data for schema - commercially important questions (localized)
   const faqData = [
@@ -123,15 +121,7 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       {/* Performance Optimizations */}
-      <PerformanceOptimizations 
-        heroImage={{
-          src: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: t('meta.heroImageAlt'),
-          format: "png"
-        }}
-      />
+      <PerformanceOptimizations />
       
       {/* FAQ Schema */}
       <FAQSchema

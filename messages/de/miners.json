@@ -19,12 +19,31 @@
       "miners": "Für Miner"
     },
     "metrics": {
-      "networkHashrate": { "label": "Netzwerk-Hashrate", "comment": "Netzwerk-Hashrate → Wettbewerb & Sicherheit" },
-      "difficulty": { "label": "Schwierigkeit", "comment": "Schwierigkeit → Ausgangspunkt für Rentabilität" },
-      "blockTime": { "label": "Blockzeit", "comment": "Konsistente Blockzeiten = vorhersehbare Belohnungen" },
-      "blockReward": { "label": "Block-Belohnung", "comment": "Block-Belohnung + Gebühren → Gesamteinnahmen der Miner", "trend": "{remaining}M verbleibend" },
-      "activeMiners": { "label": "Aktive Miner", "comment": "Gesunde Miner-Verteilung" },
-      "miningPools": { "label": "Mining-Pools", "comment": "Mehrere Pool-Optionen für Dezentralisierung" }
+      "networkHashrate": {
+        "label": "Netzwerk-Hashrate",
+        "comment": "Netzwerk-Hashrate → Wettbewerb & Sicherheit"
+      },
+      "difficulty": {
+        "label": "Schwierigkeit",
+        "comment": "Schwierigkeit → Ausgangspunkt für Rentabilität"
+      },
+      "blockTime": {
+        "label": "Blockzeit",
+        "comment": "Konsistente Blockzeiten = vorhersehbare Belohnungen"
+      },
+      "blockReward": {
+        "label": "Block-Belohnung",
+        "comment": "Block-Belohnung + Gebühren → Gesamteinnahmen der Miner",
+        "trend": "{remaining}M verbleibend"
+      },
+      "activeMiners": {
+        "label": "Aktive Miner",
+        "comment": "Gesunde Miner-Verteilung"
+      },
+      "miningPools": {
+        "label": "Mining-Pools",
+        "comment": "Mehrere Pool-Optionen für Dezentralisierung"
+      }
     },
     "coreValues": {
       "asicResistant": {

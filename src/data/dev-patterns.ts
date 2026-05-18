@@ -1,6 +1,6 @@
 /**
  * Ergo Developer Patterns Library v1.0
- * 18 battle-tested patterns across 7 categories
+ * 18 reference patterns across 7 categories
  * Structured for SEO and developer experience
  */
 
@@ -193,7 +193,7 @@ await ergo.submitTransaction(signedTx);`,
     relatedPatterns: ["ergo-token-burning-supply-control", "ergo-nft-minting-guide"],
     
     resources: [
-      { type: "doc", title: "EIP-4: Token Standard", url: "/docs/developers/tokens/eip4" },
+      { type: "doc", title: "EIP-4: Token Standard", url: "/docs/developers/data-model-apis/assets/tokens" },
       { type: "github", title: "Fleet SDK", url: "https://github.com/fleet-sdk/fleet" },
       { type: "playground", title: "Token Playground", url: "https://scastie.scala-lang.org" }
     ],
@@ -320,7 +320,7 @@ const unsignedTx = new TransactionBuilder(currentHeight)
     relatedPatterns: ["ergo-fungible-token-minting-eip4", "ergo-onchain-auction-pattern"],
     
     resources: [
-      { type: "doc", title: "EIP-4 NFT Extension", url: "/docs/developers/tokens/eip4-nft" },
+      { type: "doc", title: "EIP-4 NFT Extension", url: "/docs/developers/data-model-apis/assets/nfts" },
       { type: "github", title: "NFT Examples", url: "https://github.com/ergoplatform/eips/blob/master/eip-0004.md" }
     ],
     
@@ -466,8 +466,8 @@ const canMint = (stateBox: Box, amount: bigint): boolean => {
     relatedPatterns: ["ergo-fungible-token-minting-eip4", "ergo-dao-treasury-voting-pattern", "ergo-multisig-wallet-m-of-n"],
     
     resources: [
-      { type: "doc", title: "Token Lifecycle", url: "/docs/developers/tokens/lifecycle" },
-      { type: "blog", title: "Deflationary Mechanics", url: "/blog/deflationary-tokens" }
+      { type: "doc", title: "Token Lifecycle", url: "/docs/developers/data-model-apis/assets/tokens" },
+      { type: "blog", title: "Deflationary Mechanics", url: "/patterns/ergo-token-burning-supply-control" }
     ],
     
     securityNotes: [
@@ -597,7 +597,7 @@ const canMint = (stateBox: Box, amount: bigint): boolean => {
     
     resources: [
       { type: "doc", title: "Time-Based Contracts", url: "/docs/developers/ergoscript-languages/examples" },
-      { type: "blog", title: "Vesting on Ergo", url: "/blog/vesting-contracts" }
+      { type: "blog", title: "Vesting on Ergo", url: "/patterns/ergo-block-height-time-lock" }
     ],
     
     securityNotes: [
@@ -737,7 +737,7 @@ const canMint = (stateBox: Box, amount: bigint): boolean => {
     relatedPatterns: ["ergo-multisig-wallet-m-of-n", "ergo-privacy-one-time-address", "ergo-block-height-time-lock"],
     
     resources: [
-      { type: "doc", title: "Sigma Protocols Guide", url: "/docs/developers/crypto/sigma-protocols" },
+      { type: "doc", title: "Sigma Protocols Guide", url: "/docs/developers/ergoscript-languages/sigma-propositions" },
       { type: "blog", title: "Sigma Protocols Explained", url: "/blog/sigma-protocols-explained" },
       { type: "doc", title: "Privacy on Ergo", url: "/technology/privacy-features" }
     ],
@@ -1229,7 +1229,7 @@ function getLpTokensForDeposit(
     relatedPatterns: ["ergo-cross-chain-atomic-swap", "ergo-liquidity-mining-rewards-vault", "ergo-oracle-data-consumption"],
     
     resources: [
-      { type: "doc", title: "AMM Deep Dive", url: "/docs/developers/defi/amm" },
+      { type: "doc", title: "AMM Deep Dive", url: "/docs/developers" },
       { type: "github", title: "Spectrum Contracts", url: "https://github.com/spectrum-finance/ergo-dex" }
     ],
     
@@ -1396,8 +1396,8 @@ const ergoClaimTx = claimErgoHtlc(ergoHtlc, extractedSecret);
     relatedPatterns: ["ergo-amm-liquidity-pool", "ergo-block-height-time-lock", "ergo-sigma-or-access-control"],
     
     resources: [
-      { type: "doc", title: "Atomic Swaps Guide", url: "/docs/developers/defi/atomic-swaps" },
-      { type: "blog", title: "Cross-Chain Trading", url: "/blog/cross-chain-swaps" }
+      { type: "doc", title: "Atomic Swaps Guide", url: "/docs/developers" },
+      { type: "blog", title: "Cross-Chain Trading", url: "/patterns/ergo-cross-chain-atomic-swap" }
     ],
     
     securityNotes: [
@@ -1566,7 +1566,7 @@ async function liquidateCDP(cdp: CDP, stableTokens: bigint) {
     relatedPatterns: ["ergo-oracle-data-consumption", "ergo-amm-liquidity-pool", "ergo-liquidity-mining-rewards-vault"],
     
     resources: [
-      { type: "doc", title: "Lending Protocols", url: "/docs/developers/defi/lending" },
+      { type: "doc", title: "Lending Protocols", url: "/docs/developers" },
       { type: "github", title: "SigmaUSD Contracts", url: "https://github.com/ergoplatform/ergo-contracts" }
     ],
     
@@ -1773,7 +1773,7 @@ function calculateAPR(
     relatedPatterns: ["ergo-amm-liquidity-pool", "ergo-dao-treasury-voting-pattern", "ergo-block-height-time-lock"],
     
     resources: [
-      { type: "doc", title: "Staking Patterns", url: "/docs/developers/defi/staking" },
+      { type: "doc", title: "Staking Patterns", url: "/docs/developers" },
       { type: "github", title: "Yield Farming Examples", url: "https://github.com/spectrum-finance" }
     ],
     
@@ -1939,7 +1939,7 @@ async function buildTxWithOracle(
     relatedPatterns: ["ergo-oracle-pool-median-aggregation", "ergo-cdp-collateralized-loans", "ergo-amm-liquidity-pool"],
     
     resources: [
-      { type: "doc", title: "Oracle Pools Documentation", url: "/docs/developers/oracles" },
+      { type: "doc", title: "Oracle Pools Documentation", url: "/docs/ecosystem/infrastructure/oracles" },
       { type: "blog", title: "Oracle Pools Explained", url: "/blog/oracle-pools-explained" },
       { type: "github", title: "Oracle Pool Contracts", url: "https://github.com/ergoplatform/oracle-core" }
     ],
@@ -2148,7 +2148,7 @@ async function fetchErgUsdPrice(): Promise<number> {
     relatedPatterns: ["ergo-oracle-data-consumption", "ergo-cdp-collateralized-loans", "ergo-multisig-wallet-m-of-n"],
     
     resources: [
-      { type: "doc", title: "Oracle Core", url: "/docs/developers/oracles/core" },
+      { type: "doc", title: "Oracle Core", url: "/docs/ecosystem/infrastructure/oracles" },
       { type: "github", title: "Oracle Pool Framework", url: "https://github.com/ergoplatform/oracle-core" }
     ],
     
@@ -2374,7 +2374,7 @@ async function fulfillBabelBox(opp: BabelOpportunity): Promise<string> {
     relatedPatterns: ["ergo-storage-rent-aware-contracts", "ergo-cross-chain-atomic-swap", "ergo-amm-liquidity-pool"],
     
     resources: [
-      { type: "doc", title: "Babel Fees Guide", url: "/docs/developers/babel-fees" },
+      { type: "doc", title: "Babel Fees Guide", url: "/docs/developers/data-model-apis/babel-fees" },
       { type: "blog", title: "Babel Fees Explained", url: "/blog/babel-fees" }
     ],
     
@@ -2803,7 +2803,7 @@ async function claimRefund(
     
     resources: [
       { type: "doc", title: "Crowdfunding Contracts", url: "/docs/developers/ergoscript-languages/examples" },
-      { type: "blog", title: "Assurance Contracts", url: "/blog/assurance-contracts" }
+      { type: "blog", title: "Assurance Contracts", url: "/patterns/ergo-crowdfunding-assurance-contract" }
     ],
     
     securityNotes: [
@@ -3259,7 +3259,7 @@ async function spendOneTimeBox(
     
     resources: [
       { type: "doc", title: "Privacy on Ergo", url: "/technology/privacy-features" },
-      { type: "blog", title: "Stealth Addresses", url: "/blog/stealth-addresses" },
+      { type: "blog", title: "Stealth Addresses", url: "/patterns/ergo-privacy-one-time-address" },
       { type: "github", title: "ErgoMixer", url: "https://github.com/ergoMixer/ergoMixBack" }
     ],
     

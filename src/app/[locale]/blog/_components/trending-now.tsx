@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import type { BlogPost } from "../_lib/blog-data"
 
 interface TrendingNowProps {
@@ -18,7 +17,8 @@ export default function TrendingNow(props: TrendingNowProps) {
     return new Date(dateString).toLocaleDateString('en-US', { 
       month: 'short', 
       day: 'numeric',
-      year: 'numeric'
+      year: 'numeric',
+      timeZone: 'UTC',
     })
   }
 
@@ -32,12 +32,9 @@ export default function TrendingNow(props: TrendingNowProps) {
         Essential Reads
       </h2>
       <ul className="space-y-4 flex-1 flex flex-col" role="list">
-        {posts.map((p, index) => (
-          <motion.li
+        {posts.map((p) => (
+          <li
             key={p.id}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.05 }}
             className="flex-1"
           >
             <Link
@@ -83,7 +80,7 @@ export default function TrendingNow(props: TrendingNowProps) {
               <meta itemProp="author" content={p.author.name} />
               <meta itemProp="timeRequired" content={`PT${p.readTime}M`} />
             </article>
-          </motion.li>
+          </li>
         ))}
       </ul>
     </aside>

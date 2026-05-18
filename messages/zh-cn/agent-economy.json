@@ -33,6 +33,26 @@
         "body": "通过 Stripe 发起一笔 $0.001 的 API 调用，手续费本身就超过了调用价值。这套基础设施根本不是为任何规模的机器间微支付而建的。"
       }
     ],
+    "creditUnlock": {
+      "sectionLabel": "The Unlock",
+      "heading": "Verifiable workflows are table stakes. Programmable credit is the unlock.",
+      "description": "A verifiable workflow proves that work happened. Programmable credit lets agents coordinate future work before final settlement: sub-agent budgets, task-conditioned Notes, reserve-backed claims, expiry rules and policy-constrained spending.",
+      "formula": "Payments move value. Verification proves work. Credit creates economic agency.",
+      "items": [
+        {
+          "title": "Payments",
+          "body": "Agents pay for API calls, compute, data and tools without forcing every decision back through a human checkout."
+        },
+        {
+          "title": "Verification",
+          "body": "Receipts, task hashes and acceptance predicates define whether the agreed work actually happened."
+        },
+        {
+          "title": "Credit",
+          "body": "Bounded, redeemable Notes let agents coordinate work now and settle later under explicit rules."
+        }
+      ]
+    },
     "solution": {
       "sectionLabel": "解决方案",
       "heading": "为何 Ergo 是正确的",

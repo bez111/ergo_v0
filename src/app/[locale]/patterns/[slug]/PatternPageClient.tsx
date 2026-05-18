@@ -162,9 +162,9 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
             </div>
           </motion.section>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid min-w-0 lg:grid-cols-3 gap-8">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="min-w-0 max-w-full lg:col-span-2 space-y-8">
               
               {/* Problem & Solution */}
               <motion.section
@@ -172,11 +172,11 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <Card className="bg-black border border-white/10 rounded-2xl overflow-hidden">
+                <Card className="min-w-0 max-w-full bg-black border border-white/10 rounded-2xl overflow-hidden">
                   <CardContent className="p-0">
-                    <div className="grid md:grid-cols-2">
+                    <div className="grid min-w-0 md:grid-cols-2">
                       {/* Problem */}
-                      <div className="p-6 border-b md:border-b-0 md:border-r border-white/10">
+                      <div className="min-w-0 p-6 border-b md:border-b-0 md:border-r border-white/10">
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center">
                             <AlertTriangle className="w-4 h-4 text-red-400" />
@@ -187,7 +187,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                       </div>
 
                       {/* Solution */}
-                      <div className="p-6">
+                      <div className="min-w-0 p-6">
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
                             <Zap className="w-4 h-4 text-green-400" />
@@ -369,7 +369,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-6">
+            <div className="min-w-0 max-w-full space-y-6">
               
               {/* Resources */}
               <motion.section
@@ -510,4 +510,3 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
     </BackgroundWrapper>
   );
 }
-

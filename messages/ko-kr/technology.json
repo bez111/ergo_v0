@@ -3,103 +3,6 @@
     "title": "기술",
     "subtitle": "금융의 미래를 위한 고급 블록체인 기술",
     "description": "Ergo의 혁신적인 블록체인 기술을 탐색하세요",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo 기술 — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
-    "explore_ergo_s_technology_stack": "Ergo의 기술 스택을 탐색하세요: eUTXO, ErgoScript, Autolykos PoW, 스토리지 렌트, 시그마 프로토콜, NIPoPoWs.",
-    "frequently_asked_questions": "자주 묻는 질문",
-    "go_to_docs": "문서 보기",
-    "extended_utxo_model_that_enables": "병렬 스마트 컨트랙트 실행과 조합 가능한 DeFi 애플리케이션을 가능하게 하는 확장 UTXO 모델. Bitcoin의 보안을 유지하면서 재진입 공격을 방지합니다",
-    "full_blockchain_security_without_trusted": "신뢰된 중간자 없는 완전한 블록체인 보안.",
-    "dive_into_ergo_docs_href_docs_color": "Ergo 문서로 들어가기\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "에코시스템 앱 보기\",\n    href: \"/ecosystem\",\n    color:",
-    "adaptive_emission_governance": "적응형 발행 & 거버넌스",
-    "what_makes_ergo_s_eutxo": "Ergo의 eUTXO 모델이 계정 기반 블록체인보다 우수한 이유는?\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "ErgoScript가 스마트 컨트랙트 취약점을 어떻게 방지하나요?\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "Autolykos가 분산화되고 에너지 효율적이라고 여겨지는 이유는?\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "스토리지 렌트가 블록체인 지속 가능성 문제를 어떻게 해결하나요?\",\n      tag: \"Storage",
-    "what_privacy_features_does_ergo": "Ergo는 기본적으로 어떤 프라이버시 기능을 제공하나요?\",\n      tag: \"Privacy",
-    "why_are_ergo_s_oracle": "Ergo의 오라클 풀이 Chainlink보다 더 안전한 이유는?\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "서브블록이 1초 미만의 거래 확인을 어떻게 달성하나요?\",\n      tag: \"Scaling",
-    "how_to_create_tokens_and": "스마트 컨트랙트 없이 Ergo에서 토큰과 NFT를 어떻게 생성하나요?\",\n      tag: \"Tokens & NFTs",
-    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
-    "research_in_development": "연구/개발 중",
-    "decentralized_mixers_and_privacy_tools": "분산형 믹서 및 프라이버시 도구(법적 상태 확인)\",\n                              \"DAO & 거버넌스 시스템",
-    "infrastructure_apps": "인프라 & 앱",
-    "ergo_docs_href_docs": "Ergo 문서\", href: \"/docs",
-    "whitepaper_href_https_ergoplatform_org": "백서\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
-    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
-    "dev_tutorials_href_docs_developers_tutorials": "개발자 튜토리얼\", href: \"/docs/developers/tutorials",
-    "smart_contracts_run_independently_without": "스마트 컨트랙트는 전역 상태 충돌 없이 독립적으로 실행됩니다.",
-    "build_complex_defi_applications_from": "간단하고 재사용 가능한 구성 요소로 복잡한 DeFi 애플리케이션을 구축합니다.",
-    "bitcoin_level_security": "비트코인 수준의 보안",
-    "mathematically_prove_your_smart_contracts": "스마트 컨트랙트가 안전하고 버그가 없음을 수학적으로 증명합니다.",
-    "native_zero_knowledge_proofs_and": "기밀 거래를 위한 네이티브 영지식 증명 및 링 서명.",
-    "safe_by_design": "설계상 안전",
-    "prevents_common_vulnerabilities_like_reentrancy": "재진입 공격과 예상치 못한 동작 같은 일반적인 취약점을 방지합니다.",
-    "energy_efficient_asic_resistant_mining": "네트워크 참여를 민주화하는 에너지 효율적인 ASIC 저항 채굴 알고리즘. GPU 채굴을 위해 설계되어 네트워크를 분산화되고 모두가 접근 가능하게 유지합니다.",
-    "memory_hard_algorithm_reduces_power": "메모리 하드 알고리즘은 기존 PoW에 비해 전력 소비를 줄입니다.",
-    "low_barrier_to_entry_enables": "낮은 진입 장벽으로 개인 채굴자가 수익적으로 참여할 수 있습니다.",
-    "optimized_for_consumer_gpus_to": "채굴 중앙화를 방지하기 위해 소비자 GPU에 최적화되었습니다.",
-    "revolutionary_economic_model_that_prevents": "블록체인 팽창을 방지하는 혁명적인 경제 모델. 비활성 코인은 4년 후 최소한의 렌트를 지불하여 지속 가능한 블록체인 크기와 영구적인 채굴자 보상을 보장합니다.",
-    "sustainable_blockchain": "지속 가능한 블록체인",
-    "automatic_cleanup_of_unused_data": "미사용 데이터의 자동 정리로 블록체인을 가볍고 효율적으로 유지합니다.",
-    "miners_receive_rewards_forever_ensuring": "채굴자는 영원히 보상을 받아 장기적인 네트워크 보안을 보장합니다.",
-    "maintains_lightweight_blockchain_that_runs": "적당한 하드웨어에서 실행되는 경량 블록체인을 유지합니다.",
-    "built_in_zero_knowledge_proofs": "내장 영지식 증명은 제3자 솔루션이나 복잡한 설정 없이 프라이버시 보호 거래와 고급 암호화 기능을 가능하게 합니다.",
-    "choose_between_transparent_or_confidential": "필요에 따라 투명하거나 기밀 거래를 선택합니다.",
-    "simple_apis_to_add_privacy": "모든 애플리케이션에 프라이버시 기능을 추가하는 간단한 API.",
-    "full_security_with_minimal_data": "최소한의 데이터로 완전한 보안 - 모든 기기에서 몇 초 만에 동기화.",
-    "connect_to_other_blockchains_without": "중앙화된 검증자 없이 다른 블록체인에 연결합니다.",
-    "cryptographic_security": "암호학적 보안",
-    "mathematical_proofs_ensure_full_node": "수학적 증명으로 라이트 클라이언트에 풀 노드 수준의 보안을 보장합니다.",
-    "subblocks_in_development": "서브블록(개발 중)",
-    "sub_second_confirmations": "1초 미만 확인",
-    "near_instant_transaction_finality_for": "향상된 사용자 경험을 위한 거의 즉각적인 거래 최종성.",
-    "works_with_existing_infrastructure_no": "기존 인프라와 호환 - 브릿지나 사이드체인 불필요.",
-    "create_and_trade_tokens_and": "프로토콜 레벨에서 직접 토큰과 NFT를 생성하고 거래합니다. 스마트 컨트랙트가 필요 없습니다 - 단순하고 안전하며 비용 효율적인 네이티브 자산.",
-    "issue_tokens_stablecoins_or_nfts": "단일 거래로 토큰, 스테이블코인 또는 NFT를 발행합니다.",
-    "native_integration_with_all_ergo": "모든 Ergo 애플리케이션 및 프로토콜과의 네이티브 통합.",
-    "first_class_tokens_with_protocol": "프로토콜 레벨 보안 보장을 갖춘 일급 토큰.",
-    "decentralized_price_feeds_and_data": "프로토콜에 내장된 분산형 가격 피드 및 데이터 오라클. 단일 실패 지점 없음, 중앙화된 운영자 없음 - DeFi를 위한 신뢰할 수 있는 조합 가능한 데이터.",
-    "consensus_based_data_aggregation_ensures": "합의 기반 데이터 집계로 정확하고 조작 저항적인 가격을 보장합니다.",
-    "universal_compatibility": "범용 호환성",
-    "any_smart_contract_can_access": "모든 스마트 컨트랙트가 특별한 통합 없이 오라클 데이터에 접근할 수 있습니다.",
-    "no_central_authority_or_single": "데이터 파이프라인에 중앙 권한이나 단일 실패 지점이 없습니다.",
-    "no_forced_upgrades_no_chain_wars": "강제 업그레이드 없음, 체인 전쟁 없음.",
-    "adopt_innovations_at_your_own_pace": "자신의 속도로 혁신을 채택합니다.",
-    "evolutionary_not_revolutionary_changes": "혁명적이 아닌 진화적 변화.",
-    "consensus_driven_tuning_of_economic": "커뮤니티 입력과 함께 경제 매개변수의 합의 기반 조정(예: 채굴자 투표).",
-    "economic_variables_can_be_adjusted": "경제 변수를 조정할 수 있습니다.",
-    "adapt_to_changing_network_needs": "변화하는 네트워크 요구에 적응합니다.",
-    "discussions_and_decisions_involve_the_community": "논의와 결정에 커뮤니티가 참여합니다.",
-    "see_ecosystem_apps": "에코시스템 앱 보기",
-    "sigma_protocols_provide_native_zero": "시그마 프로토콜은 네이티브 영지식 증명, 링 서명을 제공합니다,",
-    "advanced_blockchain_infrastructure_for_scalable": "확장 가능한 DeFi, 안전한 스마트 컨트랙트 및 진정한 분산화를 위한 고급 블록체인 인프라.",
-    "ergo_tech_stack_overview": "Ergo 기술 스택 개요",
-    "ready_to_explore_ergo_tech": "Ergo 기술을 탐색할 준비가 되셨나요?",
-    "dive_deeper_into_the_docs": "문서를 더 깊이 탐구하거나 가장 진보된 UTXO 블록체인에서 구축을 시작하세요.",
-    "discover_ergo_s_advanced_blockchain": "Ergo의 고급 블록체인 기술을 발견하세요: 병렬 스마트 컨트랙트를 위한 eUTXO 모델, ErgoScript 프로그래밍 언어, 영지식 증명을 위한 시그마 프로토콜, ASIC 저항 Autolykos 채굴.",
-    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 스마트 계약', '시그마 프로토콜', 'Autolykos 채굴', '블록체인 기술', '스마트 계약 프로그래밍', 'NIPoPoWs', '스토리지 렌트', '작업 증명', 'DeFi 인프라",
-    "ergo_technology_overview": "Ergo 기술 개요",
-    "ergo_technology_next_generation_blockchain": "Ergo 기술 - 차세대 블록체인",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO는 블록체인 상태를 독립적인 박스(출력)로 분할하여, 전역 상태 없이 병렬 스마트 계약을 가능하게 하고 재진입 위험을 줄입니다. DApp은 조합 가능해집니다: 복잡한 로직을 단순한 출력으로 구성할 수 있습니다.",
-    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript는 Ergo\\",
-    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos는 메모리 집약적이고 ASIC 저항성이 있어 일반 채굴자에게 공평합니다. 솔로 채굴을 보상하고 풀 의존도를 낮춰 적당한 에너지 사용으로 네트워크를 안전하게 유지합니다.",
-    "answer_text": "Answer',\n          text:",
-    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs는 라이트 클라이언트, 즉각적인 모바일 동기화, 풀 노드 없이 신뢰가 필요 없는 크로스체인 브리지를 가능하게 하는 작은 블록체인 증명을 생성합니다.",
-    "home_item_https_ergoblockchain_org": "홈',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "기술',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_blockchain_technology_eutxo_smart": "Ergo 블록체인 기술 | eUTXO 스마트 컨트랙트 & 시그마 프로토콜",
-    "ergo_technology_stack_building_the_future": "Ergo 기술 스택 - 미래 구축",
-    "advanced_blockchain_technology_eutxo_ergoscript": "고급 블록체인 기술: eUTXO, ErgoScript, 프라이버시 기능, 지속 가능한 PoW.",
-    "eutxo_model_ergoscript_sigma_protocols": "eUTXO 모델, ErgoScript, 시그마 프로토콜, NIPoPoWs - 최첨단 블록체인 기술.",
-    "comprehensive_overview_of_ergo": "Ergo\\의 종합적인 개요",
-    "extended_utxo_model_enabling_parallel_execution": "병렬 실행을 가능하게 하는 확장 UTXO 모델",
-    "secure_declarative_language_for_programmable_money": "프로그래머블 머니를 위한 안전하고 선언적인 언어",
-    "native_zero_knowledge_proofs_and_privacy_features": "네이티브 영지식 증명 및 프라이버시 기능",
-    "memory_hard_proof_of_work_algorithm": "메모리 하드 작업 증명 알고리즘",
-    "sustainable_blockchain_state_management": "지속 가능한 블록체인 상태 관리",
-    "non_interactive_proofs_of_proof_of_work": "비상호작용 작업 증명의 증명",
     "sections": {
       "useCases": "사용 사례",
       "architecture": "아키텍처",
@@ -414,53 +317,6 @@
         "explore": "기능 탐색",
         "documentation": "문서 보기"
       }
-    },
-    "innovations": {
-      "title": "주요 혁신",
-      "items": {
-        "utxo": {
-          "title": "확장 UTXO",
-          "description": "Bitcoin의 보안과 Ethereum의 표현력을 결합합니다"
-        },
-        "sigma": {
-          "title": "시그마 프로토콜",
-          "description": "프라이버시 및 인증을 위한 내장 영지식 증명"
-        },
-        "contracts": {
-          "title": "다단계 컨트랙트",
-          "description": "미리 정의된 단계를 통해 발전하는 복잡한 스마트 컨트랙트"
-        },
-        "emission": {
-          "title": "적응형 발행",
-          "description": "장기적인 안정성을 위해 설계된 부드러운 발행 곡선"
-        }
-      }
-    },
-    "comparison": {
-      "title": "Ergo 비교",
-      "description": "Ergo의 기술이 다른 플랫폼과 어떻게 비교되는지 확인하세요",
-      "features": {
-        "model": "합의 모델",
-        "contracts": "스마트 컨트랙트",
-        "privacy": "프라이버시 기능",
-        "scalability": "확장성",
-        "sustainability": "지속 가능성"
-      }
-    },
-    "roadmap": {
-      "title": "기술 로드맵",
-      "description": "진행 중인 개발과 미래 개선 사항",
-      "phases": {
-        "current": "현재 중점",
-        "next": "다음 단계",
-        "future": "미래 비전"
-      }
-    },
-    "cta": {
-      "title": "구축할 준비가 되셨나요?",
-      "description": "가장 발전된 블록체인 플랫폼에서 개발을 시작하세요",
-      "documentation": "문서 보기",
-      "github": "GitHub 탐색"
     },
     "features": {
       "eutxo": {
@@ -1261,6 +1117,53 @@
           }
         }
       }
+    },
+    "innovations": {
+      "title": "주요 혁신",
+      "items": {
+        "utxo": {
+          "title": "확장 UTXO",
+          "description": "Bitcoin의 보안과 Ethereum의 표현력을 결합합니다"
+        },
+        "sigma": {
+          "title": "시그마 프로토콜",
+          "description": "프라이버시 및 인증을 위한 내장 영지식 증명"
+        },
+        "contracts": {
+          "title": "다단계 컨트랙트",
+          "description": "미리 정의된 단계를 통해 발전하는 복잡한 스마트 컨트랙트"
+        },
+        "emission": {
+          "title": "적응형 발행",
+          "description": "장기적인 안정성을 위해 설계된 부드러운 발행 곡선"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Ergo 비교",
+      "description": "Ergo의 기술이 다른 플랫폼과 어떻게 비교되는지 확인하세요",
+      "features": {
+        "model": "합의 모델",
+        "contracts": "스마트 컨트랙트",
+        "privacy": "프라이버시 기능",
+        "scalability": "확장성",
+        "sustainability": "지속 가능성"
+      }
+    },
+    "roadmap": {
+      "title": "기술 로드맵",
+      "description": "진행 중인 개발과 미래 개선 사항",
+      "phases": {
+        "current": "현재 중점",
+        "next": "다음 단계",
+        "future": "미래 비전"
+      }
+    },
+    "cta": {
+      "title": "구축할 준비가 되셨나요?",
+      "description": "가장 발전된 블록체인 플랫폼에서 개발을 시작하세요",
+      "documentation": "문서 보기",
+      "github": "GitHub 탐색"
     },
     "nativeTokens": {
       "title": "네이티브 토큰 & NFT",
@@ -2186,9 +2089,6 @@
       "spectrum_finance_sigmausd_duckpools": "Spectrum Finance\", \"SigmaUSD\", \"DuckPools",
       "ergo_auction_house_skyharbor_unique_assets": "Ergo Auction House\", \"SkyHarbor\", \"고유 자산",
       "oracle_pools_governance_compliance_tools": "오라클 풀\", \"거버넌스\", \"준수 도구",
-      "technology_href_technology": "기술\", href: \"/technology",
-      "technology_item_https_ergoblockchain_org": "기술', item: 'https://ergoblockchain.org/technology",
-      "techarticle_headline": "TechArticle', headline:",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO 설명: 보안, 병렬성, 프로그래밍 가능성 및 사용 사례.",
       "on_this_page": "이 페이지에서",
       "ergoscript_code_controlling_spending_conditions": "지출 조건을 제어하는 ErgoScript 코드",
@@ -2351,10 +2251,6 @@
       "predictable_moderate": "예측 가능, 보통",
       "copy_to_clipboard": "클립보드에 복사",
       "the_class_of_reentrancy_vulnerabilities": "계정 기반 시스템에서 일반적인 재진입 취약점 클래스가 eUTXO에는 없습니다",
-      "technology_item_https_ergoblockchain_org": "기술\",\n              item: \"https://ergoblockchain.org/technology",
-      "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
-      "technology_href_technology": "기술\", href: \"/technology",
-      "ergoscript_href_technology_ergoscript": "ErgoScript\", href: \"/technology/ergoscript",
       "no_shared_global_state_eliminates": "공유 전역 상태 없음으로 재진입 취약점 클래스 제거",
       "non_custodial_defi_protocols": "비수탁형 DeFi 프로토콜",
       "decentralized_oracle_networks": "탈중앙화 오라클 네트워크",
@@ -2405,6 +2301,8 @@
       "explore_ergoscript_and_start_developing": "ErgoScript를 탐색하고 오늘 안전한 스마트 컨트랙트 개발을 시작하세요.",
       "try_playground": "플레이그라운드 시도"
     },
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo 기술 — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
+    "explore_ergo_s_technology_stack": "Ergo의 기술 스택을 탐색하세요: eUTXO, ErgoScript, Autolykos PoW, 스토리지 렌트, 시그마 프로토콜, NIPoPoWs.",
     "adaptiveEmission": {
       "title": "적응형 발행",
       "subtitle": "유연한 통화 정책",
@@ -2532,17 +2430,11 @@
       "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergo는 Sigma 프로토콜, 링 서명, 영지식 증명, 기밀 트랜잭션을 포함한 다양한 프라이버시 기능을 제공합니다. 이러한 기술은 보안과 규제 준수를 유지하면서 프라이버시 보호 트랜잭션을 가능하게 합니다.",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigma 프로토콜은 비밀 값 자체를 공개하지 않고 비밀 값에 대한 진술을 증명할 수 있는 영지식 증명 시스템입니다. 프라이버시 보호 인증 및 트랜잭션 검증을 가능하게 합니다.",
       "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"네, Ergo의 프라이버시 기능은 규제를 준수하도록 설계되었습니다. 기본적으로 프라이버시를 유지하면서 필요할 때 사용자가 트랜잭션 세부 정보를 공개할 수 있는 선택적 공개 기능을 제공합니다.",
-      "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergo는 프라이버시를 프로토콜에 내장합니다: Sigma 프로토콜, 링/임계 서명, ErgoMixer, 기밀 자산 및 선택적 공개.",
       "ergo_privacy_sigma_protocols_ring": "Ergo 프라이버시,Sigma 프로토콜,링 서명,영지식 증명,ErgoMixer,기밀 트랜잭션",
-      "webpage_id_https_ergoblockchain_org_technology": "WebPage\", \"@id\": \"https://ergoblockchain.org/technology",
-      "technology_item_https_ergoblockchain_org": "기술\", item: \"https://ergoblockchain.org/technology",
-      "privacy_features_item_https_ergoblockchain": "프라이버시 기능\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
       "prepare_funds_text_split_funds": "자금 준비\", text: \"자금을 분할하고 주소 재사용을 피하세요.",
       "run_mix_text_choose_round": "믹싱 실행\", text: \"더 큰 익명성 집합을 위해 라운드 수/지연을 선택하세요.",
       "wait_spend_text_spend_after": "기다리고 지출\", text: \"지연 후 지출하세요; 직접적인 연결 가능성을 피하세요.",
-      "technology_href_technology": "기술\", href: \"/technology",
-      "privacy_features_href_technology_privacy_features": "프라이버시 기능\", href: \"/technology/privacy-features",
       "pseudonymous_addresses_utxo_model_benefits": "가명 주소\", \"UTXO 모델 이점\", \"기본 트랜잭션 프라이버시",
       "transaction_mixing_address_unlinkability_amount": "트랜잭션 믹싱\", \"주소 비연결성\", \"금액 난독화",
       "enable_powerful_privacy_tools_like": "프로토콜 수준에서 링 서명과 영지식 증명과 같은 강력한 프라이버시 도구를 가능하게 합니다.",
@@ -2789,6 +2681,128 @@
           }
         }
       }
+    },
+    "frequently_asked_questions": "자주 묻는 질문",
+    "go_to_docs": "문서 보기",
+    "extended_utxo_model_that_enables": "병렬 스마트 컨트랙트 실행과 조합 가능한 DeFi 애플리케이션을 가능하게 하는 확장 UTXO 모델. Bitcoin의 보안을 유지하면서 재진입 공격을 방지합니다",
+    "full_blockchain_security_without_trusted": "신뢰된 중간자 없는 완전한 블록체인 보안.",
+    "adaptive_emission_governance": "적응형 발행 & 거버넌스",
+    "what_makes_ergo_s_eutxo": "Ergo의 eUTXO 모델이 계정 기반 블록체인보다 우수한 이유는?\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScript가 스마트 컨트랙트 취약점을 어떻게 방지하나요?\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "Autolykos가 분산화되고 에너지 효율적이라고 여겨지는 이유는?\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "스토리지 렌트가 블록체인 지속 가능성 문제를 어떻게 해결하나요?\",\n      tag: \"Storage",
+    "what_privacy_features_does_ergo": "Ergo는 기본적으로 어떤 프라이버시 기능을 제공하나요?\",\n      tag: \"Privacy",
+    "why_are_ergo_s_oracle": "Ergo의 오라클 풀이 Chainlink보다 더 안전한 이유는?\",\n      tag: \"Oracles",
+    "how_do_subblocks_achieve_sub": "서브블록이 1초 미만의 거래 확인을 어떻게 달성하나요?\",\n      tag: \"Scaling",
+    "how_to_create_tokens_and": "스마트 컨트랙트 없이 Ergo에서 토큰과 NFT를 어떻게 생성하나요?\",\n      tag: \"Tokens & NFTs",
+    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
+    "research_in_development": "연구/개발 중",
+    "decentralized_mixers_and_privacy_tools": "분산형 믹서 및 프라이버시 도구(법적 상태 확인)\",\n                              \"DAO & 거버넌스 시스템",
+    "infrastructure_apps": "인프라 & 앱",
+    "smart_contracts_run_independently_without": "스마트 컨트랙트는 전역 상태 충돌 없이 독립적으로 실행됩니다.",
+    "build_complex_defi_applications_from": "간단하고 재사용 가능한 구성 요소로 복잡한 DeFi 애플리케이션을 구축합니다.",
+    "bitcoin_level_security": "비트코인 수준의 보안",
+    "mathematically_prove_your_smart_contracts": "스마트 컨트랙트가 안전하고 버그가 없음을 수학적으로 증명합니다.",
+    "native_zero_knowledge_proofs_and": "기밀 거래를 위한 네이티브 영지식 증명 및 링 서명.",
+    "safe_by_design": "설계상 안전",
+    "prevents_common_vulnerabilities_like_reentrancy": "재진입 공격과 예상치 못한 동작 같은 일반적인 취약점을 방지합니다.",
+    "energy_efficient_asic_resistant_mining": "네트워크 참여를 민주화하는 에너지 효율적인 ASIC 저항 채굴 알고리즘. GPU 채굴을 위해 설계되어 네트워크를 분산화되고 모두가 접근 가능하게 유지합니다.",
+    "memory_hard_algorithm_reduces_power": "메모리 하드 알고리즘은 기존 PoW에 비해 전력 소비를 줄입니다.",
+    "low_barrier_to_entry_enables": "낮은 진입 장벽으로 개인 채굴자가 수익적으로 참여할 수 있습니다.",
+    "optimized_for_consumer_gpus_to": "채굴 중앙화를 방지하기 위해 소비자 GPU에 최적화되었습니다.",
+    "revolutionary_economic_model_that_prevents": "블록체인 팽창을 방지하는 혁명적인 경제 모델. 비활성 코인은 4년 후 최소한의 렌트를 지불하여 지속 가능한 블록체인 크기와 영구적인 채굴자 보상을 보장합니다.",
+    "sustainable_blockchain": "지속 가능한 블록체인",
+    "automatic_cleanup_of_unused_data": "미사용 데이터의 자동 정리로 블록체인을 가볍고 효율적으로 유지합니다.",
+    "miners_receive_rewards_forever_ensuring": "채굴자는 영원히 보상을 받아 장기적인 네트워크 보안을 보장합니다.",
+    "maintains_lightweight_blockchain_that_runs": "적당한 하드웨어에서 실행되는 경량 블록체인을 유지합니다.",
+    "built_in_zero_knowledge_proofs": "내장 영지식 증명은 제3자 솔루션이나 복잡한 설정 없이 프라이버시 보호 거래와 고급 암호화 기능을 가능하게 합니다.",
+    "choose_between_transparent_or_confidential": "필요에 따라 투명하거나 기밀 거래를 선택합니다.",
+    "simple_apis_to_add_privacy": "모든 애플리케이션에 프라이버시 기능을 추가하는 간단한 API.",
+    "full_security_with_minimal_data": "최소한의 데이터로 완전한 보안 - 모든 기기에서 몇 초 만에 동기화.",
+    "connect_to_other_blockchains_without": "중앙화된 검증자 없이 다른 블록체인에 연결합니다.",
+    "cryptographic_security": "암호학적 보안",
+    "mathematical_proofs_ensure_full_node": "수학적 증명으로 라이트 클라이언트에 풀 노드 수준의 보안을 보장합니다.",
+    "subblocks_in_development": "서브블록(개발 중)",
+    "sub_second_confirmations": "1초 미만 확인",
+    "near_instant_transaction_finality_for": "향상된 사용자 경험을 위한 거의 즉각적인 거래 최종성.",
+    "works_with_existing_infrastructure_no": "기존 인프라와 호환 - 브릿지나 사이드체인 불필요.",
+    "create_and_trade_tokens_and": "프로토콜 레벨에서 직접 토큰과 NFT를 생성하고 거래합니다. 스마트 컨트랙트가 필요 없습니다 - 단순하고 안전하며 비용 효율적인 네이티브 자산.",
+    "issue_tokens_stablecoins_or_nfts": "단일 거래로 토큰, 스테이블코인 또는 NFT를 발행합니다.",
+    "native_integration_with_all_ergo": "모든 Ergo 애플리케이션 및 프로토콜과의 네이티브 통합.",
+    "first_class_tokens_with_protocol": "프로토콜 레벨 보안 보장을 갖춘 일급 토큰.",
+    "decentralized_price_feeds_and_data": "프로토콜에 내장된 분산형 가격 피드 및 데이터 오라클. 단일 실패 지점 없음, 중앙화된 운영자 없음 - DeFi를 위한 신뢰할 수 있는 조합 가능한 데이터.",
+    "consensus_based_data_aggregation_ensures": "합의 기반 데이터 집계로 정확하고 조작 저항적인 가격을 보장합니다.",
+    "universal_compatibility": "범용 호환성",
+    "any_smart_contract_can_access": "모든 스마트 컨트랙트가 특별한 통합 없이 오라클 데이터에 접근할 수 있습니다.",
+    "no_central_authority_or_single": "데이터 파이프라인에 중앙 권한이나 단일 실패 지점이 없습니다.",
+    "no_forced_upgrades_no_chain_wars": "강제 업그레이드 없음, 체인 전쟁 없음.",
+    "adopt_innovations_at_your_own_pace": "자신의 속도로 혁신을 채택합니다.",
+    "evolutionary_not_revolutionary_changes": "혁명적이 아닌 진화적 변화.",
+    "consensus_driven_tuning_of_economic": "커뮤니티 입력과 함께 경제 매개변수의 합의 기반 조정(예: 채굴자 투표).",
+    "economic_variables_can_be_adjusted": "경제 변수를 조정할 수 있습니다.",
+    "adapt_to_changing_network_needs": "변화하는 네트워크 요구에 적응합니다.",
+    "discussions_and_decisions_involve_the_community": "논의와 결정에 커뮤니티가 참여합니다.",
+    "see_ecosystem_apps": "에코시스템 앱 보기",
+    "sigma_protocols_provide_native_zero": "시그마 프로토콜은 네이티브 영지식 증명, 링 서명을 제공합니다,",
+    "advanced_blockchain_infrastructure_for_scalable": "확장 가능한 DeFi, 안전한 스마트 컨트랙트 및 진정한 분산화를 위한 고급 블록체인 인프라.",
+    "ergo_tech_stack_overview": "Ergo 기술 스택 개요",
+    "ready_to_explore_ergo_tech": "Ergo 기술을 탐색할 준비가 되셨나요?",
+    "dive_deeper_into_the_docs": "문서를 더 깊이 탐구하거나 가장 진보된 UTXO 블록체인에서 구축을 시작하세요.",
+    "discover_ergo_s_advanced_blockchain": "Ergo의 고급 블록체인 기술을 발견하세요: 병렬 스마트 컨트랙트를 위한 eUTXO 모델, ErgoScript 프로그래밍 언어, 영지식 증명을 위한 시그마 프로토콜, ASIC 저항 Autolykos 채굴.",
+    "ergoscript_smart_contracts_sigma_protocols": "ErgoScript 스마트 계약', '시그마 프로토콜', 'Autolykos 채굴', '블록체인 기술', '스마트 계약 프로그래밍', 'NIPoPoWs', '스토리지 렌트', '작업 증명', 'DeFi 인프라",
+    "ergo_technology_overview": "Ergo 기술 개요",
+    "ergo_technology_next_generation_blockchain": "Ergo 기술 - 차세대 블록체인",
+    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXO는 블록체인 상태를 독립적인 박스(출력)로 분할하여, 전역 상태 없이 병렬 스마트 계약을 가능하게 하고 재진입 위험을 줄입니다. DApp은 조합 가능해집니다: 복잡한 로직을 단순한 출력으로 구성할 수 있습니다.",
+    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScript는 Ergo\\",
+    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykos는 메모리 집약적이고 ASIC 저항성이 있어 일반 채굴자에게 공평합니다. 솔로 채굴을 보상하고 풀 의존도를 낮춰 적당한 에너지 사용으로 네트워크를 안전하게 유지합니다.",
+    "answer_text": "Answer',\n          text:",
+    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWs는 라이트 클라이언트, 즉각적인 모바일 동기화, 풀 노드 없이 신뢰가 필요 없는 크로스체인 브리지를 가능하게 하는 작은 블록체인 증명을 생성합니다.",
+    "ergo_blockchain_technology_eutxo_smart": "Ergo 블록체인 기술 | eUTXO 스마트 컨트랙트 & 시그마 프로토콜",
+    "ergo_technology_stack_building_the_future": "Ergo 기술 스택 - 미래 구축",
+    "advanced_blockchain_technology_eutxo_ergoscript": "고급 블록체인 기술: eUTXO, ErgoScript, 프라이버시 기능, 지속 가능한 PoW.",
+    "eutxo_model_ergoscript_sigma_protocols": "eUTXO 모델, ErgoScript, 시그마 프로토콜, NIPoPoWs - 최첨단 블록체인 기술.",
+    "comprehensive_overview_of_ergo": "Ergo\\의 종합적인 개요",
+    "extended_utxo_model_enabling_parallel_execution": "병렬 실행을 가능하게 하는 확장 UTXO 모델",
+    "secure_declarative_language_for_programmable_money": "프로그래머블 머니를 위한 안전하고 선언적인 언어",
+    "native_zero_knowledge_proofs_and_privacy_features": "네이티브 영지식 증명 및 프라이버시 기능",
+    "memory_hard_proof_of_work_algorithm": "메모리 하드 작업 증명 알고리즘",
+    "sustainable_blockchain_state_management": "지속 가능한 블록체인 상태 관리",
+    "non_interactive_proofs_of_proof_of_work": "비상호작용 작업 증명의 증명",
+    "ergoscriptPageOld": {
+      "features": [
+        {
+          "title": "형식 검증 지원",
+          "description": "선언적 제약과 1등급 암호학적 기본 요소를 통한 형식 검증 및 감사 가능성 지원"
+        },
+        {
+          "title": "eUTXO 보안 모델",
+          "description": "계정 기반 시스템에서 흔한 재진입 취약성 클래스가 eUTXO에는 존재하지 않음"
+        },
+        {
+          "title": "결정론적 실행",
+          "description": "계산 복잡성은 예측 가능하지만 네트워크 수수료는 시장 기반으로 결정"
+        },
+        {
+          "title": "네이티브 Sigma Protocols",
+          "description": "다중 서명, 임계, 링 서명 구성에 대한 1등급 지원"
+        },
+        {
+          "title": "UTXO 동시성",
+          "description": "고경합 시나리오를 위한 배치 패턴을 사용한 병렬 트랜잭션 처리"
+        },
+        {
+          "title": "제한된 계산",
+          "description": "안전을 위해 스크립트 내에서는 비-튜링 완전하지만 시퀀스는 복잡한 동작을 표현 가능"
+        }
+      ],
+      "useCases": [
+        "비수탁 DeFi 프로토콜",
+        "커스텀 다중 서명 지갑",
+        "경매 및 DAO",
+        "오라클 시스템",
+        "프라이버시 도구 및 믹서",
+        "고급 NFT 컨트랙트"
+      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -3855,42 +3869,6 @@
           "sourceCode": "GitHub 저장소"
         }
       }
-    },
-    "ergoscriptPageOld": {
-      "features": [
-        {
-          "title": "형식 검증 지원",
-          "description": "선언적 제약과 1등급 암호학적 기본 요소를 통한 형식 검증 및 감사 가능성 지원"
-        },
-        {
-          "title": "eUTXO 보안 모델",
-          "description": "계정 기반 시스템에서 흔한 재진입 취약성 클래스가 eUTXO에는 존재하지 않음"
-        },
-        {
-          "title": "결정론적 실행",
-          "description": "계산 복잡성은 예측 가능하지만 네트워크 수수료는 시장 기반으로 결정"
-        },
-        {
-          "title": "네이티브 Sigma Protocols",
-          "description": "다중 서명, 임계, 링 서명 구성에 대한 1등급 지원"
-        },
-        {
-          "title": "UTXO 동시성",
-          "description": "고경합 시나리오를 위한 배치 패턴을 사용한 병렬 트랜잭션 처리"
-        },
-        {
-          "title": "제한된 계산",
-          "description": "안전을 위해 스크립트 내에서는 비-튜링 완전하지만 시퀀스는 복잡한 동작을 표현 가능"
-        }
-      ],
-      "useCases": [
-        "비수탁 DeFi 프로토콜",
-        "커스텀 다중 서명 지갑",
-        "경매 및 DAO",
-        "오라클 시스템",
-        "프라이버시 도구 및 믹서",
-        "고급 NFT 컨트랙트"
-      ]
     }
   },
   "technologyPages": {

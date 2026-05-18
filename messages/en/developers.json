@@ -51,11 +51,21 @@
         "proficiencyLevel": "Beginner",
         "technicalAudience": "Developers, Engineers, Technical Founders",
         "about": [
-          { "name": "ErgoScript" },
-          { "name": "eUTXO Model" },
-          { "name": "Sigma Protocols" },
-          { "name": "Blockchain Development" },
-          { "name": "Smart Contracts" }
+          {
+            "name": "ErgoScript"
+          },
+          {
+            "name": "eUTXO Model"
+          },
+          {
+            "name": "Sigma Protocols"
+          },
+          {
+            "name": "Blockchain Development"
+          },
+          {
+            "name": "Smart Contracts"
+          }
         ]
       },
       "itemList": {

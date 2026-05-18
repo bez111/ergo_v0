@@ -26,7 +26,7 @@ export async function GET() {
       provider: "sage",
       protocol: "accord",
       version: "v0",
-      level: "L1-ready",
+      level: "L1-candidate",
       target: ACCORD_TARGET_URL,
       agreement_template: AGREEMENT_TEMPLATE_URL,
       accepted_rails: ["ergo"],
@@ -41,7 +41,7 @@ export async function GET() {
         },
       },
       notes:
-        "POST without Accord headers returns a 402 challenge. POST with x-accord-agreement-id and x-accord-payment={\"receipt_id\":\"...\"} validates the stored Sage receipt bundle.",
+        "POST without Accord headers returns a 402 challenge. POST with x-accord-agreement-id and x-accord-payment={\"receipt_id\":\"...\"} validates the stored Sage receipt bundle. L1 remains candidate until a signed conformance artifact is published.",
     },
     {
       headers: {

@@ -33,6 +33,7 @@ export function InfographicHero({ infographic, subtitle }: InfographicHeroProps)
       year: 'numeric',
       month: 'short',
       day: 'numeric',
+      timeZone: 'UTC',
     });
   }, [publishDate]);
 
@@ -100,5 +101,4 @@ export function InfographicHero({ infographic, subtitle }: InfographicHeroProps)
     </header>
   );
 }
-
 

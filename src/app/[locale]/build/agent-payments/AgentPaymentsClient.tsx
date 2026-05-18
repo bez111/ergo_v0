@@ -328,49 +328,50 @@ export function AgentPaymentsClient() {
               </h2>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid min-w-0 lg:grid-cols-2 gap-6">
               {PRIMITIVES.map((p, i) => (
                 <motion.div
                   key={p.id}
                   id={p.id}
+                  className="min-w-0"
                   custom={i}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
                 >
-                  <Card className="h-full bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/30 transition-all duration-300">
-                    <CardContent className="p-7">
+                  <Card className="h-full min-w-0 bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/30 transition-all duration-300">
+                    <CardContent className="min-w-0 p-5 sm:p-7">
                       {/* Header */}
-                      <div className="flex items-start gap-4 mb-5">
+                      <div className="flex min-w-0 items-start gap-4 mb-5">
                         <div className="w-11 h-11 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center flex-shrink-0">
                           <p.icon className="w-5 h-5 text-orange-400" />
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <h3 className="font-bold text-white text-lg leading-tight">{t(`primitives.${p.tKey}.title`)}</h3>
                           <p className="text-orange-400/70 font-mono text-xs">{t(`primitives.${p.tKey}.subtitle`)}</p>
                         </div>
                       </div>
 
-                      <p className="text-neutral-400 text-sm leading-relaxed mb-5">{t(`primitives.${p.tKey}.description`)}</p>
+                      <p className="text-neutral-400 text-sm leading-relaxed mb-5 break-words">{t(`primitives.${p.tKey}.description`)}</p>
 
                       {/* Properties */}
                       <ul className="space-y-1.5 mb-5">
                         {(t.raw(`primitives.${p.tKey}.properties`) as string[]).map((prop) => (
-                          <li key={prop} className="flex items-center gap-2 text-xs text-neutral-300">
+                          <li key={prop} className="flex min-w-0 items-start gap-2 text-xs text-neutral-300">
                             <CheckCircle className="w-3.5 h-3.5 text-orange-400 flex-shrink-0" />
-                            {prop}
+                            <span className="min-w-0 break-words">{prop}</span>
                           </li>
                         ))}
                       </ul>
 
                       {/* ErgoScript code block */}
-                      <div className="rounded-2xl bg-neutral-950 border border-white/8 overflow-hidden">
+                      <div className="min-w-0 max-w-full rounded-2xl bg-neutral-950 border border-white/8 overflow-hidden">
                         <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/8">
                           <Terminal className="w-3.5 h-3.5 text-orange-400" />
                           <span className="text-neutral-500 font-mono text-xs">ErgoScript</span>
                         </div>
-                        <pre className="px-4 py-4 text-xs text-neutral-300 font-mono leading-relaxed overflow-x-auto">
+                        <pre className="max-w-full px-4 py-4 text-xs text-neutral-300 font-mono leading-relaxed overflow-x-auto">
                           <code>{p.ergoScript}</code>
                         </pre>
                       </div>
@@ -406,37 +407,38 @@ export function AgentPaymentsClient() {
                 <motion.div
                   key={flow.id}
                   id={flow.id}
+                  className="min-w-0"
                   custom={fi}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   variants={fadeUp}
                 >
-                  <Card className="bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/20 transition-all duration-300">
-                    <CardContent className="p-8">
-                      <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10">
+                  <Card className="min-w-0 bg-black/80 border border-white/8 rounded-3xl hover:border-orange-500/20 transition-all duration-300">
+                    <CardContent className="min-w-0 p-5 sm:p-8">
+                      <div className="grid min-w-0 lg:grid-cols-[1fr_1.1fr] gap-10">
 
                         {/* Left: description + steps */}
-                        <div>
+                        <div className="min-w-0">
                           <h3
                             className="font-bold text-white mb-2"
                             style={{ fontSize: "clamp(16px, 2vw, 20px)" }}
                           >
                             {t(`flows.${flow.tKey}.title`)}
                           </h3>
-                          <p className="text-neutral-400 text-sm mb-7">{t(`flows.${flow.tKey}.description`)}</p>
+                          <p className="text-neutral-400 text-sm mb-7 break-words">{t(`flows.${flow.tKey}.description`)}</p>
 
                           <ol className="space-y-4">
                             {(t.raw(`flows.${flow.tKey}.steps`) as { label: string; detail: string }[]).map((step, si) => (
-                              <li key={si} className="flex items-start gap-3">
+                              <li key={si} className="flex min-w-0 items-start gap-3">
                                 <div className="w-6 h-6 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                                   <span className="text-orange-400 font-mono text-xs font-bold">
                                     {si + 1}
                                   </span>
                                 </div>
-                                <div>
-                                  <p className="text-white text-sm font-semibold">{step.label}</p>
-                                  <p className="text-neutral-500 text-xs mt-0.5">{step.detail}</p>
+                                <div className="min-w-0">
+                                  <p className="text-white text-sm font-semibold break-words">{step.label}</p>
+                                  <p className="text-neutral-500 text-xs mt-0.5 break-words">{step.detail}</p>
                                 </div>
                               </li>
                             ))}
@@ -454,12 +456,12 @@ export function AgentPaymentsClient() {
                         </div>
 
                         {/* Right: code */}
-                        <div className="rounded-2xl bg-neutral-950 border border-white/8 overflow-hidden">
+                        <div className="min-w-0 max-w-full rounded-2xl bg-neutral-950 border border-white/8 overflow-hidden">
                           <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/8">
                             <Code2 className="w-3.5 h-3.5 text-orange-400" />
                             <span className="text-neutral-500 font-mono text-xs">Fleet SDK (TypeScript)</span>
                           </div>
-                          <pre className="px-4 py-4 text-xs text-neutral-300 font-mono leading-relaxed overflow-x-auto">
+                          <pre className="max-w-full px-4 py-4 text-xs text-neutral-300 font-mono leading-relaxed overflow-x-auto">
                             <code>{flow.code}</code>
                           </pre>
                         </div>

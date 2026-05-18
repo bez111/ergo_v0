@@ -3,103 +3,6 @@
     "title": "テクノロジー",
     "subtitle": "金融の未来のための先進的なブロックチェーン技術",
     "description": "Ergoの革新的なブロックチェーン技術を探索する",
-    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo テクノロジー — eUTXO、ErgoScript、Autolykos | ergoblockchain.org",
-    "explore_ergo_s_technology_stack": "Ergoのテクノロジースタックを探索する：eUTXO、ErgoScript、Autolykos PoW、ストレージレント、シグマプロトコル、NIPoPoWs。",
-    "frequently_asked_questions": "よくある質問",
-    "go_to_docs": "ドキュメントへ",
-    "extended_utxo_model_that_enables": "並列スマートコントラクト実行とコンポーザブルなDeFiアプリケーションを可能にする拡張UTXOモデル。Bitcoinを維持しながらリエントランシー攻撃を排除",
-    "full_blockchain_security_without_trusted": "信頼された仲介者なしの完全なブロックチェーンセキュリティ。",
-    "dive_into_ergo_docs_href_docs_color": "Ergoドキュメントに飛び込む\",\n          href: \"/docs\",\n    color:",
-    "see_ecosystem_apps_href_ecosystem_color": "エコシステムアプリを見る\",\n    href: \"/ecosystem\",\n    color:",
-    "adaptive_emission_governance": "適応型エミッション & ガバナンス",
-    "what_makes_ergo_s_eutxo": "ErgoのeUTXOモデルがアカウントベースのブロックチェーンより優れている点は？\",\n      tag: \"eUTXO",
-    "how_does_ergoscript_prevent_smart": "ErgoScriptはスマートコントラクトの脆弱性をどのように防ぐか？\",\n      tag: \"ErgoScript",
-    "why_is_autolykos_considered_decentralized": "Autolykosが分散化されエネルギー効率が高いとされる理由は？\",\n      tag: \"PoW",
-    "how_does_storage_rent_solve": "ストレージレントはブロックチェーンの持続可能性をどのように解決するか？\",\n      tag: \"Storage",
-    "what_privacy_features_does_ergo": "Ergoがネイティブに提供するプライバシー機能は？\",\n      tag: \"Privacy",
-    "why_are_ergo_s_oracle": "ErgoのオラクルプールがChainlinkより安全な理由は？\",\n      tag: \"Oracles",
-    "how_do_subblocks_achieve_sub": "サブブロックはどのようにサブ秒のトランザクション確認を達成するか？\",\n      tag: \"Scaling",
-    "how_to_create_tokens_and": "スマートコントラクトなしにErgoでトークンとNFTを作成する方法は？\",\n      tag: \"Tokens & NFTs",
-    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
-    "research_in_development": "研究／開発中",
-    "decentralized_mixers_and_privacy_tools": "分散型ミキサーとプライバシーツール（法的ステータスを確認）\",\n                              \"DAO & ガバナンスシステム",
-    "infrastructure_apps": "インフラ & アプリ",
-    "ergo_docs_href_docs": "Ergoドキュメント\", href: \"/docs",
-    "whitepaper_href_https_ergoplatform_org": "ホワイトペーパー\", href: \"https://ergoplatform.org/docs/whitepaper.pdf",
-    "github_href_https_github_com_ergoplatform": "GitHub\", href: \"https://github.com/ergoplatform",
-    "dev_tutorials_href_docs_developers_tutorials": "開発者チュートリアル\", href: \"/docs/developers/tutorials",
-    "smart_contracts_run_independently_without": "スマートコントラクトはグローバルな状態の競合なしに独立して実行されます。",
-    "build_complex_defi_applications_from": "シンプルで再利用可能なコンポーネントから複雑なDeFiアプリケーションを構築。",
-    "bitcoin_level_security": "Bitcoinレベルのセキュリティ",
-    "mathematically_prove_your_smart_contracts": "スマートコントラクトが安全でバグのないことを数学的に証明。",
-    "native_zero_knowledge_proofs_and": "機密取引のためのネイティブなゼロ知識証明とリング署名。",
-    "safe_by_design": "設計上安全",
-    "prevents_common_vulnerabilities_like_reentrancy": "リエントランシー攻撃や予期しない動作などの一般的な脆弱性を防止。",
-    "energy_efficient_asic_resistant_mining": "ネットワーク参加を民主化するエネルギー効率の高いASIC耐性マイニングアルゴリズム。ネットワークを分散化し、誰もがアクセスできるように設計されたGPUマイニング。",
-    "memory_hard_algorithm_reduces_power": "メモリハードアルゴリズムにより、従来のPoWと比較して消費電力を削減。",
-    "low_barrier_to_entry_enables": "参入障壁が低く、個人マイナーが収益性高く参加可能。",
-    "optimized_for_consumer_gpus_to": "マイニングの中央集権化を防ぐためコンシューマGPUに最適化。",
-    "revolutionary_economic_model_that_prevents": "ブロックチェーンの肥大化を防ぐ革命的な経済モデル。非アクティブなコインは4年後に最小限のレントを支払い、持続可能なブロックチェーンサイズと永続的なマイナー報酬を確保。",
-    "sustainable_blockchain": "持続可能なブロックチェーン",
-    "automatic_cleanup_of_unused_data": "未使用データの自動クリーンアップにより、ブロックチェーンをスリムで効率的に維持。",
-    "miners_receive_rewards_forever_ensuring": "マイナーは永遠に報酬を受け取り、長期的なネットワークセキュリティを確保。",
-    "maintains_lightweight_blockchain_that_runs": "適度なハードウェアで動作する軽量ブロックチェーンを維持。",
-    "built_in_zero_knowledge_proofs": "組み込みのゼロ知識証明により、サードパーティのソリューションや複雑な設定なしにプライバシー保護トランザクションと高度な暗号機能を実現。",
-    "choose_between_transparent_or_confidential": "必要に応じて透明または機密トランザクションを選択。",
-    "simple_apis_to_add_privacy": "任意のアプリケーションにプライバシー機能を追加するためのシンプルなAPI。",
-    "full_security_with_minimal_data": "最小限のデータで完全なセキュリティ - 任意のデバイスで数秒で同期。",
-    "connect_to_other_blockchains_without": "中央集権的なバリデーターなしに他のブロックチェーンに接続。",
-    "cryptographic_security": "暗号学的セキュリティ",
-    "mathematical_proofs_ensure_full_node": "数学的証明によりライトクライアントにフルノードレベルのセキュリティを保証。",
-    "subblocks_in_development": "サブブロック（開発中）",
-    "sub_second_confirmations": "サブ秒確認",
-    "near_instant_transaction_finality_for": "ユーザーエクスペリエンス向上のためのほぼ瞬時のトランザクション確定性。",
-    "works_with_existing_infrastructure_no": "既存のインフラで動作 - ブリッジやサイドチェーンは不要。",
-    "create_and_trade_tokens_and": "プロトコルレベルでトークンとNFTを直接作成・取引。スマートコントラクト不要 - シンプルで安全、コスト効率の高いネイティブアセット。",
-    "issue_tokens_stablecoins_or_nfts": "1回のトランザクションでトークン、ステーブルコイン、またはNFTを発行。",
-    "native_integration_with_all_ergo": "すべてのErgoアプリケーションとプロトコルとのネイティブ統合。",
-    "first_class_tokens_with_protocol": "プロトコルレベルのセキュリティ保証を持つファーストクラスのトークン。",
-    "decentralized_price_feeds_and_data": "プロトコルに組み込まれた分散型価格フィードとデータオラクル。単一障害点なし、中央集権的なオペレーターなし - DeFiのための信頼性の高いコンポーザブルなデータ。",
-    "consensus_based_data_aggregation_ensures": "コンセンサスベースのデータ集約により、正確で操作耐性のある価格を確保。",
-    "universal_compatibility": "ユニバーサル互換性",
-    "any_smart_contract_can_access": "任意のスマートコントラクトが特別な統合なしにオラクルデータにアクセス可能。",
-    "no_central_authority_or_single": "データパイプラインに中央権限や単一障害点なし。",
-    "no_forced_upgrades_no_chain_wars": "強制的なアップグレードなし、チェーン戦争なし。",
-    "adopt_innovations_at_your_own_pace": "自分のペースでイノベーションを採用。",
-    "evolutionary_not_revolutionary_changes": "革命的ではなく、進化的な変化。",
-    "consensus_driven_tuning_of_economic": "コミュニティの意見を取り入れた経済パラメータのコンセンサス主導の調整（例：マイナー投票）。",
-    "economic_variables_can_be_adjusted": "経済変数を調整可能。",
-    "adapt_to_changing_network_needs": "変化するネットワークニーズへの適応。",
-    "discussions_and_decisions_involve_the_community": "議論と決定にコミュニティが関与。",
-    "see_ecosystem_apps": "エコシステムアプリを見る",
-    "sigma_protocols_provide_native_zero": "シグマプロトコルはネイティブなゼロ知識証明、リング署名を提供し、",
-    "advanced_blockchain_infrastructure_for_scalable": "スケーラブルなDeFi、安全なスマートコントラクト、真の分散化のための先進的なブロックチェーンインフラ。",
-    "ergo_tech_stack_overview": "Ergoテックスタック概要",
-    "ready_to_explore_ergo_tech": "Ergoテックを探索する準備はできていますか？",
-    "dive_deeper_into_the_docs": "ドキュメントをさらに深く掘り下げるか、最も先進的なUTXOブロックチェーン上での構築を始めてください。",
-    "discover_ergo_s_advanced_blockchain": "Ergoの先進的なブロックチェーン技術を発見：並列スマートコントラクトのためのeUTXOモデル、ErgoScriptプログラミング言語、ゼロ知識証明のためのシグマプロトコル、ASIC耐性のAutolykosマイニング。",
-    "ergoscript_smart_contracts_sigma_protocols": "ErgoScriptスマートコントラクト', 'シグマプロトコル', 'Autolykosマイニング', 'ブロックチェーン技術', 'スマートコントラクトプログラミング', 'NIPoPoWs', 'ストレージレント', 'プルーフオブワーク', 'DeFiインフラ",
-    "ergo_technology_overview": "Ergoテクノロジー概要",
-    "ergo_technology_next_generation_blockchain": "Ergoテクノロジー - 次世代ブロックチェーン",
-    "webpage_id_https_ergoblockchain_org_technology": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology",
-    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXOはブロックチェーンの状態を独立したボックス（出力）に分割し、グローバルな状態なしに並列スマートコントラクトを可能にし、リエントランシーリスクを低減します。DAppsはコンポーザブルになります：複雑なロジックをシンプルな出力から構築できます。",
-    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScriptはErgoの\\",
-    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykosはメモリハードかつ ASIC耐性があり、一般のマイナーにとって公平です。ソロマイニングを促進しプール依存を減らし、適度なエネルギー使用でネットワークを安全に保ちます。",
-    "answer_text": "回答',\n          text:",
-    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWsはライトクライアント、インスタントモバイル同期、フルノードなしのトラストレスクロスチェーンブリッジを可能にする小さなブロックチェーン証明を作成します。",
-    "home_item_https_ergoblockchain_org": "ホーム',\n        item: 'https://ergoblockchain.org",
-    "technology_item_https_ergoblockchain_org": "テクノロジー',\n        item: 'https://ergoblockchain.org/technology",
-    "ergo_blockchain_technology_eutxo_smart": "Ergoブロックチェーン技術 | eUTXOスマートコントラクト & シグマプロトコル",
-    "ergo_technology_stack_building_the_future": "Ergoテクノロジースタック - 未来を構築する",
-    "advanced_blockchain_technology_eutxo_ergoscript": "先進的なブロックチェーン技術：eUTXO、ErgoScript、プライバシー機能、持続可能なPoW。",
-    "eutxo_model_ergoscript_sigma_protocols": "eUTXOモデル、ErgoScript、シグマプロトコル、NIPoPoWs - 最先端のブロックチェーン技術。",
-    "comprehensive_overview_of_ergo": "Ergoの\\",
-    "extended_utxo_model_enabling_parallel_execution": "並列実行を可能にする拡張UTXOモデル",
-    "secure_declarative_language_for_programmable_money": "プログラマブルマネーのための安全で宣言的な言語",
-    "native_zero_knowledge_proofs_and_privacy_features": "ネイティブなゼロ知識証明とプライバシー機能",
-    "memory_hard_proof_of_work_algorithm": "メモリハードプルーフオブワークアルゴリズム",
-    "sustainable_blockchain_state_management": "持続可能なブロックチェーン状態管理",
-    "non_interactive_proofs_of_proof_of_work": "非インタラクティブなプルーフオブプルーフオブワーク",
     "sections": {
       "useCases": "ユースケース",
       "architecture": "アーキテクチャ",
@@ -414,53 +317,6 @@
         "explore": "機能を探索",
         "documentation": "ドキュメントを見る"
       }
-    },
-    "innovations": {
-      "title": "主要なイノベーション",
-      "items": {
-        "utxo": {
-          "title": "拡張UTXO",
-          "description": "Bitcoinのセキュリティとイーサリアムの表現力を組み合わせる"
-        },
-        "sigma": {
-          "title": "シグマプロトコル",
-          "description": "プライバシーと認証のための組み込みゼロ知識証明"
-        },
-        "contracts": {
-          "title": "マルチステージコントラクト",
-          "description": "事前定義されたステージを経て進化する複雑なスマートコントラクト"
-        },
-        "emission": {
-          "title": "適応型エミッション",
-          "description": "長期的な安定性のために設計されたスムーズなエミッションカーブ"
-        }
-      }
-    },
-    "comparison": {
-      "title": "Ergoの比較",
-      "description": "Ergoの技術が他のプラットフォームと比べてどうかを見る",
-      "features": {
-        "model": "コンセンサスモデル",
-        "contracts": "スマートコントラクト",
-        "privacy": "プライバシー機能",
-        "scalability": "スケーラビリティ",
-        "sustainability": "持続可能性"
-      }
-    },
-    "roadmap": {
-      "title": "テクノロジーロードマップ",
-      "description": "進行中の開発と将来の改善",
-      "phases": {
-        "current": "現在の焦点",
-        "next": "次のフェーズ",
-        "future": "将来のビジョン"
-      }
-    },
-    "cta": {
-      "title": "構築する準備はできていますか？",
-      "description": "最も先進的なブロックチェーンプラットフォームで開発を始める",
-      "documentation": "ドキュメントを見る",
-      "github": "GitHubを探索"
     },
     "features": {
       "eutxo": {
@@ -1261,6 +1117,53 @@
           }
         }
       }
+    },
+    "innovations": {
+      "title": "主要なイノベーション",
+      "items": {
+        "utxo": {
+          "title": "拡張UTXO",
+          "description": "Bitcoinのセキュリティとイーサリアムの表現力を組み合わせる"
+        },
+        "sigma": {
+          "title": "シグマプロトコル",
+          "description": "プライバシーと認証のための組み込みゼロ知識証明"
+        },
+        "contracts": {
+          "title": "マルチステージコントラクト",
+          "description": "事前定義されたステージを経て進化する複雑なスマートコントラクト"
+        },
+        "emission": {
+          "title": "適応型エミッション",
+          "description": "長期的な安定性のために設計されたスムーズなエミッションカーブ"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Ergoの比較",
+      "description": "Ergoの技術が他のプラットフォームと比べてどうかを見る",
+      "features": {
+        "model": "コンセンサスモデル",
+        "contracts": "スマートコントラクト",
+        "privacy": "プライバシー機能",
+        "scalability": "スケーラビリティ",
+        "sustainability": "持続可能性"
+      }
+    },
+    "roadmap": {
+      "title": "テクノロジーロードマップ",
+      "description": "進行中の開発と将来の改善",
+      "phases": {
+        "current": "現在の焦点",
+        "next": "次のフェーズ",
+        "future": "将来のビジョン"
+      }
+    },
+    "cta": {
+      "title": "構築する準備はできていますか？",
+      "description": "最も先進的なブロックチェーンプラットフォームで開発を始める",
+      "documentation": "ドキュメントを見る",
+      "github": "GitHubを探索"
     },
     "nativeTokens": {
       "title": "ネイティブトークンとNFT",
@@ -2186,9 +2089,6 @@
       "spectrum_finance_sigmausd_duckpools": "Spectrum Finance\", \"SigmaUSD\", \"DuckPools",
       "ergo_auction_house_skyharbor_unique_assets": "Ergo Auction House\", \"SkyHarbor\", \"ユニークアセット",
       "oracle_pools_governance_compliance_tools": "オラクルプール\", \"ガバナンス\", \"コンプライアンスツール",
-      "technology_href_technology": "テクノロジー\", href: \"/technology",
-      "technology_item_https_ergoblockchain_org": "テクノロジー', item: 'https://ergoblockchain.org/technology",
-      "techarticle_headline": "TechArticle', headline:",
       "ergo_eutxo_explained_security_parallelism": "Ergo eUTXO解説: セキュリティ、並列性、プログラマビリティ、ユースケース。",
       "on_this_page": "このページ",
       "ergoscript_code_controlling_spending_conditions": "支出条件を制御するErgoScriptコード",
@@ -2351,10 +2251,6 @@
       "predictable_moderate": "予測可能、中程度",
       "copy_to_clipboard": "クリップボードにコピー",
       "the_class_of_reentrancy_vulnerabilities": "アカウントベースのシステムに共通する再入脆弱性クラスはeUTXOには存在しない",
-      "technology_item_https_ergoblockchain_org": "テクノロジー\",\n              item: \"https://ergoblockchain.org/technology",
-      "ergoscript_item_https_ergoblockchain_org": "ErgoScript\",\n              item: \"https://ergoblockchain.org/technology/ergoscript",
-      "technology_href_technology": "テクノロジー\", href: \"/technology",
-      "ergoscript_href_technology_ergoscript": "ErgoScript\", href: \"/technology/ergoscript",
       "no_shared_global_state_eliminates": "共有グローバル状態なしで再入脆弱性クラスを排除",
       "non_custodial_defi_protocols": "ノンカストディアルDeFiプロトコル",
       "decentralized_oracle_networks": "分散型オラクルネットワーク",
@@ -2405,6 +2301,8 @@
       "explore_ergoscript_and_start_developing": "ErgoScriptを探索し、今日から安全なスマートコントラクトの開発を始めましょう。",
       "try_playground": "プレイグラウンドを試す"
     },
+    "ergo_technology_eutxo_ergoscript_autolykos": "Ergo テクノロジー — eUTXO、ErgoScript、Autolykos | ergoblockchain.org",
+    "explore_ergo_s_technology_stack": "Ergoのテクノロジースタックを探索する：eUTXO、ErgoScript、Autolykos PoW、ストレージレント、シグマプロトコル、NIPoPoWs。",
     "adaptiveEmission": {
       "title": "アダプティブエミッション",
       "subtitle": "柔軟な金融政策",
@@ -2532,17 +2430,11 @@
       "answer_text_ergo_offers_multiple": "Answer\",\n                text:\n                  \"Ergoは、Sigmaプロトコル、リングシグネチャ、ゼロ知識証明、機密トランザクションを含む複数のプライバシー機能を提供します。これらの技術により、セキュリティとコンプライアンスを維持しながらプライバシー保護トランザクションが可能になります。",
       "answer_text_sigma_protocols_are": "Answer\",\n                text:\n                  \"Sigmaプロトコルは、値自体を明かさずに秘密の値に関する文を証明できるゼロ知識証明システムです。プライバシー保護認証とトランザクション検証を可能にします。",
       "answer_text_yes_ergo_s": "Answer\",\n                text:\n                  \"はい、Ergoのプライバシー機能は規制に準拠するように設計されています。選択的開示機能を提供し、デフォルトでプライバシーを維持しながら必要に応じてトランザクションの詳細を監査人や規制機関に開示できます。",
-      "techarticle_id_https_ergoblockchain_org": "TechArticle\",\n          \"@id\": \"https://ergoblockchain.org/technology/privacy-features#article\",\n          headline:",
       "ergo_bakes_privacy_into_the": "Ergoはプロトコルにプライバシーを組み込んでいます: Sigmaプロトコル、リング/閾値シグネチャ、ErgoMixer、機密アセットと選択的開示。",
       "ergo_privacy_sigma_protocols_ring": "Ergoプライバシー、Sigmaプロトコル、リングシグネチャ、ゼロ知識証明、ErgoMixer、機密トランザクション",
-      "webpage_id_https_ergoblockchain_org_technology": "WebPage\", \"@id\": \"https://ergoblockchain.org/technology",
-      "technology_item_https_ergoblockchain_org": "テクノロジー\", item: \"https://ergoblockchain.org/technology",
-      "privacy_features_item_https_ergoblockchain": "プライバシー機能\",\n              item: \"https://ergoblockchain.org/technology/privacy-features",
       "prepare_funds_text_split_funds": "資金を準備する\", text: \"資金を分割しアドレスの再使用を避ける。",
       "run_mix_text_choose_round": "ミックスを実行する\", text: \"大きな匿名性セットのためにラウンド数/遅延を選択する。",
       "wait_spend_text_spend_after": "待って使う\", text: \"遅延後に使う; 直接的なリンク可能性を避ける。",
-      "technology_href_technology": "テクノロジー\", href: \"/technology",
-      "privacy_features_href_technology_privacy_features": "プライバシー機能\", href: \"/technology/privacy-features",
       "pseudonymous_addresses_utxo_model_benefits": "仮名アドレス\", \"UTXOモデルの利点\", \"基本的なトランザクションプライバシー",
       "transaction_mixing_address_unlinkability_amount": "トランザクションミキシング\", \"アドレスリンク不可能性\", \"量の難読化",
       "enable_powerful_privacy_tools_like": "プロトコルレベルでリングシグネチャとゼロ知識証明などの強力なプライバシーツールを実現します。",
@@ -2789,6 +2681,128 @@
           }
         }
       }
+    },
+    "frequently_asked_questions": "よくある質問",
+    "go_to_docs": "ドキュメントへ",
+    "extended_utxo_model_that_enables": "並列スマートコントラクト実行とコンポーザブルなDeFiアプリケーションを可能にする拡張UTXOモデル。Bitcoinを維持しながらリエントランシー攻撃を排除",
+    "full_blockchain_security_without_trusted": "信頼された仲介者なしの完全なブロックチェーンセキュリティ。",
+    "adaptive_emission_governance": "適応型エミッション & ガバナンス",
+    "what_makes_ergo_s_eutxo": "ErgoのeUTXOモデルがアカウントベースのブロックチェーンより優れている点は？\",\n      tag: \"eUTXO",
+    "how_does_ergoscript_prevent_smart": "ErgoScriptはスマートコントラクトの脆弱性をどのように防ぐか？\",\n      tag: \"ErgoScript",
+    "why_is_autolykos_considered_decentralized": "Autolykosが分散化されエネルギー効率が高いとされる理由は？\",\n      tag: \"PoW",
+    "how_does_storage_rent_solve": "ストレージレントはブロックチェーンの持続可能性をどのように解決するか？\",\n      tag: \"Storage",
+    "what_privacy_features_does_ergo": "Ergoがネイティブに提供するプライバシー機能は？\",\n      tag: \"Privacy",
+    "why_are_ergo_s_oracle": "ErgoのオラクルプールがChainlinkより安全な理由は？\",\n      tag: \"Oracles",
+    "how_do_subblocks_achieve_sub": "サブブロックはどのようにサブ秒のトランザクション確認を達成するか？\",\n      tag: \"Scaling",
+    "how_to_create_tokens_and": "スマートコントラクトなしにErgoでトークンとNFTを作成する方法は？\",\n      tag: \"Tokens & NFTs",
+    "answer_text_typeof_f_a_string": "Answer\", text: typeof f.a === \"string",
+    "research_in_development": "研究／開発中",
+    "decentralized_mixers_and_privacy_tools": "分散型ミキサーとプライバシーツール（法的ステータスを確認）\",\n                              \"DAO & ガバナンスシステム",
+    "infrastructure_apps": "インフラ & アプリ",
+    "smart_contracts_run_independently_without": "スマートコントラクトはグローバルな状態の競合なしに独立して実行されます。",
+    "build_complex_defi_applications_from": "シンプルで再利用可能なコンポーネントから複雑なDeFiアプリケーションを構築。",
+    "bitcoin_level_security": "Bitcoinレベルのセキュリティ",
+    "mathematically_prove_your_smart_contracts": "スマートコントラクトが安全でバグのないことを数学的に証明。",
+    "native_zero_knowledge_proofs_and": "機密取引のためのネイティブなゼロ知識証明とリング署名。",
+    "safe_by_design": "設計上安全",
+    "prevents_common_vulnerabilities_like_reentrancy": "リエントランシー攻撃や予期しない動作などの一般的な脆弱性を防止。",
+    "energy_efficient_asic_resistant_mining": "ネットワーク参加を民主化するエネルギー効率の高いASIC耐性マイニングアルゴリズム。ネットワークを分散化し、誰もがアクセスできるように設計されたGPUマイニング。",
+    "memory_hard_algorithm_reduces_power": "メモリハードアルゴリズムにより、従来のPoWと比較して消費電力を削減。",
+    "low_barrier_to_entry_enables": "参入障壁が低く、個人マイナーが収益性高く参加可能。",
+    "optimized_for_consumer_gpus_to": "マイニングの中央集権化を防ぐためコンシューマGPUに最適化。",
+    "revolutionary_economic_model_that_prevents": "ブロックチェーンの肥大化を防ぐ革命的な経済モデル。非アクティブなコインは4年後に最小限のレントを支払い、持続可能なブロックチェーンサイズと永続的なマイナー報酬を確保。",
+    "sustainable_blockchain": "持続可能なブロックチェーン",
+    "automatic_cleanup_of_unused_data": "未使用データの自動クリーンアップにより、ブロックチェーンをスリムで効率的に維持。",
+    "miners_receive_rewards_forever_ensuring": "マイナーは永遠に報酬を受け取り、長期的なネットワークセキュリティを確保。",
+    "maintains_lightweight_blockchain_that_runs": "適度なハードウェアで動作する軽量ブロックチェーンを維持。",
+    "built_in_zero_knowledge_proofs": "組み込みのゼロ知識証明により、サードパーティのソリューションや複雑な設定なしにプライバシー保護トランザクションと高度な暗号機能を実現。",
+    "choose_between_transparent_or_confidential": "必要に応じて透明または機密トランザクションを選択。",
+    "simple_apis_to_add_privacy": "任意のアプリケーションにプライバシー機能を追加するためのシンプルなAPI。",
+    "full_security_with_minimal_data": "最小限のデータで完全なセキュリティ - 任意のデバイスで数秒で同期。",
+    "connect_to_other_blockchains_without": "中央集権的なバリデーターなしに他のブロックチェーンに接続。",
+    "cryptographic_security": "暗号学的セキュリティ",
+    "mathematical_proofs_ensure_full_node": "数学的証明によりライトクライアントにフルノードレベルのセキュリティを保証。",
+    "subblocks_in_development": "サブブロック（開発中）",
+    "sub_second_confirmations": "サブ秒確認",
+    "near_instant_transaction_finality_for": "ユーザーエクスペリエンス向上のためのほぼ瞬時のトランザクション確定性。",
+    "works_with_existing_infrastructure_no": "既存のインフラで動作 - ブリッジやサイドチェーンは不要。",
+    "create_and_trade_tokens_and": "プロトコルレベルでトークンとNFTを直接作成・取引。スマートコントラクト不要 - シンプルで安全、コスト効率の高いネイティブアセット。",
+    "issue_tokens_stablecoins_or_nfts": "1回のトランザクションでトークン、ステーブルコイン、またはNFTを発行。",
+    "native_integration_with_all_ergo": "すべてのErgoアプリケーションとプロトコルとのネイティブ統合。",
+    "first_class_tokens_with_protocol": "プロトコルレベルのセキュリティ保証を持つファーストクラスのトークン。",
+    "decentralized_price_feeds_and_data": "プロトコルに組み込まれた分散型価格フィードとデータオラクル。単一障害点なし、中央集権的なオペレーターなし - DeFiのための信頼性の高いコンポーザブルなデータ。",
+    "consensus_based_data_aggregation_ensures": "コンセンサスベースのデータ集約により、正確で操作耐性のある価格を確保。",
+    "universal_compatibility": "ユニバーサル互換性",
+    "any_smart_contract_can_access": "任意のスマートコントラクトが特別な統合なしにオラクルデータにアクセス可能。",
+    "no_central_authority_or_single": "データパイプラインに中央権限や単一障害点なし。",
+    "no_forced_upgrades_no_chain_wars": "強制的なアップグレードなし、チェーン戦争なし。",
+    "adopt_innovations_at_your_own_pace": "自分のペースでイノベーションを採用。",
+    "evolutionary_not_revolutionary_changes": "革命的ではなく、進化的な変化。",
+    "consensus_driven_tuning_of_economic": "コミュニティの意見を取り入れた経済パラメータのコンセンサス主導の調整（例：マイナー投票）。",
+    "economic_variables_can_be_adjusted": "経済変数を調整可能。",
+    "adapt_to_changing_network_needs": "変化するネットワークニーズへの適応。",
+    "discussions_and_decisions_involve_the_community": "議論と決定にコミュニティが関与。",
+    "see_ecosystem_apps": "エコシステムアプリを見る",
+    "sigma_protocols_provide_native_zero": "シグマプロトコルはネイティブなゼロ知識証明、リング署名を提供し、",
+    "advanced_blockchain_infrastructure_for_scalable": "スケーラブルなDeFi、安全なスマートコントラクト、真の分散化のための先進的なブロックチェーンインフラ。",
+    "ergo_tech_stack_overview": "Ergoテックスタック概要",
+    "ready_to_explore_ergo_tech": "Ergoテックを探索する準備はできていますか？",
+    "dive_deeper_into_the_docs": "ドキュメントをさらに深く掘り下げるか、最も先進的なUTXOブロックチェーン上での構築を始めてください。",
+    "discover_ergo_s_advanced_blockchain": "Ergoの先進的なブロックチェーン技術を発見：並列スマートコントラクトのためのeUTXOモデル、ErgoScriptプログラミング言語、ゼロ知識証明のためのシグマプロトコル、ASIC耐性のAutolykosマイニング。",
+    "ergoscript_smart_contracts_sigma_protocols": "ErgoScriptスマートコントラクト', 'シグマプロトコル', 'Autolykosマイニング', 'ブロックチェーン技術', 'スマートコントラクトプログラミング', 'NIPoPoWs', 'ストレージレント', 'プルーフオブワーク', 'DeFiインフラ",
+    "ergo_technology_overview": "Ergoテクノロジー概要",
+    "ergo_technology_next_generation_blockchain": "Ergoテクノロジー - 次世代ブロックチェーン",
+    "answer_text_eutxo_splits_the": "Answer',\n          text: 'eUTXOはブロックチェーンの状態を独立したボックス（出力）に分割し、グローバルな状態なしに並列スマートコントラクトを可能にし、リエントランシーリスクを低減します。DAppsはコンポーザブルになります：複雑なロジックをシンプルな出力から構築できます。",
+    "answer_text_ergoscript_is_ergo": "Answer',\n          text: 'ErgoScriptはErgoの\\",
+    "answer_text_autolykos_is_memory": "Answer',\n          text: 'Autolykosはメモリハードかつ ASIC耐性があり、一般のマイナーにとって公平です。ソロマイニングを促進しプール依存を減らし、適度なエネルギー使用でネットワークを安全に保ちます。",
+    "answer_text": "回答',\n          text:",
+    "answer_text_nipopows_create_tiny": "Answer',\n          text: 'NIPoPoWsはライトクライアント、インスタントモバイル同期、フルノードなしのトラストレスクロスチェーンブリッジを可能にする小さなブロックチェーン証明を作成します。",
+    "ergo_blockchain_technology_eutxo_smart": "Ergoブロックチェーン技術 | eUTXOスマートコントラクト & シグマプロトコル",
+    "ergo_technology_stack_building_the_future": "Ergoテクノロジースタック - 未来を構築する",
+    "advanced_blockchain_technology_eutxo_ergoscript": "先進的なブロックチェーン技術：eUTXO、ErgoScript、プライバシー機能、持続可能なPoW。",
+    "eutxo_model_ergoscript_sigma_protocols": "eUTXOモデル、ErgoScript、シグマプロトコル、NIPoPoWs - 最先端のブロックチェーン技術。",
+    "comprehensive_overview_of_ergo": "Ergoの\\",
+    "extended_utxo_model_enabling_parallel_execution": "並列実行を可能にする拡張UTXOモデル",
+    "secure_declarative_language_for_programmable_money": "プログラマブルマネーのための安全で宣言的な言語",
+    "native_zero_knowledge_proofs_and_privacy_features": "ネイティブなゼロ知識証明とプライバシー機能",
+    "memory_hard_proof_of_work_algorithm": "メモリハードプルーフオブワークアルゴリズム",
+    "sustainable_blockchain_state_management": "持続可能なブロックチェーン状態管理",
+    "non_interactive_proofs_of_proof_of_work": "非インタラクティブなプルーフオブプルーフオブワーク",
+    "ergoscriptPageOld": {
+      "features": [
+        {
+          "title": "形式検証のサポート",
+          "description": "宣言的制約とファーストクラスの暗号プリミティブによる形式検証と監査可能性をサポート"
+        },
+        {
+          "title": "eUTXOセキュリティモデル",
+          "description": "アカウントベースシステムに共通するリエントランシー脆弱性のクラスがeUTXOには存在しない"
+        },
+        {
+          "title": "決定論的実行",
+          "description": "計算の複雑さは予測可能だが、ネットワーク手数料は市場によって決まる"
+        },
+        {
+          "title": "ネイティブSigmaプロトコル",
+          "description": "マルチシグ、閾値、リング署名構造のファーストクラスサポート"
+        },
+        {
+          "title": "UTXOの並行処理",
+          "description": "高競合シナリオのためのバッチャーパターンを使用した並列トランザクション処理"
+        },
+        {
+          "title": "制限された計算",
+          "description": "安全性のためスクリプト内では非チューリング完全だが、シーケンスで複雑な動作を表現可能"
+        }
+      ],
+      "useCases": [
+        "ノンカストディアルDeFiプロトコル",
+        "カスタムマルチシグウォレット",
+        "オークションとDAO",
+        "オラクルシステム",
+        "プライバシーツールとミキサー",
+        "高度なNFTコントラクト"
+      ]
     },
     "ergoscript": {
       "title": "ErgoScript",
@@ -3855,42 +3869,6 @@
           "sourceCode": "GitHubリポジトリ"
         }
       }
-    },
-    "ergoscriptPageOld": {
-      "features": [
-        {
-          "title": "形式検証のサポート",
-          "description": "宣言的制約とファーストクラスの暗号プリミティブによる形式検証と監査可能性をサポート"
-        },
-        {
-          "title": "eUTXOセキュリティモデル",
-          "description": "アカウントベースシステムに共通するリエントランシー脆弱性のクラスがeUTXOには存在しない"
-        },
-        {
-          "title": "決定論的実行",
-          "description": "計算の複雑さは予測可能だが、ネットワーク手数料は市場によって決まる"
-        },
-        {
-          "title": "ネイティブSigmaプロトコル",
-          "description": "マルチシグ、閾値、リング署名構造のファーストクラスサポート"
-        },
-        {
-          "title": "UTXOの並行処理",
-          "description": "高競合シナリオのためのバッチャーパターンを使用した並列トランザクション処理"
-        },
-        {
-          "title": "制限された計算",
-          "description": "安全性のためスクリプト内では非チューリング完全だが、シーケンスで複雑な動作を表現可能"
-        }
-      ],
-      "useCases": [
-        "ノンカストディアルDeFiプロトコル",
-        "カスタムマルチシグウォレット",
-        "オークションとDAO",
-        "オラクルシステム",
-        "プライバシーツールとミキサー",
-        "高度なNFTコントラクト"
-      ]
     }
   },
   "technologyPages": {

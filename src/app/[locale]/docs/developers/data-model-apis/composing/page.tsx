@@ -143,13 +143,13 @@ export default function ComposingTransactionsPage() {
                 </a>
               </div>
             </li>
-            <li>Refer to this <Link href="/docs/developers/data-model-apis/basics#sending-payments" className="text-orange-400 hover:underline">basic tutorial for sending a transaction</Link> for an introduction.</li>
+            <li>Refer to this <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">basic tutorial for sending a transaction</Link> for an introduction.</li>
           </ul>
         </div>
 
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
           <p className="text-gray-300">
-            Ergo also supports <Link href="/docs/developers/data-model-apis/chained" className="text-orange-400 hover:underline">'<em>Chained transactions</em>'</Link> (spending outputs of off-chain transactions).
+            Ergo also supports <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">'<em>Chained transactions</em>'</Link> (spending outputs of off-chain transactions).
           </p>
         </div>
       </div>

@@ -73,12 +73,12 @@ const COCKPIT_ITEMS = [
   },
   {
     name: "MCP endpoint",
-    status: "Fly live, DNS pending",
-    tone: "pending",
+    status: "DNS live",
+    tone: "live",
     icon: Network,
-    metric: "GitHub-backed repo",
-    body: "The Streamable HTTP MCP service is deployed on Fly and pushed to GitHub. The remaining ops gate is DNS for mcp.ergoblockchain.org.",
-    href: "https://ergoblockchain-mcp.fly.dev/health",
+    metric: "mcp.ergoblockchain.org",
+    body: "The Streamable HTTP MCP service is deployed on Fly, pushed to GitHub, and now resolves through the public mcp.ergoblockchain.org endpoint.",
+    href: "https://mcp.ergoblockchain.org/health",
     action: "Health check",
   },
   {

@@ -65,7 +65,7 @@ export function UnifiedSearch({
         id: "3",
         title: "ErgoScript Documentation",
         excerpt: "Complete guide to writing smart contracts in ErgoScript",
-        url: "/docs/ergoscript",
+        url: "/technology/ergoscript",
         type: "docs",
         category: "Developer",
         score: 0.82

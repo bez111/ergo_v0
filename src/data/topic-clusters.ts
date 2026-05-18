@@ -39,9 +39,9 @@ export const topicClusters: TopicCluster[] = [
       { url: '/use/stablecoins', title: 'Stablecoins on Ergo', type: 'use-case', priority: 2 },
       
       // Developer Resources
-      { url: '/playbooks/defi-developer', title: 'DeFi Developer Playbook', type: 'playbook', priority: 1 },
-      { url: '/patterns/amm-contracts', title: 'AMM Smart Contract Patterns', type: 'pattern', priority: 2 },
-      { url: '/patterns/liquidity-pool', title: 'Liquidity Pool Patterns', type: 'pattern', priority: 2 },
+      { url: '/playbooks/build-defi-on-ergo', title: 'DeFi Developer Playbook', type: 'playbook', priority: 1 },
+      { url: '/patterns/ergo-amm-liquidity-pool', title: 'AMM Smart Contract Patterns', type: 'pattern', priority: 2 },
+      { url: '/patterns/ergo-amm-liquidity-pool', title: 'Liquidity Pool Patterns', type: 'pattern', priority: 2 },
       
       // Comparisons
       { url: '/compare/ergo-vs-ethereum', title: 'Ergo vs Ethereum', type: 'compare', priority: 1 },
@@ -95,9 +95,9 @@ export const topicClusters: TopicCluster[] = [
       { url: '/use/privacy', title: 'Privacy Use Cases', type: 'use-case', priority: 1 },
       
       // Developer Resources
-      { url: '/playbooks/privacy-developer', title: 'Privacy Developer Playbook', type: 'playbook', priority: 1 },
-      { url: '/patterns/stealth-addresses', title: 'Stealth Address Patterns', type: 'pattern', priority: 2 },
-      { url: '/patterns/ring-signatures', title: 'Ring Signature Patterns', type: 'pattern', priority: 2 },
+      { url: '/playbooks/private-transaction-ergomixer', title: 'Privacy Developer Playbook', type: 'playbook', priority: 1 },
+      { url: '/patterns/ergo-privacy-one-time-address', title: 'Stealth Address Patterns', type: 'pattern', priority: 2 },
+      { url: '/patterns/ergo-privacy-one-time-address', title: 'Ring Signature Patterns', type: 'pattern', priority: 2 },
       
       // Comparisons
       { url: '/compare/ergo-vs-monero', title: 'Ergo vs Monero', type: 'compare', priority: 1 },
@@ -109,8 +109,8 @@ export const topicClusters: TopicCluster[] = [
       { url: '/infographics/ergo-vs-privacy-coins', title: 'Ergo vs Privacy Coins', type: 'infographic', priority: 2 },
       
       // Technology
-      { url: '/technology/sigma-protocols', title: 'Sigma Protocols', type: 'technology', priority: 1 },
-      { url: '/technology/ergomixer', title: 'ErgoMixer', type: 'technology', priority: 2 },
+      { url: '/technology/privacy-features', title: 'Sigma Protocols', type: 'technology', priority: 1 },
+      { url: '/use/privacy', title: 'ErgoMixer', type: 'technology', priority: 2 },
       
       // Glossary
       { url: '/learn/glossary/sigma-protocols', title: 'Sigma Protocols Definition', type: 'glossary', priority: 2 },
@@ -151,7 +151,7 @@ export const topicClusters: TopicCluster[] = [
       
       // Comparisons
       { url: '/compare/ergo-vs-bitcoin', title: 'Ergo vs Bitcoin', type: 'compare', priority: 1 },
-      { url: '/compare/ergo-vs-ethereum-classic', title: 'Ergo vs Ethereum Classic', type: 'compare', priority: 2 },
+      { url: '/compare/ergo-vs-ethereum', title: 'Ergo vs Ethereum Classic', type: 'compare', priority: 2 },
       { url: '/compare/ergo-vs-ravencoin', title: 'Ergo vs Ravencoin', type: 'compare', priority: 2 },
       
       // Infographics
@@ -191,7 +191,7 @@ export const topicClusters: TopicCluster[] = [
     name: 'Smart Contracts on Ergo',
     description: 'ErgoScript and eUTXO smart contracts',
     pillar: {
-      url: '/topics/ergoscript',
+      url: '/topics/ergo-technology',
       title: 'ErgoScript & Smart Contracts',
       type: 'topic',
       description: 'Complete guide to ErgoScript development',
@@ -202,10 +202,10 @@ export const topicClusters: TopicCluster[] = [
       { url: '/developers', title: 'Developer Resources', type: 'persona', priority: 1 },
       
       // Developer Resources
-      { url: '/playbooks/smart-contract-developer', title: 'Smart Contract Playbook', type: 'playbook', priority: 1 },
+      { url: '/patterns', title: 'Smart Contract Playbook', type: 'playbook', priority: 1 },
       { url: '/patterns', title: 'All ErgoScript Patterns', type: 'pattern', priority: 1 },
-      { url: '/patterns/time-locked-contracts', title: 'Time-Locked Contracts', type: 'pattern', priority: 2 },
-      { url: '/patterns/multi-signature', title: 'Multi-Signature Patterns', type: 'pattern', priority: 2 },
+      { url: '/patterns/ergo-block-height-time-lock', title: 'Time-Locked Contracts', type: 'pattern', priority: 2 },
+      { url: '/patterns/ergo-multisig-wallet-m-of-n', title: 'Multi-Signature Patterns', type: 'pattern', priority: 2 },
       
       // Technology
       { url: '/technology/ergoscript', title: 'ErgoScript Language', type: 'technology', priority: 1 },
@@ -218,7 +218,7 @@ export const topicClusters: TopicCluster[] = [
       // Glossary
       { url: '/learn/glossary/ergoscript', title: 'ErgoScript Definition', type: 'glossary', priority: 2 },
       { url: '/learn/glossary/boxes', title: 'Boxes Definition', type: 'glossary', priority: 2 },
-      { url: '/learn/glossary/registers', title: 'Registers Definition', type: 'glossary', priority: 3 }
+      { url: '/learn/glossary/boxes', title: 'Registers Definition', type: 'glossary', priority: 3 }
     ],
     faqQuestions: [
       'What is ErgoScript?',
@@ -243,7 +243,7 @@ export const topicClusters: TopicCluster[] = [
     name: 'eUTXO Model',
     description: 'Extended UTXO - Bitcoin security with smart contract flexibility',
     pillar: {
-      url: '/topics/eutxo',
+      url: '/topics/ergo-technology',
       title: 'eUTXO Model',
       type: 'topic',
       description: 'Complete guide to the eUTXO model',
@@ -264,7 +264,7 @@ export const topicClusters: TopicCluster[] = [
       
       // Glossary
       { url: '/learn/glossary/eutxo', title: 'eUTXO Definition', type: 'glossary', priority: 1 },
-      { url: '/learn/glossary/utxo', title: 'UTXO Definition', type: 'glossary', priority: 2 },
+      { url: '/learn/glossary/eutxo', title: 'UTXO Definition', type: 'glossary', priority: 2 },
       { url: '/learn/glossary/boxes', title: 'Boxes Definition', type: 'glossary', priority: 2 }
     ],
     faqQuestions: [
@@ -298,7 +298,7 @@ export const topicClusters: TopicCluster[] = [
     },
     supporting: [
       // Topics
-      { url: '/topics/ergo-tokenomics', title: 'Ergo Tokenomics', type: 'topic', priority: 1 },
+      { url: '/topics/ergo-sustainability', title: 'Ergo Tokenomics', type: 'topic', priority: 1 },
       
       // Start
       { url: '/start/introduction', title: 'Introduction to Ergo', type: 'use-case', priority: 1 },

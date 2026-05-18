@@ -236,7 +236,7 @@ export const questions: QuestionEntry[] = [
       { type: "infographic", title: "Financial Repression Stack", url: "/infographics/what-we-are-fighting-against-financial-repression-stack", badge: "Visual" },
       { type: "infographic", title: "Money Without Masters", url: "/infographics/money-without-masters-ergo-vs-banks-and-vc-crypto", badge: "Philosophy" },
       { type: "technology", title: "Privacy Features", url: "/technology/privacy-features", badge: "Tools" },
-      { type: "compare", title: "Ergo vs VC Chains", url: "/compare/ergo-vs-vc-chain", badge: "Why it matters" }
+      { type: "compare", title: "Ergo vs VC Chains", url: "/compare/ergo-vs-vc-chains", badge: "Why it matters" }
     ],
     relatedQuestions: ["why-ergo-fair-launch-matters", "is-ergo-censorship-resistant", "how-private-is-ergo"],
     jsonLdType: "HowTo",
@@ -265,7 +265,7 @@ export const questions: QuestionEntry[] = [
       { type: "infographic", title: "VC Chain vs Ergo", url: "/infographics/vc-chain-vs-ergo-fair-launch", badge: "Visual" },
       { type: "infographic", title: "Who Starts With Coins", url: "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply", badge: "Data" },
       { type: "glossary", title: "Fair Launch", url: "/learn/glossary/fair-launch", badge: "Definition" },
-      { type: "compare", title: "Ergo vs VC Chains", url: "/compare/ergo-vs-vc-chain", badge: "Comparison" },
+      { type: "compare", title: "Ergo vs VC Chains", url: "/compare/ergo-vs-vc-chains", badge: "Comparison" },
       { type: "blog", title: "Ergo Manifesto", url: "/blog/ergo-manifesto", badge: "Philosophy" }
     ],
     relatedQuestions: ["how-to-escape-financial-repression-with-ergo", "is-ergo-decentralized", "who-controls-ergo"],
@@ -360,7 +360,7 @@ export const questions: QuestionEntry[] = [
       { type: "glossary", title: "Storage Rent", url: "/learn/glossary/storage-rent", badge: "Definition" },
       { type: "infographic", title: "Storage Rent Explained", url: "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners", badge: "Visual" },
       { type: "blog", title: "Storage Rent Deep Dive", url: "/blog/storage-rent", badge: "Technical" },
-      { type: "infographic", title: "Storage Rent vs State Bloat", url: "/infographics/storage-rent-vs-state-bloat-ergo", badge: "Comparison" }
+      { type: "infographic", title: "Storage Rent vs State Bloat", url: "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners", badge: "Comparison" }
     ],
     relatedQuestions: ["how-ergo-stays-sustainable", "what-happens-to-lost-ergo", "why-storage-rent-matters"],
     jsonLdType: "TechArticle",

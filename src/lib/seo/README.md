@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // JSON-LD Schemas
 export default function Page() {
   const schemas = [
-    createBreadcrumbSchema([{ name: "Section", href: "/section" }]),
+    createBreadcrumbSchema([{ name: "Technology", href: "/technology" }]),
     createFAQSchema([{ question: "...", answer: "..." }]),
   ]
 
@@ -332,4 +332,3 @@ These files use inline schemas intentionally (complex/dynamic data):
 | `*Client.tsx` files | Dynamic client-side data |
 
 These are fine as-is and don't need migration.
-

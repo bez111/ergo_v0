@@ -62,7 +62,6 @@
     "offline_key_generation_and_storage": "最大のセキュリティのためのオフラインキー生成と保管。",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
     "schema": {
       "name": "Ergoウォレット",
       "description": "Ergoブロックチェーンのための安全なウォレットコレクション",

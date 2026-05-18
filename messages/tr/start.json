@@ -1832,7 +1832,6 @@
       "ergo_introduction_pow_smart_contracts": "Ergo Girişi — PoW Akıllı Sözleşmeleri, eUTXO, Sigma Protokolleri",
       "meet_ergo_a_pow_smart": "Ergo ile tanışın: eUTXO modelini ve Sigma protokollerini kullanan bir PoW akıllı sözleşme platformu. Öngörülebilir maliyetlerle gizlilik odaklı, denetlenebilir dApp'ler inşa edin.",
       "pow_smart_contracts_with_eutxo_sigma_protocols": "eUTXO ve Sigma Protokolleri ile PoW akıllı sözleşmeleri.",
-      "techarticle_headline_t": "TechArticle\",\n          headline: t(",
       "answer_text_t": "Answer\",\n                text: t(",
       "blockchain_smart_contracts_defi_cryptocurrency": "Blockchain\", \"Smart Contracts\", \"DeFi\", \"Cryptocurrency",
       "introduction_to_ergo_beginner": "Ergo'ya Giriş | Başlangıç",
@@ -2009,9 +2008,6 @@
     "price_volume_analytics": "Fiyat, hacim, analitik",
     "take_the_quiz": "Sınava Gir",
     "comparisonMeta": {
-      "start_item_https_ergoblockchain_org_start": "Başlangıç\", item: \"https://ergoblockchain.org/start",
-      "comparison_item_https_ergoblockchain_org": "Karşılaştırma\", item: \"https://ergoblockchain.org/start/comparison",
-      "techarticle_headline": "TechArticle\",\n          headline:",
       "comparison_of_eutxo_vs_account": "eUTXO ile hesap modelleri, PoW ve PoS, gizlilik ve ücretlerin karşılaştırması: Ergo, Ethereum, Bitcoin, Cardano.",
       "answer_text_script_cost_is": "Answer\",\n                      text: \"Betik maliyeti sınırlıdır ve ücretler öngörülebilirdir; gaz fiyatı açık artırması yoktur (nihai ücretler bellek havuzu koşullarına bağlıdır).",
       "answer_text_yes_nipopows_enable": "Answer\",\n                      text: \"Evet. NIPoPoWs, güven gerektirmeyen hafif istemciler için özlü kanıtlar sunar.",
@@ -2041,8 +2037,6 @@
       "open_source_development": "Açık kaynak geliştirme"
     },
     "start_with_ergo_learning_paths": "Ergo ile Başlayın - Öğrenme Yolları",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
-    "start_item_https_ergoblockchain_org_start": "Start',\n        item: 'https://ergoblockchain.org/start",
     "start_your_journey_with_ergo_blockchain": "Ergo Blok Zinciri ile Yolculuğunuza Başlayın",
     "personalized_learning_paths_for_beginners": "Yeni başlayanlar, geliştiriciler, madenciler ve yatırımcılar için kişiselleştirilmiş öğrenme yolları. Ergo'ya giden yolunuzu bulun.",
     "start_your_ergo_journey_choose_your_path": "Ergo Yolculuğunuza Başlayın - Yolunuzu Seçin",

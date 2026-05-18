@@ -75,6 +75,16 @@ npm run health
 
 This checks `/health`, and also `/ready` when `SAGE_SIGNER_TOKEN` is present in `.env`.
 
+Authenticated metrics:
+
+```bash
+curl -sS http://127.0.0.1:8911/metrics \
+  -H "Authorization: Bearer $SAGE_SIGNER_TOKEN"
+```
+
+`/metrics` exposes Prometheus-style counters for successful signatures, failed
+signatures, policy rejects, rate limiting, and the circuit-breaker state.
+
 ## Protocol
 
 `POST /sign` with body `{ "unsignedTx": <EIP-12 unsigned tx> }`.
@@ -83,8 +93,10 @@ Returns `{ "signedTx": <signed tx> }` on success, `{ "error": "..." }` on failur
 The signer also enforces a basic policy:
 - Reject txs that spend more than `SAGE_MAX_SINGLE_TX` nanoERG.
 - Reject oversized request bodies using `SAGE_SIGNER_MAX_BODY_BYTES`.
+- Rate-limit authorized signing requests with `SAGE_SIGNER_MAX_REQUESTS_PER_MINUTE`.
+- Fail closed after `SAGE_SIGNER_FAILURE_TRIP_THRESHOLD` consecutive signing failures, then cool down for `SAGE_SIGNER_FAILURE_COOLDOWN_MS`.
 - Reject txs whose outputs include addresses not in `SAGE_WHITELIST_ADDRS`.
-- Log every signing decision with timestamp + tx hash for audit.
+- Log every signing decision with timestamp, request id, tx hash, and failure reason for audit. Secrets are never printed.
 
 ## Implementation
 

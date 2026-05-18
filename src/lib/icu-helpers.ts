@@ -19,7 +19,6 @@ export const PLURAL_RULES = {
   ja: ['other'],
   ko: ['other'],
   zh: ['other'],
-  ar: ['zero', 'one', 'two', 'few', 'many', 'other'],
   tr: ['zero', 'one', 'other'],
 } as const
 
@@ -58,13 +57,6 @@ export function createPluralMessage(
   } else if (['de', 'fr', 'es', 'it', 'pt', 'tr'].includes(locale)) {
     if (count === 0) rule = 'zero'
     else if (count === 1) rule = 'one'
-    else rule = 'other'
-  } else if (locale === 'ar') {
-    if (count === 0) rule = 'zero'
-    else if (count === 1) rule = 'one'
-    else if (count === 2) rule = 'two'
-    else if (count >= 3 && count <= 10) rule = 'few'
-    else if (count >= 11 && count <= 99) rule = 'many'
     else rule = 'other'
   }
   
@@ -173,6 +165,6 @@ export function extractICUParams(message: string): string[] {
       params.push(match[1])
     }
   }
-  
+
   return params
-} 
+}
