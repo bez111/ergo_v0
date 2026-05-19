@@ -25,14 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       url: getCanonicalUrl('/learn/research', locale),
       siteName: "Ergo Platform",
-      images: [{ url: "https://www.ergoblockchain.org/og/research.png", width: 1200, height: 630, alt: "Ergo Research Papers" }],
+      images: [{ url: "https://www.ergoblockchain.org/og/research.jpg", width: 1200, height: 630, alt: "Ergo Research Papers" }],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://www.ergoblockchain.org/og/research.png"]
+      images: ["https://www.ergoblockchain.org/og/research.jpg"]
     }
   }
 }

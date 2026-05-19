@@ -1,19 +1,20 @@
 import { NextResponse } from 'next/server'
-import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '@/app/[locale]/blog/_lib/uploaded-posts'
 
 export async function GET() {
   const baseUrl = 'https://www.ergoblockchain.org'
   const currentDate = new Date().toUTCString()
-  
+  const posts = await getAllBlogPostsWithUploaded()
+
   // Sort posts by date (newest first)
-  const sortedPosts = [...blogPosts].sort((a, b) => {
+  const sortedPosts = [...posts].sort((a, b) => {
     const dateA = new Date(a.date).getTime()
     const dateB = new Date(b.date).getTime()
     return dateB - dateA
   })
-  
+
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" 
+<rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -45,11 +46,11 @@ export async function GET() {
     </item>`).join('')}
   </channel>
 </rss>`
-  
+
   return new NextResponse(rssXml, {
     headers: {
       'Content-Type': 'application/xml',
       'Cache-Control': 'public, max-age=3600'
     }
   })
-} 
+}

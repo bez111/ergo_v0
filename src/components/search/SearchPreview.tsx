@@ -28,18 +28,19 @@ export function SearchPreview({ data, onClose }: SearchPreviewProps) {
     if (!data) return;
 
     setIsLoading(true);
-    
+
     // Simulate fetching content (in real implementation, this would fetch the actual page content)
     setTimeout(() => {
+      const safeTitle = data.title;
       const mockContent = `
-# ${data.title}
+# ${safeTitle}
 
-This is a preview of the ${data.title} page. Here you can see what the page contains before deciding to visit it.
+This is a preview of the ${safeTitle} page. Here you can see what the page contains before deciding to visit it.
 
 ## Key Features
 
 - **Feature 1**: Description of the first key feature
-- **Feature 2**: Description of the second key feature  
+- **Feature 2**: Description of the second key feature
 - **Feature 3**: Description of the third key feature
 
 ## Code Example
@@ -68,7 +69,7 @@ val contract = {
 
 This preview shows you exactly what you'll find on this page, helping you decide if it's what you're looking for.
       `;
-      
+
       setPreviewContent(mockContent);
       setIsLoading(false);
     }, 300);
@@ -76,7 +77,7 @@ This preview shows you exactly what you'll find on this page, helping you decide
 
   const copyToClipboard = async () => {
     if (!data) return;
-    
+
     try {
       await navigator.clipboard.writeText(data.url);
       setCopied(true);
@@ -122,7 +123,7 @@ This preview shows you exactly what you'll find on this page, helping you decide
               <p className="text-sm text-gray-400">{data.section}</p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowFullContent(!showFullContent)}
@@ -131,19 +132,19 @@ This preview shows you exactly what you'll find on this page, helping you decide
               {showFullContent ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               {showFullContent ? 'Compact' : 'Full'}
             </button>
-            
+
             <button
               onClick={copyToClipboard}
               className={`flex items-center gap-2 px-3 py-2 text-sm rounded-lg transition-colors ${
-                copied 
-                  ? 'bg-green-600 text-white' 
+                copied
+                  ? 'bg-green-600 text-white'
                   : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700'
               }`}
             >
               {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               {copied ? 'Copied!' : 'Copy Link'}
             </button>
-            
+
             <button
               onClick={visitPage}
               className="flex items-center gap-2 px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
@@ -182,44 +183,45 @@ This preview shows you exactly what you'll find on this page, helping you decide
 
               {/* Preview Content */}
               <div className="prose prose-invert prose-sm max-w-none">
-                <div 
+                <div
                   className="markdown-content"
                   dangerouslySetInnerHTML={{
                     __html: previewContent
                       .split('\n')
                       .map(line => {
                         if (line.startsWith('# ')) {
-                          return `<h1 class="text-xl font-bold text-white mb-4">${line.substring(2)}</h1>`;
+                          return `<h1 class="text-xl font-bold text-white mb-4">${escapeHtml(line.substring(2))}</h1>`;
                         }
                         if (line.startsWith('## ')) {
-                          return `<h2 class="text-lg font-semibold text-white mb-3 mt-6">${line.substring(3)}</h2>`;
+                          return `<h2 class="text-lg font-semibold text-white mb-3 mt-6">${escapeHtml(line.substring(3))}</h2>`;
                         }
                         if (line.startsWith('- **')) {
-                          return `<li class="text-gray-300 mb-1"><strong>${line.substring(3, line.indexOf('**', 3))}</strong>${line.substring(line.indexOf('**', 3) + 2)}</li>`;
+                          return `<li class="text-gray-300 mb-1"><strong>${escapeHtml(line.substring(3, line.indexOf('**', 3)))}</strong>${escapeHtml(line.substring(line.indexOf('**', 3) + 2))}</li>`;
                         }
                         if (line.startsWith('- ')) {
-                          return `<li class="text-gray-300 mb-1">${line.substring(2)}</li>`;
+                          return `<li class="text-gray-300 mb-1">${escapeHtml(line.substring(2))}</li>`;
                         }
                         if (line.includes('```')) {
                           const codeContent = line.replace(/```\w*\n?/, '').replace(/```$/, '');
                           const isCopied = copiedCode === codeContent;
+                          const encodedCode = encodeURIComponent(codeContent);
                           return `
                             <div class="relative bg-neutral-800 p-4 rounded-lg overflow-x-auto my-4">
-                              <button 
-                                onclick="copyCode('${codeContent.replace(/'/g, "\\'")}')"
+                              <button
+                                onclick="copyCode(decodeURIComponent('${encodedCode}'))"
                                 class="absolute top-2 right-2 p-1 hover:bg-neutral-700 rounded transition-colors ${isCopied ? 'text-green-400' : 'text-gray-400'}"
                                 title="Copy code"
                               >
                                 ${isCopied ? '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>' : '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>'}
                               </button>
-                              <code class="text-cyan-300">${codeContent}</code>
+                              <code class="text-cyan-300">${escapeHtml(codeContent)}</code>
                             </div>
                           `;
                         }
                         if (line.trim() === '') {
                           return '<br>';
                         }
-                        return `<p class="text-gray-300 mb-3">${line}</p>`;
+                        return `<p class="text-gray-300 mb-3">${escapeHtml(line)}</p>`;
                       })
                       .join('')
                   }}
@@ -238,7 +240,7 @@ This preview shows you exactly what you'll find on this page, helping you decide
                     <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
-                
+
                 <div className="text-sm text-gray-400">
                   Press <kbd className="px-2 py-1 bg-neutral-800 rounded text-xs">Esc</kbd> to close
                 </div>
@@ -263,4 +265,17 @@ This preview shows you exactly what you'll find on this page, helping you decide
       />
     </div>
   );
-} 
+}
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => {
+    switch (char) {
+      case '&': return '&amp;';
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '"': return '&quot;';
+      case "'": return '&#39;';
+      default: return char;
+    }
+  });
+}

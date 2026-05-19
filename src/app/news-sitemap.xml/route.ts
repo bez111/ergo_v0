@@ -1,9 +1,11 @@
-import { blogPosts } from '../[locale]/blog/_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '../[locale]/blog/_lib/uploaded-posts'
 import { sitemapLocales, getLocalizedUrl, escapeXml, sitemapHeaders } from '@/lib/sitemap-utils'
 
 export async function GET() {
+  const allPosts = await getAllBlogPostsWithUploaded()
+
   // Filter posts from last 48 hours for Google News
-  const recentPosts = blogPosts.filter(post => {
+  const recentPosts = allPosts.filter(post => {
     const postDate = new Date(post.date)
     const twoDaysAgo = new Date(Date.now() - 48 * 60 * 60 * 1000)
     return postDate >= twoDaysAgo

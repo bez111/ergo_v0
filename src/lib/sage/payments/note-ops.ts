@@ -20,6 +20,7 @@
 
 import type { ErgoNoteOps } from "@accord-protocol/rails-ergo"
 import { ErgoAgentPay } from "ergo-agent-pay"
+import { parseServiceUrl } from "@/lib/security/service-url"
 
 interface RegisterObject {
   serializedValue?: string
@@ -42,10 +43,30 @@ function flattenRegisters(box: RawBox): RawBox {
   for (const [k, v] of Object.entries(box.additionalRegisters)) {
     if (typeof v === "string") flat[k] = v
     else if (v && typeof v === "object" && typeof v.serializedValue === "string") {
-      flat[k] = v.serializedValue
+      flat[k] = k === "R5" ? normalizeSIntForErgoAgentPay(v) ?? v.serializedValue : v.serializedValue
     }
   }
   return { ...box, additionalRegisters: flat }
+}
+
+function normalizeSIntForErgoAgentPay(register: RegisterObject): string | null {
+  if (!register.serializedValue?.startsWith("04")) return null
+
+  const rendered = Number(register.renderedValue)
+  if (!Number.isSafeInteger(rendered)) return null
+
+  const value = BigInt(rendered)
+  const zigzag = value < BigInt(0)
+    ? ((-value) << BigInt(1)) - BigInt(1)
+    : value << BigInt(1)
+  let encoded = zigzag.toString(16)
+  if (encoded.length % 2 === 1) encoded = `0${encoded}`
+
+  // ergo-agent-pay@0.3 decodes R5 by reading bytes after the SInt type
+  // tag as raw zigzag instead of decoding Sigma's VLQ payload. Explorer's
+  // renderedValue is authoritative, so hand the legacy parser the shape it
+  // expects while leaving the on-chain box itself untouched.
+  return `04${encoded}`
 }
 
 /**
@@ -107,10 +128,15 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
         // for Reserve / Note submission and works in production).
         return async (signedTx: unknown) => {
           const NODE_URL = process.env.SAGE_NODE_URL ?? "http://213.239.193.208:9052"
-          const r = await fetch(`${NODE_URL}/transactions`, {
+          const network = (process.env.SAGE_NETWORK ?? "testnet").toLowerCase()
+          const nodeUrl = parseServiceUrl(NODE_URL, {
+            requireHttpsInProduction: network === "mainnet",
+          })
+          const r = await fetch(new URL("/transactions", nodeUrl), {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(signedTx),
+            signal: AbortSignal.timeout(15_000),
           })
           const text = await r.text()
           if (!r.ok) throw new Error(`node ${r.status}: ${text.slice(0, 200)}`)

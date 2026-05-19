@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('seo.ogDescription'),
       url: getCanonicalUrl('/wallet', locale),
       siteName: 'Ergo Platform',
-      images: [{ url: 'https://www.ergoblockchain.org/og/wallets.png', width: 1200, height: 630, alt: 'Ergo Wallets Overview' }],
+      images: [{ url: 'https://www.ergoblockchain.org/og/wallets.jpg', width: 1200, height: 630, alt: 'Ergo Wallets Overview' }],
       type: 'website',
       locale: 'en_US'
     },
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('seo.twitterTitle'),
       description: t('seo.twitterDescription'),
-      images: ['https://www.ergoblockchain.org/og/wallets.png'],
+      images: ['https://www.ergoblockchain.org/og/wallets.jpg'],
       creator: '@ergoplatform',
       site: '@ergoplatform'
     },

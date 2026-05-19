@@ -9,6 +9,7 @@ const okRoutes = [
   "/agent-economy/live",
   "/blog/state-of-agent-payments-2026",
   "/build",
+  "/build/services",
   "/build/playground",
   "/patterns",
   "/patterns/ergo-amm-liquidity-pool",

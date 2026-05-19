@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "Ergo",
       title: "Ergo FAQ — Answers to 50+ Common Questions",
       description: "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy — find what you need in seconds.",
-      images: [{ url: `${siteConfig.siteUrl}/og/faq.png`, width: 1200, height: 630 }],
+      images: [{ url: `${siteConfig.siteUrl}/og/faq.jpg`, width: 1200, height: 630 }],
       locale: getOgLocale(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: "Ergo FAQ — Answers to 50+ Common Questions",
       description: "50+ answered questions about Ergo. Wallets, mining, DeFi, privacy — find answers in seconds.",
-      images: [`${siteConfig.siteUrl}/og/faq.png`],
+      images: [`${siteConfig.siteUrl}/og/faq.jpg`],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle
     },

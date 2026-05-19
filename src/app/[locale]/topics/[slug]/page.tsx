@@ -10,6 +10,7 @@ import { createBreadcrumbSchema, createTechArticleSchema, getAlternates } from "
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { getScopedMessages } from '@/lib/messages'
 import type { Locale } from '@/i18n/request'
+import { selectPrebuildParams } from '@/lib/build-surface'
 
 // Enhanced visual with image data
 export interface EnhancedVisual extends TopicResource {
@@ -58,7 +59,7 @@ function applyTranslation(topic: TopicHub, translations?: TopicsTranslations): T
 }
 
 export function generateStaticParams() {
-  return getAllTopicSlugs().map(slug => ({ slug }))
+  return selectPrebuildParams("topics", getAllTopicSlugs(), (slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -93,13 +94,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Ergo Blockchain',
       type: 'article',
       locale: locale === 'en' ? 'en_US' : locale === 'ru' ? 'ru_RU' : 'zh_CN',
-      images: [{ url: `${siteConfig.siteUrl}/og/topics/${slug}.png`, width: 1200, height: 630, alt: topic.title }]
+      images: [{ url: `${siteConfig.siteUrl}/og/hubs/topics.jpg`, width: 1200, height: 630, alt: topic.title }]
     },
     twitter: {
       card: 'summary_large_image',
       title: topic.seoTitle,
       description: topic.seoDescription,
-      images: [`${siteConfig.siteUrl}/og/topics/${slug}.png`]
+      images: [`${siteConfig.siteUrl}/og/hubs/topics.jpg`]
     },
     alternates: getAlternates(path, locale),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' } }
@@ -183,7 +184,7 @@ export default async function TopicPage({ params }: Props) {
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": `${baseUrl}/og/topics/${slug}.png`
+      "url": `${baseUrl}/og/hubs/topics.jpg`
     },
     "datePublished": topic.publishDate,
     "dateModified": topic.updatedDate || topic.publishDate,

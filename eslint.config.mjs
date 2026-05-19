@@ -1,6 +1,7 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import reactHooks from "eslint-plugin-react-hooks";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
@@ -9,6 +10,7 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    ".vercel/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
@@ -19,6 +21,9 @@ const eslintConfig = defineConfig([
   ]),
   // Custom rule overrides
   {
+    plugins: {
+      "react-hooks": reactHooks,
+    },
     linterOptions: {
       reportUnusedDisableDirectives: "off",
     },

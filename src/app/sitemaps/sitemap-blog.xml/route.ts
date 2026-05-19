@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server'
-import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '@/app/[locale]/blog/_lib/uploaded-posts'
 import { generateMultilingualBlogSitemap, sitemapHeaders, filterIndexablePages } from '@/lib/sitemap-utils'
 
 export async function GET() {
-  const posts = blogPosts.map(post => ({
+  const allPosts = await getAllBlogPostsWithUploaded()
+  const posts = allPosts.map(post => ({
     url: `/blog/${post.slug}`,
     title: post.title,
     date: post.date,

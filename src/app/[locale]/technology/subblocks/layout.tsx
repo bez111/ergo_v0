@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "subblocks",
-  ogImage: "/og/technology/subblocks.png",
+  ogImage: "/og/technology/subblocks.jpg",
   keywords: [
     "subblocks", "fast confirmations", "Layer 1 scaling",
     "transaction speed", "blockchain scalability", "sub-second finality",

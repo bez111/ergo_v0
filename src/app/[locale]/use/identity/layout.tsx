@@ -6,7 +6,7 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "identity",
-  ogImage: "/og/use/og-identity.png",
+  ogImage: "/og/use/og-identity.jpg",
   canonicalPath: "/use/identity",
 }
 

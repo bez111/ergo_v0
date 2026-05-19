@@ -4,3 +4,21 @@ node_modules
 test-results
 playwright-report
 .DS_Store
+
+# Secrets and local provider state. Git already ignores these; keep the
+# Vercel upload payload explicit too.
+.env
+.env.*
+!.env.example
+.vercel
+*.pem
+*.key
+scripts/sage-signer/.env
+
+# Heavy source masters. Runtime references should point at AVIF/WebP
+# derivatives or Blob/CDN URLs instead.
+public/infographics/*.png
+public/infographics/*.jpg
+public/infographics/*.jpeg
+public/og/*.png
+public/og/**/*.png

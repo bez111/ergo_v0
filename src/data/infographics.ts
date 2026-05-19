@@ -21,9 +21,9 @@ export const infographics: InfographicMeta[] = [
       "programmable privacy",
     ],
     previewImageUrl:
-      "/infographics/what-we-are-fighting-against-financial-repression-stack.png",
+      "/infographics/what-we-are-fighting-against-financial-repression-stack.avif",
     fullImageUrl:
-      "/infographics/what-we-are-fighting-against-financial-repression-stack.png",
+      "/infographics/what-we-are-fighting-against-financial-repression-stack.avif",
     imageAlt:
       "Infographic titled What We're Fighting Against showing a stacked tower of financial repression tools like CBDCs, KYC overreach, sanctions, freezing accounts and capital controls, contrasted with Ergo's censorship-resistant settlement, programmability without gatekeepers and privacy on demand.",
     publishDate: "2025-03-27T00:00:00.000Z",
@@ -106,9 +106,9 @@ export const infographics: InfographicMeta[] = [
       "money without masters",
     ],
     previewImageUrl:
-      "/infographics/powered-by-builders-designed-for-freedom.jpg",
+      "/infographics/powered-by-builders-designed-for-freedom.avif",
     fullImageUrl:
-      "/infographics/powered-by-builders-designed-for-freedom.jpg",
+      "/infographics/powered-by-builders-designed-for-freedom.avif",
     imageAlt:
       "Infographic with a glowing three-layer pyramid labeled miners at the base, builders in the middle, and freedom seekers at the top, explaining how Ergo is powered by builders and designed for financial freedom.",
     publishDate: "2025-03-26T00:00:00.000Z",
@@ -163,8 +163,8 @@ export const infographics: InfographicMeta[] = [
       "local ordering",
       "front-running",
     ],
-    previewImageUrl: "/infographics/mev-resistance-vs-dark-forest.png",
-    fullImageUrl: "/infographics/mev-resistance-vs-dark-forest.png",
+    previewImageUrl: "/infographics/mev-resistance-vs-dark-forest.avif",
+    fullImageUrl: "/infographics/mev-resistance-vs-dark-forest.avif",
     imageAlt:
       "Infographic titled MEV-Resistance vs the Dark Forest comparing global DeFi-style mempools on Ethereum with Ergo's MEV-aware local ordering and eUTXO design.",
     publishDate: "2025-03-12T00:00:00.000Z",
@@ -220,8 +220,8 @@ export const infographics: InfographicMeta[] = [
       "Sigma Protocols",
       "state models",
     ],
-    previewImageUrl: "/infographics/smart-contract-l1-tree.png",
-    fullImageUrl: "/infographics/smart-contract-l1-tree.png",
+    previewImageUrl: "/infographics/smart-contract-l1-tree.avif",
+    fullImageUrl: "/infographics/smart-contract-l1-tree.avif",
     imageAlt:
       "Infographic titled Smart-Contract L1 Tree showing Bitcoin at the root branching into Ethereum, Cardano and Ergo, with a table comparing determinism, audit complexity, expressiveness and hidden global state risk.",
     publishDate: "2025-03-11T00:00:00.000Z",
@@ -277,8 +277,8 @@ export const infographics: InfographicMeta[] = [
       "auditability",
       "fair launch",
     ],
-    previewImageUrl: "/infographics/ergo-vs-privacy-coins.png",
-    fullImageUrl: "/infographics/ergo-vs-privacy-coins.png",
+    previewImageUrl: "/infographics/ergo-vs-privacy-coins.avif",
+    fullImageUrl: "/infographics/ergo-vs-privacy-coins.avif",
     imageAlt:
       "Infographic titled Ergo vs Privacy Coins comparing Ergo, Monero, Zcash and L2 mixers across privacy model, programmability, selective disclosure, auditability and fair-launch tokenomics.",
     publishDate: "2025-03-15T00:00:00.000Z",
@@ -335,9 +335,9 @@ export const infographics: InfographicMeta[] = [
       "regulation",
     ],
     previewImageUrl:
-      "/infographics/pow-vs-pos-censorship-and-attack-surface.png",
+      "/infographics/pow-vs-pos-censorship-and-attack-surface.avif",
     fullImageUrl:
-      "/infographics/pow-vs-pos-censorship-and-attack-surface.png",
+      "/infographics/pow-vs-pos-censorship-and-attack-surface.avif",
     imageAlt:
       "Infographic titled PoW vs PoS: Censorship & Attack Surface comparing Proof-of-Work, classic Proof-of-Stake, and validator-committee models on who can censor, cartel risk, regulatory pressure, and resistance tools.",
     publishDate: "2025-03-20T00:00:00.000Z",
@@ -396,8 +396,8 @@ export const infographics: InfographicMeta[] = [
       "Ethereum",
       "state model comparison",
     ],
-    previewImageUrl: "/infographics/eutxo-vs-accounts-vs-classic-utxo.png",
-    fullImageUrl: "/infographics/eutxo-vs-accounts-vs-classic-utxo.png",
+    previewImageUrl: "/infographics/eutxo-vs-accounts-vs-classic-utxo.avif",
+    fullImageUrl: "/infographics/eutxo-vs-accounts-vs-classic-utxo.avif",
     imageAlt:
       "Infographic titled eUTXO vs Accounts vs Classic UTXO comparing Bitcoin's classic UTXO model, the account model, and Ergo-style eUTXO in terms of parallelism, logic transparency, smart-contract friendliness, and fee predictability.",
     publishDate: "2025-03-09T00:00:00.000Z",
@@ -455,9 +455,9 @@ export const infographics: InfographicMeta[] = [
       "regulation",
     ],
     previewImageUrl:
-      "/infographics/privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.png",
+      "/infographics/privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.avif",
     fullImageUrl:
-      "/infographics/privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.png",
+      "/infographics/privacy-but-auditable-sigma-protocols-vs-mixers-and-privacy-coins.avif",
     imageAlt:
       "Infographic titled Privacy, But Auditable comparing mixers & tumblers, classic privacy coins, and Ergo + Sigma Protocols across privacy mode, auditability, user experience, and regulatory signal.",
     publishDate: "2025-03-14T00:00:00.000Z",
@@ -520,8 +520,8 @@ export const infographics: InfographicMeta[] = [
       "DeFi",
       "smart contracts",
     ],
-    previewImageUrl: "/og/infographics/where-ergo-fits-among-major-chains.png",
-    fullImageUrl: "/og/infographics/where-ergo-fits-among-major-chains.png",
+    previewImageUrl: "/og/infographics/where-ergo-fits-among-major-chains.avif",
+    fullImageUrl: "/og/infographics/where-ergo-fits-among-major-chains.avif",
     imageAlt:
       "Matrix-style scatterplot titled “Where Ergo Fits Among Major Chains”, showing Ergo in the top-left DeFi and privacy corner, contrasted with Bitcoin, Monero, Zcash, Ethereum, Cardano, Solana, typical VC chains and CBDCs along axes for programmability & privacy versus launch & power structure.",
     publishDate: "2025-12-07T00:00:00.000Z",
@@ -587,8 +587,8 @@ export const infographics: InfographicMeta[] = [
       "DeFi",
       "smart contracts",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-zcash-zk-without-ceremony.png",
-    fullImageUrl: "/og/infographics/ergo-vs-zcash-zk-without-ceremony.png",
+    previewImageUrl: "/og/infographics/ergo-vs-zcash-zk-without-ceremony.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-zcash-zk-without-ceremony.avif",
     imageAlt:
       "Infographic titled “Ergo vs Zcash: ZK Without Ceremony”. On the left, a glowing Sigma Protocols diagram for Ergo with no trusted setup. On the right, a robed ceremony around a pedestal and furnace labeled toxic waste and key destruction for Zcash trusted setup, plus three comparison blocks for trusted setup, smart contracts & DeFi, and privacy model.",
     publishDate: "2025-12-08T00:00:00.000Z",
@@ -672,8 +672,8 @@ export const infographics: InfographicMeta[] = [
       "validators",
       "VC funding",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-solana-tps-vs-sovereignty.png",
-    fullImageUrl: "/og/infographics/ergo-vs-solana-tps-vs-sovereignty.png",
+    previewImageUrl: "/og/infographics/ergo-vs-solana-tps-vs-sovereignty.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-solana-tps-vs-sovereignty.avif",
     imageAlt:
       "Infographic titled “Ergo vs Solana: TPS vs Sovereignty”. On the left, a decentralized GPU miner network with high decentralization, security and sustainability for Ergo. On the right, a large speedometer showing 65,000+ TPS and data centers for Solana, plus comparison blocks for hardware requirements, launch & funding and focus.",
     publishDate: "2025-12-09T00:00:00.000Z",
@@ -759,8 +759,8 @@ export const infographics: InfographicMeta[] = [
       "storage rent",
       "sustainability",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-cardano-two-eutxo-paths.png",
-    fullImageUrl: "/og/infographics/ergo-vs-cardano-two-eutxo-paths.png",
+    previewImageUrl: "/og/infographics/ergo-vs-cardano-two-eutxo-paths.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-cardano-two-eutxo-paths.avif",
     imageAlt:
       "Infographic titled “Ergo vs Cardano: Two eUTXO Paths”. A central eUTXO research hub splits into two roads: a blocky PoW fair-launch path for Ergo and a smooth PoS ICO and foundation path for Cardano, with four comparison panels for consensus, launch & distribution, privacy and sustainability.",
     publishDate: "2025-12-10T00:00:00.000Z",
@@ -846,9 +846,9 @@ export const infographics: InfographicMeta[] = [
       "eUTXO",
     ],
     previewImageUrl:
-      "/og/infographics/ergo-vs-litecoin-digital-silver-vs-programmable-money.png",
+      "/og/infographics/ergo-vs-litecoin-digital-silver-vs-programmable-money.avif",
     fullImageUrl:
-      "/og/infographics/ergo-vs-litecoin-digital-silver-vs-programmable-money.png",
+      "/og/infographics/ergo-vs-litecoin-digital-silver-vs-programmable-money.avif",
     imageAlt:
       "Infographic titled “Ergo vs Litecoin: Digital Silver vs Programmable Money”. On the left, Ergo is shown as programmable PoW money with icons for smart contracts, DeFi, privacy and dApps. On the right, Litecoin appears as a speeding silver coin for faster Bitcoin-style payments, with comparison panels for role & narrative, smart contracts and privacy.",
     publishDate: "2025-12-11T00:00:00.000Z",
@@ -933,8 +933,8 @@ export const infographics: InfographicMeta[] = [
       "selective disclosure",
       "compliance",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-monero-privacy-modes.png",
-    fullImageUrl: "/og/infographics/ergo-vs-monero-privacy-modes.png",
+    previewImageUrl: "/og/infographics/ergo-vs-monero-privacy-modes.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-monero-privacy-modes.avif",
     imageAlt:
       "Infographic titled “Ergo vs Monero: Privacy Modes”. A slider shows transparent to private with programmable privacy highlighted for Ergo and a large ON switch for full privacy for Monero, plus three comparison panels for privacy mode, scope of the chain and flexibility & compliance.",
     publishDate: "2025-12-12T00:00:00.000Z",
@@ -1019,8 +1019,8 @@ export const infographics: InfographicMeta[] = [
       "PoW vs PoS",
       "state model",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-ethereum-same-power-less-pain.png",
-    fullImageUrl: "/og/infographics/ergo-vs-ethereum-same-power-less-pain.png",
+    previewImageUrl: "/og/infographics/ergo-vs-ethereum-same-power-less-pain.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-ethereum-same-power-less-pain.avif",
     imageAlt:
       "Infographic titled “Ergo vs Ethereum: Same Power, Less Pain”. Two balanced scales compare Ergo and Ethereum programmability, then another scale tilts under Ethereum’s heavy MEV risks, with four panels below for state model & safety, fees & MEV, consensus & power structure, and privacy.",
     publishDate: "2025-12-13T00:00:00.000Z",
@@ -1112,8 +1112,8 @@ export const infographics: InfographicMeta[] = [
       "MEV",
       "privacy",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-major-l1s-feature-checklist.png",
-    fullImageUrl: "/og/infographics/ergo-vs-major-l1s-feature-checklist.png",
+    previewImageUrl: "/og/infographics/ergo-vs-major-l1s-feature-checklist.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-major-l1s-feature-checklist.avif",
     imageAlt:
       "Feature matrix titled “Ergo vs Major L1s – Feature Checklist”, comparing Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across rows like consensus, launch & distribution, state model, smart contracts, L1 privacy, storage rent, MEV resistance, light clients and censorship resistance, with the Ergo column highlighted in vibrant green.",
     publishDate: "2025-12-14T00:00:00.000Z",
@@ -1200,9 +1200,9 @@ export const infographics: InfographicMeta[] = [
       "incentive structure",
     ],
     previewImageUrl:
-      "/og/infographics/ergo-vs-avalanche-funding-story-and-power-structure.png",
+      "/og/infographics/ergo-vs-avalanche-funding-story-and-power-structure.avif",
     fullImageUrl:
-      "/og/infographics/ergo-vs-avalanche-funding-story-and-power-structure.png",
+      "/og/infographics/ergo-vs-avalanche-funding-story-and-power-structure.avif",
     imageAlt:
       "Infographic titled “Ergo vs Avalanche: Funding Story and Power Structure”. On the left, Ergo shows a cold capital thermometer at zero and icons for mining and community PoW. On the right, Avalanche shows a red-hot thermometer labeled $290M+ with burning stacks of cash, VC coins and banks, plus comparison blocks for funding & launch, consensus & control, and incentive structure.",
     publishDate: "2025-12-15T00:00:00.000Z",
@@ -1289,9 +1289,9 @@ export const infographics: InfographicMeta[] = [
       "NiPoPoWs",
     ],
     previewImageUrl:
-      "/og/infographics/ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.png",
+      "/og/infographics/ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.avif",
     fullImageUrl:
-      "/og/infographics/ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.png",
+      "/og/infographics/ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.avif",
     imageAlt:
       "Infographic titled “Ergo vs Bitcoin: Bitcoin With the Missing Pieces”. On the left, an Ergo brick made of stacked layers for eUTXO money, smart contracts, privacy and sustainability; on the right, a simple Bitcoin UTXO brick with ghosted missing layers for smart contracts, privacy and sustainability, plus five comparison panels for state model, L1 privacy, long-term security & storage, use-cases and light clients.",
     publishDate: "2025-12-16T00:00:00.000Z",
@@ -1375,8 +1375,8 @@ export const infographics: InfographicMeta[] = [
       "monetary policy",
       "programmable money",
     ],
-    previewImageUrl: "/og/infographics/ergo-vs-cbdcs-control-vs-sovereignty.png",
-    fullImageUrl: "/og/infographics/ergo-vs-cbdcs-control-vs-sovereignty.png",
+    previewImageUrl: "/og/infographics/ergo-vs-cbdcs-control-vs-sovereignty.avif",
+    fullImageUrl: "/og/infographics/ergo-vs-cbdcs-control-vs-sovereignty.avif",
     imageAlt:
       "Infographic titled “Ergo vs CBDCs: Control vs Sovereignty”. On the left, a self-custody wallet with user-controlled keys for Ergo; on the right, a CBDC card held by a robot hand representing central bank accounts and surveillance. Below, four panels compare ownership & custody, privacy, censorship & programmability, and monetary policy between Ergo and CBDCs.",
     publishDate: "2025-12-17T00:00:00.000Z",
@@ -1464,9 +1464,9 @@ export const infographics: InfographicMeta[] = [
       "storage rent",
     ],
     previewImageUrl:
-      "/og/infographics/ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.png",
+      "/og/infographics/ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.avif",
     fullImageUrl:
-      "/og/infographics/ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.png",
+      "/og/infographics/ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.avif",
     imageAlt:
       "Infographic titled “Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi”. On the left, Ergo powers a network of DEXes, stablecoins, lending and programmable DeFi built on native tokens. On the right, Ravencoin focuses on simple asset issuance and transfers, with three comparison panels for token model, smart contracts & DeFi, and privacy & advanced features.",
     publishDate: "2025-12-18T00:00:00.000Z",
@@ -1553,9 +1553,9 @@ export const infographics: InfographicMeta[] = [
       "fair launch",
     ],
     previewImageUrl:
-      "/og/infographics/ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.png",
+      "/og/infographics/ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.avif",
     fullImageUrl:
-      "/og/infographics/ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.png",
+      "/og/infographics/ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.avif",
     imageAlt:
       "Infographic titled “Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW”. On the left, Ergo powers DEXes, stablecoins, lending and programmable DeFi built on native eUTXO tokens. On the right, Kaspa shows a fast BlockDAG highway for high-throughput PoW payments, with comparison panels for token model, smart contracts & DeFi, and privacy & advanced features.",
     publishDate: "2025-12-19T00:00:00.000Z",
@@ -1640,8 +1640,8 @@ export const infographics: InfographicMeta[] = [
       "security budget",
       "51% attack",
     ],
-    previewImageUrl: "/infographics/autolykos-mining-without-masters.png",
-    fullImageUrl: "/infographics/autolykos-mining-without-masters.png",
+    previewImageUrl: "/infographics/autolykos-mining-without-masters.avif",
+    fullImageUrl: "/infographics/autolykos-mining-without-masters.avif",
     imageAlt:
       "Infographic titled Autolykos: Mining Without Masters showing a GPU mining farm on consumer hardware and bullet points explaining how Ergo's Autolykos Proof-of-Work keeps mining open and decentralized.",
     publishDate: "2025-03-16T00:00:00.000Z",
@@ -1704,9 +1704,9 @@ export const infographics: InfographicMeta[] = [
       "miners",
     ],
     previewImageUrl:
-      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.jpg",
+      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.avif",
     fullImageUrl:
-      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.jpg",
+      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.avif",
     imageAlt:
       "Infographic titled Who Starts With the Coins? comparing a typical VC chain token allocation pie chart with Ergo's PoW-only supply over time.",
     publishDate: "2025-03-18T00:00:00.000Z",
@@ -1766,9 +1766,9 @@ export const infographics: InfographicMeta[] = [
       "GPU mining",
     ],
     previewImageUrl:
-      "/infographics/how-is-security-maintained-pos-vs-ergo-autolykos.png",
+      "/infographics/how-is-security-maintained-pos-vs-ergo-autolykos.avif",
     fullImageUrl:
-      "/infographics/how-is-security-maintained-pos-vs-ergo-autolykos.png",
+      "/infographics/how-is-security-maintained-pos-vs-ergo-autolykos.avif",
     imageAlt:
       "Infographic titled How Is Security Maintained? comparing typical Proof-of-Stake staking, where validators and large stakers secure the network, with Ergo's Autolykos GPU mining model.",
     publishDate: "2025-03-17T00:00:00.000Z",
@@ -1827,8 +1827,8 @@ export const infographics: InfographicMeta[] = [
       "storage rent",
       "tail emission",
     ],
-    previewImageUrl: "/infographics/how-it-starts-vc-chain-vs-ergo.png",
-    fullImageUrl: "/infographics/how-it-starts-vc-chain-vs-ergo.png",
+    previewImageUrl: "/infographics/how-it-starts-vc-chain-vs-ergo.avif",
+    fullImageUrl: "/infographics/how-it-starts-vc-chain-vs-ergo.avif",
     imageAlt:
       "Infographic titled How It Starts: VC Chain vs Ergo comparing the typical VC chain launch funnel with Ergo's fair-launched PoW path, from private sales versus open mining to long-term security.",
     publishDate: "2025-03-19T00:00:00.000Z",
@@ -1891,9 +1891,9 @@ export const infographics: InfographicMeta[] = [
       "Ethereum",
     ],
     previewImageUrl:
-      "/infographics/engineered-for-global-settlement-ergo.png",
+      "/infographics/engineered-for-global-settlement-ergo.avif",
     fullImageUrl:
-      "/infographics/engineered-for-global-settlement-ergo.png",
+      "/infographics/engineered-for-global-settlement-ergo.avif",
     imageAlt:
       "Infographic titled Engineered for Global Settlement comparing Ergo L1 settlement with Bitcoin, Ethereum and typical L2 rollups in terms of block time, fees, MEV and state model.",
     publishDate: "2025-03-05T00:00:00.000Z",
@@ -1955,9 +1955,9 @@ export const infographics: InfographicMeta[] = [
       "sustainability",
     ],
     previewImageUrl:
-      "/infographics/ergo-blockchain-research-driven-cypherpunk-aligned.png",
+      "/infographics/ergo-blockchain-research-driven-cypherpunk-aligned.avif",
     fullImageUrl:
-      "/infographics/ergo-blockchain-research-driven-cypherpunk-aligned.png",
+      "/infographics/ergo-blockchain-research-driven-cypherpunk-aligned.avif",
     imageAlt:
       "Infographic titled Ergo Blockchain: Research-Driven & Cypherpunk-Aligned summarizing Ergo's origins and fair launch, core technologies like eUTXO and Sigma Protocols, and long-term sustainability features such as Autolykos, NiPoPoWs and storage rent.",
     publishDate: "2025-03-21T00:00:00.000Z",
@@ -2022,9 +2022,9 @@ export const infographics: InfographicMeta[] = [
       "Sigma Protocols",
     ],
     previewImageUrl:
-      "/infographics/blockchain-matrix-where-ergo-actually-fits.png",
+      "/infographics/blockchain-matrix-where-ergo-actually-fits.avif",
     fullImageUrl:
-      "/infographics/blockchain-matrix-where-ergo-actually-fits.png",
+      "/infographics/blockchain-matrix-where-ergo-actually-fits.avif",
     imageAlt:
       "Infographic titled Blockchain Matrix: Where Ergo Actually Fits', showing a comparison table of major chains like Bitcoin, Ethereum, Monero, Zcash, Cardano, Solana, a typical VC chain, and Ergo across consensus, launch, privacy, MEV and fees.",
     publishDate: "2025-03-24T00:00:00.000Z",
@@ -2089,9 +2089,9 @@ export const infographics: InfographicMeta[] = [
       "cypherpunk ethos",
     ],
     previewImageUrl:
-      "/infographics/money-without-masters-ergo-vs-banks-and-vc-crypto.png",
+      "/infographics/money-without-masters-ergo-vs-banks-and-vc-crypto.avif",
     fullImageUrl:
-      "/infographics/money-without-masters-ergo-vs-banks-and-vc-crypto.png",
+      "/infographics/money-without-masters-ergo-vs-banks-and-vc-crypto.avif",
     imageAlt:
       "Infographic titled Money Without Masters comparing traditional banking and VC/ICO crypto to the Ergo blockchain in terms of control, censorship and who really owns your money.",
     publishDate: "2025-03-25T00:00:00.000Z",
@@ -2203,9 +2203,9 @@ export const infographics: InfographicMeta[] = [
       "blockchain performance",
     ],
     previewImageUrl:
-      "/infographics/ergo-subblock-technology-boosting-throughput-with-parallelism.png",
+      "/infographics/ergo-subblock-technology-boosting-throughput-with-parallelism.avif",
     fullImageUrl:
-      "/infographics/ergo-subblock-technology-boosting-throughput-with-parallelism.png",
+      "/infographics/ergo-subblock-technology-boosting-throughput-with-parallelism.avif",
     imageAlt:
       "Infographic titled Ergo's Subblock Technology: Boosting Throughput with Parallelism comparing traditional sequential blockchains with Ergo's key blocks and subblocks.",
     publishDate: "2025-03-06T00:00:00.000Z",
@@ -2260,9 +2260,9 @@ export const infographics: InfographicMeta[] = [
       "decentralization",
     ],
     previewImageUrl:
-      "/infographics/ergo-oracle-pools-decentralized-reliable-real-world-data.png",
+      "/infographics/ergo-oracle-pools-decentralized-reliable-real-world-data.avif",
     fullImageUrl:
-      "/infographics/ergo-oracle-pools-decentralized-reliable-real-world-data.png",
+      "/infographics/ergo-oracle-pools-decentralized-reliable-real-world-data.avif",
     imageAlt:
       "Infographic titled Ergo's Oracle Pools: Decentralized & Reliable Real-World Data explaining the off-chain data challenge, decentralized oracle pools solution, how it works, and the benefits.",
     publishDate: "2025-03-07T00:00:00.000Z",
@@ -2318,9 +2318,9 @@ export const infographics: InfographicMeta[] = [
       "bridges",
     ],
     previewImageUrl:
-      "/infographics/ergo-nipopows-scalable-trustless-light-clients.png",
+      "/infographics/ergo-nipopows-scalable-trustless-light-clients.avif",
     fullImageUrl:
-      "/infographics/ergo-nipopows-scalable-trustless-light-clients.png",
+      "/infographics/ergo-nipopows-scalable-trustless-light-clients.avif",
     imageAlt:
       "Infographic titled Ergo NiPoPoWs: The Key to Scalable, Trustless Light Clients comparing heavy full nodes with NiPoPoW proofs.",
     publishDate: "2025-03-08T00:00:00.000Z",
@@ -2374,8 +2374,8 @@ export const infographics: InfographicMeta[] = [
       "light clients",
       "decentralization",
     ],
-    previewImageUrl: "/infographics/ergo-privacy-non-interactive-efficient.png",
-    fullImageUrl: "/infographics/ergo-privacy-non-interactive-efficient.png",
+    previewImageUrl: "/infographics/ergo-privacy-non-interactive-efficient.avif",
+    fullImageUrl: "/infographics/ergo-privacy-non-interactive-efficient.avif",
     imageAlt:
       "Infographic titled Ergo Privacy: Non-Interactive & Efficient explaining how Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs provide built-in privacy.",
     publishDate: "2025-03-13T00:00:00.000Z",
@@ -2428,9 +2428,9 @@ export const infographics: InfographicMeta[] = [
       "long-term viability",
     ],
     previewImageUrl:
-      "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.png",
+      "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.avif",
     fullImageUrl:
-      "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.png",
+      "/infographics/ergo-storage-rent-preventing-blockchain-bloat-rewarding-miners.avif",
     imageAlt:
       "Infographic titled Ergo Storage Rent: Preventing Blockchain Bloat & Rewarding Miners explaining the state bloat problem and storage rent solution.",
     publishDate: "2025-03-04T00:00:00.000Z",
@@ -2486,9 +2486,9 @@ export const infographics: InfographicMeta[] = [
       "scalability",
     ],
     previewImageUrl:
-      "/infographics/ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.png",
+      "/infographics/ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.avif",
     fullImageUrl:
-      "/infographics/ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.png",
+      "/infographics/ergo-eutxo-model-bitcoin-security-smart-contract-flexibility.avif",
     imageAlt:
       "Infographic titled Ergo's eUTXO Model: Bitcoin's Security Meets Smart Contract Flexibility comparing Bitcoin UTXO with Ergo eUTXO.",
     publishDate: "2025-03-10T00:00:00.000Z",
@@ -2544,8 +2544,8 @@ export const infographics: InfographicMeta[] = [
       "decentralization",
       "cypherpunk",
     ],
-    previewImageUrl: "/infographics/ergoscript-cypherpunk-code-of-freedom.png",
-    fullImageUrl: "/infographics/ergoscript-cypherpunk-code-of-freedom.png",
+    previewImageUrl: "/infographics/ergoscript-cypherpunk-code-of-freedom.avif",
+    fullImageUrl: "/infographics/ergoscript-cypherpunk-code-of-freedom.avif",
     imageAlt:
       "Cyberpunk-style infographic titled ErgoScript: The Cypherpunk Code of Freedom explaining eUTXO foundation, design principles, Sigma Protocols zk-privacy, and decentralization use cases.",
     publishDate: "2025-03-22T00:00:00.000Z",
@@ -2601,8 +2601,8 @@ export const infographics: InfographicMeta[] = [
       "smart contracts",
       "DeFi",
     ],
-    previewImageUrl: "/infographics/ergo-blockchain-introduction-fundamentals.png",
-    fullImageUrl: "/infographics/ergo-blockchain-introduction-fundamentals.png",
+    previewImageUrl: "/infographics/ergo-blockchain-introduction-fundamentals.avif",
+    fullImageUrl: "/infographics/ergo-blockchain-introduction-fundamentals.avif",
     imageAlt:
       "Infographic titled Ergo Blockchain: Introduction & Fundamentals summarizing what Ergo is, the eUTXO model, Autolykos PoW, Sigma Protocols, and its mission and principles.",
     publishDate: "2025-03-23T00:00:00.000Z",
@@ -2664,8 +2664,8 @@ export const infographics: InfographicMeta[] = [
       "Proof-of-Work",
       "light clients",
     ],
-    previewImageUrl: "/infographics/three-pillars-ergos-sustainability.png",
-    fullImageUrl: "/infographics/three-pillars-ergos-sustainability.png",
+    previewImageUrl: "/infographics/three-pillars-ergos-sustainability.avif",
+    fullImageUrl: "/infographics/three-pillars-ergos-sustainability.avif",
     imageAlt:
       "Infographic titled The Three Pillars of Ergo's Sustainability showing Autolykos mining, NiPoPoWs nodes and storage rent as protocol-level mechanisms for long-term viability.",
     publishDate: "2025-02-02T00:00:00.000Z",
@@ -2723,8 +2723,8 @@ export const infographics: InfographicMeta[] = [
       "cypherpunks",
       "crypto ethos",
     ],
-    previewImageUrl: "/infographics/who-actually-needs-ergo.png",
-    fullImageUrl: "/infographics/who-actually-needs-ergo.png",
+    previewImageUrl: "/infographics/who-actually-needs-ergo.avif",
+    fullImageUrl: "/infographics/who-actually-needs-ergo.avif",
     imageAlt:
       "Infographic titled Who Actually Needs Ergo? showing four personas around the Ergo Sigma symbol: builder/dev, miner/PoW maxi, privacy-focused user and cypherpunk OG.",
     publishDate: "2025-02-01T00:00:00.000Z",
@@ -2774,8 +2774,8 @@ export const infographics: InfographicMeta[] = [
     category: "vc-chains-narratives",
     level: "beginner",
     tags: ["Ergo", "fair launch", "VC chain", "tokenomics", "Autolykos", "Proof-of-Work", "decentralization", "security"],
-    previewImageUrl: "/infographics/vc-chain-vs-ergo-fair-launch.png",
-    fullImageUrl: "/infographics/vc-chain-vs-ergo-fair-launch.png",
+    previewImageUrl: "/infographics/vc-chain-vs-ergo-fair-launch.avif",
+    fullImageUrl: "/infographics/vc-chain-vs-ergo-fair-launch.avif",
     imageAlt: "Infographic comparing a typical VC-funded chain with Ergo across launch, ownership, mining, security and governance.",
     publishDate: "2025-01-20T00:00:00.000Z",
     readingTimeMinutes: 5,
@@ -2866,9 +2866,9 @@ export const infographics: InfographicMeta[] = [
       "on-chain markets",
     ],
     previewImageUrl:
-      "/infographics/ergo-babel-fees-pay-with-any-token.png",
+      "/infographics/ergo-babel-fees-pay-with-any-token.avif",
     fullImageUrl:
-      "/infographics/ergo-babel-fees-pay-with-any-token.png",
+      "/infographics/ergo-babel-fees-pay-with-any-token.avif",
     imageAlt:
       "Infographic explaining Ergo Babel Fees: how users can pay transaction fees in any token while miners receive ERG through automated on-chain exchange.",
     publishDate: "2025-12-08T00:00:00.000Z",

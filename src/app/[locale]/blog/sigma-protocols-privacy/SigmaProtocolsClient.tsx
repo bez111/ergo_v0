@@ -300,7 +300,7 @@ export function SigmaProtocolsClient() {
               className="mb-12"
             >
               <ExpandableInfographic
-                src="/og/infographics/sigma-protocols-privacy.png"
+                src="/og/infographics/sigma-protocols-privacy.avif"
                 alt="Ergo & Sigma Protocols: The Next Step In Blockchain Privacy"
               />
             </motion.section>

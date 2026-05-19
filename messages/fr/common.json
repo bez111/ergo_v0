@@ -468,7 +468,9 @@
     "use_description": "Guides pratiques et tutoriels pour les utilisateurs",
     "ecosystem_description": "Projets, tableaux de bord et partenaires",
     "technology_description": "Concepts techniques fondamentaux et innovations d'Ergo",
-    "learn_description": "Ressources éducatives et matériaux d'apprentissage"
+    "learn_description": "Ressources éducatives et matériaux d'apprentissage",
+    "developer services": "Services développeurs",
+    "developer_services_description": "Faucet, inspecteur d’adresses, recherche tx/box, vérificateur de reçus, hasher et état des services."
   },
   "errors": {
     "network": {

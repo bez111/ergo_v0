@@ -107,6 +107,7 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 **Primary pages:**
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
 - ${BASE_URL}/build/agent-payments — Technical reference: primitives, code, SDK comparison
+- ${BASE_URL}/build/services — Developer workbench: faucet surface, inspectors, receipt verifier, hash tool, service status API
 - ${BASE_URL}/demos — testnet reference demos for agent payment and programmable credit flows
 - ${BASE_URL}/ergo-watch#agent-economy — runtime metrics surface; agent-economy counters remain prototype/status indicators until signed demo receipts are connected
 - ${BASE_URL}/blog/agent-economy-manifesto — canonical manifesto

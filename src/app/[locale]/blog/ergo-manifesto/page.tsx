@@ -13,7 +13,7 @@ const PATH = "/blog/ergo-manifesto"
 const SEO = {
   title: "The Ergo Manifesto: Ergonomic Money for Everyone",
   description: "The foundational vision of Ergo Platform by Kushti - creating decentralized financial tools that empower ordinary people. A manifesto for true peer-to-peer economic freedom.",
-  image: "/og/ergo-manifesto.png",
+  image: "/og/ergo-manifesto.jpg",
   keywords: [
     "ergo manifesto", "ergonomic money", "decentralized finance",
     "financial freedom", "cryptocurrency philosophy", "peer to peer",

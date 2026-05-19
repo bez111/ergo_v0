@@ -1,10 +1,11 @@
-import { blogPosts } from "./_lib/blog-data"
+import { getAllBlogPostsWithUploaded } from "./_lib/uploaded-posts"
 
 export default async function Head({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
   const sp = await searchParams
   const page = Math.max(1, Number(sp?.page ?? 1) || 1)
   const pageSize = 12
-  const total = blogPosts.filter((p) => !p.featured).length
+  const posts = await getAllBlogPostsWithUploaded()
+  const total = posts.filter((p) => !p.featured).length
   const last = Math.max(1, Math.ceil(total / pageSize))
   const base = "https://www.ergoblockchain.org/blog"
 
@@ -19,4 +20,4 @@ export default async function Head({ searchParams }: { searchParams: Promise<{ p
       {next && <link rel="next" href={next} />}
     </>
   )
-} 
+}

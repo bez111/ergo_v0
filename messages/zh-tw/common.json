@@ -468,7 +468,9 @@
     "use_description": "實用指南與使用者教程",
     "ecosystem_description": "專案、儀表板與合作夥伴",
     "technology_description": "Ergo 的核心技術概念與創新",
-    "learn_description": "教育資源與學習材料"
+    "learn_description": "教育資源與學習材料",
+    "developer services": "開發者服務",
+    "developer_services_description": "Faucet、地址檢查器、tx/box 查詢、收據驗證器、雜湊工具和服務狀態。"
   },
   "errors": {
     "network": {

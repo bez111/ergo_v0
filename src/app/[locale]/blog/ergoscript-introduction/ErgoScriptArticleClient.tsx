@@ -252,7 +252,7 @@ export default function ErgoScriptArticleClient() {
             {/* ErgoScript Infographic */}
             <section className="mb-12">
               <ExpandableInfographic
-                src="/og/infographics/ergoscript-introduction.png"
+                src="/og/infographics/ergoscript-introduction.avif"
                 alt="ErgoScript Explained: The Language of Secure Smart Contracts on Ergo"
               />
             </section>

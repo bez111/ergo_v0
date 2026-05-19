@@ -468,7 +468,9 @@
     "use_description": "Praktische Anleitungen und Benutzer-Tutorials",
     "ecosystem_description": "Projekte, Dashboards und Partner",
     "technology_description": "Zentrale technische Konzepte und Innovationen von Ergo",
-    "learn_description": "Bildungsressourcen und Lernmaterialien"
+    "learn_description": "Bildungsressourcen und Lernmaterialien",
+    "developer services": "Entwicklerdienste",
+    "developer_services_description": "Faucet-Oberfläche, Adressinspektor, Tx/Box-Suche, Receipt-Verifier, Hasher und Servicestatus."
   },
   "errors": {
     "network": {

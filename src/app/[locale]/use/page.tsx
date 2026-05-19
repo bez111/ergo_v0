@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: "ergoblockchain.org",
       title,
       description,
-      images: [{ url: "https://www.ergoblockchain.org/og/use/use.png", width: 1200, height: 630 }],
+      images: [{ url: "https://www.ergoblockchain.org/og/use/use.jpg", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      images: ["https://www.ergoblockchain.org/og/use/use.png"],
+      images: ["https://www.ergoblockchain.org/og/use/use.jpg"],
       ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
     },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },

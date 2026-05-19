@@ -15,7 +15,7 @@ interface Props {
 
 const SEO = {
   slug: "oracle-pools",
-  ogImage: "/og/technology/oracle-pools.png",
+  ogImage: "/og/technology/oracle-pools.jpg",
   keywords: [
     "Oracle Pools", "decentralized oracles", "price feeds", "DeFi oracles",
     "blockchain oracles", "Ergo oracles", "data feeds", "on-chain aggregation",

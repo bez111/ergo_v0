@@ -12,7 +12,7 @@ const SEO = {
   path: "/hodlers",
   title: "Hold ERG — Sound Money with No Pre-mine | Ergo",
   description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
-  ogImage: "/og/hubs/hodlers.png",
+  ogImage: "/og/hubs/hodlers.jpg",
   keywords: [
     "hold ERG", "Ergo investment", "sound money",
     "cryptocurrency holders", "Bitcoin alternative", "fair launch",

@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { useTranslations, useLocale } from "next-intl"
-import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
+import { blogPosts, type BlogPost } from "@/app/[locale]/blog/_lib/blog-data"
 
 // Map our app locales to Intl date locales
 const INTL_LOCALE: Record<string, string> = {
@@ -16,13 +16,13 @@ const INTL_LOCALE: Record<string, string> = {
   'zh-cn': 'zh-CN', 'zh-tw': 'zh-TW', tr: 'tr-TR',
 }
 
-export function BlogSectionHome() {
+export function BlogSectionHome({ posts = blogPosts }: { posts?: BlogPost[] }) {
   const t = useTranslations('blogSectionHome')
   const locale = useLocale()
   const intlLocale = INTL_LOCALE[locale] || 'en-US'
 
   // Get 3 latest posts (do not mutate original array)
-  const latestPosts = [...blogPosts]
+  const latestPosts = [...posts]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3)
 
@@ -53,27 +53,27 @@ export function BlogSectionHome() {
           {latestPosts.map((post) => {
             const cardImage =
               post.slug === "sigma-protocols-privacy"
-                ? "/og/sigma-protocols-privacy.png"
+                ? "/og/sigma-protocols-privacy.jpg"
                 : post.slug === "sigma-protocols-explained"
-                ? "/og/sigma-protocols-explained.png"
+                ? "/og/sigma-protocols-explained.jpg"
                 : post.slug === "ergo-in-5-minutes"
-                ? "/og/ergo-in-five-minutes.png"
+                ? "/og/ergo-in-five-minutes.jpg"
                 : post.slug === "ergo-manifesto"
-                ? "/og/ergo-manifesto.png"
+                ? "/og/ergo-manifesto.jpg"
                 : post.slug === "nipopows-explained"
-                ? "/og/nipopows-explained.png"
+                ? "/og/nipopows-explained.jpg"
                 : post.slug === "eutxo-vs-accounts"
-                ? "/og/eutxo-vs-accounts.png"
+                ? "/og/eutxo-vs-accounts.jpg"
                 : post.slug === "oracle-pools-explained"
-                ? "/og/oracle-pools-explained.png"
+                ? "/og/oracle-pools-explained.jpg"
                 : post.slug === "storage-rent"
-                ? "/og/storage-rent.png"
+                ? "/og/storage-rent.jpg"
                 : post.slug === "ergoscript-introduction"
-                ? "/og/ergoscript-introduction.png"
+                ? "/og/ergoscript-introduction.jpg"
                 : post.slug === "babel-fees"
-                ? "/og/babel-fees.png"
+                ? "/og/babel-fees.jpg"
                 : post.slug === "autolykos-proof-of-work"
-                ? "/og/autolykos-proof-of-work.png"
+                ? "/og/autolykos-proof-of-work.jpg"
                 : post.image
 
             return (

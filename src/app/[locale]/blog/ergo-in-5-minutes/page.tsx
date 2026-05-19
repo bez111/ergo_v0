@@ -11,7 +11,7 @@ const PATH = "/blog/ergo-in-5-minutes"
 const SEO = {
   title: "Ergo in 5 Minutes: Why It Matters & How It Works",
   description: "Proof-of-Work blockchain with eUTXO and Sigma protocols: fair launch (no ICO), privacy, Storage Rent, and the Ergo DeFi ecosystem.",
-  image: "/og/ergo-in-five-minutes.png",
+  image: "/og/ergo-in-five-minutes.jpg",
   keywords: [
     "ergo blockchain", "proof of work", "eutxo model",
     "sigma protocols", "ergoscript", "storage rent",

@@ -13,7 +13,7 @@ const SEO = {
   path: "/compare",
   title: "Ergo vs Bitcoin, Ethereum, Cardano — Full Comparison | Ergo",
   description: "Compare Ergo to Bitcoin, Ethereum, Cardano, Monero & more. Side-by-side analysis of consensus, smart contracts, privacy & tokenomics.",
-  ogImage: "/og/hubs/compare.png",
+  ogImage: "/og/hubs/compare.jpg",
   keywords: [
     "ergo comparison", "ergo vs bitcoin", "ergo vs ethereum",
     "blockchain comparison", "ergo vs cardano", "ergo vs monero",

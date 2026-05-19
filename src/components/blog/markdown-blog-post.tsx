@@ -23,7 +23,7 @@ import { siteConfig } from "@/config/site-config"
  * Anything missing falls back to a sensible default — fields are tolerant
  * because the markdown drafts come from outside the codebase.
  */
-interface ArticleFrontMatter {
+export interface ArticleFrontMatter {
   title?: string
   slug?: string
   seo_title?: string
@@ -239,12 +239,17 @@ function extractTldr(body: string): { tldr: { title: string; body: string }[]; b
   return { tldr: items, bodyWithoutTldr: bodyWithoutTldr.trim() }
 }
 
-async function markdownToHtml(md: string): Promise<string> {
+async function markdownToHtml(md: string, options: { trusted?: boolean } = {}): Promise<string> {
   const file = await remark()
     .use(remarkGfm)
-    .use(remarkHtml, { sanitize: false })
+    .use(remarkHtml, { sanitize: (options.trusted ?? true) ? false : true })
     .process(md)
   return wrapH2Sections(wrapTables(addHeadingAnchors(String(file))))
+}
+
+export interface LoadedMarkdownArticle {
+  frontMatter: ArticleFrontMatter
+  body: string
 }
 
 export interface MarkdownBlogPostProps {
@@ -252,16 +257,26 @@ export interface MarkdownBlogPostProps {
   slug: string
   /** Locale segment for canonical / breadcrumb URLs. */
   locale: string
-  /** Optional cover image — defaults to /og/blog/<slug>.png if present. */
+  /** Optional cover image — defaults to /og/blog/<slug>.jpg if present. */
   heroImage?: string
+  /** Optional already-loaded article, used by Blob-backed CMS posts. */
+  article?: LoadedMarkdownArticle
+  /** Static repo markdown is trusted; uploaded markdown is sanitized. */
+  trusted?: boolean
 }
 
-export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlogPostProps) {
-  const { frontMatter, body } = await loadArticle(slug, locale)
+export async function MarkdownBlogPost({
+  slug,
+  locale,
+  heroImage,
+  article,
+  trusted = true,
+}: MarkdownBlogPostProps) {
+  const { frontMatter, body } = article ?? await loadArticle(slug, locale)
   const cleaned = stripLeadingH1(stripAuthoringMeta(body))
   const { faq, bodyWithoutFaq } = extractFaq(cleaned)
   const { tldr, bodyWithoutTldr } = extractTldr(bodyWithoutFaq)
-  const bodyHtml = await markdownToHtml(bodyWithoutTldr)
+  const bodyHtml = await markdownToHtml(bodyWithoutTldr, { trusted })
   // TOC reflects the post-extraction body (no TL;DR / FAQ in it).
   const tocItems = buildToc(bodyWithoutTldr)
 
@@ -270,7 +285,7 @@ export async function MarkdownBlogPost({ slug, locale, heroImage }: MarkdownBlog
   const description = frontMatter.meta_description ?? frontMatter.excerpt ?? ""
   const datePublished = frontMatter.date_published
   const dateModified = frontMatter.date_modified ?? datePublished
-  const cover = heroImage ?? `/og/blog/${slug}.png`
+  const cover = heroImage ?? `/og/blog/${slug}.jpg`
 
   const schemas = [
     createBreadcrumbSchema(

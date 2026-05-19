@@ -20,6 +20,11 @@ export const mainNavItems = [
         description: "Compile ErgoScript in the browser with Monaco, Fleet compiler, and sigma-rust WASM.",
       },
       {
+        title: "Developer Services",
+        href: "/build/services",
+        description: "Faucet surface, address inspector, tx/box lookup, receipt verifier, hasher, and service status.",
+      },
+      {
         title: "Demos",
         href: "/demos",
         description: "Three working flows on Ergo testnet: API call payment, credit system, community reserve.",

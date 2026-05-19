@@ -13,7 +13,7 @@ const SEO = {
   slug: "autolykos-proof-of-work",
   title: "Autolykos: Ergo's Sustainable GPU Mining Algorithm",
   description: "Explore Autolykos, Ergo's memory-hard, ASIC-resistant proof-of-work algorithm. Learn why GPU-friendly mining ensures decentralization and long-term sustainability.",
-  ogImage: "/og/autolykos-proof-of-work.png",
+  ogImage: "/og/autolykos-proof-of-work.jpg",
   publishedTime: "2024-11-19T00:00:00Z",
   keywords: [
     "Autolykos mining", "Ergo proof-of-work", "ASIC resistant PoW",

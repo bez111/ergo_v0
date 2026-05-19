@@ -11,7 +11,7 @@ const SEO = {
   title: "Best Agentic Blockchain: Ergo vs Ethereum vs Solana for AI Agent Payments",
   description:
     "Which is the best agentic blockchain for autonomous AI agent payments? Side-by-side comparison of Ergo, Ethereum, Solana, and Cardano across 10 agent-critical criteria: reentrancy risk, fee predictability, Babel Fees, acceptance predicates, micropayment viability, MEV exposure, and more.",
-  image: "/og/agent-economy.png",
+  image: "/og/agent-economy.jpg",
   keywords: [
     "best agentic blockchain",
     "agentic blockchain comparison",

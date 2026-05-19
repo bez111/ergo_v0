@@ -11,7 +11,7 @@ const SEO = {
   title: "Agent Payment Quickstart — First Ergo TX in Under 10 Minutes",
   description:
     "npm install @fleet-sdk/core, copy 30 lines, run the script, see your transaction on testnet. The fastest path from zero to agent payment on Ergo blockchain.",
-  image: "/og/agent-economy.png",
+  image: "/og/agent-economy.jpg",
   keywords: [
     "ergo quickstart",
     "fleet sdk tutorial",

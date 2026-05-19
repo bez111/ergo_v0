@@ -13,7 +13,7 @@ const SEO = {
   slug: "babel-fees",
   title: "Babel Fees: Pay Ergo Transaction Fees in Any Token",
   description: "Learn how Ergo's Babel Fees let users pay transaction fees in any token they hold. Miners still receive ERG through on-chain Babel boxes — true gas abstraction.",
-  ogImage: "/og/babel-fees.png",
+  ogImage: "/og/babel-fees.jpg",
   publishedTime: "2024-11-18T00:00:00Z",
   keywords: [
     "Babel Fees", "pay gas in any token", "Ergo gas abstraction",

@@ -15,6 +15,7 @@ import { PerformanceOptimizations } from "@/components/seo/performance-optimizat
 import { ScopedMessagesProvider } from "@/components/i18n/scoped-messages-provider"
 import { siteConfig } from '@/config/site-config';
 import type { Locale } from '@/i18n/request';
+import { getAllBlogPostsWithUploaded } from './blog/_lib/uploaded-posts';
 
 // Lazy-load below-the-fold components for better LCP
 const BuildForScale = dynamic(() => import("@/components/home/build-for-scale").then(mod => mod.BuildForScale), {
@@ -87,7 +88,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       type: "website",
       locale: locale === 'ru' ? 'ru_RU' : 'en_US',
       images: [{
-        url: "https://www.ergoblockchain.org/og/homepage.png",
+        url: "https://www.ergoblockchain.org/og/homepage.jpg",
         width: 1200,
         height: 630,
         alt: t('og.imageAlt')
@@ -97,7 +98,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       card: "summary_large_image",
       title: t('twitter.title'),
       description: t('twitter.description'),
-      images: ["https://www.ergoblockchain.org/og/homepage.png"],
+      images: ["https://www.ergoblockchain.org/og/homepage.jpg"],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle
     }
@@ -107,6 +108,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'seo.home' });
+  const homeBlogPosts = await getAllBlogPostsWithUploaded();
 
   // FAQ data for schema - commercially important questions (localized)
   const faqData = [
@@ -170,7 +172,7 @@ export default async function HomePage({ params }: HomePageProps) {
           <AgentEconomySection />
           <MadeForMassAdoption />
           <PoweredByErgo />
-          <BlogSectionHome />
+          <BlogSectionHome posts={homeBlogPosts} />
           <JoinCommunity />
           <FAQSimple />
           <FinalCTASimple />

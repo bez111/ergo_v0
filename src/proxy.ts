@@ -117,8 +117,8 @@ function normalizePathname(pathname: string): string {
 
 export const config = {
   // Match app routes while excluding APIs, Next internals, Vercel internals,
-  // and static assets with file extensions.
+  // admin routes, and static assets with file extensions.
   matcher: [
-    '/((?!api|_next|_vercel|.*\\..*).*)'
+    '/((?!api|admin|_next|_vercel|.*\\..*).*)'
   ]
 };

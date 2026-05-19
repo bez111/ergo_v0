@@ -1,5 +1,6 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { timingSafeEqual } from 'node:crypto'
 import { version } from '@/lib/version'
 import { NextResponse } from 'next/server'
 
@@ -53,7 +54,7 @@ async function checkExternalAPIs(): Promise<boolean> {
       fetch('https://api.github.com/rate_limit', { signal: AbortSignal.timeout(3000) }),
       // Добавьте другие критичные API
     ])
-    
+
     return checks.every(result => result.status === 'fulfilled')
   } catch (error) {
     if (process.env.NODE_ENV === 'development') console.error('External API health check failed:', error)
@@ -61,12 +62,40 @@ async function checkExternalAPIs(): Promise<boolean> {
   }
 }
 
-export async function GET(_request: Request) {
+export async function GET(request: Request) {
+  const url = new URL(request.url)
+  const wantsDetails = url.searchParams.get('detail') === '1' || url.searchParams.get('details') === '1'
+  if (!wantsDetails) {
+    return NextResponse.json(
+      {
+        ok: true,
+        status: 'healthy',
+        service: 'ergo-platform',
+        timestamp: new Date().toISOString(),
+      },
+      {
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+        },
+      },
+    )
+  }
+
+  if (!isObservabilityAuthorized(request)) {
+    return NextResponse.json(
+      { error: 'not found' },
+      {
+        status: 404,
+        headers: { 'Cache-Control': 'no-store' },
+      },
+    )
+  }
+
   const startTime = Date.now()
-  
+
   // Получаем uptime процесса
   const uptime = process.uptime()
-  
+
   // Базовая информация о здоровье
   const health: HealthStatus = {
     status: 'healthy',
@@ -79,21 +108,21 @@ export async function GET(_request: Request) {
       cpuUsage: process.cpuUsage()
     }
   }
-  
+
   // Выполняем проверки
   const checks = [
     { name: 'database', check: checkDatabase },
     { name: 'redis', check: checkRedis },
     { name: 'external_apis', check: checkExternalAPIs }
   ]
-  
+
   // Параллельное выполнение всех проверок
   const results = await Promise.allSettled(
     checks.map(async ({ name, check }) => {
       const checkStart = Date.now()
       const result = await check()
       const responseTime = Date.now() - checkStart
-      
+
       return {
         name,
         status: result ? 'pass' : 'fail',
@@ -101,11 +130,11 @@ export async function GET(_request: Request) {
       }
     })
   )
-  
+
   // Обработка результатов
   let hasFailures = false
   let hasWarnings = false
-  
+
   results.forEach((result, index) => {
     if (result.status === 'fulfilled') {
       const { name, status, responseTime } = result.value
@@ -113,7 +142,7 @@ export async function GET(_request: Request) {
         status: status as 'pass' | 'fail',
         responseTime
       }
-      
+
       if (status === 'fail') {
         hasFailures = true
       } else if (responseTime && responseTime > 1000) {
@@ -133,17 +162,17 @@ export async function GET(_request: Request) {
       }
     }
   })
-  
+
   // Проверка памяти - корректная формула для реального использования
   const heapUsed = health.metrics?.memoryUsage.heapUsed || 0
   const heapTotal = health.metrics?.memoryUsage.heapTotal || 0
   const rss = health.metrics?.memoryUsage.rss || 0
-  
+
   // Используем RSS (Resident Set Size) для более точной оценки
   const maxMemory = 1024 * 1024 * 1024 // 1GB limit
   const memoryUsagePercent = (rss / maxMemory) * 100
   const heapPercent = (heapUsed / heapTotal) * 100
-  
+
   if (rss > maxMemory * 0.9) {
     health.checks['memory'] = {
       status: 'fail',
@@ -162,21 +191,21 @@ export async function GET(_request: Request) {
       message: `Memory normal: RSS ${(rss / 1024 / 1024).toFixed(0)}MB (${memoryUsagePercent.toFixed(1)}%), Heap ${heapPercent.toFixed(1)}%`
     }
   }
-  
+
   // Определяем общий статус
   if (hasFailures) {
     health.status = 'unhealthy'
   } else if (hasWarnings) {
     health.status = 'degraded'
   }
-  
+
   // Общее время выполнения проверки
   const totalTime = Date.now() - startTime
-  
+
   // Определяем HTTP статус код
-  const statusCode = health.status === 'healthy' ? 200 : 
+  const statusCode = health.status === 'healthy' ? 200 :
                      health.status === 'degraded' ? 200 : 503
-  
+
   return NextResponse.json(health, {
     status: statusCode,
     headers: {
@@ -189,4 +218,23 @@ export async function GET(_request: Request) {
 // Liveness probe - простая проверка что сервис жив
 export async function HEAD() {
   return new NextResponse(null, { status: 200 })
-} 
+}
+
+function isObservabilityAuthorized(request: Request): boolean {
+  const expected = process.env.OBSERVABILITY_TOKEN || process.env.METRICS_TOKEN
+  if (!expected && process.env.NODE_ENV !== 'production') return true
+  if (!expected) return false
+
+  const authorization = request.headers.get('authorization') ?? ''
+  const bearer = authorization.toLowerCase().startsWith('bearer ')
+    ? authorization.slice(7).trim()
+    : ''
+  const headerToken = request.headers.get('x-observability-token')?.trim() ?? ''
+  return constantTimeEquals(bearer, expected) || constantTimeEquals(headerToken, expected)
+}
+
+function constantTimeEquals(actual: string, expected: string): boolean {
+  const actualBuffer = Buffer.from(actual)
+  const expectedBuffer = Buffer.from(expected)
+  return actualBuffer.length === expectedBuffer.length && timingSafeEqual(actualBuffer, expectedBuffer)
+}

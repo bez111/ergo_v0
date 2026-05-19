@@ -8,6 +8,7 @@ import { createBreadcrumbSchema, createTechArticleSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { getScopedMessages } from "@/lib/messages"
 import type { Locale } from "@/i18n/request"
+import { selectPrebuildParams } from "@/lib/build-surface"
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>
@@ -20,7 +21,7 @@ function getLocalizedPatternBySlug(slug: string, translations?: PatternsTranslat
 }
 
 export async function generateStaticParams() {
-  return devPatterns.map((pattern) => ({ slug: pattern.slug }))
+  return selectPrebuildParams("patterns", devPatterns, (pattern) => ({ slug: pattern.slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: pattern.seoDescription,
       url: `${siteConfig.siteUrl}/patterns/${slug}`,
       type: "article",
-      images: [{ url: `${siteConfig.siteUrl}/og/patterns/${slug}.png`, width: 1200, height: 630 }]
+      images: [{ url: `${siteConfig.siteUrl}/og/hubs/pattern.jpg`, width: 1200, height: 630 }]
     },
     twitter: {
       card: "summary_large_image",

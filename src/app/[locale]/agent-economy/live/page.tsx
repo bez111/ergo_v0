@@ -24,7 +24,7 @@ export async function generateMetadata({
       siteName: "Ergo Blockchain",
       images: [
         {
-          url: `${BASE_URL}/og/agent-economy.png`,
+          url: `${BASE_URL}/og/agent-economy.jpg`,
           width: 1200,
           height: 630,
           alt: "Ergo Agent Economy live cockpit",
@@ -37,7 +37,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: "Ergo Agent Economy Live Hub",
       description: "Sage receipts, Accord, MCP and ErgoScript status in one live cockpit.",
-      images: [`${BASE_URL}/og/agent-economy.png`],
+      images: [`${BASE_URL}/og/agent-economy.jpg`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
     },

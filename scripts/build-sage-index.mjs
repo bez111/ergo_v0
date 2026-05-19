@@ -41,7 +41,7 @@ function chunkText(text, maxWords = MAX_WORDS_PER_CHUNK, overlap = CHUNK_OVERLAP
 function stripMarkdown(md) {
   return md
     .replace(/```[\s\S]*?```/g, " ")
-    .replace(/`[^`]*`/g, " ")
+    .replace(/`([^`]*)`/g, "$1")
     .replace(/!\[[^\]]*\]\([^)]+\)/g, " ")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/^#+\s*/gm, "")
@@ -49,6 +49,16 @@ function stripMarkdown(md) {
     .replace(/^\s*[-*+]\s+/gm, "")
     .replace(/\s+/g, " ")
     .trim()
+}
+
+function stripAuthoringMeta(md) {
+  const cuts = ["## Article JSON-LD draft", "## Source notes"]
+  let out = md
+  for (const heading of cuts) {
+    const idx = out.indexOf(heading)
+    if (idx >= 0) out = out.slice(0, idx).trimEnd()
+  }
+  return out
 }
 
 const docs = []
@@ -62,7 +72,7 @@ for (const file of readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"))) {
   const title = data.title || data.seo_title || slug
   const tags = Array.isArray(data.tags) ? data.tags.join(", ") : ""
 
-  const cleanText = stripMarkdown(content)
+  const cleanText = stripMarkdown(stripAuthoringMeta(content))
   const chunks = chunkText(cleanText)
 
   for (const [i, chunk] of chunks.entries()) {

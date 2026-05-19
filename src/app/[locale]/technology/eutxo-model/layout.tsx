@@ -15,7 +15,7 @@ interface Props {
 
 const SEO = {
   slug: "eutxo-model",
-  ogImage: "/og/technology/eutxo-vs-accounts.png",
+  ogImage: "/og/technology/eutxo-vs-accounts.jpg",
   keywords: [
     "eUTXO", "Extended UTXO", "UTXO model", "parallel execution",
     "agentic blockchain", "eUTXO AI agents", "agentic blockchain eUTXO",

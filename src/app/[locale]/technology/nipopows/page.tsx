@@ -178,7 +178,7 @@ export default function NIPOPOWsPage() {
           "@id": "https://www.ergoblockchain.org/technology/nipopows#article",
           headline: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) on Ergo — Light Clients & Cross-Chain",
           description: "Verify Ergo on mobile/web with compact PoW proofs. NIPoPoWs enable light clients, bridges, and efficient oracles.",
-          image: "https://www.ergoblockchain.org/og/nipopows.png",
+          image: "https://www.ergoblockchain.org/og/nipopows-explained.jpg",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
           mainEntityOfPage: "https://www.ergoblockchain.org/technology/nipopows",

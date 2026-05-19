@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "/og/technology.png",
+          url: "/og/technology.jpg",
           width: 1200,
           height: 630,
           alt: t("ogAlt"),
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t("twitterTitle"),
       description: t("twitterDescription"),
-      images: ["/og/technology.png"],
+      images: ["/og/technology.jpg"],
     },
   };
 }
@@ -54,7 +54,7 @@ export default async function TechnologyMapPage({ params }: Props) {
     "@id": "https://www.ergoblockchain.org/technology/map",
     "headline": t("title"),
     "description": t("subtitle"),
-    "image": "https://www.ergoblockchain.org/og/technology-map.png",
+    "image": "https://www.ergoblockchain.org/og/technology.jpg",
     "datePublished": "2024-12-15",
     "dateModified": new Date().toISOString().split('T')[0],
     "author": {

@@ -55,7 +55,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: SEO.description,
       url: learnUrl,
       siteName: "Ergo Platform",
-      images: [{ url: `${siteConfig.siteUrl}/og/hubs/learn.png`, width: 1200, height: 630, alt: "Ergo Learn — Build with Sigma Protocols" }],
+      images: [{ url: `${siteConfig.siteUrl}/og/hubs/learn.jpg`, width: 1200, height: 630, alt: "Ergo Learn — Build with Sigma Protocols" }],
       type: "website",
       locale: "en_US"
     },
@@ -63,7 +63,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: SEO.title,
       description: SEO.description,
-      images: [`${siteConfig.siteUrl}/og/hubs/learn.png`],
+      images: [`${siteConfig.siteUrl}/og/hubs/learn.jpg`],
       site: "@ergoplatform",
       creator: "@ergoplatform"
     },

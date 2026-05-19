@@ -171,7 +171,7 @@ export function ErgoManifestoClient() {
             className="mb-16"
           >
             <ExpandableInfographic
-              src="/og/infographics/ergo-manifesto.png"
+              src="/og/infographics/ergo-manifesto.avif"
               alt="The Ergo Manifesto: Building Ergonomic Money for Regular People"
             />
           </motion.section>

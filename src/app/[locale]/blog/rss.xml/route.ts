@@ -1,9 +1,10 @@
 import { siteConfig } from '@/config/site-config'
-import { blogPosts } from '../_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '../_lib/uploaded-posts'
 
 export async function GET() {
   const baseUrl = siteConfig.siteUrl
   const buildDate = new Date().toUTCString()
+  const posts = await getAllBlogPostsWithUploaded()
   
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" 
@@ -28,7 +29,7 @@ export async function GET() {
     <managingEditor>contact@ergoplatform.org (Ergo Team)</managingEditor>
     <webMaster>contact@ergoplatform.org (Ergo Team)</webMaster>
     <ttl>60</ttl>
-${blogPosts
+${posts
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 50) // Last 50 posts
   .map(post => {
@@ -44,7 +45,7 @@ ${blogPosts
       <dc:creator><![CDATA[${post.author.name}]]></dc:creator>
       <category><![CDATA[${post.category}]]></category>
       ${post.tags?.map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ') || ''}
-      ${post.image ? `<enclosure url="${baseUrl}${post.image}" type="${post.image.endsWith('.png') ? 'image/png' : post.image.endsWith('.svg') ? 'image/svg+xml' : 'image/jpeg'}"/>` : ''}
+      ${post.image ? `<enclosure url="${absolutize(baseUrl, post.image)}" type="${post.image.endsWith('.png') ? 'image/png' : post.image.endsWith('.svg') ? 'image/svg+xml' : 'image/jpeg'}"/>` : ''}
       <content:encoded><![CDATA[
         <p>${post.excerpt}</p>
         <p>By ${post.author.name}${post.author.role ? ` - ${post.author.role}` : ''}</p>
@@ -64,3 +65,7 @@ ${blogPosts
   })
 }
 
+function absolutize(baseUrl: string, url: string): string {
+  if (/^https?:\/\//i.test(url)) return url
+  return `${baseUrl}${url.startsWith('/') ? url : `/${url}`}`
+}

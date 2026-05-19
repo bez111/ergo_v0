@@ -252,7 +252,7 @@ export async function generateMetadata({
       siteName: "Ergo Blockchain",
       images: [
         {
-          url: `${BASE_URL}/og/agent-economy.png`,
+          url: `${BASE_URL}/og/agent-economy.jpg`,
           width: 1200,
           height: 630,
           alt: "Ergo Watch metrics dashboard",
@@ -265,7 +265,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: "Ergo Watch",
       description: "Live Ergo network metrics and agent-economy analytics.",
-      images: [`${BASE_URL}/og/agent-economy.png`],
+      images: [`${BASE_URL}/og/agent-economy.jpg`],
     },
   }
 }

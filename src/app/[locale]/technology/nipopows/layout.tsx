@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "nipopows",
-  ogImage: "/og/technology/nipopows-explained.png",
+  ogImage: "/og/technology/nipopows-explained.jpg",
   keywords: [
     "NIPoPoWs", "Non-Interactive Proofs of Proof-of-Work", "light clients",
     "mobile wallet", "cross-chain bridges", "blockchain interoperability",

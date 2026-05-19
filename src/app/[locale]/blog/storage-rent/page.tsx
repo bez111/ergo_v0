@@ -13,7 +13,7 @@ const SEO = {
   slug: "storage-rent",
   title: "How Ergo's Storage Rent Solves Blockchain State Bloat",
   description: "Ergo's storage rent charges small fees on dormant accounts, clearing dust and keeping blockchain state manageable. Learn how this ensures long-term sustainability.",
-  ogImage: "/og/storage-rent.png",
+  ogImage: "/og/storage-rent.jpg",
   publishedTime: "2024-11-14T00:00:00Z",
   keywords: [
     "storage rent", "blockchain state bloat", "ergo demurrage",

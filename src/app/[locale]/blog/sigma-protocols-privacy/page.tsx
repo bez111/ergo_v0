@@ -11,7 +11,7 @@ const PATH = "/blog/sigma-protocols-privacy"
 const SEO = {
   title: "Ergo And Sigma Protocols: The Next Step In Blockchain Privacy",
   description: "As first-gen privacy coins see a resurgence of activity, Ergo's composable zero-knowledge signatures offer new options for compliant confidentiality.",
-  image: "/og/sigma-protocols-privacy.png",
+  image: "/og/sigma-protocols-privacy.jpg",
   keywords: [
     "sigma protocols", "blockchain privacy", "zero knowledge proofs",
     "ergo privacy", "privacy coins", "confidential transactions",

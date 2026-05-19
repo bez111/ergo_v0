@@ -56,7 +56,7 @@ export async function generateMetadata({
       siteName: "Ergo Blockchain",
       images: [
         {
-          url: `${BASE_URL}/og/agent-payments.png`,
+          url: `${BASE_URL}/og/agent-payments.jpg`,
           width: 1200,
           height: 630,
           alt: "Ergo Agent Payment Architecture — Reserve, Note, Tracker, Predicate",
@@ -70,7 +70,7 @@ export async function generateMetadata({
       title: "Agent Payment Stack — Technical Architecture",
       description:
         "Reserve → Note → Tracker → Acceptance Predicate. The reference architecture for agent payments on Ergo.",
-      images: [`${BASE_URL}/og/agent-payments.png`],
+      images: [`${BASE_URL}/og/agent-payments.jpg`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
     },

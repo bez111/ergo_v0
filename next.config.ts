@@ -36,6 +36,12 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'], // AVIF приоритет для лучшего сжатия
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.public.blob.vercel-storage.com',
+      },
+    ],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 год для статичных изображений
     dangerouslyAllowSVG: true, // Разрешить SVG для placeholder изображений
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",

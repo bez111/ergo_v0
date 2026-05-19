@@ -1,4 +1,4 @@
-import { ArrowRight, Code2, Play, ReceiptText, TerminalSquare } from "lucide-react"
+import { ArrowRight, Code2, Play, ReceiptText, ServerCog, TerminalSquare } from "lucide-react"
 import { Link } from "@/i18n/navigation"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
@@ -25,6 +25,13 @@ const buildTools = [
     icon: ReceiptText,
     label: "Inspect flow",
   },
+  {
+    title: "Developer Services",
+    description: "Use the faucet surface, address inspector, box/tx lookup, receipt verifier, hasher, and service index.",
+    href: "/build/services",
+    icon: ServerCog,
+    label: "Open workbench",
+  },
 ]
 
 export default function BuildIndexPage() {
@@ -49,7 +56,7 @@ export default function BuildIndexPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-5 md:grid-cols-3">
+            <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {buildTools.map((tool) => (
                 <Link
                   key={tool.href}

@@ -468,7 +468,9 @@
     "use_description": "실용적인 가이드 및 사용자 방법 안내",
     "ecosystem_description": "프로젝트, 대시보드 및 파트너",
     "technology_description": "Ergo의 핵심 기술 개념과 혁신",
-    "learn_description": "교육 리소스 및 학습 자료"
+    "learn_description": "교육 리소스 및 학습 자료",
+    "developer services": "개발자 서비스",
+    "developer_services_description": "Faucet, 주소 검사기, tx/box 조회, 영수증 검증기, 해시 도구, 서비스 상태."
   },
   "errors": {
     "network": {

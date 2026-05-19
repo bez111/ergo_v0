@@ -6,7 +6,7 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "nfts",
-  ogImage: "/og/use/og-nfts.png",
+  ogImage: "/og/use/og-nfts.jpg",
   canonicalPath: "/use/nfts",
 }
 

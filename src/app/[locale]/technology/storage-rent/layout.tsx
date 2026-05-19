@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "storage-rent",
-  ogImage: "/og/technology/storage-rent.png",
+  ogImage: "/og/technology/storage-rent.jpg",
   keywords: [
     "storage rent", "state bloat", "blockchain sustainability",
     "demurrage", "Ergo tokenomics", "lost coins recovery",

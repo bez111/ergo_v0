@@ -254,7 +254,7 @@ export default function AutolykosArticleClient() {
             {/* Autolykos Infographic */}
             <section className="mb-12">
               <ExpandableInfographic
-                src="/og/infographics/autolykos-proof-of-work.png"
+                src="/og/infographics/autolykos-proof-of-work.avif"
                 alt="Autolykos: Ergo's Memory-Hard Proof-of-Work Algorithm"
               />
             </section>

@@ -2,7 +2,6 @@ import {
   validateAgreement,
   validateSettlementReceipt,
   validateVerificationReceipt,
-  type AccordAgreement,
   type AccordSettlementReceipt,
   type AccordVerificationReceipt,
   type ValidationResult,

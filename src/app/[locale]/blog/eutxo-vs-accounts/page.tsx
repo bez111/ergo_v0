@@ -11,7 +11,7 @@ const PATH = "/blog/eutxo-vs-accounts"
 const SEO = {
   title: "Two Blockchain Models: Why Ergo Chose Differently",
   description: "Deterministic execution, explicit state transitions, and auditable privacy patterns — how Ergo's eUTXO model differs from Ethereum's account model for secure, scalable DeFi.",
-  image: "/og/eutxo-vs-accounts.png",
+  image: "/og/eutxo-vs-accounts.jpg",
   keywords: [
     "ergo blockchain", "eutxo model", "ethereum accounts",
     "smart contracts", "ergoscript", "blockchain comparison",

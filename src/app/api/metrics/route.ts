@@ -1,5 +1,6 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { timingSafeEqual } from 'node:crypto'
 import { NextResponse } from 'next/server'
 import { register, collectDefaultMetrics, Counter, Histogram, Gauge } from 'prom-client'
 
@@ -75,6 +76,9 @@ const searchQueries = new Counter({
   labelNames: ['type']
 })
 
+const MAX_METRICS_BODY_BYTES = 32 * 1024
+const LABEL_RE = /^[a-zA-Z0-9_./:-]{1,120}$/
+
 // Функция для записи метрик (вызывается из middleware)
 // Перенесена в lib/metrics-utils.ts
 function recordMetrics(
@@ -85,7 +89,7 @@ function recordMetrics(
 ) {
   httpRequestsTotal.labels(method, route, String(status)).inc()
   httpRequestDuration.labels(method, route, String(status)).observe(duration)
-  
+
   // Обновляем error rate
   if (status >= 500) {
     errorRate.labels('5xx').inc()
@@ -107,16 +111,18 @@ function recordWebVitals(metrics: {
 }
 
 // API endpoint для Prometheus
-export async function GET() {
+export async function GET(request: Request) {
+  if (!isObservabilityAuthorized(request)) return hiddenObservabilityResponse()
+
   try {
     // Симуляция текущих метрик (в реальности берутся из системы)
     activeConnections.set(Math.floor(Math.random() * 100) + 50)
     cacheHitRate.labels('cdn').set(Math.random() * 100)
     cacheHitRate.labels('redis').set(Math.random() * 100)
-    
+
     // Получаем все метрики
     const metrics = await register.metrics()
-    
+
     return new NextResponse(metrics, {
       headers: {
         'Content-Type': register.contentType,
@@ -134,27 +140,41 @@ export async function GET() {
 
 // Health check endpoint
 export async function POST(request: Request) {
+  if (!isObservabilityAuthorized(request)) return hiddenObservabilityResponse()
+
   try {
-    const data = await request.json()
-    
+    const length = Number(request.headers.get('content-length') ?? '0')
+    if (Number.isFinite(length) && length > MAX_METRICS_BODY_BYTES) {
+      return NextResponse.json({ error: 'Metrics payload too large' }, { status: 413 })
+    }
+
+    const text = await request.text()
+    if (text.length > MAX_METRICS_BODY_BYTES) {
+      return NextResponse.json({ error: 'Metrics payload too large' }, { status: 413 })
+    }
+    const data = JSON.parse(text)
+
     // Записываем Web Vitals если они переданы
     if (data.webVitals) {
       recordWebVitals(data.webVitals)
     }
-    
+
     // Записываем другие метрики
     if (data.pageView) {
-      pageViews.labels(data.pageView).inc()
+      pageViews.labels(safeLabel(data.pageView, 'unknown')).inc()
     }
-    
+
     if (data.apiCall) {
-      apiCallsTotal.labels(data.apiCall.endpoint, data.apiCall.status).inc()
+      apiCallsTotal.labels(
+        safeLabel(data.apiCall.endpoint, 'unknown'),
+        safeLabel(data.apiCall.status, 'unknown'),
+      ).inc()
     }
-    
+
     if (data.search) {
-      searchQueries.labels(data.search.type).inc()
+      searchQueries.labels(safeLabel(data.search.type, 'unknown')).inc()
     }
-    
+
     return NextResponse.json({ success: true })
   } catch {
     return NextResponse.json(
@@ -162,4 +182,39 @@ export async function POST(request: Request) {
       { status: 500 }
     )
   }
-} 
+}
+
+function safeLabel(value: unknown, fallback: string): string {
+  if (typeof value !== 'string') return fallback
+  const trimmed = value.trim()
+  return LABEL_RE.test(trimmed) ? trimmed : fallback
+}
+
+function isObservabilityAuthorized(request: Request): boolean {
+  const expected = process.env.OBSERVABILITY_TOKEN || process.env.METRICS_TOKEN
+  if (!expected && process.env.NODE_ENV !== 'production') return true
+  if (!expected) return false
+
+  const authorization = request.headers.get('authorization') ?? ''
+  const bearer = authorization.toLowerCase().startsWith('bearer ')
+    ? authorization.slice(7).trim()
+    : ''
+  const headerToken = request.headers.get('x-observability-token')?.trim() ?? ''
+  return constantTimeEquals(bearer, expected) || constantTimeEquals(headerToken, expected)
+}
+
+function constantTimeEquals(actual: string, expected: string): boolean {
+  const actualBuffer = Buffer.from(actual)
+  const expectedBuffer = Buffer.from(expected)
+  return actualBuffer.length === expectedBuffer.length && timingSafeEqual(actualBuffer, expectedBuffer)
+}
+
+function hiddenObservabilityResponse(): NextResponse {
+  return NextResponse.json(
+    { error: 'not found' },
+    {
+      status: 404,
+      headers: { 'Cache-Control': 'no-store' },
+    },
+  )
+}

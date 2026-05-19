@@ -23,7 +23,7 @@ export function GuideCard({ guide, index }: GuideCardProps) {
       <Link href={`/use/guides/${guide.slug}`}>
         <div className="relative">
           <Image
-            src={guide.image || "/og/intro.png"}
+            src={guide.image || "/og/intro.jpg"}
             alt={guide.title}
             width={400}
             height={200}

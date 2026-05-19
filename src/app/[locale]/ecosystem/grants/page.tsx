@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: getCanonicalUrl('/ecosystem/grants', locale),
       siteName: "Ergo Platform",
       images: [{
-        url: "https://www.ergoblockchain.org/og/grants.png",
+        url: "https://www.ergoblockchain.org/og/grants.jpg",
         width: 1200,
         height: 630,
         alt: "Ergo Grants Program"
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: ["https://www.ergoblockchain.org/og/grants.png"],
+      images: ["https://www.ergoblockchain.org/og/grants.jpg"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
     },

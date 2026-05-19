@@ -10,7 +10,7 @@ export async function getMetadata() {
       siteName: "Ergo Blockchain",
       type: "website",
       images: [{
-        url: "https://www.ergoblockchain.org/og/start.png",
+        url: "https://www.ergoblockchain.org/og/start.jpg",
         width: 1200,
         height: 630,
         alt: "Get Started with Ergo Blockchain"
@@ -20,7 +20,7 @@ export async function getMetadata() {
       card: "summary_large_image",
       title: "Get Started with Ergo Blockchain",
       description: "Download wallet, buy ERG, send transactions. Complete beginner's guide.",
-      images: ["https://www.ergoblockchain.org/og/start.png"],
+      images: ["https://www.ergoblockchain.org/og/start.jpg"],
       creator: "@ergoblockchain",
       site: "@ergoblockchain"
     }

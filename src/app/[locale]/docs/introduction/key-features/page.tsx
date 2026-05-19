@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     url: 'https://www.ergoblockchain.org/docs/introduction/key-features',
     siteName: 'Ergo Platform',
     images: [{
-      url: 'https://www.ergoblockchain.org/og/ergo-features.png',
+      url: 'https://www.ergoblockchain.org/og/ergo-features.jpg',
       width: 1200,
       height: 630,
       alt: 'Ergo Key Features'
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ergo Key Features - Next-Gen Blockchain',
     description: 'Revolutionary blockchain features: eUTXO, Storage Rent, ErgoScript, Sigma Protocols, and more.',
-    images: ['https://www.ergoblockchain.org/og/ergo-features.png'],
+    images: ['https://www.ergoblockchain.org/og/ergo-features.jpg'],
     creator: '@ergoplatform',
     site: '@ergoplatform'
   },

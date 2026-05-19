@@ -151,7 +151,7 @@ export default function SecurePowPage() {
           "@type": "TechArticle",
           headline: t("seo.title"),
           description: t("seo.description"),
-          image: "https://www.ergoblockchain.org/og/secure-pow.png",
+          image: "https://www.ergoblockchain.org/og/autolykos-proof-of-work.jpg",
           datePublished: "2025-08-10",
           dateModified: "2025-08-10",
           author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
@@ -172,7 +172,7 @@ export default function SecurePowPage() {
           description: t("howTo.description"),
           totalTime: "PT30M",
           estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "0" },
-          image: "https://www.ergoblockchain.org/og/secure-pow.png",
+          image: "https://www.ergoblockchain.org/og/autolykos-proof-of-work.jpg",
           tool: [
             { "@type": "HowToTool", name: t("howTo.tools.gpu") },
             { "@type": "HowToTool", name: t("howTo.tools.minerSoftware") },

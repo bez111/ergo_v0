@@ -20,6 +20,7 @@
 
 import type { SignerFn } from "ergo-agent-pay"
 import { ErgoAgentPay } from "ergo-agent-pay"
+import { parseServiceUrl } from "@/lib/security/service-url"
 
 interface SageWalletConfig {
   address: string
@@ -98,18 +99,20 @@ function buildSigner(): SignerFn {
   const seed = process.env.SAGE_WALLET_SEED
 
   if (remoteUrl) {
+    const signerUrl = parseServiceUrl(remoteUrl)
     const token = process.env.SAGE_SIGNER_TOKEN
     return async (unsignedTx) => {
-      const res = await fetch(remoteUrl, {
+      const res = await fetch(signerUrl, {
         method: "POST",
         headers: {
           "content-type": "application/json",
           ...(token ? { authorization: `Bearer ${token}` } : {}),
         },
         body: JSON.stringify({ unsignedTx }),
+        signal: AbortSignal.timeout(15_000),
       })
       if (!res.ok) {
-        throw new Error(`Sage remote signer ${remoteUrl} returned ${res.status}`)
+        throw new Error(`Sage remote signer ${signerUrl.origin} returned ${res.status}`)
       }
       const body = (await res.json()) as { signedTx: unknown }
       if (!body.signedTx) throw new Error("Sage remote signer returned no signedTx")

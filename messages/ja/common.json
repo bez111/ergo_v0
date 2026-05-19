@@ -468,7 +468,9 @@
     "use_description": "実践的なガイドとユーザー向けハウツー",
     "ecosystem_description": "プロジェクト、ダッシュボード、パートナー",
     "technology_description": "Ergoのコアとなる技術概念とイノベーション",
-    "learn_description": "教育リソースと学習素材"
+    "learn_description": "教育リソースと学習素材",
+    "developer services": "開発者サービス",
+    "developer_services_description": "Faucet、アドレス検査、tx/box検索、レシート検証、ハッシュ計算、サービス状態。"
   },
   "errors": {
     "network": {

@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "native-tokens",
-  ogImage: "/og/technology/native-tokens.png",
+  ogImage: "/og/technology/native-tokens.jpg",
   keywords: [
     "native tokens", "NFTs", "Ergo tokens", "EIP-4", "token creation",
     "digital assets", "NFT minting", "first-class tokens",

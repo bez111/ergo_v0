@@ -106,17 +106,17 @@ function getRelatedBlogPostsForProject(project: EcosystemProject, limit = 3): Bl
 
 // Image mapping for blog posts
 const blogImageMapping: Record<string, string> = {
-  'oracle-pools-explained': '/og/oracle-pools-explained.png',
-  'sigma-protocols-privacy': '/og/sigma-protocols-privacy.png',
-  'ergo-in-5-minutes': '/og/ergo-in-five-minutes.png',
-  'ergo-manifesto': '/og/ergo-manifesto.png',
-  'nipopows-explained': '/og/nipopows-explained.png',
-  'storage-rent': '/og/storage-rent.png',
-  'sigma-protocols-explained': '/og/sigma-protocols-explained.png',
-  'eutxo-vs-accounts': '/og/eutxo-vs-accounts.png',
-  'babel-fees': '/og/babel-fees.png',
-  'ergoscript-introduction': '/og/ergoscript-introduction.png',
-  'autolykos-proof-of-work': '/og/autolykos-proof-of-work.png',
+  'oracle-pools-explained': '/og/oracle-pools-explained.jpg',
+  'sigma-protocols-privacy': '/og/sigma-protocols-privacy.jpg',
+  'ergo-in-5-minutes': '/og/ergo-in-five-minutes.jpg',
+  'ergo-manifesto': '/og/ergo-manifesto.jpg',
+  'nipopows-explained': '/og/nipopows-explained.jpg',
+  'storage-rent': '/og/storage-rent.jpg',
+  'sigma-protocols-explained': '/og/sigma-protocols-explained.jpg',
+  'eutxo-vs-accounts': '/og/eutxo-vs-accounts.jpg',
+  'babel-fees': '/og/babel-fees.jpg',
+  'ergoscript-introduction': '/og/ergoscript-introduction.jpg',
+  'autolykos-proof-of-work': '/og/autolykos-proof-of-work.jpg',
 }
 
 interface ProjectClientProps {

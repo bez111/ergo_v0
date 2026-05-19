@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: `${siteConfig.siteUrl}/og/agent-economy.png`,
+        url: `${siteConfig.siteUrl}/og/agent-economy.jpg`,
         width: 1200,
         height: 630,
         alt: `State of Ergo ${PERIOD}`,

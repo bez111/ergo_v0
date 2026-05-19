@@ -74,7 +74,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: "Ergo Wallets | Secure Storage for ERG",
     description: "Choose from official Ergo wallets...",
     path: "/wallet",
-    ogImage: "/og/wallet.png",
+    ogImage: "/og/hubs/wallet.jpg",
     keywords: ["ergo wallet", "nautilus", "safew"],
   })
 }

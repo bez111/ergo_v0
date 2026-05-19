@@ -7,6 +7,7 @@ import { getLocalizedComparison, type ComparisonTranslations } from "@/data/comp
 import { ComparePageClient } from "./ComparePageClient"
 import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { selectPrebuildParams } from "@/lib/build-surface"
 
 interface Props {
   params: Promise<{ competitor: string; locale: string }>
@@ -14,7 +15,7 @@ interface Props {
 
 // Generate static params for all comparison pages
 export async function generateStaticParams() {
-  return comparisons.map((comparison) => ({
+  return selectPrebuildParams("compare", comparisons, (comparison) => ({
     competitor: `ergo-vs-${comparison.slug}`,
   }))
 }

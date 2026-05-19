@@ -1,20 +1,26 @@
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit, apiLimiter } from '@/lib/rate-limiter'
+
+const MAX_BODY_BYTES = 16 * 1024
+const validMetrics = new Set(['LCP', 'INP', 'CLS', 'FCP', 'TTFB'])
 
 export async function POST(request: NextRequest) {
+  const rateLimitResult = await rateLimit(request, apiLimiter)
+  if (rateLimitResult) return rateLimitResult
+
   try {
-    const body = await request.json()
-    
+    const body = JSON.parse(await readLimitedBody(request))
+
     // Валидация метрик
-    const validMetrics = ['LCP', 'INP', 'CLS', 'FCP', 'TTFB']
-    if (!validMetrics.includes(body.name)) {
+    if (!validMetrics.has(body.name) || typeof body.value !== 'number' || !Number.isFinite(body.value)) {
       return NextResponse.json({ error: 'Invalid metric name' }, { status: 400 })
     }
 
     // В production здесь можно отправлять данные в аналитику
     // Google Analytics, DataDog, или собственную систему
-    
+
     // Web Vitals metrics processing (console logging removed for cleaner output)
     const _metricsData = {
       name: body.name,
@@ -60,14 +66,28 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
+    if (error instanceof Error && error.message === 'request body too large') {
+      return NextResponse.json({ error: 'Metric payload too large' }, { status: 413 })
+    }
+    if (error instanceof SyntaxError) {
+      return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 })
+    }
     if (process.env.NODE_ENV === 'development') console.error('Error processing vitals:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 
 export async function GET() {
-  return NextResponse.json({ 
+  return NextResponse.json({
     message: 'Web Vitals endpoint',
     supportedMetrics: ['LCP', 'INP', 'CLS', 'FCP', 'TTFB']
   })
-} 
+}
+
+async function readLimitedBody(request: NextRequest): Promise<string> {
+  const length = Number(request.headers.get('content-length') ?? '0')
+  if (Number.isFinite(length) && length > MAX_BODY_BYTES) throw new Error('request body too large')
+  const text = await request.text()
+  if (text.length > MAX_BODY_BYTES) throw new Error('request body too large')
+  return text
+}

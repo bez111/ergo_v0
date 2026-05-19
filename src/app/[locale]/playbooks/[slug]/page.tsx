@@ -6,6 +6,7 @@ import { PlaybookPageClient } from "./PlaybookPageClient";
 import { SchemaOrg } from "@/components/seo/schema-org";
 import { getScopedMessages } from "@/lib/messages";
 import type { Locale } from "@/i18n/request";
+import { selectPrebuildParams } from "@/lib/build-surface";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -13,7 +14,7 @@ interface Props {
 
 export async function generateStaticParams() {
   const slugs = getAllPlaybookSlugs();
-  return slugs.map((slug) => ({ slug }));
+  return selectPrebuildParams("playbooks", slugs, (slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

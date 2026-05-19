@@ -44,7 +44,7 @@ export async function buildBlogMetadata(opts: {
   const path = `/blog/${opts.slug}`
   const title = fm.seo_title ?? fm.title ?? opts.slug
   const description = fm.meta_description ?? fm.excerpt ?? ""
-  const image = opts.fallbackImage ?? `/og/blog/${opts.slug}.png`
+  const image = opts.fallbackImage ?? `/og/blog/${opts.slug}.jpg`
   const datePublished = fm.date_published
 
   return {

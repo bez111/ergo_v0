@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "privacy-features",
-  ogImage: "/og/technology/sigma-protocols-explained.png",
+  ogImage: "/og/technology/sigma-protocols-explained.jpg",
   keywords: [
     "Sigma protocols", "zero knowledge proofs", "ZKP", "ring signatures",
     "ErgoMixer", "blockchain privacy", "confidential transactions",

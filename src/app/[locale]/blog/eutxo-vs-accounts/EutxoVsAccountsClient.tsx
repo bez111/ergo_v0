@@ -299,7 +299,7 @@ export function EutxoVsAccountsClient() {
             className="mb-14"
           >
             <ExpandableInfographic
-              src="/og/infographics/eutxo-vs-accounts.png"
+              src="/og/infographics/eutxo-vs-accounts.avif"
               alt="eUTXO vs Accounts: Two Blockchain Transaction Models Compared"
             />
           </motion.section>

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
+import { rateLimit, apiLimiter } from '@/lib/rate-limiter'
 
 interface WebVitalMetric {
   name: string
@@ -14,15 +15,21 @@ interface WebVitalMetric {
 
 // In-memory storage for Web Vitals (replace with database in production)
 const webVitalsData: WebVitalMetric[] = []
+const MAX_BODY_BYTES = 16 * 1024
+const VALID_METRICS = new Set(['LCP', 'INP', 'CLS', 'FCP', 'TTFB'])
 
 export async function POST(request: NextRequest) {
+  const rateLimitResult = await rateLimit(request, apiLimiter)
+  if (rateLimitResult) return rateLimitResult
+
   try {
-    const metric: WebVitalMetric = await request.json()
+    const metric: WebVitalMetric = JSON.parse(await readLimitedBody(request))
     
     // Validate metric data
-    if (!metric.name || typeof metric.value !== 'number') {
+    if (!VALID_METRICS.has(metric.name) || typeof metric.value !== 'number' || !Number.isFinite(metric.value)) {
       return NextResponse.json({ error: 'Invalid metric data' }, { status: 400 })
     }
+    metric.url = typeof metric.url === 'string' ? metric.url.slice(0, 2048) : ''
 
     // Get request metadata
     const headersList = await headers()
@@ -48,9 +55,23 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
+    if (error instanceof Error && error.message === 'request body too large') {
+      return NextResponse.json({ error: 'Metric payload too large' }, { status: 413 })
+    }
+    if (error instanceof SyntaxError) {
+      return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 })
+    }
     if (process.env.NODE_ENV === 'development') console.error('Error storing Web Vital:', error)
     return NextResponse.json({ error: 'Failed to store metric' }, { status: 500 })
   }
+}
+
+async function readLimitedBody(request: NextRequest): Promise<string> {
+  const length = Number(request.headers.get('content-length') ?? '0')
+  if (Number.isFinite(length) && length > MAX_BODY_BYTES) throw new Error('request body too large')
+  const text = await request.text()
+  if (text.length > MAX_BODY_BYTES) throw new Error('request body too large')
+  return text
 }
 
 // Get Web Vitals statistics

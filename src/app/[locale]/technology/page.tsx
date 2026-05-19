@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('ogDescription'),
       url: getCanonicalUrl('/technology', locale),
       siteName: 'Ergo Platform',
-      images: [{ url: 'https://www.ergoblockchain.org/og/technology.png', width: 1200, height: 630, alt: t('ogImageAlt') }],
+      images: [{ url: 'https://www.ergoblockchain.org/og/technology.jpg', width: 1200, height: 630, alt: t('ogImageAlt') }],
       type: 'website',
       locale: 'en_US'
     },
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ['https://www.ergoblockchain.org/og/technology.png'],
+      images: ['https://www.ergoblockchain.org/og/technology.jpg'],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle
     },
@@ -83,7 +83,7 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
     createTechArticleSchema("/technology", {
       headline: t('headline'),
       description: t('description'),
-      image: "/og/technology.png",
+      image: "/og/technology.jpg",
       datePublished: "2024-01-01",
       dateModified: "2024-12-15",
     }),

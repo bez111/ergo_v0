@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config/site-config'
-import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '@/app/[locale]/blog/_lib/uploaded-posts'
 
 /**
  * RSS 2.0 Feed for Ergo Blog
@@ -8,6 +8,7 @@ import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
 export async function GET() {
   const baseUrl = siteConfig.siteUrl
   const buildDate = new Date().toUTCString()
+  const posts = await getAllBlogPostsWithUploaded()
   
   const escapeXml = (str: string) => 
     str.replace(/&/g, '&amp;')
@@ -39,7 +40,7 @@ export async function GET() {
     <managingEditor>contact@ergoplatform.org (Ergo Team)</managingEditor>
     <webMaster>contact@ergoplatform.org (Ergo Team)</webMaster>
     <ttl>60</ttl>
-${blogPosts
+${posts
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 50)
   .map(post => {
@@ -58,7 +59,7 @@ ${blogPosts
       <dc:creator><![CDATA[${post.author.name}]]></dc:creator>
       <category><![CDATA[${post.category}]]></category>
       ${post.tags?.map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ') || ''}
-      ${post.image ? `<enclosure url="${baseUrl}${post.image}" type="${imageType}"/>` : ''}
+      ${post.image ? `<enclosure url="${absolutize(baseUrl, post.image)}" type="${imageType}"/>` : ''}
       <content:encoded><![CDATA[
         <p>${escapeXml(post.excerpt)}</p>
         <p>By ${escapeXml(post.author.name)}${post.author.role ? ` - ${escapeXml(post.author.role)}` : ''}</p>
@@ -77,3 +78,7 @@ ${blogPosts
   })
 }
 
+function absolutize(baseUrl: string, url: string): string {
+  if (/^https?:\/\//i.test(url)) return url
+  return `${baseUrl}${url.startsWith('/') ? url : `/${url}`}`
+}

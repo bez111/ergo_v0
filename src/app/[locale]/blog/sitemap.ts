@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
-import { blogPosts } from './_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from './_lib/uploaded-posts'
 
 const PAGE_SIZE = 12
 
-export default function BlogSitemap(): MetadataRoute.Sitemap {
+export default async function BlogSitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.ergoblockchain.org'
   const currentDate = new Date()
+  const posts = await getAllBlogPostsWithUploaded()
 
   // Main blog page
   const blogPages: MetadataRoute.Sitemap = [
@@ -18,7 +19,7 @@ export default function BlogSitemap(): MetadataRoute.Sitemap {
   ]
 
   // Pagination
-  const nonFeatured = blogPosts.filter((p) => !p.featured)
+  const nonFeatured = posts.filter((p) => !p.featured)
   const totalPages = Math.max(1, Math.ceil(nonFeatured.length / PAGE_SIZE))
   const paginationEntries: MetadataRoute.Sitemap = Array.from({ length: totalPages }, (_, i) => {
     const page = i + 1
@@ -32,7 +33,7 @@ export default function BlogSitemap(): MetadataRoute.Sitemap {
   })
 
   // Individual blog posts
-  const postPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+  const postPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',
@@ -40,4 +41,4 @@ export default function BlogSitemap(): MetadataRoute.Sitemap {
   }))
 
   return [...blogPages, ...paginationEntries, ...postPages]
-} 
+}

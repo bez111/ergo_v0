@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: getCanonicalUrl('/ecosystem/map', locale),
       siteName: "Ergo Platform",
       images: [{
-        url: "https://www.ergoblockchain.org/og/ecosystem-map.png",
+        url: "https://www.ergoblockchain.org/og/ecosystem-map.jpg",
         width: 1200,
         height: 630,
         alt: "Ergo Ecosystem Interactive Map"
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["https://www.ergoblockchain.org/og/ecosystem-map.png"],
+      images: ["https://www.ergoblockchain.org/og/ecosystem-map.jpg"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
     },

@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "adaptive-emission",
-  ogImage: "/og/technology/adaptive-emission.png",
+  ogImage: "/og/technology/adaptive-emission.jpg",
   keywords: [
     "adaptive emission", "Ergo tokenomics", "miner governance",
     "emission schedule", "cryptocurrency governance", "EIP-27",

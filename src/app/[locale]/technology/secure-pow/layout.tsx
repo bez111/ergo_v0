@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "secure-pow",
-  ogImage: "/og/technology/autolykos-proof-of-work.png",
+  ogImage: "/og/technology/autolykos-proof-of-work.jpg",
   keywords: [
     "Autolykos", "proof of work", "GPU mining", "ASIC resistant",
     "memory hard", "Ergo mining", "decentralized mining",

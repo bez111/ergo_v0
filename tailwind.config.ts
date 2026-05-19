@@ -140,6 +140,7 @@ const config = {
         }
       },
       fontFamily: {
+        sans: ["Inter", "Arial", "Helvetica", "sans-serif"],
         mono: ["JetBrains Mono", "Monaco", "Consolas", "Courier New", "monospace"],
       },
       spacing: {

@@ -140,7 +140,7 @@ export default function IntroductionClient() {
           headline: "Ergo Blockchain — PoW eUTXO Smart Contracts & Sigma Protocols",
           description:
             "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs.",
-          image: "https://www.ergoblockchain.org/og/intro.png",
+          image: "https://www.ergoblockchain.org/og/intro.jpg",
           datePublished: isoDate,
           dateModified: isoDate,
           author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },

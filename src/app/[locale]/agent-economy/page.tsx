@@ -71,7 +71,7 @@ export async function generateMetadata({
       siteName: "Ergo Blockchain",
       images: [
         {
-          url: `${BASE_URL}/og/agent-economy.png`,
+          url: `${BASE_URL}/og/agent-economy.jpg`,
           width: 1200,
           height: 630,
           alt: "Ergo Agent Economy — Base layer for autonomous economic agents",
@@ -85,7 +85,7 @@ export async function generateMetadata({
       title: "Agent Economy on Ergo",
       description:
         "Agreements · Verification Receipts · Settlement Receipts · Wallet Policy — testnet-first agent commerce on Ergo.",
-      images: [`${BASE_URL}/og/agent-economy.png`],
+      images: [`${BASE_URL}/og/agent-economy.jpg`],
       creator: "@ergoplatform",
       site: "@ergoplatform",
     },

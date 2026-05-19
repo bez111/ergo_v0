@@ -6,7 +6,7 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 // SEO Configuration
 const SEO = {
   slug: "daos",
-  ogImage: "/og/use/og-daos.png",
+  ogImage: "/og/use/og-daos.jpg",
   canonicalPath: "/use/daos",
 }
 

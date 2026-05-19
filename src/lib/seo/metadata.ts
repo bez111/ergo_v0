@@ -87,7 +87,7 @@ export function createMetadata(config: PageSEOConfig): Metadata {
   const url = `${BASE_URL}${path}`
   const imageUrl = ogImage 
     ? (ogImage.startsWith("http") ? ogImage : `${BASE_URL}${ogImage.startsWith("/") ? "" : "/"}${ogImage}`)
-    : `${BASE_URL}/og/default.png`
+    : `${BASE_URL}/og/homepage.jpg`
 
   const metadata: Metadata = {
     title,
@@ -162,7 +162,7 @@ export function createTechnologyMetadata(
     title: `${title} | Ergo`,
     description,
     path: `/technology/${slug}`,
-    ogImage: ogImage || `/og/technology-${slug}.png`,
+    ogImage: ogImage || `/og/technology.jpg`,
     keywords: ["Ergo", "blockchain", ...keywords],
     type: "article",
   })
@@ -203,7 +203,7 @@ export function createBlogMetadata(
     title,
     description,
     path: `/blog/${slug}`,
-    ogImage: ogImage || `/og/${slug}.png`,
+    ogImage: ogImage || `/og/${slug}.jpg`,
     keywords,
     type: "article",
     ...(publishedTime && { publishedTime }),
@@ -233,4 +233,3 @@ export function createHubMetadata(
 }
 
 export default createMetadata
-

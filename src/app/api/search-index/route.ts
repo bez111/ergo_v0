@@ -1,13 +1,14 @@
 import { NextResponse } from 'next/server'
-import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '@/app/[locale]/blog/_lib/uploaded-posts'
 import { menuData } from '@/app/[locale]/docs/menuData'
 
 // Generate a comprehensive search index for SEO and site search
 export async function GET() {
   const baseUrl = 'https://www.ergoblockchain.org'
+  const posts = await getAllBlogPostsWithUploaded()
   
   // Index blog posts
-  const blogIndex = blogPosts.map(post => ({
+  const blogIndex = posts.map(post => ({
     id: `blog-${post.slug}`,
     type: 'blog',
     title: post.title,

@@ -15,7 +15,7 @@ const SEO = {
   path: "/developers",
   title: "Ergo Developers — ErgoScript, SDKs, eUTXO Patterns & API | Build on Ergo",
   description: "Build secure dApps on Ergo. Learn ErgoScript, explore eUTXO patterns, access SDKs (Fleet, AppKit, sigma-rust). Removes the protocol-level reentrancy class (application bugs still possible), predictable costs, built-in privacy with Sigma protocols.",
-  ogImage: "/og/hubs/developers.png",
+  ogImage: "/og/hubs/developers.jpg",
   keywords: [
     "Ergo developers", "ErgoScript", "eUTXO", "smart contracts",
     "build on Ergo", "Ergo SDK", "Fleet SDK", "sigma-rust", "AppKit",

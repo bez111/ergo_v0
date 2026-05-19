@@ -16,7 +16,7 @@ interface Props {
 
 const SEO = {
   slug: "ergoscript",
-  ogImage: "/og/technology/ergoscript-introduction.png",
+  ogImage: "/og/technology/ergoscript-introduction.jpg",
   keywords: [
     "ErgoScript", "smart contract language", "eUTXO", "formal verification",
     "cryptography", "DeFi", "blockchain development", "sigma protocols",

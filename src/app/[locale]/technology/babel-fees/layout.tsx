@@ -15,7 +15,7 @@ interface Props {
 
 const SEO = {
   slug: "babel-fees",
-  ogImage: "/og/technology/babel-fees.png",
+  ogImage: "/og/technology/babel-fees.jpg",
   keywords: [
     "Babel fees", "gas abstraction", "transaction fees", "DeFi UX",
     "token payment", "stablecoin fees", "Ergo DeFi", "fee abstraction",

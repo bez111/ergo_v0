@@ -300,7 +300,7 @@ export function ErgoIn5MinutesClient() {
               {/* Ergo in 5 Minutes Infographic */}
               <div className="mb-12">
                 <ExpandableInfographic
-                  src="/og/infographics/ergo-in-five-minutes.png"
+                  src="/og/infographics/ergo-in-five-minutes.avif"
                   alt="Ergo in 5 Minutes: A Brief Introduction to the Ergo Platform"
                 />
               </div>

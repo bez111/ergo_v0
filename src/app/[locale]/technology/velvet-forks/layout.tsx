@@ -14,7 +14,7 @@ interface Props {
 
 const SEO = {
   slug: "velvet-forks",
-  ogImage: "/og/technology/velvet-forks.png",
+  ogImage: "/og/technology/velvet-forks.jpg",
   keywords: [
     "velvet forks", "protocol upgrades", "backward compatibility",
     "soft forks", "blockchain evolution", "seamless upgrades",

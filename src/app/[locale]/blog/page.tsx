@@ -1,5 +1,6 @@
 import { Suspense } from "react"
-import { blogPosts, categories } from "./_lib/blog-data"
+import { categories, type BlogPost } from "./_lib/blog-data"
+import { getAllBlogPostsWithUploaded } from "./_lib/uploaded-posts"
 import { BlogHero } from "./_components/blog-hero"
 import TrendingNow from "./_components/trending-now"
 import BlogClientStable from "./_components/blog-client-stable"
@@ -17,7 +18,7 @@ export const revalidate = 300
 const pageSize = 12
 const siteUrl = siteConfig.siteUrl
 
-function BlogListFallback({ posts, total }: { posts: typeof blogPosts; total: number }) {
+function BlogListFallback({ posts, total }: { posts: BlogPost[]; total: number }) {
   return (
     <section className="mt-4" aria-labelledby="blog-results-fallback" aria-busy="true">
       <h2 id="blog-results-fallback" className="sr-only">
@@ -56,7 +57,8 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
   const twitterHandle = siteConfig.twitterHandle
 
-  const totalPagesMeta = Math.max(1, Math.ceil(blogPosts.length / pageSize))
+  const allPosts = await getAllBlogPostsWithUploaded()
+  const totalPagesMeta = Math.max(1, Math.ceil(allPosts.length / pageSize))
   const prev = page > 2 ? `${baseUrl}?page=${page - 1}` : page === 2 ? baseUrl : undefined
   const next = page < totalPagesMeta ? `${baseUrl}?page=${page + 1}` : undefined
 
@@ -119,22 +121,25 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     redirect(clean)
   }
 
+  const allPosts = await getAllBlogPostsWithUploaded()
+  const allCategories = Array.from(new Set([...categories, ...allPosts.map((post) => post.category)]))
+
   // Featured: prefer a `pinned` cornerstone post (the manifesto) over the
   // newest `featured` update. Pinning means the post stays in the hero
   // regardless of date — meant for evergreen strategic pieces, not for
   // recurring updates.
-  const pinnedPost = blogPosts.find((post) => post.pinned)
-  const featuredCandidates = blogPosts
+  const pinnedPost = allPosts.find((post) => post.pinned)
+  const featuredCandidates = allPosts
     .filter((post) => post.featured && !post.pinned)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-  const featuredPost = pinnedPost ?? featuredCandidates[0] ?? blogPosts[0] ?? null
+  const featuredPost = pinnedPost ?? featuredCandidates[0] ?? allPosts[0] ?? null
 
-  const trendingPosts = blogPosts
+  const trendingPosts = allPosts
     .filter((post) => post.trending)
     .filter((post) => !featuredPost || post.id !== featuredPost.id)
 
   // All other posts, newest first.
-  const allNonFeatured = blogPosts
+  const allNonFeatured = allPosts
     .filter((post) => !featuredPost || post.id !== featuredPost.id)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   const total = allNonFeatured.length
@@ -330,7 +335,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                 <BlogHero featuredPost={featuredPost} />
               </div>
               <aside aria-labelledby="trending" role="complementary">
-                <TrendingNow posts={trendingPosts.slice(0, 3)} categories={categories.map(cat => ({ id: cat, name: cat }))} />
+                <TrendingNow posts={trendingPosts.slice(0, 3)} categories={allCategories.map(cat => ({ id: cat, name: cat }))} />
               </aside>
             </div>
           </section>
@@ -339,8 +344,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           <div className="mb-12">
             <Suspense fallback={<BlogListFallback posts={initialList} total={total} />}>
               <BlogClientStable
-                posts={blogPosts}
-                categories={categories.map(cat => ({ id: cat, name: cat }))}
+                posts={allPosts}
+                categories={allCategories.map(cat => ({ id: cat, name: cat }))}
                 page={currentPage}
                 pageSize={pageSize}
                 total={total}

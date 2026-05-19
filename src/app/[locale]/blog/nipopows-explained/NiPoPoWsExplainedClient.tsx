@@ -288,7 +288,7 @@ export default function NiPoPoWsExplainedClient() {
             className="mb-12"
           >
             <ExpandableInfographic
-              src="/og/infographics/nipopows-explained.png"
+              src="/og/infographics/nipopows-explained.avif"
               alt="NiPoPoWs Explained: Compact Proofs for Light Clients & Interoperability"
             />
           </motion.section>

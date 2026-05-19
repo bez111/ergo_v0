@@ -11,7 +11,7 @@ const PATH = "/blog/sigma-protocols-explained"
 const SEO = {
   title: "Sigma Protocols Explained: Zero-Knowledge Privacy Made Simple | Ergo",
   description: "Learn Sigma Protocols through simple analogies and real-world examples. No advanced mathematics required! Discover how Ergo's composable zero-knowledge proofs enable programmable privacy.",
-  image: "/og/sigma-protocols-explained.png",
+  image: "/og/sigma-protocols-explained.jpg",
   keywords: [
     "sigma protocols explained", "zero knowledge proofs tutorial",
     "blockchain privacy guide", "ergo cryptography beginner",

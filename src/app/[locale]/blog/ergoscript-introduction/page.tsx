@@ -13,7 +13,7 @@ const SEO = {
   slug: "ergoscript-introduction",
   title: "ErgoScript Tutorial: Smart Contracts on Ergo Blockchain",
   description: "Learn ErgoScript, Ergo's functional smart contract language for the eUTXO model. Build secure, deterministic dApps with this practical developer guide.",
-  ogImage: "/og/ergoscript-introduction.png",
+  ogImage: "/og/ergoscript-introduction.jpg",
   publishedTime: "2024-11-18T00:00:00Z",
   keywords: [
     "ErgoScript introduction", "Ergo smart contracts", "eUTXO scripting language",

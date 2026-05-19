@@ -318,7 +318,7 @@ export function OraclePoolsExplainedClient() {
             className="mb-12"
           >
             <ExpandableInfographic
-              src="/og/infographics/oracle-pools-explained.png"
+              src="/og/infographics/oracle-pools-explained.avif"
               alt="Ergo Oracle Pools Explained: Decentralized, Reliable Data for dApps"
             />
           </motion.section>

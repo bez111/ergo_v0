@@ -34,7 +34,7 @@ export async function generateMetadata({ searchParams, params }: {
       url: canonical,
       title: t('ogTitle'),
       description: t('ogDescription'),
-      images: [{ url: "/og/hubs/ecosystem.png", width: 1200, height: 630 }],
+      images: [{ url: "/og/hubs/ecosystem.jpg", width: 1200, height: 630 }],
       siteName: "Ergo",
       locale: getOgLocale(locale),
     },

@@ -868,7 +868,7 @@ function FeaturedArticleCard({
   index: number;
 }) {
   // Get OG image or fallback
-  const imageUrl = post.image || `/og/${post.slug}.png`;
+  const imageUrl = post.image || `/og/${post.slug}.jpg`;
   
   return (
     <Link 
@@ -955,7 +955,7 @@ function VisualCard({
   // Extract slug from URL like /infographics/some-slug -> some-slug
   const urlParts = resource.url.split('/');
   const slug = urlParts[urlParts.length - 1];
-  const imageUrl = `/infographics/${slug}.png`;
+  const imageUrl = `/infographics/${slug}.avif`;
   
   const href = `${resource.url}?utm_source=topic&utm_medium=visual&utm_campaign=${topicSlug}`;
 

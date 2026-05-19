@@ -73,13 +73,13 @@ const ASSETS: Array<{
   {
     title: "OG card — Agent Economy",
     desc: "1200×630 social card for the agent-economy hub page.",
-    href: "/og/agent-economy.png",
+    href: "/og/agent-economy.jpg",
     ext: "png",
   },
   {
     title: "OG card — Agent Payments architecture",
     desc: "1200×630 social card for the build/agent-payments page.",
-    href: "/og/agent-payments.png",
+    href: "/og/agent-payments.jpg",
     ext: "png",
   },
 ]

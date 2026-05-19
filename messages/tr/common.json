@@ -468,7 +468,9 @@
     "use_description": "Pratik kılavuzlar ve kullanıcı nasıl yapılır rehberleri",
     "ecosystem_description": "Projeler, kontrol panelleri ve ortaklar",
     "technology_description": "Ergo'nun temel teknik kavramları ve yenilikleri",
-    "learn_description": "Eğitim kaynakları ve öğrenme materyalleri"
+    "learn_description": "Eğitim kaynakları ve öğrenme materyalleri",
+    "developer services": "Geliştirici Servisleri",
+    "developer_services_description": "Faucet yüzeyi, adres denetleyici, tx/box arama, receipt doğrulayıcı, hasher ve servis durumu."
   },
   "errors": {
     "network": {

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: getCanonicalUrl('/technology/babel-fees', locale),
       siteName: "Ergo Platform",
       images: [{
-        url: "https://www.ergoblockchain.org/og/babel-fees.png",
+        url: "https://www.ergoblockchain.org/og/babel-fees.jpg",
         width: 1200,
         height: 630,
         alt: "Ergo Babel Fees Technology"
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: "Babel Fees - Pay Fees with Any Token | Ergo",
       description: "Revolutionary fee payment system on Ergo blockchain - pay transaction fees with any token!",
-      images: ["https://www.ergoblockchain.org/og/babel-fees.png"],
+      images: ["https://www.ergoblockchain.org/og/babel-fees.jpg"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
     },

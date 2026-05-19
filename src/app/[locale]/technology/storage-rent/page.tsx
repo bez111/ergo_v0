@@ -258,7 +258,7 @@ export default function StorageRentPage() {
           "@type": "TechArticle",
           headline: t("seo.title"),
           description: t("seo.description"),
-          image: "https://www.ergoblockchain.org/og/storage-rent.png",
+          image: "https://www.ergoblockchain.org/og/storage-rent.jpg",
           datePublished: PUBLISHED,
           dateModified: UPDATED,
           author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },

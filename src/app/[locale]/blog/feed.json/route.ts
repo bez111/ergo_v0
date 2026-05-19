@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config/site-config'
-import { blogPosts } from '../_lib/blog-data'
+import { getAllBlogPostsWithUploaded } from '../_lib/uploaded-posts'
 
 /**
  * JSON Feed 1.1 specification: https://jsonfeed.org/version/1.1
@@ -7,6 +7,7 @@ import { blogPosts } from '../_lib/blog-data'
  */
 export async function GET() {
   const baseUrl = siteConfig.siteUrl
+  const posts = await getAllBlogPostsWithUploaded()
   
   const feed = {
     version: "https://jsonfeed.org/version/1.1",
@@ -24,7 +25,7 @@ export async function GET() {
         avatar: `${baseUrl}/icon-512x512.png`
       }
     ],
-    items: blogPosts
+    items: posts
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 50) // Last 50 posts
       .map(post => {
@@ -37,7 +38,7 @@ export async function GET() {
           summary: post.excerpt,
           content_text: post.excerpt,
           content_html: `<p>${post.excerpt}</p><p>By ${post.author.name}${post.author.role ? ` - ${post.author.role}` : ''}</p><p><a href="${postUrl}">Read full article</a></p>`,
-          image: post.image ? `${baseUrl}${post.image}` : undefined,
+          image: post.image ? absolutize(baseUrl, post.image) : undefined,
           date_published: new Date(post.date).toISOString(),
           date_modified: post.lastUpdated 
             ? new Date(post.lastUpdated).toISOString() 
@@ -73,4 +74,8 @@ export async function GET() {
   })
 }
 
+function absolutize(baseUrl: string, url: string): string {
+  if (/^https?:\/\//i.test(url)) return url
+  return `${baseUrl}${url.startsWith('/') ? url : `/${url}`}`
+}
 

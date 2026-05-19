@@ -13,7 +13,7 @@ const SEO = {
   slug: "nipopows-explained",
   title: "NiPoPoWs: Trustless Light Clients & Bridges on Ergo",
   description: "Learn how NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo.",
-  ogImage: "/og/nipopows-explained.png",
+  ogImage: "/og/nipopows-explained.jpg",
   publishedTime: "2024-01-15T00:00:00Z",
   keywords: [
     "nipopow", "non-interactive proofs of proof-of-work", "ergo nipopow",

@@ -6,6 +6,7 @@ import { UniversalInfographicClient } from '@/components/infographics/UniversalI
 import { infographics } from '@/data/infographics';
 import { getLocalizedInfographic, type InfographicTranslations } from '@/data/infographics-i18n';
 import { siteConfig } from '@/config/site-config';
+import { selectPrebuildParams } from '@/lib/build-surface';
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -70,7 +71,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  return infographics.map((infographic) => ({
+  return selectPrebuildParams("infographics", infographics, (infographic) => ({
     slug: infographic.slug,
   }));
 }

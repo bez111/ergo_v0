@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('ogDescription'),
       url: getCanonicalUrl('/start/introduction', locale),
       siteName: "Ergo Platform",
-      images: [{ url: "https://www.ergoblockchain.org/og/introduction.png", width: 1200, height: 630, alt: t('ogAlt') }],
+      images: [{ url: "https://www.ergoblockchain.org/og/introduction.jpg", width: 1200, height: 630, alt: t('ogAlt') }],
       type: "article",
       locale: getOgLocale(locale)
     },
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["https://www.ergoblockchain.org/og/introduction.png"]
+      images: ["https://www.ergoblockchain.org/og/introduction.jpg"]
     }
   }
 }
@@ -48,7 +48,7 @@ export default function IntroductionPage() {
     createTechArticleSchema("/start/introduction", {
       headline: "Introduction to Ergo Blockchain",
       description: "Comprehensive guide for beginners to understand Ergo",
-      image: "/og/introduction.png",
+      image: "/og/introduction.jpg",
       datePublished: "2024-01-01",
       proficiencyLevel: "Beginner",
     }),

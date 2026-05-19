@@ -106,18 +106,34 @@ export function LocalSearch() {
 
   // Highlight search terms in text
   const highlightText = (text: string, query: string): string => {
-    if (!query || !text) return text;
+    const safeText = escapeHtml(text);
+    if (!query || !text) return safeText;
     
     const queryWords = query.toLowerCase().split(' ').filter(w => w.length > 0);
-    let highlightedText = text;
+    let highlightedText = safeText;
     
     queryWords.forEach(word => {
-      const regex = new RegExp(`(${word})`, 'gi');
+      const regex = new RegExp(`(${escapeRegExp(escapeHtml(word))})`, 'gi');
       highlightedText = highlightedText.replace(regex, '<mark class="bg-orange-500/30 text-orange-400">$1</mark>');
     });
     
     return highlightedText;
   };
+
+  const escapeHtml = (value: string): string =>
+    value.replace(/[&<>"']/g, (char) => {
+      switch (char) {
+        case '&': return '&amp;';
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '"': return '&quot;';
+        case "'": return '&#39;';
+        default: return char;
+      }
+    });
+
+  const escapeRegExp = (value: string): string =>
+    value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
   // Initialize search index
   useEffect(() => {

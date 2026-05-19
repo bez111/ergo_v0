@@ -325,7 +325,7 @@ export function SigmaProtocolsExplainedClient() {
               className="mb-12"
             >
               <ExpandableInfographic
-                src="/og/infographics/sigma-protocols-explained.png"
+                src="/og/infographics/sigma-protocols-explained.avif"
                 alt="Sigma Protocols Explained: Intuitive Zero-Knowledge Cryptography on Ergo"
               />
             </motion.section>

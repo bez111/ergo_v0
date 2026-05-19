@@ -1,3 +1,4 @@
+import { timingSafeEqual } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { siteConfig } from '@/config/site-config'
 
@@ -11,6 +12,8 @@ const ENDPOINTS = [
   'https://www.bing.com/indexnow',
   'https://yandex.com/indexnow',
 ]
+const MAX_BODY_BYTES = 256 * 1024
+const MAX_URLS_PER_SUBMISSION = 1000
 
 interface SubmitBody {
   urls: string[]
@@ -18,22 +21,35 @@ interface SubmitBody {
 }
 
 export async function POST(req: NextRequest) {
-  // Optional shared-secret guard so random clients can't trigger submissions
   const expectedSecret = process.env.INDEXNOW_TRIGGER_SECRET
-  const body = (await req.json()) as SubmitBody
-  if (expectedSecret && body.secret !== expectedSecret) {
+  if (!expectedSecret && process.env.NODE_ENV === 'production') {
+    return NextResponse.json({ error: 'INDEXNOW_TRIGGER_SECRET is required' }, { status: 503 })
+  }
+
+  let body: SubmitBody
+  try {
+    body = await readLimitedJson(req)
+  } catch (error) {
+    const tooLarge = error instanceof Error && error.message === 'request body too large'
+    return NextResponse.json(
+      { error: tooLarge ? 'request body too large' : 'invalid JSON body' },
+      { status: tooLarge ? 413 : 400 },
+    )
+  }
+
+  if (expectedSecret && !constantTimeEquals(body.secret ?? '', expectedSecret)) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 })
   }
 
   if (!Array.isArray(body.urls) || body.urls.length === 0) {
     return NextResponse.json({ error: 'urls array required' }, { status: 400 })
   }
-  if (body.urls.length > 10000) {
-    return NextResponse.json({ error: 'max 10,000 urls per submission' }, { status: 400 })
+  if (body.urls.length > MAX_URLS_PER_SUBMISSION) {
+    return NextResponse.json({ error: `max ${MAX_URLS_PER_SUBMISSION} urls per submission` }, { status: 400 })
   }
 
   // All URLs must be on the verified host
-  const invalid = body.urls.find((u) => !u.startsWith(siteConfig.siteUrl))
+  const invalid = body.urls.find((u) => !isAllowedSiteUrl(u))
   if (invalid) {
     return NextResponse.json({ error: `URL not on ${siteConfig.siteUrl}: ${invalid}` }, { status: 400 })
   }
@@ -62,6 +78,33 @@ export async function POST(req: NextRequest) {
       r.status === 'fulfilled' ? r.value : { error: String(r.reason) }
     ),
   })
+}
+
+async function readLimitedJson(req: NextRequest): Promise<SubmitBody> {
+  const length = Number(req.headers.get('content-length') ?? '0')
+  if (Number.isFinite(length) && length > MAX_BODY_BYTES) {
+    throw new Error('request body too large')
+  }
+  const text = await req.text()
+  if (text.length > MAX_BODY_BYTES) {
+    throw new Error('request body too large')
+  }
+  return JSON.parse(text) as SubmitBody
+}
+
+function isAllowedSiteUrl(value: string): boolean {
+  try {
+    const url = new URL(value)
+    return url.protocol === 'https:' && url.host === HOST && url.pathname.startsWith('/')
+  } catch {
+    return false
+  }
+}
+
+function constantTimeEquals(actual: string, expected: string): boolean {
+  const actualBuffer = Buffer.from(actual)
+  const expectedBuffer = Buffer.from(expected)
+  return actualBuffer.length === expectedBuffer.length && timingSafeEqual(actualBuffer, expectedBuffer)
 }
 
 export async function GET() {

@@ -468,7 +468,9 @@
     "use_description": "Практические руководства и инструкции для пользователей",
     "ecosystem_description": "Проекты, дашборды и партнёры",
     "technology_description": "Основные технические концепции и инновации Ergo",
-    "learn_description": "Образовательные ресурсы и учебные материалы"
+    "learn_description": "Образовательные ресурсы и учебные материалы",
+    "developer services": "Сервисы разработчика",
+    "developer_services_description": "Faucet, инспектор адресов, поиск tx/box, проверка receipt, hasher и статус сервисов."
   },
   "errors": {
     "network": {

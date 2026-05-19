@@ -227,15 +227,17 @@ export async function GET(req: Request) {
         owner: "dns",
         blocked_by_external: true,
       }]),
-      {
+      ...(latestFullReceipt ? [] : [{
         id: "post-blob-paid-flow",
         label: "Run one new paid Sage flow to create a full receipt bundle",
         owner: "wallet",
         blocked_by_external: true,
-      },
+      }]),
       {
         id: "accord-conformance",
-        label: "Run conformance against the new receipt and publish signed evidence",
+        label: latestFullReceipt
+          ? "Publish signed conformance evidence for the full receipt bundle"
+          : "Run conformance against the new receipt and publish signed evidence",
         owner: "repo",
         blocked_by_external: !latestFullReceipt,
       },

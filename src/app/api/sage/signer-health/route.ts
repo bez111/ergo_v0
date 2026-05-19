@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { parseServiceUrl } from "@/lib/security/service-url"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -78,7 +79,7 @@ export async function GET() {
 
 function signerHealthUrl(value: string): string | null {
   try {
-    const url = new URL(value)
+    const url = parseServiceUrl(value)
     if (url.pathname.endsWith("/sign")) {
       url.pathname = url.pathname.replace(/\/sign$/, "/health")
     } else {

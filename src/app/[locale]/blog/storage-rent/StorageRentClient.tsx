@@ -261,7 +261,7 @@ export function StorageRentArticleClient() {
               className="mb-12"
             >
               <ExpandableInfographic
-                src="/og/infographics/storage-rent.png"
+                src="/og/infographics/storage-rent.avif"
                 alt="Ergo Storage Rent: Solving Blockchain State Bloat"
               />
             </motion.section>

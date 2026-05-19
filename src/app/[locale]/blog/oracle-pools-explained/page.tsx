@@ -13,7 +13,7 @@ const SEO = {
   slug: "oracle-pools-explained",
   title: "Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained",
   description: "Learn how Ergo's decentralized oracle pools minimize trust assumptions through on-chain aggregation, permissionless participation, and transparent data storage in eUTXOs.",
-  ogImage: "/og/oracle-pools-explained.png",
+  ogImage: "/og/oracle-pools-explained.jpg",
   publishedTime: "2024-01-20T00:00:00Z",
   keywords: [
     "ergo oracle pools", "decentralized oracles", "trust-minimized oracles",

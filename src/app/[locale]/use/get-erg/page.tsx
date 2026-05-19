@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: getCanonicalUrl('/use/get-erg', locale),
       siteName: "Ergo Platform",
       images: [{
-        url: "https://www.ergoblockchain.org/og/get-erg.png",
+        url: "https://www.ergoblockchain.org/og/get-erg.jpg",
         width: 1200,
         height: 630,
         alt: "Buy ERG Guide"
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["https://www.ergoblockchain.org/og/get-erg.png"],
+      images: ["https://www.ergoblockchain.org/og/get-erg.jpg"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
     },

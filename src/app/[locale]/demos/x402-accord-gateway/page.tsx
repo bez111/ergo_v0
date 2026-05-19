@@ -21,7 +21,7 @@ export async function generateMetadata({
       description: demo.description,
       url: getCanonicalUrl(`/demos/${demo.slug}`, locale),
       siteName: "Ergo Blockchain",
-      images: [{ url: "https://www.ergoblockchain.org/og/demos.png", width: 1200, height: 630 }],
+      images: [{ url: "https://www.ergoblockchain.org/og/demos.jpg", width: 1200, height: 630 }],
       type: "website",
       locale: getOgLocale(locale),
     },

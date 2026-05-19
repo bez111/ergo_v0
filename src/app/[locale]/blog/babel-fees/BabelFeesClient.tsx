@@ -253,7 +253,7 @@ export default function BabelFeesArticleClient() {
             {/* Babel Fees Infographic */}
             <section className="mb-12">
               <ExpandableInfographic
-                src="/og/infographics/babel-fees-infographics.png"
+                src="/og/infographics/babel-fees-infographics.avif"
                 alt="Ergo Babel Fees: The Universal Token Converter for Gas"
               />
             </section>

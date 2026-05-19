@@ -13,7 +13,7 @@ const SEO = {
   path: "/miners",
   title: "Mine Ergo (ERG) — GPU-Friendly, ASIC-Resistant | Ergo",
   description: "Start mining Ergo with any GPU. ASIC-resistant Autolykos algorithm, fair rewards, active pools. Calculator, guides & software included.",
-  ogImage: "/og/hubs/miners.png",
+  ogImage: "/og/hubs/miners.jpg",
   keywords: [
     "mine Ergo", "ERG mining", "GPU mining", "ASIC resistant",
     "Autolykos", "cryptocurrency mining", "proof of work",

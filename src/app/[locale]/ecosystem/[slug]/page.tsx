@@ -6,12 +6,13 @@ import { getLocalizedProjectBySlug, type EcosystemTranslations } from "../ecosys
 import ProjectClient from "./ProjectClient"
 import { createBreadcrumbSchema, createFAQSchema, createSoftwareAppSchema } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { selectPrebuildParams } from "@/lib/build-surface"
 
 export const revalidate = 600
 
 // Generate static params for all projects
 export async function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }))
+  return selectPrebuildParams("ecosystem", projects, (project) => ({ slug: project.slug }))
 }
 
 // Generate metadata for each project
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: canonical,
       title,
       description,
-      images: [{ url: "/og/hubs/ecosystem.png", width: 1200, height: 630 }],
+      images: [{ url: "/og/hubs/ecosystem.jpg", width: 1200, height: 630 }],
       siteName: "Ergo Platform",
       locale: "en_US",
     },

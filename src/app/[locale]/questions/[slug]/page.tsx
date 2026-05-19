@@ -8,6 +8,7 @@ import { createBreadcrumbSchema, createFAQSchema, createHowToSchema, createTechA
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 import { getScopedMessages } from '@/lib/messages'
 import type { Locale } from '@/i18n/request'
+import { selectPrebuildParams } from '@/lib/build-surface'
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>
@@ -30,7 +31,7 @@ function applyTranslation(question: QuestionEntry, translations?: QuestionsTrans
 }
 
 export function generateStaticParams() {
-  return getAllQuestionSlugs().map(slug => ({ slug }))
+  return selectPrebuildParams("questions", getAllQuestionSlugs(), (slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

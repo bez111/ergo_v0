@@ -212,7 +212,7 @@ export default function PrivacyFeaturesPage() {
           "@id": "https://www.ergoblockchain.org/technology/privacy-features#article",
           headline: t("seo.title"),
           description: t("seo.description"),
-          image: "https://www.ergoblockchain.org/og/privacy.png",
+          image: "https://www.ergoblockchain.org/og/sigma-protocols-privacy.jpg",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
           author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },

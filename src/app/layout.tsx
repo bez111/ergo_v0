@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css"
 import { siteConfig } from "@/config/site-config";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
@@ -11,20 +10,6 @@ import { renderSchemaScripts } from "@/components/seo/SEOSchemas";
 /* ISR: статическая генерация + обновление каждые 5 минут */
 export const revalidate = 300;
 
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: 'swap',
-  preload: true,
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: 'swap',
-  preload: true,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -157,7 +142,6 @@ export default function RootLayout({
     <html
       lang="en"
       dir="ltr"
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>

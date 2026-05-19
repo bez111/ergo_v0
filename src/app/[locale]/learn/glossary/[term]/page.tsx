@@ -7,6 +7,7 @@ import { getLocalizedGlossaryTerm, type GlossaryTermsTranslations } from "@/data
 import { GlossaryTermClient } from "./GlossaryTermClient"
 import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema, getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
 import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
+import { selectPrebuildParams } from "@/lib/build-surface"
 
 interface Props {
   params: Promise<{ term: string; locale: string }>
@@ -14,7 +15,7 @@ interface Props {
 
 // Generate static params for all glossary terms
 export async function generateStaticParams() {
-  return glossaryTerms.map((term) => ({ term: term.slug }))
+  return selectPrebuildParams("glossary", glossaryTerms, (term) => ({ term: term.slug }))
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
@@ -53,14 +54,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       siteName: "Ergo Platform",
       title,
       description,
-      images: [{ url: `${origin}/og/glossary-${term.slug}.png`, width: 1200, height: 630, alt: `${term.term} - Ergo Glossary` }],
+      images: [{ url: `${origin}/og/glossary.jpg`, width: 1200, height: 630, alt: `${term.term} - Ergo Glossary` }],
       locale: getOgLocale(params.locale),
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og/glossary-${term.slug}.png`],
+      images: [`${origin}/og/glossary.jpg`],
       site: siteConfig.twitterHandle,
       creator: siteConfig.twitterHandle,
     },

@@ -55,6 +55,7 @@ export async function GET() {
     { url: '/demos/agent-credit-note', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/agent-payments', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/build/quickstart', priority: 0.8, changefreq: 'weekly' as const },
+    { url: '/build/services', priority: 0.8, changefreq: 'weekly' as const },
     // Agent registry
     { url: '/ergo-watch/agents/submit', priority: 0.7, changefreq: 'monthly' as const },
     // Press + annual report

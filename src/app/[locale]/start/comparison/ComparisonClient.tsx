@@ -182,7 +182,7 @@ export default function ComparisonClient() {
           headline: "Ergo vs Others — Practical Comparison",
           description:
             "Comparison of eUTXO vs account models, PoW vs PoS, privacy and fees: Ergo, Ethereum, Bitcoin, Cardano.",
-          image: "https://www.ergoblockchain.org/og/comparison.png",
+          image: "https://www.ergoblockchain.org/og/comparison.jpg",
           datePublished: isoDate,
           dateModified: isoDate,
           author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://www.ergoblockchain.org" },
