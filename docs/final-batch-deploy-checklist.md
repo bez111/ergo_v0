@@ -32,6 +32,7 @@ completeness = full_receipt_bundle
 ```bash
 cd /Users/alexanderbezkrovny/Desktop/ergo_v0
 npm run audit:claims
+npm run audit:agent-economy-gate
 npm run type-check
 npm run qa:mobile-crawl -- --discover-only --out artifacts/mobile-crawl/latest-discovery
 npx eslint src/proxy.ts \

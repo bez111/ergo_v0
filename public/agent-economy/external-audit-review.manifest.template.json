@@ -1,0 +1,54 @@
+{
+  "type": "ergo.agent_economy.external_audit_review_manifest.template.v0",
+  "version": "v0",
+  "status": "template_external_review_pending",
+  "last_reviewed": "2026-05-20",
+  "public_claim": "Template only. No independent external audit or review report is published yet.",
+  "network_scope": [
+    "testnet evidence",
+    "future mainnet readiness gate"
+  ],
+  "reviewer": {
+    "name": null,
+    "organization": null,
+    "contact": null,
+    "public_key_or_signature_identity": null
+  },
+  "review_boundary": {
+    "repo": "https://github.com/bez111/ergo_v0",
+    "reviewed_commit": null,
+    "reviewed_lockfile_hash": null,
+    "reviewed_deployment_id": null,
+    "reviewed_mainnet_script_identity_manifest": null,
+    "reviewed_testnet_evidence_pack": "https://www.ergoblockchain.org/agent-economy/audit-manifest.v0.json"
+  },
+  "scope": {
+    "included": [
+      "Sage quote/chat/verify APIs",
+      "Agreement JSON",
+      "Verification Receipt JSON",
+      "Settlement Receipt JSON",
+      "Vercel Blob receipt durability model",
+      "Sage signer redemption policy",
+      "Ergo Note and Reserve flow",
+      "Accord conformance artifact publication",
+      "Agent Economy Live Hub and status APIs",
+      "Mainnet gate wording and claim controls"
+    ],
+    "excluded_unless_added_by_reviewer": [
+      "third-party wallet internals",
+      "third-party tenant deployments",
+      "exchange integrations",
+      "unpublished production custody setup"
+    ]
+  },
+  "findings": [],
+  "required_before_acceptance": [
+    "Reviewer identity is filled.",
+    "Reviewed commit and artifact hashes are filled.",
+    "Findings include severity, status, remediation reference, and residual risk.",
+    "The report is signed or otherwise independently attributable.",
+    "The reviewed script identity manifest is linked and non-template."
+  ],
+  "mainnet_gate_effect": "This template does not open the mainnet gate. A completed, attributable external review is required."
+}

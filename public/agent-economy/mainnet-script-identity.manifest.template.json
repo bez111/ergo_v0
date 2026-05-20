@@ -1,0 +1,85 @@
+{
+  "type": "ergo.agent_economy.mainnet_script_identity_manifest.template.v0",
+  "version": "v0",
+  "status": "template_mainnet_identity_pending",
+  "last_reviewed": "2026-05-20",
+  "public_claim": "Template only. No mainnet script identity is published or audited yet.",
+  "network": "mainnet",
+  "provider_id": "provider://sage-ergoblockchain",
+  "must_not_be_used_as": [
+    "mainnet readiness evidence",
+    "production custody evidence",
+    "audited contract identity"
+  ],
+  "review_boundary": {
+    "reviewed_site_commit": null,
+    "reviewed_lockfile_hash": null,
+    "reviewed_package_versions": {
+      "@accord-protocol/core": null,
+      "@accord-protocol/gateway": null,
+      "@accord-protocol/rails": null,
+      "@accord-protocol/rails-ergo": null,
+      "ergo-agent-pay": null,
+      "ergo-agent-kit": null,
+      "@fleet-sdk/core": null,
+      "@fleet-sdk/compiler": null
+    },
+    "compiler_or_serialization_toolchain": null,
+    "reviewer_or_auditor": null,
+    "external_review_manifest": null
+  },
+  "scripts": [
+    {
+      "id": "reserve",
+      "role": "payment reserve or funding box",
+      "source_artifact": null,
+      "source_artifact_hash": null,
+      "compiled_ergo_tree": null,
+      "compiled_ergo_tree_hash": null,
+      "mainnet_address": null,
+      "test_vectors": []
+    },
+    {
+      "id": "note",
+      "role": "task-bound payment Note",
+      "source_artifact": null,
+      "source_artifact_hash": null,
+      "compiled_ergo_tree": null,
+      "compiled_ergo_tree_hash": null,
+      "mainnet_address": null,
+      "register_contract": {
+        "R4": "reserve box id",
+        "R5": "expiry height",
+        "R6": "task hash"
+      },
+      "test_vectors": []
+    },
+    {
+      "id": "tracker",
+      "role": "optional settlement or accounting tracker",
+      "source_artifact": null,
+      "source_artifact_hash": null,
+      "compiled_ergo_tree": null,
+      "compiled_ergo_tree_hash": null,
+      "mainnet_address": null,
+      "test_vectors": []
+    },
+    {
+      "id": "acceptance-predicate",
+      "role": "work acceptance predicate or verifier policy",
+      "source_artifact": null,
+      "source_artifact_hash": null,
+      "compiled_ergo_tree": null,
+      "compiled_ergo_tree_hash": null,
+      "mainnet_address": null,
+      "test_vectors": []
+    }
+  ],
+  "required_before_publication": [
+    "Replace every null with a reviewed concrete artifact or explicitly remove unused script roles.",
+    "Bind every script to a reviewed source artifact hash and compiled ErgoTree hash.",
+    "Publish exact dependency and compiler/toolchain versions.",
+    "Link the external review or audit manifest for the same commit and script set.",
+    "Update /api/agent-economy/mainnet-gate only after this manifest and the external review are both non-template artifacts."
+  ]
+}

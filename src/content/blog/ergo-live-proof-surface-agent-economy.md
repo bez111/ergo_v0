@@ -221,8 +221,11 @@ Educational content becomes stronger when it can point into executable surfaces.
 | Sage paid flow | Site chat widget | Live testnet proof. |
 | Sage receipt API | `/api/sage/receipt/{id}` | Full post-Blob bundle published. |
 | Accord evidence | `/evidence/sage/conformance-l1-2026-05-20.signed.json` | Signed L1 evidence published. |
+| Testnet script identity | `/agent-economy/script-identity-manifest.v0.json` | Observed testnet wallet, Note, Reserve and settlement identity published. |
+| Signer ops evidence | `/agent-economy/signer-ops-evidence.v0.json` | Permanent testnet signer endpoint and operations evidence published. |
+| Audit scope manifest | `/agent-economy/audit-scope-manifest.v0.json` | Draft review scope published. Not an independent audit report. |
 | ErgoScript Playground | `/build/playground` | Live developer surface. |
-| Mainnet gate | `/api/agent-economy/mainnet-gate` | Closed by design. |
+| Mainnet gate | `/api/agent-economy/mainnet-gate` | Closed by design: 4 gates completed, 2 trust gates pending. |
 
 ## What is not claimed
 
@@ -234,7 +237,7 @@ Not claimed:
 - Accord is production certified.
 - ChainCash or Basis contracts are audited.
 - The current payment scripts are safe for real funds.
-- A temporary signer path is production operations.
+- Testnet signer operations evidence equals production custody.
 - Signed L1 evidence equals full audit readiness.
 
 The correct public posture is:
@@ -251,13 +254,22 @@ The next gates are clear.
 
 First, the Accord registry profile now points to the new Sage evidence and receipt bundle. That makes the registry a durable pointer to the same public proof surface instead of a separate database of facts.
 
-Second, the testnet signer now has a permanent controlled endpoint and a public operations evidence manifest. The remaining work is to attach external review to auth, logs, health checks, limits, rotation and incident handling.
+Second, the testnet signer now has a permanent controlled endpoint and a public operations evidence manifest. That evidence is published, but it is still testnet operations evidence, not a production custody claim.
 
 Third, testnet script identity is now published as an observed manifest. Mainnet still needs audit-bound source artifacts, compiled script hashes, addresses, network, package versions and known limits.
 
 Fourth, external audit or review manifests need to exist before any mainnet claim.
 
 Finally, the Sage widget can move beyond activity feed embedding into a full paid widget: chat, quote, verify, receipt link and tenant config.
+
+In machine-readable form, the mainnet gate now reports:
+
+```text
+completed = 4
+pending = 2
+```
+
+The two remaining trust gates are external review and audit-bound mainnet script identity.
 
 ## Why this matters
 

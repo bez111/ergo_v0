@@ -23,6 +23,12 @@ https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json
 audit_scope_manifest
 https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json
 
+external_review_template
+https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json
+
+mainnet_script_identity_template
+https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.manifest.template.json
+
 mainnet_gate
 https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 ```
@@ -35,6 +41,8 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - The conformance result is signed by `provider://sage-ergoblockchain`.
 - A permanent testnet signer service is reachable and address-matched.
 - The observed testnet wallet, reserve, note, registers, and settlement identifiers are published.
+- The external review and mainnet script identity templates are published, but they are not completed artifacts.
+- The mainnet gate currently has 4 completed gates and 2 pending trust gates.
 
 ## What remains blocked
 
@@ -47,4 +55,10 @@ Until those are published, use only:
 ```text
 testnet live proof
 audit-gated mainnet path
+```
+
+Local guardrail:
+
+```bash
+npm run audit:agent-economy-gate
 ```
