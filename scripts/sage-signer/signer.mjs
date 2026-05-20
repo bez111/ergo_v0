@@ -108,7 +108,7 @@ console.log("Sage signer starting…")
 console.log(`  network: ${NETWORK}`)
 console.log(`  signer:  ${SIGNER_ADDRESS}`)
 console.log(`  port: ${PORT}`)
-console.log(`  policy: max ${MAX_SINGLE_TX} nanoERG/tx, ${WHITELIST.length} whitelisted addr(s)`)
+console.log(`  policy: max ${MAX_SINGLE_TX} nanoERG/tx to non-self recipients, ${WHITELIST.length} whitelisted addr(s)`)
 console.log(`  max body: ${MAX_BODY_BYTES} bytes`)
 console.log(`  rate: ${MAX_REQUESTS_PER_MINUTE}/min, trip after ${FAILURE_TRIP_THRESHOLD} signing failure(s)`)
 console.log()
@@ -224,16 +224,17 @@ const server = http.createServer(async (req, res) => {
       return
     }
 
-    // Policy: spending cap.
-    const totalSpend = sumOutputValue(unsigned)
-    if (totalSpend > MAX_SINGLE_TX) {
+    // Policy: cap value leaving the signer wallet. Ergo transactions often
+    // include large self-change outputs; those should not trip the cap.
+    const policySpend = sumNonSelfOutputValue(unsigned)
+    if (policySpend > MAX_SINGLE_TX) {
       counters.policyRejected++
-      recordPolicyReject("tx exceeds spending cap", {
+      recordPolicyReject("tx exceeds non-self spending cap", {
         requestId,
-        totalSpend: String(totalSpend),
+        policySpend: String(policySpend),
         cap: String(MAX_SINGLE_TX),
       })
-      sendJson(res, 403, { error: `tx total ${totalSpend} > cap ${MAX_SINGLE_TX}` })
+      sendJson(res, 403, { error: `tx non-self total ${policySpend} > cap ${MAX_SINGLE_TX}` })
       return
     }
 
@@ -256,9 +257,9 @@ const server = http.createServer(async (req, res) => {
       opsState.lastSigned = {
         ts: new Date().toISOString(),
         txId: signed?.id ?? null,
-        spend: String(totalSpend),
+        spend: String(policySpend),
       }
-      audit("SIGN", "ok", { requestId, txId: signed?.id ?? "(unknown)", spend: String(totalSpend) })
+      audit("SIGN", "ok", { requestId, txId: signed?.id ?? "(unknown)", policySpend: String(policySpend) })
       res.writeHead(200, { "content-type": "application/json" })
       res.end(stringifyWithBigInts({ signedTx: signed }))
     } catch (err) {
@@ -289,10 +290,13 @@ server.listen(PORT, () => {
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
-function sumOutputValue(tx) {
+function sumNonSelfOutputValue(tx) {
   try {
     const outs = tx.outputs ?? []
-    return outs.reduce((sum, o) => sum + BigInt(o?.value ?? 0), 0n)
+    return outs.reduce((sum, o) => {
+      if (o?.address === SIGNER_ADDRESS) return sum
+      return sum + BigInt(o?.value ?? 0)
+    }, 0n)
   } catch {
     return 0n
   }

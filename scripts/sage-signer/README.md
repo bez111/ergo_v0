@@ -118,7 +118,7 @@ Returns `{ "signedTx": <signed tx> }` on success, `{ "error": "..." }` on failur
 The signer also enforces a basic policy:
 - Abort at startup when `SAGE_EXPECTED_WALLET_ADDRESS` / `SAGE_WALLET_ADDRESS`
   is set and does not match the seed-derived signer address.
-- Reject txs that spend more than `SAGE_MAX_SINGLE_TX` nanoERG.
+- Reject txs that send more than `SAGE_MAX_SINGLE_TX` nanoERG to non-self recipients.
 - Reject oversized request bodies using `SAGE_SIGNER_MAX_BODY_BYTES`.
 - Rate-limit authorized signing requests with `SAGE_SIGNER_MAX_REQUESTS_PER_MINUTE`.
 - Fail closed after `SAGE_SIGNER_FAILURE_TRIP_THRESHOLD` consecutive signing failures, then cool down for `SAGE_SIGNER_FAILURE_COOLDOWN_MS`.
