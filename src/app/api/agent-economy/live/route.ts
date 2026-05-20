@@ -463,10 +463,12 @@ function buildLifecycle(opts: {
     {
       id: "note",
       label: "Ergo Note payment",
-      state: opts.settlementCount > 0 ? "live" : "pending",
+      state: opts.latestFullReceipt || opts.settlementCount > 0 ? "live" : "pending",
       detail: opts.settlementCount > 0
         ? `${opts.settlementCount} settled Note flow(s) visible in activity.`
-        : "Waiting for the first paid Note flow.",
+        : opts.latestFullReceipt
+          ? `Paid Note verified for ${shortId(opts.latestFullReceipt.id)}; redemption is tracked separately.`
+          : "Waiting for the first paid Note flow.",
       evidence_href: "/api/sage/activity",
     },
     {
