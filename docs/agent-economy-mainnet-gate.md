@@ -13,13 +13,15 @@ Published:
 - Post-Blob Sage receipt bundle with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON.
 - Signed Accord L1 conformance result for the Sage provider endpoint.
 - Public provider signing key for verifying signed conformance artifacts.
+- Accord registry evidence pointing to the signed conformance artifact.
+- Testnet observed script identity manifest.
+- Testnet signer operations runbook and evidence manifest.
+- Public MCP DNS and health endpoint.
 
 Still required before any mainnet language:
 
-- Registry evidence update pointing to the signed conformance artifact.
-- Exact contract identity manifest: network, contract source artifact hashes, compiled script hashes, and Reserve / Note / Tracker / Acceptance Predicate identifiers.
-- Audit manifest: scope, reviewed commit/artifact hashes, reviewer identity, and finding status.
-- Signer operations runbook and hardening evidence: health/readiness checks, limits, failure logging, and failover procedure.
+- Audit-bound mainnet contract identity manifest: network, contract source artifact hashes, compiled script hashes, and Reserve / Note / Tracker / Acceptance Predicate identifiers.
+- External audit or review report: scope, reviewed commit/artifact hashes, reviewer identity, finding status, remediation state, and residual risks.
 
 ## Public language rule
 
@@ -48,3 +50,7 @@ The current gate is exposed at:
 
 Live Hub consumes that endpoint and should remain the public source for the
 current status.
+
+In the machine-readable gate, a blocker with `state = "open"` means that the
+required artifact has opened that gate. The still-required work is also exposed
+as `pending_blockers` for consumers that only need the remaining list.

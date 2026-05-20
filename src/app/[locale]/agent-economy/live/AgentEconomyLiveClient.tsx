@@ -583,9 +583,9 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
     {
       id: "mcp",
       label: "MCP tool surface",
-      state: "pending",
-      detail: "Fly endpoint works; public DNS is the remaining gate.",
-      evidence_href: "https://ergoblockchain-mcp.fly.dev/health",
+      state: "live",
+      detail: "Public MCP DNS and health endpoint are live.",
+      evidence_href: "https://mcp.ergoblockchain.org/health",
     },
     {
       id: "widget",
@@ -623,16 +623,16 @@ function fallbackMainnetBlockers() {
     {
       id: "exact-contract-identity",
       label: "Exact script identity",
-      state: "closed",
+      state: "pending",
       owner: "audit",
-      detail: "Publish script hashes and artifact manifests.",
+      detail: "Testnet observed identity is published; audit-bound mainnet identity is still required.",
     },
     {
       id: "external-audit-manifests",
       label: "Audit manifests",
-      state: "closed",
+      state: "pending",
       owner: "audit",
-      detail: "Attach audit scope and signed reviewer identity.",
+      detail: "Draft scope is published; signed external review is still required.",
     },
   ]
 }
