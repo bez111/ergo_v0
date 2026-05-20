@@ -13,7 +13,7 @@ Sage can serve paid testnet turns in two modes:
 - Custody: seller signing key must stay outside Vercel.
 - Public claim: testnet proof, not mainnet readiness.
 - Durable receipts: new paid turns should persist full Agreement, Verification Receipt, and Settlement Receipt JSON through Vercel Blob.
-- Conformance: not complete until a post-Blob receipt produces a signed conformance artifact and registry evidence.
+- Conformance: Sage L1 evidence is signed and published for the first post-Blob full receipt bundle; mainnet remains blocked until script identity, audit manifests, and permanent signer operations are published.
 
 ## Required secrets
 
@@ -53,11 +53,16 @@ npm install
 npm start
 ```
 
-Expose it:
+Expose it for local testing:
 
 ```bash
 cloudflared tunnel --url http://localhost:8911
 ```
+
+Do not point production `SAGE_SIGNER_URL` at an ad-hoc `trycloudflare.com`
+quick tunnel. Production settlement mode needs a controlled endpoint: a named
+Cloudflare Tunnel under the operator account, a locked-down Fly/VM signer, or an
+equivalent permanent service with key custody, auth, logs, and rotation.
 
 Set or rotate the Vercel URL:
 

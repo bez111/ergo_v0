@@ -1,10 +1,11 @@
 # Final Batch Deploy Checklist
 
-Do this only after the external blockers are cleared.
+Use this for the next deploy batch after local code/content changes. The
+post-Blob receipt and signed L1 evidence gates are already complete.
 
 ## User-owned gates
 
-- [ ] DNS resolves:
+- [x] DNS resolves:
 
 ```bash
 dig +short mcp.ergoblockchain.org A
@@ -12,15 +13,17 @@ dig +short mcp.ergoblockchain.org AAAA
 curl -fsS https://mcp.ergoblockchain.org/health
 ```
 
-- [ ] One post-Blob paid Sage flow exists.
-- [ ] `BLOB_READ_WRITE_TOKEN` is present and `/api/sage/receipt/blob-probe-2026-05-16` reports `storage_healthy = true`.
-- [ ] `/api/sage/receipt/<id>` returns:
+- [x] One post-Blob paid Sage flow exists:
+  `09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`.
+- [x] `BLOB_READ_WRITE_TOKEN` is present and `/api/sage/receipt/blob-probe-2026-05-16` reports `storage_healthy = true`.
+- [x] `/api/sage/receipt/<id>` returns:
 
 ```text
 completeness = full_receipt_bundle
 ```
 
-- [ ] Final hub subdomain is chosen.
+- [x] Final hub subdomain is chosen: `agents.ergoblockchain.org`.
+- [ ] Permanent settlement signer endpoint is configured if the next batch must prove fresh redemption, not only verification + durable receipt.
 
 ## Preflight
 
@@ -85,7 +88,7 @@ Expected:
 - Live Hub page loads.
 - `receipt-storage = live`.
 - `full-receipt-bundle = live` after paid flow.
-- `accord-conformance = pending` or `live` depending on evidence status.
+- `accord-conformance = live`.
 - `mcp-dns = live` after DNS.
 - `mainnet-audit-gate = blocked` until audit/script identity artifacts exist.
 

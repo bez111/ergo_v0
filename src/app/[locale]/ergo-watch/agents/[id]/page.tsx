@@ -283,6 +283,42 @@ export default async function AgentProfilePage({ params }: PageProps) {
                     {profile.conformance.last_run_at ?? "Pending"}
                   </span>
                 </KV>
+                {profile.conformance.result_uri && (
+                  <KV label="Result" mono>
+                    <a
+                      href={profile.conformance.result_uri}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-300 hover:text-orange-200 font-mono break-all text-xs underline decoration-orange-500/40"
+                    >
+                      signed artifact
+                    </a>
+                  </KV>
+                )}
+                {profile.conformance.receipt_uri && (
+                  <KV label="Receipt" mono>
+                    <a
+                      href={profile.conformance.receipt_uri}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-300 hover:text-orange-200 font-mono break-all text-xs underline decoration-orange-500/40"
+                    >
+                      full receipt bundle
+                    </a>
+                  </KV>
+                )}
+                {profile.conformance.public_key_uri && (
+                  <KV label="Public key" mono>
+                    <a
+                      href={profile.conformance.public_key_uri}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-300 hover:text-orange-200 font-mono break-all text-xs underline decoration-orange-500/40"
+                    >
+                      provider signing key
+                    </a>
+                  </KV>
+                )}
                 {profile.conformance.notes && (
                   <KV label="Notes" mono>
                     <span className="text-gray-400 text-xs">

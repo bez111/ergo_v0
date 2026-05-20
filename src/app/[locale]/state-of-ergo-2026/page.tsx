@@ -159,9 +159,9 @@ const THESIS = [
 
 const NEXT = [
   {
-    title: "Conformance suite ships",
+    title: "Signed conformance evidence ships",
     body:
-      "accord-conformance v0 with L0-L4 test levels — schema, transport, rail, security, registry-cert. Sage will be the first provider with a signed conformance result.",
+      "accord-conformance v0 now has a signed Sage L1 result against the public Accord endpoint and a post-Blob full receipt bundle. Higher levels and registry certification remain the next trust layer.",
   },
   {
     title: "More production agents in the registry",

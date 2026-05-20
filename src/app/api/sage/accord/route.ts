@@ -26,9 +26,11 @@ export async function GET() {
       provider: "sage",
       protocol: "accord",
       version: "v0",
-      level: "L1-candidate",
+      level: "L1",
       target: ACCORD_TARGET_URL,
       agreement_template: AGREEMENT_TEMPLATE_URL,
+      conformance_evidence: "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
+      public_signing_key: "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
       accepted_rails: ["ergo"],
       payment_header: {
         name: "X-Accord-Payment",
@@ -41,7 +43,7 @@ export async function GET() {
         },
       },
       notes:
-        "POST without Accord headers returns a 402 challenge. POST with x-accord-agreement-id and x-accord-payment={\"receipt_id\":\"...\"} validates the stored Sage receipt bundle. L1 remains candidate until a signed conformance artifact is published.",
+        "POST without Accord headers returns a 402 challenge. POST with x-accord-agreement-id and x-accord-payment={\"receipt_id\":\"...\"} validates the stored Sage receipt bundle. Signed L1 conformance evidence is published for the first post-Blob full receipt bundle.",
     },
     {
       headers: {

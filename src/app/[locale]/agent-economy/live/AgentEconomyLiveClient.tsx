@@ -48,6 +48,8 @@ interface LiveStatusResponse {
     storage_configured: boolean
     receipt_storage_healthy?: boolean
     latest_full_receipt_id: string | null
+    accord_conformance_level?: string | null
+    accord_conformance_evidence?: string | null
     sage_wallet_event_count: number
     sage_settlement_count: number
     sage_signer_status?: string
@@ -298,8 +300,9 @@ export function AgentEconomyLiveClient() {
                     <div>
                       <h2 className="font-semibold text-yellow-50">Protocol pass runway</h2>
                       <p className="mt-2 text-sm leading-relaxed text-yellow-50/75">
-                        Mainnet language stays locked. The next unlock is a
-                        post-Blob paid Sage receipt, then conformance evidence.
+                        Full receipt and signed L1 evidence are live. The next
+                        unlock is exact script identity, signer ops, and audit
+                        manifests.
                       </p>
                     </div>
                   </div>
@@ -377,20 +380,30 @@ export function AgentEconomyLiveClient() {
         <section className="border-y border-white/5 bg-black/50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid gap-5 md:grid-cols-4">
-                <ProofTile
-                  icon={ReceiptText}
-                  label="Receipt source"
-                  value={
-                    status
-                      ? status.summary.receipt_storage_healthy
-                        ? "Blob healthy"
-                        : status.summary.storage_configured
-                          ? "Blob failing"
-                          : "Setup pending"
-                      : "pending"
-                  }
-                />
-              <ProofTile icon={CheckCircle2} label="Conformance" value={status?.summary.latest_full_receipt_id ? "Ready to run" : "Blocked"} />
+              <ProofTile
+                icon={ReceiptText}
+                label="Receipt source"
+                value={
+                  status
+                    ? status.summary.receipt_storage_healthy
+                      ? "Blob healthy"
+                      : status.summary.storage_configured
+                        ? "Blob failing"
+                        : "Setup pending"
+                    : "pending"
+                }
+              />
+              <ProofTile
+                icon={CheckCircle2}
+                label="Conformance"
+                value={
+                  status?.summary.accord_conformance_level
+                    ? `${status.summary.accord_conformance_level} live`
+                    : status?.summary.latest_full_receipt_id
+                      ? "Ready to run"
+                      : "Blocked"
+                }
+              />
               <ProofTile icon={Network} label="MCP" value={gateStateLabel(gates.find((gate) => gate.id === "mcp-fly")?.state)} />
               <ProofTile icon={WalletCards} label="Mainnet gate" value={status?.summary.mainnet_gate_status ?? "closed"} />
             </div>
@@ -491,15 +504,15 @@ function gateStateLabel(state?: GateState) {
 function fallbackActions() {
   return [
     {
-      id: "post-blob-paid-flow",
-      label: "Run one new paid Sage flow to create a full receipt bundle",
-      owner: "wallet",
-      blocked_by_external: true,
+      id: "registry-evidence",
+      label: "Open the Accord registry PR with the signed Sage artifact",
+      owner: "repo",
+      blocked_by_external: false,
     },
     {
-      id: "accord-conformance",
-      label: "Run conformance and publish signed evidence",
-      owner: "repo",
+      id: "permanent-signer",
+      label: "Configure a permanent controlled signer endpoint",
+      owner: "ops",
       blocked_by_external: true,
     },
   ]
@@ -551,16 +564,16 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
     {
       id: "receipt",
       label: "Full receipt bundle",
-      state: "blocked",
-      detail: "Needs one new paid Sage flow after Blob storage.",
-      evidence_href: "/api/sage/receipt/blob-probe-2026-05-16",
+      state: "live",
+      detail: "Post-Blob full receipt bundle is published.",
+      evidence_href: "/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
     },
     {
       id: "conformance",
       label: "Accord conformance",
-      state: "blocked",
-      detail: "Blocked by the missing full receipt bundle.",
-      evidence_href: "/api/sage/accord",
+      state: "live",
+      detail: "Signed Sage L1 conformance evidence is published.",
+      evidence_href: "/evidence/sage/conformance-l1-2026-05-20.signed.json",
     },
     {
       id: "mcp",
@@ -591,16 +604,16 @@ function fallbackMainnetBlockers() {
     {
       id: "post-blob-full-receipt",
       label: "Post-Blob full receipt",
-      state: "closed",
+      state: "open",
       owner: "wallet",
-      detail: "Run one paid Sage flow after Blob storage.",
+      detail: "First post-Blob full receipt bundle is published.",
     },
     {
       id: "accord-conformance-signed",
       label: "Signed conformance",
-      state: "closed",
+      state: "open",
       owner: "repo",
-      detail: "Run Accord conformance and publish signed evidence.",
+      detail: "Signed Sage L1 evidence is published.",
     },
     {
       id: "exact-contract-identity",

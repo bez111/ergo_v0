@@ -168,7 +168,7 @@ export default async function AgentRegistryPage() {
 function SageFeature({ provider }: { provider: ProviderProfile }) {
   const isVerifyOnly = provider.operational_status?.settlement_mode
     ?.toString()
-    .startsWith("verify-only")
+    .includes("verify-only")
   return (
     <section className="rounded-2xl border border-orange-500/30 bg-gradient-to-br from-orange-500/10 to-orange-500/5 p-6 md:p-8">
       <div className="flex items-start gap-3 mb-3">

@@ -4,6 +4,8 @@ import type { NextRequest } from 'next/server';
 import { routing } from './i18n/routing';
 
 const intlProxy = createMiddleware(routing);
+const localeHeaderName = 'X-NEXT-INTL-LOCALE';
+const internalLocaleRewriteHeader = 'X-ERGO-INTERNAL-LOCALE-REWRITE';
 const agentHubHosts = new Set([
   'agents.ergoblockchain.org',
   'agenthub.ergoblockchain.org',
@@ -57,6 +59,12 @@ export function proxy(request: NextRequest) {
   const host = normalizeHost(request.headers.get('host'));
   const path = request.nextUrl.pathname;
 
+  if (request.headers.get(internalLocaleRewriteHeader) === '1') {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set(localeHeaderName, routing.defaultLocale);
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
+
   const agentHubPath = getAgentHubPath(path);
   if (agentHubHosts.has(host) && agentHubPath) {
     const url = request.nextUrl.clone();
@@ -71,7 +79,18 @@ export function proxy(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
-  return intlProxy(request);
+  const currentPath = normalizePathname(request.nextUrl.pathname);
+  const firstSegment = currentPath.split('/').filter(Boolean)[0];
+  if (firstSegment && localePrefixes.has(firstSegment)) {
+    return intlProxy(request);
+  }
+
+  const url = request.nextUrl.clone();
+  url.pathname = currentPath === '/' ? '/en' : `/en${currentPath}`;
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set(localeHeaderName, routing.defaultLocale);
+  requestHeaders.set(internalLocaleRewriteHeader, '1');
+  return NextResponse.rewrite(url, { request: { headers: requestHeaders } });
 }
 
 function getAgentHubPath(pathname: string): string | null {

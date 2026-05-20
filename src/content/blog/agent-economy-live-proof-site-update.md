@@ -6,8 +6,8 @@ meta_description: "What is now live on ergoblockchain.org: Agent Economy Live Hu
 excerpt: "The Ergo site is no longer only a documentation and narrative surface. It now exposes live agent-economy infrastructure: Agent Hub, MCP, Sage receipts, an ErgoScript playground and clear testnet/mainnet gates."
 author: "Ergo Developer Relations"
 date_published: "2026-05-18"
-date_modified: "2026-05-18"
-status: "Public site update. The website infrastructure is live; Sage/Accord payment flows remain testnet-first and audit-gated until signed conformance evidence and mainnet manifests are published."
+date_modified: "2026-05-20"
+status: "Public site update. The website infrastructure is live; Sage/Accord remains testnet-first, with a post-Blob full receipt bundle and signed L1 conformance evidence now published."
 tags: ["Ergo", "Agent Economy", "Sage", "MCP", "Accord Protocol", "ErgoScript Playground"]
 target_keywords: ["Ergo agent economy", "AI agent payments", "Sage AI agent", "MCP endpoint", "Accord Protocol receipts", "ErgoScript playground"]
 ---
@@ -22,6 +22,8 @@ That means the website is no longer only where we describe autonomous payments, 
 
 This article is a clean status update: what is working now, what remains experimental, and where the site is going next.
 
+**Update on 2026-05-20:** the immediate post-Blob proof task is now complete. Sage produced a full receipt bundle at [`/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`](/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c), and Sage L1 Accord conformance evidence is signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). This upgrades the proof surface, but it does not open mainnet language.
+
 ## TL;DR
 
 ### The site now has a live Agent Economy surface
@@ -34,7 +36,11 @@ The new Agent Economy Live Hub gives humans and machines one place to inspect th
 
 ### Sage has a real Ergo testnet settlement trail
 
-Sage has already produced a real Ergo testnet redemption transaction. New Blob-era paid turns can persist the full receipt bundle: Agreement JSON, Verification Receipt JSON and Settlement Receipt JSON.
+Sage has already produced a real Ergo testnet redemption transaction. A new Blob-era paid turn has also persisted the full receipt bundle: Agreement JSON, Verification Receipt JSON and Settlement Receipt JSON.
+
+### Accord L1 evidence is signed
+
+The first post-Blob receipt bundle passed Sage's L1 Accord conformance run. The signed artifact and provider public key are public, so tools can verify the claim without relying on this article.
 
 ### The important caveat remains testnet first
 
@@ -72,8 +78,9 @@ The table below separates live website infrastructure from testnet protocol clai
 | Agent status API | `/api/agent-economy/live` | Machine-readable summary for dashboards, agents and future widgets. | Live API. |
 | Public MCP endpoint | `mcp.ergoblockchain.org` | MCP Streamable HTTP endpoint plus health checks. | Live infrastructure. |
 | Sage paid flow | Sage on the site | 402-style premium request, testnet Note verification and settlement trail. | Testnet proof. |
-| Sage receipt API | `/api/sage/receipt/<id>` | Machine-readable receipt source of truth for Sage evidence. | Live API; full bundle appears for new Blob-era paid turns. |
+| Sage receipt API | `/api/sage/receipt/<id>` | Machine-readable receipt source of truth for Sage evidence. | Live API; first post-Blob full bundle is published. |
 | Blob receipt storage | Vercel Blob | Durable storage for Agreement JSON, Verification Receipt JSON and Settlement Receipt JSON. | Storage configured and healthy. |
+| Accord evidence | `/evidence/sage/conformance-l1-2026-05-20.signed.json` | Signed Sage L1 conformance result for the post-Blob receipt. | Published testnet evidence. |
 | ErgoScript Playground | `/build/playground` | Browser workbench for ErgoScript examples and sigma-rust WASM. | Live developer surface. |
 | Sage widget source | `sage-widget` repo | Activity feed package today, with paid widget surface moving toward chat, quote, verify, receipt link and tenant config. | Source prepared; publish lifecycle remains separate. |
 
@@ -97,7 +104,11 @@ This proves something specific and useful: an AI agent interaction can be bound 
 
 It does not prove everything yet. That distinction is important.
 
-The first real Sage settlement happened before durable receipt storage was added, so that early receipt remains chain-proof-only. Blob storage is now live for new paid turns. The next paid Sage turn after that deployment is the one that should produce the first full receipt bundle.
+The first real Sage settlement happened before durable receipt storage was added, so that early receipt remains chain-proof-only. Blob storage is now live for new paid turns, and the first post-Blob paid turn has produced a full receipt bundle:
+
+```text
+09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c
+```
 
 That bundle is the object we care about:
 
@@ -182,7 +193,7 @@ Here is the honest boundary:
 |---|---|---|
 | Ergo base chain | Ergo is live. | This article does not claim new consensus functionality. |
 | Sage | Hosted testnet proof with real settlement trail. | Not audited mainnet payment infrastructure. |
-| Accord receipts | Storage path is live for new paid turns. | No full protocol pass until a Blob-era receipt is generated and conformance is signed. |
+| Accord receipts | Full receipt bundle and signed Sage L1 evidence are published. | No mainnet/audit pass until script identity, signer ops and audit manifests exist. |
 | MCP | Public endpoint is live. | Not a guarantee that every future tool is production ready. |
 | Widget | Package and source surfaces exist. | The full embeddable paid chat widget is still the next level. |
 | Mainnet | Mainnet gate is intentionally closed. | No production readiness claim before audit manifests and exact script identity are published. |
@@ -224,29 +235,19 @@ That is a much stronger claim than a whitepaper. It is a live, inspectable syste
 
 The next steps are concrete.
 
-### 1. Run one new paid Sage flow after Blob
-
-This is the immediate proof task. One new paid Sage turn should create a full receipt bundle under `/api/sage/receipt/<id>`.
-
-The expected status should move from chain proof to full receipt bundle.
-
-### 2. Run Accord conformance
-
-Once the full bundle exists, it should be checked against the Accord conformance path. The output should be a signed artifact, not just a developer note.
-
-### 3. Update registry evidence
+### 1. Update registry evidence
 
 The Accord or Sage registry entry should link to the conformance evidence and receipt bundle without duplicating the entire receipt object.
 
-### 4. Harden signer operations
+### 2. Harden signer operations
 
-The signer path needs operational polish: health display, failure logging, limits, monitoring, fallback/runbook and clearer redemption failure visibility.
+The signer path needs operational polish: a permanent controlled endpoint, health display, failure logging, limits, monitoring, fallback/runbook and clearer redemption failure visibility.
 
-### 5. Expand Sage widget v0.1 toward a paid widget
+### 3. Expand Sage widget v0.1 toward a paid widget
 
 The next widget level is not only an activity feed. It should become an embeddable paid Sage surface: chat, quote, verify, receipt link and tenant configuration.
 
-### 6. Keep mainnet behind the audit gate
+### 4. Keep mainnet behind the audit gate
 
 Before mainnet claims, the site should publish exact script identity, audit manifests, package versions and signed contract evidence.
 
@@ -283,7 +284,7 @@ No. Sage is a hosted testnet proof. It has a real Ergo testnet settlement trail 
 
 ### What is the most important next proof?
 
-One new paid Sage turn after Blob storage. That should produce a full receipt bundle with Agreement JSON, Verification Receipt JSON and Settlement Receipt JSON.
+A fresh settled-on-chain post-Blob paid turn through a permanent controlled signer endpoint. The full receipt bundle and signed L1 evidence already exist; the remaining trust work is operational signer hardening, registry evidence, script identity and audits.
 
 ### Why does the MCP root show a simple error in the browser?
 
@@ -295,4 +296,4 @@ Because articles should not be databases. The source of truth should be `/api/sa
 
 ### When can the site claim mainnet readiness?
 
-After signed conformance evidence, audit manifests, exact script identities, package versions and operational signer controls are published for the relevant production flow.
+After audit manifests, exact script identities, package versions and operational signer controls are published for the relevant production flow. Signed Sage L1 conformance evidence exists, but it is only one gate.

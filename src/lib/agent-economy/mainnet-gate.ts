@@ -73,5 +73,6 @@ export const agentEconomyMainnetGate = {
     "script identity manifest",
     "audit manifest",
     "signer operations runbook",
+    "permanent signer endpoint",
   ],
 }

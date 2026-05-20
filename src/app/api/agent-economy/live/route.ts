@@ -92,7 +92,11 @@ export async function GET(req: Request) {
     ),
   ])
 
-  const latestFullReceipt = await discoverLatestFullReceipt(siteBaseUrl, activity.data)
+  const latestFullReceipt = await discoverLatestFullReceipt(
+    siteBaseUrl,
+    activity.data,
+    conformanceEvidence.data?.receipt_id ?? null,
+  )
   const activityEvents = activity.data?.events ?? []
   const settlementCount = activityEvents.filter((event) => event.type === "settlement").length
   const storageConfigured = storage.data?.storage_configured === true
@@ -192,7 +196,7 @@ export async function GET(req: Request) {
       mainnetGateStatus === "open" ? "live" : "blocked",
       mainnetGateStatus === "open"
         ? "All mainnet gate artifacts are published"
-        : "Closed until full receipt, conformance, script identity, and audit manifests are published",
+        : "Closed until exact script identity, signer operations, and audit manifests are published",
       "/api/agent-economy/mainnet-gate",
     ),
   ]
@@ -217,7 +221,7 @@ export async function GET(req: Request) {
     posture: {
       label: "testnet_live_proof",
       mainnet_ready: false,
-      note: "Live testnet proof. Mainnet claims remain blocked until conformance evidence, exact script identity, signed artifacts, and external audit manifests are published.",
+      note: "Live testnet proof. Full receipt and signed L1 conformance evidence are published; mainnet claims remain blocked until exact script identity, signer operations, and external audit manifests are published.",
     },
     monitor: {
       request_origin: requestOrigin,
@@ -257,7 +261,7 @@ export async function GET(req: Request) {
       }]),
       ...(conformancePassed ? [{
         id: "registry-evidence",
-        label: "Update Accord registry evidence with the signed Sage artifact",
+        label: "Open the Accord registry PR with the signed Sage artifact",
         owner: "repo",
         blocked_by_external: false,
       }] : [{
@@ -295,8 +299,10 @@ function gate(id: string, label: string, state: GateState, detail: string, href:
 async function discoverLatestFullReceipt(
   origin: string,
   activity: SageActivityResponse | null,
+  evidenceReceiptId: string | null,
 ): Promise<SageReceiptResponse | null> {
   const candidates = new Set<string>()
+  if (evidenceReceiptId) candidates.add(evidenceReceiptId)
   for (const event of activity?.events ?? []) {
     if (typeof event.txId === "string") candidates.add(event.txId)
     if (typeof event.noteBoxId === "string") candidates.add(event.noteBoxId)
@@ -449,7 +455,7 @@ function buildLifecycle(opts: {
       id: "mainnet",
       label: "Mainnet/audit gate",
       state: opts.mainnetGateStatus === "open" ? "live" : "blocked",
-      detail: "Mainnet language stays closed until conformance, script identity, and audit evidence are published.",
+      detail: "Mainnet language stays closed until script identity, signer ops, and audit evidence are published.",
       evidence_href: "/api/agent-economy/mainnet-gate",
     },
   ]

@@ -10,8 +10,10 @@ Allowed:
 - Sage has a public Ergo testnet payment proof.
 - Sage has produced at least one real Ergo testnet redemption transaction.
 - Durable full receipt storage is live for new paid Sage turns.
+- A post-Blob paid Sage flow produced a full receipt bundle with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON.
+- Sage has signed public Accord L1 conformance evidence for that receipt bundle.
 - `/api/sage/receipt/<id>` is the machine-readable source of truth for Sage receipts.
-- Accord conformance is pending until a post-storage receipt produces a signed artifact and registry evidence.
+- The current published evidence is still testnet-only and does not open mainnet readiness.
 
 Not allowed yet:
 
@@ -19,7 +21,7 @@ Not allowed yet:
 - "Accord is production certified."
 - "ChainCash/Basis contracts are audited."
 - "The current Sage script is safe for real funds."
-- "Full Accord pass" before signed conformance evidence exists.
+- "Full Accord pass" or "registry-certified" beyond the currently published Sage L1 evidence.
 
 ## Required artifacts before mainnet claims
 
@@ -89,7 +91,7 @@ When writing articles, docs, pages, press text, or social copy:
 
 - Say "testnet proof" unless a specific audited mainnet deployment is being referenced.
 - Say "durable receipt storage for new paid turns" rather than implying old receipts were upgraded.
-- Say "conformance pending" until the signed artifact and registry evidence are published.
+- Say "signed Sage L1 conformance evidence is published" only when linking to the signed artifact.
 - Separate "Ergo mainnet is live" from "Accord/Sage mainnet readiness."
 - Link to `/legal/risk`, `/legal/security`, and the relevant receipt or conformance evidence.
 
@@ -97,13 +99,12 @@ When writing articles, docs, pages, press text, or social copy:
 
 Before changing public copy to mainnet/production wording:
 
-- [ ] Full receipt bundle exists for a post-storage Sage paid turn.
-- [ ] `npm run sage:conformance -- --receipt <id>` passes.
-- [ ] Conformance result is signed.
-- [ ] Signed artifact is published at a stable URI.
+- [x] Full receipt bundle exists for a post-storage Sage paid turn.
+- [x] `npm run sage:conformance:evidence` passes for the post-storage receipt.
+- [x] Conformance result is signed.
+- [x] Signed artifact is published at a stable URI.
 - [ ] Accord registry evidence points to that artifact.
 - [ ] External audit or review manifest is published.
 - [ ] Script identity manifest is published.
 - [ ] Signer ops runbook is current.
 - [ ] Risk disclosure is updated.
-

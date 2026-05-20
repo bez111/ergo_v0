@@ -6,7 +6,7 @@ meta_description: "How Sage, the AI concierge on ergoblockchain.org, moved from 
 excerpt: "Sage now has a real Ergo testnet settlement trail and durable full receipt storage for new paid turns: Agreement JSON, Verification Receipt JSON, Settlement Receipt JSON, and a chain-anchored public receipt API."
 author: "Ergo Developer Relations"
 date_published: "2026-05-15"
-date_modified: "2026-05-16"
+date_modified: "2026-05-20"
 tags: ["Agent Economy", "Accord Protocol", "Sage", "build log", "Ergo testnet", "AI agent payments", "Claude", "Fleet SDK"]
 target_keywords: ["paid AI agent on blockchain", "Sage Ergo concierge", "Accord Protocol live demo", "AI agent on-chain payment", "agent economy working demo"]
 ---
@@ -30,9 +30,9 @@ f697e4841dd9a0c689d0b83a311130b85a0cfbab123230a6c40284b44c4cafef
 - Receipt JSON: <https://www.ergoblockchain.org/api/sage/receipt/f697e4841dd9a0c689d0b83a311130b85a0cfbab123230a6c40284b44c4cafef>
 - Live activity feed: <https://www.ergoblockchain.org/api/sage/activity>
 
-This post is the build log: what Sage does, what is proven, what is still deliberately not claimed, and what has to ship next before we can call the Sage pilot a full protocol pass.
+This post is the build log: what Sage does, what is proven, what is still deliberately not claimed, and what has to ship next before Sage can move from testnet proof to audited mainnet infrastructure.
 
-Update as of 2026-05-16: durable receipt storage is live for new paid Sage turns. The first settlement transaction above predates that storage layer, so it remains a chain-proof receipt. New post-storage paid turns can now persist the full Agreement, Verification Receipt, and Settlement Receipt bundle in `/api/sage/receipt/<id>`.
+Update as of 2026-05-20: durable receipt storage is live, and Sage has produced the first post-Blob full receipt bundle at [`/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`](/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c). Sage L1 Accord conformance evidence is also signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). The first settlement transaction above still predates storage, so it remains a chain-proof receipt.
 
 ## What Sage Does
 
@@ -97,7 +97,7 @@ That meant Sage verified the buyer's Note and delivered the premium response, bu
 
 The signer is now wired for the live testnet flow.
 
-That moves Sage from "verified, settlement pending" to "settled on Ergo testnet" for the first proof transaction. The public activity feed now reports a `settlement` event, and the receipt page for the settlement tx returns HTTP 200.
+That moved Sage from "verified, settlement pending" to "settled on Ergo testnet" for the first proof transaction. The public activity feed reports a `settlement` event, and the receipt page for the settlement tx returns HTTP 200. The current production signer can still degrade to verify-only mode if the off-Vercel signer endpoint is unavailable.
 
 ## What Is Proven
 
@@ -118,13 +118,13 @@ That is a real milestone.
 
 This does **not** certify mainnet use.
 
-It also does **not** make the Sage pilot a full Accord protocol `pass` yet.
+It also does **not** make the Sage pilot mainnet-ready.
 
-The remaining piece is conformance evidence. The storage path for full receipt bundles is now implemented, but a protocol pass needs one new paid Sage turn after the Blob deployment, then an external conformance run against the stored bundle.
+The next remaining pieces are operational and audit evidence. The storage path for full receipt bundles is implemented, one post-Blob bundle exists, and signed Sage L1 conformance evidence is published. Mainnet language still needs exact script identity, signer operations evidence, and external audit/review manifests.
 
 The honest status is:
 
-> On-chain Sage settlement is proven. Full receipt storage is live for new receipts. Signed conformance evidence is still pending.
+> On-chain Sage settlement is proven. Full receipt storage is live for new receipts. Signed Sage L1 conformance evidence is published. Mainnet remains audit-gated.
 
 That distinction is important. Old chain-only receipts cannot be magically upgraded because the original Agreement and signed verification receipt were not stored at the time. New receipts can carry the full bundle.
 
@@ -199,7 +199,7 @@ The correct posture is still conservative:
 - no mainnet certification;
 - no external audit claim;
 - old pre-storage receipts may remain chain-proof-only;
-- no claim of Accord conformance until the signed artifact is published;
+- signed Sage L1 conformance evidence exists, but it is testnet evidence only;
 - no claim that every future deployment is safe by copying this one;
 - external audit and mainnet manifests still pending.
 
@@ -207,17 +207,17 @@ That is not weakness. It is the difference between a credible build log and mark
 
 ## What's Next
 
-The next step is not "prove settlement" or "add storage." Those parts have happened.
+The next step is not "prove settlement," "add storage," or "sign L1 evidence." Those parts have happened.
 
-The next step is to turn the implementation into evidence:
+The next step is to turn the evidence into durable operations and registry state:
 
-- create one new paid Sage turn now that Blob storage is live;
-- confirm `/api/sage/receipt/<id>` returns `completeness: "full_receipt_bundle"`;
-- run the Accord conformance runner against `/api/sage/accord`;
-- sign the conformance artifact;
-- publish the artifact URI in the Accord registry evidence.
+- open or merge the Accord registry evidence update;
+- give the signer a permanent controlled endpoint;
+- publish exact script identity manifests;
+- publish external audit or review manifests;
+- keep the public wording testnet-first until those gates exist.
 
-After that, Sage can move from "settlement proven and storage-ready" to a protocol-level pass.
+After that, Sage can move from "testnet proof with signed L1 evidence" toward a stronger registry and audit posture.
 
 Then come the bigger roadmap items:
 
@@ -248,7 +248,7 @@ Yes. If `SAGE_SIGNER_URL` and local signing are unavailable, Sage can still run 
 
 ### Is the current Sage pilot a full Accord pass?
 
-Not yet. The chain settlement is real and full receipt storage is live for new paid turns, but the next public claim needs a signed conformance artifact generated from a post-storage receipt. Until then, the pilot is best described as settlement-proven, storage-ready, and conformance-pending.
+It has a signed Sage L1 conformance artifact generated from a post-storage receipt. That is not the same as audited mainnet readiness or full registry certification. The pilot is best described as settlement-proven, full-receipt-backed, L1-conformance-signed, and audit-gated.
 
 ### How is this different from x402?
 

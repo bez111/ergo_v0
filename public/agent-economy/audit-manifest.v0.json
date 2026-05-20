@@ -2,7 +2,7 @@
   "type": "ergo.agent_economy.audit_manifest.v0",
   "version": "v0",
   "status": "draft",
-  "last_reviewed": "2026-05-17",
+  "last_reviewed": "2026-05-20",
   "scope": {
     "network": "testnet",
     "components": [
@@ -22,8 +22,9 @@
     "signer operations hardening evidence"
   ],
   "artifacts": {
-    "full_receipt_bundle": null,
-    "signed_conformance_result": null,
+    "full_receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
+    "signed_conformance_result": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
+    "provider_signing_key": "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
     "script_identity_manifest": null,
     "audit_report": null,
     "signer_runbook": "https://github.com/bez111/ergo_v0/blob/main/docs/sage-signer-ops.md"

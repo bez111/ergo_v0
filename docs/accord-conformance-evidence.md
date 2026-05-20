@@ -2,9 +2,28 @@
 
 This is the batch-mode path after the first post-Blob full Sage receipt exists.
 
+## Current published evidence
+
+Status as of 2026-05-20:
+
+```text
+receipt_id = 09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c
+agreement_id = acc_sage_9ac19993a88a4d984325
+achieved_level = L1
+signed_artifact = https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json
+public_key = https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json
+receipt_api = https://www.ergoblockchain.org/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c
+```
+
+This is Sage testnet conformance evidence. It does not open mainnet readiness
+without script identity, audit manifests, and signer operations evidence.
+
 ## 1. Create the receipt
 
 Run one paid Sage flow after `BLOB_READ_WRITE_TOKEN` is configured.
+
+This was first completed on 2026-05-20 for receipt
+`09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`.
 
 Success condition:
 
@@ -52,6 +71,12 @@ node /Users/alexanderbezkrovny/Desktop/accord-protocol/packages/accord-conforman
 ```
 
 Do not commit private keys or paste them into prompts.
+
+The current public provider key is committed at:
+
+```text
+public/evidence/sage/provider-signing-key.json
+```
 
 ## 4. Update registry evidence
 

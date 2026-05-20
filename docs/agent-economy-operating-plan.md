@@ -17,8 +17,9 @@ durable receipt, and expose the result to other tools?
 The target answer is:
 
 ```text
-Yes, on testnet today. Mainnet remains closed until conformance, exact script
-identity, and audit artifacts are published.
+Yes, on testnet today for quote, payment verification, durable full receipt,
+and signed L1 conformance evidence. Mainnet remains closed until exact script
+identity, signer operations, and audit artifacts are published.
 ```
 
 ## Product Shape
@@ -46,12 +47,11 @@ identity, and audit artifacts are published.
 
 ## Current External Blockers
 
-- DNS: `mcp.ergoblockchain.org`.
-- One new paid Sage flow after Blob.
-- Final hub subdomain choice:
-  - `agents.ergoblockchain.org`
-  - `agenthub.ergoblockchain.org`
-  - `agentichub.ergoblockchain.org`
+- Permanent settlement signer endpoint. A temporary tunnel is not enough for
+  production `SAGE_SIGNER_URL`.
+- Accord registry PR/merge for the Sage L1 evidence update.
+- Exact script identity manifest and external audit/review manifest before any
+  mainnet language.
 
 ## Current Internal Batch
 
@@ -64,6 +64,7 @@ Prepared locally:
 - Accord conformance evidence exporter.
 - Sage widget paid embed callbacks and receipt bundle fetch.
 - MCP DNS runbook.
+- Published post-Blob full receipt bundle and signed Sage L1 conformance evidence.
 
 ## Final Public Language
 
@@ -84,11 +85,11 @@ certified
 
 ## What Opens The Next Level
 
-The first post-Blob `full_receipt_bundle` is the unlock. After that, the order
-is:
+The first post-Blob `full_receipt_bundle` and signed L1 evidence are done. The
+remaining order is:
 
-1. Run `npm run sage:conformance:evidence`.
-2. Sign the conformance artifact.
-3. Update Accord registry evidence.
-4. Run final full build and smoke tests.
-5. Deploy one batch.
+1. Open/merge the Accord registry evidence update.
+2. Give the signer a permanent controlled endpoint.
+3. Publish exact script identity manifests.
+4. Publish external audit/review manifests.
+5. Run final full build and smoke tests for the next deploy batch.
