@@ -50,6 +50,8 @@ interface SageSignerHealthResponse {
     latest_event?: {
       kind?: string
       created_at?: string
+      receipt_id?: string
+      note_box_id?: string
       error?: string
     } | null
     latest_event_status?: string
@@ -120,6 +122,7 @@ export async function GET(req: Request) {
     siteBaseUrl,
     activity.data,
     conformanceEvidence.data?.receipt_id ?? null,
+    signer.data?.ops?.latest_event?.receipt_id ?? signer.data?.ops?.latest_event?.note_box_id ?? null,
   )
   const activityEvents = activity.data?.events ?? []
   const settlementCount = activityEvents.filter((event) => event.type === "settlement").length
@@ -131,7 +134,11 @@ export async function GET(req: Request) {
     Boolean(conformanceEvidence.data.achieved_level) &&
     conformanceEvidence.data.ready_for_registry === true
   const conformanceLevel = conformanceEvidence.data?.achieved_level ?? null
+  const conformanceReceiptId = conformanceEvidence.data?.receipt_id ?? null
   const conformanceHref = conformanceEvidence.data?.signed_artifact_url ?? "/evidence/sage/latest-evidence.json"
+  const conformanceCoversLatestReceipt = Boolean(
+    latestFullReceipt?.id && conformanceReceiptId === latestFullReceipt.id,
+  )
   const registryMerged = registry.data?.conformance?.level === conformanceLevel &&
     registry.data?.conformance?.result_uri === conformanceHref &&
     registry.data?.live_proof?.latest_full_receipt_bundle?.receipt_id ===
@@ -177,7 +184,9 @@ export async function GET(req: Request) {
       "Accord conformance",
       conformancePassed ? "live" : latestFullReceipt ? "pending" : "blocked",
       conformancePassed
-        ? `Signed ${conformanceLevel} evidence published for the latest full receipt bundle`
+        ? conformanceCoversLatestReceipt
+          ? `Signed ${conformanceLevel} evidence published for the latest full receipt bundle`
+          : `Signed ${conformanceLevel} evidence published for receipt ${shortId(conformanceReceiptId ?? undefined)}`
         : latestFullReceipt
           ? "Ready for conformance run and signed evidence"
           : "Blocked until a full receipt bundle exists",
@@ -347,8 +356,10 @@ async function discoverLatestFullReceipt(
   origin: string,
   activity: SageActivityResponse | null,
   evidenceReceiptId: string | null,
+  signerOpsReceiptId: string | null,
 ): Promise<SageReceiptResponse | null> {
   const candidates = new Set<string>()
+  if (signerOpsReceiptId) candidates.add(signerOpsReceiptId)
   if (evidenceReceiptId) candidates.add(evidenceReceiptId)
   for (const event of activity?.events ?? []) {
     if (typeof event.txId === "string") candidates.add(event.txId)
