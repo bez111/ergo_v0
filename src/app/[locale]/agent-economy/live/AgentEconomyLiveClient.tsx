@@ -50,6 +50,7 @@ interface LiveStatusResponse {
     latest_full_receipt_id: string | null
     accord_conformance_level?: string | null
     accord_conformance_evidence?: string | null
+    accord_registry_merged?: boolean
     sage_wallet_event_count: number
     sage_settlement_count: number
     sage_signer_status?: string
@@ -91,6 +92,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "full-receipt-bundle": ShieldCheck,
   "accord-bridge": GitBranch,
   "accord-conformance": CheckCircle2,
+  "accord-registry": GitBranch,
   "sage-signer": ShieldCheck,
   "sage-widget": CircuitBoard,
   "mcp-fly": Network,
@@ -504,16 +506,16 @@ function gateStateLabel(state?: GateState) {
 function fallbackActions() {
   return [
     {
-      id: "registry-evidence",
-      label: "Open the Accord registry PR with the signed Sage artifact",
-      owner: "repo",
-      blocked_by_external: false,
-    },
-    {
       id: "permanent-signer",
       label: "Configure a permanent controlled signer endpoint",
       owner: "ops",
       blocked_by_external: true,
+    },
+    {
+      id: "script-identity",
+      label: "Publish exact script identity manifests before mainnet claims",
+      owner: "repo",
+      blocked_by_external: false,
     },
   ]
 }
@@ -524,10 +526,13 @@ function skeletonGates(): LiveGate[] {
     "receipt-storage",
     "full-receipt-bundle",
     "accord-bridge",
+    "accord-conformance",
+    "accord-registry",
     "sage-signer",
     "sage-widget",
     "mcp-fly",
     "mcp-dns",
+    "playground",
     "mainnet-audit-gate",
   ].map((id) => ({
     id,

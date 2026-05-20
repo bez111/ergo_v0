@@ -17,6 +17,7 @@ import {
   normalizeSettlementReceipt,
   prefixedAccordHash,
 } from "@/lib/sage/receipts/artifacts"
+import { recordSignerOpsEvent } from "@/lib/sage/signer-ops"
 
 export interface VerifyOpts {
   quote: SageQuote
@@ -81,6 +82,15 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
   //    the deployed Note path, so the public site should describe this
   //    as verify-only until a settlement tx exists.
   if (!rail.settle) {
+    await recordSignerOpsEvent({
+      kind: "redemption_verify_only",
+      network,
+      quote_id: opts.quote.quoteId,
+      agreement_id: agreement.agreement_id,
+      note_box_id: opts.proof.noteBoxId,
+      receipt_id: opts.proof.noteBoxId,
+      error: "settle() missing on adapter — verified-only mode",
+    })
     const settlementReceipt = buildPendingSettlementReceipt({
       agreement,
       quote: opts.quote,
@@ -115,6 +125,15 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
     const settlementTxId = settle.tx?.tx_id && /^[0-9a-f]{64}$/i.test(settle.tx.tx_id)
       ? settle.tx.tx_id
       : undefined
+    await recordSignerOpsEvent({
+      kind: "redemption_settled",
+      network,
+      quote_id: opts.quote.quoteId,
+      agreement_id: agreement.agreement_id,
+      note_box_id: opts.proof.noteBoxId,
+      receipt_id: settlementTxId ?? opts.proof.noteBoxId,
+      settlement_tx_id: settlementTxId,
+    })
     return {
       ok: true,
       settlementTxId,
@@ -130,6 +149,15 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
     const msg = err instanceof Error ? err.message : "settle threw"
     const stack = err instanceof Error && err.stack ? err.stack.split("\n").slice(0, 8).join(" || ") : "(no stack)"
     console.warn(`[sage] settle failed (verify ok, deferring redemption): ${msg} STACK=${stack}`)
+    await recordSignerOpsEvent({
+      kind: "redemption_deferred",
+      network,
+      quote_id: opts.quote.quoteId,
+      agreement_id: agreement.agreement_id,
+      note_box_id: opts.proof.noteBoxId,
+      receipt_id: opts.proof.noteBoxId,
+      error: msg,
+    })
     const settlementReceipt = buildPendingSettlementReceipt({
       agreement,
       quote: opts.quote,

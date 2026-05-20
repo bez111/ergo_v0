@@ -89,7 +89,6 @@ export async function listProviders(): Promise<ProviderProfile[]> {
 
   return providers
     .filter((p): p is ProviderProfile => !!p && p.type === "accord.provider_profile.v0")
-    .map(applyLocalProviderEvidence)
 }
 
 /**
@@ -108,45 +107,9 @@ export async function getProvider(id: string): Promise<ProviderProfile | null> {
     const profile = (await res.json()) as ProviderProfile
     if (profile.type !== "accord.provider_profile.v0") return null
     profile.__sourceUrl = `https://github.com/accord-protocol/accord-protocol/blob/main/registry/providers/${id}.json`
-    return applyLocalProviderEvidence(profile)
+    return profile
   } catch {
     return null
-  }
-}
-
-function applyLocalProviderEvidence(profile: ProviderProfile): ProviderProfile {
-  if (!profile.provider_id.includes("sage-ergoblockchain")) return profile
-  if (profile.conformance?.last_run_at && profile.conformance?.result_uri) return profile
-
-  return {
-    ...profile,
-    operational_status: {
-      ...profile.operational_status,
-      settlement_mode:
-        "testnet settlement proven; hosted site may degrade to verify-only when the off-Vercel signer is unavailable. The first end-to-end settled redemption tx confirmed at testnet block 345673 on 2026-05-15.",
-    },
-    live_proof: {
-      ...profile.live_proof,
-      latest_full_receipt_bundle: {
-        receipt_id: "09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
-        agreement_id: "acc_sage_9ac19993a88a4d984325",
-        status: "verified_pending_redemption",
-        public_receipt_url:
-          "https://www.ergoblockchain.org/r/sage/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
-        api_receipt_url:
-          "https://www.ergoblockchain.org/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
-      },
-    },
-    conformance: {
-      level: "L1",
-      last_run_at: "2026-05-20T13:50:27.327Z",
-      result_uri: "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
-      public_key_uri: "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
-      receipt_uri:
-        "https://www.ergoblockchain.org/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
-      notes:
-        "Automated L1 network conformance passed against the post-Blob full receipt bundle and was signed by provider://sage-ergoblockchain. This is testnet evidence only; mainnet claims remain blocked until script identity, audit manifests, and permanent signer operations are published.",
-    },
   }
 }
 

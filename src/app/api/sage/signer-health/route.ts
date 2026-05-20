@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 import { parseServiceUrl } from "@/lib/security/service-url"
+import { loadLatestSignerOpsEvent, signerOpsPolicy } from "@/lib/sage/signer-ops"
 
 export const runtime = "nodejs"
 export const dynamic = "force-dynamic"
@@ -17,6 +18,17 @@ const DEFAULT_TIMEOUT_MS = 2_500
 export async function GET() {
   const signerUrl = process.env.SAGE_SIGNER_URL
   const healthUrl = signerUrl ? signerHealthUrl(signerUrl) : null
+  const [latestOps] = await Promise.all([loadLatestSignerOpsEvent()])
+  const ops = {
+    policy: signerOpsPolicy(),
+    latest_event: latestOps.ok ? latestOps.event : null,
+    latest_event_status: latestOps.ok
+      ? "recorded"
+      : latestOps.configured
+        ? "none_or_unavailable"
+        : "storage_not_configured",
+    latest_event_error: latestOps.ok ? null : latestOps.error ?? latestOps.reason ?? null,
+  }
 
   if (!healthUrl) {
     return NextResponse.json(
@@ -27,6 +39,7 @@ export async function GET() {
         reachable: false,
         status: "verify_only",
         settlement_mode: "verify_only",
+        ops,
         note:
           "SAGE_SIGNER_URL is not configured. Sage can verify payments and serve premium answers, but redemption settlement is deferred.",
       },
@@ -57,6 +70,7 @@ export async function GET() {
         uptime_ms: typeof body?.uptime_ms === "number" ? body.uptime_ms : null,
         checked_ms: Date.now() - started,
         ready_requires_auth: true,
+        ops,
       },
       { headers: noStoreHeaders() },
     )
@@ -70,6 +84,7 @@ export async function GET() {
         status: "degraded",
         settlement_mode: "verify_only_fallback",
         checked_ms: Date.now() - started,
+        ops,
         error: error instanceof Error ? error.message : "signer health probe failed",
       },
       { headers: noStoreHeaders() },

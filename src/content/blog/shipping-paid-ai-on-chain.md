@@ -84,7 +84,7 @@ That last nuance matters. The architecture is designed for stronger script-level
 11. /api/sage/chat routes to the premium model path.
 12. Premium answer streams back to the user.
 13. If the signer is available, Sage redeems the Note.
-14. The settlement tx becomes visible on Ergo testnet and on /r/sage/<id>.
+14. The settlement tx becomes visible on Ergo testnet and on /r/sage/{id}.
 ```
 
 The first confirmed full redemption landed at Ergo testnet block `345673`.

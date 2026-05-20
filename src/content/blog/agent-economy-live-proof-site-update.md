@@ -78,7 +78,7 @@ The table below separates live website infrastructure from testnet protocol clai
 | Agent status API | `/api/agent-economy/live` | Machine-readable summary for dashboards, agents and future widgets. | Live API. |
 | Public MCP endpoint | `mcp.ergoblockchain.org` | MCP Streamable HTTP endpoint plus health checks. | Live infrastructure. |
 | Sage paid flow | Sage on the site | 402-style premium request, testnet Note verification and settlement trail. | Testnet proof. |
-| Sage receipt API | `/api/sage/receipt/<id>` | Machine-readable receipt source of truth for Sage evidence. | Live API; first post-Blob full bundle is published. |
+| Sage receipt API | `/api/sage/receipt/{id}` | Machine-readable receipt source of truth for Sage evidence. | Live API; first post-Blob full bundle is published. |
 | Blob receipt storage | Vercel Blob | Durable storage for Agreement JSON, Verification Receipt JSON and Settlement Receipt JSON. | Storage configured and healthy. |
 | Accord evidence | `/evidence/sage/conformance-l1-2026-05-20.signed.json` | Signed Sage L1 conformance result for the post-Blob receipt. | Published testnet evidence. |
 | ErgoScript Playground | `/build/playground` | Browser workbench for ErgoScript examples and sigma-rust WASM. | Live developer surface. |
@@ -160,7 +160,7 @@ The site now follows a simpler rule:
 
 > Receipt data lives once. Other surfaces display it or link to it.
 
-For Sage, `/api/sage/receipt/<id>` should be the machine-readable source of truth. The receipt page should render it. Blog posts should tell the story and link to it. Registry entries should summarize and link to evidence.
+For Sage, `/api/sage/receipt/{id}` should be the machine-readable source of truth. The receipt page should render it. Blog posts should tell the story and link to it. Registry entries should summarize and link to evidence.
 
 That keeps the stack auditable.
 
@@ -292,7 +292,7 @@ Because the root route is not the MCP service. Use `/health` for health checks a
 
 ### Why not put all receipt data in the blog article?
 
-Because articles should not be databases. The source of truth should be `/api/sage/receipt/<id>`. Articles should explain the story and link to evidence.
+Because articles should not be databases. The source of truth should be `/api/sage/receipt/{id}`. Articles should explain the story and link to evidence.
 
 ### When can the site claim mainnet readiness?
 

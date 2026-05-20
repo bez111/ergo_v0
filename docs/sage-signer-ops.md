@@ -138,6 +138,19 @@ reachable = true
 settlement_mode = settlement_available
 ```
 
+The same response includes a lightweight operations snapshot:
+
+```text
+ops.policy.failure_logging = vercel_blob_latest_event
+ops.latest_event_status = recorded | none_or_unavailable | storage_not_configured
+ops.latest_event.kind = redemption_settled | redemption_deferred | redemption_verify_only
+```
+
+New paid verification attempts write the latest signer operation event to
+Vercel Blob. This is intentionally small: it records the last settlement,
+deferred redemption, or verify-only fallback without turning the site into a
+logging backend.
+
 Check full receipt after a paid turn:
 
 ```bash

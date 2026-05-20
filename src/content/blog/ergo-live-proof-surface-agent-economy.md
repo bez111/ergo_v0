@@ -219,7 +219,7 @@ Educational content becomes stronger when it can point into executable surfaces.
 | Agent status API | `/api/agent-economy/live` | Live machine-readable status. |
 | MCP endpoint | `mcp.ergoblockchain.org` | Live public infrastructure. |
 | Sage paid flow | Site chat widget | Live testnet proof. |
-| Sage receipt API | `/api/sage/receipt/<id>` | Full post-Blob bundle published. |
+| Sage receipt API | `/api/sage/receipt/{id}` | Full post-Blob bundle published. |
 | Accord evidence | `/evidence/sage/conformance-l1-2026-05-20.signed.json` | Signed L1 evidence published. |
 | ErgoScript Playground | `/build/playground` | Live developer surface. |
 | Mainnet gate | `/api/agent-economy/mainnet-gate` | Closed by design. |
@@ -249,7 +249,7 @@ That is stronger than hype because it is inspectable.
 
 The next gates are clear.
 
-First, the Accord registry profile should point to the new Sage evidence and receipt bundle.
+First, the Accord registry profile now points to the new Sage evidence and receipt bundle. That makes the registry a durable pointer to the same public proof surface instead of a separate database of facts.
 
 Second, the signer needs a permanent controlled endpoint. A temporary tunnel is fine for local testing, but production settlement should use a controlled deployment with auth, logs, health checks, limits and rotation.
 
@@ -313,4 +313,3 @@ A fresh settled-on-chain post-Blob paid turn through a permanent controlled sign
 ### When can the site claim mainnet readiness?
 
 Only after audit manifests, exact script identities, package versions and operational signer controls are published for the relevant production flow. Signed Sage L1 evidence is a completed gate, not the whole gate.
-

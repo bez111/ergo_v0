@@ -23,6 +23,7 @@ completeness = full_receipt_bundle
 ```
 
 - [x] Final hub subdomain is chosen: `agents.ergoblockchain.org`.
+- [x] Accord registry evidence for Sage L1 is merged upstream.
 - [ ] Permanent settlement signer endpoint is configured if the next batch must prove fresh redemption, not only verification + durable receipt.
 
 ## Preflight
@@ -89,6 +90,7 @@ Expected:
 - `receipt-storage = live`.
 - `full-receipt-bundle = live` after paid flow.
 - `accord-conformance = live`.
+- `accord-registry = live`.
 - `mcp-dns = live` after DNS.
 - `mainnet-audit-gate = blocked` until audit/script identity artifacts exist.
 
