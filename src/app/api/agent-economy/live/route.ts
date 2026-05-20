@@ -141,8 +141,7 @@ export async function GET(req: Request) {
   )
   const registryMerged = registry.data?.conformance?.level === conformanceLevel &&
     registry.data?.conformance?.result_uri === conformanceHref &&
-    registry.data?.live_proof?.latest_full_receipt_bundle?.receipt_id ===
-      "09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c"
+    registry.data?.live_proof?.latest_full_receipt_bundle?.receipt_id === conformanceReceiptId
 
   const gates = [
     gate(

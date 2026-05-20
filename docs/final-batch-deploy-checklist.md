@@ -13,8 +13,8 @@ dig +short mcp.ergoblockchain.org AAAA
 curl -fsS https://mcp.ergoblockchain.org/health
 ```
 
-- [x] One post-Blob paid Sage flow exists:
-  `09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`.
+- [x] One settled post-Blob paid Sage flow exists:
+  `83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`.
 - [x] `BLOB_READ_WRITE_TOKEN` is present and `/api/sage/receipt/blob-probe-2026-05-16` reports `storage_healthy = true`.
 - [x] `/api/sage/receipt/<id>` returns:
 
@@ -23,8 +23,8 @@ completeness = full_receipt_bundle
 ```
 
 - [x] Final hub subdomain is chosen: `agents.ergoblockchain.org`.
-- [x] Accord registry evidence for Sage L1 is merged upstream.
-- [ ] Permanent settlement signer endpoint is configured if the next batch must prove fresh redemption, not only verification + durable receipt.
+- [x] Accord registry evidence for Sage L1 is prepared with the latest settled receipt.
+- [x] Permanent settlement signer endpoint is configured for fresh testnet redemption.
 
 ## Preflight
 

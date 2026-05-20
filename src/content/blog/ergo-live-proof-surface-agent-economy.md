@@ -86,16 +86,16 @@ The next missing piece was durable receipt storage.
 
 That is now live.
 
-A post-Blob paid Sage flow produced a full receipt bundle:
+A post-Blob paid Sage flow produced a settled full receipt bundle:
 
 ```text
-09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c
+83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
 ```
 
 Receipt API:
 
 ```text
-/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c
+/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
 ```
 
 That bundle stores the three objects that matter:
@@ -104,7 +104,7 @@ That bundle stores the three objects that matter:
 |---|---|
 | Agreement JSON | Records what was requested, price, task hash, verifier and payment terms. |
 | Verification Receipt JSON | Records what Sage verified before serving the premium response. |
-| Settlement Receipt JSON | Records how the payment flow closed from the protocol point of view. |
+| Settlement Receipt JSON | Records how the payment flow closed on-chain from the protocol point of view. |
 
 This is the difference between "a transaction happened" and "this exact work agreement was verified."
 
@@ -251,7 +251,7 @@ The next gates are clear.
 
 First, the Accord registry profile now points to the new Sage evidence and receipt bundle. That makes the registry a durable pointer to the same public proof surface instead of a separate database of facts.
 
-Second, the signer needs a permanent controlled endpoint. A temporary tunnel is fine for local testing, but production settlement should use a controlled deployment with auth, logs, health checks, limits and rotation.
+Second, the testnet signer now has a permanent controlled endpoint. The remaining work is to publish stronger operations evidence around auth, logs, health checks, limits, rotation and incident handling.
 
 Third, exact script identity manifests need to be published. That means source artifacts, compiled script hashes, addresses, network, package versions and known limits.
 

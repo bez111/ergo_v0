@@ -22,7 +22,7 @@ That means the website is no longer only where we describe autonomous payments, 
 
 This article is a clean status update: what is working now, what remains experimental, and where the site is going next.
 
-**Update on 2026-05-20:** the immediate post-Blob proof task is now complete. Sage produced a full receipt bundle at [`/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`](/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c), and Sage L1 Accord conformance evidence is signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). This upgrades the proof surface, but it does not open mainnet language.
+**Update on 2026-05-20:** the immediate post-Blob proof task is now complete. Sage produced a settled full receipt bundle at [`/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`](/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3), and Sage L1 Accord conformance evidence is signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). This upgrades the proof surface, but it does not open mainnet language.
 
 ## TL;DR
 
@@ -104,10 +104,10 @@ This proves something specific and useful: an AI agent interaction can be bound 
 
 It does not prove everything yet. That distinction is important.
 
-The first real Sage settlement happened before durable receipt storage was added, so that early receipt remains chain-proof-only. Blob storage is now live for new paid turns, and the first post-Blob paid turn has produced a full receipt bundle:
+The first real Sage settlement happened before durable receipt storage was added, so that early receipt remains chain-proof-only. Blob storage is now live for new paid turns, and the current post-Blob settled paid turn has produced a full receipt bundle:
 
 ```text
-09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c
+83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
 ```
 
 That bundle is the object we care about:
@@ -241,7 +241,7 @@ The Accord or Sage registry entry should link to the conformance evidence and re
 
 ### 2. Harden signer operations
 
-The signer path needs operational polish: a permanent controlled endpoint, health display, failure logging, limits, monitoring, fallback/runbook and clearer redemption failure visibility.
+The signer endpoint is now permanent for the testnet flow. The remaining signer work is operational polish: published health evidence, failure logging, limits, monitoring, fallback/runbook and clearer redemption failure visibility.
 
 ### 3. Expand Sage widget v0.1 toward a paid widget
 

@@ -47,8 +47,6 @@ identity, signer operations, and audit artifacts are published.
 
 ## Current External Blockers
 
-- Permanent settlement signer endpoint. A temporary tunnel is not enough for
-  production `SAGE_SIGNER_URL`.
 - Exact script identity manifest and external audit/review manifest before any
   mainnet language.
 
@@ -64,7 +62,7 @@ Prepared locally:
 - Accord registry evidence is merged upstream for Sage L1.
 - Sage widget paid embed callbacks and receipt bundle fetch.
 - MCP DNS runbook.
-- Published post-Blob full receipt bundle and signed Sage L1 conformance evidence.
+- Published settled post-Blob full receipt bundle, permanent testnet signer, and signed Sage L1 conformance evidence.
 
 ## Final Public Language
 
@@ -85,10 +83,10 @@ certified
 
 ## What Opens The Next Level
 
-The first post-Blob `full_receipt_bundle` and signed L1 evidence are done. The
+The settled post-Blob `full_receipt_bundle`, permanent testnet signer, and signed L1 evidence are done. The
 remaining order is:
 
-1. Give the signer a permanent controlled endpoint.
+1. Publish signer operations evidence for the permanent testnet endpoint.
 2. Publish exact script identity manifests.
 3. Publish external audit/review manifests.
 4. Run final full build and smoke tests for the next deploy batch.

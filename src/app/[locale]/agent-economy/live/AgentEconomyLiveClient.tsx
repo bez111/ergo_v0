@@ -506,10 +506,10 @@ function gateStateLabel(state?: GateState) {
 function fallbackActions() {
   return [
     {
-      id: "permanent-signer",
-      label: "Configure a permanent controlled signer endpoint",
+      id: "signer-ops-evidence",
+      label: "Publish signer operations evidence and limits",
       owner: "ops",
-      blocked_by_external: true,
+      blocked_by_external: false,
     },
     {
       id: "script-identity",
@@ -570,8 +570,8 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
       id: "receipt",
       label: "Full receipt bundle",
       state: "live",
-      detail: "Post-Blob full receipt bundle is published.",
-      evidence_href: "/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
+      detail: "Post-Blob full receipt bundle is settled and published.",
+      evidence_href: "/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
     },
     {
       id: "conformance",

@@ -22,7 +22,7 @@
     "signer operations hardening evidence"
   ],
   "artifacts": {
-    "full_receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
+    "full_receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
     "signed_conformance_result": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
     "provider_signing_key": "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
     "script_identity_manifest": null,

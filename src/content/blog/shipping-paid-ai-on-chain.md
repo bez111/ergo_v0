@@ -32,7 +32,7 @@ f697e4841dd9a0c689d0b83a311130b85a0cfbab123230a6c40284b44c4cafef
 
 This post is the build log: what Sage does, what is proven, what is still deliberately not claimed, and what has to ship next before Sage can move from testnet proof to audited mainnet infrastructure.
 
-Update as of 2026-05-20: durable receipt storage is live, and Sage has produced the first post-Blob full receipt bundle at [`/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`](/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c). Sage L1 Accord conformance evidence is also signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). The first settlement transaction above still predates storage, so it remains a chain-proof receipt.
+Update as of 2026-05-20: durable receipt storage is live, and Sage has produced a settled post-Blob full receipt bundle at [`/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`](/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3). Sage L1 Accord conformance evidence is also signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). The first settlement transaction above still predates storage, so it remains a chain-proof receipt.
 
 ## What Sage Does
 
@@ -97,7 +97,7 @@ That meant Sage verified the buyer's Note and delivered the premium response, bu
 
 The signer is now wired for the live testnet flow.
 
-That moved Sage from "verified, settlement pending" to "settled on Ergo testnet" for the first proof transaction. The public activity feed reports a `settlement` event, and the receipt page for the settlement tx returns HTTP 200. The current production signer can still degrade to verify-only mode if the off-Vercel signer endpoint is unavailable.
+That moved Sage from "verified, settlement pending" to "settled on Ergo testnet" for the first proof transaction. The public activity feed reports a `settlement` event, and the receipt page for the settlement tx returns HTTP 200. The production path can still degrade to verify-only mode if the off-Vercel signer endpoint is unavailable, but the normal testnet path now uses a permanent signer service.
 
 ## What Is Proven
 
@@ -212,7 +212,7 @@ The next step is not "prove settlement," "add storage," or "sign L1 evidence." T
 The next step is to turn the evidence into durable operations and registry state:
 
 - open or merge the Accord registry evidence update;
-- give the signer a permanent controlled endpoint;
+- publish signer operations evidence for the permanent testnet endpoint;
 - publish exact script identity manifests;
 - publish external audit or review manifests;
 - keep the public wording testnet-first until those gates exist.

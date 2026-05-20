@@ -15,14 +15,14 @@ Ergoblockchain.org is no longer only a content site. It is becoming a public ope
 - Agent Economy Live Hub at `/agent-economy/live` and `agents.ergoblockchain.org`.
 - Public MCP service at `mcp.ergoblockchain.org` with `/health` and `/mcp`.
 - Vercel Blob backed Sage receipts.
-- First post-Blob full Sage receipt bundle:
-  `09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c`.
+- Settled post-Blob full Sage receipt bundle:
+  `83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`.
 - Signed Sage L1 Accord conformance evidence:
   `/evidence/sage/conformance-l1-2026-05-20.signed.json`.
 - Public provider signing key:
   `/evidence/sage/provider-signing-key.json`.
 - Agent registry UI overlay so Sage shows current local evidence even before the upstream registry PR merges.
-- Mainnet gate remains closed and explicit.
+- Permanent testnet signer is live; mainnet gate remains closed and explicit.
 - Press copy, roadmap copy, blog status copy and Sage retrieval index were updated to avoid stale "conformance pending" language.
 
 ## What the evidence proves
@@ -34,7 +34,7 @@ Sage can:
 - store Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON;
 - expose a public receipt API as the source of truth;
 - pass an L1 Accord network conformance run against the public endpoint;
-- publish a signed artifact that tools can verify.
+- redeem the Note through the hosted testnet signer and publish a signed artifact that tools can verify.
 
 ## What it does not prove
 
@@ -47,7 +47,7 @@ Do not claim:
 - full registry certification beyond L1 evidence;
 - production signer operations.
 
-The remaining gates are exact script identity, external audit manifests, and a permanent controlled signer endpoint.
+The remaining gates are exact script identity, external audit manifests, and production-grade signer operations evidence.
 
 ## The strongest narrative
 
@@ -71,14 +71,14 @@ That combination is the point.
 5. Signed L1 evidence makes the claim machine-checkable.
 6. MCP gives agents a public entry point.
 7. The mainnet gate stays closed because credibility beats hype.
-8. The next frontier: permanent signer ops, registry PR, script identity, audits, paid widget, wallet agents.
+8. The next frontier: signer ops evidence, registry PR, script identity, audits, paid widget, wallet agents.
 
 ## Copy blocks
 
 Short version:
 
 ```text
-The Ergo site is becoming a live proof surface for the agent economy. Sage now has a post-Blob full receipt bundle, signed L1 Accord evidence, public MCP, an Agent Hub, and explicit mainnet gates. The claim is not "mainnet ready." The claim is stronger because it is precise: testnet proof, public receipts, signed evidence, audit-gated path.
+The Ergo site is becoming a live proof surface for the agent economy. Sage now has a settled post-Blob full receipt bundle, signed L1 Accord evidence, public MCP, an Agent Hub, and explicit mainnet gates. The claim is not "mainnet ready." The claim is stronger because it is precise: testnet proof, public receipts, signed evidence, audit-gated path.
 ```
 
 Tweet-size version:
@@ -87,7 +87,7 @@ Tweet-size version:
 Ergoblockchain.org is turning into a live proof surface, not just a website.
 
 Sage now has:
-- full receipt bundle
+- settled full receipt bundle
 - signed Accord L1 evidence
 - public MCP
 - Agent Hub
@@ -95,4 +95,3 @@ Sage now has:
 
 Testnet proof first. Mainnet only after scripts, signer ops and audits.
 ```
-
