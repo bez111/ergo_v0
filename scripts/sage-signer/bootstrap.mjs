@@ -359,12 +359,15 @@ function nanoToErg(nano) {
 async function issueTestNote(key, address) {
   const SAGE_BASE =
     process.env.SAGE_BASE_URL ?? "https://www.ergoblockchain.org"
+  const SAGE_VERIFY_BASE =
+    process.env.SAGE_VERIFY_BASE_URL ?? SAGE_BASE
   const PREMIUM_QUESTION =
     process.env.SAGE_TEST_QUESTION ?? "/code show me a Fleet SDK example"
 
   console.log("Issuing test Note for end-to-end Sage round-trip…")
   console.log(`  buyer wallet    ${address}`)
-  console.log(`  via Sage at     ${SAGE_BASE}`)
+  console.log(`  quote via       ${SAGE_BASE}`)
+  console.log(`  verify via      ${SAGE_VERIFY_BASE}`)
   console.log(`  question        "${PREMIUM_QUESTION}"`)
   console.log("")
 
@@ -499,13 +502,13 @@ async function issueTestNote(key, address) {
   if (process.env.SAGE_SKIP_VERIFY_AFTER_ISSUE === "1") {
     console.log("Verify skipped because SAGE_SKIP_VERIFY_AFTER_ISSUE=1.")
     console.log("To verify manually, POST { quote, question, noteBoxId } to:")
-    console.log(`  ${SAGE_BASE}/api/sage/verify-payment`)
+    console.log(`  ${SAGE_VERIFY_BASE}/api/sage/verify-payment`)
     console.log("")
     return
   }
 
-  console.log("Verifying Note with production Sage…")
-  const verifyRes = await fetch(`${SAGE_BASE}/api/sage/verify-payment`, {
+  console.log("Verifying Note with Sage…")
+  const verifyRes = await fetch(`${SAGE_VERIFY_BASE}/api/sage/verify-payment`, {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({

@@ -9,6 +9,9 @@ interface SignerHealthPayload {
   ok?: boolean
   service?: string
   version?: string
+  network?: string
+  signer_address?: string
+  address_matches_expected?: boolean | null
   status?: string
   uptime_ms?: number
 }
@@ -55,6 +58,12 @@ export async function GET() {
     })
     const body = await readJson<SignerHealthPayload>(res)
     const reachable = res.ok && body?.ok === true && body.service === "sage-signer"
+    const expectedAddress = process.env.SAGE_WALLET_ADDRESS ?? null
+    const signerAddress = typeof body?.signer_address === "string" ? body.signer_address : null
+    const addressMatches = reachable && signerAddress && expectedAddress
+      ? signerAddress === expectedAddress
+      : null
+    const settlementReady = reachable && addressMatches !== false
 
     return NextResponse.json(
       {
@@ -62,10 +71,14 @@ export async function GET() {
         type: "sage.signer_health.v0",
         configured: true,
         reachable,
-        status: reachable ? "up" : "degraded",
-        settlement_mode: reachable ? "settlement_available" : "verify_only_fallback",
+        status: settlementReady ? "up" : "degraded",
+        settlement_mode: settlementReady ? "settlement_available" : "verify_only_fallback",
         service: body?.service ?? null,
         version: body?.version ?? null,
+        network: body?.network ?? null,
+        signer_address: signerAddress,
+        expected_address: expectedAddress,
+        address_matches_expected: addressMatches,
         signer_status: body?.status ?? null,
         uptime_ms: typeof body?.uptime_ms === "number" ? body.uptime_ms : null,
         checked_ms: Date.now() - started,

@@ -23,8 +23,14 @@ cd scripts/sage-signer
 npm install
 cp .env.example .env
 # Edit .env, set SAGE_WALLET_SEED to your BIP-39 mnemonic
+npm run inspect
 npm start
 ```
+
+`npm run inspect` prints the public address derived from the local seed and,
+when `.vercel/.env.production.local` exists, compares it with production
+`SAGE_WALLET_ADDRESS` and `SAGE_SIGNER_TOKEN` without printing secrets. Do not
+expose `/sign` until the signer address matches the address used by Sage quotes.
 
 Then expose port 8911 to the internet:
 
@@ -91,6 +97,8 @@ signatures, policy rejects, rate limiting, and the circuit-breaker state.
 Returns `{ "signedTx": <signed tx> }` on success, `{ "error": "..." }` on failure.
 
 The signer also enforces a basic policy:
+- Abort at startup when `SAGE_EXPECTED_WALLET_ADDRESS` / `SAGE_WALLET_ADDRESS`
+  is set and does not match the seed-derived signer address.
 - Reject txs that spend more than `SAGE_MAX_SINGLE_TX` nanoERG.
 - Reject oversized request bodies using `SAGE_SIGNER_MAX_BODY_BYTES`.
 - Rate-limit authorized signing requests with `SAGE_SIGNER_MAX_REQUESTS_PER_MINUTE`.

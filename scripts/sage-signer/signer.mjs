@@ -41,6 +41,7 @@ import "dotenv/config"
 import http from "node:http"
 import crypto from "node:crypto"
 import { ErgoHDKey, Prover } from "@fleet-sdk/wallet"
+import { ErgoAddress, Network as FleetNetwork } from "@fleet-sdk/core"
 
 const PORT = Number(process.env.PORT ?? 8911)
 const TOKEN = process.env.SAGE_SIGNER_TOKEN ?? ""
@@ -90,9 +91,22 @@ if (!SEED) {
 
 // Derive the HD key once at boot — the Prover signs many txs with it.
 const KEY = await ErgoHDKey.fromMnemonic(SEED, PASSPHRASE ? { passphrase: PASSPHRASE } : undefined)
+const SIGNER_ADDRESS = ErgoAddress
+  .fromPublicKey(KEY.publicKey, NETWORK === "mainnet" ? FleetNetwork.Mainnet : FleetNetwork.Testnet)
+  .toString(NETWORK === "mainnet" ? FleetNetwork.Mainnet : FleetNetwork.Testnet)
+const EXPECTED_ADDRESS = process.env.SAGE_EXPECTED_WALLET_ADDRESS ?? process.env.SAGE_WALLET_ADDRESS ?? ""
+
+if (EXPECTED_ADDRESS && EXPECTED_ADDRESS !== SIGNER_ADDRESS) {
+  console.error("✗ signer wallet mismatch")
+  console.error(`  derived signer address: ${SIGNER_ADDRESS}`)
+  console.error(`  expected address:       ${EXPECTED_ADDRESS}`)
+  console.error("  Fix SAGE_WALLET_SEED or SAGE_WALLET_ADDRESS before exposing /sign.")
+  process.exit(1)
+}
 
 console.log("Sage signer starting…")
 console.log(`  network: ${NETWORK}`)
+console.log(`  signer:  ${SIGNER_ADDRESS}`)
 console.log(`  port: ${PORT}`)
 console.log(`  policy: max ${MAX_SINGLE_TX} nanoERG/tx, ${WHITELIST.length} whitelisted addr(s)`)
 console.log(`  max body: ${MAX_BODY_BYTES} bytes`)
@@ -313,6 +327,9 @@ function healthPayload() {
     ok: true,
     service: "sage-signer",
     version: SERVICE_VERSION,
+    network: NETWORK,
+    signer_address: SIGNER_ADDRESS,
+    address_matches_expected: EXPECTED_ADDRESS ? EXPECTED_ADDRESS === SIGNER_ADDRESS : null,
     status: circuit.open ? "degraded" : "up",
     signing_available: !circuit.open,
     uptime_ms: Date.now() - BOOTED_AT.getTime(),

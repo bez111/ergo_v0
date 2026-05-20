@@ -19,7 +19,8 @@
  */
 
 import type { ErgoNoteOps } from "@accord-protocol/rails-ergo"
-import { ErgoAgentPay } from "ergo-agent-pay"
+import type { NoteInfo } from "ergo-agent-pay"
+import { decodeRegisterBytes, decodeRegisterInt, ErgoAgentPay } from "ergo-agent-pay"
 import { parseServiceUrl } from "@/lib/security/service-url"
 
 interface RegisterObject {
@@ -37,13 +38,28 @@ interface RawBox {
   [key: string]: unknown
 }
 
-function flattenRegisters(box: RawBox): RawBox {
+interface NoteOpsState {
+  originalNetwork: Record<string, unknown>
+  wrappedNetwork: Record<string, unknown>
+}
+
+interface SageNetworkCarrier {
+  network: Record<string, unknown>
+  __sageNoteOpsState?: NoteOpsState
+}
+
+function flattenRegisters(
+  box: RawBox,
+  opts: { legacySIntForCheckNote?: boolean } = {},
+): RawBox {
   if (!box.additionalRegisters) return box
   const flat: Record<string, string> = {}
   for (const [k, v] of Object.entries(box.additionalRegisters)) {
     if (typeof v === "string") flat[k] = v
     else if (v && typeof v === "object" && typeof v.serializedValue === "string") {
-      flat[k] = k === "R5" ? normalizeSIntForErgoAgentPay(v) ?? v.serializedValue : v.serializedValue
+      flat[k] = opts.legacySIntForCheckNote && k === "R5"
+        ? normalizeSIntForErgoAgentPay(v) ?? v.serializedValue
+        : v.serializedValue
     }
   }
   return { ...box, additionalRegisters: flat }
@@ -93,10 +109,10 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
   // overrides getBox and forwards everything else with bound `this`.
   // Internal `this.network.X(...)` calls now hit the wrapped network
   // directly because the field reference points at the wrapper.
-  const networkCarrier = agent as unknown as { network: Record<string, unknown> }
-  const originalNetwork = networkCarrier.network
+  const networkCarrier = agent as unknown as SageNetworkCarrier
+  const originalNetwork = networkCarrier.__sageNoteOpsState?.originalNetwork ?? networkCarrier.network
 
-  const wrappedNetwork = new Proxy(originalNetwork, {
+  const wrappedNetwork = networkCarrier.__sageNoteOpsState?.wrappedNetwork ?? new Proxy(originalNetwork, {
     get(target, prop, receiver) {
       if (prop === "getBox") {
         const orig = target.getBox as (id: string) => Promise<unknown>
@@ -170,11 +186,54 @@ export function buildSageNoteOps(agent: ErgoAgentPay): ErgoNoteOps {
   })
 
   // Mutate the field. ergo-agent-pay's methods will see the wrapper from
-  // here on. Idempotent — wrapping a wrapper is a no-op since the inner
-  // Proxy still forwards correctly.
+  // here on. Keep the base network separately so repeated calls on the
+  // cached agent do not start treating an old Proxy as the canonical
+  // explorer client.
+  networkCarrier.__sageNoteOpsState = { originalNetwork, wrappedNetwork }
   networkCarrier.network = wrappedNetwork
+
+  const ops = agent as unknown as ErgoNoteOps & { checkNote: (noteBoxId: string) => Promise<NoteInfo> }
+  const getRawBox = originalNetwork.getBox as (id: string) => Promise<unknown>
+  const getHeight = wrappedNetwork.getHeight as () => Promise<number>
+
+  // checkNote needs a compatibility view of R5 because ergo-agent-pay@0.3
+  // decodes SInt from a legacy raw-zigzag shape while the explorer returns
+  // the canonical Sigma VLQ payload. Redemption must NOT receive that
+  // compatibility view: Fleet validates input box serialization against
+  // boxId, so signing must keep the real on-chain serializedValue.
+  ops.checkNote = async (noteBoxId: string): Promise<NoteInfo> => {
+    let box: RawBox
+    try {
+      box = flattenRegisters((await getRawBox.call(originalNetwork, noteBoxId)) as RawBox, {
+        legacySIntForCheckNote: true,
+      })
+    } catch {
+      throw new Error(`Note box ${noteBoxId} not found.`)
+    }
+
+    const currentBlock = await getHeight()
+    const regs = box.additionalRegisters ?? {}
+    const expiryBlock = regs.R5 ? decodeRegisterInt(regs.R5 as string) : 0
+    const reserveBoxId = regs.R4 ? decodeRegisterBytes(regs.R4 as string) : undefined
+    const taskHash = regs.R6 ? decodeRegisterBytes(regs.R6 as string) : undefined
+    const credentialKey = regs.R7 ? decodeRegisterBytes(regs.R7 as string) : undefined
+    const valueNano = BigInt(box.value)
+
+    return {
+      boxId: noteBoxId,
+      value: valueNano,
+      ergs: (Number(valueNano) / 1e9).toFixed(9).replace(/\.?0+$/, ""),
+      expiryBlock,
+      currentBlock,
+      isExpired: currentBlock >= expiryBlock,
+      reserveBoxId,
+      taskHash: taskHash || undefined,
+      credentialKey: credentialKey || undefined,
+      raw: box,
+    }
+  }
 
   // Cast through unknown — same TS-private-but-runtime-public quirk as
   // example 16's seller/tool.ts.
-  return agent as unknown as ErgoNoteOps
+  return ops
 }

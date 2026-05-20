@@ -33,6 +33,7 @@ Local signer machine:
 
 ```text
 SAGE_WALLET_SEED
+SAGE_EXPECTED_WALLET_ADDRESS=<same public address as Vercel SAGE_WALLET_ADDRESS>
 SAGE_SIGNER_TOKEN
 SAGE_NETWORK=testnet
 SAGE_MAX_SINGLE_TX_NANOERG=10000000
@@ -44,6 +45,26 @@ SAGE_WHITELIST_ADDRS=<comma-separated allowed output addresses>
 ```
 
 Do not put `SAGE_WALLET_SEED` in Vercel, source code, screenshots, logs, tickets, or prompts.
+
+Before exposing the signer, confirm the local seed matches the wallet address
+used by production quotes:
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0/scripts/sage-signer
+npm run inspect
+```
+
+Expected:
+
+```text
+address match: yes
+token match: yes
+```
+
+If `address match: no`, stop. The signer seed cannot redeem Notes paid to the
+production `SAGE_WALLET_ADDRESS`. Either restore the seller-wallet seed that
+derives that address or rotate Vercel's `SAGE_WALLET_ADDRESS` and
+`SAGE_RESERVE_BOX_ID` to the wallet whose signer you actually run.
 
 ## Start settlement mode
 
@@ -136,6 +157,7 @@ Expected when settlement signer is live:
 configured = true
 reachable = true
 settlement_mode = settlement_available
+address_matches_expected = true
 ```
 
 The same response includes a lightweight operations snapshot:
@@ -209,6 +231,7 @@ If `sage_signer_circuit_open=1`, the signer is failing closed after repeated sig
 | --- | --- | --- |
 | `/api/sage/quote` returns 503 | wallet env missing | verify `SAGE_WALLET_ADDRESS`, `SAGE_RESERVE_BOX_ID`, `SAGE_PAYMENT_HMAC_KEY`, redeploy |
 | verify succeeds but receipt is pending | signer offline or URL invalid | keep degraded verify-only mode, fix tunnel, rotate `SAGE_SIGNER_URL`, redeploy |
+| signer reachable but `address_matches_expected=false` | signer seed is for a different wallet than production quotes | stop signer, restore correct seller seed or rotate Vercel wallet/reserve env |
 | receipt is `chain_proof_only` | Blob missing when payment was verified, or old receipt | create one new paid turn after Blob is configured |
 | signer returns 401 | token mismatch | rotate both local `SAGE_SIGNER_TOKEN` and Vercel `SAGE_SIGNER_TOKEN` |
 | signer rejects policy | amount or output not allowed | inspect tx policy, `SAGE_MAX_SINGLE_TX_NANOERG`, `SAGE_WHITELIST_ADDRS` |
