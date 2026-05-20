@@ -1,16 +1,17 @@
-import type { Metadata } from "next"
-import { MarkdownBlogPost } from "@/components/blog/markdown-blog-post"
-import { buildBlogMetadata } from "@/components/blog/markdown-blog-metadata"
+import { permanentRedirect } from "next/navigation"
 
-const SLUG = "agent-economy-live-proof-site-update"
-const HERO_IMAGE = "/og/blog/agent-economy-live-proof-site-update.jpg"
+const CANONICAL_SLUG = "ergo-live-proof-surface-agent-economy"
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params
-  return buildBlogMetadata({ slug: SLUG, locale, fallbackImage: HERO_IMAGE })
+export function generateMetadata() {
+  return {
+    robots: {
+      index: false,
+      follow: true,
+    },
+  }
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  return <MarkdownBlogPost slug={SLUG} locale={locale} heroImage={HERO_IMAGE} />
+  permanentRedirect(locale === "en" ? `/blog/${CANONICAL_SLUG}` : `/${locale}/blog/${CANONICAL_SLUG}`)
 }

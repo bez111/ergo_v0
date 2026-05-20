@@ -17,6 +17,7 @@ const localePrefixes = new Set([
   'ja', 'de', 'fr', 'it',
 ]);
 const legacyRouteRedirects = new Map<string, string>([
+  ['/blog/agent-economy-live-proof-site-update', '/blog/ergo-live-proof-surface-agent-economy'],
   ['/blog/assurance-contracts', '/patterns/ergo-crowdfunding-assurance-contract'],
   ['/blog/cross-chain-swaps', '/patterns/ergo-cross-chain-atomic-swap'],
   ['/blog/deflationary-tokens', '/patterns/ergo-token-burning-supply-control'],

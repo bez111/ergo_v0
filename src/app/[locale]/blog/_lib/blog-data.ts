@@ -103,25 +103,6 @@ export const blogPosts: BlogPost[] = [
     shares: 0
   },
   {
-    id: 'agent-economy-live-proof-site-update',
-    slug: 'agent-economy-live-proof-site-update',
-    title: 'Ergoblockchain.org Is Becoming a Live Proof Surface for the Agent Economy',
-    excerpt:
-      'The Ergo site now exposes live agent-economy infrastructure: Agent Hub, MCP, Sage receipts, signed L1 evidence, an ErgoScript playground and clear testnet/mainnet gates.',
-    date: '2026-05-18',
-    lastUpdated: '2026-05-20',
-    author: authors['dev-relations']!,
-    category: 'Build Log',
-    readTime: 9,
-    wordCount: 2300,
-    image: '/og/blog/agent-economy-live-proof-site-update.jpg',
-    tags: ['Ergo', 'Agent Economy', 'Sage', 'MCP', 'Accord Protocol', 'ErgoScript Playground'],
-    featured: false,
-    trending: true,
-    difficulty: 'Intermediate',
-    shares: 0
-  },
-  {
     id: 'shipping-paid-ai-on-chain',
     slug: 'shipping-paid-ai-on-chain',
     title: 'Shipping Sage: a paid AI agent settled on Ergo testnet',

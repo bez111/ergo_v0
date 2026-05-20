@@ -54,6 +54,7 @@
     "smoke:staging": "node scripts/staging-smoke.mjs",
     "qa:mobile-crawl": "node scripts/mobile-crawl.mjs",
     "qa:sitemap-crawl": "node scripts/mobile-crawl.mjs --status-only",
+    "audit:blog": "node scripts/blog-content-audit.mjs",
     "audit:claims": "node scripts/content-claim-audit.mjs",
     "audit:agent-economy-gate": "node scripts/agent-economy-gate-audit.mjs",
     "audit:locales": "node scripts/localization-audit.mjs",
