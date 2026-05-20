@@ -56,6 +56,25 @@ vercel env add SAGE_SIGNER_URL production
 vercel --prod --yes
 ```
 
+## Fly deployment scaffold
+
+This directory also contains a minimal Fly.io scaffold for a permanent testnet
+signer:
+
+```bash
+fly apps create ergoblockchain-sage-signer --org personal
+fly secrets import --app ergoblockchain-sage-signer
+fly deploy
+```
+
+Only import the signer seed into Fly when you explicitly accept the testnet
+key-custody tradeoff. `.dockerignore` excludes `.env`, so the mnemonic is never
+copied into the image by accident. The public signer URL is:
+
+```text
+https://ergoblockchain-sage-signer.fly.dev/sign
+```
+
 ## Health and Readiness
 
 The signer exposes two lightweight ops endpoints:
