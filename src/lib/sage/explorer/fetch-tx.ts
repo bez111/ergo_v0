@@ -294,15 +294,18 @@ export async function fetchSageActivity(
           value: number
           additionalRegisters?: Record<string, unknown>
         }>
-        outputs: Array<{ boxId: string; address?: string; value: number }>
+        outputs: Array<{
+          boxId: string
+          address?: string
+          value: number
+          additionalRegisters?: Record<string, unknown>
+        }>
       }>
     }
     const events: SageActivityEvent[] = (body.items ?? []).map((tx) => {
-      const noteInput = tx.inputs.find((inp) => {
-        const regs = inp.additionalRegisters
-        if (!regs || typeof regs !== "object") return false
-        const keys = Object.keys(regs)
-        return keys.includes("R4") && keys.includes("R5") && keys.includes("R6")
+      const noteInput = tx.inputs.find(hasNoteRegisters)
+      const noteOutput = tx.outputs.find((output) => {
+        return output.address === receiver && hasNoteRegisters(output)
       })
       const inflow = tx.outputs
         .filter((o) => o.address === receiver)
@@ -318,8 +321,8 @@ export async function fetchSageActivity(
         timestamp: tx.timestamp,
         type,
         inflowNanoErg: inflow,
-        paymentNanoErg: noteInput?.value,
-        noteBoxId: noteInput?.boxId,
+        paymentNanoErg: noteInput?.value ?? noteOutput?.value,
+        noteBoxId: noteInput?.boxId ?? noteOutput?.boxId,
       }
     })
     return {
@@ -339,4 +342,11 @@ export async function fetchSageActivity(
       error: err instanceof Error ? err.message : "explorer fetch failed",
     }
   }
+}
+
+function hasNoteRegisters(box: { additionalRegisters?: Record<string, unknown> }): boolean {
+  const regs = box.additionalRegisters
+  if (!regs || typeof regs !== "object") return false
+  const keys = Object.keys(regs)
+  return keys.includes("R4") && keys.includes("R5") && keys.includes("R6")
 }
