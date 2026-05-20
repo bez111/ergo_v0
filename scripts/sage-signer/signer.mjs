@@ -94,6 +94,7 @@ const KEY = await ErgoHDKey.fromMnemonic(SEED, PASSPHRASE ? { passphrase: PASSPH
 const SIGNER_ADDRESS = ErgoAddress
   .fromPublicKey(KEY.publicKey, NETWORK === "mainnet" ? FleetNetwork.Mainnet : FleetNetwork.Testnet)
   .toString(NETWORK === "mainnet" ? FleetNetwork.Mainnet : FleetNetwork.Testnet)
+const SIGNER_ERGO_TREE = ErgoAddress.fromBase58(SIGNER_ADDRESS).ergoTree
 const EXPECTED_ADDRESS = process.env.SAGE_EXPECTED_WALLET_ADDRESS ?? process.env.SAGE_WALLET_ADDRESS ?? ""
 
 if (EXPECTED_ADDRESS && EXPECTED_ADDRESS !== SIGNER_ADDRESS) {
@@ -294,12 +295,18 @@ function sumNonSelfOutputValue(tx) {
   try {
     const outs = tx.outputs ?? []
     return outs.reduce((sum, o) => {
-      if (o?.address === SIGNER_ADDRESS) return sum
+      if (isSelfOutput(o)) return sum
       return sum + BigInt(o?.value ?? 0)
     }, 0n)
   } catch {
     return 0n
   }
+}
+
+function isSelfOutput(output) {
+  if (output?.address === SIGNER_ADDRESS) return true
+  const tree = String(output?.ergoTree ?? output?.ergo_tree ?? "").toLowerCase()
+  return tree === SIGNER_ERGO_TREE.toLowerCase()
 }
 
 function uniqueRecipients(tx) {
