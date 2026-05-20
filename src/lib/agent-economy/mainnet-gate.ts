@@ -51,10 +51,10 @@ export const agentEconomyMainnetGate = {
     {
       id: "signer-ops-runbook",
       label: "Signer operations hardening",
-      state: "pending",
+      state: "open",
       owner: "ops",
       detail:
-        "Keep signer health, limits, failure logging, failover, and manual runbook visible in the Live Hub.",
+        "Permanent Fly signer is live on testnet with health checks, policy limits, failure logging, and runbook visibility in the Live Hub.",
     },
     {
       id: "mcp-dns",
