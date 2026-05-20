@@ -117,6 +117,7 @@ const accord = runAccordL1({
   agreementId,
   paymentJson,
 })
+const achievedLevel = accord.result?.achieved_level ?? highestPassedLevel(accord.result?.levels)
 
 const artifact = {
   type: "sage.conformance_result.v0",
@@ -129,7 +130,7 @@ const artifact = {
   accord_l1: accord.result,
   accord_l1_exit_code: accord.exitCode,
   accord_l1_stderr: accord.stderr || undefined,
-  achieved_level: accord.result?.achieved_level ?? null,
+  achieved_level: achievedLevel,
   status: accord.exitCode === 0 ? "passed" : "failed_or_inconclusive",
   signing_hint:
     "Sign with: accord-conformance sign --key-file <private-key-file> --signer provider://sage --output <signed.json> <this artifact>",
@@ -295,6 +296,17 @@ function runAccordL1({ cliPath, targetUrl, agreementId, paymentJson }) {
     stderr: run.stderr.trim(),
     result: parseJsonMaybe(run.stdout),
   }
+}
+
+function highestPassedLevel(levels) {
+  if (!Array.isArray(levels)) return null
+  const passed = levels
+    .filter((level) => level?.passed === true && typeof level.level === "string")
+    .map((level) => level.level)
+  if (passed.includes("L3")) return "L3"
+  if (passed.includes("L2")) return "L2"
+  if (passed.includes("L1")) return "L1"
+  return passed[0] ?? null
 }
 
 function parseJsonMaybe(value) {
