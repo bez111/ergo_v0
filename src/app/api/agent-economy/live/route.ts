@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { agentEconomyMainnetGate } from "@/lib/agent-economy/mainnet-gate"
+import { agentEconomyMainnetGate, type MainnetGateBlocker } from "@/lib/agent-economy/mainnet-gate"
 
 type GateState = "live" | "pending" | "blocked" | "degraded"
 
@@ -130,6 +130,9 @@ export async function GET(req: Request) {
   const storageHealthy = storage.data?.ok === true && storage.data.storage_healthy === true
   const signerState = signerGateState(signer)
   const mainnetGateStatus = mainnetGate.data?.status ?? agentEconomyMainnetGate.status
+  const remoteMainnetBlockers = (mainnetGate.data as { blockers?: MainnetGateBlocker[] } | null)?.blockers
+  const mainnetBlockers = (Array.isArray(remoteMainnetBlockers) ? remoteMainnetBlockers : agentEconomyMainnetGate.blockers)
+    .filter((blocker) => blocker.state !== "open")
   const conformancePassed = conformanceEvidence.data?.status === "passed" &&
     Boolean(conformanceEvidence.data.achieved_level) &&
     conformanceEvidence.data.ready_for_registry === true
@@ -243,7 +246,9 @@ export async function GET(req: Request) {
       mainnetGateStatus === "open" ? "live" : "blocked",
       mainnetGateStatus === "open"
         ? "All mainnet gate artifacts are published"
-        : "Closed until exact script identity, signer operations, and audit manifests are published",
+        : mainnetBlockers.length > 0
+          ? `Closed; ${mainnetBlockers.length} audit/mainnet artifacts still pending`
+          : "Closed until exact script identity, signer operations, and audit manifests are published",
       "/api/agent-economy/mainnet-gate",
     ),
   ]
@@ -326,6 +331,12 @@ export async function GET(req: Request) {
         owner: "ops",
         blocked_by_external: true,
       }]),
+      ...mainnetBlockers.map((blocker) => ({
+        id: blocker.id,
+        label: blocker.label,
+        owner: blocker.owner,
+        blocked_by_external: blocker.owner === "audit",
+      })),
     ],
     probes: {
       sage_activity: publicProbe(activity),

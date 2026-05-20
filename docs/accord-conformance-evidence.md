@@ -15,8 +15,10 @@ public_key = https://www.ergoblockchain.org/evidence/sage/provider-signing-key.j
 receipt_api = https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
 ```
 
-This is Sage testnet conformance evidence. It does not open mainnet readiness
-without script identity, audit manifests, and signer operations evidence.
+This is Sage testnet conformance evidence. It does not open mainnet readiness:
+the testnet script identity, audit scope, and signer operations evidence are
+published, but an external audit/review report and audit-bound mainnet script
+identity are still missing.
 
 ## 1. Create the receipt
 
@@ -100,6 +102,6 @@ Live Hub should show:
 
 - `Full receipt bundle = live`
 - `Accord conformance = ready/passed`
-- `Mainnet gate = closed` until script identity and audit manifests are also published
+- `Mainnet gate = closed` until external audit/review and audit-bound mainnet script identity are also published
 
 Conformance evidence alone does not open mainnet readiness.

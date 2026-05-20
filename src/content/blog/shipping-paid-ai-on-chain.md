@@ -120,7 +120,7 @@ This does **not** certify mainnet use.
 
 It also does **not** make the Sage pilot mainnet-ready.
 
-The next remaining pieces are operational and audit evidence. The storage path for full receipt bundles is implemented, one post-Blob bundle exists, and signed Sage L1 conformance evidence is published. Mainnet language still needs exact script identity, signer operations evidence, and external audit/review manifests.
+The next remaining pieces are external review and mainnet-specific identity. The storage path for full receipt bundles is implemented, one post-Blob bundle exists, signed Sage L1 conformance evidence is published, and testnet identity plus signer operations evidence are public. Mainnet language still needs an external audit/review report and audit-bound mainnet script identity.
 
 The honest status is:
 
@@ -212,9 +212,8 @@ The next step is not "prove settlement," "add storage," or "sign L1 evidence." T
 The next step is to turn the evidence into durable operations and registry state:
 
 - open or merge the Accord registry evidence update;
-- publish signer operations evidence for the permanent testnet endpoint;
-- publish exact script identity manifests;
-- publish external audit or review manifests;
+- publish an external audit or review report;
+- publish audit-bound mainnet script identity manifests;
 - keep the public wording testnet-first until those gates exist.
 
 After that, Sage can move from "testnet proof with signed L1 evidence" toward a stronger registry and audit posture.

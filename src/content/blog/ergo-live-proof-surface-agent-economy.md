@@ -51,7 +51,7 @@ Humans browse pages. Agents call tools. `mcp.ergoblockchain.org` is the machine-
 
 ### Mainnet language stays locked
 
-This is live testnet proof, not audited mainnet infrastructure. Exact script identity, signer operations and audits remain the gates.
+This is live testnet proof, not audited mainnet infrastructure. Testnet identity and signer evidence are published; external review and audit-bound mainnet script identity remain the gates.
 
 ## What changed
 
@@ -251,9 +251,9 @@ The next gates are clear.
 
 First, the Accord registry profile now points to the new Sage evidence and receipt bundle. That makes the registry a durable pointer to the same public proof surface instead of a separate database of facts.
 
-Second, the testnet signer now has a permanent controlled endpoint. The remaining work is to publish stronger operations evidence around auth, logs, health checks, limits, rotation and incident handling.
+Second, the testnet signer now has a permanent controlled endpoint and a public operations evidence manifest. The remaining work is to attach external review to auth, logs, health checks, limits, rotation and incident handling.
 
-Third, exact script identity manifests need to be published. That means source artifacts, compiled script hashes, addresses, network, package versions and known limits.
+Third, testnet script identity is now published as an observed manifest. Mainnet still needs audit-bound source artifacts, compiled script hashes, addresses, network, package versions and known limits.
 
 Fourth, external audit or review manifests need to exist before any mainnet claim.
 
@@ -308,8 +308,8 @@ MCP gives agents and compatible clients a machine-facing entry point. The site s
 
 ### What is the next strongest proof?
 
-A fresh settled-on-chain post-Blob paid turn through a permanent controlled signer endpoint. The full receipt bundle and signed L1 evidence already exist; the next trust layer is signer operations, registry evidence, script identity and audits.
+External review and audit-bound mainnet identity. The full receipt bundle, signed L1 evidence, registry evidence, testnet signer evidence and observed testnet script identity already exist; the next trust layer is independent review.
 
 ### When can the site claim mainnet readiness?
 
-Only after audit manifests, exact script identities, package versions and operational signer controls are published for the relevant production flow. Signed Sage L1 evidence is a completed gate, not the whole gate.
+Only after an external audit/review report, audit-bound script identities, package versions and production signer controls are published for the relevant production flow. Signed Sage L1 evidence is a completed gate, not the whole gate.

@@ -47,7 +47,7 @@ Do not claim:
 - full registry certification beyond L1 evidence;
 - production signer operations.
 
-The remaining gates are exact script identity, external audit manifests, and production-grade signer operations evidence.
+The remaining gates are external audit/review and audit-bound mainnet script identity. The testnet script identity, audit scope, and signer operations evidence are now published.
 
 ## The strongest narrative
 
@@ -71,7 +71,7 @@ That combination is the point.
 5. Signed L1 evidence makes the claim machine-checkable.
 6. MCP gives agents a public entry point.
 7. The mainnet gate stays closed because credibility beats hype.
-8. The next frontier: signer ops evidence, registry PR, script identity, audits, paid widget, wallet agents.
+8. The next frontier: external review, audit-bound mainnet script identity, paid widget, wallet agents.
 
 ## Copy blocks
 
@@ -93,5 +93,5 @@ Sage now has:
 - Agent Hub
 - explicit mainnet gate
 
-Testnet proof first. Mainnet only after scripts, signer ops and audits.
+Testnet proof first. Mainnet only after external review and audit-bound scripts.
 ```

@@ -1,0 +1,72 @@
+{
+  "type": "ergo.agent_economy.signer_ops_evidence.v0",
+  "version": "v0",
+  "status": "testnet_operational",
+  "last_reviewed": "2026-05-20T20:45:36Z",
+  "public_claim": "Permanent testnet signer is live. This is not mainnet custody certification.",
+  "network": "testnet",
+  "service": {
+    "name": "sage-signer",
+    "version": "0.1.0",
+    "public_health_url": "https://ergoblockchain-sage-signer.fly.dev/health",
+    "site_health_proxy": "https://www.ergoblockchain.org/api/sage/signer-health",
+    "sign_url_env": "SAGE_SIGNER_URL",
+    "sign_url_public_host": "ergoblockchain-sage-signer.fly.dev",
+    "runtime": "Fly.io",
+    "regions": [
+      "fra"
+    ]
+  },
+  "public_identity": {
+    "signer_address": "3WwRauZrYjaQYgnS9P6U4i7Ng7MBzn8MSh4yPXA9qgcySrmkEdn6",
+    "expected_address": "3WwRauZrYjaQYgnS9P6U4i7Ng7MBzn8MSh4yPXA9qgcySrmkEdn6",
+    "address_matches_expected": true
+  },
+  "observed_health": {
+    "status": "up",
+    "configured": true,
+    "reachable": true,
+    "settlement_mode": "settlement_available",
+    "ready_requires_auth": true,
+    "checked_from": "https://www.ergoblockchain.org/api/sage/signer-health"
+  },
+  "policy": {
+    "key_isolation": "Signer seed is outside Vercel; Vercel stores only signer URL/token and public seller address.",
+    "fallback_mode": "verify_only_fallback",
+    "failure_logging": "vercel_blob_latest_event",
+    "runbook": "https://github.com/bez111/ergo_v0/blob/main/docs/sage-signer-ops.md",
+    "limits": {
+      "verify_payment_per_ip_per_minute": 10,
+      "signer_health_timeout_ms": 2500,
+      "verify_payment_max_duration_s": 60,
+      "signer_max_single_tx_nanoerg": 10000000,
+      "signer_max_body_bytes": 262144,
+      "signer_max_requests_per_minute": 30,
+      "failure_trip_threshold": 5,
+      "failure_cooldown_ms": 300000
+    },
+    "secret_redaction": [
+      "SAGE_WALLET_SEED",
+      "SAGE_SIGNER_TOKEN",
+      "private keys",
+      "mnemonics"
+    ]
+  },
+  "latest_observed_event": {
+    "type": "sage.signer_ops_event.v1",
+    "event_id": "20260520-194833-redemption_settled-83ac762fd75f",
+    "created_at": "2026-05-20T19:48:33Z",
+    "kind": "redemption_settled",
+    "agreement_id": "acc_sage_47710f9ca3bcaa70ac7b",
+    "note_box_id": "2c7ea0802ff5c36cf72859f0ade09e095812ad35bc89ebe00ca48816fa656415",
+    "receipt_id": "83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
+    "settlement_tx_id": "83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3"
+  },
+  "mainnet_blockers": [
+    "Move from testnet mnemonic custody to a production custody model, such as hardware signer, KMS, or multi-party controls.",
+    "Publish immutable audit logs or retention policy.",
+    "Publish monitoring and alert routing.",
+    "Publish key rotation and emergency pause procedure.",
+    "Publish independent review of signer policy and transaction limits."
+  ]
+}

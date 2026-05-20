@@ -47,7 +47,7 @@ identity, signer operations, and audit artifacts are published.
 
 ## Current External Blockers
 
-- Exact script identity manifest and external audit/review manifest before any
+- External audit/review report and audit-bound mainnet script identity before any
   mainnet language.
 
 ## Current Internal Batch
@@ -86,7 +86,7 @@ certified
 The settled post-Blob `full_receipt_bundle`, permanent testnet signer, and signed L1 evidence are done. The
 remaining order is:
 
-1. Publish signer operations evidence for the permanent testnet endpoint.
-2. Publish exact script identity manifests.
-3. Publish external audit/review manifests.
+1. Publish an external audit/review report.
+2. Publish audit-bound mainnet script identity manifests.
+3. Update risk disclosure with reviewer findings and residual risks.
 4. Run final full build and smoke tests for the next deploy batch.

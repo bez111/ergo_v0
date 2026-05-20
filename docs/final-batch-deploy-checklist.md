@@ -25,6 +25,7 @@ completeness = full_receipt_bundle
 - [x] Final hub subdomain is chosen: `agents.ergoblockchain.org`.
 - [x] Accord registry evidence for Sage L1 is prepared with the latest settled receipt.
 - [x] Permanent settlement signer endpoint is configured for fresh testnet redemption.
+- [x] Testnet script identity, audit scope, and signer ops evidence manifests are published.
 
 ## Preflight
 
@@ -92,7 +93,7 @@ Expected:
 - `accord-conformance = live`.
 - `accord-registry = live`.
 - `mcp-dns = live` after DNS.
-- `mainnet-audit-gate = blocked` until audit/script identity artifacts exist.
+- `mainnet-audit-gate = blocked` until external audit and audit-bound mainnet script identity exist.
 
 ## Do not ship if
 

@@ -12,6 +12,9 @@ Allowed:
 - Durable full receipt storage is live for new paid Sage turns.
 - A post-Blob paid Sage flow produced a full receipt bundle with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON.
 - Sage has signed public Accord L1 conformance evidence for that receipt bundle.
+- A testnet observed script identity manifest is published.
+- A draft audit scope manifest is published.
+- Testnet signer operations evidence is published.
 - `/api/sage/receipt/<id>` is the machine-readable source of truth for Sage receipts.
 - The current published evidence is still testnet-only and does not open mainnet readiness.
 
@@ -103,8 +106,10 @@ Before changing public copy to mainnet/production wording:
 - [x] `npm run sage:conformance:evidence` passes for the post-storage receipt.
 - [x] Conformance result is signed.
 - [x] Signed artifact is published at a stable URI.
-- [ ] Accord registry evidence points to that artifact.
-- [ ] External audit or review manifest is published.
-- [ ] Script identity manifest is published.
-- [ ] Signer ops runbook is current.
+- [x] Accord registry evidence points to that artifact.
+- [x] Testnet observed script identity manifest is published.
+- [x] Draft audit scope manifest is published.
+- [x] Testnet signer ops evidence and runbook are current.
+- [ ] External audit or review report is published.
+- [ ] Audit-bound mainnet script identity manifest is published.
 - [ ] Risk disclosure is updated.

@@ -193,14 +193,14 @@ Here is the honest boundary:
 |---|---|---|
 | Ergo base chain | Ergo is live. | This article does not claim new consensus functionality. |
 | Sage | Hosted testnet proof with real settlement trail. | Not audited mainnet payment infrastructure. |
-| Accord receipts | Full receipt bundle and signed Sage L1 evidence are published. | No mainnet/audit pass until script identity, signer ops and audit manifests exist. |
+| Accord receipts | Full receipt bundle and signed Sage L1 evidence are published. | No mainnet/audit pass until external review and audit-bound mainnet script identity exist. |
 | MCP | Public endpoint is live. | Not a guarantee that every future tool is production ready. |
 | Widget | Package and source surfaces exist. | The full embeddable paid chat widget is still the next level. |
-| Mainnet | Mainnet gate is intentionally closed. | No production readiness claim before audit manifests and exact script identity are published. |
+| Mainnet | Mainnet gate is intentionally closed. | No production readiness claim before external audit/review and audit-bound mainnet script identity are published. |
 
 This posture is not modesty for its own sake. It is how infrastructure becomes credible.
 
-If a website claims "production ready" before signed artifacts, exact script hashes, signer runbooks and audit manifests exist, it weakens the whole project. A better strategy is to let public evidence accumulate and make the next gate obvious.
+If a website claims "production ready" before signed artifacts, exact script hashes, signer runbooks and audit reports exist, it weakens the whole project. A better strategy is to let public evidence accumulate and make the next gate obvious.
 
 ## Where The Site Is Going
 
@@ -249,7 +249,7 @@ The next widget level is not only an activity feed. It should become an embeddab
 
 ### 4. Keep mainnet behind the audit gate
 
-Before mainnet claims, the site should publish exact script identity, audit manifests, package versions and signed contract evidence.
+Before mainnet claims, the site should publish external audit/review results, audit-bound script identity, package versions and signed contract evidence.
 
 ## Why This Is Cool
 
@@ -284,7 +284,7 @@ No. Sage is a hosted testnet proof. It has a real Ergo testnet settlement trail 
 
 ### What is the most important next proof?
 
-A fresh settled-on-chain post-Blob paid turn through a permanent controlled signer endpoint. The full receipt bundle and signed L1 evidence already exist; the remaining trust work is operational signer hardening, registry evidence, script identity and audits.
+External review and audit-bound mainnet identity. The full receipt bundle, signed L1 evidence, registry evidence, testnet signer evidence and observed testnet script identity already exist; the remaining trust work is independent review and mainnet-specific identity.
 
 ### Why does the MCP root show a simple error in the browser?
 
@@ -296,4 +296,4 @@ Because articles should not be databases. The source of truth should be `/api/sa
 
 ### When can the site claim mainnet readiness?
 
-After audit manifests, exact script identities, package versions and operational signer controls are published for the relevant production flow. Signed Sage L1 conformance evidence exists, but it is only one gate.
+After an external audit/review report, audit-bound script identities, package versions and production signer controls are published for the relevant production flow. Signed Sage L1 conformance evidence exists, but it is only one gate.

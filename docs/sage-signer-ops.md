@@ -13,7 +13,7 @@ Sage can serve paid testnet turns in two modes:
 - Custody: seller signing key must stay outside Vercel.
 - Public claim: testnet proof, not mainnet readiness.
 - Durable receipts: new paid turns should persist full Agreement, Verification Receipt, and Settlement Receipt JSON through Vercel Blob.
-- Conformance: Sage L1 evidence is signed and published for a settled post-Blob full receipt bundle; mainnet remains blocked until script identity, audit manifests, and production-grade signer operations evidence are published.
+- Conformance: Sage L1 evidence is signed and published for a settled post-Blob full receipt bundle. Testnet script identity, audit scope, and signer operations evidence are also published; mainnet remains blocked until an external audit/review report and audit-bound mainnet script identity exist.
 
 ## Required secrets
 

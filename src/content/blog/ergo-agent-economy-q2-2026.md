@@ -46,7 +46,7 @@ TypeScript/Node, Python and MCP tooling let builders approach the stack from dif
 
 ### The next bottleneck is audit and operations evidence
 
-Durable receipt storage, the permanent testnet signer and signed Sage L1 conformance evidence are live for a settled post-Blob receipt. The next phase is updated registry evidence, signer operations evidence, exact script identity manifests, external security review, clear status manifests, and more framework integrations.
+Durable receipt storage, the permanent testnet signer, testnet identity manifests, signer operations evidence and signed Sage L1 conformance evidence are live for a settled post-Blob receipt. The next phase is external security review, audit-bound mainnet script identity, clear status manifests, and more framework integrations.
 
 ## Naming and migration
 
@@ -162,7 +162,7 @@ Agents need a predictable way to discover payment terms. A future standard could
 
 ### 3. Hosted testnet reference dApp and conformance evidence
 
-Sage now covers the first hosted testnet proof: a builder can open the site, trigger a 402-style premium flow, verify a testnet Note, inspect a real settlement transaction, inspect a settled post-Blob full receipt bundle, and verify signed Sage L1 conformance evidence. The remaining reference-dApp work is registry evidence, signer operations evidence, exact script identity and audit manifests that external tools can verify without relying on article prose.
+Sage now covers the first hosted testnet proof: a builder can open the site, trigger a 402-style premium flow, verify a testnet Note, inspect a real settlement transaction, inspect a settled post-Blob full receipt bundle, verify signed Sage L1 conformance evidence, and inspect testnet identity and signer operations manifests. The remaining reference-dApp work is external review and audit-bound mainnet identity that external tools can verify without relying on article prose.
 
 ### 4. Conformance tests
 
@@ -198,7 +198,7 @@ x402 focuses on payment over HTTP: a resource requires payment, the client submi
 
 ### What should the next demo show?
 
-Sage now shows the first version of that flow, including a settled post-storage paid receipt and signed Accord L1 evidence. The next demo should close the remaining trust gap with signer operations evidence, registry evidence, exact script identity, audit manifests, and the same Ergo Note settlement path.
+Sage now shows the first version of that flow, including a settled post-storage paid receipt, signed Accord L1 evidence, registry evidence, observed testnet script identity and signer operations evidence. The next demo should close the remaining trust gap with external review, audit-bound mainnet identity and the same Ergo Note settlement path.
 
 ## Article JSON-LD draft
 

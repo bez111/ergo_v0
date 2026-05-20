@@ -35,18 +35,18 @@ export const agentEconomyMainnetGate = {
     {
       id: "exact-contract-identity",
       label: "Exact script hashes and contract identity",
-      state: "closed",
+      state: "pending",
       owner: "audit",
       detail:
-        "Publish exact ErgoScript/Fleet artifacts, script hashes, network, and deployment identifiers for every payment primitive.",
+        "A testnet observed identity manifest is published; mainnet still needs audited source-to-ErgoTree mapping, package versions, and deployment identifiers for every payment primitive.",
     },
     {
       id: "external-audit-manifests",
       label: "Audit manifests",
-      state: "closed",
+      state: "pending",
       owner: "audit",
       detail:
-        "Attach audit scope, findings status, artifact hashes, and signed reviewer identity before any mainnet language.",
+        "A draft audit scope manifest is published; signed external review findings are still required before any mainnet language.",
     },
     {
       id: "signer-ops-runbook",
@@ -70,9 +70,26 @@ export const agentEconomyMainnetGate = {
     "signed Accord conformance result",
     "public provider signing key",
     "registry evidence update",
-    "script identity manifest",
-    "audit manifest",
+    "testnet script identity manifest",
+    "audit scope manifest",
+    "external audit or review artifact",
+    "signer operations evidence",
     "signer operations runbook",
     "permanent signer endpoint",
   ],
+  artifacts: {
+    full_receipt_bundle:
+      "https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
+    signed_conformance_result:
+      "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
+    latest_evidence: "https://www.ergoblockchain.org/evidence/sage/latest-evidence.json",
+    script_identity_manifest:
+      "https://www.ergoblockchain.org/agent-economy/script-identity-manifest.v0.json",
+    audit_scope_manifest:
+      "https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json",
+    signer_ops_evidence:
+      "https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json",
+    signer_runbook: "https://github.com/bez111/ergo_v0/blob/main/docs/sage-signer-ops.md",
+    external_audit_report: null,
+  },
 }
