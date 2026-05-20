@@ -48,6 +48,15 @@ interface SageSignerHealthResponse {
   version?: string | null
 }
 
+interface SageRegistryEvidenceResponse {
+  status?: string
+  achieved_level?: string | null
+  ready_for_registry?: boolean
+  receipt_id?: string | null
+  signed_artifact_url?: string | null
+  public_signing_key_url?: string | null
+}
+
 interface LifecycleStage {
   id: string
   label: string
@@ -68,12 +77,13 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, signer, mcpFly, mcpDns, mainnetGate] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, signer, mcpFly, mcpDns, mainnetGate] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
     ),
     probeJson<{ ok?: boolean; type?: string; level?: string }>(`${siteBaseUrl}/api/sage/accord`),
+    probeJson<SageRegistryEvidenceResponse>(`${siteBaseUrl}/evidence/sage/latest-evidence.json`),
     probeJson<SageSignerHealthResponse>(`${siteBaseUrl}/api/sage/signer-health`),
     probeJson<{ ok?: boolean; service?: string; version?: string }>(MCP_FLY_HEALTH_URL),
     probeJson<{ ok?: boolean; service?: string }>(MCP_DNS_HEALTH_URL),
@@ -89,6 +99,11 @@ export async function GET(req: Request) {
   const storageHealthy = storage.data?.ok === true && storage.data.storage_healthy === true
   const signerState = signerGateState(signer)
   const mainnetGateStatus = mainnetGate.data?.status ?? agentEconomyMainnetGate.status
+  const conformancePassed = conformanceEvidence.data?.status === "passed" &&
+    Boolean(conformanceEvidence.data.achieved_level) &&
+    conformanceEvidence.data.ready_for_registry === true
+  const conformanceLevel = conformanceEvidence.data?.achieved_level ?? null
+  const conformanceHref = conformanceEvidence.data?.signed_artifact_url ?? "/evidence/sage/latest-evidence.json"
 
   const gates = [
     gate(
@@ -128,11 +143,13 @@ export async function GET(req: Request) {
     gate(
       "accord-conformance",
       "Accord conformance",
-      latestFullReceipt ? "pending" : "blocked",
-      latestFullReceipt
-        ? "Ready for conformance run and signed evidence"
-        : "Blocked until a full receipt bundle exists",
-      "/api/sage/accord",
+      conformancePassed ? "live" : latestFullReceipt ? "pending" : "blocked",
+      conformancePassed
+        ? `Signed ${conformanceLevel} evidence published for the latest full receipt bundle`
+        : latestFullReceipt
+          ? "Ready for conformance run and signed evidence"
+          : "Blocked until a full receipt bundle exists",
+      conformanceHref,
     ),
     gate(
       "sage-signer",
@@ -184,6 +201,9 @@ export async function GET(req: Request) {
     settlementCount,
     storageHealthy,
     latestFullReceipt,
+    conformancePassed,
+    conformanceLevel,
+    conformanceHref,
     mcpFlyLive: mcpFly.ok && mcpFly.data?.ok === true,
     mcpDnsLive: mcpDns.ok && mcpDns.data?.ok === true,
     mainnetGateStatus,
@@ -209,6 +229,8 @@ export async function GET(req: Request) {
       storage_configured: storageConfigured,
       receipt_storage_healthy: storageHealthy,
       latest_full_receipt_id: latestFullReceipt?.id ?? null,
+      accord_conformance_level: conformancePassed ? conformanceLevel : null,
+      accord_conformance_evidence: conformancePassed ? conformanceHref : null,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -233,19 +255,25 @@ export async function GET(req: Request) {
         owner: "wallet",
         blocked_by_external: true,
       }]),
-      {
+      ...(conformancePassed ? [{
+        id: "registry-evidence",
+        label: "Update Accord registry evidence with the signed Sage artifact",
+        owner: "repo",
+        blocked_by_external: false,
+      }] : [{
         id: "accord-conformance",
         label: latestFullReceipt
           ? "Publish signed conformance evidence for the full receipt bundle"
           : "Run conformance against the new receipt and publish signed evidence",
         owner: "repo",
         blocked_by_external: !latestFullReceipt,
-      },
+      }]),
     ],
     probes: {
       sage_activity: publicProbe(activity),
       receipt_storage: publicProbe(storage),
       accord: publicProbe(accord),
+      accord_conformance_evidence: publicProbe(conformanceEvidence),
       sage_signer: publicProbe(signer),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
@@ -344,6 +372,9 @@ function buildLifecycle(opts: {
   settlementCount: number
   storageHealthy: boolean
   latestFullReceipt: SageReceiptResponse | null
+  conformancePassed: boolean
+  conformanceLevel: string | null
+  conformanceHref: string
   mcpFlyLive: boolean
   mcpDnsLive: boolean
   mainnetGateStatus: string
@@ -388,11 +419,13 @@ function buildLifecycle(opts: {
     {
       id: "conformance",
       label: "Accord conformance",
-      state: opts.latestFullReceipt ? "pending" : "blocked",
-      detail: opts.latestFullReceipt
-        ? "Ready for signed conformance artifact generation."
-        : "Blocked by the missing full receipt bundle.",
-      evidence_href: "/api/sage/accord",
+      state: opts.conformancePassed ? "live" : opts.latestFullReceipt ? "pending" : "blocked",
+      detail: opts.conformancePassed
+        ? `Signed ${opts.conformanceLevel ?? "L1"} conformance evidence is published.`
+        : opts.latestFullReceipt
+          ? "Ready for signed conformance artifact generation."
+          : "Blocked by the missing full receipt bundle.",
+      evidence_href: opts.conformancePassed ? opts.conformanceHref : "/api/sage/accord",
     },
     {
       id: "mcp",

@@ -1,0 +1,8 @@
+{
+  "type": "sage.provider_signing_key.v0",
+  "provider_id": "provider://sage-ergoblockchain",
+  "scheme": "ed25519",
+  "public_key": "0xa94e16b40ce918db8f2925bd3f9c0bd604a38e40ffcbb46e5d758bdc6ae587bc",
+  "generated_at": "2026-05-20T14:29:54.776Z",
+  "note": "Public key for verifying signed Sage Accord conformance artifacts. Private key is stored locally and is not committed."
+}

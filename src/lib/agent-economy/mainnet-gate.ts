@@ -12,25 +12,25 @@ export const agentEconomyMainnetGate = {
   type: "ergo.agent_economy.mainnet_gate.v0",
   version: "v0",
   status: "closed" as MainnetGateState,
-  last_reviewed: "2026-05-18",
+  last_reviewed: "2026-05-20",
   public_claim:
     "Testnet live proof only. Do not claim production or mainnet readiness until every blocker is open.",
   blockers: [
     {
       id: "post-blob-full-receipt",
       label: "Post-Blob full Sage receipt bundle",
-      state: "closed",
+      state: "open",
       owner: "wallet",
       detail:
-        "Run one new paid Sage flow after Blob storage so Agreement, Verification Receipt, and Settlement Receipt JSON persist durably.",
+        "A post-Blob paid Sage flow produced a durable full receipt bundle with Agreement, Verification Receipt, and Settlement Receipt JSON.",
     },
     {
       id: "accord-conformance-signed",
       label: "Signed Accord conformance evidence",
-      state: "closed",
+      state: "open",
       owner: "repo",
       detail:
-        "Run conformance against the full receipt bundle, sign the artifact with a public provider signing key, and publish registry evidence.",
+        "L1 conformance passed against the full receipt bundle and a signed public evidence artifact is published.",
     },
     {
       id: "exact-contract-identity",
@@ -59,7 +59,7 @@ export const agentEconomyMainnetGate = {
     {
       id: "mcp-dns",
       label: "MCP public DNS",
-      state: "closed",
+      state: "open",
       owner: "dns",
       detail:
         "mcp.ergoblockchain.org resolves to the Fly service and the public health and MCP endpoints respond.",

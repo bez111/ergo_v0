@@ -1,0 +1,31 @@
+{
+  "type": "sage.registry_evidence.v0",
+  "provider_id": "provider://sage-ergoblockchain",
+  "provider_endpoint": "https://www.ergoblockchain.org/api/sage/accord",
+  "generated_at": "2026-05-20T13:50:27.329Z",
+  "status": "passed",
+  "achieved_level": "L1",
+  "receipt_id": "09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
+  "agreement_id": "acc_sage_9ac19993a88a4d984325",
+  "public_receipt_url": "https://www.ergoblockchain.org/r/sage/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
+  "api_receipt_url": "https://www.ergoblockchain.org/api/sage/receipt/09a9e5c0e5e5ca716bfc7c856aa4ece42a0655ad06f8806cf054c79c09eb318c",
+  "conformance_artifact_path": "artifacts/sage-conformance/2026-05-20T13-50-25-015Z.json",
+  "signed_artifact_path": "public/evidence/sage/conformance-l1-2026-05-20.signed.json",
+  "registry_patch_path": "docs/handoff/accord-protocol-sage-registry-bump.patch",
+  "ready_for_registry": true,
+  "next_actions": [
+    "Update accord-protocol/registry/providers/sage.json evidence fields.",
+    "Attach this evidence JSON and the signed artifact to the registry PR.",
+    "Keep mainnet gate closed until exact script identity and audit manifests are published."
+  ],
+  "signed_artifact_url": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
+  "public_signing_key_path": "public/evidence/sage/provider-signing-key.json",
+  "public_signing_key_url": "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
+  "signature": {
+    "scheme": "ed25519",
+    "public_key": "0xa94e16b40ce918db8f2925bd3f9c0bd604a38e40ffcbb46e5d758bdc6ae587bc",
+    "signature": "0x837eb437a9b1a54643552186c15a3e6e211e377e829ce2e5f3fc6bde09b09ccc7df5cd4cca25e47d403323803c67000232ad1ddbf3e7b247cc5bfb4f94df680f",
+    "signed_at": "2026-05-20T14:29:54Z",
+    "signer": "provider://sage-ergoblockchain"
+  }
+}
