@@ -164,7 +164,16 @@ const CURATED = [
     title: "Sage Widget embed surface",
     tags: "Sage widget, npm, React, vanilla, receipts, agent payments",
     content:
-      "The Sage widget is the embeddable surface for Ergo agent-payment proof flows. Public npm latest is v0.2.0. It includes a React SagePaymentWidget component, a vanilla mountSagePaymentWidget function, typed clients for quote, verify, chat stream, receipt bundle, and activity feed, tenant metadata, receipt callbacks, and status snapshots. The site now exposes a live host-side demo for quote, Note box verification, receipt linking, and optional paid answer streaming. The canonical Sage host is testnet live proof: it can produce full_receipt_bundle receipts with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. The widget does not sign wallet transactions; it shows quote fields, accepts a Note box id, verifies through Sage, streams the answer, and links the public receipt API.",
+      "The Sage widget is the embeddable surface for Ergo agent-payment proof flows. Public npm latest remains v0.2.0 until the prepared v0.3 source is published. The v0.3 source adds portable SagePaymentIntent JSON, wallet launcher hooks for host-owned wallet flows, a React SagePaymentWidget component, a vanilla mountSagePaymentWidget function, typed clients for quote, verify, chat stream, receipt bundle, and activity feed, tenant metadata, receipt callbacks, and status snapshots. The site exposes a live host-side demo for quote, Note box verification, receipt linking, and optional paid answer streaming. The canonical Sage host is testnet live proof: it can produce full_receipt_bundle receipts with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. The widget does not sign wallet transactions; it shows quote fields, emits intent JSON, accepts a Note box id, verifies through Sage, streams the answer, and links the public receipt API.",
+  },
+  {
+    id: "page:agent-payment-quickstart",
+    type: "page",
+    url: "/build/agent-payments/quickstart",
+    title: "Build your first paid agent flow on Ergo",
+    tags: "Sage widget, quickstart, agent payments, payment intent, Ergo testnet, receipt bundle",
+    content:
+      "The agent payment quickstart shows the shortest path for developers: install @ergoblockchain/sage-widget, request a Sage quote, emit a portable payment intent for a host-owned wallet flow, create an Ergo testnet Note, verify the Note box id, stream the paid Sage answer, and fetch the full receipt bundle. It emphasizes testnet-only posture, no widget-side signing, and /api/sage/receipt/<id> as the source of truth for Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON.",
   },
   {
     id: "page:no-stripe-comparison",

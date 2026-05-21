@@ -190,6 +190,16 @@ const nextConfig: NextConfig = {
           destination: '/agent-economy/sage-widget',
         },
         {
+          source: '/quickstart',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/build/agent-payments/quickstart',
+        },
+        {
+          source: '/quickstart',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/build/agent-payments/quickstart',
+        },
+        {
           source: '/playground',
           has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
           destination: '/build/playground',

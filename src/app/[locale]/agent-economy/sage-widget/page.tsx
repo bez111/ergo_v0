@@ -33,11 +33,18 @@ export function PaidSagePanel() {
       tenant={{ id: "my-ergo-app", label: "My Ergo app" }}
       paymentInstructions={{
         helperText: "Issue the quoted testnet Note, then paste the Note box id.",
+        walletLauncherLabel: "Open my testnet wallet",
         walletUrl: "https://www.ergoblockchain.org/build/agent-payments",
       }}
       onQuote={(quote) => console.log("quote", quote.quote)}
+      onPaymentIntent={(intent) => console.log("wallet intent", intent)}
       onReceipt={(receipt) => console.log("receipt", receipt.receiptUrl)}
       onReceiptBundle={(bundle) => console.log(bundle.completeness)}
+      walletLauncher={async (intent) => {
+        // Host-owned wallet flow. Return { ok: true, noteBoxId } when ready.
+        console.log(intent.amountErg, intent.receiverAddress, intent.taskHash)
+        return { ok: true }
+      }}
     />
   )
 }`
@@ -55,9 +62,20 @@ await handle.send("/code show me a Fleet SDK example")
 console.log(handle.status().receiptBundle?.completeness)`
 
 const receiptExample = `import {
+  createSagePaymentIntent,
+  fetchSageQuote,
   fetchSageReceipt,
   isFullSageReceiptBundle,
 } from "@ergoblockchain/sage-widget"
+
+const question = "/deep explain Accord receipts"
+const quoteResponse = await fetchSageQuote({ question })
+if (!quoteResponse.quote) throw new Error("No premium quote returned")
+
+const intent = createSagePaymentIntent({
+  question,
+  quote: quoteResponse.quote,
+})
 
 const receipt = await fetchSageReceipt("${LATEST_RECEIPT_ID}")
 
@@ -115,17 +133,17 @@ const statusItems: Array<{
 }> = [
   {
     label: "Source",
-    value: "v0.2 ready",
-    detail: "Paid widget code is pushed in GitHub with React, vanilla, typed API helpers, and smoke checks.",
+    value: "v0.3 candidate",
+    detail: "Source is prepared with payment intent JSON, wallet launcher hooks, React, vanilla, typed API helpers, and smoke checks.",
     icon: GitBranch,
     tone: "live",
   },
   {
     label: "npm",
-    value: "0.2.0 live",
-    detail: "Public npm latest now ships the paid widget surface with React, vanilla, typed API clients, and receipt callbacks.",
+    value: "publish next",
+    detail: "Public npm latest remains v0.2.0 until the v0.3 package is published from the sage-widget repo.",
     icon: PackageCheck,
-    tone: "live",
+    tone: "pending",
   },
   {
     label: "Receipt",
@@ -167,10 +185,10 @@ const flowItems = [
 ]
 
 const releaseChecklist = [
-  "npm latest points to @ergoblockchain/sage-widget@0.2.0",
-  "Published tarball includes root, React, vanilla, type declarations, README, and license",
+  "v0.3 source adds portable SagePaymentIntent JSON for host-owned wallet flows",
+  "Published tarball should include root, React, vanilla, type declarations, README, and license",
   "Live host demo calls the production Sage quote, verify, chat, and receipt APIs",
-  "Keep wallet signing outside the widget until a dedicated wallet flow is reviewed",
+  "Keep wallet signing outside the widget; host apps own wallet policy and signing",
   "Keep mainnet wording closed until external audit evidence exists",
 ]
 
@@ -226,6 +244,13 @@ export default function SageWidgetPage() {
                     <ExternalLink className="h-4 w-4" />
                   </a>
                   <Link
+                    href="/build/agent-payments/quickstart"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Quickstart
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
                     href="/agent-economy/live"
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >
@@ -241,14 +266,15 @@ export default function SageWidgetPage() {
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Release posture
                     </div>
-                    <div className="mt-1 text-2xl font-bold text-white">npm v0.2.0 live</div>
+                    <div className="mt-1 text-2xl font-bold text-white">v0.3 publish candidate</div>
                   </div>
                   <BadgeCheck className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The source and public npm package now point to the v0.2 paid
-                  widget surface. The canonical Sage host remains a testnet
-                  proof, with mainnet wording closed behind audit evidence.
+                  The source is ready for the v0.3 paid widget surface. npm
+                  publish is the next external step; the canonical Sage host
+                  remains a testnet proof, with mainnet wording closed behind
+                  audit evidence.
                 </p>
                 <div className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-3 font-mono text-xs text-neutral-300">
                   npm install @ergoblockchain/sage-widget

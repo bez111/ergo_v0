@@ -216,7 +216,7 @@ export async function GET(req: Request) {
       "sage-widget",
       "Sage widget",
       "live",
-      "npm latest is v0.2.0 with React, vanilla, typed API clients, and receipt callbacks",
+      "v0.3 source is prepared with payment intents, wallet launcher hooks, React, vanilla, typed API clients, and receipt callbacks",
       "/agent-economy/sage-widget",
     ),
     gate(
@@ -518,7 +518,7 @@ function buildLifecycle(opts: {
       id: "widget",
       label: "Embeddable widget",
       state: "live",
-      detail: "Published npm v0.2.0 package exposes the paid Sage widget surface.",
+      detail: "Sage widget v0.3 source is prepared for host-owned wallet flows; npm publish is the next external step.",
       evidence_href: "/agent-economy/sage-widget",
     },
     {

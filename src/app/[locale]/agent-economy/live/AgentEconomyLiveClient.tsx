@@ -191,6 +191,22 @@ export function AgentEconomyLiveClient() {
                   The page tracks what is live, what is blocked, and what must
                   happen before the stack can claim a protocol pass.
                 </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    href="/build/agent-payments/quickstart"
+                    className="inline-flex items-center gap-2 rounded-lg border border-orange-500 bg-orange-500 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-black transition-colors hover:bg-orange-400"
+                  >
+                    Build first flow
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="/agent-economy/sage-widget"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Widget demo
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-black/75 p-5">
@@ -339,10 +355,10 @@ export function AgentEconomyLiveClient() {
                     simulation, local signing, and receipts.
                   </p>
                   <Link
-                    href="/build/agent-payments"
+                    href="/build/agent-payments/quickstart"
                     className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-orange-200 hover:text-orange-100"
                   >
-                    Architecture
+                    Quickstart
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
@@ -591,7 +607,7 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
       id: "widget",
       label: "Embeddable widget",
       state: "live",
-      detail: "Published npm v0.2.0 package exposes the paid Sage widget surface.",
+      detail: "Sage widget v0.3 source is prepared for payment intents and host-owned wallet flows.",
       evidence_href: "/agent-economy/sage-widget",
     },
     {

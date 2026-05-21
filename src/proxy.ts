@@ -110,6 +110,7 @@ function getAgentHubPath(pathname: string): string | null {
   const aliases = new Map<string, string>([
     ['/live', '/agent-economy/live'],
     ['/sage-widget', '/agent-economy/sage-widget'],
+    ['/quickstart', '/build/agent-payments/quickstart'],
     ['/playground', '/build/playground'],
     ['/services', '/build/services'],
   ]);

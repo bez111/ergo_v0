@@ -6,6 +6,7 @@ const checks = [
   { path: "/admin/blog", expect: [200, 401, 503] },
   { path: "/agent-economy/live", expect: [200] },
   { path: "/agent-economy/sage-widget", expect: [200] },
+  { path: "/build/agent-payments/quickstart", expect: [200] },
   { path: "/build/playground", expect: [200] },
   { path: "/build/services", expect: [200] },
   { path: "/api/agent-economy/live", expect: [200] },
@@ -24,8 +25,8 @@ const hostChecks = process.env.CHECK_AGENT_HOSTS === "true"
   ? [
       { url: "https://agents.ergoblockchain.org/", expect: [200], label: "agents root" },
       { url: "https://agents.ergoblockchain.org/sage-widget", expect: [200], label: "agents sage-widget" },
+      { url: "https://agents.ergoblockchain.org/quickstart", expect: [200], label: "agents quickstart" },
       { url: "https://agents.ergoblockchain.org/api/live", expect: [200], label: "agents api/live" },
-      { url: "https://agenthub.ergoblockchain.org/", expect: [200], label: "agenthub root" },
     ]
   : []
 
