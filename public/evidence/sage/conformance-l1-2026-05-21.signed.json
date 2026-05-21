@@ -1,0 +1,154 @@
+{
+  "type": "sage.conformance_result.v0",
+  "target": "https://www.ergoblockchain.org/api/sage/accord",
+  "started_at": "2026-05-21T11:16:44.447Z",
+  "finished_at": "2026-05-21T11:16:48.014Z",
+  "receipt_id": "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+  "agreement_id": "acc_sage_7d6b87c41592efee70ff",
+  "sage": {
+    "passed": true,
+    "checks": [
+      {
+        "id": "bundle.full_receipt_bundle",
+        "result": "pass"
+      },
+      {
+        "id": "agreement.present",
+        "result": "pass"
+      },
+      {
+        "id": "verification_receipt.present",
+        "result": "pass"
+      },
+      {
+        "id": "settlement_receipt.present",
+        "result": "pass"
+      },
+      {
+        "id": "agreement_hash.present",
+        "result": "pass"
+      },
+      {
+        "id": "verification_hash.present",
+        "result": "pass"
+      },
+      {
+        "id": "settlement_hash.present",
+        "result": "pass"
+      },
+      {
+        "id": "verification.agreement_id.matches",
+        "result": "pass"
+      },
+      {
+        "id": "settlement.agreement_id.matches",
+        "result": "pass"
+      },
+      {
+        "id": "settlement.includes_verification_receipt",
+        "result": "pass"
+      }
+    ]
+  },
+  "accord_l1": {
+    "target": "network:https://www.ergoblockchain.org/api/sage/accord",
+    "started_at": "2026-05-21T11:16:45Z",
+    "finished_at": "2026-05-21T11:16:47Z",
+    "levels": [
+      {
+        "level": "L1",
+        "passed": true,
+        "passed_count": 12,
+        "failed_count": 0,
+        "inconclusive_count": 0,
+        "checks": [
+          {
+            "id": "L1.network.challenge.reachable",
+            "level": "L1",
+            "description": "https://www.ergoblockchain.org/api/sage/accord is reachable (POST without Accord headers)",
+            "result": "pass",
+            "duration_ms": 962
+          },
+          {
+            "id": "L1.network.challenge.status-402",
+            "level": "L1",
+            "description": "POST without Accord-* headers → 402",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.challenge.accord-version",
+            "level": "L1",
+            "description": "Accord-Version response header is \"v0\"",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.challenge.agreement-required",
+            "level": "L1",
+            "description": "Accord-Agreement-Required response header is \"true\"",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.challenge.www-authenticate",
+            "level": "L1",
+            "description": "WWW-Authenticate: Accord402",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.challenge.body-error-code",
+            "level": "L1",
+            "description": "body.error == ACCORD_PAYMENT_REQUIRED",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.challenge.body-agreement-template",
+            "level": "L1",
+            "description": "body.agreement_template is a non-empty string",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.missing-payment.status-402",
+            "level": "L1",
+            "description": "POST with agreement-id but no payment → 402",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.missing-payment.body-error-code",
+            "level": "L1",
+            "description": "body.error ∈ {MISSING_PAYMENT, UNKNOWN_AGREEMENT}",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.happy-path.status-200",
+            "level": "L1",
+            "description": "valid Accord-* headers → 200",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.happy-path.agreement-hash-header",
+            "level": "L1",
+            "description": "x-accord-agreement-hash response header is blake2b256:0x<64>",
+            "result": "pass"
+          },
+          {
+            "id": "L1.network.happy-path.body-shape",
+            "level": "L1",
+            "description": "200 body is { output, _meta } with accord_agreement_id in _meta",
+            "result": "pass"
+          }
+        ]
+      }
+    ],
+    "achieved_level": null
+  },
+  "accord_l1_exit_code": 0,
+  "achieved_level": "L1",
+  "status": "passed",
+  "signing_hint": "Sign with: accord-conformance sign --key-file <private-key-file> --signer provider://sage --output <signed.json> <this artifact>",
+  "signature": {
+    "scheme": "ed25519",
+    "public_key": "0xa94e16b40ce918db8f2925bd3f9c0bd604a38e40ffcbb46e5d758bdc6ae587bc",
+    "signature": "0xe6a30817b416574ab074f5c1beb7e7b7821790eef94548532a4fad32795dc069a5d50021dde2bc2860f884fc67f9762e0f8a2e0c04a7bfb593aa08ddb84ea508",
+    "signed_at": "2026-05-21T11:20:38Z",
+    "signer": "provider://sage-ergoblockchain"
+  }
+}
