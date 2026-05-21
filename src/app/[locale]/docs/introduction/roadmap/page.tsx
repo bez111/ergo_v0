@@ -373,7 +373,7 @@ export default function RoadmapPage() {
                   <li>• 10 working examples on testnet ✓</li>
                   <li>• Sage hosted testnet reference dApp with real settlement and full receipt storage for new receipts ✓</li>
                   <li>• Signed Sage L1 Accord conformance artifact for the first post-Blob full receipt bundle ✓</li>
-                  <li>• @ergoblockchain/sage-widget v0.1.0 activity-feed package ✓</li>
+                  <li>• @ergoblockchain/sage-widget v0.2.0 paid-widget package ✓</li>
                   <li>• Agent Economy live cockpit and ErgoScript playground WASM build warning cleanup ✓</li>
                 </ul>
                 <p><strong>Ongoing:</strong></p>
@@ -382,7 +382,7 @@ export default function RoadmapPage() {
                   <li>• Standardisation of agent payment discovery (RFC-style spec)</li>
                   <li>• Accord registry evidence PR/merge for Sage</li>
                   <li>• Permanent signer endpoint and operational hardening</li>
-                  <li>• Embeddable paid Sage widget: chat, quote, verify, receipt link, tenant config</li>
+                  <li>• Live host-side demo and reviewed wallet flow for the paid Sage widget</li>
                   <li>• Scalability improvements (L1 and L2)</li>
                   <li>• Continued ecosystem development and security strengthening</li>
                 </ul>

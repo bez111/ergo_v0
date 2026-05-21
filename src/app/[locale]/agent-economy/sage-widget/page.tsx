@@ -121,10 +121,10 @@ const statusItems: Array<{
   },
   {
     label: "npm",
-    value: "0.1.0 live",
-    detail: "Current public npm latest is the activity-feed package. v0.2 publish is the next release gate.",
+    value: "0.2.0 live",
+    detail: "Public npm latest now ships the paid widget surface with React, vanilla, typed API clients, and receipt callbacks.",
     icon: PackageCheck,
-    tone: "pending",
+    tone: "live",
   },
   {
     label: "Receipt",
@@ -166,8 +166,8 @@ const flowItems = [
 ]
 
 const releaseChecklist = [
-  "npm publish @ergoblockchain/sage-widget@0.2.0",
-  "Verify npm tarball against GitHub source and package exports",
+  "npm latest points to @ergoblockchain/sage-widget@0.2.0",
+  "Published tarball includes root, React, vanilla, type declarations, README, and license",
   "Smoke test React and vanilla examples against the production Sage API",
   "Keep wallet signing outside the widget until a dedicated wallet flow is reviewed",
   "Keep mainnet wording closed until external audit evidence exists",
@@ -240,14 +240,14 @@ export default function SageWidgetPage() {
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Release posture
                     </div>
-                    <div className="mt-1 text-2xl font-bold text-white">Source-ready, npm gate next</div>
+                    <div className="mt-1 text-2xl font-bold text-white">npm v0.2.0 live</div>
                   </div>
                   <BadgeCheck className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The source has v0.2 paid-widget capability. Public npm still
-                  reports v0.1.0 until the release is published, so production
-                  copy must describe this as the next package gate.
+                  The source and public npm package now point to the v0.2 paid
+                  widget surface. The canonical Sage host remains a testnet
+                  proof, with mainnet wording closed behind audit evidence.
                 </p>
                 <div className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-3 font-mono text-xs text-neutral-300">
                   npm install @ergoblockchain/sage-widget
@@ -307,7 +307,7 @@ export default function SageWidgetPage() {
                 Release gate
               </p>
               <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-                What must happen before this becomes the public install path.
+                What changed now that this is the public install path.
               </h2>
               <div className="mt-7 grid gap-3">
                 {releaseChecklist.map((item, index) => (
@@ -360,10 +360,10 @@ export default function SageWidgetPage() {
               <div>
                 <h2 className="text-2xl font-bold text-white">Next product move</h2>
                 <p className="mt-3 max-w-3xl leading-relaxed text-orange-50/75">
-                  After npm v0.2 is published, the site can turn this page into
-                  the canonical install doc and add a live host-side demo. Until
-                  then it functions as the release specification and public
-                  status surface.
+                  This page is now the canonical install doc. The next upgrade
+                  is a live host-side demo that pairs the widget with a reviewed
+                  wallet flow while keeping the receipt API as the source of
+                  truth.
                 </p>
               </div>
               <Link

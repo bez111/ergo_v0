@@ -506,12 +506,6 @@ function gateStateLabel(state?: GateState) {
 function fallbackActions() {
   return [
     {
-      id: "sage-widget-npm-v020",
-      label: "Publish @ergoblockchain/sage-widget v0.2.0 after the final package sweep",
-      owner: "repo",
-      blocked_by_external: true,
-    },
-    {
       id: "script-identity",
       label: "Publish audit-bound mainnet script identity before mainnet claims",
       owner: "audit",
@@ -596,8 +590,8 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
     {
       id: "widget",
       label: "Embeddable widget",
-      state: "pending",
-      detail: "Paid widget source is ready; npm v0.2 publish is the remaining release gate.",
+      state: "live",
+      detail: "Published npm v0.2.0 package exposes the paid Sage widget surface.",
       evidence_href: "/agent-economy/sage-widget",
     },
     {

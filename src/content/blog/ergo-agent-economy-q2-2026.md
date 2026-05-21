@@ -34,7 +34,7 @@ The project is open source and working, but not production-certified. The repo s
 
 ### Sage is now the first hosted testnet proof
 
-Since this article first shipped, Sage on ergoblockchain.org has moved from roadmap item to live testnet proof: a 402-style premium flow, a public activity feed, one real Ergo testnet redemption transaction, durable full receipt storage for new paid turns, a permanent testnet signer service, and signed Sage L1 conformance evidence for a settled post-Blob full receipt bundle. The first settlement receipt remains chain-proof-only because it predates storage. The published `@ergoblockchain/sage-widget` v0.1.0 package exposes the activity-feed component. The MCP endpoint is live at `mcp.ergoblockchain.org`.
+Since this article first shipped, Sage on ergoblockchain.org has moved from roadmap item to live testnet proof: a 402-style premium flow, a public activity feed, one real Ergo testnet redemption transaction, durable full receipt storage for new paid turns, a permanent testnet signer service, and signed Sage L1 conformance evidence for a settled post-Blob full receipt bundle. The first settlement receipt remains chain-proof-only because it predates storage. The published `@ergoblockchain/sage-widget` v0.2.0 package exposes the paid widget surface for React and vanilla hosts. The MCP endpoint is live at `mcp.ergoblockchain.org`.
 
 ### The Note lifecycle is now implemented end to end
 
