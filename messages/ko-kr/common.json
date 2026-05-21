@@ -470,7 +470,9 @@
     "technology_description": "Ergo의 핵심 기술 개념과 혁신",
     "learn_description": "교육 리소스 및 학습 자료",
     "developer services": "개발자 서비스",
-    "developer_services_description": "Faucet, 주소 검사기, tx/box 조회, 영수증 검증기, 해시 도구, 서비스 상태."
+    "developer_services_description": "Faucet, 주소 검사기, tx/box 조회, 영수증 검증기, 해시 도구, 서비스 상태.",
+    "sage widget": "Sage 위젯",
+    "sage_widget_description": "유료 Sage 흐름을 임베드합니다: 채팅, 견적, Note 검증, receipt 링크, tenant 설정."
   },
   "errors": {
     "network": {

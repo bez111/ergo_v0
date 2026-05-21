@@ -2,7 +2,7 @@
   "type": "ergo.agent_economy.external_audit_review_manifest.template.v0",
   "version": "v0",
   "status": "template_external_review_pending",
-  "last_reviewed": "2026-05-20",
+  "last_reviewed": "2026-05-21",
   "public_claim": "Template only. No independent external audit or review report is published yet.",
   "network_scope": [
     "testnet evidence",

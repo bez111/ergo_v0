@@ -2,17 +2,17 @@
   "type": "ergo.agent_economy.script_identity_manifest.v0",
   "version": "v0",
   "status": "draft_testnet_observed_identity",
-  "last_reviewed": "2026-05-20",
+  "last_reviewed": "2026-05-21",
   "public_claim": "Observed testnet runtime identity only. Not an audited mainnet contract identity.",
   "network": "testnet",
   "provider_id": "provider://sage-ergoblockchain",
   "scope": {
     "flow": "Sage premium query paid through Accord/Ergo Note flow",
-    "receipt_id": "83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
-    "agreement_id": "acc_sage_47710f9ca3bcaa70ac7b",
-    "note_box_id": "2c7ea0802ff5c36cf72859f0ade09e095812ad35bc89ebe00ca48816fa656415",
-    "note_tx_id": "cdec5f44316bf7338bbeccca049c055551521e9490392a95c722fd358a0dce79",
-    "settlement_tx_id": "83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3"
+    "receipt_id": "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+    "agreement_id": "acc_sage_7d6b87c41592efee70ff",
+    "note_box_id": "c942939bead0faa601dfea59e222784052ff6d01709c670f036c53395ab72630",
+    "note_tx_id": "30ace821d11a3f19098f0d9dee09c016c858da105efa6904aef4a84bb6782a88",
+    "settlement_tx_id": "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
   },
   "wallet_identity": {
     "seller_address": "3WwRauZrYjaQYgnS9P6U4i7Ng7MBzn8MSh4yPXA9qgcySrmkEdn6",
@@ -29,31 +29,31 @@
     "reserve_ergo_tree_hash": "blake2b256:0x5f0aa5ff874844d8fe84609782aed3ecf5fdbf1d92671e7c834af4c79ac128e9"
   },
   "note_identity": {
-    "note_box_id": "2c7ea0802ff5c36cf72859f0ade09e095812ad35bc89ebe00ca48816fa656415",
-    "note_tx_id": "cdec5f44316bf7338bbeccca049c055551521e9490392a95c722fd358a0dce79",
+    "note_box_id": "c942939bead0faa601dfea59e222784052ff6d01709c670f036c53395ab72630",
+    "note_tx_id": "30ace821d11a3f19098f0d9dee09c016c858da105efa6904aef4a84bb6782a88",
     "note_value_nanoerg": 1000000,
     "note_ergo_tree": "0008cd026b92b55d3cd43c2c5689bca34b8baab0a412fe518413c9fd1daf4c692b0d303a",
     "note_ergo_tree_hash": "blake2b256:0x5f0aa5ff874844d8fe84609782aed3ecf5fdbf1d92671e7c834af4c79ac128e9",
     "registers": {
       "R4_reserve_box_id": "3858165e08977c01fb29367dfc798ae60059bd640b79a242f8905d7bc7e5caf4",
-      "R5_expiry_height": 355607,
-      "R6_task_hash": "02c44611f7bcefa8fe9032031721d8175344caa58f0c6fe413e1f8f4e5d869ed"
+      "R5_expiry_height": 356843,
+      "R6_task_hash": "9674cd3942614a20dc66e08a5d9fa4dfadcb511d6a9096b5eaf94a14230ced33"
     }
   },
   "settlement_identity": {
-    "settlement_tx_id": "83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
-    "settlement_block_id": "94abd18c4773d4d34248dbacc00d001738698dc639f228e07b4685ba29f6a61b",
-    "settlement_inclusion_height": 355491,
+    "settlement_tx_id": "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+    "settlement_block_id": "0f86c4fc348e4a372844c7d542f3fc41e8715e103d1aea2ad5aa39359a6fd01e",
+    "settlement_inclusion_height": 356728,
     "observed_outputs": [
       {
-        "box_id": "456449e925895abb6e5de7f50a07ee83869a5f9e7477bd1d796dad83e634056a",
+        "box_id": "fa5bc656eae3c9c49656ea74a8ef23c28f4dcc695e78ee88dd6f4e2dee58e24e",
         "value_nanoerg": 1000000,
         "ergo_tree_hash": "blake2b256:0x5f0aa5ff874844d8fe84609782aed3ecf5fdbf1d92671e7c834af4c79ac128e9",
         "role": "seller_payment_output"
       },
       {
-        "box_id": "ec7f4bf5e540e480d776c0ec5ba59f4b85d2bd147f2aba19fbe397376eae045a",
-        "value_nanoerg": 59881000000,
+        "box_id": "f710d89ead6c3f03d70eb98d2cef655b0b0f880f8d23dee7a19ecc50feb4ca03",
+        "value_nanoerg": 59877800000,
         "ergo_tree_hash": "blake2b256:0x5f0aa5ff874844d8fe84609782aed3ecf5fdbf1d92671e7c834af4c79ac128e9",
         "role": "seller_change_output"
       }
@@ -61,11 +61,11 @@
   },
   "implementation_identity": {
     "site_repo": "https://github.com/bez111/ergo_v0",
-    "site_commit": "bf9ed8be",
+    "site_commit": "409f4cb0",
     "accord_registry_repo": "https://github.com/accord-protocol/accord-protocol",
-    "accord_registry_commit": "240cf8c",
-    "signed_conformance_result": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json",
-    "full_receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3"
+    "accord_registry_commit": "5040f85",
+    "signed_conformance_result": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.json",
+    "full_receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
   },
   "mainnet_blockers": [
     "Publish audited source-to-ErgoTree mapping for every payment script used in a mainnet deployment.",

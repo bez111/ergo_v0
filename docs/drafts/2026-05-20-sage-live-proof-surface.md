@@ -16,9 +16,9 @@ Ergoblockchain.org is no longer only a content site. It is becoming a public ope
 - Public MCP service at `mcp.ergoblockchain.org` with `/health` and `/mcp`.
 - Vercel Blob backed Sage receipts.
 - Settled post-Blob full Sage receipt bundle:
-  `83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`.
+  `f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81`.
 - Signed Sage L1 Accord conformance evidence:
-  `/evidence/sage/conformance-l1-2026-05-20.signed.json`.
+  `/evidence/sage/conformance-l1-2026-05-21.signed.json`.
 - Public provider signing key:
   `/evidence/sage/provider-signing-key.json`.
 - Agent registry UI overlay so Sage shows current local evidence even before the upstream registry PR merges.

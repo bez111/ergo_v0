@@ -1,15 +1,15 @@
 # Agent Economy Evidence Pack
 
-Current status as of 2026-05-20: testnet live proof, not mainnet readiness.
+Current status as of 2026-05-21: testnet live proof, not mainnet readiness.
 
 ## Published evidence
 
 ```text
 full_receipt_bundle
-https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
+https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 
 signed_conformance_result
-https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json
+https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.json
 
 latest_evidence_summary
 https://www.ergoblockchain.org/evidence/sage/latest-evidence.json

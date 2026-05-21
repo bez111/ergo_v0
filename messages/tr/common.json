@@ -470,7 +470,9 @@
     "technology_description": "Ergo'nun temel teknik kavramları ve yenilikleri",
     "learn_description": "Eğitim kaynakları ve öğrenme materyalleri",
     "developer services": "Geliştirici Servisleri",
-    "developer_services_description": "Faucet yüzeyi, adres denetleyici, tx/box arama, receipt doğrulayıcı, hasher ve servis durumu."
+    "developer_services_description": "Faucet yüzeyi, adres denetleyici, tx/box arama, receipt doğrulayıcı, hasher ve servis durumu.",
+    "sage widget": "Sage Widget",
+    "sage_widget_description": "Ücretli Sage akışlarını gömün: sohbet, teklif, Note doğrulama, receipt bağlantıları ve tenant yapılandırması."
   },
   "errors": {
     "network": {

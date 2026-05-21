@@ -10,7 +10,7 @@
  * Or via:    npm run sage:index   (added to package.json scripts)
  */
 
-import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs"
+import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync } from "node:fs"
 import { fileURLToPath } from "node:url"
 import { dirname, join, resolve } from "node:path"
 import matter from "gray-matter"
@@ -158,6 +158,15 @@ const CURATED = [
       "Three live demos run on Ergo testnet showing agent-economy patterns end-to-end. (1) Agent API Payment: an agent pays per-call for an external API using a Note redeemed only when the API returns a valid response. (2) Agent Credit Note: an orchestrator issues a budget Note to a sub-agent; the sub-agent spends within the limit; unused funds expire back to the orchestrator. (3) MCP Paid Tool: a Claude/MCP-compatible tool that charges a small fee per invocation, settled on Ergo. (4) x402 Accord Gateway: an HTTP 402 payment-required flow where the server asks for an Accord Note instead of a Stripe charge. All demos are reproducible from the accord-protocol repo.",
   },
   {
+    id: "page:sage-widget",
+    type: "page",
+    url: "/agent-economy/sage-widget",
+    title: "Sage Widget embed surface",
+    tags: "Sage widget, npm, React, vanilla, receipts, agent payments",
+    content:
+      "The Sage widget is the embeddable surface for Ergo agent-payment proof flows. The v0.2 source includes a React SagePaymentWidget component, a vanilla mountSagePaymentWidget function, typed clients for quote, verify, chat stream, receipt bundle, and activity feed, tenant metadata, receipt callbacks, and status snapshots. The canonical Sage host is testnet live proof: it can produce full_receipt_bundle receipts with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. Public npm latest remains v0.1.0 until the v0.2 release is published. The widget does not sign wallet transactions; it shows quote fields, accepts a Note box id, verifies through Sage, streams the answer, and links the public receipt API.",
+  },
+  {
     id: "page:no-stripe-comparison",
     type: "page",
     url: "/blog/agents-cant-use-stripe",
@@ -172,8 +181,9 @@ docs.push(...CURATED)
 
 // --------------------------------------------------------- write the corpus
 mkdirSync(OUT_DIR, { recursive: true })
+const generatedAt = getStableGeneratedAt(docs)
 const payload = {
-  generatedAt: new Date().toISOString(),
+  generatedAt,
   documentCount: docs.length,
   docs,
 }
@@ -182,3 +192,22 @@ writeFileSync(OUT_FILE, JSON.stringify(payload, null, 2))
 console.log(
   `[sage:index] ${docs.length} chunks (${docs.filter((d) => d.type === "blog").length} blog, ${docs.filter((d) => d.type === "page").length} curated) → ${OUT_FILE}`,
 )
+
+function getStableGeneratedAt(nextDocs) {
+  if (!existsSync(OUT_FILE)) return new Date().toISOString()
+
+  try {
+    const previous = JSON.parse(readFileSync(OUT_FILE, "utf8"))
+    if (
+      previous?.generatedAt &&
+      previous?.documentCount === nextDocs.length &&
+      JSON.stringify(previous.docs) === JSON.stringify(nextDocs)
+    ) {
+      return previous.generatedAt
+    }
+  } catch {
+    // Fall through and stamp a new index when the previous file is unreadable.
+  }
+
+  return new Date().toISOString()
+}

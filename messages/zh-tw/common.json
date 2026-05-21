@@ -470,7 +470,9 @@
     "technology_description": "Ergo 的核心技術概念與創新",
     "learn_description": "教育資源與學習材料",
     "developer services": "開發者服務",
-    "developer_services_description": "Faucet、地址檢查器、tx/box 查詢、收據驗證器、雜湊工具和服務狀態。"
+    "developer_services_description": "Faucet、地址檢查器、tx/box 查詢、收據驗證器、雜湊工具和服務狀態。",
+    "sage widget": "Sage 小工具",
+    "sage_widget_description": "嵌入付費 Sage 流程：聊天、報價、Note 驗證、receipt 連結與 tenant 設定。"
   },
   "errors": {
     "network": {

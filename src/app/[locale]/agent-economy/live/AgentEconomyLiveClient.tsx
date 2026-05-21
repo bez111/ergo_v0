@@ -303,8 +303,8 @@ export function AgentEconomyLiveClient() {
                       <h2 className="font-semibold text-yellow-50">Protocol pass runway</h2>
                       <p className="mt-2 text-sm leading-relaxed text-yellow-50/75">
                         Full receipt and signed L1 evidence are live. The next
-                        unlock is exact script identity, signer ops, and audit
-                        manifests.
+                        unlock is an audit-bound mainnet script identity plus
+                        an external review artifact.
                       </p>
                     </div>
                   </div>
@@ -506,16 +506,22 @@ function gateStateLabel(state?: GateState) {
 function fallbackActions() {
   return [
     {
-      id: "signer-ops-evidence",
-      label: "Publish signer operations evidence and limits",
-      owner: "ops",
-      blocked_by_external: false,
+      id: "sage-widget-npm-v020",
+      label: "Publish @ergoblockchain/sage-widget v0.2.0 after the final package sweep",
+      owner: "repo",
+      blocked_by_external: true,
     },
     {
       id: "script-identity",
-      label: "Publish exact script identity manifests before mainnet claims",
-      owner: "repo",
-      blocked_by_external: false,
+      label: "Publish audit-bound mainnet script identity before mainnet claims",
+      owner: "audit",
+      blocked_by_external: true,
+    },
+    {
+      id: "external-audit",
+      label: "Publish external audit or review artifact",
+      owner: "audit",
+      blocked_by_external: true,
     },
   ]
 }
@@ -571,14 +577,14 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
       label: "Full receipt bundle",
       state: "live",
       detail: "Post-Blob full receipt bundle is settled and published.",
-      evidence_href: "/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3",
+      evidence_href: "/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
     },
     {
       id: "conformance",
       label: "Accord conformance",
       state: "live",
       detail: "Signed Sage L1 conformance evidence is published.",
-      evidence_href: "/evidence/sage/conformance-l1-2026-05-20.signed.json",
+      evidence_href: "/evidence/sage/conformance-l1-2026-05-21.signed.json",
     },
     {
       id: "mcp",
@@ -591,8 +597,8 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
       id: "widget",
       label: "Embeddable widget",
       state: "pending",
-      detail: "Paid widget code is prepared locally.",
-      evidence_href: "https://github.com/bez111/sage-widget",
+      detail: "Paid widget source is ready; npm v0.2 publish is the remaining release gate.",
+      evidence_href: "/agent-economy/sage-widget",
     },
     {
       id: "mainnet",

@@ -1,4 +1,5 @@
 import {
+  Bot,
   Boxes,
   Braces,
   CheckCircle2,
@@ -153,6 +154,23 @@ export const devServices: DevService[] = [
     icon: Gauge,
     machineReadable: true,
     notes: ["Feeds Agent Hub.", "Useful for dashboards, bots, and smoke checks."],
+  },
+  {
+    id: "sage-widget",
+    title: "Embeddable Sage Widget",
+    summary: "React and vanilla embed surface for paid Sage chat, quote, Note verification, receipt links, and tenant config.",
+    href: "/agent-economy/sage-widget",
+    apiHref: "https://github.com/bez111/sage-widget",
+    category: "agents",
+    state: "guarded",
+    latency: "human",
+    icon: Bot,
+    machineReadable: false,
+    notes: [
+      "v0.2 source is ready in GitHub.",
+      "Public npm latest remains v0.1.0 until the release is published.",
+      "Canonical Sage host is testnet live proof, not mainnet readiness.",
+    ],
   },
   {
     id: "accord-conformance",

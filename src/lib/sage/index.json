@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-20T22:23:46.698Z",
-  "documentCount": 51,
+  "generatedAt": "2026-05-21T14:39:34.871Z",
+  "documentCount": 52,
   "docs": [
     {
       "id": "blog:agent-economy-manifesto:0",
@@ -401,6 +401,14 @@
       "title": "Live testnet demos",
       "tags": "demos, testnet, agent API payment, MCP, x402",
       "content": "Three live demos run on Ergo testnet showing agent-economy patterns end-to-end. (1) Agent API Payment: an agent pays per-call for an external API using a Note redeemed only when the API returns a valid response. (2) Agent Credit Note: an orchestrator issues a budget Note to a sub-agent; the sub-agent spends within the limit; unused funds expire back to the orchestrator. (3) MCP Paid Tool: a Claude/MCP-compatible tool that charges a small fee per invocation, settled on Ergo. (4) x402 Accord Gateway: an HTTP 402 payment-required flow where the server asks for an Accord Note instead of a Stripe charge. All demos are reproducible from the accord-protocol repo."
+    },
+    {
+      "id": "page:sage-widget",
+      "type": "page",
+      "url": "/agent-economy/sage-widget",
+      "title": "Sage Widget embed surface",
+      "tags": "Sage widget, npm, React, vanilla, receipts, agent payments",
+      "content": "The Sage widget is the embeddable surface for Ergo agent-payment proof flows. The v0.2 source includes a React SagePaymentWidget component, a vanilla mountSagePaymentWidget function, typed clients for quote, verify, chat stream, receipt bundle, and activity feed, tenant metadata, receipt callbacks, and status snapshots. The canonical Sage host is testnet live proof: it can produce full_receipt_bundle receipts with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. Public npm latest remains v0.1.0 until the v0.2 release is published. The widget does not sign wallet transactions; it shows quote fields, accepts a Note box id, verifies through Sage, streams the answer, and links the public receipt API."
     },
     {
       "id": "page:no-stripe-comparison",

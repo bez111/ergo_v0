@@ -470,7 +470,9 @@
     "technology_description": "Concetti tecnici fondamentali e innovazioni di Ergo",
     "learn_description": "Risorse educative e materiali di apprendimento",
     "developer services": "Servizi per sviluppatori",
-    "developer_services_description": "Faucet, ispettore indirizzi, ricerca tx/box, verifica ricevute, hasher e stato dei servizi."
+    "developer_services_description": "Faucet, ispettore indirizzi, ricerca tx/box, verifica ricevute, hasher e stato dei servizi.",
+    "sage widget": "Widget Sage",
+    "sage_widget_description": "Integra flussi Sage a pagamento: chat, preventivo, verifica Note, link ricevuta e configurazione tenant."
   },
   "errors": {
     "network": {

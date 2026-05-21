@@ -470,7 +470,9 @@
     "technology_description": "Concepts techniques fondamentaux et innovations d'Ergo",
     "learn_description": "Ressources éducatives et matériaux d'apprentissage",
     "developer services": "Services développeurs",
-    "developer_services_description": "Faucet, inspecteur d’adresses, recherche tx/box, vérificateur de reçus, hasher et état des services."
+    "developer_services_description": "Faucet, inspecteur d’adresses, recherche tx/box, vérificateur de reçus, hasher et état des services.",
+    "sage widget": "Widget Sage",
+    "sage_widget_description": "Intégrez les flux Sage payants: chat, devis, vérification de Note, liens de reçu et configuration tenant."
   },
   "errors": {
     "network": {

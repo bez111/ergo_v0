@@ -14,7 +14,7 @@ curl -fsS https://mcp.ergoblockchain.org/health
 ```
 
 - [x] One settled post-Blob paid Sage flow exists:
-  `83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`.
+  `f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81`.
 - [x] `BLOB_READ_WRITE_TOKEN` is present and `/api/sage/receipt/blob-probe-2026-05-16` reports `storage_healthy = true`.
 - [x] `/api/sage/receipt/<id>` returns:
 

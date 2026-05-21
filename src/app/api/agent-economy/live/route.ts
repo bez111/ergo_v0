@@ -216,8 +216,8 @@ export async function GET(req: Request) {
       "sage-widget",
       "Sage widget",
       "pending",
-      "v0.2 paid widget source is in this batch; npm publish waits for the final sweep",
-      "https://github.com/bez111/sage-widget",
+      "v0.2 paid widget source is ready; public npm latest remains v0.1.0 until publish",
+      "/agent-economy/sage-widget",
     ),
     gate(
       "mcp-fly",
@@ -248,7 +248,7 @@ export async function GET(req: Request) {
         ? "All mainnet gate artifacts are published"
         : mainnetBlockers.length > 0
           ? `Closed; ${mainnetBlockers.length} audit/mainnet artifacts still pending`
-          : "Closed until exact script identity, signer operations, and audit manifests are published",
+          : "Closed until audit-bound script identity and external review evidence are published",
       "/api/agent-economy/mainnet-gate",
     ),
   ]
@@ -273,7 +273,7 @@ export async function GET(req: Request) {
     posture: {
       label: "testnet_live_proof",
       mainnet_ready: false,
-      note: "Live testnet proof. Full receipt and signed L1 conformance evidence are published; mainnet claims remain blocked until exact script identity, signer operations, and external audit manifests are published.",
+      note: "Live testnet proof. Full receipt, signed L1 conformance evidence, signer ops, and testnet identity are published; mainnet claims remain blocked until an audit-bound mainnet script identity and external review artifact exist.",
     },
     monitor: {
       request_origin: requestOrigin,
@@ -331,6 +331,12 @@ export async function GET(req: Request) {
         owner: "ops",
         blocked_by_external: true,
       }]),
+      {
+        id: "sage-widget-npm-v020",
+        label: "Publish @ergoblockchain/sage-widget v0.2.0 after final package sweep",
+        owner: "repo",
+        blocked_by_external: true,
+      },
       ...mainnetBlockers.map((blocker) => ({
         id: blocker.id,
         label: blocker.label,
@@ -518,14 +524,14 @@ function buildLifecycle(opts: {
       id: "widget",
       label: "Embeddable widget",
       state: "pending",
-      detail: "Paid widget code is prepared locally; npm publish waits for the final sweep.",
-      evidence_href: "https://github.com/bez111/sage-widget",
+      detail: "Paid widget source is ready; npm v0.2 publish is the remaining release gate.",
+      evidence_href: "/agent-economy/sage-widget",
     },
     {
       id: "mainnet",
       label: "Mainnet/audit gate",
       state: opts.mainnetGateStatus === "open" ? "live" : "blocked",
-      detail: "Mainnet language stays closed until script identity, signer ops, and audit evidence are published.",
+      detail: "Mainnet language stays closed until audit-bound script identity and external review evidence are published.",
       evidence_href: "/api/agent-economy/mainnet-gate",
     },
   ]

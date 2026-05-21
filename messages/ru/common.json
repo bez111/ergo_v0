@@ -470,7 +470,9 @@
     "technology_description": "Основные технические концепции и инновации Ergo",
     "learn_description": "Образовательные ресурсы и учебные материалы",
     "developer services": "Сервисы разработчика",
-    "developer_services_description": "Faucet, инспектор адресов, поиск tx/box, проверка receipt, hasher и статус сервисов."
+    "developer_services_description": "Faucet, инспектор адресов, поиск tx/box, проверка receipt, hasher и статус сервисов.",
+    "sage widget": "Виджет Sage",
+    "sage_widget_description": "Встраивайте платные Sage-флоу: чат, quote, проверка Note, ссылки на receipt и tenant config."
   },
   "errors": {
     "network": {

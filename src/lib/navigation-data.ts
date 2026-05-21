@@ -15,6 +15,11 @@ export const mainNavItems = [
         description: "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.",
       },
       {
+        title: "Sage Widget",
+        href: "/agent-economy/sage-widget",
+        description: "Embed paid Sage flows: chat, quote, Note verification, receipt links, and tenant config.",
+      },
+      {
         title: "Playground",
         href: "/build/playground",
         description: "Compile ErgoScript in the browser with Monaco, Fleet compiler, and sigma-rust WASM.",

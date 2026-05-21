@@ -83,13 +83,13 @@ const COCKPIT_ITEMS = [
   },
   {
     name: "Sage widget",
-    status: "Package track",
+    status: "Source-ready",
     tone: "live",
     icon: Cpu,
-    metric: "@ergoblockchain/sage-widget",
-    body: "The public package starts with activity-feed embedding. The paid chat/quote/verify/receipt widget is the next bigger surface.",
-    href: "https://www.npmjs.com/package/@ergoblockchain/sage-widget",
-    action: "Open npm",
+    metric: "v0.2 gate",
+    body: "React and vanilla paid widget source is ready with chat, quote, Note verification, receipt link, tenant config, and typed callbacks. npm latest remains v0.1.0 until publish.",
+    href: "/agent-economy/sage-widget",
+    action: "Embed Sage",
   },
   {
     name: "ErgoScript playground",

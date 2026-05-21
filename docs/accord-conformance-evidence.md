@@ -4,15 +4,15 @@ This is the batch-mode path after the first post-Blob full Sage receipt exists.
 
 ## Current published evidence
 
-Status as of 2026-05-20:
+Status as of 2026-05-21:
 
 ```text
-receipt_id = 83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
-agreement_id = acc_sage_47710f9ca3bcaa70ac7b
+receipt_id = f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
+agreement_id = acc_sage_7d6b87c41592efee70ff
 achieved_level = L1
-signed_artifact = https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-20.signed.json
+signed_artifact = https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.json
 public_key = https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json
-receipt_api = https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
+receipt_api = https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 ```
 
 This is Sage testnet conformance evidence. It does not open mainnet readiness:
@@ -24,8 +24,8 @@ identity are still missing.
 
 Run one paid Sage flow after `BLOB_READ_WRITE_TOKEN` is configured.
 
-The current settled-on-chain post-Blob proof was completed on 2026-05-20 for receipt
-`83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`.
+The current settled-on-chain post-Blob proof was completed on 2026-05-21 for receipt
+`f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81`.
 
 Success condition:
 

@@ -46,6 +46,7 @@ export function MainNav() {
       "Build on the agent economy stack": "build_description",
       "Why Ergo is the base layer for autonomous economic agents: credit, notes, programmable trust.": "agent_economy_description",
       "Technical architecture: Reserve · Note · Tracker · Predicate. With Fleet SDK code examples.": "agent_payments_description",
+      "Embed paid Sage flows: chat, quote, Note verification, receipt links, and tenant config.": "sage_widget_description",
       "Compile ErgoScript in the browser with Monaco, Fleet compiler, and sigma-rust WASM.": "playground_description",
       "Faucet surface, address inspector, tx/box lookup, receipt verifier, hasher, and service status.": "developer_services_description",
       "Three working flows on Ergo testnet: API call payment, credit system, community reserve.": "demos_description",

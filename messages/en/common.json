@@ -470,7 +470,9 @@
     "technology_description": "Core technical concepts and innovations of Ergo",
     "learn_description": "Educational resources and learning materials",
     "developer services": "Developer Services",
-    "developer_services_description": "Faucet surface, address inspector, tx/box lookup, receipt verifier, hasher, and service status."
+    "developer_services_description": "Faucet surface, address inspector, tx/box lookup, receipt verifier, hasher, and service status.",
+    "sage widget": "Sage Widget",
+    "sage_widget_description": "Embed paid Sage flows: chat, quote, Note verification, receipt links, and tenant config."
   },
   "errors": {
     "network": {

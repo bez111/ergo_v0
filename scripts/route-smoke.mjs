@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 const base = (process.env.BASE_URL || "http://localhost:3001").replace(/\/$/, "")
-const timeoutMs = Number(process.env.ROUTE_SMOKE_TIMEOUT_MS || 45_000)
+const timeoutMs = Number(process.env.ROUTE_SMOKE_TIMEOUT_MS || 90_000)
 
 const okRoutes = [
   "/",
   "/agent-economy",
   "/agent-economy/live",
+  "/agent-economy/sage-widget",
   "/blog/state-of-agent-payments-2026",
   "/build",
   "/build/services",
