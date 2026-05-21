@@ -36,6 +36,9 @@ https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json
 Draft audit scope
 https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json
 
+Audit readiness checklist
+https://www.ergoblockchain.org/agent-economy/audit-readiness-checklist.v0.json
+
 External review template
 https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json
 
@@ -56,6 +59,8 @@ The current review target is the hosted Sage/Accord testnet proof surface:
 - Agent Economy Live Hub status API and public claim controls.
 - MCP endpoint only as public machine-facing infrastructure, not as a custody
   or payment signer.
+- Published Sage widget v0.2 package only as an embeddable testnet proof
+  surface. Wallet signing remains outside the widget until separately reviewed.
 
 Out of scope until explicitly added:
 

@@ -20,6 +20,7 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Link } from "@/i18n/navigation"
 import { getAlternates, getCanonicalUrl, getOgLocale } from "@/lib/seo"
+import { SageWidgetLiveDemo } from "./SageWidgetLiveDemo"
 
 const BASE_URL = "https://www.ergoblockchain.org"
 const LATEST_RECEIPT_ID = "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
@@ -168,7 +169,7 @@ const flowItems = [
 const releaseChecklist = [
   "npm latest points to @ergoblockchain/sage-widget@0.2.0",
   "Published tarball includes root, React, vanilla, type declarations, README, and license",
-  "Smoke test React and vanilla examples against the production Sage API",
+  "Live host demo calls the production Sage quote, verify, chat, and receipt APIs",
   "Keep wallet signing outside the widget until a dedicated wallet flow is reviewed",
   "Keep mainnet wording closed until external audit evidence exists",
 ]
@@ -293,6 +294,12 @@ export default function SageWidgetPage() {
         </section>
 
         <section className="px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SageWidgetLiveDemo />
+          </div>
+        </section>
+
+        <section className="border-y border-white/5 bg-neutral-950/55 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
             <CodePanel title="React paid widget" body={reactExample} />
             <CodePanel title="Vanilla mount" body={vanillaExample} />
@@ -300,7 +307,7 @@ export default function SageWidgetPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/5 bg-neutral-950/55 px-4 py-14 sm:px-6 lg:px-8">
+        <section className="px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_420px]">
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.22em] text-orange-300">
@@ -360,10 +367,10 @@ export default function SageWidgetPage() {
               <div>
                 <h2 className="text-2xl font-bold text-white">Next product move</h2>
                 <p className="mt-3 max-w-3xl leading-relaxed text-orange-50/75">
-                  This page is now the canonical install doc. The next upgrade
-                  is a live host-side demo that pairs the widget with a reviewed
-                  wallet flow while keeping the receipt API as the source of
-                  truth.
+                  This page is now the canonical install doc and live host
+                  demo. The next upgrade is a reviewed wallet flow that can
+                  issue the Note without weakening the receipt API as the source
+                  of truth.
                 </p>
               </div>
               <Link

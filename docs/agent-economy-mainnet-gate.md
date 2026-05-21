@@ -16,6 +16,7 @@ Published:
 - Accord registry evidence pointing to the signed conformance artifact.
 - Testnet observed script identity manifest.
 - Testnet signer operations runbook and evidence manifest.
+- Audit readiness checklist for external reviewer handoff.
 - Public MCP DNS and health endpoint.
 
 Still required before any mainnet language:

@@ -104,6 +104,18 @@ function getAgentHubPath(pathname: string): string | null {
     return `/${maybeLocale}/agent-economy/live`;
   }
 
+  const locale = maybeLocale && localePrefixes.has(maybeLocale) ? maybeLocale : 'en';
+  const routeParts = maybeLocale && localePrefixes.has(maybeLocale) ? parts.slice(1) : parts;
+  const route = `/${routeParts.join('/')}`;
+  const aliases = new Map<string, string>([
+    ['/live', '/agent-economy/live'],
+    ['/sage-widget', '/agent-economy/sage-widget'],
+    ['/playground', '/build/playground'],
+    ['/services', '/build/services'],
+  ]);
+  const target = aliases.get(route);
+  if (target) return `/${locale}${target}`;
+
   return null;
 }
 

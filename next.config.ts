@@ -161,6 +161,66 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         {
           source: '/',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/agent-economy/live',
+        },
+        {
+          source: '/',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/agent-economy/live',
+        },
+        {
+          source: '/live',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/agent-economy/live',
+        },
+        {
+          source: '/live',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/agent-economy/live',
+        },
+        {
+          source: '/sage-widget',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/agent-economy/sage-widget',
+        },
+        {
+          source: '/sage-widget',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/agent-economy/sage-widget',
+        },
+        {
+          source: '/playground',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/build/playground',
+        },
+        {
+          source: '/playground',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/build/playground',
+        },
+        {
+          source: '/services',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/build/services',
+        },
+        {
+          source: '/services',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/build/services',
+        },
+        {
+          source: '/api/live',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/api/agent-economy/live',
+        },
+        {
+          source: '/api/live',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/api/agent-economy/live',
+        },
+        {
+          source: '/',
           has: [{ type: 'host' as const, value: 'ergowatch.ergoblockchain.org' }],
           destination: '/ergo-watch',
         },

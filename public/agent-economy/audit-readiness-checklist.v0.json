@@ -1,0 +1,87 @@
+{
+  "type": "ergo.agent_economy.audit_readiness_checklist.v0",
+  "version": "v0",
+  "status": "ready_for_external_review_not_audit_report",
+  "last_reviewed": "2026-05-21",
+  "public_claim": "The testnet evidence pack is ready to hand to an external reviewer. This file is not an audit report and does not open mainnet readiness.",
+  "network": "testnet",
+  "provider_id": "provider://sage-ergoblockchain",
+  "review_target": {
+    "site_repo": "https://github.com/bez111/ergo_v0",
+    "sage_widget_repo": "https://github.com/bez111/sage-widget",
+    "mcp_repo": "https://github.com/bez111/ergoblockchain-mcp",
+    "accord_registry_repo": "https://github.com/accord-protocol/accord-protocol",
+    "public_live_hub": "https://www.ergoblockchain.org/agent-economy/live",
+    "public_status_api": "https://www.ergoblockchain.org/api/agent-economy/live",
+    "public_mainnet_gate": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate"
+  },
+  "evidence_inputs": [
+    {
+      "id": "full_receipt_bundle",
+      "uri": "https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+      "expectation": "Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON are present for a settled post-Blob paid Sage turn."
+    },
+    {
+      "id": "signed_conformance_result",
+      "uri": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.json",
+      "expectation": "Signed Sage L1 conformance evidence validates the same receipt bundle."
+    },
+    {
+      "id": "provider_signing_key",
+      "uri": "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
+      "expectation": "Public key verifies signed conformance artifacts."
+    },
+    {
+      "id": "testnet_script_identity",
+      "uri": "https://www.ergoblockchain.org/agent-economy/script-identity-manifest.v0.json",
+      "expectation": "Observed testnet wallet, reserve, note, registers, and settlement identifiers are public."
+    },
+    {
+      "id": "signer_ops_evidence",
+      "uri": "https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json",
+      "expectation": "Signer health, policy limits, and failure logging posture are published for the testnet pilot."
+    },
+    {
+      "id": "audit_scope_manifest",
+      "uri": "https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json",
+      "expectation": "Scope states what is included and what remains excluded until separate review."
+    }
+  ],
+  "reviewer_must_record": [
+    "reviewer identity",
+    "review date",
+    "reviewed repository commits",
+    "reviewed deployment id",
+    "reviewed package-lock hash",
+    "reviewed package versions",
+    "reviewed public evidence URLs",
+    "findings with severity, exploitability, remediation status, and residual risk",
+    "explicit statement on whether any finding blocks mainnet language",
+    "signature, public key, or durable attribution method"
+  ],
+  "review_questions": [
+    "Can a stale, unrelated, replayed, wrong-recipient, wrong-value, wrong-reserve, or wrong-task Note satisfy a premium Sage request?",
+    "Is task hash canonicalization stable across quote, verify, receipt, conformance, and widget surfaces?",
+    "Can Agreement JSON, Verification Receipt JSON, or Settlement Receipt JSON be tampered with after creation without detection?",
+    "Does the receipt API clearly distinguish full_receipt_bundle from chain_proof_only historical receipts?",
+    "Can the signer settle more value than policy allows or settle to a non-Sage address?",
+    "Are signer failure logs, health checks, limits, and manual runbooks sufficient for the stated testnet pilot?",
+    "Does public wording stay constrained to testnet proof and avoid production/mainnet readiness claims?",
+    "Are both pending mainnet blockers still enforced by /api/agent-economy/mainnet-gate?"
+  ],
+  "local_commands": [
+    "npm run type-check",
+    "npm run audit:blog",
+    "npm run audit:locales",
+    "npm run audit:agent-economy-gate",
+    "npm run audit:assets",
+    "npm run smoke:routes"
+  ],
+  "mainnet_gate_rule": {
+    "must_remain_closed_until": [
+      "https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.v0.json",
+      "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.manifest.v0.json"
+    ],
+    "template_files_are_not_sufficient": true
+  }
+}

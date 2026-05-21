@@ -3,13 +3,17 @@
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import {
   AlertTriangle,
+  Calendar,
   CheckCircle2,
+  Eye,
   FileText,
+  Hash,
   Image as ImageIcon,
   KeyRound,
   Loader2,
   RefreshCw,
   Send,
+  Type,
   Upload,
 } from "lucide-react"
 
@@ -34,12 +38,27 @@ interface AdminState {
   entries: BlogCmsEntry[]
 }
 
+interface ArticlePreview {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  author: string
+  date: string
+  readTime: number
+  wordCount: number
+  bodySample: string
+}
+
 const TOKEN_KEY = "ergo-blog-admin-token"
+const WORDS_PER_MINUTE = 220
 
 export function BlogAdminClient() {
   const formRef = useRef<HTMLFormElement>(null)
   const [token, setToken] = useState("")
   const [state, setState] = useState<AdminState | null>(null)
+  const [preview, setPreview] = useState<ArticlePreview | null>(null)
+  const [heroPreview, setHeroPreview] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState<{ type: "ok" | "error"; text: string } | null>(null)
 
@@ -91,13 +110,44 @@ export function BlogAdminClient() {
 
       window.sessionStorage.setItem(TOKEN_KEY, token)
       formRef.current?.reset()
+      setPreview(null)
+      setHeroPreview(null)
       await refresh(token)
-      setMessage({ type: "ok", text: `Saved ${payload.entry.title}` })
+      setMessage({ type: "ok", text: `Saved ${payload.entry.title} and revalidated /blog/${payload.entry.slug}` })
     } catch (error) {
       setMessage({ type: "error", text: error instanceof Error ? error.message : "Publish failed" })
     } finally {
       setBusy(false)
     }
+  }
+
+  async function handleMarkdownPreview(file: File | null) {
+    setMessage(null)
+    if (!file) {
+      setPreview(null)
+      return
+    }
+
+    try {
+      const markdown = await file.text()
+      setPreview(parsePreview(markdown))
+    } catch (error) {
+      setPreview(null)
+      setMessage({ type: "error", text: error instanceof Error ? error.message : "Could not preview markdown" })
+    }
+  }
+
+  function handleHeroPreview(file: File | null) {
+    setMessage(null)
+    if (!file) {
+      setHeroPreview(null)
+      return
+    }
+
+    const reader = new FileReader()
+    reader.onload = () => setHeroPreview(typeof reader.result === "string" ? reader.result : null)
+    reader.onerror = () => setMessage({ type: "error", text: "Could not preview hero image" })
+    reader.readAsDataURL(file)
   }
 
   return (
@@ -185,6 +235,7 @@ export function BlogAdminClient() {
                   type="file"
                   accept=".md,.markdown,text/markdown,text/plain"
                   required
+                  onChange={(event) => void handleMarkdownPreview(event.currentTarget.files?.[0] ?? null)}
                   className="block w-full text-sm text-neutral-300 file:mr-4 file:rounded-md file:border-0 file:bg-orange-500 file:px-3 file:py-2 file:font-mono file:text-xs file:uppercase file:tracking-[0.12em] file:text-black hover:file:bg-orange-400"
                 />
               </label>
@@ -198,8 +249,13 @@ export function BlogAdminClient() {
                   name="hero"
                   type="file"
                   accept="image/*"
+                  onChange={(event) => handleHeroPreview(event.currentTarget.files?.[0] ?? null)}
                   className="block w-full text-sm text-neutral-300 file:mr-4 file:rounded-md file:border-0 file:bg-white/10 file:px-3 file:py-2 file:font-mono file:text-xs file:uppercase file:tracking-[0.12em] file:text-white hover:file:bg-white/15"
                 />
+                <span className="mt-3 block text-xs leading-relaxed text-neutral-500">
+                  Upload can be PNG, JPG, WebP, or AVIF. The API crops it to
+                  1200×630 and stores optimized JPEG + WebP in Vercel Blob.
+                </span>
               </label>
 
               <button
@@ -214,6 +270,66 @@ export function BlogAdminClient() {
           </form>
 
           <section className="rounded-lg border border-white/10 bg-black p-5">
+            <div className="mb-5 rounded-md border border-orange-500/25 bg-orange-500/[0.045] p-4">
+              <div className="mb-4 flex items-center gap-2">
+                <Eye className="h-4 w-4 text-orange-300" />
+                <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-orange-200">
+                  Pre-publish preview
+                </h2>
+              </div>
+              {preview ? (
+                <div className="overflow-hidden rounded-md border border-white/10 bg-neutral-950">
+                  <div className="relative aspect-[1200/630] bg-neutral-900">
+                    {heroPreview ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={heroPreview}
+                        alt=""
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center text-sm text-neutral-600">
+                        Hero preview appears here
+                      </div>
+                    )}
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent p-4">
+                      <div className="font-mono text-[10px] uppercase tracking-[0.16em] text-orange-300">
+                        /blog/{preview.slug}
+                      </div>
+                      <h3 className="mt-1 line-clamp-2 text-2xl font-bold leading-tight text-white">
+                        {preview.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="space-y-4 p-4">
+                    <p className="line-clamp-3 text-sm leading-relaxed text-neutral-300">
+                      {preview.excerpt}
+                    </p>
+                    <div className="grid gap-2 text-xs text-neutral-500 sm:grid-cols-2">
+                      <PreviewFact icon={Hash} label="Slug" value={preview.slug} />
+                      <PreviewFact icon={Calendar} label="Date" value={preview.date} />
+                      <PreviewFact icon={Type} label="Category" value={preview.category} />
+                      <PreviewFact icon={FileText} label="Length" value={`${preview.readTime}m · ${preview.wordCount}w`} />
+                    </div>
+                    <div className="rounded-md border border-white/10 bg-black/55 p-3">
+                      <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.16em] text-neutral-600">
+                        Body sample
+                      </div>
+                      <p className="line-clamp-4 text-xs leading-relaxed text-neutral-400">
+                        {preview.bodySample}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <p className="text-sm leading-relaxed text-neutral-500">
+                  Select a markdown file to preview title, slug, excerpt,
+                  article length, and the blog-card hero treatment before
+                  writing anything to Blob.
+                </p>
+              )}
+            </div>
+
             <div className="mb-5 flex items-center justify-between gap-3 border-b border-white/10 pb-4">
               <h2 className="text-lg font-semibold">Blob state</h2>
               <div className="flex flex-wrap gap-2">
@@ -312,6 +428,123 @@ function StatusPill({ label, ok }: { label: string; ok: boolean }) {
   )
 }
 
+function PreviewFact({
+  icon: Icon,
+  label,
+  value,
+}: {
+  icon: typeof FileText
+  label: string
+  value: string
+}) {
+  return (
+    <div className="flex min-w-0 items-start gap-2 rounded-md border border-white/10 bg-white/[0.03] p-2">
+      <Icon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-neutral-600" />
+      <div className="min-w-0">
+        <div className="font-mono text-[9px] uppercase tracking-[0.14em] text-neutral-600">
+          {label}
+        </div>
+        <div className="mt-0.5 truncate text-neutral-300" title={value}>
+          {value}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function authHeaders(token: string): HeadersInit {
   return token.trim() ? { Authorization: `Bearer ${token.trim()}` } : {}
+}
+
+function parsePreview(markdown: string): ArticlePreview {
+  const { frontMatter, body } = splitFrontMatter(markdown)
+  const today = new Date().toISOString().slice(0, 10)
+  const title = frontMatter.title ?? extractH1(body) ?? "Untitled article"
+  const excerpt =
+    frontMatter.excerpt ??
+    frontMatter.meta_description ??
+    firstParagraph(body) ??
+    "Ergo ecosystem update."
+  const wordCount = countWords(body)
+
+  return {
+    slug: normalizeSlug(frontMatter.slug ?? title),
+    title,
+    excerpt,
+    category: frontMatter.category ?? "Build Log",
+    author: frontMatter.author ?? "Developer Relations",
+    date: frontMatter.date_published ?? frontMatter.date ?? today,
+    readTime: Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE)),
+    wordCount,
+    bodySample: firstParagraph(body) ?? body.replace(/\s+/g, " ").trim().slice(0, 280),
+  }
+}
+
+function splitFrontMatter(markdown: string): {
+  frontMatter: Record<string, string>
+  body: string
+} {
+  const match = markdown.match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/)
+  if (!match) return { frontMatter: {}, body: markdown }
+
+  const [, raw = "", body = ""] = match
+  const frontMatter: Record<string, string> = {}
+
+  for (const line of raw.split(/\r?\n/)) {
+    const separator = line.indexOf(":")
+    if (separator <= 0) continue
+    const key = line.slice(0, separator).trim()
+    const value = line
+      .slice(separator + 1)
+      .trim()
+      .replace(/^['"]|['"]$/g, "")
+    if (key && value && !value.startsWith("[")) frontMatter[key] = value
+  }
+
+  return { frontMatter, body }
+}
+
+function normalizeSlug(value: string): string {
+  return value
+    .replace(/^https?:\/\/[^/]+\/blog\//i, "")
+    .replace(/^\/?blog\//i, "")
+    .replace(/\.md$/i, "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-")
+    .slice(0, 90)
+}
+
+function extractH1(body: string): string | undefined {
+  return body.match(/^#\s+(.+?)\s*$/m)?.[1]?.trim()
+}
+
+function firstParagraph(body: string): string | undefined {
+  const paragraph = body
+    .replace(/^#\s+.+?$/gm, "")
+    .split(/\n{2,}/)
+    .map((part) => part.trim())
+    .find((part) => part && !part.startsWith("```") && !part.startsWith("|"))
+
+  if (!paragraph) return undefined
+  return paragraph
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[*_`>#-]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 240)
+}
+
+function countWords(body: string): number {
+  return body
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/[^\p{L}\p{N}\s-]/gu, " ")
+    .split(/\s+/)
+    .filter(Boolean)
+    .length
 }

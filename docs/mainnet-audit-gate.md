@@ -14,6 +14,7 @@ Allowed:
 - Sage has signed public Accord L1 conformance evidence for that receipt bundle.
 - A testnet observed script identity manifest is published.
 - A draft audit scope manifest is published.
+- An audit readiness checklist is published for the external reviewer handoff.
 - Testnet signer operations evidence is published.
 - External review and mainnet script identity templates are published.
 - `/api/sage/receipt/<id>` is the machine-readable source of truth for Sage receipts.
@@ -110,6 +111,7 @@ Before changing public copy to mainnet/production wording:
 - [x] Accord registry evidence points to that artifact.
 - [x] Testnet observed script identity manifest is published.
 - [x] Draft audit scope manifest is published.
+- [x] Audit readiness checklist is published.
 - [x] Testnet signer ops evidence and runbook are current.
 - [x] External review and mainnet script identity templates are published.
 - [ ] External audit or review report is published.

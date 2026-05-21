@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T18:11:41.410Z",
+  "generatedAt": "2026-05-21T19:35:33.492Z",
   "documentCount": 52,
   "docs": [
     {
@@ -408,7 +408,7 @@
       "url": "/agent-economy/sage-widget",
       "title": "Sage Widget embed surface",
       "tags": "Sage widget, npm, React, vanilla, receipts, agent payments",
-      "content": "The Sage widget is the embeddable surface for Ergo agent-payment proof flows. Public npm latest is v0.2.0. It includes a React SagePaymentWidget component, a vanilla mountSagePaymentWidget function, typed clients for quote, verify, chat stream, receipt bundle, and activity feed, tenant metadata, receipt callbacks, and status snapshots. The canonical Sage host is testnet live proof: it can produce full_receipt_bundle receipts with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. The widget does not sign wallet transactions; it shows quote fields, accepts a Note box id, verifies through Sage, streams the answer, and links the public receipt API."
+      "content": "The Sage widget is the embeddable surface for Ergo agent-payment proof flows. Public npm latest is v0.2.0. It includes a React SagePaymentWidget component, a vanilla mountSagePaymentWidget function, typed clients for quote, verify, chat stream, receipt bundle, and activity feed, tenant metadata, receipt callbacks, and status snapshots. The site now exposes a live host-side demo for quote, Note box verification, receipt linking, and optional paid answer streaming. The canonical Sage host is testnet live proof: it can produce full_receipt_bundle receipts with Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON. The widget does not sign wallet transactions; it shows quote fields, accepts a Note box id, verifies through Sage, streams the answer, and links the public receipt API."
     },
     {
       "id": "page:no-stripe-comparison",
