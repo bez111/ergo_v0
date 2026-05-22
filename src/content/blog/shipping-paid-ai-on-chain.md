@@ -222,7 +222,7 @@ Then come the bigger roadmap items:
 
 - surface the Accord provider registry on the site;
 - show live agent activity in more places;
-- expand the published `@ergoblockchain/sage-widget` v0.2.0 paid widget into more live host-side demos;
+- expand the published `@ergoblockchain/sage-widget` v0.3.0 paid widget into more live host-side demos;
 - move the public MCP endpoint from the live Fly URL to `mcp.ergoblockchain.org` once DNS is live;
 - run external audits before any mainnet claims;
 - sign exact script/contract manifests before any controlled mainnet launch.

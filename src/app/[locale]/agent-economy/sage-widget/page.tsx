@@ -133,17 +133,17 @@ const statusItems: Array<{
 }> = [
   {
     label: "Source",
-    value: "v0.3 candidate",
-    detail: "Source is prepared with payment intent JSON, wallet launcher hooks, React, vanilla, typed API helpers, and smoke checks.",
+    value: "v0.3.0",
+    detail: "Source is published with payment intent JSON, wallet launcher hooks, React, vanilla, typed API helpers, and smoke checks.",
     icon: GitBranch,
     tone: "live",
   },
   {
     label: "npm",
-    value: "trusted publish",
-    detail: "v0.3 publishes through GitHub Actions Trusted Publishing, avoiding local OTP prompts and long-lived npm tokens.",
+    value: "published",
+    detail: "npm latest is v0.3.0, published through GitHub Actions Trusted Publishing without local OTP prompts or long-lived npm tokens.",
     icon: PackageCheck,
-    tone: "pending",
+    tone: "live",
   },
   {
     label: "Receipt",
@@ -185,8 +185,8 @@ const flowItems = [
 ]
 
 const releaseChecklist = [
-  "v0.3 source adds portable SagePaymentIntent JSON for host-owned wallet flows",
-  "Published tarball should include root, React, vanilla, type declarations, README, and license",
+  "v0.3.0 adds portable SagePaymentIntent JSON for host-owned wallet flows",
+  "Published tarball includes root, React, vanilla, type declarations, README, and license",
   "Live host demo calls the production Sage quote, verify, chat, and receipt APIs",
   "Keep wallet signing outside the widget; host apps own wallet policy and signing",
   "Keep mainnet wording closed until external audit evidence exists",
@@ -266,15 +266,15 @@ export default function SageWidgetPage() {
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Release posture
                     </div>
-                    <div className="mt-1 text-2xl font-bold text-white">v0.3 trusted-publish ready</div>
+                    <div className="mt-1 text-2xl font-bold text-white">v0.3.0 published</div>
                   </div>
                   <BadgeCheck className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The source is ready for the v0.3 paid widget surface. npm is
-                  now wired for GitHub Actions Trusted Publishing; the canonical
-                  Sage host remains a testnet proof, with mainnet wording closed
-                  behind audit evidence.
+                  The v0.3.0 paid widget surface is published on npm via GitHub
+                  Actions Trusted Publishing. The canonical Sage host remains a
+                  testnet proof, with mainnet wording closed behind audit
+                  evidence.
                 </p>
                 <div className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-3 font-mono text-xs text-neutral-300">
                   npm install @ergoblockchain/sage-widget

@@ -632,8 +632,8 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
     {
       id: "widget",
       label: "Embeddable widget",
-      state: "pending",
-      detail: "Sage widget v0.3 source is prepared; npm Trusted Publishing is the remaining release gate.",
+      state: "live",
+      detail: "Sage widget v0.3.0 is published for payment intents and host-owned wallet flows.",
       evidence_href: "/agent-economy/sage-widget",
     },
     {

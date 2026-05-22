@@ -373,7 +373,7 @@ export default function RoadmapPage() {
                   <li>• 10 working examples on testnet ✓</li>
                   <li>• Sage hosted testnet reference dApp with real settlement and full receipt storage for new receipts ✓</li>
                   <li>• Signed Sage L1 Accord conformance artifact for the first post-Blob full receipt bundle ✓</li>
-                  <li>• @ergoblockchain/sage-widget v0.3.0 source and Trusted Publishing release path ✓</li>
+                  <li>• @ergoblockchain/sage-widget v0.3.0 paid-widget package via Trusted Publishing ✓</li>
                   <li>• Agent Economy live cockpit and ErgoScript playground WASM build warning cleanup ✓</li>
                 </ul>
                 <p><strong>Ongoing:</strong></p>
