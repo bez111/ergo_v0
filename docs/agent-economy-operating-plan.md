@@ -50,9 +50,9 @@ identity, signer operations, and audit artifacts are published.
 - External audit/review report and audit-bound mainnet script identity before any
   mainnet language.
 
-## Current Internal Batch
+## Current Live Batch
 
-Prepared locally:
+Live in production:
 
 - Live Hub lifecycle view.
 - Agent subdomain routing.
@@ -63,6 +63,11 @@ Prepared locally:
 - Sage widget paid embed callbacks and receipt bundle fetch.
 - MCP DNS runbook.
 - Published settled post-Blob full receipt bundle, permanent testnet signer, and signed Sage L1 conformance evidence.
+- Wallet-agent policy-check API.
+- Wallet-agent policy playground.
+- Wallet-agent reference runner.
+- Developer services index with live probes for Sage, MCP, wallet-agent policy, receipt storage, and Agent Hub surfaces.
+- Production routes for `agents.ergoblockchain.org`.
 
 ## Final Public Language
 
@@ -89,4 +94,4 @@ remaining order is:
 1. Publish an external audit/review report.
 2. Publish audit-bound mainnet script identity manifests.
 3. Update risk disclosure with reviewer findings and residual risks.
-4. Run final full build and smoke tests for the next deploy batch.
+4. Keep wallet-agent surfaces testnet-first until external review exists.
