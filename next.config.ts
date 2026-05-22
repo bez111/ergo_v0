@@ -210,6 +210,16 @@ const nextConfig: NextConfig = {
           destination: '/build/agent-payments/wallet-agent-runner',
         },
         {
+          source: '/policy-playground',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/build/agent-payments/policy-playground',
+        },
+        {
+          source: '/policy-playground',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/build/agent-payments/policy-playground',
+        },
+        {
           source: '/runner',
           has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
           destination: '/build/agent-payments/wallet-agent-runner',

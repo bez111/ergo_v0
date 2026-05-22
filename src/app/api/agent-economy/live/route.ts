@@ -109,7 +109,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent, walletAgentPolicy, walletAgentReferenceFlow] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -136,6 +136,7 @@ export async function GET(req: Request) {
     probeJson<{ ok?: boolean; type?: string; status?: string }>(
       `${siteBaseUrl}/api/agent-economy/wallet-agent/reference-flow`,
     ),
+    probePage(`${siteBaseUrl}/build/agent-payments/policy-playground`),
   ])
 
   const latestFullReceipt = await discoverLatestFullReceipt(
@@ -279,6 +280,15 @@ export async function GET(req: Request) {
       "/build/agent-payments/wallet-agent-runner",
     ),
     gate(
+      "wallet-agent-policy-playground",
+      "Wallet-agent policy playground",
+      walletAgentPolicyPlayground.ok ? "live" : "degraded",
+      walletAgentPolicyPlayground.ok
+        ? "Interactive policy verdict playground is available for developers"
+        : walletAgentPolicyPlayground.error ?? "wallet-agent policy playground unavailable",
+      "/build/agent-payments/policy-playground",
+    ),
+    gate(
       "mcp-fly",
       "MCP Fly endpoint",
       mcpFly.ok && mcpFly.data?.ok === true ? "live" : "degraded",
@@ -365,6 +375,7 @@ export async function GET(req: Request) {
         walletAgentPolicy.ok && walletAgentPolicy.data?.ok === true,
       wallet_agent_reference_flow_published:
         walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true,
+      wallet_agent_policy_playground_published: walletAgentPolicyPlayground.ok,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -433,6 +444,7 @@ export async function GET(req: Request) {
       wallet_agent_spec: publicProbe(walletAgent),
       wallet_agent_policy_check: publicProbe(walletAgentPolicy),
       wallet_agent_reference_flow: publicProbe(walletAgentReferenceFlow),
+      wallet_agent_policy_playground: publicProbe(walletAgentPolicyPlayground),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),
@@ -499,6 +511,34 @@ async function probeJson<T>(
       status: res.status,
       ms: Date.now() - started,
       data,
+      error: res.ok ? null : `HTTP ${res.status}`,
+    }
+  } catch (error) {
+    return {
+      ok: false,
+      status: null,
+      ms: Date.now() - started,
+      data: null,
+      error: error instanceof Error ? error.message : "probe failed",
+    }
+  }
+}
+
+async function probePage(
+  url: string,
+  opts: { timeoutMs?: number } = {},
+): Promise<ProbeResult<null>> {
+  const started = Date.now()
+  try {
+    const res = await fetch(url, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(opts.timeoutMs ?? 4_000),
+    })
+    return {
+      ok: res.ok,
+      status: res.status,
+      ms: Date.now() - started,
+      data: null,
       error: res.ok ? null : `HTTP ${res.status}`,
     }
   } catch (error) {

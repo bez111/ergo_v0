@@ -203,6 +203,15 @@ const CURATED = [
       "The Wallet-Agent Reference Runner is the practical developer path for host-owned local wallet agents on Ergo testnet. It shows how to load a wallet-agent policy profile, receive a Sage payment intent, normalize the intent into a proposed action, call /api/agent-economy/wallet-agent/policy-check, stop immediately after a denied verdict, simulate one exact transaction, ask the host-owned wallet to sign only that transaction, broadcast it, verify the Note or receipt, and retain the receipt bundle. The machine-readable reference flow is /api/agent-economy/wallet-agent/reference-flow and the public manifest is /agent-economy/wallet-agent-reference-flow.v0.json. The runner is not wallet software, not a remote signer, not custody infrastructure, and not mainnet readiness evidence.",
   },
   {
+    id: "page:wallet-agent-policy-playground",
+    type: "page",
+    url: "/build/agent-payments/policy-playground",
+    title: "Wallet-agent policy playground",
+    tags: "wallet agent, policy-check, playground, developer tool, allow deny verdict",
+    content:
+      "The Wallet-Agent Policy Playground lets developers test the wallet-agent policy-check API interactively. A developer can change amount, spent_today, fee, recipient allowlist state, reserve allowlist state, expiry height delta, task hash, human confirmation, and receipt expectation, then inspect the live allow or deny verdict returned by /api/agent-economy/wallet-agent/policy-check. The playground demonstrates both allowed and blocked verdicts, including wrong recipient, wrong reserve, over cap amount, fee limit, stale expiry, short task hash, missing receipt, and human confirmation requirements. It is not a wallet connection, not a signer, not a broadcaster, and not custody infrastructure.",
+  },
+  {
     id: "page:no-stripe-comparison",
     type: "page",
     url: "/blog/agents-cant-use-stripe",

@@ -112,6 +112,7 @@ function getAgentHubPath(pathname: string): string | null {
     ['/sage-widget', '/agent-economy/sage-widget'],
     ['/wallet-agent', '/agent-economy/wallet-agent'],
     ['/wallet-agent-runner', '/build/agent-payments/wallet-agent-runner'],
+    ['/policy-playground', '/build/agent-payments/policy-playground'],
     ['/runner', '/build/agent-payments/wallet-agent-runner'],
     ['/trust', '/agent-economy/trust'],
     ['/review-pack', '/agent-economy/review-pack'],

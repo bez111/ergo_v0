@@ -64,6 +64,16 @@
       "destination": "/build/agent-payments/wallet-agent-runner"
     },
     {
+      "source": "/policy-playground",
+      "has": [{ "type": "host", "value": "agents.ergoblockchain.org" }],
+      "destination": "/build/agent-payments/policy-playground"
+    },
+    {
+      "source": "/policy-playground",
+      "has": [{ "type": "host", "value": "agenthub.ergoblockchain.org" }],
+      "destination": "/build/agent-payments/policy-playground"
+    },
+    {
       "source": "/runner",
       "has": [{ "type": "host", "value": "agents.ergoblockchain.org" }],
       "destination": "/build/agent-payments/wallet-agent-runner"

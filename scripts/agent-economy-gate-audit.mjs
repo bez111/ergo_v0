@@ -49,6 +49,8 @@ const paths = [
   "public/agent-economy/wallet-agent-policy.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.profile.template.json",
   "public/agent-economy/wallet-agent-reference-flow.v0.json",
+  "src/app/[locale]/build/agent-payments/policy-playground/page.tsx",
+  "src/app/[locale]/build/agent-payments/policy-playground/PolicyPlaygroundClient.tsx",
   "src/app/[locale]/build/agent-payments/wallet-agent-runner/page.tsx",
   "src/app/[locale]/agent-economy/review-pack/page.tsx",
   "src/app/[locale]/agent-economy/wallet-agent/page.tsx",
@@ -138,6 +140,7 @@ for (const required of [
   "wallet_agent_policy_schema",
   "wallet_agent_policy_check_api",
   "wallet_agent_reference_flow_api",
+  "wallet_agent_policy_playground",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
 }
@@ -150,6 +153,7 @@ for (const required of [
   "wallet-agent-policy.profile.template.json",
   "policy-check",
   "reference_flow_api",
+  "policy_playground",
   "Never expose seed phrases",
   "prompt text override policy",
   "receipt bundle",
@@ -206,6 +210,19 @@ assert(
   "wallet-agent reference manifest must keep mainnet_ready false",
 )
 
+const walletAgentPolicyPlaygroundSource = readText(
+  "src/app/[locale]/build/agent-payments/policy-playground/PolicyPlaygroundClient.tsx",
+)
+for (const required of [
+  "/api/agent-economy/wallet-agent/policy-check",
+  "wrong_recipient_address",
+  "Run check",
+  "Request payload",
+  "Verdict JSON",
+]) {
+  assert(walletAgentPolicyPlaygroundSource.includes(required), `wallet-agent policy playground is missing: ${required}`)
+}
+
 const externalReviewSchema = readJson("public/agent-economy/external-audit-review.schema.v0.json")
 assert(
   externalReviewSchema.properties?.type?.const === "ergo.agent_economy.external_audit_review_manifest.v0",
@@ -258,6 +275,7 @@ for (const required of [
   "Testnet script identity",
   "Signer ops evidence",
   "Wallet-agent policy check",
+  "Wallet-agent policy playground",
   "Wallet-agent reference runner",
   "Audit scope manifest",
   "completed = 4",

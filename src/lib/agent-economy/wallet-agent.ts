@@ -4,6 +4,7 @@ import {
   WALLET_AGENT_POLICY_TEMPLATE_URL,
 } from "./wallet-agent-policy"
 import {
+  WALLET_AGENT_POLICY_PLAYGROUND_URL,
   WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
   WALLET_AGENT_REFERENCE_FLOW_PAGE_URL,
   WALLET_AGENT_REFERENCE_FLOW_URL,
@@ -43,6 +44,7 @@ export const agentEconomyWalletAgentSpec = {
     reference_flow_page: WALLET_AGENT_REFERENCE_FLOW_PAGE_URL,
     reference_flow_api: WALLET_AGENT_REFERENCE_FLOW_URL,
     reference_flow_manifest: WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
+    policy_playground: WALLET_AGENT_POLICY_PLAYGROUND_URL,
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     sage_widget: "https://www.ergoblockchain.org/agent-economy/sage-widget",
     agent_payment_quickstart: "https://www.ergoblockchain.org/build/agent-payments/quickstart",
@@ -172,6 +174,12 @@ export const agentEconomyWalletAgentSpec = {
     "Never claim mainnet readiness before external review and audit-bound script identity exist.",
   ],
   integration_surfaces: [
+    {
+      id: "policy_playground",
+      label: "Policy playground",
+      role: "Lets developers mutate a proposed wallet action and inspect the live allow/deny verdict.",
+      href: WALLET_AGENT_POLICY_PLAYGROUND_URL,
+    },
     {
       id: "reference_flow",
       label: "Reference runner",

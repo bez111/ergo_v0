@@ -10,6 +10,7 @@ import {
   LockKeyhole,
   ReceiptText,
   ShieldCheck,
+  SlidersHorizontal,
   TerminalSquare,
   WalletCards,
   type LucideIcon,
@@ -156,6 +157,13 @@ export default function WalletAgentRunnerPage() {
                   >
                     Policy-check API
                     <ShieldCheck className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="/build/agent-payments/policy-playground"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Try playground
+                    <SlidersHorizontal className="h-4 w-4" />
                   </Link>
                 </div>
               </div>

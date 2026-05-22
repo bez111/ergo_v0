@@ -19,6 +19,7 @@ const okRoutes = [
   "/blog/state-of-agent-payments-2026",
   "/build",
   "/build/agent-payments/quickstart",
+  "/build/agent-payments/policy-playground",
   "/build/agent-payments/wallet-agent-runner",
   "/build/services",
   "/build/playground",

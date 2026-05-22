@@ -13,6 +13,8 @@ export const WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL =
   "https://www.ergoblockchain.org/agent-economy/wallet-agent-reference-flow.v0.json"
 export const WALLET_AGENT_REFERENCE_FLOW_PAGE_URL =
   "https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner"
+export const WALLET_AGENT_POLICY_PLAYGROUND_URL =
+  "https://www.ergoblockchain.org/build/agent-payments/policy-playground"
 
 export const walletAgentReferenceFlow = {
   type: WALLET_AGENT_REFERENCE_FLOW_TYPE,
@@ -26,6 +28,7 @@ export const walletAgentReferenceFlow = {
     human_page: WALLET_AGENT_REFERENCE_FLOW_PAGE_URL,
     machine_api: WALLET_AGENT_REFERENCE_FLOW_URL,
     public_manifest: WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
+    policy_playground: WALLET_AGENT_POLICY_PLAYGROUND_URL,
     policy_schema: WALLET_AGENT_POLICY_SCHEMA_URL,
     policy_template: WALLET_AGENT_POLICY_TEMPLATE_URL,
     policy_check_api: WALLET_AGENT_POLICY_CHECK_URL,

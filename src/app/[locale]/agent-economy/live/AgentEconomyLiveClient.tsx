@@ -16,6 +16,7 @@ import {
   Radio,
   ReceiptText,
   ShieldCheck,
+  SlidersHorizontal,
   WalletCards,
 } from "lucide-react"
 import { Link } from "@/i18n/navigation"
@@ -61,6 +62,7 @@ interface LiveStatusResponse {
     wallet_agent_spec_published?: boolean
     wallet_agent_policy_check_published?: boolean
     wallet_agent_reference_flow_published?: boolean
+    wallet_agent_policy_playground_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -104,6 +106,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "wallet-agent-spec": WalletCards,
   "wallet-agent-policy": ShieldCheck,
   "wallet-agent-reference-flow": GitBranch,
+  "wallet-agent-policy-playground": SlidersHorizontal,
   "mcp-fly": Network,
   "mcp-dns": Globe2,
   "mainnet-audit-gate": AlertTriangle,
@@ -590,6 +593,7 @@ function skeletonGates(): LiveGate[] {
     "wallet-agent-spec",
     "wallet-agent-policy",
     "wallet-agent-reference-flow",
+    "wallet-agent-policy-playground",
     "mcp-fly",
     "mcp-dns",
     "playground",

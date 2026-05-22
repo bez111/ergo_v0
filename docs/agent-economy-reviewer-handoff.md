@@ -24,6 +24,9 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 Wallet-agent policy-check API
 https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check
 
+Wallet-agent policy playground
+https://www.ergoblockchain.org/build/agent-payments/policy-playground
+
 Wallet-agent reference runner
 https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner
 ```
@@ -76,14 +79,16 @@ template should fail review.
 6. Review wallet-agent policy-check denial behavior for wrong recipient,
    wrong reserve, over-cap amount, stale expiry, missing receipt retention, and
    mainnet-disabled actions.
-7. Review the wallet-agent reference runner boundary: denied verdicts stop the
+7. Confirm the policy playground demonstrates allowed and blocked verdicts
+   without wallet authority, signing, or broadcast.
+8. Review the wallet-agent reference runner boundary: denied verdicts stop the
    flow, simulation happens before signing, and signing stays in the host-owned
    wallet layer.
-8. Review signer limits, health, failure logging, and runbook posture.
-9. Produce the external review manifest.
-10. Produce the audit-bound mainnet script identity manifest.
-11. Mark each finding as blocking or non-blocking for mainnet language.
-12. Only after both completed artifacts exist should the mainnet gate source be
+9. Review signer limits, health, failure logging, and runbook posture.
+10. Produce the external review manifest.
+11. Produce the audit-bound mainnet script identity manifest.
+12. Mark each finding as blocking or non-blocking for mainnet language.
+13. Only after both completed artifacts exist should the mainnet gate source be
     updated away from `null`.
 
 ## Mainnet Gate Acceptance Rule

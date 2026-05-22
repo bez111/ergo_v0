@@ -7,6 +7,7 @@
   "public_entrypoints": {
     "human_page": "https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner",
     "machine_api": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/reference-flow",
+    "policy_playground": "https://www.ergoblockchain.org/build/agent-payments/policy-playground",
     "policy_schema": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json",
     "policy_template": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json",
     "policy_check_api": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check",

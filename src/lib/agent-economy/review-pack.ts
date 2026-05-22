@@ -54,6 +54,8 @@ export const agentEconomyReviewPack = {
       "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/reference-flow",
     wallet_agent_reference_flow_manifest:
       "https://www.ergoblockchain.org/agent-economy/wallet-agent-reference-flow.v0.json",
+    wallet_agent_policy_playground:
+      "https://www.ergoblockchain.org/build/agent-payments/policy-playground",
     external_audit_review_schema:
       "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
     mainnet_script_identity_schema:
@@ -72,7 +74,7 @@ export const agentEconomyReviewPack = {
       "Accord L1 conformance evidence and provider signing key publication",
       "MCP endpoint as public machine-facing infrastructure",
       "Sage widget v0.3.0 as host-owned wallet handoff surface",
-      "Wallet-agent safety spec, policy-check API, and reference runner for local policy, simulation, signing boundaries, and receipt retention",
+      "Wallet-agent safety spec, policy-check API, policy playground, and reference runner for local policy, simulation, signing boundaries, and receipt retention",
       "Public wording and mainnet gate controls",
     ],
     excluded_until_separate_review: [
@@ -94,6 +96,7 @@ export const agentEconomyReviewPack = {
     "Verify that receipt completeness distinguishes full_receipt_bundle from chain_proof_only.",
     "Review signer policy limits, failure logging, failover posture, and redaction guarantees.",
     "Verify that the wallet-agent policy-check API denies wrong-recipient, wrong-reserve, over-cap, stale-expiry, and missing-receipt actions before any signing request.",
+    "Verify that the wallet-agent policy playground demonstrates both allowed and blocked verdicts without touching wallet authority.",
     "Verify that the wallet-agent reference flow keeps signing inside the host-owned wallet layer and stops after a denied policy verdict.",
     "Confirm that public site wording remains testnet-only until both pending mainnet gates are closed.",
     "Publish findings with severity, status, remediation reference, and residual risk.",
