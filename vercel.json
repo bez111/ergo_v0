@@ -44,6 +44,16 @@
       "destination": "/agent-economy/sage-widget"
     },
     {
+      "source": "/wallet-agent",
+      "has": [{ "type": "host", "value": "agents.ergoblockchain.org" }],
+      "destination": "/agent-economy/wallet-agent"
+    },
+    {
+      "source": "/wallet-agent",
+      "has": [{ "type": "host", "value": "agenthub.ergoblockchain.org" }],
+      "destination": "/agent-economy/wallet-agent"
+    },
+    {
       "source": "/trust",
       "has": [{ "type": "host", "value": "agents.ergoblockchain.org" }],
       "destination": "/agent-economy/trust"

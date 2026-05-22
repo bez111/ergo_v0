@@ -40,6 +40,8 @@ export const agentEconomyReviewPack = {
     ...agentEconomyMainnetGate.artifacts,
     review_pack_page: "https://www.ergoblockchain.org/agent-economy/review-pack",
     review_pack_api: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
+    wallet_agent_safety_spec: "https://www.ergoblockchain.org/agent-economy/wallet-agent",
+    wallet_agent_safety_spec_api: "https://www.ergoblockchain.org/api/agent-economy/wallet-agent",
     external_audit_review_schema:
       "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
     mainnet_script_identity_schema:
@@ -58,6 +60,7 @@ export const agentEconomyReviewPack = {
       "Accord L1 conformance evidence and provider signing key publication",
       "MCP endpoint as public machine-facing infrastructure",
       "Sage widget v0.3.0 as host-owned wallet handoff surface",
+      "Wallet-agent safety spec for local policy, simulation, signing boundaries, and receipt retention",
       "Public wording and mainnet gate controls",
     ],
     excluded_until_separate_review: [

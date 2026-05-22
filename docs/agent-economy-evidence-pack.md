@@ -20,6 +20,12 @@ https://www.ergoblockchain.org/agent-economy/review-pack
 review_pack_api
 https://www.ergoblockchain.org/api/agent-economy/review-pack
 
+wallet_agent_safety_spec
+https://www.ergoblockchain.org/agent-economy/wallet-agent
+
+wallet_agent_safety_spec_api
+https://www.ergoblockchain.org/api/agent-economy/wallet-agent
+
 testnet_script_identity
 https://www.ergoblockchain.org/agent-economy/script-identity-manifest.v0.json
 
@@ -60,6 +66,7 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - A permanent testnet signer service is reachable and address-matched.
 - The observed testnet wallet, reserve, note, registers, and settlement identifiers are published.
 - The public audit readiness checklist is published for an external reviewer.
+- The local wallet-agent safety boundary is published as a human page and JSON API.
 - The external review and mainnet script identity templates are published, but they are not completed artifacts.
 - The mainnet gate currently has 4 completed gates and 2 pending trust gates.
 

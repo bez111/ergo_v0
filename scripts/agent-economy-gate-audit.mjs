@@ -47,8 +47,11 @@ const paths = [
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
   "public/agent-economy/mainnet-script-identity.schema.v0.json",
   "src/app/[locale]/agent-economy/review-pack/page.tsx",
+  "src/app/[locale]/agent-economy/wallet-agent/page.tsx",
   "src/app/api/agent-economy/review-pack/route.ts",
+  "src/app/api/agent-economy/wallet-agent/route.ts",
   "src/lib/agent-economy/review-pack.ts",
+  "src/lib/agent-economy/wallet-agent.ts",
   "docs/audit-review-pack.md",
   "docs/agent-economy-reviewer-handoff.md",
   "src/content/blog/ergo-live-proof-surface-agent-economy.md",
@@ -123,8 +126,20 @@ for (const required of [
   "template_files_are_not_sufficient",
   "external-audit-review.schema.v0.json",
   "mainnet-script-identity.schema.v0.json",
+  "wallet_agent_safety_spec",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
+}
+
+const walletAgentSource = readText("src/lib/agent-economy/wallet-agent.ts")
+for (const required of [
+  "draft_testnet_safety_spec",
+  "local_user_or_wallet_controlled",
+  "Never expose seed phrases",
+  "prompt text override policy",
+  "receipt bundle",
+]) {
+  assert(walletAgentSource.includes(required), `wallet-agent spec is missing: ${required}`)
 }
 
 const externalReviewSchema = readJson("public/agent-economy/external-audit-review.schema.v0.json")

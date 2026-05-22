@@ -21,6 +21,7 @@ import {
   ChevronRight,
   Landmark,
   Cpu,
+  WalletCards,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -90,6 +91,16 @@ const COCKPIT_ITEMS = [
     body: "React and vanilla paid widget package is published with payment intents, wallet launcher hooks, quote, Note verification, receipt links, tenant config, and typed callbacks.",
     href: "/agent-economy/sage-widget",
     action: "Embed Sage",
+  },
+  {
+    name: "Wallet-agent spec",
+    status: "Safety spec",
+    tone: "live",
+    icon: WalletCards,
+    metric: "local policy",
+    body: "The next wallet-agent layer is specified as local policy, transaction simulation, bounded signing, and receipt-first accountability.",
+    href: "/agent-economy/wallet-agent",
+    action: "Read spec",
   },
   {
     name: "ErgoScript playground",

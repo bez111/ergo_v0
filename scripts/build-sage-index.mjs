@@ -185,6 +185,15 @@ const CURATED = [
       "The Agent Economy Review Pack is the reviewer handoff for the hosted Sage and Accord testnet proof. It exposes a human page and /api/agent-economy/review-pack as the machine-readable source for review scope, evidence, repositories, local commands, allowed language, forbidden claims, and mainnet gate rules. The pack is not an audit report and does not open mainnet readiness. It tells reviewers to inspect the full Sage receipt bundle, signed Accord L1 conformance evidence, provider signing key, observed testnet script identity, signer operations evidence, MCP endpoint, @ergoblockchain/sage-widget v0.3.0, and mainnet gate API. Completed external artifacts should satisfy /agent-economy/external-audit-review.schema.v0.json and /agent-economy/mainnet-script-identity.schema.v0.json, and reviewers should follow docs/agent-economy-reviewer-handoff.md. It keeps real-funds mainnet custody, third-party wallet internals, tenant deployments, exchange integrations, and unpublished production signer setup out of scope until separate review.",
   },
   {
+    id: "page:wallet-agent-safety-spec",
+    type: "page",
+    url: "/agent-economy/wallet-agent",
+    title: "Wallet-agent safety spec",
+    tags: "wallet agent, local signing, policy, simulation, agent payments, receipts",
+    content:
+      "The Wallet-Agent Safety Spec defines how a local Ergo wallet agent should operate before any autonomous payment flow. It is a testnet-first safety boundary, not custody software and not mainnet readiness evidence. A wallet agent should parse user intent, apply local policy caps and allowlists, treat remote quotes as untrusted input, simulate the exact transaction, require human confirmation when policy says so, sign only locally inside the user wallet or local process, broadcast only the simulated transaction, and store or link a receipt bundle. The spec forbids exposing seed phrases or private keys to remote pages, granting unbounded LLM signing authority, letting prompt text override local policy, treating a remote quote as proof of safety, or making mainnet readiness claims before external review and audit-bound script identity exist. The machine-readable source is /api/agent-economy/wallet-agent.",
+  },
+  {
     id: "page:no-stripe-comparison",
     type: "page",
     url: "/blog/agents-cant-use-stripe",
