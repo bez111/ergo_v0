@@ -48,8 +48,17 @@ https://www.ergoblockchain.org/agent-economy/audit-readiness-checklist.v0.json
 External review template
 https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json
 
+External review schema
+https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json
+
 Mainnet script identity template
 https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.manifest.template.json
+
+Mainnet script identity schema
+https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json
+
+Reviewer handoff
+https://github.com/bez111/ergo_v0/blob/main/docs/agent-economy-reviewer-handoff.md
 ```
 
 ## Review Boundary
@@ -89,6 +98,12 @@ An acceptable review artifact should include:
 - findings with severity, status, remediation reference, and residual risk;
 - explicit statement on whether any finding blocks mainnet language;
 - signature, public key, or other durable attribution.
+- conformance with the public external review schema.
+
+The audit-bound mainnet identity artifact should include exact source artifact
+hashes, compiled ErgoTree hashes, mainnet addresses, package versions, compiler
+or serialization toolchain, test vectors, and a link back to the completed
+external review manifest.
 
 ## Minimum Questions
 
@@ -121,6 +136,13 @@ public files:
 ```
 
 The template files are intentionally not enough to open the gate.
+
+Completed artifacts should satisfy:
+
+```text
+/agent-economy/external-audit-review.schema.v0.json
+/agent-economy/mainnet-script-identity.schema.v0.json
+```
 
 ## Local Verification
 

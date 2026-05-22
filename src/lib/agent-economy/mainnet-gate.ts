@@ -95,8 +95,12 @@ export const agentEconomyMainnetGate = {
       "https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json",
     external_audit_review_template:
       "https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json",
+    external_audit_review_schema:
+      "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
     mainnet_script_identity_template:
       "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.manifest.template.json",
+    mainnet_script_identity_schema:
+      "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json",
     signer_runbook: "https://github.com/bez111/ergo_v0/blob/main/docs/sage-signer-ops.md",
     external_audit_report: null,
     mainnet_script_identity: null,

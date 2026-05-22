@@ -43,11 +43,14 @@ const paths = [
   "public/agent-economy/script-identity-manifest.v0.json",
   "public/agent-economy/signer-ops-evidence.v0.json",
   "public/agent-economy/external-audit-review.manifest.template.json",
+  "public/agent-economy/external-audit-review.schema.v0.json",
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
+  "public/agent-economy/mainnet-script-identity.schema.v0.json",
   "src/app/[locale]/agent-economy/review-pack/page.tsx",
   "src/app/api/agent-economy/review-pack/route.ts",
   "src/lib/agent-economy/review-pack.ts",
   "docs/audit-review-pack.md",
+  "docs/agent-economy-reviewer-handoff.md",
   "src/content/blog/ergo-live-proof-surface-agent-economy.md",
   "src/lib/agent-economy/mainnet-gate.ts",
 ]
@@ -85,10 +88,22 @@ assert(
   "audit manifest must link the external review template",
 )
 assert(
+  auditManifest.artifacts?.external_audit_review_schema?.includes(
+    "external-audit-review.schema.v0.json",
+  ),
+  "audit manifest must link the external review schema",
+)
+assert(
   auditManifest.artifacts?.mainnet_script_identity_template?.includes(
     "mainnet-script-identity.manifest.template.json",
   ),
   "audit manifest must link the mainnet script identity template",
+)
+assert(
+  auditManifest.artifacts?.mainnet_script_identity_schema?.includes(
+    "mainnet-script-identity.schema.v0.json",
+  ),
+  "audit manifest must link the mainnet script identity schema",
 )
 assert(
   auditManifest.artifacts?.review_pack?.includes("/agent-economy/review-pack"),
@@ -104,10 +119,33 @@ for (const required of [
   "ready_for_external_review_not_audit_report",
   "forbidden_language",
   "reviewer_checklist",
+  "acceptance_workflow",
   "template_files_are_not_sufficient",
+  "external-audit-review.schema.v0.json",
+  "mainnet-script-identity.schema.v0.json",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
 }
+
+const externalReviewSchema = readJson("public/agent-economy/external-audit-review.schema.v0.json")
+assert(
+  externalReviewSchema.properties?.type?.const === "ergo.agent_economy.external_audit_review_manifest.v0",
+  "external review schema must bind the completed manifest type",
+)
+assert(
+  externalReviewSchema.properties?.findings?.items?.properties?.blocks_mainnet_language?.type === "boolean",
+  "external review schema must require finding-level mainnet blocking state",
+)
+
+const mainnetIdentitySchema = readJson("public/agent-economy/mainnet-script-identity.schema.v0.json")
+assert(
+  mainnetIdentitySchema.properties?.status?.const === "completed_audit_bound_mainnet_identity",
+  "mainnet script identity schema must require completed audit-bound status",
+)
+assert(
+  mainnetIdentitySchema.properties?.scripts?.items?.properties?.compiled_ergo_tree_hash?.minLength >= 16,
+  "mainnet script identity schema must require compiled ErgoTree hashes",
+)
 
 const gateSource = readText("src/lib/agent-economy/mainnet-gate.ts")
 assert(gateSource.includes('status: "closed"'), "mainnet gate must stay closed")
@@ -154,9 +192,23 @@ for (const required of [
   "/api/agent-economy/review-pack",
   "/agent-economy/external-audit-review.manifest.v0.json",
   "/agent-economy/mainnet-script-identity.manifest.v0.json",
+  "/agent-economy/external-audit-review.schema.v0.json",
+  "/agent-economy/mainnet-script-identity.schema.v0.json",
   "The template files are intentionally not enough to open the gate.",
 ]) {
   assert(reviewPack.includes(required), `audit review pack is missing: ${required}`)
+}
+
+const reviewerHandoff = readText("docs/agent-economy-reviewer-handoff.md")
+for (const required of [
+  "Required Output Files",
+  "JSON Contracts",
+  "external-audit-review.schema.v0.json",
+  "mainnet-script-identity.schema.v0.json",
+  "external_audit_report",
+  "mainnet_script_identity",
+]) {
+  assert(reviewerHandoff.includes(required), `reviewer handoff is missing: ${required}`)
 }
 
 if (failures.length > 0) {

@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
+  "title": "Ergo Agent Economy External Audit Review Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "reviewer",
+    "review_boundary",
+    "scope",
+    "findings",
+    "conclusions",
+    "attribution",
+    "mainnet_gate_effect"
+  ],
+  "properties": {
+    "type": {
+      "const": "ergo.agent_economy.external_audit_review_manifest.v0"
+    },
+    "version": {
+      "const": "v0"
+    },
+    "status": {
+      "enum": [
+        "completed_external_review",
+        "completed_external_review_with_open_findings",
+        "rejected_or_incomplete"
+      ]
+    },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "organization",
+        "contact",
+        "public_key_or_signature_identity"
+      ],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "organization": { "type": "string", "minLength": 1 },
+        "contact": { "type": "string", "minLength": 1 },
+        "public_key_or_signature_identity": { "type": "string", "minLength": 1 }
+      }
+    },
+    "review_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repo",
+        "reviewed_commit",
+        "reviewed_lockfile_hash",
+        "reviewed_deployment_id",
+        "reviewed_mainnet_script_identity_manifest",
+        "reviewed_testnet_evidence_pack"
+      ],
+      "properties": {
+        "repo": { "type": "string", "format": "uri" },
+        "reviewed_commit": { "type": "string", "minLength": 7 },
+        "reviewed_lockfile_hash": { "type": "string", "minLength": 16 },
+        "reviewed_deployment_id": { "type": "string", "minLength": 1 },
+        "reviewed_mainnet_script_identity_manifest": { "type": "string", "format": "uri" },
+        "reviewed_testnet_evidence_pack": { "type": "string", "format": "uri" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "included",
+        "excluded_unless_added_by_reviewer"
+      ],
+      "properties": {
+        "included": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "excluded_unless_added_by_reviewer": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "severity",
+          "status",
+          "blocks_mainnet_language",
+          "description",
+          "evidence",
+          "remediation",
+          "residual_risk"
+        ],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "severity": {
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low",
+              "informational"
+            ]
+          },
+          "status": {
+            "enum": [
+              "open",
+              "mitigated",
+              "accepted_risk",
+              "not_applicable"
+            ]
+          },
+          "blocks_mainnet_language": { "type": "boolean" },
+          "description": { "type": "string", "minLength": 1 },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "remediation": { "type": "string", "minLength": 1 },
+          "residual_risk": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "conclusions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "summary",
+        "mainnet_language_status",
+        "required_followups"
+      ],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1 },
+        "mainnet_language_status": {
+          "enum": [
+            "blocked",
+            "allowed_after_identity_manifest",
+            "not_assessed"
+          ]
+        },
+        "required_followups": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signed_at",
+        "signature",
+        "signature_payload_hash"
+      ],
+      "properties": {
+        "signed_at": { "type": "string", "format": "date-time" },
+        "signature": { "type": "string", "minLength": 1 },
+        "signature_payload_hash": { "type": "string", "minLength": 16 }
+      }
+    },
+    "mainnet_gate_effect": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -227,6 +227,26 @@ export default function AgentEconomyReviewPackPage() {
         <section className="border-t border-white/5 px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
+              eyebrow="Acceptance workflow"
+              title="How a review becomes gate evidence."
+              body="The next external artifact should be strict enough to pin code, deployments, script identities, findings, and residual risk without changing the public mainnet posture prematurely."
+            />
+            <div className="mt-8 grid gap-3 lg:grid-cols-5">
+              {agentEconomyReviewPack.acceptance_workflow.map((item, index) => (
+                <div key={item} className="rounded-lg border border-white/10 bg-black/70 p-4">
+                  <div className="font-mono text-xs uppercase tracking-widest text-orange-300">
+                    Step {index + 1}
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-neutral-300">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-white/5 px-4 py-14 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeader
               eyebrow="Local verification"
               title="Commands to run before accepting the pack."
               body="These commands do not replace external review. They keep the website, content claims, and public gate mechanics honest while the review is pending."

@@ -1,6 +1,7 @@
 {
   "type": "ergo.agent_economy.mainnet_script_identity_manifest.template.v0",
   "version": "v0",
+  "schema": "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json",
   "status": "template_mainnet_identity_pending",
   "last_reviewed": "2026-05-21",
   "public_claim": "Template only. No mainnet script identity is published or audited yet.",

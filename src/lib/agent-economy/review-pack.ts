@@ -40,6 +40,11 @@ export const agentEconomyReviewPack = {
     ...agentEconomyMainnetGate.artifacts,
     review_pack_page: "https://www.ergoblockchain.org/agent-economy/review-pack",
     review_pack_api: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
+    external_audit_review_schema:
+      "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
+    mainnet_script_identity_schema:
+      "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json",
+    reviewer_handoff_doc: "https://github.com/bez111/ergo_v0/blob/main/docs/agent-economy-reviewer-handoff.md",
     sage_widget_npm: "https://www.npmjs.com/package/@ergoblockchain/sage-widget/v/0.3.0",
   },
   review_scope: {
@@ -83,6 +88,13 @@ export const agentEconomyReviewPack = {
     "npm run audit:agent-economy-gate",
     "npm run smoke:routes",
     "npm run smoke:staging",
+  ],
+  acceptance_workflow: [
+    "The external reviewer pins reviewed commits, deployment id, lockfile hash, package versions, and evidence URLs.",
+    "The reviewer publishes a completed external-audit-review.manifest.v0.json that satisfies the public schema.",
+    "A completed mainnet-script-identity.manifest.v0.json binds every mainnet script to source artifact hash, compiled ErgoTree hash, address, and test vectors.",
+    "Every finding states severity, status, remediation reference, residual risk, and whether it blocks mainnet language.",
+    "The mainnet gate remains closed until both completed non-template artifacts are linked from /api/agent-economy/mainnet-gate.",
   ],
   mainnet_gate_rule: {
     status: agentEconomyMainnetGate.status,

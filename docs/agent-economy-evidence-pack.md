@@ -35,8 +35,17 @@ https://www.ergoblockchain.org/agent-economy/audit-readiness-checklist.v0.json
 external_review_template
 https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json
 
+external_review_schema
+https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json
+
 mainnet_script_identity_template
 https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.manifest.template.json
+
+mainnet_script_identity_schema
+https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json
+
+reviewer_handoff
+https://github.com/bez111/ergo_v0/blob/main/docs/agent-economy-reviewer-handoff.md
 
 mainnet_gate
 https://www.ergoblockchain.org/api/agent-economy/mainnet-gate

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T09:52:38.792Z",
+  "generatedAt": "2026-05-22T10:27:42.592Z",
   "documentCount": 54,
   "docs": [
     {
@@ -424,7 +424,7 @@
       "url": "/agent-economy/review-pack",
       "title": "Agent Economy external review pack",
       "tags": "audit, external review, mainnet gate, evidence pack, Sage, Accord",
-      "content": "The Agent Economy Review Pack is the reviewer handoff for the hosted Sage and Accord testnet proof. It exposes a human page and /api/agent-economy/review-pack as the machine-readable source for review scope, evidence, repositories, local commands, allowed language, forbidden claims, and mainnet gate rules. The pack is not an audit report and does not open mainnet readiness. It tells reviewers to inspect the full Sage receipt bundle, signed Accord L1 conformance evidence, provider signing key, observed testnet script identity, signer operations evidence, MCP endpoint, @ergoblockchain/sage-widget v0.3.0, and mainnet gate API. It keeps real-funds mainnet custody, third-party wallet internals, tenant deployments, exchange integrations, and unpublished production signer setup out of scope until separate review."
+      "content": "The Agent Economy Review Pack is the reviewer handoff for the hosted Sage and Accord testnet proof. It exposes a human page and /api/agent-economy/review-pack as the machine-readable source for review scope, evidence, repositories, local commands, allowed language, forbidden claims, and mainnet gate rules. The pack is not an audit report and does not open mainnet readiness. It tells reviewers to inspect the full Sage receipt bundle, signed Accord L1 conformance evidence, provider signing key, observed testnet script identity, signer operations evidence, MCP endpoint, @ergoblockchain/sage-widget v0.3.0, and mainnet gate API. Completed external artifacts should satisfy /agent-economy/external-audit-review.schema.v0.json and /agent-economy/mainnet-script-identity.schema.v0.json, and reviewers should follow docs/agent-economy-reviewer-handoff.md. It keeps real-funds mainnet custody, third-party wallet internals, tenant deployments, exchange integrations, and unpublished production signer setup out of scope until separate review."
     },
     {
       "id": "page:no-stripe-comparison",

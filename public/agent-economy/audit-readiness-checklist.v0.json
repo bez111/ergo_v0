@@ -15,7 +15,9 @@
     "public_review_pack": "https://www.ergoblockchain.org/agent-economy/review-pack",
     "public_review_pack_api": "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     "public_status_api": "https://www.ergoblockchain.org/api/agent-economy/live",
-    "public_mainnet_gate": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate"
+    "public_mainnet_gate": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate",
+    "external_audit_review_schema": "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
+    "mainnet_script_identity_schema": "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json"
   },
   "evidence_inputs": [
     {
