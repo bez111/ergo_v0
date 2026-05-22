@@ -12,6 +12,12 @@ claims without sliding into production or mainnet language.
 Live Hub
 https://www.ergoblockchain.org/agent-economy/live
 
+Human review pack
+https://www.ergoblockchain.org/agent-economy/review-pack
+
+Machine-readable review pack
+https://www.ergoblockchain.org/api/agent-economy/review-pack
+
 Live status API
 https://www.ergoblockchain.org/api/agent-economy/live
 

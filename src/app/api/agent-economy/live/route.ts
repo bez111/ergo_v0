@@ -109,7 +109,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -123,6 +123,9 @@ export async function GET(req: Request) {
     probeJson<{ ok?: boolean; service?: string }>(MCP_DNS_HEALTH_URL),
     probeJson<{ ok?: boolean; status?: string; blockers?: unknown[] }>(
       `${siteBaseUrl}/api/agent-economy/mainnet-gate`,
+    ),
+    probeJson<{ ok?: boolean; status?: string; type?: string }>(
+      `${siteBaseUrl}/api/agent-economy/review-pack`,
     ),
   ])
 
@@ -265,6 +268,15 @@ export async function GET(req: Request) {
           : "Closed until audit-bound script identity and external review evidence are published",
       "/api/agent-economy/mainnet-gate",
     ),
+    gate(
+      "audit-review-pack",
+      "Review pack",
+      reviewPack.ok && reviewPack.data?.ok === true ? "live" : "degraded",
+      reviewPack.ok && reviewPack.data?.ok === true
+        ? "External review handoff pack is published"
+        : reviewPack.error ?? "review pack endpoint unavailable",
+      "/agent-economy/review-pack",
+    ),
   ]
   const lifecycle = buildLifecycle({
     accordLive: accord.ok && accord.data?.ok === true,
@@ -310,6 +322,7 @@ export async function GET(req: Request) {
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
       mainnet_gate_status: mainnetGateStatus,
+      review_pack_published: reviewPack.ok && reviewPack.data?.ok === true,
     },
     mainnet_gate: mainnetGate.data?.blockers ? mainnetGate.data : {
       ok: true,
@@ -373,6 +386,7 @@ export async function GET(req: Request) {
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),
+      audit_review_pack: publicProbe(reviewPack),
     },
   }
 

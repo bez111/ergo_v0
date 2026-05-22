@@ -57,6 +57,7 @@ interface LiveStatusResponse {
     sage_settlement_count: number
     sage_signer_status?: string
     mainnet_gate_status?: string
+    review_pack_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -100,6 +101,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "mcp-fly": Network,
   "mcp-dns": Globe2,
   "mainnet-audit-gate": AlertTriangle,
+  "audit-review-pack": ShieldCheck,
   playground: Code2,
 }
 
@@ -329,6 +331,13 @@ export function AgentEconomyLiveClient() {
                         className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-yellow-100 hover:text-white"
                       >
                         Trust gate
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
+                      <Link
+                        href="/agent-economy/review-pack"
+                        className="ml-4 mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-yellow-100 hover:text-white"
+                      >
+                        Review pack
                         <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
@@ -576,6 +585,7 @@ function skeletonGates(): LiveGate[] {
     "mcp-dns",
     "playground",
     "mainnet-audit-gate",
+    "audit-review-pack",
   ].map((id) => ({
     id,
     label: "Live gate",

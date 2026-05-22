@@ -105,6 +105,13 @@ export default function AgentEconomyTrustPage() {
                     <FileJson2 className="h-4 w-4" />
                   </Link>
                   <Link
+                    href="/agent-economy/review-pack"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Review pack
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
                     href="/agent-economy/live"
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >

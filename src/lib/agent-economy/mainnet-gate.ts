@@ -89,6 +89,8 @@ export const agentEconomyMainnetGate = {
       "https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json",
     audit_readiness_checklist:
       "https://www.ergoblockchain.org/agent-economy/audit-readiness-checklist.v0.json",
+    review_pack: "https://www.ergoblockchain.org/agent-economy/review-pack",
+    review_pack_api: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     signer_ops_evidence:
       "https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json",
     external_audit_review_template:

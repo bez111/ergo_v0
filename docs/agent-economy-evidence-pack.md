@@ -14,6 +14,12 @@ https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.js
 latest_evidence_summary
 https://www.ergoblockchain.org/evidence/sage/latest-evidence.json
 
+review_pack
+https://www.ergoblockchain.org/agent-economy/review-pack
+
+review_pack_api
+https://www.ergoblockchain.org/api/agent-economy/review-pack
+
 testnet_script_identity
 https://www.ergoblockchain.org/agent-economy/script-identity-manifest.v0.json
 

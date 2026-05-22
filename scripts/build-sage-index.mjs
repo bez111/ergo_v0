@@ -176,6 +176,15 @@ const CURATED = [
       "The agent payment quickstart shows the shortest path for developers: install @ergoblockchain/sage-widget, request a Sage quote, emit a portable payment intent for a host-owned wallet flow, create an Ergo testnet Note, verify the Note box id, stream the paid Sage answer, and fetch the full receipt bundle. It emphasizes testnet-only posture, no widget-side signing, and /api/sage/receipt/<id> as the source of truth for Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON.",
   },
   {
+    id: "page:agent-economy-review-pack",
+    type: "page",
+    url: "/agent-economy/review-pack",
+    title: "Agent Economy external review pack",
+    tags: "audit, external review, mainnet gate, evidence pack, Sage, Accord",
+    content:
+      "The Agent Economy Review Pack is the reviewer handoff for the hosted Sage and Accord testnet proof. It exposes a human page and /api/agent-economy/review-pack as the machine-readable source for review scope, evidence, repositories, local commands, allowed language, forbidden claims, and mainnet gate rules. The pack is not an audit report and does not open mainnet readiness. It tells reviewers to inspect the full Sage receipt bundle, signed Accord L1 conformance evidence, provider signing key, observed testnet script identity, signer operations evidence, MCP endpoint, @ergoblockchain/sage-widget v0.3.0, and mainnet gate API. It keeps real-funds mainnet custody, third-party wallet internals, tenant deployments, exchange integrations, and unpublished production signer setup out of scope until separate review.",
+  },
+  {
     id: "page:no-stripe-comparison",
     type: "page",
     url: "/blog/agents-cant-use-stripe",

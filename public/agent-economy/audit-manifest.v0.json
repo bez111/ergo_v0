@@ -25,6 +25,8 @@
     "provider_signing_key": "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json",
     "script_identity_manifest": "https://www.ergoblockchain.org/agent-economy/script-identity-manifest.v0.json",
     "audit_scope_manifest": "https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json",
+    "review_pack": "https://www.ergoblockchain.org/agent-economy/review-pack",
+    "review_pack_api": "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     "signer_ops_evidence": "https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json",
     "external_audit_review_template": "https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json",
     "mainnet_script_identity_template": "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.manifest.template.json",

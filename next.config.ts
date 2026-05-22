@@ -200,6 +200,16 @@ const nextConfig: NextConfig = {
           destination: '/agent-economy/trust',
         },
         {
+          source: '/review-pack',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/agent-economy/review-pack',
+        },
+        {
+          source: '/review-pack',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/agent-economy/review-pack',
+        },
+        {
           source: '/quickstart',
           has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
           destination: '/build/agent-payments/quickstart',

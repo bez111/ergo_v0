@@ -44,6 +44,9 @@ const paths = [
   "public/agent-economy/signer-ops-evidence.v0.json",
   "public/agent-economy/external-audit-review.manifest.template.json",
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
+  "src/app/[locale]/agent-economy/review-pack/page.tsx",
+  "src/app/api/agent-economy/review-pack/route.ts",
+  "src/lib/agent-economy/review-pack.ts",
   "docs/audit-review-pack.md",
   "src/content/blog/ergo-live-proof-surface-agent-economy.md",
   "src/lib/agent-economy/mainnet-gate.ts",
@@ -87,6 +90,24 @@ assert(
   ),
   "audit manifest must link the mainnet script identity template",
 )
+assert(
+  auditManifest.artifacts?.review_pack?.includes("/agent-economy/review-pack"),
+  "audit manifest must link the human review pack",
+)
+assert(
+  auditManifest.artifacts?.review_pack_api?.includes("/api/agent-economy/review-pack"),
+  "audit manifest must link the machine-readable review pack",
+)
+
+const reviewPackSource = readText("src/lib/agent-economy/review-pack.ts")
+for (const required of [
+  "ready_for_external_review_not_audit_report",
+  "forbidden_language",
+  "reviewer_checklist",
+  "template_files_are_not_sufficient",
+]) {
+  assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
+}
 
 const gateSource = readText("src/lib/agent-economy/mainnet-gate.ts")
 assert(gateSource.includes('status: "closed"'), "mainnet gate must stay closed")
@@ -129,6 +150,8 @@ for (const required of [
 
 const reviewPack = readText("docs/audit-review-pack.md")
 for (const required of [
+  "/agent-economy/review-pack",
+  "/api/agent-economy/review-pack",
   "/agent-economy/external-audit-review.manifest.v0.json",
   "/agent-economy/mainnet-script-identity.manifest.v0.json",
   "The template files are intentionally not enough to open the gate.",

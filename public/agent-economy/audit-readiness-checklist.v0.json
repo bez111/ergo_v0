@@ -12,6 +12,8 @@
     "mcp_repo": "https://github.com/bez111/ergoblockchain-mcp",
     "accord_registry_repo": "https://github.com/accord-protocol/accord-protocol",
     "public_live_hub": "https://www.ergoblockchain.org/agent-economy/live",
+    "public_review_pack": "https://www.ergoblockchain.org/agent-economy/review-pack",
+    "public_review_pack_api": "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     "public_status_api": "https://www.ergoblockchain.org/api/agent-economy/live",
     "public_mainnet_gate": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate"
   },
