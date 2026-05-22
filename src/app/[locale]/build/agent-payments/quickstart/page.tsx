@@ -201,6 +201,13 @@ export default function AgentPaymentQuickstartPage() {
                     Open widget demo
                     <ArrowRight className="h-4 w-4" />
                   </Link>
+                  <Link
+                    href="/build/agent-payments/wallet-agent-runner"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Wallet runner
+                    <WalletCards className="h-4 w-4" />
+                  </Link>
                   <a
                     href="https://github.com/bez111/sage-widget"
                     target="_blank"

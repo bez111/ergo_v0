@@ -109,7 +109,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent, walletAgentPolicy] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent, walletAgentPolicy, walletAgentReferenceFlow] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -132,6 +132,9 @@ export async function GET(req: Request) {
     ),
     probeJson<{ ok?: boolean; type?: string; example_verdict?: { allowed?: boolean } }>(
       `${siteBaseUrl}/api/agent-economy/wallet-agent/policy-check`,
+    ),
+    probeJson<{ ok?: boolean; type?: string; status?: string }>(
+      `${siteBaseUrl}/api/agent-economy/wallet-agent/reference-flow`,
     ),
   ])
 
@@ -265,6 +268,17 @@ export async function GET(req: Request) {
       "/api/agent-economy/wallet-agent/policy-check",
     ),
     gate(
+      "wallet-agent-reference-flow",
+      "Wallet-agent reference flow",
+      walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true
+        ? "live"
+        : "degraded",
+      walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true
+        ? "Reference runner API is published for host-owned wallet flows"
+        : walletAgentReferenceFlow.error ?? "wallet-agent reference flow endpoint unavailable",
+      "/build/agent-payments/wallet-agent-runner",
+    ),
+    gate(
       "mcp-fly",
       "MCP Fly endpoint",
       mcpFly.ok && mcpFly.data?.ok === true ? "live" : "degraded",
@@ -349,6 +363,8 @@ export async function GET(req: Request) {
       wallet_agent_spec_published: walletAgent.ok && walletAgent.data?.ok === true,
       wallet_agent_policy_check_published:
         walletAgentPolicy.ok && walletAgentPolicy.data?.ok === true,
+      wallet_agent_reference_flow_published:
+        walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -416,6 +432,7 @@ export async function GET(req: Request) {
       sage_widget_npm: publicProbe(widgetNpm),
       wallet_agent_spec: publicProbe(walletAgent),
       wallet_agent_policy_check: publicProbe(walletAgentPolicy),
+      wallet_agent_reference_flow: publicProbe(walletAgentReferenceFlow),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),

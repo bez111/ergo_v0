@@ -3,6 +3,11 @@ import {
   WALLET_AGENT_POLICY_SCHEMA_URL,
   WALLET_AGENT_POLICY_TEMPLATE_URL,
 } from "./wallet-agent-policy"
+import {
+  WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
+  WALLET_AGENT_REFERENCE_FLOW_PAGE_URL,
+  WALLET_AGENT_REFERENCE_FLOW_URL,
+} from "./wallet-agent-reference-flow"
 
 export const agentEconomyWalletAgentSpec = {
   type: "ergo.agent_economy.wallet_agent_safety_spec.v0",
@@ -35,6 +40,9 @@ export const agentEconomyWalletAgentSpec = {
     policy_schema: WALLET_AGENT_POLICY_SCHEMA_URL,
     policy_template: WALLET_AGENT_POLICY_TEMPLATE_URL,
     policy_check_api: WALLET_AGENT_POLICY_CHECK_URL,
+    reference_flow_page: WALLET_AGENT_REFERENCE_FLOW_PAGE_URL,
+    reference_flow_api: WALLET_AGENT_REFERENCE_FLOW_URL,
+    reference_flow_manifest: WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     sage_widget: "https://www.ergoblockchain.org/agent-economy/sage-widget",
     agent_payment_quickstart: "https://www.ergoblockchain.org/build/agent-payments/quickstart",
@@ -164,6 +172,12 @@ export const agentEconomyWalletAgentSpec = {
     "Never claim mainnet readiness before external review and audit-bound script identity exist.",
   ],
   integration_surfaces: [
+    {
+      id: "reference_flow",
+      label: "Reference runner",
+      role: "Shows the practical host-owned wallet-agent flow from policy profile to exact signing request and receipt retention.",
+      href: WALLET_AGENT_REFERENCE_FLOW_PAGE_URL,
+    },
     {
       id: "policy_check_api",
       label: "Policy-check API",

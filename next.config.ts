@@ -200,6 +200,26 @@ const nextConfig: NextConfig = {
           destination: '/agent-economy/wallet-agent',
         },
         {
+          source: '/wallet-agent-runner',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/build/agent-payments/wallet-agent-runner',
+        },
+        {
+          source: '/wallet-agent-runner',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/build/agent-payments/wallet-agent-runner',
+        },
+        {
+          source: '/runner',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/build/agent-payments/wallet-agent-runner',
+        },
+        {
+          source: '/runner',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/build/agent-payments/wallet-agent-runner',
+        },
+        {
           source: '/trust',
           has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
           destination: '/agent-economy/trust',
@@ -268,6 +288,16 @@ const nextConfig: NextConfig = {
           source: '/api/wallet-agent/policy-check',
           has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
           destination: '/api/agent-economy/wallet-agent/policy-check',
+        },
+        {
+          source: '/api/wallet-agent/reference-flow',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/api/agent-economy/wallet-agent/reference-flow',
+        },
+        {
+          source: '/api/wallet-agent/reference-flow',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/api/agent-economy/wallet-agent/reference-flow',
         },
         {
           source: '/',

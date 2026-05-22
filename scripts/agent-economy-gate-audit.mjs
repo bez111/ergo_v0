@@ -48,14 +48,18 @@ const paths = [
   "public/agent-economy/mainnet-script-identity.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.profile.template.json",
+  "public/agent-economy/wallet-agent-reference-flow.v0.json",
+  "src/app/[locale]/build/agent-payments/wallet-agent-runner/page.tsx",
   "src/app/[locale]/agent-economy/review-pack/page.tsx",
   "src/app/[locale]/agent-economy/wallet-agent/page.tsx",
   "src/app/api/agent-economy/review-pack/route.ts",
   "src/app/api/agent-economy/wallet-agent/route.ts",
   "src/app/api/agent-economy/wallet-agent/policy-check/route.ts",
+  "src/app/api/agent-economy/wallet-agent/reference-flow/route.ts",
   "src/lib/agent-economy/review-pack.ts",
   "src/lib/agent-economy/wallet-agent.ts",
   "src/lib/agent-economy/wallet-agent-policy.ts",
+  "src/lib/agent-economy/wallet-agent-reference-flow.ts",
   "docs/audit-review-pack.md",
   "docs/agent-economy-reviewer-handoff.md",
   "src/content/blog/ergo-live-proof-surface-agent-economy.md",
@@ -133,6 +137,7 @@ for (const required of [
   "wallet_agent_safety_spec",
   "wallet_agent_policy_schema",
   "wallet_agent_policy_check_api",
+  "wallet_agent_reference_flow_api",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
 }
@@ -144,6 +149,7 @@ for (const required of [
   "wallet-agent-policy.schema.v0.json",
   "wallet-agent-policy.profile.template.json",
   "policy-check",
+  "reference_flow_api",
   "Never expose seed phrases",
   "prompt text override policy",
   "receipt bundle",
@@ -176,6 +182,28 @@ assert(
 assert(
   walletAgentPolicySchema.properties?.receipt_retention?.properties?.required?.const === true,
   "wallet-agent policy schema must require receipt retention",
+)
+
+const walletAgentReferenceSource = readText("src/lib/agent-economy/wallet-agent-reference-flow.ts")
+for (const required of [
+  "ergo.agent_economy.wallet_agent_reference_flow.v0",
+  "simulate_exact_transaction",
+  "ask_host_wallet_to_sign",
+  "retain_receipt_bundle",
+  "The site does not custody funds",
+  "Remote prompt text cannot override",
+]) {
+  assert(walletAgentReferenceSource.includes(required), `wallet-agent reference flow is missing: ${required}`)
+}
+
+const walletAgentReferenceManifest = readJson("public/agent-economy/wallet-agent-reference-flow.v0.json")
+assert(
+  walletAgentReferenceManifest.type === "ergo.agent_economy.wallet_agent_reference_flow.v0",
+  "wallet-agent reference manifest must bind the flow type",
+)
+assert(
+  walletAgentReferenceManifest.mainnet_ready === false,
+  "wallet-agent reference manifest must keep mainnet_ready false",
 )
 
 const externalReviewSchema = readJson("public/agent-economy/external-audit-review.schema.v0.json")
@@ -230,6 +258,7 @@ for (const required of [
   "Testnet script identity",
   "Signer ops evidence",
   "Wallet-agent policy check",
+  "Wallet-agent reference runner",
   "Audit scope manifest",
   "completed = 4",
   "pending = 2",
@@ -247,6 +276,8 @@ for (const required of [
   "/agent-economy/external-audit-review.schema.v0.json",
   "/agent-economy/mainnet-script-identity.schema.v0.json",
   "/agent-economy/wallet-agent-policy.schema.v0.json",
+  "/agent-economy/wallet-agent-reference-flow.v0.json",
+  "/api/agent-economy/wallet-agent/reference-flow",
   "/api/agent-economy/wallet-agent/policy-check",
   "The template files are intentionally not enough to open the gate.",
 ]) {

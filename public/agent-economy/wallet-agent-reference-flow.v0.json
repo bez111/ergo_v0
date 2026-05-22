@@ -1,0 +1,33 @@
+{
+  "type": "ergo.agent_economy.wallet_agent_reference_flow.v0",
+  "version": "v0",
+  "status": "testnet_reference_flow",
+  "mainnet_ready": false,
+  "summary": "A host-owned wallet-agent flow for Ergo testnet: load local policy, request or accept payment intent, run policy-check, simulate an exact transaction, ask the wallet to sign, broadcast, verify, and retain the receipt.",
+  "public_entrypoints": {
+    "human_page": "https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner",
+    "machine_api": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/reference-flow",
+    "policy_schema": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json",
+    "policy_template": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json",
+    "policy_check_api": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check",
+    "sage_widget": "https://www.ergoblockchain.org/agent-economy/sage-widget",
+    "receipt_api": "https://www.ergoblockchain.org/api/sage/receipt/{receiptId}"
+  },
+  "stages": [
+    "load_policy_profile",
+    "fetch_or_receive_payment_intent",
+    "normalize_proposed_action",
+    "request_policy_verdict",
+    "simulate_exact_transaction",
+    "ask_host_wallet_to_sign",
+    "broadcast_simulated_transaction",
+    "verify_note_or_receipt",
+    "retain_receipt_bundle"
+  ],
+  "hard_boundaries": [
+    "The site does not custody funds.",
+    "The policy-check API does not sign transactions.",
+    "A remote prompt cannot override local policy.",
+    "Mainnet remains disabled until external review and audit-bound script identity exist."
+  ]
+}

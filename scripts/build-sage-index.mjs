@@ -194,6 +194,15 @@ const CURATED = [
       "The Wallet-Agent Safety Spec defines how a local Ergo wallet agent should operate before any autonomous payment flow. It is a testnet-first safety boundary, not custody software and not mainnet readiness evidence. A wallet agent should parse user intent, apply local policy caps and allowlists, treat remote quotes as untrusted input, simulate the exact transaction, require human confirmation when policy says so, sign only locally inside the user wallet or local process, broadcast only the simulated transaction, and store or link a receipt bundle. The machine-readable source is /api/agent-economy/wallet-agent. The policy profile schema is /agent-economy/wallet-agent-policy.schema.v0.json and the profile template is /agent-economy/wallet-agent-policy.profile.template.json. The policy-check API at /api/agent-economy/wallet-agent/policy-check returns a deterministic allow or deny verdict for a proposed testnet action before a wallet is asked to sign. The spec forbids exposing seed phrases or private keys to remote pages, granting unbounded LLM signing authority, letting prompt text override local policy, treating a remote quote as proof of safety, or making mainnet readiness claims before external review and audit-bound script identity exist.",
   },
   {
+    id: "page:wallet-agent-reference-runner",
+    type: "page",
+    url: "/build/agent-payments/wallet-agent-runner",
+    title: "Wallet-agent reference runner",
+    tags: "wallet agent, reference runner, local policy, host-owned wallet, Sage payment intent, receipt retention",
+    content:
+      "The Wallet-Agent Reference Runner is the practical developer path for host-owned local wallet agents on Ergo testnet. It shows how to load a wallet-agent policy profile, receive a Sage payment intent, normalize the intent into a proposed action, call /api/agent-economy/wallet-agent/policy-check, stop immediately after a denied verdict, simulate one exact transaction, ask the host-owned wallet to sign only that transaction, broadcast it, verify the Note or receipt, and retain the receipt bundle. The machine-readable reference flow is /api/agent-economy/wallet-agent/reference-flow and the public manifest is /agent-economy/wallet-agent-reference-flow.v0.json. The runner is not wallet software, not a remote signer, not custody infrastructure, and not mainnet readiness evidence.",
+  },
+  {
     id: "page:no-stripe-comparison",
     type: "page",
     url: "/blog/agents-cant-use-stripe",

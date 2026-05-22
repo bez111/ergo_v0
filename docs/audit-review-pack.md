@@ -36,6 +36,15 @@ https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.templat
 Wallet-agent policy-check API
 https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check
 
+Wallet-agent reference runner
+https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner
+
+Wallet-agent reference flow API
+https://www.ergoblockchain.org/api/agent-economy/wallet-agent/reference-flow
+
+Wallet-agent reference flow manifest
+https://www.ergoblockchain.org/agent-economy/wallet-agent-reference-flow.v0.json
+
 Full Sage receipt bundle
 https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 
@@ -88,6 +97,8 @@ The current review target is the hosted Sage/Accord testnet proof surface:
   or payment signer.
 - Wallet-agent safety spec and policy-check API only as local policy and
   simulation boundary evidence, not as wallet software.
+- Wallet-agent reference runner only as a host-owned wallet integration path,
+  not as a site-operated signer.
 - Published Sage widget v0.3 package only as an embeddable testnet proof
   surface. Wallet signing remains outside the widget until separately reviewed.
 
@@ -135,6 +146,8 @@ The review should answer these questions directly:
 - Does the wallet-agent policy-check API reject wrong-recipient, wrong-reserve,
   over-cap, stale-expiry, missing-receipt, or mainnet-disabled actions before a
   wallet is asked to sign?
+- Does the wallet-agent reference runner stop after a denied verdict and keep
+  all signing inside the host-owned wallet layer?
 - Are signer limits, failure logging, health checks, and failover procedures
   sufficient for the stated testnet pilot?
 - Does public wording stay inside "testnet proof" and avoid production or

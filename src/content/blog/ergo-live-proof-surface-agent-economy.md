@@ -224,6 +224,7 @@ Educational content becomes stronger when it can point into executable surfaces.
 | Testnet script identity | `/agent-economy/script-identity-manifest.v0.json` | Observed testnet wallet, Note, Reserve and settlement identity published. |
 | Signer ops evidence | `/agent-economy/signer-ops-evidence.v0.json` | Permanent testnet signer endpoint and operations evidence published. |
 | Wallet-agent policy check | `/api/agent-economy/wallet-agent/policy-check` | Machine-readable testnet policy verdict before any local wallet signing request. |
+| Wallet-agent reference runner | `/build/agent-payments/wallet-agent-runner` | Developer path from local policy to exact wallet signing request and receipt retention. |
 | Audit scope manifest | `/agent-economy/audit-scope-manifest.v0.json` | Draft review scope published. Not an independent audit report. |
 | ErgoScript Playground | `/build/playground` | Live developer surface. |
 | Mainnet gate | `/api/agent-economy/mainnet-gate` | Closed by design: 4 gates completed, 2 trust gates pending. |
@@ -268,6 +269,11 @@ The next wallet-agent layer is also now explicit: a policy profile schema,
 template and policy-check API. This gives future local agents a deterministic
 allow/deny surface for recipient, reserve, amount, expiry, task hash and receipt
 retention checks before a wallet is asked to sign.
+
+The reference runner then turns that contract into a developer sequence: load
+policy, receive payment intent, check the proposed action, simulate one exact
+transaction, keep signing inside the host-owned wallet layer, verify the Note and
+retain the receipt bundle.
 
 In machine-readable form, the mainnet gate now reports:
 
