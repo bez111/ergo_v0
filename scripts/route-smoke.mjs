@@ -8,6 +8,7 @@ const okRoutes = [
   "/agent-economy",
   "/agent-economy/live",
   "/agent-economy/sage-widget",
+  "/agent-economy/trust",
   "/blog/state-of-agent-payments-2026",
   "/build",
   "/build/agent-payments/quickstart",

@@ -51,6 +51,8 @@ interface LiveStatusResponse {
     accord_conformance_level?: string | null
     accord_conformance_evidence?: string | null
     accord_registry_merged?: boolean
+    sage_widget_npm_version?: string | null
+    sage_widget_npm_published?: boolean
     sage_wallet_event_count: number
     sage_settlement_count: number
     sage_signer_status?: string
@@ -322,6 +324,13 @@ export function AgentEconomyLiveClient() {
                         unlock is an audit-bound mainnet script identity plus
                         an external review artifact.
                       </p>
+                      <Link
+                        href="/agent-economy/trust"
+                        className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-yellow-100 hover:text-white"
+                      >
+                        Trust gate
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -371,6 +380,13 @@ export function AgentEconomyLiveClient() {
                         {status?.mainnet_gate?.public_claim ??
                           "Testnet live proof only until the required evidence is published."}
                       </p>
+                      <Link
+                        href="/agent-economy/trust"
+                        className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-red-100 hover:text-white"
+                      >
+                        Evidence pack
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
                     </div>
                     <span className="rounded-full border border-red-500/30 bg-red-500/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-red-100">
                       {status?.mainnet_gate?.status ?? "closed"}
@@ -422,7 +438,17 @@ export function AgentEconomyLiveClient() {
                       : "Blocked"
                 }
               />
-              <ProofTile icon={Network} label="MCP" value={gateStateLabel(gates.find((gate) => gate.id === "mcp-fly")?.state)} />
+              <ProofTile
+                icon={CircuitBoard}
+                label="Widget npm"
+                value={
+                  status?.summary.sage_widget_npm_published
+                    ? `${status.summary.sage_widget_npm_version ?? "v0.3"} live`
+                    : status?.summary.sage_widget_npm_version
+                      ? `${status.summary.sage_widget_npm_version} latest`
+                      : "pending"
+                }
+              />
               <ProofTile icon={WalletCards} label="Mainnet gate" value={status?.summary.mainnet_gate_status ?? "closed"} />
             </div>
           </div>
@@ -606,8 +632,8 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
     {
       id: "widget",
       label: "Embeddable widget",
-      state: "live",
-      detail: "Sage widget v0.3 source is prepared for payment intents and host-owned wallet flows.",
+      state: "pending",
+      detail: "Sage widget v0.3 source is prepared; npm Trusted Publishing is the remaining release gate.",
       evidence_href: "/agent-economy/sage-widget",
     },
     {

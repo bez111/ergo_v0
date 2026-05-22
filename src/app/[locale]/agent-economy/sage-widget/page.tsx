@@ -140,8 +140,8 @@ const statusItems: Array<{
   },
   {
     label: "npm",
-    value: "publish next",
-    detail: "Public npm latest remains v0.2.0 until the v0.3 package is published from the sage-widget repo.",
+    value: "trusted publish",
+    detail: "v0.3 publishes through GitHub Actions Trusted Publishing, avoiding local OTP prompts and long-lived npm tokens.",
     icon: PackageCheck,
     tone: "pending",
   },
@@ -266,15 +266,15 @@ export default function SageWidgetPage() {
                     <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                       Release posture
                     </div>
-                    <div className="mt-1 text-2xl font-bold text-white">v0.3 publish candidate</div>
+                    <div className="mt-1 text-2xl font-bold text-white">v0.3 trusted-publish ready</div>
                   </div>
                   <BadgeCheck className="h-9 w-9 text-orange-300" />
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-neutral-400">
-                  The source is ready for the v0.3 paid widget surface. npm
-                  publish is the next external step; the canonical Sage host
-                  remains a testnet proof, with mainnet wording closed behind
-                  audit evidence.
+                  The source is ready for the v0.3 paid widget surface. npm is
+                  now wired for GitHub Actions Trusted Publishing; the canonical
+                  Sage host remains a testnet proof, with mainnet wording closed
+                  behind audit evidence.
                 </p>
                 <div className="mt-5 rounded-md border border-white/10 bg-white/[0.03] p-3 font-mono text-xs text-neutral-300">
                   npm install @ergoblockchain/sage-widget

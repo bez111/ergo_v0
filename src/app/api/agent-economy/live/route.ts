@@ -80,6 +80,11 @@ interface SageRegistryProviderResponse {
   }
 }
 
+interface NpmPackageResponse {
+  name?: string
+  version?: string
+}
+
 interface LifecycleStage {
   id: string
   label: string
@@ -96,13 +101,15 @@ const MCP_FLY_HEALTH_URL = "https://ergoblockchain-mcp.fly.dev/health"
 const MCP_DNS_HEALTH_URL = "https://mcp.ergoblockchain.org/health"
 const SAGE_REGISTRY_URL =
   "https://raw.githubusercontent.com/accord-protocol/accord-protocol/main/registry/providers/sage.json"
+const SAGE_WIDGET_NPM_URL = "https://registry.npmjs.org/@ergoblockchain%2Fsage-widget/latest"
+const SAGE_WIDGET_TARGET_VERSION = "0.3.0"
 
 export async function GET(req: Request) {
   const started = Date.now()
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, mcpFly, mcpDns, mainnetGate] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -111,6 +118,7 @@ export async function GET(req: Request) {
     probeJson<SageRegistryEvidenceResponse>(`${siteBaseUrl}/evidence/sage/latest-evidence.json`),
     probeJson<SageRegistryProviderResponse>(SAGE_REGISTRY_URL),
     probeJson<SageSignerHealthResponse>(`${siteBaseUrl}/api/sage/signer-health`),
+    probeJson<NpmPackageResponse>(SAGE_WIDGET_NPM_URL),
     probeJson<{ ok?: boolean; service?: string; version?: string }>(MCP_FLY_HEALTH_URL),
     probeJson<{ ok?: boolean; service?: string }>(MCP_DNS_HEALTH_URL),
     probeJson<{ ok?: boolean; status?: string; blockers?: unknown[] }>(
@@ -145,6 +153,8 @@ export async function GET(req: Request) {
   const registryMerged = registry.data?.conformance?.level === conformanceLevel &&
     registry.data?.conformance?.result_uri === conformanceHref &&
     registry.data?.live_proof?.latest_full_receipt_bundle?.receipt_id === conformanceReceiptId
+  const widgetNpmVersion = widgetNpm.data?.version ?? null
+  const widgetPublished = Boolean(widgetNpm.ok && widgetNpmVersion && isAtLeastVersion(widgetNpmVersion, SAGE_WIDGET_TARGET_VERSION))
 
   const gates = [
     gate(
@@ -215,8 +225,12 @@ export async function GET(req: Request) {
     gate(
       "sage-widget",
       "Sage widget",
-      "live",
-      "v0.3 source is prepared with payment intents, wallet launcher hooks, React, vanilla, typed API clients, and receipt callbacks",
+      widgetPublished ? "live" : "pending",
+      widgetPublished
+        ? `npm latest ${widgetNpmVersion} exposes payment intents, wallet launcher hooks, React, vanilla, typed API clients, and receipt callbacks`
+        : widgetNpmVersion
+          ? `Source v${SAGE_WIDGET_TARGET_VERSION} is ready; npm latest is still ${widgetNpmVersion}`
+          : widgetNpm.error ?? "Source is ready; npm registry probe is not reporting latest version",
       "/agent-economy/sage-widget",
     ),
     gate(
@@ -260,6 +274,8 @@ export async function GET(req: Request) {
     conformancePassed,
     conformanceLevel,
     conformanceHref,
+    widgetPublished,
+    widgetNpmVersion,
     mcpFlyLive: mcpFly.ok && mcpFly.data?.ok === true,
     mcpDnsLive: mcpDns.ok && mcpDns.data?.ok === true,
     mainnetGateStatus,
@@ -288,6 +304,8 @@ export async function GET(req: Request) {
       accord_conformance_level: conformancePassed ? conformanceLevel : null,
       accord_conformance_evidence: conformancePassed ? conformanceHref : null,
       accord_registry_merged: registryMerged,
+      sage_widget_npm_version: widgetNpmVersion,
+      sage_widget_npm_published: widgetPublished,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -331,6 +349,12 @@ export async function GET(req: Request) {
         owner: "ops",
         blocked_by_external: true,
       }]),
+      ...(widgetPublished ? [] : [{
+        id: "sage-widget-npm",
+        label: "Publish @ergoblockchain/sage-widget v0.3.0 through npm Trusted Publishing",
+        owner: "release",
+        blocked_by_external: true,
+      }]),
       ...mainnetBlockers.map((blocker) => ({
         id: blocker.id,
         label: blocker.label,
@@ -345,6 +369,7 @@ export async function GET(req: Request) {
       accord_conformance_evidence: publicProbe(conformanceEvidence),
       accord_registry: publicProbe(registry),
       sage_signer: publicProbe(signer),
+      sage_widget_npm: publicProbe(widgetNpm),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),
@@ -441,6 +466,19 @@ function trimSlash(value: string) {
   return value.replace(/\/+$/, "")
 }
 
+function isAtLeastVersion(version: string, target: string) {
+  const parse = (value: string) => value.split(".").map((part) => Number.parseInt(part, 10) || 0)
+  const currentParts = parse(version)
+  const targetParts = parse(target)
+  for (let i = 0; i < Math.max(currentParts.length, targetParts.length); i += 1) {
+    const current = currentParts[i] ?? 0
+    const required = targetParts[i] ?? 0
+    if (current > required) return true
+    if (current < required) return false
+  }
+  return true
+}
+
 function buildLifecycle(opts: {
   accordLive: boolean
   settlementCount: number
@@ -449,6 +487,8 @@ function buildLifecycle(opts: {
   conformancePassed: boolean
   conformanceLevel: string | null
   conformanceHref: string
+  widgetPublished: boolean
+  widgetNpmVersion: string | null
   mcpFlyLive: boolean
   mcpDnsLive: boolean
   mainnetGateStatus: string
@@ -517,8 +557,10 @@ function buildLifecycle(opts: {
     {
       id: "widget",
       label: "Embeddable widget",
-      state: "live",
-      detail: "Sage widget v0.3 source is prepared for host-owned wallet flows; npm publish is the next external step.",
+      state: opts.widgetPublished ? "live" : "pending",
+      detail: opts.widgetPublished
+        ? `Sage widget ${opts.widgetNpmVersion ?? "v0.3"} is published for host-owned wallet flows.`
+        : "Sage widget v0.3 source is prepared; npm Trusted Publishing setup is the next release gate.",
       evidence_href: "/agent-economy/sage-widget",
     },
     {
