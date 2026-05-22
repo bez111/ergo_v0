@@ -266,9 +266,13 @@ export function DevServicesClient() {
                 </div>
                 <div className="mt-5 grid grid-cols-2 gap-2">
                   <ProbeBadge label="Site" probe={index?.probes.site_health} />
+                  <ProbeBadge label="Agent" probe={index?.probes.agent_live} />
+                  <ProbeBadge label="Policy" probe={index?.probes.wallet_agent_policy} />
+                  <ProbeBadge label="Runner" probe={index?.probes.wallet_agent_reference_flow} />
                   <ProbeBadge label="MCP" probe={index?.probes.mcp_health} />
                   <ProbeBadge label="Blob" probe={index?.probes.receipt_storage} />
                   <ProbeBadge label="Accord" probe={index?.probes.sage_accord} />
+                  <ProbeBadge label="Lab" probe={index?.probes.wallet_agent_policy_playground} />
                 </div>
               </div>
             </div>

@@ -18,12 +18,24 @@ export async function GET(req: Request) {
   const services = serializableDevServices()
   const faucetConfigured = isFaucetConfigured()
 
-  const [siteHealth, agentLive, receiptStorage, sageAccord, mcpHealth] = await Promise.all([
+  const [
+    siteHealth,
+    agentLive,
+    receiptStorage,
+    sageAccord,
+    mcpHealth,
+    walletAgentPolicy,
+    walletAgentReferenceFlow,
+    walletAgentPolicyPlayground,
+  ] = await Promise.all([
     probe(`${origin}/api/health`),
     probe(`${origin}/api/agent-economy/live`),
     probe(`${origin}/api/sage/receipt/blob-probe-2026-05-16`),
     probe(`${origin}/api/sage/accord`),
     probe("https://mcp.ergoblockchain.org/health"),
+    probe(`${origin}/api/agent-economy/wallet-agent/policy-check`),
+    probe(`${origin}/api/agent-economy/wallet-agent/reference-flow`),
+    probe(`${origin}/build/agent-payments/policy-playground`),
   ])
 
   return NextResponse.json(
@@ -58,6 +70,9 @@ export async function GET(req: Request) {
         receipt_storage: receiptStorage,
         sage_accord: sageAccord,
         mcp_health: mcpHealth,
+        wallet_agent_policy: walletAgentPolicy,
+        wallet_agent_reference_flow: walletAgentReferenceFlow,
+        wallet_agent_policy_playground: walletAgentPolicyPlayground,
       },
     },
     {

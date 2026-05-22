@@ -6,6 +6,11 @@
 
 - `GET /api/dev/services` returns the service catalog, status counts, and lightweight probes.
 - `GET /api/dev/tools` returns tool examples.
+- `GET /api/agent-economy/wallet-agent/policy-check` returns the policy-check contract and example request.
+- `POST /api/agent-economy/wallet-agent/policy-check` returns deterministic allow/deny verdicts for wallet-agent actions.
+- `GET /api/agent-economy/wallet-agent/reference-flow` returns the reference flow for policy, simulation, local signing, verification, and receipt retention.
+- `/build/agent-payments/policy-playground` is the interactive version of the policy-check contract.
+- `/build/agent-payments/wallet-agent-runner` is the human-readable runner walkthrough.
 - `POST /api/dev/tools` runs stateless helpers:
   - `hash` for Blake2b-256 over UTF-8 or hex bytes.
   - `address` for Ergo address validation and ErgoTree extraction.
