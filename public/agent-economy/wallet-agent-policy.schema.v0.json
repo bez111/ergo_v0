@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json",
+  "title": "Ergo Wallet-Agent Policy Profile v0",
+  "description": "A testnet-first local policy profile for Ergo wallet agents. This schema describes limits and allowlists before any host-owned wallet signs a transaction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "agent_id",
+    "network",
+    "daily_spend_cap",
+    "per_action_spend_cap",
+    "max_fee",
+    "allowed_recipients",
+    "allowed_reserves",
+    "allowed_actions",
+    "requires_human_confirmation_above",
+    "expiry_height_limit",
+    "receipt_retention"
+  ],
+  "properties": {
+    "type": {
+      "const": "ergo.agent_economy.wallet_agent_policy_profile.v0"
+    },
+    "version": {
+      "const": "v0"
+    },
+    "agent_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 96
+    },
+    "network": {
+      "enum": ["testnet", "mainnet-disabled"]
+    },
+    "daily_spend_cap": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]{1,9})?$"
+    },
+    "per_action_spend_cap": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]{1,9})?$"
+    },
+    "max_fee": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]{1,9})?$"
+    },
+    "allowed_recipients": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 256
+      }
+    },
+    "allowed_reserves": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 256
+      }
+    },
+    "allowed_actions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "quote",
+          "simulate",
+          "sign_specific_transaction",
+          "broadcast_simulated_transaction",
+          "verify_note",
+          "fetch_receipt"
+        ]
+      }
+    },
+    "requires_human_confirmation_above": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]{1,9})?$"
+    },
+    "expiry_height_limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10080
+    },
+    "receipt_retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "mode"],
+      "properties": {
+        "required": {
+          "type": "boolean",
+          "const": true
+        },
+        "mode": {
+          "enum": ["local_plus_public_url", "local_only", "public_url_only"]
+        }
+      }
+    }
+  }
+}

@@ -118,6 +118,13 @@ export default function WalletAgentPage() {
                     <FileJson2 className="h-4 w-4" />
                   </Link>
                   <Link
+                    href="/api/agent-economy/wallet-agent/policy-check"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Policy verdict
+                    <ShieldCheck className="h-4 w-4" />
+                  </Link>
+                  <Link
                     href="/agent-economy/sage-widget"
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >
@@ -273,6 +280,61 @@ export default function WalletAgentPage() {
                 </div>
               </div>
             </div>
+            <div className="mt-10">
+              <SectionHeader
+                eyebrow="Machine contract"
+                title="Policy verdict before wallet authority."
+                body={agentEconomyWalletAgentSpec.policy_contract.rule}
+              />
+              <div className="mt-8 grid gap-4 md:grid-cols-3">
+                <ContractLink
+                  icon={FileJson2}
+                  title="Policy schema"
+                  href={agentEconomyWalletAgentSpec.policy_contract.schema}
+                  body="Canonical JSON shape for caps, allowlists, expiry windows, and receipt retention."
+                />
+                <ContractLink
+                  icon={ReceiptText}
+                  title="Profile template"
+                  href={agentEconomyWalletAgentSpec.policy_contract.template}
+                  body="A testnet-first profile starter with explicit recipients, reserves, spend caps, and allowed actions."
+                />
+                <ContractLink
+                  icon={ShieldCheck}
+                  title="Policy-check API"
+                  href={agentEconomyWalletAgentSpec.policy_contract.check_api}
+                  body="Returns a machine-readable allow or deny verdict for a proposed local wallet action."
+                />
+              </div>
+              <div className="mt-5 grid gap-4 lg:grid-cols-[0.85fr_1.15fr]">
+                <div className="rounded-lg border border-red-500/20 bg-red-500/[0.035] p-5">
+                  <h2 className="text-lg font-bold text-white">Boundary claims</h2>
+                  <ul className="mt-4 space-y-3">
+                    {agentEconomyWalletAgentSpec.policy_contract.never_claims.map((claim) => (
+                      <li key={claim} className="flex gap-3 text-sm leading-relaxed text-neutral-300">
+                        <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-red-200" />
+                        <span>{claim}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <pre className="overflow-x-auto rounded-lg border border-white/10 bg-black/80 p-5 text-xs leading-relaxed text-neutral-300">
+{`POST /api/agent-economy/wallet-agent/policy-check
+{
+  "profile": "wallet-agent-policy.profile.v0",
+  "proposed_action": {
+    "network": "testnet",
+    "action": "sign_specific_transaction",
+    "amount": "0.005000000",
+    "recipient": "allowlisted testnet recipient",
+    "reserve": "allowlisted reserve",
+    "task_hash": "canonical agreement hash",
+    "receipt_expected": true
+  }
+}`}
+                </pre>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -374,6 +436,36 @@ function LanguagePanel({
         ))}
       </ul>
     </div>
+  )
+}
+
+function ContractLink({
+  icon: Icon,
+  title,
+  href,
+  body,
+}: {
+  icon: LucideIcon
+  title: string
+  href: string
+  body: string
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-lg border border-white/10 bg-black/70 p-5 transition-colors hover:border-orange-500/35 hover:bg-orange-500/[0.035]"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-orange-500/25 bg-orange-500/10">
+          <Icon className="h-5 w-5 text-orange-300" />
+        </div>
+        <ExternalLink className="h-4 w-4 text-orange-300" />
+      </div>
+      <h2 className="mt-5 text-lg font-bold text-white">{title}</h2>
+      <p className="mt-3 text-sm leading-relaxed text-neutral-400">{body}</p>
+    </a>
   )
 }
 

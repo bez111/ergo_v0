@@ -109,7 +109,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent, walletAgentPolicy] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -129,6 +129,9 @@ export async function GET(req: Request) {
     ),
     probeJson<{ ok?: boolean; status?: string; type?: string }>(
       `${siteBaseUrl}/api/agent-economy/wallet-agent`,
+    ),
+    probeJson<{ ok?: boolean; type?: string; example_verdict?: { allowed?: boolean } }>(
+      `${siteBaseUrl}/api/agent-economy/wallet-agent/policy-check`,
     ),
   ])
 
@@ -249,6 +252,19 @@ export async function GET(req: Request) {
       "/agent-economy/wallet-agent",
     ),
     gate(
+      "wallet-agent-policy",
+      "Wallet-agent policy check",
+      walletAgentPolicy.ok &&
+        walletAgentPolicy.data?.ok === true &&
+        walletAgentPolicy.data.example_verdict?.allowed === true
+        ? "live"
+        : "degraded",
+      walletAgentPolicy.ok && walletAgentPolicy.data?.ok === true
+        ? "Policy profile schema, template, and deterministic verdict API are published"
+        : walletAgentPolicy.error ?? "wallet-agent policy-check endpoint unavailable",
+      "/api/agent-economy/wallet-agent/policy-check",
+    ),
+    gate(
       "mcp-fly",
       "MCP Fly endpoint",
       mcpFly.ok && mcpFly.data?.ok === true ? "live" : "degraded",
@@ -331,6 +347,8 @@ export async function GET(req: Request) {
       sage_widget_npm_version: widgetNpmVersion,
       sage_widget_npm_published: widgetPublished,
       wallet_agent_spec_published: walletAgent.ok && walletAgent.data?.ok === true,
+      wallet_agent_policy_check_published:
+        walletAgentPolicy.ok && walletAgentPolicy.data?.ok === true,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -397,6 +415,7 @@ export async function GET(req: Request) {
       sage_signer: publicProbe(signer),
       sage_widget_npm: publicProbe(widgetNpm),
       wallet_agent_spec: publicProbe(walletAgent),
+      wallet_agent_policy_check: publicProbe(walletAgentPolicy),
       mcp_fly: publicProbe(mcpFly),
       mcp_dns: publicProbe(mcpDns),
       mainnet_gate: publicProbe(mainnetGate),

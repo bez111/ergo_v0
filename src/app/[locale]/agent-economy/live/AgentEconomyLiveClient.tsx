@@ -59,6 +59,7 @@ interface LiveStatusResponse {
     mainnet_gate_status?: string
     review_pack_published?: boolean
     wallet_agent_spec_published?: boolean
+    wallet_agent_policy_check_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -100,6 +101,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "sage-signer": ShieldCheck,
   "sage-widget": CircuitBoard,
   "wallet-agent-spec": WalletCards,
+  "wallet-agent-policy": ShieldCheck,
   "mcp-fly": Network,
   "mcp-dns": Globe2,
   "mainnet-audit-gate": AlertTriangle,
@@ -584,6 +586,7 @@ function skeletonGates(): LiveGate[] {
     "sage-signer",
     "sage-widget",
     "wallet-agent-spec",
+    "wallet-agent-policy",
     "mcp-fly",
     "mcp-dns",
     "playground",

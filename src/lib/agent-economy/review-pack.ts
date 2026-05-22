@@ -42,6 +42,12 @@ export const agentEconomyReviewPack = {
     review_pack_api: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     wallet_agent_safety_spec: "https://www.ergoblockchain.org/agent-economy/wallet-agent",
     wallet_agent_safety_spec_api: "https://www.ergoblockchain.org/api/agent-economy/wallet-agent",
+    wallet_agent_policy_schema:
+      "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json",
+    wallet_agent_policy_template:
+      "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json",
+    wallet_agent_policy_check_api:
+      "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check",
     external_audit_review_schema:
       "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
     mainnet_script_identity_schema:
@@ -60,7 +66,7 @@ export const agentEconomyReviewPack = {
       "Accord L1 conformance evidence and provider signing key publication",
       "MCP endpoint as public machine-facing infrastructure",
       "Sage widget v0.3.0 as host-owned wallet handoff surface",
-      "Wallet-agent safety spec for local policy, simulation, signing boundaries, and receipt retention",
+      "Wallet-agent safety spec and policy-check API for local policy, simulation, signing boundaries, and receipt retention",
       "Public wording and mainnet gate controls",
     ],
     excluded_until_separate_review: [
@@ -81,6 +87,7 @@ export const agentEconomyReviewPack = {
     "Verify that stale, unrelated, wrong-recipient, wrong-value, wrong-reserve, or replayed Notes cannot satisfy a premium Sage request.",
     "Verify that receipt completeness distinguishes full_receipt_bundle from chain_proof_only.",
     "Review signer policy limits, failure logging, failover posture, and redaction guarantees.",
+    "Verify that the wallet-agent policy-check API denies wrong-recipient, wrong-reserve, over-cap, stale-expiry, and missing-receipt actions before any signing request.",
     "Confirm that public site wording remains testnet-only until both pending mainnet gates are closed.",
     "Publish findings with severity, status, remediation reference, and residual risk.",
   ],

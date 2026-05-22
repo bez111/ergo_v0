@@ -1,0 +1,29 @@
+{
+  "type": "ergo.agent_economy.wallet_agent_policy_profile.v0",
+  "version": "v0",
+  "agent_id": "local-sage-agent-demo",
+  "network": "testnet",
+  "daily_spend_cap": "0.250000000",
+  "per_action_spend_cap": "0.050000000",
+  "max_fee": "0.002000000",
+  "allowed_recipients": [
+    "testnet_recipient_address_or_payment_endpoint"
+  ],
+  "allowed_reserves": [
+    "testnet_reserve_box_id_or_alias"
+  ],
+  "allowed_actions": [
+    "quote",
+    "simulate",
+    "sign_specific_transaction",
+    "broadcast_simulated_transaction",
+    "verify_note",
+    "fetch_receipt"
+  ],
+  "requires_human_confirmation_above": "0.010000000",
+  "expiry_height_limit": 720,
+  "receipt_retention": {
+    "required": true,
+    "mode": "local_plus_public_url"
+  }
+}

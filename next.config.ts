@@ -260,6 +260,16 @@ const nextConfig: NextConfig = {
           destination: '/api/agent-economy/live',
         },
         {
+          source: '/api/wallet-agent/policy-check',
+          has: [{ type: 'host' as const, value: 'agents.ergoblockchain.org' }],
+          destination: '/api/agent-economy/wallet-agent/policy-check',
+        },
+        {
+          source: '/api/wallet-agent/policy-check',
+          has: [{ type: 'host' as const, value: 'agenthub.ergoblockchain.org' }],
+          destination: '/api/agent-economy/wallet-agent/policy-check',
+        },
+        {
           source: '/',
           has: [{ type: 'host' as const, value: 'ergowatch.ergoblockchain.org' }],
           destination: '/ergo-watch',

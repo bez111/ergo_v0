@@ -1,6 +1,6 @@
 # Agent Economy Audit Review Pack
 
-Current status as of 2026-05-21: testnet live proof, not mainnet readiness.
+Current status as of 2026-05-22: testnet live proof, not mainnet readiness.
 
 This pack is the handoff for an external reviewer. Its job is to make the
 review boundary exact enough that the public site can keep making precise
@@ -23,6 +23,18 @@ https://www.ergoblockchain.org/api/agent-economy/live
 
 Mainnet gate API
 https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
+
+Wallet-agent safety spec
+https://www.ergoblockchain.org/agent-economy/wallet-agent
+
+Wallet-agent policy profile schema
+https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json
+
+Wallet-agent policy profile template
+https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json
+
+Wallet-agent policy-check API
+https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check
 
 Full Sage receipt bundle
 https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
@@ -74,7 +86,9 @@ The current review target is the hosted Sage/Accord testnet proof surface:
 - Agent Economy Live Hub status API and public claim controls.
 - MCP endpoint only as public machine-facing infrastructure, not as a custody
   or payment signer.
-- Published Sage widget v0.2 package only as an embeddable testnet proof
+- Wallet-agent safety spec and policy-check API only as local policy and
+  simulation boundary evidence, not as wallet software.
+- Published Sage widget v0.3 package only as an embeddable testnet proof
   surface. Wallet signing remains outside the widget until separately reviewed.
 
 Out of scope until explicitly added:
@@ -118,6 +132,9 @@ The review should answer these questions directly:
   proofs?
 - Can the signer be tricked into settling a transaction with a wrong recipient,
   wrong value, wrong Note, wrong reserve, or over-limit output?
+- Does the wallet-agent policy-check API reject wrong-recipient, wrong-reserve,
+  over-cap, stale-expiry, missing-receipt, or mainnet-disabled actions before a
+  wallet is asked to sign?
 - Are signer limits, failure logging, health checks, and failover procedures
   sufficient for the stated testnet pilot?
 - Does public wording stay inside "testnet proof" and avoid production or

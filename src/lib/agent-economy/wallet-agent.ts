@@ -1,3 +1,9 @@
+import {
+  WALLET_AGENT_POLICY_CHECK_URL,
+  WALLET_AGENT_POLICY_SCHEMA_URL,
+  WALLET_AGENT_POLICY_TEMPLATE_URL,
+} from "./wallet-agent-policy"
+
 export const agentEconomyWalletAgentSpec = {
   type: "ergo.agent_economy.wallet_agent_safety_spec.v0",
   version: "v0",
@@ -26,6 +32,9 @@ export const agentEconomyWalletAgentSpec = {
   entrypoints: {
     human_spec_page: "https://www.ergoblockchain.org/agent-economy/wallet-agent",
     machine_spec: "https://www.ergoblockchain.org/api/agent-economy/wallet-agent",
+    policy_schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+    policy_template: WALLET_AGENT_POLICY_TEMPLATE_URL,
+    policy_check_api: WALLET_AGENT_POLICY_CHECK_URL,
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     sage_widget: "https://www.ergoblockchain.org/agent-economy/sage-widget",
     agent_payment_quickstart: "https://www.ergoblockchain.org/build/agent-payments/quickstart",
@@ -90,6 +99,10 @@ export const agentEconomyWalletAgentSpec = {
     },
   ],
   policy_profile: {
+    type: "ergo.agent_economy.wallet_agent_policy_profile.v0",
+    schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+    template: WALLET_AGENT_POLICY_TEMPLATE_URL,
+    check_api: WALLET_AGENT_POLICY_CHECK_URL,
     required_fields: [
       "agent_id",
       "network",
@@ -114,6 +127,23 @@ export const agentEconomyWalletAgentSpec = {
       receipt_retention: "store receipt URL and hash locally",
     },
   },
+  policy_contract: {
+    status: "machine_checkable_v0",
+    schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+    template: WALLET_AGENT_POLICY_TEMPLATE_URL,
+    check_api: WALLET_AGENT_POLICY_CHECK_URL,
+    public_files: [
+      "wallet-agent-policy.schema.v0.json",
+      "wallet-agent-policy.profile.template.json",
+    ],
+    verdict_type: "ergo.agent_economy.wallet_agent_policy_verdict.v0",
+    rule: "The policy-check API returns a deterministic allow/deny verdict before any host-owned wallet is asked to sign.",
+    never_claims: [
+      "policy-check signs transactions",
+      "policy-check proves a transaction is safe on mainnet",
+      "policy-check replaces wallet UI confirmation",
+    ],
+  },
   transaction_checks: [
     "Network matches the policy profile.",
     "Receiver address matches the quoted receiver and local allowlist.",
@@ -134,6 +164,12 @@ export const agentEconomyWalletAgentSpec = {
     "Never claim mainnet readiness before external review and audit-bound script identity exist.",
   ],
   integration_surfaces: [
+    {
+      id: "policy_check_api",
+      label: "Policy-check API",
+      role: "Returns a machine-readable allow/deny verdict for a local policy profile and a proposed testnet action.",
+      href: WALLET_AGENT_POLICY_CHECK_URL,
+    },
     {
       id: "sage_widget",
       label: "Sage widget",
@@ -161,6 +197,7 @@ export const agentEconomyWalletAgentSpec = {
   ],
   acceptance_criteria: [
     "A wallet-agent implementation can serialize its policy profile before any transaction request.",
+    "A wallet-agent implementation can call the policy-check API and persist a rejected verdict reason.",
     "Every signing request references one exact simulated transaction.",
     "A rejected policy check is recorded with a machine-readable reason.",
     "A successful flow links to a full receipt bundle or clearly states chain_proof_only.",

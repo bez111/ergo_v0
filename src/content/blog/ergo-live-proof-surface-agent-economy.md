@@ -6,7 +6,7 @@ meta_description: "Ergoblockchain.org now exposes a live agent-economy proof sur
 excerpt: "The Ergo site is becoming more than a narrative website. It now exposes live agent-economy infrastructure: Sage full receipts, signed L1 evidence, MCP, Agent Hub, an ErgoScript playground and clear audit-gated mainnet boundaries."
 author: "Ergo Developer Relations"
 date_published: "2026-05-20"
-date_modified: "2026-05-20"
+date_modified: "2026-05-22"
 category: "Build Log"
 status: "Public site update. Live testnet proof, signed L1 evidence, audit-gated mainnet path."
 tags: ["Ergo", "Agent Economy", "Sage", "Accord Protocol", "MCP", "ErgoScript", "AI Agent Payments"]
@@ -223,6 +223,7 @@ Educational content becomes stronger when it can point into executable surfaces.
 | Accord evidence | `/evidence/sage/conformance-l1-2026-05-20.signed.json` | Signed L1 evidence published. |
 | Testnet script identity | `/agent-economy/script-identity-manifest.v0.json` | Observed testnet wallet, Note, Reserve and settlement identity published. |
 | Signer ops evidence | `/agent-economy/signer-ops-evidence.v0.json` | Permanent testnet signer endpoint and operations evidence published. |
+| Wallet-agent policy check | `/api/agent-economy/wallet-agent/policy-check` | Machine-readable testnet policy verdict before any local wallet signing request. |
 | Audit scope manifest | `/agent-economy/audit-scope-manifest.v0.json` | Draft review scope published. Not an independent audit report. |
 | ErgoScript Playground | `/build/playground` | Live developer surface. |
 | Mainnet gate | `/api/agent-economy/mainnet-gate` | Closed by design: 4 gates completed, 2 trust gates pending. |
@@ -239,6 +240,7 @@ Not claimed:
 - The current payment scripts are safe for real funds.
 - Testnet signer operations evidence equals production custody.
 - Signed L1 evidence equals full audit readiness.
+- The wallet-agent policy-check API is wallet software or mainnet custody.
 
 The correct public posture is:
 
@@ -261,6 +263,11 @@ Third, testnet script identity is now published as an observed manifest. Mainnet
 Fourth, external audit or review manifests need to exist before any mainnet claim.
 
 Finally, the Sage widget can move beyond activity feed embedding into a full paid widget: chat, quote, verify, receipt link and tenant config.
+
+The next wallet-agent layer is also now explicit: a policy profile schema,
+template and policy-check API. This gives future local agents a deterministic
+allow/deny surface for recipient, reserve, amount, expiry, task hash and receipt
+retention checks before a wallet is asked to sign.
 
 In machine-readable form, the mainnet gate now reports:
 
