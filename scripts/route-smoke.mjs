@@ -2,18 +2,26 @@
 
 const base = (process.env.BASE_URL || "http://localhost:3001").replace(/\/$/, "")
 const timeoutMs = Number(process.env.ROUTE_SMOKE_TIMEOUT_MS || 90_000)
+const isLocalBase = /^https?:\/\/(?:localhost|127\.0\.0\.1|\[::1\])(?::|$)/.test(base)
+const includeDeepDocs =
+  process.env.ROUTE_SMOKE_INCLUDE_DEEP_DOCS === "true" ||
+  (!isLocalBase && process.env.ROUTE_SMOKE_INCLUDE_DEEP_DOCS !== "false")
 
 const okRoutes = [
   "/",
   "/agent-economy",
   "/agent-economy/live",
+  "/agent-economy/launch-kit",
+  "/agent-economy/developer-launch-kit.schema.v0.json",
   "/agent-economy/review-pack",
   "/agent-economy/wallet-agent-policy.schema.v0.json",
+  "/agent-economy/wallet-agent-policy-check.schema.v0.json",
   "/agent-economy/wallet-agent-policy.profile.template.json",
   "/agent-economy/sage-widget",
   "/agent-economy/trust",
   "/agent-economy/wallet-agent",
   "/agent-economy/wallet-agent-reference-flow.v0.json",
+  "/api/agent-economy/launch-kit",
   "/api/agent-economy/wallet-agent/policy-check",
   "/api/agent-economy/wallet-agent/reference-flow",
   "/blog/state-of-agent-payments-2026",
@@ -33,12 +41,15 @@ const okRoutes = [
   "/docs/developers/cryptographic-primitives",
   "/docs/developers/data-model-apis",
   "/docs/developers/ergoscript-languages",
-  "/docs/developers/tooling/mosaik/simple-ui",
-  "/docs/ecosystem/financial/defi/duckpools",
-  "/docs/ecosystem/financial/defi/sigmafi",
   "/technology/nipopows",
   "/start",
   "/use/defi",
+]
+
+const deepDocsRoutes = [
+  "/docs/developers/tooling/mosaik/simple-ui",
+  "/docs/ecosystem/financial/defi/duckpools",
+  "/docs/ecosystem/financial/defi/sigmafi",
 ]
 
 const redirectRoutes = new Map([
@@ -51,6 +62,11 @@ const redirectRoutes = new Map([
 ])
 
 const failures = []
+const routesToCheck = includeDeepDocs ? [...okRoutes, ...deepDocsRoutes] : okRoutes
+
+if (!includeDeepDocs) {
+  console.log("skipping deep docs routes on local dev base; set ROUTE_SMOKE_INCLUDE_DEEP_DOCS=true for full route smoke")
+}
 
 async function fetchWithTimeout(url, options = {}) {
   const controller = new AbortController()
@@ -66,7 +82,7 @@ async function fetchWithTimeout(url, options = {}) {
   }
 }
 
-for (const route of okRoutes) {
+for (const route of routesToCheck) {
   let response
   let body = ""
   let fetchError = null

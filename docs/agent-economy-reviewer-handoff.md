@@ -59,6 +59,7 @@ Completed artifacts should satisfy these schemas:
 https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json
 https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json
 https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json
+https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
 https://www.ergoblockchain.org/agent-economy/wallet-agent-reference-flow.v0.json
 ```
 
@@ -77,8 +78,9 @@ template should fail review.
 5. Review stale/replayed/wrong-recipient/wrong-value/wrong-reserve/wrong-task
    Note rejection behavior.
 6. Review wallet-agent policy-check denial behavior for wrong recipient,
-   wrong reserve, over-cap amount, stale expiry, missing receipt retention, and
-   mainnet-disabled actions.
+   wrong reserve, over-cap amount, stale expiry, invalid task hash, missing
+   receipt retention, unknown profile or action fields, malformed decimal
+   strings, invalid receipt-retention modes, and mainnet-disabled actions.
 7. Confirm the policy playground demonstrates allowed and blocked verdicts
    without wallet authority, signing, or broadcast.
 8. Review the wallet-agent reference runner boundary: denied verdicts stop the

@@ -88,9 +88,9 @@ export const blogPosts: BlogPost[] = [
     slug: 'ergo-live-proof-surface-agent-economy',
     title: 'Ergoblockchain.org Is Becoming a Live Proof Surface for the Agent Economy',
     excerpt:
-      'The Ergo site is becoming more than a narrative website. It now exposes live agent-economy infrastructure: Sage full receipts, signed L1 evidence, MCP, Agent Hub, an ErgoScript playground and clear audit-gated mainnet boundaries.',
+      'The Ergo site is becoming more than a narrative website. It now exposes live agent-economy infrastructure: Sage full receipts, signed L1 evidence, MCP, an agent host, an ErgoScript playground and clear audit-gated mainnet boundaries.',
     date: '2026-05-20',
-    lastUpdated: '2026-05-20',
+    lastUpdated: '2026-05-22',
     author: authors['dev-relations']!,
     category: 'Build Log',
     readTime: 9,
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Sage now has a real Ergo testnet settlement trail, a full post-Blob receipt bundle, signed L1 conformance evidence, and a public receipt API.',
     date: '2026-05-15',
-    lastUpdated: '2026-05-20',
+    lastUpdated: '2026-05-22',
     author: authors['ergo-team']!,
     category: 'Build Log',
     readTime: 11,

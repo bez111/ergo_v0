@@ -1,9 +1,9 @@
 ---
 title: "Ergoblockchain.org Is Becoming a Live Proof Surface for the Agent Economy"
 slug: "/blog/ergo-live-proof-surface-agent-economy"
-seo_title: "Ergo Live Proof Surface: Sage Receipts, MCP, Accord Evidence and Agent Hub"
-meta_description: "Ergoblockchain.org now exposes a live agent-economy proof surface: Sage full receipt bundles, signed Accord L1 evidence, MCP, Agent Hub, ErgoScript Playground and explicit mainnet gates."
-excerpt: "The Ergo site is becoming more than a narrative website. It now exposes live agent-economy infrastructure: Sage full receipts, signed L1 evidence, MCP, Agent Hub, an ErgoScript playground and clear audit-gated mainnet boundaries."
+seo_title: "Ergo Live Proof Surface: Sage Receipts, MCP, Accord Evidence and Agent Host"
+meta_description: "Ergoblockchain.org now exposes a live agent-economy proof surface: Sage full receipt bundles, signed Accord L1 evidence, MCP, agents.ergoblockchain.org, ErgoScript Playground and explicit mainnet gates."
+excerpt: "The Ergo site is becoming more than a narrative website. It now exposes live agent-economy infrastructure: Sage full receipts, signed L1 evidence, MCP, an agent host, an ErgoScript playground and clear audit-gated mainnet boundaries."
 author: "Ergo Developer Relations"
 date_published: "2026-05-20"
 date_modified: "2026-05-22"
@@ -89,13 +89,13 @@ That is now live.
 A post-Blob paid Sage flow produced a settled full receipt bundle:
 
 ```text
-83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
+f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 ```
 
 Receipt API:
 
 ```text
-/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
+/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 ```
 
 That bundle stores the three objects that matter:
@@ -112,7 +112,7 @@ A blockchain transaction alone cannot reconstruct the full question, agreement t
 
 ## Sage L1 Accord evidence is signed
 
-The first post-Blob full receipt bundle was then used for an Accord conformance run.
+The current post-Blob full receipt bundle was then used for an Accord conformance run.
 
 Sage passed L1 network conformance against the public Accord endpoint:
 
@@ -123,7 +123,7 @@ Sage passed L1 network conformance against the public Accord endpoint:
 The signed artifact is published here:
 
 ```text
-/evidence/sage/conformance-l1-2026-05-20.signed.json
+/evidence/sage/conformance-l1-2026-05-21.signed.json
 ```
 
 The provider signing key is published here:
@@ -157,7 +157,7 @@ This gives the site a machine-facing entry point.
 
 Over time, that surface can expose receipt lookup, protocol status, developer discovery, payment tools and conformance evidence to compatible agent hosts.
 
-## Agent Hub is the cockpit
+## The Live Hub is the cockpit
 
 The human-facing side is the Agent Economy Live Hub:
 
@@ -220,7 +220,7 @@ Educational content becomes stronger when it can point into executable surfaces.
 | MCP endpoint | `mcp.ergoblockchain.org` | Live public infrastructure. |
 | Sage paid flow | Site chat widget | Live testnet proof. |
 | Sage receipt API | `/api/sage/receipt/{id}` | Full post-Blob bundle published. |
-| Accord evidence | `/evidence/sage/conformance-l1-2026-05-20.signed.json` | Signed L1 evidence published. |
+| Accord evidence | `/evidence/sage/conformance-l1-2026-05-21.signed.json` | Signed L1 evidence published. |
 | Testnet script identity | `/agent-economy/script-identity-manifest.v0.json` | Observed testnet wallet, Note, Reserve and settlement identity published. |
 | Signer ops evidence | `/agent-economy/signer-ops-evidence.v0.json` | Permanent testnet signer endpoint and operations evidence published. |
 | Wallet-agent policy check | `/api/agent-economy/wallet-agent/policy-check` | Machine-readable testnet policy verdict before any local wallet signing request. |

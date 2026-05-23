@@ -109,7 +109,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -126,6 +126,9 @@ export async function GET(req: Request) {
     ),
     probeJson<{ ok?: boolean; status?: string; type?: string }>(
       `${siteBaseUrl}/api/agent-economy/review-pack`,
+    ),
+    probeJson<{ ok?: boolean; status?: string; type?: string }>(
+      `${siteBaseUrl}/api/agent-economy/launch-kit`,
     ),
     probeJson<{ ok?: boolean; status?: string; type?: string }>(
       `${siteBaseUrl}/api/agent-economy/wallet-agent`,
@@ -245,6 +248,15 @@ export async function GET(req: Request) {
           ? `Source v${SAGE_WIDGET_TARGET_VERSION} is ready; npm latest is still ${widgetNpmVersion}`
           : widgetNpm.error ?? "Source is ready; npm registry probe is not reporting latest version",
       "/agent-economy/sage-widget",
+    ),
+    gate(
+      "developer-launch-kit",
+      "Developer launch kit",
+      launchKit.ok && launchKit.data?.ok === true ? "live" : "degraded",
+      launchKit.ok && launchKit.data?.ok === true
+        ? "Five-minute developer path and JSON launch manifest are published"
+        : launchKit.error ?? "developer launch kit endpoint unavailable",
+      "/agent-economy/launch-kit",
     ),
     gate(
       "wallet-agent-spec",
@@ -376,6 +388,7 @@ export async function GET(req: Request) {
       wallet_agent_reference_flow_published:
         walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true,
       wallet_agent_policy_playground_published: walletAgentPolicyPlayground.ok,
+      developer_launch_kit_published: launchKit.ok && launchKit.data?.ok === true,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -441,6 +454,7 @@ export async function GET(req: Request) {
       accord_registry: publicProbe(registry),
       sage_signer: publicProbe(signer),
       sage_widget_npm: publicProbe(widgetNpm),
+      developer_launch_kit: publicProbe(launchKit),
       wallet_agent_spec: publicProbe(walletAgent),
       wallet_agent_policy_check: publicProbe(walletAgentPolicy),
       wallet_agent_reference_flow: publicProbe(walletAgentReferenceFlow),

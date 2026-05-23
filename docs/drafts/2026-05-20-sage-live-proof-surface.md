@@ -65,7 +65,7 @@ That combination is the point.
 ## Suggested article structure
 
 1. The old web was narrative. The new site is evidence.
-2. The Agent Hub is the cockpit.
+2. The Agent Economy Live Hub is the cockpit.
 3. Sage is the first hosted testnet proof.
 4. Receipt storage is the difference between "a tx happened" and "this exact agreement was verified."
 5. Signed L1 evidence makes the claim machine-checkable.
@@ -78,7 +78,7 @@ That combination is the point.
 Short version:
 
 ```text
-The Ergo site is becoming a live proof surface for the agent economy. Sage now has a settled post-Blob full receipt bundle, signed L1 Accord evidence, public MCP, an Agent Hub, and explicit mainnet gates. The claim is not "mainnet ready." The claim is stronger because it is precise: testnet proof, public receipts, signed evidence, audit-gated path.
+The Ergo site is becoming a live proof surface for the agent economy. Sage now has a settled post-Blob full receipt bundle, signed L1 Accord evidence, public MCP, a dedicated agents.ergoblockchain.org host, and explicit mainnet gates. The claim is not "mainnet ready." The claim is stronger because it is precise: testnet proof, public receipts, signed evidence, audit-gated path.
 ```
 
 Tweet-size version:
@@ -90,7 +90,7 @@ Sage now has:
 - settled full receipt bundle
 - signed Accord L1 evidence
 - public MCP
-- Agent Hub
+- Agent Economy Live Hub
 - explicit mainnet gate
 
 Testnet proof first. Mainnet only after external review and audit-bound scripts.

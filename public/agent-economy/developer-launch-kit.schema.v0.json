@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
+  "title": "Ergo Agent Economy Developer Launch Kit API Response v0",
+  "description": "Machine-readable launch instructions for Ergo's testnet-first Agent Economy surfaces. Mainnet remains audit-gated.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ok",
+    "type",
+    "version",
+    "status",
+    "last_updated",
+    "public_claim",
+    "entrypoints",
+    "five_minute_path",
+    "api_recipes",
+    "npm",
+    "guardrails",
+    "open_gates"
+  ],
+  "properties": {
+    "ok": {
+      "type": "boolean",
+      "const": true
+    },
+    "type": {
+      "const": "ergo.agent_economy.developer_launch_kit.v0"
+    },
+    "version": {
+      "const": "v0"
+    },
+    "status": {
+      "enum": ["testnet_live_proof"]
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "public_claim": {
+      "type": "string",
+      "minLength": 24
+    },
+    "entrypoints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "human_page",
+        "machine_api",
+        "schema",
+        "policy_check_schema",
+        "agent_host",
+        "live_hub",
+        "developer_services",
+        "review_pack"
+      ],
+      "properties": {
+        "human_page": { "type": "string", "format": "uri" },
+        "machine_api": { "type": "string", "format": "uri" },
+        "schema": { "type": "string", "format": "uri" },
+        "policy_check_schema": { "type": "string", "format": "uri" },
+        "agent_host": { "type": "string", "format": "uri" },
+        "live_hub": { "type": "string", "format": "uri" },
+        "developer_services": { "type": "string", "format": "uri" },
+        "review_pack": { "type": "string", "format": "uri" }
+      }
+    },
+    "five_minute_path": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "$ref": "#/$defs/step" }
+    },
+    "api_recipes": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "$ref": "#/$defs/apiRecipe" }
+    },
+    "npm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["package", "version", "install", "surfaces"],
+      "properties": {
+        "package": {
+          "const": "@ergoblockchain/sage-widget"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "install": {
+          "type": "string",
+          "minLength": 16
+        },
+        "surfaces": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 8
+          }
+        }
+      }
+    },
+    "guardrails": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 16
+      }
+    },
+    "open_gates": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/gate" }
+    }
+  },
+  "$defs": {
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "href", "goal", "expected"],
+      "properties": {
+        "id": { "type": "string", "minLength": 3 },
+        "label": { "type": "string", "minLength": 3 },
+        "href": { "type": "string", "format": "uri" },
+        "goal": { "type": "string", "minLength": 16 },
+        "expected": { "type": "string", "minLength": 8 }
+      }
+    },
+    "apiRecipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "method", "url", "curl", "checks"],
+      "properties": {
+        "id": { "type": "string", "minLength": 3 },
+        "label": { "type": "string", "minLength": 3 },
+        "method": { "enum": ["GET", "POST"] },
+        "url": { "type": "string", "format": "uri" },
+        "curl": { "type": "string", "minLength": 12 },
+        "checks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 2
+          }
+        }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "owner", "href"],
+      "properties": {
+        "id": { "type": "string", "minLength": 3 },
+        "label": { "type": "string", "minLength": 3 },
+        "owner": { "type": "string", "minLength": 3 },
+        "href": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

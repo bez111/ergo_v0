@@ -26,6 +26,9 @@ export const agentEconomyReviewPack = {
   entrypoints: {
     human_review_page: "https://www.ergoblockchain.org/agent-economy/review-pack",
     machine_review_pack: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
+    developer_launch_kit: "https://www.ergoblockchain.org/agent-economy/launch-kit",
+    developer_launch_kit_api: "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
+    developer_launch_kit_schema: "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     trust_gate: "https://www.ergoblockchain.org/agent-economy/trust",
     mainnet_gate_api: "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate",
@@ -40,10 +43,16 @@ export const agentEconomyReviewPack = {
     ...agentEconomyMainnetGate.artifacts,
     review_pack_page: "https://www.ergoblockchain.org/agent-economy/review-pack",
     review_pack_api: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
+    developer_launch_kit: "https://www.ergoblockchain.org/agent-economy/launch-kit",
+    developer_launch_kit_api: "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
+    developer_launch_kit_schema:
+      "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
     wallet_agent_safety_spec: "https://www.ergoblockchain.org/agent-economy/wallet-agent",
     wallet_agent_safety_spec_api: "https://www.ergoblockchain.org/api/agent-economy/wallet-agent",
     wallet_agent_policy_schema:
       "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json",
+    wallet_agent_policy_check_schema:
+      "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json",
     wallet_agent_policy_template:
       "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json",
     wallet_agent_policy_check_api:
@@ -61,6 +70,7 @@ export const agentEconomyReviewPack = {
     mainnet_script_identity_schema:
       "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json",
     reviewer_handoff_doc: "https://github.com/bez111/ergo_v0/blob/main/docs/agent-economy-reviewer-handoff.md",
+    mcp_endpoint_runbook: "https://github.com/bez111/ergo_v0/blob/main/docs/mcp-endpoint-runbook.md",
     sage_widget_npm: "https://www.npmjs.com/package/@ergoblockchain/sage-widget/v/0.3.0",
   },
   review_scope: {
@@ -73,8 +83,9 @@ export const agentEconomyReviewPack = {
       "Observed Ergo testnet Reserve, Note, registers, and settlement identity",
       "Accord L1 conformance evidence and provider signing key publication",
       "MCP endpoint as public machine-facing infrastructure",
+      "Developer launch kit and service index as the public onboarding surface",
       "Sage widget v0.3.0 as host-owned wallet handoff surface",
-      "Wallet-agent safety spec, policy-check API, policy playground, and reference runner for local policy, simulation, signing boundaries, and receipt retention",
+      "Wallet-agent safety spec, policy-check API, policy playground, and reference runner for local policy, simulation, signing boundaries, strict decimal/task-hash validation, unknown-field rejection, and receipt retention",
       "Public wording and mainnet gate controls",
     ],
     excluded_until_separate_review: [
@@ -94,6 +105,7 @@ export const agentEconomyReviewPack = {
     "Verify that signed conformance evidence covers the same receipt id.",
     "Verify that stale, unrelated, wrong-recipient, wrong-value, wrong-reserve, or replayed Notes cannot satisfy a premium Sage request.",
     "Verify that receipt completeness distinguishes full_receipt_bundle from chain_proof_only.",
+    "Verify that wallet-agent policy-check rejects malformed decimals, negative spend, invalid task hashes, unknown profile/action fields, unknown allowed actions, invalid receipt-retention modes, and mainnet-disabled actions.",
     "Review signer policy limits, failure logging, failover posture, and redaction guarantees.",
     "Verify that the wallet-agent policy-check API denies wrong-recipient, wrong-reserve, over-cap, stale-expiry, and missing-receipt actions before any signing request.",
     "Verify that the wallet-agent policy playground demonstrates both allowed and blocked verdicts without touching wallet authority.",

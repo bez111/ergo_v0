@@ -1,5 +1,6 @@
 import {
   WALLET_AGENT_POLICY_CHECK_URL,
+  WALLET_AGENT_POLICY_CHECK_SCHEMA_URL,
   WALLET_AGENT_POLICY_SCHEMA_URL,
   WALLET_AGENT_POLICY_TEMPLATE_URL,
 } from "./wallet-agent-policy"
@@ -46,6 +47,7 @@ export const agentEconomyWalletAgentSpec = {
     reference_flow_manifest: WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
     policy_playground: WALLET_AGENT_POLICY_PLAYGROUND_URL,
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
+    developer_launch_kit: "https://www.ergoblockchain.org/agent-economy/launch-kit",
     sage_widget: "https://www.ergoblockchain.org/agent-economy/sage-widget",
     agent_payment_quickstart: "https://www.ergoblockchain.org/build/agent-payments/quickstart",
     review_pack: "https://www.ergoblockchain.org/agent-economy/review-pack",
@@ -108,11 +110,12 @@ export const agentEconomyWalletAgentSpec = {
       rule: "Store or link the receipt bundle so the user can prove what was authorized and settled.",
     },
   ],
-  policy_profile: {
-    type: "ergo.agent_economy.wallet_agent_policy_profile.v0",
-    schema: WALLET_AGENT_POLICY_SCHEMA_URL,
-    template: WALLET_AGENT_POLICY_TEMPLATE_URL,
-    check_api: WALLET_AGENT_POLICY_CHECK_URL,
+    policy_profile: {
+      type: "ergo.agent_economy.wallet_agent_policy_profile.v0",
+      schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+      check_request_schema: WALLET_AGENT_POLICY_CHECK_SCHEMA_URL,
+      template: WALLET_AGENT_POLICY_TEMPLATE_URL,
+      check_api: WALLET_AGENT_POLICY_CHECK_URL,
     required_fields: [
       "agent_id",
       "network",
@@ -140,10 +143,12 @@ export const agentEconomyWalletAgentSpec = {
   policy_contract: {
     status: "machine_checkable_v0",
     schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+    request_schema: WALLET_AGENT_POLICY_CHECK_SCHEMA_URL,
     template: WALLET_AGENT_POLICY_TEMPLATE_URL,
     check_api: WALLET_AGENT_POLICY_CHECK_URL,
     public_files: [
       "wallet-agent-policy.schema.v0.json",
+      "wallet-agent-policy-check.schema.v0.json",
       "wallet-agent-policy.profile.template.json",
     ],
     verdict_type: "ergo.agent_economy.wallet_agent_policy_verdict.v0",
@@ -158,9 +163,12 @@ export const agentEconomyWalletAgentSpec = {
     "Network matches the policy profile.",
     "Receiver address matches the quoted receiver and local allowlist.",
     "Reserve box id matches the quote and local allowlist.",
-    "Amount is less than both per-action and daily spend caps.",
-    "Task hash matches the canonical user intent and Agreement JSON.",
+    "Amount, spent_today, and fee are strict decimal strings with no scientific notation.",
+    "Amount is less than both per-action and daily spend caps, and spent_today is non-negative.",
+    "Task hash is canonical hex and matches the canonical user intent and Agreement JSON.",
     "Expiry height is inside the policy window.",
+    "Unknown policy or proposed-action fields fail closed.",
+    "Receipt-retention mode is explicit and valid.",
     "Registers match the expected Note contract fields.",
     "No extra outputs, token movements, or data inputs are present without policy permission.",
     "Fee is inside the configured limit.",

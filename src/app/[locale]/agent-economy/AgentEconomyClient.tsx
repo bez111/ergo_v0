@@ -22,6 +22,7 @@ import {
   Landmark,
   Cpu,
   WalletCards,
+  Rocket,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -91,6 +92,16 @@ const COCKPIT_ITEMS = [
     body: "React and vanilla paid widget package is published with payment intents, wallet launcher hooks, quote, Note verification, receipt links, tenant config, and typed callbacks.",
     href: "/agent-economy/sage-widget",
     action: "Embed Sage",
+  },
+  {
+    name: "Developer launch kit",
+    status: "Live path",
+    tone: "live",
+    icon: Rocket,
+    metric: "5-minute route",
+    body: "A practical developer path ties together live status, receipt bundles, policy checks, MCP, services, npm widget, and mainnet guardrails.",
+    href: "/agent-economy/launch-kit",
+    action: "Start here",
   },
   {
     name: "Wallet-agent spec",

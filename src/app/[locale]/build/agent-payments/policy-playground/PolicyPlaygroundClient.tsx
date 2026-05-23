@@ -12,13 +12,14 @@ import {
   XCircle,
 } from "lucide-react"
 import {
-  type WalletAgentPolicyProfile,
   type WalletAgentPolicyVerdict,
   walletAgentPolicyExampleRequest,
 } from "@/lib/agent-economy/wallet-agent-policy"
 
 type RecipientMode = "allowed" | "wrong"
 type ReserveMode = "allowed" | "wrong"
+type ProfileFault = "clean" | "unknown-field" | "bad-retention"
+type ActionFault = "clean" | "unknown-field" | "bad-spend"
 
 interface PlaygroundState {
   amount: string
@@ -30,6 +31,8 @@ interface PlaygroundState {
   taskHash: string
   humanConfirmed: boolean
   receiptExpected: boolean
+  profileFault: ProfileFault
+  actionFault: ActionFault
 }
 
 const allowedRecipient = "testnet_recipient_address_or_payment_endpoint"
@@ -57,6 +60,8 @@ const presets: Array<{
       taskHash: "9c5e7a16f4e8c2d2a8b74a0d8c2e91aa",
       humanConfirmed: false,
       receiptExpected: true,
+      profileFault: "clean",
+      actionFault: "clean",
     },
   },
   {
@@ -73,6 +78,8 @@ const presets: Array<{
       taskHash: "9c5e7a16f4e8c2d2a8b74a0d8c2e91aa",
       humanConfirmed: false,
       receiptExpected: true,
+      profileFault: "clean",
+      actionFault: "clean",
     },
   },
   {
@@ -89,12 +96,14 @@ const presets: Array<{
       taskHash: "9c5e7a16f4e8c2d2a8b74a0d8c2e91aa",
       humanConfirmed: false,
       receiptExpected: true,
+      profileFault: "clean",
+      actionFault: "clean",
     },
   },
   {
     id: "stale-no-receipt",
-    label: "Stale/no receipt",
-    description: "Expiry window is too long and receipt retention is missing.",
+    label: "Invalid hash/no receipt",
+    description: "Expiry window is too long, task hash is invalid, and receipt retention is missing.",
     state: {
       amount: "0.005000000",
       spentToday: "0.000000000",
@@ -105,6 +114,26 @@ const presets: Array<{
       taskHash: "short",
       humanConfirmed: false,
       receiptExpected: false,
+      profileFault: "clean",
+      actionFault: "clean",
+    },
+  },
+  {
+    id: "tampered-payload",
+    label: "Tampered payload",
+    description: "Unknown fields and malformed spend fail closed before signing.",
+    state: {
+      amount: "0.005000000",
+      spentToday: "0.000000000",
+      fee: "0.001000000",
+      recipientMode: "allowed",
+      reserveMode: "allowed",
+      expiryHeightDelta: 120,
+      taskHash: "9c5e7a16f4e8c2d2a8b74a0d8c2e91aa",
+      humanConfirmed: false,
+      receiptExpected: true,
+      profileFault: "unknown-field",
+      actionFault: "bad-spend",
     },
   },
 ]
@@ -116,20 +145,39 @@ export function PolicyPlaygroundClient() {
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState<"request" | "verdict" | null>(null)
 
-  const profile = walletAgentPolicyExampleRequest.profile satisfies WalletAgentPolicyProfile
-  const proposedAction = useMemo(() => ({
-    network: "testnet",
-    action: "sign_specific_transaction",
-    amount: state.amount,
-    spent_today: state.spentToday,
-    fee: state.fee,
-    recipient: state.recipientMode === "allowed" ? allowedRecipient : wrongRecipient,
-    reserve: state.reserveMode === "allowed" ? allowedReserve : wrongReserve,
-    expiry_height_delta: state.expiryHeightDelta,
-    task_hash: state.taskHash,
-    human_confirmed: state.humanConfirmed,
-    receipt_expected: state.receiptExpected,
-  }), [state])
+  const baseProfile = walletAgentPolicyExampleRequest.profile
+  const profile = useMemo(() => {
+    const next: Record<string, unknown> = { ...baseProfile }
+    if (state.profileFault === "unknown-field") {
+      next.remote_prompt_override = "try to raise the spending cap"
+    }
+    if (state.profileFault === "bad-retention") {
+      next.receipt_retention = {
+        required: true,
+        mode: "remote_only",
+      }
+    }
+    return next
+  }, [baseProfile, state.profileFault])
+  const proposedAction = useMemo(() => {
+    const next: Record<string, unknown> = {
+      network: "testnet",
+      action: "sign_specific_transaction",
+      amount: state.amount,
+      spent_today: state.actionFault === "bad-spend" ? "-1.000000000" : state.spentToday,
+      fee: state.fee,
+      recipient: state.recipientMode === "allowed" ? allowedRecipient : wrongRecipient,
+      reserve: state.reserveMode === "allowed" ? allowedReserve : wrongReserve,
+      expiry_height_delta: state.expiryHeightDelta,
+      task_hash: state.taskHash,
+      human_confirmed: state.humanConfirmed,
+      receipt_expected: state.receiptExpected,
+    }
+    if (state.actionFault === "unknown-field") {
+      next.prompt_says_ignore_policy = true
+    }
+    return next
+  }, [state])
   const requestPayload = useMemo(() => ({
     profile,
     proposed_action: proposedAction,
@@ -250,6 +298,26 @@ export function PolicyPlaygroundClient() {
               <TextField label="Spent today" value={state.spentToday} onChange={(spentToday) => setState((prev) => ({ ...prev, spentToday }))} />
               <TextField label="Fee" value={state.fee} onChange={(fee) => setState((prev) => ({ ...prev, fee }))} />
               <ToggleGroup
+                label="Profile contract"
+                value={state.profileFault}
+                options={[
+                  { value: "clean", label: "strict" },
+                  { value: "unknown-field", label: "unknown" },
+                  { value: "bad-retention", label: "retention" },
+                ]}
+                onChange={(profileFault) => setState((prev) => ({ ...prev, profileFault }))}
+              />
+              <ToggleGroup
+                label="Action payload"
+                value={state.actionFault}
+                options={[
+                  { value: "clean", label: "strict" },
+                  { value: "unknown-field", label: "unknown" },
+                  { value: "bad-spend", label: "bad spend" },
+                ]}
+                onChange={(actionFault) => setState((prev) => ({ ...prev, actionFault }))}
+              />
+              <ToggleGroup
                 label="Recipient"
                 value={state.recipientMode}
                 options={[
@@ -341,10 +409,10 @@ export function PolicyPlaygroundClient() {
               <h2 className="text-lg font-bold text-white">Policy profile</h2>
             </div>
             <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-              <MiniStat label="Network" value={profile.network} />
-              <MiniStat label="Daily cap" value={profile.daily_spend_cap} />
-              <MiniStat label="Per action" value={profile.per_action_spend_cap} />
-              <MiniStat label="Max fee" value={profile.max_fee} />
+              <MiniStat label="Network" value={baseProfile.network} />
+              <MiniStat label="Daily cap" value={baseProfile.daily_spend_cap} />
+              <MiniStat label="Per action" value={baseProfile.per_action_spend_cap} />
+              <MiniStat label="Max fee" value={baseProfile.max_fee} />
             </div>
           </div>
         </div>

@@ -15,6 +15,7 @@ import {
   Network,
   Radio,
   ReceiptText,
+  Rocket,
   ShieldCheck,
   SlidersHorizontal,
   WalletCards,
@@ -63,6 +64,7 @@ interface LiveStatusResponse {
     wallet_agent_policy_check_published?: boolean
     wallet_agent_reference_flow_published?: boolean
     wallet_agent_policy_playground_published?: boolean
+    developer_launch_kit_published?: boolean
   }
   mainnet_gate?: {
     status: string
@@ -103,6 +105,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "accord-registry": GitBranch,
   "sage-signer": ShieldCheck,
   "sage-widget": CircuitBoard,
+  "developer-launch-kit": Rocket,
   "wallet-agent-spec": WalletCards,
   "wallet-agent-policy": ShieldCheck,
   "wallet-agent-reference-flow": GitBranch,
@@ -195,7 +198,7 @@ export function AgentEconomyLiveClient() {
                   </span>
                 </div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[0.96] text-white">
-                  Ergo Agent Economy
+                  Ergo Agent Economy{" "}
                   <span className="block text-orange-400">Live Hub</span>
                 </h1>
                 <p className="mt-7 max-w-3xl text-neutral-300 leading-relaxed text-lg">
@@ -210,6 +213,13 @@ export function AgentEconomyLiveClient() {
                     className="inline-flex items-center gap-2 rounded-lg border border-orange-500 bg-orange-500 px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-black transition-colors hover:bg-orange-400"
                   >
                     Build first flow
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="/agent-economy/launch-kit"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Launch kit
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
@@ -386,6 +396,13 @@ export function AgentEconomyLiveClient() {
                     className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-orange-200 hover:text-orange-100"
                   >
                     Quickstart
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link
+                    href="/agent-economy/launch-kit"
+                    className="ml-4 mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-widest text-orange-200 hover:text-orange-100"
+                  >
+                    Launch kit
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </div>
@@ -590,6 +607,7 @@ function skeletonGates(): LiveGate[] {
     "accord-registry",
     "sage-signer",
     "sage-widget",
+    "developer-launch-kit",
     "wallet-agent-spec",
     "wallet-agent-policy",
     "wallet-agent-reference-flow",
@@ -658,6 +676,13 @@ function fallbackLifecycle(): NonNullable<LiveStatusResponse["lifecycle"]> {
       state: "live",
       detail: "Sage widget v0.3.0 is published for payment intents and host-owned wallet flows.",
       evidence_href: "/agent-economy/sage-widget",
+    },
+    {
+      id: "launch-kit",
+      label: "Developer launch kit",
+      state: "live",
+      detail: "A five-minute developer path and JSON launch manifest are published.",
+      evidence_href: "/agent-economy/launch-kit",
     },
     {
       id: "mainnet",

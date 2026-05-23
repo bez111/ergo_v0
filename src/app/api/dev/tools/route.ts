@@ -73,7 +73,10 @@ export async function GET() {
       },
       receipt: {
         method: "POST",
-        body: { action: "receipt", input: "<sage-receipt-id>" },
+        body: {
+          action: "receipt",
+          input: "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+        },
       },
     },
   })

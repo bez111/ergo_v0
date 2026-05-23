@@ -1,5 +1,6 @@
 import {
   WALLET_AGENT_POLICY_CHECK_URL,
+  WALLET_AGENT_POLICY_CHECK_SCHEMA_URL,
   WALLET_AGENT_POLICY_SCHEMA_URL,
   WALLET_AGENT_POLICY_TEMPLATE_URL,
   walletAgentPolicyExampleRequest,
@@ -30,6 +31,7 @@ export const walletAgentReferenceFlow = {
     public_manifest: WALLET_AGENT_REFERENCE_FLOW_MANIFEST_URL,
     policy_playground: WALLET_AGENT_POLICY_PLAYGROUND_URL,
     policy_schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+    policy_check_schema: WALLET_AGENT_POLICY_CHECK_SCHEMA_URL,
     policy_template: WALLET_AGENT_POLICY_TEMPLATE_URL,
     policy_check_api: WALLET_AGENT_POLICY_CHECK_URL,
     sage_widget: "https://www.ergoblockchain.org/agent-economy/sage-widget",

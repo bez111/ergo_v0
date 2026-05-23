@@ -76,7 +76,7 @@ export default function LanguageSwitcher() {
         aria-label={t('switchLanguage') || 'Switch Language'}
       >
         <Globe className="h-4 w-4" />
-        <span className="hidden sm:inline">{currentLocaleConfig.name}</span>
+        <span className="hidden 2xl:inline">{currentLocaleConfig.name}</span>
         <ChevronDown 
           className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
         />
@@ -129,4 +129,4 @@ export default function LanguageSwitcher() {
       )}
     </div>
   );
-} 
+}

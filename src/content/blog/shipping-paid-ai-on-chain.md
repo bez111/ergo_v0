@@ -6,7 +6,7 @@ meta_description: "How Sage, the AI concierge on ergoblockchain.org, moved from 
 excerpt: "Sage now has a real Ergo testnet settlement trail and durable full receipt storage for new paid turns: Agreement JSON, Verification Receipt JSON, Settlement Receipt JSON, and a chain-anchored public receipt API."
 author: "Ergo Developer Relations"
 date_published: "2026-05-15"
-date_modified: "2026-05-20"
+date_modified: "2026-05-22"
 tags: ["Agent Economy", "Accord Protocol", "Sage", "build log", "Ergo testnet", "AI agent payments", "Claude", "Fleet SDK"]
 target_keywords: ["paid AI agent on blockchain", "Sage Ergo concierge", "Accord Protocol live demo", "AI agent on-chain payment", "agent economy working demo"]
 ---
@@ -32,7 +32,7 @@ f697e4841dd9a0c689d0b83a311130b85a0cfbab123230a6c40284b44c4cafef
 
 This post is the build log: what Sage does, what is proven, what is still deliberately not claimed, and what has to ship next before Sage can move from testnet proof to audited mainnet infrastructure.
 
-Update as of 2026-05-20: durable receipt storage is live, and Sage has produced a settled post-Blob full receipt bundle at [`/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3`](/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3). Sage L1 Accord conformance evidence is also signed and published at [`/evidence/sage/conformance-l1-2026-05-20.signed.json`](/evidence/sage/conformance-l1-2026-05-20.signed.json). The first settlement transaction above still predates storage, so it remains a chain-proof receipt.
+Update as of 2026-05-22: durable receipt storage is live, and Sage has produced a settled post-Blob full receipt bundle at [`/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81`](/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81). Sage L1 Accord conformance evidence is also signed and published at [`/evidence/sage/conformance-l1-2026-05-21.signed.json`](/evidence/sage/conformance-l1-2026-05-21.signed.json). The first settlement transaction above still predates storage, so it remains a chain-proof receipt.
 
 ## What Sage Does
 

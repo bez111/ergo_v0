@@ -71,6 +71,7 @@ Important status language:
 Canonical Agent Economy pages:
 
 - [Agent Economy](${BASE_URL}/agent-economy)
+- [Developer Launch Kit](${BASE_URL}/agent-economy/launch-kit) and [JSON Schema](${BASE_URL}/agent-economy/developer-launch-kit.schema.v0.json)
 - [Agent Economy Manifesto](${BASE_URL}/blog/agent-economy-manifesto)
 - [Agent Payment Architecture](${BASE_URL}/build/agent-payments)
 - [Developer Services](${BASE_URL}/build/services)

@@ -17,6 +17,7 @@ const IMAGES: ImageEntry[] = [
   // Hub pages
   { pageUrl: '/', imageLoc: '/og-image.png', title: 'Ergo — The Agentic Blockchain', caption: 'Layer-1 PoW blockchain for autonomous agent payments' },
   { pageUrl: '/agent-economy', imageLoc: '/og/agent-economy.jpg', title: 'Ergo Agent Economy — Notes, Reserves, Trackers', caption: 'Open-source stack for autonomous agent commerce' },
+  { pageUrl: '/agent-economy/launch-kit', imageLoc: '/og/agent-economy.jpg', title: 'Ergo Agent Economy Developer Launch Kit', caption: 'Five-minute path for live status, receipts, policy checks, MCP, and Sage widget' },
   { pageUrl: '/build/agent-payments', imageLoc: '/og/agent-economy.jpg', title: 'Agent Payment Architecture on Ergo', caption: 'Reserve + Note + Tracker + Acceptance Predicate primitives' },
   { pageUrl: '/build/quickstart', imageLoc: '/og/agent-economy.jpg', title: 'Agent Payment Quickstart — Fleet SDK in 10 minutes', caption: 'First Ergo transaction in under 10 minutes' },
   { pageUrl: '/build/services', imageLoc: '/og/hubs/developers.jpg', title: 'Ergo Developer Services', caption: 'Faucet, inspectors, receipt verifier, hash tool, and service status API' },

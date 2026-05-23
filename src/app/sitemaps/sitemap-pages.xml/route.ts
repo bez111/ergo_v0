@@ -47,6 +47,7 @@ export async function GET() {
     // Agent Economy & Build
     { url: '/agent-economy', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agent-economy/live', priority: 0.9, changefreq: 'hourly' as const },
+    { url: '/agent-economy/launch-kit', priority: 0.9, changefreq: 'weekly' as const },
     { url: '/agent-economy/sage-widget', priority: 0.8, changefreq: 'weekly' as const },
     { url: '/agent-economy/manifesto', priority: 0.8, changefreq: 'monthly' as const },
     { url: '/agent-economy/vs', priority: 0.8, changefreq: 'monthly' as const },

@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json",
+  "title": "Ergo Wallet-Agent Policy Check Request v0",
+  "description": "POST body schema for the testnet-first wallet-agent policy-check API. The same file also defines the policy verdict shape under $defs.policyVerdict.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile", "proposed_action"],
+  "properties": {
+    "profile": {
+      "$ref": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json"
+    },
+    "proposed_action": {
+      "$ref": "#/$defs/proposedAction"
+    }
+  },
+  "$defs": {
+    "decimalString": {
+      "type": "string",
+      "pattern": "^[0-9]+(\\.[0-9]{1,9})?$"
+    },
+    "proposedAction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "network",
+        "action",
+        "amount",
+        "spent_today",
+        "fee",
+        "recipient",
+        "reserve",
+        "expiry_height_delta",
+        "task_hash",
+        "human_confirmed",
+        "receipt_expected"
+      ],
+      "properties": {
+        "network": {
+          "const": "testnet"
+        },
+        "action": {
+          "enum": [
+            "quote",
+            "simulate",
+            "sign_specific_transaction",
+            "broadcast_simulated_transaction",
+            "verify_note",
+            "fetch_receipt"
+          ]
+        },
+        "amount": {
+          "$ref": "#/$defs/decimalString"
+        },
+        "spent_today": {
+          "$ref": "#/$defs/decimalString"
+        },
+        "fee": {
+          "$ref": "#/$defs/decimalString"
+        },
+        "recipient": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 256
+        },
+        "reserve": {
+          "type": "string",
+          "minLength": 8,
+          "maxLength": 256
+        },
+        "expiry_height_delta": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10080
+        },
+        "task_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{16,}$"
+        },
+        "human_confirmed": {
+          "type": "boolean"
+        },
+        "receipt_expected": {
+          "type": "boolean"
+        }
+      }
+    },
+    "policyVerdict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "ok",
+        "allowed",
+        "profile_id",
+        "checked_at",
+        "summary",
+        "reasons",
+        "warnings",
+        "normalized_action",
+        "policy_contract"
+      ],
+      "properties": {
+        "type": {
+          "const": "ergo.agent_economy.wallet_agent_policy_verdict.v0"
+        },
+        "ok": {
+          "type": "boolean",
+          "const": true
+        },
+        "allowed": {
+          "type": "boolean"
+        },
+        "profile_id": {
+          "type": ["string", "null"]
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "summary": {
+          "enum": [
+            "policy_allows_exact_testnet_action",
+            "policy_blocks_or_requires_more_information"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "normalized_action": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "network",
+            "action",
+            "amount",
+            "spent_today",
+            "fee",
+            "recipient",
+            "reserve",
+            "expiry_height_delta",
+            "task_hash",
+            "human_confirmed",
+            "receipt_expected"
+          ],
+          "properties": {
+            "network": { "type": ["string", "null"] },
+            "action": { "type": ["string", "null"] },
+            "amount": { "type": ["number", "null"] },
+            "spent_today": { "type": ["number", "null"] },
+            "fee": { "type": ["number", "null"] },
+            "recipient": { "type": ["string", "null"] },
+            "reserve": { "type": ["string", "null"] },
+            "expiry_height_delta": { "type": ["integer", "null"] },
+            "task_hash": { "type": ["string", "null"] },
+            "human_confirmed": { "type": "boolean" },
+            "receipt_expected": { "type": "boolean" }
+          }
+        },
+        "policy_contract": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["schema", "template", "check_api"],
+          "properties": {
+            "schema": { "type": "string", "format": "uri" },
+            "template": { "type": "string", "format": "uri" },
+            "check_api": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    }
+  }
+}

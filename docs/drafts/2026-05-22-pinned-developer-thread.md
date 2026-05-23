@@ -21,6 +21,12 @@ We now expose a live proof surface for developers:
 Start here:
 https://www.ergoblockchain.org/agent-economy/live
 
+Developer launch kit:
+https://www.ergoblockchain.org/agent-economy/launch-kit
+
+Launch kit schema:
+https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
 2/ The core idea is simple:
 
 An autonomous agent should not just "send a payment".
@@ -44,7 +50,7 @@ Premium Sage requests can produce a full receipt bundle:
 - on-chain testnet settlement trail
 
 Receipt API:
-https://www.ergoblockchain.org/api/sage/receipt/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
+https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 
 4/ The public receipt page is human-readable.
 
@@ -53,7 +59,7 @@ The API is the source of truth.
 That matters because screenshots do not scale to agent systems. Agents,
 wallets, dashboards, and review tools need stable JSON they can inspect.
 
-https://www.ergoblockchain.org/r/sage/83ac762fd75fbe702eec19ad74ec8ac696243ea889974de6eca92216937bb8d3
+https://www.ergoblockchain.org/r/sage/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81
 
 5/ We also published a machine-readable live status layer.
 
@@ -156,6 +162,9 @@ flows:
 - Live cockpit:
   https://agents.ergoblockchain.org
 
+- Developer launch kit:
+  https://www.ergoblockchain.org/agent-economy/launch-kit
+
 - Developer services:
   https://www.ergoblockchain.org/build/services
 
@@ -173,4 +182,3 @@ receipts, local wallet policy, and auditable settlement.
 Primitive by primitive.
 Receipt by receipt.
 No mainnet shortcuts.
-

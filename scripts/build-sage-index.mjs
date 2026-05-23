@@ -176,6 +176,15 @@ const CURATED = [
       "The agent payment quickstart shows the shortest path for developers: install @ergoblockchain/sage-widget, request a Sage quote, emit a portable payment intent for a host-owned wallet flow, create an Ergo testnet Note, verify the Note box id, stream the paid Sage answer, and fetch the full receipt bundle. It emphasizes testnet-only posture, no widget-side signing, and /api/sage/receipt/<id> as the source of truth for Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON.",
   },
   {
+    id: "page:agent-economy-launch-kit",
+    type: "page",
+    url: "/agent-economy/launch-kit",
+    title: "Agent Economy developer launch kit",
+    tags: "developer launch kit, agent economy, Sage, policy-check, receipts, MCP, widget",
+    content:
+      "The Agent Economy Developer Launch Kit is the shortest path for a developer to try the live Ergo agent-economy surfaces. It exposes a human page at /agent-economy/launch-kit, a machine-readable manifest at /api/agent-economy/launch-kit, and a JSON Schema at /agent-economy/developer-launch-kit.schema.v0.json. The launch kit points builders to /api/agent-economy/live for live status, agents.ergoblockchain.org/policy-playground for wallet-agent policy denial checks, /api/sage/receipt/<id> for full receipt bundles, /build/services for hashing and inspectors, mcp.ergoblockchain.org for MCP health and tool access, and @ergoblockchain/sage-widget v0.3.0 for React and vanilla embedding. It explicitly keeps public language testnet-first and says mainnet remains blocked until external review and audit-bound mainnet script identity are published.",
+  },
+  {
     id: "page:agent-economy-review-pack",
     type: "page",
     url: "/agent-economy/review-pack",
@@ -191,7 +200,7 @@ const CURATED = [
     title: "Wallet-agent safety spec",
     tags: "wallet agent, local signing, policy, simulation, agent payments, receipts",
     content:
-      "The Wallet-Agent Safety Spec defines how a local Ergo wallet agent should operate before any autonomous payment flow. It is a testnet-first safety boundary, not custody software and not mainnet readiness evidence. A wallet agent should parse user intent, apply local policy caps and allowlists, treat remote quotes as untrusted input, simulate the exact transaction, require human confirmation when policy says so, sign only locally inside the user wallet or local process, broadcast only the simulated transaction, and store or link a receipt bundle. The machine-readable source is /api/agent-economy/wallet-agent. The policy profile schema is /agent-economy/wallet-agent-policy.schema.v0.json and the profile template is /agent-economy/wallet-agent-policy.profile.template.json. The policy-check API at /api/agent-economy/wallet-agent/policy-check returns a deterministic allow or deny verdict for a proposed testnet action before a wallet is asked to sign. The spec forbids exposing seed phrases or private keys to remote pages, granting unbounded LLM signing authority, letting prompt text override local policy, treating a remote quote as proof of safety, or making mainnet readiness claims before external review and audit-bound script identity exist.",
+      "The Wallet-Agent Safety Spec defines how a local Ergo wallet agent should operate before any autonomous payment flow. It is a testnet-first safety boundary, not custody software and not mainnet readiness evidence. A wallet agent should parse user intent, apply local policy caps and allowlists, treat remote quotes as untrusted input, simulate the exact transaction, require human confirmation when policy says so, sign only locally inside the user wallet or local process, broadcast only the simulated transaction, and store or link a receipt bundle. The machine-readable source is /api/agent-economy/wallet-agent. The policy profile schema is /agent-economy/wallet-agent-policy.schema.v0.json, the policy-check request/verdict schema is /agent-economy/wallet-agent-policy-check.schema.v0.json, and the profile template is /agent-economy/wallet-agent-policy.profile.template.json. The policy-check API at /api/agent-economy/wallet-agent/policy-check returns a deterministic allow or deny verdict for a proposed testnet action before a wallet is asked to sign. The spec forbids exposing seed phrases or private keys to remote pages, granting unbounded LLM signing authority, letting prompt text override local policy, treating a remote quote as proof of safety, or making mainnet readiness claims before external review and audit-bound script identity exist.",
   },
   {
     id: "page:wallet-agent-reference-runner",
@@ -209,7 +218,7 @@ const CURATED = [
     title: "Wallet-agent policy playground",
     tags: "wallet agent, policy-check, playground, developer tool, allow deny verdict",
     content:
-      "The Wallet-Agent Policy Playground lets developers test the wallet-agent policy-check API interactively. A developer can change amount, spent_today, fee, recipient allowlist state, reserve allowlist state, expiry height delta, task hash, human confirmation, and receipt expectation, then inspect the live allow or deny verdict returned by /api/agent-economy/wallet-agent/policy-check. The playground demonstrates both allowed and blocked verdicts, including wrong recipient, wrong reserve, over cap amount, fee limit, stale expiry, short task hash, missing receipt, and human confirmation requirements. It is not a wallet connection, not a signer, not a broadcaster, and not custody infrastructure.",
+      "The Wallet-Agent Policy Playground lets developers test the wallet-agent policy-check API interactively. A developer can change amount, spent_today, fee, recipient allowlist state, reserve allowlist state, expiry height delta, task hash, human confirmation, and receipt expectation, then inspect the live allow or deny verdict returned by /api/agent-economy/wallet-agent/policy-check. The playground demonstrates both allowed and blocked verdicts, including wrong recipient, wrong reserve, over cap amount, fee limit, stale expiry, invalid task hash, missing receipt, and human confirmation requirements. The policy check also rejects unknown profile/action fields, unknown allowed actions, malformed decimal strings, negative spend, invalid receipt-retention modes, and mainnet-disabled actions. It is not a wallet connection, not a signer, not a broadcaster, and not custody infrastructure.",
   },
   {
     id: "page:no-stripe-comparison",

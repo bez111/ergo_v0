@@ -8,8 +8,6 @@ const localeHeaderName = 'X-NEXT-INTL-LOCALE';
 const internalLocaleRewriteHeader = 'X-ERGO-INTERNAL-LOCALE-REWRITE';
 const agentHubHosts = new Set([
   'agents.ergoblockchain.org',
-  'agenthub.ergoblockchain.org',
-  'agentichub.ergoblockchain.org',
 ]);
 const localePrefixes = new Set([
   'en', 'ru', 'zh-cn', 'zh-tw',
@@ -109,6 +107,7 @@ function getAgentHubPath(pathname: string): string | null {
   const route = `/${routeParts.join('/')}`;
   const aliases = new Map<string, string>([
     ['/live', '/agent-economy/live'],
+    ['/launch-kit', '/agent-economy/launch-kit'],
     ['/sage-widget', '/agent-economy/sage-widget'],
     ['/wallet-agent', '/agent-economy/wallet-agent'],
     ['/wallet-agent-runner', '/build/agent-payments/wallet-agent-runner'],

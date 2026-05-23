@@ -24,8 +24,7 @@ identity, signer operations, and audit artifacts are published.
 
 ## Product Shape
 
-- `agents.ergoblockchain.org` or `agenthub.ergoblockchain.org` becomes the
-  short entry point.
+- `agents.ergoblockchain.org` becomes the short entry point.
 - `/agent-economy/live` remains the canonical Live Hub route.
 - `/api/agent-economy/live` remains the machine-readable source for hub status.
 - `/api/sage/receipt/<id>` remains the single source of receipt truth.
@@ -61,13 +60,14 @@ Live in production:
 - Accord conformance evidence exporter.
 - Accord registry evidence is merged upstream for Sage L1.
 - Sage widget paid embed callbacks and receipt bundle fetch.
-- MCP DNS runbook.
+- Dedicated MCP endpoint runbook for DNS, health checks, smoke checks, and failure modes.
 - Published settled post-Blob full receipt bundle, permanent testnet signer, and signed Sage L1 conformance evidence.
 - Wallet-agent policy-check API.
 - Wallet-agent policy playground.
 - Wallet-agent reference runner.
-- Developer services index with live probes for Sage, MCP, wallet-agent policy, receipt storage, and Agent Hub surfaces.
+- Developer services index with live probes for Sage, MCP, wallet-agent policy, receipt storage, and agent host surfaces.
 - Production routes for `agents.ergoblockchain.org`.
+- Developer launch kit with a five-minute path, API recipes, npm widget surface, guardrails, machine-readable JSON, and JSON Schema.
 
 ## Final Public Language
 

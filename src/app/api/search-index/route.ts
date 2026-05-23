@@ -183,6 +183,18 @@ export async function GET() {
       schema: ['TechArticle', 'SoftwareApplication']
     },
     {
+      id: 'agent-economy-launch-kit',
+      type: 'page',
+      title: 'Agent Economy Developer Launch Kit',
+      description: 'A five-minute developer path and JSON Schema-backed contract for Ergo agent-economy surfaces: live status, receipt bundles, wallet-agent policy checks, MCP, services and Sage widget.',
+      url: '/agent-economy/launch-kit',
+      absoluteUrl: `${baseUrl}/agent-economy/launch-kit`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'agent economy launch kit, developer launch kit schema, Sage widget, policy-check, MCP, receipt bundle, Ergo developer services',
+      schema: ['TechArticle', 'SoftwareApplication']
+    },
+    {
       id: 'community',
       type: 'page',
       title: 'Community - No VC, No Premine, Built by Ergo Contributors',

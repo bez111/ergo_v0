@@ -20,6 +20,18 @@ https://www.ergoblockchain.org/agent-economy/review-pack
 review_pack_api
 https://www.ergoblockchain.org/api/agent-economy/review-pack
 
+developer_launch_kit
+https://www.ergoblockchain.org/agent-economy/launch-kit
+
+developer_launch_kit_api
+https://www.ergoblockchain.org/api/agent-economy/launch-kit
+
+developer_launch_kit_schema
+https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
+wallet_agent_policy_check_schema
+https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
+
 wallet_agent_safety_spec
 https://www.ergoblockchain.org/agent-economy/wallet-agent
 
@@ -53,6 +65,9 @@ https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.j
 reviewer_handoff
 https://github.com/bez111/ergo_v0/blob/main/docs/agent-economy-reviewer-handoff.md
 
+mcp_endpoint_runbook
+https://github.com/bez111/ergo_v0/blob/main/docs/mcp-endpoint-runbook.md
+
 mainnet_gate
 https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 ```
@@ -64,8 +79,10 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - Sage passed Accord L1 network conformance against that receipt.
 - The conformance result is signed by `provider://sage-ergoblockchain`.
 - A permanent testnet signer service is reachable and address-matched.
+- The MCP endpoint has a dedicated DNS, health, smoke, and failure-mode runbook.
 - The observed testnet wallet, reserve, note, registers, and settlement identifiers are published.
 - The public audit readiness checklist is published for an external reviewer.
+- The developer launch kit is published as a human page, JSON manifest, and JSON Schema.
 - The local wallet-agent safety boundary is published as a human page and JSON API.
 - The external review and mainnet script identity templates are published, but they are not completed artifacts.
 - The mainnet gate currently has 4 completed gates and 2 pending trust gates.

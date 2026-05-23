@@ -3,6 +3,8 @@
 Use this for the next deploy batch after local code/content changes. The
 post-Blob receipt and signed L1 evidence gates are already complete.
 
+Current local batch summary: [docs/current-batch-ledger.md](./current-batch-ledger.md).
+
 ## User-owned gates
 
 - [x] DNS resolves:
@@ -12,6 +14,8 @@ dig +short mcp.ergoblockchain.org A
 dig +short mcp.ergoblockchain.org AAAA
 curl -fsS https://mcp.ergoblockchain.org/health
 ```
+
+MCP operations reference: [docs/mcp-endpoint-runbook.md](./mcp-endpoint-runbook.md).
 
 - [x] One settled post-Blob paid Sage flow exists:
   `f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81`.
@@ -29,11 +33,30 @@ completeness = full_receipt_bundle
 
 ## Preflight
 
+Quick local gate while we are still batching changes and intentionally not
+deploying every step:
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0
+npm run preflight:batch
+```
+
+Final build gate for the deploy window:
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0
+npm run preflight:batch -- --build
+```
+
+Manual equivalent:
+
 ```bash
 cd /Users/alexanderbezkrovny/Desktop/ergo_v0
 npm run audit:claims
 npm run audit:blog
 npm run audit:agent-economy-gate
+npm run audit:agent-host
+npm run audit:locales
 npm run type-check
 npm run qa:mobile-crawl -- --discover-only --out artifacts/mobile-crawl/latest-discovery
 npx eslint src/proxy.ts \
@@ -51,6 +74,13 @@ Local route smoke before build, with the dev server running on port `3001`:
 ```bash
 npm run dev -- --port 3001
 npm run smoke:routes
+```
+
+The local dev smoke intentionally skips a few deep docs routes that are noisy in
+Turbopack dev mode. For a local production server after build, include them:
+
+```bash
+ROUTE_SMOKE_INCLUDE_DEEP_DOCS=true npm run smoke:routes
 ```
 
 Full mobile crawl gate after the local production server is running:
@@ -81,15 +111,20 @@ npm run smoke
 
 ```bash
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/live
+curl -fsS https://www.ergoblockchain.org/api/agent-economy/launch-kit
+curl -fsS https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 curl -fsS https://www.ergoblockchain.org/api/sage/signer-health
 curl -fsS https://www.ergoblockchain.org/agent-economy/live
+curl -fsS https://www.ergoblockchain.org/agent-economy/launch-kit
 npm run smoke:routes:prod
 ```
 
 Expected:
 
 - Live Hub page loads.
+- Developer Launch Kit page and JSON load.
 - `receipt-storage = live`.
 - `full-receipt-bundle = live` after paid flow.
 - `accord-conformance = live`.

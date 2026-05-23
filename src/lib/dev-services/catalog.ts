@@ -13,6 +13,7 @@ import {
   Hash,
   Network,
   ReceiptText,
+  Rocket,
   Search,
   ShieldCheck,
   SlidersHorizontal,
@@ -158,6 +159,22 @@ export const devServices: DevService[] = [
     notes: ["Feeds Agent Hub.", "Useful for dashboards, bots, and smoke checks."],
   },
   {
+    id: "agent-developer-launch-kit",
+    title: "Agent Economy Launch Kit",
+    summary: "Five-minute developer path across live status, policy checks, receipts, MCP, services, and widget embedding.",
+    href: "/agent-economy/launch-kit",
+    apiHref: "/api/agent-economy/launch-kit",
+    category: "agents",
+    state: "live",
+    latency: "instant",
+    icon: Rocket,
+    machineReadable: true,
+    notes: [
+      "Human page and JSON manifest share one source.",
+      "Keeps testnet proof and mainnet gate language explicit.",
+    ],
+  },
+  {
     id: "wallet-agent-policy-check",
     title: "Wallet-Agent Policy Check",
     summary: "Deterministic allow/deny verdicts for proposed wallet-agent actions before signing.",
@@ -170,6 +187,7 @@ export const devServices: DevService[] = [
     machineReadable: true,
     notes: [
       "Checks recipient, reserve, amount, fee, expiry, task hash, and receipt expectations.",
+      "Request and verdict schema: /agent-economy/wallet-agent-policy-check.schema.v0.json.",
       "Returns reasons and warnings only; it never signs or broadcasts.",
     ],
   },

@@ -2,12 +2,16 @@ import "server-only"
 import { getBlogCmsIndex } from "@/lib/blog-cms/storage"
 import { authors, blogPosts, type Author, type BlogPost } from "./blog-data"
 
+const supersededUploadedSlugs = new Set([
+  "agent-economy-live-proof-site-update",
+])
+
 export async function getPublishedUploadedBlogPosts(): Promise<BlogPost[]> {
   const index = await getBlogCmsIndex()
   const staticSlugs = new Set(blogPosts.map((post) => post.slug))
 
   return index.entries
-    .filter((entry) => !staticSlugs.has(entry.slug))
+    .filter((entry) => !staticSlugs.has(entry.slug) && !supersededUploadedSlugs.has(entry.slug))
     .map((entry) => ({
       id: entry.slug,
       slug: entry.slug,
@@ -48,4 +52,3 @@ function resolveAuthor(author: string): Author {
     }
   )
 }
-

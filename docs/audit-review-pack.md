@@ -18,6 +18,15 @@ https://www.ergoblockchain.org/agent-economy/review-pack
 Machine-readable review pack
 https://www.ergoblockchain.org/api/agent-economy/review-pack
 
+Developer launch kit
+https://www.ergoblockchain.org/agent-economy/launch-kit
+
+Machine-readable developer launch kit
+https://www.ergoblockchain.org/api/agent-economy/launch-kit
+
+Developer launch kit schema
+https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
 Live status API
 https://www.ergoblockchain.org/api/agent-economy/live
 
@@ -29,6 +38,9 @@ https://www.ergoblockchain.org/agent-economy/wallet-agent
 
 Wallet-agent policy profile schema
 https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json
+
+Wallet-agent policy-check request schema
+https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
 
 Wallet-agent policy profile template
 https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json
@@ -83,6 +95,9 @@ https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.j
 
 Reviewer handoff
 https://github.com/bez111/ergo_v0/blob/main/docs/agent-economy-reviewer-handoff.md
+
+MCP endpoint runbook
+https://github.com/bez111/ergo_v0/blob/main/docs/mcp-endpoint-runbook.md
 ```
 
 ## Review Boundary
@@ -149,8 +164,9 @@ The review should answer these questions directly:
 - Can the signer be tricked into settling a transaction with a wrong recipient,
   wrong value, wrong Note, wrong reserve, or over-limit output?
 - Does the wallet-agent policy-check API reject wrong-recipient, wrong-reserve,
-  over-cap, stale-expiry, missing-receipt, or mainnet-disabled actions before a
-  wallet is asked to sign?
+  over-cap, stale-expiry, invalid-task-hash, malformed decimal, unknown-field,
+  invalid receipt-retention, missing-receipt, or mainnet-disabled actions before
+  a wallet is asked to sign?
 - Does the policy playground demonstrate those allowed and blocked verdicts
   without asking for wallet authority?
 - Does the wallet-agent reference runner stop after a denied verdict and keep

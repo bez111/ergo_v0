@@ -4,6 +4,8 @@ export const WALLET_AGENT_POLICY_VERDICT_TYPE =
   "ergo.agent_economy.wallet_agent_policy_verdict.v0"
 export const WALLET_AGENT_POLICY_SCHEMA_URL =
   "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json"
+export const WALLET_AGENT_POLICY_CHECK_SCHEMA_URL =
+  "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json"
 export const WALLET_AGENT_POLICY_TEMPLATE_URL =
   "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.profile.template.json"
 export const WALLET_AGENT_POLICY_CHECK_URL =
@@ -19,6 +21,44 @@ export const WALLET_AGENT_ALLOWED_ACTIONS = [
 ] as const
 
 export type WalletAgentAllowedAction = (typeof WALLET_AGENT_ALLOWED_ACTIONS)[number]
+
+const DECIMAL_PATTERN = /^[0-9]+(\.[0-9]{1,9})?$/
+const TASK_HASH_PATTERN = /^[0-9a-fA-F]{16,}$/
+const RECEIPT_RETENTION_MODES = [
+  "local_plus_public_url",
+  "local_only",
+  "public_url_only",
+] as const
+
+const POLICY_PROFILE_KEYS = new Set([
+  "type",
+  "version",
+  "agent_id",
+  "network",
+  "daily_spend_cap",
+  "per_action_spend_cap",
+  "max_fee",
+  "allowed_recipients",
+  "allowed_reserves",
+  "allowed_actions",
+  "requires_human_confirmation_above",
+  "expiry_height_limit",
+  "receipt_retention",
+])
+
+const PROPOSED_ACTION_KEYS = new Set([
+  "network",
+  "action",
+  "amount",
+  "spent_today",
+  "fee",
+  "recipient",
+  "reserve",
+  "expiry_height_delta",
+  "task_hash",
+  "human_confirmed",
+  "receipt_expected",
+])
 
 export interface WalletAgentPolicyProfile {
   type: typeof WALLET_AGENT_POLICY_PROFILE_TYPE
@@ -42,9 +82,9 @@ export interface WalletAgentPolicyProfile {
 export interface WalletAgentProposedAction {
   network?: string
   action?: string
-  amount?: string | number
-  spent_today?: string | number
-  fee?: string | number
+  amount?: string
+  spent_today?: string
+  fee?: string
   recipient?: string
   reserve?: string
   expiry_height_delta?: number
@@ -66,7 +106,7 @@ export interface WalletAgentPolicyVerdict {
     network: string | null
     action: string | null
     amount: number | null
-    spent_today: number
+    spent_today: number | null
     fee: number | null
     recipient: string | null
     reserve: string | null
@@ -75,11 +115,12 @@ export interface WalletAgentPolicyVerdict {
     human_confirmed: boolean
     receipt_expected: boolean
   }
-  policy_contract: {
-    schema: string
-    template: string
-    check_api: string
-  }
+    policy_contract: {
+      schema: string
+      request_schema: string
+      template: string
+      check_api: string
+    }
 }
 
 export const walletAgentPolicyExampleRequest = {
@@ -139,12 +180,29 @@ export function evaluateWalletAgentPolicy(
   if (!profile) reasons.push("policy_profile_missing_or_invalid")
   if (!action) reasons.push("proposed_action_missing_or_invalid")
 
+  if (profile) {
+    const unknownProfileFields = unknownKeys(profile, POLICY_PROFILE_KEYS)
+    if (unknownProfileFields.length > 0) {
+      reasons.push("policy_profile_has_unknown_fields")
+      warnings.push(`unknown_policy_profile_fields:${unknownProfileFields.join(",")}`)
+    }
+  }
+  if (action) {
+    const unknownActionFields = unknownKeys(action, PROPOSED_ACTION_KEYS)
+    if (unknownActionFields.length > 0) {
+      reasons.push("proposed_action_has_unknown_fields")
+      warnings.push(`unknown_proposed_action_fields:${unknownActionFields.join(",")}`)
+    }
+  }
+
   const profileId = readString(profile, "agent_id")
   const profileNetwork = readString(profile, "network")
   const actionNetwork = readString(action, "network")
   const actionName = readString(action, "action")
   const amount = readDecimal(action?.amount)
-  const spentToday = readDecimal(action?.spent_today) ?? 0
+  const spentTodayInput = action?.spent_today
+  const spentTodayValue = spentTodayInput === undefined ? 0 : readDecimal(spentTodayInput)
+  const spentToday = spentTodayValue ?? 0
   const fee = readDecimal(action?.fee)
   const recipient = readString(action, "recipient")
   const reserve = readString(action, "reserve")
@@ -170,6 +228,12 @@ export function evaluateWalletAgentPolicy(
   }
 
   const allowedActions = readStringArray(profile?.allowed_actions)
+  const invalidAllowedActions = allowedActions.filter(
+    (item) => !WALLET_AGENT_ALLOWED_ACTIONS.includes(item as WalletAgentAllowedAction),
+  )
+  if (invalidAllowedActions.length > 0) {
+    reasons.push("policy_allowed_actions_include_unknown_values")
+  }
   if (!actionName) {
     reasons.push("action_missing")
   } else if (!WALLET_AGENT_ALLOWED_ACTIONS.includes(actionName as WalletAgentAllowedAction)) {
@@ -221,6 +285,10 @@ export function evaluateWalletAgentPolicy(
     }
   }
 
+  if (spentTodayInput !== undefined && (spentTodayValue === null || spentToday < 0)) {
+    reasons.push("spent_today_must_be_non_negative_decimal")
+  }
+
   if (fee === null || fee < 0) {
     reasons.push("fee_must_be_non_negative_decimal")
   } else if (maxFee === null || maxFee <= 0) {
@@ -238,8 +306,8 @@ export function evaluateWalletAgentPolicy(
     reasons.push("expiry_height_delta_exceeds_policy_limit")
   }
 
-  if (!taskHash || taskHash.length < 16) {
-    reasons.push("task_hash_missing_or_too_short")
+  if (!taskHash || !TASK_HASH_PATTERN.test(taskHash)) {
+    reasons.push("task_hash_must_be_hex_with_minimum_length")
   }
 
   const receiptRetention = isRecord(profile?.receipt_retention)
@@ -247,6 +315,12 @@ export function evaluateWalletAgentPolicy(
     : null
   if (receiptRetention?.required !== true) {
     reasons.push("receipt_retention_must_be_required")
+  } else if (
+    !RECEIPT_RETENTION_MODES.includes(
+      receiptRetention.mode as (typeof RECEIPT_RETENTION_MODES)[number],
+    )
+  ) {
+    reasons.push("receipt_retention_mode_invalid")
   } else if (!receiptExpected) {
     reasons.push("receipt_expected_must_be_true")
   }
@@ -275,7 +349,7 @@ export function evaluateWalletAgentPolicy(
       network: actionNetwork,
       action: actionName,
       amount,
-      spent_today: spentToday,
+      spent_today: spentTodayValue,
       fee,
       recipient,
       reserve,
@@ -286,6 +360,7 @@ export function evaluateWalletAgentPolicy(
     },
     policy_contract: {
       schema: WALLET_AGENT_POLICY_SCHEMA_URL,
+      request_schema: WALLET_AGENT_POLICY_CHECK_SCHEMA_URL,
       template: WALLET_AGENT_POLICY_TEMPLATE_URL,
       check_api: WALLET_AGENT_POLICY_CHECK_URL,
     },
@@ -307,12 +382,18 @@ function readStringArray(value: unknown) {
 }
 
 function readDecimal(value: unknown) {
-  if (typeof value !== "string" && typeof value !== "number") return null
-  const next = typeof value === "number" ? value : Number(value)
+  if (typeof value !== "string") return null
+  const trimmed = value.trim()
+  if (!DECIMAL_PATTERN.test(trimmed)) return null
+  const next = Number(trimmed)
   return Number.isFinite(next) ? next : null
 }
 
 function readInteger(value: unknown) {
   if (typeof value !== "number" || !Number.isInteger(value)) return null
   return value
+}
+
+function unknownKeys(record: Record<string, unknown>, allowed: Set<string>) {
+  return Object.keys(record).filter((key) => !allowed.has(key))
 }

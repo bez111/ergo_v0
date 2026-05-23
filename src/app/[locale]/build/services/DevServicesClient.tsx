@@ -59,7 +59,7 @@ interface ServiceIndex {
   probes: Record<string, Probe>
 }
 
-const RECEIPT_EXAMPLE = "99c3742422196a4303774fae4c2a7796634cbece73d2fafedc509b394abf69f7"
+const RECEIPT_EXAMPLE = "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81"
 
 const categories = Object.entries(devServiceCategories) as Array<[
   DevServiceCategory,
@@ -267,6 +267,7 @@ export function DevServicesClient() {
                 <div className="mt-5 grid grid-cols-2 gap-2">
                   <ProbeBadge label="Site" probe={index?.probes.site_health} />
                   <ProbeBadge label="Agent" probe={index?.probes.agent_live} />
+                  <ProbeBadge label="Launch" probe={index?.probes.agent_launch_kit} />
                   <ProbeBadge label="Policy" probe={index?.probes.wallet_agent_policy} />
                   <ProbeBadge label="Runner" probe={index?.probes.wallet_agent_reference_flow} />
                   <ProbeBadge label="MCP" probe={index?.probes.mcp_health} />
@@ -403,7 +404,7 @@ export function DevServicesClient() {
                     href="/api/dev/tools"
                     className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 font-mono text-[11px] uppercase tracking-widest text-neutral-300 transition hover:border-orange-500/35 hover:text-orange-200"
                   >
-                    Schema <ExternalLink className="h-3.5 w-3.5" />
+                    Examples <ExternalLink className="h-3.5 w-3.5" />
                   </NextLink>
                 </div>
 
