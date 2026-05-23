@@ -47,6 +47,7 @@ const paths = [
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
   "public/agent-economy/mainnet-script-identity.schema.v0.json",
   "public/agent-economy/developer-launch-kit.schema.v0.json",
+  "public/agent-economy/current-release.schema.v0.json",
   "public/agent-economy/release-watchlist.v0.json",
   "public/agent-economy/release-watchlist.schema.v0.json",
   "public/agent-economy/release-attestation-2026-05-23.v0.json",
@@ -62,6 +63,7 @@ const paths = [
   "src/app/[locale]/agent-economy/review-pack/page.tsx",
   "src/app/[locale]/agent-economy/wallet-agent/page.tsx",
   "src/app/api/agent-economy/launch-kit/route.ts",
+  "src/app/api/agent-economy/release/current/route.ts",
   "src/app/api/agent-economy/review-pack/route.ts",
   "src/app/api/agent-economy/wallet-agent/route.ts",
   "src/app/api/agent-economy/wallet-agent/policy-check/route.ts",
@@ -171,6 +173,18 @@ assert(
   "audit manifest must link the release watchlist schema",
 )
 assert(
+  auditManifest.artifacts?.current_release_api?.includes(
+    "/api/agent-economy/release/current",
+  ),
+  "audit manifest must link the current release API",
+)
+assert(
+  auditManifest.artifacts?.current_release_schema?.includes(
+    "/agent-economy/current-release.schema.v0.json",
+  ),
+  "audit manifest must link the current release schema",
+)
+assert(
   auditManifest.artifacts?.release_attestation_2026_05_23?.includes(
     "/agent-economy/release-attestation-2026-05-23.v0.json",
   ),
@@ -209,6 +223,8 @@ for (const required of [
   "wallet_agent_policy_playground",
   "developer_launch_kit",
   "developer_launch_kit_schema",
+  "current_release_api",
+  "current_release_schema",
   "release_watchlist",
   "release_watchlist_schema",
   "release_attestation_2026_05_23",
@@ -235,6 +251,7 @@ for (const required of [
   "five_minute_path",
   "api_recipes",
   "developer-launch-kit.schema.v0.json",
+  "api/agent-economy/release/current",
   "release-watchlist.v0.json",
   "release-attestation-2026-05-23.v0.json",
   "policy-playground",
@@ -285,9 +302,26 @@ assert(
   releaseWatchlist.watch_targets?.some((target) => target.id === "mcp-health") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "sage-full-receipt") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "mainnet-gate-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "current-release-api") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "release-attestation"),
-  "release watchlist must cover MCP, Sage receipt, mainnet gate, and release attestation targets",
+  "release watchlist must cover MCP, Sage receipt, current release, mainnet gate, and release attestation targets",
 )
+
+const currentReleaseSchema = readJson("public/agent-economy/current-release.schema.v0.json")
+assert(
+  currentReleaseSchema.properties?.type?.const === "ergo.agent_economy.current_release.v0",
+  "current release schema must bind the current release type",
+)
+const currentReleaseRoute = readText("src/app/api/agent-economy/release/current/route.ts")
+for (const required of [
+  "ergo.agent_economy.current_release.v0",
+  "VERCEL_GIT_COMMIT_SHA",
+  "VERCEL_URL",
+  "runtime_release_status_not_audit_report",
+  "mainnet_ready: false",
+]) {
+  assert(currentReleaseRoute.includes(required), `current release route is missing: ${required}`)
+}
 
 const releaseAttestation = readJson("public/agent-economy/release-attestation-2026-05-23.v0.json")
 assert(
@@ -505,6 +539,8 @@ for (const required of [
   "/api/agent-economy/review-pack",
   "/agent-economy/launch-kit",
   "/api/agent-economy/launch-kit",
+  "/api/agent-economy/release/current",
+  "/agent-economy/current-release.schema.v0.json",
   "/agent-economy/release-watchlist.v0.json",
   "/agent-economy/release-watchlist.schema.v0.json",
   "/agent-economy/release-attestation-2026-05-23.v0.json",
@@ -531,6 +567,7 @@ for (const required of [
   "mainnet-script-identity.schema.v0.json",
   "wallet-agent-policy.schema.v0.json",
   "wallet-agent-policy-check.schema.v0.json",
+  "current-release.schema.v0.json",
   "release-watchlist.schema.v0.json",
   "release-attestation.schema.v0.json",
   "policy-check API",

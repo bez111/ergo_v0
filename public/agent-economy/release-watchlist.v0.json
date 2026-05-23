@@ -192,6 +192,19 @@
       }
     },
     {
+      "id": "current-release-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/release/current",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "type": "ergo.agent_economy.current_release.v0",
+        "status": "runtime_release_status_not_audit_report",
+        "mainnet_gate.status": "closed",
+        "mainnet_gate.mainnet_ready": false
+      }
+    },
+    {
       "id": "release-attestation",
       "url": "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
       "kind": "json",

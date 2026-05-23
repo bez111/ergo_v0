@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/current-release.schema.v0.json",
+  "title": "Ergo Agent Economy Current Release v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ok",
+    "type",
+    "version",
+    "status",
+    "generated_at",
+    "public_claim",
+    "release",
+    "mainnet_gate",
+    "evidence",
+    "limitations"
+  ],
+  "properties": {
+    "ok": {
+      "const": true
+    },
+    "type": {
+      "const": "ergo.agent_economy.current_release.v0"
+    },
+    "version": {
+      "const": "v0"
+    },
+    "status": {
+      "const": "runtime_release_status_not_audit_report"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "public_claim": {
+      "type": "string",
+      "minLength": 24
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "site_repo",
+        "site_commit",
+        "site_commit_short",
+        "git_ref",
+        "vercel_env",
+        "vercel_url",
+        "production_url"
+      ],
+      "properties": {
+        "site_repo": { "type": "string", "format": "uri" },
+        "site_commit": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{7,40}$"
+        },
+        "site_commit_short": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{7,12}$"
+        },
+        "git_ref": {
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "vercel_env": {
+          "type": ["string", "null"],
+          "minLength": 1
+        },
+        "vercel_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "production_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "mainnet_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "completed", "pending", "mainnet_ready"],
+      "properties": {
+        "status": { "const": "closed" },
+        "completed": { "const": 4 },
+        "pending": { "const": 2 },
+        "mainnet_ready": { "const": false }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 8
+      },
+      "uniqueItems": true
+    }
+  }
+}

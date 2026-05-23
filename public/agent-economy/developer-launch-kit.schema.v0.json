@@ -54,6 +54,7 @@
         "developer_services",
         "review_pack",
         "release_watchlist",
+        "current_release",
         "release_attestation_2026_05_23"
       ],
       "properties": {
@@ -66,6 +67,7 @@
         "developer_services": { "type": "string", "format": "uri" },
         "review_pack": { "type": "string", "format": "uri" },
         "release_watchlist": { "type": "string", "format": "uri" },
+        "current_release": { "type": "string", "format": "uri" },
         "release_attestation_2026_05_23": { "type": "string", "format": "uri" }
       }
     },

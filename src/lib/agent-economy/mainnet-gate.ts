@@ -99,6 +99,10 @@ export const agentEconomyMainnetGate = {
       "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
     release_watchlist_schema:
       "https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json",
+    current_release_api:
+      "https://www.ergoblockchain.org/api/agent-economy/release/current",
+    current_release_schema:
+      "https://www.ergoblockchain.org/agent-economy/current-release.schema.v0.json",
     release_attestation_2026_05_23:
       "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
     release_attestation_schema:

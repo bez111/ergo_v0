@@ -35,6 +35,12 @@ https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
 release_watchlist_schema
 https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json
 
+current_release_api
+https://www.ergoblockchain.org/api/agent-economy/release/current
+
+current_release_schema
+https://www.ergoblockchain.org/agent-economy/current-release.schema.v0.json
+
 release_attestation_2026_05_23
 https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json
 
@@ -96,6 +102,7 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - The public audit readiness checklist is published for an external reviewer.
 - The developer launch kit is published as a human page, JSON manifest, and JSON Schema.
 - The release watchlist is published as the post-deploy operational contract for health, security headers, signer, MCP, receipt, and mainnet gate invariants.
+- The current release API reports the runtime Git/Vercel context for the currently served deployment without requiring a new static attestation on every deploy.
 - The 2026-05-23 release attestation pins the deployed commit, Vercel deployment id, package-lock hash, npm audit status, post-deploy watch status, production health, and route smoke result.
 - The local wallet-agent safety boundary is published as a human page and JSON API.
 - The external review and mainnet script identity templates are published, but they are not completed artifacts.
