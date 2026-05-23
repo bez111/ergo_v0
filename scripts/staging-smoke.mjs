@@ -2,6 +2,8 @@ const baseUrl = (process.env.BASE_URL ?? process.argv[2] ?? "http://localhost:30
 
 const checks = [
   { path: "/", expect: [200] },
+  { path: "/sitemap.xml", expect: [200] },
+  { path: "/sitemaps/sitemap-pages.xml", expect: [200] },
   { path: "/blog", expect: [200] },
   { path: "/admin/blog", expect: [200, 401, 503] },
   { path: "/agent-economy/live", expect: [200] },

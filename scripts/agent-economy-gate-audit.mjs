@@ -68,6 +68,7 @@ const paths = [
   "src/app/api/agent-economy/wallet-agent/route.ts",
   "src/app/api/agent-economy/wallet-agent/policy-check/route.ts",
   "src/app/api/agent-economy/wallet-agent/reference-flow/route.ts",
+  "src/app/sitemaps/sitemap-pages.xml/route.ts",
   "src/lib/agent-economy/review-pack.ts",
   "src/lib/agent-economy/developer-launch-kit.ts",
   "src/lib/agent-economy/wallet-agent.ts",
@@ -243,6 +244,39 @@ for (const required of [
   "Do not expose wallet seed phrases",
 ]) {
   assert(mcpRunbookSource.includes(required), `MCP endpoint runbook is missing: ${required}`)
+}
+
+const sitemapPagesSource = readText("src/app/sitemaps/sitemap-pages.xml/route.ts")
+for (const required of [
+  "'/agent-economy'",
+  "'/agent-economy/live'",
+  "'/agent-economy/launch-kit'",
+  "'/agent-economy/metrics'",
+  "'/agent-economy/trust'",
+  "'/agent-economy/review-pack'",
+  "'/agent-economy/wallet-agent'",
+  "'/agent-economy/sage-widget'",
+  "'/build'",
+  "'/build/playground'",
+  "'/build/agent-payments'",
+  "'/build/agent-payments/quickstart'",
+  "'/build/agent-payments/policy-playground'",
+  "'/build/agent-payments/wallet-agent-runner'",
+  "'/build/services'",
+]) {
+  assert(sitemapPagesSource.includes(required), `sitemap-pages is missing: ${required}`)
+}
+
+for (const forbidden of [
+  "'/api/agent-economy/release/current'",
+  "'/agent-economy/release-watchlist.v0.json'",
+  "'/agent-economy/current-release.schema.v0.json'",
+  "'/agent-economy/release-attestation-2026-05-23.v0.json'",
+]) {
+  assert(
+    !sitemapPagesSource.includes(forbidden),
+    `sitemap-pages should not include machine artifact: ${forbidden}`,
+  )
 }
 
 const launchKitSource = readText("src/lib/agent-economy/developer-launch-kit.ts")

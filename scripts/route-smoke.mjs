@@ -9,6 +9,8 @@ const includeDeepDocs =
 
 const okRoutes = [
   "/",
+  "/sitemap.xml",
+  "/sitemaps/sitemap-pages.xml",
   "/agent-economy",
   "/agent-economy/live",
   "/agent-economy/launch-kit",
