@@ -68,6 +68,7 @@ const paths = [
   "src/app/api/agent-economy/wallet-agent/route.ts",
   "src/app/api/agent-economy/wallet-agent/policy-check/route.ts",
   "src/app/api/agent-economy/wallet-agent/reference-flow/route.ts",
+  "src/app/sitemap.xml/route.ts",
   "src/app/sitemaps/sitemap-pages.xml/route.ts",
   "src/lib/agent-economy/review-pack.ts",
   "src/lib/agent-economy/developer-launch-kit.ts",
@@ -247,6 +248,26 @@ for (const required of [
 }
 
 const sitemapPagesSource = readText("src/app/sitemaps/sitemap-pages.xml/route.ts")
+const sitemapIndexSource = readText("src/app/sitemap.xml/route.ts")
+for (const required of [
+  "sitemapindex",
+  "/sitemaps/sitemap-pages.xml",
+  "/sitemaps/sitemap-blog.xml",
+  "/sitemaps/sitemap-ecosystem.xml",
+  "/sitemaps/sitemap-technology.xml",
+  "/sitemaps/sitemap-use-cases.xml",
+  "/sitemaps/sitemap-compare.xml",
+  "/sitemaps/sitemap-playbooks.xml",
+  "/sitemaps/sitemap-glossary.xml",
+  "/sitemaps/sitemap-infographics.xml",
+  "/sitemaps/sitemap-questions.xml",
+  "/sitemaps/sitemap-topics.xml",
+  "/sitemaps/sitemap-images.xml",
+  "/news-sitemap.xml",
+]) {
+  assert(sitemapIndexSource.includes(required), `sitemap index is missing: ${required}`)
+}
+
 for (const required of [
   "'/agent-economy'",
   "'/agent-economy/live'",

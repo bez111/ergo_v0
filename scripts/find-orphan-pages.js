@@ -121,11 +121,18 @@ function isInNavigation(url) {
 
 // Проверить наличие страницы в sitemap
 function isInSitemap(url) {
-  const sitemapPath = path.join('src/app', 'sitemap.ts');
-  if (fs.existsSync(sitemapPath)) {
-    const content = fs.readFileSync(sitemapPath, 'utf8');
-    return content.toLowerCase().includes(url);
+  const sitemapPaths = [
+    path.join('src/app', 'sitemap.xml', 'route.ts'),
+    path.join('src/app', 'sitemaps', 'sitemap-pages.xml', 'route.ts'),
+  ];
+
+  for (const sitemapPath of sitemapPaths) {
+    if (fs.existsSync(sitemapPath)) {
+      const content = fs.readFileSync(sitemapPath, 'utf8');
+      if (content.toLowerCase().includes(url)) return true;
+    }
   }
+
   return false;
 }
 
@@ -243,4 +250,4 @@ function findOrphanPages() {
 }
 
 // Запуск
-findOrphanPages(); 
+findOrphanPages();
