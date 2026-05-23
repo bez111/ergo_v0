@@ -15,6 +15,8 @@ export const agentEconomyDeveloperLaunchKit = {
     developer_services: "https://www.ergoblockchain.org/build/services",
     review_pack: "https://www.ergoblockchain.org/agent-economy/review-pack",
     release_watchlist: "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+    release_attestation_2026_05_23:
+      "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
   },
   five_minute_path: [
     {
@@ -102,6 +104,15 @@ export const agentEconomyDeveloperLaunchKit = {
       url: "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
       curl: "curl -sS https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
       checks: ["security_baseline", "mainnet_gate_invariants", "watch_targets"],
+    },
+    {
+      id: "release-attestation",
+      label: "Release attestation",
+      method: "GET",
+      url: "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
+      curl:
+        "curl -sS https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
+      checks: ["release.site_commit", "release.vercel_deployment_id", "security.npm_audit", "mainnet_gate"],
     },
   ],
   npm: {

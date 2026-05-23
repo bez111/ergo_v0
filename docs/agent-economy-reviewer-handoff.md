@@ -32,6 +32,9 @@ https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner
 
 Release watchlist
 https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
+
+Release attestation 2026-05-23
+https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json
 ```
 
 ## Required Output Files
@@ -65,6 +68,7 @@ https://www.ergoblockchain.org/agent-economy/wallet-agent-policy.schema.v0.json
 https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
 https://www.ergoblockchain.org/agent-economy/wallet-agent-reference-flow.v0.json
 https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json
+https://www.ergoblockchain.org/agent-economy/release-attestation.schema.v0.json
 ```
 
 The schemas require concrete reviewer identity, reviewed commits, package and
@@ -77,27 +81,29 @@ template should fail review.
 1. Pin the reviewed repositories and commits.
 2. Pin deployment identifiers and package-lock hash.
 3. Record npm audit status and post-deploy watch status.
-4. Inspect the full Sage receipt bundle and confirm Agreement JSON,
+4. Inspect the release attestation for the reviewed commit, Vercel deployment
+   id, package-lock hash, security status, check results, and limitations.
+5. Inspect the full Sage receipt bundle and confirm Agreement JSON,
    Verification Receipt JSON, and Settlement Receipt JSON are present.
-5. Confirm signed Accord L1 evidence covers the same receipt id.
-6. Review stale/replayed/wrong-recipient/wrong-value/wrong-reserve/wrong-task
+6. Confirm signed Accord L1 evidence covers the same receipt id.
+7. Review stale/replayed/wrong-recipient/wrong-value/wrong-reserve/wrong-task
    Note rejection behavior.
-7. Review wallet-agent policy-check denial behavior for wrong recipient,
+8. Review wallet-agent policy-check denial behavior for wrong recipient,
    wrong reserve, over-cap amount, stale expiry, invalid task hash, missing
    receipt retention, unknown profile or action fields, malformed decimal
    strings, invalid receipt-retention modes, and mainnet-disabled actions.
-8. Confirm the policy playground demonstrates allowed and blocked verdicts
+9. Confirm the policy playground demonstrates allowed and blocked verdicts
    without wallet authority, signing, or broadcast.
-9. Review the wallet-agent reference runner boundary: denied verdicts stop the
+10. Review the wallet-agent reference runner boundary: denied verdicts stop the
    flow, simulation happens before signing, and signing stays in the host-owned
    wallet layer.
-10. Review signer limits, health, failure logging, and runbook posture.
-11. Run or inspect the release watchlist and confirm security headers, MCP
+11. Review signer limits, health, failure logging, and runbook posture.
+12. Run or inspect the release watchlist and confirm security headers, MCP
     health, full receipt bundle, signer health, and mainnet gate invariants.
-12. Produce the external review manifest.
-13. Produce the audit-bound mainnet script identity manifest.
-14. Mark each finding as blocking or non-blocking for mainnet language.
-15. Only after both completed artifacts exist should the mainnet gate source be
+13. Produce the external review manifest.
+14. Produce the audit-bound mainnet script identity manifest.
+15. Mark each finding as blocking or non-blocking for mainnet language.
+16. Only after both completed artifacts exist should the mainnet gate source be
     updated away from `null`.
 
 ## Mainnet Gate Acceptance Rule

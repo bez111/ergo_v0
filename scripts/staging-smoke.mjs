@@ -9,6 +9,8 @@ const checks = [
   { path: "/agent-economy/developer-launch-kit.schema.v0.json", expect: [200] },
   { path: "/agent-economy/release-watchlist.v0.json", expect: [200] },
   { path: "/agent-economy/release-watchlist.schema.v0.json", expect: [200] },
+  { path: "/agent-economy/release-attestation-2026-05-23.v0.json", expect: [200] },
+  { path: "/agent-economy/release-attestation.schema.v0.json", expect: [200] },
   { path: "/agent-economy/review-pack", expect: [200] },
   { path: "/agent-economy/external-audit-review.schema.v0.json", expect: [200] },
   { path: "/agent-economy/mainnet-script-identity.schema.v0.json", expect: [200] },

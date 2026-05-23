@@ -51,6 +51,10 @@ export const agentEconomyReviewPack = {
       "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
     release_watchlist_schema:
       "https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json",
+    release_attestation_2026_05_23:
+      "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
+    release_attestation_schema:
+      "https://www.ergoblockchain.org/agent-economy/release-attestation.schema.v0.json",
     wallet_agent_safety_spec: "https://www.ergoblockchain.org/agent-economy/wallet-agent",
     wallet_agent_safety_spec_api: "https://www.ergoblockchain.org/api/agent-economy/wallet-agent",
     wallet_agent_policy_schema:
@@ -92,6 +96,7 @@ export const agentEconomyReviewPack = {
       "Wallet-agent safety spec, policy-check API, policy playground, and reference runner for local policy, simulation, signing boundaries, strict decimal/task-hash validation, unknown-field rejection, and receipt retention",
       "Public wording and mainnet gate controls",
       "Release watchlist, security header checks, npm audit expectation, and post-deploy smoke targets",
+      "Release attestation artifact that records the reviewed commit, deployment id, npm audit result, post-deploy watch result, and mainnet gate invariants",
     ],
     excluded_until_separate_review: [
       "real-funds mainnet custody",
@@ -116,6 +121,7 @@ export const agentEconomyReviewPack = {
     "Verify that the wallet-agent policy playground demonstrates both allowed and blocked verdicts without touching wallet authority.",
     "Verify that the wallet-agent reference flow keeps signing inside the host-owned wallet layer and stops after a denied policy verdict.",
     "Verify that release watch targets, security headers, and mainnet gate invariants stay green after every production deploy.",
+    "Verify that the release attestation pins the reviewed commit, Vercel deployment id, package-lock hash, and check results.",
     "Confirm that public site wording remains testnet-only until both pending mainnet gates are closed.",
     "Publish findings with severity, status, remediation reference, and residual risk.",
   ],

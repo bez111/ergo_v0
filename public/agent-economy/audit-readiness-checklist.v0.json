@@ -17,6 +17,7 @@
     "public_status_api": "https://www.ergoblockchain.org/api/agent-economy/live",
     "public_mainnet_gate": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate",
     "public_release_watchlist": "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+    "release_attestation_2026_05_23": "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
     "external_audit_review_schema": "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
     "mainnet_script_identity_schema": "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json"
   },
@@ -65,6 +66,11 @@
       "id": "release_watchlist",
       "uri": "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
       "expectation": "Post-deploy watch targets, security headers, npm audit expectation, and mainnet gate invariants are documented."
+    },
+    {
+      "id": "release_attestation_2026_05_23",
+      "uri": "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
+      "expectation": "The latest production deploy has a machine-readable record of commit, Vercel deployment id, security posture, post-deploy checks, and mainnet gate invariants."
     },
     {
       "id": "mcp_dns_health",

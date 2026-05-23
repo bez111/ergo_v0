@@ -15,6 +15,8 @@ const okRoutes = [
   "/agent-economy/developer-launch-kit.schema.v0.json",
   "/agent-economy/release-watchlist.v0.json",
   "/agent-economy/release-watchlist.schema.v0.json",
+  "/agent-economy/release-attestation-2026-05-23.v0.json",
+  "/agent-economy/release-attestation.schema.v0.json",
   "/agent-economy/review-pack",
   "/agent-economy/wallet-agent-policy.schema.v0.json",
   "/agent-economy/wallet-agent-policy-check.schema.v0.json",

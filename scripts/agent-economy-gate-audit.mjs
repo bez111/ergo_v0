@@ -49,6 +49,8 @@ const paths = [
   "public/agent-economy/developer-launch-kit.schema.v0.json",
   "public/agent-economy/release-watchlist.v0.json",
   "public/agent-economy/release-watchlist.schema.v0.json",
+  "public/agent-economy/release-attestation-2026-05-23.v0.json",
+  "public/agent-economy/release-attestation.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.schema.v0.json",
   "public/agent-economy/wallet-agent-policy-check.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.profile.template.json",
@@ -96,6 +98,10 @@ assertStatus(
 assertStatus(
   "public/agent-economy/release-watchlist.v0.json",
   "testnet_release_watchlist_not_audit_report",
+)
+assertStatus(
+  "public/agent-economy/release-attestation-2026-05-23.v0.json",
+  "testnet_release_attestation_not_audit_report",
 )
 
 assert(
@@ -165,6 +171,18 @@ assert(
   "audit manifest must link the release watchlist schema",
 )
 assert(
+  auditManifest.artifacts?.release_attestation_2026_05_23?.includes(
+    "/agent-economy/release-attestation-2026-05-23.v0.json",
+  ),
+  "audit manifest must link the 2026-05-23 release attestation",
+)
+assert(
+  auditManifest.artifacts?.release_attestation_schema?.includes(
+    "/agent-economy/release-attestation.schema.v0.json",
+  ),
+  "audit manifest must link the release attestation schema",
+)
+assert(
   auditManifest.artifacts?.wallet_agent_policy_check_schema?.includes(
     "/agent-economy/wallet-agent-policy-check.schema.v0.json",
   ),
@@ -193,6 +211,8 @@ for (const required of [
   "developer_launch_kit_schema",
   "release_watchlist",
   "release_watchlist_schema",
+  "release_attestation_2026_05_23",
+  "release_attestation_schema",
   "mcp_endpoint_runbook",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
@@ -216,6 +236,7 @@ for (const required of [
   "api_recipes",
   "developer-launch-kit.schema.v0.json",
   "release-watchlist.v0.json",
+  "release-attestation-2026-05-23.v0.json",
   "policy-playground",
   "@ergoblockchain/sage-widget",
   "Mainnet remains audit-gated",
@@ -263,8 +284,37 @@ assert(
 assert(
   releaseWatchlist.watch_targets?.some((target) => target.id === "mcp-health") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "sage-full-receipt") &&
-    releaseWatchlist.watch_targets?.some((target) => target.id === "mainnet-gate-api"),
-  "release watchlist must cover MCP, Sage receipt, and mainnet gate targets",
+    releaseWatchlist.watch_targets?.some((target) => target.id === "mainnet-gate-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "release-attestation"),
+  "release watchlist must cover MCP, Sage receipt, mainnet gate, and release attestation targets",
+)
+
+const releaseAttestation = readJson("public/agent-economy/release-attestation-2026-05-23.v0.json")
+assert(
+  releaseAttestation.type === "ergo.agent_economy.release_attestation.v0",
+  "release attestation must bind the attestation type",
+)
+assert(
+  releaseAttestation.release?.site_commit === "6241b881b13e",
+  "release attestation must pin the reviewed site commit",
+)
+assert(
+  releaseAttestation.release?.vercel_deployment_id === "dpl_49NfUCVbjjLg5a4Tkeg2p2pxXToe",
+  "release attestation must pin the Vercel deployment id",
+)
+assert(
+  releaseAttestation.security?.npm_audit?.known_vulnerabilities === 0,
+  "release attestation must record a clean npm audit",
+)
+assert(
+  releaseAttestation.mainnet_gate?.status === "closed" &&
+    releaseAttestation.mainnet_gate?.mainnet_ready === false,
+  "release attestation must keep mainnet gate closed",
+)
+assert(
+  releaseAttestation.artifact_hashes?.package_lock_sha256 ===
+    "9e28f7eff249448c4a6420cce93a0fc9b2d55d910c994d8537851ff8351df8cb",
+  "release attestation must pin the package-lock hash",
 )
 
 const walletAgentSource = readText("src/lib/agent-economy/wallet-agent.ts")
@@ -457,6 +507,8 @@ for (const required of [
   "/api/agent-economy/launch-kit",
   "/agent-economy/release-watchlist.v0.json",
   "/agent-economy/release-watchlist.schema.v0.json",
+  "/agent-economy/release-attestation-2026-05-23.v0.json",
+  "/agent-economy/release-attestation.schema.v0.json",
   "/agent-economy/external-audit-review.manifest.v0.json",
   "/agent-economy/mainnet-script-identity.manifest.v0.json",
   "/agent-economy/external-audit-review.schema.v0.json",
@@ -480,6 +532,7 @@ for (const required of [
   "wallet-agent-policy.schema.v0.json",
   "wallet-agent-policy-check.schema.v0.json",
   "release-watchlist.schema.v0.json",
+  "release-attestation.schema.v0.json",
   "policy-check API",
   "external_audit_report",
   "mainnet_script_identity",

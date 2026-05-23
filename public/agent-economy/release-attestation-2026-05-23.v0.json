@@ -1,0 +1,86 @@
+{
+  "type": "ergo.agent_economy.release_attestation.v0",
+  "version": "v0",
+  "status": "testnet_release_attestation_not_audit_report",
+  "captured_at": "2026-05-23T12:01:33Z",
+  "public_claim": "Machine-readable record of the May 23, 2026 production deployment checks. This is not an external audit report and does not open mainnet readiness.",
+  "release": {
+    "site_repo": "https://github.com/bez111/ergo_v0",
+    "site_commit": "6241b881b13e",
+    "production_url": "https://www.ergoblockchain.org",
+    "vercel_deployment_id": "dpl_49NfUCVbjjLg5a4Tkeg2p2pxXToe",
+    "vercel_deployment_url": "https://ergo-platform-yb5ptds4v-alexanderbezkrovnys-projects.vercel.app",
+    "vercel_inspector_url": "https://vercel.com/alexanderbezkrovnys-projects/ergo-platform/49NfUCVbjjLg5a4Tkeg2p2pxXToe"
+  },
+  "security": {
+    "npm_audit": {
+      "status": "clean",
+      "known_vulnerabilities": 0
+    },
+    "dependency_overrides": {
+      "qs": "^6.15.2"
+    },
+    "security_headers": {
+      "content-security-policy": "present",
+      "strict-transport-security": "present",
+      "x-content-type-options": "present",
+      "x-frame-options": "present"
+    }
+  },
+  "mainnet_gate": {
+    "status": "closed",
+    "completed": 4,
+    "pending": 2,
+    "mainnet_ready": false
+  },
+  "artifact_hashes": {
+    "package_lock_sha256": "9e28f7eff249448c4a6420cce93a0fc9b2d55d910c994d8537851ff8351df8cb",
+    "release_watchlist_sha256": "26f030511bf73f744f2d882b4b9d4b3e6eaeda23af81ae83241ab2e66b4deabb",
+    "release_watchlist_schema_sha256": "80879eef8faca92d8de1f6bf4ceda878f5fbb0e672098dc05d8394bd03a09dc1",
+    "release_attestation_schema_sha256": "556ae72309baf45f6aa8e86aafe2e51c05585e574885e0d92fc87dce04438310"
+  },
+  "checks": [
+    {
+      "id": "full-preflight-build",
+      "command": "npm run preflight:batch -- --build",
+      "status": "passed",
+      "summary": "Claims, blog content, Agent Economy gate, agent host routes, locales, type-check, whitespace check, and production build passed."
+    },
+    {
+      "id": "vercel-prebuilt-build",
+      "command": "npx vercel build --prod --yes",
+      "status": "passed",
+      "summary": "Vercel production output completed with zero npm audit vulnerabilities during install."
+    },
+    {
+      "id": "vercel-production-deploy",
+      "command": "npx vercel deploy --prebuilt --prod --yes",
+      "status": "passed",
+      "summary": "Deployment completed and aliased to https://www.ergoblockchain.org."
+    },
+    {
+      "id": "post-deploy-watch",
+      "command": "npm run watch:post-deploy",
+      "status": "passed",
+      "summary": "Site, Agent Hub, MCP, signer, Blob probe, full receipt, release watchlist, npm package, and mainnet gate checks passed."
+    },
+    {
+      "id": "production-health",
+      "command": "npm run health:prod",
+      "status": "passed",
+      "summary": "12/12 production health checks passed; required security headers were present."
+    },
+    {
+      "id": "production-route-smoke",
+      "command": "npm run smoke:routes:prod",
+      "status": "passed",
+      "summary": "Production route smoke passed for core pages, Agent Economy pages, API routes, schemas, docs routes, and redirects."
+    }
+  ],
+  "limitations": [
+    "This record is a deployment attestation, not an external security audit.",
+    "This record does not assert mainnet or production real-funds readiness.",
+    "Mainnet language remains blocked until external review and audit-bound mainnet script identity artifacts exist.",
+    "Signer and wallet-agent evidence remains testnet pilot evidence only."
+  ]
+}

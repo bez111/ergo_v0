@@ -33,6 +33,12 @@ https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
 Release watchlist schema
 https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json
 
+Release attestation 2026-05-23
+https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json
+
+Release attestation schema
+https://www.ergoblockchain.org/agent-economy/release-attestation.schema.v0.json
+
 Live status API
 https://www.ergoblockchain.org/api/agent-economy/live
 
@@ -129,6 +135,8 @@ The current review target is the hosted Sage/Accord testnet proof surface:
   surface. Wallet signing remains outside the widget until separately reviewed.
 - Release watchlist only as a post-deploy operational contract. It is not an
   audit report and does not open mainnet readiness.
+- Release attestation only as a deployment record for reviewed production
+  checks. It is not an external security audit or mainnet approval.
 
 Out of scope until explicitly added:
 
@@ -149,6 +157,7 @@ An acceptable review artifact should include:
 - reviewed package versions;
 - reviewed public evidence URLs;
 - npm audit result and post-deploy watch result;
+- release attestation URI for the reviewed deployment, if available;
 - findings with severity, status, remediation reference, and residual risk;
 - explicit statement on whether any finding blocks mainnet language;
 - signature, public key, or other durable attribution;
@@ -186,6 +195,8 @@ The review should answer these questions directly:
   mainnet readiness claims?
 - Do the release watch targets, security headers, signer health, MCP health,
   full receipt bundle, and mainnet gate invariants stay green after deploy?
+- Does the release attestation pin the reviewed commit, deployment id, lockfile
+  hash, security posture, and post-deploy check results?
 - Are all mainnet claims blocked until an audit-bound mainnet script identity
   and external review are published?
 

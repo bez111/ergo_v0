@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/release-attestation.schema.v0.json",
+  "title": "Ergo Agent Economy Release Attestation v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "captured_at",
+    "public_claim",
+    "release",
+    "security",
+    "mainnet_gate",
+    "artifact_hashes",
+    "checks",
+    "limitations"
+  ],
+  "properties": {
+    "type": {
+      "const": "ergo.agent_economy.release_attestation.v0"
+    },
+    "version": {
+      "const": "v0"
+    },
+    "status": {
+      "const": "testnet_release_attestation_not_audit_report"
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "public_claim": {
+      "type": "string",
+      "minLength": 24
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "site_repo",
+        "site_commit",
+        "production_url",
+        "vercel_deployment_id",
+        "vercel_deployment_url",
+        "vercel_inspector_url"
+      ],
+      "properties": {
+        "site_repo": { "type": "string", "format": "uri" },
+        "site_commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{12,40}$"
+        },
+        "production_url": { "type": "string", "format": "uri" },
+        "vercel_deployment_id": {
+          "type": "string",
+          "pattern": "^dpl_[A-Za-z0-9]+$"
+        },
+        "vercel_deployment_url": { "type": "string", "format": "uri" },
+        "vercel_inspector_url": { "type": "string", "format": "uri" }
+      }
+    },
+    "security": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "npm_audit",
+        "dependency_overrides",
+        "security_headers"
+      ],
+      "properties": {
+        "npm_audit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "known_vulnerabilities"],
+          "properties": {
+            "status": { "const": "clean" },
+            "known_vulnerabilities": {
+              "type": "integer",
+              "const": 0
+            }
+          }
+        },
+        "dependency_overrides": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "security_headers": {
+          "type": "object",
+          "additionalProperties": {
+            "const": "present"
+          }
+        }
+      }
+    },
+    "mainnet_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "completed", "pending", "mainnet_ready"],
+      "properties": {
+        "status": { "const": "closed" },
+        "completed": { "const": 4 },
+        "pending": { "const": 2 },
+        "mainnet_ready": { "const": false }
+      }
+    },
+    "artifact_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "command", "status"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "command": {
+            "type": "string",
+            "minLength": 3
+          },
+          "status": {
+            "const": "passed"
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 8
+      },
+      "uniqueItems": true
+    }
+  }
+}

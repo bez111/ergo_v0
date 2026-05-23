@@ -192,6 +192,19 @@
       }
     },
     {
+      "id": "release-attestation",
+      "url": "https://www.ergoblockchain.org/agent-economy/release-attestation-2026-05-23.v0.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "type": "ergo.agent_economy.release_attestation.v0",
+        "status": "testnet_release_attestation_not_audit_report",
+        "release.site_commit": "6241b881b13e",
+        "release.vercel_deployment_id": "dpl_49NfUCVbjjLg5a4Tkeg2p2pxXToe",
+        "mainnet_gate.mainnet_ready": false
+      }
+    },
+    {
       "id": "agents-host-root",
       "url": "https://agents.ergoblockchain.org/",
       "kind": "page",
