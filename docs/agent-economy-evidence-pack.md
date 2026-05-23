@@ -1,6 +1,6 @@
 # Agent Economy Evidence Pack
 
-Current status as of 2026-05-21: testnet live proof, not mainnet readiness.
+Current status as of 2026-05-23: testnet live proof, not mainnet readiness.
 
 ## Published evidence
 
@@ -28,6 +28,12 @@ https://www.ergoblockchain.org/api/agent-economy/launch-kit
 
 developer_launch_kit_schema
 https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
+release_watchlist
+https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
+
+release_watchlist_schema
+https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json
 
 wallet_agent_policy_check_schema
 https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
@@ -83,6 +89,7 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - The observed testnet wallet, reserve, note, registers, and settlement identifiers are published.
 - The public audit readiness checklist is published for an external reviewer.
 - The developer launch kit is published as a human page, JSON manifest, and JSON Schema.
+- The release watchlist is published as the post-deploy operational contract for health, security headers, signer, MCP, receipt, and mainnet gate invariants.
 - The local wallet-agent safety boundary is published as a human page and JSON API.
 - The external review and mainnet script identity templates are published, but they are not completed artifacts.
 - The mainnet gate currently has 4 completed gates and 2 pending trust gates.
@@ -104,4 +111,5 @@ Local guardrail:
 
 ```bash
 npm run audit:agent-economy-gate
+npm run watch:post-deploy
 ```

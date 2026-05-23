@@ -2,7 +2,7 @@ export const agentEconomyDeveloperLaunchKit = {
   type: "ergo.agent_economy.developer_launch_kit.v0",
   version: "v0",
   status: "testnet_live_proof",
-  last_updated: "2026-05-22",
+  last_updated: "2026-05-23",
   public_claim:
     "A practical developer entrypoint for Ergo's testnet-first agent economy surfaces. Mainnet remains audit-gated.",
   entrypoints: {
@@ -14,6 +14,7 @@ export const agentEconomyDeveloperLaunchKit = {
     live_hub: "https://www.ergoblockchain.org/agent-economy/live",
     developer_services: "https://www.ergoblockchain.org/build/services",
     review_pack: "https://www.ergoblockchain.org/agent-economy/review-pack",
+    release_watchlist: "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
   },
   five_minute_path: [
     {
@@ -93,6 +94,14 @@ export const agentEconomyDeveloperLaunchKit = {
       url: "https://mcp.ergoblockchain.org/health",
       curl: "curl -sS https://mcp.ergoblockchain.org/health",
       checks: ["ok", "service", "version"],
+    },
+    {
+      id: "release-watchlist",
+      label: "Release watchlist",
+      method: "GET",
+      url: "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+      curl: "curl -sS https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+      checks: ["security_baseline", "mainnet_gate_invariants", "watch_targets"],
     },
   ],
   npm: {

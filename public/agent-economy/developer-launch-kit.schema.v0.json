@@ -52,7 +52,8 @@
         "agent_host",
         "live_hub",
         "developer_services",
-        "review_pack"
+        "review_pack",
+        "release_watchlist"
       ],
       "properties": {
         "human_page": { "type": "string", "format": "uri" },
@@ -62,7 +63,8 @@
         "agent_host": { "type": "string", "format": "uri" },
         "live_hub": { "type": "string", "format": "uri" },
         "developer_services": { "type": "string", "format": "uri" },
-        "review_pack": { "type": "string", "format": "uri" }
+        "review_pack": { "type": "string", "format": "uri" },
+        "release_watchlist": { "type": "string", "format": "uri" }
       }
     },
     "five_minute_path": {

@@ -47,6 +47,8 @@ const paths = [
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
   "public/agent-economy/mainnet-script-identity.schema.v0.json",
   "public/agent-economy/developer-launch-kit.schema.v0.json",
+  "public/agent-economy/release-watchlist.v0.json",
+  "public/agent-economy/release-watchlist.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.schema.v0.json",
   "public/agent-economy/wallet-agent-policy-check.schema.v0.json",
   "public/agent-economy/wallet-agent-policy.profile.template.json",
@@ -90,6 +92,10 @@ assertStatus(
 assertStatus(
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
   "template_mainnet_identity_pending",
+)
+assertStatus(
+  "public/agent-economy/release-watchlist.v0.json",
+  "testnet_release_watchlist_not_audit_report",
 )
 
 assert(
@@ -147,6 +153,18 @@ assert(
   "audit manifest must link the developer launch kit schema",
 )
 assert(
+  auditManifest.artifacts?.release_watchlist?.includes(
+    "/agent-economy/release-watchlist.v0.json",
+  ),
+  "audit manifest must link the release watchlist",
+)
+assert(
+  auditManifest.artifacts?.release_watchlist_schema?.includes(
+    "/agent-economy/release-watchlist.schema.v0.json",
+  ),
+  "audit manifest must link the release watchlist schema",
+)
+assert(
   auditManifest.artifacts?.wallet_agent_policy_check_schema?.includes(
     "/agent-economy/wallet-agent-policy-check.schema.v0.json",
   ),
@@ -173,6 +191,8 @@ for (const required of [
   "wallet_agent_policy_playground",
   "developer_launch_kit",
   "developer_launch_kit_schema",
+  "release_watchlist",
+  "release_watchlist_schema",
   "mcp_endpoint_runbook",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
@@ -195,6 +215,7 @@ for (const required of [
   "five_minute_path",
   "api_recipes",
   "developer-launch-kit.schema.v0.json",
+  "release-watchlist.v0.json",
   "policy-playground",
   "@ergoblockchain/sage-widget",
   "Mainnet remains audit-gated",
@@ -215,6 +236,35 @@ assert(
 assert(
   launchKitSchema.properties?.open_gates?.minItems === 2,
   "developer launch kit schema must preserve the two audit-gated next steps",
+)
+
+const releaseWatchlist = readJson("public/agent-economy/release-watchlist.v0.json")
+assert(
+  releaseWatchlist.type === "ergo.agent_economy.release_watchlist.v0",
+  "release watchlist must bind the watchlist type",
+)
+assert(
+  releaseWatchlist.mainnet_gate_invariants?.status === "closed",
+  "release watchlist must keep the mainnet gate invariant closed",
+)
+assert(
+  releaseWatchlist.mainnet_gate_invariants?.completed === 4 &&
+    releaseWatchlist.mainnet_gate_invariants?.pending === 2,
+  "release watchlist must preserve 4 completed and 2 pending gates",
+)
+assert(
+  releaseWatchlist.mainnet_gate_invariants?.mainnet_ready === false,
+  "release watchlist must require mainnet_ready false",
+)
+assert(
+  releaseWatchlist.security_baseline?.dependency_overrides?.qs === "^6.15.2",
+  "release watchlist must record the qs security override",
+)
+assert(
+  releaseWatchlist.watch_targets?.some((target) => target.id === "mcp-health") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "sage-full-receipt") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "mainnet-gate-api"),
+  "release watchlist must cover MCP, Sage receipt, and mainnet gate targets",
 )
 
 const walletAgentSource = readText("src/lib/agent-economy/wallet-agent.ts")
@@ -405,6 +455,8 @@ for (const required of [
   "/api/agent-economy/review-pack",
   "/agent-economy/launch-kit",
   "/api/agent-economy/launch-kit",
+  "/agent-economy/release-watchlist.v0.json",
+  "/agent-economy/release-watchlist.schema.v0.json",
   "/agent-economy/external-audit-review.manifest.v0.json",
   "/agent-economy/mainnet-script-identity.manifest.v0.json",
   "/agent-economy/external-audit-review.schema.v0.json",
@@ -427,6 +479,7 @@ for (const required of [
   "mainnet-script-identity.schema.v0.json",
   "wallet-agent-policy.schema.v0.json",
   "wallet-agent-policy-check.schema.v0.json",
+  "release-watchlist.schema.v0.json",
   "policy-check API",
   "external_audit_report",
   "mainnet_script_identity",

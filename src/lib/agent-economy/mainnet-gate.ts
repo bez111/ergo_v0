@@ -12,7 +12,7 @@ export const agentEconomyMainnetGate = {
   type: "ergo.agent_economy.mainnet_gate.v0",
   version: "v0",
   status: "closed" as MainnetGateState,
-  last_reviewed: "2026-05-21",
+  last_reviewed: "2026-05-23",
   public_claim:
     "Testnet live proof only. Do not claim production or mainnet readiness until every blocker is open.",
   blockers: [
@@ -95,6 +95,10 @@ export const agentEconomyMainnetGate = {
     developer_launch_kit_api: "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
     developer_launch_kit_schema:
       "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
+    release_watchlist:
+      "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+    release_watchlist_schema:
+      "https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json",
     wallet_agent_policy_check_schema:
       "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json",
     signer_ops_evidence:

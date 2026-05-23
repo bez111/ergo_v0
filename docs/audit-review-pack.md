@@ -1,6 +1,6 @@
 # Agent Economy Audit Review Pack
 
-Current status as of 2026-05-22: testnet live proof, not mainnet readiness.
+Current status as of 2026-05-23: testnet live proof, not mainnet readiness.
 
 This pack is the handoff for an external reviewer. Its job is to make the
 review boundary exact enough that the public site can keep making precise
@@ -26,6 +26,12 @@ https://www.ergoblockchain.org/api/agent-economy/launch-kit
 
 Developer launch kit schema
 https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
+Release watchlist
+https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
+
+Release watchlist schema
+https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json
 
 Live status API
 https://www.ergoblockchain.org/api/agent-economy/live
@@ -121,6 +127,8 @@ The current review target is the hosted Sage/Accord testnet proof surface:
   not as a site-operated signer.
 - Published Sage widget v0.3 package only as an embeddable testnet proof
   surface. Wallet signing remains outside the widget until separately reviewed.
+- Release watchlist only as a post-deploy operational contract. It is not an
+  audit report and does not open mainnet readiness.
 
 Out of scope until explicitly added:
 
@@ -140,9 +148,10 @@ An acceptable review artifact should include:
 - reviewed lockfile hash;
 - reviewed package versions;
 - reviewed public evidence URLs;
+- npm audit result and post-deploy watch result;
 - findings with severity, status, remediation reference, and residual risk;
 - explicit statement on whether any finding blocks mainnet language;
-- signature, public key, or other durable attribution.
+- signature, public key, or other durable attribution;
 - conformance with the public external review schema.
 
 The audit-bound mainnet identity artifact should include exact source artifact
@@ -175,6 +184,8 @@ The review should answer these questions directly:
   sufficient for the stated testnet pilot?
 - Does public wording stay inside "testnet proof" and avoid production or
   mainnet readiness claims?
+- Do the release watch targets, security headers, signer health, MCP health,
+  full receipt bundle, and mainnet gate invariants stay green after deploy?
 - Are all mainnet claims blocked until an audit-bound mainnet script identity
   and external review are published?
 
@@ -203,6 +214,7 @@ Run:
 
 ```bash
 npm run audit:agent-economy-gate
+npm run watch:post-deploy
 ```
 
 The check should report the current state as:

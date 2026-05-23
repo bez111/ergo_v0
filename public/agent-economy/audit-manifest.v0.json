@@ -2,7 +2,7 @@
   "type": "ergo.agent_economy.audit_manifest.v0",
   "version": "v0",
   "status": "draft",
-  "last_reviewed": "2026-05-21",
+  "last_reviewed": "2026-05-23",
   "scope": {
     "network": "testnet",
     "components": [
@@ -12,7 +12,8 @@
       "Sage signer redemption service",
       "MCP endpoint",
       "Sage npm widget",
-      "Developer launch kit and service index"
+      "Developer launch kit and service index",
+      "Release watchlist and post-deploy operational checks"
     ]
   },
   "required_before_mainnet": [
@@ -31,6 +32,8 @@
     "developer_launch_kit": "https://www.ergoblockchain.org/agent-economy/launch-kit",
     "developer_launch_kit_api": "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
     "developer_launch_kit_schema": "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
+    "release_watchlist": "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+    "release_watchlist_schema": "https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json",
     "wallet_agent_policy_check_schema": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json",
     "signer_ops_evidence": "https://www.ergoblockchain.org/agent-economy/signer-ops-evidence.v0.json",
     "external_audit_review_template": "https://www.ergoblockchain.org/agent-economy/external-audit-review.manifest.template.json",

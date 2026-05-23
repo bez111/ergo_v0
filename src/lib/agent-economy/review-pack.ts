@@ -4,7 +4,7 @@ export const agentEconomyReviewPack = {
   type: "ergo.agent_economy.external_review_pack.v0",
   version: "v0",
   status: "ready_for_external_review_not_audit_report",
-  last_reviewed: "2026-05-22",
+  last_reviewed: "2026-05-23",
   public_claim:
     "This is a reviewer handoff pack for the testnet live proof. It is not an external audit report and does not open mainnet readiness.",
   posture: {
@@ -47,6 +47,10 @@ export const agentEconomyReviewPack = {
     developer_launch_kit_api: "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
     developer_launch_kit_schema:
       "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
+    release_watchlist:
+      "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+    release_watchlist_schema:
+      "https://www.ergoblockchain.org/agent-economy/release-watchlist.schema.v0.json",
     wallet_agent_safety_spec: "https://www.ergoblockchain.org/agent-economy/wallet-agent",
     wallet_agent_safety_spec_api: "https://www.ergoblockchain.org/api/agent-economy/wallet-agent",
     wallet_agent_policy_schema:
@@ -87,6 +91,7 @@ export const agentEconomyReviewPack = {
       "Sage widget v0.3.0 as host-owned wallet handoff surface",
       "Wallet-agent safety spec, policy-check API, policy playground, and reference runner for local policy, simulation, signing boundaries, strict decimal/task-hash validation, unknown-field rejection, and receipt retention",
       "Public wording and mainnet gate controls",
+      "Release watchlist, security header checks, npm audit expectation, and post-deploy smoke targets",
     ],
     excluded_until_separate_review: [
       "real-funds mainnet custody",
@@ -110,6 +115,7 @@ export const agentEconomyReviewPack = {
     "Verify that the wallet-agent policy-check API denies wrong-recipient, wrong-reserve, over-cap, stale-expiry, and missing-receipt actions before any signing request.",
     "Verify that the wallet-agent policy playground demonstrates both allowed and blocked verdicts without touching wallet authority.",
     "Verify that the wallet-agent reference flow keeps signing inside the host-owned wallet layer and stops after a denied policy verdict.",
+    "Verify that release watch targets, security headers, and mainnet gate invariants stay green after every production deploy.",
     "Confirm that public site wording remains testnet-only until both pending mainnet gates are closed.",
     "Publish findings with severity, status, remediation reference, and residual risk.",
   ],
@@ -118,8 +124,10 @@ export const agentEconomyReviewPack = {
     "npm run audit:blog",
     "npm run audit:locales",
     "npm run audit:agent-economy-gate",
+    "npm audit --audit-level=moderate",
     "npm run smoke:routes",
     "npm run smoke:staging",
+    "npm run watch:post-deploy",
   ],
   acceptance_workflow: [
     "The external reviewer pins reviewed commits, deployment id, lockfile hash, package versions, and evidence URLs.",

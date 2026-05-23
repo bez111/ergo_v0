@@ -7,6 +7,8 @@ const checks = [
   { path: "/agent-economy/live", expect: [200] },
   { path: "/agent-economy/launch-kit", expect: [200] },
   { path: "/agent-economy/developer-launch-kit.schema.v0.json", expect: [200] },
+  { path: "/agent-economy/release-watchlist.v0.json", expect: [200] },
+  { path: "/agent-economy/release-watchlist.schema.v0.json", expect: [200] },
   { path: "/agent-economy/review-pack", expect: [200] },
   { path: "/agent-economy/external-audit-review.schema.v0.json", expect: [200] },
   { path: "/agent-economy/mainnet-script-identity.schema.v0.json", expect: [200] },

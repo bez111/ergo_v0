@@ -50,6 +50,7 @@
     "test:report": "playwright show-report",
     "health": "node scripts/health-check.js",
     "health:prod": "BASE_URL=https://www.ergoblockchain.org node scripts/health-check.js",
+    "watch:post-deploy": "node scripts/post-deploy-watch.mjs",
     "smoke:routes": "node scripts/route-smoke.mjs",
     "smoke:routes:prod": "BASE_URL=https://www.ergoblockchain.org node scripts/route-smoke.mjs",
     "smoke:staging": "node scripts/staging-smoke.mjs",
@@ -132,7 +133,8 @@
     "lodash": "^4.17.21",
     "jsonpath-plus": "^10.3.0",
     "micromatch": "^4.0.8",
-    "postcss": "^8.5.14"
+    "postcss": "^8.5.14",
+    "qs": "^6.15.2"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.1.0",

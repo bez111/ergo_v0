@@ -1,0 +1,225 @@
+{
+  "type": "ergo.agent_economy.release_watchlist.v0",
+  "version": "v0",
+  "status": "testnet_release_watchlist_not_audit_report",
+  "last_reviewed": "2026-05-23",
+  "public_claim": "Post-deploy watch contract for the testnet live proof surface. This is not an audit report and does not open mainnet readiness.",
+  "security_baseline": {
+    "npm_audit": "Before a production deploy, npm audit should report zero known vulnerabilities at the configured audit level.",
+    "dependency_overrides": {
+      "qs": "^6.15.2"
+    },
+    "required_security_headers": [
+      "content-security-policy",
+      "strict-transport-security",
+      "x-content-type-options",
+      "x-frame-options"
+    ],
+    "production_claim_guard": "The public posture must remain testnet-only and mainnet_ready must remain false until both external review and audit-bound mainnet script identity exist."
+  },
+  "mainnet_gate_invariants": {
+    "status": "closed",
+    "completed": 4,
+    "pending": 2,
+    "mainnet_ready": false
+  },
+  "deployment_fields_to_record": [
+    "site repository commit",
+    "Vercel deployment id",
+    "package-lock hash",
+    "npm audit result",
+    "post-deploy watch result",
+    "reviewed public evidence URLs"
+  ],
+  "watch_targets": [
+    {
+      "id": "site-home",
+      "url": "https://www.ergoblockchain.org/",
+      "kind": "page",
+      "expect_status": [200],
+      "check_security_headers": true
+    },
+    {
+      "id": "agent-live-hub",
+      "url": "https://www.ergoblockchain.org/agent-economy/live",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agent-launch-kit",
+      "url": "https://www.ergoblockchain.org/agent-economy/launch-kit",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agent-review-pack",
+      "url": "https://www.ergoblockchain.org/agent-economy/review-pack",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agent-trust-gate",
+      "url": "https://www.ergoblockchain.org/agent-economy/trust",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "sage-widget-page",
+      "url": "https://www.ergoblockchain.org/agent-economy/sage-widget",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "wallet-agent-page",
+      "url": "https://www.ergoblockchain.org/agent-economy/wallet-agent",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "policy-playground",
+      "url": "https://www.ergoblockchain.org/build/agent-payments/policy-playground",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "wallet-agent-runner",
+      "url": "https://www.ergoblockchain.org/build/agent-payments/wallet-agent-runner",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "live-status-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/live",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "posture.mainnet_ready": false,
+        "summary.mainnet_gate_status": "closed"
+      }
+    },
+    {
+      "id": "mainnet-gate-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "status": "closed",
+        "progress.completed": 4,
+        "progress.pending": 2
+      }
+    },
+    {
+      "id": "launch-kit-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "status": "testnet_live_proof"
+      }
+    },
+    {
+      "id": "review-pack-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/review-pack",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "status": "ready_for_external_review_not_audit_report"
+      }
+    },
+    {
+      "id": "wallet-policy-check-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "example_verdict.allowed": true
+      }
+    },
+    {
+      "id": "wallet-reference-flow-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/reference-flow",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "type": "ergo.agent_economy.wallet_agent_reference_flow.v0"
+      }
+    },
+    {
+      "id": "sage-signer-health",
+      "url": "https://www.ergoblockchain.org/api/sage/signer-health",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "reachable": true,
+        "status": "up"
+      }
+    },
+    {
+      "id": "sage-blob-probe",
+      "url": "https://www.ergoblockchain.org/api/sage/receipt/blob-probe-2026-05-16",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "storage_healthy": true
+      }
+    },
+    {
+      "id": "sage-full-receipt",
+      "url": "https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "completeness": "full_receipt_bundle"
+      }
+    },
+    {
+      "id": "release-watchlist",
+      "url": "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "type": "ergo.agent_economy.release_watchlist.v0",
+        "status": "testnet_release_watchlist_not_audit_report"
+      }
+    },
+    {
+      "id": "agents-host-root",
+      "url": "https://agents.ergoblockchain.org/",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agents-host-live",
+      "url": "https://agents.ergoblockchain.org/live",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "mcp-health",
+      "url": "https://mcp.ergoblockchain.org/health",
+      "kind": "external",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true
+      }
+    },
+    {
+      "id": "sage-widget-npm",
+      "url": "https://registry.npmjs.org/@ergoblockchain%2Fsage-widget/latest",
+      "kind": "external",
+      "expect_status": [200],
+      "expect_json": {
+        "version": "0.3.0"
+      }
+    }
+  ]
+}

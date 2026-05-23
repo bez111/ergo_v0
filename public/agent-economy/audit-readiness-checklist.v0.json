@@ -2,7 +2,7 @@
   "type": "ergo.agent_economy.audit_readiness_checklist.v0",
   "version": "v0",
   "status": "ready_for_external_review_not_audit_report",
-  "last_reviewed": "2026-05-21",
+  "last_reviewed": "2026-05-23",
   "public_claim": "The testnet evidence pack is ready to hand to an external reviewer. This file is not an audit report and does not open mainnet readiness.",
   "network": "testnet",
   "provider_id": "provider://sage-ergoblockchain",
@@ -16,6 +16,7 @@
     "public_review_pack_api": "https://www.ergoblockchain.org/api/agent-economy/review-pack",
     "public_status_api": "https://www.ergoblockchain.org/api/agent-economy/live",
     "public_mainnet_gate": "https://www.ergoblockchain.org/api/agent-economy/mainnet-gate",
+    "public_release_watchlist": "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
     "external_audit_review_schema": "https://www.ergoblockchain.org/agent-economy/external-audit-review.schema.v0.json",
     "mainnet_script_identity_schema": "https://www.ergoblockchain.org/agent-economy/mainnet-script-identity.schema.v0.json"
   },
@@ -49,6 +50,26 @@
       "id": "audit_scope_manifest",
       "uri": "https://www.ergoblockchain.org/agent-economy/audit-scope-manifest.v0.json",
       "expectation": "Scope states what is included and what remains excluded until separate review."
+    },
+    {
+      "id": "developer_launch_kit",
+      "uri": "https://www.ergoblockchain.org/agent-economy/launch-kit",
+      "expectation": "Developers have a public five-minute path, service index, schemas, and guarded testnet entrypoints."
+    },
+    {
+      "id": "wallet_agent_policy_check",
+      "uri": "https://www.ergoblockchain.org/api/agent-economy/wallet-agent/policy-check",
+      "expectation": "Wallet-agent actions are evaluated against deterministic local policy before any host wallet signing request."
+    },
+    {
+      "id": "release_watchlist",
+      "uri": "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
+      "expectation": "Post-deploy watch targets, security headers, npm audit expectation, and mainnet gate invariants are documented."
+    },
+    {
+      "id": "mcp_dns_health",
+      "uri": "https://mcp.ergoblockchain.org/health",
+      "expectation": "The public MCP DNS endpoint responds independently from the main site."
     }
   ],
   "reviewer_must_record": [
@@ -79,7 +100,9 @@
     "npm run audit:locales",
     "npm run audit:agent-economy-gate",
     "npm run audit:assets",
-    "npm run smoke:routes"
+    "npm audit --audit-level=moderate",
+    "npm run smoke:routes",
+    "npm run watch:post-deploy"
   ],
   "mainnet_gate_rule": {
     "must_remain_closed_until": [

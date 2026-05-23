@@ -2,7 +2,7 @@
   "type": "ergo.agent_economy.script_identity_manifest.v0",
   "version": "v0",
   "status": "draft_testnet_observed_identity",
-  "last_reviewed": "2026-05-21",
+  "last_reviewed": "2026-05-23",
   "public_claim": "Observed testnet runtime identity only. Not an audited mainnet contract identity.",
   "network": "testnet",
   "provider_id": "provider://sage-ergoblockchain",
@@ -61,7 +61,7 @@
   },
   "implementation_identity": {
     "site_repo": "https://github.com/bez111/ergo_v0",
-    "site_commit": "409f4cb0",
+    "site_commit": "73a68191309b",
     "accord_registry_repo": "https://github.com/accord-protocol/accord-protocol",
     "accord_registry_commit": "5040f85",
     "signed_conformance_result": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.json",
