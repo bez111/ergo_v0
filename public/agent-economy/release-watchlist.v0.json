@@ -2,7 +2,7 @@
   "type": "ergo.agent_economy.release_watchlist.v0",
   "version": "v0",
   "status": "testnet_release_watchlist_not_audit_report",
-  "last_reviewed": "2026-05-23",
+  "last_reviewed": "2026-05-24",
   "public_claim": "Post-deploy watch contract for the testnet live proof surface. This is not an audit report and does not open mainnet readiness.",
   "security_baseline": {
     "npm_audit": "Before a production deploy, npm audit should report zero known vulnerabilities at the configured audit level.",
@@ -29,6 +29,7 @@
     "package-lock hash",
     "npm audit result",
     "post-deploy watch result",
+    "Sage proof reconciliation result",
     "reviewed public evidence URLs"
   ],
   "watch_targets": [
@@ -46,8 +47,26 @@
       "expect_status": [200]
     },
     {
+      "id": "agent-start",
+      "url": "https://www.ergoblockchain.org/agent-economy/start",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
       "id": "agent-launch-kit",
       "url": "https://www.ergoblockchain.org/agent-economy/launch-kit",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agent-proof-explorer",
+      "url": "https://www.ergoblockchain.org/agent-economy/proofs",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agent-roadmap",
+      "url": "https://www.ergoblockchain.org/agent-economy/roadmap",
       "kind": "page",
       "expect_status": [200]
     },
@@ -95,6 +114,7 @@
       "expect_json": {
         "ok": true,
         "posture.mainnet_ready": false,
+        "summary.accord_conformance_receipt_resolved": true,
         "summary.mainnet_gate_status": "closed"
       }
     },
@@ -118,6 +138,147 @@
       "expect_json": {
         "ok": true,
         "status": "testnet_live_proof"
+      }
+    },
+    {
+      "id": "proof-explorer-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/proofs",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "type": "ergo.agent_economy.proof_explorer.v0",
+        "posture.mainnet_ready": false,
+        "summary.mainnet_gate_status": "closed",
+        "summary.conformance_receipt_resolved": true,
+        "surfaces.schema": "https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json",
+        "verify_steps.0.id": "proof-board",
+        "verify_steps.0.command": "curl -sS https://www.ergoblockchain.org/api/agent-economy/proofs"
+      }
+    },
+    {
+      "id": "proof-explorer-schema",
+      "url": "https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "$id": "https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json",
+        "properties.type.const": "ergo.agent_economy.proof_explorer.v0",
+        "properties.posture.properties.mainnet_ready.const": false
+      }
+    },
+    {
+      "id": "agent-economy-discovery",
+      "url": "https://www.ergoblockchain.org/.well-known/agent-economy.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "type": "ergo.agent_economy.discovery.v0",
+        "posture.mainnet_ready": false,
+        "surfaces.proof_explorer_api": "https://www.ergoblockchain.org/api/agent-economy/proofs",
+        "verification.proof_reconciliation.command": "npm run sage:proof-reconcile"
+      }
+    },
+    {
+      "id": "agent-economy-discovery-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/discovery",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "type": "ergo.agent_economy.discovery.v0",
+        "posture.mainnet_ready": false,
+        "surfaces.discovery_api": "https://www.ergoblockchain.org/api/agent-economy/discovery",
+        "surfaces.roadmap_api": "https://www.ergoblockchain.org/api/agent-economy/roadmap",
+        "surfaces.dev_services_api": "https://www.ergoblockchain.org/api/dev/services",
+        "surfaces.dev_tools_api": "https://www.ergoblockchain.org/api/dev/tools",
+        "verification.post_deploy_watch.command": "npm run watch:agent-economy"
+      }
+    },
+    {
+      "id": "agent-economy-discovery-schema",
+      "url": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "$id": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json",
+        "properties.type.const": "ergo.agent_economy.discovery.v0",
+        "properties.posture.properties.mainnet_ready.const": false
+      }
+    },
+    {
+      "id": "agent-economy-openapi",
+      "url": "https://www.ergoblockchain.org/agent-economy/openapi.v0.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "openapi": "3.1.0",
+        "info.title": "Ergo Agent Economy Public API",
+        "x-ergo-posture.mainnet_ready": false,
+        "paths./api/agent-economy/proofs.get.operationId": "getAgentEconomyProofs",
+        "paths./api/agent-economy/roadmap.get.operationId": "getAgentEconomyRoadmap",
+        "paths./api/dev/services.get.operationId": "getDeveloperServicesIndex",
+        "paths./api/dev/tools.post.operationId": "runDeveloperTool",
+        "paths./api/sage/quote.post.operationId": "createSageQuote",
+        "paths./api/sage/chat.post.operationId": "chatWithSage",
+        "paths./api/sage/verify-payment.post.operationId": "verifySagePayment"
+      }
+    },
+    {
+      "id": "developer-services-api",
+      "url": "https://www.ergoblockchain.org/api/dev/services",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "type": "ergo.dev_services_index.v1",
+        "posture.label": "developer_utility_belt"
+      }
+    },
+    {
+      "id": "developer-tools-api",
+      "url": "https://www.ergoblockchain.org/api/dev/tools",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "ok": true,
+        "type": "ergo.dev_tools.v1",
+        "actions.hash.method": "POST",
+        "actions.receipt.method": "POST"
+      }
+    },
+    {
+      "id": "agent-roadmap-api",
+      "url": "https://www.ergoblockchain.org/api/agent-economy/roadmap",
+      "kind": "api",
+      "expect_status": [200],
+      "expect_json": {
+        "type": "ergo.agent_economy.roadmap.v0",
+        "posture.mainnet_ready": false,
+        "mainnet_gate.status": "closed"
+      }
+    },
+    {
+      "id": "agent-roadmap-schema",
+      "url": "https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "$id": "https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json",
+        "properties.type.const": "ergo.agent_economy.roadmap.v0",
+        "properties.posture.properties.mainnet_ready.const": false
+      }
+    },
+    {
+      "id": "accord-provider-descriptor",
+      "url": "https://www.ergoblockchain.org/.well-known/accord",
+      "kind": "json",
+      "expect_status": [200],
+      "expect_json": {
+        "type": "accord.provider_descriptor.v0",
+        "status": "conformance_l1_signed_testnet",
+        "posture.mainnet_ready": false,
+        "evidence.conformance.level": "L1",
+        "evidence.conformance.status": "passed"
       }
     },
     {
@@ -226,6 +387,18 @@
     {
       "id": "agents-host-live",
       "url": "https://agents.ergoblockchain.org/live",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agents-host-start",
+      "url": "https://agents.ergoblockchain.org/start",
+      "kind": "page",
+      "expect_status": [200]
+    },
+    {
+      "id": "agents-host-proofs",
+      "url": "https://agents.ergoblockchain.org/proofs",
       "kind": "page",
       "expect_status": [200]
     },

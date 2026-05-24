@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json",
+  "title": "Ergo Agent Economy Roadmap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "posture",
+    "north_star",
+    "product_principles",
+    "phases",
+    "primary_paths",
+    "next_actions",
+    "mainnet_gate"
+  ],
+  "properties": {
+    "type": { "const": "ergo.agent_economy.roadmap.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "testnet_live_proof_roadmap" },
+    "last_updated": { "type": "string" },
+    "public_claim": { "type": "string" },
+    "posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["network", "mainnet_ready", "production_custody", "gate"],
+      "properties": {
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "gate": { "type": "string" }
+      }
+    },
+    "north_star": { "type": "string" },
+    "product_principles": {
+      "type": "array",
+      "minItems": 3,
+      "items": { "type": "string" }
+    },
+    "phases": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "phase", "title", "summary", "proof_links"],
+        "properties": {
+          "id": { "type": "string" },
+          "phase": {
+            "enum": ["live", "build_next", "trust_gated", "later"]
+          },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "proof_links": {
+            "type": "array",
+            "items": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    },
+    "primary_paths": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" },
+      "required": ["human_start", "live_hub", "proof_explorer", "developer_launch_kit", "machine_discovery", "openapi"]
+    },
+    "next_actions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "owner", "label", "blocked_by_external"],
+        "properties": {
+          "id": { "type": "string" },
+          "owner": { "enum": ["repo", "audit", "ops", "wallet", "dns"] },
+          "label": { "type": "string" },
+          "blocked_by_external": { "type": "boolean" }
+        }
+      }
+    },
+    "mainnet_gate": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["status", "mainnet_ready", "pending_blockers", "artifacts"],
+      "properties": {
+        "status": { "const": "closed" },
+        "mainnet_ready": { "const": false },
+        "pending_blockers": { "type": "array" },
+        "artifacts": { "type": "object" }
+      }
+    }
+  }
+}

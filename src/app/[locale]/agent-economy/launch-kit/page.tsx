@@ -73,6 +73,18 @@ const quickLinks = [
     detail: "Operational state for Sage, MCP, receipts, widget, policy, and mainnet gate.",
   },
   {
+    label: "Proof explorer",
+    href: "/agent-economy/proofs",
+    icon: FileJson2,
+    detail: "One board for receipt bundles, conformance evidence, MCP health, widget state, and audit gates.",
+  },
+  {
+    label: "Roadmap",
+    href: "/agent-economy/roadmap",
+    icon: GitBranch,
+    detail: "Strategic map for live surfaces, next repo work, external trust gates, and later provider registry work.",
+  },
+  {
     label: "Policy playground",
     href: "/build/agent-payments/policy-playground",
     icon: ShieldCheck,
@@ -142,6 +154,20 @@ export default function AgentEconomyLaunchKitPage() {
                     <ExternalLink className="h-4 w-4" />
                   </LaunchLink>
                   <LaunchLink
+                    href="/api/agent-economy/discovery"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Discovery API
+                    <FileJson2 className="h-4 w-4" />
+                  </LaunchLink>
+                  <LaunchLink
+                    href="/agent-economy/openapi.v0.json"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    OpenAPI
+                    <FileJson2 className="h-4 w-4" />
+                  </LaunchLink>
+                  <LaunchLink
                     href="/agent-economy/developer-launch-kit.schema.v0.json"
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >
@@ -178,7 +204,7 @@ export default function AgentEconomyLaunchKitPage() {
         </section>
 
         <section className="border-y border-white/5 bg-black/45 px-4 py-10 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mx-auto grid max-w-7xl gap-4 md:grid-cols-2 xl:grid-cols-3">
             {quickLinks.map((item) => (
               <LaunchLink
                 key={item.href}
@@ -236,11 +262,11 @@ export default function AgentEconomyLaunchKitPage() {
               title="Machine-readable surfaces to wire first."
               body="These are deliberately boring endpoints: stable JSON, explicit status, and no signing authority."
             />
-            <div className="mt-8 grid gap-4 lg:grid-cols-2">
+            <div className="mt-8 grid min-w-0 gap-4 lg:grid-cols-2">
               {kit.api_recipes.map((recipe) => (
-                <div key={recipe.id} className="rounded-lg border border-white/10 bg-black/75">
+                <div key={recipe.id} className="min-w-0 rounded-lg border border-white/10 bg-black/75">
                   <div className="flex items-start justify-between gap-4 border-b border-white/10 p-4">
-                    <div>
+                    <div className="min-w-0">
                       <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
                         {recipe.method}
                       </div>
@@ -253,7 +279,7 @@ export default function AgentEconomyLaunchKitPage() {
                       <ExternalLink className="h-4 w-4" />
                     </LaunchLink>
                   </div>
-                  <pre className="overflow-auto border-b border-white/10 p-4 text-xs leading-relaxed text-orange-100">
+                  <pre className="max-w-full overflow-auto border-b border-white/10 p-4 text-xs leading-relaxed text-orange-100">
                     {recipe.curl}
                   </pre>
                   <div className="flex flex-wrap gap-2 p-4">
@@ -273,8 +299,8 @@ export default function AgentEconomyLaunchKitPage() {
         </section>
 
         <section className="px-4 py-14 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div>
+          <div className="mx-auto grid max-w-7xl min-w-0 gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="min-w-0">
               <SectionHeader
                 eyebrow="Widget"
                 title="Embed Sage without handing over wallet authority."
@@ -290,7 +316,7 @@ export default function AgentEconomyLaunchKitPage() {
                     <div className="mt-1 text-2xl font-bold text-white">v{kit.npm.version}</div>
                   </div>
                 </div>
-                <pre className="mt-5 overflow-auto rounded-md border border-white/10 bg-black/70 p-4 text-sm text-orange-100">
+                <pre className="mt-5 max-w-full overflow-auto rounded-md border border-white/10 bg-black/70 p-4 text-sm text-orange-100">
                   {kit.npm.install}
                 </pre>
               </div>

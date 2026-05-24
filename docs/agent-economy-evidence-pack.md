@@ -1,6 +1,6 @@
 # Agent Economy Evidence Pack
 
-Current status as of 2026-05-23: testnet live proof, not mainnet readiness.
+Current status as of 2026-05-24: testnet live proof, not mainnet readiness.
 
 ## Published evidence
 
@@ -28,6 +28,24 @@ https://www.ergoblockchain.org/api/agent-economy/launch-kit
 
 developer_launch_kit_schema
 https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
+agent_economy_discovery
+https://www.ergoblockchain.org/.well-known/agent-economy.json
+
+agent_economy_discovery_api
+https://www.ergoblockchain.org/api/agent-economy/discovery
+
+agent_economy_discovery_schema
+https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json
+
+agent_economy_openapi
+https://www.ergoblockchain.org/agent-economy/openapi.v0.json
+
+developer_services_api
+https://www.ergoblockchain.org/api/dev/services
+
+developer_tools_api
+https://www.ergoblockchain.org/api/dev/tools
 
 release_watchlist
 https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
@@ -101,6 +119,8 @@ https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 - The observed testnet wallet, reserve, note, registers, and settlement identifiers are published.
 - The public audit readiness checklist is published for an external reviewer.
 - The developer launch kit is published as a human page, JSON manifest, and JSON Schema.
+- The Agent Economy discovery descriptor and API are published for machine-readable agent surface discovery.
+- The Agent Economy OpenAPI manifest is published for API client and documentation tooling.
 - The release watchlist is published as the post-deploy operational contract for health, security headers, signer, MCP, receipt, and mainnet gate invariants.
 - The current release API reports the runtime Git/Vercel context for the currently served deployment without requiring a new static attestation on every deploy.
 - The 2026-05-23 release attestation pins the deployed commit, Vercel deployment id, package-lock hash, npm audit status, post-deploy watch status, production health, and route smoke result.
@@ -125,5 +145,5 @@ Local guardrail:
 
 ```bash
 npm run audit:agent-economy-gate
-npm run watch:post-deploy
+npm run watch:agent-economy
 ```

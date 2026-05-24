@@ -111,19 +111,33 @@ npm run smoke
 
 ```bash
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/live
+curl -fsS https://www.ergoblockchain.org/.well-known/agent-economy.json
+curl -fsS https://www.ergoblockchain.org/api/agent-economy/discovery
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/launch-kit
+curl -fsS https://www.ergoblockchain.org/api/agent-economy/proofs
+curl -fsS https://www.ergoblockchain.org/api/agent-economy/roadmap
 curl -fsS https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/openapi.v0.json
 curl -fsS https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/api/dev/services
+curl -fsS https://www.ergoblockchain.org/api/dev/tools
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/mainnet-gate
 curl -fsS https://www.ergoblockchain.org/api/sage/signer-health
+curl -fsS https://www.ergoblockchain.org/agent-economy/start
 curl -fsS https://www.ergoblockchain.org/agent-economy/live
 curl -fsS https://www.ergoblockchain.org/agent-economy/launch-kit
+curl -fsS https://www.ergoblockchain.org/agent-economy/proofs
 npm run smoke:routes:prod
+npm run watch:agent-economy
 ```
 
 Expected:
 
 - Live Hub page loads.
+- Start page, Proof Explorer, Roadmap, Discovery API, OpenAPI contract, and developer tools APIs load.
 - Developer Launch Kit page and JSON load.
 - `receipt-storage = live`.
 - `full-receipt-bundle = live` after paid flow.

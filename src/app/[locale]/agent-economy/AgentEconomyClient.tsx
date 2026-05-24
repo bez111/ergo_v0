@@ -200,10 +200,10 @@ export function AgentEconomyClient() {
               <div className="flex flex-wrap gap-4">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}>
                   <Link
-                    href="/build/agent-payments"
+                    href="/agent-economy/start"
                     className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black font-mono font-semibold uppercase tracking-wider px-6 py-3 rounded-2xl border-2 border-orange-500 hover:border-orange-600 transition-all text-sm"
                   >
-                    <span>{t("hero.ctaArchitecture")}</span>
+                    <span>Start building</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
@@ -236,9 +236,9 @@ export function AgentEconomyClient() {
           description="A practical route for builders who want agent payments, work verification, settlement receipts, and programmable credit without pretending the stack is production-certified."
           steps={[
             {
-              label: "Run demos",
-              description: "Start with the visible x402, MCP, API-payment, and credit-note flows.",
-              href: "/demos",
+              label: "Start here",
+              description: "Orient around what is live, what is verifiable, and what remains mainnet-gated.",
+              href: "/agent-economy/start",
             },
             {
               label: "Read Accord",

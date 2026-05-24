@@ -1,6 +1,6 @@
 # Current Local Batch Ledger
 
-Status as of 2026-05-22: local batch in progress, not deployed.
+Status as of 2026-05-24: local batch in progress, not deployed.
 
 This file records the current release batch so the final deploy window can be
 reviewed without reconstructing intent from a large diff.
@@ -8,13 +8,31 @@ reviewed without reconstructing intent from a large diff.
 ## Included In This Batch
 
 - Agent Economy Developer Launch Kit:
+  - start page: `/agent-economy/start`
   - human page: `/agent-economy/launch-kit`
   - JSON API: `/api/agent-economy/launch-kit`
   - JSON Schema: `/agent-economy/developer-launch-kit.schema.v0.json`
+  - Discovery API: `/api/agent-economy/discovery`
+  - OpenAPI contract: `/agent-economy/openapi.v0.json`
+  - roadmap page/API/schema: `/agent-economy/roadmap`, `/api/agent-economy/roadmap`, `/agent-economy/roadmap.schema.v0.json`
+  - developer services API: `/api/dev/services`
+  - stateless developer tools API: `/api/dev/tools`
+  - paid Sage flow contract: `/api/sage/quote`, `/api/sage/verify-payment`, `/api/sage/chat`, `/api/sage/receipt/<id>`
   - wallet-agent policy-check request schema: `/agent-economy/wallet-agent-policy-check.schema.v0.json`
+- Agent Economy Proof Explorer:
+  - human page: `/agent-economy/proofs`
+  - JSON API: `/api/agent-economy/proofs`
+  - JSON Schema: `/agent-economy/proof-explorer.schema.v0.json`
+  - verify steps for full receipt bundle, signed conformance evidence, MCP health, widget state, activity, and mainnet gate
 - Agent host aliases for `agents.ergoblockchain.org`:
+  - `/`
+  - `/start`
+  - `/live`
   - `/launch-kit`
+  - `/proofs`
+  - `/api/discovery`
   - `/api/launch-kit`
+  - `/api/proofs`
   - `agenthub.ergoblockchain.org` is intentionally not part of this batch.
 - Live Hub integration:
   - developer launch kit gate
@@ -25,6 +43,19 @@ reviewed without reconstructing intent from a large diff.
   - launch kit probe
   - full receipt bundle example in the receipt verifier
 - Machine-readable discovery:
+  - `/.well-known/agent-economy.json`
+  - `/api/agent-economy/discovery`
+  - `/agent-economy/discovery.schema.v0.json`
+  - `/agent-economy/openapi.v0.json`
+  - `/agent-economy/roadmap`
+  - `/api/agent-economy/roadmap`
+  - `/agent-economy/roadmap.schema.v0.json`
+  - `/api/dev/services`
+  - `/api/dev/tools`
+  - `/api/sage/quote`
+  - `/api/sage/verify-payment`
+  - `/api/sage/chat`
+  - `/.well-known/accord`
   - search index
   - `llms.txt`
   - `llms-full.txt`
@@ -110,8 +141,15 @@ Then run production smoke after deployment:
 ```bash
 npm run smoke:routes:prod
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/live
+curl -fsS https://www.ergoblockchain.org/.well-known/agent-economy.json
+curl -fsS https://www.ergoblockchain.org/api/agent-economy/discovery
 curl -fsS https://www.ergoblockchain.org/api/agent-economy/launch-kit
+curl -fsS https://www.ergoblockchain.org/api/agent-economy/proofs
 curl -fsS https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json
+curl -fsS https://www.ergoblockchain.org/agent-economy/openapi.v0.json
 curl -fsS https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json
 curl -fsS https://mcp.ergoblockchain.org/health
+npm run watch:agent-economy
 ```

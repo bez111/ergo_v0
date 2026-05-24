@@ -105,3 +105,25 @@ Live Hub should show:
 - `Mainnet gate = closed` until external audit/review and audit-bound mainnet script identity are also published
 
 Conformance evidence alone does not open mainnet readiness.
+
+## 6. Reconcile the public proof chain
+
+After the evidence is published and the site is deployed, run:
+
+```bash
+cd /Users/alexanderbezkrovny/Desktop/ergo_v0
+npm run watch:agent-economy
+```
+
+For a preview deployment:
+
+```bash
+BASE_URL=https://<deployment-url> npm run watch:agent-economy
+```
+
+This command is the operational guard for the whole Sage proof chain. It checks
+that Blob storage is healthy, `/api/sage/receipt/<id>` returns
+`full_receipt_bundle`, the signed conformance artifact references the same
+receipt, Live Hub and Proof Explorer both resolve that receipt, and the mainnet
+gate is still closed. If signed evidence exists but the referenced receipt is
+missing or chain-only, the proof chain is treated as blocked.

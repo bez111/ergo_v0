@@ -4,7 +4,12 @@
   "name": "Sage",
   "protocol": "accord",
   "version": "v0",
-  "status": "conformance_ready",
+  "status": "conformance_l1_signed_testnet",
+  "posture": {
+    "network": "ergo_testnet",
+    "mainnet_ready": false,
+    "claim": "Sage is a hosted testnet proof surface. Signed Accord L1 evidence is public, but mainnet readiness remains audit-gated."
+  },
   "endpoints": {
     "accord_402": "https://www.ergoblockchain.org/api/sage/accord",
     "quote": "https://www.ergoblockchain.org/api/sage/quote",
@@ -16,7 +21,14 @@
     "ergo"
   ],
   "evidence": {
-    "receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/{id}",
-    "conformance": "pending:first post-Blob full receipt + signed conformance artifact"
+    "latest_full_receipt_id": "f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+    "receipt_bundle": "https://www.ergoblockchain.org/api/sage/receipt/f8752d10a2ece92fbc88065c3b92b94da621ec65943098f43c9e084deb763d81",
+    "conformance": {
+      "level": "L1",
+      "status": "passed",
+      "signed_artifact": "https://www.ergoblockchain.org/evidence/sage/conformance-l1-2026-05-21.signed.json",
+      "provider_signing_key": "https://www.ergoblockchain.org/evidence/sage/provider-signing-key.json"
+    },
+    "proof_explorer": "https://www.ergoblockchain.org/api/agent-economy/proofs"
   }
 }

@@ -106,8 +106,11 @@ function getAgentHubPath(pathname: string): string | null {
   const routeParts = maybeLocale && localePrefixes.has(maybeLocale) ? parts.slice(1) : parts;
   const route = `/${routeParts.join('/')}`;
   const aliases = new Map<string, string>([
+    ['/start', '/agent-economy/start'],
     ['/live', '/agent-economy/live'],
     ['/launch-kit', '/agent-economy/launch-kit'],
+    ['/proofs', '/agent-economy/proofs'],
+    ['/roadmap', '/agent-economy/roadmap'],
     ['/sage-widget', '/agent-economy/sage-widget'],
     ['/wallet-agent', '/agent-economy/wallet-agent'],
     ['/wallet-agent-runner', '/build/agent-payments/wallet-agent-runner'],

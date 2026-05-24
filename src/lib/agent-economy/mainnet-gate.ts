@@ -12,7 +12,7 @@ export const agentEconomyMainnetGate = {
   type: "ergo.agent_economy.mainnet_gate.v0",
   version: "v0",
   status: "closed" as MainnetGateState,
-  last_reviewed: "2026-05-23",
+  last_reviewed: "2026-05-24",
   public_claim:
     "Testnet live proof only. Do not claim production or mainnet readiness until every blocker is open.",
   blockers: [
@@ -91,10 +91,20 @@ export const agentEconomyMainnetGate = {
       "https://www.ergoblockchain.org/agent-economy/audit-readiness-checklist.v0.json",
     review_pack: "https://www.ergoblockchain.org/agent-economy/review-pack",
     review_pack_api: "https://www.ergoblockchain.org/api/agent-economy/review-pack",
+    agent_economy_start: "https://www.ergoblockchain.org/agent-economy/start",
+    agent_economy_roadmap: "https://www.ergoblockchain.org/agent-economy/roadmap",
+    agent_economy_roadmap_api:
+      "https://www.ergoblockchain.org/api/agent-economy/roadmap",
+    agent_economy_roadmap_schema:
+      "https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json",
     developer_launch_kit: "https://www.ergoblockchain.org/agent-economy/launch-kit",
     developer_launch_kit_api: "https://www.ergoblockchain.org/api/agent-economy/launch-kit",
     developer_launch_kit_schema:
       "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json",
+    proof_explorer: "https://www.ergoblockchain.org/agent-economy/proofs",
+    proof_explorer_api: "https://www.ergoblockchain.org/api/agent-economy/proofs",
+    proof_explorer_schema:
+      "https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json",
     release_watchlist:
       "https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json",
     release_watchlist_schema:

@@ -106,6 +106,7 @@ const GATE_ICONS: Record<string, typeof Bot> = {
   "sage-signer": ShieldCheck,
   "sage-widget": CircuitBoard,
   "developer-launch-kit": Rocket,
+  "proof-explorer": ReceiptText,
   "wallet-agent-spec": WalletCards,
   "wallet-agent-policy": ShieldCheck,
   "wallet-agent-reference-flow": GitBranch,
@@ -220,6 +221,13 @@ export function AgentEconomyLiveClient() {
                     className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
                   >
                     Launch kit
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="/agent-economy/proofs"
+                    className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-5 py-3 font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200 transition-colors hover:border-orange-500/45 hover:bg-orange-500/10"
+                  >
+                    Proof explorer
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
@@ -451,15 +459,9 @@ export function AgentEconomyLiveClient() {
             <div className="grid gap-5 md:grid-cols-4">
               <ProofTile
                 icon={ReceiptText}
-                label="Receipt source"
+                label="Proof explorer"
                 value={
-                  status
-                    ? status.summary.receipt_storage_healthy
-                      ? "Blob healthy"
-                      : status.summary.storage_configured
-                        ? "Blob failing"
-                        : "Setup pending"
-                    : "pending"
+                  status ? "Live board" : "pending"
                 }
               />
               <ProofTile
@@ -608,6 +610,7 @@ function skeletonGates(): LiveGate[] {
     "sage-signer",
     "sage-widget",
     "developer-launch-kit",
+    "proof-explorer",
     "wallet-agent-spec",
     "wallet-agent-policy",
     "wallet-agent-reference-flow",

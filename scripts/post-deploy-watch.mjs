@@ -20,6 +20,9 @@ function resolveUrl(value) {
 
 function getPath(source, path) {
   return path.split(".").reduce((value, segment) => {
+    if (Array.isArray(value) && /^\d+$/.test(segment)) {
+      return value[Number(segment)]
+    }
     if (value === null || typeof value !== "object") return undefined
     return value[segment]
   }, source)

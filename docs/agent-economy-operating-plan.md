@@ -25,6 +25,10 @@ identity, signer operations, and audit artifacts are published.
 ## Product Shape
 
 - `agents.ergoblockchain.org` becomes the short entry point.
+- `/agent-economy/roadmap` becomes the public helicopter view for live, next,
+  trust-gated, and later work.
+- `/api/agent-economy/roadmap` remains the machine-readable source for that
+  roadmap.
 - `/agent-economy/live` remains the canonical Live Hub route.
 - `/api/agent-economy/live` remains the machine-readable source for hub status.
 - `/api/sage/receipt/<id>` remains the single source of receipt truth.

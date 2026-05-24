@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export const revalidate = 86400 // 24h
 
 const BASE_URL = 'https://www.ergoblockchain.org'
-const LAST_UPDATED = '2026-05-12'
+const LAST_UPDATED = '2026-05-23'
 
 export async function GET() {
   const content = `# Ergo Platform
@@ -71,7 +71,13 @@ Important status language:
 Canonical Agent Economy pages:
 
 - [Agent Economy](${BASE_URL}/agent-economy)
+- [Agent Economy Start](${BASE_URL}/agent-economy/start): fastest path through live state, proof APIs, developer launch kit and mainnet gate
+- [Agent Economy Discovery JSON](${BASE_URL}/.well-known/agent-economy.json) and [Discovery API](${BASE_URL}/api/agent-economy/discovery): machine-readable entrypoints for agent surfaces, proof APIs, MCP, Sage receipts and verification commands
 - [Developer Launch Kit](${BASE_URL}/agent-economy/launch-kit) and [JSON Schema](${BASE_URL}/agent-economy/developer-launch-kit.schema.v0.json)
+- [Agent Economy Roadmap](${BASE_URL}/agent-economy/roadmap) and [Roadmap API](${BASE_URL}/api/agent-economy/roadmap): strategic live/next/gated/later map for the proof surface
+- [Agent Economy OpenAPI](${BASE_URL}/agent-economy/openapi.v0.json): public API contract for discovery, live status, proofs, launch kit, review pack, wallet-agent policy, and Sage receipts
+- [Proof Explorer](${BASE_URL}/agent-economy/proofs) and [Proof API](${BASE_URL}/api/agent-economy/proofs)
+- [Live Hub](${BASE_URL}/agent-economy/live) and [Live Status API](${BASE_URL}/api/agent-economy/live)
 - [Agent Economy Manifesto](${BASE_URL}/blog/agent-economy-manifesto)
 - [Agent Payment Architecture](${BASE_URL}/build/agent-payments)
 - [Developer Services](${BASE_URL}/build/services)

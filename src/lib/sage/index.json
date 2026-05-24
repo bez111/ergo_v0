@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-23T03:21:00.104Z",
-  "documentCount": 58,
+  "generatedAt": "2026-05-24T12:13:22.972Z",
+  "documentCount": 60,
   "docs": [
     {
       "id": "blog:agent-economy-manifesto:0",
@@ -419,12 +419,28 @@
       "content": "The agent payment quickstart shows the shortest path for developers: install @ergoblockchain/sage-widget, request a Sage quote, emit a portable payment intent for a host-owned wallet flow, create an Ergo testnet Note, verify the Note box id, stream the paid Sage answer, and fetch the full receipt bundle. It emphasizes testnet-only posture, no widget-side signing, and /api/sage/receipt/<id> as the source of truth for Agreement JSON, Verification Receipt JSON, and Settlement Receipt JSON."
     },
     {
+      "id": "page:agent-economy-start",
+      "type": "page",
+      "url": "/agent-economy/start",
+      "title": "Start building the Ergo Agent Economy",
+      "tags": "agent economy start, developer onboarding, proof API, discovery, launch kit, MCP, mainnet gate",
+      "content": "The Agent Economy Start page is the fastest orientation path for developers and agents. It explains the public posture as testnet live proof, points to the Live Hub for operational state, the Proof Explorer and /api/agent-economy/proofs for verifiable evidence and verify_steps, /.well-known/agent-economy.json and /api/agent-economy/discovery for machine discovery, /agent-economy/openapi.v0.json for API tooling, the Developer Launch Kit for the five-minute build path, mcp.ergoblockchain.org for machine access, wallet-agent policy checks for local safety, @ergoblockchain/sage-widget v0.3.0 for embedding paid Sage flows, and the mainnet gate for external review and audit-bound script identity. It is designed to answer: what is live now, what can be verified, what can be built first, and what remains blocked before production mainnet claims."
+    },
+    {
       "id": "page:agent-economy-launch-kit",
       "type": "page",
       "url": "/agent-economy/launch-kit",
       "title": "Agent Economy developer launch kit",
-      "tags": "developer launch kit, agent economy, Sage, policy-check, receipts, MCP, widget",
-      "content": "The Agent Economy Developer Launch Kit is the shortest path for a developer to try the live Ergo agent-economy surfaces. It exposes a human page at /agent-economy/launch-kit, a machine-readable manifest at /api/agent-economy/launch-kit, and a JSON Schema at /agent-economy/developer-launch-kit.schema.v0.json. The launch kit points builders to /api/agent-economy/live for live status, agents.ergoblockchain.org/policy-playground for wallet-agent policy denial checks, /api/sage/receipt/<id> for full receipt bundles, /build/services for hashing and inspectors, mcp.ergoblockchain.org for MCP health and tool access, and @ergoblockchain/sage-widget v0.3.0 for React and vanilla embedding. It explicitly keeps public language testnet-first and says mainnet remains blocked until external review and audit-bound mainnet script identity are published."
+      "tags": "developer launch kit, agent economy, Sage, policy-check, receipts, discovery, MCP, widget",
+      "content": "The Agent Economy Developer Launch Kit is the shortest path for a developer to try the live Ergo agent-economy surfaces. It exposes a human page at /agent-economy/launch-kit, a machine-readable manifest at /api/agent-economy/launch-kit, discovery descriptors at /.well-known/agent-economy.json and /api/agent-economy/discovery, the OpenAPI contract at /agent-economy/openapi.v0.json, the Sage provider descriptor at /.well-known/accord, and JSON Schemas at /agent-economy/developer-launch-kit.schema.v0.json and /agent-economy/discovery.schema.v0.json. The launch kit points builders to /api/agent-economy/live for live status, /agent-economy/proofs and /api/agent-economy/proofs for the proof explorer, agents.ergoblockchain.org/policy-playground for wallet-agent policy denial checks, /api/sage/receipt/<id> for full receipt bundles, /build/services for hashing and inspectors, mcp.ergoblockchain.org for MCP health and tool access, and @ergoblockchain/sage-widget v0.3.0 for React and vanilla embedding. It explicitly keeps public language testnet-first and says mainnet remains blocked until external review and audit-bound mainnet script identity are published."
+    },
+    {
+      "id": "page:agent-economy-proof-explorer",
+      "type": "page",
+      "url": "/agent-economy/proofs",
+      "title": "Agent Economy proof explorer",
+      "tags": "proof explorer, Sage receipt bundle, Accord conformance, MCP health, audit gate, agent economy",
+      "content": "The Agent Economy Proof Explorer is the human and machine-readable evidence board for Ergo's testnet agent economy. The human page at /agent-economy/proofs renders /api/agent-economy/proofs. The API collects full Sage receipt bundles from /api/sage/receipt/<id>, signed Accord conformance evidence from /evidence/sage/latest-evidence.json, public MCP health from mcp.ergoblockchain.org/health, @ergoblockchain/sage-widget npm state, recent Sage wallet activity, and the closed mainnet gate. The proof explorer is intentionally testnet-first: it shows what developers can verify now while preserving the rule that mainnet readiness requires external review and audit-bound mainnet script identity."
     },
     {
       "id": "page:agent-economy-review-pack",

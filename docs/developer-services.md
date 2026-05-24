@@ -6,8 +6,18 @@
 
 - `GET /api/dev/services` returns the service catalog, status counts, and lightweight probes.
 - `GET /api/dev/tools` returns tool examples.
+- `POST /api/dev/tools` runs stateless helpers for hash, address, box, tx, and receipt checks. It never signs, broadcasts, or mutates chain state.
+- `GET /.well-known/agent-economy.json` returns the canonical machine discovery descriptor for Agent Economy surfaces.
+- `GET /api/agent-economy/discovery` returns the API version of the discovery descriptor with schema link headers.
 - `GET /api/agent-economy/launch-kit` returns the five-minute developer launch path, API recipes, npm widget surface, guardrails, and remaining mainnet gates.
+- `GET /api/agent-economy/roadmap` returns the live/next/gated/later strategic map for the proof surface.
 - `/agent-economy/developer-launch-kit.schema.v0.json` defines the launch kit response contract for agents and tooling.
+- `/agent-economy/discovery.schema.v0.json` defines the discovery descriptor contract.
+- `/agent-economy/roadmap.schema.v0.json` defines the roadmap response contract.
+- `/agent-economy/openapi.v0.json` defines the public Agent Economy API contract for client and docs tooling.
+  It includes `/api/dev/services`, `/api/dev/tools`, and the paid Sage flow (`/api/sage/quote`, `/api/sage/verify-payment`, `/api/sage/chat`) so the utility belt and receipt pipeline can be discovered through the same contract as the proof surfaces.
+- `GET /api/agent-economy/proofs` returns the machine-readable proof explorer.
+- `/agent-economy/proof-explorer.schema.v0.json` defines the proof explorer response contract.
 - `/agent-economy/wallet-agent-policy-check.schema.v0.json` defines the wallet-agent policy-check POST body and verdict contract.
 - `GET /api/agent-economy/wallet-agent/policy-check` returns the policy-check contract and example request.
 - `POST /api/agent-economy/wallet-agent/policy-check` returns deterministic allow/deny verdicts for wallet-agent actions.

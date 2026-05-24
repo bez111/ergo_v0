@@ -114,7 +114,7 @@
     "npm run audit:assets",
     "npm audit --audit-level=moderate",
     "npm run smoke:routes",
-    "npm run watch:post-deploy"
+    "npm run watch:agent-economy"
   ],
   "mainnet_gate_rule": {
     "must_remain_closed_until": [

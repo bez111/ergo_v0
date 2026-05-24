@@ -29,6 +29,16 @@
       "destination": "/agent-economy/live"
     },
     {
+      "source": "/start",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/agent-economy/start"
+    },
+    {
       "source": "/live",
       "has": [
         {
@@ -47,6 +57,26 @@
         }
       ],
       "destination": "/agent-economy/launch-kit"
+    },
+    {
+      "source": "/proofs",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/agent-economy/proofs"
+    },
+    {
+      "source": "/roadmap",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/agent-economy/roadmap"
     },
     {
       "source": "/sage-widget",
@@ -159,6 +189,16 @@
       "destination": "/api/agent-economy/live"
     },
     {
+      "source": "/api/discovery",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/agent-economy/discovery"
+    },
+    {
       "source": "/api/launch-kit",
       "has": [
         {
@@ -167,6 +207,26 @@
         }
       ],
       "destination": "/api/agent-economy/launch-kit"
+    },
+    {
+      "source": "/api/proofs",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/agent-economy/proofs"
+    },
+    {
+      "source": "/api/roadmap",
+      "has": [
+        {
+          "type": "host",
+          "value": "agents.ergoblockchain.org"
+        }
+      ],
+      "destination": "/api/agent-economy/roadmap"
     },
     {
       "source": "/api/wallet-agent/policy-check",

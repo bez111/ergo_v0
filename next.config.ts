@@ -7,8 +7,11 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const agentsHost = 'agents.ergoblockchain.org';
 const agentsHostRoutes = [
   ['/', '/agent-economy/live'],
+  ['/start', '/agent-economy/start'],
   ['/live', '/agent-economy/live'],
   ['/launch-kit', '/agent-economy/launch-kit'],
+  ['/proofs', '/agent-economy/proofs'],
+  ['/roadmap', '/agent-economy/roadmap'],
   ['/sage-widget', '/agent-economy/sage-widget'],
   ['/wallet-agent', '/agent-economy/wallet-agent'],
   ['/wallet-agent-runner', '/build/agent-payments/wallet-agent-runner'],
@@ -20,7 +23,10 @@ const agentsHostRoutes = [
   ['/playground', '/build/playground'],
   ['/services', '/build/services'],
   ['/api/live', '/api/agent-economy/live'],
+  ['/api/discovery', '/api/agent-economy/discovery'],
   ['/api/launch-kit', '/api/agent-economy/launch-kit'],
+  ['/api/proofs', '/api/agent-economy/proofs'],
+  ['/api/roadmap', '/api/agent-economy/roadmap'],
   ['/api/wallet-agent/policy-check', '/api/agent-economy/wallet-agent/policy-check'],
   ['/api/wallet-agent/reference-flow', '/api/agent-economy/wallet-agent/reference-flow'],
 ] as const;

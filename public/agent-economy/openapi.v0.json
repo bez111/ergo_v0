@@ -1,0 +1,531 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Ergo Agent Economy Public API",
+    "version": "0.1.0",
+    "summary": "Machine-readable API contract for the Ergo Agent Economy testnet proof surface.",
+    "description": "Public Agent Economy APIs expose discovery, live status, proof exploration, launch-kit data, review evidence, wallet-agent policy checks, and Sage receipt surfaces. This contract is testnet-first and does not imply mainnet readiness."
+  },
+  "jsonSchemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "servers": [
+    {
+      "url": "https://www.ergoblockchain.org",
+      "description": "Canonical Ergo site"
+    },
+    {
+      "url": "https://agents.ergoblockchain.org",
+      "description": "Agent Hub host with short aliases for selected Agent Economy APIs"
+    }
+  ],
+  "tags": [
+    { "name": "Discovery", "description": "Machine-readable entrypoints and schema links." },
+    { "name": "Live Proof", "description": "Operational status and proof-chain APIs." },
+    { "name": "Developer", "description": "Builder launch kit and developer-facing contracts." },
+    { "name": "Developer Tools", "description": "Stateless helper APIs for hashing, address inspection, explorer lookup, and receipt checks." },
+    { "name": "Wallet Agent", "description": "Policy and host-owned wallet integration boundaries." },
+    { "name": "Sage", "description": "Hosted Sage testnet receipt and payment proof APIs." },
+    { "name": "Trust", "description": "Review pack and mainnet-gate surfaces." }
+  ],
+  "paths": {
+    "/.well-known/agent-economy.json": {
+      "get": {
+        "tags": ["Discovery"],
+        "operationId": "getWellKnownAgentEconomyDiscovery",
+        "summary": "Get the well-known Agent Economy discovery descriptor",
+        "responses": {
+          "200": {
+            "description": "Agent Economy discovery descriptor",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent-economy/discovery": {
+      "get": {
+        "tags": ["Discovery"],
+        "operationId": "getAgentEconomyDiscovery",
+        "summary": "Get the API version of the Agent Economy discovery descriptor",
+        "responses": {
+          "200": {
+            "description": "Agent Economy discovery descriptor with schema link headers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent-economy/live": {
+      "get": {
+        "tags": ["Live Proof"],
+        "operationId": "getAgentEconomyLiveStatus",
+        "summary": "Get live Agent Economy operational status",
+        "responses": {
+          "200": {
+            "description": "Live status for Sage, receipt storage, MCP, signer health, widget state, wallet-agent surfaces, and the mainnet gate"
+          }
+        }
+      }
+    },
+    "/api/agent-economy/proofs": {
+      "get": {
+        "tags": ["Live Proof"],
+        "operationId": "getAgentEconomyProofs",
+        "summary": "Get the machine-readable proof explorer",
+        "responses": {
+          "200": {
+            "description": "Proof explorer evidence board",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent-economy/launch-kit": {
+      "get": {
+        "tags": ["Developer"],
+        "operationId": "getAgentEconomyLaunchKit",
+        "summary": "Get the developer launch kit",
+        "responses": {
+          "200": {
+            "description": "Five-minute developer launch kit",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/agent-economy/roadmap": {
+      "get": {
+        "tags": ["Developer"],
+        "operationId": "getAgentEconomyRoadmap",
+        "summary": "Get the Agent Economy strategic roadmap",
+        "responses": {
+          "200": {
+            "description": "Roadmap of live, next, trust-gated, and later Agent Economy work",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://www.ergoblockchain.org/agent-economy/roadmap.schema.v0.json"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/services": {
+      "get": {
+        "tags": ["Developer Tools"],
+        "operationId": "getDeveloperServicesIndex",
+        "summary": "Get the public developer service catalog",
+        "responses": {
+          "200": {
+            "description": "Developer service catalog, status counts, and lightweight probes for the public utility belt",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["ok", "type", "counts", "services", "probes"],
+                  "properties": {
+                    "ok": { "const": true },
+                    "type": { "const": "ergo.dev_services_index.v1" },
+                    "counts": { "type": "object" },
+                    "services": { "type": "array" },
+                    "probes": { "type": "object" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/tools": {
+      "get": {
+        "tags": ["Developer Tools"],
+        "operationId": "getDeveloperToolsContract",
+        "summary": "Get available stateless developer tool actions",
+        "responses": {
+          "200": {
+            "description": "Available helper actions and example request bodies"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Developer Tools"],
+        "operationId": "runDeveloperTool",
+        "summary": "Run a stateless developer helper",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["action"],
+                "properties": {
+                  "action": {
+                    "enum": ["hash", "address", "box", "tx", "receipt"]
+                  },
+                  "input": { "type": "string" },
+                  "encoding": { "enum": ["utf8", "hex"] },
+                  "network": { "enum": ["mainnet", "testnet"] }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tool result. The endpoint does not sign, broadcast, or mutate chain state."
+          },
+          "400": {
+            "description": "Invalid request or unsupported action"
+          }
+        }
+      }
+    },
+    "/api/agent-economy/mainnet-gate": {
+      "get": {
+        "tags": ["Trust"],
+        "operationId": "getAgentEconomyMainnetGate",
+        "summary": "Get mainnet readiness gate status",
+        "responses": {
+          "200": {
+            "description": "Closed mainnet gate until external review and audit-bound script identity exist"
+          }
+        }
+      }
+    },
+    "/api/agent-economy/review-pack": {
+      "get": {
+        "tags": ["Trust"],
+        "operationId": "getAgentEconomyReviewPack",
+        "summary": "Get the external reviewer handoff pack",
+        "responses": {
+          "200": {
+            "description": "Machine-readable external review pack"
+          }
+        }
+      }
+    },
+    "/api/agent-economy/wallet-agent": {
+      "get": {
+        "tags": ["Wallet Agent"],
+        "operationId": "getWalletAgentSpec",
+        "summary": "Get wallet-agent safety specification",
+        "responses": {
+          "200": {
+            "description": "Wallet-agent safety specification and policy links"
+          }
+        }
+      }
+    },
+    "/api/agent-economy/wallet-agent/policy-check": {
+      "get": {
+        "tags": ["Wallet Agent"],
+        "operationId": "getWalletAgentPolicyCheckContract",
+        "summary": "Get policy-check schema, example request, and example verdict",
+        "responses": {
+          "200": {
+            "description": "Policy-check contract and examples"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Wallet Agent"],
+        "operationId": "checkWalletAgentPolicy",
+        "summary": "Check a proposed wallet-agent action before signing",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "https://www.ergoblockchain.org/agent-economy/wallet-agent-policy-check.schema.v0.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Deterministic allow/deny verdict. This endpoint never signs or broadcasts."
+          },
+          "400": {
+            "description": "Invalid policy-check request"
+          }
+        }
+      }
+    },
+    "/api/agent-economy/wallet-agent/reference-flow": {
+      "get": {
+        "tags": ["Wallet Agent"],
+        "operationId": "getWalletAgentReferenceFlow",
+        "summary": "Get the wallet-agent reference flow",
+        "responses": {
+          "200": {
+            "description": "Reference flow for policy, simulation, host-owned signing, broadcast, and receipt retention"
+          }
+        }
+      }
+    },
+    "/api/sage/quote": {
+      "post": {
+        "tags": ["Sage"],
+        "operationId": "createSageQuote",
+        "summary": "Create a Sage quote or free-tier decision",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["question"],
+                "properties": {
+                  "question": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 4000
+                  },
+                  "history": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["role", "content"],
+                      "properties": {
+                        "role": {
+                          "enum": ["user", "assistant"]
+                        },
+                        "content": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Free-tier decision or premium quote with Note payment request"
+          },
+          "400": {
+            "description": "Invalid, missing, or too-long question"
+          },
+          "429": {
+            "description": "Quote rate limit exceeded"
+          },
+          "503": {
+            "description": "Sage payment configuration or wallet address is unavailable"
+          }
+        }
+      }
+    },
+    "/api/sage/chat": {
+      "post": {
+        "tags": ["Sage"],
+        "operationId": "chatWithSage",
+        "summary": "Ask Sage after free-tier or paid authorization",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["messages"],
+                "properties": {
+                  "messages": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "required": ["role", "content"],
+                      "properties": {
+                        "role": {
+                          "enum": ["user", "assistant"]
+                        },
+                        "content": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "paymentToken": {
+                    "type": "string",
+                    "description": "Token returned by /api/sage/verify-payment for premium turns"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sage response for an allowed free or paid turn"
+          },
+          "400": {
+            "description": "Invalid message payload"
+          },
+          "402": {
+            "description": "Premium payment is required before the response can be generated"
+          },
+          "429": {
+            "description": "Question rate limit exceeded"
+          },
+          "503": {
+            "description": "Sage model provider is not configured"
+          }
+        }
+      }
+    },
+    "/api/sage/verify-payment": {
+      "post": {
+        "tags": ["Sage"],
+        "operationId": "verifySagePayment",
+        "summary": "Verify a testnet Note payment and store the full receipt bundle",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["quote", "question", "noteBoxId"],
+                "properties": {
+                  "quote": {
+                    "type": "object",
+                    "required": ["quoteId"],
+                    "properties": {
+                      "quoteId": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "question": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "noteBoxId": {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F]{64}$"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Payment verified, payment token issued, and receipt bundle stored"
+          },
+          "400": {
+            "description": "Invalid quote, question, or Note box id"
+          },
+          "402": {
+            "description": "Payment could not be verified against the requested quote"
+          },
+          "410": {
+            "description": "Quote expired before verification"
+          },
+          "429": {
+            "description": "Verification rate limit exceeded"
+          },
+          "503": {
+            "description": "Receipt storage is required but unavailable"
+          }
+        }
+      }
+    },
+    "/api/sage/activity": {
+      "get": {
+        "tags": ["Sage"],
+        "operationId": "getSageActivity",
+        "summary": "Get public Sage activity feed",
+        "responses": {
+          "200": {
+            "description": "Recent Sage activity records"
+          }
+        }
+      }
+    },
+    "/api/sage/signer-health": {
+      "get": {
+        "tags": ["Sage"],
+        "operationId": "getSageSignerHealth",
+        "summary": "Get Sage signer health",
+        "responses": {
+          "200": {
+            "description": "Signer is reachable and healthy"
+          },
+          "503": {
+            "description": "Signer is unavailable or degraded"
+          }
+        }
+      }
+    },
+    "/api/sage/receipt/{id}": {
+      "get": {
+        "tags": ["Sage"],
+        "operationId": "getSageReceipt",
+        "summary": "Get Sage receipt by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Sage receipt id or transaction id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sage receipt. New post-Blob paid turns should return full_receipt_bundle."
+          },
+          "404": {
+            "description": "Receipt not found"
+          }
+        }
+      }
+    }
+  },
+  "x-ergo-posture": {
+    "network": "ergo_testnet",
+    "mainnet_ready": false,
+    "production_custody": false,
+    "required_before_mainnet": [
+      "external audit or review report",
+      "audit-bound mainnet script identity manifest"
+    ]
+  }
+}

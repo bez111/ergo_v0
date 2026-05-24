@@ -106,7 +106,18 @@ Ergo is the first reference programmable-settlement rail for the Accord Protocol
 
 **Primary pages:**
 - ${BASE_URL}/agent-economy — Narrative hub: why Ergo, what the stack is, who is building it
+- ${BASE_URL}/agent-economy/start — Fastest starting path: live proof, proof APIs, launch kit, developer surfaces and mainnet gate boundary
+- ${BASE_URL}/agent-economy/live — Operational cockpit for Sage, receipts, Accord, MCP, widget, wallet-agent surfaces and the mainnet gate
 - ${BASE_URL}/agent-economy/launch-kit — Five-minute developer launch kit: live status, policy checks, receipts, MCP, services, widget, guardrails, and schema-backed JSON
+- ${BASE_URL}/agent-economy/proofs — Public proof explorer for full Sage receipt bundles, signed Accord conformance evidence, MCP health, widget npm state, recent Sage activity and the closed mainnet gate
+- ${BASE_URL}/agent-economy/roadmap — Strategic live/next/gated/later roadmap for the public proof surface and mainnet gate
+- ${BASE_URL}/api/agent-economy/roadmap — Machine-readable roadmap source
+- ${BASE_URL}/api/agent-economy/proofs — Machine-readable proof explorer source
+- ${BASE_URL}/.well-known/agent-economy.json — Well-known discovery entrypoint for Agent Economy pages, APIs, Sage receipt evidence, MCP, package surfaces and verification commands
+- ${BASE_URL}/api/agent-economy/discovery — API version of the same discovery descriptor with schema link headers
+- ${BASE_URL}/.well-known/accord — Sage Accord provider descriptor with testnet L1 conformance evidence and full receipt link
+- ${BASE_URL}/agent-economy/discovery.schema.v0.json — JSON Schema for the Agent Economy discovery descriptor
+- ${BASE_URL}/agent-economy/openapi.v0.json — OpenAPI contract for public Agent Economy and Sage proof APIs
 - ${BASE_URL}/agent-economy/developer-launch-kit.schema.v0.json — JSON Schema for the launch kit API response
 - ${BASE_URL}/build/agent-payments — Technical reference: primitives, code, SDK comparison
 - ${BASE_URL}/build/services — Developer workbench: faucet surface, inspectors, receipt verifier, hash tool, service status API

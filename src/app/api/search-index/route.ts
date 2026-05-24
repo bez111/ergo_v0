@@ -183,6 +183,30 @@ export async function GET() {
       schema: ['TechArticle', 'SoftwareApplication']
     },
     {
+      id: 'agent-economy-start',
+      type: 'page',
+      title: 'Start Building the Ergo Agent Economy',
+      description: 'The fastest path through Ergo agent-economy live proof, Proof Explorer, developer launch kit, machine discovery, OpenAPI and the mainnet gate.',
+      url: '/agent-economy/start',
+      absoluteUrl: `${baseUrl}/agent-economy/start`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'Ergo Agent Economy start, proof API, discovery descriptor, OpenAPI, developer launch path, mainnet gate',
+      schema: ['TechArticle', 'SoftwareApplication']
+    },
+    {
+      id: 'agent-economy-live',
+      type: 'page',
+      title: 'Agent Economy Live Hub',
+      description: 'A public live cockpit for Sage receipts, MCP health, wallet-agent policy checks, widget state, signer status, and audit-gated mainnet posture.',
+      url: '/agent-economy/live',
+      absoluteUrl: `${baseUrl}/agent-economy/live`,
+      priority: 0.9,
+      changeFrequency: 'hourly',
+      keywords: 'Agent Economy live hub, Sage receipts, MCP health, wallet-agent policy, mainnet gate, Ergo live proof',
+      schema: ['SoftwareApplication', 'Dataset']
+    },
+    {
       id: 'agent-economy-launch-kit',
       type: 'page',
       title: 'Agent Economy Developer Launch Kit',
@@ -193,6 +217,30 @@ export async function GET() {
       changeFrequency: 'weekly',
       keywords: 'agent economy launch kit, developer launch kit schema, Sage widget, policy-check, MCP, receipt bundle, Ergo developer services',
       schema: ['TechArticle', 'SoftwareApplication']
+    },
+    {
+      id: 'agent-economy-proof-explorer',
+      type: 'page',
+      title: 'Agent Economy Proof Explorer',
+      description: 'A human and machine-readable evidence board for Sage full receipt bundles, signed Accord conformance evidence, MCP health, widget state and closed mainnet gates.',
+      url: '/agent-economy/proofs',
+      absoluteUrl: `${baseUrl}/agent-economy/proofs`,
+      priority: 0.9,
+      changeFrequency: 'hourly',
+      keywords: 'Agent Economy proof explorer, Sage receipt bundle, Accord conformance evidence, MCP health, proof API, testnet proof',
+      schema: ['Dataset', 'SoftwareApplication']
+    },
+    {
+      id: 'agent-economy-roadmap',
+      type: 'page',
+      title: 'Agent Economy Roadmap',
+      description: 'Strategic roadmap for Ergo Agent Economy live proof, developer surfaces, wallet-agent references, external review gates and audit-bound mainnet identity.',
+      url: '/agent-economy/roadmap',
+      absoluteUrl: `${baseUrl}/agent-economy/roadmap`,
+      priority: 0.9,
+      changeFrequency: 'weekly',
+      keywords: 'Agent Economy roadmap, helicopter view, live proof surface, Sage widget, wallet-agent reference, mainnet gate, external audit',
+      schema: ['TechArticle', 'Dataset']
     },
     {
       id: 'community',

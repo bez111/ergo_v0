@@ -109,7 +109,7 @@ export async function GET(req: Request) {
   const requestOrigin = new URL(req.url).origin
   const siteBaseUrl = trimSlash(process.env.AGENT_ECONOMY_LIVE_BASE_URL ?? requestOrigin)
 
-  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground] = await Promise.all([
+  const [activity, storage, accord, conformanceEvidence, registry, signer, widgetNpm, mcpFly, mcpDns, mainnetGate, reviewPack, launchKit, proofExplorer, walletAgent, walletAgentPolicy, walletAgentReferenceFlow, walletAgentPolicyPlayground] = await Promise.all([
     probeJson<SageActivityResponse>(`${siteBaseUrl}/api/sage/activity?limit=8`),
     probeJson<SageReceiptStorageHealthResponse>(
       `${siteBaseUrl}/api/sage/receipt/blob-probe-2026-05-16`,
@@ -130,6 +130,7 @@ export async function GET(req: Request) {
     probeJson<{ ok?: boolean; status?: string; type?: string }>(
       `${siteBaseUrl}/api/agent-economy/launch-kit`,
     ),
+    probePage(`${siteBaseUrl}/agent-economy/proofs`),
     probeJson<{ ok?: boolean; status?: string; type?: string }>(
       `${siteBaseUrl}/api/agent-economy/wallet-agent`,
     ),
@@ -157,16 +158,18 @@ export async function GET(req: Request) {
   const remoteMainnetBlockers = (mainnetGate.data as { blockers?: MainnetGateBlocker[] } | null)?.blockers
   const mainnetBlockers = (Array.isArray(remoteMainnetBlockers) ? remoteMainnetBlockers : agentEconomyMainnetGate.blockers)
     .filter((blocker) => blocker.state !== "open")
-  const conformancePassed = conformanceEvidence.data?.status === "passed" &&
+  const conformanceEvidencePassed = conformanceEvidence.data?.status === "passed" &&
     Boolean(conformanceEvidence.data.achieved_level) &&
     conformanceEvidence.data.ready_for_registry === true
   const conformanceLevel = conformanceEvidence.data?.achieved_level ?? null
   const conformanceReceiptId = conformanceEvidence.data?.receipt_id ?? null
   const conformanceHref = conformanceEvidence.data?.signed_artifact_url ?? "/evidence/sage/latest-evidence.json"
-  const conformanceCoversLatestReceipt = Boolean(
+  const conformanceReceiptResolved = Boolean(
     latestFullReceipt?.id && conformanceReceiptId === latestFullReceipt.id,
   )
-  const registryMerged = registry.data?.conformance?.level === conformanceLevel &&
+  const conformancePassed = conformanceEvidencePassed && conformanceReceiptResolved
+  const registryMerged = conformancePassed &&
+    registry.data?.conformance?.level === conformanceLevel &&
     registry.data?.conformance?.result_uri === conformanceHref &&
     registry.data?.live_proof?.latest_full_receipt_bundle?.receipt_id === conformanceReceiptId
   const widgetNpmVersion = widgetNpm.data?.version ?? null
@@ -210,11 +213,21 @@ export async function GET(req: Request) {
     gate(
       "accord-conformance",
       "Accord conformance",
-      conformancePassed ? "live" : latestFullReceipt ? "pending" : "blocked",
-      conformancePassed
-        ? conformanceCoversLatestReceipt
+      conformanceEvidencePassed
+        ? conformanceReceiptResolved
+          ? "live"
+          : latestFullReceipt
+            ? "pending"
+            : "degraded"
+        : latestFullReceipt
+          ? "pending"
+          : "blocked",
+      conformanceEvidencePassed
+        ? conformanceReceiptResolved
           ? `Signed ${conformanceLevel} evidence published for the latest full receipt bundle`
-          : `Signed ${conformanceLevel} evidence published for receipt ${shortId(conformanceReceiptId ?? undefined)}`
+          : latestFullReceipt
+            ? `Signed ${conformanceLevel} evidence references ${shortId(conformanceReceiptId ?? undefined)}, not the latest readable full receipt`
+            : `Signed ${conformanceLevel} evidence is published, but the referenced full receipt is not currently readable`
         : latestFullReceipt
           ? "Ready for conformance run and signed evidence"
           : "Blocked until a full receipt bundle exists",
@@ -257,6 +270,15 @@ export async function GET(req: Request) {
         ? "Five-minute developer path and JSON launch manifest are published"
         : launchKit.error ?? "developer launch kit endpoint unavailable",
       "/agent-economy/launch-kit",
+    ),
+    gate(
+      "proof-explorer",
+      "Proof explorer",
+      proofExplorer.ok ? "live" : "degraded",
+      proofExplorer.ok
+        ? "Human proof explorer page is available for receipt, conformance, MCP, widget, and gate inspection"
+        : proofExplorer.error ?? "proof explorer endpoint unavailable",
+      "/agent-economy/proofs",
     ),
     gate(
       "wallet-agent-spec",
@@ -348,6 +370,8 @@ export async function GET(req: Request) {
     storageHealthy,
     latestFullReceipt,
     conformancePassed,
+    conformanceEvidencePassed,
+    conformanceReceiptResolved,
     conformanceLevel,
     conformanceHref,
     widgetPublished,
@@ -377,8 +401,9 @@ export async function GET(req: Request) {
       storage_configured: storageConfigured,
       receipt_storage_healthy: storageHealthy,
       latest_full_receipt_id: latestFullReceipt?.id ?? null,
-      accord_conformance_level: conformancePassed ? conformanceLevel : null,
-      accord_conformance_evidence: conformancePassed ? conformanceHref : null,
+      accord_conformance_level: conformanceEvidencePassed ? conformanceLevel : null,
+      accord_conformance_evidence: conformanceEvidencePassed ? conformanceHref : null,
+      accord_conformance_receipt_resolved: conformanceReceiptResolved,
       accord_registry_merged: registryMerged,
       sage_widget_npm_version: widgetNpmVersion,
       sage_widget_npm_published: widgetPublished,
@@ -389,6 +414,7 @@ export async function GET(req: Request) {
         walletAgentReferenceFlow.ok && walletAgentReferenceFlow.data?.ok === true,
       wallet_agent_policy_playground_published: walletAgentPolicyPlayground.ok,
       developer_launch_kit_published: launchKit.ok && launchKit.data?.ok === true,
+      proof_explorer_published: proofExplorer.ok,
       sage_wallet_event_count: activity.data?.total ?? 0,
       sage_settlement_count: settlementCount,
       sage_signer_status: signer.data?.status ?? (signer.ok ? "unknown" : "unreachable"),
@@ -414,12 +440,17 @@ export async function GET(req: Request) {
         owner: "wallet",
         blocked_by_external: true,
       }]),
-      ...(conformancePassed && !registryMerged ? [{
+      ...(conformanceEvidencePassed && !conformanceReceiptResolved ? [{
+        id: "conformance-receipt-resolution",
+        label: "Make the signed conformance receipt resolve as full_receipt_bundle from /api/sage/receipt/<id>",
+        owner: "storage",
+        blocked_by_external: !storageHealthy,
+      }] : conformancePassed && !registryMerged ? [{
         id: "registry-evidence",
         label: "Merge the Accord registry PR with the signed Sage artifact",
         owner: "repo",
         blocked_by_external: false,
-      }] : !conformancePassed ? [{
+      }] : !conformanceEvidencePassed ? [{
         id: "accord-conformance",
         label: latestFullReceipt
           ? "Publish signed conformance evidence for the full receipt bundle"
@@ -455,6 +486,7 @@ export async function GET(req: Request) {
       sage_signer: publicProbe(signer),
       sage_widget_npm: publicProbe(widgetNpm),
       developer_launch_kit: publicProbe(launchKit),
+      proof_explorer: publicProbe(proofExplorer),
       wallet_agent_spec: publicProbe(walletAgent),
       wallet_agent_policy_check: publicProbe(walletAgentPolicy),
       wallet_agent_reference_flow: publicProbe(walletAgentReferenceFlow),
@@ -603,6 +635,8 @@ function buildLifecycle(opts: {
   storageHealthy: boolean
   latestFullReceipt: SageReceiptResponse | null
   conformancePassed: boolean
+  conformanceEvidencePassed: boolean
+  conformanceReceiptResolved: boolean
   conformanceLevel: string | null
   conformanceHref: string
   widgetPublished: boolean
@@ -653,13 +687,21 @@ function buildLifecycle(opts: {
     {
       id: "conformance",
       label: "Accord conformance",
-      state: opts.conformancePassed ? "live" : opts.latestFullReceipt ? "pending" : "blocked",
+      state: opts.conformancePassed
+        ? "live"
+        : opts.conformanceEvidencePassed
+          ? "degraded"
+          : opts.latestFullReceipt
+            ? "pending"
+            : "blocked",
       detail: opts.conformancePassed
-        ? `Signed ${opts.conformanceLevel ?? "L1"} conformance evidence is published.`
+        ? `Signed ${opts.conformanceLevel ?? "L1"} conformance evidence is published and its receipt resolves as a full bundle.`
+        : opts.conformanceEvidencePassed
+          ? "Signed conformance evidence is published, but its referenced receipt is not currently readable as a full receipt bundle."
         : opts.latestFullReceipt
           ? "Ready for signed conformance artifact generation."
           : "Blocked by the missing full receipt bundle.",
-      evidence_href: opts.conformancePassed ? opts.conformanceHref : "/api/sage/accord",
+      evidence_href: opts.conformanceEvidencePassed ? opts.conformanceHref : "/api/sage/accord",
     },
     {
       id: "mcp",

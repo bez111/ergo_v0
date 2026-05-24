@@ -46,7 +46,13 @@ const paths = [
   "public/agent-economy/external-audit-review.schema.v0.json",
   "public/agent-economy/mainnet-script-identity.manifest.template.json",
   "public/agent-economy/mainnet-script-identity.schema.v0.json",
+  "public/.well-known/agent-economy.json",
+  "public/.well-known/accord",
+  "public/agent-economy/discovery.schema.v0.json",
+  "public/agent-economy/openapi.v0.json",
+  "public/agent-economy/roadmap.schema.v0.json",
   "public/agent-economy/developer-launch-kit.schema.v0.json",
+  "public/agent-economy/proof-explorer.schema.v0.json",
   "public/agent-economy/current-release.schema.v0.json",
   "public/agent-economy/release-watchlist.v0.json",
   "public/agent-economy/release-watchlist.schema.v0.json",
@@ -59,10 +65,17 @@ const paths = [
   "src/app/[locale]/build/agent-payments/policy-playground/page.tsx",
   "src/app/[locale]/build/agent-payments/policy-playground/PolicyPlaygroundClient.tsx",
   "src/app/[locale]/build/agent-payments/wallet-agent-runner/page.tsx",
+  "src/app/[locale]/agent-economy/start/page.tsx",
+  "src/app/[locale]/agent-economy/roadmap/page.tsx",
   "src/app/[locale]/agent-economy/launch-kit/page.tsx",
+  "src/app/[locale]/agent-economy/proofs/page.tsx",
+  "src/app/[locale]/agent-economy/proofs/ProofExplorerClient.tsx",
   "src/app/[locale]/agent-economy/review-pack/page.tsx",
   "src/app/[locale]/agent-economy/wallet-agent/page.tsx",
+  "src/app/api/agent-economy/discovery/route.ts",
   "src/app/api/agent-economy/launch-kit/route.ts",
+  "src/app/api/agent-economy/roadmap/route.ts",
+  "src/app/api/agent-economy/proofs/route.ts",
   "src/app/api/agent-economy/release/current/route.ts",
   "src/app/api/agent-economy/review-pack/route.ts",
   "src/app/api/agent-economy/wallet-agent/route.ts",
@@ -149,6 +162,22 @@ assert(
   "audit manifest must link the machine-readable review pack",
 )
 assert(
+  auditManifest.artifacts?.agent_economy_start?.includes("/agent-economy/start"),
+  "audit manifest must link the Agent Economy start page",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_roadmap?.includes("/agent-economy/roadmap"),
+  "audit manifest must link the Agent Economy roadmap",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_roadmap_api?.includes("/api/agent-economy/roadmap"),
+  "audit manifest must link the Agent Economy roadmap API",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_roadmap_schema?.includes("/agent-economy/roadmap.schema.v0.json"),
+  "audit manifest must link the Agent Economy roadmap schema",
+)
+assert(
   auditManifest.artifacts?.developer_launch_kit?.includes("/agent-economy/launch-kit"),
   "audit manifest must link the developer launch kit",
 )
@@ -161,6 +190,46 @@ assert(
     "/agent-economy/developer-launch-kit.schema.v0.json",
   ),
   "audit manifest must link the developer launch kit schema",
+)
+assert(
+  auditManifest.artifacts?.developer_services_api?.includes("/api/dev/services"),
+  "audit manifest must link the developer services API",
+)
+assert(
+  auditManifest.artifacts?.developer_tools_api?.includes("/api/dev/tools"),
+  "audit manifest must link the developer tools API",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_discovery?.includes("/.well-known/agent-economy.json"),
+  "audit manifest must link the Agent Economy discovery descriptor",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_discovery_api?.includes("/api/agent-economy/discovery"),
+  "audit manifest must link the Agent Economy discovery API",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_discovery_schema?.includes("/agent-economy/discovery.schema.v0.json"),
+  "audit manifest must link the Agent Economy discovery schema",
+)
+assert(
+  auditManifest.artifacts?.accord_provider_descriptor?.includes("/.well-known/accord"),
+  "audit manifest must link the Sage Accord provider descriptor",
+)
+assert(
+  auditManifest.artifacts?.agent_economy_openapi?.includes("/agent-economy/openapi.v0.json"),
+  "audit manifest must link the Agent Economy OpenAPI manifest",
+)
+assert(
+  auditManifest.artifacts?.proof_explorer?.includes("/agent-economy/proofs"),
+  "audit manifest must link the proof explorer",
+)
+assert(
+  auditManifest.artifacts?.proof_explorer_api?.includes("/api/agent-economy/proofs"),
+  "audit manifest must link the proof explorer API",
+)
+assert(
+  auditManifest.artifacts?.proof_explorer_schema?.includes("/agent-economy/proof-explorer.schema.v0.json"),
+  "audit manifest must link the proof explorer schema",
 )
 assert(
   auditManifest.artifacts?.release_watchlist?.includes(
@@ -225,15 +294,60 @@ for (const required of [
   "wallet_agent_policy_playground",
   "developer_launch_kit",
   "developer_launch_kit_schema",
+  "developer_services_api",
+  "developer_tools_api",
   "current_release_api",
   "current_release_schema",
   "release_watchlist",
   "release_watchlist_schema",
   "release_attestation_2026_05_23",
   "release_attestation_schema",
+  "agent_economy_start",
+  "agent_economy_roadmap",
+  "agent_economy_roadmap_api",
+  "agent_economy_roadmap_schema",
+  "proof_explorer",
+  "proof_explorer_api",
   "mcp_endpoint_runbook",
 ]) {
   assert(reviewPackSource.includes(required), `review pack source is missing: ${required}`)
+}
+
+const proofExplorerClientSource = readText("src/app/[locale]/agent-economy/proofs/ProofExplorerClient.tsx")
+for (const required of [
+  "Verify this yourself",
+  "verify_steps",
+  "curl -sS https://www.ergoblockchain.org/api/agent-economy/proofs",
+  "curl -sS https://mcp.ergoblockchain.org/health",
+  "/api/agent-economy/discovery",
+  "/agent-economy/openapi.v0.json",
+  "proof-explorer.schema.v0.json",
+]) {
+  assert(proofExplorerClientSource.includes(required), `proof explorer client is missing: ${required}`)
+}
+
+const proofExplorerApiSource = readText("src/app/api/agent-economy/proofs/route.ts")
+for (const required of [
+  "verify_steps",
+  "buildVerifySteps",
+  "schema: PROOF_EXPLORER_SCHEMA_URL",
+  "ConformanceReceiptResolution",
+  "Referenced receipt API",
+  "passed_but_receipt_unreadable",
+  "curl -sS https://www.ergoblockchain.org/api/agent-economy/proofs",
+  "curl -sS https://mcp.ergoblockchain.org/health",
+]) {
+  assert(proofExplorerApiSource.includes(required), `proof explorer API is missing: ${required}`)
+}
+
+const liveStatusSource = readText("src/app/api/agent-economy/live/route.ts")
+for (const required of [
+  "conformanceEvidencePassed",
+  "conformanceReceiptResolved",
+  "accord_conformance_receipt_resolved",
+  "conformance-receipt-resolution",
+]) {
+  assert(liveStatusSource.includes(required), `agent economy live status is missing: ${required}`)
 }
 
 const mcpRunbookSource = readText("docs/mcp-endpoint-runbook.md")
@@ -248,7 +362,9 @@ for (const required of [
 }
 
 const sitemapPagesSource = readText("src/app/sitemaps/sitemap-pages.xml/route.ts")
+const sitemapImagesSource = readText("src/app/sitemaps/sitemap-images.xml/route.ts")
 const sitemapIndexSource = readText("src/app/sitemap.xml/route.ts")
+const searchIndexSource = readText("src/app/api/search-index/route.ts")
 for (const required of [
   "sitemapindex",
   "/sitemaps/sitemap-pages.xml",
@@ -270,8 +386,11 @@ for (const required of [
 
 for (const required of [
   "'/agent-economy'",
+  "'/agent-economy/start'",
   "'/agent-economy/live'",
   "'/agent-economy/launch-kit'",
+  "'/agent-economy/proofs'",
+  "'/agent-economy/roadmap'",
   "'/agent-economy/metrics'",
   "'/agent-economy/trust'",
   "'/agent-economy/review-pack'",
@@ -288,6 +407,29 @@ for (const required of [
   assert(sitemapPagesSource.includes(required), `sitemap-pages is missing: ${required}`)
 }
 
+for (const required of [
+  "pageUrl: '/agent-economy/start'",
+  "pageUrl: '/agent-economy/live'",
+  "pageUrl: '/agent-economy/launch-kit'",
+  "pageUrl: '/agent-economy/proofs'",
+  "pageUrl: '/agent-economy/roadmap'",
+]) {
+  assert(sitemapImagesSource.includes(required), `sitemap-images is missing: ${required}`)
+}
+
+for (const required of [
+  "id: 'agent-economy-start'",
+  "id: 'agent-economy-live'",
+  "id: 'agent-economy-launch-kit'",
+  "id: 'agent-economy-proof-explorer'",
+  "id: 'agent-economy-roadmap'",
+  "discovery descriptor",
+  "OpenAPI",
+  "Proof Explorer",
+]) {
+  assert(searchIndexSource.includes(required), `search index is missing: ${required}`)
+}
+
 for (const forbidden of [
   "'/api/agent-economy/release/current'",
   "'/agent-economy/release-watchlist.v0.json'",
@@ -301,12 +443,27 @@ for (const forbidden of [
 }
 
 const launchKitSource = readText("src/lib/agent-economy/developer-launch-kit.ts")
+const launchKitPageSource = readText("src/app/[locale]/agent-economy/launch-kit/page.tsx")
+const startPageSource = readText("src/app/[locale]/agent-economy/start/page.tsx")
 for (const required of [
   "ergo.agent_economy.developer_launch_kit.v0",
   "five_minute_path",
   "api_recipes",
   "developer-launch-kit.schema.v0.json",
+  "agent-economy/start",
+  "agent-economy/roadmap",
+  "api/agent-economy/roadmap",
+  "roadmap.schema.v0.json",
   "api/agent-economy/release/current",
+  "api/agent-economy/proofs",
+  ".well-known/agent-economy.json",
+  "api/agent-economy/discovery",
+  "api/dev/services",
+  "api/dev/tools",
+  "openapi.v0.json",
+  ".well-known/accord",
+  "discovery.schema.v0.json",
+  "proof_explorer",
   "release-watchlist.v0.json",
   "release-attestation-2026-05-23.v0.json",
   "policy-playground",
@@ -317,6 +474,24 @@ for (const required of [
   assert(launchKitSource.includes(required), `developer launch kit is missing: ${required}`)
 }
 
+for (const required of [
+  "/api/agent-economy/discovery",
+  "/agent-economy/openapi.v0.json",
+  "/agent-economy/roadmap",
+]) {
+  assert(launchKitPageSource.includes(required), `launch kit page is missing: ${required}`)
+}
+
+for (const required of [
+  "/api/agent-economy/discovery",
+  "/agent-economy/openapi.v0.json",
+  "/api/agent-economy/proofs",
+  "/agent-economy/launch-kit",
+  "/agent-economy/roadmap",
+]) {
+  assert(startPageSource.includes(required), `agent economy start page is missing: ${required}`)
+}
+
 const launchKitSchema = readJson("public/agent-economy/developer-launch-kit.schema.v0.json")
 assert(
   launchKitSchema.properties?.type?.const === "ergo.agent_economy.developer_launch_kit.v0",
@@ -325,6 +500,35 @@ assert(
 assert(
   launchKitSchema.properties?.entrypoints?.required?.includes("schema"),
   "developer launch kit schema must require a schema entrypoint",
+)
+assert(
+  launchKitSchema.properties?.entrypoints?.required?.includes("start_page"),
+  "developer launch kit schema must require the start page entrypoint",
+)
+assert(
+  launchKitSchema.properties?.entrypoints?.required?.includes("roadmap") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("roadmap_api") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("roadmap_schema"),
+  "developer launch kit schema must require roadmap entrypoints",
+)
+assert(
+  launchKitSchema.properties?.entrypoints?.required?.includes("developer_services_api") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("developer_tools_api"),
+  "developer launch kit schema must require developer services API entrypoints",
+)
+assert(
+    launchKitSchema.properties?.entrypoints?.required?.includes("proof_explorer") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("proof_explorer_api") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("proof_explorer_schema"),
+  "developer launch kit schema must include proof explorer entrypoints",
+)
+assert(
+    launchKitSchema.properties?.entrypoints?.required?.includes("discovery") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("discovery_api") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("discovery_schema") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("accord_provider_descriptor") &&
+    launchKitSchema.properties?.entrypoints?.required?.includes("openapi"),
+  "developer launch kit schema must include discovery entrypoints",
 )
 assert(
   launchKitSchema.properties?.open_gates?.minItems === 2,
@@ -354,13 +558,241 @@ assert(
   "release watchlist must record the qs security override",
 )
 assert(
-  releaseWatchlist.watch_targets?.some((target) => target.id === "mcp-health") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "mcp-health") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "sage-full-receipt") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-start") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-proof-explorer") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-roadmap") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "proof-explorer-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "proof-explorer-schema") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-roadmap-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-roadmap-schema") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-economy-discovery") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-economy-discovery-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-economy-discovery-schema") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "agent-economy-openapi") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "developer-services-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "developer-tools-api") &&
+    releaseWatchlist.watch_targets?.some((target) => target.id === "accord-provider-descriptor") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "mainnet-gate-api") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "current-release-api") &&
     releaseWatchlist.watch_targets?.some((target) => target.id === "release-attestation"),
-  "release watchlist must cover MCP, Sage receipt, current release, mainnet gate, and release attestation targets",
+  "release watchlist must cover MCP, Sage receipt, discovery, current release, mainnet gate, and release attestation targets",
 )
+
+const proofExplorerWatchTarget = releaseWatchlist.watch_targets?.find((target) => target.id === "proof-explorer-api")
+assert(
+  proofExplorerWatchTarget?.expect_json?.["verify_steps.0.id"] === "proof-board" &&
+    proofExplorerWatchTarget?.expect_json?.["surfaces.schema"]?.includes("proof-explorer.schema.v0.json") &&
+    proofExplorerWatchTarget?.expect_json?.["summary.conformance_receipt_resolved"] === true,
+  "release watchlist must verify proof explorer schema, verify_steps, and conformance receipt resolution",
+)
+const liveStatusWatchTarget = releaseWatchlist.watch_targets?.find((target) => target.id === "live-status-api")
+assert(
+  liveStatusWatchTarget?.expect_json?.["summary.accord_conformance_receipt_resolved"] === true,
+  "release watchlist must verify live status conformance receipt resolution",
+)
+const discoveryWatchTarget = releaseWatchlist.watch_targets?.find((target) => target.id === "agent-economy-discovery-api")
+assert(
+  discoveryWatchTarget?.expect_json?.["surfaces.discovery_api"] === "https://www.ergoblockchain.org/api/agent-economy/discovery" &&
+    discoveryWatchTarget?.expect_json?.["surfaces.roadmap_api"] === "https://www.ergoblockchain.org/api/agent-economy/roadmap" &&
+    discoveryWatchTarget?.expect_json?.["surfaces.dev_services_api"] === "https://www.ergoblockchain.org/api/dev/services" &&
+    discoveryWatchTarget?.expect_json?.["surfaces.dev_tools_api"] === "https://www.ergoblockchain.org/api/dev/tools" &&
+    discoveryWatchTarget?.expect_json?.["verification.post_deploy_watch.command"] === "npm run watch:agent-economy",
+  "release watchlist must verify Agent Economy discovery API",
+)
+const openApiWatchTarget = releaseWatchlist.watch_targets?.find((target) => target.id === "agent-economy-openapi")
+assert(
+  openApiWatchTarget?.expect_json?.["openapi"] === "3.1.0" &&
+    openApiWatchTarget?.expect_json?.["x-ergo-posture.mainnet_ready"] === false &&
+    openApiWatchTarget?.expect_json?.["paths./api/agent-economy/proofs.get.operationId"] === "getAgentEconomyProofs" &&
+    openApiWatchTarget?.expect_json?.["paths./api/agent-economy/roadmap.get.operationId"] === "getAgentEconomyRoadmap" &&
+    openApiWatchTarget?.expect_json?.["paths./api/dev/services.get.operationId"] === "getDeveloperServicesIndex" &&
+    openApiWatchTarget?.expect_json?.["paths./api/dev/tools.post.operationId"] === "runDeveloperTool" &&
+    openApiWatchTarget?.expect_json?.["paths./api/sage/quote.post.operationId"] === "createSageQuote" &&
+    openApiWatchTarget?.expect_json?.["paths./api/sage/chat.post.operationId"] === "chatWithSage" &&
+    openApiWatchTarget?.expect_json?.["paths./api/sage/verify-payment.post.operationId"] === "verifySagePayment",
+  "release watchlist must verify Agent Economy OpenAPI manifest",
+)
+assert(
+  releaseWatchlist.deployment_fields_to_record?.includes("Sage proof reconciliation result"),
+  "release watchlist must require recording Sage proof reconciliation result",
+)
+const postDeployWatchSource = readText("scripts/post-deploy-watch.mjs")
+assert(
+  postDeployWatchSource.includes("Array.isArray(value)") &&
+    postDeployWatchSource.includes("Number(segment)"),
+  "post-deploy watch must support array indexes in expect_json paths",
+)
+
+const proofExplorerSchema = readJson("public/agent-economy/proof-explorer.schema.v0.json")
+assert(
+  proofExplorerSchema.properties?.type?.const === "ergo.agent_economy.proof_explorer.v0",
+  "proof explorer schema must bind the proof explorer type",
+)
+assert(
+  proofExplorerSchema.properties?.posture?.properties?.mainnet_ready?.const === false,
+  "proof explorer schema must keep mainnet_ready false",
+)
+assert(
+  proofExplorerSchema.required?.includes("verify_steps"),
+  "proof explorer schema must require verify_steps",
+)
+assert(
+  proofExplorerSchema.properties?.summary?.required?.includes("conformance_receipt_resolved"),
+  "proof explorer schema must require conformance_receipt_resolved in summary",
+)
+assert(
+  proofExplorerSchema.properties?.verify_steps?.minItems >= 4,
+  "proof explorer schema must require at least four verify steps",
+)
+
+const roadmapSchema = readJson("public/agent-economy/roadmap.schema.v0.json")
+assert(
+  roadmapSchema.properties?.type?.const === "ergo.agent_economy.roadmap.v0",
+  "roadmap schema must bind the roadmap type",
+)
+assert(
+  roadmapSchema.properties?.posture?.properties?.mainnet_ready?.const === false,
+  "roadmap schema must keep mainnet_ready false",
+)
+assert(
+  roadmapSchema.properties?.phases?.minItems >= 4,
+  "roadmap schema must require live/next/gated/later phases",
+)
+const roadmapSource = readText("src/lib/agent-economy/roadmap.ts")
+for (const required of [
+  "ergo.agent_economy.roadmap.v0",
+  "build_next",
+  "trust_gated",
+  "external_review_and_audit_bound_mainnet_script_identity_required",
+  "agentEconomyMainnetGate",
+]) {
+  assert(roadmapSource.includes(required), `roadmap source is missing: ${required}`)
+}
+const roadmapApiSource = readText("src/app/api/agent-economy/roadmap/route.ts")
+assert(
+  roadmapApiSource.includes("roadmap.schema.v0.json") &&
+    roadmapApiSource.includes("agentEconomyRoadmap"),
+  "roadmap API must return roadmap data with schema link",
+)
+
+const agentEconomyDiscovery = readJson("public/.well-known/agent-economy.json")
+assert(
+  agentEconomyDiscovery.type === "ergo.agent_economy.discovery.v0",
+  "agent economy discovery descriptor must bind discovery type",
+)
+assert(
+  agentEconomyDiscovery.posture?.mainnet_ready === false &&
+    agentEconomyDiscovery.verification?.proof_reconciliation?.command === "npm run sage:proof-reconcile" &&
+    agentEconomyDiscovery.verification?.post_deploy_watch?.command === "npm run watch:agent-economy",
+  "agent economy discovery descriptor must expose proof reconciliation and keep mainnet closed",
+)
+assert(
+  agentEconomyDiscovery.surfaces?.proof_explorer_api?.includes("/api/agent-economy/proofs") &&
+    agentEconomyDiscovery.surfaces?.roadmap === "https://www.ergoblockchain.org/agent-economy/roadmap" &&
+    agentEconomyDiscovery.surfaces?.roadmap_api === "https://www.ergoblockchain.org/api/agent-economy/roadmap" &&
+    agentEconomyDiscovery.surfaces?.discovery_api === "https://www.ergoblockchain.org/api/agent-economy/discovery" &&
+    agentEconomyDiscovery.surfaces?.launch_kit_api === "https://www.ergoblockchain.org/api/agent-economy/launch-kit" &&
+    agentEconomyDiscovery.surfaces?.developer_launch_kit_api ===
+      "https://www.ergoblockchain.org/api/agent-economy/launch-kit" &&
+    agentEconomyDiscovery.surfaces?.dev_services_api === "https://www.ergoblockchain.org/api/dev/services" &&
+    agentEconomyDiscovery.surfaces?.dev_tools_api === "https://www.ergoblockchain.org/api/dev/tools" &&
+    agentEconomyDiscovery.surfaces?.openapi === "https://www.ergoblockchain.org/agent-economy/openapi.v0.json" &&
+    agentEconomyDiscovery.sage?.latest_full_receipt?.includes("/api/sage/receipt/") &&
+    agentEconomyDiscovery.mcp?.streamable_http === "https://mcp.ergoblockchain.org/mcp",
+  "agent economy discovery descriptor must link discovery API, roadmap API, launch kit API, dev tools APIs, proof API, latest receipt, and MCP endpoint",
+)
+const agentEconomyDiscoverySchema = readJson("public/agent-economy/discovery.schema.v0.json")
+assert(
+  agentEconomyDiscoverySchema.properties?.type?.const === "ergo.agent_economy.discovery.v0",
+  "agent economy discovery schema must bind discovery type",
+)
+assert(
+  agentEconomyDiscoverySchema.properties?.posture?.properties?.mainnet_ready?.const === false,
+  "agent economy discovery schema must keep mainnet_ready false",
+)
+assert(
+  agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("discovery_api"),
+  "agent economy discovery schema must require discovery_api",
+)
+assert(
+  agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("roadmap") &&
+    agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("roadmap_api"),
+  "agent economy discovery schema must require roadmap surfaces",
+)
+assert(
+  agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("launch_kit_api") &&
+    agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("developer_launch_kit_api"),
+  "agent economy discovery schema must require launch kit API aliases",
+)
+assert(
+  agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("dev_services_api") &&
+    agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("dev_tools_api"),
+  "agent economy discovery schema must require developer services APIs",
+)
+assert(
+  agentEconomyDiscoverySchema.properties?.surfaces?.required?.includes("openapi"),
+  "agent economy discovery schema must require openapi",
+)
+const discoveryApiSource = readText("src/app/api/agent-economy/discovery/route.ts")
+assert(
+  discoveryApiSource.includes("public/.well-known/agent-economy.json") &&
+    discoveryApiSource.includes("discovery.schema.v0.json") &&
+    discoveryApiSource.includes("s-maxage=300"),
+  "Agent Economy discovery API must serve the well-known descriptor with schema link and cache headers",
+)
+const accordProviderDescriptor = readJson("public/.well-known/accord")
+assert(
+  accordProviderDescriptor.status === "conformance_l1_signed_testnet" &&
+    accordProviderDescriptor.posture?.mainnet_ready === false &&
+    accordProviderDescriptor.evidence?.conformance?.level === "L1" &&
+    accordProviderDescriptor.evidence?.conformance?.status === "passed",
+  "Sage Accord provider descriptor must point to signed testnet L1 evidence without opening mainnet",
+)
+const agentEconomyOpenApi = readJson("public/agent-economy/openapi.v0.json")
+assert(
+  agentEconomyOpenApi.openapi === "3.1.0" &&
+    agentEconomyOpenApi.info?.title === "Ergo Agent Economy Public API" &&
+    agentEconomyOpenApi["x-ergo-posture"]?.mainnet_ready === false,
+  "Agent Economy OpenAPI manifest must bind OpenAPI 3.1 and keep mainnet closed",
+)
+for (const required of [
+  "/api/agent-economy/discovery",
+  "/api/agent-economy/live",
+  "/api/agent-economy/proofs",
+  "/api/agent-economy/roadmap",
+  "/api/agent-economy/launch-kit",
+  "/api/dev/services",
+  "/api/dev/tools",
+  "/api/sage/quote",
+  "/api/sage/chat",
+  "/api/sage/verify-payment",
+  "/api/sage/receipt/{id}",
+]) {
+  assert(agentEconomyOpenApi.paths?.[required], `Agent Economy OpenAPI manifest missing path: ${required}`)
+}
+
+const packageJson = readJson("package.json")
+assert(
+  packageJson.scripts?.["sage:proof-reconcile"] === "node scripts/sage-proof-reconcile.mjs",
+  "package scripts must expose sage:proof-reconcile",
+)
+assert(
+  packageJson.scripts?.["watch:agent-economy"]?.includes("watch:post-deploy") &&
+    packageJson.scripts?.["watch:agent-economy"]?.includes("sage:proof-reconcile"),
+  "package scripts must expose one-command Agent Economy post-deploy watch",
+)
+const sageProofReconcileSource = readText("scripts/sage-proof-reconcile.mjs")
+for (const required of [
+  "sage.proof_reconciliation.v0",
+  "conformance_receipt_resolved",
+  "BLOB_READ_WRITE_TOKEN",
+  "full_receipt_bundle",
+  "mainnet_ready remains false",
+]) {
+  assert(sageProofReconcileSource.includes(required), `sage proof reconcile script is missing: ${required}`)
+}
 
 const currentReleaseSchema = readJson("public/agent-economy/current-release.schema.v0.json")
 assert(
@@ -594,6 +1026,9 @@ for (const required of [
   "/api/agent-economy/review-pack",
   "/agent-economy/launch-kit",
   "/api/agent-economy/launch-kit",
+  "/agent-economy/proofs",
+  "/api/agent-economy/proofs",
+  "/agent-economy/proof-explorer.schema.v0.json",
   "/api/agent-economy/release/current",
   "/agent-economy/current-release.schema.v0.json",
   "/agent-economy/release-watchlist.v0.json",
@@ -625,6 +1060,7 @@ for (const required of [
   "current-release.schema.v0.json",
   "release-watchlist.schema.v0.json",
   "release-attestation.schema.v0.json",
+  "proof-explorer.schema.v0.json",
   "policy-check API",
   "external_audit_report",
   "mainnet_script_identity",

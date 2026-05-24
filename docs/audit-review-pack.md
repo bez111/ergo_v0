@@ -1,6 +1,6 @@
 # Agent Economy Audit Review Pack
 
-Current status as of 2026-05-23: testnet live proof, not mainnet readiness.
+Current status as of 2026-05-24: testnet live proof, not mainnet readiness.
 
 This pack is the handoff for an external reviewer. Its job is to make the
 review boundary exact enough that the public site can keep making precise
@@ -26,6 +26,36 @@ https://www.ergoblockchain.org/api/agent-economy/launch-kit
 
 Developer launch kit schema
 https://www.ergoblockchain.org/agent-economy/developer-launch-kit.schema.v0.json
+
+Proof explorer
+https://www.ergoblockchain.org/agent-economy/proofs
+
+Machine-readable proof explorer
+https://www.ergoblockchain.org/api/agent-economy/proofs
+
+Proof explorer schema
+https://www.ergoblockchain.org/agent-economy/proof-explorer.schema.v0.json
+
+Agent Economy discovery descriptor
+https://www.ergoblockchain.org/.well-known/agent-economy.json
+
+Agent Economy discovery API
+https://www.ergoblockchain.org/api/agent-economy/discovery
+
+Agent Economy discovery schema
+https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json
+
+Agent Economy OpenAPI manifest
+https://www.ergoblockchain.org/agent-economy/openapi.v0.json
+
+Developer services API
+https://www.ergoblockchain.org/api/dev/services
+
+Developer tools API
+https://www.ergoblockchain.org/api/dev/tools
+
+Sage Accord provider descriptor
+https://www.ergoblockchain.org/.well-known/accord
 
 Release watchlist
 https://www.ergoblockchain.org/agent-economy/release-watchlist.v0.json
@@ -129,6 +159,14 @@ The current review target is the hosted Sage/Accord testnet proof surface:
 - Sage testnet signer redemption policy and public health evidence.
 - Observed Ergo testnet Reserve, Note, register, and settlement identity.
 - Agent Economy Live Hub status API and public claim controls.
+- Agent Economy Proof Explorer as a public evidence board for receipts,
+  conformance evidence, MCP health, widget state, recent Sage activity, and
+  the mainnet gate.
+- Agent Economy discovery descriptor as a machine-readable map of human pages,
+  APIs, Sage evidence, MCP, package surfaces, schemas, and verification
+  commands.
+- Agent Economy OpenAPI manifest as the public API client and documentation
+  contract for the testnet proof surface.
 - MCP endpoint only as public machine-facing infrastructure, not as a custody
   or payment signer.
 - Wallet-agent safety spec and policy-check API only as local policy and
@@ -165,6 +203,7 @@ An acceptable review artifact should include:
 - reviewed package versions;
 - reviewed public evidence URLs;
 - npm audit result and post-deploy watch result;
+- Sage proof reconciliation result;
 - release attestation URI for the reviewed deployment, if available;
 - findings with severity, status, remediation reference, and residual risk;
 - explicit statement on whether any finding blocks mainnet language;
@@ -203,6 +242,9 @@ The review should answer these questions directly:
   mainnet readiness claims?
 - Do the release watch targets, security headers, signer health, MCP health,
   full receipt bundle, and mainnet gate invariants stay green after deploy?
+- Does Sage proof reconciliation confirm that Blob storage, the receipt API,
+  signed conformance evidence, Live API, Proof API, and closed mainnet gate are
+  all describing the same receipt and trust posture?
 - Does the release attestation pin the reviewed commit, deployment id, lockfile
   hash, security posture, and post-deploy check results?
 - Does the current release API report the served commit and keep
@@ -235,7 +277,7 @@ Run:
 
 ```bash
 npm run audit:agent-economy-gate
-npm run watch:post-deploy
+npm run watch:agent-economy
 ```
 
 The check should report the current state as:

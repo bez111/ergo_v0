@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.ergoblockchain.org/agent-economy/discovery.schema.v0.json",
+  "title": "Ergo Agent Economy Discovery",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "type",
+    "version",
+    "status",
+    "canonical",
+    "schema",
+    "posture",
+    "hosts",
+    "surfaces",
+    "sage",
+    "mcp",
+    "packages",
+    "schemas",
+    "verification"
+  ],
+  "properties": {
+    "type": { "const": "ergo.agent_economy.discovery.v0" },
+    "version": { "const": "v0" },
+    "status": { "const": "testnet_live_proof_not_mainnet_ready" },
+    "last_reviewed": { "type": "string" },
+    "canonical": { "type": "string", "format": "uri" },
+    "schema": { "type": "string", "format": "uri" },
+    "public_claim": { "type": "string" },
+    "posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["network", "mainnet_ready", "production_custody", "audit_gate"],
+      "properties": {
+        "network": { "const": "ergo_testnet" },
+        "mainnet_ready": { "const": false },
+        "production_custody": { "const": false },
+        "audit_gate": { "type": "string" }
+      }
+    },
+    "hosts": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" },
+      "required": ["human_site", "agent_hub", "mcp"]
+    },
+    "surfaces": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" },
+      "required": [
+        "start",
+        "roadmap",
+        "roadmap_api",
+        "discovery_api",
+        "live_api",
+        "proof_explorer_api",
+        "launch_kit_api",
+        "developer_launch_kit_api",
+        "dev_services_api",
+        "dev_tools_api",
+        "openapi",
+        "mainnet_gate_api"
+      ]
+    },
+    "sage": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "provider_descriptor",
+        "quote",
+        "verify_payment",
+        "latest_full_receipt_id",
+        "latest_full_receipt",
+        "conformance"
+      ],
+      "properties": {
+        "latest_full_receipt_id": { "type": "string", "minLength": 64 },
+        "conformance": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["level", "status", "signed_artifact"],
+          "properties": {
+            "level": { "const": "L1" },
+            "status": { "const": "passed" },
+            "signed_artifact": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    },
+    "mcp": {
+      "type": "object",
+      "additionalProperties": { "type": "string", "format": "uri" },
+      "required": ["health", "streamable_http", "repository"]
+    },
+    "packages": { "type": "object" },
+    "schemas": { "type": "object" },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["proof_reconciliation", "post_deploy_watch"],
+      "properties": {
+        "proof_reconciliation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["command", "checks"],
+          "properties": {
+            "command": { "const": "npm run sage:proof-reconcile" },
+            "checks": {
+              "type": "array",
+              "minItems": 6,
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "post_deploy_watch": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["command"],
+          "properties": {
+            "command": { "const": "npm run watch:agent-economy" }
+          }
+        }
+      }
+    }
+  }
+}
