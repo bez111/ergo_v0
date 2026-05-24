@@ -3,6 +3,7 @@ import {
   failingSageConformanceChecks,
   validateSageReceiptBundle,
 } from "@/lib/sage/receipts/conformance"
+import { normalizeSageReceiptBundleForAccordV0 } from "@/lib/sage/receipts/bundle"
 import { loadReceiptBundle } from "@/lib/sage/receipts/storage"
 import type { SageReceiptBundle } from "@/lib/sage/receipts/types"
 
@@ -90,7 +91,7 @@ export async function POST(req: Request) {
     })
   }
 
-  const bundle = stored.bundle
+  const bundle = normalizeSageReceiptBundleForAccordV0(stored.bundle)
   const agreement = bundle.accord.agreement_json
   if (!agreement || agreement.agreement_id !== agreementId) {
     return accordError(402, "UNKNOWN_AGREEMENT", "Receipt does not contain the requested agreement.", {
