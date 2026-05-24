@@ -810,6 +810,14 @@ for (const required of [
   assert(currentReleaseRoute.includes(required), `current release route is missing: ${required}`)
 }
 
+const mainnetGateRoute = readText("src/app/api/agent-economy/mainnet-gate/route.ts")
+for (const required of [
+  "mainnet_ready: false",
+  "production_custody: false",
+]) {
+  assert(mainnetGateRoute.includes(required), `mainnet gate route is missing: ${required}`)
+}
+
 const releaseAttestation = readJson("public/agent-economy/release-attestation-2026-05-23.v0.json")
 assert(
   releaseAttestation.type === "ergo.agent_economy.release_attestation.v0",

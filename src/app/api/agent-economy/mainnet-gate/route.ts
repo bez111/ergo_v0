@@ -13,6 +13,8 @@ export async function GET() {
     {
       ok: true,
       ...agentEconomyMainnetGate,
+      mainnet_ready: false,
+      production_custody: false,
       progress: {
         completed: completedBlockers.length,
         pending: pendingBlockers.length,
