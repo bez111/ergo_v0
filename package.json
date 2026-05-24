@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/generate-version.js && node scripts/build-sage-index.mjs && node scripts/sync-monaco.mjs && npx next dev",
-    "build": "node scripts/generate-version.js && node scripts/build-icons.mjs && node scripts/build-sage-index.mjs && node scripts/sync-monaco.mjs && npx next build --webpack",
+    "build": "node scripts/generate-version.js && node scripts/build-icons.mjs && node scripts/build-sage-index.mjs && node scripts/sync-monaco.mjs && NODE_OPTIONS=--max-old-space-size=4096 npx next build --webpack",
     "preflight:batch": "node scripts/final-batch-preflight.mjs",
     "sage:index": "node scripts/build-sage-index.mjs",
     "sage:wallet": "npm --prefix scripts/sage-signer install && npm --prefix scripts/sage-signer run bootstrap",
@@ -68,7 +68,7 @@
     "crowdin:download": "crowdin download"
   },
   "dependencies": {
-    "@accord-protocol/core": "^0.4.0",
+    "@accord-protocol/core": "^0.4.2",
     "@accord-protocol/gateway": "^0.4.0",
     "@accord-protocol/mcp": "^0.4.0",
     "@accord-protocol/rails": "^0.4.0",
@@ -82,6 +82,7 @@
     "@fleet-sdk/core": "^0.12.0",
     "@monaco-editor/react": "^4.7.0",
     "@next/mdx": "16.0.1",
+    "@noble/curves": "^1.9.7",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",

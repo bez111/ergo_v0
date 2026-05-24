@@ -6,10 +6,10 @@ export type SageReceiptStatus = "settled_on_chain" | "verified_pending_redemptio
 export type SageReceiptCompleteness = "full_receipt_bundle" | "full" | "chain_proof_only"
 
 export interface SageReceiptSignature {
-  scheme: "sage-hmac-sha256" | "unsigned"
-  public_key: string
-  signature: string
-  signing_hash: `blake2b256:0x${string}`
+  scheme: "ed25519"
+  public_key: `0x${string}`
+  signature: `0x${string}`
+  signer_role?: "gateway" | "provider" | "verifier" | "registry"
 }
 
 export type SageVerificationReceiptJson = Omit<AccordVerificationReceipt, "signature"> & {

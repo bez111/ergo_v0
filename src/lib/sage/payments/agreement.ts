@@ -9,6 +9,7 @@
 
 import { accordHashV0, type AccordAgreement } from "@accord-protocol/core"
 import { computeTaskHashAsync } from "ergo-agent-pay"
+import { accordObjectId, inlineInputRef } from "@/lib/sage/accord-v0"
 import type { SageQuote } from "./types"
 import { getSageWalletConfig } from "./wallet"
 
@@ -57,13 +58,17 @@ export function quoteToAgreement(quote: SageQuote, question: string): AccordAgre
   return {
     type: "accord.agreement.v0",
     version: "v0",
-    agreement_id: `acc_sage_${quote.quoteId}`,
+    agreement_id: accordObjectId("acc", {
+      provider: "sage",
+      quote_id: quote.quoteId,
+      task_hash: quote.taskHash,
+    }),
     created_at: quote.issuedAt ?? nowIsoUtc(),
     buyer: { id: "agent://sage-anonymous-buyer" },
     seller: { id: `agent://ergo-testnet/${quote.receiverAddress}` },
     task: {
       kind: "sage_premium_query",
-      input_ref: question,
+      input_ref: inlineInputRef(canonicalizeQuestion(question)),
       description: "Premium answer from Sage with code-grade depth and Sonnet 4.6 reasoning.",
       output_schema: "sage.premium_answer.v0",
     },

@@ -121,6 +121,7 @@ export async function verifyAndSettle(opts: VerifyOpts): Promise<SageVerificatio
     const settlementReceipt = normalizeSettlementReceipt({
       settlement: settle,
       verificationReceiptHash,
+      network,
     })
     const settlementTxId = settle.tx?.tx_id && /^[0-9a-f]{64}$/i.test(settle.tx.tx_id)
       ? settle.tx.tx_id

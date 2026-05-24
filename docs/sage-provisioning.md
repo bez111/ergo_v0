@@ -96,6 +96,12 @@ vercel env add SAGE_NETWORK production
 vercel env add SAGE_PAYMENT_HMAC_KEY production
 # paste: <output of step 3>
 
+# Optional but recommended: dedicated Ed25519 key for public Accord v0
+# Verification Receipt / Settlement Receipt signatures. If omitted, Sage
+# derives a receipt signing key from SAGE_PAYMENT_HMAC_KEY so the public JSON
+# remains schema-valid, but a dedicated key is cleaner operationally.
+openssl rand -hex 32 | vercel env add SAGE_RECEIPT_ED25519_PRIVATE_KEY production
+
 # Required for full Agreement / Verification / Settlement receipt bundles.
 # Create a Vercel Blob store in the project, then copy its read-write token.
 vercel env add BLOB_READ_WRITE_TOKEN production
@@ -112,6 +118,7 @@ Mirror the same values into `.env.local` for local dev:
 SAGE_WALLET_ADDRESS=<addr>
 SAGE_RESERVE_BOX_ID=<box id>
 SAGE_PAYMENT_HMAC_KEY=<hmac key>
+SAGE_RECEIPT_ED25519_PRIVATE_KEY=<optional dedicated receipt signing private key>
 SAGE_NETWORK=testnet
 BLOB_READ_WRITE_TOKEN=<vercel blob read-write token>
 ```

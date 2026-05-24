@@ -1,10 +1,13 @@
-import { createHmac } from "node:crypto"
+import { createHash } from "node:crypto"
+import { ed25519 } from "@noble/curves/ed25519"
 import {
   accordHashV0,
-  signingHash,
+  signingHashRaw,
   type AccordAgreement,
   type AccordSettlementReceipt,
+  type AccordVerificationReceipt,
 } from "@accord-protocol/core"
+import { accordObjectId } from "@/lib/sage/accord-v0"
 import { canonicalizeQuestion } from "@/lib/sage/payments/agreement"
 import type { SagePaymentProof, SageQuote } from "@/lib/sage/payments/types"
 import type { SageReceiptNetwork, SageReceiptSignature, SageSettlementReceiptJson, SageVerificationReceiptJson } from "./types"
@@ -31,6 +34,7 @@ interface BuildPendingSettlementReceiptOpts {
 interface NormalizeSettlementReceiptOpts {
   settlement: AccordSettlementReceipt
   verificationReceiptHash: `blake2b256:0x${string}`
+  network?: SageReceiptNetwork
 }
 
 export function prefixedAccordHash(value: unknown): `blake2b256:0x${string}` {
@@ -47,11 +51,11 @@ export function buildVerificationReceipt(opts: BuildVerificationReceiptOpts): Sa
   const unsigned = {
     type: "accord.verification_receipt.v0" as const,
     version: "v0" as const,
-    receipt_id: `vr_sage_${accordHashV0({
+    receipt_id: accordObjectId("vr", {
       agreement_id: opts.agreement.agreement_id,
       note_box_id: opts.proof.noteBoxId,
       task_hash: opts.quote.taskHash,
-    }).slice(0, 24)}`,
+    }),
     agreement_id: opts.agreement.agreement_id,
     agreement_hash: prefixedAccordHash(opts.agreement),
     verifier: { id: "verifier://sage-self-v0" },
@@ -107,6 +111,11 @@ export function normalizeSettlementReceipt(opts: NormalizeSettlementReceiptOpts)
   const settlementWithMetadata = opts.settlement as AccordSettlementReceipt & { metadata?: unknown }
   const unsigned = {
     ...opts.settlement,
+    agreement_id: opts.settlement.agreement_id,
+    tx: {
+      ...opts.settlement.tx,
+      network: normalizeReceiptNetwork(opts.settlement.tx.network, opts.network),
+    },
     verification_receipts: Array.from(
       new Set([...(opts.settlement.verification_receipts ?? []), opts.verificationReceiptHash]),
     ),
@@ -122,15 +131,81 @@ export function normalizeSettlementReceipt(opts: NormalizeSettlementReceiptOpts)
   }
 }
 
+export function normalizeVerificationReceiptForAccordV0(
+  receipt: AccordVerificationReceipt & { metadata?: Record<string, unknown> },
+  agreement: AccordAgreement,
+): SageVerificationReceiptJson {
+  const { signature: _oldSignature, ...rest } = receipt
+  const receiptId = isAccordObjectId("vr", receipt.receipt_id)
+    ? receipt.receipt_id
+    : accordObjectId("vr", {
+        agreement_id: agreement.agreement_id,
+        old_receipt_id: receipt.receipt_id,
+        evidence: receipt.evidence,
+      })
+  const unsigned = {
+    ...rest,
+    receipt_id: receiptId,
+    agreement_id: agreement.agreement_id,
+    agreement_hash: prefixedAccordHash(agreement),
+    metadata: {
+      ...(isRecord(rest.metadata) ? rest.metadata : {}),
+      ...(receiptId !== receipt.receipt_id ? { sage_legacy_receipt_id: receipt.receipt_id } : {}),
+    },
+  }
+
+  return {
+    ...unsigned,
+    signature: signReceiptObject(unsigned, "verification"),
+  }
+}
+
+export function normalizeSettlementReceiptForAccordV0(
+  receipt: AccordSettlementReceipt & { metadata?: Record<string, unknown> },
+  agreement: AccordAgreement,
+  verificationReceiptHash: `blake2b256:0x${string}`,
+  network: SageReceiptNetwork,
+): SageSettlementReceiptJson {
+  const { signature: _oldSignature, ...rest } = receipt
+  const settlementId = isAccordObjectId("sr", receipt.settlement_id)
+    ? receipt.settlement_id
+    : accordObjectId("sr", {
+        agreement_id: agreement.agreement_id,
+        old_settlement_id: receipt.settlement_id,
+        tx: receipt.tx,
+      })
+  const unsigned = {
+    ...rest,
+    settlement_id: settlementId,
+    agreement_id: agreement.agreement_id,
+    agreement_hash: prefixedAccordHash(agreement),
+    verification_receipts: [verificationReceiptHash],
+    tx: {
+      ...receipt.tx,
+      network: normalizeReceiptNetwork(receipt.tx.network, network),
+    },
+    metadata: {
+      ...(isRecord(rest.metadata) ? rest.metadata : {}),
+      ...(settlementId !== receipt.settlement_id ? { sage_legacy_settlement_id: receipt.settlement_id } : {}),
+      sage_receipt_role: "settlement",
+    },
+  }
+
+  return {
+    ...unsigned,
+    signature: signReceiptObject(unsigned, "settlement"),
+  }
+}
+
 export function buildPendingSettlementReceipt(opts: BuildPendingSettlementReceiptOpts): SageSettlementReceiptJson {
   const createdAt = opts.createdAt ?? nowIsoSecond()
   const unsigned = {
     type: "accord.settlement_receipt.v0" as const,
     version: "v0" as const,
-    settlement_id: `sr_sage_${accordHashV0({
+    settlement_id: accordObjectId("sr", {
       agreement_id: opts.agreement.agreement_id,
       note_box_id: opts.proof.noteBoxId,
-    }).slice(0, 24)}`,
+    }),
     agreement_id: opts.agreement.agreement_id,
     agreement_hash: prefixedAccordHash(opts.agreement),
     verification_receipts: [opts.verificationReceiptHash],
@@ -161,27 +236,62 @@ export function buildPendingSettlementReceipt(opts: BuildPendingSettlementReceip
 }
 
 function signReceiptObject(value: Record<string, unknown>, role: "verification" | "settlement"): SageReceiptSignature {
-  const digest = signingHash(value)
-  const signing_hash = `blake2b256:0x${digest}` as const
-  const key = process.env.SAGE_PAYMENT_HMAC_KEY
-  if (key && key.length >= 32) {
-    const signature = createHmac("sha256", key)
-      .update(`sage-receipt.${role}.${digest}`)
-      .digest("hex")
-    return {
-      scheme: "sage-hmac-sha256",
-      public_key: "env:SAGE_PAYMENT_HMAC_KEY",
-      signature: `hmac-sha256:${signature}`,
-      signing_hash,
-    }
+  const privateKey = receiptSigningPrivateKey()
+  const publicKey = ed25519.getPublicKey(privateKey)
+  const signature = ed25519.sign(signingHashRaw(value), privateKey)
+  return {
+    scheme: "ed25519",
+    public_key: `0x${bytesToHex(publicKey)}`,
+    signature: `0x${bytesToHex(signature)}`,
+    ...(role === "settlement" ? { signer_role: "provider" as const } : {}),
+  }
+}
+
+function normalizeReceiptNetwork(value: unknown, fallback: SageReceiptNetwork = "testnet"): SageReceiptNetwork {
+  if (value === "mainnet" || value === "testnet") return value
+  if (isRecord(value) && typeof value.baseUrl === "string") {
+    return value.baseUrl.includes("testnet") ? "testnet" : fallback
+  }
+  return fallback
+}
+
+function isAccordObjectId(prefix: "acc" | "vr" | "sr", value: unknown): value is `${typeof prefix}_${string}` {
+  return typeof value === "string" && new RegExp(`^${prefix}_[0-9A-HJKMNP-TV-Z]{26}$`).test(value)
+}
+
+function receiptSigningPrivateKey(): Uint8Array {
+  const explicit = process.env.SAGE_RECEIPT_ED25519_PRIVATE_KEY
+  if (explicit) return parsePrivateKey(explicit, "SAGE_RECEIPT_ED25519_PRIVATE_KEY")
+
+  const paymentKey = process.env.SAGE_PAYMENT_HMAC_KEY
+  if (paymentKey && paymentKey.length >= 32) {
+    return createHash("sha256")
+      .update("sage-receipt-ed25519:")
+      .update(paymentKey)
+      .digest()
   }
 
-  return {
-    scheme: "unsigned",
-    public_key: "not-configured",
-    signature: `unsigned:${digest}`,
-    signing_hash,
+  throw new Error("SAGE_RECEIPT_ED25519_PRIVATE_KEY or SAGE_PAYMENT_HMAC_KEY is required to sign Sage receipts")
+}
+
+function parsePrivateKey(value: string, name: string): Uint8Array {
+  const clean = value.trim().replace(/^0x/i, "")
+  if (!/^[0-9a-f]{64}$/i.test(clean)) {
+    throw new Error(`${name} must be a 32-byte hex string`)
   }
+  return hexToBytes(clean)
+}
+
+function bytesToHex(bytes: Uint8Array): string {
+  return Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("")
+}
+
+function hexToBytes(hex: string): Uint8Array {
+  const out = new Uint8Array(hex.length / 2)
+  for (let i = 0; i < out.length; i += 1) {
+    out[i] = Number.parseInt(hex.slice(i * 2, i * 2 + 2), 16)
+  }
+  return out
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {

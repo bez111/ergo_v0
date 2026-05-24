@@ -1,8 +1,14 @@
 import type { AccordAgreement } from "@accord-protocol/core"
+import { accordObjectId, inlineInputRef } from "@/lib/sage/accord-v0"
 import { canonicalizeQuestion } from "@/lib/sage/payments/agreement"
 import type { SagePaymentProof, SageQuote, SageVerificationResult } from "@/lib/sage/payments/types"
 import { explorerBoxUrl, explorerUrl } from "@/lib/sage/explorer/fetch-tx"
-import { nowIsoSecond, prefixedAccordHash } from "./artifacts"
+import {
+  normalizeSettlementReceiptForAccordV0,
+  normalizeVerificationReceiptForAccordV0,
+  nowIsoSecond,
+  prefixedAccordHash,
+} from "./artifacts"
 import type { SageReceiptBundle, SageReceiptNetwork } from "./types"
 
 interface BuildReceiptBundleOpts {
@@ -29,7 +35,7 @@ export function buildSageReceiptBundle(opts: BuildReceiptBundleOpts): SageReceip
   const status = settlementTxId ? "settled_on_chain" : "verified_pending_redemption"
   const now = nowIsoSecond()
 
-  return {
+  return normalizeSageReceiptBundleForAccordV0({
     ok: true,
     type: "sage.receipt_bundle.v1",
     version: "v1",
@@ -67,6 +73,69 @@ export function buildSageReceiptBundle(opts: BuildReceiptBundleOpts): SageReceip
       verification_receipt_json: result.verificationReceipt,
       settlement_receipt_json: result.settlementReceipt,
     },
+  })
+}
+
+export function normalizeSageReceiptBundleForAccordV0(bundle: SageReceiptBundle): SageReceiptBundle {
+  const agreement = bundle.accord.agreement_json
+  const verification = bundle.accord.verification_receipt_json
+  const settlement = bundle.accord.settlement_receipt_json
+  if (!agreement || !verification || !settlement) return bundle
+
+  const normalizedAgreement = normalizeAgreementForAccordV0(agreement, bundle)
+  const normalizedVerification = normalizeVerificationReceiptForAccordV0(verification, normalizedAgreement)
+  const verificationReceiptHash = prefixedAccordHash(normalizedVerification)
+  const normalizedSettlement = normalizeSettlementReceiptForAccordV0(
+    settlement,
+    normalizedAgreement,
+    verificationReceiptHash,
+    bundle.network,
+  )
+
+  return {
+    ...bundle,
+    completeness: "full_receipt_bundle",
+    accord: {
+      agreement_hash: prefixedAccordHash(normalizedAgreement),
+      verification_receipt_hash: verificationReceiptHash,
+      settlement_receipt_hash: prefixedAccordHash(normalizedSettlement),
+      agreement_json: normalizedAgreement,
+      verification_receipt_json: normalizedVerification,
+      settlement_receipt_json: normalizedSettlement,
+    },
+  }
+}
+
+function normalizeAgreementForAccordV0(agreement: AccordAgreement, bundle: SageReceiptBundle): AccordAgreement {
+  const canonicalQuestion =
+    bundle.task.canonical_question ??
+    (bundle.task.question ? canonicalizeQuestion(bundle.task.question) : null) ??
+    stripInlinePrefix(agreement.task.input_ref) ??
+    bundle.quote.quoteId
+  const agreementId = isAccordObjectId("acc", agreement.agreement_id)
+    ? agreement.agreement_id
+    : accordObjectId("acc", {
+        provider: "sage",
+        quote_id: bundle.quote.quoteId,
+        task_hash: bundle.quote.taskHash,
+        legacy_agreement_id: agreement.agreement_id,
+      })
+  const inputRef = /^(github|https|ipfs|data|inline):/.test(agreement.task.input_ref)
+    ? agreement.task.input_ref
+    : inlineInputRef(canonicalQuestion)
+
+  return {
+    ...agreement,
+    agreement_id: agreementId,
+    task: {
+      ...agreement.task,
+      input_ref: inputRef,
+    },
+    metadata: {
+      ...(agreement.metadata ?? {}),
+      sage_quote_id: bundle.quote.quoteId,
+      ...(agreementId !== agreement.agreement_id ? { sage_legacy_agreement_id: agreement.agreement_id } : {}),
+    },
   }
 }
 
@@ -85,6 +154,14 @@ export function receiptAliases(bundle: SageReceiptBundle): string[] {
 
 function isHex64(value: string): boolean {
   return /^[0-9a-f]{64}$/i.test(value)
+}
+
+function isAccordObjectId(prefix: "acc" | "vr" | "sr", value: unknown): value is `${typeof prefix}_${string}` {
+  return typeof value === "string" && new RegExp(`^${prefix}_[0-9A-HJKMNP-TV-Z]{26}$`).test(value)
+}
+
+function stripInlinePrefix(value: string): string {
+  return value.startsWith("inline:") ? value.slice("inline:".length) : value
 }
 
 function ergDecimalToNanoString(value: string): string {

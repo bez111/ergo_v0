@@ -25,6 +25,7 @@ import {
   loadReceiptBundle,
   probeReceiptStorage,
 } from "@/lib/sage/receipts/storage"
+import { normalizeSageReceiptBundleForAccordV0 } from "@/lib/sage/receipts/bundle"
 import type { SageReceiptBundle } from "@/lib/sage/receipts/types"
 
 interface ReceiptRouteProps {
@@ -66,7 +67,7 @@ export async function GET(_req: Request, { params }: ReceiptRouteProps) {
 
   const stored = await loadReceiptBundle(id)
   if (stored.ok && stored.bundle) {
-    return NextResponse.json(stored.bundle, { headers: cacheHeaders() })
+    return NextResponse.json(normalizeSageReceiptBundleForAccordV0(stored.bundle), { headers: cacheHeaders() })
   }
 
   if (!/^[0-9a-f]{64}$/i.test(id)) {

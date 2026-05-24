@@ -31,7 +31,8 @@ const nextConfig: NextConfig = {
   // Экспериментальные оптимизации
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-*', 'react-icons', 'mermaid'],
-    webpackBuildWorker: true, // Ускорить сборку
+    webpackBuildWorker: false,
+    optimizeCss: false,
   },
 
   // Тяжёлые пакеты — не бандлить в server bundle (иначе превышается лимит Vercel 250MB)
